@@ -1,0 +1,204 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-07-language-stats",
+  "kind": "reference",
+  "status": "written",
+  "title": "{Le Français en Chiffres}",
+  "description": "Fascinating statistics and linguistic facts about French - from phonemes to pangrams!",
+  "vocabulary": [
+    {
+      "word_id": "un-phoneme-fr",
+      "fr": "un phonème",
+      "gloss": "a phoneme (distinct sound)",
+      "note": "masculine - 36-37 in French"
+    },
+    {
+      "word_id": "une-voyelle-fr",
+      "fr": "une voyelle",
+      "gloss": "a vowel",
+      "note": "feminine - 16 vowel sounds!"
+    },
+    {
+      "word_id": "une-consonne-fr",
+      "fr": "une consonne",
+      "gloss": "a consonant",
+      "note": "feminine - 20-21 sounds"
+    },
+    {
+      "word_id": "une-syllabe-fr",
+      "fr": "une syllabe",
+      "gloss": "a syllable",
+      "note": "feminine"
+    },
+    {
+      "word_id": "un-accent-fr",
+      "fr": "un accent",
+      "gloss": "an accent / diacritical mark",
+      "note": "masculine - 5 types"
+    },
+    {
+      "word_id": "la-liaison-fr",
+      "fr": "la liaison",
+      "gloss": "the linking (of words)",
+      "note": "unique French feature"
+    },
+    {
+      "word_id": "un-mot-fr",
+      "fr": "un mot",
+      "gloss": "a word",
+      "note": "masculine"
+    },
+    {
+      "word_id": "une-phrase-fr",
+      "fr": "une phrase",
+      "gloss": "a sentence",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-vocabulaire-fr",
+      "fr": "le vocabulaire",
+      "gloss": "the vocabulary",
+      "note": "masculine"
+    },
+    {
+      "word_id": "la-grammaire-fr",
+      "fr": "la grammaire",
+      "gloss": "the grammar",
+      "note": "feminine"
+    },
+    {
+      "word_id": "un-verbe-fr",
+      "fr": "un verbe",
+      "gloss": "a verb",
+      "note": "masculine"
+    },
+    {
+      "word_id": "un-nom-fr",
+      "fr": "un nom",
+      "gloss": "a noun",
+      "note": "masculine"
+    },
+    {
+      "word_id": "un-adjectif-fr",
+      "fr": "un adjectif",
+      "gloss": "an adjective",
+      "note": "masculine"
+    },
+    {
+      "word_id": "masculin-fr",
+      "fr": "masculin",
+      "gloss": "masculine",
+      "note": "grammatical gender"
+    },
+    {
+      "word_id": "feminin-fr",
+      "fr": "féminin",
+      "gloss": "feminine",
+      "note": "grammatical gender"
+    },
+    {
+      "word_id": "la-conjugaison-fr",
+      "fr": "la conjugaison",
+      "gloss": "the conjugation",
+      "note": "feminine"
+    },
+    {
+      "word_id": "irregulier-fr",
+      "fr": "irrégulier",
+      "gloss": "irregular",
+      "note": "~350 irregular verbs"
+    },
+    {
+      "word_id": "l-academie-francaise-fr",
+      "fr": "l'Académie française",
+      "gloss": "the French Academy",
+      "note": "since 1635 - language authority"
+    },
+    {
+      "word_id": "francophone-fr",
+      "fr": "francophone",
+      "gloss": "French-speaking",
+      "note": "300M speakers worldwide"
+    },
+    {
+      "word_id": "parler-vite-fr",
+      "fr": "parler vite",
+      "gloss": "to speak fast",
+      "note": "7-8 syllables per second!"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-french-sounds-phonology",
+      "heading": "French Sounds - Phonology",
+      "text": "French has 36-37 distinct sounds (phonemes) - 16 vowels and 20-21 consonants",
+      "example": "4 nasal vowels (ã, ẽ, õ, {œ̃}) - unique to French! No 'th' sound (why 'the' is hard). Uvular 'r' (back of throat)."
+    },
+    {
+      "id": "s-syllable-timed-language",
+      "heading": "Syllable-Timed Language",
+      "text": "Each syllable gets equal time - unlike English which stresses certain words",
+      "example": "French flows smoothly with even rhythm. No word stress like English! Emphasis on last syllable of phrases. Creates musical, flowing sound."
+    },
+    {
+      "id": "s-speaking-speed",
+      "heading": "Speaking Speed",
+      "text": "French speakers talk fast! 7.0-8.0 syllables per second vs English 6.5",
+      "example": "French needs more syllables to convey same info (lower information density), so speakers compensate by speaking faster!"
+    },
+    {
+      "id": "s-the-alphabet-accents",
+      "heading": "The Alphabet & Accents",
+      "text": "26 letters + 5 diacritical marks + 2 ligatures",
+      "example": "Letters: same as English. Accents: {é è ê ë à ù û ç. Ligatures}: œ ({cœur}), æ ({rare}). {Total}: {33 unique characters!}"
+    },
+    {
+      "id": "s-vocabulary-size",
+      "heading": "Vocabulary Size",
+      "text": "100,000 words in common use - educated speakers know 30,000 actively",
+      "example": "{Le Grand Robert dictionary}: 100,000 words, 350,000 definitions. Average person: 5,000-30,000 words depending on education."
+    },
+    {
+      "id": "s-french-influence-on-english",
+      "heading": "French Influence on English",
+      "text": "29% of English vocabulary comes from French (thanks to Norman Conquest 1066!)",
+      "example": "45% of English has Latin/French origins total. Beef, pork, royal, justice, parliament - all from French!"
+    },
+    {
+      "id": "s-grammar-complexity",
+      "heading": "Grammar Complexity",
+      "text": "2 genders, 17-20 verb tenses, ~350 irregular verbs (only ~50 common)",
+      "example": "Masculine/Feminine. 3 verb groups (-er, -ir, -re) + irregulars. ~25 '{essential}' irregular verbs to memorize. SVO word order like English."
+    },
+    {
+      "id": "s-global-ranking",
+      "heading": "Global Ranking",
+      "text": "5th most spoken, 2nd most studied, 3rd language of business",
+      "example": "300M speakers (2023), projected 700M by 2050. Official in 29 countries. One of 6 UN languages. Growing fast in Africa!"
+    },
+    {
+      "id": "s-fun-language-facts",
+      "heading": "Fun Language Facts",
+      "text": "Quirky and interesting trivia about French",
+      "example": "Longest word: '{anticonstitutionnellement}' (25 letters). Most common word: '{de}'. Most common letter: 'e' (15%). No word for 'home' or '{shallow}'!"
+    },
+    {
+      "id": "s-liaison-flow",
+      "heading": "Liaison & Flow",
+      "text": "Words link together smoothly - consonants connect to following vowels",
+      "example": "'{les enfants}' sounds like 'lay-zahn-fahn' (z sound links). '{un homme}' = '{uh-nom}'. Creates beautiful flowing speech!"
+    },
+    {
+      "id": "s-l-academie-francaise",
+      "heading": "{L'Académie Française}",
+      "text": "Official authority on French language since 1635 - protects '{purity}' of French",
+      "example": "40 immortals (lifetime members) decide official French. Resist English words. Prefer '{ordinateur}' to '{computer}', '{courriel}' to '{email}'."
+    },
+    {
+      "id": "s-perfect-french-pangram",
+      "heading": "Perfect French Pangram",
+      "text": "A sentence using all 26 letters",
+      "example": "'{Portez ce vieux whisky au juge blond qui fume}' (Bring this old whisky to the blonde judge who smokes)"
+    }
+  ]
+}

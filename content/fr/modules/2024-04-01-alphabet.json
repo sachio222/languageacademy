@@ -1,0 +1,252 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-01-alphabet",
+  "kind": "reference",
+  "status": "written",
+  "title": "{L'Alphabet}",
+  "description": "The French alphabet with pronunciation guide - 26 letters with unique French sounds",
+  "vocabulary": [
+    {
+      "word_id": "a-fr.a",
+      "fr": "a",
+      "gloss": "A (letter)",
+      "note": "pronounced 'ah'"
+    },
+    {
+      "word_id": "b-fr",
+      "fr": "b",
+      "gloss": "B (letter)",
+      "note": "pronounced 'bay'"
+    },
+    {
+      "word_id": "c-fr",
+      "fr": "c",
+      "gloss": "C (letter)",
+      "note": "pronounced 'say'"
+    },
+    {
+      "word_id": "d-fr",
+      "fr": "d",
+      "gloss": "D (letter)",
+      "note": "pronounced 'day'"
+    },
+    {
+      "word_id": "e-fr",
+      "fr": "e",
+      "gloss": "E (letter)",
+      "note": "pronounced 'euh'"
+    },
+    {
+      "word_id": "f-fr",
+      "fr": "f",
+      "gloss": "F (letter)",
+      "note": "pronounced 'eff'"
+    },
+    {
+      "word_id": "g-fr",
+      "fr": "g",
+      "gloss": "G (letter)",
+      "note": "pronounced 'zhay'"
+    },
+    {
+      "word_id": "h-fr",
+      "fr": "h",
+      "gloss": "H (letter)",
+      "note": "pronounced 'ash'"
+    },
+    {
+      "word_id": "i-fr",
+      "fr": "i",
+      "gloss": "I (letter)",
+      "note": "pronounced 'ee'"
+    },
+    {
+      "word_id": "j-fr",
+      "fr": "j",
+      "gloss": "J (letter)",
+      "note": "pronounced 'zhee'"
+    },
+    {
+      "word_id": "k-fr",
+      "fr": "k",
+      "gloss": "K (letter)",
+      "note": "pronounced 'kah'"
+    },
+    {
+      "word_id": "l-fr.l",
+      "fr": "l",
+      "gloss": "L (letter)",
+      "note": "pronounced 'ell'"
+    },
+    {
+      "word_id": "m-fr",
+      "fr": "m",
+      "gloss": "M (letter)",
+      "note": "pronounced 'emm'"
+    },
+    {
+      "word_id": "n-fr",
+      "fr": "n",
+      "gloss": "N (letter)",
+      "note": "pronounced 'enn'"
+    },
+    {
+      "word_id": "o-fr",
+      "fr": "o",
+      "gloss": "O (letter)",
+      "note": "pronounced 'oh'"
+    },
+    {
+      "word_id": "p-fr",
+      "fr": "p",
+      "gloss": "P (letter)",
+      "note": "pronounced 'pay'"
+    },
+    {
+      "word_id": "q-fr",
+      "fr": "q",
+      "gloss": "Q (letter)",
+      "note": "pronounced 'koo'"
+    },
+    {
+      "word_id": "r-fr",
+      "fr": "r",
+      "gloss": "R (letter)",
+      "note": "pronounced 'air'"
+    },
+    {
+      "word_id": "s-fr",
+      "fr": "s",
+      "gloss": "S (letter)",
+      "note": "pronounced 'ess'"
+    },
+    {
+      "word_id": "t-fr",
+      "fr": "t",
+      "gloss": "T (letter)",
+      "note": "pronounced 'tay'"
+    },
+    {
+      "word_id": "u-fr",
+      "fr": "u",
+      "gloss": "U (letter)",
+      "note": "pronounced 'oo'"
+    },
+    {
+      "word_id": "v-fr",
+      "fr": "v",
+      "gloss": "V (letter)",
+      "note": "pronounced 'vay'"
+    },
+    {
+      "word_id": "w-fr",
+      "fr": "w",
+      "gloss": "W (letter)",
+      "note": "pronounced 'doo-bluh-vay'"
+    },
+    {
+      "word_id": "x-fr",
+      "fr": "x",
+      "gloss": "X (letter)",
+      "note": "pronounced 'eex'"
+    },
+    {
+      "word_id": "y-fr",
+      "fr": "y",
+      "gloss": "Y (letter)",
+      "note": "pronounced 'ee-grek'"
+    },
+    {
+      "word_id": "z-fr",
+      "fr": "z",
+      "gloss": "Z (letter)",
+      "note": "pronounced 'zed'"
+    },
+    {
+      "word_id": "l-alphabet-fr",
+      "fr": "l'alphabet",
+      "gloss": "the alphabet",
+      "note": "masculine"
+    },
+    {
+      "word_id": "une-lettre-fr",
+      "fr": "une lettre",
+      "gloss": "a letter",
+      "note": "feminine"
+    },
+    {
+      "word_id": "un-accent-fr",
+      "fr": "un accent",
+      "gloss": "an accent",
+      "note": "masculine"
+    },
+    {
+      "word_id": "une-voyelle-fr",
+      "fr": "une voyelle",
+      "gloss": "a vowel",
+      "note": "feminine - a, e, i, o, u, y"
+    },
+    {
+      "word_id": "une-consonne-fr",
+      "fr": "une consonne",
+      "gloss": "a consonant",
+      "note": "feminine - all other letters"
+    },
+    {
+      "word_id": "epeler-fr",
+      "fr": "épeler",
+      "gloss": "to spell",
+      "note": "verb"
+    },
+    {
+      "word_id": "comment-ca-s-ecrit-fr",
+      "fr": "Comment ça s'écrit?",
+      "gloss": "How do you write that?",
+      "note": "useful phrase"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-the-french-alphabet",
+      "heading": "The French Alphabet",
+      "text": "French uses the same 26 letters as English, but pronunciation is very different!",
+      "example": "A ({ah}), B (bay), C (say), D (day), E (euh), F (eff), G (zhay), H (ash), I (ee), J (zhee), K (kah), L (ell), M (emm), N (enn), O ({oh}), P (pay), Q (koo), R ({air}), S (ess), T (tay), U (oo), V (vay), W (doo-bluh-vay), X (eex), Y (ee-grek), Z (zed)"
+    },
+    {
+      "id": "s-accent-aigu-e",
+      "heading": "Accent Aigu (é)",
+      "text": "The acute accent - appears only on 'e' and makes it sound like 'ay'",
+      "example": "{café}, {été} (summer), {déjà}"
+    },
+    {
+      "id": "s-accent-grave-e-a",
+      "heading": "{Accent Grave} ({è, à, ù})",
+      "text": "The grave accent - on 'e' makes it sound like 'eh', on 'a' and 'u' it distinguishes meaning",
+      "example": "{très}, {où} (where), {là} (there)"
+    },
+    {
+      "id": "s-accent-circonflexe-a-e",
+      "heading": "Accent Circonflexe ({â, ê, î, ô, û})",
+      "text": "The circumflex - can appear on any vowel, often indicates a historical 's' was dropped",
+      "example": "{être} (to be), {hôtel}, {pâtes} (pasta), {île} (island)"
+    },
+    {
+      "id": "s-trema-e-i-u",
+      "heading": "{Tréma} ({ë, ï, ü, ÿ})",
+      "text": "The diaeresis - indicates two vowels are pronounced separately",
+      "example": "{Noël} (Christmas), {naïve}, {maïs} (corn)"
+    },
+    {
+      "id": "s-cedille-c",
+      "heading": "{Cédille} (ç)",
+      "text": "The cedilla - makes 'c' sound like 's' before a, o, u",
+      "example": "{ça}, {français}, {garçon} (boy)"
+    },
+    {
+      "id": "s-ligatures-oe-ae",
+      "heading": "Ligatures ({œ, æ})",
+      "text": "Two letters merged together - œ is common, æ is rare",
+      "example": "{cœur} (heart), {sœur} (sister), curriculum vitæ"
+    }
+  ]
+}

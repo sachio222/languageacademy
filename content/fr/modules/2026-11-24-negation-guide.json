@@ -1,0 +1,225 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2026-11-24-negation-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Saying No - Negation Guide",
+  "description": "Say not, no more, nothing and never with sentences you already know.",
+  "can_do": [
+    "Say what you are not and what you do not have",
+    "Say not anymore, nothing and never"
+  ],
+  "minutes": 3,
+  "line": "Say not, no more, nothing and never with sentences you already know.",
+  "parts": [
+    {
+      "id": "p-not-ne-pas",
+      "heading": "Not: {ne … pas}",
+      "text": [
+        "Put {ne} before the verb and {pas} after it. Before a vowel, {ne} becomes {n'}."
+      ],
+      "blocks": [
+        {
+          "table": {
+            "rows": [
+              {
+                "fr": "je ne suis pas",
+                "en": "I'm not"
+              },
+              {
+                "fr": "tu n'es pas",
+                "en": "you're not"
+              },
+              {
+                "fr": "elle n'est pas",
+                "en": "she isn't"
+              },
+              {
+                "fr": "je n'ai pas",
+                "en": "I don't have"
+              },
+              {
+                "fr": "nous n'avons pas",
+                "en": "we don't have"
+              },
+              {
+                "fr": "ils n'ont pas",
+                "en": "they don't have"
+              }
+            ]
+          }
+        },
+        {
+          "lines": [
+            [
+              "Non, je ne suis pas fatigué.",
+              "No, I'm not tired."
+            ],
+            [
+              "Paul n'est pas content.",
+              "Paul isn't happy."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-not-any-pas-de",
+      "heading": "Not any: {pas de}",
+      "text": [
+        "After {pas}, the articles {un}, {une} and {des} become {de}, or {d'} before a vowel."
+      ],
+      "blocks": [
+        {
+          "table": {
+            "rows": [
+              {
+                "fr": "Je n'ai pas de chat.",
+                "en": "I don't have a cat."
+              },
+              {
+                "fr": "Il n'a pas de voiture.",
+                "en": "He doesn't have a car."
+              },
+              {
+                "fr": "Nous n'avons pas d'amis.",
+                "en": "We don't have any friends."
+              },
+              {
+                "fr": "Je n'ai pas le livre.",
+                "en": "I don't have the book.",
+                "note": "{Le}, {la} and {les} stay as they are."
+              },
+              {
+                "fr": "Paul n'est pas un enfant.",
+                "en": "Paul isn't a child.",
+                "note": "After {être}, {un} and {une} stay as they are."
+              }
+            ]
+          }
+        },
+        {
+          "lines": [
+            [
+              "J'ai un chat, mais je n'ai pas de chien.",
+              "I have a cat, but I don't have a dog."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-no-more-nothing-never",
+      "heading": "No more, nothing, never: swap {pas}",
+      "text": [
+        "Keep {ne} and put another word where {pas} goes."
+      ],
+      "blocks": [
+        {
+          "table": {
+            "rows": [
+              {
+                "fr": "ne … pas",
+                "en": "not"
+              },
+              {
+                "fr": "ne … plus",
+                "en": "not anymore, no more"
+              },
+              {
+                "fr": "ne … rien",
+                "en": "nothing"
+              },
+              {
+                "fr": "ne … jamais",
+                "en": "never"
+              }
+            ]
+          }
+        },
+        {
+          "lines": [
+            [
+              "Je ne suis plus fatigué.",
+              "I'm not tired anymore."
+            ],
+            [
+              "Je n'ai plus de café.",
+              "I don't have any more coffee."
+            ],
+            [
+              "Il n'a rien.",
+              "He has nothing."
+            ],
+            [
+              "Tu n'es jamais content.",
+              "You're never happy."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one means “I don't have a cat”?",
+      "options": [
+        {
+          "text": "Je n'ai pas de chat.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je n'ai pas un chat.",
+          "fr": true
+        },
+        {
+          "text": "Je ne ai pas de chat.",
+          "fr": true
+        }
+      ],
+      "why": "After {pas}, {un} becomes {de}, and {ne} becomes {n'} before a vowel: {Je n'ai pas de chat.}"
+    },
+    {
+      "id": "k2",
+      "ask": "Which one means “You aren't a child”?",
+      "options": [
+        {
+          "text": "Tu ne pas es un enfant.",
+          "fr": true
+        },
+        {
+          "text": "Tu n'es pas un enfant.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Tu n'es pas d'enfant.",
+          "fr": true
+        }
+      ],
+      "why": "{ne} goes before the verb and {pas} after it. After {être}, {un} stays as it is: {Tu n'es pas un enfant.}"
+    },
+    {
+      "id": "k3",
+      "ask": "Which one means “I don't have a car anymore”?",
+      "options": [
+        {
+          "text": "Je n'ai jamais de voiture.",
+          "fr": true
+        },
+        {
+          "text": "Je n'ai pas de voiture.",
+          "fr": true
+        },
+        {
+          "text": "Je n'ai plus de voiture.",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "Put {plus} where {pas} goes to say anymore. {jamais} means never, and {pas} means not."
+    }
+  ]
+}

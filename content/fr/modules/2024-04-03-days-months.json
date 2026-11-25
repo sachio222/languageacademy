@@ -1,0 +1,204 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-03-days-months",
+  "kind": "reference",
+  "status": "written",
+  "title": "{Jours et Mois}",
+  "description": "Days of the week, months, and seasons - never capitalized in French!",
+  "vocabulary": [
+    {
+      "word_id": "lundi-fr",
+      "fr": "lundi",
+      "gloss": "Monday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "mardi-fr",
+      "fr": "mardi",
+      "gloss": "Tuesday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "mercredi-fr",
+      "fr": "mercredi",
+      "gloss": "Wednesday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "jeudi-fr",
+      "fr": "jeudi",
+      "gloss": "Thursday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "vendredi-fr",
+      "fr": "vendredi",
+      "gloss": "Friday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "samedi-fr",
+      "fr": "samedi",
+      "gloss": "Saturday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "dimanche-fr",
+      "fr": "dimanche",
+      "gloss": "Sunday",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "janvier-fr",
+      "fr": "janvier",
+      "gloss": "January",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "fevrier-fr",
+      "fr": "février",
+      "gloss": "February",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "mars-fr",
+      "fr": "mars",
+      "gloss": "March",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "avril-fr",
+      "fr": "avril",
+      "gloss": "April",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "mai-fr",
+      "fr": "mai",
+      "gloss": "May",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "juin-fr",
+      "fr": "juin",
+      "gloss": "June",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "juillet-fr",
+      "fr": "juillet",
+      "gloss": "July",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "aout-fr",
+      "fr": "août",
+      "gloss": "August",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "septembre-fr",
+      "fr": "septembre",
+      "gloss": "September",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "octobre-fr",
+      "fr": "octobre",
+      "gloss": "October",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "novembre-fr",
+      "fr": "novembre",
+      "gloss": "November",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "decembre-fr",
+      "fr": "décembre",
+      "gloss": "December",
+      "note": "never capitalized!"
+    },
+    {
+      "word_id": "le-printemps-fr",
+      "fr": "le printemps",
+      "gloss": "spring",
+      "note": "masculine"
+    },
+    {
+      "word_id": "l-ete-fr",
+      "fr": "l'été",
+      "gloss": "summer",
+      "note": "masculine"
+    },
+    {
+      "word_id": "l-automne-fr",
+      "fr": "l'automne",
+      "gloss": "fall / autumn",
+      "note": "masculine"
+    },
+    {
+      "word_id": "l-hiver-fr",
+      "fr": "l'hiver",
+      "gloss": "winter",
+      "note": "masculine"
+    },
+    {
+      "word_id": "aujourd-hui-fr",
+      "fr": "aujourd'hui",
+      "gloss": "today",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "demain-fr",
+      "fr": "demain",
+      "gloss": "tomorrow",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "hier-fr",
+      "fr": "hier",
+      "gloss": "yesterday",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "cette-semaine-fr",
+      "fr": "cette semaine",
+      "gloss": "this week",
+      "note": "time phrase"
+    },
+    {
+      "word_id": "le-week-end-fr",
+      "fr": "le week-end",
+      "gloss": "the weekend",
+      "note": "borrowed from English!"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-days-of-the-week",
+      "heading": "Days of the Week",
+      "text": "Seven days - NEVER capitalized in French (unlike English!)",
+      "example": "{lundi} (Monday), {mardi} (Tuesday), {mercredi} (Wednesday), {jeudi} (Thursday), {vendredi} (Friday), {samedi} (Saturday), {dimanche} (Sunday)"
+    },
+    {
+      "id": "s-months-of-the-year",
+      "heading": "Months of the Year",
+      "text": "Twelve months - also NEVER capitalized in French",
+      "example": "{janvier}, {février}, {mars}, {avril}, {mai}, {juin}, {juillet}, {août}, {septembre}, {octobre}, {novembre}, {décembre}"
+    },
+    {
+      "id": "s-seasons-les-saisons",
+      "heading": "Seasons ({Les Saisons})",
+      "text": "Four seasons - note the articles!",
+      "example": "{le printemps} (spring), {l'été} (summer), {l'automne} (fall), {l'hiver} (winter)"
+    },
+    {
+      "id": "s-useful-time-phrases",
+      "heading": "Useful Time Phrases",
+      "text": "Essential words for talking about days and time",
+      "example": "{aujourd'hui} (today), {demain} (tomorrow), {hier} (yesterday), {cette semaine} (this week), {le week-end} (the weekend)"
+    }
+  ]
+}

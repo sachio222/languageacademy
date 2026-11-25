@@ -153,6 +153,20 @@
       "5": "c-making-natural-sentences"
     }
   },
+  "2024-01-09-reading1": {
+    "items": {
+      "2024-01-09-reading1.1": "i-paul",
+      "2024-01-09-reading1.2": "i-un-chat-et-un",
+      "2024-01-09-reading1.3": "i-marie",
+      "2024-01-09-reading1.4": "i-une-maison-et-une",
+      "2024-01-09-reading1.5": "i-des-livres",
+      "2024-01-09-reading1.6": "i-des-chats-et-des",
+      "2024-01-09-reading1.7": "i-des-enfants-et-des",
+      "2024-01-09-reading1.8": "i-tres",
+      "2024-01-09-reading1.9": "i-mais"
+    },
+    "concepts": {}
+  },
   "2024-01-10-unit1-practice": {
     "items": {},
     "concepts": {}
@@ -341,6 +355,10 @@
       "7": "c-common-question-phrases-memorize"
     }
   },
+  "2024-01-19-questions-help": {
+    "items": {},
+    "concepts": {}
+  },
   "2024-01-19-stressed-pronouns": {
     "items": {
       "2024-01-19-stressed-pronouns.1": "i-moi",
@@ -459,6 +477,23 @@
       "0": "c-add-nuance-to-any",
       "1": "c-most-common-adverbs"
     }
+  },
+  "2024-01-22-reading2": {
+    "items": {
+      "2024-01-22-reading2.1": "i-caen",
+      "2024-01-22-reading2.2": "i-thomas",
+      "2024-01-22-reading2.3": "i-un-livre",
+      "2024-01-22-reading2.4": "i-nouvelle",
+      "2024-01-22-reading2.5": "i-vieille-et-belle",
+      "2024-01-22-reading2.6": "i-veux",
+      "2024-01-22-reading2.7": "i-a",
+      "2024-01-22-reading2.8": "i-honfleur",
+      "2024-01-22-reading2.9": "i-dans-sa-voiture",
+      "2024-01-22-reading2.10": "i-ces-belles-choses",
+      "2024-01-22-reading2.11": "i-a-2",
+      "2024-01-22-reading2.12": "i-oui"
+    },
+    "concepts": {}
   },
   "2024-01-23-common-special-forms-1": {
     "items": {
@@ -677,6 +712,10 @@
       "1": "c-parent-friend-language"
     }
   },
+  "2024-01-28-verb-pattern-help": {
+    "items": {},
+    "concepts": {}
+  },
   "2024-01-29-opinion-phrases": {
     "items": {
       "2024-01-29-opinion-phrases.1": "i-je-pense-qu-il",
@@ -813,6 +852,21 @@
       "2": "c-gender-agreement"
     }
   },
+  "2024-02-01-reading-10": {
+    "items": {
+      "2024-02-01-reading-10.1": "reading-10-1",
+      "2024-02-01-reading-10.2": "reading-10-2",
+      "2024-02-01-reading-10.3": "reading-10-3",
+      "2024-02-01-reading-10.4": "reading-10-4",
+      "2024-02-01-reading-10.5": "reading-10-5",
+      "2024-02-01-reading-10.6": "reading-10-6",
+      "2024-02-01-reading-10.7": "reading-10-7",
+      "2024-02-01-reading-10.8": "reading-10-8",
+      "2024-02-01-reading-10.9": "reading-10-9",
+      "2024-02-01-reading-10.10": "reading-10-10"
+    },
+    "concepts": {}
+  },
   "2024-02-02-combining": {
     "items": {
       "2024-02-02-combining.1": "i-il-l-a",
@@ -847,6 +901,23 @@
       "0": "c-je-me-fais-verb",
       "1": "c-je-fais-verb-having"
     }
+  },
+  "2024-02-03-reading3": {
+    "items": {
+      "2024-02-03-reading3.1": "i-cafe-de-la-paix",
+      "2024-02-03-reading3.2": "i-oui-je-vais-au",
+      "2024-02-03-reading3.3": "i-le-comte-de-monte",
+      "2024-02-03-reading3.4": "i-c-est-le-tien",
+      "2024-02-03-reading3.5": "i-c-est-le-mien",
+      "2024-02-03-reading3.6": "i-montmartre",
+      "2024-02-03-reading3.7": "i-son-jeune-enfant",
+      "2024-02-03-reading3.8": "i-un-nouveau-bon-livre",
+      "2024-02-03-reading3.9": "i-il-est-nouveau",
+      "2024-02-03-reading3.10": "i-vieux",
+      "2024-02-03-reading3.11": "i-dans-ma-voiture",
+      "2024-02-03-reading3.12": "i-pour-moi-merci"
+    },
+    "concepts": {}
   },
   "2024-02-03-so-that-phrases": {
     "items": {
@@ -1061,6 +1132,21 @@
       "2": "c-beyond-commands",
       "3": "c-perception-integration"
     }
+  },
+  "2024-02-12-reading-11": {
+    "items": {
+      "2024-02-12-reading-11.1": "reading-11-1",
+      "2024-02-12-reading-11.2": "reading-11-2",
+      "2024-02-12-reading-11.3": "reading-11-3",
+      "2024-02-12-reading-11.4": "reading-11-4",
+      "2024-02-12-reading-11.5": "reading-11-5",
+      "2024-02-12-reading-11.6": "reading-11-6",
+      "2024-02-12-reading-11.7": "reading-11-7",
+      "2024-02-12-reading-11.8": "reading-11-8",
+      "2024-02-12-reading-11.9": "reading-11-9",
+      "2024-02-12-reading-11.10": "reading-11-10"
+    },
+    "concepts": {}
   },
   "2024-02-13-search-and-find": {
     "items": {
@@ -1641,6 +1727,27 @@
       "4": "c-common-uses"
     }
   },
+  "2024-03-30-reading-4": {
+    "items": {
+      "2024-03-30-reading-4.1": "i-jardin-du-luxembourg",
+      "2024-03-30-reading-4.2": "i-argent",
+      "2024-03-30-reading-4.3": "i-dans-sa-maison",
+      "2024-03-30-reading-4.4": "i-marie",
+      "2024-03-30-reading-4.5": "i-les-editeurs",
+      "2024-03-30-reading-4.6": "i-carrefour-de-l-odeon",
+      "2024-03-30-reading-4.7": "i-du-pain-et-de",
+      "2024-03-30-reading-4.8": "i-toujours",
+      "2024-03-30-reading-4.9": "i-non",
+      "2024-03-30-reading-4.10": "i-oui",
+      "2024-03-30-reading-4.11": "i-personne",
+      "2024-03-30-reading-4.12": "i-cette-ville",
+      "2024-03-30-reading-4.13": "i-non-2",
+      "2024-03-30-reading-4.14": "i-son-pain",
+      "2024-03-30-reading-4.15": "i-saint-germain",
+      "2024-03-30-reading-4.16": "i-bonsoir"
+    },
+    "concepts": {}
+  },
   "2024-03-31-survival-phrases": {
     "items": {
       "2024-03-31-survival-phrases.1": "i-je-voudrais-un-livre",
@@ -1663,6 +1770,18 @@
       "1": "c-essential-questions",
       "2": "c-polite-words",
       "3": "c-restrooms-always-plural"
+    }
+  },
+  "2024-04-01-alphabet": {
+    "items": {},
+    "concepts": {
+      "0": "s-the-french-alphabet",
+      "1": "s-accent-aigu-e",
+      "2": "s-accent-grave-e-a",
+      "3": "s-accent-circonflexe-a-e",
+      "4": "s-trema-e-i-u",
+      "5": "s-cedille-c",
+      "6": "s-ligatures-oe-ae"
     }
   },
   "2024-04-01-time-adverbs": {
@@ -1696,6 +1815,20 @@
       "0": "c-frequency-adverbs",
       "1": "c-time-expressions",
       "2": "c-position-in-sentence"
+    }
+  },
+  "2024-04-02-numbers": {
+    "items": {},
+    "concepts": {
+      "0": "s-numbers-0-20",
+      "1": "s-tens-20-60",
+      "2": "s-the-famous-french-70s",
+      "3": "s-the-infamous-french-80s",
+      "4": "s-the-wild-french-90s",
+      "5": "s-numbers-21-69-pattern",
+      "6": "s-large-numbers",
+      "7": "s-belgian-swiss-variation",
+      "8": "s-important-exceptions-rules"
     }
   },
   "2024-04-02-unit-4-exam": {
@@ -1744,6 +1877,15 @@
     },
     "concepts": {}
   },
+  "2024-04-03-days-months": {
+    "items": {},
+    "concepts": {
+      "0": "s-days-of-the-week",
+      "1": "s-months-of-the-year",
+      "2": "s-seasons-les-saisons",
+      "3": "s-useful-time-phrases"
+    }
+  },
   "2024-04-03-unit-4-practice": {
     "items": {},
     "concepts": {}
@@ -1779,6 +1921,19 @@
       "4": "c-with-infinitives"
     }
   },
+  "2024-04-04-holidays": {
+    "items": {},
+    "concepts": {
+      "0": "s-les-jours-feries-national",
+      "1": "s-bastille-day-la-fete",
+      "2": "s-religious-holidays",
+      "3": "s-wwi-wwii-commemorations",
+      "4": "s-fun-french-traditions",
+      "5": "s-christmas-new-year-les",
+      "6": "s-quebec-holidays",
+      "7": "s-holiday-greetings"
+    }
+  },
   "2024-04-05-avoir-past": {
     "items": {
       "2024-04-05-avoir-past.1": "i-j-avais-un-chat",
@@ -1808,6 +1963,18 @@
       "2": "c-avait-had-third-person",
       "3": "c-avions-aviez-avaient-had",
       "4": "c-common-expressions-with-avoir"
+    }
+  },
+  "2024-04-05-colors": {
+    "items": {},
+    "concepts": {
+      "0": "s-colors-are-adjectives",
+      "1": "s-basic-colors",
+      "2": "s-feminine-forms",
+      "3": "s-plural-forms",
+      "4": "s-invariable-colors",
+      "5": "s-compound-colors",
+      "6": "s-using-colors-in-questions"
     }
   },
   "2024-04-06-boire": {
@@ -1849,6 +2016,23 @@
       "4": "c-with-drink-nouns"
     }
   },
+  "2024-04-06-french-countries": {
+    "items": {},
+    "concepts": {
+      "0": "s-la-francophonie-the-french",
+      "1": "s-europe-where-it-all",
+      "2": "s-north-america-quebec-haiti",
+      "3": "s-africa-the-future-of",
+      "4": "s-west-africa-french-belt",
+      "5": "s-central-africa-congo-basin",
+      "6": "s-north-africa-le-maghreb",
+      "7": "s-east-africa-islands",
+      "8": "s-caribbean-les-antilles",
+      "9": "s-middle-east-asia",
+      "10": "s-pacific-islands-polynesie-francaise",
+      "11": "s-the-future-is-african"
+    }
+  },
   "2024-04-07-comparisons-slang": {
     "items": {
       "2024-04-07-comparisons-slang.1": "i-c-est-ouf",
@@ -1878,6 +2062,23 @@
       "3": "c-verlan-french-slang-technique"
     }
   },
+  "2024-04-07-language-stats": {
+    "items": {},
+    "concepts": {
+      "0": "s-french-sounds-phonology",
+      "1": "s-syllable-timed-language",
+      "2": "s-speaking-speed",
+      "3": "s-the-alphabet-accents",
+      "4": "s-vocabulary-size",
+      "5": "s-french-influence-on-english",
+      "6": "s-grammar-complexity",
+      "7": "s-global-ranking",
+      "8": "s-fun-language-facts",
+      "9": "s-liaison-flow",
+      "10": "s-l-academie-francaise",
+      "11": "s-perfect-french-pangram"
+    }
+  },
   "2024-04-08-comparisons": {
     "items": {
       "2024-04-08-comparisons.1": "i-plus",
@@ -1905,6 +2106,10 @@
       "2": "c-superlatives-the-best-the",
       "3": "c-intensity-modifiers"
     }
+  },
+  "2024-04-08-spelling-patterns": {
+    "items": {},
+    "concepts": {}
   },
   "2024-04-09-conditionals": {
     "items": {
@@ -2037,6 +2242,24 @@
       "3": "c-past-participle-mange",
       "4": "c-with-food-nouns"
     }
+  },
+  "2024-04-13-reading-5": {
+    "items": {
+      "2024-04-13-reading-5.1": "i-arles",
+      "2024-04-13-reading-5.2": "i-absinthe",
+      "2024-04-13-reading-5.3": "i-tableau",
+      "2024-04-13-reading-5.4": "i-la-nuit",
+      "2024-04-13-reading-5.5": "i-couleurs",
+      "2024-04-13-reading-5.6": "i-hotel",
+      "2024-04-13-reading-5.7": "i-hier",
+      "2024-04-13-reading-5.8": "i-tres-bon",
+      "2024-04-13-reading-5.9": "i-etoiles",
+      "2024-04-13-reading-5.10": "i-tu-es-un-grand",
+      "2024-04-13-reading-5.11": "i-arles-2",
+      "2024-04-13-reading-5.12": "i-meilleur",
+      "2024-04-13-reading-5.13": "i-toute"
+    },
+    "concepts": {}
   },
   "2024-04-14-unit-5-exam": {
     "items": {
@@ -2388,6 +2611,21 @@
       "4": "c-j-etais-en-train"
     }
   },
+  "2024-04-24-reading-6": {
+    "items": {
+      "2024-04-24-reading-6.1": "i-prendre-le-train",
+      "2024-04-24-reading-6.2": "i-trois-heures",
+      "2024-04-24-reading-6.3": "i-ton-manteau",
+      "2024-04-24-reading-6.4": "i-du-pain-et-du",
+      "2024-04-24-reading-6.5": "i-paris-est-la-plus",
+      "2024-04-24-reading-6.6": "i-la-tour-eiffel",
+      "2024-04-24-reading-6.7": "i-toute-la-famille",
+      "2024-04-24-reading-6.8": "i-prendre-ses-livres",
+      "2024-04-24-reading-6.9": "i-apprendre-quelques-mots-en",
+      "2024-04-24-reading-6.10": "i-mon-livre-de-francais"
+    },
+    "concepts": {}
+  },
   "2024-04-25-top-200-nouns": {
     "items": {
       "2024-04-25-top-200-nouns.1": "i-une-annee",
@@ -2690,6 +2928,21 @@
       "4": "c-asking-opinions"
     }
   },
+  "2024-05-07-reading-7": {
+    "items": {
+      "2024-05-07-reading-7.1": "reading-7-1",
+      "2024-05-07-reading-7.2": "reading-7-2",
+      "2024-05-07-reading-7.3": "reading-7-3",
+      "2024-05-07-reading-7.4": "reading-7-4",
+      "2024-05-07-reading-7.5": "reading-7-5",
+      "2024-05-07-reading-7.6": "reading-7-6",
+      "2024-05-07-reading-7.7": "reading-7-7",
+      "2024-05-07-reading-7.8": "reading-7-8",
+      "2024-05-07-reading-7.9": "reading-7-9",
+      "2024-05-07-reading-7.10": "reading-7-10"
+    },
+    "concepts": {}
+  },
   "2024-05-08-savoir": {
     "items": {
       "2024-05-08-savoir.1": "i-je-sais",
@@ -2929,6 +3182,21 @@
       "2": "c-telling-your-morning-story",
       "3": "c-asking-about-morning-routines"
     }
+  },
+  "2024-05-20-reading-8": {
+    "items": {
+      "2024-05-20-reading-8.1": "reading-8-1",
+      "2024-05-20-reading-8.2": "reading-8-2",
+      "2024-05-20-reading-8.3": "reading-8-3",
+      "2024-05-20-reading-8.4": "reading-8-4",
+      "2024-05-20-reading-8.5": "reading-8-5",
+      "2024-05-20-reading-8.6": "reading-8-6",
+      "2024-05-20-reading-8.7": "reading-8-7",
+      "2024-05-20-reading-8.8": "reading-8-8",
+      "2024-05-20-reading-8.9": "reading-8-9",
+      "2024-05-20-reading-8.10": "reading-8-10"
+    },
+    "concepts": {}
   },
   "2024-05-21-reflexive-pronouns": {
     "items": {
@@ -3336,6 +3604,21 @@
       "6": "c-mental-vs-physical-age"
     }
   },
+  "2024-06-05-reading-9": {
+    "items": {
+      "2024-06-05-reading-9.1": "reading-9-1",
+      "2024-06-05-reading-9.2": "reading-9-2",
+      "2024-06-05-reading-9.3": "reading-9-3",
+      "2024-06-05-reading-9.4": "reading-9-4",
+      "2024-06-05-reading-9.5": "reading-9-5",
+      "2024-06-05-reading-9.6": "reading-9-6",
+      "2024-06-05-reading-9.7": "reading-9-7",
+      "2024-06-05-reading-9.8": "reading-9-8",
+      "2024-06-05-reading-9.9": "reading-9-9",
+      "2024-06-05-reading-9.10": "reading-9-10"
+    },
+    "concepts": {}
+  },
   "2024-06-06-reciprocal-reflexives": {
     "items": {
       "2024-06-06-reciprocal-reflexives.1": "reciprocal-1",
@@ -3447,6 +3730,14 @@
     "items": {},
     "concepts": {}
   },
+  "2024-10-20-liaison-help": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-10-21-cognates-help": {
+    "items": {},
+    "concepts": {}
+  },
   "2024-10-22-donner": {
     "items": {
       "2024-10-22-donner.1": "i-je-donne",
@@ -3496,6 +3787,14 @@
       "1": "c-trouver-to-find",
       "2": "c-common-usage-patterns",
       "3": "c-with-prepositions"
+    }
+  },
+  "2024-12-18-pronunciation-test": {
+    "items": {},
+    "concepts": {
+      "0": "s-french-pronunciation-patterns",
+      "1": "s-nasal-vowels",
+      "2": "s-liaison-and-elision"
     }
   }
 }

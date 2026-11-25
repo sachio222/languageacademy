@@ -1,0 +1,300 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-02-numbers",
+  "kind": "reference",
+  "status": "written",
+  "title": "{Les Nombres}",
+  "description": "French numbers from 0 to infinity - including the unique 70s, 80s, and 90s!",
+  "vocabulary": [
+    {
+      "word_id": "zero-fr",
+      "fr": "zéro",
+      "gloss": "zero",
+      "note": "0"
+    },
+    {
+      "word_id": "un-fr.one",
+      "fr": "un",
+      "gloss": "one",
+      "note": "1"
+    },
+    {
+      "word_id": "deux-fr",
+      "fr": "deux",
+      "gloss": "two",
+      "note": "2"
+    },
+    {
+      "word_id": "trois-fr",
+      "fr": "trois",
+      "gloss": "three",
+      "note": "3"
+    },
+    {
+      "word_id": "quatre-fr",
+      "fr": "quatre",
+      "gloss": "four",
+      "note": "4"
+    },
+    {
+      "word_id": "cinq-fr",
+      "fr": "cinq",
+      "gloss": "five",
+      "note": "5"
+    },
+    {
+      "word_id": "six-fr",
+      "fr": "six",
+      "gloss": "six",
+      "note": "6"
+    },
+    {
+      "word_id": "sept-fr",
+      "fr": "sept",
+      "gloss": "seven",
+      "note": "7"
+    },
+    {
+      "word_id": "huit-fr",
+      "fr": "huit",
+      "gloss": "eight",
+      "note": "8"
+    },
+    {
+      "word_id": "neuf-fr",
+      "fr": "neuf",
+      "gloss": "nine",
+      "note": "9"
+    },
+    {
+      "word_id": "dix-fr",
+      "fr": "dix",
+      "gloss": "ten",
+      "note": "10"
+    },
+    {
+      "word_id": "vingt-fr",
+      "fr": "vingt",
+      "gloss": "twenty",
+      "note": "20"
+    },
+    {
+      "word_id": "vingt-et-un-fr.twenty-one",
+      "fr": "vingt-et-un",
+      "gloss": "twenty-one",
+      "note": "21 - uses 'et' (and)"
+    },
+    {
+      "word_id": "vingt-deux-fr",
+      "fr": "vingt-deux",
+      "gloss": "twenty-two",
+      "note": "22 - regular hyphen"
+    },
+    {
+      "word_id": "trente-fr",
+      "fr": "trente",
+      "gloss": "thirty",
+      "note": "30"
+    },
+    {
+      "word_id": "trente-et-un-fr",
+      "fr": "trente-et-un",
+      "gloss": "thirty-one",
+      "note": "31 - uses 'et' (and)"
+    },
+    {
+      "word_id": "trente-cinq-fr",
+      "fr": "trente-cinq",
+      "gloss": "thirty-five",
+      "note": "35 - regular hyphen"
+    },
+    {
+      "word_id": "quarante-fr",
+      "fr": "quarante",
+      "gloss": "forty",
+      "note": "40"
+    },
+    {
+      "word_id": "quarante-et-un-fr",
+      "fr": "quarante-et-un",
+      "gloss": "forty-one",
+      "note": "41 - uses 'et' (and)"
+    },
+    {
+      "word_id": "cinquante-fr",
+      "fr": "cinquante",
+      "gloss": "fifty",
+      "note": "50"
+    },
+    {
+      "word_id": "cinquante-et-un-fr",
+      "fr": "cinquante-et-un",
+      "gloss": "fifty-one",
+      "note": "51 - uses 'et' (and)"
+    },
+    {
+      "word_id": "soixante-fr",
+      "fr": "soixante",
+      "gloss": "sixty",
+      "note": "60"
+    },
+    {
+      "word_id": "soixante-et-un-fr",
+      "fr": "soixante-et-un",
+      "gloss": "sixty-one",
+      "note": "61 - uses 'et' (and)"
+    },
+    {
+      "word_id": "soixante-neuf-fr",
+      "fr": "soixante-neuf",
+      "gloss": "sixty-nine",
+      "note": "69 - nice 😏"
+    },
+    {
+      "word_id": "soixante-dix-fr",
+      "fr": "soixante-dix",
+      "gloss": "seventy",
+      "note": "70 (literally: sixty-ten)"
+    },
+    {
+      "word_id": "soixante-et-onze-fr.seventy-one",
+      "fr": "soixante-et-onze",
+      "gloss": "seventy-one",
+      "note": "71 - uses 'et' (sixty-and-eleven)"
+    },
+    {
+      "word_id": "soixante-quinze-fr",
+      "fr": "soixante-quinze",
+      "gloss": "seventy-five",
+      "note": "75 - sixty-fifteen"
+    },
+    {
+      "word_id": "soixante-dix-neuf-fr",
+      "fr": "soixante-dix-neuf",
+      "gloss": "seventy-nine",
+      "note": "79 - sixty-nineteen"
+    },
+    {
+      "word_id": "quatre-vingts-fr",
+      "fr": "quatre-vingts",
+      "gloss": "eighty",
+      "note": "80 - four-twenties (has 's')"
+    },
+    {
+      "word_id": "quatre-vingt-un-fr",
+      "fr": "quatre-vingt-un",
+      "gloss": "eighty-one",
+      "note": "81 - NO 'et', no 's' on vingt"
+    },
+    {
+      "word_id": "quatre-vingt-dix-fr",
+      "fr": "quatre-vingt-dix",
+      "gloss": "ninety",
+      "note": "90 - four-twenty-ten"
+    },
+    {
+      "word_id": "quatre-vingt-onze-fr",
+      "fr": "quatre-vingt-onze",
+      "gloss": "ninety-one",
+      "note": "91 - NO 'et' (four-twenty-eleven)"
+    },
+    {
+      "word_id": "quatre-vingt-dix-neuf-fr",
+      "fr": "quatre-vingt-dix-neuf",
+      "gloss": "ninety-nine",
+      "note": "99 - four-twenty-nineteen!"
+    },
+    {
+      "word_id": "cent-fr",
+      "fr": "cent",
+      "gloss": "one hundred",
+      "note": "100"
+    },
+    {
+      "word_id": "deux-cents-fr",
+      "fr": "deux cents",
+      "gloss": "two hundred",
+      "note": "200 - plural 's'"
+    },
+    {
+      "word_id": "deux-cent-un-fr",
+      "fr": "deux cent un",
+      "gloss": "two hundred one",
+      "note": "201 - no 's' when followed by number"
+    },
+    {
+      "word_id": "mille-fr",
+      "fr": "mille",
+      "gloss": "one thousand",
+      "note": "1,000"
+    },
+    {
+      "word_id": "trois-mille-fr",
+      "fr": "trois mille",
+      "gloss": "three thousand",
+      "note": "3,000 - mille NEVER plural"
+    },
+    {
+      "word_id": "un-million-fr",
+      "fr": "un million",
+      "gloss": "one million",
+      "note": "1,000,000"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-numbers-0-20",
+      "heading": "Numbers 0-20",
+      "text": "The foundation numbers you need to memorize",
+      "example": "{0 zéro}, {1 un}, {2 deux}, {3 trois}, {4 quatre}, {5 cinq}, {6 six}, {7 sept}, {8 huit}, {9 neuf}, {10 dix}, {11 onze}, {12 douze}, {13 treize}, {14 quatorze}, {15 quinze}, {16 seize}, {17 dix-sept}, {18 dix-huit}, {19 dix-neuf}, {20 vingt}"
+    },
+    {
+      "id": "s-tens-20-60",
+      "heading": "Tens (20-60)",
+      "text": "Regular tens that follow a pattern",
+      "example": "{20 vingt}, {30 trente}, {40 quarante}, {50 cinquante}, {60 soixante}"
+    },
+    {
+      "id": "s-the-famous-french-70s",
+      "heading": "The Famous French 70s!",
+      "text": "70 = sixty-ten (soixante-dix). French counts: 71 (sixty-eleven), 72 (sixty-twelve), etc.",
+      "example": "{70 soixante-dix}, {71 soixante-et-onze}, {75 soixante-quinze}, {79 soixante-dix-neuf}"
+    },
+    {
+      "id": "s-the-infamous-french-80s",
+      "heading": "The Infamous French 80s!",
+      "text": "80 = four-twenties (quatre-vingts). A remnant of Celtic base-20 counting!",
+      "example": "{80 quatre-vingts}, {81 quatre-vingt-un}, {85 quatre-vingt-cinq}, {89 quatre-vingt-neuf}"
+    },
+    {
+      "id": "s-the-wild-french-90s",
+      "heading": "The Wild French 90s!",
+      "text": "90 = four-twenty-ten (quatre-vingt-dix). Combining both systems!",
+      "example": "{90 quatre-vingt-dix, 91 quatre-vingt-onze, 95 quatre-vingt-quinze, 99 quatre-vingt-dix-neuf}"
+    },
+    {
+      "id": "s-numbers-21-69-pattern",
+      "heading": "Numbers 21-69 Pattern",
+      "text": "Add single digits with a hyphen. Use '{et}' (and) for 21, 31, 41, 51, 61",
+      "example": "{21 vingt-et-un}, {22 vingt-deux}, {35 trente-cinq}, {47 quarante-sept}, {69 soixante-neuf}"
+    },
+    {
+      "id": "s-large-numbers",
+      "heading": "Large Numbers",
+      "text": "Hundreds, thousands, millions - building bigger numbers",
+      "example": "{100 cent}, {200 deux cents}, {1000 mille}, 1,000,{000 un million}, 1,000,000,{000 un milliard}"
+    },
+    {
+      "id": "s-belgian-swiss-variation",
+      "heading": "Belgian & Swiss Variation",
+      "text": "More logical! Belgium and Switzerland use: 70 septante, 90 nonante",
+      "example": "70 septante (vs soixante-dix), 90 nonante (vs quatre-vingt-dix). Much easier!"
+    },
+    {
+      "id": "s-important-exceptions-rules",
+      "heading": "Important Exceptions & Rules",
+      "text": "Key exceptions you need to know to avoid common mistakes",
+      "example": "1) '{et}' (and) only for 21, 31, 41, 51, 61, 71 - NOT 81 or 91! 2) '{quatre-vingts}' (80) has 's' but '{quatre-vingt-un}' (81) loses it. 3) '{cents}' plural: '{deux cents}' (200) but '{deux cent un}' (201). 4) '{mille}' NEVER plural: '{trois mille}' (3,000) not 'milles'. 5) Hyphens between all parts EXCEPT before/after 'et' or '{cent}/{mille'}"
+    }
+  ]
+}

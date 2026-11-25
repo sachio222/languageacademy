@@ -199,6 +199,9 @@
       "note": "super informal"
     }
   },
+  "2024-01-22-reading2": {
+    "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far."
+  },
   "2024-01-23-common-special-forms-1": {
     "concepts": [
       {
@@ -310,6 +313,10 @@
         "example": "Parent to kid: '{Il faut que tu finisses tes devoirs}' (You need to finish homework)"
       }
     ]
+  },
+  "2024-02-01-reading-10": {
+    "description": "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more",
+    "title": "Reading - {Mes Rêves et Mes Espoirs}"
   },
   "2024-02-02-combining": {
     "items/i-il-va-partir": {
@@ -429,6 +436,9 @@
   "2024-02-08-age-personal-info": {
     "description": "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information."
   },
+  "2024-02-12-reading-11": {
+    "title": "Reading - {La France Moderne}"
+  },
   "2024-02-15-unit-11-exam": {
     "description": "Final test for this unit! Demonstrate mastery of age expressions, all missing top 100 verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), directions, and practical communication. Achieve complete French foundation!",
     "items/i-la-france-a-soixante": {
@@ -547,6 +557,9 @@
       }
     ]
   },
+  "2024-03-30-reading-4": {
+    "description": "A natural conversation using all your vocabulary."
+  },
   "2024-04-02-unit-4-exam": {
     "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
   },
@@ -581,6 +594,75 @@
         "example": "{c'est ouf} = {c'est fou} (it's crazy), {chelou} = louche (weird)"
       }
     ]
+  },
+  "2024-04-13-reading-5": {
+    "description": "A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin.",
+    "vocabulary/aimer-fr": {
+      "word_id": "aimer-fr",
+      "fr": "aimer",
+      "gloss": "to like/love"
+    },
+    "vocabulary/aller-fr": {
+      "word_id": "aller-fr",
+      "fr": "aller",
+      "gloss": "to go"
+    },
+    "vocabulary/appeler-fr": {
+      "word_id": "appeler-fr",
+      "fr": "appeler",
+      "gloss": "to call"
+    },
+    "vocabulary/boire-fr": {
+      "word_id": "boire-fr",
+      "fr": "boire",
+      "gloss": "to drink"
+    },
+    "vocabulary/chercher-fr": {
+      "word_id": "chercher-fr",
+      "fr": "chercher",
+      "gloss": "to look for"
+    },
+    "vocabulary/continuer-fr": {
+      "word_id": "continuer-fr",
+      "fr": "continuer",
+      "gloss": "to continue"
+    },
+    "vocabulary/excusez-moi-fr": {
+      "word_id": "excusez-moi-fr",
+      "fr": "excusez-moi",
+      "gloss": "excuse me",
+      "note": "polite expression"
+    },
+    "vocabulary/faire-fr": {
+      "word_id": "faire-fr",
+      "fr": "faire",
+      "gloss": "to do/make"
+    },
+    "vocabulary/parler-fr": {
+      "word_id": "parler-fr",
+      "fr": "parler",
+      "gloss": "to speak/talk"
+    },
+    "vocabulary/partir-fr": {
+      "word_id": "partir-fr",
+      "fr": "partir",
+      "gloss": "to leave"
+    },
+    "vocabulary/venir-fr": {
+      "word_id": "venir-fr",
+      "fr": "venir",
+      "gloss": "to come"
+    },
+    "vocabulary/voir-fr": {
+      "word_id": "voir-fr",
+      "fr": "voir",
+      "gloss": "to see"
+    },
+    "vocabulary/vouloir-fr": {
+      "word_id": "vouloir-fr",
+      "fr": "vouloir",
+      "gloss": "to want"
+    }
   },
   "2024-04-14-unit-5-exam": {
     "description": "Test everything from this unit! Comparisons, slang, past tense, conditionals, and food vocabulary."
@@ -632,6 +714,120 @@
       "fr": "vous commandez?",
       "gloss": "are you ready to order?",
       "note": "waiter's question"
+    }
+  },
+  "2024-04-24-reading-6": {
+    "description": "A family plans a trip to Paris. Uses this unit's vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin.",
+    "vocabulary/avoir-fr": {
+      "word_id": "avoir-fr",
+      "fr": "avoir",
+      "gloss": "to have"
+    },
+    "vocabulary/belle-fr": {
+      "word_id": "belle-fr",
+      "fr": "belle",
+      "gloss": "beautiful (fem)",
+      "note": "feminine of beau"
+    },
+    "vocabulary/bonne-idee-fr": {
+      "word_id": "bonne-idee-fr",
+      "fr": "bonne idée",
+      "gloss": "good idea",
+      "note": "feminine of bon"
+    },
+    "vocabulary/de-bons-restaurants-fr": {
+      "word_id": "de-bons-restaurants-fr",
+      "fr": "de bons restaurants",
+      "gloss": "good restaurants",
+      "note": "plural adjective"
+    },
+    "vocabulary/du-fromage-fr": {
+      "word_id": "du-fromage-fr",
+      "fr": "du fromage",
+      "gloss": "cheese"
+    },
+    "vocabulary/du-pain-fr": {
+      "word_id": "du-pain-fr",
+      "fr": "du pain",
+      "gloss": "bread"
+    },
+    "vocabulary/en-ce-moment-fr": {
+      "word_id": "en-ce-moment-fr",
+      "fr": "en ce moment",
+      "gloss": "right now/at this moment",
+      "note": "time expression"
+    },
+    "vocabulary/faire-fr": {
+      "word_id": "faire-fr",
+      "fr": "faire",
+      "gloss": "to do"
+    },
+    "vocabulary/la-ville-fr": {
+      "word_id": "la-ville-fr",
+      "fr": "la ville",
+      "gloss": "city",
+      "note": "feminine"
+    },
+    "vocabulary/maintenant-fr": {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now"
+    },
+    "vocabulary/manger-fr": {
+      "word_id": "manger-fr",
+      "fr": "manger",
+      "gloss": "to eat"
+    },
+    "vocabulary/merci-fr": {
+      "word_id": "merci-fr",
+      "fr": "merci",
+      "gloss": "thank you"
+    },
+    "vocabulary/mon-livre-fr": {
+      "word_id": "mon-livre-fr",
+      "fr": "mon livre",
+      "gloss": "my book"
+    },
+    "vocabulary/parler-francais-fr": {
+      "word_id": "parler-francais-fr",
+      "fr": "parler français",
+      "gloss": "to speak French"
+    },
+    "vocabulary/plus-belle-fr": {
+      "word_id": "plus-belle-fr",
+      "fr": "plus belle",
+      "gloss": "most beautiful",
+      "note": "superlative"
+    },
+    "vocabulary/pour-fr": {
+      "word_id": "pour-fr",
+      "fr": "pour",
+      "gloss": "for"
+    },
+    "vocabulary/ton-manteau-fr": {
+      "word_id": "ton-manteau-fr",
+      "fr": "ton manteau",
+      "gloss": "your coat"
+    },
+    "vocabulary/toujours-fr": {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always"
+    },
+    "vocabulary/toute-fr": {
+      "word_id": "toute-fr",
+      "fr": "toute",
+      "gloss": "all/whole"
+    },
+    "vocabulary/tu-parles-fr": {
+      "word_id": "tu-parles-fr",
+      "fr": "tu parles",
+      "gloss": "you speak"
+    },
+    "vocabulary/voir-fr": {
+      "word_id": "voir-fr",
+      "fr": "voir",
+      "gloss": "to see"
     }
   },
   "2024-04-25-top-200-nouns": {
@@ -751,6 +947,65 @@
       }
     ]
   },
+  "2024-05-07-reading-7": {
+    "description": "A philosophical article about learning and education. Uses all cognitive verbs from this unit!",
+    "title": "Reading - {L'Art d'Apprendre}",
+    "vocabulary/apprendre-fr": {
+      "word_id": "apprendre-fr",
+      "fr": "apprendre",
+      "gloss": "to learn"
+    },
+    "vocabulary/chercher-fr": {
+      "word_id": "chercher-fr",
+      "fr": "chercher",
+      "gloss": "to look for"
+    },
+    "vocabulary/comprendre-fr": {
+      "word_id": "comprendre-fr",
+      "fr": "comprendre",
+      "gloss": "to understand"
+    },
+    "vocabulary/connaitre-fr": {
+      "word_id": "connaitre-fr",
+      "fr": "connaître",
+      "gloss": "to know (people/places)"
+    },
+    "vocabulary/croire-fr": {
+      "word_id": "croire-fr",
+      "fr": "croire",
+      "gloss": "to believe"
+    },
+    "vocabulary/demander-fr": {
+      "word_id": "demander-fr",
+      "fr": "demander",
+      "gloss": "to ask"
+    },
+    "vocabulary/etudier-fr": {
+      "word_id": "etudier-fr",
+      "fr": "étudier",
+      "gloss": "to study"
+    },
+    "vocabulary/penser-fr": {
+      "word_id": "penser-fr",
+      "fr": "penser",
+      "gloss": "to think"
+    },
+    "vocabulary/reviser-fr": {
+      "word_id": "reviser-fr",
+      "fr": "réviser",
+      "gloss": "to review"
+    },
+    "vocabulary/savoir-fr": {
+      "word_id": "savoir-fr",
+      "fr": "savoir",
+      "gloss": "to know"
+    },
+    "vocabulary/trouver-fr": {
+      "word_id": "trouver-fr",
+      "fr": "trouver",
+      "gloss": "to find"
+    }
+  },
   "2024-05-10-unit-7-exam": {
     "description": "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers."
   },
@@ -765,6 +1020,10 @@
       "gloss": "I wash myself",
       "note": "daily routine"
     }
+  },
+  "2024-05-20-reading-8": {
+    "description": "A story about a typical day. Uses temporal words, reflexive verbs, and all this unit's vocabulary!",
+    "title": "Reading - {Ma Journée}"
   },
   "2024-05-21-reflexive-pronouns": {
     "concepts": [
@@ -925,11 +1184,120 @@
       ]
     }
   },
+  "2024-06-05-reading-9": {
+    "description": "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of this unit",
+    "title": "Reading - {Une Histoire du Passé}"
+  },
   "2024-06-09-unit-9-exam": {
     "description": "Test everything from this unit! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery."
   },
   "2024-06-10-unit-9-practice": {
     "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
     "title": "Discourse & Past Tense Practice - Fill in the Blanks"
+  },
+  "2024-10-20-liaison-help": {
+    "parts/p-elision-l-ami-j": {
+      "id": "p-elision-l-ami-j",
+      "heading": "Elision: {l'ami, j'ai}",
+      "text": [
+        "Before a vowel sound, {le}, {la} and {je} drop their vowel and take an apostrophe. The two words then sound like one."
+      ],
+      "note": "A silent h counts as a vowel, so {homme} takes {l'} as well. The same happens to {si} before {il} in {s'il vous plaît}. Elision and liaison work together. One friend is {l'ami}. More than one is {les amis}, where {les} keeps its s and links with a z sound.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "l'ami",
+              "le + ami"
+            ],
+            [
+              "l'amie",
+              "la + amie"
+            ],
+            [
+              "l'enfant",
+              "le + enfant"
+            ],
+            [
+              "l'homme",
+              "le + homme"
+            ],
+            [
+              "j'ai",
+              "je + ai"
+            ],
+            [
+              "s'il vous plaît",
+              "si + il"
+            ]
+          ],
+          "heading": "Words You Know"
+        }
+      ]
+    }
+  },
+  "2026-11-24-negation-guide": {
+    "checks": [
+      {
+        "id": "k1",
+        "ask": "Which one means “I don't have a cat”?",
+        "options": [
+          {
+            "text": "Je n'ai pas de chat.",
+            "fr": true,
+            "right": true
+          },
+          {
+            "text": "Je n'ai pas un chat.",
+            "fr": true
+          },
+          {
+            "text": "Je ne ai pas de chat.",
+            "fr": true
+          }
+        ],
+        "why": "After {pas}, {un} becomes {de}, and {ne} becomes {n'} before a vowel: {Je n'ai pas de chat.}"
+      },
+      {
+        "id": "k2",
+        "ask": "Which one means “You aren't a child”?",
+        "options": [
+          {
+            "text": "Tu ne pas es un enfant.",
+            "fr": true
+          },
+          {
+            "text": "Tu n'es pas un enfant.",
+            "fr": true,
+            "right": true
+          },
+          {
+            "text": "Tu n'es pas d'enfant.",
+            "fr": true
+          }
+        ],
+        "why": "{ne} goes before the verb and {pas} after it. After {être}, {un} stays as it is: {Tu n'es pas un enfant.}"
+      },
+      {
+        "id": "k3",
+        "ask": "Which one means “I don't have a car anymore”?",
+        "options": [
+          {
+            "text": "Je n'ai jamais de voiture.",
+            "fr": true
+          },
+          {
+            "text": "Je n'ai pas de voiture.",
+            "fr": true
+          },
+          {
+            "text": "Je n'ai plus de voiture.",
+            "fr": true,
+            "right": true
+          }
+        ],
+        "why": "Put {plus} where {pas} goes to say anymore. {jamais} means never, and {pas} means not."
+      }
+    ]
   }
 }

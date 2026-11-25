@@ -1,6 +1,6 @@
-# Converting lessons, practice sets and unit exams to module files
+# Converting today’s modules to module files
 
-`pnpm content:migrate modules` wrote 146 module files under `content/fr/modules/` from today’s lessons, practice sets and unit exams in `src/lessons/modules/`, with 2435 items. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2557 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 538 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -23,17 +23,28 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 
 | Section | Lines |
 |---|---|
-| Spellings taught more than once | 128 |
+| Guide checks written by hand | 1 |
+| Spellings taught more than once | 375 |
 | Item types to confirm | 260 |
 | Practice blanks that were in the wrong place | 58 |
-| Position words | 56 |
+| Position words | 113 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 825 |
-| Hand edits kept | 71 |
-| Live ids with no converted item | 86 |
-| Fields with no place in a module file | 1832 |
-| Text written differently | 577 |
+| Passage words with no pop-up | 10 |
+| Estimates to confirm | 1 |
+| Hand edits kept | 131 |
+| Live ids with no converted item | 315 |
+| Fields with no place in a module file | 1956 |
+| Text written differently | 670 |
 | Outline | 16 |
+
+## Guide checks written by hand
+
+The source guide has no checks, so its three are written by hand in the module file. A rerun keeps them, and hand-fixes.json records them.
+
+**2026-11-24-negation-guide**
+
+- `checks` three checks, written by hand in the module file (kept on rerun)
 
 ## Spellings taught more than once
 
@@ -94,6 +105,34 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[22]` "l'addition": same meaning as "the bill/check" in 2024-03-31-survival-phrases: kept l-addition-fr
 
+**2024-03-30-reading-4**
+
+- `vocabulary[2]` "comment ça va": new meaning "how are you": comment-ca-va-fr.how-are-you; met before as "how's it going?" (comment-ca-va-fr, 2024-01-18-questions)
+- `vocabulary[4]` "je ne peux pas": same meaning as "I can't" in 2024-03-27-negation-2: kept je-ne-peux-pas-fr
+- `vocabulary[5]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr
+- `vocabulary[6]` "je dois": same meaning as "I must" in 2024-03-23-devoir: kept je-dois-fr
+- `vocabulary[7]` "le travail": same meaning as "work" in 2024-03-24-everyday-nouns: kept le-travail-fr
+- `vocabulary[8]` "aujourd'hui": same meaning as "today" in 2024-04-01-time-adverbs: kept aujourd-hui-fr
+- `vocabulary[9]` "demain": same meaning as "tomorrow" in 2024-04-01-time-adverbs: kept demain-fr
+- `vocabulary[10]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr
+- `vocabulary[13]` "venir": same meaning as "to come" in 2024-01-26-venir: kept venir-fr
+- `vocabulary[17]` "la carte de crédit": same meaning as "credit card" in 2024-03-24-everyday-nouns: kept la-carte-de-credit-fr
+- `vocabulary[19]` "là-bas": same meaning as "over there" in 2024-03-26-location-adverbs: kept la-bas-fr
+- `vocabulary[22]` "où": same meaning as "where" in 2024-01-18-questions: kept ou-fr.where
+- `vocabulary[23]` "la place": same meaning as "square/place" in 2024-03-24-everyday-nouns: kept la-place-fr
+- `vocabulary[25]` "c'est ça": same meaning as "that's it/right" in 2024-01-13-ca-survival: kept c-est-ca-fr
+- `vocabulary[26]` "tout le monde": same meaning as "everybody/everyone" in 2024-03-24-everyday-nouns: kept tout-le-monde-fr
+- `vocabulary[27]` "partir": same meaning as "to leave / to depart" in 2024-01-29-partir: kept partir-fr
+- `vocabulary[28]` "au revoir": same meaning as "goodbye" in 2024-01-01-famous-words: kept au-revoir-fr
+- `vocabulary[34]` "le pain": same meaning as "bread" in 2024-03-24-everyday-nouns: kept le-pain-fr
+- `vocabulary[35]` "l'eau": same meaning as "water" in 2024-03-24-everyday-nouns: kept l-eau-fr
+- `vocabulary[36]` "s'il vous plaît": same meaning as "please" in 2024-01-01-famous-words: kept s-il-vous-plait-fr
+- `vocabulary[37]` "voilà": new meaning "there you go": voila-fr.there-you-go; met before as "there it is / here you go" (voila-fr, 2024-01-01-famous-words)
+- `vocabulary[38]` "jamais": same meaning as "never (with ne)" in 2024-04-01-time-adverbs: kept jamais-fr
+- `vocabulary[44]` "la ville": same meaning as "city" in 2024-03-24-everyday-nouns: kept la-ville-fr
+- `vocabulary[45]` "personne": same meaning as "nobody/no one" in 2024-03-24-everyday-nouns: kept personne-fr
+- `vocabulary[48]` "la vie": same meaning as "life" in 2024-03-24-everyday-nouns: kept la-vie-fr
+
 **2024-04-07-comparisons-slang**
 
 - `vocabulary[7]` "trop": same meaning as "too much / too" in 2024-04-08-comparisons: kept trop-fr
@@ -116,6 +155,26 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[0]` "manger": same meaning as "to eat" in 2024-03-30-reading-4: kept manger-fr
 
+**2024-04-13-reading-5**
+
+- `vocabulary[5]` "café": new meaning "café": cafe-fr.caf; met before as "coffee" (cafe-fr, 2024-01-01-famous-words)
+- `vocabulary[9]` "nous avons mangé": same meaning as "we ate" in 2024-04-12-manger: kept nous-avons-mange-fr
+- `vocabulary[10]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
+- `vocabulary[11]` "aujourd'hui": same meaning as "today" in 2024-04-01-time-adverbs: kept aujourd-hui-fr
+- `vocabulary[15]` "boire": same meaning as "to drink" in 2024-04-06-boire: kept boire-fr (fixed by hand)
+- `vocabulary[16]` "faire": same meaning as "to do / to make" in 2024-03-25-faire: kept faire-fr (fixed by hand)
+- `vocabulary[17]` "aimer": same meaning as "to like / to love" in 2024-04-04-aimer: kept aimer-fr (fixed by hand)
+- `vocabulary[18]` "vouloir": same meaning as "to want" in 2024-01-15-vouloir: kept vouloir-fr (fixed by hand)
+- `vocabulary[19]` "aller": same meaning as "to go" in 2024-01-27-aller: kept aller-fr (fixed by hand)
+- `vocabulary[20]` "venir": same meaning as "to come" in 2024-01-26-venir: kept venir-fr (fixed by hand)
+- `vocabulary[21]` "partir": same meaning as "to leave / to depart" in 2024-01-29-partir: kept partir-fr (fixed by hand)
+- `vocabulary[22]` "voir": same meaning as "to see" in 2024-01-17-voir: kept voir-fr (fixed by hand)
+- `vocabulary[23]` "chercher": same meaning as "to search/look for" in 2024-10-22-search-find: kept chercher-fr (fixed by hand)
+- `vocabulary[26]` "parler": same meaning as "to speak / to talk" in 2024-03-29-parler: kept parler-fr (fixed by hand)
+- `vocabulary[35]` "mon ami": same meaning as "my friend" in 2024-03-30-reading-4: kept mon-ami-fr
+- `vocabulary[37]` "excusez-moi": same meaning as "excuse me" in 2024-03-31-survival-phrases: kept excusez-moi-fr (fixed by hand)
+- `vocabulary[38]` "encore": new meaning "more / again": encore-fr.more; met before as "still" (encore-fr, 2024-04-01-time-adverbs)
+
 **2024-04-23-progressive-tenses**
 
 - `vocabulary[8]` "je ne peux pas": same meaning as "I can't" in 2024-03-27-negation-2: kept je-ne-peux-pas-fr
@@ -127,6 +186,37 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-04-25-top-200-nouns**
 
 - `vocabulary[21]` "le problème": same meaning as "problem" in 2024-03-30-reading-4: kept le-probleme-fr
+
+**2024-04-24-reading-6**
+
+- `vocabulary[1]` "prendre": same meaning as "to take" in 2024-04-22-prendre: kept prendre-fr
+- `vocabulary[5]` "apprendre": same meaning as "to learn" in 2024-04-22-prendre: kept apprendre-fr
+- `vocabulary[6]` "mettre": same meaning as "to put / to set / to wear" in 2024-04-21-mettre: kept mettre-fr
+- `vocabulary[8]` "demander": same meaning as "to ask / to ask for" in 2024-04-19-demander: kept demander-fr
+- `vocabulary[9]` "manger": same meaning as "to eat" in 2024-03-30-reading-4: kept manger-fr (fixed by hand)
+- `vocabulary[11]` "dire": same meaning as "to say / to tell" in 2024-04-20-dire: kept dire-fr
+- `vocabulary[14]` "j'ai besoin de": same meaning as "I need" in 2024-04-17-besoin: kept j-ai-besoin-de-fr
+- `vocabulary[15]` "tu as besoin de": same meaning as "you need (informal)" in 2024-04-17-besoin: kept tu-as-besoin-de-fr
+- `vocabulary[19]` "la famille": same meaning as "family" in 2024-04-25-top-200-nouns: kept la-famille-fr
+- `vocabulary[20]` "le père": same meaning as "father" in 2024-04-25-top-200-nouns: kept le-pere-fr
+- `vocabulary[21]` "la mère": same meaning as "mother" in 2024-04-25-top-200-nouns: kept la-mere-fr
+- `vocabulary[25]` "le moment": same meaning as "moment" in 2024-04-25-top-200-nouns: kept le-moment-fr
+- `vocabulary[28]` "le monde": same meaning as "world" in 2024-03-24-everyday-nouns: kept le-monde-fr
+- `vocabulary[29]` "la ville": same meaning as "city" in 2024-03-24-everyday-nouns: kept la-ville-fr (fixed by hand)
+- `vocabulary[34]` "dans": same meaning as "in / inside" in 2024-01-20-prepositions: kept dans-fr
+- `vocabulary[41]` "oui": same meaning as "yes" in 2024-01-01-famous-words: kept oui-fr
+- `vocabulary[45]` "trois": same meaning as "three" in 2026-11-24-numbers: kept trois-fr
+- `vocabulary[46]` "est-ce que": new meaning "question marker": est-ce-que-fr.question-marker; met before as "question maker" (est-ce-que-fr, 2024-01-18-questions)
+- `vocabulary[47]` "quelque chose": same meaning as "something" in 2024-03-24-everyday-nouns: kept quelque-chose-fr
+- `vocabulary[51]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr (fixed by hand)
+- `vocabulary[53]` "voir": same meaning as "to see" in 2024-01-17-voir: kept voir-fr (fixed by hand)
+- `vocabulary[57]` "faire": same meaning as "to do / to make" in 2024-03-25-faire: kept faire-fr (fixed by hand)
+- `vocabulary[64]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
+- `vocabulary[65]` "tu parles": same meaning as "you speak (informal)" in 2024-03-29-parler: kept tu-parles-fr (fixed by hand)
+- `vocabulary[67]` "merci": same meaning as "thank you" in 2024-01-01-famous-words: kept merci-fr (fixed by hand)
+- `vocabulary[69]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr (fixed by hand)
+- `vocabulary[70]` "avoir": same meaning as "to have" in 2024-01-04-avoir: kept avoir-fr (fixed by hand)
+- `vocabulary[74]` "pour": same meaning as "for" in 2024-01-20-prepositions: kept pour-fr (fixed by hand)
 
 **2024-05-05-on-and-people**
 
@@ -177,6 +267,34 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[7]` "même": same meaning as "same / even" in 2024-04-08-comparisons: kept meme-fr
 - `vocabulary[10]` "mal": same meaning as "badly / bad" in 2024-04-08-comparisons: kept mal-fr
 
+**2024-05-07-reading-7**
+
+- `vocabulary[0]` "apprendre": same meaning as "to learn" in 2024-04-22-prendre: kept apprendre-fr (fixed by hand)
+- `vocabulary[2]` "étudier": same meaning as "to study" in 2024-05-09-studying-verbs: kept etudier-fr (fixed by hand)
+- `vocabulary[5]` "comprendre": same meaning as "to understand" in 2024-04-22-prendre: kept comprendre-fr (fixed by hand)
+- `vocabulary[6]` "comprends": same meaning as "understand (you/I)" in 2024-04-24-reading-6: kept comprends-fr
+- `vocabulary[9]` "savoir": same meaning as "to know (facts/skills)" in 2024-05-08-savoir: kept savoir-fr (fixed by hand)
+- `vocabulary[12]` "connaître": same meaning as "to know / to be familiar with" in 2024-04-30-connaitre: kept connaitre-fr (fixed by hand)
+- `vocabulary[14]` "penser": same meaning as "to think" in 2024-05-06-penser: kept penser-fr (fixed by hand)
+- `vocabulary[18]` "croire": same meaning as "to believe / to think" in 2024-05-01-croire: kept croire-fr (fixed by hand)
+- `vocabulary[20]` "réviser": same meaning as "to review / to revise" in 2024-05-09-studying-verbs: kept reviser-fr (fixed by hand)
+- `vocabulary[23]` "chercher": same meaning as "to search/look for" in 2024-10-22-search-find: kept chercher-fr (fixed by hand)
+- `vocabulary[25]` "trouver": same meaning as "to find" in 2024-10-22-search-find: kept trouver-fr (fixed by hand)
+- `vocabulary[37]` "donc": same meaning as "so / therefore" in 2024-05-02-discourse-markers: kept donc-fr
+- `vocabulary[38]` "en fait": same meaning as "in fact / actually" in 2024-05-02-discourse-markers: kept en-fait-fr
+- `vocabulary[39]` "bon": new meaning "well": bon-fr.well; met before as "good" (bon-fr, 2024-01-01-famous-words); "well / so (discourse use)" (bon-fr.discourse, 2024-05-02-discourse-markers)
+- `vocabulary[40]` "alors": same meaning as "so / then" in 2024-05-02-discourse-markers: kept alors-fr
+- `vocabulary[41]` "quoi": same meaning as "like / you know (filler at end)" in 2024-05-02-discourse-markers: kept quoi-fr
+- `vocabulary[42]` "tout le monde": same meaning as "everybody/everyone" in 2024-03-24-everyday-nouns: kept tout-le-monde-fr
+- `vocabulary[43]` "même": same meaning as "same / even" in 2024-04-08-comparisons: kept meme-fr
+- `vocabulary[44]` "mal": same meaning as "badly / bad" in 2024-04-08-comparisons: kept mal-fr
+- `vocabulary[49]` "comment": same meaning as "how" in 2024-01-18-questions: kept comment-fr
+- `vocabulary[55]` "demander": same meaning as "to ask / to ask for" in 2024-04-19-demander: kept demander-fr (fixed by hand)
+- `vocabulary[62]` "meilleures": same meaning as "better (plural)" in 2024-04-13-reading-5: kept meilleures-fr
+- `vocabulary[64]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr
+- `vocabulary[65]` "beaucoup": same meaning as "a lot/much" in 2024-04-24-reading-6: kept beaucoup-fr
+- `vocabulary[75]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
+
 **2024-05-23-temporal-words**
 
 - `vocabulary[0]` "pendant": same meaning as "during / for" in 2024-05-07-reading-7: kept pendant-fr
@@ -214,6 +332,34 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[9]` "Allons-y!": same meaning as "Let's go!" in 2024-05-03-knowledge-nouns: kept allons-y-fr
 - `vocabulary[10]` "Fais!": same meaning as "do/make (you)" in 2024-04-24-reading-6: kept fais-fr
 - `vocabulary[11]` "Faites!": same meaning as "do/make" in 2024-05-07-reading-7: kept faites-fr
+
+**2024-05-20-reading-8**
+
+- `vocabulary[0]` "d'abord": same meaning as "first" in 2024-05-07-reading-7: kept d-abord-fr
+- `vocabulary[1]` "ensuite": same meaning as "next / then" in 2024-05-07-reading-7: kept ensuite-fr
+- `vocabulary[2]` "puis": same meaning as "then" in 2024-05-23-temporal-words: kept puis-fr
+- `vocabulary[3]` "après": same meaning as "after" in 2024-05-07-reading-7: kept apres-fr
+- `vocabulary[4]` "finalement": same meaning as "finally" in 2024-05-07-reading-7: kept finalement-fr
+- `vocabulary[5]` "avant": same meaning as "before" in 2024-05-23-temporal-words: kept avant-fr
+- `vocabulary[6]` "pendant": same meaning as "during / for" in 2024-05-07-reading-7: kept pendant-fr
+- `vocabulary[7]` "je m'appelle": same meaning as "my name is / I'm called" in 2024-05-22-s-appeler: kept je-m-appelle-fr
+- `vocabulary[8]` "je me réveille": same meaning as "I wake up" in 2024-05-19-morning-routine: kept je-me-reveille-fr
+- `vocabulary[9]` "je me lève": same meaning as "I get up" in 2024-05-19-morning-routine: kept je-me-leve-fr
+- `vocabulary[10]` "je me lave": same meaning as "I wash myself" in 2024-05-17-getting-ready: kept je-me-lave-fr
+- `vocabulary[11]` "je m'habille": same meaning as "I get dressed" in 2024-05-17-getting-ready: kept je-m-habille-fr
+- `vocabulary[12]` "je me prépare": same meaning as "I get ready" in 2024-05-17-getting-ready: kept je-me-prepare-fr
+- `vocabulary[13]` "je me dépêche": new meaning "I hurry": je-me-depeche-fr.i-hurry; met before as "I'm hurrying" (je-me-depeche-fr, 2024-05-16-daily-reflexives)
+- `vocabulary[14]` "je me souviens": same meaning as "I remember" in 2024-05-16-daily-reflexives: kept je-me-souviens-fr
+- `vocabulary[15]` "on s'amuse": new meaning "we have fun": on-s-amuse-fr.we-have-fun; met before as "we're having fun" (on-s-amuse-fr, 2024-05-16-daily-reflexives)
+- `vocabulary[19]` "on se voit": same meaning as "we see each other" in 2024-06-06-reciprocal-reflexives: kept on-se-voit-fr
+- `vocabulary[22]` "Pense!": same meaning as "think(s)" in 2024-05-07-reading-7: kept pense-fr
+- `vocabulary[23]` "Parle!": same meaning as "Speak!" in 2024-05-13-commands-tu: kept parle-fr
+- `vocabulary[28]` "quelques": same meaning as "some/a few" in 2024-04-24-reading-6: kept quelques-fr
+- `vocabulary[31]` "café": same meaning as "coffee" in 2024-01-01-famous-words: kept cafe-fr
+- `vocabulary[39]` "contente": same meaning as "happy" in 2024-04-24-reading-6: kept contente-fr
+- `vocabulary[40]` "encore": same meaning as "more / again" in 2024-04-13-reading-5: kept encore-fr.more
+- `vocabulary[42]` "voilà": new meaning "there is / that's": voila-fr.there-is; met before as "there it is / here you go" (voila-fr, 2024-01-01-famous-words); "there you go" (voila-fr.there-you-go, 2024-03-30-reading-4)
+- `vocabulary[43]` "votre": same meaning as "your (singular, formal)" in 2024-01-31-possessive-adjectives: kept votre-fr
 
 **2024-05-26-causal-words**
 
@@ -258,6 +404,49 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[2]` "c'était": same meaning as "it was" in 2024-04-13-reading-5: kept c-etait-fr
 - `vocabulary[3]` "il y avait": same meaning as "there was / there were" in 2024-05-27-imparfait-all-verbs: kept il-y-avait-fr
 
+**2024-06-05-reading-9**
+
+- `vocabulary[1]` "Jardin du Luxembourg": same meaning as "Luxembourg Garden (famous Paris park)" in 2024-03-30-reading-4: kept jardin-du-luxembourg-fr
+- `vocabulary[4]` "la Sorbonne": same meaning as "the Sorbonne" in 2024-05-20-reading-8: kept la-sorbonne-fr
+- `vocabulary[9]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
+- `vocabulary[10]` "c'était": same meaning as "it was" in 2024-04-13-reading-5: kept c-etait-fr
+- `vocabulary[12]` "il faisait": same meaning as "it was (weather) / he was doing" in 2024-05-27-imparfait-all-verbs: kept il-faisait-fr
+- `vocabulary[14]` "parce que": same meaning as "because" in 2024-05-26-causal-words: kept parce-que-fr
+- `vocabulary[16]` "le travail": same meaning as "work" in 2024-03-24-everyday-nouns: kept le-travail-fr
+- `vocabulary[17]` "d'abord": same meaning as "first" in 2024-05-07-reading-7: kept d-abord-fr
+- `vocabulary[18]` "je me suis réveillé": same meaning as "I woke up (masc)" in 2024-06-07-reflexive-past: kept je-me-suis-reveille-fr
+- `vocabulary[19]` "d'habitude": same meaning as "usually, normally" in 2024-06-04-pc-vs-imparfait: kept d-habitude-fr
+- `vocabulary[23]` "j'ai voulu": same meaning as "I wanted" in 2024-06-02-passe-compose-irregular-2: kept j-ai-voulu-fr
+- `vocabulary[25]` "le temps": same meaning as "time/weather" in 2024-03-24-everyday-nouns: kept le-temps-fr
+- `vocabulary[30]` "près de": same meaning as "near, close to" in 2024-05-28-more-spatial-relations: kept pres-de-fr
+- `vocabulary[32]` "il y avait": same meaning as "there was / there were" in 2024-05-27-imparfait-all-verbs: kept il-y-avait-fr
+- `vocabulary[37]` "quand": same meaning as "when" in 2024-01-18-questions: kept quand-fr
+- `vocabulary[39]` "j'ai vu": same meaning as "I saw" in 2024-06-01-passe-compose-irregular-1: kept j-ai-vu-fr
+- `vocabulary[41]` "Pierre": same meaning as "Pierre (friend's name)" in 2024-06-05-reading-9: kept pierre-fr (written: pierre-fr.pierre)
+- `vocabulary[50]` "salut": same meaning as "hi / bye" in 2024-01-01-famous-words: kept salut-fr
+- `vocabulary[52]` "ici": same meaning as "here" in 2024-03-26-location-adverbs: kept ici-fr
+- `vocabulary[53]` "j'ai demandé": same meaning as "I asked" in 2024-05-30-passe-compose-er: kept j-ai-demande-fr
+- `vocabulary[68]` "car": same meaning as "for, because" in 2024-05-26-causal-words: kept car-fr
+- `vocabulary[69]` "j'ai eu": same meaning as "I had" in 2024-06-01-passe-compose-irregular-1: kept j-ai-eu-fr
+- `vocabulary[71]` "le problème": same meaning as "problem" in 2024-03-30-reading-4: kept le-probleme-fr
+- `vocabulary[73]` "ensuite": same meaning as "next / then" in 2024-05-07-reading-7: kept ensuite-fr
+- `vocabulary[74]` "comme": same meaning as "as, since" in 2024-05-26-causal-words: kept comme-fr
+- `vocabulary[80]` "en face de": same meaning as "across from, opposite" in 2024-05-28-more-spatial-relations: kept en-face-de-fr
+- `vocabulary[84]` "à côté de": same meaning as "next to, beside" in 2024-05-28-more-spatial-relations: kept a-cote-de-fr
+- `vocabulary[87]` "autour de": same meaning as "around" in 2024-05-28-more-spatial-relations: kept autour-de-fr
+- `vocabulary[88]` "partout": same meaning as "everywhere" in 2024-03-26-location-adverbs: kept partout-fr
+- `vocabulary[91]` "pendant que": same meaning as "while" in 2024-06-04-pc-vs-imparfait: kept pendant-que-fr
+- `vocabulary[94]` "Marie": same meaning as "Marie (friend's name)" in 2024-06-05-reading-9: kept marie-fr (written: marie-fr.marie)
+- `vocabulary[111]` "grâce à": same meaning as "thanks to" in 2024-05-26-causal-words: kept grace-a-fr
+- `vocabulary[118]` "nous sommes allés": same meaning as "we went" in 2024-05-29-passe-compose-agreement: kept nous-sommes-alles-fr
+- `vocabulary[137]` "derrière": same meaning as "behind" in 2024-01-20-prepositions: kept derriere-fr
+- `vocabulary[138]` "nous avons mangé": same meaning as "we ate" in 2024-04-12-manger: kept nous-avons-mange-fr
+- `vocabulary[146]` "la vie": same meaning as "life" in 2024-03-24-everyday-nouns: kept la-vie-fr
+- `vocabulary[149]` "à cause de": same meaning as "because of" in 2024-05-26-causal-words: kept a-cause-de-fr
+- `vocabulary[160]` "finalement": same meaning as "finally" in 2024-05-07-reading-7: kept finalement-fr
+- `vocabulary[162]` "chez moi": same meaning as "to my place / home" in 2024-05-20-reading-8: kept chez-moi-fr
+- `vocabulary[170]` "parfois": same meaning as "sometimes" in 2024-04-01-time-adverbs: kept parfois-fr
+
 **2024-01-25-emotion-phrases**
 
 - `vocabulary[0]` "je suis content que tu sois là": new meaning "I'm happy you're here": je-suis-content-que-tu-sois-la-fr.i-m-happy; met before as "I'm glad you're here" (je-suis-content-que-tu-sois-la-fr, 2024-06-05-reading-9) (written: je-suis-content-que-tu-sois-la-fr) (fixed by hand)
@@ -266,6 +455,28 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[0]` "vraiment": same meaning as "really / truly" in 2024-05-07-reading-7: kept vraiment-fr
 - `vocabulary[6]` "probablement": same meaning as "probably" in 2024-05-02-discourse-markers: kept probablement-fr
+
+**2024-02-01-reading-10**
+
+- `vocabulary[0]` "Paris": same meaning as "Paris (capital of France)" in 2024-06-05-reading-9: kept paris-fr
+- `vocabulary[7]` "la Tour Eiffel": same meaning as "Eiffel Tower" in 2024-04-24-reading-6: kept la-tour-eiffel-fr
+- `vocabulary[23]` "sois": same meaning as "Be! (informal)" in 2024-05-18-irregular-commands: kept sois-fr
+- `vocabulary[42]` "depuis": same meaning as "since / for" in 2024-05-23-temporal-words: kept depuis-fr
+- `vocabulary[43]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr
+- `vocabulary[54]` "en train de": same meaning as "in the process of" in 2024-05-07-reading-7: kept en-train-de-fr
+- `vocabulary[56]` "artiste": same meaning as "artist" in 2024-04-13-reading-5: kept artiste-fr
+- `vocabulary[61]` "essaies": same meaning as "try (subjunctive, tu)" in 2024-02-01-reading-10: kept essaies-fr (written: essaies-fr.try)
+- `vocabulary[63]` "professeur": same meaning as "teacher / professor" in 2024-05-20-reading-8: kept professeur-fr
+- `vocabulary[70]` "encore": same meaning as "still" in 2024-04-01-time-adverbs: kept encore-fr
+- `vocabulary[76]` "réussisse": same meaning as "succeeds/succeed (subjunctive)" in 2024-02-01-reading-10: kept reussisse-fr (written: reussisse-fr.succeeds)
+- `vocabulary[80]` "magnifique": same meaning as "magnificent" in 2024-05-07-reading-7: kept magnifique-fr
+- `vocabulary[84]` "toute la nuit": same meaning as "all night" in 2024-04-13-reading-5: kept toute-la-nuit-fr
+- `vocabulary[90]` "continuer": same meaning as "to continue" in 2024-04-13-reading-5: kept continuer-fr
+- `vocabulary[97]` "demain": same meaning as "tomorrow" in 2024-04-01-time-adverbs: kept demain-fr
+- `vocabulary[98]` "appeler": same meaning as "to call" in 2024-04-13-reading-5: kept appeler-fr
+- `vocabulary[100]` "demande": same meaning as "ask(s)" in 2024-05-07-reading-7: kept demande-fr
+- `vocabulary[105]` "grâce à": same meaning as "thanks to" in 2024-05-26-causal-words: kept grace-a-fr
+- `vocabulary[111]` "savoir": same meaning as "to know (facts/skills)" in 2024-05-08-savoir: kept savoir-fr
 
 **2024-02-10-donner**
 
@@ -307,6 +518,19 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[18]` "en face de": same meaning as "across from, opposite" in 2024-05-28-more-spatial-relations: kept en-face-de-fr
 - `vocabulary[30]` "vous voyez": same meaning as "you see (formal)" in 2024-01-17-voir: kept vous-voyez-fr
 
+**2024-02-12-reading-11**
+
+- `vocabulary[1]` "rapidement": new meaning "rapidly": rapidement-fr.rapidly; met before as "quickly" (rapidement-fr, 2024-01-22-common-adverbs)
+- `vocabulary[47]` "facilement": same meaning as "easily" in 2024-01-22-common-adverbs: kept facilement-fr
+- `vocabulary[96]` "questions": same meaning as "questions" in 2024-05-07-reading-7: kept questions-fr
+- `vocabulary[120]` "Paris": same meaning as "Paris (capital of France)" in 2024-06-05-reading-9: kept paris-fr
+- `vocabulary[122]` "Notre-Dame": same meaning as "Notre-Dame Cathedral (iconic medieval cathedral)" in 2024-02-01-reading-10: kept notre-dame-fr
+- `vocabulary[127]` "Montmartre": same meaning as "Montmartre (historic artist district in Paris)" in 2024-02-01-reading-10: kept montmartre-fr
+- `vocabulary[129]` "Lyon": same meaning as "Lyon (second largest city in France)" in 2024-06-05-reading-9: kept lyon-fr
+- `vocabulary[131]` "Bordeaux": same meaning as "Bordeaux (famous wine city in southwest France)" in 2024-02-01-reading-10: kept bordeaux-fr
+- `vocabulary[132]` "Nice": same meaning as "Nice (beautiful city on French Riviera)" in 2024-02-01-reading-10: kept nice-fr
+- `vocabulary[137]` "Vincent van Gogh": same meaning as "Vincent van Gogh" in 2024-04-13-reading-5: kept vincent-van-gogh-fr
+
 **2024-03-15-nature-animals**
 
 - `vocabulary[8]` "un chat": same meaning as "a cat (male)" in 2024-01-06-basic-nouns: kept un-chat-fr
@@ -331,6 +555,85 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-03-23-embedded-questions**
 
 - `vocabulary[1]` "je ne sais pas": same meaning as "I don't know" in 2024-05-08-savoir: kept je-ne-sais-pas-fr
+
+**2024-04-01-alphabet**
+
+- `vocabulary[0]` "a": a-fr already names "à", a different spelling: a-fr.a
+- `vocabulary[11]` "l": l-fr already names "l'", a different spelling: l-fr.l
+
+**2024-04-02-numbers**
+
+- `vocabulary[0]` "zéro": same meaning as "zero" in 2026-11-24-numbers: kept zero-fr
+- `vocabulary[1]` "un": same meaning as "one" in 2026-11-24-numbers: kept un-fr.one
+- `vocabulary[2]` "deux": same meaning as "two" in 2026-11-24-numbers: kept deux-fr
+- `vocabulary[3]` "trois": same meaning as "three" in 2026-11-24-numbers: kept trois-fr
+- `vocabulary[4]` "quatre": same meaning as "four" in 2026-11-24-numbers: kept quatre-fr
+- `vocabulary[5]` "cinq": same meaning as "five" in 2026-11-24-numbers: kept cinq-fr
+- `vocabulary[6]` "six": same meaning as "six" in 2026-11-24-numbers: kept six-fr
+- `vocabulary[7]` "sept": same meaning as "seven" in 2026-11-24-numbers: kept sept-fr
+- `vocabulary[8]` "huit": same meaning as "eight" in 2026-11-24-numbers: kept huit-fr
+- `vocabulary[9]` "neuf": same meaning as "nine" in 2026-11-24-numbers: kept neuf-fr
+- `vocabulary[10]` "dix": same meaning as "ten" in 2026-11-24-numbers: kept dix-fr
+- `vocabulary[11]` "vingt": same meaning as "twenty" in 2026-11-24-numbers: kept vingt-fr
+- `vocabulary[12]` "vingt-et-un": vingt-et-un-fr already names "vingt et un", a different spelling: vingt-et-un-fr.twenty-one
+- `vocabulary[13]` "vingt-deux": same meaning as "twenty-two" in 2026-11-24-numbers: kept vingt-deux-fr
+- `vocabulary[14]` "trente": same meaning as "thirty" in 2026-11-24-numbers: kept trente-fr
+- `vocabulary[17]` "quarante": same meaning as "forty" in 2026-11-24-numbers: kept quarante-fr
+- `vocabulary[19]` "cinquante": same meaning as "fifty" in 2026-11-24-numbers: kept cinquante-fr
+- `vocabulary[21]` "soixante": same meaning as "sixty" in 2026-11-24-numbers: kept soixante-fr
+- `vocabulary[24]` "soixante-dix": same meaning as "seventy" in 2026-11-24-numbers: kept soixante-dix-fr
+- `vocabulary[25]` "soixante-et-onze": soixante-et-onze-fr already names "soixante et onze", a different spelling: soixante-et-onze-fr.seventy-one
+- `vocabulary[28]` "quatre-vingts": same meaning as "eighty" in 2026-11-24-numbers: kept quatre-vingts-fr
+- `vocabulary[29]` "quatre-vingt-un": same meaning as "eighty-one" in 2026-11-24-numbers: kept quatre-vingt-un-fr
+- `vocabulary[30]` "quatre-vingt-dix": same meaning as "ninety" in 2026-11-24-numbers: kept quatre-vingt-dix-fr
+- `vocabulary[33]` "cent": same meaning as "one hundred" in 2026-11-24-numbers: kept cent-fr
+
+**2024-04-03-days-months**
+
+- `vocabulary[5]` "samedi": same meaning as "Saturday" in 2024-06-05-reading-9: kept samedi-fr
+- `vocabulary[23]` "aujourd'hui": same meaning as "today" in 2024-04-01-time-adverbs: kept aujourd-hui-fr
+- `vocabulary[24]` "demain": same meaning as "tomorrow" in 2024-04-01-time-adverbs: kept demain-fr
+- `vocabulary[25]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
+- `vocabulary[27]` "le week-end": same meaning as "the weekend" in 2024-06-05-reading-9: kept le-week-end-fr
+
+**2024-04-05-colors**
+
+- `vocabulary[29]` "un arbre": same meaning as "a tree" in 2024-03-15-nature-animals: kept un-arbre-fr
+- `vocabulary[30]` "une fleur": same meaning as "a flower" in 2024-03-15-nature-animals: kept une-fleur-fr
+
+**2024-04-06-french-countries**
+
+- `vocabulary[5]` "parler français": same meaning as "to speak French" in 2024-04-24-reading-6: kept parler-francais-fr
+
+**2024-04-07-language-stats**
+
+- `vocabulary[1]` "une voyelle": same meaning as "a vowel" in 2024-04-01-alphabet: kept une-voyelle-fr
+- `vocabulary[2]` "une consonne": same meaning as "a consonant" in 2024-04-01-alphabet: kept une-consonne-fr
+- `vocabulary[4]` "un accent": same meaning as "an accent" in 2024-04-01-alphabet: kept un-accent-fr
+- `vocabulary[18]` "francophone": same meaning as "French-speaking" in 2024-04-06-french-countries: kept francophone-fr
+
+**2024-12-18-pronunciation-test**
+
+- `vocabulary[0]` "bonjour": same meaning as "hello / good day" in 2024-01-01-famous-words: kept bonjour-fr
+- `vocabulary[1]` "merci": same meaning as "thank you" in 2024-01-01-famous-words: kept merci-fr
+- `vocabulary[2]` "au revoir": same meaning as "goodbye" in 2024-01-01-famous-words: kept au-revoir-fr
+- `vocabulary[3]` "oui": same meaning as "yes" in 2024-01-01-famous-words: kept oui-fr
+- `vocabulary[4]` "non": same meaning as "no" in 2024-01-01-famous-words: kept non-fr
+- `vocabulary[5]` "s'il vous plaît": same meaning as "please" in 2024-01-01-famous-words: kept s-il-vous-plait-fr
+- `vocabulary[6]` "rouge": same meaning as "red" in 2024-04-05-colors: kept rouge-fr
+- `vocabulary[7]` "trois": same meaning as "three" in 2026-11-24-numbers: kept trois-fr
+- `vocabulary[9]` "bon": same meaning as "good" in 2024-01-01-famous-words: kept bon-fr
+- `vocabulary[11]` "un": same meaning as "one" in 2026-11-24-numbers: kept un-fr.one
+- `vocabulary[13]` "je suis": same meaning as "I am" in 2024-01-02-etre: kept je-suis-fr
+- `vocabulary[14]` "tu es": same meaning as "you are (informal)" in 2024-01-02-etre: kept tu-es-fr
+- `vocabulary[15]` "il est": same meaning as "he is" in 2024-01-02-etre: kept il-est-fr
+- `vocabulary[16]` "tu": same meaning as "you (informal)" in 2024-01-01-pronouns: kept tu-fr
+- `vocabulary[18]` "plus": same meaning as "more" in 2024-04-08-comparisons: kept plus-fr
+- `vocabulary[19]` "comment": same meaning as "how" in 2024-01-18-questions: kept comment-fr
+- `vocabulary[20]` "très bien": new meaning "very good": tres-bien-fr.very-good; met before as "very well" (tres-bien-fr, 2024-04-24-reading-6)
+- `vocabulary[21]` "peut-être": same meaning as "maybe" in 2024-04-13-reading-5: kept peut-etre-fr
+- `vocabulary[22]` "beaucoup": same meaning as "a lot/much" in 2024-04-24-reading-6: kept beaucoup-fr
+- `vocabulary[24]` "nuit": same meaning as "night" in 2024-02-01-reading-10: kept nuit-fr
 
 ## Item types to confirm
 
@@ -780,6 +1083,10 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 - `items[1].hint` "Combine: it is + that (using être from M3)" (fixed by hand)
 
+**2024-01-22-reading2**
+
+- `description` "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2." (fixed by hand)
+
 **2024-01-23-unit2-practice**
 
 - `title` "Unit 2 Practice - Fill in the Blanks" (fixed by hand)
@@ -806,6 +1113,10 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 - `description` "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations." (fixed by hand)
 
+**2024-03-30-reading-4**
+
+- `description` "Unit 4 mastery! A natural conversation using all your vocabulary." (fixed by hand)
+
 **2024-04-03-unit-4-practice**
 
 - `title` "Unit 4 Practice - Fill in the Blanks" (fixed by hand)
@@ -814,6 +1125,23 @@ Learner text that names a module, unit or reading by number. The source says it 
 **2024-04-02-unit-4-exam**
 
 - `description` "Test everything from Unit 4! Survival phrases, essential verbs, negation, and expressing time and place." (fixed by hand)
+
+**2024-04-13-reading-5**
+
+- `description` "Unit 5 mastery! A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin." (fixed by hand)
+- `vocabulary[15].note` "Unit 5 verb" (fixed by hand)
+- `vocabulary[16].note` "Unit 4 verb" (fixed by hand)
+- `vocabulary[17].note` "Unit 5 verb" (fixed by hand)
+- `vocabulary[18].note` "Unit 2 verb" (fixed by hand)
+- `vocabulary[19].note` "Unit 3 verb" (fixed by hand)
+- `vocabulary[20].note` "Unit 3 verb" (fixed by hand)
+- `vocabulary[21].note` "Unit 3 verb" (fixed by hand)
+- `vocabulary[22].note` "Unit 2 verb" (fixed by hand)
+- `vocabulary[23].note` "Unit 4 verb" (fixed by hand)
+- `vocabulary[24].note` "Unit 4 verb" (fixed by hand)
+- `vocabulary[25].note` "Unit 4 verb" (fixed by hand)
+- `vocabulary[26].note` "Unit 4 verb" (fixed by hand)
+- `vocabulary[37].note` "Unit 4 - polite expression" (fixed by hand)
 
 **2024-04-15-unit-5-practice**
 
@@ -825,6 +1153,30 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 - `description` "Test everything from Unit 5! Comparisons, slang, past tense, conditionals, and food vocabulary." (fixed by hand)
 
+**2024-04-24-reading-6**
+
+- `description` "A family plans a trip to Paris. Uses Unit 6 vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin." (fixed by hand)
+- `vocabulary[9].note` "Unit 5 verb" (fixed by hand)
+- `vocabulary[38].note` "from Unit 6 mettre module" (fixed by hand)
+- `vocabulary[39].note` "from Unit 1" (fixed by hand)
+- `vocabulary[48].note` "from Unit 5 food-nouns" (fixed by hand)
+- `vocabulary[49].note` "from Unit 5 food-nouns" (fixed by hand)
+- `vocabulary[51].note` "Unit 4 time-adverbs" (fixed by hand)
+- `vocabulary[53].note` "Unit 3 voir module" (fixed by hand)
+- `vocabulary[55].note` "from Unit 5 comparisons" (fixed by hand)
+- `vocabulary[56].note` "time expression with Unit 6 moment" (fixed by hand)
+- `vocabulary[57].note` "Unit 4 faire module" (fixed by hand)
+- `vocabulary[58].note` "plural adjective from Unit 2" (fixed by hand)
+- `vocabulary[60].note` "from Unit 4 parler" (fixed by hand)
+- `vocabulary[65].note` "from Unit 4 parler" (fixed by hand)
+- `vocabulary[67].note` "from Unit 1 famous-words" (fixed by hand)
+- `vocabulary[68].note` "bon from Unit 2 adjectives" (fixed by hand)
+- `vocabulary[69].note` "Unit 4 time-adverbs" (fixed by hand)
+- `vocabulary[70].note` "Unit 1 avoir module" (fixed by hand)
+- `vocabulary[71].note` "from Unit 2 adjectives (beau)" (fixed by hand)
+- `vocabulary[72].note` "superlative from Unit 5" (fixed by hand)
+- `vocabulary[74].note` "Unit 2 prepositions" (fixed by hand)
+
 **2024-04-27-unit-6-practice**
 
 - `title` "Unit 6 Practice - Fill in the Blanks" (fixed by hand)
@@ -834,6 +1186,22 @@ Learner text that names a module, unit or reading by number. The source says it 
 **2024-04-26-unit-6-exam**
 
 - `description` "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and essential vocabulary." (fixed by hand)
+
+**2024-05-07-reading-7**
+
+- `title` "Reading 7 - L'Art d'Apprendre" (fixed by hand)
+- `description` "A philosophical article about learning and education. Uses all cognitive verbs from Unit 7!" (fixed by hand)
+- `vocabulary[0].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[2].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[5].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[9].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[12].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[14].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[18].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[20].note` "Unit 7 verb" (fixed by hand)
+- `vocabulary[23].note` "Unit 6 verb" (fixed by hand)
+- `vocabulary[25].note` "Unit 6 verb" (fixed by hand)
+- `vocabulary[55].note` "Unit 6 verb" (fixed by hand)
 
 **2024-05-11-unit-7-practice**
 
@@ -848,6 +1216,11 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 - `concepts[1].term` "This should've been in Unit 1!" (fixed by hand)
 
+**2024-05-20-reading-8**
+
+- `title` "Reading 8 - Ma Journée" (fixed by hand)
+- `description` "A story about a typical day. Uses temporal words, reflexive verbs, and all Unit 8 vocabulary!" (fixed by hand)
+
 **2024-05-25-unit-8-practice**
 
 - `title` "Unit 8 Practice - Fill in the Blanks" (fixed by hand)
@@ -857,6 +1230,11 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 - `description` "Test everything from Unit 8! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions." (fixed by hand)
 
+**2024-06-05-reading-9**
+
+- `title` "Reading 9 - Une Histoire du Passé" (fixed by hand)
+- `description` "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of Unit 9" (fixed by hand)
+
 **2024-06-10-unit-9-practice**
 
 - `title` "Unit 9 Practice - Fill in the Blanks" (fixed by hand)
@@ -865,6 +1243,11 @@ Learner text that names a module, unit or reading by number. The source says it 
 **2024-06-09-unit-9-exam**
 
 - `description` "Test everything from Unit 9! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery." (fixed by hand)
+
+**2024-02-01-reading-10**
+
+- `title` "Reading 10 - Mes Rêves et Mes Espoirs" (fixed by hand)
+- `description` "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more" (fixed by hand)
 
 **2024-02-05-unit-10-practice**
 
@@ -881,6 +1264,10 @@ Learner text that names a module, unit or reading by number. The source says it 
 **2024-02-08-age-personal-info**
 
 - `description` "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information. Finally complete what should have been in Unit 1!" (fixed by hand)
+
+**2024-02-12-reading-11**
+
+- `title` "Reading 11 - La France Moderne" (fixed by hand)
 
 **2024-02-16-unit-11-practice**
 
@@ -1346,6 +1733,30 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 - 7 × framed by its instruction: `items[1]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[11]`
 
+## Passage words with no pop-up
+
+Each word below appears in the reading’s passage and has no dictionary entry (src/data/dictionary/), no row in the reading’s glossary or vocabulary table, and is not a name in curriculum-graph/languages/fr/names.json. Each needs one of the three, so every word a learner taps opens a pop-up.
+
+**2024-04-13-reading-5**
+
+- 5 words: boisson, favorite, fées, vertes, Terrasse
+
+**2024-05-07-reading-7**
+
+- 1 word: étudiante
+
+**2024-02-12-reading-11**
+
+- 4 words: traverse, bord, vélo, tram
+
+## Estimates to confirm
+
+The source sets no value, so the conversion wrote an estimate.
+
+**2026-11-24-negation-guide**
+
+- `minutes` 3 minutes for three parts (L sets Cognates 4, Liaison 4, Questions 5, Verb Patterns 6)
+
 ## Hand edits kept
 
 The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.
@@ -1359,11 +1770,19 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `concepts[2].definition` "Every exercise combines plurals with verbs from M2-M3" → "Every exercise combines plurals with être and avoir"
 
+**2024-10-20-liaison-help**
+
+- `parts[5].note` "A silent h counts as a vowel, so homme takes "l'" as well. The same happens to si before il in s'il vous plaît. Elision and liaison work together. One friend is l'ami. More than one is les amis, where les keeps its s and links with a z sound." → "A silent h counts as a vowel, so homme takes l' as well. The same happens to si before il in s'il vous plaît. Elision and liaison work together. One friend is l'ami. More than one is les amis, where les keeps its s and links with a z sound."
+
 **2024-01-10-unit1-practice**
 
 - `title` "Unit 1 Practice - Fill in the Blanks" → "Essential Grammar Practice - Fill in the Blanks"
 - `description` "Complete sentences using everything you've learned in Unit 1. Fill in the blanks to create correct French sentences!" → "Complete sentences using everything you've learned in this unit. Fill in the blanks to create correct French sentences!"
 - `can_do[2]` "Apply everything from Unit 1 in context" → "Apply everything from this unit in context"
+
+**2026-11-24-negation-guide**
+
+- `checks` "[]" → "["id":"k1","ask":"Which one means “I don't have a cat”?","options":["text":"Je n'ai pas de chat.","fr":true,"right":true,"text":"Je n'ai pas un chat.","fr":true,"text":"Je ne ai pas de chat.","fr":true],"why":"After pas, un becomes de, and ne becomes n' before a vowel: Je n'ai pas de chat.","id":"k2","ask":"Which one means “You aren't a child”?","options":["text":"Tu ne pas es un enfant.","fr":true,"text":"Tu n'es pas un enfant.","fr":true,"right":true,"text":"Tu n'es pas d'enfant.","fr":true],"why":"ne goes before the verb and pas after it. After être, un stays as it is: Tu n'es pas un enfant.","id":"k3","ask":"Which one means “I don't have a car anymore”?","options":["text":"Je n'ai jamais de voiture.","fr":true,"text":"Je n'ai pas de voiture.","fr":true,"text":"Je n'ai plus de voiture.","fr":true,"right":true],"why":"Put plus where pas goes to say anymore. jamais means never, and pas means not."]"
 
 **2024-01-13-ca-survival**
 
@@ -1372,6 +1791,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-01-18-questions**
 
 - `vocabulary[11].word_id` "ca-va-fr.question-2" → "ca-va-fr.question"
+
+**2024-01-22-reading2**
+
+- `description` "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2." → "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far."
 
 **2024-01-23-unit2-practice**
 
@@ -1404,6 +1827,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations." → "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
 
+**2024-03-30-reading-4**
+
+- `description` "Unit 4 mastery! A natural conversation using all your vocabulary." → "A natural conversation using all your vocabulary."
+
 **2024-04-03-unit-4-practice**
 
 - `title` "Unit 4 Practice - Fill in the Blanks" → "Everyday Words Practice - Fill in the Blanks"
@@ -1412,6 +1839,23 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-04-02-unit-4-exam**
 
 - `description` "Test everything from Unit 4! Survival phrases, essential verbs, negation, and expressing time and place." → "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
+
+**2024-04-13-reading-5**
+
+- `description` "Unit 5 mastery! A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin." → "A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin."
+- `vocabulary[15].note` ""Unit 5 verb"" → "(removed)"
+- `vocabulary[16].note` ""Unit 4 verb"" → "(removed)"
+- `vocabulary[17].note` ""Unit 5 verb"" → "(removed)"
+- `vocabulary[18].note` ""Unit 2 verb"" → "(removed)"
+- `vocabulary[19].note` ""Unit 3 verb"" → "(removed)"
+- `vocabulary[20].note` ""Unit 3 verb"" → "(removed)"
+- `vocabulary[21].note` ""Unit 3 verb"" → "(removed)"
+- `vocabulary[22].note` ""Unit 2 verb"" → "(removed)"
+- `vocabulary[23].note` ""Unit 4 verb"" → "(removed)"
+- `vocabulary[24].note` ""Unit 4 verb"" → "(removed)"
+- `vocabulary[25].note` ""Unit 4 verb"" → "(removed)"
+- `vocabulary[26].note` ""Unit 4 verb"" → "(removed)"
+- `vocabulary[37].note` "Unit 4 - polite expression" → "polite expression"
 
 **2024-04-15-unit-5-practice**
 
@@ -1427,6 +1871,31 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `vocabulary[11].word_id` "vous-commandez-fr.question" → "vous-commandez-fr.are-you-ready"
 
+**2024-04-24-reading-6**
+
+- `description` "A family plans a trip to Paris. Uses Unit 6 vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin." → "A family plans a trip to Paris. Uses this unit's vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin."
+- `vocabulary[9].note` ""Unit 5 verb"" → "(removed)"
+- `vocabulary[29].note` "feminine; from Unit 4 everyday-nouns" → "feminine"
+- `vocabulary[38].note` ""from Unit 6 mettre module"" → "(removed)"
+- `vocabulary[39].note` ""from Unit 1"" → "(removed)"
+- `vocabulary[48].note` ""from Unit 5 food-nouns"" → "(removed)"
+- `vocabulary[49].note` ""from Unit 5 food-nouns"" → "(removed)"
+- `vocabulary[51].note` ""Unit 4 time-adverbs"" → "(removed)"
+- `vocabulary[53].note` ""Unit 3 voir module"" → "(removed)"
+- `vocabulary[55].note` ""from Unit 5 comparisons"" → "(removed)"
+- `vocabulary[56].note` "time expression with Unit 6 moment" → "time expression"
+- `vocabulary[57].note` ""Unit 4 faire module"" → "(removed)"
+- `vocabulary[58].note` "plural adjective from Unit 2" → "plural adjective"
+- `vocabulary[60].note` ""from Unit 4 parler"" → "(removed)"
+- `vocabulary[65].note` ""from Unit 4 parler"" → "(removed)"
+- `vocabulary[67].note` ""from Unit 1 famous-words"" → "(removed)"
+- `vocabulary[68].note` "bon from Unit 2 adjectives" → "feminine of bon"
+- `vocabulary[69].note` ""Unit 4 time-adverbs"" → "(removed)"
+- `vocabulary[70].note` ""Unit 1 avoir module"" → "(removed)"
+- `vocabulary[71].note` "from Unit 2 adjectives (beau)" → "feminine of beau"
+- `vocabulary[72].note` "superlative from Unit 5" → "superlative"
+- `vocabulary[74].note` ""Unit 2 prepositions"" → "(removed)"
+
 **2024-04-27-unit-6-practice**
 
 - `title` "Unit 6 Practice - Fill in the Blanks" → "Basic Fluency Practice - Fill in the Blanks"
@@ -1440,6 +1909,22 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-04-29-comprendre**
 
 - `vocabulary[2].word_id` "tu-comprends-fr.you-understand" → "tu-comprends-fr"
+
+**2024-05-07-reading-7**
+
+- `title` "Reading 7 - L'Art d'Apprendre" → "Reading - L'Art d'Apprendre"
+- `description` "A philosophical article about learning and education. Uses all cognitive verbs from Unit 7!" → "A philosophical article about learning and education. Uses all cognitive verbs from this unit!"
+- `vocabulary[0].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[2].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[5].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[9].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[12].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[14].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[18].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[20].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[23].note` ""Unit 6 verb"" → "(removed)"
+- `vocabulary[25].note` ""Unit 6 verb"" → "(removed)"
+- `vocabulary[55].note` ""Unit 6 verb"" → "(removed)"
 
 **2024-05-11-unit-7-practice**
 
@@ -1457,6 +1942,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-05-17-getting-ready**
 
 - `vocabulary[1].word_id` "je-me-lave-fr.i-wash-myself" → "je-me-lave-fr"
+
+**2024-05-20-reading-8**
+
+- `title` "Reading 8 - Ma Journée" → "Reading - Ma Journée"
+- `description` "A story about a typical day. Uses temporal words, reflexive verbs, and all Unit 8 vocabulary!" → "A story about a typical day. Uses temporal words, reflexive verbs, and all this unit's vocabulary!"
 
 **2024-05-25-unit-8-practice**
 
@@ -1477,6 +1967,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[9].gloss` "Thanks to being hungry, I ate" → "Because I was hungry, I ate"
 - `items[9].hint` ""WRONG! Fix: ___ j'avais faim, j'ai mangé (Because I was hungry, I ate)"" → "(removed)"
 
+**2024-06-05-reading-9**
+
+- `title` "Reading 9 - Une Histoire du Passé" → "Reading - Une Histoire du Passé"
+- `description` "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of Unit 9" → "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of this unit"
+
 **2024-06-10-unit-9-practice**
 
 - `title` "Unit 9 Practice - Fill in the Blanks" → "Discourse & Past Tense Practice - Fill in the Blanks"
@@ -1489,6 +1984,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-01-25-emotion-phrases**
 
 - `vocabulary[0].word_id` "je-suis-content-que-tu-sois-la-fr.i-m-happy" → "je-suis-content-que-tu-sois-la-fr"
+
+**2024-02-01-reading-10**
+
+- `title` "Reading 10 - Mes Rêves et Mes Espoirs" → "Reading - Mes Rêves et Mes Espoirs"
+- `description` "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more" → "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more"
 
 **2024-02-05-unit-10-practice**
 
@@ -1505,6 +2005,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-02-08-age-personal-info**
 
 - `description` "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information. Finally complete what should have been in Unit 1!" → "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information."
+
+**2024-02-12-reading-11**
+
+- `title` "Reading 11 - La France Moderne" → "Reading - La France Moderne"
 
 **2024-02-16-unit-11-practice**
 
@@ -1536,6 +2040,12 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 The live app stores answers under these exercise ids and concept indexes, and no converted item or concept has the same content, so live-ids.json has no entry for them.
 
+**2024-01-09-reading1**
+
+- `concepts[0]` concept "First Reading Milestone"
+- `concepts[1]` concept "Comprehension Achievement"
+- `concepts[2]` concept "Functional Literacy"
+
 **2024-01-10-unit1-practice**
 
 - `concepts[0]` concept "Foundation Reinforcement"
@@ -1547,6 +2057,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[0]` concept "Foundation Layer Complete"
 - `concepts[1]` concept "Functional Composition"
 - `concepts[2]` concept "Immediate Utility"
+
+**2024-01-22-reading2**
+
+- `concepts[0]` concept "Adventure Reading Milestone"
+- `concepts[1]` concept "Conversational French"
+- `concepts[2]` concept "Cultural Context"
 
 **2024-01-23-unit2-practice**
 
@@ -1560,6 +2076,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[1]` concept "Essential Communication Verbs"
 - `concepts[2]` concept "Question Formation"
 - `concepts[3]` concept "Descriptive Language"
+
+**2024-02-03-reading3**
+
+- `concepts[0]` concept "Advanced Reading Milestone"
+- `concepts[1]` concept "Natural French Flow"
+- `concepts[2]` concept "Complex Relationships"
 
 **2024-02-04-unit3-practice**
 
@@ -1575,6 +2097,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[3]` concept "Possession and Ownership"
 - `concepts[4]` concept "Contractions"
 
+**2024-03-30-reading-4**
+
+- `concepts[0]` concept "Café Conversation Milestone"
+- `concepts[1]` concept "Real-World French"
+- `concepts[2]` concept "Cultural Integration"
+
 **2024-04-03-unit-4-practice**
 
 - `concepts[0]` concept "Survival French Practice"
@@ -1588,6 +2116,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[2]` concept "Negation and Politeness"
 - `concepts[3]` concept "Time and Space Orientation"
 - `concepts[4]` concept "Daily Life Vocabulary"
+
+**2024-04-13-reading-5**
+
+- `concepts[0]` concept "Art and History Milestone"
+- `concepts[1]` concept "French Art Culture"
+- `concepts[2]` concept "Past Tense Narrative"
 
 **2024-04-15-unit-5-practice**
 
@@ -1603,6 +2137,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[3]` concept "Conditional Thinking"
 - `concepts[4]` concept "Food and Time Vocabulary"
 
+**2024-04-24-reading-6**
+
+- `concepts[0]` concept "Advanced Communication Milestone"
+- `concepts[1]` concept "Real-World Scenarios"
+- `concepts[2]` concept "Fluency Integration"
+
 **2024-04-27-unit-6-practice**
 
 - `concepts[0]` concept "Fluency Practice"
@@ -1616,6 +2156,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[2]` concept "Essential Communication Verbs"
 - `concepts[3]` concept "Expressing Needs and Wants"
 - `concepts[4]` concept "Extensive Vocabulary"
+
+**2024-05-07-reading-7**
+
+- `concepts[0]` concept "Academic Reading Milestone"
+- `concepts[1]` concept "Educational Context"
+- `concepts[2]` concept "Cognitive Language Integration"
 
 **2024-05-11-unit-7-practice**
 
@@ -1631,6 +2177,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[3]` concept "On vs Nous Usage"
 - `concepts[4]` concept "Cultural and Academic Vocabulary"
 
+**2024-05-20-reading-8**
+
+- `concepts[0]` concept "Daily Life Reading Milestone"
+- `concepts[1]` concept "Routine and Relationships"
+- `concepts[2]` concept "Temporal Narrative Integration"
+
 **2024-05-25-unit-8-practice**
 
 - `concepts[0]` concept "Daily Life Practice"
@@ -1644,6 +2196,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[2]` concept "Reflexive Verbs"
 - `concepts[3]` concept "Routine and Commands"
 - `concepts[4]` concept "Reciprocal Actions"
+
+**2024-06-05-reading-9**
+
+- `concepts[0]` concept "Narrative Reading Milestone"
+- `concepts[1]` concept "Past Tense Narrative"
+- `concepts[2]` concept "Discourse Integration"
 
 **2024-06-10-unit-9-practice**
 
@@ -1659,6 +2217,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[3]` concept "Plus-que-parfait"
 - `concepts[4]` concept "Discourse Markers"
 
+**2024-02-01-reading-10**
+
+- `concepts[0]` concept "Expertise Reading Milestone"
+- `concepts[1]` concept "Sophisticated Discourse"
+- `concepts[2]` concept "Mastery Integration"
+
 **2024-02-05-unit-10-practice**
 
 - `concepts[0]` concept "Mastery Practice"
@@ -1672,6 +2236,12 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[2]` concept "Subjunctive Mood"
 - `concepts[3]` concept "Indefinite Pronouns"
 - `concepts[4]` concept "Advanced Hypotheticals"
+
+**2024-02-12-reading-11**
+
+- `concepts[0]` concept "Final Reading Milestone"
+- `concepts[1]` concept "Complete French Mastery"
+- `concepts[2]` concept "B2+ Level Achievement"
 
 **2024-02-16-unit-11-practice**
 
@@ -1687,6 +2257,223 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[3]` concept "Passive Voice"
 - `concepts[4]` concept "Causative Faire"
 - `concepts[5]` concept "Gerunds and Transitions"
+
+**2024-04-01-alphabet**
+
+- `2024-04-01-alphabet.1` exercise "A (letter)" → "a"
+- `2024-04-01-alphabet.2` exercise "B (letter)" → "b"
+- `2024-04-01-alphabet.3` exercise "C (letter)" → "c"
+- `2024-04-01-alphabet.4` exercise "D (letter)" → "d"
+- `2024-04-01-alphabet.5` exercise "E (letter)" → "e"
+- `2024-04-01-alphabet.6` exercise "F (letter)" → "f"
+- `2024-04-01-alphabet.7` exercise "G (letter)" → "g"
+- `2024-04-01-alphabet.8` exercise "H (letter)" → "h"
+- `2024-04-01-alphabet.9` exercise "I (letter)" → "i"
+- `2024-04-01-alphabet.10` exercise "J (letter)" → "j"
+- `2024-04-01-alphabet.11` exercise "K (letter)" → "k"
+- `2024-04-01-alphabet.12` exercise "L (letter)" → "l"
+- `2024-04-01-alphabet.13` exercise "M (letter)" → "m"
+- `2024-04-01-alphabet.14` exercise "N (letter)" → "n"
+- `2024-04-01-alphabet.15` exercise "O (letter)" → "o"
+- `2024-04-01-alphabet.16` exercise "P (letter)" → "p"
+- `2024-04-01-alphabet.17` exercise "Q (letter)" → "q"
+- `2024-04-01-alphabet.18` exercise "R (letter)" → "r"
+- `2024-04-01-alphabet.19` exercise "S (letter)" → "s"
+- `2024-04-01-alphabet.20` exercise "T (letter)" → "t"
+- `2024-04-01-alphabet.21` exercise "U (letter)" → "u"
+- `2024-04-01-alphabet.22` exercise "V (letter)" → "v"
+- `2024-04-01-alphabet.23` exercise "W (letter)" → "w"
+- `2024-04-01-alphabet.24` exercise "X (letter)" → "x"
+- `2024-04-01-alphabet.25` exercise "Y (letter)" → "y"
+- `2024-04-01-alphabet.26` exercise "Z (letter)" → "z"
+- `2024-04-01-alphabet.27` exercise "the alphabet" → "l'alphabet"
+- `2024-04-01-alphabet.28` exercise "a letter" → "une lettre"
+- `2024-04-01-alphabet.29` exercise "an accent" → "un accent"
+- `2024-04-01-alphabet.30` exercise "a vowel" → "une voyelle"
+- `2024-04-01-alphabet.31` exercise "a consonant" → "une consonne"
+- `2024-04-01-alphabet.32` exercise "to spell" → "épeler"
+- `2024-04-01-alphabet.33` exercise "How do you write that?" → "Comment ça s'écrit?"
+
+**2024-04-02-numbers**
+
+- `2024-04-02-numbers.1` exercise "zero" → "zéro"
+- `2024-04-02-numbers.2` exercise "one" → "un"
+- `2024-04-02-numbers.3` exercise "two" → "deux"
+- `2024-04-02-numbers.4` exercise "three" → "trois"
+- `2024-04-02-numbers.5` exercise "four" → "quatre"
+- `2024-04-02-numbers.6` exercise "five" → "cinq"
+- `2024-04-02-numbers.7` exercise "six" → "six"
+- `2024-04-02-numbers.8` exercise "seven" → "sept"
+- `2024-04-02-numbers.9` exercise "eight" → "huit"
+- `2024-04-02-numbers.10` exercise "nine" → "neuf"
+- `2024-04-02-numbers.11` exercise "ten" → "dix"
+- `2024-04-02-numbers.12` exercise "twenty" → "vingt"
+- `2024-04-02-numbers.13` exercise "twenty-one" → "vingt-et-un"
+- `2024-04-02-numbers.14` exercise "twenty-two" → "vingt-deux"
+- `2024-04-02-numbers.15` exercise "thirty" → "trente"
+- `2024-04-02-numbers.16` exercise "thirty-one" → "trente-et-un"
+- `2024-04-02-numbers.17` exercise "thirty-five" → "trente-cinq"
+- `2024-04-02-numbers.18` exercise "forty" → "quarante"
+- `2024-04-02-numbers.19` exercise "forty-one" → "quarante-et-un"
+- `2024-04-02-numbers.20` exercise "fifty" → "cinquante"
+- `2024-04-02-numbers.21` exercise "fifty-one" → "cinquante-et-un"
+- `2024-04-02-numbers.22` exercise "sixty" → "soixante"
+- `2024-04-02-numbers.23` exercise "sixty-one" → "soixante-et-un"
+- `2024-04-02-numbers.24` exercise "sixty-nine" → "soixante-neuf"
+- `2024-04-02-numbers.25` exercise "seventy" → "soixante-dix"
+- `2024-04-02-numbers.26` exercise "seventy-one" → "soixante-et-onze"
+- `2024-04-02-numbers.27` exercise "seventy-five" → "soixante-quinze"
+- `2024-04-02-numbers.28` exercise "seventy-nine" → "soixante-dix-neuf"
+- `2024-04-02-numbers.29` exercise "eighty" → "quatre-vingts"
+- `2024-04-02-numbers.30` exercise "eighty-one" → "quatre-vingt-un"
+- `2024-04-02-numbers.31` exercise "ninety" → "quatre-vingt-dix"
+- `2024-04-02-numbers.32` exercise "ninety-one" → "quatre-vingt-onze"
+- `2024-04-02-numbers.33` exercise "ninety-nine" → "quatre-vingt-dix-neuf"
+- `2024-04-02-numbers.34` exercise "one hundred" → "cent"
+- `2024-04-02-numbers.35` exercise "two hundred" → "deux cents"
+- `2024-04-02-numbers.36` exercise "two hundred one" → "deux cent un"
+- `2024-04-02-numbers.37` exercise "one thousand" → "mille"
+- `2024-04-02-numbers.38` exercise "three thousand" → "trois mille"
+- `2024-04-02-numbers.39` exercise "one million" → "un million"
+
+**2024-04-03-days-months**
+
+- `2024-04-03-days-months.1` exercise "Monday" → "lundi"
+- `2024-04-03-days-months.2` exercise "Tuesday" → "mardi"
+- `2024-04-03-days-months.3` exercise "Wednesday" → "mercredi"
+- `2024-04-03-days-months.4` exercise "Thursday" → "jeudi"
+- `2024-04-03-days-months.5` exercise "Friday" → "vendredi"
+- `2024-04-03-days-months.6` exercise "Saturday" → "samedi"
+- `2024-04-03-days-months.7` exercise "Sunday" → "dimanche"
+- `2024-04-03-days-months.8` exercise "January" → "janvier"
+- `2024-04-03-days-months.9` exercise "February" → "février"
+- `2024-04-03-days-months.10` exercise "March" → "mars"
+- `2024-04-03-days-months.11` exercise "April" → "avril"
+- `2024-04-03-days-months.12` exercise "May" → "mai"
+- `2024-04-03-days-months.13` exercise "June" → "juin"
+- `2024-04-03-days-months.14` exercise "July" → "juillet"
+- `2024-04-03-days-months.15` exercise "August" → "août"
+- `2024-04-03-days-months.16` exercise "September" → "septembre"
+- `2024-04-03-days-months.17` exercise "October" → "octobre"
+- `2024-04-03-days-months.18` exercise "November" → "novembre"
+- `2024-04-03-days-months.19` exercise "December" → "décembre"
+- `2024-04-03-days-months.20` exercise "spring" → "le printemps"
+- `2024-04-03-days-months.21` exercise "summer" → "l'été"
+- `2024-04-03-days-months.22` exercise "fall / autumn" → "l'automne"
+- `2024-04-03-days-months.23` exercise "winter" → "l'hiver"
+- `2024-04-03-days-months.24` exercise "today" → "aujourd'hui"
+- `2024-04-03-days-months.25` exercise "tomorrow" → "demain"
+- `2024-04-03-days-months.26` exercise "yesterday" → "hier"
+- `2024-04-03-days-months.27` exercise "this week" → "cette semaine"
+- `2024-04-03-days-months.28` exercise "the weekend" → "le week-end"
+
+**2024-04-04-holidays**
+
+- `2024-04-04-holidays.1` exercise "a holiday / party / celebration" → "une fête"
+- `2024-04-04-holidays.2` exercise "a public holiday / day off" → "un jour férié"
+- `2024-04-04-holidays.3` exercise "New Year's Day" → "le Nouvel An"
+- `2024-04-04-holidays.4` exercise "Easter" → "Pâques"
+- `2024-04-04-holidays.5` exercise "Labor Day" → "la Fête du Travail"
+- `2024-04-04-holidays.6` exercise "Bastille Day / National Day" → "la Fête Nationale"
+- `2024-04-04-holidays.7` exercise "All Saints' Day" → "la Toussaint"
+- `2024-04-04-holidays.8` exercise "Christmas" → "Noël"
+- `2024-04-04-holidays.9` exercise "Candlemas / Crêpe Day" → "la Chandeleur"
+- `2024-04-04-holidays.10` exercise "April Fools' Day" → "le Poisson d'Avril"
+- `2024-04-04-holidays.11` exercise "Music Festival Day" → "la Fête de la Musique"
+- `2024-04-04-holidays.12` exercise "Christmas/New Year's Eve dinner" → "le Réveillon"
+- `2024-04-04-holidays.13` exercise "King Cake" → "la Galette des Rois"
+- `2024-04-04-holidays.14` exercise "Valentine's Day" → "la Saint-Valentin"
+- `2024-04-04-holidays.15` exercise "Halloween" → "Halloween"
+- `2024-04-04-holidays.16` exercise "Merry Christmas!" → "Joyeux Noël!"
+- `2024-04-04-holidays.17` exercise "Happy New Year!" → "Bonne année!"
+- `2024-04-04-holidays.18` exercise "Happy Easter!" → "Joyeuses Pâques!"
+- `2024-04-04-holidays.19` exercise "Happy Holidays!" → "Bonnes fêtes!"
+- `2024-04-04-holidays.20` exercise "Happy Birthday!" → "Bon anniversaire!"
+
+**2024-04-05-colors**
+
+- `2024-04-05-colors.1` exercise "blue" → "bleu / bleue"
+- `2024-04-05-colors.2` exercise "red" → "rouge"
+- `2024-04-05-colors.3` exercise "green" → "vert / verte"
+- `2024-04-05-colors.4` exercise "yellow" → "jaune"
+- `2024-04-05-colors.5` exercise "white" → "blanc / blanche"
+- `2024-04-05-colors.6` exercise "black" → "noir / noire"
+- `2024-04-05-colors.7` exercise "orange" → "orange"
+- `2024-04-05-colors.8` exercise "purple/violet" → "violet / violette"
+- `2024-04-05-colors.9` exercise "pink" → "rose"
+- `2024-04-05-colors.10` exercise "gray" → "gris / grise"
+- `2024-04-05-colors.11` exercise "brown" → "marron"
+- `2024-04-05-colors.12` exercise "beige" → "beige"
+- `2024-04-05-colors.13` exercise "light (shade)" → "clair"
+- `2024-04-05-colors.14` exercise "dark (shade)" → "foncé"
+- `2024-04-05-colors.15` exercise "bright/vivid" → "vif / vive"
+- `2024-04-05-colors.16` exercise "pale" → "pâle"
+- `2024-04-05-colors.17` exercise "golden" → "doré"
+- `2024-04-05-colors.18` exercise "silver" → "argenté"
+- `2024-04-05-colors.19` exercise "multicolored" → "multicolore"
+- `2024-04-05-colors.20` exercise "colorful" → "coloré / colorée"
+- `2024-04-05-colors.21` exercise "the color" → "la couleur"
+- `2024-04-05-colors.22` exercise "What color?" → "De quelle couleur?"
+- `2024-04-05-colors.23` exercise "What color is...?" → "De quelle couleur est...?"
+- `2024-04-05-colors.24` exercise "the sky" → "le ciel"
+- `2024-04-05-colors.25` exercise "the grass" → "l'herbe"
+- `2024-04-05-colors.26` exercise "the clouds" → "les nuages"
+- `2024-04-05-colors.27` exercise "the sun" → "le soleil"
+- `2024-04-05-colors.28` exercise "the sea" → "la mer"
+- `2024-04-05-colors.29` exercise "the snow" → "la neige"
+- `2024-04-05-colors.30` exercise "a tree" → "un arbre"
+- `2024-04-05-colors.31` exercise "a flower" → "une fleur"
+- `2024-04-05-colors.32` exercise "the leaves" → "les feuilles"
+- `2024-04-05-colors.33` exercise "to see life through rose-colored glasses" → "voir la vie en rose"
+- `2024-04-05-colors.34` exercise "to be in the red (in debt)" → "être dans le rouge"
+- `2024-04-05-colors.35` exercise "to be scared stiff" → "avoir une peur bleue"
+- `2024-04-05-colors.36` exercise "to laugh nervously/fake laugh" → "rire jaune"
+
+**2024-04-06-french-countries**
+
+- `2024-04-06-french-countries.1` exercise "the French-speaking world" → "la Francophonie"
+- `2024-04-06-french-countries.2` exercise "French-speaking" → "francophone"
+- `2024-04-06-french-countries.3` exercise "a country" → "un pays"
+- `2024-04-06-french-countries.4` exercise "a language" → "une langue"
+- `2024-04-06-french-countries.5` exercise "the official language" → "la langue officielle"
+- `2024-04-06-french-countries.6` exercise "to speak French" → "parler français"
+- `2024-04-06-french-countries.7` exercise "Africa" → "l'Afrique"
+- `2024-04-06-french-countries.8` exercise "Europe" → "l'Europe"
+- `2024-04-06-french-countries.9` exercise "North America" → "l'Amérique du Nord"
+- `2024-04-06-french-countries.10` exercise "the Caribbean" → "les Caraïbes"
+- `2024-04-06-french-countries.11` exercise "Quebec" → "le Québec"
+- `2024-04-06-french-countries.12` exercise "Congo (DRC)" → "le Congo"
+- `2024-04-06-french-countries.13` exercise "France" → "la France"
+- `2024-04-06-french-countries.14` exercise "Belgium" → "la Belgique"
+- `2024-04-06-french-countries.15` exercise "Switzerland" → "la Suisse"
+- `2024-04-06-french-countries.16` exercise "Senegal" → "le Sénégal"
+- `2024-04-06-french-countries.17` exercise "Ivory Coast" → "la Côte d'Ivoire"
+- `2024-04-06-french-countries.18` exercise "Haiti" → "Haïti"
+- `2024-04-06-french-countries.19` exercise "Morocco" → "le Maroc"
+- `2024-04-06-french-countries.20` exercise "Lebanon" → "le Liban"
+
+**2024-04-07-language-stats**
+
+- `2024-04-07-language-stats.1` exercise "a phoneme (distinct sound)" → "un phonème"
+- `2024-04-07-language-stats.2` exercise "a vowel" → "une voyelle"
+- `2024-04-07-language-stats.3` exercise "a consonant" → "une consonne"
+- `2024-04-07-language-stats.4` exercise "a syllable" → "une syllabe"
+- `2024-04-07-language-stats.5` exercise "an accent / diacritical mark" → "un accent"
+- `2024-04-07-language-stats.6` exercise "the linking (of words)" → "la liaison"
+- `2024-04-07-language-stats.7` exercise "a word" → "un mot"
+- `2024-04-07-language-stats.8` exercise "a sentence" → "une phrase"
+- `2024-04-07-language-stats.9` exercise "the vocabulary" → "le vocabulaire"
+- `2024-04-07-language-stats.10` exercise "the grammar" → "la grammaire"
+- `2024-04-07-language-stats.11` exercise "a verb" → "un verbe"
+- `2024-04-07-language-stats.12` exercise "a noun" → "un nom"
+- `2024-04-07-language-stats.13` exercise "an adjective" → "un adjectif"
+- `2024-04-07-language-stats.14` exercise "masculine" → "masculin"
+- `2024-04-07-language-stats.15` exercise "feminine" → "féminin"
+- `2024-04-07-language-stats.16` exercise "the conjugation" → "la conjugaison"
+- `2024-04-07-language-stats.17` exercise "irregular" → "irrégulier"
+- `2024-04-07-language-stats.18` exercise "the French Academy" → "l'Académie française"
+- `2024-04-07-language-stats.19` exercise "French-speaking" → "francophone"
+- `2024-04-07-language-stats.20` exercise "to speak fast" → "parler vite"
 
 ## Fields with no place in a module file
 
@@ -1718,6 +2505,12 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "prepare to talk about real things" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Add nouns to talk about real objects" (no field; the next-module teaser is computed from the outline)
 
+**2024-10-21-cognates-help**
+
+- `emailMetadata.capabilities` ["Recognize French words that look like English","Understand why French isn't as hard as you thought","Build confidence with familiar word patterns"] (can_do holds L's "What you can do now" lines)
+- `emailMetadata.realWorldUse` "quickly expand your vocabulary using cognates" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Continue building your noun vocabulary" (no field; the next-module teaser is computed from the outline)
+
 **2024-01-06-basic-nouns**
 
 - `emailMetadata.realWorldUse` "name and talk about concrete objects" (no field; the next-module teaser is computed from the outline)
@@ -1731,11 +2524,33 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.nextModuleTeaser` "Learn demonstratives to point to specific things" (no field; the next-module teaser is computed from the outline)
 - 8 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`
 
+**2024-10-20-liaison-help**
+
+- `emailMetadata.capabilities` ["Understand how French words flow together","Recognize when sounds connect between words","Sound more natural when speaking French"] (can_do holds L's "What you can do now" lines)
+- `emailMetadata.realWorldUse` "speak with natural French rhythm and flow" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Use connectors to link your ideas" (no field; the next-module teaser is computed from the outline)
+
 **2024-01-08-connectors**
 
 - `emailMetadata.realWorldUse` "make your French sound natural and connected" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Practice everything you've learned with reading comprehension" (no field; the next-module teaser is computed from the outline)
 - 6 × generic instruction dropped (Say '…'): `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[9].instruction`
+
+**2024-01-09-reading1**
+
+- `emailMetadata.realWorldUse` "read simple French texts and understand them" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "First reading comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice combining everything you've learned" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "First Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Comprehension Achievement": a reading has no concept cards
+- `concepts[2]` concept "Functional Literacy": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "Les Amis (The Friends)" (the story's title comes from stories/)
+- `glossary` 7 story glossary notes (a glossary row holds fr and en)
+- `exerciseConfig.items[1].prompt` "Find the answer in the passage above" (says only where the answer is)
+- `exerciseConfig.items[3].prompt` "Find the answer in the passage above" (says only where the answer is)
+- `exerciseConfig.items[5].prompt` "Find the answer in the passage above" (says only where the answer is)
+- `exerciseConfig.items[6].prompt` "Find the answer in the passage above" (says only where the answer is)
 
 **2024-01-10-unit1-practice**
 
@@ -1764,6 +2579,11 @@ Today’s objects hold these, and the module schema has no field for them.
 
 - `emailMetadata.realWorldUse` "say ages and count people and things" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Learn to say no: je ne suis pas, je n'ai pas" (no field; the next-module teaser is computed from the outline)
+
+**2026-11-24-negation-guide**
+
+- `emailMetadata.realWorldUse` "say no in French" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Point at things with this and that" (no field; the next-module teaser is computed from the outline)
 
 **2024-01-12-demonstratives**
 
@@ -1808,6 +2628,12 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.nextModuleTeaser` "Learn stressed pronouns for emphasis" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.utilityScore` 10 (no field; the next-module teaser is computed from the outline)
 
+**2024-01-19-questions-help**
+
+- `emailMetadata.capabilities` ["Understand the three ways to ask questions in French","Choose the right question method for each situation","Build confidence in asking questions naturally"] (can_do holds L's "What you can do now" lines)
+- `emailMetadata.realWorldUse` "master French question formation" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Use stressed pronouns for emphasis" (no field; the next-module teaser is computed from the outline)
+
 **2024-01-19-stressed-pronouns**
 
 - `emailMetadata.realWorldUse` "emphasize and specify people in conversation" (no field; the next-module teaser is computed from the outline)
@@ -1827,6 +2653,18 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "describe qualities and characteristics of things" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Practice reading comprehension with everything you've learned" (no field; the next-module teaser is computed from the outline)
 - 16 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`, `exerciseConfig.items[15].instruction`
+
+**2024-01-22-reading2**
+
+- `emailMetadata.realWorldUse` "read French stories and understand cultural content" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Cultural reading comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice everything with interactive exercises" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Adventure Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Conversational French": a reading has no concept cards
+- `concepts[2]` concept "Cultural Context": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "Rendez-vous en Normandie (The Normandy Meetup)" (the story's title comes from stories/)
+- `glossary` 6 story glossary notes (a glossary row holds fr and en)
 
 **2024-01-23-unit2-practice**
 
@@ -1868,6 +2706,12 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "talk about movement and future plans" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Learn verb patterns to master conjugation" (no field; the next-module teaser is computed from the outline)
 
+**2024-01-28-verb-pattern-help**
+
+- `emailMetadata.capabilities` ["Recognize patterns across French verb conjugations","Predict how new verbs will conjugate","Understand why verbs change the way they do"] (can_do holds L's "What you can do now" lines)
+- `emailMetadata.realWorldUse` "learn new verbs faster using patterns" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Apply patterns to partir (to leave)" (no field; the next-module teaser is computed from the outline)
+
 **2024-01-29-partir**
 
 - `emailMetadata.realWorldUse` "talk about leaving places and travel" (no field; the next-module teaser is computed from the outline)
@@ -1895,6 +2739,18 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "have sophisticated conversations about ownership" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.milestone` "Complex sentence mastery" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Test your comprehension with cultural reading" (no field; the next-module teaser is computed from the outline)
+
+**2024-02-03-reading3**
+
+- `emailMetadata.realWorldUse` "read French literature and authentic content" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Advanced reading comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice advanced structures with interactive exercises" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Advanced Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Natural French Flow": a reading has no concept cards
+- `concepts[2]` concept "Complex Relationships": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "La Première Page (The First Page)" (the story's title comes from stories/)
+- `glossary` 11 story glossary notes (a glossary row holds fr and en)
 
 **2024-02-04-unit3-practice**
 
@@ -1980,6 +2836,18 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.nextModuleTeaser` "Test comprehension with cultural reading" (no field; the next-module teaser is computed from the outline)
 - 21 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`, `exerciseConfig.items[15].instruction`, `exerciseConfig.items[16].instruction`, `exerciseConfig.items[17].instruction`, `exerciseConfig.items[18].instruction`, `exerciseConfig.items[20].instruction`, `exerciseConfig.items[21].instruction`, `exerciseConfig.items[22].instruction`
 
+**2024-03-30-reading-4**
+
+- `emailMetadata.realWorldUse` "understand real French conversations" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Authentic conversation comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice with interactive exercises" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Café Conversation Milestone": a reading has no concept cards
+- `concepts[1]` concept "Real-World French": a reading has no concept cards
+- `concepts[2]` concept "Cultural Integration": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "La nouvelle époque de Marie (Marie's new life)" (the story's title comes from stories/)
+- `glossary` 2 story glossary notes (a glossary row holds fr and en)
+
 **2024-04-03-unit-4-practice**
 
 - `emailMetadata.realWorldUse` "navigate daily French situations" (no field; the next-module teaser is computed from the outline)
@@ -2064,6 +2932,17 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "order drinks and discuss beverages" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Practice reading comprehension with food context" (no field; the next-module teaser is computed from the outline)
 - 15 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[15].instruction`, `exerciseConfig.items[16].instruction`, `exerciseConfig.items[19].instruction`, `exerciseConfig.items[21].instruction`, `exerciseConfig.items[22].instruction`, `exerciseConfig.items[23].instruction`, `exerciseConfig.items[25].instruction`
+
+**2024-04-13-reading-5**
+
+- `emailMetadata.realWorldUse` "enjoy French cultural and historical content" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Cultural literacy achieved" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice all your skills with interactive exercises" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Art and History Milestone": a reading has no concept cards
+- `concepts[1]` concept "French Art Culture": a reading has no concept cards
+- `concepts[2]` concept "Past Tense Narrative": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "La fée verte (The Green Fairy)" (the story's title comes from stories/)
 
 **2024-04-15-unit-5-practice**
 
@@ -2338,6 +3217,18 @@ Today’s objects hold these, and the module schema has no field for them.
 - `exerciseConfig.items[32].explanation` i-a-la-fin: "à la fin (at the end) - common time expression" (the item has a hint)
 - 33 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`, `exerciseConfig.items[15].instruction`, `exerciseConfig.items[16].instruction`, `exerciseConfig.items[17].instruction`, `exerciseConfig.items[18].instruction`, `exerciseConfig.items[19].instruction`, `exerciseConfig.items[20].instruction`, `exerciseConfig.items[21].instruction`, `exerciseConfig.items[22].instruction`, `exerciseConfig.items[23].instruction`, `exerciseConfig.items[24].instruction`, `exerciseConfig.items[25].instruction`, `exerciseConfig.items[26].instruction`, `exerciseConfig.items[27].instruction`, `exerciseConfig.items[28].instruction`, `exerciseConfig.items[29].instruction`, `exerciseConfig.items[30].instruction`, `exerciseConfig.items[31].instruction`, `exerciseConfig.items[32].instruction`
 
+**2024-04-24-reading-6**
+
+- `emailMetadata.realWorldUse` "understand French conversations about planning and communication" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Advanced communication comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice all Unit 6 skills" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Advanced Communication Milestone": a reading has no concept cards
+- `concepts[1]` concept "Real-World Scenarios": a reading has no concept cards
+- `concepts[2]` concept "Fluency Integration": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "Un Voyage en Famille" (the story's title comes from stories/)
+- `exerciseConfig.items[5].prompt` "What will Marie see for the first time?" (says only where the answer is)
+
 **2024-04-27-unit-6-practice**
 
 - `emailMetadata.realWorldUse` "form sophisticated communication" (no field; the next-module teaser is computed from the outline)
@@ -2427,6 +3318,17 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "add nuance to comparisons and descriptions" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Test comprehension with cultural reading" (no field; the next-module teaser is computed from the outline)
 - 6 × generic instruction dropped (Say '…'): `exercises[0].instruction`, `exercises[1].instruction`, `exercises[2].instruction`, `exercises[3].instruction`, `exercises[4].instruction`, `exercises[5].instruction`
+
+**2024-05-07-reading-7**
+
+- `emailMetadata.realWorldUse` "read French intellectual and educational content" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Academic comprehension achieved" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice Unit 7 cognitive skills" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Academic Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Educational Context": a reading has no concept cards
+- `concepts[2]` concept "Cognitive Language Integration": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "L'Art d'Apprendre" (the story's title comes from stories/)
 
 **2024-05-11-unit-7-practice**
 
@@ -2523,6 +3425,17 @@ Today’s objects hold these, and the module schema has no field for them.
 
 - `emailMetadata.realWorldUse` "give precise instructions with objects" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Add temporal words to sequence events" (no field; the next-module teaser is computed from the outline)
+
+**2024-05-20-reading-8**
+
+- `emailMetadata.realWorldUse` "understand French daily life narratives" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Daily routine comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice all Unit 8 reflexive skills" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Daily Life Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Routine and Relationships": a reading has no concept cards
+- `concepts[2]` concept "Temporal Narrative Integration": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `readingPassage.title` "Ma Journée" (the story's title comes from stories/)
 
 **2024-05-25-unit-8-practice**
 
@@ -2630,6 +3543,18 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.nextModuleTeaser` "Test your storytelling with reading comprehension" (no field; the next-module teaser is computed from the outline)
 - `unit` 9 (the outline places the module)
 - `fillInBlanksSentences` 10 strings, never shown (the exercises hold the same sentences)
+
+**2024-06-05-reading-9**
+
+- `emailMetadata.realWorldUse` "read French stories and narratives" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Past tense narrative comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice all past tense skills" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Narrative Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Past Tense Narrative": a reading has no concept cards
+- `concepts[2]` concept "Discourse Integration": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `unit` 9 (the outline places the module)
+- `readingPassage.title` "Un Samedi à Paris" (the story's title comes from stories/)
 
 **2024-06-10-unit-9-practice**
 
@@ -2740,6 +3665,18 @@ Today’s objects hold these, and the module schema has no field for them.
 
 - `unit` 10 (the outline places the module)
 
+**2024-02-01-reading-10**
+
+- `emailMetadata.realWorldUse` "read French philosophical and emotional content" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "B2 reading comprehension" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice all B2 expressions" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Expertise Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Sophisticated Discourse": a reading has no concept cards
+- `concepts[2]` concept "Mastery Integration": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `unit` 10 (the outline places the module)
+- `readingPassage.title` "Un Rêve à Paris" (the story's title comes from stories/)
+
 **2024-02-05-unit-10-practice**
 
 - `emailMetadata.realWorldUse` "communicate at B2 level" (no field; the next-module teaser is computed from the outline)
@@ -2827,6 +3764,18 @@ Today’s objects hold these, and the module schema has no field for them.
 - 7 × generic instruction dropped (Translate to French): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`
 - 4 × generic instruction dropped (Say: '…'): `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`
 - 2 × generic instruction dropped (Ask: '…'): `exerciseConfig.items[9].instruction`, `exerciseConfig.items[12].instruction`
+
+**2024-02-12-reading-11**
+
+- `emailMetadata.realWorldUse` "read authentic French publications" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.milestone` "Advanced reading mastery" (no field; the next-module teaser is computed from the outline)
+- `emailMetadata.nextModuleTeaser` "Practice all essential vocabulary" (no field; the next-module teaser is computed from the outline)
+- `concepts[0]` concept "Final Reading Milestone": a reading has no concept cards
+- `concepts[1]` concept "Complete French Mastery": a reading has no concept cards
+- `concepts[2]` concept "B2+ Level Achievement": a reading has no concept cards
+- `skipStudyMode` true (Study Mode belongs to lessons only)
+- `unit` 11 (the outline places the module)
+- `readingPassage.title` "La France d'Aujourd'hui : Un Pays en Mouvement" (the story's title comes from stories/)
 
 **2024-02-16-unit-11-practice**
 
@@ -2936,6 +3885,43 @@ Today’s objects hold these, and the module schema has no field for them.
 - `exerciseConfig.items[13].explanation` i-comment-est-ce-que-3: "Peak complexity! Question + opinion + conditional + causative - you've mastered it all!" (the item has a hint)
 - 14 × generic instruction dropped (Ask '…'): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`
 
+**2024-04-01-alphabet**
+
+- `id` "alphabet" (today's page slug; the module_key names the page)
+
+**2024-04-02-numbers**
+
+- `id` "numbers" (today's page slug; the module_key names the page)
+
+**2024-04-03-days-months**
+
+- `id` "days-months" (today's page slug; the module_key names the page)
+
+**2024-04-04-holidays**
+
+- `id` "holidays" (today's page slug; the module_key names the page)
+
+**2024-04-05-colors**
+
+- `id` "colors" (today's page slug; the module_key names the page)
+
+**2024-04-06-french-countries**
+
+- `id` "french-countries" (today's page slug; the module_key names the page)
+
+**2024-04-07-language-stats**
+
+- `id` "language-stats" (today's page slug; the module_key names the page)
+
+**2024-04-08-spelling-patterns**
+
+- `sections` 6 category icons (emoji; no field)
+
+**2024-12-18-pronunciation-test**
+
+- `emailMetadata.realWorldUse` "speak French confidently with clear pronunciation" (no field; a Reference page has no next module)
+- `emailMetadata.nextModuleTeaser` "Continue with conversation practice" (no field; a Reference page has no next module)
+
 ## Text written differently
 
 The same words, moved into a field of the new shape.
@@ -2952,6 +3938,24 @@ The same words, moved into a field of the new shape.
 - `items[6].prompt` i-ils-ont: prompt "they have (masculine or mixed)" joined to the instruction (a transform has no cue field)
 - `items[7].prompt` i-elles-ont: prompt "they have (all feminine)" joined to the instruction (a transform has no cue field)
 
+**2024-10-21-cognates-help**
+
+- `title` "Cognates - French and English Share Many Words" is L's title "Cognates"
+
+**2024-10-20-liaison-help**
+
+- `title` "French Flow - Liaison Help" is L's title "French Flow · Liaison"
+- `parts` "Silent letters at the end" from LiaisonHelp.jsx (L's copy predates it)
+- `parts` "Elision: l'ami, j'ai" from LiaisonHelp.jsx (L's copy predates it)
+
+**2024-01-09-reading1**
+
+- `passage` story text: added: "Paul, un chat et un chien."
+- `passage` story text: added: "Marie, la maison et la voiture."
+- `passage` story text: added: "Les amis ont des livres et des chats."
+- `passage` story text: added: "Les amis, les enfants, les chiens et le chat."
+- `passage` story text: added: "Au revoir, Paul et Marie !"
+
 **2024-01-10-unit1-practice**
 
 - `items[4].blanks` i-un-et: 2 blank hints joined into one hint
@@ -2959,6 +3963,10 @@ The same words, moved into a field of the new shape.
 - `items[10].blanks` i-mais-aussi: 2 blank hints joined into one hint
 - `items[11].blanks` i-la-ou: 2 blank hints joined into one hint
 - 12 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`
+
+**2026-11-24-negation-guide**
+
+- `line` the guide row line is the description (the source has no line)
 
 **2024-01-17-voir**
 
@@ -2971,6 +3979,15 @@ The same words, moved into a field of the new shape.
 - `items[6].prompt` i-ils-voient: prompt "they see / they are seeing (masculine or mixed)" joined to the instruction (a transform has no cue field)
 - `items[7].prompt` i-elles-voient: prompt "they see / they are seeing (all feminine)" joined to the instruction (a transform has no cue field)
 
+**2024-01-22-reading2**
+
+- `passage` story text: added: "Sophie et Thomas à Caen."
+- `passage` story text: added: "Marie, la nouvelle voiture et le chien à Honfleur."
+- `passage` story text: added: "Les vieilles et belles maisons de Bayeux."
+- `passage` story text: added: "La petite maison de Pierre à Rouen."
+- `passage` story text: added: "Le Mont-Saint-Michel."
+- `passage` story text: added: "Il est très grand !"
+
 **2024-01-23-unit2-practice**
 
 - `items[10].blanks` i-veux-cette: 2 blank hints joined into one hint
@@ -2981,6 +3998,14 @@ The same words, moved into a field of the new shape.
 - `items[18].blanks` i-avoir-ces: 2 blank hints joined into one hint
 - `items[19].blanks` i-chez-toi: 2 blank hints joined into one hint
 - 20 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`
+
+**2024-02-03-reading3**
+
+- `passage` story text: added: "Sophie et Marc à Paris."
+- `passage` story text: added: "Le nouveau livre de Sophie."
+- `passage` story text: added: "Paul et son jeune enfant à Montmartre."
+- `passage` story text: added: "Un nouveau livre pour Sophie."
+- `passage` story text: added: "Un bon café au Café de la Paix."
 
 **2024-02-04-unit3-practice**
 
@@ -3004,6 +4029,17 @@ The same words, moved into a field of the new shape.
 - `items[6].prompt` i-ils-parlent: prompt "they speak / they talk (masculine or mixed)" joined to the instruction (a transform has no cue field)
 - `items[7].prompt` i-elles-parlent: prompt "they speak / they talk (all feminine)" joined to the instruction (a transform has no cue field)
 
+**2024-03-30-reading-4**
+
+- `passage[21].speaker` "La femme" names the speaker; the English line said "The woman"
+- `passage[23].speaker` "La femme" names the speaker; the English line said "The woman"
+- `passage` story text: added: "Marie doit aller au travail."
+- `passage` story text: added: "Marie et Paul dans la rue."
+- `passage` story text: "Ce soir au café:" → "Ce soir au café"
+- `passage` story text: added: "Ce soir, au café Les Éditeurs."
+- `passage` story text: added: "Du pain et de l'eau."
+- `passage` story text: added: "Marie aime cette ville."
+
 **2024-04-03-unit-4-practice**
 
 - `items[4].blanks` i-ne-pas: 2 blank hints joined into one hint
@@ -3016,12 +4052,48 @@ The same words, moved into a field of the new shape.
 - `items[19].blanks` i-n-pas-ici: 3 blank hints joined into one hint
 - 20 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`
 
+**2024-04-13-reading-5**
+
+- `passage` story text: added: "La ville d'Arles."
+- `passage` story text: added: "Vincent van Gogh et Paul Gauguin se retrouvent à leur café préféré pour boire leur boisson favorite, l'absinthe."
+- `passage` story text: added: "On dit parfois qu'elle fait voir des fées vertes."
+- `passage` story text: added: "Vincent van Gogh et Paul Gauguin parlent dans un café à Arles."
+- `passage` story text: added: "Le serveur apporte leurs absinthes."
+- `passage` story text: added: "Ils boivent beaucoup."
+- `passage` story text: added: "Ils l'aiment."
+- `passage` story text: added: "Vincent part pour son hôtel."
+- `passage` story text: added: "Il trouve ses peintures."
+- `passage` story text: added: "Il revient au café."
+- `passage` story text: added: "Ils boivent encore de l'absinthe."
+- `passage` story text: added: "Ils sont au café toute la nuit."
+- `passage` story text: added: "Vincent fait son tableau."
+- `passage` story text: added: "Paul boit son absinthe avec lui."
+- `readingPassage.subtitle` the subtitle is a passage block in the story
+
 **2024-04-15-unit-5-practice**
 
 - `items[31].blanks` i-devrions-au: 2 blank hints joined into one hint
 - `items[32].blanks` i-avais-manger: 2 blank hints joined into one hint
 - `items[33].blanks` i-etait-mange: 2 blank hints joined into one hint
 - 37 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`, `items[20].instruction`, `items[21].instruction`, `items[22].instruction`, `items[23].instruction`, `items[24].instruction`, `items[25].instruction`, `items[26].instruction`, `items[27].instruction`, `items[28].instruction`, `items[29].instruction`, `items[30].instruction`, `items[31].instruction`, `items[32].instruction`, `items[33].instruction`, `items[34].instruction`, `items[35].instruction`, `items[36].instruction`
+
+**2024-04-24-reading-6**
+
+- `passage[1].speaker` "Le père" names the speaker; the English line said "Father"
+- `passage[4].speaker` "La mère" names the speaker; the English line said "Mother"
+- `passage[6].speaker` "La mère" names the speaker; the English line said "Mother"
+- `passage[8].speaker` "Le père" names the speaker; the English line said "Father"
+- `passage[10].speaker` "Le père" names the speaker; the English line said "Father"
+- `passage[13].speaker` "Le père" names the speaker; the English line said "Father"
+- `passage[16].speaker` "La mère" names the speaker; the English line said "Mother"
+- `passage[18].speaker` "Le père" names the speaker; the English line said "Father"
+- `passage[20].speaker` "La mère" names the speaker; the English line said "Mother"
+- `passage[22].speaker` "Le père" names the speaker; the English line said "Father"
+- `passage` story text: added: "Le père, la mère, Marie et son frère à la maison."
+- `passage` story text: added: "Marie peut prendre trois livres."
+- `passage` story text: added: "Dans le train, la famille mange du pain et du fromage."
+- `passage` story text: added: "Marie voit la Tour Eiffel pour la première fois."
+- `vocabularyReference[58]` "la ville" ("city") is listed twice; one card, notes joined
 
 **2024-04-27-unit-6-practice**
 
@@ -3062,6 +4134,14 @@ The same words, moved into a field of the new shape.
 - `items[6].prompt` i-ils-croient: prompt "they believe / they think (masculine or mixed)" joined to the instruction (a transform has no cue field)
 - `items[7].prompt` i-elles-croient: prompt "they believe / they think (all feminine)" joined to the instruction (a transform has no cue field)
 
+**2024-05-07-reading-7**
+
+- `passage` story text: added: "Une étudiante pense à une grande question."
+- `passage` story text: added: "Socrate demande des questions à ses étudiants."
+- `passage` story text: added: "Elle révise."
+- `passage` story text: added: "Elle voit les choses entre les idées."
+- `passage` story text: added: "L'apprentissage est un voyage."
+
 **2024-05-11-unit-7-practice**
 
 - `items[15].blanks` i-sais-connais: 2 blank hints joined into one hint
@@ -3075,6 +4155,16 @@ The same words, moved into a field of the new shape.
 **2024-05-23-temporal-words**
 
 - `vocabularyReference[7]` "après" ("after / afterwards") is listed twice; one card, notes joined
+
+**2024-05-20-reading-8**
+
+- `passage` story text: added: "Sept heures."
+- `passage` story text: added: "Marie pense à sa journée."
+- `passage` story text: added: "Marie prend son café."
+- `passage` story text: added: "À la Sorbonne, les étudiants s'aident."
+- `passage` story text: added: "Marie mange avec ses amis."
+- `passage` story text: added: "Ils se parlent en français."
+- `passage` story text: added: "Le soir, Marie rentre chez elle."
 
 **2024-05-25-unit-8-practice**
 
@@ -3157,6 +4247,16 @@ The same words, moved into a field of the new shape.
 - 1 × "Complete the story:" prefix dropped; the sentence is the text: `items[0].prompt`
 - 14 × "Complete:" prefix dropped; the sentence is the text: `items[1].prompt`, `items[2].prompt`, `items[3].prompt`, `items[4].prompt`, `items[5].prompt`, `items[6].prompt`, `items[7].prompt`, `items[8].prompt`, `items[9].prompt`, `items[10].prompt`, `items[11].prompt`, `items[12].prompt`, `items[13].prompt`, `items[14].prompt`
 
+**2024-06-05-reading-9**
+
+- `passage` story text: added: "Un samedi matin au Jardin du Luxembourg."
+- `passage` story text: added: "Pierre est assis sur un banc, sous un grand arbre."
+- `passage` story text: added: "Au Café de Flore, Marie vient à notre table."
+- `passage` story text: added: "Le soir, au Procope, le plus vieux restaurant de Paris."
+- `passage` story text: added: "Vers 10h, je rentre chez moi, fatigué mais heureux."
+- `passage` story text: added: "Fin"
+- `vocabularyReference[177]` "j'ai eu" ("I had") is listed twice; one card, notes joined
+
 **2024-06-10-unit-9-practice**
 
 - `items[15].blanks` i-lisais-es-arrive: 2 blank hints joined into one hint
@@ -3167,10 +4267,29 @@ The same words, moved into a field of the new shape.
 - `items[20].blanks` i-s-est-cachee-pour: 2 blank hints joined into one hint
 - 21 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`, `items[20].instruction`
 
+**2024-02-01-reading-10**
+
+- `passage` story text: added: "Sophie regarde Notre-Dame et pense à ses rêves."
+- `passage` story text: added: "Le rêve de Sophie : une petite maison à Montmartre."
+- `passage` story text: added: "Le rêve de Marc : ses peintures au Louvre."
+- `passage` story text: added: "Sophie et Marc marchent vers la Seine."
+- `passage` story text: added: "Un nouveau jour pour Sophie."
+- `passage` story text: added: "Fin"
+- `vocabularyReference[77]` "réussissions" ("succeed (subjunctive, nous)") is listed twice; one card, notes joined
+
 **2024-02-05-unit-10-practice**
 
 - `items[19].blanks` i-voudrais-suives: 2 blank hints joined into one hint
 - 20 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`
+
+**2024-02-12-reading-11**
+
+- `passage` story text: added: "La Tour Eiffel, l'Arc de Triomphe, le Louvre et Notre-Dame."
+- `passage` story text: added: "À six ans, les enfants arrivent à l'école primaire."
+- `passage` story text: added: "Un train rapide traverse la campagne vers le sud."
+- `passage` story text: added: "L'été à Nice, au bord de la Méditerranée."
+- `passage` story text: added: "À vélo et en tram, la France pense à l'avenir."
+- `passage` story text: added: "Fin"
 
 **2024-02-16-unit-11-practice**
 
@@ -3179,6 +4298,14 @@ The same words, moved into a field of the new shape.
 - `items[18].blanks` i-evolue-vivent: 2 blank hints joined into one hint
 - `items[19].blanks` i-j-ai-vis-travaille: 3 blank hints joined into one hint
 - 19 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`
+
+**2024-04-08-spelling-patterns**
+
+- `isPhonicsReference` the page's spelling patterns (src/data/frenchPhonics.js, 30 sounds) are written out as its sections
+
+**2024-12-18-pronunciation-test**
+
+- `screen` a word list to say aloud (exerciseConfig type "none"): screen pronunciation-test
 
 ## Outline
 

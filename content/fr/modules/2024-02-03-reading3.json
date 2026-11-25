@@ -1,0 +1,600 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-03-reading3",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading Comprehension 3 - {La Première Page}",
+  "description": "See how much you've mastered! Motion, possession, and complex pronouns in action.",
+  "can_do": [
+    "Read complex French stories with advanced grammar",
+    "Understand movement, possession, and object pronouns in context",
+    "Comprehend authentic French narrative flow"
+  ],
+  "story_id": "reading3",
+  "vocabulary": [],
+  "passage": [
+    {
+      "id": "b-paris-1871-belle-epoque",
+      "fr": "Paris, 1871, Belle Époque",
+      "en": "Paris, 1871, Belle Époque",
+      "layout": "dateline"
+    },
+    {
+      "id": "b-bonjour-marc-tu-viens",
+      "speaker": "Sophie",
+      "fr": "Bonjour Marc ! Tu viens au Café de la Paix avec moi ?",
+      "en": "Hello Marc! Are you coming to Café de la Paix with me?"
+    },
+    {
+      "id": "b-oui-je-vais-au",
+      "speaker": "Marc",
+      "fr": "Oui ! Je vais au café avec toi. Tu as *Le Comte de Monte-Cristo* ? C'est le livre rouge et jaune.",
+      "en": "Yes! I'm going to the café with you. Do you have the Count of Monte Cristo? It's the red and yellow book."
+    },
+    {
+      "id": "img-rue",
+      "fr": "Sophie et Marc à Paris.",
+      "en": "Sophie and Marc in Paris.",
+      "img": {
+        "src": "img/reading3/rue",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Sophie, in a long cream dress, meets Marc, in a brown suit, on a Paris boulevard; Marc holds up a red and yellow book."
+      }
+    },
+    {
+      "id": "b-oui-je-l-ai",
+      "speaker": "Sophie",
+      "fr": "Oui, je l'ai. Il est très vieux ! C'est le tien ?",
+      "en": "Yes, I have it. It's very old! Is it yours?"
+    },
+    {
+      "id": "b-oui-c-est-le",
+      "speaker": "Marc",
+      "fr": "Oui, c'est le mien. Tu le veux ?",
+      "en": "Yes, it's mine. Do you want it?"
+    },
+    {
+      "id": "b-non-merci-j-ai",
+      "speaker": "Sophie",
+      "fr": "Non, merci ! J'ai mon livre de Jules Verne, *Vingt mille lieues sous les mers*. Il est nouveau. Tu veux le voir ?",
+      "en": "No, thank you! I have my Jules Verne book. Twenty Thousand Leagues Under the Sea. It's new, do you want to see it?"
+    },
+    {
+      "id": "img-verne",
+      "fr": "Le nouveau livre de Sophie.",
+      "en": "Sophie's new book.",
+      "img": {
+        "src": "img/reading3/verne",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Sophie shows Marc her new dark-blue book with a small gold submarine on the cover, under a flowering chestnut tree by the Seine."
+      }
+    },
+    {
+      "id": "b-oui-s-il-te",
+      "speaker": "Marc",
+      "fr": "Oui, s'il te plaît, au café.",
+      "en": "Yes, please, at the café."
+    },
+    {
+      "id": "b-ou-est-ton-ami",
+      "speaker": "Sophie",
+      "fr": "Où est ton ami Paul ? Il vient aussi ?",
+      "en": "Where is your friend Paul? Is he coming too?"
+    },
+    {
+      "id": "b-non-il-part-a",
+      "speaker": "Marc",
+      "fr": "Non, il part à Montmartre. Il a son jeune enfant aujourd'hui et il le voit à la maison.",
+      "en": "No, he's leaving for Montmartre. He has his young child today and he sees him at home."
+    },
+    {
+      "id": "img-montmartre",
+      "fr": "Paul et son jeune enfant à Montmartre.",
+      "en": "Paul and his young child in Montmartre.",
+      "img": {
+        "src": "img/reading3/montmartre",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Paul, in a grey coat and flat cap, walks hand in hand with his small son in a sailor suit up a Montmartre lane toward a windmill."
+      }
+    },
+    {
+      "id": "b-c-est-bon-tu",
+      "speaker": "Sophie",
+      "fr": "C'est bon. Tu as ses livres avec toi aussi ?",
+      "en": "That's good. Do you have his books with you also?"
+    },
+    {
+      "id": "b-oui-ils-sont-dans",
+      "speaker": "Marc",
+      "fr": "Oui, ils sont dans ma voiture. Et j'ai un nouveau bon livre pour toi aussi !",
+      "en": "Yes, they're in my carriage (voiture). And I have a new good book for you too!"
+    },
+    {
+      "id": "img-voiture",
+      "fr": "Un nouveau livre pour Sophie.",
+      "en": "A new book for Sophie.",
+      "img": {
+        "src": "img/reading3/voiture",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Beside a horse-drawn carriage with books on the seat, Marc hands a new book to a smiling Sophie."
+      }
+    },
+    {
+      "id": "b-oh-pour-moi-merci",
+      "speaker": "Sophie",
+      "fr": "Oh ! Pour moi ? Merci ! Allons au café !",
+      "en": "Oh! For me? Thank you! Let's go to the café!"
+    },
+    {
+      "id": "b-je-veux-un-bon",
+      "speaker": "Marc",
+      "fr": "Je veux un bon café avec toi.",
+      "en": "I want a good coffee with you."
+    },
+    {
+      "id": "b-oui-moi-aussi",
+      "speaker": "Sophie",
+      "fr": "Oui ! Moi aussi !",
+      "en": "Yes! I want a good coffee with you!"
+    },
+    {
+      "id": "img-cafe",
+      "fr": "Un bon café au Café de la Paix.",
+      "en": "A good coffee at the Café de la Paix.",
+      "img": {
+        "src": "img/reading3/cafe",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Sophie and Marc sit at a round marble table with two cups of coffee and a book inside the gilded Café de la Paix."
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "tu viens",
+      "en": "you're coming"
+    },
+    {
+      "fr": "au café",
+      "en": "to the café, at the café"
+    },
+    {
+      "fr": "avec moi",
+      "en": "with me"
+    },
+    {
+      "fr": "je vais",
+      "en": "I'm going"
+    },
+    {
+      "fr": "avec toi",
+      "en": "with you"
+    },
+    {
+      "fr": "tu as",
+      "en": "you have"
+    },
+    {
+      "fr": "Le Comte de Monte-Cristo",
+      "en": "The Count of Monte Cristo"
+    },
+    {
+      "fr": "le livre",
+      "en": "the book"
+    },
+    {
+      "fr": "je l'ai",
+      "en": "I have it"
+    },
+    {
+      "fr": "il est",
+      "en": "it is, he is"
+    },
+    {
+      "fr": "le tien",
+      "en": "yours"
+    },
+    {
+      "fr": "le mien",
+      "en": "mine"
+    },
+    {
+      "fr": "tu le veux",
+      "en": "do you want it?"
+    },
+    {
+      "fr": "mon livre",
+      "en": "my book"
+    },
+    {
+      "fr": "Jules Verne",
+      "en": "Jules Verne"
+    },
+    {
+      "fr": "Vingt mille lieues sous les mers",
+      "en": "Twenty Thousand Leagues Under the Sea"
+    },
+    {
+      "fr": "tu veux",
+      "en": "you want"
+    },
+    {
+      "fr": "le voir",
+      "en": "to see it"
+    },
+    {
+      "fr": "où est",
+      "en": "where is"
+    },
+    {
+      "fr": "ton ami",
+      "en": "your friend"
+    },
+    {
+      "fr": "il vient",
+      "en": "he's coming"
+    },
+    {
+      "fr": "il part",
+      "en": "he's leaving"
+    },
+    {
+      "fr": "Montmartre",
+      "en": "Montmartre"
+    },
+    {
+      "fr": "il a",
+      "en": "he has"
+    },
+    {
+      "fr": "son jeune enfant",
+      "en": "his young child"
+    },
+    {
+      "fr": "il le voit",
+      "en": "he sees him"
+    },
+    {
+      "fr": "à la maison",
+      "en": "at home"
+    },
+    {
+      "fr": "c'est bon",
+      "en": "that's good"
+    },
+    {
+      "fr": "ses livres",
+      "en": "his books"
+    },
+    {
+      "fr": "ils sont",
+      "en": "they are"
+    },
+    {
+      "fr": "dans ma voiture",
+      "en": "in my carriage"
+    },
+    {
+      "fr": "un nouveau bon livre",
+      "en": "a good new book"
+    },
+    {
+      "fr": "pour toi",
+      "en": "for you"
+    },
+    {
+      "fr": "pour moi",
+      "en": "for me"
+    },
+    {
+      "fr": "je veux",
+      "en": "I want"
+    },
+    {
+      "fr": "un bon café",
+      "en": "a good coffee"
+    },
+    {
+      "fr": "moi aussi",
+      "en": "me too"
+    },
+    {
+      "fr": "Café de la Paix",
+      "en": "Café de la Paix"
+    },
+    {
+      "fr": "Belle Époque",
+      "en": "Belle Époque"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-cafe-de-la-paix",
+      "type": "comprehension",
+      "question": "Where does Sophie invite Marc?",
+      "cue": "Sophie invites Marc to ___ ___ ___ ___",
+      "answer": "Café de la Paix",
+      "accept": [
+        "café",
+        "au café",
+        "au Café de la Paix"
+      ],
+      "hint": "Look for '{tu viens au ___}' - what's the full café name?",
+      "mistakes": [
+        {
+          "answer": "à la maison",
+          "feedback": "She invites him to the café, not the house"
+        },
+        {
+          "answer": "Montmartre",
+          "feedback": "That's where Paul goes, not where Sophie invites Marc"
+        },
+        {
+          "answer": "à la café",
+          "feedback": "café is masculine, use '{au}' not 'à la'"
+        }
+      ]
+    },
+    {
+      "id": "i-oui-je-vais-au",
+      "type": "comprehension",
+      "question": "How does Marc respond to Sophie's invitation?",
+      "cue": "___ ! ___ ___ ___ ___ ___ ___",
+      "answer": "Oui ! Je vais au café avec toi",
+      "accept": [
+        "Je vais au café avec toi",
+        "Oui"
+      ],
+      "hint": "Marc's complete response to Sophie's invitation",
+      "mistakes": [
+        {
+          "answer": "Non merci",
+          "feedback": "Marc accepts the invitation - he says '{Oui! Je vais au café avec toi}'"
+        },
+        {
+          "answer": "Je ne peux pas",
+          "feedback": "Marc agrees to go - he says '{Oui! Je vais au café avec toi}'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-comte-de-monte",
+      "type": "comprehension",
+      "question": "What book does Marc ask Sophie about?",
+      "cue": "{Tu as ___ ___ ___ ___-___?}",
+      "answer": "Le Comte de Monte-Cristo",
+      "accept": [
+        "Comte de Monte-Cristo",
+        "Monte-Cristo",
+        "le livre rouge et jaune",
+        "son livre"
+      ],
+      "hint": "Look for the book title Marc mentions",
+      "mistakes": [
+        {
+          "answer": "Jules Verne",
+          "feedback": "That's Sophie's book, not the one Marc asks about"
+        },
+        {
+          "answer": "Vingt mille lieues",
+          "feedback": "That's Sophie's book, not the one Marc asks about"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-le-tien",
+      "type": "comprehension",
+      "question": "How does Sophie ask if the book belongs to Marc?",
+      "cue": "Is it ___? (yours, informal, masculine thing)",
+      "answer": "c'est le tien",
+      "accept": [
+        "le tien",
+        "c'est le tien?"
+      ],
+      "hint": "c'est + possessive pronoun for 'yours' informal",
+      "mistakes": [
+        {
+          "answer": "c'est ton",
+          "feedback": "Use possessive pronoun '{le tien}' not adjective 'ton'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-le-mien",
+      "type": "comprehension",
+      "question": "How does Marc confirm ownership?",
+      "cue": "It's ___ (mine, masculine thing)",
+      "answer": "c'est le mien",
+      "accept": [
+        "le mien",
+        "oui, c'est le mien"
+      ],
+      "hint": "c'est + possessive pronoun for 'mine'",
+      "mistakes": [
+        {
+          "answer": "c'est mon",
+          "feedback": "Use possessive pronoun '{le mien}' not adjective 'mon'"
+        }
+      ]
+    },
+    {
+      "id": "i-montmartre",
+      "type": "comprehension",
+      "question": "Where does Paul go?",
+      "cue": "{il part à ___}",
+      "answer": "Montmartre",
+      "accept": [
+        "à Montmartre"
+      ],
+      "hint": "Look for where Marc says Paul is going",
+      "mistakes": [
+        {
+          "answer": "café",
+          "feedback": "Paul doesn't come to the café, he goes to Montmartre"
+        },
+        {
+          "answer": "maison",
+          "feedback": "He goes to Montmartre first, then sees his child at home"
+        }
+      ]
+    },
+    {
+      "id": "i-son-jeune-enfant",
+      "type": "comprehension",
+      "question": "Why can't Paul come to the café?",
+      "cue": "{Il a son ___ ___ aujourd'hui}",
+      "answer": "son jeune enfant",
+      "accept": [
+        "enfant",
+        "jeune enfant",
+        "son enfant",
+        "il voit son jeune enfant",
+        "il voit son enfant"
+      ],
+      "hint": "Look for what Paul has today",
+      "mistakes": [
+        {
+          "answer": "chat",
+          "feedback": "Paul has his young child, not a cat"
+        },
+        {
+          "answer": "livre",
+          "feedback": "Paul has his young child, not a book"
+        }
+      ]
+    },
+    {
+      "id": "i-un-nouveau-bon-livre",
+      "type": "comprehension",
+      "question": "What does Marc offer to give Sophie?",
+      "cue": "{Et j'ai un ___ ___ ___ pour toi aussi !}",
+      "answer": "un nouveau bon livre",
+      "accept": [
+        "livre",
+        "un livre",
+        "bon livre",
+        "nouveau livre",
+        "un bon livre",
+        "un bon nouveau livre",
+        "un nouveau livre"
+      ],
+      "hint": "Look for what Marc says he has for Sophie",
+      "mistakes": [
+        {
+          "answer": "vieux livre",
+          "feedback": "Marc offers a new (nouveau) book, not an old one"
+        },
+        {
+          "answer": "café",
+          "feedback": "Marc offers a book (livre), not coffee"
+        }
+      ]
+    },
+    {
+      "id": "i-il-est-nouveau",
+      "type": "comprehension",
+      "question": "How does Sophie describe her book?",
+      "cue": "{Il est ___}",
+      "answer": "il est nouveau",
+      "accept": [
+        "nouveau",
+        "un nouveau livre",
+        "mon livre de Jules Verne",
+        "un livre de Jules Verne",
+        "un nouveau livre de Jules Verne",
+        "de Jules Verne"
+      ],
+      "hint": "Look for the adjective Sophie uses about her Jules Verne book",
+      "mistakes": [
+        {
+          "answer": "vieux",
+          "feedback": "Sophie's book is new (nouveau), Marc's book is old (vieux)"
+        },
+        {
+          "answer": "rouge",
+          "feedback": "Sophie describes her book as new, not a color"
+        },
+        {
+          "answer": "nouvelle",
+          "feedback": "a book is masculine, use '{nouveau}' not 'nouvelle'"
+        }
+      ]
+    },
+    {
+      "id": "i-vieux",
+      "type": "comprehension",
+      "question": "How does Sophie describe Marc's book?",
+      "cue": "It's very ___",
+      "answer": "vieux",
+      "accept": [
+        "très vieux",
+        "il est très vieux",
+        "il est vieux"
+      ],
+      "hint": "Look for the adjective Sophie uses to describe the book",
+      "mistakes": [
+        {
+          "answer": "nouveau",
+          "feedback": "Sophie says it's very old (vieux), not new"
+        },
+        {
+          "answer": "vielle",
+          "feedback": "Book is masculine, use '{vieux}' not 'vielle'"
+        }
+      ]
+    },
+    {
+      "id": "i-dans-ma-voiture",
+      "type": "comprehension",
+      "question": "Where does Marc say Paul's books are?",
+      "cue": "{ils sont ___ ___ ___}",
+      "answer": "dans ma voiture",
+      "accept": [
+        "voiture",
+        "ma voiture",
+        "dans la voiture",
+        "sa voiture",
+        "dans sa voiture"
+      ],
+      "hint": "Look for where Marc keeps the books",
+      "mistakes": [
+        {
+          "answer": "maison",
+          "feedback": "The books are in the car (voiture), not at home"
+        },
+        {
+          "answer": "café",
+          "feedback": "The books are in the car, not at the café"
+        }
+      ]
+    },
+    {
+      "id": "i-pour-moi-merci",
+      "type": "comprehension",
+      "question": "How does Sophie react when Marc offers her a book?",
+      "cue": "{Oh ! ___ ___ ? ___ !}",
+      "answer": "Pour moi ? Merci",
+      "accept": [
+        "Pour moi",
+        "Merci",
+        "Oh pour moi merci",
+        "Oh! Pour moi? Merci!"
+      ],
+      "hint": "Look for Sophie's surprised and grateful response to Marc's offer",
+      "mistakes": [
+        {
+          "answer": "Non merci",
+          "feedback": "Sophie is excited and grateful, she says '{Oh! Pour moi? Merci!}'"
+        },
+        {
+          "answer": "Je ne veux pas",
+          "feedback": "Sophie accepts gratefully, she doesn't refuse the gift"
+        }
+      ]
+    }
+  ]
+}

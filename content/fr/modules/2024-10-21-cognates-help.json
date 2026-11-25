@@ -1,0 +1,313 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-10-21-cognates-help",
+  "kind": "guide",
+  "status": "written",
+  "title": "Cognates",
+  "description": "Discover words that are almost the same in English and French",
+  "can_do": [
+    "Recognize French words that look like English ones, such as {un restaurant} and {une idée}.",
+    "Say them the French way, with {un} or {une} in front."
+  ],
+  "minutes": 4,
+  "line": "French words you can already read, and how French says them.",
+  "parts": [
+    {
+      "id": "p-words-you-may-know",
+      "heading": "Words you may know already",
+      "text": [
+        "A cognate is a word that looks and sounds alike in two languages because both come from the same older word. English took thousands of words from French after the Norman Conquest in 1066."
+      ],
+      "note": "Over 30% of English words come from French or Latin, so you already know more French words than you think."
+    },
+    {
+      "id": "p-spelled-exactly-the-same",
+      "heading": "Spelled exactly the same",
+      "text": [
+        "These words are spelled the same in both languages. Tap each one: the spelling matches, the sound does not."
+      ],
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "un restaurant",
+              "restaurant"
+            ],
+            [
+              "un garage",
+              "garage"
+            ],
+            [
+              "une station",
+              "station"
+            ],
+            [
+              "une radio",
+              "radio"
+            ],
+            [
+              "une table",
+              "table"
+            ],
+            [
+              "une minute",
+              "minute"
+            ],
+            [
+              "une machine",
+              "machine"
+            ],
+            [
+              "une photo",
+              "photo"
+            ],
+            [
+              "un menu",
+              "menu"
+            ],
+            [
+              "un buffet",
+              "buffet"
+            ],
+            [
+              "un ballet",
+              "ballet"
+            ],
+            [
+              "une situation",
+              "situation"
+            ],
+            [
+              "une conversation",
+              "conversation"
+            ],
+            [
+              "une information",
+              "information"
+            ],
+            [
+              "un accident",
+              "accident"
+            ],
+            [
+              "un moment",
+              "moment"
+            ],
+            [
+              "un sandwich",
+              "sandwich"
+            ],
+            [
+              "un client",
+              "client"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-almost-the-same",
+      "heading": "Almost the same",
+      "text": [
+        "These differ by an accent or a letter or two."
+      ],
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "un café",
+              "café"
+            ],
+            [
+              "un hôtel",
+              "hotel"
+            ],
+            [
+              "un cinéma",
+              "cinema"
+            ],
+            [
+              "un téléphone",
+              "telephone"
+            ],
+            [
+              "un parc",
+              "park"
+            ],
+            [
+              "un programme",
+              "program"
+            ],
+            [
+              "un problème",
+              "problem"
+            ],
+            [
+              "un système",
+              "system"
+            ],
+            [
+              "un touriste",
+              "tourist"
+            ],
+            [
+              "un artiste",
+              "artist"
+            ],
+            [
+              "une salade",
+              "salad"
+            ],
+            [
+              "une banane",
+              "banana"
+            ],
+            [
+              "un chocolat",
+              "chocolate"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-same-root-small-changes",
+      "heading": "Same root, small changes",
+      "text": [
+        "These share a root and a meaning. The changes repeat: -or becomes -eur in {docteur} and {acteur}, and -k becomes -que in {banque}."
+      ],
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "une banque",
+              "bank"
+            ],
+            [
+              "une carte",
+              "card, map"
+            ],
+            [
+              "un docteur",
+              "doctor"
+            ],
+            [
+              "un professeur",
+              "professor"
+            ],
+            [
+              "un acteur",
+              "actor"
+            ],
+            [
+              "une actrice",
+              "actress"
+            ],
+            [
+              "un hôpital",
+              "hospital"
+            ],
+            [
+              "un musée",
+              "museum"
+            ],
+            [
+              "un projet",
+              "project"
+            ],
+            [
+              "un sujet",
+              "subject"
+            ],
+            [
+              "une idée",
+              "idea"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-keep-the-article",
+      "heading": "Keep the article",
+      "text": [
+        "Every French noun is masculine or feminine, so learn each cognate with its article, {un} or {une}. French does not drop the article the way English does in “I want coffee”."
+      ],
+      "note": "Every time you recognize a cognate, you add a French word without studying it.",
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Je veux un café.",
+              "I want a coffee."
+            ],
+            [
+              "Je veux du café.",
+              "I want some coffee."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Listen. What does it mean?",
+      "say": "un hôpital",
+      "sound": "uh no-pee-tal",
+      "options": [
+        {
+          "text": "hospital",
+          "right": true
+        },
+        {
+          "text": "hotel"
+        },
+        {
+          "text": "park"
+        }
+      ],
+      "why": "{un hôpital} is hospital. The ô stands for an s that French dropped long ago."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one has an English twin?",
+      "options": [
+        {
+          "text": "merci",
+          "fr": true
+        },
+        {
+          "text": "une salade",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "tu es",
+          "fr": true
+        }
+      ],
+      "why": "{une salade} is salad. {merci} means thank you, and {tu es} means you are."
+    },
+    {
+      "id": "k3",
+      "ask": "Listen. What does it mean?",
+      "say": "une idée",
+      "sound": "oon ee-day",
+      "options": [
+        {
+          "text": "information"
+        },
+        {
+          "text": "minute"
+        },
+        {
+          "text": "idea",
+          "right": true
+        }
+      ],
+      "why": "{une idée} is idea, with one extra e and an accent."
+    }
+  ]
+}

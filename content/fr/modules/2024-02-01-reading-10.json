@@ -1,0 +1,935 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-01-reading-10",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading - {Mes Rêves et Mes Espoirs}",
+  "description": "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more",
+  "can_do": [
+    "Read sophisticated French texts about dreams and ambitions",
+    "Understand subjunctive and conditional mood in context",
+    "Comprehend B2-level emotional and hypothetical expressions"
+  ],
+  "story_id": "reading10",
+  "vocabulary": [
+    {
+      "word_id": "paris-fr",
+      "fr": "Paris",
+      "gloss": "Paris (capital of France)"
+    },
+    {
+      "word_id": "notre-dame-fr",
+      "fr": "Notre-Dame",
+      "gloss": "Notre-Dame Cathedral (iconic medieval cathedral)"
+    },
+    {
+      "word_id": "montmartre-fr",
+      "fr": "Montmartre",
+      "gloss": "Montmartre (historic artist district in Paris)"
+    },
+    {
+      "word_id": "nice-fr",
+      "fr": "Nice",
+      "gloss": "Nice (beautiful city on French Riviera)"
+    },
+    {
+      "word_id": "bordeaux-fr",
+      "fr": "Bordeaux",
+      "gloss": "Bordeaux (famous wine city in southwest France)"
+    },
+    {
+      "word_id": "le-louvre-fr",
+      "fr": "le Louvre",
+      "gloss": "The Louvre (world's largest art museum)"
+    },
+    {
+      "word_id": "la-seine-fr",
+      "fr": "la Seine",
+      "gloss": "The Seine (river flowing through Paris)"
+    },
+    {
+      "word_id": "la-tour-eiffel-fr",
+      "fr": "la Tour Eiffel",
+      "gloss": "The Eiffel Tower (iconic Paris landmark)"
+    },
+    {
+      "word_id": "sophie-fr",
+      "fr": "Sophie",
+      "gloss": "Sophie (narrator's name)"
+    },
+    {
+      "word_id": "marc-fr",
+      "fr": "Marc",
+      "gloss": "Marc (friend's name)"
+    },
+    {
+      "word_id": "je-veux-que-fr",
+      "fr": "je veux que",
+      "gloss": "I want (someone to)"
+    },
+    {
+      "word_id": "j-aimerais-que-fr",
+      "fr": "j'aimerais que",
+      "gloss": "I'd like (someone to)"
+    },
+    {
+      "word_id": "je-suis-content-e-que-fr",
+      "fr": "je suis content(e) que",
+      "gloss": "I'm happy that"
+    },
+    {
+      "word_id": "je-suis-heureux-heureuse-que-fr",
+      "fr": "je suis heureux/heureuse que",
+      "gloss": "I'm happy that"
+    },
+    {
+      "word_id": "j-ai-peur-que-fr",
+      "fr": "j'ai peur que",
+      "gloss": "I'm afraid that"
+    },
+    {
+      "word_id": "je-regrette-que-fr",
+      "fr": "je regrette que",
+      "gloss": "I regret that"
+    },
+    {
+      "word_id": "il-faut-que-fr",
+      "fr": "il faut que",
+      "gloss": "it's necessary that / must"
+    },
+    {
+      "word_id": "si-j-etais-fr",
+      "fr": "si j'étais",
+      "gloss": "if I were"
+    },
+    {
+      "word_id": "si-j-avais-fr",
+      "fr": "si j'avais",
+      "gloss": "if I had"
+    },
+    {
+      "word_id": "j-avais-deja-fr",
+      "fr": "j'avais déjà",
+      "gloss": "I had already"
+    },
+    {
+      "word_id": "avant-que-fr",
+      "fr": "avant que",
+      "gloss": "before (someone does)"
+    },
+    {
+      "word_id": "pour-que-fr",
+      "fr": "pour que",
+      "gloss": "so that (someone can)"
+    },
+    {
+      "word_id": "soit-fr",
+      "fr": "soit",
+      "gloss": "is/be (subjunctive)"
+    },
+    {
+      "word_id": "sois-fr",
+      "fr": "sois",
+      "gloss": "are/be (subjunctive, tu)"
+    },
+    {
+      "word_id": "soyons-fr",
+      "fr": "soyons",
+      "gloss": "are/be (subjunctive, nous)"
+    },
+    {
+      "word_id": "soient-fr",
+      "fr": "soient",
+      "gloss": "are/be (subjunctive, ils/elles)"
+    },
+    {
+      "word_id": "vienne-fr",
+      "fr": "vienne",
+      "gloss": "comes/come (subjunctive)"
+    },
+    {
+      "word_id": "ait-fr",
+      "fr": "ait",
+      "gloss": "has/have (subjunctive)"
+    },
+    {
+      "word_id": "aies-fr",
+      "fr": "aies",
+      "gloss": "have (subjunctive, tu)"
+    },
+    {
+      "word_id": "essaie-fr",
+      "fr": "essaie",
+      "gloss": "try (subjunctive)"
+    },
+    {
+      "word_id": "essaies-fr",
+      "fr": "essaies",
+      "gloss": "try (subjunctive, tu)"
+    },
+    {
+      "word_id": "reussisse-fr",
+      "fr": "réussisse",
+      "gloss": "succeeds/succeed (subjunctive)"
+    },
+    {
+      "word_id": "reussissions-fr",
+      "fr": "réussissions",
+      "gloss": "succeed (subjunctive, nous)"
+    },
+    {
+      "word_id": "sache-fr",
+      "fr": "sache",
+      "gloss": "knows/know (subjunctive)"
+    },
+    {
+      "word_id": "saches-fr",
+      "fr": "saches",
+      "gloss": "know (subjunctive, tu)"
+    },
+    {
+      "word_id": "voient-fr",
+      "fr": "voient",
+      "gloss": "see (subjunctive, ils/elles)"
+    },
+    {
+      "word_id": "puisse-fr",
+      "fr": "puisse",
+      "gloss": "can (subjunctive, je)"
+    },
+    {
+      "word_id": "puissions-fr",
+      "fr": "puissions",
+      "gloss": "can (subjunctive, nous)"
+    },
+    {
+      "word_id": "reve-fr",
+      "fr": "rêve",
+      "gloss": "dream"
+    },
+    {
+      "word_id": "reves-fr",
+      "fr": "rêves",
+      "gloss": "dreams"
+    },
+    {
+      "word_id": "espoir-fr",
+      "fr": "espoir",
+      "gloss": "hope"
+    },
+    {
+      "word_id": "espoirs-fr",
+      "fr": "espoirs",
+      "gloss": "hopes"
+    },
+    {
+      "word_id": "depuis-fr",
+      "fr": "depuis",
+      "gloss": "since / for (time)"
+    },
+    {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always"
+    },
+    {
+      "word_id": "cathedrale-fr",
+      "fr": "cathédrale",
+      "gloss": "cathedral"
+    },
+    {
+      "word_id": "differente-fr",
+      "fr": "différente",
+      "gloss": "different (fem)"
+    },
+    {
+      "word_id": "simplement-fr",
+      "fr": "simplement",
+      "gloss": "simply"
+    },
+    {
+      "word_id": "rever-fr",
+      "fr": "rêver",
+      "gloss": "to dream"
+    },
+    {
+      "word_id": "acheterais-fr",
+      "fr": "achèterais",
+      "gloss": "would buy"
+    },
+    {
+      "word_id": "voyagerais-fr",
+      "fr": "voyagerais",
+      "gloss": "would travel"
+    },
+    {
+      "word_id": "quartier-fr",
+      "fr": "quartier",
+      "gloss": "neighborhood / district"
+    },
+    {
+      "word_id": "artistes-fr",
+      "fr": "artistes",
+      "gloss": "artists"
+    },
+    {
+      "word_id": "ont-vecu-fr",
+      "fr": "ont vécu",
+      "gloss": "have lived / lived"
+    },
+    {
+      "word_id": "serais-fr",
+      "fr": "serais",
+      "gloss": "would be"
+    },
+    {
+      "word_id": "en-train-de-fr",
+      "fr": "en train de",
+      "gloss": "in the process of"
+    },
+    {
+      "word_id": "change-fr",
+      "fr": "change",
+      "gloss": "changes / change"
+    },
+    {
+      "word_id": "artiste-fr",
+      "fr": "artiste",
+      "gloss": "artist"
+    },
+    {
+      "word_id": "peintures-fr",
+      "fr": "peintures",
+      "gloss": "paintings"
+    },
+    {
+      "word_id": "monde-fr",
+      "fr": "monde",
+      "gloss": "world"
+    },
+    {
+      "word_id": "difficile-fr",
+      "fr": "difficile",
+      "gloss": "difficult"
+    },
+    {
+      "word_id": "essayer-fr",
+      "fr": "essayer",
+      "gloss": "to try"
+    },
+    {
+      "word_id": "essaies-fr.try",
+      "fr": "essaies",
+      "gloss": "try (tu)"
+    },
+    {
+      "word_id": "tu-ne-sauras-jamais-fr",
+      "fr": "tu ne sauras jamais",
+      "gloss": "you'll never know"
+    },
+    {
+      "word_id": "professeur-fr",
+      "fr": "professeur",
+      "gloss": "teacher"
+    },
+    {
+      "word_id": "etudiants-fr",
+      "fr": "étudiants",
+      "gloss": "students"
+    },
+    {
+      "word_id": "adorent-fr",
+      "fr": "adorent",
+      "gloss": "love (ils/elles)"
+    },
+    {
+      "word_id": "langue-fr",
+      "fr": "langue",
+      "gloss": "language"
+    },
+    {
+      "word_id": "excellente-fr",
+      "fr": "excellente",
+      "gloss": "excellent (fem)"
+    },
+    {
+      "word_id": "essaye-fr",
+      "fr": "essayé",
+      "gloss": "tried"
+    },
+    {
+      "word_id": "reussi-fr",
+      "fr": "réussi",
+      "gloss": "succeeded"
+    },
+    {
+      "word_id": "encore-fr",
+      "fr": "encore",
+      "gloss": "again / still"
+    },
+    {
+      "word_id": "renoncerais-fr",
+      "fr": "renoncerais",
+      "gloss": "would give up"
+    },
+    {
+      "word_id": "raison-fr",
+      "fr": "raison",
+      "gloss": "right / reason"
+    },
+    {
+      "word_id": "perdu-fr",
+      "fr": "perdu",
+      "gloss": "lost"
+    },
+    {
+      "word_id": "aider-fr",
+      "fr": "aider",
+      "gloss": "to help"
+    },
+    {
+      "word_id": "l-un-l-autre-fr",
+      "fr": "l'un l'autre",
+      "gloss": "each other"
+    },
+    {
+      "word_id": "reussisse-fr.succeeds",
+      "fr": "réussisse",
+      "gloss": "succeeds (subjunctive)"
+    },
+    {
+      "word_id": "tous-les-deux-fr",
+      "fr": "tous les deux",
+      "gloss": "both (of us)"
+    },
+    {
+      "word_id": "marche-fr",
+      "fr": "marché",
+      "gloss": "walked"
+    },
+    {
+      "word_id": "nuit-fr",
+      "fr": "nuit",
+      "gloss": "night"
+    },
+    {
+      "word_id": "magnifique-fr",
+      "fr": "magnifique",
+      "gloss": "magnificent"
+    },
+    {
+      "word_id": "lumieres-fr",
+      "fr": "lumières",
+      "gloss": "lights"
+    },
+    {
+      "word_id": "brillaient-fr",
+      "fr": "brillaient",
+      "gloss": "were shining"
+    },
+    {
+      "word_id": "au-loin-fr",
+      "fr": "au loin",
+      "gloss": "in the distance"
+    },
+    {
+      "word_id": "toute-la-nuit-fr",
+      "fr": "toute la nuit",
+      "gloss": "all night"
+    },
+    {
+      "word_id": "toute-ma-vie-fr",
+      "fr": "toute ma vie",
+      "gloss": "all my life / my whole life"
+    },
+    {
+      "word_id": "pont-fr",
+      "fr": "pont",
+      "gloss": "bridge"
+    },
+    {
+      "word_id": "reconnaissante-fr",
+      "fr": "reconnaissante",
+      "gloss": "grateful (fem)"
+    },
+    {
+      "word_id": "m-aies-dit-fr",
+      "fr": "m'aies dit",
+      "gloss": "told me (subjunctive)"
+    },
+    {
+      "word_id": "dois-fr",
+      "fr": "dois",
+      "gloss": "must"
+    },
+    {
+      "word_id": "continuer-fr",
+      "fr": "continuer",
+      "gloss": "to continue"
+    },
+    {
+      "word_id": "conversation-fr",
+      "fr": "conversation",
+      "gloss": "conversation"
+    },
+    {
+      "word_id": "j-aie-perdu-fr",
+      "fr": "j'aie perdu",
+      "gloss": "I lost (subjunctive)"
+    },
+    {
+      "word_id": "plus-tot-fr",
+      "fr": "plus tôt",
+      "gloss": "earlier"
+    },
+    {
+      "word_id": "j-aurais-continue-fr",
+      "fr": "j'aurais continué",
+      "gloss": "I would have continued"
+    },
+    {
+      "word_id": "etudes-fr",
+      "fr": "études",
+      "gloss": "studies"
+    },
+    {
+      "word_id": "trop-tard-fr",
+      "fr": "trop tard",
+      "gloss": "too late"
+    },
+    {
+      "word_id": "demain-fr",
+      "fr": "demain",
+      "gloss": "tomorrow"
+    },
+    {
+      "word_id": "appeler-fr",
+      "fr": "appeler",
+      "gloss": "to call"
+    },
+    {
+      "word_id": "universite-fr",
+      "fr": "université",
+      "gloss": "university"
+    },
+    {
+      "word_id": "demande-fr",
+      "fr": "demande",
+      "gloss": "ask (I)"
+    },
+    {
+      "word_id": "informations-fr",
+      "fr": "informations",
+      "gloss": "information"
+    },
+    {
+      "word_id": "devenir-fr",
+      "fr": "devenir",
+      "gloss": "to become"
+    },
+    {
+      "word_id": "deviennent-fr",
+      "fr": "deviennent",
+      "gloss": "become (ils/elles)"
+    },
+    {
+      "word_id": "realite-fr",
+      "fr": "réalité",
+      "gloss": "reality"
+    },
+    {
+      "word_id": "grace-a-fr",
+      "fr": "grâce à",
+      "gloss": "thanks to"
+    },
+    {
+      "word_id": "soiree-fr",
+      "fr": "soirée",
+      "gloss": "evening"
+    },
+    {
+      "word_id": "retrouve-fr",
+      "fr": "retrouvé",
+      "gloss": "found again"
+    },
+    {
+      "word_id": "courage-fr",
+      "fr": "courage",
+      "gloss": "courage"
+    },
+    {
+      "word_id": "existe-fr",
+      "fr": "existe",
+      "gloss": "exists"
+    },
+    {
+      "word_id": "me-soutiennent-fr",
+      "fr": "me soutiennent",
+      "gloss": "support me"
+    },
+    {
+      "word_id": "savoir-fr",
+      "fr": "savoir",
+      "gloss": "to know"
+    },
+    {
+      "word_id": "peuvent-fr",
+      "fr": "peuvent",
+      "gloss": "can (ils/elles)"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-je-m-appelle-sophie",
+      "fr": "Je m'appelle Sophie et j'habite à Paris depuis cinq ans. J'adore cette ville! Mais j'ai toujours un grand rêve: je veux que ma vie soit différente.",
+      "en": "My name is Sophie and I've been living in Paris for five years. I love this city! But I always have a big dream: I want my life to be different."
+    },
+    {
+      "id": "b-hier-soir-j-etais",
+      "fr": "Hier soir, j'étais assise dans un petit café près de Notre-Dame. Je regardais la belle cathédrale et je pensais à mes rêves. Il faisait froid mais j'étais contente d'être là.",
+      "en": "Last night, I was sitting in a small café near Notre-Dame. I was looking at the beautiful cathedral and thinking about my dreams. It was cold but I was happy to be there."
+    },
+    {
+      "id": "img-cafe",
+      "fr": "Sophie regarde Notre-Dame et pense à ses rêves.",
+      "en": "Sophie looks at Notre-Dame and thinks about her dreams.",
+      "img": {
+        "src": "img/reading10/cafe",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Chagall-style painting of Sophie, in a red coat and yellow scarf, holding a coffee at a small café table and gazing at Notre-Dame in the blue dusk."
+      }
+    },
+    {
+      "id": "b-j-avais-deja-fini",
+      "fr": "J'avais déjà fini mon travail pour la journée. J'avais déjà pensé à beaucoup de choses. Maintenant, je voulais simplement rêver un peu.",
+      "en": "I had already finished my work for the day. I had already thought about many things. Now, I just wanted to dream a little."
+    },
+    {
+      "id": "b-si-j-etais-riche",
+      "fr": "Si j'étais riche, j'achèterais une petite maison à Montmartre. J'aimerais habiter dans ce quartier célèbre où les artistes ont vécu. Si j'avais plus d'argent, je voyagerais aussi à Nice et à Bordeaux.",
+      "en": "If I were rich, I'd buy a small house in Montmartre. I'd like to live in this famous neighborhood where artists have lived. If I had more money, I'd also travel to Nice and Bordeaux."
+    },
+    {
+      "id": "img-montmartre",
+      "fr": "Le rêve de Sophie : une petite maison à Montmartre.",
+      "en": "Sophie's dream: a small house in Montmartre.",
+      "img": {
+        "src": "img/reading10/montmartre",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Chagall-style painting of Sophie floating over the rooftops of Montmartre, past a windmill and the white domes of Sacré-Cœur, toward a small house with a red door."
+      }
+    },
+    {
+      "id": "b-mon-ami-marc-est",
+      "fr": "Mon ami Marc est arrivé au café. Il savait que j'aime ce café parce que c'est près de Notre-Dame. Je suis contente qu'il soit venu! On se parle toujours de nos rêves.",
+      "en": "My friend Marc arrived at the café. He knew I like this café because it's near Notre-Dame. I'm glad he came! We always talk to each other about our dreams."
+    },
+    {
+      "id": "b-salut-sophie-je-savais",
+      "fr": "\"Salut Sophie! Je savais que tu serais ici,\" il a dit.",
+      "en": "\"Hi Sophie! I knew you'd be here,\" he said."
+    },
+    {
+      "id": "b-bonjour-marc-je-suis",
+      "fr": "\"Bonjour Marc! Je suis heureuse que tu sois là. J'étais en train de penser à mes rêves,\" j'ai dit.",
+      "en": "\"Hello Marc! I'm happy you're here. I was thinking about my dreams,\" I said."
+    },
+    {
+      "id": "b-ah-oui-moi-aussi",
+      "fr": "\"Ah oui? Moi aussi, j'ai beaucoup de rêves. Je veux que ma vie change,\" il a dit.",
+      "en": "\"Oh yes? Me too, I have many dreams. I want my life to change,\" he said."
+    },
+    {
+      "id": "b-marc-m-a-dit",
+      "fr": "Marc m'a dit qu'il voulait être artiste. Il voulait que les gens voient ses peintures au Louvre un jour. C'est un grand rêve! Le Louvre est le musée le plus célèbre du monde.",
+      "en": "Marc told me he wanted to be an artist. He wanted people to see his paintings at the Louvre one day. It's a big dream! The Louvre is the most famous museum in the world."
+    },
+    {
+      "id": "b-je-veux-qu-un",
+      "fr": "\"Je veux qu'un jour mes peintures soient au Louvre. Mais j'ai peur que ce soit difficile,\" il a dit.",
+      "en": "\"I want my paintings to be at the Louvre one day. But I'm afraid it might be difficult,\" he said."
+    },
+    {
+      "id": "img-louvre",
+      "fr": "Le rêve de Marc : ses peintures au Louvre.",
+      "en": "Marc's dream: his paintings in the Louvre.",
+      "img": {
+        "src": "img/reading10/louvre",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Chagall-style painting of Marc, in a paint-stained green jacket, flying with his brush and palette as his canvases drift toward the Louvre pyramid."
+      }
+    },
+    {
+      "id": "b-je-comprends-mais-il",
+      "fr": "\"Je comprends. Mais il faut que tu essaies! Si tu ne fais rien, tu ne sauras jamais,\" j'ai dit.",
+      "en": "\"I understand. But you have to try! If you don't do anything, you'll never know,\" I said."
+    },
+    {
+      "id": "b-nous-avons-parle-pendant",
+      "fr": "Nous avons parlé pendant une heure. Je lui ai dit que je voulais être professeur de français. J'aimerais que mes étudiants adorent la langue française comme moi.",
+      "en": "We talked for an hour. I told him I wanted to be a French teacher. I'd like my students to love the French language like me."
+    },
+    {
+      "id": "b-je-suis-content-que",
+      "fr": "\"Je suis content que tu aies ce rêve. Tu serais une excellente professeur,\" Marc a dit.",
+      "en": "\"I'm glad you have this dream. You'd be an excellent teacher,\" Marc said."
+    },
+    {
+      "id": "b-merci-mais-j-ai",
+      "fr": "\"Merci! Mais j'ai peur que ce soit trop difficile. J'avais déjà essayé l'année dernière mais je n'ai pas réussi,\" j'ai dit.",
+      "en": "\"Thank you! But I'm afraid it might be too difficult. I had already tried last year but I didn't succeed,\" I said."
+    },
+    {
+      "id": "b-il-faut-que-tu",
+      "fr": "\"Il faut que tu essaies encore! Si j'étais toi, je ne renoncerais pas,\" il a dit.",
+      "en": "\"You have to try again! If I were you, I wouldn't give up,\" he said."
+    },
+    {
+      "id": "b-marc-avait-raison-avant",
+      "fr": "Marc avait raison. Avant que nous parlions, j'avais déjà perdu espoir. Mais maintenant, je me sens mieux.",
+      "en": "Marc was right. Before we talked, I had already lost hope. But now, I feel better."
+    },
+    {
+      "id": "b-nous-avons-decide-d",
+      "fr": "Nous avons décidé d'aider l'un l'autre. Je veux qu'il réussisse avec ses peintures, et il veut que je réussisse comme professeur.",
+      "en": "We decided to help each other. I want him to succeed with his paintings, and he wants me to succeed as a teacher."
+    },
+    {
+      "id": "b-je-suis-heureux-que",
+      "fr": "\"Je suis heureux que nous soyons amis. On peut s'aider,\" Marc a dit.",
+      "en": "\"I'm happy we're friends. We can help each other,\" Marc said."
+    },
+    {
+      "id": "b-moi-aussi-j-aimerais",
+      "fr": "\"Moi aussi! J'aimerais que nous réussissions tous les deux,\" j'ai dit.",
+      "en": "\"Me too! I'd like us both to succeed,\" I said."
+    },
+    {
+      "id": "b-apres-notre-cafe-nous",
+      "fr": "Après notre café, nous avons marché vers la Seine. Il faisait nuit maintenant et Paris était magnifique. Les lumières de la Tour Eiffel brillaient au loin.",
+      "en": "After our coffee, we walked towards the Seine. It was night now and Paris was magnificent. The lights of the Eiffel Tower were shining in the distance."
+    },
+    {
+      "id": "img-seine",
+      "fr": "Sophie et Marc marchent vers la Seine.",
+      "en": "Sophie and Marc walk toward the Seine.",
+      "img": {
+        "src": "img/reading10/seine",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Chagall-style painting of Sophie and Marc walking along the Seine at night toward a stone bridge, the Eiffel Tower glowing gold in the distance."
+      }
+    },
+    {
+      "id": "b-si-on-avait-plus",
+      "fr": "\"Si on avait plus de temps, on pourrait marcher toute la nuit,\" Marc a dit.",
+      "en": "\"If we had more time, we could walk all night,\" Marc said."
+    },
+    {
+      "id": "b-oui-j-adore-paris",
+      "fr": "\"Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie,\" j'ai dit.",
+      "en": "\"Yes! I love Paris at night. That's why I want to stay here all my life,\" I said."
+    },
+    {
+      "id": "b-nous-nous-sommes-dit",
+      "fr": "Nous nous sommes dit au revoir près du pont. Avant de partir, Marc m'a dit quelque chose d'important.",
+      "en": "We said goodbye near the bridge. Before leaving, Marc told me something important."
+    },
+    {
+      "id": "b-sophie-il-faut-que",
+      "fr": "\"Sophie, il faut que tu saches une chose: tes rêves sont importants. Je veux que tu continues à essayer,\" il a dit.",
+      "en": "\"Sophie, you need to know one thing: your dreams are important. I want you to keep trying,\" he said."
+    },
+    {
+      "id": "b-merci-marc-je-suis",
+      "fr": "\"Merci Marc. Je suis reconnaissante que tu m'aies dit ça. Toi aussi, tu dois continuer avec tes peintures,\" j'ai dit.",
+      "en": "\"Thank you Marc. I'm grateful you told me that. You too, you must continue with your paintings,\" I said."
+    },
+    {
+      "id": "b-en-rentrant-chez-moi",
+      "fr": "En rentrant chez moi, j'ai pensé à notre conversation. Je regrette que j'aie perdu espoir avant. Mais maintenant, je suis contente que Marc soit mon ami.",
+      "en": "Walking home, I thought about our conversation. I regret that I lost hope before. But now, I'm glad Marc is my friend."
+    },
+    {
+      "id": "b-si-j-avais-su",
+      "fr": "Si j'avais su plus tôt que l'espoir était si important, j'aurais continué mes études. Mais il n'est pas trop tard!",
+      "en": "If I had known earlier that hope was so important, I would have continued my studies. But it's not too late!"
+    },
+    {
+      "id": "b-demain-je-vais-appeler",
+      "fr": "Demain, je vais appeler l'université. Il faut que je demande des informations pour devenir professeur. Je veux que mes rêves deviennent réalité.",
+      "en": "Tomorrow, I'm going to call the university. I need to ask for information to become a teacher. I want my dreams to become reality."
+    },
+    {
+      "id": "img-courage",
+      "fr": "Un nouveau jour pour Sophie.",
+      "en": "A new day for Sophie.",
+      "img": {
+        "src": "img/reading10/courage",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Chagall-style painting of Sophie at the open window of her apartment at sunrise, arms open, above the rooftops of Paris."
+      }
+    },
+    {
+      "id": "b-grace-a-mon-ami",
+      "fr": "Grâce à mon ami et à cette belle soirée à Paris, j'ai retrouvé mon courage. Je suis heureuse que cette ville existe, et je suis contente que mes amis me soutiennent.",
+      "en": "Thanks to my friend and to this beautiful evening in Paris, I found my courage again. I'm happy this city exists, and I'm glad my friends support me."
+    },
+    {
+      "id": "b-comme-marc-a-dit",
+      "fr": "Comme Marc a dit: il faut essayer! Si on ne fait rien, on ne saura jamais. Et moi, je veux savoir si mes rêves peuvent devenir réalité.",
+      "en": "Like Marc said: you have to try! If we don't do anything, we'll never know. And me, I want to know if my dreams can become reality."
+    },
+    {
+      "id": "b-fin",
+      "fr": "Fin",
+      "en": "The End",
+      "layout": "end"
+    }
+  ],
+  "items": [
+    {
+      "id": "reading-10-1",
+      "type": "comprehension",
+      "question": "{Où habitait Sophie?}",
+      "cue": "Where did Sophie live?",
+      "answer": "Paris",
+      "accept": [
+        "paris",
+        "à Paris",
+        "à paris"
+      ],
+      "hint": "{Elle habitait à...}"
+    },
+    {
+      "id": "reading-10-2",
+      "type": "comprehension",
+      "question": "{Où était Sophie hier soir?}",
+      "cue": "Where was Sophie last night?",
+      "answer": "dans un café près de Notre-Dame",
+      "accept": [
+        "Notre-Dame",
+        "notre-dame",
+        "notre dame",
+        "près de Notre-Dame",
+        "café"
+      ],
+      "hint": "{Dans un café près de...}"
+    },
+    {
+      "id": "reading-10-3",
+      "type": "comprehension",
+      "question": "{Qu'est-ce que Sophie voulait?}",
+      "cue": "What did Sophie want?",
+      "answer": "que sa vie soit différente",
+      "accept": [
+        "soit différente",
+        "soit differente",
+        "différente",
+        "que ma vie soit différente"
+      ],
+      "hint": "{Je veux que ma vie...}"
+    },
+    {
+      "id": "reading-10-4",
+      "type": "comprehension",
+      "question": "{Si Sophie était riche, qu'est-ce qu'elle achèterait?}",
+      "cue": "If Sophie were rich, what would she buy?",
+      "answer": "une petite maison à Montmartre",
+      "accept": [
+        "Montmartre",
+        "montmartre",
+        "une maison à Montmartre",
+        "maison"
+      ],
+      "hint": "{Une petite maison à...}"
+    },
+    {
+      "id": "reading-10-5",
+      "type": "comprehension",
+      "question": "{Quel est le rêve de Marc?}",
+      "cue": "What is Marc's dream?",
+      "answer": "être artiste",
+      "accept": [
+        "artiste",
+        "un artiste"
+      ],
+      "hint": "{Être... et avoir ses peintures au Louvre}"
+    },
+    {
+      "id": "reading-10-6",
+      "type": "comprehension",
+      "question": "{Qu'est-ce que Sophie veut devenir?}",
+      "cue": "What does Sophie want to become?",
+      "answer": "professeur de français",
+      "accept": [
+        "français",
+        "francais",
+        "professeur",
+        "professeur de francais"
+      ],
+      "hint": "{Professeur de...}"
+    },
+    {
+      "id": "reading-10-7",
+      "type": "comprehension",
+      "question": "{Qu'est-ce que Sophie avait déjà fait?}",
+      "cue": "What had Sophie already done?",
+      "answer": "elle avait essayé",
+      "accept": [
+        "essayé",
+        "essaye",
+        "j'avais essayé",
+        "j'ai essayé"
+      ],
+      "hint": "{J'avais déjà...}"
+    },
+    {
+      "id": "reading-10-8",
+      "type": "comprehension",
+      "question": "{Qu'est-ce qu'ils ont décidé de faire?}",
+      "cue": "What did they decide to do?",
+      "answer": "aider l'un l'autre",
+      "accept": [
+        "l'un l'autre",
+        "s'aider",
+        "aider",
+        "ils ont décidé de s'aider"
+      ],
+      "hint": "{Aider...}"
+    },
+    {
+      "id": "reading-10-9",
+      "type": "comprehension",
+      "question": "{Où ont-ils marché après le café?}",
+      "cue": "Where did they walk after the café?",
+      "answer": "vers la Seine",
+      "accept": [
+        "la Seine",
+        "la seine",
+        "Seine"
+      ],
+      "hint": "{Vers...}"
+    },
+    {
+      "id": "reading-10-10",
+      "type": "comprehension",
+      "question": "{Qu'est-ce que Sophie va faire demain?}",
+      "cue": "What is Sophie going to do tomorrow?",
+      "answer": "appeler l'université",
+      "accept": [
+        "l'université",
+        "l'universite",
+        "université",
+        "appeler",
+        "elle va appeler l'université",
+        "je vais appeler l'université"
+      ],
+      "hint": "{Elle va appeler...}"
+    }
+  ]
+}

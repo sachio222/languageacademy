@@ -1,0 +1,204 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-06-french-countries",
+  "kind": "reference",
+  "status": "written",
+  "title": "La Francophonie",
+  "description": "French-speaking countries around the world - 300 million speakers across 5 continents!",
+  "vocabulary": [
+    {
+      "word_id": "la-francophonie-fr",
+      "fr": "la Francophonie",
+      "gloss": "the French-speaking world",
+      "note": "cultural/linguistic community"
+    },
+    {
+      "word_id": "francophone-fr",
+      "fr": "francophone",
+      "gloss": "French-speaking",
+      "note": "adjective"
+    },
+    {
+      "word_id": "un-pays-fr",
+      "fr": "un pays",
+      "gloss": "a country",
+      "note": "masculine"
+    },
+    {
+      "word_id": "une-langue-fr",
+      "fr": "une langue",
+      "gloss": "a language",
+      "note": "feminine"
+    },
+    {
+      "word_id": "la-langue-officielle-fr",
+      "fr": "la langue officielle",
+      "gloss": "the official language",
+      "note": "government language"
+    },
+    {
+      "word_id": "parler-francais-fr",
+      "fr": "parler français",
+      "gloss": "to speak French",
+      "note": "verb phrase"
+    },
+    {
+      "word_id": "l-afrique-fr",
+      "fr": "l'Afrique",
+      "gloss": "Africa",
+      "note": "feminine - 60% of French speakers!"
+    },
+    {
+      "word_id": "l-europe-fr",
+      "fr": "l'Europe",
+      "gloss": "Europe",
+      "note": "feminine - birthplace"
+    },
+    {
+      "word_id": "l-amerique-du-nord-fr",
+      "fr": "l'Amérique du Nord",
+      "gloss": "North America",
+      "note": "feminine - Quebec!"
+    },
+    {
+      "word_id": "les-caraibes-fr",
+      "fr": "les Caraïbes",
+      "gloss": "the Caribbean",
+      "note": "feminine plural"
+    },
+    {
+      "word_id": "le-quebec-fr",
+      "fr": "le Québec",
+      "gloss": "Quebec",
+      "note": "7.9 million French speakers"
+    },
+    {
+      "word_id": "le-congo-fr",
+      "fr": "le Congo",
+      "gloss": "Congo (DRC)",
+      "note": "90M - 2nd largest French country!"
+    },
+    {
+      "word_id": "la-france-fr",
+      "fr": "la France",
+      "gloss": "France",
+      "note": "67M - birthplace of French"
+    },
+    {
+      "word_id": "la-belgique-fr",
+      "fr": "la Belgique",
+      "gloss": "Belgium",
+      "note": "French, Dutch, German"
+    },
+    {
+      "word_id": "la-suisse-fr",
+      "fr": "la Suisse",
+      "gloss": "Switzerland",
+      "note": "French, German, Italian, Romansh"
+    },
+    {
+      "word_id": "le-senegal-fr",
+      "fr": "le Sénégal",
+      "gloss": "Senegal",
+      "note": "West Africa"
+    },
+    {
+      "word_id": "la-cote-d-ivoire-fr",
+      "fr": "la Côte d'Ivoire",
+      "gloss": "Ivory Coast",
+      "note": "economic hub of West Africa"
+    },
+    {
+      "word_id": "haiti-fr",
+      "fr": "Haïti",
+      "gloss": "Haiti",
+      "note": "French + Creole"
+    },
+    {
+      "word_id": "le-maroc-fr",
+      "fr": "le Maroc",
+      "gloss": "Morocco",
+      "note": "North Africa - Maghreb"
+    },
+    {
+      "word_id": "le-liban-fr",
+      "fr": "le Liban",
+      "gloss": "Lebanon",
+      "note": "Paris of the Middle East"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-la-francophonie-the-french",
+      "heading": "La Francophonie - The French-Speaking World",
+      "text": "French is spoken by 300+ million people across 29 countries as an official language",
+      "example": "5th most spoken language globally, 2nd most studied language, official language of UN, EU, NATO, Olympics"
+    },
+    {
+      "id": "s-europe-where-it-all",
+      "heading": "{Europe} - Where It All Began",
+      "text": "France, Belgium, Switzerland, Luxembourg, Monaco - 90 million French speakers",
+      "example": "{France} (67M - birthplace), Belgium (11.5M - also Dutch/German), Switzerland (8.6M - also German/Italian), {Luxembourg} (632K), Monaco (39K)"
+    },
+    {
+      "id": "s-north-america-quebec-haiti",
+      "heading": "North America - Québec & Haiti",
+      "text": "8+ million French speakers, primarily in Quebec (Canada) and Haiti",
+      "example": "Quebec (7.9M - '{Je me souviens}'), Haiti (11.4M - French + Creole), Louisiana (200K speakers), {Saint-Pierre-et-Miquelon} (6K)"
+    },
+    {
+      "id": "s-africa-the-future-of",
+      "heading": "Africa - The Future of French!",
+      "text": "Africa has the MOST French speakers (60% of global total) and growing fast!",
+      "example": "By 2050, 85% of French speakers will be in Africa. Democratic Republic of Congo will overtake France as #1 French-speaking country!"
+    },
+    {
+      "id": "s-west-africa-french-belt",
+      "heading": "West Africa - French Belt",
+      "text": "11 countries where French is the official language",
+      "example": "Senegal (16M), {Côte d'Ivoire} (26M - economic hub), Mali (20M), Burkina Faso (21M), Niger (24M), Benin (12M), Togo (8M), Guinea (13M)"
+    },
+    {
+      "id": "s-central-africa-congo-basin",
+      "heading": "Central Africa - Congo Basin",
+      "text": "French is the lingua franca connecting hundreds of ethnic groups",
+      "example": "DRC (90M - 2nd largest!), Cameroon (27M - also English), Chad (16M), Congo-Brazzaville (5.5M), {CAR} (4.8M), Gabon (2.2M)"
+    },
+    {
+      "id": "s-north-africa-le-maghreb",
+      "heading": "North Africa - Le Maghreb",
+      "text": "French widely spoken alongside Arabic in former French colonies",
+      "example": "Morocco (33% speak French), Algeria (33%), Tunisia (66%) - French used in business, education, media"
+    },
+    {
+      "id": "s-east-africa-islands",
+      "heading": "East Africa & Islands",
+      "text": "French official in 7 countries and island nations",
+      "example": "Madagascar (28M), Rwanda (13M), Burundi (12M), Djibouti (990K), Comoros (870K), Seychelles (98K), Mauritius (1.3M)"
+    },
+    {
+      "id": "s-caribbean-les-antilles",
+      "heading": "Caribbean - Les Antilles",
+      "text": "French departments and territories in the Caribbean",
+      "example": "Guadeloupe (400K), Martinique (375K), French Guiana (290K) - all part of France with euros and French laws!"
+    },
+    {
+      "id": "s-middle-east-asia",
+      "heading": "Middle East & Asia",
+      "text": "Former French influence still present",
+      "example": "Lebanon (40% speak French - Paris of Middle East), Vietnam (600K - legacy of French Indochina)"
+    },
+    {
+      "id": "s-pacific-islands-polynesie-francaise",
+      "heading": "Pacific Islands - {Polynésie Française}",
+      "text": "French territories across the Pacific Ocean",
+      "example": "French Polynesia/Tahiti (280K), New Caledonia (271K), Vanuatu (307K - French, English, Bislama official)"
+    },
+    {
+      "id": "s-the-future-is-african",
+      "heading": "The Future is African!",
+      "text": "By 2050, French will have 700 million speakers - mostly due to African population growth",
+      "example": "DRC will have more French speakers than France! French will be Africa's most-spoken language. 85% of French speakers will be African."
+    }
+  ]
+}

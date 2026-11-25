@@ -1,0 +1,1084 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-12-reading-11",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading - {La France Moderne}",
+  "description": "Official exposition about modern France. Demonstrates your advanced reading ability with sophisticated, real-world French text using only vocabulary you've learned.",
+  "can_do": [
+    "Read official French expositions and articles",
+    "Understand sophisticated cultural and social content",
+    "Comprehend real-world French publications"
+  ],
+  "story_id": "reading11",
+  "vocabulary": [
+    {
+      "word_id": "evoluer-fr",
+      "fr": "évoluer",
+      "gloss": "to evolve",
+      "note": "development/change"
+    },
+    {
+      "word_id": "rapidement-fr.rapidly",
+      "fr": "rapidement",
+      "gloss": "rapidly",
+      "note": "speed adverb"
+    },
+    {
+      "word_id": "habitants-fr",
+      "fr": "habitants",
+      "gloss": "inhabitants",
+      "note": "people who live there"
+    },
+    {
+      "word_id": "nation-fr",
+      "fr": "nation",
+      "gloss": "nation",
+      "note": "country/state"
+    },
+    {
+      "word_id": "capitale-fr",
+      "fr": "capitale",
+      "gloss": "capital (city)",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "millions-fr",
+      "fr": "millions",
+      "gloss": "millions",
+      "note": "large numbers"
+    },
+    {
+      "word_id": "visiteurs-fr",
+      "fr": "visiteurs",
+      "gloss": "visitors",
+      "note": "tourists/guests"
+    },
+    {
+      "word_id": "admirer-fr",
+      "fr": "admirer",
+      "gloss": "to admire",
+      "note": "appreciation verb"
+    },
+    {
+      "word_id": "monuments-fr",
+      "fr": "monuments",
+      "gloss": "monuments",
+      "note": "historic buildings"
+    },
+    {
+      "word_id": "historiques-fr",
+      "fr": "historiques",
+      "gloss": "historic",
+      "note": "adjective"
+    },
+    {
+      "word_id": "systeme-fr",
+      "fr": "système",
+      "gloss": "system",
+      "note": "masculine noun"
+    },
+    {
+      "word_id": "educatif-fr",
+      "fr": "éducatif",
+      "gloss": "educational",
+      "note": "adjective"
+    },
+    {
+      "word_id": "reconnu-fr",
+      "fr": "reconnu",
+      "gloss": "recognized",
+      "note": "past participle"
+    },
+    {
+      "word_id": "internationalement-fr",
+      "fr": "internationalement",
+      "gloss": "internationally",
+      "note": "manner adverb"
+    },
+    {
+      "word_id": "matieres-fr",
+      "fr": "matières",
+      "gloss": "subjects (school)",
+      "note": "academic subjects"
+    },
+    {
+      "word_id": "sciences-fr",
+      "fr": "sciences",
+      "gloss": "sciences",
+      "note": "academic field"
+    },
+    {
+      "word_id": "litterature-fr",
+      "fr": "littérature",
+      "gloss": "literature",
+      "note": "academic field"
+    },
+    {
+      "word_id": "primaire-fr",
+      "fr": "primaire",
+      "gloss": "primary/elementary",
+      "note": "school level"
+    },
+    {
+      "word_id": "culture-fr",
+      "fr": "culture",
+      "gloss": "culture",
+      "note": "civilization/arts"
+    },
+    {
+      "word_id": "influence-fr",
+      "fr": "influence",
+      "gloss": "influences",
+      "note": "verb - affects"
+    },
+    {
+      "word_id": "entier-fr",
+      "fr": "entier",
+      "gloss": "entire/whole",
+      "note": "adjective"
+    },
+    {
+      "word_id": "creent-fr",
+      "fr": "créent",
+      "gloss": "create",
+      "note": "ils/elles form of créer"
+    },
+    {
+      "word_id": "oeuvres-fr",
+      "fr": "œuvres",
+      "gloss": "works (of art)",
+      "note": "artistic creations"
+    },
+    {
+      "word_id": "inspirent-fr",
+      "fr": "inspirent",
+      "gloss": "inspire",
+      "note": "ils/elles form"
+    },
+    {
+      "word_id": "planete-fr",
+      "fr": "planète",
+      "gloss": "planet",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "populaire-fr",
+      "fr": "populaire",
+      "gloss": "popular",
+      "note": "adjective"
+    },
+    {
+      "word_id": "plaisir-fr",
+      "fr": "plaisir",
+      "gloss": "pleasure",
+      "note": "masculine noun"
+    },
+    {
+      "word_id": "plats-fr",
+      "fr": "plats",
+      "gloss": "dishes (food)",
+      "note": "meal items"
+    },
+    {
+      "word_id": "economie-fr",
+      "fr": "économie",
+      "gloss": "economy",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "depend-fr",
+      "fr": "dépend",
+      "gloss": "depends",
+      "note": "from dépendre"
+    },
+    {
+      "word_id": "secteurs-fr",
+      "fr": "secteurs",
+      "gloss": "sectors",
+      "note": "economic areas"
+    },
+    {
+      "word_id": "services-fr",
+      "fr": "services",
+      "gloss": "services",
+      "note": "service sector"
+    },
+    {
+      "word_id": "industrie-fr",
+      "fr": "industrie",
+      "gloss": "industry",
+      "note": "manufacturing"
+    },
+    {
+      "word_id": "agriculture-fr",
+      "fr": "agriculture",
+      "gloss": "agriculture",
+      "note": "farming"
+    },
+    {
+      "word_id": "entreprises-fr",
+      "fr": "entreprises",
+      "gloss": "companies",
+      "note": "businesses"
+    },
+    {
+      "word_id": "exportent-fr",
+      "fr": "exportent",
+      "gloss": "export",
+      "note": "sell abroad"
+    },
+    {
+      "word_id": "produits-fr",
+      "fr": "produits",
+      "gloss": "products",
+      "note": "manufactured goods"
+    },
+    {
+      "word_id": "transport-fr",
+      "fr": "transport",
+      "gloss": "transportation",
+      "note": "movement system"
+    },
+    {
+      "word_id": "public-fr",
+      "fr": "public",
+      "gloss": "public",
+      "note": "adjective"
+    },
+    {
+      "word_id": "fonctionne-fr",
+      "fr": "fonctionne",
+      "gloss": "functions/works",
+      "note": "operates well"
+    },
+    {
+      "word_id": "trains-fr",
+      "fr": "trains",
+      "gloss": "trains",
+      "note": "railway transport"
+    },
+    {
+      "word_id": "rapides-fr",
+      "fr": "rapides",
+      "gloss": "fast",
+      "note": "speed adjective"
+    },
+    {
+      "word_id": "connectent-fr",
+      "fr": "connectent",
+      "gloss": "connect",
+      "note": "link together"
+    },
+    {
+      "word_id": "destination-fr",
+      "fr": "destination",
+      "gloss": "destination",
+      "note": "end point"
+    },
+    {
+      "word_id": "metro-fr",
+      "fr": "métro",
+      "gloss": "metro/subway",
+      "note": "Paris underground"
+    },
+    {
+      "word_id": "permet-fr",
+      "fr": "permet",
+      "gloss": "allows/permits",
+      "note": "enables"
+    },
+    {
+      "word_id": "se-deplacer-fr",
+      "fr": "se déplacer",
+      "gloss": "to move around",
+      "note": "reflexive movement"
+    },
+    {
+      "word_id": "facilement-fr",
+      "fr": "facilement",
+      "gloss": "easily",
+      "note": "manner adverb"
+    },
+    {
+      "word_id": "vacances-fr",
+      "fr": "vacances",
+      "gloss": "vacation",
+      "note": "always plural in French"
+    },
+    {
+      "word_id": "ete-fr",
+      "fr": "été",
+      "gloss": "summer",
+      "note": "season"
+    },
+    {
+      "word_id": "profiter-fr",
+      "fr": "profiter",
+      "gloss": "to enjoy/benefit from",
+      "note": "take advantage"
+    },
+    {
+      "word_id": "soleil-fr",
+      "fr": "soleil",
+      "gloss": "sun",
+      "note": "masculine noun"
+    },
+    {
+      "word_id": "mer-fr",
+      "fr": "mer",
+      "gloss": "sea",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "destinations-fr",
+      "fr": "destinations",
+      "gloss": "destinations",
+      "note": "travel endpoints"
+    },
+    {
+      "word_id": "preferent-fr",
+      "fr": "préfèrent",
+      "gloss": "prefer",
+      "note": "ils/elles form of préférer"
+    },
+    {
+      "word_id": "region-fr",
+      "fr": "région",
+      "gloss": "region",
+      "note": "geographic area"
+    },
+    {
+      "word_id": "decouvrir-fr",
+      "fr": "découvrir",
+      "gloss": "to discover",
+      "note": "exploration verb"
+    },
+    {
+      "word_id": "beaute-fr",
+      "fr": "beauté",
+      "gloss": "beauty",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "campagne-fr",
+      "fr": "campagne",
+      "gloss": "countryside",
+      "note": "rural areas"
+    },
+    {
+      "word_id": "technologie-fr",
+      "fr": "technologie",
+      "gloss": "technology",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "quotidienne-fr",
+      "fr": "quotidienne",
+      "gloss": "daily",
+      "note": "everyday life"
+    },
+    {
+      "word_id": "jeunes-fr",
+      "fr": "jeunes",
+      "gloss": "young people",
+      "note": "youth"
+    },
+    {
+      "word_id": "en-ligne-fr",
+      "fr": "en ligne",
+      "gloss": "online",
+      "note": "internet context"
+    },
+    {
+      "word_id": "internet-fr",
+      "fr": "internet",
+      "gloss": "internet",
+      "note": "web/online"
+    },
+    {
+      "word_id": "communiquent-fr",
+      "fr": "communiquent",
+      "gloss": "communicate",
+      "note": "ils/elles form"
+    },
+    {
+      "word_id": "telephones-fr",
+      "fr": "téléphones",
+      "gloss": "phones",
+      "note": "mobile devices"
+    },
+    {
+      "word_id": "generation-fr",
+      "fr": "génération",
+      "gloss": "generation",
+      "note": "age group"
+    },
+    {
+      "word_id": "parents-fr",
+      "fr": "parents",
+      "gloss": "parents",
+      "note": "mothers and fathers"
+    },
+    {
+      "word_id": "garde-fr",
+      "fr": "garde",
+      "gloss": "keeps/maintains",
+      "note": "preserves"
+    },
+    {
+      "word_id": "valeurs-fr",
+      "fr": "valeurs",
+      "gloss": "values",
+      "note": "principles/beliefs"
+    },
+    {
+      "word_id": "activement-fr",
+      "fr": "activement",
+      "gloss": "actively",
+      "note": "manner adverb"
+    },
+    {
+      "word_id": "proteger-fr",
+      "fr": "protéger",
+      "gloss": "to protect",
+      "note": "safeguard"
+    },
+    {
+      "word_id": "environnement-fr",
+      "fr": "environnement",
+      "gloss": "environment",
+      "note": "nature/ecology"
+    },
+    {
+      "word_id": "gouvernement-fr",
+      "fr": "gouvernement",
+      "gloss": "government",
+      "note": "state authority"
+    },
+    {
+      "word_id": "encourage-fr",
+      "fr": "encourage",
+      "gloss": "encourages",
+      "note": "promotes/supports"
+    },
+    {
+      "word_id": "citoyens-fr",
+      "fr": "citoyens",
+      "gloss": "citizens",
+      "note": "people of country"
+    },
+    {
+      "word_id": "utiliser-fr",
+      "fr": "utiliser",
+      "gloss": "to use",
+      "note": "employ/make use of"
+    },
+    {
+      "word_id": "recycler-fr",
+      "fr": "recycler",
+      "gloss": "to recycle",
+      "note": "environmental action"
+    },
+    {
+      "word_id": "dechets-fr",
+      "fr": "déchets",
+      "gloss": "waste",
+      "note": "garbage/trash"
+    },
+    {
+      "word_id": "economiser-fr",
+      "fr": "économiser",
+      "gloss": "to save/conserve",
+      "note": "use less"
+    },
+    {
+      "word_id": "energie-fr",
+      "fr": "énergie",
+      "gloss": "energy",
+      "note": "power/fuel"
+    },
+    {
+      "word_id": "efforts-fr",
+      "fr": "efforts",
+      "gloss": "efforts",
+      "note": "attempts/tries"
+    },
+    {
+      "word_id": "montrent-fr",
+      "fr": "montrent",
+      "gloss": "show",
+      "note": "demonstrate"
+    },
+    {
+      "word_id": "avenir-fr",
+      "fr": "avenir",
+      "gloss": "future",
+      "note": "time ahead"
+    },
+    {
+      "word_id": "relations-fr",
+      "fr": "relations",
+      "gloss": "relations",
+      "note": "relationships"
+    },
+    {
+      "word_id": "internationales-fr",
+      "fr": "internationales",
+      "gloss": "international",
+      "note": "between countries"
+    },
+    {
+      "word_id": "participe-fr",
+      "fr": "participe",
+      "gloss": "participates",
+      "note": "takes part in"
+    },
+    {
+      "word_id": "organisations-fr",
+      "fr": "organisations",
+      "gloss": "organizations",
+      "note": "institutions"
+    },
+    {
+      "word_id": "europeennes-fr",
+      "fr": "européennes",
+      "gloss": "European",
+      "note": "of Europe"
+    },
+    {
+      "word_id": "mondiales-fr",
+      "fr": "mondiales",
+      "gloss": "global/world",
+      "note": "worldwide"
+    },
+    {
+      "word_id": "diplomates-fr",
+      "fr": "diplomates",
+      "gloss": "diplomats",
+      "note": "international representatives"
+    },
+    {
+      "word_id": "regulierement-fr",
+      "fr": "régulièrement",
+      "gloss": "regularly",
+      "note": "on regular basis"
+    },
+    {
+      "word_id": "rencontrer-fr",
+      "fr": "rencontrer",
+      "gloss": "to meet",
+      "note": "encounter/meet with"
+    },
+    {
+      "word_id": "homologues-fr",
+      "fr": "homologues",
+      "gloss": "counterparts",
+      "note": "equivalent positions"
+    },
+    {
+      "word_id": "etrangers-fr",
+      "fr": "étrangers",
+      "gloss": "foreign",
+      "note": "from other countries"
+    },
+    {
+      "word_id": "discutent-fr",
+      "fr": "discutent",
+      "gloss": "discuss",
+      "note": "talk about seriously"
+    },
+    {
+      "word_id": "questions-fr",
+      "fr": "questions",
+      "gloss": "questions/issues",
+      "note": "topics/matters"
+    },
+    {
+      "word_id": "economiques-fr",
+      "fr": "économiques",
+      "gloss": "economic",
+      "note": "related to economy"
+    },
+    {
+      "word_id": "politiques-fr",
+      "fr": "politiques",
+      "gloss": "political",
+      "note": "related to politics"
+    },
+    {
+      "word_id": "culturelles-fr",
+      "fr": "culturelles",
+      "gloss": "cultural",
+      "note": "related to culture"
+    },
+    {
+      "word_id": "conclusion-fr",
+      "fr": "conclusion",
+      "gloss": "conclusion",
+      "note": "final section"
+    },
+    {
+      "word_id": "moderne-fr",
+      "fr": "moderne",
+      "gloss": "modern",
+      "note": "contemporary"
+    },
+    {
+      "word_id": "combine-fr",
+      "fr": "combine",
+      "gloss": "combines",
+      "note": "mixes together"
+    },
+    {
+      "word_id": "tradition-fr",
+      "fr": "tradition",
+      "gloss": "tradition",
+      "note": "historic customs"
+    },
+    {
+      "word_id": "innovation-fr",
+      "fr": "innovation",
+      "gloss": "innovation",
+      "note": "new developments"
+    },
+    {
+      "word_id": "preserve-fr",
+      "fr": "préserve",
+      "gloss": "preserves",
+      "note": "keeps safe"
+    },
+    {
+      "word_id": "patrimoine-fr",
+      "fr": "patrimoine",
+      "gloss": "heritage",
+      "note": "cultural inheritance"
+    },
+    {
+      "word_id": "historique-fr",
+      "fr": "historique",
+      "gloss": "historic",
+      "note": "from history"
+    },
+    {
+      "word_id": "embrassant-fr",
+      "fr": "embrassant",
+      "gloss": "embracing",
+      "note": "accepting fully"
+    },
+    {
+      "word_id": "changements-fr",
+      "fr": "changements",
+      "gloss": "changes",
+      "note": "modifications"
+    },
+    {
+      "word_id": "vingt-et-unieme-fr",
+      "fr": "vingt et unième",
+      "gloss": "twenty-first",
+      "note": "21st century"
+    },
+    {
+      "word_id": "siecle-fr",
+      "fr": "siècle",
+      "gloss": "century",
+      "note": "100-year period"
+    },
+    {
+      "word_id": "jouer-fr",
+      "fr": "jouer",
+      "gloss": "to play",
+      "note": "perform/take part"
+    },
+    {
+      "word_id": "role-fr",
+      "fr": "rôle",
+      "gloss": "role",
+      "note": "function/position"
+    },
+    {
+      "word_id": "significatif-fr",
+      "fr": "significatif",
+      "gloss": "significant",
+      "note": "important/meaningful"
+    },
+    {
+      "word_id": "scene-fr",
+      "fr": "scène",
+      "gloss": "scene/stage",
+      "note": "platform/arena"
+    },
+    {
+      "word_id": "contributions-fr",
+      "fr": "contributions",
+      "gloss": "contributions",
+      "note": "what it gives"
+    },
+    {
+      "word_id": "enrichissent-fr",
+      "fr": "enrichissent",
+      "gloss": "enrich",
+      "note": "make richer/better"
+    },
+    {
+      "word_id": "france-fr",
+      "fr": "France",
+      "gloss": "France (country)"
+    },
+    {
+      "word_id": "europe-fr",
+      "fr": "Europe",
+      "gloss": "Europe (continent)"
+    },
+    {
+      "word_id": "paris-fr",
+      "fr": "Paris",
+      "gloss": "Paris (French capital)"
+    },
+    {
+      "word_id": "tour-eiffel-fr",
+      "fr": "Tour Eiffel",
+      "gloss": "Eiffel Tower"
+    },
+    {
+      "word_id": "notre-dame-fr",
+      "fr": "Notre-Dame",
+      "gloss": "Notre-Dame Cathedral"
+    },
+    {
+      "word_id": "louvre-fr",
+      "fr": "Louvre",
+      "gloss": "Louvre Museum"
+    },
+    {
+      "word_id": "arc-de-triomphe-fr",
+      "fr": "Arc de Triomphe",
+      "gloss": "Arc de Triomphe (triumphal arch)"
+    },
+    {
+      "word_id": "champs-elysees-fr",
+      "fr": "Champs-Élysées",
+      "gloss": "Champs-Élysées (famous avenue)"
+    },
+    {
+      "word_id": "versailles-fr",
+      "fr": "Versailles",
+      "gloss": "Palace of Versailles"
+    },
+    {
+      "word_id": "montmartre-fr",
+      "fr": "Montmartre",
+      "gloss": "Montmartre (artist district)"
+    },
+    {
+      "word_id": "moulin-rouge-fr",
+      "fr": "Moulin Rouge",
+      "gloss": "Moulin Rouge (famous cabaret)"
+    },
+    {
+      "word_id": "lyon-fr",
+      "fr": "Lyon",
+      "gloss": "Lyon (major French city)"
+    },
+    {
+      "word_id": "marseille-fr",
+      "fr": "Marseille",
+      "gloss": "Marseille (port city)"
+    },
+    {
+      "word_id": "bordeaux-fr",
+      "fr": "Bordeaux",
+      "gloss": "Bordeaux (wine capital)"
+    },
+    {
+      "word_id": "nice-fr",
+      "fr": "Nice",
+      "gloss": "Nice (French Riviera)"
+    },
+    {
+      "word_id": "cannes-fr",
+      "fr": "Cannes",
+      "gloss": "Cannes (film festival city)"
+    },
+    {
+      "word_id": "mediterranee-fr",
+      "fr": "Méditerranée",
+      "gloss": "Mediterranean Sea"
+    },
+    {
+      "word_id": "claude-monet-fr",
+      "fr": "Claude Monet",
+      "gloss": "Claude Monet (Impressionist painter)"
+    },
+    {
+      "word_id": "auguste-renoir-fr",
+      "fr": "Auguste Renoir",
+      "gloss": "Auguste Renoir (Impressionist painter)"
+    },
+    {
+      "word_id": "vincent-van-gogh-fr",
+      "fr": "Vincent van Gogh",
+      "gloss": "Vincent van Gogh (Post-Impressionist painter)"
+    },
+    {
+      "word_id": "coq-au-vin-fr",
+      "fr": "coq au vin",
+      "gloss": "coq au vin (classic chicken dish)"
+    },
+    {
+      "word_id": "ratatouille-fr",
+      "fr": "ratatouille",
+      "gloss": "ratatouille (vegetable stew)"
+    },
+    {
+      "word_id": "bouillabaisse-fr",
+      "fr": "bouillabaisse",
+      "gloss": "bouillabaisse (Marseille fish stew)"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-la-france-d-aujourd",
+      "fr": "La France d'aujourd'hui est un pays qui continue à évoluer rapidement. Avec ses soixante-huit millions d'habitants, elle reste une nation importante en Europe et dans le monde.",
+      "en": "Modern France is a country that continues to evolve rapidly. With its sixty-eight million inhabitants, it remains an important nation in Europe and in the world."
+    },
+    {
+      "id": "b-paris-sa-capitale-compte",
+      "fr": "Paris, sa capitale, compte plus de deux millions de personnes. Cette ville magnifique attire des millions de visiteurs chaque année. Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame, le Louvre, et l'Arc de Triomphe sur les Champs-Élysées. Beaucoup visitent aussi le château de Versailles. Les touristes cherchent souvent des directions pour trouver ces lieux historiques.",
+      "en": "Paris, its capital, has more than two million people. This magnificent city attracts millions of visitors each year. They come to admire its famous monuments like the Eiffel Tower, Notre-Dame, the Louvre, and the Arc de Triomphe on the Champs-Élysées. Many also visit the Palace of Versailles. Tourists often look for directions to find these historic places."
+    },
+    {
+      "id": "img-paris",
+      "fr": "La Tour Eiffel, l'Arc de Triomphe, le Louvre et Notre-Dame.",
+      "en": "The Eiffel Tower, the Arc de Triomphe, the Louvre and Notre-Dame.",
+      "img": {
+        "src": "img/reading11/paris",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of Paris at dusk in navy, cream and red: the Eiffel Tower in steep perspective, crowds walking up the Champs-Élysées to the Arc de Triomphe, the Louvre pyramid and Notre-Dame."
+      }
+    },
+    {
+      "id": "b-le-systeme-educatif-francais",
+      "fr": "Le système éducatif français est reconnu internationalement. Les étudiants français travaillent dur dans leurs écoles et universités. Ils étudient beaucoup de matières différentes : les sciences, l'histoire, les langues étrangères, et la littérature. L'apprentissage commence très jeune - les enfants ont généralement six ans quand ils arrivent à l'école primaire.",
+      "en": "The French educational system is internationally recognized. French students work hard in their schools and universities. They study many different subjects: sciences, history, foreign languages, and literature. Learning begins very young - children are generally six years old when they arrive at elementary school."
+    },
+    {
+      "id": "img-ecole",
+      "fr": "À six ans, les enfants arrivent à l'école primaire.",
+      "en": "At six, children start elementary school.",
+      "img": {
+        "src": "img/reading11/ecole",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of a classroom: young children raise their hands while a teacher points at shapes on the blackboard, beside a globe and stacked books."
+      }
+    },
+    {
+      "id": "b-la-culture-francaise-influence",
+      "fr": "La culture française influence le monde entier. Les artistes français comme Claude Monet, Auguste Renoir, et Vincent van Gogh ont créé des œuvres magnifiques. Ces peintres impressionnistes vivent encore dans la mémoire collective. Aujourd'hui, les nouveaux artistes vivent souvent dans des quartiers comme Montmartre, près du célèbre Moulin Rouge.",
+      "en": "French culture influences the entire world. French artists like Claude Monet, Auguste Renoir, and Vincent van Gogh created magnificent works. These Impressionist painters still live in collective memory. Today, new artists often live in neighborhoods like Montmartre, near the famous Moulin Rouge."
+    },
+    {
+      "id": "b-la-cuisine-francaise-reste",
+      "fr": "La cuisine française reste également très populaire dans le monde. Les plats traditionnels comme le coq au vin, la ratatouille, et la bouillabaisse de Marseille donnent du plaisir à des millions de personnes. Les restaurants français créent des expériences culinaires inoubliables.",
+      "en": "French cuisine also remains very popular worldwide. Traditional dishes like coq au vin, ratatouille, and Marseille's bouillabaisse give pleasure to millions of people. French restaurants create unforgettable culinary experiences."
+    },
+    {
+      "id": "b-l-economie-francaise-depend",
+      "fr": "L'économie française dépend de plusieurs secteurs importants. Beaucoup de Français travaillent dans les services, d'autres dans l'industrie ou l'agriculture. Les entreprises françaises exportent leurs produits vers l'est, l'ouest, le nord et le sud - dans toute l'Europe et au-delà.",
+      "en": "The French economy depends on several important sectors. Many French people work in services, others in industry or agriculture. French companies export their products to the east, west, north and south - throughout Europe and beyond."
+    },
+    {
+      "id": "b-le-transport-public-fonctionne",
+      "fr": "Le transport public fonctionne très bien en France. Les trains rapides connectent les grandes villes comme Lyon, Marseille, Bordeaux, et Nice. Les voyageurs peuvent arriver rapidement à leur destination. Dans Paris, le métro permet aux habitants de se déplacer facilement. Ils attendent quelques minutes seulement entre les trains.",
+      "en": "Public transportation works very well in France. Fast trains connect major cities like Lyon, Marseille, Bordeaux, and Nice. Travelers can arrive quickly at their destination. In Paris, the metro allows inhabitants to move around easily. They wait only a few minutes between trains."
+    },
+    {
+      "id": "img-tgv",
+      "fr": "Un train rapide traverse la campagne vers le sud.",
+      "en": "A fast train crosses the countryside toward the south.",
+      "img": {
+        "src": "img/reading11/tgv",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of a high-speed train racing across a stone viaduct over vineyards, with a metro train leaving a tunnel and travellers pulling suitcases below."
+      }
+    },
+    {
+      "id": "b-les-francais-adorent-leurs",
+      "fr": "Les Français adorent leurs vacances. En été, ils voyagent souvent vers le sud pour profiter du soleil et de la mer Méditerranée. Nice et Cannes sont des destinations très populaires. D'autres préfèrent rester dans leur région et découvrir la beauté de la campagne française.",
+      "en": "The French love their vacations. In summer, they often travel south to enjoy the sun and the Mediterranean Sea. Nice and Cannes are very popular destinations. Others prefer to stay in their region and discover the beauty of the French countryside."
+    },
+    {
+      "id": "img-mer",
+      "fr": "L'été à Nice, au bord de la Méditerranée.",
+      "en": "Summer in Nice, on the Mediterranean.",
+      "img": {
+        "src": "img/reading11/mer",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of Nice in summer: palm trees along the curving seafront promenade, blue parasols on the beach, swimmers and a sailboat under a huge golden sun."
+      }
+    },
+    {
+      "id": "b-la-technologie-change-aussi",
+      "fr": "La technologie change aussi la vie quotidienne en France. Les jeunes Français écoutent de la musique en ligne, regardent des films sur internet, et communiquent avec leurs amis via leurs téléphones. Cette génération vit différemment de leurs parents, mais elle garde les valeurs françaises importantes.",
+      "en": "Technology is also changing daily life in France. Young French people listen to music online, watch movies on the internet, and communicate with their friends via their phones. This generation lives differently from their parents, but keeps important French values."
+    },
+    {
+      "id": "b-aujourd-hui-la-france",
+      "fr": "Aujourd'hui, la France travaille activement pour protéger l'environnement. Le gouvernement encourage les citoyens à utiliser les transports publics, à recycler leurs déchets, et à économiser l'énergie. Ces efforts montrent que la France pense à l'avenir de la planète.",
+      "en": "Today, France works actively to protect the environment. The government encourages citizens to use public transport, to recycle their waste, and to save energy. These efforts show that France thinks about the future of the planet."
+    },
+    {
+      "id": "img-avenir",
+      "fr": "À vélo et en tram, la France pense à l'avenir.",
+      "en": "By bike and by tram, France thinks about the future.",
+      "img": {
+        "src": "img/reading11/avenir",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of young people cycling on a green bike lane past Haussmann buildings with solar panels, a tram, recycling bins, a Gothic spire, a glass tower and wind turbines."
+      }
+    },
+    {
+      "id": "b-les-relations-internationales-restent",
+      "fr": "Les relations internationales restent très importantes pour la France. Elle participe activement aux organisations européennes et mondiales. Les diplomates français voyagent régulièrement pour rencontrer leurs homologues étrangers. Ils discutent de questions économiques, politiques, et culturelles.",
+      "en": "International relations remain very important for France. It participates actively in European and global organizations. French diplomats travel regularly to meet their foreign counterparts. They discuss economic, political, and cultural questions."
+    },
+    {
+      "id": "b-en-conclusion-la-france",
+      "fr": "En conclusion, la France moderne combine tradition et innovation. Elle préserve son patrimoine historique tout en embrassant les changements du vingt et unième siècle. Cette nation continue à jouer un rôle significatif sur la scène internationale, et ses contributions enrichissent notre monde.",
+      "en": "In conclusion, modern France combines tradition and innovation. It preserves its historic heritage while embracing the changes of the twenty-first century. This nation continues to play a significant role on the international stage, and its contributions enrich our world."
+    },
+    {
+      "id": "b-fin",
+      "fr": "Fin",
+      "en": "The End",
+      "layout": "end"
+    }
+  ],
+  "items": [
+    {
+      "id": "reading-11-1",
+      "type": "comprehension",
+      "question": "{Combien d'habitants a la France?}",
+      "cue": "How many inhabitants does France have?",
+      "answer": "soixante-huit millions",
+      "accept": [
+        "68 millions",
+        "soixante-huit millions d'habitants"
+      ],
+      "hint": "{Soixante-huit...}"
+    },
+    {
+      "id": "reading-11-2",
+      "type": "comprehension",
+      "question": "{Que cherchent les touristes à Paris?}",
+      "cue": "What do tourists look for in Paris?",
+      "answer": "directions",
+      "accept": [
+        "des directions",
+        "les directions"
+      ],
+      "hint": "{Des... pour trouver les monuments}"
+    },
+    {
+      "id": "reading-11-3",
+      "type": "comprehension",
+      "question": "{Quel âge ont les enfants quand ils arrivent à l'école?}",
+      "cue": "How old are children when they arrive at school?",
+      "answer": "six ans",
+      "accept": [
+        "six",
+        "6 ans"
+      ],
+      "hint": "{Ils ont généralement... ans}"
+    },
+    {
+      "id": "reading-11-4",
+      "type": "comprehension",
+      "question": "{Où vivent souvent les artistes français?}",
+      "cue": "Where do French artists often live?",
+      "answer": "Montmartre",
+      "accept": [
+        "à Montmartre",
+        "dans Montmartre"
+      ],
+      "hint": "{Dans des quartiers comme...}"
+    },
+    {
+      "id": "reading-11-5",
+      "type": "comprehension",
+      "question": "{Dans quels secteurs travaillent les Français?}",
+      "cue": "In which sectors do French people work?",
+      "answer": "l'agriculture",
+      "accept": [
+        "agriculture",
+        "les services",
+        "l'industrie"
+      ],
+      "hint": "{Les services, l'industrie ou...}"
+    },
+    {
+      "id": "reading-11-6",
+      "type": "comprehension",
+      "question": "{Où voyagent les Français en été?}",
+      "cue": "Where do French people travel in summer?",
+      "answer": "sud",
+      "accept": [
+        "vers le sud",
+        "au sud"
+      ],
+      "hint": "{Vers le... pour le soleil}"
+    },
+    {
+      "id": "reading-11-7",
+      "type": "comprehension",
+      "question": "{Comment les jeunes communiquent-ils avec leurs amis?}",
+      "cue": "How do young people communicate with their friends?",
+      "answer": "téléphones",
+      "accept": [
+        "téléphone",
+        "via leurs téléphones"
+      ],
+      "hint": "{Via leurs...}"
+    },
+    {
+      "id": "reading-11-8",
+      "type": "comprehension",
+      "question": "{Que fait la France pour l'environnement?}",
+      "cue": "What does France do for the environment?",
+      "answer": "protéger",
+      "accept": [
+        "protéger l'environnement",
+        "le protéger"
+      ],
+      "hint": "{Elle travaille pour...}"
+    },
+    {
+      "id": "reading-11-9",
+      "type": "comprehension",
+      "question": "{Avec qui les diplomates français rencontrent-ils?}",
+      "cue": "Who do French diplomats meet with?",
+      "answer": "homologues",
+      "accept": [
+        "homologues étrangers",
+        "leurs homologues"
+      ],
+      "hint": "{Leurs... étrangers}"
+    },
+    {
+      "id": "reading-11-10",
+      "type": "comprehension",
+      "question": "{Que combine la France moderne?}",
+      "cue": "What does modern France combine?",
+      "answer": "innovation",
+      "accept": [
+        "tradition et innovation"
+      ],
+      "hint": "{Tradition et...}"
+    }
+  ]
+}

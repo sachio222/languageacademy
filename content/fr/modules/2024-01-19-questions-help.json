@@ -1,0 +1,258 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-19-questions-help",
+  "kind": "guide",
+  "status": "written",
+  "title": "The Power to Ask Anything",
+  "description": "Any statement can be turned into a question using these three methods.",
+  "can_do": [
+    "Turn any sentence into a question with {est-ce que}.",
+    "Recognize a question made with a rising voice or a flipped verb, and know where each one fits."
+  ],
+  "minutes": 5,
+  "line": "Three ways to turn any sentence into a question, and when to use each one.",
+  "parts": [
+    {
+      "id": "p-three-ways-to-ask",
+      "heading": "Three ways to ask",
+      "text": [
+        "Every French question uses one of three methods."
+      ],
+      "note": "Start with {est-ce que}. It works for every question and changes nothing else in the sentence.",
+      "blocks": [
+        {
+          "ways": [
+            {
+              "n": 1,
+              "fr": "Est-ce que",
+              "t": "Works for every question",
+              "d": "Anywhere"
+            },
+            {
+              "n": 2,
+              "fr": "",
+              "t": "A rising voice",
+              "d": "With friends and family"
+            },
+            {
+              "n": 3,
+              "fr": "",
+              "t": "Inversion: the verb first",
+              "d": "Formal speech and writing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-est-ce-que",
+      "heading": "{Est-ce que}",
+      "text": [
+        "{Est-ce que} means roughly “is it that”. Put it in front of any statement and the statement becomes a question."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "A statement",
+              "fr": "Tu as un chat",
+              "en": "You have a cat"
+            },
+            {
+              "k": "Add",
+              "fr": "Est-ce que",
+              "en": "is it that"
+            },
+            {
+              "k": "A question",
+              "fr": "Est-ce que tu as un chat ?",
+              "en": "Do you have a cat?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            [
+              "Où est-ce que tu es ?",
+              "Where are you?"
+            ],
+            [
+              "Quand est-ce que tu viens ?",
+              "When are you coming?"
+            ]
+          ],
+          "heading": "With a question word in front"
+        }
+      ]
+    },
+    {
+      "id": "p-raise-your-voice",
+      "heading": "Raise your voice",
+      "text": [
+        "In everyday speech, French speakers often keep the statement as it is and raise their voice at the end."
+      ],
+      "note": "Same words, different tone. This is how friends talk to each other.",
+      "blocks": [
+        {
+          "rise": [
+            {
+              "fr": "Tu viens ce soir.",
+              "en": "You are coming tonight.",
+              "tone": "flat"
+            },
+            {
+              "fr": "Tu viens ce soir ?",
+              "en": "Are you coming tonight?",
+              "tone": "up"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-flip-the-verb",
+      "heading": "Flip the verb",
+      "text": [
+        "For formal speech and writing, put the verb before the subject and join them with a hyphen. This is called inversion."
+      ],
+      "note": "You will see it in books, formal emails and the news.",
+      "blocks": [
+        {
+          "flip": [
+            {
+              "fr": "Tu es prêt.",
+              "en": "You are ready.",
+              "parts": [
+                [
+                  "Tu",
+                  "s"
+                ],
+                [
+                  "es",
+                  "v"
+                ],
+                [
+                  "prêt",
+                  ""
+                ]
+              ]
+            },
+            {
+              "fr": "Es-tu prêt ?",
+              "en": "Are you ready?",
+              "parts": [
+                [
+                  "Es",
+                  "v"
+                ],
+                [
+                  "-",
+                  "h"
+                ],
+                [
+                  "tu",
+                  "s"
+                ],
+                [
+                  "prêt ?",
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-which-one-to-use",
+      "heading": "Which one to use",
+      "text": [],
+      "note": "Use {est-ce que} for everything at first. The other two come as you hear more French.",
+      "blocks": [
+        {
+          "ways": [
+            {
+              "n": 1,
+              "fr": "Est-ce que",
+              "t": "Use it anywhere",
+              "d": "Clear, and always correct"
+            },
+            {
+              "n": 2,
+              "fr": "",
+              "t": "A rising voice",
+              "d": "Relaxed, for friends and family"
+            },
+            {
+              "n": 3,
+              "fr": "",
+              "t": "Inversion",
+              "d": "Formal, for writing and speeches"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one turns {Tu as un chat} into a question?",
+      "options": [
+        {
+          "text": "Est-ce que tu as un chat ?",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Tu est-ce que as un chat ?",
+          "fr": true
+        },
+        {
+          "text": "Tu as un chat est-ce que ?",
+          "fr": true
+        }
+      ],
+      "why": "{Est-ce que} goes in front, and the rest of the sentence stays the same."
+    },
+    {
+      "id": "k2",
+      "ask": "Listen. How is this question made?",
+      "say": "Tu viens ce soir ?",
+      "show": "Tu viens ce soir ?",
+      "options": [
+        {
+          "text": "With est-ce que"
+        },
+        {
+          "text": "With a rising voice",
+          "right": true
+        },
+        {
+          "text": "By flipping the verb"
+        }
+      ],
+      "why": "The words are the same as the statement. The voice rises at the end."
+    },
+    {
+      "id": "k3",
+      "ask": "Which one is the formal question?",
+      "options": [
+        {
+          "text": "Tu es prêt ?",
+          "fr": true
+        },
+        {
+          "text": "Es-tu prêt ?",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Est-ce que tu es prêt ?",
+          "fr": true
+        }
+      ],
+      "why": "The verb comes first, joined to {tu} with a hyphen: {Es-tu prêt ?}"
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-22-reading2",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading Comprehension 2 - {Rendez-vous en Normandie}",
+  "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far.",
+  "can_do": [
+    "Read engaging French stories with cultural context",
+    "Understand dialogue and descriptive passages",
+    "Comprehend French at a conversational level"
+  ],
+  "story_id": "reading2",
+  "vocabulary": [],
+  "passage": [
+    {
+      "id": "b-bonjour-sophie-comment-ca",
+      "speaker": "Marie",
+      "fr": "Bonjour Sophie ! Comment ça va ?",
+      "en": "Hello, Sophie! How's it going?"
+    },
+    {
+      "id": "b-ca-va-bien-je",
+      "speaker": "Sophie",
+      "fr": "Ça va bien ! Je suis à Caen avec un ami Thomas. Et toi, où es-tu ?",
+      "en": "It's going well! I am in Caen with a friend Thomas. And you, where are you?"
+    },
+    {
+      "id": "img-caen",
+      "fr": "Sophie et Thomas à Caen.",
+      "en": "Sophie and Thomas in Caen.",
+      "img": {
+        "src": "img/reading2/caen",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Sophie, in a straw hat and orange dress, talks on the phone at a café table beside Thomas, the twin spires of the Abbaye aux Hommes behind them."
+      }
+    },
+    {
+      "id": "b-je-suis-a-honfleur",
+      "speaker": "Marie",
+      "fr": "Je suis à Honfleur ! J'ai une nouvelle voiture et je veux voir Bayeux aussi.",
+      "en": "I am in Honfleur! I have a new car and I want to see Bayeux too."
+    },
+    {
+      "id": "img-honfleur",
+      "fr": "Marie, la nouvelle voiture et le chien à Honfleur.",
+      "en": "Marie, the new car and the dog in Honfleur.",
+      "img": {
+        "src": "img/reading2/honfleur",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Marie stands on the quay of Honfleur's old harbour beside her new pale-blue car, a dog looking out of the window, tall houses reflected in the water."
+      }
+    },
+    {
+      "id": "b-qu-est-ce-que",
+      "speaker": "Sophie",
+      "fr": "Qu'est-ce que c'est, ça ? Cette chose dans la voiture ?",
+      "en": "What is that? That thing in the car?"
+    },
+    {
+      "id": "b-ca-c-est-un",
+      "speaker": "Marie",
+      "fr": "Ça ? C'est un livre sur la Normandie. Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles !",
+      "en": "That? It's a book about Normandy. There's Mont-Saint-Michel, Rouen... These things are very beautiful!"
+    },
+    {
+      "id": "b-je-veux-voir-le",
+      "speaker": "Thomas",
+      "fr": "Je veux voir le Mont-Saint-Michel !",
+      "en": "I want to see Mont-Saint-Michel!"
+    },
+    {
+      "id": "b-moi-aussi-il-est",
+      "speaker": "Marie",
+      "fr": "Moi aussi. Il est très grand. Nous pouvons voir de vieilles et belles choses aussi !",
+      "en": "Me too. It is very big. We can see old and beautiful things too!"
+    },
+    {
+      "id": "b-et-bayeux-qu-est",
+      "speaker": "Sophie",
+      "fr": "Et Bayeux ? Qu'est-ce que c'est à Bayeux ?",
+      "en": "And Bayeux? What is there in Bayeux?"
+    },
+    {
+      "id": "b-la-ville-a-de",
+      "speaker": "Marie",
+      "fr": "La ville a de vieilles et belles maisons. Est-ce que tu veux voir ces maisons ?",
+      "en": "The town has old and beautiful houses. Do you want to see these houses?"
+    },
+    {
+      "id": "img-bayeux",
+      "fr": "Les vieilles et belles maisons de Bayeux.",
+      "en": "The old and beautiful houses of Bayeux.",
+      "img": {
+        "src": "img/reading2/bayeux",
+        "w": 1600,
+        "h": 1067,
+        "alt": "A cobbled street of old half-timbered houses in Bayeux beside a stream and a water mill, the cathedral spires above the roofs."
+      }
+    },
+    {
+      "id": "b-oui-et-j-ai",
+      "speaker": "Thomas",
+      "fr": "Oui, et j'ai un ami Pierre à Rouen.",
+      "en": "Yes, and I have a friend Pierre in Rouen."
+    },
+    {
+      "id": "b-pierre-il-a-une",
+      "speaker": "Sophie",
+      "fr": "Pierre ? Il a une maison à Rouen ?",
+      "en": "Pierre? Does he have a house in Rouen?"
+    },
+    {
+      "id": "b-oui-il-a-une",
+      "speaker": "Thomas",
+      "fr": "Oui ! Il a une petite mais très belle maison. Elle est à Rouen.",
+      "en": "Yes! He has a small but very beautiful house. It is in Rouen."
+    },
+    {
+      "id": "img-rouen",
+      "fr": "La petite maison de Pierre à Rouen.",
+      "en": "Pierre's small house in Rouen.",
+      "img": {
+        "src": "img/reading2/rouen",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Pierre waves from the red door of his small half-timbered house as Thomas and Sophie arrive with a dog and a cat, Rouen cathedral's spire in the distance."
+      }
+    },
+    {
+      "id": "b-une-maison-a-rouen",
+      "speaker": "Marie",
+      "fr": "Une maison à Rouen ? C'est bon ça! J'ai le chien dans la voiture. Il peut voir Rouen aussi ?",
+      "en": "A house in Rouen? That's good! I have the dog in the car. Can he see Rouen too?"
+    },
+    {
+      "id": "b-oui-les-chiens-peuvent",
+      "speaker": "Sophie",
+      "fr": "Oui ! Les chiens peuvent être avec nous ! Et le chat est dans la voiture aussi.",
+      "en": "Yes! Dogs can be with us! And the cat is in the car too."
+    },
+    {
+      "id": "b-tu-as-un-chat",
+      "speaker": "Marie",
+      "fr": "Tu as un chat ? Je veux voir ce chat! Nous pouvons voir ces choses en un jour ?",
+      "en": "You have a cat? I want to see this cat! Can we see these things in one day?"
+    },
+    {
+      "id": "b-non-mais-nous-avons",
+      "speaker": "Thomas",
+      "fr": "Non, mais nous avons deux jours. Un jour pour Mont-Saint-Michel et Bayeux, un autre jour pour Rouen et Honfleur.",
+      "en": "No, but we have two days. One day for Mont-Saint-Michel and Bayeux, another day for Rouen and Honfleur."
+    },
+    {
+      "id": "b-tres-bien-voila-nous",
+      "speaker": "Sophie",
+      "fr": "Très bien ! Voilà ! Nous pouvons voir ces belles choses ! Salut !",
+      "en": "Very good! There! We can see these beautiful things! Bye!"
+    },
+    {
+      "id": "img-mont",
+      "fr": "Le Mont-Saint-Michel. Il est très grand !",
+      "en": "Mont-Saint-Michel. It is very big!",
+      "img": {
+        "src": "img/reading2/mont",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Marie, Sophie and Thomas, seen from behind with the dog, look across the bay at Mont-Saint-Michel at sunset."
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "comment ça va",
+      "en": "how's it going?"
+    },
+    {
+      "fr": "ça va bien",
+      "en": "it's going well"
+    },
+    {
+      "fr": "je suis",
+      "en": "I am"
+    },
+    {
+      "fr": "un ami",
+      "en": "a friend"
+    },
+    {
+      "fr": "et toi",
+      "en": "and you"
+    },
+    {
+      "fr": "où es-tu",
+      "en": "where are you?"
+    },
+    {
+      "fr": "une nouvelle voiture",
+      "en": "a new car"
+    },
+    {
+      "fr": "je veux",
+      "en": "I want"
+    },
+    {
+      "fr": "cette chose",
+      "en": "this thing, that thing"
+    },
+    {
+      "fr": "la voiture",
+      "en": "the car"
+    },
+    {
+      "fr": "un livre",
+      "en": "a book"
+    },
+    {
+      "fr": "ces choses",
+      "en": "these things"
+    },
+    {
+      "fr": "moi aussi",
+      "en": "me too"
+    },
+    {
+      "fr": "il est",
+      "en": "he is, it is"
+    },
+    {
+      "fr": "nous pouvons",
+      "en": "we can"
+    },
+    {
+      "fr": "de vieilles",
+      "en": "old"
+    },
+    {
+      "fr": "la ville",
+      "en": "the town, the city"
+    },
+    {
+      "fr": "tu veux",
+      "en": "you want"
+    },
+    {
+      "fr": "ces maisons",
+      "en": "these houses"
+    },
+    {
+      "fr": "il a",
+      "en": "he has"
+    },
+    {
+      "fr": "une maison",
+      "en": "a house"
+    },
+    {
+      "fr": "elle est",
+      "en": "she is, it is"
+    },
+    {
+      "fr": "c'est bon",
+      "en": "that's good"
+    },
+    {
+      "fr": "le chien",
+      "en": "the dog"
+    },
+    {
+      "fr": "il peut",
+      "en": "he can, it can"
+    },
+    {
+      "fr": "les chiens",
+      "en": "the dogs"
+    },
+    {
+      "fr": "avec nous",
+      "en": "with us"
+    },
+    {
+      "fr": "le chat",
+      "en": "the cat"
+    },
+    {
+      "fr": "tu as",
+      "en": "you have"
+    },
+    {
+      "fr": "un chat",
+      "en": "a cat"
+    },
+    {
+      "fr": "ce chat",
+      "en": "this cat"
+    },
+    {
+      "fr": "en un jour",
+      "en": "in one day"
+    },
+    {
+      "fr": "nous avons",
+      "en": "we have"
+    },
+    {
+      "fr": "deux jours",
+      "en": "two days"
+    },
+    {
+      "fr": "un jour",
+      "en": "one day"
+    },
+    {
+      "fr": "un autre jour",
+      "en": "another day"
+    },
+    {
+      "fr": "très bien",
+      "en": "very good"
+    },
+    {
+      "fr": "le Mont-Saint-Michel",
+      "en": "Mont-Saint-Michel"
+    },
+    {
+      "fr": "Mont-Saint-Michel",
+      "en": "Mont-Saint-Michel"
+    },
+    {
+      "fr": "la Normandie",
+      "en": "Normandy"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-caen",
+      "type": "comprehension",
+      "question": "Where is Sophie in the story?",
+      "cue": "Sophie is in ___",
+      "answer": "Caen",
+      "accept": [
+        "à Caen",
+        "Sophie est à Caen",
+        "Elle est à Caen",
+        "à Caen avec un ami Thomas"
+      ],
+      "hint": "Look for the Norman city where Sophie is located",
+      "mistakes": [
+        {
+          "answer": "Honfleur",
+          "feedback": "That's where Marie is, Sophie is in Caen"
+        },
+        {
+          "answer": "Rouen",
+          "feedback": "That's where Pierre is, Sophie is in Caen"
+        }
+      ]
+    },
+    {
+      "id": "i-thomas",
+      "type": "comprehension",
+      "question": "Who is with Sophie?",
+      "cue": "Sophie is with her friend ___",
+      "answer": "Thomas",
+      "hint": "Look for '{un ami ___}'",
+      "mistakes": [
+        {
+          "answer": "Pierre",
+          "feedback": "Pierre is in Rouen, Thomas is with Sophie"
+        },
+        {
+          "answer": "Marie",
+          "feedback": "Marie is talking to them, Thomas is with Sophie"
+        }
+      ]
+    },
+    {
+      "id": "i-un-livre",
+      "type": "comprehension",
+      "question": "What does Marie have in her car?",
+      "cue": "Marie has a ___ in her car",
+      "answer": "un livre",
+      "accept": [
+        "livre",
+        "un livre sur la Normandie",
+        "livre sur la Normandie",
+        "le livre",
+        "c'est un livre",
+        "elle a un livre"
+      ],
+      "hint": "It's about Normandy - something you can read",
+      "mistakes": [
+        {
+          "answer": "chien",
+          "feedback": "The dog is mentioned later, the book is in the car"
+        },
+        {
+          "answer": "chat",
+          "feedback": "The cat is Sophie's, Marie has a book"
+        }
+      ]
+    },
+    {
+      "id": "i-nouvelle",
+      "type": "comprehension",
+      "question": "How does Marie describe her car?",
+      "cue": "{J'ai une ___ voiture}",
+      "answer": "nouvelle",
+      "accept": [
+        "une nouvelle voiture",
+        "nouvelle voiture",
+        "j'ai une nouvelle voiture",
+        "ma nouvelle voiture"
+      ],
+      "hint": "Adjective meaning 'new'",
+      "mistakes": [
+        {
+          "answer": "vieille",
+          "feedback": "She says it's new (nouvelle), not old (vieille)"
+        },
+        {
+          "answer": "grande",
+          "feedback": "She describes it as new (nouvelle), not big (grande)"
+        }
+      ]
+    },
+    {
+      "id": "i-vieille-et-belle",
+      "type": "comprehension",
+      "question": "How do they describe Mont-Saint-Michel?",
+      "cue": "{C'est une chose ___ et ___}",
+      "answer": "vieille et belle",
+      "accept": [
+        "cette vieille et belle chose",
+        "vieille et belle chose",
+        "très grande",
+        "grande",
+        "belle",
+        "vieille",
+        "c'est vieille et belle",
+        "elle est très grande",
+        "très grande aussi"
+      ],
+      "hint": "Two adjectives Marie uses to describe it",
+      "mistakes": [
+        {
+          "answer": "nouvelle et belle",
+          "feedback": "They say it's old (vieille), not new (nouvelle)"
+        },
+        {
+          "answer": "petite et belle",
+          "feedback": "They say it's big (grande), not small (petite)"
+        }
+      ]
+    },
+    {
+      "id": "i-veux",
+      "type": "comprehension",
+      "question": "What does Thomas want to do with Mont-Saint-Michel?",
+      "cue": "{Complete: Je ___ voir Mont-Saint-Michel}",
+      "answer": "veux",
+      "accept": [
+        "voir Mont-Saint-Michel",
+        "je veux voir",
+        "il veut voir",
+        "voir",
+        "veux voir",
+        "veut voir Mont-Saint-Michel",
+        "je veux voir Mont-Saint-Michel"
+      ],
+      "hint": "Verb meaning 'to want'",
+      "mistakes": [
+        {
+          "answer": "peux",
+          "feedback": "He wants (veux) to see it, not can (peux)"
+        },
+        {
+          "answer": "suis",
+          "feedback": "He wants (veux) to see it, not is (suis)"
+        }
+      ]
+    },
+    {
+      "id": "i-a",
+      "type": "comprehension",
+      "question": "Where is Pierre's house?",
+      "cue": "{Complete: Elle est ___ Rouen}",
+      "answer": "à",
+      "accept": [
+        "à Rouen",
+        "Rouen",
+        "elle est à Rouen",
+        "il a une maison à Rouen",
+        "une maison à Rouen",
+        "Pierre est à Rouen"
+      ],
+      "hint": "Preposition used with cities",
+      "mistakes": [
+        {
+          "answer": "dans",
+          "feedback": "Use 'à' with cities, not 'dans'"
+        },
+        {
+          "answer": "sur",
+          "feedback": "The house is in (à) Rouen, not on (sur) Rouen"
+        },
+        {
+          "answer": "avec",
+          "feedback": "The house is in (à) Rouen, not with (avec) Rouen"
+        }
+      ]
+    },
+    {
+      "id": "i-honfleur",
+      "type": "comprehension",
+      "question": "Where does Marie say she is?",
+      "cue": "{Complete: Je suis à ___}",
+      "answer": "Honfleur",
+      "accept": [
+        "à Honfleur",
+        "je suis à Honfleur",
+        "elle est à Honfleur",
+        "Marie est à Honfleur"
+      ],
+      "hint": "Look for the Norman town where Marie is located",
+      "mistakes": [
+        {
+          "answer": "Caen",
+          "feedback": "That's where Sophie is, Marie is in Honfleur"
+        },
+        {
+          "answer": "Rouen",
+          "feedback": "That's where Pierre is, Marie is in Honfleur"
+        }
+      ]
+    },
+    {
+      "id": "i-dans-sa-voiture",
+      "type": "comprehension",
+      "question": "Where is Marie's dog?",
+      "cue": "{J'ai mon chien ___ ma voiture}",
+      "answer": "dans sa voiture",
+      "accept": [
+        "dans ma voiture",
+        "dans",
+        "dans la voiture",
+        "voiture",
+        "la voiture"
+      ],
+      "hint": "Preposition meaning 'in'"
+    },
+    {
+      "id": "i-ces-belles-choses",
+      "type": "comprehension",
+      "question": "What does Sophie say they can see in Normandy?",
+      "cue": "{Nous pouvons aller à ___ belles choses!}",
+      "answer": "ces belles choses",
+      "accept": [
+        "belles choses",
+        "ces belles choses en Normandie",
+        "nous pouvons voir ces belles choses"
+      ],
+      "hint": "Demonstrative for 'these' with plural noun"
+    },
+    {
+      "id": "i-a-2",
+      "type": "comprehension",
+      "question": "What preposition shows where Thomas's friend's house is?",
+      "cue": "{Elle est ___ Rouen}",
+      "answer": "à",
+      "accept": [
+        "à Rouen"
+      ],
+      "hint": "Preposition used with cities",
+      "mistakes": [
+        {
+          "answer": "dans",
+          "feedback": "Use 'à' with cities, not 'dans'"
+        }
+      ]
+    },
+    {
+      "id": "i-oui",
+      "type": "comprehension",
+      "question": "Can the dogs come with them on the trip?",
+      "cue": "{Les chiens peuvent ___ avec nous!}",
+      "answer": "oui",
+      "accept": [
+        "les chiens peuvent être avec nous",
+        "ils peuvent être avec nous",
+        "être avec nous"
+      ],
+      "hint": "Verb meaning 'to go'"
+    }
+  ]
+}

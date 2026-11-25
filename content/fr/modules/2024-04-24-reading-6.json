@@ -1,0 +1,743 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-24-reading-6",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading Comprehension 6 - {Un Voyage en Famille}",
+  "description": "A family plans a trip to Paris. Uses this unit's vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin.",
+  "can_do": [
+    "Read complex stories with advanced communication verbs",
+    "Understand French family conversations and planning",
+    "Comprehend progressive tenses and future forms in context"
+  ],
+  "story_id": "reading6",
+  "vocabulary": [
+    {
+      "word_id": "je-suis-en-train-de-fr",
+      "fr": "je suis en train de",
+      "gloss": "I am in the process of",
+      "note": "progressive present"
+    },
+    {
+      "word_id": "prendre-fr",
+      "fr": "prendre",
+      "gloss": "to take",
+      "note": "also: to take time"
+    },
+    {
+      "word_id": "prendre-le-train-fr",
+      "fr": "prendre le train",
+      "gloss": "to take the train",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "ca-prend-fr",
+      "fr": "ça prend",
+      "gloss": "it takes (time)",
+      "note": "impersonal expression"
+    },
+    {
+      "word_id": "comprends-fr",
+      "fr": "comprends",
+      "gloss": "understand (you/I)",
+      "note": "from comprendre"
+    },
+    {
+      "word_id": "apprendre-fr",
+      "fr": "apprendre",
+      "gloss": "to learn",
+      "note": "related to prendre"
+    },
+    {
+      "word_id": "mettre-fr",
+      "fr": "mettre",
+      "gloss": "to put",
+      "note": "irregular verb"
+    },
+    {
+      "word_id": "mettre-dans-fr",
+      "fr": "mettre dans",
+      "gloss": "to put in",
+      "note": "with location"
+    },
+    {
+      "word_id": "demander-fr",
+      "fr": "demander",
+      "gloss": "to ask",
+      "note": "regular -ER verb"
+    },
+    {
+      "word_id": "manger-fr",
+      "fr": "manger",
+      "gloss": "to eat"
+    },
+    {
+      "word_id": "marcher-fr",
+      "fr": "marcher",
+      "gloss": "to walk",
+      "note": "regular -ER verb from vocabulary"
+    },
+    {
+      "word_id": "dire-fr",
+      "fr": "dire",
+      "gloss": "to say/tell",
+      "note": "irregular verb"
+    },
+    {
+      "word_id": "me-dis-fr",
+      "fr": "me dis",
+      "gloss": "tell me",
+      "note": "with object pronoun"
+    },
+    {
+      "word_id": "finir-fr",
+      "fr": "finir",
+      "gloss": "to finish",
+      "note": "-IR verb"
+    },
+    {
+      "word_id": "j-ai-besoin-de-fr",
+      "fr": "j'ai besoin de",
+      "gloss": "I need",
+      "note": "avoir besoin de + infinitive/noun"
+    },
+    {
+      "word_id": "tu-as-besoin-de-fr",
+      "fr": "tu as besoin de",
+      "gloss": "you need",
+      "note": "besoin expression"
+    },
+    {
+      "word_id": "nous-allons-partir-fr",
+      "fr": "nous allons partir",
+      "gloss": "we're going to leave",
+      "note": "near future: aller + infinitive"
+    },
+    {
+      "word_id": "je-vais-mettre-fr",
+      "fr": "je vais mettre",
+      "gloss": "I'm going to put",
+      "note": "near future"
+    },
+    {
+      "word_id": "qu-est-ce-qu-on-va-faire-fr",
+      "fr": "qu'est-ce qu'on va faire",
+      "gloss": "what are we going to do",
+      "note": "question with near future"
+    },
+    {
+      "word_id": "la-famille-fr",
+      "fr": "la famille",
+      "gloss": "family",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "le-pere-fr",
+      "fr": "le père",
+      "gloss": "father",
+      "note": "masculine"
+    },
+    {
+      "word_id": "la-mere-fr",
+      "fr": "la mère",
+      "gloss": "mother",
+      "note": "feminine"
+    },
+    {
+      "word_id": "mon-frere-fr",
+      "fr": "mon frère",
+      "gloss": "my brother",
+      "note": "masculine"
+    },
+    {
+      "word_id": "une-semaine-fr",
+      "fr": "une semaine",
+      "gloss": "a week",
+      "note": "time period"
+    },
+    {
+      "word_id": "une-question-fr",
+      "fr": "une question",
+      "gloss": "a question",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-moment-fr",
+      "fr": "le moment",
+      "gloss": "moment",
+      "note": "en ce moment = right now"
+    },
+    {
+      "word_id": "la-premiere-fois-fr",
+      "fr": "la première fois",
+      "gloss": "the first time",
+      "note": "fois = time/occasion"
+    },
+    {
+      "word_id": "une-annee-fr",
+      "fr": "une année",
+      "gloss": "a year",
+      "note": "feminine - duration"
+    },
+    {
+      "word_id": "le-monde-fr",
+      "fr": "le monde",
+      "gloss": "world",
+      "note": "le monde entier = whole world"
+    },
+    {
+      "word_id": "la-ville-fr",
+      "fr": "la ville",
+      "gloss": "city",
+      "note": "feminine"
+    },
+    {
+      "word_id": "papa-fr",
+      "fr": "papa",
+      "gloss": "dad",
+      "note": "informal for père"
+    },
+    {
+      "word_id": "maman-fr",
+      "fr": "maman",
+      "gloss": "mom",
+      "note": "informal for mère"
+    },
+    {
+      "word_id": "qu-est-ce-que-fr",
+      "fr": "qu'est-ce que",
+      "gloss": "what",
+      "note": "question phrase"
+    },
+    {
+      "word_id": "fais-fr",
+      "fr": "fais",
+      "gloss": "do/make (you)",
+      "note": "from faire"
+    },
+    {
+      "word_id": "dans-fr",
+      "fr": "dans",
+      "gloss": "in",
+      "note": "preposition"
+    },
+    {
+      "word_id": "super-fr",
+      "fr": "super",
+      "gloss": "great/super",
+      "note": "exclamation"
+    },
+    {
+      "word_id": "tes-livres-fr",
+      "fr": "tes livres",
+      "gloss": "your books",
+      "note": "plural possessive"
+    },
+    {
+      "word_id": "ses-livres-fr",
+      "fr": "ses livres",
+      "gloss": "his/her books",
+      "note": "plural possessive"
+    },
+    {
+      "word_id": "ton-manteau-fr",
+      "fr": "ton manteau",
+      "gloss": "your coat"
+    },
+    {
+      "word_id": "mon-livre-fr",
+      "fr": "mon livre",
+      "gloss": "my book"
+    },
+    {
+      "word_id": "livre-de-francais-fr",
+      "fr": "livre de français",
+      "gloss": "French book",
+      "note": "compound noun"
+    },
+    {
+      "word_id": "oui-fr",
+      "fr": "oui",
+      "gloss": "yes",
+      "note": "affirmative"
+    },
+    {
+      "word_id": "bien-sur-fr",
+      "fr": "bien sûr",
+      "gloss": "of course",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "le-train-fr",
+      "fr": "le train",
+      "gloss": "train",
+      "note": "from vocabulary"
+    },
+    {
+      "word_id": "trois-heures-fr",
+      "fr": "trois heures",
+      "gloss": "three hours",
+      "note": "time expression"
+    },
+    {
+      "word_id": "trois-fr",
+      "fr": "trois",
+      "gloss": "three",
+      "note": "number"
+    },
+    {
+      "word_id": "est-ce-que-fr.question-marker",
+      "fr": "est-ce que",
+      "gloss": "question marker",
+      "note": "forms yes/no questions"
+    },
+    {
+      "word_id": "quelque-chose-fr",
+      "fr": "quelque chose",
+      "gloss": "something",
+      "note": "indefinite pronoun"
+    },
+    {
+      "word_id": "du-pain-fr",
+      "fr": "du pain",
+      "gloss": "bread"
+    },
+    {
+      "word_id": "du-fromage-fr",
+      "fr": "du fromage",
+      "gloss": "cheese"
+    },
+    {
+      "word_id": "le-prix-fr",
+      "fr": "le prix",
+      "gloss": "price",
+      "note": "from everyday-nouns"
+    },
+    {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always"
+    },
+    {
+      "word_id": "c-est-vrai-fr",
+      "fr": "c'est vrai",
+      "gloss": "that's true",
+      "note": "confirmation phrase"
+    },
+    {
+      "word_id": "voir-fr",
+      "fr": "voir",
+      "gloss": "to see"
+    },
+    {
+      "word_id": "va-venir-fr",
+      "fr": "va venir",
+      "gloss": "is going to come",
+      "note": "near future of venir"
+    },
+    {
+      "word_id": "toute-fr",
+      "fr": "toute",
+      "gloss": "all/whole"
+    },
+    {
+      "word_id": "en-ce-moment-fr",
+      "fr": "en ce moment",
+      "gloss": "right now/at this moment",
+      "note": "time expression"
+    },
+    {
+      "word_id": "faire-fr",
+      "fr": "faire",
+      "gloss": "to do"
+    },
+    {
+      "word_id": "de-bons-restaurants-fr",
+      "fr": "de bons restaurants",
+      "gloss": "good restaurants",
+      "note": "plural adjective"
+    },
+    {
+      "word_id": "beaucoup-fr",
+      "fr": "beaucoup",
+      "gloss": "a lot/much",
+      "note": "adverb from vocabulary"
+    },
+    {
+      "word_id": "parler-francais-fr",
+      "fr": "parler français",
+      "gloss": "to speak French"
+    },
+    {
+      "word_id": "quelques-fr",
+      "fr": "quelques",
+      "gloss": "some/a few",
+      "note": "plural adjective"
+    },
+    {
+      "word_id": "mots-fr",
+      "fr": "mots",
+      "gloss": "words",
+      "note": "plural of mot"
+    },
+    {
+      "word_id": "avant-de-partir-fr",
+      "fr": "avant de partir",
+      "gloss": "before leaving",
+      "note": "avant de + infinitive"
+    },
+    {
+      "word_id": "deja-fr",
+      "fr": "déjà",
+      "gloss": "already",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "tu-parles-fr",
+      "fr": "tu parles",
+      "gloss": "you speak"
+    },
+    {
+      "word_id": "tres-bien-fr",
+      "fr": "très bien",
+      "gloss": "very well",
+      "note": "adverb phrase"
+    },
+    {
+      "word_id": "merci-fr",
+      "fr": "merci",
+      "gloss": "thank you"
+    },
+    {
+      "word_id": "bonne-idee-fr",
+      "fr": "bonne idée",
+      "gloss": "good idea",
+      "note": "feminine of bon"
+    },
+    {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now"
+    },
+    {
+      "word_id": "avoir-fr",
+      "fr": "avoir",
+      "gloss": "to have"
+    },
+    {
+      "word_id": "belle-fr",
+      "fr": "belle",
+      "gloss": "beautiful (fem)",
+      "note": "feminine of beau"
+    },
+    {
+      "word_id": "plus-belle-fr",
+      "fr": "plus belle",
+      "gloss": "most beautiful",
+      "note": "superlative"
+    },
+    {
+      "word_id": "la-tour-eiffel-fr",
+      "fr": "la Tour Eiffel",
+      "gloss": "Eiffel Tower",
+      "note": "proper noun"
+    },
+    {
+      "word_id": "pour-fr",
+      "fr": "pour",
+      "gloss": "for"
+    },
+    {
+      "word_id": "contente-fr",
+      "fr": "contente",
+      "gloss": "happy",
+      "note": "feminine adjective"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-papa-qu-est-ce",
+      "speaker": "Marie",
+      "fr": "Papa, qu'est-ce que tu fais?",
+      "en": "Dad, what are you doing?"
+    },
+    {
+      "id": "b-je-suis-en-train",
+      "speaker": "Le père",
+      "fr": "Je suis en train de prendre le train pour Paris. Nous allons partir dans une semaine!",
+      "en": "I'm in the process of taking the train to Paris. We're going to leave in a week!"
+    },
+    {
+      "id": "img-home",
+      "fr": "Le père, la mère, Marie et son frère à la maison.",
+      "en": "Father, mother, Marie and her brother at home.",
+      "img": {
+        "src": "img/reading6/home",
+        "w": 1600,
+        "h": 1067,
+        "alt": "In a sunlit room, the father reads the train tickets with Marie and her brother while the mother packs a red coat into a trunk."
+      }
+    },
+    {
+      "id": "b-super-qu-est-ce",
+      "speaker": "Marie",
+      "fr": "Super! Qu'est-ce que je vais prendre?",
+      "en": "Great! What am I going to take?"
+    },
+    {
+      "id": "b-tu-vas-prendre-ton",
+      "speaker": "La mère",
+      "fr": "Tu vas prendre ton manteau et tes livres. Tu as besoin de ton manteau!",
+      "en": "You're going to take your coat and your books. You need your coat!"
+    },
+    {
+      "id": "b-maman-j-ai-une",
+      "speaker": "Marie",
+      "fr": "Maman, j'ai une question. Est-ce que je peux prendre mon livre?",
+      "en": "Mom, I have a question. Can I take my book?"
+    },
+    {
+      "id": "b-oui-bien-sur-tu",
+      "speaker": "La mère",
+      "fr": "Oui, bien sûr. Tu peux prendre trois livres.",
+      "en": "Yes, of course. You can take three books."
+    },
+    {
+      "id": "img-books",
+      "fr": "Marie peut prendre trois livres.",
+      "en": "Marie can take three books.",
+      "img": {
+        "src": "img/reading6/books",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Marie, in a white dress, packs a stack of books into a trunk while her mother helps, her brother kneels by his own books and the father watches."
+      }
+    },
+    {
+      "id": "b-marie-tu-comprends-que",
+      "speaker": "Le père",
+      "fr": "Marie, tu comprends que nous allons prendre le train? Ça prend trois heures.",
+      "en": "Marie, you understand that we're going to take the train? It takes three hours."
+    },
+    {
+      "id": "b-oui-papa-je-comprends",
+      "speaker": "Marie",
+      "fr": "Oui papa, je comprends. Est-ce qu'on va manger quelque chose dans le train?",
+      "en": "Yes dad, I understand. Are we going to eat something on the train?"
+    },
+    {
+      "id": "b-oui-nous-allons-manger",
+      "speaker": "Le père",
+      "fr": "Oui, nous allons manger du pain et du fromage. J'ai besoin de demander le prix.",
+      "en": "Yes, we're going to eat bread and cheese. I need to ask the price."
+    },
+    {
+      "id": "img-train",
+      "fr": "Dans le train, la famille mange du pain et du fromage.",
+      "en": "On the train, the family eats bread and cheese.",
+      "img": {
+        "src": "img/reading6/train",
+        "w": 1600,
+        "h": 1067,
+        "alt": "The family shares bread and cheese in a train compartment as their train steams out of Gare Saint-Lazare."
+      }
+    },
+    {
+      "id": "b-papa-qu-est-ce-2",
+      "speaker": "Marie",
+      "fr": "Papa, qu'est-ce que tu me dis toujours? \"Paris est la plus belle ville du monde!\"",
+      "en": "Dad, what do you always tell me? \"Paris is the most beautiful city in the world!\""
+    },
+    {
+      "id": "b-c-est-vrai-tu",
+      "speaker": "Le père",
+      "fr": "C'est vrai! Tu vas voir la Tour Eiffel pour la première fois!",
+      "en": "That's true! You're going to see the Eiffel Tower for the first time!"
+    },
+    {
+      "id": "img-eiffel",
+      "fr": "Marie voit la Tour Eiffel pour la première fois.",
+      "en": "Marie sees the Eiffel Tower for the first time.",
+      "img": {
+        "src": "img/reading6/eiffel",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Seen from behind, Marie, her brother and their parents look across the Seine at the Eiffel Tower."
+      }
+    },
+    {
+      "id": "b-je-suis-tres-contente",
+      "speaker": "Marie",
+      "fr": "Je suis très contente! Mon frère va venir aussi?",
+      "en": "I'm very happy! Is my brother going to come too?"
+    },
+    {
+      "id": "b-oui-toute-la-famille",
+      "speaker": "La mère",
+      "fr": "Oui, toute la famille va venir. Ton frère est en train de prendre ses livres en ce moment.",
+      "en": "Yes, the whole family is going to come. Your brother is in the process of getting his books right now."
+    },
+    {
+      "id": "b-qu-est-ce-qu",
+      "speaker": "Marie",
+      "fr": "Qu'est-ce qu'on va faire à Paris?",
+      "en": "What are we going to do in Paris?"
+    },
+    {
+      "id": "b-nous-allons-voir-la",
+      "speaker": "Le père",
+      "fr": "Nous allons voir la ville, manger dans de bons restaurants, et parler français beaucoup.",
+      "en": "We're going to see the city, eat in good restaurants, and speak French a lot."
+    },
+    {
+      "id": "b-j-ai-besoin-d",
+      "speaker": "Marie",
+      "fr": "J'ai besoin d'apprendre quelques mots en français avant de partir!",
+      "en": "I need to learn some words in French before leaving!"
+    },
+    {
+      "id": "b-tu-apprends-deja-le",
+      "speaker": "La mère",
+      "fr": "Tu apprends déjà le français! Tu parles très bien.",
+      "en": "You're already learning French! You speak very well."
+    },
+    {
+      "id": "b-merci-maman-je-vais",
+      "speaker": "Marie",
+      "fr": "Merci maman. Je vais prendre mon livre de français.",
+      "en": "Thank you mom. I'm going to take my French book."
+    },
+    {
+      "id": "b-bonne-idee-maintenant-j",
+      "speaker": "Le père",
+      "fr": "Bonne idée! Maintenant, j'ai besoin de finir. Nous allons avoir une belle année!",
+      "en": "Good idea! Now, I need to finish. We're going to have a beautiful year!"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-prendre-le-train",
+      "type": "comprehension",
+      "question": "What is the father doing at the beginning?",
+      "cue": "What is the father doing?",
+      "answer": "prendre le train",
+      "accept": [
+        "il prend le train",
+        "je prends le train",
+        "il est en train de prendre le train"
+      ],
+      "hint": "He says '{je suis en train de...}'"
+    },
+    {
+      "id": "i-trois-heures",
+      "type": "comprehension",
+      "question": "How long does the train take to Paris?",
+      "cue": "How long is the train ride?",
+      "answer": "trois heures",
+      "accept": [
+        "3 heures"
+      ],
+      "hint": "The father says '{ça prend...}'"
+    },
+    {
+      "id": "i-ton-manteau",
+      "type": "comprehension",
+      "question": "What does Marie's mother say she needs?",
+      "cue": "What does Marie need to bring?",
+      "answer": "ton manteau",
+      "accept": [
+        "manteau",
+        "son manteau"
+      ],
+      "hint": "Mother says '{tu as besoin de...}'"
+    },
+    {
+      "id": "i-du-pain-et-du",
+      "type": "comprehension",
+      "question": "What are they going to eat on the train?",
+      "cue": "What will they eat on the train?",
+      "answer": "du pain et du fromage",
+      "accept": [
+        "du fromage et du pain"
+      ],
+      "hint": "Father says '{nous allons manger...}'"
+    },
+    {
+      "id": "i-paris-est-la-plus",
+      "type": "comprehension",
+      "question": "What does the father say about Paris?",
+      "cue": "What does father always say about Paris?",
+      "answer": "Paris est la plus belle ville du monde",
+      "accept": [
+        "la plus belle ville du monde",
+        "plus belle ville du monde",
+        "la plus belle ville"
+      ],
+      "hint": "Marie reminds him: '{qu'est-ce que tu me dis toujours?}'"
+    },
+    {
+      "id": "i-la-tour-eiffel",
+      "type": "comprehension",
+      "question": "What will Marie see for the first time?",
+      "answer": "la Tour Eiffel",
+      "accept": [
+        "Tour Eiffel"
+      ],
+      "hint": "Father says '{pour la première fois}'"
+    },
+    {
+      "id": "i-toute-la-famille",
+      "type": "comprehension",
+      "question": "Who else is going on the trip?",
+      "cue": "Who else is coming on the trip?",
+      "answer": "toute la famille",
+      "accept": [
+        "la famille",
+        "famille",
+        "son frère",
+        "le frère"
+      ],
+      "hint": "Mother says '{toute la...}'"
+    },
+    {
+      "id": "i-prendre-ses-livres",
+      "type": "comprehension",
+      "question": "What is Marie's brother doing right now?",
+      "cue": "What is the brother doing now?",
+      "answer": "prendre ses livres",
+      "accept": [
+        "il prend ses livres",
+        "il est en train de prendre ses livres"
+      ],
+      "hint": "Mother says '{en ce moment}'"
+    },
+    {
+      "id": "i-apprendre-quelques-mots-en",
+      "type": "comprehension",
+      "question": "What does Marie need to do before leaving?",
+      "cue": "What does Marie need to do before the trip?",
+      "answer": "apprendre quelques mots en français",
+      "accept": [
+        "apprendre des mots",
+        "apprendre le français",
+        "elle doit apprendre"
+      ],
+      "hint": "She says '{j'ai besoin d'apprendre...}'"
+    },
+    {
+      "id": "i-mon-livre-de-francais",
+      "type": "comprehension",
+      "question": "What is Marie going to take at the end?",
+      "cue": "What does Marie decide to take?",
+      "answer": "mon livre de français",
+      "accept": [
+        "son livre de français",
+        "livre de français",
+        "un livre",
+        "un livre de français",
+        "un livre de français pour apprendre"
+      ],
+      "hint": "She says '{je vais prendre...}'"
+    }
+  ]
+}

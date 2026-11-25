@@ -1,0 +1,983 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-30-reading-4",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading Comprehension 4 - {La nouvelle époque de Marie}",
+  "description": "A natural conversation using all your vocabulary.",
+  "can_do": [
+    "Follow authentic French café conversations",
+    "Understand survival phrases in context",
+    "Comprehend French with negation and time expressions"
+  ],
+  "story_id": "reading4",
+  "vocabulary": [
+    {
+      "word_id": "jardin-du-luxembourg-fr",
+      "fr": "Jardin du Luxembourg",
+      "gloss": "Luxembourg Garden (famous Paris park)"
+    },
+    {
+      "word_id": "saint-germain-fr",
+      "fr": "Saint-Germain",
+      "gloss": "Saint-Germain-des-Prés (trendy Paris neighborhood)"
+    },
+    {
+      "word_id": "comment-ca-va-fr.how-are-you",
+      "fr": "comment ça va",
+      "gloss": "how are you",
+      "note": "common greeting"
+    },
+    {
+      "word_id": "ca-va-bien-fr",
+      "fr": "ça va bien",
+      "gloss": "I'm good / it's going well",
+      "note": "response"
+    },
+    {
+      "word_id": "je-ne-peux-pas-fr",
+      "fr": "je ne peux pas",
+      "gloss": "I can't",
+      "note": "pouvoir + negation"
+    },
+    {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "je-dois-fr",
+      "fr": "je dois",
+      "gloss": "I must",
+      "note": "from devoir"
+    },
+    {
+      "word_id": "le-travail-fr",
+      "fr": "le travail",
+      "gloss": "work",
+      "note": "everyday noun"
+    },
+    {
+      "word_id": "aujourd-hui-fr",
+      "fr": "aujourd'hui",
+      "gloss": "today",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "demain-fr",
+      "fr": "demain",
+      "gloss": "tomorrow",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always",
+      "note": "frequency adverb"
+    },
+    {
+      "word_id": "le-matin-fr",
+      "fr": "le matin",
+      "gloss": "the morning",
+      "note": "time expression"
+    },
+    {
+      "word_id": "ce-soir-fr",
+      "fr": "ce soir",
+      "gloss": "this evening / tonight",
+      "note": "time expression"
+    },
+    {
+      "word_id": "venir-fr",
+      "fr": "venir",
+      "gloss": "to come",
+      "note": "verb"
+    },
+    {
+      "word_id": "le-probleme-fr",
+      "fr": "le problème",
+      "gloss": "problem",
+      "note": "noun"
+    },
+    {
+      "word_id": "d-argent-fr",
+      "fr": "d'argent",
+      "gloss": "money / (any) money",
+      "note": "with negation"
+    },
+    {
+      "word_id": "avec-moi-fr",
+      "fr": "avec moi",
+      "gloss": "with me",
+      "note": "preposition + stressed pronoun"
+    },
+    {
+      "word_id": "la-carte-de-credit-fr",
+      "fr": "la carte de crédit",
+      "gloss": "credit card",
+      "note": "compound noun"
+    },
+    {
+      "word_id": "dans-ma-maison-fr",
+      "fr": "dans ma maison",
+      "gloss": "in my house",
+      "note": "location"
+    },
+    {
+      "word_id": "la-bas-fr",
+      "fr": "là-bas",
+      "gloss": "over there",
+      "note": "location adverb"
+    },
+    {
+      "word_id": "je-paie-fr",
+      "fr": "je paie",
+      "gloss": "I pay",
+      "note": "from payer"
+    },
+    {
+      "word_id": "tu-ne-dois-pas-fr",
+      "fr": "tu ne dois pas",
+      "gloss": "you don't have to / you mustn't",
+      "note": "devoir + negation"
+    },
+    {
+      "word_id": "ou-fr.where",
+      "fr": "où",
+      "gloss": "where",
+      "note": "question word"
+    },
+    {
+      "word_id": "la-place-fr",
+      "fr": "la place",
+      "gloss": "square / place",
+      "note": "everyday noun"
+    },
+    {
+      "word_id": "je-la-vois-fr",
+      "fr": "je la vois",
+      "gloss": "I see it (fem)",
+      "note": "object pronoun"
+    },
+    {
+      "word_id": "c-est-ca-fr",
+      "fr": "c'est ça",
+      "gloss": "that's it",
+      "note": "expression"
+    },
+    {
+      "word_id": "tout-le-monde-fr",
+      "fr": "tout le monde",
+      "gloss": "everybody",
+      "note": "expression"
+    },
+    {
+      "word_id": "partir-fr",
+      "fr": "partir",
+      "gloss": "to leave",
+      "note": "verb"
+    },
+    {
+      "word_id": "au-revoir-fr",
+      "fr": "au revoir",
+      "gloss": "goodbye",
+      "note": "farewell"
+    },
+    {
+      "word_id": "a-ce-soir-fr",
+      "fr": "à ce soir",
+      "gloss": "see you this evening",
+      "note": "expression"
+    },
+    {
+      "word_id": "tu-es-la-fr",
+      "fr": "tu es là",
+      "gloss": "you're here / you're there",
+      "note": "être + location"
+    },
+    {
+      "word_id": "viens-fr",
+      "fr": "viens",
+      "gloss": "come",
+      "note": "imperative from venir"
+    },
+    {
+      "word_id": "qu-est-ce-que-vous-voulez-fr",
+      "fr": "qu'est-ce que vous voulez",
+      "gloss": "what do you want",
+      "note": "polite question"
+    },
+    {
+      "word_id": "nous-voudrions-fr",
+      "fr": "nous voudrions",
+      "gloss": "we would like",
+      "note": "polite request"
+    },
+    {
+      "word_id": "le-pain-fr",
+      "fr": "le pain",
+      "gloss": "bread",
+      "note": "everyday noun"
+    },
+    {
+      "word_id": "l-eau-fr",
+      "fr": "l'eau",
+      "gloss": "water",
+      "note": "everyday noun"
+    },
+    {
+      "word_id": "s-il-vous-plait-fr",
+      "fr": "s'il vous plaît",
+      "gloss": "please (formal)",
+      "note": "survival phrase"
+    },
+    {
+      "word_id": "voila-fr.there-you-go",
+      "fr": "voilà",
+      "gloss": "there you go",
+      "note": "presentation"
+    },
+    {
+      "word_id": "jamais-fr",
+      "fr": "jamais",
+      "gloss": "never",
+      "note": "with ne"
+    },
+    {
+      "word_id": "autres-fr",
+      "fr": "autres",
+      "gloss": "other / others",
+      "note": "adjective"
+    },
+    {
+      "word_id": "le-meilleur-fr",
+      "fr": "le meilleur",
+      "gloss": "the best",
+      "note": "superlative"
+    },
+    {
+      "word_id": "tu-parles-bien-fr",
+      "fr": "tu parles bien",
+      "gloss": "you speak well",
+      "note": "compliment"
+    },
+    {
+      "word_id": "mais-non-fr",
+      "fr": "mais non",
+      "gloss": "but no / not at all",
+      "note": "expression"
+    },
+    {
+      "word_id": "nouvelle-fr",
+      "fr": "nouvelle",
+      "gloss": "new (feminine)",
+      "note": "adjective"
+    },
+    {
+      "word_id": "la-ville-fr",
+      "fr": "la ville",
+      "gloss": "city",
+      "note": "everyday noun"
+    },
+    {
+      "word_id": "personne-fr",
+      "fr": "personne",
+      "gloss": "nobody",
+      "note": "with ne"
+    },
+    {
+      "word_id": "mon-ami-fr",
+      "fr": "mon ami",
+      "gloss": "my friend",
+      "note": "possessive + noun"
+    },
+    {
+      "word_id": "nous-sommes-amis-fr",
+      "fr": "nous sommes amis",
+      "gloss": "we are friends",
+      "note": "statement"
+    },
+    {
+      "word_id": "la-vie-fr",
+      "fr": "la vie",
+      "gloss": "life",
+      "note": "everyday noun"
+    },
+    {
+      "word_id": "j-aime-fr",
+      "fr": "j'aime",
+      "gloss": "I love / I like",
+      "note": "from aimer"
+    },
+    {
+      "word_id": "cette-ville-fr",
+      "fr": "cette ville",
+      "gloss": "this city",
+      "note": "demonstrative + noun"
+    },
+    {
+      "word_id": "manger-fr",
+      "fr": "manger",
+      "gloss": "to eat",
+      "note": "verb"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-marie-tu-veux-aller",
+      "speaker": "Paul",
+      "fr": "Marie ! Tu veux aller au Jardin du Luxembourg avec moi ?",
+      "en": "Marie! Do you want to go to Jardin du Luxembourg with me?"
+    },
+    {
+      "id": "b-oui-mais-je-ne",
+      "speaker": "Marie",
+      "fr": "Oui ! Mais je ne peux pas maintenant. Je dois aller au travail.",
+      "en": "Yes! But I can't right now. I must go to work."
+    },
+    {
+      "id": "img-matin",
+      "fr": "Marie doit aller au travail.",
+      "en": "Marie must go to work.",
+      "img": {
+        "src": "img/reading4/matin",
+        "w": 1600,
+        "h": 1067,
+        "alt": "At the door of her building, Marie in a cream trench coat checks her watch while Paul in a navy coat and teal scarf points toward a park; a flying car glides past."
+      }
+    },
+    {
+      "id": "b-tu-vas-au-travail",
+      "speaker": "Paul",
+      "fr": "Tu vas au travail aujourd'hui ? C'est demain ton jour de travail, non ?",
+      "en": "You're going to work today? Tomorrow is your work day, no?"
+    },
+    {
+      "id": "b-non-aujourd-hui-je",
+      "speaker": "Marie",
+      "fr": "Non, aujourd'hui ! Je vais toujours au travail le matin. Mais ce soir, je ne vais pas au travail.",
+      "en": "No, today! I always go to work in the morning. But this evening, I'm not going to work."
+    },
+    {
+      "id": "b-ah-bon-ce-soir",
+      "speaker": "Paul",
+      "fr": "Ah bon ! Ce soir alors ! Tu veux venir à Saint-Germain ce soir avec moi ?",
+      "en": "Ah good! This evening then! Do you want to come to Saint-Germain this evening with me?"
+    },
+    {
+      "id": "b-oui-mais-j-ai",
+      "speaker": "Marie",
+      "fr": "Oui ! Mais j'ai un problème. Je n'ai pas d'argent avec moi.",
+      "en": "Yes! But I have a problem. I don't have money with me."
+    },
+    {
+      "id": "b-tu-n-as-pas",
+      "speaker": "Paul",
+      "fr": "Tu n'as pas d'argent ? Tu as ta carte de crédit ?",
+      "en": "You don't have money? Do you have your credit card?"
+    },
+    {
+      "id": "b-oui-j-ai-ma",
+      "speaker": "Marie",
+      "fr": "Oui, j'ai ma carte de crédit chez moi. Je vais la chercher là-bas.",
+      "en": "Yes, I have my credit card at home. I'm going to look for it there."
+    },
+    {
+      "id": "img-rue",
+      "fr": "Marie et Paul dans la rue.",
+      "en": "Marie and Paul in the street.",
+      "img": {
+        "src": "img/reading4/rue",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Marie and Paul walk down a Paris boulevard, chatting, the Eiffel Tower in the distance and flying cars above the trees."
+      }
+    },
+    {
+      "id": "b-bon-moi-je-paie",
+      "speaker": "Paul",
+      "fr": "Bon ! Moi, je paie ce soir ! Tu ne dois pas payer !",
+      "en": "Good! Me, I'm paying this evening! You don't have to pay!"
+    },
+    {
+      "id": "b-non-non-je-ne",
+      "speaker": "Marie",
+      "fr": "Non, non ! Je ne veux pas ça. Tu es très gentil, mais je vais payer avec ma carte.",
+      "en": "No, no! I don't want that. You're very kind, but I'm going to pay with my card."
+    },
+    {
+      "id": "b-ca-va-alors-ce",
+      "speaker": "Paul",
+      "fr": "Ça va. Alors, ce soir à six heures ?",
+      "en": "Okay. So, this evening at six o'clock?"
+    },
+    {
+      "id": "b-oui-quel-cafe-a",
+      "speaker": "Marie",
+      "fr": "Oui ! Quel café à Saint-Germain ?",
+      "en": "Yes! Which café in Saint-Germain?"
+    },
+    {
+      "id": "b-les-editeurs-il-est",
+      "speaker": "Paul",
+      "fr": "Les Éditeurs. Il est sur le carrefour de l'Odéon. Tu peux le voir de ta maison.",
+      "en": "Les Éditeurs. It's on Carrefour de l'Odéon. You can see it from your house."
+    },
+    {
+      "id": "b-bon-maintenant-je-dois",
+      "speaker": "Marie",
+      "fr": "Bon ! Maintenant je dois partir. Au revoir Paul !",
+      "en": "Good! Now I must leave. Goodbye Paul!"
+    },
+    {
+      "id": "b-au-revoir-marie-a",
+      "speaker": "Paul",
+      "fr": "Au revoir Marie ! À ce soir !",
+      "en": "Goodbye Marie! See you this evening!"
+    },
+    {
+      "id": "b-ce-soir-au-cafe",
+      "fr": "Ce soir au café",
+      "en": "This evening at the café",
+      "layout": "scene"
+    },
+    {
+      "id": "b-bonsoir-paul",
+      "speaker": "Marie",
+      "fr": "Bonsoir Paul !",
+      "en": "Good evening Paul!"
+    },
+    {
+      "id": "b-marie-tu-es-la",
+      "speaker": "Paul",
+      "fr": "Marie ! Tu es là ! Viens, viens ! Nous allons voir la femme ici. Excusez-moi madame !",
+      "en": "Marie! You're here! Come, come! We're going to see the woman here. Excuse me madam!"
+    },
+    {
+      "id": "img-cafe",
+      "fr": "Ce soir, au café Les Éditeurs.",
+      "en": "This evening, at the café Les Éditeurs.",
+      "img": {
+        "src": "img/reading4/cafe",
+        "w": 1600,
+        "h": 1067,
+        "alt": "In the evening, Paul waves Marie in at the door of a corner café with glowing windows and a red awning, small flying cars in a violet sky."
+      }
+    },
+    {
+      "id": "b-bonjour-qu-est-ce",
+      "speaker": "La femme",
+      "fr": "Bonjour ! Qu'est-ce que vous voulez ?",
+      "en": "Hello! What do you want?"
+    },
+    {
+      "id": "b-nous-voudrions-du-pain",
+      "speaker": "Paul",
+      "fr": "Nous voudrions du pain et de l'eau, s'il vous plaît.",
+      "en": "We would like bread and water, please."
+    },
+    {
+      "id": "b-du-pain-et-de",
+      "speaker": "La femme",
+      "fr": "Du pain et de l'eau. Voilà !",
+      "en": "Bread and water. There you go!"
+    },
+    {
+      "id": "img-pain",
+      "fr": "Du pain et de l'eau.",
+      "en": "Bread and water.",
+      "img": {
+        "src": "img/reading4/pain",
+        "w": 1600,
+        "h": 1067,
+        "alt": "A smiling grey-haired waitress sets a basket of baguette slices and a carafe of water on Marie and Paul's table."
+      }
+    },
+    {
+      "id": "b-miam-le-pain-est",
+      "speaker": "Marie",
+      "fr": "Miam ! Le pain est très bon ici. C'est délicieux !",
+      "en": "Yum! The bread is very good here. It's delicious!"
+    },
+    {
+      "id": "b-oui-je-viens-toujours",
+      "speaker": "Paul",
+      "fr": "Oui ! Je viens toujours ici. Je ne vais jamais aux autres cafés. Ce café est le meilleur !",
+      "en": "Yes! I always come here. I never go to the other cafés. This café is the best!"
+    },
+    {
+      "id": "b-tu-parles-bien-francais",
+      "speaker": "Marie",
+      "fr": "Tu parles bien français, Paul. Moi, je ne parle pas toujours bien.",
+      "en": "You speak French well, Paul. Me, I don't always speak well."
+    },
+    {
+      "id": "b-mais-non-ton-francais",
+      "speaker": "Paul",
+      "fr": "Mais non ! Ton français est très bon ! Tu es nouvelle ici ?",
+      "en": "But no! Your French is very good! Are you new here?"
+    },
+    {
+      "id": "b-oui-je-suis-nouvelle",
+      "speaker": "Marie",
+      "fr": "Oui, je suis nouvelle dans la ville. Je ne vois personne ici. Tu es mon meilleur ami maintenant !",
+      "en": "Yes, I'm new in the city. I see nobody here. You're my best friend now!"
+    },
+    {
+      "id": "b-oui-nous-pouvons-etre",
+      "speaker": "Paul",
+      "fr": "Oui ! Nous pouvons être de bons amis ! Et tu vas voir, la vie ici est très bonne.",
+      "en": "Yes! We can be good friends! And you'll see, life here is very good."
+    },
+    {
+      "id": "b-mmmh-j-aime-cette",
+      "speaker": "Marie",
+      "fr": "Mmmh! J'aime cette ville. Je ne vais jamais partir !",
+      "en": "Mmmh! I love this city. I'll never leave!"
+    },
+    {
+      "id": "img-ville",
+      "fr": "Marie aime cette ville.",
+      "en": "Marie loves this city.",
+      "img": {
+        "src": "img/reading4/ville",
+        "w": 1600,
+        "h": 1067,
+        "alt": "At night on the café terrace, Marie throws her arms open toward the lit Eiffel Tower while Paul smiles beside her with a piece of bread."
+      }
+    },
+    {
+      "id": "b-bon-maintenant-tu-dois",
+      "speaker": "Paul",
+      "fr": "Bon ! Maintenant tu dois manger ton pain !",
+      "en": "Good! Now you must eat your bread!"
+    },
+    {
+      "id": "b-oui-merci-paul-tu",
+      "speaker": "Marie",
+      "fr": "Oui ! Merci Paul. Tu es un très bon ami.",
+      "en": "Yes! Thank you Paul. You're a very good friend."
+    },
+    {
+      "id": "b-fin",
+      "fr": "Fin!",
+      "en": "The End!",
+      "layout": "end"
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "Les Éditeurs",
+      "en": "Les Éditeurs"
+    },
+    {
+      "fr": "tu veux",
+      "en": "you want, do you want"
+    },
+    {
+      "fr": "au Jardin du Luxembourg",
+      "en": "to the Luxembourg Garden"
+    },
+    {
+      "fr": "au travail",
+      "en": "to work"
+    },
+    {
+      "fr": "tu vas",
+      "en": "you're going"
+    },
+    {
+      "fr": "ton jour de travail",
+      "en": "your work day"
+    },
+    {
+      "fr": "je vais",
+      "en": "I'm going, I go"
+    },
+    {
+      "fr": "ah bon",
+      "en": "oh really, ah good"
+    },
+    {
+      "fr": "un problème",
+      "en": "a problem"
+    },
+    {
+      "fr": "je n'ai pas",
+      "en": "I don't have"
+    },
+    {
+      "fr": "tu n'as pas",
+      "en": "you don't have"
+    },
+    {
+      "fr": "tu as",
+      "en": "you have"
+    },
+    {
+      "fr": "ta carte de crédit",
+      "en": "your credit card"
+    },
+    {
+      "fr": "ma carte de crédit",
+      "en": "my credit card"
+    },
+    {
+      "fr": "chez moi",
+      "en": "at my place, at home"
+    },
+    {
+      "fr": "je vais la chercher",
+      "en": "I'm going to get it"
+    },
+    {
+      "fr": "je ne veux pas",
+      "en": "I don't want"
+    },
+    {
+      "fr": "tu es",
+      "en": "you are"
+    },
+    {
+      "fr": "avec ma carte",
+      "en": "with my card"
+    },
+    {
+      "fr": "ça va",
+      "en": "OK, that's fine"
+    },
+    {
+      "fr": "six heures",
+      "en": "six o'clock"
+    },
+    {
+      "fr": "quel café",
+      "en": "which café"
+    },
+    {
+      "fr": "il est",
+      "en": "it is, he is"
+    },
+    {
+      "fr": "le carrefour de l'Odéon",
+      "en": "the Odéon crossroads"
+    },
+    {
+      "fr": "tu peux",
+      "en": "you can"
+    },
+    {
+      "fr": "le voir",
+      "en": "see it"
+    },
+    {
+      "fr": "de ta maison",
+      "en": "from your house"
+    },
+    {
+      "fr": "nous allons",
+      "en": "we're going"
+    },
+    {
+      "fr": "la femme",
+      "en": "the woman"
+    },
+    {
+      "fr": "du pain",
+      "en": "some bread"
+    },
+    {
+      "fr": "de l'eau",
+      "en": "some water"
+    },
+    {
+      "fr": "je viens",
+      "en": "I come"
+    },
+    {
+      "fr": "aux autres cafés",
+      "en": "to the other cafés"
+    },
+    {
+      "fr": "ce café",
+      "en": "this café"
+    },
+    {
+      "fr": "je ne parle pas",
+      "en": "I don't speak"
+    },
+    {
+      "fr": "ton français",
+      "en": "your French"
+    },
+    {
+      "fr": "je suis",
+      "en": "I am"
+    },
+    {
+      "fr": "dans la ville",
+      "en": "in the city"
+    },
+    {
+      "fr": "je ne vois personne",
+      "en": "I don't see anyone"
+    },
+    {
+      "fr": "mon meilleur ami",
+      "en": "my best friend"
+    },
+    {
+      "fr": "nous pouvons",
+      "en": "we can"
+    },
+    {
+      "fr": "de bons amis",
+      "en": "good friends"
+    },
+    {
+      "fr": "tu vas voir",
+      "en": "you'll see"
+    },
+    {
+      "fr": "très bonne",
+      "en": "very good"
+    },
+    {
+      "fr": "je ne vais jamais partir",
+      "en": "I'm never going to leave"
+    },
+    {
+      "fr": "tu dois",
+      "en": "you must"
+    },
+    {
+      "fr": "ton pain",
+      "en": "your bread"
+    },
+    {
+      "fr": "un très bon ami",
+      "en": "a very good friend"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-jardin-du-luxembourg",
+      "type": "comprehension",
+      "question": "Where does Paul want to go first?",
+      "cue": "{Au Jardin du ___}",
+      "answer": "jardin du luxembourg",
+      "accept": [
+        "luxembourg"
+      ],
+      "hint": "Luxembourg Garden"
+    },
+    {
+      "id": "i-argent",
+      "type": "comprehension",
+      "question": "What does Marie not have with her?",
+      "cue": "{Je n'ai pas d'___}",
+      "answer": "argent",
+      "accept": [
+        "d'argent",
+        "de l'argent"
+      ],
+      "hint": "Money"
+    },
+    {
+      "id": "i-dans-sa-maison",
+      "type": "comprehension",
+      "question": "Where is Marie's credit card?",
+      "cue": "{Dans ma ___}",
+      "answer": "dans sa maison",
+      "accept": [
+        "maison",
+        "ma maison",
+        "sa maison",
+        "la maison",
+        "dans ma maison",
+        "dans la maison",
+        "chez elle",
+        "chez moi"
+      ],
+      "hint": "In my house"
+    },
+    {
+      "id": "i-marie",
+      "type": "comprehension",
+      "question": "Who wants to pay this evening?",
+      "cue": "{___, je paie}",
+      "answer": "Marie",
+      "accept": [
+        "moi",
+        "moi je paie",
+        "Paul",
+        "Paul je paie"
+      ],
+      "hint": "Hmm..."
+    },
+    {
+      "id": "i-les-editeurs",
+      "type": "comprehension",
+      "question": "What café do they go to in Saint-Germain?",
+      "cue": "{Les ___}",
+      "answer": "Les Éditeurs",
+      "accept": [
+        "les éditeurs",
+        "editeurs"
+      ],
+      "hint": "The name of the café"
+    },
+    {
+      "id": "i-carrefour-de-l-odeon",
+      "type": "comprehension",
+      "question": "Where is Les Éditeurs located?",
+      "cue": "{Sur le carrefour de ___}",
+      "answer": "carrefour de l'Odéon",
+      "accept": [
+        "odéon",
+        "l'odéon",
+        "carrefour de l'odéon",
+        "sur la carrefour",
+        "la carrefour",
+        "sur la carrefour de l'odéon"
+      ],
+      "hint": "Famous intersection in Saint-Germain"
+    },
+    {
+      "id": "i-du-pain-et-de",
+      "type": "comprehension",
+      "question": "What do they order at the café?",
+      "cue": "{Du ___ et de l'eau}",
+      "answer": "du pain et de l'eau",
+      "accept": [
+        "pain",
+        "pain et eau",
+        "pain et de l'eau",
+        "pain et de l eau",
+        "du pain et eau",
+        "du pain et de l eau",
+        "pain et l'eau",
+        "pain et l eau",
+        "de l'eau et du pain",
+        "eau et pain"
+      ],
+      "hint": "Bread"
+    },
+    {
+      "id": "i-toujours",
+      "type": "comprehension",
+      "question": "How often does Paul come to this café?",
+      "cue": "{Je viens ___ ici}",
+      "answer": "toujours",
+      "accept": [
+        "je viens toujours ici",
+        "il vient toujours ici",
+        "il vient toujours"
+      ],
+      "hint": "Always"
+    },
+    {
+      "id": "i-non",
+      "type": "comprehension",
+      "question": "Does Paul ever go to other cafés?",
+      "cue": "{Je ne vais ___ aux autres cafés}",
+      "answer": "non",
+      "accept": [
+        "jamais",
+        "je ne vais jamais",
+        "il ne va jamais"
+      ],
+      "hint": "Never (with ne)"
+    },
+    {
+      "id": "i-oui",
+      "type": "comprehension",
+      "question": "Is Marie new in the city?",
+      "cue": "{Je suis ___ dans la ville}",
+      "answer": "oui",
+      "accept": [
+        "elle est nouvelle"
+      ],
+      "hint": "New (feminine form)"
+    },
+    {
+      "id": "i-personne",
+      "type": "comprehension",
+      "question": "Who does Marie see in the city?",
+      "cue": "{Je ne vois ___}",
+      "answer": "personne",
+      "accept": [
+        "je ne vois personne",
+        "elle ne voit personne"
+      ],
+      "hint": "Nobody"
+    },
+    {
+      "id": "i-cette-ville",
+      "type": "comprehension",
+      "question": "What does Marie love?",
+      "cue": "{J'aime cette ___}",
+      "answer": "cette ville",
+      "accept": [
+        "ville",
+        "la ville",
+        "Marie aime cette ville",
+        "elle aime cette ville",
+        "Marie aime la ville",
+        "elle aime la ville"
+      ],
+      "hint": "This city"
+    },
+    {
+      "id": "i-non-2",
+      "type": "comprehension",
+      "question": "Will Marie ever leave?",
+      "cue": "{Je ne vais ___ partir}",
+      "answer": "non",
+      "accept": [
+        "jamais",
+        "non, jamias",
+        "je ne vais jamais partir",
+        "elle ne va jamais partir"
+      ],
+      "hint": "Never (with ne)"
+    },
+    {
+      "id": "i-son-pain",
+      "type": "comprehension",
+      "question": "What must Marie eat now?",
+      "cue": "{Tu dois manger ton ___}",
+      "answer": "son pain",
+      "accept": [
+        "pain",
+        "ton pain",
+        "le pain"
+      ],
+      "hint": "Famous french food"
+    },
+    {
+      "id": "i-saint-germain",
+      "type": "comprehension",
+      "question": "Which neighborhood do they go to in the evening?",
+      "cue": "À ___",
+      "answer": "Saint-Germain",
+      "accept": [
+        "saint-germain",
+        "saint germain"
+      ],
+      "hint": "Trendy Paris neighborhood"
+    },
+    {
+      "id": "i-bonsoir",
+      "type": "comprehension",
+      "question": "How does Marie greet Paul in the evening?",
+      "cue": "{___ Paul!}",
+      "answer": "Bonsoir",
+      "accept": [
+        "bonsoir paul"
+      ],
+      "hint": "Evening greeting"
+    }
+  ]
+}

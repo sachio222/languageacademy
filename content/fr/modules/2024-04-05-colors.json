@@ -1,0 +1,270 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-05-colors",
+  "kind": "reference",
+  "status": "written",
+  "title": "{Les Couleurs}",
+  "description": "Essential colors in French - learn how colors agree with nouns and create beautiful descriptions",
+  "vocabulary": [
+    {
+      "word_id": "bleu-bleue-fr",
+      "fr": "bleu / bleue",
+      "gloss": "blue",
+      "note": "le ciel est bleu, la mer est bleue"
+    },
+    {
+      "word_id": "rouge-fr",
+      "fr": "rouge",
+      "gloss": "red",
+      "note": "invariable - same for masculine/feminine"
+    },
+    {
+      "word_id": "vert-verte-fr",
+      "fr": "vert / verte",
+      "gloss": "green",
+      "note": "l'herbe est verte, un arbre vert"
+    },
+    {
+      "word_id": "jaune-fr",
+      "fr": "jaune",
+      "gloss": "yellow",
+      "note": "invariable - le soleil est jaune"
+    },
+    {
+      "word_id": "blanc-blanche-fr",
+      "fr": "blanc / blanche",
+      "gloss": "white",
+      "note": "les nuages sont blancs, la neige est blanche"
+    },
+    {
+      "word_id": "noir-noire-fr",
+      "fr": "noir / noire",
+      "gloss": "black",
+      "note": "un chat noir, une voiture noire"
+    },
+    {
+      "word_id": "orange-fr",
+      "fr": "orange",
+      "gloss": "orange",
+      "note": "INVARIABLE - never changes! une orange orange"
+    },
+    {
+      "word_id": "violet-violette-fr",
+      "fr": "violet / violette",
+      "gloss": "purple/violet",
+      "note": "un violon violet, une fleur violette"
+    },
+    {
+      "word_id": "rose-fr",
+      "fr": "rose",
+      "gloss": "pink",
+      "note": "invariable - une rose rose (a pink rose)"
+    },
+    {
+      "word_id": "gris-grise-fr",
+      "fr": "gris / grise",
+      "gloss": "gray",
+      "note": "un ciel gris, une souris grise"
+    },
+    {
+      "word_id": "marron-fr",
+      "fr": "marron",
+      "gloss": "brown",
+      "note": "INVARIABLE - never changes! des yeux marron"
+    },
+    {
+      "word_id": "beige-fr",
+      "fr": "beige",
+      "gloss": "beige",
+      "note": "invariable - un pantalon beige"
+    },
+    {
+      "word_id": "clair-fr",
+      "fr": "clair",
+      "gloss": "light (shade)",
+      "note": "bleu clair (light blue), vert clair (light green)"
+    },
+    {
+      "word_id": "fonce-fr",
+      "fr": "foncé",
+      "gloss": "dark (shade)",
+      "note": "bleu foncé (dark blue), vert foncé (dark green)"
+    },
+    {
+      "word_id": "vif-vive-fr",
+      "fr": "vif / vive",
+      "gloss": "bright/vivid",
+      "note": "une couleur vive (a bright color)"
+    },
+    {
+      "word_id": "pale-fr",
+      "fr": "pâle",
+      "gloss": "pale",
+      "note": "un bleu pâle (a pale blue)"
+    },
+    {
+      "word_id": "dore-fr",
+      "fr": "doré",
+      "gloss": "golden",
+      "note": "agrees - un bracelet doré, une bague dorée"
+    },
+    {
+      "word_id": "argente-fr",
+      "fr": "argenté",
+      "gloss": "silver",
+      "note": "agrees - un collier argenté"
+    },
+    {
+      "word_id": "multicolore-fr",
+      "fr": "multicolore",
+      "gloss": "multicolored",
+      "note": "agrees - des vêtements multicolores"
+    },
+    {
+      "word_id": "colore-coloree-fr",
+      "fr": "coloré / colorée",
+      "gloss": "colorful",
+      "note": "agrees - une maison colorée"
+    },
+    {
+      "word_id": "la-couleur-fr",
+      "fr": "la couleur",
+      "gloss": "the color",
+      "note": "feminine - De quelle couleur?"
+    },
+    {
+      "word_id": "de-quelle-couleur-fr",
+      "fr": "De quelle couleur?",
+      "gloss": "What color?",
+      "note": "essential question phrase"
+    },
+    {
+      "word_id": "de-quelle-couleur-est-fr",
+      "fr": "De quelle couleur est...?",
+      "gloss": "What color is...?",
+      "note": "De quelle couleur est le ciel?"
+    },
+    {
+      "word_id": "le-ciel-fr",
+      "fr": "le ciel",
+      "gloss": "the sky",
+      "note": "masculine - le ciel est bleu"
+    },
+    {
+      "word_id": "l-herbe-fr",
+      "fr": "l'herbe",
+      "gloss": "the grass",
+      "note": "feminine (herbe) - l'herbe est verte"
+    },
+    {
+      "word_id": "les-nuages-fr",
+      "fr": "les nuages",
+      "gloss": "the clouds",
+      "note": "masculine plural - les nuages sont blancs"
+    },
+    {
+      "word_id": "le-soleil-fr",
+      "fr": "le soleil",
+      "gloss": "the sun",
+      "note": "masculine - le soleil est jaune"
+    },
+    {
+      "word_id": "la-mer-fr",
+      "fr": "la mer",
+      "gloss": "the sea",
+      "note": "feminine - la mer est bleue"
+    },
+    {
+      "word_id": "la-neige-fr",
+      "fr": "la neige",
+      "gloss": "the snow",
+      "note": "feminine - la neige est blanche"
+    },
+    {
+      "word_id": "un-arbre-fr",
+      "fr": "un arbre",
+      "gloss": "a tree",
+      "note": "masculine - un arbre vert"
+    },
+    {
+      "word_id": "une-fleur-fr",
+      "fr": "une fleur",
+      "gloss": "a flower",
+      "note": "feminine - une fleur rose"
+    },
+    {
+      "word_id": "les-feuilles-fr",
+      "fr": "les feuilles",
+      "gloss": "the leaves",
+      "note": "feminine plural - les feuilles sont vertes"
+    },
+    {
+      "word_id": "voir-la-vie-en-rose-fr",
+      "fr": "voir la vie en rose",
+      "gloss": "to see life through rose-colored glasses",
+      "note": "idiom - être optimiste"
+    },
+    {
+      "word_id": "etre-dans-le-rouge-fr",
+      "fr": "être dans le rouge",
+      "gloss": "to be in the red (in debt)",
+      "note": "idiom - financial expression"
+    },
+    {
+      "word_id": "avoir-une-peur-bleue-fr",
+      "fr": "avoir une peur bleue",
+      "gloss": "to be scared stiff",
+      "note": "idiom - literally 'to have a blue fear'"
+    },
+    {
+      "word_id": "rire-jaune-fr",
+      "fr": "rire jaune",
+      "gloss": "to laugh nervously/fake laugh",
+      "note": "idiom - literally 'to laugh yellow'"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-colors-are-adjectives",
+      "heading": "Colors are Adjectives",
+      "text": "In French, colors are adjectives that agree with the noun in gender and number. They usually come AFTER the noun.",
+      "example": "{le ciel bleu} (the blue sky), {une maison blanche} (a white house), {des yeux verts} (green eyes)"
+    },
+    {
+      "id": "s-basic-colors",
+      "heading": "Basic Colors",
+      "text": "The most common colors you'll use every day - memorize these first!",
+      "example": "{bleu} (blue), {rouge} (red), {vert} (green), {jaune} (yellow), {blanc} (white), {noir} (black)"
+    },
+    {
+      "id": "s-feminine-forms",
+      "heading": "Feminine Forms",
+      "text": "Add -e to make most colors feminine. Some have special forms.",
+      "example": "{bleu} → {bleue}, {vert} → {verte}, {blanc} → {blanche}, {rouge} → rouge (no change)"
+    },
+    {
+      "id": "s-plural-forms",
+      "heading": "Plural Forms",
+      "text": "Add -s for plural (unless already ends in -s or -x)",
+      "example": "{bleu} → {bleus} (masculine plural), {bleue} → {bleues} (feminine plural), {gris} → gris (no change)"
+    },
+    {
+      "id": "s-invariable-colors",
+      "heading": "Invariable Colors",
+      "text": "Some colors never change: marron (brown), orange (orange). These are actually nouns used as adjectives!",
+      "example": "{un chat marron}, {une maison marron}, {des chats marron} (no -s!)"
+    },
+    {
+      "id": "s-compound-colors",
+      "heading": "Compound Colors",
+      "text": "Colors with two words or modified colors are invariable (never change)",
+      "example": "{des yeux bleu clair} (light blue eyes), {des robes bleu foncé} (dark blue dresses)"
+    },
+    {
+      "id": "s-using-colors-in-questions",
+      "heading": "Using Colors in Questions",
+      "text": "Now you can ask about colors of things!",
+      "example": "{De quelle couleur est le ciel?} (What color is the sky?) → {Le ciel est bleu. Pourquoi est-ce que l'herbe est verte?} (Why is grass green?)"
+    }
+  ]
+}

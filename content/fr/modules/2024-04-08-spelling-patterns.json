@@ -1,0 +1,725 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-08-spelling-patterns",
+  "kind": "reference",
+  "status": "written",
+  "title": "French Spelling Patterns",
+  "description": "Complete guide to French sound-to-spelling correspondences",
+  "sections": [
+    {
+      "id": "s-basic-vowel-sounds-a",
+      "heading": "Basic Vowel Sounds: /a/",
+      "text": "As in 'father'",
+      "rows": [
+        {
+          "fr": "a",
+          "en": "Most common",
+          "note": "{chat}, {la}, {va}"
+        },
+        {
+          "fr": "à",
+          "en": "With grave accent",
+          "note": "{à}, {là}, {voilà}"
+        },
+        {
+          "fr": "â",
+          "en": "With circumflex",
+          "note": "{pâte}, {âge}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-e",
+      "heading": "Basic Vowel Sounds: /e/",
+      "text": "As in 'day' (closed e)",
+      "rows": [
+        {
+          "fr": "é",
+          "en": "With acute accent",
+          "note": "{été}, {café}, {école}"
+        },
+        {
+          "fr": "er",
+          "en": "Verb infinitive endings",
+          "note": "{parler}, {aller}, {manger}"
+        },
+        {
+          "fr": "et",
+          "en": "Word 'and' and some words",
+          "note": "{et}, {ballet}"
+        },
+        {
+          "fr": "ez",
+          "en": "Verb endings",
+          "note": "{vous allez}, {parlez}"
+        },
+        {
+          "fr": "es",
+          "en": "Some possessives",
+          "note": "{mes}, {tes}, {ses}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds",
+      "heading": "Basic Vowel Sounds: /ɛ/",
+      "text": "As in 'bed' (open e)",
+      "rows": [
+        {
+          "fr": "è",
+          "en": "With grave accent",
+          "note": "{très}, {père}, {mère}"
+        },
+        {
+          "fr": "ê",
+          "en": "With circumflex",
+          "note": "{être}, {fête}, {fenêtre}"
+        },
+        {
+          "fr": "ai",
+          "en": "Very common",
+          "note": "{j'ai}, {mais}, {maison}"
+        },
+        {
+          "fr": "ei",
+          "en": "Less common",
+          "note": "{neige}"
+        },
+        {
+          "fr": "e",
+          "en": "Before double consonants or final consonants",
+          "note": "{belle}, {cette}, {elle}"
+        },
+        {
+          "fr": "et",
+          "en": "At end of some words",
+          "note": "{poulet}, {jouet}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-2",
+      "heading": "Basic Vowel Sounds: /ə/",
+      "text": "Schwa - the neutral 'uh' sound",
+      "rows": [
+        {
+          "fr": "e",
+          "en": "In short words and unstressed syllables",
+          "note": "{je}, {le}, {de}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-i",
+      "heading": "Basic Vowel Sounds: /i/",
+      "text": "As in 'see'",
+      "rows": [
+        {
+          "fr": "i",
+          "en": "Most common",
+          "note": "{si}, {il}, {ici}"
+        },
+        {
+          "fr": "î",
+          "en": "With circumflex",
+          "note": "{île}, {dîner}"
+        },
+        {
+          "fr": "ï",
+          "en": "With diaeresis (shows separate syllable)",
+          "note": "{naïf}"
+        },
+        {
+          "fr": "y",
+          "en": "Less common",
+          "note": "{système}, {il y a}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-o",
+      "heading": "Basic Vowel Sounds: /o/",
+      "text": "As in 'go' (closed o)",
+      "rows": [
+        {
+          "fr": "o",
+          "en": "Common",
+          "note": "{métro}, {gros}"
+        },
+        {
+          "fr": "ô",
+          "en": "With circumflex",
+          "note": "{hôtel}, {drôle}"
+        },
+        {
+          "fr": "au",
+          "en": "Very common",
+          "note": "{au}, {auto}, {jaune}"
+        },
+        {
+          "fr": "eau",
+          "en": "Very common",
+          "note": "{eau}, {beau}, {nouveau}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-3",
+      "heading": "Basic Vowel Sounds: /ɔ/",
+      "text": "As in 'off' (open o)",
+      "rows": [
+        {
+          "fr": "o",
+          "en": "Before consonants",
+          "note": "{homme}, {bonne}"
+        },
+        {
+          "fr": "au",
+          "en": "In some names",
+          "note": "{Paul}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-u",
+      "heading": "Basic Vowel Sounds: /u/",
+      "text": "As in 'food'",
+      "rows": [
+        {
+          "fr": "ou",
+          "en": "Most common",
+          "note": "{ou}, {vous}, {nous}"
+        },
+        {
+          "fr": "où",
+          "en": "The word 'where'",
+          "note": "{où}"
+        },
+        {
+          "fr": "oû",
+          "en": "With circumflex (rare)",
+          "note": "{goût}"
+        }
+      ]
+    },
+    {
+      "id": "s-basic-vowel-sounds-y",
+      "heading": "Basic Vowel Sounds: /y/",
+      "text": "Like German 'ü' - say 'ee' with rounded lips",
+      "rows": [
+        {
+          "fr": "u",
+          "en": "Most common",
+          "note": "{tu}, {une}, {plus}"
+        },
+        {
+          "fr": "û",
+          "en": "With circumfex",
+          "note": "{sûr}"
+        },
+        {
+          "fr": "ü",
+          "en": "In German names",
+          "note": "{Müller}"
+        }
+      ]
+    },
+    {
+      "id": "s-nasal-vowels",
+      "heading": "Nasal Vowels: /ɑ̃/",
+      "text": "Nasal 'ah' - as in French 'en'",
+      "rows": [
+        {
+          "fr": "an",
+          "en": "Very common",
+          "note": "{dans}, {grand}, {avant}"
+        },
+        {
+          "fr": "en",
+          "en": "Very common",
+          "note": "{en}, {enfant}, {comment}"
+        },
+        {
+          "fr": "am",
+          "en": "Before b/p",
+          "note": "{jambe}, {lampe}"
+        },
+        {
+          "fr": "em",
+          "en": "Before b/p",
+          "note": "{temps}, {ensemble}"
+        }
+      ]
+    },
+    {
+      "id": "s-nasal-vowels-2",
+      "heading": "Nasal Vowels: /ɛ̃/",
+      "text": "Nasal 'eh' - as in French 'un'",
+      "rows": [
+        {
+          "fr": "in",
+          "en": "Very common",
+          "note": "{vin}, {cinq}, {fin}"
+        },
+        {
+          "fr": "im",
+          "en": "Before b/p",
+          "note": "{impossible}, {important}"
+        },
+        {
+          "fr": "ain",
+          "en": "Common",
+          "note": "{pain}, {main}, {demain}"
+        },
+        {
+          "fr": "aim",
+          "en": "Before b/p (rare)",
+          "note": "{faim}"
+        },
+        {
+          "fr": "ein",
+          "en": "Less common",
+          "note": "{plein}"
+        },
+        {
+          "fr": "un",
+          "en": "Common",
+          "note": "{un}, {lundi}"
+        },
+        {
+          "fr": "yn",
+          "en": "Greek origin",
+          "note": "{syntaxe}"
+        },
+        {
+          "fr": "ym",
+          "en": "Greek origin, before b/p",
+          "note": "{sympa}"
+        }
+      ]
+    },
+    {
+      "id": "s-nasal-vowels-3",
+      "heading": "Nasal Vowels: /ɔ̃/",
+      "text": "Nasal 'oh' - as in French 'bon'",
+      "rows": [
+        {
+          "fr": "on",
+          "en": "Very common",
+          "note": "{on}, {bon}, {sont}"
+        },
+        {
+          "fr": "om",
+          "en": "Before b/p",
+          "note": "{nombre}, {tomber}"
+        }
+      ]
+    },
+    {
+      "id": "s-compound-vowels-diphthongs-wa",
+      "heading": "Compound Vowels & Diphthongs: /wa/",
+      "text": "As in 'wah'",
+      "rows": [
+        {
+          "fr": "oi",
+          "en": "Very common",
+          "note": "{moi}, {toi}, {trois}"
+        },
+        {
+          "fr": "oy",
+          "en": "Rare",
+          "note": "{royal}"
+        }
+      ]
+    },
+    {
+      "id": "s-compound-vowels-diphthongs-w",
+      "heading": "Compound Vowels & Diphthongs: /wɛ̃/",
+      "text": "Nasal 'weh'",
+      "rows": [
+        {
+          "fr": "oin",
+          "en": "Common in some words",
+          "note": "{loin}, {coin}, {moins}"
+        }
+      ]
+    },
+    {
+      "id": "s-compound-vowels-diphthongs-i",
+      "heading": "Compound Vowels & Diphthongs: /ɥi/",
+      "text": "Like 'wee' with rounded lips",
+      "rows": [
+        {
+          "fr": "ui",
+          "en": "Common",
+          "note": "{lui}, {je suis}, {nuit}"
+        }
+      ]
+    },
+    {
+      "id": "s-compound-vowels-diphthongs-j",
+      "heading": "Compound Vowels & Diphthongs: /j/",
+      "text": "Y sound - as in 'yes'",
+      "rows": [
+        {
+          "fr": "i",
+          "en": "Before vowels",
+          "note": "{bien}, {hier}"
+        },
+        {
+          "fr": "y",
+          "en": "Less common",
+          "note": "{yeux}"
+        },
+        {
+          "fr": "il",
+          "en": "At end of words",
+          "note": "{travail}, {soleil}"
+        },
+        {
+          "fr": "ill",
+          "en": "In middle or end",
+          "note": "{fille}, {famille}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-s",
+      "heading": "Consonant Sounds: /s/",
+      "text": "As in 'sun'",
+      "rows": [
+        {
+          "fr": "s",
+          "en": "At beginning or after consonant",
+          "note": "{si}, {sur}, {aussi}"
+        },
+        {
+          "fr": "ss",
+          "en": "Between vowels",
+          "note": "{poisson}, {aussi}"
+        },
+        {
+          "fr": "c",
+          "en": "Before e, i, y",
+          "note": "{ce}, {ça}, {cinq}"
+        },
+        {
+          "fr": "ç",
+          "en": "Before a, o, u",
+          "note": "{ça}, {français}, {garçon}"
+        },
+        {
+          "fr": "t",
+          "en": "In -tion endings",
+          "note": "{nation}, {attention}"
+        },
+        {
+          "fr": "x",
+          "en": "In some numbers",
+          "note": "{six}, {dix}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-z",
+      "heading": "Consonant Sounds: /z/",
+      "text": "As in 'zoo'",
+      "rows": [
+        {
+          "fr": "s",
+          "en": "Between vowels",
+          "note": "{maison}, {chose}"
+        },
+        {
+          "fr": "z",
+          "en": "Common",
+          "note": "{zéro}, {onze}"
+        },
+        {
+          "fr": "x",
+          "en": "In some words",
+          "note": "{deuxième}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-k",
+      "heading": "Consonant Sounds: /k/",
+      "text": "As in 'cat'",
+      "rows": [
+        {
+          "fr": "c",
+          "en": "Before a, o, u",
+          "note": "{chat}, {avec}, {comme}"
+        },
+        {
+          "fr": "k",
+          "en": "Foreign words",
+          "note": "{kilo}"
+        },
+        {
+          "fr": "qu",
+          "en": "Very common",
+          "note": "{que}, {qui}, {quoi}"
+        },
+        {
+          "fr": "q",
+          "en": "Rare",
+          "note": "{cinq}"
+        },
+        {
+          "fr": "ch",
+          "en": "Greek origin",
+          "note": "{orchestre}"
+        },
+        {
+          "fr": "ck",
+          "en": "English borrowings",
+          "note": "{ticket}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds",
+      "heading": "Consonant Sounds: /ʒ/",
+      "text": "As in 'measure'",
+      "rows": [
+        {
+          "fr": "j",
+          "en": "Most common",
+          "note": "{je}, {jour}, {joli}"
+        },
+        {
+          "fr": "g",
+          "en": "Before e, i, y",
+          "note": "{je mange}, {orange}"
+        },
+        {
+          "fr": "ge",
+          "en": "To keep /ʒ/ sound before a, o",
+          "note": "{mangeons}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-2",
+      "heading": "Consonant Sounds: /ʃ/",
+      "text": "As in 'shoe'",
+      "rows": [
+        {
+          "fr": "ch",
+          "en": "Most common",
+          "note": "{chat}, {chez}, {chose}"
+        },
+        {
+          "fr": "sch",
+          "en": "Greek/German origin",
+          "note": "{schéma}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-3",
+      "heading": "Consonant Sounds: /ɲ/",
+      "text": "As in 'onion' (Spanish ñ)",
+      "rows": [
+        {
+          "fr": "gn",
+          "en": "Common",
+          "note": "{oignon}, {montagne}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-4",
+      "heading": "Consonant Sounds: /ʁ/",
+      "text": "French R - guttural sound",
+      "rows": [
+        {
+          "fr": "r",
+          "en": "Always",
+          "note": "{rouge}, {très}, {parler}"
+        },
+        {
+          "fr": "rr",
+          "en": "Double R",
+          "note": "{terrible}, {terre}"
+        }
+      ]
+    },
+    {
+      "id": "s-consonant-sounds-g",
+      "heading": "Consonant Sounds: /g/",
+      "text": "As in 'go'",
+      "rows": [
+        {
+          "fr": "g",
+          "en": "Before a, o, u",
+          "note": "{gare}, {grand}"
+        },
+        {
+          "fr": "gu",
+          "en": "Before e, i to keep /g/ sound",
+          "note": "{guide}, {guerre}"
+        },
+        {
+          "fr": "gg",
+          "en": "Rare",
+          "note": "{aggraver}"
+        }
+      ]
+    },
+    {
+      "id": "s-silent-letters-silent-final",
+      "heading": "Silent Letters: Silent final consonants",
+      "text": "Usually not pronounced at word end",
+      "rows": [
+        {
+          "fr": "-s",
+          "en": "Plural marker, usually silent",
+          "note": "{les}, {vous}, {trois}"
+        },
+        {
+          "fr": "-t",
+          "en": "Usually silent at end",
+          "note": "{et}, {est}, {chat}"
+        },
+        {
+          "fr": "-d",
+          "en": "Usually silent at end",
+          "note": "{grand}"
+        },
+        {
+          "fr": "-x",
+          "en": "Usually silent at end",
+          "note": "{deux}, {heureux}"
+        },
+        {
+          "fr": "-z",
+          "en": "Sometimes pronounced",
+          "note": "{chez}, {assez}"
+        },
+        {
+          "fr": "-p",
+          "en": "Usually silent at end",
+          "note": "{beaucoup}, {trop}"
+        }
+      ]
+    },
+    {
+      "id": "s-silent-letters-silent-h",
+      "heading": "Silent Letters: Silent h",
+      "text": "Never pronounced in French",
+      "rows": [
+        {
+          "fr": "h",
+          "en": "Always silent",
+          "note": "{homme}, {hôtel}, {heure}"
+        }
+      ]
+    },
+    {
+      "id": "s-silent-letters-silent-e",
+      "heading": "Silent Letters: Silent e",
+      "text": "Often dropped in speech",
+      "rows": [
+        {
+          "fr": "e",
+          "en": "Often silent in casual speech",
+          "note": "{je}, {le}, {que}"
+        },
+        {
+          "fr": "-e",
+          "en": "Silent at end of words",
+          "note": "{grande}, {porte}"
+        }
+      ]
+    },
+    {
+      "id": "s-special-patterns-liaison",
+      "heading": "Special Patterns: Liaison",
+      "text": "Connecting final consonant to next vowel",
+      "rows": [
+        {
+          "fr": "s → /z/",
+          "en": "S becomes Z sound",
+          "note": "{les amis}, {vous êtes}"
+        },
+        {
+          "fr": "t → /t/",
+          "en": "T is pronounced",
+          "note": "{c'est un}, {tout à fait}"
+        },
+        {
+          "fr": "n → /n/",
+          "en": "N is pronounced",
+          "note": "{un ami}, {mon école}"
+        },
+        {
+          "fr": "d → /t/",
+          "en": "D becomes T sound",
+          "note": "{grand ami}"
+        },
+        {
+          "fr": "x → /z/",
+          "en": "X becomes Z sound",
+          "note": "{deux ans}"
+        }
+      ]
+    },
+    {
+      "id": "s-special-patterns-elision",
+      "heading": "Special Patterns: Elision",
+      "text": "Dropping vowel before another vowel",
+      "rows": [
+        {
+          "fr": "je → j'",
+          "en": "Before vowel sounds",
+          "note": "{j'ai}, {j'aime}"
+        },
+        {
+          "fr": "le/la → l'",
+          "en": "Before vowel sounds",
+          "note": "{l'homme}, {l'école}"
+        },
+        {
+          "fr": "ce → c'",
+          "en": "Before vowel sounds",
+          "note": "{c'est}"
+        },
+        {
+          "fr": "me/te/se → m'/t'/s'",
+          "en": "Before vowel sounds",
+          "note": "{s'il}, {m'appelle}"
+        }
+      ]
+    },
+    {
+      "id": "s-special-patterns-double-consonants",
+      "heading": "Special Patterns: Double consonants",
+      "text": "Often affect preceding vowel sound",
+      "rows": [
+        {
+          "fr": "ll",
+          "en": "Creates open /ɛ/ sound before",
+          "note": "{elle}, {quelle}, {belle}"
+        },
+        {
+          "fr": "tt",
+          "en": "Creates open /ɛ/ sound before",
+          "note": "{cette}, {mettre}"
+        },
+        {
+          "fr": "ss",
+          "en": "Keeps /s/ sound between vowels",
+          "note": "{poisson}, {adresse}"
+        },
+        {
+          "fr": "nn",
+          "en": "Often creates nasal release",
+          "note": "{bonne}, {donne}"
+        }
+      ]
+    }
+  ]
+}

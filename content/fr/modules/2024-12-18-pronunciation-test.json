@@ -1,0 +1,186 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-12-18-pronunciation-test",
+  "kind": "reference",
+  "status": "written",
+  "title": "Pronunciation Test: Essential Words",
+  "description": "Practice your French pronunciation with AI-powered feedback. Master these essential words and sounds!",
+  "can_do": [
+    "Pronounce common French words correctly",
+    "Master French vowel and consonant sounds",
+    "Develop native-like pronunciation habits"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "bonjour-fr",
+      "fr": "bonjour",
+      "gloss": "hello / good day",
+      "note": "greeting - literally 'good day'"
+    },
+    {
+      "word_id": "merci-fr",
+      "fr": "merci",
+      "gloss": "thank you",
+      "note": "gratitude - notice the French 'r'"
+    },
+    {
+      "word_id": "au-revoir-fr",
+      "fr": "au revoir",
+      "gloss": "goodbye",
+      "note": "farewell - practice linking the words"
+    },
+    {
+      "word_id": "oui-fr",
+      "fr": "oui",
+      "gloss": "yes",
+      "note": "pure 'ee' sound, starts with 'w'"
+    },
+    {
+      "word_id": "non-fr",
+      "fr": "non",
+      "gloss": "no",
+      "note": "nasal 'on' sound"
+    },
+    {
+      "word_id": "s-il-vous-plait-fr",
+      "fr": "s'il vous plaît",
+      "gloss": "please",
+      "note": "formal - practice the liaison"
+    },
+    {
+      "word_id": "rouge-fr",
+      "fr": "rouge",
+      "gloss": "red",
+      "note": "practice the guttural 'r'"
+    },
+    {
+      "word_id": "trois-fr",
+      "fr": "trois",
+      "gloss": "three",
+      "note": "French 'r' + 'wa' sound"
+    },
+    {
+      "word_id": "rue-fr",
+      "fr": "rue",
+      "gloss": "street",
+      "note": "guttural 'r' + pure 'u'"
+    },
+    {
+      "word_id": "bon-fr",
+      "fr": "bon",
+      "gloss": "good",
+      "note": "nasal 'on' - don't pronounce the 'n'"
+    },
+    {
+      "word_id": "vin-fr",
+      "fr": "vin",
+      "gloss": "wine",
+      "note": "nasal 'in' sound"
+    },
+    {
+      "word_id": "un-fr.one",
+      "fr": "un",
+      "gloss": "one",
+      "note": "nasal 'un' - unique to French"
+    },
+    {
+      "word_id": "pain-fr",
+      "fr": "pain",
+      "gloss": "bread",
+      "note": "nasal 'ain' sound"
+    },
+    {
+      "word_id": "je-suis-fr",
+      "fr": "je suis",
+      "gloss": "I am",
+      "note": "liaison - sounds like 'zhuh swee'"
+    },
+    {
+      "word_id": "tu-es-fr",
+      "fr": "tu es",
+      "gloss": "you are",
+      "note": "short sounds - 'tu' rhymes with 'vous'"
+    },
+    {
+      "word_id": "il-est-fr",
+      "fr": "il est",
+      "gloss": "he is",
+      "note": "silent consonants"
+    },
+    {
+      "word_id": "tu-fr",
+      "fr": "tu",
+      "gloss": "you (informal)",
+      "note": "French 'u' - pucker lips and say 'ee'"
+    },
+    {
+      "word_id": "lune-fr",
+      "fr": "lune",
+      "gloss": "moon",
+      "note": "practice the French 'u' sound"
+    },
+    {
+      "word_id": "plus-fr",
+      "fr": "plus",
+      "gloss": "more",
+      "note": "silent 's' - ends with 'u' sound"
+    },
+    {
+      "word_id": "comment-fr",
+      "fr": "comment",
+      "gloss": "how",
+      "note": "nasal 'an' at the end"
+    },
+    {
+      "word_id": "tres-bien-fr.very-good",
+      "fr": "très bien",
+      "gloss": "very good",
+      "note": "link the words smoothly"
+    },
+    {
+      "word_id": "peut-etre-fr",
+      "fr": "peut-être",
+      "gloss": "maybe",
+      "note": "liaison between words"
+    },
+    {
+      "word_id": "beaucoup-fr",
+      "fr": "beaucoup",
+      "gloss": "a lot / much",
+      "note": "silent 'p' - ends like 'boh-koo'"
+    },
+    {
+      "word_id": "temps-fr",
+      "fr": "temps",
+      "gloss": "time / weather",
+      "note": "silent 'ps' - nasal 'an' sound"
+    },
+    {
+      "word_id": "nuit-fr",
+      "fr": "nuit",
+      "gloss": "night",
+      "note": "silent 't' - ends with 'wee'"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-french-pronunciation-patterns",
+      "heading": "French Pronunciation Patterns",
+      "text": "French has unique sounds that differ from English",
+      "example": "The French 'r' is guttural, vowels are pure, and many final consonants are silent"
+    },
+    {
+      "id": "s-nasal-vowels",
+      "heading": "Nasal Vowels",
+      "text": "French has four nasal vowel sounds not found in English",
+      "example": "Words like '{bon}', '{un}', '{vin}', and '{pain}' use nasal vowels"
+    },
+    {
+      "id": "s-liaison-and-elision",
+      "heading": "Liaison and Elision",
+      "text": "French words flow together in speech",
+      "example": "Silent consonants become pronounced when followed by vowels, like 'les amis' (lay-za-mee)"
+    }
+  ],
+  "screen": "pronunciation-test"
+}

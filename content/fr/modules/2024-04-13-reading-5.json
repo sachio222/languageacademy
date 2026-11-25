@@ -1,0 +1,623 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-13-reading-5",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading Comprehension 5 - {La fée verte} (The Green Fairy)",
+  "description": "A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin.",
+  "can_do": [
+    "Read French art history stories",
+    "Understand cultural content with past tense",
+    "Comprehend sophisticated narratives about famous artists"
+  ],
+  "story_id": "reading5",
+  "vocabulary": [
+    {
+      "word_id": "vincent-van-gogh-fr",
+      "fr": "Vincent van Gogh",
+      "gloss": "Vincent van Gogh",
+      "note": "famous Dutch painter (1853-1890)"
+    },
+    {
+      "word_id": "paul-gauguin-fr",
+      "fr": "Paul Gauguin",
+      "gloss": "Paul Gauguin",
+      "note": "French post-impressionist painter, Van Gogh's friend"
+    },
+    {
+      "word_id": "arles-fr",
+      "fr": "Arles",
+      "gloss": "Arles",
+      "note": "city in southern France where Van Gogh painted"
+    },
+    {
+      "word_id": "absinthe-fr",
+      "fr": "absinthe",
+      "gloss": "absinthe",
+      "note": "anise-flavored spirit popular with artists"
+    },
+    {
+      "word_id": "artiste-fr",
+      "fr": "artiste",
+      "gloss": "artist",
+      "note": "cognate"
+    },
+    {
+      "word_id": "cafe-fr.caf",
+      "fr": "café",
+      "gloss": "café",
+      "note": "cognate - coffee shop/drink"
+    },
+    {
+      "word_id": "hotel-fr",
+      "fr": "hôtel",
+      "gloss": "hotel",
+      "note": "cognate"
+    },
+    {
+      "word_id": "couleurs-fr",
+      "fr": "couleurs",
+      "gloss": "colors",
+      "note": "cognate"
+    },
+    {
+      "word_id": "c-etait-fr",
+      "fr": "c'était",
+      "gloss": "it was",
+      "note": "être imperfect - very common"
+    },
+    {
+      "word_id": "nous-avons-mange-fr",
+      "fr": "nous avons mangé",
+      "gloss": "we ate",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "hier-fr",
+      "fr": "hier",
+      "gloss": "yesterday",
+      "note": "time word"
+    },
+    {
+      "word_id": "aujourd-hui-fr",
+      "fr": "aujourd'hui",
+      "gloss": "today",
+      "note": "time word"
+    },
+    {
+      "word_id": "plus-beau-que-fr",
+      "fr": "plus beau que",
+      "gloss": "more beautiful than",
+      "note": "comparison"
+    },
+    {
+      "word_id": "meilleure-que-fr",
+      "fr": "meilleure que",
+      "gloss": "better than (fem)",
+      "note": "comparison"
+    },
+    {
+      "word_id": "meilleures-fr",
+      "fr": "meilleures",
+      "gloss": "better (plural)",
+      "note": "comparison"
+    },
+    {
+      "word_id": "boire-fr",
+      "fr": "boire",
+      "gloss": "to drink"
+    },
+    {
+      "word_id": "faire-fr",
+      "fr": "faire",
+      "gloss": "to do/make"
+    },
+    {
+      "word_id": "aimer-fr",
+      "fr": "aimer",
+      "gloss": "to like/love"
+    },
+    {
+      "word_id": "vouloir-fr",
+      "fr": "vouloir",
+      "gloss": "to want"
+    },
+    {
+      "word_id": "aller-fr",
+      "fr": "aller",
+      "gloss": "to go"
+    },
+    {
+      "word_id": "venir-fr",
+      "fr": "venir",
+      "gloss": "to come"
+    },
+    {
+      "word_id": "partir-fr",
+      "fr": "partir",
+      "gloss": "to leave"
+    },
+    {
+      "word_id": "voir-fr",
+      "fr": "voir",
+      "gloss": "to see"
+    },
+    {
+      "word_id": "chercher-fr",
+      "fr": "chercher",
+      "gloss": "to look for"
+    },
+    {
+      "word_id": "continuer-fr",
+      "fr": "continuer",
+      "gloss": "to continue"
+    },
+    {
+      "word_id": "appeler-fr",
+      "fr": "appeler",
+      "gloss": "to call"
+    },
+    {
+      "word_id": "parler-fr",
+      "fr": "parler",
+      "gloss": "to speak/talk"
+    },
+    {
+      "word_id": "le-soir-fr",
+      "fr": "le soir",
+      "gloss": "evening",
+      "note": "time of day"
+    },
+    {
+      "word_id": "la-nuit-fr",
+      "fr": "la nuit",
+      "gloss": "night",
+      "note": "time of day"
+    },
+    {
+      "word_id": "le-jour-fr",
+      "fr": "le jour",
+      "gloss": "day",
+      "note": "time of day"
+    },
+    {
+      "word_id": "les-etoiles-fr",
+      "fr": "les étoiles",
+      "gloss": "the stars",
+      "note": "night sky"
+    },
+    {
+      "word_id": "tableau-fr",
+      "fr": "tableau",
+      "gloss": "painting",
+      "note": "artwork (completed painting)"
+    },
+    {
+      "word_id": "tableaux-fr",
+      "fr": "tableaux",
+      "gloss": "paintings",
+      "note": "plural of tableau"
+    },
+    {
+      "word_id": "toute-la-nuit-fr",
+      "fr": "toute la nuit",
+      "gloss": "all night",
+      "note": "duration"
+    },
+    {
+      "word_id": "peut-etre-fr",
+      "fr": "peut-être",
+      "gloss": "maybe",
+      "note": "possibility"
+    },
+    {
+      "word_id": "mon-ami-fr",
+      "fr": "mon ami",
+      "gloss": "my friend",
+      "note": "possessive + noun"
+    },
+    {
+      "word_id": "prefere-fr",
+      "fr": "préféré",
+      "gloss": "favorite",
+      "note": "preference"
+    },
+    {
+      "word_id": "excusez-moi-fr",
+      "fr": "excusez-moi",
+      "gloss": "excuse me",
+      "note": "polite expression"
+    },
+    {
+      "word_id": "encore-fr.more",
+      "fr": "encore",
+      "gloss": "more / again",
+      "note": "adverb"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-la-ville-d-arles",
+      "fr": "La ville d'Arles. Vincent van Gogh et Paul Gauguin se retrouvent à leur café préféré pour boire leur boisson favorite, l'absinthe. On dit parfois qu'elle fait voir des fées vertes.",
+      "en": "The city of Arles. Vincent van Gogh and Paul Gauguin meet at their favorite café to drink their favorite drink, absinthe. It is sometimes said to make one see green fairies.",
+      "layout": "dateline"
+    },
+    {
+      "id": "img-arrive",
+      "fr": "Vincent van Gogh et Paul Gauguin parlent dans un café à Arles.",
+      "en": "Vincent van Gogh and Paul Gauguin are talking in a café in Arles.",
+      "img": {
+        "src": "img/reading5/arrive",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Vincent van Gogh, in a straw hat and blue jacket, shakes hands with Paul Gauguin, in a red scarf, beside the yellow café terrace under a starry sky."
+      }
+    },
+    {
+      "id": "b-salut-vincent-dit-paul",
+      "fr": "« Salut Vincent ! » dit Paul.",
+      "en": "\"Hi Vincent!\" says Paul."
+    },
+    {
+      "id": "b-salut-paul-mon-ami",
+      "fr": "« Salut Paul, mon ami ! » dit Vincent.",
+      "en": "\"Hi Paul, my friend!\" says Vincent."
+    },
+    {
+      "id": "b-comment-ca-va-demande",
+      "fr": "« Comment ça va ? » demande Paul.",
+      "en": "\"How are you?\" asks Paul."
+    },
+    {
+      "id": "b-bien-et-toi",
+      "fr": "« Bien, et toi ? »",
+      "en": "\"Good, and you?\""
+    },
+    {
+      "id": "b-tres-bien-merci-nous",
+      "fr": "« Très bien, merci. Nous avons mangé ici hier, » dit Paul.",
+      "en": "\"Very good, thanks. We ate here yesterday,\" says Paul."
+    },
+    {
+      "id": "b-oui-c-etait-bon",
+      "fr": "« Oui. C'était bon, » dit Vincent.",
+      "en": "\"Yes. It was good,\" says Vincent."
+    },
+    {
+      "id": "b-qu-est-ce-que",
+      "fr": "« Qu'est-ce que tu veux boire ? » demande Paul.",
+      "en": "\"What do you want to drink?\" Paul asks."
+    },
+    {
+      "id": "b-je-veux-une-absinthe",
+      "fr": "« Je veux une absinthe, quoi d'autre ? » dit Vincent.",
+      "en": "\"I want an absinthe, what else?\" says Vincent."
+    },
+    {
+      "id": "b-moi-aussi-j-aime",
+      "fr": "« Moi aussi. J'aime l'absinthe, » dit Paul.",
+      "en": "\"Me too. I like absinthe,\" says Paul."
+    },
+    {
+      "id": "img-absinthe",
+      "fr": "Le serveur apporte leurs absinthes. Ils boivent beaucoup. Ils l'aiment.",
+      "en": "The waiter brings their absinthes. They drink a lot. They like it.",
+      "img": {
+        "src": "img/reading5/absinthe",
+        "w": 1600,
+        "h": 1067,
+        "alt": "A waiter pours water as Vincent and Paul raise two glasses of pale green absinthe at their table on the terrace."
+      }
+    },
+    {
+      "id": "b-vincent-regarde-autour-du",
+      "fr": "Vincent regarde autour du café.",
+      "en": "Vincent looks around the café."
+    },
+    {
+      "id": "b-ce-cafe-est-tres",
+      "fr": "« Ce café est très beau, » il dit. « Je veux faire quelque chose. »",
+      "en": "\"This café is very beautiful,\" he says. \"I want to do something.\""
+    },
+    {
+      "id": "b-qu-est-ce-que-2",
+      "fr": "« Qu'est-ce que tu veux faire ? » demande Paul.",
+      "en": "\"What do you want to do?\" asks Paul."
+    },
+    {
+      "id": "b-je-veux-faire-un",
+      "fr": "« Je veux faire un tableau de ce café la nuit. »",
+      "en": "\"I want to make a painting of this café at night.\""
+    },
+    {
+      "id": "b-bonne-idee-dit-paul",
+      "fr": "« Bonne idée ! » dit Paul. « Ce café est plus beau la nuit que le jour, n'est-ce pas ? »",
+      "en": "\"Good idea!\" says Paul. \"This café is more beautiful at night than during the day, isn't it?\""
+    },
+    {
+      "id": "b-vincent-dit-oui-les",
+      "fr": "Vincent dit : « Oui ! Les couleurs sont meilleures le soir. Et les étoiles sont belles. »",
+      "en": "Vincent says, \"Yes! The colors are better in the evening. And the stars are beautiful.\""
+    },
+    {
+      "id": "b-excusez-moi-dit-vincent",
+      "fr": "« Excusez-moi, » dit Vincent. « Je vais à mon hôtel. Je vais chercher mes peintures. »",
+      "en": "\"Excuse me,\" says Vincent. \"I'm going to my hotel. I'm going to look for my paints.\""
+    },
+    {
+      "id": "b-maintenant-demande-paul",
+      "fr": "« Maintenant ? » demande Paul.",
+      "en": "\"Right now?\" asks Paul."
+    },
+    {
+      "id": "b-oui-ce-soir-dit",
+      "fr": "« Oui... ce soir... » dit Vincent.",
+      "en": "\"Yes... this evening...\" says Vincent."
+    },
+    {
+      "id": "b-ah-j-adore-ca",
+      "fr": "« Ah, j'adore ça ! » dit Paul.",
+      "en": "\"Ah, I love it!\" says Paul."
+    },
+    {
+      "id": "img-paints",
+      "fr": "Vincent part pour son hôtel. Il trouve ses peintures. Il revient au café.",
+      "en": "Vincent leaves for his hotel. He finds his paints. He returns to the café.",
+      "img": {
+        "src": "img/reading5/paints",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Vincent hurries down a cobbled street at night with his paint box and easel under his arm, the lit café at the end of the street."
+      }
+    },
+    {
+      "id": "b-deux-heures-plus-tard",
+      "fr": "Deux heures plus tard",
+      "en": "Two hours later",
+      "layout": "scene"
+    },
+    {
+      "id": "b-vincent-fait-son-tableau",
+      "fr": "Vincent fait son tableau. Paul boit son absinthe.",
+      "en": "Vincent makes his painting. Paul drinks his absinthe."
+    },
+    {
+      "id": "b-comment-tu-fais-ca",
+      "fr": "« Comment tu fais ça ? » demande Paul. « Tu vois les couleurs la nuit ? »",
+      "en": "\"How do you do that?\" asks Paul. \"You see the colors at night?\""
+    },
+    {
+      "id": "b-oui-je-vois-tout",
+      "fr": "« Oui, je vois tout, » dit Vincent. « Je vois le café, je vois les étoiles, je vois les gens. »",
+      "en": "\"Yes, I see everything,\" says Vincent. \"I see the café, I see the stars, I see the people.\""
+    },
+    {
+      "id": "img-easel",
+      "fr": "Ils boivent encore de l'absinthe.",
+      "en": "They drink more absinthe.",
+      "img": {
+        "src": "img/reading5/easel",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Vincent paints the café terrace at his easel while Paul watches from the table with a glass of absinthe."
+      }
+    },
+    {
+      "id": "b-paul-dit-tu-es",
+      "fr": "Paul dit : « Tu es un grand artiste, Vincent. »",
+      "en": "Paul says, \"You are a great artist, Vincent.\""
+    },
+    {
+      "id": "b-merci-mon-ami-dit",
+      "fr": "« Merci, mon ami, » dit Vincent. « J'aime Arles. Arles est belle. Ce café est mon café préféré. »",
+      "en": "\"Thank you, my friend,\" says Vincent. \"I love Arles. Arles is beautiful. This café is my favorite café.\""
+    },
+    {
+      "id": "b-ils-boivent-beaucoup-de",
+      "fr": "Ils boivent beaucoup de leurs absinthes. Vincent continue son tableau du café la nuit.",
+      "en": "They drink a lot of their absinthes. Vincent continues his painting (tableau) of the café at night."
+    },
+    {
+      "id": "b-paul-dit-ce-tableau",
+      "fr": "Paul dit : « Ce tableau est meilleur que tes autres tableaux. »",
+      "en": "Paul says, \"This painting (tableau) is better than your other paintings (tableaux).\""
+    },
+    {
+      "id": "b-vincent-sourit-peut-etre",
+      "fr": "Vincent sourit. « Peut-être. Nous allons voir. »",
+      "en": "Vincent smiles. \"Maybe. We'll see.\""
+    },
+    {
+      "id": "img-dawn",
+      "fr": "Ils sont au café toute la nuit. Vincent fait son tableau. Paul boit son absinthe avec lui.",
+      "en": "They are at the café all night. Vincent makes his painting (tableau). Paul drinks his absinthe with him.",
+      "img": {
+        "src": "img/reading5/dawn",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Seen from behind, Vincent and Paul sit on a bench on the empty terrace, looking at the finished painting on its easel as the sky starts to lighten."
+      }
+    },
+    {
+      "id": "b-c-est-une-bonne",
+      "fr": "C'est une bonne nuit à Arles.",
+      "en": "It's a good night in Arles."
+    },
+    {
+      "id": "b-je-l-appelle-terrasse",
+      "fr": "« Je l'appelle : Terrasse du café le soir, » dit Vincent.",
+      "en": "\"I call it: Café Terrace at Night,\" says Vincent."
+    },
+    {
+      "id": "b-fin",
+      "fr": "Fin.",
+      "en": "The End.",
+      "layout": "end"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-arles",
+      "type": "comprehension",
+      "question": "Where are Vincent and Paul?",
+      "cue": "{Ils sont à ___}",
+      "answer": "Arles",
+      "accept": [
+        "à Arles",
+        "au café"
+      ],
+      "hint": "City in southern France"
+    },
+    {
+      "id": "i-absinthe",
+      "type": "comprehension",
+      "question": "What does Vincent want to drink?",
+      "cue": "{Je veux une ___}",
+      "answer": "absinthe",
+      "accept": [
+        "une absinthe"
+      ],
+      "hint": "Anise-flavored spirit popular with artists"
+    },
+    {
+      "id": "i-tableau",
+      "type": "comprehension",
+      "question": "What does Vincent want to make?",
+      "cue": "{Je veux faire un ___}",
+      "answer": "tableau",
+      "accept": [
+        "un tableau",
+        "tableau de ce café"
+      ],
+      "hint": "Artwork"
+    },
+    {
+      "id": "i-la-nuit",
+      "type": "comprehension",
+      "question": "When is the café more beautiful?",
+      "cue": "{Ce café est plus beau ___ que le jour}",
+      "answer": "la nuit",
+      "accept": [
+        "nuit",
+        "le soir"
+      ],
+      "hint": "At night"
+    },
+    {
+      "id": "i-couleurs",
+      "type": "comprehension",
+      "question": "What are better in the evening?",
+      "cue": "{Les ___ sont meilleures le soir}",
+      "answer": "couleurs",
+      "accept": [
+        "les couleurs"
+      ],
+      "hint": "What painters work with"
+    },
+    {
+      "id": "i-hotel",
+      "type": "comprehension",
+      "question": "Where does Vincent go to get his painting supplies?",
+      "cue": "{Vincent va à son ___}",
+      "answer": "hôtel",
+      "accept": [
+        "son hôtel"
+      ],
+      "hint": "Where he's staying"
+    },
+    {
+      "id": "i-hier",
+      "type": "comprehension",
+      "question": "When did they eat at the café?",
+      "cue": "{___, nous avons mangé ici}",
+      "answer": "Hier",
+      "accept": [
+        "hier"
+      ],
+      "hint": "Yesterday"
+    },
+    {
+      "id": "i-tres-bon",
+      "type": "comprehension",
+      "question": "What was the food like yesterday?",
+      "cue": "{C'___ très bon}",
+      "answer": "très bon",
+      "accept": [
+        "c'était très bon"
+      ],
+      "hint": "It was (past tense)"
+    },
+    {
+      "id": "i-etoiles",
+      "type": "comprehension",
+      "question": "What does Vincent see at night?",
+      "cue": "{Je vois le café, je vois les ___}",
+      "answer": "étoiles",
+      "accept": [
+        "les étoiles",
+        "le cafe",
+        "les gens",
+        "il voit le café, il voit les étoiles, il voit les gens",
+        "il voit le café, les étoiles, les gens",
+        "il voit le gens, les étoiles, le café",
+        "il voit les gens, le café, les étoiles",
+        "il voit les étoiles, les gens, le café",
+        "il voit les étoiles, le café, les gens",
+        "le café, les étoiles, les gens",
+        "le café, les gens, les étoiles",
+        "le gens, les étoiles, le café",
+        "les gens, le café, les étoiles",
+        "les étoiles, les gens, le café",
+        "les étoiles, le café, les gens"
+      ],
+      "hint": "In the night sky"
+    },
+    {
+      "id": "i-tu-es-un-grand",
+      "type": "comprehension",
+      "question": "What does Paul say about Vincent?",
+      "cue": "{Tu es un grand ___}",
+      "answer": "Tu es un grand artiste",
+      "accept": [
+        "Tu es un grand artiste, Vincent",
+        "il est un grand artiste"
+      ],
+      "hint": "Painter/creator"
+    },
+    {
+      "id": "i-arles-2",
+      "type": "comprehension",
+      "question": "What city does Vincent love?",
+      "cue": "{J'aime ___}",
+      "answer": "Arles",
+      "accept": [
+        "j'aime Arles"
+      ],
+      "hint": "The city where they are"
+    },
+    {
+      "id": "i-meilleur",
+      "type": "comprehension",
+      "question": "How does Paul compare this painting to Vincent's others?",
+      "cue": "{Ce tableau est ___ que tes autres tableaux}",
+      "answer": "meilleur",
+      "accept": [
+        "plus beau",
+        "meilleur que tes autres tableaux",
+        "meilleur que ses autres tableaux"
+      ],
+      "hint": "Better than"
+    },
+    {
+      "id": "i-toute",
+      "type": "comprehension",
+      "question": "How long are they at the café?",
+      "cue": "{Ils sont au café ___ la nuit}",
+      "answer": "toute",
+      "accept": [
+        "toute la nuit"
+      ],
+      "hint": "All night"
+    }
+  ]
+}

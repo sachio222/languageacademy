@@ -1,0 +1,306 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-10-20-liaison-help",
+  "kind": "guide",
+  "status": "written",
+  "title": "French Flow · Liaison",
+  "description": "Learn how French words connect smoothly",
+  "can_do": [
+    "Hear when a silent letter links to the next word, as in {les amis}.",
+    "Tell {ils sont} (they are) from {ils ont} (they have) by ear."
+  ],
+  "minutes": 4,
+  "line": "How a silent letter links to the next word, and why it changes what you hear.",
+  "parts": [
+    {
+      "id": "p-silent-letters-at-the",
+      "heading": "Silent letters at the end",
+      "text": [
+        "Most consonants at the end of a French word are silent. You write them, but you don't say them."
+      ],
+      "note": "Final s, t, x and d are usually silent. The plural s is silent too, so {ami} and {amis} sound the same. A final r or l is often heard, as in {bonjour} and {il}.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "les",
+              "lay"
+            ],
+            [
+              "vous",
+              "voo"
+            ],
+            [
+              "chat",
+              "sha"
+            ],
+            [
+              "salut",
+              "sa-loo"
+            ],
+            [
+              "enfant",
+              "ahn-fahn"
+            ]
+          ],
+          "heading": "Silent at the end"
+        },
+        {
+          "pairs": [
+            [
+              "bonjour",
+              "bon-zhoor"
+            ],
+            [
+              "bonsoir",
+              "bon-swahr"
+            ],
+            [
+              "il",
+              "eel"
+            ]
+          ],
+          "heading": "Heard at the end"
+        }
+      ]
+    },
+    {
+      "id": "p-words-that-run-together",
+      "heading": "Words that run together",
+      "text": [
+        "Many French words end in a letter you do not say. When the next word starts with a vowel sound (a, e, i, o, u or a silent h), that letter wakes up and links the two words. This link is called liaison."
+      ],
+      "note": "The silent s at the end of {les}, {vous} and {ils} turns into a z sound before a vowel.",
+      "blocks": [
+        {
+          "ties": [
+            {
+              "fr": "les amis",
+              "a": "les",
+              "b": "amis",
+              "link": "s",
+              "sound": "lay [z]a-mee",
+              "en": "the friends"
+            },
+            {
+              "fr": "vous êtes",
+              "a": "vous",
+              "b": "êtes",
+              "link": "s",
+              "sound": "voo [z]et",
+              "en": "you are"
+            },
+            {
+              "fr": "ils ont",
+              "a": "ils",
+              "b": "ont",
+              "link": "s",
+              "sound": "eel [z]on",
+              "en": "they have"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-with-and-without",
+      "heading": "With and without",
+      "text": [
+        "Hear each pair without the link, then with it. Without it, the words blur into one. With it, you can hear each word."
+      ],
+      "blocks": [
+        {
+          "cmp": {
+            "left": "Without the link",
+            "right": "With the link",
+            "rows": [
+              [
+                {
+                  "fr": "vous avez",
+                  "say": "vou avez"
+                },
+                {
+                  "fr": "vous avez",
+                  "say": "vous avez"
+                }
+              ],
+              [
+                {
+                  "fr": "les hommes",
+                  "say": "leh hommes"
+                },
+                {
+                  "fr": "les hommes",
+                  "say": "les hommes"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-a-link-can-change",
+      "heading": "A link can change the meaning",
+      "text": [
+        "{ils sont} means they are. {ils ont} means they have. The only sound that tells them apart is s or z."
+      ],
+      "note": "In {ils sont}, the s sound belongs to {sont}. In {ils ont}, the z sound is carried over from the end of {ils}.",
+      "blocks": [
+        {
+          "cmp": {
+            "left": "No link",
+            "right": "A link",
+            "rows": [
+              [
+                {
+                  "fr": "ils sont",
+                  "say": "ils sont",
+                  "en": "they are",
+                  "sub": "{sont} starts with s"
+                },
+                {
+                  "fr": "ils ont",
+                  "say": "ils ont",
+                  "en": "they have",
+                  "sub": "{ont} starts with a vowel"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-more-to-hear",
+      "heading": "More to hear",
+      "text": [
+        "The same link, in words you know."
+      ],
+      "note": "You do not need to work it out each time. Copy what you hear, and the links come with practice.",
+      "blocks": [
+        {
+          "ties": [
+            {
+              "fr": "elles ont",
+              "a": "elles",
+              "b": "ont",
+              "link": "s",
+              "sound": "el [z]on",
+              "en": "they have (feminine)"
+            },
+            {
+              "fr": "nous avons",
+              "a": "nous",
+              "b": "avons",
+              "link": "s",
+              "sound": "noo [z]a-von",
+              "en": "we have"
+            },
+            {
+              "fr": "les enfants",
+              "a": "les",
+              "b": "enfants",
+              "link": "s",
+              "sound": "lay [z]on-fon",
+              "en": "the children"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-elision-l-ami-j",
+      "heading": "Elision: {l'ami, j'ai}",
+      "text": [
+        "Before a vowel sound, {le}, {la} and {je} drop their vowel and take an apostrophe. The two words then sound like one."
+      ],
+      "note": "A silent h counts as a vowel, so {homme} takes {l'} as well. The same happens to {si} before {il} in {s'il vous plaît}. Elision and liaison work together. One friend is {l'ami}. More than one is {les amis}, where {les} keeps its s and links with a z sound.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "l'ami",
+              "le + ami"
+            ],
+            [
+              "l'amie",
+              "la + amie"
+            ],
+            [
+              "l'enfant",
+              "le + enfant"
+            ],
+            [
+              "l'homme",
+              "le + homme"
+            ],
+            [
+              "j'ai",
+              "je + ai"
+            ],
+            [
+              "s'il vous plaît",
+              "si + il"
+            ]
+          ],
+          "heading": "Words You Know"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Listen. Do the words link with a z sound?",
+      "say": "les enfants",
+      "show": "les enfants",
+      "sound": "lay zon-fon",
+      "options": [
+        {
+          "text": "Yes, a z",
+          "right": true
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "why": "{enfants} starts with a vowel, so the s of {les} sounds as z."
+    },
+    {
+      "id": "k2",
+      "ask": "Listen. Do you hear a z between the words?",
+      "say": "ils sont",
+      "show": "ils sont",
+      "sound": "eel son",
+      "options": [
+        {
+          "text": "Yes, a z"
+        },
+        {
+          "text": "No, an s",
+          "right": true
+        }
+      ],
+      "why": "{sont} starts with s, so nothing links. The s you hear starts {sont}."
+    },
+    {
+      "id": "k3",
+      "ask": "Listen. Which one did you hear?",
+      "say": "ils ont",
+      "sound": "eel zon",
+      "options": [
+        {
+          "text": "ils sont, they are",
+          "fr": true
+        },
+        {
+          "text": "ils ont, they have",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "The z links {ils} to {ont}: {ils ont}, they have."
+    }
+  ]
+}

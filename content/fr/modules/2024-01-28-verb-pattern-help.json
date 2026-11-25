@@ -1,0 +1,514 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-28-verb-pattern-help",
+  "kind": "guide",
+  "status": "written",
+  "title": "Understanding Verb Patterns",
+  "description": "Learn the patterns that make French verbs predictable",
+  "can_do": [
+    "Expect the {je}, {tu}, {il} and {elle} forms of a verb to sound alike.",
+    "Expect -ons for {nous}, -ez for {vous} and a silent -ent for {ils} and {elles}.",
+    "Spot {être}, {avoir} and {aller} as the verbs that break these patterns."
+  ],
+  "minutes": 6,
+  "line": "How the verbs you know sound alike, and the three that break the pattern.",
+  "parts": [
+    {
+      "id": "p-french-verbs-follow-patterns",
+      "heading": "French verbs follow patterns",
+      "text": [
+        "French verbs belong to groups, and verbs in a group change in similar ways. Once you hear a pattern, each new verb is easier to learn.",
+        "You learned each verb as it is written. This guide is about how the forms sound."
+      ]
+    },
+    {
+      "id": "p-four-forms-one-sound",
+      "heading": "Four forms, one sound",
+      "text": [
+        "Listen to {je}, {tu}, {il} and {elle} in each verb."
+      ],
+      "note": "The spellings differ, but within each verb these four forms sound the same. That helps when you speak and when you listen.",
+      "blocks": [
+        {
+          "verbs": [
+            {
+              "v": "vouloir",
+              "en": "to want",
+              "f": [
+                [
+                  "je",
+                  "veux"
+                ],
+                [
+                  "tu",
+                  "veux"
+                ],
+                [
+                  "il",
+                  "veut"
+                ],
+                [
+                  "elle",
+                  "veut"
+                ]
+              ]
+            },
+            {
+              "v": "pouvoir",
+              "en": "can",
+              "f": [
+                [
+                  "je",
+                  "peux"
+                ],
+                [
+                  "tu",
+                  "peux"
+                ],
+                [
+                  "il",
+                  "peut"
+                ],
+                [
+                  "elle",
+                  "peut"
+                ]
+              ]
+            },
+            {
+              "v": "venir",
+              "en": "to come",
+              "f": [
+                [
+                  "je",
+                  "viens"
+                ],
+                [
+                  "tu",
+                  "viens"
+                ],
+                [
+                  "il",
+                  "vient"
+                ],
+                [
+                  "elle",
+                  "vient"
+                ]
+              ]
+            },
+            {
+              "v": "voir",
+              "en": "to see",
+              "f": [
+                [
+                  "je",
+                  "vois"
+                ],
+                [
+                  "tu",
+                  "vois"
+                ],
+                [
+                  "il",
+                  "voit"
+                ],
+                [
+                  "elle",
+                  "voit"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-ons-for-nous-ez",
+      "heading": "-ons for nous, -ez for vous",
+      "text": [
+        "Whatever the group, {nous} and {vous} keep these endings."
+      ],
+      "blocks": [
+        {
+          "table": {
+            "cols": [
+              "nous (-ons)",
+              "vous (-ez)"
+            ],
+            "rows": [
+              [
+                "vouloir",
+                [
+                  "nous voulons",
+                  "we want"
+                ],
+                [
+                  "vous voulez",
+                  "you want"
+                ]
+              ],
+              [
+                "pouvoir",
+                [
+                  "nous pouvons",
+                  "we can"
+                ],
+                [
+                  "vous pouvez",
+                  "you can"
+                ]
+              ],
+              [
+                "venir",
+                [
+                  "nous venons",
+                  "we come"
+                ],
+                [
+                  "vous venez",
+                  "you come"
+                ]
+              ],
+              [
+                "voir",
+                [
+                  "nous voyons",
+                  "we see"
+                ],
+                [
+                  "vous voyez",
+                  "you see"
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-the-silent-ent",
+      "heading": "The silent -ent",
+      "text": [
+        "For {ils} and {elles}, the verb ends in -ent."
+      ],
+      "note": "The -ent is written but never spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so {ils veulent} sounds a little different from {il veut}.",
+      "blocks": [
+        {
+          "verbs": [
+            {
+              "v": "vouloir",
+              "en": "to want",
+              "f": [
+                [
+                  "ils",
+                  "veulent"
+                ],
+                [
+                  "elles",
+                  "veulent"
+                ]
+              ]
+            },
+            {
+              "v": "pouvoir",
+              "en": "can",
+              "f": [
+                [
+                  "ils",
+                  "peuvent"
+                ],
+                [
+                  "elles",
+                  "peuvent"
+                ]
+              ]
+            },
+            {
+              "v": "venir",
+              "en": "to come",
+              "f": [
+                [
+                  "ils",
+                  "viennent"
+                ],
+                [
+                  "elles",
+                  "viennent"
+                ]
+              ]
+            },
+            {
+              "v": "voir",
+              "en": "to see",
+              "f": [
+                [
+                  "ils",
+                  "voient"
+                ],
+                [
+                  "elles",
+                  "voient"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-etre-avoir-and-aller",
+      "heading": "être, avoir and aller go their own way",
+      "text": [
+        "Some verbs are used so often that they kept forms of their own. These are the irregular verbs, and you use them so much that they stick. English does the same with am, are and is."
+      ],
+      "note": "Listen again: {tu} and {il} still sound the same in each of the three.",
+      "blocks": [
+        {
+          "verbs": [
+            {
+              "v": "être",
+              "en": "to be",
+              "f": [
+                [
+                  "je",
+                  "suis"
+                ],
+                [
+                  "tu",
+                  "es"
+                ],
+                [
+                  "il",
+                  "est"
+                ],
+                [
+                  "elle",
+                  "est"
+                ]
+              ]
+            },
+            {
+              "v": "avoir",
+              "en": "to have",
+              "f": [
+                [
+                  "j'",
+                  "ai"
+                ],
+                [
+                  "tu",
+                  "as"
+                ],
+                [
+                  "il",
+                  "a"
+                ],
+                [
+                  "elle",
+                  "a"
+                ]
+              ]
+            },
+            {
+              "v": "aller",
+              "en": "to go",
+              "f": [
+                [
+                  "je",
+                  "vais"
+                ],
+                [
+                  "tu",
+                  "vas"
+                ],
+                [
+                  "il",
+                  "va"
+                ],
+                [
+                  "elle",
+                  "va"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-avoir-and-aller-keep",
+      "heading": "avoir and aller keep -ons and -ez",
+      "text": [
+        "Even these two keep the {nous} and {vous} endings. {être} is the one that breaks them."
+      ],
+      "note": "{être} is the most used verb in French, and the most irregular.",
+      "blocks": [
+        {
+          "table": {
+            "cols": [
+              "nous",
+              "vous"
+            ],
+            "rows": [
+              [
+                "avoir",
+                [
+                  "nous avons",
+                  "we have"
+                ],
+                [
+                  "vous avez",
+                  "you have"
+                ]
+              ],
+              [
+                "aller",
+                [
+                  "nous allons",
+                  "we go"
+                ],
+                [
+                  "vous allez",
+                  "you go"
+                ]
+              ],
+              [
+                "être",
+                [
+                  "nous sommes",
+                  "we are"
+                ],
+                [
+                  "vous êtes",
+                  "you are"
+                ],
+                "odd"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-ils-and-elles-sont",
+      "heading": "ils and elles: {sont, ont, vont}",
+      "text": [],
+      "note": "In {ils ont}, the s of {ils} sounds as z before the vowel. In {ils sont}, you hear a clean s. That z is a liaison.",
+      "blocks": [
+        {
+          "verbs": [
+            {
+              "v": "être",
+              "en": "to be",
+              "f": [
+                [
+                  "ils",
+                  "sont"
+                ],
+                [
+                  "elles",
+                  "sont"
+                ]
+              ]
+            },
+            {
+              "v": "avoir",
+              "en": "to have",
+              "f": [
+                [
+                  "ils",
+                  "ont"
+                ],
+                [
+                  "elles",
+                  "ont"
+                ]
+              ]
+            },
+            {
+              "v": "aller",
+              "en": "to go",
+              "f": [
+                [
+                  "ils",
+                  "vont"
+                ],
+                [
+                  "elles",
+                  "vont"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-why-this-helps",
+      "heading": "Why this helps",
+      "text": [],
+      "blocks": [
+        {
+          "list": [
+            "Different spellings often share one sound, so the forms you hear keep coming back.",
+            "{être}, {avoir} and {aller} are among the most irregular verbs in French, and you know them already.",
+            "Most verbs you meet next follow these patterns, starting with {partir} in the next lesson."
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Listen. Do {je veux} and {il veut} sound the same?",
+      "say": "je veux. il veut.",
+      "options": [
+        {
+          "text": "Yes",
+          "right": true
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "why": "They sound the same. The x and the t at the end are both silent."
+    },
+    {
+      "id": "k2",
+      "ask": "Listen. In {ils veulent}, do you hear the -ent?",
+      "say": "ils veulent",
+      "options": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No, it is silent",
+          "right": true
+        }
+      ],
+      "why": "The -ent is written but never spoken."
+    },
+    {
+      "id": "k3",
+      "ask": "Which verb breaks the -ons ending for {nous}?",
+      "options": [
+        {
+          "text": "avoir",
+          "fr": true
+        },
+        {
+          "text": "aller",
+          "fr": true
+        },
+        {
+          "text": "être",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "{nous sommes}. {avoir} and {aller} keep it: {nous avons}, {nous allons}."
+    }
+  ]
+}

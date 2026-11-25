@@ -1,0 +1,360 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-09-reading1",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading Comprehension - First Paragraph!",
+  "description": "You can READ FRENCH! This entire paragraph uses only words you've learned. Comprehension test!",
+  "can_do": [
+    "Read and understand a complete French paragraph",
+    "Recognize sentence patterns using all your vocabulary",
+    "Comprehend French stories and basic conversations"
+  ],
+  "story_id": "reading1",
+  "vocabulary": [],
+  "passage": [
+    {
+      "id": "b-bonjour-je-suis-paul",
+      "fr": "Bonjour ! Je suis Paul. Je suis un homme. J'ai un chat et un chien aussi.",
+      "en": "Hello! I am Paul. I am a man. I have a cat and a dog too."
+    },
+    {
+      "id": "img-paul",
+      "fr": "Paul, un chat et un chien.",
+      "en": "Paul, a cat and a dog.",
+      "img": {
+        "src": "img/reading1/paul",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Paul, in a red jacket, stands in front of a village house with an orange cat and a cream dog."
+      }
+    },
+    {
+      "id": "b-tu-es-marie-tu",
+      "fr": "Tu es Marie. Tu es une femme. Tu as une maison et une voiture. La maison est très bonne !",
+      "en": "You are Marie. You are a woman. You have a house and a car. The house is very good!"
+    },
+    {
+      "id": "img-marie",
+      "fr": "Marie, la maison et la voiture.",
+      "en": "Marie, the house and the car.",
+      "img": {
+        "src": "img/reading1/marie",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Marie, in a blue dress, beside her yellow car and her white house with blue shutters."
+      }
+    },
+    {
+      "id": "b-tu-as-un-ami",
+      "fr": "Tu as un ami. Il a des livres. J'ai une amie aussi. Elle a des chats et des livres aussi.",
+      "en": "You have a friend. He has books. I have a friend too. She has cats and books too."
+    },
+    {
+      "id": "img-amis",
+      "fr": "Les amis ont des livres et des chats.",
+      "en": "The friends have books and cats.",
+      "img": {
+        "src": "img/reading1/amis",
+        "w": 1600,
+        "h": 1067,
+        "alt": "A blond man reads beside a stack of books; a red-haired woman reads with two cats asleep at her feet."
+      }
+    },
+    {
+      "id": "b-nous-sommes-les-amis",
+      "fr": "Nous sommes les amis. Nous avons des enfants et des chiens. Les chiens sont très bons, mais les chats sont bons aussi.",
+      "en": "We are the friends. We have children and dogs. The dogs are very good, but the cats are good too."
+    },
+    {
+      "id": "img-famille",
+      "fr": "Les amis, les enfants, les chiens et le chat.",
+      "en": "The friends, the children, the dogs and the cat.",
+      "img": {
+        "src": "img/reading1/famille",
+        "w": 1600,
+        "h": 1067,
+        "alt": "The four friends sit on the grass with two children, two dogs and a cat, bicycles behind them."
+      }
+    },
+    {
+      "id": "b-c-est-un-tres",
+      "fr": "C'est un très bon jour ! Nous sommes très bons.",
+      "en": "It's a very good day! We are very good."
+    },
+    {
+      "id": "b-merci-et-au-revoir",
+      "fr": "Merci et au revoir !",
+      "en": "Thank you and goodbye!"
+    },
+    {
+      "id": "img-revoir",
+      "fr": "Au revoir, Paul et Marie !",
+      "en": "Goodbye, Paul and Marie!",
+      "img": {
+        "src": "img/reading1/revoir",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Paul and Marie wave goodbye at the garden gate under a yellow sun, a dog sitting beside them."
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "je suis",
+      "en": "I am"
+    },
+    {
+      "fr": "un homme",
+      "en": "a man"
+    },
+    {
+      "fr": "un chat",
+      "en": "a cat"
+    },
+    {
+      "fr": "un chien",
+      "en": "a dog"
+    },
+    {
+      "fr": "tu es",
+      "en": "you are"
+    },
+    {
+      "fr": "une femme",
+      "en": "a woman"
+    },
+    {
+      "fr": "tu as",
+      "en": "you have"
+    },
+    {
+      "fr": "une maison",
+      "en": "a house"
+    },
+    {
+      "fr": "une voiture",
+      "en": "a car"
+    },
+    {
+      "fr": "la maison",
+      "en": "the house"
+    },
+    {
+      "fr": "un ami",
+      "en": "a friend"
+    },
+    {
+      "fr": "il a",
+      "en": "he has"
+    },
+    {
+      "fr": "des livres",
+      "en": "books"
+    },
+    {
+      "fr": "une amie",
+      "en": "a friend"
+    },
+    {
+      "fr": "elle a",
+      "en": "she has"
+    },
+    {
+      "fr": "des chats",
+      "en": "cats"
+    },
+    {
+      "fr": "nous sommes",
+      "en": "we are"
+    },
+    {
+      "fr": "les amis",
+      "en": "the friends"
+    },
+    {
+      "fr": "nous avons",
+      "en": "we have"
+    },
+    {
+      "fr": "des enfants",
+      "en": "children"
+    },
+    {
+      "fr": "des chiens",
+      "en": "dogs"
+    },
+    {
+      "fr": "les chiens",
+      "en": "the dogs"
+    },
+    {
+      "fr": "les chats",
+      "en": "the cats"
+    },
+    {
+      "fr": "un jour",
+      "en": "a day"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-paul",
+      "type": "comprehension",
+      "question": "What is the narrator's name?",
+      "cue": "Who is '{je}'?",
+      "answer": "Paul",
+      "hint": "Second sentence - '{je suis ___}'",
+      "mistakes": [
+        {
+          "answer": "Marie",
+          "feedback": "That's '{tu}', not 'je'"
+        }
+      ]
+    },
+    {
+      "id": "i-un-chat-et-un",
+      "type": "comprehension",
+      "question": "What animals does Paul have?",
+      "answer": "un chat et un chien",
+      "accept": [
+        "un chien et un chat",
+        "chat et chien",
+        "chien et chat",
+        "il a un chat et un chien",
+        "il a un chien et un chat"
+      ],
+      "hint": "Look for '{j'ai un chat et...}'",
+      "mistakes": [
+        {
+          "answer": "des livres",
+          "feedback": "That's what '{il}' (he) has, not Paul"
+        },
+        {
+          "answer": "un chat",
+          "feedback": "Paul has more than just a cat - read further!"
+        },
+        {
+          "answer": "un chien",
+          "feedback": "Paul has more than just a dog - he also has a cat!"
+        }
+      ]
+    },
+    {
+      "id": "i-marie",
+      "type": "comprehension",
+      "question": "Who is '{tu}' (you)?",
+      "cue": "What is '{tu}' called?",
+      "answer": "Marie",
+      "hint": "Second paragraph - '{tu es ___}' (a name!)",
+      "mistakes": [
+        {
+          "answer": "Paul",
+          "feedback": "That's '{je}', not 'tu'"
+        }
+      ]
+    },
+    {
+      "id": "i-une-maison-et-une",
+      "type": "comprehension",
+      "question": "What does Marie have?",
+      "answer": "une maison et une voiture",
+      "accept": [
+        "une maison",
+        "une voiture",
+        "une voiture et une maison",
+        "maison et voiture",
+        "voiture et maison",
+        "elle a une maison et une voiture",
+        "elle a une voiture et une maison"
+      ],
+      "hint": "Look for '{tu as ___}' - she has two things"
+    },
+    {
+      "id": "i-des-livres",
+      "type": "comprehension",
+      "question": "What does Paul's male friend have?",
+      "cue": "The male friend has...",
+      "answer": "des livres",
+      "hint": "Third paragraph - '{il a ___}'",
+      "mistakes": [
+        {
+          "answer": "un chat",
+          "feedback": "That's what Paul has"
+        }
+      ]
+    },
+    {
+      "id": "i-des-chats-et-des",
+      "type": "comprehension",
+      "question": "What does Paul's female friend have?",
+      "answer": "des chats et des livres",
+      "accept": [
+        "des chats",
+        "des livres",
+        "des livres et des chats",
+        "chats et livres"
+      ],
+      "hint": "Look for '{elle a ___}' - she has two things connected by '{et}'",
+      "mistakes": [
+        {
+          "answer": "une voiture",
+          "feedback": "That's what Marie has"
+        }
+      ]
+    },
+    {
+      "id": "i-des-enfants-et-des",
+      "type": "comprehension",
+      "question": "What do '{nous}' (we) have?",
+      "answer": "des enfants et des chiens",
+      "accept": [
+        "des enfants",
+        "des chiens",
+        "des chiens et des enfants",
+        "enfants et chiens",
+        "ils ont des enfants et des chiens",
+        "ils ont des chiens et des enfants"
+      ],
+      "hint": "Fourth paragraph - '{nous avons ___}' - we have two things",
+      "mistakes": [
+        {
+          "answer": "des livres",
+          "feedback": "That's what '{il}' has"
+        }
+      ]
+    },
+    {
+      "id": "i-tres",
+      "type": "comprehension",
+      "question": "What word intensifies '{bon}' in the phrase about the day?",
+      "cue": "It's a ___ good day",
+      "answer": "très",
+      "hint": "Look for '{c'est un ___ bon jour}'",
+      "mistakes": [
+        {
+          "answer": "bon",
+          "feedback": "That's the adjective. What word comes BEFORE 'bon'?"
+        }
+      ]
+    },
+    {
+      "id": "i-mais",
+      "type": "comprehension",
+      "question": "Which connector word is used to contrast dogs and cats?",
+      "cue": "The dogs are good, ___ the cats are good too",
+      "answer": "mais",
+      "hint": "Look for the word showing contrast: '{très bon, ___ les chats}'",
+      "mistakes": [
+        {
+          "answer": "et",
+          "feedback": "That means 'and'. Look for the word meaning 'but'"
+        },
+        {
+          "answer": "aussi",
+          "feedback": "That means 'also/too', not the connector showing contrast"
+        }
+      ]
+    }
+  ]
+}

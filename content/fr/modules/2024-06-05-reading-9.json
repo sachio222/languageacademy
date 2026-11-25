@@ -1,0 +1,1219 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-05-reading-9",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading - {Une Histoire du Passé}",
+  "description": "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of this unit",
+  "can_do": [
+    "Read complete French stories in the past tense",
+    "Understand mixed passé composé and imparfait narratives",
+    "Comprehend sophisticated storytelling with causal relationships"
+  ],
+  "story_id": "reading9",
+  "vocabulary": [
+    {
+      "word_id": "paris-fr",
+      "fr": "Paris",
+      "gloss": "Paris (capital of France)"
+    },
+    {
+      "word_id": "jardin-du-luxembourg-fr",
+      "fr": "Jardin du Luxembourg",
+      "gloss": "Luxembourg Garden (famous Paris park)"
+    },
+    {
+      "word_id": "pierre-fr",
+      "fr": "Pierre",
+      "gloss": "Pierre (friend's name)"
+    },
+    {
+      "word_id": "marie-fr",
+      "fr": "Marie",
+      "gloss": "Marie (friend's name)"
+    },
+    {
+      "word_id": "la-sorbonne-fr",
+      "fr": "la Sorbonne",
+      "gloss": "the Sorbonne (famous Paris university)"
+    },
+    {
+      "word_id": "cafe-de-flore-fr",
+      "fr": "Café de Flore",
+      "gloss": "Café de Flore (famous Parisian café)"
+    },
+    {
+      "word_id": "lyon-fr",
+      "fr": "Lyon",
+      "gloss": "Lyon (second largest city in France)"
+    },
+    {
+      "word_id": "amelie-fr",
+      "fr": "Amélie",
+      "gloss": "Amélie (French film, 2001)"
+    },
+    {
+      "word_id": "le-procope-fr",
+      "fr": "Le Procope",
+      "gloss": "Le Procope (oldest café-restaurant in Paris, opened 1686)"
+    },
+    {
+      "word_id": "hier-fr",
+      "fr": "hier",
+      "gloss": "yesterday"
+    },
+    {
+      "word_id": "c-etait-fr",
+      "fr": "c'était",
+      "gloss": "it was"
+    },
+    {
+      "word_id": "samedi-fr",
+      "fr": "samedi",
+      "gloss": "Saturday"
+    },
+    {
+      "word_id": "il-faisait-fr",
+      "fr": "il faisait",
+      "gloss": "it was (weather)"
+    },
+    {
+      "word_id": "j-etais-content-fr",
+      "fr": "j'étais content",
+      "gloss": "I was happy"
+    },
+    {
+      "word_id": "parce-que-fr",
+      "fr": "parce que",
+      "gloss": "because"
+    },
+    {
+      "word_id": "le-week-end-fr",
+      "fr": "le week-end",
+      "gloss": "the weekend"
+    },
+    {
+      "word_id": "le-travail-fr",
+      "fr": "le travail",
+      "gloss": "the work / job"
+    },
+    {
+      "word_id": "d-abord-fr",
+      "fr": "d'abord",
+      "gloss": "first"
+    },
+    {
+      "word_id": "je-me-suis-reveille-fr",
+      "fr": "je me suis réveillé",
+      "gloss": "I woke up"
+    },
+    {
+      "word_id": "d-habitude-fr",
+      "fr": "d'habitude",
+      "gloss": "usually"
+    },
+    {
+      "word_id": "je-me-levais-fr",
+      "fr": "je me levais",
+      "gloss": "I used to get up"
+    },
+    {
+      "word_id": "plus-tard-fr",
+      "fr": "plus tard",
+      "gloss": "later"
+    },
+    {
+      "word_id": "ce-jour-la-fr",
+      "fr": "ce jour-là",
+      "gloss": "that day"
+    },
+    {
+      "word_id": "j-ai-voulu-fr",
+      "fr": "j'ai voulu",
+      "gloss": "I wanted"
+    },
+    {
+      "word_id": "sortir-fr",
+      "fr": "sortir",
+      "gloss": "to go out"
+    },
+    {
+      "word_id": "le-temps-fr",
+      "fr": "le temps",
+      "gloss": "the weather / time"
+    },
+    {
+      "word_id": "si-beau-fr",
+      "fr": "si beau",
+      "gloss": "so nice"
+    },
+    {
+      "word_id": "apres-mon-cafe-fr",
+      "fr": "après mon café",
+      "gloss": "after my coffee"
+    },
+    {
+      "word_id": "je-suis-alle-fr",
+      "fr": "je suis allé",
+      "gloss": "I went"
+    },
+    {
+      "word_id": "le-parc-fr",
+      "fr": "le parc",
+      "gloss": "the park"
+    },
+    {
+      "word_id": "pres-de-fr",
+      "fr": "près de",
+      "gloss": "near"
+    },
+    {
+      "word_id": "ma-maison-fr",
+      "fr": "ma maison",
+      "gloss": "my house"
+    },
+    {
+      "word_id": "il-y-avait-fr",
+      "fr": "il y avait",
+      "gloss": "there was/were"
+    },
+    {
+      "word_id": "beaucoup-de-gens-fr",
+      "fr": "beaucoup de gens",
+      "gloss": "many people"
+    },
+    {
+      "word_id": "une-belle-journee-fr",
+      "fr": "une belle journée",
+      "gloss": "a beautiful day"
+    },
+    {
+      "word_id": "pres-du-lac-fr",
+      "fr": "près du lac",
+      "gloss": "near the lake"
+    },
+    {
+      "word_id": "le-lac-fr",
+      "fr": "le lac",
+      "gloss": "the lake"
+    },
+    {
+      "word_id": "quand-fr",
+      "fr": "quand",
+      "gloss": "when"
+    },
+    {
+      "word_id": "soudain-fr",
+      "fr": "soudain",
+      "gloss": "suddenly"
+    },
+    {
+      "word_id": "j-ai-vu-fr",
+      "fr": "j'ai vu",
+      "gloss": "I saw"
+    },
+    {
+      "word_id": "mon-ami-pierre-fr",
+      "fr": "mon ami Pierre",
+      "gloss": "my friend Pierre"
+    },
+    {
+      "word_id": "pierre-fr.pierre",
+      "fr": "Pierre",
+      "gloss": "Pierre (name)"
+    },
+    {
+      "word_id": "il-etait-assis-fr",
+      "fr": "il était assis",
+      "gloss": "he was sitting"
+    },
+    {
+      "word_id": "sur-un-banc-fr",
+      "fr": "sur un banc",
+      "gloss": "on a bench"
+    },
+    {
+      "word_id": "le-banc-fr",
+      "fr": "le banc",
+      "gloss": "the bench"
+    },
+    {
+      "word_id": "sous-un-arbre-fr",
+      "fr": "sous un arbre",
+      "gloss": "under a tree"
+    },
+    {
+      "word_id": "un-grand-arbre-fr",
+      "fr": "un grand arbre",
+      "gloss": "a big tree"
+    },
+    {
+      "word_id": "l-arbre-fr",
+      "fr": "l'arbre",
+      "gloss": "the tree"
+    },
+    {
+      "word_id": "vers-lui-fr",
+      "fr": "vers lui",
+      "gloss": "towards him"
+    },
+    {
+      "word_id": "on-a-commence-a-parler-fr",
+      "fr": "on a commencé à parler",
+      "gloss": "we started talking"
+    },
+    {
+      "word_id": "salut-fr",
+      "fr": "salut",
+      "gloss": "hi"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-fais-fr",
+      "fr": "qu'est-ce que tu fais",
+      "gloss": "what are you doing"
+    },
+    {
+      "word_id": "ici-fr",
+      "fr": "ici",
+      "gloss": "here"
+    },
+    {
+      "word_id": "j-ai-demande-fr",
+      "fr": "j'ai demandé",
+      "gloss": "I asked"
+    },
+    {
+      "word_id": "je-voulais-etre-dehors-fr",
+      "fr": "je voulais être dehors",
+      "gloss": "I wanted to be outside"
+    },
+    {
+      "word_id": "dehors-fr",
+      "fr": "dehors",
+      "gloss": "outside"
+    },
+    {
+      "word_id": "je-suis-content-que-tu-sois-la-fr",
+      "fr": "je suis content que tu sois là",
+      "gloss": "I'm glad you're here"
+    },
+    {
+      "word_id": "il-a-dit-fr",
+      "fr": "il a dit",
+      "gloss": "he said"
+    },
+    {
+      "word_id": "nous-avons-parle-fr",
+      "fr": "nous avons parlé",
+      "gloss": "we talked"
+    },
+    {
+      "word_id": "pendant-une-heure-fr",
+      "fr": "pendant une heure",
+      "gloss": "for an hour"
+    },
+    {
+      "word_id": "il-m-a-dit-fr",
+      "fr": "il m'a dit",
+      "gloss": "he told me"
+    },
+    {
+      "word_id": "qu-il-voulait-fr",
+      "fr": "qu'il voulait",
+      "gloss": "that he wanted"
+    },
+    {
+      "word_id": "un-nouveau-travail-fr",
+      "fr": "un nouveau travail",
+      "gloss": "a new job"
+    },
+    {
+      "word_id": "nouveau-fr",
+      "fr": "nouveau",
+      "gloss": "new"
+    },
+    {
+      "word_id": "il-n-aimait-pas-fr",
+      "fr": "il n'aimait pas",
+      "gloss": "he didn't like"
+    },
+    {
+      "word_id": "son-travail-fr",
+      "fr": "son travail",
+      "gloss": "his job"
+    },
+    {
+      "word_id": "je-lui-ai-dit-fr",
+      "fr": "je lui ai dit",
+      "gloss": "I told him"
+    },
+    {
+      "word_id": "je-comprenais-fr",
+      "fr": "je comprenais",
+      "gloss": "I understood"
+    },
+    {
+      "word_id": "car-fr",
+      "fr": "car",
+      "gloss": "because"
+    },
+    {
+      "word_id": "j-ai-eu-fr",
+      "fr": "j'ai eu",
+      "gloss": "I had"
+    },
+    {
+      "word_id": "le-meme-probleme-fr",
+      "fr": "le même problème",
+      "gloss": "the same problem"
+    },
+    {
+      "word_id": "le-probleme-fr",
+      "fr": "le problème",
+      "gloss": "the problem"
+    },
+    {
+      "word_id": "l-annee-derniere-fr",
+      "fr": "l'année dernière",
+      "gloss": "last year"
+    },
+    {
+      "word_id": "ensuite-fr",
+      "fr": "ensuite",
+      "gloss": "then"
+    },
+    {
+      "word_id": "comme-fr",
+      "fr": "comme",
+      "gloss": "since, as"
+    },
+    {
+      "word_id": "nous-avions-faim-fr",
+      "fr": "nous avions faim",
+      "gloss": "we were hungry"
+    },
+    {
+      "word_id": "nous-avons-decide-fr",
+      "fr": "nous avons décidé",
+      "gloss": "we decided"
+    },
+    {
+      "word_id": "d-aller-au-cafe-fr",
+      "fr": "d'aller au café",
+      "gloss": "to go to the café"
+    },
+    {
+      "word_id": "qui-est-fr",
+      "fr": "qui est",
+      "gloss": "that is / which is"
+    },
+    {
+      "word_id": "en-face-du-parc-fr",
+      "fr": "en face du parc",
+      "gloss": "across from the park"
+    },
+    {
+      "word_id": "en-face-de-fr",
+      "fr": "en face de",
+      "gloss": "across from"
+    },
+    {
+      "word_id": "le-cafe-etait-fr",
+      "fr": "le café était",
+      "gloss": "the café was"
+    },
+    {
+      "word_id": "tres-bon-fr",
+      "fr": "très bon",
+      "gloss": "very good"
+    },
+    {
+      "word_id": "a-cote-des-fenetres-fr",
+      "fr": "à côté des fenêtres",
+      "gloss": "next to the windows"
+    },
+    {
+      "word_id": "a-cote-de-fr",
+      "fr": "à côté de",
+      "gloss": "next to"
+    },
+    {
+      "word_id": "les-fenetres-fr",
+      "fr": "les fenêtres",
+      "gloss": "the windows"
+    },
+    {
+      "word_id": "autour-des-tables-fr",
+      "fr": "autour des tables",
+      "gloss": "around the tables"
+    },
+    {
+      "word_id": "autour-de-fr",
+      "fr": "autour de",
+      "gloss": "around"
+    },
+    {
+      "word_id": "partout-fr",
+      "fr": "partout",
+      "gloss": "everywhere"
+    },
+    {
+      "word_id": "nous-avons-commande-fr",
+      "fr": "nous avons commandé",
+      "gloss": "we ordered"
+    },
+    {
+      "word_id": "des-sandwichs-fr",
+      "fr": "des sandwichs",
+      "gloss": "sandwiches"
+    },
+    {
+      "word_id": "pendant-que-fr",
+      "fr": "pendant que",
+      "gloss": "while"
+    },
+    {
+      "word_id": "nous-mangions-fr",
+      "fr": "nous mangions",
+      "gloss": "we were eating"
+    },
+    {
+      "word_id": "nous-avons-vu-marie-fr",
+      "fr": "nous avons vu Marie",
+      "gloss": "we saw Marie"
+    },
+    {
+      "word_id": "marie-fr.marie",
+      "fr": "Marie",
+      "gloss": "Marie (name)"
+    },
+    {
+      "word_id": "elle-est-entree-fr",
+      "fr": "elle est entrée",
+      "gloss": "she entered"
+    },
+    {
+      "word_id": "elle-nous-a-vus-fr",
+      "fr": "elle nous a vus",
+      "gloss": "she saw us"
+    },
+    {
+      "word_id": "elle-est-venue-fr",
+      "fr": "elle est venue",
+      "gloss": "she came"
+    },
+    {
+      "word_id": "a-notre-table-fr",
+      "fr": "à notre table",
+      "gloss": "to our table"
+    },
+    {
+      "word_id": "quelle-surprise-fr",
+      "fr": "quelle surprise",
+      "gloss": "what a surprise"
+    },
+    {
+      "word_id": "elle-a-dit-fr",
+      "fr": "elle a dit",
+      "gloss": "she said"
+    },
+    {
+      "word_id": "je-ne-savais-pas-fr",
+      "fr": "je ne savais pas",
+      "gloss": "I didn't know"
+    },
+    {
+      "word_id": "vous-etiez-ici-fr",
+      "fr": "vous étiez ici",
+      "gloss": "you were here"
+    },
+    {
+      "word_id": "notre-amie-fr",
+      "fr": "notre amie",
+      "gloss": "our friend"
+    },
+    {
+      "word_id": "de-l-universite-fr",
+      "fr": "de l'université",
+      "gloss": "from university"
+    },
+    {
+      "word_id": "l-universite-fr",
+      "fr": "l'université",
+      "gloss": "the university"
+    },
+    {
+      "word_id": "nous-ne-l-avons-pas-vue-fr",
+      "fr": "nous ne l'avons pas vue",
+      "gloss": "we haven't seen her"
+    },
+    {
+      "word_id": "depuis-six-mois-fr",
+      "fr": "depuis six mois",
+      "gloss": "for six months"
+    },
+    {
+      "word_id": "elle-est-maintenant-fr",
+      "fr": "elle est maintenant",
+      "gloss": "she's now"
+    },
+    {
+      "word_id": "dans-une-autre-ville-fr",
+      "fr": "dans une autre ville",
+      "gloss": "in another city"
+    },
+    {
+      "word_id": "autre-fr",
+      "fr": "autre",
+      "gloss": "other / another"
+    },
+    {
+      "word_id": "grace-a-fr",
+      "fr": "grâce à",
+      "gloss": "thanks to"
+    },
+    {
+      "word_id": "cette-rencontre-fr",
+      "fr": "cette rencontre",
+      "gloss": "this meeting"
+    },
+    {
+      "word_id": "la-rencontre-fr",
+      "fr": "la rencontre",
+      "gloss": "the meeting"
+    },
+    {
+      "word_id": "nous-avons-pu-etre-fr",
+      "fr": "nous avons pu être",
+      "gloss": "we were able to be"
+    },
+    {
+      "word_id": "pour-l-apres-midi-fr",
+      "fr": "pour l'après-midi",
+      "gloss": "for the afternoon"
+    },
+    {
+      "word_id": "l-apres-midi-fr",
+      "fr": "l'après-midi",
+      "gloss": "the afternoon"
+    },
+    {
+      "word_id": "ensemble-fr",
+      "fr": "ensemble",
+      "gloss": "together"
+    },
+    {
+      "word_id": "nous-sommes-alles-fr",
+      "fr": "nous sommes allés",
+      "gloss": "we went"
+    },
+    {
+      "word_id": "au-cinema-fr",
+      "fr": "au cinéma",
+      "gloss": "to the cinema"
+    },
+    {
+      "word_id": "le-cinema-fr",
+      "fr": "le cinéma",
+      "gloss": "the cinema"
+    },
+    {
+      "word_id": "un-bon-film-fr",
+      "fr": "un bon film",
+      "gloss": "a good film"
+    },
+    {
+      "word_id": "le-film-fr",
+      "fr": "le film",
+      "gloss": "the film"
+    },
+    {
+      "word_id": "francais-fr",
+      "fr": "français",
+      "gloss": "French"
+    },
+    {
+      "word_id": "le-cinema-etait-fr",
+      "fr": "le cinéma était",
+      "gloss": "the cinema was"
+    },
+    {
+      "word_id": "pres-de-la-gare-fr",
+      "fr": "près de la gare",
+      "gloss": "near the station"
+    },
+    {
+      "word_id": "la-gare-fr",
+      "fr": "la gare",
+      "gloss": "the station"
+    },
+    {
+      "word_id": "a-dix-minutes-fr",
+      "fr": "à dix minutes",
+      "gloss": "ten minutes away"
+    },
+    {
+      "word_id": "du-cafe-fr",
+      "fr": "du café",
+      "gloss": "from the café"
+    },
+    {
+      "word_id": "le-film-etait-excellent-fr",
+      "fr": "le film était excellent",
+      "gloss": "the film was excellent"
+    },
+    {
+      "word_id": "excellent-fr",
+      "fr": "excellent",
+      "gloss": "excellent"
+    },
+    {
+      "word_id": "nous-avons-beaucoup-aime-fr",
+      "fr": "nous avons beaucoup aimé",
+      "gloss": "we really liked"
+    },
+    {
+      "word_id": "apres-le-film-fr",
+      "fr": "après le film",
+      "gloss": "after the film"
+    },
+    {
+      "word_id": "nous-avons-decide-de-manger-fr",
+      "fr": "nous avons décidé de manger",
+      "gloss": "we decided to eat"
+    },
+    {
+      "word_id": "au-restaurant-fr",
+      "fr": "au restaurant",
+      "gloss": "at the restaurant"
+    },
+    {
+      "word_id": "qui-est-derriere-fr",
+      "fr": "qui est derrière",
+      "gloss": "that's behind"
+    },
+    {
+      "word_id": "derriere-le-cinema-fr",
+      "fr": "derrière le cinéma",
+      "gloss": "behind the cinema"
+    },
+    {
+      "word_id": "derriere-fr",
+      "fr": "derrière",
+      "gloss": "behind"
+    },
+    {
+      "word_id": "nous-avons-mange-fr",
+      "fr": "nous avons mangé",
+      "gloss": "we ate"
+    },
+    {
+      "word_id": "de-la-bonne-cuisine-fr",
+      "fr": "de la bonne cuisine",
+      "gloss": "good food"
+    },
+    {
+      "word_id": "la-cuisine-fr",
+      "fr": "la cuisine",
+      "gloss": "the food / cuisine"
+    },
+    {
+      "word_id": "francaise-fr",
+      "fr": "française",
+      "gloss": "French (feminine)"
+    },
+    {
+      "word_id": "c-etait-delicieux-fr",
+      "fr": "c'était délicieux",
+      "gloss": "it was delicious"
+    },
+    {
+      "word_id": "delicieux-fr",
+      "fr": "délicieux",
+      "gloss": "delicious"
+    },
+    {
+      "word_id": "nous-avons-parle-de-fr",
+      "fr": "nous avons parlé de",
+      "gloss": "we talked about"
+    },
+    {
+      "word_id": "nos-vies-fr",
+      "fr": "nos vies",
+      "gloss": "our lives"
+    },
+    {
+      "word_id": "la-vie-fr",
+      "fr": "la vie",
+      "gloss": "the life"
+    },
+    {
+      "word_id": "ce-que-nous-voulons-faire-fr",
+      "fr": "ce que nous voulons faire",
+      "gloss": "what we want to do"
+    },
+    {
+      "word_id": "a-cause-du-temps-fr",
+      "fr": "à cause du temps",
+      "gloss": "because of the time"
+    },
+    {
+      "word_id": "a-cause-de-fr",
+      "fr": "à cause de",
+      "gloss": "because of"
+    },
+    {
+      "word_id": "marie-a-du-partir-fr",
+      "fr": "Marie a dû partir",
+      "gloss": "Marie had to leave"
+    },
+    {
+      "word_id": "vers-9h-fr",
+      "fr": "vers 9h",
+      "gloss": "around 9pm"
+    },
+    {
+      "word_id": "pour-rentrer-fr",
+      "fr": "pour rentrer",
+      "gloss": "to go home"
+    },
+    {
+      "word_id": "chez-elle-fr",
+      "fr": "chez elle",
+      "gloss": "to her place"
+    },
+    {
+      "word_id": "pierre-et-moi-fr",
+      "fr": "Pierre et moi",
+      "gloss": "Pierre and I"
+    },
+    {
+      "word_id": "sommes-restes-fr",
+      "fr": "sommes restés",
+      "gloss": "stayed"
+    },
+    {
+      "word_id": "un-peu-plus-fr",
+      "fr": "un peu plus",
+      "gloss": "a bit more/longer"
+    },
+    {
+      "word_id": "nous-avons-pris-fr",
+      "fr": "nous avons pris",
+      "gloss": "we had / took"
+    },
+    {
+      "word_id": "un-dernier-cafe-fr",
+      "fr": "un dernier café",
+      "gloss": "one last coffee"
+    },
+    {
+      "word_id": "dernier-fr",
+      "fr": "dernier",
+      "gloss": "last"
+    },
+    {
+      "word_id": "finalement-fr",
+      "fr": "finalement",
+      "gloss": "finally"
+    },
+    {
+      "word_id": "je-suis-rentre-fr",
+      "fr": "je suis rentré",
+      "gloss": "I went home"
+    },
+    {
+      "word_id": "chez-moi-fr",
+      "fr": "chez moi",
+      "gloss": "to my place"
+    },
+    {
+      "word_id": "vers-10h-fr",
+      "fr": "vers 10h",
+      "gloss": "around 10pm"
+    },
+    {
+      "word_id": "j-etais-fatigue-fr",
+      "fr": "j'étais fatigué",
+      "gloss": "I was tired"
+    },
+    {
+      "word_id": "fatigue-fr",
+      "fr": "fatigué",
+      "gloss": "tired"
+    },
+    {
+      "word_id": "mais-tres-heureux-fr",
+      "fr": "mais très heureux",
+      "gloss": "but very happy"
+    },
+    {
+      "word_id": "heureux-fr",
+      "fr": "heureux",
+      "gloss": "happy"
+    },
+    {
+      "word_id": "une-journee-parfaite-fr",
+      "fr": "une journée parfaite",
+      "gloss": "a perfect day"
+    },
+    {
+      "word_id": "parfait-fr",
+      "fr": "parfait",
+      "gloss": "perfect"
+    },
+    {
+      "word_id": "parfois-fr",
+      "fr": "parfois",
+      "gloss": "sometimes"
+    },
+    {
+      "word_id": "les-meilleures-journees-fr",
+      "fr": "les meilleures journées",
+      "gloss": "the best days"
+    },
+    {
+      "word_id": "meilleur-fr",
+      "fr": "meilleur",
+      "gloss": "better / best"
+    },
+    {
+      "word_id": "sont-celles-fr",
+      "fr": "sont celles",
+      "gloss": "are those"
+    },
+    {
+      "word_id": "qu-on-ne-pense-pas-avoir-fr",
+      "fr": "qu'on ne pense pas avoir",
+      "gloss": "that we don't think we'll have"
+    },
+    {
+      "word_id": "grace-a-ma-sortie-fr",
+      "fr": "grâce à ma sortie",
+      "gloss": "thanks to my outing"
+    },
+    {
+      "word_id": "la-sortie-fr",
+      "fr": "la sortie",
+      "gloss": "the outing / exit"
+    },
+    {
+      "word_id": "une-tres-belle-journee-fr",
+      "fr": "une très belle journée",
+      "gloss": "a very beautiful day"
+    },
+    {
+      "word_id": "avec-mes-amis-fr",
+      "fr": "avec mes amis",
+      "gloss": "with my friends"
+    },
+    {
+      "word_id": "avant-de-dormir-fr",
+      "fr": "avant de dormir",
+      "gloss": "before sleeping"
+    },
+    {
+      "word_id": "dormir-fr",
+      "fr": "dormir",
+      "gloss": "to sleep"
+    },
+    {
+      "word_id": "j-ai-pense-fr",
+      "fr": "j'ai pensé",
+      "gloss": "I thought"
+    },
+    {
+      "word_id": "c-est-pour-ca-que-fr",
+      "fr": "c'est pour ça que",
+      "gloss": "that's why"
+    },
+    {
+      "word_id": "j-aime-les-samedis-fr",
+      "fr": "j'aime les samedis",
+      "gloss": "I love Saturdays"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-hier-c-etait-samedi",
+      "fr": "Hier, c'était samedi et il faisait très beau à Paris. J'étais content parce que c'était le week-end et je n'avais pas de travail.",
+      "en": "Yesterday, it was Saturday and the weather was very nice in Paris. I was happy because it was the weekend and I had no work."
+    },
+    {
+      "id": "b-d-abord-je-me",
+      "fr": "D'abord, je me suis réveillé à 8h. D'habitude, je me levais plus tard le samedi, mais ce jour-là, j'ai voulu sortir tôt parce que le temps était si beau.",
+      "en": "First, I woke up at 8am. Usually, I used to get up later on Saturdays, but that day, I wanted to go out early because the weather was so nice."
+    },
+    {
+      "id": "b-apres-mon-cafe-je",
+      "fr": "Après mon café, je suis allé au Jardin du Luxembourg près de ma maison. J'aime beaucoup ce parc! Il y avait beaucoup de gens dans le jardin. C'était une belle journée.",
+      "en": "After my coffee, I went to Jardin du Luxembourg near my house. I really like this park! There were many people in the garden. It was a beautiful day."
+    },
+    {
+      "id": "img-jardin",
+      "fr": "Un samedi matin au Jardin du Luxembourg.",
+      "en": "A Saturday morning in the Jardin du Luxembourg.",
+      "img": {
+        "src": "img/reading9/jardin",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Impressionist painting of a young man in a straw hat and cream jacket walking toward the pond of the Jardin du Luxembourg, with toy sailboats, strollers and the Luxembourg Palace behind."
+      }
+    },
+    {
+      "id": "b-je-suis-alle-pres",
+      "fr": "Je suis allé près du lac quand soudain j'ai vu mon ami Pierre. Il était assis sur un banc sous un grand arbre. Je suis allé vers lui et on a commencé à parler.",
+      "en": "I went near the lake when suddenly I saw my friend Pierre. He was sitting on a bench under a big tree. I went towards him and we started talking."
+    },
+    {
+      "id": "img-banc",
+      "fr": "Pierre est assis sur un banc, sous un grand arbre.",
+      "en": "Pierre is sitting on a bench under a big tree.",
+      "img": {
+        "src": "img/reading9/banc",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Impressionist painting of Pierre, bearded in a bowler hat, waving from a green bench under a big tree beside the pond as the narrator walks up."
+      }
+    },
+    {
+      "id": "b-salut-pierre-qu-est",
+      "fr": "\"Salut Pierre! Qu'est-ce que tu fais ici?\" j'ai demandé.",
+      "en": "\"Hi Pierre! What are you doing here?\" I asked."
+    },
+    {
+      "id": "b-bonjour-je-voulais-etre",
+      "fr": "\"Bonjour! Je voulais être dehors parce qu'il faisait si beau. Je suis content que tu sois là!\" il a dit.",
+      "en": "\"Hello! I wanted to be outside because it was so nice. I'm glad you're here!\" he said."
+    },
+    {
+      "id": "b-nous-avons-parle-pendant",
+      "fr": "Nous avons parlé pendant une heure. Il m'a dit qu'il voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je lui ai dit que je comprenais car j'ai eu le même problème l'année dernière.",
+      "en": "We talked for an hour. He told me he wanted a new job at the Sorbonne because he didn't like his job. I told him that I understood because I had the same problem last year."
+    },
+    {
+      "id": "b-ensuite-comme-nous-avions",
+      "fr": "Ensuite, comme nous avions faim, nous avons décidé d'aller au Café de Flore qui est en face du jardin. Le Café de Flore est très bon et très célèbre à Paris! Il y avait beaucoup de gens - à côté des fenêtres, autour des tables, partout!",
+      "en": "Then, since we were hungry, we decided to go to Café de Flore which is across from the garden. Café de Flore is very good and very famous in Paris! There were many people - next to the windows, around the tables, everywhere!"
+    },
+    {
+      "id": "b-nous-avons-commande-des",
+      "fr": "Nous avons commandé des sandwichs et du café. Pendant que nous mangions, nous avons vu Marie. Elle est entrée dans le café. Elle nous a vus et elle est venue à notre table.",
+      "en": "We ordered sandwiches and coffee. While we were eating, we saw Marie. She entered the café. She saw us and she came to our table."
+    },
+    {
+      "id": "img-flore",
+      "fr": "Au Café de Flore, Marie vient à notre table.",
+      "en": "At Café de Flore, Marie comes to our table.",
+      "img": {
+        "src": "img/reading9/flore",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Impressionist painting of a crowded Paris café with red banquettes and mirrors; the narrator and Pierre look up from their coffee as Marie, in a lavender dress, arrives at their table."
+      }
+    },
+    {
+      "id": "b-quelle-surprise-elle-a",
+      "fr": "\"Quelle surprise!\" elle a dit. \"Je ne savais pas que vous étiez ici!\"",
+      "en": "\"What a surprise!\" she said. \"I didn't know you were here!\""
+    },
+    {
+      "id": "b-marie-etait-notre-amie",
+      "fr": "Marie était notre amie de la Sorbonne. Nous ne l'avons pas vue depuis six mois parce qu'elle est maintenant à Lyon. Grâce à cette rencontre, nous avons pu être ensemble pour l'après-midi.",
+      "en": "Marie was our friend from the Sorbonne. We haven't seen her for six months because she's now in Lyon. Thanks to this meeting, we were able to be together for the afternoon."
+    },
+    {
+      "id": "b-l-apres-midi-nous",
+      "fr": "L'après-midi, nous sommes allés au cinéma près de la gare. Il y avait le film \"Amélie\" - un très bon film français! Le cinéma était à dix minutes du Café de Flore.",
+      "en": "In the afternoon, we went to the cinema near the station. There was the film \"Amélie\" - a very good French film! The cinema was ten minutes from Café de Flore."
+    },
+    {
+      "id": "b-le-film-etait-excellent",
+      "fr": "Le film était excellent! Nous avons beaucoup aimé Amélie. Après le film, nous avons décidé de manger ensemble au Restaurant Le Procope qui est derrière le cinéma. Le Procope est le plus vieux restaurant de Paris!",
+      "en": "The film was excellent! We really liked Amélie. After the film, we decided to eat together at Restaurant Le Procope which is behind the cinema. Le Procope is the oldest restaurant in Paris!"
+    },
+    {
+      "id": "b-au-restaurant-nous-avons",
+      "fr": "Au restaurant, nous avons mangé de la bonne cuisine française. C'était délicieux! Nous avons parlé de la Sorbonne, de nos vies, et de ce que nous voulons faire.",
+      "en": "At the restaurant, we ate good French food. It was delicious! We talked about the Sorbonne, about our lives, and about what we want to do."
+    },
+    {
+      "id": "img-procope",
+      "fr": "Le soir, au Procope, le plus vieux restaurant de Paris.",
+      "en": "In the evening at Le Procope, the oldest restaurant in Paris.",
+      "img": {
+        "src": "img/reading9/procope",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Impressionist painting of the three friends laughing at a round table in a red restaurant with chandeliers and gilt frames."
+      }
+    },
+    {
+      "id": "b-a-cause-du-temps",
+      "fr": "À cause du temps, Marie a dû partir vers 9h pour rentrer à Lyon. Pierre et moi sommes restés un peu plus. Nous avons pris un dernier café ensemble.",
+      "en": "Because of the time, Marie had to leave around 9pm to go back to Lyon. Pierre and I stayed a bit longer. We had one last coffee together."
+    },
+    {
+      "id": "b-finalement-je-suis-rentre",
+      "fr": "Finalement, je suis rentré chez moi vers 10h. J'étais fatigué mais très heureux. C'était une journée parfaite à Paris.",
+      "en": "Finally, I went home around 10pm. I was tired but very happy. It was a perfect day in Paris."
+    },
+    {
+      "id": "img-nuit",
+      "fr": "Vers 10h, je rentre chez moi, fatigué mais heureux.",
+      "en": "Around 10pm, I walk home, tired but happy.",
+      "img": {
+        "src": "img/reading9/nuit",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Impressionist painting of the narrator walking home alone at night along a tree-lined Paris street lit by gas lamps, smiling."
+      }
+    },
+    {
+      "id": "b-parfois-les-meilleures-journees",
+      "fr": "Parfois, les meilleures journées sont celles qu'on ne pense pas avoir. Grâce à ma sortie au Jardin du Luxembourg, j'ai eu une très belle journée avec mes amis.",
+      "en": "Sometimes, the best days are the ones we don't think we'll have. Thanks to my outing to Jardin du Luxembourg, I had a very beautiful day with my friends."
+    },
+    {
+      "id": "b-avant-de-dormir-j",
+      "fr": "Avant de dormir, j'ai pensé: \"C'est pour ça que j'aime les samedis à Paris!\"",
+      "en": "Before sleeping, I thought: \"That's why I love Saturdays in Paris!\""
+    },
+    {
+      "id": "b-fin",
+      "fr": "Fin",
+      "en": "The End",
+      "layout": "end"
+    }
+  ],
+  "items": [
+    {
+      "id": "reading-9-1",
+      "type": "comprehension",
+      "question": "{Quel temps faisait-il hier?}",
+      "cue": "What was the weather like yesterday?",
+      "answer": "beau",
+      "accept": [
+        "très beau",
+        "il faisait beau"
+      ],
+      "hint": "{Il faisait très...}"
+    },
+    {
+      "id": "reading-9-2",
+      "type": "comprehension",
+      "question": "{Pourquoi était-il content?}",
+      "cue": "Why was he happy?",
+      "answer": "le week-end",
+      "accept": [
+        "le weekend",
+        "weekend",
+        "week-end"
+      ],
+      "hint": "{Parce que c'était...}"
+    },
+    {
+      "id": "reading-9-3",
+      "type": "comprehension",
+      "question": "{Où est-il allé après son café?}",
+      "cue": "Where did he go after his coffee?",
+      "answer": "au parc",
+      "accept": [
+        "parc",
+        "au Jardin du Luxembourg",
+        "Jardin du Luxembourg"
+      ],
+      "hint": "{Il est allé au...}"
+    },
+    {
+      "id": "reading-9-4",
+      "type": "comprehension",
+      "question": "{Où était Pierre?}",
+      "cue": "Where was Pierre?",
+      "answer": "sur un banc",
+      "accept": [
+        "banc",
+        "un banc"
+      ],
+      "hint": "{Il était assis sur un...}"
+    },
+    {
+      "id": "reading-9-5",
+      "type": "comprehension",
+      "question": "{Pourquoi Pierre voulait-il un nouveau travail?}",
+      "cue": "Why did Pierre want a new job?",
+      "answer": "il n'aimait pas son travail",
+      "accept": [
+        "n'aimait pas son travail",
+        "n'aimait pas",
+        "parce qu'il n'aimait pas son travail"
+      ],
+      "hint": "{Parce qu'il...}"
+    },
+    {
+      "id": "reading-9-6",
+      "type": "comprehension",
+      "question": "{Où est le café?}",
+      "cue": "Where is the café?",
+      "answer": "en face du parc",
+      "accept": [
+        "parc",
+        "en face du jardin",
+        "Café de Flore"
+      ],
+      "hint": "{En face du...}"
+    },
+    {
+      "id": "reading-9-7",
+      "type": "comprehension",
+      "question": "{Qui est entré dans le café?}",
+      "cue": "Who entered the café?",
+      "answer": "Marie",
+      "accept": [
+        "marie"
+      ],
+      "hint": "Their friend..."
+    },
+    {
+      "id": "reading-9-8",
+      "type": "comprehension",
+      "question": "{Où sont-ils allés l'après-midi?}",
+      "cue": "Where did they go in the afternoon?",
+      "answer": "au cinéma",
+      "accept": [
+        "cinéma",
+        "cinema",
+        "au cinema"
+      ],
+      "hint": "{Ils sont allés au...}"
+    },
+    {
+      "id": "reading-9-9",
+      "type": "comprehension",
+      "question": "{Où est le restaurant?}",
+      "cue": "Where is the restaurant?",
+      "answer": "derrière le cinéma",
+      "accept": [
+        "cinéma",
+        "cinema",
+        "derrière le cinema",
+        "Le Procope"
+      ],
+      "hint": "{Derrière le...}"
+    },
+    {
+      "id": "reading-9-10",
+      "type": "comprehension",
+      "question": "{À quelle heure est-ce qu'il est rentré chez lui?}",
+      "cue": "What time did he go home?",
+      "answer": "10h",
+      "accept": [
+        "10 heures",
+        "dix heures",
+        "vers 10h",
+        "10"
+      ],
+      "hint": "{Vers...}"
+    }
+  ]
+}

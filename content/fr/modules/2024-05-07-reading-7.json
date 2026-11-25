@@ -1,0 +1,762 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-07-reading-7",
+  "kind": "reading",
+  "status": "written",
+  "title": "Reading - {L'Art d'Apprendre}",
+  "description": "A philosophical article about learning and education. Uses all cognitive verbs from this unit!",
+  "can_do": [
+    "Read philosophical French texts about learning",
+    "Understand academic and intellectual discourse",
+    "Comprehend cognitive verbs and discourse markers in context"
+  ],
+  "story_id": "reading7",
+  "vocabulary": [
+    {
+      "word_id": "apprendre-fr",
+      "fr": "apprendre",
+      "gloss": "to learn"
+    },
+    {
+      "word_id": "apprend-fr",
+      "fr": "apprend",
+      "gloss": "learns",
+      "note": "3rd person"
+    },
+    {
+      "word_id": "etudier-fr",
+      "fr": "étudier",
+      "gloss": "to study"
+    },
+    {
+      "word_id": "etudie-fr",
+      "fr": "étudie",
+      "gloss": "studies",
+      "note": "3rd person"
+    },
+    {
+      "word_id": "etudiant-s-fr",
+      "fr": "étudiant(s)",
+      "gloss": "student(s)",
+      "note": "noun"
+    },
+    {
+      "word_id": "comprendre-fr",
+      "fr": "comprendre",
+      "gloss": "to understand"
+    },
+    {
+      "word_id": "comprends-fr",
+      "fr": "comprends",
+      "gloss": "understand",
+      "note": "1st/2nd person"
+    },
+    {
+      "word_id": "comprend-fr",
+      "fr": "comprend",
+      "gloss": "understands",
+      "note": "3rd person"
+    },
+    {
+      "word_id": "comprenez-fr",
+      "fr": "comprenez",
+      "gloss": "understand",
+      "note": "formal/plural"
+    },
+    {
+      "word_id": "savoir-fr",
+      "fr": "savoir",
+      "gloss": "to know"
+    },
+    {
+      "word_id": "sais-fr",
+      "fr": "sais",
+      "gloss": "know",
+      "note": "1st person"
+    },
+    {
+      "word_id": "sait-fr",
+      "fr": "sait",
+      "gloss": "knows",
+      "note": "3rd person"
+    },
+    {
+      "word_id": "connaitre-fr",
+      "fr": "connaître",
+      "gloss": "to know (people/places)"
+    },
+    {
+      "word_id": "connais-fr",
+      "fr": "connais",
+      "gloss": "know",
+      "note": "1st person"
+    },
+    {
+      "word_id": "penser-fr",
+      "fr": "penser",
+      "gloss": "to think"
+    },
+    {
+      "word_id": "pense-fr",
+      "fr": "pense",
+      "gloss": "think(s)",
+      "note": "present"
+    },
+    {
+      "word_id": "pensent-fr",
+      "fr": "pensent",
+      "gloss": "think",
+      "note": "plural"
+    },
+    {
+      "word_id": "pensees-fr",
+      "fr": "pensées",
+      "gloss": "thoughts",
+      "note": "noun"
+    },
+    {
+      "word_id": "croire-fr",
+      "fr": "croire",
+      "gloss": "to believe"
+    },
+    {
+      "word_id": "croit-fr",
+      "fr": "croit",
+      "gloss": "believes",
+      "note": "3rd person"
+    },
+    {
+      "word_id": "reviser-fr",
+      "fr": "réviser",
+      "gloss": "to review"
+    },
+    {
+      "word_id": "revise-fr",
+      "fr": "révise",
+      "gloss": "review(s)",
+      "note": "present"
+    },
+    {
+      "word_id": "revision-fr",
+      "fr": "révision",
+      "gloss": "review",
+      "note": "noun"
+    },
+    {
+      "word_id": "chercher-fr",
+      "fr": "chercher",
+      "gloss": "to look for"
+    },
+    {
+      "word_id": "cherche-fr",
+      "fr": "cherche",
+      "gloss": "look(s) for",
+      "note": "present"
+    },
+    {
+      "word_id": "trouver-fr",
+      "fr": "trouver",
+      "gloss": "to find"
+    },
+    {
+      "word_id": "trouve-fr",
+      "fr": "trouve",
+      "gloss": "find(s)",
+      "note": "present"
+    },
+    {
+      "word_id": "l-apprentissage-fr",
+      "fr": "l'apprentissage",
+      "gloss": "learning (process)",
+      "note": "masculine noun"
+    },
+    {
+      "word_id": "question-fr",
+      "fr": "question",
+      "gloss": "question",
+      "note": "feminine"
+    },
+    {
+      "word_id": "questions-fr",
+      "fr": "questions",
+      "gloss": "questions",
+      "note": "plural"
+    },
+    {
+      "word_id": "reponse-fr",
+      "fr": "réponse",
+      "gloss": "answer",
+      "note": "feminine"
+    },
+    {
+      "word_id": "reponses-fr",
+      "fr": "réponses",
+      "gloss": "answers",
+      "note": "plural"
+    },
+    {
+      "word_id": "idee-fr",
+      "fr": "idée",
+      "gloss": "idea",
+      "note": "feminine"
+    },
+    {
+      "word_id": "idees-fr",
+      "fr": "idées",
+      "gloss": "ideas",
+      "note": "plural"
+    },
+    {
+      "word_id": "l-etude-fr",
+      "fr": "l'étude",
+      "gloss": "study",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "connaissance-fr",
+      "fr": "connaissance",
+      "gloss": "knowledge",
+      "note": "feminine"
+    },
+    {
+      "word_id": "pensee-fr",
+      "fr": "pensée",
+      "gloss": "thought",
+      "note": "feminine"
+    },
+    {
+      "word_id": "donc-fr",
+      "fr": "donc",
+      "gloss": "so / therefore",
+      "note": "connector"
+    },
+    {
+      "word_id": "en-fait-fr",
+      "fr": "en fait",
+      "gloss": "actually / in fact",
+      "note": "discourse marker"
+    },
+    {
+      "word_id": "bon-fr.well",
+      "fr": "bon",
+      "gloss": "well",
+      "note": "discourse marker"
+    },
+    {
+      "word_id": "alors-fr",
+      "fr": "alors",
+      "gloss": "so / then",
+      "note": "connector"
+    },
+    {
+      "word_id": "quoi-fr",
+      "fr": "quoi",
+      "gloss": "you know (filler)",
+      "note": "end of sentence"
+    },
+    {
+      "word_id": "tout-le-monde-fr",
+      "fr": "tout le monde",
+      "gloss": "everyone",
+      "note": "fixed expression"
+    },
+    {
+      "word_id": "meme-fr",
+      "fr": "même",
+      "gloss": "even / same",
+      "note": "modifier"
+    },
+    {
+      "word_id": "mal-fr",
+      "fr": "mal",
+      "gloss": "badly / poorly",
+      "note": "adverb"
+    },
+    {
+      "word_id": "socrate-fr",
+      "fr": "Socrate",
+      "gloss": "Socrates",
+      "note": "⭐ Greek philosopher - Socratic method"
+    },
+    {
+      "word_id": "pendant-fr",
+      "fr": "pendant",
+      "gloss": "during / for",
+      "note": "preposition"
+    },
+    {
+      "word_id": "des-heures-fr",
+      "fr": "des heures",
+      "gloss": "hours",
+      "note": "time"
+    },
+    {
+      "word_id": "vraiment-fr",
+      "fr": "vraiment",
+      "gloss": "really / truly",
+      "note": "adverb"
+    },
+    {
+      "word_id": "comment-fr",
+      "fr": "comment",
+      "gloss": "how",
+      "note": "question word"
+    },
+    {
+      "word_id": "voici-fr",
+      "fr": "voici",
+      "gloss": "here is/are",
+      "note": "demonstrative"
+    },
+    {
+      "word_id": "d-abord-fr",
+      "fr": "d'abord",
+      "gloss": "first",
+      "note": "sequence"
+    },
+    {
+      "word_id": "ensuite-fr",
+      "fr": "ensuite",
+      "gloss": "next / then",
+      "note": "sequence"
+    },
+    {
+      "word_id": "apres-fr",
+      "fr": "après",
+      "gloss": "after",
+      "note": "sequence"
+    },
+    {
+      "word_id": "finalement-fr",
+      "fr": "finalement",
+      "gloss": "finally",
+      "note": "sequence"
+    },
+    {
+      "word_id": "demander-fr",
+      "fr": "demander",
+      "gloss": "to ask"
+    },
+    {
+      "word_id": "demande-fr",
+      "fr": "demande",
+      "gloss": "ask(s)",
+      "note": "present"
+    },
+    {
+      "word_id": "mieux-fr",
+      "fr": "mieux",
+      "gloss": "better",
+      "note": "comparative"
+    },
+    {
+      "word_id": "soi-fr",
+      "fr": "soi",
+      "gloss": "oneself",
+      "note": "stressed pronoun"
+    },
+    {
+      "word_id": "certains-fr",
+      "fr": "certains",
+      "gloss": "some (people)",
+      "note": "pronoun"
+    },
+    {
+      "word_id": "bons-fr",
+      "fr": "bons",
+      "gloss": "good (plural)",
+      "note": "adjective"
+    },
+    {
+      "word_id": "methode-fr",
+      "fr": "méthode",
+      "gloss": "method",
+      "note": "noun"
+    },
+    {
+      "word_id": "meilleures-fr",
+      "fr": "meilleures",
+      "gloss": "better (fem plural)",
+      "note": "comparative"
+    },
+    {
+      "word_id": "avec-le-temps-fr",
+      "fr": "avec le temps",
+      "gloss": "with time",
+      "note": "expression"
+    },
+    {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now",
+      "note": "time adverb"
+    },
+    {
+      "word_id": "beaucoup-fr",
+      "fr": "beaucoup",
+      "gloss": "a lot / much",
+      "note": "quantity"
+    },
+    {
+      "word_id": "un-peu-fr",
+      "fr": "un peu",
+      "gloss": "a little",
+      "note": "quantity"
+    },
+    {
+      "word_id": "des-mots-fr",
+      "fr": "des mots",
+      "gloss": "words",
+      "note": "noun plural"
+    },
+    {
+      "word_id": "mot-fr",
+      "fr": "mot",
+      "gloss": "word",
+      "note": "noun"
+    },
+    {
+      "word_id": "des-phrases-fr",
+      "fr": "des phrases",
+      "gloss": "phrases",
+      "note": "plural"
+    },
+    {
+      "word_id": "phrase-fr",
+      "fr": "phrase",
+      "gloss": "phrase / sentence",
+      "note": "noun"
+    },
+    {
+      "word_id": "voyage-fr",
+      "fr": "voyage",
+      "gloss": "journey / trip",
+      "note": "noun"
+    },
+    {
+      "word_id": "magnifique-fr",
+      "fr": "magnifique",
+      "gloss": "magnificent",
+      "note": "adjective"
+    },
+    {
+      "word_id": "en-train-de-fr",
+      "fr": "en train de",
+      "gloss": "in the process of",
+      "note": "progressive"
+    },
+    {
+      "word_id": "preuve-fr",
+      "fr": "preuve",
+      "gloss": "proof",
+      "note": "noun"
+    },
+    {
+      "word_id": "deja-fr",
+      "fr": "déjà",
+      "gloss": "already",
+      "note": "adverb"
+    },
+    {
+      "word_id": "faites-fr",
+      "fr": "faites",
+      "gloss": "do/make",
+      "note": "faire - vous form"
+    },
+    {
+      "word_id": "le-faites-fr",
+      "fr": "le faites",
+      "gloss": "do it",
+      "note": "with object pronoun"
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-qu-est-ce-que",
+      "fr": "Qu'est-ce que l'apprentissage? En fait, c'est une grande question. Tout le monde étudie, mais est-ce que tout le monde apprend bien?",
+      "en": "What is learning? Actually, it's a big question. Everyone studies, but does everyone learn well?"
+    },
+    {
+      "id": "img-question",
+      "fr": "Une étudiante pense à une grande question.",
+      "en": "A student thinks about a big question.",
+      "img": {
+        "src": "img/reading7/question",
+        "w": 1600,
+        "h": 1067,
+        "alt": "A young woman in a white dress and red shawl sits at a candlelit desk of open books and scrolls, chin on her hand, deep in thought."
+      }
+    },
+    {
+      "id": "b-bon-je-pense-que",
+      "fr": "Bon, je pense que l'apprentissage va avec une question. Quand on a une question, on veut étudier. On cherche une réponse. Donc, les questions sont très bonnes pour apprendre.",
+      "en": "Well, I think that learning goes with a question. When we have a question, we want to study. We look for an answer. So, questions are very good for learning."
+    },
+    {
+      "id": "b-mais-etudier-ce-n",
+      "fr": "Mais étudier, ce n'est pas la même chose qu'apprendre. Je peux étudier pendant des heures, mais si je ne comprends pas, je n'apprends pas vraiment. L'apprentissage, c'est quand je comprends une idée.",
+      "en": "But studying isn't the same thing as learning. I can study for hours, but if I don't understand, I'm not really learning. Learning is when I understand an idea."
+    },
+    {
+      "id": "b-alors-comment-est-ce",
+      "fr": "Alors, comment est-ce qu'on apprend bien? Voici mes pensées:",
+      "en": "So, how do we learn well? Here are my thoughts:"
+    },
+    {
+      "id": "b-d-abord-on-doit",
+      "fr": "D'abord, on doit demander des questions. Socrate pense que les questions sont essentielles. Si on ne demande pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.",
+      "en": "First, we must ask questions. Socrates thinks that questions are essential. If we don't ask questions, we don't think. And if we don't think, we don't understand."
+    },
+    {
+      "id": "img-socrates",
+      "fr": "Socrate demande des questions à ses étudiants.",
+      "en": "Socrates asks his students questions.",
+      "img": {
+        "src": "img/reading7/socrates",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Socrates, white-bearded, raises a finger as he questions a group of young students under a stone colonnade."
+      }
+    },
+    {
+      "id": "b-ensuite-on-doit-etudier",
+      "fr": "Ensuite, on doit étudier bien. On ne peut pas apprendre si on étudie mal. L'étude demande du temps.",
+      "en": "Next, we must study well. We can't learn if we study poorly. Study requires time."
+    },
+    {
+      "id": "b-apres-on-doit-reviser",
+      "fr": "Après, on doit réviser. La révision est très bonne. Quand on révise, on comprend mieux. On voit les choses entre les idées.",
+      "en": "After that, we must review. Review is very good. When we review, we understand better. We see the things between ideas."
+    },
+    {
+      "id": "img-review",
+      "fr": "Elle révise. Elle voit les choses entre les idées.",
+      "en": "She reviews. She sees the things between ideas.",
+      "img": {
+        "src": "img/reading7/review",
+        "w": 1600,
+        "h": 1067,
+        "alt": "The student reviews loose pages of notes spread across her table by candlelight, a bust of a philosopher behind her."
+      }
+    },
+    {
+      "id": "b-finalement-on-doit-croire",
+      "fr": "Finalement, on doit croire en soi. Si on ne croit pas qu'on peut apprendre, on ne va pas apprendre.",
+      "en": "Finally, we must believe in ourselves. If we don't believe we can learn, we're not going to learn."
+    },
+    {
+      "id": "b-je-connais-beaucoup-d",
+      "fr": "Je connais beaucoup d'étudiants. Certains pensent qu'ils ne sont pas bons en apprentissage. Mais en fait, tout le monde peut apprendre. C'est une question de méthode.",
+      "en": "I know many students. Some think they're not good at learning. But actually, everyone can learn. It's a question of method."
+    },
+    {
+      "id": "b-meme-les-choses-sont",
+      "fr": "Même les choses sont meilleures avec le temps. Maintenant, je comprends beaucoup. Je sais parler un peu. Je connais des mots, des phrases, des idées.",
+      "en": "Even things are better with time. Now, I understand a lot. I know how to speak a little. I know words, phrases, ideas."
+    },
+    {
+      "id": "b-donc-l-apprentissage-est",
+      "fr": "Donc, l'apprentissage est un voyage. On veut une réponse. On étudie. On cherche. On trouve des réponses. On comprend. Et finalement, on sait. C'est magnifique, quoi!",
+      "en": "So, learning is a journey. We want an answer. We study. We search. We find answers. We understand. And finally, we know. It's magnificent, you know!"
+    },
+    {
+      "id": "img-journey",
+      "fr": "L'apprentissage est un voyage.",
+      "en": "Learning is a journey.",
+      "img": {
+        "src": "img/reading7/journey",
+        "w": 1600,
+        "h": 1067,
+        "alt": "The student walks a dirt road at sunrise with a book under her arm, a small Greek temple on a hill in the distance."
+      }
+    },
+    {
+      "id": "b-en-fait-vous-etes",
+      "fr": "En fait, vous êtes en train d'apprendre maintenant. Vous comprenez mes idées. C'est la preuve que vous pouvez apprendre. Vous le faites déjà!",
+      "en": "Actually, you're learning right now. You understand my ideas. That's proof that you can learn. You're already doing it!"
+    }
+  ],
+  "items": [
+    {
+      "id": "reading-7-1",
+      "type": "comprehension",
+      "question": "According to the text, what does learning begin with?",
+      "cue": "Learning begins with...",
+      "answer": "une question",
+      "accept": [
+        "question",
+        "des questions"
+      ],
+      "hint": "First paragraph mentions this",
+      "mistakes": [
+        {
+          "answer": "un livre",
+          "feedback": "The text says learning begins with a question, not a book"
+        },
+        {
+          "answer": "un professeur",
+          "feedback": "The text says learning begins with a question, not a teacher"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-2",
+      "type": "comprehension",
+      "question": "What's the difference between studying and learning?",
+      "cue": "Learning is when you...",
+      "answer": "comprends",
+      "accept": [
+        "je comprends",
+        "quand je comprends",
+        "on comprend"
+      ],
+      "hint": "Third paragraph explains this",
+      "mistakes": [
+        {
+          "answer": "étudies",
+          "feedback": "Learning is when you understand, not just when you study"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-3",
+      "type": "comprehension",
+      "question": "What is the first thing we must do to learn well?",
+      "cue": "First, we must...",
+      "answer": "demander des questions",
+      "accept": [
+        "demander",
+        "questions",
+        "poser des questions"
+      ],
+      "hint": "Look for '{D'abord}'",
+      "mistakes": [
+        {
+          "answer": "réviser",
+          "feedback": "Asking questions comes first, review comes later"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-4",
+      "type": "comprehension",
+      "question": "What happens when we review?",
+      "cue": "When we review, we understand...",
+      "answer": "on comprend mieux",
+      "accept": [
+        "nous comprenons mieux",
+        "mieux",
+        "on voit les choses entre les idées"
+      ],
+      "hint": "The text says '{on comprend...}'"
+    },
+    {
+      "id": "reading-7-5",
+      "type": "comprehension",
+      "question": "What must we believe in to learn?",
+      "cue": "We must believe in...",
+      "answer": "soi",
+      "accept": [
+        "croire en soi",
+        "en soi"
+      ],
+      "hint": "Look for '{croire en...}'",
+      "mistakes": [
+        {
+          "answer": "le professeur",
+          "feedback": "The text says we must believe in ourselves (soi)"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-6",
+      "type": "comprehension",
+      "question": "According to the author, can everyone learn?",
+      "cue": "Everyone can learn because...",
+      "answer": "oui",
+      "accept": [
+        "c'est une question de méthode",
+        "question de méthode",
+        "méthode"
+      ],
+      "hint": "Look for '{tout le monde peut...}'",
+      "mistakes": [
+        {
+          "answer": "c'est facile",
+          "feedback": "The text says it's a question of method, not that it's easy"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-7",
+      "type": "comprehension",
+      "question": "Things do what over time according to the text?",
+      "cue": "Things are...",
+      "answer": "les choses sont meilleures avec le temps",
+      "accept": [
+        "meilleures",
+        "meilleures avec le temps",
+        "elles sont meilleures"
+      ],
+      "hint": "Look for '{même les choses sont...}'"
+    },
+    {
+      "id": "reading-7-8",
+      "type": "comprehension",
+      "question": "What is learning described as?",
+      "cue": "Learning is a...",
+      "answer": "un voyage",
+      "accept": [
+        "voyage"
+      ],
+      "hint": "Near the end: '{l'apprentissage est un...}'",
+      "mistakes": [
+        {
+          "answer": "problème",
+          "feedback": "Learning is described as a journey (voyage), not a problem"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-9",
+      "type": "comprehension",
+      "question": "What is the proof that you can learn?",
+      "cue": "The proof is that you...",
+      "answer": "vous comprenez mes idées",
+      "accept": [
+        "comprenez mes idées",
+        "comprenez les idées",
+        "vous comprenez",
+        "je comprends mes idées",
+        "je comprends les idées",
+        "vous comprendez les idées"
+      ],
+      "hint": "Last paragraph: '{C'est la preuve que...}'",
+      "mistakes": [
+        {
+          "answer": "parlez français",
+          "feedback": "The proof is that you understand the ideas"
+        }
+      ]
+    },
+    {
+      "id": "reading-7-10",
+      "type": "comprehension",
+      "question": "What are you doing right now according to the text?",
+      "cue": "You are...",
+      "answer": "apprendre",
+      "accept": [
+        "vous êtes en train d'apprendre",
+        "en train d'apprendre",
+        "je suis en train d'apprendre"
+      ],
+      "hint": "Last paragraph: '{vous êtes en train de...}'",
+      "mistakes": [
+        {
+          "answer": "étudier seulement",
+          "feedback": "The text says you're learning (apprendre), not just studying"
+        }
+      ]
+    }
+  ]
+}

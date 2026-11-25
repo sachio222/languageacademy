@@ -1,0 +1,180 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-04-holidays",
+  "kind": "reference",
+  "status": "written",
+  "title": "{Les Fêtes}",
+  "description": "French holidays and celebrations - from Bastille Day to crêpe day!",
+  "vocabulary": [
+    {
+      "word_id": "une-fete-fr",
+      "fr": "une fête",
+      "gloss": "a holiday / party / celebration",
+      "note": "feminine"
+    },
+    {
+      "word_id": "un-jour-ferie-fr",
+      "fr": "un jour férié",
+      "gloss": "a public holiday / day off",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-nouvel-an-fr",
+      "fr": "le Nouvel An",
+      "gloss": "New Year's Day",
+      "note": "January 1"
+    },
+    {
+      "word_id": "paques-fr",
+      "fr": "Pâques",
+      "gloss": "Easter",
+      "note": "varies - March/April"
+    },
+    {
+      "word_id": "la-fete-du-travail-fr",
+      "fr": "la Fête du Travail",
+      "gloss": "Labor Day",
+      "note": "May 1"
+    },
+    {
+      "word_id": "la-fete-nationale-fr",
+      "fr": "la Fête Nationale",
+      "gloss": "Bastille Day / National Day",
+      "note": "July 14 🇫🇷"
+    },
+    {
+      "word_id": "la-toussaint-fr",
+      "fr": "la Toussaint",
+      "gloss": "All Saints' Day",
+      "note": "November 1"
+    },
+    {
+      "word_id": "noel-fr",
+      "fr": "Noël",
+      "gloss": "Christmas",
+      "note": "December 25"
+    },
+    {
+      "word_id": "la-chandeleur-fr",
+      "fr": "la Chandeleur",
+      "gloss": "Candlemas / Crêpe Day",
+      "note": "February 2 - make crêpes!"
+    },
+    {
+      "word_id": "le-poisson-d-avril-fr",
+      "fr": "le Poisson d'Avril",
+      "gloss": "April Fools' Day",
+      "note": "April 1 - stick paper fish on backs!"
+    },
+    {
+      "word_id": "la-fete-de-la-musique-fr",
+      "fr": "la Fête de la Musique",
+      "gloss": "Music Festival Day",
+      "note": "June 21 - free concerts!"
+    },
+    {
+      "word_id": "le-reveillon-fr",
+      "fr": "le Réveillon",
+      "gloss": "Christmas/New Year's Eve dinner",
+      "note": "fancy celebration meal"
+    },
+    {
+      "word_id": "la-galette-des-rois-fr",
+      "fr": "la Galette des Rois",
+      "gloss": "King Cake",
+      "note": "Jan 6 - hidden prize inside!"
+    },
+    {
+      "word_id": "la-saint-valentin-fr",
+      "fr": "la Saint-Valentin",
+      "gloss": "Valentine's Day",
+      "note": "February 14"
+    },
+    {
+      "word_id": "halloween-fr",
+      "fr": "Halloween",
+      "gloss": "Halloween",
+      "note": "Oct 31 - increasingly popular!"
+    },
+    {
+      "word_id": "joyeux-noel-fr",
+      "fr": "Joyeux Noël!",
+      "gloss": "Merry Christmas!",
+      "note": "holiday greeting"
+    },
+    {
+      "word_id": "bonne-annee-fr",
+      "fr": "Bonne année!",
+      "gloss": "Happy New Year!",
+      "note": "holiday greeting"
+    },
+    {
+      "word_id": "joyeuses-paques-fr",
+      "fr": "Joyeuses Pâques!",
+      "gloss": "Happy Easter!",
+      "note": "holiday greeting"
+    },
+    {
+      "word_id": "bonnes-fetes-fr",
+      "fr": "Bonnes fêtes!",
+      "gloss": "Happy Holidays!",
+      "note": "general greeting"
+    },
+    {
+      "word_id": "bon-anniversaire-fr",
+      "fr": "Bon anniversaire!",
+      "gloss": "Happy Birthday!",
+      "note": "birthday greeting"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-les-jours-feries-national",
+      "heading": "{Les Jours Fériés} (National Holidays)",
+      "text": "France has 11 official public holidays - more than most countries!",
+      "example": "{le Nouvel An} (Jan 1), {Pâques} (Easter), {la Fête Nationale} (July 14 - Bastille Day), {Noël} (Dec 25)"
+    },
+    {
+      "id": "s-bastille-day-la-fete",
+      "heading": "Bastille Day - {La Fête Nationale}",
+      "text": "July 14 - France's most important holiday celebrating the French Revolution (1789)",
+      "example": "{Military parade on Champs-Élysées, fireworks, parties} - like July 4th in America but with more cheese!"
+    },
+    {
+      "id": "s-religious-holidays",
+      "heading": "Religious Holidays",
+      "text": "France is secular but many Catholic holidays are still official days off",
+      "example": "{Pâques} (Easter), Ascension, Pentecôte (Pentecost), Assomption (Aug 15), Toussaint (Nov 1 - All Saints)"
+    },
+    {
+      "id": "s-wwi-wwii-commemorations",
+      "heading": "WWI & WWII Commemorations",
+      "text": "France honors both world wars with official holidays",
+      "example": "{8 mai} - {Victoire 1945} (WWII), {11 novembre} - Armistice 1918 (WWI)"
+    },
+    {
+      "id": "s-fun-french-traditions",
+      "heading": "Fun French Traditions",
+      "text": "Unique celebrations you won't find everywhere!",
+      "example": "{la Chandeleur} (Feb 2 - Crêpe Day!), {le Poisson d'Avril} (April 1 - stick fish on backs!), {la Fête de la Musique} (June 21 - free concerts everywhere!)"
+    },
+    {
+      "id": "s-christmas-new-year-les",
+      "heading": "Christmas & New Year ({Les Réveillons})",
+      "text": "Two huge celebrations with fancy dinners called '{réveillons}'",
+      "example": "{le Réveillon de Noël} (Christmas Eve dinner), {le Réveillon du Nouvel An} (New Year's Eve), {la Galette des Rois} (Jan 6 - King Cake with hidden prize!)"
+    },
+    {
+      "id": "s-quebec-holidays",
+      "heading": "Quebec Holidays",
+      "text": "French Canada has unique celebrations",
+      "example": "{la Saint-Jean-Baptiste} (June 24 - Quebec National Day), {le Jour du Souvenir} (Nov 11 - Remembrance Day)"
+    },
+    {
+      "id": "s-holiday-greetings",
+      "heading": "Holiday Greetings",
+      "text": "Essential phrases for celebrating",
+      "example": "{Joyeux Noël!} (Merry Christmas!), {Bonne année!} (Happy New Year!), {Joyeuses Pâques!} (Happy Easter!), {Bon anniversaire!} (Happy Birthday!)"
+    }
+  ]
+}
