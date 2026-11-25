@@ -71,7 +71,7 @@ Ids are permanent, because L stores progress against them.
 
 ## Editing a module converted from the live app
 
-The modules with dated keys (`2024-01-02-etre`) were converted from `src/lessons/modules`. You may edit them here like any other module. Then run `pnpm content:migrate`: it keeps your edit, records it in `legacy/hand-fixes.json` and lists it in `migration-report.md`. Commit the module and those two files together; until then `content:migrate --check` fails.
+The modules with dated keys (`2024-01-02-etre`) were converted from `src/lessons/modules`. You may edit them here like any other module. Then run `pnpm content:migrate`: it keeps your edit, records it in `legacy/hand-fixes.json` and lists it in `migration-report.md`. Commit the module and those two files together; until then `content:migrate --check` fails. An item, concept card or vocabulary card you add counts as an edit too: give it a new id, and the run records it with the other hand edits.
 
 The live app does not show these edits. It keeps showing the lesson as `main` builds it, until L replaces it.
 
