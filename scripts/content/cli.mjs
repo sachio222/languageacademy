@@ -5,15 +5,22 @@ import { resolve } from 'node:path';
 import { loadCourse, CONTENT_ROOT } from './load.mjs';
 import { ContentError } from './problems.mjs';
 
-function arg(args, name) {
-  const i = args.indexOf(name);
-  return i === -1 ? undefined : args[i + 1];
-}
-
 function validate(args) {
-  const root = arg(args, '--root') ? resolve(arg(args, '--root')) : CONTENT_ROOT;
-  // Until the outline is written (plan Task 5), a missing content folder is an empty course.
-  if (!existsSync(root)) {
+  const i = args.indexOf('--root');
+  let root = CONTENT_ROOT;
+  if (i !== -1) {
+    const value = args[i + 1];
+    if (value === undefined || value.startsWith('--')) {
+      console.error('--root needs a content folder');
+      return 2;
+    }
+    root = resolve(value);
+    if (!existsSync(root)) {
+      console.error(`${value}: no such content folder`);
+      return 1;
+    }
+  } else if (!existsSync(root)) {
+    // Until the outline is written (plan Task 5), a missing content/fr is an empty course.
     console.log('ok 0 modules');
     return 0;
   }

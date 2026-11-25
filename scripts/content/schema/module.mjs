@@ -88,14 +88,14 @@ const CONCEPTS = LIST(
   { unique: 'id' },
 );
 const PHRASES = LIST(OBJ({ phrase_id_suffix: ID, fr: S('fr'), word_id: KEY }, ['phrase_id_suffix', 'fr']), { unique: 'phrase_id_suffix' });
-const PART = OBJ({ id: ID, heading: S('native_fr'), text: LIST(S('native_fr')), note: S('native_fr'), blocks: LIST(BLOCK, { nonEmpty: true }) }, ['id', 'heading']);
+const PART = OBJ({ id: ID, heading: S('native_fr'), text: LIST(S('native_fr')), note: S('native_fr'), blocks: LIST(BLOCK, { nonEmpty: true }) }, ['id', 'heading', 'text']);
 const CHECK = OBJ(
   { id: ID, ask: S('native_fr'), say: S('fr'), sound: S('native'), show: S('fr'), options: OPTIONS, why: S('native_fr') },
   ['id', 'ask', 'options', 'why'],
 );
 const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w', 'h', 'alt']);
 const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('native'), img: IMG }, ['id']);
-const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading']);
+const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY }, ['words', 'constructions', 'source']);
 
 const KIND_SCHEMAS = {

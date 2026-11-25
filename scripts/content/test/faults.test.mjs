@@ -83,6 +83,18 @@ test('every problem is collected before throwing', () => {
   assert.deepEqual(ps.map((p) => p.code).sort(), ['field_unknown', 'field_unknown', 'outline_missing_file']);
 });
 
+test('a module file holding null', () => {
+  const ps = fails((_, files) => editText(files, MINI_KEYS.practice, () => 'null'));
+  assert.deepEqual(ps.map((p) => [p.file, p.path, p.code]), [[fileOf(MINI_KEYS.practice), '', 'field_type']]);
+});
+
+test('a parsed module that is null or not an object', () => {
+  for (const bad of [null, 7, 'practice', []]) {
+    const ps = fails((_, files) => files.map((f) => (f.file === fileOf(MINI_KEYS.practice) ? { file: f.file, json: bad } : f)));
+    assert.deepEqual(ps.map((p) => [p.file, p.path, p.code]), [[fileOf(MINI_KEYS.practice), '', 'field_type']], JSON.stringify(bad));
+  }
+});
+
 test('assembleCourse leaves its input untouched', () => {
   const outline = miniOutline();
   const files = miniFiles().map((f) => ({ file: f.file, json: JSON.parse(f.text) }));

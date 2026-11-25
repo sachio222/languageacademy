@@ -13,7 +13,8 @@ const keyOfFile = (file) => file.replace(/^.*[\\/]/, '').replace(/\.json$/, '');
 
 /**
  * @param outline  parsed course.json
- * @param files    Array<{ file, json }> or Array<{ file, text }>; a file is named <module_key>.json
+ * @param files    Array<{ file, json }> or Array<{ file, text }>; a file is named <module_key>.json.
+ *                 An entry with a `json` key is taken as parsed, whatever its value.
  * @param opts     { outlineFile?: string, checkAnswer?: (item, typed) => boolean }
  *                 checkAnswer is accepted for Task 4's item_unpassable and mistake_accepted rules.
  */
@@ -21,15 +22,19 @@ export function assembleCourse(outline, files, opts = {}) {
   const outlineFile = opts.outlineFile || 'course.json';
   const problems = [];
 
-  const sources = new Map(); // module_key -> { file, json | null }
+  // module_key -> { file, json, parsed }. parsed is false only when the text is not JSON; a file whose JSON
+  // is null or any other non-object is parsed and goes to validateModule, which reports field_type at ''.
+  const sources = new Map();
   for (const f of files) {
     let json = f.json;
-    if (json === undefined) {
+    let parsed = true;
+    if (!('json' in f)) {
       try {
         json = JSON.parse(f.text);
       } catch (e) {
         problems.push(problem(f.file, '', 'json_invalid', `not valid JSON: ${e.message}`));
-        json = null;
+        json = undefined;
+        parsed = false;
       }
     }
     const key = keyOfFile(f.file);
@@ -37,18 +42,20 @@ export function assembleCourse(outline, files, opts = {}) {
       problems.push(problem(f.file, '', 'module_duplicate', `${key} already comes from ${sources.get(key).file}`));
       continue;
     }
-    sources.set(key, { file: f.file, json });
+    sources.set(key, { file: f.file, json, parsed });
   }
 
   const unitIndexOf = unitIndexes(outline);
-  for (const [key, { file, json }] of sources) {
-    if (json === null) continue;
+  for (const [key, { file, json, parsed }] of sources) {
+    if (!parsed) continue;
     if (isObj(json) && typeof json.module_key === 'string' && json.module_key !== key)
       problems.push(problem(file, 'module_key', 'module_key_mismatch', `module_key ${json.module_key} does not match the file name ${key}.json`));
     problems.push(...validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null }));
   }
 
-  const modulesByKey = new Map([...sources].map(([k, s]) => [k, s.json]));
+  // The outline sees a usable module object, or null for a file that exists but holds none (unparseable
+  // or not an object; already reported above).
+  const modulesByKey = new Map([...sources].map(([k, s]) => [k, s.parsed && isObj(s.json) ? s.json : null]));
   problems.push(...validateOutline(outline, modulesByKey, { file: outlineFile }));
 
   if (problems.length) throw new ContentError(problems);

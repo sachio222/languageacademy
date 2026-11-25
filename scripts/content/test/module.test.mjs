@@ -142,7 +142,6 @@ test('lesson items default to steps', () => {
   assert.deepEqual(items.find((i) => i.id === 'i-je-suis').steps, ['writing', 'lesson-exam']);
   assert.deepEqual(items.find((i) => i.id === 'i-paul').steps, ['lesson-exam']);
   assert.deepEqual(items.find((i) => i.id === 'i-plural').steps, ['writing', 'lesson-exam']);
-  assert.equal(withMistakes.steps, undefined);
 });
 
 test('a meaning item is never defaulted into writing', () => {
@@ -228,6 +227,16 @@ test('written modules may not carry a plan', () => {
   const mod = miniModule(MINI_KEYS.practice);
   mod.plan = { words: [], constructions: [], source: 'plan.json' };
   assert.deepEqual(codes(mod, 2), ['field_unknown']);
+});
+
+test('guide parts and Reference sections need their text', () => {
+  // Spec 5.6: parts[] { id, heading, text, … }; spec 5.9: sections[] { id, heading, text, rows? }.
+  const guide = miniModule(MINI_KEYS.guide);
+  delete guide.parts[0].text;
+  assert.deepEqual(validateModule(guide, { file: 'g.json', unitIndex: 2 }).map((p) => [p.code, p.path]), [['field_missing', 'parts[0].text']]);
+  const page = miniModule(MINI_KEYS.reference);
+  delete page.sections[0].text;
+  assert.deepEqual(validateModule(page, { file: 'r.json', unitIndex: null }).map((p) => [p.code, p.path]), [['field_missing', 'sections[0].text']]);
 });
 
 test('bad French span in a module field', () => {

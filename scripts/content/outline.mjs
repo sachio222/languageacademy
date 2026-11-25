@@ -15,7 +15,8 @@ const RETIRED_FIELDS = ['module_key', 'reason', 'replaced_by'];
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 
-// modulesByKey: module_key -> parsed module JSON, or null for a file that exists but could not be read.
+// modulesByKey: module_key -> the module object, or null for a file that exists but holds no usable module
+// (not valid JSON, or JSON that is not an object). assembleCourse reports those files itself.
 export function validateOutline(outline, modulesByKey, { file = 'course.json' } = {}) {
   const ps = [];
   const bad = (path, code, msg) => ps.push(problem(file, path, code, msg));
