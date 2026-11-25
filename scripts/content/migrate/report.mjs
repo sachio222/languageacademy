@@ -20,7 +20,7 @@ const SECTIONS = [
   ['source_changed', 'Source changes since the last run', 'The source changed, so these parts were converted again; their ids stay.'],
   ['source_added', 'Source exercises added since the last run', ''],
   ['source_removed', 'Source exercises removed since the last run', ''],
-  ['live_unmatched', 'Live ids with no converted item', 'The live app stores answers under these exercise ids and concept indexes, and no converted item or concept has the same content, so live-ids.json has no entry for them.'],
+  ['live_unmatched', 'Live ids with no converted item', 'The live app stores answers under these exercise ids and concept indexes, and no converted item, concept or section has the same content, so live-ids.json has no entry for them. Real misses come first: each needs a look. The other two groups are expected, since the new files hold nothing for those ids.'],
   ['dropped_field', 'Fields with no place in a module file', 'Today’s objects hold these, and the module schema has no field for them.'],
   ['text_changed', 'Text written differently', 'The same words, moved into a field of the new shape.'],
   ['outline', 'Outline', 'Changes the outline step made when it wrote course.json from today’s unit configs.'],
@@ -63,44 +63,77 @@ export function renderReport(lines, summary) {
     for (const u of summary.byUnit) out.push(`| ${u.unit} | ${u.translate} | ${u.respond} |`);
     out.push('');
   }
+  const misses = lines.filter((l) => l.kind === 'live_unmatched' && (l.reason ?? 'miss') === 'miss').length;
   out.push('| Section | Lines |', '|---|---|');
-  for (const [kind, heading] of SECTIONS) if (count(lines, kind)) out.push(`| ${heading} | ${count(lines, kind)} |`);
+  for (const [kind, heading] of SECTIONS) {
+    if (!count(lines, kind)) continue;
+    const note = kind === 'live_unmatched' ? ` (${misses} real ${misses === 1 ? 'miss' : 'misses'})` : '';
+    out.push(`| ${heading} | ${count(lines, kind)}${note} |`);
+  }
   out.push('');
   for (const [kind, heading, about] of SECTIONS) {
     const mine = lines.filter((l) => l.kind === kind);
     if (!mine.length) continue;
     out.push(`## ${heading}`, '');
     if (about) out.push(about, '');
-    let current = null;
-    let groups = null;
-    const flush = () => {
-      for (const [g, ls] of groups || [])
-        out.push(
-          g === 'words'
-            ? `- ${ls.length} ${ls.length === 1 ? 'word' : 'words'}: ${ls.map((l) => l.detail).join(', ')}`
-            : `- ${ls.length} × ${g}: ${ls.map((l) => `\`${l.path}\``).join(', ')}`,
-        );
-      groups = null;
-    };
-    for (const l of mine) {
-      if (l.module_key !== current) {
-        flush();
-        current = l.module_key;
-        out.push('', `**${current ?? 'course'}**`, '');
-      }
-      if (l.kind === 'reading_word_no_popup') {
-        groups = groups || new Map();
-        groups.set('words', [...(groups.get('words') || []), l]);
-        continue;
-      }
-      const g = groupOf(l);
-      if (g) {
-        groups = groups || new Map();
-        groups.set(g, [...(groups.get(g) || []), l]);
-      } else out.push(`- \`${l.path}\` ${l.detail.replace(/\n/g, ' ')}`);
-    }
-    flush();
+    if (kind === 'live_unmatched') writeLiveUnmatched(out, mine);
+    else writeLines(out, mine);
     out.push('');
   }
   return out.join('\n').replace(/\n{3,}/g, '\n\n').trimEnd() + '\n';
+}
+
+// Live ids by reason: real misses line by line, the expected groups as one count per module.
+const LIVE_REASONS = [
+  ['reference_words', 'Reference word lists', 'The live app builds an exercise from each word of a Reference page; a Reference page has no items.', 'exercise'],
+  ['no_concepts', 'Concept cards of modules that hold none', 'Practice sets, unit exams and readings hold no concept cards, so the live ticks on their cards have no new id.', 'concept card'],
+];
+function writeLiveUnmatched(out, mine) {
+  const misses = mine.filter((l) => (l.reason ?? 'miss') === 'miss');
+  out.push('### Real misses', '');
+  if (misses.length) writeLines(out, misses);
+  else out.push('None.');
+  out.push('');
+  for (const [reason, heading, about, noun] of LIVE_REASONS) {
+    const ls = mine.filter((l) => l.reason === reason);
+    if (!ls.length) continue;
+    out.push(`### ${heading}`, '', about, '');
+    const byModule = new Map();
+    for (const l of ls) byModule.set(l.module_key, [...(byModule.get(l.module_key) || []), l]);
+    for (const [key, ms] of byModule) out.push(`- **${key}**: ${ms.length} ${noun}${ms.length === 1 ? '' : 's'}`);
+    out.push('');
+  }
+}
+
+// One section's lines, module by module, with repeated mechanical changes grouped.
+function writeLines(out, mine) {
+  let current = null;
+  let groups = null;
+  const flush = () => {
+    for (const [g, ls] of groups || [])
+      out.push(
+        g === 'words'
+          ? `- ${ls.length} ${ls.length === 1 ? 'word' : 'words'}: ${ls.map((l) => l.detail).join(', ')}`
+          : `- ${ls.length} × ${g}: ${ls.map((l) => `\`${l.path}\``).join(', ')}`,
+      );
+    groups = null;
+  };
+  for (const l of mine) {
+    if (l.module_key !== current) {
+      flush();
+      current = l.module_key;
+      out.push('', `**${current ?? 'course'}**`, '');
+    }
+    if (l.kind === 'reading_word_no_popup') {
+      groups = groups || new Map();
+      groups.set('words', [...(groups.get('words') || []), l]);
+      continue;
+    }
+    const g = groupOf(l);
+    if (g) {
+      groups = groups || new Map();
+      groups.set(g, [...(groups.get(g) || []), l]);
+    } else out.push(`- \`${l.path}\` ${l.detail.replace(/\n/g, ' ')}`);
+  }
+  flush();
 }

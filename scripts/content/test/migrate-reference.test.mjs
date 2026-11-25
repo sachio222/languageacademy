@@ -29,6 +29,12 @@ test('the spelling patterns page writes its phonics data out as sections', () =>
   const sounds = phonics.reduce((n, c) => n + c.patterns.length, 0);
   assert.equal(mod.sections.length, sounds);
   assert.equal(mod.sections[0].heading, 'Basic Vowel Sounds: /a/');
+  // Each section is named for the sound it teaches, not numbered.
+  const ids = mod.sections.map((s) => s.id);
+  assert.deepEqual(ids.slice(0, 4), ['s-a', 's-e-closed', 's-e-open', 's-schwa']);
+  assert.ok(ids.includes('s-a-nasal') && ids.includes('s-silent-h') && ids.includes('s-elision'), ids.join(' '));
+  assert.equal(new Set(ids).size, ids.length);
+  assert.ok(ids.every((id) => !/-\d+$/.test(id)), ids.join(' '));
   assert.deepEqual(mod.sections[0].rows[0], { fr: 'a', en: 'Most common', note: '{chat}, {la}, {va}' });
   assert.equal(mod.screen, undefined);
   assert.deepEqual(validateModule(mod, {}), []);

@@ -2,10 +2,10 @@
 // the module, word ids in course order, the sentences that changed, readings with no story, words with no pop-up.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readingFrom, changedSentences, wordsWithoutPopup } from '../migrate/reading.mjs';
+import { readingFrom, changedSentences, wordsWithoutPopup, comprehensionFrom } from '../migrate/reading.mjs';
 import { todaysModules, readLSources } from '../migrate/sources.mjs';
 import { proposeWordId } from '../word-ids.mjs';
-import { validateModule } from '../schema/module.mjs';
+import { validateModule, hasPositionWord } from '../schema/module.mjs';
 
 const L = readLSources();
 const { configs } = await todaysModules();
@@ -25,13 +25,17 @@ test('reading passage from story', () => {
   assert.equal(r.mod.story_id, 'reading1');
   assert.equal(r.mod.passage[0].fr, "Bonjour ! Je suis Paul. Je suis un homme. J'ai un chat et un chien aussi.");
   assert.equal(r.mod.passage[0].en, 'Hello! I am Paul. I am a man. I have a cat and a dog too.');
-  assert.deepEqual(r.mod.vocabulary.map((w) => [w.fr, w.gloss]), cards(old.vocabularyReference));
   assert.equal(r.mod.items.length, old.exerciseConfig.items.length);
   assert.ok(r.mod.items.every((i) => i.type === 'comprehension'));
   const img = r.mod.passage[1];
   assert.deepEqual(img.img, { src: 'img/reading1/paul', w: 1600, h: 1067, alt: storyOf(1).blocks[1].alt });
   assert.equal(img.fr, 'Paul, un chat et un chien.');
   assert.deepEqual(errors(r.mod, 1), []);
+  // Reading 1 teaches no table; reading 8's has rows, each one a card.
+  const old8 = configs.get('2024-05-20-reading-8');
+  const r8 = readingFrom(old8, storyOf(8), { unitIndex: 8 });
+  assert.ok(old8.vocabularyReference.length > 0);
+  assert.deepEqual(r8.mod.vocabulary.map((w) => [w.fr, w.gloss]), cards(old8.vocabularyReference));
 });
 
 test('a reading’s vocabulary table is its words, with word ids in course order', () => {
@@ -45,9 +49,11 @@ test('a reading’s vocabulary table is its words, with word ids in course order
   assert.ok(minted.has('manger-fr'), 'first taught here, so the reading mints its id');
   // A later lesson teaching the same meaning keeps the reading's id.
   assert.equal(proposeWordId({ french: 'manger', english: 'to eat' }, seen).word_id, 'manger-fr');
-  // Its description says "Unit 4 mastery!": a position word, reported and fixed by hand in the written file.
-  assert.deepEqual(errors(r.mod, 4).map((p) => p.code), ['position_word']);
-  assert.ok(r.report.some((l) => l.kind === 'position_word' && l.path === 'description'));
+  // Its title says "Reading Comprehension 4" and its description "Unit 4 mastery!": position words, reported and fixed
+  // by hand in the written file.
+  assert.deepEqual(errors(r.mod, 4).map((p) => [p.code, p.path]), [['position_word', 'title'], ['position_word', 'description']]);
+  assert.ok(r.report.some((l) => l.kind === 'position_word' && l.path === 'title'));
+  assert.ok(hasPositionWord('Reading Comprehension 6 - Un Voyage en Famille') && !hasPositionWord('Reading Comprehension - First Paragraph!'));
 });
 
 test('speakers, scenes and the closing line', () => {
@@ -74,6 +80,30 @@ test('questions keep their second line as the cue, and authored ids', () => {
   assert.ok(r1.report.some((l) => l.kind === 'dropped_field' && /Find the answer/.test(l.detail)));
   const r7 = readingFrom(configs.get('2024-05-07-reading-7'), storyOf(7), { unitIndex: 7 });
   assert.equal(r7.mod.items[0].id, 'reading-7-1');
+  // A second line that repeats the question is dropped for that reason.
+  const lines = [];
+  const item = comprehensionFrom({ instruction: 'Where is Sophie?', prompt: 'Where is Sophie?', expectedAnswer: 'Caen' }, { add: (path, kind, detail) => lines.push({ path, kind, detail }), ref: 'x' });
+  assert.equal(item.cue, undefined);
+  assert.deepEqual(lines.map((l) => l.detail), ['"Where is Sophie?" (repeats the question)']);
+});
+
+test('quoted French in a question is a span, as L marks it', () => {
+  const r1 = readingFrom(configs.get('2024-01-09-reading1'), storyOf(1), { unitIndex: 1 });
+  assert.equal(r1.mod.items[0].cue, 'Who is {je}?');
+  assert.equal(r1.mod.items[2].question, 'Who is {tu} (you)?');
+  assert.equal(r1.mod.items[0].hint, 'Second sentence - {je suis ___}');
+  const quoted = /['‘"“]\{|\}['’"”]/;
+  const texts = r1.mod.items.flatMap((it) => [it.question, it.cue, it.hint, ...(it.mistakes || []).map((m) => m.feedback)].filter(Boolean));
+  assert.deepEqual(texts.filter((t) => quoted.test(t)), [], 'no quotes around a span');
+});
+
+test('inline italic markup is removed from the passage, and reported', () => {
+  const r3 = readingFrom(configs.get('2024-02-03-reading3'), storyOf(3), { unitIndex: 3 });
+  const marc = r3.mod.passage.find((b) => /Monte-Cristo/.test(b.fr ?? ''));
+  assert.equal(marc.fr, "Oui ! Je vais au café avec toi. Tu as Le Comte de Monte-Cristo ? C'est le livre rouge et jaune.");
+  assert.ok(r3.mod.passage.every((b) => !String(b.fr ?? '').includes('*') && !String(b.en ?? '').includes('*')));
+  const italics = r3.report.filter((l) => l.kind === 'text_changed' && /italic/.test(l.detail));
+  assert.deepEqual(italics.map((l) => l.detail), ['italic markup removed: *Le Comte de Monte-Cristo*', 'italic markup removed: *Vingt mille lieues sous les mers*']);
 });
 
 test('text_changed lists each sentence where the story differs from today’s text', () => {

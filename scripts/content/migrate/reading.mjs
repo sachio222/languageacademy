@@ -35,6 +35,11 @@ function splitSpeaker(text) {
   return m ? { speaker: clean(m[1]), text: clean(String(text).slice(m[0].length)) } : { speaker: null, text: clean(text) };
 }
 const unitalic = (s) => s.replace(/^\*([^*]+)\*$/, '$1');
+// L defines no inline markup in a passage (L 3da5ad7), so *italic* titles lose their asterisks; each one is reported.
+function noItalics(text, path, add) {
+  for (const m of String(text).matchAll(/\*([^*]+)\*/g)) add(path, 'text_changed', `italic markup removed: ${m[0]}`);
+  return String(text).replace(/\*([^*]+)\*/g, '$1');
+}
 
 /** Story blocks (fr, en, img/w/h/alt, dateline, scene, end) as passage blocks without ids, with report lines. */
 export function blocksFromStory(story, add = () => {}) {
@@ -46,8 +51,8 @@ export function blocksFromStory(story, add = () => {}) {
       const fr = splitSpeaker(frRaw);
       const en = splitSpeaker(b.en);
       if (fr.speaker) out.speaker = fr.speaker;
-      out.fr = b.dateline ? unitalic(fr.text) : fr.text;
-      if (b.en !== undefined) out.en = b.dateline ? unitalic(en.text) : en.text;
+      out.fr = noItalics(b.dateline ? unitalic(fr.text) : fr.text, `passage[${i}].fr`, add);
+      if (b.en !== undefined) out.en = noItalics(b.dateline ? unitalic(en.text) : en.text, `passage[${i}].en`, add);
       if (fr.speaker && en.speaker && fr.speaker !== en.speaker)
         add(`passage[${i}].speaker`, 'text_changed', `"${fr.speaker}" names the speaker; the English line said "${en.speaker}"`);
     }
@@ -74,7 +79,7 @@ export function blocksFromPassage(rp, add = () => {}) {
     const h = HEADER.exec(t);
     const a = splitSpeaker(h ? h[1] : t);
     const b = splitSpeaker(String(en[i] ?? '').trim().replace(HEADER, '$1'));
-    const block = { ...(a.speaker ? { speaker: a.speaker } : {}), fr: a.text, en: b.text || '' };
+    const block = { ...(a.speaker ? { speaker: a.speaker } : {}), fr: noItalics(a.text, `readingPassage.text`, add), en: noItalics(b.text || '', `readingPassage.translation`, add) };
     if (h) block.layout = 'scene';
     if (!block.en) add(`readingPassage.translation`, 'dropped_field', `no translation beside "${a.text.slice(0, 60)}"`);
     out.push(block);
@@ -169,19 +174,23 @@ export function wordsWithoutPopup(mod, { dictionaryForms = new Set(), names = ne
 const GENERIC_PROMPT = /^find the answer in the passage/i;
 
 /** One reading question (exerciseConfig custom item) as a comprehension item without id. */
+// L marks French in a question with braces only (L 3da5ad7): "Who is 'tu' (you)?" is "Who is {tu} (you)?".
+const unquoteSpans = (t) => String(t).replace(/(['‘"“])\{([^}]+)\}(['’"”])/g, '{$2}');
+
 export function comprehensionFrom(it, { isWord = null, add = () => {}, ref } = {}) {
   unknown(it, ITEM_FIELDS, ref);
-  const mark = (t, mode, own = null) => markFrench(String(t).trim(), mode, { isWord, own });
+  const mark = (t, mode, own = null) => unquoteSpans(markFrench(String(t).trim(), mode, { isWord, own }));
   const answer = String(it.expectedAnswer ?? '').trim();
   const item = { type: 'comprehension', question: mark(it.instruction, 'quoted') };
   const prompt = String(it.prompt ?? '').trim();
-  if (prompt && !GENERIC_PROMPT.test(prompt) && normText(prompt) !== normText(it.instruction)) item.cue = mark(prompt, 'quoted');
-  else if (prompt) add(`${ref}.prompt`, 'dropped_field', `"${prompt}" (says only where the answer is)`);
+  const repeats = normText(prompt) === normText(it.instruction);
+  if (prompt && !GENERIC_PROMPT.test(prompt) && !repeats) item.cue = mark(prompt, 'quoted');
+  else if (prompt) add(`${ref}.prompt`, 'dropped_field', `"${prompt}" (${repeats ? 'repeats the question' : 'says only where the answer is'})`);
   item.answer = answer;
   const accept = acceptOf(it.acceptableAnswers, answer);
   if (accept.length) item.accept = accept;
   if (isStr(it.hint)) item.hint = mark(it.hint, 'quoted');
-  const mistakes = mistakesOf(it.wrongAnswers, answer, (t, mode, own) => markFrench(t, mode, { isWord, own }));
+  const mistakes = mistakesOf(it.wrongAnswers, answer, (t, mode, own) => unquoteSpans(markFrench(t, mode, { isWord, own })));
   if (mistakes.length) item.mistakes = mistakes;
   return item;
 }

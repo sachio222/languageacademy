@@ -39,7 +39,7 @@ import { convertGuide } from './guide.mjs';
 import { readingFrom } from './reading.mjs';
 import { referenceFrom } from './reference.mjs';
 import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
-import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms } from './sources.mjs';
+import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses } from './sources.mjs';
 import { liveIdMatch } from './live-ids.mjs';
 import { renderReport } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
@@ -273,6 +273,8 @@ async function modules(args, flags, kindWords = ['modules']) {
   let heldCount = 0;
   const byUnit = [];
   const minted = new Set();
+  // The English of every word taught so far, in course order, for the Liaison guide's phrases (guide.mjs meaningOf).
+  const glosses = new Map();
   const needL = () => {
     if (!lSources) throw new UsageError(`${rel(join(ROOT, L_SOURCES_FILE))} is missing; run \`pnpm content:migrate l-sources\` first`);
     return lSources;
@@ -283,7 +285,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     const existing = flags.force ? null : readJson(join(ROOT, 'modules', `${key}.json`));
     const record = flags.force ? null : records[key] ?? null;
     const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null };
-    if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx });
+    if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
       const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;
       return readingFrom(old, story, { ...common, dictionary, seenBySpelling, dictionaryForms: forms, names: graph.names, minted });
@@ -292,23 +294,34 @@ async function modules(args, flags, kindWords = ['modules']) {
     return convertModule(old, { ...common, unitKey: unitInfo.key, dictionary, seenBySpelling });
   };
   const take = (key, kind, r, counts) => {
-    if (Object.keys(r.handFixes).length) newFixes[key] = r.handFixes;
+    // A module of a kind this run does not write keeps its file, its merge base and its hand fixes exactly as they
+    // are, so a later full run still sees a source change to it as a source change (never as a hand edit).
+    const excluded = wanted && !wanted.has(kind);
+    const kept = excluded ? readJson(join(ROOT, 'modules', `${key}.json`)) : null;
+    const mod = kept ?? r.mod;
+    if (excluded) {
+      if (records[key] !== undefined) newRecords[key] = records[key];
+      if (allFixes[key] !== undefined) newFixes[key] = allFixes[key];
+    } else {
+      if (Object.keys(r.handFixes).length) newFixes[key] = r.handFixes;
+      newRecords[key] = r.record;
+    }
+    addGlosses(glosses, mod);
     lines.push(...r.report);
-    (r.mod.items || []).forEach((item, i) => {
+    (mod.items || []).forEach((item, i) => {
       for (const p of checkItemPassable(item, defaultCheckAnswer, { file: key, path: `items[${i}]` }))
         lines.push({ module_key: key, path: p.path, kind: 'answer_fails', detail: `${item.id}: ${p.message}` });
     });
-    converted.set(key, r.mod);
+    converted.set(key, mod);
     kinds.set(key, kind);
     if (counts) {
       const framed = new Set(r.report.filter((l) => l.kind === 'framed_respond').map((l) => l.path));
-      (r.mod.items || []).forEach((item, i) => {
+      (mod.items || []).forEach((item, i) => {
         if (item.type === 'translate') counts.translate += 1;
         else if (item.type === 'respond' && framed.has(`items[${i}]`)) counts.respond += 1;
       });
     }
-    newRecords[key] = r.record;
-    itemCount += (r.mod.items || []).length;
+    itemCount += (mod.items || []).length;
     heldCount += (r.held || []).length;
   };
 
@@ -342,8 +355,13 @@ async function modules(args, flags, kindWords = ['modules']) {
   });
   if (wt !== 0) return wt;
   const { map, unmatched } = liveIdMatch(live, converted);
+  // Why a live id has no converted item: a Reference page's word-list exercises (a Reference page has no items), a
+  // concept card of a module that holds none (practice sets, unit exams, readings), or a real miss.
+  const NO_CONCEPTS = ['practice', 'unit_exam', 'reading', 'guide'];
+  const reasonOf = (u) =>
+    kinds.get(u.module_key) === 'reference' && u.what === 'exercise' ? 'reference_words' : u.what === 'concept' && NO_CONCEPTS.includes(kinds.get(u.module_key)) ? 'no_concepts' : 'miss';
   for (const u of unmatched)
-    lines.push({ module_key: u.module_key, path: u.what === 'concept' ? `concepts[${u.live_id}]` : u.live_id, kind: 'live_unmatched', detail: `${u.what} ${u.detail}` });
+    lines.push({ module_key: u.module_key, path: u.what === 'concept' ? `concepts[${u.live_id}]` : u.live_id, kind: 'live_unmatched', reason: reasonOf(u), detail: `${u.what} ${u.detail}` });
 
   const settings = readJson(join(REPO_ROOT, 'curriculum-graph/core/settings.json'));
   for (const line of outlineFromUnitConfigs(unitConfigs, { opensWords: settings.reference.modules }).report)

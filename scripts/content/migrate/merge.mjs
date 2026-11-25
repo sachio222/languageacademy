@@ -19,6 +19,9 @@ export const clone = (v) => (v === undefined ? undefined : JSON.parse(JSON.strin
 export const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 export const hashOf = (v) => createHash('sha1').update(JSON.stringify(v ?? null)).digest('hex').slice(0, 12);
 export const sortKeys = (o) => Object.fromEntries(Object.keys(o).sort().map((x) => [x, o[x]]));
+// The same value whatever the order of its keys, for telling whether two parts say the same thing.
+const canonical = (v) => (Array.isArray(v) ? v.map(canonical) : isObj(v) ? Object.fromEntries(Object.keys(v).sort().map((k) => [k, canonical(v[k])])) : v);
+const sameContent = (a, b) => JSON.stringify(canonical(a ?? null)) === JSON.stringify(canonical(b ?? null));
 const baseOf = (e) => (typeof e === 'string' ? { src: e } : isObj(e) ? e : null);
 
 // Leaf differences between two values, text compared as a learner sees it (braces removed).
@@ -65,6 +68,9 @@ export function createMerger({ existing = null, record = null, handFixes = null,
       if (base.src !== undefined && base.src !== srcHash && ex) add(path, 'source_changed', 'converted again from the changed source');
       return { value: freshVal, out: freshOut };
     }
+    // A hand edit the converter now writes the same way: the two agree, so the new output is the base again and the
+    // part is no longer a hand fix.
+    if (sameContent(fileHas ? fileVal : undefined, freshVal)) return { value: freshVal, out: freshOut };
     if (freshOut !== base.out) conflict(path, base.src !== srcHash ? 'the source changed under it' : 'the converter now writes it differently');
     return { value: fileHas ? clone(fileVal) : undefined, out: base.out, src: base.src };
   }

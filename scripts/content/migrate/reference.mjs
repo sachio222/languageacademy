@@ -30,6 +30,18 @@ export function sectionFromConcept(c, { isWord = null } = {}) {
   return s;
 }
 
+// A spelling-page section is named for the sound it teaches: `s-` and the sound's name, never a number.
+const SOUND_NAMES = {
+  '/a/': 'a', '/e/': 'e-closed', '/ɛ/': 'e-open', '/ə/': 'schwa', '/i/': 'i', '/o/': 'o-closed', '/ɔ/': 'o-open',
+  '/u/': 'u', '/y/': 'y', '/ɑ̃/': 'a-nasal', '/ɛ̃/': 'e-nasal', '/ɔ̃/': 'o-nasal', '/wa/': 'wa', '/wɛ̃/': 'we-nasal',
+  '/ɥi/': 'ui', '/j/': 'j', '/s/': 's', '/z/': 'z', '/k/': 'k', '/ʒ/': 'zh', '/ʃ/': 'sh', '/ɲ/': 'gn', '/ʁ/': 'r', '/g/': 'g',
+};
+export function soundId(sound) {
+  const name = SOUND_NAMES[sound] ?? (/^\/.*\/$/.test(sound) ? null : slugify(sound, { words: 4 }));
+  if (!name) throw new Error(`frenchPhonics.js: name the sound ${sound} in reference.mjs SOUND_NAMES`);
+  return `s-${name}`;
+}
+
 /**
  * frenchPhonics (src/data/frenchPhonics.js) as sections: one per sound, headed by its category and sound, with one row
  * per spelling (the spelling, its note, and its example words as a French note).
@@ -107,8 +119,8 @@ export function referenceFrom(old, opts = {}) {
   const sections = mergeList(
     m,
     'sections',
-    freshSections.map((s, i) => ({ value: s, src: sectionSources[i] })),
-    { keyOf: (s) => normText(unmark(s.heading)), makeId: (s, taken) => sectionId(s.heading, taken), add },
+    freshSections.map((s, i) => ({ value: s, src: sectionSources[i], idBase: old.isPhonicsReference ? soundId(sectionSources[i].sound) : null })),
+    { keyOf: (s) => normText(unmark(s.heading)), makeId: (s, taken, f) => (f.idBase ? freeId(f.idBase, taken) : sectionId(s.heading, taken)), add },
   );
   if (sections.list.length) mod.sections = sections.list;
   if (m.ex?.tables !== undefined) mod.tables = clone(m.ex.tables);

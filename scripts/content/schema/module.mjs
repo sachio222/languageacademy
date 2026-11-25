@@ -43,8 +43,45 @@ export const STATUSES = ['written', 'planned'];
 // { <type>: <L's value>, heading?: native_fr } with exactly one type key (L's linesH becomes a heading).
 export const BLOCK_TYPES = ['pairs', 'ties', 'cmp', 'build', 'rise', 'flip', 'ways', 'verbs', 'table', 'list', 'lines'];
 
-// "Module 14", "M12", "Unit 3", "Reading 7" (and "Lesson 5", French "Unité 2", "Leçon 4").
-const POSITION_WORDS = /\b(?:modules?|units?|unité|readings?|lessons?|leçon)\s+\d+/i;
+// Each block type's value, in the shape L draws it (prototypes/l/j-guides.js partBody). A block in any other shape
+// is block_invalid, since L cannot draw it. Each check returns a message, or null when the value fits.
+const str = (v) => typeof v === 'string' && v.trim() !== '';
+const strOrEmpty = (v) => typeof v === 'string';
+const isPair = (p) => Array.isArray(p) && p.length === 2 && p.every(str);
+const only = (o, keys) => isObj(o) && Object.keys(o).every((k) => keys.includes(k));
+const listOf = (v, test, what) => (Array.isArray(v) && v.length > 0 && v.every(test) ? null : `a non-empty list of ${what}`);
+const BLOCK_SHAPES = {
+  // A pair may carry a third cell, the sound respelled for English readers (L dfec513), drawn under the French.
+  pairs: (v) => listOf(v, (p) => isPair(p) || (Array.isArray(p) && p.length === 3 && p.every(str)), '[French, English] or [French, English, sound]'),
+  lines: (v) => listOf(v, isPair, '[French, English] pairs'),
+  list: (v) => listOf(v, str, 'strings'),
+  ties: (v) => listOf(v, (t) => only(t, ['fr', 'a', 'b', 'link', 'sound', 'en']) && ['fr', 'a', 'b', 'link', 'sound', 'en'].every((k) => str(t[k])), '{ fr, a, b, link, sound, en }'),
+  cmp: (v) => {
+    const cell = (c) => only(c, ['fr', 'say', 'en', 'sub']) && str(c.fr) && ['say', 'en', 'sub'].every((k) => c[k] === undefined || str(c[k]));
+    return only(v, ['left', 'right', 'rows']) && str(v.left) && str(v.right) && listOf(v.rows, (r) => Array.isArray(r) && r.length === 2 && r.every(cell), '') === null
+      ? null
+      : '{ left, right, rows: [[cell, cell]] } with cells { fr, say?, en?, sub? }';
+  },
+  build: (v) => listOf(v, (b) => only(b, ['k', 'fr', 'en']) && str(b.k) && str(b.fr) && str(b.en), '{ k, fr, en }'),
+  rise: (v) => listOf(v, (r) => only(r, ['fr', 'en', 'tone']) && str(r.fr) && str(r.en) && ['flat', 'up'].includes(r.tone), '{ fr, en, tone: flat | up }'),
+  flip: (v) =>
+    listOf(
+      v,
+      (f) => only(f, ['fr', 'en', 'parts']) && str(f.fr) && str(f.en) && Array.isArray(f.parts) && f.parts.length > 0 && f.parts.every((p) => Array.isArray(p) && p.length === 2 && str(p[0]) && ['', 's', 'v', 'h'].includes(p[1])),
+      '{ fr, en, parts: [[text, "" | s | v | h]] }',
+    ),
+  ways: (v) => listOf(v, (w) => only(w, ['n', 'fr', 't', 'd']) && Number.isInteger(w.n) && strOrEmpty(w.fr) && str(w.t) && str(w.d), '{ n, fr, t, d }'),
+  verbs: (v) => listOf(v, (x) => only(x, ['v', 'en', 'f']) && str(x.v) && str(x.en) && listOf(x.f, isPair, '') === null, '{ v, en, f: [[pronoun, form]] }'),
+  table: (v) =>
+    only(v, ['cols', 'rows']) &&
+    Array.isArray(v.cols) && v.cols.length === 2 && v.cols.every(str) &&
+    listOf(v.rows, (r) => Array.isArray(r) && (r.length === 3 || (r.length === 4 && r[3] === 'odd')) && str(r[0]) && isPair(r[1]) && isPair(r[2]), '') === null
+      ? null
+      : '{ cols: [two headings], rows: [[label, [fr, en], [fr, en], "odd"?]] }',
+};
+
+// "Module 14", "M12", "Unit 3", "Reading 7", "Reading Comprehension 6" (and "Lesson 5", French "Unité 2", "Leçon 4").
+const POSITION_WORDS = /\b(?:modules?|units?|unité|readings?(?:\s+comprehension)?|lessons?|leçon)\s+\d+/i;
 const POSITION_SHORT = /\bM\d+\b/;
 export function hasPositionWord(text) {
   return POSITION_WORDS.test(text) || POSITION_SHORT.test(text);
@@ -95,7 +132,8 @@ const CHECK = OBJ(
 );
 const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w', 'h', 'alt']);
 // layout: the story's dateline, scene heading or closing line (stories/readingN.html), drawn apart from the text.
-const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('native'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
+// speaker: the label shown beside the French (Paul, Le père), so French the learner reads.
+const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('fr'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
 // example: a section made from a concept card keeps the card's example line.
 const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY }, ['words', 'constructions', 'source']);
@@ -181,6 +219,8 @@ function walk(node, v, path, cx, parent) {
       const type = types[0];
       if (types.length !== 1 || !BLOCK_TYPES.includes(type) || !(Array.isArray(v[type]) || isObj(v[type])))
         return bad(path, 'block_invalid', `${path} must be one example block: { ${BLOCK_TYPES.join(' | ')}: …, heading? }`);
+      const shape = BLOCK_SHAPES[type](v[type]);
+      if (shape) return bad(join(path, type), 'block_invalid', `${join(path, type)} must be ${shape}, the shape L draws`);
       if (v.heading !== undefined) walk(S('native_fr'), v.heading, join(path, 'heading'), cx, v);
       collectStrings(v[type], join(path, type), cx.texts);
       return;

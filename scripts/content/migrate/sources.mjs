@@ -33,6 +33,28 @@ export function readLSources(root = CONTENT_ROOT) {
   return existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : null;
 }
 
+/**
+ * The English of every word taught before `key` in course order, from the written module files: Map<lowercased
+ * French, gloss>, the first card of a spelling winning. run.mjs keeps the same map as it walks the course.
+ */
+export function glossesBefore(key, root = CONTENT_ROOT) {
+  const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
+  const glosses = new Map();
+  for (const unit of outline.units)
+    for (const k of unit.entries) {
+      if (k === key) return glosses;
+      const file = join(root, 'modules', `${k}.json`);
+      if (existsSync(file)) addGlosses(glosses, JSON.parse(readFileSync(file, 'utf8')));
+    }
+  return glosses;
+}
+export function addGlosses(glosses, mod) {
+  for (const w of mod.vocabulary || []) {
+    const fr = String(w.fr).trim().toLowerCase();
+    if (!glosses.has(fr)) glosses.set(fr, w.gloss);
+  }
+}
+
 export const liaisonJsx = () => readFileSync(join(REPO_ROOT, 'src/components/LiaisonHelp.jsx'), 'utf8');
 export const frenchPhonics = async () => (await importFrom('src/data/frenchPhonics.js')).frenchPhonics;
 

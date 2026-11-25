@@ -98,9 +98,10 @@ export function guideFromL(g, moduleKey, { extraParts = { before: [], after: [] 
 const curlyToSpans = (s) => String(s).replace(/\{/g, '\\{').replace(/“([^”]+)”/g, '{$1}');
 
 /**
- * The negation guide's `guide.sections[]` as parts (spec 6): the rule is the text, `rows` a `table` block of
- * { fr, en, note? } rows (a lesson table's row shape, since L's verb-table shape holds no notes), `examples` a
- * `lines` block. `checks: []`: its three checks are written by hand. Returns { mod, report }.
+ * The negation guide's `guide.sections[]` as parts (spec 6), in L's block shapes: the rule is the text; `rows` a
+ * `pairs` block when they are fragments ("je ne suis pas", "ne … plus") and a `lines` block when they are whole
+ * sentences; `examples` a `lines` block. A row's note has no cell in L's shapes, so the part's notes join into its
+ * `note`. `checks: []`: its three checks are written by hand. Returns { mod, report }.
  */
 export function guideFromSections(old, { isWord = null } = {}) {
   const report = [];
@@ -111,15 +112,17 @@ export function guideFromSections(old, { isWord = null } = {}) {
     const heading = curlyToSpans(s.heading);
     const p = { id: partId(heading, taken), heading, text: isStr(s.rule) ? [curlyToSpans(s.rule)] : [] };
     const blocks = [];
-    if ((s.rows || []).length)
-      blocks.push({
-        table: {
-          rows: s.rows.map((r, j) => {
-            unknown(r, ['french', 'english', 'note'], `${old.moduleKey} guide.sections[${i}].rows[${j}]`);
-            return { fr: r.french, en: r.english, ...(isStr(r.note) ? { note: curlyToSpans(r.note) } : {}) };
-          }),
-        },
-      });
+    const rows = s.rows || [];
+    rows.forEach((r, j) => unknown(r, ['french', 'english', 'note'], `${old.moduleKey} guide.sections[${i}].rows[${j}]`));
+    if (rows.length) {
+      const type = rows.every((r) => /[.!?]\s*$/.test(String(r.french).trim())) ? 'lines' : 'pairs';
+      blocks.push({ [type]: rows.map((r) => [r.french, r.english]) });
+      const notes = rows.filter((r) => isStr(r.note)).map((r) => curlyToSpans(r.note.trim()));
+      if (notes.length) {
+        p.note = notes.join(' ');
+        add(`guide.sections[${i}].rows`, 'text_changed', `${notes.length} row notes joined into the part's note (L's ${type} have no note cell)`);
+      }
+    }
     if ((s.examples || []).length)
       blocks.push({
         lines: s.examples.map((e, j) => {
@@ -154,16 +157,24 @@ const allText = (re, s) => [...s.matchAll(re)].map((m) => stripTags(m[1]));
 /**
  * The parts LiaisonHelp.jsx holds and L's Liaison guide lacks: its sections saved under the indexes listed after
  * "Added later" in `liaisonSections` (silent final letters, elision). Each is a part: h2 the heading, the intro the
- * text, each h3 group of phrases a `pairs` block of [French, pronunciation], the insight box the note. Parts the file
- * renders before its first original section go before L's parts; the others after. Returns { before, after }.
+ * text, each h3 group of phrases a `pairs` block of [French, English, sound] (L dfec513: the respelling is drawn
+ * under the French), the insight box the note. The file gives no English, so each phrase takes the course's own gloss
+ * for it from `meanings` (lowercased French -> gloss, the words taught before the guide): `les` "the (plural)"; a
+ * noun without its article from `un chat` "a cat (male)" -> "cat (male)"; an elided article from `un ami`
+ * "a friend (masc)" -> `l'ami` "the friend (masc)". Parts the file renders before its first original section go
+ * before L's parts; the others after. Returns { before, after }.
  */
-export function liaisonAdditions(jsx, { isWord = null } = {}) {
+export function liaisonAdditions(jsx, { isWord = null, meanings = new Map() } = {}) {
   const added = /\/\/ Added later[\s\S]*?\n\s*\];/.exec(jsx);
   if (!added) throw new Error('LiaisonHelp.jsx: no "Added later" sections in liaisonSections');
   const indexes = new Set([...added[0].matchAll(/index:\s*(\d+)/g)].map((m) => +m[1]));
   // French quoted in the JSX ("le") is marked as a span, the quotes dropped as L writes them.
   // Headings are read as titles are (segments), text and notes as hints are (quoted).
-  const toSpans = (s, mode = 'quoted') => markFrench(s, mode, { isWord }).replace(/["“]\{([^}]+)\}["”]/g, '{$1}');
+  // A quoted elided article ("l'") is French too, though too short for the word test.
+  const toSpans = (s, mode = 'quoted') =>
+    markFrench(s, mode, { isWord })
+      .replace(/["“]\{([^}]+)\}["”]/g, '{$1}')
+      .replace(/["“]([a-zàâçéèêëîïôûù]{1,5}')["”]/gi, '{$1}');
   const out = { before: [], after: [] };
   let seenOriginal = false;
   for (const m of jsx.matchAll(/<section className="liaison-section">([\s\S]*?)<\/section>/g)) {
@@ -183,7 +194,7 @@ export function liaisonAdditions(jsx, { isWord = null } = {}) {
       const sound = allText(/<div className="phrase-pronunciation">([\s\S]*?)<\/div>/g, g);
       if (!fr.length) continue;
       if (fr.length !== sound.length) throw new Error(`LiaisonHelp.jsx "${heading}": a phrase without its pronunciation`);
-      blocks.push({ pairs: fr.map((f, i) => [f, sound[i]]), heading: toSpans(h3, 'segments') });
+      blocks.push({ pairs: fr.map((f, i) => [f, meaningOf(f, meanings), sound[i]]), heading: toSpans(h3, 'segments') });
     }
     const note = allText(/<p>([\s\S]*?)<\/p>/g, body.slice(body.indexOf('insight-box'))).map((t) => toSpans(t)).join(' ');
     const part = { heading, text, ...(note ? { note } : {}), ...(blocks.length ? { blocks } : {}) };
@@ -191,6 +202,18 @@ export function liaisonAdditions(jsx, { isWord = null } = {}) {
   }
   if (out.before.length + out.after.length !== indexes.size) throw new Error(`LiaisonHelp.jsx: found ${out.before.length + out.after.length} added sections, expected ${indexes.size}`);
   return out;
+}
+
+// The course's English for a phrase taught before the guide (see liaisonAdditions).
+const stripArticle = (gloss) => String(gloss).replace(/^(?:a|an)\s+/i, '');
+export function meaningOf(fr, meanings) {
+  const f = String(fr).trim().toLowerCase().replace(/’/g, "'");
+  if (meanings.has(f)) return meanings.get(f);
+  const noun = (w) => meanings.get(`un ${w}`) ?? meanings.get(`une ${w}`);
+  const elided = /^l'(.+)$/.exec(f);
+  if (elided && noun(elided[1])) return `the ${stripArticle(noun(elided[1]))}`;
+  if (noun(f)) return stripArticle(noun(f));
+  throw new Error(`LiaisonHelp.jsx: no English for "${fr}" among the words taught before the guide`);
 }
 
 /* ---------- French in a block ---------- */
@@ -225,11 +248,8 @@ export function blockFrench(block) {
       }
       break;
     case 'table':
-      // L's verb table ({ cols, rows: [[verb, [fr, en], [fr, en]]] }) or a data guide's rows ({ rows: [{ fr, en }] }).
-      for (const r of v.rows) {
-        if (Array.isArray(r)) push(r[0], r[1]?.[0], r[2]?.[0]);
-        else push(r.fr);
-      }
+      // L's verb table: { cols, rows: [[verb, [fr, en], [fr, en], "odd"?]] }.
+      for (const r of v.rows) push(r[0], r[1]?.[0], r[2]?.[0]);
       break;
     case 'list':
       for (const t of v) for (const m of String(t).matchAll(/\{([^}]+)\}/g)) push(m[1]);
@@ -247,7 +267,7 @@ const KNOWN = ['moduleKey', 'title', 'description', 'isHelpModule', 'emailMetada
 /**
  * One of today's guide modules as a guide file, merged with what is written.
  * @param old   today's module object (isHelpModule)
- * @param opts  { lGuides, liaisonJsx, existing?, record?, handFixes?, isWord?, unitIndex? }
+ * @param opts  { lGuides, liaisonJsx, meanings? (Map of the words taught before), existing?, record?, handFixes?, isWord?, unitIndex? }
  * @returns { mod, report, record, handFixes }
  */
 export function convertGuide(old, opts = {}) {
@@ -268,7 +288,7 @@ export function convertGuide(old, opts = {}) {
   } else {
     const g = lGuideFor(opts.lGuides, key);
     if (!g) throw new Error(`${key}: no L guide in content/fr/legacy/l-sources.json; run \`pnpm content:migrate l-sources\``);
-    const extraParts = /liaison-help$/.test(key) ? liaisonAdditions(opts.liaisonJsx ?? '', { isWord }) : { before: [], after: [] };
+    const extraParts = /liaison-help$/.test(key) ? liaisonAdditions(opts.liaisonJsx ?? '', { isWord, meanings: opts.meanings }) : { before: [], after: [] };
     fresh = guideFromL(g, key, { extraParts, description: mark(old.description, 'quoted'), isWord });
     sourceOf = { title: g.title, description: old.description, can_do: g.can, minutes: g.min, line: g.line, checks: g.check };
     if (unmark(fresh.title) !== String(old.title).trim()) add('title', 'text_changed', `"${old.title}" is L's title "${unmark(fresh.title)}"`);
