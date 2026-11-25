@@ -85,7 +85,9 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
 
   if (typeof item.id !== 'string' || !ID_PATTERN.test(item.id)) bad('id', 'id_invalid', `id must match ${ID_PATTERN}`);
 
-  if (item.type === 'translate' && unitIndex !== 1) bad('type', 'translate_outside_unit1', 'translate items are allowed in Unit 1 only');
+  // A checker finding, not a load failure (spec 5.4): a warning, which Task 10 counts under the issue budget.
+  if (item.type === 'translate' && unitIndex !== 1)
+    ps.push(problem(file, `${path}.type`, 'translate_outside_unit1', 'a bare English sentence to translate, outside Unit 1; rewrite it over time (Jake, 2026-11-25)', 'warning'));
 
   // Plain string fields.
   for (const field of Object.keys(FIELD_ROLES[item.type])) {

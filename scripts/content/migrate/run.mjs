@@ -218,8 +218,11 @@ async function modules(args, flags) {
   const newRecords = {};
   let itemCount = 0;
   let heldCount = 0;
+  const byUnit = [];
 
   for (const [ui, unit] of outline.units.entries()) {
+    const counts = { unit: `${unit.unit_key} ${unit.name}`, translate: 0, respond: 0 };
+    byUnit.push(counts);
     for (const key of unit.entries) {
       const old = configs.get(key);
       if (!old) continue; // written in content/ only, with no source in src/lessons/modules/
@@ -242,6 +245,11 @@ async function modules(args, flags) {
           lines.push({ module_key: key, path: p.path, kind: 'answer_fails', detail: `${item.id}: ${p.message}` });
       });
       converted.set(key, r.mod);
+      const framed = new Set(r.report.filter((l) => l.kind === 'framed_respond').map((l) => l.path));
+      r.mod.items.forEach((item, i) => {
+        if (item.type === 'translate') counts.translate += 1;
+        else if (item.type === 'respond' && framed.has(`items[${i}]`)) counts.respond += 1;
+      });
       newRecords[key] = r.record;
       itemCount += r.mod.items.length;
       heldCount += r.held.length;
@@ -274,7 +282,7 @@ async function modules(args, flags) {
   for (const [key, mod] of converted) status |= writeFile(join(CONTENT_ROOT, 'modules', `${key}.json`), json(mod), always);
   status |= writeFile(join(CONTENT_ROOT, 'legacy', 'live-ids.json'), json(sorted(map)), always);
   status |= writeFile(recordFile, json(sorted(newRecords)), always);
-  status |= writeFile(join(CONTENT_ROOT, 'migration-report.md'), renderReport(lines, { modules: converted.size, items: itemCount, held: heldCount }), always);
+  status |= writeFile(join(CONTENT_ROOT, 'migration-report.md'), renderReport(lines, { modules: converted.size, items: itemCount, held: heldCount, byUnit }), always);
   const byKind = new Map();
   for (const l of lines) byKind.set(l.kind, (byKind.get(l.kind) || 0) + 1);
   console.log(`modules: ${converted.size} files, ${itemCount} items, ${heldCount} held out`);

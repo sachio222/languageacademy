@@ -13,7 +13,7 @@ import { markFrench, unmark } from './mark-french.mjs';
 import { makeItemId, makeConceptId, makeTableId } from '../item-ids.mjs';
 import { proposeWordId, rememberWord } from '../word-ids.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
-import { HOLDS } from './holds.mjs';
+import { HOLDS, REWRITES } from './holds.mjs';
 
 const { buildExercises } = await import(new URL('../../../src/lessons/moduleBuilder.js', import.meta.url).href);
 
@@ -222,7 +222,12 @@ export function convertModule(old, opts = {}) {
       held.push({ ref: src.ref, reason: hold.reason, answer: answerOf, prompt: src.live?.prompt ?? src.raw?.prompt ?? src.raw?.text });
       continue;
     }
-    const r = src.shape === 'sentence' ? convertSentence(src, ctx) : src.shape === 'fillblank' ? convertFillblank(src, ctx) : convertTyped(src, nm, its.get(src.ref), ctx);
+    const rewrite = REWRITES.find((w) => w.module_key === key && w.ref === src.ref);
+    if (rewrite && rewrite.answer !== answerOf)
+      throw new Error(`holds.mjs: ${key} ${src.ref} now has the answer "${answerOf}", not "${rewrite.answer}"; update the rewrite`);
+    const r = rewrite
+      ? { item: clone(rewrite.item), lines: [{ path: src.ref, kind: 'rewritten', detail: rewrite.ruling }] }
+      : src.shape === 'sentence' ? convertSentence(src, ctx) : src.shape === 'fillblank' ? convertFillblank(src, ctx) : convertTyped(src, nm, its.get(src.ref), ctx);
     if (r.held) {
       held.push({ ref: src.ref, reason: r.held, answer: answerOf, prompt: src.live?.prompt ?? src.raw?.prompt });
       continue;

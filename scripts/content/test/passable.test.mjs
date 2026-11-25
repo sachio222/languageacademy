@@ -51,9 +51,24 @@ test('an answer the checker rejects is reported at answer', () => {
 });
 
 test('mistake that passes', () => {
-  const item = { id: 'a', type: 'respond', situation: 's', answer: 'je suis fatigué', mistakes: [{ answer: 'je suis fatigue', feedback: 'Add the accent.' }, { answer: 'je suis fatiguée', feedback: 'x' }] };
+  // "je suis fatigué !" differs from the answer by a mark only, which the live checker drops.
+  const item = { id: 'a', type: 'respond', situation: 's', answer: 'je suis fatigué', mistakes: [{ answer: 'je suis fatigué !', feedback: 'x' }, { answer: 'je suis fatiguée', feedback: 'x' }] };
   const ps = run(item);
   assert.deepEqual(ps.map((p) => [p.code, p.path]), [['mistake_accepted', 'items[0].mistakes[0].answer']]);
+});
+
+test('a mistake that differs only by accents is not mistake_accepted', () => {
+  // The live checker passes "ou" for "où" with a warning; L grades it apart and shows the feedback.
+  assert.equal(live('où', 'ou'), true);
+  const typed = { id: 'a', type: 'translate', prompt: 'where', answer: 'où', mistakes: [{ answer: 'ou', feedback: 'Need the accent: où, not ou (or)' }] };
+  assert.deepEqual(run(typed), []);
+  const viaAccept = { id: 'a', type: 'respond', situation: 's', answer: 'le côté', accept: ['le cote'], mistakes: [{ answer: 'le coté', feedback: 'x' }] };
+  assert.deepEqual(run(viaAccept), []);
+  const gap = { id: 'g', type: 'gapfill', text: 'Bien ___ !', blanks: [{ answer: 'sûr' }], mistakes: [{ answer: 'sur', feedback: 'Accent: sûr' }] };
+  assert.deepEqual(run(gap), []);
+  // Same spelling as an accepted answer is still a mistake the checker accepts.
+  const same = { id: 'a', type: 'respond', situation: 's', answer: 'elles sont chez Ladurée', accept: ['elles sont à Ladurée'], mistakes: [{ answer: 'elles sont à Ladurée', feedback: 'x' }] };
+  assert.deepEqual(run(same).map((p) => p.code), ['mistake_accepted']);
 });
 
 test('meaning items are checked on the native answer', () => {

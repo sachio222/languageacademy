@@ -19,6 +19,12 @@ const words = (s) => normText(s).split(' ').filter(Boolean);
 
 // Does this converted item ask the live exercise? Same answer, and the live prompt inside what the item shows.
 function answersMatch(item, ex) {
+  // A choice item written in place of a typed exercise (holds.mjs REWRITES): its right option holds the old answer.
+  if (item.type === 'choice') {
+    const right = new Set(words(unmark((item.options || []).find((o) => o.right)?.text ?? '')));
+    const live = words(ex.expectedAnswer);
+    return live.length > 0 && live.every((w) => right.has(w));
+  }
   if (item.type === 'gapfill') {
     const live = new Set(words(ex.expectedAnswer));
     return (item.blanks || []).every((b) => words(b.answer).every((w) => live.has(w)));

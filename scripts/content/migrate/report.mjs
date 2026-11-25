@@ -9,7 +9,8 @@ const SECTIONS = [
   ['type_guess', 'Item types to confirm', 'The classifier had no clear rule for these items, so the type is its best guess.'],
   ['blank_misplaced', 'Practice blanks that were in the wrong place', 'The practice screen shows a blank in place of the character at its position, so these blanks cut a word, dropped a mark or sat after the full stop. Each is placed where the language-graph checker reads it.'],
   ['position_word', 'Position words', 'Learner text that names a module, unit or reading by number. The source says it this way; the module file names the subject instead, and each line fixed so says "fixed by hand".'],
-  ['translate_to_respond', 'Translation prompts written as respond items', 'English-to-French translation items are allowed in Unit 1 lessons only. These became respond items, with the English shown as the situation.'],
+  ['rewritten', 'Exercises rewritten as Jake ruled', 'No conversion of today’s text fits these, so each is written as Jake ruled, in its place.'],
+  ['framed_respond', 'English prompts written as respond items', 'An English prompt framed by its instruction ("Say \'you would do it\' (informal)") or by a context note ("I know Marie (person)") is a respond item, with the whole frame as the situation, since the context does the teaching (Jake, 2026-11-25). A bare English sentence is a translate item; outside Unit 1 each is a checker warning, rewritten over time.'],
   ['hand_edit', 'Hand edits kept', 'The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.'],
   ['source_changed', 'Source changes since the last run', 'The source changed, so these parts were converted again; their ids stay.'],
   ['source_added', 'Source exercises added since the last run', ''],
@@ -24,7 +25,7 @@ const count = (lines, kind) => lines.filter((l) => l.kind === kind).length;
 
 // Lines that repeat one mechanical change are listed once per module, with their paths.
 function groupOf(l) {
-  if (l.kind === 'translate_to_respond') return /^[^:]+: ([^:]+):/.exec(l.detail)?.[1] ?? null;
+  if (l.kind === 'framed_respond') return /framed by its instruction/.test(l.detail) ? 'framed by its instruction' : 'framed by a context note';
   if (l.kind === 'dropped_field' && /: generic instruction "/.test(l.detail)) return `generic instruction dropped (${/generic instruction "(.*)"$/.exec(l.detail)[1].replace(/(["'‘“]).*(["'’”])/, '$1…$2')})`;
   if (l.kind === 'text_changed' && /prefix dropped/.test(l.detail)) return `"${/"([^"]*)" prefix/.exec(l.detail)[1]}" prefix dropped; the sentence is the text`;
   if (l.kind === 'text_changed' && /written as the gloss/.test(l.detail)) return 'instruction written as the gloss ("Complete:" and quotes dropped)';
@@ -33,7 +34,7 @@ function groupOf(l) {
 
 /**
  * @param lines   ReportLine[] ({ module_key, path, kind, detail }), course order
- * @param summary { modules, items, held } numbers for the opening paragraph
+ * @param summary { modules, items, held, byUnit?: [{ unit, translate, respond }] }
  */
 export function renderReport(lines, summary) {
   const out = [];
@@ -45,6 +46,12 @@ export function renderReport(lines, summary) {
     '',
   );
   out.push('This file is written again on every run. Fixes go in the module files, never here.', '');
+  if (summary.byUnit?.length) {
+    out.push('English-to-French prompts by unit: a bare English sentence is a `translate` item, a framed one a `respond` item.', '');
+    out.push('| Unit | Bare `translate` | Framed `respond` |', '|---|---|---|');
+    for (const u of summary.byUnit) out.push(`| ${u.unit} | ${u.translate} | ${u.respond} |`);
+    out.push('');
+  }
   out.push('| Section | Lines |', '|---|---|');
   for (const [kind, heading] of SECTIONS) if (count(lines, kind)) out.push(`| ${heading} | ${count(lines, kind)} |`);
   out.push('');

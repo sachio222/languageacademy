@@ -31,7 +31,11 @@ test('gapfill blank count', () => {
 test('translate outside unit 1', () => {
   const item = { id: 'i-a', type: 'translate', prompt: 'I am', answer: 'je suis' };
   assert.deepEqual(codes(item, { unitIndex: 2 }), ['translate_outside_unit1']);
+  // A checker finding (spec 5.4), so a warning: it never stops a load.
+  assert.deepEqual(validateItem(item, { ...ctx, unitIndex: 2 }).map((p) => p.severity), ['warning']);
+  assert.deepEqual(codes(item, { unitIndex: 1 }), []);
 });
+
 
 test('unknown item field', () => {
   const ps = validateItem({ id: 'a', type: 'translate', prompt: 'x', answer: 'y', expectedAnswer: 'z' }, ctx);

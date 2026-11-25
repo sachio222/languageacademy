@@ -223,13 +223,20 @@ export function convertTyped(src, nm, it, ctx) {
     return finish({ type: 'meaning', shown, answer });
   }
 
+  // Jake, 2026-11-25: a bare English sentence to say in French is `translate` (outside Unit 1 a checker warning,
+  // rewritten over time); a prompt framed by its instruction ("Say 'you would do it' (informal)") or by a context
+  // note ("I know Marie (person)") stays `respond`, with the whole frame as the situation, since the context
+  // teaches. Same split in Unit 1.
   const [cls, why] = classifyItem(nm, it);
   const guess = (detail) => add(src.ref, 'type_guess', `classifier: ${cls} (${why}); ${detail}`);
-  if (why === 'English prompt with a French answer') guess('written as respond, the instruction as the situation');
-  const scene = () => {
-    const out = { type: 'respond', situation: isStr(instruction) ? mark(instruction.trim(), 'quoted') : mark(String(prompt).trim(), 'spans') };
-    if (isStr(instruction) && isStr(prompt)) out.cue = mark(prompt.trim(), 'spans');
-    return out;
+  const framed = () => {
+    if (isStr(instruction) && !isGenericInstruction(instruction, prompt)) {
+      const out = { type: 'respond', situation: mark(instruction.trim(), 'quoted') };
+      if (isStr(prompt)) out.cue = mark(prompt.trim(), 'spans');
+      return out;
+    }
+    if (isStr(instruction)) add(`${src.ref}.instruction`, 'dropped_field', `generic instruction "${instruction}"`);
+    return { type: 'respond', situation: mark(String(prompt).trim(), 'spans') };
   };
 
   if (cls === 'other') {
@@ -237,25 +244,17 @@ export function convertTyped(src, nm, it, ctx) {
     if (french && isStr(instruction)) return finish({ type: 'transform', instruction: mark(instruction.trim(), 'quoted'), shown: prompt.trim(), answer });
     if (!isStr(prompt)) return { held: `no prompt and a French answer "${answer}"; nothing tells the learner what to write` };
     guess(french ? 'French prompt with no instruction, written as respond' : 'English or mixed prompt, written as respond (instruction as situation, prompt as cue)');
-    return finish(scene());
+    return finish(framed());
   }
-  if (cls === 'situation') return finish(scene());
-
-  // translate
-  const generic = isGenericInstruction(instruction, prompt);
-  if (!isStr(prompt)) return finish(scene());
-  if (generic && ctx.unitIndex === 1 && ctx.kind === 'lesson') {
-    if (isStr(instruction)) add(`${src.ref}.instruction`, 'dropped_field', `generic instruction "${instruction}"`);
-    return finish({ type: 'translate', prompt: mark(prompt.trim(), 'spans') });
+  if (!isStr(prompt)) return finish(framed());
+  const bare = isGenericInstruction(instruction, prompt) && !/\([^)]*\)/.test(prompt);
+  if (why === 'English prompt with a French answer') guess(bare ? 'written as translate' : 'written as respond (framed)');
+  if (cls === 'situation' || !bare) {
+    add(src.ref, 'framed_respond', isStr(instruction) && !isGenericInstruction(instruction, prompt) ? `framed by its instruction "${instruction}"` : `framed by a context note in "${prompt}"`);
+    return finish(framed());
   }
-  const where = ctx.kind === 'unit_exam' ? 'unit exams have no translate step' : ctx.unitIndex === 1 ? 'the instruction holds context a translate item has no field for' : 'translate is Unit 1 only';
-  if (generic) {
-    if (isStr(instruction)) add(`${src.ref}.instruction`, 'dropped_field', `generic instruction "${instruction}"`);
-    add(src.ref, 'translate_to_respond', `${where}: the English prompt "${prompt}" is the situation`);
-    return finish({ type: 'respond', situation: mark(prompt.trim(), 'spans') });
-  }
-  add(src.ref, 'translate_to_respond', `${where}: instruction as situation, prompt "${prompt}" as cue`);
-  return finish(scene());
+  if (isStr(instruction)) add(`${src.ref}.instruction`, 'dropped_field', `generic instruction "${instruction}"`);
+  return finish({ type: 'translate', prompt: mark(prompt.trim(), 'spans') });
 }
 
 function isGenericMeaningInstruction(instruction, shown) {

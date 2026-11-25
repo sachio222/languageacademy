@@ -19,7 +19,7 @@ export const STEPS_BY_KIND = {
 
 // Spec 5.4, "Steps it may appear in". choice: "any scored step" that holds authored items.
 export const TYPE_STEPS = {
-  translate: ['writing', 'lesson-exam'],
+  translate: ['writing', 'lesson-exam', 'exam-questions'], // a unit exam asks translations too; outside Unit 1 each is a warning
   respond: ['writing', 'lesson-exam', 'exam-questions'],
   transform: ['writing', 'lesson-exam', 'practice-exercises', 'exam-questions'],
   gapfill: ['writing', 'lesson-exam', 'practice-exercises', 'exam-questions'],

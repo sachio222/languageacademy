@@ -1,6 +1,6 @@
 // assembleCourse: outline + module files -> Course (spec 7). Pure: no fs, so Vite can import it.
 // Collects every problem from every file before throwing one ContentError.
-import { problem, ContentError } from './problems.mjs';
+import { problem, ContentError, isWarning } from './problems.mjs';
 import { validateModule, defaultSteps } from './schema/module.mjs';
 import { validateOutline } from './outline.mjs';
 import { checkItemPassable } from './passable.mjs';
@@ -54,8 +54,8 @@ export function assembleCourse(outline, files, opts = {}) {
       problems.push(problem(file, 'module_key', 'module_key_mismatch', `module_key ${json.module_key} does not match the file name ${key}.json`));
     const own = validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null });
     problems.push(...own);
-    // Only a module whose items are well formed can have its answers checked.
-    if (opts.checkAnswer && own.length === 0 && isObj(json) && Array.isArray(json.items))
+    // Only a module whose items are well formed can have its answers checked; a warning does not stop it.
+    if (opts.checkAnswer && !own.some((p) => !isWarning(p)) && isObj(json) && Array.isArray(json.items))
       json.items.forEach((item, i) => problems.push(...checkItemPassable(item, opts.checkAnswer, { file, path: `items[${i}]` })));
   }
 
@@ -64,8 +64,11 @@ export function assembleCourse(outline, files, opts = {}) {
   const modulesByKey = new Map([...sources].map(([k, s]) => [k, s.parsed && isObj(s.json) ? s.json : null]));
   problems.push(...validateOutline(outline, modulesByKey, { file: outlineFile }));
 
-  if (problems.length) throw new ContentError(problems);
-  return build(outline, sources);
+  // Warnings never stop a load: the course carries them, and so does an error thrown for other problems.
+  const warnings = problems.filter(isWarning);
+  const errors = problems.filter((p) => !isWarning(p));
+  if (errors.length) throw new ContentError(errors, warnings);
+  return Object.assign(build(outline, sources), { warnings });
 }
 
 // module_key -> 1-based unit index, from the first listing (the outline check reports any second one).

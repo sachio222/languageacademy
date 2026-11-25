@@ -27,6 +27,24 @@ function rootWithMissingFiles(t) {
   return root;
 }
 
+test('a translate item outside Unit 1 is a warning, printed and counted', (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-content-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(MINI_ROOT, root, { recursive: true });
+  const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
+  // The mini lesson's translate items, moved into unit2.
+  outline.units[0].entries = outline.units[0].entries.filter((k) => k !== '2024-01-02-etre');
+  outline.units[1].entries.unshift('2024-01-02-etre');
+  writeFileSync(join(root, 'course.json'), JSON.stringify(outline));
+  const r = run('validate', '--root', root);
+  assert.equal(r.status, 0, r.stderr);
+  const out = r.stdout.trim().split('\n');
+  assert.ok(out.includes('warnings:'), r.stdout);
+  assert.ok(out.some((l) => /^warning .*2024-01-02-etre\.json:items\[\d+\]\.type translate_outside_unit1 /.test(l)), r.stdout);
+  assert.match(out.at(-2), /^\d+ warnings?: translate_outside_unit1 \d+$/);
+  assert.equal(out.at(-1), 'ok 6 modules');
+});
+
 test('missing files fail without --allow', (t) => {
   const r = run('validate', '--root', rootWithMissingFiles(t));
   assert.equal(r.status, 1);

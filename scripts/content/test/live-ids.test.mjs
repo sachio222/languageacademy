@@ -57,6 +57,18 @@ test('an item added on the branch has no live id', () => {
   assert.deepEqual(unmatched, []);
 });
 
+test('a choice item written in place of a typed exercise keeps its live id', () => {
+  const mod = {
+    module_key: 'm',
+    items: [
+      { id: 'i-for-facts', type: 'choice', question: 'When do you use {savoir}?', options: [{ text: 'For facts and skills', right: true }, { text: 'For people and places you are familiar with' }] },
+      { id: 'i-for-people', type: 'choice', question: 'When do you use {connaître}?', options: [{ text: 'For people and places', right: true }, { text: 'For facts and skills' }] },
+    ],
+  };
+  const lesson = { moduleKey: 'm', concepts: [], exercises: [{ id: 'm.1', prompt: 'savoir is for...', expectedAnswer: 'facts' }, { id: 'm.2', prompt: 'connaître is for...', expectedAnswer: 'people' }] };
+  assert.deepEqual(liveIdMap([lesson], new Map([['m', mod]])).m.items, { 'm.1': 'i-for-facts', 'm.2': 'i-for-people' });
+});
+
 test('a live exercise with no converted item is listed', () => {
   const { mod } = convertModule(old, { unitKey: 'unit2', unitIndex: 2 });
   const lesson = live(old);

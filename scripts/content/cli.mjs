@@ -2,6 +2,8 @@
 // or every problem as `file:path code message` and a count by code, and exits 1.
 // --allow <code> (until plan Task 7 writes every module file; Task 7 removes it): problems with that code are
 // still printed, to stdout, and counted, but do not fail the run. Any other problem still fails it.
+// Warnings (translate outside Unit 1) never fail a run: a warnings section lists each one as `warning <problem>`
+// and a count by code, before the closing line.
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadCourse, CONTENT_ROOT } from './load.mjs';
@@ -14,6 +16,12 @@ const countByCode = (ps) => {
 };
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 const line = (p) => `${p.file}:${p.path} ${p.code} ${p.message}`;
+function printWarnings(warnings) {
+  if (!warnings?.length) return;
+  console.log('warnings:');
+  for (const p of warnings) console.log(`warning ${line(p)}`);
+  console.log(`${plural(warnings.length, 'warning')}: ${countByCode(warnings)}`);
+}
 
 function validate(args) {
   const allowed = new Set();
@@ -42,10 +50,12 @@ function validate(args) {
   }
   try {
     const course = loadCourse({ root });
+    printWarnings(course.warnings);
     console.log(`ok ${course.modules.size} modules`);
     return 0;
   } catch (e) {
     if (!(e instanceof ContentError)) throw e;
+    printWarnings(e.warnings);
     const allow = e.problems.filter((p) => allowed.has(p.code));
     const fail = e.problems.filter((p) => !allowed.has(p.code));
     for (const p of allow) console.log(`allowed ${line(p)}`);

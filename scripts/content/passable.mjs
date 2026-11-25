@@ -25,6 +25,23 @@ export function defaultCheckAnswer(item, typed, ctx = {}) {
   return isExerciseComplete(runTests(ex, typed));
 }
 
+// Spelling as a learner types it, accents kept: lowercase, straight apostrophes, single spaces, no end mark.
+const plain = (s) =>
+  String(s)
+    .toLowerCase()
+    .normalize('NFC')
+    .replace(/[’ʼ‘`]/g, "'")
+    .replace(/\s+/g, ' ')
+    .replace(/[\s.!?…]+$/, '')
+    .trim();
+const unaccented = (s) => plain(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+// A mistake that differs from a right answer only by accents ("ou" for "où"). The live checker folds accents and
+// passes it with a warning; the new version (L) grades it apart and shows the mistake's feedback, so it teaches.
+export function accentOnly(mistake, rights) {
+  return rights.some((r) => plain(mistake) !== plain(r) && unaccented(mistake) === unaccented(r));
+}
+
 // Pick-one items are chosen on screen, not typed.
 const isPickOne = (item) => item.type === 'choice' || (item.type === 'comprehension' && item.options !== undefined);
 
@@ -32,7 +49,8 @@ const isPickOne = (item) => item.type === 'choice' || (item.type === 'comprehens
  * @param item         a valid content item (validateItem found nothing)
  * @param checkAnswer  (item, typed, { blank? }) => boolean
  * @param where        { file, path } with path the item's path, e.g. "items[3]"
- * @returns Problem[]  item_unpassable (answer or accept fails), mistake_accepted (a mistake passes)
+ * @returns Problem[]  item_unpassable (answer or accept fails), mistake_accepted (a mistake passes; one that
+ *                     differs from a right answer only by accents is skipped, see accentOnly)
  */
 export function checkItemPassable(item, checkAnswer, { file, path }) {
   if (isPickOne(item)) return [];
@@ -49,7 +67,9 @@ export function checkItemPassable(item, checkAnswer, { file, path }) {
       });
     });
     // A mistake belongs to no one blank, so it is a problem only when it passes every blank.
+    const rights = item.blanks.flatMap((b) => [b.answer, ...(b.accept || [])]);
     (item.mistakes || []).forEach((m, i) => {
+      if (accentOnly(m.answer, rights)) return;
       if (item.blanks.every((_, k) => passes(m.answer, { blank: k })))
         bad(`mistakes[${i}].answer`, 'mistake_accepted', `the checker accepts the mistake "${m.answer}"`);
     });
@@ -60,7 +80,9 @@ export function checkItemPassable(item, checkAnswer, { file, path }) {
   (item.accept || []).forEach((a, i) => {
     if (!passes(a)) bad(`accept[${i}]`, 'item_unpassable', `the checker rejects the accepted answer "${a}"`);
   });
+  const rights = [item.answer, ...(item.accept || [])];
   (item.mistakes || []).forEach((m, i) => {
+    if (accentOnly(m.answer, rights)) return;
     if (passes(m.answer)) bad(`mistakes[${i}].answer`, 'mistake_accepted', `the checker accepts the mistake "${m.answer}"`);
   });
   return ps;

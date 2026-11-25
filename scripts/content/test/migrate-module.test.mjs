@@ -209,13 +209,29 @@ test('position words reported', () => {
   assert.equal(pw[0].path, 'concepts[0].term');
 });
 
-test('translate outside Unit 1 becomes respond', () => {
-  const old = base({ exerciseConfig: { type: 'custom', items: [{ instruction: 'Translate to French', prompt: 'I am tired', expectedAnswer: 'je suis fatigué' }] } });
+test('a bare English sentence is translate; a framed one is respond (Jake, 2026-11-25)', () => {
+  const old = base({
+    exerciseConfig: {
+      type: 'custom',
+      items: [
+        { instruction: 'Translate to French', prompt: 'I have this book', expectedAnswer: "j'ai ce livre" },
+        { instruction: "Say 'you would do it' (informal)", prompt: 'you would do it (informal)', expectedAnswer: 'tu le ferais' },
+        { instruction: 'Translate to French', prompt: 'I know Marie (person)', expectedAnswer: 'je connais Marie' },
+        { instruction: 'Ask your friend for the cat politely', prompt: "I'd like the cat, please", expectedAnswer: "je voudrais le chat, s'il te plaît" },
+      ],
+    },
+  });
   const { mod, report } = convertModule(old, { unitKey: 'unit4', unitIndex: 4 });
-  assert.equal(mod.items[0].type, 'respond');
-  assert.equal(mod.items[0].situation, 'I am tired');
-  assert.equal(lines(report, 'translate_to_respond').length, 1);
-  assert.deepEqual(validateModule(mod, { unitIndex: 4 }), []);
+  assert.deepEqual(mod.items.map((i) => i.type), ['translate', 'respond', 'respond', 'respond']);
+  assert.equal(mod.items[0].prompt, 'I have this book');
+  // The whole frame is the situation.
+  assert.equal(unmark(mod.items[1].situation), "Say 'you would do it' (informal)");
+  assert.equal(mod.items[1].cue, 'you would do it (informal)');
+  assert.equal(mod.items[2].situation, 'I know Marie (person)');
+  assert.equal(lines(report, 'framed_respond').length, 3);
+  // Outside Unit 1 the bare sentence is a warning, never a load failure.
+  const ps = validateModule(mod, { unitIndex: 4 });
+  assert.deepEqual(ps.map((p) => [p.code, p.severity]), [['translate_outside_unit1', 'warning']]);
 });
 
 test('explanation becomes the hint only where there is none', () => {
@@ -251,7 +267,7 @@ test('unit exam: no title, no teaching, tests declared', () => {
   assert.equal(mod.title, undefined);
   assert.equal(mod.concepts, undefined);
   assert.deepEqual(mod.tests, { constructions: [] });
-  assert.equal(mod.items[0].type, 'respond');
+  assert.equal(mod.items[0].type, 'translate');
   const dropped = lines(report, 'dropped_field').map((l) => l.path);
   for (const p of ['title', 'unitNumber', 'concepts[0]']) assert.ok(dropped.includes(p), `${p} in ${dropped}`);
   assert.deepEqual(validateModule(mod, { unitIndex: 1 }), []);
