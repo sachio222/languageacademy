@@ -239,8 +239,8 @@
   "items": [
     {
       "id": "i-je-dors",
-      "type": "respond",
-      "situation": "I sleep",
+      "type": "translate",
+      "prompt": "I sleep",
       "answer": "je dors",
       "hint": "dormir for je"
     },
@@ -253,22 +253,22 @@
     },
     {
       "id": "i-il-dort",
-      "type": "respond",
-      "situation": "he sleeps",
+      "type": "translate",
+      "prompt": "he sleeps",
       "answer": "il dort",
       "hint": "dormir for il - drop the -s"
     },
     {
       "id": "i-je-travaille",
-      "type": "respond",
-      "situation": "I work",
+      "type": "translate",
+      "prompt": "I work",
       "answer": "je travaille",
       "hint": "travailler for je"
     },
     {
       "id": "i-nous-travaillons",
-      "type": "respond",
-      "situation": "we work",
+      "type": "translate",
+      "prompt": "we work",
       "answer": "nous travaillons",
       "hint": "travailler for nous"
     },
@@ -281,29 +281,29 @@
     },
     {
       "id": "i-je-vis",
-      "type": "respond",
-      "situation": "I live",
+      "type": "translate",
+      "prompt": "I live",
       "answer": "je vis",
       "hint": "vivre for je - irregular"
     },
     {
       "id": "i-elle-vit",
-      "type": "respond",
-      "situation": "she lives",
+      "type": "translate",
+      "prompt": "she lives",
       "answer": "elle vit",
       "hint": "vivre for elle - same as je but no -s"
     },
     {
       "id": "i-ils-vivent",
-      "type": "respond",
-      "situation": "they live",
+      "type": "translate",
+      "prompt": "they live",
       "answer": "ils vivent",
       "hint": "vivre for ils - add -ent to viv-"
     },
     {
       "id": "i-tu-dors-bien",
-      "type": "respond",
-      "situation": "Do you sleep well?",
+      "type": "translate",
+      "prompt": "Do you sleep well?",
       "answer": "tu dors bien?",
       "accept": [
         "est-ce que tu dors bien?"
@@ -323,29 +323,29 @@
     },
     {
       "id": "i-je-vis-a-paris",
-      "type": "respond",
-      "situation": "I live in Paris",
+      "type": "translate",
+      "prompt": "I live in Paris",
       "answer": "je vis à Paris",
       "hint": "je vis + à + city"
     },
     {
       "id": "i-je-travaille-dur",
-      "type": "respond",
-      "situation": "I work hard",
+      "type": "translate",
+      "prompt": "I work hard",
       "answer": "je travaille dur",
       "hint": "{je travaille + dur}"
     },
     {
       "id": "i-je-dors-huit-heures",
-      "type": "respond",
-      "situation": "I sleep 8 hours",
+      "type": "translate",
+      "prompt": "I sleep 8 hours",
       "answer": "je dors huit heures",
       "hint": "{je dors + huit heures}"
     },
     {
       "id": "i-nous-vivons-notre-vie",
-      "type": "respond",
-      "situation": "We live our life",
+      "type": "translate",
+      "prompt": "We live our life",
       "answer": "nous vivons notre vie",
       "accept": [
         "on vit notre vie"

@@ -181,8 +181,8 @@
     },
     {
       "id": "discourse-markers-2",
-      "type": "respond",
-      "situation": "Actually, I don't know",
+      "type": "translate",
+      "prompt": "Actually, I don't know",
       "answer": "en fait, je ne sais pas",
       "hint": "en fait + comma + je ne sais pas"
     },
@@ -220,15 +220,15 @@
     },
     {
       "id": "discourse-markers-7",
-      "type": "respond",
-      "situation": "almost",
+      "type": "translate",
+      "prompt": "almost",
       "answer": "presque",
       "hint": "Nearly, not quite"
     },
     {
       "id": "discourse-markers-8",
-      "type": "respond",
-      "situation": "maybe",
+      "type": "translate",
+      "prompt": "maybe",
       "answer": "peut-être",
       "hint": "Perhaps, possibly - with hyphen",
       "mistakes": [
@@ -240,8 +240,8 @@
     },
     {
       "id": "discourse-markers-9",
-      "type": "respond",
-      "situation": "definitely",
+      "type": "translate",
+      "prompt": "definitely",
       "answer": "certainement",
       "hint": "Certainly, for sure",
       "mistakes": [
@@ -253,8 +253,8 @@
     },
     {
       "id": "discourse-markers-10",
-      "type": "respond",
-      "situation": "only",
+      "type": "translate",
+      "prompt": "only",
       "answer": "seulement",
       "hint": "Just, merely",
       "mistakes": [
@@ -266,36 +266,42 @@
     },
     {
       "id": "discourse-markers-11",
-      "type": "respond",
-      "situation": "probably",
+      "type": "translate",
+      "prompt": "probably",
       "answer": "probablement",
       "hint": "Likely, most likely"
     },
     {
       "id": "discourse-markers-12",
-      "type": "respond",
-      "situation": "surely",
+      "type": "translate",
+      "prompt": "surely",
       "answer": "sûrement",
       "hint": "Certainly, definitely"
     },
     {
       "id": "discourse-markers-13",
-      "type": "respond",
-      "situation": "of course",
+      "type": "translate",
+      "prompt": "of course",
       "answer": "bien sûr",
-      "hint": "{bien + sûr}"
+      "hint": "{bien + sûr}",
+      "mistakes": [
+        {
+          "answer": "bien sur",
+          "feedback": "Use accent: bien sûr"
+        }
+      ]
     },
     {
       "id": "discourse-markers-17",
-      "type": "respond",
-      "situation": "I am almost ready",
+      "type": "translate",
+      "prompt": "I am almost ready",
       "answer": "je suis presque prêt",
       "hint": "{je suis + presque + prêt}"
     },
     {
       "id": "discourse-markers-18",
-      "type": "respond",
-      "situation": "Maybe he understands",
+      "type": "translate",
+      "prompt": "Maybe he understands",
       "answer": "peut-être il comprend",
       "hint": "{peut-être + il comprend}"
     }

@@ -107,8 +107,8 @@
   "items": [
     {
       "id": "i-je-ne-peux-pas",
-      "type": "respond",
-      "situation": "I can't",
+      "type": "translate",
+      "prompt": "I can't",
       "answer": "je ne peux pas",
       "hint": "Negate '{je peux}'",
       "mistakes": [
@@ -136,8 +136,8 @@
     },
     {
       "id": "i-il-ne-veut-pas",
-      "type": "respond",
-      "situation": "he doesn't want",
+      "type": "translate",
+      "prompt": "he doesn't want",
       "answer": "il ne veut pas",
       "hint": "Negate '{il veut}'"
     },
@@ -151,8 +151,8 @@
     },
     {
       "id": "i-elle-ne-voit-pas",
-      "type": "respond",
-      "situation": "she doesn't see",
+      "type": "translate",
+      "prompt": "she doesn't see",
       "answer": "elle ne voit pas",
       "hint": "Negate '{elle voit}'"
     },
@@ -172,15 +172,15 @@
     },
     {
       "id": "i-il-n-a-jamais",
-      "type": "respond",
-      "situation": "he never has",
+      "type": "translate",
+      "prompt": "he never has",
       "answer": "il n'a jamais",
       "hint": "{il n'a + jamais}"
     },
     {
       "id": "i-nous-ne-voulons-jamais",
-      "type": "respond",
-      "situation": "we never want",
+      "type": "translate",
+      "prompt": "we never want",
       "answer": "nous ne voulons jamais",
       "hint": "{nous ne voulons + jamais}"
     },
@@ -200,8 +200,8 @@
     },
     {
       "id": "i-je-ne-peux-pas-2",
-      "type": "respond",
-      "situation": "I can't see it",
+      "type": "translate",
+      "prompt": "I can't see it",
       "answer": "je ne peux pas le voir",
       "accept": [
         "je ne le vois pas"
@@ -226,8 +226,8 @@
     },
     {
       "id": "i-nous-n-allons-pas",
-      "type": "respond",
-      "situation": "we cannot go",
+      "type": "translate",
+      "prompt": "we cannot go",
       "answer": "nous n'allons pas",
       "accept": [
         "nous ne pouvons pas aller"
@@ -236,8 +236,8 @@
     },
     {
       "id": "i-elle-ne-voit-jamais",
-      "type": "respond",
-      "situation": "she never sees",
+      "type": "translate",
+      "prompt": "she never sees",
       "answer": "elle ne voit jamais",
       "hint": "{elle ne voit + jamais}"
     },
@@ -254,15 +254,15 @@
     },
     {
       "id": "i-il-ne-fait-jamais",
-      "type": "respond",
-      "situation": "he never does that",
+      "type": "translate",
+      "prompt": "he never does that",
       "answer": "il ne fait jamais ça",
       "hint": "{il ne fait jamais + ça}"
     },
     {
       "id": "i-nous-ne-faisons-pas",
-      "type": "respond",
-      "situation": "we don't make this",
+      "type": "translate",
+      "prompt": "we don't make this",
       "answer": "nous ne faisons pas ça",
       "hint": "Negate '{nous faisons ça}'"
     }

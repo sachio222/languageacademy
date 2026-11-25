@@ -33,8 +33,8 @@
     },
     {
       "id": "i-je-viens",
-      "type": "respond",
-      "situation": "I come",
+      "type": "translate",
+      "prompt": "I come",
       "answer": "je viens",
       "hint": "venir conjugated with je"
     },
@@ -47,15 +47,15 @@
     },
     {
       "id": "i-il-part",
-      "type": "respond",
-      "situation": "he leaves",
+      "type": "translate",
+      "prompt": "he leaves",
       "answer": "il part",
       "hint": "partir conjugated with il"
     },
     {
       "id": "i-je-vois",
-      "type": "respond",
-      "situation": "I see",
+      "type": "translate",
+      "prompt": "I see",
       "answer": "je vois",
       "hint": "voir conjugated with je"
     },
@@ -82,8 +82,8 @@
     },
     {
       "id": "i-nous-les-avons",
-      "type": "respond",
-      "situation": "we have them",
+      "type": "translate",
+      "prompt": "we have them",
       "answer": "nous les avons",
       "hint": "Plural object pronoun before verb"
     },
@@ -152,22 +152,22 @@
     },
     {
       "id": "i-il-l-a",
-      "type": "respond",
-      "situation": "he has it",
+      "type": "translate",
+      "prompt": "he has it",
       "answer": "il l'a",
       "hint": "Object pronoun before avoir, contracts to l'"
     },
     {
       "id": "i-j-ai-mon-chat",
-      "type": "respond",
-      "situation": "I have my cat",
+      "type": "translate",
+      "prompt": "I have my cat",
       "answer": "j'ai mon chat",
       "hint": "avoir + possessive adjective + noun"
     },
     {
       "id": "i-elle-les-voit",
-      "type": "respond",
-      "situation": "she sees them",
+      "type": "translate",
+      "prompt": "she sees them",
       "answer": "elle les voit",
       "hint": "Plural object pronoun before voir"
     },
@@ -180,8 +180,8 @@
     },
     {
       "id": "i-il-va-partir",
-      "type": "respond",
-      "situation": "he's going to leave",
+      "type": "translate",
+      "prompt": "he's going to leave",
       "answer": "il va partir",
       "hint": "aller + infinitive for future meaning"
     },

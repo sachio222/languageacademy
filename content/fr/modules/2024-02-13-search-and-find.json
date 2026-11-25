@@ -209,8 +209,8 @@
   "items": [
     {
       "id": "i-je-cherche",
-      "type": "respond",
-      "situation": "I look for",
+      "type": "translate",
+      "prompt": "I look for",
       "answer": "je cherche",
       "hint": "chercher for je"
     },
@@ -223,43 +223,43 @@
     },
     {
       "id": "i-nous-cherchons",
-      "type": "respond",
-      "situation": "we look for",
+      "type": "translate",
+      "prompt": "we look for",
       "answer": "nous cherchons",
       "hint": "chercher for nous"
     },
     {
       "id": "i-je-trouve",
-      "type": "respond",
-      "situation": "I find",
+      "type": "translate",
+      "prompt": "I find",
       "answer": "je trouve",
       "hint": "trouver for je"
     },
     {
       "id": "i-elle-trouve",
-      "type": "respond",
-      "situation": "she finds",
+      "type": "translate",
+      "prompt": "she finds",
       "answer": "elle trouve",
       "hint": "trouver for elle"
     },
     {
       "id": "i-ils-trouvent",
-      "type": "respond",
-      "situation": "they find",
+      "type": "translate",
+      "prompt": "they find",
       "answer": "ils trouvent",
       "hint": "trouver for ils"
     },
     {
       "id": "i-je-cherche-mes-cles",
-      "type": "respond",
-      "situation": "I'm looking for my keys",
+      "type": "translate",
+      "prompt": "I'm looking for my keys",
       "answer": "je cherche mes clés",
       "hint": "{je cherche + mes clés}"
     },
     {
       "id": "i-qu-est-ce-que",
-      "type": "respond",
-      "situation": "What are you looking for?",
+      "type": "translate",
+      "prompt": "What are you looking for?",
       "answer": "qu'est-ce que tu cherches",
       "accept": [
         "tu cherches quoi"
@@ -290,15 +290,15 @@
     },
     {
       "id": "i-je-cherche-du-travail",
-      "type": "respond",
-      "situation": "I'm looking for work",
+      "type": "translate",
+      "prompt": "I'm looking for work",
       "answer": "je cherche du travail",
       "hint": "{je cherche + du travail}"
     },
     {
       "id": "i-tu-as-trouve-ton",
-      "type": "respond",
-      "situation": "Did you find your phone?",
+      "type": "translate",
+      "prompt": "Did you find your phone?",
       "answer": "tu as trouvé ton téléphone?",
       "accept": [
         "as-tu trouvé ton téléphone?"
@@ -318,8 +318,8 @@
     },
     {
       "id": "i-je-ne-peux-pas",
-      "type": "respond",
-      "situation": "I can't find it",
+      "type": "translate",
+      "prompt": "I can't find it",
       "answer": "je ne peux pas le trouver",
       "accept": [
         "je ne le trouve pas"

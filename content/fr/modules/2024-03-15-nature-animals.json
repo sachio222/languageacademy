@@ -167,8 +167,8 @@
   "items": [
     {
       "id": "i-un-oiseau",
-      "type": "respond",
-      "situation": "a bird",
+      "type": "translate",
+      "prompt": "a bird",
       "answer": "un oiseau",
       "hint": "masculine article + oiseau",
       "mistakes": [
@@ -184,8 +184,8 @@
     },
     {
       "id": "i-une-tortue",
-      "type": "respond",
-      "situation": "a turtle",
+      "type": "translate",
+      "prompt": "a turtle",
       "answer": "une tortue",
       "hint": "feminine article + tortue",
       "mistakes": [
@@ -197,8 +197,8 @@
     },
     {
       "id": "i-un-ecureuil",
-      "type": "respond",
-      "situation": "a squirrel",
+      "type": "translate",
+      "prompt": "a squirrel",
       "answer": "un écureuil",
       "accept": [
         "un ecureuil"
@@ -213,50 +213,50 @@
     },
     {
       "id": "i-un-lapin",
-      "type": "respond",
-      "situation": "a rabbit",
+      "type": "translate",
+      "prompt": "a rabbit",
       "answer": "un lapin",
       "hint": "masculine article + lapin"
     },
     {
       "id": "i-un-papillon",
-      "type": "respond",
-      "situation": "a butterfly",
+      "type": "translate",
+      "prompt": "a butterfly",
       "answer": "un papillon",
       "hint": "masculine article + papillon"
     },
     {
       "id": "i-une-abeille",
-      "type": "respond",
-      "situation": "a bee",
+      "type": "translate",
+      "prompt": "a bee",
       "answer": "une abeille",
       "hint": "feminine article + abeille"
     },
     {
       "id": "i-une-plante",
-      "type": "respond",
-      "situation": "a plant",
+      "type": "translate",
+      "prompt": "a plant",
       "answer": "une plante",
       "hint": "feminine article + plante"
     },
     {
       "id": "i-le-vent",
-      "type": "respond",
-      "situation": "the wind",
+      "type": "translate",
+      "prompt": "the wind",
       "answer": "le vent",
       "hint": "masculine article + vent"
     },
     {
       "id": "i-la-pluie",
-      "type": "respond",
-      "situation": "the rain",
+      "type": "translate",
+      "prompt": "the rain",
       "answer": "la pluie",
       "hint": "feminine article + pluie"
     },
     {
       "id": "i-la-tortue-est-lente",
-      "type": "respond",
-      "situation": "The turtle is slow",
+      "type": "translate",
+      "prompt": "The turtle is slow",
       "answer": "la tortue est lente",
       "hint": "la tortue + est + lente (feminine)",
       "mistakes": [
@@ -268,8 +268,8 @@
     },
     {
       "id": "i-l-ecureuil-est-rapide",
-      "type": "respond",
-      "situation": "The squirrel is fast",
+      "type": "translate",
+      "prompt": "The squirrel is fast",
       "answer": "l'écureuil est rapide",
       "accept": [
         "l'ecureuil est rapide"
@@ -278,29 +278,29 @@
     },
     {
       "id": "i-l-abeille-est-petite",
-      "type": "respond",
-      "situation": "The bee is small",
+      "type": "translate",
+      "prompt": "The bee is small",
       "answer": "l'abeille est petite",
       "hint": "l'abeille + est + petite (feminine)"
     },
     {
       "id": "i-un-oiseau-bleu",
-      "type": "respond",
-      "situation": "a blue bird",
+      "type": "translate",
+      "prompt": "a blue bird",
       "answer": "un oiseau bleu",
       "hint": "{un oiseau + bleu}"
     },
     {
       "id": "i-un-papillon-jaune",
-      "type": "respond",
-      "situation": "a yellow butterfly",
+      "type": "translate",
+      "prompt": "a yellow butterfly",
       "answer": "un papillon jaune",
       "hint": "{un papillon + jaune}"
     },
     {
       "id": "i-je-vois-un-oiseau",
-      "type": "respond",
-      "situation": "I see a bird",
+      "type": "translate",
+      "prompt": "I see a bird",
       "answer": "je vois un oiseau",
       "hint": "{je vois + un oiseau}"
     }

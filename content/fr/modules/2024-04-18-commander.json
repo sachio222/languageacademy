@@ -99,7 +99,7 @@
     },
     {
       "id": "c-restaurant-cafe-context",
-      "term": "{Restaurant}/café context",
+      "term": "Restaurant/café context",
       "definition": "Most common use - ordering food and drinks in restaurants",
       "example": "{je commande un steak} (I order a steak), {vous commandez le menu?} (are you ordering the set menu?)"
     },
@@ -113,14 +113,14 @@
       "id": "c-similar-to-demander",
       "term": "Similar to demander",
       "definition": "Both mean 'to ask for', but commander specifically means 'to order' (more formal/transactional)",
-      "example": "{demander} = ask for (general), {commander} = order ({restaurant}/shop)"
+      "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
     }
   ],
   "items": [
     {
       "id": "i-je-commande",
-      "type": "respond",
-      "situation": "I order",
+      "type": "translate",
+      "prompt": "I order",
       "answer": "je commande",
       "hint": "{je...}",
       "mistakes": [
@@ -162,8 +162,8 @@
     },
     {
       "id": "i-elle-commande",
-      "type": "respond",
-      "situation": "she orders",
+      "type": "translate",
+      "prompt": "she orders",
       "answer": "elle commande",
       "hint": "{elle...}",
       "mistakes": [
@@ -183,8 +183,8 @@
     },
     {
       "id": "i-nous-commandons",
-      "type": "respond",
-      "situation": "we order",
+      "type": "translate",
+      "prompt": "we order",
       "answer": "nous commandons",
       "hint": "{nous...}",
       "mistakes": [
@@ -226,8 +226,8 @@
     },
     {
       "id": "i-ils-commandent",
-      "type": "respond",
-      "situation": "they order",
+      "type": "translate",
+      "prompt": "they order",
       "answer": "ils commandent",
       "hint": "{ils...}",
       "mistakes": [
@@ -247,8 +247,8 @@
     },
     {
       "id": "i-je-commande-un-cafe",
-      "type": "respond",
-      "situation": "I order a coffee",
+      "type": "translate",
+      "prompt": "I order a coffee",
       "answer": "je commande un café",
       "accept": [
         "je commande un cafe"
@@ -271,8 +271,8 @@
     },
     {
       "id": "i-tu-commandes-une-pizza",
-      "type": "respond",
-      "situation": "you order a pizza",
+      "type": "translate",
+      "prompt": "you order a pizza",
       "answer": "tu commandes une pizza",
       "hint": "{tu commandes une pizza}",
       "mistakes": [
@@ -292,8 +292,8 @@
     },
     {
       "id": "i-il-commande-un-steak",
-      "type": "respond",
-      "situation": "he orders a steak",
+      "type": "translate",
+      "prompt": "he orders a steak",
       "answer": "il commande un steak",
       "hint": "{il commande un steak}",
       "mistakes": [
@@ -313,8 +313,8 @@
     },
     {
       "id": "i-elle-commande-du-vin",
-      "type": "respond",
-      "situation": "she orders wine",
+      "type": "translate",
+      "prompt": "she orders wine",
       "answer": "elle commande du vin",
       "hint": "{elle commande du vin}",
       "mistakes": [
@@ -334,8 +334,8 @@
     },
     {
       "id": "i-nous-commandons-le-menu",
-      "type": "respond",
-      "situation": "we order the menu",
+      "type": "translate",
+      "prompt": "we order the menu",
       "answer": "nous commandons le menu",
       "hint": "{nous commandons le menu}",
       "mistakes": [
@@ -355,8 +355,8 @@
     },
     {
       "id": "i-ils-commandent-le-dessert",
-      "type": "respond",
-      "situation": "they order dessert",
+      "type": "translate",
+      "prompt": "they order dessert",
       "answer": "ils commandent le dessert",
       "hint": "{ils commandent le dessert}",
       "mistakes": [
@@ -376,8 +376,8 @@
     },
     {
       "id": "i-je-voudrais-commander",
-      "type": "respond",
-      "situation": "I would like to order",
+      "type": "translate",
+      "prompt": "I would like to order",
       "answer": "je voudrais commander",
       "hint": "{je voudrais commander}",
       "mistakes": [
@@ -422,8 +422,8 @@
     },
     {
       "id": "i-qu-est-ce-que",
-      "type": "respond",
-      "situation": "what are you ordering?",
+      "type": "translate",
+      "prompt": "what are you ordering?",
       "answer": "qu'est-ce que tu commandes?",
       "accept": [
         "qu'est-ce que tu commandes",
@@ -447,8 +447,8 @@
     },
     {
       "id": "i-je-commande-en-ligne",
-      "type": "respond",
-      "situation": "I order online",
+      "type": "translate",
+      "prompt": "I order online",
       "answer": "je commande en ligne",
       "hint": "{je commande en ligne}",
       "mistakes": [
@@ -468,8 +468,8 @@
     },
     {
       "id": "i-tu-commandes-sur-amazon",
-      "type": "respond",
-      "situation": "you order on Amazon",
+      "type": "translate",
+      "prompt": "you order on Amazon",
       "answer": "tu commandes sur Amazon",
       "hint": "{tu commandes sur Amazon}",
       "mistakes": [
@@ -489,8 +489,8 @@
     },
     {
       "id": "i-nous-commandons-par-telephone",
-      "type": "respond",
-      "situation": "we order by phone",
+      "type": "translate",
+      "prompt": "we order by phone",
       "answer": "nous commandons par téléphone",
       "accept": [
         "nous commandons par telephone"
@@ -513,8 +513,8 @@
     },
     {
       "id": "i-je-ne-commande-pas",
-      "type": "respond",
-      "situation": "I'm not ordering",
+      "type": "translate",
+      "prompt": "I'm not ordering",
       "answer": "je ne commande pas",
       "hint": "{je ne commande pas}",
       "mistakes": [
@@ -534,8 +534,8 @@
     },
     {
       "id": "i-tu-ne-commandes-pas",
-      "type": "respond",
-      "situation": "you don't order that",
+      "type": "translate",
+      "prompt": "you don't order that",
       "answer": "tu ne commandes pas ça",
       "accept": [
         "tu ne commandes pas ca"
@@ -558,8 +558,8 @@
     },
     {
       "id": "i-j-ai-commande",
-      "type": "respond",
-      "situation": "I ordered",
+      "type": "translate",
+      "prompt": "I ordered",
       "answer": "j'ai commandé",
       "accept": [
         "j ai commandé",
@@ -583,8 +583,8 @@
     },
     {
       "id": "i-nous-avons-commande-une",
-      "type": "respond",
-      "situation": "we ordered a pizza",
+      "type": "translate",
+      "prompt": "we ordered a pizza",
       "answer": "nous avons commandé une pizza",
       "accept": [
         "nous avons commande une pizza"
@@ -607,8 +607,8 @@
     },
     {
       "id": "i-ils-ont-commande-le",
-      "type": "respond",
-      "situation": "they ordered dessert",
+      "type": "translate",
+      "prompt": "they ordered dessert",
       "answer": "ils ont commandé le dessert",
       "accept": [
         "ils ont commande le dessert"

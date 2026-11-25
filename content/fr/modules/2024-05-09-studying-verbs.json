@@ -143,8 +143,8 @@
   "items": [
     {
       "id": "studying-verbs-1",
-      "type": "respond",
-      "situation": "I'm studying French",
+      "type": "translate",
+      "prompt": "I'm studying French",
       "answer": "j'étudie le français",
       "hint": "étudier for je + le français",
       "mistakes": [
@@ -156,8 +156,8 @@
     },
     {
       "id": "studying-verbs-2",
-      "type": "respond",
-      "situation": "I'm reviewing my lessons",
+      "type": "translate",
+      "prompt": "I'm reviewing my lessons",
       "answer": "je révise mes leçons",
       "hint": "réviser for je + mes leçons"
     },
@@ -170,22 +170,22 @@
     },
     {
       "id": "studying-verbs-4",
-      "type": "respond",
-      "situation": "She reviews for the exam",
+      "type": "translate",
+      "prompt": "She reviews for the exam",
       "answer": "elle révise pour l'examen",
       "hint": "réviser for elle + pour l'examen"
     },
     {
       "id": "studying-verbs-5",
-      "type": "respond",
-      "situation": "We study together",
+      "type": "translate",
+      "prompt": "We study together",
       "answer": "nous étudions ensemble",
       "hint": "étudier for nous + ensemble"
     },
     {
       "id": "studying-verbs-6",
-      "type": "respond",
-      "situation": "They are reviewing",
+      "type": "translate",
+      "prompt": "They are reviewing",
       "answer": "ils révisent",
       "hint": "réviser for ils"
     }

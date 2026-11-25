@@ -96,8 +96,8 @@
   "items": [
     {
       "id": "i-n-est-ce-pas",
-      "type": "respond",
-      "situation": "Isn't that true?",
+      "type": "translate",
+      "prompt": "Isn't that true?",
       "answer": "n'est-ce pas vrai?",
       "accept": [
         "n'est-ce pas vrai"
@@ -117,8 +117,8 @@
     },
     {
       "id": "i-n-es-tu-pas",
-      "type": "respond",
-      "situation": "Aren't you happy?",
+      "type": "translate",
+      "prompt": "Aren't you happy?",
       "answer": "n'es-tu pas content?",
       "accept": [
         "n'es-tu pas content"
@@ -127,8 +127,8 @@
     },
     {
       "id": "i-n-as-tu-pas",
-      "type": "respond",
-      "situation": "Aren't you hungry?",
+      "type": "translate",
+      "prompt": "Aren't you hungry?",
       "answer": "n'as-tu pas faim?",
       "accept": [
         "n'as-tu pas faim"
@@ -137,8 +137,8 @@
     },
     {
       "id": "i-ne-veux-tu-pas",
-      "type": "respond",
-      "situation": "Don't you want to try?",
+      "type": "translate",
+      "prompt": "Don't you want to try?",
       "answer": "ne veux-tu pas essayer?",
       "accept": [
         "ne veux-tu pas essayer"
@@ -204,8 +204,8 @@
     },
     {
       "id": "i-n-est-ce-pas-3",
-      "type": "respond",
-      "situation": "Isn't that magnificent?",
+      "type": "translate",
+      "prompt": "Isn't that magnificent?",
       "answer": "n'est-ce pas magnifique?",
       "accept": [
         "n'est-ce pas magnifique"

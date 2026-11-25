@@ -81,7 +81,7 @@
     },
     {
       "id": "c-position-before-the-verb",
-      "term": "{Position}: Before the Verb",
+      "term": "Position: Before the Verb",
       "definition": "Reflexive pronouns go BEFORE the conjugated verb, just like object pronouns",
       "example": "{je me lave} (not je lave me), {tu te lèves} (not tu lèves te)"
     },
@@ -163,8 +163,8 @@
     },
     {
       "id": "reflexive-pronouns-8",
-      "type": "respond",
-      "situation": "I wash myself",
+      "type": "translate",
+      "prompt": "I wash myself",
       "answer": "je me lave",
       "hint": "je + me + laver conjugated",
       "mistakes": [

@@ -131,8 +131,8 @@
   "items": [
     {
       "id": "i-je-dis",
-      "type": "respond",
-      "situation": "I say",
+      "type": "translate",
+      "prompt": "I say",
       "answer": "je dis",
       "hint": "{je...}",
       "mistakes": [
@@ -174,8 +174,8 @@
     },
     {
       "id": "i-il-dit",
-      "type": "respond",
-      "situation": "he says",
+      "type": "translate",
+      "prompt": "he says",
       "answer": "il dit",
       "hint": "{il...}",
       "mistakes": [
@@ -195,8 +195,8 @@
     },
     {
       "id": "i-nous-disons",
-      "type": "respond",
-      "situation": "we say",
+      "type": "translate",
+      "prompt": "we say",
       "answer": "nous disons",
       "hint": "{nous...}",
       "mistakes": [
@@ -238,8 +238,8 @@
     },
     {
       "id": "i-ils-disent",
-      "type": "respond",
-      "situation": "they say",
+      "type": "translate",
+      "prompt": "they say",
       "answer": "ils disent",
       "hint": "{ils...}",
       "mistakes": [
@@ -259,8 +259,8 @@
     },
     {
       "id": "i-je-dis-bonjour",
-      "type": "respond",
-      "situation": "I say hello",
+      "type": "translate",
+      "prompt": "I say hello",
       "answer": "je dis bonjour",
       "hint": "{je dis...}",
       "mistakes": [
@@ -280,8 +280,8 @@
     },
     {
       "id": "i-tu-dis-la-verite",
-      "type": "respond",
-      "situation": "you tell the truth",
+      "type": "translate",
+      "prompt": "you tell the truth",
       "answer": "tu dis la vérité",
       "accept": [
         "tu dis la verite"
@@ -304,8 +304,8 @@
     },
     {
       "id": "i-elle-dit-oui",
-      "type": "respond",
-      "situation": "she says yes",
+      "type": "translate",
+      "prompt": "she says yes",
       "answer": "elle dit oui",
       "hint": "{elle dit oui}",
       "mistakes": [
@@ -325,8 +325,8 @@
     },
     {
       "id": "i-nous-disons-une-histoire",
-      "type": "respond",
-      "situation": "we tell a story",
+      "type": "translate",
+      "prompt": "we tell a story",
       "answer": "nous disons une histoire",
       "hint": "{nous disons une histoire}",
       "mistakes": [
@@ -346,8 +346,8 @@
     },
     {
       "id": "i-je-dis-que-c",
-      "type": "respond",
-      "situation": "I say that it's good",
+      "type": "translate",
+      "prompt": "I say that it's good",
       "answer": "je dis que c'est bon",
       "accept": [
         "je dis que c est bon"
@@ -370,8 +370,8 @@
     },
     {
       "id": "i-il-dit-qu-il",
-      "type": "respond",
-      "situation": "he says that he is coming",
+      "type": "translate",
+      "prompt": "he says that he is coming",
       "answer": "il dit qu'il vient",
       "accept": [
         "il dit qu il vient"
@@ -394,8 +394,8 @@
     },
     {
       "id": "i-ils-disent-que-c",
-      "type": "respond",
-      "situation": "they say that it's true",
+      "type": "translate",
+      "prompt": "they say that it's true",
       "answer": "ils disent que c'est vrai",
       "accept": [
         "ils disent que c est vrai"
@@ -440,8 +440,8 @@
     },
     {
       "id": "i-tu-me-dis",
-      "type": "respond",
-      "situation": "you tell me",
+      "type": "translate",
+      "prompt": "you tell me",
       "answer": "tu me dis",
       "hint": "{tu me dis}",
       "mistakes": [
@@ -461,8 +461,8 @@
     },
     {
       "id": "i-il-me-dit",
-      "type": "respond",
-      "situation": "he tells me",
+      "type": "translate",
+      "prompt": "he tells me",
       "answer": "il me dit",
       "hint": "{il me dit}",
       "mistakes": [
@@ -482,8 +482,8 @@
     },
     {
       "id": "i-elle-nous-dit",
-      "type": "respond",
-      "situation": "she tells us",
+      "type": "translate",
+      "prompt": "she tells us",
       "answer": "elle nous dit",
       "hint": "{elle nous dit}",
       "mistakes": [
@@ -503,8 +503,8 @@
     },
     {
       "id": "i-c-est-a-dire",
-      "type": "respond",
-      "situation": "that is to say",
+      "type": "translate",
+      "prompt": "that is to say",
       "answer": "c'est-à-dire",
       "accept": [
         "c est a dire",
@@ -550,8 +550,8 @@
     },
     {
       "id": "i-comme-on-dit",
-      "type": "respond",
-      "situation": "as they say",
+      "type": "translate",
+      "prompt": "as they say",
       "answer": "comme on dit",
       "hint": "{comme on dit}",
       "mistakes": [
@@ -571,8 +571,8 @@
     },
     {
       "id": "i-j-ai-dit",
-      "type": "respond",
-      "situation": "I said",
+      "type": "translate",
+      "prompt": "I said",
       "answer": "j'ai dit",
       "accept": [
         "j ai dit"
@@ -595,8 +595,8 @@
     },
     {
       "id": "i-tu-m-as-dit",
-      "type": "respond",
-      "situation": "you told me",
+      "type": "translate",
+      "prompt": "you told me",
       "answer": "tu m'as dit",
       "accept": [
         "tu m as dit"

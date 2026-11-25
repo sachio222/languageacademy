@@ -119,8 +119,8 @@
   "items": [
     {
       "id": "i-j-ai-besoin-d",
-      "type": "respond",
-      "situation": "I need help",
+      "type": "translate",
+      "prompt": "I need help",
       "answer": "j'ai besoin d'aide",
       "accept": [
         "j ai besoin d'aide",
@@ -144,8 +144,8 @@
     },
     {
       "id": "i-tu-as-besoin-d",
-      "type": "respond",
-      "situation": "you need money",
+      "type": "translate",
+      "prompt": "you need money",
       "answer": "tu as besoin d'argent",
       "accept": [
         "tu as besoin d argent"
@@ -168,8 +168,8 @@
     },
     {
       "id": "i-j-ai-besoin-de",
-      "type": "respond",
-      "situation": "I need time",
+      "type": "translate",
+      "prompt": "I need time",
       "answer": "j'ai besoin de temps",
       "accept": [
         "j ai besoin de temps"
@@ -192,8 +192,8 @@
     },
     {
       "id": "i-il-a-besoin-d",
-      "type": "respond",
-      "situation": "he needs water",
+      "type": "translate",
+      "prompt": "he needs water",
       "answer": "il a besoin d'eau",
       "accept": [
         "il a besoin d eau"
@@ -216,8 +216,8 @@
     },
     {
       "id": "i-elle-a-besoin-d",
-      "type": "respond",
-      "situation": "she needs a car",
+      "type": "translate",
+      "prompt": "she needs a car",
       "answer": "elle a besoin d'une voiture",
       "accept": [
         "elle a besoin d une voiture"
@@ -240,8 +240,8 @@
     },
     {
       "id": "i-nous-avons-besoin-de",
-      "type": "respond",
-      "situation": "we need coffee",
+      "type": "translate",
+      "prompt": "we need coffee",
       "answer": "nous avons besoin de café",
       "accept": [
         "nous avons besoin de cafe"
@@ -286,8 +286,8 @@
     },
     {
       "id": "i-ils-ont-besoin-d",
-      "type": "respond",
-      "situation": "they need space",
+      "type": "translate",
+      "prompt": "they need space",
       "answer": "ils ont besoin d'espace",
       "accept": [
         "ils ont besoin d espace"
@@ -310,8 +310,8 @@
     },
     {
       "id": "i-j-ai-besoin-de-2",
-      "type": "respond",
-      "situation": "I need to eat",
+      "type": "translate",
+      "prompt": "I need to eat",
       "answer": "j'ai besoin de manger",
       "accept": [
         "j ai besoin de manger"
@@ -334,8 +334,8 @@
     },
     {
       "id": "i-tu-as-besoin-de",
-      "type": "respond",
-      "situation": "you need to leave",
+      "type": "translate",
+      "prompt": "you need to leave",
       "answer": "tu as besoin de partir",
       "hint": "{tu as besoin de partir}",
       "mistakes": [
@@ -355,8 +355,8 @@
     },
     {
       "id": "i-j-ai-besoin-de-3",
-      "type": "respond",
-      "situation": "I need to sleep",
+      "type": "translate",
+      "prompt": "I need to sleep",
       "answer": "j'ai besoin de dormir",
       "accept": [
         "j ai besoin de dormir"
@@ -379,8 +379,8 @@
     },
     {
       "id": "i-elle-a-besoin-de",
-      "type": "respond",
-      "situation": "she needs to work",
+      "type": "translate",
+      "prompt": "she needs to work",
       "answer": "elle a besoin de travailler",
       "hint": "{elle a besoin de travailler}",
       "mistakes": [
@@ -400,8 +400,8 @@
     },
     {
       "id": "i-nous-avons-besoin-de-2",
-      "type": "respond",
-      "situation": "we need to talk",
+      "type": "translate",
+      "prompt": "we need to talk",
       "answer": "nous avons besoin de parler",
       "hint": "{nous avons besoin de parler}",
       "mistakes": [
@@ -421,8 +421,8 @@
     },
     {
       "id": "i-ils-ont-besoin-de",
-      "type": "respond",
-      "situation": "they need to understand",
+      "type": "translate",
+      "prompt": "they need to understand",
       "answer": "ils ont besoin de comprendre",
       "hint": "{ils ont besoin de comprendre}",
       "mistakes": [
@@ -442,8 +442,8 @@
     },
     {
       "id": "i-de-quoi-tu-as",
-      "type": "respond",
-      "situation": "what do you need?",
+      "type": "translate",
+      "prompt": "what do you need?",
       "answer": "de quoi tu as besoin?",
       "accept": [
         "de quoi tu as besoin"
@@ -466,8 +466,8 @@
     },
     {
       "id": "i-tu-as-besoin-d-2",
-      "type": "respond",
-      "situation": "do you need help?",
+      "type": "translate",
+      "prompt": "do you need help?",
       "answer": "tu as besoin d'aide?",
       "accept": [
         "tu as besoin d aide?",
@@ -492,8 +492,8 @@
     },
     {
       "id": "i-il-a-besoin-de",
-      "type": "respond",
-      "situation": "does he need that?",
+      "type": "translate",
+      "prompt": "does he need that?",
       "answer": "il a besoin de ça?",
       "accept": [
         "il a besoin de ca?",
@@ -518,8 +518,8 @@
     },
     {
       "id": "i-je-n-ai-pas",
-      "type": "respond",
-      "situation": "I don't need help",
+      "type": "translate",
+      "prompt": "I don't need help",
       "answer": "je n'ai pas besoin d'aide",
       "accept": [
         "je n ai pas besoin d'aide",
@@ -543,8 +543,8 @@
     },
     {
       "id": "i-tu-n-as-pas",
-      "type": "respond",
-      "situation": "you don't need that",
+      "type": "translate",
+      "prompt": "you don't need that",
       "answer": "tu n'as pas besoin de ça",
       "accept": [
         "tu n as pas besoin de ça",
@@ -568,8 +568,8 @@
     },
     {
       "id": "i-elle-n-a-pas",
-      "type": "respond",
-      "situation": "she doesn't need to leave",
+      "type": "translate",
+      "prompt": "she doesn't need to leave",
       "answer": "elle n'a pas besoin de partir",
       "accept": [
         "elle n a pas besoin de partir"
@@ -592,8 +592,8 @@
     },
     {
       "id": "i-nous-n-avons-pas",
-      "type": "respond",
-      "situation": "we don't need money",
+      "type": "translate",
+      "prompt": "we don't need money",
       "answer": "nous n'avons pas besoin d'argent",
       "accept": [
         "nous n avons pas besoin d'argent",
@@ -617,8 +617,8 @@
     },
     {
       "id": "i-j-avais-besoin-d",
-      "type": "respond",
-      "situation": "I needed help",
+      "type": "translate",
+      "prompt": "I needed help",
       "answer": "j'avais besoin d'aide",
       "accept": [
         "j avais besoin d'aide",
@@ -642,8 +642,8 @@
     },
     {
       "id": "i-tu-avais-besoin-de",
-      "type": "respond",
-      "situation": "you needed time",
+      "type": "translate",
+      "prompt": "you needed time",
       "answer": "tu avais besoin de temps",
       "hint": "{tu avais besoin de temps}",
       "mistakes": [

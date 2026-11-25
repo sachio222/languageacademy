@@ -12,8 +12,8 @@
   "items": [
     {
       "id": "i-j-ai-vingt-deux",
-      "type": "respond",
-      "situation": "I am 22 years old",
+      "type": "translate",
+      "prompt": "I am 22 years old",
       "answer": "j'ai vingt-deux ans",
       "accept": [
         "j'ai 22 ans"
@@ -114,8 +114,8 @@
     },
     {
       "id": "i-je-dors",
-      "type": "respond",
-      "situation": "I sleep",
+      "type": "translate",
+      "prompt": "I sleep",
       "answer": "je dors",
       "hint": "dormir for je"
     },
@@ -137,8 +137,8 @@
     },
     {
       "id": "i-je-travaille",
-      "type": "respond",
-      "situation": "I work",
+      "type": "translate",
+      "prompt": "I work",
       "answer": "je travaille",
       "hint": "travailler for je"
     },
@@ -160,8 +160,8 @@
     },
     {
       "id": "i-je-vis",
-      "type": "respond",
-      "situation": "I live",
+      "type": "translate",
+      "prompt": "I live",
       "answer": "je vis",
       "hint": "vivre for je - irregular"
     },

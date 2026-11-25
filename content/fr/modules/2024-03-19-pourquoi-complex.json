@@ -84,7 +84,7 @@
       "id": "c-basic-pattern-pourquoi-est",
       "term": "Basic Pattern: pourquoi est-ce que + statement",
       "definition": "Take any statement and add pourquoi est-ce que before it",
-      "example": "Statement: {Le ciel est bleu} → {Question}: {Pourquoi est-ce que le ciel est bleu?}"
+      "example": "Statement: {Le ciel est bleu} → Question: {Pourquoi est-ce que le ciel est bleu?}"
     },
     {
       "id": "c-nature-curiosity-questions",
@@ -108,8 +108,8 @@
   "items": [
     {
       "id": "i-pourquoi-est-ce-que",
-      "type": "respond",
-      "situation": "Why is the sky blue?",
+      "type": "translate",
+      "prompt": "Why is the sky blue?",
       "answer": "pourquoi est-ce que le ciel est bleu?",
       "accept": [
         "pourquoi est-ce que le ciel est bleu"
@@ -118,8 +118,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-2",
-      "type": "respond",
-      "situation": "Why is grass green?",
+      "type": "translate",
+      "prompt": "Why is grass green?",
       "answer": "pourquoi est-ce que l'herbe est verte?",
       "accept": [
         "pourquoi est-ce que l'herbe est verte"
@@ -128,8 +128,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-3",
-      "type": "respond",
-      "situation": "Why are clouds white?",
+      "type": "translate",
+      "prompt": "Why are clouds white?",
       "answer": "pourquoi est-ce que les nuages sont blancs?",
       "accept": [
         "pourquoi est-ce que les nuages sont blancs"
@@ -138,8 +138,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-4",
-      "type": "respond",
-      "situation": "Why is it like that?",
+      "type": "translate",
+      "prompt": "Why is it like that?",
       "answer": "pourquoi est-ce que c'est comme ça?",
       "accept": [
         "pourquoi est-ce que c'est comme ça"
@@ -148,8 +148,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-qu",
-      "type": "respond",
-      "situation": "Why does he have that?",
+      "type": "translate",
+      "prompt": "Why does he have that?",
       "answer": "pourquoi est-ce qu'il a ça?",
       "accept": [
         "pourquoi est-ce qu'il a ça"
@@ -158,8 +158,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-5",
-      "type": "respond",
-      "situation": "Why do birds have wings?",
+      "type": "translate",
+      "prompt": "Why do birds have wings?",
       "answer": "pourquoi est-ce que les oiseaux ont des ailes?",
       "accept": [
         "pourquoi est-ce que les oiseaux ont des ailes"
@@ -168,8 +168,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-6",
-      "type": "respond",
-      "situation": "Why does the sun shine?",
+      "type": "translate",
+      "prompt": "Why does the sun shine?",
       "answer": "pourquoi est-ce que le soleil brille?",
       "accept": [
         "pourquoi est-ce que le soleil brille"
@@ -178,8 +178,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-7",
-      "type": "respond",
-      "situation": "Why do birds fly?",
+      "type": "translate",
+      "prompt": "Why do birds fly?",
       "answer": "pourquoi est-ce que les oiseaux volent?",
       "accept": [
         "pourquoi est-ce que les oiseaux volent"
@@ -188,8 +188,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-8",
-      "type": "respond",
-      "situation": "Why do plants grow?",
+      "type": "translate",
+      "prompt": "Why do plants grow?",
       "answer": "pourquoi est-ce que les plantes poussent?",
       "accept": [
         "pourquoi est-ce que les plantes poussent"
@@ -198,8 +198,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-qu-2",
-      "type": "respond",
-      "situation": "Why does it rain?",
+      "type": "translate",
+      "prompt": "Why does it rain?",
       "answer": "pourquoi est-ce qu'il pleut?",
       "accept": [
         "pourquoi est-ce qu'il pleut"
@@ -208,8 +208,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-9",
-      "type": "respond",
-      "situation": "Why are you running?",
+      "type": "translate",
+      "prompt": "Why are you running?",
       "answer": "pourquoi est-ce que tu cours?",
       "accept": [
         "pourquoi est-ce que tu cours"
@@ -218,8 +218,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-qu-3",
-      "type": "respond",
-      "situation": "Why does he do that?",
+      "type": "translate",
+      "prompt": "Why does he do that?",
       "answer": "pourquoi est-ce qu'il fait ça?",
       "accept": [
         "pourquoi est-ce qu'il fait ça"
@@ -250,8 +250,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-11",
-      "type": "respond",
-      "situation": "Why do I have to do that?",
+      "type": "translate",
+      "prompt": "Why do I have to do that?",
       "answer": "pourquoi est-ce que je dois faire ça?",
       "accept": [
         "pourquoi est-ce que je dois faire ça"
@@ -260,8 +260,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-qu-5",
-      "type": "respond",
-      "situation": "Why can we see the sun?",
+      "type": "translate",
+      "prompt": "Why can we see the sun?",
       "answer": "pourquoi est-ce qu'on peut voir le soleil?",
       "accept": [
         "pourquoi est-ce qu'on peut voir le soleil"
@@ -270,8 +270,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-12",
-      "type": "respond",
-      "situation": "Why are you hurrying?",
+      "type": "translate",
+      "prompt": "Why are you hurrying?",
       "answer": "pourquoi est-ce que tu te dépêches?",
       "accept": [
         "pourquoi est-ce que tu te dépêches",
@@ -281,8 +281,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-13",
-      "type": "respond",
-      "situation": "Why do plants need water?",
+      "type": "translate",
+      "prompt": "Why do plants need water?",
       "answer": "pourquoi est-ce que les plantes ont besoin d'eau?",
       "accept": [
         "pourquoi est-ce que les plantes ont besoin d'eau"

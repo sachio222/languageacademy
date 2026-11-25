@@ -83,8 +83,8 @@
   "items": [
     {
       "id": "reciprocal-1",
-      "type": "respond",
-      "situation": "We love each other",
+      "type": "translate",
+      "prompt": "We love each other",
       "answer": "nous nous aimons",
       "hint": "{nous nous + aimer}"
     },
@@ -106,15 +106,15 @@
     },
     {
       "id": "reciprocal-4",
-      "type": "respond",
-      "situation": "They talk to each other",
+      "type": "translate",
+      "prompt": "They talk to each other",
       "answer": "ils se parlent",
       "hint": "{ils se + parler}"
     },
     {
       "id": "reciprocal-5",
-      "type": "respond",
-      "situation": "They know each other",
+      "type": "translate",
+      "prompt": "They know each other",
       "answer": "ils se connaissent",
       "hint": "{ils se + connaître}"
     },

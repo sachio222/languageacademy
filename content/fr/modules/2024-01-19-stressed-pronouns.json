@@ -193,8 +193,8 @@
     },
     {
       "id": "i-avec-moi",
-      "type": "respond",
-      "situation": "with me",
+      "type": "translate",
+      "prompt": "with me",
       "answer": "avec moi",
       "hint": "avec + stressed pronoun for 'me'",
       "mistakes": [
@@ -220,8 +220,8 @@
     },
     {
       "id": "i-avec-lui",
-      "type": "respond",
-      "situation": "with him",
+      "type": "translate",
+      "prompt": "with him",
       "answer": "avec lui",
       "hint": "avec + stressed pronoun for 'him'",
       "mistakes": [

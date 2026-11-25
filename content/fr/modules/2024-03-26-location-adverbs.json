@@ -77,8 +77,8 @@
   "items": [
     {
       "id": "i-ici",
-      "type": "respond",
-      "situation": "here",
+      "type": "translate",
+      "prompt": "here",
       "answer": "ici",
       "hint": "This location - nearby",
       "mistakes": [
@@ -90,8 +90,8 @@
     },
     {
       "id": "i-la",
-      "type": "respond",
-      "situation": "there",
+      "type": "translate",
+      "prompt": "there",
       "answer": "là",
       "hint": "That location",
       "mistakes": [
@@ -117,15 +117,15 @@
     },
     {
       "id": "i-partout",
-      "type": "respond",
-      "situation": "everywhere",
+      "type": "translate",
+      "prompt": "everywhere",
       "answer": "partout",
       "hint": "All places - par + tout"
     },
     {
       "id": "i-quelque-part",
-      "type": "respond",
-      "situation": "somewhere",
+      "type": "translate",
+      "prompt": "somewhere",
       "answer": "quelque part",
       "hint": "quelque + part (some place)"
     },
@@ -139,29 +139,29 @@
     },
     {
       "id": "i-je-suis-ici",
-      "type": "respond",
-      "situation": "I am here",
+      "type": "translate",
+      "prompt": "I am here",
       "answer": "je suis ici",
       "hint": "{je suis + ici}"
     },
     {
       "id": "i-le-chat-est-la",
-      "type": "respond",
-      "situation": "the cat is there",
+      "type": "translate",
+      "prompt": "the cat is there",
       "answer": "le chat est là",
       "hint": "{le chat + est + là}"
     },
     {
       "id": "i-le-cafe-est-la",
-      "type": "respond",
-      "situation": "the café is over there",
+      "type": "translate",
+      "prompt": "the café is over there",
       "answer": "le café est là-bas",
       "hint": "{le café + est + là-bas}"
     },
     {
       "id": "i-je-vais-partout",
-      "type": "respond",
-      "situation": "I go everywhere",
+      "type": "translate",
+      "prompt": "I go everywhere",
       "answer": "je vais partout",
       "hint": "{je vais + partout}"
     },
@@ -178,8 +178,8 @@
     },
     {
       "id": "i-le-livre-est-quelque",
-      "type": "respond",
-      "situation": "the book is somewhere",
+      "type": "translate",
+      "prompt": "the book is somewhere",
       "answer": "le livre est quelque part",
       "hint": "{le livre + est + quelque part}"
     }

@@ -185,7 +185,7 @@
       "id": "c-time-nouns",
       "term": "Time nouns",
       "definition": "Express time periods and moments: année, fois, moment, heure, minute",
-      "example": "{une année} (a year), {une fois} (once/one time), {un moment} ({a moment})"
+      "example": "{une année} (a year), {une fois} (once/one time), {un moment} (a moment)"
     },
     {
       "id": "c-people-relationships",
@@ -215,8 +215,8 @@
   "items": [
     {
       "id": "i-une-annee",
-      "type": "respond",
-      "situation": "a year",
+      "type": "translate",
+      "prompt": "a year",
       "answer": "une année",
       "accept": [
         "une annee"
@@ -247,8 +247,8 @@
     },
     {
       "id": "i-une-fois",
-      "type": "respond",
-      "situation": "once",
+      "type": "translate",
+      "prompt": "once",
       "answer": "une fois",
       "hint": "{une...}",
       "mistakes": [
@@ -268,8 +268,8 @@
     },
     {
       "id": "i-un-moment",
-      "type": "respond",
-      "situation": "a moment",
+      "type": "translate",
+      "prompt": "a moment",
       "answer": "un moment",
       "hint": "{un...}",
       "mistakes": [
@@ -289,8 +289,8 @@
     },
     {
       "id": "i-une-heure",
-      "type": "respond",
-      "situation": "one hour",
+      "type": "translate",
+      "prompt": "one hour",
       "answer": "une heure",
       "hint": "{une...}",
       "mistakes": [
@@ -310,8 +310,8 @@
     },
     {
       "id": "i-une-minute",
-      "type": "respond",
-      "situation": "one minute",
+      "type": "translate",
+      "prompt": "one minute",
       "answer": "une minute",
       "hint": "{une...}",
       "mistakes": [
@@ -331,8 +331,8 @@
     },
     {
       "id": "i-le-debut",
-      "type": "respond",
-      "situation": "the beginning",
+      "type": "translate",
+      "prompt": "the beginning",
       "answer": "le début",
       "accept": [
         "le debut"
@@ -355,8 +355,8 @@
     },
     {
       "id": "i-la-fin",
-      "type": "respond",
-      "situation": "the end",
+      "type": "translate",
+      "prompt": "the end",
       "answer": "la fin",
       "hint": "{la...}",
       "mistakes": [
@@ -376,8 +376,8 @@
     },
     {
       "id": "i-une-personne",
-      "type": "respond",
-      "situation": "a person",
+      "type": "translate",
+      "prompt": "a person",
       "answer": "une personne",
       "hint": "{une...}",
       "mistakes": [
@@ -397,8 +397,8 @@
     },
     {
       "id": "i-ma-famille",
-      "type": "respond",
-      "situation": "my family",
+      "type": "translate",
+      "prompt": "my family",
       "answer": "ma famille",
       "hint": "{ma...}",
       "mistakes": [
@@ -418,8 +418,8 @@
     },
     {
       "id": "i-mon-pere",
-      "type": "respond",
-      "situation": "my father",
+      "type": "translate",
+      "prompt": "my father",
       "answer": "mon père",
       "accept": [
         "mon pere"
@@ -442,8 +442,8 @@
     },
     {
       "id": "i-ma-mere",
-      "type": "respond",
-      "situation": "my mother",
+      "type": "translate",
+      "prompt": "my mother",
       "answer": "ma mère",
       "accept": [
         "ma mere"
@@ -466,8 +466,8 @@
     },
     {
       "id": "i-mon-frere",
-      "type": "respond",
-      "situation": "my brother",
+      "type": "translate",
+      "prompt": "my brother",
       "answer": "mon frère",
       "accept": [
         "mon frere"
@@ -490,8 +490,8 @@
     },
     {
       "id": "i-ma-soeur",
-      "type": "respond",
-      "situation": "my sister",
+      "type": "translate",
+      "prompt": "my sister",
       "answer": "ma sœur",
       "accept": [
         "ma soeur"
@@ -514,8 +514,8 @@
     },
     {
       "id": "i-un-fils",
-      "type": "respond",
-      "situation": "a son",
+      "type": "translate",
+      "prompt": "a son",
       "answer": "un fils",
       "hint": "{un...}",
       "mistakes": [
@@ -535,8 +535,8 @@
     },
     {
       "id": "i-une-fille",
-      "type": "respond",
-      "situation": "a daughter",
+      "type": "translate",
+      "prompt": "a daughter",
       "answer": "une fille",
       "hint": "{une...}",
       "mistakes": [
@@ -556,8 +556,8 @@
     },
     {
       "id": "i-les-yeux",
-      "type": "respond",
-      "situation": "the eyes",
+      "type": "translate",
+      "prompt": "the eyes",
       "answer": "les yeux",
       "hint": "{les...}",
       "mistakes": [
@@ -577,8 +577,8 @@
     },
     {
       "id": "i-le-visage",
-      "type": "respond",
-      "situation": "the face",
+      "type": "translate",
+      "prompt": "the face",
       "answer": "le visage",
       "hint": "{le...}",
       "mistakes": [
@@ -598,8 +598,8 @@
     },
     {
       "id": "i-le-corps",
-      "type": "respond",
-      "situation": "the body",
+      "type": "translate",
+      "prompt": "the body",
       "answer": "le corps",
       "hint": "{le...}",
       "mistakes": [
@@ -619,8 +619,8 @@
     },
     {
       "id": "i-le-coeur",
-      "type": "respond",
-      "situation": "the heart",
+      "type": "translate",
+      "prompt": "the heart",
       "answer": "le cœur",
       "accept": [
         "le coeur"
@@ -643,8 +643,8 @@
     },
     {
       "id": "i-la-voix",
-      "type": "respond",
-      "situation": "the voice",
+      "type": "translate",
+      "prompt": "the voice",
       "answer": "la voix",
       "hint": "{la...}",
       "mistakes": [
@@ -664,8 +664,8 @@
     },
     {
       "id": "i-une-histoire",
-      "type": "respond",
-      "situation": "a story",
+      "type": "translate",
+      "prompt": "a story",
       "answer": "une histoire",
       "hint": "{une...}",
       "mistakes": [
@@ -685,8 +685,8 @@
     },
     {
       "id": "i-un-probleme",
-      "type": "respond",
-      "situation": "a problem",
+      "type": "translate",
+      "prompt": "a problem",
       "answer": "un problème",
       "accept": [
         "un probleme"
@@ -709,8 +709,8 @@
     },
     {
       "id": "i-une-question",
-      "type": "respond",
-      "situation": "a question",
+      "type": "translate",
+      "prompt": "a question",
       "answer": "une question",
       "hint": "{une...}",
       "mistakes": [
@@ -730,8 +730,8 @@
     },
     {
       "id": "i-la-raison",
-      "type": "respond",
-      "situation": "the reason",
+      "type": "translate",
+      "prompt": "the reason",
       "answer": "la raison",
       "hint": "{la...}",
       "mistakes": [
@@ -751,8 +751,8 @@
     },
     {
       "id": "i-un-fait",
-      "type": "respond",
-      "situation": "a fact",
+      "type": "translate",
+      "prompt": "a fact",
       "answer": "un fait",
       "hint": "{un...}",
       "mistakes": [
@@ -772,8 +772,8 @@
     },
     {
       "id": "i-une-partie",
-      "type": "respond",
-      "situation": "a part",
+      "type": "translate",
+      "prompt": "a part",
       "answer": "une partie",
       "hint": "{une...}",
       "mistakes": [
@@ -793,8 +793,8 @@
     },
     {
       "id": "i-le-cote",
-      "type": "respond",
-      "situation": "the side",
+      "type": "translate",
+      "prompt": "the side",
       "answer": "le côté",
       "accept": [
         "le cote"
@@ -806,6 +806,10 @@
           "feedback": "Expected: \"{le côté}\""
         },
         {
+          "answer": "le coté",
+          "feedback": "Expected: \"le côté\""
+        },
+        {
           "answer": "la cote",
           "feedback": "Expected: \"{le côté}\""
         }
@@ -813,8 +817,8 @@
     },
     {
       "id": "i-j-ai-un-probleme",
-      "type": "respond",
-      "situation": "I have a problem",
+      "type": "translate",
+      "prompt": "I have a problem",
       "answer": "j'ai un problème",
       "accept": [
         "j ai un problème",
@@ -838,8 +842,8 @@
     },
     {
       "id": "i-j-ai-une-question",
-      "type": "respond",
-      "situation": "I have a question",
+      "type": "translate",
+      "prompt": "I have a question",
       "answer": "j'ai une question",
       "accept": [
         "j ai une question"
@@ -862,8 +866,8 @@
     },
     {
       "id": "i-c-est-une-longue",
-      "type": "respond",
-      "situation": "it's a long story",
+      "type": "translate",
+      "prompt": "it's a long story",
       "answer": "c'est une longue histoire",
       "accept": [
         "c est une longue histoire"
@@ -886,8 +890,8 @@
     },
     {
       "id": "i-toute-ma-famille",
-      "type": "respond",
-      "situation": "my whole family",
+      "type": "translate",
+      "prompt": "my whole family",
       "answer": "toute ma famille",
       "hint": "{toute ma famille}",
       "mistakes": [
@@ -907,8 +911,8 @@
     },
     {
       "id": "i-au-debut",
-      "type": "respond",
-      "situation": "at the beginning",
+      "type": "translate",
+      "prompt": "at the beginning",
       "answer": "au début",
       "accept": [
         "au debut"
@@ -931,8 +935,8 @@
     },
     {
       "id": "i-a-la-fin",
-      "type": "respond",
-      "situation": "at the end",
+      "type": "translate",
+      "prompt": "at the end",
       "answer": "à la fin",
       "accept": [
         "a la fin"

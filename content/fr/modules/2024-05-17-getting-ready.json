@@ -107,22 +107,22 @@
   "items": [
     {
       "id": "getting-ready-1",
-      "type": "respond",
-      "situation": "I wash myself",
+      "type": "translate",
+      "prompt": "I wash myself",
       "answer": "je me lave",
       "hint": "{je me + laver}"
     },
     {
       "id": "getting-ready-2",
-      "type": "respond",
-      "situation": "I get dressed",
+      "type": "translate",
+      "prompt": "I get dressed",
       "answer": "je m'habille",
       "hint": "je m' + habiller (elision!)"
     },
     {
       "id": "getting-ready-3",
-      "type": "respond",
-      "situation": "I get ready for class",
+      "type": "translate",
+      "prompt": "I get ready for class",
       "answer": "je me prépare pour le cours",
       "hint": "{je me prépare + pour + le cours}"
     },

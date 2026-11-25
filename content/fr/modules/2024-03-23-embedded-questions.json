@@ -96,64 +96,64 @@
   "items": [
     {
       "id": "i-je-me-demande-pourquoi",
-      "type": "respond",
-      "situation": "I wonder why it's like that",
+      "type": "translate",
+      "prompt": "I wonder why it's like that",
       "answer": "je me demande pourquoi c'est comme ça",
       "hint": "je me demande + pourquoi c'est comme ça (no est-ce que!)"
     },
     {
       "id": "i-je-me-demande-comment",
-      "type": "respond",
-      "situation": "I wonder how that works",
+      "type": "translate",
+      "prompt": "I wonder how that works",
       "answer": "je me demande comment ça marche",
       "hint": "{je me demande + comment ça marche}"
     },
     {
       "id": "i-je-me-demande-pourquoi-2",
-      "type": "respond",
-      "situation": "I wonder why the sky is blue",
+      "type": "translate",
+      "prompt": "I wonder why the sky is blue",
       "answer": "je me demande pourquoi le ciel est bleu",
       "hint": "{je me demande + pourquoi le ciel est bleu}"
     },
     {
       "id": "i-je-me-demande-ou",
-      "type": "respond",
-      "situation": "I wonder where he is",
+      "type": "translate",
+      "prompt": "I wonder where he is",
       "answer": "je me demande où il est",
       "hint": "{je me demande + où il est}"
     },
     {
       "id": "i-je-ne-sais-pas",
-      "type": "respond",
-      "situation": "I don't know how we do that",
+      "type": "translate",
+      "prompt": "I don't know how we do that",
       "answer": "je ne sais pas comment on fait ça",
       "hint": "{je ne sais pas + comment on fait ça}"
     },
     {
       "id": "i-je-ne-sais-pas-2",
-      "type": "respond",
-      "situation": "I don't know why he does that",
+      "type": "translate",
+      "prompt": "I don't know why he does that",
       "answer": "je ne sais pas pourquoi il fait ça",
       "hint": "{je ne sais pas + pourquoi il fait ça}"
     },
     {
       "id": "i-je-ne-sais-pas-3",
-      "type": "respond",
-      "situation": "I don't know how a turtle swims",
+      "type": "translate",
+      "prompt": "I don't know how a turtle swims",
       "answer": "je ne sais pas comment une tortue nage",
       "hint": "{je ne sais pas + comment une tortue nage}"
     },
     {
       "id": "i-je-ne-sais-pas-4",
-      "type": "respond",
-      "situation": "I don't know where the station is",
+      "type": "translate",
+      "prompt": "I don't know where the station is",
       "answer": "je ne sais pas où est la gare",
       "hint": "{je ne sais pas + où est la gare}"
     },
     {
       "id": "i-peux-tu-me-dire",
-      "type": "respond",
-      "situation": "Can you tell me where the station is?",
+      "type": "translate",
+      "prompt": "Can you tell me where the station is?",
       "answer": "peux-tu me dire où est la gare?",
       "accept": [
         "peux-tu me dire où est la gare"
@@ -162,8 +162,8 @@
     },
     {
       "id": "i-peux-tu-me-dire-2",
-      "type": "respond",
-      "situation": "Can you tell me how that works?",
+      "type": "translate",
+      "prompt": "Can you tell me how that works?",
       "answer": "peux-tu me dire comment ça marche?",
       "accept": [
         "peux-tu me dire comment ça marche"
@@ -172,8 +172,8 @@
     },
     {
       "id": "i-peux-tu-me-dire-3",
-      "type": "respond",
-      "situation": "Can you tell me why he does that?",
+      "type": "translate",
+      "prompt": "Can you tell me why he does that?",
       "answer": "peux-tu me dire pourquoi il fait ça?",
       "accept": [
         "peux-tu me dire pourquoi il fait ça"
@@ -182,8 +182,8 @@
     },
     {
       "id": "i-tu-sais-pourquoi-il",
-      "type": "respond",
-      "situation": "Do you know why he does that?",
+      "type": "translate",
+      "prompt": "Do you know why he does that?",
       "answer": "tu sais pourquoi il fait ça?",
       "accept": [
         "tu sais pourquoi il fait ça"
@@ -192,8 +192,8 @@
     },
     {
       "id": "i-on-ne-comprend-pas",
-      "type": "respond",
-      "situation": "We don't understand why it's like that",
+      "type": "translate",
+      "prompt": "We don't understand why it's like that",
       "answer": "on ne comprend pas pourquoi c'est comme ça",
       "hint": "{on ne comprend pas + pourquoi c'est comme ça}"
     },

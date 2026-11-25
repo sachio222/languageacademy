@@ -179,15 +179,15 @@
     },
     {
       "id": "i-je-n-ai-pas-2",
-      "type": "respond",
-      "situation": "I don't have a cat",
+      "type": "translate",
+      "prompt": "I don't have a cat",
       "answer": "je n'ai pas un chat",
       "hint": "Negate '{j'ai un chat}'"
     },
     {
       "id": "i-elle-n-est-pas",
-      "type": "respond",
-      "situation": "she is not a woman",
+      "type": "translate",
+      "prompt": "she is not a woman",
       "answer": "elle n'est pas une femme",
       "hint": "Negate '{elle est une femme}'"
     },
@@ -223,22 +223,22 @@
     },
     {
       "id": "i-nous-ne-sommes-pas",
-      "type": "respond",
-      "situation": "we are not at the café",
+      "type": "translate",
+      "prompt": "we are not at the café",
       "answer": "nous ne sommes pas au café",
       "hint": "Negate '{nous sommes au café}'"
     },
     {
       "id": "i-elle-ne-veut-pas",
-      "type": "respond",
-      "situation": "she doesn't want this",
+      "type": "translate",
+      "prompt": "she doesn't want this",
       "answer": "elle ne veut pas ça",
       "hint": "Negate '{elle veut ça}'"
     },
     {
       "id": "i-je-ne-fais-pas",
-      "type": "respond",
-      "situation": "I don't do that",
+      "type": "translate",
+      "prompt": "I don't do that",
       "answer": "je ne fais pas ça",
       "hint": "Negate '{je fais ça}'"
     },

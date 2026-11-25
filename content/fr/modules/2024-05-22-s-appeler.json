@@ -107,8 +107,8 @@
   "items": [
     {
       "id": "s-appeler-1",
-      "type": "respond",
-      "situation": "My name is Marie",
+      "type": "translate",
+      "prompt": "My name is Marie",
       "answer": "je m'appelle Marie",
       "hint": "je m'appelle + name",
       "mistakes": [
@@ -132,15 +132,15 @@
     },
     {
       "id": "s-appeler-3",
-      "type": "respond",
-      "situation": "His name is Pierre",
+      "type": "translate",
+      "prompt": "His name is Pierre",
       "answer": "il s'appelle Pierre",
       "hint": "il s'appelle + name"
     },
     {
       "id": "s-appeler-4",
-      "type": "respond",
-      "situation": "Her name is Sophie",
+      "type": "translate",
+      "prompt": "Her name is Sophie",
       "answer": "elle s'appelle Sophie",
       "hint": "elle s'appelle + name"
     },

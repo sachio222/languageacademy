@@ -191,8 +191,8 @@
   "items": [
     {
       "id": "i-j-ai-le-temps",
-      "type": "respond",
-      "situation": "I have time",
+      "type": "translate",
+      "prompt": "I have time",
       "answer": "j'ai le temps",
       "hint": "j'ai + article + temps (masculine)",
       "mistakes": [
@@ -208,8 +208,8 @@
     },
     {
       "id": "i-la-vie-est-bonne",
-      "type": "respond",
-      "situation": "life is good",
+      "type": "translate",
+      "prompt": "life is good",
       "answer": "la vie est bonne",
       "hint": "la vie + est + bon/bonne (feminine form!)",
       "mistakes": [
@@ -225,8 +225,8 @@
     },
     {
       "id": "i-le-monde-est-grand",
-      "type": "respond",
-      "situation": "the world is big",
+      "type": "translate",
+      "prompt": "the world is big",
       "answer": "le monde est grand",
       "hint": "le monde + est + grand (masculine)",
       "mistakes": [
@@ -242,8 +242,8 @@
     },
     {
       "id": "i-je-veux-de-l",
-      "type": "respond",
-      "situation": "I want water",
+      "type": "translate",
+      "prompt": "I want water",
       "answer": "je veux de l'eau",
       "accept": [
         "je veux l'eau",
@@ -259,8 +259,8 @@
     },
     {
       "id": "i-nous-avons-du-pain",
-      "type": "respond",
-      "situation": "we have bread",
+      "type": "translate",
+      "prompt": "we have bread",
       "answer": "nous avons du pain",
       "accept": [
         "nous avons le pain"
@@ -293,8 +293,8 @@
     },
     {
       "id": "i-je-dois-travailler",
-      "type": "respond",
-      "situation": "I must work",
+      "type": "translate",
+      "prompt": "I must work",
       "answer": "je dois travailler",
       "hint": "je dois + travailler (work as a verb!)",
       "mistakes": [
@@ -306,8 +306,8 @@
     },
     {
       "id": "i-elle-vit-dans-la",
-      "type": "respond",
-      "situation": "she lives in the city",
+      "type": "translate",
+      "prompt": "she lives in the city",
       "answer": "elle vit dans la ville",
       "accept": [
         "elle habite dans la ville"
@@ -322,8 +322,8 @@
     },
     {
       "id": "i-la-place-est-ici",
-      "type": "respond",
-      "situation": "the square is here",
+      "type": "translate",
+      "prompt": "the square is here",
       "answer": "la place est ici",
       "hint": "{la place + est + ici}",
       "mistakes": [
@@ -335,8 +335,8 @@
     },
     {
       "id": "i-je-vois-la-rue",
-      "type": "respond",
-      "situation": "I see the street",
+      "type": "translate",
+      "prompt": "I see the street",
       "answer": "je vois la rue",
       "hint": "{je vois + la rue}",
       "mistakes": [
@@ -348,8 +348,8 @@
     },
     {
       "id": "i-le-pain-est-sur",
-      "type": "respond",
-      "situation": "the bread is on the table",
+      "type": "translate",
+      "prompt": "the bread is on the table",
       "answer": "le pain est sur la table",
       "hint": "{le pain + est + sur + la table}",
       "mistakes": [
@@ -361,8 +361,8 @@
     },
     {
       "id": "i-je-l-ai-dans",
-      "type": "respond",
-      "situation": "I have it in my hand",
+      "type": "translate",
+      "prompt": "I have it in my hand",
       "answer": "je l'ai dans ma main",
       "accept": [
         "je l ai dans ma main"
@@ -377,8 +377,8 @@
     },
     {
       "id": "i-mon-nom-est-marc",
-      "type": "respond",
-      "situation": "my name is Marc",
+      "type": "translate",
+      "prompt": "my name is Marc",
       "answer": "mon nom est Marc",
       "hint": "{mon nom + est + Marc}",
       "mistakes": [
@@ -390,8 +390,8 @@
     },
     {
       "id": "i-la-porte-est-la",
-      "type": "respond",
-      "situation": "the door is there",
+      "type": "translate",
+      "prompt": "the door is there",
       "answer": "la porte est là",
       "hint": "{la porte + est + là}",
       "mistakes": [
@@ -403,8 +403,8 @@
     },
     {
       "id": "i-tout-le-monde-est",
-      "type": "respond",
-      "situation": "everybody is here",
+      "type": "translate",
+      "prompt": "everybody is here",
       "answer": "tout le monde est ici",
       "hint": "tout le monde + est + ici (singular verb!)",
       "mistakes": [
@@ -416,8 +416,8 @@
     },
     {
       "id": "i-je-ne-vois-personne",
-      "type": "respond",
-      "situation": "I see nobody",
+      "type": "translate",
+      "prompt": "I see nobody",
       "answer": "je ne vois personne",
       "hint": "je ne vois personne (negation with personne!)",
       "mistakes": [
@@ -429,8 +429,8 @@
     },
     {
       "id": "i-je-veux-payer-avec",
-      "type": "respond",
-      "situation": "I want to pay with credit card",
+      "type": "translate",
+      "prompt": "I want to pay with credit card",
       "answer": "je veux payer avec la carte de crédit",
       "accept": [
         "je veux payer avec une carte de crédit"
@@ -445,8 +445,8 @@
     },
     {
       "id": "i-j-ai-des-especes",
-      "type": "respond",
-      "situation": "I have cash",
+      "type": "translate",
+      "prompt": "I have cash",
       "answer": "j'ai des espèces",
       "accept": [
         "j ai des espèces"
@@ -461,8 +461,8 @@
     },
     {
       "id": "i-nous-voulons-une-carafe",
-      "type": "respond",
-      "situation": "we want a carafe of water",
+      "type": "translate",
+      "prompt": "we want a carafe of water",
       "answer": "nous voulons une carafe d'eau",
       "accept": [
         "nous voulons une carafe d eau"
@@ -496,8 +496,8 @@
     },
     {
       "id": "i-je-vois-quelqu-un",
-      "type": "respond",
-      "situation": "I see someone",
+      "type": "translate",
+      "prompt": "I see someone",
       "answer": "je vois quelqu'un",
       "hint": "{je vois + quelqu'un}",
       "mistakes": [
@@ -513,8 +513,8 @@
     },
     {
       "id": "i-je-veux-quelque-chose",
-      "type": "respond",
-      "situation": "I want something",
+      "type": "translate",
+      "prompt": "I want something",
       "answer": "je veux quelque chose",
       "hint": "{je veux + quelque chose}",
       "mistakes": [
@@ -526,8 +526,8 @@
     },
     {
       "id": "i-quelqu-un-a-le",
-      "type": "respond",
-      "situation": "someone has the book",
+      "type": "translate",
+      "prompt": "someone has the book",
       "answer": "quelqu'un a le livre",
       "hint": "{quelqu'un + a + le livre}",
       "mistakes": [

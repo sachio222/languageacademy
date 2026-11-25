@@ -107,7 +107,7 @@
       "id": "c-communication-nouns",
       "term": "Communication nouns",
       "definition": "Question-and-answer vocabulary - essential for learning!",
-      "example": "{la question} ({question}), {la réponse} (answer), {l'idée} (idea)"
+      "example": "{la question} (question), {la réponse} (answer), {l'idée} (idea)"
     },
     {
       "id": "c-complete-sentence-composition",
@@ -119,8 +119,8 @@
   "items": [
     {
       "id": "knowledge-nouns-1",
-      "type": "respond",
-      "situation": "I have a question",
+      "type": "translate",
+      "prompt": "I have a question",
       "answer": "j'ai une question",
       "hint": "j'ai + une question (feminine)",
       "mistakes": [
@@ -132,22 +132,22 @@
     },
     {
       "id": "knowledge-nouns-2",
-      "type": "respond",
-      "situation": "That's a good idea",
+      "type": "translate",
+      "prompt": "That's a good idea",
       "answer": "c'est une bonne idée",
       "hint": "c'est + une bonne idée (feminine adjective agrees)"
     },
     {
       "id": "knowledge-nouns-3",
-      "type": "respond",
-      "situation": "I go to university",
+      "type": "translate",
+      "prompt": "I go to university",
       "answer": "je vais à l'université",
       "hint": "je vais + à l'université (use à l' before vowel)"
     },
     {
       "id": "knowledge-nouns-4",
-      "type": "respond",
-      "situation": "I know the answer",
+      "type": "translate",
+      "prompt": "I know the answer",
       "answer": "je sais la réponse",
       "hint": "je sais + la réponse (use savoir for facts)",
       "mistakes": [
@@ -159,15 +159,15 @@
     },
     {
       "id": "knowledge-nouns-5",
-      "type": "respond",
-      "situation": "I'm learning my lessons",
+      "type": "translate",
+      "prompt": "I'm learning my lessons",
       "answer": "j'apprends mes leçons",
       "hint": "{j'apprends + mes leçons}"
     },
     {
       "id": "knowledge-nouns-6",
-      "type": "respond",
-      "situation": "I understand the question",
+      "type": "translate",
+      "prompt": "I understand the question",
       "answer": "je comprends la question",
       "hint": "{je comprends + la question}"
     }

@@ -209,8 +209,8 @@
   "items": [
     {
       "id": "i-j-ecoute",
-      "type": "respond",
-      "situation": "I listen",
+      "type": "translate",
+      "prompt": "I listen",
       "answer": "j'écoute",
       "hint": "écouter for je"
     },
@@ -223,22 +223,22 @@
     },
     {
       "id": "i-nous-ecoutons",
-      "type": "respond",
-      "situation": "we listen",
+      "type": "translate",
+      "prompt": "we listen",
       "answer": "nous écoutons",
       "hint": "écouter for nous"
     },
     {
       "id": "i-je-regarde",
-      "type": "respond",
-      "situation": "I watch",
+      "type": "translate",
+      "prompt": "I watch",
       "answer": "je regarde",
       "hint": "regarder for je"
     },
     {
       "id": "i-il-regarde",
-      "type": "respond",
-      "situation": "he watches",
+      "type": "translate",
+      "prompt": "he watches",
       "answer": "il regarde",
       "hint": "regarder for il"
     },
@@ -251,15 +251,15 @@
     },
     {
       "id": "i-j-ecoute-de-la",
-      "type": "respond",
-      "situation": "I listen to music",
+      "type": "translate",
+      "prompt": "I listen to music",
       "answer": "j'écoute de la musique",
       "hint": "{j'écoute + de la musique}"
     },
     {
       "id": "i-je-regarde-la-tele",
-      "type": "respond",
-      "situation": "I watch TV",
+      "type": "translate",
+      "prompt": "I watch TV",
       "answer": "je regarde la télé",
       "accept": [
         "je regarde la télévision"
@@ -268,8 +268,8 @@
     },
     {
       "id": "i-qu-est-ce-que",
-      "type": "respond",
-      "situation": "What are you listening to?",
+      "type": "translate",
+      "prompt": "What are you listening to?",
       "answer": "qu'est-ce que tu écoutes?",
       "accept": [
         "tu écoutes quoi?"
@@ -278,8 +278,8 @@
     },
     {
       "id": "i-qu-est-ce-que-2",
-      "type": "respond",
-      "situation": "What are you watching?",
+      "type": "translate",
+      "prompt": "What are you watching?",
       "answer": "qu'est-ce que tu regardes?",
       "accept": [
         "tu regardes quoi?"
@@ -288,15 +288,15 @@
     },
     {
       "id": "i-je-regarde-des-films",
-      "type": "respond",
-      "situation": "I watch movies",
+      "type": "translate",
+      "prompt": "I watch movies",
       "answer": "je regarde des films",
       "hint": "{je regarde + des films}"
     },
     {
       "id": "i-ecoute-le-professeur",
-      "type": "respond",
-      "situation": "Listen to the teacher!",
+      "type": "translate",
+      "prompt": "Listen to the teacher!",
       "answer": "écoute le professeur!",
       "accept": [
         "écoutez le professeur!"

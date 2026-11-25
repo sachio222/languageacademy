@@ -113,8 +113,8 @@
   "items": [
     {
       "id": "i-je-donne",
-      "type": "respond",
-      "situation": "I give",
+      "type": "translate",
+      "prompt": "I give",
       "answer": "je donne",
       "hint": "donner for je",
       "mistakes": [
@@ -140,22 +140,22 @@
     },
     {
       "id": "i-il-donne",
-      "type": "respond",
-      "situation": "he gives",
+      "type": "translate",
+      "prompt": "he gives",
       "answer": "il donne",
       "hint": "donner for il"
     },
     {
       "id": "i-elle-donne",
-      "type": "respond",
-      "situation": "she gives",
+      "type": "translate",
+      "prompt": "she gives",
       "answer": "elle donne",
       "hint": "donner for elle"
     },
     {
       "id": "i-nous-donnons",
-      "type": "respond",
-      "situation": "we give",
+      "type": "translate",
+      "prompt": "we give",
       "answer": "nous donnons",
       "hint": "donner for nous",
       "mistakes": [
@@ -181,8 +181,8 @@
     },
     {
       "id": "i-ils-donnent",
-      "type": "respond",
-      "situation": "they give",
+      "type": "translate",
+      "prompt": "they give",
       "answer": "ils donnent",
       "accept": [
         "elles donnent"
@@ -197,8 +197,8 @@
     },
     {
       "id": "i-je-donne-le-livre",
-      "type": "respond",
-      "situation": "I give the book",
+      "type": "translate",
+      "prompt": "I give the book",
       "answer": "je donne le livre",
       "hint": "{je donne + le livre}",
       "mistakes": [
@@ -218,8 +218,8 @@
     },
     {
       "id": "i-nous-donnons-la-maison",
-      "type": "respond",
-      "situation": "we give the house",
+      "type": "translate",
+      "prompt": "we give the house",
       "answer": "nous donnons la maison",
       "hint": "{nous donnons + la maison}"
     },
@@ -254,8 +254,8 @@
     },
     {
       "id": "i-il-ne-donne-rien",
-      "type": "respond",
-      "situation": "he doesn't give anything",
+      "type": "translate",
+      "prompt": "he doesn't give anything",
       "answer": "il ne donne rien",
       "accept": [
         "il ne donne pas"
@@ -264,8 +264,8 @@
     },
     {
       "id": "i-nous-donnons-toujours",
-      "type": "respond",
-      "situation": "we always give",
+      "type": "translate",
+      "prompt": "we always give",
       "answer": "nous donnons toujours",
       "accept": [
         "nous donnons toujours quelque chose"

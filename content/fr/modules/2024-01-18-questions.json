@@ -107,7 +107,7 @@
       "id": "c-method-1-est-ce",
       "term": "Method 1: {Est-ce que} (Beginner-Friendly!)",
       "definition": "Add '{est-ce que}' before ANY statement to make it a question. No word order change needed!",
-      "example": "Statement: '{tu as un chat}' → {Question}: '{est-ce que tu as un chat?}' (do you have a cat?)"
+      "example": "Statement: '{tu as un chat}' → Question: '{est-ce que tu as un chat?}' (do you have a cat?)"
     },
     {
       "id": "c-with-question-words-est",
@@ -189,7 +189,13 @@
       "situation": "You can't find your cat. Ask about location",
       "cue": "where",
       "answer": "où",
-      "hint": "Remember the accent: où"
+      "hint": "Remember the accent: où",
+      "mistakes": [
+        {
+          "answer": "ou",
+          "feedback": "Need accent: où, not 'ou' (which means 'or')"
+        }
+      ]
     },
     {
       "id": "i-quand",
@@ -273,7 +279,13 @@
       "situation": "You're looking for something. Ask about its location",
       "cue": "Where is it?",
       "answer": "où est-ce",
-      "hint": "Combine 'where' + est-ce - remember the accent!"
+      "hint": "Combine 'where' + est-ce - remember the accent!",
+      "mistakes": [
+        {
+          "answer": "ou est-ce",
+          "feedback": "Use où with an accent, not 'ou'"
+        }
+      ]
     },
     {
       "id": "i-est-ce-que-tu",
@@ -300,6 +312,10 @@
         {
           "answer": "où tu es",
           "feedback": "Add '{est-ce que}' between où and tu es"
+        },
+        {
+          "answer": "ou est-ce que tu es",
+          "feedback": "Use où (with accent), not 'ou' (which means 'or')"
         }
       ]
     },

@@ -210,8 +210,8 @@
     },
     {
       "id": "i-tu-as-une-voiture",
-      "type": "translate",
-      "prompt": "you have a car (informal)",
+      "type": "respond",
+      "situation": "you have a car (informal)",
       "answer": "tu as une voiture",
       "hint": "Combine: you have + article + car (feminine)",
       "mistakes": [
@@ -307,8 +307,8 @@
     },
     {
       "id": "i-tu-as-une-chose",
-      "type": "translate",
-      "prompt": "you have a thing (informal)",
+      "type": "respond",
+      "situation": "you have a thing (informal)",
       "answer": "tu as une chose",
       "hint": "Combine: you have + article + thing (feminine)",
       "mistakes": [

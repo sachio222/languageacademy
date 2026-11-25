@@ -54,64 +54,64 @@
     },
     {
       "id": "i-devant",
-      "type": "respond",
-      "situation": "in front of",
+      "type": "translate",
+      "prompt": "in front of",
       "answer": "devant",
       "hint": "Opposite of derrière"
     },
     {
       "id": "i-derriere",
-      "type": "respond",
-      "situation": "behind",
+      "type": "translate",
+      "prompt": "behind",
       "answer": "derrière",
       "hint": "Opposite of devant"
     },
     {
       "id": "i-entre",
-      "type": "respond",
-      "situation": "between",
+      "type": "translate",
+      "prompt": "between",
       "answer": "entre",
       "hint": "Among two things"
     },
     {
       "id": "i-au-dessus-de",
-      "type": "respond",
-      "situation": "above / over",
+      "type": "translate",
+      "prompt": "above / over",
       "answer": "au-dessus de",
       "hint": "Compound preposition with dessus"
     },
     {
       "id": "i-au-dessous-de",
-      "type": "respond",
-      "situation": "below / under",
+      "type": "translate",
+      "prompt": "below / under",
       "answer": "au-dessous de",
       "hint": "Compound preposition with dessous"
     },
     {
       "id": "i-pres-de",
-      "type": "respond",
-      "situation": "near / close to",
+      "type": "translate",
+      "prompt": "near / close to",
       "answer": "près de",
       "hint": "Proximity - compound with de"
     },
     {
       "id": "i-loin-de",
-      "type": "respond",
-      "situation": "far from",
+      "type": "translate",
+      "prompt": "far from",
       "answer": "loin de",
       "hint": "Distance - opposite of près de"
     },
     {
       "id": "i-a-cote-de",
-      "type": "respond",
-      "situation": "next to / beside",
+      "type": "translate",
+      "prompt": "next to / beside",
       "answer": "à côté de",
       "hint": "Right next to - compound with côté"
     },
     {
       "id": "i-j-ai-parle",
-      "type": "respond",
-      "situation": "I spoke",
+      "type": "translate",
+      "prompt": "I spoke",
       "answer": "j'ai parlé",
       "hint": "passé composé of parler"
     },
@@ -124,8 +124,8 @@
     },
     {
       "id": "i-nous-avons-ecoute",
-      "type": "respond",
-      "situation": "we listened",
+      "type": "translate",
+      "prompt": "we listened",
       "answer": "nous avons écouté",
       "hint": "passé composé of écouter"
     },
@@ -138,22 +138,22 @@
     },
     {
       "id": "i-j-ai-eu",
-      "type": "respond",
-      "situation": "I had",
+      "type": "translate",
+      "prompt": "I had",
       "answer": "j'ai eu",
       "hint": "passé composé of avoir - irregular participle"
     },
     {
       "id": "i-elle-a-ete",
-      "type": "respond",
-      "situation": "she was",
+      "type": "translate",
+      "prompt": "she was",
       "answer": "elle a été",
       "hint": "passé composé of être - irregular participle"
     },
     {
       "id": "i-nous-avons-fait",
-      "type": "respond",
-      "situation": "we did/made",
+      "type": "translate",
+      "prompt": "we did/made",
       "answer": "nous avons fait",
       "hint": "passé composé of faire - irregular participle"
     },
@@ -166,22 +166,22 @@
     },
     {
       "id": "i-il-a-dit",
-      "type": "respond",
-      "situation": "he said",
+      "type": "translate",
+      "prompt": "he said",
       "answer": "il a dit",
       "hint": "passé composé of dire - irregular participle"
     },
     {
       "id": "i-j-ai-pris",
-      "type": "respond",
-      "situation": "I took",
+      "type": "translate",
+      "prompt": "I took",
       "answer": "j'ai pris",
       "hint": "passé composé of prendre - irregular participle"
     },
     {
       "id": "i-elle-est-allee",
-      "type": "respond",
-      "situation": "she went",
+      "type": "translate",
+      "prompt": "she went",
       "answer": "elle est allée",
       "hint": "passé composé of aller - feminine agreement"
     },
@@ -215,8 +215,8 @@
     },
     {
       "id": "i-je-parlais",
-      "type": "respond",
-      "situation": "I was speaking",
+      "type": "translate",
+      "prompt": "I was speaking",
       "answer": "je parlais",
       "hint": "imparfait of parler"
     },
@@ -236,8 +236,8 @@
     },
     {
       "id": "i-nous-allions",
-      "type": "respond",
-      "situation": "we used to go",
+      "type": "translate",
+      "prompt": "we used to go",
       "answer": "nous allions",
       "hint": "imparfait of aller - habitual action"
     },

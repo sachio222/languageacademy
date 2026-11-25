@@ -219,8 +219,8 @@
     },
     {
       "id": "i-le-chat-est-dans",
-      "type": "respond",
-      "situation": "the cat is in the house",
+      "type": "translate",
+      "prompt": "the cat is in the house",
       "answer": "le chat est dans la maison",
       "hint": "le chat + est + [in] + la maison",
       "mistakes": [
@@ -232,8 +232,8 @@
     },
     {
       "id": "i-la-chose-est-sur",
-      "type": "respond",
-      "situation": "the thing is on the book",
+      "type": "translate",
+      "prompt": "the thing is on the book",
       "answer": "la chose est sur le livre",
       "hint": "{la chose + est + [on] + le livre}"
     },
@@ -253,8 +253,8 @@
     },
     {
       "id": "i-sous",
-      "type": "respond",
-      "situation": "under",
+      "type": "translate",
+      "prompt": "under",
       "answer": "sous",
       "hint": "Opposite of '{sur}' (on) - beneath",
       "mistakes": [
@@ -266,8 +266,8 @@
     },
     {
       "id": "i-le-chat-est-sous",
-      "type": "respond",
-      "situation": "the cat is under the table",
+      "type": "translate",
+      "prompt": "the cat is under the table",
       "answer": "le chat est sous la table",
       "hint": "{le chat + est + sous + la table}",
       "mistakes": [
@@ -279,8 +279,8 @@
     },
     {
       "id": "i-devant",
-      "type": "respond",
-      "situation": "in front of",
+      "type": "translate",
+      "prompt": "in front of",
       "answer": "devant",
       "hint": "Position - facing something",
       "mistakes": [
@@ -292,15 +292,15 @@
     },
     {
       "id": "i-je-suis-devant-la",
-      "type": "respond",
-      "situation": "I am in front of the house",
+      "type": "translate",
+      "prompt": "I am in front of the house",
       "answer": "je suis devant la maison",
       "hint": "{je suis + devant + la maison}"
     },
     {
       "id": "i-derriere",
-      "type": "respond",
-      "situation": "behind",
+      "type": "translate",
+      "prompt": "behind",
       "answer": "derrière",
       "hint": "Opposite of '{devant}' (in front)",
       "mistakes": [
@@ -312,29 +312,29 @@
     },
     {
       "id": "i-le-livre-est-derriere",
-      "type": "respond",
-      "situation": "the book is behind the door",
+      "type": "translate",
+      "prompt": "the book is behind the door",
       "answer": "le livre est derrière la porte",
       "hint": "{le livre + est + derrière + la porte}"
     },
     {
       "id": "i-entre",
-      "type": "respond",
-      "situation": "between",
+      "type": "translate",
+      "prompt": "between",
       "answer": "entre",
       "hint": "Position between two things"
     },
     {
       "id": "i-je-suis-entre-les",
-      "type": "respond",
-      "situation": "I am between friends",
+      "type": "translate",
+      "prompt": "I am between friends",
       "answer": "je suis entre les amis",
       "hint": "{je suis + entre + les amis}"
     },
     {
       "id": "i-je-suis-chez-pierre",
-      "type": "respond",
-      "situation": "I am at Pierre's place",
+      "type": "translate",
+      "prompt": "I am at Pierre's place",
       "answer": "je suis chez Pierre",
       "hint": "{je suis + chez + Pierre}",
       "mistakes": [
@@ -346,8 +346,8 @@
     },
     {
       "id": "i-le-chat-est-chez",
-      "type": "respond",
-      "situation": "the cat is at the woman's place",
+      "type": "translate",
+      "prompt": "the cat is at the woman's place",
       "answer": "le chat est chez la femme",
       "hint": "{le chat + est + chez + la femme}",
       "mistakes": [

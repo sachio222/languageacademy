@@ -149,8 +149,8 @@
   "items": [
     {
       "id": "i-je-prends",
-      "type": "respond",
-      "situation": "I take",
+      "type": "translate",
+      "prompt": "I take",
       "answer": "je prends",
       "hint": "{je...}",
       "mistakes": [
@@ -192,8 +192,8 @@
     },
     {
       "id": "i-il-prend",
-      "type": "respond",
-      "situation": "he takes",
+      "type": "translate",
+      "prompt": "he takes",
       "answer": "il prend",
       "hint": "{il...}",
       "mistakes": [
@@ -213,8 +213,8 @@
     },
     {
       "id": "i-nous-prenons",
-      "type": "respond",
-      "situation": "we take",
+      "type": "translate",
+      "prompt": "we take",
       "answer": "nous prenons",
       "hint": "{nous...}",
       "mistakes": [
@@ -256,8 +256,8 @@
     },
     {
       "id": "i-ils-prennent",
-      "type": "respond",
-      "situation": "they take",
+      "type": "translate",
+      "prompt": "they take",
       "answer": "ils prennent",
       "hint": "ils... (double n!)",
       "mistakes": [
@@ -277,8 +277,8 @@
     },
     {
       "id": "i-je-prends-le-bus",
-      "type": "respond",
-      "situation": "I take the bus",
+      "type": "translate",
+      "prompt": "I take the bus",
       "answer": "je prends le bus",
       "hint": "{je prends le bus}",
       "mistakes": [
@@ -298,8 +298,8 @@
     },
     {
       "id": "i-tu-prends-le-train",
-      "type": "respond",
-      "situation": "you take the train",
+      "type": "translate",
+      "prompt": "you take the train",
       "answer": "tu prends le train",
       "hint": "{tu prends le train}",
       "mistakes": [
@@ -319,8 +319,8 @@
     },
     {
       "id": "i-elle-prend-son-temps",
-      "type": "respond",
-      "situation": "she takes her time",
+      "type": "translate",
+      "prompt": "she takes her time",
       "answer": "elle prend son temps",
       "hint": "{elle prend son temps}",
       "mistakes": [
@@ -340,8 +340,8 @@
     },
     {
       "id": "i-je-prends-un-cafe",
-      "type": "respond",
-      "situation": "I'm having a coffee",
+      "type": "translate",
+      "prompt": "I'm having a coffee",
       "answer": "je prends un café",
       "accept": [
         "je prends un cafe"
@@ -364,8 +364,8 @@
     },
     {
       "id": "i-nous-prenons-la-voiture",
-      "type": "respond",
-      "situation": "we take the car",
+      "type": "translate",
+      "prompt": "we take the car",
       "answer": "nous prenons la voiture",
       "hint": "{nous prenons la voiture}",
       "mistakes": [
@@ -385,8 +385,8 @@
     },
     {
       "id": "i-j-apprends",
-      "type": "respond",
-      "situation": "I learn",
+      "type": "translate",
+      "prompt": "I learn",
       "answer": "j'apprends",
       "accept": [
         "j apprends"
@@ -409,8 +409,8 @@
     },
     {
       "id": "i-j-apprends-le-francais",
-      "type": "respond",
-      "situation": "I learn French",
+      "type": "translate",
+      "prompt": "I learn French",
       "answer": "j'apprends le français",
       "accept": [
         "j apprends le français",
@@ -434,8 +434,8 @@
     },
     {
       "id": "i-tu-apprends-vite",
-      "type": "respond",
-      "situation": "you learn quickly",
+      "type": "translate",
+      "prompt": "you learn quickly",
       "answer": "tu apprends vite",
       "hint": "{tu apprends vite}",
       "mistakes": [
@@ -455,8 +455,8 @@
     },
     {
       "id": "i-elle-apprend-l-anglais",
-      "type": "respond",
-      "situation": "she learns English",
+      "type": "translate",
+      "prompt": "she learns English",
       "answer": "elle apprend l'anglais",
       "accept": [
         "elle apprend l anglais"
@@ -479,8 +479,8 @@
     },
     {
       "id": "i-nous-apprenons-ensemble",
-      "type": "respond",
-      "situation": "we learn together",
+      "type": "translate",
+      "prompt": "we learn together",
       "answer": "nous apprenons ensemble",
       "hint": "{nous apprenons ensemble}",
       "mistakes": [
@@ -500,8 +500,8 @@
     },
     {
       "id": "i-je-comprends",
-      "type": "respond",
-      "situation": "I understand",
+      "type": "translate",
+      "prompt": "I understand",
       "answer": "je comprends",
       "hint": "{je...}",
       "mistakes": [
@@ -521,8 +521,8 @@
     },
     {
       "id": "i-je-ne-comprends-pas",
-      "type": "respond",
-      "situation": "I don't understand",
+      "type": "translate",
+      "prompt": "I don't understand",
       "answer": "je ne comprends pas",
       "hint": "{je ne comprends pas}",
       "mistakes": [
@@ -542,8 +542,8 @@
     },
     {
       "id": "i-tu-comprends",
-      "type": "respond",
-      "situation": "do you understand?",
+      "type": "translate",
+      "prompt": "do you understand?",
       "answer": "tu comprends?",
       "accept": [
         "tu comprends"
@@ -566,8 +566,8 @@
     },
     {
       "id": "i-il-comprend-le-francais",
-      "type": "respond",
-      "situation": "he understands French",
+      "type": "translate",
+      "prompt": "he understands French",
       "answer": "il comprend le français",
       "accept": [
         "il comprend le francais"
@@ -590,8 +590,8 @@
     },
     {
       "id": "i-nous-comprenons-la-question",
-      "type": "respond",
-      "situation": "we understand the question",
+      "type": "translate",
+      "prompt": "we understand the question",
       "answer": "nous comprenons la question",
       "hint": "{nous comprenons la question}",
       "mistakes": [
@@ -611,8 +611,8 @@
     },
     {
       "id": "i-ils-ne-comprennent-pas",
-      "type": "respond",
-      "situation": "they don't understand",
+      "type": "translate",
+      "prompt": "they don't understand",
       "answer": "ils ne comprennent pas",
       "hint": "{ils ne comprennent pas}",
       "mistakes": [
@@ -632,8 +632,8 @@
     },
     {
       "id": "i-j-ai-pris-le",
-      "type": "respond",
-      "situation": "I took the bus",
+      "type": "translate",
+      "prompt": "I took the bus",
       "answer": "j'ai pris le bus",
       "accept": [
         "j ai pris le bus"
@@ -656,8 +656,8 @@
     },
     {
       "id": "i-j-ai-beaucoup-appris",
-      "type": "respond",
-      "situation": "I learned a lot",
+      "type": "translate",
+      "prompt": "I learned a lot",
       "answer": "j'ai beaucoup appris",
       "accept": [
         "j ai beaucoup appris"

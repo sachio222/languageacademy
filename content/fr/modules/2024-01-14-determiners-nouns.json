@@ -101,8 +101,8 @@
   "items": [
     {
       "id": "i-j-ai-ce-livre",
-      "type": "respond",
-      "situation": "I have this book",
+      "type": "translate",
+      "prompt": "I have this book",
       "answer": "j'ai ce livre",
       "hint": "Combine: I have + demonstrative + book",
       "mistakes": [
@@ -118,8 +118,8 @@
     },
     {
       "id": "i-elle-a-cette-maison",
-      "type": "respond",
-      "situation": "she has this house",
+      "type": "translate",
+      "prompt": "she has this house",
       "answer": "elle a cette maison",
       "hint": "Combine: she has + demonstrative + house (feminine)",
       "mistakes": [
@@ -131,8 +131,8 @@
     },
     {
       "id": "i-nous-avons-ces-livres",
-      "type": "respond",
-      "situation": "we have these books",
+      "type": "translate",
+      "prompt": "we have these books",
       "answer": "nous avons ces livres",
       "hint": "Combine: we have + plural demonstrative + plural noun",
       "mistakes": [
@@ -174,8 +174,8 @@
     },
     {
       "id": "i-c-est-cet-homme",
-      "type": "respond",
-      "situation": "it's this man",
+      "type": "translate",
+      "prompt": "it's this man",
       "answer": "c'est cet homme",
       "hint": "Combine: it is + demonstrative (vowel form) + man",
       "mistakes": [
@@ -191,8 +191,8 @@
     },
     {
       "id": "i-j-ai-le-chat",
-      "type": "respond",
-      "situation": "I have the cat",
+      "type": "translate",
+      "prompt": "I have the cat",
       "answer": "j'ai le chat",
       "hint": "Combine: I have + the + cat",
       "mistakes": [
@@ -208,8 +208,8 @@
     },
     {
       "id": "i-elle-a-la-maison",
-      "type": "respond",
-      "situation": "she has the house",
+      "type": "translate",
+      "prompt": "she has the house",
       "answer": "elle a la maison",
       "hint": "Combine: she has + the + house (feminine)",
       "mistakes": [
@@ -234,8 +234,8 @@
     },
     {
       "id": "i-j-ai-ces-enfants",
-      "type": "respond",
-      "situation": "I have these children",
+      "type": "translate",
+      "prompt": "I have these children",
       "answer": "j'ai ces enfants",
       "hint": "Combine: I have + plural demonstrative + children",
       "mistakes": [
@@ -247,8 +247,8 @@
     },
     {
       "id": "i-c-est-ce-livre",
-      "type": "respond",
-      "situation": "it's this book",
+      "type": "translate",
+      "prompt": "it's this book",
       "answer": "c'est ce livre",
       "hint": "Combine: it is + demonstrative + book",
       "mistakes": [

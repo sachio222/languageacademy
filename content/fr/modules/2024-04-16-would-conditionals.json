@@ -181,8 +181,8 @@
     },
     {
       "id": "i-elle-voudrait-ca",
-      "type": "respond",
-      "situation": "she would like that",
+      "type": "translate",
+      "prompt": "she would like that",
       "answer": "elle voudrait ça",
       "hint": "{elle + voudrait + ça}",
       "mistakes": [
@@ -194,8 +194,8 @@
     },
     {
       "id": "i-nous-voudrions-de-l",
-      "type": "respond",
-      "situation": "we would like water",
+      "type": "translate",
+      "prompt": "we would like water",
       "answer": "nous voudrions de l'eau",
       "accept": [
         "nous voudrions de l eau",
@@ -225,8 +225,8 @@
     },
     {
       "id": "i-ils-voudraient-ca",
-      "type": "respond",
-      "situation": "they would like that",
+      "type": "translate",
+      "prompt": "they would like that",
       "answer": "ils voudraient ça",
       "accept": [
         "elles voudraient ça"
@@ -241,8 +241,8 @@
     },
     {
       "id": "i-j-irais-a-paris",
-      "type": "respond",
-      "situation": "I would go to Paris",
+      "type": "translate",
+      "prompt": "I would go to Paris",
       "answer": "j'irais à Paris",
       "accept": [
         "j irais à Paris"
@@ -271,8 +271,8 @@
     },
     {
       "id": "i-il-irait",
-      "type": "respond",
-      "situation": "he would go",
+      "type": "translate",
+      "prompt": "he would go",
       "answer": "il irait",
       "hint": "{il + irait}",
       "mistakes": [
@@ -284,8 +284,8 @@
     },
     {
       "id": "i-nous-irions-a-paris",
-      "type": "respond",
-      "situation": "we would go to Paris",
+      "type": "translate",
+      "prompt": "we would go to Paris",
       "answer": "nous irions à Paris",
       "hint": "{nous + irions + à Paris}",
       "mistakes": [
@@ -311,8 +311,8 @@
     },
     {
       "id": "i-ils-iraient",
-      "type": "respond",
-      "situation": "they would go",
+      "type": "translate",
+      "prompt": "they would go",
       "answer": "ils iraient",
       "accept": [
         "elles iraient"
@@ -327,8 +327,8 @@
     },
     {
       "id": "i-je-ferais-ca",
-      "type": "respond",
-      "situation": "I would do that",
+      "type": "translate",
+      "prompt": "I would do that",
       "answer": "je ferais ça",
       "hint": "{je ferais + ça}",
       "mistakes": [
@@ -354,8 +354,8 @@
     },
     {
       "id": "i-elle-ferait-ca",
-      "type": "respond",
-      "situation": "she would do that",
+      "type": "translate",
+      "prompt": "she would do that",
       "answer": "elle ferait ça",
       "hint": "{elle + ferait + ça}",
       "mistakes": [
@@ -367,8 +367,8 @@
     },
     {
       "id": "i-nous-ferions-ca",
-      "type": "respond",
-      "situation": "we would do that",
+      "type": "translate",
+      "prompt": "we would do that",
       "answer": "nous ferions ça",
       "hint": "{nous + ferions + ça}",
       "mistakes": [
@@ -394,8 +394,8 @@
     },
     {
       "id": "i-ils-feraient-ca",
-      "type": "respond",
-      "situation": "they would do that",
+      "type": "translate",
+      "prompt": "they would do that",
       "answer": "ils feraient ça",
       "accept": [
         "elles feraient ça"
@@ -410,8 +410,8 @@
     },
     {
       "id": "i-je-ne-voudrais-pas",
-      "type": "respond",
-      "situation": "I would not like that",
+      "type": "translate",
+      "prompt": "I would not like that",
       "answer": "je ne voudrais pas ça",
       "hint": "{je ne voudrais pas + ça}",
       "mistakes": [
@@ -423,8 +423,8 @@
     },
     {
       "id": "i-je-n-irais-pas",
-      "type": "respond",
-      "situation": "I would not go",
+      "type": "translate",
+      "prompt": "I would not go",
       "answer": "je n'irais pas",
       "accept": [
         "je n irais pas"
@@ -439,8 +439,8 @@
     },
     {
       "id": "i-nous-ne-ferions-pas",
-      "type": "respond",
-      "situation": "we would not do that",
+      "type": "translate",
+      "prompt": "we would not do that",
       "answer": "nous ne ferions pas ça",
       "hint": "{nous ne ferions pas + ça}",
       "mistakes": [

@@ -324,8 +324,8 @@
   "items": [
     {
       "id": "i-je-nage",
-      "type": "respond",
-      "situation": "I swim",
+      "type": "translate",
+      "prompt": "I swim",
       "answer": "je nage",
       "hint": "nager for je"
     },
@@ -338,43 +338,43 @@
     },
     {
       "id": "i-nous-nageons",
-      "type": "respond",
-      "situation": "we swim",
+      "type": "translate",
+      "prompt": "we swim",
       "answer": "nous nageons",
       "hint": "nager for nous - careful with spelling!"
     },
     {
       "id": "i-je-saute",
-      "type": "respond",
-      "situation": "I jump",
+      "type": "translate",
+      "prompt": "I jump",
       "answer": "je saute",
       "hint": "sauter for je"
     },
     {
       "id": "i-ils-sautent",
-      "type": "respond",
-      "situation": "they jump",
+      "type": "translate",
+      "prompt": "they jump",
       "answer": "ils sautent",
       "hint": "sauter for ils"
     },
     {
       "id": "i-il-vole",
-      "type": "respond",
-      "situation": "he flies",
+      "type": "translate",
+      "prompt": "he flies",
       "answer": "il vole",
       "hint": "voler for il"
     },
     {
       "id": "i-nous-volons",
-      "type": "respond",
-      "situation": "we fly",
+      "type": "translate",
+      "prompt": "we fly",
       "answer": "nous volons",
       "hint": "voler for nous"
     },
     {
       "id": "i-je-cours",
-      "type": "respond",
-      "situation": "I run",
+      "type": "translate",
+      "prompt": "I run",
       "answer": "je cours",
       "hint": "courir for je - irregular!"
     },
@@ -387,43 +387,43 @@
     },
     {
       "id": "i-il-court",
-      "type": "respond",
-      "situation": "he runs",
+      "type": "translate",
+      "prompt": "he runs",
       "answer": "il court",
       "hint": "courir for il - drop the -s"
     },
     {
       "id": "i-je-marche",
-      "type": "respond",
-      "situation": "I walk",
+      "type": "translate",
+      "prompt": "I walk",
       "answer": "je marche",
       "hint": "marcher for je"
     },
     {
       "id": "i-elle-grimpe",
-      "type": "respond",
-      "situation": "she climbs",
+      "type": "translate",
+      "prompt": "she climbs",
       "answer": "elle grimpe",
       "hint": "grimper for elle"
     },
     {
       "id": "i-la-tortue-nage",
-      "type": "respond",
-      "situation": "The turtle swims",
+      "type": "translate",
+      "prompt": "The turtle swims",
       "answer": "la tortue nage",
       "hint": "{la tortue + nage}"
     },
     {
       "id": "i-l-oiseau-vole",
-      "type": "respond",
-      "situation": "The bird flies",
+      "type": "translate",
+      "prompt": "The bird flies",
       "answer": "l'oiseau vole",
       "hint": "{l'oiseau + vole}"
     },
     {
       "id": "i-l-ecureuil-saute",
-      "type": "respond",
-      "situation": "The squirrel jumps",
+      "type": "translate",
+      "prompt": "The squirrel jumps",
       "answer": "l'écureuil saute",
       "accept": [
         "l'ecureuil saute"
@@ -432,15 +432,15 @@
     },
     {
       "id": "i-le-lapin-saute",
-      "type": "respond",
-      "situation": "The rabbit jumps",
+      "type": "translate",
+      "prompt": "The rabbit jumps",
       "answer": "le lapin saute",
       "hint": "{le lapin + saute}"
     },
     {
       "id": "i-tu-cours-vite",
-      "type": "respond",
-      "situation": "You run fast!",
+      "type": "translate",
+      "prompt": "You run fast!",
       "answer": "tu cours vite",
       "accept": [
         "tu cours vite!"
@@ -449,8 +449,8 @@
     },
     {
       "id": "i-je-nage-dans-la",
-      "type": "respond",
-      "situation": "I swim in the sea",
+      "type": "translate",
+      "prompt": "I swim in the sea",
       "answer": "je nage dans la mer",
       "hint": "{je nage + dans la mer}"
     },

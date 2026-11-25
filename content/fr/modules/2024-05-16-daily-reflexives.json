@@ -107,8 +107,8 @@
   "items": [
     {
       "id": "daily-reflex-1",
-      "type": "respond",
-      "situation": "I remember",
+      "type": "translate",
+      "prompt": "I remember",
       "answer": "je me souviens",
       "hint": "je me + souvenir (like venir)"
     },
@@ -122,8 +122,8 @@
     },
     {
       "id": "daily-reflex-3",
-      "type": "respond",
-      "situation": "I'm having fun",
+      "type": "translate",
+      "prompt": "I'm having fun",
       "answer": "je m'amuse",
       "hint": "je m' + amuser (elision!)"
     },
@@ -137,8 +137,8 @@
     },
     {
       "id": "daily-reflex-5",
-      "type": "respond",
-      "situation": "I'm hurrying",
+      "type": "translate",
+      "prompt": "I'm hurrying",
       "answer": "je me dépêche",
       "accept": [
         "je me depeche"

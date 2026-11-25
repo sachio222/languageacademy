@@ -233,8 +233,8 @@
   "items": [
     {
       "id": "i-j-attends",
-      "type": "respond",
-      "situation": "I wait",
+      "type": "translate",
+      "prompt": "I wait",
       "answer": "j'attends",
       "hint": "attendre for je"
     },
@@ -247,29 +247,29 @@
     },
     {
       "id": "i-nous-restons",
-      "type": "respond",
-      "situation": "we stay",
+      "type": "translate",
+      "prompt": "we stay",
       "answer": "nous restons",
       "hint": "rester for nous"
     },
     {
       "id": "i-le-nord",
-      "type": "respond",
-      "situation": "north",
+      "type": "translate",
+      "prompt": "north",
       "answer": "le nord",
       "hint": "masculine direction"
     },
     {
       "id": "i-le-sud",
-      "type": "respond",
-      "situation": "south",
+      "type": "translate",
+      "prompt": "south",
       "answer": "le sud",
       "hint": "masculine direction"
     },
     {
       "id": "i-tournez-a-gauche",
-      "type": "respond",
-      "situation": "turn left",
+      "type": "translate",
+      "prompt": "turn left",
       "answer": "tournez à gauche",
       "accept": [
         "tourne à gauche"
@@ -278,8 +278,8 @@
     },
     {
       "id": "i-tournez-a-droite",
-      "type": "respond",
-      "situation": "turn right",
+      "type": "translate",
+      "prompt": "turn right",
       "answer": "tournez à droite",
       "accept": [
         "tourne à droite"
@@ -288,15 +288,15 @@
     },
     {
       "id": "i-j-attends-le-bus",
-      "type": "respond",
-      "situation": "I'm waiting for the bus",
+      "type": "translate",
+      "prompt": "I'm waiting for the bus",
       "answer": "j'attends le bus",
       "hint": "{j'attends + le bus}"
     },
     {
       "id": "i-le-train-arrive-a",
-      "type": "respond",
-      "situation": "The train arrives at 3pm",
+      "type": "translate",
+      "prompt": "The train arrives at 3pm",
       "answer": "le train arrive à trois heures",
       "accept": [
         "le train arrive à 15h"
@@ -305,8 +305,8 @@
     },
     {
       "id": "i-ou-est-la-gare",
-      "type": "respond",
-      "situation": "Where is the train station?",
+      "type": "translate",
+      "prompt": "Where is the train station?",
       "answer": "où est la gare?",
       "hint": "{où est + la gare}"
     },
@@ -331,22 +331,22 @@
     },
     {
       "id": "i-c-est-loin",
-      "type": "respond",
-      "situation": "Is it far?",
+      "type": "translate",
+      "prompt": "Is it far?",
       "answer": "c'est loin?",
       "hint": "{c'est + loin + question}"
     },
     {
       "id": "i-c-est-a-cinq",
-      "type": "respond",
-      "situation": "It's five minutes on foot",
+      "type": "translate",
+      "prompt": "It's five minutes on foot",
       "answer": "c'est à cinq minutes à pied",
       "hint": "{c'est + à cinq minutes + à pied}"
     },
     {
       "id": "i-je-reste-a-paris",
-      "type": "respond",
-      "situation": "I'm staying in Paris for three days",
+      "type": "translate",
+      "prompt": "I'm staying in Paris for three days",
       "answer": "je reste à Paris pendant trois jours",
       "hint": "je reste + à Paris + pendant + duration"
     }

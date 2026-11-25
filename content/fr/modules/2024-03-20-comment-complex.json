@@ -102,8 +102,8 @@
   "items": [
     {
       "id": "i-comment-est-ce-qu",
-      "type": "respond",
-      "situation": "How does a turtle swim?",
+      "type": "translate",
+      "prompt": "How does a turtle swim?",
       "answer": "comment est-ce qu'une tortue nage?",
       "accept": [
         "comment est-ce qu'une tortue nage"
@@ -112,8 +112,8 @@
     },
     {
       "id": "i-comment-est-ce-qu-2",
-      "type": "respond",
-      "situation": "How does a bird fly?",
+      "type": "translate",
+      "prompt": "How does a bird fly?",
       "answer": "comment est-ce qu'un oiseau vole?",
       "accept": [
         "comment est-ce qu'un oiseau vole"
@@ -122,8 +122,8 @@
     },
     {
       "id": "i-comment-est-ce-qu-3",
-      "type": "respond",
-      "situation": "How does a squirrel jump?",
+      "type": "translate",
+      "prompt": "How does a squirrel jump?",
       "answer": "comment est-ce qu'un écureuil saute?",
       "accept": [
         "comment est-ce qu'un écureuil saute",
@@ -134,8 +134,8 @@
     },
     {
       "id": "i-comment-est-ce-qu-4",
-      "type": "respond",
-      "situation": "How does a rabbit jump?",
+      "type": "translate",
+      "prompt": "How does a rabbit jump?",
       "answer": "comment est-ce qu'un lapin saute?",
       "accept": [
         "comment est-ce qu'un lapin saute"
@@ -144,8 +144,8 @@
     },
     {
       "id": "i-comment-est-ce-qu-5",
-      "type": "respond",
-      "situation": "How does a squirrel climb?",
+      "type": "translate",
+      "prompt": "How does a squirrel climb?",
       "answer": "comment est-ce qu'un écureuil grimpe?",
       "accept": [
         "comment est-ce qu'un écureuil grimpe",
@@ -156,8 +156,8 @@
     },
     {
       "id": "i-comment-est-ce-que",
-      "type": "respond",
-      "situation": "How do plants grow?",
+      "type": "translate",
+      "prompt": "How do plants grow?",
       "answer": "comment est-ce que les plantes poussent?",
       "accept": [
         "comment est-ce que les plantes poussent"
@@ -166,8 +166,8 @@
     },
     {
       "id": "i-comment-est-ce-que-2",
-      "type": "respond",
-      "situation": "How does the sun shine?",
+      "type": "translate",
+      "prompt": "How does the sun shine?",
       "answer": "comment est-ce que le soleil brille?",
       "accept": [
         "comment est-ce que le soleil brille"
@@ -176,8 +176,8 @@
     },
     {
       "id": "i-comment-est-ce-que-3",
-      "type": "respond",
-      "situation": "How does rain fall?",
+      "type": "translate",
+      "prompt": "How does rain fall?",
       "answer": "comment est-ce que la pluie tombe?",
       "accept": [
         "comment est-ce que la pluie tombe"
@@ -186,8 +186,8 @@
     },
     {
       "id": "i-comment-est-ce-qu-6",
-      "type": "respond",
-      "situation": "How do we do that?",
+      "type": "translate",
+      "prompt": "How do we do that?",
       "answer": "comment est-ce qu'on fait ça?",
       "accept": [
         "comment est-ce qu'on fait ça"
@@ -196,8 +196,8 @@
     },
     {
       "id": "i-comment-est-ce-que-4",
-      "type": "respond",
-      "situation": "How do you do that?",
+      "type": "translate",
+      "prompt": "How do you do that?",
       "answer": "comment est-ce que tu fais ça?",
       "accept": [
         "comment est-ce que tu fais ça"
@@ -206,8 +206,8 @@
     },
     {
       "id": "i-comment-est-ce-que-5",
-      "type": "respond",
-      "situation": "How do you swim?",
+      "type": "translate",
+      "prompt": "How do you swim?",
       "answer": "comment est-ce que tu nages?",
       "accept": [
         "comment est-ce que tu nages"
@@ -216,8 +216,8 @@
     },
     {
       "id": "i-comment-est-ce-qu-7",
-      "type": "respond",
-      "situation": "How does he run so fast?",
+      "type": "translate",
+      "prompt": "How does he run so fast?",
       "answer": "comment est-ce qu'il court si vite?",
       "accept": [
         "comment est-ce qu'il court si vite"
@@ -226,8 +226,8 @@
     },
     {
       "id": "i-comment-est-ce-que-6",
-      "type": "respond",
-      "situation": "How does that make grass green?",
+      "type": "translate",
+      "prompt": "How does that make grass green?",
       "answer": "comment est-ce que ça rend l'herbe verte?",
       "accept": [
         "comment est-ce que ça rend l'herbe verte"

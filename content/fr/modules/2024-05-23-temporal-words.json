@@ -109,8 +109,8 @@
     },
     {
       "id": "temporal-2",
-      "type": "respond",
-      "situation": "before",
+      "type": "translate",
+      "prompt": "before",
       "answer": "avant",
       "hint": "Temporal preposition - opposite of après",
       "mistakes": [
@@ -122,8 +122,8 @@
     },
     {
       "id": "temporal-3",
-      "type": "respond",
-      "situation": "after",
+      "type": "translate",
+      "prompt": "after",
       "answer": "après",
       "hint": "Temporal word - opposite of avant",
       "mistakes": [
@@ -165,8 +165,8 @@
     },
     {
       "id": "temporal-7",
-      "type": "respond",
-      "situation": "finally",
+      "type": "translate",
+      "prompt": "finally",
       "answer": "finalement",
       "hint": "Ends a sequence - finalement",
       "mistakes": [
@@ -178,29 +178,29 @@
     },
     {
       "id": "temporal-8",
-      "type": "respond",
-      "situation": "First, I eat",
+      "type": "translate",
+      "prompt": "First, I eat",
       "answer": "d'abord, je mange",
       "hint": "D'abord + comma + je mange"
     },
     {
       "id": "temporal-9",
-      "type": "respond",
-      "situation": "Then, I leave",
+      "type": "translate",
+      "prompt": "Then, I leave",
       "answer": "ensuite, je pars",
       "hint": "Ensuite + comma + je pars"
     },
     {
       "id": "temporal-10",
-      "type": "respond",
-      "situation": "Before class, I study",
+      "type": "translate",
+      "prompt": "Before class, I study",
       "answer": "avant le cours, j'étudie",
       "hint": "Avant + le cours + comma + j'étudie"
     },
     {
       "id": "temporal-11",
-      "type": "respond",
-      "situation": "After class, I review",
+      "type": "translate",
+      "prompt": "After class, I review",
       "answer": "après le cours, je révise",
       "hint": "Après + le cours + comma + je révise"
     },

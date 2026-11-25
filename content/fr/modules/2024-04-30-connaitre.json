@@ -3,7 +3,7 @@
   "module_key": "2024-04-30-connaitre",
   "kind": "lesson",
   "status": "written",
-  "title": "{connaître} - To Know (People/{Places})",
+  "title": "{connaître} - To Know (People/Places)",
   "description": "Express knowledge of people and places: je connais Marie (I know Marie), tu connais Paris? (do you know Paris?)",
   "can_do": [
     "Talk about people you know (I know Marie)",
@@ -69,7 +69,7 @@
   "concepts": [
     {
       "id": "c-connaitre-to-know-people",
-      "term": "{connaître} = to know (people or {places})",
+      "term": "{connaître} = to know (people or places)",
       "definition": "CRITICAL distinction: connaître is for people you know or places you're familiar with",
       "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris)"
     },

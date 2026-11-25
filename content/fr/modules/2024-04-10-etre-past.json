@@ -83,8 +83,8 @@
   "items": [
     {
       "id": "i-j-etais-ici",
-      "type": "respond",
-      "situation": "I was here",
+      "type": "translate",
+      "prompt": "I was here",
       "answer": "j'étais ici",
       "accept": [
         "j étais ici"
@@ -99,8 +99,8 @@
     },
     {
       "id": "i-j-etais-content",
-      "type": "respond",
-      "situation": "I was happy",
+      "type": "translate",
+      "prompt": "I was happy",
       "answer": "j'étais content",
       "accept": [
         "j étais content",
@@ -144,8 +144,8 @@
     },
     {
       "id": "i-il-etait-ici",
-      "type": "respond",
-      "situation": "he was here",
+      "type": "translate",
+      "prompt": "he was here",
       "answer": "il était ici",
       "hint": "{il était + ici}",
       "mistakes": [
@@ -161,8 +161,8 @@
     },
     {
       "id": "i-elle-etait-contente",
-      "type": "respond",
-      "situation": "she was happy",
+      "type": "translate",
+      "prompt": "she was happy",
       "answer": "elle était contente",
       "hint": "elle était + contente (feminine form)",
       "mistakes": [
@@ -178,8 +178,8 @@
     },
     {
       "id": "i-c-etait-bon",
-      "type": "respond",
-      "situation": "it was good",
+      "type": "translate",
+      "prompt": "it was good",
       "answer": "c'était bon",
       "accept": [
         "c était bon"
@@ -194,8 +194,8 @@
     },
     {
       "id": "i-c-etait-la",
-      "type": "respond",
-      "situation": "it was there",
+      "type": "translate",
+      "prompt": "it was there",
       "answer": "c'était là",
       "accept": [
         "c était là"
@@ -210,8 +210,8 @@
     },
     {
       "id": "i-nous-etions-ici",
-      "type": "respond",
-      "situation": "we were here",
+      "type": "translate",
+      "prompt": "we were here",
       "answer": "nous étions ici",
       "hint": "{nous étions + ici}",
       "mistakes": [
@@ -227,8 +227,8 @@
     },
     {
       "id": "i-nous-etions-contents",
-      "type": "respond",
-      "situation": "we were happy",
+      "type": "translate",
+      "prompt": "we were happy",
       "answer": "nous étions contents",
       "hint": "{nous étions + contents}",
       "mistakes": [
@@ -272,8 +272,8 @@
     },
     {
       "id": "i-ils-etaient-ici",
-      "type": "respond",
-      "situation": "they were here",
+      "type": "translate",
+      "prompt": "they were here",
       "answer": "ils étaient ici",
       "accept": [
         "elles étaient ici"
@@ -292,8 +292,8 @@
     },
     {
       "id": "i-ils-etaient-contents",
-      "type": "respond",
-      "situation": "they were happy",
+      "type": "translate",
+      "prompt": "they were happy",
       "answer": "ils étaient contents",
       "accept": [
         "elles étaient contentes"
@@ -308,8 +308,8 @@
     },
     {
       "id": "i-je-n-etais-pas",
-      "type": "respond",
-      "situation": "I was not here",
+      "type": "translate",
+      "prompt": "I was not here",
       "answer": "je n'étais pas ici",
       "accept": [
         "je n étais pas ici"
@@ -345,8 +345,8 @@
     },
     {
       "id": "i-il-n-etait-pas",
-      "type": "respond",
-      "situation": "he was not happy",
+      "type": "translate",
+      "prompt": "he was not happy",
       "answer": "il n'était pas content",
       "accept": [
         "il n était pas content"
@@ -361,8 +361,8 @@
     },
     {
       "id": "i-nous-n-etions-pas",
-      "type": "respond",
-      "situation": "we were not there",
+      "type": "translate",
+      "prompt": "we were not there",
       "answer": "nous n'étions pas là",
       "accept": [
         "nous n étions pas là"
@@ -377,8 +377,8 @@
     },
     {
       "id": "i-ils-n-etaient-pas",
-      "type": "respond",
-      "situation": "they were not here",
+      "type": "translate",
+      "prompt": "they were not here",
       "answer": "ils n'étaient pas ici",
       "accept": [
         "elles n'étaient pas ici",
@@ -394,8 +394,8 @@
     },
     {
       "id": "i-j-etais-a-paris",
-      "type": "respond",
-      "situation": "I was in Paris",
+      "type": "translate",
+      "prompt": "I was in Paris",
       "answer": "j'étais à Paris",
       "accept": [
         "j étais à Paris"

@@ -639,7 +639,8 @@
       "2024-01-27-aller.16": "i-je-peux-aller-avec",
       "2024-01-27-aller.17": "i-je-vais-etre-bon",
       "2024-01-27-aller.18": "i-qu-est-ce-que",
-      "2024-01-27-aller.19": "i-je-vais-avoir-ca"
+      "2024-01-27-aller.19": "i-je-vais-avoir-ca",
+      "2024-01-27-aller.20": "i-qu-est-ce-que-2"
     },
     "concepts": {
       "0": "c-aller-to-go",
@@ -2745,10 +2746,12 @@
       "2024-05-10-unit-7-exam.16": "i-je-sais-parler-francais",
       "2024-05-10-unit-7-exam.17": "i-tu-sais",
       "2024-05-10-unit-7-exam.18": "i-tout-le-monde-sait",
+      "2024-05-10-unit-7-exam.19": "i-for-facts-and-skills",
       "2024-05-10-unit-7-exam.20": "i-je-connais-marie",
       "2024-05-10-unit-7-exam.21": "i-je-connais-paris",
       "2024-05-10-unit-7-exam.22": "i-tu-connais-ce-restaurant",
       "2024-05-10-unit-7-exam.23": "i-on-connait-les-gens",
+      "2024-05-10-unit-7-exam.24": "i-for-people-places-and",
       "2024-05-10-unit-7-exam.25": "i-je-pense",
       "2024-05-10-unit-7-exam.26": "i-je-pense-que-oui",
       "2024-05-10-unit-7-exam.27": "i-qu-est-ce-que",

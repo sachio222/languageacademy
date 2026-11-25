@@ -312,36 +312,36 @@
   "items": [
     {
       "id": "i-il-brille",
-      "type": "respond",
-      "situation": "he shines",
+      "type": "translate",
+      "prompt": "he shines",
       "answer": "il brille",
       "hint": "briller for il"
     },
     {
       "id": "i-le-soleil-brille",
-      "type": "respond",
-      "situation": "The sun shines",
+      "type": "translate",
+      "prompt": "The sun shines",
       "answer": "le soleil brille",
       "hint": "{le soleil + brille}"
     },
     {
       "id": "i-ils-poussent",
-      "type": "respond",
-      "situation": "they grow",
+      "type": "translate",
+      "prompt": "they grow",
       "answer": "ils poussent",
       "hint": "pousser for ils"
     },
     {
       "id": "i-les-plantes-poussent",
-      "type": "respond",
-      "situation": "Plants grow",
+      "type": "translate",
+      "prompt": "Plants grow",
       "answer": "les plantes poussent",
       "hint": "{les plantes + poussent}"
     },
     {
       "id": "i-les-plantes-poussent-au",
-      "type": "respond",
-      "situation": "Plants grow in spring",
+      "type": "translate",
+      "prompt": "Plants grow in spring",
       "answer": "les plantes poussent au printemps",
       "hint": "{les plantes poussent + au printemps}"
     },
@@ -363,43 +363,43 @@
     },
     {
       "id": "i-le-vent-souffle",
-      "type": "respond",
-      "situation": "The wind blows",
+      "type": "translate",
+      "prompt": "The wind blows",
       "answer": "le vent souffle",
       "hint": "{le vent + souffle}"
     },
     {
       "id": "i-je-rends",
-      "type": "respond",
-      "situation": "I make / I render",
+      "type": "translate",
+      "prompt": "I make / I render",
       "answer": "je rends",
       "hint": "rendre for je - like prendre!"
     },
     {
       "id": "i-il-rend",
-      "type": "respond",
-      "situation": "it makes / renders",
+      "type": "translate",
+      "prompt": "it makes / renders",
       "answer": "il rend",
       "hint": "rendre for il"
     },
     {
       "id": "i-ils-rendent",
-      "type": "respond",
-      "situation": "they make / render",
+      "type": "translate",
+      "prompt": "they make / render",
       "answer": "ils rendent",
       "hint": "rendre for ils"
     },
     {
       "id": "i-le-soleil-rend-l",
-      "type": "respond",
-      "situation": "The sun makes grass green",
+      "type": "translate",
+      "prompt": "The sun makes grass green",
       "answer": "le soleil rend l'herbe verte",
       "hint": "{le soleil + rend + l'herbe + verte}"
     },
     {
       "id": "i-le-froid-rend-l",
-      "type": "respond",
-      "situation": "Cold makes water frozen",
+      "type": "translate",
+      "prompt": "Cold makes water frozen",
       "answer": "le froid rend l'eau glacée",
       "accept": [
         "le froid rend l'eau glacee"
@@ -408,15 +408,15 @@
     },
     {
       "id": "i-la-pluie-rend-la",
-      "type": "respond",
-      "situation": "Rain makes the earth wet",
+      "type": "translate",
+      "prompt": "Rain makes the earth wet",
       "answer": "la pluie rend la terre humide",
       "hint": "{la pluie + rend + la terre + humide}"
     },
     {
       "id": "i-le-soleil-brille-dans",
-      "type": "respond",
-      "situation": "The sun shines in the sky",
+      "type": "translate",
+      "prompt": "The sun shines in the sky",
       "answer": "le soleil brille dans le ciel",
       "hint": "{le soleil brille + dans le ciel}"
     }

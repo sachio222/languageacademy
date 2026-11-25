@@ -60,29 +60,29 @@
     },
     {
       "id": "i-il-faut-que-tu",
-      "type": "respond",
-      "situation": "You need to eat",
+      "type": "translate",
+      "prompt": "You need to eat",
       "answer": "il faut que tu manges",
       "hint": "Direct necessity to a specific person"
     },
     {
       "id": "i-il-faut-qu-on",
-      "type": "respond",
-      "situation": "We need to leave",
+      "type": "translate",
+      "prompt": "We need to leave",
       "answer": "il faut qu'on parte",
       "hint": "Group necessity"
     },
     {
       "id": "i-il-faut-qu-elle",
-      "type": "respond",
-      "situation": "She needs to know",
+      "type": "translate",
+      "prompt": "She needs to know",
       "answer": "il faut qu'elle sache",
       "hint": "Information necessity"
     },
     {
       "id": "i-il-faut-que-je",
-      "type": "respond",
-      "situation": "I need to be careful",
+      "type": "translate",
+      "prompt": "I need to be careful",
       "answer": "il faut que je fasse attention",
       "accept": [
         "il faut que je sois sage"
@@ -91,8 +91,8 @@
     },
     {
       "id": "i-je-veux-que-tu",
-      "type": "respond",
-      "situation": "I want you to come",
+      "type": "translate",
+      "prompt": "I want you to come",
       "answer": "je veux que tu viennes",
       "hint": "Direct wish to someone"
     },
@@ -105,15 +105,15 @@
     },
     {
       "id": "i-je-veux-qu-il",
-      "type": "respond",
-      "situation": "I want him to understand",
+      "type": "translate",
+      "prompt": "I want him to understand",
       "answer": "je veux qu'il comprenne",
       "hint": "Wish about understanding"
     },
     {
       "id": "i-je-veux-qu-on",
-      "type": "respond",
-      "situation": "I want us to succeed",
+      "type": "translate",
+      "prompt": "I want us to succeed",
       "answer": "je veux qu'on réussisse",
       "accept": [
         "je veux que nous réussissions"
@@ -122,8 +122,8 @@
     },
     {
       "id": "i-je-suis-content-que",
-      "type": "respond",
-      "situation": "I'm happy you're here",
+      "type": "translate",
+      "prompt": "I'm happy you're here",
       "answer": "je suis content que tu sois là",
       "accept": [
         "je suis heureux que tu sois là",
@@ -134,15 +134,15 @@
     },
     {
       "id": "i-j-ai-peur-qu",
-      "type": "respond",
-      "situation": "I'm afraid he'll leave",
+      "type": "translate",
+      "prompt": "I'm afraid he'll leave",
       "answer": "j'ai peur qu'il parte",
       "hint": "Worry about someone's action"
     },
     {
       "id": "i-je-suis-desole-que",
-      "type": "respond",
-      "situation": "I'm sorry you're sick",
+      "type": "translate",
+      "prompt": "I'm sorry you're sick",
       "answer": "je suis désolé que tu sois malade",
       "accept": [
         "je suis désolée que tu sois malade"
@@ -151,8 +151,8 @@
     },
     {
       "id": "i-je-suis-surpris-que",
-      "type": "respond",
-      "situation": "I'm surprised you know that",
+      "type": "translate",
+      "prompt": "I'm surprised you know that",
       "answer": "je suis surpris que tu saches ça",
       "accept": [
         "je suis surprise que tu saches ça",
@@ -162,29 +162,29 @@
     },
     {
       "id": "i-je-regrette-que-tu",
-      "type": "respond",
-      "situation": "I regret you can't come",
+      "type": "translate",
+      "prompt": "I regret you can't come",
       "answer": "je regrette que tu ne puisses pas venir",
       "hint": "Disappointment expression"
     },
     {
       "id": "i-si-j-etais-riche",
-      "type": "respond",
-      "situation": "If I were rich, I'd travel",
+      "type": "translate",
+      "prompt": "If I were rich, I'd travel",
       "answer": "si j'étais riche, je voyagerais",
       "hint": "Fantasy/daydream scenario"
     },
     {
       "id": "i-si-j-etais-toi",
-      "type": "respond",
-      "situation": "If I were you, I'd do that",
+      "type": "translate",
+      "prompt": "If I were you, I'd do that",
       "answer": "si j'étais toi, je ferais ça",
       "hint": "Giving advice"
     },
     {
       "id": "i-si-on-avait-le",
-      "type": "respond",
-      "situation": "If we had time, we'd walk",
+      "type": "translate",
+      "prompt": "If we had time, we'd walk",
       "answer": "si on avait le temps, on marcherait",
       "accept": [
         "si nous avions le temps, nous marcherions"
@@ -193,8 +193,8 @@
     },
     {
       "id": "i-si-tu-etais-la",
-      "type": "respond",
-      "situation": "If you were here, I'd be happy",
+      "type": "translate",
+      "prompt": "If you were here, I'd be happy",
       "answer": "si tu étais là, je serais content",
       "accept": [
         "si tu étais ici, je serais heureux",
@@ -204,8 +204,8 @@
     },
     {
       "id": "i-si-j-avais-su",
-      "type": "respond",
-      "situation": "If I had known, I would have come",
+      "type": "translate",
+      "prompt": "If I had known, I would have come",
       "answer": "si j'avais su, je serais venu",
       "accept": [
         "si j'avais su, je serais venue"
@@ -214,36 +214,36 @@
     },
     {
       "id": "i-si-j-avais-eu",
-      "type": "respond",
-      "situation": "If I had time, I would have helped",
+      "type": "translate",
+      "prompt": "If I had time, I would have helped",
       "answer": "si j'avais eu le temps, j'aurais aidé",
       "hint": "Past conditional regret"
     },
     {
       "id": "i-si-elle-m-avait",
-      "type": "respond",
-      "situation": "If she had told me, I would have understood",
+      "type": "translate",
+      "prompt": "If she had told me, I would have understood",
       "answer": "si elle m'avait dit, j'aurais compris",
       "hint": "Information regret"
     },
     {
       "id": "i-j-avais-deja-mange",
-      "type": "respond",
-      "situation": "I had already eaten",
+      "type": "translate",
+      "prompt": "I had already eaten",
       "answer": "j'avais déjà mangé",
       "hint": "Show what happened first in past"
     },
     {
       "id": "i-elle-etait-deja-partie",
-      "type": "respond",
-      "situation": "She had already left",
+      "type": "translate",
+      "prompt": "She had already left",
       "answer": "elle était déjà partie",
       "hint": "Explaining someone's absence"
     },
     {
       "id": "i-nous-avions-deja-vu",
-      "type": "respond",
-      "situation": "We had already seen this movie",
+      "type": "translate",
+      "prompt": "We had already seen this movie",
       "answer": "nous avions déjà vu ce film",
       "accept": [
         "on avait déjà vu ce film"
@@ -252,29 +252,29 @@
     },
     {
       "id": "i-avant-que-tu-partes",
-      "type": "respond",
-      "situation": "Before you leave, call me",
+      "type": "translate",
+      "prompt": "Before you leave, call me",
       "answer": "avant que tu partes, appelle-moi",
       "hint": "Before someone does something"
     },
     {
       "id": "i-j-explique-pour-que",
-      "type": "respond",
-      "situation": "I'm explaining so you understand",
+      "type": "translate",
+      "prompt": "I'm explaining so you understand",
       "answer": "j'explique pour que tu comprennes",
       "hint": "Purpose expression"
     },
     {
       "id": "i-bien-que-ce-soit",
-      "type": "respond",
-      "situation": "Although it's difficult, I continue",
+      "type": "translate",
+      "prompt": "Although it's difficult, I continue",
       "answer": "bien que ce soit difficile, je continue",
       "hint": "Contrast expression"
     },
     {
       "id": "i-en-mangeant-nous-parlons",
-      "type": "respond",
-      "situation": "While eating, we talk",
+      "type": "translate",
+      "prompt": "While eating, we talk",
       "answer": "en mangeant, nous parlons",
       "accept": [
         "en mangeant, on parle"
@@ -283,15 +283,15 @@
     },
     {
       "id": "i-il-est-possible-qu",
-      "type": "respond",
-      "situation": "It's possible he doesn't understand",
+      "type": "translate",
+      "prompt": "It's possible he doesn't understand",
       "answer": "il est possible qu'il ne comprenne pas",
       "hint": "Uncertainty expression"
     },
     {
       "id": "i-je-suis-vraiment-content",
-      "type": "respond",
-      "situation": "I'm really happy we're friends",
+      "type": "translate",
+      "prompt": "I'm really happy we're friends",
       "answer": "je suis vraiment content que nous soyons amis",
       "accept": [
         "je suis vraiment heureux qu'on soit amis",
@@ -301,8 +301,8 @@
     },
     {
       "id": "i-je-me-fais-reparer",
-      "type": "respond",
-      "situation": "I'm getting my car repaired",
+      "type": "translate",
+      "prompt": "I'm getting my car repaired",
       "answer": "je me fais réparer ma voiture",
       "hint": "Service expression"
     },

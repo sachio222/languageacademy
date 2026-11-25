@@ -95,8 +95,8 @@
   "items": [
     {
       "id": "i-j-avais-un-chat",
-      "type": "respond",
-      "situation": "I had a cat",
+      "type": "translate",
+      "prompt": "I had a cat",
       "answer": "j'avais un chat",
       "accept": [
         "j avais un chat"
@@ -111,8 +111,8 @@
     },
     {
       "id": "i-j-avais-un-livre",
-      "type": "respond",
-      "situation": "I had a book",
+      "type": "translate",
+      "prompt": "I had a book",
       "answer": "j'avais un livre",
       "accept": [
         "j avais un livre"
@@ -155,8 +155,8 @@
     },
     {
       "id": "i-il-avait-une-voiture",
-      "type": "respond",
-      "situation": "he had a car",
+      "type": "translate",
+      "prompt": "he had a car",
       "answer": "il avait une voiture",
       "hint": "{il avait + une voiture}",
       "mistakes": [
@@ -172,8 +172,8 @@
     },
     {
       "id": "i-elle-avait-une-maison",
-      "type": "respond",
-      "situation": "she had a house",
+      "type": "translate",
+      "prompt": "she had a house",
       "answer": "elle avait une maison",
       "hint": "{elle avait + une maison}",
       "mistakes": [
@@ -189,8 +189,8 @@
     },
     {
       "id": "i-nous-avions-un-chat",
-      "type": "respond",
-      "situation": "we had a cat",
+      "type": "translate",
+      "prompt": "we had a cat",
       "answer": "nous avions un chat",
       "hint": "{nous avions + un chat}",
       "mistakes": [
@@ -206,8 +206,8 @@
     },
     {
       "id": "i-nous-avions-le-temps",
-      "type": "respond",
-      "situation": "we had time",
+      "type": "translate",
+      "prompt": "we had time",
       "answer": "nous avions le temps",
       "hint": "{nous avions + le temps}",
       "mistakes": [
@@ -255,8 +255,8 @@
     },
     {
       "id": "i-ils-avaient-une-maison",
-      "type": "respond",
-      "situation": "they had a house",
+      "type": "translate",
+      "prompt": "they had a house",
       "answer": "ils avaient une maison",
       "accept": [
         "elles avaient une maison"
@@ -275,8 +275,8 @@
     },
     {
       "id": "i-ils-avaient-des-enfants",
-      "type": "respond",
-      "situation": "they had children",
+      "type": "translate",
+      "prompt": "they had children",
       "answer": "ils avaient des enfants",
       "accept": [
         "elles avaient des enfants"
@@ -326,8 +326,8 @@
     },
     {
       "id": "i-nous-avions-faim",
-      "type": "respond",
-      "situation": "we were hungry",
+      "type": "translate",
+      "prompt": "we were hungry",
       "answer": "nous avions faim",
       "hint": "{nous avions + faim}",
       "mistakes": [

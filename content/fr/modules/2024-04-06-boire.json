@@ -125,8 +125,8 @@
   "items": [
     {
       "id": "i-je-bois-du-cafe",
-      "type": "respond",
-      "situation": "I drink coffee",
+      "type": "translate",
+      "prompt": "I drink coffee",
       "answer": "je bois du café",
       "accept": [
         "je bois le café"
@@ -145,8 +145,8 @@
     },
     {
       "id": "i-je-bois-de-l",
-      "type": "respond",
-      "situation": "I drink water",
+      "type": "translate",
+      "prompt": "I drink water",
       "answer": "je bois de l'eau",
       "accept": [
         "je bois de l eau",
@@ -196,8 +196,8 @@
     },
     {
       "id": "i-il-boit-de-la",
-      "type": "respond",
-      "situation": "he drinks beer",
+      "type": "translate",
+      "prompt": "he drinks beer",
       "answer": "il boit de la bière",
       "accept": [
         "il boit la bière",
@@ -213,8 +213,8 @@
     },
     {
       "id": "i-elle-boit-du-jus",
-      "type": "respond",
-      "situation": "she drinks juice",
+      "type": "translate",
+      "prompt": "she drinks juice",
       "answer": "elle boit du jus",
       "accept": [
         "elle boit le jus"
@@ -229,8 +229,8 @@
     },
     {
       "id": "i-nous-buvons-de-l",
-      "type": "respond",
-      "situation": "we drink water",
+      "type": "translate",
+      "prompt": "we drink water",
       "answer": "nous buvons de l'eau",
       "accept": [
         "nous buvons de l eau",
@@ -250,8 +250,8 @@
     },
     {
       "id": "i-nous-buvons-du-cafe",
-      "type": "respond",
-      "situation": "we drink coffee",
+      "type": "translate",
+      "prompt": "we drink coffee",
       "answer": "nous buvons du café",
       "accept": [
         "nous buvons le café"
@@ -305,8 +305,8 @@
     },
     {
       "id": "i-ils-boivent-de-la",
-      "type": "respond",
-      "situation": "they drink beer",
+      "type": "translate",
+      "prompt": "they drink beer",
       "answer": "ils boivent de la bière",
       "accept": [
         "elles boivent de la bière",
@@ -327,8 +327,8 @@
     },
     {
       "id": "i-ils-boivent-du-the",
-      "type": "respond",
-      "situation": "they drink tea",
+      "type": "translate",
+      "prompt": "they drink tea",
       "answer": "ils boivent du thé",
       "accept": [
         "elles boivent du thé",
@@ -389,8 +389,8 @@
     },
     {
       "id": "i-j-aime-boire-du",
-      "type": "respond",
-      "situation": "I like to drink coffee",
+      "type": "translate",
+      "prompt": "I like to drink coffee",
       "answer": "j'aime boire du café",
       "accept": [
         "j aime boire du café",
@@ -406,8 +406,8 @@
     },
     {
       "id": "i-je-veux-boire-de",
-      "type": "respond",
-      "situation": "I want to drink water",
+      "type": "translate",
+      "prompt": "I want to drink water",
       "answer": "je veux boire de l'eau",
       "accept": [
         "je veux boire de l eau",
@@ -462,8 +462,8 @@
     },
     {
       "id": "i-j-ai-bu-du",
-      "type": "respond",
-      "situation": "I drank coffee",
+      "type": "translate",
+      "prompt": "I drank coffee",
       "answer": "j'ai bu du café",
       "accept": [
         "j ai bu du café"
@@ -495,8 +495,8 @@
     },
     {
       "id": "i-il-a-bu-du",
-      "type": "respond",
-      "situation": "he drank wine",
+      "type": "translate",
+      "prompt": "he drank wine",
       "answer": "il a bu du vin",
       "hint": "{il a + bu + du vin}",
       "mistakes": [
@@ -512,8 +512,8 @@
     },
     {
       "id": "i-elle-a-bu-du",
-      "type": "respond",
-      "situation": "she drank tea",
+      "type": "translate",
+      "prompt": "she drank tea",
       "answer": "elle a bu du thé",
       "accept": [
         "elle a bu du the"
@@ -528,8 +528,8 @@
     },
     {
       "id": "i-nous-avons-bu-de",
-      "type": "respond",
-      "situation": "we drank beer",
+      "type": "translate",
+      "prompt": "we drank beer",
       "answer": "nous avons bu de la bière",
       "accept": [
         "nous avons bu de la biere"
@@ -558,8 +558,8 @@
     },
     {
       "id": "i-ils-ont-bu-de",
-      "type": "respond",
-      "situation": "they drank water",
+      "type": "translate",
+      "prompt": "they drank water",
       "answer": "ils ont bu de l'eau",
       "accept": [
         "elles ont bu de l'eau",

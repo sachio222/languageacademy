@@ -83,7 +83,7 @@
       "id": "c-where-you-cannot-use",
       "term": "Where You CANNOT Use These Forms",
       "definition": "DON'T use these for normal statements, questions, or with just il faut/je veux (no '{que}')",
-      "example": "{✗ Tu sois content?} (Wrong! Say: {Tu es content?}). {✗ Il faut aller} ({Correct} - no '{que}' = normal form)"
+      "example": "✗ {Tu sois content?} (Wrong! Say: {Tu es content?}). ✗ {Il faut aller} (Correct - no '{que}' = normal form)"
     },
     {
       "id": "c-the-trigger-look-for",

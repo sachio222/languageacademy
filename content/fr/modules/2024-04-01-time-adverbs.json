@@ -131,15 +131,15 @@
   "items": [
     {
       "id": "i-maintenant",
-      "type": "respond",
-      "situation": "now",
+      "type": "translate",
+      "prompt": "now",
       "answer": "maintenant",
       "hint": "Present moment"
     },
     {
       "id": "i-aujourd-hui",
-      "type": "respond",
-      "situation": "today",
+      "type": "translate",
+      "prompt": "today",
       "answer": "aujourd'hui",
       "hint": "This day - literally 'of today'",
       "mistakes": [
@@ -151,8 +151,8 @@
     },
     {
       "id": "i-demain",
-      "type": "respond",
-      "situation": "tomorrow",
+      "type": "translate",
+      "prompt": "tomorrow",
       "answer": "demain",
       "hint": "Next day",
       "mistakes": [
@@ -164,15 +164,15 @@
     },
     {
       "id": "i-hier",
-      "type": "respond",
-      "situation": "yesterday",
+      "type": "translate",
+      "prompt": "yesterday",
       "answer": "hier",
       "hint": "Previous day"
     },
     {
       "id": "i-avant-hier",
-      "type": "respond",
-      "situation": "the day before yesterday",
+      "type": "translate",
+      "prompt": "the day before yesterday",
       "answer": "avant-hier",
       "hint": "avant + hier (before yesterday)",
       "mistakes": [
@@ -184,8 +184,8 @@
     },
     {
       "id": "i-toujours",
-      "type": "respond",
-      "situation": "always",
+      "type": "translate",
+      "prompt": "always",
       "answer": "toujours",
       "hint": "100% of the time",
       "mistakes": [
@@ -211,36 +211,36 @@
     },
     {
       "id": "i-je-suis-maintenant",
-      "type": "respond",
-      "situation": "I am now",
+      "type": "translate",
+      "prompt": "I am now",
       "answer": "je suis maintenant",
       "hint": "{je suis + maintenant}"
     },
     {
       "id": "i-il-va-aujourd-hui",
-      "type": "respond",
-      "situation": "he goes today",
+      "type": "translate",
+      "prompt": "he goes today",
       "answer": "il va aujourd'hui",
       "hint": "{il va + aujourd'hui}"
     },
     {
       "id": "i-je-veux-ca-demain",
-      "type": "respond",
-      "situation": "I want this tomorrow",
+      "type": "translate",
+      "prompt": "I want this tomorrow",
       "answer": "je veux ça demain",
       "hint": "{je veux + ça + demain}"
     },
     {
       "id": "i-nous-sommes-toujours-ici",
-      "type": "respond",
-      "situation": "we are always here",
+      "type": "translate",
+      "prompt": "we are always here",
       "answer": "nous sommes toujours ici",
       "hint": "{nous sommes + toujours + ici}"
     },
     {
       "id": "i-pour-toujours",
-      "type": "respond",
-      "situation": "forever",
+      "type": "translate",
+      "prompt": "forever",
       "answer": "pour toujours",
       "hint": "pour + toujours (for always)",
       "mistakes": [
@@ -252,8 +252,8 @@
     },
     {
       "id": "i-souvent",
-      "type": "respond",
-      "situation": "often",
+      "type": "translate",
+      "prompt": "often",
       "answer": "souvent",
       "hint": "Frequency adverb - happens frequently",
       "mistakes": [
@@ -269,8 +269,8 @@
     },
     {
       "id": "i-parfois",
-      "type": "respond",
-      "situation": "sometimes",
+      "type": "translate",
+      "prompt": "sometimes",
       "answer": "parfois",
       "hint": "Occasionally - not always, not never",
       "mistakes": [
@@ -286,8 +286,8 @@
     },
     {
       "id": "i-de-temps-en-temps",
-      "type": "respond",
-      "situation": "from time to time",
+      "type": "translate",
+      "prompt": "from time to time",
       "answer": "de temps en temps",
       "hint": "de temps en temps - occasionally",
       "mistakes": [
@@ -299,8 +299,8 @@
     },
     {
       "id": "i-rarement",
-      "type": "respond",
-      "situation": "rarely",
+      "type": "translate",
+      "prompt": "rarely",
       "answer": "rarement",
       "hint": "Not often - infrequent",
       "mistakes": [
@@ -316,8 +316,8 @@
     },
     {
       "id": "i-tres-rarement",
-      "type": "respond",
-      "situation": "very rarely",
+      "type": "translate",
+      "prompt": "very rarely",
       "answer": "très rarement",
       "hint": "{très + rarement}",
       "mistakes": [
@@ -329,8 +329,8 @@
     },
     {
       "id": "i-je-vais-souvent",
-      "type": "respond",
-      "situation": "I go often",
+      "type": "translate",
+      "prompt": "I go often",
       "answer": "je vais souvent",
       "hint": "{je vais + souvent}",
       "mistakes": [
@@ -342,8 +342,8 @@
     },
     {
       "id": "i-il-parle-rarement",
-      "type": "respond",
-      "situation": "he speaks rarely",
+      "type": "translate",
+      "prompt": "he speaks rarely",
       "answer": "il parle rarement",
       "hint": "{il parle + rarement}",
       "mistakes": [
@@ -355,8 +355,8 @@
     },
     {
       "id": "i-je-mange-parfois",
-      "type": "respond",
-      "situation": "I eat sometimes",
+      "type": "translate",
+      "prompt": "I eat sometimes",
       "answer": "je mange parfois",
       "hint": "{je mange + parfois}",
       "mistakes": [
@@ -368,29 +368,29 @@
     },
     {
       "id": "i-deja",
-      "type": "respond",
-      "situation": "already",
+      "type": "translate",
+      "prompt": "already",
       "answer": "déjà",
       "hint": "By now, before this time"
     },
     {
       "id": "i-encore",
-      "type": "respond",
-      "situation": "still",
+      "type": "translate",
+      "prompt": "still",
       "answer": "encore",
       "hint": "Continuing, not yet finished"
     },
     {
       "id": "i-juste",
-      "type": "respond",
-      "situation": "just",
+      "type": "translate",
+      "prompt": "just",
       "answer": "juste",
       "hint": "Only, simply"
     },
     {
       "id": "i-je-veux-juste-ca",
-      "type": "respond",
-      "situation": "I just want this",
+      "type": "translate",
+      "prompt": "I just want this",
       "answer": "je veux juste ça",
       "hint": "{je veux + juste + ça}"
     }

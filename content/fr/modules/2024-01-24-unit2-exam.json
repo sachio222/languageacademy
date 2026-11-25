@@ -12,78 +12,78 @@
   "items": [
     {
       "id": "i-ce-livre",
-      "type": "respond",
-      "situation": "this book",
+      "type": "translate",
+      "prompt": "this book",
       "answer": "ce livre",
       "hint": "Masculine noun starting with consonant"
     },
     {
       "id": "i-cette-maison",
-      "type": "respond",
-      "situation": "this house",
+      "type": "translate",
+      "prompt": "this house",
       "answer": "cette maison",
       "hint": "Feminine noun"
     },
     {
       "id": "i-ces-chats",
-      "type": "respond",
-      "situation": "these cats",
+      "type": "translate",
+      "prompt": "these cats",
       "answer": "ces chats",
       "hint": "Plural demonstrative"
     },
     {
       "id": "i-j-ai-ce-chat",
-      "type": "respond",
-      "situation": "I have this cat",
+      "type": "translate",
+      "prompt": "I have this cat",
       "answer": "j'ai ce chat",
       "hint": "Combine avoir + demonstrative + noun"
     },
     {
       "id": "i-c-est-ca",
-      "type": "respond",
-      "situation": "that's it / that's right",
+      "type": "translate",
+      "prompt": "that's it / that's right",
       "answer": "c'est ça",
       "hint": "Common phrase with être + ça"
     },
     {
       "id": "i-ou",
-      "type": "respond",
-      "situation": "where",
+      "type": "translate",
+      "prompt": "where",
       "answer": "où",
       "hint": "Question word for location"
     },
     {
       "id": "i-que",
-      "type": "respond",
-      "situation": "what",
+      "type": "translate",
+      "prompt": "what",
       "answer": "que",
       "hint": "Question word - use the short form"
     },
     {
       "id": "i-qui",
-      "type": "respond",
-      "situation": "who",
+      "type": "translate",
+      "prompt": "who",
       "answer": "qui",
       "hint": "Question word for people"
     },
     {
       "id": "i-combien",
-      "type": "respond",
-      "situation": "how much / how many",
+      "type": "translate",
+      "prompt": "how much / how many",
       "answer": "combien",
       "hint": "Question word for quantity and price"
     },
     {
       "id": "i-ou-est-le-chat",
-      "type": "respond",
-      "situation": "where is the cat?",
+      "type": "translate",
+      "prompt": "where is the cat?",
       "answer": "où est le chat",
       "hint": "Question word + est + definite article + noun"
     },
     {
       "id": "i-combien-est-ce",
-      "type": "respond",
-      "situation": "how much is it?",
+      "type": "translate",
+      "prompt": "how much is it?",
       "answer": "combien est-ce",
       "accept": [
         "c'est combien"
@@ -113,8 +113,8 @@
     },
     {
       "id": "i-avec-moi",
-      "type": "respond",
-      "situation": "with me",
+      "type": "translate",
+      "prompt": "with me",
       "answer": "avec moi",
       "hint": "avec + stressed pronoun"
     },
@@ -127,15 +127,15 @@
     },
     {
       "id": "i-avec-lui",
-      "type": "respond",
-      "situation": "with him",
+      "type": "translate",
+      "prompt": "with him",
       "answer": "avec lui",
       "hint": "avec + stressed pronoun for 'him'"
     },
     {
       "id": "i-le-chat-est-dans",
-      "type": "respond",
-      "situation": "the cat is in the house",
+      "type": "translate",
+      "prompt": "the cat is in the house",
       "answer": "le chat est dans la maison",
       "hint": "le chat + est + preposition + la maison"
     },
@@ -162,8 +162,8 @@
     },
     {
       "id": "i-un-bon-livre",
-      "type": "respond",
-      "situation": "a good book",
+      "type": "translate",
+      "prompt": "a good book",
       "answer": "un bon livre",
       "hint": "Article + adjective + noun"
     },
@@ -176,29 +176,29 @@
     },
     {
       "id": "i-elle-est-avec-moi",
-      "type": "respond",
-      "situation": "she is with me",
+      "type": "translate",
+      "prompt": "she is with me",
       "answer": "elle est avec moi",
       "hint": "elle + est + avec + stressed pronoun"
     },
     {
       "id": "i-j-ai-une-petite",
-      "type": "respond",
-      "situation": "I have a small house",
+      "type": "translate",
+      "prompt": "I have a small house",
       "answer": "j'ai une petite maison",
       "hint": "avoir + article + adjective + noun"
     },
     {
       "id": "i-ou-est-le-grand",
-      "type": "respond",
-      "situation": "where is the big dog?",
+      "type": "translate",
+      "prompt": "where is the big dog?",
       "answer": "où est le grand chien",
       "hint": "où + est + article + adjective + noun"
     },
     {
       "id": "i-je-veux",
-      "type": "respond",
-      "situation": "I want",
+      "type": "translate",
+      "prompt": "I want",
       "answer": "je veux",
       "hint": "vouloir conjugated for je"
     },
@@ -211,22 +211,22 @@
     },
     {
       "id": "i-je-vois",
-      "type": "respond",
-      "situation": "I see",
+      "type": "translate",
+      "prompt": "I see",
       "answer": "je vois",
       "hint": "voir conjugated for je"
     },
     {
       "id": "i-elle-voit",
-      "type": "respond",
-      "situation": "she sees",
+      "type": "translate",
+      "prompt": "she sees",
       "answer": "elle voit",
       "hint": "voir conjugated for elle"
     },
     {
       "id": "i-je-veux-voir-ca",
-      "type": "respond",
-      "situation": "I want to see this",
+      "type": "translate",
+      "prompt": "I want to see this",
       "answer": "je veux voir ça",
       "hint": "je veux + infinitive + demonstrative"
     },

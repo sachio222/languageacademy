@@ -133,8 +133,8 @@
     },
     {
       "id": "i-ce-livre-est-plus",
-      "type": "respond",
-      "situation": "this book is bigger",
+      "type": "translate",
+      "prompt": "this book is bigger",
       "answer": "ce livre est plus grand",
       "hint": "{ce livre + est + plus + grand}",
       "mistakes": [
@@ -236,8 +236,8 @@
     },
     {
       "id": "i-c-est-pire",
-      "type": "respond",
-      "situation": "it's worse",
+      "type": "translate",
+      "prompt": "it's worse",
       "answer": "c'est pire",
       "hint": "'{pire}' is same for both genders",
       "mistakes": [
@@ -249,8 +249,8 @@
     },
     {
       "id": "i-la-pire-chose",
-      "type": "respond",
-      "situation": "the worst thing",
+      "type": "translate",
+      "prompt": "the worst thing",
       "answer": "la pire chose",
       "hint": "chose is feminine - la pire chose",
       "mistakes": [
@@ -262,8 +262,8 @@
     },
     {
       "id": "i-c-est-trop-cher",
-      "type": "respond",
-      "situation": "it's too expensive",
+      "type": "translate",
+      "prompt": "it's too expensive",
       "answer": "c'est trop cher",
       "hint": "{c'est + trop + cher}",
       "mistakes": [
@@ -279,8 +279,8 @@
     },
     {
       "id": "i-j-ai-trop-de",
-      "type": "respond",
-      "situation": "I have too much work",
+      "type": "translate",
+      "prompt": "I have too much work",
       "answer": "j'ai trop de travail",
       "accept": [
         "j ai trop de travail"
@@ -309,8 +309,8 @@
     },
     {
       "id": "i-je-veux-tout",
-      "type": "respond",
-      "situation": "I want everything",
+      "type": "translate",
+      "prompt": "I want everything",
       "answer": "je veux tout",
       "hint": "je veux + tout (everything as object)",
       "mistakes": [
@@ -322,8 +322,8 @@
     },
     {
       "id": "i-le-meme-livre",
-      "type": "respond",
-      "situation": "the same book",
+      "type": "translate",
+      "prompt": "the same book",
       "answer": "le même livre",
       "hint": "{le + même + livre}",
       "mistakes": [
@@ -335,8 +335,8 @@
     },
     {
       "id": "i-c-est-la-meme",
-      "type": "respond",
-      "situation": "it's the same thing",
+      "type": "translate",
+      "prompt": "it's the same thing",
       "answer": "c'est la même chose",
       "hint": "c'est + la même chose (chose is feminine)",
       "mistakes": [
@@ -348,8 +348,8 @@
     },
     {
       "id": "i-il-parle-mal",
-      "type": "respond",
-      "situation": "he speaks badly",
+      "type": "translate",
+      "prompt": "he speaks badly",
       "answer": "il parle mal",
       "hint": "il parle + mal (adverb - opposite of '{bien}')",
       "mistakes": [
@@ -361,8 +361,8 @@
     },
     {
       "id": "i-c-est-meilleur",
-      "type": "respond",
-      "situation": "that's better",
+      "type": "translate",
+      "prompt": "that's better",
       "answer": "c'est meilleur",
       "hint": "c'est + meilleur (can use masculine as default)",
       "mistakes": [

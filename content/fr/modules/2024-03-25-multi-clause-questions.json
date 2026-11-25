@@ -96,8 +96,8 @@
   "items": [
     {
       "id": "i-pourquoi-est-ce-qu",
-      "type": "respond",
-      "situation": "Why do I have to do that?",
+      "type": "translate",
+      "prompt": "Why do I have to do that?",
       "answer": "pourquoi est-ce qu'il faut que je fasse ça?",
       "accept": [
         "pourquoi est-ce qu'il faut que je fasse ça"
@@ -106,8 +106,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-qu-2",
-      "type": "respond",
-      "situation": "Why do you have to leave?",
+      "type": "translate",
+      "prompt": "Why do you have to leave?",
       "answer": "pourquoi est-ce qu'il faut que tu partes?",
       "accept": [
         "pourquoi est-ce qu'il faut que tu partes"
@@ -116,8 +116,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que",
-      "type": "respond",
-      "situation": "Why do you want me to do that?",
+      "type": "translate",
+      "prompt": "Why do you want me to do that?",
       "answer": "pourquoi est-ce que tu veux que je fasse ça?",
       "accept": [
         "pourquoi est-ce que tu veux que je fasse ça"
@@ -126,8 +126,8 @@
     },
     {
       "id": "i-comment-est-ce-que",
-      "type": "respond",
-      "situation": "How do you want me to do it?",
+      "type": "translate",
+      "prompt": "How do you want me to do it?",
       "answer": "comment est-ce que tu veux que je le fasse?",
       "accept": [
         "comment est-ce que tu veux que je le fasse"
@@ -136,8 +136,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-2",
-      "type": "respond",
-      "situation": "Why do you want him to come?",
+      "type": "translate",
+      "prompt": "Why do you want him to come?",
       "answer": "pourquoi est-ce que tu veux qu'il vienne?",
       "accept": [
         "pourquoi est-ce que tu veux qu'il vienne"
@@ -146,8 +146,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-3",
-      "type": "respond",
-      "situation": "Why do you think it's like that?",
+      "type": "translate",
+      "prompt": "Why do you think it's like that?",
       "answer": "pourquoi est-ce que tu penses que c'est comme ça?",
       "accept": [
         "pourquoi est-ce que tu penses que c'est comme ça"
@@ -156,8 +156,8 @@
     },
     {
       "id": "i-comment-est-ce-que-2",
-      "type": "respond",
-      "situation": "How do you think we should do that?",
+      "type": "translate",
+      "prompt": "How do you think we should do that?",
       "answer": "comment est-ce que tu penses qu'on devrait faire ça?",
       "accept": [
         "comment est-ce que tu penses qu'on devrait faire ça"
@@ -166,8 +166,8 @@
     },
     {
       "id": "i-qu-est-ce-que",
-      "type": "respond",
-      "situation": "What do you think he should do?",
+      "type": "translate",
+      "prompt": "What do you think he should do?",
       "answer": "qu'est-ce que tu penses qu'il devrait faire?",
       "accept": [
         "qu'est-ce que tu penses qu'il devrait faire"
@@ -176,8 +176,8 @@
     },
     {
       "id": "i-qu-est-ce-qui",
-      "type": "respond",
-      "situation": "What would make grass greener?",
+      "type": "translate",
+      "prompt": "What would make grass greener?",
       "answer": "qu'est-ce qui rendrait l'herbe plus verte?",
       "accept": [
         "qu'est-ce qui rendrait l'herbe plus verte"
@@ -186,8 +186,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-4",
-      "type": "respond",
-      "situation": "Why would you do that?",
+      "type": "translate",
+      "prompt": "Why would you do that?",
       "answer": "pourquoi est-ce que tu ferais ça?",
       "accept": [
         "pourquoi est-ce que tu ferais ça"
@@ -196,8 +196,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-5",
-      "type": "respond",
-      "situation": "Why doesn't it work?",
+      "type": "translate",
+      "prompt": "Why doesn't it work?",
       "answer": "pourquoi est-ce que ça ne marche pas?",
       "accept": [
         "pourquoi est-ce que ça ne marche pas"
@@ -206,8 +206,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-qu-3",
-      "type": "respond",
-      "situation": "Why doesn't he want to come?",
+      "type": "translate",
+      "prompt": "Why doesn't he want to come?",
       "answer": "pourquoi est-ce qu'il ne veut pas venir?",
       "accept": [
         "pourquoi est-ce qu'il ne veut pas venir"
@@ -216,8 +216,8 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-6",
-      "type": "respond",
-      "situation": "Why are you happy that he's here?",
+      "type": "translate",
+      "prompt": "Why are you happy that he's here?",
       "answer": "pourquoi est-ce que tu es content qu'il soit là?",
       "accept": [
         "pourquoi est-ce que tu es content qu'il soit là",
@@ -228,8 +228,8 @@
     },
     {
       "id": "i-comment-est-ce-que-3",
-      "type": "respond",
-      "situation": "How do you think we could make it work?",
+      "type": "translate",
+      "prompt": "How do you think we could make it work?",
       "answer": "comment est-ce que tu penses qu'on pourrait le faire marcher?",
       "accept": [
         "comment est-ce que tu penses qu'on pourrait le faire marcher"

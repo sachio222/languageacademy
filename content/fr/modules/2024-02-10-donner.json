@@ -149,8 +149,8 @@
   "items": [
     {
       "id": "i-je-donne",
-      "type": "respond",
-      "situation": "I give",
+      "type": "translate",
+      "prompt": "I give",
       "answer": "je donne",
       "hint": "donner for je"
     },
@@ -163,43 +163,43 @@
     },
     {
       "id": "i-il-donne",
-      "type": "respond",
-      "situation": "he gives",
+      "type": "translate",
+      "prompt": "he gives",
       "answer": "il donne",
       "hint": "donner for il"
     },
     {
       "id": "i-nous-donnons",
-      "type": "respond",
-      "situation": "we give",
+      "type": "translate",
+      "prompt": "we give",
       "answer": "nous donnons",
       "hint": "donner for nous"
     },
     {
       "id": "i-je-te-donne-le",
-      "type": "respond",
-      "situation": "I give you the book",
+      "type": "translate",
+      "prompt": "I give you the book",
       "answer": "je te donne le livre",
       "hint": "je + te + donne + object"
     },
     {
       "id": "i-tu-me-donnes-de",
-      "type": "respond",
-      "situation": "You give me help",
+      "type": "translate",
+      "prompt": "You give me help",
       "answer": "tu me donnes de l'aide",
       "hint": "{tu + me + donnes + aide}"
     },
     {
       "id": "i-elle-donne-de-l",
-      "type": "respond",
-      "situation": "She gives money to the children",
+      "type": "translate",
+      "prompt": "She gives money to the children",
       "answer": "elle donne de l'argent aux enfants",
       "hint": "{elle donne + argent + aux enfants}"
     },
     {
       "id": "i-tu-peux-me-donner",
-      "type": "respond",
-      "situation": "Can you give me your phone number?",
+      "type": "translate",
+      "prompt": "Can you give me your phone number?",
       "answer": "tu peux me donner ton numéro",
       "accept": [
         "vous pouvez me donner votre numéro"
@@ -208,8 +208,8 @@
     },
     {
       "id": "i-je-te-donne-rendez",
-      "type": "respond",
-      "situation": "I'm giving you an appointment",
+      "type": "translate",
+      "prompt": "I'm giving you an appointment",
       "answer": "je te donne rendez-vous",
       "accept": [
         "je vous donne rendez-vous"

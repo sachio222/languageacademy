@@ -119,8 +119,8 @@
   "items": [
     {
       "id": "i-je-mets",
-      "type": "respond",
-      "situation": "I put",
+      "type": "translate",
+      "prompt": "I put",
       "answer": "je mets",
       "hint": "{je...}",
       "mistakes": [
@@ -162,8 +162,8 @@
     },
     {
       "id": "i-elle-met",
-      "type": "respond",
-      "situation": "she puts",
+      "type": "translate",
+      "prompt": "she puts",
       "answer": "elle met",
       "hint": "{elle...}",
       "mistakes": [
@@ -183,8 +183,8 @@
     },
     {
       "id": "i-nous-mettons",
-      "type": "respond",
-      "situation": "we put",
+      "type": "translate",
+      "prompt": "we put",
       "answer": "nous mettons",
       "hint": "nous... (double t!)",
       "mistakes": [
@@ -226,8 +226,8 @@
     },
     {
       "id": "i-ils-mettent",
-      "type": "respond",
-      "situation": "they put",
+      "type": "translate",
+      "prompt": "they put",
       "answer": "ils mettent",
       "hint": "ils... (double t!)",
       "mistakes": [
@@ -247,8 +247,8 @@
     },
     {
       "id": "i-je-mets-la-table",
-      "type": "respond",
-      "situation": "I set the table",
+      "type": "translate",
+      "prompt": "I set the table",
       "answer": "je mets la table",
       "hint": "{je mets la table}",
       "mistakes": [
@@ -268,8 +268,8 @@
     },
     {
       "id": "i-tu-peux-mettre-la",
-      "type": "respond",
-      "situation": "can you set the table?",
+      "type": "translate",
+      "prompt": "can you set the table?",
       "answer": "tu peux mettre la table?",
       "accept": [
         "tu peux mettre la table"
@@ -292,8 +292,8 @@
     },
     {
       "id": "i-nous-mettons-la-table",
-      "type": "respond",
-      "situation": "we are setting the table",
+      "type": "translate",
+      "prompt": "we are setting the table",
       "answer": "nous mettons la table",
       "hint": "{nous mettons la table}",
       "mistakes": [
@@ -313,8 +313,8 @@
     },
     {
       "id": "i-je-mets-le-livre",
-      "type": "respond",
-      "situation": "I put the book on the table",
+      "type": "translate",
+      "prompt": "I put the book on the table",
       "answer": "je mets le livre sur la table",
       "hint": "{je mets le livre sur la table}",
       "mistakes": [
@@ -334,8 +334,8 @@
     },
     {
       "id": "i-tu-mets-ca-ici",
-      "type": "respond",
-      "situation": "you put that here",
+      "type": "translate",
+      "prompt": "you put that here",
       "answer": "tu mets ça ici",
       "accept": [
         "tu mets ca ici"
@@ -358,8 +358,8 @@
     },
     {
       "id": "i-elle-met-son-sac",
-      "type": "respond",
-      "situation": "she puts her bag in the car",
+      "type": "translate",
+      "prompt": "she puts her bag in the car",
       "answer": "elle met son sac dans la voiture",
       "hint": "{elle met son sac dans la voiture}",
       "mistakes": [
@@ -379,8 +379,8 @@
     },
     {
       "id": "i-je-mets-un-manteau",
-      "type": "respond",
-      "situation": "I put on a coat",
+      "type": "translate",
+      "prompt": "I put on a coat",
       "answer": "je mets un manteau",
       "hint": "{je mets un manteau}",
       "mistakes": [
@@ -400,8 +400,8 @@
     },
     {
       "id": "i-tu-mets-un-pantalon",
-      "type": "respond",
-      "situation": "you put on pants",
+      "type": "translate",
+      "prompt": "you put on pants",
       "answer": "tu mets un pantalon",
       "hint": "{tu mets un pantalon}",
       "mistakes": [
@@ -421,8 +421,8 @@
     },
     {
       "id": "i-qu-est-ce-que",
-      "type": "respond",
-      "situation": "what are you wearing?",
+      "type": "translate",
+      "prompt": "what are you wearing?",
       "answer": "qu'est-ce que tu mets?",
       "accept": [
         "qu'est-ce que tu mets",
@@ -446,8 +446,8 @@
     },
     {
       "id": "i-il-met-une-chemise",
-      "type": "respond",
-      "situation": "he is putting on a shirt",
+      "type": "translate",
+      "prompt": "he is putting on a shirt",
       "answer": "il met une chemise",
       "hint": "{il met une chemise}",
       "mistakes": [
@@ -467,8 +467,8 @@
     },
     {
       "id": "i-nous-mettons-nos-chaussures",
-      "type": "respond",
-      "situation": "we put on our shoes",
+      "type": "translate",
+      "prompt": "we put on our shoes",
       "answer": "nous mettons nos chaussures",
       "hint": "{nous mettons nos chaussures}",
       "mistakes": [
@@ -488,8 +488,8 @@
     },
     {
       "id": "i-ca-met-du-temps",
-      "type": "respond",
-      "situation": "it takes time",
+      "type": "translate",
+      "prompt": "it takes time",
       "answer": "ça met du temps",
       "accept": [
         "ca met du temps"
@@ -512,8 +512,8 @@
     },
     {
       "id": "i-ca-met-deux-heures",
-      "type": "respond",
-      "situation": "it takes two hours",
+      "type": "translate",
+      "prompt": "it takes two hours",
       "answer": "ça met deux heures",
       "accept": [
         "ca met deux heures"

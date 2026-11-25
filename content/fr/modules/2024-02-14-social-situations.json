@@ -257,8 +257,8 @@
   "items": [
     {
       "id": "i-j-attends",
-      "type": "respond",
-      "situation": "I wait",
+      "type": "translate",
+      "prompt": "I wait",
       "answer": "j'attends",
       "hint": "attendre for je"
     },
@@ -271,43 +271,43 @@
     },
     {
       "id": "i-elle-attend",
-      "type": "respond",
-      "situation": "she waits",
+      "type": "translate",
+      "prompt": "she waits",
       "answer": "elle attend",
       "hint": "attendre for elle - drop -s"
     },
     {
       "id": "i-j-arrive",
-      "type": "respond",
-      "situation": "I arrive",
+      "type": "translate",
+      "prompt": "I arrive",
       "answer": "j'arrive",
       "hint": "arriver for je"
     },
     {
       "id": "i-il-arrive",
-      "type": "respond",
-      "situation": "he arrives",
+      "type": "translate",
+      "prompt": "he arrives",
       "answer": "il arrive",
       "hint": "arriver for il"
     },
     {
       "id": "i-ils-arrivent",
-      "type": "respond",
-      "situation": "they arrive",
+      "type": "translate",
+      "prompt": "they arrive",
       "answer": "ils arrivent",
       "hint": "arriver for ils"
     },
     {
       "id": "i-je-reste",
-      "type": "respond",
-      "situation": "I stay",
+      "type": "translate",
+      "prompt": "I stay",
       "answer": "je reste",
       "hint": "rester for je"
     },
     {
       "id": "i-nous-restons",
-      "type": "respond",
-      "situation": "we stay",
+      "type": "translate",
+      "prompt": "we stay",
       "answer": "nous restons",
       "hint": "rester for nous"
     },
@@ -320,15 +320,15 @@
     },
     {
       "id": "i-j-attends-le-bus",
-      "type": "respond",
-      "situation": "I'm waiting for the bus",
+      "type": "translate",
+      "prompt": "I'm waiting for the bus",
       "answer": "j'attends le bus",
       "hint": "{j'attends + le bus}"
     },
     {
       "id": "i-tu-attends-quelqu-un",
-      "type": "respond",
-      "situation": "Are you waiting for someone?",
+      "type": "translate",
+      "prompt": "Are you waiting for someone?",
       "answer": "tu attends quelqu'un?",
       "accept": [
         "est-ce que tu attends quelqu'un?"
@@ -337,8 +337,8 @@
     },
     {
       "id": "i-j-arrive-a-neuf",
-      "type": "respond",
-      "situation": "I arrive at 9am",
+      "type": "translate",
+      "prompt": "I arrive at 9am",
       "answer": "j'arrive à neuf heures",
       "accept": [
         "j'arrive à 9h"
@@ -347,8 +347,8 @@
     },
     {
       "id": "i-quand-tu-arrives",
-      "type": "respond",
-      "situation": "When do you arrive?",
+      "type": "translate",
+      "prompt": "When do you arrive?",
       "answer": "quand tu arrives?",
       "accept": [
         "quand est-ce que tu arrives?",
@@ -358,15 +358,15 @@
     },
     {
       "id": "i-je-reste-ici",
-      "type": "respond",
-      "situation": "I'm staying here",
+      "type": "translate",
+      "prompt": "I'm staying here",
       "answer": "je reste ici",
       "hint": "{je reste + ici}"
     },
     {
       "id": "i-combien-de-temps-tu",
-      "type": "respond",
-      "situation": "How long are you staying?",
+      "type": "translate",
+      "prompt": "How long are you staying?",
       "answer": "combien de temps tu restes?",
       "accept": [
         "tu restes combien de temps?"

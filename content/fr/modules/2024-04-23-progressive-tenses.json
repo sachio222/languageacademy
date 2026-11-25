@@ -119,8 +119,8 @@
   "items": [
     {
       "id": "i-je-suis-en-train",
-      "type": "respond",
-      "situation": "I am eating",
+      "type": "translate",
+      "prompt": "I am eating",
       "answer": "je suis en train de manger",
       "hint": "{je suis en train de...}",
       "mistakes": [
@@ -144,8 +144,8 @@
     },
     {
       "id": "i-elle-est-en-train",
-      "type": "respond",
-      "situation": "she is talking",
+      "type": "translate",
+      "prompt": "she is talking",
       "answer": "elle est en train de parler",
       "hint": "{elle est en train de...}",
       "mistakes": [
@@ -169,8 +169,8 @@
     },
     {
       "id": "i-nous-sommes-en-train",
-      "type": "respond",
-      "situation": "we are leaving",
+      "type": "translate",
+      "prompt": "we are leaving",
       "answer": "nous sommes en train de partir",
       "hint": "{nous sommes en train de...}",
       "mistakes": [
@@ -194,8 +194,8 @@
     },
     {
       "id": "i-j-etais-en-train",
-      "type": "respond",
-      "situation": "I was eating",
+      "type": "translate",
+      "prompt": "I was eating",
       "answer": "j'étais en train de manger",
       "accept": [
         "j étais en train de manger"
@@ -222,8 +222,8 @@
     },
     {
       "id": "i-ils-etaient-en-train",
-      "type": "respond",
-      "situation": "they were talking",
+      "type": "translate",
+      "prompt": "they were talking",
       "answer": "ils étaient en train de parler",
       "hint": "{ils étaient en train de...}",
       "mistakes": [
@@ -247,8 +247,8 @@
     },
     {
       "id": "i-je-vais-manger",
-      "type": "respond",
-      "situation": "I am going to eat",
+      "type": "translate",
+      "prompt": "I am going to eat",
       "answer": "je vais manger",
       "hint": "je vais + infinitive",
       "mistakes": [
@@ -272,8 +272,8 @@
     },
     {
       "id": "i-tu-vas-parler",
-      "type": "respond",
-      "situation": "you are going to speak",
+      "type": "translate",
+      "prompt": "you are going to speak",
       "answer": "tu vas parler",
       "hint": "tu vas + infinitive",
       "mistakes": [
@@ -297,8 +297,8 @@
     },
     {
       "id": "i-nous-allons-partir",
-      "type": "respond",
-      "situation": "we are going to leave",
+      "type": "translate",
+      "prompt": "we are going to leave",
       "answer": "nous allons partir",
       "hint": "nous allons + infinitive",
       "mistakes": [
@@ -322,8 +322,8 @@
     },
     {
       "id": "i-ils-vont-venir",
-      "type": "respond",
-      "situation": "they are going to come",
+      "type": "translate",
+      "prompt": "they are going to come",
       "answer": "ils vont venir",
       "hint": "ils vont + infinitive",
       "mistakes": [
@@ -347,8 +347,8 @@
     },
     {
       "id": "i-je-parlerai",
-      "type": "respond",
-      "situation": "I will speak",
+      "type": "translate",
+      "prompt": "I will speak",
       "answer": "je parlerai",
       "hint": "{parler + ai}",
       "mistakes": [
@@ -372,8 +372,8 @@
     },
     {
       "id": "i-tu-mangeras",
-      "type": "respond",
-      "situation": "you will eat",
+      "type": "translate",
+      "prompt": "you will eat",
       "answer": "tu mangeras",
       "hint": "{manger + as}",
       "mistakes": [
@@ -397,8 +397,8 @@
     },
     {
       "id": "i-il-partira",
-      "type": "respond",
-      "situation": "he will leave",
+      "type": "translate",
+      "prompt": "he will leave",
       "answer": "il partira",
       "hint": "{partir + a}",
       "mistakes": [
@@ -422,8 +422,8 @@
     },
     {
       "id": "i-nous-viendrons",
-      "type": "respond",
-      "situation": "we will come",
+      "type": "translate",
+      "prompt": "we will come",
       "answer": "nous viendrons",
       "hint": "venir + ons",
       "mistakes": [
@@ -447,8 +447,8 @@
     },
     {
       "id": "i-j-irai",
-      "type": "respond",
-      "situation": "I will go",
+      "type": "translate",
+      "prompt": "I will go",
       "answer": "j'irai",
       "accept": [
         "j irai"
@@ -475,8 +475,8 @@
     },
     {
       "id": "i-je-ne-peux-pas",
-      "type": "respond",
-      "situation": "I can't leave",
+      "type": "translate",
+      "prompt": "I can't leave",
       "answer": "je ne peux pas partir",
       "hint": "{je ne peux pas...}",
       "mistakes": [
@@ -500,8 +500,8 @@
     },
     {
       "id": "i-je-ne-vais-pas",
-      "type": "respond",
-      "situation": "I won't go",
+      "type": "translate",
+      "prompt": "I won't go",
       "answer": "je ne vais pas aller",
       "hint": "{je ne vais pas...}",
       "mistakes": [
@@ -525,8 +525,8 @@
     },
     {
       "id": "i-je-ne-devrais-pas",
-      "type": "respond",
-      "situation": "I shouldn't eat that",
+      "type": "translate",
+      "prompt": "I shouldn't eat that",
       "answer": "je ne devrais pas manger ça",
       "accept": [
         "je ne devrais pas manger ca"
@@ -553,8 +553,8 @@
     },
     {
       "id": "i-tu-ne-peux-pas",
-      "type": "respond",
-      "situation": "you can't do that",
+      "type": "translate",
+      "prompt": "you can't do that",
       "answer": "tu ne peux pas faire ça",
       "accept": [
         "tu ne peux pas faire ca"
@@ -581,8 +581,8 @@
     },
     {
       "id": "i-il-ne-le-fera",
-      "type": "respond",
-      "situation": "he won't do it",
+      "type": "translate",
+      "prompt": "he won't do it",
       "answer": "il ne le fera pas",
       "hint": "{il ne le fera pas}",
       "mistakes": [
@@ -606,8 +606,8 @@
     },
     {
       "id": "i-j-allais-partir",
-      "type": "respond",
-      "situation": "I was going to leave",
+      "type": "translate",
+      "prompt": "I was going to leave",
       "answer": "j'allais partir",
       "accept": [
         "j allais partir"
@@ -634,8 +634,8 @@
     },
     {
       "id": "i-nous-ne-pourrons-pas",
-      "type": "respond",
-      "situation": "we will not be able to come",
+      "type": "translate",
+      "prompt": "we will not be able to come",
       "answer": "nous ne pourrons pas venir",
       "hint": "{nous ne pourrons pas...}",
       "mistakes": [

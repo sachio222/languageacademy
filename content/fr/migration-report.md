@@ -1,35 +1,39 @@
 # Converting lessons, practice sets and unit exams to module files
 
-`pnpm content:migrate modules` wrote 146 module files under `content/fr/modules/` from today’s lessons, practice sets and unit exams in `src/lessons/modules/`, with 2432 items. 3 exercises are held out until Jake decides them (first section). The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate modules` wrote 146 module files under `content/fr/modules/` from today’s lessons, practice sets and unit exams in `src/lessons/modules/`, with 2435 items. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
+English-to-French prompts by unit: a bare English sentence is a `translate` item, a framed one a `respond` item.
+
+| Unit | Bare `translate` | Framed `respond` |
+|---|---|---|
+| unit1 Essential Grammar | 35 | 48 |
+| unit2 Asking & Describing | 57 | 99 |
+| unit3 Movement & Possession | 11 | 104 |
+| unit4 Everyday Words | 109 | 85 |
+| unit5 Time & Taste | 174 | 112 |
+| unit6 Basic Fluency | 249 | 37 |
+| unit7 Knowledge & Learning | 74 | 31 |
+| unit8 Daily Life & Actions | 51 | 55 |
+| unit9 Discourse & Past Tense | 18 | 17 |
+| unit10 Mastery & Nuance | 29 | 102 |
+| unit11 Daily Essentials | 69 | 70 |
+| unit12 Curiosity & Questions | 105 | 65 |
+
 | Section | Lines |
 |---|---|
-| Needs Jake | 3 |
 | Spellings taught more than once | 124 |
-| Item types to confirm | 259 |
+| Item types to confirm | 260 |
 | Practice blanks that were in the wrong place | 58 |
 | Position words | 56 |
-| Translation prompts written as respond items | 1747 |
-| Hand edits kept | 74 |
-| Live ids with no converted item | 89 |
+| Exercises rewritten as Jake ruled | 2 |
+| English prompts written as respond items | 825 |
+| Hand edits kept | 70 |
+| Live ids with no converted item | 86 |
 | Fields with no place in a module file | 1833 |
 | Text written differently | 538 |
 | Outline | 16 |
-
-## Needs Jake
-
-These exercises are left out of the converted files, because fixing them takes a teaching decision. Each stays out on every rerun until it is decided.
-
-**2024-01-27-aller**
-
-- `exerciseConfig.items[19]` "What are you going to have?" → "qu'est-ce que tu vas avoir?": "qu'est-ce que tu as?" is both an accepted answer and a mistake ("This needs aller!"); the live checker accepts it. Which is right: accept it, or mark it wrong?
-
-**2024-05-10-unit-7-exam**
-
-- `exerciseConfig.items[18]` "savoir is for..." → "facts": asks when to use a word, with an English answer; no item type fits (rewrite as a choice item?)
-- `exerciseConfig.items[23]` "connaître is for..." → "people": asks when to use a word, with an English answer; no item type fits (rewrite as a choice item?)
 
 ## Spellings taught more than once
 
@@ -321,43 +325,43 @@ The classifier had no clear rule for these items, so the type is its best guess.
 
 **2024-01-12-demonstratives**
 
-- `items[0]` i-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-15-vouloir**
 
-- `items[0]` i-je-veux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-veux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-veut: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-veut: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-voulons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-voulez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-veulent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-veulent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-veux-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-nous-voulons-ce-livre: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-je-veux-etre-un: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-je-veux-avoir-un: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-elle-veut-avoir-une: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-je-veux-ca-s: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-veux: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-veux: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-veut: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-veut: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-voulons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-voulez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-veulent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-veulent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-veux-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-nous-voulons-ce-livre: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-je-veux-etre-un: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-je-veux-avoir-un: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-elle-veut-avoir-une: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-je-veux-ca-s: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-16-pouvoir**
 
-- `items[0]` i-je-peux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-peux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-peut: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-peut: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-pouvons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-pouvez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-peuvent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-peuvent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-peux-avoir-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-il-peut-avoir-un: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-nous-pouvons-avoir-une: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-je-peux-etre-un: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-elle-peut-etre-artiste: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-je-peux-vouloir-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[14]` i-ils-peuvent-vouloir-un: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-je-peux-avoir-ca-2: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-peux: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-peux: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-peut: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-peut: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-pouvons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-pouvez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-peuvent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-peuvent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-peux-avoir-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-il-peut-avoir-un: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-nous-pouvons-avoir-une: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-je-peux-etre-un: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-elle-peut-etre-artiste: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-je-peux-vouloir-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[14]` i-ils-peuvent-vouloir-un: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-je-peux-avoir-ca-2: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-18-questions**
 
@@ -375,73 +379,74 @@ The classifier had no clear rule for these items, so the type is its best guess.
 
 **2024-01-26-venir**
 
-- `items[0]` i-je-viens: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-viens: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-vient: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-vient: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-venons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-venez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-viennent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-viennent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-viens-avec-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-je-viens-de-chez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-il-vient-avec-son: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-nous-venons-avec-vous: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-qui-vient: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-d-ou-viens-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[14]` i-avec-quoi-viens-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-je-veux-venir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[16]` i-veux-tu-venir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[17]` i-je-veux-venir-avec: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[18]` i-peux-tu-venir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[19]` i-je-peux-venir-a: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[20]` i-je-viens-te-voir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[21]` i-pourquoi-viens-tu-me: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-viens: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-viens: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-vient: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-vient: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-venons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-venez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-viennent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-viennent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-viens-avec-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-je-viens-de-chez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-il-vient-avec-son: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-nous-venons-avec-vous: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-qui-vient: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-d-ou-viens-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[14]` i-avec-quoi-viens-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-je-veux-venir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[16]` i-veux-tu-venir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[17]` i-je-veux-venir-avec: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[18]` i-peux-tu-venir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[19]` i-je-peux-venir-a: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[20]` i-je-viens-te-voir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[21]` i-pourquoi-viens-tu-me: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-27-aller**
 
-- `items[0]` i-je-vais: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-vas: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-va: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-va: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-allons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-allez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-vont: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-vont: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-vais-avec-eux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-tu-vas-avec-quoi: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-il-va-avec-moi: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-nous-allons-avec-ma: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-qui-est-ce-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-je-veux-aller-avec: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[14]` i-peux-tu-aller: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-je-peux-aller-avec: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[16]` i-je-vais-etre-bon: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[17]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[18]` i-je-vais-avoir-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-vais: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-vas: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-va: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-va: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-allons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-allez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-vont: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-vont: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-vais-avec-eux: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-tu-vas-avec-quoi: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-il-va-avec-moi: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-nous-allons-avec-ma: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-qui-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-je-veux-aller-avec: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[14]` i-peux-tu-aller: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-je-peux-aller-avec: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[16]` i-je-vais-etre-bon: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[17]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[18]` i-je-vais-avoir-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[19]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
 
 **2024-01-29-partir**
 
-- `items[0]` i-je-pars: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-pars: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-part: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-part: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-partons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-partez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-partent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-partent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-pars-de-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-il-part-de-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-nous-partons-de-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-je-veux-partir-de: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[14]` i-peux-tu-partir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-je-peux-partir-de: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[16]` i-je-vais-partir-de: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[17]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[18]` i-je-viens-partir-de: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[19]` i-pourquoi-viens-tu-partir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-pars: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-pars: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-part: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-part: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-partons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-partez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-partent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-partent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-pars-de-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-il-part-de-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-nous-partons-de-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-je-veux-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[14]` i-peux-tu-partir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-je-peux-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[16]` i-je-vais-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[17]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[18]` i-je-viens-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[19]` i-pourquoi-viens-tu-partir: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-31-possessive-adjectives**
 
@@ -463,68 +468,68 @@ The classifier had no clear rule for these items, so the type is its best guess.
 
 **2024-02-02-combining**
 
-- `items[1]` i-elle-l-a: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-ils-les-ont: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-c-est-le-sien: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-c-est-le-leur: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-est-ce-le-tien: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-est-ce-le-sien: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-est-ce-la-sienne: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-je-le-veux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
-- `items[10]` i-tu-viens-avec-moi: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
-- `items[11]` i-il-va-partir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
+- `items[1]` i-elle-l-a: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-ils-les-ont: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-c-est-le-sien: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-c-est-le-leur: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-est-ce-le-tien: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-est-ce-le-sien: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-est-ce-la-sienne: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-je-le-veux: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
+- `items[10]` i-tu-viens-avec-moi: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
+- `items[11]` i-il-va-partir: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
 
 **2024-03-31-survival-phrases**
 
-- `items[2]` i-c-est-combien-le: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-ou-est-le-cafe: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-ou-sont-les-toilettes: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[2]` i-c-est-combien-le: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-ou-est-le-cafe: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-ou-sont-les-toilettes: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-03-25-faire**
 
-- `items[0]` i-je-fais: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-fais: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-fait: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-fait: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-faisons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-faites: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-font: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-font: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-fais-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-il-fait-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-nous-faisons-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-que-veux-tu-faire: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-je-veux-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[14]` i-peux-tu-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-je-peux-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[16]` i-je-vais-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[17]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[18]` i-nous-lui-faisons-voir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[19]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-fais: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-fais: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-fait: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-fait: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-faisons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-faites: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-font: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-font: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-fais-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-il-fait-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-nous-faisons-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-que-veux-tu-faire: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-je-veux-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[14]` i-peux-tu-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-je-peux-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[16]` i-je-vais-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[17]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[18]` i-nous-lui-faisons-voir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[19]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-03-23-devoir**
 
-- `items[0]` i-je-dois: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-tu-dois: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-il-doit: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-doit: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-nous-devons: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-vous-devez: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-ils-doivent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-elles-doivent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-dois-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-il-doit-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[11]` i-nous-devons-faire-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-pourquoi-dois-tu-aller: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-nous-devons-aller-a: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[14]` i-il-doit-partir-maintenant: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-quand-dois-tu-partir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[16]` i-ils-doivent-l-avoir: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[17]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[18]` i-je-dois-etre-bon: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[19]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-dois: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-tu-dois: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-il-doit: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-doit: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-nous-devons: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-vous-devez: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-ils-doivent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-elles-doivent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-dois-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-il-doit-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[11]` i-nous-devons-faire-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-pourquoi-dois-tu-aller: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-nous-devons-aller-a: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[14]` i-il-doit-partir-maintenant: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-quand-dois-tu-partir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[16]` i-ils-doivent-l-avoir: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[17]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[18]` i-je-dois-etre-bon: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[19]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-03-28-negation**
 
@@ -539,113 +544,113 @@ The classifier had no clear rule for these items, so the type is its best guess.
 
 **2024-02-07-wish-phrases**
 
-- `items[1]` i-je-veux-qu-il: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-j-aimerais-que-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-je-veux-qu-elle: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[1]` i-je-veux-qu-il: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-j-aimerais-que-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-je-veux-qu-elle: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-25-emotion-phrases**
 
-- `items[1]` i-je-suis-triste-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-j-ai-peur-qu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-je-suis-desole-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-je-suis-surpris-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-je-regrette-que-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[1]` i-je-suis-triste-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-j-ai-peur-qu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-je-suis-desole-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-je-suis-surpris-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-je-regrette-que-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-29-opinion-phrases**
 
-- `items[0]` i-je-pense-qu-il: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-je-ne-pense-pas: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-je-doute-qu-elle: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-je-ne-crois-pas: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-je-ne-pense-pas-2: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-je-doute-que-ce: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-pense-qu-il: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-je-ne-pense-pas: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-je-doute-qu-elle: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-je-ne-crois-pas: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-je-ne-pense-pas-2: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-je-doute-que-ce: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-27-hypothetical-phrases**
 
-- `items[3]` i-si-tu-etais-ici: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[3]` i-si-tu-etais-ici: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-26-had-already-phrases**
 
-- `items[0]` i-j-avais-deja-mange: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-j-etais-deja-parti: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-elle-etait-deja-partie: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-j-avais-deja-vu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-il-avait-deja-commence: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-nous-avions-deja-fini: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-j-avais-deja-mange: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-j-etais-deja-parti: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-elle-etait-deja-partie: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-j-avais-deja-vu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-il-avait-deja-commence: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-nous-avions-deja-fini: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-22-common-adverbs**
 
-- `items[2]` i-parler-lentement: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-courir-rapidement: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-comprendre-facilement: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-completement-fini: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-probablement: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[2]` i-parler-lentement: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-courir-rapidement: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-comprendre-facilement: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-completement-fini: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-probablement: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-02-02-service-phrases**
 
-- `items[0]` i-je-me-fais-couper: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[1]` i-je-fais-reparer-ma: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-je-me-fais-maquiller: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-je-fais-nettoyer-la: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-je-me-fais-examiner: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-je-fais-construire-une: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[0]` i-je-me-fais-couper: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[1]` i-je-fais-reparer-ma: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-je-me-fais-maquiller: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-je-fais-nettoyer-la: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-je-me-fais-examiner: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-je-fais-construire-une: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-02-08-age-personal-info**
 
-- `items[1]` i-quel-age-as-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-quel-age-avez-vous: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-elle-a-dix-huit: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-je-suis-ne-en: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-je-suis-nee-en: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-je-suis-ne-a: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-je-m-appelle-sophie: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-en-quelle-annee-etes: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-j-ai-trente-ans: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
+- `items[1]` i-quel-age-as-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-quel-age-avez-vous: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-elle-a-dix-huit: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-je-suis-ne-en: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-je-suis-nee-en: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-je-suis-ne-a: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-je-m-appelle-sophie: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-en-quelle-annee-etes: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-j-ai-trente-ans: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-02-15-unit-11-exam**
 
-- `items[1]` i-quel-age-avez-vous: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[2]` i-quel-age-as-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[3]` i-je-suis-ne-en: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[4]` i-je-suis-nee-a: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[5]` i-je-m-appelle-sophie: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[6]` i-je-donne: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[7]` i-ils-donnent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[8]` i-je-te-donne-le: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[9]` i-tu-peux-me-donner: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[10]` i-donner-rendez-vous: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[12]` i-tu-dors-bien: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[13]` i-je-dors-huit-heures: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[15]` i-ou-travaillez-vous: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[16]` i-je-travaille-dur: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[18]` i-je-vis-a-bordeaux: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[19]` i-vivre-sa-vie: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[20]` i-je-cherche-ma-voiture: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[21]` i-j-ai-trouve: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[22]` i-comment-tu-trouves-ca: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[23]` i-je-trouve-que-c: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[24]` i-j-ecoute-de-la: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[25]` i-nous-regardons-des-films: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[26]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[27]` i-ecoute-le-professeur: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[28]` i-j-attends-mon-ami: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[29]` i-a-quelle-heure-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[30]` i-le-train-arrive-a: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[31]` i-je-reste-trois-jours: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[32]` i-combien-de-temps-tu: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[33]` i-j-attends-tu-arrives: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[34]` i-tournez-a-gauche: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[35]` i-tournez-a-droite: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[36]` i-allez-tout-droit: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[37]` i-ou-est-le-musee: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[38]` i-c-est-loin: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[39]` i-excusez-moi-ou-est: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[40]` i-c-est-a-cinq: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[41]` i-allez-tout-droit-puis: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation
-- `items[42]` i-la-france-a-soixante: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
-- `items[43]` i-les-touristes-cherchent-des: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
-- `items[44]` i-les-artistes-francais-vivent: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
-- `items[45]` i-la-france-moderne-combine: classifier: translate (English prompt with a French answer); written as respond, the instruction as the situation (fixed by hand)
+- `items[1]` i-quel-age-avez-vous: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[2]` i-quel-age-as-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[3]` i-je-suis-ne-en: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[4]` i-je-suis-nee-a: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[5]` i-je-m-appelle-sophie: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[6]` i-je-donne: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[7]` i-ils-donnent: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[8]` i-je-te-donne-le: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[9]` i-tu-peux-me-donner: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[10]` i-donner-rendez-vous: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[12]` i-tu-dors-bien: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[13]` i-je-dors-huit-heures: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[15]` i-ou-travaillez-vous: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[16]` i-je-travaille-dur: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[18]` i-je-vis-a-bordeaux: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[19]` i-vivre-sa-vie: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[20]` i-je-cherche-ma-voiture: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[21]` i-j-ai-trouve: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[22]` i-comment-tu-trouves-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[23]` i-je-trouve-que-c: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[24]` i-j-ecoute-de-la: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[25]` i-nous-regardons-des-films: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[26]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[27]` i-ecoute-le-professeur: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[28]` i-j-attends-mon-ami: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[29]` i-a-quelle-heure-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[30]` i-le-train-arrive-a: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[31]` i-je-reste-trois-jours: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[32]` i-combien-de-temps-tu: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[33]` i-j-attends-tu-arrives: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[34]` i-tournez-a-gauche: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[35]` i-tournez-a-droite: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[36]` i-allez-tout-droit: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[37]` i-ou-est-le-musee: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[38]` i-c-est-loin: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[39]` i-excusez-moi-ou-est: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[40]` i-c-est-a-cinq: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[41]` i-allez-tout-droit-puis: classifier: translate (English prompt with a French answer); written as respond (framed)
+- `items[42]` i-la-france-a-soixante: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
+- `items[43]` i-les-touristes-cherchent-des: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
+- `items[44]` i-les-artistes-francais-vivent: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
+- `items[45]` i-la-france-moderne-combine: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
 
 ## Practice blanks that were in the wrong place
 
@@ -886,453 +891,447 @@ Learner text that names a module, unit or reading by number. The source says it 
 - `concepts[0].term` "Questions + Unit 10 Structures" (fixed by hand)
 - `concepts[0].definition` "Combine question words with all the sophisticated structures from Unit 10" (fixed by hand)
 
-## Translation prompts written as respond items
+## Exercises rewritten as Jake ruled
 
-English-to-French translation items are allowed in Unit 1 lessons only. These became respond items, with the English shown as the situation.
-
-**2024-01-01-famous-words**
-
-- 5 × the instruction holds context a translate item has no field for: `items[3]`, `items[4]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-01-01-pronouns**
-
-- 4 × the instruction holds context a translate item has no field for: `items[0]`, `items[2]`, `items[3]`, `items[4]`
-
-**2024-01-05-articles**
-
-- 6 × the instruction holds context a translate item has no field for: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
-
-**2024-01-06-basic-nouns**
-
-- 6 × the instruction holds context a translate item has no field for: `items[1]`, `items[2]`, `items[4]`, `items[7]`, `items[8]`, `items[10]`
-
-**2024-01-08-connectors**
-
-- 3 × the instruction holds context a translate item has no field for: `items[4]`, `items[6]`, `items[8]`
-
-**2024-01-11-unit1-exam**
-
-- 24 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`
-
-**2024-01-12-demonstratives**
-
-- 10 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
-
-**2024-01-13-ca-survival**
-
-- 4 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[4]`, `items[5]`
-
-**2024-01-14-determiners-nouns**
-
-- 11 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`
-
-**2024-01-15-vouloir**
-
-- 14 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
-
-**2024-01-16-pouvoir**
-
-- 16 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
-
-**2024-01-18-questions**
-
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`
-
-**2024-01-19-stressed-pronouns**
-
-- 12 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-01-20-prepositions**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-01-21-adjectives**
-
-- 16 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
-
-**2024-01-24-unit2-exam**
-
-- 33 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`
-
-**2024-01-25-contractions**
-
-- 3 × translate is Unit 1 only: `items[7]`, `items[8]`, `items[9]`
-
-**2024-01-26-venir**
-
-- 22 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`
-
-**2024-01-27-aller**
-
-- 19 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`
-
-**2024-01-29-partir**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-02-01-possessive-pronouns**
-
-- 12 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-02-02-combining**
-
-- 10 × translate is Unit 1 only: `items[1]`, `items[2]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-02-05-unit3-exam**
-
-- 26 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`
-
-**2024-03-31-survival-phrases**
-
-- 5 × translate is Unit 1 only: `items[2]`, `items[4]`, `items[5]`, `items[10]`, `items[11]`
-
-**2024-03-25-faire**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-03-23-devoir**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-10-22-search-find**
-
-- 14 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
-
-**2024-03-28-negation**
-
-- 8 × translate is Unit 1 only: `items[7]`, `items[8]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
-
-**2024-04-01-time-adverbs**
-
-- 24 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`
-
-**2024-03-27-negation-2**
-
-- 18 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`
-
-**2024-03-26-location-adverbs**
-
-- 12 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-03-24-everyday-nouns**
-
-- 23 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`
-
-**2024-04-02-unit-4-exam**
-
-- 41 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`
-
-**2024-04-08-comparisons**
-
-- 18 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`
-
-**2024-04-07-comparisons-slang**
-
-- 19 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`
-
-**2024-04-09-conditionals**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-04-16-would-conditionals**
-
-- 21 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`
-
-**2024-04-04-aimer**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-04-10-etre-past**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-04-05-avoir-past**
-
-- 20 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-04-11-food-nouns**
-
-- 24 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`
-
-**2024-04-12-manger**
-
-- 26 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`
-
-**2024-04-06-boire**
-
-- 28 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`
-
-**2024-04-14-unit-5-exam**
-
-- 70 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`, `items[41]`, `items[42]`, `items[43]`, `items[44]`, `items[45]`, `items[46]`, `items[47]`, `items[48]`, `items[49]`, `items[50]`, `items[51]`, `items[52]`, `items[53]`, `items[54]`, `items[55]`, `items[56]`, `items[57]`, `items[58]`, `items[59]`, `items[60]`, `items[61]`, `items[62]`, `items[63]`, `items[64]`, `items[65]`, `items[66]`, `items[67]`, `items[68]`, `items[69]`
-
-**2024-04-23-progressive-tenses**
-
-- 21 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`
-
-**2024-04-20-dire**
-
-- 22 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`
-
-**2024-04-22-prendre**
-
-- 26 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`
-
-**2024-10-22-donner**
-
-- 16 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
-
-**2024-04-21-mettre**
-
-- 22 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`
-
-**2024-04-19-demander**
-
-- 25 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`
-
-**2024-04-18-commander**
-
-- 23 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`
-
-**2024-04-17-besoin**
-
-- 23 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`
-
-**2024-04-25-top-200-nouns**
-
-- 33 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`
-
-**2024-04-26-unit-6-exam**
-
-- 75 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`, `items[41]`, `items[42]`, `items[43]`, `items[44]`, `items[45]`, `items[46]`, `items[47]`, `items[48]`, `items[49]`, `items[50]`, `items[51]`, `items[52]`, `items[53]`, `items[54]`, `items[55]`, `items[56]`, `items[57]`, `items[58]`, `items[59]`, `items[60]`, `items[61]`, `items[62]`, `items[63]`, `items[64]`, `items[65]`, `items[66]`, `items[67]`, `items[68]`, `items[69]`, `items[70]`, `items[71]`, `items[72]`, `items[73]`, `items[74]`, `items[75]`
-
-**2024-05-05-on-and-people**
-
-- 8 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`
-
-**2024-05-09-studying-verbs**
-
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
-
-**2024-05-04-learning-verbs**
-
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
-
-**2024-05-03-knowledge-nouns**
-
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
-
-**2024-05-02-discourse-markers**
-
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
-
-**2024-04-28-comparison-modifiers**
-
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+No conversion of today’s text fits these, so each is written as Jake ruled, in its place.
 
 **2024-05-10-unit-7-exam**
 
-- 58 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`, `items[42]`, `items[43]`, `items[44]`, `items[45]`, `items[46]`, `items[47]`, `items[48]`, `items[49]`, `items[50]`, `items[51]`, `items[52]`, `items[53]`, `items[54]`, `items[55]`, `items[56]`, `items[57]`, `items[58]`, `items[59]`
+- `items[18]` i-for-facts-and-skills: Jake, 2026-11-25: "When do you use savoir?" as a choice item (its English answers fit no typed item)
+- `items[23]` i-for-people-places-and: Jake, 2026-11-25: "When do you use connaître?" as a choice item (its English answers fit no typed item)
+
+## English prompts written as respond items
+
+An English prompt framed by its instruction ("Say 'you would do it' (informal)") or by a context note ("I know Marie (person)") is a respond item, with the whole frame as the situation, since the context does the teaching (Jake, 2026-11-25). A bare English sentence is a translate item; outside Unit 1 each is a checker warning, rewritten over time.
+
+**2024-01-01-famous-words**
+
+- 13 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`
+
+**2024-01-01-pronouns**
+
+- 9 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`
+
+**2024-01-05-articles**
+
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+
+**2024-01-06-basic-nouns**
+
+- 6 × framed by its instruction: `items[1]`, `items[2]`, `items[4]`, `items[7]`, `items[8]`, `items[10]`
+- 2 × framed by a context note: `items[6]`, `items[12]`
+
+**2024-01-07-plurals**
+
+- 4 × framed by a context note: `items[1]`, `items[3]`, `items[5]`, `items[6]`
+
+**2024-01-08-connectors**
+
+- 3 × framed by its instruction: `items[4]`, `items[6]`, `items[8]`
+
+**2024-01-11-unit1-exam**
+
+- 5 × framed by a context note: `items[1]`, `items[3]`, `items[6]`, `items[15]`, `items[21]`
+
+**2024-01-12-demonstratives**
+
+- 10 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
+
+**2024-01-13-ca-survival**
+
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+
+**2024-01-14-determiners-nouns**
+
+- 3 × framed by a context note: `items[3]`, `items[4]`, `items[8]`
+
+**2024-01-15-vouloir**
+
+- 14 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
+
+**2024-01-16-pouvoir**
+
+- 16 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
+
+**2024-01-18-questions**
+
+- 18 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`
+
+**2024-01-19-stressed-pronouns**
+
+- 10 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[9]`, `items[11]`
+
+**2024-01-20-prepositions**
+
+- 8 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[9]`
+
+**2024-01-21-adjectives**
+
+- 3 × framed by a context note: `items[4]`, `items[8]`, `items[15]`
+
+**2024-01-24-unit2-exam**
+
+- 11 × framed by a context note: `items[11]`, `items[12]`, `items[13]`, `items[15]`, `items[18]`, `items[19]`, `items[20]`, `items[22]`, `items[27]`, `items[31]`, `items[32]`
+
+**2024-01-26-venir**
+
+- 22 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`
+
+**2024-01-27-aller**
+
+- 20 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+
+**2024-01-29-partir**
+
+- 20 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+
+**2024-02-01-possessive-pronouns**
+
+- 12 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
+
+**2024-02-02-combining**
+
+- 12 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
+
+**2024-02-05-unit3-exam**
+
+- 18 × framed by a context note: `items[0]`, `items[1]`, `items[2]`, `items[4]`, `items[7]`, `items[8]`, `items[9]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[23]`, `items[25]`
+
+**2024-03-31-survival-phrases**
+
+- 14 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
+
+**2024-03-25-faire**
+
+- 20 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+
+**2024-03-23-devoir**
+
+- 20 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+
+**2024-10-22-search-find**
+
+- 7 × framed by its instruction: `items[0]`, `items[2]`, `items[3]`, `items[6]`, `items[7]`, `items[12]`, `items[13]`
+
+**2024-03-28-negation**
+
+- 3 × framed by its instruction: `items[10]`, `items[11]`, `items[15]`
+
+**2024-04-01-time-adverbs**
+
+- 1 × framed by its instruction: `items[6]`
+
+**2024-03-27-negation-2**
+
+- 8 × framed by its instruction: `items[1]`, `items[2]`, `items[4]`, `items[6]`, `items[9]`, `items[11]`, `items[12]`, `items[15]`
+
+**2024-03-26-location-adverbs**
+
+- 3 × framed by its instruction: `items[2]`, `items[5]`, `items[10]`
+
+**2024-03-24-everyday-nouns**
+
+- 2 × framed by its instruction: `items[5]`, `items[19]`
+
+**2024-04-02-unit-4-exam**
+
+- 1 × framed by its instruction: `items[0]`
+- 6 × framed by a context note: `items[1]`, `items[6]`, `items[8]`, `items[10]`, `items[14]`, `items[40]`
+
+**2024-04-08-comparisons**
+
+- 8 × framed by its instruction: `items[0]`, `items[1]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[12]`
+
+**2024-04-07-comparisons-slang**
+
+- 19 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`
+
+**2024-04-09-conditionals**
+
+- 7 × framed by its instruction: `items[2]`, `items[3]`, `items[8]`, `items[9]`, `items[14]`, `items[15]`, `items[19]`
+
+**2024-04-16-would-conditionals**
+
+- 7 × framed by its instruction: `items[0]`, `items[1]`, `items[4]`, `items[7]`, `items[10]`, `items[13]`, `items[16]`
+
+**2024-04-04-aimer**
+
+- 10 × framed by its instruction: `items[2]`, `items[3]`, `items[8]`, `items[9]`, `items[13]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+
+**2024-04-10-etre-past**
+
+- 5 × framed by its instruction: `items[2]`, `items[3]`, `items[10]`, `items[11]`, `items[15]`
+
+**2024-04-05-avoir-past**
+
+- 11 × framed by its instruction: `items[2]`, `items[3]`, `items[8]`, `items[9]`, `items[12]`, `items[13]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+
+**2024-04-11-food-nouns**
+
+- 3 × framed by its instruction: `items[2]`, `items[6]`, `items[23]`
+
+**2024-04-12-manger**
+
+- 12 × framed by its instruction: `items[2]`, `items[3]`, `items[8]`, `items[9]`, `items[12]`, `items[13]`, `items[14]`, `items[17]`, `items[18]`, `items[20]`, `items[23]`, `items[25]`
+
+**2024-04-06-boire**
+
+- 13 × framed by its instruction: `items[2]`, `items[3]`, `items[8]`, `items[9]`, `items[12]`, `items[13]`, `items[14]`, `items[17]`, `items[18]`, `items[20]`, `items[24]`, `items[26]`, `items[27]`
+
+**2024-04-14-unit-5-exam**
+
+- 12 × framed by a context note: `items[2]`, `items[3]`, `items[12]`, `items[15]`, `items[20]`, `items[23]`, `items[28]`, `items[33]`, `items[37]`, `items[42]`, `items[56]`, `items[69]`
+- 5 × framed by its instruction: `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`
+
+**2024-04-20-dire**
+
+- 4 × framed by its instruction: `items[1]`, `items[4]`, `items[13]`, `items[18]`
+
+**2024-04-22-prendre**
+
+- 4 × framed by its instruction: `items[1]`, `items[4]`, `items[24]`, `items[25]`
+
+**2024-10-22-donner**
+
+- 7 × framed by its instruction: `items[1]`, `items[5]`, `items[8]`, `items[10]`, `items[11]`, `items[14]`, `items[15]`
+
+**2024-04-21-mettre**
+
+- 5 × framed by its instruction: `items[1]`, `items[4]`, `items[19]`, `items[20]`, `items[21]`
+
+**2024-04-19-demander**
+
+- 3 × framed by its instruction: `items[1]`, `items[4]`, `items[14]`
+
+**2024-04-18-commander**
+
+- 3 × framed by its instruction: `items[1]`, `items[4]`, `items[13]`
+
+**2024-04-17-besoin**
+
+- 1 × framed by its instruction: `items[6]`
+
+**2024-04-26-unit-6-exam**
+
+- 10 × framed by a context note: `items[4]`, `items[7]`, `items[17]`, `items[19]`, `items[20]`, `items[27]`, `items[31]`, `items[39]`, `items[41]`, `items[48]`
+
+**2024-05-05-on-and-people**
+
+- 4 × framed by its instruction: `items[0]`, `items[4]`, `items[6]`, `items[7]`
+- 1 × framed by a context note: `items[1]`
+
+**2024-05-09-studying-verbs**
+
+- 1 × framed by a context note: `items[2]`
+
+**2024-05-04-learning-verbs**
+
+- 1 × framed by a context note: `items[1]`
+
+**2024-05-02-discourse-markers**
+
+- 5 × framed by its instruction: `items[0]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+
+**2024-05-10-unit-7-exam**
+
+- 17 × framed by a context note: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[7]`, `items[9]`, `items[11]`, `items[13]`, `items[16]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[26]`, `items[27]`, `items[58]`
+- 2 × framed by its instruction: `items[44]`, `items[45]`
 
 **2024-05-23-temporal-words**
 
-- 12 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-05-21-reflexive-pronouns**
-
-- 1 × translate is Unit 1 only: `items[7]`
+- 5 × framed by its instruction: `items[0]`, `items[3]`, `items[4]`, `items[5]`, `items[11]`
 
 **2024-05-22-s-appeler**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 3 × framed by its instruction: `items[1]`, `items[4]`, `items[5]`
 
 **2024-05-19-morning-routine**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 1 × framed by its instruction: `items[2]`
 
 **2024-05-17-getting-ready**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 2 × framed by its instruction: `items[3]`, `items[5]`
+- 1 × framed by a context note: `items[4]`
 
 **2024-05-16-daily-reflexives**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 3 × framed by its instruction: `items[1]`, `items[3]`, `items[5]`
 
 **2024-06-07-reflexive-past**
 
-- 5 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
+- 3 × framed by its instruction: `items[0]`, `items[3]`, `items[4]`
 
 **2024-06-06-reciprocal-reflexives**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 3 × framed by its instruction: `items[1]`, `items[2]`, `items[5]`
 
 **2024-05-13-commands-tu**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-05-14-commands-vous**
 
-- 4 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`
+- 4 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`
 
 **2024-05-18-irregular-commands**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-05-12-commands-pronouns**
 
-- 5 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
+- 5 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
 
 **2024-05-24-unit-8-exam**
 
-- 37 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`
+- 7 × framed by a context note: `items[14]`, `items[21]`, `items[22]`, `items[24]`, `items[26]`, `items[30]`, `items[32]`
+- 6 × framed by its instruction: `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`
 
 **2024-06-09-unit-9-exam**
 
-- 35 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`
+- 17 × framed by a context note: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[15]`, `items[17]`, `items[21]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[30]`, `items[31]`, `items[33]`, `items[34]`
 
 **2024-01-23-common-special-forms-1**
 
-- 8 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`
+- 8 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`
 
 **2024-01-24-common-special-forms-2**
 
-- 10 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
+- 10 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
 
 **2024-01-28-necessity-phrases**
 
-- 3 × translate is Unit 1 only: `items[2]`, `items[3]`, `items[6]`
+- 7 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`
 
 **2024-02-07-wish-phrases**
 
-- 3 × translate is Unit 1 only: `items[1]`, `items[3]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-25-emotion-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-29-opinion-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-27-hypothetical-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-30-past-regret-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-26-had-already-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-22-common-adverbs**
 
-- 7 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`
+- 7 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`
 
 **2024-02-06-while-doing-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-02-02-service-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-01-21-before-phrases**
 
-- 5 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
+- 5 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
 
 **2024-02-03-so-that-phrases**
 
-- 5 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
+- 5 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
 
 **2024-01-20-although-phrases**
 
-- 5 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
+- 5 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`
 
 **2024-01-31-possibility-phrases**
 
-- 6 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`
 
 **2024-02-04-unit-10-exam**
 
-- 30 × unit exams have no translate step: `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`
+- 1 × framed by a context note: `items[11]`
 
 **2024-02-08-age-personal-info**
 
-- 10 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
+- 10 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
 
 **2024-02-10-donner**
 
-- 10 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`
+- 1 × framed by a context note: `items[1]`
+- 1 × framed by its instruction: `items[9]`
 
 **2024-05-15-daily-actions-1**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 2 × framed by a context note: `items[1]`, `items[5]`
+- 1 × framed by its instruction: `items[10]`
 
 **2024-02-13-search-and-find**
 
-- 14 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
+- 1 × framed by a context note: `items[1]`
+- 3 × framed by its instruction: `items[8]`, `items[9]`, `items[12]`
 
 **2024-02-11-perception-verbs**
 
-- 14 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
+- 2 × framed by a context note: `items[1]`, `items[5]`
+- 2 × framed by its instruction: `items[12]`, `items[13]`
 
 **2024-02-14-social-situations**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 2 × framed by a context note: `items[1]`, `items[8]`
 
 **2024-02-09-directions-navigation**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 1 × framed by a context note: `items[1]`
+- 2 × framed by its instruction: `items[10]`, `items[11]`
 
 **2024-02-15-unit-11-exam**
 
-- 46 × unit exams have no translate step: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`, `items[41]`, `items[42]`, `items[43]`, `items[44]`, `items[45]`
-
-**2024-03-15-nature-animals**
-
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 42 × framed by its instruction: `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[12]`, `items[13]`, `items[15]`, `items[16]`, `items[18]`, `items[19]`, `items[20]`, `items[21]`, `items[22]`, `items[23]`, `items[24]`, `items[25]`, `items[26]`, `items[27]`, `items[28]`, `items[29]`, `items[30]`, `items[31]`, `items[32]`, `items[33]`, `items[34]`, `items[35]`, `items[36]`, `items[37]`, `items[38]`, `items[39]`, `items[40]`, `items[41]`, `items[42]`, `items[43]`, `items[44]`, `items[45]`
 
 **2024-03-16-movement-verbs**
 
-- 19 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`
+- 2 × framed by a context note: `items[1]`, `items[8]`
+- 1 × framed by its instruction: `items[18]`
 
 **2024-03-17-natural-phenomena**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 2 × framed by its instruction: `items[5]`, `items[6]`
 
 **2024-03-15-questce-qui-que**
 
-- 16 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
+- 16 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
 
 **2024-03-19-pourquoi-complex**
 
-- 18 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`
+- 2 × framed by its instruction: `items[12]`, `items[13]`
 
 **2024-03-20-comment-complex**
 
-- 16 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
+- 3 × framed by its instruction: `items[13]`, `items[14]`, `items[15]`
 
 **2024-03-16-quiest-qui-que**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 15 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
 
 **2024-03-22-inversion-questions**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 15 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
 
 **2024-03-23-embedded-questions**
 
-- 15 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`
+- 2 × framed by its instruction: `items[13]`, `items[14]`
 
 **2024-03-24-rhetorical-negative**
 
-- 12 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`
-
-**2024-03-25-multi-clause-questions**
-
-- 14 × translate is Unit 1 only: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
+- 7 × framed by its instruction: `items[1]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[11]`
 
 ## Hand edits kept
 
@@ -1361,9 +1360,6 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-01-18-questions**
 
 - `vocabulary[11].word_id` "ca-va-fr.you-good" → "ca-va-fr.question"
-- `items[2].mistakes` "["answer":"ou","feedback":"Need accent: où, not 'ou' (which means 'or')"]" → "(removed)"
-- `items[9].mistakes` "["answer":"ou est-ce","feedback":"Use où with an accent, not 'ou'"]" → "(removed)"
-- `items[11].mistakes` "["answer":"où tu es","feedback":"Add 'est-ce que' between où and tu es","answer":"ou est-ce que tu es","feedback":"Use où (with accent), not 'ou' (which means 'or')"]" → "["answer":"où tu es","feedback":"Add 'est-ce que' between où and tu es"]"
 
 **2024-01-23-unit2-practice**
 
@@ -1375,6 +1371,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 2! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences." → "Test everything from this unit! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences."
 - `items[32].mistakes` "["answer":"elles sont à Ladurée","feedback":"That's acceptable but 'chez' is more natural for shops/businesses - use 'chez Ladurée'"]" → "(removed)"
+
+**2024-01-27-aller**
+
+- `items[19].accept` "["qu'est-ce que tu as?"]" → "(removed)"
 
 **2024-02-02-combining**
 
@@ -1411,10 +1411,6 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 5! Comparisons, slang, past tense, conditionals, and food vocabulary." → "Test everything from this unit! Comparisons, slang, past tense, conditionals, and food vocabulary."
 
-**2024-04-25-top-200-nouns**
-
-- `items[26].mistakes` "["answer":"la côté","feedback":"Expected: \"le côté\"","answer":"le coté","feedback":"Expected: \"le côté\"","answer":"la cote","feedback":"Expected: \"le côté\""]" → "["answer":"la côté","feedback":"Expected: \"le côté\"","answer":"la cote","feedback":"Expected: \"le côté\""]"
-
 **2024-04-27-unit-6-practice**
 
 - `title` "Unit 6 Practice - Fill in the Blanks" → "Basic Fluency Practice - Fill in the Blanks"
@@ -1424,10 +1420,6 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-04-26-unit-6-exam**
 
 - `description` "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and essential vocabulary." → "Test everything from this unit! Progressive tenses, future forms, communication verbs, and essential vocabulary."
-
-**2024-05-02-discourse-markers**
-
-- `items[12].mistakes` "["answer":"bien sur","feedback":"Use accent: bien sûr"]" → "(removed)"
 
 **2024-05-11-unit-7-practice**
 
@@ -1549,10 +1541,6 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `concepts[2]` concept "Question Formation"
 - `concepts[3]` concept "Descriptive Language"
 
-**2024-01-27-aller**
-
-- `2024-01-27-aller.20` exercise "What are you going to have?" → "qu'est-ce que tu vas avoir?"
-
 **2024-02-04-unit3-practice**
 
 - `concepts[0]` concept "Movement & Possession Practice"
@@ -1617,8 +1605,6 @@ The live app stores answers under these exercise ids and concept indexes, and no
 
 **2024-05-10-unit-7-exam**
 
-- `2024-05-10-unit-7-exam.19` exercise "savoir is for..." → "facts"
-- `2024-05-10-unit-7-exam.24` exercise "connaître is for..." → "people"
 - `concepts[0]` concept "Knowledge and Learning Mastery"
 - `concepts[1]` concept "Cognitive Verb Mastery"
 - `concepts[2]` concept "Learning and Teaching"

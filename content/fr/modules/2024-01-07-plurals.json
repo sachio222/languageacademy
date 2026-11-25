@@ -100,8 +100,8 @@
     },
     {
       "id": "i-tu-as-des-chats",
-      "type": "translate",
-      "prompt": "you have some cats (informal)",
+      "type": "respond",
+      "situation": "you have some cats (informal)",
       "answer": "tu as des chats",
       "hint": "Combine: you have + des + cats",
       "mistakes": [
@@ -130,8 +130,8 @@
     },
     {
       "id": "i-ils-ont-les-chats",
-      "type": "translate",
-      "prompt": "they have the cats (masculine)",
+      "type": "respond",
+      "situation": "they have the cats (masculine)",
       "answer": "ils ont les chats",
       "hint": "Combine: they have + the + cats",
       "mistakes": [
@@ -156,8 +156,8 @@
     },
     {
       "id": "i-ils-sont-les-amis",
-      "type": "translate",
-      "prompt": "they are the friends (masculine)",
+      "type": "respond",
+      "situation": "they are the friends (masculine)",
       "answer": "ils sont les amis",
       "hint": "Combine: they are + the + friends (plural)",
       "mistakes": [
@@ -169,8 +169,8 @@
     },
     {
       "id": "i-vous-avez-les-choses",
-      "type": "translate",
-      "prompt": "you have the things (formal)",
+      "type": "respond",
+      "situation": "you have the things (formal)",
       "answer": "vous avez les choses",
       "hint": "Combine: you have + the + things (plural)",
       "mistakes": [

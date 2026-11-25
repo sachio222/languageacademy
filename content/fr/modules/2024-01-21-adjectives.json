@@ -107,8 +107,8 @@
   "items": [
     {
       "id": "i-j-ai-un-bon",
-      "type": "respond",
-      "situation": "I have a good book",
+      "type": "translate",
+      "prompt": "I have a good book",
       "answer": "j'ai un bon livre",
       "hint": "Combine: j'ai + article + bon (masculine form) + livre",
       "mistakes": [
@@ -124,8 +124,8 @@
     },
     {
       "id": "i-elle-a-une-bonne",
-      "type": "respond",
-      "situation": "she has a good house",
+      "type": "translate",
+      "prompt": "she has a good house",
       "answer": "elle a une bonne maison",
       "hint": "maison is feminine - use feminine form of 'good'",
       "mistakes": [
@@ -137,8 +137,8 @@
     },
     {
       "id": "i-c-est-un-grand",
-      "type": "respond",
-      "situation": "it's a big man",
+      "type": "translate",
+      "prompt": "it's a big man",
       "answer": "c'est un grand homme",
       "hint": "homme is masculine - use masculine form",
       "mistakes": [
@@ -150,8 +150,8 @@
     },
     {
       "id": "i-c-est-une-grande",
-      "type": "respond",
-      "situation": "it's a big woman",
+      "type": "translate",
+      "prompt": "it's a big woman",
       "answer": "c'est une grande femme",
       "hint": "femme is feminine - use feminine form",
       "mistakes": [
@@ -176,8 +176,8 @@
     },
     {
       "id": "i-elle-a-une-petite",
-      "type": "respond",
-      "situation": "she has a small house",
+      "type": "translate",
+      "prompt": "she has a small house",
       "answer": "elle a une petite maison",
       "hint": "maison is feminine - use feminine form",
       "mistakes": [
@@ -189,8 +189,8 @@
     },
     {
       "id": "i-nous-avons-une-nouvelle",
-      "type": "respond",
-      "situation": "we have a new car",
+      "type": "translate",
+      "prompt": "we have a new car",
       "answer": "nous avons une nouvelle voiture",
       "hint": "voiture is feminine - nouveau becomes nouvelle",
       "mistakes": [
@@ -202,8 +202,8 @@
     },
     {
       "id": "i-il-a-un-nouveau",
-      "type": "respond",
-      "situation": "he has a new book",
+      "type": "translate",
+      "prompt": "he has a new book",
       "answer": "il a un nouveau livre",
       "hint": "livre is masculine - use nouveau",
       "mistakes": [
@@ -228,8 +228,8 @@
     },
     {
       "id": "i-j-ai-une-vieille",
-      "type": "respond",
-      "situation": "I have an old house",
+      "type": "translate",
+      "prompt": "I have an old house",
       "answer": "j'ai une vieille maison",
       "hint": "maison is feminine - vieux becomes vieille",
       "mistakes": [
@@ -241,8 +241,8 @@
     },
     {
       "id": "i-il-est-un-jeune",
-      "type": "respond",
-      "situation": "he is a young man",
+      "type": "translate",
+      "prompt": "he is a young man",
       "answer": "il est un jeune homme",
       "hint": "jeune is the same for both genders",
       "mistakes": [
@@ -254,8 +254,8 @@
     },
     {
       "id": "i-elle-est-une-jeune",
-      "type": "respond",
-      "situation": "she is a young woman",
+      "type": "translate",
+      "prompt": "she is a young woman",
       "answer": "elle est une jeune femme",
       "hint": "jeune is the same for both genders",
       "mistakes": [
@@ -267,8 +267,8 @@
     },
     {
       "id": "i-c-est-un-beau",
-      "type": "respond",
-      "situation": "it's a beautiful book",
+      "type": "translate",
+      "prompt": "it's a beautiful book",
       "answer": "c'est un beau livre",
       "hint": "livre is masculine - use beau",
       "mistakes": [
@@ -280,8 +280,8 @@
     },
     {
       "id": "i-nous-avons-une-belle",
-      "type": "respond",
-      "situation": "we have a beautiful house",
+      "type": "translate",
+      "prompt": "we have a beautiful house",
       "answer": "nous avons une belle maison",
       "hint": "maison is feminine - beau becomes belle",
       "mistakes": [
@@ -293,8 +293,8 @@
     },
     {
       "id": "i-j-ai-un-autre",
-      "type": "respond",
-      "situation": "I have another book",
+      "type": "translate",
+      "prompt": "I have another book",
       "answer": "j'ai un autre livre",
       "hint": "autre is the same for both genders",
       "mistakes": [

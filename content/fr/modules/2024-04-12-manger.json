@@ -125,8 +125,8 @@
   "items": [
     {
       "id": "i-je-mange-du-pain",
-      "type": "respond",
-      "situation": "I eat bread",
+      "type": "translate",
+      "prompt": "I eat bread",
       "answer": "je mange du pain",
       "hint": "{je mange + du pain}",
       "mistakes": [
@@ -138,8 +138,8 @@
     },
     {
       "id": "i-je-mange-une-baguette",
-      "type": "respond",
-      "situation": "I eat a baguette",
+      "type": "translate",
+      "prompt": "I eat a baguette",
       "answer": "je mange une baguette",
       "hint": "{je mange + une baguette}",
       "mistakes": [
@@ -183,8 +183,8 @@
     },
     {
       "id": "i-il-mange-de-la",
-      "type": "respond",
-      "situation": "he eats meat",
+      "type": "translate",
+      "prompt": "he eats meat",
       "answer": "il mange de la viande",
       "accept": [
         "il mange la viande"
@@ -199,8 +199,8 @@
     },
     {
       "id": "i-elle-mange-du-poisson",
-      "type": "respond",
-      "situation": "she eats fish",
+      "type": "translate",
+      "prompt": "she eats fish",
       "answer": "elle mange du poisson",
       "accept": [
         "elle mange le poisson"
@@ -215,8 +215,8 @@
     },
     {
       "id": "i-nous-mangeons-ensemble",
-      "type": "respond",
-      "situation": "we eat together",
+      "type": "translate",
+      "prompt": "we eat together",
       "answer": "nous mangeons ensemble",
       "hint": "{nous mangeons + ensemble}",
       "mistakes": [
@@ -232,8 +232,8 @@
     },
     {
       "id": "i-nous-mangeons-des-legumes",
-      "type": "respond",
-      "situation": "we eat vegetables",
+      "type": "translate",
+      "prompt": "we eat vegetables",
       "answer": "nous mangeons des légumes",
       "accept": [
         "nous mangeons les légumes"
@@ -276,8 +276,8 @@
     },
     {
       "id": "i-ils-mangent-du-poulet",
-      "type": "respond",
-      "situation": "they eat chicken",
+      "type": "translate",
+      "prompt": "they eat chicken",
       "answer": "ils mangent du poulet",
       "accept": [
         "elles mangent du poulet",
@@ -293,8 +293,8 @@
     },
     {
       "id": "i-ils-mangent-des-frites",
-      "type": "respond",
-      "situation": "they eat fries",
+      "type": "translate",
+      "prompt": "they eat fries",
       "answer": "ils mangent des frites",
       "accept": [
         "elles mangent des frites",
@@ -356,8 +356,8 @@
     },
     {
       "id": "i-j-aime-manger",
-      "type": "respond",
-      "situation": "I like to eat",
+      "type": "translate",
+      "prompt": "I like to eat",
       "answer": "j'aime manger",
       "accept": [
         "j aime manger"
@@ -372,8 +372,8 @@
     },
     {
       "id": "i-je-veux-manger",
-      "type": "respond",
-      "situation": "I want to eat",
+      "type": "translate",
+      "prompt": "I want to eat",
       "answer": "je veux manger",
       "hint": "{je veux + manger}",
       "mistakes": [
@@ -425,8 +425,8 @@
     },
     {
       "id": "i-j-ai-mange-du",
-      "type": "respond",
-      "situation": "I ate bread",
+      "type": "translate",
+      "prompt": "I ate bread",
       "answer": "j'ai mangé du pain",
       "accept": [
         "j ai mangé du pain",
@@ -459,8 +459,8 @@
     },
     {
       "id": "i-il-a-mange-du",
-      "type": "respond",
-      "situation": "he ate fish",
+      "type": "translate",
+      "prompt": "he ate fish",
       "answer": "il a mangé du poisson",
       "accept": [
         "il a mange du poisson"
@@ -475,8 +475,8 @@
     },
     {
       "id": "i-nous-avons-mange-ensemble",
-      "type": "respond",
-      "situation": "we ate together",
+      "type": "translate",
+      "prompt": "we ate together",
       "answer": "nous avons mangé ensemble",
       "accept": [
         "nous avons mange ensemble"
@@ -508,8 +508,8 @@
     },
     {
       "id": "i-ils-ont-mange-du",
-      "type": "respond",
-      "situation": "they ate chicken",
+      "type": "translate",
+      "prompt": "they ate chicken",
       "answer": "ils ont mangé du poulet",
       "accept": [
         "elles ont mangé du poulet",

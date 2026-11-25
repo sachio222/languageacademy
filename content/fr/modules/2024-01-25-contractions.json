@@ -191,8 +191,8 @@
     },
     {
       "id": "i-je-suis-au-cafe",
-      "type": "respond",
-      "situation": "I am at the café",
+      "type": "translate",
+      "prompt": "I am at the café",
       "answer": "je suis au café",
       "hint": "je suis + à + le café (contracts!)",
       "mistakes": [
@@ -204,8 +204,8 @@
     },
     {
       "id": "i-le-chat-est-a",
-      "type": "respond",
-      "situation": "the cat is at the house",
+      "type": "translate",
+      "prompt": "the cat is at the house",
       "answer": "le chat est à la maison",
       "hint": "{le chat + est + à la maison}",
       "mistakes": [
@@ -217,8 +217,8 @@
     },
     {
       "id": "i-je-suis-avec-les",
-      "type": "respond",
-      "situation": "I am with the friends",
+      "type": "translate",
+      "prompt": "I am with the friends",
       "answer": "je suis avec les amis",
       "hint": "je suis + avec + les amis (avec doesn't contract!)",
       "mistakes": [

@@ -101,8 +101,8 @@
   "items": [
     {
       "id": "i-j-aime-le-cafe",
-      "type": "respond",
-      "situation": "I like coffee",
+      "type": "translate",
+      "prompt": "I like coffee",
       "answer": "j'aime le café",
       "accept": [
         "j aime le café"
@@ -117,8 +117,8 @@
     },
     {
       "id": "i-j-aime-ce-livre",
-      "type": "respond",
-      "situation": "I like this book",
+      "type": "translate",
+      "prompt": "I like this book",
       "answer": "j'aime ce livre",
       "accept": [
         "j aime ce livre"
@@ -161,8 +161,8 @@
     },
     {
       "id": "i-il-aime-l-eau",
-      "type": "respond",
-      "situation": "he likes water",
+      "type": "translate",
+      "prompt": "he likes water",
       "answer": "il aime l'eau",
       "accept": [
         "il aime l eau"
@@ -177,8 +177,8 @@
     },
     {
       "id": "i-elle-aime-paris",
-      "type": "respond",
-      "situation": "she loves Paris",
+      "type": "translate",
+      "prompt": "she loves Paris",
       "answer": "elle aime Paris",
       "hint": "{elle + aime + Paris}",
       "mistakes": [
@@ -190,8 +190,8 @@
     },
     {
       "id": "i-nous-aimons-ca",
-      "type": "respond",
-      "situation": "we like this",
+      "type": "translate",
+      "prompt": "we like this",
       "answer": "nous aimons ça",
       "hint": "{nous + aimons + ça}",
       "mistakes": [
@@ -203,8 +203,8 @@
     },
     {
       "id": "i-nous-aimons-le-cafe",
-      "type": "respond",
-      "situation": "we love coffee",
+      "type": "translate",
+      "prompt": "we love coffee",
       "answer": "nous aimons le café",
       "hint": "{nous + aimons + le café}",
       "mistakes": [
@@ -244,8 +244,8 @@
     },
     {
       "id": "i-ils-aiment-le-pain",
-      "type": "respond",
-      "situation": "they like bread",
+      "type": "translate",
+      "prompt": "they like bread",
       "answer": "ils aiment le pain",
       "accept": [
         "elles aiment le pain"
@@ -260,8 +260,8 @@
     },
     {
       "id": "i-ils-aiment-paris",
-      "type": "respond",
-      "situation": "they love Paris",
+      "type": "translate",
+      "prompt": "they love Paris",
       "answer": "ils aiment Paris",
       "accept": [
         "elles aiment Paris"
@@ -276,8 +276,8 @@
     },
     {
       "id": "i-j-aime-parler-francais",
-      "type": "respond",
-      "situation": "I like speaking French",
+      "type": "translate",
+      "prompt": "I like speaking French",
       "answer": "j'aime parler français",
       "accept": [
         "j aime parler français"
@@ -306,8 +306,8 @@
     },
     {
       "id": "i-nous-aimons-travailler",
-      "type": "respond",
-      "situation": "we like working",
+      "type": "translate",
+      "prompt": "we like working",
       "answer": "nous aimons travailler",
       "hint": "{nous aimons + travailler}",
       "mistakes": [

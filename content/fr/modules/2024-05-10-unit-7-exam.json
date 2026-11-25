@@ -60,8 +60,8 @@
     },
     {
       "id": "i-tout-le-monde",
-      "type": "respond",
-      "situation": "everyone",
+      "type": "translate",
+      "prompt": "everyone",
       "answer": "tout le monde",
       "hint": "Fixed expression - literally 'all the world'"
     },
@@ -74,8 +74,8 @@
     },
     {
       "id": "i-je-comprends",
-      "type": "respond",
-      "situation": "I understand",
+      "type": "translate",
+      "prompt": "I understand",
       "answer": "je comprends",
       "hint": "comprendre for je"
     },
@@ -88,8 +88,8 @@
     },
     {
       "id": "i-je-ne-comprends-pas",
-      "type": "respond",
-      "situation": "I don't understand",
+      "type": "translate",
+      "prompt": "I don't understand",
       "answer": "je ne comprends pas",
       "hint": "Essential learning phrase!"
     },
@@ -102,8 +102,8 @@
     },
     {
       "id": "i-elle-comprend",
-      "type": "respond",
-      "situation": "she understands",
+      "type": "translate",
+      "prompt": "she understands",
       "answer": "elle comprend",
       "hint": "comprendre for elle"
     },
@@ -116,15 +116,15 @@
     },
     {
       "id": "i-je-ne-sais-pas",
-      "type": "respond",
-      "situation": "I don't know",
+      "type": "translate",
+      "prompt": "I don't know",
       "answer": "je ne sais pas",
       "hint": "Rank 21 - most common phrase!"
     },
     {
       "id": "i-je-sais-parler-francais",
-      "type": "respond",
-      "situation": "I know how to speak French",
+      "type": "translate",
+      "prompt": "I know how to speak French",
       "answer": "je sais parler français",
       "accept": [
         "je sais parler francais"
@@ -140,10 +140,28 @@
     },
     {
       "id": "i-tout-le-monde-sait",
-      "type": "respond",
-      "situation": "everyone knows",
+      "type": "translate",
+      "prompt": "everyone knows",
       "answer": "tout le monde sait",
       "hint": "tout le monde + singular verb!"
+    },
+    {
+      "id": "i-for-facts-and-skills",
+      "type": "choice",
+      "question": "When do you use {savoir}?",
+      "options": [
+        {
+          "text": "For facts and skills: what you know, and how to do something",
+          "right": true
+        },
+        {
+          "text": "For people and places you are familiar with"
+        },
+        {
+          "text": "For both"
+        }
+      ],
+      "hint": "Facts or skills, not people or places"
     },
     {
       "id": "i-je-connais-marie",
@@ -177,16 +195,34 @@
       "hint": "{on + connaître + les gens}"
     },
     {
+      "id": "i-for-people-places-and",
+      "type": "choice",
+      "question": "When do you use {connaître}?",
+      "options": [
+        {
+          "text": "For people, places and things you are familiar with",
+          "right": true
+        },
+        {
+          "text": "For facts and skills"
+        },
+        {
+          "text": "For both"
+        }
+      ],
+      "hint": "People or places, not facts"
+    },
+    {
       "id": "i-je-pense",
-      "type": "respond",
-      "situation": "I think",
+      "type": "translate",
+      "prompt": "I think",
       "answer": "je pense",
       "hint": "penser for je"
     },
     {
       "id": "i-je-pense-que-oui",
-      "type": "respond",
-      "situation": "I think so",
+      "type": "translate",
+      "prompt": "I think so",
       "answer": "je pense que oui",
       "hint": "{je pense que + oui}"
     },
@@ -206,36 +242,36 @@
     },
     {
       "id": "i-je-crois",
-      "type": "respond",
-      "situation": "I believe",
+      "type": "translate",
+      "prompt": "I believe",
       "answer": "je crois",
       "hint": "croire for je"
     },
     {
       "id": "i-je-crois-que-oui",
-      "type": "respond",
-      "situation": "I believe so",
+      "type": "translate",
+      "prompt": "I believe so",
       "answer": "je crois que oui",
       "hint": "{je crois que + oui}"
     },
     {
       "id": "i-on-doit-croire-en",
-      "type": "respond",
-      "situation": "we must believe in ourselves",
+      "type": "translate",
+      "prompt": "we must believe in ourselves",
       "answer": "on doit croire en soi",
       "hint": "{on doit + croire en soi}"
     },
     {
       "id": "i-elle-croit",
-      "type": "respond",
-      "situation": "she believes",
+      "type": "translate",
+      "prompt": "she believes",
       "answer": "elle croit",
       "hint": "croire for elle"
     },
     {
       "id": "i-j-apprends-le-francais",
-      "type": "respond",
-      "situation": "I'm learning French",
+      "type": "translate",
+      "prompt": "I'm learning French",
       "answer": "j'apprends le français",
       "accept": [
         "j apprends le francais",
@@ -245,8 +281,8 @@
     },
     {
       "id": "i-elle-enseigne-le-francais",
-      "type": "respond",
-      "situation": "she teaches French",
+      "type": "translate",
+      "prompt": "she teaches French",
       "answer": "elle enseigne le français",
       "accept": [
         "elle enseigne le francais"
@@ -255,8 +291,8 @@
     },
     {
       "id": "i-j-etudie-a-l",
-      "type": "respond",
-      "situation": "I'm studying at university",
+      "type": "translate",
+      "prompt": "I'm studying at university",
       "answer": "j'étudie à l'université",
       "accept": [
         "j etudie a l universite",
@@ -266,8 +302,8 @@
     },
     {
       "id": "i-je-revise-mes-lecons",
-      "type": "respond",
-      "situation": "I'm reviewing my lessons",
+      "type": "translate",
+      "prompt": "I'm reviewing my lessons",
       "answer": "je révise mes leçons",
       "accept": [
         "je revise mes lecons"
@@ -276,15 +312,15 @@
     },
     {
       "id": "i-j-ai-une-question",
-      "type": "respond",
-      "situation": "I have a question",
+      "type": "translate",
+      "prompt": "I have a question",
       "answer": "j'ai une question",
       "hint": "j'ai + une question (feminine)"
     },
     {
       "id": "i-la-reponse",
-      "type": "respond",
-      "situation": "the answer",
+      "type": "translate",
+      "prompt": "the answer",
       "answer": "la réponse",
       "accept": [
         "la reponse"
@@ -293,8 +329,8 @@
     },
     {
       "id": "i-une-bonne-idee",
-      "type": "respond",
-      "situation": "a good idea",
+      "type": "translate",
+      "prompt": "a good idea",
       "answer": "une bonne idée",
       "accept": [
         "une bonne idee"
@@ -303,8 +339,8 @@
     },
     {
       "id": "i-la-lecon",
-      "type": "respond",
-      "situation": "the lesson",
+      "type": "translate",
+      "prompt": "the lesson",
       "answer": "la leçon",
       "accept": [
         "la lecon"
@@ -313,22 +349,22 @@
     },
     {
       "id": "i-le-cours",
-      "type": "respond",
-      "situation": "the class / the course",
+      "type": "translate",
+      "prompt": "the class / the course",
       "answer": "le cours",
       "hint": "masculine noun"
     },
     {
       "id": "i-donc",
-      "type": "respond",
-      "situation": "so / therefore",
+      "type": "translate",
+      "prompt": "so / therefore",
       "answer": "donc",
       "hint": "Logical conclusion connector"
     },
     {
       "id": "i-en-fait",
-      "type": "respond",
-      "situation": "actually / in fact",
+      "type": "translate",
+      "prompt": "actually / in fact",
       "answer": "en fait",
       "hint": "Two words - clarification marker"
     },
@@ -361,43 +397,43 @@
     },
     {
       "id": "i-peut-etre",
-      "type": "respond",
-      "situation": "maybe",
+      "type": "translate",
+      "prompt": "maybe",
       "answer": "peut-être",
       "hint": "Perhaps, possibly - with hyphen"
     },
     {
       "id": "i-certainement",
-      "type": "respond",
-      "situation": "definitely",
+      "type": "translate",
+      "prompt": "definitely",
       "answer": "certainement",
       "hint": "Certainly, for sure"
     },
     {
       "id": "i-bien-sur",
-      "type": "respond",
-      "situation": "of course",
+      "type": "translate",
+      "prompt": "of course",
       "answer": "bien sûr",
       "hint": "Two words - bien + sûr"
     },
     {
       "id": "i-tout-le-monde-2",
-      "type": "respond",
-      "situation": "everyone",
+      "type": "translate",
+      "prompt": "everyone",
       "answer": "tout le monde",
       "hint": "Fixed expression - tout le monde"
     },
     {
       "id": "i-meme-moi",
-      "type": "respond",
-      "situation": "even me",
+      "type": "translate",
+      "prompt": "even me",
       "answer": "même moi",
       "hint": "{même + moi}"
     },
     {
       "id": "i-la-meme-chose",
-      "type": "respond",
-      "situation": "the same thing",
+      "type": "translate",
+      "prompt": "the same thing",
       "answer": "la même chose",
       "accept": [
         "la meme chose"
@@ -406,22 +442,22 @@
     },
     {
       "id": "i-je-comprends-mal",
-      "type": "respond",
-      "situation": "I understand poorly",
+      "type": "translate",
+      "prompt": "I understand poorly",
       "answer": "je comprends mal",
       "hint": "je comprends + mal (adverb after verb)"
     },
     {
       "id": "i-je-sais-tout",
-      "type": "respond",
-      "situation": "I know everything",
+      "type": "translate",
+      "prompt": "I know everything",
       "answer": "je sais tout",
       "hint": "je sais + tout (pronoun)"
     },
     {
       "id": "i-on-etudie-donc-on",
-      "type": "respond",
-      "situation": "We study, so we learn",
+      "type": "translate",
+      "prompt": "We study, so we learn",
       "answer": "on étudie, donc on apprend",
       "accept": [
         "on etudie donc on apprend",
@@ -431,15 +467,15 @@
     },
     {
       "id": "i-je-pense-que-tout",
-      "type": "respond",
-      "situation": "I think that everyone can learn",
+      "type": "translate",
+      "prompt": "I think that everyone can learn",
       "answer": "je pense que tout le monde peut apprendre",
       "hint": "{je pense que + tout le monde peut apprendre}"
     },
     {
       "id": "i-en-fait-je-ne",
-      "type": "respond",
-      "situation": "Actually, I don't know the answer",
+      "type": "translate",
+      "prompt": "Actually, I don't know the answer",
       "answer": "en fait, je ne sais pas la réponse",
       "accept": [
         "en fait je ne sais pas la reponse"
@@ -448,8 +484,8 @@
     },
     {
       "id": "i-je-connais-marie-mais",
-      "type": "respond",
-      "situation": "I know Marie but I don't know Paris",
+      "type": "translate",
+      "prompt": "I know Marie but I don't know Paris",
       "answer": "je connais Marie mais je ne connais pas Paris",
       "hint": "{je connais + Marie + mais + je ne connais pas + Paris}"
     },
@@ -462,8 +498,8 @@
     },
     {
       "id": "i-je-crois-qu-on",
-      "type": "respond",
-      "situation": "I believe that we can learn",
+      "type": "translate",
+      "prompt": "I believe that we can learn",
       "answer": "je crois qu'on peut apprendre",
       "accept": [
         "je crois que on peut apprendre"
@@ -472,8 +508,8 @@
     },
     {
       "id": "i-j-etudie-le-francais",
-      "type": "respond",
-      "situation": "I'm studying French at university",
+      "type": "translate",
+      "prompt": "I'm studying French at university",
       "answer": "j'étudie le français à l'université",
       "accept": [
         "j etudie le francais a l universite"
@@ -482,8 +518,8 @@
     },
     {
       "id": "i-je-revise-mes-lecons-2",
-      "type": "respond",
-      "situation": "I'm reviewing my lessons because I have an exam",
+      "type": "translate",
+      "prompt": "I'm reviewing my lessons because I have an exam",
       "answer": "je révise mes leçons parce que j'ai un examen",
       "accept": [
         "je revise mes lecons parce que j ai un examen"

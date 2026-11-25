@@ -137,8 +137,8 @@
   "items": [
     {
       "id": "learning-verbs-1",
-      "type": "respond",
-      "situation": "I'm learning French",
+      "type": "translate",
+      "prompt": "I'm learning French",
       "answer": "j'apprends le français",
       "hint": "apprendre conjugated for je + le français",
       "mistakes": [
@@ -167,29 +167,29 @@
     },
     {
       "id": "learning-verbs-3",
-      "type": "respond",
-      "situation": "He learns English",
+      "type": "translate",
+      "prompt": "He learns English",
       "answer": "il apprend l'anglais",
       "hint": "apprendre for il + l'anglais"
     },
     {
       "id": "learning-verbs-4",
-      "type": "respond",
-      "situation": "She teaches French",
+      "type": "translate",
+      "prompt": "She teaches French",
       "answer": "elle enseigne le français",
       "hint": "enseigner for elle + le français"
     },
     {
       "id": "learning-verbs-5",
-      "type": "respond",
-      "situation": "We're learning together",
+      "type": "translate",
+      "prompt": "We're learning together",
       "answer": "nous apprenons ensemble",
       "hint": "apprendre for nous + ensemble"
     },
     {
       "id": "learning-verbs-6",
-      "type": "respond",
-      "situation": "They teach at university",
+      "type": "translate",
+      "prompt": "They teach at university",
       "answer": "ils enseignent à l'université",
       "hint": "enseigner for ils + à l'université"
     }

@@ -107,8 +107,8 @@
     },
     {
       "id": "reflex-past-2",
-      "type": "respond",
-      "situation": "She got up",
+      "type": "translate",
+      "prompt": "She got up",
       "answer": "elle s'est levée",
       "accept": [
         "elle s est levee"
@@ -123,8 +123,8 @@
     },
     {
       "id": "reflex-past-3",
-      "type": "respond",
-      "situation": "He washed himself",
+      "type": "translate",
+      "prompt": "He washed himself",
       "answer": "il s'est lavé",
       "accept": [
         "il s est lave"

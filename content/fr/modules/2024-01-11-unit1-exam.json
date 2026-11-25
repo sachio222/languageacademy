@@ -12,8 +12,8 @@
   "items": [
     {
       "id": "i-je-suis",
-      "type": "respond",
-      "situation": "I am",
+      "type": "translate",
+      "prompt": "I am",
       "answer": "je suis",
       "hint": "Use the verb être"
     },
@@ -26,8 +26,8 @@
     },
     {
       "id": "i-elle-est",
-      "type": "respond",
-      "situation": "she is",
+      "type": "translate",
+      "prompt": "she is",
       "answer": "elle est",
       "hint": "Feminine pronoun + être"
     },
@@ -40,15 +40,15 @@
     },
     {
       "id": "i-nous-sommes",
-      "type": "respond",
-      "situation": "we are",
+      "type": "translate",
+      "prompt": "we are",
       "answer": "nous sommes",
       "hint": "First person plural + être"
     },
     {
       "id": "i-j-ai",
-      "type": "respond",
-      "situation": "I have",
+      "type": "translate",
+      "prompt": "I have",
       "answer": "j'ai",
       "hint": "Remember the apostrophe!"
     },
@@ -61,57 +61,57 @@
     },
     {
       "id": "i-il-a",
-      "type": "respond",
-      "situation": "he has",
+      "type": "translate",
+      "prompt": "he has",
       "answer": "il a",
       "hint": "Masculine singular pronoun + avoir"
     },
     {
       "id": "i-un-chat",
-      "type": "respond",
-      "situation": "a cat",
+      "type": "translate",
+      "prompt": "a cat",
       "answer": "un chat",
       "hint": "Indefinite article + noun (masculine)"
     },
     {
       "id": "i-le-livre",
-      "type": "respond",
-      "situation": "the book",
+      "type": "translate",
+      "prompt": "the book",
       "answer": "le livre",
       "hint": "Definite article + noun (masculine)"
     },
     {
       "id": "i-une-femme",
-      "type": "respond",
-      "situation": "a woman",
+      "type": "translate",
+      "prompt": "a woman",
       "answer": "une femme",
       "hint": "Indefinite article (feminine)"
     },
     {
       "id": "i-la-maison",
-      "type": "respond",
-      "situation": "the house",
+      "type": "translate",
+      "prompt": "the house",
       "answer": "la maison",
       "hint": "Definite article + noun (feminine)"
     },
     {
       "id": "i-les-chats",
-      "type": "respond",
-      "situation": "the cats",
+      "type": "translate",
+      "prompt": "the cats",
       "answer": "les chats",
       "hint": "Plural definite article + noun"
     },
     {
       "id": "i-des-livres",
-      "type": "respond",
-      "situation": "some books",
+      "type": "translate",
+      "prompt": "some books",
       "answer": "des livres",
       "hint": "Plural indefinite article + noun"
     },
     {
       "id": "i-j-ai-un-chien",
-      "type": "respond",
-      "situation": "I have a dog",
+      "type": "translate",
+      "prompt": "I have a dog",
       "answer": "j'ai un chien",
       "hint": "Combine avoir + indefinite article + noun"
     },
@@ -124,36 +124,36 @@
     },
     {
       "id": "i-un-chat-et-un",
-      "type": "respond",
-      "situation": "a cat and a dog",
+      "type": "translate",
+      "prompt": "a cat and a dog",
       "answer": "un chat et un chien",
       "hint": "Use '{et}' (and) to connect two nouns"
     },
     {
       "id": "i-j-ai-un-livre",
-      "type": "respond",
-      "situation": "I have a book and a cat",
+      "type": "translate",
+      "prompt": "I have a book and a cat",
       "answer": "j'ai un livre et un chat",
       "hint": "avoir + noun + et + noun"
     },
     {
       "id": "i-je-suis-un-homme",
-      "type": "respond",
-      "situation": "I am a man but she is a woman",
+      "type": "translate",
+      "prompt": "I am a man but she is a woman",
       "answer": "je suis un homme mais elle est une femme",
       "hint": "Use '{mais}' (but) to connect two statements"
     },
     {
       "id": "i-nous-avons-les-livres",
-      "type": "respond",
-      "situation": "we have the books",
+      "type": "translate",
+      "prompt": "we have the books",
       "answer": "nous avons les livres",
       "hint": "nous + avoir + plural noun"
     },
     {
       "id": "i-ils-sont-les-chats",
-      "type": "respond",
-      "situation": "they are the cats",
+      "type": "translate",
+      "prompt": "they are the cats",
       "answer": "ils sont les chats",
       "hint": "Masculine plural pronoun + être + plural noun"
     },
@@ -166,15 +166,15 @@
     },
     {
       "id": "i-je-suis-un-homme-2",
-      "type": "respond",
-      "situation": "I am a man or a woman",
+      "type": "translate",
+      "prompt": "I am a man or a woman",
       "answer": "je suis un homme ou une femme",
       "hint": "Use '{ou}' (or) to connect two options"
     },
     {
       "id": "i-nous-avons-les-chats",
-      "type": "respond",
-      "situation": "we have the cats and the dogs",
+      "type": "translate",
+      "prompt": "we have the cats and the dogs",
       "answer": "nous avons les chats et les chiens",
       "hint": "nous + avoir + plural noun + et + plural noun"
     }

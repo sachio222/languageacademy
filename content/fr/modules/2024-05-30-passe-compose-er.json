@@ -117,7 +117,7 @@
     },
     {
       "id": "c-questions-inversion-or-est",
-      "term": "{Questions}: inversion or {Est-ce que}",
+      "term": "Questions: inversion or {Est-ce que}",
       "definition": "Invert avoir with subject, or use est-ce que",
       "example": "{As-tu parlé?} (Did you speak?), {Est-ce que tu as mangé?} (Did you eat?)"
     },

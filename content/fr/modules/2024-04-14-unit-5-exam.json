@@ -12,15 +12,15 @@
   "items": [
     {
       "id": "i-plus",
-      "type": "respond",
-      "situation": "more",
+      "type": "translate",
+      "prompt": "more",
       "answer": "plus",
       "hint": "Comparison word - makes adjectives comparative"
     },
     {
       "id": "i-moins",
-      "type": "respond",
-      "situation": "less",
+      "type": "translate",
+      "prompt": "less",
       "answer": "moins",
       "hint": "Opposite of '{plus}'"
     },
@@ -40,15 +40,15 @@
     },
     {
       "id": "i-trop-cher",
-      "type": "respond",
-      "situation": "too expensive",
+      "type": "translate",
+      "prompt": "too expensive",
       "answer": "trop cher",
       "hint": "Intensity modifier + adjective"
     },
     {
       "id": "i-la-meme-chose",
-      "type": "respond",
-      "situation": "the same thing",
+      "type": "translate",
+      "prompt": "the same thing",
       "answer": "la même chose",
       "accept": [
         "le même chose"
@@ -113,8 +113,8 @@
     },
     {
       "id": "i-je-devrais",
-      "type": "respond",
-      "situation": "I should",
+      "type": "translate",
+      "prompt": "I should",
       "answer": "je devrais",
       "hint": "Conditional form of devoir for je"
     },
@@ -127,15 +127,15 @@
     },
     {
       "id": "i-nous-devrions-aller",
-      "type": "respond",
-      "situation": "we should go",
+      "type": "translate",
+      "prompt": "we should go",
       "answer": "nous devrions aller",
       "hint": "nous devrions + infinitive"
     },
     {
       "id": "i-je-pourrais",
-      "type": "respond",
-      "situation": "I could",
+      "type": "translate",
+      "prompt": "I could",
       "answer": "je pourrais",
       "hint": "Conditional form of pouvoir for je"
     },
@@ -148,8 +148,8 @@
     },
     {
       "id": "i-je-ne-devrais-pas",
-      "type": "respond",
-      "situation": "I should not go",
+      "type": "translate",
+      "prompt": "I should not go",
       "answer": "je ne devrais pas partir",
       "accept": [
         "je ne devrais pas aller"
@@ -158,15 +158,15 @@
     },
     {
       "id": "i-je-voudrais",
-      "type": "respond",
-      "situation": "I would like",
+      "type": "translate",
+      "prompt": "I would like",
       "answer": "je voudrais",
       "hint": "Conditional form of vouloir - polite!"
     },
     {
       "id": "i-nous-voudrions-de-l",
-      "type": "respond",
-      "situation": "we would like water",
+      "type": "translate",
+      "prompt": "we would like water",
       "answer": "nous voudrions de l'eau",
       "accept": [
         "nous voudrions de l eau"
@@ -175,8 +175,8 @@
     },
     {
       "id": "i-j-irais",
-      "type": "respond",
-      "situation": "I would go",
+      "type": "translate",
+      "prompt": "I would go",
       "answer": "j'irais",
       "accept": [
         "j irais"
@@ -195,8 +195,8 @@
     },
     {
       "id": "i-je-ferais-ca",
-      "type": "respond",
-      "situation": "I would do that",
+      "type": "translate",
+      "prompt": "I would do that",
       "answer": "je ferais ça",
       "accept": [
         "je ferais ca"
@@ -205,8 +205,8 @@
     },
     {
       "id": "i-j-etais",
-      "type": "respond",
-      "situation": "I was",
+      "type": "translate",
+      "prompt": "I was",
       "answer": "j'étais",
       "accept": [
         "j étais",
@@ -226,8 +226,8 @@
     },
     {
       "id": "i-c-etait-bon",
-      "type": "respond",
-      "situation": "it was good",
+      "type": "translate",
+      "prompt": "it was good",
       "answer": "c'était bon",
       "accept": [
         "c etait bon",
@@ -237,8 +237,8 @@
     },
     {
       "id": "i-nous-etions-ici",
-      "type": "respond",
-      "situation": "we were here",
+      "type": "translate",
+      "prompt": "we were here",
       "answer": "nous étions ici",
       "accept": [
         "nous etions ici"
@@ -247,8 +247,8 @@
     },
     {
       "id": "i-ils-etaient-contents",
-      "type": "respond",
-      "situation": "they were happy",
+      "type": "translate",
+      "prompt": "they were happy",
       "answer": "ils étaient contents",
       "accept": [
         "elles étaient contents",
@@ -258,8 +258,8 @@
     },
     {
       "id": "i-j-avais",
-      "type": "respond",
-      "situation": "I had",
+      "type": "translate",
+      "prompt": "I had",
       "answer": "j'avais",
       "accept": [
         "j avais"
@@ -275,8 +275,8 @@
     },
     {
       "id": "i-j-avais-faim",
-      "type": "respond",
-      "situation": "I was hungry",
+      "type": "translate",
+      "prompt": "I was hungry",
       "answer": "j'avais faim",
       "accept": [
         "j avais faim"
@@ -285,22 +285,22 @@
     },
     {
       "id": "i-nous-avions-un-chat",
-      "type": "respond",
-      "situation": "we had a cat",
+      "type": "translate",
+      "prompt": "we had a cat",
       "answer": "nous avions un chat",
       "hint": "{nous avions + un chat}"
     },
     {
       "id": "i-elle-avait-le-temps",
-      "type": "respond",
-      "situation": "she had time",
+      "type": "translate",
+      "prompt": "she had time",
       "answer": "elle avait le temps",
       "hint": "{elle avait + le temps}"
     },
     {
       "id": "i-j-aime-le-cafe",
-      "type": "respond",
-      "situation": "I like coffee",
+      "type": "translate",
+      "prompt": "I like coffee",
       "answer": "j'aime le café",
       "accept": [
         "j aime le café",
@@ -317,15 +317,15 @@
     },
     {
       "id": "i-nous-aimons-la-pizza",
-      "type": "respond",
-      "situation": "we like pizza",
+      "type": "translate",
+      "prompt": "we like pizza",
       "answer": "nous aimons la pizza",
       "hint": "nous aimons + article + noun"
     },
     {
       "id": "i-je-t-aime",
-      "type": "respond",
-      "situation": "I love you",
+      "type": "translate",
+      "prompt": "I love you",
       "answer": "je t'aime",
       "accept": [
         "je t aime"
@@ -334,8 +334,8 @@
     },
     {
       "id": "i-je-mange",
-      "type": "respond",
-      "situation": "I eat",
+      "type": "translate",
+      "prompt": "I eat",
       "answer": "je mange",
       "hint": "manger conjugated for je"
     },
@@ -348,15 +348,15 @@
     },
     {
       "id": "i-nous-mangeons",
-      "type": "respond",
-      "situation": "we eat",
+      "type": "translate",
+      "prompt": "we eat",
       "answer": "nous mangeons",
       "hint": "manger conjugated for nous - careful with spelling!"
     },
     {
       "id": "i-j-ai-mange",
-      "type": "respond",
-      "situation": "I ate",
+      "type": "translate",
+      "prompt": "I ate",
       "answer": "j'ai mangé",
       "accept": [
         "j ai mangé",
@@ -366,8 +366,8 @@
     },
     {
       "id": "i-nous-avons-mange-du",
-      "type": "respond",
-      "situation": "we ate bread",
+      "type": "translate",
+      "prompt": "we ate bread",
       "answer": "nous avons mangé du pain",
       "accept": [
         "nous avons mange du pain"
@@ -376,8 +376,8 @@
     },
     {
       "id": "i-je-bois",
-      "type": "respond",
-      "situation": "I drink",
+      "type": "translate",
+      "prompt": "I drink",
       "answer": "je bois",
       "hint": "boire conjugated for je (irregular!)"
     },
@@ -390,15 +390,15 @@
     },
     {
       "id": "i-nous-buvons",
-      "type": "respond",
-      "situation": "we drink",
+      "type": "translate",
+      "prompt": "we drink",
       "answer": "nous buvons",
       "hint": "boire conjugated for nous - stem changes to buv-!"
     },
     {
       "id": "i-j-ai-bu",
-      "type": "respond",
-      "situation": "I drank",
+      "type": "translate",
+      "prompt": "I drank",
       "answer": "j'ai bu",
       "accept": [
         "j ai bu"
@@ -407,8 +407,8 @@
     },
     {
       "id": "i-nous-avons-bu-du",
-      "type": "respond",
-      "situation": "we drank coffee",
+      "type": "translate",
+      "prompt": "we drank coffee",
       "answer": "nous avons bu du café",
       "accept": [
         "nous avons bu du cafe"
@@ -417,8 +417,8 @@
     },
     {
       "id": "i-le-pain",
-      "type": "respond",
-      "situation": "bread",
+      "type": "translate",
+      "prompt": "bread",
       "answer": "le pain",
       "accept": [
         "pain"
@@ -427,22 +427,22 @@
     },
     {
       "id": "i-une-baguette",
-      "type": "respond",
-      "situation": "a baguette",
+      "type": "translate",
+      "prompt": "a baguette",
       "answer": "une baguette",
       "hint": "Iconic French bread - feminine"
     },
     {
       "id": "i-un-express",
-      "type": "respond",
-      "situation": "an espresso",
+      "type": "translate",
+      "prompt": "an espresso",
       "answer": "un express",
       "hint": "Short strong coffee"
     },
     {
       "id": "i-la-pizza",
-      "type": "respond",
-      "situation": "pizza",
+      "type": "translate",
+      "prompt": "pizza",
       "answer": "la pizza",
       "accept": [
         "pizza"
@@ -451,8 +451,8 @@
     },
     {
       "id": "i-l-eau",
-      "type": "respond",
-      "situation": "water",
+      "type": "translate",
+      "prompt": "water",
       "answer": "l'eau",
       "accept": [
         "l eau",
@@ -462,8 +462,8 @@
     },
     {
       "id": "i-le-vin",
-      "type": "respond",
-      "situation": "wine",
+      "type": "translate",
+      "prompt": "wine",
       "answer": "le vin",
       "accept": [
         "vin"
@@ -472,8 +472,8 @@
     },
     {
       "id": "i-je-voudrais-un-cafe",
-      "type": "respond",
-      "situation": "I would like a coffee, please",
+      "type": "translate",
+      "prompt": "I would like a coffee, please",
       "answer": "je voudrais un café s'il vous plaît",
       "accept": [
         "je voudrais un café, s'il vous plaît",
@@ -483,8 +483,8 @@
     },
     {
       "id": "i-j-ai-mange-une",
-      "type": "respond",
-      "situation": "I ate a baguette yesterday",
+      "type": "translate",
+      "prompt": "I ate a baguette yesterday",
       "answer": "j'ai mangé une baguette hier",
       "accept": [
         "j ai mange une baguette hier"
@@ -493,15 +493,15 @@
     },
     {
       "id": "i-nous-avons-bu-du-2",
-      "type": "respond",
-      "situation": "we drank wine at the restaurant",
+      "type": "translate",
+      "prompt": "we drank wine at the restaurant",
       "answer": "nous avons bu du vin au restaurant",
       "hint": "Passé composé + partitive + location"
     },
     {
       "id": "i-ce-restaurant-est-meilleur",
-      "type": "respond",
-      "situation": "this restaurant is better than the other",
+      "type": "translate",
+      "prompt": "this restaurant is better than the other",
       "answer": "ce restaurant est meilleur que l'autre",
       "accept": [
         "ce restaurant est meilleur que l autre"
@@ -517,8 +517,8 @@
     },
     {
       "id": "i-j-etais-tres-content",
-      "type": "respond",
-      "situation": "I was very happy yesterday",
+      "type": "translate",
+      "prompt": "I was very happy yesterday",
       "answer": "j'étais très content hier",
       "accept": [
         "j etais très content hier",
@@ -528,8 +528,8 @@
     },
     {
       "id": "i-nous-pourrions-aller-au",
-      "type": "respond",
-      "situation": "we could go to the café",
+      "type": "translate",
+      "prompt": "we could go to the café",
       "answer": "nous pourrions aller au café",
       "accept": [
         "nous pourrions aller au cafe"
@@ -538,8 +538,8 @@
     },
     {
       "id": "i-j-aime-manger-de",
-      "type": "respond",
-      "situation": "I like to eat pizza",
+      "type": "translate",
+      "prompt": "I like to eat pizza",
       "answer": "j'aime manger de la pizza",
       "accept": [
         "j aime manger de la pizza",
@@ -549,8 +549,8 @@
     },
     {
       "id": "i-je-n-ai-pas",
-      "type": "respond",
-      "situation": "I did not eat",
+      "type": "translate",
+      "prompt": "I did not eat",
       "answer": "je n'ai pas mangé",
       "accept": [
         "je n ai pas mangé",
@@ -560,8 +560,8 @@
     },
     {
       "id": "i-nous-n-avons-pas",
-      "type": "respond",
-      "situation": "we did not drink",
+      "type": "translate",
+      "prompt": "we did not drink",
       "answer": "nous n'avons pas bu",
       "accept": [
         "nous n avons pas bu"
@@ -570,8 +570,8 @@
     },
     {
       "id": "i-je-n-etais-pas",
-      "type": "respond",
-      "situation": "I was not here",
+      "type": "translate",
+      "prompt": "I was not here",
       "answer": "je n'étais pas ici",
       "accept": [
         "je n étais pas ici",
@@ -581,8 +581,8 @@
     },
     {
       "id": "i-je-ne-devrais-pas-2",
-      "type": "respond",
-      "situation": "I should not go",
+      "type": "translate",
+      "prompt": "I should not go",
       "answer": "je ne devrais pas partir",
       "accept": [
         "je ne devrais pas aller"
@@ -591,15 +591,15 @@
     },
     {
       "id": "i-tout-le-monde",
-      "type": "respond",
-      "situation": "everybody",
+      "type": "translate",
+      "prompt": "everybody",
       "answer": "tout le monde",
       "hint": "Literally 'all the world'"
     },
     {
       "id": "i-je-n-aime-pas",
-      "type": "respond",
-      "situation": "I don't like meat",
+      "type": "translate",
+      "prompt": "I don't like meat",
       "answer": "je n'aime pas la viande",
       "accept": [
         "je n aime pas la viande"
@@ -608,15 +608,15 @@
     },
     {
       "id": "i-nous-mangeons-ensemble",
-      "type": "respond",
-      "situation": "we eat together",
+      "type": "translate",
+      "prompt": "we eat together",
       "answer": "nous mangeons ensemble",
       "hint": "nous mangeons + adverb"
     },
     {
       "id": "i-ils-etaient-au-restaurant",
-      "type": "respond",
-      "situation": "they were at the restaurant yesterday",
+      "type": "translate",
+      "prompt": "they were at the restaurant yesterday",
       "answer": "ils étaient au restaurant hier",
       "accept": [
         "elles étaient au restaurant hier",
@@ -626,8 +626,8 @@
     },
     {
       "id": "i-c-est-la-meilleure",
-      "type": "respond",
-      "situation": "it's the best pizza of my life",
+      "type": "translate",
+      "prompt": "it's the best pizza of my life",
       "answer": "c'est la meilleure pizza de ma vie",
       "accept": [
         "c est la meilleure pizza de ma vie"

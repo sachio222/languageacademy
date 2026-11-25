@@ -383,6 +383,20 @@
           "feedback": "This needs aller! Try: je vais avoir ça"
         }
       ]
+    },
+    {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask what someone is going to have",
+      "cue": "What are you going to have?",
+      "answer": "qu'est-ce que tu vas avoir?",
+      "hint": "{qu'est-ce que tu vas avoir}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu as?",
+          "feedback": "This needs aller! Try: qu'est-ce que tu vas avoir?"
+        }
+      ]
     }
   ]
 }

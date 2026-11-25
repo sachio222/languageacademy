@@ -30,8 +30,8 @@
     },
     {
       "id": "i-excusez-moi",
-      "type": "respond",
-      "situation": "excuse me / sorry",
+      "type": "translate",
+      "prompt": "excuse me / sorry",
       "answer": "excusez-moi",
       "accept": [
         "excusez moi"
@@ -40,8 +40,8 @@
     },
     {
       "id": "i-c-est-combien",
-      "type": "respond",
-      "situation": "how much is it?",
+      "type": "translate",
+      "prompt": "how much is it?",
       "answer": "c'est combien",
       "accept": [
         "combien est-ce"
@@ -50,15 +50,15 @@
     },
     {
       "id": "i-merci-beaucoup",
-      "type": "respond",
-      "situation": "thank you very much",
+      "type": "translate",
+      "prompt": "thank you very much",
       "answer": "merci beaucoup",
       "hint": "merci + intensity adverb"
     },
     {
       "id": "i-je-fais",
-      "type": "respond",
-      "situation": "I do / I make",
+      "type": "translate",
+      "prompt": "I do / I make",
       "answer": "je fais",
       "hint": "Verb faire conjugated for je"
     },
@@ -71,8 +71,8 @@
     },
     {
       "id": "i-nous-faisons",
-      "type": "respond",
-      "situation": "we do / we make",
+      "type": "translate",
+      "prompt": "we do / we make",
       "answer": "nous faisons",
       "hint": "Verb faire conjugated for nous"
     },
@@ -88,8 +88,8 @@
     },
     {
       "id": "i-je-dois",
-      "type": "respond",
-      "situation": "I must / I have to",
+      "type": "translate",
+      "prompt": "I must / I have to",
       "answer": "je dois",
       "hint": "Verb devoir conjugated for je"
     },
@@ -102,22 +102,22 @@
     },
     {
       "id": "i-nous-devons",
-      "type": "respond",
-      "situation": "we must",
+      "type": "translate",
+      "prompt": "we must",
       "answer": "nous devons",
       "hint": "Verb devoir conjugated for nous"
     },
     {
       "id": "i-je-dois-partir",
-      "type": "respond",
-      "situation": "I must leave",
+      "type": "translate",
+      "prompt": "I must leave",
       "answer": "je dois partir",
       "hint": "je dois + infinitive '{partir}'"
     },
     {
       "id": "i-je-parle",
-      "type": "respond",
-      "situation": "I speak",
+      "type": "translate",
+      "prompt": "I speak",
       "answer": "je parle",
       "hint": "Regular -er verb parler for je"
     },
@@ -130,15 +130,15 @@
     },
     {
       "id": "i-nous-parlons",
-      "type": "respond",
-      "situation": "we speak",
+      "type": "translate",
+      "prompt": "we speak",
       "answer": "nous parlons",
       "hint": "Regular -er verb parler for nous"
     },
     {
       "id": "i-je-parle-francais",
-      "type": "respond",
-      "situation": "I speak French",
+      "type": "translate",
+      "prompt": "I speak French",
       "answer": "je parle français",
       "accept": [
         "je parle francais"
@@ -147,29 +147,29 @@
     },
     {
       "id": "i-je-cherche",
-      "type": "respond",
-      "situation": "I search / I look for",
+      "type": "translate",
+      "prompt": "I search / I look for",
       "answer": "je cherche",
       "hint": "Verb chercher conjugated for je"
     },
     {
       "id": "i-je-trouve",
-      "type": "respond",
-      "situation": "I find",
+      "type": "translate",
+      "prompt": "I find",
       "answer": "je trouve",
       "hint": "Verb trouver conjugated for je"
     },
     {
       "id": "i-je-cherche-le-livre",
-      "type": "respond",
-      "situation": "I'm looking for the book",
+      "type": "translate",
+      "prompt": "I'm looking for the book",
       "answer": "je cherche le livre",
       "hint": "{je cherche + le livre}"
     },
     {
       "id": "i-ne-pas",
-      "type": "respond",
-      "situation": "not",
+      "type": "translate",
+      "prompt": "not",
       "answer": "ne pas",
       "accept": [
         "ne...pas",
@@ -179,57 +179,57 @@
     },
     {
       "id": "i-je-ne-veux-pas",
-      "type": "respond",
-      "situation": "I don't want",
+      "type": "translate",
+      "prompt": "I don't want",
       "answer": "je ne veux pas",
       "hint": "Negation: je ne veux pas"
     },
     {
       "id": "i-il-ne-parle-pas",
-      "type": "respond",
-      "situation": "he doesn't speak",
+      "type": "translate",
+      "prompt": "he doesn't speak",
       "answer": "il ne parle pas",
       "hint": "Negation: il ne parle pas"
     },
     {
       "id": "i-nous-ne-pouvons-pas",
-      "type": "respond",
-      "situation": "we can't",
+      "type": "translate",
+      "prompt": "we can't",
       "answer": "nous ne pouvons pas",
       "hint": "Negation: nous ne pouvons pas"
     },
     {
       "id": "i-je-ne-mange-jamais",
-      "type": "respond",
-      "situation": "I never eat",
+      "type": "translate",
+      "prompt": "I never eat",
       "answer": "je ne mange jamais",
       "hint": "Negation with jamais: je ne mange jamais"
     },
     {
       "id": "i-maintenant",
-      "type": "respond",
-      "situation": "now",
+      "type": "translate",
+      "prompt": "now",
       "answer": "maintenant",
       "hint": "Time adverb for present moment"
     },
     {
       "id": "i-toujours",
-      "type": "respond",
-      "situation": "always",
+      "type": "translate",
+      "prompt": "always",
       "answer": "toujours",
       "hint": "Frequency adverb - 100% of the time"
     },
     {
       "id": "i-jamais",
-      "type": "respond",
-      "situation": "never",
+      "type": "translate",
+      "prompt": "never",
       "answer": "jamais",
       "hint": "Frequency adverb - 0% of the time"
     },
     {
       "id": "i-aujourd-hui",
-      "type": "respond",
-      "situation": "today",
+      "type": "translate",
+      "prompt": "today",
       "answer": "aujourd'hui",
       "accept": [
         "aujourd hui"
@@ -238,43 +238,43 @@
     },
     {
       "id": "i-demain",
-      "type": "respond",
-      "situation": "tomorrow",
+      "type": "translate",
+      "prompt": "tomorrow",
       "answer": "demain",
       "hint": "Future time expression"
     },
     {
       "id": "i-deja",
-      "type": "respond",
-      "situation": "already",
+      "type": "translate",
+      "prompt": "already",
       "answer": "déjà",
       "hint": "Time adverb - by now, before this time"
     },
     {
       "id": "i-encore",
-      "type": "respond",
-      "situation": "still",
+      "type": "translate",
+      "prompt": "still",
       "answer": "encore",
       "hint": "Time adverb - continuing, not yet finished"
     },
     {
       "id": "i-parfois",
-      "type": "respond",
-      "situation": "sometimes",
+      "type": "translate",
+      "prompt": "sometimes",
       "answer": "parfois",
       "hint": "Frequency adverb - occasionally"
     },
     {
       "id": "i-ici",
-      "type": "respond",
-      "situation": "here",
+      "type": "translate",
+      "prompt": "here",
       "answer": "ici",
       "hint": "Location adverb - this place"
     },
     {
       "id": "i-la",
-      "type": "respond",
-      "situation": "there",
+      "type": "translate",
+      "prompt": "there",
       "answer": "là",
       "accept": [
         "la"
@@ -283,8 +283,8 @@
     },
     {
       "id": "i-la-bas",
-      "type": "respond",
-      "situation": "over there",
+      "type": "translate",
+      "prompt": "over there",
       "answer": "là-bas",
       "accept": [
         "là bas",
@@ -295,8 +295,8 @@
     },
     {
       "id": "i-je-dois-parler-francais",
-      "type": "respond",
-      "situation": "I must speak French here",
+      "type": "translate",
+      "prompt": "I must speak French here",
       "answer": "je dois parler français ici",
       "accept": [
         "je dois parler francais ici"
@@ -305,8 +305,8 @@
     },
     {
       "id": "i-nous-faisons-toujours-des",
-      "type": "respond",
-      "situation": "we always do things here",
+      "type": "translate",
+      "prompt": "we always do things here",
       "answer": "nous faisons toujours des choses ici",
       "accept": [
         "nous faisons des choses ici toujours"
@@ -315,15 +315,15 @@
     },
     {
       "id": "i-elle-ne-parle-pas",
-      "type": "respond",
-      "situation": "she doesn't speak now",
+      "type": "translate",
+      "prompt": "she doesn't speak now",
       "answer": "elle ne parle pas maintenant",
       "hint": "elle + negation + parler + maintenant"
     },
     {
       "id": "i-je-voudrais-un-cafe",
-      "type": "respond",
-      "situation": "I would like a coffee, please",
+      "type": "translate",
+      "prompt": "I would like a coffee, please",
       "answer": "je voudrais un café s'il vous plaît",
       "accept": [
         "je voudrais un café, s'il vous plaît",

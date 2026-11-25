@@ -125,15 +125,15 @@
   "items": [
     {
       "id": "morning-1",
-      "type": "respond",
-      "situation": "I wake up",
+      "type": "translate",
+      "prompt": "I wake up",
       "answer": "je me réveille",
       "hint": "je me + réveiller conjugated"
     },
     {
       "id": "morning-2",
-      "type": "respond",
-      "situation": "I wake up at 7am",
+      "type": "translate",
+      "prompt": "I wake up at 7am",
       "answer": "je me réveille à sept heures",
       "accept": [
         "je me reveille a sept heures",
@@ -154,8 +154,8 @@
     },
     {
       "id": "morning-4",
-      "type": "respond",
-      "situation": "I get up",
+      "type": "translate",
+      "prompt": "I get up",
       "answer": "je me lève",
       "accept": [
         "je me leve"
@@ -164,8 +164,8 @@
     },
     {
       "id": "morning-5",
-      "type": "respond",
-      "situation": "She gets up at 8am",
+      "type": "translate",
+      "prompt": "She gets up at 8am",
       "answer": "elle se lève à huit heures",
       "accept": [
         "elle se leve a huit heures",
@@ -175,8 +175,8 @@
     },
     {
       "id": "morning-6",
-      "type": "respond",
-      "situation": "First, I wake up. Then, I get up.",
+      "type": "translate",
+      "prompt": "First, I wake up. Then, I get up.",
       "answer": "d'abord, je me réveille. ensuite, je me lève",
       "accept": [
         "d abord je me reveille ensuite je me leve"

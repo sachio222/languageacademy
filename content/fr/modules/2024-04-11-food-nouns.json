@@ -269,8 +269,8 @@
   "items": [
     {
       "id": "i-je-veux-de-l",
-      "type": "respond",
-      "situation": "I want water",
+      "type": "translate",
+      "prompt": "I want water",
       "answer": "je veux de l'eau",
       "accept": [
         "je veux de l eau",
@@ -286,8 +286,8 @@
     },
     {
       "id": "i-j-aime-le-cafe",
-      "type": "respond",
-      "situation": "I like coffee",
+      "type": "translate",
+      "prompt": "I like coffee",
       "answer": "j'aime le café",
       "accept": [
         "j aime le café"
@@ -316,8 +316,8 @@
     },
     {
       "id": "i-je-veux-une-baguette",
-      "type": "respond",
-      "situation": "I want a baguette",
+      "type": "translate",
+      "prompt": "I want a baguette",
       "answer": "je veux une baguette",
       "hint": "je veux + une baguette (feminine!)",
       "mistakes": [
@@ -329,8 +329,8 @@
     },
     {
       "id": "i-je-voudrais-un-croissant",
-      "type": "respond",
-      "situation": "I would like a croissant",
+      "type": "translate",
+      "prompt": "I would like a croissant",
       "answer": "je voudrais un croissant",
       "hint": "{je voudrais + un croissant}",
       "mistakes": [
@@ -342,8 +342,8 @@
     },
     {
       "id": "i-j-aime-la-pizza",
-      "type": "respond",
-      "situation": "I like pizza",
+      "type": "translate",
+      "prompt": "I like pizza",
       "answer": "j'aime la pizza",
       "accept": [
         "j aime la pizza"
@@ -372,8 +372,8 @@
     },
     {
       "id": "i-je-veux-du-the",
-      "type": "respond",
-      "situation": "I want some tea",
+      "type": "translate",
+      "prompt": "I want some tea",
       "answer": "je veux du thé",
       "hint": "{je veux + du thé}",
       "mistakes": [
@@ -385,8 +385,8 @@
     },
     {
       "id": "i-le-pain-est-bon",
-      "type": "respond",
-      "situation": "the bread is good",
+      "type": "translate",
+      "prompt": "the bread is good",
       "answer": "le pain est bon",
       "hint": "{le pain + est + bon}",
       "mistakes": [
@@ -398,8 +398,8 @@
     },
     {
       "id": "i-j-aime-le-fromage",
-      "type": "respond",
-      "situation": "I like cheese",
+      "type": "translate",
+      "prompt": "I like cheese",
       "answer": "j'aime le fromage",
       "accept": [
         "j aime le fromage"
@@ -414,8 +414,8 @@
     },
     {
       "id": "i-je-veux-de-la",
-      "type": "respond",
-      "situation": "I want some meat",
+      "type": "translate",
+      "prompt": "I want some meat",
       "answer": "je veux de la viande",
       "hint": "je veux + de la viande (feminine!)",
       "mistakes": [
@@ -427,8 +427,8 @@
     },
     {
       "id": "i-j-aime-le-poulet",
-      "type": "respond",
-      "situation": "I like chicken",
+      "type": "translate",
+      "prompt": "I like chicken",
       "answer": "j'aime le poulet",
       "accept": [
         "j aime le poulet"
@@ -443,8 +443,8 @@
     },
     {
       "id": "i-je-veux-du-poisson",
-      "type": "respond",
-      "situation": "I want some fish",
+      "type": "translate",
+      "prompt": "I want some fish",
       "answer": "je veux du poisson",
       "hint": "{je veux + du poisson}",
       "mistakes": [
@@ -456,8 +456,8 @@
     },
     {
       "id": "i-j-aime-les-legumes",
-      "type": "respond",
-      "situation": "I like vegetables",
+      "type": "translate",
+      "prompt": "I like vegetables",
       "answer": "j'aime les légumes",
       "accept": [
         "j aime les légumes"
@@ -472,8 +472,8 @@
     },
     {
       "id": "i-je-veux-une-salade",
-      "type": "respond",
-      "situation": "I want a salad",
+      "type": "translate",
+      "prompt": "I want a salad",
       "answer": "je veux une salade",
       "hint": "{je veux + une salade}",
       "mistakes": [
@@ -485,8 +485,8 @@
     },
     {
       "id": "i-j-aime-les-frites",
-      "type": "respond",
-      "situation": "I like fries",
+      "type": "translate",
+      "prompt": "I like fries",
       "answer": "j'aime les frites",
       "accept": [
         "j aime les frites"
@@ -501,8 +501,8 @@
     },
     {
       "id": "i-je-veux-des-fruits",
-      "type": "respond",
-      "situation": "I want some fruit",
+      "type": "translate",
+      "prompt": "I want some fruit",
       "answer": "je veux des fruits",
       "hint": "je veux + des fruits (plural!)",
       "mistakes": [
@@ -514,8 +514,8 @@
     },
     {
       "id": "i-j-aime-les-pommes",
-      "type": "respond",
-      "situation": "I like apples",
+      "type": "translate",
+      "prompt": "I like apples",
       "answer": "j'aime les pommes",
       "accept": [
         "j aime les pommes"
@@ -530,8 +530,8 @@
     },
     {
       "id": "i-je-veux-du-riz",
-      "type": "respond",
-      "situation": "I want some rice",
+      "type": "translate",
+      "prompt": "I want some rice",
       "answer": "je veux du riz",
       "hint": "{je veux + du riz}",
       "mistakes": [
@@ -543,8 +543,8 @@
     },
     {
       "id": "i-j-aime-les-pates",
-      "type": "respond",
-      "situation": "I like pasta",
+      "type": "translate",
+      "prompt": "I like pasta",
       "answer": "j'aime les pâtes",
       "accept": [
         "j aime les pâtes",
@@ -560,8 +560,8 @@
     },
     {
       "id": "i-je-veux-du-gateau",
-      "type": "respond",
-      "situation": "I want some cake",
+      "type": "translate",
+      "prompt": "I want some cake",
       "answer": "je veux du gâteau",
       "accept": [
         "je veux du gateau"
@@ -576,8 +576,8 @@
     },
     {
       "id": "i-j-aime-la-glace",
-      "type": "respond",
-      "situation": "I like ice cream",
+      "type": "translate",
+      "prompt": "I like ice cream",
       "answer": "j'aime la glace",
       "accept": [
         "j aime la glace"
@@ -592,8 +592,8 @@
     },
     {
       "id": "i-je-veux-du-chocolat",
-      "type": "respond",
-      "situation": "I want some chocolate",
+      "type": "translate",
+      "prompt": "I want some chocolate",
       "answer": "je veux du chocolat",
       "hint": "{je veux + du chocolat}",
       "mistakes": [

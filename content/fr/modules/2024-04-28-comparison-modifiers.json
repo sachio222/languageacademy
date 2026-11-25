@@ -125,8 +125,8 @@
   "items": [
     {
       "id": "comparison-modifiers-1",
-      "type": "respond",
-      "situation": "Everyone knows",
+      "type": "translate",
+      "prompt": "Everyone knows",
       "answer": "tout le monde sait",
       "hint": "tout le monde + sait (savoir for il/elle/on form)",
       "mistakes": [
@@ -138,22 +138,22 @@
     },
     {
       "id": "comparison-modifiers-2",
-      "type": "respond",
-      "situation": "It's the same thing",
+      "type": "translate",
+      "prompt": "It's the same thing",
       "answer": "c'est la même chose",
       "hint": "c'est + la même chose (feminine)"
     },
     {
       "id": "comparison-modifiers-3",
-      "type": "respond",
-      "situation": "Even I know",
+      "type": "translate",
+      "prompt": "Even I know",
       "answer": "même moi, je sais",
       "hint": "même + moi + comma + je sais"
     },
     {
       "id": "comparison-modifiers-4",
-      "type": "respond",
-      "situation": "I understand poorly",
+      "type": "translate",
+      "prompt": "I understand poorly",
       "answer": "je comprends mal",
       "hint": "je comprends + mal (adverb after verb)",
       "mistakes": [
@@ -165,15 +165,15 @@
     },
     {
       "id": "comparison-modifiers-5",
-      "type": "respond",
-      "situation": "Everyone understands",
+      "type": "translate",
+      "prompt": "Everyone understands",
       "answer": "tout le monde comprend",
       "hint": "tout le monde + comprend (singular verb)"
     },
     {
       "id": "comparison-modifiers-6",
-      "type": "respond",
-      "situation": "I know everything",
+      "type": "translate",
+      "prompt": "I know everything",
       "answer": "je sais tout",
       "hint": "je sais + tout (pronoun)"
     }

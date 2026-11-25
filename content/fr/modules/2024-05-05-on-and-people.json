@@ -202,8 +202,8 @@
     },
     {
       "id": "on-people-3",
-      "type": "respond",
-      "situation": "People say that it's good",
+      "type": "translate",
+      "prompt": "People say that it's good",
       "answer": "on dit que c'est bon",
       "hint": "{on dit + que + c'est bon}",
       "mistakes": [
@@ -215,8 +215,8 @@
     },
     {
       "id": "on-people-4",
-      "type": "respond",
-      "situation": "One cannot know everything",
+      "type": "translate",
+      "prompt": "One cannot know everything",
       "answer": "on ne peut pas tout savoir",
       "hint": "{on ne peut pas + tout + savoir}",
       "mistakes": [
@@ -246,8 +246,8 @@
     },
     {
       "id": "on-people-6",
-      "type": "respond",
-      "situation": "People think",
+      "type": "translate",
+      "prompt": "People think",
       "answer": "les gens pensent",
       "hint": "les gens + pensent (plural verb)",
       "mistakes": [
