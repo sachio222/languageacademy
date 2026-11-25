@@ -286,6 +286,23 @@ function readShownText(mod, key, kind, isWord, screen, items) {
     add(`sentences[${i}].instruction`, 'instruction', s.instruction, 'quoted');
     (Array.isArray(s.blanks) ? s.blanks : []).forEach((b, j) => add(`sentences[${i}].blanks[${j}].hint`, 'hint', b?.hint, 'quoted'));
   });
+  // A guide (GuideScreen.jsx) shows each table row's French and each example sentence whole, and the learner can hear
+  // them; its headings, rules and notes are English with quoted French.
+  const whole = (pathIn, text) => {
+    if (typeof text !== 'string' || !text.trim()) return;
+    items.push({ ref: `${key}#${pathIn}`, source: 'guide', french: [], shown: [text.trim()], lenient: [], englishPrompt: null, instruction: null });
+  };
+  (Array.isArray(mod.guide?.sections) ? mod.guide.sections : []).forEach((s, i) => {
+    if (!s) return;
+    const at = `guide.sections[${i}]`;
+    add(`${at}.heading`, 'guide', s.heading, 'quoted');
+    add(`${at}.rule`, 'guide', s.rule, 'quoted');
+    (Array.isArray(s.rows) ? s.rows : []).forEach((r, j) => {
+      whole(`${at}.rows[${j}].french`, r?.french);
+      add(`${at}.rows[${j}].note`, 'guide', r?.note, 'quoted');
+    });
+    (Array.isArray(s.examples) ? s.examples : []).forEach((e, j) => whole(`${at}.examples[${j}].french`, e?.french));
+  });
   const passage = mod.readingPassage;
   if (passage) {
     add('readingPassage.title', 'passage', passage.title, 'segments');
@@ -356,6 +373,8 @@ export function readModule(mod, position, unitId, unitTitle = null, opts = {}) {
     unitTitle,
     unitDescription: opts.unitDescription ?? null,
     kind,
+    // a help module whose screen is its guide data, rendered by GuideScreen.jsx, needs no screen component
+    guide: Array.isArray(mod.guide?.sections),
     vocab: (mod.vocabularyReference ?? []).map((v) => v.french).filter((f) => typeof f === 'string'),
     conceptTerms: (mod.concepts ?? []).map((c) => c.term).filter((t) => typeof t === 'string'),
     items,

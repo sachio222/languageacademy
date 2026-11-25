@@ -5087,5 +5087,32 @@
       "fr:form:trouver.prs.3pl",
       "fr:form:trouver.sbjv.3pl"
     ]
+  },
+  "2026-11-24-negation-guide": {
+    "overrides": {
+      "2026-11-24-negation-guide#guide.sections[2].examples[0].french": {
+        "ignore": [
+          "fr:cx:comparative"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:neg.ne-pas",
+      "fr:cx:neg.de",
+      "fr:cx:neg.ne-plus",
+      "fr:cx:neg.ne-rien",
+      "fr:cx:neg.ne-jamais"
+    ],
+    "teachesWords": [],
+    "teachesWordsManual": [
+      "fr:lex:ne",
+      "fr:form:ne.elided",
+      "fr:lex:pas",
+      "fr:lex:de",
+      "fr:form:de.elided",
+      "fr:lex:plus",
+      "fr:lex:rien",
+      "fr:lex:jamais"
+    ]
   }
 }

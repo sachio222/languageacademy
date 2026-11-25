@@ -1,0 +1,295 @@
+/* GuideScreen - shared screen for data-driven guides (help modules with a `guide` object) */
+
+.guide-screen {
+  --guide-navy: #13294b;
+  --guide-blue: #3b82f6;
+  --guide-ink: #1a1a1a;
+  --guide-muted: #5f5a66;
+  --guide-line: #e8ebf0;
+  --guide-soft: #f6f8fb;
+  --guide-heading-font: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* rhythm: inside a group < between groups < between cards */
+  --guide-gap-in: 0.25rem;
+  --guide-gap-group: 1.5rem;
+  --guide-gap-card: 2.5rem;
+
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.guide-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.guide-loading {
+  text-align: center;
+  color: var(--guide-muted);
+  padding: 3rem 0;
+}
+
+/* Header */
+.guide-header {
+  margin-bottom: var(--guide-gap-card);
+}
+
+.guide-kicker {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a8f98;
+  margin-bottom: 0.5rem;
+}
+
+.guide-header h1 {
+  font-family: var(--guide-heading-font);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--guide-ink);
+  margin: 0 0 0.5rem;
+}
+
+.guide-intro {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--guide-muted);
+  margin: 0;
+}
+
+/* French inside English text */
+.guide-fr {
+  font-weight: 700;
+  color: var(--guide-navy);
+}
+
+/* Section card */
+.guide-card {
+  border: 1px solid var(--guide-line);
+  border-radius: 16px;
+  padding: 1.75rem 1.75rem 1.25rem;
+  margin-bottom: var(--guide-gap-card);
+  background: #ffffff;
+}
+
+.guide-card-head {
+  margin-bottom: var(--guide-gap-group);
+}
+
+.guide-card h2 {
+  font-family: var(--guide-heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--guide-ink);
+  margin: 0 0 0.5rem;
+}
+
+.guide-card h2 .guide-fr {
+  color: var(--guide-blue);
+}
+
+.guide-rule {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: #3a3f47;
+  margin: 0;
+}
+
+/* Rows and examples share one line layout: French over English, speak button at the end */
+.guide-rows,
+.guide-examples ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.guide-rows {
+  border-top: 1px solid var(--guide-line);
+}
+
+.guide-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--guide-line);
+  min-width: 0;
+}
+
+.guide-line-text {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 1rem;
+  row-gap: var(--guide-gap-in);
+  align-items: baseline;
+}
+
+.guide-line-french {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--guide-ink);
+  overflow-wrap: anywhere;
+}
+
+.guide-line-english {
+  font-size: 1rem;
+  color: var(--guide-muted);
+  overflow-wrap: anywhere;
+}
+
+.guide-line-note {
+  grid-column: 1 / -1;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--guide-muted);
+}
+
+.guide-examples {
+  margin-top: var(--guide-gap-group);
+  background: var(--guide-soft);
+  border-radius: 12px;
+  padding: 1rem 1.25rem 0.25rem;
+}
+
+.guide-examples h3 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a8f98;
+  margin: 0 0 var(--guide-gap-in);
+}
+
+.guide-examples .guide-line {
+  border-bottom-color: #e3e7ee;
+}
+
+.guide-examples .guide-line:last-child {
+  border-bottom: none;
+}
+
+.guide-examples .guide-line-text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.guide-card-foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--guide-gap-group);
+}
+
+/* Focal card: the screen's one action */
+.guide-focal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: var(--guide-navy);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.guide-focal-text {
+  min-width: 0;
+}
+
+.guide-focal-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #ffffff;
+  color: var(--guide-navy);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-focal-title {
+  font-family: var(--guide-heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 var(--guide-gap-in);
+}
+
+.guide-focal-sub {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: #c9d3e3;
+  margin: 0;
+}
+
+.guide-focal-button {
+  flex-shrink: 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--guide-navy);
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.875rem 1.75rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.guide-focal-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.guide-focal-button:focus-visible {
+  outline: 3px solid var(--guide-blue);
+  outline-offset: 3px;
+}
+
+/* Phone widths */
+@media (max-width: 640px) {
+  .guide-container {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .guide-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .guide-intro {
+    font-size: 1rem;
+  }
+
+  .guide-card {
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  .guide-card h2 {
+    font-size: 1.3125rem;
+  }
+
+  .guide-line-text {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .guide-examples {
+    padding: 0.875rem 0.875rem 0.125rem;
+  }
+
+  .guide-focal {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .guide-focal-button {
+    width: 100%;
+  }
+}

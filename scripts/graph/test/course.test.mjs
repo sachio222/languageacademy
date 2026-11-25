@@ -11,13 +11,13 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../
 const course = await readCourse(repoRoot);
 const frenchOf = (m) => m.items.flatMap((i) => i.french);
 
-test('course has 160 modules at positions 1..160', () => {
-  assert.equal(course.length, 160);
-  assert.deepEqual(course.map((m) => m.position), Array.from({ length: 160 }, (_, i) => i + 1));
+test('course has 161 modules at positions 1..161', () => {
+  assert.equal(course.length, 161);
+  assert.deepEqual(course.map((m) => m.position), Array.from({ length: 161 }, (_, i) => i + 1));
 });
 
-test('position 30 is the aller lesson and teaches je vais', () => {
-  const m = course[29];
+test('position 31 is the aller lesson and teaches je vais', () => {
+  const m = course[30];
   assert.equal(m.moduleKey, '2024-01-27-aller');
   assert.equal(m.kind, 'lesson');
   assert.ok(m.items.some((i) => i.french.includes('je vais')));
@@ -27,10 +27,10 @@ test('no module is titled Les Nombres', () => {
   assert.equal(course.filter((m) => m.title === 'Les Nombres').length, 0);
 });
 
-test('verb-pattern-help appears once, at position 31', () => {
+test('verb-pattern-help appears once, at position 32', () => {
   const hits = course.filter((m) => m.moduleKey === '2024-01-28-verb-pattern-help');
   assert.equal(hits.length, 1);
-  assert.equal(hits[0].position, 31);
+  assert.equal(hits[0].position, 32);
   assert.equal(hits[0].kind, 'help');
 });
 
@@ -64,7 +64,7 @@ test('kinds and unit fields are set', () => {
   assert.equal(course.filter((m) => m.kind === 'exam').length, 11);
   assert.equal(course.filter((m) => m.kind === 'practice').length, 11);
   assert.equal(course.filter((m) => m.kind === 'reading').length, 11);
-  assert.equal(course.filter((m) => m.kind === 'help').length, 4);
+  assert.equal(course.filter((m) => m.kind === 'help').length, 5);
   assert.equal(course[0].unitId, 1);
   assert.match(course[0].unitTitle, /^Unit 1/);
   assert.ok(course[0].vocab.includes('bonjour'));
@@ -354,9 +354,14 @@ test('readCourse reads each help screen named in the course map', async () => {
   const graph = loadGraph(path.join(repoRoot, 'curriculum-graph'), 'fr');
   const isWord = frenchWordTest(graph, buildFormIndex(graph));
   const full = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord });
-  const help = full.filter((m) => m.kind === 'help');
+  const help = full.filter((m) => m.kind === 'help' && !m.guide);
   assert.equal(help.length, 4);
   for (const m of help) assert.ok(m.items.some((i) => i.source === 'screen'), m.moduleKey);
+  // a guide is read from its data, not from a screen component
+  const guides = full.filter((m) => m.kind === 'help' && m.guide);
+  assert.deepEqual(guides.map((m) => m.moduleKey), ['2026-11-24-negation-guide']);
+  assert.ok(guides[0].items.some((i) => i.source === 'guide' && i.shown.includes("Je n'ai pas de chat.")));
+  assert.ok(guides[0].items.every((i) => i.source !== 'screen'));
   const cognates = full.find((m) => m.moduleKey === '2024-10-21-cognates-help');
   const screen = cognates.items.filter((i) => i.source === 'screen');
   assert.equal(screen[0].ref, '2024-10-21-cognates-help#screen[0]');

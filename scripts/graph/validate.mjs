@@ -5,8 +5,8 @@ import { parseId } from './ids.mjs';
 import { GROUPS, LEVELS } from './functions.mjs';
 import { nodeLevel, validCefrSource, coreListStatusProblem, CEFR_SOURCE_PREFIXES } from './levels-data.mjs';
 
-// opts.course and opts.repoRoot turn on the help screen checks: every help module names its screen component in
-// the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
+// opts.course and opts.repoRoot turn on the help screen checks: every help module without guide data names its
+// screen component in the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
 // course, and that settings.reference.openFrom is not past its last position. opts.referenceModules (the module keys
 // of the Reference unit) checks settings.reference.modules.
 export function validateGraph(graph, opts = {}) {
@@ -170,7 +170,7 @@ export function validateGraph(graph, opts = {}) {
   }
 
   for (const m of opts.course ?? []) {
-    if (m.kind !== 'help' || typeof graph.courseMap?.[m.moduleKey]?.screen === 'string') continue;
+    if (m.kind !== 'help' || m.guide || typeof graph.courseMap?.[m.moduleKey]?.screen === 'string') continue;
     out.push(issue({
       rule: 'screen-missing', moduleKey: m.moduleKey, position: m.position,
       message: `${m.moduleKey} is a help module, but course-map.json names no screen component for it`,

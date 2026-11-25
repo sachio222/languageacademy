@@ -2,7 +2,7 @@
  * useHelpModuleCompletion - Shared logic for help module completion
  * Handles auto-completion, validation, and warning display
  * 
- * Reused by: VerbPatternHelp, QuestionsHelp, LiaisonHelp, CognatesHelp
+ * Reused by: VerbPatternHelp, QuestionsHelp, LiaisonHelp, CognatesHelp, GuideScreen
  */
 
 import { useState, useEffect, useCallback, useRef } from 'react';

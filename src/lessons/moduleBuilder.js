@@ -238,6 +238,8 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
     isPhonicsReference: moduleConfig.isPhonicsReference || false,
     // Pass through help module flag
     isHelpModule: moduleConfig.isHelpModule || false,
+    // Pass through guide data (help modules rendered by GuideScreen)
+    guide: moduleConfig.guide || null,
   };
 
   // Debug logging for unit exams

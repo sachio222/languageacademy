@@ -17,6 +17,7 @@ import VerbPatternHelp from './VerbPatternHelp';
 import LiaisonHelp from './LiaisonHelp';
 import CognatesHelp from './CognatesHelp';
 import QuestionsHelp from './QuestionsHelp';
+import GuideScreen from './GuideScreen';
 import ModuleSelector from './ModuleSelector';
 import ModuleSectionHeader from './ModuleSectionHeader';
 import { extractModuleId, extractUnitId } from '../utils/progressSync';
@@ -851,7 +852,9 @@ function LessonView({ lesson, unitInfo, onBack, completedExercises, onExerciseCo
                   className={isLocked ? 'module-paywall-locked' : ''}
                   style={{ position: 'relative' }}
                 >
-                  {lesson.moduleKey?.includes('liaison-help') ? (
+                  {lesson.guide ? (
+                    <GuideScreen module={lesson} onComplete={handleNextModule} />
+                  ) : lesson.moduleKey?.includes('liaison-help') ? (
                     <LiaisonHelp
                       onComplete={handleNextModule}
                       moduleId={lesson.id}

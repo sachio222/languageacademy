@@ -25,6 +25,25 @@ export const FIELDS = {
     sentences: read('fill-in-the-blank sentences, see the sentence level'),
     fillInBlanksSentences: read('gap-fill sentences, filled with the answer of the matching exercise. No component reads this field (searched src/components); it is checked as it was before'),
     readingPassage: read('reading passage, see the readingPassage level'),
+    guide: read('guide screen of a help module (GuideScreen.jsx), see the guide level'),
+  },
+  guide: {
+    sections: read('one card each (GuideScreen.jsx), see the guideSection level'),
+  },
+  guideSection: {
+    heading: read('card heading (GuideScreen.jsx); quoted French'),
+    rule: read('rule line under the heading (GuideScreen.jsx); quoted French'),
+    rows: read('table rows, see the guideRow level'),
+    examples: read('example sentences, see the guideExample level'),
+  },
+  guideRow: {
+    french: read('French column of the table (GuideScreen.jsx), with a speak button; checked whole'),
+    english: ignored('English column of the table'),
+    note: read('note under the row (GuideScreen.jsx); quoted French'),
+  },
+  guideExample: {
+    french: read('example sentence (GuideScreen.jsx), with a speak button; checked whole'),
+    english: ignored('English meaning of the example'),
   },
   emailMetadata: {
     capabilities: ignored('email text, not shown in a lesson'),
@@ -133,8 +152,10 @@ export const FIELDS = {
 const CHILD = {
   module: {
     emailMetadata: 'emailMetadata', readingPassage: 'readingPassage', concepts: 'concept', vocabularyReference: 'vocab',
-    exerciseConfig: 'exerciseConfig', exercises: 'exercise', sentences: 'sentence',
+    exerciseConfig: 'exerciseConfig', exercises: 'exercise', sentences: 'sentence', guide: 'guide',
   },
+  guide: { sections: 'guideSection' },
+  guideSection: { rows: 'guideRow', examples: 'guideExample' },
   vocab: { wikipedia: 'wikipedia' },
   exerciseConfig: { items: 'item', conjugations: 'conjugations' },
   conjugations: Object.fromEntries(Object.keys(FIELDS.conjugations).map((p) => [p, 'conjugation'])),
