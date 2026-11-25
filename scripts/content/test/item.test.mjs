@@ -93,3 +93,14 @@ test('itemTexts roles: gapfill and choice', () => {
   assert.equal(cb['options[1].text'].role, 'native');
   assert.equal(cb['options[0].text'].typed, false);
 });
+
+test('itemTexts roles: comprehension', () => {
+  const t = itemTexts({ id: 'a', type: 'comprehension', question: 'How do they travel?', answer: 'prendre le train', accept: ['le train'] });
+  const by = Object.fromEntries(t.map((x) => [x.path, x]));
+  assert.equal(by.question.role, 'native_fr');
+  assert.deepEqual([by.answer.role, by.answer.typed], ['fr', true]);
+  assert.deepEqual([by['accept[0]'].role, by['accept[0]'].typed], ['fr', true]);
+  const o = itemTexts({ id: 'a', type: 'comprehension', question: 'q', options: [{ text: 'le train', fr: true, right: true }, { text: 'by car' }] });
+  assert.equal(o[1].role, 'fr');
+  assert.equal(o[2].role, 'native');
+});

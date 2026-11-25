@@ -25,8 +25,8 @@ const FIELD_ROLES = {
   gapfill: { gloss: ['native_fr', false], text: ['fr', false] },
   meaning: { shown: ['fr', false], answer: ['native', true], accept: ['native', true] },
   choice: { question: ['native_fr', false] },
-  // The spec gives no role for comprehension answers; they are the learner's reading of the story, so native.
-  comprehension: { question: ['native_fr', false], answer: ['native', true], accept: ['native', true] },
+  // Readings are answered in French (ruling: reading-6 "prendre le train", reading-3 "Café de la Paix").
+  comprehension: { question: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
 };
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
