@@ -324,6 +324,50 @@
         "qu'est-ce que tu vois"
       ],
       "hint": "Statement to question: qu'est-ce que + subject + verb"
+    },
+    {
+      "id": "i-qu-est-ce-qui-nage-dans-la-mer",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose nage dans la mer.",
+      "answer": "qu'est-ce qui nage dans la mer ?",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que nage dans la mer ?",
+          "feedback": "The thing does the swimming, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-saute-et-grimpe",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose saute et grimpe dans l'arbre.",
+      "answer": "qu'est-ce qui saute et grimpe dans l'arbre ?"
+    },
+    {
+      "id": "i-qu-est-ce-qui-court-tres-vite",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose court très vite dans le jardin.",
+      "answer": "qu'est-ce qui court très vite dans le jardin ?"
+    },
+    {
+      "id": "i-qu-est-ce-qui-vole-dans-le-jardin",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose vole dans le jardin.",
+      "answer": "qu'est-ce qui vole dans le jardin ?"
+    },
+    {
+      "id": "i-qu-est-ce-qui-rend-la-terre-humide",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce qui rend la terre humide ?} Answer: the rain does.",
+      "answer": "la pluie rend la terre humide",
+      "accept": [
+        "la pluie",
+        "c'est la pluie"
+      ]
     }
   ]
 }

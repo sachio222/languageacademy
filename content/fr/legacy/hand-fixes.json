@@ -485,12 +485,1077 @@
     "description": "Complete sentences using this unit's essential vocabulary: age expressions, missing top 100 verbs, and directions!",
     "title": "Daily Essentials Practice - Fill in the Blanks"
   },
+  "2024-03-15-nature-animals": {
+    "concepts": [
+      {
+        "id": "c-animals-for-question-asking",
+        "term": "Animals for Question-Asking",
+        "definition": "The next lessons ask how and why these animals move. Start with what each one is like.",
+        "example": "{La tortue est lente.} (The turtle is slow.) {L'écureuil est rapide.} (The squirrel is fast.)"
+      },
+      {
+        "id": "c-learning-animal-genders",
+        "term": "Learning Animal Genders",
+        "definition": "Always learn the article with the animal - gender matters for questions!",
+        "example": "{un oiseau} (masculine), {une tortue} (feminine), {un écureuil} (masculine)"
+      },
+      {
+        "id": "c-nature-elements",
+        "term": "Nature words",
+        "definition": "Essential nature vocabulary for asking questions about natural phenomena",
+        "example": "{le vent} (wind), {la pluie} (rain), {une plante} (plant), {un arbre} (tree)"
+      },
+      {
+        "id": "c-combining-with-colors",
+        "term": "Combining with Colors",
+        "definition": "Use color vocabulary from Reference module to describe animals",
+        "example": "{un oiseau bleu} (a blue bird), {un papillon jaune} (a yellow butterfly)"
+      },
+      {
+        "id": "c-setting-up-for-questions",
+        "term": "Setting Up for Questions",
+        "definition": "These words come back in the question lessons that follow.",
+        "example": "{Pourquoi est-ce que la tortue est lente ?} (Why is the turtle slow?)"
+      }
+    ],
+    "items/i-il-y-a-des-abeilles-dans-le-jardin": {
+      "id": "i-il-y-a-des-abeilles-dans-le-jardin",
+      "type": "transform",
+      "instruction": "Make it plural.",
+      "shown": "Il y a une abeille dans le jardin.",
+      "answer": "il y a des abeilles dans le jardin",
+      "mistakes": [
+        {
+          "answer": "il y a des abeille dans le jardin",
+          "feedback": "The plural noun adds -s: {des abeilles}."
+        }
+      ]
+    },
+    "items/i-je-vois-un-oiseau": {
+      "id": "i-je-vois-un-oiseau",
+      "type": "respond",
+      "situation": "You are in the garden with a friend. Tell them you see a bird.",
+      "answer": "je vois un oiseau",
+      "accept": [
+        "regarde, je vois un oiseau"
+      ]
+    },
+    "items/i-l-abeille-est-petite": {
+      "id": "i-l-abeille-est-petite",
+      "type": "transform",
+      "instruction": "Say the opposite: the bee is small.",
+      "shown": "L'abeille est grande.",
+      "answer": "l'abeille est petite",
+      "mistakes": [
+        {
+          "answer": "l'abeille est petit",
+          "feedback": "{abeille} is feminine, so the adjective adds -e: {petite}."
+        }
+      ]
+    },
+    "items/i-l-ecureuil-est-rapide": {
+      "id": "i-l-ecureuil-est-rapide",
+      "type": "transform",
+      "instruction": "Say the opposite: the squirrel is fast.",
+      "shown": "L'écureuil est lent.",
+      "answer": "l'écureuil est rapide",
+      "accept": [
+        "l'ecureuil est rapide"
+      ]
+    },
+    "items/i-la-pluie": {
+      "id": "i-la-pluie",
+      "type": "gapfill",
+      "text": "Les plantes aiment ___.",
+      "blanks": [
+        {
+          "answer": "la pluie"
+        }
+      ],
+      "gloss": "Plants like the rain."
+    },
+    "items/i-la-tortue-est-lente": {
+      "id": "i-la-tortue-est-lente",
+      "type": "transform",
+      "instruction": "Say the opposite: the turtle is slow.",
+      "shown": "La tortue est rapide.",
+      "answer": "la tortue est lente",
+      "mistakes": [
+        {
+          "answer": "la tortue est lent",
+          "feedback": "Lente must agree with feminine 'tortue'. Use '{lente}' with 'e'"
+        }
+      ]
+    },
+    "items/i-la-tortue-est-plus-lente-que-le-lapin": {
+      "id": "i-la-tortue-est-plus-lente-que-le-lapin",
+      "type": "transform",
+      "instruction": "Compare the two animals with {plus … que}.",
+      "shown": "la tortue (lente) / le lapin",
+      "answer": "la tortue est plus lente que le lapin",
+      "mistakes": [
+        {
+          "answer": "la tortue est plus lent que le lapin",
+          "feedback": "{lent} agrees with {la tortue}, which is feminine: {plus lente}."
+        }
+      ]
+    },
+    "items/i-le-vent": {
+      "id": "i-le-vent",
+      "type": "gapfill",
+      "text": "J'aime le soleil, mais je n'aime pas ___.",
+      "blanks": [
+        {
+          "answer": "le vent"
+        }
+      ],
+      "gloss": "I like the sun, but I don't like the wind."
+    },
+    "items/i-un-ecureuil": {
+      "id": "i-un-ecureuil",
+      "type": "gapfill",
+      "text": "Il y a ___ dans l'arbre : il est petit et rapide.",
+      "blanks": [
+        {
+          "answer": "un écureuil",
+          "accept": [
+            "un ecureuil"
+          ]
+        }
+      ],
+      "gloss": "There is a squirrel in the tree: it is small and fast.",
+      "mistakes": [
+        {
+          "answer": "une écureuil",
+          "feedback": "Écureuil is masculine. Use '{un écureuil}'"
+        }
+      ]
+    },
+    "items/i-un-lapin": {
+      "id": "i-un-lapin",
+      "type": "gapfill",
+      "text": "Nous avons ___ et un chat à la maison.",
+      "blanks": [
+        {
+          "answer": "un lapin"
+        }
+      ],
+      "gloss": "We have a rabbit and a cat at home.",
+      "mistakes": [
+        {
+          "answer": "une lapin",
+          "feedback": "{lapin} is masculine: {un lapin}."
+        }
+      ]
+    },
+    "items/i-un-oiseau": {
+      "id": "i-un-oiseau",
+      "type": "gapfill",
+      "text": "Je vois ___ : il est petit et bleu.",
+      "blanks": [
+        {
+          "answer": "un oiseau"
+        }
+      ],
+      "gloss": "I see a bird: it is small and blue.",
+      "mistakes": [
+        {
+          "answer": "une oiseau",
+          "feedback": "Oiseau is masculine. Use '{un oiseau}' (the 's' is silent!)"
+        },
+        {
+          "answer": "un oisau",
+          "feedback": "Careful with spelling: oiseau (the 's' is silent)"
+        }
+      ]
+    },
+    "items/i-un-oiseau-bleu": {
+      "id": "i-un-oiseau-bleu",
+      "type": "transform",
+      "instruction": "Put the color in the right place.",
+      "shown": "un oiseau + bleu",
+      "answer": "un oiseau bleu",
+      "mistakes": [
+        {
+          "answer": "un bleu oiseau",
+          "feedback": "Colors come after the noun: {un oiseau bleu}."
+        }
+      ]
+    },
+    "items/i-un-papillon": {
+      "id": "i-un-papillon",
+      "type": "gapfill",
+      "text": "Le chat regarde ___.",
+      "blanks": [
+        {
+          "answer": "un papillon"
+        }
+      ],
+      "gloss": "The cat is watching a butterfly."
+    },
+    "items/i-un-papillon-jaune": {
+      "id": "i-un-papillon-jaune",
+      "type": "gapfill",
+      "text": "Sur la fleur, il y a ___.",
+      "blanks": [
+        {
+          "answer": "un papillon jaune"
+        }
+      ],
+      "gloss": "On the flower, there is a yellow butterfly.",
+      "mistakes": [
+        {
+          "answer": "un jaune papillon",
+          "feedback": "Colors come after the noun: {un papillon jaune}."
+        }
+      ]
+    },
+    "items/i-une-abeille": {
+      "id": "i-une-abeille",
+      "type": "gapfill",
+      "text": "Il y a ___ dans la fleur.",
+      "blanks": [
+        {
+          "answer": "une abeille"
+        }
+      ],
+      "gloss": "There is a bee in the flower.",
+      "mistakes": [
+        {
+          "answer": "un abeille",
+          "feedback": "{abeille} is feminine: {une abeille}."
+        }
+      ]
+    },
+    "items/i-une-plante": {
+      "id": "i-une-plante",
+      "type": "gapfill",
+      "text": "Je donne ___ à ma mère.",
+      "blanks": [
+        {
+          "answer": "une plante"
+        }
+      ],
+      "gloss": "I'm giving my mother a plant."
+    },
+    "items/i-une-tortue": {
+      "id": "i-une-tortue",
+      "type": "gapfill",
+      "text": "C'est ___ : elle est très lente.",
+      "blanks": [
+        {
+          "answer": "une tortue"
+        }
+      ],
+      "gloss": "It's a turtle: it is very slow.",
+      "mistakes": [
+        {
+          "answer": "un tortue",
+          "feedback": "Tortue is feminine. Use '{une tortue}'"
+        }
+      ]
+    },
+    "vocabulary/la-pluie-fr": {
+      "word_id": "la-pluie-fr",
+      "fr": "la pluie",
+      "gloss": "the rain",
+      "note": "feminine: {la pluie}"
+    },
+    "vocabulary/le-vent-fr": {
+      "word_id": "le-vent-fr",
+      "fr": "le vent",
+      "gloss": "the wind",
+      "note": "masculine: {le vent}"
+    }
+  },
   "2024-03-15-questce-qui-que": {
+    "items/i-qu-est-ce-qui-court-tres-vite": {
+      "id": "i-qu-est-ce-qui-court-tres-vite",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose court très vite dans le jardin.",
+      "answer": "qu'est-ce qui court très vite dans le jardin ?"
+    },
+    "items/i-qu-est-ce-qui-nage-dans-la-mer": {
+      "id": "i-qu-est-ce-qui-nage-dans-la-mer",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose nage dans la mer.",
+      "answer": "qu'est-ce qui nage dans la mer ?",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que nage dans la mer ?",
+          "feedback": "The thing does the swimming, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
+    },
+    "items/i-qu-est-ce-qui-rend-la-terre-humide": {
+      "id": "i-qu-est-ce-qui-rend-la-terre-humide",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce qui rend la terre humide ?} Answer: the rain does.",
+      "answer": "la pluie rend la terre humide",
+      "accept": [
+        "la pluie",
+        "c'est la pluie"
+      ]
+    },
+    "items/i-qu-est-ce-qui-saute-et-grimpe": {
+      "id": "i-qu-est-ce-qui-saute-et-grimpe",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose saute et grimpe dans l'arbre.",
+      "answer": "qu'est-ce qui saute et grimpe dans l'arbre ?"
+    },
+    "items/i-qu-est-ce-qui-vole-dans-le-jardin": {
+      "id": "i-qu-est-ce-qui-vole-dans-le-jardin",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose vole dans le jardin.",
+      "answer": "qu'est-ce qui vole dans le jardin ?"
+    },
     "vocabulary/qu-est-ce-que-fr.object-pronoun": {
       "word_id": "qu-est-ce-que-fr",
       "fr": "qu'est-ce que",
       "gloss": "what (object)",
       "note": "⭐⭐⭐ OBJECT: what DO you verb"
+    }
+  },
+  "2024-03-16-movement-verbs": {
+    "concepts": [
+      {
+        "id": "c-six-essential-movement-verbs",
+        "term": "Six Essential Movement Verbs",
+        "definition": "These verbs describe all basic types of movement in nature and daily life",
+        "example": "{nager} (swim), {sauter} (jump), {voler} (fly), {courir} (run), {marcher} (walk), {grimper} (climb)"
+      },
+      {
+        "id": "c-regular-er-verbs-pattern",
+        "term": "Regular -ER Verbs Pattern",
+        "definition": "Most movement verbs follow the regular -ER pattern you already know",
+        "example": "{nager}: {je nage}, {tu nages}, {il nage}, {nous nageons}, {vous nagez}, {ils nagent}"
+      },
+      {
+        "id": "c-courir-irregular-ir-verb",
+        "term": "{courir} - Irregular -IR Verb",
+        "definition": "Courir (to run) is irregular but common - memorize the pattern",
+        "example": "{je cours}, {tu cours}, {il court}, {nous courons}, {vous courez}, {ils courent}"
+      },
+      {
+        "id": "c-animals-movement",
+        "term": "Animals + Movement",
+        "definition": "Combine with animal vocabulary to describe how animals move",
+        "example": "{La tortue nage} (the turtle swims), {Les oiseaux volent} (birds fly), {L'écureuil saute} (the squirrel jumps)"
+      },
+      {
+        "id": "c-works-in-all-tenses",
+        "term": "Works in All Tenses",
+        "definition": "These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.",
+        "example": "{Je nage} (I swim), {J'ai nagé} (I swam), {Je nageais} (I was swimming, I used to swim)"
+      },
+      {
+        "id": "c-savoir-infinitive",
+        "term": "{savoir} + infinitive: know how to",
+        "definition": "Use {savoir} with an infinitive for a skill someone has learned, and {pouvoir} for whether they are able to at that moment.",
+        "example": "{Je sais nager.} (I can swim, I know how.) {Les petits oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
+      }
+    ],
+    "items/i-avons-couru": {
+      "id": "i-avons-couru",
+      "type": "gapfill",
+      "text": "Hier, nous ___ dans le parc.",
+      "blanks": [
+        {
+          "answer": "avons couru"
+        }
+      ],
+      "gloss": "Yesterday we ran in the park.",
+      "mistakes": [
+        {
+          "answer": "sommes couru",
+          "feedback": "{courir} takes {avoir} in the passé composé: {nous avons couru}."
+        }
+      ]
+    },
+    "items/i-courait": {
+      "id": "i-courait",
+      "type": "gapfill",
+      "text": "Avant, mon père ___ tous les matins.",
+      "blanks": [
+        {
+          "answer": "courait"
+        }
+      ],
+      "gloss": "My father used to run every morning."
+    },
+    "items/i-elle-grimpe": {
+      "id": "i-elle-grimpe",
+      "type": "gapfill",
+      "text": "L'écureuil ___ dans l'arbre.",
+      "blanks": [
+        {
+          "answer": "grimpe"
+        }
+      ],
+      "gloss": "The squirrel climbs up the tree."
+    },
+    "items/i-il-court": {
+      "id": "i-il-court",
+      "type": "gapfill",
+      "text": "Il ___ plus vite que moi.",
+      "blanks": [
+        {
+          "answer": "court"
+        }
+      ],
+      "gloss": "He runs faster than me.",
+      "mistakes": [
+        {
+          "answer": "cours",
+          "feedback": "With {il}, write {court}, with a t."
+        }
+      ]
+    },
+    "items/i-il-vole": {
+      "id": "i-il-vole",
+      "type": "gapfill",
+      "text": "Le papillon ___ de fleur en fleur.",
+      "blanks": [
+        {
+          "answer": "vole"
+        }
+      ],
+      "gloss": "The butterfly flies from flower to flower."
+    },
+    "items/i-ils-sautent": {
+      "id": "i-ils-sautent",
+      "type": "gapfill",
+      "text": "Les lapins ___ dans le jardin.",
+      "blanks": [
+        {
+          "answer": "sautent"
+        }
+      ],
+      "gloss": "The rabbits are jumping in the garden."
+    },
+    "items/i-j-ai-nage": {
+      "id": "i-j-ai-nage",
+      "type": "transform",
+      "instruction": "Put it in the passé composé.",
+      "shown": "Je nage.",
+      "answer": "j'ai nagé",
+      "accept": [
+        "j'ai nage"
+      ],
+      "mistakes": [
+        {
+          "answer": "je suis nagé",
+          "feedback": "{nager} takes {avoir} in the passé composé: {j'ai nagé}."
+        }
+      ]
+    },
+    "items/i-j-aime-marcher-dans-la-nature": {
+      "id": "i-j-aime-marcher-dans-la-nature",
+      "type": "respond",
+      "situation": "A friend asks: {Qu'est-ce que tu aimes faire le week-end ?} Say you like walking in nature.",
+      "answer": "j'aime marcher dans la nature"
+    },
+    "items/i-je-cours": {
+      "id": "i-je-cours",
+      "type": "gapfill",
+      "text": "Je ___ tous les jours dans le parc.",
+      "blanks": [
+        {
+          "answer": "cours"
+        }
+      ],
+      "gloss": "I run every day in the park.",
+      "mistakes": [
+        {
+          "answer": "court",
+          "feedback": "With {je}, write {cours}. {court} goes with {il} and {elle}."
+        }
+      ]
+    },
+    "items/i-je-marche": {
+      "id": "i-je-marche",
+      "type": "gapfill",
+      "text": "La tortue est lente : elle ___ lentement.",
+      "blanks": [
+        {
+          "answer": "marche"
+        }
+      ],
+      "gloss": "The turtle is slow: it walks slowly."
+    },
+    "items/i-je-nage": {
+      "id": "i-je-nage",
+      "type": "gapfill",
+      "text": "Le matin, je ___ avec mon frère.",
+      "blanks": [
+        {
+          "answer": "nage"
+        }
+      ],
+      "gloss": "In the morning, I swim with my brother.",
+      "mistakes": [
+        {
+          "answer": "nages",
+          "feedback": "With {je}, {nager} ends in -e: {je nage}."
+        }
+      ]
+    },
+    "items/i-je-nage-dans-la": {
+      "id": "i-je-nage-dans-la",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce que tu fais en été ?} Say that you swim in the sea.",
+      "answer": "je nage dans la mer",
+      "accept": [
+        "en été, je nage dans la mer"
+      ]
+    },
+    "items/i-je-ne-sais-pas-nager": {
+      "id": "i-je-ne-sais-pas-nager",
+      "type": "transform",
+      "instruction": "Say it with {savoir}: you don't know how to swim.",
+      "shown": "Je ne nage pas.",
+      "answer": "je ne sais pas nager",
+      "mistakes": [
+        {
+          "answer": "je sais ne pas nager",
+          "feedback": "Put {ne … pas} around {sais}: {je ne sais pas nager}."
+        }
+      ]
+    },
+    "items/i-je-saute": {
+      "id": "i-je-saute",
+      "type": "transform",
+      "instruction": "Change the subject to {je}.",
+      "shown": "L'écureuil saute.",
+      "answer": "je saute"
+    },
+    "items/i-l-ecureuil-saute": {
+      "id": "i-l-ecureuil-saute",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce que l'écureuil fait ?} Say that the squirrel is jumping.",
+      "answer": "l'écureuil saute",
+      "accept": [
+        "l'ecureuil saute",
+        "il saute"
+      ]
+    },
+    "items/i-l-oiseau-vole": {
+      "id": "i-l-oiseau-vole",
+      "type": "transform",
+      "instruction": "Make it singular.",
+      "shown": "Les oiseaux volent.",
+      "answer": "l'oiseau vole",
+      "mistakes": [
+        {
+          "answer": "l'oiseau volent",
+          "feedback": "With one bird, the verb loses -nt: {l'oiseau vole}."
+        }
+      ]
+    },
+    "items/i-la-tortue-nage": {
+      "id": "i-la-tortue-nage",
+      "type": "transform",
+      "instruction": "Make it singular.",
+      "shown": "Les tortues nagent.",
+      "answer": "la tortue nage"
+    },
+    "items/i-le-lapin-saute": {
+      "id": "i-le-lapin-saute",
+      "type": "transform",
+      "instruction": "Change the subject to {le lapin}.",
+      "shown": "Je saute.",
+      "answer": "le lapin saute"
+    },
+    "items/i-le-poisson-sait-nager": {
+      "id": "i-le-poisson-sait-nager",
+      "type": "transform",
+      "instruction": "Say it with {savoir}: the fish knows how to swim.",
+      "shown": "Le poisson nage.",
+      "answer": "le poisson sait nager"
+    },
+    "items/i-nageais": {
+      "id": "i-nageais",
+      "type": "gapfill",
+      "text": "Quand j'étais petit, je ___ tous les étés.",
+      "blanks": [
+        {
+          "answer": "nageais"
+        }
+      ],
+      "gloss": "When I was little, I swam every summer.",
+      "mistakes": [
+        {
+          "answer": "ai nagé",
+          "feedback": "For something you did again and again in the past, use the imparfait: {je nageais}."
+        }
+      ]
+    },
+    "items/i-nous-nageons": {
+      "id": "i-nous-nageons",
+      "type": "gapfill",
+      "text": "Nous ___ tous les matins.",
+      "blanks": [
+        {
+          "answer": "nageons"
+        }
+      ],
+      "gloss": "We swim every morning.",
+      "mistakes": [
+        {
+          "answer": "nagons",
+          "feedback": "Keep the e before -ons so the g stays soft: {nageons}."
+        }
+      ]
+    },
+    "items/i-nous-volons": {
+      "id": "i-nous-volons",
+      "type": "transform",
+      "instruction": "Change the subject to {nous}.",
+      "shown": "Les oiseaux volent.",
+      "answer": "nous volons",
+      "mistakes": [
+        {
+          "answer": "nous volent",
+          "feedback": "With {nous}, the verb ends in -ons: {nous volons}."
+        }
+      ]
+    },
+    "items/i-oui-je-sais-nager": {
+      "id": "i-oui-je-sais-nager",
+      "type": "respond",
+      "situation": "Your friend asks: {Tu sais nager ?} Say yes, you know how to swim. Use {savoir}.",
+      "answer": "oui, je sais nager",
+      "accept": [
+        "je sais nager"
+      ],
+      "mistakes": [
+        {
+          "answer": "oui, je peux nager",
+          "feedback": "For a skill you have learned, use {savoir}: {je sais nager}."
+        }
+      ]
+    },
+    "items/i-tu-cours": {
+      "id": "i-tu-cours",
+      "type": "transform",
+      "instruction": "Change the subject to {tu}.",
+      "shown": "Je cours.",
+      "answer": "tu cours"
+    },
+    "items/i-tu-cours-vite": {
+      "id": "i-tu-cours-vite",
+      "type": "respond",
+      "situation": "Your friend is running ahead of you in the park. Tell them they run fast.",
+      "answer": "tu cours vite",
+      "accept": [
+        "tu cours vite !"
+      ]
+    },
+    "items/i-tu-nages": {
+      "id": "i-tu-nages",
+      "type": "gapfill",
+      "text": "Tu ___ très bien !",
+      "blanks": [
+        {
+          "answer": "nages"
+        }
+      ],
+      "gloss": "You swim very well!"
+    },
+    "items/i-volent": {
+      "id": "i-volent",
+      "type": "gapfill",
+      "text": "Les abeilles ___ dans le jardin.",
+      "blanks": [
+        {
+          "answer": "volent"
+        }
+      ],
+      "gloss": "The bees are flying in the garden."
+    },
+    "tables": [
+      {
+        "id": "t-three-tenses",
+        "title": "{nager} and {courir} in the present and the past",
+        "rows": [
+          {
+            "fr": "je nage",
+            "en": "I swim",
+            "note": "present"
+          },
+          {
+            "fr": "j'ai nagé",
+            "en": "I swam",
+            "note": "passé composé, with {avoir}"
+          },
+          {
+            "fr": "je nageais",
+            "en": "I was swimming, I used to swim",
+            "note": "imparfait: {nage-} keeps its e before -ais"
+          },
+          {
+            "fr": "il court",
+            "en": "he runs",
+            "note": "present"
+          },
+          {
+            "fr": "il a couru",
+            "en": "he ran",
+            "note": "passé composé, with {avoir}"
+          },
+          {
+            "fr": "il courait",
+            "en": "he was running, he used to run",
+            "note": "imparfait"
+          }
+        ]
+      }
+    ],
+    "vocabulary/couru-fr": {
+      "word_id": "couru-fr",
+      "fr": "couru",
+      "gloss": "run (past participle)",
+      "note": "passé composé of {courir}, with {avoir}: {il a couru}"
+    },
+    "vocabulary/il-courait-fr": {
+      "word_id": "il-courait-fr",
+      "fr": "il courait",
+      "gloss": "he was running / he used to run",
+      "note": "imparfait of {courir}"
+    },
+    "vocabulary/je-nageais-fr": {
+      "word_id": "je-nageais-fr",
+      "fr": "je nageais",
+      "gloss": "I was swimming / I used to swim",
+      "note": "imparfait of {nager}"
+    }
+  },
+  "2024-03-16-quiest-qui-que": {
+    "items/i-qui-est-ce-que-6": {
+      "id": "i-qui-est-ce-que-6",
+      "type": "gapfill",
+      "text": "___ tu as vu au marché ?",
+      "blanks": [
+        {
+          "answer": "qui est-ce que"
+        }
+      ],
+      "gloss": "Who did you see at the market?",
+      "mistakes": [
+        {
+          "answer": "qui est-ce qui",
+          "feedback": "Another subject, {tu}, comes next, so the person seen is the object: {qui est-ce que}."
+        }
+      ]
+    },
+    "items/i-qui-est-ce-qui-a-un-chat-blanc": {
+      "id": "i-qui-est-ce-qui-a-un-chat-blanc",
+      "type": "respond",
+      "situation": "Someone in your class has a white cat. Ask who has a white cat, with {qui est-ce qui}.",
+      "answer": "qui est-ce qui a un chat blanc ?",
+      "accept": [
+        "qui est-ce qui a un chat blanc"
+      ]
+    },
+    "items/i-qui-est-ce-qui-aime-la-nature": {
+      "id": "i-qui-est-ce-qui-aime-la-nature",
+      "type": "respond",
+      "situation": "You are planning a walk in the hills. Ask the group who likes nature, with {qui est-ce qui}.",
+      "answer": "qui est-ce qui aime la nature ?",
+      "accept": [
+        "qui est-ce qui aime la nature"
+      ]
+    },
+    "items/i-qui-est-ce-qui-est-plus-lent-que-la-tortue": {
+      "id": "i-qui-est-ce-qui-est-plus-lent-que-la-tortue",
+      "type": "transform",
+      "instruction": "Ask who, with {qui est-ce qui}.",
+      "shown": "Quelqu'un est plus lent que la tortue.",
+      "answer": "qui est-ce qui est plus lent que la tortue ?",
+      "accept": [
+        "qui est-ce qui est plus lent que la tortue"
+      ]
+    }
+  },
+  "2024-03-17-natural-phenomena": {
+    "concepts": [
+      {
+        "id": "c-natural-process-verbs",
+        "term": "Natural Process Verbs",
+        "definition": "Verbs that describe what happens in nature - shining, growing, raining",
+        "example": "{Le soleil brille} (the sun shines), {Les plantes poussent} (plants grow), {Le vent souffle} (the wind blows)"
+      },
+      {
+        "id": "c-pleuvoir-impersonal-verb",
+        "term": "{pleuvoir} - Impersonal Verb",
+        "definition": "Pleuvoir (to rain) only uses '{il}' form - il pleut (it rains)",
+        "example": "{il pleut} (it rains), {il a plu} (it rained), {il pleuvait} (it was raining)"
+      },
+      {
+        "id": "c-rendre-critical-causative-verb",
+        "term": "{rendre} - CRITICAL Causative Verb!",
+        "definition": "Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!",
+        "example": "{Le soleil rend l'herbe verte} (the sun makes grass green), {Le froid rend l'eau glacée} (cold makes water frozen)"
+      },
+      {
+        "id": "c-causative-pattern-rendre-adjective",
+        "term": "Causative Pattern: rendre + adjective",
+        "definition": "Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]",
+        "example": "{La pluie rend la terre humide} (rain makes the earth wet), {Le soleil rend l'herbe verte} (the sun makes grass green)"
+      },
+      {
+        "id": "c-setting-up-question-patterns",
+        "term": "Setting Up Question Patterns",
+        "definition": "The next lessons use these verbs to ask why and how.",
+        "example": "{Pourquoi est-ce que le soleil brille ? Comment est-ce que les plantes poussent ?}"
+      },
+      {
+        "id": "c-ne-plus-no-longer",
+        "term": "{ne … plus}: no longer",
+        "definition": "Put {ne} before the verb and {plus} after it to say that something has stopped. It works like {ne … pas}.",
+        "example": "{Il ne pleut plus.} (It isn't raining any more.) {Le vent ne souffle plus.} (The wind isn't blowing any more.)"
+      }
+    ],
+    "items/i-il-a-plu": {
+      "id": "i-il-a-plu",
+      "type": "transform",
+      "instruction": "Put it in the passé composé.",
+      "shown": "Il pleut.",
+      "answer": "il a plu",
+      "mistakes": [
+        {
+          "answer": "il a pleuvu",
+          "feedback": "The past participle of {pleuvoir} is irregular: {il a plu}."
+        }
+      ]
+    },
+    "items/i-il-brille": {
+      "id": "i-il-brille",
+      "type": "gapfill",
+      "text": "Il fait beau : le soleil ___.",
+      "blanks": [
+        {
+          "answer": "brille"
+        }
+      ],
+      "gloss": "The weather is nice: the sun is shining."
+    },
+    "items/i-il-ne-pleut-plus": {
+      "id": "i-il-ne-pleut-plus",
+      "type": "transform",
+      "instruction": "Say that the rain has stopped, with {ne … plus}.",
+      "shown": "Il pleut.",
+      "answer": "il ne pleut plus",
+      "mistakes": [
+        {
+          "answer": "il ne pleut pas",
+          "feedback": "{ne … pas} says it is not raining. To say it has stopped, use {ne … plus}."
+        }
+      ]
+    },
+    "items/i-il-pleut": {
+      "id": "i-il-pleut",
+      "type": "respond",
+      "situation": "You look out of the window and see rain. Tell your friend it is raining.",
+      "answer": "il pleut"
+    },
+    "items/i-il-rend": {
+      "id": "i-il-rend",
+      "type": "gapfill",
+      "text": "Le soleil me ___ heureux.",
+      "blanks": [
+        {
+          "answer": "rend"
+        }
+      ],
+      "gloss": "The sun makes me happy."
+    },
+    "items/i-ils-poussent": {
+      "id": "i-ils-poussent",
+      "type": "gapfill",
+      "text": "Au printemps, les fleurs ___.",
+      "blanks": [
+        {
+          "answer": "poussent"
+        }
+      ],
+      "gloss": "In spring, flowers grow."
+    },
+    "items/i-ils-rendent": {
+      "id": "i-ils-rendent",
+      "type": "gapfill",
+      "text": "Les vacances me ___ heureux.",
+      "blanks": [
+        {
+          "answer": "rendent"
+        }
+      ],
+      "gloss": "Holidays make me happy."
+    },
+    "items/i-je-rends": {
+      "id": "i-je-rends",
+      "type": "gapfill",
+      "text": "Je ___ ma mère heureuse.",
+      "blanks": [
+        {
+          "answer": "rends"
+        }
+      ],
+      "gloss": "I make my mother happy.",
+      "mistakes": [
+        {
+          "answer": "rend",
+          "feedback": "With {je}, {rendre} ends in -s: {je rends}."
+        }
+      ]
+    },
+    "items/i-la-pluie-rend-la": {
+      "id": "i-la-pluie-rend-la",
+      "type": "transform",
+      "instruction": "Say it with {rendre}.",
+      "shown": "Il pleut, alors la terre est humide.",
+      "answer": "la pluie rend la terre humide"
+    },
+    "items/i-le-froid-rend-l": {
+      "id": "i-le-froid-rend-l",
+      "type": "transform",
+      "instruction": "Say it with {rendre}.",
+      "shown": "Il fait froid, alors l'eau est glacée.",
+      "answer": "le froid rend l'eau glacée",
+      "accept": [
+        "le froid rend l'eau glacee"
+      ]
+    },
+    "items/i-le-soleil-brille": {
+      "id": "i-le-soleil-brille",
+      "type": "respond",
+      "situation": "Your friend asks: {Il fait beau aujourd'hui ?} Say yes, the sun is shining.",
+      "answer": "le soleil brille",
+      "accept": [
+        "oui, le soleil brille",
+        "oui, il fait beau, le soleil brille"
+      ]
+    },
+    "items/i-le-soleil-brille-dans": {
+      "id": "i-le-soleil-brille-dans",
+      "type": "respond",
+      "situation": "Your friend asks: {Où est-ce que le soleil brille ?} Answer: in the sky.",
+      "answer": "le soleil brille dans le ciel",
+      "accept": [
+        "dans le ciel",
+        "il brille dans le ciel"
+      ]
+    },
+    "items/i-le-soleil-rend-l": {
+      "id": "i-le-soleil-rend-l",
+      "type": "transform",
+      "instruction": "Say it with {rendre}: the sun makes the grass green.",
+      "shown": "le soleil / l'herbe / verte",
+      "answer": "le soleil rend l'herbe verte"
+    },
+    "items/i-le-vent-ne-souffle-plus": {
+      "id": "i-le-vent-ne-souffle-plus",
+      "type": "transform",
+      "instruction": "Say that the wind has stopped, with {ne … plus}.",
+      "shown": "Le vent souffle.",
+      "answer": "le vent ne souffle plus"
+    },
+    "items/i-le-vent-souffle": {
+      "id": "i-le-vent-souffle",
+      "type": "gapfill",
+      "text": "Il fait froid et le vent ___.",
+      "blanks": [
+        {
+          "answer": "souffle"
+        }
+      ],
+      "gloss": "It is cold and the wind is blowing."
+    },
+    "items/i-les-plantes-poussent": {
+      "id": "i-les-plantes-poussent",
+      "type": "transform",
+      "instruction": "Make it plural.",
+      "shown": "La plante pousse.",
+      "answer": "les plantes poussent"
+    },
+    "items/i-les-plantes-poussent-au": {
+      "id": "i-les-plantes-poussent-au",
+      "type": "respond",
+      "situation": "Your friend asks: {Quand est-ce que les plantes poussent ?} Answer: in spring.",
+      "answer": "les plantes poussent au printemps",
+      "accept": [
+        "au printemps",
+        "elles poussent au printemps"
+      ]
+    },
+    "items/i-non-il-ne-pleut-plus": {
+      "id": "i-non-il-ne-pleut-plus",
+      "type": "respond",
+      "situation": "Your friend asks: {Il pleut encore ?} Say no, it is not raining any more. Use {ne … plus}.",
+      "answer": "non, il ne pleut plus",
+      "accept": [
+        "il ne pleut plus"
+      ]
+    },
+    "items/i-pleuvait": {
+      "id": "i-pleuvait",
+      "type": "gapfill",
+      "text": "Hier, quand je suis sorti, il ___.",
+      "blanks": [
+        {
+          "answer": "pleuvait"
+        }
+      ],
+      "gloss": "Yesterday, when I went out, it was raining.",
+      "mistakes": [
+        {
+          "answer": "a plu",
+          "feedback": "For what was going on in the background, use the imparfait: {il pleuvait}."
+        }
+      ]
+    },
+    "items/i-suis-tombe": {
+      "id": "i-suis-tombe",
+      "type": "gapfill",
+      "text": "Hier, je ___ dans la rue.",
+      "blanks": [
+        {
+          "answer": "suis tombé",
+          "accept": [
+            "suis tombée",
+            "suis tombe",
+            "suis tombee"
+          ]
+        }
+      ],
+      "gloss": "Yesterday I fell in the street.",
+      "mistakes": [
+        {
+          "answer": "ai tombé",
+          "feedback": "{tomber} takes {être} in the passé composé: {je suis tombé}."
+        }
+      ]
+    },
+    "items/i-tomber": {
+      "id": "i-tomber",
+      "type": "gapfill",
+      "text": "Attention, tu vas ___ !",
+      "blanks": [
+        {
+          "answer": "tomber"
+        }
+      ],
+      "gloss": "Careful, you're going to fall!"
+    },
+    "vocabulary/qu-est-ce-qui-rend-fr": {
+      "word_id": "qu-est-ce-qui-rend-fr",
+      "fr": "qu'est-ce qui rend...?",
+      "gloss": "what makes...?",
+      "note": "a preview of the next lesson, which teaches this question"
     }
   },
   "2024-03-19-pourquoi-complex": {
@@ -525,7 +1590,710 @@
         "definition": "Once you master pourquoi, you can ask 'why' about literally anything you can say in French!",
         "example": "Any vocabulary × pourquoi × any tense = unlimited curiosity questions"
       }
-    ]
+    ],
+    "items/i-pourquoi-est-ce-qu": {
+      "id": "i-pourquoi-est-ce-qu",
+      "type": "respond",
+      "situation": "Your little brother has your phone. Ask your mother why he has that, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce qu'il a ça ?",
+      "accept": [
+        "pourquoi est-ce qu'il a ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu-2": {
+      "id": "i-pourquoi-est-ce-qu-2",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il pleut.",
+      "answer": "pourquoi est-ce qu'il pleut ?",
+      "accept": [
+        "pourquoi est-ce qu'il pleut"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que il pleut ?",
+          "feedback": "{que} becomes {qu'} before a vowel: {est-ce qu'il}."
+        }
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu-3": {
+      "id": "i-pourquoi-est-ce-qu-3",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il fait ça.",
+      "answer": "pourquoi est-ce qu'il fait ça ?",
+      "accept": [
+        "pourquoi est-ce qu'il fait ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu-5": {
+      "id": "i-pourquoi-est-ce-qu-5",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "On peut voir le soleil.",
+      "answer": "pourquoi est-ce qu'on peut voir le soleil ?",
+      "accept": [
+        "pourquoi est-ce qu'on peut voir le soleil"
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu-6": {
+      "id": "i-pourquoi-est-ce-qu-6",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il ne pleut plus.",
+      "answer": "pourquoi est-ce qu'il ne pleut plus ?",
+      "accept": [
+        "pourquoi est-ce qu'il ne pleut plus"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que": {
+      "id": "i-pourquoi-est-ce-que",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Le ciel est bleu.",
+      "answer": "pourquoi est-ce que le ciel est bleu ?",
+      "accept": [
+        "pourquoi est-ce que le ciel est bleu"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que est le ciel bleu ?",
+          "feedback": "After {est-ce que}, keep statement order: subject, then verb."
+        }
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-11": {
+      "id": "i-pourquoi-est-ce-que-11",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Je dois faire ça.",
+      "answer": "pourquoi est-ce que je dois faire ça ?",
+      "accept": [
+        "pourquoi est-ce que je dois faire ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-12": {
+      "id": "i-pourquoi-est-ce-que-12",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu te dépêches.",
+      "answer": "pourquoi est-ce que tu te dépêches ?",
+      "accept": [
+        "pourquoi est-ce que tu te dépêches",
+        "pourquoi est-ce que tu te depeches?"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-13": {
+      "id": "i-pourquoi-est-ce-que-13",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les plantes ont besoin d'eau.",
+      "answer": "pourquoi est-ce que les plantes ont besoin d'eau ?",
+      "accept": [
+        "pourquoi est-ce que les plantes ont besoin d'eau"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-2": {
+      "id": "i-pourquoi-est-ce-que-2",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "L'herbe est verte.",
+      "answer": "pourquoi est-ce que l'herbe est verte ?",
+      "accept": [
+        "pourquoi est-ce que l'herbe est verte"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-3": {
+      "id": "i-pourquoi-est-ce-que-3",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les nuages sont blancs.",
+      "answer": "pourquoi est-ce que les nuages sont blancs ?",
+      "accept": [
+        "pourquoi est-ce que les nuages sont blancs"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-4": {
+      "id": "i-pourquoi-est-ce-que-4",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "C'est comme ça.",
+      "answer": "pourquoi est-ce que c'est comme ça ?",
+      "accept": [
+        "pourquoi est-ce que c'est comme ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-5": {
+      "id": "i-pourquoi-est-ce-que-5",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les oiseaux ont des ailes.",
+      "answer": "pourquoi est-ce que les oiseaux ont des ailes ?",
+      "accept": [
+        "pourquoi est-ce que les oiseaux ont des ailes"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-6": {
+      "id": "i-pourquoi-est-ce-que-6",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Le soleil brille.",
+      "answer": "pourquoi est-ce que le soleil brille ?",
+      "accept": [
+        "pourquoi est-ce que le soleil brille"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-7": {
+      "id": "i-pourquoi-est-ce-que-7",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les oiseaux volent.",
+      "answer": "pourquoi est-ce que les oiseaux volent ?",
+      "accept": [
+        "pourquoi est-ce que les oiseaux volent"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-8": {
+      "id": "i-pourquoi-est-ce-que-8",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les plantes poussent.",
+      "answer": "pourquoi est-ce que les plantes poussent ?",
+      "accept": [
+        "pourquoi est-ce que les plantes poussent"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-9": {
+      "id": "i-pourquoi-est-ce-que-9",
+      "type": "respond",
+      "situation": "Your little brother is running in the house. Ask him why he is running, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que tu cours ?",
+      "accept": [
+        "pourquoi est-ce que tu cours"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-l-eau-est-glacee": {
+      "id": "i-pourquoi-est-ce-que-l-eau-est-glacee",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "L'eau est glacée.",
+      "answer": "pourquoi est-ce que l'eau est glacée ?",
+      "accept": [
+        "pourquoi est-ce que l'eau est glacée",
+        "pourquoi est-ce que l'eau est glacee"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-la-terre-est-humide": {
+      "id": "i-pourquoi-est-ce-que-la-terre-est-humide",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "La terre est humide.",
+      "answer": "pourquoi est-ce que la terre est humide ?",
+      "accept": [
+        "pourquoi est-ce que la terre est humide"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-le-chien-fait-du-bruit": {
+      "id": "i-pourquoi-est-ce-que-le-chien-fait-du-bruit",
+      "type": "respond",
+      "situation": "The dog next door is barking at night. Ask why it is making noise, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que le chien fait du bruit ?",
+      "accept": [
+        "pourquoi est-ce que le chien fait du bruit"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-le-vent-souffle": {
+      "id": "i-pourquoi-est-ce-que-le-vent-souffle",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Le vent souffle.",
+      "answer": "pourquoi est-ce que le vent souffle ?",
+      "accept": [
+        "pourquoi est-ce que le vent souffle"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-tu-es-tombe": {
+      "id": "i-pourquoi-est-ce-que-tu-es-tombe",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu es tombé.",
+      "answer": "pourquoi est-ce que tu es tombé ?",
+      "accept": [
+        "pourquoi est-ce que tu es tombé",
+        "pourquoi est-ce que tu es tombée ?",
+        "pourquoi est-ce que tu es tombée",
+        "pourquoi est-ce que tu es tombe"
+      ]
+    },
+    "vocabulary/une-aile-fr": {
+      "word_id": "une-aile-fr",
+      "fr": "une aile",
+      "gloss": "a wing",
+      "note": "feminine; plural {des ailes}"
+    }
+  },
+  "2024-03-20-comment-complex": {
+    "items/i-comment-est-ce-qu": {
+      "id": "i-comment-est-ce-qu",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Une tortue nage.",
+      "answer": "comment est-ce qu'une tortue nage ?",
+      "accept": [
+        "comment est-ce qu'une tortue nage"
+      ],
+      "mistakes": [
+        {
+          "answer": "comment est-ce que une tortue nage ?",
+          "feedback": "{que} becomes {qu'} before a vowel: {est-ce qu'une tortue}."
+        }
+      ]
+    },
+    "items/i-comment-est-ce-qu-2": {
+      "id": "i-comment-est-ce-qu-2",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un oiseau vole.",
+      "answer": "comment est-ce qu'un oiseau vole ?",
+      "accept": [
+        "comment est-ce qu'un oiseau vole"
+      ]
+    },
+    "items/i-comment-est-ce-qu-3": {
+      "id": "i-comment-est-ce-qu-3",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un écureuil saute.",
+      "answer": "comment est-ce qu'un écureuil saute ?",
+      "accept": [
+        "comment est-ce qu'un écureuil saute",
+        "comment est-ce qu'un ecureuil saute"
+      ]
+    },
+    "items/i-comment-est-ce-qu-4": {
+      "id": "i-comment-est-ce-qu-4",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un lapin saute.",
+      "answer": "comment est-ce qu'un lapin saute ?",
+      "accept": [
+        "comment est-ce qu'un lapin saute"
+      ]
+    },
+    "items/i-comment-est-ce-qu-5": {
+      "id": "i-comment-est-ce-qu-5",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un écureuil grimpe.",
+      "answer": "comment est-ce qu'un écureuil grimpe ?",
+      "accept": [
+        "comment est-ce qu'un écureuil grimpe",
+        "comment est-ce qu'un ecureuil grimpe"
+      ]
+    },
+    "items/i-comment-est-ce-qu-6": {
+      "id": "i-comment-est-ce-qu-6",
+      "type": "respond",
+      "situation": "Your friend opens a box that you could not open. Ask how it is done, with {comment est-ce que} and {on}.",
+      "cue": "How do we do that?",
+      "answer": "comment est-ce qu'on fait ça ?",
+      "accept": [
+        "comment est-ce qu'on fait ça"
+      ]
+    },
+    "items/i-comment-est-ce-qu-7": {
+      "id": "i-comment-est-ce-qu-7",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Il court si vite.",
+      "answer": "comment est-ce qu'il court si vite ?",
+      "accept": [
+        "comment est-ce qu'il court si vite"
+      ]
+    },
+    "items/i-comment-est-ce-qu-un-oiseau-vole-avec-ses-ailes": {
+      "id": "i-comment-est-ce-qu-un-oiseau-vole-avec-ses-ailes",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un oiseau vole avec ses ailes.",
+      "answer": "comment est-ce qu'un oiseau vole avec ses ailes ?",
+      "accept": [
+        "comment est-ce qu'un oiseau vole avec ses ailes"
+      ]
+    },
+    "items/i-comment-est-ce-que": {
+      "id": "i-comment-est-ce-que",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Les plantes poussent.",
+      "answer": "comment est-ce que les plantes poussent ?",
+      "accept": [
+        "comment est-ce que les plantes poussent"
+      ]
+    },
+    "items/i-comment-est-ce-que-2": {
+      "id": "i-comment-est-ce-que-2",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Le soleil brille.",
+      "answer": "comment est-ce que le soleil brille ?",
+      "accept": [
+        "comment est-ce que le soleil brille"
+      ]
+    },
+    "items/i-comment-est-ce-que-3": {
+      "id": "i-comment-est-ce-que-3",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "La pluie tombe.",
+      "answer": "comment est-ce que la pluie tombe ?",
+      "accept": [
+        "comment est-ce que la pluie tombe"
+      ]
+    },
+    "items/i-comment-est-ce-que-4": {
+      "id": "i-comment-est-ce-que-4",
+      "type": "respond",
+      "situation": "Your friend does a card trick. Ask how they do that, with {comment est-ce que}.",
+      "answer": "comment est-ce que tu fais ça ?",
+      "accept": [
+        "comment est-ce que tu fais ça"
+      ]
+    },
+    "items/i-comment-est-ce-que-5": {
+      "id": "i-comment-est-ce-que-5",
+      "type": "respond",
+      "situation": "Your friend swims very well. Ask how they swim, with {comment est-ce que}.",
+      "answer": "comment est-ce que tu nages ?",
+      "accept": [
+        "comment est-ce que tu nages"
+      ]
+    },
+    "items/i-comment-est-ce-que-6": {
+      "id": "i-comment-est-ce-que-6",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Ça rend l'herbe verte.",
+      "answer": "comment est-ce que ça rend l'herbe verte ?",
+      "accept": [
+        "comment est-ce que ça rend l'herbe verte"
+      ]
+    },
+    "items/i-comment-est-ce-que-le-papillon-vole": {
+      "id": "i-comment-est-ce-que-le-papillon-vole",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Le papillon vole.",
+      "answer": "comment est-ce que le papillon vole ?",
+      "accept": [
+        "comment est-ce que le papillon vole"
+      ]
+    },
+    "items/i-comment-est-ce-que-les-abeilles-trouvent-les-fleurs": {
+      "id": "i-comment-est-ce-que-les-abeilles-trouvent-les-fleurs",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Les abeilles trouvent les fleurs.",
+      "answer": "comment est-ce que les abeilles trouvent les fleurs ?",
+      "accept": [
+        "comment est-ce que les abeilles trouvent les fleurs"
+      ]
+    },
+    "items/i-comment-est-ce-que-les-nuages-blancs-restent": {
+      "id": "i-comment-est-ce-que-les-nuages-blancs-restent",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Les nuages blancs restent dans le ciel bleu.",
+      "answer": "comment est-ce que les nuages blancs restent dans le ciel bleu ?",
+      "accept": [
+        "comment est-ce que les nuages blancs restent dans le ciel bleu"
+      ]
+    },
+    "items/i-comment-est-ce-que-tu-as-fait-ca": {
+      "id": "i-comment-est-ce-que-tu-as-fait-ca",
+      "type": "respond",
+      "situation": "Your friend did the card trick again. Ask how they did that, with {comment est-ce que} and the passé composé.",
+      "answer": "comment est-ce que tu as fait ça ?",
+      "accept": [
+        "comment est-ce que tu as fait ça"
+      ]
+    },
+    "items/i-qu-est-ce-qui-fait-ce-bruit": {
+      "id": "i-qu-est-ce-qui-fait-ce-bruit",
+      "type": "respond",
+      "situation": "You hear a noise in the garden. Ask what is making that noise, with {qu'est-ce qui}.",
+      "answer": "qu'est-ce qui fait ce bruit ?",
+      "accept": [
+        "qu'est-ce qui fait ce bruit"
+      ],
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que fait ce bruit ?",
+          "feedback": "The thing makes the noise, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
+    },
+    "vocabulary/comment-est-ce-qu-un-ecureuil-saute-fr": {
+      "word_id": "comment-est-ce-qu-un-ecureuil-saute-fr",
+      "fr": "Comment est-ce qu'un écureuil saute?",
+      "gloss": "How does a squirrel jump?",
+      "note": "animal + movement question",
+      "review": true
+    },
+    "vocabulary/comment-est-ce-qu-une-tortue-nage-fr": {
+      "word_id": "comment-est-ce-qu-une-tortue-nage-fr",
+      "fr": "Comment est-ce qu'une tortue nage?",
+      "gloss": "How does a turtle swim?",
+      "note": "animal + movement question",
+      "review": true
+    },
+    "vocabulary/comment-nage-une-tortue-fr": {
+      "word_id": "comment-nage-une-tortue-fr",
+      "fr": "Comment nage une tortue?",
+      "gloss": "How does a turtle swim?",
+      "note": "FORMAL inversion - same meaning",
+      "review": true
+    }
+  },
+  "2024-03-22-inversion-questions": {
+    "items/i-a-t-il-plu-hier": {
+      "id": "i-a-t-il-plu-hier",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Il a plu hier.",
+      "answer": "a-t-il plu hier ?",
+      "accept": [
+        "a-t-il plu hier"
+      ],
+      "mistakes": [
+        {
+          "answer": "a-il plu hier ?",
+          "feedback": "Between two vowels, add {-t-}: {a-t-il}."
+        }
+      ]
+    },
+    "items/i-as-tu-nage-dans-la-mer": {
+      "id": "i-as-tu-nage-dans-la-mer",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu as nagé dans la mer.",
+      "answer": "as-tu nagé dans la mer ?",
+      "accept": [
+        "as-tu nagé dans la mer",
+        "as-tu nage dans la mer"
+      ],
+      "mistakes": [
+        {
+          "answer": "as nagé-tu dans la mer ?",
+          "feedback": "In the passé composé, invert the helping verb and its subject: {as-tu nagé}."
+        }
+      ]
+    },
+    "items/i-veux-tu-venir": {
+      "id": "i-veux-tu-venir",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu veux venir.",
+      "answer": "veux-tu venir ?",
+      "accept": [
+        "veux-tu venir"
+      ]
+    }
+  },
+  "2024-03-23-embedded-questions": {
+    "items/i-je-me-demande-comment": {
+      "id": "i-je-me-demande-comment",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Comment est-ce que ça marche ?",
+      "answer": "je me demande comment ça marche"
+    },
+    "items/i-je-me-demande-ou": {
+      "id": "i-je-me-demande-ou",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Où est-il ?",
+      "answer": "je me demande où il est",
+      "mistakes": [
+        {
+          "answer": "je me demande où est-il",
+          "feedback": "Inside the sentence, put the subject before the verb: {où il est}."
+        }
+      ]
+    },
+    "items/i-je-me-demande-ou-vont-les-oiseaux": {
+      "id": "i-je-me-demande-ou-vont-les-oiseaux",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Où vont les oiseaux en hiver ?",
+      "answer": "je me demande où vont les oiseaux en hiver",
+      "accept": [
+        "je me demande où les oiseaux vont en hiver"
+      ]
+    },
+    "items/i-je-me-demande-pourquoi": {
+      "id": "i-je-me-demande-pourquoi",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi est-ce que c'est comme ça ?",
+      "answer": "je me demande pourquoi c'est comme ça",
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi est-ce que c'est comme ça",
+          "feedback": "After {je me demande}, drop {est-ce que}: {pourquoi c'est comme ça}."
+        }
+      ]
+    },
+    "items/i-je-me-demande-pourquoi-2": {
+      "id": "i-je-me-demande-pourquoi-2",
+      "type": "respond",
+      "situation": "You look up at the sky with a friend. Say that you wonder why it is blue, starting with {Je me demande}.",
+      "cue": "I wonder why the sky is blue",
+      "answer": "je me demande pourquoi le ciel est bleu",
+      "accept": [
+        "je me demande pourquoi il est bleu"
+      ],
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi le ciel est-il bleu",
+          "feedback": "Inside the sentence, use statement order with no inversion: {pourquoi le ciel est bleu}."
+        }
+      ]
+    },
+    "items/i-je-me-demande-pourquoi-il-ne-pleut-plus": {
+      "id": "i-je-me-demande-pourquoi-il-ne-pleut-plus",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi est-ce qu'il ne pleut plus ?",
+      "answer": "je me demande pourquoi il ne pleut plus"
+    },
+    "items/i-je-me-demande-pourquoi-le-vent-souffle": {
+      "id": "i-je-me-demande-pourquoi-le-vent-souffle",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi le vent souffle-t-il si fort ?",
+      "answer": "je me demande pourquoi le vent souffle si fort"
+    },
+    "items/i-je-ne-sais-pas": {
+      "id": "i-je-ne-sais-pas",
+      "type": "respond",
+      "situation": "Someone asks you: {Comment est-ce qu'on fait ça ?} You have no idea. Say you don't know how we do that.",
+      "answer": "je ne sais pas comment on fait ça"
+    },
+    "items/i-je-ne-sais-pas-2": {
+      "id": "i-je-ne-sais-pas-2",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Pourquoi fait-il ça ?",
+      "answer": "je ne sais pas pourquoi il fait ça"
+    },
+    "items/i-je-ne-sais-pas-3": {
+      "id": "i-je-ne-sais-pas-3",
+      "type": "respond",
+      "situation": "A child asks you: {Comment est-ce qu'une tortue nage ?} You have no idea. Say so, starting with {Je ne sais pas}.",
+      "cue": "I don't know how a turtle swims",
+      "answer": "je ne sais pas comment une tortue nage",
+      "accept": [
+        "je ne sais pas comment nage une tortue"
+      ],
+      "mistakes": [
+        {
+          "answer": "je ne sais pas comment est-ce qu'une tortue nage",
+          "feedback": "After {je ne sais pas}, drop {est-ce que}."
+        }
+      ]
+    },
+    "items/i-je-ne-sais-pas-4": {
+      "id": "i-je-ne-sais-pas-4",
+      "type": "respond",
+      "situation": "A tourist asks you: {Où est la gare ?} You don't know. Tell them.",
+      "answer": "je ne sais pas où est la gare",
+      "accept": [
+        "je ne sais pas où la gare est",
+        "désolé, je ne sais pas où est la gare",
+        "désolée, je ne sais pas où est la gare"
+      ]
+    },
+    "items/i-je-ne-sais-pas-pourquoi-l-eau-est-glacee": {
+      "id": "i-je-ne-sais-pas-pourquoi-l-eau-est-glacee",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Pourquoi est-ce que l'eau est glacée ?",
+      "answer": "je ne sais pas pourquoi l'eau est glacée",
+      "accept": [
+        "je ne sais pas pourquoi l'eau est glacee"
+      ]
+    },
+    "items/i-je-ne-sais-pas-pourquoi-les-oiseaux-ont-des-ailes": {
+      "id": "i-je-ne-sais-pas-pourquoi-les-oiseaux-ont-des-ailes",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Pourquoi les oiseaux ont-ils des ailes ?",
+      "answer": "je ne sais pas pourquoi les oiseaux ont des ailes"
+    },
+    "items/i-je-ne-sais-pas-quand-les-plantes-fleurissent": {
+      "id": "i-je-ne-sais-pas-quand-les-plantes-fleurissent",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Quand fleurissent les plantes ?",
+      "answer": "je ne sais pas quand les plantes fleurissent",
+      "accept": [
+        "je ne sais pas quand fleurissent les plantes"
+      ]
+    },
+    "items/i-on-ne-comprend-pas": {
+      "id": "i-on-ne-comprend-pas",
+      "type": "transform",
+      "instruction": "Start with {On ne comprend pas}.",
+      "shown": "Pourquoi c'est comme ça ?",
+      "answer": "on ne comprend pas pourquoi c'est comme ça"
+    },
+    "items/i-peux-tu-me-dire": {
+      "id": "i-peux-tu-me-dire",
+      "type": "respond",
+      "situation": "You are lost in town. Ask a friend where the station is, politely, with {peux-tu me dire}.",
+      "answer": "peux-tu me dire où est la gare ?",
+      "accept": [
+        "peux-tu me dire où est la gare",
+        "peux-tu me dire où la gare est ?"
+      ]
+    },
+    "items/i-peux-tu-me-dire-2": {
+      "id": "i-peux-tu-me-dire-2",
+      "type": "transform",
+      "instruction": "Ask politely, with {Peux-tu me dire}.",
+      "shown": "Comment ça marche ?",
+      "answer": "peux-tu me dire comment ça marche ?",
+      "accept": [
+        "peux-tu me dire comment ça marche"
+      ]
+    },
+    "items/i-peux-tu-me-dire-3": {
+      "id": "i-peux-tu-me-dire-3",
+      "type": "transform",
+      "instruction": "Ask politely, with {Peux-tu me dire}.",
+      "shown": "Pourquoi est-ce qu'il fait ça ?",
+      "answer": "peux-tu me dire pourquoi il fait ça ?",
+      "accept": [
+        "peux-tu me dire pourquoi il fait ça"
+      ],
+      "mistakes": [
+        {
+          "answer": "peux-tu me dire pourquoi est-ce qu'il fait ça ?",
+          "feedback": "After {peux-tu me dire}, drop {est-ce que}: {pourquoi il fait ça}."
+        }
+      ]
+    },
+    "items/i-tu-sais-pourquoi-il": {
+      "id": "i-tu-sais-pourquoi-il",
+      "type": "transform",
+      "instruction": "Ask it with {Tu sais}.",
+      "shown": "Pourquoi il fait ça ?",
+      "answer": "tu sais pourquoi il fait ça ?",
+      "accept": [
+        "tu sais pourquoi il fait ça"
+      ]
+    }
   },
   "2024-03-24-everyday-nouns": {
     "concepts": [
@@ -608,6 +2376,71 @@
       ]
     }
   },
+  "2024-03-24-rhetorical-negative": {
+    "items/i-n-as-tu-pas": {
+      "id": "i-n-as-tu-pas",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu n'as pas faim ?",
+      "answer": "n'as-tu pas faim ?",
+      "accept": [
+        "n'as-tu pas faim"
+      ],
+      "mistakes": [
+        {
+          "answer": "n'as pas-tu faim ?",
+          "feedback": "{pas} comes after the inverted pair: {n'as-tu pas}."
+        }
+      ]
+    },
+    "items/i-n-es-tu-pas": {
+      "id": "i-n-es-tu-pas",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu n'es pas content ?",
+      "answer": "n'es-tu pas content ?",
+      "accept": [
+        "n'es-tu pas content",
+        "n'es-tu pas contente ?",
+        "n'es-tu pas contente"
+      ],
+      "mistakes": [
+        {
+          "answer": "ne es-tu pas content ?",
+          "feedback": "{ne} becomes {n'} before a vowel: {n'es-tu pas}."
+        }
+      ]
+    },
+    "items/i-n-est-ce-pas": {
+      "id": "i-n-est-ce-pas",
+      "type": "respond",
+      "situation": "Your friend doubts that French bread is the best. Ask a negative question to get them to agree: isn't that true?",
+      "answer": "n'est-ce pas vrai ?",
+      "accept": [
+        "n'est-ce pas vrai"
+      ]
+    },
+    "items/i-n-est-ce-pas-3": {
+      "id": "i-n-est-ce-pas-3",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Ce n'est pas magnifique ?",
+      "answer": "n'est-ce pas magnifique ?",
+      "accept": [
+        "n'est-ce pas magnifique"
+      ]
+    },
+    "items/i-ne-veux-tu-pas": {
+      "id": "i-ne-veux-tu-pas",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu ne veux pas essayer ?",
+      "answer": "ne veux-tu pas essayer ?",
+      "accept": [
+        "ne veux-tu pas essayer"
+      ]
+    }
+  },
   "2024-03-25-multi-clause-questions": {
     "concepts": [
       {
@@ -640,7 +2473,190 @@
         "definition": "These questions demonstrate complete mastery of French question formation",
         "example": "Can ask ANY question about ANY thought - you've reached full competency!"
       }
-    ]
+    ],
+    "items/i-c-est-bien-qu-il-soit-la-n-est-ce-pas": {
+      "id": "i-c-est-bien-qu-il-soit-la-n-est-ce-pas",
+      "type": "transform",
+      "instruction": "Ask for agreement with {n'est-ce pas}.",
+      "shown": "C'est bien qu'il soit là.",
+      "answer": "c'est bien qu'il soit là, n'est-ce pas ?",
+      "accept": [
+        "c'est bien qu'il soit là n'est-ce pas",
+        "c'est bien qu'il soit la, n'est-ce pas"
+      ]
+    },
+    "items/i-comment-est-ce-que": {
+      "id": "i-comment-est-ce-que",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Tu veux que je le fasse.",
+      "answer": "comment est-ce que tu veux que je le fasse ?",
+      "accept": [
+        "comment est-ce que tu veux que je le fasse"
+      ]
+    },
+    "items/i-comment-est-ce-que-2": {
+      "id": "i-comment-est-ce-que-2",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Tu penses qu'on devrait faire ça.",
+      "answer": "comment est-ce que tu penses qu'on devrait faire ça ?",
+      "accept": [
+        "comment est-ce que tu penses qu'on devrait faire ça"
+      ]
+    },
+    "items/i-comment-est-ce-que-3": {
+      "id": "i-comment-est-ce-que-3",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Tu penses qu'on pourrait le faire marcher.",
+      "answer": "comment est-ce que tu penses qu'on pourrait le faire marcher ?",
+      "accept": [
+        "comment est-ce que tu penses qu'on pourrait le faire marcher"
+      ]
+    },
+    "items/i-je-me-demande-pourquoi-il-faut-que-je-parte": {
+      "id": "i-je-me-demande-pourquoi-il-faut-que-je-parte",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi est-ce qu'il faut que je parte ?",
+      "answer": "je me demande pourquoi il faut que je parte",
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi est-ce qu'il faut que je parte",
+          "feedback": "After {je me demande}, drop {est-ce que}."
+        }
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu": {
+      "id": "i-pourquoi-est-ce-qu",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il faut que je fasse ça.",
+      "answer": "pourquoi est-ce qu'il faut que je fasse ça ?",
+      "accept": [
+        "pourquoi est-ce qu'il faut que je fasse ça"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce qu'il faut que je fais ça ?",
+          "feedback": "After {il faut que}, use the subjunctive: {que je fasse}."
+        }
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu-2": {
+      "id": "i-pourquoi-est-ce-qu-2",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il faut que tu partes.",
+      "answer": "pourquoi est-ce qu'il faut que tu partes ?",
+      "accept": [
+        "pourquoi est-ce qu'il faut que tu partes"
+      ]
+    },
+    "items/i-pourquoi-est-ce-qu-3": {
+      "id": "i-pourquoi-est-ce-qu-3",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il ne veut pas venir.",
+      "answer": "pourquoi est-ce qu'il ne veut pas venir ?",
+      "accept": [
+        "pourquoi est-ce qu'il ne veut pas venir"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que": {
+      "id": "i-pourquoi-est-ce-que",
+      "type": "respond",
+      "situation": "Your friend asks you to clean the kitchen. Ask why they want you to do that, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que tu veux que je fasse ça ?",
+      "accept": [
+        "pourquoi est-ce que tu veux que je fasse ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-2": {
+      "id": "i-pourquoi-est-ce-que-2",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu veux qu'il vienne.",
+      "answer": "pourquoi est-ce que tu veux qu'il vienne ?",
+      "accept": [
+        "pourquoi est-ce que tu veux qu'il vienne"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-3": {
+      "id": "i-pourquoi-est-ce-que-3",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu penses que c'est comme ça.",
+      "answer": "pourquoi est-ce que tu penses que c'est comme ça ?",
+      "accept": [
+        "pourquoi est-ce que tu penses que c'est comme ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-4": {
+      "id": "i-pourquoi-est-ce-que-4",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu ferais ça.",
+      "answer": "pourquoi est-ce que tu ferais ça ?",
+      "accept": [
+        "pourquoi est-ce que tu ferais ça"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-5": {
+      "id": "i-pourquoi-est-ce-que-5",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Ça ne marche pas.",
+      "answer": "pourquoi est-ce que ça ne marche pas ?",
+      "accept": [
+        "pourquoi est-ce que ça ne marche pas"
+      ]
+    },
+    "items/i-pourquoi-est-ce-que-6": {
+      "id": "i-pourquoi-est-ce-que-6",
+      "type": "respond",
+      "situation": "Your friend Marc smiles when Paul walks in. Ask Marc why he is happy that Paul is here, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que tu es content qu'il soit là ?",
+      "accept": [
+        "pourquoi est-ce que tu es content qu'il soit là",
+        "pourquoi est-ce que tu es content qu'il soit la",
+        "pourquoi est-ce que tu es content que Paul soit là ?",
+        "pourquoi est-ce que tu es content que Paul soit là"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que tu es content qu'il est là ?",
+          "feedback": "After {content que}, use the subjunctive: {qu'il soit là}."
+        }
+      ]
+    },
+    "items/i-qu-est-ce-que": {
+      "id": "i-qu-est-ce-que",
+      "type": "transform",
+      "instruction": "Ask what, with {qu'est-ce que}.",
+      "shown": "Tu penses qu'il devrait faire quelque chose.",
+      "answer": "qu'est-ce que tu penses qu'il devrait faire ?",
+      "accept": [
+        "qu'est-ce que tu penses qu'il devrait faire"
+      ]
+    },
+    "items/i-qu-est-ce-qui": {
+      "id": "i-qu-est-ce-qui",
+      "type": "transform",
+      "instruction": "Ask what, with {qu'est-ce qui}.",
+      "shown": "Quelque chose rendrait l'herbe plus verte.",
+      "answer": "qu'est-ce qui rendrait l'herbe plus verte ?",
+      "accept": [
+        "qu'est-ce qui rendrait l'herbe plus verte"
+      ],
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que rendrait l'herbe plus verte ?",
+          "feedback": "The thing does the making, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
+    }
   },
   "2024-03-30-reading-4": {
     "description": "A natural conversation using all your vocabulary.",

@@ -99,13 +99,13 @@
       "word_id": "le-vent-fr",
       "fr": "le vent",
       "gloss": "the wind",
-      "note": "masculine - for '{souffler}' (to blow)"
+      "note": "masculine: {le vent}"
     },
     {
       "word_id": "la-pluie-fr",
       "fr": "la pluie",
       "gloss": "the rain",
-      "note": "feminine - for '{pleuvoir}' (to rain)"
+      "note": "feminine: {la pluie}"
     },
     {
       "word_id": "la-nature-fr",
@@ -136,8 +136,8 @@
     {
       "id": "c-animals-for-question-asking",
       "term": "Animals for Question-Asking",
-      "definition": "These animals are perfect examples for asking 'how does X do Y?' questions",
-      "example": "{Comment est-ce qu'une tortue nage? Comment est-ce qu'un écureuil saute?}"
+      "definition": "The next lessons ask how and why these animals move. Start with what each one is like.",
+      "example": "{La tortue est lente.} (The turtle is slow.) {L'écureuil est rapide.} (The squirrel is fast.)"
     },
     {
       "id": "c-learning-animal-genders",
@@ -147,7 +147,7 @@
     },
     {
       "id": "c-nature-elements",
-      "term": "{Nature Elements}",
+      "term": "Nature words",
       "definition": "Essential nature vocabulary for asking questions about natural phenomena",
       "example": "{le vent} (wind), {la pluie} (rain), {une plante} (plant), {un arbre} (tree)"
     },
@@ -160,17 +160,21 @@
     {
       "id": "c-setting-up-for-questions",
       "term": "Setting Up for Questions",
-      "definition": "This vocabulary enables curiosity questions in future modules",
-      "example": "After learning this: you can ask '{Pourquoi est-ce que les oiseaux volent?}' (Why do birds fly?)"
+      "definition": "These words come back in the question lessons that follow.",
+      "example": "{Pourquoi est-ce que la tortue est lente ?} (Why is the turtle slow?)"
     }
   ],
   "items": [
     {
       "id": "i-un-oiseau",
-      "type": "translate",
-      "prompt": "a bird",
-      "answer": "un oiseau",
-      "hint": "masculine article + oiseau",
+      "type": "gapfill",
+      "text": "Je vois ___ : il est petit et bleu.",
+      "blanks": [
+        {
+          "answer": "un oiseau"
+        }
+      ],
+      "gloss": "I see a bird: it is small and blue.",
       "mistakes": [
         {
           "answer": "une oiseau",
@@ -184,10 +188,14 @@
     },
     {
       "id": "i-une-tortue",
-      "type": "translate",
-      "prompt": "a turtle",
-      "answer": "une tortue",
-      "hint": "feminine article + tortue",
+      "type": "gapfill",
+      "text": "C'est ___ : elle est très lente.",
+      "blanks": [
+        {
+          "answer": "une tortue"
+        }
+      ],
+      "gloss": "It's a turtle: it is very slow.",
       "mistakes": [
         {
           "answer": "un tortue",
@@ -197,13 +205,17 @@
     },
     {
       "id": "i-un-ecureuil",
-      "type": "translate",
-      "prompt": "a squirrel",
-      "answer": "un écureuil",
-      "accept": [
-        "un ecureuil"
+      "type": "gapfill",
+      "text": "Il y a ___ dans l'arbre : il est petit et rapide.",
+      "blanks": [
+        {
+          "answer": "un écureuil",
+          "accept": [
+            "un ecureuil"
+          ]
+        }
       ],
-      "hint": "masculine article + écureuil",
+      "gloss": "There is a squirrel in the tree: it is small and fast.",
       "mistakes": [
         {
           "answer": "une écureuil",
@@ -213,52 +225,88 @@
     },
     {
       "id": "i-un-lapin",
-      "type": "translate",
-      "prompt": "a rabbit",
-      "answer": "un lapin",
-      "hint": "masculine article + lapin"
+      "type": "gapfill",
+      "text": "Nous avons ___ et un chat à la maison.",
+      "blanks": [
+        {
+          "answer": "un lapin"
+        }
+      ],
+      "gloss": "We have a rabbit and a cat at home.",
+      "mistakes": [
+        {
+          "answer": "une lapin",
+          "feedback": "{lapin} is masculine: {un lapin}."
+        }
+      ]
     },
     {
       "id": "i-un-papillon",
-      "type": "translate",
-      "prompt": "a butterfly",
-      "answer": "un papillon",
-      "hint": "masculine article + papillon"
+      "type": "gapfill",
+      "text": "Le chat regarde ___.",
+      "blanks": [
+        {
+          "answer": "un papillon"
+        }
+      ],
+      "gloss": "The cat is watching a butterfly."
     },
     {
       "id": "i-une-abeille",
-      "type": "translate",
-      "prompt": "a bee",
-      "answer": "une abeille",
-      "hint": "feminine article + abeille"
+      "type": "gapfill",
+      "text": "Il y a ___ dans la fleur.",
+      "blanks": [
+        {
+          "answer": "une abeille"
+        }
+      ],
+      "gloss": "There is a bee in the flower.",
+      "mistakes": [
+        {
+          "answer": "un abeille",
+          "feedback": "{abeille} is feminine: {une abeille}."
+        }
+      ]
     },
     {
       "id": "i-une-plante",
-      "type": "translate",
-      "prompt": "a plant",
-      "answer": "une plante",
-      "hint": "feminine article + plante"
+      "type": "gapfill",
+      "text": "Je donne ___ à ma mère.",
+      "blanks": [
+        {
+          "answer": "une plante"
+        }
+      ],
+      "gloss": "I'm giving my mother a plant."
     },
     {
       "id": "i-le-vent",
-      "type": "translate",
-      "prompt": "the wind",
-      "answer": "le vent",
-      "hint": "masculine article + vent"
+      "type": "gapfill",
+      "text": "J'aime le soleil, mais je n'aime pas ___.",
+      "blanks": [
+        {
+          "answer": "le vent"
+        }
+      ],
+      "gloss": "I like the sun, but I don't like the wind."
     },
     {
       "id": "i-la-pluie",
-      "type": "translate",
-      "prompt": "the rain",
-      "answer": "la pluie",
-      "hint": "feminine article + pluie"
+      "type": "gapfill",
+      "text": "Les plantes aiment ___.",
+      "blanks": [
+        {
+          "answer": "la pluie"
+        }
+      ],
+      "gloss": "Plants like the rain."
     },
     {
       "id": "i-la-tortue-est-lente",
-      "type": "translate",
-      "prompt": "The turtle is slow",
+      "type": "transform",
+      "instruction": "Say the opposite: the turtle is slow.",
+      "shown": "La tortue est rapide.",
       "answer": "la tortue est lente",
-      "hint": "la tortue + est + lente (feminine)",
       "mistakes": [
         {
           "answer": "la tortue est lent",
@@ -268,41 +316,91 @@
     },
     {
       "id": "i-l-ecureuil-est-rapide",
-      "type": "translate",
-      "prompt": "The squirrel is fast",
+      "type": "transform",
+      "instruction": "Say the opposite: the squirrel is fast.",
+      "shown": "L'écureuil est lent.",
       "answer": "l'écureuil est rapide",
       "accept": [
         "l'ecureuil est rapide"
-      ],
-      "hint": "{l'écureuil + est + rapide}"
+      ]
     },
     {
       "id": "i-l-abeille-est-petite",
-      "type": "translate",
-      "prompt": "The bee is small",
+      "type": "transform",
+      "instruction": "Say the opposite: the bee is small.",
+      "shown": "L'abeille est grande.",
       "answer": "l'abeille est petite",
-      "hint": "l'abeille + est + petite (feminine)"
+      "mistakes": [
+        {
+          "answer": "l'abeille est petit",
+          "feedback": "{abeille} is feminine, so the adjective adds -e: {petite}."
+        }
+      ]
     },
     {
       "id": "i-un-oiseau-bleu",
-      "type": "translate",
-      "prompt": "a blue bird",
+      "type": "transform",
+      "instruction": "Put the color in the right place.",
+      "shown": "un oiseau + bleu",
       "answer": "un oiseau bleu",
-      "hint": "{un oiseau + bleu}"
+      "mistakes": [
+        {
+          "answer": "un bleu oiseau",
+          "feedback": "Colors come after the noun: {un oiseau bleu}."
+        }
+      ]
     },
     {
       "id": "i-un-papillon-jaune",
-      "type": "translate",
-      "prompt": "a yellow butterfly",
-      "answer": "un papillon jaune",
-      "hint": "{un papillon + jaune}"
+      "type": "gapfill",
+      "text": "Sur la fleur, il y a ___.",
+      "blanks": [
+        {
+          "answer": "un papillon jaune"
+        }
+      ],
+      "gloss": "On the flower, there is a yellow butterfly.",
+      "mistakes": [
+        {
+          "answer": "un jaune papillon",
+          "feedback": "Colors come after the noun: {un papillon jaune}."
+        }
+      ]
     },
     {
       "id": "i-je-vois-un-oiseau",
-      "type": "translate",
-      "prompt": "I see a bird",
+      "type": "respond",
+      "situation": "You are in the garden with a friend. Tell them you see a bird.",
       "answer": "je vois un oiseau",
-      "hint": "{je vois + un oiseau}"
+      "accept": [
+        "regarde, je vois un oiseau"
+      ]
+    },
+    {
+      "id": "i-la-tortue-est-plus-lente-que-le-lapin",
+      "type": "transform",
+      "instruction": "Compare the two animals with {plus … que}.",
+      "shown": "la tortue (lente) / le lapin",
+      "answer": "la tortue est plus lente que le lapin",
+      "mistakes": [
+        {
+          "answer": "la tortue est plus lent que le lapin",
+          "feedback": "{lent} agrees with {la tortue}, which is feminine: {plus lente}."
+        }
+      ]
+    },
+    {
+      "id": "i-il-y-a-des-abeilles-dans-le-jardin",
+      "type": "transform",
+      "instruction": "Make it plural.",
+      "shown": "Il y a une abeille dans le jardin.",
+      "answer": "il y a des abeilles dans le jardin",
+      "mistakes": [
+        {
+          "answer": "il y a des abeille dans le jardin",
+          "feedback": "The plural noun adds -s: {des abeilles}."
+        }
+      ]
     }
   ]
 }

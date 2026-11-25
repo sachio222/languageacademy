@@ -287,6 +287,24 @@
       "fr": "marcher lentement",
       "gloss": "to walk slowly",
       "note": "{il marche lentement}"
+    },
+    {
+      "word_id": "je-nageais-fr",
+      "fr": "je nageais",
+      "gloss": "I was swimming / I used to swim",
+      "note": "imparfait of {nager}"
+    },
+    {
+      "word_id": "couru-fr",
+      "fr": "couru",
+      "gloss": "run (past participle)",
+      "note": "passé composé of {courir}, with {avoir}: {il a couru}"
+    },
+    {
+      "word_id": "il-courait-fr",
+      "fr": "il courait",
+      "gloss": "he was running / he used to run",
+      "note": "imparfait of {courir}"
     }
   ],
   "concepts": [
@@ -312,158 +330,377 @@
       "id": "c-animals-movement",
       "term": "Animals + Movement",
       "definition": "Combine with animal vocabulary to describe how animals move",
-      "example": "{La tortue nage} (the turtle swims), {L'oiseau vole} (the bird flies), {L'écureuil saute} (the squirrel jumps)"
+      "example": "{La tortue nage} (the turtle swims), {Les oiseaux volent} (birds fly), {L'écureuil saute} (the squirrel jumps)"
     },
     {
       "id": "c-works-in-all-tenses",
       "term": "Works in All Tenses",
-      "definition": "These verbs work in all tenses you've learned - present, past, imparfait",
-      "example": "{Je nage} (I swim), {J'ai nagé} (I swam), {Je nageais} (I was swimming)"
+      "definition": "These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.",
+      "example": "{Je nage} (I swim), {J'ai nagé} (I swam), {Je nageais} (I was swimming, I used to swim)"
+    },
+    {
+      "id": "c-savoir-infinitive",
+      "term": "{savoir} + infinitive: know how to",
+      "definition": "Use {savoir} with an infinitive for a skill someone has learned, and {pouvoir} for whether they are able to at that moment.",
+      "example": "{Je sais nager.} (I can swim, I know how.) {Les petits oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-three-tenses",
+      "title": "{nager} and {courir} in the present and the past",
+      "rows": [
+        {
+          "fr": "je nage",
+          "en": "I swim",
+          "note": "present"
+        },
+        {
+          "fr": "j'ai nagé",
+          "en": "I swam",
+          "note": "passé composé, with {avoir}"
+        },
+        {
+          "fr": "je nageais",
+          "en": "I was swimming, I used to swim",
+          "note": "imparfait: {nage-} keeps its e before -ais"
+        },
+        {
+          "fr": "il court",
+          "en": "he runs",
+          "note": "present"
+        },
+        {
+          "fr": "il a couru",
+          "en": "he ran",
+          "note": "passé composé, with {avoir}"
+        },
+        {
+          "fr": "il courait",
+          "en": "he was running, he used to run",
+          "note": "imparfait"
+        }
+      ]
     }
   ],
   "items": [
     {
       "id": "i-je-nage",
-      "type": "translate",
-      "prompt": "I swim",
-      "answer": "je nage",
-      "hint": "nager for je"
+      "type": "gapfill",
+      "text": "Le matin, je ___ avec mon frère.",
+      "blanks": [
+        {
+          "answer": "nage"
+        }
+      ],
+      "gloss": "In the morning, I swim with my brother.",
+      "mistakes": [
+        {
+          "answer": "nages",
+          "feedback": "With {je}, {nager} ends in -e: {je nage}."
+        }
+      ]
     },
     {
       "id": "i-tu-nages",
-      "type": "respond",
-      "situation": "you swim (informal)",
-      "answer": "tu nages",
-      "hint": "nager for tu"
+      "type": "gapfill",
+      "text": "Tu ___ très bien !",
+      "blanks": [
+        {
+          "answer": "nages"
+        }
+      ],
+      "gloss": "You swim very well!"
     },
     {
       "id": "i-nous-nageons",
-      "type": "translate",
-      "prompt": "we swim",
-      "answer": "nous nageons",
-      "hint": "nager for nous - careful with spelling!"
+      "type": "gapfill",
+      "text": "Nous ___ tous les matins.",
+      "blanks": [
+        {
+          "answer": "nageons"
+        }
+      ],
+      "gloss": "We swim every morning.",
+      "mistakes": [
+        {
+          "answer": "nagons",
+          "feedback": "Keep the e before -ons so the g stays soft: {nageons}."
+        }
+      ]
     },
     {
       "id": "i-je-saute",
-      "type": "translate",
-      "prompt": "I jump",
-      "answer": "je saute",
-      "hint": "sauter for je"
+      "type": "transform",
+      "instruction": "Change the subject to {je}.",
+      "shown": "L'écureuil saute.",
+      "answer": "je saute"
     },
     {
       "id": "i-ils-sautent",
-      "type": "translate",
-      "prompt": "they jump",
-      "answer": "ils sautent",
-      "hint": "sauter for ils"
+      "type": "gapfill",
+      "text": "Les lapins ___ dans le jardin.",
+      "blanks": [
+        {
+          "answer": "sautent"
+        }
+      ],
+      "gloss": "The rabbits are jumping in the garden."
     },
     {
       "id": "i-il-vole",
-      "type": "translate",
-      "prompt": "he flies",
-      "answer": "il vole",
-      "hint": "voler for il"
+      "type": "gapfill",
+      "text": "Le papillon ___ de fleur en fleur.",
+      "blanks": [
+        {
+          "answer": "vole"
+        }
+      ],
+      "gloss": "The butterfly flies from flower to flower."
     },
     {
       "id": "i-nous-volons",
-      "type": "translate",
-      "prompt": "we fly",
+      "type": "transform",
+      "instruction": "Change the subject to {nous}.",
+      "shown": "Les oiseaux volent.",
       "answer": "nous volons",
-      "hint": "voler for nous"
+      "mistakes": [
+        {
+          "answer": "nous volent",
+          "feedback": "With {nous}, the verb ends in -ons: {nous volons}."
+        }
+      ]
     },
     {
       "id": "i-je-cours",
-      "type": "translate",
-      "prompt": "I run",
-      "answer": "je cours",
-      "hint": "courir for je - irregular!"
+      "type": "gapfill",
+      "text": "Je ___ tous les jours dans le parc.",
+      "blanks": [
+        {
+          "answer": "cours"
+        }
+      ],
+      "gloss": "I run every day in the park.",
+      "mistakes": [
+        {
+          "answer": "court",
+          "feedback": "With {je}, write {cours}. {court} goes with {il} and {elle}."
+        }
+      ]
     },
     {
       "id": "i-tu-cours",
-      "type": "respond",
-      "situation": "you run (informal)",
-      "answer": "tu cours",
-      "hint": "courir for tu - same as je"
+      "type": "transform",
+      "instruction": "Change the subject to {tu}.",
+      "shown": "Je cours.",
+      "answer": "tu cours"
     },
     {
       "id": "i-il-court",
-      "type": "translate",
-      "prompt": "he runs",
-      "answer": "il court",
-      "hint": "courir for il - drop the -s"
+      "type": "gapfill",
+      "text": "Il ___ plus vite que moi.",
+      "blanks": [
+        {
+          "answer": "court"
+        }
+      ],
+      "gloss": "He runs faster than me.",
+      "mistakes": [
+        {
+          "answer": "cours",
+          "feedback": "With {il}, write {court}, with a t."
+        }
+      ]
     },
     {
       "id": "i-je-marche",
-      "type": "translate",
-      "prompt": "I walk",
-      "answer": "je marche",
-      "hint": "marcher for je"
+      "type": "gapfill",
+      "text": "La tortue est lente : elle ___ lentement.",
+      "blanks": [
+        {
+          "answer": "marche"
+        }
+      ],
+      "gloss": "The turtle is slow: it walks slowly."
     },
     {
       "id": "i-elle-grimpe",
-      "type": "translate",
-      "prompt": "she climbs",
-      "answer": "elle grimpe",
-      "hint": "grimper for elle"
+      "type": "gapfill",
+      "text": "L'écureuil ___ dans l'arbre.",
+      "blanks": [
+        {
+          "answer": "grimpe"
+        }
+      ],
+      "gloss": "The squirrel climbs up the tree."
     },
     {
       "id": "i-la-tortue-nage",
-      "type": "translate",
-      "prompt": "The turtle swims",
-      "answer": "la tortue nage",
-      "hint": "{la tortue + nage}"
+      "type": "transform",
+      "instruction": "Make it singular.",
+      "shown": "Les tortues nagent.",
+      "answer": "la tortue nage"
     },
     {
       "id": "i-l-oiseau-vole",
-      "type": "translate",
-      "prompt": "The bird flies",
+      "type": "transform",
+      "instruction": "Make it singular.",
+      "shown": "Les oiseaux volent.",
       "answer": "l'oiseau vole",
-      "hint": "{l'oiseau + vole}"
+      "mistakes": [
+        {
+          "answer": "l'oiseau volent",
+          "feedback": "With one bird, the verb loses -nt: {l'oiseau vole}."
+        }
+      ]
     },
     {
       "id": "i-l-ecureuil-saute",
-      "type": "translate",
-      "prompt": "The squirrel jumps",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce que l'écureuil fait ?} Say that the squirrel is jumping.",
       "answer": "l'écureuil saute",
       "accept": [
-        "l'ecureuil saute"
-      ],
-      "hint": "{l'écureuil + saute}"
+        "l'ecureuil saute",
+        "il saute"
+      ]
     },
     {
       "id": "i-le-lapin-saute",
-      "type": "translate",
-      "prompt": "The rabbit jumps",
-      "answer": "le lapin saute",
-      "hint": "{le lapin + saute}"
+      "type": "transform",
+      "instruction": "Change the subject to {le lapin}.",
+      "shown": "Je saute.",
+      "answer": "le lapin saute"
     },
     {
       "id": "i-tu-cours-vite",
-      "type": "translate",
-      "prompt": "You run fast!",
+      "type": "respond",
+      "situation": "Your friend is running ahead of you in the park. Tell them they run fast.",
       "answer": "tu cours vite",
       "accept": [
-        "tu cours vite!"
-      ],
-      "hint": "{tu cours + vite}"
+        "tu cours vite !"
+      ]
     },
     {
       "id": "i-je-nage-dans-la",
-      "type": "translate",
-      "prompt": "I swim in the sea",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce que tu fais en été ?} Say that you swim in the sea.",
       "answer": "je nage dans la mer",
-      "hint": "{je nage + dans la mer}"
+      "accept": [
+        "en été, je nage dans la mer"
+      ]
     },
     {
       "id": "i-j-ai-nage",
-      "type": "respond",
-      "situation": "Say 'I swam' (passé composé)",
-      "cue": "I swam",
+      "type": "transform",
+      "instruction": "Put it in the passé composé.",
+      "shown": "Je nage.",
       "answer": "j'ai nagé",
       "accept": [
         "j'ai nage"
       ],
-      "hint": "j'ai + past participle of nager"
+      "mistakes": [
+        {
+          "answer": "je suis nagé",
+          "feedback": "{nager} takes {avoir} in the passé composé: {j'ai nagé}."
+        }
+      ]
+    },
+    {
+      "id": "i-volent",
+      "type": "gapfill",
+      "text": "Les abeilles ___ dans le jardin.",
+      "blanks": [
+        {
+          "answer": "volent"
+        }
+      ],
+      "gloss": "The bees are flying in the garden."
+    },
+    {
+      "id": "i-j-aime-marcher-dans-la-nature",
+      "type": "respond",
+      "situation": "A friend asks: {Qu'est-ce que tu aimes faire le week-end ?} Say you like walking in nature.",
+      "answer": "j'aime marcher dans la nature"
+    },
+    {
+      "id": "i-avons-couru",
+      "type": "gapfill",
+      "text": "Hier, nous ___ dans le parc.",
+      "blanks": [
+        {
+          "answer": "avons couru"
+        }
+      ],
+      "gloss": "Yesterday we ran in the park.",
+      "mistakes": [
+        {
+          "answer": "sommes couru",
+          "feedback": "{courir} takes {avoir} in the passé composé: {nous avons couru}."
+        }
+      ]
+    },
+    {
+      "id": "i-nageais",
+      "type": "gapfill",
+      "text": "Quand j'étais petit, je ___ tous les étés.",
+      "blanks": [
+        {
+          "answer": "nageais"
+        }
+      ],
+      "gloss": "When I was little, I swam every summer.",
+      "mistakes": [
+        {
+          "answer": "ai nagé",
+          "feedback": "For something you did again and again in the past, use the imparfait: {je nageais}."
+        }
+      ]
+    },
+    {
+      "id": "i-courait",
+      "type": "gapfill",
+      "text": "Avant, mon père ___ tous les matins.",
+      "blanks": [
+        {
+          "answer": "courait"
+        }
+      ],
+      "gloss": "My father used to run every morning."
+    },
+    {
+      "id": "i-oui-je-sais-nager",
+      "type": "respond",
+      "situation": "Your friend asks: {Tu sais nager ?} Say yes, you know how to swim. Use {savoir}.",
+      "answer": "oui, je sais nager",
+      "accept": [
+        "je sais nager"
+      ],
+      "mistakes": [
+        {
+          "answer": "oui, je peux nager",
+          "feedback": "For a skill you have learned, use {savoir}: {je sais nager}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-poisson-sait-nager",
+      "type": "transform",
+      "instruction": "Say it with {savoir}: the fish knows how to swim.",
+      "shown": "Le poisson nage.",
+      "answer": "le poisson sait nager"
+    },
+    {
+      "id": "i-je-ne-sais-pas-nager",
+      "type": "transform",
+      "instruction": "Say it with {savoir}: you don't know how to swim.",
+      "shown": "Je ne nage pas.",
+      "answer": "je ne sais pas nager",
+      "mistakes": [
+        {
+          "answer": "je sais ne pas nager",
+          "feedback": "Put {ne … pas} around {sais}: {je ne sais pas nager}."
+        }
+      ]
     }
   ]
 }

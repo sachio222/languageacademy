@@ -208,8 +208,9 @@ test('preTeach: a passage word becomes a vocabulary row, a table word needs none
 /* ---------- the committed files ---------- */
 
 // Teaching a writer added by hand after the split (content Task C2): a lesson that first uses pas de, ne … rien, y or
-// en now teaches it, and the Unit 8 practice set and exam test y and en. Each id must be in the file, after what the
-// split declared.
+// en now teaches it, and the Unit 8 practice set and exam test y and en. Content Task C3: Natural Phenomena teaches
+// ne … plus, which Reading 12 uses and only the negation guide taught before. Each id must be in the file, after what
+// the split declared.
 const TEACHING_ADDED_AFTER_SPLIT = {
   '2024-03-24-everyday-nouns': { teaches: ['fr:cx:neg.de'] },
   '2024-10-22-donner': { teaches: ['fr:cx:neg.ne-rien'] },
@@ -217,6 +218,7 @@ const TEACHING_ADDED_AFTER_SPLIT = {
   '2024-05-12-commands-pronouns': { teaches: ['fr:cx:pronoun.en'] },
   '2024-05-24-unit-8-exam': { tests: ['fr:cx:pronoun.y', 'fr:cx:pronoun.en'] },
   '2024-05-25-unit-8-practice': { tests: ['fr:cx:pronoun.y', 'fr:cx:pronoun.en'] },
+  '2024-03-17-natural-phenomena': { teaches: ['fr:cx:neg.ne-plus'] },
 };
 function withoutAddedTeaching(key, field, declared) {
   const added = TEACHING_ADDED_AFTER_SPLIT[key]?.[field];

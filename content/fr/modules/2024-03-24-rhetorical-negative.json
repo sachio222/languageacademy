@@ -103,13 +103,12 @@
   "items": [
     {
       "id": "i-n-est-ce-pas",
-      "type": "translate",
-      "prompt": "Isn't that true?",
-      "answer": "n'est-ce pas vrai?",
+      "type": "respond",
+      "situation": "Your friend doubts that French bread is the best. Ask a negative question to get them to agree: isn't that true?",
+      "answer": "n'est-ce pas vrai ?",
       "accept": [
         "n'est-ce pas vrai"
-      ],
-      "hint": "{n'est-ce pas + vrai}"
+      ]
     },
     {
       "id": "i-n-est-ce-pas-2",
@@ -124,33 +123,47 @@
     },
     {
       "id": "i-n-es-tu-pas",
-      "type": "translate",
-      "prompt": "Aren't you happy?",
-      "answer": "n'es-tu pas content?",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu n'es pas content ?",
+      "answer": "n'es-tu pas content ?",
       "accept": [
-        "n'es-tu pas content"
+        "n'es-tu pas content",
+        "n'es-tu pas contente ?",
+        "n'es-tu pas contente"
       ],
-      "hint": "{n'es-tu pas + content}"
+      "mistakes": [
+        {
+          "answer": "ne es-tu pas content ?",
+          "feedback": "{ne} becomes {n'} before a vowel: {n'es-tu pas}."
+        }
+      ]
     },
     {
       "id": "i-n-as-tu-pas",
-      "type": "translate",
-      "prompt": "Aren't you hungry?",
-      "answer": "n'as-tu pas faim?",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu n'as pas faim ?",
+      "answer": "n'as-tu pas faim ?",
       "accept": [
         "n'as-tu pas faim"
       ],
-      "hint": "{n'as-tu pas + faim}"
+      "mistakes": [
+        {
+          "answer": "n'as pas-tu faim ?",
+          "feedback": "{pas} comes after the inverted pair: {n'as-tu pas}."
+        }
+      ]
     },
     {
       "id": "i-ne-veux-tu-pas",
-      "type": "translate",
-      "prompt": "Don't you want to try?",
-      "answer": "ne veux-tu pas essayer?",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu ne veux pas essayer ?",
+      "answer": "ne veux-tu pas essayer ?",
       "accept": [
         "ne veux-tu pas essayer"
-      ],
-      "hint": "{ne veux-tu pas + essayer}"
+      ]
     },
     {
       "id": "i-comment-ne-pas-aimer",
@@ -211,13 +224,13 @@
     },
     {
       "id": "i-n-est-ce-pas-3",
-      "type": "translate",
-      "prompt": "Isn't that magnificent?",
-      "answer": "n'est-ce pas magnifique?",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Ce n'est pas magnifique ?",
+      "answer": "n'est-ce pas magnifique ?",
       "accept": [
         "n'est-ce pas magnifique"
-      ],
-      "hint": "{n'est-ce pas + magnifique}"
+      ]
     },
     {
       "id": "i-pourquoi-ne-pas-aller",

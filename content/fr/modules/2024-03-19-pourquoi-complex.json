@@ -76,6 +76,12 @@
       "fr": "Pourquoi est-ce que c'est comme ça?",
       "gloss": "Why is it like that?",
       "note": "general question"
+    },
+    {
+      "word_id": "une-aile-fr",
+      "fr": "une aile",
+      "gloss": "a wing",
+      "note": "feminine; plural {des ailes}"
     }
   ],
   "concepts": [
@@ -113,123 +119,133 @@
   "items": [
     {
       "id": "i-pourquoi-est-ce-que",
-      "type": "translate",
-      "prompt": "Why is the sky blue?",
-      "answer": "pourquoi est-ce que le ciel est bleu?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Le ciel est bleu.",
+      "answer": "pourquoi est-ce que le ciel est bleu ?",
       "accept": [
         "pourquoi est-ce que le ciel est bleu"
       ],
-      "hint": "{pourquoi est-ce que + le ciel est bleu}"
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que est le ciel bleu ?",
+          "feedback": "After {est-ce que}, keep statement order: subject, then verb."
+        }
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-2",
-      "type": "translate",
-      "prompt": "Why is grass green?",
-      "answer": "pourquoi est-ce que l'herbe est verte?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "L'herbe est verte.",
+      "answer": "pourquoi est-ce que l'herbe est verte ?",
       "accept": [
         "pourquoi est-ce que l'herbe est verte"
-      ],
-      "hint": "{pourquoi est-ce que + l'herbe est verte}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-3",
-      "type": "translate",
-      "prompt": "Why are clouds white?",
-      "answer": "pourquoi est-ce que les nuages sont blancs?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les nuages sont blancs.",
+      "answer": "pourquoi est-ce que les nuages sont blancs ?",
       "accept": [
         "pourquoi est-ce que les nuages sont blancs"
-      ],
-      "hint": "{pourquoi est-ce que + les nuages sont blancs}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-4",
-      "type": "translate",
-      "prompt": "Why is it like that?",
-      "answer": "pourquoi est-ce que c'est comme ça?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "C'est comme ça.",
+      "answer": "pourquoi est-ce que c'est comme ça ?",
       "accept": [
         "pourquoi est-ce que c'est comme ça"
-      ],
-      "hint": "{pourquoi est-ce que + c'est comme ça}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu",
-      "type": "translate",
-      "prompt": "Why does he have that?",
-      "answer": "pourquoi est-ce qu'il a ça?",
+      "type": "respond",
+      "situation": "Your little brother has your phone. Ask your mother why he has that, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce qu'il a ça ?",
       "accept": [
         "pourquoi est-ce qu'il a ça"
-      ],
-      "hint": "{pourquoi est-ce que + il a ça}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-5",
-      "type": "translate",
-      "prompt": "Why do birds have wings?",
-      "answer": "pourquoi est-ce que les oiseaux ont des ailes?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les oiseaux ont des ailes.",
+      "answer": "pourquoi est-ce que les oiseaux ont des ailes ?",
       "accept": [
         "pourquoi est-ce que les oiseaux ont des ailes"
-      ],
-      "hint": "{pourquoi est-ce que + les oiseaux ont des ailes}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-6",
-      "type": "translate",
-      "prompt": "Why does the sun shine?",
-      "answer": "pourquoi est-ce que le soleil brille?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Le soleil brille.",
+      "answer": "pourquoi est-ce que le soleil brille ?",
       "accept": [
         "pourquoi est-ce que le soleil brille"
-      ],
-      "hint": "{pourquoi est-ce que + le soleil brille}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-7",
-      "type": "translate",
-      "prompt": "Why do birds fly?",
-      "answer": "pourquoi est-ce que les oiseaux volent?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les oiseaux volent.",
+      "answer": "pourquoi est-ce que les oiseaux volent ?",
       "accept": [
         "pourquoi est-ce que les oiseaux volent"
-      ],
-      "hint": "{pourquoi est-ce que + les oiseaux volent}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-8",
-      "type": "translate",
-      "prompt": "Why do plants grow?",
-      "answer": "pourquoi est-ce que les plantes poussent?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les plantes poussent.",
+      "answer": "pourquoi est-ce que les plantes poussent ?",
       "accept": [
         "pourquoi est-ce que les plantes poussent"
-      ],
-      "hint": "{pourquoi est-ce que + les plantes poussent}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu-2",
-      "type": "translate",
-      "prompt": "Why does it rain?",
-      "answer": "pourquoi est-ce qu'il pleut?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il pleut.",
+      "answer": "pourquoi est-ce qu'il pleut ?",
       "accept": [
         "pourquoi est-ce qu'il pleut"
       ],
-      "hint": "{pourquoi est-ce que + il pleut}"
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que il pleut ?",
+          "feedback": "{que} becomes {qu'} before a vowel: {est-ce qu'il}."
+        }
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-9",
-      "type": "translate",
-      "prompt": "Why are you running?",
-      "answer": "pourquoi est-ce que tu cours?",
+      "type": "respond",
+      "situation": "Your little brother is running in the house. Ask him why he is running, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que tu cours ?",
       "accept": [
         "pourquoi est-ce que tu cours"
-      ],
-      "hint": "{pourquoi est-ce que + tu cours}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu-3",
-      "type": "translate",
-      "prompt": "Why does he do that?",
-      "answer": "pourquoi est-ce qu'il fait ça?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il fait ça.",
+      "answer": "pourquoi est-ce qu'il fait ça ?",
       "accept": [
         "pourquoi est-ce qu'il fait ça"
-      ],
-      "hint": "{pourquoi est-ce que + il fait ça}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu-4",
@@ -255,44 +271,107 @@
     },
     {
       "id": "i-pourquoi-est-ce-que-11",
-      "type": "translate",
-      "prompt": "Why do I have to do that?",
-      "answer": "pourquoi est-ce que je dois faire ça?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Je dois faire ça.",
+      "answer": "pourquoi est-ce que je dois faire ça ?",
       "accept": [
         "pourquoi est-ce que je dois faire ça"
-      ],
-      "hint": "{pourquoi est-ce que + je dois faire ça}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu-5",
-      "type": "translate",
-      "prompt": "Why can we see the sun?",
-      "answer": "pourquoi est-ce qu'on peut voir le soleil?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "On peut voir le soleil.",
+      "answer": "pourquoi est-ce qu'on peut voir le soleil ?",
       "accept": [
         "pourquoi est-ce qu'on peut voir le soleil"
-      ],
-      "hint": "{pourquoi est-ce que + on peut voir le soleil}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-12",
-      "type": "translate",
-      "prompt": "Why are you hurrying?",
-      "answer": "pourquoi est-ce que tu te dépêches?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu te dépêches.",
+      "answer": "pourquoi est-ce que tu te dépêches ?",
       "accept": [
         "pourquoi est-ce que tu te dépêches",
         "pourquoi est-ce que tu te depeches?"
-      ],
-      "hint": "{pourquoi est-ce que + tu te dépêches}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-13",
-      "type": "translate",
-      "prompt": "Why do plants need water?",
-      "answer": "pourquoi est-ce que les plantes ont besoin d'eau?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Les plantes ont besoin d'eau.",
+      "answer": "pourquoi est-ce que les plantes ont besoin d'eau ?",
       "accept": [
         "pourquoi est-ce que les plantes ont besoin d'eau"
-      ],
-      "hint": "{pourquoi est-ce que + les plantes ont besoin d'eau}"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu-6",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il ne pleut plus.",
+      "answer": "pourquoi est-ce qu'il ne pleut plus ?",
+      "accept": [
+        "pourquoi est-ce qu'il ne pleut plus"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-le-vent-souffle",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Le vent souffle.",
+      "answer": "pourquoi est-ce que le vent souffle ?",
+      "accept": [
+        "pourquoi est-ce que le vent souffle"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-la-terre-est-humide",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "La terre est humide.",
+      "answer": "pourquoi est-ce que la terre est humide ?",
+      "accept": [
+        "pourquoi est-ce que la terre est humide"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-l-eau-est-glacee",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "L'eau est glacée.",
+      "answer": "pourquoi est-ce que l'eau est glacée ?",
+      "accept": [
+        "pourquoi est-ce que l'eau est glacée",
+        "pourquoi est-ce que l'eau est glacee"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-le-chien-fait-du-bruit",
+      "type": "respond",
+      "situation": "The dog next door is barking at night. Ask why it is making noise, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que le chien fait du bruit ?",
+      "accept": [
+        "pourquoi est-ce que le chien fait du bruit"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-tu-es-tombe",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu es tombé.",
+      "answer": "pourquoi est-ce que tu es tombé ?",
+      "accept": [
+        "pourquoi est-ce que tu es tombé",
+        "pourquoi est-ce que tu es tombée ?",
+        "pourquoi est-ce que tu es tombée",
+        "pourquoi est-ce que tu es tombe"
+      ]
     }
   ]
 }

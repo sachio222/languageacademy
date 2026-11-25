@@ -269,6 +269,49 @@
         "comment fais-tu ça"
       ],
       "hint": "Remove est-ce que, invert: comment fais-tu ça"
+    },
+    {
+      "id": "i-as-tu-nage-dans-la-mer",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu as nagé dans la mer.",
+      "answer": "as-tu nagé dans la mer ?",
+      "accept": [
+        "as-tu nagé dans la mer",
+        "as-tu nage dans la mer"
+      ],
+      "mistakes": [
+        {
+          "answer": "as nagé-tu dans la mer ?",
+          "feedback": "In the passé composé, invert the helping verb and its subject: {as-tu nagé}."
+        }
+      ]
+    },
+    {
+      "id": "i-a-t-il-plu-hier",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Il a plu hier.",
+      "answer": "a-t-il plu hier ?",
+      "accept": [
+        "a-t-il plu hier"
+      ],
+      "mistakes": [
+        {
+          "answer": "a-il plu hier ?",
+          "feedback": "Between two vowels, add {-t-}: {a-t-il}."
+        }
+      ]
+    },
+    {
+      "id": "i-veux-tu-venir",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu veux venir.",
+      "answer": "veux-tu venir ?",
+      "accept": [
+        "veux-tu venir"
+      ]
     }
   ]
 }

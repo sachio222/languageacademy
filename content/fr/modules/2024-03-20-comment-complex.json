@@ -22,7 +22,8 @@
       "word_id": "comment-est-ce-qu-une-tortue-nage-fr",
       "fr": "Comment est-ce qu'une tortue nage?",
       "gloss": "How does a turtle swim?",
-      "note": "animal + movement question"
+      "note": "animal + movement question",
+      "review": true
     },
     {
       "word_id": "comment-est-ce-qu-un-oiseau-vole-fr",
@@ -34,7 +35,8 @@
       "word_id": "comment-est-ce-qu-un-ecureuil-saute-fr",
       "fr": "Comment est-ce qu'un écureuil saute?",
       "gloss": "How does a squirrel jump?",
-      "note": "animal + movement question"
+      "note": "animal + movement question",
+      "review": true
     },
     {
       "word_id": "comment-est-ce-qu-un-lapin-saute-fr",
@@ -70,7 +72,8 @@
       "word_id": "comment-nage-une-tortue-fr",
       "fr": "Comment nage une tortue?",
       "gloss": "How does a turtle swim?",
-      "note": "FORMAL inversion - same meaning"
+      "note": "FORMAL inversion - same meaning",
+      "review": true
     }
   ],
   "concepts": [
@@ -108,137 +111,139 @@
   "items": [
     {
       "id": "i-comment-est-ce-qu",
-      "type": "translate",
-      "prompt": "How does a turtle swim?",
-      "answer": "comment est-ce qu'une tortue nage?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Une tortue nage.",
+      "answer": "comment est-ce qu'une tortue nage ?",
       "accept": [
         "comment est-ce qu'une tortue nage"
       ],
-      "hint": "{comment est-ce que + une tortue nage}"
+      "mistakes": [
+        {
+          "answer": "comment est-ce que une tortue nage ?",
+          "feedback": "{que} becomes {qu'} before a vowel: {est-ce qu'une tortue}."
+        }
+      ]
     },
     {
       "id": "i-comment-est-ce-qu-2",
-      "type": "translate",
-      "prompt": "How does a bird fly?",
-      "answer": "comment est-ce qu'un oiseau vole?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un oiseau vole.",
+      "answer": "comment est-ce qu'un oiseau vole ?",
       "accept": [
         "comment est-ce qu'un oiseau vole"
-      ],
-      "hint": "{comment est-ce que + un oiseau vole}"
+      ]
     },
     {
       "id": "i-comment-est-ce-qu-3",
-      "type": "translate",
-      "prompt": "How does a squirrel jump?",
-      "answer": "comment est-ce qu'un écureuil saute?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un écureuil saute.",
+      "answer": "comment est-ce qu'un écureuil saute ?",
       "accept": [
         "comment est-ce qu'un écureuil saute",
-        "comment est-ce qu'un ecureuil saute",
-        "comment est-ce qu'un ecureuil saute?"
-      ],
-      "hint": "{comment est-ce que + un écureuil saute}"
+        "comment est-ce qu'un ecureuil saute"
+      ]
     },
     {
       "id": "i-comment-est-ce-qu-4",
-      "type": "translate",
-      "prompt": "How does a rabbit jump?",
-      "answer": "comment est-ce qu'un lapin saute?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un lapin saute.",
+      "answer": "comment est-ce qu'un lapin saute ?",
       "accept": [
         "comment est-ce qu'un lapin saute"
-      ],
-      "hint": "{comment est-ce que + un lapin saute}"
+      ]
     },
     {
       "id": "i-comment-est-ce-qu-5",
-      "type": "translate",
-      "prompt": "How does a squirrel climb?",
-      "answer": "comment est-ce qu'un écureuil grimpe?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un écureuil grimpe.",
+      "answer": "comment est-ce qu'un écureuil grimpe ?",
       "accept": [
         "comment est-ce qu'un écureuil grimpe",
-        "comment est-ce qu'un ecureuil grimpe",
-        "comment est-ce qu'un ecureuil grimpe?"
-      ],
-      "hint": "{comment est-ce que + un écureuil grimpe}"
+        "comment est-ce qu'un ecureuil grimpe"
+      ]
     },
     {
       "id": "i-comment-est-ce-que",
-      "type": "translate",
-      "prompt": "How do plants grow?",
-      "answer": "comment est-ce que les plantes poussent?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Les plantes poussent.",
+      "answer": "comment est-ce que les plantes poussent ?",
       "accept": [
         "comment est-ce que les plantes poussent"
-      ],
-      "hint": "{comment est-ce que + les plantes poussent}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que-2",
-      "type": "translate",
-      "prompt": "How does the sun shine?",
-      "answer": "comment est-ce que le soleil brille?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Le soleil brille.",
+      "answer": "comment est-ce que le soleil brille ?",
       "accept": [
         "comment est-ce que le soleil brille"
-      ],
-      "hint": "{comment est-ce que + le soleil brille}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que-3",
-      "type": "translate",
-      "prompt": "How does rain fall?",
-      "answer": "comment est-ce que la pluie tombe?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "La pluie tombe.",
+      "answer": "comment est-ce que la pluie tombe ?",
       "accept": [
         "comment est-ce que la pluie tombe"
-      ],
-      "hint": "{comment est-ce que + la pluie tombe}"
+      ]
     },
     {
       "id": "i-comment-est-ce-qu-6",
-      "type": "translate",
-      "prompt": "How do we do that?",
-      "answer": "comment est-ce qu'on fait ça?",
+      "type": "respond",
+      "situation": "Your friend opens a box that you could not open. Ask how it is done, with {comment est-ce que} and {on}.",
+      "cue": "How do we do that?",
+      "answer": "comment est-ce qu'on fait ça ?",
       "accept": [
         "comment est-ce qu'on fait ça"
-      ],
-      "hint": "{comment est-ce que + on fait ça}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que-4",
-      "type": "translate",
-      "prompt": "How do you do that?",
-      "answer": "comment est-ce que tu fais ça?",
+      "type": "respond",
+      "situation": "Your friend does a card trick. Ask how they do that, with {comment est-ce que}.",
+      "answer": "comment est-ce que tu fais ça ?",
       "accept": [
         "comment est-ce que tu fais ça"
-      ],
-      "hint": "{comment est-ce que + tu fais ça}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que-5",
-      "type": "translate",
-      "prompt": "How do you swim?",
-      "answer": "comment est-ce que tu nages?",
+      "type": "respond",
+      "situation": "Your friend swims very well. Ask how they swim, with {comment est-ce que}.",
+      "answer": "comment est-ce que tu nages ?",
       "accept": [
         "comment est-ce que tu nages"
-      ],
-      "hint": "{comment est-ce que + tu nages}"
+      ]
     },
     {
       "id": "i-comment-est-ce-qu-7",
-      "type": "translate",
-      "prompt": "How does he run so fast?",
-      "answer": "comment est-ce qu'il court si vite?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Il court si vite.",
+      "answer": "comment est-ce qu'il court si vite ?",
       "accept": [
         "comment est-ce qu'il court si vite"
-      ],
-      "hint": "{comment est-ce que + il court si vite}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que-6",
-      "type": "translate",
-      "prompt": "How does that make grass green?",
-      "answer": "comment est-ce que ça rend l'herbe verte?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Ça rend l'herbe verte.",
+      "answer": "comment est-ce que ça rend l'herbe verte ?",
       "accept": [
         "comment est-ce que ça rend l'herbe verte"
-      ],
-      "hint": "{comment est-ce que + ça rend l'herbe verte}"
+      ]
     },
     {
       "id": "i-comment-nage-une-tortue",
@@ -274,6 +279,70 @@
         "comment fait-on ça?"
       ],
       "hint": "{comment est-ce que + on fait ça}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-un-oiseau-vole-avec-ses-ailes",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Un oiseau vole avec ses ailes.",
+      "answer": "comment est-ce qu'un oiseau vole avec ses ailes ?",
+      "accept": [
+        "comment est-ce qu'un oiseau vole avec ses ailes"
+      ]
+    },
+    {
+      "id": "i-comment-est-ce-que-le-papillon-vole",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Le papillon vole.",
+      "answer": "comment est-ce que le papillon vole ?",
+      "accept": [
+        "comment est-ce que le papillon vole"
+      ]
+    },
+    {
+      "id": "i-comment-est-ce-que-les-abeilles-trouvent-les-fleurs",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Les abeilles trouvent les fleurs.",
+      "answer": "comment est-ce que les abeilles trouvent les fleurs ?",
+      "accept": [
+        "comment est-ce que les abeilles trouvent les fleurs"
+      ]
+    },
+    {
+      "id": "i-comment-est-ce-que-les-nuages-blancs-restent",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Les nuages blancs restent dans le ciel bleu.",
+      "answer": "comment est-ce que les nuages blancs restent dans le ciel bleu ?",
+      "accept": [
+        "comment est-ce que les nuages blancs restent dans le ciel bleu"
+      ]
+    },
+    {
+      "id": "i-comment-est-ce-que-tu-as-fait-ca",
+      "type": "respond",
+      "situation": "Your friend did the card trick again. Ask how they did that, with {comment est-ce que} and the passé composé.",
+      "answer": "comment est-ce que tu as fait ça ?",
+      "accept": [
+        "comment est-ce que tu as fait ça"
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-fait-ce-bruit",
+      "type": "respond",
+      "situation": "You hear a noise in the garden. Ask what is making that noise, with {qu'est-ce qui}.",
+      "answer": "qu'est-ce qui fait ce bruit ?",
+      "accept": [
+        "qu'est-ce qui fait ce bruit"
+      ],
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que fait ce bruit ?",
+          "feedback": "The thing makes the noise, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
     }
   ]
 }

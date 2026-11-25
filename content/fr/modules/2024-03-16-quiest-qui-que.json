@@ -258,16 +258,20 @@
     },
     {
       "id": "i-qui-est-ce-que-6",
-      "type": "respond",
-      "situation": "Ask 'Who did you meet?' (object, past tense)",
-      "cue": "Who did you meet?",
-      "answer": "qui est-ce que tu as rencontré?",
-      "accept": [
-        "qui est-ce que tu as rencontré",
-        "qui est-ce que tu as rencontre",
-        "qui est-ce que tu as rencontre?"
+      "type": "gapfill",
+      "text": "___ tu as vu au marché ?",
+      "blanks": [
+        {
+          "answer": "qui est-ce que"
+        }
       ],
-      "hint": "{qui est-ce que + tu as rencontré}"
+      "gloss": "Who did you see at the market?",
+      "mistakes": [
+        {
+          "answer": "qui est-ce qui",
+          "feedback": "Another subject, {tu}, comes next, so the person seen is the object: {qui est-ce que}."
+        }
+      ]
     },
     {
       "id": "i-qui-est-ce-qui-8",
@@ -290,6 +294,34 @@
         "qui est-ce que tu vois"
       ],
       "hint": "{qui est-ce que...}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-a-un-chat-blanc",
+      "type": "respond",
+      "situation": "Someone in your class has a white cat. Ask who has a white cat, with {qui est-ce qui}.",
+      "answer": "qui est-ce qui a un chat blanc ?",
+      "accept": [
+        "qui est-ce qui a un chat blanc"
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-qui-aime-la-nature",
+      "type": "respond",
+      "situation": "You are planning a walk in the hills. Ask the group who likes nature, with {qui est-ce qui}.",
+      "answer": "qui est-ce qui aime la nature ?",
+      "accept": [
+        "qui est-ce qui aime la nature"
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-qui-est-plus-lent-que-la-tortue",
+      "type": "transform",
+      "instruction": "Ask who, with {qui est-ce qui}.",
+      "shown": "Quelqu'un est plus lent que la tortue.",
+      "answer": "qui est-ce qui est plus lent que la tortue ?",
+      "accept": [
+        "qui est-ce qui est plus lent que la tortue"
+      ]
     }
   ]
 }

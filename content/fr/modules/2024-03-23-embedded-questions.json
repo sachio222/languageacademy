@@ -101,106 +101,145 @@
   "items": [
     {
       "id": "i-je-me-demande-pourquoi",
-      "type": "translate",
-      "prompt": "I wonder why it's like that",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi est-ce que c'est comme ça ?",
       "answer": "je me demande pourquoi c'est comme ça",
-      "hint": "je me demande + pourquoi c'est comme ça (no est-ce que!)"
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi est-ce que c'est comme ça",
+          "feedback": "After {je me demande}, drop {est-ce que}: {pourquoi c'est comme ça}."
+        }
+      ]
     },
     {
       "id": "i-je-me-demande-comment",
-      "type": "translate",
-      "prompt": "I wonder how that works",
-      "answer": "je me demande comment ça marche",
-      "hint": "{je me demande + comment ça marche}"
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Comment est-ce que ça marche ?",
+      "answer": "je me demande comment ça marche"
     },
     {
       "id": "i-je-me-demande-pourquoi-2",
-      "type": "translate",
-      "prompt": "I wonder why the sky is blue",
+      "type": "respond",
+      "situation": "You look up at the sky with a friend. Say that you wonder why it is blue, starting with {Je me demande}.",
+      "cue": "I wonder why the sky is blue",
       "answer": "je me demande pourquoi le ciel est bleu",
-      "hint": "{je me demande + pourquoi le ciel est bleu}"
+      "accept": [
+        "je me demande pourquoi il est bleu"
+      ],
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi le ciel est-il bleu",
+          "feedback": "Inside the sentence, use statement order with no inversion: {pourquoi le ciel est bleu}."
+        }
+      ]
     },
     {
       "id": "i-je-me-demande-ou",
-      "type": "translate",
-      "prompt": "I wonder where he is",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Où est-il ?",
       "answer": "je me demande où il est",
-      "hint": "{je me demande + où il est}"
+      "mistakes": [
+        {
+          "answer": "je me demande où est-il",
+          "feedback": "Inside the sentence, put the subject before the verb: {où il est}."
+        }
+      ]
     },
     {
       "id": "i-je-ne-sais-pas",
-      "type": "translate",
-      "prompt": "I don't know how we do that",
-      "answer": "je ne sais pas comment on fait ça",
-      "hint": "{je ne sais pas + comment on fait ça}"
+      "type": "respond",
+      "situation": "Someone asks you: {Comment est-ce qu'on fait ça ?} You have no idea. Say you don't know how we do that.",
+      "answer": "je ne sais pas comment on fait ça"
     },
     {
       "id": "i-je-ne-sais-pas-2",
-      "type": "translate",
-      "prompt": "I don't know why he does that",
-      "answer": "je ne sais pas pourquoi il fait ça",
-      "hint": "{je ne sais pas + pourquoi il fait ça}"
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Pourquoi fait-il ça ?",
+      "answer": "je ne sais pas pourquoi il fait ça"
     },
     {
       "id": "i-je-ne-sais-pas-3",
-      "type": "translate",
-      "prompt": "I don't know how a turtle swims",
+      "type": "respond",
+      "situation": "A child asks you: {Comment est-ce qu'une tortue nage ?} You have no idea. Say so, starting with {Je ne sais pas}.",
+      "cue": "I don't know how a turtle swims",
       "answer": "je ne sais pas comment une tortue nage",
-      "hint": "{je ne sais pas + comment une tortue nage}"
+      "accept": [
+        "je ne sais pas comment nage une tortue"
+      ],
+      "mistakes": [
+        {
+          "answer": "je ne sais pas comment est-ce qu'une tortue nage",
+          "feedback": "After {je ne sais pas}, drop {est-ce que}."
+        }
+      ]
     },
     {
       "id": "i-je-ne-sais-pas-4",
-      "type": "translate",
-      "prompt": "I don't know where the station is",
+      "type": "respond",
+      "situation": "A tourist asks you: {Où est la gare ?} You don't know. Tell them.",
       "answer": "je ne sais pas où est la gare",
-      "hint": "{je ne sais pas + où est la gare}"
+      "accept": [
+        "je ne sais pas où la gare est",
+        "désolé, je ne sais pas où est la gare",
+        "désolée, je ne sais pas où est la gare"
+      ]
     },
     {
       "id": "i-peux-tu-me-dire",
-      "type": "translate",
-      "prompt": "Can you tell me where the station is?",
-      "answer": "peux-tu me dire où est la gare?",
+      "type": "respond",
+      "situation": "You are lost in town. Ask a friend where the station is, politely, with {peux-tu me dire}.",
+      "answer": "peux-tu me dire où est la gare ?",
       "accept": [
-        "peux-tu me dire où est la gare"
-      ],
-      "hint": "{peux-tu me dire + où est la gare}"
+        "peux-tu me dire où est la gare",
+        "peux-tu me dire où la gare est ?"
+      ]
     },
     {
       "id": "i-peux-tu-me-dire-2",
-      "type": "translate",
-      "prompt": "Can you tell me how that works?",
-      "answer": "peux-tu me dire comment ça marche?",
+      "type": "transform",
+      "instruction": "Ask politely, with {Peux-tu me dire}.",
+      "shown": "Comment ça marche ?",
+      "answer": "peux-tu me dire comment ça marche ?",
       "accept": [
         "peux-tu me dire comment ça marche"
-      ],
-      "hint": "{peux-tu me dire + comment ça marche}"
+      ]
     },
     {
       "id": "i-peux-tu-me-dire-3",
-      "type": "translate",
-      "prompt": "Can you tell me why he does that?",
-      "answer": "peux-tu me dire pourquoi il fait ça?",
+      "type": "transform",
+      "instruction": "Ask politely, with {Peux-tu me dire}.",
+      "shown": "Pourquoi est-ce qu'il fait ça ?",
+      "answer": "peux-tu me dire pourquoi il fait ça ?",
       "accept": [
         "peux-tu me dire pourquoi il fait ça"
       ],
-      "hint": "{peux-tu me dire + pourquoi il fait ça}"
+      "mistakes": [
+        {
+          "answer": "peux-tu me dire pourquoi est-ce qu'il fait ça ?",
+          "feedback": "After {peux-tu me dire}, drop {est-ce que}: {pourquoi il fait ça}."
+        }
+      ]
     },
     {
       "id": "i-tu-sais-pourquoi-il",
-      "type": "translate",
-      "prompt": "Do you know why he does that?",
-      "answer": "tu sais pourquoi il fait ça?",
+      "type": "transform",
+      "instruction": "Ask it with {Tu sais}.",
+      "shown": "Pourquoi il fait ça ?",
+      "answer": "tu sais pourquoi il fait ça ?",
       "accept": [
         "tu sais pourquoi il fait ça"
-      ],
-      "hint": "{tu sais + pourquoi il fait ça}"
+      ]
     },
     {
       "id": "i-on-ne-comprend-pas",
-      "type": "translate",
-      "prompt": "We don't understand why it's like that",
-      "answer": "on ne comprend pas pourquoi c'est comme ça",
-      "hint": "{on ne comprend pas + pourquoi c'est comme ça}"
+      "type": "transform",
+      "instruction": "Start with {On ne comprend pas}.",
+      "shown": "Pourquoi c'est comme ça ?",
+      "answer": "on ne comprend pas pourquoi c'est comme ça"
     },
     {
       "id": "i-je-me-demande-pourquoi-3",
@@ -217,6 +256,57 @@
       "cue": "I don't know how a turtle swims",
       "answer": "je ne sais pas comment une tortue nage",
       "hint": "je ne sais pas + drop est-ce que"
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-il-ne-pleut-plus",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi est-ce qu'il ne pleut plus ?",
+      "answer": "je me demande pourquoi il ne pleut plus"
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-le-vent-souffle",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi le vent souffle-t-il si fort ?",
+      "answer": "je me demande pourquoi le vent souffle si fort"
+    },
+    {
+      "id": "i-je-me-demande-ou-vont-les-oiseaux",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Où vont les oiseaux en hiver ?",
+      "answer": "je me demande où vont les oiseaux en hiver",
+      "accept": [
+        "je me demande où les oiseaux vont en hiver"
+      ]
+    },
+    {
+      "id": "i-je-ne-sais-pas-quand-les-plantes-fleurissent",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Quand fleurissent les plantes ?",
+      "answer": "je ne sais pas quand les plantes fleurissent",
+      "accept": [
+        "je ne sais pas quand fleurissent les plantes"
+      ]
+    },
+    {
+      "id": "i-je-ne-sais-pas-pourquoi-l-eau-est-glacee",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Pourquoi est-ce que l'eau est glacée ?",
+      "answer": "je ne sais pas pourquoi l'eau est glacée",
+      "accept": [
+        "je ne sais pas pourquoi l'eau est glacee"
+      ]
+    },
+    {
+      "id": "i-je-ne-sais-pas-pourquoi-les-oiseaux-ont-des-ailes",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Pourquoi les oiseaux ont-ils des ailes ?",
+      "answer": "je ne sais pas pourquoi les oiseaux ont des ailes"
     }
   ]
 }

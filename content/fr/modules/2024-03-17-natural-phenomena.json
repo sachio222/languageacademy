@@ -7,7 +7,8 @@
   "description": "Learn how nature works: le soleil brille (the sun shines), les plantes poussent (plants grow), il pleut (it rains) + CAUSATIVE: rendre (to make/render)",
   "teaches": {
     "constructions": [
-      "fr:cx:rendre-adjective"
+      "fr:cx:rendre-adjective",
+      "fr:cx:neg.ne-plus"
     ]
   },
   "vocabulary": [
@@ -279,7 +280,7 @@
       "word_id": "qu-est-ce-qui-rend-fr",
       "fr": "qu'est-ce qui rend...?",
       "gloss": "what makes...?",
-      "note": "⭐ QUESTION PATTERN with causative!"
+      "note": "a preview of the next lesson, which teaches this question"
     }
   ],
   "concepts": [
@@ -305,125 +306,252 @@
       "id": "c-causative-pattern-rendre-adjective",
       "term": "Causative Pattern: rendre + adjective",
       "definition": "Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]",
-      "example": "{Qu'est-ce qui rend le ciel bleu?} (What makes the sky blue?) → {La lumière rend le ciel bleu} (Light makes the sky blue)"
+      "example": "{La pluie rend la terre humide} (rain makes the earth wet), {Le soleil rend l'herbe verte} (the sun makes grass green)"
     },
     {
       "id": "c-setting-up-question-patterns",
       "term": "Setting Up Question Patterns",
-      "definition": "These verbs enable sophisticated 'why' and 'what makes' questions",
-      "example": "{Pourquoi est-ce que le soleil brille? Qu'est-ce qui rend l'herbe verte? Comment est-ce que les plantes poussent?}"
+      "definition": "The next lessons use these verbs to ask why and how.",
+      "example": "{Pourquoi est-ce que le soleil brille ? Comment est-ce que les plantes poussent ?}"
+    },
+    {
+      "id": "c-ne-plus-no-longer",
+      "term": "{ne … plus}: no longer",
+      "definition": "Put {ne} before the verb and {plus} after it to say that something has stopped. It works like {ne … pas}.",
+      "example": "{Il ne pleut plus.} (It isn't raining any more.) {Le vent ne souffle plus.} (The wind isn't blowing any more.)"
     }
   ],
   "items": [
     {
       "id": "i-il-brille",
-      "type": "translate",
-      "prompt": "he shines",
-      "answer": "il brille",
-      "hint": "briller for il"
+      "type": "gapfill",
+      "text": "Il fait beau : le soleil ___.",
+      "blanks": [
+        {
+          "answer": "brille"
+        }
+      ],
+      "gloss": "The weather is nice: the sun is shining."
     },
     {
       "id": "i-le-soleil-brille",
-      "type": "translate",
-      "prompt": "The sun shines",
+      "type": "respond",
+      "situation": "Your friend asks: {Il fait beau aujourd'hui ?} Say yes, the sun is shining.",
       "answer": "le soleil brille",
-      "hint": "{le soleil + brille}"
+      "accept": [
+        "oui, le soleil brille",
+        "oui, il fait beau, le soleil brille"
+      ]
     },
     {
       "id": "i-ils-poussent",
-      "type": "translate",
-      "prompt": "they grow",
-      "answer": "ils poussent",
-      "hint": "pousser for ils"
+      "type": "gapfill",
+      "text": "Au printemps, les fleurs ___.",
+      "blanks": [
+        {
+          "answer": "poussent"
+        }
+      ],
+      "gloss": "In spring, flowers grow."
     },
     {
       "id": "i-les-plantes-poussent",
-      "type": "translate",
-      "prompt": "Plants grow",
-      "answer": "les plantes poussent",
-      "hint": "{les plantes + poussent}"
+      "type": "transform",
+      "instruction": "Make it plural.",
+      "shown": "La plante pousse.",
+      "answer": "les plantes poussent"
     },
     {
       "id": "i-les-plantes-poussent-au",
-      "type": "translate",
-      "prompt": "Plants grow in spring",
+      "type": "respond",
+      "situation": "Your friend asks: {Quand est-ce que les plantes poussent ?} Answer: in spring.",
       "answer": "les plantes poussent au printemps",
-      "hint": "{les plantes poussent + au printemps}"
+      "accept": [
+        "au printemps",
+        "elles poussent au printemps"
+      ]
     },
     {
       "id": "i-il-pleut",
       "type": "respond",
-      "situation": "Say 'It rains' / 'It's raining'",
-      "cue": "It rains",
-      "answer": "il pleut",
-      "hint": "impersonal verb - only il pleut"
+      "situation": "You look out of the window and see rain. Tell your friend it is raining.",
+      "answer": "il pleut"
     },
     {
       "id": "i-il-a-plu",
-      "type": "respond",
-      "situation": "Say 'It rained' (passé composé)",
-      "cue": "It rained",
+      "type": "transform",
+      "instruction": "Put it in the passé composé.",
+      "shown": "Il pleut.",
       "answer": "il a plu",
-      "hint": "il + a + plu (irregular past participle!)"
+      "mistakes": [
+        {
+          "answer": "il a pleuvu",
+          "feedback": "The past participle of {pleuvoir} is irregular: {il a plu}."
+        }
+      ]
     },
     {
       "id": "i-le-vent-souffle",
-      "type": "translate",
-      "prompt": "The wind blows",
-      "answer": "le vent souffle",
-      "hint": "{le vent + souffle}"
+      "type": "gapfill",
+      "text": "Il fait froid et le vent ___.",
+      "blanks": [
+        {
+          "answer": "souffle"
+        }
+      ],
+      "gloss": "It is cold and the wind is blowing."
     },
     {
       "id": "i-je-rends",
-      "type": "translate",
-      "prompt": "I make / I render",
-      "answer": "je rends",
-      "hint": "rendre for je - like prendre!"
+      "type": "gapfill",
+      "text": "Je ___ ma mère heureuse.",
+      "blanks": [
+        {
+          "answer": "rends"
+        }
+      ],
+      "gloss": "I make my mother happy.",
+      "mistakes": [
+        {
+          "answer": "rend",
+          "feedback": "With {je}, {rendre} ends in -s: {je rends}."
+        }
+      ]
     },
     {
       "id": "i-il-rend",
-      "type": "translate",
-      "prompt": "it makes / renders",
-      "answer": "il rend",
-      "hint": "rendre for il"
+      "type": "gapfill",
+      "text": "Le soleil me ___ heureux.",
+      "blanks": [
+        {
+          "answer": "rend"
+        }
+      ],
+      "gloss": "The sun makes me happy."
     },
     {
       "id": "i-ils-rendent",
-      "type": "translate",
-      "prompt": "they make / render",
-      "answer": "ils rendent",
-      "hint": "rendre for ils"
+      "type": "gapfill",
+      "text": "Les vacances me ___ heureux.",
+      "blanks": [
+        {
+          "answer": "rendent"
+        }
+      ],
+      "gloss": "Holidays make me happy."
     },
     {
       "id": "i-le-soleil-rend-l",
-      "type": "translate",
-      "prompt": "The sun makes grass green",
-      "answer": "le soleil rend l'herbe verte",
-      "hint": "{le soleil + rend + l'herbe + verte}"
+      "type": "transform",
+      "instruction": "Say it with {rendre}: the sun makes the grass green.",
+      "shown": "le soleil / l'herbe / verte",
+      "answer": "le soleil rend l'herbe verte"
     },
     {
       "id": "i-le-froid-rend-l",
-      "type": "translate",
-      "prompt": "Cold makes water frozen",
+      "type": "transform",
+      "instruction": "Say it with {rendre}.",
+      "shown": "Il fait froid, alors l'eau est glacée.",
       "answer": "le froid rend l'eau glacée",
       "accept": [
         "le froid rend l'eau glacee"
-      ],
-      "hint": "{le froid + rend + l'eau + glacée}"
+      ]
     },
     {
       "id": "i-la-pluie-rend-la",
-      "type": "translate",
-      "prompt": "Rain makes the earth wet",
-      "answer": "la pluie rend la terre humide",
-      "hint": "{la pluie + rend + la terre + humide}"
+      "type": "transform",
+      "instruction": "Say it with {rendre}.",
+      "shown": "Il pleut, alors la terre est humide.",
+      "answer": "la pluie rend la terre humide"
     },
     {
       "id": "i-le-soleil-brille-dans",
-      "type": "translate",
-      "prompt": "The sun shines in the sky",
+      "type": "respond",
+      "situation": "Your friend asks: {Où est-ce que le soleil brille ?} Answer: in the sky.",
       "answer": "le soleil brille dans le ciel",
-      "hint": "{le soleil brille + dans le ciel}"
+      "accept": [
+        "dans le ciel",
+        "il brille dans le ciel"
+      ]
+    },
+    {
+      "id": "i-pleuvait",
+      "type": "gapfill",
+      "text": "Hier, quand je suis sorti, il ___.",
+      "blanks": [
+        {
+          "answer": "pleuvait"
+        }
+      ],
+      "gloss": "Yesterday, when I went out, it was raining.",
+      "mistakes": [
+        {
+          "answer": "a plu",
+          "feedback": "For what was going on in the background, use the imparfait: {il pleuvait}."
+        }
+      ]
+    },
+    {
+      "id": "i-tomber",
+      "type": "gapfill",
+      "text": "Attention, tu vas ___ !",
+      "blanks": [
+        {
+          "answer": "tomber"
+        }
+      ],
+      "gloss": "Careful, you're going to fall!"
+    },
+    {
+      "id": "i-suis-tombe",
+      "type": "gapfill",
+      "text": "Hier, je ___ dans la rue.",
+      "blanks": [
+        {
+          "answer": "suis tombé",
+          "accept": [
+            "suis tombée",
+            "suis tombe",
+            "suis tombee"
+          ]
+        }
+      ],
+      "gloss": "Yesterday I fell in the street.",
+      "mistakes": [
+        {
+          "answer": "ai tombé",
+          "feedback": "{tomber} takes {être} in the passé composé: {je suis tombé}."
+        }
+      ]
+    },
+    {
+      "id": "i-il-ne-pleut-plus",
+      "type": "transform",
+      "instruction": "Say that the rain has stopped, with {ne … plus}.",
+      "shown": "Il pleut.",
+      "answer": "il ne pleut plus",
+      "mistakes": [
+        {
+          "answer": "il ne pleut pas",
+          "feedback": "{ne … pas} says it is not raining. To say it has stopped, use {ne … plus}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-vent-ne-souffle-plus",
+      "type": "transform",
+      "instruction": "Say that the wind has stopped, with {ne … plus}.",
+      "shown": "Le vent souffle.",
+      "answer": "le vent ne souffle plus"
+    },
+    {
+      "id": "i-non-il-ne-pleut-plus",
+      "type": "respond",
+      "situation": "Your friend asks: {Il pleut encore ?} Say no, it is not raining any more. Use {ne … plus}.",
+      "answer": "non, il ne pleut plus",
+      "accept": [
+        "il ne pleut plus"
+      ]
     }
   ]
 }

@@ -96,145 +96,186 @@
   "items": [
     {
       "id": "i-pourquoi-est-ce-qu",
-      "type": "translate",
-      "prompt": "Why do I have to do that?",
-      "answer": "pourquoi est-ce qu'il faut que je fasse ça?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il faut que je fasse ça.",
+      "answer": "pourquoi est-ce qu'il faut que je fasse ça ?",
       "accept": [
         "pourquoi est-ce qu'il faut que je fasse ça"
       ],
-      "hint": "{pourquoi est-ce que + il faut que je fasse ça}"
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce qu'il faut que je fais ça ?",
+          "feedback": "After {il faut que}, use the subjunctive: {que je fasse}."
+        }
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu-2",
-      "type": "translate",
-      "prompt": "Why do you have to leave?",
-      "answer": "pourquoi est-ce qu'il faut que tu partes?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il faut que tu partes.",
+      "answer": "pourquoi est-ce qu'il faut que tu partes ?",
       "accept": [
         "pourquoi est-ce qu'il faut que tu partes"
-      ],
-      "hint": "{pourquoi est-ce que + il faut que tu partes}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que",
-      "type": "translate",
-      "prompt": "Why do you want me to do that?",
-      "answer": "pourquoi est-ce que tu veux que je fasse ça?",
+      "type": "respond",
+      "situation": "Your friend asks you to clean the kitchen. Ask why they want you to do that, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que tu veux que je fasse ça ?",
       "accept": [
         "pourquoi est-ce que tu veux que je fasse ça"
-      ],
-      "hint": "{pourquoi est-ce que + tu veux que je fasse ça}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que",
-      "type": "translate",
-      "prompt": "How do you want me to do it?",
-      "answer": "comment est-ce que tu veux que je le fasse?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Tu veux que je le fasse.",
+      "answer": "comment est-ce que tu veux que je le fasse ?",
       "accept": [
         "comment est-ce que tu veux que je le fasse"
-      ],
-      "hint": "{comment est-ce que + tu veux que je le fasse}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-2",
-      "type": "translate",
-      "prompt": "Why do you want him to come?",
-      "answer": "pourquoi est-ce que tu veux qu'il vienne?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu veux qu'il vienne.",
+      "answer": "pourquoi est-ce que tu veux qu'il vienne ?",
       "accept": [
         "pourquoi est-ce que tu veux qu'il vienne"
-      ],
-      "hint": "{pourquoi est-ce que + tu veux qu'il vienne}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-3",
-      "type": "translate",
-      "prompt": "Why do you think it's like that?",
-      "answer": "pourquoi est-ce que tu penses que c'est comme ça?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu penses que c'est comme ça.",
+      "answer": "pourquoi est-ce que tu penses que c'est comme ça ?",
       "accept": [
         "pourquoi est-ce que tu penses que c'est comme ça"
-      ],
-      "hint": "{pourquoi est-ce que + tu penses que c'est comme ça}"
+      ]
     },
     {
       "id": "i-comment-est-ce-que-2",
-      "type": "translate",
-      "prompt": "How do you think we should do that?",
-      "answer": "comment est-ce que tu penses qu'on devrait faire ça?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Tu penses qu'on devrait faire ça.",
+      "answer": "comment est-ce que tu penses qu'on devrait faire ça ?",
       "accept": [
         "comment est-ce que tu penses qu'on devrait faire ça"
-      ],
-      "hint": "{comment est-ce que + tu penses qu'on devrait faire ça}"
+      ]
     },
     {
       "id": "i-qu-est-ce-que",
-      "type": "translate",
-      "prompt": "What do you think he should do?",
-      "answer": "qu'est-ce que tu penses qu'il devrait faire?",
+      "type": "transform",
+      "instruction": "Ask what, with {qu'est-ce que}.",
+      "shown": "Tu penses qu'il devrait faire quelque chose.",
+      "answer": "qu'est-ce que tu penses qu'il devrait faire ?",
       "accept": [
         "qu'est-ce que tu penses qu'il devrait faire"
-      ],
-      "hint": "{qu'est-ce que + tu penses qu'il devrait faire}"
+      ]
     },
     {
       "id": "i-qu-est-ce-qui",
-      "type": "translate",
-      "prompt": "What would make grass greener?",
-      "answer": "qu'est-ce qui rendrait l'herbe plus verte?",
+      "type": "transform",
+      "instruction": "Ask what, with {qu'est-ce qui}.",
+      "shown": "Quelque chose rendrait l'herbe plus verte.",
+      "answer": "qu'est-ce qui rendrait l'herbe plus verte ?",
       "accept": [
         "qu'est-ce qui rendrait l'herbe plus verte"
       ],
-      "hint": "{qu'est-ce qui + rendrait l'herbe plus verte}"
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que rendrait l'herbe plus verte ?",
+          "feedback": "The thing does the making, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-4",
-      "type": "translate",
-      "prompt": "Why would you do that?",
-      "answer": "pourquoi est-ce que tu ferais ça?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Tu ferais ça.",
+      "answer": "pourquoi est-ce que tu ferais ça ?",
       "accept": [
         "pourquoi est-ce que tu ferais ça"
-      ],
-      "hint": "pourquoi est-ce que + tu ferais ça (conditional!)"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-5",
-      "type": "translate",
-      "prompt": "Why doesn't it work?",
-      "answer": "pourquoi est-ce que ça ne marche pas?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Ça ne marche pas.",
+      "answer": "pourquoi est-ce que ça ne marche pas ?",
       "accept": [
         "pourquoi est-ce que ça ne marche pas"
-      ],
-      "hint": "{pourquoi est-ce que + ça ne marche pas}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-qu-3",
-      "type": "translate",
-      "prompt": "Why doesn't he want to come?",
-      "answer": "pourquoi est-ce qu'il ne veut pas venir?",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il ne veut pas venir.",
+      "answer": "pourquoi est-ce qu'il ne veut pas venir ?",
       "accept": [
         "pourquoi est-ce qu'il ne veut pas venir"
-      ],
-      "hint": "{pourquoi est-ce que + il ne veut pas venir}"
+      ]
     },
     {
       "id": "i-pourquoi-est-ce-que-6",
-      "type": "translate",
-      "prompt": "Why are you happy that he's here?",
-      "answer": "pourquoi est-ce que tu es content qu'il soit là?",
+      "type": "respond",
+      "situation": "Your friend Marc smiles when Paul walks in. Ask Marc why he is happy that Paul is here, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que tu es content qu'il soit là ?",
       "accept": [
         "pourquoi est-ce que tu es content qu'il soit là",
         "pourquoi est-ce que tu es content qu'il soit la",
-        "pourquoi est-ce que tu es content qu'il soit la?"
+        "pourquoi est-ce que tu es content que Paul soit là ?",
+        "pourquoi est-ce que tu es content que Paul soit là"
       ],
-      "hint": "{pourquoi est-ce que + tu es content qu'il soit là}"
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que tu es content qu'il est là ?",
+          "feedback": "After {content que}, use the subjunctive: {qu'il soit là}."
+        }
+      ]
     },
     {
       "id": "i-comment-est-ce-que-3",
-      "type": "translate",
-      "prompt": "How do you think we could make it work?",
-      "answer": "comment est-ce que tu penses qu'on pourrait le faire marcher?",
+      "type": "transform",
+      "instruction": "Ask how, with {comment est-ce que}.",
+      "shown": "Tu penses qu'on pourrait le faire marcher.",
+      "answer": "comment est-ce que tu penses qu'on pourrait le faire marcher ?",
       "accept": [
         "comment est-ce que tu penses qu'on pourrait le faire marcher"
-      ],
-      "hint": "{comment est-ce que + tu penses qu'on pourrait le faire marcher}"
+      ]
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-il-faut-que-je-parte",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi est-ce qu'il faut que je parte ?",
+      "answer": "je me demande pourquoi il faut que je parte",
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi est-ce qu'il faut que je parte",
+          "feedback": "After {je me demande}, drop {est-ce que}."
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-bien-qu-il-soit-la-n-est-ce-pas",
+      "type": "transform",
+      "instruction": "Ask for agreement with {n'est-ce pas}.",
+      "shown": "C'est bien qu'il soit là.",
+      "answer": "c'est bien qu'il soit là, n'est-ce pas ?",
+      "accept": [
+        "c'est bien qu'il soit là n'est-ce pas",
+        "c'est bien qu'il soit la, n'est-ce pas"
+      ]
     }
   ]
 }
