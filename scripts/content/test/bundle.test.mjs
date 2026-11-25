@@ -149,6 +149,26 @@ test('item kinds and answer keys', () => {
   assert.match(check.choices[0].choice_id, new RegExp(`^${check.item_id}\\.c1$`));
 });
 
+test('a respond cue is the English to say, not a scene line', () => {
+  const sources = course.units.flatMap((u) => u.modules).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
+  const withCue = sources.filter(([, i]) => i.type === 'respond' && i.cue !== undefined);
+  assert.ok(withCue.length > 0);
+  for (const [key, src] of withCue) {
+    const item = contentOf(bundle, key).items.find((i) => i.item_id === src.id);
+    assert.equal(item.prompt.text, src.situation, `${key}/${src.id}`);
+    assert.equal(item.prompt.en, src.cue, `${key}/${src.id}`);
+    assert.ok(!('context' in item.prompt), `${key}/${src.id} has a context`);
+  }
+  // No item mapping writes a scene line: no source field sets one today.
+  assert.ok(bundle.content.every((c) => c.items.every((i) => !('context' in i.prompt))));
+});
+
+test('a build leaves both bundles in place', () => {
+  // Vite empties dist/ on every build, so the build script writes the bundles L's adapter reads after it.
+  const pkg = JSON.parse(readFileSync(fileURLToPath(new URL('../../../package.json', import.meta.url)), 'utf8'));
+  assert.match(pkg.scripts.build, /prepare-historical-css\.sh && pnpm content:bundle && pnpm content:bundle --units unit1$/);
+});
+
 test('topic defaults are reported', () => {
   // No module writes a topic yet, so each entry takes its unit's name and the report lists it.
   assert.equal(report.topic_defaulted.length, bundle.entries.length);

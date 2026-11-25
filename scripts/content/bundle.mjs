@@ -89,7 +89,8 @@ function bundleItem(item, note) {
     case 'translate':
       return { ...base, kind: 'typed', prompt: defined({ text: item.prompt, hint }), answer_key: typedKey(item), miss_text: MISS_TYPED };
     case 'respond':
-      return { ...base, kind: 'typed', prompt: defined({ text: item.situation, context: item.cue, hint }), answer_key: typedKey(item), miss_text: MISS_TYPED };
+      // The cue is the English the learner says in French ("hello / good day"): ItemPrompt.en, not a scene line.
+      return { ...base, kind: 'typed', prompt: defined({ text: item.situation, en: item.cue, hint }), answer_key: typedKey(item), miss_text: MISS_TYPED };
     case 'transform':
       return { ...base, kind: 'typed', prompt: defined({ text: item.instruction, shown_fr: item.shown, hint }), answer_key: typedKey(item), miss_text: MISS_TYPED };
     case 'meaning':
