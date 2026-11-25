@@ -234,7 +234,7 @@ export function convertModule(old, opts = {}) {
   // wrote it takes the new output (a converter fix or a source change reaches it); a part the file holds
   // differently is a hand edit and stays, with a `merge_conflict` line when the new output differs from the base
   // too. A base with no `out` (a record from before this rule) or no record keeps the file, as before.
-  const merger = createMerger({ existing, record, handFixes: opts.handFixes, add });
+  const merger = createMerger({ existing, record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, add });
   const { ex, rec, fixes, handEdits, outFixes, mergePart, noteFix } = merger;
   const outRecord = { fields: {}, vocabulary: [], items: {} };
   const baseOf = (e) => (typeof e === 'string' ? { src: e } : isObj(e) ? e : null);
@@ -279,21 +279,31 @@ export function convertModule(old, opts = {}) {
   const exItems = Array.isArray(ex?.items) ? ex.items : [];
   const exIndex = new Map(exItems.map((it, i) => [it.id, i]));
   const recItems = Object.fromEntries(Object.entries(rec?.items ?? {}).map(([id, e]) => [id, baseOf(e)]));
+  // Ids come from the written file and its record under --force too (merge.mjs createMerger idExisting, idRecord).
+  const idItems = Array.isArray(merger.idEx?.items) ? merger.idEx.items : [];
+  const idRecItems = Object.fromEntries(Object.entries(merger.idRec?.items ?? {}).map(([id, e]) => [id, baseOf(e)]));
   const used = new Set();
-  const taken = new Set([...exItems.map((i) => i.id), ...Object.keys(recItems)]);
+  const taken = new Set([...idItems.map((i) => i.id), ...Object.keys(idRecItems)]);
   const entries = []; // { f, id, item, sort, state }
   const refAt = (ref) => {
     const m = /^(.*)\[(\d+)\]$/.exec(String(ref ?? ''));
     return m ? { list: m[1], at: +m[2] } : { list: null, at: -1 };
   };
-  const recList = Object.entries(recItems).map(([id, b]) => ({ ...b, id, ...refAt(b.ref) }));
+  const recList = Object.entries(idRecItems).map(([id, b]) => ({ ...b, id, ...refAt(b.ref) }));
   const srcList = freshItems.map((f) => ({ f, src: f.hash, key: f.key, answer: f.answer, ...refAt(f.src.ref) }));
-  if (rec) {
+  if (merger.idRec) {
     const promptOf = (k) => String(k ?? '').split('|')[0];
     const pairs = pairByContent(
       srcList,
       recList,
-      [(s, r) => r.src === s.src, (s, r) => r.key !== undefined && r.key === s.key, { unique: (s, r) => r.answer !== undefined && r.answer === s.answer }],
+      [
+        (s, r) => r.src === s.src,
+        (s, r) => r.key !== undefined && r.key === s.key,
+        { unique: (s, r) => r.answer !== undefined && r.answer === s.answer },
+        // An answer corrected under the same prompt is the same question (spec 8.1 keeps its id); unique, so a prompt
+        // two exercises share pairs neither.
+        { unique: (s, r) => r.key !== undefined && promptOf(r.key) !== '' && promptOf(r.key) === promptOf(s.key) },
+      ],
       { samePlace: (s, r) => r.key !== undefined && (promptOf(r.key) === promptOf(s.key) || r.answer === s.answer) },
     );
     for (const s of srcList) {
@@ -307,7 +317,7 @@ export function convertModule(old, opts = {}) {
   // With no record (or an item the record never had), a written item with the same content.
   for (const f of freshItems.filter((x) => !x.id)) {
     const k2 = contentKey(f.item);
-    const e = exItems.find((it) => !used.has(it.id) && !(it.id in recItems) && contentKey(it) === k2);
+    const e = idItems.find((it) => !used.has(it.id) && !(it.id in idRecItems) && contentKey(it) === k2);
     if (e) {
       used.add(e.id);
       f.id = e.id;

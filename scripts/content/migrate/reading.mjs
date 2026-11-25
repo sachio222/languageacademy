@@ -248,7 +248,7 @@ export function readingFrom(old, story, opts = {}) {
   }
 
   /* merge */
-  const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, add });
+  const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, add });
   const mod = { schema: MODULE_SCHEMA, module_key: key, kind: 'reading', status: 'written' };
   const fields = {};
   const sources = { title: old.title, description: old.description, can_do: old.emailMetadata?.capabilities ?? null, story_id: story?.n ?? null };

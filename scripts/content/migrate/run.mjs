@@ -341,7 +341,8 @@ async function modules(args, flags, kindWords = ['modules']) {
     const existing = flags.force ? null : written;
     const record = flags.force ? null : records[key] ?? null;
     const declaration = declared ? declared.declarations[key] ?? {} : undefined;
-    const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf, written };
+    // idRecord: the record, read for ids only, so --force pairs each source part with its written id (spec 8.1).
+    const common = { existing, record, idRecord: records[key] ?? null, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf, written };
     if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
       const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;

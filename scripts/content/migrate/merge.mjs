@@ -7,6 +7,10 @@
 // converter wrote it takes the new output; a part the file holds differently is a hand edit and stays, with a
 // `merge_conflict` line when the new output differs from the base too. With no record the written file wins
 // wherever it has the part. With no written file (--force) the hand fixes (legacy/hand-fixes.json) are applied again.
+//
+// Ids are another matter: --force merges nothing from the file, but still pairs each source element with the written
+// file and the record by content for its id (createMerger idExisting, idRecord), so an id never moves to another item
+// and a hand fix, keyed by id, stays on its item (spec 8.1).
 import { createHash } from 'node:crypto';
 import { normText } from './items.mjs';
 import { unmark } from './mark-french.mjs';
@@ -44,11 +48,16 @@ export function diffs(a, b, path, out) {
 
 /**
  * The merge state of one module. `add(path, kind, detail)` takes report lines.
- * Returns { ex, rec, fixes, handEdits, outFixes, mergePart, noteFix }.
+ * idExisting, idRecord: the written file and its record, read for ids only. A normal run passes neither (existing and
+ * record serve); --force passes them with no existing or record, so values come from the source and the hand fixes
+ * while ids still come from what is written.
+ * Returns { ex, rec, idEx, idRec, fixes, handEdits, outFixes, mergePart, noteFix }.
  */
-export function createMerger({ existing = null, record = null, handFixes = null, add }) {
+export function createMerger({ existing = null, record = null, handFixes = null, idExisting = null, idRecord = null, add }) {
   const ex = isObj(existing) ? existing : null;
   const rec = isObj(record) ? record : null;
+  const idEx = ex ?? (isObj(idExisting) ? idExisting : null);
+  const idRec = rec ?? (isObj(idRecord) ? idRecord : null);
   const fixes = isObj(handFixes) ? handFixes : {};
   const handEdits = [];
   const outFixes = {};
@@ -77,7 +86,7 @@ export function createMerger({ existing = null, record = null, handFixes = null,
   const noteFix = (partKey, value, freshVal) => {
     if (!same(value, freshVal)) outFixes[partKey] = value === undefined ? null : clone(value);
   };
-  return { ex, rec, fixes, handEdits, outFixes, mergePart, noteFix };
+  return { ex, rec, idEx, idRec, fixes, handEdits, outFixes, mergePart, noteFix };
 }
 
 /**
@@ -120,7 +129,7 @@ export function mergeDeclared(m, decl, field, { mod, outFields, testsBefore, wri
     else if (field === 'tests') value = testsBefore;
     if (value !== undefined) mod[field] = clone(value);
     // The record's base carries forward, so a later run that declares again still tells a hand edit from its output.
-    if (m.rec?.fields?.[field] !== undefined) outFields[field] = clone(m.rec.fields[field]);
+    if (m.idRec?.fields?.[field] !== undefined) outFields[field] = clone(m.idRec.fields[field]);
     return;
   }
   const prior = { value: field === 'tests' ? testsBefore : undefined };
@@ -142,12 +151,15 @@ export function mergeList(m, name, fresh, { keyOf, makeId, samePlace = () => tru
   const fileList = Array.isArray(m.ex?.[name]) ? m.ex[name] : [];
   const fileIndex = new Map(fileList.map((e, i) => [e?.id, i]));
   const recList = Array.isArray(m.rec?.lists?.[name]) ? m.rec.lists[name] : [];
-  const recIds = new Set(recList.map((r) => r.id));
+  // For ids (under --force too): what is written and recorded.
+  const idList = Array.isArray(m.idEx?.[name]) ? m.idEx[name] : [];
+  const idRecList = Array.isArray(m.idRec?.lists?.[name]) ? m.idRec.lists[name] : [];
+  const recIds = new Set(idRecList.map((r) => r.id));
   const srcInfo = fresh.map((f, at) => ({ at, src: hashOf(f.src), key: keyOf(f.value), f }));
-  const pairs = m.rec
-    ? pairByContent(srcInfo, recList, [(s, r) => r.src === s.src, (s, r) => r.key === s.key], { samePlace })
+  const pairs = m.idRec
+    ? pairByContent(srcInfo, idRecList, [(s, r) => r.src === s.src, (s, r) => r.key === s.key], { samePlace })
     : new Map();
-  const taken = new Set([...fileList.map((e) => e?.id), ...recIds].filter(Boolean));
+  const taken = new Set([...idList.map((e) => e?.id), ...recIds].filter(Boolean));
   const used = new Set();
   const entries = []; // { id, value, sort, fresh? }
   const outRecord = [];
@@ -157,8 +169,8 @@ export function mergeList(m, name, fresh, { keyOf, makeId, samePlace = () => tru
     const r = pairs.get(s.at) ?? null;
     let id = r?.id ?? null;
     // With no record (or an element the record never had), a written element with the same content.
-    if (!id && m.ex) {
-      const e = fileList.find((x) => isObj(x) && !used.has(x.id) && !recIds.has(x.id) && keyOf(x) === s.key);
+    if (!id && m.idEx) {
+      const e = idList.find((x) => isObj(x) && !used.has(x.id) && !recIds.has(x.id) && keyOf(x) === s.key);
       if (e) id = e.id;
     }
     if (!id) id = makeId(s.f.value, taken, s.f);
@@ -166,14 +178,14 @@ export function mergeList(m, name, fresh, { keyOf, makeId, samePlace = () => tru
     used.add(id);
     const freshVal = { id, ...s.f.value };
     const fileHas = fileIndex.has(id);
-    const base = r ? { src: r.src, out: r.out } : m.rec ? { src: undefined } : null;
+    const base = r && m.rec ? { src: r.src, out: r.out } : m.rec ? { src: undefined } : null;
     const res = m.mergePart(`${prefix}${id}`, `${name}[${fileIndex.get(id) ?? '?'}]`, fileHas, fileList[fileIndex.get(id)], freshVal, base, s.src);
     outRecord.push({ id, src: res.src ?? s.src, key: s.key, out: res.out, at: s.at });
     if (res.value) entries.push({ id, value: res.value, sort: fileIndex.get(id) ?? null, freshVal });
     else m.noteFix(`${prefix}${id}`, undefined, freshVal); // removed by hand: stays removed
   }
   // Recorded elements no source element pairs with: their source is gone, so they go too.
-  for (const r of recList) {
+  for (const r of idRecList) {
     if (used.has(r.id)) continue;
     if (fileIndex.has(r.id)) add(`${name}[${fileIndex.get(r.id)}]`, 'source_removed', `${r.id}: its source is gone, so it is removed`);
     used.add(r.id);
@@ -234,6 +246,9 @@ function alternatives0(gloss) {
 export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, minted = null, infoCards = null, markNote = (t) => t }) {
   const { ex, rec, fixes, mergePart, noteFix, handEdits } = m;
   const fileVocab = Array.isArray(ex?.vocabulary) ? ex.vocabulary : [];
+  // For word ids (under --force too): the written table and its record.
+  const idVocab = Array.isArray(m.idEx?.vocabulary) ? m.idEx.vocabulary : [];
+  const idRec = m.idRec;
   const strip = (w) => (w ? Object.fromEntries(Object.entries(w).filter(([k]) => k !== 'word_id')) : null);
   const cardKey = (fr, gloss) => `${normText(fr)}|${normText(gloss)}`;
   const freshCards = []; // per source card: the card, or null when it repeats an earlier card exactly
@@ -278,33 +293,40 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
   // The record's cards: keyed format { src, key, at, word_id, id, out }, or the positional format of earlier runs
   // (an array by source index, sources unchanged since).
   let recCards = [];
-  if (Array.isArray(rec?.vocabulary) && rec.vocabulary.length && !('key' in (baseOf(rec.vocabulary[0]) ?? {}))) {
+  if (Array.isArray(idRec?.vocabulary) && idRec.vocabulary.length && !('key' in (baseOf(idRec.vocabulary[0]) ?? {}))) {
     // Earlier positional record: entry i belongs to source card i; its written card is the next file card.
     let k = 0;
-    recCards = rec.vocabulary.map((e, i) => {
+    recCards = idRec.vocabulary.map((e, i) => {
       const b = baseOf(e) ?? {};
-      const written = b.out !== undefined && b.out !== hashOf(null) ? fileVocab[k++] : undefined;
+      const written = b.out !== undefined && b.out !== hashOf(null) ? idVocab[k++] : undefined;
       return { ...b, key: srcInfo[i]?.key, fr: srcInfo[i]?.fr, at: i, id: written?.word_id ?? null, legacyCard: written };
     });
-  } else if (Array.isArray(rec?.vocabulary)) recCards = rec.vocabulary.map((e) => ({ ...baseOf(e), fr: String(baseOf(e)?.key ?? '').split('|')[0] }));
+  } else if (Array.isArray(idRec?.vocabulary)) recCards = idRec.vocabulary.map((e) => ({ ...baseOf(e), fr: String(baseOf(e)?.key ?? '').split('|')[0] }));
+  const glossOf = (k) => String(k ?? '').split('|').slice(1).join('|');
   const pairs = pairByContent(
     srcInfo,
     recCards,
-    [(s, r) => r.src === s.src, (s, r) => r.key === s.key, { unique: (s, r) => r.fr === s.fr }],
+    [
+      (s, r) => r.src === s.src,
+      (s, r) => r.key === s.key,
+      { unique: (s, r) => r.fr === s.fr },
+      // A spelling fixed by a letter or two, same gloss: the same card (a typo fix keeps its word id).
+      { unique: (s, r) => glossOf(r.key) !== '' && glossOf(r.key) === glossOf(s.key) && editDistance(r.fr ?? '', s.fr, 2) <= 2 },
+    ],
     // By place only a spelling fix of the same word (same folded French); another word there is a new card.
     { samePlace: (s, r) => slugify(r.fr ?? '') !== '' && slugify(r.fr) === slugify(s.fr) },
   );
-  const fileById = new Map(fileVocab.map((w) => [w.word_id, w]));
+  const fileById = new Map(idVocab.map((w) => [w.word_id, w]));
   const usedFile = new Set();
   const findWritten = (r) => {
     if (!r) return undefined;
     if (r.legacyCard) return r.legacyCard;
     let w = r.id ? fileById.get(r.id) : undefined;
-    if (!w) w = fileVocab.find((x) => !usedFile.has(x) && cardKey(x.fr, x.gloss) === r.key);
+    if (!w) w = idVocab.find((x) => !usedFile.has(x) && cardKey(x.fr, x.gloss) === r.key);
     return w;
   };
   // With no record, a written card belongs to the source card with its French and gloss.
-  const noRecordCard = (s) => fileVocab.find((x) => !usedFile.has(x) && cardKey(x.fr, x.gloss) === s.key);
+  const noRecordCard = (s) => idVocab.find((x) => !usedFile.has(x) && cardKey(x.fr, x.gloss) === s.key);
 
   const vocab = [];
   const outRecord = [];
@@ -312,7 +334,7 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
   const NULL = hashOf(null);
   for (const s of srcInfo) {
     const r = pairs.get(s.at) ?? null;
-    const fileW = rec ? findWritten(r) : noRecordCard(s);
+    const fileW = idRec ? findWritten(r) : noRecordCard(s);
     if (fileW) usedFile.add(fileW);
     const v = src[s.at];
     let freshW = null;
@@ -345,7 +367,7 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
       value = fixes[fixKey] === null ? null : clone(fixes[fixKey]);
       out = hashOf(strip(freshW));
     } else {
-      const base = r ? { src: r.src, out: r.out } : rec ? { src: undefined } : null;
+      const base = r && rec ? { src: r.src, out: r.out } : rec ? { src: undefined } : null;
       const mp = mergePart(fixKey, `vocabulary[${vocab.length}]`, fileW !== undefined, strip(fileW) ?? undefined, strip(freshW), base, s.src);
       out = mp.out;
       if (mp.src !== undefined) srcRec = mp.src;
@@ -372,7 +394,7 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
       add(`vocabulary/${w.word_id}`, 'source_removed', `"${w.fr}" (${w.word_id}): its source card is gone, so the card is removed`);
     }
   }
-  // Cards written by hand, with no source card, stay.
+  // Cards written by hand, with no source card, stay (a normal run; --force brings them back from the hand fixes).
   for (const w of fileVocab) {
     if (usedFile.has(w)) continue;
     vocab.push(clone(w));
@@ -393,6 +415,23 @@ export function sourceCards(src) {
     else if (card.note && card.note !== twin.note) twin.note = twin.note ? `${twin.note}; ${card.note}` : card.note;
   }
   return out;
+}
+
+/** Levenshtein distance of two strings, stopping early once it passes `max` (then max + 1). */
+export function editDistance(a, b, max = Infinity) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    let best = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      best = Math.min(best, cur[j]);
+    }
+    if (best > max) return max + 1;
+    prev = cur;
+  }
+  return prev[b.length];
 }
 
 // word-ids.mjs's spelling key, for telling whether a spelling was seen before.

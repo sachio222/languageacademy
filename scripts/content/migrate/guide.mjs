@@ -301,7 +301,7 @@ export function convertGuide(old, opts = {}) {
   for (const f of ['concepts', 'vocabularyReference', 'exercises'])
     if ((old[f] || []).length) add(f, 'dropped_field', `${old[f].length} entries (a guide has no ${f})`);
 
-  const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, add });
+  const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, add });
   const mod = { schema: MODULE_SCHEMA, module_key: key, kind: 'guide', status: 'written' };
   const fields = {};
   mergeField(m, 'title', fresh.title, sourceOf.title, { mod, outFields: fields });

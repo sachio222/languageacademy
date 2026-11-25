@@ -44,3 +44,15 @@ test('--check: exit 0 as committed, 1 when a file would change', { skip: !hasMai
   assert.match(changed.stdout, /would change .*hand-fixes\.json/);
   assert.equal(readFileSync(file, 'utf8'), text, '--check writes nothing');
 });
+
+test('--force gives back every committed file: ids, hand fixes and record bases stay (final review I3)', { skip: !hasMain && 'no main in this checkout' }, (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-force-'));
+  const work = mkdtempSync(join(tmpdir(), 'la-force-wt-'));
+  t.after(() => {
+    rmSync(root, { recursive: true, force: true });
+    rmSync(work, { recursive: true, force: true });
+  });
+  cpSync(join(REPO, 'content/fr'), root, { recursive: true });
+  const r = spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', RUN, '--force', '--check', '--root', root, '--tmp', work], { cwd: REPO, encoding: 'utf8' });
+  assert.equal(r.status, 0, r.stdout.split('\n').filter((l) => l.startsWith('would change')).join('\n') + r.stderr);
+});
