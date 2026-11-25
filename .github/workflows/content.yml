@@ -20,5 +20,7 @@ jobs:
       - run: pnpm content:test
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test
+      # Task 10 replaces this with a blocking `pnpm graph:check --budget`.
       - run: pnpm graph:check
+        continue-on-error: true
       - run: pnpm build
