@@ -117,3 +117,42 @@ test('a spelling fix of an answer the old one no longer matches ("il par" to "il
   assert.equal(he.answer, 'il part');
   assert.ok(second.report.some((l) => l.kind === 'id_new_answer' && l.detail.startsWith(`${he.id}: replaces ${id}`)));
 });
+
+// A writer's hand edit on an item whose answer main then corrects to one that accepts none of the old answers: the
+// item takes a new id, and the edit has nowhere to go. That is a conflict naming both ids, never a silent loss
+// (C0 review I1).
+test('a hand edit on an item main gives a new id is a conflict until settled or accepted', () => {
+  const first = convertModule(lesson([leave, youLeave]), ctx);
+  const edited = clone(first.mod);
+  edited.items.find((i) => i.id === 'i-tu-pars').hint = 'Writer hint: {tu pars}';
+  const second = convertModule(lesson([leave, youLeave]), { ...ctx, existing: edited, record: first.record });
+  assert.deepEqual(Object.keys(second.handFixes), ['items/i-tu-pars']);
+  const corrected = lesson([leave, { ...youLeave, expectedAnswer: 'toi, tu pars' }]);
+  const conflictOf = (r) => r.report.filter((l) => l.kind === 'merge_conflict');
+  // A normal run keeps the edited item as written and reports the conflict, with both ids.
+  const normal = convertModule(corrected, { ...ctx, existing: clone(second.mod), record: second.record });
+  assert.deepEqual(normal.mod, second.mod, 'nothing changes until the conflict is settled');
+  assert.deepEqual(normal.handFixes, second.handFixes, 'the hand edit stays recorded');
+  assert.equal(conflictOf(normal).length, 1);
+  assert.match(conflictOf(normal)[0].detail, /i-tu-pars/);
+  assert.match(conflictOf(normal)[0].detail, /i-toi-tu-pars/);
+  // --force reports the same.
+  const forced = convertModule(corrected, { ...ctx, existing: null, record: null, handFixes: second.handFixes, written: second.mod, idRecord: second.record });
+  assert.deepEqual(forced.mod, normal.mod);
+  assert.deepEqual(conflictOf(forced).map((l) => l.detail), conflictOf(normal).map((l) => l.detail));
+  // Undoing the edit settles it: the correction then goes through with its new id.
+  const undone = convertModule(corrected, { ...ctx, existing: clone(first.mod), record: second.record });
+  assert.deepEqual(conflictOf(undone), []);
+  assert.deepEqual(undone.mod.items.map((i) => i.id), ['i-je-pars', 'i-toi-tu-pars']);
+  // --accept-conflicts takes main's correction under the new id, drops the edit and says so with both ids.
+  const accepted = convertModule(corrected, { ...ctx, existing: clone(second.mod), record: second.record, acceptConflicts: true });
+  assert.deepEqual(conflictOf(accepted), []);
+  assert.deepEqual(accepted.mod.items.map((i) => i.id), ['i-je-pars', 'i-toi-tu-pars']);
+  assert.equal('items/i-tu-pars' in accepted.handFixes, false);
+  const note = accepted.report.find((l) => l.kind === 'conflict_accepted');
+  assert.ok(note && /i-tu-pars/.test(note.detail) && /i-toi-tu-pars/.test(note.detail), JSON.stringify(accepted.report));
+  // An edit made since the last run (not yet in hand-fixes.json) is caught the same way.
+  const fresh = convertModule(corrected, { ...ctx, existing: clone(edited), record: first.record });
+  assert.equal(conflictOf(fresh).length, 1);
+  assert.deepEqual(fresh.mod.items.map((i) => i.id), ['i-je-pars', 'i-tu-pars']);
+});
