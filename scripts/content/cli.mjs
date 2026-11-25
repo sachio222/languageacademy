@@ -1,7 +1,9 @@
-// Content CLI. `node scripts/content/cli.mjs validate [--root <dir>]` prints `ok <n> modules`,
-// or every problem as `file:path code message` and a count by code, and exits 1.
-// Warnings (translate outside Unit 1) never fail a run: a warnings section lists each one as `warning <problem>`
-// and a count by code, before the closing line.
+// Content CLI.
+// `validate [--root <dir>]` prints `ok <n> modules`, or every problem as `file:path code message` and a count by code,
+// and exits 1. Warnings (translate outside Unit 1) never fail a run: a warnings section lists each one as
+// `warning <problem>` and a count by code, before the closing line.
+// `bundle [--root <dir>] [--out <file>] [--units unit1,...] [--previous <file>] [--check]` builds the la-bundle@1
+// release bundle (bundle.mjs) and prints its hash, byte size and counts; see bundleCommand.
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadCourse, CONTENT_ROOT } from './load.mjs';
@@ -21,7 +23,10 @@ function printWarnings(warnings) {
   console.log(`${plural(warnings.length, 'warning')}: ${countByCode(warnings)}`);
 }
 
-const USAGE = 'usage: node scripts/content/cli.mjs validate [--root <content dir>]';
+const USAGE = [
+  'usage: node scripts/content/cli.mjs validate [--root <content dir>]',
+  '       node scripts/content/cli.mjs bundle [--root <content dir>] [--out <file>] [--units <unit_key,...>] [--previous <bundle.json>] [--check]',
+].join('\n');
 
 function validate(args) {
   for (let j = 0; j < args.length; j++) {
@@ -61,5 +66,6 @@ function validate(args) {
 
 const [command, ...args] = process.argv.slice(2);
 if (command === 'validate') process.exit(validate(args));
+if (command === 'bundle') process.exit(await (await import('./bundle-cli.mjs')).bundleCommand(args, { usage: USAGE, printWarnings, line, countByCode, plural }));
 console.error(USAGE);
 process.exit(2);

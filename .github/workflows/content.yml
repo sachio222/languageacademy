@@ -19,11 +19,23 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      # L's bundle checker (scripts/content/vendor/la-bundle) is stdlib Python 3.9 or later.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - run: pnpm install --frozen-lockfile
       - run: pnpm content:validate
       - run: pnpm content:test
       # Every module file (every kind) matches a rerun of the migration, hand fixes kept; exit 1 if any file would change.
       - run: pnpm content:migrate --check
+      # The release bundle for L (la-bundle@1): built, release-checked and run through L's checker, writing nothing.
+      - run: pnpm content:bundle --check
+      # The vendored checker matches the vault. CI has no vault, so here it only says the copy was not compared.
+      - run: pnpm content:vendor-check --check
+      # The full bundle and the Unit 1 sample, written to dist/content/, each run through L's checker (exit 0 or fail).
+      - run: pnpm content:bundle && pnpm content:bundle --units unit1
+      - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist/content/bundle.json
+      - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist/content/bundle-unit1.json
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test
       # Task 10 replaces this with a blocking `pnpm graph:check --budget`.

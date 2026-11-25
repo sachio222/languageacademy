@@ -1,0 +1,1207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "la-bundle@1: catalog release bundle",
+  "description": "The JSON document a staff member uploads as CatalogReleaseCreate.bundle (POST /curriculum/v1/catalog-releases). The content layer's bundle builder (pnpm content:bundle in the app repository) writes it from the course source files under content/fr/, and supabase/scripts/curriculum-import-catalog.ts uploads it. Output is deterministic: keys sorted, arrays in course order, so the same source files give the same bytes. Curriculum assigns what the bundle never carries: catalog_version, content_revision (a new revision only for content that changed since the published version), position_key, display_number, minutes, word_count, routes and first_module_key. Release validation (domains/curriculum.md section 3) checks the rules that a schema cannot, such as unique keys and item placement. Up to 10 MB; story images travel as paths, never inline.",
+  "x-format": "la-bundle@1",
+  "type": "object",
+  "required": [
+    "schema",
+    "language",
+    "native",
+    "units",
+    "entries",
+    "shelf",
+    "words",
+    "stories",
+    "content",
+    "placement_form",
+    "retired",
+    "aliases"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "la-bundle@1"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "fr"
+      ]
+    },
+    "native": {
+      "type": "string",
+      "enum": [
+        "en"
+      ],
+      "description": "Language of the learner-facing text that is not French."
+    },
+    "units": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Every published unit, in course order. The number of units and the last unit come only from this list; nothing assumes a count.",
+      "items": {
+        "$ref": "#/$defs/BundleUnit"
+      }
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Every catalog entry in a unit, in course order. Reference pages are not entries; they are in shelf.pages.",
+      "items": {
+        "$ref": "#/$defs/BundleEntry"
+      }
+    },
+    "shelf": {
+      "$ref": "#/$defs/BundleShelf"
+    },
+    "words": {
+      "type": "array",
+      "description": "Every word taught or shown in this release, once each.",
+      "items": {
+        "$ref": "#/$defs/BundleWord"
+      }
+    },
+    "stories": {
+      "type": "array",
+      "description": "One row per reading's story. The unit and reading come from the entry whose story_id matches.",
+      "items": {
+        "$ref": "#/$defs/BundleStory"
+      }
+    },
+    "content": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Content of every entry and every Reference page, one object per module_key.",
+      "items": {
+        "$ref": "#/$defs/BundleContent"
+      }
+    },
+    "placement_form": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/BundlePlacementForm"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A new placement form, or null to keep the form of the version this release is based on."
+    },
+    "retired": {
+      "type": "array",
+      "description": "Every module_key ever retired. A retired key never appears in entries or shelf again (module_key_reused).",
+      "items": {
+        "type": "object",
+        "required": [
+          "module_key",
+          "reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "module_key": {
+            "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "replaced_by": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "aliases": {
+      "type": "object",
+      "required": [
+        "legacy_position"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "legacy_position": {
+          "type": "object",
+          "description": "Live app position to module_key, frozen from the live app's main branch at commit e4392e7, before any guide was inserted. Used only to open old /lessons?module=N links; never stored or sent (DATA-1). The same table in every release.",
+          "propertyNames": {
+            "pattern": "^[1-9][0-9]{0,3}$"
+          },
+          "additionalProperties": {
+            "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+          }
+        }
+      }
+    },
+    "build": {
+      "type": "object",
+      "required": [
+        "source_commit",
+        "built_at"
+      ],
+      "additionalProperties": false,
+      "description": "Where the bundle came from, written by the bundle builder. Optional; not stored by curriculum.",
+      "properties": {
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "built_at": {
+          "type": "string",
+          "maxLength": 40,
+          "description": "ISO 8601 date and time in UTC."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "ItemId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "maxLength": 100,
+      "description": "Unique inside its module_key and frozen while the question keeps its meaning (C-ID-4)."
+    },
+    "BundleUnit": {
+      "type": "object",
+      "required": [
+        "unit_key",
+        "ordinal",
+        "name",
+        "description",
+        "after_text",
+        "can_do_short",
+        "can_do_example_fr"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "unit_key": {
+          "$ref": "common.openapi.json#/components/schemas/UnitKey"
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "after_text": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "The unit's can-do sentence: 'After this unit you can ...'."
+        },
+        "can_do_short": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Short form for email subject lines: 'introduce yourself'."
+        },
+        "can_do_example_fr": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "French example of the can-do; {name} marks the learner's preferred name."
+        }
+      }
+    },
+    "BundleEntry": {
+      "type": "object",
+      "required": [
+        "module_key",
+        "unit_key",
+        "position",
+        "kind",
+        "title",
+        "topic",
+        "description",
+        "can_do",
+        "guide_after_module_key",
+        "story_id",
+        "steps"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "module_key": {
+          "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+        },
+        "unit_key": {
+          "$ref": "common.openapi.json#/components/schemas/UnitKey"
+        },
+        "position": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Order inside the unit, guides included. Display and routes only."
+        },
+        "kind": {
+          "$ref": "curriculum.openapi.json#/components/schemas/LessonKind"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "short_title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 40,
+          "description": "The short name on unit rows, the Home card and La Référence, such as Cognates for a guide titled Cognates · French and English Share Many Words. Optional; null or absent means title is used everywhere."
+        },
+        "topic": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "The subject in a few words, for reminder copy ('être')."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "can_do": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "description": "Lines on the Lesson complete screen and in emails; French marked with braces."
+        },
+        "guide_after_module_key": {
+          "oneOf": [
+            {
+              "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "story_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "curriculum.openapi.json#/components/schemas/CatalogStep"
+          }
+        },
+        "can_do_examples": {
+          "type": "array",
+          "maxItems": 3,
+          "description": "Example sentences shown on Lesson complete under the can-do line. Optional.",
+          "items": {
+            "type": "object",
+            "required": [
+              "fr",
+              "en"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "fr": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              }
+            }
+          }
+        }
+      }
+    },
+    "BundleShelf": {
+      "type": "object",
+      "required": [
+        "pages"
+      ],
+      "additionalProperties": false,
+      "description": "The Reference shelf (La Référence). Guides are not listed: they appear on the shelf by their own module_key, in course order.",
+      "properties": {
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "module_key",
+              "ordinal",
+              "title",
+              "description",
+              "screen"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "module_key": {
+                "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+              },
+              "ordinal": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "title": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "screen": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "pronunciation-test"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "A page with its own screen. Until that screen is built, the client shows the page's text and tables like any other Reference page."
+              }
+            }
+          }
+        }
+      }
+    },
+    "BundleWord": {
+      "type": "object",
+      "required": [
+        "word_id",
+        "text",
+        "meaning_en",
+        "part_of_speech",
+        "dictionary_ref",
+        "sense_note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "word_id": {
+          "$ref": "common.openapi.json#/components/schemas/WordId"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "meaning_en": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "part_of_speech": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dictionary_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sense_note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "What separates this meaning from another with the same spelling."
+        }
+      }
+    },
+    "BundleStory": {
+      "type": "object",
+      "required": [
+        "story_id",
+        "title",
+        "title_en",
+        "cover"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "story_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "title_en": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "string",
+          "description": "Static path under /stories/img/."
+        },
+        "credit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200,
+          "description": "Illustration credit shown under the story. Optional."
+        }
+      }
+    },
+    "BundleContent": {
+      "type": "object",
+      "required": [
+        "module_key",
+        "kind",
+        "words",
+        "phrases",
+        "items",
+        "steps"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "module_key": {
+          "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+        },
+        "kind": {
+          "$ref": "curriculum.openapi.json#/components/schemas/ContentKind"
+        },
+        "words": {
+          "type": "array",
+          "items": {
+            "$ref": "curriculum.openapi.json#/components/schemas/LessonWord"
+          }
+        },
+        "phrases": {
+          "type": "array",
+          "description": "Pronunciation phrases. A lesson with none gets its Pronunciation step marked Soon (phrases_missing).",
+          "items": {
+            "$ref": "#/$defs/BundlePhrase"
+          }
+        },
+        "items": {
+          "type": "array",
+          "description": "Every exercise item of this module, once each, keyed by item_id. Steps place them through item_ids.",
+          "items": {
+            "$ref": "#/$defs/BundleItem"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "description": "One object per step of the entry, plus one reference-content part for a Reference page.",
+          "items": {
+            "$ref": "#/$defs/BundleStepContent"
+          }
+        }
+      }
+    },
+    "BundleStepContent": {
+      "type": "object",
+      "required": [
+        "section_id",
+        "body",
+        "preview",
+        "item_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "section_id": {
+          "$ref": "common.openapi.json#/components/schemas/SectionId"
+        },
+        "body": {
+          "anyOf": [
+            {
+              "$ref": "curriculum.openapi.json#/components/schemas/VocabularyIntroBody"
+            },
+            {
+              "$ref": "curriculum.openapi.json#/components/schemas/ReferenceBody"
+            },
+            {
+              "$ref": "#/$defs/GuideBody"
+            },
+            {
+              "$ref": "#/$defs/ReadingBody"
+            },
+            {
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Shape set by section_id and checked by release validation: vocabulary-intro holds VocabularyIntroBody, reference-content ReferenceBody, interactive-help GuideBody, reading-passage ReadingBody. Other steps hold null or an object their screen defines."
+        },
+        "preview": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "The free preview shown when the step is locked: a guide's first part, a reading's first picture and the two text blocks after it. Null for a step that is free to everyone or has no preview. Curriculum stores and serves it; identity's access rule decides who sees the full step."
+        },
+        "item_ids": {
+          "type": "array",
+          "description": "The items asked in this step, in order. One item may appear in Writing and in the lesson exam under one item_id and one answer key.",
+          "items": {
+            "$ref": "#/$defs/ItemId"
+          }
+        }
+      }
+    },
+    "BundleItem": {
+      "type": "object",
+      "required": [
+        "item_id",
+        "kind",
+        "prompt",
+        "answer_key",
+        "miss_text",
+        "word_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "item_id": {
+          "$ref": "#/$defs/ItemId"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "choice",
+            "typed",
+            "pair",
+            "guide_check",
+            "story_question"
+          ]
+        },
+        "prompt": {
+          "$ref": "curriculum.openapi.json#/components/schemas/ItemPrompt"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "choice_id",
+              "text"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "choice_id": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "The options of a choice or guide_check item, or the cards of a Speed Match pair item, in display order. A pair item's PairAnswerKey names these ids, every card in exactly one pair."
+        },
+        "answer_key": {
+          "$ref": "curriculum.openapi.json#/components/schemas/AnswerKey",
+          "description": "Every item has one. A guide check's ChoiceAnswerKey marks the right choice; guide checks add no miss."
+        },
+        "miss_text": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "The named-miss sentence template, e.g. 'You wrote {answer}. It's {expected}.'"
+        },
+        "word_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "common.openapi.json#/components/schemas/WordId"
+          }
+        }
+      }
+    },
+    "BundlePhrase": {
+      "type": "object",
+      "required": [
+        "phrase_id",
+        "text",
+        "reference_text",
+        "word_id",
+        "sounds",
+        "parts",
+        "general_tip",
+        "audio_path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "phrase_id": {
+          "$ref": "common.openapi.json#/components/schemas/PhraseId"
+        },
+        "text": {
+          "type": "string"
+        },
+        "reference_text": {
+          "type": "string",
+          "description": "What Azure Speech scores against."
+        },
+        "word_id": {
+          "oneOf": [
+            {
+              "$ref": "common.openapi.json#/components/schemas/WordId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sounds": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "IPA from the dictionary."
+        },
+        "parts": {
+          "type": "array",
+          "description": "Parts with a reviewed tip each (AI-2). Empty when no tip has been reviewed; the step then works with the reference text and the general tip.",
+          "items": {
+            "type": "object",
+            "required": [
+              "text",
+              "phonemes",
+              "tip"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "phonemes": {
+                "type": "string"
+              },
+              "tip": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Reviewed tip for this part (AI-2); null when the part has none."
+              }
+            }
+          }
+        },
+        "general_tip": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Shown labeled General tip. Null: the screen shows the band and model audio with no tip."
+        },
+        "audio_path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Recorded model audio."
+        },
+        "meaning_en": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200,
+          "description": "English meaning of the phrase as a whole, when it differs from its word's meaning. Optional."
+        }
+      }
+    },
+    "BundlePlacementForm": {
+      "type": "object",
+      "required": [
+        "form_version",
+        "levels"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "form_version": {
+          "type": "string",
+          "pattern": "^placement-form@[0-9]+$"
+        },
+        "levels": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Levels in order. Each names the unit a learner who fails it starts at; the form, not a fixed count, sets how many levels there are and which unit the last one places into.",
+          "items": {
+            "type": "object",
+            "required": [
+              "level",
+              "unit_key",
+              "questions"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "level": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "unit_key": {
+                "$ref": "common.openapi.json#/components/schemas/UnitKey"
+              },
+              "questions": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "question_id",
+                    "index",
+                    "prompt",
+                    "options",
+                    "answer_choice_index",
+                    "listening",
+                    "audio_path"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "question_id": {
+                      "type": "string"
+                    },
+                    "index": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 2
+                    },
+                    "prompt": {
+                      "type": "string"
+                    },
+                    "options": {
+                      "type": "array",
+                      "minItems": 3,
+                      "maxItems": 3,
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "choice_index",
+                          "text",
+                          "lang"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "choice_index": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 2
+                          },
+                          "text": {
+                            "type": "string"
+                          },
+                          "lang": {
+                            "type": "string",
+                            "enum": [
+                              "fr",
+                              "en"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "answer_choice_index": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 2
+                    },
+                    "listening": {
+                      "type": "boolean"
+                    },
+                    "audio_path": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Recorded audio for a listening question."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GuideBlock": {
+      "description": "One guide block: exactly one type key, whose value has the shape prototype L's j-guides.js draws for that type, and an optional heading.",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "pairs"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "pairs": {
+              "description": "Prototype L's own shape for a pairs block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "ties"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "ties": {
+              "description": "Prototype L's own shape for a ties block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "cmp"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "cmp": {
+              "description": "Prototype L's own shape for a cmp block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "build"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "build": {
+              "description": "Prototype L's own shape for a build block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "rise"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "rise": {
+              "description": "Prototype L's own shape for a rise block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "flip"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "flip": {
+              "description": "Prototype L's own shape for a flip block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "ways"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "ways": {
+              "description": "Prototype L's own shape for a ways block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "verbs"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "verbs": {
+              "description": "Prototype L's own shape for a verbs block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "table"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "table": {
+              "description": "Prototype L's own shape for a table block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "list"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "list": {
+              "description": "Prototype L's own shape for a list block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "lines"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lines": {
+              "description": "Prototype L's own shape for a lines block."
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        }
+      ]
+    },
+    "GuideBody": {
+      "type": "object",
+      "required": [
+        "line",
+        "parts"
+      ],
+      "additionalProperties": false,
+      "description": "Body of a guide's interactive-help step. The guide's checks are items of kind guide_check placed in this step through item_ids; its minutes are the step estimate and its can-do lines are the entry's can_do.",
+      "properties": {
+        "line": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300,
+          "description": "The one line under the guide's title."
+        },
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "heading",
+              "text"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]*$",
+                "maxLength": 60
+              },
+              "heading": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "text": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000,
+                  "description": "A paragraph; French marked with braces."
+                }
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 1000
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/GuideBlock"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ReadingBody": {
+      "type": "object",
+      "required": [
+        "story_id",
+        "passage"
+      ],
+      "additionalProperties": false,
+      "description": "Body of a reading's reading-passage step. A block with fr also has en; a block with neither has img (checked by release validation). Comprehension questions are items placed through item_ids.",
+      "properties": {
+        "story_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$",
+          "maxLength": 60,
+          "description": "The BundleStory this reading tells."
+        },
+        "passage": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]*$",
+                "maxLength": 60
+              },
+              "fr": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "speaker": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "img": {
+                "type": "object",
+                "required": [
+                  "src",
+                  "w",
+                  "h",
+                  "alt"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 300
+                  },
+                  "w": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "h": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "alt": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 500
+                  }
+                }
+              },
+              "layout": {
+                "type": "string",
+                "enum": [
+                  "dateline",
+                  "scene",
+                  "end"
+                ]
+              }
+            }
+          }
+        },
+        "glossary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "fr",
+              "en"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "fr": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              }
+            }
+          }
+        },
+        "preview_blocks": {
+          "type": "array",
+          "description": "Passage block ids shown in the free preview when the step is locked.",
+          "items": {
+            "type": "string",
+            "maxLength": 60
+          }
+        }
+      }
+    }
+  }
+}

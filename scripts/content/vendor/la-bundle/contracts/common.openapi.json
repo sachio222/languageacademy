@@ -1,0 +1,1192 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "info": {
+    "title": "Language Academy common API components",
+    "version": "1.0.0",
+    "summary": "Shared schemas, parameters, headers, responses and security schemes for every domain API.",
+    "description": "Every contracts/<domain>.openapi.json references these with relative $refs, for example {\"$ref\": \"common.openapi.json#/components/responses/ValidationFailed\"}. Rules are in build-spec/00-conventions.md sections 2 and 5. This document defines no paths."
+  },
+  "servers": [
+    {
+      "url": "https://{project_ref}.supabase.co/functions/v1",
+      "variables": {
+        "project_ref": {
+          "default": "project-ref",
+          "description": "The Supabase project reference."
+        }
+      },
+      "description": "Each domain's paths start with /<domain>/v1/ (C-API-1)."
+    }
+  ],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Uuid": {
+        "type": "string",
+        "format": "uuid",
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+        "description": "Any UUID, lower case. Ids from the live app may be version 4; new ids are version 7. Treat as opaque (C-ID-1)."
+      },
+      "UuidV7": {
+        "type": "string",
+        "format": "uuid",
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+        "description": "A version 7 UUID. Required for client-made record ids (C-ID-2)."
+      },
+      "Instant": {
+        "type": "string",
+        "format": "date-time",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$",
+        "examples": [
+          "2026-11-30T04:15:00.000Z"
+        ],
+        "description": "An instant in UTC with milliseconds (C-TIME-1)."
+      },
+      "LocalDate": {
+        "type": "string",
+        "format": "date",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "examples": [
+          "2026-11-30"
+        ],
+        "description": "A date on the learner's local calendar (C-TIME-3)."
+      },
+      "LocalTime": {
+        "type": "string",
+        "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$",
+        "examples": [
+          "21:15"
+        ],
+        "description": "A 24-hour wall-clock time, interpreted in a stated time zone."
+      },
+      "TimeZone": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^(UTC|[A-Za-z]+(/[A-Za-z0-9_+\\-]+)+)$",
+        "examples": [
+          "America/Denver",
+          "Asia/Kathmandu"
+        ],
+        "description": "An IANA time zone name (C-TIME-2)."
+      },
+      "ModuleKey": {
+        "type": "string",
+        "pattern": "^([0-9]{4}-[0-9]{2}-[0-9]{2}-)?[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+        "examples": [
+          "2024-01-02-etre"
+        ],
+        "description": "Permanent lesson key issued by curriculum (C-ID-3)."
+      },
+      "SectionId": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+        "maxLength": 64,
+        "examples": [
+          "vocabulary-intro",
+          "speed-match"
+        ],
+        "description": "Stored step id inside a lesson, from curriculum's mapping."
+      },
+      "UnitKey": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "examples": [
+          "unit1"
+        ],
+        "description": "Opaque stable unit key; display order comes from the catalog."
+      },
+      "WordId": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100,
+        "examples": [
+          "croire-fr"
+        ],
+        "description": "Stable id for one taught meaning of a word (DATA-7)."
+      },
+      "PhraseId": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100,
+        "description": "Stable id for a pronunciation phrase."
+      },
+      "CatalogVersion": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Lesson catalog release number; increases with each release."
+      },
+      "Revision": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Optimistic concurrency counter of a mutable resource (C-API-7). Sent back as ETag \"r<revision>\"."
+      },
+      "IdempotencyKey": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_-]{16,64}$",
+        "description": "Client-made key for one logical write; the client uses a UUIDv7 (C-API-6)."
+      },
+      "TraceId": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{32}$",
+        "description": "W3C trace id; used as correlation_id (C-OBS-4)."
+      },
+      "StandardErrorCode": {
+        "type": "string",
+        "enum": [
+          "validation_failed",
+          "idempotency_key_missing",
+          "unauthenticated",
+          "forbidden",
+          "entitlement_required",
+          "not_found",
+          "conflict",
+          "request_in_progress",
+          "gone",
+          "version_mismatch",
+          "payload_too_large",
+          "unsupported_media_type",
+          "idempotency_key_reused",
+          "client_outdated",
+          "precondition_required",
+          "rate_limited",
+          "allowance_exhausted",
+          "internal",
+          "feature_disabled",
+          "dependency_unavailable",
+          "timeout"
+        ],
+        "description": "Codes every client handles (C-API-5)."
+      },
+      "ErrorCode": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)?$",
+        "maxLength": 80,
+        "description": "A StandardErrorCode, or a domain code written <domain>.<code> and listed in that domain's x-error-codes.",
+        "examples": [
+          "version_mismatch",
+          "speech.audio_unreadable"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "retryable",
+          "details",
+          "request_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ErrorCode"
+          },
+          "message": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "A sentence safe to show a learner. Never internal detail."
+          },
+          "retryable": {
+            "type": "boolean",
+            "description": "True when the same request, with the same idempotency key, may succeed later."
+          },
+          "details": {
+            "type": "object",
+            "description": "Operation-specific detail; may be empty.",
+            "additionalProperties": true
+          },
+          "request_id": {
+            "$ref": "#/components/schemas/Uuid"
+          }
+        }
+      },
+      "ErrorEnvelope": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          }
+        }
+      },
+      "ValidationDetails": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "field",
+                "rule"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "description": "JSON pointer into the request body, or a parameter name."
+                },
+                "rule": {
+                  "type": "string",
+                  "description": "Short rule name, such as required, pattern, max_length, range."
+                }
+              }
+            }
+          }
+        }
+      },
+      "Meta": {
+        "type": "object",
+        "required": [
+          "request_id",
+          "server_time"
+        ],
+        "properties": {
+          "request_id": {
+            "$ref": "#/components/schemas/Uuid"
+          },
+          "server_time": {
+            "$ref": "#/components/schemas/Instant"
+          },
+          "catalog_version": {
+            "$ref": "#/components/schemas/CatalogVersion",
+            "description": "Optional: the catalog release the answer was built from (curriculum and progress reads)."
+          },
+          "summary_version": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Optional: the learner summary version the answer was built from (progress reads)."
+          }
+        },
+        "description": "Present on every success response (C-API-3)."
+      },
+      "ListMeta": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Meta"
+          },
+          {
+            "type": "object",
+            "required": [
+              "next_cursor",
+              "limit"
+            ],
+            "properties": {
+              "next_cursor": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Opaque cursor for the next page; null on the last page."
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 200
+              }
+            }
+          }
+        ]
+      },
+      "BatchItemResult": {
+        "type": "object",
+        "required": [
+          "client_record_id",
+          "status"
+        ],
+        "properties": {
+          "client_record_id": {
+            "$ref": "#/components/schemas/UuidV7"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "applied",
+              "duplicate",
+              "rejected"
+            ]
+          },
+          "error": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Error"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "data": {
+            "description": "The stored record, when the operation returns it."
+          }
+        },
+        "description": "One item of a batch response (C-API-11)."
+      }
+    },
+    "parameters": {
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "$ref": "#/components/schemas/IdempotencyKey"
+        },
+        "description": "Required on every write (C-API-6)."
+      },
+      "IfMatch": {
+        "name": "If-Match",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "pattern": "^\"r[0-9]+\"$",
+          "examples": [
+            "\"r4\""
+          ]
+        },
+        "description": "The revision the client last read (C-API-7)."
+      },
+      "RequestId": {
+        "name": "X-Request-Id",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "$ref": "#/components/schemas/Uuid"
+        },
+        "description": "Optional client-made request id; the server makes one if absent."
+      },
+      "Traceparent": {
+        "name": "traceparent",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "pattern": "^00-[0-9a-f]{32}-[0-9a-f]{16}-[0-9a-f]{2}$"
+        },
+        "description": "W3C Trace Context, one per learner action (C-OBS-4)."
+      },
+      "ClientBuild": {
+        "name": "X-Client-Build",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "maxLength": 64,
+          "examples": [
+            "2026.11.24-4f2a91c"
+          ]
+        },
+        "description": "The SPA build id. Learner requests below client.min_build get 426 client_outdated."
+      },
+      "Limit": {
+        "name": "limit",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200,
+          "default": 50
+        }
+      },
+      "Cursor": {
+        "name": "cursor",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "description": "Opaque cursor from meta.next_cursor (C-API-8)."
+      },
+      "IfNoneMatch": {
+        "name": "If-None-Match",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "maxLength": 64,
+          "examples": [
+            "\"c14\"",
+            "\"s9021\""
+          ]
+        },
+        "description": "Optional on cached reads (C-API-9). A tag equal to the current ETag gets 304 with no body."
+      }
+    },
+    "headers": {
+      "XRequestId": {
+        "description": "The request id; equals error.request_id or meta.request_id.",
+        "schema": {
+          "$ref": "#/components/schemas/Uuid"
+        }
+      },
+      "ETag": {
+        "description": "Current revision as \"r<revision>\".",
+        "schema": {
+          "type": "string",
+          "pattern": "^\"r[0-9]+\"$"
+        }
+      },
+      "IdempotencyReplayed": {
+        "description": "true when the response is a stored replay of an earlier request with the same key.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "true"
+          ]
+        }
+      },
+      "RetryAfter": {
+        "description": "Seconds to wait before retrying.",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "RateLimitLimit": {
+        "description": "Requests allowed in the current window.",
+        "schema": {
+          "type": "integer"
+        }
+      },
+      "RateLimitRemaining": {
+        "description": "Requests left in the current window.",
+        "schema": {
+          "type": "integer"
+        }
+      },
+      "RateLimitReset": {
+        "description": "Seconds until the window resets.",
+        "schema": {
+          "type": "integer"
+        }
+      }
+    },
+    "responses": {
+      "ValidationFailed": {
+        "description": "Bad request. Codes: validation_failed, idempotency_key_missing.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "validation_failed": {
+                "value": {
+                  "error": {
+                    "code": "validation_failed",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              },
+              "idempotency_key_missing": {
+                "value": {
+                  "error": {
+                    "code": "idempotency_key_missing",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Unauthenticated": {
+        "description": "Missing or invalid Clerk token. Codes: unauthenticated.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "unauthenticated": {
+                "value": {
+                  "error": {
+                    "code": "unauthenticated",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Not allowed for this caller. Codes: forbidden, entitlement_required.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "forbidden": {
+                "value": {
+                  "error": {
+                    "code": "forbidden",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              },
+              "entitlement_required": {
+                "value": {
+                  "error": {
+                    "code": "entitlement_required",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "No such resource for this caller. Codes: not_found.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "not_found": {
+                "value": {
+                  "error": {
+                    "code": "not_found",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Conflict": {
+        "description": "State conflict, or the same idempotency key is still running. Codes: conflict, request_in_progress.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "Retry-After": {
+            "$ref": "#/components/headers/RetryAfter"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "conflict": {
+                "value": {
+                  "error": {
+                    "code": "conflict",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              },
+              "request_in_progress": {
+                "value": {
+                  "error": {
+                    "code": "request_in_progress",
+                    "message": "A sentence for people.",
+                    "retryable": true,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Gone": {
+        "description": "Deleted, or the account is being deleted. Codes: gone. Never used for link tokens (C-API-5).",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "gone": {
+                "value": {
+                  "error": {
+                    "code": "gone",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PreconditionFailed": {
+        "description": "Stale revision. Codes: version_mismatch.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "version_mismatch": {
+                "value": {
+                  "error": {
+                    "code": "version_mismatch",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PayloadTooLarge": {
+        "description": "Body too large. Codes: payload_too_large.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "payload_too_large": {
+                "value": {
+                  "error": {
+                    "code": "payload_too_large",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "UnsupportedMediaType": {
+        "description": "Unreadable content type or format. Codes: unsupported_media_type.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "unsupported_media_type": {
+                "value": {
+                  "error": {
+                    "code": "unsupported_media_type",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "IdempotencyKeyReused": {
+        "description": "Key reused with a different body. Codes: idempotency_key_reused.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "idempotency_key_reused": {
+                "value": {
+                  "error": {
+                    "code": "idempotency_key_reused",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ClientOutdated": {
+        "description": "Client build too old. Codes: client_outdated.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "client_outdated": {
+                "value": {
+                  "error": {
+                    "code": "client_outdated",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PreconditionRequired": {
+        "description": "If-Match missing. Codes: precondition_required.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "precondition_required": {
+                "value": {
+                  "error": {
+                    "code": "precondition_required",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "TooManyRequests": {
+        "description": "Rate limit or daily allowance reached. Codes: rate_limited, allowance_exhausted.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "Retry-After": {
+            "$ref": "#/components/headers/RetryAfter"
+          },
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "rate_limited": {
+                "value": {
+                  "error": {
+                    "code": "rate_limited",
+                    "message": "A sentence for people.",
+                    "retryable": true,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              },
+              "allowance_exhausted": {
+                "value": {
+                  "error": {
+                    "code": "allowance_exhausted",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Internal": {
+        "description": "Unexpected server error. Codes: internal.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "internal": {
+                "value": {
+                  "error": {
+                    "code": "internal",
+                    "message": "A sentence for people.",
+                    "retryable": true,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Unavailable": {
+        "description": "Feature switched off, or a dependency did not answer. Codes: feature_disabled, dependency_unavailable.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "Retry-After": {
+            "$ref": "#/components/headers/RetryAfter"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "feature_disabled": {
+                "value": {
+                  "error": {
+                    "code": "feature_disabled",
+                    "message": "A sentence for people.",
+                    "retryable": false,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              },
+              "dependency_unavailable": {
+                "value": {
+                  "error": {
+                    "code": "dependency_unavailable",
+                    "message": "A sentence for people.",
+                    "retryable": true,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Timeout": {
+        "description": "Server ran out of time. Codes: timeout.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorEnvelope"
+            },
+            "examples": {
+              "timeout": {
+                "value": {
+                  "error": {
+                    "code": "timeout",
+                    "message": "A sentence for people.",
+                    "retryable": true,
+                    "details": {},
+                    "request_id": "0193f0c2-7a1e-7c3d-9b2a-4f5e6d7c8b9a"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NotModified": {
+        "description": "Not modified: the copy the client holds, named by If-None-Match, is current. No body.",
+        "headers": {
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "ETag": {
+            "$ref": "#/components/headers/ETag"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "ClerkBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "A Clerk session JWT. The edge function verifies signature (Clerk JWKS), expiry, issuer and authorized party, then maps sub to the internal user id. Supabase's anon key is never accepted (C-AUTH-1)."
+      },
+      "WorkerSecret": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Worker-Secret",
+        "description": "Shared secret from Supabase Vault, sent by pg_cron through pg_net to <domain>-worker functions (C-AUTH-7)."
+      }
+    }
+  },
+  "security": [
+    {
+      "ClerkBearer": []
+    }
+  ],
+  "x-error-catalog": [
+    {
+      "code": "validation_failed",
+      "http_status": 400,
+      "retryable": false,
+      "meaning": "The body or parameters break the schema or a rule; details.fields lists {field, rule}."
+    },
+    {
+      "code": "idempotency_key_missing",
+      "http_status": 400,
+      "retryable": false,
+      "meaning": "A write arrived without Idempotency-Key."
+    },
+    {
+      "code": "unauthenticated",
+      "http_status": 401,
+      "retryable": false,
+      "meaning": "No valid Clerk token. The client refreshes its token once and retries once."
+    },
+    {
+      "code": "forbidden",
+      "http_status": 403,
+      "retryable": false,
+      "meaning": "Signed in, but this action is not the caller's to take."
+    },
+    {
+      "code": "entitlement_required",
+      "http_status": 403,
+      "retryable": false,
+      "meaning": "The step or feature needs Premium; details.required names the entitlement."
+    },
+    {
+      "code": "not_found",
+      "http_status": 404,
+      "retryable": false,
+      "meaning": "No such resource for this caller, including one that belongs to someone else."
+    },
+    {
+      "code": "conflict",
+      "http_status": 409,
+      "retryable": false,
+      "meaning": "The resource's state does not allow this transition; details.state gives the current state."
+    },
+    {
+      "code": "request_in_progress",
+      "http_status": 409,
+      "retryable": true,
+      "meaning": "Another request with the same idempotency key is still running; retry after Retry-After."
+    },
+    {
+      "code": "gone",
+      "http_status": 410,
+      "retryable": false,
+      "meaning": "A resource the signed-in caller owned was deleted, or their account is being deleted. Link tokens never get 410: an unknown, expired or revoked token gets 404 not_found."
+    },
+    {
+      "code": "version_mismatch",
+      "http_status": 412,
+      "retryable": false,
+      "meaning": "If-Match does not match the current revision; details.current holds the current resource."
+    },
+    {
+      "code": "payload_too_large",
+      "http_status": 413,
+      "retryable": false,
+      "meaning": "Body over the operation's cap."
+    },
+    {
+      "code": "unsupported_media_type",
+      "http_status": 415,
+      "retryable": false,
+      "meaning": "Wrong content type, or an audio format the server cannot read."
+    },
+    {
+      "code": "idempotency_key_reused",
+      "http_status": 422,
+      "retryable": false,
+      "meaning": "The key was used before with a different body."
+    },
+    {
+      "code": "client_outdated",
+      "http_status": 426,
+      "retryable": false,
+      "meaning": "The client build is below client.min_build; the client reloads."
+    },
+    {
+      "code": "precondition_required",
+      "http_status": 428,
+      "retryable": false,
+      "meaning": "An update arrived without If-Match."
+    },
+    {
+      "code": "rate_limited",
+      "http_status": 429,
+      "retryable": true,
+      "meaning": "Too many requests; wait for Retry-After."
+    },
+    {
+      "code": "allowance_exhausted",
+      "http_status": 429,
+      "retryable": false,
+      "meaning": "A daily allowance is used up; details gives allowance, limit and resets_at."
+    },
+    {
+      "code": "internal",
+      "http_status": 500,
+      "retryable": true,
+      "meaning": "An unexpected server error; safe to retry with the same idempotency key."
+    },
+    {
+      "code": "feature_disabled",
+      "http_status": 503,
+      "retryable": false,
+      "meaning": "A kill switch is off for this feature."
+    },
+    {
+      "code": "dependency_unavailable",
+      "http_status": 503,
+      "retryable": true,
+      "meaning": "A provider or the database did not answer."
+    },
+    {
+      "code": "timeout",
+      "http_status": 504,
+      "retryable": true,
+      "meaning": "The server ran out of time; a retry with the same idempotency key returns the committed result if there was one."
+    }
+  ],
+  "x-rate-limit-classes": {
+    "read": {
+      "per_minute": 120,
+      "key": "user"
+    },
+    "write": {
+      "per_minute": 60,
+      "key": "user"
+    },
+    "sync": {
+      "per_minute": 20,
+      "key": "user",
+      "max_items": 100
+    },
+    "costly": {
+      "per_minute": 20,
+      "key": "user"
+    },
+    "public_token": {
+      "per_minute_per_token": 10,
+      "per_minute_per_address": 60,
+      "key": "token and hashed client address"
+    },
+    "machine": {
+      "per_minute": null,
+      "key": "none for verified callers; failed signature or worker-secret checks count per hashed client address",
+      "failed_auth_per_minute_per_address": 60,
+      "use": "provider webhooks and worker endpoints called by pg_cron"
+    }
+  },
+  "x-operation-extensions": {
+    "x-rate-limit": "One of the x-rate-limit-classes keys.",
+    "x-idempotent": "true on every write; the operation must reference parameters/IdempotencyKey.",
+    "x-emits": "Array of event types the operation can publish.",
+    "x-flag": "The ops.flags key that switches the operation off, if any.",
+    "x-entitlement": "free, premium or staff:<role>, when access depends on it.",
+    "x-error-codes": "At the document root of a domain file: domain-specific codes as {code, http_status, retryable, meaning}.",
+    "x-idempotency-key": "optional, only on an operation a mail client calls without custom headers (RFC 8058 one-click unsubscribe); the operation is idempotent by its effect (C-API-6)."
+  }
+}

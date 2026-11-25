@@ -1,0 +1,4477 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "info": {
+    "title": "Language Academy curriculum API",
+    "version": "1.0.0",
+    "summary": "Catalog, lesson content, words, Word of the Day, content review and catalog releases.",
+    "description": "Edge function `curriculum`. Domain document: build-spec/domains/curriculum.md. Shared pieces come from common.openapi.json; rules from build-spec/00-conventions.md."
+  },
+  "servers": [
+    {
+      "url": "https://{project_ref}.supabase.co/functions/v1",
+      "variables": {
+        "project_ref": {
+          "default": "project-ref"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "ClerkBearer": []
+    }
+  ],
+  "paths": {
+    "/curriculum/v1/catalog": {
+      "get": {
+        "operationId": "curriculum_get_catalog",
+        "summary": "Get the published catalog",
+        "description": "The catalog version now published: units, lessons, guides, readings, steps with minute estimates and access tiers, stories, and the key map from prototype step ids, live section ids and position keys to stored keys. The same for every learner; holds no lesson text. Clients cache it by catalog_version.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IfNoneMatchCatalog"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The published catalog.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "#/components/headers/CatalogETag"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogManifest"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "Not modified.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "#/components/headers/CatalogETag"
+              }
+            }
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "free"
+      }
+    },
+    "/curriculum/v1/catalog/versions/{catalog_version}": {
+      "get": {
+        "operationId": "curriculum_get_catalog_version",
+        "summary": "Get one catalog version",
+        "description": "A published or retired version still inside its acceptance window, for a client that opened a step on it. A version outside the window returns gone.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CatalogVersionPath"
+          },
+          {
+            "$ref": "#/components/parameters/IfNoneMatchCatalog"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "That catalog version.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "#/components/headers/CatalogETag"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogManifest"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "Not modified.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "#/components/headers/CatalogETag"
+              }
+            }
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "410": {
+            "$ref": "common.openapi.json#/components/responses/Gone"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "free"
+      }
+    },
+    "/curriculum/v1/lessons/{module_key}/content": {
+      "get": {
+        "operationId": "curriculum_get_lesson_content",
+        "summary": "Get a lesson's content",
+        "description": "Words, phrases, exercise items and step bodies of one lesson at one content revision. Steps the caller may not open (identity svc_can_access) come back locked, with an empty body and only the free preview (OPS-4). Without content_revision the revision in the published catalog is returned.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ModuleKeyPath"
+          },
+          {
+            "name": "content_revision",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "$ref": "#/components/parameters/IfNoneMatchContent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lesson content for this caller.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "#/components/headers/ContentETag"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/LessonContent"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "Not modified.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "#/components/headers/ContentETag"
+              }
+            }
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "410": {
+            "$ref": "common.openapi.json#/components/responses/Gone"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "free"
+      }
+    },
+    "/curriculum/v1/words": {
+      "get": {
+        "operationId": "curriculum_list_words",
+        "summary": "Get words by id",
+        "description": "Display data for up to 200 word ids, for review cards. Unknown ids are left out of the list.",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 200,
+              "items": {
+                "$ref": "common.openapi.json#/components/schemas/WordId"
+              }
+            }
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The words found.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Word"
+                      }
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "free"
+      }
+    },
+    "/curriculum/v1/word-of-the-day": {
+      "get": {
+        "operationId": "curriculum_get_word_of_the_day",
+        "summary": "Get the Word of the Day for a date",
+        "description": "The published Word of the Day for the learner's local date. Only items in status published are ever returned (AI-1). A date more than one day after the server's UTC date is refused.",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "common.openapi.json#/components/schemas/LocalDate"
+            }
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The published item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/WordOfTheDay"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-flag": "curriculum.wotd.serve",
+        "x-entitlement": "free"
+      }
+    },
+    "/curriculum/v1/content-items/{item_id}": {
+      "get": {
+        "operationId": "curriculum_get_content_item",
+        "summary": "Get a published content item",
+        "description": "A published content item by id, for links from email. A withdrawn item returns gone.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The published item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/WordOfTheDay"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "410": {
+            "$ref": "common.openapi.json#/components/responses/Gone"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "free"
+      }
+    },
+    "/curriculum/v1/review/items": {
+      "get": {
+        "operationId": "curriculum_list_review_items",
+        "summary": "List content items for review",
+        "description": "Staff queue of content items by status, kind and publish date, ordered by publish_date then item_id.",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/ContentItemStatus"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "word_of_the_day"
+              ]
+            }
+          },
+          {
+            "name": "from_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "common.openapi.json#/components/schemas/LocalDate"
+            }
+          },
+          {
+            "name": "to_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "common.openapi.json#/components/schemas/LocalDate"
+            }
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Limit"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Cursor"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of items.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReviewItem"
+                      }
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumListMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "staff:reviewer"
+      },
+      "post": {
+        "operationId": "curriculum_create_review_item",
+        "summary": "Create a staff-written content item",
+        "description": "Creates a draft written by staff. Automatic checks run at once and are stored on the item.",
+        "parameters": [
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The new draft.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewItemCreate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}": {
+      "get": {
+        "operationId": "curriculum_get_review_item",
+        "summary": "Get a content item with its review history",
+        "description": "The item at its current content revision, its checks and every review decision.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "staff:reviewer"
+      },
+      "put": {
+        "operationId": "curriculum_update_review_item",
+        "summary": "Edit a content item",
+        "description": "Replaces the body and date, creating a new content revision and rerunning the checks. An approved item goes back to in_review, because the approval was for the old revision. Published, withdrawn and rejected items cannot be edited (conflict); withdraw and create a new item instead.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The edited item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewItemUpdate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}/submit": {
+      "post": {
+        "operationId": "curriculum_submit_review_item",
+        "summary": "Send a draft to review",
+        "description": "draft to in_review. Refused with curriculum.checks_failed while any automatic check fails.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The item in review.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisionPin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}/approve": {
+      "post": {
+        "operationId": "curriculum_approve_review_item",
+        "summary": "Approve a content item",
+        "description": "in_review to approved, for the content revision the reviewer read. The reviewer must hold the reviewer role (identity svc_has_role, SEC-9) and must not be the last editor of that revision (curriculum.self_review_not_allowed). Writes an audit entry.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The approved item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [
+          "curriculum.content_item_reviewed"
+        ],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisionPin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}/reject": {
+      "post": {
+        "operationId": "curriculum_reject_review_item",
+        "summary": "Reject a content item",
+        "description": "in_review to rejected, which is final. The date is free for another item. Writes an audit entry.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The rejected item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [
+          "curriculum.content_item_reviewed"
+        ],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisionPin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}/request-changes": {
+      "post": {
+        "operationId": "curriculum_request_changes_review_item",
+        "summary": "Send a content item back to draft",
+        "description": "in_review to draft with a note. Writes an audit entry.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The item, back in draft.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [
+          "curriculum.content_item_reviewed"
+        ],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisionPin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}/publish": {
+      "post": {
+        "operationId": "curriculum_publish_review_item",
+        "summary": "Publish an approved content item now",
+        "description": "approved to published ahead of the automatic publish job, which publishes approved items 48 hours before their date.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The published item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [
+          "curriculum.content_item_published"
+        ],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisionPin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/review/items/{item_id}/withdraw": {
+      "post": {
+        "operationId": "curriculum_withdraw_review_item",
+        "summary": "Withdraw a content item",
+        "description": "approved or published to withdrawn. Messaging stops every unsent message that uses it. Writes an audit entry.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ItemIdPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The withdrawn item.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ReviewItem"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [
+          "curriculum.content_item_withdrawn"
+        ],
+        "x-idempotent": true,
+        "x-entitlement": "staff:reviewer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithdrawInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/catalog-releases": {
+      "get": {
+        "operationId": "curriculum_list_catalog_releases",
+        "summary": "List catalog releases",
+        "description": "Every catalog version with its status, newest first.",
+        "parameters": [
+          {
+            "$ref": "common.openapi.json#/components/parameters/Limit"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Cursor"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of releases.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/CatalogRelease"
+                      }
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumListMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "staff:reviewer"
+      },
+      "post": {
+        "operationId": "curriculum_create_catalog_release",
+        "summary": "Create a draft catalog release",
+        "description": "Stores a la-bundle@1 bundle (contracts/curriculum.bundle.schema.json) as the next catalog version in draft and runs validation. A bundle that fails the schema is stored with the problem bundle_invalid and nothing else. The body cap for this operation is 10 MB.",
+        "parameters": [
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The draft release with its validation report and diff.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogRelease"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [],
+        "x-idempotent": true,
+        "x-entitlement": "staff:admin",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CatalogReleaseCreate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curriculum/v1/catalog-releases/{catalog_version}": {
+      "get": {
+        "operationId": "curriculum_get_catalog_release",
+        "summary": "Get a catalog release",
+        "description": "One release with validation problems and its diff against the published version.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CatalogVersionPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The release.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogRelease"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          }
+        },
+        "x-rate-limit": "read",
+        "x-emits": [],
+        "x-entitlement": "staff:reviewer"
+      }
+    },
+    "/curriculum/v1/catalog-releases/{catalog_version}/submit": {
+      "post": {
+        "operationId": "curriculum_submit_catalog_release",
+        "summary": "Send a release to review",
+        "description": "draft to in_review. Refused with curriculum.release_invalid while validation has problems.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CatalogVersionPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The release in review.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogRelease"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [],
+        "x-idempotent": true,
+        "x-entitlement": "staff:admin"
+      }
+    },
+    "/curriculum/v1/catalog-releases/{catalog_version}/publish": {
+      "post": {
+        "operationId": "curriculum_publish_catalog_release",
+        "summary": "Publish a catalog release",
+        "description": "in_review to published; the previous published version becomes retired and stays readable for its acceptance window. The publisher holds the reviewer role and did not create the release. Writes an audit entry.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CatalogVersionPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The published release.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogRelease"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [
+          "curriculum.catalog_version_published"
+        ],
+        "x-idempotent": true,
+        "x-flag": "curriculum.catalog.publish",
+        "x-entitlement": "staff:reviewer"
+      }
+    },
+    "/curriculum/v1/catalog-releases/{catalog_version}/discard": {
+      "post": {
+        "operationId": "curriculum_discard_catalog_release",
+        "summary": "Discard a release",
+        "description": "draft or in_review to discarded. The version number is never reused.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CatalogVersionPath"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IfMatch"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/RequestId"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/Traceparent"
+          },
+          {
+            "$ref": "common.openapi.json#/components/parameters/ClientBuild"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The discarded release.",
+            "headers": {
+              "X-Request-Id": {
+                "$ref": "common.openapi.json#/components/headers/XRequestId"
+              },
+              "ETag": {
+                "$ref": "common.openapi.json#/components/headers/ETag"
+              },
+              "Idempotency-Replayed": {
+                "$ref": "common.openapi.json#/components/headers/IdempotencyReplayed"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "data",
+                    "meta"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/CatalogRelease"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/CurriculumMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "428": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionRequired"
+          },
+          "400": {
+            "$ref": "common.openapi.json#/components/responses/ValidationFailed"
+          },
+          "401": {
+            "$ref": "common.openapi.json#/components/responses/Unauthenticated"
+          },
+          "409": {
+            "$ref": "common.openapi.json#/components/responses/Conflict"
+          },
+          "413": {
+            "$ref": "common.openapi.json#/components/responses/PayloadTooLarge"
+          },
+          "422": {
+            "$ref": "common.openapi.json#/components/responses/IdempotencyKeyReused"
+          },
+          "426": {
+            "$ref": "common.openapi.json#/components/responses/ClientOutdated"
+          },
+          "429": {
+            "$ref": "common.openapi.json#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "common.openapi.json#/components/responses/Internal"
+          },
+          "503": {
+            "$ref": "common.openapi.json#/components/responses/Unavailable"
+          },
+          "504": {
+            "$ref": "common.openapi.json#/components/responses/Timeout"
+          },
+          "403": {
+            "$ref": "common.openapi.json#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "common.openapi.json#/components/responses/NotFound"
+          },
+          "412": {
+            "$ref": "common.openapi.json#/components/responses/PreconditionFailed"
+          }
+        },
+        "x-rate-limit": "write",
+        "x-emits": [],
+        "x-idempotent": true,
+        "x-entitlement": "staff:admin"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CurriculumMeta": {
+        "description": "Meta (C-API-3) plus the catalog version now published, so a client learns of a new release on any response.",
+        "allOf": [
+          {
+            "$ref": "common.openapi.json#/components/schemas/Meta"
+          },
+          {
+            "type": "object",
+            "required": [
+              "catalog_version"
+            ],
+            "properties": {
+              "catalog_version": {
+                "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+              }
+            }
+          }
+        ]
+      },
+      "CurriculumListMeta": {
+        "allOf": [
+          {
+            "$ref": "common.openapi.json#/components/schemas/ListMeta"
+          },
+          {
+            "type": "object",
+            "required": [
+              "catalog_version"
+            ],
+            "properties": {
+              "catalog_version": {
+                "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+              }
+            }
+          }
+        ]
+      },
+      "LessonKind": {
+        "type": "string",
+        "enum": [
+          "lesson",
+          "guide",
+          "reading",
+          "practice",
+          "unit_exam"
+        ],
+        "description": "Kind of a catalog entry. Prototype kind 'help' is 'guide'; prototype kind 'exam' is 'unit_exam'."
+      },
+      "AccessTier": {
+        "type": "string",
+        "enum": [
+          "free",
+          "premium"
+        ]
+      },
+      "CatalogStep": {
+        "type": "object",
+        "required": [
+          "section_id",
+          "ordinal",
+          "name",
+          "short_name",
+          "counted",
+          "soon",
+          "estimate_minutes",
+          "access_tier",
+          "scored",
+          "pass_pct"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "section_id": {
+            "$ref": "common.openapi.json#/components/schemas/SectionId"
+          },
+          "ordinal": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 60,
+            "examples": [
+              "Vocabulary Intro"
+            ]
+          },
+          "short_name": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "counted": {
+            "type": "boolean",
+            "description": "Counts toward lesson completion and minutes. False for Soon steps."
+          },
+          "soon": {
+            "type": "boolean",
+            "description": "Shown as Soon; cannot be opened or completed (Conversation today)."
+          },
+          "estimate_minutes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 60,
+            "multipleOf": 0.5
+          },
+          "access_tier": {
+            "$ref": "#/components/schemas/AccessTier"
+          },
+          "scored": {
+            "type": "boolean"
+          },
+          "pass_pct": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Set for exams (80). A finish below it is outcome failed."
+          }
+        }
+      },
+      "CatalogLesson": {
+        "type": "object",
+        "required": [
+          "module_key",
+          "unit_key",
+          "position",
+          "position_key",
+          "display_number",
+          "kind",
+          "title",
+          "description",
+          "can_do",
+          "content_revision",
+          "minutes",
+          "word_count",
+          "story_id",
+          "steps"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "module_key": {
+            "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+          },
+          "unit_key": {
+            "$ref": "common.openapi.json#/components/schemas/UnitKey"
+          },
+          "position": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Order inside the unit, guides included. Used only for routes and display (C-ID-3)."
+          },
+          "position_key": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+$",
+            "examples": [
+              "1.3"
+            ],
+            "description": "Route key 'U.N' for this catalog version only."
+          },
+          "display_number": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The number shown as 'Lesson N'. Equal to position for every kind, guides included (guide rows add a Guide tag)."
+          },
+          "kind": {
+            "$ref": "#/components/schemas/LessonKind"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 160,
+            "description": "French parts marked with braces, as in 'Essential Verb · {être} (to be)'."
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "content_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minutes": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Sum of estimate_minutes over counted steps."
+          },
+          "word_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "story_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "guide_after_module_key": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "For a guide, the lesson it follows in the list."
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogStep"
+            }
+          },
+          "can_do": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "description": "What the learner can do after this entry, shown on the Lesson complete screen and in emails; French marked with braces. Empty for entries without one."
+          }
+        }
+      },
+      "CatalogUnit": {
+        "type": "object",
+        "required": [
+          "unit_key",
+          "ordinal",
+          "name",
+          "description",
+          "after_text",
+          "lessons"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "unit_key": {
+            "$ref": "common.openapi.json#/components/schemas/UnitKey"
+          },
+          "ordinal": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "after_text": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "Can-do sentence: 'After this unit you can ...'."
+          },
+          "lessons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogLesson"
+            }
+          }
+        }
+      },
+      "StepAliases": {
+        "type": "object",
+        "required": [
+          "prototype_steps",
+          "live_sections",
+          "kinds",
+          "legacy_positions"
+        ],
+        "additionalProperties": false,
+        "description": "Published key map. Keys outside this map are never stored or sent (DATA-1).",
+        "properties": {
+          "prototype_steps": {
+            "type": "object",
+            "additionalProperties": {
+              "oneOf": [
+                {
+                  "$ref": "common.openapi.json#/components/schemas/SectionId"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "examples": [
+              {
+                "vocabulary": "vocabulary-intro",
+                "pronunciation": "pronunciation",
+                "flash-cards": "flash-cards",
+                "speed-match": "speed-match",
+                "writing": "writing",
+                "conversation": "conversation",
+                "exam": "lesson-exam",
+                "reading": "reading-passage",
+                "practice": "practice-exercises",
+                "unit-exam": "exam-questions",
+                "guide": "interactive-help",
+                "complete": null
+              }
+            ]
+          },
+          "live_sections": {
+            "type": "object",
+            "additionalProperties": {
+              "oneOf": [
+                {
+                  "$ref": "common.openapi.json#/components/schemas/SectionId"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "examples": [
+              {
+                "vocabulary-intro": "vocabulary-intro",
+                "exam-questions": "exam-questions",
+                "interactive-help": "interactive-help",
+                "reference-content": null,
+                "next-module": null
+              }
+            ]
+          },
+          "kinds": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LessonKind"
+            },
+            "examples": [
+              {
+                "help": "guide",
+                "exam": "unit_exam",
+                "lesson": "lesson",
+                "reading": "reading",
+                "practice": "practice"
+              }
+            ]
+          },
+          "legacy_positions": {
+            "type": "object",
+            "description": "Live app position to module_key, frozen from the live app's main branch at commit e4392e7. The client uses it only to open old /lessons?module=N links and never stores or sends the number (DATA-1).",
+            "propertyNames": {
+              "pattern": "^[1-9][0-9]{0,3}$"
+            },
+            "additionalProperties": {
+              "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+            },
+            "examples": [
+              {
+                "3": "2024-01-02-etre",
+                "14": "2024-01-11-unit1-exam"
+              }
+            ]
+          }
+        }
+      },
+      "StorySummary": {
+        "type": "object",
+        "required": [
+          "story_id",
+          "unit_key",
+          "reading_module_key",
+          "title",
+          "title_en",
+          "cover"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "story_id": {
+            "type": "string"
+          },
+          "unit_key": {
+            "$ref": "common.openapi.json#/components/schemas/UnitKey"
+          },
+          "reading_module_key": {
+            "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+          },
+          "title": {
+            "type": "string"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "cover": {
+            "type": "string",
+            "description": "Path of the cover image under the static stories folder."
+          }
+        }
+      },
+      "CatalogManifest": {
+        "type": "object",
+        "required": [
+          "catalog_version",
+          "published_at",
+          "language",
+          "units",
+          "shelf",
+          "aliases",
+          "routes",
+          "stories",
+          "accepted_versions"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "catalog_version": {
+            "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+          },
+          "published_at": {
+            "$ref": "common.openapi.json#/components/schemas/Instant"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "fr"
+            ]
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CatalogUnit"
+            },
+            "description": "Every unit in display order. The number of units and the last unit come only from this list."
+          },
+          "aliases": {
+            "$ref": "#/components/schemas/StepAliases"
+          },
+          "routes": {
+            "type": "object",
+            "description": "position_key to module_key for this version, e.g. {\"1.3\": \"2024-01-02-etre\"}.",
+            "additionalProperties": {
+              "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+            }
+          },
+          "stories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StorySummary"
+            }
+          },
+          "accepted_versions": {
+            "type": "array",
+            "items": {
+              "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+            },
+            "description": "Catalog versions the progress API still accepts attempts for."
+          },
+          "shelf": {
+            "$ref": "#/components/schemas/ShelfManifest"
+          }
+        }
+      },
+      "LessonWord": {
+        "type": "object",
+        "required": [
+          "word_id",
+          "text",
+          "meaning_en",
+          "ordinal"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "word_id": {
+            "$ref": "common.openapi.json#/components/schemas/WordId"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "French spelling. Display only; never a key (DATA-7)."
+          },
+          "meaning_en": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "ordinal": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "example_fr": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "example_en": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "part_of_speech": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "Phrase": {
+        "type": "object",
+        "required": [
+          "phrase_id",
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "phrase_id": {
+            "$ref": "common.openapi.json#/components/schemas/PhraseId"
+          },
+          "text": {
+            "type": "string"
+          },
+          "word_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/WordId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sounds": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "parts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Parts with a reviewed tip each (AI-2). Empty when no part tip has been reviewed; the step then works with the phrase's reference text and its general tip."
+          },
+          "tip": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "General tip, labelled as general when shown (AI-2)."
+          }
+        }
+      },
+      "ExerciseItem": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "kind",
+          "prompt",
+          "word_ids"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Unique inside its module_key and stable across content revisions while the question keeps its meaning. The same item_id may appear in Writing and in the lesson exam; it is one question with one answer key."
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "choice",
+              "typed",
+              "pair",
+              "guide_check",
+              "story_question"
+            ]
+          },
+          "prompt": {
+            "$ref": "#/components/schemas/ItemPrompt"
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "choice_id",
+                "text"
+              ],
+              "properties": {
+                "choice_id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "answer_key": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AnswerKey"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Sent for instant feedback; the server grades again (C-LAY-4). One item has one answer key in every step it appears in."
+          },
+          "word_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.openapi.json#/components/schemas/WordId"
+            }
+          }
+        }
+      },
+      "StepContent": {
+        "type": "object",
+        "required": [
+          "section_id",
+          "locked",
+          "body",
+          "items",
+          "preview"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "section_id": {
+            "$ref": "common.openapi.json#/components/schemas/SectionId",
+            "description": "A step of the entry, or reference-content for a Reference page's text, which is not a step and carries no progress."
+          },
+          "locked": {
+            "type": "boolean",
+            "description": "True when the caller may not open this step; body and items are then empty (OPS-4)."
+          },
+          "body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/VocabularyIntroBody"
+              },
+              {
+                "$ref": "#/components/schemas/ReferenceBody"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Shape set by section_id: vocabulary-intro holds VocabularyIntroBody, a Reference page's reference-content part holds ReferenceBody, interactive-help holds guide parts and checks, reading-passage holds story blocks. Empty when locked."
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExerciseItem"
+            }
+          },
+          "preview": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "For locked steps only: the free preview carried in the release bundle (a guide's first part, a reading's first picture and the two text blocks after it). Curriculum stores and serves it; identity's access rule decides who sees the full step."
+          }
+        }
+      },
+      "LessonContent": {
+        "type": "object",
+        "required": [
+          "module_key",
+          "content_revision",
+          "kind",
+          "words",
+          "phrases",
+          "steps"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "module_key": {
+            "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+          },
+          "content_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ContentKind"
+          },
+          "words": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LessonWord"
+            }
+          },
+          "phrases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Phrase"
+            }
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StepContent"
+            }
+          }
+        },
+        "description": "Content of a catalog entry or a Reference page at one content revision."
+      },
+      "Word": {
+        "type": "object",
+        "required": [
+          "word_id",
+          "text",
+          "meaning_en",
+          "first_module_key"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "word_id": {
+            "$ref": "common.openapi.json#/components/schemas/WordId"
+          },
+          "text": {
+            "type": "string"
+          },
+          "meaning_en": {
+            "type": "string"
+          },
+          "part_of_speech": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "first_module_key": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "dictionary_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "examples": [
+              "aller-fr"
+            ]
+          },
+          "retired": {
+            "type": "boolean"
+          }
+        }
+      },
+      "WordOfTheDay": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "content_revision",
+          "publish_date",
+          "language",
+          "word",
+          "body"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item_id": {
+            "$ref": "common.openapi.json#/components/schemas/Uuid"
+          },
+          "content_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "publish_date": {
+            "$ref": "common.openapi.json#/components/schemas/LocalDate"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "fr"
+            ]
+          },
+          "word_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/WordId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "word": {
+            "type": "string"
+          },
+          "lesson_module_key": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/WordOfTheDayBody"
+          }
+        }
+      },
+      "WordOfTheDayBody": {
+        "type": "object",
+        "required": [
+          "meaning_en",
+          "line",
+          "examples"
+        ],
+        "additionalProperties": false,
+        "description": "Validated on import and on every edit (AI-1).",
+        "properties": {
+          "meaning_en": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "part_of_speech": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "phonetic": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "line": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          },
+          "examples": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "required": [
+                "fr",
+                "en"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "fr": {
+                  "type": "string",
+                  "maxLength": 200
+                },
+                "en": {
+                  "type": "string",
+                  "maxLength": 200
+                }
+              }
+            }
+          },
+          "forms": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "required": [
+                "fr",
+                "en"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "fr": {
+                  "type": "string"
+                },
+                "en": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "quiz": {
+            "type": "object",
+            "required": [
+              "correct",
+              "wrong"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "correct": {
+                "type": "string"
+              },
+              "wrong": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ContentItemStatus": {
+        "type": "string",
+        "enum": [
+          "draft",
+          "in_review",
+          "approved",
+          "published",
+          "withdrawn",
+          "rejected"
+        ]
+      },
+      "CheckResult": {
+        "type": "object",
+        "required": [
+          "check",
+          "passed"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "check": {
+            "type": "string",
+            "enum": [
+              "schema",
+              "word_known",
+              "examples_present",
+              "date_free",
+              "length_limits",
+              "generator_checks"
+            ]
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "detail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "ReviewDecision": {
+        "type": "object",
+        "required": [
+          "decision",
+          "content_revision",
+          "reviewer_id",
+          "decided_at"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approved",
+              "rejected",
+              "changes_requested"
+            ]
+          },
+          "content_revision": {
+            "type": "integer"
+          },
+          "reviewer_id": {
+            "$ref": "common.openapi.json#/components/schemas/Uuid"
+          },
+          "decided_at": {
+            "$ref": "common.openapi.json#/components/schemas/Instant"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "ReviewItem": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "kind",
+          "language",
+          "status",
+          "publish_date",
+          "content_revision",
+          "revision",
+          "source",
+          "checks",
+          "body",
+          "reviews"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item_id": {
+            "$ref": "common.openapi.json#/components/schemas/Uuid"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "word_of_the_day"
+            ]
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "fr"
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/ContentItemStatus"
+          },
+          "publish_date": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/LocalDate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "content_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "revision": {
+            "$ref": "common.openapi.json#/components/schemas/Revision"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "ai_draft",
+              "staff"
+            ]
+          },
+          "draft_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "generator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "checks": {
+            "type": "object",
+            "required": [
+              "passed",
+              "results"
+            ],
+            "properties": {
+              "passed": {
+                "type": "boolean"
+              },
+              "results": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CheckResult"
+                }
+              }
+            }
+          },
+          "body": {
+            "$ref": "#/components/schemas/WordOfTheDayBody"
+          },
+          "word_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/WordId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "last_edited_by": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Staff id of the last editor; null when the body is the AI draft unchanged."
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReviewDecision"
+            }
+          },
+          "published_at": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "withdrawn_at": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "withdraw_reason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "error_found",
+              "superseded",
+              "other",
+              null
+            ]
+          }
+        }
+      },
+      "ReviewItemCreate": {
+        "type": "object",
+        "required": [
+          "kind",
+          "language",
+          "publish_date",
+          "body"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "word_of_the_day"
+            ]
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "fr"
+            ]
+          },
+          "publish_date": {
+            "$ref": "common.openapi.json#/components/schemas/LocalDate"
+          },
+          "word_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/WordId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/WordOfTheDayBody"
+          }
+        }
+      },
+      "ReviewItemUpdate": {
+        "type": "object",
+        "required": [
+          "publish_date",
+          "body"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "publish_date": {
+            "$ref": "common.openapi.json#/components/schemas/LocalDate"
+          },
+          "word_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/WordId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body": {
+            "$ref": "#/components/schemas/WordOfTheDayBody"
+          }
+        }
+      },
+      "RevisionPin": {
+        "type": "object",
+        "required": [
+          "content_revision"
+        ],
+        "additionalProperties": false,
+        "description": "The content revision the reviewer read. A decision on any other revision is refused with version_mismatch.",
+        "properties": {
+          "content_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          }
+        }
+      },
+      "WithdrawInput": {
+        "type": "object",
+        "required": [
+          "reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "type": "string",
+            "enum": [
+              "error_found",
+              "superseded",
+              "other"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          }
+        }
+      },
+      "ReleaseProblem": {
+        "type": "object",
+        "required": [
+          "code",
+          "severity",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "module_key_missing",
+              "module_key_reused",
+              "position_duplicate",
+              "section_id_invalid",
+              "estimate_invalid",
+              "alias_missing",
+              "access_rule_broken",
+              "word_id_changed",
+              "item_id_reused",
+              "content_unreviewed",
+              "unit_empty",
+              "story_missing",
+              "bundle_invalid",
+              "shelf_invalid",
+              "item_placement_invalid",
+              "item_shape_invalid",
+              "phrases_missing"
+            ]
+          },
+          "module_key": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "section_id": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/SectionId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "detail": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "error",
+              "warning"
+            ],
+            "description": "error blocks submitting and publishing; warning is listed for the reviewer and blocks nothing."
+          }
+        }
+      },
+      "CatalogRelease": {
+        "type": "object",
+        "required": [
+          "catalog_version",
+          "status",
+          "based_on_version",
+          "created_by",
+          "created_at",
+          "validation",
+          "diff",
+          "revision"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "catalog_version": {
+            "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "in_review",
+              "published",
+              "retired",
+              "discarded"
+            ]
+          },
+          "based_on_version": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "created_by": {
+            "$ref": "common.openapi.json#/components/schemas/Uuid"
+          },
+          "created_at": {
+            "$ref": "common.openapi.json#/components/schemas/Instant"
+          },
+          "submitted_at": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "published_by": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "published_at": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "retired_at": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "validation": {
+            "type": "object",
+            "required": [
+              "passed",
+              "problems"
+            ],
+            "properties": {
+              "passed": {
+                "type": "boolean"
+              },
+              "problems": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ReleaseProblem"
+                }
+              }
+            }
+          },
+          "diff": {
+            "type": "object",
+            "required": [
+              "added_module_keys",
+              "retired_module_keys",
+              "changed_module_keys",
+              "moved_module_keys",
+              "estimates_changed",
+              "access_changed"
+            ],
+            "properties": {
+              "added_module_keys": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+                }
+              },
+              "retired_module_keys": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+                }
+              },
+              "changed_module_keys": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+                }
+              },
+              "moved_module_keys": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+                }
+              },
+              "estimates_changed": {
+                "type": "boolean"
+              },
+              "access_changed": {
+                "type": "boolean"
+              }
+            }
+          },
+          "revision": {
+            "$ref": "common.openapi.json#/components/schemas/Revision"
+          }
+        }
+      },
+      "CatalogReleaseCreate": {
+        "type": "object",
+        "required": [
+          "based_on_version",
+          "bundle"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "based_on_version": {
+            "oneOf": [
+              {
+                "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "bundle": {
+            "$ref": "curriculum.bundle.schema.json#",
+            "description": "A la-bundle@1 document: units, entries with their steps, the Reference shelf, words, stories, content with items, phrases and previews, the placement form, retired keys and the frozen legacy position table. Up to 10 MB."
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4000
+          }
+        }
+      },
+      "ContentKind": {
+        "type": "string",
+        "enum": [
+          "lesson",
+          "guide",
+          "reading",
+          "practice",
+          "unit_exam",
+          "reference"
+        ],
+        "description": "Kind of anything with lesson content: a catalog entry (LessonKind) or a Reference page on the shelf ('reference'). Reference pages carry no progress."
+      },
+      "ShelfPage": {
+        "type": "object",
+        "required": [
+          "module_key",
+          "ordinal",
+          "title",
+          "description",
+          "content_revision",
+          "screen"
+        ],
+        "additionalProperties": false,
+        "description": "A Reference page on La Référence, outside the numbered units. It has no steps and carries no progress.",
+        "properties": {
+          "module_key": {
+            "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+          },
+          "ordinal": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "content_revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "screen": {
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "pronunciation-test"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "A page with its own screen. Until that screen is built, the client shows the page's text and tables like any other Reference page."
+          }
+        }
+      },
+      "ShelfManifest": {
+        "type": "object",
+        "required": [
+          "pages",
+          "guide_module_keys"
+        ],
+        "additionalProperties": false,
+        "description": "La Référence. Guides are linked by their own module_key, in course order, and never copied.",
+        "properties": {
+          "pages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShelfPage"
+            }
+          },
+          "guide_module_keys": {
+            "type": "array",
+            "items": {
+              "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+            }
+          }
+        }
+      },
+      "TypedAnswerKey": {
+        "type": "object",
+        "required": [
+          "accept"
+        ],
+        "additionalProperties": false,
+        "description": "A typed item with one answer.",
+        "properties": {
+          "language": {
+            "type": "string",
+            "enum": [
+              "fr",
+              "en"
+            ],
+            "default": "fr",
+            "description": "Language of the expected answer. fr: the shared answer checker applies French normalization (accents, elision, spacing). en: English normalization, for meaning items whose answer is English."
+          },
+          "accept": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Every accepted answer; the first is the one shown as correct."
+          },
+          "mistakes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "answer",
+                "feedback"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "answer": {
+                  "type": "string"
+                },
+                "feedback": {
+                  "type": "string",
+                  "description": "French marked with braces."
+                }
+              }
+            },
+            "description": "Named wrong answers with their explanation. None of them may pass the checker."
+          }
+        }
+      },
+      "BlanksAnswerKey": {
+        "type": "object",
+        "required": [
+          "blanks"
+        ],
+        "additionalProperties": false,
+        "description": "A gap-fill with one or more blanks. prompt.text holds one ___ marker per blank, in order; the checker grades each blank and the item is right only when every blank is.",
+        "properties": {
+          "language": {
+            "type": "string",
+            "enum": [
+              "fr",
+              "en"
+            ],
+            "default": "fr",
+            "description": "Language of the expected answer. fr: the shared answer checker applies French normalization (accents, elision, spacing). en: English normalization, for meaning items whose answer is English."
+          },
+          "blanks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "accept"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "accept": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "mistakes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "answer",
+                      "feedback"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "answer": {
+                        "type": "string"
+                      },
+                      "feedback": {
+                        "type": "string",
+                        "description": "French marked with braces."
+                      }
+                    }
+                  },
+                  "description": "Named wrong answers with their explanation. None of them may pass the checker."
+                }
+              }
+            }
+          }
+        }
+      },
+      "ChoiceAnswerKey": {
+        "type": "object",
+        "required": [
+          "correct_choice_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "correct_choice_id": {
+            "type": "string"
+          },
+          "mistakes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "choice_id",
+                "feedback"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "choice_id": {
+                  "type": "string"
+                },
+                "feedback": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "PairAnswerKey": {
+        "type": "object",
+        "required": [
+          "pairs"
+        ],
+        "additionalProperties": false,
+        "description": "Speed Match: which left card goes with which right card.",
+        "properties": {
+          "pairs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "left_id",
+                "right_id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "left_id": {
+                  "type": "string"
+                },
+                "right_id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AnswerKey": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TypedAnswerKey"
+          },
+          {
+            "$ref": "#/components/schemas/BlanksAnswerKey"
+          },
+          {
+            "$ref": "#/components/schemas/ChoiceAnswerKey"
+          },
+          {
+            "$ref": "#/components/schemas/PairAnswerKey"
+          }
+        ],
+        "description": "Stored answer key of an exercise item (la-bundle@1). typed and story_question items use TypedAnswerKey or BlanksAnswerKey, choice and guide_check items ChoiceAnswerKey, pair items PairAnswerKey. A guide check's key marks the right choice for feedback; guide checks add no miss."
+      },
+      "ConceptBlock": {
+        "type": "object",
+        "required": [
+          "type",
+          "block_id",
+          "term",
+          "definition"
+        ],
+        "additionalProperties": false,
+        "description": "A grammar card. Text is English with French marked with braces.",
+        "properties": {
+          "type": {
+            "const": "concept"
+          },
+          "block_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "maxLength": 100,
+            "description": "Unique inside its module_key and frozen once written (C-ID-4)."
+          },
+          "term": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "definition": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "example": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 300
+          }
+        }
+      },
+      "TableBlock": {
+        "type": "object",
+        "required": [
+          "type",
+          "block_id",
+          "title",
+          "rows"
+        ],
+        "additionalProperties": false,
+        "description": "A conjugation table or another two-column table of French and English.",
+        "properties": {
+          "type": {
+            "const": "table"
+          },
+          "block_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "maxLength": 100,
+            "description": "Unique inside its module_key and frozen once written (C-ID-4)."
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "rows": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "fr",
+                "en"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "fr": {
+                  "type": "string"
+                },
+                "en": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "ReferenceSectionBlock": {
+        "type": "object",
+        "required": [
+          "type",
+          "block_id",
+          "heading",
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "const": "section"
+          },
+          "block_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "maxLength": 100,
+            "description": "Unique inside its module_key and frozen once written (C-ID-4)."
+          },
+          "heading": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "text": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "fr",
+                "en"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "fr": {
+                  "type": "string"
+                },
+                "en": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "VocabularyIntroBody": {
+        "type": "object",
+        "required": [
+          "blocks"
+        ],
+        "additionalProperties": false,
+        "description": "Body of the vocabulary-intro step. The words come from LessonContent.words; blocks are the lesson's concept cards and tables, in display order. No progress is stored for a block.",
+        "properties": {
+          "blocks": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ConceptBlock"
+                },
+                {
+                  "$ref": "#/components/schemas/TableBlock"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "ReferenceBody": {
+        "type": "object",
+        "required": [
+          "blocks"
+        ],
+        "additionalProperties": false,
+        "description": "Body of a Reference page's reference-content part: sections and tables, in display order. The page's word table is LessonContent.words.",
+        "properties": {
+          "blocks": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ReferenceSectionBlock"
+                },
+                {
+                  "$ref": "#/components/schemas/TableBlock"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "ItemPrompt": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false,
+        "description": "What the learner sees for one exercise item (la-bundle@1). French is marked with braces in every text field. Fields an item kind does not use are absent or null.",
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500,
+            "description": "The question line. A typed item with several blanks holds one ___ marker (three or more underscores) per blank."
+          },
+          "en": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "English shown with the question, such as the phrase to write in French.",
+            "maxLength": 500
+          },
+          "context": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "A scene line shown before the question.",
+            "maxLength": 500
+          },
+          "hint": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Shown when the learner asks for a hint.",
+            "maxLength": 500
+          },
+          "sub": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "A second line under the question.",
+            "maxLength": 500
+          },
+          "audio_text": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "French read aloud for a listening question.",
+            "maxLength": 500
+          },
+          "shown_fr": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "French shown on screen for the learner to look at.",
+            "maxLength": 500
+          },
+          "sound": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The sound spelled for English readers, such as lay zon-fon.",
+            "maxLength": 500
+          },
+          "explain": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Shown after the learner answers, right or wrong.",
+            "maxLength": 500
+          },
+          "left_label": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Speed Match: heading over the left column.",
+            "maxLength": 500
+          },
+          "right_label": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Speed Match: heading over the right column.",
+            "maxLength": 500
+          }
+        }
+      }
+    },
+    "parameters": {
+      "ModuleKeyPath": {
+        "name": "module_key",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "$ref": "common.openapi.json#/components/schemas/ModuleKey"
+        }
+      },
+      "CatalogVersionPath": {
+        "name": "catalog_version",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "$ref": "common.openapi.json#/components/schemas/CatalogVersion"
+        }
+      },
+      "ItemIdPath": {
+        "name": "item_id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "$ref": "common.openapi.json#/components/schemas/Uuid"
+        }
+      },
+      "IfNoneMatchCatalog": {
+        "name": "If-None-Match",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "pattern": "^\"c[0-9]+\"$",
+          "examples": [
+            "\"c14\""
+          ]
+        },
+        "description": "Tag of the copy the client holds; a current tag gets 304 with no body."
+      },
+      "IfNoneMatchContent": {
+        "name": "If-None-Match",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "pattern": "^\"l[0-9]+-[a-z]+\"$",
+          "examples": [
+            "\"l7-premium\""
+          ]
+        },
+        "description": "Tag of the copy the client holds; a current tag gets 304 with no body."
+      }
+    },
+    "headers": {
+      "CatalogETag": {
+        "description": "\"c<catalog_version>\".",
+        "schema": {
+          "type": "string",
+          "pattern": "^\"c[0-9]+\"$"
+        }
+      },
+      "ContentETag": {
+        "description": "\"l<content_revision>-<free|premium>\": the content differs by entitlement.",
+        "schema": {
+          "type": "string",
+          "pattern": "^\"l[0-9]+-[a-z]+\"$"
+        }
+      },
+      "CacheControl": {
+        "description": "private, max-age=300 for the catalog; private, max-age=86400 for a lesson content revision.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "securitySchemes": {
+      "ClerkBearer": {
+        "$ref": "common.openapi.json#/components/securitySchemes/ClerkBearer"
+      }
+    }
+  },
+  "x-error-codes": [
+    {
+      "code": "curriculum.self_review_not_allowed",
+      "http_status": 403,
+      "retryable": false,
+      "meaning": "The caller last edited this content revision, or created this release; another reviewer must decide."
+    },
+    {
+      "code": "curriculum.checks_failed",
+      "http_status": 409,
+      "retryable": false,
+      "meaning": "An automatic check fails on this content revision; details.checks lists them."
+    },
+    {
+      "code": "curriculum.release_invalid",
+      "http_status": 409,
+      "retryable": false,
+      "meaning": "The release has validation problems; details.problems lists them."
+    },
+    {
+      "code": "curriculum.date_taken",
+      "http_status": 409,
+      "retryable": false,
+      "meaning": "Another item of this kind and language is approved or published for that date."
+    }
+  ]
+}
