@@ -173,3 +173,10 @@ test('an option flag is true or false, never a string', () => {
   assert.deepEqual(codes(choice({ fr: 'yes' })), ['options_invalid']);
   assert.deepEqual(codes(choice({ right: 'true' })), ['options_invalid', 'options_invalid']);
 });
+
+test('mistakes or blanks that are no list are field_type, never a crash', () => {
+  for (const bad of ['x', {}, 7, true]) {
+    assert.deepEqual(codes({ id: 'a', type: 'translate', prompt: 'I am', answer: 'je suis', mistakes: bad }), ['field_type'], `mistakes ${JSON.stringify(bad)}`);
+    assert.deepEqual(codes({ id: 'g', type: 'gapfill', text: 'Je ___ ici.', blanks: bad }), ['field_type'], `blanks ${JSON.stringify(bad)}`);
+  }
+});

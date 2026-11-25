@@ -65,12 +65,12 @@ export function itemTexts(item) {
     else add(field, role, v, typed);
   }
   add('hint', 'native_fr', item.hint, false);
-  (item.mistakes || []).forEach((m, i) => {
+  (Array.isArray(item.mistakes) ? item.mistakes : []).forEach((m, i) => {
     if (!isObj(m)) return;
     add(`mistakes[${i}].answer`, answerRole(item.type), m.answer, true);
     add(`mistakes[${i}].feedback`, 'native_fr', m.feedback, false);
   });
-  (item.blanks || []).forEach((b, i) => {
+  (Array.isArray(item.blanks) ? item.blanks : []).forEach((b, i) => {
     if (!isObj(b)) return;
     add(`blanks[${i}].answer`, 'fr', b.answer, true);
     (Array.isArray(b.accept) ? b.accept : []).forEach((t, j) => add(`blanks[${i}].accept[${j}]`, 'fr', t, true));
