@@ -561,6 +561,11 @@
       }
     }
   },
+  "2024-05-20-reading-8": {
+    "excludeWords": [
+      "fr:lex:cuisiner"
+    ]
+  },
   "2024-05-24-unit-8-exam": {
     "overrides": {
       "2024-05-24-unit-8-exam#i-vas-y": {
@@ -632,6 +637,13 @@
       "fr:form:le.pronoun.f",
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
+    ]
+  },
+  "2024-06-05-reading-9": {
+    "excludeWords": [
+      "fr:lex:cuisiner",
+      "fr:lex:rencontrer",
+      "fr:lex:sortir"
     ]
   },
   "2024-06-08-spatial-prepositions": {

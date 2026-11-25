@@ -44,13 +44,13 @@
       "word_id": "tu-ne-veux-jamais-fr",
       "fr": "tu ne veux jamais",
       "gloss": "you never want",
-      "note": "ne...jamais"
+      "note": "{ne...jamais}"
     },
     {
       "word_id": "il-ne-fait-jamais-fr",
       "fr": "il ne fait jamais",
       "gloss": "he never does",
-      "note": "faire + jamais"
+      "note": "{faire + jamais}"
     },
     {
       "word_id": "nous-ne-faisons-pas-fr",
@@ -74,7 +74,7 @@
       "word_id": "elle-ne-voit-jamais-fr",
       "fr": "elle ne voit jamais",
       "gloss": "she never sees",
-      "note": "voir + jamais"
+      "note": "{voir + jamais}"
     },
     {
       "word_id": "je-ne-le-veux-pas-fr",

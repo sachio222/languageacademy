@@ -7,10 +7,11 @@ import { analyzeItems, suppressions } from './taught-before.mjs';
 import { lookupKey } from '../fr/forms.mjs';
 import { wordsWithoutPopup } from '../../content/migrate/reading.mjs';
 
-const norm = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
+// Case, spacing and the final punctuation do not make an item new ("Allons-y !" and "allons-y").
+const norm = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().toLowerCase().replace(/[\s.!?…;:,]+$/u, '');
 
 // What a learner is asked and what they answer, by item type: two items with the same signature are the same
-// question word for word. Hints, accepted answers and mistakes are left out.
+// question word for word, up to case and final punctuation. Hints, accepted answers and mistakes are left out.
 function signature(item) {
   const blanks = (item.blanks ?? []).map((b) => b.answer);
   const options = (item.options ?? []).map((o) => `${o.right ? '*' : ''}${o.text}`);

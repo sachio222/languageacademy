@@ -10,7 +10,7 @@
       "word_id": "bleu-bleue-fr",
       "fr": "bleu / bleue",
       "gloss": "blue",
-      "note": "le ciel est bleu, la mer est bleue"
+      "note": "{le ciel est bleu, la mer est bleue}"
     },
     {
       "word_id": "rouge-fr",
@@ -22,25 +22,25 @@
       "word_id": "vert-verte-fr",
       "fr": "vert / verte",
       "gloss": "green",
-      "note": "l'herbe est verte, un arbre vert"
+      "note": "{l'herbe est verte, un arbre vert}"
     },
     {
       "word_id": "jaune-fr",
       "fr": "jaune",
       "gloss": "yellow",
-      "note": "invariable - le soleil est jaune"
+      "note": "{invariable - le soleil est jaune}"
     },
     {
       "word_id": "blanc-blanche-fr",
       "fr": "blanc / blanche",
       "gloss": "white",
-      "note": "les nuages sont blancs, la neige est blanche"
+      "note": "{les nuages sont blancs, la neige est blanche}"
     },
     {
       "word_id": "noir-noire-fr",
       "fr": "noir / noire",
       "gloss": "black",
-      "note": "un chat noir, une voiture noire"
+      "note": "{un chat noir, une voiture noire}"
     },
     {
       "word_id": "orange-fr",
@@ -52,19 +52,19 @@
       "word_id": "violet-violette-fr",
       "fr": "violet / violette",
       "gloss": "purple/violet",
-      "note": "un violon violet, une fleur violette"
+      "note": "{un violon violet, une fleur violette}"
     },
     {
       "word_id": "rose-fr",
       "fr": "rose",
       "gloss": "pink",
-      "note": "invariable - une rose rose (a pink rose)"
+      "note": "{invariable - une rose rose (a pink rose)}"
     },
     {
       "word_id": "gris-grise-fr",
       "fr": "gris / grise",
       "gloss": "gray",
-      "note": "un ciel gris, une souris grise"
+      "note": "{un ciel gris, une souris grise}"
     },
     {
       "word_id": "marron-fr",
@@ -76,7 +76,7 @@
       "word_id": "beige-fr",
       "fr": "beige",
       "gloss": "beige",
-      "note": "invariable - un pantalon beige"
+      "note": "{invariable - un pantalon beige}"
     },
     {
       "word_id": "clair-fr",
@@ -94,7 +94,7 @@
       "word_id": "vif-vive-fr",
       "fr": "vif / vive",
       "gloss": "bright/vivid",
-      "note": "une couleur vive (a bright color)"
+      "note": "{une couleur vive (a bright color)}"
     },
     {
       "word_id": "pale-fr",
@@ -106,25 +106,25 @@
       "word_id": "dore-fr",
       "fr": "doré",
       "gloss": "golden",
-      "note": "agrees - un bracelet doré, une bague dorée"
+      "note": "{agrees - un bracelet doré, une bague dorée}"
     },
     {
       "word_id": "argente-fr",
       "fr": "argenté",
       "gloss": "silver",
-      "note": "agrees - un collier argenté"
+      "note": "{agrees - un collier argenté}"
     },
     {
       "word_id": "multicolore-fr",
       "fr": "multicolore",
       "gloss": "multicolored",
-      "note": "agrees - des vêtements multicolores"
+      "note": "{agrees - des vêtements multicolores}"
     },
     {
       "word_id": "colore-coloree-fr",
       "fr": "coloré / colorée",
       "gloss": "colorful",
-      "note": "agrees - une maison colorée"
+      "note": "{agrees - une maison colorée}"
     },
     {
       "word_id": "la-couleur-fr",
@@ -142,7 +142,7 @@
       "word_id": "de-quelle-couleur-est-fr",
       "fr": "De quelle couleur est...?",
       "gloss": "What color is...?",
-      "note": "De quelle couleur est le ciel?"
+      "note": "{De quelle couleur est le ciel?}"
     },
     {
       "word_id": "le-ciel-fr",

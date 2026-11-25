@@ -264,7 +264,7 @@ export function readingFrom(old, story, opts = {}) {
     lines.push(...pre.report);
     for (const r of pre.rows) table.push({ french: r.fr, english: r.gloss });
   }
-  const v = mergeVocabulary(m, table, { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add, minted: opts.minted ?? null, infoCards: opts.imageCredit ?? (() => ({ credit: null, stated: null })) });
+  const v = mergeVocabulary(m, table, { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add, minted: opts.minted ?? null, infoCards: opts.imageCredit ?? (() => ({ credit: null, stated: null })), markNote: (t) => mark(t, 'quoted') });
   mod.vocabulary = v.vocab;
 
   const passage = mergeList(

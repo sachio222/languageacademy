@@ -47,25 +47,25 @@
       "word_id": "il-elle-a-besoin-de-fr",
       "fr": "il/elle a besoin de",
       "gloss": "he/she needs",
-      "note": "il/elle a + besoin + de"
+      "note": "{il/elle a + besoin + de}"
     },
     {
       "word_id": "nous-avons-besoin-de-fr",
       "fr": "nous avons besoin de",
       "gloss": "we need",
-      "note": "nous avons + besoin + de"
+      "note": "{nous avons + besoin + de}"
     },
     {
       "word_id": "vous-avez-besoin-de-fr",
       "fr": "vous avez besoin de",
       "gloss": "you need (formal/plural)",
-      "note": "vous avez + besoin + de"
+      "note": "{vous avez + besoin + de}"
     },
     {
       "word_id": "ils-elles-ont-besoin-de-fr",
       "fr": "ils/elles ont besoin de",
       "gloss": "they need",
-      "note": "ils/elles ont + besoin + de"
+      "note": "{ils/elles ont + besoin + de}"
     },
     {
       "word_id": "j-ai-besoin-d-aide-fr",

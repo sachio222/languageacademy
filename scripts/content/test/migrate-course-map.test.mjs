@@ -10,6 +10,7 @@ import { convertModule } from '../migrate/module.mjs';
 import { loadCourse, graphIds } from '../load.mjs';
 import { todaysModules, readLSources } from '../migrate/sources.mjs';
 import { readingFrom } from '../migrate/reading.mjs';
+import { unmark } from '../migrate/mark-french.mjs';
 
 const REPO = fileURLToPath(new URL('../../../', import.meta.url));
 const readJson = (p) => JSON.parse(readFileSync(join(REPO, p), 'utf8'));
@@ -143,7 +144,8 @@ test('corrections at places with no live id come through by the id the migration
   }
   // Each new key names text that is there, and the text the old place held.
   const mod = (k) => course.modules.get(k);
-  assert.equal(mod('2024-01-13-ca-survival').vocabulary.find((w) => w.word_id === 'ca-va-fr').note, configs.get('2024-01-13-ca-survival').vocabularyReference[2].note);
+  // A note's French is marked as a span (native_fr); without the braces it is today's note.
+  assert.equal(unmark(mod('2024-01-13-ca-survival').vocabulary.find((w) => w.word_id === 'ca-va-fr').note), configs.get('2024-01-13-ca-survival').vocabularyReference[2].note);
   const negation = mod('2026-11-24-negation-guide').parts.find((p) => p.id === 'p-no-more-nothing-never');
   assert.equal(negation.blocks[1].lines[0][0], configs.get('2026-11-24-negation-guide').guide.sections[2].examples[0].french);
   assert.ok(mod('2024-04-03-unit-4-practice').items.some((it) => it.id === 'i-je-voudrais'));
@@ -218,9 +220,23 @@ test('every module file declares what the course map says it teaches and tests',
   assert.equal(n, 124);
 });
 
-test('the committed course-map.json is the split of the course map before the split', () => {
+// Corrections added by hand after the split (Task 10 fix round 1): reading tables that list a noun spelled like a
+// verb form exclude the verb, so the noun is credited.
+const ADDED_AFTER_SPLIT = {
+  '2024-05-20-reading-8': ['fr:lex:cuisiner'],
+  '2024-06-05-reading-9': ['fr:lex:cuisiner', 'fr:lex:rencontrer', 'fr:lex:sortir'],
+};
+
+test('the committed course-map.json is the split of the course map before the split, plus later exclusions', () => {
   const { corrections } = split(COURSE_MAP);
-  assert.deepEqual(readJson('curriculum-graph/languages/fr/course-map.json'), corrections);
+  const committed = readJson('curriculum-graph/languages/fr/course-map.json');
+  for (const [key, ids] of Object.entries(ADDED_AFTER_SPLIT)) {
+    assert.deepEqual(committed[key].excludeWords.filter((id) => ids.includes(id)), ids, key);
+    committed[key].excludeWords = committed[key].excludeWords.filter((id) => !ids.includes(id));
+    if (!committed[key].excludeWords.length) delete committed[key].excludeWords;
+    if (!Object.keys(committed[key]).length) delete committed[key];
+  }
+  assert.deepEqual(committed, corrections);
 });
 
 test('taught constructions may be the graph\u2019s regular patterns', () => {

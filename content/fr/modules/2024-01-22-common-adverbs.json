@@ -27,25 +27,25 @@
       "word_id": "lentement-fr",
       "fr": "lentement",
       "gloss": "slowly",
-      "note": "parler lentement"
+      "note": "{parler lentement}"
     },
     {
       "word_id": "rapidement-fr",
       "fr": "rapidement",
       "gloss": "quickly",
-      "note": "courir rapidement"
+      "note": "{courir rapidement}"
     },
     {
       "word_id": "facilement-fr",
       "fr": "facilement",
       "gloss": "easily",
-      "note": "comprendre facilement"
+      "note": "{comprendre facilement}"
     },
     {
       "word_id": "completement-fr",
       "fr": "complètement",
       "gloss": "completely",
-      "note": "complètement fini"
+      "note": "{complètement fini}"
     },
     {
       "word_id": "probablement-fr",

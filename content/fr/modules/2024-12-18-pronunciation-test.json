@@ -33,13 +33,13 @@
       "word_id": "oui-fr",
       "fr": "oui",
       "gloss": "yes",
-      "note": "pure 'ee' sound, starts with 'w'"
+      "note": "pure '{ee}' sound, starts with 'w'"
     },
     {
       "word_id": "non-fr",
       "fr": "non",
       "gloss": "no",
-      "note": "nasal 'on' sound"
+      "note": "nasal '{on}' sound"
     },
     {
       "word_id": "s-il-vous-plait-fr",
@@ -57,7 +57,7 @@
       "word_id": "trois-fr",
       "fr": "trois",
       "gloss": "three",
-      "note": "French 'r' + 'wa' sound"
+      "note": "French 'r' + '{wa}' sound"
     },
     {
       "word_id": "rue-fr",
@@ -69,7 +69,7 @@
       "word_id": "bon-fr",
       "fr": "bon",
       "gloss": "good",
-      "note": "nasal 'on' - don't pronounce the 'n'"
+      "note": "nasal '{on}' - don't pronounce the 'n'"
     },
     {
       "word_id": "vin-fr",
@@ -81,13 +81,13 @@
       "word_id": "un-fr.one",
       "fr": "un",
       "gloss": "one",
-      "note": "nasal 'un' - unique to French"
+      "note": "nasal '{un}' - unique to French"
     },
     {
       "word_id": "pain-fr",
       "fr": "pain",
       "gloss": "bread",
-      "note": "nasal 'ain' sound"
+      "note": "nasal '{ain}' sound"
     },
     {
       "word_id": "je-suis-fr",
@@ -99,7 +99,7 @@
       "word_id": "tu-es-fr",
       "fr": "tu es",
       "gloss": "you are",
-      "note": "short sounds - 'tu' rhymes with 'vous'"
+      "note": "short sounds - '{tu}' rhymes with 'vous'"
     },
     {
       "word_id": "il-est-fr",
@@ -111,7 +111,7 @@
       "word_id": "tu-fr",
       "fr": "tu",
       "gloss": "you (informal)",
-      "note": "French 'u' - pucker lips and say 'ee'"
+      "note": "French 'u' - pucker lips and say '{ee}'"
     },
     {
       "word_id": "lune-fr",
@@ -129,7 +129,7 @@
       "word_id": "comment-fr",
       "fr": "comment",
       "gloss": "how",
-      "note": "nasal 'an' at the end"
+      "note": "nasal '{an}' at the end"
     },
     {
       "word_id": "tres-bien-fr.very-good",
@@ -147,19 +147,19 @@
       "word_id": "beaucoup-fr",
       "fr": "beaucoup",
       "gloss": "a lot / much",
-      "note": "silent 'p' - ends like 'boh-koo'"
+      "note": "silent 'p' - ends like '{boh-koo}'"
     },
     {
       "word_id": "temps-fr",
       "fr": "temps",
       "gloss": "time / weather",
-      "note": "silent 'ps' - nasal 'an' sound"
+      "note": "silent 'ps' - nasal '{an}' sound"
     },
     {
       "word_id": "nuit-fr",
       "fr": "nuit",
       "gloss": "night",
-      "note": "silent 't' - ends with 'wee'"
+      "note": "silent 't' - ends with '{wee}'"
     }
   ],
   "sections": [

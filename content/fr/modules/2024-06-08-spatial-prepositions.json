@@ -34,7 +34,7 @@
       "word_id": "entre-fr",
       "fr": "entre",
       "gloss": "between",
-      "note": "use 'et' to connect: entre A et B"
+      "note": "use '{et}' to connect: entre A et B"
     },
     {
       "word_id": "parmi-fr",

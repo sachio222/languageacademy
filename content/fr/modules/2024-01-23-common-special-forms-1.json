@@ -21,55 +21,55 @@
       "word_id": "tu-sois-fr",
       "fr": "tu sois",
       "gloss": "you be",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-soit-fr",
       "fr": "il/elle soit",
       "gloss": "he/she be",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "je-sois-fr",
       "fr": "je sois",
       "gloss": "I be",
-      "note": "used after 'il faut que'"
+      "note": "used after '{il faut que}'"
     },
     {
       "word_id": "tu-aies-fr",
       "fr": "tu aies",
       "gloss": "you have",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-ait-fr",
       "fr": "il/elle ait",
       "gloss": "he/she have",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "tu-ailles-fr",
       "fr": "tu ailles",
       "gloss": "you go",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-aille-fr",
       "fr": "il/elle aille",
       "gloss": "he/she go",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "tu-fasses-fr",
       "fr": "tu fasses",
       "gloss": "you do/make",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-fasse-fr",
       "fr": "il/elle fasse",
       "gloss": "he/she do/make",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     }
   ],
   "concepts": [

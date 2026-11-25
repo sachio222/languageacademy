@@ -21,61 +21,61 @@
       "word_id": "tu-viennes-fr",
       "fr": "tu viennes",
       "gloss": "you come",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-vienne-fr",
       "fr": "il/elle vienne",
       "gloss": "he/she come",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "tu-partes-fr",
       "fr": "tu partes",
       "gloss": "you leave",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-parte-fr",
       "fr": "il/elle parte",
       "gloss": "he/she leave",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "tu-puisses-fr",
       "fr": "tu puisses",
       "gloss": "you can",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-puisse-fr",
       "fr": "il/elle puisse",
       "gloss": "he/she can",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "tu-saches-fr",
       "fr": "tu saches",
       "gloss": "you know",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-sache-fr",
       "fr": "il/elle sache",
       "gloss": "he/she know",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "tu-comprennes-fr",
       "fr": "tu comprennes",
       "gloss": "you understand",
-      "note": "⭐ used after 'il faut que' / 'je veux que'"
+      "note": "⭐ used after '{il faut que}' / '{je veux que}'"
     },
     {
       "word_id": "il-elle-comprenne-fr",
       "fr": "il/elle comprenne",
       "gloss": "he/she understand",
-      "note": "used after 'il faut que' / 'je veux que'"
+      "note": "used after '{il faut que}' / '{je veux que}'"
     }
   ],
   "concepts": [

@@ -45,7 +45,7 @@
       "word_id": "nous-disons-fr",
       "fr": "nous disons",
       "gloss": "we say / we tell",
-      "note": "add -ons to 'dis'"
+      "note": "add -ons to '{dis}'"
     },
     {
       "word_id": "vous-dites-fr",
@@ -87,7 +87,7 @@
       "word_id": "c-est-a-dire-fr",
       "fr": "c'est-à-dire",
       "gloss": "that is to say / i.e.",
-      "note": "useful connector - abbreviated as 'càd'"
+      "note": "useful connector - abbreviated as '{càd}'"
     },
     {
       "word_id": "on-dit-que-fr",

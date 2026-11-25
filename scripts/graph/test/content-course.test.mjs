@@ -254,3 +254,68 @@ test('the Reference pages that open come from the outline shelf, and settings na
   assert.equal(ofRule(issues, 'reference-modules-differ').length, 1, 'the mini shelf opens the alphabet only');
   assert.deepEqual(ctx.referenceOpenTitles.length, 1);
 });
+
+test('French in a vocabulary note is checked', async () => {
+  const course = miniCourse((modules) => {
+    modules.get('2024-01-02-etre').vocabulary.push({ word_id: 'je-suis-la-fr', fr: 'je suis là', gloss: 'I am here', note: 'Answer {merci} with this.' });
+  });
+  const { issues } = await checkMini(course);
+  const hit = ofRule(issues, 'untaught-word').filter((i) => i.surface === 'merci');
+  assert.deepEqual(hit.map((i) => i.itemRef), ['2024-01-02-etre#vocabulary/je-suis-la-fr/note']);
+});
+
+test('each committed override on a vocabulary note silences a real issue', async () => {
+  const corrections = JSON.parse(readFileSync(join(repoRoot, 'curriculum-graph/languages/fr/course-map.json'), 'utf8'));
+  const refs = Object.entries(corrections).flatMap(([k, e]) => Object.keys(e.overrides ?? {}).filter((r) => r.endsWith('/note')).map((r) => [k, r]));
+  assert.equal(refs.length, 3);
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  for (const [key, ref] of refs) {
+    const without = structuredClone(corrections);
+    delete without[key].overrides[ref];
+    const { issues } = await runCheck({ repoRoot, lang: 'fr', corrections: without, dictionaryForms: ctx.dictionaryForms });
+    assert.ok(issues.some((i) => i.itemRef === ref && i.rule.startsWith('untaught-')), `${ref} silences nothing`);
+  }
+});
+
+test('a unit can-do example is read: a planted untaught word in it is reported', async () => {
+  const course = miniCourse((modules, outline) => {
+    outline.units[0].can_do_example_fr = 'Je suis {name}. Merci !';
+  });
+  const { ctx, issues } = await checkMini(course);
+  const ref = 'reading-cafe#unit/can_do_example_fr';
+  assert.deepEqual(ctx.course.flatMap((m) => m.items).find((it) => it.ref === ref)?.shown, ['Je suis Paul. Merci !']);
+  const hits = ofRule(issues, 'untaught-word').filter((i) => i.itemRef === ref).map((i) => i.surface);
+  assert.deepEqual(hits, ['Merci']);
+});
+
+test('a unit can-do line and description are read for their spans at the unit\'s last module', () => {
+  const course = readCourseFromContent(miniCourse((modules, outline) => {
+    outline.units[0].can_do = 'say who you are and join ideas with {et}';
+  }));
+  const items = new Map(course.flatMap((m) => m.items.map((it) => [it.ref, it])));
+  assert.deepEqual(items.get('reading-cafe#unit/can_do').shown, ['et']);
+  assert.equal(items.get('reading-cafe#unit/can_do').source, 'unit-can-do');
+  assert.ok(items.has('reading-cafe#unit/description'));
+});
+
+test('a planned module teaches and tests nothing', () => {
+  const course = readCourseFromContent(miniCourse((modules, outline) => {
+    modules.set('2024-01-09-planned', {
+      schema: 'la-module@1', module_key: '2024-01-09-planned', kind: 'lesson', status: 'planned', title: 'Planned',
+      teaches: { constructions: ['fr:cx:q.est-ce-que'], words: ['fr:lex:merci'] },
+      plan: { words: ['fr:lex:merci'], constructions: ['fr:cx:q.est-ce-que'], source: 'course plan' },
+    });
+    outline.units[2].entries.push('2024-01-09-planned');
+  }));
+  const m = course.find((x) => x.moduleKey === '2024-01-09-planned');
+  assert.deepEqual(m.teaches, { words: [], constructions: [] });
+  assert.deepEqual(m.tests, []);
+});
+
+test('a reading table that lists a noun spelled like a verb form credits the noun once the verb is excluded', async () => {
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  const r9 = ctx.graph.courseMap['2024-06-05-reading-9'].teachesWords;
+  for (const id of ['fr:lex:cuisine', 'fr:lex:rencontre', 'fr:lex:sortie']) assert.ok(r9.includes(id), id);
+  for (const id of ['fr:lex:cuisiner', 'fr:lex:rencontrer', 'fr:form:sortir.ptcp.f']) assert.ok(!r9.includes(id), id);
+  assert.ok(ctx.graph.courseMap['2024-05-20-reading-8'].teachesWords.includes('fr:lex:cuisine'));
+});

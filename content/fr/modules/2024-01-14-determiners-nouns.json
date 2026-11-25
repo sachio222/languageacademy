@@ -44,13 +44,13 @@
       "word_id": "ils-ont-ces-chats-fr",
       "fr": "ils ont ces chats",
       "gloss": "they have these cats",
-      "note": "avoir + ces"
+      "note": "{avoir + ces}"
     },
     {
       "word_id": "c-est-cet-homme-fr",
       "fr": "c'est cet homme",
       "gloss": "it's this man",
-      "note": "c'est + cet"
+      "note": "{c'est + cet}"
     },
     {
       "word_id": "j-ai-ces-enfants-fr",
@@ -62,25 +62,25 @@
       "word_id": "j-ai-le-chat-fr",
       "fr": "j'ai le chat",
       "gloss": "I have the cat",
-      "note": "avoir + le"
+      "note": "{avoir + le}"
     },
     {
       "word_id": "elle-a-la-maison-fr",
       "fr": "elle a la maison",
       "gloss": "she has the house",
-      "note": "avoir + la"
+      "note": "{avoir + la}"
     },
     {
       "word_id": "ils-ont-les-chiens-fr",
       "fr": "ils ont les chiens",
       "gloss": "they have the dogs",
-      "note": "avoir + les"
+      "note": "{avoir + les}"
     },
     {
       "word_id": "c-est-ce-livre-fr",
       "fr": "c'est ce livre",
       "gloss": "it's this book",
-      "note": "être + ce"
+      "note": "{être + ce}"
     }
   ],
   "concepts": [

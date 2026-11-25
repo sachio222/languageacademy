@@ -1,7 +1,7 @@
 {
   "constructionsByLevel": {
     "A1": 68,
-    "A2": 51,
+    "A2": 53,
     "B1": 25,
     "B2": 5,
     "C1": 0,
@@ -324,16 +324,16 @@
       "A1": {
         "availableWords": 226,
         "cognateWords": 89,
-        "constructions": 8,
-        "referenceWords": 83,
-        "words": 54
+        "constructions": 7,
+        "referenceWords": 64,
+        "words": 73
       },
       "A2": {
-        "availableWords": 72,
+        "availableWords": 71,
         "cognateWords": 59,
         "constructions": 0,
         "referenceWords": 12,
-        "words": 1
+        "words": 0
       },
       "B1": {
         "availableWords": 45,
@@ -346,18 +346,18 @@
     },
     {
       "A1": {
-        "availableWords": 227,
+        "availableWords": 231,
         "cognateWords": 89,
-        "constructions": 9,
-        "referenceWords": 83,
-        "words": 55
+        "constructions": 10,
+        "referenceWords": 64,
+        "words": 78
       },
       "A2": {
-        "availableWords": 72,
+        "availableWords": 71,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
-        "words": 1
+        "words": 0
       },
       "B1": {
         "availableWords": 45,
@@ -370,16 +370,16 @@
     },
     {
       "A1": {
-        "availableWords": 227,
+        "availableWords": 235,
         "cognateWords": 89,
-        "constructions": 9,
-        "referenceWords": 83,
-        "words": 55
+        "constructions": 11,
+        "referenceWords": 64,
+        "words": 82
       },
       "A2": {
         "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 1
       },
@@ -394,16 +394,16 @@
     },
     {
       "A1": {
-        "availableWords": 228,
+        "availableWords": 236,
         "cognateWords": 89,
-        "constructions": 10,
-        "referenceWords": 83,
-        "words": 56
+        "constructions": 12,
+        "referenceWords": 64,
+        "words": 83
       },
       "A2": {
         "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 1
       },
@@ -418,16 +418,16 @@
     },
     {
       "A1": {
-        "availableWords": 229,
+        "availableWords": 236,
         "cognateWords": 89,
-        "constructions": 10,
-        "referenceWords": 83,
-        "words": 57
+        "constructions": 12,
+        "referenceWords": 64,
+        "words": 83
       },
       "A2": {
         "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 1
       },
@@ -442,16 +442,16 @@
     },
     {
       "A1": {
-        "availableWords": 230,
+        "availableWords": 237,
         "cognateWords": 89,
-        "constructions": 10,
-        "referenceWords": 83,
-        "words": 58
+        "constructions": 13,
+        "referenceWords": 64,
+        "words": 84
       },
       "A2": {
         "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 1
       },
@@ -466,16 +466,16 @@
     },
     {
       "A1": {
-        "availableWords": 240,
+        "availableWords": 238,
         "cognateWords": 89,
-        "constructions": 15,
-        "referenceWords": 83,
-        "words": 68
+        "constructions": 13,
+        "referenceWords": 64,
+        "words": 85
       },
       "A2": {
         "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 1
       },
@@ -490,16 +490,16 @@
     },
     {
       "A1": {
-        "availableWords": 240,
+        "availableWords": 239,
         "cognateWords": 89,
-        "constructions": 15,
-        "referenceWords": 83,
-        "words": 68
+        "constructions": 13,
+        "referenceWords": 64,
+        "words": 86
       },
       "A2": {
         "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 1
       },
@@ -514,18 +514,18 @@
     },
     {
       "A1": {
-        "availableWords": 246,
+        "availableWords": 249,
         "cognateWords": 89,
-        "constructions": 16,
-        "referenceWords": 83,
-        "words": 74
+        "constructions": 18,
+        "referenceWords": 64,
+        "words": 96
       },
       "A2": {
-        "availableWords": 73,
+        "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
-        "words": 2
+        "words": 1
       },
       "B1": {
         "availableWords": 45,
@@ -538,18 +538,18 @@
     },
     {
       "A1": {
-        "availableWords": 257,
+        "availableWords": 249,
         "cognateWords": 89,
-        "constructions": 16,
-        "referenceWords": 83,
-        "words": 85
+        "constructions": 18,
+        "referenceWords": 64,
+        "words": 96
       },
       "A2": {
-        "availableWords": 73,
+        "availableWords": 72,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
-        "words": 2
+        "words": 1
       },
       "B1": {
         "availableWords": 45,
@@ -562,16 +562,16 @@
     },
     {
       "A1": {
-        "availableWords": 263,
+        "availableWords": 255,
         "cognateWords": 89,
-        "constructions": 18,
-        "referenceWords": 82,
-        "words": 92
+        "constructions": 19,
+        "referenceWords": 64,
+        "words": 102
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -586,16 +586,16 @@
     },
     {
       "A1": {
-        "availableWords": 263,
+        "availableWords": 266,
         "cognateWords": 89,
-        "constructions": 18,
-        "referenceWords": 82,
-        "words": 92
+        "constructions": 19,
+        "referenceWords": 64,
+        "words": 113
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -610,16 +610,16 @@
     },
     {
       "A1": {
-        "availableWords": 263,
+        "availableWords": 272,
         "cognateWords": 89,
-        "constructions": 18,
-        "referenceWords": 82,
-        "words": 92
+        "constructions": 21,
+        "referenceWords": 63,
+        "words": 120
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -634,16 +634,16 @@
     },
     {
       "A1": {
-        "availableWords": 263,
+        "availableWords": 272,
         "cognateWords": 89,
-        "constructions": 18,
-        "referenceWords": 82,
-        "words": 92
+        "constructions": 21,
+        "referenceWords": 63,
+        "words": 120
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -658,16 +658,16 @@
     },
     {
       "A1": {
-        "availableWords": 265,
+        "availableWords": 272,
         "cognateWords": 89,
         "constructions": 21,
-        "referenceWords": 82,
-        "words": 94
+        "referenceWords": 63,
+        "words": 120
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -682,16 +682,16 @@
     },
     {
       "A1": {
-        "availableWords": 267,
+        "availableWords": 272,
         "cognateWords": 89,
         "constructions": 21,
-        "referenceWords": 82,
-        "words": 96
+        "referenceWords": 63,
+        "words": 120
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -706,16 +706,16 @@
     },
     {
       "A1": {
-        "availableWords": 267,
+        "availableWords": 274,
         "cognateWords": 89,
-        "constructions": 22,
-        "referenceWords": 82,
-        "words": 96
+        "constructions": 24,
+        "referenceWords": 63,
+        "words": 122
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -730,16 +730,16 @@
     },
     {
       "A1": {
-        "availableWords": 267,
+        "availableWords": 276,
         "cognateWords": 89,
-        "constructions": 22,
-        "referenceWords": 82,
-        "words": 96
+        "constructions": 24,
+        "referenceWords": 63,
+        "words": 124
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -754,16 +754,16 @@
     },
     {
       "A1": {
-        "availableWords": 268,
+        "availableWords": 276,
         "cognateWords": 89,
-        "constructions": 22,
-        "referenceWords": 82,
-        "words": 97
+        "constructions": 25,
+        "referenceWords": 63,
+        "words": 124
       },
       "A2": {
         "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 0,
+        "constructions": 2,
         "referenceWords": 12,
         "words": 2
       },
@@ -778,18 +778,18 @@
     },
     {
       "A1": {
-        "availableWords": 270,
+        "availableWords": 276,
         "cognateWords": 89,
-        "constructions": 22,
-        "referenceWords": 82,
-        "words": 99
+        "constructions": 25,
+        "referenceWords": 63,
+        "words": 124
       },
       "A2": {
-        "availableWords": 74,
+        "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 1,
+        "constructions": 2,
         "referenceWords": 12,
-        "words": 3
+        "words": 2
       },
       "B1": {
         "availableWords": 45,
@@ -802,18 +802,18 @@
     },
     {
       "A1": {
-        "availableWords": 276,
+        "availableWords": 277,
         "cognateWords": 89,
-        "constructions": 23,
-        "referenceWords": 82,
-        "words": 105
+        "constructions": 25,
+        "referenceWords": 63,
+        "words": 125
       },
       "A2": {
-        "availableWords": 75,
+        "availableWords": 73,
         "cognateWords": 59,
-        "constructions": 1,
+        "constructions": 2,
         "referenceWords": 12,
-        "words": 4
+        "words": 2
       },
       "B1": {
         "availableWords": 45,
@@ -826,18 +826,18 @@
     },
     {
       "A1": {
-        "availableWords": 276,
+        "availableWords": 279,
         "cognateWords": 89,
-        "constructions": 23,
-        "referenceWords": 82,
-        "words": 105
+        "constructions": 25,
+        "referenceWords": 63,
+        "words": 127
       },
       "A2": {
-        "availableWords": 80,
+        "availableWords": 74,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 3,
         "referenceWords": 12,
-        "words": 9
+        "words": 3
       },
       "B1": {
         "availableWords": 45,
@@ -850,18 +850,18 @@
     },
     {
       "A1": {
-        "availableWords": 276,
+        "availableWords": 285,
         "cognateWords": 89,
-        "constructions": 23,
-        "referenceWords": 82,
-        "words": 105
+        "constructions": 26,
+        "referenceWords": 63,
+        "words": 133
       },
       "A2": {
-        "availableWords": 80,
+        "availableWords": 75,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 3,
         "referenceWords": 12,
-        "words": 9
+        "words": 4
       },
       "B1": {
         "availableWords": 45,
@@ -874,16 +874,16 @@
     },
     {
       "A1": {
-        "availableWords": 276,
+        "availableWords": 285,
         "cognateWords": 89,
-        "constructions": 23,
-        "referenceWords": 82,
-        "words": 105
+        "constructions": 26,
+        "referenceWords": 63,
+        "words": 133
       },
       "A2": {
         "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 9
       },
@@ -898,16 +898,16 @@
     },
     {
       "A1": {
-        "availableWords": 276,
+        "availableWords": 285,
         "cognateWords": 89,
-        "constructions": 23,
-        "referenceWords": 82,
-        "words": 105
+        "constructions": 26,
+        "referenceWords": 63,
+        "words": 133
       },
       "A2": {
         "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 9
       },
@@ -922,16 +922,16 @@
     },
     {
       "A1": {
-        "availableWords": 276,
+        "availableWords": 285,
         "cognateWords": 89,
-        "constructions": 23,
-        "referenceWords": 82,
-        "words": 105
+        "constructions": 26,
+        "referenceWords": 63,
+        "words": 133
       },
       "A2": {
         "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 9
       },
@@ -946,16 +946,16 @@
     },
     {
       "A1": {
-        "availableWords": 282,
+        "availableWords": 285,
         "cognateWords": 89,
-        "constructions": 24,
-        "referenceWords": 82,
-        "words": 111
+        "constructions": 26,
+        "referenceWords": 63,
+        "words": 133
       },
       "A2": {
         "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 9
       },
@@ -970,16 +970,16 @@
     },
     {
       "A1": {
-        "availableWords": 283,
+        "availableWords": 285,
         "cognateWords": 89,
-        "constructions": 24,
-        "referenceWords": 82,
-        "words": 112
+        "constructions": 26,
+        "referenceWords": 63,
+        "words": 133
       },
       "A2": {
         "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 9
       },
@@ -994,18 +994,18 @@
     },
     {
       "A1": {
-        "availableWords": 284,
+        "availableWords": 291,
         "cognateWords": 89,
-        "constructions": 24,
-        "referenceWords": 82,
-        "words": 113
+        "constructions": 27,
+        "referenceWords": 63,
+        "words": 139
       },
       "A2": {
-        "availableWords": 81,
+        "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 10
+        "words": 9
       },
       "B1": {
         "availableWords": 45,
@@ -1018,18 +1018,18 @@
     },
     {
       "A1": {
-        "availableWords": 285,
+        "availableWords": 292,
         "cognateWords": 89,
-        "constructions": 25,
-        "referenceWords": 82,
-        "words": 114
+        "constructions": 27,
+        "referenceWords": 63,
+        "words": 140
       },
       "A2": {
-        "availableWords": 81,
+        "availableWords": 80,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 10
+        "words": 9
       },
       "B1": {
         "availableWords": 45,
@@ -1042,16 +1042,16 @@
     },
     {
       "A1": {
-        "availableWords": 287,
+        "availableWords": 293,
         "cognateWords": 89,
-        "constructions": 25,
-        "referenceWords": 82,
-        "words": 116
+        "constructions": 27,
+        "referenceWords": 63,
+        "words": 141
       },
       "A2": {
         "availableWords": 81,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 10
       },
@@ -1066,16 +1066,16 @@
     },
     {
       "A1": {
-        "availableWords": 289,
+        "availableWords": 294,
         "cognateWords": 89,
-        "constructions": 26,
-        "referenceWords": 82,
-        "words": 118
+        "constructions": 28,
+        "referenceWords": 63,
+        "words": 142
       },
       "A2": {
         "availableWords": 81,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
         "words": 10
       },
@@ -1090,18 +1090,18 @@
     },
     {
       "A1": {
-        "availableWords": 302,
+        "availableWords": 296,
         "cognateWords": 89,
-        "constructions": 26,
-        "referenceWords": 82,
-        "words": 131
+        "constructions": 28,
+        "referenceWords": 63,
+        "words": 144
       },
       "A2": {
-        "availableWords": 83,
+        "availableWords": 81,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 12
+        "words": 10
       },
       "B1": {
         "availableWords": 45,
@@ -1114,18 +1114,18 @@
     },
     {
       "A1": {
-        "availableWords": 302,
+        "availableWords": 296,
         "cognateWords": 89,
-        "constructions": 27,
-        "referenceWords": 82,
-        "words": 131
+        "constructions": 28,
+        "referenceWords": 63,
+        "words": 144
       },
       "A2": {
-        "availableWords": 83,
+        "availableWords": 81,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 12
+        "words": 10
       },
       "B1": {
         "availableWords": 45,
@@ -1138,18 +1138,18 @@
     },
     {
       "A1": {
-        "availableWords": 307,
+        "availableWords": 308,
         "cognateWords": 89,
-        "constructions": 27,
-        "referenceWords": 82,
-        "words": 136
+        "constructions": 28,
+        "referenceWords": 63,
+        "words": 156
       },
       "A2": {
-        "availableWords": 85,
+        "availableWords": 83,
         "cognateWords": 59,
-        "constructions": 2,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 14
+        "words": 12
       },
       "B1": {
         "availableWords": 45,
@@ -1162,18 +1162,18 @@
     },
     {
       "A1": {
-        "availableWords": 322,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 155
+        "availableWords": 308,
+        "cognateWords": 89,
+        "constructions": 28,
+        "referenceWords": 63,
+        "words": 156
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 83,
         "cognateWords": 59,
-        "constructions": 3,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 18
+        "words": 12
       },
       "B1": {
         "availableWords": 45,
@@ -1186,18 +1186,18 @@
     },
     {
       "A1": {
-        "availableWords": 322,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 155
+        "availableWords": 313,
+        "cognateWords": 89,
+        "constructions": 28,
+        "referenceWords": 63,
+        "words": 161
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 85,
         "cognateWords": 59,
-        "constructions": 3,
+        "constructions": 4,
         "referenceWords": 12,
-        "words": 18
+        "words": 14
       },
       "B1": {
         "availableWords": 45,
@@ -1210,16 +1210,16 @@
     },
     {
       "A1": {
-        "availableWords": 322,
+        "availableWords": 328,
         "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 155
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 180
       },
       "A2": {
         "availableWords": 89,
         "cognateWords": 59,
-        "constructions": 3,
+        "constructions": 5,
         "referenceWords": 12,
         "words": 18
       },
@@ -1234,18 +1234,18 @@
     },
     {
       "A1": {
-        "availableWords": 322,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 155
+        "availableWords": 333,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 187
       },
       "A2": {
-        "availableWords": 89,
+        "availableWords": 90,
         "cognateWords": 59,
-        "constructions": 3,
-        "referenceWords": 12,
-        "words": 18
+        "constructions": 5,
+        "referenceWords": 11,
+        "words": 20
       },
       "B1": {
         "availableWords": 45,
@@ -1258,17 +1258,17 @@
     },
     {
       "A1": {
-        "availableWords": 327,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 160
+        "availableWords": 333,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 187
       },
       "A2": {
-        "availableWords": 91,
+        "availableWords": 90,
         "cognateWords": 59,
-        "constructions": 6,
-        "referenceWords": 12,
+        "constructions": 5,
+        "referenceWords": 11,
         "words": 20
       },
       "B1": {
@@ -1282,66 +1282,66 @@
     },
     {
       "A1": {
-        "availableWords": 332,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 165
+        "availableWords": 333,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 187
       },
       "A2": {
-        "availableWords": 93,
+        "availableWords": 90,
         "cognateWords": 59,
-        "constructions": 6,
-        "referenceWords": 12,
-        "words": 22
+        "constructions": 5,
+        "referenceWords": 11,
+        "words": 20
       },
       "B1": {
-        "availableWords": 47,
+        "availableWords": 45,
         "cognateWords": 38,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 2
+        "words": 0
       },
       "position": 54
     },
     {
       "A1": {
-        "availableWords": 332,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 165
+        "availableWords": 337,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 191
       },
       "A2": {
-        "availableWords": 93,
+        "availableWords": 91,
         "cognateWords": 59,
-        "constructions": 7,
-        "referenceWords": 12,
-        "words": 22
+        "constructions": 8,
+        "referenceWords": 11,
+        "words": 21
       },
       "B1": {
-        "availableWords": 47,
+        "availableWords": 45,
         "cognateWords": 38,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 2
+        "words": 0
       },
       "position": 55
     },
     {
       "A1": {
-        "availableWords": 332,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 165
+        "availableWords": 342,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 196
       },
       "A2": {
         "availableWords": 93,
         "cognateWords": 59,
-        "constructions": 7,
-        "referenceWords": 12,
-        "words": 22
+        "constructions": 8,
+        "referenceWords": 11,
+        "words": 23
       },
       "B1": {
         "availableWords": 47,
@@ -1354,18 +1354,18 @@
     },
     {
       "A1": {
-        "availableWords": 333,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 166
+        "availableWords": 342,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 196
       },
       "A2": {
         "availableWords": 93,
         "cognateWords": 59,
-        "constructions": 7,
-        "referenceWords": 12,
-        "words": 22
+        "constructions": 9,
+        "referenceWords": 11,
+        "words": 23
       },
       "B1": {
         "availableWords": 47,
@@ -1378,18 +1378,18 @@
     },
     {
       "A1": {
-        "availableWords": 333,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 166
+        "availableWords": 342,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 196
       },
       "A2": {
         "availableWords": 93,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 22
+        "constructions": 9,
+        "referenceWords": 11,
+        "words": 23
       },
       "B1": {
         "availableWords": 47,
@@ -1402,18 +1402,18 @@
     },
     {
       "A1": {
-        "availableWords": 335,
-        "cognateWords": 87,
-        "constructions": 27,
-        "referenceWords": 80,
-        "words": 168
+        "availableWords": 342,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 196
       },
       "A2": {
         "availableWords": 93,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 22
+        "constructions": 9,
+        "referenceWords": 11,
+        "words": 23
       },
       "B1": {
         "availableWords": 47,
@@ -1426,18 +1426,18 @@
     },
     {
       "A1": {
-        "availableWords": 359,
-        "cognateWords": 83,
-        "constructions": 27,
-        "referenceWords": 78,
-        "words": 198
+        "availableWords": 342,
+        "cognateWords": 85,
+        "constructions": 28,
+        "referenceWords": 61,
+        "words": 196
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 93,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 26
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 23
       },
       "B1": {
         "availableWords": 47,
@@ -1450,18 +1450,18 @@
     },
     {
       "A1": {
-        "availableWords": 360,
-        "cognateWords": 83,
+        "availableWords": 344,
+        "cognateWords": 85,
         "constructions": 28,
-        "referenceWords": 78,
-        "words": 199
+        "referenceWords": 61,
+        "words": 198
       },
       "A2": {
-        "availableWords": 97,
+        "availableWords": 93,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 26
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 23
       },
       "B1": {
         "availableWords": 47,
@@ -1474,18 +1474,18 @@
     },
     {
       "A1": {
-        "availableWords": 361,
-        "cognateWords": 83,
+        "availableWords": 368,
+        "cognateWords": 81,
         "constructions": 28,
-        "referenceWords": 78,
-        "words": 200
+        "referenceWords": 59,
+        "words": 228
       },
       "A2": {
         "availableWords": 97,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 26
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 27
       },
       "B1": {
         "availableWords": 47,
@@ -1498,18 +1498,18 @@
     },
     {
       "A1": {
-        "availableWords": 361,
-        "cognateWords": 83,
-        "constructions": 28,
-        "referenceWords": 78,
-        "words": 200
+        "availableWords": 368,
+        "cognateWords": 81,
+        "constructions": 29,
+        "referenceWords": 59,
+        "words": 228
       },
       "A2": {
         "availableWords": 97,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 26
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 27
       },
       "B1": {
         "availableWords": 47,
@@ -1522,18 +1522,18 @@
     },
     {
       "A1": {
-        "availableWords": 361,
-        "cognateWords": 83,
-        "constructions": 28,
-        "referenceWords": 78,
-        "words": 200
+        "availableWords": 369,
+        "cognateWords": 81,
+        "constructions": 29,
+        "referenceWords": 59,
+        "words": 229
       },
       "A2": {
         "availableWords": 97,
         "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 26
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 27
       },
       "B1": {
         "availableWords": 47,
@@ -1546,18 +1546,18 @@
     },
     {
       "A1": {
-        "availableWords": 361,
-        "cognateWords": 83,
-        "constructions": 28,
-        "referenceWords": 78,
-        "words": 200
+        "availableWords": 371,
+        "cognateWords": 78,
+        "constructions": 29,
+        "referenceWords": 58,
+        "words": 235
       },
       "A2": {
-        "availableWords": 97,
-        "cognateWords": 59,
-        "constructions": 8,
-        "referenceWords": 12,
-        "words": 26
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
         "availableWords": 47,
@@ -1570,18 +1570,18 @@
     },
     {
       "A1": {
-        "availableWords": 362,
-        "cognateWords": 83,
+        "availableWords": 371,
+        "cognateWords": 78,
         "constructions": 29,
-        "referenceWords": 78,
-        "words": 201
+        "referenceWords": 58,
+        "words": 235
       },
       "A2": {
-        "availableWords": 97,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 26
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
         "availableWords": 47,
@@ -1594,18 +1594,18 @@
     },
     {
       "A1": {
-        "availableWords": 364,
-        "cognateWords": 83,
+        "availableWords": 371,
+        "cognateWords": 78,
         "constructions": 29,
-        "referenceWords": 78,
-        "words": 203
+        "referenceWords": 58,
+        "words": 235
       },
       "A2": {
-        "availableWords": 97,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 26
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 10,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
         "availableWords": 47,
@@ -1618,18 +1618,18 @@
     },
     {
       "A1": {
-        "availableWords": 368,
-        "cognateWords": 83,
-        "constructions": 29,
-        "referenceWords": 77,
-        "words": 208
+        "availableWords": 372,
+        "cognateWords": 78,
+        "constructions": 30,
+        "referenceWords": 58,
+        "words": 236
       },
       "A2": {
-        "availableWords": 97,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 26
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
         "availableWords": 47,
@@ -1642,18 +1642,18 @@
     },
     {
       "A1": {
-        "availableWords": 370,
-        "cognateWords": 83,
-        "constructions": 29,
-        "referenceWords": 77,
-        "words": 210
+        "availableWords": 374,
+        "cognateWords": 78,
+        "constructions": 30,
+        "referenceWords": 58,
+        "words": 238
       },
       "A2": {
-        "availableWords": 97,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 26
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
         "availableWords": 47,
@@ -1666,18 +1666,18 @@
     },
     {
       "A1": {
-        "availableWords": 373,
-        "cognateWords": 83,
-        "constructions": 29,
-        "referenceWords": 77,
-        "words": 213
+        "availableWords": 378,
+        "cognateWords": 78,
+        "constructions": 30,
+        "referenceWords": 57,
+        "words": 243
       },
       "A2": {
-        "availableWords": 97,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 26
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
         "availableWords": 47,
@@ -1690,66 +1690,66 @@
     },
     {
       "A1": {
-        "availableWords": 375,
-        "cognateWords": 83,
-        "constructions": 29,
-        "referenceWords": 77,
-        "words": 215
+        "availableWords": 380,
+        "cognateWords": 78,
+        "constructions": 30,
+        "referenceWords": 57,
+        "words": 245
       },
       "A2": {
         "availableWords": 98,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 27
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
-        "availableWords": 48,
+        "availableWords": 47,
         "cognateWords": 38,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 3
+        "words": 2
       },
       "position": 71
     },
     {
       "A1": {
-        "availableWords": 376,
-        "cognateWords": 83,
-        "constructions": 29,
-        "referenceWords": 77,
-        "words": 216
+        "availableWords": 383,
+        "cognateWords": 78,
+        "constructions": 30,
+        "referenceWords": 57,
+        "words": 248
       },
       "A2": {
-        "availableWords": 99,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 28
+        "availableWords": 98,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 29
       },
       "B1": {
-        "availableWords": 48,
+        "availableWords": 47,
         "cognateWords": 38,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 3
+        "words": 2
       },
       "position": 72
     },
     {
       "A1": {
-        "availableWords": 377,
-        "cognateWords": 83,
-        "constructions": 29,
-        "referenceWords": 77,
-        "words": 217
+        "availableWords": 385,
+        "cognateWords": 78,
+        "constructions": 30,
+        "referenceWords": 57,
+        "words": 250
       },
       "A2": {
         "availableWords": 99,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 28
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 30
       },
       "B1": {
         "availableWords": 48,
@@ -1762,18 +1762,18 @@
     },
     {
       "A1": {
-        "availableWords": 393,
+        "availableWords": 386,
         "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 240
+        "constructions": 30,
+        "referenceWords": 57,
+        "words": 251
       },
       "A2": {
-        "availableWords": 101,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 30
+        "availableWords": 100,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 31
       },
       "B1": {
         "availableWords": 48,
@@ -1786,18 +1786,18 @@
     },
     {
       "A1": {
-        "availableWords": 393,
+        "availableWords": 387,
         "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 240
+        "constructions": 30,
+        "referenceWords": 57,
+        "words": 252
       },
       "A2": {
-        "availableWords": 101,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 30
+        "availableWords": 100,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 31
       },
       "B1": {
         "availableWords": 48,
@@ -1810,18 +1810,18 @@
     },
     {
       "A1": {
-        "availableWords": 393,
-        "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 240
+        "availableWords": 403,
+        "cognateWords": 74,
+        "constructions": 30,
+        "referenceWords": 55,
+        "words": 274
       },
       "A2": {
-        "availableWords": 101,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 30
+        "availableWords": 102,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 33
       },
       "B1": {
         "availableWords": 48,
@@ -1834,18 +1834,18 @@
     },
     {
       "A1": {
-        "availableWords": 393,
-        "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 240
+        "availableWords": 410,
+        "cognateWords": 66,
+        "constructions": 30,
+        "referenceWords": 54,
+        "words": 290
       },
       "A2": {
-        "availableWords": 101,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 30
+        "availableWords": 102,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 33
       },
       "B1": {
         "availableWords": 48,
@@ -1858,18 +1858,66 @@
     },
     {
       "A1": {
-        "availableWords": 396,
-        "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 243
+        "availableWords": 410,
+        "cognateWords": 66,
+        "constructions": 30,
+        "referenceWords": 54,
+        "words": 290
       },
       "A2": {
         "availableWords": 102,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 31
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 33
+      },
+      "B1": {
+        "availableWords": 48,
+        "cognateWords": 38,
+        "constructions": 0,
+        "referenceWords": 7,
+        "words": 3
+      },
+      "position": 78
+    },
+    {
+      "A1": {
+        "availableWords": 410,
+        "cognateWords": 66,
+        "constructions": 30,
+        "referenceWords": 54,
+        "words": 290
+      },
+      "A2": {
+        "availableWords": 102,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 33
+      },
+      "B1": {
+        "availableWords": 48,
+        "cognateWords": 38,
+        "constructions": 0,
+        "referenceWords": 7,
+        "words": 3
+      },
+      "position": 79
+    },
+    {
+      "A1": {
+        "availableWords": 413,
+        "cognateWords": 66,
+        "constructions": 30,
+        "referenceWords": 54,
+        "words": 293
+      },
+      "A2": {
+        "availableWords": 103,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 34
       },
       "B1": {
         "availableWords": 50,
@@ -1878,70 +1926,22 @@
         "referenceWords": 7,
         "words": 5
       },
-      "position": 78
-    },
-    {
-      "A1": {
-        "availableWords": 398,
-        "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 245
-      },
-      "A2": {
-        "availableWords": 102,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 31
-      },
-      "B1": {
-        "availableWords": 51,
-        "cognateWords": 38,
-        "constructions": 0,
-        "referenceWords": 7,
-        "words": 6
-      },
-      "position": 79
-    },
-    {
-      "A1": {
-        "availableWords": 398,
-        "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 245
-      },
-      "A2": {
-        "availableWords": 103,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 32
-      },
-      "B1": {
-        "availableWords": 51,
-        "cognateWords": 38,
-        "constructions": 0,
-        "referenceWords": 7,
-        "words": 6
-      },
       "position": 80
     },
     {
       "A1": {
-        "availableWords": 398,
-        "cognateWords": 78,
-        "constructions": 29,
-        "referenceWords": 75,
-        "words": 245
+        "availableWords": 415,
+        "cognateWords": 66,
+        "constructions": 30,
+        "referenceWords": 54,
+        "words": 295
       },
       "A2": {
         "availableWords": 103,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 32
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 34
       },
       "B1": {
         "availableWords": 51,
@@ -1954,18 +1954,18 @@
     },
     {
       "A1": {
-        "availableWords": 398,
-        "cognateWords": 78,
+        "availableWords": 415,
+        "cognateWords": 66,
         "constructions": 30,
-        "referenceWords": 75,
-        "words": 245
+        "referenceWords": 54,
+        "words": 295
       },
       "A2": {
-        "availableWords": 103,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 32
+        "availableWords": 104,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 35
       },
       "B1": {
         "availableWords": 51,
@@ -1978,18 +1978,18 @@
     },
     {
       "A1": {
-        "availableWords": 399,
-        "cognateWords": 78,
+        "availableWords": 415,
+        "cognateWords": 66,
         "constructions": 30,
-        "referenceWords": 75,
-        "words": 246
+        "referenceWords": 54,
+        "words": 295
       },
       "A2": {
-        "availableWords": 103,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 32
+        "availableWords": 104,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 35
       },
       "B1": {
         "availableWords": 51,
@@ -2002,18 +2002,18 @@
     },
     {
       "A1": {
-        "availableWords": 399,
-        "cognateWords": 78,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 246
+        "availableWords": 415,
+        "cognateWords": 66,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 295
       },
       "A2": {
-        "availableWords": 103,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 32
+        "availableWords": 104,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 35
       },
       "B1": {
         "availableWords": 51,
@@ -2026,18 +2026,18 @@
     },
     {
       "A1": {
-        "availableWords": 399,
-        "cognateWords": 78,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 246
+        "availableWords": 416,
+        "cognateWords": 66,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 296
       },
       "A2": {
         "availableWords": 104,
-        "cognateWords": 59,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 33
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 35
       },
       "B1": {
         "availableWords": 51,
@@ -2050,18 +2050,66 @@
     },
     {
       "A1": {
-        "availableWords": 401,
-        "cognateWords": 76,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 250
+        "availableWords": 416,
+        "cognateWords": 66,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 296
       },
       "A2": {
-        "availableWords": 107,
+        "availableWords": 104,
         "cognateWords": 58,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 37
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 35
+      },
+      "B1": {
+        "availableWords": 51,
+        "cognateWords": 38,
+        "constructions": 0,
+        "referenceWords": 7,
+        "words": 6
+      },
+      "position": 86
+    },
+    {
+      "A1": {
+        "availableWords": 416,
+        "cognateWords": 66,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 296
+      },
+      "A2": {
+        "availableWords": 105,
+        "cognateWords": 58,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 36
+      },
+      "B1": {
+        "availableWords": 51,
+        "cognateWords": 38,
+        "constructions": 0,
+        "referenceWords": 7,
+        "words": 6
+      },
+      "position": 87
+    },
+    {
+      "A1": {
+        "availableWords": 418,
+        "cognateWords": 65,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 299
+      },
+      "A2": {
+        "availableWords": 108,
+        "cognateWords": 57,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 40
       },
       "B1": {
         "availableWords": 52,
@@ -2070,70 +2118,22 @@
         "referenceWords": 7,
         "words": 7
       },
-      "position": 86
-    },
-    {
-      "A1": {
-        "availableWords": 404,
-        "cognateWords": 75,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 254
-      },
-      "A2": {
-        "availableWords": 111,
-        "cognateWords": 58,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 41
-      },
-      "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
-        "constructions": 0,
-        "referenceWords": 7,
-        "words": 9
-      },
-      "position": 87
-    },
-    {
-      "A1": {
-        "availableWords": 405,
-        "cognateWords": 75,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 255
-      },
-      "A2": {
-        "availableWords": 111,
-        "cognateWords": 58,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 41
-      },
-      "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
-        "constructions": 0,
-        "referenceWords": 7,
-        "words": 9
-      },
       "position": 88
     },
     {
       "A1": {
-        "availableWords": 405,
-        "cognateWords": 75,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 255
+        "availableWords": 420,
+        "cognateWords": 65,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 301
       },
       "A2": {
-        "availableWords": 111,
-        "cognateWords": 58,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 41
+        "availableWords": 112,
+        "cognateWords": 57,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 44
       },
       "B1": {
         "availableWords": 54,
@@ -2146,18 +2146,18 @@
     },
     {
       "A1": {
-        "availableWords": 405,
-        "cognateWords": 75,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 255
+        "availableWords": 421,
+        "cognateWords": 65,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 302
       },
       "A2": {
-        "availableWords": 111,
-        "cognateWords": 58,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 41
+        "availableWords": 112,
+        "cognateWords": 57,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 44
       },
       "B1": {
         "availableWords": 54,
@@ -2170,407 +2170,407 @@
     },
     {
       "A1": {
-        "availableWords": 405,
-        "cognateWords": 75,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 255
+        "availableWords": 426,
+        "cognateWords": 64,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 308
       },
       "A2": {
-        "availableWords": 111,
-        "cognateWords": 58,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 41
+        "availableWords": 118,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 52
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 91
     },
     {
       "A1": {
-        "availableWords": 408,
-        "cognateWords": 75,
-        "constructions": 30,
-        "referenceWords": 75,
-        "words": 258
+        "availableWords": 426,
+        "cognateWords": 64,
+        "constructions": 31,
+        "referenceWords": 54,
+        "words": 308
       },
       "A2": {
-        "availableWords": 115,
-        "cognateWords": 57,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 46
+        "availableWords": 118,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 52
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 92
     },
     {
       "A1": {
-        "availableWords": 411,
-        "cognateWords": 75,
+        "availableWords": 426,
+        "cognateWords": 64,
         "constructions": 31,
-        "referenceWords": 75,
-        "words": 261
+        "referenceWords": 54,
+        "words": 308
       },
       "A2": {
-        "availableWords": 115,
-        "cognateWords": 57,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 46
+        "availableWords": 118,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 52
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 93
     },
     {
       "A1": {
-        "availableWords": 412,
-        "cognateWords": 75,
+        "availableWords": 428,
+        "cognateWords": 64,
         "constructions": 31,
-        "referenceWords": 75,
-        "words": 262
+        "referenceWords": 54,
+        "words": 310
       },
       "A2": {
-        "availableWords": 115,
-        "cognateWords": 57,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 46
+        "availableWords": 119,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 53
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 94
     },
     {
       "A1": {
-        "availableWords": 413,
-        "cognateWords": 75,
-        "constructions": 31,
-        "referenceWords": 75,
-        "words": 263
+        "availableWords": 431,
+        "cognateWords": 64,
+        "constructions": 32,
+        "referenceWords": 54,
+        "words": 313
       },
       "A2": {
-        "availableWords": 115,
-        "cognateWords": 57,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 46
+        "availableWords": 119,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 53
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 95
     },
     {
       "A1": {
-        "availableWords": 414,
-        "cognateWords": 75,
-        "constructions": 31,
-        "referenceWords": 75,
-        "words": 264
+        "availableWords": 431,
+        "cognateWords": 64,
+        "constructions": 32,
+        "referenceWords": 54,
+        "words": 313
       },
       "A2": {
-        "availableWords": 115,
-        "cognateWords": 57,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 46
+        "availableWords": 119,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 53
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 96
     },
     {
       "A1": {
-        "availableWords": 416,
-        "cognateWords": 75,
-        "constructions": 31,
-        "referenceWords": 75,
-        "words": 266
+        "availableWords": 432,
+        "cognateWords": 64,
+        "constructions": 32,
+        "referenceWords": 54,
+        "words": 314
       },
       "A2": {
-        "availableWords": 116,
-        "cognateWords": 57,
-        "constructions": 9,
-        "referenceWords": 12,
-        "words": 47
+        "availableWords": 119,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 53
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 97
     },
     {
       "A1": {
-        "availableWords": 416,
-        "cognateWords": 75,
-        "constructions": 31,
-        "referenceWords": 75,
-        "words": 266
+        "availableWords": 433,
+        "cognateWords": 64,
+        "constructions": 32,
+        "referenceWords": 54,
+        "words": 315
       },
       "A2": {
-        "availableWords": 116,
-        "cognateWords": 57,
-        "constructions": 10,
-        "referenceWords": 12,
-        "words": 47
+        "availableWords": 119,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 53
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 98
     },
     {
       "A1": {
-        "availableWords": 416,
-        "cognateWords": 75,
-        "constructions": 31,
-        "referenceWords": 75,
-        "words": 266
+        "availableWords": 435,
+        "cognateWords": 64,
+        "constructions": 32,
+        "referenceWords": 54,
+        "words": 317
       },
       "A2": {
-        "availableWords": 116,
-        "cognateWords": 57,
-        "constructions": 10,
-        "referenceWords": 12,
-        "words": 47
+        "availableWords": 120,
+        "cognateWords": 55,
+        "constructions": 11,
+        "referenceWords": 11,
+        "words": 54
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 99
     },
     {
       "A1": {
-        "availableWords": 418,
-        "cognateWords": 75,
+        "availableWords": 435,
+        "cognateWords": 64,
         "constructions": 32,
-        "referenceWords": 75,
-        "words": 268
+        "referenceWords": 54,
+        "words": 317
       },
       "A2": {
-        "availableWords": 116,
-        "cognateWords": 57,
-        "constructions": 10,
-        "referenceWords": 12,
-        "words": 47
+        "availableWords": 120,
+        "cognateWords": 55,
+        "constructions": 12,
+        "referenceWords": 11,
+        "words": 54
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 100
     },
     {
       "A1": {
-        "availableWords": 418,
-        "cognateWords": 75,
-        "constructions": 33,
-        "referenceWords": 75,
-        "words": 268
+        "availableWords": 435,
+        "cognateWords": 64,
+        "constructions": 32,
+        "referenceWords": 54,
+        "words": 317
       },
       "A2": {
-        "availableWords": 116,
-        "cognateWords": 57,
-        "constructions": 10,
-        "referenceWords": 12,
-        "words": 47
+        "availableWords": 120,
+        "cognateWords": 55,
+        "constructions": 12,
+        "referenceWords": 11,
+        "words": 54
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 101
     },
     {
       "A1": {
-        "availableWords": 419,
-        "cognateWords": 74,
+        "availableWords": 437,
+        "cognateWords": 64,
         "constructions": 33,
-        "referenceWords": 75,
-        "words": 270
+        "referenceWords": 54,
+        "words": 319
       },
       "A2": {
-        "availableWords": 117,
-        "cognateWords": 57,
+        "availableWords": 120,
+        "cognateWords": 55,
         "constructions": 12,
-        "referenceWords": 12,
-        "words": 48
+        "referenceWords": 11,
+        "words": 54
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 102
     },
     {
       "A1": {
-        "availableWords": 419,
-        "cognateWords": 74,
-        "constructions": 33,
-        "referenceWords": 75,
-        "words": 270
+        "availableWords": 437,
+        "cognateWords": 64,
+        "constructions": 34,
+        "referenceWords": 54,
+        "words": 319
       },
       "A2": {
-        "availableWords": 117,
-        "cognateWords": 57,
+        "availableWords": 120,
+        "cognateWords": 55,
         "constructions": 12,
-        "referenceWords": 12,
-        "words": 48
+        "referenceWords": 11,
+        "words": 54
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 103
     },
     {
       "A1": {
-        "availableWords": 419,
-        "cognateWords": 74,
-        "constructions": 33,
-        "referenceWords": 75,
-        "words": 270
+        "availableWords": 438,
+        "cognateWords": 63,
+        "constructions": 34,
+        "referenceWords": 54,
+        "words": 321
       },
       "A2": {
-        "availableWords": 117,
-        "cognateWords": 57,
-        "constructions": 12,
-        "referenceWords": 12,
-        "words": 48
+        "availableWords": 121,
+        "cognateWords": 55,
+        "constructions": 14,
+        "referenceWords": 11,
+        "words": 55
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 104
     },
     {
       "A1": {
-        "availableWords": 419,
-        "cognateWords": 74,
-        "constructions": 33,
-        "referenceWords": 75,
-        "words": 270
+        "availableWords": 438,
+        "cognateWords": 63,
+        "constructions": 34,
+        "referenceWords": 54,
+        "words": 321
       },
       "A2": {
-        "availableWords": 117,
-        "cognateWords": 57,
-        "constructions": 12,
-        "referenceWords": 12,
-        "words": 48
+        "availableWords": 121,
+        "cognateWords": 55,
+        "constructions": 14,
+        "referenceWords": 11,
+        "words": 55
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 36,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 12
       },
       "position": 105
     },
     {
       "A1": {
-        "availableWords": 419,
-        "cognateWords": 74,
-        "constructions": 33,
-        "referenceWords": 75,
-        "words": 270
+        "availableWords": 442,
+        "cognateWords": 61,
+        "constructions": 34,
+        "referenceWords": 54,
+        "words": 327
       },
       "A2": {
-        "availableWords": 117,
-        "cognateWords": 57,
-        "constructions": 12,
-        "referenceWords": 12,
-        "words": 48
+        "availableWords": 122,
+        "cognateWords": 55,
+        "constructions": 14,
+        "referenceWords": 11,
+        "words": 56
       },
       "B1": {
-        "availableWords": 54,
-        "cognateWords": 38,
+        "availableWords": 55,
+        "cognateWords": 35,
         "constructions": 0,
         "referenceWords": 7,
-        "words": 9
+        "words": 13
       },
       "position": 106
     },
     {
       "A1": {
-        "availableWords": 420,
-        "cognateWords": 74,
+        "availableWords": 442,
+        "cognateWords": 61,
         "constructions": 34,
-        "referenceWords": 75,
-        "words": 271
+        "referenceWords": 54,
+        "words": 327
       },
       "A2": {
-        "availableWords": 118,
-        "cognateWords": 57,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 49
+        "availableWords": 122,
+        "cognateWords": 55,
+        "constructions": 14,
+        "referenceWords": 11,
+        "words": 56
       },
       "B1": {
-        "availableWords": 58,
-        "cognateWords": 38,
-        "constructions": 1,
+        "availableWords": 55,
+        "cognateWords": 35,
+        "constructions": 0,
         "referenceWords": 7,
         "words": 13
       },
@@ -2578,1307 +2578,1354 @@
     },
     {
       "A1": {
-        "availableWords": 421,
-        "cognateWords": 74,
+        "availableWords": 442,
+        "cognateWords": 61,
         "constructions": 34,
-        "referenceWords": 75,
-        "words": 272
+        "referenceWords": 54,
+        "words": 327
       },
       "A2": {
-        "availableWords": 120,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 52
+        "availableWords": 122,
+        "cognateWords": 55,
+        "constructions": 14,
+        "referenceWords": 11,
+        "words": 56
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
-        "constructions": 1,
+        "availableWords": 55,
+        "cognateWords": 35,
+        "constructions": 0,
         "referenceWords": 7,
-        "words": 14
+        "words": 13
       },
       "position": 108
     },
     {
       "A1": {
-        "availableWords": 427,
-        "cognateWords": 74,
-        "constructions": 34,
-        "referenceWords": 75,
-        "words": 278
+        "availableWords": 443,
+        "cognateWords": 61,
+        "constructions": 35,
+        "referenceWords": 54,
+        "words": 328
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 123,
+        "cognateWords": 55,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 57
       },
       "B1": {
         "availableWords": 59,
-        "cognateWords": 38,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 17
       },
       "position": 109
     },
     {
       "A1": {
-        "availableWords": 428,
-        "cognateWords": 74,
-        "constructions": 34,
-        "referenceWords": 75,
-        "words": 279
+        "availableWords": 444,
+        "cognateWords": 61,
+        "constructions": 35,
+        "referenceWords": 54,
+        "words": 329
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 125,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 60
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 110
     },
     {
       "A1": {
-        "availableWords": 429,
-        "cognateWords": 74,
-        "constructions": 34,
-        "referenceWords": 75,
-        "words": 280
+        "availableWords": 450,
+        "cognateWords": 61,
+        "constructions": 35,
+        "referenceWords": 54,
+        "words": 335
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 111
     },
     {
       "A1": {
-        "availableWords": 429,
-        "cognateWords": 74,
-        "constructions": 34,
-        "referenceWords": 75,
-        "words": 280
+        "availableWords": 451,
+        "cognateWords": 61,
+        "constructions": 35,
+        "referenceWords": 54,
+        "words": 336
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 112
     },
     {
       "A1": {
-        "availableWords": 436,
-        "cognateWords": 72,
+        "availableWords": 452,
+        "cognateWords": 61,
         "constructions": 35,
-        "referenceWords": 75,
-        "words": 289
+        "referenceWords": 54,
+        "words": 337
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 113
     },
     {
       "A1": {
-        "availableWords": 436,
-        "cognateWords": 72,
+        "availableWords": 452,
+        "cognateWords": 61,
         "constructions": 35,
-        "referenceWords": 75,
-        "words": 289
+        "referenceWords": 54,
+        "words": 337
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 114
     },
     {
       "A1": {
-        "availableWords": 437,
-        "cognateWords": 72,
+        "availableWords": 458,
+        "cognateWords": 59,
         "constructions": 36,
-        "referenceWords": 75,
-        "words": 290
+        "referenceWords": 54,
+        "words": 345
       },
       "A2": {
-        "availableWords": 124,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 56
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 115
     },
     {
       "A1": {
-        "availableWords": 438,
-        "cognateWords": 72,
+        "availableWords": 458,
+        "cognateWords": 59,
         "constructions": 36,
-        "referenceWords": 75,
-        "words": 291
+        "referenceWords": 54,
+        "words": 345
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 116
     },
     {
       "A1": {
-        "availableWords": 439,
-        "cognateWords": 72,
-        "constructions": 36,
-        "referenceWords": 75,
-        "words": 292
+        "availableWords": 459,
+        "cognateWords": 59,
+        "constructions": 37,
+        "referenceWords": 54,
+        "words": 346
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 129,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 64
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 117
     },
     {
       "A1": {
-        "availableWords": 439,
-        "cognateWords": 72,
-        "constructions": 36,
-        "referenceWords": 75,
-        "words": 292
+        "availableWords": 460,
+        "cognateWords": 59,
+        "constructions": 37,
+        "referenceWords": 54,
+        "words": 347
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 131,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 66
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 118
     },
     {
       "A1": {
-        "availableWords": 439,
-        "cognateWords": 72,
-        "constructions": 36,
-        "referenceWords": 75,
-        "words": 292
+        "availableWords": 461,
+        "cognateWords": 59,
+        "constructions": 37,
+        "referenceWords": 54,
+        "words": 348
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 131,
+        "cognateWords": 54,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 66
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 119
     },
     {
       "A1": {
-        "availableWords": 439,
-        "cognateWords": 72,
-        "constructions": 36,
-        "referenceWords": 75,
-        "words": 292
+        "availableWords": 471,
+        "cognateWords": 52,
+        "constructions": 37,
+        "referenceWords": 51,
+        "words": 368
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 13,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 139,
+        "cognateWords": 52,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 76
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 120
     },
     {
       "A1": {
-        "availableWords": 439,
-        "cognateWords": 72,
-        "constructions": 36,
-        "referenceWords": 75,
-        "words": 292
+        "availableWords": 471,
+        "cognateWords": 52,
+        "constructions": 37,
+        "referenceWords": 51,
+        "words": 368
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 139,
+        "cognateWords": 52,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 76
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
-        "constructions": 2,
+        "availableWords": 60,
+        "cognateWords": 35,
+        "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 121
     },
     {
       "A1": {
-        "availableWords": 439,
-        "cognateWords": 72,
-        "constructions": 36,
-        "referenceWords": 75,
-        "words": 292
+        "availableWords": 471,
+        "cognateWords": 52,
+        "constructions": 37,
+        "referenceWords": 51,
+        "words": 368
       },
       "A2": {
-        "availableWords": 126,
-        "cognateWords": 56,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 58
+        "availableWords": 139,
+        "cognateWords": 52,
+        "constructions": 15,
+        "referenceWords": 11,
+        "words": 76
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
-        "constructions": 2,
+        "availableWords": 60,
+        "cognateWords": 35,
+        "constructions": 1,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 122
     },
     {
       "A1": {
-        "availableWords": 440,
-        "cognateWords": 72,
+        "availableWords": 471,
+        "cognateWords": 52,
         "constructions": 37,
-        "referenceWords": 75,
-        "words": 293
+        "referenceWords": 51,
+        "words": 368
       },
       "A2": {
-        "availableWords": 127,
-        "cognateWords": 56,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 59
+        "availableWords": 139,
+        "cognateWords": 52,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 76
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 2,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 123
     },
     {
       "A1": {
-        "availableWords": 441,
-        "cognateWords": 72,
+        "availableWords": 471,
+        "cognateWords": 52,
         "constructions": 37,
-        "referenceWords": 75,
-        "words": 294
+        "referenceWords": 51,
+        "words": 368
       },
       "A2": {
-        "availableWords": 127,
-        "cognateWords": 56,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 59
+        "availableWords": 139,
+        "cognateWords": 52,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 76
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
+        "availableWords": 60,
+        "cognateWords": 35,
         "constructions": 2,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 124
     },
     {
       "A1": {
-        "availableWords": 444,
-        "cognateWords": 71,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 299
+        "availableWords": 472,
+        "cognateWords": 52,
+        "constructions": 38,
+        "referenceWords": 51,
+        "words": 369
       },
       "A2": {
-        "availableWords": 127,
-        "cognateWords": 55,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 60
+        "availableWords": 140,
+        "cognateWords": 52,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 77
       },
       "B1": {
-        "availableWords": 59,
-        "cognateWords": 38,
-        "constructions": 3,
+        "availableWords": 60,
+        "cognateWords": 35,
+        "constructions": 2,
         "referenceWords": 7,
-        "words": 14
+        "words": 18
       },
       "position": 125
     },
     {
       "A1": {
-        "availableWords": 445,
-        "cognateWords": 70,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 301
+        "availableWords": 472,
+        "cognateWords": 52,
+        "constructions": 38,
+        "referenceWords": 51,
+        "words": 369
       },
       "A2": {
-        "availableWords": 127,
-        "cognateWords": 55,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 60
+        "availableWords": 140,
+        "cognateWords": 52,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 77
       },
       "B1": {
         "availableWords": 60,
-        "cognateWords": 38,
-        "constructions": 5,
+        "cognateWords": 35,
+        "constructions": 2,
         "referenceWords": 7,
-        "words": 15
+        "words": 18
       },
       "position": 126
     },
     {
       "A1": {
-        "availableWords": 445,
-        "cognateWords": 69,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 302
+        "availableWords": 475,
+        "cognateWords": 52,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 373
       },
       "A2": {
-        "availableWords": 127,
-        "cognateWords": 54,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 61
+        "availableWords": 140,
+        "cognateWords": 51,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 78
       },
       "B1": {
         "availableWords": 60,
-        "cognateWords": 38,
-        "constructions": 6,
+        "cognateWords": 35,
+        "constructions": 3,
         "referenceWords": 7,
-        "words": 15
+        "words": 18
       },
       "position": 127
     },
     {
       "A1": {
-        "availableWords": 445,
-        "cognateWords": 69,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 302
+        "availableWords": 475,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 374
       },
       "A2": {
-        "availableWords": 128,
-        "cognateWords": 54,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 62
+        "availableWords": 140,
+        "cognateWords": 51,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 78
       },
       "B1": {
-        "availableWords": 60,
-        "cognateWords": 38,
-        "constructions": 6,
+        "availableWords": 61,
+        "cognateWords": 35,
+        "constructions": 5,
         "referenceWords": 7,
-        "words": 15
+        "words": 19
       },
       "position": 128
     },
     {
       "A1": {
-        "availableWords": 445,
-        "cognateWords": 66,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 305
+        "availableWords": 475,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 374
       },
       "A2": {
-        "availableWords": 128,
-        "cognateWords": 54,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 62
+        "availableWords": 140,
+        "cognateWords": 50,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 79
       },
       "B1": {
-        "availableWords": 60,
-        "cognateWords": 38,
-        "constructions": 7,
+        "availableWords": 61,
+        "cognateWords": 35,
+        "constructions": 6,
         "referenceWords": 7,
-        "words": 15
+        "words": 19
       },
       "position": 129
     },
     {
       "A1": {
-        "availableWords": 446,
-        "cognateWords": 66,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 306
+        "availableWords": 475,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 374
       },
       "A2": {
-        "availableWords": 132,
-        "cognateWords": 54,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 66
+        "availableWords": 141,
+        "cognateWords": 50,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 80
       },
       "B1": {
         "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 7,
+        "cognateWords": 35,
+        "constructions": 6,
         "referenceWords": 7,
-        "words": 16
+        "words": 19
       },
       "position": 130
     },
     {
       "A1": {
-        "availableWords": 447,
-        "cognateWords": 66,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 307
+        "availableWords": 475,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 374
       },
       "A2": {
-        "availableWords": 132,
-        "cognateWords": 53,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 67
+        "availableWords": 141,
+        "cognateWords": 50,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 80
       },
       "B1": {
         "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 8,
+        "cognateWords": 35,
+        "constructions": 7,
         "referenceWords": 7,
-        "words": 16
+        "words": 19
       },
       "position": 131
     },
     {
       "A1": {
-        "availableWords": 449,
-        "cognateWords": 66,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 309
+        "availableWords": 475,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 374
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 53,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 72
+        "availableWords": 145,
+        "cognateWords": 50,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 84
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 8,
+        "availableWords": 62,
+        "cognateWords": 35,
+        "constructions": 7,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 132
     },
     {
       "A1": {
-        "availableWords": 450,
-        "cognateWords": 66,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 310
+        "availableWords": 475,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 374
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 53,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 72
+        "availableWords": 145,
+        "cognateWords": 49,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 85
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 9,
+        "availableWords": 62,
+        "cognateWords": 35,
+        "constructions": 8,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 133
     },
     {
       "A1": {
-        "availableWords": 450,
-        "cognateWords": 66,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 310
+        "availableWords": 477,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 376
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 53,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 72
+        "availableWords": 150,
+        "cognateWords": 49,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 90
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 10,
+        "availableWords": 62,
+        "cognateWords": 35,
+        "constructions": 8,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 134
     },
     {
       "A1": {
-        "availableWords": 452,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 313
+        "availableWords": 477,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 376
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 52,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 73
+        "availableWords": 150,
+        "cognateWords": 49,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 90
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 11,
+        "availableWords": 62,
+        "cognateWords": 35,
+        "constructions": 9,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 135
     },
     {
       "A1": {
-        "availableWords": 452,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 313
+        "availableWords": 477,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 376
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 52,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 73
+        "availableWords": 150,
+        "cognateWords": 49,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 90
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 12,
+        "availableWords": 62,
+        "cognateWords": 35,
+        "constructions": 10,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 136
     },
     {
       "A1": {
-        "availableWords": 452,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 313
+        "availableWords": 478,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 377
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 52,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 73
+        "availableWords": 150,
+        "cognateWords": 48,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 91
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
-        "constructions": 12,
+        "availableWords": 62,
+        "cognateWords": 35,
+        "constructions": 11,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 137
     },
     {
       "A1": {
-        "availableWords": 452,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 313
+        "availableWords": 478,
+        "cognateWords": 51,
+        "constructions": 38,
+        "referenceWords": 50,
+        "words": 377
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 52,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 73
+        "availableWords": 150,
+        "cognateWords": 48,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 91
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 62,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 20
       },
       "position": 138
     },
     {
       "A1": {
-        "availableWords": 452,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 74,
-        "words": 313
+        "availableWords": 490,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 49,
+        "words": 397
       },
       "A2": {
-        "availableWords": 137,
-        "cognateWords": 52,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 73
+        "availableWords": 155,
+        "cognateWords": 43,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 101
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 139
     },
     {
       "A1": {
-        "availableWords": 455,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 66,
-        "words": 324
+        "availableWords": 490,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 49,
+        "words": 397
       },
       "A2": {
-        "availableWords": 138,
-        "cognateWords": 52,
-        "constructions": 14,
-        "referenceWords": 12,
-        "words": 74
+        "availableWords": 155,
+        "cognateWords": 43,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 101
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 140
     },
     {
       "A1": {
-        "availableWords": 456,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 66,
-        "words": 325
+        "availableWords": 490,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 49,
+        "words": 397
       },
       "A2": {
-        "availableWords": 138,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 12,
-        "words": 74
+        "availableWords": 155,
+        "cognateWords": 43,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 101
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 141
     },
     {
       "A1": {
-        "availableWords": 459,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 66,
-        "words": 328
+        "availableWords": 493,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 48,
+        "words": 401
       },
       "A2": {
-        "availableWords": 138,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 12,
-        "words": 74
+        "availableWords": 156,
+        "cognateWords": 43,
+        "constructions": 16,
+        "referenceWords": 11,
+        "words": 102
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 142
     },
     {
       "A1": {
-        "availableWords": 460,
-        "cognateWords": 65,
-        "constructions": 37,
-        "referenceWords": 66,
-        "words": 329
+        "availableWords": 494,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 48,
+        "words": 402
       },
       "A2": {
-        "availableWords": 138,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 12,
-        "words": 74
+        "availableWords": 156,
+        "cognateWords": 43,
+        "constructions": 17,
+        "referenceWords": 11,
+        "words": 102
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 143
     },
     {
       "A1": {
-        "availableWords": 463,
-        "cognateWords": 64,
-        "constructions": 37,
-        "referenceWords": 65,
-        "words": 334
+        "availableWords": 495,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 48,
+        "words": 403
       },
       "A2": {
-        "availableWords": 138,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 12,
-        "words": 74
+        "availableWords": 156,
+        "cognateWords": 43,
+        "constructions": 17,
+        "referenceWords": 11,
+        "words": 102
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 144
     },
     {
       "A1": {
-        "availableWords": 464,
-        "cognateWords": 64,
-        "constructions": 37,
-        "referenceWords": 65,
-        "words": 335
+        "availableWords": 496,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 48,
+        "words": 404
       },
       "A2": {
-        "availableWords": 138,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 12,
-        "words": 74
+        "availableWords": 156,
+        "cognateWords": 43,
+        "constructions": 17,
+        "referenceWords": 11,
+        "words": 102
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 145
     },
     {
       "A1": {
-        "availableWords": 470,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 64,
-        "words": 343
+        "availableWords": 498,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 47,
+        "words": 407
       },
       "A2": {
-        "availableWords": 140,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 78
+        "availableWords": 156,
+        "cognateWords": 43,
+        "constructions": 17,
+        "referenceWords": 11,
+        "words": 102
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 146
     },
     {
       "A1": {
-        "availableWords": 470,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 64,
-        "words": 343
+        "availableWords": 499,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 47,
+        "words": 408
       },
       "A2": {
-        "availableWords": 140,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 78
+        "availableWords": 156,
+        "cognateWords": 43,
+        "constructions": 17,
+        "referenceWords": 11,
+        "words": 102
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 147
     },
     {
       "A1": {
-        "availableWords": 470,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 64,
-        "words": 343
+        "availableWords": 505,
+        "cognateWords": 44,
+        "constructions": 38,
+        "referenceWords": 47,
+        "words": 414
       },
       "A2": {
-        "availableWords": 140,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 78
+        "availableWords": 158,
+        "cognateWords": 43,
+        "constructions": 17,
+        "referenceWords": 9,
+        "words": 106
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 63,
+        "cognateWords": 35,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 21
       },
       "position": 148
     },
     {
       "A1": {
-        "availableWords": 470,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 64,
-        "words": 343
+        "availableWords": 514,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 44,
+        "words": 437
       },
       "A2": {
-        "availableWords": 140,
-        "cognateWords": 52,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 78
+        "availableWords": 169,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 144
       },
       "B1": {
-        "availableWords": 61,
-        "cognateWords": 38,
+        "availableWords": 71,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 16
+        "words": 56
       },
       "position": 149
     },
     {
       "A1": {
-        "availableWords": 474,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 62,
-        "words": 349
+        "availableWords": 514,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 44,
+        "words": 437
       },
       "A2": {
-        "availableWords": 143,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 82
+        "availableWords": 169,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 144
       },
       "B1": {
-        "availableWords": 65,
-        "cognateWords": 38,
+        "availableWords": 71,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 20
+        "words": 56
       },
       "position": 150
     },
     {
       "A1": {
-        "availableWords": 479,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 61,
-        "words": 355
+        "availableWords": 514,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 44,
+        "words": 437
       },
       "A2": {
-        "availableWords": 144,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 83
+        "availableWords": 169,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 144
       },
       "B1": {
-        "availableWords": 65,
-        "cognateWords": 38,
+        "availableWords": 71,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 20
+        "words": 56
       },
       "position": 151
     },
     {
       "A1": {
-        "availableWords": 482,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 58,
-        "words": 361
+        "availableWords": 518,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 43,
+        "words": 442
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 172,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 147
       },
       "B1": {
-        "availableWords": 66,
-        "cognateWords": 38,
+        "availableWords": 75,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 21
+        "words": 60
       },
       "position": 152
     },
     {
       "A1": {
-        "availableWords": 483,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 58,
-        "words": 362
+        "availableWords": 523,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 43,
+        "words": 447
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 173,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 148
       },
       "B1": {
-        "availableWords": 66,
-        "cognateWords": 38,
+        "availableWords": 75,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 21
+        "words": 60
       },
       "position": 153
     },
     {
       "A1": {
-        "availableWords": 483,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 54,
-        "words": 366
+        "availableWords": 526,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 41,
+        "words": 452
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 66,
-        "cognateWords": 38,
+        "availableWords": 76,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 21
+        "words": 61
       },
       "position": 154
     },
     {
       "A1": {
-        "availableWords": 483,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 54,
-        "words": 366
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 41,
+        "words": 453
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 66,
-        "cognateWords": 38,
+        "availableWords": 76,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 21
+        "words": 61
       },
       "position": 155
     },
     {
       "A1": {
-        "availableWords": 483,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 54,
-        "words": 366
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 37,
+        "words": 457
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 66,
-        "cognateWords": 38,
+        "availableWords": 76,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 21
+        "words": 61
       },
       "position": 156
     },
     {
       "A1": {
-        "availableWords": 483,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 53,
-        "words": 367
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 37,
+        "words": 457
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 67,
-        "cognateWords": 38,
+        "availableWords": 76,
+        "cognateWords": 8,
         "constructions": 12,
         "referenceWords": 7,
-        "words": 22
+        "words": 61
       },
       "position": 157
     },
     {
       "A1": {
-        "availableWords": 484,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 53,
-        "words": 368
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 37,
+        "words": 457
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 67,
-        "cognateWords": 38,
-        "constructions": 13,
+        "availableWords": 76,
+        "cognateWords": 8,
+        "constructions": 12,
         "referenceWords": 7,
-        "words": 22
+        "words": 61
       },
       "position": 158
     },
     {
       "A1": {
-        "availableWords": 485,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 53,
-        "words": 369
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 36,
+        "words": 458
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 67,
-        "cognateWords": 38,
-        "constructions": 13,
+        "availableWords": 77,
+        "cognateWords": 8,
+        "constructions": 12,
         "referenceWords": 7,
-        "words": 22
+        "words": 62
       },
       "position": 159
     },
     {
       "A1": {
-        "availableWords": 485,
-        "cognateWords": 63,
-        "constructions": 37,
-        "referenceWords": 53,
-        "words": 369
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 36,
+        "words": 458
       },
       "A2": {
-        "availableWords": 147,
-        "cognateWords": 51,
-        "constructions": 15,
-        "referenceWords": 10,
-        "words": 86
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
       },
       "B1": {
-        "availableWords": 67,
-        "cognateWords": 38,
+        "availableWords": 77,
+        "cognateWords": 8,
         "constructions": 13,
         "referenceWords": 7,
-        "words": 22
+        "words": 62
       },
       "position": 160
+    },
+    {
+      "A1": {
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 36,
+        "words": 458
+      },
+      "A2": {
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
+      },
+      "B1": {
+        "availableWords": 77,
+        "cognateWords": 8,
+        "constructions": 13,
+        "referenceWords": 7,
+        "words": 62
+      },
+      "position": 161
+    },
+    {
+      "A1": {
+        "availableWords": 527,
+        "cognateWords": 33,
+        "constructions": 38,
+        "referenceWords": 36,
+        "words": 458
+      },
+      "A2": {
+        "availableWords": 175,
+        "cognateWords": 17,
+        "constructions": 17,
+        "referenceWords": 8,
+        "words": 150
+      },
+      "B1": {
+        "availableWords": 77,
+        "cognateWords": 8,
+        "constructions": 13,
+        "referenceWords": 7,
+        "words": 62
+      },
+      "position": 162
     }
   ],
   "headwordsByLevel": {
     "A1": 759,
-    "A2": 698,
-    "B1": 857,
+    "A2": 707,
+    "B1": 862,
     "B2": 21,
     "C1": 7,
     "C2": 0
   },
   "levels": {
     "A1": {
-      "availableWords": 485,
-      "cognateWords": 63,
+      "availableWords": 527,
+      "cognateWords": 33,
       "coreConstructions": 40,
       "coreWords": 733,
       "cumulative": {
-        "availableWords": 485,
-        "cognateWords": 63,
+        "availableWords": 527,
+        "cognateWords": 33,
         "coreConstructions": 40,
         "coreWords": 733,
         "reachedAt": null,
-        "referenceWords": 53,
-        "taughtConstructions": 37,
-        "taughtWords": 369
+        "referenceWords": 36,
+        "taughtConstructions": 38,
+        "taughtWords": 458
       },
       "reachedAt": null,
-      "referenceWords": 53,
-      "taughtConstructions": 37,
-      "taughtWords": 369,
+      "referenceWords": 36,
+      "taughtConstructions": 38,
+      "taughtWords": 458,
       "untaughtConstructions": [
-        "fr:cx:neg.de",
         "fr:cx:verb.ir.present",
         "fr:cx:verb.re.present"
       ],
@@ -3888,24 +3935,18 @@
         "fr:lex:aout",
         "fr:lex:automne",
         "fr:lex:avril",
-        "fr:lex:cinquante",
         "fr:lex:clair",
-        "fr:lex:couleur",
         "fr:lex:decembre",
-        "fr:lex:deux",
         "fr:lex:dimanche",
-        "fr:lex:dix",
         "fr:lex:ete",
         "fr:lex:fete",
         "fr:lex:fevrier",
         "fr:lex:gris",
-        "fr:lex:huit",
         "fr:lex:janvier",
         "fr:lex:jaune",
         "fr:lex:jeudi",
         "fr:lex:juillet",
         "fr:lex:juin",
-        "fr:lex:langue",
         "fr:lex:lettre",
         "fr:lex:lundi",
         "fr:lex:mai",
@@ -3918,34 +3959,20 @@
         "fr:lex:noir",
         "fr:lex:novembre",
         "fr:lex:octobre",
-        "fr:lex:onze",
         "fr:lex:pays",
         "fr:lex:printemps",
-        "fr:lex:quarante",
         "fr:lex:rose",
-        "fr:lex:rouge",
-        "fr:lex:samedi",
-        "fr:lex:semaine",
-        "fr:lex:sept",
         "fr:lex:septembre",
-        "fr:lex:six",
-        "fr:lex:soixante",
         "fr:lex:suisse",
-        "fr:lex:trois",
         "fr:lex:vendredi",
-        "fr:lex:violet",
-        "fr:lex:week-end",
-        "fr:lex:zero"
+        "fr:lex:violet"
       ],
       "untaughtWords": [
         "fr:lex:accepter",
         "fr:lex:accident",
         "fr:lex:accord",
-        "fr:lex:acheter",
-        "fr:lex:adorer",
         "fr:lex:aeroport",
         "fr:lex:ah",
-        "fr:lex:aider",
         "fr:lex:allemand",
         "fr:lex:allo",
         "fr:lex:alphabet",
@@ -3957,15 +3984,12 @@
         "fr:lex:aout",
         "fr:lex:appartement",
         "fr:lex:appetit",
-        "fr:lex:apres-midi",
-        "fr:lex:asseoir",
         "fr:lex:assiette",
         "fr:lex:automne",
         "fr:lex:avion",
         "fr:lex:avril",
         "fr:lex:banque",
         "fr:lex:bateau",
-        "fr:lex:beaucoup",
         "fr:lex:bebe",
         "fr:lex:belge",
         "fr:lex:bibliotheque",
@@ -3981,14 +4005,12 @@
         "fr:lex:cacher",
         "fr:lex:cadeau",
         "fr:lex:cahier",
-        "fr:lex:campagne",
         "fr:lex:canadien",
         "fr:lex:canape",
         "fr:lex:carotte",
         "fr:lex:centre",
         "fr:lex:chaise",
         "fr:lex:chambre",
-        "fr:lex:changer",
         "fr:lex:chanter",
         "fr:lex:chapeau",
         "fr:lex:chaussette",
@@ -3997,61 +4019,44 @@
         "fr:lex:cher",
         "fr:lex:chinois",
         "fr:lex:choisir",
-        "fr:lex:cinema",
-        "fr:lex:cinquante",
         "fr:lex:citron",
         "fr:lex:clair",
         "fr:lex:client",
         "fr:lex:confirmer",
         "fr:lex:confiture",
         "fr:lex:contre",
-        "fr:lex:conversation",
         "fr:lex:copain",
         "fr:lex:coucher",
-        "fr:lex:couleur",
         "fr:lex:course",
         "fr:lex:court",
         "fr:lex:cousin",
         "fr:lex:couteau",
         "fr:lex:crayon",
         "fr:lex:cuillere",
-        "fr:lex:cuisine",
-        "fr:lex:dame",
         "fr:lex:danser",
         "fr:lex:decembre",
-        "fr:lex:decouvrir",
         "fr:lex:dejeuner",
-        "fr:lex:delicieux",
         "fr:lex:demi",
         "fr:lex:demi-heure",
         "fr:lex:dent",
-        "fr:lex:dernier",
         "fr:lex:desirer",
         "fr:lex:dessert",
         "fr:lex:dessin",
         "fr:lex:dessiner",
         "fr:lex:detester",
-        "fr:lex:deux",
         "fr:lex:deuxieme",
-        "fr:lex:different",
-        "fr:lex:difficile",
         "fr:lex:dimanche",
         "fr:lex:diner",
         "fr:lex:direction",
-        "fr:lex:discuter",
-        "fr:lex:dix",
         "fr:lex:docteur",
         "fr:lex:doigt",
         "fr:lex:dos",
         "fr:lex:douche",
         "fr:lex:doucher",
-        "fr:lex:douze",
         "fr:lex:echarpe",
         "fr:lex:ecrire",
-        "fr:lex:effort",
         "fr:lex:eglise",
         "fr:lex:eleve",
-        "fr:lex:embrasser",
         "fr:lex:enchante",
         "fr:lex:entendre",
         "fr:lex:entree",
@@ -4060,11 +4065,9 @@
         "fr:lex:espagnol",
         "fr:lex:etage",
         "fr:lex:ete",
-        "fr:lex:etudiant",
         "fr:lex:euro",
         "fr:lex:exemple",
         "fr:lex:exercice",
-        "fr:lex:exister",
         "fr:lex:expliquer",
         "fr:lex:facile",
         "fr:lex:felicitations",
@@ -4084,26 +4087,19 @@
         "fr:lex:gros",
         "fr:lex:habiter",
         "fr:lex:haut",
-        "fr:lex:heureux",
         "fr:lex:hopital",
-        "fr:lex:hotel",
-        "fr:lex:huit",
         "fr:lex:important",
-        "fr:lex:information",
         "fr:lex:intelligent",
         "fr:lex:interessant",
-        "fr:lex:internet",
         "fr:lex:inviter",
         "fr:lex:italien",
         "fr:lex:jambe",
         "fr:lex:jambon",
         "fr:lex:janvier",
         "fr:lex:japonais",
-        "fr:lex:jardin",
         "fr:lex:jaune",
         "fr:lex:jeudi",
         "fr:lex:joli",
-        "fr:lex:jouer",
         "fr:lex:journal",
         "fr:lex:juillet",
         "fr:lex:juin",
@@ -4111,14 +4107,12 @@
         "fr:lex:kilo",
         "fr:lex:kilometre",
         "fr:lex:lampe",
-        "fr:lex:langue",
         "fr:lex:lettre",
         "fr:lex:libre",
         "fr:lex:lire",
         "fr:lex:lit",
         "fr:lex:litre",
         "fr:lex:longtemps",
-        "fr:lex:lumiere",
         "fr:lex:lundi",
         "fr:lex:lunettes",
         "fr:lex:lycee",
@@ -4127,14 +4121,12 @@
         "fr:lex:mademoiselle",
         "fr:lex:magasin",
         "fr:lex:mai",
-        "fr:lex:maman",
         "fr:lex:marche",
         "fr:lex:mardi",
         "fr:lex:mari",
         "fr:lex:marron",
         "fr:lex:mars",
         "fr:lex:match",
-        "fr:lex:matin",
         "fr:lex:mauvais",
         "fr:lex:medecin",
         "fr:lex:menu",
@@ -4142,15 +4134,11 @@
         "fr:lex:meteo",
         "fr:lex:metier",
         "fr:lex:metre",
-        "fr:lex:metro",
         "fr:lex:midi",
         "fr:lex:minuit",
-        "fr:lex:mois",
         "fr:lex:monsieur",
         "fr:lex:montagne",
         "fr:lex:montre",
-        "fr:lex:montrer",
-        "fr:lex:mot",
         "fr:lex:moto",
         "fr:lex:musee",
         "fr:lex:neige",
@@ -4164,90 +4152,55 @@
         "fr:lex:oh",
         "fr:lex:oignon",
         "fr:lex:oncle",
-        "fr:lex:onze",
         "fr:lex:ordinateur",
         "fr:lex:oreille",
         "fr:lex:oublier",
         "fr:lex:ouvrir",
-        "fr:lex:papa",
-        "fr:lex:parc",
-        "fr:lex:parent",
         "fr:lex:passer",
-        "fr:lex:payer",
         "fr:lex:pays",
-        "fr:lex:perdre",
-        "fr:lex:permettre",
         "fr:lex:petit-dejeuner",
         "fr:lex:pharmacie",
         "fr:lex:photo",
-        "fr:lex:phrase",
         "fr:lex:piece",
         "fr:lex:piscine",
         "fr:lex:plage",
-        "fr:lex:plaisir",
-        "fr:lex:plat",
         "fr:lex:poire",
         "fr:lex:pomme-de-terre",
-        "fr:lex:poser",
         "fr:lex:poste",
         "fr:lex:prefere",
-        "fr:lex:preferer",
-        "fr:lex:premier",
         "fr:lex:prenom",
         "fr:lex:presenter",
         "fr:lex:pret",
         "fr:lex:printemps",
-        "fr:lex:prix",
         "fr:lex:prochain",
-        "fr:lex:profiter",
         "fr:lex:pull",
-        "fr:lex:quarante",
         "fr:lex:quart",
-        "fr:lex:quartier",
-        "fr:lex:quatorze",
         "fr:lex:quatrieme",
         "fr:lex:radio",
         "fr:lex:raisin",
         "fr:lex:refuser",
         "fr:lex:remercier",
-        "fr:lex:rencontrer",
         "fr:lex:repas",
         "fr:lex:repeter",
         "fr:lex:repondre",
         "fr:lex:reserver",
-        "fr:lex:restaurant",
         "fr:lex:retard",
-        "fr:lex:retrouver",
-        "fr:lex:reve",
-        "fr:lex:rever",
-        "fr:lex:rien",
         "fr:lex:robe",
         "fr:lex:rose",
-        "fr:lex:rouge",
         "fr:lex:route",
         "fr:lex:russe",
         "fr:lex:sac",
         "fr:lex:saison",
         "fr:lex:salle",
         "fr:lex:salon",
-        "fr:lex:samedi",
-        "fr:lex:sandwich",
         "fr:lex:sans",
         "fr:lex:secret",
-        "fr:lex:seize",
-        "fr:lex:semaine",
         "fr:lex:sens",
-        "fr:lex:sept",
         "fr:lex:septembre",
         "fr:lex:serveur",
-        "fr:lex:service",
         "fr:lex:seul",
         "fr:lex:simple",
-        "fr:lex:six",
         "fr:lex:soif",
-        "fr:lex:soir",
-        "fr:lex:soiree",
-        "fr:lex:soixante",
         "fr:lex:sommeil",
         "fr:lex:souhaiter",
         "fr:lex:soupe",
@@ -4259,28 +4212,19 @@
         "fr:lex:suisse",
         "fr:lex:suivre",
         "fr:lex:sujet",
-        "fr:lex:super",
         "fr:lex:supermarche",
         "fr:lex:surprise",
         "fr:lex:sympa",
         "fr:lex:tante",
         "fr:lex:tasse",
         "fr:lex:taxi",
-        "fr:lex:telephone",
         "fr:lex:television",
         "fr:lex:tennis",
         "fr:lex:theatre",
         "fr:lex:ticket",
-        "fr:lex:tot",
-        "fr:lex:tour",
         "fr:lex:touriste",
-        "fr:lex:transport",
         "fr:lex:traverser",
-        "fr:lex:treize",
-        "fr:lex:trois",
         "fr:lex:troisieme",
-        "fr:lex:utiliser",
-        "fr:lex:vacances",
         "fr:lex:valise",
         "fr:lex:velo",
         "fr:lex:vendeur",
@@ -4292,37 +4236,32 @@
         "fr:lex:village",
         "fr:lex:violet",
         "fr:lex:visiter",
-        "fr:lex:voici",
         "fr:lex:volontiers",
         "fr:lex:voyage",
         "fr:lex:vue",
-        "fr:lex:week-end",
-        "fr:lex:yaourt",
-        "fr:lex:zero"
+        "fr:lex:yaourt"
       ]
     },
     "A2": {
-      "availableWords": 147,
-      "cognateWords": 51,
+      "availableWords": 175,
+      "cognateWords": 17,
       "coreConstructions": 23,
       "coreWords": 681,
       "cumulative": {
-        "availableWords": 632,
-        "cognateWords": 114,
+        "availableWords": 702,
+        "cognateWords": 50,
         "coreConstructions": 63,
         "coreWords": 1414,
         "reachedAt": null,
-        "referenceWords": 63,
-        "taughtConstructions": 52,
-        "taughtWords": 455
+        "referenceWords": 44,
+        "taughtConstructions": 55,
+        "taughtWords": 608
       },
       "reachedAt": null,
-      "referenceWords": 10,
-      "taughtConstructions": 15,
-      "taughtWords": 86,
+      "referenceWords": 8,
+      "taughtConstructions": 17,
+      "taughtWords": 150,
       "untaughtConstructions": [
-        "fr:cx:neg.ne-plus",
-        "fr:cx:neg.ne-rien",
         "fr:cx:pronoun.en",
         "fr:cx:pronoun.y",
         "fr:cx:relative.ou",
@@ -4336,11 +4275,9 @@
         "fr:lex:feuille",
         "fr:lex:fonce",
         "fr:lex:joyeux",
-        "fr:lex:million",
         "fr:lex:pale",
         "fr:lex:paques",
-        "fr:lex:roi",
-        "fr:lex:saint"
+        "fr:lex:roi"
       ],
       "untaughtWords": [
         "fr:lex:absent",
@@ -4350,7 +4287,6 @@
         "fr:lex:acteur",
         "fr:lex:activite",
         "fr:lex:actrice",
-        "fr:lex:admirer",
         "fr:lex:adolescent",
         "fr:lex:adulte",
         "fr:lex:affaire",
@@ -4378,7 +4314,6 @@
         "fr:lex:arret",
         "fr:lex:arreter",
         "fr:lex:arrivee",
-        "fr:lex:artiste",
         "fr:lex:ascenseur",
         "fr:lex:assez",
         "fr:lex:assister",
@@ -4387,7 +4322,6 @@
         "fr:lex:attraper",
         "fr:lex:avance",
         "fr:lex:avancer",
-        "fr:lex:avenir",
         "fr:lex:aventure",
         "fr:lex:avenue",
         "fr:lex:avertir",
@@ -4400,13 +4334,11 @@
         "fr:lex:balcon",
         "fr:lex:balle",
         "fr:lex:ballon",
-        "fr:lex:banc",
         "fr:lex:bar",
         "fr:lex:barbe",
         "fr:lex:bas",
         "fr:lex:batiment",
         "fr:lex:bavarder",
-        "fr:lex:beaute",
         "fr:lex:beige",
         "fr:lex:bete",
         "fr:lex:bijou",
@@ -4436,27 +4368,21 @@
         "fr:lex:camarade",
         "fr:lex:camion",
         "fr:lex:canard",
-        "fr:lex:capitale",
         "fr:lex:caractere",
         "fr:lex:carnet",
         "fr:lex:carrefour",
         "fr:lex:casque",
         "fr:lex:casquette",
         "fr:lex:casser",
-        "fr:lex:cathedrale",
         "fr:lex:cave",
         "fr:lex:ceinture",
         "fr:lex:celebre",
-        "fr:lex:celui",
         "fr:lex:centime",
-        "fr:lex:certain",
         "fr:lex:chacun",
         "fr:lex:chaine",
         "fr:lex:chaleur",
-        "fr:lex:champ",
         "fr:lex:champagne",
         "fr:lex:champion",
-        "fr:lex:changement",
         "fr:lex:chanson",
         "fr:lex:chanteur",
         "fr:lex:charmant",
@@ -4496,20 +4422,17 @@
         "fr:lex:couloir",
         "fr:lex:couple",
         "fr:lex:cour",
-        "fr:lex:courage",
         "fr:lex:courageux",
         "fr:lex:courriel",
         "fr:lex:courrier",
         "fr:lex:couverture",
         "fr:lex:cravate",
-        "fr:lex:creer",
         "fr:lex:creme",
         "fr:lex:crier",
         "fr:lex:cuir",
         "fr:lex:cuire",
         "fr:lex:cuisiner",
         "fr:lex:cuisinier",
-        "fr:lex:culture",
         "fr:lex:curieux",
         "fr:lex:danger",
         "fr:lex:dangereux",
@@ -4520,15 +4443,11 @@
         "fr:lex:decrocher",
         "fr:lex:dedans",
         "fr:lex:degre",
-        "fr:lex:dehors",
         "fr:lex:demenager",
         "fr:lex:depart",
-        "fr:lex:dependre",
         "fr:lex:depenser",
-        "fr:lex:deplacer",
         "fr:lex:deposer",
         "fr:lex:deranger",
-        "fr:lex:destination",
         "fr:lex:deviner",
         "fr:lex:difference",
         "fr:lex:directement",
@@ -4552,14 +4471,11 @@
         "fr:lex:emmener",
         "fr:lex:emploi",
         "fr:lex:endormir",
-        "fr:lex:energie",
         "fr:lex:enfance",
         "fr:lex:enlever",
         "fr:lex:ennuyer",
         "fr:lex:enorme",
-        "fr:lex:entier",
         "fr:lex:entrainer",
-        "fr:lex:entreprise",
         "fr:lex:epaule",
         "fr:lex:epicerie",
         "fr:lex:epoque",
@@ -4568,16 +4484,11 @@
         "fr:lex:escalier",
         "fr:lex:espace",
         "fr:lex:esperer",
-        "fr:lex:espoir",
         "fr:lex:eteindre",
-        "fr:lex:etoile",
-        "fr:lex:etranger",
-        "fr:lex:europeen",
         "fr:lex:evidemment",
         "fr:lex:exact",
         "fr:lex:exactement",
         "fr:lex:examen",
-        "fr:lex:excellent",
         "fr:lex:excuse",
         "fr:lex:experience",
         "fr:lex:explication",
@@ -4596,7 +4507,6 @@
         "fr:lex:fievre",
         "fr:lex:fleuve",
         "fr:lex:fonce",
-        "fr:lex:fonctionner",
         "fr:lex:fond",
         "fr:lex:foret",
         "fr:lex:forme",
@@ -4606,7 +4516,6 @@
         "fr:lex:fumer",
         "fr:lex:gant",
         "fr:lex:garage",
-        "fr:lex:garde",
         "fr:lex:geant",
         "fr:lex:general",
         "fr:lex:generalement",
@@ -4623,7 +4532,6 @@
         "fr:lex:guerre",
         "fr:lex:guide",
         "fr:lex:guitare",
-        "fr:lex:habitant",
         "fr:lex:heureusement",
         "fr:lex:horrible",
         "fr:lex:huile",
@@ -4647,7 +4555,6 @@
         "fr:lex:installer",
         "fr:lex:instrument",
         "fr:lex:interdire",
-        "fr:lex:international",
         "fr:lex:inutile",
         "fr:lex:inventer",
         "fr:lex:invite",
@@ -4664,7 +4571,6 @@
         "fr:lex:jusque",
         "fr:lex:justement",
         "fr:lex:la-haut",
-        "fr:lex:lac",
         "fr:lex:laid",
         "fr:lex:laisser",
         "fr:lex:large",
@@ -4678,7 +4584,6 @@
         "fr:lex:lourd",
         "fr:lex:lune",
         "fr:lex:magazine",
-        "fr:lex:magnifique",
         "fr:lex:maitresse",
         "fr:lex:maladie",
         "fr:lex:malheureusement",
@@ -4688,7 +4593,6 @@
         "fr:lex:mariage",
         "fr:lex:marque",
         "fr:lex:mathematiques",
-        "fr:lex:matiere",
         "fr:lex:matinee",
         "fr:lex:mechant",
         "fr:lex:medicament",
@@ -4698,15 +4602,11 @@
         "fr:lex:merveilleux",
         "fr:lex:message",
         "fr:lex:meuble",
-        "fr:lex:mieux",
         "fr:lex:mignon",
-        "fr:lex:million",
         "fr:lex:mince",
         "fr:lex:miroir",
-        "fr:lex:moderne",
         "fr:lex:moitie",
         "fr:lex:monnaie",
-        "fr:lex:monument",
         "fr:lex:morceau",
         "fr:lex:mouchoir",
         "fr:lex:mourir",
@@ -4738,12 +4638,10 @@
         "fr:lex:papier",
         "fr:lex:paques",
         "fr:lex:paquet",
-        "fr:lex:parfait",
         "fr:lex:parfaitement",
         "fr:lex:parfum",
         "fr:lex:parking",
         "fr:lex:partager",
-        "fr:lex:participer",
         "fr:lex:passager",
         "fr:lex:passe",
         "fr:lex:passeport",
@@ -4754,14 +4652,12 @@
         "fr:lex:peau",
         "fr:lex:peche",
         "fr:lex:peindre",
-        "fr:lex:peinture",
         "fr:lex:permis",
         "fr:lex:piano",
         "fr:lex:pilote",
         "fr:lex:placard",
         "fr:lex:plaisanter",
         "fr:lex:plan",
-        "fr:lex:planete",
         "fr:lex:plein",
         "fr:lex:pleurer",
         "fr:lex:plusieurs",
@@ -4770,7 +4666,6 @@
         "fr:lex:police",
         "fr:lex:policier",
         "fr:lex:polonais",
-        "fr:lex:pont",
         "fr:lex:port",
         "fr:lex:portable",
         "fr:lex:portefeuille",
@@ -4780,7 +4675,6 @@
         "fr:lex:poupee",
         "fr:lex:pratique",
         "fr:lex:present",
-        "fr:lex:preuve",
         "fr:lex:prier",
         "fr:lex:produit",
         "fr:lex:professionnel",
@@ -4793,7 +4687,6 @@
         "fr:lex:propos",
         "fr:lex:proposer",
         "fr:lex:propre",
-        "fr:lex:proteger",
         "fr:lex:quai",
         "fr:lex:qualite",
         "fr:lex:quelquefois",
@@ -4806,23 +4699,17 @@
         "fr:lex:ranger",
         "fr:lex:rappeler",
         "fr:lex:rater",
-        "fr:lex:realite",
         "fr:lex:recevoir",
         "fr:lex:recommander",
         "fr:lex:recommencer",
-        "fr:lex:reconnaitre",
         "fr:lex:refaire",
         "fr:lex:reflechir",
         "fr:lex:refrigerateur",
-        "fr:lex:region",
         "fr:lex:regle",
         "fr:lex:reine",
         "fr:lex:rejoindre",
-        "fr:lex:relation",
         "fr:lex:remplacer",
         "fr:lex:remplir",
-        "fr:lex:rencontre",
-        "fr:lex:renoncer",
         "fr:lex:renseignement",
         "fr:lex:renseigner",
         "fr:lex:repartir",
@@ -4842,18 +4729,14 @@
         "fr:lex:riviere",
         "fr:lex:rock",
         "fr:lex:roi",
-        "fr:lex:role",
         "fr:lex:roman",
         "fr:lex:rond",
         "fr:lex:rouler",
         "fr:lex:roux",
         "fr:lex:sable",
-        "fr:lex:saint",
         "fr:lex:salaire",
         "fr:lex:sale",
         "fr:lex:sante",
-        "fr:lex:scene",
-        "fr:lex:science",
         "fr:lex:sec",
         "fr:lex:seconde",
         "fr:lex:secours",
@@ -4867,28 +4750,21 @@
         "fr:lex:serpent",
         "fr:lex:serviette",
         "fr:lex:servir",
-        "fr:lex:siecle",
         "fr:lex:signer",
         "fr:lex:signifier",
         "fr:lex:silence",
-        "fr:lex:simplement",
         "fr:lex:situation",
         "fr:lex:ski",
         "fr:lex:sofa",
         "fr:lex:sonner",
-        "fr:lex:sortie",
         "fr:lex:souris",
-        "fr:lex:soutenir",
         "fr:lex:special",
         "fr:lex:spectacle",
         "fr:lex:stade",
         "fr:lex:studio",
         "fr:lex:stupide",
-        "fr:lex:suite",
         "fr:lex:superbe",
-        "fr:lex:surprendre",
         "fr:lex:surtout",
-        "fr:lex:systeme",
         "fr:lex:taille",
         "fr:lex:taper",
         "fr:lex:tapis",
@@ -4906,7 +4782,6 @@
         "fr:lex:toit",
         "fr:lex:tort",
         "fr:lex:toucher",
-        "fr:lex:tradition",
         "fr:lex:traduire",
         "fr:lex:tranche",
         "fr:lex:tranquille",
@@ -4916,11 +4791,9 @@
         "fr:lex:usine",
         "fr:lex:utile",
         "fr:lex:vache",
-        "fr:lex:valeur",
         "fr:lex:vendre",
         "fr:lex:verifier",
         "fr:lex:verite",
-        "fr:lex:vers",
         "fr:lex:vide",
         "fr:lex:video",
         "fr:lex:vider",
@@ -4931,24 +4804,24 @@
       ]
     },
     "B1": {
-      "availableWords": 67,
-      "cognateWords": 38,
+      "availableWords": 77,
+      "cognateWords": 8,
       "coreConstructions": 17,
       "coreWords": 841,
       "cumulative": {
-        "availableWords": 699,
-        "cognateWords": 152,
+        "availableWords": 779,
+        "cognateWords": 58,
         "coreConstructions": 80,
         "coreWords": 2255,
         "reachedAt": null,
-        "referenceWords": 70,
-        "taughtConstructions": 65,
-        "taughtWords": 477
+        "referenceWords": 51,
+        "taughtConstructions": 68,
+        "taughtWords": 670
       },
       "reachedAt": null,
       "referenceWords": 7,
       "taughtConstructions": 13,
-      "taughtWords": 22,
+      "taughtWords": 62,
       "untaughtConstructions": [
         "fr:cx:passive",
         "fr:cx:plus-que-parfait.etre",
@@ -4975,7 +4848,6 @@
         "fr:lex:accuser",
         "fr:lex:achever",
         "fr:lex:acte",
-        "fr:lex:activement",
         "fr:lex:actuellement",
         "fr:lex:adieu",
         "fr:lex:admettre",
@@ -5089,7 +4961,6 @@
         "fr:lex:circonstance",
         "fr:lex:circuler",
         "fr:lex:citer",
-        "fr:lex:citoyen",
         "fr:lex:code",
         "fr:lex:colere",
         "fr:lex:collection",
@@ -5097,19 +4968,16 @@
         "fr:lex:colline",
         "fr:lex:commerce",
         "fr:lex:commun",
-        "fr:lex:communiquer",
         "fr:lex:compagnie",
         "fr:lex:compagnon",
         "fr:lex:comptoir",
         "fr:lex:concentrer",
         "fr:lex:conclure",
-        "fr:lex:conclusion",
         "fr:lex:concours",
         "fr:lex:condition",
         "fr:lex:conference",
         "fr:lex:confier",
         "fr:lex:confondre",
-        "fr:lex:connecter",
         "fr:lex:conscience",
         "fr:lex:consequence",
         "fr:lex:conserver",
@@ -5144,13 +5012,11 @@
         "fr:lex:cruel",
         "fr:lex:cueillir",
         "fr:lex:cuisse",
-        "fr:lex:culturel",
         "fr:lex:curiosite",
         "fr:lex:davantage",
         "fr:lex:debarrasser",
         "fr:lex:debrouiller",
         "fr:lex:decevoir",
-        "fr:lex:dechet",
         "fr:lex:dechirer",
         "fr:lex:decision",
         "fr:lex:declarer",
@@ -5199,9 +5065,6 @@
         "fr:lex:echouer",
         "fr:lex:eclairer",
         "fr:lex:eclater",
-        "fr:lex:economie",
-        "fr:lex:economique",
-        "fr:lex:economiser",
         "fr:lex:ecraser",
         "fr:lex:editeur",
         "fr:lex:education",
@@ -5221,7 +5084,6 @@
         "fr:lex:emporter",
         "fr:lex:emprunter",
         "fr:lex:enceinte",
-        "fr:lex:encourager",
         "fr:lex:enerver",
         "fr:lex:enfermer",
         "fr:lex:enfuir",
@@ -5235,7 +5097,6 @@
         "fr:lex:entretien",
         "fr:lex:envers",
         "fr:lex:environ",
-        "fr:lex:environnement",
         "fr:lex:envisager",
         "fr:lex:epais",
         "fr:lex:epouser",
@@ -5260,7 +5121,6 @@
         "fr:lex:evidence",
         "fr:lex:evident",
         "fr:lex:eviter",
-        "fr:lex:evoluer",
         "fr:lex:evoquer",
         "fr:lex:exagerer",
         "fr:lex:exception",
@@ -5312,14 +5172,12 @@
         "fr:lex:geler",
         "fr:lex:gendarme",
         "fr:lex:gener",
-        "fr:lex:generation",
         "fr:lex:genereux",
         "fr:lex:genie",
         "fr:lex:genre",
         "fr:lex:geste",
         "fr:lex:glisser",
         "fr:lex:goutte",
-        "fr:lex:gouvernement",
         "fr:lex:gras",
         "fr:lex:greve",
         "fr:lex:guerir",
@@ -5331,7 +5189,6 @@
         "fr:lex:hauteur",
         "fr:lex:heros",
         "fr:lex:hesiter",
-        "fr:lex:historique",
         "fr:lex:honnete",
         "fr:lex:honte",
         "fr:lex:horizon",
@@ -5358,13 +5215,11 @@
         "fr:lex:incident",
         "fr:lex:inconnu",
         "fr:lex:individu",
-        "fr:lex:influence",
         "fr:lex:informer",
         "fr:lex:innocent",
         "fr:lex:inoubliable",
         "fr:lex:inquietude",
         "fr:lex:insister",
-        "fr:lex:inspirer",
         "fr:lex:instinct",
         "fr:lex:instruction",
         "fr:lex:intelligence",
@@ -5398,7 +5253,6 @@
         "fr:lex:lien",
         "fr:lex:limite",
         "fr:lex:linge",
-        "fr:lex:litterature",
         "fr:lex:local",
         "fr:lex:loger",
         "fr:lex:logique",
@@ -5437,7 +5291,6 @@
         "fr:lex:mesure",
         "fr:lex:mesurer",
         "fr:lex:metal",
-        "fr:lex:methode",
         "fr:lex:meurtre",
         "fr:lex:militaire",
         "fr:lex:millier",
@@ -5448,7 +5301,6 @@
         "fr:lex:mission",
         "fr:lex:modele",
         "fr:lex:modeste",
-        "fr:lex:mondial",
         "fr:lex:monstre",
         "fr:lex:mont",
         "fr:lex:moquer",
@@ -5464,7 +5316,6 @@
         "fr:lex:muscle",
         "fr:lex:mystere",
         "fr:lex:mysterieux",
-        "fr:lex:nation",
         "fr:lex:national",
         "fr:lex:naturel",
         "fr:lex:naturellement",
@@ -5489,7 +5340,6 @@
         "fr:lex:operation",
         "fr:lex:ordinaire",
         "fr:lex:ordre",
-        "fr:lex:organisation",
         "fr:lex:origine",
         "fr:lex:oser",
         "fr:lex:outil",
@@ -5510,7 +5360,6 @@
         "fr:lex:passion",
         "fr:lex:patience",
         "fr:lex:patient",
-        "fr:lex:patrimoine",
         "fr:lex:patte",
         "fr:lex:paysan",
         "fr:lex:peine",
@@ -5538,8 +5387,6 @@
         "fr:lex:poignet",
         "fr:lex:point",
         "fr:lex:poitrine",
-        "fr:lex:politique",
-        "fr:lex:populaire",
         "fr:lex:portrait",
         "fr:lex:posseder",
         "fr:lex:pot",
@@ -5562,13 +5409,11 @@
         "fr:lex:pretre",
         "fr:lex:prevenir",
         "fr:lex:prevoir",
-        "fr:lex:primaire",
         "fr:lex:principal",
         "fr:lex:principe",
         "fr:lex:prison",
         "fr:lex:prisonnier",
         "fr:lex:prive",
-        "fr:lex:produire",
         "fr:lex:progres",
         "fr:lex:prolonger",
         "fr:lex:promesse",
@@ -5578,13 +5423,11 @@
         "fr:lex:prouver",
         "fr:lex:provoquer",
         "fr:lex:prudent",
-        "fr:lex:public",
         "fr:lex:publier",
         "fr:lex:puissance",
         "fr:lex:puissant",
         "fr:lex:punir",
         "fr:lex:pur",
-        "fr:lex:quotidien",
         "fr:lex:raisonnable",
         "fr:lex:ralentir",
         "fr:lex:ramener",
@@ -5604,10 +5447,8 @@
         "fr:lex:rechercher",
         "fr:lex:recit",
         "fr:lex:reclamer",
-        "fr:lex:reconnaissant",
         "fr:lex:reculer",
         "fr:lex:recuperer",
-        "fr:lex:recycler",
         "fr:lex:reduire",
         "fr:lex:reel",
         "fr:lex:reellement",
@@ -5617,7 +5458,6 @@
         "fr:lex:reglement",
         "fr:lex:regler",
         "fr:lex:regulier",
-        "fr:lex:regulierement",
         "fr:lex:rejeter",
         "fr:lex:religieux",
         "fr:lex:religion",
@@ -5639,7 +5479,6 @@
         "fr:lex:retraite",
         "fr:lex:reunir",
         "fr:lex:reveler",
-        "fr:lex:revision",
         "fr:lex:revolution",
         "fr:lex:revue",
         "fr:lex:ridicule",
@@ -5660,7 +5499,6 @@
         "fr:lex:scientifique",
         "fr:lex:seance",
         "fr:lex:secouer",
-        "fr:lex:secteur",
         "fr:lex:securite",
         "fr:lex:selon",
         "fr:lex:sentiment",
@@ -5676,7 +5514,6 @@
         "fr:lex:sinon",
         "fr:lex:situer",
         "fr:lex:societe",
-        "fr:lex:soi",
         "fr:lex:soigner",
         "fr:lex:soin",
         "fr:lex:sol",
@@ -5710,13 +5547,11 @@
         "fr:lex:surveiller",
         "fr:lex:survivre",
         "fr:lex:tabac",
-        "fr:lex:taire",
         "fr:lex:talent",
         "fr:lex:talon",
         "fr:lex:tandis-que",
         "fr:lex:tant",
         "fr:lex:technique",
-        "fr:lex:technologie",
         "fr:lex:tel",
         "fr:lex:temoin",
         "fr:lex:tendresse",
@@ -5749,7 +5584,6 @@
         "fr:lex:trou",
         "fr:lex:tuer",
         "fr:lex:type",
-        "fr:lex:typique",
         "fr:lex:uniforme",
         "fr:lex:uniquement",
         "fr:lex:univers",
@@ -5770,7 +5604,6 @@
         "fr:lex:vif",
         "fr:lex:violence",
         "fr:lex:violent",
-        "fr:lex:visiteur",
         "fr:lex:vitre",
         "fr:lex:vitrine",
         "fr:lex:vivant",
@@ -5779,8 +5612,7 @@
         "fr:lex:voleur",
         "fr:lex:volonte",
         "fr:lex:voyageur",
-        "fr:lex:zone",
-        "fr:lex:œuvre"
+        "fr:lex:zone"
       ]
     }
   },
@@ -5830,7 +5662,7 @@
       "label": null,
       "moduleKey": "2024-10-21-cognates-help",
       "position": 6,
-      "title": "Cognates - French and English Share Many Words",
+      "title": "Cognates",
       "unitId": 1
     },
     {
@@ -5854,7 +5686,7 @@
       "label": null,
       "moduleKey": "2024-10-20-liaison-help",
       "position": 9,
-      "title": "French Flow - Liaison Help",
+      "title": "French Flow · Liaison",
       "unitId": 1
     },
     {
@@ -5878,7 +5710,7 @@
       "label": null,
       "moduleKey": "2024-01-10-unit1-practice",
       "position": 12,
-      "title": "Unit 1 Practice - Fill in the Blanks",
+      "title": "Essential Grammar Practice - Fill in the Blanks",
       "unitId": 1
     },
     {
@@ -5886,14 +5718,30 @@
       "label": null,
       "moduleKey": "2024-01-11-unit1-exam",
       "position": 13,
-      "title": "Unit 1 Final Exam - Foundation",
+      "title": "Unit exam · Essential Grammar",
       "unitId": 1
+    },
+    {
+      "computed": "A1",
+      "label": null,
+      "moduleKey": "2026-11-24-numbers",
+      "position": 14,
+      "title": "Numbers - 0 to 100",
+      "unitId": 2
+    },
+    {
+      "computed": "A2",
+      "label": null,
+      "moduleKey": "2026-11-24-negation-guide",
+      "position": 15,
+      "title": "Saying No - Negation Guide",
+      "unitId": 2
     },
     {
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-01-12-demonstratives",
-      "position": 14,
+      "position": 16,
       "title": "Demonstratives - It, That, This",
       "unitId": 2
     },
@@ -5901,7 +5749,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-13-ca-survival",
-      "position": 15,
+      "position": 17,
       "title": "ça - Survival Phrases",
       "unitId": 2
     },
@@ -5909,7 +5757,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-14-determiners-nouns",
-      "position": 16,
+      "position": 18,
       "title": "Determiners + Nouns - Building Phrases",
       "unitId": 2
     },
@@ -5917,7 +5765,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-15-vouloir",
-      "position": 17,
+      "position": 19,
       "title": "Essential Verb - vouloir (to want)",
       "unitId": 2
     },
@@ -5925,7 +5773,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-16-pouvoir",
-      "position": 18,
+      "position": 20,
       "title": "Essential Verb - pouvoir (can)",
       "unitId": 2
     },
@@ -5933,7 +5781,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-17-voir",
-      "position": 19,
+      "position": 21,
       "title": "Essential Verb - voir (to see)",
       "unitId": 2
     },
@@ -5941,7 +5789,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-18-questions",
-      "position": 20,
+      "position": 22,
       "title": "Question Words - Ask Anything!",
       "unitId": 2
     },
@@ -5949,7 +5797,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-19-questions-help",
-      "position": 21,
+      "position": 23,
       "title": "The Power to Ask Anything",
       "unitId": 2
     },
@@ -5957,7 +5805,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-01-19-stressed-pronouns",
-      "position": 22,
+      "position": 24,
       "title": "Stressed Pronouns - moi, toi, lui...",
       "unitId": 2
     },
@@ -5965,7 +5813,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-20-prepositions",
-      "position": 23,
+      "position": 25,
       "title": "Prepositions - Spatial & Relational Words",
       "unitId": 2
     },
@@ -5973,7 +5821,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-21-adjectives",
-      "position": 24,
+      "position": 26,
       "title": "Common Adjectives - Describing Things",
       "unitId": 2
     },
@@ -5981,31 +5829,31 @@
       "computed": null,
       "label": null,
       "moduleKey": "2024-01-22-reading2",
-      "position": 25,
-      "title": "Reading Comprehension 2 - Rendez-vous en Normandie",
+      "position": 27,
+      "title": "Reading Comprehension - Rendez-vous en Normandie",
       "unitId": 2
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-01-23-unit2-practice",
-      "position": 26,
-      "title": "Unit 2 Practice - Fill in the Blanks",
+      "position": 28,
+      "title": "Asking & Describing Practice - Fill in the Blanks",
       "unitId": 2
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-01-24-unit2-exam",
-      "position": 27,
-      "title": "Unit 2 Final Exam - Composition",
+      "position": 29,
+      "title": "Unit exam · Asking & Describing",
       "unitId": 2
     },
     {
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-25-contractions",
-      "position": 28,
+      "position": 30,
       "title": "Contractions - du, au, de la, à la",
       "unitId": 3
     },
@@ -6013,7 +5861,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-26-venir",
-      "position": 29,
+      "position": 31,
       "title": "Essential Verb - venir (to come)",
       "unitId": 3
     },
@@ -6021,7 +5869,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-27-aller",
-      "position": 30,
+      "position": 32,
       "title": "Essential Verb - aller (to go)",
       "unitId": 3
     },
@@ -6029,7 +5877,7 @@
       "computed": null,
       "label": null,
       "moduleKey": "2024-01-28-verb-pattern-help",
-      "position": 31,
+      "position": 33,
       "title": "Understanding Verb Patterns",
       "unitId": 3
     },
@@ -6037,7 +5885,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-01-29-partir",
-      "position": 32,
+      "position": 34,
       "title": "Essential Verb - partir (to leave)",
       "unitId": 3
     },
@@ -6045,7 +5893,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-01-30-object-pronouns",
-      "position": 33,
+      "position": 35,
       "title": "Object Pronouns - Him, Her, It, Them",
       "unitId": 3
     },
@@ -6053,7 +5901,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-01-31-possessive-adjectives",
-      "position": 34,
+      "position": 36,
       "title": "Possessive Adjectives - My, Your, His, Her",
       "unitId": 3
     },
@@ -6061,7 +5909,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-02-01-possessive-pronouns",
-      "position": 35,
+      "position": 37,
       "title": "Possessive Pronouns - Mine, Yours, Theirs",
       "unitId": 3
     },
@@ -6069,7 +5917,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-02-02-combining",
-      "position": 36,
+      "position": 38,
       "title": "Putting It Together - Who Has What?",
       "unitId": 3
     },
@@ -6077,31 +5925,31 @@
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-03-reading3",
-      "position": 37,
-      "title": "Reading Comprehension 3 - La Première Page",
+      "position": 39,
+      "title": "Reading Comprehension - La Première Page",
       "unitId": 3
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-04-unit3-practice",
-      "position": 38,
-      "title": "Unit 3 Practice - Fill in the Blanks",
+      "position": 40,
+      "title": "Movement & Possession Practice - Fill in the Blanks",
       "unitId": 3
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-05-unit3-exam",
-      "position": 39,
-      "title": "Unit 3 Final Exam - Movement & Possession",
+      "position": 41,
+      "title": "Unit exam · Movement & Possession",
       "unitId": 3
     },
     {
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-03-31-survival-phrases",
-      "position": 40,
+      "position": 42,
       "title": "Survival Phrases - Real-World Essentials",
       "unitId": 4
     },
@@ -6109,7 +5957,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-03-25-faire",
-      "position": 41,
+      "position": 43,
       "title": "Essential Verb - faire (to do/make)",
       "unitId": 4
     },
@@ -6117,7 +5965,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-23-devoir",
-      "position": 42,
+      "position": 44,
       "title": "Essential Verb - devoir (must)",
       "unitId": 4
     },
@@ -6125,7 +5973,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-03-29-parler",
-      "position": 43,
+      "position": 45,
       "title": "Essential Verb - parler (to speak)",
       "unitId": 4
     },
@@ -6133,7 +5981,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-10-22-search-find",
-      "position": 44,
+      "position": 46,
       "title": "Essential Verbs - chercher & trouver",
       "unitId": 4
     },
@@ -6141,7 +5989,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-28-negation",
-      "position": 45,
+      "position": 47,
       "title": "Negation - ne...pas (not)",
       "unitId": 4
     },
@@ -6149,7 +5997,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-01-time-adverbs",
-      "position": 46,
+      "position": 48,
       "title": "Time & Frequency - now, always, never, today",
       "unitId": 4
     },
@@ -6157,7 +6005,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-27-negation-2",
-      "position": 47,
+      "position": 49,
       "title": "Negation Part 2 - I can't, I won't, I never",
       "unitId": 4
     },
@@ -6165,7 +6013,7 @@
       "computed": "B2",
       "label": null,
       "moduleKey": "2024-03-26-location-adverbs",
-      "position": 48,
+      "position": 50,
       "title": "Location Adverbs - here, there, everywhere",
       "unitId": 4
     },
@@ -6173,39 +6021,39 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-24-everyday-nouns",
-      "position": 49,
+      "position": 51,
       "title": "Everyday Nouns - Life & World",
       "unitId": 4
     },
     {
-      "computed": null,
+      "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-30-reading-4",
-      "position": 50,
-      "title": "Reading Comprehension 4 - La nouvelle époque de Marie",
+      "position": 52,
+      "title": "Reading Comprehension - La nouvelle époque de Marie",
       "unitId": 4
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-04-03-unit-4-practice",
-      "position": 51,
-      "title": "Unit 4 Practice - Fill in the Blanks",
+      "position": 53,
+      "title": "Everyday Words Practice - Fill in the Blanks",
       "unitId": 4
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-04-02-unit-4-exam",
-      "position": 52,
-      "title": "Unit 4 Final Exam - Expression",
+      "position": 54,
+      "title": "Unit exam · Everyday Words",
       "unitId": 4
     },
     {
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-08-comparisons",
-      "position": 53,
+      "position": 55,
       "title": "Comparisons & Intensity",
       "unitId": 5
     },
@@ -6213,7 +6061,7 @@
       "computed": "C1",
       "label": null,
       "moduleKey": "2024-04-07-comparisons-slang",
-      "position": 54,
+      "position": 56,
       "title": "Slang - Comparisons & Intensity",
       "unitId": 5
     },
@@ -6221,7 +6069,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-09-conditionals",
-      "position": 55,
+      "position": 57,
       "title": "Should & Could - Advice and Possibility",
       "unitId": 5
     },
@@ -6229,7 +6077,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-16-would-conditionals",
-      "position": 56,
+      "position": 58,
       "title": "Would Forms - Hypotheticals and Desires",
       "unitId": 5
     },
@@ -6237,7 +6085,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-04-04-aimer",
-      "position": 57,
+      "position": 59,
       "title": "aimer - To Like / To Love",
       "unitId": 5
     },
@@ -6245,7 +6093,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-10-etre-past",
-      "position": 58,
+      "position": 60,
       "title": "être - Past Tense (was / were)",
       "unitId": 5
     },
@@ -6253,7 +6101,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-05-avoir-past",
-      "position": 59,
+      "position": 61,
       "title": "avoir - Past Tense (had)",
       "unitId": 5
     },
@@ -6261,7 +6109,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-11-food-nouns",
-      "position": 60,
+      "position": 62,
       "title": "Everyday Food Nouns",
       "unitId": 5
     },
@@ -6269,7 +6117,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-04-12-manger",
-      "position": 61,
+      "position": 63,
       "title": "manger - To Eat (Present & Past)",
       "unitId": 5
     },
@@ -6277,39 +6125,39 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-04-06-boire",
-      "position": 62,
+      "position": 64,
       "title": "boire - To Drink (Present & Past)",
       "unitId": 5
     },
     {
-      "computed": null,
+      "computed": "C1",
       "label": null,
       "moduleKey": "2024-04-13-reading-5",
-      "position": 63,
-      "title": "Reading Comprehension 5 - La fée verte (The Green Fairy)",
+      "position": 65,
+      "title": "Reading Comprehension - La fée verte (The Green Fairy)",
       "unitId": 5
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-04-15-unit-5-practice",
-      "position": 64,
-      "title": "Unit 5 Practice - Fill in the Blanks",
+      "position": 66,
+      "title": "Time & Taste Practice - Fill in the Blanks",
       "unitId": 5
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-04-14-unit-5-exam",
-      "position": 65,
-      "title": "Unit 5 Final Exam - Sophistication",
+      "position": 67,
+      "title": "Unit exam · Time & Taste",
       "unitId": 5
     },
     {
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-23-progressive-tenses",
-      "position": 66,
+      "position": 68,
       "title": "Progressive & Future - Expressing Time",
       "unitId": 6
     },
@@ -6317,7 +6165,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-04-20-dire",
-      "position": 67,
+      "position": 69,
       "title": "dire - To Say / To Tell",
       "unitId": 6
     },
@@ -6325,7 +6173,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-22-prendre",
-      "position": 68,
+      "position": 70,
       "title": "prendre - To Take",
       "unitId": 6
     },
@@ -6333,7 +6181,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-10-22-donner",
-      "position": 69,
+      "position": 71,
       "title": "donner - To Give",
       "unitId": 6
     },
@@ -6341,7 +6189,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-04-21-mettre",
-      "position": 70,
+      "position": 72,
       "title": "mettre - To Put / To Set",
       "unitId": 6
     },
@@ -6349,7 +6197,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-04-19-demander",
-      "position": 71,
+      "position": 73,
       "title": "demander - To Ask",
       "unitId": 6
     },
@@ -6357,7 +6205,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-18-commander",
-      "position": 72,
+      "position": 74,
       "title": "commander - To Order",
       "unitId": 6
     },
@@ -6365,7 +6213,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-17-besoin",
-      "position": 73,
+      "position": 75,
       "title": "avoir besoin de - To Need",
       "unitId": 6
     },
@@ -6373,39 +6221,39 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-25-top-200-nouns",
-      "position": 74,
+      "position": 76,
       "title": "Essential Vocabulary - Time, People & Ideas",
       "unitId": 6
     },
     {
-      "computed": null,
+      "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-24-reading-6",
-      "position": 75,
-      "title": "Reading Comprehension 6 - Un Voyage en Famille",
+      "position": 77,
+      "title": "Reading Comprehension - Un Voyage en Famille",
       "unitId": 6
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-04-27-unit-6-practice",
-      "position": 76,
-      "title": "Unit 6 Practice - Fill in the Blanks",
+      "position": 78,
+      "title": "Basic Fluency Practice - Fill in the Blanks",
       "unitId": 6
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-04-26-unit-6-exam",
-      "position": 77,
-      "title": "Unit 6 Final Exam - Communication",
+      "position": 79,
+      "title": "Unit exam · Basic Fluency",
       "unitId": 6
     },
     {
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-05-05-on-and-people",
-      "position": 78,
+      "position": 80,
       "title": "Talking About People in General",
       "unitId": 7
     },
@@ -6413,7 +6261,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-05-09-studying-verbs",
-      "position": 79,
+      "position": 81,
       "title": "Studying & Reviewing - étudier & réviser",
       "unitId": 7
     },
@@ -6421,7 +6269,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-04-learning-verbs",
-      "position": 80,
+      "position": 82,
       "title": "Learning & Teaching - apprendre & enseigner",
       "unitId": 7
     },
@@ -6429,7 +6277,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-04-29-comprendre",
-      "position": 81,
+      "position": 83,
       "title": "comprendre - To Understand",
       "unitId": 7
     },
@@ -6437,7 +6285,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-08-savoir",
-      "position": 82,
+      "position": 84,
       "title": "savoir - To Know (Facts/Skills)",
       "unitId": 7
     },
@@ -6445,7 +6293,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-04-30-connaitre",
-      "position": 83,
+      "position": 85,
       "title": "connaître - To Know (People/Places)",
       "unitId": 7
     },
@@ -6453,7 +6301,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-06-penser",
-      "position": 84,
+      "position": 86,
       "title": "penser - To Think",
       "unitId": 7
     },
@@ -6461,7 +6309,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-01-croire",
-      "position": 85,
+      "position": 87,
       "title": "croire - To Believe",
       "unitId": 7
     },
@@ -6469,7 +6317,7 @@
       "computed": "B2",
       "label": null,
       "moduleKey": "2024-05-03-knowledge-nouns",
-      "position": 86,
+      "position": 88,
       "title": "Knowledge & Learning - Essential Nouns",
       "unitId": 7
     },
@@ -6477,7 +6325,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-05-02-discourse-markers",
-      "position": 87,
+      "position": 89,
       "title": "Discourse Markers - Sound Like a Native",
       "unitId": 7
     },
@@ -6485,39 +6333,39 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-04-28-comparison-modifiers",
-      "position": 88,
+      "position": 90,
       "title": "Modifiers - tout, même, mal",
       "unitId": 7
     },
     {
-      "computed": null,
+      "computed": "B2",
       "label": null,
       "moduleKey": "2024-05-07-reading-7",
-      "position": 89,
-      "title": "Reading 7 - L'Art d'Apprendre",
+      "position": 91,
+      "title": "Reading - L'Art d'Apprendre",
       "unitId": 7
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-05-11-unit-7-practice",
-      "position": 90,
-      "title": "Unit 7 Practice - Fill in the Blanks",
+      "position": 92,
+      "title": "Knowledge & Learning Practice - Fill in the Blanks",
       "unitId": 7
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-05-10-unit-7-exam",
-      "position": 91,
-      "title": "Unit 7 Final Exam - Knowledge & Learning",
+      "position": 93,
+      "title": "Unit exam · Knowledge & Learning",
       "unitId": 7
     },
     {
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-23-temporal-words",
-      "position": 92,
+      "position": 94,
       "title": "Temporal & Sequential Words - Time & Order",
       "unitId": 8
     },
@@ -6525,7 +6373,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-21-reflexive-pronouns",
-      "position": 93,
+      "position": 95,
       "title": "Reflexive Pronouns - me, te, se, nous, vous",
       "unitId": 8
     },
@@ -6533,7 +6381,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-22-s-appeler",
-      "position": 94,
+      "position": 96,
       "title": "s'appeler - To Be Called (Your Name!)",
       "unitId": 8
     },
@@ -6541,7 +6389,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-19-morning-routine",
-      "position": 95,
+      "position": 97,
       "title": "Morning Routine - se réveiller, se lever",
       "unitId": 8
     },
@@ -6549,7 +6397,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-17-getting-ready",
-      "position": 96,
+      "position": 98,
       "title": "Getting Ready - se laver, s'habiller, se préparer",
       "unitId": 8
     },
@@ -6557,7 +6405,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-16-daily-reflexives",
-      "position": 97,
+      "position": 99,
       "title": "Daily Actions - se souvenir, s'amuser, se dépêcher",
       "unitId": 8
     },
@@ -6565,7 +6413,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-06-07-reflexive-past",
-      "position": 98,
+      "position": 100,
       "title": "Reflexive Verbs in Past Tense",
       "unitId": 8
     },
@@ -6573,7 +6421,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-06-06-reciprocal-reflexives",
-      "position": 99,
+      "position": 101,
       "title": "Reciprocal Reflexives - Each Other",
       "unitId": 8
     },
@@ -6581,7 +6429,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-13-commands-tu",
-      "position": 100,
+      "position": 102,
       "title": "Commands - tu form (Informal)",
       "unitId": 8
     },
@@ -6589,7 +6437,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-14-commands-vous",
-      "position": 101,
+      "position": 103,
       "title": "Commands - vous form (Formal/Plural)",
       "unitId": 8
     },
@@ -6597,7 +6445,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-18-irregular-commands",
-      "position": 102,
+      "position": 104,
       "title": "Irregular Commands - être, avoir, aller, faire",
       "unitId": 8
     },
@@ -6605,39 +6453,39 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-12-commands-pronouns",
-      "position": 103,
+      "position": 105,
       "title": "Commands with Pronouns",
       "unitId": 8
     },
     {
-      "computed": null,
+      "computed": "B1",
       "label": null,
       "moduleKey": "2024-05-20-reading-8",
-      "position": 104,
-      "title": "Reading 8 - Ma Journée",
+      "position": 106,
+      "title": "Reading - Ma Journée",
       "unitId": 8
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-05-25-unit-8-practice",
-      "position": 105,
-      "title": "Unit 8 Practice - Fill in the Blanks",
+      "position": 107,
+      "title": "Daily Life & Actions Practice - Fill in the Blanks",
       "unitId": 8
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-05-24-unit-8-exam",
-      "position": 106,
-      "title": "Unit 8 Final Exam - Daily Life & Actions",
+      "position": 108,
+      "title": "Unit exam · Daily Life & Actions",
       "unitId": 8
     },
     {
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-05-26-causal-words",
-      "position": 107,
+      "position": 109,
       "title": "Causal & Reason Words - Explaining Why",
       "unitId": 9
     },
@@ -6645,7 +6493,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-06-08-spatial-prepositions",
-      "position": 108,
+      "position": 110,
       "title": "Spatial Prepositions - Position & Location",
       "unitId": 9
     },
@@ -6653,7 +6501,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-28-more-spatial-relations",
-      "position": 109,
+      "position": 111,
       "title": "More Spatial Relations - Distance & Proximity",
       "unitId": 9
     },
@@ -6661,7 +6509,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-30-passe-compose-er",
-      "position": 110,
+      "position": 112,
       "title": "Passé Composé - Regular -ER Verbs (I spoke, I ate)",
       "unitId": 9
     },
@@ -6669,7 +6517,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-06-01-passe-compose-irregular-1",
-      "position": 111,
+      "position": 113,
       "title": "Irregular Past Participles - Set 1 (had, was, did, saw)",
       "unitId": 9
     },
@@ -6677,7 +6525,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-06-02-passe-compose-irregular-2",
-      "position": 112,
+      "position": 114,
       "title": "Irregular Past Participles - Set 2 (wanted, could, had to, said)",
       "unitId": 9
     },
@@ -6685,7 +6533,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-31-passe-compose-etre",
-      "position": 113,
+      "position": 115,
       "title": "être Verbs - DR & MRS VANDERTRAMP (went, came, left)",
       "unitId": 9
     },
@@ -6693,7 +6541,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-29-passe-compose-agreement",
-      "position": 114,
+      "position": 116,
       "title": "Past Participle Agreement with être",
       "unitId": 9
     },
@@ -6701,7 +6549,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-05-27-imparfait-all-verbs",
-      "position": 115,
+      "position": 117,
       "title": "Imparfait Formation - All Verbs (was doing, used to do)",
       "unitId": 9
     },
@@ -6709,7 +6557,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-06-04-pc-vs-imparfait",
-      "position": 116,
+      "position": 118,
       "title": "Passé Composé vs Imparfait - The Golden Rule",
       "unitId": 9
     },
@@ -6717,39 +6565,39 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-06-03-past-tense-composition",
-      "position": 117,
+      "position": 119,
       "title": "Past Tense Composition - Building Complete Stories",
       "unitId": 9
     },
     {
-      "computed": null,
+      "computed": "B1",
       "label": null,
       "moduleKey": "2024-06-05-reading-9",
-      "position": 118,
-      "title": "Reading 9 - Une Histoire du Passé",
+      "position": 120,
+      "title": "Reading - Une Histoire du Passé",
       "unitId": 9
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-06-10-unit-9-practice",
-      "position": 119,
-      "title": "Unit 9 Practice - Fill in the Blanks",
+      "position": 121,
+      "title": "Discourse & Past Tense Practice - Fill in the Blanks",
       "unitId": 9
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-06-09-unit-9-exam",
-      "position": 120,
-      "title": "Unit 9 Final Exam - Discourse & Past Tense",
+      "position": 122,
+      "title": "Unit exam · Discourse & Past Tense",
       "unitId": 9
     },
     {
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-23-common-special-forms-1",
-      "position": 121,
+      "position": 123,
       "title": "Forms Used After 'il faut que' and 'je veux que'",
       "unitId": 10
     },
@@ -6757,7 +6605,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-24-common-special-forms-2",
-      "position": 122,
+      "position": 124,
       "title": "More Forms for 'il faut que' and 'je veux que' Phrases",
       "unitId": 10
     },
@@ -6765,7 +6613,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-01-28-necessity-phrases",
-      "position": 123,
+      "position": 125,
       "title": "Il faut que... - Saying What's Necessary",
       "unitId": 10
     },
@@ -6773,7 +6621,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-02-07-wish-phrases",
-      "position": 124,
+      "position": 126,
       "title": "Je veux que... - Expressing Wishes",
       "unitId": 10
     },
@@ -6781,7 +6629,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-25-emotion-phrases",
-      "position": 125,
+      "position": 127,
       "title": "Je suis content que... - Emotion Phrases",
       "unitId": 10
     },
@@ -6789,7 +6637,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-29-opinion-phrases",
-      "position": 126,
+      "position": 128,
       "title": "Je pense que... - Opinion Phrases",
       "unitId": 10
     },
@@ -6797,7 +6645,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-27-hypothetical-phrases",
-      "position": 127,
+      "position": 129,
       "title": "Si j'étais... - Daydreaming & Hypotheticals",
       "unitId": 10
     },
@@ -6805,7 +6653,7 @@
       "computed": "B2",
       "label": null,
       "moduleKey": "2024-01-30-past-regret-phrases",
-      "position": 128,
+      "position": 130,
       "title": "Si j'avais su... - Past Regret Phrases",
       "unitId": 10
     },
@@ -6813,7 +6661,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-26-had-already-phrases",
-      "position": 129,
+      "position": 131,
       "title": "J'avais déjà... - Had Already Done Phrases",
       "unitId": 10
     },
@@ -6821,7 +6669,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-22-common-adverbs",
-      "position": 130,
+      "position": 132,
       "title": "vraiment, sérieusement... - Common Adverbs",
       "unitId": 10
     },
@@ -6829,7 +6677,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-02-06-while-doing-phrases",
-      "position": 131,
+      "position": 133,
       "title": "En mangeant... - While Doing Phrases",
       "unitId": 10
     },
@@ -6837,7 +6685,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-02-02-service-phrases",
-      "position": 132,
+      "position": 134,
       "title": "Je me fais couper... - Service Phrases",
       "unitId": 10
     },
@@ -6845,7 +6693,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-21-before-phrases",
-      "position": 133,
+      "position": 135,
       "title": "Avant que... - Before Phrases",
       "unitId": 10
     },
@@ -6853,7 +6701,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-02-03-so-that-phrases",
-      "position": 134,
+      "position": 136,
       "title": "Pour que... - So That Phrases",
       "unitId": 10
     },
@@ -6861,7 +6709,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-20-although-phrases",
-      "position": 135,
+      "position": 137,
       "title": "Bien que... - Although Phrases",
       "unitId": 10
     },
@@ -6869,39 +6717,39 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-01-31-possibility-phrases",
-      "position": 136,
+      "position": 138,
       "title": "Il est possible que... - Possibility Phrases",
       "unitId": 10
     },
     {
-      "computed": null,
+      "computed": "B1",
       "label": null,
       "moduleKey": "2024-02-01-reading-10",
-      "position": 137,
-      "title": "Reading 10 - Mes Rêves et Mes Espoirs",
+      "position": 139,
+      "title": "Reading - Mes Rêves et Mes Espoirs",
       "unitId": 10
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-05-unit-10-practice",
-      "position": 138,
-      "title": "Unit 10 Practice - Fill in the Blanks",
+      "position": 140,
+      "title": "Mastery & Nuance Practice - Fill in the Blanks",
       "unitId": 10
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-04-unit-10-exam",
-      "position": 139,
-      "title": "Unit 10 Final Exam - Mastery & Nuance",
+      "position": 141,
+      "title": "Unit exam · Mastery & Nuance",
       "unitId": 10
     },
     {
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-02-08-age-personal-info",
-      "position": 140,
+      "position": 142,
       "title": "Age & Personal Information",
       "unitId": 11
     },
@@ -6909,7 +6757,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-02-10-donner",
-      "position": 141,
+      "position": 143,
       "title": "donner - To Give",
       "unitId": 11
     },
@@ -6917,7 +6765,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-05-15-daily-actions-1",
-      "position": 142,
+      "position": 144,
       "title": "Daily Life Essentials - Sleep, Work, Live",
       "unitId": 11
     },
@@ -6925,7 +6773,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-02-13-search-and-find",
-      "position": 143,
+      "position": 145,
       "title": "Search & Find - chercher, trouver",
       "unitId": 11
     },
@@ -6933,7 +6781,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-02-11-perception-verbs",
-      "position": 144,
+      "position": 146,
       "title": "Perception Verbs - écouter, regarder",
       "unitId": 11
     },
@@ -6941,7 +6789,7 @@
       "computed": "A1",
       "label": null,
       "moduleKey": "2024-02-14-social-situations",
-      "position": 145,
+      "position": 147,
       "title": "Social Situations - Wait, Arrive, Stay",
       "unitId": 11
     },
@@ -6949,39 +6797,39 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-02-09-directions-navigation",
-      "position": 146,
+      "position": 148,
       "title": "Directions & Navigation",
       "unitId": 11
     },
     {
-      "computed": null,
-      "label": "B2",
+      "computed": "C1",
+      "label": null,
       "moduleKey": "2024-02-12-reading-11",
-      "position": 147,
-      "title": "Reading 11 - La France Moderne",
+      "position": 149,
+      "title": "Reading - La France Moderne",
       "unitId": 11
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-16-unit-11-practice",
-      "position": 148,
-      "title": "Unit 11 Practice - Fill in the Blanks",
+      "position": 150,
+      "title": "Daily Essentials Practice - Fill in the Blanks",
       "unitId": 11
     },
     {
       "computed": null,
       "label": null,
       "moduleKey": "2024-02-15-unit-11-exam",
-      "position": 149,
-      "title": "Unit 11 Final Exam - Daily Essentials & Practical Communication",
+      "position": 151,
+      "title": "Unit exam · Daily Essentials",
       "unitId": 11
     },
     {
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-03-15-nature-animals",
-      "position": 150,
+      "position": 152,
       "title": "Nature & Animals - Curiosity Vocabulary",
       "unitId": 12
     },
@@ -6989,7 +6837,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-16-movement-verbs",
-      "position": 151,
+      "position": 153,
       "title": "Movement Verbs - Actions in Nature",
       "unitId": 12
     },
@@ -6997,7 +6845,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-03-17-natural-phenomena",
-      "position": 152,
+      "position": 154,
       "title": "Natural Phenomena - How Nature Works",
       "unitId": 12
     },
@@ -7005,7 +6853,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-15-questce-qui-que",
-      "position": 153,
+      "position": 155,
       "title": "qu'est-ce qui vs qu'est-ce que - Master 'What' Questions",
       "unitId": 12
     },
@@ -7013,7 +6861,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-19-pourquoi-complex",
-      "position": 154,
+      "position": 156,
       "title": "Complex pourquoi Questions - Ask Why About Anything",
       "unitId": 12
     },
@@ -7021,7 +6869,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-03-20-comment-complex",
-      "position": 155,
+      "position": 157,
       "title": "Complex comment Questions - Ask How Things Work",
       "unitId": 12
     },
@@ -7029,7 +6877,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-16-quiest-qui-que",
-      "position": 156,
+      "position": 158,
       "title": "qui est-ce qui vs qui est-ce que - Master 'Who' Questions",
       "unitId": 12
     },
@@ -7037,7 +6885,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-03-22-inversion-questions",
-      "position": 157,
+      "position": 159,
       "title": "Inversion Questions - Formal Register",
       "unitId": 12
     },
@@ -7045,7 +6893,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-03-23-embedded-questions",
-      "position": 158,
+      "position": 160,
       "title": "Embedded Questions - Polite Indirect Questions",
       "unitId": 12
     },
@@ -7053,7 +6901,7 @@
       "computed": "B1",
       "label": null,
       "moduleKey": "2024-03-24-rhetorical-negative",
-      "position": 159,
+      "position": 161,
       "title": "Rhetorical & Negative Questions - Advanced Style",
       "unitId": 12
     },
@@ -7061,7 +6909,7 @@
       "computed": "A2",
       "label": null,
       "moduleKey": "2024-03-25-multi-clause-questions",
-      "position": 160,
+      "position": 162,
       "title": "Multi-Clause Questions - Full Complexity",
       "unitId": 12
     }
@@ -7216,6 +7064,14 @@
       "taughtAt": null
     },
     {
+      "cefr": "B1",
+      "cells": [
+        "ptcp"
+      ],
+      "id": "fr:lex:taire",
+      "taughtAt": null
+    },
+    {
       "cefr": "A1",
       "cells": [
         "prs",
@@ -7228,19 +7084,19 @@
   ],
   "taughtByLevel": {
     "constructions": {
-      "A1": 55,
-      "A2": 39,
+      "A1": 56,
+      "A2": 41,
       "B1": 19,
       "B2": 2,
       "C1": 0,
       "C2": 0
     },
     "headwords": {
-      "A1": 373,
-      "A2": 92,
-      "B1": 28,
-      "B2": 2,
-      "C1": 2,
+      "A1": 463,
+      "A2": 157,
+      "B1": 72,
+      "B2": 14,
+      "C1": 6,
       "C2": 0
     }
   },
@@ -7256,113 +7112,113 @@
       "unitId": 1
     },
     {
-      "A1": 92,
+      "A1": 120,
       "A2": 4,
       "B1": 0,
       "B2": 0,
       "C1": 0,
       "C2": 0,
-      "position": 27,
+      "position": 29,
       "unitId": 2
     },
     {
-      "A1": 105,
+      "A1": 133,
       "A2": 11,
       "B1": 0,
       "B2": 0,
       "C1": 0,
       "C2": 0,
-      "position": 39,
+      "position": 41,
       "unitId": 3
     },
     {
-      "A1": 155,
-      "A2": 20,
+      "A1": 187,
+      "A2": 22,
       "B1": 0,
       "B2": 0,
       "C1": 0,
       "C2": 0,
-      "position": 52,
+      "position": 54,
       "unitId": 4
     },
     {
-      "A1": 200,
-      "A2": 31,
+      "A1": 235,
+      "A2": 34,
       "B1": 8,
       "B2": 1,
-      "C1": 2,
+      "C1": 3,
       "C2": 0,
-      "position": 65,
+      "position": 67,
       "unitId": 5
     },
     {
-      "A1": 240,
-      "A2": 35,
+      "A1": 290,
+      "A2": 38,
       "B1": 9,
       "B2": 1,
-      "C1": 2,
+      "C1": 3,
       "C2": 0,
-      "position": 77,
+      "position": 79,
       "unitId": 6
     },
     {
-      "A1": 258,
-      "A2": 47,
-      "B1": 15,
+      "A1": 312,
+      "A2": 58,
+      "B1": 18,
       "B2": 2,
-      "C1": 2,
+      "C1": 3,
       "C2": 0,
-      "position": 91,
+      "position": 93,
       "unitId": 7
     },
     {
-      "A1": 273,
-      "A2": 54,
-      "B1": 15,
+      "A1": 331,
+      "A2": 62,
+      "B1": 19,
       "B2": 2,
-      "C1": 2,
+      "C1": 3,
       "C2": 0,
-      "position": 106,
+      "position": 108,
       "unitId": 8
     },
     {
-      "A1": 296,
-      "A2": 64,
-      "B1": 20,
+      "A1": 373,
+      "A2": 82,
+      "B1": 24,
       "B2": 2,
-      "C1": 2,
+      "C1": 3,
       "C2": 0,
-      "position": 120,
+      "position": 122,
       "unitId": 9
     },
     {
-      "A1": 317,
-      "A2": 79,
-      "B1": 22,
+      "A1": 402,
+      "A2": 107,
+      "B1": 27,
       "B2": 2,
-      "C1": 2,
+      "C1": 3,
       "C2": 0,
-      "position": 139,
+      "position": 141,
       "unitId": 10
     },
     {
-      "A1": 347,
-      "A2": 84,
-      "B1": 22,
-      "B2": 2,
-      "C1": 2,
+      "A1": 442,
+      "A2": 151,
+      "B1": 66,
+      "B2": 14,
+      "C1": 6,
       "C2": 0,
-      "position": 149,
+      "position": 151,
       "unitId": 11
     },
     {
-      "A1": 373,
-      "A2": 92,
-      "B1": 28,
-      "B2": 2,
-      "C1": 2,
+      "A1": 463,
+      "A2": 157,
+      "B1": 72,
+      "B2": 14,
+      "C1": 6,
       "C2": 0,
-      "position": 160,
+      "position": 162,
       "unitId": 12
     }
   ],
@@ -7373,106 +7229,106 @@
       "firstPosition": 1,
       "label": null,
       "lastPosition": 13,
-      "title": "Unit 1: Essential Grammar",
+      "title": "Essential Grammar",
       "unitId": 1
     },
     {
       "computed": "A2",
-      "computedCount": 2,
+      "computedCount": 4,
       "firstPosition": 14,
       "label": null,
-      "lastPosition": 27,
-      "title": "Unit 2: Asking & Describing",
+      "lastPosition": 29,
+      "title": "Asking & Describing",
       "unitId": 2
     },
     {
       "computed": "A2",
       "computedCount": 15,
-      "firstPosition": 28,
+      "firstPosition": 30,
       "label": null,
-      "lastPosition": 39,
-      "title": "Unit 3: Movement & Possession",
+      "lastPosition": 41,
+      "title": "Movement & Possession",
       "unitId": 3
     },
     {
       "computed": "B2",
       "computedCount": 1,
-      "firstPosition": 40,
+      "firstPosition": 42,
       "label": null,
-      "lastPosition": 52,
-      "title": "Unit 4: Everyday Words",
+      "lastPosition": 54,
+      "title": "Everyday Words",
       "unitId": 4
     },
     {
       "computed": "C1",
-      "computedCount": 2,
-      "firstPosition": 53,
+      "computedCount": 3,
+      "firstPosition": 55,
       "label": null,
-      "lastPosition": 65,
-      "title": "Unit 5: Time & Taste",
+      "lastPosition": 67,
+      "title": "Time & Taste",
       "unitId": 5
     },
     {
       "computed": "B1",
       "computedCount": 2,
-      "firstPosition": 66,
+      "firstPosition": 68,
       "label": null,
-      "lastPosition": 77,
-      "title": "Unit 6: Basic Fluency",
+      "lastPosition": 79,
+      "title": "Basic Fluency",
       "unitId": 6
     },
     {
       "computed": "B2",
       "computedCount": 1,
-      "firstPosition": 78,
+      "firstPosition": 80,
       "label": null,
-      "lastPosition": 91,
-      "title": "Unit 7: Knowledge & Learning",
+      "lastPosition": 93,
+      "title": "Knowledge & Learning",
       "unitId": 7
     },
     {
-      "computed": "A2",
-      "computedCount": 28,
-      "firstPosition": 92,
+      "computed": "B1",
+      "computedCount": 1,
+      "firstPosition": 94,
       "label": null,
-      "lastPosition": 106,
-      "title": "Unit 8: Daily Life & Actions",
+      "lastPosition": 108,
+      "title": "Daily Life & Actions",
       "unitId": 8
     },
     {
       "computed": "B1",
       "computedCount": 6,
-      "firstPosition": 107,
+      "firstPosition": 109,
       "label": null,
-      "lastPosition": 120,
-      "title": "Unit 9: Discourse & Past Tense",
+      "lastPosition": 122,
+      "title": "Discourse & Past Tense",
       "unitId": 9
     },
     {
       "computed": "B2",
       "computedCount": 1,
-      "firstPosition": 121,
+      "firstPosition": 123,
       "label": "B2",
-      "lastPosition": 139,
-      "title": "Unit 10: Mastery & Nuance",
+      "lastPosition": 141,
+      "title": "Mastery & Nuance",
       "unitId": 10
     },
     {
-      "computed": "A2",
-      "computedCount": 7,
-      "firstPosition": 140,
+      "computed": "C1",
+      "computedCount": 4,
+      "firstPosition": 142,
       "label": null,
-      "lastPosition": 149,
-      "title": "Unit 11: Daily Essentials",
+      "lastPosition": 151,
+      "title": "Daily Essentials",
       "unitId": 11
     },
     {
       "computed": "B1",
       "computedCount": 13,
-      "firstPosition": 150,
+      "firstPosition": 152,
       "label": null,
-      "lastPosition": 160,
-      "title": "Unit 12: Curiosity & Questions",
+      "lastPosition": 162,
+      "title": "Curiosity & Questions",
       "unitId": 12
     }
   ]

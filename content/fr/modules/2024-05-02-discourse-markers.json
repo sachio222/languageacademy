@@ -48,7 +48,7 @@
       "word_id": "bon-fr.discourse",
       "fr": "bon",
       "gloss": "well / so (discourse use)",
-      "note": "new use! (you know 'bon' as 'good')"
+      "note": "new use! (you know '{bon}' as 'good')"
     },
     {
       "word_id": "alors-fr",
@@ -120,7 +120,7 @@
       "word_id": "en-fait-je-ne-sais-pas-fr",
       "fr": "En fait, je ne sais pas",
       "gloss": "Actually, I don't know",
-      "note": "en fait = clarification"
+      "note": "{en fait = clarification}"
     },
     {
       "word_id": "bah-c-est-comme-ca-fr",

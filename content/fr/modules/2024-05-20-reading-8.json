@@ -58,55 +58,55 @@
       "word_id": "je-m-appelle-fr",
       "fr": "je m'appelle",
       "gloss": "my name is",
-      "note": "s'appeler"
+      "note": "{s'appeler}"
     },
     {
       "word_id": "je-me-reveille-fr",
       "fr": "je me réveille",
       "gloss": "I wake up",
-      "note": "se réveiller"
+      "note": "{se réveiller}"
     },
     {
       "word_id": "je-me-leve-fr",
       "fr": "je me lève",
       "gloss": "I get up",
-      "note": "se lever"
+      "note": "{se lever}"
     },
     {
       "word_id": "je-me-lave-fr",
       "fr": "je me lave",
       "gloss": "I wash",
-      "note": "se laver"
+      "note": "{se laver}"
     },
     {
       "word_id": "je-m-habille-fr",
       "fr": "je m'habille",
       "gloss": "I get dressed",
-      "note": "s'habiller"
+      "note": "{s'habiller}"
     },
     {
       "word_id": "je-me-prepare-fr",
       "fr": "je me prépare",
       "gloss": "I get ready",
-      "note": "se préparer"
+      "note": "{se préparer}"
     },
     {
       "word_id": "je-me-depeche-fr.i-hurry",
       "fr": "je me dépêche",
       "gloss": "I hurry",
-      "note": "se dépêcher"
+      "note": "{se dépêcher}"
     },
     {
       "word_id": "je-me-souviens-fr",
       "fr": "je me souviens",
       "gloss": "I remember",
-      "note": "se souvenir"
+      "note": "{se souvenir}"
     },
     {
       "word_id": "on-s-amuse-fr.we-have-fun",
       "fr": "on s'amuse",
       "gloss": "we have fun",
-      "note": "s'amuser"
+      "note": "{s'amuser}"
     },
     {
       "word_id": "on-se-pose-des-questions-fr",

@@ -20,13 +20,13 @@
       "word_id": "il-l-a-fr",
       "fr": "il l'a",
       "gloss": "he has it",
-      "note": "l' = le/la (avoir)"
+      "note": "{l' = le/la (avoir)}"
     },
     {
       "word_id": "elle-l-a-fr",
       "fr": "elle l'a",
       "gloss": "she has it",
-      "note": "l' = le/la (avoir)"
+      "note": "{l' = le/la (avoir)}"
     },
     {
       "word_id": "ils-les-ont-fr",
@@ -62,7 +62,7 @@
       "word_id": "est-ce-le-tien-fr",
       "fr": "est-ce le tien",
       "gloss": "is it yours?",
-      "note": "question"
+      "note": "{question}"
     },
     {
       "word_id": "tu-viens-avec-moi-fr",

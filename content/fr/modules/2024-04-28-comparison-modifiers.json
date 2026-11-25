@@ -50,7 +50,7 @@
       "word_id": "toute-la-classe-fr",
       "fr": "toute la classe",
       "gloss": "the whole class",
-      "note": "feminine 'toute' + la classe"
+      "note": "feminine '{toute}' + la classe"
     },
     {
       "word_id": "tout-petit-fr",
@@ -74,13 +74,13 @@
       "word_id": "meme-moi-fr",
       "fr": "même moi",
       "gloss": "even me",
-      "note": "emphasis - 'même' before word"
+      "note": "emphasis - '{même}' before word"
     },
     {
       "word_id": "mal-fr",
       "fr": "mal",
       "gloss": "badly / poorly",
-      "note": "rank 87 - opposite of 'bien'"
+      "note": "rank 87 - opposite of '{bien}'"
     },
     {
       "word_id": "je-comprends-mal-fr",

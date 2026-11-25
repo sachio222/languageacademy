@@ -11,10 +11,14 @@ const TEACHING_KINDS = new Set(['lesson', 'help', 'reading']);
 // The readings extraction credits for each token of one vocabulary entry: exact accents first, folded match
 // only as a fallback, and of those only the best kind (irregular form, then generated form, then lemma).
 // Returns [{ token, readings }]; readings is [] for a token the graph does not know.
-export function entryReadings(text, index, isWord) {
+// exclude: IDs the module does not teach (its excludeWords). A reading of an excluded headword is dropped before the
+// best kind is chosen, so "la cuisine" with fr:lex:cuisiner excluded credits the noun cuisine, not a form of
+// cuisiner. An excluded form ID is only left out of the result (extractTeaches), so its headword still counts.
+export function entryReadings(text, index, isWord, exclude = null) {
   return tokenize(text, { isWord }).map((token) => {
-    let readings = lookupTokenStrict(index, token);
-    if (!readings.length) readings = lookupToken(index, token);
+    const keep = (rs) => (exclude ? rs.filter((r) => !exclude.has(r.headwordId)) : rs);
+    let readings = keep(lookupTokenStrict(index, token));
+    if (!readings.length) readings = keep(lookupToken(index, token));
     if (!readings.length) return { token, readings };
     const best = Math.min(...readings.map((r) => RANK[r.via]));
     return { token, readings: readings.filter((x) => RANK[x.via] === best) };
@@ -32,10 +36,12 @@ export function extractTeaches(graph, course, index) {
     if (!TEACHING_KINDS.has(mod.kind)) continue;
     const ids = new Set();
     const missing = new Set();
+    const exclude = new Set(courseMap[mod.moduleKey]?.excludeWords ?? []);
     for (const text of mod.vocab ?? []) {
-      for (const { token, readings } of entryReadings(text, index, isWord)) {
+      for (const { token, readings } of entryReadings(text, index, isWord, exclude)) {
         if (!readings.length) {
-          if (!graph.names?.has(token.fold)) missing.add(token.surface);
+          // a token whose only readings are excluded is known, so it is not reported
+          if (!graph.names?.has(token.fold) && !lookupToken(index, token).length) missing.add(token.surface);
           continue;
         }
         for (const r of readings) {

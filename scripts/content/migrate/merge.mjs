@@ -229,7 +229,9 @@ function alternatives0(gloss) {
  *
  * @returns { vocab, record } with record the per-card bases for migration-sources.json
  */
-export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, minted = null, infoCards = null }) {
+// markNote: marks the French in one note with braces (mark-french.mjs markFrench, 'quoted'); a note is native text
+// with French spans (native_fr), as a table row's note is. Without it the note is copied as written.
+export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, minted = null, infoCards = null, markNote = (t) => t }) {
   const { ex, rec, fixes, mergePart, noteFix, handEdits } = m;
   const fileVocab = Array.isArray(ex?.vocabulary) ? ex.vocabulary : [];
   const strip = (w) => (w ? Object.fromEntries(Object.entries(w).filter(([k]) => k !== 'word_id')) : null);
@@ -237,7 +239,7 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
   const freshCards = []; // per source card: the card, or null when it repeats an earlier card exactly
   for (const [i, v] of src.entries()) {
     const w = { word_id: null, fr: String(v.french).trim(), gloss: String(v.english).trim() };
-    const notes = [v.note, v.usage, v.agreement].filter(isStr).map((s) => s.trim());
+    const notes = [v.note, v.usage, v.agreement].filter(isStr).map((s) => markNote(s.trim()));
     if (notes.length) w.note = notes.join('; ');
     if (isStr(v.example)) w.example_fr = v.example.trim();
     for (const f of ['usage', 'agreement']) if (isStr(v[f])) add(`vocabularyReference[${i}].${f}`, 'text_changed', `"${v[f]}" added to the note`);

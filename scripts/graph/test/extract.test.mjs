@@ -197,3 +197,11 @@ test('extractTeaches matches accents first so the preposition beats the avoir fo
   assert.ok(!prep.includes('fr:form:avoir.prs.3sg'));
   assert.ok(run(['il a']).includes('fr:form:avoir.prs.3sg'));
 });
+
+test('an excluded headword is dropped before ranking, so the noun spelled like its form is credited', () => {
+  const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['il est'] })];
+  const g = withMap({ a: { excludeWords: ['fr:lex:etre'] } });
+  const words = extractTeaches(g, course, index).courseMap.a.teachesWords;
+  assert.ok(!words.some((id) => id.startsWith('fr:lex:etre') || id.startsWith('fr:form:etre')), words.join(' '));
+  assert.ok(words.includes('fr:lex:il'));
+});

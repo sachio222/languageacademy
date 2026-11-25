@@ -120,7 +120,7 @@ const COMMON_FIELDS = {
   tests: CONSTRUCTIONS,
 };
 const WORD = OBJ(
-  { word_id: KEY, fr: S('fr'), gloss: S('native'), note: S('native'), example_fr: S('fr'), example_en: S('native'), part_of_speech: KEY },
+  { word_id: KEY, fr: S('fr'), gloss: S('native'), note: S('native_fr'), example_fr: S('fr'), example_en: S('native'), part_of_speech: KEY },
   ['word_id', 'fr', 'gloss'],
 );
 const VOCABULARY = LIST(WORD, { unique: 'word_id' });

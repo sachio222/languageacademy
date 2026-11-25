@@ -1,85 +1,85 @@
 {
   "byRule": {
-    "blank-misplaced": 58,
-    "claim-untaught": 27,
-    "function-unreachable": 2,
-    "level-label": 1,
-    "level-order": 31,
-    "nonstandard-shape": 41,
-    "reuse-missed": 492,
-    "taught-twice": 137,
-    "translate-item": 1761,
-    "unknown-word": 34,
-    "untaught-construction": 109,
-    "untaught-word": 603
+    "claim-untaught": 25,
+    "exam_item_copied": 94,
+    "function-unreachable": 1,
+    "guide_only_teaching": 14,
+    "level-order": 37,
+    "reading_word_no_popup": 10,
+    "reuse-missed": 717,
+    "taught-twice": 139,
+    "translate-item": 946,
+    "unknown-word": 86,
+    "untaught-construction": 78,
+    "untaught-word": 330
   },
-  "cognatesAllowed": 638,
+  "cognatesAllowed": 252,
   "coverage": {
     "A1": {
-      "availableWords": 485,
-      "cognateWords": 63,
+      "availableWords": 527,
+      "cognateWords": 33,
       "coreConstructions": 40,
       "coreWords": 733,
       "cumulative": {
-        "availableWords": 485,
-        "cognateWords": 63,
+        "availableWords": 527,
+        "cognateWords": 33,
         "coreConstructions": 40,
         "coreWords": 733,
         "reachedAt": null,
-        "referenceWords": 53,
-        "taughtConstructions": 37,
-        "taughtWords": 369
+        "referenceWords": 36,
+        "taughtConstructions": 38,
+        "taughtWords": 458
       },
       "reachedAt": null,
-      "referenceWords": 53,
-      "taughtConstructions": 37,
-      "taughtWords": 369
+      "referenceWords": 36,
+      "taughtConstructions": 38,
+      "taughtWords": 458
     },
     "A2": {
-      "availableWords": 147,
-      "cognateWords": 51,
+      "availableWords": 175,
+      "cognateWords": 17,
       "coreConstructions": 23,
       "coreWords": 681,
       "cumulative": {
-        "availableWords": 632,
-        "cognateWords": 114,
+        "availableWords": 702,
+        "cognateWords": 50,
         "coreConstructions": 63,
         "coreWords": 1414,
         "reachedAt": null,
-        "referenceWords": 63,
-        "taughtConstructions": 52,
-        "taughtWords": 455
+        "referenceWords": 44,
+        "taughtConstructions": 55,
+        "taughtWords": 608
       },
       "reachedAt": null,
-      "referenceWords": 10,
-      "taughtConstructions": 15,
-      "taughtWords": 86
+      "referenceWords": 8,
+      "taughtConstructions": 17,
+      "taughtWords": 150
     },
     "B1": {
-      "availableWords": 67,
-      "cognateWords": 38,
+      "availableWords": 77,
+      "cognateWords": 8,
       "coreConstructions": 17,
       "coreWords": 841,
       "cumulative": {
-        "availableWords": 699,
-        "cognateWords": 152,
+        "availableWords": 779,
+        "cognateWords": 58,
         "coreConstructions": 80,
         "coreWords": 2255,
         "reachedAt": null,
-        "referenceWords": 70,
-        "taughtConstructions": 65,
-        "taughtWords": 477
+        "referenceWords": 51,
+        "taughtConstructions": 68,
+        "taughtWords": 670
       },
       "reachedAt": null,
       "referenceWords": 7,
       "taughtConstructions": 13,
-      "taughtWords": 22
+      "taughtWords": 62
     }
   },
-  "errors": 2592,
+  "errors": 1489,
   "functionsPossible": {
     "A1": {
-      "possible": 40,
+      "possible": 41,
       "total": 42
     },
     "A2": {
@@ -91,7 +91,7 @@
       "total": 19
     }
   },
-  "modulesWithErrors": 152,
+  "modulesWithErrors": 127,
   "native": "en",
-  "warnings": 704
+  "warnings": 988
 }

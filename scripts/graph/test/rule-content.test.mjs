@@ -11,10 +11,12 @@ test('exam copy', async () => {
     // word for word the lesson's i-paul (answer and situation), and a near copy with another answer
     exam.items.push({ id: 'e-paul', type: 'respond', situation: 'Someone asks your name. Say you are Paul.', answer: 'je suis Paul' });
     exam.items.push({ id: 'e-paul-2', type: 'respond', situation: 'Someone asks your name. Say you are Paul.', answer: 'je suis Pierre' });
+    // the same item with another case and final punctuation is still a copy
+    exam.items.push({ id: 'e-paul-3', type: 'respond', situation: 'someone asks your name. Say you are Paul', answer: 'Je suis Paul !' });
   });
   const { issues } = await checkMini(course);
   const copied = ofRule(issues, 'exam_item_copied');
-  assert.deepEqual(copied.map((i) => i.itemRef), ['exam-places#e-paul']);
+  assert.deepEqual(copied.map((i) => i.itemRef), ['exam-places#e-paul', 'exam-places#e-paul-3']);
   assert.equal(copied[0].severity, 'warning');
   assert.match(copied[0].message, /2024-01-02-etre#i-paul/);
 });

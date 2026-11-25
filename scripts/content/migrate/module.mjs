@@ -263,7 +263,7 @@ export function convertModule(old, opts = {}) {
 
   // Vocabulary: one part per source card, word ids in course order (merge.mjs mergeVocabulary).
   if (teaches) {
-    const v = mergeVocabulary(merger, old.vocabularyReference || [], { key, seenBySpelling, dictionary, add });
+    const v = mergeVocabulary(merger, old.vocabularyReference || [], { key, seenBySpelling, dictionary, add, markNote: (t) => mark(t, 'quoted') });
     outRecord.vocabulary = v.record;
     put('vocabulary', v.vocab);
   }

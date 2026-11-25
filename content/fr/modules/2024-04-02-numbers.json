@@ -82,7 +82,7 @@
       "word_id": "vingt-et-un-fr.twenty-one",
       "fr": "vingt-et-un",
       "gloss": "twenty-one",
-      "note": "21 - uses 'et' (and)"
+      "note": "21 - uses '{et}' (and)"
     },
     {
       "word_id": "vingt-deux-fr",
@@ -100,7 +100,7 @@
       "word_id": "trente-et-un-fr",
       "fr": "trente-et-un",
       "gloss": "thirty-one",
-      "note": "31 - uses 'et' (and)"
+      "note": "31 - uses '{et}' (and)"
     },
     {
       "word_id": "trente-cinq-fr",
@@ -118,7 +118,7 @@
       "word_id": "quarante-et-un-fr",
       "fr": "quarante-et-un",
       "gloss": "forty-one",
-      "note": "41 - uses 'et' (and)"
+      "note": "41 - uses '{et}' (and)"
     },
     {
       "word_id": "cinquante-fr",
@@ -130,7 +130,7 @@
       "word_id": "cinquante-et-un-fr",
       "fr": "cinquante-et-un",
       "gloss": "fifty-one",
-      "note": "51 - uses 'et' (and)"
+      "note": "51 - uses '{et}' (and)"
     },
     {
       "word_id": "soixante-fr",
@@ -142,13 +142,13 @@
       "word_id": "soixante-et-un-fr",
       "fr": "soixante-et-un",
       "gloss": "sixty-one",
-      "note": "61 - uses 'et' (and)"
+      "note": "61 - uses '{et}' (and)"
     },
     {
       "word_id": "soixante-neuf-fr",
       "fr": "soixante-neuf",
       "gloss": "sixty-nine",
-      "note": "69 - nice 😏"
+      "note": "{69 - nice 😏}"
     },
     {
       "word_id": "soixante-dix-fr",
@@ -160,7 +160,7 @@
       "word_id": "soixante-et-onze-fr.seventy-one",
       "fr": "soixante-et-onze",
       "gloss": "seventy-one",
-      "note": "71 - uses 'et' (sixty-and-eleven)"
+      "note": "71 - uses '{et}' (sixty-and-eleven)"
     },
     {
       "word_id": "soixante-quinze-fr",
@@ -184,7 +184,7 @@
       "word_id": "quatre-vingt-un-fr",
       "fr": "quatre-vingt-un",
       "gloss": "eighty-one",
-      "note": "81 - NO 'et', no 's' on vingt"
+      "note": "81 - NO '{et}', no 's' on vingt"
     },
     {
       "word_id": "quatre-vingt-dix-fr",
@@ -196,7 +196,7 @@
       "word_id": "quatre-vingt-onze-fr",
       "fr": "quatre-vingt-onze",
       "gloss": "ninety-one",
-      "note": "91 - NO 'et' (four-twenty-eleven)"
+      "note": "91 - NO '{et}' (four-twenty-eleven)"
     },
     {
       "word_id": "quatre-vingt-dix-neuf-fr",

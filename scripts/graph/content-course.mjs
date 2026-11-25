@@ -174,12 +174,19 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
   for (const unit of course.units) {
     unit.modules.forEach((mod, j) => {
       const key = mod.module_key;
+      const planned = mod.status === 'planned';
       const items = [];
       for (const item of mod.items ?? []) items.push(...readItem(key, item));
       items.push(...moduleItems(key, mod));
-      // The unit's can-do example is what the unit promises the learner can say: checked where the unit ends.
-      if (j === unit.modules.length - 1 && typeof unit.can_do_example_fr === 'string') {
-        items.push(textItem(`${key}#unit/can_do_example_fr`, 'unit-can-do', [unit.can_do_example_fr.replace(NAME_MARKER, NAME_STAND_IN)]));
+      // The unit's can-do lines and description (outline, native text with spans) and its French can-do example say
+      // what the unit promises the learner can do: checked where the unit ends.
+      if (j === unit.modules.length - 1) {
+        for (const f of ['description', 'can_do', 'can_do_short']) {
+          if (typeof unit[f] === 'string') items.push(textItem(`${key}#unit/${f}`, 'unit-can-do', spansOf(unit[f])));
+        }
+        if (typeof unit.can_do_example_fr === 'string') {
+          items.push(textItem(`${key}#unit/can_do_example_fr`, 'unit-can-do', [unit.can_do_example_fr.replace(NAME_MARKER, NAME_STAND_IN)]));
+        }
       }
       const shapes = [];
       if ((mod.items ?? []).length) shapes.push('items');
@@ -199,8 +206,9 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         shapes,
         unreadShapes: [],
         blankProblems: [],
-        teaches: { words: [...(mod.teaches?.words ?? [])], constructions: [...(mod.teaches?.constructions ?? [])] },
-        tests: [...(mod.tests?.constructions ?? [])],
+        // A planned module (status planned) is not written yet, so its plan teaches and tests nothing.
+        teaches: planned ? { words: [], constructions: [] } : { words: [...(mod.teaches?.words ?? [])], constructions: [...(mod.teaches?.constructions ?? [])] },
+        tests: planned ? [] : [...(mod.tests?.constructions ?? [])],
       });
     });
   }

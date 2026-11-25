@@ -274,19 +274,19 @@
       "word_id": "nager-dans-la-mer-fr",
       "fr": "nager dans la mer",
       "gloss": "to swim in the sea",
-      "note": "je nage dans la mer"
+      "note": "{je nage dans la mer}"
     },
     {
       "word_id": "courir-vite-fr",
       "fr": "courir vite",
       "gloss": "to run fast",
-      "note": "tu cours vite!"
+      "note": "{tu cours vite!}"
     },
     {
       "word_id": "marcher-lentement-fr",
       "fr": "marcher lentement",
       "gloss": "to walk slowly",
-      "note": "il marche lentement"
+      "note": "{il marche lentement}"
     }
   ],
   "concepts": [

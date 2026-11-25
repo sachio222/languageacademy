@@ -33,38 +33,38 @@
       "word_id": "j-ai-etudie-fr",
       "fr": "j'ai étudié",
       "gloss": "I studied / I have studied",
-      "note": "étudier → étudié"
+      "note": "{étudier → étudié}"
     },
     {
       "word_id": "j-ai-aime-fr",
       "fr": "j'ai aimé",
       "gloss": "I loved / I liked",
-      "note": "⭐ aimer → aimé"
+      "note": "{⭐ aimer → aimé}"
     },
     {
       "word_id": "j-ai-cherche-fr",
       "fr": "j'ai cherché",
       "gloss": "I looked for / I searched",
-      "note": "chercher → cherché"
+      "note": "{chercher → cherché}"
     },
     {
       "word_id": "j-ai-trouve-fr",
       "fr": "j'ai trouvé",
       "gloss": "I found",
-      "note": "⭐ trouver → trouvé"
+      "note": "{⭐ trouver → trouvé}"
     },
     {
       "word_id": "j-ai-travaille-fr",
       "fr": "j'ai travaillé",
       "gloss": "I worked",
-      "note": "⭐ travailler → travaillé",
+      "note": "{⭐ travailler → travaillé}",
       "example_fr": "J'ai travaillé hier"
     },
     {
       "word_id": "j-ai-ecoute-fr",
       "fr": "j'ai écouté",
       "gloss": "I listened",
-      "note": "écouter → écouté; past action",
+      "note": "{écouter → écouté}; past action",
       "example_fr": "J'ai écouté de la musique"
     },
     {

@@ -28,13 +28,13 @@
       "word_id": "c-est-ca-fr",
       "fr": "c'est ça",
       "gloss": "that's it/right",
-      "note": "être + ça"
+      "note": "{être + ça}"
     },
     {
       "word_id": "ca-va-fr",
       "fr": "ça va",
       "gloss": "it goes/OK",
-      "note": "ça + va (être)"
+      "note": "{ça + va (être)}"
     },
     {
       "word_id": "ca-va-fr.question",
@@ -46,7 +46,7 @@
       "word_id": "j-ai-ca-fr",
       "fr": "j'ai ça",
       "gloss": "I have that",
-      "note": "avoir + ça"
+      "note": "{avoir + ça}"
     },
     {
       "word_id": "tu-as-ca-fr",

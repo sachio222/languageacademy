@@ -63,37 +63,37 @@
       "word_id": "j-ai-mange-fr",
       "fr": "j'ai mangé",
       "gloss": "I ate / I have eaten",
-      "note": "passé composé - avoir + mangé"
+      "note": "{passé composé - avoir + mangé}"
     },
     {
       "word_id": "tu-as-mange-fr",
       "fr": "tu as mangé",
       "gloss": "you ate (informal)",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "il-elle-a-mange-fr",
       "fr": "il/elle a mangé",
       "gloss": "he/she ate",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "nous-avons-mange-fr",
       "fr": "nous avons mangé",
       "gloss": "we ate",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "vous-avez-mange-fr",
       "fr": "vous avez mangé",
       "gloss": "you ate (formal/plural)",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "ils-elles-ont-mange-fr",
       "fr": "ils/elles ont mangé",
       "gloss": "they ate",
-      "note": "passé composé"
+      "note": "{passé composé}"
     }
   ],
   "concepts": [

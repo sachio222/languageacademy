@@ -68,31 +68,31 @@
       "word_id": "tu-as-bu-fr",
       "fr": "tu as bu",
       "gloss": "you drank (informal)",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "il-elle-a-bu-fr",
       "fr": "il/elle a bu",
       "gloss": "he/she drank",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "nous-avons-bu-fr",
       "fr": "nous avons bu",
       "gloss": "we drank",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "vous-avez-bu-fr",
       "fr": "vous avez bu",
       "gloss": "you drank (formal/plural)",
-      "note": "passé composé"
+      "note": "{passé composé}"
     },
     {
       "word_id": "ils-elles-ont-bu-fr",
       "fr": "ils/elles ont bu",
       "gloss": "they drank",
-      "note": "passé composé"
+      "note": "{passé composé}"
     }
   ],
   "concepts": [

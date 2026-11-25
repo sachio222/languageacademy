@@ -46,19 +46,19 @@
       "word_id": "devant-fr",
       "fr": "devant",
       "gloss": "in front of / before",
-      "note": "devant la maison"
+      "note": "{devant la maison}"
     },
     {
       "word_id": "derriere-fr",
       "fr": "derrière",
       "gloss": "behind",
-      "note": "derrière la porte"
+      "note": "{derrière la porte}"
     },
     {
       "word_id": "entre-fr",
       "fr": "entre",
       "gloss": "between",
-      "note": "entre les deux"
+      "note": "{entre les deux}"
     },
     {
       "word_id": "a-fr",
@@ -82,7 +82,7 @@
       "word_id": "chez-fr",
       "fr": "chez",
       "gloss": "at (someone's place)",
-      "note": "chez Pierre, chez nous"
+      "note": "{chez Pierre, chez nous}"
     }
   ],
   "concepts": [

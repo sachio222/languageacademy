@@ -28,6 +28,10 @@ jobs:
       - run: pnpm content:test
       # Every module file (every kind) matches a rerun of the migration, hand fixes kept; exit 1 if any file would change.
       - run: pnpm content:migrate --check
+      - run: pnpm graph:test
+      # The checker over the loaded course: fails when any rule's issue count rises above
+      # curriculum-graph/reports/issue-budget.json, so counts can only go down.
+      - run: pnpm graph:check --budget
       # The release bundle for L (la-bundle@1): built, release-checked and run through L's checker, writing nothing.
       - run: pnpm content:bundle --check
       # The vendored checker matches the vault. CI has no vault, so here it only says the copy was not compared.
@@ -38,8 +42,4 @@ jobs:
       - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist-content/bundle.json
       - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist-content/bundle-unit1.json
       - run: node --test src/lessons/exerciseAnswers.test.mjs
-      - run: pnpm graph:test
-      # The checker over the loaded course: fails when any rule's issue count rises above
-      # curriculum-graph/reports/issue-budget.json, so counts can only go down.
-      - run: pnpm graph:check --budget
       - run: pnpm build

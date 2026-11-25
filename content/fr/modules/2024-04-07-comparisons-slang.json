@@ -15,13 +15,13 @@
       "word_id": "c-est-ouf-fr",
       "fr": "c'est ouf",
       "gloss": "it's crazy/insane",
-      "note": "🇫🇷 France - verlan for 'fou' (crazy)"
+      "note": "🇫🇷 France - verlan for '{fou}' (crazy)"
     },
     {
       "word_id": "c-est-chelou-fr",
       "fr": "c'est chelou",
       "gloss": "it's weird/sketchy",
-      "note": "🇫🇷 France - verlan for 'louche' (weird)"
+      "note": "🇫🇷 France - verlan for '{louche}' (weird)"
     },
     {
       "word_id": "c-est-genial-fr",
@@ -105,7 +105,7 @@
       "word_id": "c-est-ben-correct-fr",
       "fr": "c'est ben correct",
       "gloss": "it's really good/fine",
-      "note": "🇨🇦 Quebec - 'ben' = 'bien'"
+      "note": "🇨🇦 Quebec - '{ben}' = '{bien}'"
     },
     {
       "word_id": "c-est-gnama-fr",

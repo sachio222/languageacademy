@@ -28,7 +28,7 @@
       "word_id": "on-est-fr",
       "fr": "on est",
       "gloss": "we are / one is",
-      "note": "uses il/elle form 'est'"
+      "note": "uses il/elle form '{est}'"
     },
     {
       "word_id": "on-a-fr",
@@ -40,7 +40,7 @@
       "word_id": "on-va-fr",
       "fr": "on va",
       "gloss": "we're going / we go",
-      "note": "⭐ very common! 'On y va?'"
+      "note": "⭐ very common! '{On y va?}'"
     },
     {
       "word_id": "on-fait-fr",
@@ -52,13 +52,13 @@
       "word_id": "on-peut-fr",
       "fr": "on peut",
       "gloss": "we can / one can",
-      "note": "On peut apprendre!"
+      "note": "{On peut apprendre!}"
     },
     {
       "word_id": "on-doit-fr",
       "fr": "on doit",
       "gloss": "we must / one must",
-      "note": "On doit étudier"
+      "note": "{On doit étudier}"
     },
     {
       "word_id": "on-dit-fr",
@@ -88,7 +88,7 @@
       "word_id": "les-gens-disent-fr",
       "fr": "les gens disent",
       "gloss": "people say",
-      "note": "plural verb 'disent'"
+      "note": "plural verb '{disent}'"
     },
     {
       "word_id": "les-gens-pensent-fr",
@@ -106,7 +106,7 @@
       "word_id": "tout-le-monde-sait-fr",
       "fr": "tout le monde sait",
       "gloss": "everyone knows",
-      "note": "singular 'sait' not 'savent'"
+      "note": "singular '{sait}' not 'savent'"
     },
     {
       "word_id": "le-peuple-fr",
@@ -130,7 +130,7 @@
       "word_id": "les-personnes-fr",
       "fr": "les personnes",
       "gloss": "people / persons",
-      "note": "more formal than 'les gens'"
+      "note": "more formal than '{les gens}'"
     }
   ],
   "concepts": [
