@@ -137,8 +137,10 @@ test('a window that closes at a planned module is no miss until that module is w
 test('dueFor finds a planned module by key, so a writer sees what it should reuse before writing it', () => {
   const written = course50([]).filter((m) => m.position !== 3);
   const ctx = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: written }), content: withPlanned(written, [3]) };
-  assert.deepEqual(dueFor(ctx, 'm3'), { position: 3, due: [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }] });
+  assert.deepEqual(dueFor(ctx, 'm3'), { position: 3, due: [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }], ended: 0 });
   assert.deepEqual(dueFor(ctx, '3'), dueFor(ctx, 'm3'));
-  assert.equal(dueFor(ctx, 'm2').position, 2);
+  assert.deepEqual(dueFor(ctx, 'm2'), { position: 2, due: [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }], ended: 0 });
   assert.equal(dueFor(ctx, 'nowhere'), null);
+  // Past its window, the miss is counted, not due: no use at 10 meets a window that closed at 3.
+  assert.deepEqual(dueFor(ctx, 'm10'), { position: 10, due: [], ended: 1 });
 });

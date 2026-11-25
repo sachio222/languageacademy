@@ -121,14 +121,19 @@ export function ruleReuse(ctx) {
 }
 
 /**
- * dueAt for a module named by key or position, written or a course plan stub (a stub keeps its place in the course):
- * { position, due }, or null when nothing matches.
+ * What a module named by key or position can still meet, written or a course plan stub (a stub keeps its place in the
+ * course): { position, due, ended }, or null when nothing matches. due holds the dueAt entries whose window is still
+ * open at the module (it ends there or one module later); ended counts those whose window closed before it, which no
+ * use in this module meets (graph:check lists them as reuse-missed).
  */
 export function dueFor(ctx, arg) {
   const byPosition = /^\d+$/.test(String(arg));
   const match = (m) => (byPosition ? m.position === Number(arg) : m.moduleKey === arg);
   const m = ctx.course.find(match) ?? [...plannedAt(ctx).values()].map((p) => ({ position: p.position, moduleKey: p.module_key })).find(match);
-  return m ? { position: m.position, due: dueAt(ctx, m.position) } : null;
+  if (!m) return null;
+  const all = dueAt(ctx, m.position);
+  const due = all.filter((d) => d.windowEnd >= m.position);
+  return { position: m.position, due, ended: all.length - due.length };
 }
 
 // What the lesson at `position` should reuse: nodes with no use yet inside their current window, when that window

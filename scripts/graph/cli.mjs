@@ -92,6 +92,7 @@ async function main() {
     for (const d of found.due) {
       console.log(`${d.nodeId}\ttaught at ${d.taughtAt}\tlast use ${d.lastUse ?? 'none'}\twindow end ${d.windowEnd}`);
     }
+    if (found.ended) console.log(`${found.ended} more closed before position ${found.position}, so no use here meets them (graph:check lists them as reuse-missed)`);
     return;
   }
 

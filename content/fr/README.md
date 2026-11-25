@@ -26,7 +26,7 @@ The course plan already has a file for every module it lists. Each one is a stub
 
 To write a module, open its stub, set `"status": "written"`, delete the `plan` block and add the fields its kind requires. Keep the file name and `module_key` exactly as they are.
 
-The checker expects every word and pattern a module teaches to come back within 2 modules, then within 5, 12 and 30 modules of each return; each of those spans is a reuse window. Before you write, run `pnpm graph:due <module_key>`; a stub works too. It lists the words and patterns taught earlier that are due for reuse by this module, each with where it was taught, where it was last used and where its reuse window ends. Use each one in the module where it fits, or the checker reports `reuse-missed` for it.
+The checker expects every word and pattern a module teaches to come back within 2 modules, then within 5, 12 and 30 modules of each return; each of those spans is a reuse window. Before you write, run `pnpm graph:due <module_key>`; a stub works too. It lists the words and patterns taught earlier that are due for reuse by this module, each with where it was taught, where it was last used and where its reuse window ends. Use each one in the module where it fits, or the checker reports `reuse-missed` for it. A last line counts the windows that closed before this module; no use here can meet those, and `pnpm graph:check` lists them.
 
 Every written module needs `title` and `description`. A unit exam has no title of its own: the loader names it "Unit exam · <unit name>". Optional on every kind: `topic`, `can_do` (lines for "What you can do now"), `teaches` and `tests`.
 

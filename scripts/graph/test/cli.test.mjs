@@ -43,5 +43,9 @@ test('graph:check --content checks the given folder, and graph:due names what a 
   const due = run('due', 'fr', 'unit12-reading', '--content', root);
   assert.equal(due.status, 0, due.stderr);
   assert.match(due.stdout, /^fr:cx:q\.qui-est-ce-qui\ttaught at \d+\tlast use \S+\twindow end \d+$/m);
+  // Only windows the reading can still meet; the ones that closed earlier are a count.
+  const ends = [...due.stdout.matchAll(/window end (\d+)$/gm)].map((x) => Number(x[1]));
+  assert.ok(ends.length > 0 && ends.length < 20, `${ends.length} due`);
+  assert.match(due.stdout, /^\d+ more closed before position \d+, so no use here meets them/m);
   assert.equal(run('due', 'fr', 'no-such-module', '--content', root).status, 2);
 });
