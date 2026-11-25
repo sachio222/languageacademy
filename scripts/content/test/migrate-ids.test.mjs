@@ -156,3 +156,32 @@ test('a hand edit on an item main gives a new id is a conflict until settled or 
   assert.equal(conflictOf(fresh).length, 1);
   assert.deepEqual(fresh.mod.items.map((i) => i.id), ['i-je-pars', 'i-tu-pars']);
 });
+
+// The same for an item the writer removed by hand (hand-fixes.json records items/<id>: null): main's correction must
+// not bring it back silently under a new id (C0 re-review).
+test('a hand removal of an item main gives a new id is a conflict too, and stays removed until accepted', () => {
+  const first = convertModule(lesson([leave, youLeave]), ctx);
+  const removed = clone(first.mod);
+  removed.items = removed.items.filter((i) => i.id !== 'i-tu-pars');
+  const second = convertModule(lesson([leave, youLeave]), { ...ctx, existing: removed, record: first.record });
+  assert.deepEqual(second.handFixes, { 'items/i-tu-pars': null });
+  const corrected = lesson([leave, { ...youLeave, expectedAnswer: 'toi, tu pars' }]);
+  const conflictOf = (r) => r.report.filter((l) => l.kind === 'merge_conflict');
+  const normal = convertModule(corrected, { ...ctx, existing: clone(second.mod), record: second.record });
+  const forced = convertModule(corrected, { ...ctx, existing: null, record: null, handFixes: second.handFixes, written: second.mod, idRecord: second.record });
+  for (const [run, r] of [['normal', normal], ['--force', forced]]) {
+    assert.deepEqual(r.mod.items.map((i) => i.id), ['i-je-pars'], `${run}: the removal stands`);
+    assert.deepEqual(r.handFixes, { 'items/i-tu-pars': null }, `${run}: the removal stays recorded`);
+    assert.equal(conflictOf(r).length, 1, run);
+    assert.match(conflictOf(r)[0].detail, /removal/);
+    assert.match(conflictOf(r)[0].detail, /i-tu-pars/);
+    assert.match(conflictOf(r)[0].detail, /i-toi-tu-pars/);
+  }
+  assert.deepEqual(forced.record, normal.record);
+  // --accept-conflicts takes main's corrected item, under its new id, and the removal record goes.
+  const accepted = convertModule(corrected, { ...ctx, existing: clone(second.mod), record: second.record, acceptConflicts: true });
+  assert.deepEqual(conflictOf(accepted), []);
+  assert.deepEqual(accepted.mod.items.map((i) => [i.id, i.answer]), [['i-je-pars', 'je pars'], ['i-toi-tu-pars', 'toi, tu pars']]);
+  assert.equal('items/i-tu-pars' in accepted.handFixes, false);
+  assert.ok(accepted.report.some((l) => l.kind === 'conflict_accepted' && /i-tu-pars/.test(l.detail) && /i-toi-tu-pars/.test(l.detail)));
+});

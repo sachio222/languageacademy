@@ -312,13 +312,13 @@ export function convertModule(old, opts = {}) {
     // A changed answer keeps the id only while it still accepts an answer the written item accepted (content:bundle
     // --check's item_id_reused). One that accepts none asks another question: it takes a new id, and the run says so.
     const writtenById = new Map(idItems.map((it) => [it.id, it]));
-    // Was the item edited by hand? A normal run compares the file with the converter's last output; --force, which
-    // reads no file, goes by hand-fixes.json.
+    // Was the item edited or removed by hand? A normal run compares the file with the converter's last output (an item
+    // the converter wrote and the file lacks was removed); --force, which reads no file, goes by hand-fixes.json.
     const handEdited = (id) => {
       if (!ex) return `items/${id}` in fixes;
       const at = exIndex.get(id);
       const out = idRecItems[id]?.out;
-      return at !== undefined && out !== undefined && hashOf(exItems[at]) !== out;
+      return out !== undefined && (at === undefined || hashOf(exItems[at]) !== out);
     };
     for (const s of srcList) {
       const r = pairs.get(s.at);
@@ -369,7 +369,7 @@ export function convertModule(old, opts = {}) {
         const at = sort === null ? f.src.ref : `items[${sort}]`;
         add(at, 'id_new_answer',
           `${id}: replaces ${f.replaces.id}, since the corrected answer ${shown(acceptedAnswers(f.item).flat().filter(isStr))} accepts none of its answers (${shown(f.replaces.answers)}); a changed meaning takes a new id`);
-        if (f.dropsEdit) add(at, 'conflict_accepted', `hand edit on ${f.replaces.id} dropped, as accepted: main's corrected answer gave the item a new id, ${id}; copy the edit to ${id} if it still applies (items/${f.replaces.id})`);
+        if (f.dropsEdit) add(at, 'conflict_accepted', `hand edit on ${f.replaces.id} (or its removal) dropped, as accepted: main's corrected answer gave the item a new id, ${id}; copy the edit to ${id}, or remove ${id}, if it still applies (items/${f.replaces.id})`);
       }
       if (value) entries.push({ f, id, item: value, sort, state: ex ? 'added' : 'new', freshItem: { id, ...withoutId(f.item) } });
       continue;
@@ -377,15 +377,16 @@ export function convertModule(old, opts = {}) {
     // A hand-edited item main gave a new id (above): kept as written, its record and hand fix unchanged, so the
     // conflict stands on every run until it is settled.
     if (f.held) {
-      const kept = ex ? exItems[exIndex.get(f.id)] : fixes[`items/${f.id}`];
+      // An item removed by hand (absent from the file, or null in the hand fixes) stays removed.
+      const kept = (ex ? exItems[exIndex.get(f.id)] : fixes[`items/${f.id}`]) ?? null;
       const shown = (xs) => xs.map((x) => `"${x}"`).join(', ');
-      add(`items[${sortIndex.get(f.id) ?? '?'}]`, 'merge_conflict',
-        `hand edit kept; main corrected the answer to ${shown(acceptedAnswers(f.item).flat().filter(isStr))}, which accepts none of ${shown(f.held.answers)}, so the item takes a new id, ${f.held.newId}, and the edit on ${f.id} has no place on it. Undo the edit, or rerun with --accept-conflicts and copy the edit to ${f.held.newId} (items/${f.id})`);
+      const answer = shown(acceptedAnswers(f.item).flat().filter(isStr));
+      add(sortIndex.has(f.id) ? `items[${sortIndex.get(f.id)}]` : f.src.ref, 'merge_conflict', kept
+        ? `hand edit kept; main corrected the answer to ${answer}, which accepts none of ${shown(f.held.answers)}, so the item takes a new id, ${f.held.newId}, and the edit on ${f.id} has no place on it. Undo the edit, or rerun with --accept-conflicts and copy the edit to ${f.held.newId} (items/${f.id})`
+        : `hand removal kept; main corrected the answer of ${f.id}, removed here, to ${answer}, which accepts none of ${shown(f.held.answers)}, so the item would come back as ${f.held.newId}. Rerun with --accept-conflicts to take it, then remove ${f.held.newId} if it should stay out (items/${f.id})`);
       outRecord.items[f.id] = clone(merger.idRec.items[f.id]);
-      if (kept) {
-        entries.push({ f, id: f.id, item: clone(kept), sort: sortIndex.get(f.id) ?? null, state: 'held' });
-        noteFix(`items/${f.id}`, kept, undefined);
-      }
+      if (kept) entries.push({ f, id: f.id, item: clone(kept), sort: sortIndex.get(f.id) ?? null, state: 'held' });
+      noteFix(`items/${f.id}`, kept ?? undefined, kept ? undefined : { id: f.id, ...withoutId(f.item) });
       continue;
     }
     // The record's base (under --force too, where it only tells a conflict).
