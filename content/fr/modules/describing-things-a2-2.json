@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-things-a2-2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing things (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:exact",
+      "fr:lex:special",
+      "fr:lex:merveilleux",
+      "fr:lex:incroyable",
+      "fr:lex:ancien",
+      "fr:lex:inutile",
+      "fr:lex:horrible",
+      "fr:lex:vide",
+      "fr:lex:formidable",
+      "fr:lex:superbe",
+      "fr:lex:interdire"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

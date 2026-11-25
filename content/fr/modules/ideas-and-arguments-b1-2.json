@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-and-arguments-b1-2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Ideas and arguments (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:interet",
+      "fr:lex:recherche",
+      "fr:lex:maniere",
+      "fr:lex:risque",
+      "fr:lex:decision",
+      "fr:lex:operation",
+      "fr:lex:occasion",
+      "fr:lex:regard",
+      "fr:lex:importance",
+      "fr:lex:supposer",
+      "fr:lex:convaincre",
+      "fr:lex:resister",
+      "fr:lex:reveler"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

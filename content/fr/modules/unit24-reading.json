@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit24-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Starting, stopping and changing, Work and jobs and Ideas and arguments",
+  "plan": {
+    "words": [
+      "fr:lex:fonction",
+      "fr:lex:instruction",
+      "fr:lex:delicat",
+      "fr:lex:inconnu",
+      "fr:lex:correspondre",
+      "fr:lex:annonce",
+      "fr:lex:concours",
+      "fr:lex:renverser",
+      "fr:lex:element",
+      "fr:lex:ceder"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

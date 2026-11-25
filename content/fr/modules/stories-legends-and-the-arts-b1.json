@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "stories-legends-and-the-arts-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Stories, legends and the arts (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:heros",
+      "fr:lex:ange",
+      "fr:lex:monstre",
+      "fr:lex:miracle",
+      "fr:lex:destin",
+      "fr:lex:fantome",
+      "fr:lex:sort",
+      "fr:lex:prevoir",
+      "fr:lex:accorder",
+      "fr:lex:rompre",
+      "fr:lex:interrompre"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

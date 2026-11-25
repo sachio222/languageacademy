@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "countries-and-languages-a1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Countries and languages (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:americain",
+      "fr:lex:allemand",
+      "fr:lex:russe",
+      "fr:lex:italien",
+      "fr:lex:chinois",
+      "fr:lex:espagnol",
+      "fr:lex:japonais",
+      "fr:lex:belge",
+      "fr:lex:canadien"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

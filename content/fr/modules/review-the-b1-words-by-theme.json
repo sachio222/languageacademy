@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "review-the-b1-words-by-theme",
+  "kind": "practice",
+  "status": "planned",
+  "title": "Review · The B1 words by theme",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

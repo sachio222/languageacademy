@@ -211,7 +211,8 @@ test('every learner-facing string of the real course has a ref, and only deliber
           ? `${mod.module_key}#${refPath(mod, t.path.replace(/\.(answer|accept\[\d+\]|prompt|situation|cue|question|shown|text|options\[\d+\]\.text|blanks\[\d+\]\..*)$/, ''))}`
           : `${mod.module_key}#${refPath(mod, t.path)}`;
         if (refs.has(ref) || /\.mistakes\[\d+\]\.answer$/.test(t.path)) continue;
-        const why = /^vocabulary\[\d+\]\.fr$/.test(t.path) ? 'vocabulary word (taught)'
+        const why = mod.status === 'planned' ? 'planned stub (not written, so not read)'
+          : /^vocabulary\[\d+\]\.fr$/.test(t.path) ? 'vocabulary word (taught)'
           : /^vocabulary\[\d+\]\.info_card\./.test(t.path) ? 'info card (native)'
             : /^glossary\[/.test(t.path) ? 'glossary (pop-up source)'
               : /^checks\[\d+\]\.sound$/.test(t.path) ? 'check sound (respelling)'
@@ -298,18 +299,34 @@ test('a unit can-do line and description are read for their spans at the unit\'s
   assert.ok(items.has('reading-cafe#unit/description'));
 });
 
-test('a planned module teaches and tests nothing', () => {
-  const course = readCourseFromContent(miniCourse((modules, outline) => {
-    modules.set('2024-01-09-planned', {
-      schema: 'la-module@1', module_key: '2024-01-09-planned', kind: 'lesson', status: 'planned', title: 'Planned',
-      teaches: { constructions: ['fr:cx:q.est-ce-que'], words: ['fr:lex:merci'] },
-      plan: { words: ['fr:lex:merci'], constructions: ['fr:cx:q.est-ce-que'], source: 'course plan' },
-    });
-    outline.units[2].entries.push('2024-01-09-planned');
-  }));
-  const m = course.find((x) => x.moduleKey === '2024-01-09-planned');
-  assert.deepEqual(m.teaches, { words: [], constructions: [] });
-  assert.deepEqual(m.tests, []);
+// A planned module (status planned, a course plan stub) is not written yet: the checker reads the written course only,
+// so a stub teaches and tests nothing, its title's level label claims nothing, and its place does not lengthen the
+// course the reuse windows run over (plan Task 17).
+const plantStubs = (modules, outline) => {
+  const stub = (key, title) => ({
+    schema: 'la-module@1', module_key: key, kind: 'lesson', status: 'planned', title,
+    teaches: { constructions: ['fr:cx:q.est-ce-que'], words: ['fr:lex:merci'] },
+    plan: { words: ['fr:lex:merci'], constructions: ['fr:cx:q.est-ce-que'], source: 'plan.json' },
+  });
+  modules.set('2024-01-09-planned', stub('2024-01-09-planned', 'Planned (B1)'));
+  outline.units[2].entries.push('2024-01-09-planned');
+  for (let i = 1; i <= 40; i++) modules.set(`later-${i}`, stub(`later-${i}`, `Later (B1)`));
+  outline.units.push({ unit_key: 'unit4', name: 'Later', entries: Array.from({ length: 40 }, (_, i) => `later-${i + 1}`) });
+};
+
+test('a planned module is not read: it teaches and tests nothing, and the unit lines stay on its last written module', () => {
+  const course = readCourseFromContent(miniCourse(plantStubs));
+  assert.equal(course.some((m) => m.moduleKey === '2024-01-09-planned' || m.moduleKey.startsWith('later-')), false);
+  const items = new Map(course.flatMap((m) => m.items.map((it) => [it.ref, it])));
+  assert.ok(items.has('exam-places#unit/can_do'), "unit3's can-do line is read at its last written module");
+});
+
+test('planned modules change no checker count', async () => {
+  const a = await checkMini(miniCourse());
+  const b = await checkMini(miniCourse(plantStubs));
+  const byRule = (issues) => issues.reduce((o, i) => ({ ...o, [i.rule]: (o[i.rule] ?? 0) + 1 }), {});
+  assert.deepEqual(byRule(b.issues), byRule(a.issues));
+  assert.deepEqual(b.stats, a.stats);
 });
 
 test('a reading table that lists a noun spelled like a verb form credits the noun once the verb is excluded', async () => {

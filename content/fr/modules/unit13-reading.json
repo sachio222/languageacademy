@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit13-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Joining sentences",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:si.present",
+      "fr:cx:relative.ce-que",
+      "fr:cx:relative.dont"
+    ],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "word-families-for-people-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Word families for people (-eur/-euse, -ier/-ière, -ien/-ienne: vendeur, infirmière, musicien)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

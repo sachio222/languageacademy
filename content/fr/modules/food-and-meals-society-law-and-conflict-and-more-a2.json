@@ -1,0 +1,27 @@
+{
+  "schema": "la-module@1",
+  "module_key": "food-and-meals-society-law-and-conflict-and-more-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Food and meals, Society, law and conflict and more (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:guerre",
+      "fr:lex:plan",
+      "fr:lex:forme",
+      "fr:lex:ferme",
+      "fr:lex:morceau",
+      "fr:lex:reine",
+      "fr:lex:gout",
+      "fr:lex:nourriture",
+      "fr:lex:alcool",
+      "fr:lex:identite",
+      "fr:lex:champagne",
+      "fr:lex:verifier",
+      "fr:lex:partager",
+      "fr:lex:inventer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

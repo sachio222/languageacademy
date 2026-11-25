@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-things-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing things (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:vivant",
+      "fr:lex:humain",
+      "fr:lex:etrange",
+      "fr:lex:personnel",
+      "fr:lex:pur",
+      "fr:lex:sacre",
+      "fr:lex:moyen",
+      "fr:lex:puissant",
+      "fr:lex:emporter",
+      "fr:lex:accrocher",
+      "fr:lex:avaler",
+      "fr:lex:soulever"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-things-b1-4",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing things (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:evident",
+      "fr:lex:precis",
+      "fr:lex:brillant",
+      "fr:lex:veritable",
+      "fr:lex:superieur",
+      "fr:lex:furieux",
+      "fr:lex:commun",
+      "fr:lex:violent",
+      "fr:lex:baisser",
+      "fr:lex:serrer",
+      "fr:lex:glisser"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

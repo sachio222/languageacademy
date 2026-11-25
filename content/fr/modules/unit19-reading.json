@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit19-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Nature, animals and weather, Talking, agreeing and feelings and Body and health",
+  "plan": {
+    "words": [
+      "fr:lex:rhume",
+      "fr:lex:grippe",
+      "fr:lex:fievre",
+      "fr:lex:gorge",
+      "fr:lex:joue",
+      "fr:lex:epaule",
+      "fr:lex:infirmier",
+      "fr:lex:os",
+      "fr:lex:ranger",
+      "fr:lex:respirer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

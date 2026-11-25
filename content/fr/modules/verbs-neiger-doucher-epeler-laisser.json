@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-neiger-doucher-epeler-laisser",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: neiger, doucher, épeler, laisser",
+  "plan": {
+    "words": [
+      "fr:lex:neiger",
+      "fr:lex:doucher",
+      "fr:lex:epeler",
+      "fr:lex:laisser"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

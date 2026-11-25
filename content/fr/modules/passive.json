@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "passive",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Passive (la maison est construite par mon père)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:passive"
+    ],
+    "source": "plan.json"
+  }
+}

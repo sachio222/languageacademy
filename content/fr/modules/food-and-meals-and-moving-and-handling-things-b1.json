@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "food-and-meals-and-moving-and-handling-things-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Food and meals and Moving and handling things (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:trou",
+      "fr:lex:fil",
+      "fr:lex:corde",
+      "fr:lex:pot",
+      "fr:lex:goutte",
+      "fr:lex:tirer",
+      "fr:lex:ramener",
+      "fr:lex:lacher",
+      "fr:lex:remettre",
+      "fr:lex:approcher",
+      "fr:lex:charger"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

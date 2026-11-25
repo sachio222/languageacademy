@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "free-time-sport-and-culture-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Free time, sport and culture (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:danse",
+      "fr:lex:serie",
+      "fr:lex:champion",
+      "fr:lex:disque",
+      "fr:lex:ballon",
+      "fr:lex:emission",
+      "fr:lex:concert",
+      "fr:lex:entrainer",
+      "fr:lex:feter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

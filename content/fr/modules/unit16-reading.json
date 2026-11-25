@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit16-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · People and family, Food and meals and Travel and transport",
+  "plan": {
+    "words": [
+      "fr:lex:pomme-de-terre",
+      "fr:lex:jour-ferie",
+      "fr:lex:courriel",
+      "fr:lex:geographie",
+      "fr:lex:yaourt",
+      "fr:lex:refrigerateur",
+      "fr:lex:informatique",
+      "fr:lex:carrefour",
+      "fr:lex:fourchette",
+      "fr:lex:librairie"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

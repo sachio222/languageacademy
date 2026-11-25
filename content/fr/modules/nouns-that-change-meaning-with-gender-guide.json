@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nouns-that-change-meaning-with-gender-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Nouns that change meaning with gender (le tour, la tour; le livre, la livre)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

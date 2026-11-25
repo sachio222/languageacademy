@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-reserver-confirmer-dessiner-feliciter",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: réserver, confirmer, dessiner, féliciter",
+  "plan": {
+    "words": [
+      "fr:lex:reserver",
+      "fr:lex:confirmer",
+      "fr:lex:dessiner",
+      "fr:lex:feliciter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

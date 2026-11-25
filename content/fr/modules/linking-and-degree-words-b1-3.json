@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "linking-and-degree-words-b1-3",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Linking and degree words (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:envers",
+      "fr:lex:franchement",
+      "fr:lex:durant",
+      "fr:lex:aupres",
+      "fr:lex:davantage",
+      "fr:lex:totalement",
+      "fr:lex:couvrir",
+      "fr:lex:nourrir",
+      "fr:lex:declarer",
+      "fr:lex:signaler"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

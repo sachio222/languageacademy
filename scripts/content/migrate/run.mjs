@@ -386,7 +386,8 @@ async function modules(args, flags, kindWords = ['modules']) {
 
   for (const [ui, unit] of outline.units.entries()) {
     const counts = { unit: `${unit.unit_key} ${unit.name}`, translate: 0, respond: 0 };
-    byUnit.push(counts);
+    // Only units with a module converted from today's source get a row; a unit of planned stubs has no prompts yet.
+    if (unit.entries.some((k) => configs.has(k))) byUnit.push(counts);
     for (const key of unit.entries) {
       const old = configs.get(key);
       if (!old) continue; // written in content/ only, with no source in src/lessons/modules/

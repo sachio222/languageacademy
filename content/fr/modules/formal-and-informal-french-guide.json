@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "formal-and-informal-french-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Formal and informal French (vous and tu, written and spoken words)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

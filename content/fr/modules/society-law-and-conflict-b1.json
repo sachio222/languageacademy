@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-law-and-conflict-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Society, law and conflict (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:arme",
+      "fr:lex:etat",
+      "fr:lex:paix",
+      "fr:lex:president",
+      "fr:lex:securite",
+      "fr:lex:loi",
+      "fr:lex:soldat",
+      "fr:lex:victime",
+      "fr:lex:jurer",
+      "fr:lex:elever",
+      "fr:lex:dechirer",
+      "fr:lex:lutter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

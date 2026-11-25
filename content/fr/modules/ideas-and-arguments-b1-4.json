@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-and-arguments-b1-4",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Ideas and arguments (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:principe",
+      "fr:lex:attente",
+      "fr:lex:modele",
+      "fr:lex:existence",
+      "fr:lex:agir",
+      "fr:lex:causer",
+      "fr:lex:marquer",
+      "fr:lex:reagir"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

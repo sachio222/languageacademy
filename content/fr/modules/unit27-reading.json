@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit27-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Ideas and arguments, Describing things and Society, law and conflict",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

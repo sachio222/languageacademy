@@ -1,0 +1,15 @@
+{
+  "schema": "la-module@1",
+  "module_key": "qui-and-que-after-a-noun",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "qui and que after a noun (le livre que je lis, la fille qui parle)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que"
+    ],
+    "source": "plan.json"
+  }
+}

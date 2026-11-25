@@ -1,0 +1,11 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit29-exam",
+  "kind": "unit_exam",
+  "status": "planned",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "si-present",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "si + present (si tu veux, on y va)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:si.present"
+    ],
+    "source": "plan.json"
+  }
+}

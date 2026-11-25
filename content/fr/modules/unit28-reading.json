@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit28-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Shops, money and clothes and Body and health",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

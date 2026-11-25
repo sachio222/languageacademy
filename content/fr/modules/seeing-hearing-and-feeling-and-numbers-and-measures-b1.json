@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "seeing-hearing-and-feeling-and-numbers-and-measures-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Seeing, hearing and feeling and Numbers and measures (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:signe",
+      "fr:lex:trace",
+      "fr:lex:odeur",
+      "fr:lex:geste",
+      "fr:lex:millier",
+      "fr:lex:somme",
+      "fr:lex:mesure",
+      "fr:lex:centaine",
+      "fr:lex:paraitre",
+      "fr:lex:surveiller",
+      "fr:lex:ressentir",
+      "fr:lex:observer",
+      "fr:lex:apercevoir"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

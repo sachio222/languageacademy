@@ -1,0 +1,28 @@
+{
+  "schema": "la-module@1",
+  "module_key": "travel-and-transport-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Travel and transport (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:voie",
+      "fr:lex:arriere",
+      "fr:lex:piste",
+      "fr:lex:passage",
+      "fr:lex:frontiere",
+      "fr:lex:moteur",
+      "fr:lex:essence",
+      "fr:lex:agence",
+      "fr:lex:vehicule",
+      "fr:lex:fuir",
+      "fr:lex:enfuir",
+      "fr:lex:poursuivre",
+      "fr:lex:depasser",
+      "fr:lex:rattraper",
+      "fr:lex:demarrer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "la-module@1",
+  "module_key": "talking-agreeing-and-feelings-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Talking, agreeing and feelings (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:facon",
+      "fr:lex:faute",
+      "fr:lex:avis",
+      "fr:lex:propos",
+      "fr:lex:choix",
+      "fr:lex:silence",
+      "fr:lex:conseil",
+      "fr:lex:danger",
+      "fr:lex:bonheur",
+      "fr:lex:joie",
+      "fr:lex:blague",
+      "fr:lex:tromper",
+      "fr:lex:crier",
+      "fr:lex:disputer",
+      "fr:lex:avertir"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

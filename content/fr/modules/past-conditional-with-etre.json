@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "past-conditional-with-etre",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Past conditional with être (je serais venu, elle serait partie)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:conditionnel-passe.etre"
+    ],
+    "source": "plan.json"
+  }
+}

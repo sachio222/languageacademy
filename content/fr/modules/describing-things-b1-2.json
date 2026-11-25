@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-things-b1-2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing things (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:naturel",
+      "fr:lex:faible",
+      "fr:lex:reel",
+      "fr:lex:egal",
+      "fr:lex:principal",
+      "fr:lex:prive",
+      "fr:lex:affreux",
+      "fr:lex:rare",
+      "fr:lex:forcer",
+      "fr:lex:coller",
+      "fr:lex:exiger"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

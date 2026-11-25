@@ -16,8 +16,13 @@ function syntheticRoot(t) {
   const root = mkdtempSync(join(tmpdir(), 'la-scale-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   cpSync(CONTENT_ROOT, root, { recursive: true });
-  const { outlineText, files } = readContent(CONTENT_ROOT);
+  const { outlineText, files: all } = readContent(CONTENT_ROOT);
   const outline = JSON.parse(outlineText);
+  // The written course only: the course plan's stubs (status planned) would stop the bundle at their unit (spec 7).
+  const planned = new Set(all.map((f) => JSON.parse(f.text)).filter((m) => m.status === 'planned').map((m) => m.module_key));
+  for (const key of planned) rmSync(join(root, 'modules', `${key}.json`));
+  outline.units = outline.units.map((u) => ({ ...u, entries: u.entries.filter((k) => !planned.has(k)) })).filter((u) => u.entries.length);
+  const files = all.filter((f) => !planned.has(JSON.parse(f.text).module_key));
   const lessons = files.map((f) => JSON.parse(f.text)).filter((m) => m.kind === 'lesson' && m.status === 'written');
   const template = outline.units[1];
   let count = files.length;

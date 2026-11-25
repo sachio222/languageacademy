@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "school-and-language-and-describing-things-a1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "School and language and Describing things (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:seul",
+      "fr:lex:prochain",
+      "fr:lex:facile",
+      "fr:lex:simple",
+      "fr:lex:exemple",
+      "fr:lex:court",
+      "fr:lex:prefere",
+      "fr:lex:exercice",
+      "fr:lex:stylo",
+      "fr:lex:crayon",
+      "fr:lex:cahier",
+      "fr:lex:gomme"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

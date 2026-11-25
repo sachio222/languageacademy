@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ce-que-and-ce-qui",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "ce que and ce qui (je fais ce que je veux, ce qui est important)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:relative.ce-que"
+    ],
+    "source": "plan.json"
+  }
+}

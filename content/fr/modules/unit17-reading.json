@@ -1,0 +1,31 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit17-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Getting things done, Shops, money and clothes and Describing things",
+  "plan": {
+    "words": [
+      "fr:lex:boulanger",
+      "fr:lex:boucherie",
+      "fr:lex:epicerie",
+      "fr:lex:portefeuille",
+      "fr:lex:complet",
+      "fr:lex:aventure",
+      "fr:lex:chou",
+      "fr:lex:parfum",
+      "fr:lex:bague",
+      "fr:lex:depenser"
+    ],
+    "constructions": [
+      "fr:cx:imperative.vous",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:conditionnel-present",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:il-y-a",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:si.present"
+    ],
+    "source": "plan.json"
+  }
+}

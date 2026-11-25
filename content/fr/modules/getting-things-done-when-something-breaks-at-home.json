@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "getting-things-done-when-something-breaks-at-home",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Getting things done: when something breaks at home",
+  "plan": {
+    "words": [
+      "fr:lex:fuite",
+      "fr:lex:bloquer",
+      "fr:lex:enfermer",
+      "fr:lex:plombier",
+      "fr:lex:serrurier",
+      "fr:lex:electricien",
+      "fr:lex:reparateur",
+      "fr:lex:proprietaire",
+      "fr:lex:panne",
+      "fr:lex:robinet",
+      "fr:lex:serrure",
+      "fr:lex:chauffage"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

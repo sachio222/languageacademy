@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit15-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · The remaining tenses",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:conditionnel-passe.etre",
+      "fr:cx:plus-que-parfait.etre",
+      "fr:cx:futur-anterieur",
+      "fr:cx:passive",
+      "fr:cx:si.plus-que-parfait-conditionnel-passe"
+    ],
+    "source": "plan.json"
+  }
+}

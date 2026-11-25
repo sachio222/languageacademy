@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ou-after-a-place-or-a-time",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "où after a place or a time (la ville où j'habite, le jour où il est venu)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:relative.ou"
+    ],
+    "source": "plan.json"
+  }
+}

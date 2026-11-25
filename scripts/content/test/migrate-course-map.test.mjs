@@ -211,6 +211,7 @@ test('every module file declares what the course map says it teaches and tests',
   const { declarations } = split(COURSE_MAP);
   let n = 0;
   for (const [key, mod] of course.modules) {
+    if (mod.status === 'planned') continue; // a course plan stub (Task 17) was never in the course map
     const d = declarations[key] ?? {};
     assert.deepEqual(mod.teaches, d.teaches, `${key} teaches`);
     assert.deepEqual(mod.tests, d.tests, `${key} tests`);

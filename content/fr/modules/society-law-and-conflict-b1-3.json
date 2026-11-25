@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-law-and-conflict-b1-3",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Society, law and conflict (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:juge",
+      "fr:lex:attaque",
+      "fr:lex:enquete",
+      "fr:lex:pretre",
+      "fr:lex:justice",
+      "fr:lex:defense",
+      "fr:lex:volonte",
+      "fr:lex:parti",
+      "fr:lex:defendre",
+      "fr:lex:trahir",
+      "fr:lex:appuyer",
+      "fr:lex:transmettre"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

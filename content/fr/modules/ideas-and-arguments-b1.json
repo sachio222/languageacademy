@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-and-arguments-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Ideas and arguments (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:type",
+      "fr:lex:cas",
+      "fr:lex:ordre",
+      "fr:lex:esprit",
+      "fr:lex:rapport",
+      "fr:lex:effet",
+      "fr:lex:sorte",
+      "fr:lex:parole",
+      "fr:lex:impression",
+      "fr:lex:ignorer",
+      "fr:lex:avouer",
+      "fr:lex:considerer",
+      "fr:lex:fixer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

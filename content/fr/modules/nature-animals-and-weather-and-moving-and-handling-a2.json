@@ -1,0 +1,28 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nature-animals-and-weather-and-moving-and-handling-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Nature, animals and weather and Moving and handling things (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:fond",
+      "fr:lex:boite",
+      "fr:lex:bord",
+      "fr:lex:objet",
+      "fr:lex:chaine",
+      "fr:lex:poule",
+      "fr:lex:foret",
+      "fr:lex:bouton",
+      "fr:lex:serpent",
+      "fr:lex:cochon",
+      "fr:lex:boule",
+      "fr:lex:temperature",
+      "fr:lex:frapper",
+      "fr:lex:attraper",
+      "fr:lex:deposer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

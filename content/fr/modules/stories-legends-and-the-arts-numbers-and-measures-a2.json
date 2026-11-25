@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "stories-legends-and-the-arts-numbers-and-measures-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Stories, legends and the arts, Numbers and measures and more (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:seconde",
+      "fr:lex:moitie",
+      "fr:lex:avance",
+      "fr:lex:present",
+      "fr:lex:passe",
+      "fr:lex:poids",
+      "fr:lex:durer",
+      "fr:lex:demenager"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

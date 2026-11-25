@@ -158,7 +158,8 @@ const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w
 const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('fr'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
 // example: a section made from a concept card keeps the card's example line.
 const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
-const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY }, ['words', 'constructions', 'source']);
+// draft: the file a planned module will be written from, as the plan names it (Reading 12's draft, Task 17).
+const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY }, ['words', 'constructions', 'source']);
 
 const KIND_SCHEMAS = {
   lesson: {
@@ -359,6 +360,11 @@ function graphRules(mod, cx) {
     check('teaches.words', mod.teaches.words, ids.words, 'word_unknown', 'headword or form');
   }
   if (isObj(mod.tests)) check('tests.constructions', mod.tests.constructions, ids.constructions, 'construction_unknown', 'construction');
+  // A planned module's plan names graph ids too, so a stub never points at a word or pattern the graph lacks.
+  if (mod.status === 'planned' && isObj(mod.plan)) {
+    check('plan.constructions', mod.plan.constructions, ids.constructions, 'construction_unknown', 'construction');
+    check('plan.words', mod.plan.words, ids.words, 'word_unknown', 'headword or form');
+  }
 }
 
 function textRules(cx) {
@@ -384,7 +390,8 @@ function inspect(mod, { file, unitIndex = null, graphIds = null } = {}) {
   cx.kind = mod.kind;
 
   if (mod.status === 'planned') {
-    walkFields(PLANNED_FIELDS, ['title', 'plan'], mod, '', cx);
+    // A planned unit exam, like a written one, takes its title from the outline (spec 5.8).
+    walkFields(PLANNED_FIELDS, mod.kind === 'unit_exam' ? ['plan'] : ['title', 'plan'], mod, '', cx);
   } else if (!kindOk || !STATUSES.includes(mod.status)) {
     // Without a kind or a status the module's shape is unknown; check only the common fields.
     for (const [k, node] of Object.entries(COMMON_FIELDS)) if (mod[k] !== undefined) walk(node, mod[k], k, cx, mod);

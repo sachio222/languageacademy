@@ -169,18 +169,21 @@ function readItem(key, item) {
 // course: loadCourse() output. opts ({ isWord }) is accepted for readCourse's signature; roles come from the schema,
 // so no wording test runs. Returns NormalizedModule[] in course order, each with the module's declared teaching
 // (teaches: { words, constructions }, tests: construction ids), which courseMapFromContent reads.
+// A planned module (status planned, a course plan stub) is not written yet, so it is not read at all: it teaches and
+// tests nothing, its title claims no level, and the course the reuse windows run over ends at the last written module.
+// Positions keep the loader's course order, so a written module keeps its place when a stub before it is written.
 export function readCourseFromContent(course, opts = {}) { // eslint-disable-line no-unused-vars -- opts kept for readCourse's signature
   const out = [];
   for (const unit of course.units) {
-    unit.modules.forEach((mod, j) => {
+    const written = unit.modules.filter((mod) => mod.status !== 'planned');
+    written.forEach((mod, j) => {
       const key = mod.module_key;
-      const planned = mod.status === 'planned';
       const items = [];
       for (const item of mod.items ?? []) items.push(...readItem(key, item));
       items.push(...moduleItems(key, mod));
       // The unit's can-do lines and description (outline, native text with spans) and its French can-do example say
-      // what the unit promises the learner can do: checked where the unit ends.
-      if (j === unit.modules.length - 1) {
+      // what the unit promises the learner can do: checked where the unit's written modules end.
+      if (j === written.length - 1) {
         for (const f of ['description', 'can_do', 'can_do_short']) {
           if (typeof unit[f] === 'string') items.push(textItem(`${key}#unit/${f}`, 'unit-can-do', spansOf(unit[f])));
         }
@@ -206,9 +209,8 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         shapes,
         unreadShapes: [],
         blankProblems: [],
-        // A planned module (status planned) is not written yet, so its plan teaches and tests nothing.
-        teaches: planned ? { words: [], constructions: [] } : { words: [...(mod.teaches?.words ?? [])], constructions: [...(mod.teaches?.constructions ?? [])] },
-        tests: planned ? [] : [...(mod.tests?.constructions ?? [])],
+        teaches: { words: [...(mod.teaches?.words ?? [])], constructions: [...(mod.teaches?.constructions ?? [])] },
+        tests: [...(mod.tests?.constructions ?? [])],
       });
     });
   }

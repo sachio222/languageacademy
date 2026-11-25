@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "stories-legends-and-the-arts-b1-2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Stories, legends and the arts (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:talent",
+      "fr:lex:genie",
+      "fr:lex:cauchemar",
+      "fr:lex:paradis",
+      "fr:lex:piege",
+      "fr:lex:masque",
+      "fr:lex:croix",
+      "fr:lex:lancer",
+      "fr:lex:reculer",
+      "fr:lex:eclater",
+      "fr:lex:exagerer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

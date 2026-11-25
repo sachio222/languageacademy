@@ -39,10 +39,12 @@ function liveView(full, inSnapshot) {
     }),
   }));
   for (const p of full.shelf.pages.filter(isLive)) modules.set(p.module_key, p);
-  const writtenAfter = [...full.modules.keys()].filter((k) => !modules.has(k));
+  // A planned module (a course plan stub) is not written yet, so it is never live: it is left out by its status.
+  const writtenAfter = [...full.modules].filter(([k, m]) => !modules.has(k) && m.status !== 'planned').map(([k]) => k);
   return { course: { ...full, units, modules }, writtenAfter };
 }
-const { course, writtenAfter } = liveView(loadCourse(), new Set(snapshot.map((l) => l.moduleKey)));
+const full = loadCourse();
+const { course, writtenAfter } = liveView(full, new Set(snapshot.map((l) => l.moduleKey)));
 const checks = goldenChecks({ liveIds, course, lSources, handFixes, rewrites: REWRITES, plain, adapt: (m) => toLegacyLesson(m, { liveIds, course }) });
 
 // Every span text in a module: today's quotes around one are dropped before comparing (golden.mjs sameText).
@@ -109,6 +111,18 @@ test('a module written after the snapshot takes no live number and is not compar
   for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
   // The reading after the guide keeps its live number.
   assert.equal(toLegacyLesson(course.modules.get('2024-03-30-reading-4'), { liveIds, course }).id, 52);
+});
+
+test('a planned module is not live: it takes no live number, is never compared and is not listed as written after', () => {
+  // By rule (status planned), so a new stub never needs a hand edit here; the list above stays for written modules.
+  const planned = [...full.modules.values()].filter((m) => m.status === 'planned').map((m) => m.module_key);
+  assert.ok(planned.length > 0, 'the course holds planned stubs');
+  for (const key of planned) {
+    assert.equal(liveIds[key], undefined, `${key} has live ids`);
+    assert.equal(course.modules.has(key), false, `${key} takes a live number`);
+    assert.equal(writtenAfter.includes(key), false, `${key} is listed as written after the snapshot`);
+  }
+  assert.equal(result.diffs.some((d) => planned.includes(d.module_key)), false, 'a planned module is compared');
 });
 
 test('every allowed class holds exactly the differences it records', () => {

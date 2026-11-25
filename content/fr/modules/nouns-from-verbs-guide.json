@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nouns-from-verbs-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Nouns from verbs (-tion, -ment, -age: explication, changement, mariage)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

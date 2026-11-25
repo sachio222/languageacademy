@@ -1,0 +1,27 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-people-and-nature-animals-and-weather-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing people and Nature, animals and weather (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:innocent",
+      "fr:lex:prudent",
+      "fr:lex:cruel",
+      "fr:lex:raisonnable",
+      "fr:lex:assurer",
+      "fr:lex:placer",
+      "fr:lex:transformer",
+      "fr:lex:rassurer",
+      "fr:lex:rayon",
+      "fr:lex:flamme",
+      "fr:lex:colline",
+      "fr:lex:abri",
+      "fr:lex:bruler",
+      "fr:lex:couler"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

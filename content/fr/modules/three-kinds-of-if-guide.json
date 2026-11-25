@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "three-kinds-of-if-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Three kinds of if (si + present, si + imparfait, si + plus-que-parfait)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

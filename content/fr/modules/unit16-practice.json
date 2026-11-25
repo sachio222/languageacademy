@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit16-practice",
+  "kind": "practice",
+  "status": "planned",
+  "title": "Practice · People and family, Food and meals and Travel and transport",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

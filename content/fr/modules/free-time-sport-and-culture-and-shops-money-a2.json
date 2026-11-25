@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "free-time-sport-and-culture-and-shops-money-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Free time, sport and culture and Shops, money and clothes (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:jeu",
+      "fr:lex:equipe",
+      "fr:lex:balle",
+      "fr:lex:chanson",
+      "fr:lex:image",
+      "fr:lex:club",
+      "fr:lex:spectacle",
+      "fr:lex:plaisanter",
+      "fr:lex:peindre",
+      "fr:lex:cheque",
+      "fr:lex:ennuyer",
+      "fr:lex:louer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

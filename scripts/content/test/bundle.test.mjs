@@ -268,7 +268,9 @@ test('item kinds and answer keys', () => {
 });
 
 test('a respond cue is the English to say, not a scene line', () => {
-  const sources = course.units.flatMap((u) => u.modules).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
+  // The units the bundle holds: it stops before the first unit with a planned module (spec 7).
+  const bundled = new Set(bundle.units.map((u) => u.unit_key));
+  const sources = course.units.filter((u) => bundled.has(u.unit_key)).flatMap((u) => u.modules).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
   const withCue = sources.filter(([, i]) => i.type === 'respond' && i.cue !== undefined);
   assert.ok(withCue.length > 0);
   for (const [key, src] of withCue) {

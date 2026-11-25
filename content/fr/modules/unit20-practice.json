@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit20-practice",
+  "kind": "practice",
+  "status": "planned",
+  "title": "Practice · Home, Town and places and Free time, sport and culture",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

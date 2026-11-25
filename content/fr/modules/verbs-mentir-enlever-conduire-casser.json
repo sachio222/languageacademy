@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-mentir-enlever-conduire-casser",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: mentir, enlever, conduire, casser",
+  "plan": {
+    "words": [
+      "fr:lex:mentir",
+      "fr:lex:enlever",
+      "fr:lex:conduire",
+      "fr:lex:casser"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

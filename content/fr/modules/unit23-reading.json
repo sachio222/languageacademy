@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit23-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Society, law and conflict, Emotions and states of mind and Body and health",
+  "plan": {
+    "words": [
+      "fr:lex:tenue",
+      "fr:lex:intervenir",
+      "fr:lex:proposition",
+      "fr:lex:poete",
+      "fr:lex:absence",
+      "fr:lex:seance",
+      "fr:lex:rejeter",
+      "fr:lex:paysan",
+      "fr:lex:genereux",
+      "fr:lex:epreuve"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

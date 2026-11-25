@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "re-verbs-like-attendre",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "-re verbs like attendre (je réponds, nous répondons)",
+  "plan": {
+    "words": [
+      "fr:lex:repondre",
+      "fr:lex:vendre"
+    ],
+    "constructions": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
+    "source": "plan.json"
+  }
+}

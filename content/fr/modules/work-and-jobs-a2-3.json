@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-and-jobs-a2-3",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Work and jobs (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:pause",
+      "fr:lex:maitresse",
+      "fr:lex:salaire",
+      "fr:lex:ecrivain",
+      "fr:lex:ouvrier",
+      "fr:lex:activite",
+      "fr:lex:danseur",
+      "fr:lex:raccrocher",
+      "fr:lex:decrocher",
+      "fr:lex:recommander"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

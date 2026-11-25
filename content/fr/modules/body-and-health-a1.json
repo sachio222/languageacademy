@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "body-and-health-a1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Body and health (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:bras",
+      "fr:lex:jambe",
+      "fr:lex:dos",
+      "fr:lex:bouche",
+      "fr:lex:doigt",
+      "fr:lex:nez",
+      "fr:lex:dent",
+      "fr:lex:oreille",
+      "fr:lex:ventre"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

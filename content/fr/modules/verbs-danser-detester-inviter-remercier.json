@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-danser-detester-inviter-remercier",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: danser, détester, inviter, remercier",
+  "plan": {
+    "words": [
+      "fr:lex:danser",
+      "fr:lex:detester",
+      "fr:lex:inviter",
+      "fr:lex:remercier"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

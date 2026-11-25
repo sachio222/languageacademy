@@ -64,8 +64,9 @@ test('the default content folder validates clean', () => {
   const r = run('validate');
   assert.equal(r.status, 0, r.stderr);
   // Every module of the outline has its file: 146 lessons, practice sets and unit exams, 12 guides, 11 readings and
-  // 10 Reference pages. Translations outside Unit 1 still print as warnings.
-  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 179 modules');
+  // 10 Reference pages written, and the course plan's 194 planned stubs (Task 17). Translations outside Unit 1 still
+  // print as warnings.
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 373 modules');
   assert.match(r.stdout, /^\d+ warnings: translate_outside_unit1 \d+$/m);
 });
 

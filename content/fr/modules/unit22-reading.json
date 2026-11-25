@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit22-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Work and jobs, Shops, money and clothes and Nature, animals and weather",
+  "plan": {
+    "words": [
+      "fr:lex:randonnee",
+      "fr:lex:oreiller",
+      "fr:lex:armoire",
+      "fr:lex:balcon",
+      "fr:lex:guitare",
+      "fr:lex:tiroir",
+      "fr:lex:promenade",
+      "fr:lex:casque",
+      "fr:lex:ski",
+      "fr:lex:bougie"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

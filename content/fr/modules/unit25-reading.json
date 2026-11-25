@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit25-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Emotions and states of mind, Ideas and arguments and Work and jobs",
+  "plan": {
+    "words": [
+      "fr:lex:etendre",
+      "fr:lex:charme",
+      "fr:lex:auteur",
+      "fr:lex:ceremonie",
+      "fr:lex:forcement",
+      "fr:lex:songer",
+      "fr:lex:fidele",
+      "fr:lex:avantage",
+      "fr:lex:religion",
+      "fr:lex:protection"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

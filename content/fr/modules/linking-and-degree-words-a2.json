@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "linking-and-degree-words-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Linking and degree words (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:assez",
+      "fr:lex:plutot",
+      "fr:lex:tellement",
+      "fr:lex:surtout",
+      "fr:lex:exactement",
+      "fr:lex:doucement",
+      "fr:lex:chacun",
+      "fr:lex:debout",
+      "fr:lex:interesser",
+      "fr:lex:facher"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

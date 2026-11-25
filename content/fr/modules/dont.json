@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "dont",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "dont (la chose dont je parle)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:relative.dont"
+    ],
+    "source": "plan.json"
+  }
+}

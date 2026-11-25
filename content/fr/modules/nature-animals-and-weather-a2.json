@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nature-animals-and-weather-a2",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Nature, animals and weather (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:sable",
+      "fr:lex:ocean",
+      "fr:lex:canard",
+      "fr:lex:souris",
+      "fr:lex:fleuve",
+      "fr:lex:degre",
+      "fr:lex:lion",
+      "fr:lex:orage",
+      "fr:lex:mouton",
+      "fr:lex:paysage",
+      "fr:lex:brouillard",
+      "fr:lex:bouquet"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

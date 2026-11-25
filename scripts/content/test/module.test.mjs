@@ -274,6 +274,31 @@ test('a planned module holds only what the plan settles', () => {
   assert.deepEqual(codes({ ...stub, status: 'drafted' }, 13), ['status_invalid']);
 });
 
+test('a planned unit exam takes its title from the outline; every other planned module needs one', () => {
+  const plan = { words: [], constructions: [], source: 'plan.json' };
+  const exam = { schema: 'la-module@1', module_key: 'weather-exam', kind: 'unit_exam', status: 'planned', plan };
+  assert.deepEqual(codes(exam, 13), []);
+  assert.deepEqual(codes({ ...exam, kind: 'lesson' }, 13), ['field_missing']);
+  assert.deepEqual(codes({ ...exam, title: 'Unit 13 Exam' }, 13), ['position_word']);
+});
+
+test('a planned module may name the draft it will be written from', () => {
+  const stub = { schema: 'la-module@1', module_key: 'reading-weather', kind: 'reading', status: 'planned', title: 'Reading · The weather' };
+  const plan = { words: [], constructions: [], source: 'plan.json', draft: 'research/course-plan/reading-12-draft.js' };
+  assert.deepEqual(codes({ ...stub, plan }, 13), []);
+  assert.deepEqual(codes({ ...stub, plan: { ...plan, draft: '' } }, 13), ['field_type']);
+  assert.deepEqual(codes({ ...stub, plan: { ...plan, theme: 'rain' } }, 13), ['field_unknown']);
+});
+
+test("a plan's words and constructions are graph ids", () => {
+  const stub = { schema: 'la-module@1', module_key: 'weather', kind: 'lesson', status: 'planned', title: 'The weather' };
+  const plan = { words: ['fr:lex:ne', 'fr:lex:pluie'], constructions: ['fr:cx:elision', 'fr:cx:nope'], source: 'plan.json' };
+  assert.deepEqual(graphCodes({ ...stub, plan }, 13), [
+    ['construction_unknown', 'plan.constructions[1]'],
+    ['word_unknown', 'plan.words[1]'],
+  ]);
+});
+
 test('written modules may not carry a plan', () => {
   const mod = miniModule(MINI_KEYS.practice);
   mod.plan = { words: [], constructions: [], source: 'plan.json' };

@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-passer-oublier-ouvrir-fermer",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: passer, oublier, ouvrir, fermer",
+  "plan": {
+    "words": [
+      "fr:lex:passer",
+      "fr:lex:oublier",
+      "fr:lex:ouvrir",
+      "fr:lex:fermer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

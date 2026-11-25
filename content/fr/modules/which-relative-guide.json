@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "which-relative-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Which relative? (qui, que, où, dont, ce qui, ce que)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

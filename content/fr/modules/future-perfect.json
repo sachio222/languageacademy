@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "future-perfect",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Future perfect (quand tu auras fini, il sera parti)",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:futur-anterieur"
+    ],
+    "source": "plan.json"
+  }
+}

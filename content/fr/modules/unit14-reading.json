@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit14-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · The rest of the present tense, then verbs",
+  "plan": {
+    "words": [],
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:imparfait",
+      "fr:cx:futur-simple",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:si.present"
+    ],
+    "source": "plan.json"
+  }
+}

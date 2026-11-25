@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-people-b1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing people (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:capable",
+      "fr:lex:ridicule",
+      "fr:lex:honnete",
+      "fr:lex:coupable",
+      "fr:lex:nerveux",
+      "fr:lex:jaloux",
+      "fr:lex:malin",
+      "fr:lex:retirer",
+      "fr:lex:presser",
+      "fr:lex:confier",
+      "fr:lex:reduire"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

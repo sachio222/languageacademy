@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit18-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · Talking, agreeing and feelings, Work and jobs and Describing things",
+  "plan": {
+    "words": [
+      "fr:lex:quai",
+      "fr:lex:sejour",
+      "fr:lex:renseignement",
+      "fr:lex:passager",
+      "fr:lex:ecran",
+      "fr:lex:courrier",
+      "fr:lex:document",
+      "fr:lex:passeport",
+      "fr:lex:courageux",
+      "fr:lex:qualite"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

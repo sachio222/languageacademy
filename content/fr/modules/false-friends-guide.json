@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "false-friends-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: False friends (librairie, journée, rester, attendre, assister …: the look-alikes from the English-French pair list)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nature-animals-and-weather-and-linking-and-degree-a1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Nature, animals and weather and Linking and degree words (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:sans",
+      "fr:lex:contre",
+      "fr:lex:allo",
+      "fr:lex:montagne",
+      "fr:lex:bravo",
+      "fr:lex:plage",
+      "fr:lex:volontiers",
+      "fr:lex:meteo"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

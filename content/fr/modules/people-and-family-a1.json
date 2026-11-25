@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "people-and-family-a1",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "People and family (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:monsieur",
+      "fr:lex:mari",
+      "fr:lex:bebe",
+      "fr:lex:copain",
+      "fr:lex:oncle",
+      "fr:lex:tante",
+      "fr:lex:mademoiselle",
+      "fr:lex:cousin",
+      "fr:lex:grand-mere",
+      "fr:lex:eleve",
+      "fr:lex:prenom"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}
