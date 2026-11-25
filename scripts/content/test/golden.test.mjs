@@ -23,21 +23,22 @@ const lSources = readJson(join(CONTENT_ROOT, 'legacy', 'l-sources.json'));
 const handFixes = readJson(join(CONTENT_ROOT, 'legacy', 'hand-fixes.json'));
 const report = parseReport(readFileSync(join(CONTENT_ROOT, 'migration-report.md'), 'utf8'));
 
-// The course as today's lessonData.js numbers it: a module written after the snapshot (a new guide goes to L only,
-// Jake 2026-11-25) has no live lesson, so it takes no live position and nothing is compared for it. A module the
-// migration converted from the live app (it has live ids) is never left out this way.
+// The course as today's lessonData.js numbers it: a module written after the snapshot (a new guide or Reference page
+// goes to L only, Jake 2026-11-25) has no live lesson, so it takes no live position and nothing is compared for it. A
+// module the migration converted from the live app (it has live ids) is never left out this way.
 function liveView(full, inSnapshot) {
   const modules = new Map();
   let position = 0;
+  const isLive = (m) => inSnapshot.has(m.module_key) || liveIds[m.module_key];
   const units = full.units.map((u) => ({
     ...u,
-    modules: u.modules.filter((m) => inSnapshot.has(m.module_key) || liveIds[m.module_key]).map((m) => {
+    modules: u.modules.filter(isLive).map((m) => {
       const live = { ...m, position: (position += 1) };
       modules.set(m.module_key, live);
       return live;
     }),
   }));
-  for (const p of full.shelf.pages) modules.set(p.module_key, p);
+  for (const p of full.shelf.pages.filter(isLive)) modules.set(p.module_key, p);
   const writtenAfter = [...full.modules.keys()].filter((k) => !modules.has(k));
   return { course: { ...full, units, modules }, writtenAfter };
 }
@@ -103,8 +104,8 @@ test('adapter shows the same lessons as today', () => {
 });
 
 test('a module written after the snapshot takes no live number and is not compared', () => {
-  // Exactly the guides written after the snapshot; a new module joins this list by hand.
-  assert.deepEqual(writtenAfter, ['gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide']);
+  // Exactly the guides and the Reference page written after the snapshot; a new module joins this list by hand.
+  assert.deepEqual(writtenAfter, ['gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'phrasebook']);
   for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
   // The reading after the guide keeps its live number.
   assert.equal(toLegacyLesson(course.modules.get('2024-03-30-reading-4'), { liveIds, course }).id, 52);

@@ -1,8 +1,10 @@
 // Rules that need the content layer: exam items copied from lessons, passage words with no pop-up, teaching only a
-// guide gives, and the issue budget.
+// guide gives, a Reference page that opens nothing, and the issue budget.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { miniCourse, checkMini, ofRule } from './content-helpers.mjs';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { miniCourse, checkMini, ofRule, repoRoot } from './content-helpers.mjs';
 import { compareBudget } from '../budget.mjs';
 
 test('exam copy', async () => {
@@ -54,6 +56,32 @@ test('guide only teaching', async () => {
     modules.get('2024-01-02-etre').teaches.constructions.push('fr:cx:q.est-ce-que');
   });
   assert.deepEqual(ofRule((await checkMini(taught)).issues, 'guide_only_teaching').filter((i) => i.nodeId === 'fr:cx:q.est-ce-que'), []);
+});
+
+test('phrasebook opens nothing', async () => {
+  // The course's phrasebook page sits on the shelf (shelf.pages) but not in shelf.opens_words, so a phrase it lists is
+  // still untaught on the lesson path: quelque chose in a Unit 2 lesson before any lesson teaches it.
+  const phrasebook = JSON.parse(readFileSync(join(repoRoot, 'content/fr/modules/phrasebook.json'), 'utf8'));
+  assert.equal(phrasebook.kind, 'reference');
+  const withPhrasebook = (open) => miniCourse((modules, outline) => {
+    modules.set('phrasebook', phrasebook);
+    outline.shelf.pages.push('phrasebook');
+    if (open) outline.shelf.opens_words.push('phrasebook');
+    modules.set('lesson-chose', {
+      schema: 'la-module@1', module_key: 'lesson-chose', kind: 'lesson', status: 'written',
+      title: 'Something', description: 'Say something.',
+      vocabulary: [{ word_id: 'chose-tu-es-fr', fr: 'tu es', gloss: 'you are' }],
+      items: [{ id: 'i-chose', type: 'choice', question: 'Which one means something?', options: [{ text: 'quelque chose', fr: true, right: true }, { text: 'tu es', fr: true }] }],
+    });
+    outline.units[1].entries.unshift('lesson-chose');
+  });
+  const untaughtChose = async (course) => ofRule((await checkMini(course)).issues, 'untaught-word')
+    .filter((i) => i.moduleKey === 'lesson-chose' && /quelque|chose/.test(i.surface));
+  const closed = await untaughtChose(withPhrasebook(false));
+  assert.ok(closed.length > 0, 'quelque chose is untaught in the Unit 2 lesson');
+  assert.ok(closed.every((i) => i.itemRef === 'lesson-chose#i-chose'));
+  // The phrasebook does hold the phrase: listing it in opens_words would open it from the first lesson.
+  assert.deepEqual(await untaughtChose(withPhrasebook(true)), []);
 });
 
 test('the budget fails only when a count rises', () => {

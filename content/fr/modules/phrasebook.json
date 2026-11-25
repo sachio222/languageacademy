@@ -1,0 +1,108 @@
+{
+  "schema": "la-module@1",
+  "module_key": "phrasebook",
+  "kind": "reference",
+  "status": "written",
+  "title": "Phrasebook",
+  "description": "Everyday phrases to look up when you need one, from {ça va} to {n'est-ce pas}.",
+  "vocabulary": [
+    {
+      "word_id": "ca-va-fr",
+      "fr": "ça va",
+      "gloss": "how's it going? / it's going fine",
+      "note": "With a rising voice it asks how someone is. Said flat, it answers.",
+      "example_fr": "Salut, ça va ? Oui, ça va bien.",
+      "example_en": "Hi, how's it going? Yes, it's going well."
+    },
+    {
+      "word_id": "comment-ca-va-fr",
+      "fr": "comment ça va",
+      "gloss": "how are you?",
+      "note": "It is a little fuller than {ça va ?} and just as friendly.",
+      "example_fr": "Bonjour Marie, comment ça va ?",
+      "example_en": "Hello Marie, how are you?"
+    },
+    {
+      "word_id": "excusez-moi-fr",
+      "fr": "excusez-moi",
+      "gloss": "excuse me",
+      "note": "Say it to someone you call {vous}, or to a group. With a friend, say {excuse-moi}.",
+      "example_fr": "Excusez-moi, où est la gare ?",
+      "example_en": "Excuse me, where is the station?"
+    },
+    {
+      "word_id": "s-il-te-plait-fr",
+      "fr": "s'il te plaît",
+      "gloss": "please (to a friend)",
+      "note": "To someone you call {vous}, say {s'il vous plaît}.",
+      "example_fr": "Passe-moi le pain, s'il te plaît.",
+      "example_en": "Pass me the bread, please."
+    },
+    {
+      "word_id": "je-voudrais-fr",
+      "fr": "je voudrais",
+      "gloss": "I would like",
+      "note": "The polite way to ask for something in a shop or a café.",
+      "example_fr": "Je voudrais un croissant, s'il vous plaît.",
+      "example_en": "I would like a croissant, please."
+    },
+    {
+      "word_id": "bien-sur-fr",
+      "fr": "bien sûr",
+      "gloss": "of course",
+      "example_fr": "Tu viens ce soir ? Bien sûr !",
+      "example_en": "Are you coming tonight? Of course!"
+    },
+    {
+      "word_id": "de-temps-en-temps-fr",
+      "fr": "de temps en temps",
+      "gloss": "from time to time",
+      "example_fr": "Je vais au cinéma de temps en temps.",
+      "example_en": "I go to the cinema from time to time."
+    },
+    {
+      "word_id": "quelque-chose-fr",
+      "fr": "quelque chose",
+      "gloss": "something",
+      "note": "Before an adjective, add {de}: {quelque chose de bon}.",
+      "example_fr": "Tu veux quelque chose à boire ?",
+      "example_en": "Do you want something to drink?"
+    },
+    {
+      "word_id": "tout-le-monde-fr",
+      "fr": "tout le monde",
+      "gloss": "everyone",
+      "note": "It takes the {il} form of the verb: {tout le monde est là}.",
+      "example_fr": "Tout le monde est prêt ?",
+      "example_en": "Is everyone ready?"
+    },
+    {
+      "word_id": "n-est-ce-pas-fr",
+      "fr": "n'est-ce pas",
+      "gloss": "isn't it? / right?",
+      "note": "Put it at the end of a sentence to ask someone to agree.",
+      "example_fr": "Il fait beau, n'est-ce pas ?",
+      "example_en": "The weather is nice, isn't it?"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s-greeting",
+      "heading": "Saying hello",
+      "text": "Ask how someone is with {ça va ?} or {comment ça va ?}. Answer with {ça va}.",
+      "example": "{Salut, ça va ? Oui, ça va bien.}"
+    },
+    {
+      "id": "s-being-polite",
+      "heading": "Being polite",
+      "text": "Use {excusez-moi} to get someone's attention, {je voudrais} to ask for something, and {s'il te plaît} or {s'il vous plaît} to say please.",
+      "example": "{Excusez-moi, je voudrais un café, s'il vous plaît.}"
+    },
+    {
+      "id": "s-in-conversation",
+      "heading": "In conversation",
+      "text": "You will hear these often in everyday conversation: {bien sûr}, {de temps en temps}, {quelque chose}, {tout le monde} and {n'est-ce pas}.",
+      "example": "{Tout le monde aime le chocolat, n'est-ce pas ?}"
+    }
+  ]
+}
