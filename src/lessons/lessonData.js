@@ -9,7 +9,7 @@
  * That's it!
  */
 
-import { buildLesson } from "./moduleBuilder.js";
+import { buildLesson, reportExercisesWithoutAnswer } from "./moduleBuilder.js";
 
 // Import unit-based configuration system
 import { getModuleConfigs, generateUnitStructure } from "./unitConfigLoader.js";
@@ -57,6 +57,9 @@ const allLessons = moduleConfigs.map((config, index) => {
     })),
   };
 });
+
+// Log any exercise that no answer can pass (a content error) at load time
+reportExercisesWithoutAnswer(allLessons);
 
 // Dynamic unit structure - automatically calculated from unit configs
 // No more manual range maintenance! Adding/removing modules updates ranges automatically
