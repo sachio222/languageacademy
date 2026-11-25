@@ -1,0 +1,359 @@
+{
+  "schema": "la-course@1",
+  "language": "fr",
+  "native": "en",
+  "units": [
+    {
+      "unit_key": "unit1",
+      "name": "Essential Grammar",
+      "description": "Master pronouns (I, you, he), être (to be), avoir (to have), articles, basic nouns, and connectors",
+      "can_do": "introduce yourself, say who has what and join two ideas with {et} and {mais}",
+      "can_do_short": "introduce yourself",
+      "can_do_example_fr": "Je suis {name}. J’ai un chat. Je suis fatiguée, mais contente.",
+      "theme": {
+        "icon": "🧩",
+        "color": "#3b82f6"
+      },
+      "entries": [
+        "2024-01-01-famous-words",
+        "2024-01-01-pronouns",
+        "2024-01-02-etre",
+        "2024-01-04-avoir",
+        "2024-01-05-articles",
+        "2024-10-21-cognates-help",
+        "2024-01-06-basic-nouns",
+        "2024-01-07-plurals",
+        "2024-10-20-liaison-help",
+        "2024-01-08-connectors",
+        "2024-01-09-reading1",
+        "2024-01-10-unit1-practice",
+        "2024-01-11-unit1-exam"
+      ]
+    },
+    {
+      "unit_key": "unit2",
+      "name": "Asking & Describing",
+      "description": "Ask questions, use demonstratives (this/that), essential verbs (want/can/see), add descriptions with adjectives and prepositions",
+      "can_do": "ask simple questions, point at things and say what you want and can do",
+      "can_do_short": "ask simple questions",
+      "can_do_example_fr": "Qu’est-ce que c’est ? Je veux ça. Je peux venir.",
+      "theme": {
+        "icon": "✍️",
+        "color": "#8b5cf6"
+      },
+      "entries": [
+        "2026-11-24-numbers",
+        "2026-11-24-negation-guide",
+        "2024-01-12-demonstratives",
+        "2024-01-13-ca-survival",
+        "2024-01-14-determiners-nouns",
+        "2024-01-15-vouloir",
+        "2024-01-16-pouvoir",
+        "2024-01-17-voir",
+        "2024-01-18-questions",
+        "2024-01-19-questions-help",
+        "2024-01-19-stressed-pronouns",
+        "2024-01-20-prepositions",
+        "2024-01-21-adjectives",
+        "2024-01-22-reading2",
+        "2024-01-23-unit2-practice",
+        "2024-01-24-unit2-exam"
+      ]
+    },
+    {
+      "unit_key": "unit3",
+      "name": "Movement & Possession",
+      "description": "Master motion verbs (go, come, leave), object pronouns (it/them), and possessives (mine, yours)",
+      "can_do": "say where you are going and coming from, and whose things are whose",
+      "can_do_short": "say where you are going",
+      "can_do_example_fr": "Je viens de Denver. C’est le mien.",
+      "theme": {
+        "icon": "🏃",
+        "color": "#06b6d4"
+      },
+      "entries": [
+        "2024-01-25-contractions",
+        "2024-01-26-venir",
+        "2024-01-27-aller",
+        "2024-01-28-verb-pattern-help",
+        "2024-01-29-partir",
+        "2024-01-30-object-pronouns",
+        "2024-01-31-possessive-adjectives",
+        "2024-02-01-possessive-pronouns",
+        "2024-02-02-combining",
+        "2024-02-03-reading3",
+        "2024-02-04-unit3-practice",
+        "2024-02-05-unit3-exam"
+      ]
+    },
+    {
+      "unit_key": "unit4",
+      "name": "Everyday Words",
+      "description": "Survival phrases, negation (I don't), time & location words, and essential daily verbs",
+      "can_do": "ask the price, say what you do and do not do, and say when and where",
+      "can_do_short": "ask the price",
+      "can_do_example_fr": "C’est combien ? Je ne parle pas bien.",
+      "theme": {
+        "icon": "🥖",
+        "color": "#f59e0b"
+      },
+      "entries": [
+        "2024-03-31-survival-phrases",
+        "2024-03-25-faire",
+        "2024-03-23-devoir",
+        "2024-03-29-parler",
+        "2024-10-22-search-find",
+        "2024-03-28-negation",
+        "2024-04-01-time-adverbs",
+        "2024-03-27-negation-2",
+        "2024-03-26-location-adverbs",
+        "2024-03-24-everyday-nouns",
+        "2024-03-30-reading-4",
+        "2024-04-03-unit-4-practice",
+        "2024-04-02-unit-4-exam"
+      ]
+    },
+    {
+      "unit_key": "unit5",
+      "name": "Time & Taste",
+      "description": "Talk about the past (I was, I had), express preferences and opinions, order food, and add nuance with conditionals",
+      "can_do": "order a coffee, say what food you like and what you ate",
+      "can_do_short": "order a coffee",
+      "can_do_example_fr": "Je voudrais un café, s’il vous plaît. J’aime le fromage.",
+      "theme": {
+        "icon": "⌚",
+        "color": "#ec4899"
+      },
+      "entries": [
+        "2024-04-08-comparisons",
+        "2024-04-07-comparisons-slang",
+        "2024-04-09-conditionals",
+        "2024-04-16-would-conditionals",
+        "2024-04-04-aimer",
+        "2024-04-10-etre-past",
+        "2024-04-05-avoir-past",
+        "2024-04-11-food-nouns",
+        "2024-04-12-manger",
+        "2024-04-06-boire",
+        "2024-04-13-reading-5",
+        "2024-04-15-unit-5-practice",
+        "2024-04-14-unit-5-exam"
+      ]
+    },
+    {
+      "unit_key": "unit6",
+      "name": "Basic Fluency",
+      "description": "Advanced communication verbs (say, take, give, put, ask), progressive tenses, expressing needs, and comprehensive vocabulary",
+      "can_do": "order a meal, ask for the bill and say what you need",
+      "can_do_short": "order a meal",
+      "can_do_example_fr": "Je prends le poulet. L’addition, s’il vous plaît. J’ai besoin de…",
+      "theme": {
+        "icon": "👌",
+        "color": "#10b981"
+      },
+      "entries": [
+        "2024-04-23-progressive-tenses",
+        "2024-04-20-dire",
+        "2024-04-22-prendre",
+        "2024-10-22-donner",
+        "2024-04-21-mettre",
+        "2024-04-19-demander",
+        "2024-04-18-commander",
+        "2024-04-17-besoin",
+        "2024-04-25-top-200-nouns",
+        "2024-04-24-reading-6",
+        "2024-04-27-unit-6-practice",
+        "2024-04-26-unit-6-exam"
+      ]
+    },
+    {
+      "unit_key": "unit7",
+      "name": "Knowledge & Learning",
+      "description": "Express understanding, thinking, and learning: comprendre (understand), savoir (know), penser (think), plus discourse markers for natural speech",
+      "can_do": "say what you know, understand, think and believe",
+      "can_do_short": "say what you think",
+      "can_do_example_fr": "Je sais. Je comprends. Je pense que oui.",
+      "theme": {
+        "icon": "📖",
+        "color": "#f97316"
+      },
+      "entries": [
+        "2024-05-05-on-and-people",
+        "2024-05-09-studying-verbs",
+        "2024-05-04-learning-verbs",
+        "2024-04-29-comprendre",
+        "2024-05-08-savoir",
+        "2024-04-30-connaitre",
+        "2024-05-06-penser",
+        "2024-05-01-croire",
+        "2024-05-03-knowledge-nouns",
+        "2024-05-02-discourse-markers",
+        "2024-04-28-comparison-modifiers",
+        "2024-05-07-reading-7",
+        "2024-05-11-unit-7-practice",
+        "2024-05-10-unit-7-exam"
+      ]
+    },
+    {
+      "unit_key": "unit8",
+      "name": "Daily Life & Actions",
+      "description": "Sequence actions in time, describe routines, introduce yourself properly: temporal words, reflexive verbs (s'appeler, se lever, se laver), and commands",
+      "can_do": "describe your day and tell people what to do",
+      "can_do_short": "describe your day",
+      "can_do_example_fr": "Je me lève à sept heures. Venez !",
+      "theme": {
+        "icon": "🌅",
+        "color": "#8b5cf6"
+      },
+      "entries": [
+        "2024-05-23-temporal-words",
+        "2024-05-21-reflexive-pronouns",
+        "2024-05-22-s-appeler",
+        "2024-05-19-morning-routine",
+        "2024-05-17-getting-ready",
+        "2024-05-16-daily-reflexives",
+        "2024-06-07-reflexive-past",
+        "2024-06-06-reciprocal-reflexives",
+        "2024-05-13-commands-tu",
+        "2024-05-14-commands-vous",
+        "2024-05-18-irregular-commands",
+        "2024-05-12-commands-pronouns",
+        "2024-05-20-reading-8",
+        "2024-05-25-unit-8-practice",
+        "2024-05-24-unit-8-exam"
+      ]
+    },
+    {
+      "unit_key": "unit9",
+      "name": "Discourse & Past Tense",
+      "description": "Complete storytelling mastery: causal/spatial words (parce que, près de), passé composé (j'ai mangé, je suis allé), imparfait (j'étais, il faisait), and the critical PC vs IMP distinction",
+      "can_do": "tell someone what you did last weekend",
+      "can_do_short": "tell someone about your weekend",
+      "can_do_example_fr": "Samedi, je suis allé au marché. Il faisait beau.",
+      "theme": {
+        "icon": "⏳",
+        "color": "#ef4444"
+      },
+      "entries": [
+        "2024-05-26-causal-words",
+        "2024-06-08-spatial-prepositions",
+        "2024-05-28-more-spatial-relations",
+        "2024-05-30-passe-compose-er",
+        "2024-06-01-passe-compose-irregular-1",
+        "2024-06-02-passe-compose-irregular-2",
+        "2024-05-31-passe-compose-etre",
+        "2024-05-29-passe-compose-agreement",
+        "2024-05-27-imparfait-all-verbs",
+        "2024-06-04-pc-vs-imparfait",
+        "2024-06-03-past-tense-composition",
+        "2024-06-05-reading-9",
+        "2024-06-10-unit-9-practice",
+        "2024-06-09-unit-9-exam"
+      ]
+    },
+    {
+      "unit_key": "unit10",
+      "name": "Mastery & Nuance",
+      "description": "B2 Level Phrases! Learn special verb forms, then use them in top practical expressions: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su), services (je me fais couper), and more!",
+      "can_do": "say what has to happen, what you hope and what you regret",
+      "can_do_short": "say what you hope and regret",
+      "can_do_example_fr": "Il faut que je parte. Si j’avais su…",
+      "theme": {
+        "icon": "🎓",
+        "color": "#8b5cf6"
+      },
+      "entries": [
+        "2024-01-23-common-special-forms-1",
+        "2024-01-24-common-special-forms-2",
+        "2024-01-28-necessity-phrases",
+        "2024-02-07-wish-phrases",
+        "2024-01-25-emotion-phrases",
+        "2024-01-29-opinion-phrases",
+        "2024-01-27-hypothetical-phrases",
+        "2024-01-30-past-regret-phrases",
+        "2024-01-26-had-already-phrases",
+        "2024-01-22-common-adverbs",
+        "2024-02-06-while-doing-phrases",
+        "2024-02-02-service-phrases",
+        "2024-01-21-before-phrases",
+        "2024-02-03-so-that-phrases",
+        "2024-01-20-although-phrases",
+        "2024-01-31-possibility-phrases",
+        "2024-02-01-reading-10",
+        "2024-02-05-unit-10-practice",
+        "2024-02-04-unit-10-exam"
+      ]
+    },
+    {
+      "unit_key": "unit11",
+      "name": "Daily Essentials",
+      "description": "Complete the top 100! Essential life skills: age expressions, high-frequency verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), and directions. Perfect 100% top 100 coverage!",
+      "can_do": "give your age, ask the way and follow directions",
+      "can_do_short": "ask the way",
+      "can_do_example_fr": "J’ai trente-cinq ans. Où est la gare ? Tournez à gauche.",
+      "theme": {
+        "icon": "🌟",
+        "color": "#f59e0b"
+      },
+      "entries": [
+        "2024-02-08-age-personal-info",
+        "2024-02-10-donner",
+        "2024-05-15-daily-actions-1",
+        "2024-02-13-search-and-find",
+        "2024-02-11-perception-verbs",
+        "2024-02-14-social-situations",
+        "2024-02-09-directions-navigation",
+        "2024-02-12-reading-11",
+        "2024-02-16-unit-11-practice",
+        "2024-02-15-unit-11-exam"
+      ]
+    },
+    {
+      "unit_key": "unit12",
+      "name": "Curiosity & Questions",
+      "description": "Ask ANY question in French! Learn nature vocabulary, then master all question structures: qu'est-ce qui/que distinction, complex pourquoi/comment, formal inversion, embedded questions, and native-level complexity.",
+      "can_do": "ask any question, casual or formal, including polite indirect ones",
+      "can_do_short": "ask any question",
+      "can_do_example_fr": "Je me demande pourquoi. Peux-tu me dire où… ?",
+      "theme": {
+        "icon": "❓",
+        "color": "#06b6d4"
+      },
+      "entries": [
+        "2024-03-15-nature-animals",
+        "2024-03-16-movement-verbs",
+        "2024-03-17-natural-phenomena",
+        "2024-03-15-questce-qui-que",
+        "2024-03-19-pourquoi-complex",
+        "2024-03-20-comment-complex",
+        "2024-03-16-quiest-qui-que",
+        "2024-03-22-inversion-questions",
+        "2024-03-23-embedded-questions",
+        "2024-03-24-rhetorical-negative",
+        "2024-03-25-multi-clause-questions"
+      ]
+    }
+  ],
+  "shelf": {
+    "pages": [
+      "2024-04-01-alphabet",
+      "2024-04-02-numbers",
+      "2024-04-03-days-months",
+      "2024-04-04-holidays",
+      "2024-04-05-colors",
+      "2024-04-06-french-countries",
+      "2024-04-07-language-stats",
+      "2024-04-08-spelling-patterns",
+      "2024-12-18-pronunciation-test"
+    ],
+    "opens_words": [
+      "2024-04-01-alphabet",
+      "2024-04-02-numbers",
+      "2024-04-03-days-months",
+      "2024-04-04-holidays",
+      "2024-04-05-colors",
+      "2024-04-06-french-countries"
+    ]
+  },
+  "retired": []
+}

@@ -2,9 +2,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { existsSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { MINI_ROOT } from './mini-fixture.mjs';
-import { CONTENT_ROOT } from '../load.mjs';
 
 const CLI = fileURLToPath(new URL('../cli.mjs', import.meta.url));
 const run = (...args) => spawnSync(process.execPath, [CLI, ...args], { encoding: 'utf8' });
@@ -15,10 +16,54 @@ test('validate the fixture', () => {
   assert.equal(r.stdout.trim(), 'ok 6 modules');
 });
 
-test('a missing default content folder is an empty course', { skip: existsSync(CONTENT_ROOT) && 'content/fr exists' }, () => {
-  const r = run('validate');
+// A copy of the mini course whose outline lists two modules that have no file.
+function rootWithMissingFiles(t) {
+  const root = mkdtempSync(join(tmpdir(), 'la-content-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(MINI_ROOT, root, { recursive: true });
+  const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
+  outline.units[0].entries.push('not-written-yet', 'nor-this-one');
+  writeFileSync(join(root, 'course.json'), JSON.stringify(outline));
+  return root;
+}
+
+test('missing files fail without --allow', (t) => {
+  const r = run('validate', '--root', rootWithMissingFiles(t));
+  assert.equal(r.status, 1);
+  assert.match(r.stderr, /outline_missing_file 2/);
+});
+
+test('--allow counts and prints the allowed problems', (t) => {
+  const r = run('validate', '--root', rootWithMissingFiles(t), '--allow', 'outline_missing_file');
   assert.equal(r.status, 0, r.stderr);
-  assert.equal(r.stdout.trim(), 'ok 0 modules');
+  assert.match(r.stdout, /not-written-yet/);
+  assert.match(r.stdout, /nor-this-one/);
+  assert.match(r.stdout.trim().split('\n').at(-1), /^ok with 2 allowed problems: outline_missing_file 2$/);
+});
+
+test('--allow does not hide other codes', (t) => {
+  const root = rootWithMissingFiles(t);
+  const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
+  outline.units[0].name = '';
+  writeFileSync(join(root, 'course.json'), JSON.stringify(outline));
+  const r = run('validate', '--root', root, '--allow', 'outline_missing_file');
+  assert.equal(r.status, 1);
+  // The failing count names only the code that was not allowed; the allowed ones are counted on their own line.
+  assert.match(r.stderr, /^1 problem: field_type 1$/m);
+  assert.match(r.stderr, /^allowed: outline_missing_file 2$/m);
+});
+
+test('--allow needs a value', () => {
+  for (const args of [['validate', '--allow'], ['validate', '--allow', '--root', MINI_ROOT]]) {
+    const r = run(...args);
+    assert.equal(r.status, 2, args.join(' '));
+    assert.equal(r.stdout, '');
+  }
+});
+
+test('the default content folder validates with today\'s allowance', () => {
+  const r = run('validate', '--allow', 'outline_missing_file');
+  assert.equal(r.status, 0, r.stderr);
 });
 
 test('an explicit root that is missing is an error', () => {
