@@ -410,8 +410,11 @@
     "id": "fr:lex:admettre",
     "lemma": "admettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -1490,8 +1493,12 @@
     "id": "fr:lex:appuyer",
     "lemma": "appuyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -2334,7 +2341,15 @@
     "dictionaryId": null,
     "id": "fr:lex:avertir",
     "lemma": "avertir",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.ir.present",
+      "fr:cx:ptcp.ir",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.ir.subjunctive",
+      "fr:cx:prsptcp.ir"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -2727,8 +2742,13 @@
     "id": "fr:lex:battre",
     "lemma": "battre",
     "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -8195,7 +8215,15 @@
     "dictionaryId": null,
     "id": "fr:lex:detendre",
     "lemma": "détendre",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -9868,7 +9896,11 @@
     "dictionaryId": null,
     "id": "fr:lex:endormir",
     "lemma": "endormir",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:ptcp.ir",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -9973,6 +10005,7 @@
     "id": "fr:lex:enfuir",
     "lemma": "enfuir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -10046,8 +10079,12 @@
     "id": "fr:lex:ennuyer",
     "lemma": "ennuyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -10348,8 +10385,12 @@
     "id": "fr:lex:envoyer",
     "lemma": "envoyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -12611,6 +12652,7 @@
     "id": "fr:lex:fuir",
     "lemma": "fuir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -13543,10 +13585,7 @@
     "dictionaryId": null,
     "id": "fr:lex:hair",
     "lemma": "haïr",
-    "paradigms": [
-      "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
-    ],
+    "paradigms": [],
     "pos": "verb",
     "senses": []
   },
@@ -14834,8 +14873,13 @@
     "id": "fr:lex:interrompre",
     "lemma": "interrompre",
     "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -17282,6 +17326,7 @@
     "id": "fr:lex:mentir",
     "lemma": "mentir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -18076,7 +18121,15 @@
     "dictionaryId": null,
     "id": "fr:lex:mordre",
     "lemma": "mordre",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -22035,7 +22088,15 @@
     "dictionaryId": null,
     "id": "fr:lex:pretendre",
     "lemma": "prétendre",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -22437,8 +22498,11 @@
     "id": "fr:lex:promettre",
     "lemma": "promettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -23394,7 +23458,15 @@
     "dictionaryId": null,
     "id": "fr:lex:reagir",
     "lemma": "réagir",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.ir.present",
+      "fr:cx:ptcp.ir",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.ir.subjunctive",
+      "fr:cx:prsptcp.ir"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -24006,8 +24078,11 @@
     "id": "fr:lex:remettre",
     "lemma": "remettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -24197,8 +24272,12 @@
     "id": "fr:lex:renvoyer",
     "lemma": "renvoyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -24246,6 +24325,7 @@
     "id": "fr:lex:repartir",
     "lemma": "repartir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -24527,6 +24607,7 @@
     "id": "fr:lex:ressentir",
     "lemma": "ressentir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -25094,8 +25175,13 @@
     "id": "fr:lex:rompre",
     "lemma": "rompre",
     "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -26016,6 +26102,7 @@
     "id": "fr:lex:servir",
     "lemma": "servir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -27294,8 +27381,11 @@
     "id": "fr:lex:survivre",
     "lemma": "survivre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -28420,8 +28510,11 @@
     "id": "fr:lex:transmettre",
     "lemma": "transmettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
