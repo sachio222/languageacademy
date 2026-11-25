@@ -11,13 +11,13 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../
 const course = await readCourse(repoRoot);
 const frenchOf = (m) => m.items.flatMap((i) => i.french);
 
-test('course has 161 modules at positions 1..161', () => {
-  assert.equal(course.length, 161);
-  assert.deepEqual(course.map((m) => m.position), Array.from({ length: 161 }, (_, i) => i + 1));
+test('course has 162 modules at positions 1..162', () => {
+  assert.equal(course.length, 162);
+  assert.deepEqual(course.map((m) => m.position), Array.from({ length: 162 }, (_, i) => i + 1));
 });
 
-test('position 31 is the aller lesson and teaches je vais', () => {
-  const m = course[30];
+test('position 32 is the aller lesson and teaches je vais', () => {
+  const m = course[31];
   assert.equal(m.moduleKey, '2024-01-27-aller');
   assert.equal(m.kind, 'lesson');
   assert.ok(m.items.some((i) => i.french.includes('je vais')));
@@ -27,10 +27,10 @@ test('no module is titled Les Nombres', () => {
   assert.equal(course.filter((m) => m.title === 'Les Nombres').length, 0);
 });
 
-test('verb-pattern-help appears once, at position 32', () => {
+test('verb-pattern-help appears once, at position 33', () => {
   const hits = course.filter((m) => m.moduleKey === '2024-01-28-verb-pattern-help');
   assert.equal(hits.length, 1);
-  assert.equal(hits[0].position, 32);
+  assert.equal(hits[0].position, 33);
   assert.equal(hits[0].kind, 'help');
 });
 

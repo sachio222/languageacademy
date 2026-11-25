@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useSupabaseClient } from '../hooks/useSupabaseClient';
-import { lessons } from '../lessons/lessonData';
+import { lessons, unitStructure } from '../lessons/lessonData';
 import { Flame, CheckCircle, Clock, BookOpen, BookMarked, Users } from 'lucide-react';
 import { useSupabaseProgress } from '../contexts/SupabaseProgressContext';
 import { useSectionProgress } from '../contexts/SectionProgressContext';
@@ -142,25 +142,14 @@ function DashboardHeader({ completedExercises, onLessonSelect, onShowReferenceMo
   const progressPercentage = Math.round((stats.lessonsCompleted / stats.totalLessons) * 100);
   const isStreakActive = stats.streakDays > 0;
 
-  // Get unit info for the next lesson
+  // Get unit info for the next lesson. Ranges come from the unit configs, so inserting a module never
+  // leaves a lesson labelled with the wrong unit.
   const getUnitForLesson = (lessonId) => {
-    const unitStructure = [
-      { id: 1, title: 'Unit 1', lessonRange: [1, 11], icon: '🧩' },
-      { id: 2, title: 'Unit 2', lessonRange: [12, 24], icon: '✍️' },
-      { id: 3, title: 'Unit 3', lessonRange: [25, 39], icon: '🏃' },
-      { id: 4, title: 'Unit 4', lessonRange: [40, 52], icon: '💬' },
-      { id: 5, title: 'Unit 5', lessonRange: [53, 64], icon: '⌚' },
-      { id: 6, title: 'Unit 6', lessonRange: [65, 78], icon: '👌' },
-      { id: 7, title: 'Unit 7', lessonRange: [79, 92], icon: '📖' },
-      { id: 8, title: 'Unit 8', lessonRange: [93, 107], icon: '💡' },
-      { id: 9, title: 'Unit 9', lessonRange: [108, 123], icon: '⏳' },
-      { id: 10, title: 'Unit 10', lessonRange: [124, 138], icon: '🏆' }
-    ];
-
-    return unitStructure.find(unit => {
-      const [start, end] = unit.lessonRange;
-      return lessonId >= start && lessonId <= end;
+    const unit = unitStructure.find(u => {
+      const [start, end] = u.lessonRange;
+      return !u.isReference && lessonId >= start && lessonId <= end;
     });
+    return unit ? { ...unit, title: `Unit ${unit.id}` } : undefined;
   };
 
   const nextUnitInfo = nextLessonInfo ? getUnitForLesson(nextLessonInfo.lesson.id) : null;

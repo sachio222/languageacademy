@@ -1,4 +1,5 @@
 // Unit 2: Asking & Describing - Export all modules
+export { numbersLesson } from "./numbers.js";
 export { negationGuideModule } from "./negation-guide.js";
 export { module2_demonstratives } from "./demonstratives.js";
 export { caSurvival } from "./ca-survival.js";

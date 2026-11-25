@@ -5122,5 +5122,37 @@
       "fr:lex:rien",
       "fr:lex:jamais"
     ]
+  },
+  "2026-11-24-numbers": {
+    "teachesWords": [
+      "fr:lex:zero",
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:deux",
+      "fr:lex:trois",
+      "fr:lex:quatre",
+      "fr:lex:cinq",
+      "fr:lex:six",
+      "fr:lex:sept",
+      "fr:lex:huit",
+      "fr:lex:neuf",
+      "fr:lex:dix",
+      "fr:lex:onze",
+      "fr:lex:douze",
+      "fr:lex:treize",
+      "fr:lex:quatorze",
+      "fr:lex:quinze",
+      "fr:lex:seize",
+      "fr:lex:vingt",
+      "fr:lex:et",
+      "fr:lex:trente",
+      "fr:lex:quarante",
+      "fr:lex:cinquante",
+      "fr:lex:soixante",
+      "fr:form:vingt.pl",
+      "fr:lex:cent",
+      "fr:lex:an",
+      "fr:form:an.pl"
+    ]
   }
 }

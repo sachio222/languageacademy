@@ -3,6 +3,7 @@
  * Defines the pedagogical sequence and metadata for Unit 2
  */
 
+import { numbersLesson } from "./numbers.js";
 import { negationGuideModule } from "./negation-guide.js";
 import { module2_demonstratives } from "./demonstratives.js";
 import { caSurvival } from "./ca-survival.js";
@@ -29,6 +30,7 @@ export const unit2Config = {
     color: "#8b5cf6",
   },
   modules: [
+    numbersLesson, // Numbers - 0 to 100
     negationGuideModule, // Negation Guide - ne … pas, pas de, ne … plus, ne … rien, ne … jamais
     module2_demonstratives, // 12. Demonstratives - It, That, This
     caSurvival, // 13. ça Survival - Essential Usage
