@@ -1079,6 +1079,16 @@
       "additionalProperties": false,
       "description": "Body of a guide's interactive-help step. The guide's checks are items of kind guide_check placed in this step through item_ids; its minutes are the step estimate and its can-do lines are the entry's can_do.",
       "properties": {
+        "more": {
+          "type": "object",
+          "required": ["label", "url"],
+          "additionalProperties": false,
+          "description": "One outside link for anyone who wants more, shown at the end of the guide page as a Read more card that opens in a new tab. Optional; leave it out when there is none. Not shown in the guide preview or player.",
+          "properties": {
+            "label": { "type": "string", "minLength": 1, "maxLength": 80, "description": "Plain English, no braces, such as Read more about silent letters." },
+            "url": { "type": "string", "pattern": "^https://[^\\s\"'<>]+$", "maxLength": 500 }
+          }
+        },
         "line": {
           "type": "string",
           "minLength": 1,
