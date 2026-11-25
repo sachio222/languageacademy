@@ -98,7 +98,8 @@ const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 const join = (path, key) => (path ? `${path}.${key}` : key);
 
 /* ---------- schema nodes ---------- */
-const S = (role) => ({ t: 'str', role }); // learner-facing text with a role: fr, native, native_fr
+// max: at most this many characters (code points), the way L's contract counts maxLength.
+const S = (role, max) => ({ t: 'str', role, ...(max ? { max } : {}) }); // learner-facing text with a role: fr, native, native_fr
 const KEY = { t: 'key' }; // a non-empty string that no learner reads (word ids, graph ids, paths)
 const ID = { t: 'id' };
 const INT = (min) => ({ t: 'int', min });
@@ -110,7 +111,7 @@ const BLOCK = { t: 'block' };
 const OPTIONS = { t: 'options' };
 const ITEMS = { t: 'items' };
 const NULLABLE = (of) => ({ t: 'nullable', of }); // the value or null
-const MATCH = (re) => ({ t: 'match', re }); // a string no learner reads (a path, a link) matching re
+const MATCH = (re, max) => ({ t: 'match', re, ...(max ? { max } : {}) }); // a string no learner reads (a path, a link) matching re
 
 // teaches: the constructions a module teaches (graph ids), and the words it teaches that its vocabulary table does not
 // show the checker (graph headword or form ids: a guide's words, a homograph the table's spelling misreads). Taught
@@ -154,6 +155,9 @@ const CONCEPTS = LIST(
   { unique: 'id' },
 );
 const PHRASES = LIST(OBJ({ phrase_id_suffix: ID, fr: S('fr'), word_id: KEY }, ['phrase_id_suffix', 'fr']), { unique: 'phrase_id_suffix' });
+// A guide's one outside link, drawn by L as a Read more card at the end of the guide page (GuideBody.more): a plain
+// English label of 1 to 80 characters and an https link of at most 500. Leave the field out when there is none.
+const MORE = OBJ({ label: S('native', 80), url: MATCH(/^https:\/\/[^\s"'<>]+$/, 500) }, ['label', 'url']);
 const PART = OBJ({ id: ID, heading: S('native_fr'), text: LIST(S('native_fr')), note: S('native_fr'), blocks: LIST(BLOCK, { nonEmpty: true }) }, ['id', 'heading', 'text']);
 const CHECK = OBJ(
   { id: ID, ask: S('native_fr'), say: S('fr'), sound: S('native'), show: S('fr'), options: OPTIONS, why: S('native_fr') },
@@ -179,7 +183,11 @@ export const KIND_SCHEMAS = {
   },
   guide: {
     // short_title: the name on L's unit rows, Home card and La Référence (BundleEntry.short_title, 1 to 40 characters).
-    fields: { short_title: S('native'), minutes: INT(1), line: S('native_fr'), parts: LIST(PART, { nonEmpty: true, unique: 'id' }), checks: LIST(CHECK, { unique: 'id' }) },
+    // more: the optional Read more link (MORE).
+    fields: {
+      short_title: S('native'), minutes: INT(1), line: S('native_fr'), parts: LIST(PART, { nonEmpty: true, unique: 'id' }), checks: LIST(CHECK, { unique: 'id' }),
+      more: MORE,
+    },
     required: ['minutes', 'line', 'parts', 'checks'],
   },
   reading: {
@@ -224,6 +232,7 @@ function walk(node, v, path, cx, parent) {
   switch (node.t) {
     case 'str':
       if (!isStr(v)) return bad(path, 'field_type', `${path} must be a non-empty string`);
+      if (node.max && [...v].length > node.max) bad(path, 'field_type', `${path} must be at most ${node.max} characters`);
       cx.texts.push({ path, role: typeof node.role === 'function' ? node.role(parent) : node.role, text: v });
       return;
     case 'key':
@@ -237,6 +246,7 @@ function walk(node, v, path, cx, parent) {
       return walk(node.of, v, path, cx, parent);
     case 'match':
       if (typeof v !== 'string' || !node.re.test(v)) bad(path, 'field_type', `${path} must match ${node.re}`);
+      else if (node.max && [...v].length > node.max) bad(path, 'field_type', `${path} must be at most ${node.max} characters`);
       return;
     case 'int':
       if (!Number.isInteger(v) || v < node.min) bad(path, 'field_type', `${path} must be a whole number of at least ${node.min}`);

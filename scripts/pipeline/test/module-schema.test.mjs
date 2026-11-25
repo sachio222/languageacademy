@@ -396,6 +396,10 @@ test('faults the schema states: both validators refuse, and validateModule names
     ['a guide with four checks', edit(guide, (m) => { m.checks.push({ ...clone(m.checks[0]), id: 'zz' }); }), 'guide_checks_count'],
     ['a short title of 41 characters', edit(guide, (m) => { m.short_title = 'x'.repeat(41); }), 'short_title_long'],
     ['a short title of 41 emoji', edit(guide, (m) => { m.short_title = '😀'.repeat(41); }), 'short_title_long'],
+    ['a Read more label of 81 characters', edit(full.guide, (m) => { m.more.label = 'x'.repeat(81); }), 'field_type'],
+    ['a Read more url of 501 characters', edit(full.guide, (m) => { m.more.url = `https://example.org/${'a'.repeat(481)}`; }), 'field_type'],
+    ['a Read more url on http', edit(full.guide, (m) => { m.more.url = 'http://example.org/a'; }), 'field_type'],
+    ['a Read more link of null', edit(full.guide, (m) => { m.more = null; }), 'field_type'],
     ['an empty steps list', edit(lesson, (m) => { m.items[0].steps = []; }), 'steps_invalid'],
     ['speed_match of five words', edit(full.lesson, (m) => { m.speed_match = m.speed_match.slice(0, 5); }), 'speed_match_invalid'],
     ['a choice item with mistakes', edit(withChoice, (m) => { m.items[ci].mistakes = [{ answer: 'x', feedback: 'y' }]; }), 'mistakes_not_allowed'],
@@ -416,6 +420,8 @@ test('faults the schema states: both validators refuse, and validateModule names
     ['review false', edit(full.lesson, (x) => { x.vocabulary[0].review = false; })],
     ['word_ids of strings', edit(full.lesson, (x) => { x.items[0].word_ids = ['a', 'b']; })],
     ['a short title of 40 emoji', edit(guide, (x) => { x.short_title = '😀'.repeat(40); })],
+    ['a Read more label of 80 emoji', edit(full.guide, (x) => { x.more.label = '😀'.repeat(80); })],
+    ['a Read more url of 500 characters', edit(full.guide, (x) => { x.more.url = `https://example.org/${'a'.repeat(480)}`; })],
   ]) {
     const v = judge(m, m.kind);
     assert.deepEqual([v.json, v.js], [[], []], label);

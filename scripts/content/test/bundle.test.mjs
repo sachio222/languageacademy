@@ -495,3 +495,37 @@ test('a review row carries review: true into the bundle; ordinary rows carry no 
   // The real course has no review rows, so none of its words carry the key.
   assert.ok(!real.content.some((c) => c.words.some((w) => 'review' in w)));
 });
+
+test("a guide's Read more link reaches its GuideBody.more; a guide without one bundles exactly as before", (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-content-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(CONTENT_ROOT, root, { recursive: true });
+  const key = '2024-10-20-liaison-help';
+  const file = join(root, 'modules', `${key}.json`);
+  const m = JSON.parse(readFileSync(file, 'utf8'));
+  assert.equal('more' in m, false);
+  const more = { label: 'Why some French letters are written but not said', url: 'https://example.org/sons-et-lettres/23/' };
+  writeFileSync(file, JSON.stringify({ ...m, more }));
+  const edited = buildBundle(loadCourse({ root, planned: false }), { ...sources, build: BUILD });
+  const helpBody = (b) => contentOf(b, key).steps.find((s) => s.section_id === 'interactive-help');
+  assert.deepEqual(helpBody(edited).body.more, more);
+  assert.deepEqual(Object.keys(helpBody(edited).body), ['line', 'parts', 'more']);
+  assert.equal(helpBody(edited).preview?.more, undefined, 'the guide preview shows no link');
+  const v = schemaValidator(join(VENDOR, 'contracts'), 'curriculum.bundle.schema.json');
+  assert.deepEqual(v.validate(edited).slice(0, 20), []);
+  const ok = runChecker(edited);
+  assert.equal(ok.status, 0, JSON.stringify(ok.problems?.slice(0, 5)));
+  assert.equal(ok.ok, true);
+  // Without the link, the same guide bundles byte for byte as the unedited course: more is the only difference.
+  delete helpBody(edited).body.more;
+  assert.equal(canonicalJson(edited), canonicalJson(bundle));
+  assert.deepEqual(Object.keys(helpBody(bundle).body), ['line', 'parts'], 'a guide without more carries no more key');
+  // The course's guides that set a link carry it; the rest carry none.
+  const realCourse = loadCourse();
+  for (const c of real.content.filter((x) => x.kind === 'guide')) {
+    const src = realCourse.modules.get(c.module_key);
+    const body = c.steps.find((s) => s.section_id === 'interactive-help').body;
+    if (src.more) assert.deepEqual(body.more, src.more, c.module_key);
+    else assert.equal('more' in body, false, c.module_key);
+  }
+});

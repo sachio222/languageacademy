@@ -382,7 +382,8 @@ function contentOf(m, unitKey, { dictionary, storyOf, note }) {
       items.push(guideCheckItem(c));
       place('interactive-help', c.id);
     }
-    bodies['interactive-help'] = { line: m.line, parts: m.parts.map(guidePart) };
+    // GuideBody.more, the Read more link, only when the guide has one.
+    bodies['interactive-help'] = { line: m.line, parts: m.parts.map(guidePart), ...(m.more ? { more: { label: m.more.label, url: m.more.url } } : {}) };
   } else if (m.kind !== 'reference') {
     for (const item of m.items || []) {
       items.push(bundleItem(item, noteFor));

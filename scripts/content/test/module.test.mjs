@@ -51,6 +51,29 @@ test('a guide may carry a short title of 1 to 40 characters', () => {
   assert.deepEqual(codes(lesson, 1), ['field_unknown']);
 });
 
+test("a guide may end with one Read more link, { label, url }, on L's GuideBody.more limits", () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  const link = { label: 'Why some French letters are written but not said', url: 'https://example.org/sons-et-lettres/23/' };
+  mod.more = { ...link };
+  assert.deepEqual(codes(mod, 2), []);
+  assert.deepEqual(moduleTexts(mod).find((t) => t.path === 'more.label'), { path: 'more.label', role: 'native', text: link.label });
+  const withMore = (more) => codes({ ...mod, more }, 2);
+  assert.deepEqual(withMore({ ...link, url: 'http://example.org/a' }), ['field_type'], 'http is refused');
+  assert.deepEqual(withMore({ ...link, url: 'https://example.org/a b' }), ['field_type'], 'a space in the url is refused');
+  assert.deepEqual(withMore({ ...link, url: `https://example.org/${'a'.repeat(481)}` }), ['field_type'], 'a url over 500 characters is refused');
+  assert.deepEqual(withMore({ ...link, url: `https://example.org/${'a'.repeat(480)}` }), [], 'a url of 500 characters is fine');
+  assert.deepEqual(withMore({ ...link, label: 'x'.repeat(81) }), ['field_type'], 'a label over 80 characters is refused');
+  assert.deepEqual(withMore({ ...link, label: '😀'.repeat(80) }), [], 'the label counts characters');
+  assert.deepEqual(withMore({ ...link, label: '' }), ['field_type']);
+  assert.deepEqual(withMore({ ...link, label: 'Read about {ils}' }), ['span_in_plain_field'], 'the label is plain English');
+  assert.deepEqual(withMore({ url: link.url }), ['field_missing']);
+  assert.deepEqual(withMore({ ...link, zz: 1 }), ['field_unknown']);
+  assert.deepEqual(withMore(null), ['field_type'], 'null is refused; leave the field out for no link');
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.more = { ...link };
+  assert.deepEqual(codes(lesson, 1), ['field_unknown'], 'only a guide has more');
+});
+
 test('guide check needs exactly one right option', () => {
   const mod = miniModule(MINI_KEYS.guide);
   mod.checks[0].options[1].right = true;

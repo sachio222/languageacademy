@@ -120,12 +120,13 @@ function itemSchema(type) {
 function node(n, defs) {
   switch (n.t) {
     case 'str':
+      return n.max ? { ...STR(), maxLength: n.max } : STR();
     case 'key':
       return STR();
     case 'id':
       return { type: 'string', pattern: pattern(ID_PATTERN) };
     case 'match':
-      return { type: 'string', pattern: pattern(n.re) };
+      return { type: 'string', pattern: pattern(n.re), ...(n.max ? { maxLength: n.max } : {}) };
     case 'int':
       return { type: 'integer', minimum: n.min };
     case 'bool':

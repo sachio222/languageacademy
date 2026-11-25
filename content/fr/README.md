@@ -33,7 +33,7 @@ Every written module needs `title` and `description`. A unit exam has no title o
 | Kind | Required fields | Notes |
 |---|---|---|
 | `lesson` | `vocabulary` (at least one word), `items` | Optional `concepts`, `tables`, `phrases`, `speed_match` (six word ids from the lesson's vocabulary), `options` |
-| `guide` | `minutes`, `line`, `parts`, `checks` (exactly three) | A part's `blocks` use L's example block shapes; no lesson may use something only a guide teaches |
+| `guide` | `minutes`, `line`, `parts`, `checks` (exactly three) | A part's `blocks` use L's example block shapes; no lesson may use something only a guide teaches. Optional `short_title` and `more`: one outside link, `{ "label": "…", "url": "https://…" }`, shown as a Read more card at the end of the guide page. The label is plain English of at most 80 characters; leave `more` out when there is no link |
 | `reading` | `story_id`, `vocabulary`, `passage`, `items` | `items` are `comprehension` questions; optional `glossary`, `preview_blocks` |
 | `practice` | `items`, `tests` | Teaches nothing, so no vocabulary, concepts or tables |
 | `unit_exam` | `items`, `tests` | Teaches nothing |

@@ -201,6 +201,27 @@
       },
       "minItems": 3,
       "maxItems": 3
+    },
+    "more": {
+      "type": "object",
+      "required": [
+        "label",
+        "url"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "maxLength": 80
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https:\\/\\/[^\\s\"'<>]+$",
+          "maxLength": 500
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false,
