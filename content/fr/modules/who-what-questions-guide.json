@@ -1,0 +1,203 @@
+{
+  "schema": "la-module@1",
+  "module_key": "who-what-questions-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Who and What Questions - One Table",
+  "short_title": "Who and what questions",
+  "description": "Put {qui est-ce qui}, {qui est-ce que}, {qu'est-ce qui} and {qu'est-ce que} in one table.",
+  "can_do": [
+    "Ask who or what does something: {Qui est-ce qui parle ?}, {Qu'est-ce qui tombe ?}",
+    "Ask who or what someone sees or wants: {Qui est-ce que tu vois ?}, {Qu'est-ce que tu veux ?}"
+  ],
+  "minutes": 4,
+  "line": "The first word asks about a person or a thing, and the last word says whether it does the action or receives it.",
+  "parts": [
+    {
+      "id": "p-one-table",
+      "heading": "Four questions, one table",
+      "text": [
+        "Each question has two halves. The start, {qui} or {qu'}, asks about a person or a thing. The end, {qui} or {que}, says whether that person or thing does the action or receives it."
+      ],
+      "blocks": [
+        {
+          "cmp": {
+            "left": "Does the action",
+            "right": "Receives the action",
+            "rows": [
+              [
+                {
+                  "fr": "qui est-ce qui",
+                  "en": "who",
+                  "sub": "a person"
+                },
+                {
+                  "fr": "qui est-ce que",
+                  "en": "who",
+                  "sub": "a person"
+                }
+              ],
+              [
+                {
+                  "fr": "qu'est-ce qui",
+                  "en": "what",
+                  "sub": "a thing"
+                },
+                {
+                  "fr": "qu'est-ce que",
+                  "en": "what",
+                  "sub": "a thing"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-the-start",
+      "heading": "The start: a person or a thing",
+      "text": [
+        "{qui} at the start asks about a person. {qu'} at the start asks about a thing."
+      ],
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "Qui est-ce qui est à gauche ?",
+              "Who is on the left?"
+            ],
+            [
+              "Qu'est-ce qui est à gauche ?",
+              "What is on the left?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-the-end",
+      "heading": "The end: does it or receives it",
+      "text": [
+        "{qui} at the end means the person or thing does the action, so the verb usually comes next. {que} at the end means it receives the action, so another subject comes next, such as {tu}."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "Who does it",
+              "fr": "Qui est-ce qui",
+              "en": "who"
+            },
+            {
+              "k": "The verb comes next",
+              "fr": "Qui est-ce qui parle français ?",
+              "en": "Who speaks French?"
+            }
+          ]
+        },
+        {
+          "build": [
+            {
+              "k": "Who receives it",
+              "fr": "Qui est-ce que",
+              "en": "who"
+            },
+            {
+              "k": "A subject comes next",
+              "fr": "Qui est-ce que tu connais ?",
+              "en": "Who do you know?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-all-four",
+      "heading": "All four in use",
+      "text": [
+        "Read the start for a person or a thing, then the end for who does the action."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Qui est-ce qui tourne à droite ?",
+              "Who is turning right?"
+            ],
+            [
+              "Qui est-ce que tu vois au coin de la rue ?",
+              "Who do you see on the street corner?"
+            ],
+            [
+              "Qu'est-ce qui rend la ville moderne ?",
+              "What makes the city modern?"
+            ],
+            [
+              "Qu'est-ce que les habitants font le soir ?",
+              "What do the locals do in the evening?"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one asks “What is falling?”",
+      "options": [
+        {
+          "text": "Qu'est-ce que tu vois ?",
+          "fr": true
+        },
+        {
+          "text": "Qu'est-ce qui tombe ?",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Qui est-ce qui tombe ?",
+          "fr": true
+        }
+      ],
+      "why": "A thing is falling, so the question starts with {qu'}, and the thing does the action, so it ends with {qui}: {qu'est-ce qui}."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one asks “Who do you see?”",
+      "options": [
+        {
+          "text": "Qui est-ce que tu vois ?",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Qui est-ce qui voit ?",
+          "fr": true
+        },
+        {
+          "text": "Qu'est-ce que tu vois ?",
+          "fr": true
+        }
+      ],
+      "why": "You ask about a person, so it starts with {qui}. The person is the one seen, and {tu} comes next, so it ends with {que}."
+    },
+    {
+      "id": "k3",
+      "ask": "Listen. Does this ask about a person or a thing?",
+      "say": "Qu'est-ce que tu manges ?",
+      "show": "Qu'est-ce que tu manges ?",
+      "options": [
+        {
+          "text": "A person"
+        },
+        {
+          "text": "A thing",
+          "right": true
+        }
+      ],
+      "why": "It starts with {qu'}, so it asks about a thing: what you are eating."
+    }
+  ]
+}
