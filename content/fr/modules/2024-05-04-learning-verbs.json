@@ -112,7 +112,7 @@
       "id": "c-apprendre-to-learn",
       "term": "{apprendre} = to learn",
       "definition": "Part of prendre family (you already know this pattern!) - essential for education",
-      "example": "{j'apprends le français} (I'm learning French), {nous apprenons ensemble} (we're learning together)"
+      "example": "{j'apprends le français} (I'm learning French), {j'apprends beaucoup de mots} (I'm learning a lot of words), {nous apprenons ensemble} (we're learning together)"
     },
     {
       "id": "c-same-pattern-as-prendre",
@@ -130,13 +130,13 @@
       "id": "c-beautiful-semantic-progression",
       "term": "Beautiful semantic progression",
       "definition": "Teacher teaches → student learns → student understands → student knows",
-      "example": "{Il m'enseigne} → {j'apprends} → {je comprends} → {je sais} (complete learning cycle!)"
+      "example": "{Il m'enseigne} → {j'apprends} → {je comprends} (complete learning cycle!)"
     },
     {
       "id": "c-apprendre-a-infinitive",
       "term": "apprendre à + infinitive",
       "definition": "Use 'à' before infinitive to say learning how to do something",
-      "example": "{j'apprends à nager} (I'm learning to swim), {j'apprends à parler français} (I'm learning to speak French)"
+      "example": "{j'apprends à faire du café} (I'm learning to make coffee), {j'apprends à parler français} (I'm learning to speak French)"
     }
   ],
   "items": [

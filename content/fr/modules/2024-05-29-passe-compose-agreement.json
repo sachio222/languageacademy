@@ -58,7 +58,7 @@
       "fr": "vous êtes allé",
       "gloss": "you went (singular formal, masculine)",
       "note": "formal singular masculine; masculine singular (no change)",
-      "example_fr": "Monsieur, vous êtes allé où?"
+      "example_fr": "Paul, vous êtes allé où ?"
     },
     {
       "word_id": "vous-etes-allee-fr",
@@ -72,7 +72,7 @@
       "fr": "vous êtes allés",
       "gloss": "you went (plural, masculine/mixed)",
       "note": "masculine plural (+s)",
-      "example_fr": "Les garçons, vous êtes allés où?"
+      "example_fr": "Les enfants, vous êtes allés où ?"
     },
     {
       "word_id": "vous-etes-allees-fr",
@@ -80,6 +80,18 @@
       "gloss": "you went (plural, all feminine)",
       "note": "feminine plural (+es)",
       "example_fr": "Les filles, vous êtes allées où?"
+    },
+    {
+      "word_id": "nous-sommes-partis-fr",
+      "fr": "nous sommes partis",
+      "gloss": "we left",
+      "note": "masculine or mixed plural (+s)"
+    },
+    {
+      "word_id": "nous-sommes-venues-fr",
+      "fr": "nous sommes venues",
+      "gloss": "we came (all feminine)",
+      "note": "feminine plural (+es)"
     }
   ],
   "concepts": [
@@ -374,13 +386,13 @@
     {
       "id": "i-sont-rentres",
       "type": "gapfill",
-      "text": "Les garçons ___ tard",
+      "text": "Les enfants ___ tard",
       "blanks": [
         {
           "answer": "sont rentrés"
         }
       ],
-      "gloss": "The boys came home late",
+      "gloss": "The children came home late",
       "hint": "Use '{rentrer}', masculine plural!",
       "mistakes": [
         {

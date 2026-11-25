@@ -810,8 +810,12 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
     }
     if ((p = /^vocabularyReference\[\+?(\d+)\]/.exec(d.path))) {
       // An added card's row carries the card itself (compareLesson attaches the tables to paired rows only).
-      const card = d.path.includes('[+') ? (d.cards?.converted?.[+p[1]] ?? (d.live === undefined ? d.converted : undefined)) : d.cards?.live?.[+p[1]];
-      const w = (m.vocabulary || []).find((x) => x.fr === card?.french && x.gloss === card?.english);
+      // A paired card is found by its live text, or by its converted text when the recorded fix rewrote the card's
+      // French or English (C4b: Reading 7's "étudiant(s)" card became "étudiant").
+      const cards = d.path.includes('[+')
+        ? [d.cards?.converted?.[+p[1]] ?? (d.live === undefined ? d.converted : undefined)]
+        : [d.cards?.live?.[+p[1]], d.cards?.converted?.[+p[1]]];
+      const w = (m.vocabulary || []).find((x) => cards.some((card) => x.fr === card?.french && x.gloss === card?.english));
       return !!w && holds(d.module_key, `vocabulary/${w.word_id}`, w);
     }
     if ((p = /^(?:exercises|sentences)\[\+?(\d+)\]/.exec(d.path))) {

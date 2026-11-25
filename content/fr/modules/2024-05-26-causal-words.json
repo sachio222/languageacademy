@@ -90,7 +90,7 @@
       "id": "c-car-for-because-formal",
       "term": "{car} - for, because (formal/literary)",
       "definition": "More formal than '{parce que}', CANNOT start a sentence, common in writing",
-      "example": "{On étudie le français car c'est utile} (We study French for it's useful), {Je reste ici car il pleut} (I'm staying here for it's raining)"
+      "example": "{On étudie le français car c'est beau} (We study French for it's beautiful), {Je prends un café car je suis fatigué} (I'm having a coffee for I'm tired)"
     },
     {
       "id": "c-puisque-since-seeing-as",
@@ -102,19 +102,19 @@
       "id": "c-comme-as-since-at",
       "term": "{comme} - as, since (at START of sentence)",
       "definition": "Explains reason, MUST come at beginning of sentence",
-      "example": "{Comme il fait beau, on va au parc} (As it's nice, we're going to the park), {Comme je suis fatigué, je reste à la maison} (As I'm tired, I'm staying home)"
+      "example": "{Comme il fait beau, on va au parc} (As it's nice, we're going to the park), {Comme je suis fatigué, je vais dormir} (As I'm tired, I'm going to sleep)"
     },
     {
       "id": "c-grace-a-thanks-to",
       "term": "{grâce à} - thanks to (positive reason + NOUN)",
       "definition": "Positive attribution, followed by a noun or pronoun",
-      "example": "{Grâce à toi}, {je comprends mieux} (Thanks to you, I understand better), {Grâce au professeur}, {j'ai réussi} (Thanks to the teacher, I succeeded)"
+      "example": "{Grâce à toi}, {je comprends mieux} (Thanks to you, I understand better), {Grâce au professeur}, {je parle bien} (Thanks to the teacher, I speak well)"
     },
     {
       "id": "c-a-cause-de-because",
       "term": "{à cause de} - because of (negative/neutral + NOUN)",
       "definition": "Often negative or neutral, followed by a noun (NOT a clause!)",
-      "example": "{À cause de la pluie, on reste ici} (Because of the rain, we're staying here), {À cause du traffic, je suis en retard} (Because of traffic, I'm late)"
+      "example": "{À cause de la musique, je ne peux pas travailler} (Because of the music, I can't work), {À cause du bus, je suis en retard} (Because of the bus, I'm late)"
     }
   ],
   "items": [
@@ -146,13 +146,13 @@
     {
       "id": "i-car",
       "type": "gapfill",
-      "text": "On étudie le français ___ c'est utile",
+      "text": "On étudie le français ___ c'est beau",
       "blanks": [
         {
           "answer": "car"
         }
       ],
-      "gloss": "We study French for it's useful",
+      "gloss": "We study French for it's beautiful",
       "mistakes": [
         {
           "answer": "parce que",
@@ -230,13 +230,13 @@
     {
       "id": "i-a-cause-de",
       "type": "gapfill",
-      "text": "___ la pluie, on reste ici",
+      "text": "___ la musique, je ne peux pas travailler",
       "blanks": [
         {
           "answer": "À cause de"
         }
       ],
-      "gloss": "Because of the rain, we're staying here",
+      "gloss": "Because of the music, I can't work",
       "mistakes": [
         {
           "answer": "Parce que",
@@ -251,13 +251,13 @@
     {
       "id": "i-parce-que-2",
       "type": "gapfill",
-      "text": "Pourquoi tu restes? - ___ je suis fatigué",
+      "text": "Pourquoi tu ne viens pas ? - ___ je suis fatigué",
       "blanks": [
         {
           "answer": "Parce que"
         }
       ],
-      "gloss": "Why are you staying? - Because I'm tired",
+      "gloss": "Why aren't you coming? - Because I'm tired",
       "mistakes": [
         {
           "answer": "Car",
@@ -272,13 +272,13 @@
     {
       "id": "i-a-cause-du",
       "type": "gapfill",
-      "text": "Je suis en retard ___ le traffic",
+      "text": "Je suis en retard ___ bus",
       "blanks": [
         {
           "answer": "à cause du"
         }
       ],
-      "gloss": "I'm late because of traffic",
+      "gloss": "I'm late because of the bus",
       "mistakes": [
         {
           "answer": "parce que",
@@ -293,13 +293,13 @@
     {
       "id": "i-grace-au",
       "type": "gapfill",
-      "text": "J'ai réussi ___ professeur",
+      "text": "Je comprends ___ professeur",
       "blanks": [
         {
           "answer": "grâce au"
         }
       ],
-      "gloss": "I succeeded thanks to the teacher",
+      "gloss": "I understand thanks to the teacher",
       "mistakes": [
         {
           "answer": "parce que le",
@@ -335,13 +335,13 @@
     {
       "id": "i-a-cause",
       "type": "gapfill",
-      "text": "___ du mauvais temps, on annule le match",
+      "text": "___ du travail, je ne peux pas venir",
       "blanks": [
         {
           "answer": "À cause"
         }
       ],
-      "gloss": "Because of bad weather, we're canceling the match",
+      "gloss": "Because of work, I can't come",
       "mistakes": [
         {
           "answer": "Grâce à",
@@ -356,13 +356,13 @@
     {
       "id": "i-puisque-2",
       "type": "gapfill",
-      "text": "On va partir ___ tu es prêt",
+      "text": "On va partir ___ tu es là",
       "blanks": [
         {
           "answer": "puisque"
         }
       ],
-      "gloss": "We'll leave since you're ready",
+      "gloss": "We'll leave since you're here",
       "mistakes": [
         {
           "answer": "parce que",
@@ -461,13 +461,13 @@
     {
       "id": "i-a-cause-du-2",
       "type": "gapfill",
-      "text": "Je ne dors pas bien ___ bruit",
+      "text": "Je suis fatigué ___ travail",
       "blanks": [
         {
           "answer": "à cause du"
         }
       ],
-      "gloss": "I don't sleep well because of the noise",
+      "gloss": "I'm tired because of work",
       "mistakes": [
         {
           "answer": "parce que le",

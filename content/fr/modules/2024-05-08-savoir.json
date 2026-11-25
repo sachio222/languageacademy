@@ -83,7 +83,7 @@
       "id": "c-savoir-to-know-facts",
       "term": "{savoir} = to know (facts or skills)",
       "definition": "CRITICAL distinction: savoir is for facts you learned or skills you have",
-      "example": "{je sais la réponse} (I know the answer), {je sais nager} (I know how to swim)"
+      "example": "{je sais la réponse} (I know the answer), {je sais parler anglais} (I can speak English)"
     },
     {
       "id": "c-irregular-conjugation",
@@ -101,13 +101,13 @@
       "id": "c-savoir-infinitive-know-how",
       "term": "savoir + infinitive = know how to",
       "definition": "Use savoir + verb to express skills/abilities",
-      "example": "{je sais parler français} (I know how to speak French), {je sais nager} (I can swim)"
+      "example": "{je sais parler français} (I know how to speak French), {je sais faire du café} (I know how to make coffee)"
     },
     {
       "id": "c-savoir-vs-connaitre-preview",
       "term": "savoir vs connaître (preview)",
       "definition": "savoir = facts/skills, connaître = people/places (you'll learn connaître next!)",
-      "example": "{je sais la réponse} (I know the answer), {je connais Marie} (I know Marie) ← next module!"
+      "example": "{je sais la réponse} (I know the answer). To know Marie, a person, the next lesson uses another verb."
     }
   ],
   "tables": [

@@ -4,7 +4,7 @@
   "kind": "lesson",
   "status": "written",
   "title": "{Si j'étais...} - Daydreaming & Hypotheticals",
-  "description": "Talk about fantasies and what-ifs! '{Si j'étais riche, j'achèterais...}' (If I were rich, I'd buy...), '{Si j'avais le temps, je voyagerais}' (If I had time, I'd travel). Everyone loves daydreaming!",
+  "description": "Talk about fantasies and what-ifs! '{Si j'étais riche...}' (If I were rich...), '{Si j'avais le temps, je voyagerais}' (If I had time, I'd travel). Everyone loves daydreaming!",
   "can_do": [
     "Express hypothetical situations (If I were..., I would...)",
     "Talk about daydreams and what-if scenarios",
@@ -45,6 +45,18 @@
       "fr": "si on avait le temps",
       "gloss": "if we had time",
       "note": "hypothetical plan"
+    },
+    {
+      "word_id": "on-marcherait-fr",
+      "fr": "on marcherait",
+      "gloss": "we'd walk",
+      "note": "from {marcher}; {on} takes the {il} ending -ait"
+    },
+    {
+      "word_id": "nous-marcherions-fr",
+      "fr": "nous marcherions",
+      "gloss": "we'd walk",
+      "note": "the {nous} ending is -ions"
     },
     {
       "word_id": "je-voyagerais-le-monde-fr",

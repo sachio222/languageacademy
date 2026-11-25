@@ -4,7 +4,7 @@
   "kind": "lesson",
   "status": "written",
   "title": "{En mangeant...} - While Doing Phrases",
-  "description": "Describe multitasking! '{En mangeant, je regarde la télé}' (While eating, I watch TV), '{On apprend en pratiquant}' (We learn by practicing). Natural speech patterns!",
+  "description": "Describe multitasking! '{En mangeant, je regarde un film}' (While eating, I watch a film), '{On apprend en pratiquant}' (We learn by practicing). Natural speech patterns!",
   "teaches": {
     "constructions": [
       "fr:cx:gerondif",
@@ -60,7 +60,7 @@
       "id": "c-common-uses",
       "term": "Common Uses",
       "definition": "Multitasking, explaining method, simultaneous actions",
-      "example": "{Je travaille en écoutant de la musique} (I work while listening to music)"
+      "example": "{Je travaille en écoutant de la musique} (I work while listening to music), {On parle lentement en mangeant} (We talk slowly while eating)"
     }
   ],
   "items": [

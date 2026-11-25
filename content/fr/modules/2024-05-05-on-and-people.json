@@ -58,7 +58,7 @@
       "word_id": "on-doit-fr",
       "fr": "on doit",
       "gloss": "we must / one must",
-      "note": "{On doit étudier}"
+      "note": "{On doit travailler}"
     },
     {
       "word_id": "on-dit-fr",
@@ -89,6 +89,12 @@
       "fr": "les gens disent",
       "gloss": "people say",
       "note": "plural verb '{disent}'"
+    },
+    {
+      "word_id": "les-gens-sont-gentils-fr",
+      "fr": "les gens sont gentils",
+      "gloss": "people are nice",
+      "note": "plural {gentils} after {les gens}"
     },
     {
       "word_id": "les-gens-pensent-fr",
@@ -138,7 +144,7 @@
       "id": "c-on-we-one-people",
       "term": "{on} = we / one / people",
       "definition": "THE most versatile pronoun! Used MORE than '{nous}' in everyday French. Three meanings depending on context.",
-      "example": "{on va au cinéma} (we're going to movies), {on dit que} (people say that), {on ne peut pas} (one cannot)"
+      "example": "{on va au cinéma} (we're going to movies), {on va au restaurant en famille} (we're going to a restaurant as a family), {on dit que} (people say that), {on ne peut pas} (one cannot)"
     },
     {
       "id": "c-on-conjugates-like-il",
@@ -168,7 +174,7 @@
       "id": "c-making-general-statements",
       "term": "Making general statements",
       "definition": "Use '{on}' for universal truths or common wisdom - sounds philosophical!",
-      "example": "{On apprend en faisant des erreurs} (We/One learns by making mistakes), {On ne peut pas tout savoir} (One can't know everything)"
+      "example": "{On apprend tous les jours} (We learn every day), {On ne peut pas tout savoir} (One can't know everything)"
     }
   ],
   "items": [
@@ -191,18 +197,18 @@
       ]
     },
     {
-      "id": "on-people-2",
+      "id": "i-on-doit-travailler",
       "type": "respond",
-      "situation": "We must study (using on)",
-      "answer": "on doit étudier",
-      "hint": "on + doit + étudier (on uses il/elle forms)",
+      "situation": "We must work (using on)",
+      "answer": "on doit travailler",
+      "hint": "on + doit + travailler (on uses il/elle forms)",
       "mistakes": [
         {
-          "answer": "nous devons étudier",
-          "feedback": "Use '{on}' for informal - '{on doit étudier}'"
+          "answer": "nous devons travailler",
+          "feedback": "Use '{on}' for informal - '{on doit travailler}'"
         },
         {
-          "answer": "on devons étudier",
+          "answer": "on devons travailler",
           "feedback": "'on' takes il/elle forms - '{on doit}' (not 'on devons')!"
         }
       ]
@@ -283,12 +289,12 @@
       ]
     },
     {
-      "id": "on-people-8",
+      "id": "i-on-doit-partir",
       "type": "respond",
-      "situation": "Say 'We must believe' (using on)",
-      "cue": "We must believe (using on)",
-      "answer": "on doit croire",
-      "hint": "{on + doit + croire}"
+      "situation": "Say 'We must leave' (using on)",
+      "cue": "We must leave (using on)",
+      "answer": "on doit partir",
+      "hint": "{on + doit + partir}"
     }
   ]
 }

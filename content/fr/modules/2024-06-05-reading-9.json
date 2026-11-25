@@ -33,6 +33,11 @@
       "gloss": "Marie (friend's name)"
     },
     {
+      "word_id": "celebre-fr",
+      "fr": "célèbre",
+      "gloss": "famous"
+    },
+    {
       "word_id": "la-sorbonne-fr",
       "fr": "la Sorbonne",
       "gloss": "the Sorbonne (famous Paris university)"

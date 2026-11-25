@@ -78,6 +78,12 @@
       "note": "informal"
     },
     {
+      "word_id": "en-retard-fr",
+      "fr": "en retard",
+      "gloss": "late",
+      "note": "{je suis en retard} (I'm late, after the agreed time); {tard} is late in the day"
+    },
+    {
       "word_id": "depeche-toi-fr",
       "fr": "Dépêche-toi!",
       "gloss": "Hurry up!",
@@ -101,7 +107,7 @@
       "id": "c-se-depecher-to-hurry",
       "term": "{se dépêcher} = to hurry / to rush",
       "definition": "Moving quickly - time pressure!",
-      "example": "{je me dépêche} (I'm hurrying), {dépêche-toi!} (hurry up!)"
+      "example": "{je me dépêche} (I'm hurrying), {je me dépêche, je suis en retard} (I'm hurrying, I'm late), {dépêche-toi!} (hurry up!)"
     }
   ],
   "items": [

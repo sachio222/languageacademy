@@ -48,10 +48,17 @@
       "note": "signals IMP - habitual action"
     },
     {
+      "word_id": "je-mangeais-fr",
+      "fr": "je mangeais",
+      "gloss": "I was eating / I used to eat",
+      "note": "manger in imparfait"
+    },
+    {
       "word_id": "toujours-fr",
       "fr": "toujours",
       "gloss": "always",
-      "note": "signals IMP - continuous state"
+      "note": "signals IMP - continuous state",
+      "review": true
     },
     {
       "word_id": "hier-fr",
@@ -75,7 +82,7 @@
     },
     {
       "id": "c-passe-compose-specific-events",
-      "term": "{Passé Composé} - Specific Events",
+      "term": "Passé Composé - Specific Events",
       "definition": "Completed actions, countable events, things that started/stopped, main storyline",
       "example": "{J'ai vu Marie} (I saw Marie - one time), {Je suis allé au café} (I went to the café - completed)"
     },
@@ -224,13 +231,13 @@
     {
       "id": "i-jouais",
       "type": "gapfill",
-      "text": "Quand j'étais jeune, je ___ au foot",
+      "text": "Quand j'étais jeune, je ___ avec mon chien",
       "blanks": [
         {
           "answer": "jouais"
         }
       ],
-      "gloss": "When I was young, I used to play soccer",
+      "gloss": "When I was young, I used to play with my dog",
       "hint": "Choose correct tense for '{jouer}'",
       "mistakes": [
         {
@@ -486,24 +493,24 @@
       ]
     },
     {
-      "id": "i-buvait",
+      "id": "i-prenais-un-cafe",
       "type": "gapfill",
-      "text": "Il ___ du café quand je suis arrivé",
+      "text": "Je ___ un café quand tu es arrivé",
       "blanks": [
         {
-          "answer": "buvait"
+          "answer": "prenais"
         }
       ],
-      "gloss": "He was drinking coffee when I arrived",
-      "hint": "Choose correct tense for '{boire}'",
+      "gloss": "I was having a coffee when you arrived",
+      "hint": "Choose correct tense for '{prendre}'",
       "mistakes": [
         {
-          "answer": "a bu",
-          "feedback": "Ongoing action (was drinking)! Use imparfait: il buvait."
+          "answer": "ai pris",
+          "feedback": "Ongoing action (was having)! Use imparfait: je prenais."
         },
         {
-          "answer": "boit",
-          "feedback": "That's present! Use imparfait for ongoing past: il buvait."
+          "answer": "prends",
+          "feedback": "That's present! Use imparfait for ongoing past: je prenais."
         }
       ]
     }

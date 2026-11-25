@@ -517,11 +517,63 @@
       "gloss": "he is with me"
     }
   },
+  "2024-01-20-although-phrases": {
+    "concepts": [
+      {
+        "id": "c-bien-que-although-even",
+        "term": "{Bien que...} - Although / Even Though",
+        "definition": "Express doing something DESPITE another condition",
+        "example": "{Bien que je sois fatigué, je travaille} (Although I'm tired, I'm working), {Bien que tu sois fatigué, je t'aide pour que tu partes avant qu'il soit tard} (Although you're tired, I'm helping you so that you leave before it's late)"
+      },
+      {
+        "id": "c-showing-determination",
+        "term": "Showing Determination",
+        "definition": "Doing something despite obstacles - shows perseverance!",
+        "example": "{Bien qu'il fasse froid, on va au parc} (Even though it's cold, we're going to the park)"
+      }
+    ]
+  },
   "2024-01-20-prepositions": {
     "vocabulary/c-est-derriere-la-porte-fr": {
       "word_id": "c-est-derriere-la-porte-fr",
       "fr": "c'est derrière la porte",
       "gloss": "it's behind the door"
+    }
+  },
+  "2024-01-21-before-phrases": {
+    "concepts": [
+      {
+        "id": "c-avant-que-before-someone",
+        "term": "{Avant que...} - Before Someone Does Something",
+        "definition": "Use to talk about timing relative to someone else's action",
+        "example": "{Avant que tu partes} (Before you leave), {Avant qu'il arrive} (Before he arrives)"
+      },
+      {
+        "id": "c-common-in-daily-life",
+        "term": "Common in Daily Life",
+        "definition": "Coordinating actions, giving warnings, setting deadlines",
+        "example": "{Finis avant que papa rentre!} (Finish before dad gets home!), {Avant que tu partes, on parle en mangeant} (Before you leave, let's talk while we eat)"
+      }
+    ]
+  },
+  "2024-01-22-common-adverbs": {
+    "items/i-courir-rapidement": null,
+    "items/i-manger-rapidement": {
+      "id": "i-manger-rapidement",
+      "type": "respond",
+      "situation": "Say someone eats quickly",
+      "cue": "eat quickly",
+      "answer": "manger rapidement",
+      "accept": [
+        "mange rapidement"
+      ],
+      "hint": "{manger + rapidement}"
+    },
+    "vocabulary/rapidement-fr": {
+      "word_id": "rapidement-fr",
+      "fr": "rapidement",
+      "gloss": "quickly",
+      "note": "{manger rapidement}"
     }
   },
   "2024-01-22-reading2": {
@@ -559,13 +611,13 @@
         "id": "c-why-these-forms-exist",
         "term": "Why These Forms Exist",
         "definition": "French uses different verb forms after phrases like '{il faut que}' (someone needs to), '{je veux que}' (I want someone to), '{je suis content que}' (I'm happy that someone...). These express wishes, needs, or emotions about OTHER PEOPLE's actions.",
-        "example": "Normal statement: {Tu es sage} (You are good). Wish about you: {Il faut que tu sois sage} (You need to be good - different form!)"
+        "example": "Normal statement: {Tu es gentil} (You are kind). Wish about you: {Il faut que tu sois gentil} (You need to be kind - different form!)"
       },
       {
         "id": "c-where-you-can-use",
         "term": "Where You CAN Use These Forms",
         "definition": "ONLY after certain phrases: il faut que, je veux que, je suis content que, j'ai peur que, avant que, pour que, bien que, etc.",
-        "example": "✓ {Il faut que tu sois sage} (You need to be good), ✓ {Je veux qu'il aille} (I want him to go)"
+        "example": "✓ {Il faut que tu sois gentil} (You need to be kind), ✓ {Je veux qu'il aille} (I want him to go)"
       },
       {
         "id": "c-where-you-cannot-use",
@@ -579,7 +631,13 @@
         "definition": "If you see '{que}' + a person after these starter phrases, use these forms!",
         "example": "{il faut QUE tu} → use sois/{aies}/{ailles}/{fasses, je veux QUE tu} → use sois/aies/ailles/{fasses}"
       }
-    ]
+    ],
+    "vocabulary/il-faut-que-fr": {
+      "word_id": "il-faut-que-fr",
+      "fr": "il faut que",
+      "gloss": "it's necessary that / someone needs to",
+      "note": "from {falloir}; the verb after it takes the forms in this lesson"
+    }
   },
   "2024-01-23-unit2-practice": {
     "can_do": [
@@ -690,6 +748,20 @@
     ]
   },
   "2024-01-25-emotion-phrases": {
+    "concepts": [
+      {
+        "id": "c-expressing-emotions-about-others",
+        "term": "Expressing Emotions About Others",
+        "definition": "Your feelings are usually about what OTHER PEOPLE do or say!",
+        "example": "{Je suis content} (I'm happy - about what?) → {Je suis content que tu sois là} (I'm happy YOU'RE here!); {Il faut que tu viennes : je veux que tu sois là !} (You have to come: I want you to be there!)"
+      },
+      {
+        "id": "c-common-emotion-phrases",
+        "term": "Common Emotion Phrases",
+        "definition": "Happy, sad, afraid, sorry - all followed by 'que + person + action'",
+        "example": "{Je suis triste que tu partes} (I'm sad you're leaving), {J'ai peur qu'elle ne comprenne pas} (I'm afraid she won't understand)"
+      }
+    ],
     "vocabulary/je-suis-content-que-tu-sois-la-fr.i-m-happy": {
       "word_id": "je-suis-content-que-tu-sois-la-fr",
       "fr": "je suis content que tu sois là",
@@ -745,13 +817,28 @@
       ]
     }
   },
+  "2024-01-27-hypothetical-phrases": {
+    "description": "Talk about fantasies and what-ifs! '{Si j'étais riche...}' (If I were rich...), '{Si j'avais le temps, je voyagerais}' (If I had time, I'd travel). Everyone loves daydreaming!",
+    "vocabulary/nous-marcherions-fr": {
+      "word_id": "nous-marcherions-fr",
+      "fr": "nous marcherions",
+      "gloss": "we'd walk",
+      "note": "the {nous} ending is -ions"
+    },
+    "vocabulary/on-marcherait-fr": {
+      "word_id": "on-marcherait-fr",
+      "fr": "on marcherait",
+      "gloss": "we'd walk",
+      "note": "from {marcher}; {on} takes the {il} ending -ait"
+    }
+  },
   "2024-01-28-necessity-phrases": {
     "concepts": [
       {
         "id": "c-il-faut-que-directed",
         "term": "{Il faut que...} - Directed Necessity",
         "definition": "Tell SOMEONE SPECIFIC what needs to happen. More direct than 'il faut + verb'",
-        "example": "{Il faut manger} (general: someone should eat) → {Il faut que tu manges} (YOU specifically need to eat)"
+        "example": "{Il faut manger} (general: someone should eat) → {Il faut que tu manges} (YOU specifically need to eat); {Il faut qu'on aille au parc} (We need to go to the park)"
       },
       {
         "id": "c-parent-friend-language",
@@ -935,7 +1022,31 @@
   },
   "2024-02-01-reading-10": {
     "description": "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more",
-    "title": "Reading - {Mes Rêves et Mes Espoirs}"
+    "glossary": [
+      {
+        "fr": "assise",
+        "en": "sitting (feminine)"
+      },
+      {
+        "fr": "savait",
+        "en": "knew"
+      },
+      {
+        "fr": "saura",
+        "en": "will know"
+      },
+      {
+        "fr": "achèterait",
+        "en": "would buy"
+      }
+    ],
+    "title": "Reading - {Mes Rêves et Mes Espoirs}",
+    "vocabulary/je-me-sens-mieux-fr": {
+      "word_id": "je-me-sens-mieux-fr",
+      "fr": "je me sens mieux",
+      "gloss": "I feel better",
+      "note": "from {se sentir}, to feel"
+    }
   },
   "2024-02-02-combining": {
     "items/i-il-va-partir": {
@@ -1009,6 +1120,22 @@
       "gloss": "today"
     }
   },
+  "2024-02-03-so-that-phrases": {
+    "concepts": [
+      {
+        "id": "c-pour-que-so-that",
+        "term": "{Pour que...} - So That Someone Can...",
+        "definition": "Express your PURPOSE or GOAL for someone else",
+        "example": "{Pour que tu comprennes} (So that you understand), {Pour qu'elle sache} (So that she knows)"
+      },
+      {
+        "id": "c-explaining-why-you-re",
+        "term": "Explaining Why You're Doing Something",
+        "definition": "Super useful for explaining your intentions!",
+        "example": "{Je parle lentement pour que tu comprennes} (I speak slowly so you understand), {Je fais venir Marie pour que tu sois content} (I'm having Marie come so that you're happy)"
+      }
+    ]
+  },
   "2024-02-04-unit-10-exam": {
     "description": "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions.",
     "items/i-perdu-espoir": {
@@ -1030,8 +1157,7 @@
       "shown": "Si on ne fait rien, on ne _____ jamais",
       "answer": "saura",
       "accept": [
-        "sait",
-        "savoir"
+        "sait"
       ],
       "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If we don't do anything, we'll never _____'"
     },
@@ -1082,16 +1208,251 @@
   },
   "2024-02-05-unit-10-practice": {
     "description": "Complete sentences using this unit's B2 level phrases: necessity, wishes, emotions, hypotheticals, and more!",
+    "items/i-voudrais-sois-heureux": {
+      "id": "i-voudrais-sois-heureux",
+      "type": "gapfill",
+      "text": "Si j'étais ta mère, je ___ que tu ___ heureux.",
+      "blanks": [
+        {
+          "answer": "voudrais"
+        },
+        {
+          "answer": "sois"
+        }
+      ],
+      "gloss": "'If I were your mother, I'd want you to be happy' (advice + wish)",
+      "hint": "would want (conditional) / be (special form after '{que}')"
+    },
+    "items/i-voudrais-suives": null,
     "title": "Mastery & Nuance Practice - Fill in the Blanks"
   },
   "2024-02-05-unit3-exam": {
     "description": "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
   },
+  "2024-02-06-while-doing-phrases": {
+    "concepts": [
+      {
+        "id": "c-en-ant-while-doing",
+        "term": "En + -ant = While Doing",
+        "definition": "Describe two actions happening at the same time, or the METHOD you use",
+        "example": "{En mangeant} (while eating), {en parlant} (while speaking), {en travaillant} (while working)"
+      },
+      {
+        "id": "c-common-uses",
+        "term": "Common Uses",
+        "definition": "Multitasking, explaining method, simultaneous actions",
+        "example": "{Je travaille en écoutant de la musique} (I work while listening to music), {On parle lentement en mangeant} (We talk slowly while eating)"
+      }
+    ],
+    "description": "Describe multitasking! '{En mangeant, je regarde un film}' (While eating, I watch a film), '{On apprend en pratiquant}' (We learn by practicing). Natural speech patterns!"
+  },
+  "2024-02-07-wish-phrases": {
+    "concepts": [
+      {
+        "id": "c-je-veux-que-directing",
+        "term": "{Je veux que...} - Directing Wishes",
+        "definition": "Express what you want SOMEONE ELSE to do (not yourself!)",
+        "example": "{Je veux manger} (I want to eat - {me}) → {Je veux que tu manges} (I want YOU to eat - you)"
+      },
+      {
+        "id": "c-softer-version-j-aimerais",
+        "term": "Softer Version: {J'aimerais que...}",
+        "definition": "More polite way to express wishes",
+        "example": "{J'aimerais que tu viennes} (I'd like you to come), {Je ne veux pas que tu tombes !} (I don't want you to fall!)"
+      }
+    ]
+  },
   "2024-02-08-age-personal-info": {
     "description": "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information."
   },
+  "2024-02-09-directions-navigation": {
+    "concepts": [
+      {
+        "id": "c-cardinal-directions",
+        "term": "Cardinal Directions",
+        "definition": "The four main compass directions in French",
+        "example": "{le nord} (north), {le sud} (south), {l'est} (east), {l'ouest} (west)"
+      },
+      {
+        "id": "c-turn-directions",
+        "term": "Turn Directions",
+        "definition": "Essential for giving and following directions",
+        "example": "{tournez à gauche} (turn left), {tournez à droite} (turn right), {tout droit} (straight ahead)"
+      },
+      {
+        "id": "c-location-descriptions",
+        "term": "Location Descriptions",
+        "definition": "Describe where things are relative to other things",
+        "example": "{à côté de} (next to), {en face de} (across from), {près de} (near), {loin de} (far from)"
+      },
+      {
+        "id": "c-giving-directions",
+        "term": "Giving Directions",
+        "definition": "Complete phrases for helping someone navigate",
+        "example": "{Allez tout droit jusqu'à la gare, puis tournez à gauche} (Go straight as far as the station, then turn left)"
+      },
+      {
+        "id": "c-asking-for-directions",
+        "term": "Asking for Directions",
+        "definition": "How to ask for help when lost",
+        "example": "{Excusez-moi}, {où est...?} ({Excuse me}, where is...?), {Comment aller à...?} (How do you get to...?)"
+      }
+    ],
+    "vocabulary/jusqu-a-fr": {
+      "word_id": "jusqu-a-fr",
+      "fr": "jusqu'à",
+      "gloss": "as far as / until",
+      "note": "{jusqu'à la gare} (as far as the station), {jusqu'à demain} (until tomorrow)"
+    }
+  },
+  "2024-02-10-donner": {
+    "concepts": [
+      {
+        "id": "c-donner-to-give",
+        "term": "{donner} = to give",
+        "definition": "One of the most common verbs - used for gifts, help, information, objects",
+        "example": "{Je donne un livre} (I give a book), {Tu me donnes ton numéro?} (Do you give me your number?)"
+      },
+      {
+        "id": "c-regular-er-conjugation",
+        "term": "Regular -ER Conjugation",
+        "definition": "Follows standard -ER pattern like parler, manger",
+        "example": "{je donne}, {tu donnes}, {il donne}, {nous donnons}, {vous donnez}, {ils donnent}"
+      },
+      {
+        "id": "c-direct-and-indirect-objects",
+        "term": "Direct and Indirect Objects",
+        "definition": "Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un",
+        "example": "{Je donne le livre à Marie} (I give the book to Marie) → {Je lui donne le livre} (I give it to her)"
+      },
+      {
+        "id": "c-common-expressions",
+        "term": "Common Expressions",
+        "definition": "Many fixed phrases use donner in French",
+        "example": "{donner l'heure} (tell the time), {donner raison} (agree with someone), {donner rendez-vous} (make an appointment)"
+      }
+    ]
+  },
   "2024-02-12-reading-11": {
+    "glossary": [
+      {
+        "fr": "compte",
+        "en": "has (in number)"
+      },
+      {
+        "fr": "attire",
+        "en": "attracts"
+      },
+      {
+        "fr": "lieux",
+        "en": "places"
+      },
+      {
+        "fr": "étrangères",
+        "en": "foreign"
+      },
+      {
+        "fr": "peintres",
+        "en": "painters"
+      },
+      {
+        "fr": "mémoire",
+        "en": "memory"
+      },
+      {
+        "fr": "également",
+        "en": "also, as well"
+      },
+      {
+        "fr": "inoubliables",
+        "en": "unforgettable"
+      },
+      {
+        "fr": "plusieurs",
+        "en": "several"
+      },
+      {
+        "fr": "françaises",
+        "en": "French"
+      },
+      {
+        "fr": "au-delà",
+        "en": "beyond"
+      },
+      {
+        "fr": "traverse",
+        "en": "crosses"
+      },
+      {
+        "fr": "au bord de",
+        "en": "on the shore of"
+      },
+      {
+        "fr": "vélo",
+        "en": "bike"
+      },
+      {
+        "fr": "quels",
+        "en": "which"
+      }
+    ],
     "title": "Reading - {La France Moderne}"
+  },
+  "2024-02-13-search-and-find": {
+    "concepts": [
+      {
+        "id": "c-chercher-to-look-for",
+        "term": "{chercher} = to look for / to search (rank 57)",
+        "definition": "Regular -ER verb for searching - used constantly in daily life",
+        "example": "{Je cherche mes clés} (I'm looking for my keys), {Tu cherches quoi?} (What are you looking for?), {C'est dur de trouver mes clés !} (It's hard to find my keys!)"
+      },
+      {
+        "id": "c-trouver-to-find-rank",
+        "term": "{trouver} = to find (rank 58)",
+        "definition": "Regular -ER verb for finding - the successful result of chercher!",
+        "example": "{J'ai trouvé!} (I found it!), {Tu trouves ça comment?} (What do you think of that?)"
+      },
+      {
+        "id": "c-the-perfect-sequence",
+        "term": "The Perfect Sequence",
+        "definition": "These two verbs form a natural action sequence",
+        "example": "{Je cherche} → {Je trouve} (I search → I find). The complete search-and-discovery process!"
+      },
+      {
+        "id": "c-extended-meanings",
+        "term": "Extended Meanings",
+        "definition": "Both verbs have broader meanings beyond physical searching",
+        "example": "{chercher} = try to do, {trouver} = think/consider ({Je trouve que...} = I think that...)"
+      }
+    ]
+  },
+  "2024-02-14-social-situations": {
+    "concepts": [
+      {
+        "id": "c-attendre-to-wait-rank",
+        "term": "{attendre} = to wait (rank 67)",
+        "definition": "Regular -RE verb for waiting - essential for appointments and transport",
+        "example": "{J'attends le bus} (I'm waiting for the bus), {Tu attends quelqu'un?} (Are you waiting for someone?), {J'attends Marie et j'écoute de la musique} (I'm waiting for Marie and listening to music)"
+      },
+      {
+        "id": "c-arriver-to-arrive-rank",
+        "term": "{arriver} = to arrive (rank 69)",
+        "definition": "Regular -ER verb for arriving - completing journeys and meetings",
+        "example": "{J'arrive à 8h} (I arrive at 8am), {Le train arrive} (The train is arriving)"
+      },
+      {
+        "id": "c-rester-to-stay-rank",
+        "term": "{rester} = to stay (rank 70)",
+        "definition": "Regular -ER verb for staying - not leaving, remaining somewhere",
+        "example": "{Je reste ici} (I'm staying here), {Tu restes combien de temps?} (How long are you staying?)"
+      },
+      {
+        "id": "c-social-coordination",
+        "term": "Social Coordination",
+        "definition": "These three verbs enable complete social planning and coordination",
+        "example": "{J'attends Marie, elle arrive à 7h, et nous restons ensemble} (I'm waiting for Marie, she arrives at 7, and we stay together)"
+      }
+    ]
   },
   "2024-02-15-unit-11-exam": {
     "description": "Final test for this unit! Demonstrate mastery of age expressions, all missing top 100 verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), directions, and practical communication. Achieve complete French foundation!",
@@ -1153,7 +1514,7 @@
         "id": "c-nature-elements",
         "term": "Nature words",
         "definition": "Essential nature vocabulary for asking questions about natural phenomena",
-        "example": "{le vent} (wind), {la pluie} (rain), {une plante} (plant), {un arbre} (tree)"
+        "example": "{le vent} (wind), {la pluie} (rain), {une plante} (plant), {un arbre} (tree); {Il y a des millions d'oiseaux} (There are millions of birds)"
       },
       {
         "id": "c-combining-with-colors",
@@ -1547,7 +1908,7 @@
         "id": "c-courir-irregular-ir-verb",
         "term": "{courir} - Irregular -IR Verb",
         "definition": "Courir (to run) is irregular but common - memorize the pattern",
-        "example": "{je cours}, {tu cours}, {il court}, {nous courons}, {vous courez}, {ils courent}"
+        "example": "{je cours}, {tu cours}, {il court}, {nous courons}, {vous courez}, {ils courent}; {Je cours jusqu'à la gare} (I run as far as the station)"
       },
       {
         "id": "c-animals-movement",
@@ -4328,6 +4689,38 @@
     "title": "Basic Fluency Practice - Fill in the Blanks"
   },
   "2024-04-29-comprendre": {
+    "concepts": [
+      {
+        "id": "c-comprendre-to-understand",
+        "term": "{comprendre} = to understand",
+        "definition": "Essential learning verb - follows same pattern as prendre (which you already know!)",
+        "example": "{je comprends le français} (I understand French), {tu comprends?} (do you understand?)"
+      },
+      {
+        "id": "c-same-pattern-as-prendre",
+        "term": "Same pattern as prendre",
+        "definition": "If you know prendre, you know comprendre! Just add com- prefix",
+        "example": "{je prends} → {je comprends}, {tu prends} → {tu comprends}, {ils prennent} → {ils comprennent}"
+      },
+      {
+        "id": "c-most-common-use-je",
+        "term": "Most common use: '{Je ne comprends pas}'",
+        "definition": "THE essential phrase for learning - I don't understand",
+        "example": "{Je ne comprends pas} (I don't understand), {Tu comprends?} (Do you understand?)"
+      },
+      {
+        "id": "c-comprendre-noun",
+        "term": "comprendre + noun",
+        "definition": "You can understand things, people, languages, concepts",
+        "example": "{je comprends le français} (I understand French), {je comprends Marie} (I understand Marie), {je comprends la leçon} (I understand the lesson)"
+      },
+      {
+        "id": "c-building-on-prendre-knowledge",
+        "term": "Building on prendre knowledge",
+        "definition": "Three verbs in prendre family: prendre (take), apprendre (learn), comprendre (understand)",
+        "example": "{j'apprends} → {je comprends} (I learn → I understand) - natural progression!"
+      }
+    ],
     "vocabulary/tu-comprends-fr.you-understand": {
       "word_id": "tu-comprends-fr",
       "fr": "tu comprends",
@@ -4341,7 +4734,7 @@
         "id": "c-connaitre-to-know-people",
         "term": "{connaître} = to know (people or places)",
         "definition": "CRITICAL distinction: connaître is for people you know or places you're familiar with",
-        "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris)"
+        "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris), {Je ne sais pas, je ne connais pas Paris} (I don't know, I don't know Paris)"
       },
       {
         "id": "c-irregular-conjugation-with-i",
@@ -4369,6 +4762,57 @@
       }
     ],
     "title": "{connaître} - To Know (People/Places)"
+  },
+  "2024-05-02-discourse-markers": {
+    "concepts": [
+      {
+        "id": "c-what-are-discourse-markers",
+        "term": "What are discourse markers?",
+        "definition": "Words that organize speech, show transitions, add emphasis, or fill pauses - natives use them CONSTANTLY!",
+        "example": "Without: '{Je ne comprends pas. Je veux apprendre.}' With: '{Bon, je ne comprends pas, donc je veux apprendre, quoi.}' ← Native!"
+      },
+      {
+        "id": "c-donc-so-therefore",
+        "term": "{donc} = so / therefore",
+        "definition": "Shows logical conclusion - very common! Connects cause and effect",
+        "example": "{Je pense}, {donc je suis} (I think, therefore I am - Descartes!), {Donc}, {tu comprends?} (So, do you understand?)"
+      },
+      {
+        "id": "c-en-fait-in-fact",
+        "term": "{en fait} = in fact / actually",
+        "definition": "Corrects or clarifies something - super common in conversation",
+        "example": "{En fait, je ne sais pas} (Actually, I don't know), {En fait, c'est comme ça} (In fact, that's how it is)"
+      },
+      {
+        "id": "c-bah-well",
+        "term": "{bah} = well...",
+        "definition": "Filler word - shows hesitation or introduces explanation (informal!)",
+        "example": "{Bah, c'est comme ça} (Well, that's how it is), {Bah}, {je sais pas} (Well, I don't know)"
+      },
+      {
+        "id": "c-quoi-like-you-know",
+        "term": "{quoi} = like / you know (at end)",
+        "definition": "End-of-sentence filler - VERY French! Emphasizes or seeks agreement",
+        "example": "{C'est bon}, {quoi} (It's good, you know), {Je pense ça}, quoi (I think that, like)"
+      },
+      {
+        "id": "c-more-discourse-markers",
+        "term": "More discourse markers",
+        "definition": "bon (well, so), alors (so, then), ainsi (thus - formal)",
+        "example": "{Bon}, {on commence?} (Well, shall we start?), {Alors}, {tu viens?} (So, are you coming?), {Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui.} (So, are you going to the university? Actually, I don't have class today.), {Bon, voilà la réponse.} (Well, there's the answer.)"
+      }
+    ],
+    "items/discourse-markers-17": null,
+    "items/i-je-suis-presque-la": {
+      "id": "i-je-suis-presque-la",
+      "type": "respond",
+      "situation": "A friend calls to ask where you are. Say \"I'm almost there.\"",
+      "answer": "je suis presque là",
+      "accept": [
+        "je suis presque la"
+      ],
+      "hint": "{je suis + presque + là}"
+    }
   },
   "2024-05-03-knowledge-nouns": {
     "concepts": [
@@ -4398,8 +4842,161 @@
       }
     ]
   },
+  "2024-05-04-learning-verbs": {
+    "concepts": [
+      {
+        "id": "c-apprendre-to-learn",
+        "term": "{apprendre} = to learn",
+        "definition": "Part of prendre family (you already know this pattern!) - essential for education",
+        "example": "{j'apprends le français} (I'm learning French), {j'apprends beaucoup de mots} (I'm learning a lot of words), {nous apprenons ensemble} (we're learning together)"
+      },
+      {
+        "id": "c-same-pattern-as-prendre",
+        "term": "Same pattern as prendre/{comprendre}",
+        "definition": "If you know prendre and comprendre, you know apprendre! Add ap- prefix",
+        "example": "{je prends} → {j'apprends}, {tu comprends} → {tu apprends} (same pattern!)"
+      },
+      {
+        "id": "c-enseigner-to-teach",
+        "term": "{enseigner} = to teach",
+        "definition": "Regular -ER verb - easy! Natural pair with apprendre",
+        "example": "{j'enseigne le français} (I teach French), {il m'enseigne} (he teaches me)"
+      },
+      {
+        "id": "c-beautiful-semantic-progression",
+        "term": "Beautiful semantic progression",
+        "definition": "Teacher teaches → student learns → student understands → student knows",
+        "example": "{Il m'enseigne} → {j'apprends} → {je comprends} (complete learning cycle!)"
+      },
+      {
+        "id": "c-apprendre-a-infinitive",
+        "term": "apprendre à + infinitive",
+        "definition": "Use 'à' before infinitive to say learning how to do something",
+        "example": "{j'apprends à faire du café} (I'm learning to make coffee), {j'apprends à parler français} (I'm learning to speak French)"
+      }
+    ]
+  },
+  "2024-05-05-on-and-people": {
+    "concepts": [
+      {
+        "id": "c-on-we-one-people",
+        "term": "{on} = we / one / people",
+        "definition": "THE most versatile pronoun! Used MORE than '{nous}' in everyday French. Three meanings depending on context.",
+        "example": "{on va au cinéma} (we're going to movies), {on va au restaurant en famille} (we're going to a restaurant as a family), {on dit que} (people say that), {on ne peut pas} (one cannot)"
+      },
+      {
+        "id": "c-on-conjugates-like-il",
+        "term": "on conjugates like il/{elle} (third person singular)",
+        "definition": "CRITICAL: Even though '{on}' means 'we', it uses il/elle verb forms!",
+        "example": "{on est} (we are), {on a} (we have), {on va} (we go), {on fait} (we do) - all use il/elle forms"
+      },
+      {
+        "id": "c-on-vs-nous",
+        "term": "on vs nous",
+        "definition": "on = informal, conversational (90% of speech). nous = formal, written (10%)",
+        "example": "Friends: '{on va manger?}' Formal: '{nous allons manger}' (much less common!)"
+      },
+      {
+        "id": "c-les-gens-people-general",
+        "term": "{les gens} = people (general)",
+        "definition": "Plural noun for referring to people in general - very common!",
+        "example": "{les gens disent} (people say), {les gens pensent} (people think), {les gens sont gentils} (people are nice)"
+      },
+      {
+        "id": "c-tout-le-monde-everyone",
+        "term": "{tout le monde} = everyone",
+        "definition": "Fixed expression (literally 'all the world') - uses SINGULAR verb!",
+        "example": "{tout le monde sait} (everyone knows - singular!), {tout le monde pense} (everyone thinks)"
+      },
+      {
+        "id": "c-making-general-statements",
+        "term": "Making general statements",
+        "definition": "Use '{on}' for universal truths or common wisdom - sounds philosophical!",
+        "example": "{On apprend tous les jours} (We learn every day), {On ne peut pas tout savoir} (One can't know everything)"
+      }
+    ],
+    "items/i-on-doit-partir": {
+      "id": "i-on-doit-partir",
+      "type": "respond",
+      "situation": "Say 'We must leave' (using on)",
+      "cue": "We must leave (using on)",
+      "answer": "on doit partir",
+      "hint": "{on + doit + partir}"
+    },
+    "items/i-on-doit-travailler": {
+      "id": "i-on-doit-travailler",
+      "type": "respond",
+      "situation": "We must work (using on)",
+      "answer": "on doit travailler",
+      "hint": "on + doit + travailler (on uses il/elle forms)",
+      "mistakes": [
+        {
+          "answer": "nous devons travailler",
+          "feedback": "Use '{on}' for informal - '{on doit travailler}'"
+        },
+        {
+          "answer": "on devons travailler",
+          "feedback": "'on' takes il/elle forms - '{on doit}' (not 'on devons')!"
+        }
+      ]
+    },
+    "items/on-people-2": null,
+    "items/on-people-8": null,
+    "vocabulary/les-gens-sont-gentils-fr": {
+      "word_id": "les-gens-sont-gentils-fr",
+      "fr": "les gens sont gentils",
+      "gloss": "people are nice",
+      "note": "plural {gentils} after {les gens}"
+    },
+    "vocabulary/on-doit-fr": {
+      "word_id": "on-doit-fr",
+      "fr": "on doit",
+      "gloss": "we must / one must",
+      "note": "{On doit travailler}"
+    }
+  },
+  "2024-05-06-penser": {
+    "concepts": [
+      {
+        "id": "c-penser-to-think",
+        "term": "{penser} = to think",
+        "definition": "Core cognitive verb for expressing opinions and thoughts",
+        "example": "{je pense que c'est bon} (I think it's good), {tu penses?} (what do you think?)"
+      },
+      {
+        "id": "c-regular-er-verb",
+        "term": "Regular -ER verb",
+        "definition": "Easy conjugation! Like parler, manger, etc. (verbs you already know)",
+        "example": "{je pense}, {tu penses}, {il pense} - add -e, -{es}, -e endings"
+      },
+      {
+        "id": "c-penser-que-to-think",
+        "term": "{penser que...} (to think that...)",
+        "definition": "Use '{que}' to introduce your opinion - VERY common pattern",
+        "example": "{je pense que oui} (I think so), {je pense que non} (I don't think so), {je pense que je connais Marie} (I think I know Marie), {je pense qu'il sait parler anglais} (I think he can speak English)"
+      },
+      {
+        "id": "c-penser-a-to-think",
+        "term": "{penser à...} (to think about...)",
+        "definition": "Use 'à' + person/thing when thinking about something",
+        "example": "{je pense à toi} (I'm thinking about you), {je pense à ça} (I'm thinking about that)"
+      },
+      {
+        "id": "c-asking-opinions",
+        "term": "Asking opinions",
+        "definition": "Qu'est-ce que tu penses? = What do you think? (essential!)",
+        "example": "{Qu'est-ce que tu penses de ça?} (What do you think about that?)"
+      }
+    ]
+  },
   "2024-05-07-reading-7": {
     "description": "A philosophical article about learning and education. Uses all cognitive verbs from this unit!",
+    "glossary": [
+      {
+        "fr": "poser des questions",
+        "en": "to ask questions"
+      }
+    ],
     "title": "Reading - {L'Art d'Apprendre}",
     "vocabulary/apprendre-fr": {
       "word_id": "apprendre-fr",
@@ -4431,6 +5028,12 @@
       "fr": "demander",
       "gloss": "to ask"
     },
+    "vocabulary/etudiant-s-fr": {
+      "word_id": "etudiant-s-fr",
+      "fr": "étudiant",
+      "gloss": "student",
+      "note": "noun; plural {étudiants}"
+    },
     "vocabulary/etudier-fr": {
       "word_id": "etudier-fr",
       "fr": "étudier",
@@ -4457,8 +5060,88 @@
       "gloss": "to find"
     }
   },
+  "2024-05-08-savoir": {
+    "concepts": [
+      {
+        "id": "c-savoir-to-know-facts",
+        "term": "{savoir} = to know (facts or skills)",
+        "definition": "CRITICAL distinction: savoir is for facts you learned or skills you have",
+        "example": "{je sais la réponse} (I know the answer), {je sais parler anglais} (I can speak English)"
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "Irregular conjugation",
+        "definition": "Must memorize! Present: je sais, tu sais, il sait, nous savons, vous savez, ils savent",
+        "example": "Notice: {je}/{tu}/il all sound the same ('say'), {nous}/vous different"
+      },
+      {
+        "id": "c-je-ne-sais-pas",
+        "term": "'{Je ne sais pas}' - THE phrase",
+        "definition": "Rank 21 = one of most common phrases in ALL of French! You'll use it constantly",
+        "example": "{Je ne sais pas} (I don't know), {Tu sais?} (You know? / Do you know?)"
+      },
+      {
+        "id": "c-savoir-infinitive-know-how",
+        "term": "savoir + infinitive = know how to",
+        "definition": "Use savoir + verb to express skills/abilities",
+        "example": "{je sais parler français} (I know how to speak French), {je sais faire du café} (I know how to make coffee)"
+      },
+      {
+        "id": "c-savoir-vs-connaitre-preview",
+        "term": "savoir vs connaître (preview)",
+        "definition": "savoir = facts/skills, connaître = people/places (you'll learn connaître next!)",
+        "example": "{je sais la réponse} (I know the answer). To know Marie, a person, the next lesson uses another verb."
+      }
+    ]
+  },
+  "2024-05-09-studying-verbs": {
+    "concepts": [
+      {
+        "id": "c-etudier-to-study",
+        "term": "{étudier} = to study",
+        "definition": "Regular -ER verb - easy! Essential for academic contexts",
+        "example": "{j'étudie à l'université} (I study at university), {j'étudie le français} (I'm studying French)"
+      },
+      {
+        "id": "c-reviser-to-review-to",
+        "term": "{réviser} = to review / to revise",
+        "definition": "Regular -ER verb - going over material you've learned",
+        "example": "{je révise mes leçons} (I'm reviewing my lessons), {je révise pour l'examen} (I'm reviewing for the exam)"
+      },
+      {
+        "id": "c-study-workflow",
+        "term": "Study workflow",
+        "definition": "Natural progression: study → learn → understand → review → know",
+        "example": "{j'étudie} → {j'apprends} → {je comprends} → {je révise}"
+      },
+      {
+        "id": "c-etudier-vs-apprendre",
+        "term": "étudier vs apprendre",
+        "definition": "étudier = the act of studying (action), apprendre = acquiring knowledge (result)",
+        "example": "{j'étudie le soir} (I study in the evening - action), {j'apprends beaucoup} (I learn a lot - result)"
+      },
+      {
+        "id": "c-complete-learning-narrative",
+        "term": "Complete learning narrative",
+        "definition": "Now you can describe your entire learning journey in French!",
+        "example": "{J'étudie} → {j'apprends} → {je comprends} → {je révise} → {je pense} (I study → learn → understand → review → think). Knowing and believing come in the next lessons."
+      }
+    ]
+  },
   "2024-05-10-unit-7-exam": {
-    "description": "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers."
+    "description": "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers.",
+    "items/i-j-ai-un-examen-donc": {
+      "id": "i-j-ai-un-examen-donc",
+      "type": "respond",
+      "situation": "Say that you have an exam, so you are reviewing your lessons.",
+      "answer": "j'ai un examen, donc je révise mes leçons",
+      "accept": [
+        "j'ai un examen donc je révise mes leçons",
+        "j ai un examen donc je revise mes lecons"
+      ],
+      "hint": "{j'ai un examen + donc + je révise mes leçons}"
+    },
+    "items/i-je-revise-mes-lecons-2": null
   },
   "2024-05-11-unit-7-practice": {
     "description": "Complete sentences using cognitive verbs, on, discourse markers, and essential vocabulary from this unit!",
@@ -4476,7 +5159,7 @@
         "id": "c-affirmative-commands-attach-with",
         "term": "Affirmative Commands: Attach with Hyphens",
         "definition": "In positive commands, pronouns attach to the verb with hyphens",
-        "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!)"
+        "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!), {Regarde-moi et fais attention!} (Look at me and pay attention!), {Amuse-toi bien!} (Have fun!), {Dépêche-toi, habille-toi!} (Hurry up, get dressed!)"
       },
       {
         "id": "c-negative-commands-separate-with",
@@ -4549,9 +5232,147 @@
           "feedback": "In a positive command, {en} goes after the verb: {prends-en}."
         }
       ]
+    },
+    "vocabulary/montre-la-moi-fr": {
+      "word_id": "montre-la-moi-fr",
+      "fr": "Montre-la-moi!",
+      "gloss": "Show it to me!",
+      "note": "from {montrer} (to show); {la} before {moi}"
+    }
+  },
+  "2024-05-13-commands-tu": {
+    "concepts": [
+      {
+        "id": "c-imperative-mood-commands",
+        "term": "Imperative Mood = Commands",
+        "definition": "Tell someone to do something - no subject pronoun needed!",
+        "example": "{Mange!} (Eat!), {Parle!} (Speak!), {Va!} (Go!), {Pars tôt!} (Leave early!)"
+      },
+      {
+        "id": "c-tu-form-just-drop",
+        "term": "tu form: Just Drop the Pronoun!",
+        "definition": "For most verbs, use the tu form without '{tu}'",
+        "example": "{tu manges} → {Mange!} (you eat → Eat!), {tu parles} → {Parle!} (you speak → Speak!)"
+      },
+      {
+        "id": "c-er-verbs-drop-the",
+        "term": "-ER verbs: Drop the final -s",
+        "definition": "For -ER verbs only, also drop the final -s in tu command form",
+        "example": "{tu manges} → {Mange!} (not Manges!), {tu parles} → {Parle!} (not Parles!)"
+      },
+      {
+        "id": "c-use-with-friends-and",
+        "term": "Use with Friends and Family",
+        "definition": "tu commands are informal - use with people you'd call '{tu}'",
+        "example": "To a friend: {Mange!} (Eat!), {Écoute!} (Listen!), {Viens!} (Come!), {Viens, on est en retard!} (Come on, we're late!)"
+      }
+    ]
+  },
+  "2024-05-14-commands-vous": {
+    "concepts": [
+      {
+        "id": "c-vous-commands-formal-or",
+        "term": "vous Commands = Formal or Groups",
+        "definition": "Use vous form for strangers, bosses, or multiple people",
+        "example": "To strangers: Mangez! To a group: {Venez!} (Come!), {On se voit demain!} (See you tomorrow!)"
+      },
+      {
+        "id": "c-easy-formation-drop-the",
+        "term": "Easy Formation: Drop the Pronoun!",
+        "definition": "Just use vous form without saying '{vous}'",
+        "example": "{vous mangez} → {Mangez!}, {vous parlez} → {Parlez!}"
+      },
+      {
+        "id": "c-keep-the-ez-ending",
+        "term": "Keep the -ez Ending",
+        "definition": "Unlike tu commands, vous commands keep all letters!",
+        "example": "{Mangez!} (not Mange!), {Parlez!} (not Parle!)"
+      }
+    ]
+  },
+  "2024-05-15-daily-actions-1": {
+    "concepts": [
+      {
+        "id": "c-dormir-to-sleep-rank",
+        "term": "{dormir} = to sleep (rank 54)",
+        "definition": "Regular -IR verb for sleeping - essential for daily routines",
+        "example": "{je dors} (I sleep), {je dors huit heures} (I sleep 8 hours), {tu dors bien?} (do you sleep well?)"
+      },
+      {
+        "id": "c-travailler-to-work-rank",
+        "term": "{travailler} = to work (rank 55)",
+        "definition": "Regular -ER verb for working - essential for adult life",
+        "example": "{je travaille} (I work), {je travaille à Paris} (I work in Paris), {où travaillez-vous?} (where do you work?)"
+      },
+      {
+        "id": "c-vivre-to-live-rank",
+        "term": "{vivre} = to live (rank 56)",
+        "definition": "Irregular verb for living/being alive - existential and location",
+        "example": "{je vis} (I live), {je vis à Paris} (I live in Paris), {vivre sa vie} (to live one's life)"
+      },
+      {
+        "id": "c-daily-life-integration",
+        "term": "Daily Life Integration",
+        "definition": "These three verbs complete your ability to describe human existence",
+        "example": "{Je vis à Paris, je travaille près d'ici, et je dors bien} (I live in Paris, work near here, and sleep well)"
+      }
+    ]
+  },
+  "2024-05-16-daily-reflexives": {
+    "concepts": [
+      {
+        "id": "c-se-souvenir-to-remember",
+        "term": "{se souvenir} = to remember",
+        "definition": "Recall memories - important mental action",
+        "example": "{je me souviens de ça} (I remember that), {tu te souviens?} (do you remember?)"
+      },
+      {
+        "id": "c-s-amuser-to-have",
+        "term": "{s'amuser} = to have fun / to enjoy oneself",
+        "definition": "Enjoying yourself - social/emotional",
+        "example": "{je m'amuse} (I'm having fun), {on s'amuse bien} (we're having a good time)"
+      },
+      {
+        "id": "c-se-depecher-to-hurry",
+        "term": "{se dépêcher} = to hurry / to rush",
+        "definition": "Moving quickly - time pressure!",
+        "example": "{je me dépêche} (I'm hurrying), {je me dépêche, je suis en retard} (I'm hurrying, I'm late), {dépêche-toi!} (hurry up!)"
+      }
+    ],
+    "vocabulary/en-retard-fr": {
+      "word_id": "en-retard-fr",
+      "fr": "en retard",
+      "gloss": "late",
+      "note": "{je suis en retard} (I'm late, after the agreed time); {tard} is late in the day"
     }
   },
   "2024-05-17-getting-ready": {
+    "concepts": [
+      {
+        "id": "c-se-laver-to-wash",
+        "term": "{se laver} = to wash oneself",
+        "definition": "Personal hygiene - wash yourself",
+        "example": "{je me lave} (I wash myself), {tu te laves} (you wash yourself)"
+      },
+      {
+        "id": "c-s-habiller-to-get",
+        "term": "{s'habiller} = to get dressed",
+        "definition": "Put clothes on yourself - daily essential!",
+        "example": "{je m'habille} (I get dressed), {elle s'habille bien} (she dresses well)"
+      },
+      {
+        "id": "c-se-preparer-to-get",
+        "term": "{se préparer} = to get ready / to prepare oneself",
+        "definition": "General preparation - for school, work, going out",
+        "example": "{je me prépare pour le cours} (I get ready for class), {je me prépare tôt le matin} (I get ready early in the morning), {on se prépare} (we get ready)"
+      },
+      {
+        "id": "c-complete-morning-sequence",
+        "term": "Complete Morning Sequence",
+        "definition": "Now you can tell your entire morning story!",
+        "example": "{D'abord, je me réveille. Ensuite, je me lève. Après, je me lave. Puis, je m'habille. Finalement, je me prépare.}"
+      }
+    ],
     "vocabulary/je-me-lave-fr.i-wash-myself": {
       "word_id": "je-me-lave-fr",
       "fr": "je me lave",
@@ -4577,13 +5398,13 @@
         "id": "c-etre-commands",
         "term": "être Commands",
         "definition": "{tu: Sois! vous: Soyez! nous: Soyons!}",
-        "example": "{Sois sage!} (Be good!), {Soyez gentil!} (Be kind!)"
+        "example": "{Sois là à six heures!} (Be there at six!), {Soyez gentil!} (Be kind!)"
       },
       {
         "id": "c-avoir-commands",
         "term": "avoir Commands",
         "definition": "{tu: Aie! vous: Ayez! nous: Ayons!}",
-        "example": "{Aie confiance!} (Have confidence!), {Ayez patience!} (Have patience!)"
+        "example": "{Aie confiance!} (Have confidence!), {N'ayez pas peur!} (Don't be afraid!)"
       },
       {
         "id": "c-aller-commands",
@@ -4652,11 +5473,56 @@
           "feedback": "{y} goes before the verb: {j'y vais}."
         }
       ]
+    },
+    "vocabulary/ayons-fr": {
+      "word_id": "ayons-fr",
+      "fr": "Ayons!",
+      "gloss": "Let's have!",
+      "note": "avoir command - nous form"
+    },
+    "vocabulary/soyons-fr": {
+      "word_id": "soyons-fr",
+      "fr": "Soyons!",
+      "gloss": "Let's be!",
+      "note": "être command - nous form"
+    }
+  },
+  "2024-05-19-morning-routine": {
+    "vocabulary/tot-fr": {
+      "word_id": "tot-fr",
+      "fr": "tôt",
+      "gloss": "early",
+      "note": "the opposite of {tard}"
     }
   },
   "2024-05-20-reading-8": {
     "description": "A story about a typical day. Uses temporal words, reflexive verbs, and all this unit's vocabulary!",
-    "title": "Reading - {Ma Journée}"
+    "glossary": [
+      {
+        "fr": "comprenais",
+        "en": "understood (was understanding)"
+      }
+    ],
+    "items/i-pense-a-demain": {
+      "id": "i-pense-a-demain",
+      "type": "comprehension",
+      "question": "What pattern shows Marie's daily commitment to learning?",
+      "cue": "She goes from morning preparation to...",
+      "answer": "elle rentre contente et pense à demain",
+      "accept": [
+        "je rentre contente et pense à demain",
+        "contente et pense à demain",
+        "elle pense à demain"
+      ],
+      "hint": "What cycle does her day show from morning to evening?"
+    },
+    "items/reading-8-10": null,
+    "title": "Reading - {Ma Journée}",
+    "vocabulary/parce-que-fr": {
+      "word_id": "parce-que-fr",
+      "fr": "parce que",
+      "gloss": "because"
+    }
   },
   "2024-05-21-reflexive-pronouns": {
     "concepts": [
@@ -4684,7 +5550,23 @@
         "definition": "me (myself), te (yourself), se (himself/herself/oneself), nous (ourselves), vous (yourselves), se (themselves)",
         "example": "Each pronoun matches a subject: {je} → {me}, {tu} → {te}, {il}/{elle} → {se}, {nous} → nous, {vous} → vous, {ils}/{elles} → se"
       }
-    ]
+    ],
+    "items/reflexive-pronouns-4": {
+      "id": "reflexive-pronouns-4",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{elle}'? The sentence means \"her name is Marie\".",
+      "shown": "elle ... appelle Marie",
+      "answer": "se",
+      "hint": "Same as for '{il}' - third person reflexive"
+    },
+    "items/reflexive-pronouns-7": {
+      "id": "reflexive-pronouns-7",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{ils}'? The sentence means \"they meet up\".",
+      "shown": "ils ... retrouvent",
+      "answer": "se",
+      "hint": "Third person plural - same as singular '{il}'"
+    }
   },
   "2024-05-22-s-appeler": {
     "concepts": [
@@ -4692,7 +5574,7 @@
         "id": "c-s-appeler-to-be",
         "term": "{s'appeler} = to be called / to call oneself",
         "definition": "THE way to say your name in French! Literally 'to call oneself'",
-        "example": "{Je m'appelle Marie} (I call myself Marie = My name is Marie), {Comment tu t'appelles?} (What do you call yourself? = What's your name?)"
+        "example": "{Je m'appelle Marie} (I call myself Marie = My name is Marie), {Comment tu t'appelles?} (What do you call yourself? = What's your name?), {Mon frère s'appelle Paul} (My brother's name is Paul)"
       },
       {
         "id": "c-this-should-ve-been",
@@ -4711,6 +5593,34 @@
         "term": "Regular -ER verb conjugation",
         "definition": "Once you know the reflexive pronouns, the verb part is easy - regular -ER pattern!",
         "example": "{appelle}, {appelles}, appelle, {appelons}, {appelez}, {appellent}"
+      }
+    ]
+  },
+  "2024-05-23-temporal-words": {
+    "concepts": [
+      {
+        "id": "c-temporal-prepositions",
+        "term": "Temporal Prepositions",
+        "definition": "Words that show when or for how long something happens - used with nouns",
+        "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le travail} (after work), {une fois} (once), {cette année} (this year), {en ce moment} (right now); {Après le travail, je bois un café} (After work, I have a coffee)"
+      },
+      {
+        "id": "c-sequential-connectors",
+        "term": "Sequential Connectors",
+        "definition": "Words that show the order of actions - connect sentences smoothly",
+        "example": "{D'abord}, {je mange. Ensuite}, {je pars. Finalement}, {j'arrive.} (First, I eat. Then, I leave. Finally, I arrive.)"
+      },
+      {
+        "id": "c-building-smooth-narratives",
+        "term": "Building Smooth Narratives",
+        "definition": "Use these words to tell stories and describe routines naturally",
+        "example": "Before: '{Je mange. Je pars.}' (choppy) After: '{D'abord, je mange. Ensuite, je pars.}' (smooth!)"
+      },
+      {
+        "id": "c-position-in-sentence",
+        "term": "Position in Sentence",
+        "definition": "Sequential connectors usually start sentences. Prepositions go before nouns.",
+        "example": "{D'abord}, {je pars} (First, I leave). {Je pars après le cours} (I leave after class)."
       }
     ]
   },
@@ -4824,11 +5734,434 @@
     },
     "title": "Daily Life & Actions Practice - Fill in the Blanks"
   },
+  "2024-05-26-causal-words": {
+    "concepts": [
+      {
+        "id": "c-parce-que-because-most",
+        "term": "{parce que} - because (most common)",
+        "definition": "Answers '{pourquoi?}' - used in all situations",
+        "example": "{Je mange parce que j'ai faim} (I eat because I'm hungry), {Je ne viens pas parce que je suis malade} (I'm not coming because I'm sick)"
+      },
+      {
+        "id": "c-car-for-because-formal",
+        "term": "{car} - for, because (formal/literary)",
+        "definition": "More formal than '{parce que}', CANNOT start a sentence, common in writing",
+        "example": "{On étudie le français car c'est beau} (We study French for it's beautiful), {Je prends un café car je suis fatigué} (I'm having a coffee for I'm tired)"
+      },
+      {
+        "id": "c-puisque-since-seeing-as",
+        "term": "{puisque} - since, seeing as",
+        "definition": "Indicates logical conclusion or something already known, slightly formal",
+        "example": "{Puisque tu es là, on commence} (Since you're here, we'll start), {Puisque c'est vrai, je te crois} (Since it's true, I believe you)"
+      },
+      {
+        "id": "c-comme-as-since-at",
+        "term": "{comme} - as, since (at START of sentence)",
+        "definition": "Explains reason, MUST come at beginning of sentence",
+        "example": "{Comme il fait beau, on va au parc} (As it's nice, we're going to the park), {Comme je suis fatigué, je vais dormir} (As I'm tired, I'm going to sleep)"
+      },
+      {
+        "id": "c-grace-a-thanks-to",
+        "term": "{grâce à} - thanks to (positive reason + NOUN)",
+        "definition": "Positive attribution, followed by a noun or pronoun",
+        "example": "{Grâce à toi}, {je comprends mieux} (Thanks to you, I understand better), {Grâce au professeur}, {je parle bien} (Thanks to the teacher, I speak well)"
+      },
+      {
+        "id": "c-a-cause-de-because",
+        "term": "{à cause de} - because of (negative/neutral + NOUN)",
+        "definition": "Often negative or neutral, followed by a noun (NOT a clause!)",
+        "example": "{À cause de la musique, je ne peux pas travailler} (Because of the music, I can't work), {À cause du bus, je suis en retard} (Because of the bus, I'm late)"
+      }
+    ],
+    "items/i-a-cause": {
+      "id": "i-a-cause",
+      "type": "gapfill",
+      "text": "___ du travail, je ne peux pas venir",
+      "blanks": [
+        {
+          "answer": "À cause"
+        }
+      ],
+      "gloss": "Because of work, I can't come",
+      "mistakes": [
+        {
+          "answer": "Grâce à",
+          "feedback": "Bad weather isn't positive! Use '{à cause de}' for negative reasons."
+        },
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE: '{parce qu'il fait mauvais}'. Use '{à cause de}' + noun!"
+        }
+      ]
+    },
+    "items/i-a-cause-de": {
+      "id": "i-a-cause-de",
+      "type": "gapfill",
+      "text": "___ la musique, je ne peux pas travailler",
+      "blanks": [
+        {
+          "answer": "À cause de"
+        }
+      ],
+      "gloss": "Because of the music, I can't work",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE: '{parce qu'il pleut}'. Use '{à cause de}' + noun here!"
+        },
+        {
+          "answer": "Grâce à",
+          "feedback": "Grâce à is for POSITIVE reasons! Use '{à cause de}' for negative/neutral."
+        }
+      ]
+    },
+    "items/i-a-cause-du": {
+      "id": "i-a-cause-du",
+      "type": "gapfill",
+      "text": "Je suis en retard ___ bus",
+      "blanks": [
+        {
+          "answer": "à cause du"
+        }
+      ],
+      "gloss": "I'm late because of the bus",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que needs a CLAUSE: '{parce qu'il y a du traffic}'. Use '{à cause de}' + noun!"
+        },
+        {
+          "answer": "grâce au",
+          "feedback": "Being late isn't positive! Use '{à cause de}' for negative reasons."
+        }
+      ]
+    },
+    "items/i-a-cause-du-2": {
+      "id": "i-a-cause-du-2",
+      "type": "gapfill",
+      "text": "Je suis fatigué ___ travail",
+      "blanks": [
+        {
+          "answer": "à cause du"
+        }
+      ],
+      "gloss": "I'm tired because of work",
+      "mistakes": [
+        {
+          "answer": "parce que le",
+          "feedback": "Close! But '{à cause de}' + noun is more direct than parce que + clause."
+        },
+        {
+          "answer": "grâce au",
+          "feedback": "Not sleeping well isn't positive! Use '{à cause de}' for problems."
+        }
+      ]
+    },
+    "items/i-car": {
+      "id": "i-car",
+      "type": "gapfill",
+      "text": "On étudie le français ___ c'est beau",
+      "blanks": [
+        {
+          "answer": "car"
+        }
+      ],
+      "gloss": "We study French for it's beautiful",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que works! But '{car}' is more elegant in this context."
+        },
+        {
+          "answer": "comme",
+          "feedback": "Comme must come at the START of the sentence: '{Comme c'est utile, on étudie...}'"
+        }
+      ]
+    },
+    "items/i-grace-au": {
+      "id": "i-grace-au",
+      "type": "gapfill",
+      "text": "Je comprends ___ professeur",
+      "blanks": [
+        {
+          "answer": "grâce au"
+        }
+      ],
+      "gloss": "I understand thanks to the teacher",
+      "mistakes": [
+        {
+          "answer": "parce que le",
+          "feedback": "Close! But '{grâce à}' + noun is more elegant than 'parce que' + clause here."
+        },
+        {
+          "answer": "à cause du",
+          "feedback": "Succeeding is positive! Use '{grâce à}' for positive attribution."
+        }
+      ]
+    },
+    "items/i-parce-que-2": {
+      "id": "i-parce-que-2",
+      "type": "gapfill",
+      "text": "Pourquoi tu ne viens pas ? - ___ je suis fatigué",
+      "blanks": [
+        {
+          "answer": "Parce que"
+        }
+      ],
+      "gloss": "Why aren't you coming? - Because I'm tired",
+      "mistakes": [
+        {
+          "answer": "Car",
+          "feedback": "Car works but sounds formal. Use '{parce que}' to answer '{pourquoi}'."
+        },
+        {
+          "answer": "Puisque",
+          "feedback": "Puisque is for known facts, not direct answers to '{pourquoi}'. Use '{parce que}'!"
+        }
+      ]
+    },
+    "items/i-puisque-2": {
+      "id": "i-puisque-2",
+      "type": "gapfill",
+      "text": "On va partir ___ tu es là",
+      "blanks": [
+        {
+          "answer": "puisque"
+        }
+      ],
+      "gloss": "We'll leave since you're here",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que works! But '{puisque}' emphasizes the logical conclusion better."
+        },
+        {
+          "answer": "car",
+          "feedback": "Car works but '{puisque}' is more natural for 'since'."
+        }
+      ]
+    }
+  },
+  "2024-05-27-imparfait-all-verbs": {
+    "items/i-etais-2": {
+      "id": "i-etais-2",
+      "type": "gapfill",
+      "text": "Quand j'___ jeune, je jouais avec mon chien",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "When I was young, I used to play with my dog",
+      "hint": "Use '{être}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "ai été",
+          "feedback": "That's passé composé! Use imparfait for description: j'étais jeune."
+        },
+        {
+          "answer": "suis",
+          "feedback": "That's present tense! Use imparfait: j'étais (I was)."
+        },
+        {
+          "answer": "était",
+          "feedback": "That's il/elle form! Use '{je}' form: j'étais (not était)."
+        }
+      ]
+    },
+    "vocabulary/je-jouais-fr": {
+      "word_id": "je-jouais-fr",
+      "fr": "je jouais",
+      "gloss": "I was playing / I used to play",
+      "note": "{jouer} (to play) in imparfait"
+    },
+    "vocabulary/vous-vouliez-fr": {
+      "word_id": "vous-vouliez-fr",
+      "fr": "vous vouliez",
+      "gloss": "you wanted (formal/plural)",
+      "note": "vouloir in imparfait"
+    }
+  },
+  "2024-05-28-more-spatial-relations": {
+    "concepts": [
+      {
+        "id": "c-pres-de-near-close",
+        "term": "{près de} - near, close to",
+        "definition": "Indicates proximity, nearness",
+        "example": "{Le café est près de l'école} (The café is near the school), {J'habite près d'ici} (I live near here)"
+      },
+      {
+        "id": "c-loin-de-far-from",
+        "term": "{loin de} - far from",
+        "definition": "Indicates distance, remoteness",
+        "example": "{La gare est loin de la maison} (The station is far from the house), {C'est loin d'ici?} (Is it far from here?)"
+      },
+      {
+        "id": "c-a-cote-de-next",
+        "term": "{à côté de} - next to, beside",
+        "definition": "Indicates immediate proximity, side-by-side position",
+        "example": "{Je suis à côté de toi} (I'm next to you), {Le restaurant est à côté du cinéma} (The restaurant is next to the cinema)"
+      },
+      {
+        "id": "c-en-face-de-across",
+        "term": "{en face de} - across from, opposite",
+        "definition": "Indicates facing position, directly opposite",
+        "example": "{Ma maison est en face du parc} (My house is across from the park), {Il est assis en face de moi} (He's sitting across from me)"
+      },
+      {
+        "id": "c-autour-de-around",
+        "term": "{autour de} - around",
+        "definition": "Indicates surrounding position",
+        "example": "{Les gens sont autour de la table} (People are around the table), {Autour de la ville} (Around the city)"
+      },
+      {
+        "id": "c-le-long-de-along",
+        "term": "{le long de} - along",
+        "definition": "Indicates position along a length",
+        "example": "{Le long de la rue} (Along the street), {On marche le long de la rivière} (We walk along the river)"
+      },
+      {
+        "id": "c-au-milieu-de-in",
+        "term": "{au milieu de} - in the middle of",
+        "definition": "Indicates center position",
+        "example": "{Au milieu de la place} (In the middle of the square), {Il est au milieu} (He's in the middle)"
+      },
+      {
+        "id": "c-au-bout-de-at",
+        "term": "{au bout de} - at the end of",
+        "definition": "Indicates end position",
+        "example": "{Au bout de la rue} (At the end of the street), {C'est au bout} (It's at the end)"
+      }
+    ],
+    "items/i-a-cote-de-2": {
+      "id": "i-a-cote-de-2",
+      "type": "gapfill",
+      "text": "Mets-toi ___ moi",
+      "blanks": [
+        {
+          "answer": "à côté de"
+        }
+      ],
+      "gloss": "Sit next to me",
+      "mistakes": [
+        {
+          "answer": "avec",
+          "feedback": "Avec means 'with'. Use '{à côté de}' for physical position 'next to'!"
+        },
+        {
+          "answer": "près de",
+          "feedback": "Près de means 'near' (general). Use '{à côté de}' for 'right next to'!"
+        }
+      ]
+    },
+    "items/i-au-bout-du": {
+      "id": "i-au-bout-du",
+      "type": "gapfill",
+      "text": "La porte est ___ jardin",
+      "blanks": [
+        {
+          "answer": "au bout du"
+        }
+      ],
+      "gloss": "The door is at the end of the garden",
+      "mistakes": [
+        {
+          "answer": "dans le",
+          "feedback": "Dans means 'in' (general). Use '{au bout de}' for 'at the end of'!"
+        },
+        {
+          "answer": "près du",
+          "feedback": "Près de means 'near'. Use '{au bout de}' for 'at the end of'!"
+        }
+      ]
+    },
+    "items/i-au-milieu-de-la": {
+      "id": "i-au-milieu-de-la",
+      "type": "gapfill",
+      "text": "La table est ___ cuisine",
+      "blanks": [
+        {
+          "answer": "au milieu de la"
+        }
+      ],
+      "gloss": "The table is in the middle of the kitchen",
+      "mistakes": [
+        {
+          "answer": "dans la",
+          "feedback": "Dans means 'in' (general). Use '{au milieu de}' for 'in the middle of'!"
+        },
+        {
+          "answer": "sur la",
+          "feedback": "Sur means 'on'. Use '{au milieu de}' for 'in the middle of'!"
+        }
+      ]
+    },
+    "vocabulary/la-gare-fr": {
+      "word_id": "la-gare-fr",
+      "fr": "la gare",
+      "gloss": "the train station",
+      "note": "feminine"
+    }
+  },
+  "2024-05-29-passe-compose-agreement": {
+    "items/i-sont-rentres": {
+      "id": "i-sont-rentres",
+      "type": "gapfill",
+      "text": "Les enfants ___ tard",
+      "blanks": [
+        {
+          "answer": "sont rentrés"
+        }
+      ],
+      "gloss": "The children came home late",
+      "hint": "Use '{rentrer}', masculine plural!",
+      "mistakes": [
+        {
+          "answer": "sont rentré",
+          "feedback": "Les garçons is plural! Add -s for masculine plural: sont rentrés."
+        },
+        {
+          "answer": "sont rentrées",
+          "feedback": "Garçons (boys) is masculine! Use -s (not -es): sont rentrés."
+        },
+        {
+          "answer": "ont rentrés",
+          "feedback": "Rentrer uses ÊTRE, not avoir! It's '{sont rentrés}', not 'ont rentrés'."
+        }
+      ]
+    },
+    "vocabulary/nous-sommes-partis-fr": {
+      "word_id": "nous-sommes-partis-fr",
+      "fr": "nous sommes partis",
+      "gloss": "we left",
+      "note": "masculine or mixed plural (+s)"
+    },
+    "vocabulary/nous-sommes-venues-fr": {
+      "word_id": "nous-sommes-venues-fr",
+      "fr": "nous sommes venues",
+      "gloss": "we came (all feminine)",
+      "note": "feminine plural (+es)"
+    },
+    "vocabulary/vous-etes-alle-fr": {
+      "word_id": "vous-etes-alle-fr",
+      "fr": "vous êtes allé",
+      "gloss": "you went (singular formal, masculine)",
+      "note": "formal singular masculine; masculine singular (no change)",
+      "example_fr": "Paul, vous êtes allé où ?"
+    },
+    "vocabulary/vous-etes-alles-fr": {
+      "word_id": "vous-etes-alles-fr",
+      "fr": "vous êtes allés",
+      "gloss": "you went (plural, masculine/mixed)",
+      "note": "masculine plural (+s)",
+      "example_fr": "Les enfants, vous êtes allés où ?"
+    }
+  },
   "2024-05-30-passe-compose-er": {
     "concepts": [
       {
         "id": "c-passe-compose-avoir-past",
-        "term": "{Passé Composé} = avoir + past participle",
+        "term": "Passé Composé = avoir + past participle",
         "definition": "Compound past tense for completed actions: auxiliary verb '{avoir}' + past participle",
         "example": "{j'ai parlé} (I spoke), {tu as mangé} (you ate), {il a étudié} (he studied)"
       },
@@ -4862,9 +6195,299 @@
         "definition": "For specific completed actions in the past, countable events",
         "example": "{Hier, j'ai parlé avec Marie} (Yesterday, I spoke with Marie), {J'ai mangé à 8h} (I ate at 8)"
       }
+    ],
+    "items/i-a-regarde": {
+      "id": "i-a-regarde",
+      "type": "gapfill",
+      "text": "On ___ les enfants hier soir",
+      "blanks": [
+        {
+          "answer": "a regardé"
+        }
+      ],
+      "gloss": "We watched the children last night",
+      "hint": "Use '{regarder}'",
+      "mistakes": [
+        {
+          "answer": "regarde",
+          "feedback": "That's present tense! Use passé composé: on a regardé (we watched)."
+        },
+        {
+          "answer": "a regarder",
+          "feedback": "Change -er to -é! The past participle is '{regardé}', not 'regarder'."
+        }
+      ]
+    },
+    "items/i-avez-cherche": {
+      "id": "i-avez-cherche",
+      "type": "gapfill",
+      "text": "Vous ___ mon livre ?",
+      "blanks": [
+        {
+          "answer": "avez cherché"
+        }
+      ],
+      "gloss": "Did you look for my book?",
+      "hint": "Use '{chercher}'",
+      "mistakes": [
+        {
+          "answer": "cherchez",
+          "feedback": "That's present tense! Use passé composé: vous avez cherché (you looked for)."
+        },
+        {
+          "answer": "avez chercher",
+          "feedback": "Change -er to -é! The past participle is '{cherché}', not 'chercher'."
+        },
+        {
+          "answer": "avons cherché",
+          "feedback": "'Avons' is for '{nous}'! Use '{avez}' for vous: vous avez cherché."
+        }
+      ]
+    },
+    "vocabulary/j-ai-regarde-fr": {
+      "word_id": "j-ai-regarde-fr",
+      "fr": "j'ai regardé",
+      "gloss": "I watched / I looked at",
+      "note": "past action",
+      "example_fr": "J'ai regardé la ville"
+    }
+  },
+  "2024-05-31-passe-compose-etre": {
+    "items/i-est-venue": {
+      "id": "i-est-venue",
+      "type": "gapfill",
+      "text": "Elle n'___ pas ___",
+      "blanks": [
+        {
+          "answer": "est"
+        },
+        {
+          "answer": "venue"
+        }
+      ],
+      "gloss": "She didn't come",
+      "hint": "Use '{venir}' with ÊTRE!",
+      "mistakes": [
+        {
+          "answer": "a pas venu",
+          "feedback": "Venir uses ÊTRE! Use '{elle n'est pas venue}', not 'a pas venu'."
+        },
+        {
+          "answer": "vient pas",
+          "feedback": "That's present tense! Use passé composé: elle n'est pas venue."
+        }
+      ]
+    },
+    "items/i-etes-entres": {
+      "id": "i-etes-entres",
+      "type": "gapfill",
+      "text": "___-vous ___ dans le café ?",
+      "blanks": [
+        {
+          "answer": "Êtes"
+        },
+        {
+          "answer": "entrés"
+        }
+      ],
+      "gloss": "Did you go into the café?",
+      "hint": "Use '{entrer}' with ÊTRE!",
+      "mistakes": [
+        {
+          "answer": "Avez entré",
+          "feedback": "Entrer uses ÊTRE, not avoir! Use '{êtes-vous entrés ?}' (motion verb)."
+        },
+        {
+          "answer": "Entrez",
+          "feedback": "That's present tense! Use passé composé: {êtes-vous entrés ?}"
+        }
+      ]
+    },
+    "items/i-etes-partis": null,
+    "items/i-etes-restes": {
+      "id": "i-etes-restes",
+      "type": "gapfill",
+      "text": "Vous ___ à la maison ?",
+      "blanks": [
+        {
+          "answer": "êtes restés"
+        }
+      ],
+      "gloss": "Did you stay home?",
+      "hint": "Use '{rester}' with ÊTRE!",
+      "mistakes": [
+        {
+          "answer": "avez resté",
+          "feedback": "Rester uses ÊTRE, not avoir! Use '{vous êtes restés}' (a DR & MRS VANDERTRAMP verb)."
+        },
+        {
+          "answer": "restez",
+          "feedback": "That's present tense! Use passé composé: {vous êtes restés}."
+        }
+      ]
+    },
+    "items/i-etes-sortis": null,
+    "vocabulary/elle-est-venue-ils-sont-venus-fr": {
+      "word_id": "elle-est-venue-ils-sont-venus-fr",
+      "fr": "elle est venue / ils sont venus",
+      "gloss": "she came / they came",
+      "note": "with être the ending agrees: -e for feminine, -s for plural"
+    },
+    "vocabulary/il-est-ne-il-est-mort-fr": {
+      "word_id": "il-est-ne-il-est-mort-fr",
+      "fr": "il est né / il est mort",
+      "gloss": "he was born / he died",
+      "note": "naître → né, mourir → mort (both use être!)"
+    },
+    "vocabulary/je-suis-retourne-fr": {
+      "word_id": "je-suis-retourne-fr",
+      "fr": "je suis retourné",
+      "gloss": "I went back",
+      "note": "retourner → retourné (uses être!)"
+    }
+  },
+  "2024-06-01-passe-compose-irregular-1": {
+    "concepts": [
+      {
+        "id": "c-avoir-eu-had",
+        "term": "{avoir} → {eu} (had)",
+        "definition": "Irregular past participle: j'ai eu, tu as eu, il a eu",
+        "example": "{J'ai eu le temps} (I had time), {J'ai eu de la chance} (I had luck/I was lucky)"
+      },
+      {
+        "id": "c-etre-ete-was-been",
+        "term": "{être} → {été} (was/been)",
+        "definition": "Irregular past participle: j'ai été, tu as été, il a été",
+        "example": "{J'ai été content} (I was happy), {J'ai été à Paris} (I went to Paris - informal)"
+      },
+      {
+        "id": "c-faire-fait-did-made",
+        "term": "{faire} → {fait} (did/made)",
+        "definition": "Irregular past participle: j'ai fait, tu as fait, il a fait",
+        "example": "{J'ai fait ça} (I did that), {J'ai fait mes devoirs} (I did my homework), {J'ai fait un gâteau} (I made a cake)"
+      },
+      {
+        "id": "c-voir-vu-saw",
+        "term": "{voir} → {vu} (saw)",
+        "definition": "Irregular past participle: j'ai vu, tu as vu, il a vu",
+        "example": "{J'ai vu le film} (I saw the movie), {Tu as vu Marie?} (Did you see Marie?), {J'ai vu Paul, il est assis au café} (I saw Paul, he's sitting at the café)"
+      },
+      {
+        "id": "c-memory-tip",
+        "term": "Memory tip",
+        "definition": "These 4 verbs are the most common - memorize them!",
+        "example": "{eu}, {été}, {fait}, {vu} - practice these until automatic"
+      },
+      {
+        "id": "c-all-use-avoir-as",
+        "term": "All use AVOIR as auxiliary",
+        "definition": "These 4 verbs all use '{avoir}' (not être) in passé composé",
+        "example": "{j'ai eu}, {j'ai été}, {j'ai fait}, {j'ai vu} (all with '{avoir}')"
+      }
     ]
   },
   "2024-06-03-past-tense-composition": {
+    "concepts": [
+      {
+        "id": "c-complete-narrative-structure",
+        "term": "Complete Narrative Structure",
+        "definition": "Combine: 1) Scene-setting (IMP), 2) Events (PC), 3) Causal reasoning (parce que, car), 4) Spatial context (près de, devant)",
+        "example": "{Hier, il faisait beau donc je suis allé au parc près de chez moi. J'étais content parce que j'avais du temps.}"
+      },
+      {
+        "id": "c-layered-storytelling-pattern",
+        "term": "Layered Storytelling Pattern",
+        "definition": "Background (IMP) → Event (PC) → Reason (parce que) → Next Event (PC)",
+        "example": "{Il faisait beau} (background) {quand je suis sorti} (event). {J'ai décidé d'aller au café} (event) {parce que j'avais faim} (reason)."
+      },
+      {
+        "id": "c-rich-scene-setting",
+        "term": "Rich Scene-Setting",
+        "definition": "Use spatial prepositions + imparfait to paint the picture",
+        "example": "{Le café était près de l'école. Il y avait beaucoup de gens. Ils étaient assis autour des tables.}"
+      },
+      {
+        "id": "c-causal-flow-in-narratives",
+        "term": "Causal Flow in Narratives",
+        "definition": "Use donc, parce que, car, comme to connect events logically",
+        "example": "{Comme il faisait beau, je suis sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait faim.}"
+      },
+      {
+        "id": "c-time-and-space-integration",
+        "term": "Time and Space Integration",
+        "definition": "Combine temporal words (d'abord, ensuite) with spatial (près de, devant)",
+        "example": "{D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma. Après, j'ai joué avec mon chien.}"
+      }
+    ],
+    "items/i-a-cause-de": {
+      "id": "i-a-cause-de",
+      "type": "gapfill",
+      "text": "___ la fête, on est rentrés tard",
+      "blanks": [
+        {
+          "answer": "À cause de"
+        }
+      ],
+      "gloss": "Because of the party, we got home late",
+      "hint": "Negative reason + noun",
+      "mistakes": [
+        {
+          "answer": "Grâce à",
+          "feedback": "Rain isn't positive! Use '{à cause de}' for negative/neutral reasons."
+        },
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE! Use '{à cause de la pluie}' (because of THE RAIN - noun)."
+        }
+      ]
+    },
+    "items/i-ai-fait-ensuite": {
+      "id": "i-ai-fait-ensuite",
+      "type": "gapfill",
+      "text": "J'___ mes devoirs ___ j'ai écouté de la musique",
+      "blanks": [
+        {
+          "answer": "ai fait"
+        },
+        {
+          "answer": "ensuite"
+        }
+      ],
+      "gloss": "I did my homework then I listened to music",
+      "hint": "Two events in sequence",
+      "mistakes": [
+        {
+          "answer": "faisais ensuite",
+          "feedback": "Completed homework = specific event! Use passé composé: j'ai fait."
+        },
+        {
+          "answer": "ai fait car",
+          "feedback": "'Car' is for reason! Use '{ensuite}' (then) for sequence."
+        }
+      ]
+    },
+    "items/i-grace-a": {
+      "id": "i-grace-a",
+      "type": "gapfill",
+      "text": "___ toi, j'ai appris le français",
+      "blanks": [
+        {
+          "answer": "Grâce à"
+        }
+      ],
+      "gloss": "Thanks to you, I learned French",
+      "hint": "Positive attribution",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE! Use '{Grâce à toi}' (thanks to you - NOUN)."
+        },
+        {
+          "answer": "À cause de",
+          "feedback": "Succeeding is POSITIVE! Use '{grâce à}' (not à cause de which is negative/neutral)."
+        }
+      ]
+    },
     "items/i-j-en-ai-mange": {
       "id": "i-j-en-ai-mange",
       "type": "gapfill",
@@ -4906,17 +6529,485 @@
           "feedback": "À cause de needs a NOUN! Use '{Parce que j'avais faim}' (because I was hungry)."
         }
       ]
+    },
+    "items/i-sur-dans": {
+      "id": "i-sur-dans",
+      "type": "gapfill",
+      "text": "Le livre était ___ la table ___ la cuisine",
+      "blanks": [
+        {
+          "answer": "sur"
+        },
+        {
+          "answer": "dans"
+        }
+      ],
+      "gloss": "The book was on the table in the kitchen",
+      "hint": "Two spatial prepositions",
+      "mistakes": [
+        {
+          "answer": "dans sur",
+          "feedback": "Wrong order! The book is ON (sur) the table, IN (dans) the room."
+        },
+        {
+          "answer": "au-dessus dans",
+          "feedback": "Au-dessus means 'above' (hanging). Use '{sur}' for '{on}' (touching surface)."
+        }
+      ]
+    }
+  },
+  "2024-06-04-pc-vs-imparfait": {
+    "concepts": [
+      {
+        "id": "c-the-golden-rule",
+        "term": "The Golden Rule",
+        "definition": "PASSÉ COMPOSÉ = Specific completed action (What happened?). IMPARFAIT = Ongoing state/description/habit (How things were/used to be)",
+        "example": "{J'ai mangé} (I ate - specific event) vs Je mangeais (I was eating/used to eat - ongoing or habit)"
+      },
+      {
+        "id": "c-passe-compose-specific-events",
+        "term": "Passé Composé - Specific Events",
+        "definition": "Completed actions, countable events, things that started/stopped, main storyline",
+        "example": "{J'ai vu Marie} (I saw Marie - one time), {Je suis allé au café} (I went to the café - completed)"
+      },
+      {
+        "id": "c-imparfait-background-habits",
+        "term": "Imparfait - Background & Habits",
+        "definition": "Descriptions, ongoing states, repeated habits ('used to'), scene-setting, background information",
+        "example": "{Il faisait beau} (It was nice - description), {Je parlais français tous les jours} (I used to speak French every day - habit)"
+      },
+      {
+        "id": "c-pattern-background-imp-event",
+        "term": "Pattern: Background (IMP) + Event (PC)",
+        "definition": "Use imparfait to set the scene, passé composé for what happened",
+        "example": "{Il faisait beau} (background - IMP) {quand je suis arrivé} (event - PC) = It was nice when I arrived"
+      },
+      {
+        "id": "c-time-expressions-help",
+        "term": "Time expressions help",
+        "definition": "PC: hier (yesterday), soudain (suddenly), à 8h (at 8). IMP: tous les jours (every day), toujours (always), d'habitude (usually)",
+        "example": "{Hier}, {j'ai mangé} (PC - specific time) vs Je mangeais tous les jours (IMP - habit)"
+      },
+      {
+        "id": "c-was-doing-interrupted-by",
+        "term": "'Was doing' interrupted by event",
+        "definition": "Use imparfait for ongoing action, passé composé for interruption",
+        "example": "{Je parlais avec Marie} (I was talking - IMP) {quand tu as appelé} (you called - PC event)"
+      },
+      {
+        "id": "c-mental-vs-physical-age",
+        "term": "Mental vs Physical age",
+        "definition": "Physical age/description = IMP. Mental state at moment = can be PC",
+        "example": "{J'avais 20 ans} (I was 20 - IMP description) vs J'ai eu peur (I got scared - {PC reaction})"
+      }
+    ],
+    "items/i-buvait": null,
+    "items/i-jouais": {
+      "id": "i-jouais",
+      "type": "gapfill",
+      "text": "Quand j'étais jeune, je ___ avec mon chien",
+      "blanks": [
+        {
+          "answer": "jouais"
+        }
+      ],
+      "gloss": "When I was young, I used to play with my dog",
+      "hint": "Choose correct tense for '{jouer}'",
+      "mistakes": [
+        {
+          "answer": "ai joué",
+          "feedback": "Repeated past action (habit)! Use imparfait: je jouais (I used to play)."
+        },
+        {
+          "answer": "joue",
+          "feedback": "That's present! Use imparfait for past habit: je jouais."
+        }
+      ]
+    },
+    "items/i-prenais-un-cafe": {
+      "id": "i-prenais-un-cafe",
+      "type": "gapfill",
+      "text": "Je ___ un café quand tu es arrivé",
+      "blanks": [
+        {
+          "answer": "prenais"
+        }
+      ],
+      "gloss": "I was having a coffee when you arrived",
+      "hint": "Choose correct tense for '{prendre}'",
+      "mistakes": [
+        {
+          "answer": "ai pris",
+          "feedback": "Ongoing action (was having)! Use imparfait: je prenais."
+        },
+        {
+          "answer": "prends",
+          "feedback": "That's present! Use imparfait for ongoing past: je prenais."
+        }
+      ]
+    },
+    "vocabulary/je-mangeais-fr": {
+      "word_id": "je-mangeais-fr",
+      "fr": "je mangeais",
+      "gloss": "I was eating / I used to eat",
+      "note": "manger in imparfait"
+    },
+    "vocabulary/toujours-fr": {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always",
+      "note": "signals IMP - continuous state",
+      "review": true
     }
   },
   "2024-06-05-reading-9": {
     "description": "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of this unit",
-    "title": "Reading - {Une Histoire du Passé}"
+    "title": "Reading - {Une Histoire du Passé}",
+    "vocabulary/celebre-fr": {
+      "word_id": "celebre-fr",
+      "fr": "célèbre",
+      "gloss": "famous"
+    }
+  },
+  "2024-06-07-reflexive-past": {
+    "concepts": [
+      {
+        "id": "c-reflexive-verbs-always-use",
+        "term": "Reflexive Verbs ALWAYS use être in Past",
+        "definition": "CRITICAL: ALL reflexive verbs use être (never avoir) in passé composé",
+        "example": "{je me suis lavé} (I washed myself - uses être), {elle s'est levée} (she got up - uses être)"
+      },
+      {
+        "id": "c-agreement-with-subject",
+        "term": "Agreement with Subject",
+        "definition": "Past participle agrees with the subject (like all être verbs)",
+        "example": "{je me suis réveillé} (masc), {je me suis réveillée} (fem), {ils se sont levés} (masc pl), {elles se sont levées} (fem pl)"
+      },
+      {
+        "id": "c-pronoun-position",
+        "term": "Pronoun Position",
+        "definition": "Reflexive pronoun stays BEFORE the auxiliary être",
+        "example": "{je me suis levé} (not je suis me levé), {tu t'es lavé} (not tu es te lavé)"
+      },
+      {
+        "id": "c-telling-past-routines",
+        "term": "Telling Past Routines",
+        "definition": "Now you can describe what you did this morning!",
+        "example": "{Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé. J'étais en retard, donc je me suis dépêché.}"
+      }
+    ]
+  },
+  "2024-06-08-spatial-prepositions": {
+    "concepts": [
+      {
+        "id": "c-devant-in-front-of",
+        "term": "{devant} - in front of",
+        "definition": "Indicates position in front of something",
+        "example": "{Je suis devant la porte} (I'm in front of the door), {La voiture est devant la maison} (The car is in front of the house)"
+      },
+      {
+        "id": "c-derriere-behind",
+        "term": "{derrière} - behind",
+        "definition": "Indicates position behind something",
+        "example": "{Le chat est derrière le sofa} (The cat is behind the sofa), {Il est derrière moi} (He's behind me)"
+      },
+      {
+        "id": "c-entre-between",
+        "term": "{entre} - between",
+        "definition": "Indicates position between two things",
+        "example": "{Le café est entre l'école et le parc} (The café is between the school and the park), {Entre toi et moi} (Between you and me)"
+      },
+      {
+        "id": "c-parmi-among",
+        "term": "{parmi} - among",
+        "definition": "Indicates being among multiple things or people",
+        "example": "{Parmi les étudiants} (Among the students), {Il est parmi nous} (He's among us)"
+      },
+      {
+        "id": "c-au-dessus-de-above",
+        "term": "{au-dessus} ({de}) - above, over",
+        "definition": "Indicates position above something",
+        "example": "{Le tableau est au-dessus de la table} (The painting is above the table), {Au-dessus de la ville} (Above the city)"
+      },
+      {
+        "id": "c-au-dessous-de-below",
+        "term": "{au-dessous} ({de}) - below, beneath, under",
+        "definition": "Indicates position below something",
+        "example": "{au-dessous de nous} (below us), {Le parking est au-dessous} (The parking is below)"
+      },
+      {
+        "id": "c-review-dans-sur-sous",
+        "term": "Review: {dans, sur, sous}",
+        "definition": "Reinforce: dans (in/inside), sur (on/on top of), sous (under/beneath)",
+        "example": "{Le livre est dans le sac} (in the bag), {sur la table} (on the table), {sous la table} (under the table)"
+      }
+    ],
+    "items/i-au-dessous-2": {
+      "id": "i-au-dessous-2",
+      "type": "gapfill",
+      "text": "La cuisine est ___",
+      "blanks": [
+        {
+          "answer": "au-dessous"
+        }
+      ],
+      "gloss": "The kitchen is downstairs/below",
+      "mistakes": [
+        {
+          "answer": "au-dessus",
+          "feedback": "Au-dessus means 'above/upstairs'. Use '{au-dessous}' for 'below/downstairs'!"
+        },
+        {
+          "answer": "en bas",
+          "feedback": "En bas works too! But we're learning '{au-dessous}' here."
+        }
+      ]
+    },
+    "items/i-au-dessus-du": {
+      "id": "i-au-dessus-du",
+      "type": "gapfill",
+      "text": "J'habite ___ café",
+      "blanks": [
+        {
+          "answer": "au-dessus du"
+        }
+      ],
+      "gloss": "I live above the café",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on' (touching). Use '{au-dessus de}' for 'above' (hanging)!"
+        },
+        {
+          "answer": "devant",
+          "feedback": "Devant means 'in front of'. Use '{au-dessus de}' for 'above'!"
+        }
+      ]
+    },
+    "items/i-sous-2": {
+      "id": "i-sous-2",
+      "type": "gapfill",
+      "text": "Le chat est ___ la voiture",
+      "blanks": [
+        {
+          "answer": "sous"
+        }
+      ],
+      "gloss": "The cat is under the car",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on top of'. Use '{sous}' for 'under/beneath'!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{sous}' for 'under/beneath'!"
+        }
+      ]
+    },
+    "items/i-sur": {
+      "id": "i-sur",
+      "type": "gapfill",
+      "text": "Mon téléphone est ___ la table",
+      "blanks": [
+        {
+          "answer": "sur"
+        }
+      ],
+      "gloss": "My phone is on the table",
+      "mistakes": [
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{sur}' for 'on top of' a surface!"
+        },
+        {
+          "answer": "au-dessus de",
+          "feedback": "Au-dessus means 'above' (not touching). Use '{sur}' for '{on}' (touching)!"
+        }
+      ]
+    },
+    "vocabulary/assis-fr": {
+      "word_id": "assis-fr",
+      "fr": "assis",
+      "gloss": "sitting, seated",
+      "note": "{il est assis} (he's sitting)"
+    },
+    "vocabulary/la-fenetre-fr": {
+      "word_id": "la-fenetre-fr",
+      "fr": "la fenêtre",
+      "gloss": "the window",
+      "note": "feminine"
+    }
   },
   "2024-06-09-unit-9-exam": {
-    "description": "Test everything from this unit! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery."
+    "description": "Test everything from this unit! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery.",
+    "items/i-ai-achete": null,
+    "items/i-ai-trouve": {
+      "id": "i-ai-trouve",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'Yesterday I found a book'",
+      "shown": "hier j'_____ (trouver) un livre",
+      "answer": "ai trouvé",
+      "hint": "Completed action at specific time - use passé composé"
+    },
+    "items/i-est-arrivee": {
+      "id": "i-est-arrivee",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'Suddenly Marie arrived'",
+      "shown": "soudain Marie _____ (arriver)",
+      "answer": "est arrivée",
+      "hint": "Sudden completed event - use passé composé"
+    },
+    "items/i-est-ouverte": null,
+    "items/i-lisais": null,
+    "items/i-mangeais-quand": {
+      "id": "i-mangeais-quand",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'I was eating when he called'",
+      "shown": "je _____ (manger) quand il a téléphoné",
+      "answer": "mangeais",
+      "hint": "Ongoing background action - use imparfait"
+    },
+    "items/i-parlait": {
+      "id": "i-parlait",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'While Marie was talking, I left'",
+      "shown": "pendant que Marie _____ (parler), je suis parti",
+      "answer": "parlait",
+      "hint": "Background condition/description - use imparfait"
+    },
+    "items/i-pleuvait": null
   },
   "2024-06-10-unit-9-practice": {
     "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
+    "items/i-ai-lu": null,
+    "items/i-ai-vu-marie": {
+      "id": "i-ai-vu-marie",
+      "type": "gapfill",
+      "text": "Hier, j'___ Marie au café.",
+      "blanks": [
+        {
+          "answer": "ai vu"
+        }
+      ],
+      "gloss": "Yesterday, I saw Marie at the café",
+      "hint": "passé composé of voir (to see)"
+    },
+    "items/i-comme-sommes-restes": {
+      "id": "i-comme-sommes-restes",
+      "type": "gapfill",
+      "text": "___ nous étions fatigués, nous ___ à la maison.",
+      "blanks": [
+        {
+          "answer": "comme"
+        },
+        {
+          "answer": "sommes restés"
+        }
+      ],
+      "gloss": "Since we were tired, we stayed home",
+      "hint": "since/as (causal connector) / passé composé of rester (être verb)"
+    },
+    "items/i-courait-a-marche": null,
+    "items/i-cuisinais-ai-entendu": null,
+    "items/i-entre": {
+      "id": "i-entre",
+      "type": "gapfill",
+      "text": "Le chat est ___ la porte et la table.",
+      "blanks": [
+        {
+          "answer": "entre"
+        }
+      ],
+      "gloss": "The cat is between the door and the table",
+      "hint": "between"
+    },
+    "items/i-grace-a": {
+      "id": "i-grace-a",
+      "type": "gapfill",
+      "text": "___ toi, j'ai appris le français.",
+      "blanks": [
+        {
+          "answer": "grâce à"
+        }
+      ],
+      "gloss": "Thanks to you, I learned French",
+      "hint": "thanks to (positive reason)"
+    },
+    "items/i-lisais-es-arrive": null,
+    "items/i-mangeais-es-arrive": {
+      "id": "i-mangeais-es-arrive",
+      "type": "gapfill",
+      "text": "Je ___ quand tu ___.",
+      "blanks": [
+        {
+          "answer": "mangeais"
+        },
+        {
+          "answer": "es arrivé"
+        }
+      ],
+      "gloss": "I was eating when you arrived",
+      "hint": "imparfait - ongoing action / passé composé - completed action"
+    },
+    "items/i-parce-que": {
+      "id": "i-parce-que",
+      "type": "gapfill",
+      "text": "Je suis en retard ___ je suis parti tard.",
+      "blanks": [
+        {
+          "answer": "parce que"
+        }
+      ],
+      "gloss": "I'm late because I left late",
+      "hint": "because (most common)"
+    },
+    "items/i-prenais-ai-marche": {
+      "id": "i-prenais-ai-marche",
+      "type": "gapfill",
+      "text": "Je ___ le bus tous les jours, mais hier j'___.",
+      "blanks": [
+        {
+          "answer": "prenais"
+        },
+        {
+          "answer": "ai marché"
+        }
+      ],
+      "gloss": "I used to take the bus every day, but yesterday I walked",
+      "hint": "imparfait - habitual action / passé composé - specific completed action"
+    },
+    "items/i-s-est-cachee-pour": null,
+    "items/i-s-est-levee-parce-qu": {
+      "id": "i-s-est-levee-parce-qu",
+      "type": "gapfill",
+      "text": "Elle ___ à sept heures ___ elle avait un cours.",
+      "blanks": [
+        {
+          "answer": "s'est levée"
+        },
+        {
+          "answer": "parce qu'"
+        }
+      ],
+      "gloss": "She got up at seven because she had a class",
+      "hint": "passé composé of se lever (reflexive) / because"
+    },
+    "items/i-travaillais-a-appele": {
+      "id": "i-travaillais-a-appele",
+      "type": "gapfill",
+      "text": "Pendant que je ___, Marie ___.",
+      "blanks": [
+        {
+          "answer": "travaillais"
+        },
+        {
+          "answer": "a appelé"
+        }
+      ],
+      "gloss": "While I was working, Marie called",
+      "hint": "imparfait - ongoing background action / passé composé - sudden event"
+    },
     "title": "Discourse & Past Tense Practice - Fill in the Blanks"
   },
   "2024-10-21-cognates-help": {

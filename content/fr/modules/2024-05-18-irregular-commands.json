@@ -39,6 +39,12 @@
       "note": "common command"
     },
     {
+      "word_id": "soyons-fr",
+      "fr": "Soyons!",
+      "gloss": "Let's be!",
+      "note": "être command - nous form"
+    },
+    {
       "word_id": "aie-fr",
       "fr": "Aie!",
       "gloss": "Have! (informal)",
@@ -55,6 +61,12 @@
       "fr": "Aie confiance!",
       "gloss": "Have confidence!",
       "note": "encouragement"
+    },
+    {
+      "word_id": "ayons-fr",
+      "fr": "Ayons!",
+      "gloss": "Let's have!",
+      "note": "avoir command - nous form"
     },
     {
       "word_id": "va-fr",
@@ -116,13 +128,13 @@
       "id": "c-etre-commands",
       "term": "être Commands",
       "definition": "{tu: Sois! vous: Soyez! nous: Soyons!}",
-      "example": "{Sois sage!} (Be good!), {Soyez gentil!} (Be kind!)"
+      "example": "{Sois là à six heures!} (Be there at six!), {Soyez gentil!} (Be kind!)"
     },
     {
       "id": "c-avoir-commands",
       "term": "avoir Commands",
       "definition": "{tu: Aie! vous: Ayez! nous: Ayons!}",
-      "example": "{Aie confiance!} (Have confidence!), {Ayez patience!} (Have patience!)"
+      "example": "{Aie confiance!} (Have confidence!), {N'ayez pas peur!} (Don't be afraid!)"
     },
     {
       "id": "c-aller-commands",

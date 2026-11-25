@@ -125,19 +125,19 @@
       "id": "c-study-workflow",
       "term": "Study workflow",
       "definition": "Natural progression: study → learn → understand → review → know",
-      "example": "{j'étudie} → {j'apprends} → {je comprends} → {je révise} → {je sais}"
+      "example": "{j'étudie} → {j'apprends} → {je comprends} → {je révise}"
     },
     {
       "id": "c-etudier-vs-apprendre",
       "term": "étudier vs apprendre",
       "definition": "étudier = the act of studying (action), apprendre = acquiring knowledge (result)",
-      "example": "{j'étudie pendant 2 heures} (I study for 2 hours - action), {j'apprends beaucoup} (I learn a lot - result)"
+      "example": "{j'étudie le soir} (I study in the evening - action), {j'apprends beaucoup} (I learn a lot - result)"
     },
     {
       "id": "c-complete-learning-narrative",
       "term": "Complete learning narrative",
       "definition": "Now you can describe your entire learning journey in French!",
-      "example": "{J'étudie} → {j'apprends} → {je comprends} → {je révise} → {je sais} → {je pense} → {je crois} (I study → learn → understand → review → know → think → believe)"
+      "example": "{J'étudie} → {j'apprends} → {je comprends} → {je révise} → {je pense} (I study → learn → understand → review → think). Knowing and believing come in the next lessons."
     }
   ],
   "items": [

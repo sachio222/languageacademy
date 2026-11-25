@@ -137,8 +137,8 @@
     {
       "id": "reflexive-pronouns-4",
       "type": "transform",
-      "instruction": "Which reflexive pronoun goes with '{elle}'?",
-      "shown": "elle ... habille (she gets dressed)",
+      "instruction": "Which reflexive pronoun goes with '{elle}'? The sentence means \"her name is Marie\".",
+      "shown": "elle ... appelle Marie",
       "answer": "se",
       "hint": "Same as for '{il}' - third person reflexive"
     },
@@ -161,8 +161,8 @@
     {
       "id": "reflexive-pronouns-7",
       "type": "transform",
-      "instruction": "Which reflexive pronoun goes with '{ils}'?",
-      "shown": "ils ... amusent (they have fun)",
+      "instruction": "Which reflexive pronoun goes with '{ils}'? The sentence means \"they meet up\".",
+      "shown": "ils ... retrouvent",
       "answer": "se",
       "hint": "Third person plural - same as singular '{il}'"
     },

@@ -199,6 +199,12 @@
       "note": "indicating nearby direction"
     },
     {
+      "word_id": "jusqu-a-fr",
+      "fr": "jusqu'à",
+      "gloss": "as far as / until",
+      "note": "{jusqu'à la gare} (as far as the station), {jusqu'à demain} (until tomorrow)"
+    },
+    {
       "word_id": "vous-voyez-fr",
       "fr": "vous voyez",
       "gloss": "you see / do you see",
@@ -228,7 +234,7 @@
       "id": "c-giving-directions",
       "term": "Giving Directions",
       "definition": "Complete phrases for helping someone navigate",
-      "example": "{Allez tout droit, puis tournez à gauche} (Go straight, then turn left)"
+      "example": "{Allez tout droit jusqu'à la gare, puis tournez à gauche} (Go straight as far as the station, then turn left)"
     },
     {
       "id": "c-asking-for-directions",

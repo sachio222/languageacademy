@@ -18,6 +18,12 @@
       "note": "⭐ very common - proximity"
     },
     {
+      "word_id": "la-gare-fr",
+      "fr": "la gare",
+      "gloss": "the train station",
+      "note": "feminine"
+    },
+    {
       "word_id": "loin-de-fr",
       "fr": "loin de",
       "gloss": "far from",
@@ -128,7 +134,7 @@
       "id": "c-au-milieu-de-in",
       "term": "{au milieu de} - in the middle of",
       "definition": "Indicates center position",
-      "example": "{Au milieu de la pièce} (In the middle of the room), {Il est au milieu} (He's in the middle)"
+      "example": "{Au milieu de la place} (In the middle of the square), {Il est au milieu} (He's in the middle)"
     },
     {
       "id": "c-au-bout-de-at",
@@ -267,13 +273,13 @@
     {
       "id": "i-au-milieu-de-la",
       "type": "gapfill",
-      "text": "La table est ___ pièce",
+      "text": "La table est ___ cuisine",
       "blanks": [
         {
           "answer": "au milieu de la"
         }
       ],
-      "gloss": "The table is in the middle of the room",
+      "gloss": "The table is in the middle of the kitchen",
       "mistakes": [
         {
           "answer": "dans la",
@@ -456,13 +462,13 @@
     {
       "id": "i-au-bout-du",
       "type": "gapfill",
-      "text": "La porte est ___ couloir",
+      "text": "La porte est ___ jardin",
       "blanks": [
         {
           "answer": "au bout du"
         }
       ],
-      "gloss": "The door is at the end of the hallway",
+      "gloss": "The door is at the end of the garden",
       "mistakes": [
         {
           "answer": "dans le",
@@ -498,13 +504,13 @@
     {
       "id": "i-a-cote-de-2",
       "type": "gapfill",
-      "text": "Assieds-toi ___ moi",
+      "text": "Mets-toi ___ moi",
       "blanks": [
         {
           "answer": "à côté de"
         }
       ],
-      "gloss": "Sit next to me/Sit beside me",
+      "gloss": "Sit next to me",
       "mistakes": [
         {
           "answer": "avec",

@@ -256,19 +256,19 @@
       "hint": "imparfait of finir"
     },
     {
-      "id": "i-lisais",
+      "id": "i-mangeais-quand",
       "type": "transform",
-      "instruction": "Choose the correct tense for: 'I was reading when he called'",
-      "shown": "je _____ (lire) quand il a téléphoné",
-      "answer": "lisais",
+      "instruction": "Choose the correct tense for: 'I was eating when he called'",
+      "shown": "je _____ (manger) quand il a téléphoné",
+      "answer": "mangeais",
       "hint": "Ongoing background action - use imparfait"
     },
     {
-      "id": "i-ai-achete",
+      "id": "i-ai-trouve",
       "type": "transform",
-      "instruction": "Choose the correct tense for: 'Yesterday I bought a book'",
-      "shown": "hier j'_____ (acheter) un livre",
-      "answer": "ai acheté",
+      "instruction": "Choose the correct tense for: 'Yesterday I found a book'",
+      "shown": "hier j'_____ (trouver) un livre",
+      "answer": "ai trouvé",
       "hint": "Completed action at specific time - use passé composé"
     },
     {
@@ -280,19 +280,19 @@
       "hint": "Repeated habitual action - use imparfait"
     },
     {
-      "id": "i-est-ouverte",
+      "id": "i-est-arrivee",
       "type": "transform",
-      "instruction": "Choose the correct tense for: 'Suddenly the door opened'",
-      "shown": "soudain la porte s'_____ (ouvrir)",
-      "answer": "est ouverte",
+      "instruction": "Choose the correct tense for: 'Suddenly Marie arrived'",
+      "shown": "soudain Marie _____ (arriver)",
+      "answer": "est arrivée",
       "hint": "Sudden completed event - use passé composé"
     },
     {
-      "id": "i-pleuvait",
+      "id": "i-parlait",
       "type": "transform",
-      "instruction": "Choose the correct tense for: 'While it was raining, I stayed inside'",
-      "shown": "pendant qu'il _____ (pleuvoir), je suis resté dedans",
-      "answer": "pleuvait",
+      "instruction": "Choose the correct tense for: 'While Marie was talking, I left'",
+      "shown": "pendant que Marie _____ (parler), je suis parti",
+      "answer": "parlait",
       "hint": "Background condition/description - use imparfait"
     }
   ],

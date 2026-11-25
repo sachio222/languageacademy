@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2622 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 532 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2622 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 529 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -14,28 +14,28 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | unit4 Everyday Words | 109 | 85 |
 | unit5 Time & Taste | 174 | 112 |
 | unit6 Basic Fluency | 249 | 37 |
-| unit7 Knowledge & Learning | 74 | 31 |
+| unit7 Knowledge & Learning | 72 | 29 |
 | unit8 Daily Life & Actions | 51 | 55 |
 | unit9 Discourse & Past Tense | 18 | 17 |
-| unit10 Mastery & Nuance | 29 | 102 |
+| unit10 Mastery & Nuance | 29 | 101 |
 | unit11 Daily Essentials | 69 | 70 |
 | unit12 Curiosity & Questions | 0 | 60 |
 
 | Section | Lines |
 |---|---|
 | Guide checks written by hand | 1 |
-| Spellings taught more than once | 398 |
-| Item types to confirm | 260 |
-| Practice blanks that were in the wrong place | 58 |
+| Spellings taught more than once | 402 |
+| Item types to confirm | 259 |
+| Practice blanks that were in the wrong place | 51 |
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
-| English prompts written as respond items | 825 |
-| Passage words with no pop-up | 10 |
+| English prompts written as respond items | 822 |
+| Passage words with no pop-up | 7 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 918 |
-| Live ids with no converted item | 315 (0 real misses) |
-| Fields with no place in a module file | 1956 |
-| Text written differently | 673 |
+| Hand edits kept | 1047 |
+| Live ids with no converted item | 337 (22 real misses) |
+| Fields with no place in a module file | 1954 |
+| Text written differently | 659 |
 | Notes | 3 |
 | Outline | 16 |
 
@@ -381,6 +381,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-05-26-causal-words**
 
+- `vocabulary[0]` "parce que": same meaning as "because" in 2024-05-20-reading-8: kept parce-que-fr
 - `vocabulary[6]` "pourquoi": same meaning as "why" in 2024-01-18-questions: kept pourquoi-fr
 - `vocabulary[7]` "la raison": same meaning as "reason" in 2024-04-25-top-200-nouns: kept la-raison-fr
 
@@ -419,7 +420,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[0]` "quand": same meaning as "when" in 2024-01-18-questions: kept quand-fr
 - `vocabulary[3]` "tous les jours": same meaning as "every day" in 2024-05-27-imparfait-all-verbs: kept tous-les-jours-fr
-- `vocabulary[5]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr
+- `vocabulary[5]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr (fixed by hand)
 - `vocabulary[6]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
 
 **2024-06-03-past-tense-composition**
@@ -436,7 +437,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[9]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
 - `vocabulary[10]` "c'était": same meaning as "it was" in 2024-04-13-reading-5: kept c-etait-fr
 - `vocabulary[12]` "il faisait": same meaning as "it was (weather) / he was doing" in 2024-05-27-imparfait-all-verbs: kept il-faisait-fr
-- `vocabulary[14]` "parce que": same meaning as "because" in 2024-05-26-causal-words: kept parce-que-fr
+- `vocabulary[14]` "parce que": same meaning as "because" in 2024-05-20-reading-8: kept parce-que-fr
 - `vocabulary[16]` "le travail": same meaning as "work" in 2024-03-24-everyday-nouns: kept le-travail-fr
 - `vocabulary[17]` "d'abord": same meaning as "first" in 2024-05-07-reading-7: kept d-abord-fr
 - `vocabulary[18]` "je me suis réveillé": same meaning as "I woke up (masc)" in 2024-06-07-reflexive-past: kept je-me-suis-reveille-fr
@@ -466,6 +467,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[111]` "grâce à": same meaning as "thanks to" in 2024-05-26-causal-words: kept grace-a-fr
 - `vocabulary[117]` "ensemble": same meaning as "together" in 2024-03-29-parler: kept ensemble-fr
 - `vocabulary[118]` "nous sommes allés": same meaning as "we went" in 2024-05-29-passe-compose-agreement: kept nous-sommes-alles-fr
+- `vocabulary[126]` "la gare": new meaning "the station": la-gare-fr.the-station; met before as "the train station" (la-gare-fr, 2024-05-28-more-spatial-relations) (written: la-gare-fr)
 - `vocabulary[137]` "derrière": same meaning as "behind" in 2024-01-20-prepositions: kept derriere-fr
 - `vocabulary[138]` "nous avons mangé": same meaning as "we ate" in 2024-04-12-manger: kept nous-avons-mange-fr
 - `vocabulary[146]` "la vie": same meaning as "life" in 2024-03-24-everyday-nouns: kept la-vie-fr
@@ -488,7 +490,9 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[0]` "Paris": same meaning as "Paris (capital of France)" in 2024-06-05-reading-9: kept paris-fr
 - `vocabulary[7]` "la Tour Eiffel": same meaning as "Eiffel Tower" in 2024-04-24-reading-6: kept la-tour-eiffel-fr
+- `vocabulary[16]` "il faut que": same meaning as "it's necessary that / someone needs to" in 2024-01-23-common-special-forms-1: kept il-faut-que-fr
 - `vocabulary[23]` "sois": same meaning as "Be! (informal)" in 2024-05-18-irregular-commands: kept sois-fr
+- `vocabulary[24]` "soyons": same meaning as "Let's be!" in 2024-05-18-irregular-commands: kept soyons-fr
 - `vocabulary[42]` "depuis": same meaning as "since / for" in 2024-05-23-temporal-words: kept depuis-fr
 - `vocabulary[43]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr
 - `vocabulary[54]` "en train de": same meaning as "in the process of" in 2024-05-07-reading-7: kept en-train-de-fr
@@ -927,7 +931,6 @@ The classifier had no clear rule for these items, so the type is its best guess.
 **2024-01-22-common-adverbs**
 
 - `items[2]` i-parler-lentement: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[3]` i-courir-rapidement: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[4]` i-comprendre-facilement: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[5]` i-completement-fini: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[6]` i-probablement: classifier: translate (English prompt with a French answer); written as respond (framed)
@@ -1062,12 +1065,7 @@ The practice screen shows a blank in place of the character at its position, so 
 
 **2024-06-10-unit-9-practice**
 
-- `items[15]` i-lisais-es-arrive: the blank for "es arrivé" at position 17 sits after the end of the sentence; placed as the checker reads it: "Je ___ quand tu ___."
-- `items[16]` i-courait-a-marche: the blank for "a marché" at position 35 sits after the end of the sentence; placed as the checker reads it: "Il ___ tous les jours, mais hier il ___."
-- `items[17]` i-cuisinais-ai-entendu: the blank for "cuisinais" at position 15 sits on the mark ",", which the app drops; placed as the checker reads it: "Pendant que je ___, j'___ un bruit."
-- `items[17]` i-cuisinais-ai-entendu: the blank for "ai entendu" at position 27 sits inside the word "bruit"; placed as the checker reads it: "Pendant que je ___, j'___ un bruit."
-- `items[18]` i-comme-sommes-restes: the blank for "sommes restés" at position 25 sits inside the word "maison"; placed as the checker reads it: "___ il pleuvait, nous ___ à la maison."
-- `items[20]` i-s-est-cachee-pour: the blank for "pour que" at position 33 sits inside the word "ne"; placed as the checker reads it: "Elle ___ derrière l'arbre ___ personne ne la voie."
+- `items[18]` i-comme-sommes-restes: the blank for "sommes restés" at position 25 sits inside the word "maison"; placed as the checker reads it: "___ il pleuvait, nous ___ à la maison." (fixed by hand)
 
 **2024-02-05-unit-10-practice**
 
@@ -1076,8 +1074,6 @@ The practice screen shows a blank in place of the character at its position, so 
 - `items[10]` i-vient: the blank for "vient" at position 15 sits on the mark ".", which the app drops; placed as the checker reads it: "Je pense qu'il ___."
 - `items[11]` i-vienne: the blank for "vienne" at position 22 sits on the mark ".", which the app drops; placed as the checker reads it: "Je ne pense pas qu'il ___."
 - `items[17]` i-couper: the blank for "couper" at position 12 sits inside the word "les"; placed as the checker reads it: "Je me fais ___ les cheveux demain."
-- `items[19]` i-voudrais-suives: the blank for "voudrais" at position 16 sits inside the word "je"; placed as the checker reads it: "Si j'étais toi, je ___ que tu ___ tes rêves."
-- `items[19]` i-voudrais-suives: the blank for "suives" at position 32 sits inside the word "rêves"; placed as the checker reads it: "Si j'étais toi, je ___ que tu ___ tes rêves."
 
 **2024-02-16-unit-11-practice**
 
@@ -1556,8 +1552,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-05-05-on-and-people**
 
-- 4 × framed by its instruction: `items[0]`, `items[4]`, `items[6]`, `items[7]`
-- 1 × framed by a context note: `items[1]`
+- 3 × framed by its instruction: `items[0]`, `items[4]`, `items[6]`
 
 **2024-05-09-studying-verbs**
 
@@ -1668,7 +1663,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-01-22-common-adverbs**
 
-- 7 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`
+- 6 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[4]`, `items[5]`, `items[6]`
 
 **2024-02-06-while-doing-phrases**
 
@@ -1786,7 +1781,7 @@ Each word below appears in the reading’s passage and has no dictionary entry (
 
 **2024-02-12-reading-11**
 
-- 4 words: traverse, bord, vélo, tram
+- 1 word: tram
 
 ## Estimates to confirm
 
@@ -2065,9 +2060,46 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and essential vocabulary." → "Test everything from this unit! Progressive tenses, future forms, communication verbs, and essential vocabulary."
 
+**2024-05-05-on-and-people**
+
+- `vocabulary[6].note` "On doit étudier" → "On doit travailler"
+- `concepts[0].example` "on va au cinéma (we're going to movies), on dit que (people say that), on ne peut pas (one cannot)" → "on va au cinéma (we're going to movies), on va au restaurant en famille (we're going to a restaurant as a family), on dit que (people say that), on ne peut pas (one cannot)"
+- `concepts[5].example` "On apprend en faisant des erreurs (We/One learns by making mistakes), On ne peut pas tout savoir (One can't know everything)" → "On apprend tous les jours (We learn every day), On ne peut pas tout savoir (One can't know everything)"
+
+**2024-05-09-studying-verbs**
+
+- `concepts[2].example` "j'étudie → j'apprends → je comprends → je révise → je sais" → "j'étudie → j'apprends → je comprends → je révise"
+- `concepts[3].example` "j'étudie pendant 2 heures (I study for 2 hours - action), j'apprends beaucoup (I learn a lot - result)" → "j'étudie le soir (I study in the evening - action), j'apprends beaucoup (I learn a lot - result)"
+- `concepts[4].example` "J'étudie → j'apprends → je comprends → je révise → je sais → je pense → je crois (I study → learn → understand → review → know → think → believe)" → "J'étudie → j'apprends → je comprends → je révise → je pense (I study → learn → understand → review → think). Knowing and believing come in the next lessons."
+
+**2024-05-04-learning-verbs**
+
+- `concepts[0].example` "j'apprends le français (I'm learning French), nous apprenons ensemble (we're learning together)" → "j'apprends le français (I'm learning French), j'apprends beaucoup de mots (I'm learning a lot of words), nous apprenons ensemble (we're learning together)"
+- `concepts[3].example` "Il m'enseigne → j'apprends → je comprends → je sais (complete learning cycle!)" → "Il m'enseigne → j'apprends → je comprends (complete learning cycle!)"
+- `concepts[4].example` "j'apprends à nager (I'm learning to swim), j'apprends à parler français (I'm learning to speak French)" → "j'apprends à faire du café (I'm learning to make coffee), j'apprends à parler français (I'm learning to speak French)"
+
 **2024-04-29-comprendre**
 
 - `vocabulary[2].word_id` "tu-comprends-fr.you-understand" → "tu-comprends-fr"
+- `concepts[3].example` "je comprends le français (I understand French), je comprends Marie (I understand Marie)" → "je comprends le français (I understand French), je comprends Marie (I understand Marie), je comprends la leçon (I understand the lesson)"
+
+**2024-05-08-savoir**
+
+- `concepts[0].example` "je sais la réponse (I know the answer), je sais nager (I know how to swim)" → "je sais la réponse (I know the answer), je sais parler anglais (I can speak English)"
+- `concepts[3].example` "je sais parler français (I know how to speak French), je sais nager (I can swim)" → "je sais parler français (I know how to speak French), je sais faire du café (I know how to make coffee)"
+- `concepts[4].example` "je sais la réponse (I know the answer), je connais Marie (I know Marie) ← next module!" → "je sais la réponse (I know the answer). To know Marie, a person, the next lesson uses another verb."
+
+**2024-04-30-connaitre**
+
+- `concepts[0].example` "je connais Marie (I know Marie), je connais Paris (I know/am familiar with Paris)" → "je connais Marie (I know Marie), je connais Paris (I know/am familiar with Paris), Je ne sais pas, je ne connais pas Paris (I don't know, I don't know Paris)"
+
+**2024-05-06-penser**
+
+- `concepts[2].example` "je pense que oui (I think so), je pense que non (I don't think so)" → "je pense que oui (I think so), je pense que non (I don't think so), je pense que je connais Marie (I think I know Marie), je pense qu'il sait parler anglais (I think he can speak English)"
+
+**2024-05-02-discourse-markers**
+
+- `concepts[5].example` "Bon, on commence? (Well, shall we start?), Alors, tu viens? (So, are you coming?)" → "Bon, on commence? (Well, shall we start?), Alors, tu viens? (So, are you coming?), Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui. (So, are you going to the university? Actually, I don't have class today.), Bon, voilà la réponse. (Well, there's the answer.)"
 
 **2024-05-07-reading-7**
 
@@ -2075,6 +2107,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `description` "A philosophical article about learning and education. Uses all cognitive verbs from Unit 7!" → "A philosophical article about learning and education. Uses all cognitive verbs from this unit!"
 - `vocabulary[0].note` ""Unit 7 verb"" → "(removed)"
 - `vocabulary[2].note` ""Unit 7 verb"" → "(removed)"
+- `vocabulary[4].fr` "étudiant(s)" → "étudiant"
+- `vocabulary[4].gloss` "student(s)" → "student"
+- `vocabulary[4].note` "noun" → "noun; plural étudiants"
 - `vocabulary[5].note` ""Unit 7 verb"" → "(removed)"
 - `vocabulary[9].note` ""Unit 7 verb"" → "(removed)"
 - `vocabulary[12].note` ""Unit 7 verb"" → "(removed)"
@@ -2084,6 +2119,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[23].note` ""Unit 6 verb"" → "(removed)"
 - `vocabulary[25].note` ""Unit 6 verb"" → "(removed)"
 - `vocabulary[55].note` ""Unit 6 verb"" → "(removed)"
+- `glossary[0].fr` "étudiant(s)" → "poser des questions"
+- `glossary[0].en` "student(s)" → "to ask questions"
 
 **2024-05-11-unit-7-practice**
 
@@ -2094,27 +2131,59 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 7! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers." → "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers."
 
+**2024-05-23-temporal-words**
+
+- `concepts[0].example` "pendant des heures (for hours), avant le cours (before class), après le dîner (after dinner)" → "pendant des heures (for hours), avant le cours (before class), après le travail (after work), une fois (once), cette année (this year), en ce moment (right now); Après le travail, je bois un café (After work, I have a coffee)"
+
+**2024-05-21-reflexive-pronouns**
+
+- `items[3].instruction` "Which reflexive pronoun goes with 'elle'?" → "Which reflexive pronoun goes with 'elle'? The sentence means "her name is Marie"."
+- `items[3].shown` "elle ... habille (she gets dressed)" → "elle ... appelle Marie"
+- `items[6].instruction` "Which reflexive pronoun goes with 'ils'?" → "Which reflexive pronoun goes with 'ils'? The sentence means "they meet up"."
+- `items[6].shown` "ils ... amusent (they have fun)" → "ils ... retrouvent"
+
 **2024-05-22-s-appeler**
 
+- `concepts[0].example` "Je m'appelle Marie (I call myself Marie = My name is Marie), Comment tu t'appelles? (What do you call yourself? = What's your name?)" → "Je m'appelle Marie (I call myself Marie = My name is Marie), Comment tu t'appelles? (What do you call yourself? = What's your name?), Mon frère s'appelle Paul (My brother's name is Paul)"
 - `concepts[1].term` "This should've been in Unit 1!" → "The Most Basic Introduction"
 
 **2024-05-17-getting-ready**
 
 - `vocabulary[1].word_id` "je-me-lave-fr.i-wash-myself" → "je-me-lave-fr"
+- `concepts[2].example` "je me prépare pour le cours (I get ready for class), on se prépare (we get ready)" → "je me prépare pour le cours (I get ready for class), je me prépare tôt le matin (I get ready early in the morning), on se prépare (we get ready)"
+
+**2024-05-16-daily-reflexives**
+
+- `concepts[2].example` "je me dépêche (I'm hurrying), dépêche-toi! (hurry up!)" → "je me dépêche (I'm hurrying), je me dépêche, je suis en retard (I'm hurrying, I'm late), dépêche-toi! (hurry up!)"
+
+**2024-06-07-reflexive-past**
+
+- `concepts[3].example` "Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé." → "Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé. J'étais en retard, donc je me suis dépêché."
+
+**2024-05-13-commands-tu**
+
+- `concepts[0].example` "Mange! (Eat!), Parle! (Speak!), Va! (Go!)" → "Mange! (Eat!), Parle! (Speak!), Va! (Go!), Pars tôt! (Leave early!)"
+- `concepts[3].example` "To a friend: Mange! (Eat!), Écoute! (Listen!), Viens! (Come!)" → "To a friend: Mange! (Eat!), Écoute! (Listen!), Viens! (Come!), Viens, on est en retard! (Come on, we're late!)"
+
+**2024-05-14-commands-vous**
+
+- `concepts[0].example` "To strangers: Mangez! To a group: Venez! (Come!)" → "To strangers: Mangez! To a group: Venez! (Come!), On se voit demain! (See you tomorrow!)"
 
 **2024-05-18-irregular-commands**
 
-- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)","id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café or chez Paul. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the y in vas-y comes from.","example":"Tu vas au café ? Oui, j'y vais. (Are you going to the café? Yes, I'm going there.)"]"
+- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois là à six heures! (Be there at six!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), N'ayez pas peur! (Don't be afraid!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)","id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café or chez Paul. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the y in vas-y comes from.","example":"Tu vas au café ? Oui, j'y vais. (Are you going to the café? Yes, I'm going there.)"]"
 
 **2024-05-12-commands-pronouns**
 
 - `can_do` "["Give commands with object pronouns (Give it to me!)","Use pronouns with affirmative and negative commands","Form complex commands like 'Don't do it!' or 'Look at me!'"]" → "["Give commands with object pronouns (Give it to me!)","Use pronouns with affirmative and negative commands","Form complex commands like 'Don't do it!' or 'Look at me!'","Say some or how many with en: j'en veux, j'en ai trois."]"
-- `concepts` "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)"]" → "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)","id":"c-en-some","term":"en: some, of them","definition":"en stands for something you already named with du, de la, de l', des or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.","example":"Tu veux du café ? Oui, j'en veux. (Do you want some coffee? Yes, I want some.), Prends-en ! (Take some!)"]"
+- `concepts` "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)"]" → "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!), Regarde-moi et fais attention! (Look at me and pay attention!), Amuse-toi bien! (Have fun!), Dépêche-toi, habille-toi! (Hurry up, get dressed!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)","id":"c-en-some","term":"en: some, of them","definition":"en stands for something you already named with du, de la, de l', des or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.","example":"Tu veux du café ? Oui, j'en veux. (Do you want some coffee? Yes, I want some.), Prends-en ! (Take some!)"]"
 
 **2024-05-20-reading-8**
 
 - `title` "Reading 8 - Ma Journée" → "Reading - Ma Journée"
 - `description` "A story about a typical day. Uses temporal words, reflexive verbs, and all Unit 8 vocabulary!" → "A story about a typical day. Uses temporal words, reflexive verbs, and all this unit's vocabulary!"
+- `glossary` "(none)" → "["fr":"comprenais","en":"understood (was understanding)"]"
+- `items[9]` "(none)" → ""id":"i-pense-a-demain","type":"comprehension","question":"What pattern shows Marie's daily commitment to learning?","cue":"She goes from morning preparation to...","answer":"elle rentre contente et pense à demain","accept":["je rentre contente et pense à demain","contente et pense à demain","elle pense à demain"],"hint":"What cycle does her day show from morning to evening?""
 
 **2024-05-25-unit-8-practice**
 
@@ -2130,10 +2199,101 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 8! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions." → "Test everything from this unit! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions."
 
+**2024-05-26-causal-words**
+
+- `concepts[1].example` "On étudie le français car c'est utile (We study French for it's useful), Je reste ici car il pleut (I'm staying here for it's raining)" → "On étudie le français car c'est beau (We study French for it's beautiful), Je prends un café car je suis fatigué (I'm having a coffee for I'm tired)"
+- `concepts[3].example` "Comme il fait beau, on va au parc (As it's nice, we're going to the park), Comme je suis fatigué, je reste à la maison (As I'm tired, I'm staying home)" → "Comme il fait beau, on va au parc (As it's nice, we're going to the park), Comme je suis fatigué, je vais dormir (As I'm tired, I'm going to sleep)"
+- `concepts[4].example` "Grâce à toi, je comprends mieux (Thanks to you, I understand better), Grâce au professeur, j'ai réussi (Thanks to the teacher, I succeeded)" → "Grâce à toi, je comprends mieux (Thanks to you, I understand better), Grâce au professeur, je parle bien (Thanks to the teacher, I speak well)"
+- `concepts[5].example` "À cause de la pluie, on reste ici (Because of the rain, we're staying here), À cause du traffic, je suis en retard (Because of traffic, I'm late)" → "À cause de la musique, je ne peux pas travailler (Because of the music, I can't work), À cause du bus, je suis en retard (Because of the bus, I'm late)"
+- `items[1].text` "On étudie le français ___ c'est utile" → "On étudie le français ___ c'est beau"
+- `items[1].gloss` "We study French for it's useful" → "We study French for it's beautiful"
+- `items[5].text` "___ la pluie, on reste ici" → "___ la musique, je ne peux pas travailler"
+- `items[5].gloss` "Because of the rain, we're staying here" → "Because of the music, I can't work"
+- `items[6].text` "Pourquoi tu restes? - ___ je suis fatigué" → "Pourquoi tu ne viens pas ? - ___ je suis fatigué"
+- `items[6].gloss` "Why are you staying? - Because I'm tired" → "Why aren't you coming? - Because I'm tired"
+- `items[7].text` "Je suis en retard ___ le traffic" → "Je suis en retard ___ bus"
+- `items[7].gloss` "I'm late because of traffic" → "I'm late because of the bus"
+- `items[8].text` "J'ai réussi ___ professeur" → "Je comprends ___ professeur"
+- `items[8].gloss` "I succeeded thanks to the teacher" → "I understand thanks to the teacher"
+- `items[10].text` "___ du mauvais temps, on annule le match" → "___ du travail, je ne peux pas venir"
+- `items[10].gloss` "Because of bad weather, we're canceling the match" → "Because of work, I can't come"
+- `items[11].text` "On va partir ___ tu es prêt" → "On va partir ___ tu es là"
+- `items[11].gloss` "We'll leave since you're ready" → "We'll leave since you're here"
+- `items[16].text` "Je ne dors pas bien ___ bruit" → "Je suis fatigué ___ travail"
+- `items[16].gloss` "I don't sleep well because of the noise" → "I'm tired because of work"
+
+**2024-06-08-spatial-prepositions**
+
+- `concepts[5].example` "Au-dessous du niveau (Below the level), Le parking est au-dessous (The parking is below)" → "au-dessous de nous (below us), Le parking est au-dessous (The parking is below)"
+- `concepts[6].example` "Le livre est dans le sac (in the bag), sur la table (on the table), sous la chaise (under the chair)" → "Le livre est dans le sac (in the bag), sur la table (on the table), sous la table (under the table)"
+- `items[7].text` "Mes clés sont ___ la table" → "Mon téléphone est ___ la table"
+- `items[7].gloss` "My keys are on the table" → "My phone is on the table"
+- `items[11].text` "La lampe est ___ le lit" → "J'habite ___ café"
+- `items[11].gloss` "The lamp is above the bed" → "I live above the café"
+- `items[14].text` "Ma chambre est ___" → "La cuisine est ___"
+- `items[14].gloss` "My bedroom is downstairs/below" → "The kitchen is downstairs/below"
+- `items[15].text` "Le chat dort ___ mon lit" → "Le chat est ___ la voiture"
+- `items[15].gloss` "The cat sleeps under my bed" → "The cat is under the car"
+
+**2024-05-28-more-spatial-relations**
+
+- `concepts[6].example` "Au milieu de la pièce (In the middle of the room), Il est au milieu (He's in the middle)" → "Au milieu de la place (In the middle of the square), Il est au milieu (He's in the middle)"
+- `items[6].text` "La table est ___ pièce" → "La table est ___ cuisine"
+- `items[6].gloss` "The table is in the middle of the room" → "The table is in the middle of the kitchen"
+- `items[15].text` "La porte est ___ couloir" → "La porte est ___ jardin"
+- `items[15].gloss` "The door is at the end of the hallway" → "The door is at the end of the garden"
+- `items[17].text` "Assieds-toi ___ moi" → "Mets-toi ___ moi"
+- `items[17].gloss` "Sit next to me/Sit beside me" → "Sit next to me"
+
+**2024-05-30-passe-compose-er**
+
+- `vocabulary[8].example_fr` "J'ai regardé la télé" → "J'ai regardé la ville"
+- `items[4].text` "Vous ___ mes clés?" → "Vous ___ mon livre ?"
+- `items[4].gloss` "Did you look for my keys?" → "Did you look for my book?"
+- `items[9].text` "On ___ la télé hier soir" → "On ___ les enfants hier soir"
+- `items[9].gloss` "We watched TV last night" → "We watched the children last night"
+
+**2024-06-01-passe-compose-irregular-1**
+
+- `concepts[3].example` "J'ai vu le film (I saw the movie), Tu as vu Marie? (Did you see Marie?)" → "J'ai vu le film (I saw the movie), Tu as vu Marie? (Did you see Marie?), J'ai vu Paul, il est assis au café (I saw Paul, he's sitting at the café)"
+
+**2024-05-31-passe-compose-etre**
+
+- `items[17].text` "Elle ne ___ pas ___" → "Elle n'___ pas ___"
+
+**2024-05-29-passe-compose-agreement**
+
+- `vocabulary[6].example_fr` "Monsieur, vous êtes allé où?" → "Paul, vous êtes allé où ?"
+- `vocabulary[8].example_fr` "Les garçons, vous êtes allés où?" → "Les enfants, vous êtes allés où ?"
+- `items[10].text` "Les garçons ___ tard" → "Les enfants ___ tard"
+- `items[10].gloss` "The boys came home late" → "The children came home late"
+
+**2024-05-27-imparfait-all-verbs**
+
+- `items[15].text` "Quand j'___ jeune, je jouais au foot" → "Quand j'___ jeune, je jouais avec mon chien"
+- `items[15].gloss` "When I was young, I used to play soccer" → "When I was young, I used to play with my dog"
+
+**2024-06-04-pc-vs-imparfait**
+
+- `vocabulary[5].review` "(none)" → "true"
+- `items[5].text` "Quand j'étais jeune, je ___ au foot" → "Quand j'étais jeune, je ___ avec mon chien"
+- `items[5].gloss` "When I was young, I used to play soccer" → "When I was young, I used to play with my dog"
+
 **2024-06-03-past-tense-composition**
 
+- `concepts[0].example` "Hier, il faisait beau donc je suis allé au parc près de chez moi. J'étais content parce que j'avais du temps libre." → "Hier, il faisait beau donc je suis allé au parc près de chez moi. J'étais content parce que j'avais du temps."
+- `concepts[3].example` "Comme il faisait beau, je suis sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait soif." → "Comme il faisait beau, je suis sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait faim."
+- `concepts[4].example` "D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma." → "D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma. Après, j'ai joué avec mon chien."
 - `items[9].gloss` "Thanks to being hungry, I ate" → "Because I was hungry, I ate"
 - `items[9].hint` ""WRONG! Fix: ___ j'avais faim, j'ai mangé (Because I was hungry, I ate)"" → "(removed)"
+- `items[10].text` "Le livre était ___ la table ___ ma chambre" → "Le livre était ___ la table ___ la cuisine"
+- `items[10].gloss` "The book was on the table in my room" → "The book was on the table in the kitchen"
+- `items[12].text` "J'___ mes devoirs ___ j'ai regardé la télé" → "J'___ mes devoirs ___ j'ai écouté de la musique"
+- `items[12].gloss` "I did my homework then I watched TV" → "I did my homework then I listened to music"
+- `items[13].text` "___ toi, j'ai réussi" → "___ toi, j'ai appris le français"
+- `items[13].gloss` "Thanks to you, I succeeded" → "Thanks to you, I learned French"
+- `items[14].text` "___ la pluie, on est restés à la maison" → "___ la fête, on est rentrés tard"
+- `items[14].gloss` "Because of the rain, we stayed home" → "Because of the party, we got home late"
 
 **2024-06-05-reading-9**
 
@@ -2144,19 +2304,68 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Unit 9 Practice - Fill in the Blanks" → "Discourse & Past Tense Practice - Fill in the Blanks"
 - `description` "Complete sentences using causal words, spatial prepositions, and past tenses from Unit 9!" → "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!"
+- `items[0].text` "Je suis en retard ___ j'ai raté le bus." → "Je suis en retard ___ je suis parti tard."
+- `items[0].gloss` "I'm late because I missed the bus" → "I'm late because I left late"
+- `items[2].text` "___ à toi, j'ai réussi." → "___ toi, j'ai appris le français."
+- `items[2].gloss` "Thanks to you, I succeeded" → "Thanks to you, I learned French"
+- `items[4].text` "Le chat est ___ les deux chaises." → "Le chat est ___ la porte et la table."
+- `items[4].gloss` "The cat is between the two chairs" → "The cat is between the door and the table"
+- `items[18].text` "___ il pleuvait, nous ___ à la maison." → "___ nous étions fatigués, nous ___ à la maison."
+- `items[18].gloss` "Since it was raining, we stayed home" → "Since we were tired, we stayed home"
 
 **2024-06-09-unit-9-exam**
 
 - `description` "Test everything from Unit 9! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery." → "Test everything from this unit! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery."
 
+**2024-01-23-common-special-forms-1**
+
+- `concepts[0].example` "Normal statement: Tu es sage (You are good). Wish about you: Il faut que tu sois sage (You need to be good - different form!)" → "Normal statement: Tu es gentil (You are kind). Wish about you: Il faut que tu sois gentil (You need to be kind - different form!)"
+- `concepts[1].example` "✓ Il faut que tu sois sage (You need to be good), ✓ Je veux qu'il aille (I want him to go)" → "✓ Il faut que tu sois gentil (You need to be kind), ✓ Je veux qu'il aille (I want him to go)"
+
+**2024-01-28-necessity-phrases**
+
+- `concepts[0].example` "Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat)" → "Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat); Il faut qu'on aille au parc (We need to go to the park)"
+
+**2024-02-07-wish-phrases**
+
+- `concepts[1].example` "J'aimerais que tu viennes (I'd like you to come)" → "J'aimerais que tu viennes (I'd like you to come), Je ne veux pas que tu tombes ! (I don't want you to fall!)"
+
 **2024-01-25-emotion-phrases**
 
 - `vocabulary[0].word_id` "je-suis-content-que-tu-sois-la-fr.i-m-happy" → "je-suis-content-que-tu-sois-la-fr"
+- `concepts[0].example` "Je suis content (I'm happy - about what?) → Je suis content que tu sois là (I'm happy YOU'RE here!)" → "Je suis content (I'm happy - about what?) → Je suis content que tu sois là (I'm happy YOU'RE here!); Il faut que tu viennes : je veux que tu sois là ! (You have to come: I want you to be there!)"
+
+**2024-01-27-hypothetical-phrases**
+
+- `description` "Talk about fantasies and what-ifs! 'Si j'étais riche, j'achèterais...' (If I were rich, I'd buy...), 'Si j'avais le temps, je voyagerais' (If I had time, I'd travel). Everyone loves daydreaming!" → "Talk about fantasies and what-ifs! 'Si j'étais riche...' (If I were rich...), 'Si j'avais le temps, je voyagerais' (If I had time, I'd travel). Everyone loves daydreaming!"
+
+**2024-01-22-common-adverbs**
+
+- `vocabulary[3].note` "courir rapidement" → "manger rapidement"
+
+**2024-02-06-while-doing-phrases**
+
+- `description` "Describe multitasking! 'En mangeant, je regarde la télé' (While eating, I watch TV), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!" → "Describe multitasking! 'En mangeant, je regarde un film' (While eating, I watch a film), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!"
+- `concepts[1].example` "Je travaille en écoutant de la musique (I work while listening to music)" → "Je travaille en écoutant de la musique (I work while listening to music), On parle lentement en mangeant (We talk slowly while eating)"
+
+**2024-01-21-before-phrases**
+
+- `concepts[1].example` "Finis avant que papa rentre! (Finish before dad gets home!)" → "Finis avant que papa rentre! (Finish before dad gets home!), Avant que tu partes, on parle en mangeant (Before you leave, let's talk while we eat)"
+
+**2024-02-03-so-that-phrases**
+
+- `concepts[1].example` "Je parle lentement pour que tu comprennes (I speak slowly so you understand)" → "Je parle lentement pour que tu comprennes (I speak slowly so you understand), Je fais venir Marie pour que tu sois content (I'm having Marie come so that you're happy)"
+
+**2024-01-20-although-phrases**
+
+- `concepts[0].example` "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working)" → "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working), Bien que tu sois fatigué, je t'aide pour que tu partes avant qu'il soit tard (Although you're tired, I'm helping you so that you leave before it's late)"
+- `concepts[1].example` "Bien qu'il fasse froid, on sort (Even though it's cold, we're going out)" → "Bien qu'il fasse froid, on va au parc (Even though it's cold, we're going to the park)"
 
 **2024-02-01-reading-10**
 
 - `title` "Reading 10 - Mes Rêves et Mes Espoirs" → "Reading - Mes Rêves et Mes Espoirs"
 - `description` "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more" → "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more"
+- `glossary` "(none)" → "["fr":"assise","en":"sitting (feminine)","fr":"savait","en":"knew","fr":"saura","en":"will know","fr":"achèterait","en":"would buy"]"
 
 **2024-02-05-unit-10-practice**
 
@@ -2166,6 +2375,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-02-04-unit-10-exam**
 
 - `description` "Test everything from Unit 10! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions." → "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions."
+- `items[36].accept` "["sait","savoir"]" → "["sait"]"
 - `items[36].hint` "Marc's wisdom from Reading 10: 'If we don't do anything, we'll never _____'" → "Marc's wisdom from the reading Mes Rêves et Mes Espoirs: 'If we don't do anything, we'll never _____'"
 - `items[37].instruction` "From Reading 10: What did Sophie want about her life?" → "From the reading Mes Rêves et Mes Espoirs: What did Sophie want about her life?"
 - `items[38].instruction` "From Reading 10: What had Sophie already done before talking to Marc?" → "From the reading Mes Rêves et Mes Espoirs: What had Sophie already done before talking to Marc?"
@@ -2174,9 +2384,30 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information. Finally complete what should have been in Unit 1!" → "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information."
 
+**2024-02-10-donner**
+
+- `concepts[0].example` "Je donne un cadeau (I give a gift), Tu me donnes ton numéro? (Do you give me your number?)" → "Je donne un livre (I give a book), Tu me donnes ton numéro? (Do you give me your number?)"
+
+**2024-05-15-daily-actions-1**
+
+- `concepts[3].example` "Je vis à Paris, je travaille au centre-ville, et je dors bien (I live in Paris, work downtown, and sleep well)" → "Je vis à Paris, je travaille près d'ici, et je dors bien (I live in Paris, work near here, and sleep well)"
+
+**2024-02-13-search-and-find**
+
+- `concepts[0].example` "Je cherche mes clés (I'm looking for my keys), Tu cherches quoi? (What are you looking for?)" → "Je cherche mes clés (I'm looking for my keys), Tu cherches quoi? (What are you looking for?), C'est dur de trouver mes clés ! (It's hard to find my keys!)"
+
+**2024-02-14-social-situations**
+
+- `concepts[0].example` "J'attends le bus (I'm waiting for the bus), Tu attends quelqu'un? (Are you waiting for someone?)" → "J'attends le bus (I'm waiting for the bus), Tu attends quelqu'un? (Are you waiting for someone?), J'attends Marie et j'écoute de la musique (I'm waiting for Marie and listening to music)"
+
+**2024-02-09-directions-navigation**
+
+- `concepts[3].example` "Allez tout droit, puis tournez à gauche (Go straight, then turn left)" → "Allez tout droit jusqu'à la gare, puis tournez à gauche (Go straight as far as the station, then turn left)"
+
 **2024-02-12-reading-11**
 
 - `title` "Reading 11 - La France Moderne" → "Reading - La France Moderne"
+- `glossary` "(none)" → "["fr":"compte","en":"has (in number)","fr":"attire","en":"attracts","fr":"lieux","en":"places","fr":"étrangères","en":"foreign","fr":"peintres","en":"painters","fr":"mémoire","en":"memory","fr":"également","en":"also, as well","fr":"inoubliables","en":"unforgettable","fr":"plusieurs","en":"several","fr":"françaises","en":"French","fr":"au-delà","en":"beyond","fr":"traverse","en":"crosses","fr":"au bord de","en":"on the shore of","fr":"vélo","en":"bike","fr":"quels","en":"which"]"
 
 **2024-02-16-unit-11-practice**
 
@@ -2199,6 +2430,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `concepts[0].definition` "These animals are perfect examples for asking 'how does X do Y?' questions" → "The next lessons ask how and why these animals move. Start with what each one is like."
 - `concepts[0].example` "Comment est-ce qu'une tortue nage? Comment est-ce qu'un écureuil saute?" → "La tortue est lente. (The turtle is slow.) L'écureuil est rapide. (The squirrel is fast.)"
 - `concepts[2].term` "Nature Elements" → "Nature words"
+- `concepts[2].example` "le vent (wind), la pluie (rain), une plante (plant), un arbre (tree)" → "le vent (wind), la pluie (rain), une plante (plant), un arbre (tree); Il y a des millions d'oiseaux (There are millions of birds)"
 - `concepts[4].definition` "This vocabulary enables curiosity questions in future modules" → "These words come back in the question lessons that follow."
 - `concepts[4].example` "After learning this: you can ask 'Pourquoi est-ce que les oiseaux volent?' (Why do birds fly?)" → "Pourquoi est-ce que la tortue est lente ? (Why is the turtle slow?)"
 - `items[0].type` "translate" → "gapfill"
@@ -2307,7 +2539,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-16-movement-verbs**
 
-- `concepts` "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), L'oiseau vole (the bird flies), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in all tenses you've learned - present, past, imparfait","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming)"]" → "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), Les oiseaux volent (birds fly), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming, I used to swim)","id":"c-savoir-infinitive","term":"savoir + infinitive: know how to","definition":"Use savoir with an infinitive for a skill someone has learned, and pouvoir for whether they are able to at that moment.","example":"Je sais nager. (I can swim, I know how.) Les jeunes oiseaux ne savent pas encore voler. (Baby birds can't fly yet.)"]"
+- `concepts` "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), L'oiseau vole (the bird flies), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in all tenses you've learned - present, past, imparfait","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming)"]" → "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent; Je cours jusqu'à la gare (I run as far as the station)","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), Les oiseaux volent (birds fly), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming, I used to swim)","id":"c-savoir-infinitive","term":"savoir + infinitive: know how to","definition":"Use savoir with an infinitive for a skill someone has learned, and pouvoir for whether they are able to at that moment.","example":"Je sais nager. (I can swim, I know how.) Les jeunes oiseaux ne savent pas encore voler. (Baby birds can't fly yet.)"]"
 - `tables` "(none)" → "["id":"t-three-tenses","title":"nager and courir in the present and the past","rows":["fr":"je nage","en":"I swim","note":"present","fr":"j'ai nagé","en":"I swam","note":"passé composé, with avoir","fr":"je nageais","en":"I was swimming, I used to swim","note":"imparfait: nage- keeps its e before -ais","fr":"il court","en":"he runs","note":"present","fr":"il a couru","en":"he ran","note":"passé composé, with avoir","fr":"il courait","en":"he was running, he used to run","note":"imparfait"]]"
 - `items[0].type` "translate" → "gapfill"
 - `items[0].text` "(none)" → ""Le matin, je ___ avec mon frère.""
@@ -2946,7 +3178,63 @@ The live app stores answers under these exercise ids and concept indexes, and no
 
 ### Real misses
 
-None.
+**2024-05-05-on-and-people**
+
+- `2024-05-05-on-and-people.2` exercise "We must study (using on)" → "on doit étudier"
+- `2024-05-05-on-and-people.8` exercise "We must believe (using on)" → "on doit croire"
+
+**2024-05-02-discourse-markers**
+
+- `2024-05-02-discourse-markers.14` exercise "I am almost ready" → "je suis presque prêt"
+
+**2024-05-10-unit-7-exam**
+
+- `2024-05-10-unit-7-exam.62` exercise "I'm reviewing my lessons because I have an exam" → "je révise mes leçons parce que j'ai un examen"
+
+**2024-05-21-reflexive-pronouns**
+
+- `2024-05-21-reflexive-pronouns.4` exercise "elle ... habille (she gets dressed)" → "se"
+- `2024-05-21-reflexive-pronouns.7` exercise "ils ... amusent (they have fun)" → "se"
+
+**2024-05-20-reading-8**
+
+- `2024-05-20-reading-8.10` exercise "She goes from morning preparation to..." → "elle rentre contente et pense au lendemain"
+
+**2024-05-26-causal-words**
+
+- `2024-05-26-causal-words.2` exercise "Complete: On étudie le français ___ c'est utile (We study French for it's useful)" → "car"
+- `2024-05-26-causal-words.6` exercise "Complete: ___ la pluie, on reste ici (Because of the rain, we're staying here)" → "À cause de"
+- `2024-05-26-causal-words.7` exercise "Complete: Pourquoi tu restes? - ___ je suis fatigué (Why are you staying? - Because I'm tired)" → "Parce que"
+- `2024-05-26-causal-words.8` exercise "Complete: Je suis en retard ___ le traffic (I'm late because of traffic)" → "à cause du"
+- `2024-05-26-causal-words.17` exercise "Complete: Je ne dors pas bien ___ bruit (I don't sleep well because of the noise)" → "à cause du"
+
+**2024-05-28-more-spatial-relations**
+
+- `2024-05-28-more-spatial-relations.7` exercise "Complete: La table est ___ pièce (The table is in the middle of the room)" → "au milieu de la"
+
+**2024-05-31-passe-compose-etre**
+
+- `2024-05-31-passe-compose-etre.5` exercise "Complete: Vous ___ hier? (Did you go out yesterday?) - Use 'sortir' with ÊTRE!" → "êtes sortis"
+- `2024-05-31-passe-compose-etre.16` exercise "Complete: ___ vous ___ en vacances? (Did you go on vacation?) - Use 'partir' with ÊTRE!" → "Êtes partis"
+
+**2024-05-27-imparfait-all-verbs**
+
+- `2024-05-27-imparfait-all-verbs.16` exercise "Complete: Quand j'___ jeune, je jouais au foot (When I was young, I used to play soccer) - Use 'être' in imparfait" → "étais"
+
+**2024-06-04-pc-vs-imparfait**
+
+- `2024-06-04-pc-vs-imparfait.18` exercise "Complete: Il ___ du café quand je suis arrivé (He was drinking coffee when I arrived) - Choose correct tense for 'boire'" → "buvait"
+
+**2024-06-09-unit-9-exam**
+
+- `2024-06-09-unit-9-exam.36` exercise "je _____ (lire) quand il a téléphoné" → "lisais"
+- `2024-06-09-unit-9-exam.37` exercise "hier j'_____ (acheter) un livre" → "ai acheté"
+- `2024-06-09-unit-9-exam.39` exercise "soudain la porte s'_____ (ouvrir)" → "est ouverte"
+- `2024-06-09-unit-9-exam.40` exercise "pendant qu'il _____ (pleuvoir), je suis resté dedans" → "pleuvait"
+
+**2024-01-22-common-adverbs**
+
+- `2024-01-22-common-adverbs.4` exercise "run quickly" → "courir rapidement"
 
 ### Reference word lists
 
@@ -3783,7 +4071,7 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "speak naturally about people in general" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.milestone` "Natural French pronoun usage" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Add discourse markers for conversational flow" (no field; the next-module teaser is computed from the outline)
-- 4 × generic instruction dropped (Say '…'): `exercises[1].instruction`, `exercises[2].instruction`, `exercises[3].instruction`, `exercises[5].instruction`
+- 3 × generic instruction dropped (Say '…'): `exercises[2].instruction`, `exercises[3].instruction`, `exercises[5].instruction`
 
 **2024-05-09-studying-verbs**
 
@@ -3834,7 +4122,7 @@ Today’s objects hold these, and the module schema has no field for them.
 - `emailMetadata.realWorldUse` "speak with natural French rhythm and flow" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.milestone` "Natural conversational French" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Complete modifiers with tout, même, mal" (no field; the next-module teaser is computed from the outline)
-- 10 × generic instruction dropped (Say '…'): `exercises[1].instruction`, `exercises[6].instruction`, `exercises[7].instruction`, `exercises[8].instruction`, `exercises[9].instruction`, `exercises[10].instruction`, `exercises[11].instruction`, `exercises[12].instruction`, `exercises[13].instruction`, `exercises[14].instruction`
+- 9 × generic instruction dropped (Say '…'): `exercises[1].instruction`, `exercises[6].instruction`, `exercises[7].instruction`, `exercises[8].instruction`, `exercises[9].instruction`, `exercises[10].instruction`, `exercises[11].instruction`, `exercises[12].instruction`, `exercises[14].instruction`
 
 **2024-04-28-comparison-modifiers**
 
@@ -3852,6 +4140,7 @@ Today’s objects hold these, and the module schema has no field for them.
 - `concepts[2]` concept "Cognitive Language Integration": a reading has no concept cards
 - `skipStudyMode` true (Study Mode belongs to lessons only)
 - `readingPassage.title` "L'Art d'Apprendre" (the story's title comes from stories/)
+- `glossary` 1 story glossary notes (a glossary row holds fr and en)
 
 **2024-05-11-unit-7-practice**
 
@@ -3876,7 +4165,7 @@ Today’s objects hold these, and the module schema has no field for them.
 - `concepts[4]` concept "Cultural and Academic Vocabulary": a unit exam teaches nothing
 - `skipStudyMode` true (Study Mode belongs to lessons only)
 - `unitNumber` 7 (the outline places the exam)
-- 56 × generic instruction dropped (Translate to French): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`, `exerciseConfig.items[15].instruction`, `exerciseConfig.items[16].instruction`, `exerciseConfig.items[17].instruction`, `exerciseConfig.items[19].instruction`, `exerciseConfig.items[20].instruction`, `exerciseConfig.items[21].instruction`, `exerciseConfig.items[22].instruction`, `exerciseConfig.items[24].instruction`, `exerciseConfig.items[25].instruction`, `exerciseConfig.items[26].instruction`, `exerciseConfig.items[27].instruction`, `exerciseConfig.items[28].instruction`, `exerciseConfig.items[29].instruction`, `exerciseConfig.items[30].instruction`, `exerciseConfig.items[31].instruction`, `exerciseConfig.items[32].instruction`, `exerciseConfig.items[33].instruction`, `exerciseConfig.items[34].instruction`, `exerciseConfig.items[35].instruction`, `exerciseConfig.items[36].instruction`, `exerciseConfig.items[37].instruction`, `exerciseConfig.items[38].instruction`, `exerciseConfig.items[39].instruction`, `exerciseConfig.items[40].instruction`, `exerciseConfig.items[41].instruction`, `exerciseConfig.items[42].instruction`, `exerciseConfig.items[46].instruction`, `exerciseConfig.items[47].instruction`, `exerciseConfig.items[48].instruction`, `exerciseConfig.items[49].instruction`, `exerciseConfig.items[50].instruction`, `exerciseConfig.items[51].instruction`, `exerciseConfig.items[52].instruction`, `exerciseConfig.items[53].instruction`, `exerciseConfig.items[54].instruction`, `exerciseConfig.items[55].instruction`, `exerciseConfig.items[56].instruction`, `exerciseConfig.items[57].instruction`, `exerciseConfig.items[58].instruction`, `exerciseConfig.items[59].instruction`, `exerciseConfig.items[60].instruction`, `exerciseConfig.items[61].instruction`
+- 55 × generic instruction dropped (Translate to French): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`, `exerciseConfig.items[15].instruction`, `exerciseConfig.items[16].instruction`, `exerciseConfig.items[17].instruction`, `exerciseConfig.items[19].instruction`, `exerciseConfig.items[20].instruction`, `exerciseConfig.items[21].instruction`, `exerciseConfig.items[22].instruction`, `exerciseConfig.items[24].instruction`, `exerciseConfig.items[25].instruction`, `exerciseConfig.items[26].instruction`, `exerciseConfig.items[27].instruction`, `exerciseConfig.items[28].instruction`, `exerciseConfig.items[29].instruction`, `exerciseConfig.items[30].instruction`, `exerciseConfig.items[31].instruction`, `exerciseConfig.items[32].instruction`, `exerciseConfig.items[33].instruction`, `exerciseConfig.items[34].instruction`, `exerciseConfig.items[35].instruction`, `exerciseConfig.items[36].instruction`, `exerciseConfig.items[37].instruction`, `exerciseConfig.items[38].instruction`, `exerciseConfig.items[39].instruction`, `exerciseConfig.items[40].instruction`, `exerciseConfig.items[41].instruction`, `exerciseConfig.items[42].instruction`, `exerciseConfig.items[46].instruction`, `exerciseConfig.items[47].instruction`, `exerciseConfig.items[48].instruction`, `exerciseConfig.items[49].instruction`, `exerciseConfig.items[50].instruction`, `exerciseConfig.items[51].instruction`, `exerciseConfig.items[52].instruction`, `exerciseConfig.items[53].instruction`, `exerciseConfig.items[54].instruction`, `exerciseConfig.items[55].instruction`, `exerciseConfig.items[56].instruction`, `exerciseConfig.items[57].instruction`, `exerciseConfig.items[58].instruction`, `exerciseConfig.items[59].instruction`, `exerciseConfig.items[60].instruction`
 - 1 × generic instruction dropped (What does '…' mean?): `exerciseConfig.items[5].instruction`
 
 **2024-05-23-temporal-words**
@@ -4743,7 +5032,7 @@ The same words, moved into a field of the new shape.
 
 **2024-05-31-passe-compose-etre**
 
-- 18 × "Complete:" prefix dropped; the sentence is the text: `items[0].prompt`, `items[1].prompt`, `items[2].prompt`, `items[3].prompt`, `items[4].prompt`, `items[5].prompt`, `items[6].prompt`, `items[7].prompt`, `items[8].prompt`, `items[9].prompt`, `items[10].prompt`, `items[11].prompt`, `items[12].prompt`, `items[13].prompt`, `items[14].prompt`, `items[15].prompt`, `items[16].prompt`, `items[17].prompt`
+- 16 × "Complete:" prefix dropped; the sentence is the text: `items[0].prompt`, `items[1].prompt`, `items[2].prompt`, `items[3].prompt`, `items[5].prompt`, `items[6].prompt`, `items[7].prompt`, `items[8].prompt`, `items[9].prompt`, `items[10].prompt`, `items[11].prompt`, `items[12].prompt`, `items[13].prompt`, `items[14].prompt`, `items[16].prompt`, `items[17].prompt`
 
 **2024-05-29-passe-compose-agreement**
 
@@ -4766,7 +5055,7 @@ The same words, moved into a field of the new shape.
 
 **2024-06-04-pc-vs-imparfait**
 
-- 18 × "Complete:" prefix dropped; the sentence is the text: `items[0].prompt`, `items[1].prompt`, `items[2].prompt`, `items[3].prompt`, `items[4].prompt`, `items[5].prompt`, `items[6].prompt`, `items[7].prompt`, `items[8].prompt`, `items[9].prompt`, `items[10].prompt`, `items[11].prompt`, `items[12].prompt`, `items[13].prompt`, `items[14].prompt`, `items[15].prompt`, `items[16].prompt`, `items[17].prompt`
+- 17 × "Complete:" prefix dropped; the sentence is the text: `items[0].prompt`, `items[1].prompt`, `items[2].prompt`, `items[3].prompt`, `items[4].prompt`, `items[5].prompt`, `items[6].prompt`, `items[7].prompt`, `items[8].prompt`, `items[9].prompt`, `items[10].prompt`, `items[11].prompt`, `items[12].prompt`, `items[13].prompt`, `items[14].prompt`, `items[15].prompt`, `items[16].prompt`
 
 **2024-06-03-past-tense-composition**
 
@@ -4785,13 +5074,9 @@ The same words, moved into a field of the new shape.
 
 **2024-06-10-unit-9-practice**
 
-- `items[15].blanks` i-lisais-es-arrive: 2 blank hints joined into one hint
-- `items[16].blanks` i-courait-a-marche: 2 blank hints joined into one hint
-- `items[17].blanks` i-cuisinais-ai-entendu: 2 blank hints joined into one hint
 - `items[18].blanks` i-comme-sommes-restes: 2 blank hints joined into one hint
 - `items[19].blanks` i-sur-ai-vu: 2 blank hints joined into one hint
-- `items[20].blanks` i-s-est-cachee-pour: 2 blank hints joined into one hint
-- 21 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`, `items[20].instruction`
+- 16 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[18].instruction`, `items[19].instruction`
 
 **2024-02-01-reading-10**
 
@@ -4805,8 +5090,7 @@ The same words, moved into a field of the new shape.
 
 **2024-02-05-unit-10-practice**
 
-- `items[19].blanks` i-voudrais-suives: 2 blank hints joined into one hint
-- 20 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`
+- 19 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`
 
 **2024-02-12-reading-11**
 

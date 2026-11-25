@@ -25,6 +25,12 @@
       "note": "⭐ command + object + indirect"
     },
     {
+      "word_id": "montre-la-moi-fr",
+      "fr": "Montre-la-moi!",
+      "gloss": "Show it to me!",
+      "note": "from {montrer} (to show); {la} before {moi}"
+    },
+    {
       "word_id": "regarde-moi-fr",
       "fr": "Regarde-moi!",
       "gloss": "Look at me!",
@@ -54,7 +60,7 @@
       "id": "c-affirmative-commands-attach-with",
       "term": "Affirmative Commands: Attach with Hyphens",
       "definition": "In positive commands, pronouns attach to the verb with hyphens",
-      "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!)"
+      "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!), {Regarde-moi et fais attention!} (Look at me and pay attention!), {Amuse-toi bien!} (Have fun!), {Dépêche-toi, habille-toi!} (Hurry up, get dressed!)"
     },
     {
       "id": "c-negative-commands-separate-with",

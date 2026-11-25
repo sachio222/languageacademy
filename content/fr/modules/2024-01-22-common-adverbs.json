@@ -33,7 +33,7 @@
       "word_id": "rapidement-fr",
       "fr": "rapidement",
       "gloss": "quickly",
-      "note": "{courir rapidement}"
+      "note": "{manger rapidement}"
     },
     {
       "word_id": "facilement-fr",
@@ -97,15 +97,15 @@
       "hint": "{parler + lentement}"
     },
     {
-      "id": "i-courir-rapidement",
+      "id": "i-manger-rapidement",
       "type": "respond",
-      "situation": "Say someone runs quickly",
-      "cue": "run quickly",
-      "answer": "courir rapidement",
+      "situation": "Say someone eats quickly",
+      "cue": "eat quickly",
+      "answer": "manger rapidement",
       "accept": [
-        "court rapidement"
+        "mange rapidement"
       ],
-      "hint": "{courir + rapidement}"
+      "hint": "{manger + rapidement}"
     },
     {
       "id": "i-comprendre-facilement",

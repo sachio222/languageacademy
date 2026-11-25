@@ -518,14 +518,15 @@
       "hint": "{j'étudie + le français + à l'université}"
     },
     {
-      "id": "i-je-revise-mes-lecons-2",
-      "type": "translate",
-      "prompt": "I'm reviewing my lessons because I have an exam",
-      "answer": "je révise mes leçons parce que j'ai un examen",
+      "id": "i-j-ai-un-examen-donc",
+      "type": "respond",
+      "situation": "Say that you have an exam, so you are reviewing your lessons.",
+      "answer": "j'ai un examen, donc je révise mes leçons",
       "accept": [
-        "je revise mes lecons parce que j ai un examen"
+        "j'ai un examen donc je révise mes leçons",
+        "j ai un examen donc je revise mes lecons"
       ],
-      "hint": "{je révise mes leçons + parce que + j'ai un examen}"
+      "hint": "{j'ai un examen + donc + je révise mes leçons}"
     }
   ],
   "tests": {

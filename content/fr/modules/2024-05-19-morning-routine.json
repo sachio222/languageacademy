@@ -54,6 +54,12 @@
       "note": "polite form"
     },
     {
+      "word_id": "tot-fr",
+      "fr": "tôt",
+      "gloss": "early",
+      "note": "the opposite of {tard}"
+    },
+    {
       "word_id": "se-lever-fr",
       "fr": "se lever",
       "gloss": "to get up / to stand up",

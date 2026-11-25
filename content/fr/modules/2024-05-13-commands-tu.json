@@ -70,7 +70,7 @@
       "id": "c-imperative-mood-commands",
       "term": "Imperative Mood = Commands",
       "definition": "Tell someone to do something - no subject pronoun needed!",
-      "example": "{Mange!} (Eat!), {Parle!} (Speak!), {Va!} (Go!)"
+      "example": "{Mange!} (Eat!), {Parle!} (Speak!), {Va!} (Go!), {Pars tôt!} (Leave early!)"
     },
     {
       "id": "c-tu-form-just-drop",
@@ -88,7 +88,7 @@
       "id": "c-use-with-friends-and",
       "term": "Use with Friends and Family",
       "definition": "tu commands are informal - use with people you'd call '{tu}'",
-      "example": "To a friend: {Mange!} (Eat!), {Écoute!} (Listen!), {Viens!} (Come!)"
+      "example": "To a friend: {Mange!} (Eat!), {Écoute!} (Listen!), {Viens!} (Come!), {Viens, on est en retard!} (Come on, we're late!)"
     }
   ],
   "items": [

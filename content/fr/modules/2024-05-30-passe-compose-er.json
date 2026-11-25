@@ -72,7 +72,7 @@
       "fr": "j'ai regardé",
       "gloss": "I watched / I looked at",
       "note": "past action",
-      "example_fr": "J'ai regardé la télé"
+      "example_fr": "J'ai regardé la ville"
     },
     {
       "word_id": "j-ai-demande-fr",
@@ -99,7 +99,7 @@
   "concepts": [
     {
       "id": "c-passe-compose-avoir-past",
-      "term": "{Passé Composé} = avoir + past participle",
+      "term": "Passé Composé = avoir + past participle",
       "definition": "Compound past tense for completed actions: auxiliary verb '{avoir}' + past participle",
       "example": "{j'ai parlé} (I spoke), {tu as mangé} (you ate), {il a étudié} (he studied)"
     },
@@ -242,13 +242,13 @@
     {
       "id": "i-avez-cherche",
       "type": "gapfill",
-      "text": "Vous ___ mes clés?",
+      "text": "Vous ___ mon livre ?",
       "blanks": [
         {
           "answer": "avez cherché"
         }
       ],
-      "gloss": "Did you look for my keys?",
+      "gloss": "Did you look for my book?",
       "hint": "Use '{chercher}'",
       "mistakes": [
         {
@@ -366,13 +366,13 @@
     {
       "id": "i-a-regarde",
       "type": "gapfill",
-      "text": "On ___ la télé hier soir",
+      "text": "On ___ les enfants hier soir",
       "blanks": [
         {
           "answer": "a regardé"
         }
       ],
-      "gloss": "We watched TV last night",
+      "gloss": "We watched the children last night",
       "hint": "Use '{regarder}'",
       "mistakes": [
         {

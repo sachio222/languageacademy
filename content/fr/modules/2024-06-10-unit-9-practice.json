@@ -14,13 +14,13 @@
     {
       "id": "i-parce-que",
       "type": "gapfill",
-      "text": "Je suis en retard ___ j'ai raté le bus.",
+      "text": "Je suis en retard ___ je suis parti tard.",
       "blanks": [
         {
           "answer": "parce que"
         }
       ],
-      "gloss": "I'm late because I missed the bus",
+      "gloss": "I'm late because I left late",
       "hint": "because (most common)"
     },
     {
@@ -38,13 +38,13 @@
     {
       "id": "i-grace-a",
       "type": "gapfill",
-      "text": "___ à toi, j'ai réussi.",
+      "text": "___ toi, j'ai appris le français.",
       "blanks": [
         {
           "answer": "grâce à"
         }
       ],
-      "gloss": "Thanks to you, I succeeded",
+      "gloss": "Thanks to you, I learned French",
       "hint": "thanks to (positive reason)"
     },
     {
@@ -62,13 +62,13 @@
     {
       "id": "i-entre",
       "type": "gapfill",
-      "text": "Le chat est ___ les deux chaises.",
+      "text": "Le chat est ___ la porte et la table.",
       "blanks": [
         {
           "answer": "entre"
         }
       ],
-      "gloss": "The cat is between the two chairs",
+      "gloss": "The cat is between the door and the table",
       "hint": "between"
     },
     {
@@ -84,16 +84,16 @@
       "hint": "near / close to"
     },
     {
-      "id": "i-ai-lu",
+      "id": "i-ai-vu-marie",
       "type": "gapfill",
-      "text": "Hier, j'___ un livre.",
+      "text": "Hier, j'___ Marie au café.",
       "blanks": [
         {
-          "answer": "ai lu"
+          "answer": "ai vu"
         }
       ],
-      "gloss": "Yesterday, I read a book",
-      "hint": "passé composé of lire (to read)"
+      "gloss": "Yesterday, I saw Marie at the café",
+      "hint": "passé composé of voir (to see)"
     },
     {
       "id": "i-as-fini",
@@ -192,54 +192,54 @@
       "hint": "imparfait of aller (repeated action)"
     },
     {
-      "id": "i-lisais-es-arrive",
+      "id": "i-mangeais-es-arrive",
       "type": "gapfill",
       "text": "Je ___ quand tu ___.",
       "blanks": [
         {
-          "answer": "lisais"
+          "answer": "mangeais"
         },
         {
           "answer": "es arrivé"
         }
       ],
-      "gloss": "I was reading when you arrived",
+      "gloss": "I was eating when you arrived",
       "hint": "imparfait - ongoing action / passé composé - completed action"
     },
     {
-      "id": "i-courait-a-marche",
+      "id": "i-prenais-ai-marche",
       "type": "gapfill",
-      "text": "Il ___ tous les jours, mais hier il ___.",
+      "text": "Je ___ le bus tous les jours, mais hier j'___.",
       "blanks": [
         {
-          "answer": "courait"
+          "answer": "prenais"
         },
         {
-          "answer": "a marché"
+          "answer": "ai marché"
         }
       ],
-      "gloss": "He used to run every day, but yesterday he walked",
+      "gloss": "I used to take the bus every day, but yesterday I walked",
       "hint": "imparfait - habitual action / passé composé - specific completed action"
     },
     {
-      "id": "i-cuisinais-ai-entendu",
+      "id": "i-travaillais-a-appele",
       "type": "gapfill",
-      "text": "Pendant que je ___, j'___ un bruit.",
+      "text": "Pendant que je ___, Marie ___.",
       "blanks": [
         {
-          "answer": "cuisinais"
+          "answer": "travaillais"
         },
         {
-          "answer": "ai entendu"
+          "answer": "a appelé"
         }
       ],
-      "gloss": "While I was cooking, I heard a noise",
+      "gloss": "While I was working, Marie called",
       "hint": "imparfait - ongoing background action / passé composé - sudden event"
     },
     {
       "id": "i-comme-sommes-restes",
       "type": "gapfill",
-      "text": "___ il pleuvait, nous ___ à la maison.",
+      "text": "___ nous étions fatigués, nous ___ à la maison.",
       "blanks": [
         {
           "answer": "comme"
@@ -248,7 +248,7 @@
           "answer": "sommes restés"
         }
       ],
-      "gloss": "Since it was raining, we stayed home",
+      "gloss": "Since we were tired, we stayed home",
       "hint": "since/as (causal connector) / passé composé of rester (être verb)"
     },
     {
@@ -267,19 +267,19 @@
       "hint": "on (spatial preposition) / passé composé of voir"
     },
     {
-      "id": "i-s-est-cachee-pour",
+      "id": "i-s-est-levee-parce-qu",
       "type": "gapfill",
-      "text": "Elle ___ derrière l'arbre ___ personne ne la voie.",
+      "text": "Elle ___ à sept heures ___ elle avait un cours.",
       "blanks": [
         {
-          "answer": "s'est cachée"
+          "answer": "s'est levée"
         },
         {
-          "answer": "pour que"
+          "answer": "parce qu'"
         }
       ],
-      "gloss": "She hid behind the tree so that nobody would see her",
-      "hint": "passé composé of se cacher (reflexive) / so that (purpose)"
+      "gloss": "She got up at seven because she had a class",
+      "hint": "passé composé of se lever (reflexive) / because"
     }
   ],
   "tests": {

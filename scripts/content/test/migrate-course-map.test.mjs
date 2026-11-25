@@ -266,10 +266,21 @@ const ADDED_AFTER_SPLIT = {
   '2024-01-22-reading2': LE_PRONOUN,
   '2024-05-20-reading-8': ['fr:lex:cuisiner'],
   '2024-06-05-reading-9': ['fr:lex:cuisiner', 'fr:lex:rencontrer', 'fr:lex:sortir'],
+  // C4b: Reading 7's table lists the noun étudiant, which the checker would read as the present participle of étudier
+  // (a lesson teaches étudier at 85); the agreement table lists "nous sommes partis", the verb, not the noun parti.
+  '2024-05-07-reading-7': ['fr:lex:etudier'],
+  '2024-05-29-passe-compose-agreement': ['fr:lex:parti'],
 };
+// Content notes settled after the split (C4b): the être-verbs gap-fill now reads "Elle n'___ pas ___".
+const NOTES_SETTLED_AFTER_SPLIT = ['2024-05-31-passe-compose-etre'];
 
 test('the committed course-map.json is the split of the course map before the split, plus later exclusions', () => {
   const { corrections } = split(COURSE_MAP);
+  for (const key of NOTES_SETTLED_AFTER_SPLIT) {
+    assert.ok(corrections[key]?.contentNotes?.length, `${key} had a content note at the split`);
+    delete corrections[key].contentNotes;
+    if (!Object.keys(corrections[key]).length) delete corrections[key];
+  }
   const committed = readJson('curriculum-graph/languages/fr/course-map.json');
   for (const [key, ids] of Object.entries(ADDED_AFTER_SPLIT)) {
     assert.deepEqual(committed[key].excludeWords.filter((id) => ids.includes(id)), ids, key);

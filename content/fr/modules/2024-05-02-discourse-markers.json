@@ -170,7 +170,7 @@
       "id": "c-more-discourse-markers",
       "term": "More discourse markers",
       "definition": "bon (well, so), alors (so, then), ainsi (thus - formal)",
-      "example": "{Bon}, {on commence?} (Well, shall we start?), {Alors}, {tu viens?} (So, are you coming?)"
+      "example": "{Bon}, {on commence?} (Well, shall we start?), {Alors}, {tu viens?} (So, are you coming?), {Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui.} (So, are you going to the university? Actually, I don't have class today.), {Bon, voilà la réponse.} (Well, there's the answer.)"
     }
   ],
   "items": [
@@ -301,11 +301,14 @@
       ]
     },
     {
-      "id": "discourse-markers-17",
-      "type": "translate",
-      "prompt": "I am almost ready",
-      "answer": "je suis presque prêt",
-      "hint": "{je suis + presque + prêt}"
+      "id": "i-je-suis-presque-la",
+      "type": "respond",
+      "situation": "A friend calls to ask where you are. Say \"I'm almost there.\"",
+      "answer": "je suis presque là",
+      "accept": [
+        "je suis presque la"
+      ],
+      "hint": "{je suis + presque + là}"
     },
     {
       "id": "discourse-markers-18",

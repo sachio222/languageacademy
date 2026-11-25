@@ -88,6 +88,24 @@
       "fr": "je suis devenu(e)",
       "gloss": "I became",
       "note": "devenir → devenu (uses être!)"
+    },
+    {
+      "word_id": "il-est-ne-il-est-mort-fr",
+      "fr": "il est né / il est mort",
+      "gloss": "he was born / he died",
+      "note": "naître → né, mourir → mort (both use être!)"
+    },
+    {
+      "word_id": "je-suis-retourne-fr",
+      "fr": "je suis retourné",
+      "gloss": "I went back",
+      "note": "retourner → retourné (uses être!)"
+    },
+    {
+      "word_id": "elle-est-venue-ils-sont-venus-fr",
+      "fr": "elle est venue / ils sont venus",
+      "gloss": "she came / they came",
+      "note": "with être the ending agrees: -e for feminine, -s for plural"
     }
   ],
   "concepts": [
@@ -230,24 +248,24 @@
       ]
     },
     {
-      "id": "i-etes-sortis",
+      "id": "i-etes-restes",
       "type": "gapfill",
-      "text": "Vous ___ hier?",
+      "text": "Vous ___ à la maison ?",
       "blanks": [
         {
-          "answer": "êtes sortis"
+          "answer": "êtes restés"
         }
       ],
-      "gloss": "Did you go out yesterday?",
-      "hint": "Use '{sortir}' with ÊTRE!",
+      "gloss": "Did you stay home?",
+      "hint": "Use '{rester}' with ÊTRE!",
       "mistakes": [
         {
-          "answer": "avez sorti",
-          "feedback": "Sortir uses ÊTRE, not avoir! Use '{vous êtes sortis}' (motion verb)."
+          "answer": "avez resté",
+          "feedback": "Rester uses ÊTRE, not avoir! Use '{vous êtes restés}' (a DR & MRS VANDERTRAMP verb)."
         },
         {
-          "answer": "sortez",
-          "feedback": "That's present tense! Use passé composé: vous êtes sortis."
+          "answer": "restez",
+          "feedback": "That's present tense! Use passé composé: {vous êtes restés}."
         }
       ]
     },
@@ -475,27 +493,27 @@
       ]
     },
     {
-      "id": "i-etes-partis",
+      "id": "i-etes-entres",
       "type": "gapfill",
-      "text": "___ vous ___ en vacances?",
+      "text": "___-vous ___ dans le café ?",
       "blanks": [
         {
           "answer": "Êtes"
         },
         {
-          "answer": "partis"
+          "answer": "entrés"
         }
       ],
-      "gloss": "Did you go on vacation?",
-      "hint": "Use '{partir}' with ÊTRE!",
+      "gloss": "Did you go into the café?",
+      "hint": "Use '{entrer}' with ÊTRE!",
       "mistakes": [
         {
-          "answer": "Avez parti",
-          "feedback": "Partir uses ÊTRE, not avoir! Use '{êtes-vous partis?}' (motion verb)."
+          "answer": "Avez entré",
+          "feedback": "Entrer uses ÊTRE, not avoir! Use '{êtes-vous entrés ?}' (motion verb)."
         },
         {
-          "answer": "Partez",
-          "feedback": "That's present tense! Use passé composé: êtes-vous partis?"
+          "answer": "Entrez",
+          "feedback": "That's present tense! Use passé composé: {êtes-vous entrés ?}"
         }
       ]
     },
@@ -524,7 +542,7 @@
     {
       "id": "i-est-venue",
       "type": "gapfill",
-      "text": "Elle ne ___ pas ___",
+      "text": "Elle n'___ pas ___",
       "blanks": [
         {
           "answer": "est"

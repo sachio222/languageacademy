@@ -240,19 +240,19 @@
       "hint": "that he (after possibility expression)"
     },
     {
-      "id": "i-voudrais-suives",
+      "id": "i-voudrais-sois-heureux",
       "type": "gapfill",
-      "text": "Si j'étais toi, je ___ que tu ___ tes rêves.",
+      "text": "Si j'étais ta mère, je ___ que tu ___ heureux.",
       "blanks": [
         {
           "answer": "voudrais"
         },
         {
-          "answer": "suives"
+          "answer": "sois"
         }
       ],
-      "gloss": "'If I were you, I'd want you to follow your dreams' (advice + wish)",
-      "hint": "would want (conditional) / follow (special form after '{que}')"
+      "gloss": "'If I were your mother, I'd want you to be happy' (advice + wish)",
+      "hint": "would want (conditional) / be (special form after '{que}')"
     }
   ],
   "tests": {

@@ -67,6 +67,18 @@
       "note": "⭐ very common - on surface"
     },
     {
+      "word_id": "la-fenetre-fr",
+      "fr": "la fenêtre",
+      "gloss": "the window",
+      "note": "feminine"
+    },
+    {
+      "word_id": "assis-fr",
+      "fr": "assis",
+      "gloss": "sitting, seated",
+      "note": "{il est assis} (he's sitting)"
+    },
+    {
       "word_id": "sous-fr",
       "fr": "sous",
       "gloss": "under, beneath",
@@ -126,13 +138,13 @@
       "id": "c-au-dessous-de-below",
       "term": "{au-dessous} ({de}) - below, beneath, under",
       "definition": "Indicates position below something",
-      "example": "{Au-dessous du niveau} (Below the level), {Le parking est au-dessous} (The parking is below)"
+      "example": "{au-dessous de nous} (below us), {Le parking est au-dessous} (The parking is below)"
     },
     {
       "id": "c-review-dans-sur-sous",
       "term": "Review: {dans, sur, sous}",
       "definition": "Reinforce: dans (in/inside), sur (on/on top of), sous (under/beneath)",
-      "example": "{Le livre est dans le sac} (in the bag), {sur la table} (on the table), {sous la chaise} (under the chair)"
+      "example": "{Le livre est dans le sac} (in the bag), {sur la table} (on the table), {sous la table} (under the table)"
     }
   ],
   "items": [
@@ -286,13 +298,13 @@
     {
       "id": "i-sur",
       "type": "gapfill",
-      "text": "Mes clés sont ___ la table",
+      "text": "Mon téléphone est ___ la table",
       "blanks": [
         {
           "answer": "sur"
         }
       ],
-      "gloss": "My keys are on the table",
+      "gloss": "My phone is on the table",
       "mistakes": [
         {
           "answer": "dans",
@@ -370,13 +382,13 @@
     {
       "id": "i-au-dessus-du",
       "type": "gapfill",
-      "text": "La lampe est ___ le lit",
+      "text": "J'habite ___ café",
       "blanks": [
         {
           "answer": "au-dessus du"
         }
       ],
-      "gloss": "The lamp is above the bed",
+      "gloss": "I live above the café",
       "mistakes": [
         {
           "answer": "sur",
@@ -433,13 +445,13 @@
     {
       "id": "i-au-dessous-2",
       "type": "gapfill",
-      "text": "Ma chambre est ___",
+      "text": "La cuisine est ___",
       "blanks": [
         {
           "answer": "au-dessous"
         }
       ],
-      "gloss": "My bedroom is downstairs/below",
+      "gloss": "The kitchen is downstairs/below",
       "mistakes": [
         {
           "answer": "au-dessus",
@@ -454,13 +466,13 @@
     {
       "id": "i-sous-2",
       "type": "gapfill",
-      "text": "Le chat dort ___ mon lit",
+      "text": "Le chat est ___ la voiture",
       "blanks": [
         {
           "answer": "sous"
         }
       ],
-      "gloss": "The cat sleeps under my bed",
+      "gloss": "The cat is under the car",
       "mistakes": [
         {
           "answer": "sur",

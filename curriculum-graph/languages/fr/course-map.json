@@ -513,6 +513,11 @@
       }
     }
   },
+  "2024-05-07-reading-7": {
+    "excludeWords": [
+      "fr:lex:etudier"
+    ]
+  },
   "2024-05-08-savoir": {
     "excludeWords": [
       "fr:lex:savoir"
@@ -617,9 +622,9 @@
       "fr:form:le.pronoun.elided"
     ]
   },
-  "2024-05-31-passe-compose-etre": {
-    "contentNotes": [
-      "the gap-fill \"Elle ne ___ pas ___\" with answer \"est pas venue\" reads \"Elle ne est pas venue\" once filled; French elides it to \"Elle n'est pas venue\"."
+  "2024-05-29-passe-compose-agreement": {
+    "excludeWords": [
+      "fr:lex:parti"
     ]
   },
   "2024-06-01-passe-compose-irregular-1": {

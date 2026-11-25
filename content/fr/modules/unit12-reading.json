@@ -541,6 +541,18 @@
     {
       "fr": "dors",
       "en": "sleep"
+    },
+    {
+      "fr": "irons",
+      "en": "will go"
+    },
+    {
+      "fr": "pourras",
+      "en": "will be able to"
+    },
+    {
+      "fr": "verras",
+      "en": "will see"
     }
   ],
   "items": [

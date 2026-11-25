@@ -36,9 +36,9 @@
     },
     {
       "word_id": "etudiant-s-fr",
-      "fr": "étudiant(s)",
-      "gloss": "student(s)",
-      "note": "noun"
+      "fr": "étudiant",
+      "gloss": "student",
+      "note": "noun; plural {étudiants}"
     },
     {
       "word_id": "comprendre-fr",
@@ -574,6 +574,12 @@
       "id": "b-en-fait-vous-etes",
       "fr": "En fait, vous êtes en train d'apprendre maintenant. Vous comprenez mes idées. C'est la preuve que vous pouvez apprendre. Vous le faites déjà!",
       "en": "Actually, you're learning right now. You understand my ideas. That's proof that you can learn. You're already doing it!"
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "poser des questions",
+      "en": "to ask questions"
     }
   ],
   "items": [

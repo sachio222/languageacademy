@@ -492,8 +492,10 @@ test('a review row carries review: true into the bundle; ordinary rows carry no 
   const ok = runChecker(b);
   assert.equal(ok.status, 0, JSON.stringify(ok));
   assert.equal(ok.ok, true);
-  // The real course has no review rows, so none of its words carry the key.
-  assert.ok(!real.content.some((c) => c.words.some((w) => 'review' in w)));
+  // In the real course only review rows carry the key: today the one in Units 1 to 11, toujours in the Unit 9 lesson
+  // that sets the two past tenses side by side (C4b; toujours is taught at 49).
+  const reviewed = real.content.flatMap((c) => c.words.filter((w) => 'review' in w).map((w) => `${c.module_key} ${w.word_id} ${w.review}`));
+  assert.deepEqual(reviewed, ['2024-06-04-pc-vs-imparfait toujours-fr true']);
 });
 
 test("a guide's Read more link reaches its GuideBody.more; a guide without one bundles exactly as before", (t) => {

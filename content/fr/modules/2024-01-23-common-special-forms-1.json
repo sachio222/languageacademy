@@ -18,6 +18,12 @@
   },
   "vocabulary": [
     {
+      "word_id": "il-faut-que-fr",
+      "fr": "il faut que",
+      "gloss": "it's necessary that / someone needs to",
+      "note": "from {falloir}; the verb after it takes the forms in this lesson"
+    },
+    {
       "word_id": "tu-sois-fr",
       "fr": "tu sois",
       "gloss": "you be",
@@ -77,13 +83,13 @@
       "id": "c-why-these-forms-exist",
       "term": "Why These Forms Exist",
       "definition": "French uses different verb forms after phrases like '{il faut que}' (someone needs to), '{je veux que}' (I want someone to), '{je suis content que}' (I'm happy that someone...). These express wishes, needs, or emotions about OTHER PEOPLE's actions.",
-      "example": "Normal statement: {Tu es sage} (You are good). Wish about you: {Il faut que tu sois sage} (You need to be good - different form!)"
+      "example": "Normal statement: {Tu es gentil} (You are kind). Wish about you: {Il faut que tu sois gentil} (You need to be kind - different form!)"
     },
     {
       "id": "c-where-you-can-use",
       "term": "Where You CAN Use These Forms",
       "definition": "ONLY after certain phrases: il faut que, je veux que, je suis content que, j'ai peur que, avant que, pour que, bien que, etc.",
-      "example": "✓ {Il faut que tu sois sage} (You need to be good), ✓ {Je veux qu'il aille} (I want him to go)"
+      "example": "✓ {Il faut que tu sois gentil} (You need to be kind), ✓ {Je veux qu'il aille} (I want him to go)"
     },
     {
       "id": "c-where-you-cannot-use",

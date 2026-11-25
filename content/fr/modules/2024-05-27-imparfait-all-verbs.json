@@ -51,6 +51,18 @@
       "note": "⭐ very common - description"
     },
     {
+      "word_id": "vous-vouliez-fr",
+      "fr": "vous vouliez",
+      "gloss": "you wanted (formal/plural)",
+      "note": "vouloir in imparfait"
+    },
+    {
+      "word_id": "je-jouais-fr",
+      "fr": "je jouais",
+      "gloss": "I was playing / I used to play",
+      "note": "{jouer} (to play) in imparfait"
+    },
+    {
       "word_id": "je-prenais-fr",
       "fr": "je prenais",
       "gloss": "I was taking / I used to take",
@@ -504,13 +516,13 @@
     {
       "id": "i-etais-2",
       "type": "gapfill",
-      "text": "Quand j'___ jeune, je jouais au foot",
+      "text": "Quand j'___ jeune, je jouais avec mon chien",
       "blanks": [
         {
           "answer": "étais"
         }
       ],
-      "gloss": "When I was young, I used to play soccer",
+      "gloss": "When I was young, I used to play with my dog",
       "hint": "Use '{être}' in imparfait",
       "mistakes": [
         {

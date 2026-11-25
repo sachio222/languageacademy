@@ -49,6 +49,11 @@
       "note": "preposition"
     },
     {
+      "word_id": "parce-que-fr",
+      "fr": "parce que",
+      "gloss": "because"
+    },
+    {
       "word_id": "pendant-fr",
       "fr": "pendant",
       "gloss": "during / for",
@@ -379,6 +384,12 @@
       "en": "That's my day. And you, how is your day?"
     }
   ],
+  "glossary": [
+    {
+      "fr": "comprenais",
+      "en": "understood (was understanding)"
+    }
+  ],
   "items": [
     {
       "id": "reading-8-1",
@@ -488,14 +499,15 @@
       "hint": "What makes speaking French with friends special?"
     },
     {
-      "id": "reading-8-10",
+      "id": "i-pense-a-demain",
       "type": "comprehension",
       "question": "What pattern shows Marie's daily commitment to learning?",
       "cue": "She goes from morning preparation to...",
-      "answer": "elle rentre contente et pense au lendemain",
+      "answer": "elle rentre contente et pense à demain",
       "accept": [
-        "je rentre contente et pense au lendemain",
-        "contente et pense au lendemain"
+        "je rentre contente et pense à demain",
+        "contente et pense à demain",
+        "elle pense à demain"
       ],
       "hint": "What cycle does her day show from morning to evening?"
     }

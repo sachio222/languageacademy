@@ -309,6 +309,12 @@
       "gloss": "to dream"
     },
     {
+      "word_id": "je-me-sens-mieux-fr",
+      "fr": "je me sens mieux",
+      "gloss": "I feel better",
+      "note": "from {se sentir}, to feel"
+    },
+    {
       "word_id": "acheterais-fr",
       "fr": "achèterais",
       "gloss": "would buy"
@@ -845,6 +851,24 @@
       "fr": "Fin",
       "en": "The End",
       "layout": "end"
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "assise",
+      "en": "sitting (feminine)"
+    },
+    {
+      "fr": "savait",
+      "en": "knew"
+    },
+    {
+      "fr": "saura",
+      "en": "will know"
+    },
+    {
+      "fr": "achèterait",
+      "en": "would buy"
     }
   ],
   "items": [

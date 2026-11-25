@@ -313,8 +313,7 @@
       "shown": "Si on ne fait rien, on ne _____ jamais",
       "answer": "saura",
       "accept": [
-        "sait",
-        "savoir"
+        "sait"
       ],
       "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If we don't do anything, we'll never _____'"
     },
