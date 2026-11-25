@@ -1,0 +1,24 @@
+name: content
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm content:test
+      - run: node --test src/lessons/exerciseAnswers.test.mjs
+      - run: pnpm graph:test
+      - run: pnpm graph:check
+      - run: pnpm build
