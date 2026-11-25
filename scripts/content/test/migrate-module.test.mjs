@@ -276,3 +276,36 @@ test('unit exam: no title, no teaching, tests declared', () => {
 test('an unknown source field is an error, never silently dropped', () => {
   assert.throws(() => convertModule(base({ somethingNew: 1, exerciseConfig: { type: 'custom', items: [] } }), U1), /somethingNew/);
 });
+
+test('a question card and its statement are two cards; only an identical card is merged', () => {
+  const old = base({
+    vocabularyReference: [
+      { french: 'tu comprends', english: 'you understand', note: '' },
+      { french: 'Tu comprends?', english: 'Do you understand?', note: 'question' },
+      { french: 'après', english: 'after', note: 'time' },
+      { french: 'après', english: 'after', note: 'connector' },
+    ],
+    exerciseConfig: { type: 'custom', items: [{ instruction: 'Translate:', prompt: 'you understand', expectedAnswer: 'tu comprends' }] },
+  });
+  const { mod } = convertModule(old, U1);
+  assert.deepEqual(mod.vocabulary.map((w) => [w.word_id, w.fr]), [['tu-comprends-fr', 'tu comprends'], ['tu-comprends-fr.question', 'Tu comprends?'], ['apres-fr', 'après']]);
+  assert.equal(mod.vocabulary[2].note, 'time; connector');
+});
+
+test('learner-visible prompts stay: a conjugation prompt the instruction lacks, a meaning question', () => {
+  const conjugations = { je: { pronoun: 'je', conjugation: 'vois', combined: 'je vois', english: 'I see', englishFull: 'I see / I am seeing' } };
+  const { mod } = convertModule(base({ exerciseConfig: { type: 'conjugation', verb: 'voir', conjugations, items: [{ key: 'je' }] } }), U1);
+  assert.equal(unmark(mod.items[0].instruction), 'Say "I see" in French: I see / I am seeing');
+  const exam = {
+    moduleKey: '2024-05-10-test-exam',
+    description: 'Exam.',
+    isUnitExam: true,
+    vocabularyReference: [],
+    concepts: [],
+    exerciseConfig: { type: 'custom', items: [{ instruction: "What does 'quoi' mean at the end of a sentence?", prompt: 'quoi (at end)', hint: 'Filler', expectedAnswer: 'you know' }] },
+  };
+  const m2 = convertModule(exam, { unitKey: 'unit7', unitIndex: 7 }).mod;
+  assert.equal(m2.items[0].type, 'meaning');
+  assert.equal(unmark(m2.items[0].instruction), "What does 'quoi' mean at the end of a sentence?");
+  assert.deepEqual(validateModule(m2, { unitIndex: 7 }), []);
+});

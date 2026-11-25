@@ -39,6 +39,8 @@ const unaccented = (s) => plain(s).normalize('NFD').replace(/[\u0300-\u036f]/g, 
 // A mistake that differs from a right answer only by accents ("ou" for "où"). The live checker folds accents and
 // passes it with a warning; the new version (L) grades it apart and shows the mistake's feedback, so it teaches.
 export function accentOnly(mistake, rights) {
+  // The same spelling as a right answer is a mistake the checker accepts, accents or not.
+  if (rights.some((r) => plain(mistake) === plain(r))) return false;
   return rights.some((r) => plain(mistake) !== plain(r) && unaccented(mistake) === unaccented(r));
 }
 

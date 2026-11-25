@@ -12,7 +12,8 @@ const SHAPES = {
   respond: { req: ['situation', 'answer'], opt: ['cue', 'accept'] },
   transform: { req: ['instruction', 'shown', 'answer'], opt: ['accept'] },
   gapfill: { req: ['text', 'blanks'], opt: ['gloss'] },
-  meaning: { req: ['shown', 'answer'], opt: ['accept'] },
+  // instruction: a question that says more than "what does it mean" ("… at the end of a sentence?").
+  meaning: { req: ['shown', 'answer'], opt: ['instruction', 'accept'] },
   choice: { req: ['question', 'options'], opt: [] },
   comprehension: { req: ['question'], opt: ['answer', 'accept', 'options'] },
 };
@@ -23,7 +24,7 @@ const FIELD_ROLES = {
   respond: { situation: ['native_fr', false], cue: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
   transform: { instruction: ['native_fr', false], shown: ['fr', false], answer: ['fr', true], accept: ['fr', true] },
   gapfill: { gloss: ['native_fr', false], text: ['fr', false] },
-  meaning: { shown: ['fr', false], answer: ['native', true], accept: ['native', true] },
+  meaning: { instruction: ['native_fr', false], shown: ['fr', false], answer: ['native', true], accept: ['native', true] },
   choice: { question: ['native_fr', false] },
   // Readings are answered in French (ruling: reading-6 "prendre le train", reading-3 "Café de la Paix").
   comprehension: { question: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },

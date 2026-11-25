@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # migrate --check reads live ids from main's merge-base with this branch, so it needs main's history.
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           version: 10
@@ -20,6 +23,8 @@ jobs:
       # Task 7 removes --allow once every module file is written.
       - run: pnpm content:validate --allow outline_missing_file
       - run: pnpm content:test
+      # The module files match a rerun of the migration (hand fixes kept); exit 1 if any file would change.
+      - run: pnpm content:migrate modules --check
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test
       # Task 10 replaces this with a blocking `pnpm graph:check --budget`.

@@ -10,13 +10,13 @@
 //     content/fr/legacy/positions-<sha7>.json: the live positions on <commit>, read from a temporary
 //     `git worktree add` of that commit under <dir> (default: the system temp folder), removed afterwards.
 //     The table is frozen: a file that differs is kept unless --force; --check exits 1 if it would change.
-//   node scripts/content/migrate/run.mjs modules [--check] [--live-ref <commit>] [--tmp <dir>]
+//   node scripts/content/migrate/run.mjs modules [--root <content dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force]
 //     content/fr/modules/<key>.json for every lesson, practice set and unit exam in the outline, plus
-//     legacy/live-ids.json, legacy/migration-sources.json and migration-report.md. Reads each written module file
-//     and the record of what the last run read first, and keeps every part whose source is unchanged (spec 8.2),
-//     so hand fixes survive. Live ids come from lessonData.js on --live-ref (default: the main commit last merged
+//     legacy/live-ids.json, legacy/migration-sources.json (each part's source and last output), legacy/hand-fixes.json
+//     and migration-report.md. Three-way merge (spec 8.2): a part the file holds as the converter last wrote it takes
+//     the new output; a part edited by hand stays. Live ids come from lessonData.js on --live-ref (default: the main commit last merged
 //     here, `git merge-base HEAD origin/main`), read from a temporary worktree. --check exits 1 if a file would change.
-//     --force converts from the source alone and drops every hand fix in the module files.
+//     --force converts from the source alone, then applies legacy/hand-fixes.json again.
 import '../vite-shim.mjs'; // lets Node import src/ files written for Vite
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
@@ -24,6 +24,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join, relative, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { REPO_ROOT, CONTENT_ROOT } from '../load.mjs';
+import { ContentError, problem } from '../problems.mjs';
 import { outlineFromUnitConfigs, checkOutline, mergeOutline } from './outline.mjs';
 import { frozenPositions, checkAgainstLessons } from './positions.mjs';
 import { convertModule, kindOf } from './module.mjs';
@@ -186,7 +187,29 @@ async function quietly(fn) {
   }
 }
 
-const readJson = (file) => (existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : null);
+// A file that exists but is not JSON stops the run with a ContentError naming it.
+function readJson(file) {
+  if (!existsSync(file)) return null;
+  try {
+    return JSON.parse(readFileSync(file, 'utf8'));
+  } catch (e) {
+    throw new ContentError([problem(rel(file), '', 'json_invalid', `not valid JSON: ${e.message}`)]);
+  }
+}
+
+// The main commit last merged into this branch. A checkout without origin/main (a shallow CI clone) falls back to
+// a local main, and stops with a message when it has neither.
+function defaultLiveRef() {
+  for (const ref of ['origin/main', 'main']) {
+    try {
+      git('rev-parse', '--verify', '--quiet', `${ref}^{commit}`);
+      return git('merge-base', 'HEAD', ref);
+    } catch {
+      // try the next ref
+    }
+  }
+  throw new UsageError('no origin/main or main to read live ids from; fetch main (CI: actions/checkout with fetch-depth: 0) or pass --live-ref <commit>');
+}
 
 // Spelling -> live dictionary id (src/data/dictionary/words/cambridge), for word ids (spec 8.1).
 async function dictionaryMap() {
@@ -204,14 +227,21 @@ function wordTest() {
 }
 
 async function modules(args, flags) {
-  const outline = readJson(join(CONTENT_ROOT, 'course.json'));
+  const rootArg = option(args, '--root');
+  const ROOT = rootArg === undefined ? CONTENT_ROOT : resolve(rootArg);
+  const outline = readJson(join(ROOT, 'course.json'));
   if (!outline) throw new UsageError('content/fr/course.json is missing; run `outline` first');
   const { unitConfigs } = await quietly(() => importFrom(REPO_ROOT, 'src/lessons/unitConfigLoader.js'));
   const configs = new Map(unitConfigs.flatMap((u) => u.modules).map((m) => [m.moduleKey, m]));
   const dictionary = await dictionaryMap();
   const isWord = wordTest();
-  const recordFile = join(CONTENT_ROOT, 'legacy', 'migration-sources.json');
+  const recordFile = join(ROOT, 'legacy', 'migration-sources.json');
   const records = readJson(recordFile) ?? {};
+  // Every part the module files hold differently from the converter's output, as data, so --force can apply
+  // them again and nothing a person fixed lives only in the module files.
+  const fixesFile = join(ROOT, 'legacy', 'hand-fixes.json');
+  const allFixes = readJson(fixesFile) ?? {};
+  const newFixes = {};
   const seenBySpelling = new Map();
   const lines = [];
   const converted = new Map();
@@ -235,10 +265,11 @@ async function modules(args, flags) {
             proposeWordId({ french: v.french, english: v.english, note: v.note, module_key: key }, seenBySpelling, dictionary);
         continue;
       }
-      // --force converts from the source alone, as if nothing were written: it drops every hand fix.
-      const existing = flags.force ? null : readJson(join(CONTENT_ROOT, 'modules', `${key}.json`));
+      // --force converts from the source alone, as if nothing were written, then applies hand-fixes.json again.
+      const existing = flags.force ? null : readJson(join(ROOT, 'modules', `${key}.json`));
       const record = flags.force ? null : records[key] ?? null;
-      const r = convertModule(old, { unitKey: unit.unit_key, unitIndex: ui + 1, existing, record, dictionary, seenBySpelling, isWord });
+      const r = convertModule(old, { unitKey: unit.unit_key, unitIndex: ui + 1, existing, record, dictionary, seenBySpelling, isWord, handFixes: allFixes[key] ?? {} });
+      if (Object.keys(r.handFixes).length) newFixes[key] = r.handFixes;
       lines.push(...r.report);
       r.mod.items.forEach((item, i) => {
         for (const p of checkItemPassable(item, defaultCheckAnswer, { file: key, path: `items[${i}]` }))
@@ -256,7 +287,7 @@ async function modules(args, flags) {
     }
   }
 
-  const liveRef = option(args, '--live-ref') ?? git('merge-base', 'HEAD', 'origin/main');
+  const liveRef = option(args, '--live-ref') ?? defaultLiveRef();
   let live = null;
   const wt = await inWorktree(liveRef, args, 'live-ids', async (dir) => {
     const { lessons } = await quietly(() => importFrom(dir, 'src/lessons/lessonData.js'));
@@ -279,13 +310,15 @@ async function modules(args, flags) {
   const sorted = (o) => Object.fromEntries(Object.keys(o).sort().map((k) => [k, o[k]]));
   const always = { ...flags, force: true }; // these files are rebuilt from what is written, so a rerun keeps edits
   let status = 0;
-  for (const [key, mod] of converted) status |= writeFile(join(CONTENT_ROOT, 'modules', `${key}.json`), json(mod), always);
-  status |= writeFile(join(CONTENT_ROOT, 'legacy', 'live-ids.json'), json(sorted(map)), always);
+  for (const [key, mod] of converted) status |= writeFile(join(ROOT, 'modules', `${key}.json`), json(mod), always);
+  status |= writeFile(join(ROOT, 'legacy', 'live-ids.json'), json(sorted(map)), always);
   status |= writeFile(recordFile, json(sorted(newRecords)), always);
-  status |= writeFile(join(CONTENT_ROOT, 'migration-report.md'), renderReport(lines, { modules: converted.size, items: itemCount, held: heldCount, byUnit }), always);
+  status |= writeFile(fixesFile, json(sorted(newFixes)), always);
+  status |= writeFile(join(ROOT, 'migration-report.md'), renderReport(lines, { modules: converted.size, items: itemCount, held: heldCount, byUnit }), always);
   const byKind = new Map();
   for (const l of lines) byKind.set(l.kind, (byKind.get(l.kind) || 0) + 1);
-  console.log(`modules: ${converted.size} files, ${itemCount} items, ${heldCount} held out`);
+  const fixCount = Object.values(newFixes).reduce((n, f) => n + Object.keys(f).length, 0);
+  console.log(`modules: ${converted.size} files, ${itemCount} items, ${heldCount} held out, ${fixCount} hand-fixed parts`);
   console.log(`report: ${[...byKind].map(([k, n]) => `${k} ${n}`).join(', ')}`);
   return status;
 }
@@ -299,7 +332,11 @@ try {
   const flags = { check: args.includes('--check'), force: args.includes('--force') };
   process.exitCode = await COMMANDS[command](args, flags);
 } catch (e) {
-  if (!(e instanceof UsageError)) throw e;
-  console.error(e.message);
-  process.exitCode = 2;
+  if (e instanceof ContentError) {
+    for (const p of e.problems) console.error(`${p.file}:${p.path} ${p.code} ${p.message}`);
+    process.exitCode = 1;
+  } else if (e instanceof UsageError) {
+    console.error(e.message);
+    process.exitCode = 2;
+  } else throw e;
 }

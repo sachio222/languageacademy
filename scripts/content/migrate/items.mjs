@@ -209,8 +209,12 @@ export function convertTyped(src, nm, it, ctx) {
     return { item: out, lines };
   };
 
+  // A transform has no native cue, so the builder's English prompt ("I see / I am seeing") joins the instruction
+  // when the instruction does not already say it (spec 6: learners see the same prompts).
   if (src.conjugation) {
-    return finish({ type: 'transform', instruction: mark(instruction, 'quoted'), shown: src.conjugation.verb, answer });
+    const said = isStr(prompt) && !normText(instruction).includes(normText(prompt));
+    if (said) add(`${src.ref}.prompt`, 'text_changed', `prompt "${prompt}" joined to the instruction (a transform has no cue field)`);
+    return finish({ type: 'transform', instruction: mark(said ? `${instruction.trim()}: ${prompt.trim()}` : instruction.trim(), 'quoted'), shown: src.conjugation.verb, answer });
   }
 
   // English answers: "What does 'on' mean?" A question about use ("When do you use 'savoir'?") is no meaning item.
@@ -218,8 +222,12 @@ export function convertTyped(src, nm, it, ctx) {
   if (isEnglish(answer) || (meaningQ && hasEnglishWord(answer))) {
     if (/^When do you use/i.test(instruction ?? '')) return { held: 'asks when to use a word, with an English answer; no item type fits (rewrite as a choice item?)' };
     const shown = isStr(prompt) && !hasEnglishWord(prompt) ? prompt.trim() : meaningQ ? meaningQ[1] : String(prompt ?? '').trim();
-    if (!isGenericMeaningInstruction(instruction, shown)) add(`${src.ref}.instruction`, 'dropped_field', `instruction "${instruction}" (a meaning item shows only the French)`);
-    else add(`${src.ref}.instruction`, 'dropped_field', `generic instruction "${instruction}"`);
+    // A question that says more than "what does it mean" stays as the item's instruction.
+    if (!isGenericMeaningInstruction(instruction, shown)) {
+      if (isStr(prompt) && prompt.trim() !== shown) add(`${src.ref}.prompt`, 'text_changed', `prompt "${prompt}": the instruction says it, and the French "${shown}" is shown`);
+      return finish({ type: 'meaning', instruction: mark(instruction.trim(), 'quoted'), shown, answer });
+    }
+    add(`${src.ref}.instruction`, 'dropped_field', `generic instruction "${instruction}"`);
     return finish({ type: 'meaning', shown, answer });
   }
 

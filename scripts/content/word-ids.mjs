@@ -49,8 +49,12 @@ function alternatives(gloss) {
     .filter(Boolean);
 }
 
+// A card written as a question ("Tu comprends?") is another sense of the statement ("tu comprends"): both
+// are taught as cards, so they need two ids.
+const isQuestion = (e) => /\?\s*$/.test(String(e.french));
+
 function sameMeaning(a, b) {
-  if (roleOf(a) !== roleOf(b)) return false;
+  if (roleOf(a) !== roleOf(b) || isQuestion(a) !== isQuestion(b)) return false;
   const xs = alternatives(a.english);
   const ys = alternatives(b.english);
   const within = (s, t) => ` ${t} `.includes(` ${s} `);
@@ -60,6 +64,7 @@ function sameMeaning(a, b) {
 function suffixFor(entry) {
   const role = roleOf(entry);
   if (role) return ROLES.find(([r]) => r === role)[2];
+  if (isQuestion(entry)) return 'question';
   return slugify(alternatives(entry.english)[0] ?? entry.english, { words: 3 }) || 'sense';
 }
 

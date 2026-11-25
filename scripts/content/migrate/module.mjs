@@ -1,16 +1,17 @@
 // convertModule: one of today's lesson, practice or unit exam objects (src/lessons/modules/) as a module file
 // (spec 5.2, 5.5, 5.8, 6). Pure apart from today's builder and checker, which it reads.
 //
-// Reruns (spec 8.2). The caller passes the written file (`existing`) and the record of what the last run read
-// (`record`: a hash of each source part). A part whose source is unchanged keeps what the file holds, so hand
-// fixes (types, ids, word ids, text) survive; a changed part is converted again, keeping its ids, and reported.
-// With no record the written file wins wherever it has the part.
+// Reruns (spec 8.2): a three-way merge. The caller passes the written file (`existing`) and the record of the last
+// run (`record`: per part, the hash of its source and of what the converter wrote). A part the file holds as the
+// converter last wrote it takes the new output, so converter fixes and source changes reach it; a part edited by
+// hand stays, with a merge_conflict line when the new output differs too. `handFixes` (legacy/hand-fixes.json)
+// is applied again when nothing is written (--force). With no record the written file wins wherever it has the part.
 import '../vite-shim.mjs';
 import { createHash } from 'node:crypto';
 import { readModule } from '../../graph/course.mjs';
 import { convertTyped, convertFillblank, convertSentence, normText } from './items.mjs';
 import { markFrench, unmark } from './mark-french.mjs';
-import { makeItemId, makeConceptId, makeTableId } from '../item-ids.mjs';
+import { makeItemId, makeConceptId, makeTableId, slugify } from '../item-ids.mjs';
 import { proposeWordId, rememberWord } from '../word-ids.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { HOLDS, REWRITES } from './holds.mjs';
@@ -243,133 +244,220 @@ export function convertModule(old, opts = {}) {
     freshItems.push({ src, hash: hashOf(src.hashPart), item, lines: itemLines });
   }
 
-  /* ---------- merge with what is written ---------- */
+  /* ---------- merge with what is written (three-way) ---------- */
+  // Each part (a module field, one vocabulary card, one item) has a base in the record: the hash of its source
+  // (`src`) and of what the converter wrote for it last time (`out`). A part the file holds as the converter
+  // wrote it takes the new output (a converter fix or a source change reaches it); a part the file holds
+  // differently is a hand edit and stays, with a `merge_conflict` line when the new output differs from the base
+  // too. A base with no `out` (a record from before this rule) or no record keeps the file, as before.
   const ex = isObj(existing) ? existing : null;
   const rec = isObj(record) ? record : null;
-  const fieldHashes = Object.fromEntries(Object.entries(sources).map(([f, v]) => [f, hashOf(v)]));
-  const keepField = (f) => ex && (rec ? rec.fields?.[f] === fieldHashes[f] : f in ex || f === 'vocabulary');
+  const fixes = isObj(opts.handFixes) ? opts.handFixes : {};
   const handEdits = [];
+  const outFixes = {};
+  const outRecord = { fields: {}, vocabulary: [], items: {} };
+  const baseOf = (e) => (typeof e === 'string' ? { src: e } : isObj(e) ? e : null);
   const mod = { schema: MODULE_SCHEMA, module_key: key, kind, status: 'written' };
   const put = (f, v) => {
     if (v !== undefined) mod[f] = v;
   };
+  const conflict = (path, detail) => add(path, 'merge_conflict', `hand edit kept; ${detail}`);
 
-  for (const f of ['title', 'description', 'can_do']) {
-    if (keepField(f)) {
-      put(f, clone(ex[f]));
-      diffs(ex[f], fresh[f], f, handEdits);
-    } else {
-      put(f, fresh[f]);
-      if (ex && rec?.fields?.[f] !== undefined) add(f, 'source_changed', 'converted again from the changed source');
+  // One part. fileHas/fileVal: what the file holds; freshVal: the new output; base: the record entry.
+  // Returns { value, out } with out the base to record.
+  function mergePart(partKey, path, fileHas, fileVal, freshVal, base, srcHash) {
+    const freshOut = hashOf(freshVal);
+    if (!ex) {
+      // --force: the hand fixes (content/fr/legacy/hand-fixes.json) are applied again; null is a removal.
+      if (partKey in fixes) return { value: fixes[partKey] === null ? undefined : clone(fixes[partKey]), out: freshOut };
+      return { value: freshVal, out: freshOut };
     }
+    if (!base || base.out === undefined) return { value: fileHas ? clone(fileVal) : freshVal, out: freshOut };
+    if (hashOf(fileHas ? fileVal : undefined) === base.out) {
+      if (base.src !== undefined && base.src !== srcHash && ex) add(path, 'source_changed', 'converted again from the changed source');
+      return { value: freshVal, out: freshOut };
+    }
+    if (freshOut !== base.out) conflict(path, base.src !== srcHash ? 'the source changed under it' : 'the converter now writes it differently');
+    return { value: fileHas ? clone(fileVal) : undefined, out: base.out, src: base.src };
   }
+  const noteFix = (partKey, value, freshVal) => {
+    if (!same(value, freshVal)) outFixes[partKey] = value === undefined ? null : clone(value);
+  };
+
+  // Ids written before stay with their term or title when a concept or table list is converted again.
+  const keepIds = (f, list) => {
+    if (!Array.isArray(list)) return list;
+    const written = new Map((ex?.[f] || []).map((c) => [normText(f === 'concepts' ? c.term : c.title), c.id]));
+    return list.map((c) => ({ ...c, id: written.get(normText(f === 'concepts' ? c.term : c.title)) ?? c.id }));
+  };
+  const fieldPart = (f, freshVal) => {
+    const srcHash = hashOf(sources[f]);
+    const r = mergePart(f, f, ex ? f in ex : false, ex?.[f], freshVal, baseOf(rec?.fields?.[f]), srcHash);
+    outRecord.fields[f] = { src: r.src ?? srcHash, out: r.out };
+    put(f, r.value);
+    if (r.value !== undefined || freshVal !== undefined) diffs(r.value, freshVal, f, handEdits);
+    noteFix(f, r.value, freshVal);
+  };
+
+  for (const f of ['title', 'description', 'can_do']) fieldPart(f, fresh[f]);
   if (ex?.teaches !== undefined) put('teaches', clone(ex.teaches));
 
-  // Vocabulary: word ids proposed in course order, so the seen map always grows; a kept table feeds it as written.
-  sources.vocabulary = teaches ? old.vocabularyReference ?? [] : null;
-  fieldHashes.vocabulary = hashOf(sources.vocabulary);
+  // Vocabulary: one part per source card. Word ids are frozen once written: a card the file holds keeps its id
+  // whatever the converter proposes; a new card takes the proposal. Ids are proposed in course order, and each
+  // written card joins the walk as written.
   if (teaches) {
-    const freshVocab = [];
-    const proposals = [];
-    const local = new Map(seenBySpelling); // proposals for the fresh table, without touching the real map yet
-    for (const [i, v] of (old.vocabularyReference || []).entries()) {
-      const { word_id, review } = proposeWordId({ french: v.french, english: v.english, note: v.note, module_key: key }, local, dictionary);
-      const w = { word_id, fr: String(v.french).trim(), gloss: String(v.english).trim() };
+    const src = old.vocabularyReference || [];
+    const fileVocab = Array.isArray(ex?.vocabulary) ? ex.vocabulary : [];
+    const baseVocab = Array.isArray(rec?.vocabulary) ? rec.vocabulary : null;
+    const NULL = hashOf(null);
+    const freshCards = []; // per source card: the card, or null when it repeats an earlier card exactly
+    const strip = (w) => (w ? Object.fromEntries(Object.entries(w).filter(([k]) => k !== 'word_id')) : null);
+    for (const [i, v] of src.entries()) {
+      const w = { word_id: null, fr: String(v.french).trim(), gloss: String(v.english).trim() };
       const notes = [v.note, v.usage, v.agreement].filter(isStr).map((s) => s.trim());
       if (notes.length) w.note = notes.join('; ');
       if (isStr(v.example)) w.example_fr = v.example.trim();
-      // One meaning listed twice in one table is one word: its notes join the first entry.
-      const twin = freshVocab.find((x) => x.word_id === word_id);
+      for (const f of ['usage', 'agreement']) if (isStr(v[f])) add(`vocabularyReference[${i}].${f}`, 'text_changed', `"${v[f]}" added to the note`);
+      if (isStr(v.example)) add(`vocabularyReference[${i}].example`, 'text_changed', `"${v.example}" is example_fr`);
+      if (isStr(v.ttsText)) add(`vocabularyReference[${i}].ttsText`, 'dropped_field', `"${v.ttsText}" (speech override; no field)`);
+      // The same card twice (same French, same gloss) is one card, its notes joined.
+      const twin = freshCards.find((x) => x && x.fr === w.fr && x.gloss === w.gloss);
       if (twin) {
         if (w.note && w.note !== twin.note) twin.note = twin.note ? `${twin.note}; ${w.note}` : w.note;
         if (w.example_fr && !twin.example_fr) twin.example_fr = w.example_fr;
-        lines.push({ module_key: key, path: `vocabularyReference[${i}]`, kind: 'text_changed', detail: `"${w.fr}" ("${w.gloss}") is listed twice with one meaning; one word, notes joined` });
-        continue;
-      }
-      freshVocab.push(w);
-      proposals.push({ i: freshVocab.length - 1, review });
-      for (const f of ['usage', 'agreement']) if (isStr(v[f])) lines.push({ module_key: key, path: `vocabularyReference[${i}].${f}`, kind: 'text_changed', detail: `"${v[f]}" added to the note` });
-      if (isStr(v.example)) lines.push({ module_key: key, path: `vocabularyReference[${i}].example`, kind: 'text_changed', detail: `"${v.example}" is example_fr` });
-      if (isStr(v.ttsText)) lines.push({ module_key: key, path: `vocabularyReference[${i}].ttsText`, kind: 'dropped_field', detail: `"${v.ttsText}" (speech override; no field)` });
+        add(`vocabularyReference[${i}]`, 'text_changed', `"${w.fr}" ("${w.gloss}") is listed twice; one card, notes joined`);
+        freshCards.push(null);
+      } else freshCards.push(w);
     }
-    if (keepField('vocabulary') && Array.isArray(ex.vocabulary)) {
-      put('vocabulary', clone(ex.vocabulary));
-      for (const w of ex.vocabulary) rememberWord(w, key, seenBySpelling);
-      diffs(ex.vocabulary, freshVocab, 'vocabulary', handEdits);
+    // Which written card belongs to which source card: the record's layout (cards it wrote, in order), or for an
+    // older record the fresh layout.
+    // An older record has no layout: a written card belongs to the source card with its French and gloss.
+    let fileCard;
+    let extra;
+    if (baseVocab) {
+      let k = 0;
+      fileCard = src.map((_, i) => (baseOf(baseVocab[i])?.out !== undefined && baseOf(baseVocab[i]).out !== NULL ? fileVocab[k++] : undefined));
+      extra = fileVocab.slice(k);
     } else {
-      // Ids written before stay with their spelling and meaning.
-      const writtenIds = new Map((ex?.vocabulary || []).map((w) => [`${w.fr}|${w.gloss}`, w.word_id]));
-      const vocab = freshVocab.map((w) => ({ ...w, word_id: writtenIds.get(`${w.fr}|${w.gloss}`) ?? w.word_id }));
-      for (const w of vocab) rememberWord(w, key, seenBySpelling);
-      put('vocabulary', vocab);
-      if (ex && rec?.fields?.vocabulary !== undefined) add('vocabulary', 'source_changed', 'converted again from the changed source');
+      const usedCards = new Set();
+      fileCard = src.map((v) => {
+        const j = fileVocab.findIndex((w, n) => !usedCards.has(n) && w.fr === String(v.french).trim() && w.gloss === String(v.english).trim());
+        if (j === -1) return undefined;
+        usedCards.add(j);
+        return fileVocab[j];
+      });
+      extra = fileVocab.filter((_, n) => !usedCards.has(n));
     }
-    for (const { i, review } of proposals) if (review) add(`vocabulary[${i}]`, 'word_sense', `"${freshVocab[i].fr}": ${review}`);
+    // extra: cards written by hand, with no source card
+    const vocab = [];
+    const usedIds = new Set();
+    for (const [i, card] of freshCards.entries()) {
+      const fileW = fileCard[i];
+      const v = src[i];
+      let freshW = null;
+      let proposed = null;
+      if (card) {
+        const { word_id, review } = proposeWordId({ french: v.french, english: v.english, note: v.note, module_key: key }, new Map(seenBySpelling), dictionary);
+        let id = fileW?.word_id ?? word_id;
+        // A proposal another card of this table already has: the second card is another meaning.
+        if (!fileW?.word_id && usedIds.has(id)) {
+          const stem = id.replace(/\..*$/, '');
+          const suffix = /\?\s*$/.test(String(v.french)) ? 'question' : slugify(alternatives0(v.english), { words: 3 }) || 'sense';
+          let candidate = `${stem}.${suffix}`;
+          for (let n = 2; usedIds.has(candidate); n++) candidate = `${stem}.${suffix}-${n}`;
+          id = candidate;
+        }
+        freshW = { ...card, word_id: id };
+        // The converter's own id for this card: the one it gave when it first wrote the card (recorded), else
+        // this run's choice for a new card, else its proposal.
+        const recorded = baseVocab ? baseOf(baseVocab[i])?.word_id : undefined;
+        proposed = { ...card, word_id: recorded ?? (fileW?.word_id === undefined ? id : word_id) };
+        if (review) add(`vocabulary[${vocab.length}]`, 'word_sense', `"${card.fr}": ${review}${id !== word_id ? ` (written: ${id})` : ''}`);
+      }
+      const srcHash = hashOf(v);
+      const base = baseVocab ? baseOf(baseVocab[i]) : rec ? { src: undefined } : null;
+      // Compared without the word id, which is frozen apart from this merge.
+      let value;
+      if (!ex && `vocabulary/${i}` in fixes) {
+        value = fixes[`vocabulary/${i}`] === null ? null : clone(fixes[`vocabulary/${i}`]);
+        outRecord.vocabulary[i] = { src: srcHash, out: hashOf(strip(freshW)), ...(proposed ? { word_id: proposed.word_id } : {}) };
+      } else {
+        const r = mergePart(`vocabulary/${i}`, `vocabulary[${vocab.length}]`, fileW !== undefined, strip(fileW) ?? undefined, strip(freshW), base, srcHash);
+        outRecord.vocabulary[i] = { src: r.src ?? srcHash, out: r.out, ...(proposed ? { word_id: proposed.word_id } : {}) };
+        value = r.value ? { word_id: fileW?.word_id ?? freshW?.word_id, ...r.value } : null;
+      }
+      // Key order as the converter writes it.
+      const ordered = value ? { word_id: value.word_id, fr: value.fr, gloss: value.gloss, ...value } : null;
+      if (ordered) {
+        diffs(ordered, proposed ?? undefined, `vocabulary[${vocab.length}]`, handEdits);
+        vocab.push(ordered);
+        usedIds.add(ordered.word_id);
+        rememberWord(ordered, key, seenBySpelling);
+      } else if (proposed) diffs(undefined, proposed, `vocabulary/${i}`, handEdits);
+      // A written id that differs from the proposal is kept against the converter, so it is a hand fix too.
+      noteFix(`vocabulary/${i}`, ordered ?? undefined, proposed ?? undefined);
+    }
+    for (const w of extra) {
+      vocab.push(clone(w));
+      rememberWord(w, key, seenBySpelling);
+    }
+    put('vocabulary', vocab);
   }
 
-  for (const f of ['concepts', 'tables']) {
-    if (keepField(f)) {
-      put(f, clone(ex[f]));
-      diffs(ex[f], fresh[f], f, handEdits);
-    } else if (fresh[f] !== undefined) {
-      // Ids written before stay with their term or title.
-      const written = new Map((ex?.[f] || []).map((c) => [normText(f === 'concepts' ? c.term : c.title), c.id]));
-      put(f, fresh[f].map((c) => ({ ...c, id: written.get(normText(f === 'concepts' ? c.term : c.title)) ?? c.id })));
-      if (ex && rec?.fields?.[f] !== undefined) add(f, 'source_changed', 'converted again from the changed source');
-    }
-  }
+  fieldPart('concepts', keepIds('concepts', fresh.concepts));
+  fieldPart('tables', keepIds('tables', fresh.tables));
 
-  // Items.
+  // Items: a source exercise finds its written item by the record (same source hash, else the same source place),
+  // else by content.
   const exItems = Array.isArray(ex?.items) ? ex.items : [];
   const exIndex = new Map(exItems.map((it, i) => [it.id, i]));
-  const recItems = rec?.items ?? {};
+  const recItems = Object.fromEntries(Object.entries(rec?.items ?? {}).map(([id, e]) => [id, baseOf(e)]));
   const freshHashes = new Set(freshItems.map((f) => f.hash));
   const used = new Set();
   const taken = new Set([...exItems.map((i) => i.id), ...Object.keys(recItems)]);
   const entries = []; // { f, id, item, sort, state }
-  const outRecord = {};
-  // 1. the record: this source exercise was written before as id
-  for (const f of freshItems) {
-    const id = Object.keys(recItems).find((i) => recItems[i] === f.hash && !used.has(i));
-    if (id === undefined) continue;
+  const claim = (f, id) => {
     used.add(id);
-    outRecord[id] = f.hash;
-    f.done = true;
-    if (exIndex.has(id)) entries.push({ f, id, item: clone(exItems[exIndex.get(id)]), sort: exIndex.get(id), state: 'kept' });
-    // else removed by hand: it stays removed, and the record keeps its id
+    f.id = id;
+  };
+  for (const f of freshItems) {
+    const ids = Object.keys(recItems).filter((i) => !used.has(i) && recItems[i].src === f.hash);
+    const id = ids.find((i) => recItems[i].ref === f.src.ref) ?? ids[0];
+    if (id !== undefined) claim(f, id);
   }
-  // 2. a written item with the same content (no record, or a record from before this item existed)
-  const orphans = exItems.filter((it) => !used.has(it.id) && (!(it.id in recItems) || !freshHashes.has(recItems[it.id])));
-  for (const f of freshItems.filter((x) => !x.done)) {
-    const k = contentKey(f.item);
-    const e = orphans.find((it) => !used.has(it.id) && contentKey(it) === k);
-    if (!e) continue;
-    used.add(e.id);
-    f.done = true;
-    outRecord[e.id] = f.hash;
-    const changed = rec && e.id in recItems;
-    entries.push({ f, id: e.id, item: changed ? { id: e.id, ...withoutId(f.item) } : clone(e), sort: exIndex.get(e.id), state: changed ? 'changed' : 'kept' });
+  for (const f of freshItems.filter((x) => !x.id)) {
+    const id = Object.keys(recItems).find((i) => !used.has(i) && recItems[i].ref === f.src.ref && !freshHashes.has(recItems[i].src));
+    if (id !== undefined) claim(f, id);
   }
-  // 3. a changed source exercise takes the place of the written item its old source made, in order
-  const recOrphans = orphans.filter((it) => !used.has(it.id) && it.id in recItems);
-  for (const f of freshItems.filter((x) => !x.done)) {
-    const e = recOrphans.find((it) => !used.has(it.id));
-    if (!e) break;
-    used.add(e.id);
-    f.done = true;
-    outRecord[e.id] = f.hash;
-    entries.push({ f, id: e.id, item: { id: e.id, ...withoutId(f.item) }, sort: exIndex.get(e.id), state: 'changed' });
+  for (const f of freshItems.filter((x) => !x.id)) {
+    const k2 = contentKey(f.item);
+    const e = exItems.find((it) => !used.has(it.id) && !(it.id in recItems && freshHashes.has(recItems[it.id].src)) && contentKey(it) === k2);
+    if (e) claim(f, e.id);
   }
-  // 4. new
-  for (const f of freshItems.filter((x) => !x.done)) {
-    const id = makeItemId(f.item, taken);
-    outRecord[id] = f.hash;
-    entries.push({ f, id, item: { id, ...withoutId(f.item) }, sort: null, state: ex ? 'added' : 'new' });
+  for (const f of freshItems) {
+    const freshItem = f.id ? { id: f.id, ...withoutId(f.item) } : null;
+    if (!f.id) {
+      const id = makeItemId(f.item, taken);
+      f.id = id;
+      const value = `items/${id}` in fixes && !ex ? clone(fixes[`items/${id}`]) : { id, ...withoutId(f.item) };
+      outRecord.items[id] = { src: f.hash, out: hashOf({ id, ...withoutId(f.item) }), ref: f.src.ref };
+      if (value) entries.push({ f, id, item: value, sort: null, state: ex ? 'added' : 'new', freshItem: { id, ...withoutId(f.item) } });
+      continue;
+    }
+    const base = recItems[f.id] ?? null;
+    const fileHas = exIndex.has(f.id);
+    const r = mergePart(`items/${f.id}`, `items[${exIndex.get(f.id) ?? '?'}]`, fileHas, exItems[exIndex.get(f.id)], freshItem, base, f.hash);
+    outRecord.items[f.id] = { src: r.src ?? f.hash, out: r.out, ref: f.src.ref };
+    // An item removed by hand stays removed; the record keeps its id.
+    if (r.value) entries.push({ f, id: f.id, item: r.value, sort: exIndex.get(f.id) ?? null, state: 'merged', freshItem });
+    else if (!fileHas && base?.out !== undefined) noteFix(`items/${f.id}`, undefined, freshItem);
   }
-  // Items written by hand (never made by a run) stay.
-  for (const it of exItems) if (!used.has(it.id) && !(it.id in recItems)) entries.push({ f: null, id: it.id, item: clone(it), sort: exIndex.get(it.id), state: 'hand' });
-  for (const it of exItems)
-    if (!used.has(it.id) && it.id in recItems && !freshHashes.has(recItems[it.id])) add(`items[${exIndex.get(it.id)}]`, 'source_removed', `${it.id}: its source exercise is gone, so the item is removed`);
+  // Items written by hand (never made by a run) stay; items whose source exercise is gone go.
+  for (const it of exItems) {
+    if (used.has(it.id)) continue;
+    if (!(it.id in recItems)) entries.push({ f: null, id: it.id, item: clone(it), sort: exIndex.get(it.id), state: 'hand' });
+    else add(`items[${exIndex.get(it.id)}]`, 'source_removed', `${it.id}: its source exercise is gone, so the item is removed`);
+  }
 
   // Order: written order; a new item follows the item made from the source exercise before it.
   const bySource = new Map(entries.filter((e) => e.f).map((e) => [e.f, e]));
@@ -390,19 +478,24 @@ export function convertModule(old, opts = {}) {
     if (!e.f) return;
     const at = `items[${i}]`;
     for (const l of e.f.lines) lines.push({ module_key: key, path: l.kind === 'dropped_field' ? l.path : l.path.replace(e.f.src.ref, at), kind: l.kind, detail: `${e.id}: ${l.detail}` });
-    if (e.state === 'changed') add(at, 'source_changed', `${e.id}: converted again from the changed source exercise ${e.f.src.ref}`);
     if (e.state === 'added') add(at, 'source_added', `${e.id}: new source exercise ${e.f.src.ref}`);
-    if (e.state === 'kept') diffs(e.item, { id: e.id, ...withoutId(e.f.item) }, at, handEdits);
+    diffs(e.item, e.freshItem, at, handEdits);
+    noteFix(`items/${e.id}`, e.item, e.freshItem);
   });
+  // Lines mergePart wrote with a file position point at the item's place now.
+  for (const l of lines) {
+    const m = /^items\[(\d+|\?)\]$/.exec(l.path);
+    if (m && (l.kind === 'source_changed' || l.kind === 'merge_conflict')) {
+      const id = m[1] === '?' ? null : exItems[+m[1]]?.id;
+      const at = entries.findIndex((e) => e.id === id);
+      if (at !== -1) l.path = `items[${at}]`;
+    }
+  }
   for (const h of held) add(h.ref, 'held_out', `"${h.prompt ?? ''}" → "${h.answer ?? ''}": ${h.reason}`);
 
-  for (const f of ['options', 'tests']) {
-    if (f === 'tests' && ex?.tests !== undefined) put(f, clone(ex.tests));
-    else if (keepField(f)) {
-      put(f, clone(ex[f]));
-      diffs(ex[f], fresh[f], f, handEdits);
-    } else put(f, fresh[f]);
-  }
+  fieldPart('options', fresh.options);
+  if (ex?.tests !== undefined) put('tests', clone(ex.tests));
+  else put('tests', fresh.tests);
 
   // Position words in what the source says (spec 5.2): reported, written as they are, fixed by hand.
   const freshMod = { ...mod, ...fresh, items: freshItems.map((f) => f.item) };
@@ -415,11 +508,12 @@ export function convertModule(old, opts = {}) {
     if (['position_word', 'blank_misplaced', 'word_sense', 'type_guess'].includes(l.kind) && handEdits.some((d) => related(d.path, l.path)))
       l.detail += ' (fixed by hand)';
 
-  const outRecordSorted = Object.fromEntries(Object.keys(outRecord).sort().map((k) => [k, outRecord[k]]));
+  const sortKeys = (o) => Object.fromEntries(Object.keys(o).sort().map((x) => [x, o[x]]));
   return {
     mod,
     report: lines,
-    record: { fields: Object.fromEntries(Object.keys(fieldHashes).sort().map((k) => [k, fieldHashes[k]])), items: outRecordSorted },
+    record: { fields: sortKeys(outRecord.fields), ...(teaches ? { vocabulary: outRecord.vocabulary } : {}), items: sortKeys(outRecord.items) },
+    handFixes: sortKeys(outFixes),
     held,
   };
 }
@@ -427,4 +521,9 @@ export function convertModule(old, opts = {}) {
 function withoutId(item) {
   const { id, ...rest } = item;
   return rest;
+}
+
+// The first meaning of a gloss: "that/it (informal)" -> "that".
+function alternatives0(gloss) {
+  return String(gloss).replace(/\([^)]*\)/g, ' ').split(/\/|,|;|\bor\b/)[0] ?? '';
 }

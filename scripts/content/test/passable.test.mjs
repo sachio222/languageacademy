@@ -69,6 +69,9 @@ test('a mistake that differs only by accents is not mistake_accepted', () => {
   // Same spelling as an accepted answer is still a mistake the checker accepts.
   const same = { id: 'a', type: 'respond', situation: 's', answer: 'elles sont chez Ladurée', accept: ['elles sont à Ladurée'], mistakes: [{ answer: 'elles sont à Ladurée', feedback: 'x' }] };
   assert.deepEqual(run(same).map((p) => p.code), ['mistake_accepted']);
+  // Equal to one right answer and an accent away from another: still accepted, so still a problem.
+  const both = { id: 'a', type: 'respond', situation: 's', answer: 'où', accept: ['ou'], mistakes: [{ answer: 'ou', feedback: 'x' }] };
+  assert.deepEqual(run(both).map((p) => p.code), ['mistake_accepted']);
 });
 
 test('meaning items are checked on the native answer', () => {

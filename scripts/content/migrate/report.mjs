@@ -12,6 +12,7 @@ const SECTIONS = [
   ['rewritten', 'Exercises rewritten as Jake ruled', 'No conversion of today’s text fits these, so each is written as Jake ruled, in its place.'],
   ['framed_respond', 'English prompts written as respond items', 'An English prompt framed by its instruction ("Say \'you would do it\' (informal)") or by a context note ("I know Marie (person)") is a respond item, with the whole frame as the situation, since the context does the teaching (Jake, 2026-11-25). A bare English sentence is a translate item; outside Unit 1 each is a checker warning, rewritten over time.'],
   ['hand_edit', 'Hand edits kept', 'The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.'],
+  ['merge_conflict', 'Hand edits the source or converter changed under', 'A hand edit is kept, and the source or the converter now gives something else for the same part. Compare the two and settle it in the module file; the line stays until the file matches the new output.'],
   ['source_changed', 'Source changes since the last run', 'The source changed, so these parts were converted again; their ids stay.'],
   ['source_added', 'Source exercises added since the last run', ''],
   ['source_removed', 'Source exercises removed since the last run', ''],

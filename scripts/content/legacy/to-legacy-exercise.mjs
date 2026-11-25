@@ -48,6 +48,6 @@ export function toLegacyExercise(item, { liveId, blank } = {}) {
   }
   ex.wrongAnswers = (item.mistakes || []).map((m) => ({ answer: m.answer, feedback: m.feedback }));
   if (item.hint !== undefined) ex.hint = item.hint;
-  if (item.type === 'transform' && item.instruction !== undefined) ex.instruction = item.instruction;
+  if ((item.type === 'transform' || item.type === 'meaning') && item.instruction !== undefined) ex.instruction = item.instruction;
   return ex;
 }

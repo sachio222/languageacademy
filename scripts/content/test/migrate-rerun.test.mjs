@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import '../vite-shim.mjs';
-import { convertModule } from '../migrate/module.mjs';
+import { convertModule, hashOf } from '../migrate/module.mjs';
 
 const old = {
   moduleKey: '2024-01-02-test',
@@ -66,4 +66,61 @@ test('an item removed by hand stays removed', () => {
   const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
   assert.deepEqual(second.mod, edited);
   assert.deepEqual(second.record, first.record);
+});
+
+test('a hand edit on one item survives a source change on another', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  edited.items[0].hint = 'Hand hint';
+  const changed = clone(old);
+  changed.exerciseConfig.items[1].expectedAnswer = 'tu es là';
+  const second = convertModule(changed, { ...ctx, existing: edited, record: first.record });
+  assert.equal(second.mod.items[0].hint, 'Hand hint');
+  assert.equal(second.mod.items[1].answer, 'tu es là');
+  assert.equal(second.mod.items[1].id, first.mod.items[1].id);
+  assert.ok(!second.report.some((l) => l.kind === 'merge_conflict'), JSON.stringify(second.report.filter((l) => l.kind === 'merge_conflict')));
+});
+
+test('a hand-fixed type survives a change to its own source, with a merge_conflict line', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  const it = edited.items[1];
+  edited.items[1] = { id: it.id, type: 'respond', situation: it.prompt, answer: it.answer };
+  const changed = clone(old);
+  changed.exerciseConfig.items[1].prompt = 'you are (informal)';
+  const second = convertModule(changed, { ...ctx, existing: edited, record: first.record });
+  assert.deepEqual(second.mod.items[1], edited.items[1]);
+  assert.ok(second.report.some((l) => l.kind === 'merge_conflict' && l.path === 'items[1]'), JSON.stringify(second.report));
+  // The conflict stays on every rerun until a person settles it.
+  const third = convertModule(changed, { ...ctx, existing: second.mod, record: second.record });
+  assert.deepEqual(third.mod, second.mod);
+  assert.ok(third.report.some((l) => l.kind === 'merge_conflict'));
+});
+
+test('three-way merge: a converter fix reaches a part nobody edited, and only that part', () => {
+  const first = convertModule(old, ctx);
+  // As if an older converter had written item 0's hint and the description differently, and a person had then
+  // fixed item 1 by hand.
+  const file = clone(first.mod);
+  const record = clone(first.record);
+  file.items[0].hint = 'old converter hint';
+  record.items[file.items[0].id].out = hashOf(file.items[0]);
+  file.description = 'Old converter description.';
+  record.fields.description.out = hashOf(file.description);
+  file.items[1].hint = 'Hand hint';
+  const second = convertModule(old, { ...ctx, existing: file, record });
+  assert.equal(second.mod.items[0].hint, undefined); // the converter writes no hint for it now
+  assert.equal(second.mod.description, first.mod.description);
+  assert.equal(second.mod.items[1].hint, 'Hand hint');
+  assert.deepEqual(Object.keys(second.handFixes), [`items/${first.mod.items[1].id}`]);
+});
+
+test('--force reapplies the hand fixes', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  edited.items[1].hint = 'Hand hint';
+  edited.vocabulary[0].word_id = 'je-suis-fr.hand';
+  const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
+  const forced = convertModule(old, { ...ctx, handFixes: second.handFixes });
+  assert.deepEqual(forced.mod, edited);
 });
