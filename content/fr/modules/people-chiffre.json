@@ -1,0 +1,28 @@
+{
+  "schema": "la-module@1",
+  "module_key": "people-chiffre",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "People and family and School and language (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:chiffre",
+      "fr:lex:adulte",
+      "fr:lex:neveu",
+      "fr:lex:texte",
+      "fr:lex:lecture",
+      "fr:lex:jumeau",
+      "fr:lex:ecriture",
+      "fr:lex:carnet",
+      "fr:lex:dizaine",
+      "fr:lex:niece",
+      "fr:lex:adolescent",
+      "fr:lex:decrire",
+      "fr:lex:comparer",
+      "fr:lex:prononcer",
+      "fr:lex:traduire"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

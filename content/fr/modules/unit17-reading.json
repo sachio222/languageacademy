@@ -26,6 +26,7 @@
       "fr:cx:neg.ne-pas",
       "fr:cx:si.present"
     ],
-    "source": "plan.json"
+    "source": "plan.json",
+    "note": "Sunday evening, water runs out under the kitchen sink in Marc's flat. He tries to stop it, cannot reach his landlord, calls two plumbers (one is not available, the other can come in an hour), asks for a price, and the plumber fixes the pipe; on the way out a neighbour slips on the stairs and Marc calls the SAMU."
   }
 }

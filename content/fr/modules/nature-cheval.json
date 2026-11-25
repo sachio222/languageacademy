@@ -1,0 +1,28 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nature-cheval",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Nature, animals and weather and Travel and transport (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:cheval",
+      "fr:lex:bois",
+      "fr:lex:doux",
+      "fr:lex:ile",
+      "fr:lex:vache",
+      "fr:lex:sec",
+      "fr:lex:chaleur",
+      "fr:lex:allumer",
+      "fr:lex:planter",
+      "fr:lex:chauffeur",
+      "fr:lex:vitesse",
+      "fr:lex:pilote",
+      "fr:lex:port",
+      "fr:lex:rouler",
+      "fr:lex:promener"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -14,6 +14,7 @@
       "fr:cx:passive",
       "fr:cx:si.plus-que-parfait-conditionnel-passe"
     ],
-    "source": "plan.json"
+    "source": "plan.json",
+    "note": "A travel diary that looks back and forward: what had happened before the trip, what would have happened if the train had been late, what will have been done by the end, and the monuments built and visited (passive)."
   }
 }

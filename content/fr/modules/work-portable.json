@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-portable",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Work and jobs (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:portable",
+      "fr:lex:journaliste",
+      "fr:lex:policier",
+      "fr:lex:secretaire",
+      "fr:lex:emploi",
+      "fr:lex:signer",
+      "fr:lex:remplacer",
+      "fr:lex:contacter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

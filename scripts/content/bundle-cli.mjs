@@ -181,7 +181,23 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
     }
     for (const p of checked.problems) console.error(`checker ${p.severity} ${p.code} ${p.pointer} ${p.detail}`);
     console.log(checked.ok ? "checker ok (L's check_bundle.py)" : "checker FAIL (L's check_bundle.py)");
-    return errors.length || !checked.ok ? 1 : 0;
+    // The bundle stops before the first unit with a planned module, so the written modules of that unit and later
+    // ones are not in it. The written course alone (planned modules left out) is built and checked too, never written.
+    let writtenOk = true;
+    if (report.units_stopped_at && !units) {
+      const written = buildBundleWithReport(loadCourse({ root, planned: false }), { ...sources, previous, build }).bundle;
+      const wp = releaseProblems(written, previous);
+      for (const p of wp) console.error(`written course: ${p.severity} ${p.code} ${p.module_key ?? ''} ${p.detail}`);
+      const wc = runChecker(written);
+      if (wc.error) {
+        console.error(`written course: ${wc.error}`);
+        return 1;
+      }
+      for (const p of wc.problems) console.error(`written course: checker ${p.severity} ${p.code} ${p.pointer} ${p.detail}`);
+      writtenOk = wc.ok && !wp.some((p) => p.severity === 'error');
+      console.log(`written course (planned modules left out): entries ${written.entries.length} (units ${written.units.length}); checker ${wc.ok ? 'ok' : 'FAIL'}`);
+    }
+    return errors.length || !checked.ok || !writtenOk ? 1 : 0;
   }
   if (errors.length) {
     console.error(`${plural(errors.length, 'release problem')}; no bundle written`);

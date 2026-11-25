@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "town-cour",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Town and places (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:cour",
+      "fr:lex:bar",
+      "fr:lex:usine",
+      "fr:lex:sortie",
+      "fr:lex:queue",
+      "fr:lex:panneau",
+      "fr:lex:trottoir",
+      "fr:lex:avenue",
+      "fr:lex:indiquer",
+      "fr:lex:vider"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

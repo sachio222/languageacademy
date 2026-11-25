@@ -1,0 +1,29 @@
+{
+  "schema": "la-module@1",
+  "module_key": "emergencies",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Getting things done: emergencies",
+  "plan": {
+    "words": [
+      "fr:lex:urgence",
+      "fr:lex:secours",
+      "fr:lex:ambulance",
+      "fr:lex:police",
+      "fr:lex:medecin",
+      "fr:lex:pharmacie",
+      "fr:lex:feu",
+      "fr:lex:incendie",
+      "fr:lex:fumee",
+      "fr:lex:blesser",
+      "fr:lex:sang",
+      "fr:lex:douleur",
+      "fr:lex:pompier"
+    ],
+    "constructions": [
+      "fr:cx:chunk.au-secours",
+      "fr:cx:chunk.pharmacie-de-garde"
+    ],
+    "source": "plan.json"
+  }
+}

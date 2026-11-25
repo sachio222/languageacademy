@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-lien",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Ideas and arguments (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:lien",
+      "fr:lex:limite",
+      "fr:lex:theorie",
+      "fr:lex:style",
+      "fr:lex:choc",
+      "fr:lex:acces",
+      "fr:lex:origine",
+      "fr:lex:imagination",
+      "fr:lex:reaction",
+      "fr:lex:remarquer",
+      "fr:lex:rechercher",
+      "fr:lex:provoquer",
+      "fr:lex:conclure"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

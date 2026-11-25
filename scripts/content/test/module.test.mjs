@@ -288,6 +288,9 @@ test('a planned module may name the draft it will be written from', () => {
   assert.deepEqual(codes({ ...stub, plan }, 13), []);
   assert.deepEqual(codes({ ...stub, plan: { ...plan, draft: '' } }, 13), ['field_type']);
   assert.deepEqual(codes({ ...stub, plan: { ...plan, theme: 'rain' } }, 13), ['field_unknown']);
+  // A note for the writer is native text: a unit exam's subtitle or a reading's theme brief, with no position word.
+  assert.deepEqual(codes({ ...stub, plan: { ...plan, note: 'A neighbourhood guide written by a teenager.' } }, 13), []);
+  assert.deepEqual(codes({ ...stub, plan: { ...plan, note: 'Like Reading 7, but longer.' } }, 13), ['position_word']);
 });
 
 test("a plan's words and constructions are graph ids", () => {

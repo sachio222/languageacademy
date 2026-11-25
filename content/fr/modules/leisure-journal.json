@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "leisure-journal",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Free time, sport and culture, Work and jobs and more (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:journal",
+      "fr:lex:village",
+      "fr:lex:surprise",
+      "fr:lex:poste",
+      "fr:lex:eglise",
+      "fr:lex:metier",
+      "fr:lex:lycee",
+      "fr:lex:theatre",
+      "fr:lex:ordinateur",
+      "fr:lex:dessin",
+      "fr:lex:piscine",
+      "fr:lex:bibliotheque",
+      "fr:lex:tennis"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

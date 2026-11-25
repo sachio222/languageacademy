@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "calling-a-repairer",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Getting things done: calling someone to fix it",
+  "plan": {
+    "words": [
+      "fr:lex:urgent",
+      "fr:lex:immediatement",
+      "fr:lex:assurance",
+      "fr:lex:devis",
+      "fr:lex:facture",
+      "fr:lex:depanner",
+      "fr:lex:disponible"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "la-module@1",
+  "module_key": "feelings-peine",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Emotions and states of mind (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:peine",
+      "fr:lex:honte",
+      "fr:lex:ennui",
+      "fr:lex:pitie",
+      "fr:lex:sentiment",
+      "fr:lex:colere",
+      "fr:lex:malheur",
+      "fr:lex:folie",
+      "fr:lex:calmer",
+      "fr:lex:oser",
+      "fr:lex:plaindre",
+      "fr:lex:hair",
+      "fr:lex:etonner",
+      "fr:lex:decevoir"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

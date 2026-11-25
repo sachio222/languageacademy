@@ -1,0 +1,27 @@
+{
+  "schema": "la-module@1",
+  "module_key": "change-crise",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Starting, stopping and changing (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:crise",
+      "fr:lex:mouvement",
+      "fr:lex:succes",
+      "fr:lex:perte",
+      "fr:lex:evenement",
+      "fr:lex:explosion",
+      "fr:lex:chute",
+      "fr:lex:echec",
+      "fr:lex:sauver",
+      "fr:lex:disparaitre",
+      "fr:lex:detruire",
+      "fr:lex:echapper",
+      "fr:lex:cesser",
+      "fr:lex:survivre"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

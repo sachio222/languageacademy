@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "stories-mystere",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Stories, legends and the arts (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:mystere",
+      "fr:lex:portrait",
+      "fr:lex:figure",
+      "fr:lex:abandonner",
+      "fr:lex:ecraser",
+      "fr:lex:posseder",
+      "fr:lex:hesiter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

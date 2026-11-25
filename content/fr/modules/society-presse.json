@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-presse",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Society, law and conflict (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:presse",
+      "fr:lex:presence",
+      "fr:lex:militaire",
+      "fr:lex:violence",
+      "fr:lex:ministre",
+      "fr:lex:prisonnier",
+      "fr:lex:responsabilite",
+      "fr:lex:pression",
+      "fr:lex:liberer",
+      "fr:lex:punir",
+      "fr:lex:convenir",
+      "fr:lex:impressionner"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

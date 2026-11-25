@@ -8,7 +8,7 @@ import { tmpdir } from 'node:os';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadCourse, readContent, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
-import { assembleCourse } from '../assemble.mjs';
+import { assembleCourse, withoutPlanned } from '../assemble.mjs';
 import { defaultCheckAnswer } from '../passable.mjs';
 import { buildBundle, buildBundleWithReport, bundleHash, canonicalJson, splitBlankMistakes, ipaMismatch } from '../bundle.mjs';
 import { releaseProblems } from '../release-checks.mjs';
@@ -21,9 +21,17 @@ const CLI = fileURLToPath(new URL('../cli.mjs', import.meta.url));
 const BUILD = { source_commit: 'e059c59', built_at: '2026-11-25T00:00:00Z' };
 
 const sources = await loadBundleSources();
-const course = loadCourse();
+// The written course: the course plan's stubs (status planned) left out. The real course's bundle stops before the
+// first unit with a stub (spec 7), which would leave Unit 12's written modules untested here; it is checked below too.
+const course = loadCourse({ planned: false });
 const { bundle, report } = buildBundleWithReport(course, { ...sources, build: BUILD });
 const unit1 = buildBundle(course, { ...sources, build: BUILD, units: ['unit1'] });
+const real = buildBundle(loadCourse(), { ...sources, build: BUILD });
+// The written course with its files as text, for tests that change it.
+const writtenContent = () => {
+  const { outlineText, files } = readContent(CONTENT_ROOT);
+  return withoutPlanned(JSON.parse(outlineText), files);
+};
 
 const contentOf = (b, key) => b.content.find((c) => c.module_key === key);
 const entryOf = (b, key) => b.entries.find((e) => e.module_key === key);
@@ -43,8 +51,9 @@ test('bundle validates against its schema', () => {
   assert.equal(bundle.schema, 'la-bundle@1');
 });
 
-test("L's checker passes the full bundle and the Unit 1 sample", () => {
-  for (const [name, b] of [['full', bundle], ['unit1', unit1]]) {
+test("L's checker passes the written course's bundle, the real course's bundle and the Unit 1 sample", () => {
+  assert.ok(bundle.units.some((u) => u.unit_key === 'unit12'), "the written course's bundle holds Unit 12");
+  for (const [name, b] of [['written', bundle], ['real', real], ['unit1', unit1]]) {
     const r = runChecker(b);
     assert.equal(r.error, undefined, `${name}: ${r.error}`);
     const errors = r.problems.filter((p) => p.severity === 'error');
@@ -268,9 +277,7 @@ test('item kinds and answer keys', () => {
 });
 
 test('a respond cue is the English to say, not a scene line', () => {
-  // The units the bundle holds: it stops before the first unit with a planned module (spec 7).
-  const bundled = new Set(bundle.units.map((u) => u.unit_key));
-  const sources = course.units.filter((u) => bundled.has(u.unit_key)).flatMap((u) => u.modules).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
+  const sources = course.units.flatMap((u) => u.modules).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
   const withCue = sources.filter(([, i]) => i.type === 'respond' && i.cue !== undefined);
   assert.ok(withCue.length > 0);
   for (const [key, src] of withCue) {
@@ -306,25 +313,24 @@ test('topic defaults are reported', () => {
     assert.equal(e.topic, missing.includes(e) ? unitName.get(e.unit_key) : own, e.module_key);
   }
   // A module that gains a topic keeps it and leaves the report.
-  const { outlineText, files } = readContent(CONTENT_ROOT);
+  const { outline: written, files } = writtenContent();
   const key = '2024-01-02-etre';
   const withTopic = files.map((f) => (f.file.endsWith(`/${key}.json`) ? { file: f.file, json: { ...JSON.parse(f.text), topic: 'être' } } : f));
-  const r = buildBundleWithReport(assembleCourse(JSON.parse(outlineText), withTopic, { checkAnswer: defaultCheckAnswer }), { ...sources, build: BUILD });
+  const r = buildBundleWithReport(assembleCourse(written, withTopic, { checkAnswer: defaultCheckAnswer }), { ...sources, build: BUILD });
   assert.equal(entryOf(r.bundle, key).topic, 'être');
   assert.ok(!r.report.topic_defaulted.some((d) => d.module_key === key));
   assert.equal(r.report.topic_defaulted.length, report.topic_defaulted.length - 1);
 });
 
 test('same input same hash', async () => {
-  const again = buildBundle(loadCourse(), { ...(await loadBundleSources()), build: { ...BUILD, built_at: '2027-01-01T00:00:00Z' } });
+  const again = buildBundle(loadCourse({ planned: false }), { ...(await loadBundleSources()), build: { ...BUILD, built_at: '2027-01-01T00:00:00Z' } });
   assert.equal(bundleHash(again), bundleHash(bundle));
   assert.equal(canonicalJson({ ...again, build: BUILD }), canonicalJson(bundle));
   assert.match(bundleHash(bundle), /^[0-9a-f]{64}$/);
 });
 
 test('reorder changes no key', () => {
-  const { outlineText, files } = readContent(CONTENT_ROOT);
-  const outline = JSON.parse(outlineText);
+  const { outline, files } = writtenContent();
   const u2 = outline.units[1].entries;
   const [a, b] = [u2.indexOf('2024-01-12-demonstratives'), u2.indexOf('2024-01-13-ca-survival')];
   [u2[a], u2[b]] = [u2[b], u2[a]];
@@ -395,7 +401,8 @@ test('the CLI writes the bundle and prints its hash, size and entry count', (t) 
   const written = JSON.parse(readFileSync(out, 'utf8'));
   assert.match(r.stdout, new RegExp(`^hash ${bundleHash(written)}$`, 'm'));
   assert.match(r.stdout, new RegExp(`^bytes ${readFileSync(out).length}$`, 'm'));
-  assert.match(r.stdout, new RegExp(`^entries ${bundle.entries.length}\\b`, 'm'));
+  // The CLI builds the real course, which stops before the first unit with a stub.
+  assert.match(r.stdout, new RegExp(`^entries ${real.entries.length}\\b`, 'm'));
   // Against a previous bundle: the keys added, retired, moved and changed.
   const prev = structuredClone(written);
   prev.entries = prev.entries.filter((e) => e.module_key !== '2024-01-11-unit1-exam');
@@ -416,6 +423,8 @@ test('the --check run builds, checks and writes nothing', (t) => {
   const r = spawnSync(process.execPath, [CLI, 'bundle', '--check', '--out', out], { encoding: 'utf8', maxBuffer: 64 << 20 });
   assert.equal(r.status, 0, r.stdout + r.stderr);
   assert.match(r.stdout, /checker ok/);
+  // The real bundle stops before the first unit with a stub, so the written course is checked as well.
+  assert.match(r.stdout, /^written course \(planned modules left out\): entries \d+ \(units \d+\); checker ok$/m);
   assert.doesNotMatch(r.stdout, /^wrote /m);
   assert.equal(existsSync(out), false, '--check wrote --out');
   assert.deepEqual(defaults.map(mtime), before, '--check touched a default bundle');

@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "body-sante",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Body and health (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:sante",
+      "fr:lex:peau",
+      "fr:lex:maladie",
+      "fr:lex:cigarette",
+      "fr:lex:genou",
+      "fr:lex:cou",
+      "fr:lex:repos",
+      "fr:lex:medicament",
+      "fr:lex:fumer",
+      "fr:lex:endormir"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

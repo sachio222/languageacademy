@@ -6,6 +6,7 @@
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "plan.json",
+    "note": "Ask about anything"
   }
 }

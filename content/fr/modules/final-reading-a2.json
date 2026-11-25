@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "final-reading-a2",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Final reading: a long story that uses the whole course",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

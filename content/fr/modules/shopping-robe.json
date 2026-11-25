@@ -1,0 +1,28 @@
+{
+  "schema": "la-module@1",
+  "module_key": "shopping-robe",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Shops, money and clothes (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:robe",
+      "fr:lex:marche",
+      "fr:lex:vetement",
+      "fr:lex:chapeau",
+      "fr:lex:montre",
+      "fr:lex:veste",
+      "fr:lex:vendeur",
+      "fr:lex:chaussette",
+      "fr:lex:pull",
+      "fr:lex:jupe",
+      "fr:lex:supermarche",
+      "fr:lex:euro",
+      "fr:lex:echarpe",
+      "fr:lex:boulangerie",
+      "fr:lex:lunettes"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -7,6 +7,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { loadCourse, readContent, CONTENT_ROOT } from '../load.mjs';
 import { buildBundle, canonicalJson } from '../bundle.mjs';
+import { withoutPlanned } from '../assemble.mjs';
 import { loadBundleSources } from '../bundle-sources.mjs';
 
 const TARGET = 400;
@@ -17,12 +18,10 @@ function syntheticRoot(t) {
   t.after(() => rmSync(root, { recursive: true, force: true }));
   cpSync(CONTENT_ROOT, root, { recursive: true });
   const { outlineText, files: all } = readContent(CONTENT_ROOT);
-  const outline = JSON.parse(outlineText);
   // The written course only: the course plan's stubs (status planned) would stop the bundle at their unit (spec 7).
-  const planned = new Set(all.map((f) => JSON.parse(f.text)).filter((m) => m.status === 'planned').map((m) => m.module_key));
-  for (const key of planned) rmSync(join(root, 'modules', `${key}.json`));
-  outline.units = outline.units.map((u) => ({ ...u, entries: u.entries.filter((k) => !planned.has(k)) })).filter((u) => u.entries.length);
-  const files = all.filter((f) => !planned.has(JSON.parse(f.text).module_key));
+  const { outline, files } = withoutPlanned(JSON.parse(outlineText), all);
+  const kept = new Set(files.map((f) => f.file));
+  for (const f of all) if (!kept.has(f.file)) rmSync(join(root, 'modules', f.file.replace(/^.*\//, '')));
   const lessons = files.map((f) => JSON.parse(f.text)).filter((m) => m.kind === 'lesson' && m.status === 'written');
   const template = outline.units[1];
   let count = files.length;

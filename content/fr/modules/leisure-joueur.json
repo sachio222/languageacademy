@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "leisure-joueur",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Free time, sport and culture (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:joueur",
+      "fr:lex:poupee",
+      "fr:lex:jouet",
+      "fr:lex:peche",
+      "fr:lex:roman",
+      "fr:lex:instrument",
+      "fr:lex:piano",
+      "fr:lex:comedie",
+      "fr:lex:bavarder"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

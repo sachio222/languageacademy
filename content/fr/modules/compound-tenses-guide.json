@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "compound-tenses-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Every compound tense is a helper + participle",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

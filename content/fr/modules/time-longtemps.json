@@ -1,0 +1,27 @@
+{
+  "schema": "la-module@1",
+  "module_key": "time-longtemps",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Time and the day and Home (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:longtemps",
+      "fr:lex:bientot",
+      "fr:lex:salle",
+      "fr:lex:cuisine",
+      "fr:lex:entree",
+      "fr:lex:etage",
+      "fr:lex:salon",
+      "fr:lex:minuit",
+      "fr:lex:douche",
+      "fr:lex:midi",
+      "fr:lex:saison",
+      "fr:lex:demi-heure",
+      "fr:lex:quart",
+      "fr:lex:canape"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

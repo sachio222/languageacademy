@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "character-bete",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing people (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:bete",
+      "fr:lex:charmant",
+      "fr:lex:mechant",
+      "fr:lex:malheureux",
+      "fr:lex:inquiet",
+      "fr:lex:curieux",
+      "fr:lex:amusant",
+      "fr:lex:recommencer",
+      "fr:lex:ajouter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

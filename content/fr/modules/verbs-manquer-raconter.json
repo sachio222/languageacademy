@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-manquer-raconter",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: manquer, raconter, marier, inquiéter",
+  "plan": {
+    "words": [
+      "fr:lex:manquer",
+      "fr:lex:raconter",
+      "fr:lex:marier",
+      "fr:lex:inquieter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

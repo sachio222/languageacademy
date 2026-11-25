@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-materiel",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Work and jobs (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:materiel",
+      "fr:lex:traiter",
+      "fr:lex:regler",
+      "fr:lex:separer",
+      "fr:lex:representer",
+      "fr:lex:fabriquer",
+      "fr:lex:identifier"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

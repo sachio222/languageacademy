@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nature-courant",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Nature, animals and weather (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:courant",
+      "fr:lex:source",
+      "fr:lex:ombre",
+      "fr:lex:singe",
+      "fr:lex:patte",
+      "fr:lex:univers",
+      "fr:lex:sombre",
+      "fr:lex:loup",
+      "fr:lex:desert",
+      "fr:lex:chasser",
+      "fr:lex:adresser",
+      "fr:lex:creuser",
+      "fr:lex:achever"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

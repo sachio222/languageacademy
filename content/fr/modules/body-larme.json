@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "body-larme",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Body and health (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:larme",
+      "fr:lex:blessure",
+      "fr:lex:front",
+      "fr:lex:aveugle",
+      "fr:lex:levre",
+      "fr:lex:medical",
+      "fr:lex:nerf",
+      "fr:lex:piquer",
+      "fr:lex:guerir",
+      "fr:lex:croiser",
+      "fr:lex:raser"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

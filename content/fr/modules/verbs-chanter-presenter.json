@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-chanter-presenter",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: chanter, présenter, accepter, refuser",
+  "plan": {
+    "words": [
+      "fr:lex:chanter",
+      "fr:lex:presenter",
+      "fr:lex:accepter",
+      "fr:lex:refuser"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

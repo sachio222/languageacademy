@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "review-patterns-a2",
+  "kind": "practice",
+  "status": "planned",
+  "title": "Review · Every pattern of the course, one sentence each",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

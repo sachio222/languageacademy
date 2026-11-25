@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "town-prison",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Town and places (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:prison",
+      "fr:lex:zone",
+      "fr:lex:terrain",
+      "fr:lex:sol",
+      "fr:lex:cimetiere",
+      "fr:lex:battre",
+      "fr:lex:renvoyer",
+      "fr:lex:joindre",
+      "fr:lex:echouer",
+      "fr:lex:transporter"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

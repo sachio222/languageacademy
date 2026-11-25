@@ -158,8 +158,11 @@ const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w
 const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('fr'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
 // example: a section made from a concept card keeps the card's example line.
 const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
-// draft: the file a planned module will be written from, as the plan names it (Reading 12's draft, Task 17).
-const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY }, ['words', 'constructions', 'source']);
+// A planned module's plan (Task 17): the graph ids it will teach or use, where the plan lives (source, "plan.json") and,
+// optionally, the draft it will be written from and a note for its writer (a unit exam's subtitle, a reading's theme
+// brief). source and draft are paths relative to the vault's curriculum folder, projects/product/curriculum/
+// (plan.json sits at research/course-plan/plan.json there; draft names research/course-plan/<file>).
+const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY, note: S('native') }, ['words', 'constructions', 'source']);
 
 const KIND_SCHEMAS = {
   lesson: {

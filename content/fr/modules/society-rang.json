@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-rang",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Society, law and conflict (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:rang",
+      "fr:lex:revolution",
+      "fr:lex:tuer",
+      "fr:lex:accuser",
+      "fr:lex:augmenter",
+      "fr:lex:effacer"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

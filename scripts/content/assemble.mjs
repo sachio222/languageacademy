@@ -72,6 +72,30 @@ export function assembleCourse(outline, files, opts = {}) {
   return Object.assign(build(outline, sources), { warnings });
 }
 
+/**
+ * The written course only: every planned module (status planned, a course plan stub) taken out of the files and the
+ * outline, and units left empty dropped. A file that is not JSON is kept, so assembleCourse still reports it.
+ * @param outline parsed course.json; files Array<{ file, json }> or Array<{ file, text }>
+ * @returns { outline, files }
+ */
+export function withoutPlanned(outline, files) {
+  const parsed = (f) => {
+    if ('json' in f) return f.json;
+    try {
+      return JSON.parse(f.text);
+    } catch {
+      return null;
+    }
+  };
+  const planned = new Set(files.filter((f) => parsed(f)?.status === 'planned').map((f) => keyOfFile(f.file)));
+  const out = structuredClone(outline);
+  if (isObj(out) && Array.isArray(out.units))
+    out.units = out.units
+      .map((u) => (isObj(u) && Array.isArray(u.entries) ? { ...u, entries: u.entries.filter((k) => !planned.has(k)) } : u))
+      .filter((u) => !isObj(u) || !Array.isArray(u.entries) || u.entries.length > 0);
+  return { outline: out, files: files.filter((f) => !planned.has(keyOfFile(f.file))) };
+}
+
 // module_key -> 1-based unit index, from the first listing (the outline check reports any second one).
 function unitIndexes(outline) {
   const out = new Map();

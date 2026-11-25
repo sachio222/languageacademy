@@ -1,0 +1,17 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-bouger-apporter",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Verbs: bouger, apporter, imaginer, recevoir",
+  "plan": {
+    "words": [
+      "fr:lex:bouger",
+      "fr:lex:apporter",
+      "fr:lex:imaginer",
+      "fr:lex:recevoir"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

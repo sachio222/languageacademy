@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "talk-contact",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Talking, agreeing and feelings (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:contact",
+      "fr:lex:tort",
+      "fr:lex:dommage",
+      "fr:lex:contraire",
+      "fr:lex:excuse",
+      "fr:lex:resultat",
+      "fr:lex:difference",
+      "fr:lex:rencontre",
+      "fr:lex:explication",
+      "fr:lex:rire",
+      "fr:lex:proposer",
+      "fr:lex:conseiller"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

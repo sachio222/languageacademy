@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "talk-mensonge",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Talking, agreeing and feelings (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:mensonge",
+      "fr:lex:cri",
+      "fr:lex:adieu",
+      "fr:lex:betise",
+      "fr:lex:promesse",
+      "fr:lex:voeu",
+      "fr:lex:pardonner",
+      "fr:lex:prevenir",
+      "fr:lex:parier",
+      "fr:lex:annoncer",
+      "fr:lex:nommer",
+      "fr:lex:interroger"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

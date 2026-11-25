@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "home-miroir",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Home (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:miroir",
+      "fr:lex:studio",
+      "fr:lex:cave",
+      "fr:lex:placard",
+      "fr:lex:tapis",
+      "fr:lex:meuble",
+      "fr:lex:fauteuil",
+      "fr:lex:drap"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

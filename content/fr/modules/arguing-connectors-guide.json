@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "arguing-connectors-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Connectors for arguing (pourtant, cependant, toutefois, par contre, en effet)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

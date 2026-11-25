@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "can-do-a2-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "What you can do in French now (the A1 and A2 functions you can perform)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

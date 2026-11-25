@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "describing-plein",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing things (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:plein",
+      "fr:lex:pauvre",
+      "fr:lex:propre",
+      "fr:lex:sale",
+      "fr:lex:bizarre",
+      "fr:lex:impossible",
+      "fr:lex:faux",
+      "fr:lex:tranquille",
+      "fr:lex:dangereux",
+      "fr:lex:terrible",
+      "fr:lex:sonner",
+      "fr:lex:assister"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

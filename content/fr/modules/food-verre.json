@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "food-verre",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Food and meals (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:verre",
+      "fr:lex:couteau",
+      "fr:lex:bouteille",
+      "fr:lex:dejeuner",
+      "fr:lex:repas",
+      "fr:lex:soupe",
+      "fr:lex:tasse",
+      "fr:lex:assiette",
+      "fr:lex:appetit",
+      "fr:lex:oignon",
+      "fr:lex:petit-dejeuner"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "people-epoux",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "People and family (B1)",
+  "plan": {
+    "words": [
+      "fr:lex:epoux",
+      "fr:lex:membre",
+      "fr:lex:fiance",
+      "fr:lex:menteur",
+      "fr:lex:personnage",
+      "fr:lex:jeunesse",
+      "fr:lex:compagnon",
+      "fr:lex:epouser",
+      "fr:lex:eloigner",
+      "fr:lex:accueillir",
+      "fr:lex:mefier"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

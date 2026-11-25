@@ -1,16 +1,15 @@
 // Task 17: the course plan's modules for Units 12 to 29 as planned stubs (status planned) in the outline, so writers
-// fill them in unit by unit while nothing planned publishes or teaches.
+// fill them in unit by unit while nothing planned publishes or teaches. Keys come from content/fr/plan-keys.json.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { loadCourse, readContent, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
-import { assembleCourse } from '../assemble.mjs';
-import { defaultCheckAnswer } from '../passable.mjs';
+import { loadCourse, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
 import { validateModule, hasPositionWord } from '../schema/module.mjs';
 import { buildBundleWithReport } from '../bundle.mjs';
 import { loadBundleSources } from '../bundle-sources.mjs';
-import { planToStubs, applyStubs, isPlanStub, planGraph, DEFAULT_PLAN_FILE, SHORT_KEY } from '../plan-stubs.mjs';
+import { planToStubs, applyStubs, isPlanStub, planGraph, readPlanKeys, planKeyList, main, DEFAULT_PLAN_FILE, SHORT_KEY, COUNTER_END } from '../plan-stubs.mjs';
 import { runCheck } from '../../graph/check.mjs';
 import { summarize } from '../../graph/report.mjs';
 
@@ -26,18 +25,19 @@ const PLAN = {
           unit: 2,
           title: 'Second (completion)',
           modules: [
-            { kind: 'reading', title: 'Reading 2 - Le Chat', words: [{ id: 'fr:lex:chat', lemma: 'chat' }], reading: { draft: 'reading-2-draft.js' } },
-            { kind: 'practice', title: 'Unit 2 Practice - Cats in context' },
-            { kind: 'exam', title: 'Unit 2 Exam - All about cats' },
+            { n: 1, kind: 'reading', title: 'Reading 2 - Le Chat', words: [{ id: 'fr:lex:chat', lemma: 'chat' }], reading: { draft: 'reading-2-draft.js' } },
+            { n: 2, kind: 'practice', title: 'Unit 2 Practice - Cats in context' },
+            { n: 3, kind: 'exam', title: 'Unit 2 Exam - All about cats' },
           ],
         },
         {
           unit: 3,
           title: 'Joining sentences',
           modules: [
-            { kind: 'lesson', title: 'qui after a noun (la fille qui parle)', adds: ['fr:cx:relative.qui'], words: [] },
-            { kind: 'help', title: 'Guide: Which relative? (qui, que)', words: [] },
+            { n: 4, kind: 'lesson', title: 'qui after a noun (la fille qui parle)', adds: ['fr:cx:relative.qui'], words: [] },
+            { n: 5, kind: 'help', title: 'Guide: Which relative? (qui, que)', words: [] },
             {
+              n: 6,
               kind: 'lesson',
               title: 'Getting things done: emergencies',
               words: [{ id: 'fr:lex:urgence', lemma: 'urgence' }],
@@ -45,11 +45,11 @@ const PLAN = {
               newHeadwords: ['pompier', 'gyrophare'],
               phrases: ['Au secours !', 'Il y a le feu !'],
             },
-            { kind: 'lesson', title: 'Pets (A1)', words: [{ id: 'fr:lex:chien', lemma: 'chien' }] },
-            { kind: 'lesson', title: 'Pets (A1)', words: [{ id: 'fr:lex:nope', lemma: 'nope' }], adds: ['fr:cx:nope'] },
-            { kind: 'reading', title: 'Reading 3', words: [], reading: { theme: 'A long pitch.', mustUse: ['fr:cx:relative.qui'] } },
-            { kind: 'practice', title: 'Unit 3 Practice' },
-            { kind: 'exam', title: 'Unit 3 Exam' },
+            { n: 7, kind: 'lesson', title: 'Pets (A1)', themeIds: ['pets'], words: [{ id: 'fr:lex:chien', lemma: 'chien' }] },
+            { n: 8, kind: 'lesson', title: 'Pets (A1)', themeIds: ['pets'], words: [{ id: 'fr:lex:nope', lemma: 'nope' }], adds: ['fr:cx:nope'] },
+            { n: 9, kind: 'reading', title: 'Reading 3', words: [], reading: { theme: 'A long pitch.', mustUse: ['fr:cx:relative.qui'] } },
+            { n: 10, kind: 'practice', title: 'Unit 3 Practice' },
+            { n: 11, kind: 'exam', title: 'Unit 3 Exam' },
           ],
         },
       ],
@@ -57,10 +57,17 @@ const PLAN = {
     {
       version: 2,
       title: 'V2',
-      units: [{ unit: 4, title: 'Course completion: French B1', completion: true, modules: [{ kind: 'practice', title: 'Review 1: the words by theme' }, { kind: 'exam', title: 'Final exam against the B1 core' }] }],
+      units: [{ unit: 4, title: 'Course completion: French B1', completion: true, modules: [{ n: 12, kind: 'practice', title: 'Review 1: the words by theme' }, { n: 13, kind: 'exam', title: 'Final exam against the B1 core' }] }],
     },
     { version: 3, title: 'B2 outline (proposal)', proposal: true, grammar: [] },
   ],
+};
+const KEYS = {
+  source: 'plan.json',
+  versions: {
+    1: { 1: 'reading-le-chat', 2: 'unit2-practice', 3: 'unit2-exam', 4: 'qui-after-a-noun', 5: 'which-relative-guide', 6: 'emergencies', 7: 'pets-chien', 8: 'pets-nope', 9: 'unit3-reading', 10: 'unit3-practice', 11: 'unit3-exam' },
+    2: { 12: 'review-words-b1', 13: 'unit4-exam' },
+  },
 };
 const GRAPH = {
   constructions: new Set(['fr:cx:relative.qui', 'fr:cx:chunk.au-secours']),
@@ -73,7 +80,7 @@ const COURSE = {
     { unit_key: 'unit1', name: 'Essentials', modules: [{ module_key: '2024-01-01-hello', status: 'written' }] },
     { unit_key: 'unit2', name: 'Second', modules: [{ module_key: '2024-01-02-cats', status: 'written' }] },
   ],
-  registry: new Set(['2024-01-01-hello', '2024-01-02-cats', 'pets-a1', 'unit3-exam']),
+  retired: [{ module_key: 'old-cats', reason: 'merged', replaced_by: '2024-01-02-cats' }],
 };
 const OUTLINE = {
   schema: 'la-course@1',
@@ -87,8 +94,25 @@ const OUTLINE = {
   retired: [],
 };
 
-const small = planToStubs(PLAN, COURSE, { graph: GRAPH });
+const small = planToStubs(PLAN, COURSE, { graph: GRAPH, keys: KEYS });
 const byTitle = (r, plan) => r.modules[r.report.modules.findIndex((m) => m.plan_title === plan)];
+const withKeys = (edit) => {
+  const k = structuredClone(KEYS);
+  edit(k.versions);
+  return k;
+};
+// The course after a run: the outline with the stubs listed, the stubs as its modules (or as written modules).
+const courseAfter = (result, outline, status = () => 'planned') => {
+  const stubs = new Map(result.modules.map((m) => [m.module_key, m]));
+  return {
+    units: outline.units.map((u) => ({
+      unit_key: u.unit_key,
+      name: u.name,
+      modules: u.entries.map((k) => (stubs.has(k) ? { ...stubs.get(k), status: status(k) } : { module_key: k, status: 'written' })),
+    })),
+    retired: COURSE.retired,
+  };
+};
 
 test('small plan: one stub per module of versions 1 and 2, none of the proposal', () => {
   assert.equal(small.modules.length, 13);
@@ -104,24 +128,16 @@ test('small plan: one stub per module of versions 1 and 2, none of the proposal'
   );
 });
 
-test('small plan: keys are short slugs from the title (the unit key when the title is only the unit name), unique against the registry and each other', () => {
-  const keys = small.modules.map((m) => m.module_key);
-  assert.deepEqual(keys, [
-    'reading-le-chat',
-    'cats-in-context-practice',
-    'unit2-exam',
-    'qui-after-a-noun',
-    'which-relative-guide',
-    'getting-things-done-emergencies',
-    'pets-a1-2',
-    'pets-a1-3',
-    'unit3-reading',
-    'unit3-practice',
-    'unit3-exam-2',
-    'review-the-words-by-theme',
-    'unit4-exam',
-  ]);
-  for (const k of keys) assert.match(k, SHORT_KEY);
+test('small plan: keys come only from the key map, and a bad map stops the run', () => {
+  assert.deepEqual(small.modules.map((m) => m.module_key), planKeyList(KEYS));
+  const run = (keys) => () => planToStubs(PLAN, COURSE, { graph: GRAPH, keys });
+  assert.throws(run(withKeys((v) => delete v[1][4])), /module 4 .* has no key/);
+  assert.throws(run(withKeys((v) => (v[1][8] = 'pets-chien'))), /given to two plan modules/);
+  assert.throws(run(withKeys((v) => (v[1][8] = 'pets-a1-2'))), /without a counter/);
+  assert.throws(run(withKeys((v) => (v[1][8] = 'Pets'))), /not a short slug/);
+  assert.throws(run(withKeys((v) => (v[1][8] = 'old-cats'))), /retired key/);
+  assert.throws(run(withKeys((v) => (v[2][99] = 'nothing-here'))), /keys for no plan module: nothing-here/);
+  assert.throws(() => planToStubs(PLAN, COURSE, { graph: GRAPH }), /needs the key map/);
 });
 
 test('small plan: position words leave the titles, and every change is reported', () => {
@@ -149,6 +165,13 @@ test('small plan: position words leave the titles, and every change is reported'
   );
 });
 
+test("small plan: a unit exam's dropped subtitle and a reading's theme brief go into plan.note", () => {
+  assert.equal(byTitle(small, 'Unit 2 Exam - All about cats').plan.note, 'All about cats');
+  assert.equal(byTitle(small, 'Final exam against the B1 core').plan.note, 'Final exam against the B1 core');
+  assert.equal(byTitle(small, 'Reading 3').plan.note, 'A long pitch.');
+  for (const t of ['Unit 3 Exam', 'Reading 2 - Le Chat', 'Unit 3 Practice', 'Pets (A1)']) assert.equal('note' in byTitle(small, t).plan, false, t);
+});
+
 test("small plan: words and constructions are the plan's graph ids; an id that does not resolve is reported, not written", () => {
   assert.deepEqual(byTitle(small, 'Reading 2 - Le Chat').plan, { words: ['fr:lex:chat'], constructions: [], source: 'plan.json', draft: 'research/course-plan/reading-2-draft.js' });
   assert.deepEqual(byTitle(small, 'qui after a noun (la fille qui parle)').plan.constructions, ['fr:cx:relative.qui']);
@@ -163,14 +186,14 @@ test("small plan: words and constructions are the plan's graph ids; an id that d
   assert.deepEqual(
     small.report.unresolved.map((u) => [u.module_key, u.field, u.value]),
     [
-      ['getting-things-done-emergencies', 'newHeadwords', 'gyrophare'],
-      ['pets-a1-3', 'words', 'fr:lex:nope'],
-      ['pets-a1-3', 'adds', 'fr:cx:nope'],
+      ['emergencies', 'newHeadwords', 'gyrophare'],
+      ['pets-nope', 'words', 'fr:lex:nope'],
+      ['pets-nope', 'adds', 'fr:cx:nope'],
     ],
   );
 });
 
-test('small plan: the unit the course has gains its ending; later units take the next unused keys', () => {
+test("small plan: the unit the course has gains its ending; a new unit's key is unit<plan unit>", () => {
   assert.deepEqual(
     small.units.map((u) => [u.unit_key, u.name, u.existing, u.entries.length]),
     [
@@ -179,58 +202,125 @@ test('small plan: the unit the course has gains its ending; later units take the
       ['unit4', 'Course completion: French B1', false, 2],
     ],
   );
-  const outline = applyStubs(OUTLINE, small.units, new Set());
-  assert.deepEqual(outline.units[1].entries, ['2024-01-02-cats', 'reading-le-chat', 'cats-in-context-practice', 'unit2-exam']);
+  const outline = applyStubs(OUTLINE, small.units);
+  assert.deepEqual(outline.units[1].entries, ['2024-01-02-cats', 'reading-le-chat', 'unit2-practice', 'unit2-exam']);
   assert.deepEqual(Object.keys(outline.units[2]), ['unit_key', 'name', 'entries']);
   assert.deepEqual(outline.units.map((u) => u.unit_key), ['unit1', 'unit2', 'unit3', 'unit4']);
 });
 
-test('small plan: a rerun over its own stubs gives the same keys and outline', () => {
-  const outline = applyStubs(OUTLINE, small.units, new Set());
-  const stubs = new Map(small.modules.map((m) => [m.module_key, m]));
-  const course = {
-    units: outline.units.map((u) => ({ unit_key: u.unit_key, name: u.name, modules: u.entries.map((k) => stubs.get(k) ?? { module_key: k, status: 'written' }) })),
-    registry: new Set([...COURSE.registry, ...stubs.keys()]),
-  };
-  const again = planToStubs(PLAN, course, { graph: GRAPH });
+test('small plan: a rerun over its own stubs gives the same stubs and outline', () => {
+  const outline = applyStubs(OUTLINE, small.units);
+  const again = planToStubs(PLAN, courseAfter(small, outline), { graph: GRAPH, keys: KEYS });
   assert.deepEqual(again.modules, small.modules);
-  assert.deepEqual(again.report.new_on_rerun, []);
-  assert.deepEqual(applyStubs(outline, again.units, new Set(stubs.keys())), outline);
-  // Once a writer has written a stub, a rerun would bring its plan module back under a new key: that is reported.
-  const written = { ...stubs.get('unit3-reading'), status: 'written' };
-  const after = { ...course, units: course.units.map((u) => ({ ...u, modules: u.modules.map((m) => (m.module_key === 'unit3-reading' ? written : m)) })) };
-  assert.deepEqual(planToStubs(PLAN, after, { graph: GRAPH }).report.new_on_rerun, ['unit3-reading-2']);
+  assert.deepEqual(applyStubs(outline, again.units), outline);
 });
 
-/* ---------- the committed course ---------- */
+test('small plan: a written stub is skipped, never duplicated; once every stub is written a run adds nothing', () => {
+  const outline = applyStubs(OUTLINE, small.units);
+  const one = planToStubs(PLAN, courseAfter(small, outline, (k) => (k === 'unit3-reading' ? 'written' : 'planned')), { graph: GRAPH, keys: KEYS });
+  assert.deepEqual(one.report.written, ['unit3-reading']);
+  assert.equal(one.modules.some((m) => m.module_key === 'unit3-reading'), false);
+  assert.equal(one.modules.length, 12);
+  assert.deepEqual(applyStubs(outline, one.units), outline);
+  const all = planToStubs(PLAN, courseAfter(small, outline, () => 'written'), { graph: GRAPH, keys: KEYS });
+  assert.deepEqual(all.modules, []);
+  assert.equal(all.report.written.length, 13);
+  assert.deepEqual(applyStubs(outline, all.units), outline);
+  // A written module a writer moved to another unit stays there.
+  const moved = structuredClone(outline);
+  moved.units[2].entries = moved.units[2].entries.filter((k) => k !== 'pets-chien');
+  moved.units[3].entries.push('pets-chien');
+  assert.deepEqual(applyStubs(moved, all.units), moved);
+});
+
+test('small plan: a stub whose key the map no longer holds is taken out of the outline', () => {
+  const outline = applyStubs(OUTLINE, small.units);
+  const renamed = withKeys((v) => (v[1][7] = 'pets-dog'));
+  const r = planToStubs(PLAN, courseAfter(small, outline), { graph: GRAPH, keys: renamed });
+  const next = applyStubs(outline, r.units, new Set(['pets-chien']));
+  assert.deepEqual(next.units[2].entries.slice(3, 5), ['pets-dog', 'pets-nope']);
+  assert.equal(next.units.some((u) => u.entries.includes('pets-chien')), false);
+});
+
+/* ---------- the committed key map and course ---------- */
 
 const course = loadCourse();
 const planned = [...course.modules.values()].filter((m) => m.status === 'planned');
+const keys = readPlanKeys();
 const hasPlan = existsSync(DEFAULT_PLAN_FILE);
+const needsPlan = { skip: !hasPlan && `the course plan is not on this machine (${DEFAULT_PLAN_FILE})` };
 
-test('stubs for every planned module', { skip: !hasPlan && `the course plan is not on this machine (${DEFAULT_PLAN_FILE})` }, () => {
+test('the key map: 194 short keys, unique, with no counter, each a planned stub or a written module, none retired', () => {
+  const list = planKeyList(keys);
+  assert.equal(list.length, 194);
+  assert.equal(new Set(list).size, list.length);
+  for (const k of list) {
+    assert.match(k, SHORT_KEY);
+    assert.doesNotMatch(k, COUNTER_END, k);
+    assert.ok(course.modules.has(k), `${k} has no module file`);
+  }
+  const retired = new Set(course.retired.map((r) => r.module_key));
+  for (const k of list) assert.equal(retired.has(k), false, k);
+  // Every planned stub is in the map: none was named any other way.
+  for (const m of planned) assert.ok(list.includes(m.module_key), m.module_key);
+});
+
+test('stubs for every planned module', needsPlan, () => {
   const plan = JSON.parse(readFileSync(DEFAULT_PLAN_FILE, 'utf8'));
   const want = plan.versions.slice(0, 2).reduce((n, v) => n + v.units.reduce((k, u) => k + u.modules.length, 0), 0);
   assert.equal(want, 194);
   assert.equal(planned.length, want);
-  // The committed stubs and outline are exactly what the script writes from the plan.
-  const r = planToStubs(plan, course, { graph: planGraph() });
+  // The committed stubs and outline are exactly what the script writes from the plan and the key map.
+  const r = planToStubs(plan, course, { graph: planGraph(), keys });
   assert.deepEqual(planned.map((m) => m.module_key), r.modules.map((m) => m.module_key));
   for (const m of r.modules) assert.deepEqual(JSON.parse(readFileSync(join(CONTENT_ROOT, 'modules', `${m.module_key}.json`), 'utf8')), m);
   const outline = JSON.parse(readFileSync(join(CONTENT_ROOT, 'course.json'), 'utf8'));
-  assert.deepEqual(applyStubs(outline, r.units, new Set(planned.map((m) => m.module_key))), outline);
+  assert.deepEqual(applyStubs(outline, r.units), outline);
   assert.deepEqual(r.report.unresolved, []);
+  // Every unit key is unit<plan unit>, and each unit lists its plan modules in plan order.
+  assert.deepEqual(r.units.map((u) => u.unit_key), plan.versions.slice(0, 2).flatMap((v) => v.units.map((u) => `unit${u.unit}`)));
+  for (const u of r.units) assert.deepEqual(course.units.find((x) => x.unit_key === u.unit_key).modules.map((m) => m.module_key).filter((k) => u.entries.includes(k)), u.entries, u.unit_key);
+});
+
+test('once every stub is written, a run adds nothing', needsPlan, () => {
+  const plan = JSON.parse(readFileSync(DEFAULT_PLAN_FILE, 'utf8'));
+  const allWritten = { ...course, units: course.units.map((u) => ({ ...u, modules: u.modules.map((m) => ({ ...m, status: 'written' })) })) };
+  const r = planToStubs(plan, allWritten, { graph: planGraph(), keys });
+  assert.deepEqual(r.modules, []);
+  assert.equal(r.report.written.length, 194);
+  const outline = JSON.parse(readFileSync(join(CONTENT_ROOT, 'course.json'), 'utf8'));
+  assert.deepEqual(applyStubs(outline, r.units), outline);
+});
+
+test('--write refuses to overwrite a stub edited by hand, and --force overwrites it', needsPlan, (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-stubs-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(CONTENT_ROOT, root, { recursive: true });
+  const file = join(root, 'modules', 'home-repairs.json');
+  const original = readFileSync(file, 'utf8');
+  const quiet = t.mock.method(console, 'log', () => {});
+  t.mock.method(console, 'error', () => {});
+  assert.equal(main(['--write', '--root', root]), 0, 'an untouched copy writes cleanly');
+  assert.equal(readFileSync(file, 'utf8'), original);
+  assert.ok(quiet.mock.calls.some((c) => c.arguments[0] === 'wrote 0 files'));
+  const edited = JSON.stringify({ ...JSON.parse(original), title: 'Getting things done: when the boiler breaks' }, null, 2) + '\n';
+  writeFileSync(file, edited);
+  assert.equal(main(['--write', '--root', root]), 1);
+  assert.equal(readFileSync(file, 'utf8'), edited, 'the hand edit is kept');
+  assert.equal(main(['--check', '--root', root]), 1);
+  assert.equal(main(['--write', '--force', '--root', root]), 0);
+  assert.equal(readFileSync(file, 'utf8'), original);
 });
 
 test('slugs unique and dateless', () => {
   assert.ok(planned.length > 0, 'the outline holds planned stubs');
-  const keys = planned.map((m) => m.module_key);
-  assert.equal(new Set(keys).size, keys.length);
-  for (const k of keys) assert.match(k, SHORT_KEY);
+  const list = planned.map((m) => m.module_key);
+  assert.equal(new Set(list).size, list.length);
+  for (const k of list) assert.match(k, SHORT_KEY);
   // Unique against every key the course had before the stubs, retired keys included.
   const written = new Set([...course.modules.values()].filter((m) => m.status !== 'planned').map((m) => m.module_key));
   for (const r of course.retired) written.add(r.module_key);
-  for (const k of keys) assert.equal(written.has(k), false, k);
+  for (const k of list) assert.equal(written.has(k), false, k);
   for (const m of planned) {
     assert.ok(isPlanStub(m), m.module_key);
     if (m.title !== undefined) assert.equal(hasPositionWord(m.title), false, m.title);
@@ -239,13 +329,18 @@ test('slugs unique and dateless', () => {
 });
 
 test('Unit 12 gains its planned ending, and Units 13 to 29 follow it', () => {
-  const keys = course.units.map((u) => u.unit_key);
-  assert.deepEqual(keys.slice(11), Array.from({ length: 18 }, (_, i) => `unit${12 + i}`));
+  assert.deepEqual(course.units.map((u) => u.unit_key).slice(11), Array.from({ length: 18 }, (_, i) => `unit${12 + i}`));
   const u12 = course.units[11].modules;
-  assert.deepEqual(u12.slice(-3).map((m) => [m.kind, m.status]), [['reading', 'planned'], ['practice', 'planned'], ['unit_exam', 'planned']]);
+  assert.deepEqual(u12.slice(-3).map((m) => [m.module_key, m.kind, m.status]), [
+    ['reading-questions-amelie', 'reading', 'planned'],
+    ['unit12-practice', 'practice', 'planned'],
+    ['unit12-exam', 'unit_exam', 'planned'],
+  ]);
   assert.equal(u12.filter((m) => m.status === 'planned').length, 3);
-  assert.equal(u12[u12.length - 3].plan.draft, 'research/course-plan/reading-12-draft.js');
-  assert.equal(u12[u12.length - 3].title, "Reading · {Les Questions d'Amélie}");
+  assert.equal(u12.at(-3).plan.draft, 'research/course-plan/reading-12-draft.js');
+  assert.equal(u12.at(-3).title, "Reading · {Les Questions d'Amélie}");
+  assert.equal(u12.at(-1).plan.note, 'Ask about anything');
+  assert.match(course.modules.get('unit17-reading').plan.note, /plumber/);
   for (const u of course.units.slice(12)) assert.ok(u.modules.every((m) => m.status === 'planned'), u.unit_key);
 });
 
@@ -262,16 +357,16 @@ test('bundle stops at first incomplete unit', () => {
   // The Unit 1 sample is unchanged.
   const unit1 = buildBundleWithReport(course, { ...sources, units: ['unit1'] }).bundle;
   assert.equal(unit1.entries.length, 13);
+  // The written course alone holds Unit 12's written modules (bundle.test.mjs runs the bundle tests on it).
+  const written = buildBundleWithReport(loadCourse({ planned: false }), sources).bundle;
+  assert.equal(written.entries.length, 169);
+  assert.equal(written.units.at(-1).unit_key, 'unit12');
 });
 
 test('checker ignores planned', async () => {
   assert.ok(planned.length > 0, 'the outline holds planned stubs');
-  // The same course with every planned module taken out of the files and the outline (and units left empty dropped).
-  const { outlineText, files } = readContent(CONTENT_ROOT);
-  const outline = JSON.parse(outlineText);
-  const stubKeys = new Set(planned.map((m) => m.module_key));
-  outline.units = outline.units.map((u) => ({ ...u, entries: u.entries.filter((k) => !stubKeys.has(k)) })).filter((u) => u.entries.length);
-  const without = assembleCourse(outline, files.filter((f) => !stubKeys.has(f.file.replace(/^.*\//, '').replace(/\.json$/, ''))), { checkAnswer: defaultCheckAnswer });
+  const without = loadCourse({ planned: false });
+  assert.equal(without.modules.size, course.modules.size - planned.length);
   const a = await runCheck({ repoRoot: REPO_ROOT, lang: 'fr', content: course });
   const b = await runCheck({ repoRoot: REPO_ROOT, lang: 'fr', content: without });
   const sa = summarize(a.issues, a.stats);

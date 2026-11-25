@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "prefixes-re-de-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Prefixes re- and dé- (refaire, recommencer, déménager, décrocher)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

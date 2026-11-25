@@ -3,7 +3,7 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { assembleCourse } from './assemble.mjs';
+import { assembleCourse, withoutPlanned } from './assemble.mjs';
 import { problem, ContentError } from './problems.mjs';
 import { defaultCheckAnswer } from './passable.mjs';
 
@@ -43,7 +43,8 @@ export function graphIds(dir = GRAPH_LANG_DIR) {
 }
 
 // graphDir: the graph language folder whose ids teaches and tests are checked against; null checks only their shape.
-export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer, graphDir = GRAPH_LANG_DIR } = {}) {
+// planned: false loads the written course only (assemble.mjs withoutPlanned), for checks of what the stubs hide.
+export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer, graphDir = GRAPH_LANG_DIR, planned = true } = {}) {
   const { outlineFile, outlineText, files } = readContent(root);
   if (outlineText === null) throw new ContentError([problem(outlineFile, '', 'file_missing', 'course.json does not exist')]);
   let outline;
@@ -61,5 +62,6 @@ export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnsw
     }
     throw new ContentError(ps);
   }
-  return assembleCourse(outline, files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir) });
+  const content = planned ? { outline, files } : withoutPlanned(outline, files);
+  return assembleCourse(content.outline, content.files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir) });
 }

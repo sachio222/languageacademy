@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "school-papier",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "School and language (A2)",
+  "plan": {
+    "words": [
+      "fr:lex:papier",
+      "fr:lex:regle",
+      "fr:lex:liste",
+      "fr:lex:test",
+      "fr:lex:nombre",
+      "fr:lex:page",
+      "fr:lex:apprecier",
+      "fr:lex:deviner",
+      "fr:lex:signifier"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

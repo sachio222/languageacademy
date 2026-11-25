@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "measures-deuxieme",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Numbers and measures (A1)",
+  "plan": {
+    "words": [
+      "fr:lex:deuxieme",
+      "fr:lex:metre",
+      "fr:lex:demi",
+      "fr:lex:troisieme",
+      "fr:lex:kilometre",
+      "fr:lex:kilo",
+      "fr:lex:litre",
+      "fr:lex:quatrieme"
+    ],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}

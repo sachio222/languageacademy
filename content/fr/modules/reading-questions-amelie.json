@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "reading-questions-amelie",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · {Les Questions d'Amélie}",
+  "plan": {
+    "words": [
+      "fr:lex:air",
+      "fr:lex:animal",
+      "fr:lex:grand-pere",
+      "fr:lex:haut",
+      "fr:lex:leger",
+      "fr:lex:lourd",
+      "fr:lex:lune"
+    ],
+    "constructions": [],
+    "source": "plan.json",
+    "draft": "research/course-plan/reading-12-draft.js"
+  }
+}

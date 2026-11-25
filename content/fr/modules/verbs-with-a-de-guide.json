@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-with-a-de-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Guide: Verbs with à and de (penser à, parler de, empêcher de, réussir à)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "plan.json"
+  }
+}
