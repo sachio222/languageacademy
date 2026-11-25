@@ -217,7 +217,9 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
       if (bad.length) throw new Error(`${key} vocabularyReference[${i}].wikipedia: fields the conversion does not know: ${bad.join(', ')}`);
       const image = isStr(wk.image) ? wk.image.trim() : null;
       const credit = image ? infoCards(image) : { credit: null, stated: null };
-      w.info_card = { name: String(wk.name).trim(), description: String(wk.description).trim(), image, image_credit: credit.credit, url: String(wk.url).trim() };
+      // A missing name, description or url stays missing, so validation names it (never the string "undefined").
+      const text = (x) => (isStr(x) ? x.trim() : undefined);
+      w.info_card = { name: text(wk.name), description: text(wk.description), image, image_credit: credit.credit, url: text(wk.url) };
       if (image && credit.credit === null)
         add(
           `vocabularyReference[${i}].wikipedia.image`,

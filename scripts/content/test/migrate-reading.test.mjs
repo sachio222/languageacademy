@@ -190,3 +190,15 @@ test('an info card needs an https link and a site image path, or null', () => {
   assert.deepEqual(withCard(card({ image: 'img/paris.gif' })), ['vocabulary[0].info_card.image']);
   assert.deepEqual(withCard({ name: 'Paris', description: 'x', url: 'https://x' }), ['vocabulary[0].info_card.image', 'vocabulary[0].info_card.image_credit']);
 });
+
+test('an info card with no name is a validation error, never the text "undefined"', async () => {
+  const { imageCredit } = await import('../migrate/sources.mjs');
+  const old = clone(configs.get('2024-02-01-reading-10'));
+  delete old.vocabularyReference[0].wikipedia.name;
+  const story = L.stories.find((s) => s.n === 10) ?? null;
+  const { mod } = readingFrom(old, story, { unitIndex: 10, imageCredit });
+  const card = JSON.parse(JSON.stringify(mod.vocabulary[0].info_card));
+  assert.ok(!('name' in card));
+  const problems = validateModule(JSON.parse(JSON.stringify(mod)), { file: 'r.json', unitIndex: 10 }).filter((p) => /info_card/.test(p.path));
+  assert.deepEqual(problems.map((p) => [p.path, p.code]), [['vocabulary[0].info_card.name', 'field_missing']]);
+});

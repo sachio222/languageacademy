@@ -193,10 +193,12 @@ function sentenceOf(item) {
 }
 
 // A data guide's parts back as today's guide.sections: the text is the rule, the first block the rows, a second
-// lines block the examples (guide.mjs guideFromSections).
+// lines block the examples (guide.mjs guideFromSections). A part's note (today's row notes, joined) comes back as
+// the section's note, so the test sees it.
 function guideOf(mod) {
   const sections = (mod.parts || []).map((p) => {
     const s = { heading: plain(p.heading), rule: (p.text || []).map(plain).join('\n\n') };
+    if (isStr(p.note)) s.note = plain(p.note);
     const [first, second] = p.blocks || [];
     const rowsOf = (b) => (b ? (b.pairs ?? b.lines ?? []).map(([fr, en]) => ({ french: fr, english: en })) : []);
     if (first) s.rows = rowsOf(first);

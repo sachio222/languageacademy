@@ -1,24 +1,29 @@
 // Task 8, spec 8.2 "Proof the live screens see the same lessons": every lesson today's lessonData.js builds
 // (fixtures/golden-lessons.json, written by `node scripts/content/migrate/run.mjs golden`) is compared, field by field,
 // with toLegacyLesson of its converted file. A difference passes only when fixtures/golden-allowed.json puts it in a
-// class whose basis is a migration-report line of Tasks 6 and 7 (or a ledger ruling), and each class holds exactly the
-// count it records, so a new difference fails until someone reads it and names its reason.
+// class whose basis is a migration-report line of Tasks 6 and 7, Task 6's data or a ledger ruling, and whose relation
+// ties the difference's values to that basis exactly; each class holds exactly the count it records, so a new
+// difference fails until someone reads it and names its reason.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadCourse, CONTENT_ROOT } from '../load.mjs';
 import { frenchSpans } from '../spans.mjs';
-import { toLegacyLesson } from '../legacy/to-legacy-lesson.mjs';
-import { compareLesson, classify, parseReport, describe, liveIdChecks } from '../legacy/golden.mjs';
+import { toLegacyLesson, plain } from '../legacy/to-legacy-lesson.mjs';
+import { compareLesson, classify, parseReport, describe, goldenChecks } from '../legacy/golden.mjs';
+import { REWRITES } from '../migrate/holds.mjs';
 
 const here = new URL('./fixtures/', import.meta.url);
 const readJson = (u) => JSON.parse(readFileSync(u, 'utf8'));
 const snapshot = readJson(new URL('golden-lessons.json', here));
 const allowed = readJson(new URL('golden-allowed.json', here));
 const liveIds = readJson(join(CONTENT_ROOT, 'legacy', 'live-ids.json'));
+const lSources = readJson(join(CONTENT_ROOT, 'legacy', 'l-sources.json'));
+const handFixes = readJson(join(CONTENT_ROOT, 'legacy', 'hand-fixes.json'));
 const report = parseReport(readFileSync(join(CONTENT_ROOT, 'migration-report.md'), 'utf8'));
 const course = loadCourse();
+const checks = goldenChecks({ liveIds, course, lSources, handFixes, rewrites: REWRITES, plain });
 
 // Every span text in a module: today's quotes around one are dropped before comparing (golden.mjs sameText).
 function spansOf(mod) {
@@ -32,7 +37,14 @@ function spansOf(mod) {
   return out;
 }
 
-function run() {
+const adapted = new Map();
+const adapt = (mod) => {
+  if (!adapted.has(mod.module_key)) adapted.set(mod.module_key, JSON.parse(JSON.stringify(toLegacyLesson(mod, { liveIds, course }))));
+  return structuredClone(adapted.get(mod.module_key));
+};
+
+// mutate(moduleKey, lesson): a planted change to the adapter's lesson, for the planted-loss tests.
+function run(mutate = null) {
   const diffs = [];
   const stats = { lessons: 0, fields: 0 };
   const seen = new Set();
@@ -49,13 +61,17 @@ function run() {
       continue;
     }
     seen.add(live.moduleKey);
-    const conv = JSON.parse(JSON.stringify(toLegacyLesson(mod, { liveIds, course })));
+    let conv = adapt(mod);
+    if (mutate) conv = mutate(live.moduleKey, conv) ?? conv;
     stats.lessons += 1;
     for (const d of compareLesson(live, conv, { spans: spansOf(mod), stats })) diffs.push({ module_key: live.moduleKey, kind: mod.kind, ...d });
   }
   for (const [key, mod] of course.modules)
     if (mod.status !== 'planned' && !seen.has(key)) diffs.push({ module_key: key, kind: mod.kind, path: '(lesson)', live: undefined, converted: key });
-  return { diffs, stats, ...classify(diffs, allowed.classes, report, liveIdChecks(liveIds)) };
+  const r = classify(diffs, allowed.classes, report, checks);
+  const counts = Object.fromEntries([...r.byClass].map(([c, ds]) => [c, ds.length]));
+  const off = allowed.classes.filter((c) => counts[c.class] !== c.count).map((c) => `${c.class} ${c.count} -> ${counts[c.class]}`);
+  return { diffs, stats, counts, off, ...r };
 }
 
 const result = run();
@@ -68,30 +84,85 @@ test('adapter shows the same lessons as today', () => {
 });
 
 test('every allowed class holds exactly the differences it records', () => {
-  const counts = Object.fromEntries([...result.byClass].map(([c, ds]) => [c, ds.length]));
-  const recorded = Object.fromEntries(allowed.classes.map((c) => [c.class, c.count]));
-  assert.deepEqual(counts, recorded);
+  assert.deepEqual(result.off, []);
 });
 
-test('every allowed class names its path pattern and its basis', () => {
+test('every allowed class names its path pattern, its basis and how its values relate to it', () => {
   for (const c of allowed.classes) {
     assert.ok(c.paths?.length && c.paths.every((p) => typeof p === 'string' && p.startsWith('^')), `${c.class}: anchored path patterns`);
-    // A whole field (^title$) is allowed only through a line pinned to it or tied to the value.
-    assert.ok(c.paths.every((p) => !/^\^[a-zA-Z.]+\$$/.test(p.replace(/\\/g, '')) || c.basis.relation || c.basis.path || c.basis.data), `${c.class}: a whole field needs a relation to its report line`);
     assert.ok(typeof c.reason === 'string' && c.reason.length > 20, `${c.class}: reason`);
-    assert.ok(c.basis.report || c.basis.ruling || c.basis.data, `${c.class}: a report line kind, a ledger ruling or a live-ids check`);
+    assert.ok(c.basis.report || c.basis.ruling || c.basis.data, `${c.class}: a report line kind, a ledger ruling or a data check`);
     if (c.basis.ruling) assert.ok(Array.isArray(c.basis.modules) && c.basis.modules.length, `${c.class}: a ruling names its modules`);
+    // Every class checks the values, not only the place: a relation, a data check, or (a single exception) the values.
+    assert.ok(c.basis.relation || c.basis.data || c.basis.values, `${c.class}: a relation, a data check or named values`);
+    assert.ok(!['any', 'same_index'].includes(c.basis.relation), `${c.class}: a relation that checks the values`);
   }
 });
 
-test('a planted loss is caught', () => {
-  // Drop one wrong answer and change one prompt in a lesson that compares clean: both must come out unexplained.
-  const live = snapshot.find((l) => l.moduleKey === '2024-01-02-etre');
-  const mod = course.modules.get(live.moduleKey);
-  const conv = JSON.parse(JSON.stringify(toLegacyLesson(mod, { liveIds, course })));
-  conv.exercises[0].wrongAnswers.pop();
-  conv.exercises[1].prompt = 'something else';
-  const diffs = compareLesson(live, conv, { spans: spansOf(mod) }).map((d) => ({ module_key: live.moduleKey, kind: mod.kind, ...d }));
-  const { unexplained } = classify(diffs, allowed.classes, report, liveIdChecks(liveIds));
-  assert.deepEqual(unexplained.map((d) => d.path).sort(), ['exercises[0].wrongAnswers[1]', 'exercises[1].prompt']);
-});
+// Planted losses: each change below makes the adapter's lesson lose or change something a learner sees, outside or
+// inside an allowed class. The test must fail on every one (an unexplained difference or a class count off).
+const only = (key, f) => (k, c) => (k === key ? f(c) ?? c : c);
+function dropPicture(c, n) {
+  const t = c.readingPassage.text.split('\n\n');
+  const tr = c.readingPassage.translation.split('\n\n');
+  const at = t.map((x, i) => (x.startsWith('![') ? i : -1)).filter((i) => i >= 0)[n];
+  t.splice(at, 1);
+  tr.splice(at, 1);
+  c.readingPassage.text = t.join('\n\n');
+  c.readingPassage.translation = tr.join('\n\n');
+}
+const PLANTED = [
+  ['a wrong answer dropped and a prompt changed (Être)', only('2024-01-02-etre', (c) => {
+    c.exercises[0].wrongAnswers.pop();
+    c.exercises[1].prompt = 'something else';
+  })],
+  ['a picture dropped from Reading 5 (story_pictures)', only('2024-04-13-reading-5', (c) => dropPicture(c, 2))],
+  ["another reading's picture in Reading 2 (story_pictures)", only('2024-01-22-reading2', (c) => {
+    c.readingPassage.text = c.readingPassage.text.replace(/!\[img\/reading2\/[^\]]+\]/, '![img/reading9/x]');
+  })],
+  ['a Unit 9 hint reworded (fillblank_suffix_now_hint)', only('2024-05-30-passe-compose-er', (c) => {
+    c.exercises[0].hint = "Use 'parlez'";
+  })],
+  ['a joined note cut (vocabulary_usage_into_note)', only('2024-05-28-more-spatial-relations', (c) => {
+    c.vocabularyReference[10].note = 'adjective';
+  })],
+  ['a twin card note cut (vocabulary_card_listed_twice)', only('2024-05-23-temporal-words', (c) => {
+    c.vocabularyReference.find((x) => x.french === 'après').note = 'sequence';
+  })],
+  ['a practice gloss cut (practice_instruction_as_gloss)', only('2024-01-10-unit1-practice', (c) => {
+    c.sentences[0].instruction = 'I am';
+  })],
+  ['a misplaced-blank sentence loses a word (practice_blank_misplaced)', only('2024-01-23-unit2-practice', (c) => {
+    c.sentences[6].text = c.sentences[6].text.replace('Il est', 'Il');
+  })],
+  ['a joined blank hint reworded (practice_blank_hints_joined)', only('2024-05-25-unit-8-practice', (c) => {
+    c.sentences[0].blanks[0].hint = 'something else';
+  })],
+  ["the negation guide's part note dropped (negation_row_notes_joined)", only('2026-11-24-negation-guide', (c) => {
+    delete c.guide.sections[1].note;
+  })],
+  ["Reading 4's scene heading dropped", only('2024-03-30-reading-4', (c) => {
+    c.readingPassage.text = c.readingPassage.text.replace(/^## /m, '');
+  })],
+  ['a position-word fix replaced (position_words_fixed)', only('2024-01-06-basic-nouns', (c) => {
+    c.exercises[0].hint = 'Combine';
+  })],
+  ['a unit exam title replaced (unit_exam_title_derived)', only('2024-01-11-unit1-exam', (c) => {
+    c.title = 'Module 13: Unit exam';
+  })],
+  ['a ruled choice item changed (savoir_connaitre_choice)', only('2024-05-10-unit-7-exam', (c) => {
+    c.exercises[18].expectedAnswer = 'anything';
+  })],
+  ['a story caption translation changed (story_translation)', only('2024-01-09-reading1', (c) => {
+    c.readingPassage.translation = c.readingPassage.translation.replace('Paul, a cat and a dog.', 'Paul.');
+  })],
+  ['two new item ids swapped (new_item_ids)', only('2026-11-24-numbers', (c) => {
+    const ex = c.exercises.filter((e) => !/\.\d+$/.test(e.id));
+    [ex[0].id, ex[1].id] = [ex[1].id, ex[0].id];
+  })],
+];
+for (const [name, mutate] of PLANTED)
+  test(`a planted loss is caught: ${name}`, () => {
+    const r = run(mutate);
+    assert.ok(r.unexplained.length > 0 || r.off.length > 0, `${name} passed the golden test`);
+  });

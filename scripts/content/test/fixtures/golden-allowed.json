@@ -1,5 +1,5 @@
 {
-  "about": "Differences between today's lessons (golden-lessons.json) and toLegacyLesson of the converted files that scripts/content/test/golden.test.mjs allows, by class. A class names the lesson paths it covers (anchored patterns), its basis (a line kind of content/fr/migration-report.md from Tasks 6 and 7, with the detail and path the line must have and how its values relate to the difference, a check against live-ids.json, or a ledger ruling with the modules it covers and, where it has one, a relation checked on the difference), and the exact count it holds. scripts/content/legacy/golden.mjs RELATIONS defines each relation.",
+  "about": "Differences between today's lessons (golden-lessons.json) and toLegacyLesson of the converted files that scripts/content/test/golden.test.mjs allows, by class. A class names the lesson paths it covers (anchored patterns), its basis (a line kind of content/fr/migration-report.md from Tasks 6 and 7 with the detail and path the line must have, a check against Task 6's data such as live-ids.json, or a ledger ruling with the modules it covers), the relation that ties each difference's values to that basis exactly, and the exact count it holds. scripts/content/legacy/golden.mjs RELATIONS and goldenChecks define each relation.",
   "classes": [
     {
       "class": "shelf_copy_removed",
@@ -53,11 +53,11 @@
     },
     {
       "class": "position_words_fixed",
-      "reason": "Learner text that named a module, unit or reading by number now names the subject (spec 5.2 position_word; fixed by hand in Tasks 6 and 7).",
+      "reason": "Learner text that named a module, unit or reading by number now names the subject (spec 5.2 position_word; fixed by hand in Tasks 6 and 7). The relation checks the new text is what hand-fixes.json holds for the module.",
       "basis": {
         "report": "position_word",
         "detail": "\\(fixed by hand\\)$",
-        "relation": "title_in_detail"
+        "relation": "position_word_hand_fixed"
       },
       "paths": [
         "^title$",
@@ -71,12 +71,12 @@
     },
     {
       "class": "unit_exam_title_derived",
-      "reason": "A unit exam's title comes from the outline, \"Unit exam · <unit name>\" (spec 5.8; Task 3 carry: Unit 1 exam titles derived).",
+      "reason": "A unit exam's title comes from the outline, \"Unit exam · <unit name>\" (spec 5.8; Task 3 carry: Unit 1 exam titles derived). The relation checks the title is \"Unit exam · <the outline's unit name>\".",
       "basis": {
         "report": "dropped_field",
         "path": "^title$",
         "detail": "a unit exam's title comes from the outline",
-        "relation": "title_in_detail"
+        "relation": "unit_exam_title_outline"
       },
       "paths": [
         "^title$"
@@ -93,7 +93,7 @@
         "report": "text_changed",
         "path": "^title$",
         "detail": "is L's title",
-        "relation": "title_in_detail"
+        "relation": "guide_title_quoted"
       },
       "paths": [
         "^title$"
@@ -142,7 +142,7 @@
         "report": "text_changed",
         "path": "^items\\[\\d+\\]\\.instruction$",
         "detail": "^instruction written as the gloss",
-        "relation": "live_contains_converted"
+        "relation": "gloss_exact"
       },
       "paths": [
         "^sentences\\[\\d+\\]\\.instruction$"
@@ -154,7 +154,7 @@
       "reason": "A practice blank that cut a word, sat on a mark the app drops, or sat after the full stop is placed where the language-graph checker reads it (spec 6, practice sets row).",
       "basis": {
         "report": "blank_misplaced",
-        "relation": "same_index"
+        "relation": "blank_misplaced_exact"
       },
       "paths": [
         "^sentences\\[\\d+\\]\\.shown$"
@@ -168,7 +168,7 @@
         "report": "text_changed",
         "path": "^items\\[\\d+\\]\\.blanks$",
         "detail": "blank hints joined into one hint",
-        "relation": "same_index"
+        "relation": "hints_joined_exact"
       },
       "paths": [
         "^sentences\\[\\d+\\]\\.blanks\\[\\d+\\]\\.hint$"
@@ -215,7 +215,7 @@
         "report": "dropped_field",
         "path": "^exerciseConfig\\.items\\[\\d+\\]\\.prompt$",
         "detail": "\\((says only where the answer is|repeats the question)\\)$",
-        "relation": "live_in_detail_same_index"
+        "relation": "comprehension_dropped"
       },
       "paths": [
         "^exercises\\[\\d+\\]\\.prompt$"
@@ -233,7 +233,7 @@
         "report": "text_changed",
         "path": "^items\\[\\d+\\]\\.prompt$",
         "detail": "the instruction says it, and the French",
-        "relation": "live_in_detail_same_index"
+        "relation": "meaning_prompt_exact"
       },
       "paths": [
         "^exercises\\[\\d+\\]\\.prompt$"
@@ -242,10 +242,10 @@
     },
     {
       "class": "savoir_connaitre_choice",
-      "reason": "Jake 2026-11-25: the two Unit 7 exam savoir/connaître items with English answers are choice items (ledger; report section \"Exercises rewritten as Jake ruled\").",
+      "reason": "Jake 2026-11-25: the two Unit 7 exam savoir/connaître items with English answers are choice items (ledger; report section \"Exercises rewritten as Jake ruled\"). The relation checks each field against the item as ruled (holds.mjs REWRITES).",
       "basis": {
         "report": "rewritten",
-        "relation": "same_index"
+        "relation": "savoir_pinned"
       },
       "paths": [
         "^exercises\\[\\d+\\]\\.(instruction|prompt|hint|expectedAnswer|accepts|wrongAnswers\\[\\d+\\])$"
@@ -276,7 +276,7 @@
         "report": "text_changed",
         "path": "^vocabularyReference\\[\\d+\\]\\.(usage|agreement)$",
         "detail": "added to the note$",
-        "relation": "same_index"
+        "relation": "usage_into_note_exact"
       },
       "paths": [
         "^vocabularyReference\\[\\d+\\]\\.(note|usage|agreement)$"
@@ -285,11 +285,11 @@
     },
     {
       "class": "vocabulary_speech_and_wikipedia_dropped",
-      "reason": "A word card's speech override has no field, and its Wikipedia entry is kept in the dictionary only (spec 6, dropped-by-the-builder row).",
+      "reason": "A word card's speech override has no field (spec 6, dropped-by-the-builder row); the line quotes the value dropped.",
       "basis": {
         "report": "dropped_field",
         "path": "^vocabularyReference\\[\\d+\\]\\.(ttsText|wikipedia)$",
-        "relation": "same_index"
+        "relation": "quoted_dropped"
       },
       "paths": [
         "^vocabularyReference\\[\\d+\\]\\.(ttsText|wikipedia)$"
@@ -303,7 +303,7 @@
         "report": "text_changed",
         "path": "^vocabularyReference\\[\\d+\\]$",
         "detail": "is listed twice; one card, notes joined$",
-        "relation": "twin_card"
+        "relation": "twin_card_exact"
       },
       "paths": [
         "^vocabularyReference\\[\\d+\\]$",
@@ -320,28 +320,30 @@
         "relation": "story_sentence"
       },
       "paths": [
-        "^readingPassage\\.text#sentence$"
+        "^readingPassage\\.text#sentence$",
+        "^readingPassage\\.text#scene$"
       ],
       "kinds": [
         "reading"
       ],
-      "count": 70
+      "count": 71
     },
     {
       "class": "story_translation",
-      "reason": "The English of a story block whose French has a story line (a caption added, a line changed) changes with it (spec 6, readings row; Task 7).",
+      "reason": "The English of a story block whose French has a story line (a caption added, a line changed) changes with it (spec 6, readings row; Task 7). The relation also checks each new English sentence is L's English for the story (l-sources.json).",
       "basis": {
         "report": "text_changed",
         "path": "^passage$",
-        "relation": "story_translation"
+        "relation": "story_translation_l"
       },
       "paths": [
-        "^readingPassage\\.translation#sentence$"
+        "^readingPassage\\.translation#sentence$",
+        "^readingPassage\\.translation#scene$"
       ],
       "kinds": [
         "reading"
       ],
-      "count": 70
+      "count": 71
     },
     {
       "class": "story_speaker_in_french",
@@ -378,11 +380,12 @@
     },
     {
       "class": "story_subtitle_in_passage",
-      "reason": "Reading 5's subtitle is a passage block in the story; its sentences are listed as story lines (Task 7).",
+      "reason": "Reading 5's subtitle is a passage block in the story; the relation checks every sentence of today's subtitle has its own story line (Task 7).",
       "basis": {
         "report": "text_changed",
         "path": "^readingPassage\\.subtitle$",
-        "detail": "^the subtitle is a passage block in the story$"
+        "detail": "^the subtitle is a passage block in the story$",
+        "relation": "subtitle_sentences_reported"
       },
       "paths": [
         "^readingPassage\\.subtitle$",
@@ -395,20 +398,21 @@
     },
     {
       "class": "negation_row_notes_joined",
-      "reason": "The negation guide's row notes join the part's note, since L's pairs and lines have no note cell (Task 7 fix round 1, guide.mjs guideFromSections).",
+      "reason": "The negation guide's row notes join the part's note, since L's pairs and lines have no note cell (Task 7 fix round 1, guide.mjs guideFromSections); the adapter gives the part's note back as the section's note, and the relation checks it is exactly today's row notes joined.",
       "basis": {
         "report": "text_changed",
         "path": "^guide\\.sections\\[\\d+\\]\\.rows$",
         "detail": "row notes joined into the part's note",
-        "relation": "same_index"
+        "relation": "row_notes_in_part_note"
       },
       "paths": [
-        "^guide\\.sections\\[\\d+\\]\\.rows\\[\\d+\\]\\.note$"
+        "^guide\\.sections\\[\\d+\\]\\.rows\\[\\d+\\]\\.note$",
+        "^guide\\.sections\\[\\d+\\]\\.note$"
       ],
       "kinds": [
         "guide"
       ],
-      "count": 2
+      "count": 3
     },
     {
       "class": "fillblank_suffix_now_hint_prompt",
@@ -487,7 +491,7 @@
     },
     {
       "class": "story_pictures",
-      "reason": "Ledger ruling 2026-11-25 Task 8 (2): a reading's passage and art come from L's story (spec 5.7, Task 7), so L's pictures (img/reading<N>/…) replace today's images.",
+      "reason": "Ledger ruling 2026-11-25 Task 8 (2): a reading's passage and art come from L's story (spec 5.7, Task 7), so L's pictures replace today's images; the relation checks the reading's pictures are the L story's art, all of it, in order (l-sources.json).",
       "basis": {
         "ruling": "ledger ruling 2026-11-25 Task 8",
         "modules": [

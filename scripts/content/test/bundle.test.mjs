@@ -424,3 +424,18 @@ test('a --previous file that is not a bundle is a clean error', (t) => {
     assert.equal(existsSync(out), false, name);
   }
 });
+
+// Task 8 (L 20991bf): Reading 10's place cards reach the bundle on the word, wherever the word appears, and on no
+// per-entry word list.
+test('Reading 10 words carry their info card in the bundle', () => {
+  const mod = course.modules.get('2024-02-01-reading-10');
+  const cards = new Map(mod.vocabulary.filter((w) => w.info_card).map((w) => [w.word_id, w.info_card]));
+  assert.equal(cards.size, 8);
+  const withCard = bundle.words.filter((w) => w.info_card);
+  assert.deepEqual(withCard.map((w) => w.word_id).sort(), [...cards.keys()].sort());
+  for (const w of withCard) assert.deepEqual(w.info_card, cards.get(w.word_id), w.word_id);
+  assert.equal(cards.get('montmartre-fr').image_credit, 'Gio Terra (Terragio67, WikiCommons), CC BY-SA 4.0');
+  // The entry's own word list stays as L's schema has it: the card is on the word only (as serialized).
+  assert.ok(!JSON.parse(JSON.stringify(contentOf(bundle, '2024-02-01-reading-10').words)).some((w) => 'info_card' in w));
+  assert.ok(!unit1.words.some((w) => w.info_card));
+});

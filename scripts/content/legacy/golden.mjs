@@ -233,9 +233,8 @@ function compareValue(live, conv, path, field, ctx, out) {
     }
     compareValue(live[f], conv[f], `${path}.${f}`, f, ctx, out);
   }
-  // An exercise's differences carry both sides' prompt and hint, so a class can relate a moved text to its new place.
-  if (field === 'exercises[]')
-    for (const d of out.slice(from)) d.exercise = { live: { prompt: live.prompt, hint: live.hint }, converted: { prompt: conv.prompt, hint: conv.hint } };
+  // An exercise's differences carry both sides' exercise, so a class can relate a moved text to its new place.
+  if (field === 'exercises[]') for (const d of out.slice(from)) d.exercise = { live, converted: conv };
 }
 
 // A passage is compared as the migration report lists story changes (reading.mjs changedSentences): sentence by
@@ -275,7 +274,9 @@ function comparePassage(live, conv, out, ctx) {
   const convFr = frOf(conv);
   for (const f of [...new Set([...Object.keys(live), ...Object.keys(conv)])]) {
     if (f !== 'text' && f !== 'translation') {
+      const from = out.length;
       compareValue(live[f], conv[f], `readingPassage.${f}`, f, ctx, out);
+      for (const d of out.slice(from)) d.passage = live; // today's subtitle, for its translation
       continue;
     }
     const lp = paragraphs(live[f]);
@@ -295,8 +296,20 @@ function comparePassage(live, conv, out, ctx) {
       for (const [i, j] of align(lpic, cpic, (x) => x)) {
         if (ctx.stats) ctx.stats.fields += 1;
         if (i !== null && j !== null && lpic[i] === cpic[j]) continue;
-        out.push({ path: 'readingPassage.text#picture', live: i === null ? null : lpic[i], converted: j === null ? null : cpic[j] });
+        out.push({ path: 'readingPassage.text#picture', live: i === null ? null : lpic[i], converted: j === null ? null : cpic[j], pictures: cpic });
       }
+    }
+    // Scene headings (## …), as the passage draws them apart from the text.
+    // A translation heading carries its paragraph's French, as a translation sentence does.
+    const heads = (ps) => ps.filter((p) => /^##\s/.test(p.body)).map((p) => ({ s: sentences(p.body.replace(/^##\s*/, '')).join(' '), i: p.i }));
+    const lh = heads(lp);
+    const ch = heads(cp);
+    for (const [i, j] of align(lh, ch, (x) => x.s)) {
+      if (ctx.stats) ctx.stats.fields += 1;
+      if (i !== null && j !== null && lh[i].s === ch[j].s) continue;
+      const d = { path: `readingPassage.${f}#scene`, live: i === null ? null : lh[i].s, converted: j === null ? null : ch[j].s };
+      if (f === 'translation') d.fr = [...(i === null ? [] : liveFr(lh[i].i)), ...(j === null ? [] : convFr(ch[j].i))];
+      out.push(d);
     }
     const ls = lp.filter((p) => p.label);
     const cs = cp.filter((p) => p.label);
@@ -322,10 +335,16 @@ export function compareLesson(live, conv, ctx = {}) {
     if (f === 'readingPassage') comparePassage(live[f], conv[f], out, ctx);
     else compareValue(live[f], conv[f], f, f, ctx, out);
   }
-  // A vocabulary difference names its card, so a class can tie it to a report line about that card.
+  // A vocabulary difference names its card and carries both tables; a practice or guide difference carries both
+  // sides' sentence or section; so a class can check a moved text against where it went.
   for (const d of out) {
-    const m = /^vocabularyReference\[(\d+)\]/.exec(d.path);
-    if (m) d.card = live.vocabularyReference?.[+m[1]]?.french;
+    let m = /^vocabularyReference\[(\d+)\]/.exec(d.path);
+    if (m) Object.assign(d, { card: live.vocabularyReference?.[+m[1]]?.french, cards: { live: live.vocabularyReference || [], converted: conv.vocabularyReference || [] } });
+    m = /^sentences\[(\d+)\]/.exec(d.path);
+    if (m) d.sentence = { live: live.sentences?.[+m[1]], converted: conv.sentences?.[+m[1]] };
+    m = /^guide\.sections\[(\d+)\]/.exec(d.path);
+    if (m) d.section = { live: live.guide?.sections?.[+m[1]], converted: conv.guide?.sections?.[+m[1]] };
+    d.spans = ctx.spans;
   }
   return out;
 }
@@ -429,41 +448,184 @@ export const RELATIONS = {
   story_art: (d) => (d.converted === null || /^img\/reading\d+\//.test(d.converted)) && (d.live === null || isStr(d.live)),
   // Ledger ruling 2026-11-25 Task 8 (5): the note line names today's mark and the speaker kept.
   speaker_colour_note: (d, l) => isStr(d.live) && isStr(d.converted) && l.detail.startsWith(`speaker_colour_dropped: "${d.live}" is the speaker "${d.converted}"`),
+  // A practice instruction written as the gloss: today's, with "Complete…:" and the quotes around the whole of it
+  // dropped, is the new gloss (items.mjs convertSentence), at the same index.
+  gloss_exact: (d, l) => {
+    if (!RELATIONS.same_index(d, l) || !isStr(d.live) || !isStr(d.converted)) return false;
+    let g = d.live.trim().replace(/^Complete[^:]*:\s*/, '');
+    const whole = /^(["'‘“])(.*)(["'’”])$/.exec(g);
+    if (whole && !/['‘"“]/.test(whole[2].replace(/(?<=\p{L})['’](?=\p{L})/gu, ''))) g = whole[2];
+    return sameText(g, d.converted, d.spans);
+  },
+  // A misplaced practice blank: the new sentence is the one the line says the checker reads, and the words a learner
+  // sees are today's words (blanks and marks aside); a blank that cut a word drops one letter of it today.
+  blank_misplaced_exact: (d, l, lines = []) => {
+    if (!RELATIONS.same_index(d, l) || !isStr(d.live) || !isStr(d.converted)) return false;
+    const m = /placed as the checker reads it: "(.*)"(?: \(fixed by hand\))?$/.exec(l.detail);
+    const even = (s) => s.replace(/\s*___\s*/g, ' ___ ').replace(/\s+/g, ' ').trim();
+    // The checker's placing, or a hand edit of it the report records ("<placed>" → "<edited>").
+    const i = firstIndex(d.path);
+    const edited = lines
+      .filter((x) => x.kind === 'hand_edit' && x.path === `items[${i}].text`)
+      .map((x) => /^"(.*)" → "(.*)"$/.exec(x.detail))
+      .filter((x) => x && m && even(x[1]) === even(m[1]))
+      .map((x) => x[2]);
+    if (!m || ![m[1], ...edited].some((t) => even(t) === even(d.converted))) return false;
+    // Letters only: today's sentence is the new one less exactly one letter for each blank the report says cut a
+    // word (the screen drew the blank in that letter's place), in order.
+    const letters = (s) => [...s.replace(/___/g, '').normalize('NFC')].filter((ch) => /[\p{L}\p{N}']/u.test(ch));
+    const a = letters(d.live);
+    const b = letters(d.converted);
+    const cuts = lines.filter((x) => x.kind === 'blank_misplaced' && firstIndex(x.path) === firstIndex(d.path) && /sits inside the word/.test(x.detail)).length;
+    if (b.length - a.length !== cuts) return false;
+    let k = 0;
+    for (const ch of b) if (k < a.length && a[k] === ch) k += 1;
+    return k === a.length;
+  },
+  // Blank hints joined: the new first hint is today's blank hints joined with " / ", and the other blanks have none.
+  hints_joined_exact: (d, l) => {
+    const s = d.sentence;
+    if (!RELATIONS.same_index(d, l) || !s?.live || !s?.converted) return false;
+    const joined = (s.live.blanks || []).map((b) => b.hint).filter(isStr).map((h) => h.trim()).join(' / ');
+    return s.converted.blanks?.[0]?.hint === joined && s.converted.blanks.slice(1).every((b) => b.hint === undefined);
+  },
+  // A card's usage and agreement notes joined into its note: the new note is today's note, usage and agreement, in
+  // that order, joined with "; ".
+  usage_into_note_exact: (d, l) => {
+    const i = firstIndex(d.path);
+    const live = d.cards?.live?.[i];
+    if (!RELATIONS.same_index(d, l) || !live) return false;
+    const conv = d.cards.converted.find((c) => c.french === live.french && c.english === live.english);
+    return !!conv && conv.note === [live.note, live.usage, live.agreement].filter(isStr).map((s) => s.trim()).join('; ');
+  },
+  // A card listed twice: one card is left, and its note holds the note of every copy.
+  // A note a position word was fixed out of by hand counts as kept when the fix line quotes it.
+  twin_card_exact: (d, l, lines = []) => {
+    const i = firstIndex(d.path);
+    const live = d.cards?.live?.[i];
+    if (!RELATIONS.twin_card(d, l) || !live) return false;
+    const copies = d.cards.live.filter((c) => c.french === live.french && c.english === live.english);
+    const left = d.cards.converted.filter((c) => c.french === live.french && c.english === live.english);
+    const fixedOut = (note) => lines.some((x) => x.kind === 'position_word' && /\(fixed by hand\)$/.test(x.detail) && x.detail.includes(note));
+    return copies.length > 1 && left.length === 1 && copies.every((c) => !isStr(c.note) || String(left[0].note ?? '').includes(c.note.trim()) || fixedOut(c.note.trim()));
+  },
+  // The negation guide's row notes, joined into the part's note: each of today's row notes (quotes around spans
+  // dropped) is in the part's note, and the part's note is exactly them, joined with a space.
+  row_notes_in_part_note: (d, l) => {
+    const s = d.section;
+    if (!RELATIONS.same_index(d, l) || !s?.live || !isStr(s.converted?.note)) return false;
+    const notes = (s.live.rows || []).map((r) => r.note).filter(isStr).map((n) => unquoteSpans(n.trim(), d.spans));
+    return notes.length > 0 && unquoteSpans(s.converted.note, d.spans) === notes.join(' ');
+  },
+  // A subtitle that is now a passage block: every one of its sentences has its own "story text: added" line (the
+  // French subtitle), or its paragraph's French does (the English one).
+  subtitle_sentences_reported: (d, l, lines = []) => {
+    if (!isStr(d.live) || d.converted !== undefined) return false;
+    const added = new Set(lines.filter((x) => x.kind === 'text_changed' && x.path === 'passage').map((x) => /^story text: added: "(.*)"$/.exec(x.detail)?.[1]).filter(Boolean));
+    const fr = sentences(/Translation$/.test(d.path) ? d.passage?.subtitle : d.live);
+    return fr.length > 0 && fr.every((s) => added.has(s));
+  },
+  // A field the report quotes as dropped ("<value>" (speech override; no field)), at its index, gone now.
+  quoted_dropped: (d, l) => d.converted === undefined && RELATIONS.same_index(d, l) && isStr(d.live) && l.detail.startsWith(`"${d.live}" (`),
+  // A reading question's prompt dropped: the line quotes it, at its index, and nothing took its place.
+  comprehension_dropped: (d, l) => d.converted === undefined && RELATIONS.live_in_detail_same_index(d, l),
+  // A meaning item's prompt: the line quotes today's prompt and the French now shown, exactly.
+  meaning_prompt_exact: (d, l) => {
+    const m = /prompt "(.*)": the instruction says it, and the French "(.*)" is shown$/.exec(l.detail);
+    return !!m && RELATIONS.same_index(d, l) && d.live === m[1] && d.converted === m[2];
+  },
+  // A guide's title is L's: the line quotes today's title and L's, exactly.
+  guide_title_quoted: (d, l) => {
+    const m = /^"(.*)" is L's title "(.*)"$/.exec(l.detail);
+    const strip = (s) => (isStr(s) ? s.replace(/^(?:Module \d+|Reference [IVXL]+): /, '') : s);
+    return !!m && strip(d.live) === m[1] && strip(d.converted) === m[2];
+  },
   any: () => true,
 };
 /**
- * Checks against content/fr/legacy/live-ids.json (Task 6, spec 8.3), for classes with `basis.data`.
- * - concept_id_from_live_ids: a concept card now carries its id, and it is the id live-ids.json gives today's card
- *   index (the Task 8 interface adds `id` to each concept); a module main lacks has no entry and keeps its own ids.
- * - item_id_not_on_main: an exercise id is `<module_key>.<item_id>` because main has no exercise for the item
- *   (spec 8.3: items added on course-guides get new ids and no live id), or it is main's live id for the item where
- *   this branch's lessonData numbers it differently.
+ * Checks that pin an allowed difference to the source data it came from, for classes with `basis.data` or as a
+ * class's relation. data = { liveIds (live-ids.json), course (loadCourse), lSources (l-sources.json), handFixes
+ * (hand-fixes.json), rewrites (holds.mjs REWRITES), plain (span braces removed) }.
+ * - concept_id_from_live_ids: a concept card's id is the one live-ids.json gives today's card index (the Task 8
+ *   interface adds `id`); a card or module main lacks keeps the module's own id for that card.
+ * - item_id_not_on_main: an exercise id names its own item: `<module_key>.<item_id>` for an item main has no exercise
+ *   for (spec 8.3), or main's live id for that very item where this branch numbers it differently.
+ * - story_art: the reading's pictures, in order, are the L story's art (ledger ruling 2026-11-25 Task 8 (2)).
+ * - story_translation_l: a story line's English is L's English for that story.
+ * - position_word_hand_fixed: the new text is what hand-fixes.json holds for the module.
+ * - unit_exam_title_outline: "Unit exam · <the outline's unit name>".
+ * - savoir_pinned: the choice item as Jake ruled it (holds.mjs REWRITES), field by field.
  */
-export function liveIdChecks(liveIds) {
+export function goldenChecks({ liveIds = {}, course = null, lSources = null, handFixes = {}, rewrites = [], plain = (t) => t } = {}) {
   const of = (key) => liveIds[key] ?? { items: {}, concepts: {} };
+  const mod = (key) => course?.modules.get(key) ?? null;
+  const storyOf = (key) => lSources?.stories?.find((s) => `reading${s.n}` === mod(key)?.story_id) ?? null;
+  const deepStrings = (v, out = new Set()) => {
+    if (isStr(v)) out.add(plain(v).trim());
+    else if (Array.isArray(v)) v.forEach((x) => deepStrings(x, out));
+    else if (isObj(v)) Object.values(v).forEach((x) => deepStrings(x, out));
+    return out;
+  };
+  const noPrefix = (s) => (isStr(s) ? s.replace(/^(?:Module \d+|Reference [IVXL]+): /, '') : s);
   return {
     concept_id_from_live_ids: (d) => {
       const m = /^concepts\[(\d+)\]\.id$/.exec(d.path);
       if (!m || d.live !== undefined || !isStr(d.converted)) return false;
-      // A module or card main does not have (the numbers lesson and the adjectives card, added on course-guides) has
-      // no live ticks to keep.
       const mapped = of(d.module_key).concepts;
-      if (liveIds[d.module_key] === undefined) return true;
-      if (mapped[m[1]] === undefined) return !Object.values(mapped).includes(d.converted);
+      // A module or card main does not have (the numbers lesson, the adjectives card) keeps its own concept id.
+      if (liveIds[d.module_key] === undefined || mapped[m[1]] === undefined)
+        return !Object.values(mapped).includes(d.converted) && (mod(d.module_key)?.concepts || []).some((c) => c.id === d.converted);
       return mapped[m[1]] === d.converted;
     },
     item_id_not_on_main: (d) => {
-      if (!/^exercises\[\d+\]\.id$/.test(d.path) || !isStr(d.converted)) return false;
-      const items = of(d.module_key).items;
+      if (!/^exercises\[\d+\]\.id$/.test(d.path) || !isStr(d.converted) || !d.exercise?.converted) return false;
+      const item = mod(d.module_key)?.items?.[d.exercise.converted.displayNumber - 1];
       const prefix = `${d.module_key}.`;
-      if (!d.converted.startsWith(prefix)) return false;
+      if (!item || !d.converted.startsWith(prefix)) return false;
+      const items = of(d.module_key).items;
       const rest = d.converted.slice(prefix.length);
-      if (/^\d+$/.test(rest)) return d.converted in items && d.live !== d.converted;
-      return !Object.values(items).includes(rest);
+      if (/^\d+$/.test(rest)) return items[d.converted] === item.id && d.live !== d.converted;
+      return rest === item.id && !Object.values(items).includes(rest);
+    },
+    story_art: (d) => {
+      const story = storyOf(d.module_key);
+      if (!story || !Array.isArray(d.pictures)) return false;
+      const art = story.blocks.filter((b) => b.img).map((b) => b.img);
+      return art.length === d.pictures.length && art.every((a, i) => a === d.pictures[i]) && (d.converted === null || art.includes(d.converted));
+    },
+    story_translation_l: (d, l) => {
+      if (!RELATIONS.story_translation(d, l)) return false;
+      if (d.converted === null) return true;
+      const story = storyOf(d.module_key);
+      return !!story && story.blocks.some((b) => isStr(b.en) && sentences(b.en).includes(d.converted));
+    },
+    position_word_hand_fixed: (d, l) => {
+      if (!RELATIONS.title_in_detail(d, l)) return false;
+      const fixes = handFixes[d.module_key];
+      if (!fixes) return false;
+      if (d.converted === undefined) {
+        // A note dropped by hand ("Unit 5 verb"): the hand-fixed card has none.
+        const m = /^vocabularyReference\[\d+\]\.note$/.exec(d.path);
+        return !!m && Object.entries(fixes).some(([k, v]) => k.startsWith('vocabulary/') && v?.fr === d.card && v.note === undefined);
+      }
+      return deepStrings(fixes).has(String(noPrefix(d.converted)).trim());
+    },
+    unit_exam_title_outline: (d, l) => {
+      const m = mod(d.module_key);
+      const unit = course?.units.find((u) => u.unit_key === m?.unit_key);
+      return RELATIONS.title_in_detail(d, l) && !!unit && d.converted === `Module ${m.position}: Unit exam · ${unit.name}`;
+    },
+    savoir_pinned: (d, l) => {
+      if (!RELATIONS.same_index(d, l)) return false;
+      const w = rewrites.find((r) => r.module_key === d.module_key && firstIndex(r.ref) === firstIndex(d.path));
+      if (!w) return false;
+      const f = /^exercises\[\d+\]\.(\w+)/.exec(d.path)?.[1];
+      const right = (w.item.options || []).find((o) => o.right);
+      const expected = { prompt: plain(w.item.question), expectedAnswer: plain(right?.text), hint: w.item.hint === undefined ? undefined : plain(w.item.hint) }[f];
+      return d.converted === expected;
     },
   };
 }
-
 function escapeRe(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
