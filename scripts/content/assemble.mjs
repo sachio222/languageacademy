@@ -4,6 +4,7 @@ import { problem, ContentError, isWarning } from './problems.mjs';
 import { validateModule, defaultSteps } from './schema/module.mjs';
 import { validateOutline } from './outline.mjs';
 import { checkItemPassable } from './passable.mjs';
+import { wordIdProblems } from './word-ids.mjs';
 
 // Unit 1 is free; every other unit is Premium (spec 5.1, L rule LRN-4). Never written in a file.
 export const FREE_UNIT_KEY = 'unit1';
@@ -64,6 +65,8 @@ export function assembleCourse(outline, files, opts = {}) {
   // or not an object; already reported above).
   const modulesByKey = new Map([...sources].map(([k, s]) => [k, s.parsed && isObj(s.json) ? s.json : null]));
   problems.push(...validateOutline(outline, modulesByKey, { file: outlineFile }));
+  // One word_id, one word, across the course in its order (word-ids.mjs).
+  problems.push(...wordIdProblems(courseOrder(outline).filter((k) => modulesByKey.get(k)).map((k) => ({ file: sources.get(k).file, mod: modulesByKey.get(k) }))));
 
   // Warnings never stop a load: the course carries them, and so does an error thrown for other problems.
   const warnings = problems.filter(isWarning);
@@ -94,6 +97,16 @@ export function withoutPlanned(outline, files) {
       .map((u) => (isObj(u) && Array.isArray(u.entries) ? { ...u, entries: u.entries.filter((k) => !planned.has(k)) } : u))
       .filter((u) => !isObj(u) || !Array.isArray(u.entries) || u.entries.length > 0);
   return { outline: out, files: files.filter((f) => !planned.has(keyOfFile(f.file))) };
+}
+
+// Every module key the outline lists, once, in course order: units first, then the shelf.
+function courseOrder(outline) {
+  if (!isObj(outline)) return [];
+  const keys = [
+    ...(Array.isArray(outline.units) ? outline.units.flatMap((u) => (isObj(u) && Array.isArray(u.entries) ? u.entries : [])) : []),
+    ...(isObj(outline.shelf) && Array.isArray(outline.shelf.pages) ? outline.shelf.pages : []),
+  ];
+  return [...new Set(keys.filter((k) => typeof k === 'string'))];
 }
 
 // module_key -> 1-based unit index, from the first listing (the outline check reports any second one).

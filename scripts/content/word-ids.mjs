@@ -125,3 +125,47 @@ export function rememberWord(word, moduleKey, seenBySpelling) {
   const prior = seenBySpelling.get(spelling) ?? [];
   seenBySpelling.set(spelling, [...prior, { word_id: word.word_id, french: word.fr, english: word.gloss, note: word.note ?? '', module_key: moduleKey }]);
 }
+
+/* ---------- one word_id, one word (course-wide, at load) ---------- */
+
+// A word as its word_id names it: the spelling (spellingOf) less a leading article, so "le chat", "chat" and "Chat !"
+// are one word and "la lune" is not "partir".
+const ARTICLE = /^(?:(?:le|la|les|un|une|des|du)\s+|l')/;
+export const wordKey = (fr) => spellingOf(fr).replace(ARTICLE, '').trim();
+
+/**
+ * Course-wide word_id problems, in course order (outline units, then the shelf). `modules`: [{ file, mod }] with each
+ * module's parsed object. Returns Problem-shaped objects ({ file, path, code, message, severity? }):
+ * - word_id_conflict (error): a word_id taught earlier for another word (a different wordKey).
+ * - word_id_unsuffixed (warning): a spelling taught earlier under one id, now under another id with no sense suffix,
+ *   so nothing says it is another meaning on purpose (spec 8.1: a new meaning takes `<id>.<sense>`).
+ */
+export function wordIdProblems(modules) {
+  const out = [];
+  const byId = new Map(); // word_id -> { key, fr, module_key }
+  const bySpelling = new Map(); // spellingOf -> { word_id, module_key }
+  for (const { file, mod } of modules) {
+    if (!mod || typeof mod !== 'object' || !Array.isArray(mod.vocabulary)) continue;
+    mod.vocabulary.forEach((w, i) => {
+      if (!w || typeof w.word_id !== 'string' || typeof w.fr !== 'string') return;
+      const path = `vocabulary[${i}].word_id`;
+      const key = wordKey(w.fr);
+      const first = byId.get(w.word_id);
+      if (first && first.key !== key)
+        out.push({ file, path, code: 'word_id_conflict', message: `${w.word_id} names "${first.fr}" in ${first.module_key}, not "${w.fr}"; give this word its own id` });
+      else if (!first) byId.set(w.word_id, { key, fr: w.fr, module_key: mod.module_key });
+      const spelling = spellingOf(w.fr);
+      const seen = bySpelling.get(spelling);
+      if (seen && seen.word_id !== w.word_id && !w.word_id.includes('.'))
+        out.push({
+          file,
+          path,
+          code: 'word_id_unsuffixed',
+          message: `"${w.fr}" is taught in ${seen.module_key} as ${seen.word_id}; the same meaning keeps that id, another meaning takes ${seen.word_id.replace(/\..*$/, '')}.<sense>`,
+          severity: 'warning',
+        });
+      else if (!seen) bySpelling.set(spelling, { word_id: w.word_id, module_key: mod.module_key });
+    });
+  }
+  return out;
+}
