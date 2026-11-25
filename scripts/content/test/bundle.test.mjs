@@ -466,3 +466,32 @@ test('Reading 10 words carry their info card in the bundle', () => {
   assert.ok(!JSON.parse(JSON.stringify(contentOf(bundle, '2024-02-01-reading-10').words)).some((w) => 'info_card' in w));
   assert.ok(!unit1.words.some((w) => w.info_card));
 });
+
+// Pipeline Task 3 added `review: true` on a lesson's vocabulary row; L's LessonWord has it as an optional boolean
+// (L be95eaa). The flag reaches the bundle word only when the row has it, so a course without review rows is unchanged.
+test('a review row carries review: true into the bundle; ordinary rows carry no review key', (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-content-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(CONTENT_ROOT, root, { recursive: true });
+  const key = '2024-01-02-etre';
+  const file = join(root, 'modules', `${key}.json`);
+  const m = JSON.parse(readFileSync(file, 'utf8'));
+  assert.ok(m.vocabulary.length > 2 && m.vocabulary.every((w) => !('review' in w)));
+  m.vocabulary[1].review = true;
+  writeFileSync(file, JSON.stringify(m));
+  const out = join(root, 'out', 'bundle.json');
+  const r = spawnSync(process.execPath, [CLI, 'bundle', '--root', root, '--out', out], { encoding: 'utf8' });
+  assert.equal(r.status, 0, r.stderr);
+  const b = JSON.parse(readFileSync(out, 'utf8'));
+  const words = contentOf(b, key).words;
+  assert.equal(words.length, m.vocabulary.length);
+  words.forEach((w, k) => {
+    if (k === 1) assert.equal(w.review, true, w.word_id);
+    else assert.ok(!('review' in w), `${w.word_id} carries no review key`);
+  });
+  const ok = runChecker(b);
+  assert.equal(ok.status, 0, JSON.stringify(ok));
+  assert.equal(ok.ok, true);
+  // The real course has no review rows, so none of its words carry the key.
+  assert.ok(!real.content.some((c) => c.words.some((w) => 'review' in w)));
+});

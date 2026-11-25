@@ -217,6 +217,8 @@ function lessonWords(m, dictionary) {
       note: w.note ?? null,
       part_of_speech: w.part_of_speech ?? entry?.part_of_speech ?? null,
     };
+    // A review row shows a word taught earlier (L's LessonWord.review, default false): emitted only when the row has it.
+    if (w.review === true) word.review = true;
     Object.defineProperty(word, 'info_card', { value: w.info_card ?? null, enumerable: false });
     return Object.defineProperty(word, 'dictionary', { value: entry, enumerable: false });
   });
