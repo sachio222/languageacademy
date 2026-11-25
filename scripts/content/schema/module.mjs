@@ -113,7 +113,7 @@ const MATCH = (re) => ({ t: 'match', re }); // a string no learner reads (a path
 // words are otherwise the module's own vocabulary (spec 5.2). tests: the constructions a practice set or exam checks.
 const CONSTRUCTIONS = OBJ({ constructions: LIST(KEY) }, ['constructions']);
 const TEACHES = OBJ({ constructions: LIST(KEY), words: LIST(KEY) }, ['constructions']);
-const COMMON_FIELDS = {
+export const COMMON_FIELDS = {
   title: S('native_fr'),
   topic: S('native_fr'),
   description: S('native_fr'),
@@ -167,7 +167,7 @@ const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), exa
 // (plan.json sits at research/course-plan/plan.json there; draft names research/course-plan/<file>).
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY, note: S('native') }, ['words', 'constructions', 'source']);
 
-const KIND_SCHEMAS = {
+export const KIND_SCHEMAS = {
   lesson: {
     // A lesson teaches at least one word: Flash Cards, Speed Match and Pronunciation are made from its vocabulary.
     fields: { vocabulary: LIST(LESSON_WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }) },
@@ -197,12 +197,12 @@ const KIND_SCHEMAS = {
   },
 };
 // A unit exam's title comes from the outline when the file has none (spec 5.8).
-const REQUIRED_WRITTEN = { default: ['title', 'description'], unit_exam: ['description'] };
+export const REQUIRED_WRITTEN = { default: ['title', 'description'], unit_exam: ['description'] };
 // Practice sets and exams teach nothing (spec 5.8): these fields on them are teaches_in_test, not field_unknown.
 const TEACHING_FIELDS = ['vocabulary', 'concepts', 'tables'];
 const TEST_KINDS = ['practice', 'unit_exam'];
 // A planned module holds only what the course plan settles (plan Task 17).
-const PLANNED_FIELDS = { schema: null, module_key: null, kind: null, status: null, title: S('native_fr'), teaches: TEACHES, plan: PLAN };
+export const PLANNED_FIELDS = { schema: null, module_key: null, kind: null, status: null, title: S('native_fr'), teaches: TEACHES, plan: PLAN };
 
 /* ---------- the walk ---------- */
 function walk(node, v, path, cx, parent) {

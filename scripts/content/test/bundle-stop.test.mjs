@@ -29,6 +29,7 @@ const bundleCheck = (root) => spawnSync(process.execPath, ['--disable-warning=MO
 const assertValidStop = (course, report) => {
   const unit = course.units.find((u) => u.unit_key === report.units_stopped_at);
   assert.ok(unit, `stopped at a unit of the course: ${report.units_stopped_at}`);
+  assert.ok(report.stopped_because, 'the bundle stopped');
   assert.ok(['planned', 'story_missing'].includes(report.stopped_because.code), report.stopped_because.code);
   if (report.stopped_because.code === 'story_missing') assert.ok(unit.modules.every((m) => m.status === 'written'), 'story_missing stops only a fully written unit');
 };

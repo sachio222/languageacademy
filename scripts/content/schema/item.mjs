@@ -17,8 +17,8 @@ export const BRACE = /[{}]/;
 export const plainFieldMessage = (t) => `${t.path} is ${t.role === 'fr' ? 'French' : 'native'} text, so it takes no {…} span; write it without braces`;
 
 // Per type: required and optional fields. Roles/typed for the simple string fields live in FIELD_ROLES.
-const COMMON = ['id', 'type', 'hint', 'mistakes', 'word_ids', 'steps'];
-const SHAPES = {
+export const COMMON = ['id', 'type', 'hint', 'mistakes', 'word_ids', 'steps'];
+export const SHAPES = {
   translate: { req: ['prompt', 'answer'], opt: ['accept'] },
   respond: { req: ['situation', 'answer'], opt: ['cue', 'accept'] },
   transform: { req: ['instruction', 'shown', 'answer'], opt: ['accept'] },
@@ -31,7 +31,7 @@ const SHAPES = {
 };
 
 // [role, typed] for each plain string field, by type.
-const FIELD_ROLES = {
+export const FIELD_ROLES = {
   translate: { prompt: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
   respond: { situation: ['native_fr', false], cue: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
   transform: { instruction: ['native_fr', false], shown: ['fr', false], answer: ['fr', true], accept: ['fr', true] },
