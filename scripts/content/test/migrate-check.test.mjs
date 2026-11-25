@@ -56,3 +56,27 @@ test('--force gives back every committed file: ids, hand fixes and record bases 
   const r = spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', RUN, '--force', '--check', '--root', root, '--tmp', work], { cwd: REPO, encoding: 'utf8' });
   assert.equal(r.status, 0, r.stdout.split('\n').filter((l) => l.startsWith('would change')).join('\n') + r.stderr);
 });
+
+test("swapping two units leaves every reading's story and passage as written (final review I4)", { skip: !hasMain && 'no main in this checkout' }, (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-swap-'));
+  const work = mkdtempSync(join(tmpdir(), 'la-swap-wt-'));
+  t.after(() => {
+    rmSync(root, { recursive: true, force: true });
+    rmSync(work, { recursive: true, force: true });
+  });
+  cpSync(join(REPO, 'content/fr'), root, { recursive: true });
+  const outlineFile = join(root, 'course.json');
+  const outline = JSON.parse(readFileSync(outlineFile, 'utf8'));
+  [outline.units[1], outline.units[2]] = [outline.units[2], outline.units[1]];
+  writeFileSync(outlineFile, JSON.stringify(outline, null, 2) + '\n');
+  const readings = ['2024-01-22-reading2', '2024-02-03-reading3'];
+  const before = Object.fromEntries(readings.map((k) => [k, JSON.parse(readFileSync(join(root, 'modules', `${k}.json`), 'utf8'))]));
+  for (const flags of [[], ['--force']]) {
+    spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', RUN, ...flags, '--root', root, '--tmp', work], { cwd: REPO, encoding: 'utf8' });
+    for (const k of readings) {
+      const after = JSON.parse(readFileSync(join(root, 'modules', `${k}.json`), 'utf8'));
+      assert.equal(after.story_id, before[k].story_id, `${k} ${flags.join(' ')}`);
+      assert.deepEqual(after.passage, before[k].passage, `${k} ${flags.join(' ')}`);
+    }
+  }
+});

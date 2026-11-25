@@ -46,7 +46,7 @@ import { outlineFromUnitConfigs, checkOutline, mergeOutline } from './outline.mj
 import { frozenPositions, checkAgainstLessons } from './positions.mjs';
 import { convertModule, kindOf } from './module.mjs';
 import { convertGuide } from './guide.mjs';
-import { readingFrom } from './reading.mjs';
+import { readingFrom, storyFor } from './reading.mjs';
 import { referenceFrom } from './reference.mjs';
 import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
 import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses, imageCredit } from './sources.mjs';
@@ -315,6 +315,8 @@ async function modules(args, flags, kindWords = ['modules']) {
   // Every part the module files hold differently from the converter's output, as data, so --force can apply
   // them again and nothing a person fixed lives only in the module files.
   const fixesFile = join(ROOT, 'legacy', 'hand-fixes.json');
+  // Each converted reading's story, frozen from the written files (reading.mjs storyFor).
+  const readingStories = readJson(join(ROOT, 'legacy', 'reading-stories.json'))?.readings ?? {};
   const allFixes = readJson(fixesFile) ?? {};
   const newFixes = {};
   const seenBySpelling = new Map();
@@ -345,7 +347,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     const common = { existing, record, idRecord: records[key] ?? null, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf, written };
     if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
-      const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;
+      const story = storyFor(key, written, needL().stories, readingStories);
       return readingFrom(old, story, { ...common, dictionary, seenBySpelling, dictionaryForms: forms, names: graph.names, minted, imageCredit });
     }
     if (kind === 'reference') return referenceFrom(old, { ...common, phonics, dictionary, seenBySpelling });

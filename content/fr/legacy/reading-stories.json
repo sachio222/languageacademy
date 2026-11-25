@@ -1,0 +1,16 @@
+{
+  "about": "Each reading converted from the live app and the L story it shows (migrate/reading.mjs storyFor), frozen on 2026-11-25 from the written files at 536d61b. A rerun takes a reading's story from its own file (story_id) first and from here only when the file is missing, never from the reading's unit position. A reading written in content/ only names its story in its own file.",
+  "readings": {
+    "2024-01-09-reading1": "reading1",
+    "2024-01-22-reading2": "reading2",
+    "2024-02-01-reading-10": "reading10",
+    "2024-02-03-reading3": "reading3",
+    "2024-02-12-reading-11": "reading11",
+    "2024-03-30-reading-4": "reading4",
+    "2024-04-13-reading-5": "reading5",
+    "2024-04-24-reading-6": "reading6",
+    "2024-05-07-reading-7": "reading7",
+    "2024-05-20-reading-8": "reading8",
+    "2024-06-05-reading-9": "reading9"
+  }
+}

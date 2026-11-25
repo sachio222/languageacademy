@@ -197,6 +197,20 @@ export function comprehensionFrom(it, { isWord = null, add = () => {}, ref } = {
 }
 
 /**
+ * The L story a reading shows: the one its written file names (story_id), else the one the frozen map gives the
+ * module (legacy/reading-stories.json), else none. Never the reading's unit position: moving a unit, or a reading
+ * into another unit, must not give it another story.
+ * @param key      module_key
+ * @param written  the module file as written, or null
+ * @param stories  l-sources.json `stories`
+ * @param frozen   { module_key: story_id } (reading-stories.json `readings`)
+ */
+export function storyFor(key, written, stories, frozen = {}) {
+  const id = (typeof written?.story_id === 'string' && written.story_id ? written.story_id : null) ?? frozen[key] ?? null;
+  return id ? (stories.find((s) => `reading${s.n}` === id) ?? null) : null;
+}
+
+/**
  * One of today's readings as a reading file, merged with what is written.
  * @param old    today's module object (isReadingComprehension)
  * @param story  the L story for this reading (l-sources.json `stories`), or null

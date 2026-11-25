@@ -202,3 +202,13 @@ test('an info card with no name is a validation error, never the text "undefined
   const problems = validateModule(JSON.parse(JSON.stringify(mod)), { file: 'r.json', unitIndex: 10 }).filter((p) => /info_card/.test(p.path));
   assert.deepEqual(problems.map((p) => [p.path, p.code]), [['vocabulary[0].info_card.name', 'field_missing']]);
 });
+
+test("a reading's story is the one its file names, else the frozen map's; never the unit's place (final review I4)", async () => {
+  const { storyFor } = await import('../migrate/reading.mjs');
+  const stories = [{ n: 2, unit: 2 }, { n: 3, unit: 3 }];
+  const map = { '2024-01-22-reading2': 'reading2' };
+  assert.equal(storyFor('2024-01-22-reading2', { story_id: 'reading3' }, stories, map).n, 3, 'the written story_id wins');
+  assert.equal(storyFor('2024-01-22-reading2', null, stories, map).n, 2, 'no file: the frozen map');
+  assert.equal(storyFor('new-reading', null, stories, map), null, 'neither: no story (story_missing)');
+  assert.equal(storyFor('new-reading', { story_id: 'reading9' }, stories, map), null, 'a story L does not have');
+});
