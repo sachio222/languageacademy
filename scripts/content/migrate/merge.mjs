@@ -427,8 +427,25 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
     for (const [k, v] of Object.entries(m.fixes))
       if (k.startsWith('vocabulary/') && isObj(v) && isStr(v.word_id) && k === `vocabulary/${v.word_id}` && !have.has(v.word_id) && !recorded.has(v.word_id)) handCards.push(v);
   }
+  // Each keeps its written place: after the card written before it (the written table: the file, or under --force the
+  // file read for ids), as items do.
+  const written = ex ? fileVocab : idVocab;
+  const placeOf = new Map(written.map((w, i) => [w.word_id, i]));
+  handCards.sort((a, b) => (placeOf.get(a.word_id) ?? Infinity) - (placeOf.get(b.word_id) ?? Infinity));
   for (const w of handCards) {
-    vocab.push(clone(w));
+    const at = placeOf.get(w.word_id);
+    let to = vocab.length;
+    if (at !== undefined) {
+      to = 0;
+      for (let k = at - 1; k >= 0; k--) {
+        const j = vocab.findIndex((x) => x.word_id === written[k].word_id);
+        if (j !== -1) {
+          to = j + 1;
+          break;
+        }
+      }
+    }
+    vocab.splice(to, 0, clone(w));
     rememberWord(w, key, seenBySpelling);
     noteFix(`vocabulary/${w.word_id}`, w, undefined);
   }

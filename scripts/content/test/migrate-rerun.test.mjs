@@ -276,7 +276,7 @@ test('an item and a vocabulary card added by hand are recorded as hand fixes, an
   const added = { id: 'i-tu-es-la', type: 'respond', situation: 'Say your friend is here.', cue: 'you are here', answer: 'tu es là' };
   edited.items.splice(1, 0, added);
   const card = { word_id: 'la-fr', fr: 'là', gloss: 'there, here' };
-  edited.vocabulary.push(card);
+  edited.vocabulary.splice(1, 0, card); // between the two source cards: it keeps that place
   const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
   assert.deepEqual(second.mod, edited, 'a normal run keeps the additions where they are written');
   assert.deepEqual(second.handFixes['items/i-tu-es-la'], added);
