@@ -1,0 +1,181 @@
+{
+  "schema": "la-module@1",
+  "module_key": "pronoun-order-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Pronoun Order - Two Pronouns before the Verb",
+  "short_title": "Pronoun order",
+  "description": "Put two object pronouns in order before the verb: {je te le donne}, {je le lui donne}.",
+  "can_do": [
+    "Put two pronouns before the verb in order: {je te le donne}.",
+    "Replace both objects of a sentence: {je donne le livre à Marie} becomes {je le lui donne}."
+  ],
+  "minutes": 5,
+  "line": "Object pronouns go before the verb, and two pronouns always come in the same order: {te le}, {le lui}.",
+  "parts": [
+    {
+      "id": "p-one-pronoun",
+      "heading": "One pronoun, before the verb",
+      "text": [
+        "An object pronoun goes in front of the verb it belongs to."
+      ],
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "Je le vois.",
+              "I see him."
+            ],
+            [
+              "Tu me donnes ton numéro ?",
+              "Will you give me your number?"
+            ],
+            [
+              "Je lui donne le livre.",
+              "I give her the book."
+            ],
+            [
+              "Je ne la vois pas.",
+              "I don't see her."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-me-te-first",
+      "heading": "{me}, {te}, {nous} and {vous} come first",
+      "text": [
+        "When a sentence has {me}, {te}, {nous} or {vous} and also {le}, {la} or {les}, the first group goes first."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "Start",
+              "fr": "Je te donne le livre.",
+              "en": "I give you the book."
+            },
+            {
+              "k": "le livre becomes le: te + le",
+              "fr": "Je te le donne.",
+              "en": "I give it to you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-le-before-lui",
+      "heading": "{le} comes before {lui}",
+      "text": [
+        "{le}, {la} and {les} go before {lui} and {leur}."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "Start",
+              "fr": "Je donne le livre à Marie.",
+              "en": "I give the book to Marie."
+            },
+            {
+              "k": "le livre becomes le",
+              "fr": "Je le donne à Marie.",
+              "en": "I give it to Marie."
+            },
+            {
+              "k": "à Marie becomes lui",
+              "fr": "Je le lui donne.",
+              "en": "I give it to her."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-with-ne-pas",
+      "heading": "With {ne … pas}",
+      "text": [
+        "{ne} goes in front of both pronouns, and {pas} goes after the verb. The pronouns stay together."
+      ],
+      "note": "In a positive command, the pronouns move after the verb: {donne-le-moi}.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "Je ne te le donne pas.",
+              "I'm not giving it to you."
+            ],
+            [
+              "Je ne le lui donne pas.",
+              "I'm not giving it to him."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one means “I give it to you”?",
+      "options": [
+        {
+          "text": "Je te donne le livre.",
+          "fr": true
+        },
+        {
+          "text": "Je te le donne.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Tu me le donnes.",
+          "fr": true
+        }
+      ],
+      "why": "{te} comes before {le}: {je te le donne}."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one means “I give it to him”?",
+      "options": [
+        {
+          "text": "Je le donne.",
+          "fr": true
+        },
+        {
+          "text": "Je le lui donne.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Il me le donne.",
+          "fr": true
+        }
+      ],
+      "why": "{le} is the thing and {lui} is the person, and {le} comes first: {je le lui donne}."
+    },
+    {
+      "id": "k3",
+      "ask": "Which one means “I'm not giving it to her”?",
+      "options": [
+        {
+          "text": "Je ne le lui donne pas.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je le lui donne.",
+          "fr": true
+        },
+        {
+          "text": "Elle ne me le donne pas.",
+          "fr": true
+        }
+      ],
+      "why": "{ne} goes before both pronouns and {pas} after the verb: {je ne le lui donne pas}."
+    }
+  ]
+}
