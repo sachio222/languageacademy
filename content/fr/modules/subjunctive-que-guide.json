@@ -1,0 +1,261 @@
+{
+  "schema": "la-module@1",
+  "module_key": "subjunctive-que-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Which {que} - When the Next Verb Changes",
+  "short_title": "Subjunctive after que",
+  "description": "Gather the phrases that change the verb after {que}, and the ones that leave it as it is.",
+  "can_do": [
+    "Change the verb after a wish, a need or a feeling: {je veux que tu viennes}.",
+    "Keep the verb as it is after {je pense que}, and change it after {je ne pense pas que}."
+  ],
+  "minutes": 6,
+  "line": "After most phrases of wish, need, feeling or doubt, the verb after {que} takes the subjunctive: {il faut que tu partes}.",
+  "parts": [
+    {
+      "id": "p-one-verb-two-forms",
+      "heading": "One verb, two forms",
+      "text": [
+        "After some phrases with {que}, the next verb takes a special form called the subjunctive: {tu partes} in place of {tu pars}. After other phrases, the verb stays as it is."
+      ],
+      "blocks": [
+        {
+          "cmp": {
+            "left": "A plain statement",
+            "right": "After a phrase with que",
+            "rows": [
+              [
+                {
+                  "fr": "tu pars",
+                  "en": "you leave"
+                },
+                {
+                  "fr": "il faut que tu partes",
+                  "en": "you need to leave"
+                }
+              ],
+              [
+                {
+                  "fr": "il vient",
+                  "en": "he comes"
+                },
+                {
+                  "fr": "je veux qu'il vienne",
+                  "en": "I want him to come"
+                }
+              ],
+              [
+                {
+                  "fr": "tu es là",
+                  "en": "you are here"
+                },
+                {
+                  "fr": "je suis content que tu sois là",
+                  "en": "I'm happy you're here"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-wish-need-feeling",
+      "heading": "A wish, a need, a feeling",
+      "text": [
+        "When you say what you want, what someone needs to do or how you feel about it, the verb after {que} usually changes."
+      ],
+      "blocks": [
+        {
+          "heading": "A wish or a need",
+          "lines": [
+            [
+              "Il faut que tu fasses attention.",
+              "You need to pay attention."
+            ],
+            [
+              "Je veux que tu comprennes.",
+              "I want you to understand."
+            ],
+            [
+              "J'aimerais que tu sois là.",
+              "I'd like you to be there."
+            ]
+          ]
+        },
+        {
+          "heading": "A feeling",
+          "lines": [
+            [
+              "Je suis triste que tu partes.",
+              "I'm sad you're leaving."
+            ],
+            [
+              "J'ai peur qu'il parte.",
+              "I'm afraid he'll leave."
+            ],
+            [
+              "Je regrette que tu ne puisses pas venir.",
+              "I'm sorry you can't come."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-belief-or-doubt",
+      "heading": "Belief or doubt",
+      "text": [
+        "{je pense que} states what you believe, so the verb stays as it is. With {ne … pas}, it expresses a doubt, and the verb usually changes. {il est possible que} changes it too, but {peut-être que} keeps the verb as it is."
+      ],
+      "blocks": [
+        {
+          "cmp": {
+            "left": "Verb as it is",
+            "right": "Subjunctive",
+            "rows": [
+              [
+                {
+                  "fr": "je pense qu'il vient",
+                  "en": "I think he's coming"
+                },
+                {
+                  "fr": "je ne pense pas qu'il vienne",
+                  "en": "I don't think he's coming"
+                }
+              ],
+              [
+                {
+                  "fr": "peut-être qu'il viendra",
+                  "en": "maybe he'll come"
+                },
+                {
+                  "fr": "il est possible qu'il vienne",
+                  "en": "it's possible he'll come"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "lines": [
+            [
+              "Je doute que ce soit possible.",
+              "I doubt that's possible."
+            ],
+            [
+              "Je ne crois pas qu'il ait raison.",
+              "I don't think he's right."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-before-so-that-although",
+      "heading": "{avant que}, {pour que}, {bien que}",
+      "text": [
+        "These three join two ideas, and the verb after each one takes the subjunctive."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Il faut partir avant qu'il soit trop tard.",
+              "We need to leave before it's too late."
+            ],
+            [
+              "Je parle lentement pour que tu comprennes.",
+              "I speak slowly so that you understand."
+            ],
+            [
+              "Bien que je sois fatigué, je travaille.",
+              "Although I'm tired, I'm working."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-every-phrase",
+      "heading": "Every phrase in one list",
+      "text": [
+        "The verb after {que} takes the subjunctive after each of these phrases."
+      ],
+      "blocks": [
+        {
+          "list": [
+            "A need or a wish: {il faut que}, {je veux que}, {j'aimerais que}",
+            "A feeling: {je suis content que}, {je suis triste que}, {je suis désolé que}, {je suis surpris que}, {j'ai peur que}, {je regrette que}",
+            "A doubt: {je doute que}, {je ne pense pas que}, {je ne crois pas que}",
+            "A possibility: {il est possible que}, {il se peut que}",
+            "Time, purpose and contrast: {avant que}, {pour que}, {bien que}"
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one means “I want you to come”?",
+      "options": [
+        {
+          "text": "Je veux venir.",
+          "fr": true
+        },
+        {
+          "text": "Je veux que tu viennes.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je pense que tu viens.",
+          "fr": true
+        }
+      ],
+      "why": "A wish about someone else takes {que} and the subjunctive: {que tu viennes}."
+    },
+    {
+      "id": "k2",
+      "ask": "After which phrase does the next verb change?",
+      "options": [
+        {
+          "text": "je pense que",
+          "fr": true
+        },
+        {
+          "text": "peut-être que",
+          "fr": true
+        },
+        {
+          "text": "il faut que",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "{il faut que} states a need, so the verb after it takes the subjunctive. After {je pense que} and {peut-être que}, the verb stays as it is."
+    },
+    {
+      "id": "k3",
+      "ask": "Which one means “I don't think he's coming”?",
+      "options": [
+        {
+          "text": "Je ne pense pas qu'il vienne.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je pense qu'il vient.",
+          "fr": true
+        },
+        {
+          "text": "Il est possible qu'il vienne.",
+          "fr": true
+        }
+      ],
+      "why": "{je ne pense pas que} expresses a doubt, so the verb changes: {qu'il vienne}."
+    }
+  ]
+}
