@@ -10,6 +10,13 @@
 //     content/fr/legacy/positions-<sha7>.json: the live positions on <commit>, read from a temporary
 //     `git worktree add` of that commit under <dir> (default: the system temp folder), removed afterwards.
 //     The table is frozen: a file that differs is kept unless --force; --check exits 1 if it would change.
+//   node scripts/content/migrate/run.mjs modules [--check] [--live-ref <commit>] [--tmp <dir>]
+//     content/fr/modules/<key>.json for every lesson, practice set and unit exam in the outline, plus
+//     legacy/live-ids.json, legacy/migration-sources.json and migration-report.md. Reads each written module file
+//     and the record of what the last run read first, and keeps every part whose source is unchanged (spec 8.2),
+//     so hand fixes survive. Live ids come from lessonData.js on --live-ref (default: the main commit last merged
+//     here, `git merge-base HEAD origin/main`), read from a temporary worktree. --check exits 1 if a file would change.
+//     --force converts from the source alone and drops every hand fix in the module files.
 import '../vite-shim.mjs'; // lets Node import src/ files written for Vite
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
@@ -19,6 +26,14 @@ import { pathToFileURL } from 'node:url';
 import { REPO_ROOT, CONTENT_ROOT } from '../load.mjs';
 import { outlineFromUnitConfigs, checkOutline, mergeOutline } from './outline.mjs';
 import { frozenPositions, checkAgainstLessons } from './positions.mjs';
+import { convertModule, kindOf } from './module.mjs';
+import { liveIdMatch } from './live-ids.mjs';
+import { renderReport } from './report.mjs';
+import { proposeWordId } from '../word-ids.mjs';
+import { checkItemPassable, defaultCheckAnswer } from '../passable.mjs';
+import { loadGraph } from '../../graph/load.mjs';
+import { buildFormIndex } from '../../graph/fr/forms.mjs';
+import { frenchWordTest } from '../../graph/french-text.mjs';
 
 const rel = (p) => relative(REPO_ROOT, p) || '.';
 const json = (v) => JSON.stringify(v, null, 2) + '\n';
@@ -133,8 +148,142 @@ async function positions(args, flags) {
   return status;
 }
 
-const COMMANDS = { outline, positions };
-const USAGE = 'usage: node scripts/content/migrate/run.mjs outline|positions [--ref <commit>] [--tmp <dir>] [--check] [--force]';
+const git = (...a) => execFileSync('git', a, { cwd: REPO_ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+
+// Runs fn(dir) on a temporary `git worktree add` of ref under --tmp (default: the system temp folder), then removes
+// the worktree. Returns fn's status, or 1 when the worktree cannot be removed.
+async function inWorktree(ref, args, label, fn) {
+  const sha = git('rev-parse', '--verify', '--short=7', `${ref}^{commit}`);
+  const parent = resolve(option(args, '--tmp') ?? tmpdir());
+  if (!existsSync(parent)) throw new UsageError(`--tmp ${parent}: no such folder`);
+  const dir = join(parent, `la-${label}-${sha}`);
+  if (existsSync(dir)) throw new UsageError(`${dir} already exists; remove it first (git worktree remove)`);
+  console.log(`worktree: ${dir} (${ref} = ${sha})`);
+  git('worktree', 'add', '--detach', dir, sha);
+  let status;
+  try {
+    status = await fn(dir, sha);
+  } finally {
+    try {
+      git('worktree', 'remove', '--force', dir);
+      console.log(`removed worktree: ${dir}`);
+    } catch (e) {
+      console.error(`could not remove worktree ${dir}: ${String(e.stderr || e.message).trim()}`);
+      status = 1;
+    }
+  }
+  return status;
+}
+
+// Today's builder logs [DEBUG] lines through console.log while it builds; they are not this command's output.
+async function quietly(fn) {
+  const log = console.log;
+  console.log = () => {};
+  try {
+    return await fn();
+  } finally {
+    console.log = log;
+  }
+}
+
+const readJson = (file) => (existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : null);
+
+// Spelling -> live dictionary id (src/data/dictionary/words/cambridge), for word ids (spec 8.1).
+async function dictionaryMap() {
+  const d = await importFrom(REPO_ROOT, 'src/data/dictionary/words/cambridge/index.js');
+  const map = new Map();
+  for (const words of Object.values(d))
+    for (const [id, w] of words) if (w?.lang === 'fr' && typeof w.word === 'string' && !map.has(w.word)) map.set(w.word, id);
+  return map;
+}
+
+// The checker's word test, so French spans are marked where today's checker reads French.
+function wordTest() {
+  const graph = loadGraph(join(REPO_ROOT, 'curriculum-graph'), 'fr');
+  return frenchWordTest(graph, buildFormIndex(graph));
+}
+
+async function modules(args, flags) {
+  const outline = readJson(join(CONTENT_ROOT, 'course.json'));
+  if (!outline) throw new UsageError('content/fr/course.json is missing; run `outline` first');
+  const { unitConfigs } = await quietly(() => importFrom(REPO_ROOT, 'src/lessons/unitConfigLoader.js'));
+  const configs = new Map(unitConfigs.flatMap((u) => u.modules).map((m) => [m.moduleKey, m]));
+  const dictionary = await dictionaryMap();
+  const isWord = wordTest();
+  const recordFile = join(CONTENT_ROOT, 'legacy', 'migration-sources.json');
+  const records = readJson(recordFile) ?? {};
+  const seenBySpelling = new Map();
+  const lines = [];
+  const converted = new Map();
+  const newRecords = {};
+  let itemCount = 0;
+  let heldCount = 0;
+
+  for (const [ui, unit] of outline.units.entries()) {
+    for (const key of unit.entries) {
+      const old = configs.get(key);
+      if (!old) continue; // written in content/ only, with no source in src/lessons/modules/
+      const kind = kindOf(old);
+      if (!kind) {
+        // A reading teaches the words in its own table, so its spellings join the course-order walk and a later
+        // lesson's proposals know them. Task 7 writes the reading files with the same walk.
+        if (old.isReadingComprehension)
+          for (const v of old.vocabularyReference || [])
+            proposeWordId({ french: v.french, english: v.english, note: v.note, module_key: key }, seenBySpelling, dictionary);
+        continue;
+      }
+      // --force converts from the source alone, as if nothing were written: it drops every hand fix.
+      const existing = flags.force ? null : readJson(join(CONTENT_ROOT, 'modules', `${key}.json`));
+      const record = flags.force ? null : records[key] ?? null;
+      const r = convertModule(old, { unitKey: unit.unit_key, unitIndex: ui + 1, existing, record, dictionary, seenBySpelling, isWord });
+      lines.push(...r.report);
+      r.mod.items.forEach((item, i) => {
+        for (const p of checkItemPassable(item, defaultCheckAnswer, { file: key, path: `items[${i}]` }))
+          lines.push({ module_key: key, path: p.path, kind: 'answer_fails', detail: `${item.id}: ${p.message}` });
+      });
+      converted.set(key, r.mod);
+      newRecords[key] = r.record;
+      itemCount += r.mod.items.length;
+      heldCount += r.held.length;
+    }
+  }
+
+  const liveRef = option(args, '--live-ref') ?? git('merge-base', 'HEAD', 'origin/main');
+  let live = null;
+  const wt = await inWorktree(liveRef, args, 'live-ids', async (dir) => {
+    const { lessons } = await quietly(() => importFrom(dir, 'src/lessons/lessonData.js'));
+    live = lessons.map((l) => ({
+      moduleKey: l.moduleKey,
+      concepts: l.concepts,
+      exercises: l.exercises.map((e) => ({ id: e.id, prompt: e.prompt, expectedAnswer: e.expectedAnswer })),
+    }));
+    return 0;
+  });
+  if (wt !== 0) return wt;
+  const { map, unmatched } = liveIdMatch(live, converted);
+  for (const u of unmatched)
+    lines.push({ module_key: u.module_key, path: u.what === 'concept' ? `concepts[${u.live_id}]` : u.live_id, kind: 'live_unmatched', detail: `${u.what} ${u.detail}` });
+
+  const settings = readJson(join(REPO_ROOT, 'curriculum-graph/core/settings.json'));
+  for (const line of outlineFromUnitConfigs(unitConfigs, { opensWords: settings.reference.modules }).report)
+    lines.push({ module_key: null, path: 'course.json', kind: 'outline', detail: line });
+
+  const sorted = (o) => Object.fromEntries(Object.keys(o).sort().map((k) => [k, o[k]]));
+  const always = { ...flags, force: true }; // these files are rebuilt from what is written, so a rerun keeps edits
+  let status = 0;
+  for (const [key, mod] of converted) status |= writeFile(join(CONTENT_ROOT, 'modules', `${key}.json`), json(mod), always);
+  status |= writeFile(join(CONTENT_ROOT, 'legacy', 'live-ids.json'), json(sorted(map)), always);
+  status |= writeFile(recordFile, json(sorted(newRecords)), always);
+  status |= writeFile(join(CONTENT_ROOT, 'migration-report.md'), renderReport(lines, { modules: converted.size, items: itemCount, held: heldCount }), always);
+  const byKind = new Map();
+  for (const l of lines) byKind.set(l.kind, (byKind.get(l.kind) || 0) + 1);
+  console.log(`modules: ${converted.size} files, ${itemCount} items, ${heldCount} held out`);
+  console.log(`report: ${[...byKind].map(([k, n]) => `${k} ${n}`).join(', ')}`);
+  return status;
+}
+
+const COMMANDS = { outline, positions, modules };
+const USAGE = 'usage: node scripts/content/migrate/run.mjs outline|positions|modules [--ref <commit>] [--live-ref <commit>] [--tmp <dir>] [--check] [--force]';
 
 const [command, ...args] = process.argv.slice(2);
 try {

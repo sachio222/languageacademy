@@ -64,8 +64,13 @@ test('--allow needs a value', () => {
 test('the default content folder validates with today\'s allowance', () => {
   const r = run('validate', '--allow', 'outline_missing_file');
   assert.equal(r.status, 0, r.stderr);
-  // Until Task 6 writes module files, every listed module is missing. Tasks 6 and 7 update this count.
-  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok with 171 allowed problems: outline_missing_file 171');
+  // Task 6 wrote the lessons, practice sets and unit exams; the 5 guides, 11 readings and 9 Reference pages are
+  // Task 7's, which removes the allowance.
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok with 25 allowed problems: outline_missing_file 25');
+  const missing = r.stdout.split('\n').filter((l) => l.startsWith('allowed ')).map((l) => l.match(/modules\/([^.]+)\.json/)?.[1] ?? l);
+  const kinds = JSON.parse(readFileSync(new URL('../../../content/fr/course.json', import.meta.url), 'utf8'));
+  assert.equal(missing.length, 25);
+  assert.ok(kinds.shelf.pages.every((k) => missing.includes(k)), 'every Reference page is still Task 7’s');
 });
 
 test('an explicit root that is missing is an error', () => {
