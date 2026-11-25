@@ -1,19 +1,18 @@
 # French course graph
 
-This folder holds a map of what the French course teaches: its words, their forms and its grammar patterns, and which module teaches each one. A checker reads all 162 modules in course order and lists every word or pattern a learner meets before a lesson has taught it, along with other course problems, in a fix list for the product owner.
+This folder holds a map of what the French course teaches: its words, their forms and its grammar patterns, and which module teaches each one. A checker reads all 162 modules in course order, from the course content in `content/fr/` (see `scripts/content/`), and lists every word or pattern a learner meets before a lesson has taught it, along with other course problems, in a fix list for the product owner.
 
 Run the checker after you change a lesson. Once it finds no errors, the course can lock: its content is frozen and all course fixes ship together as one release.
 
 ## Words used here
 
-- **Module**: one lesson, help page, practice set, reading or exam in `src/lessons/`. Its **position** is its place in course order, from 1 to 162. The Reference unit (alphabet, numbers, days) has no position; see The Reference unit below.
-- **Teaching module**: lessons and help pages teach through their vocabulary table and concept cards. Practice sets, readings and exams never teach; their concept cards count as reminders.
+- **Module**: one lesson, guide, practice set, reading or unit exam, written as one file in `content/fr/modules/`. Its **position** is its place in course order, from 1 to 162, set by the outline `content/fr/course.json`. The pages on the Reference shelf (alphabet, numbers, days) have no position; see The Reference unit below.
+- **Teaching module**: a lesson teaches the words of its vocabulary table and the constructions its file lists in `teaches.constructions`. A guide teaches what its file lists in `teaches`. A reading teaches the words of its own vocabulary table, at its own position. Practice sets and exams never teach; they list what they check in `tests.constructions`.
 - **Headword**: one entry in the course word list, such as `fr:lex:livre`. Its **forms** are the other ways it is written: livres, or parle and parlons for parler.
 - **Construction**: a grammar pattern or fixed phrase, such as `fr:cx:neg.ne-pas` (ne … pas) or `fr:cx:chunk.ca-va` (ça va). Each one has a **detector**, a pattern that finds it in a French sentence.
 - **Node ID**: the code that names a headword (`fr:lex:`), an irregular form (`fr:form:`), a construction (`fr:cx:`), a name (`fr:name:`) or a function (`fn:`). An ID never changes once it is committed.
-- **Item ref**: the address of one exercise, written `<moduleKey>#<path in the module file>`, for example `2024-01-01-famous-words#exerciseConfig.items[5]`. The path is `exerciseConfig.items[N]`, `exercises[N]`, `sentences[N]`, `fillInBlanksSentences[N]` or `readingPassage`. French a learner reads around the exercises has a ref of the same kind, ending in the path of its field: `concepts[2].example`, `exerciseConfig.items[5].hint`, `vocabularyReference[3].note`, `guide.sections[0].examples[1].french`, or `screen[4]` for the fifth French string on a help screen (counting from 0).
-- **Help screen**: a help module whose page is written into a React component in `src/components/` instead of its lesson file. The course has four: liaison, cognates, questions and verb patterns.
-- **Guide**: a help module whose page is data in its lesson file, a `guide` object that `src/components/GuideScreen.jsx` renders: `{ sections: [{ heading, rule, rows: [{ french, english, note }], examples: [{ french, english }] }] }`. A guide gathers pieces the learner already has into one rule; the first is the negation guide (`2026-11-24-negation-guide`). Its refs end in the path of the field, such as `guide.sections[1].rows[2].french`.
+- **Item ref**: the address of one exercise or one piece of text, written `<moduleKey>#<path>`. An exercise is named by its id: `2024-01-01-famous-words#i-s-il-vous-plait`. Its hint, instruction and the feedback on its second known mistake add a field: `#i-paul/hint`, `#i-plural/instruction`, `#i-je-suis/mistakes/1/feedback`. Other text is named by the ids in its path, with list positions only where entries have no id: `#concepts/c-etre-forms/example`, `#vocabulary/ca-va-fr/note`, `#tables/t-etre-present/rows/2/fr`, `#parts/p-not-any-pas-de/text/0`, `#parts/p-no-more-nothing-never/blocks/1/lines/0/0`, `#checks/k1/ask`, `#passage/b3/fr`, `#title`. Because a ref names ids, it stays the same when an exercise moves within its module.
+- **Guide**: a module of kind `guide` that gathers pieces the learner already has into one rule, such as the negation guide (`2026-11-24-negation-guide`). Its file holds parts, each with text and example blocks (`pairs`, `lines`, `cmp` and others, in the shapes `scripts/content/schema/module.mjs` lists), and three checks.
 - **Function**: something a learner does with the language, such as asking the time or apologising. One list of functions serves every language. An **exponent** is one way to perform a function in one language: the words and patterns that together do it, such as quelle, heure and the question word order est-il for "Quelle heure est-il ?".
 - **CEFR level**: a level of the Common European Framework of Reference for Languages, which grades learners from A1 (beginner) through A2, B1, B2 and C1 to C2.
 - **Cognate**: a French word that a speaker of the learner's native language reads correctly without a lesson, such as restaurant for an English speaker. A **false friend** looks like a word of that language but means something else: librairie is a bookshop, not a library.
@@ -22,7 +21,7 @@ A word is available at a position once a teaching module at or before it has tau
 
 ## Cognates and the learner's native language
 
-The cognates lesson (`2024-10-21-cognates-help`, position 6) tells learners that many French words look like English ones. From that lesson on, every cognate counts as known, in French the learner types as well as French the learner reads or hears, so Section 1 of the fix list does not list it. Before position 6 a cognate is an ordinary untaught word, and a false friend never counts as known this way. The cognates screen shows its words but does not teach them. The level and function reports count a cognate as available from the cognates lesson on, in its own count (`cognateWords`) beside the words lessons teach and the Reference words, and a function that needs one is possible from there.
+The cognates lesson (`2024-10-21-cognates-help`, position 6) tells learners that many French words look like English ones. From that lesson on, every cognate counts as known, in French the learner types as well as French the learner reads or hears, so Section 1 of the fix list does not list it. Before position 6 a cognate is an ordinary untaught word, and a false friend never counts as known this way. The cognates guide shows its words but does not teach them. The level and function reports count a cognate as available from the cognates lesson on, in its own count (`cognateWords`) beside the words lessons teach and the Reference words, and a function that needs one is possible from there.
 
 Which words count depends on the learner's native language, so the list belongs to the language pair and lives in a pair folder, `pairs/<native>-<target>/`, not in the French word list. Each pair has its own list: Spanish or Italian speakers learning French would have their own lists, larger than the English one, because their languages share far more words with French. `pairs/en-fr/cognates.json` holds the English-French list:
 
@@ -51,7 +50,7 @@ The Reference unit holds the alphabet, numbers, days and months, holidays, color
 ```
 
 - `openFrom` is the course position from which those words count as available. Set it to null to keep the unit closed: a word that no lesson teaches is then untaught even when the Reference unit lists it.
-- `modules` lists the Reference pages whose vocabulary tables open, by module key. Language facts, spelling patterns and the pronunciation test are left out: they teach about French rather than words to look up.
+- `modules` lists the Reference pages whose vocabulary tables open, by module key. Language facts, spelling patterns and the pronunciation test are left out: they teach about French rather than words to look up. The checker opens the pages the outline lists in `shelf.opens_words` (`content/fr/course.json`); keep `modules` the same list, which `pnpm graph:check` checks against the shelf.
 
 On those pages only nouns, adjectives, numbers and letters open, with their forms, such as noire, vive and vingts. Verbs never open, infinitives included, so épeler and être stay closed; adverbs such as demain and grammar words such as je, cette and de stay closed too. A word is read as the kind of word that may open, so l'été opens the season été, not the past participle of être.
 
@@ -63,11 +62,22 @@ The level and function reports count Reference words apart from the words lesson
 
 ## What the checker reads
 
-The checker reads French the learner types (answers, blanks) and French the learner reads or hears (a French prompt, a reading passage), and checks both with their accents. It also reads the French on concept cards, hints, instructions, vocabulary notes, feedback on a wrong answer, module and passage titles, and help screens. Most of that text mixes English and French. The checker takes quoted French, such as 'bon voyage' in a hint. On concept examples, titles and help screens it also splits the text at parentheses, arrows, equals signs, slashes, colons and dashes, and keeps each part that reads as French. A concept example that lists short words or phrases between commas (eu, été, fait, vu) is read one entry at a time, so a grammar pattern never matches across two entries. A quoted span counts as French when it has no English word, so a French word missing from the course word list shows up in Section 9 of the fix list. A quoted span right after meaning or means, or after a word class and for (noun meaning 'car', stressed pronoun for 'me'), is an English gloss; after a word class and for, a subject pronoun such as 'tu' stays French. Course codes such as (M17) and word parts such as -t- are not words. An unquoted part also needs most of its words in the course word list, because English labels such as "Rising Tone" have no English word the checker can spot. English words are listed in `scripts/graph/french-text.mjs`; if Section 9 shows an English word from a hint or note, add it there. French written inside an English sentence without quotes is missed, so quote it. Where the checker still reads English as French, an `overrides` entry in `course-map.json` names the words or patterns to ignore in that item.
+The checker loads the course with `loadCourse()` from `scripts/content/load.mjs`, the same loader the bundle builder uses, and reads it with `scripts/graph/content-course.mjs`. Every string in a module file has a role in the content schema: French the learner reads, hears or types, native text, or native text with French in braces (`Use {être} for how you feel.`). The checker reads French by that role, never by guessing from the wording.
 
-A help screen teaches only what its course-map entry credits. Its French is checked like any other text. On a guide, each row's and each example's French is checked whole, and the heading, rule and notes are read for quoted French: write French there in curly quotes (“ne … pas”), which the screen shows in bold without the quotes. A guide has no vocabulary table, so list the words it teaches in `teachesWordsManual`.
+An exercise's type says which of its fields is French:
 
-`scripts/graph/fields.mjs` lists every field a module file can hold, marked read or ignored with the reason, such as `explanation`, which no screen shows. `pnpm graph:test` fails when a module has a field the list does not name. If you add a field to a lesson, add it to the list too.
+- In `translate`, `respond`, `transform`, `gapfill` and `comprehension` exercises, the answer is French the learner types, and each `accept` is another answer the checker reads without accents.
+- `shown` (in `transform` and `meaning`), a gap-fill sentence, and an option marked `fr` are French the learner reads. A gap-fill sentence is read with its blanks filled, and only the blank answers count as typed.
+- French in braces in a `prompt`, `situation`, `cue` or `question` is French the learner reads with the exercise, so it is checked like the rest of the exercise.
+- The answer to a `meaning` exercise is English, and a mistake's answer is wrong on purpose, so the checker reads neither.
+
+Around the exercises it reads the French of vocabulary examples, table rows, pronunciation phrases, concept cards, descriptions, can-do lines, reading passages and guides. In a guide block it reads the French cells: the first cell of a `pairs` or `lines` row, every `fr` cell, the `say` values a `cmp` row speaks, a `verbs` entry's verb and forms, and a `table` row's verb and French forms. The third `pairs` cell, which respells a sound for English readers, is neither French nor English, and neither is a check's `sound`. A unit's can-do example in the outline (`can_do_example_fr`) is checked at the unit's last module, with `{name}`, the learner's name, read as a name.
+
+Hints, mistake feedback, instructions and titles stay outside the taught-before rule: a word in them may come before its lesson. Their French still counts as a use for the reuse windows. Where the checker misreads a sentence, an `overrides` entry in `course-map.json` names the words or patterns to ignore in that item.
+
+Words and patterns a guide teaches count as taught at the guide's position, but a guide is never a prerequisite, because a learner may skip it. When another module uses something only a guide has taught by then, the checker reports `guide_only_teaching`, and a lesson should teach it first.
+
+`pnpm graph:test` fails when any learner-facing string of the course gets no ref, so French cannot sit in a field the checker skips. The content schema rejects a field it does not know (`field_unknown`), so a new field needs a role there first.
 
 ## Files
 
@@ -84,52 +94,47 @@ A help screen teaches only what its course-map entry credits. Its French is chec
 | `languages/fr/reading-limits.json` | Verbs whose forms the checker cannot yet tell from a noun or adjective with the same spelling | By hand |
 | `languages/fr/constructions.json` | Grammar patterns with their detectors and example sentences | Written by `scripts/graph/fr/build/constructions.mjs` |
 | `languages/fr/names.json` | People, places and brands that need no teaching | By hand |
-| `languages/fr/course-map.json` | For each module: what it teaches and tests, and corrections to how the checker reads it | `teachesWords` by `pnpm graph:extract`, every other field by hand |
+| `languages/fr/course-map.json` | Corrections to how the checker reads each module (see Course-map fields). What a module teaches and tests is in its own file under `content/fr/modules/` | By hand |
 | `reports/fr-fix-list.md`, `reports/fr-summary.json` | Latest fix list and counts | `pnpm graph:report` |
 | `reports/fr-levels.json`, `reports/fr-functions.json` | Level coverage and function coverage, as data for charts | `pnpm graph:report` |
+| `reports/issue-budget.json` | The most issues of each rule the course may have | `pnpm graph:check --lower-budget`, which only lowers counts |
 
 ## Commands
 
 Run these from the repository root.
 
-- `pnpm graph:check` prints a count for each rule it found, plus `dangling-ref`, `level-data-missing` and `unread-items` even at 0, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of that level's core words and the core constructions taught by the end of the course and where the level is reached, followed from A2 on by the same counts through that level (the level and the levels below it), then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
+- `pnpm graph:check` prints a count for each rule it found, plus `dangling-ref`, `level-data-missing` and `unread-items` even at 0, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of that level's core words and the core constructions taught by the end of the course and where the level is reached, followed from A2 on by the same counts through that level (the level and the levels below it), then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--budget` to compare each count with `reports/issue-budget.json` instead: it exits with status 1 only when a rule has more issues than its budget (a rule the budget does not list has a budget of 0), and lists each rule over or under. CI runs `pnpm graph:check --budget` on every push, so a change that adds issues fails. After you fix issues, run `pnpm graph:check --lower-budget` to write the lower counts into the budget; it never raises one. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
 - `pnpm graph:due <moduleKey|position>` lists the words and patterns the module at that position should use again. A taught word or pattern should come back within 2 modules, then within 5, 12 and 30 modules of each use. The list holds those with no use yet inside their current window, when that window ends at the next module or has already ended. Each line gives the ID, where it was taught, its last use and where its window ends.
 - `pnpm graph:report` writes the fix list (`reports/fr-fix-list.md`), the counts (`reports/fr-summary.json`) and the level and function data (`reports/fr-levels.json`, `reports/fr-functions.json`; see Level and function reports). The same input always gives byte-identical files.
-- `pnpm graph:extract` rereads the vocabulary table of every teaching module and rewrites `teachesWords` in `course-map.json`. It prints each vocabulary word the course word list does not have.
+- `pnpm graph:extract` prints the words each lesson and reading teaches, as the checker reads them from its vocabulary table, and each vocabulary word the course word list does not have. It writes nothing; the checker derives these words on every run.
 - `pnpm graph:test` runs the checker's tests, including the example sentences of every construction.
 
 ## Adding or editing a lesson
 
-1. Edit the module file in `src/lessons/modules/`: its vocabulary table (`vocabularyReference`), concept cards and exercises.
-2. Run `pnpm graph:extract`. If it prints a word, add that word as a headword (see below) and run it again.
-3. In `course-map.json`, under the module's key, list in `teachesConstructions` the ID of each grammar pattern its concept cards explain. A pattern the graph does not have yet needs a construction first (see below).
+1. Edit the module file in `content/fr/modules/`: its vocabulary table (`vocabulary`), concept cards and exercises (`items`). Run `pnpm content:validate`.
+2. Run `pnpm graph:extract`. If it prints an unknown word, add that word as a headword (see below) and run it again.
+3. In the module file, list in `teaches.constructions` the ID of each grammar pattern its concept cards explain. A pattern the graph does not have yet needs a construction first (see below).
 4. Run `pnpm graph:check`, then `pnpm graph:report`, and read the module's lines in the fix list.
 5. Before you write the next module, run `pnpm graph:due <its position>` and use what it lists in the new exercises.
 
-`pnpm graph:test` fails when a vocabulary table lists a form whose tense puts the module above the level of everything else it teaches, such as sois (a subjunctive form of être) in a lesson that credits no subjunctive. List the construction that builds that tense in `teachesConstructions`, here `fr:cx:subj.il-faut-que`, or take the form out of the table.
+`pnpm graph:test` fails when a vocabulary table lists a form whose tense puts the module above the level of everything else it teaches, such as sois (a subjunctive form of être) in a lesson that credits no subjunctive. List the construction that builds that tense in the module's `teaches.constructions`, here `fr:cx:subj.il-faut-que`, or take the form out of the table.
 
 Every verb has all six present forms except the verbs in `reading-limits.json` (see Level and function reports), falloir and pleuvoir, which have only il, and suivre, whose suis is left to être. A new irregular verb follows a verb of the same family (see Adding an irregular form): tenir and its compounds like venir, sentir like partir, employer and essuyer like nettoyer. A verb that never agrees, such as rire, mentir or réagir, has one past participle (ri, menti, réagi) and no ptcp.f, ptcp.pl or ptcp.fpl.
 
-Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in `excludeWords` and the noun in `teachesWordsManual` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne.
+Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in its `excludeWords` correction and the noun in its file's `teaches.words` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne.
 
 ## Course-map fields
 
-Each entry in `course-map.json` is keyed by `moduleKey`. Only `teachesWords` is generated. Edit the other fields by hand.
+`course-map.json` holds the checker's corrections, under each module's key. What a module teaches and tests is written in its own file: `teaches.constructions` and `teaches.words` on a lesson or guide, `tests.constructions` on a practice set or exam. A lesson or reading also teaches the words of its vocabulary table, which the checker reads on every run.
 
 | Field | Meaning |
 |---|---|
-| `teachesWords` | Headwords and forms the module's vocabulary table teaches. `pnpm graph:extract` writes it; do not edit it. |
-| `teachesWordsManual` | Headwords or forms the module teaches that extraction misses or misreads, such as `fr:lex:devant` (in front of) in a table where extraction reads devant as a form of devoir. |
-| `excludeWords` | IDs extraction credits that the module does not teach, such as `fr:lex:devoir` in that same table. `pnpm graph:extract` leaves them out of `teachesWords`. |
-| `teachesConstructions` | Constructions the module's concept cards explain. |
-| `tests` | Constructions an exam or practice module says it tests. Each must be taught by that module's position. |
-| `preTeach` | IDs a reading module teaches in a short list before its passage. A reading teaches nothing else. |
-| `itemKinds` | `{ "<item ref>": "translate" }` (or `"situation"` or `"other"`) for an exercise the checker sorts wrongly. The checker sorts every exercise itself (`scripts/graph/rules/item-kinds.mjs`), so this field holds exceptions only. English-to-French translation prompts are allowed through Unit 1. |
-| `overrides` | `{ "<item ref>": { "ignore": [ ... ] } }`: node IDs or words the checker should not count in that exercise when it misreads the sentence. The first lesson ignores `fr:cx:elision` in "s'il vous plaît", a fixed phrase taught before elision. The hint "Combine avoir + ça" ignores `fr:lex:combiner` and `fr:cx:imperative.tu`, because combine is English there. An ignored word or pattern does not count as used in that item, so no fix line points to it. |
+| `excludeWords` | IDs the vocabulary table seems to teach that the module does not, such as `fr:lex:devoir` in a table where devant (in front of) reads as a form of devoir. The module file then lists `fr:lex:devant` in `teaches.words`. |
+| `overrides` | `{ "<item ref>": { "ignore": [ ... ] } }`: node IDs or words the checker should not count in that item when it misreads the sentence. The first lesson ignores `fr:cx:elision` in "s'il vous plaît", a fixed phrase taught before elision. An ignored word or pattern does not count as used in that item, so no fix line points to it. |
+| `itemKinds` | `{ "<item ref>": "translate" }` (or `"other"`) for an exercise whose type the translation rule should not follow. The type in the module file decides by default: only a `translate` exercise is a bare English sentence to translate, and those are allowed through Unit 1. |
 | `contentNotes` | Errors in lesson text that no rule can see, written as plain sentences. They open the fix list. |
-| `screen` | For a help module, the component file of its help screen, such as `"src/components/CognatesHelp.jsx"`. The checker reads the French on that screen. A guide needs no `screen`: its page is its `guide` data. |
 
-`pnpm graph:check` warns about an `itemKinds` or `overrides` key that names no exercise of its module, and reports any ID in these fields that is not in the graph. It reports an error `screen-missing` for a help module with no `screen` and no `guide`, and `dangling-ref` for a `screen` file that does not exist.
+`pnpm graph:check` warns `course-map-unknown-item` for an `overrides` or `itemKinds` key that names no item of its module, and `course-map-unknown-module` for a key that names no module. It reports `course-map-field` for any other field in the file, or a ref filed under another module, and `dangling-ref` for an ID that is not in the graph.
 
 For a pair file, it reports `dangling-ref` for a cognate or false friend that is not in the graph and for a `lesson` that is not in the course, and `cognate-conflict` for an ID listed both as a cognate and as a false friend. A pair file with a missing field or an unknown `kind` stops the checker with a message that names the file.
 
@@ -161,7 +166,7 @@ Add an object to `forms.json` and keep the file sorted by `id`:
 { "id": "fr:form:aller.prs.1sg", "of": "fr:lex:aller", "cell": "prs.1sg", "surface": "vais" }
 ```
 
-`cell` names the slot the form fills: `prs`, `impf`, `fut`, `cond` or `sbjv` followed by a person from `1sg` to `3pl`; `ptcp`, `ptcp.f`, `ptcp.pl` and `ptcp.fpl` for past participles; `prsptcp` for the present participle; `f`, `pl` and `fpl` for nouns and adjectives; `elided` for an apostrophe form such as jusqu'. An irregular form replaces the regular form of that cell. A learner has it only once a vocabulary table lists it, or a lesson's `teachesWordsManual` does.
+`cell` names the slot the form fills: `prs`, `impf`, `fut`, `cond` or `sbjv` followed by a person from `1sg` to `3pl`; `ptcp`, `ptcp.f`, `ptcp.pl` and `ptcp.fpl` for past participles; `prsptcp` for the present participle; `f`, `pl` and `fpl` for nouns and adjectives; `elided` for an apostrophe form such as jusqu'. An irregular form replaces the regular form of that cell. A learner has it only once a vocabulary table lists it, or a module file's `teaches.words` does.
 
 ## Adding a construction
 
@@ -180,7 +185,7 @@ A seventh argument, `{ licenses: [headword IDs] }`, names the words the construc
 
 Give the new construction a level in the `LEVELS` table in `scripts/graph/fr/build/construction-levels.mjs`; `constructions.mjs` stops with a message that names any construction without one.
 
-Then run `node scripts/graph/fr/build/constructions.mjs` and `pnpm graph:test`. The test fails when a detector misses one of its match sentences or matches one of its noMatch sentences. Finally, add the new ID to `teachesConstructions` of the lesson that explains it.
+Then run `node scripts/graph/fr/build/constructions.mjs` and `pnpm graph:test`. The test fails when a detector misses one of its match sentences or matches one of its noMatch sentences. Finally, add the new ID to `teaches.constructions` in the file of the lesson that explains it.
 
 A detector is a list of steps, one for each word it matches, read left to right over the sentence with accents removed. A list of such lists matches when any one of them does. A step can set these keys:
 
@@ -300,10 +305,10 @@ A share in the curve is its count divided by `coreWords` or `coreConstructions` 
 
 ## Build scripts
 
-`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs`, `constructions.mjs` and `course-map.mjs` with `node`, in that order, then `pnpm graph:extract`, reproduces every committed data file byte for byte.
+`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs` and `constructions.mjs` with `node`, in that order, reproduces the data files they wrote byte for byte.
 
 - `constructions.mjs` writes `constructions.json` and stays its source of truth.
-- `course-map.mjs` and `course-map-data.mjs` wrote the hand-edited course-map fields, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The JSON files are now the source of truth, so edit them directly. Running `course-map.mjs` again would overwrite those edits.
+- `course-map.mjs` and `course-map-data.mjs` wrote the first course map, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The course map has since been split between the module files and the corrections, keyed by item id, so `course-map.mjs` now stops before writing. Edit the JSON files and module files directly.
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
 - `core-words.mjs` records the words added for the core lists, with their levels and the irregular forms for their spelling changes (rangeons, jette, mène), and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
 - `constructions.mjs` takes construction levels from `construction-levels.mjs`.

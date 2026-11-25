@@ -1,11 +1,12 @@
-// Task 9, fix round 2: after Task 10 renames course-map.corrections.json over course-map.json, teaching lives only in
-// the module files. A routine `pnpm graph:extract` then writes teachesWords back into the course map; neither a
-// normal migration run nor --force may empty a teaches or tests, or touch a correction key.
+// Task 9, fix round 2: since Task 10 renamed course-map.corrections.json over course-map.json, teaching lives only in
+// the module files. Before Task 10, `pnpm graph:extract` wrote teachesWords into the course map; a map that still holds
+// them stays split, and neither a normal migration run nor --force may empty a teaches or tests, or touch a correction
+// key.
 // It reads live ids from main through a git worktree, so it needs main's history (CI: fetch-depth 0).
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync, execFileSync } from 'node:child_process';
-import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -50,9 +51,8 @@ before(() => {
   cpSync(join(REPO, 'content/fr'), root, { recursive: true });
   cpSync(join(REPO, 'curriculum-graph'), graph, { recursive: true });
   declared = declarations();
-  // Task 10's rename, then what `pnpm graph:extract` writes into the renamed map: teachesWords for each module.
-  const original = readJson(join(FR(), 'course-map.json'));
-  renameSync(join(FR(), 'course-map.corrections.json'), join(FR(), 'course-map.json'));
+  // The committed (renamed) map, plus what `pnpm graph:extract` wrote before Task 10: teachesWords for each module.
+  const original = readJson(join(REPO, 'scripts/content/test/fixtures/course-map-before-split.json'));
   const map = readJson(join(FR(), 'course-map.json'));
   for (const [key, e] of Object.entries(original)) if (e.teachesWords) map[key] = { ...(map[key] ?? {}), teachesWords: e.teachesWords };
   courseMapText = JSON.stringify(map, null, 2) + '\n';

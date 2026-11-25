@@ -18,6 +18,38 @@ function readJson(path) {
   }
 }
 
+// course-map.json holds checker corrections only, per module: excludeWords (homograph ids extraction must not credit),
+// overrides (keyed "<moduleKey>#<item_id>" and the other refs of content-course.mjs, each { ignore: [...] }),
+// itemKinds (keyed the same way) and contentNotes (lesson text to fix, listed in the fix list). What a module teaches
+// and tests is written in its own file under content/<lang>/modules.
+export const CORRECTION_FIELDS = ['excludeWords', 'overrides', 'itemKinds', 'contentNotes'];
+
+// The corrections the checker uses, and a problem line for anything else in the file: a field that is not a
+// correction (a course map from before the split) or a key outside its own module. The file is kept whole in
+// courseMap, so the migration can still split an old map; graph:check reports each problem as course-map-field.
+function corrections(courseMap) {
+  const out = {};
+  const problems = [];
+  for (const [moduleKey, entry] of Object.entries(courseMap)) {
+    const kept = {};
+    for (const [field, value] of Object.entries(entry ?? {})) {
+      if (!CORRECTION_FIELDS.includes(field)) {
+        problems.push({ moduleKey, message: `course-map.json ${moduleKey}.${field} is not a correction (${CORRECTION_FIELDS.join(', ')}); write teaching and tests in the module file` });
+        continue;
+      }
+      if (field === 'overrides' || field === 'itemKinds') {
+        const keys = Object.keys(value ?? {});
+        for (const ref of keys.filter((k) => !k.startsWith(`${moduleKey}#`))) {
+          problems.push({ moduleKey, message: `course-map.json ${moduleKey}.${field} key ${ref} must start with "${moduleKey}#"` });
+        }
+        kept[field] = Object.fromEntries(keys.filter((k) => k.startsWith(`${moduleKey}#`)).map((k) => [k, value[k]]));
+      } else kept[field] = value;
+    }
+    if (Object.keys(kept).length) out[moduleKey] = kept;
+  }
+  return { corrections: out, problems };
+}
+
 const DEFAULT_SETTINGS = {
   reuse: { immediateWindow: 2, windows: [5, 12, 30] },
   translateAllowedThroughUnit: 1,
@@ -56,6 +88,7 @@ export function loadGraph(graphDir, lang, opts = {}) {
   const constructions = readJson(join(langDir, 'constructions.json'));
   const nameList = readJson(join(langDir, 'names.json'));
   const courseMap = readJson(join(langDir, 'course-map.json'));
+  const { corrections: fixes, problems: courseMapProblems } = corrections(courseMap);
   // How this language performs the shared functions (functions.mjs), core lists per level
   // (core/levels/<lang>-<level>.json) and headwords the checker cannot yet read in running text
   // (reading-limits.json). A language may have none of them yet.
@@ -76,5 +109,10 @@ export function loadGraph(graphDir, lang, opts = {}) {
   }
 
   const names = new Set(nameList.map((n) => fold(n.surface)));
-  return { lang, native, pair, settings, functions, exponents, coreLists, readingLimits, nodes, duplicates, headwords, forms, paradigms, constructions, names, courseMap };
+  // courseMap is the file as written; runCheck replaces it with the per-module entries built from the content layer and
+  // the corrections (content-course.mjs courseMapFromContent).
+  return {
+    lang, native, pair, settings, functions, exponents, coreLists, readingLimits, nodes, duplicates, headwords, forms, paradigms, constructions, names,
+    courseMap, corrections: fixes, courseMapProblems,
+  };
 }

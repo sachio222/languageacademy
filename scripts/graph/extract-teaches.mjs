@@ -1,13 +1,12 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from './load.mjs';
-import { readCourse } from './course.mjs';
 import { tokenize } from './fr/tokenize.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict } from './fr/forms.mjs';
-import { writeSortedJson } from './write-json.mjs';
 
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
-const TEACHING_KINDS = new Set(['lesson', 'help']);
+// A reading teaches the words of its own vocabulary table, at its own position (Jake's ruling, spec 5.7).
+const TEACHING_KINDS = new Set(['lesson', 'help', 'reading']);
 
 // The readings extraction credits for each token of one vocabulary entry: exact accents first, folded match
 // only as a fallback, and of those only the best kind (irregular form, then generated form, then lemma).
@@ -22,7 +21,7 @@ export function entryReadings(text, index, isWord) {
   });
 }
 
-// Words each lesson or help module teaches, read from its vocabulary table.
+// Words each lesson, help module or reading teaches, read from its vocabulary table.
 // excludeWords lists over-taught homograph IDs to drop from the result.
 // Only teachesWords is rewritten; every other course-map field is kept.
 export function extractTeaches(graph, course, index) {
@@ -54,14 +53,22 @@ export function extractTeaches(graph, course, index) {
   return { courseMap, unknown };
 }
 
+// Prints the words each module teaches, as the checker derives them, and the vocabulary tokens the graph does not
+// know. It writes nothing: course-map.json holds checker corrections only, and the checker derives these words on
+// every run (content-course.mjs courseMapFromContent).
 async function main() {
   const repoRoot = resolve(process.argv[2] ?? join(dirname(fileURLToPath(import.meta.url)), '../..'));
+  const { loadCourse } = await import('../content/load.mjs');
+  const { readCourseFromContent } = await import('./content-course.mjs');
   const graph = loadGraph(join(repoRoot, 'curriculum-graph'), 'fr');
-  const course = await readCourse(repoRoot);
+  const course = readCourseFromContent(loadCourse({ root: join(repoRoot, 'content', 'fr') }));
   const { courseMap, unknown } = extractTeaches(graph, course, buildFormIndex(graph));
-  writeSortedJson(join(repoRoot, 'curriculum-graph/languages/fr/course-map.json'), courseMap);
-  for (const u of unknown) console.log(`${u.moduleKey}\t${u.surface}`);
-  console.log(`extract-teaches: ${Object.keys(courseMap).length} modules, ${unknown.length} unknown vocab tokens`);
+  for (const m of course) {
+    const words = courseMap[m.moduleKey]?.teachesWords;
+    if (words?.length) console.log(`${m.moduleKey}\t${[...words].sort().join(' ')}`);
+  }
+  for (const u of unknown) console.log(`unknown\t${u.moduleKey}\t${u.surface}`);
+  console.log(`extract-teaches: ${course.filter((m) => courseMap[m.moduleKey]?.teachesWords?.length).length} modules teach words, ${unknown.length} unknown vocab tokens`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) await main();

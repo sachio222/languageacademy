@@ -385,9 +385,19 @@ test('a cognate first read in a hint and typed much later is fixed in the module
   const typed = untaught(ctx, 'café').find((i) => i.moduleKey === 'm149');
   assert.equal(typed.reason, 'cognate');
   assert.equal(typed.fix.moduleKey, 'm149');
-  // the hint before the cognates lesson is an ordinary untaught word, fixed where it is read
-  const early = untaught(ctx, 'café').find((i) => i.moduleKey === 'm2');
-  assert.deepEqual([early.reason, early.fix.moduleKey], ['nowhere', 'm2']);
+  // hints stay outside the taught-before rule (Jake), so the hint before the cognates lesson is not an issue, but it is
+  // still a use of the word
+  assert.equal(untaught(ctx, 'café').find((i) => i.moduleKey === 'm2'), undefined);
+  assert.equal(firstUse(ctx).get('fr:lex:cafe')?.moduleKey, 'm2');
+});
+
+test('hints, feedback, instructions and titles stay outside the taught-before rule', () => {
+  const course = cognateCourse(
+    mod(2, ['hint', 'feedback', 'instruction', 'title', 'concept'].map((source) => item([], { source, shown: ['nous travaillons'] }))),
+    mod(4, [item('nous travaillons')]),
+  );
+  const hits = ruleTaughtBefore(setup(cognateMap, course)).filter((i) => i.moduleKey === 'm2' && i.surface === 'travaillons');
+  assert.deepEqual(hits.map((i) => i.itemRef), ['m2#5'], 'only the concept card');
 });
 
 test('a word or pattern an override ignores in an item is not a use of it there', () => {

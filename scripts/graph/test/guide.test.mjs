@@ -6,7 +6,6 @@ import { readModule } from '../course.mjs';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { ruleTaughtBefore } from '../rules/taught-before.mjs';
-import { FIELDS, levelOf } from '../fields.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -93,19 +92,4 @@ test('validateGraph accepts a guide help module with no screen component', () =>
   const plain = [makeModule({ position: 1, moduleKey: 'h1', kind: 'help' })];
   assert.deepEqual(validateGraph({ ...graph, courseMap: { h1: {} } }, { course: plain, repoRoot }).map((i) => i.rule),
     ['screen-missing']);
-});
-
-test('the field registry lists every field of a guide', () => {
-  const missing = [];
-  const walk = (value, level) => {
-    if (Array.isArray(value)) { value.forEach((v) => walk(v, level)); return; }
-    if (!value || typeof value !== 'object') return;
-    for (const [name, child] of Object.entries(value)) {
-      if (!FIELDS[level]?.[name]) { missing.push(`${level}.${name}`); continue; }
-      const next = levelOf(level, name);
-      if (next) walk(child, next);
-    }
-  };
-  walk(guideModule(negation), 'module');
-  assert.deepEqual(missing, []);
 });

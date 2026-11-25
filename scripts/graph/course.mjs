@@ -1,4 +1,6 @@
-// Reads every lesson module of the course into one normalized shape.
+// Reads every lesson module of today's course (src/lessons) into one normalized shape. graph:check reads the content
+// layer instead (content-course.mjs readCourseFromContent, the same shape); this reader stays for the scripts and
+// tests that still compare against today's lessons.
 // Every exercise shape the course uses is turned into Items. An Item's `french` is French the learner types and
 // `shown` is French the learner reads or hears; both are checked as written (accents count). `lenient` holds
 // accepted answers, checked without accents. Anything the reader does not understand lands in `unreadShapes`
@@ -238,7 +240,7 @@ function readFib(list, key, unread, items, fills) {
 }
 
 // French the learner reads around the exercises: one item per field that holds some, with the field's path as
-// its ref and the French in `shown`. Which fields are read, and why the others are not, is in fields.mjs.
+// its ref and the French in `shown`. (The checker reads the content layer now: content-course.mjs.)
 function readShownText(mod, key, kind, isWord, screen, items) {
   const add = (pathIn, source, text, mode, own = null) => {
     let shown = frenchIn(text, mode, isWord);

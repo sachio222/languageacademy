@@ -55,14 +55,18 @@ test('extractTeaches ranks irregular above generated above lemma', () => {
   assert.deepEqual(courseMap.a.teachesWords, ['h:I', 'I']);
 });
 
-test('extractTeaches ignores exam, practice and reading modules', () => {
+test('extractTeaches ignores exam and practice modules; a reading teaches its own table', () => {
   const course = [
     makeModule({ position: 1, moduleKey: 'e', kind: 'exam', vocab: ['je'] }),
-    makeModule({ position: 2, moduleKey: 'h', kind: 'help', vocab: ['je'] }),
+    makeModule({ position: 2, moduleKey: 'p', kind: 'practice', vocab: ['je'] }),
+    makeModule({ position: 3, moduleKey: 'h', kind: 'help', vocab: ['je'] }),
+    makeModule({ position: 4, moduleKey: 'r', kind: 'reading', vocab: ['je'] }),
   ];
   const { courseMap } = extractTeaches(graph, course, index);
   assert.equal(courseMap.e, undefined);
+  assert.equal(courseMap.p, undefined);
   assert.deepEqual(courseMap.h.teachesWords, ['fr:lex:je']);
+  assert.deepEqual(courseMap.r.teachesWords, ['fr:lex:je']);
 });
 
 test('seedHeadwords keeps lemmas and skips conjugated-form entries', () => {

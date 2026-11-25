@@ -39,7 +39,7 @@ jobs:
       - run: python3 scripts/content/vendor/la-bundle/check/check_bundle.py dist-content/bundle-unit1.json
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test
-      # Task 10 replaces this with a blocking `pnpm graph:check --budget`.
-      - run: pnpm graph:check
-        continue-on-error: true
+      # The checker over the loaded course: fails when any rule's issue count rises above
+      # curriculum-graph/reports/issue-budget.json, so counts can only go down.
+      - run: pnpm graph:check --budget
       - run: pnpm build

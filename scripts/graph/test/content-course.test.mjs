@@ -1,0 +1,256 @@
+// readCourseFromContent: the checker reads the loaded content course (scripts/content) in the shape readCourse gives.
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { readModule } from '../course.mjs';
+import { readCourseFromContent } from '../content-course.mjs';
+import { runCheck } from '../check.mjs';
+import { miniCourse, checkMini, ofRule, repoRoot } from './content-helpers.mjs';
+
+const typeOf = (v) => (v === null ? 'null' : Array.isArray(v) ? 'array' : typeof v);
+// A field readCourse leaves null when there is nothing to say may hold a string here, and the other way round.
+const sameType = (a, b) => typeOf(a) === typeOf(b) || (['null', 'string'].includes(typeOf(a)) && ['null', 'string'].includes(typeOf(b)));
+
+// One module in today's shape, with an item, a hint and a concept card, read the way readCourse reads each module.
+const legacy = readModule({
+  moduleKey: 'legacy', title: 'Être', description: 'Say {who} you are',
+  concepts: [{ term: 'être', definition: 'to be', example: 'je suis' }],
+  vocabularyReference: [{ french: 'je suis', english: 'I am', note: 'first person' }],
+  exerciseConfig: { items: [{ instruction: 'Say it', prompt: 'I am', expectedAnswer: 'je suis', acceptableAnswers: ['Je suis'], hint: "use 'je'" }] },
+}, 1, 1, 'Unit 1', { unitDescription: 'Essentials' });
+
+test('same shape as readCourse', () => {
+  const course = readCourseFromContent(miniCourse());
+  const lesson = course.find((m) => m.moduleKey === '2024-01-02-etre');
+  for (const [k, v] of Object.entries(legacy)) {
+    assert.ok(k in lesson, `module key ${k}`);
+    assert.ok(sameType(v, lesson[k]), `module key ${k}: ${typeOf(v)} here, ${typeOf(lesson[k])} from content`);
+  }
+  const want = legacy.items.find((it) => it.source === 'items');
+  for (const m of course) {
+    assert.deepEqual(m.unreadShapes, [], m.moduleKey);
+    assert.deepEqual(m.blankProblems, [], m.moduleKey);
+    for (const it of m.items) {
+      for (const [k, v] of Object.entries(want)) {
+        assert.ok(k in it, `${it.ref}: item key ${k}`);
+        assert.ok(sameType(v, it[k]), `${it.ref}: item key ${k}`);
+      }
+      assert.ok(it.ref.startsWith(`${m.moduleKey}#`), it.ref);
+    }
+  }
+  // Kinds as readCourse names them; positions follow the outline across units.
+  assert.deepEqual(course.map((m) => [m.position, m.kind, m.unitId]), [
+    [1, 'lesson', 1], [2, 'reading', 1], [3, 'help', 2], [4, 'practice', 2], [5, 'exam', 3],
+  ]);
+  assert.equal(course[2].guide, true);
+  assert.equal(lesson.unitTitle, 'Essentials');
+  assert.deepEqual(lesson.vocab, ['je suis', 'tu es', 'il est', 'elle est', 'nous sommes', 'vous êtes']);
+});
+
+test('item roles come from the item type', () => {
+  const course = readCourseFromContent(miniCourse());
+  const items = new Map(course.flatMap((m) => m.items.map((it) => [it.ref, it])));
+  const at = (ref) => items.get(ref) ?? assert.fail(`no item ${ref}`);
+  // translate: the answer is typed French, the English prompt is not French
+  assert.deepEqual(at('2024-01-02-etre#i-je-suis').french, ['je suis']);
+  assert.deepEqual(at('2024-01-02-etre#i-je-suis').shown, []);
+  assert.equal(at('2024-01-02-etre#i-je-suis').type, 'translate');
+  // respond: accept is lenient; the hint is its own ref
+  assert.deepEqual(at('2024-01-02-etre#i-paul').lenient, ['Je suis Paul.']);
+  assert.deepEqual(at('2024-01-02-etre#i-paul/hint').shown, ['je suis']);
+  assert.equal(at('2024-01-02-etre#i-paul/hint').source, 'hint');
+  // gapfill: the filled sentence, with the blank answers typed
+  assert.deepEqual(at('2024-01-02-etre#i-tu-es').french, ['Tu es Paul ?']);
+  assert.deepEqual(at('2024-01-02-etre#i-tu-es').blankAnswers, ['es']);
+  assert.deepEqual(at('practice-etre#p-nous-vous').french, ['Nous sommes là et vous êtes ici.']);
+  // meaning: the French is shown and the English answer is not French
+  assert.deepEqual(at('2024-01-02-etre#i-il-est').shown, ['il est']);
+  assert.deepEqual(at('2024-01-02-etre#i-il-est').french, []);
+  // transform: the instruction's span is read apart from the item
+  assert.deepEqual(at('2024-01-02-etre#i-plural').shown, ['je suis']);
+  assert.deepEqual(at('2024-01-02-etre#i-plural/instruction').shown, ['nous']);
+  // choice: French options are shown
+  assert.deepEqual(at('2024-01-02-etre#i-which').shown, ['tu es', 'il est']);
+  // mistakes: the wrong answer is never read; its feedback is
+  assert.deepEqual(at('2024-01-02-etre#i-je-suis/mistakes/0/feedback').shown, ['je', 'suis']);
+  assert.ok(![...items.values()].some((it) => [...it.french, ...it.shown, ...it.lenient].includes('je es')));
+  // module texts: concept cards, tables, phrases, notes and the passage
+  assert.deepEqual(at('2024-01-02-etre#concepts/c-etre-forms/example').shown, ['Je suis Paul.']);
+  assert.deepEqual(at('2024-01-02-etre#tables/t-etre-present/rows/2/fr').shown, ['il est']);
+  assert.deepEqual(at('2024-01-02-etre#vocabulary/je-suis-fr/example_fr').shown, ['Je suis Paul.']);
+  assert.ok(items.has('2024-01-02-etre#vocabulary/tu-es-fr/note'));
+  assert.deepEqual(at('reading-cafe#passage/b3/fr').shown, ['Je suis au café.']);
+  assert.deepEqual(at('reading-cafe#q-where').shown, ['au café', 'à la gare']);
+});
+
+test('role from type', async () => {
+  const course = miniCourse((modules) => {
+    modules.get('practice-etre').items.push(
+      { id: 'p-translate-word', type: 'transform', instruction: 'Translate this into the plural.', shown: 'je suis', answer: 'nous sommes' },
+    );
+    const exam = modules.get('exam-places');
+    exam.items.push({ id: 'e-framed', type: 'respond', situation: 'Translate: I am at the café.', answer: 'je suis au café' });
+    exam.items.push({ id: 'e-bare', type: 'translate', prompt: 'We are here.', answer: 'nous sommes là' });
+  });
+  const { issues } = await checkMini(course);
+  const refs = ofRule(issues, 'translate-item').map((i) => i.itemRef);
+  assert.ok(!refs.includes('exam-places#e-framed'), 'a respond item is never a translation, whatever its wording');
+  assert.ok(!refs.includes('practice-etre#p-translate-word'));
+  assert.ok(refs.includes('exam-places#e-bare'), 'a translate item outside Unit 1 is');
+  assert.ok(!refs.some((r) => r.startsWith('2024-01-02-etre#')), 'Unit 1 may translate');
+});
+
+test('reading table teaches', async () => {
+  const { ctx, issues } = await runCheck({ repoRoot, lang: 'fr' });
+  const r6 = ctx.course.find((m) => m.moduleKey === '2024-04-24-reading-6');
+  assert.equal(r6.kind, 'reading');
+  assert.equal(ctx.timeline.taughtAt.get('fr:lex:beaucoup'), r6.position);
+  assert.ok(!issues.some((i) => i.rule === 'untaught-word' && i.moduleKey === r6.moduleKey && i.nodeId === 'fr:lex:beaucoup'));
+
+  // In the mini reading: vélo is in the passage, in no table and taught nowhere earlier; chat is in the table.
+  const mini = miniCourse((modules) => {
+    const r = modules.get('reading-cafe');
+    r.passage.push({ id: 'b4', fr: 'Paul a un chat et un vélo.', en: 'Paul has a cat and a bike.' });
+    r.vocabulary.push({ word_id: 'chat-fr', fr: 'un chat', gloss: 'a cat' }, { word_id: 'avoir-fr', fr: 'a', gloss: 'has' }, { word_id: 'et-fr', fr: 'et', gloss: 'and' });
+  });
+  const { issues: mi } = await checkMini(mini);
+  const words = ofRule(mi, 'untaught-word').filter((i) => i.moduleKey === 'reading-cafe').map((i) => i.surface);
+  assert.ok(words.includes('vélo'), words.join(', '));
+  assert.ok(!words.includes('chat'), words.join(', '));
+});
+
+test('French prompts are checked: shown French and respond situation spans; hints are outside the taught-before rule', async () => {
+  const course = miniCourse((modules) => {
+    const l = modules.get('2024-01-02-etre');
+    l.items.push({ id: 'i-span', type: 'respond', situation: 'Someone says {merci}. Say you are Paul.', answer: 'je suis Paul', hint: 'Not {pardon}.' });
+    l.items.push({ id: 'i-shown', type: 'meaning', shown: 'bonsoir', answer: 'good evening' });
+  });
+  const { issues } = await checkMini(course);
+  const untaught = ofRule(issues, 'untaught-word').filter((i) => i.moduleKey === '2024-01-02-etre');
+  assert.ok(untaught.some((i) => i.surface === 'merci' && i.itemRef === '2024-01-02-etre#i-span'), 'situation span');
+  assert.ok(untaught.some((i) => i.surface === 'bonsoir' && i.itemRef === '2024-01-02-etre#i-shown'), 'shown French');
+  assert.ok(!untaught.some((i) => i.surface === 'pardon'), 'a hint stays outside the rule');
+});
+
+test('{name} in a unit can-do example is the learner name, never an untaught word', async () => {
+  const { issues } = await checkMini(miniCourse());
+  assert.ok(!issues.some((i) => i.rule === 'untaught-word' && /name/i.test(i.surface ?? '')));
+  assert.ok(!issues.some((i) => i.rule === 'unknown-word' && /name/i.test(i.surface ?? '')));
+});
+
+test('corrections follow item ids', async () => {
+  const untaughtIn = (issues, ref) => ofRule(issues, 'untaught-word').filter((i) => i.itemRef === ref && i.surface === 'merci');
+  const ref = '2024-01-02-etre#i-merci';
+  const corrections = { '2024-01-02-etre': { overrides: { [ref]: { ignore: ['merci'] } } } };
+  const course = (atEnd) => miniCourse((modules) => {
+    const items = modules.get('2024-01-02-etre').items;
+    const item = { id: 'i-merci', type: 'respond', situation: 'Someone helps you. Thank them.', answer: 'merci' };
+    if (atEnd) items.push(item);
+    else items.unshift(item);
+  });
+  // Without the override the word is reported, so the override is what silences it.
+  assert.equal(untaughtIn((await checkMini(course(false))).issues, ref).length, 1);
+  for (const atEnd of [false, true]) {
+    const { issues } = await checkMini(course(atEnd), { corrections });
+    assert.deepEqual(untaughtIn(issues, ref), [], atEnd ? 'moved to the end' : 'first');
+    assert.deepEqual(ofRule(issues, 'course-map-unknown-item'), []);
+  }
+  // An override whose item is gone is reported.
+  const { issues } = await checkMini(miniCourse(), { corrections });
+  assert.deepEqual(ofRule(issues, 'course-map-unknown-item').map((i) => i.itemRef), [ref]);
+});
+
+test('every committed override names a ref of its module', async () => {
+  const corrections = JSON.parse(readFileSync(join(repoRoot, 'curriculum-graph/languages/fr/course-map.json'), 'utf8'));
+  const keys = Object.values(corrections).flatMap((e) => Object.keys(e.overrides ?? {}));
+  assert.equal(keys.length, 35);
+  const { ctx, issues } = await runCheck({ repoRoot, lang: 'fr' });
+  const refs = new Set(ctx.course.flatMap((m) => m.items.map((it) => it.ref)));
+  assert.deepEqual(keys.filter((k) => !refs.has(k)), []);
+  assert.deepEqual(ofRule(issues, 'course-map-unknown-item'), []);
+});
+
+test('the committed course map holds corrections only', () => {
+  const corrections = JSON.parse(readFileSync(join(repoRoot, 'curriculum-graph/languages/fr/course-map.json'), 'utf8'));
+  const fields = new Set(Object.values(corrections).flatMap((e) => Object.keys(e)));
+  for (const f of fields) assert.ok(['excludeWords', 'overrides', 'itemKinds', 'contentNotes'].includes(f), f);
+});
+
+test('guide block cells: French cells are shown French, sound cells are neither', () => {
+  const course = readCourseFromContent(miniCourse((modules) => {
+    const g = modules.get('questions-help');
+    g.parts[0].blocks.push(
+      { pairs: [['les amis', 'the friends', 'lay za-mee']] },
+      { cmp: { left: 'No link', right: 'A link', rows: [[{ fr: 'ils sont', say: 'ils sont', en: 'they are' }, { fr: 'ils ont', en: 'they have', sub: '{ont} starts with a vowel' }]] } },
+    );
+  }));
+  const g = course.find((m) => m.moduleKey === 'questions-help');
+  const shown = new Map(g.items.map((it) => [it.ref, it.shown]));
+  const p = 'questions-help#parts/p-three-ways-to-ask/blocks';
+  assert.deepEqual(shown.get(`${p}/1/pairs/0/0`), ['les amis']);
+  assert.deepEqual(shown.get(`${p}/1/pairs/0/1`) ?? [], []);
+  assert.deepEqual(shown.get(`${p}/1/pairs/0/2`) ?? [], [], 'the sound respelling is not French');
+  assert.deepEqual(shown.get(`${p}/2/cmp/rows/0/0/say`), ['ils sont']);
+  assert.deepEqual(shown.get(`${p}/2/cmp/rows/0/1/sub`), ['ont']);
+  assert.deepEqual(shown.get(`${p}/0/ways/0/fr`), ['Est-ce que']);
+});
+
+test('every learner-facing string of the real course has a ref, and only deliberate ones are left out', async () => {
+  const { loadCourse } = await import('../../content/load.mjs');
+  const { moduleTexts } = await import('../../content/schema/module.mjs');
+  const { refPath, blockCellRole } = await import('../content-course.mjs');
+  const loaded = loadCourse();
+  const refs = new Set(readCourseFromContent(loaded).flatMap((m) => m.items.map((it) => it.ref)));
+  const left = new Map();
+  for (const unit of loaded.units) {
+    for (const mod of unit.modules) {
+      for (const t of moduleTexts(mod)) {
+        // An item's fields sit on the item's own ref; a mistake's answer is deliberately wrong and never read.
+        const ref = t.path.startsWith('items[')
+          ? `${mod.module_key}#${refPath(mod, t.path.replace(/\.(answer|accept\[\d+\]|prompt|situation|cue|question|shown|text|options\[\d+\]\.text|blanks\[\d+\]\..*)$/, ''))}`
+          : `${mod.module_key}#${refPath(mod, t.path)}`;
+        if (refs.has(ref) || /\.mistakes\[\d+\]\.answer$/.test(t.path)) continue;
+        const why = /^vocabulary\[\d+\]\.fr$/.test(t.path) ? 'vocabulary word (taught)'
+          : /^vocabulary\[\d+\]\.info_card\./.test(t.path) ? 'info card (native)'
+            : /^glossary\[/.test(t.path) ? 'glossary (pop-up source)'
+              : /^checks\[\d+\]\.sound$/.test(t.path) ? 'check sound (respelling)'
+                : t.role === 'block' && blockCellRole(t.path) === 'none' ? 'block cell, neither French nor native'
+                  : `UNREAD ${t.path}`;
+        left.set(why, (left.get(why) ?? 0) + 1);
+      }
+    }
+  }
+  assert.deepEqual([...left.keys()].filter((k) => k.startsWith('UNREAD')), []);
+});
+
+test('a course map field that is not a correction is kept for the migration and reported by graph:check', async () => {
+  const { mkdtempSync, cpSync, writeFileSync, rmSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { loadGraph } = await import('../load.mjs');
+  const dir = mkdtempSync(join(tmpdir(), 'la-graph-'));
+  try {
+    cpSync(join(repoRoot, 'scripts/graph/test/fixtures/graph-mini'), dir, { recursive: true });
+    writeFileSync(join(dir, 'languages/fr/course-map.json'), JSON.stringify({
+      a: { teachesConstructions: ['fr:cx:x'], excludeWords: ['fr:lex:je'], overrides: { 'a#i-1': { ignore: ['je'] }, 'b#i-2': { ignore: ['tu'] } } },
+    }));
+    const graph = loadGraph(dir, 'fr');
+    assert.deepEqual(graph.corrections, { a: { excludeWords: ['fr:lex:je'], overrides: { 'a#i-1': { ignore: ['je'] } } } });
+    assert.deepEqual(graph.courseMap.a.teachesConstructions, ['fr:cx:x'], 'the file is kept whole');
+    assert.equal(graph.courseMapProblems.length, 2);
+    assert.match(graph.courseMapProblems[0].message, /teachesConstructions is not a correction/);
+    assert.match(graph.courseMapProblems[1].message, /b#i-2 must start with "a#"/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+  const { issues } = await runCheck({ repoRoot, lang: 'fr' });
+  assert.deepEqual(ofRule(issues, 'course-map-field'), []);
+});
+
+test('the Reference pages that open come from the outline shelf, and settings name the same ones', async () => {
+  const { issues: real } = await runCheck({ repoRoot, lang: 'fr' });
+  assert.deepEqual(ofRule(real, 'reference-modules-differ'), []);
+  const { ctx, issues } = await checkMini(miniCourse());
+  assert.equal(ofRule(issues, 'reference-modules-differ').length, 1, 'the mini shelf opens the alphabet only');
+  assert.deepEqual(ctx.referenceOpenTitles.length, 1);
+});

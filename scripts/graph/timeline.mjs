@@ -2,13 +2,19 @@ import { issue } from './issues.mjs';
 
 const TEACHING = new Set(['lesson', 'help']);
 const TEACH_FIELDS = ['teachesWords', 'teachesWordsManual', 'teachesConstructions'];
+// A reading teaches the words of its own vocabulary table at its own position (Jake's ruling, spec 5.7), never a
+// construction.
+const READING_FIELDS = ['teachesWords', 'teachesWordsManual'];
 
-// Node IDs a module teaches: lessons and help pages through their teaches fields, readings through preTeach, other
-// modules nothing. The timeline and the module levels both use this rule.
+// The teaching fields a module of this kind may hold: lessons and help pages all three, readings their words, other
+// modules none.
+const fieldsFor = (kind) => (TEACHING.has(kind) ? TEACH_FIELDS : kind === 'reading' ? READING_FIELDS : []);
+
+// Node IDs a module teaches, from its entry (graph.courseMap, built from the module file by courseMapFromContent).
+// The timeline and the module levels both use this rule.
 export function moduleTeaches(m, entry) {
   if (!entry) return [];
-  const fields = TEACHING.has(m.kind) ? TEACH_FIELDS : m.kind === 'reading' ? ['preTeach'] : [];
-  return [...new Set(fields.flatMap((f) => entry[f] ?? []))];
+  return [...new Set(fieldsFor(m.kind).flatMap((f) => entry[f] ?? []))];
 }
 
 // Availability timeline: which node is taught at which course position, and which the Reference unit opens.
@@ -41,8 +47,9 @@ export function buildTimeline(graph, course, opts = {}) {
     const entry = courseMap[m.moduleKey];
     if (!entry) continue;
     for (const id of moduleTeaches(m, entry)) teach(id, m.position);
-    if (!TEACHING.has(m.kind)) {
-      const offending = TEACH_FIELDS.flatMap((f) => entry[f] ?? []);
+    const allowed = fieldsFor(m.kind);
+    if (allowed.length < TEACH_FIELDS.length) {
+      const offending = TEACH_FIELDS.filter((f) => !allowed.includes(f)).flatMap((f) => entry[f] ?? []);
       if (offending.length) {
         issues.push(issue({
           rule: 'teaches-in-non-teaching-module',

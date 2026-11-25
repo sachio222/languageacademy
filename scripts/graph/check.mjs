@@ -1,7 +1,9 @@
 import { join } from 'node:path';
 import { loadGraph } from './load.mjs';
+import { issue } from './issues.mjs';
 import { validateGraph } from './validate.mjs';
-import { readCourse, readReferenceModules } from './course.mjs';
+import { readCourseFromContent, referenceModulesFromContent, courseMapFromContent } from './content-course.mjs';
+import { loadCourse } from '../content/load.mjs';
 import { buildFormIndex } from './fr/forms.mjs';
 import { frenchWordTest } from './french-text.mjs';
 import { buildTimeline } from './timeline.mjs';
@@ -15,6 +17,7 @@ import { ruleUnread } from './rules/unread.mjs';
 import { ruleShapes } from './rules/shapes.mjs';
 import { ruleBlanks } from './rules/blanks.mjs';
 import { ruleCourseMapKeys, ruleCourseMapItems } from './rules/course-map.mjs';
+import { ruleExamItemCopied, ruleReadingWordNoPopup, ruleGuideOnlyTeaching } from './rules/content.mjs';
 import { ruleFunctionExponents, ruleFunctionUnreachable, functionReport } from './functions.mjs';
 import { reportStats } from './report-data.mjs';
 import { entryReadings } from './extract-teaches.mjs';
@@ -25,6 +28,7 @@ const RULES = [
   ruleTaughtBefore, ruleReuse, ruleTranslation, ruleClaims,
   ruleDuplicates, ruleLevels, ruleUnread, ruleShapes, ruleBlanks, ruleCourseMapKeys, ruleCourseMapItems,
   ruleFunctionExponents, ruleFunctionUnreachable,
+  ruleExamItemCopied, ruleReadingWordNoPopup, ruleGuideOnlyTeaching,
 ];
 
 // Headwords and forms the Reference unit's vocabulary tables list, read the way lesson vocabulary is. The report
@@ -75,20 +79,40 @@ export function referenceOpenNodes(index, vocab) {
 }
 
 // native: the learner's native language, which picks the language pair; settings.defaultNative when left out.
-export async function runCheck({ repoRoot, lang, native }) {
+// The course is the content layer: loadCourse() over content/<lang> (or opts.content, an already loaded Course), read
+// by readCourseFromContent. opts.corrections replaces the committed course-map corrections and opts.dictionaryForms
+// the dictionary's folded spellings (src/data/dictionary), for tests.
+export async function runCheck({ repoRoot, lang, native, content, corrections, dictionaryForms }) {
   const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang, { native });
+  if (corrections) {
+    graph.corrections = corrections;
+    graph.courseMapProblems = [];
+  }
   const index = buildFormIndex(graph);
-  const course = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord: frenchWordTest(graph, index) });
-  const referenceModules = await readReferenceModules(repoRoot);
+  const loaded = content ?? loadCourse({ root: join(repoRoot, 'content', lang), graphDir: join(repoRoot, 'curriculum-graph', 'languages', lang) });
+  const course = readCourseFromContent(loaded, { isWord: frenchWordTest(graph, index) });
+  // What each module teaches and tests comes from its own file; the course map adds the corrections.
+  graph.courseMap = courseMapFromContent(course, graph.corrections, { graph, index });
+  const referenceModules = referenceModulesFromContent(loaded);
   const reference = referenceNodes(index, referenceModules.flatMap((m) => m.vocab));
-  // Only the modules settings.reference.modules lists open their words; the others are read for the report only.
-  const openKeys = new Set(graph.settings?.reference?.modules ?? []);
+  // Only the shelf pages the outline lists in opens_words open their words; the others are read for the report only.
+  const openKeys = new Set(loaded.shelf.opens_words ?? []);
   const open = referenceOpenNodes(index, referenceModules.filter((m) => openKeys.has(m.moduleKey)).flatMap((m) => m.vocab));
   const timeline = buildTimeline(graph, course, { reference: open, openFrom: graph.settings?.reference?.openFrom ?? null });
   // referenceOpenTitles: the titles of the Reference pages that open, for the fix list.
   const referenceOpenTitles = referenceModules.filter((m) => openKeys.has(m.moduleKey)).map((m) => m.title);
-  const ctx = { graph, course, index, timeline, reference, referenceOpenTitles };
+  const forms = dictionaryForms ?? await (await import('../content/migrate/sources.mjs')).dictionaryForms();
+  const ctx = { graph, course, index, timeline, reference, referenceOpen: open, referenceOpenTitles, content: loaded, dictionaryForms: forms };
+  // settings.reference.modules and the outline's shelf.opens_words name the same pages; the checker opens the shelf's.
+  const listed = [...(graph.settings?.reference?.modules ?? [])].sort();
+  const shelf = [...openKeys].sort();
+  const sameShelf = !graph.settings?.reference || (listed.length === shelf.length && listed.every((k, i) => k === shelf[i]));
   const issues = [
+    ...(sameShelf ? [] : [issue({
+      rule: 'reference-modules-differ', nodeId: 'settings:reference.modules',
+      message: `settings.reference.modules (${listed.join(', ')}) differs from the outline's shelf.opens_words (${shelf.join(', ')}); the checker opens the shelf's pages`,
+    })]),
+    ...(graph.courseMapProblems ?? []).map((p) => issue({ rule: 'course-map-field', severity: 'error', moduleKey: p.moduleKey, message: p.message })),
     ...validateGraph(graph, { course, repoRoot, referenceModules: referenceModules.map((m) => m.moduleKey) }),
     ...timeline.issues,
     ...RULES.flatMap((rule) => rule(ctx)),

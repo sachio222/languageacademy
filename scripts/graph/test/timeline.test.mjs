@@ -68,10 +68,10 @@ test('taughtAt keeps the first position; manual words and constructions count', 
   assert.equal(timeline.taughtAt.get('fr:cx:verb.er.present'), 1);
 });
 
-test('help teaches; reading teaches only preTeach', () => {
+test('help teaches; a reading teaches the words of its own table', () => {
   const graph = withMap({
     m1: { teachesWords: ['fr:lex:parler'] },
-    m2: { preTeach: ['fr:lex:aller'] },
+    m2: { teachesWords: ['fr:lex:aller'] },
   });
   const course = [makeModule({ position: 1, kind: 'help' }), makeModule({ position: 2, kind: 'reading' })];
   const { timeline, } = makeCtx({ graph, course });
@@ -80,11 +80,11 @@ test('help teaches; reading teaches only preTeach', () => {
   assert.deepEqual(timeline.issues, []);
 });
 
-test('teaches entries on exam, practice and reading modules are errors and are ignored', () => {
+test('teaches entries on exam and practice modules, and constructions on a reading, are errors and are ignored', () => {
   const graph = withMap({
     m1: { teachesWords: ['fr:lex:parler'] },
     m2: { teachesConstructions: ['fr:cx:verb.er.present'], teachesWordsManual: ['fr:lex:aller'] },
-    m3: { teachesWords: ['fr:lex:cafe'], preTeach: ['fr:lex:aller'] },
+    m3: { teachesWords: ['fr:lex:cafe'], teachesWordsManual: ['fr:lex:aller'], teachesConstructions: ['fr:cx:passe-compose.avoir'] },
   });
   const course = [
     makeModule({ position: 1, kind: 'exam' }),
@@ -102,8 +102,12 @@ test('teaches entries on exam, practice and reading modules are errors and are i
   assert.match(timeline.issues[0].message, /fr:lex:parler/);
   assert.match(timeline.issues[1].message, /fr:cx:verb\.er\.present/);
   assert.match(timeline.issues[1].message, /fr:lex:aller/);
+  assert.match(timeline.issues[2].message, /fr:cx:passe-compose\.avoir/);
+  assert.doesNotMatch(timeline.issues[2].message, /fr:lex:cafe/);
   assert.equal(timeline.isAvailable('fr:lex:parler', 160), false);
-  assert.equal(timeline.isAvailable('fr:lex:cafe', 160), false);
+  assert.equal(timeline.isAvailable('fr:cx:passe-compose.avoir', 160), false);
+  // the reading's own table words are taught there
+  assert.equal(timeline.taughtAt.get('fr:lex:cafe'), 3);
   assert.equal(timeline.taughtAt.get('fr:lex:aller'), 3);
 });
 

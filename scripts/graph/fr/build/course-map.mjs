@@ -1,4 +1,5 @@
-// Writes the hand-curated fields of curriculum-graph/languages/fr/course-map.json (teachesConstructions, tests,
+// Retired with the content layer: it now exits before writing (see the end of the file); --report still prints.
+// Wrote the hand-curated fields of curriculum-graph/languages/fr/course-map.json (teachesConstructions, tests,
 // teachesWordsManual, excludeWords, overrides, contentNotes; it clears itemKinds) from course-map-data.mjs, writes
 // names.json, and edits headwords.json (names removed, savoir dictionaryId, pronoun notes). teachesWords is
 // left to `pnpm graph:extract`: run it after this script.
@@ -187,6 +188,12 @@ if (REPORT) {
   for (const row of table) console.log(JSON.stringify(row));
   process.exit(0);
 }
+// Since the content layer, course-map.json holds checker corrections only, keyed by content item ids, and each module
+// file declares what it teaches and tests (content/fr/modules). This script wrote the old shape, keyed by today's
+// lesson positions, so it stops here and writes nothing; it stays as the record of how that data was built.
+console.error('course-map.mjs writes the course map in its old shape, which the checker no longer reads. Edit '
+  + 'curriculum-graph/languages/fr/course-map.json (corrections) or the module files under content/fr/modules instead.');
+process.exit(1);
 for (const [key, e] of Object.entries(courseMap)) if (!Object.keys(e).length) delete courseMap[key]; // nothing left to say
 writeSortedJson(join(DIR, 'course-map.json'), courseMap);
 writeSortedJson(join(DIR, 'names.json'), names);

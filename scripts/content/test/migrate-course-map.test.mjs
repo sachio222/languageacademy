@@ -14,7 +14,8 @@ import { readingFrom } from '../migrate/reading.mjs';
 const REPO = fileURLToPath(new URL('../../../', import.meta.url));
 const readJson = (p) => JSON.parse(readFileSync(join(REPO, p), 'utf8'));
 const LIVE_IDS = readJson('content/fr/legacy/live-ids.json');
-const COURSE_MAP = readJson('curriculum-graph/languages/fr/course-map.json');
+// The course map as it was before the split (Task 10 renamed the corrections over it), kept as a frozen input.
+const COURSE_MAP = readJson('scripts/content/test/fixtures/course-map-before-split.json');
 const course = loadCourse();
 const { configs } = await todaysModules();
 const RECORDS = readJson('content/fr/legacy/migration-sources.json');
@@ -217,9 +218,9 @@ test('every module file declares what the course map says it teaches and tests',
   assert.equal(n, 124);
 });
 
-test('course-map.corrections.json is the split of course-map.json', () => {
+test('the committed course-map.json is the split of the course map before the split', () => {
   const { corrections } = split(COURSE_MAP);
-  assert.deepEqual(readJson('curriculum-graph/languages/fr/course-map.corrections.json'), corrections);
+  assert.deepEqual(readJson('curriculum-graph/languages/fr/course-map.json'), corrections);
 });
 
 test('taught constructions may be the graph\u2019s regular patterns', () => {
@@ -335,7 +336,7 @@ test('a live number the migration record places elsewhere in the source is repor
 
 /* ---------- fix round 2: a course map split before is never split again ---------- */
 
-const CORRECTIONS = readJson('curriculum-graph/languages/fr/course-map.corrections.json');
+const CORRECTIONS = readJson('curriculum-graph/languages/fr/course-map.json');
 
 test('teachesWords alone does not make a course map unsplit', () => {
   const withWords = structuredClone(CORRECTIONS);

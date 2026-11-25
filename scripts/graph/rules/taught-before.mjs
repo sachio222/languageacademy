@@ -3,6 +3,7 @@ import { lookupToken, lookupTokenStrict, lookupKey, strictKey } from '../fr/form
 import { detectConstructions, matchSpans } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
 import { languageName } from '../pairs.mjs';
+import { OUTSIDE } from '../content-course.mjs';
 
 const memo = new WeakMap();
 
@@ -91,7 +92,8 @@ function uses(ctx) {
   return out;
 }
 
-const suppressions = (ctx, moduleKey, itemRef) => {
+// The words and patterns a course-map override tells the checker to ignore in one item (graph ids or folded words).
+export const suppressions = (ctx, moduleKey, itemRef) => {
   const list = ctx.graph.courseMap?.[moduleKey]?.overrides?.[itemRef]?.ignore ?? [];
   return new Set(list.map((x) => (String(x).includes(':') ? String(x) : fold(String(x)))));
 };
@@ -182,6 +184,8 @@ function run(ctx) {
     };
     const seenCx = new Set();
     for (const it of m.items) {
+      // Hints, feedback, instructions and titles stay outside this rule (Jake); their French still counts for reuse.
+      if (OUTSIDE.has(it.source)) continue;
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
         const typedAt = typedTest(it, a, isWord);

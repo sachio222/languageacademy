@@ -1,0 +1,5168 @@
+{
+  "2024-01-01-famous-words": {
+    "overrides": {
+      "2024-01-01-famous-words#exerciseConfig.items[5]": {
+        "ignore": [
+          "fr:cx:elision",
+          "fr:cx:pronoun.subject"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:chunk.au-revoir",
+      "fr:cx:chunk.sil-vous-plait"
+    ],
+    "teachesWords": [
+      "fr:lex:bonjour",
+      "fr:lex:bonsoir",
+      "fr:lex:merci",
+      "fr:lex:oui",
+      "fr:lex:non",
+      "fr:lex:se",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:lex:il",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:plaire",
+      "fr:form:plaire.prs.3sg",
+      "fr:lex:pardon",
+      "fr:lex:au",
+      "fr:lex:revoir",
+      "fr:lex:voila",
+      "fr:lex:cafe",
+      "fr:lex:bon",
+      "fr:lex:bien",
+      "fr:lex:salut"
+    ]
+  },
+  "2024-01-01-pronouns": {
+    "teachesConstructions": [
+      "fr:cx:pronoun.subject",
+      "fr:cx:pronoun.tu-vous",
+      "fr:cx:pronoun.on"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:lex:on"
+    ]
+  },
+  "2024-01-02-etre": {
+    "overrides": {
+      "2024-01-02-etre#concepts[0].example": {
+        "ignore": [
+          "fr:lex:express"
+        ]
+      }
+    },
+    "teachesWords": [
+      "fr:lex:etre",
+      "fr:lex:je",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:tu",
+      "fr:form:etre.prs.2sg",
+      "fr:lex:il",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:etre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:etre.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:etre.prs.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-04-avoir": {
+    "teachesConstructions": [
+      "fr:cx:elision",
+      "fr:cx:age.avoir-ans"
+    ],
+    "teachesWords": [
+      "fr:lex:avoir",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:tu",
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:il",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:avoir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:avoir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:avoir.prs.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-05-articles": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:article.indefinite",
+      "fr:cx:article.definite",
+      "fr:cx:noun.gender"
+    ],
+    "teachesWords": [
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:form:le.pl",
+      "fr:form:le.elided"
+    ]
+  },
+  "2024-01-06-basic-nouns": {
+    "teachesConstructions": [
+      "fr:cx:noun.gender"
+    ],
+    "teachesWords": [
+      "fr:lex:un",
+      "fr:lex:livre",
+      "fr:lex:chat",
+      "fr:form:un.f",
+      "fr:lex:chatte",
+      "fr:lex:chien",
+      "fr:lex:chienne",
+      "fr:lex:maison",
+      "fr:lex:voiture",
+      "fr:lex:ami",
+      "fr:lex:amie",
+      "fr:lex:homme",
+      "fr:lex:femme",
+      "fr:lex:enfant",
+      "fr:lex:chose",
+      "fr:lex:jour"
+    ]
+  },
+  "2024-01-07-plurals": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:noun.plural",
+      "fr:cx:article.definite",
+      "fr:cx:article.indefinite"
+    ],
+    "teachesWords": [
+      "fr:lex:des",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:chat",
+      "fr:form:chat.pl",
+      "fr:lex:chien",
+      "fr:form:chien.pl",
+      "fr:lex:livre",
+      "fr:form:livre.pl",
+      "fr:lex:ami",
+      "fr:form:ami.pl",
+      "fr:lex:chose",
+      "fr:form:chose.pl",
+      "fr:lex:enfant",
+      "fr:form:enfant.pl"
+    ]
+  },
+  "2024-01-08-connectors": {
+    "teachesWords": [
+      "fr:lex:et",
+      "fr:lex:mais",
+      "fr:lex:ou",
+      "fr:lex:aussi",
+      "fr:lex:tres"
+    ]
+  },
+  "2024-01-10-unit1-practice": {
+    "tests": [
+      "fr:cx:pronoun.subject",
+      "fr:cx:article.indefinite",
+      "fr:cx:article.definite"
+    ]
+  },
+  "2024-01-11-unit1-exam": {
+    "overrides": {
+      "2024-01-11-unit1-exam#concepts[2].example": {
+        "ignore": [
+          "fr:lex:express",
+          "possession"
+        ]
+      }
+    },
+    "tests": [
+      "fr:cx:pronoun.subject",
+      "fr:cx:article.indefinite",
+      "fr:cx:article.definite",
+      "fr:cx:noun.plural",
+      "fr:cx:cest"
+    ]
+  },
+  "2024-01-12-demonstratives": {
+    "teachesConstructions": [
+      "fr:cx:demonstrative.adjective"
+    ],
+    "teachesWords": [
+      "fr:lex:ca",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.mv",
+      "fr:form:ce.f",
+      "fr:form:ce.pl",
+      "fr:lex:ceci",
+      "fr:lex:cela"
+    ]
+  },
+  "2024-01-13-ca-survival": {
+    "contentNotes": [
+      "the vocabulary note \"ça + va (être)\" names the wrong verb: \"va\" comes from aller, so the note should read \"ça + va (aller)\"."
+    ],
+    "overrides": {
+      "2024-01-13-ca-survival#exerciseConfig.items[4].hint": {
+        "ignore": [
+          "fr:lex:combiner",
+          "fr:cx:imperative.tu"
+        ]
+      },
+      "2024-01-13-ca-survival#exerciseConfig.items[5].hint": {
+        "ignore": [
+          "fr:lex:combiner",
+          "fr:cx:imperative.tu"
+        ]
+      },
+      "2024-01-13-ca-survival#vocabularyReference[2].note": {
+        "ignore": [
+          "fr:cx:frame.aller-infinitive"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:cest",
+      "fr:cx:chunk.cest-ca",
+      "fr:cx:chunk.ca-va"
+    ],
+    "teachesWords": [
+      "fr:lex:ca",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:aller",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:tu",
+      "fr:form:avoir.prs.2sg"
+    ]
+  },
+  "2024-01-14-determiners-nouns": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:demonstrative.adjective"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:livre",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:avoir.prs.3sg",
+      "fr:form:ce.f",
+      "fr:lex:maison",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:avoir.prs.1pl",
+      "fr:form:ce.pl",
+      "fr:form:livre.pl",
+      "fr:lex:tu",
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:chat",
+      "fr:lex:ils",
+      "fr:form:avoir.prs.3pl",
+      "fr:form:chat.pl",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:form:ce.mv",
+      "fr:lex:homme",
+      "fr:lex:enfant",
+      "fr:form:enfant.pl",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:form:le.pl",
+      "fr:lex:chien",
+      "fr:form:chien.pl"
+    ]
+  },
+  "2024-01-15-vouloir": {
+    "teachesConstructions": [
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:vouloir",
+      "fr:lex:je",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:vouloir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:vouloir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:vouloir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:vouloir.prs.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-16-pouvoir": {
+    "teachesConstructions": [
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:pouvoir",
+      "fr:lex:je",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:form:pouvoir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:pouvoir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:pouvoir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:pouvoir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:pouvoir.prs.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-17-voir": {
+    "teachesWords": [
+      "fr:lex:voir",
+      "fr:lex:je",
+      "fr:form:voir.prs.1sg",
+      "fr:form:voir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:voir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:voir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:voir.prs.3pl",
+      "fr:form:voir.sbjv.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-18-questions": {
+    "teachesConstructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.intonation",
+      "fr:cx:q.inversion",
+      "fr:cx:q.words",
+      "fr:cx:q.quest-ce-que",
+      "fr:cx:chunk.quest-ce-que-cest",
+      "fr:cx:chunk.comment-ca-va",
+      "fr:cx:chunk.ca-va"
+    ],
+    "teachesWords": [
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:quoi",
+      "fr:lex:qui",
+      "fr:lex:ou.adverb",
+      "fr:lex:quand",
+      "fr:lex:comment",
+      "fr:lex:pourquoi",
+      "fr:lex:combien",
+      "fr:lex:quel",
+      "fr:form:quel.f",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:ca",
+      "fr:lex:aller",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:tu",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:form:pouvoir.prs.2sg"
+    ]
+  },
+  "2024-01-19-questions-help": {
+    "screen": "src/components/QuestionsHelp.jsx",
+    "teachesConstructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.intonation",
+      "fr:cx:q.inversion"
+    ],
+    "teachesWords": []
+  },
+  "2024-01-19-stressed-pronouns": {
+    "overrides": {
+      "2024-01-19-stressed-pronouns#concepts[1].example": {
+        "ignore": [
+          "fr:lex:me"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:pronoun.stressed"
+    ],
+    "teachesWords": [
+      "fr:lex:moi",
+      "fr:lex:toi",
+      "fr:lex:toi.pronoun",
+      "fr:lex:lui",
+      "fr:lex:lui.pronoun",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:eux",
+      "fr:lex:eux.pronoun",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-20-although-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.bien-que"
+    ],
+    "teachesWords": [
+      "fr:lex:bien",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:je",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:lex:fatigue",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:lex:faire",
+      "fr:form:faire.sbjv.1sg",
+      "fr:form:faire.sbjv.3sg",
+      "fr:lex:froid",
+      "fr:lex:tu",
+      "fr:lex:occupe",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:etre.sbjv.3sg",
+      "fr:lex:malade",
+      "fr:lex:on",
+      "fr:lex:avoir",
+      "fr:form:avoir.sbjv.3sg",
+      "fr:lex:peu",
+      "fr:lex:de",
+      "fr:lex:temps"
+    ]
+  },
+  "2024-01-20-prepositions": {
+    "excludeWords": [
+      "fr:lex:devoir",
+      "fr:form:devoir.prsptcp",
+      "fr:lex:entrer"
+    ],
+    "teachesWords": [
+      "fr:lex:avec",
+      "fr:lex:dans",
+      "fr:lex:sur.preposition",
+      "fr:lex:sous",
+      "fr:lex:derriere",
+      "fr:form:entrer.prs.1sg",
+      "fr:form:entrer.prs.3sg",
+      "fr:form:entrer.sbjv.1sg",
+      "fr:form:entrer.sbjv.3sg",
+      "fr:lex:a.preposition",
+      "fr:lex:de",
+      "fr:lex:pour",
+      "fr:lex:chez"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:devant",
+      "fr:lex:entre"
+    ]
+  },
+  "2024-01-21-adjectives": {
+    "teachesConstructions": [
+      "fr:cx:adj.agreement",
+      "fr:cx:adj.placement",
+      "fr:cx:adj.regular",
+      "fr:cx:adj.e"
+    ],
+    "teachesWords": [
+      "fr:lex:bon",
+      "fr:form:bon.f",
+      "fr:lex:grand",
+      "fr:form:grand.f",
+      "fr:lex:petit",
+      "fr:form:petit.f",
+      "fr:lex:nouveau",
+      "fr:form:nouveau.f",
+      "fr:lex:vieux",
+      "fr:form:vieux.f",
+      "fr:lex:jeune",
+      "fr:lex:beau",
+      "fr:form:beau.f",
+      "fr:lex:autre",
+      "fr:form:beau.mv",
+      "fr:form:nouveau.mv",
+      "fr:form:vieux.mv",
+      "fr:form:beau.fpl",
+      "fr:form:vieux.fpl"
+    ]
+  },
+  "2024-01-21-before-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.avant-que"
+    ],
+    "teachesWords": [
+      "fr:lex:avant",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:tu",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.2sg",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:lex:arriver",
+      "fr:form:arriver.prs.1sg",
+      "fr:form:arriver.prs.3sg",
+      "fr:form:arriver.sbjv.1sg",
+      "fr:form:arriver.sbjv.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:venir",
+      "fr:form:venir.sbjv.1sg",
+      "fr:form:venir.sbjv.3sg",
+      "fr:lex:on",
+      "fr:form:partir.sbjv.1sg",
+      "fr:form:partir.sbjv.3sg",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.3sg",
+      "fr:lex:trop",
+      "fr:lex:tard"
+    ]
+  },
+  "2024-01-22-common-adverbs": {
+    "teachesWords": [
+      "fr:lex:vraiment",
+      "fr:lex:serieusement",
+      "fr:lex:lentement",
+      "fr:lex:rapidement",
+      "fr:lex:facilement",
+      "fr:lex:completement",
+      "fr:lex:probablement"
+    ]
+  },
+  "2024-01-23-common-special-forms-1": {
+    "teachesConstructions": [
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que"
+    ],
+    "teachesWords": [
+      "fr:lex:tu",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:etre.sbjv.3sg",
+      "fr:lex:je",
+      "fr:lex:avoir",
+      "fr:form:avoir.sbjv.2sg",
+      "fr:form:avoir.sbjv.3sg",
+      "fr:lex:aller",
+      "fr:form:aller.sbjv.2sg",
+      "fr:form:aller.sbjv.1sg",
+      "fr:form:aller.sbjv.3sg",
+      "fr:lex:faire",
+      "fr:form:faire.sbjv.2sg",
+      "fr:form:faire.sbjv.1sg",
+      "fr:form:faire.sbjv.3sg"
+    ]
+  },
+  "2024-01-23-unit2-practice": {
+    "tests": [
+      "fr:cx:demonstrative.adjective",
+      "fr:cx:chunk.ca-va",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:pronoun.stressed",
+      "fr:cx:q.words",
+      "fr:cx:chunk.comment-ca-va",
+      "fr:cx:chunk.quest-ce-que-cest"
+    ]
+  },
+  "2024-01-24-common-special-forms-2": {
+    "teachesConstructions": [
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que"
+    ],
+    "teachesWords": [
+      "fr:lex:tu",
+      "fr:lex:venir",
+      "fr:form:venir.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:venir.sbjv.1sg",
+      "fr:form:venir.sbjv.3sg",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.2sg",
+      "fr:form:partir.sbjv.1sg",
+      "fr:form:partir.sbjv.3sg",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.sbjv.2sg",
+      "fr:form:pouvoir.sbjv.1sg",
+      "fr:form:pouvoir.sbjv.3sg",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.sbjv.2sg",
+      "fr:form:savoir.verb.sbjv.1sg",
+      "fr:form:savoir.verb.sbjv.3sg",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.sbjv.2sg",
+      "fr:form:comprendre.sbjv.1sg",
+      "fr:form:comprendre.sbjv.3sg"
+    ]
+  },
+  "2024-01-24-unit2-exam": {
+    "tests": [
+      "fr:cx:demonstrative.adjective",
+      "fr:cx:chunk.ca-va",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:pronoun.stressed",
+      "fr:cx:q.words",
+      "fr:cx:chunk.comment-ca-va",
+      "fr:cx:chunk.quest-ce-que-cest",
+      "fr:cx:adj.agreement",
+      "fr:cx:adj.placement"
+    ]
+  },
+  "2024-01-25-contractions": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:contraction.de",
+      "fr:cx:contraction.a",
+      "fr:cx:article.partitive",
+      "fr:cx:elision"
+    ],
+    "teachesWords": [
+      "fr:lex:du",
+      "fr:lex:de",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:form:le.elided",
+      "fr:lex:des",
+      "fr:lex:au",
+      "fr:lex:a.preposition",
+      "fr:lex:aux"
+    ]
+  },
+  "2024-01-25-emotion-phrases": {
+    "excludeWords": [
+      "fr:lex:surprendre",
+      "fr:form:surprendre.ptcp",
+      "fr:form:surprendre.ptcp.pl"
+    ],
+    "teachesConstructions": [
+      "fr:cx:subj.emotion-que"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:content",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:tu",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:lex:la",
+      "fr:lex:triste",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.2sg",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:peur",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:form:partir.sbjv.1sg",
+      "fr:form:partir.sbjv.3sg",
+      "fr:lex:desole",
+      "fr:lex:malade",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.sbjv.2sg",
+      "fr:lex:ca",
+      "fr:lex:regretter",
+      "fr:form:regretter.prs.1sg",
+      "fr:form:regretter.prs.3sg",
+      "fr:form:regretter.sbjv.1sg",
+      "fr:form:regretter.sbjv.3sg",
+      "fr:lex:ne",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.sbjv.2sg",
+      "fr:lex:pas",
+      "fr:lex:venir"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:surpris"
+    ]
+  },
+  "2024-01-26-had-already-phrases": {
+    "teachesConstructions": [
+      "fr:cx:plus-que-parfait.avoir"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.impf.1sg",
+      "fr:form:avoir.impf.2sg",
+      "fr:lex:deja",
+      "fr:lex:manger",
+      "fr:form:manger.ptcp",
+      "fr:lex:etre",
+      "fr:form:etre.impf.1sg",
+      "fr:form:etre.impf.2sg",
+      "fr:lex:partir",
+      "fr:form:partir.ptcp",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:etre.impf.3sg",
+      "fr:form:partir.ptcp.f",
+      "fr:lex:voir",
+      "fr:form:voir.ptcp",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:film",
+      "fr:lex:il",
+      "fr:form:avoir.impf.3sg",
+      "fr:lex:commencer",
+      "fr:form:commencer.ptcp",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:avoir.impf.1pl",
+      "fr:lex:finir",
+      "fr:form:finir.ptcp"
+    ]
+  },
+  "2024-01-26-venir": {
+    "teachesConstructions": [
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:venir",
+      "fr:lex:je",
+      "fr:form:venir.prs.1sg",
+      "fr:form:venir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:venir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:venir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:venir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:venir.prs.3pl",
+      "fr:form:venir.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:revenir",
+      "fr:form:revenir.prs.1sg",
+      "fr:form:revenir.prs.2sg",
+      "fr:form:revenir.prs.3sg",
+      "fr:form:revenir.prs.1pl",
+      "fr:form:revenir.prs.2pl",
+      "fr:form:revenir.prs.3pl",
+      "fr:form:revenir.sbjv.3pl"
+    ]
+  },
+  "2024-01-27-aller": {
+    "teachesConstructions": [
+      "fr:cx:frame.aller-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:aller",
+      "fr:lex:je",
+      "fr:form:aller.prs.1sg",
+      "fr:lex:tu",
+      "fr:form:aller.prs.2sg",
+      "fr:lex:il",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:aller.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:aller.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:aller.prs.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-27-hypothetical-phrases": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:si.imparfait-conditionnel"
+    ],
+    "teachesWords": [
+      "fr:lex:si",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:etre",
+      "fr:form:etre.impf.1sg",
+      "fr:form:etre.impf.2sg",
+      "fr:lex:riche",
+      "fr:lex:avoir",
+      "fr:form:avoir.impf.1sg",
+      "fr:form:avoir.impf.2sg",
+      "fr:lex:de",
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:lex:argent",
+      "fr:lex:toi",
+      "fr:lex:toi.pronoun",
+      "fr:lex:tu",
+      "fr:lex:ici",
+      "fr:lex:on",
+      "fr:form:avoir.impf.3sg",
+      "fr:lex:temps",
+      "fr:lex:voyager",
+      "fr:form:voyager.cond.1sg",
+      "fr:form:voyager.cond.2sg",
+      "fr:lex:monde"
+    ]
+  },
+  "2024-01-28-necessity-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:frame.il-faut-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:il",
+      "fr:lex:falloir",
+      "fr:form:falloir.prs.3sg",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:tu",
+      "fr:lex:manger",
+      "fr:form:manger.prs.2sg",
+      "fr:form:manger.sbjv.2sg",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.2sg",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:aller",
+      "fr:form:aller.sbjv.1sg",
+      "fr:form:aller.sbjv.3sg",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:on",
+      "fr:form:partir.sbjv.1sg",
+      "fr:form:partir.sbjv.3sg",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:lex:sage",
+      "fr:lex:faire",
+      "fr:form:faire.sbjv.2sg",
+      "fr:lex:attention",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:venir",
+      "fr:form:venir.sbjv.1sg",
+      "fr:form:venir.sbjv.3sg"
+    ]
+  },
+  "2024-01-28-verb-pattern-help": {
+    "screen": "src/components/VerbPatternHelp.jsx",
+    "teachesWords": []
+  },
+  "2024-01-29-opinion-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.ne-pas-penser-que",
+      "fr:cx:frame.verb-que-clause",
+      "fr:cx:subj.douter-que"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:penser",
+      "fr:form:penser.prs.1sg",
+      "fr:form:penser.prs.3sg",
+      "fr:form:penser.sbjv.1sg",
+      "fr:form:penser.sbjv.3sg",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:lex:venir",
+      "fr:form:venir.prs.3sg",
+      "fr:lex:ne",
+      "fr:lex:pas",
+      "fr:form:venir.sbjv.1sg",
+      "fr:form:venir.sbjv.3sg",
+      "fr:lex:douter",
+      "fr:form:douter.prs.1sg",
+      "fr:form:douter.prs.3sg",
+      "fr:form:douter.sbjv.1sg",
+      "fr:form:douter.sbjv.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.sbjv.1sg",
+      "fr:form:savoir.verb.sbjv.3sg",
+      "fr:lex:croire",
+      "fr:form:croire.prs.1sg",
+      "fr:form:croire.prs.2sg",
+      "fr:lex:avoir",
+      "fr:form:avoir.sbjv.3sg",
+      "fr:lex:raison",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.3sg",
+      "fr:lex:vrai",
+      "fr:lex:possible"
+    ]
+  },
+  "2024-01-29-partir": {
+    "teachesWords": [
+      "fr:lex:partir",
+      "fr:lex:je",
+      "fr:form:partir.prs.1sg",
+      "fr:form:partir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:partir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:partir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:partir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:partir.prs.3pl",
+      "fr:form:partir.sbjv.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-01-30-object-pronouns": {
+    "teachesConstructions": [
+      "fr:cx:pronoun.direct-object"
+    ],
+    "teachesWords": [
+      "fr:lex:me",
+      "fr:lex:te",
+      "fr:lex:le",
+      "fr:lex:le.pronoun",
+      "fr:form:le.f",
+      "fr:form:le.pronoun.f",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:le.pl",
+      "fr:form:le.pronoun.pl"
+    ]
+  },
+  "2024-01-30-past-regret-phrases": {
+    "teachesConstructions": [
+      "fr:cx:si.plus-que-parfait-conditionnel-passe"
+    ],
+    "teachesWords": [
+      "fr:lex:si",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.impf.1sg",
+      "fr:form:avoir.impf.2sg",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.ptcp",
+      "fr:lex:etudier",
+      "fr:form:etudier.ptcp",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:ca",
+      "fr:lex:etre",
+      "fr:form:etre.cond.1sg",
+      "fr:form:etre.cond.2sg",
+      "fr:lex:venir",
+      "fr:form:venir.ptcp",
+      "fr:form:avoir.cond.1sg",
+      "fr:form:avoir.cond.2sg",
+      "fr:lex:reussir",
+      "fr:form:reussir.ptcp",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.ptcp"
+    ]
+  },
+  "2024-01-31-possessive-adjectives": {
+    "teachesConstructions": [
+      "fr:cx:possessive.adjective"
+    ],
+    "teachesWords": [
+      "fr:lex:mon",
+      "fr:form:mon.f",
+      "fr:form:mon.pl",
+      "fr:lex:ton",
+      "fr:form:ton.f",
+      "fr:form:ton.pl",
+      "fr:lex:son",
+      "fr:form:son.f",
+      "fr:form:son.pl",
+      "fr:lex:notre.noun",
+      "fr:form:notre.noun.pl",
+      "fr:lex:votre.noun",
+      "fr:form:votre.noun.pl",
+      "fr:lex:leur",
+      "fr:lex:leur.pronoun",
+      "fr:form:leur.pl"
+    ]
+  },
+  "2024-01-31-possibility-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.possible-que"
+    ],
+    "teachesWords": [
+      "fr:lex:il",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:possible",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:venir",
+      "fr:form:venir.sbjv.1sg",
+      "fr:form:venir.sbjv.3sg",
+      "fr:lex:peut-etre",
+      "fr:form:venir.fut.3sg",
+      "fr:lex:se",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.prs.3sg",
+      "fr:lex:on",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.1sg",
+      "fr:form:partir.sbjv.3sg",
+      "fr:lex:demain",
+      "fr:lex:pas"
+    ]
+  },
+  "2024-02-01-possessive-pronouns": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided",
+      "fr:lex:tenir",
+      "fr:form:tenir.sbjv.1sg",
+      "fr:form:tenir.sbjv.3sg"
+    ],
+    "teachesConstructions": [
+      "fr:cx:possessive.pronoun"
+    ],
+    "teachesWords": [
+      "fr:lex:le",
+      "fr:lex:mien",
+      "fr:form:le.f",
+      "fr:form:mien.f",
+      "fr:lex:tien",
+      "fr:form:tien.f",
+      "fr:lex:sien",
+      "fr:form:sien.f",
+      "fr:lex:notre",
+      "fr:lex:votre",
+      "fr:lex:leur",
+      "fr:lex:leur.pronoun"
+    ]
+  },
+  "2024-02-02-combining": {
+    "overrides": {
+      "2024-02-02-combining#exerciseConfig.items[10].hint": {
+        "ignore": [
+          "fr:lex:combiner",
+          "fr:cx:imperative.tu"
+        ]
+      },
+      "2024-02-02-combining#exerciseConfig.items[11].wrongAnswers[0].feedback": {
+        "ignore": [
+          "fr:cx:imperative.irregular"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:pronoun.direct-object"
+    ],
+    "teachesWords": [
+      "fr:lex:il",
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:ils",
+      "fr:form:le.pl",
+      "fr:form:le.pronoun.pl",
+      "fr:form:avoir.prs.3pl",
+      "fr:lex:je",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:mien",
+      "fr:lex:sien",
+      "fr:lex:leur",
+      "fr:lex:leur.pronoun",
+      "fr:lex:ce",
+      "fr:lex:tien",
+      "fr:lex:tu",
+      "fr:lex:venir",
+      "fr:form:venir.prs.1sg",
+      "fr:form:venir.prs.2sg",
+      "fr:lex:avec",
+      "fr:lex:moi",
+      "fr:lex:aller",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:partir"
+    ]
+  },
+  "2024-02-02-service-phrases": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "overrides": {
+      "2024-02-02-service-phrases#title": {
+        "ignore": [
+          "fr:lex:service",
+          "fr:lex:phrase"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:causative.faire"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:lex:faire",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:lex:couper",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:cheveu",
+      "fr:form:cheveu.pl",
+      "fr:lex:reparer",
+      "fr:lex:mon",
+      "fr:form:mon.f",
+      "fr:lex:voiture",
+      "fr:lex:maquiller",
+      "fr:lex:nettoyer",
+      "fr:form:le.f",
+      "fr:lex:maison",
+      "fr:lex:examiner",
+      "fr:lex:construire",
+      "fr:lex:un",
+      "fr:form:un.f"
+    ]
+  },
+  "2024-02-03-so-that-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.pour-que"
+    ],
+    "teachesWords": [
+      "fr:lex:pour",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:tu",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.sbjv.2sg",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.sbjv.1sg",
+      "fr:form:savoir.verb.sbjv.3sg",
+      "fr:lex:on",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.sbjv.1sg",
+      "fr:form:pouvoir.sbjv.3sg",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:lex:content",
+      "fr:lex:il",
+      "fr:lex:venir",
+      "fr:form:venir.sbjv.1sg",
+      "fr:form:venir.sbjv.3sg"
+    ]
+  },
+  "2024-02-04-unit-10-exam": {
+    "tests": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:relative.dont",
+      "fr:cx:relative.ce-que",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:subj.possible-que",
+      "fr:cx:subj.bien-que",
+      "fr:cx:subj.douter-que",
+      "fr:cx:subj.emotion-que",
+      "fr:cx:chunk.quelque-chose",
+      "fr:cx:neg.ne-personne",
+      "fr:cx:neg.ne-rien",
+      "fr:cx:si.imparfait-conditionnel"
+    ]
+  },
+  "2024-02-04-unit3-practice": {
+    "tests": [
+      "fr:cx:contraction.a",
+      "fr:cx:pronoun.direct-object",
+      "fr:cx:possessive.adjective",
+      "fr:cx:possessive.pronoun"
+    ]
+  },
+  "2024-02-05-unit-10-practice": {
+    "tests": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:relative.dont",
+      "fr:cx:relative.ce-que",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:subj.possible-que",
+      "fr:cx:subj.bien-que",
+      "fr:cx:chunk.quelque-chose",
+      "fr:cx:neg.ne-personne",
+      "fr:cx:neg.ne-rien"
+    ]
+  },
+  "2024-02-05-unit3-exam": {
+    "tests": [
+      "fr:cx:contraction.a",
+      "fr:cx:contraction.de",
+      "fr:cx:elision",
+      "fr:cx:pronoun.direct-object",
+      "fr:cx:possessive.adjective",
+      "fr:cx:possessive.pronoun"
+    ]
+  },
+  "2024-02-06-while-doing-phrases": {
+    "teachesConstructions": [
+      "fr:cx:gerondif",
+      "fr:cx:prsptcp.er"
+    ],
+    "teachesWords": [
+      "fr:lex:en",
+      "fr:lex:manger",
+      "fr:form:manger.prsptcp",
+      "fr:lex:parler",
+      "fr:form:parler.prsptcp",
+      "fr:lex:travailler",
+      "fr:form:travailler.prsptcp",
+      "fr:lex:ecouter",
+      "fr:form:ecouter.prsptcp",
+      "fr:lex:marcher",
+      "fr:form:marcher.prsptcp",
+      "fr:lex:pratiquer",
+      "fr:form:pratiquer.prsptcp"
+    ]
+  },
+  "2024-02-07-wish-phrases": {
+    "teachesConstructions": [
+      "fr:cx:subj.vouloir-que"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:tu",
+      "fr:lex:venir",
+      "fr:form:venir.sbjv.2sg",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.1sg",
+      "fr:form:partir.sbjv.3sg",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.sbjv.2sg",
+      "fr:form:je.elided",
+      "fr:lex:aimer",
+      "fr:form:aimer.cond.1sg",
+      "fr:form:aimer.cond.2sg",
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:lex:la",
+      "fr:lex:on",
+      "fr:lex:aller",
+      "fr:form:aller.sbjv.1sg",
+      "fr:form:aller.sbjv.3sg",
+      "fr:lex:ensemble",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.sbjv.1sg",
+      "fr:form:savoir.verb.sbjv.3sg"
+    ]
+  },
+  "2024-02-08-age-personal-info": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:age.avoir-ans"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:an",
+      "fr:form:an.pl",
+      "fr:lex:quel",
+      "fr:lex:age",
+      "fr:form:avoir.prs.2pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:vingt",
+      "fr:lex:il",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:quinze",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:trente",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:naitre",
+      "fr:form:naitre.ptcp",
+      "fr:form:naitre.ptcp.f",
+      "fr:lex:en",
+      "fr:lex:mille",
+      "fr:lex:neuf",
+      "fr:lex:cent",
+      "fr:lex:quatre",
+      "fr:lex:a.preposition",
+      "fr:form:quel.f",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:votre.noun",
+      "fr:lex:date",
+      "fr:lex:de",
+      "fr:lex:naissance",
+      "fr:lex:mon",
+      "fr:form:mon.f",
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:form:le.pl",
+      "fr:form:le.f"
+    ]
+  },
+  "2024-02-09-directions-navigation": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:le",
+      "fr:lex:nord",
+      "fr:lex:sud",
+      "fr:form:le.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ouest",
+      "fr:lex:a.preposition",
+      "fr:lex:gauche",
+      "fr:lex:droit",
+      "fr:form:droit.f",
+      "fr:lex:tout",
+      "fr:lex:tourner",
+      "fr:form:tourner.prs.2pl",
+      "fr:form:tourner.prs.1sg",
+      "fr:form:tourner.prs.3sg",
+      "fr:form:tourner.sbjv.1sg",
+      "fr:form:tourner.sbjv.3sg",
+      "fr:lex:aller",
+      "fr:form:aller.prs.2pl",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:continuer",
+      "fr:form:continuer.prs.2pl",
+      "fr:form:continuer.prs.1sg",
+      "fr:form:continuer.prs.3sg",
+      "fr:form:continuer.sbjv.1sg",
+      "fr:form:continuer.sbjv.3sg",
+      "fr:lex:pres",
+      "fr:lex:de",
+      "fr:lex:loin",
+      "fr:lex:cote",
+      "fr:lex:en",
+      "fr:lex:face",
+      "fr:lex:au",
+      "fr:lex:coin",
+      "fr:lex:cinq",
+      "fr:lex:minute",
+      "fr:form:minute.pl",
+      "fr:lex:pied",
+      "fr:lex:voiture",
+      "fr:lex:ou.adverb",
+      "fr:lex:comment",
+      "fr:lex:excuser",
+      "fr:form:excuser.prs.2pl",
+      "fr:lex:moi",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:par",
+      "fr:lex:la",
+      "fr:lex:ici",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:voir",
+      "fr:form:voir.prs.2pl"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:droite",
+      "fr:lex:est"
+    ]
+  },
+  "2024-02-10-donner": {
+    "excludeWords": [
+      "fr:lex:aider",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:pronoun.indirect-object"
+    ],
+    "teachesWords": [
+      "fr:lex:donner",
+      "fr:lex:je",
+      "fr:form:donner.prs.1sg",
+      "fr:form:donner.prs.3sg",
+      "fr:form:donner.sbjv.1sg",
+      "fr:form:donner.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:donner.prs.2sg",
+      "fr:form:donner.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:donner.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:donner.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:donner.prs.3pl",
+      "fr:form:donner.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:te",
+      "fr:lex:me",
+      "fr:lex:quelque",
+      "fr:lex:chose",
+      "fr:lex:a.preposition",
+      "fr:lex:quelqu-un",
+      "fr:lex:rendez-vous",
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:lex:heure",
+      "fr:lex:raison",
+      "fr:lex:de",
+      "fr:form:aider.prs.1sg",
+      "fr:form:aider.prs.3sg",
+      "fr:form:aider.sbjv.1sg",
+      "fr:form:aider.sbjv.3sg",
+      "fr:lex:argent"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:aide"
+    ]
+  },
+  "2024-02-11-perception-verbs": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:ecouter",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:ecouter.prs.1sg",
+      "fr:form:ecouter.prs.3sg",
+      "fr:form:ecouter.sbjv.1sg",
+      "fr:form:ecouter.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:ecouter.prs.2sg",
+      "fr:form:ecouter.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:ecouter.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:ecouter.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:ecouter.prs.3pl",
+      "fr:form:ecouter.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:regarder",
+      "fr:form:regarder.prs.1sg",
+      "fr:form:regarder.prs.3sg",
+      "fr:form:regarder.sbjv.1sg",
+      "fr:form:regarder.sbjv.3sg",
+      "fr:form:regarder.prs.2sg",
+      "fr:form:regarder.sbjv.2sg",
+      "fr:form:regarder.prs.1pl",
+      "fr:form:regarder.prs.2pl",
+      "fr:form:regarder.prs.3pl",
+      "fr:form:regarder.sbjv.3pl",
+      "fr:lex:de",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:musique",
+      "fr:lex:tele",
+      "fr:lex:un",
+      "fr:lex:film",
+      "fr:lex:professeur",
+      "fr:lex:par",
+      "fr:lex:fenetre",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:trouver",
+      "fr:form:trouver.prs.1sg",
+      "fr:form:trouver.prs.3sg",
+      "fr:form:trouver.sbjv.1sg",
+      "fr:form:trouver.sbjv.3sg",
+      "fr:lex:comment",
+      "fr:form:trouver.prs.2sg",
+      "fr:form:trouver.sbjv.2sg",
+      "fr:lex:ca",
+      "fr:lex:bien"
+    ]
+  },
+  "2024-02-13-search-and-find": {
+    "teachesConstructions": [
+      "fr:cx:frame.verb-que-clause"
+    ],
+    "teachesWords": [
+      "fr:lex:chercher",
+      "fr:lex:je",
+      "fr:form:chercher.prs.1sg",
+      "fr:form:chercher.prs.3sg",
+      "fr:form:chercher.sbjv.1sg",
+      "fr:form:chercher.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:chercher.prs.2sg",
+      "fr:form:chercher.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:chercher.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:chercher.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:chercher.prs.3pl",
+      "fr:form:chercher.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:trouver",
+      "fr:form:trouver.prs.1sg",
+      "fr:form:trouver.prs.3sg",
+      "fr:form:trouver.sbjv.1sg",
+      "fr:form:trouver.sbjv.3sg",
+      "fr:form:trouver.prs.2sg",
+      "fr:form:trouver.sbjv.2sg",
+      "fr:form:trouver.prs.1pl",
+      "fr:form:trouver.prs.2pl",
+      "fr:form:trouver.prs.3pl",
+      "fr:form:trouver.sbjv.3pl",
+      "fr:lex:mon",
+      "fr:form:mon.pl",
+      "fr:lex:cle",
+      "fr:form:cle.pl",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:quoi",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:form:trouver.ptcp",
+      "fr:lex:ca",
+      "fr:lex:comment",
+      "fr:lex:du",
+      "fr:lex:travail",
+      "fr:lex:quelqu-un"
+    ]
+  },
+  "2024-02-14-social-situations": {
+    "excludeWords": [
+      "fr:lex:boire",
+      "fr:form:boire.ptcp.pl",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:attendre",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:attendre.prs.1sg",
+      "fr:form:attendre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:attendre.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:attendre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:attendre.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:attendre.prs.3pl",
+      "fr:form:attendre.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:arriver",
+      "fr:form:arriver.prs.1sg",
+      "fr:form:arriver.prs.3sg",
+      "fr:form:arriver.sbjv.1sg",
+      "fr:form:arriver.sbjv.3sg",
+      "fr:form:arriver.prs.2sg",
+      "fr:form:arriver.sbjv.2sg",
+      "fr:form:arriver.prs.1pl",
+      "fr:form:arriver.prs.2pl",
+      "fr:form:arriver.prs.3pl",
+      "fr:form:arriver.sbjv.3pl",
+      "fr:lex:rester",
+      "fr:form:rester.prs.1sg",
+      "fr:form:rester.prs.3sg",
+      "fr:form:rester.sbjv.1sg",
+      "fr:form:rester.sbjv.3sg",
+      "fr:form:rester.prs.2sg",
+      "fr:form:rester.sbjv.2sg",
+      "fr:form:rester.prs.1pl",
+      "fr:form:rester.prs.2pl",
+      "fr:form:rester.prs.3pl",
+      "fr:form:rester.sbjv.3pl",
+      "fr:lex:le",
+      "fr:lex:quelqu-un",
+      "fr:lex:a.preposition",
+      "fr:lex:train",
+      "fr:lex:ici",
+      "fr:lex:combien",
+      "fr:lex:de",
+      "fr:lex:temps",
+      "fr:lex:on",
+      "fr:lex:ensemble",
+      "fr:lex:du",
+      "fr:lex:pain"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:bus"
+    ]
+  },
+  "2024-02-15-unit-11-exam": {
+    "tests": [
+      "fr:cx:futur-simple",
+      "fr:cx:futur-anterieur",
+      "fr:cx:conditionnel-present",
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:passive",
+      "fr:cx:causative.faire",
+      "fr:cx:gerondif"
+    ]
+  },
+  "2024-02-16-unit-11-practice": {
+    "contentNotes": [
+      "the gap-fill \"Je ___ mes amis au café\" with answer \"attends\" reads \"Je attends\"; French elides it to \"J'attends\"."
+    ],
+    "tests": [
+      "fr:cx:futur-simple",
+      "fr:cx:futur-anterieur",
+      "fr:cx:conditionnel-present",
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:passive",
+      "fr:cx:causative.faire",
+      "fr:cx:gerondif"
+    ]
+  },
+  "2024-03-15-nature-animals": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:un",
+      "fr:lex:oiseau",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:form:oiseau.pl",
+      "fr:form:un.f",
+      "fr:lex:tortue",
+      "fr:lex:ecureuil",
+      "fr:lex:lapin",
+      "fr:lex:papillon",
+      "fr:lex:abeille",
+      "fr:lex:poisson",
+      "fr:lex:chat",
+      "fr:lex:arbre",
+      "fr:form:arbre.pl",
+      "fr:lex:plante",
+      "fr:form:plante.pl",
+      "fr:lex:fleur",
+      "fr:lex:vent",
+      "fr:form:le.f",
+      "fr:lex:pluie",
+      "fr:lex:nature",
+      "fr:lex:lent",
+      "fr:form:lent.f",
+      "fr:lex:rapide",
+      "fr:lex:petit",
+      "fr:form:petit.f"
+    ]
+  },
+  "2024-03-15-questce-qui-que": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:q.quest-ce-qui",
+      "fr:cx:q.quest-ce-que"
+    ],
+    "teachesWords": [
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:qui",
+      "fr:lex:briller",
+      "fr:form:briller.prs.1sg",
+      "fr:form:briller.prs.3sg",
+      "fr:form:briller.sbjv.1sg",
+      "fr:form:briller.sbjv.3sg",
+      "fr:lex:tomber",
+      "fr:form:tomber.prs.1sg",
+      "fr:form:tomber.prs.3sg",
+      "fr:form:tomber.sbjv.1sg",
+      "fr:form:tomber.sbjv.3sg",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:du",
+      "fr:lex:bruit",
+      "fr:lex:rendre",
+      "fr:form:rendre.prs.3sg",
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:lex:herbe",
+      "fr:lex:vert",
+      "fr:form:vert.f",
+      "fr:lex:tu",
+      "fr:lex:voir",
+      "fr:form:voir.prs.1sg",
+      "fr:form:voir.prs.2sg",
+      "fr:lex:manger",
+      "fr:form:manger.prs.2sg",
+      "fr:form:manger.sbjv.2sg",
+      "fr:form:le.pl",
+      "fr:lex:oiseau",
+      "fr:form:oiseau.pl",
+      "fr:form:manger.prs.3pl",
+      "fr:form:manger.sbjv.3pl",
+      "fr:lex:soleil"
+    ]
+  },
+  "2024-03-16-movement-verbs": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:nager",
+      "fr:lex:je",
+      "fr:form:nager.prs.1sg",
+      "fr:form:nager.prs.3sg",
+      "fr:form:nager.sbjv.1sg",
+      "fr:form:nager.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:nager.prs.2sg",
+      "fr:form:nager.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:nager.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:nager.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:nager.prs.3pl",
+      "fr:form:nager.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:sauter",
+      "fr:form:sauter.prs.1sg",
+      "fr:form:sauter.prs.3sg",
+      "fr:form:sauter.sbjv.1sg",
+      "fr:form:sauter.sbjv.3sg",
+      "fr:form:sauter.prs.2sg",
+      "fr:form:sauter.sbjv.2sg",
+      "fr:form:sauter.prs.1pl",
+      "fr:form:sauter.prs.2pl",
+      "fr:form:sauter.prs.3pl",
+      "fr:form:sauter.sbjv.3pl",
+      "fr:lex:voler",
+      "fr:form:voler.prs.1sg",
+      "fr:form:voler.prs.3sg",
+      "fr:form:voler.sbjv.1sg",
+      "fr:form:voler.sbjv.3sg",
+      "fr:form:voler.prs.2sg",
+      "fr:form:voler.sbjv.2sg",
+      "fr:form:voler.prs.1pl",
+      "fr:form:voler.prs.2pl",
+      "fr:form:voler.prs.3pl",
+      "fr:form:voler.sbjv.3pl",
+      "fr:lex:courir",
+      "fr:form:courir.prs.1sg",
+      "fr:form:courir.prs.2sg",
+      "fr:form:courir.prs.3sg",
+      "fr:form:courir.prs.1pl",
+      "fr:form:courir.prs.2pl",
+      "fr:form:courir.prs.3pl",
+      "fr:form:courir.sbjv.3pl",
+      "fr:lex:marcher",
+      "fr:form:marcher.prs.1sg",
+      "fr:form:marcher.prs.3sg",
+      "fr:form:marcher.sbjv.1sg",
+      "fr:form:marcher.sbjv.3sg",
+      "fr:form:marcher.prs.2sg",
+      "fr:form:marcher.sbjv.2sg",
+      "fr:form:marcher.prs.1pl",
+      "fr:form:marcher.prs.2pl",
+      "fr:form:marcher.prs.3pl",
+      "fr:form:marcher.sbjv.3pl",
+      "fr:lex:grimper",
+      "fr:form:grimper.prs.1sg",
+      "fr:form:grimper.prs.3sg",
+      "fr:form:grimper.sbjv.1sg",
+      "fr:form:grimper.sbjv.3sg",
+      "fr:form:grimper.prs.2sg",
+      "fr:form:grimper.sbjv.2sg",
+      "fr:form:grimper.prs.1pl",
+      "fr:form:grimper.prs.2pl",
+      "fr:form:grimper.prs.3pl",
+      "fr:form:grimper.sbjv.3pl",
+      "fr:lex:dans",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:mer",
+      "fr:lex:vite",
+      "fr:lex:lentement"
+    ]
+  },
+  "2024-03-16-quiest-qui-que": {
+    "teachesConstructions": [
+      "fr:cx:q.qui-est-ce-qui",
+      "fr:cx:q.qui-est-ce-que"
+    ],
+    "teachesWords": [
+      "fr:lex:qui",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:parler",
+      "fr:form:parler.prs.1sg",
+      "fr:form:parler.prs.3sg",
+      "fr:form:parler.sbjv.1sg",
+      "fr:form:parler.sbjv.3sg",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:ca",
+      "fr:lex:nager",
+      "fr:form:nager.prs.1sg",
+      "fr:form:nager.prs.3sg",
+      "fr:form:nager.sbjv.1sg",
+      "fr:form:nager.sbjv.3sg",
+      "fr:lex:francais",
+      "fr:lex:tu",
+      "fr:lex:voir",
+      "fr:form:voir.prs.1sg",
+      "fr:form:voir.prs.2sg",
+      "fr:lex:aimer",
+      "fr:form:aimer.prs.2sg",
+      "fr:form:aimer.sbjv.2sg",
+      "fr:lex:je",
+      "fr:lex:devoir",
+      "fr:form:devoir.prs.1sg",
+      "fr:form:devoir.prs.2sg",
+      "fr:lex:appeler",
+      "fr:lex:connaitre",
+      "fr:form:connaitre.prs.1sg",
+      "fr:form:connaitre.prs.2sg"
+    ]
+  },
+  "2024-03-17-natural-phenomena": {
+    "contentNotes": [
+      "the vocabulary entry and concept card \"rendre + adjective\" have the English placeholder \"adjective\" where a French example belongs (for example \"rendre heureux\")."
+    ],
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:rendre-adjective"
+    ],
+    "teachesWords": [
+      "fr:lex:briller",
+      "fr:lex:je",
+      "fr:form:briller.prs.1sg",
+      "fr:form:briller.prs.3sg",
+      "fr:form:briller.sbjv.1sg",
+      "fr:form:briller.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:briller.prs.2sg",
+      "fr:form:briller.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:briller.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:briller.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:briller.prs.3pl",
+      "fr:form:briller.sbjv.3pl",
+      "fr:lex:le",
+      "fr:lex:soleil",
+      "fr:lex:pousser",
+      "fr:form:pousser.prs.1sg",
+      "fr:form:pousser.prs.3sg",
+      "fr:form:pousser.sbjv.1sg",
+      "fr:form:pousser.sbjv.3sg",
+      "fr:form:pousser.prs.2sg",
+      "fr:form:pousser.sbjv.2sg",
+      "fr:form:pousser.prs.1pl",
+      "fr:form:pousser.prs.2pl",
+      "fr:form:pousser.prs.3pl",
+      "fr:form:pousser.sbjv.3pl",
+      "fr:form:le.pl",
+      "fr:lex:plante",
+      "fr:form:plante.pl",
+      "fr:lex:pleuvoir",
+      "fr:form:pleuvoir.prs.3sg",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:plaire",
+      "fr:form:plaire.ptcp",
+      "fr:form:pleuvoir.ptcp",
+      "fr:form:pleuvoir.impf.3sg",
+      "fr:lex:souffler",
+      "fr:form:souffler.prs.1sg",
+      "fr:form:souffler.prs.3sg",
+      "fr:form:souffler.sbjv.1sg",
+      "fr:form:souffler.sbjv.3sg",
+      "fr:form:souffler.prs.2sg",
+      "fr:form:souffler.sbjv.2sg",
+      "fr:form:souffler.prs.1pl",
+      "fr:form:souffler.prs.2pl",
+      "fr:form:souffler.prs.3pl",
+      "fr:form:souffler.sbjv.3pl",
+      "fr:lex:vent",
+      "fr:lex:tomber",
+      "fr:form:tomber.prs.1sg",
+      "fr:form:tomber.prs.3sg",
+      "fr:form:tomber.sbjv.1sg",
+      "fr:form:tomber.sbjv.3sg",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:form:tomber.ptcp",
+      "fr:lex:e",
+      "fr:form:le.f",
+      "fr:lex:pluie",
+      "fr:lex:rendre",
+      "fr:form:rendre.prs.1sg",
+      "fr:form:rendre.prs.2sg",
+      "fr:form:rendre.prs.3sg",
+      "fr:form:rendre.prs.1pl",
+      "fr:form:rendre.prs.2pl",
+      "fr:form:rendre.prs.3pl",
+      "fr:form:rendre.sbjv.3pl",
+      "fr:form:le.elided",
+      "fr:lex:herbe",
+      "fr:lex:vert",
+      "fr:form:vert.f",
+      "fr:lex:froid",
+      "fr:lex:eau",
+      "fr:lex:glace.adjective",
+      "fr:form:glace.adjective.f",
+      "fr:lex:terre",
+      "fr:lex:humide",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:qui"
+    ]
+  },
+  "2024-03-19-pourquoi-complex": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:q.est-ce-que"
+    ],
+    "teachesWords": [
+      "fr:lex:pourquoi",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:le",
+      "fr:lex:ciel",
+      "fr:lex:bleu",
+      "fr:form:le.elided",
+      "fr:lex:herbe",
+      "fr:lex:vert",
+      "fr:form:vert.f",
+      "fr:form:le.pl",
+      "fr:lex:nuage",
+      "fr:form:nuage.pl",
+      "fr:form:etre.prs.3pl",
+      "fr:lex:blanc",
+      "fr:form:blanc.pl",
+      "fr:lex:soleil",
+      "fr:lex:briller",
+      "fr:form:briller.prs.1sg",
+      "fr:form:briller.prs.3sg",
+      "fr:form:briller.sbjv.1sg",
+      "fr:form:briller.sbjv.3sg",
+      "fr:lex:oiseau",
+      "fr:form:oiseau.pl",
+      "fr:lex:voler",
+      "fr:form:voler.prs.3pl",
+      "fr:form:voler.sbjv.3pl",
+      "fr:lex:plante",
+      "fr:form:plante.pl",
+      "fr:lex:pousser",
+      "fr:form:pousser.prs.3pl",
+      "fr:form:pousser.sbjv.3pl",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:lex:pleuvoir",
+      "fr:form:pleuvoir.prs.3sg",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:ca",
+      "fr:lex:tu",
+      "fr:lex:courir",
+      "fr:form:courir.prs.1sg",
+      "fr:form:courir.prs.2sg",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:comme"
+    ]
+  },
+  "2024-03-20-comment-complex": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.inversion"
+    ],
+    "teachesWords": [
+      "fr:lex:comment",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:tortue",
+      "fr:lex:nager",
+      "fr:form:nager.prs.1sg",
+      "fr:form:nager.prs.3sg",
+      "fr:form:nager.sbjv.1sg",
+      "fr:form:nager.sbjv.3sg",
+      "fr:lex:oiseau",
+      "fr:lex:voler",
+      "fr:form:voler.prs.1sg",
+      "fr:form:voler.prs.3sg",
+      "fr:form:voler.sbjv.1sg",
+      "fr:form:voler.sbjv.3sg",
+      "fr:lex:ecureuil",
+      "fr:lex:sauter",
+      "fr:form:sauter.prs.1sg",
+      "fr:form:sauter.prs.3sg",
+      "fr:form:sauter.sbjv.1sg",
+      "fr:form:sauter.sbjv.3sg",
+      "fr:lex:lapin",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:plante",
+      "fr:form:plante.pl",
+      "fr:lex:pousser",
+      "fr:form:pousser.prs.3pl",
+      "fr:form:pousser.sbjv.3pl",
+      "fr:lex:on",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:ca",
+      "fr:lex:tu",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:lex:il",
+      "fr:lex:courir",
+      "fr:form:courir.prs.3sg",
+      "fr:lex:si",
+      "fr:lex:vite"
+    ]
+  },
+  "2024-03-22-inversion-questions": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:q.inversion"
+    ],
+    "teachesWords": [
+      "fr:lex:comment",
+      "fr:lex:faire",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:ca",
+      "fr:lex:ou.adverb",
+      "fr:lex:aller",
+      "fr:form:aller.prs.2sg",
+      "fr:lex:pourquoi",
+      "fr:lex:courir",
+      "fr:form:courir.prs.3sg",
+      "fr:lex:il",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.3sg",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:nuage",
+      "fr:form:nuage.pl",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3pl",
+      "fr:lex:ils",
+      "fr:lex:blanc",
+      "fr:form:blanc.pl",
+      "fr:lex:nager",
+      "fr:form:nager.prs.1sg",
+      "fr:form:nager.prs.3sg",
+      "fr:form:nager.sbjv.1sg",
+      "fr:form:nager.sbjv.3sg",
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:tortue",
+      "fr:form:aller.prs.3pl",
+      "fr:lex:oiseau",
+      "fr:form:oiseau.pl",
+      "fr:lex:en",
+      "fr:lex:hiver",
+      "fr:lex:quand",
+      "fr:lex:fleurir",
+      "fr:form:fleurir.prs.3pl",
+      "fr:form:fleurir.sbjv.3pl",
+      "fr:lex:plante",
+      "fr:form:plante.pl",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:on"
+    ]
+  },
+  "2024-03-23-devoir": {
+    "teachesConstructions": [
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:devoir",
+      "fr:lex:devoir.noun",
+      "fr:lex:je",
+      "fr:form:devoir.prs.1sg",
+      "fr:form:devoir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:devoir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:devoir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:devoir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:devoir.prs.3pl",
+      "fr:form:devoir.sbjv.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-03-23-embedded-questions": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:q.embedded"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:lex:demander",
+      "fr:form:demander.prs.1sg",
+      "fr:form:demander.prs.3sg",
+      "fr:form:demander.sbjv.1sg",
+      "fr:form:demander.sbjv.3sg",
+      "fr:lex:ne",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.prs.1sg",
+      "fr:form:savoir.verb.prs.2sg",
+      "fr:lex:pas",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:form:pouvoir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:dire",
+      "fr:lex:pourquoi",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:comme",
+      "fr:lex:ca",
+      "fr:lex:comment",
+      "fr:lex:on",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:ou.adverb",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:gare",
+      "fr:lex:il",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.prs.3sg",
+      "fr:lex:marcher",
+      "fr:form:marcher.prs.1sg",
+      "fr:form:marcher.prs.3sg",
+      "fr:form:marcher.sbjv.1sg",
+      "fr:form:marcher.sbjv.3sg"
+    ]
+  },
+  "2024-03-24-everyday-nouns": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:chunk.quelque-chose",
+      "fr:cx:chunk.tout-le-monde",
+      "fr:cx:neg.ne-personne"
+    ],
+    "teachesWords": [
+      "fr:lex:le",
+      "fr:lex:temps",
+      "fr:form:le.f",
+      "fr:lex:vie",
+      "fr:lex:monde",
+      "fr:form:le.elided",
+      "fr:lex:eau",
+      "fr:lex:pain",
+      "fr:lex:argent",
+      "fr:lex:travail",
+      "fr:lex:ville",
+      "fr:lex:place",
+      "fr:lex:rue",
+      "fr:lex:table",
+      "fr:lex:main",
+      "fr:lex:tete",
+      "fr:lex:nom",
+      "fr:lex:porte",
+      "fr:lex:tout",
+      "fr:lex:personne",
+      "fr:lex:quelqu-un",
+      "fr:lex:quelque",
+      "fr:lex:chose",
+      "fr:lex:carte",
+      "fr:lex:de",
+      "fr:lex:credit",
+      "fr:form:le.pl",
+      "fr:lex:espece",
+      "fr:form:espece.pl",
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:carafe",
+      "fr:form:de.elided",
+      "fr:lex:addition",
+      "fr:lex:tableau",
+      "fr:lex:art",
+      "fr:form:tableau.pl"
+    ]
+  },
+  "2024-03-24-rhetorical-negative": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:q.negative-inversion",
+      "fr:cx:neg.ne-pas-infinitive",
+      "fr:cx:chunk.nest-ce-pas"
+    ],
+    "teachesWords": [
+      "fr:lex:ne",
+      "fr:form:ne.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:pas",
+      "fr:lex:vrai",
+      "fr:form:etre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:content",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:faim",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:essayer",
+      "fr:lex:comment",
+      "fr:lex:aimer",
+      "fr:lex:ca",
+      "fr:lex:qui",
+      "fr:form:vouloir.cond.3sg",
+      "fr:lex:pourquoi",
+      "fr:lex:le",
+      "fr:lex:soleil"
+    ]
+  },
+  "2024-03-25-faire": {
+    "teachesWords": [
+      "fr:lex:faire",
+      "fr:lex:je",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:faire.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:faire.prs.2pl",
+      "fr:form:faire.ptcp.fpl",
+      "fr:lex:ils",
+      "fr:form:faire.prs.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-03-25-multi-clause-questions": {
+    "teachesWords": [
+      "fr:lex:pourquoi",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:il",
+      "fr:lex:falloir",
+      "fr:form:falloir.prs.3sg",
+      "fr:lex:je",
+      "fr:lex:faire",
+      "fr:form:faire.sbjv.1sg",
+      "fr:form:faire.sbjv.3sg",
+      "fr:lex:ca",
+      "fr:lex:tu",
+      "fr:lex:partir",
+      "fr:form:partir.sbjv.2sg",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:comment",
+      "fr:lex:le",
+      "fr:lex:le.pronoun",
+      "fr:lex:penser",
+      "fr:form:penser.prs.2sg",
+      "fr:form:penser.sbjv.2sg",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:comme",
+      "fr:lex:on",
+      "fr:lex:devoir",
+      "fr:form:devoir.cond.3sg",
+      "fr:lex:qui",
+      "fr:lex:rendre",
+      "fr:form:rendre.cond.3sg",
+      "fr:form:le.elided",
+      "fr:form:le.pronoun.elided",
+      "fr:lex:herbe",
+      "fr:lex:plus",
+      "fr:lex:vert",
+      "fr:form:vert.f",
+      "fr:form:faire.cond.1sg",
+      "fr:form:faire.cond.2sg",
+      "fr:lex:ne",
+      "fr:lex:marcher",
+      "fr:form:marcher.prs.1sg",
+      "fr:form:marcher.prs.3sg",
+      "fr:form:marcher.sbjv.1sg",
+      "fr:form:marcher.sbjv.3sg",
+      "fr:lex:pas"
+    ]
+  },
+  "2024-03-26-location-adverbs": {
+    "excludeWords": [
+      "fr:lex:partir",
+      "fr:form:partir.prs.3sg"
+    ],
+    "teachesConstructions": [
+      "fr:cx:adverb.placement",
+      "fr:cx:chunk.quelque-part",
+      "fr:cx:chunk.nulle-part"
+    ],
+    "teachesWords": [
+      "fr:lex:ici",
+      "fr:lex:la",
+      "fr:lex:la-bas",
+      "fr:lex:partout",
+      "fr:lex:quelque",
+      "fr:lex:nul",
+      "fr:form:nul.f"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:part"
+    ]
+  },
+  "2024-03-27-negation-2": {
+    "teachesConstructions": [
+      "fr:cx:neg.ne-jamais"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:ne",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:form:pouvoir.prs.2sg",
+      "fr:lex:pas",
+      "fr:lex:tu",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:pouvoir.prs.1pl",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:jamais",
+      "fr:lex:il",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:form:faire.prs.1pl",
+      "fr:lex:ils",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3pl",
+      "fr:form:ne.elided",
+      "fr:lex:aller",
+      "fr:form:aller.prs.1pl",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:voir",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:le",
+      "fr:lex:le.pronoun"
+    ]
+  },
+  "2024-03-28-negation": {
+    "teachesConstructions": [
+      "fr:cx:neg.ne-pas",
+      "fr:cx:elision"
+    ],
+    "teachesWords": [
+      "fr:lex:ne",
+      "fr:lex:pas",
+      "fr:lex:je",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:form:ne.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.prs.1sg",
+      "fr:form:vouloir.prs.2sg",
+      "fr:lex:faire",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:aller",
+      "fr:form:aller.prs.2sg",
+      "fr:lex:il",
+      "fr:lex:voir",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:le",
+      "fr:lex:le.pronoun",
+      "fr:form:voir.prs.1sg",
+      "fr:form:voir.prs.2sg"
+    ]
+  },
+  "2024-03-29-parler": {
+    "teachesConstructions": [
+      "fr:cx:verb.er.present"
+    ],
+    "teachesWords": [
+      "fr:lex:parler",
+      "fr:lex:je",
+      "fr:form:parler.prs.1sg",
+      "fr:form:parler.prs.3sg",
+      "fr:form:parler.sbjv.1sg",
+      "fr:form:parler.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:parler.prs.2sg",
+      "fr:form:parler.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:parler.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:parler.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:parler.prs.3pl",
+      "fr:form:parler.sbjv.3pl",
+      "fr:lex:elles"
+    ]
+  },
+  "2024-03-31-survival-phrases": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "overrides": {
+      "2024-03-31-survival-phrases#concepts[0].definition": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#concepts[0].example": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[0]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[0].hint": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[0].wrongAnswers[0].feedback": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[1]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#exerciseConfig.items[1].hint": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:cx:chunk.sil-te-plait",
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-voudrais"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.cond.1sg",
+      "fr:form:vouloir.cond.2sg",
+      "fr:lex:se",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:lex:il",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:plaire",
+      "fr:form:plaire.prs.3sg",
+      "fr:lex:te",
+      "fr:lex:excuser",
+      "fr:form:excuser.prs.2pl",
+      "fr:lex:moi",
+      "fr:lex:bon",
+      "fr:form:bon.f",
+      "fr:lex:nuit",
+      "fr:lex:journee",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:combien",
+      "fr:lex:ca",
+      "fr:lex:couter",
+      "fr:form:couter.prs.1sg",
+      "fr:form:couter.prs.3sg",
+      "fr:form:couter.sbjv.1sg",
+      "fr:form:couter.sbjv.3sg",
+      "fr:lex:ou.adverb",
+      "fr:form:etre.prs.3pl",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:toilettes",
+      "fr:form:le.elided",
+      "fr:lex:addition",
+      "fr:lex:pardon"
+    ]
+  },
+  "2024-04-01-time-adverbs": {
+    "teachesConstructions": [
+      "fr:cx:adverb.placement",
+      "fr:cx:chunk.de-temps-en-temps"
+    ],
+    "teachesWords": [
+      "fr:lex:toujours",
+      "fr:lex:pour",
+      "fr:lex:souvent",
+      "fr:lex:parfois",
+      "fr:lex:de",
+      "fr:lex:temps",
+      "fr:lex:en",
+      "fr:lex:rarement",
+      "fr:lex:tres",
+      "fr:lex:jamais",
+      "fr:lex:deja",
+      "fr:lex:encore",
+      "fr:lex:juste",
+      "fr:lex:maintenant",
+      "fr:lex:aujourd-hui",
+      "fr:lex:demain",
+      "fr:lex:hier",
+      "fr:lex:avant"
+    ]
+  },
+  "2024-04-02-unit-4-exam": {
+    "overrides": {
+      "2024-04-02-unit-4-exam#exerciseConfig.items[0]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-04-02-unit-4-exam#exerciseConfig.items[39]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
+    },
+    "tests": [
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-ne-sais-pas",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:neg.ne-jamais",
+      "fr:cx:adverb.placement"
+    ]
+  },
+  "2024-04-03-unit-4-practice": {
+    "overrides": {
+      "2024-04-03-unit-4-practice#sentences[0]": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
+    },
+    "tests": [
+      "fr:cx:chunk.sil-vous-plait",
+      "fr:cx:chunk.excusez-moi",
+      "fr:cx:chunk.je-ne-sais-pas",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:neg.ne-jamais"
+    ]
+  },
+  "2024-04-04-aimer": {
+    "teachesConstructions": [
+      "fr:cx:frame.aimer-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:aimer",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:aimer.prs.1sg",
+      "fr:form:aimer.prs.3sg",
+      "fr:form:aimer.sbjv.1sg",
+      "fr:form:aimer.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:aimer.prs.2sg",
+      "fr:form:aimer.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:aimer.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:aimer.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:aimer.prs.3pl",
+      "fr:form:aimer.sbjv.3pl",
+      "fr:lex:bien",
+      "fr:lex:te",
+      "fr:form:te.elided"
+    ]
+  },
+  "2024-04-05-avoir-past": {
+    "teachesConstructions": [
+      "fr:cx:imparfait"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.impf.1sg",
+      "fr:form:avoir.impf.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:avoir.impf.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:avoir.impf.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:avoir.impf.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:avoir.impf.3pl",
+      "fr:lex:faim",
+      "fr:lex:raison"
+    ]
+  },
+  "2024-04-06-boire": {
+    "teachesConstructions": [
+      "fr:cx:passe-compose.avoir"
+    ],
+    "teachesWords": [
+      "fr:lex:boire",
+      "fr:lex:je",
+      "fr:form:boire.prs.1sg",
+      "fr:form:boire.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:boire.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:boire.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:boire.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:boire.prs.3pl",
+      "fr:form:boire.sbjv.3pl",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:form:boire.ptcp",
+      "fr:form:avoir.prs.2sg",
+      "fr:form:avoir.prs.3sg",
+      "fr:form:avoir.prs.1pl",
+      "fr:form:avoir.prs.2pl",
+      "fr:form:avoir.prs.3pl"
+    ]
+  },
+  "2024-04-07-comparisons-slang": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ouf",
+      "fr:lex:chelou",
+      "fr:lex:genial",
+      "fr:lex:nul",
+      "fr:lex:cool",
+      "fr:lex:dingue",
+      "fr:lex:grave",
+      "fr:lex:trop",
+      "fr:lex:vachement",
+      "fr:lex:hyper",
+      "fr:lex:malade",
+      "fr:lex:capot",
+      "fr:lex:ecœurant",
+      "fr:lex:le",
+      "fr:lex:fun",
+      "fr:lex:poche",
+      "fr:lex:ben",
+      "fr:lex:correct",
+      "fr:lex:gnama",
+      "fr:lex:fort",
+      "fr:lex:chaud",
+      "fr:lex:top",
+      "fr:lex:mortel"
+    ]
+  },
+  "2024-04-08-comparisons": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:comparative",
+      "fr:cx:comparative.irregular",
+      "fr:cx:superlative",
+      "fr:cx:chunk.tout-le-monde"
+    ],
+    "teachesWords": [
+      "fr:lex:plus",
+      "fr:lex:moins",
+      "fr:lex:meilleur",
+      "fr:form:meilleur.f",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:pire",
+      "fr:lex:trop",
+      "fr:lex:tout",
+      "fr:form:tout.f",
+      "fr:form:tout.pl",
+      "fr:form:tout.fpl",
+      "fr:lex:meme",
+      "fr:lex:mal"
+    ]
+  },
+  "2024-04-09-conditionals": {
+    "teachesConstructions": [
+      "fr:cx:conditionnel-present"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:devoir",
+      "fr:form:devoir.cond.1sg",
+      "fr:form:devoir.cond.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:devoir.cond.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:devoir.cond.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:devoir.cond.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:devoir.cond.3pl",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.cond.1sg",
+      "fr:form:pouvoir.cond.2sg",
+      "fr:form:pouvoir.cond.3sg",
+      "fr:form:pouvoir.cond.1pl",
+      "fr:form:pouvoir.cond.2pl",
+      "fr:form:pouvoir.cond.3pl"
+    ]
+  },
+  "2024-04-10-etre-past": {
+    "teachesConstructions": [
+      "fr:cx:imparfait"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:etre",
+      "fr:form:etre.impf.1sg",
+      "fr:form:etre.impf.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:etre.impf.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:etre.impf.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:etre.impf.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:etre.impf.3pl"
+    ]
+  },
+  "2024-04-11-food-nouns": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:article.partitive"
+    ],
+    "teachesWords": [
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:lex:eau",
+      "fr:lex:cafe",
+      "fr:lex:un",
+      "fr:lex:express",
+      "fr:lex:the",
+      "fr:lex:lait",
+      "fr:lex:vin",
+      "fr:form:le.f",
+      "fr:lex:biere",
+      "fr:lex:jus",
+      "fr:lex:pain",
+      "fr:form:un.f",
+      "fr:lex:baguette",
+      "fr:lex:croissant",
+      "fr:lex:beurre",
+      "fr:lex:fromage",
+      "fr:lex:pizza",
+      "fr:lex:sel",
+      "fr:lex:poivre",
+      "fr:lex:sucre",
+      "fr:lex:viande",
+      "fr:lex:poulet",
+      "fr:lex:poisson",
+      "fr:lex:bœuf",
+      "fr:lex:porc",
+      "fr:form:le.pl",
+      "fr:lex:œuf",
+      "fr:form:œuf.pl",
+      "fr:lex:legume",
+      "fr:form:legume.pl",
+      "fr:lex:salade",
+      "fr:lex:tomate",
+      "fr:lex:pomme",
+      "fr:lex:de",
+      "fr:lex:terre",
+      "fr:lex:frite",
+      "fr:form:frite.pl",
+      "fr:lex:haricot",
+      "fr:form:haricot.pl",
+      "fr:lex:fruit",
+      "fr:form:fruit.pl",
+      "fr:lex:banane",
+      "fr:lex:orange",
+      "fr:lex:riz",
+      "fr:lex:pate",
+      "fr:form:pate.pl",
+      "fr:lex:gateau",
+      "fr:lex:glace",
+      "fr:lex:chocolat"
+    ]
+  },
+  "2024-04-12-manger": {
+    "teachesConstructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:ptcp.er"
+    ],
+    "teachesWords": [
+      "fr:lex:manger",
+      "fr:lex:je",
+      "fr:form:manger.prs.1sg",
+      "fr:form:manger.prs.3sg",
+      "fr:form:manger.sbjv.1sg",
+      "fr:form:manger.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:manger.prs.2sg",
+      "fr:form:manger.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:manger.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:manger.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:manger.prs.3pl",
+      "fr:form:manger.sbjv.3pl",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:form:manger.ptcp",
+      "fr:form:avoir.prs.2sg",
+      "fr:form:avoir.prs.3sg",
+      "fr:form:avoir.prs.1pl",
+      "fr:form:avoir.prs.2pl",
+      "fr:form:avoir.prs.3pl"
+    ]
+  },
+  "2024-04-14-unit-5-exam": {
+    "contentNotes": [
+      "the concept cards teach \"plus bon que (better than)\" and \"c'est plus bon\", which are wrong French; the comparative of bon is \"meilleur\" (\"meilleur que\", \"c'est meilleur\")."
+    ],
+    "tests": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:comparative",
+      "fr:cx:si.present"
+    ]
+  },
+  "2024-04-15-unit-5-practice": {
+    "contentNotes": [
+      "the concept cards teach \"plus bon que\" and \"c'est plus bon\", which are wrong French; the comparative of bon is \"meilleur\" (\"meilleur que\", \"c'est meilleur\")."
+    ],
+    "tests": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:comparative",
+      "fr:cx:si.present"
+    ]
+  },
+  "2024-04-16-would-conditionals": {
+    "teachesConstructions": [
+      "fr:cx:conditionnel-present"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.cond.1sg",
+      "fr:form:vouloir.cond.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:vouloir.cond.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:vouloir.cond.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:vouloir.cond.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:vouloir.cond.3pl",
+      "fr:form:je.elided",
+      "fr:lex:aller",
+      "fr:form:aller.cond.1sg",
+      "fr:form:aller.cond.2sg",
+      "fr:form:aller.cond.3sg",
+      "fr:form:aller.cond.1pl",
+      "fr:form:aller.cond.2pl",
+      "fr:form:aller.cond.3pl",
+      "fr:lex:faire",
+      "fr:form:faire.cond.1sg",
+      "fr:form:faire.cond.2sg",
+      "fr:form:faire.cond.3sg",
+      "fr:form:faire.cond.1pl",
+      "fr:form:faire.cond.2pl",
+      "fr:form:faire.cond.3pl"
+    ]
+  },
+  "2024-04-17-besoin": {
+    "excludeWords": [
+      "fr:lex:aider"
+    ],
+    "teachesConstructions": [
+      "fr:cx:frame.avoir-besoin-de"
+    ],
+    "teachesWords": [
+      "fr:lex:besoin",
+      "fr:lex:avoir",
+      "fr:lex:de",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:tu",
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:avoir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:avoir.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:avoir.prs.3pl",
+      "fr:form:de.elided",
+      "fr:form:aider.prs.1sg",
+      "fr:form:aider.prs.3sg",
+      "fr:form:aider.sbjv.1sg",
+      "fr:form:aider.sbjv.3sg",
+      "fr:lex:argent",
+      "fr:lex:temps",
+      "fr:lex:ne",
+      "fr:form:ne.elided",
+      "fr:lex:pas"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:aide"
+    ]
+  },
+  "2024-04-18-commander": {
+    "teachesWords": [
+      "fr:lex:commander",
+      "fr:lex:je",
+      "fr:form:commander.prs.1sg",
+      "fr:form:commander.prs.3sg",
+      "fr:form:commander.sbjv.1sg",
+      "fr:form:commander.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:commander.prs.2sg",
+      "fr:form:commander.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:commander.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:commander.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:commander.prs.3pl",
+      "fr:form:commander.sbjv.3pl",
+      "fr:lex:un",
+      "fr:lex:cafe",
+      "fr:form:un.f",
+      "fr:lex:pizza",
+      "fr:lex:en",
+      "fr:lex:ligne",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.cond.1sg",
+      "fr:form:vouloir.cond.2sg"
+    ]
+  },
+  "2024-04-19-demander": {
+    "excludeWords": [
+      "fr:lex:aider",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:frame.demander-de-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:demander",
+      "fr:lex:je",
+      "fr:form:demander.prs.1sg",
+      "fr:form:demander.prs.3sg",
+      "fr:form:demander.sbjv.1sg",
+      "fr:form:demander.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:lex:demande",
+      "fr:form:demande.pl",
+      "fr:form:demander.prs.2sg",
+      "fr:form:demander.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:demander.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:demander.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:demander.prs.3pl",
+      "fr:form:demander.sbjv.3pl",
+      "fr:lex:de",
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:form:aider.prs.1sg",
+      "fr:form:aider.prs.3sg",
+      "fr:form:aider.sbjv.1sg",
+      "fr:form:aider.sbjv.3sg",
+      "fr:lex:pardon",
+      "fr:form:le.f",
+      "fr:lex:permission",
+      "fr:lex:a.preposition",
+      "fr:lex:quelqu-un",
+      "fr:lex:te",
+      "fr:lex:me",
+      "fr:lex:faire"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:aide"
+    ]
+  },
+  "2024-04-20-dire": {
+    "teachesConstructions": [
+      "fr:cx:frame.verb-que-clause",
+      "fr:cx:chunk.cest-a-dire"
+    ],
+    "teachesWords": [
+      "fr:lex:dire",
+      "fr:lex:je",
+      "fr:form:dire.prs.1sg",
+      "fr:form:dire.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:dire.prs.3sg",
+      "fr:form:dire.ptcp",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:dire.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:dire.prs.2pl",
+      "fr:form:dire.ptcp.fpl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:dire.prs.3pl",
+      "fr:form:dire.sbjv.3pl",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:a.preposition",
+      "fr:lex:quelqu-un",
+      "fr:lex:te",
+      "fr:lex:me",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:on",
+      "fr:lex:comme"
+    ]
+  },
+  "2024-04-21-mettre": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:mettre",
+      "fr:lex:je",
+      "fr:form:mettre.prs.1sg",
+      "fr:form:mettre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:mettre.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:mettre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:mettre.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:mettre.prs.3pl",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:table",
+      "fr:lex:un",
+      "fr:lex:pantalon",
+      "fr:lex:manteau",
+      "fr:lex:du",
+      "fr:lex:temps",
+      "fr:lex:que.conjunction",
+      "fr:form:que.conjunction.elided",
+      "fr:lex:que",
+      "fr:form:que.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun"
+    ]
+  },
+  "2024-04-22-prendre": {
+    "excludeWords": [
+      "fr:lex:boire",
+      "fr:form:boire.ptcp.pl"
+    ],
+    "teachesWords": [
+      "fr:lex:prendre",
+      "fr:lex:je",
+      "fr:form:prendre.prs.1sg",
+      "fr:form:prendre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:prendre.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:prendre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:prendre.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:prendre.prs.3pl",
+      "fr:form:prendre.sbjv.3pl",
+      "fr:lex:le",
+      "fr:lex:le.pronoun",
+      "fr:lex:un",
+      "fr:lex:cafe",
+      "fr:lex:apprendre",
+      "fr:form:je.elided",
+      "fr:form:apprendre.prs.1sg",
+      "fr:form:apprendre.prs.2sg",
+      "fr:lex:francais",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.prs.1sg",
+      "fr:form:comprendre.prs.2sg",
+      "fr:lex:ne",
+      "fr:lex:pas",
+      "fr:lex:se",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:lex:te",
+      "fr:lex:plaire",
+      "fr:form:plaire.prs.3sg"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:bus"
+    ]
+  },
+  "2024-04-23-progressive-tenses": {
+    "teachesConstructions": [
+      "fr:cx:frame.etre-en-train-de",
+      "fr:cx:frame.aller-infinitive",
+      "fr:cx:futur-simple",
+      "fr:cx:verb.future"
+    ],
+    "teachesWords": [
+      "fr:lex:etre",
+      "fr:lex:en",
+      "fr:lex:train",
+      "fr:lex:de",
+      "fr:lex:je",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:manger",
+      "fr:form:je.elided",
+      "fr:form:etre.impf.1sg",
+      "fr:form:etre.impf.2sg",
+      "fr:lex:parler",
+      "fr:lex:aller",
+      "fr:form:aller.prs.1sg",
+      "fr:lex:partir",
+      "fr:form:parler.fut.1sg",
+      "fr:lex:tu",
+      "fr:form:manger.fut.2sg",
+      "fr:lex:il",
+      "fr:form:aller.fut.3sg",
+      "fr:lex:ne",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.prs.1sg",
+      "fr:form:pouvoir.prs.2sg",
+      "fr:lex:pas",
+      "fr:lex:devoir",
+      "fr:form:devoir.cond.1sg",
+      "fr:form:devoir.cond.2sg",
+      "fr:lex:faire",
+      "fr:form:faire.fut.1sg"
+    ]
+  },
+  "2024-04-24-reading-6": {
+    "overrides": {
+      "2024-04-24-reading-6#vocabularyReference[32].note": {
+        "ignore": [
+          "fr:lex:question",
+          "fr:lex:phrase"
+        ]
+      }
+    }
+  },
+  "2024-04-25-top-200-nouns": {
+    "excludeWords": [
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:partir",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:le",
+      "fr:form:le.elided",
+      "fr:lex:annee",
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:fois",
+      "fr:lex:moment",
+      "fr:lex:heure",
+      "fr:form:le.f",
+      "fr:lex:minute",
+      "fr:lex:debut",
+      "fr:lex:fin",
+      "fr:lex:personne",
+      "fr:lex:famille",
+      "fr:lex:pere",
+      "fr:lex:mere",
+      "fr:lex:fils",
+      "fr:lex:fille",
+      "fr:lex:frere",
+      "fr:lex:sœur",
+      "fr:form:le.pl",
+      "fr:lex:œil",
+      "fr:form:œil.pl",
+      "fr:lex:visage",
+      "fr:lex:corps",
+      "fr:lex:cœur",
+      "fr:lex:voix",
+      "fr:lex:histoire",
+      "fr:lex:probleme",
+      "fr:lex:question",
+      "fr:lex:raison",
+      "fr:form:partir.ptcp.f",
+      "fr:lex:cote"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:fait",
+      "fr:lex:partie"
+    ]
+  },
+  "2024-04-26-unit-6-exam": {
+    "tests": [
+      "fr:cx:frame.etre-en-train-de",
+      "fr:cx:frame.avoir-besoin-de"
+    ]
+  },
+  "2024-04-27-unit-6-practice": {
+    "tests": [
+      "fr:cx:frame.etre-en-train-de",
+      "fr:cx:frame.avoir-besoin-de"
+    ]
+  },
+  "2024-04-28-comparison-modifiers": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:chunk.tout-le-monde"
+    ],
+    "teachesWords": [
+      "fr:lex:tout",
+      "fr:form:tout.f",
+      "fr:form:tout.pl",
+      "fr:form:tout.fpl",
+      "fr:lex:le",
+      "fr:lex:monde",
+      "fr:form:le.f",
+      "fr:lex:classe",
+      "fr:lex:petit",
+      "fr:lex:meme",
+      "fr:lex:moi",
+      "fr:lex:mal",
+      "fr:lex:je",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.prs.1sg",
+      "fr:form:comprendre.prs.2sg",
+      "fr:lex:aller"
+    ]
+  },
+  "2024-04-29-comprendre": {
+    "teachesWords": [
+      "fr:lex:comprendre",
+      "fr:lex:je",
+      "fr:form:comprendre.prs.1sg",
+      "fr:form:comprendre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:comprendre.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:comprendre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:comprendre.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:comprendre.prs.3pl",
+      "fr:form:comprendre.sbjv.3pl",
+      "fr:lex:ne",
+      "fr:lex:pas",
+      "fr:lex:bien"
+    ]
+  },
+  "2024-04-30-connaitre": {
+    "teachesWords": [
+      "fr:lex:connaitre",
+      "fr:lex:je",
+      "fr:form:connaitre.prs.1sg",
+      "fr:form:connaitre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:connaitre.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:connaitre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:connaitre.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:connaitre.prs.3pl",
+      "fr:form:connaitre.sbjv.3pl"
+    ]
+  },
+  "2024-05-01-croire": {
+    "teachesConstructions": [
+      "fr:cx:frame.verb-que-clause"
+    ],
+    "teachesWords": [
+      "fr:lex:croire",
+      "fr:lex:je",
+      "fr:form:croire.prs.1sg",
+      "fr:form:croire.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:croire.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:croire.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:croire.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:croire.prs.3pl",
+      "fr:form:croire.sbjv.3pl",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:oui",
+      "fr:lex:ne",
+      "fr:lex:pas"
+    ]
+  },
+  "2024-05-02-discourse-markers": {
+    "excludeWords": [
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp"
+    ],
+    "teachesConstructions": [
+      "fr:cx:chunk.en-fait",
+      "fr:cx:chunk.bien-sur"
+    ],
+    "teachesWords": [
+      "fr:lex:donc",
+      "fr:lex:ainsi",
+      "fr:lex:en",
+      "fr:lex:bah",
+      "fr:lex:bon",
+      "fr:lex:alors",
+      "fr:lex:quoi",
+      "fr:lex:presque",
+      "fr:lex:peut-etre",
+      "fr:lex:certainement",
+      "fr:lex:seulement",
+      "fr:lex:probablement",
+      "fr:lex:surement",
+      "fr:lex:bien",
+      "fr:lex:sur",
+      "fr:lex:je",
+      "fr:lex:penser",
+      "fr:form:penser.prs.1sg",
+      "fr:form:penser.prs.3sg",
+      "fr:form:penser.sbjv.1sg",
+      "fr:form:penser.sbjv.3sg",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:tu",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.prs.1sg",
+      "fr:form:comprendre.prs.2sg",
+      "fr:lex:ne",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.prs.1sg",
+      "fr:form:savoir.verb.prs.2sg",
+      "fr:lex:pas",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:comme",
+      "fr:lex:ca"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:fait"
+    ]
+  },
+  "2024-05-03-knowledge-nouns": {
+    "excludeWords": [
+      "fr:lex:courir",
+      "fr:form:courir.prs.1sg",
+      "fr:form:courir.prs.2sg",
+      "fr:lex:penser",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:connaissance",
+      "fr:lex:savoir",
+      "fr:lex:savoir.verb",
+      "fr:form:le.elided",
+      "fr:lex:apprentissage",
+      "fr:lex:m",
+      "fr:lex:etude",
+      "fr:lex:f",
+      "fr:lex:lecon",
+      "fr:lex:ecole",
+      "fr:lex:universite",
+      "fr:form:penser.ptcp.f",
+      "fr:lex:idee",
+      "fr:lex:question",
+      "fr:lex:reponse",
+      "fr:lex:aller",
+      "fr:form:aller.prs.1pl",
+      "fr:lex:y",
+      "fr:lex:y.pronoun"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:cours",
+      "fr:lex:pensee"
+    ]
+  },
+  "2024-05-04-learning-verbs": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:frame.apprendre-a-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:apprendre",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:apprendre.prs.1sg",
+      "fr:form:apprendre.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:apprendre.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:apprendre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:apprendre.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:apprendre.prs.3pl",
+      "fr:form:apprendre.sbjv.3pl",
+      "fr:lex:enseigner",
+      "fr:form:enseigner.prs.1sg",
+      "fr:form:enseigner.prs.3sg",
+      "fr:form:enseigner.sbjv.1sg",
+      "fr:form:enseigner.sbjv.3sg",
+      "fr:form:enseigner.prs.2sg",
+      "fr:form:enseigner.sbjv.2sg",
+      "fr:form:enseigner.prs.1pl",
+      "fr:form:enseigner.prs.2pl",
+      "fr:form:enseigner.prs.3pl",
+      "fr:form:enseigner.sbjv.3pl",
+      "fr:lex:le",
+      "fr:lex:francais"
+    ]
+  },
+  "2024-05-05-on-and-people": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "overrides": {
+      "2024-05-05-on-and-people#exercises[0]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-05-on-and-people#exercises[0].hint": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-05-on-and-people#exercises[0].wrongAnswers[0].feedback": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-05-on-and-people#vocabularyReference[3].note": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:pronoun.on",
+      "fr:cx:chunk.tout-le-monde",
+      "fr:cx:chunk.on-y-va"
+    ],
+    "teachesWords": [
+      "fr:lex:on",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:aller",
+      "fr:form:aller.prs.3sg",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.prs.3sg",
+      "fr:lex:devoir",
+      "fr:form:devoir.prs.3sg",
+      "fr:lex:dire",
+      "fr:form:dire.prs.3sg",
+      "fr:form:dire.ptcp",
+      "fr:lex:voir",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:y",
+      "fr:lex:y.pronoun",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:gens",
+      "fr:form:dire.prs.3pl",
+      "fr:form:dire.sbjv.3pl",
+      "fr:lex:penser",
+      "fr:form:penser.prs.3pl",
+      "fr:form:penser.sbjv.3pl",
+      "fr:lex:tout",
+      "fr:lex:monde",
+      "fr:lex:savoir.verb",
+      "fr:form:savoir.verb.prs.3sg",
+      "fr:lex:peuple",
+      "fr:form:le.f",
+      "fr:lex:population",
+      "fr:lex:personne",
+      "fr:form:personne.pl"
+    ]
+  },
+  "2024-05-06-penser": {
+    "teachesConstructions": [
+      "fr:cx:frame.verb-que-clause"
+    ],
+    "teachesWords": [
+      "fr:lex:penser",
+      "fr:lex:je",
+      "fr:form:penser.prs.1sg",
+      "fr:form:penser.prs.3sg",
+      "fr:form:penser.sbjv.1sg",
+      "fr:form:penser.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:penser.prs.2sg",
+      "fr:form:penser.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:penser.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:penser.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:penser.prs.3pl",
+      "fr:form:penser.sbjv.3pl",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:oui",
+      "fr:lex:non",
+      "fr:form:que.conjunction.elided",
+      "fr:form:que.elided",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:a.preposition",
+      "fr:lex:toi",
+      "fr:lex:toi.pronoun"
+    ]
+  },
+  "2024-05-08-savoir": {
+    "excludeWords": [
+      "fr:lex:savoir"
+    ],
+    "teachesConstructions": [
+      "fr:cx:frame.savoir-infinitive",
+      "fr:cx:chunk.je-ne-sais-pas"
+    ],
+    "teachesWords": [
+      "fr:lex:savoir.verb",
+      "fr:lex:je",
+      "fr:form:savoir.verb.prs.1sg",
+      "fr:form:savoir.verb.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:savoir.verb.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:savoir.verb.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:savoir.verb.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:savoir.verb.prs.3pl",
+      "fr:lex:ne",
+      "fr:lex:pas",
+      "fr:lex:parler"
+    ]
+  },
+  "2024-05-09-studying-verbs": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:etudier",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:etudier.prs.1sg",
+      "fr:form:etudier.prs.3sg",
+      "fr:form:etudier.sbjv.1sg",
+      "fr:form:etudier.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:etudier.prs.2sg",
+      "fr:form:etudier.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:etudier.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:etudier.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:etudier.prs.3pl",
+      "fr:form:etudier.sbjv.3pl",
+      "fr:lex:reviser",
+      "fr:form:reviser.prs.1sg",
+      "fr:form:reviser.prs.3sg",
+      "fr:form:reviser.sbjv.1sg",
+      "fr:form:reviser.sbjv.3sg",
+      "fr:form:reviser.prs.2sg",
+      "fr:form:reviser.sbjv.2sg",
+      "fr:form:reviser.prs.1pl",
+      "fr:form:reviser.prs.2pl",
+      "fr:form:reviser.prs.3pl",
+      "fr:form:reviser.sbjv.3pl",
+      "fr:lex:le",
+      "fr:lex:francais",
+      "fr:lex:mon",
+      "fr:form:mon.pl",
+      "fr:lex:lecon",
+      "fr:form:lecon.pl"
+    ]
+  },
+  "2024-05-10-unit-7-exam": {
+    "overrides": {
+      "2024-05-10-unit-7-exam#exerciseConfig.items[2]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-10-unit-7-exam#exerciseConfig.items[2].hint": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
+    "tests": [
+      "fr:cx:pronoun.on"
+    ]
+  },
+  "2024-05-11-unit-7-practice": {
+    "overrides": {
+      "2024-05-11-unit-7-practice#sentences[1]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
+    "tests": [
+      "fr:cx:pronoun.on",
+      "fr:cx:frame.verb-que-clause"
+    ]
+  },
+  "2024-05-12-commands-pronouns": {
+    "teachesConstructions": [
+      "fr:cx:imperative.pronouns"
+    ],
+    "teachesWords": [
+      "fr:lex:donner",
+      "fr:form:donner.prs.1sg",
+      "fr:form:donner.prs.3sg",
+      "fr:form:donner.sbjv.1sg",
+      "fr:form:donner.sbjv.3sg",
+      "fr:lex:le",
+      "fr:lex:le.pronoun",
+      "fr:lex:moi",
+      "fr:lex:regarder",
+      "fr:form:regarder.prs.1sg",
+      "fr:form:regarder.prs.3sg",
+      "fr:form:regarder.sbjv.1sg",
+      "fr:form:regarder.sbjv.3sg",
+      "fr:lex:ecouter",
+      "fr:form:ecouter.prs.1sg",
+      "fr:form:ecouter.prs.3sg",
+      "fr:form:ecouter.sbjv.1sg",
+      "fr:form:ecouter.sbjv.3sg",
+      "fr:lex:ne",
+      "fr:lex:faire",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:lex:pas",
+      "fr:lex:me"
+    ]
+  },
+  "2024-05-13-commands-tu": {
+    "teachesConstructions": [
+      "fr:cx:imperative.tu"
+    ],
+    "teachesWords": [
+      "fr:lex:manger",
+      "fr:form:manger.prs.1sg",
+      "fr:form:manger.prs.3sg",
+      "fr:form:manger.sbjv.1sg",
+      "fr:form:manger.sbjv.3sg",
+      "fr:lex:parler",
+      "fr:form:parler.prs.1sg",
+      "fr:form:parler.prs.3sg",
+      "fr:form:parler.sbjv.1sg",
+      "fr:form:parler.sbjv.3sg",
+      "fr:lex:ecouter",
+      "fr:form:ecouter.prs.1sg",
+      "fr:form:ecouter.prs.3sg",
+      "fr:form:ecouter.sbjv.1sg",
+      "fr:form:ecouter.sbjv.3sg",
+      "fr:lex:regarder",
+      "fr:form:regarder.prs.1sg",
+      "fr:form:regarder.prs.3sg",
+      "fr:form:regarder.sbjv.1sg",
+      "fr:form:regarder.sbjv.3sg",
+      "fr:lex:penser",
+      "fr:form:penser.prs.1sg",
+      "fr:form:penser.prs.3sg",
+      "fr:form:penser.sbjv.1sg",
+      "fr:form:penser.sbjv.3sg",
+      "fr:lex:venir",
+      "fr:form:venir.prs.1sg",
+      "fr:form:venir.prs.2sg",
+      "fr:lex:partir",
+      "fr:form:partir.prs.1sg",
+      "fr:form:partir.prs.2sg",
+      "fr:lex:prendre",
+      "fr:form:prendre.prs.1sg",
+      "fr:form:prendre.prs.2sg"
+    ]
+  },
+  "2024-05-14-commands-vous": {
+    "teachesConstructions": [
+      "fr:cx:imperative.vous"
+    ],
+    "teachesWords": [
+      "fr:lex:manger",
+      "fr:form:manger.prs.2pl",
+      "fr:lex:parler",
+      "fr:form:parler.prs.2pl",
+      "fr:lex:ecouter",
+      "fr:form:ecouter.prs.2pl",
+      "fr:lex:regarder",
+      "fr:form:regarder.prs.2pl",
+      "fr:lex:venir",
+      "fr:form:venir.prs.2pl",
+      "fr:lex:prendre",
+      "fr:form:prendre.prs.2pl"
+    ]
+  },
+  "2024-05-15-daily-actions-1": {
+    "teachesWords": [
+      "fr:lex:dormir",
+      "fr:lex:je",
+      "fr:form:dormir.prs.1sg",
+      "fr:form:dormir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:il",
+      "fr:form:dormir.prs.3sg",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:dormir.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:dormir.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:dormir.prs.3pl",
+      "fr:form:dormir.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:travailler",
+      "fr:form:travailler.prs.1sg",
+      "fr:form:travailler.prs.3sg",
+      "fr:form:travailler.sbjv.1sg",
+      "fr:form:travailler.sbjv.3sg",
+      "fr:form:travailler.prs.2sg",
+      "fr:form:travailler.sbjv.2sg",
+      "fr:form:travailler.prs.1pl",
+      "fr:form:travailler.prs.2pl",
+      "fr:form:travailler.prs.3pl",
+      "fr:form:travailler.sbjv.3pl",
+      "fr:lex:vivre",
+      "fr:form:vivre.prs.1sg",
+      "fr:form:vivre.prs.2sg",
+      "fr:form:vivre.prs.3sg",
+      "fr:form:vivre.prs.1pl",
+      "fr:form:vivre.prs.2pl",
+      "fr:form:vivre.prs.3pl",
+      "fr:lex:bien",
+      "fr:lex:dur",
+      "fr:lex:son",
+      "fr:form:son.f",
+      "fr:lex:vie",
+      "fr:lex:ou.adverb",
+      "fr:lex:a.preposition"
+    ]
+  },
+  "2024-05-16-daily-reflexives": {
+    "teachesWords": [
+      "fr:lex:se",
+      "fr:lex:se-souvenir",
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:form:se-souvenir.prs.1sg",
+      "fr:form:se-souvenir.prs.2sg",
+      "fr:lex:tu",
+      "fr:lex:te",
+      "fr:lex:il",
+      "fr:form:se-souvenir.prs.3sg",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:lex:amuser",
+      "fr:form:me.elided",
+      "fr:form:amuser.prs.1sg",
+      "fr:form:amuser.prs.3sg",
+      "fr:form:amuser.sbjv.1sg",
+      "fr:form:amuser.sbjv.3sg",
+      "fr:form:te.elided",
+      "fr:form:amuser.prs.2sg",
+      "fr:form:amuser.sbjv.2sg",
+      "fr:lex:on",
+      "fr:lex:depecher",
+      "fr:form:depecher.prs.1sg",
+      "fr:form:depecher.prs.3sg",
+      "fr:form:depecher.sbjv.1sg",
+      "fr:form:depecher.sbjv.3sg",
+      "fr:form:depecher.prs.2sg",
+      "fr:form:depecher.sbjv.2sg",
+      "fr:lex:toi",
+      "fr:lex:toi.pronoun"
+    ]
+  },
+  "2024-05-17-getting-ready": {
+    "teachesWords": [
+      "fr:lex:se",
+      "fr:lex:laver",
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:form:laver.prs.1sg",
+      "fr:form:laver.prs.3sg",
+      "fr:form:laver.sbjv.1sg",
+      "fr:form:laver.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:lex:te",
+      "fr:form:laver.prs.2sg",
+      "fr:form:laver.sbjv.2sg",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:lex:habiller",
+      "fr:form:me.elided",
+      "fr:form:habiller.prs.1sg",
+      "fr:form:habiller.prs.3sg",
+      "fr:form:habiller.sbjv.1sg",
+      "fr:form:habiller.sbjv.3sg",
+      "fr:form:te.elided",
+      "fr:form:habiller.prs.2sg",
+      "fr:form:habiller.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:preparer",
+      "fr:form:preparer.prs.1sg",
+      "fr:form:preparer.prs.3sg",
+      "fr:form:preparer.sbjv.1sg",
+      "fr:form:preparer.sbjv.3sg",
+      "fr:form:preparer.prs.2sg",
+      "fr:form:preparer.sbjv.2sg",
+      "fr:lex:on"
+    ]
+  },
+  "2024-05-18-irregular-commands": {
+    "overrides": {
+      "2024-05-18-irregular-commands#concepts[1].example": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-18-irregular-commands#concepts[4].example": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-18-irregular-commands#exercises[3]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      },
+      "2024-05-18-irregular-commands#exercises[5]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:imperative.irregular",
+      "fr:cx:imperative.nous",
+      "fr:cx:chunk.vas-y",
+      "fr:cx:chunk.allons-y"
+    ],
+    "teachesWords": [
+      "fr:lex:etre",
+      "fr:form:etre.sbjv.1sg",
+      "fr:form:etre.sbjv.2sg",
+      "fr:form:etre.sbjv.2pl",
+      "fr:lex:gentil",
+      "fr:lex:avoir",
+      "fr:form:avoir.sbjv.1sg",
+      "fr:form:avoir.sbjv.2pl",
+      "fr:lex:confiance",
+      "fr:lex:aller",
+      "fr:form:aller.prs.3sg",
+      "fr:form:aller.prs.2pl",
+      "fr:form:aller.prs.2sg",
+      "fr:lex:y",
+      "fr:lex:y.pronoun",
+      "fr:form:aller.prs.1pl",
+      "fr:lex:faire",
+      "fr:form:faire.prs.1sg",
+      "fr:form:faire.prs.2sg",
+      "fr:form:faire.prs.2pl",
+      "fr:form:faire.ptcp.fpl",
+      "fr:lex:attention"
+    ]
+  },
+  "2024-05-19-morning-routine": {
+    "teachesWords": [
+      "fr:lex:se",
+      "fr:lex:reveiller",
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:form:reveiller.prs.1sg",
+      "fr:form:reveiller.prs.3sg",
+      "fr:form:reveiller.sbjv.1sg",
+      "fr:form:reveiller.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:lex:te",
+      "fr:form:reveiller.prs.2sg",
+      "fr:form:reveiller.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:reveiller.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:reveiller.prs.2pl",
+      "fr:lex:lever",
+      "fr:form:lever.prs.1sg",
+      "fr:form:lever.prs.3sg",
+      "fr:form:lever.sbjv.1sg",
+      "fr:form:lever.sbjv.3sg",
+      "fr:form:lever.prs.2sg",
+      "fr:form:lever.sbjv.2sg",
+      "fr:form:lever.prs.1pl",
+      "fr:form:lever.prs.2pl"
+    ]
+  },
+  "2024-05-21-reflexive-pronouns": {
+    "teachesConstructions": [
+      "fr:cx:pronoun.reflexive"
+    ],
+    "teachesWords": [
+      "fr:lex:me",
+      "fr:lex:te",
+      "fr:lex:se",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:je",
+      "fr:lex:laver",
+      "fr:form:laver.prs.1sg",
+      "fr:form:laver.prs.3sg",
+      "fr:form:laver.sbjv.1sg",
+      "fr:form:laver.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:lex:lever",
+      "fr:form:lever.prs.2sg",
+      "fr:form:lever.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:preparer",
+      "fr:form:preparer.prs.1sg",
+      "fr:form:preparer.prs.3sg",
+      "fr:form:preparer.sbjv.1sg",
+      "fr:form:preparer.sbjv.3sg",
+      "fr:lex:aimer",
+      "fr:form:aimer.prs.1pl"
+    ]
+  },
+  "2024-05-22-s-appeler": {
+    "teachesConstructions": [
+      "fr:cx:elision"
+    ],
+    "teachesWords": [
+      "fr:lex:se",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:lex:appeler",
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:form:me.elided",
+      "fr:form:appeler.prs.1sg",
+      "fr:form:appeler.prs.3sg",
+      "fr:form:appeler.sbjv.1sg",
+      "fr:form:appeler.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:lex:te",
+      "fr:form:te.elided",
+      "fr:form:appeler.prs.2sg",
+      "fr:form:appeler.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:appeler.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:appeler.prs.2pl",
+      "fr:lex:ils",
+      "fr:form:appeler.prs.3pl",
+      "fr:form:appeler.sbjv.3pl",
+      "fr:lex:elles",
+      "fr:lex:comment"
+    ]
+  },
+  "2024-05-23-temporal-words": {
+    "teachesWords": [
+      "fr:lex:pendant",
+      "fr:lex:avant",
+      "fr:lex:apres",
+      "fr:lex:depuis",
+      "fr:lex:de",
+      "fr:form:de.elided",
+      "fr:lex:abord",
+      "fr:lex:ensuite",
+      "fr:lex:puis",
+      "fr:lex:finalement",
+      "fr:lex:enfin"
+    ]
+  },
+  "2024-05-24-unit-8-exam": {
+    "overrides": {
+      "2024-05-24-unit-8-exam#exerciseConfig.items[38]": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    },
+    "tests": [
+      "fr:cx:pronoun.reflexive",
+      "fr:cx:reciprocal",
+      "fr:cx:imperative.tu",
+      "fr:cx:imperative.vous"
+    ]
+  },
+  "2024-05-25-unit-8-practice": {
+    "tests": [
+      "fr:cx:pronoun.reflexive",
+      "fr:cx:reciprocal"
+    ]
+  },
+  "2024-05-26-causal-words": {
+    "contentNotes": [
+      "the gap-fill \"Je suis en retard ___ le traffic\" with answer \"à cause du\" reads \"à cause du le traffic\" once filled; drop \"le\" from the prompt. \"traffic\" is the English spelling: French writes \"trafic\" (also in the à cause de concept card and a feedback line)."
+    ],
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:chunk.parce-que",
+      "fr:cx:chunk.grace-a",
+      "fr:cx:chunk.a-cause-de"
+    ],
+    "teachesWords": [
+      "fr:lex:parce",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:car",
+      "fr:lex:puisque",
+      "fr:lex:comme",
+      "fr:lex:grace",
+      "fr:lex:a.preposition",
+      "fr:lex:cause",
+      "fr:lex:de",
+      "fr:lex:pourquoi",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:raison",
+      "fr:lex:motif"
+    ]
+  },
+  "2024-05-27-imparfait-all-verbs": {
+    "contentNotes": [
+      "the gap-fill \"Je ___ au café quand tu m'as appelé\" with answer \"allais\" reads \"Je allais\"; French elides it to \"J'allais\"."
+    ],
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:imparfait",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.re.impf",
+      "fr:cx:il-y-a"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:parler",
+      "fr:form:parler.impf.1sg",
+      "fr:form:parler.impf.2sg",
+      "fr:lex:il",
+      "fr:lex:faire",
+      "fr:form:faire.impf.3sg",
+      "fr:lex:on",
+      "fr:lex:aller",
+      "fr:form:aller.impf.3sg",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.impf.1sg",
+      "fr:form:vouloir.impf.2sg",
+      "fr:lex:y",
+      "fr:lex:y.pronoun",
+      "fr:lex:avoir",
+      "fr:form:avoir.impf.3sg",
+      "fr:lex:prendre",
+      "fr:form:prendre.impf.1sg",
+      "fr:form:prendre.impf.2sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:lex:etre",
+      "fr:form:etre.impf.1pl",
+      "fr:lex:tout",
+      "fr:form:tout.pl",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:jour",
+      "fr:form:jour.pl",
+      "fr:lex:chaque"
+    ]
+  },
+  "2024-05-28-more-spatial-relations": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:pres",
+      "fr:lex:de",
+      "fr:lex:loin",
+      "fr:lex:a.preposition",
+      "fr:lex:cote",
+      "fr:lex:en",
+      "fr:lex:face",
+      "fr:lex:autour",
+      "fr:lex:le",
+      "fr:lex:long",
+      "fr:lex:au",
+      "fr:lex:milieu",
+      "fr:lex:bout",
+      "fr:form:le.f",
+      "fr:lex:distance",
+      "fr:lex:proche",
+      "fr:lex:lointain",
+      "fr:lex:e",
+      "fr:lex:ici"
+    ]
+  },
+  "2024-05-29-passe-compose-agreement": {
+    "teachesConstructions": [
+      "fr:cx:ptcp.agreement"
+    ],
+    "teachesWords": [
+      "fr:lex:il",
+      "fr:lex:etre",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:aller",
+      "fr:form:aller.ptcp",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:aller.ptcp.f",
+      "fr:lex:ils",
+      "fr:form:etre.prs.3pl",
+      "fr:form:aller.ptcp.pl",
+      "fr:lex:elles",
+      "fr:form:aller.ptcp.fpl",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:etre.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:etre.prs.2pl"
+    ]
+  },
+  "2024-05-30-passe-compose-er": {
+    "teachesConstructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:ptcp.er"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:parler",
+      "fr:form:parler.ptcp",
+      "fr:lex:manger",
+      "fr:form:manger.ptcp",
+      "fr:lex:etudier",
+      "fr:form:etudier.ptcp",
+      "fr:lex:aimer",
+      "fr:form:aimer.ptcp",
+      "fr:lex:chercher",
+      "fr:form:chercher.ptcp",
+      "fr:lex:trouver",
+      "fr:form:trouver.ptcp",
+      "fr:lex:travailler",
+      "fr:form:travailler.ptcp",
+      "fr:lex:ecouter",
+      "fr:form:ecouter.ptcp",
+      "fr:lex:regarder",
+      "fr:form:regarder.ptcp",
+      "fr:lex:demander",
+      "fr:form:demander.ptcp",
+      "fr:lex:hier",
+      "fr:lex:deja"
+    ]
+  },
+  "2024-05-31-passe-compose-etre": {
+    "contentNotes": [
+      "the gap-fill \"Elle ne ___ pas ___\" with answer \"est pas venue\" reads \"Elle ne est pas venue\" once filled; French elides it to \"Elle n'est pas venue\"."
+    ],
+    "teachesConstructions": [
+      "fr:cx:passe-compose.etre",
+      "fr:cx:ptcp.agreement"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:aller",
+      "fr:form:aller.ptcp",
+      "fr:lex:e",
+      "fr:lex:venir",
+      "fr:form:venir.ptcp",
+      "fr:lex:partir",
+      "fr:form:partir.ptcp",
+      "fr:lex:arriver",
+      "fr:form:arriver.ptcp",
+      "fr:lex:sortir",
+      "fr:form:sortir.ptcp",
+      "fr:lex:entrer",
+      "fr:form:entrer.ptcp",
+      "fr:lex:rentrer",
+      "fr:form:rentrer.ptcp",
+      "fr:lex:rester",
+      "fr:form:rester.ptcp",
+      "fr:lex:monter",
+      "fr:form:monter.ptcp",
+      "fr:lex:descendre",
+      "fr:form:descendre.ptcp",
+      "fr:lex:tomber",
+      "fr:form:tomber.ptcp",
+      "fr:lex:devenir",
+      "fr:form:devenir.ptcp"
+    ]
+  },
+  "2024-06-01-passe-compose-irregular-1": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:passe-compose.avoir"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:form:avoir.ptcp",
+      "fr:lex:etre",
+      "fr:form:etre.ptcp",
+      "fr:lex:faire",
+      "fr:form:faire.prs.3sg",
+      "fr:form:faire.ptcp",
+      "fr:lex:voir",
+      "fr:form:voir.ptcp",
+      "fr:lex:tu",
+      "fr:form:avoir.prs.2sg",
+      "fr:lex:il",
+      "fr:form:avoir.prs.3sg",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:avoir.prs.1pl",
+      "fr:lex:ils",
+      "fr:form:avoir.prs.3pl",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:chance",
+      "fr:form:le.pl",
+      "fr:lex:devoir.noun",
+      "fr:form:devoir.noun.pl"
+    ]
+  },
+  "2024-06-02-passe-compose-irregular-2": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:frame.modal-infinitive"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:lex:avoir",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:vouloir",
+      "fr:form:vouloir.ptcp",
+      "fr:lex:pouvoir",
+      "fr:form:pouvoir.ptcp",
+      "fr:lex:devoir",
+      "fr:form:devoir.ptcp",
+      "fr:lex:dire",
+      "fr:form:dire.prs.3sg",
+      "fr:form:dire.ptcp",
+      "fr:lex:prendre",
+      "fr:form:prendre.ptcp",
+      "fr:form:prendre.ptcp.pl",
+      "fr:lex:mettre",
+      "fr:form:mettre.ptcp",
+      "fr:form:mettre.ptcp.pl",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.ptcp",
+      "fr:form:comprendre.ptcp.pl",
+      "fr:lex:apprendre",
+      "fr:form:apprendre.ptcp",
+      "fr:form:apprendre.ptcp.pl",
+      "fr:lex:le",
+      "fr:lex:manteau"
+    ]
+  },
+  "2024-06-03-past-tense-composition": {
+    "contentNotes": [
+      "the gap-fill \"Pendant que je ___, on a parlé pendant une heure\" with answer \"étais\" reads \"je étais\"; French elides it to \"j'étais\" (and \"While I was there\" needs \"là\": \"Pendant que j'étais là\")."
+    ],
+    "teachesConstructions": [
+      "fr:cx:il-y-a"
+    ],
+    "teachesWords": [
+      "fr:lex:donc",
+      "fr:lex:alors",
+      "fr:lex:ce.pronoun",
+      "fr:form:ce.pronoun.elided",
+      "fr:lex:etre",
+      "fr:form:etre.impf.3sg",
+      "fr:lex:il",
+      "fr:lex:y",
+      "fr:lex:y.pronoun",
+      "fr:lex:avoir",
+      "fr:form:avoir.impf.3sg",
+      "fr:lex:je",
+      "fr:form:je.elided",
+      "fr:form:avoir.prs.1sg",
+      "fr:lex:decider",
+      "fr:form:decider.ptcp",
+      "fr:lex:de"
+    ]
+  },
+  "2024-06-04-pc-vs-imparfait": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:chunk.pendant-que",
+      "fr:cx:chunk.tout-a-coup"
+    ],
+    "teachesWords": [
+      "fr:lex:quand",
+      "fr:lex:pendant",
+      "fr:lex:que",
+      "fr:lex:que.conjunction",
+      "fr:lex:soudain",
+      "fr:lex:tout",
+      "fr:lex:a.preposition",
+      "fr:lex:coup",
+      "fr:form:tout.pl",
+      "fr:lex:le",
+      "fr:form:le.pl",
+      "fr:lex:jour",
+      "fr:form:jour.pl",
+      "fr:lex:de",
+      "fr:form:de.elided",
+      "fr:lex:habitude",
+      "fr:lex:toujours",
+      "fr:lex:hier",
+      "fr:lex:ce",
+      "fr:lex:ce.pronoun",
+      "fr:lex:moment",
+      "fr:lex:la"
+    ]
+  },
+  "2024-06-06-reciprocal-reflexives": {
+    "teachesConstructions": [
+      "fr:cx:reciprocal"
+    ],
+    "teachesWords": [
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:lex:aimer",
+      "fr:form:aimer.prs.1pl",
+      "fr:lex:parler",
+      "fr:form:parler.prs.1pl",
+      "fr:lex:on",
+      "fr:lex:se",
+      "fr:lex:voir",
+      "fr:form:voir.prs.3sg",
+      "fr:lex:demain",
+      "fr:lex:ils",
+      "fr:lex:connaitre",
+      "fr:form:connaitre.prs.3pl",
+      "fr:form:connaitre.sbjv.3pl",
+      "fr:form:parler.prs.3pl",
+      "fr:form:parler.sbjv.3pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:lex:comprendre",
+      "fr:form:comprendre.prs.2pl"
+    ]
+  },
+  "2024-06-07-reflexive-past": {
+    "teachesConstructions": [
+      "fr:cx:passe-compose.reflexive",
+      "fr:cx:ptcp.agreement"
+    ],
+    "teachesWords": [
+      "fr:lex:je",
+      "fr:lex:me",
+      "fr:lex:etre",
+      "fr:form:etre.prs.1sg",
+      "fr:lex:reveiller",
+      "fr:form:reveiller.ptcp",
+      "fr:form:reveiller.ptcp.f",
+      "fr:lex:tu",
+      "fr:lex:te",
+      "fr:form:te.elided",
+      "fr:form:etre.prs.2sg",
+      "fr:lex:lever",
+      "fr:form:lever.ptcp",
+      "fr:lex:il",
+      "fr:lex:se",
+      "fr:form:se.elided",
+      "fr:lex:si",
+      "fr:form:si.elided",
+      "fr:form:etre.prs.3sg",
+      "fr:lex:laver",
+      "fr:form:laver.ptcp",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:form:lever.ptcp.f",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:etre.prs.1pl",
+      "fr:lex:preparer",
+      "fr:form:preparer.ptcp.pl",
+      "fr:lex:ils",
+      "fr:form:etre.prs.3pl",
+      "fr:lex:amuser",
+      "fr:form:amuser.ptcp.pl",
+      "fr:lex:elles",
+      "fr:form:amuser.ptcp.fpl"
+    ]
+  },
+  "2024-06-08-spatial-prepositions": {
+    "contentNotes": [
+      "the gap-fill \"La lampe est ___ le lit\" with answer \"au-dessus du\" reads \"au-dessus du le lit\" once filled; drop \"le\" from the prompt. \"il-y-a\" in the parmi exercises is written \"il y a\", without hyphens."
+    ],
+    "excludeWords": [
+      "fr:lex:devoir",
+      "fr:form:devoir.prsptcp",
+      "fr:lex:entrer",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesWords": [
+      "fr:lex:derriere",
+      "fr:form:entrer.prs.1sg",
+      "fr:form:entrer.prs.3sg",
+      "fr:form:entrer.sbjv.1sg",
+      "fr:form:entrer.sbjv.3sg",
+      "fr:lex:parmi",
+      "fr:lex:au",
+      "fr:lex:dessus",
+      "fr:lex:de",
+      "fr:lex:dessous",
+      "fr:lex:dans",
+      "fr:lex:sur.preposition",
+      "fr:lex:sous",
+      "fr:lex:le",
+      "fr:form:le.f",
+      "fr:lex:position",
+      "fr:form:le.elided",
+      "fr:lex:endroit",
+      "fr:lex:m",
+      "fr:lex:place"
+    ],
+    "teachesWordsManual": [
+      "fr:lex:devant",
+      "fr:lex:entre"
+    ]
+  },
+  "2024-06-09-unit-9-exam": {
+    "tests": [
+      "fr:cx:imparfait",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:plus-que-parfait.etre",
+      "fr:cx:chunk.en-fait"
+    ]
+  },
+  "2024-06-10-unit-9-practice": {
+    "contentNotes": [
+      "the gap-fill \"Il est fatigué ___ du travail\" with answer \"à cause de\" reads \"à cause de du travail\" once filled; French says \"à cause du travail\": make the answer \"à cause du\" and drop \"du\" from the prompt."
+    ],
+    "tests": [
+      "fr:cx:imparfait",
+      "fr:cx:chunk.en-fait"
+    ]
+  },
+  "2024-10-20-liaison-help": {
+    "screen": "src/components/LiaisonHelp.jsx",
+    "teachesWords": []
+  },
+  "2024-10-21-cognates-help": {
+    "screen": "src/components/CognatesHelp.jsx",
+    "teachesWords": []
+  },
+  "2024-10-22-donner": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ],
+    "teachesConstructions": [
+      "fr:cx:verb.er.present"
+    ],
+    "teachesWords": [
+      "fr:lex:donner",
+      "fr:lex:je",
+      "fr:form:donner.prs.1sg",
+      "fr:form:donner.prs.3sg",
+      "fr:form:donner.sbjv.1sg",
+      "fr:form:donner.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:donner.prs.2sg",
+      "fr:form:donner.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:donner.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:donner.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:donner.prs.3pl",
+      "fr:form:donner.sbjv.3pl",
+      "fr:lex:le",
+      "fr:lex:livre",
+      "fr:form:le.elided",
+      "fr:lex:adresse",
+      "fr:lex:a.preposition",
+      "fr:lex:moi"
+    ]
+  },
+  "2024-10-22-search-find": {
+    "teachesWords": [
+      "fr:lex:chercher",
+      "fr:lex:je",
+      "fr:form:chercher.prs.1sg",
+      "fr:form:chercher.prs.3sg",
+      "fr:form:chercher.sbjv.1sg",
+      "fr:form:chercher.sbjv.3sg",
+      "fr:lex:tu",
+      "fr:form:chercher.prs.2sg",
+      "fr:form:chercher.sbjv.2sg",
+      "fr:lex:il",
+      "fr:lex:elle",
+      "fr:lex:elle.pronoun",
+      "fr:lex:nous",
+      "fr:lex:nous.pronoun",
+      "fr:form:chercher.prs.1pl",
+      "fr:lex:vous",
+      "fr:lex:vous.pronoun",
+      "fr:form:chercher.prs.2pl",
+      "fr:lex:ils",
+      "fr:lex:elles",
+      "fr:form:chercher.prs.3pl",
+      "fr:form:chercher.sbjv.3pl",
+      "fr:lex:trouver",
+      "fr:form:trouver.prs.1sg",
+      "fr:form:trouver.prs.3sg",
+      "fr:form:trouver.sbjv.1sg",
+      "fr:form:trouver.sbjv.3sg",
+      "fr:form:trouver.prs.2sg",
+      "fr:form:trouver.sbjv.2sg",
+      "fr:form:trouver.prs.1pl",
+      "fr:form:trouver.prs.2pl",
+      "fr:form:trouver.prs.3pl",
+      "fr:form:trouver.sbjv.3pl"
+    ]
+  },
+  "2026-11-24-negation-guide": {
+    "overrides": {
+      "2026-11-24-negation-guide#guide.sections[1].heading": {
+        "ignore": [
+          "fr:lex:de"
+        ]
+      },
+      "2026-11-24-negation-guide#guide.sections[1].rule": {
+        "ignore": [
+          "fr:lex:de"
+        ]
+      },
+      "2026-11-24-negation-guide#guide.sections[2].examples[0].french": {
+        "ignore": [
+          "fr:cx:comparative"
+        ]
+      }
+    },
+    "teachesConstructions": [
+      "fr:cx:neg.ne-pas",
+      "fr:cx:neg.de",
+      "fr:cx:neg.ne-plus",
+      "fr:cx:neg.ne-rien",
+      "fr:cx:neg.ne-jamais"
+    ],
+    "teachesWords": [],
+    "teachesWordsManual": [
+      "fr:lex:ne",
+      "fr:form:ne.elided",
+      "fr:lex:pas",
+      "fr:lex:plus",
+      "fr:lex:rien",
+      "fr:lex:jamais"
+    ]
+  },
+  "2026-11-24-numbers": {
+    "excludeWords": [
+      "fr:lex:un",
+      "fr:form:un.f",
+      "fr:lex:et"
+    ],
+    "teachesWords": [
+      "fr:lex:zero",
+      "fr:lex:deux",
+      "fr:lex:trois",
+      "fr:lex:quatre",
+      "fr:lex:cinq",
+      "fr:lex:six",
+      "fr:lex:sept",
+      "fr:lex:huit",
+      "fr:lex:neuf",
+      "fr:lex:dix",
+      "fr:lex:onze",
+      "fr:lex:douze",
+      "fr:lex:treize",
+      "fr:lex:quatorze",
+      "fr:lex:quinze",
+      "fr:lex:seize",
+      "fr:lex:vingt",
+      "fr:lex:trente",
+      "fr:lex:quarante",
+      "fr:lex:cinquante",
+      "fr:lex:soixante",
+      "fr:form:vingt.pl",
+      "fr:lex:cent",
+      "fr:lex:an",
+      "fr:form:an.pl"
+    ]
+  }
+}

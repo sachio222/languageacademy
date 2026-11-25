@@ -162,6 +162,8 @@ const HOW_TO_READ = [
 const SOURCE_LABEL = {
   concept: 'Concept card', hint: 'Hint', instruction: 'Instruction', 'vocab-note': 'Vocabulary note',
   feedback: 'Feedback', title: 'Module title', description: 'Module description', screen: 'Help screen',
+  'vocab-example': 'Vocabulary example', table: 'Table row', phrase: 'Pronunciation phrase', guide: 'Guide',
+  check: 'Guide check', passage: 'Passage', 'can-do': 'Can-do line', 'unit-can-do': 'Unit can-do example',
 };
 
 // The how-to-read paragraph on cognates, for the native language the list was checked for. allowIn:

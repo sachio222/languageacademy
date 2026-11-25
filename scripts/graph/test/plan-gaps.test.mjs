@@ -12,6 +12,7 @@ import { tokenize } from '../fr/tokenize.mjs';
 import { matchPattern, detectConstructions } from '../fr/detect.mjs';
 import { validCefrSource } from '../levels-data.mjs';
 import { readCourse } from '../course.mjs';
+import { runCheck } from '../check.mjs';
 import { extractTeaches } from '../extract-teaches.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -236,14 +237,16 @@ test('the participle tu of taire stays out, so the pronoun tu and as-tu never re
   assert.equal(matchPattern(tokens, tokens.map((t) => lookupToken(index, t)), pc.detect, graph.names), false);
 });
 
-test('extraction of the possessive pronouns table credits le tien, not tenir, and matches course-map.json', async () => {
+test('extraction of the possessive pronouns table credits le tien, not tenir, today and in the content layer', async () => {
   const key = '2024-02-01-possessive-pronouns';
   const course = await readCourse(repoRoot);
   const { courseMap } = extractTeaches(graph, course, index);
   const taught = courseMap[key].teachesWords;
   assert.ok(taught.includes('fr:form:tien.f'), 'la tienne is credited to le tien');
   for (const id of ['fr:lex:tenir', 'fr:form:tenir.sbjv.1sg', 'fr:form:tenir.sbjv.3sg']) assert.ok(!taught.includes(id), `${id} is not credited`);
-  assert.deepEqual([...taught].sort(), [...graph.courseMap[key].teachesWords].sort());
+  // the checker derives the same words from the module file
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  assert.deepEqual([...taught].sort(), [...ctx.graph.courseMap[key].teachesWords].sort());
 });
 
 const detected = (text) => {

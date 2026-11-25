@@ -350,10 +350,19 @@ test('with the graph, English words the graph does not know are not French', () 
   assert.deepEqual(r.items.filter((i) => i.source === 'hint').map((i) => i.shown), [['salut']]);
 });
 
-test('readCourse reads each help screen named in the course map', async () => {
+// The screen components today's help modules render. The checker reads guides from the content layer now, so the
+// course map no longer names them; readCourse still reads a screen map passed to it.
+const SCREENS = {
+  '2024-01-19-questions-help': { screen: 'src/components/QuestionsHelp.jsx' },
+  '2024-01-28-verb-pattern-help': { screen: 'src/components/VerbPatternHelp.jsx' },
+  '2024-10-20-liaison-help': { screen: 'src/components/LiaisonHelp.jsx' },
+  '2024-10-21-cognates-help': { screen: 'src/components/CognatesHelp.jsx' },
+};
+
+test('readCourse reads each help screen named in the screen map', async () => {
   const graph = loadGraph(path.join(repoRoot, 'curriculum-graph'), 'fr');
   const isWord = frenchWordTest(graph, buildFormIndex(graph));
-  const full = await readCourse(repoRoot, { courseMap: graph.courseMap, isWord });
+  const full = await readCourse(repoRoot, { courseMap: SCREENS, isWord });
   const help = full.filter((m) => m.kind === 'help' && !m.guide);
   assert.equal(help.length, 4);
   for (const m of help) assert.ok(m.items.some((i) => i.source === 'screen'), m.moduleKey);
