@@ -322,7 +322,9 @@ export function sourceCards(src) {
   for (const v of src || []) {
     const notes = [v.note, v.usage, v.agreement].filter(isStr).map((s) => s.trim());
     const card = { word_id: 'w-fr', fr: String(v.french).trim(), gloss: String(v.english).trim(), ...(notes.length ? { note: notes.join('; ') } : {}) };
-    if (!out.some((x) => x.fr === card.fr && x.gloss === card.gloss)) out.push(card);
+    const twin = out.find((x) => x.fr === card.fr && x.gloss === card.gloss);
+    if (!twin) out.push(card);
+    else if (card.note && card.note !== twin.note) twin.note = twin.note ? `${twin.note}; ${card.note}` : card.note;
   }
   return out;
 }
