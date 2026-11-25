@@ -1,0 +1,176 @@
+{
+  "schema": "la-module@1",
+  "module_key": "future-conditional-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Will and Would - One Stem",
+  "description": "See how {je ferai} and {je ferais} share one stem.",
+  "can_do": [
+    "Tell {je ferai} (I will do) from {je ferais} (I would do).",
+    "Find the future stem inside a conditional, as in {il ira} and {il irait}."
+  ],
+  "minutes": 4,
+  "line": "The future and the conditional share a stem: {je ferai}, {je ferais}.",
+  "parts": [
+    {
+      "id": "p-one-stem-two-endings",
+      "heading": "One stem, two endings",
+      "text": [
+        "The future and the conditional are built on the same stem, and only the ending changes. The stem of {faire} is fer-. The future adds -ai for {je}, and the conditional adds -ais."
+      ],
+      "note": "Said aloud, {je ferai} and {je ferais} sound almost the same. In writing, the final s tells you it is the conditional.",
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "The verb",
+              "fr": "faire",
+              "en": "to do, to make"
+            },
+            {
+              "k": "Future: fer- + -ai",
+              "fr": "je ferai",
+              "en": "I will do"
+            },
+            {
+              "k": "Conditional: fer- + -ais",
+              "fr": "je ferais",
+              "en": "I would do"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-both-in-one-table",
+      "heading": "Both in one table",
+      "text": [
+        "Side by side, the future and the conditional of a verb keep one stem. For a regular verb such as {parler}, the stem is the whole infinitive: {je parlerai}. {aller} has a short stem of its own, ir-."
+      ],
+      "blocks": [
+        {
+          "table": {
+            "cols": [
+              "Future (will)",
+              "Conditional (would)"
+            ],
+            "rows": [
+              [
+                "faire",
+                [
+                  "je ferai",
+                  "I will do"
+                ],
+                [
+                  "je ferais",
+                  "I would do"
+                ],
+                "odd"
+              ],
+              [
+                "aller",
+                [
+                  "il ira",
+                  "he will go"
+                ],
+                [
+                  "il irait",
+                  "he would go"
+                ],
+                "odd"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-will-or-would",
+      "heading": "Will or would",
+      "text": [
+        "The future says what will happen. The conditional says what would happen, and it makes a request polite."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Demain, je parlerai à Paul.",
+              "Tomorrow I will speak to Paul."
+            ],
+            [
+              "Demain, il ira au café.",
+              "Tomorrow he will go to the café."
+            ],
+            [
+              "Il irait au café, mais il n'a pas d'argent.",
+              "He would go to the café, but he has no money."
+            ],
+            [
+              "Je voudrais un café, s'il vous plaît.",
+              "I would like a coffee, please."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one means “I would do”?",
+      "options": [
+        {
+          "text": "je ferai",
+          "fr": true
+        },
+        {
+          "text": "je ferais",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "je fais",
+          "fr": true
+        }
+      ],
+      "why": "The conditional adds -ais to the stem fer-: {je ferais}. {je ferai} is the future, I will do."
+    },
+    {
+      "id": "k2",
+      "ask": "What does {il irait} mean?",
+      "options": [
+        {
+          "text": "He will go"
+        },
+        {
+          "text": "He would go",
+          "right": true
+        },
+        {
+          "text": "He is going"
+        }
+      ],
+      "why": "It ends in -ait, the conditional ending for {il}. The future is {il ira}, he will go."
+    },
+    {
+      "id": "k3",
+      "ask": "Which one shares its stem with {je ferais}?",
+      "options": [
+        {
+          "text": "je fais",
+          "fr": true
+        },
+        {
+          "text": "je vais faire",
+          "fr": true
+        },
+        {
+          "text": "je ferai",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "Both are built on fer-: {je ferai} is the future of the same verb."
+    }
+  ]
+}
