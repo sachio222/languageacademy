@@ -10,7 +10,7 @@
 //     content/fr/legacy/positions-<sha7>.json: the live positions on <commit>, read from a temporary
 //     `git worktree add` of that commit under <dir> (default: the system temp folder), removed afterwards.
 //     The table is frozen: a file that differs is kept unless --force; --check exits 1 if it would change.
-//   node scripts/content/migrate/run.mjs [modules|course-map|lessons|guides|readings|reference ...] [--root <content dir>] [--graph <dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force]
+//   node scripts/content/migrate/run.mjs [modules|course-map|lessons|guides|readings|reference ...] [--root <content dir>] [--graph <dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force] [--accept-conflicts]
 //     content/fr/modules/<key>.json for every module in the outline: lessons, practice sets and unit exams (module.mjs),
 //     guides (guide.mjs), readings (reading.mjs) and Reference pages (reference.mjs), in one course-order walk so word
 //     ids are minted where a word is first taught, units first and the shelf after them. No command, or `modules`,
@@ -20,7 +20,15 @@
 //     converter last wrote it takes the new output; a part edited by hand stays. Live ids come from lessonData.js on
 //     --live-ref (default: the main commit last merged here, `git merge-base HEAD origin/main`), read from a temporary
 //     worktree. --check exits 1 if a file would change. --force converts from the source alone, then applies
-//     legacy/hand-fixes.json again. Guides and readings read prototype L's data from legacy/l-sources.json.
+//     legacy/hand-fixes.json again; ids still come from the written files and the record, by content (spec 8.1).
+//     Guides and readings read prototype L's data from legacy/l-sources.json.
+//     migration-report.md is a pure function of the files: what changed since the last run (source changes, added and
+//     removed exercises) is printed, never written, so a rerun, and --force, write the same report. A hand edit the
+//     source or the converter changed under is printed as `conflict <module> <part>` and the run exits 1 until a person
+//     settles it in the module file, or reruns with --accept-conflicts, which keeps each hand edit and moves its merge
+//     base to the new output. With the default content folder the run also writes the golden snapshot
+//     (scripts/content/test/fixtures/golden-lessons.json) from this checkout's lessonData.js, as `golden` does, so a
+//     merge of main and one `content:migrate` bring the golden test up to date too.
 //     The course map (<graph>/languages/fr/course-map.json, --graph default curriculum-graph/) is split on the same walk
 //     (course-map.mjs): each module's teaches and tests are parts of its file, merged like any other, and
 //     <graph>/languages/fr/course-map.corrections.json gets the checker's corrections, keyed by module key and item id.
@@ -52,7 +60,7 @@ import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
 import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses, imageCredit } from './sources.mjs';
 import { liveIdMatch } from './live-ids.mjs';
 import { declarationsOf, correctionsOf, isSplit, resplitProblem } from './course-map.mjs';
-import { renderReport } from './report.mjs';
+import { renderReport, RUN_ONLY_KINDS } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
 import { checkItemPassable, defaultCheckAnswer } from '../passable.mjs';
 import { loadGraph } from '../../graph/load.mjs';
@@ -344,7 +352,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     const record = flags.force ? null : records[key] ?? null;
     const declaration = declared ? declared.declarations[key] ?? {} : undefined;
     // idRecord: the record, read for ids only, so --force pairs each source part with its written id (spec 8.1).
-    const common = { existing, record, idRecord: records[key] ?? null, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf, written };
+    const common = { existing, record, idRecord: records[key] ?? null, handFixes: allFixes[key] ?? {}, acceptConflicts: flags.acceptConflicts, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf, written };
     if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
       const story = storyFor(key, written, needL().stories, readingStories);
@@ -456,8 +464,25 @@ async function modules(args, flags, kindWords = ['modules']) {
   status |= writeFile(join(ROOT, 'legacy', 'live-ids.json'), json(sorted(map)), always);
   status |= writeFile(recordFile, json(sorted(newRecords)), always);
   status |= writeFile(fixesFile, json(sorted(newFixes)), always);
-  status |= writeFile(join(ROOT, 'migration-report.md'), renderReport(lines, summary), always);
+  // What changed since the last run is this run's news, printed only: the report holds what the files say.
+  const runOnly = lines.filter((l) => RUN_ONLY_KINDS.includes(l.kind));
+  status |= writeFile(join(ROOT, 'migration-report.md'), renderReport(lines.filter((l) => !RUN_ONLY_KINDS.includes(l.kind)), summary), always);
   if (corrected) status |= writeFile(correctionsFile, json(sortDeep(corrected.corrections)), always);
+  // The golden snapshot follows the live lessons this checkout builds (a main merge changes them).
+  if (ROOT === CONTENT_ROOT) {
+    const { lessons } = await quietly(() => importFrom(REPO_ROOT, 'src/lessons/lessonData.js'));
+    status |= writeFile(GOLDEN_FILE, json(lessons), always);
+  }
+  for (const l of runOnly) console.log(`since the last run: ${l.module_key} ${l.path} ${l.kind === 'conflict_accepted' ? 'accepted' : l.kind}: ${l.detail}`);
+  const conflicts = lines.filter((l) => l.kind === 'merge_conflict');
+  for (const l of conflicts) console.error(`conflict ${l.module_key} ${l.path}: ${l.detail}`);
+  if (conflicts.length) {
+    console.error(
+      `${conflicts.length} hand ${conflicts.length === 1 ? 'edit' : 'edits'} kept against a change of the source or the converter; ` +
+        'settle each in its module file, or rerun with --accept-conflicts to keep the hand edits',
+    );
+    status |= 1;
+  }
   const lineKinds = new Map();
   for (const l of lines) lineKinds.set(l.kind, (lineKinds.get(l.kind) || 0) + 1);
   const fixCount = Object.values(newFixes).reduce((n, f) => n + Object.keys(f).length, 0);
@@ -503,7 +528,7 @@ async function golden(args, flags) {
 
 const COMMANDS = { outline, positions, 'l-sources': lSourcesCommand, golden };
 const USAGE =
-  'usage: node scripts/content/migrate/run.mjs [outline|positions|l-sources|golden|modules|lessons|guides|readings|reference ...] [--ref <commit>] [--live-ref <commit>] [--l <dir>] [--tmp <dir>] [--check] [--force]';
+  'usage: node scripts/content/migrate/run.mjs [outline|positions|l-sources|golden|modules|lessons|guides|readings|reference ...] [--ref <commit>] [--live-ref <commit>] [--l <dir>] [--tmp <dir>] [--check] [--force] [--accept-conflicts]';
 
 const argv = process.argv.slice(2);
 // No command means `modules`: every kind. Kind words (modules, lessons, guides, readings, reference) may be combined.
@@ -511,7 +536,7 @@ const words = [];
 while (argv.length && !argv[0].startsWith('--')) words.push(argv.shift());
 const args = argv;
 try {
-  const flags = { check: args.includes('--check'), force: args.includes('--force') };
+  const flags = { check: args.includes('--check'), force: args.includes('--force'), acceptConflicts: args.includes('--accept-conflicts') };
   if (words.length === 1 && COMMANDS[words[0]]) process.exitCode = await COMMANDS[words[0]](args, flags);
   else if (words.every((w) => w in KIND_WORDS)) process.exitCode = await modules(args, flags, words.length ? words : ['modules']);
   else throw new UsageError(USAGE);

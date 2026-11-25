@@ -108,7 +108,7 @@ export function referenceFrom(old, opts = {}) {
     add('screen', 'text_changed', 'a word list to say aloud (exerciseConfig type "none"): screen pronunciation-test');
   }
 
-  const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, add });
+  const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, acceptConflicts: opts.acceptConflicts, add });
   const mod = { schema: MODULE_SCHEMA, module_key: key, kind: 'reference', status: 'written' };
   const fields = {};
   const sources = { title: old.title, description: old.description, can_do: old.emailMetadata?.capabilities ?? null, screen: cfg?.type ?? null };

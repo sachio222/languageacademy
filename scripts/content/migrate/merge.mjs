@@ -51,9 +51,12 @@ export function diffs(a, b, path, out) {
  * idExisting, idRecord: the written file and its record, read for ids only. A normal run passes neither (existing and
  * record serve); --force passes them with no existing or record, so values come from the source and the hand fixes
  * while ids still come from what is written.
+ * acceptConflicts: a hand edit the source or converter changed under is kept and its base moves to the new output, so
+ * it is an ordinary hand edit from then on (a conflict_accepted line, which the run prints); without it each such part
+ * is a merge_conflict line, on every run, until a person settles it or accepts it (final review M3).
  * Returns { ex, rec, idEx, idRec, fixes, handEdits, outFixes, mergePart, noteFix }.
  */
-export function createMerger({ existing = null, record = null, handFixes = null, idExisting = null, idRecord = null, add }) {
+export function createMerger({ existing = null, record = null, handFixes = null, idExisting = null, idRecord = null, acceptConflicts = false, add }) {
   const ex = isObj(existing) ? existing : null;
   const rec = isObj(record) ? record : null;
   const idEx = ex ?? (isObj(idExisting) ? idExisting : null);
@@ -61,15 +64,34 @@ export function createMerger({ existing = null, record = null, handFixes = null,
   const fixes = isObj(handFixes) ? handFixes : {};
   const handEdits = [];
   const outFixes = {};
-  const conflict = (path, detail) => add(path, 'merge_conflict', `hand edit kept; ${detail}`);
+  // A hand edit kept against a changed output: reported (or accepted), with the part's key so the run can name the
+  // item, card or field. Returns the base to record.
+  const conflict = (partKey, path, base, srcHash, kept) => {
+    const why = base.src !== undefined && base.src !== srcHash ? 'the source changed under it' : 'the converter now writes it differently';
+    if (!acceptConflicts) {
+      add(path, 'merge_conflict', `hand edit kept; ${why} (${partKey})`);
+      return { value: kept, out: base.out, src: base.src };
+    }
+    add(path, 'conflict_accepted', `hand edit kept over the new output, as accepted; ${why} (${partKey})`);
+    return { accepted: true };
+  };
 
   // One part. fileHas/fileVal: what the file holds; freshVal: the new output; base: the record entry.
   // Returns { value, out, src? } with out the base to record.
   function mergePart(partKey, path, fileHas, fileVal, freshVal, base, srcHash) {
     const freshOut = hashOf(freshVal);
     if (!ex) {
-      // --force: the hand fixes (content/fr/legacy/hand-fixes.json) are applied again; null is a removal.
-      if (partKey in fixes) return { value: fixes[partKey] === null ? undefined : clone(fixes[partKey]), out: freshOut };
+      // --force: the hand fixes (content/fr/legacy/hand-fixes.json) are applied again; null is a removal. A fix the new
+      // output differs from, where the output moved from its base, is the conflict a normal run finds, so --force and a
+      // normal run report the same.
+      if (partKey in fixes) {
+        const value = fixes[partKey] === null ? undefined : clone(fixes[partKey]);
+        if (base?.out !== undefined && freshOut !== base.out && !sameContent(value, freshVal)) {
+          const r = conflict(partKey, path, base, srcHash, value);
+          return r.accepted ? { value, out: freshOut } : r;
+        }
+        return { value, out: freshOut };
+      }
       return { value: freshVal, out: freshOut };
     }
     if (!base || base.out === undefined) return { value: fileHas ? clone(fileVal) : freshVal, out: freshOut };
@@ -80,8 +102,12 @@ export function createMerger({ existing = null, record = null, handFixes = null,
     // A hand edit the converter now writes the same way: the two agree, so the new output is the base again and the
     // part is no longer a hand fix.
     if (sameContent(fileHas ? fileVal : undefined, freshVal)) return { value: freshVal, out: freshOut };
-    if (freshOut !== base.out) conflict(path, base.src !== srcHash ? 'the source changed under it' : 'the converter now writes it differently');
-    return { value: fileHas ? clone(fileVal) : undefined, out: base.out, src: base.src };
+    const kept = fileHas ? clone(fileVal) : undefined;
+    if (freshOut !== base.out) {
+      const r = conflict(partKey, path, base, srcHash, kept);
+      return r.accepted ? { value: kept, out: freshOut, src: srcHash } : r;
+    }
+    return { value: kept, out: base.out, src: base.src };
   }
   const noteFix = (partKey, value, freshVal) => {
     if (!same(value, freshVal)) outFixes[partKey] = value === undefined ? null : clone(value);
@@ -97,7 +123,7 @@ export function createMerger({ existing = null, record = null, handFixes = null,
  */
 export function mergeField(m, f, freshVal, sourceVal, { mod, outFields, prior }) {
   const srcHash = hashOf(sourceVal);
-  const r = m.mergePart(f, f, m.ex ? f in m.ex : false, m.ex?.[f], freshVal, baseOf(m.rec?.fields?.[f]) ?? priorBase(m, prior), srcHash);
+  const r = m.mergePart(f, f, m.ex ? f in m.ex : false, m.ex?.[f], freshVal, baseOf(m.idRec?.fields?.[f]) ?? priorBase(m, prior), srcHash);
   outFields[f] = { src: r.src ?? srcHash, out: r.out };
   if (r.value !== undefined) mod[f] = r.value;
   if (r.value !== undefined || freshVal !== undefined) diffs(r.value, freshVal, f, m.handEdits);
@@ -178,7 +204,7 @@ export function mergeList(m, name, fresh, { keyOf, makeId, samePlace = () => tru
     used.add(id);
     const freshVal = { id, ...s.f.value };
     const fileHas = fileIndex.has(id);
-    const base = r && m.rec ? { src: r.src, out: r.out } : m.rec ? { src: undefined } : null;
+    const base = r ? { src: r.src, out: r.out } : m.rec ? { src: undefined } : null;
     const res = m.mergePart(`${prefix}${id}`, `${name}[${fileIndex.get(id) ?? '?'}]`, fileHas, fileList[fileIndex.get(id)], freshVal, base, s.src);
     outRecord.push({ id, src: res.src ?? s.src, key: s.key, out: res.out, at: s.at });
     if (res.value) entries.push({ id, value: res.value, sort: fileIndex.get(id) ?? null, freshVal });
@@ -244,7 +270,7 @@ function alternatives0(gloss) {
 // markNote: marks the French in one note with braces (mark-french.mjs markFrench, 'quoted'); a note is native text
 // with French spans (native_fr), as a table row's note is. Without it the note is copied as written.
 export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, minted = null, infoCards = null, markNote = (t) => t }) {
-  const { ex, rec, fixes, mergePart, noteFix, handEdits } = m;
+  const { ex, rec, mergePart, noteFix, handEdits } = m;
   const fileVocab = Array.isArray(ex?.vocabulary) ? ex.vocabulary : [];
   // For word ids (under --force too): the written table and its record.
   const idVocab = Array.isArray(m.idEx?.vocabulary) ? m.idEx.vocabulary : [];
@@ -363,11 +389,9 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
     let value;
     let out;
     let srcRec = s.src;
-    if (!ex && fixKey in fixes) {
-      value = fixes[fixKey] === null ? null : clone(fixes[fixKey]);
-      out = hashOf(strip(freshW));
-    } else {
-      const base = r && rec ? { src: r.src, out: r.out } : rec ? { src: undefined } : null;
+    {
+      // Under --force, mergePart applies the card's hand fix (word_id included) and reports a conflict as a normal run does.
+      const base = r ? { src: r.src, out: r.out } : rec ? { src: undefined } : null;
       const mp = mergePart(fixKey, `vocabulary[${vocab.length}]`, fileW !== undefined, strip(fileW) ?? undefined, strip(freshW), base, s.src);
       out = mp.out;
       if (mp.src !== undefined) srcRec = mp.src;

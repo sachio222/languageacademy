@@ -17,9 +17,6 @@ const SECTIONS = [
   ['estimate', 'Estimates to confirm', 'The source sets no value, so the conversion wrote an estimate.'],
   ['hand_edit', 'Hand edits kept', 'The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.'],
   ['merge_conflict', 'Hand edits the source or converter changed under', 'A hand edit is kept, and the source or the converter now gives something else for the same part. Compare the two and settle it in the module file; the line stays until the file matches the new output.'],
-  ['source_changed', 'Source changes since the last run', 'The source changed, so these parts were converted again; their ids stay.'],
-  ['source_added', 'Source exercises added since the last run', ''],
-  ['source_removed', 'Source exercises removed since the last run', ''],
   ['live_unmatched', 'Live ids with no converted item', 'The live app stores answers under these exercise ids and concept indexes, and no converted item, concept or section has the same content, so live-ids.json has no entry for them. Real misses come first: each needs a look. The other two groups are expected, since the new files hold nothing for those ids.'],
   ['dropped_field', 'Fields with no place in a module file', 'Today’s objects hold these, and the module schema has no field for them.'],
   ['text_changed', 'Text written differently', 'The same words, moved into a field of the new shape.'],
@@ -27,6 +24,10 @@ const SECTIONS = [
   ['course_map', 'Course map split', 'What each module teaches and tests now sits in its module file (`teaches`, `tests`). `curriculum-graph/languages/fr/course-map.corrections.json` keeps the checker’s corrections, each under its module key and item id. These lines list every course-map entry that moved to a new key or has no place in either file.'],
   ['outline', 'Outline', 'Changes the outline step made when it wrote course.json from today’s unit configs.'],
 ];
+
+// What one run changed (a source change converted again, an exercise added or removed, a conflict accepted): news for
+// that run, which `content:migrate` prints. The report never holds them, so it is the same on every rerun and under --force.
+export const RUN_ONLY_KINDS = ['source_changed', 'source_added', 'source_removed', 'conflict_accepted'];
 
 const count = (lines, kind) => lines.filter((l) => l.kind === kind).length;
 
@@ -43,7 +44,8 @@ function groupOf(l) {
  * @param lines   ReportLine[] ({ module_key, path, kind, detail }), course order
  * @param summary { modules, items, held, byUnit?: [{ unit, translate, respond }], kinds?: { lesson, practice, unit_exam, guide, reading, reference }, readingMinted? }
  */
-export function renderReport(lines, summary) {
+export function renderReport(allLines, summary) {
+  const lines = allLines.filter((l) => !RUN_ONLY_KINDS.includes(l.kind));
   const out = [];
   out.push('# Converting today’s modules to module files', '');
   const k = summary.kinds;

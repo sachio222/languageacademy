@@ -234,7 +234,7 @@ export function convertModule(old, opts = {}) {
   // wrote it takes the new output (a converter fix or a source change reaches it); a part the file holds
   // differently is a hand edit and stays, with a `merge_conflict` line when the new output differs from the base
   // too. A base with no `out` (a record from before this rule) or no record keeps the file, as before.
-  const merger = createMerger({ existing, record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, add });
+  const merger = createMerger({ existing, record, handFixes: opts.handFixes, idExisting: opts.written, idRecord: opts.idRecord, acceptConflicts: opts.acceptConflicts, add });
   const { ex, rec, fixes, handEdits, outFixes, mergePart, noteFix } = merger;
   const outRecord = { fields: {}, vocabulary: [], items: {} };
   const baseOf = (e) => (typeof e === 'string' ? { src: e } : isObj(e) ? e : null);
@@ -251,7 +251,7 @@ export function convertModule(old, opts = {}) {
   };
   const fieldPart = (f, freshVal) => {
     const srcHash = hashOf(sources[f]);
-    const r = mergePart(f, f, ex ? f in ex : false, ex?.[f], freshVal, baseOf(rec?.fields?.[f]), srcHash);
+    const r = mergePart(f, f, ex ? f in ex : false, ex?.[f], freshVal, baseOf(merger.idRec?.fields?.[f]), srcHash);
     outRecord.fields[f] = { src: r.src ?? srcHash, out: r.out };
     put(f, r.value);
     if (r.value !== undefined || freshVal !== undefined) diffs(r.value, freshVal, f, handEdits);
@@ -333,7 +333,8 @@ export function convertModule(old, opts = {}) {
       if (value) entries.push({ f, id, item: value, sort: null, state: ex ? 'added' : 'new', freshItem: { id, ...withoutId(f.item) } });
       continue;
     }
-    const base = recItems[f.id] ?? null;
+    // The record's base (under --force too, where it only tells a conflict).
+    const base = idRecItems[f.id] ?? null;
     const fileHas = exIndex.has(f.id);
     const r = mergePart(`items/${f.id}`, `items[${exIndex.get(f.id) ?? '?'}]`, fileHas, exItems[exIndex.get(f.id)], freshItem, base, f.hash);
     outRecord.items[f.id] = { src: r.src ?? f.hash, key: f.key, answer: f.answer, out: r.out, ref: f.src.ref };

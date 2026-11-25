@@ -222,3 +222,39 @@ test('an exercise replaced in place by a different question takes a new id; the 
   const third = convertModule(edited, { ...ctx, existing: clone(first.mod), record: first.record });
   assert.deepEqual(third.mod.items.map((i) => `${i.id}=${i.answer}`), ['i-je-suis=je suis', 'i-tu-es=vous êtes', 'i-il-est=il est']);
 });
+
+test('a conflict names its part, stays until accepted, and --force reports it too (final review M3)', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  edited.items[0].hint = 'Hand hint';
+  const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
+  const changed = clone(old);
+  changed.exerciseConfig.items[0].hint = 'Source hint';
+  const id = first.mod.items[0].id;
+  const conflictOf = (r) => r.report.filter((l) => l.kind === 'merge_conflict');
+  const normal = convertModule(changed, { ...ctx, existing: second.mod, record: second.record });
+  assert.deepEqual(conflictOf(normal).map((l) => l.detail), [`hand edit kept; the source changed under it (items/${id})`]);
+  // --force from the same files: the hand fix applied again, the same conflict reported.
+  const forced = convertModule(changed, { ...ctx, existing: null, record: null, handFixes: second.handFixes, written: second.mod, idRecord: second.record });
+  assert.deepEqual(forced.mod, normal.mod);
+  assert.deepEqual(conflictOf(forced).map((l) => l.detail), conflictOf(normal).map((l) => l.detail));
+  assert.deepEqual(forced.record, normal.record);
+  // Accepted: the hand edit stays and its base moves to the new output, so the next run has no conflict.
+  const accepted = convertModule(changed, { ...ctx, existing: second.mod, record: second.record, acceptConflicts: true });
+  assert.equal(accepted.mod.items[0].hint, 'Hand hint');
+  assert.deepEqual(conflictOf(accepted), []);
+  assert.ok(accepted.report.some((l) => l.kind === 'conflict_accepted' && l.detail.includes(`items/${id}`)));
+  const after = convertModule(changed, { ...ctx, existing: accepted.mod, record: accepted.record });
+  assert.deepEqual(conflictOf(after), []);
+  assert.equal(after.mod.items[0].hint, 'Hand hint');
+  assert.deepEqual(Object.keys(after.handFixes), [`items/${id}`]);
+});
+
+test('the report holds no news of one run: source changes, additions and removals are printed only (final review I2)', async () => {
+  const { renderReport, RUN_ONLY_KINDS } = await import('../migrate/report.mjs');
+  const keep = { module_key: 'm', path: 'items[0]', kind: 'hand_edit', detail: '"a" → "b"' };
+  const news = RUN_ONLY_KINDS.map((kind) => ({ module_key: 'm', path: 'items[1]', kind, detail: 'this run' }));
+  const summary = { modules: 1, items: 2, held: 0 };
+  assert.equal(renderReport([keep, ...news], summary), renderReport([keep], summary));
+  assert.deepEqual([...RUN_ONLY_KINDS].sort(), ['conflict_accepted', 'source_added', 'source_changed', 'source_removed']);
+});
