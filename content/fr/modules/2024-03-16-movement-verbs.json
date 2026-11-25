@@ -467,7 +467,7 @@
       "mistakes": [
         {
           "answer": "nous volent",
-          "feedback": "With {nous}, the verb ends in -ons: {nous volons}."
+          "feedback": "With {nous}, the verb usually ends in -ons: {nous volons}."
         }
       ]
     },

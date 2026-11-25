@@ -2217,7 +2217,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[6].type` "translate" → "transform"
 - `items[6].instruction` "(none)" → ""Change the subject to nous.""
 - `items[6].shown` "(none)" → ""Les oiseaux volent.""
-- `items[6].mistakes` "(none)" → "["answer":"nous volent","feedback":"With nous, the verb ends in -ons: nous volons."]"
+- `items[6].mistakes` "(none)" → "["answer":"nous volent","feedback":"With nous, the verb usually ends in -ons: nous volons."]"
 - `items[6].prompt` ""we fly"" → "(removed)"
 - `items[6].hint` ""voler for nous"" → "(removed)"
 - `items[7].type` "translate" → "gapfill"
