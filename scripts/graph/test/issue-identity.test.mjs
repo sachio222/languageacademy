@@ -16,7 +16,8 @@ import { issueFingerprint, fingerprintCounts } from '../issue-identity.mjs';
 import { canonicalJson } from '../../content/bundle.mjs';
 import { loadCourse, CONTENT_ROOT } from '../../content/load.mjs';
 import { runCheck } from '../check.mjs';
-import { repoRoot } from './content-helpers.mjs';
+import { repoRoot, miniCourse } from './content-helpers.mjs';
+import { readCourseFromContent } from '../content-course.mjs';
 
 test('the fingerprint ignores message and positions', () => {
   const a = { rule: 'untaught-word', moduleKey: 'm', nodeId: 'fr:lex:x', itemRef: 'm#i-1', message: 'at 12', position: 12 };
@@ -133,6 +134,27 @@ test('level-label carries its label and what it is compared with: two labels on 
   const none = ruleLevels(ctxOf([makeModule({ position: 1, title: 'B1 Reading', kind: 'reading' })], {}, levels))
     .filter((i) => i.rule === 'level-label');
   assert.deepEqual(none[0].levelLabel, { of: 'module', label: 'B1', against: 'reached', value: null });
+});
+
+test('a unit label is identified by its unit_key: inserting a unit earlier keeps a later unit label fingerprint', () => {
+  const teach = { places: { teachesWords: ['fr:lex:parler'] } };
+  const levels = { 'fr:lex:parler': 'A1' };
+  const place = (position, unitId) => makeModule({ position, moduleKey: 'places', unitId, unitKey: 'unit7', unitTitle: 'B2 Places' });
+  const labelOf = (course) => ruleLevels(ctxOf(course, teach, levels)).filter((i) => i.rule === 'level-label');
+  const alone = labelOf([place(1, 1)]);
+  // A unit inserted ahead moves the labelled unit to index 2 and its module to position 2; the message still says
+  // "unit 2", but the fingerprint names the unit by its key.
+  const after = labelOf([makeModule({ position: 1, moduleKey: 'first', unitId: 1, unitKey: 'unit6', unitTitle: 'Greetings' }), place(2, 2)]);
+  assert.equal(alone.length, 1);
+  assert.equal(after.length, 1);
+  assert.deepEqual(after[0].levelLabel, { of: 'unit:unit7', label: 'B2', against: 'computed', value: 'A1' });
+  assert.match(after[0].message, /^unit 2 "B2 Places"/);
+  assert.equal(issueFingerprint(after[0]), issueFingerprint(alone[0]));
+});
+
+test('the content course carries each module\'s unit_key as unitKey', () => {
+  const course = readCourseFromContent(miniCourse());
+  assert.deepEqual(course.map((m) => [m.unitId, m.unitKey]), [[1, 'unit1'], [1, 'unit1'], [2, 'unit2'], [2, 'unit2'], [3, 'unit3']]);
 });
 
 test('level-data-missing carries the sorted ids with no level, so a changed set is a new fingerprint', () => {

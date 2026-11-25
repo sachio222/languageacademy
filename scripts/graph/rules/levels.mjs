@@ -232,6 +232,8 @@ export function ruleLevels(ctx) {
   const issues = [];
   const { report, taughtNodes, missing, labelTexts } = analyse(ctx);
   const name = (m) => `${m.position}. ${m.title}`;
+  // A unit's unit_key by its index: the identity a unit label carries, since an inserted unit moves the index.
+  const unitKeys = new Map(ctx.course.map((m) => [m.unitId, m.unitKey]));
 
   for (const m of report.modules) {
     if (!m.label) continue;
@@ -268,7 +270,8 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: first.moduleKey,
         position: first.position,
-        levelLabel: { of: `unit:${u.unitId}`, label: labelTexts.get(`unit:${u.unitId}`), against: 'computed', value: u.computed },
+        // of names the unit by its unit_key, which an inserted unit never moves (a course without keys: its index).
+        levelLabel: { of: `unit:${unitKeys.get(u.unitId) ?? u.unitId}`, label: labelTexts.get(`unit:${u.unitId}`), against: 'computed', value: u.computed },
         message: `unit ${u.unitId} "${u.title}" is labelled ${labelTexts.get(`unit:${u.unitId}`)} but its modules teach at most ${u.computed}`,
       }));
     }

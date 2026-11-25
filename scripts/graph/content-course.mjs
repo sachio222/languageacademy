@@ -205,6 +205,7 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         moduleKey: key,
         title: plain(mod.title ?? key),
         unitId: unit.index,
+        unitKey: unit.unit_key, // the unit's stable identity; unitId is its place in the course and moves
         unitTitle: unit.name,
         unitDescription: unit.description ?? null,
         kind: KIND[mod.kind] ?? mod.kind,
