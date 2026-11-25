@@ -365,6 +365,32 @@
     "needs": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "contrastsWith": [],
+    "detect": [
+      {
+        "surface": "au"
+      },
+      {
+        "surface": "secours"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Au secours !",
+        "Au secours, aidez-moi !"
+      ],
+      "noMatch": [
+        "Les secours arrivent.",
+        "Je vais au marché."
+      ]
+    },
+    "id": "fr:cx:chunk.au-secours",
+    "label": "Fixed phrase: au secours ! (help!)",
+    "needs": []
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: judgment",
     "contrastsWith": [],
@@ -816,6 +842,35 @@
     },
     "id": "fr:cx:chunk.pendant-que",
     "label": "Fixed phrase: pendant que (while)",
+    "needs": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "contrastsWith": [],
+    "detect": [
+      {
+        "surface": "pharmacies?"
+      },
+      {
+        "surface": "de"
+      },
+      {
+        "surface": "garde"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Où est la pharmacie de garde ?",
+        "Il y a deux pharmacies de garde ce soir."
+      ],
+      "noMatch": [
+        "La pharmacie est fermée.",
+        "Le garde de la pharmacie."
+      ]
+    },
+    "id": "fr:cx:chunk.pharmacie-de-garde",
+    "label": "Fixed phrase: la pharmacie de garde (the duty pharmacy, open at night, on Sundays and holidays)",
     "needs": []
   },
   {

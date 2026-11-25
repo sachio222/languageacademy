@@ -25,7 +25,8 @@ export const LEVELS = new Map([
     chunk.de-temps-en-temps`),
   ...levels('A2', JD, `conditionnel-present adverb.placement imperative.pronouns passe-compose.reflexive
     frame.verb-que-clause frame.avoir-besoin-de reciprocal q.quest-ce-qui q.qui-est-ce-que q.qui-est-ce-qui chunk.allons-y
-    chunk.vas-y chunk.quelque-part chunk.en-fait chunk.pendant-que chunk.tout-a-coup chunk.nest-ce-pas`),
+    chunk.vas-y chunk.quelque-part chunk.en-fait chunk.pendant-que chunk.tout-a-coup chunk.nest-ce-pas chunk.au-secours
+    chunk.pharmacie-de-garde`),
   ...levels('B1', EG, `si.imparfait-conditionnel plus-que-parfait.avoir plus-que-parfait.etre subj.emotion-que
     subj.vouloir-que subj.ne-pas-penser-que subj.possible-que subj.douter-que subj.pour-que subj.bien-que subj.avant-que
     passive gerondif relative.dont relative.ce-que q.embedded chunk.grace-a`),

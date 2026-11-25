@@ -576,6 +576,10 @@ const C = [
     ['On y va ?', 'Allez, on y va !'], ['On va au café.', 'Il y va.']),
   chunk('pendant-que', 'Fixed phrase: pendant que (while)', ['pendant', "que|qu'"],
     ['Je lis pendant que tu manges.', 'Pendant qu\'il dort, je travaille.'], ['Je lis pendant le film.', 'Je pense que oui.']),
+  chunk('au-secours', 'Fixed phrase: au secours ! (help!)', ['au', 'secours'],
+    ['Au secours !', 'Au secours, aidez-moi !'], ['Les secours arrivent.', 'Je vais au marché.']),
+  chunk('pharmacie-de-garde', 'Fixed phrase: la pharmacie de garde (the duty pharmacy, open at night, on Sundays and holidays)', ['pharmacies?', 'de', 'garde'],
+    ['Où est la pharmacie de garde ?', 'Il y a deux pharmacies de garde ce soir.'], ['La pharmacie est fermée.', 'Le garde de la pharmacie.']),
   // ---- Fixed phrases taught whole before their general pattern
   chunk('je-voudrais', 'Fixed phrase: je voudrais (I would like), the polite request taught as a phrase before the conditionnel', ['je', 'voudrais'],
     ['Je voudrais un café, s\'il vous plaît.', 'Bonjour, je voudrais un livre.'], ['Je veux un café.', 'Tu voudrais du café ?', 'Je ne voudrais pas ça.']),

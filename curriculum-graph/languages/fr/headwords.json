@@ -4674,6 +4674,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:chauffage",
+    "lemma": "chauffage",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "heating"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -7751,6 +7768,28 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:depanner",
+    "lemma": "dépanner",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to fix (a breakdown); to help someone out"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -8282,6 +8321,21 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:devis",
+    "lemma": "devis",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "quote, estimate (for a job)"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "devoir-fr",
@@ -8524,6 +8578,22 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:disponible",
+    "lemma": "disponible",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "available, free"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -9438,6 +9508,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:electricien",
+    "lemma": "électricien",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "electrician"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -11430,6 +11517,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:facture",
+    "lemma": "facture",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "bill, invoice"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -19479,6 +19583,23 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:panne",
+    "lemma": "panne",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "breakdown (en panne: out of order, broken down)"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:panneau",
@@ -20940,6 +21061,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:plombier",
+    "lemma": "plombier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "plumber"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -21184,6 +21322,23 @@
     "paradigms": [],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:pompier",
+    "lemma": "pompier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "firefighter"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -22357,6 +22512,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:proprietaire",
+    "lemma": "propriétaire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "owner; landlord"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -24033,6 +24205,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:reparateur",
+    "lemma": "réparateur",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "repairer, repair person"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -24820,6 +25009,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:robinet",
+    "lemma": "robinet",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "tap, faucet"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -25732,6 +25938,40 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:serrure",
+    "lemma": "serrure",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "lock"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:serrurier",
+    "lemma": "serrurier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "locksmith"
+      }
+    ]
   },
   {
     "cefr": "A1",
