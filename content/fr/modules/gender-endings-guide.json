@@ -3,7 +3,8 @@
   "module_key": "gender-endings-guide",
   "kind": "guide",
   "status": "written",
-  "title": "Masculine or Feminine - Clues in the Ending",
+  "title": "Masculine or Feminine from the Ending",
+  "short_title": "Gender from endings",
   "description": "Tell from its last letters whether a noun takes {un} or {une}.",
   "can_do": [
     "Guess {un} or {une} for a noun from its ending, as in {une situation} and {un moment}.",
@@ -16,9 +17,9 @@
       "id": "p-the-ending-is-a-clue",
       "heading": "The ending is a clue",
       "text": [
-        "Every French noun is masculine or feminine, and you learn each one with {un} or {une}. Some endings almost always go with one gender, so a new noun with one of these endings tells you its article."
+        "Every French noun is masculine or feminine, and you learn each one with {un} or {une}. Some endings go with one gender most of the time, so the ending of a new noun usually tells you its article."
       ],
-      "note": "Most nouns with these endings follow the pattern. Learn the few that don't with their article.",
+      "note": "These endings give a good first guess. A few nouns go the other way.",
       "blocks": [
         {
           "cmp": {
@@ -70,7 +71,7 @@
       "id": "p-feminine-endings",
       "heading": "Feminine: -tion, -té, -ure",
       "text": [
-        "Nouns that end in -tion, -té or -ure take {une} and {la}."
+        "Most nouns that end in -tion, -té or -ure take {une} and {la}."
       ],
       "blocks": [
         {
@@ -134,9 +135,9 @@
       "id": "p-masculine-endings",
       "heading": "Masculine: -ment, -age, -eau",
       "text": [
-        "Nouns that end in -ment, -age or -eau take {un} and {le}."
+        "Most nouns that end in -ment, -age or -eau take {un} and {le}."
       ],
-      "note": "Watch out for {l'eau} (water). It ends in -eau, but it is feminine.",
+      "note": "{l'eau} (water) ends in -eau but is feminine, and a few nouns that end in -age are feminine too. Learn each noun with its article.",
       "blocks": [
         {
           "heading": "-ment",
@@ -185,7 +186,7 @@
     },
     {
       "id": "p-why-gender-helps",
-      "heading": "Why the gender helps",
+      "heading": "Why gender helps",
       "text": [
         "A noun's gender sets its article and the form of any adjective that goes with it."
       ],
@@ -234,7 +235,7 @@
           "right": true
         }
       ],
-      "why": "Nouns that end in -tion are feminine: {une conversation}."
+      "why": "Most nouns that end in -tion are feminine, and this one is: {une conversation}."
     },
     {
       "id": "k2",
@@ -254,7 +255,7 @@
           "fr": true
         }
       ],
-      "why": "{voiture} ends in -ure, so it is feminine, and the adjective is feminine too: {une nouvelle voiture}."
+      "why": "{voiture} is feminine, like most nouns that end in -ure, so the adjective is feminine too: {une nouvelle voiture}."
     },
     {
       "id": "k3",
@@ -274,7 +275,7 @@
           "right": true
         }
       ],
-      "why": "Nouns that end in -ment are masculine: {un monument}. {la réalité} and {la culture} are feminine."
+      "why": "Most nouns that end in -ment are masculine, and this one is: {un monument}. {la réalité} and {la culture} are feminine."
     }
   ]
 }

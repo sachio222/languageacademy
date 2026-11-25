@@ -165,6 +165,14 @@ test('a dirty tree gives <hash>-dirty, which passes L checker; the hash ignores 
   assert.equal(bundleHash(noBuild), bundleHash(bundle));
 });
 
+test('a guide with a short title carries it on its entry; other entries leave it out', () => {
+  const entry = (key) => bundle.entries.find((e) => e.module_key === key);
+  assert.equal(entry('gender-endings-guide').short_title, 'Gender from endings');
+  assert.equal(entry('2024-10-20-liaison-help').short_title, 'Liaison');
+  assert.equal('short_title' in entry('2024-10-21-cognates-help'), false);
+  assert.equal('short_title' in entry('2024-01-02-etre'), false);
+});
+
 test("entries match L's CatalogLesson", () => {
   const api = JSON.parse(readFileSync(join(VENDOR, 'contracts', 'curriculum.openapi.json'), 'utf8')).components.schemas;
   const computed = ['position_key', 'content_revision', 'display_number', 'minutes', 'word_count'];

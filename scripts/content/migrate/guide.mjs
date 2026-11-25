@@ -304,7 +304,12 @@ export function convertGuide(old, opts = {}) {
   const m = createMerger({ existing: opts.existing, record: opts.record, handFixes: opts.handFixes, add });
   const mod = { schema: MODULE_SCHEMA, module_key: key, kind: 'guide', status: 'written' };
   const fields = {};
-  for (const f of ['title', 'description', 'can_do']) mergeField(m, f, fresh[f], sourceOf[f], { mod, outFields: fields });
+  mergeField(m, 'title', fresh.title, sourceOf.title, { mod, outFields: fields });
+  // short_title has no source: it is authored in the module file, so the run keeps the file's value (also under
+  // --force, which still reads the file as written).
+  const shortTitle = (opts.written ?? opts.existing)?.short_title;
+  if (shortTitle !== undefined) mod.short_title = shortTitle;
+  for (const f of ['description', 'can_do']) mergeField(m, f, fresh[f], sourceOf[f], { mod, outFields: fields });
   mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields, written: opts.written });
   for (const f of ['minutes', 'line']) mergeField(m, f, fresh[f], sourceOf[f], { mod, outFields: fields });
   const sourceParts = old.guide ? old.guide.sections : fresh.parts;

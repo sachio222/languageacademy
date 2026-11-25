@@ -36,6 +36,8 @@ export const ITEM_TYPES_BY_KIND = Object.fromEntries(
 ITEM_TYPES_BY_KIND.reading = ['comprehension'];
 
 export const MODULE_SCHEMA = 'la-module@1';
+// BundleEntry.short_title maxLength (L contracts/curriculum.bundle.schema.json).
+const SHORT_TITLE_MAX = 40;
 export const MODULE_KEY_PATTERN = /^([0-9]{4}-[0-9]{2}-[0-9]{2}-)?[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 export const STATUSES = ['written', 'planned'];
 
@@ -164,7 +166,8 @@ const KIND_SCHEMAS = {
     required: ['vocabulary', 'items'],
   },
   guide: {
-    fields: { minutes: INT(1), line: S('native_fr'), parts: LIST(PART, { nonEmpty: true, unique: 'id' }), checks: LIST(CHECK, { unique: 'id' }) },
+    // short_title: the name on L's unit rows, Home card and La Référence (BundleEntry.short_title, 1 to 40 characters).
+    fields: { short_title: S('native'), minutes: INT(1), line: S('native_fr'), parts: LIST(PART, { nonEmpty: true, unique: 'id' }), checks: LIST(CHECK, { unique: 'id' }) },
     required: ['minutes', 'line', 'parts', 'checks'],
   },
   reading: {
@@ -315,6 +318,8 @@ function kindRules(mod, cx) {
     if (isObj(mod.teaches) && Array.isArray(mod.teaches.words) && mod.teaches.words.length > 0)
       bad('teaches.words', 'teaches_in_test', `a ${kind} teaches nothing, so it teaches no words`);
   }
+  if (kind === 'guide' && typeof mod.short_title === 'string' && mod.short_title.length > SHORT_TITLE_MAX)
+    bad('short_title', 'short_title_long', `short_title has ${mod.short_title.length} characters; L shows at most ${SHORT_TITLE_MAX}`);
   if (kind === 'guide' && Array.isArray(mod.checks) && mod.checks.length !== 3)
     bad('checks', 'guide_checks_count', `a guide has exactly three checks, found ${mod.checks.length}`);
   if (kind === 'lesson' && Array.isArray(mod.speed_match)) {

@@ -4,6 +4,7 @@
   "kind": "guide",
   "status": "written",
   "title": "The Power to Ask Anything",
+  "short_title": "Questions",
   "description": "Any statement can be turned into a question using these three methods.",
   "can_do": [
     "Turn any sentence into a question with {est-ce que}.",

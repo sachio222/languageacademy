@@ -4,6 +4,7 @@
   "kind": "guide",
   "status": "written",
   "title": "Which Past? - Scene or Event",
+  "short_title": "Which past",
   "description": "Choose between {j'étais} and {j'ai mangé} when you talk about the past.",
   "can_do": [
     "Say how things were in the past with {j'étais} and {j'avais}.",
@@ -14,9 +15,9 @@
   "parts": [
     {
       "id": "p-two-pasts",
-      "heading": "Two pasts, two jobs",
+      "heading": "Scene and event",
       "text": [
-        "French has two tenses for telling a story in the past. The imparfait ({j'étais}, {j'avais}) sets the scene: how things were. The passé composé ({j'ai mangé}) tells the events: what happened."
+        "French has two tenses for telling a story in the past. The imparfait ({j'étais}, {j'avais}) sets the scene: how things were. The passé composé ({j'ai mangé}) tells what happened."
       ],
       "blocks": [
         {
@@ -70,8 +71,8 @@
             },
             {
               "k": "Together",
-              "fr": "J'avais faim, et j'ai mangé une pomme.",
-              "en": "I was hungry, and I ate an apple."
+              "fr": "J'avais faim et j'ai mangé une pomme.",
+              "en": "I was hungry and I ate an apple."
             }
           ]
         },
@@ -82,8 +83,8 @@
               "Last night we were at the café. We ate a croissant."
             ],
             [
-              "Marie avait faim, et elle a mangé une banane.",
-              "Marie was hungry, and she ate a banana."
+              "Marie avait faim et elle a mangé une banane.",
+              "Marie was hungry and she ate a banana."
             ],
             [
               "J'ai mangé une pizza. C'était très bon.",
@@ -99,7 +100,7 @@
       "text": [
         "Ask yourself: is this how things were, or something that happened?"
       ],
-      "note": "How things were takes the imparfait: {j'étais}, {il avait}. Something that happened takes the passé composé: {j'ai mangé}.",
+      "note": "The imparfait answers the first: {j'étais}, {il avait}. The passé composé answers the second: {j'ai mangé}.",
       "blocks": [
         {
           "pairs": [

@@ -37,6 +37,20 @@ test('guide needs three checks', () => {
   assert.deepEqual(ps.map((p) => [p.code, p.path]), [['guide_checks_count', 'checks']]);
 });
 
+test('a guide may carry a short title of 1 to 40 characters', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  mod.short_title = 'Questions';
+  assert.deepEqual(codes(mod, 2), []);
+  assert.deepEqual(moduleTexts(mod).find((t) => t.path === 'short_title'), { path: 'short_title', role: 'native', text: 'Questions' });
+  mod.short_title = 'x'.repeat(41);
+  assert.deepEqual(codes(mod, 2), ['short_title_long']);
+  mod.short_title = '';
+  assert.equal(codes(mod, 2).length, 1);
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.short_title = 'Être';
+  assert.deepEqual(codes(lesson, 1), ['field_unknown']);
+});
+
 test('guide check needs exactly one right option', () => {
   const mod = miniModule(MINI_KEYS.guide);
   mod.checks[0].options[1].right = true;

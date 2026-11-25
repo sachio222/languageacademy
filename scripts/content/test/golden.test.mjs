@@ -103,7 +103,8 @@ test('adapter shows the same lessons as today', () => {
 });
 
 test('a module written after the snapshot takes no live number and is not compared', () => {
-  assert.ok(writtenAfter.includes('gender-endings-guide'), writtenAfter.join(', '));
+  // Exactly the guides written after the snapshot; a new module joins this list by hand.
+  assert.deepEqual(writtenAfter, ['gender-endings-guide', 'which-past-guide', 'future-conditional-guide']);
   for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
   // The reading after the guide keeps its live number.
   assert.equal(toLegacyLesson(course.modules.get('2024-03-30-reading-4'), { liveIds, course }).id, 52);

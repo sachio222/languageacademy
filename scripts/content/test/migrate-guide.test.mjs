@@ -132,6 +132,18 @@ test('negation checks written by hand survive a rerun, and --force applies them 
   assert.deepEqual(forced.mod.checks, CHECKS);
 });
 
+test('a short title written in the file survives a rerun and --force, right after the title', () => {
+  const old = configs.get('2024-01-19-questions-help');
+  const first = convertGuide(old, { lGuides: L.guides });
+  assert.equal(first.mod.short_title, undefined, 'no source gives a short title');
+  const edited = { ...clone(first.mod), short_title: 'Questions' };
+  const second = convertGuide(old, { lGuides: L.guides, existing: edited, written: edited, record: first.record });
+  assert.equal(second.mod.short_title, 'Questions');
+  assert.deepEqual(Object.keys(second.mod).slice(4, 6), ['title', 'short_title']);
+  const forced = convertGuide(old, { lGuides: L.guides, written: edited, handFixes: second.handFixes });
+  assert.equal(forced.mod.short_title, 'Questions');
+});
+
 test('an L guide: a hand edit on one part stays, a renamed heading keeps its id', () => {
   const old = configs.get('2024-10-21-cognates-help');
   const first = convertGuide(old, { lGuides: L.guides });

@@ -4,6 +4,7 @@
   "kind": "guide",
   "status": "written",
   "title": "Will and Would - One Stem",
+  "short_title": "Future and conditional",
   "description": "See how {je ferai} and {je ferais} share one stem.",
   "can_do": [
     "Tell {je ferai} (I will do) from {je ferais} (I would do).",
@@ -43,9 +44,9 @@
     },
     {
       "id": "p-both-in-one-table",
-      "heading": "Both in one table",
+      "heading": "{faire} and {aller} in both tenses",
       "text": [
-        "Side by side, the future and the conditional of a verb keep one stem. For a regular verb such as {parler}, the stem is the whole infinitive: {je parlerai}. {aller} has a short stem of its own, ir-."
+        "Side by side, the future and the conditional of a verb keep one stem. For an -er verb such as {parler}, the stem is the whole infinitive: {je parlerai}. {aller} has a short stem of its own, ir-."
       ],
       "blocks": [
         {
