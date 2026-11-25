@@ -34,6 +34,8 @@ function cloneHere(t) {
   t.after(() => rmSync(tmp, { recursive: true, force: true }));
   const repo = join(tmp, 'repo');
   git(tmp, 'clone', '--quiet', '--shared', REPO, repo);
+  // This checkout's commit, whatever its HEAD is (a CI pull request checks out a detached merge commit).
+  git(repo, 'checkout', '--quiet', '--detach', git(REPO, 'rev-parse', 'HEAD'));
   const run = (...a) => git(repo, ...a);
   run('config', 'user.email', 'test@example.com');
   run('config', 'user.name', 'test');

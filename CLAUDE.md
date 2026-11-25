@@ -43,6 +43,8 @@ Lesson content is code. Each unit lives in `src/lessons/modules/unitN/`. Four mo
 
 Adding a module: README §"Extending the Platform" has the step-by-step. Remember to add the `moduleKey` field (not just import order) — the mapper relies on it.
 
+On the `content-layer` branch, the written copy of the course for the new version (L) is `content/fr/`, one JSON file per module; `content/fr/README.md` says how to write and check it. `src/lessons/modules/` there mirrors `main` for the live app: change a live lesson on `main` and merge it, and CI fails if the branch edits those files.
+
 ### Auth + data flow
 
 ```

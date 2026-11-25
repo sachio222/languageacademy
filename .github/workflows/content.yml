@@ -24,6 +24,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pnpm install --frozen-lockfile
+      # The live app's lessons (src/lessons/modules) follow main; course content is written in content/fr/.
+      - run: pnpm content:src-guard
       - run: pnpm content:validate
       - run: pnpm content:test
       # Every module file (every kind) matches a rerun of the migration, hand fixes kept; exit 1 if any file would change.

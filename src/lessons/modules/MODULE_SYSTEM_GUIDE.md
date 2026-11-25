@@ -1,5 +1,7 @@
 # Module System Guide - Complete Reference
 
+> On the `content-layer` branch, the written copy of the course for the new version (L) is `content/fr/` (see `content/fr/README.md`). These files mirror `main` for the live app: change a live lesson on `main` and merge it.
+
 This guide covers everything you need to know about adding, modifying, and managing modules in your French learning app.
 
 ## 🏗️ **System Architecture Overview**
