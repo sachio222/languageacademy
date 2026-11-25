@@ -11,7 +11,8 @@ function shownText(item) {
   return ['prompt', 'situation', 'cue', 'instruction', 'shown', 'text', 'gloss', 'question']
     .map((f) => item[f])
     .filter(isStr)
-    .map((s) => normText(unmark(s)))
+    // A blank reads as a space on both sides (promptsMatch drops it from the live prompt too).
+    .map((s) => normText(unmark(s).replace(/_{2,}/g, ' ')))
     .join(' | ');
 }
 
@@ -67,7 +68,9 @@ export function liveIdMatch(mainLessons, converted) {
         entry.items[ex.id] = hit.id;
       } else unmatched.push({ module_key: lesson.moduleKey, live_id: ex.id, what: 'exercise', detail: `"${ex.prompt}" → "${ex.expectedAnswer}"` });
     }
-    const concepts = [...(mod.concepts || [])].sort((a, b) => (a.id < b.id ? -1 : 1));
+    // A Reference page's sections are today's concept cards (reference.mjs): heading, text and example.
+    const cards = mod.concepts || (mod.sections || []).map((x) => ({ id: x.id, term: x.heading, definition: x.text, example: x.example }));
+    const concepts = [...cards].sort((a, b) => (a.id < b.id ? -1 : 1));
     const usedC = new Set();
     // A concept matches by term, else by definition or example when the term was rewritten (a position word
     // fixed by hand).

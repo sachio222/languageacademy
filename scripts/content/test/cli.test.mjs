@@ -45,50 +45,28 @@ test('a translate item outside Unit 1 is a warning, printed and counted', (t) =>
   assert.equal(out.at(-1), 'ok 6 modules');
 });
 
-test('missing files fail without --allow', (t) => {
+test('missing files fail', (t) => {
   const r = run('validate', '--root', rootWithMissingFiles(t));
   assert.equal(r.status, 1);
   assert.match(r.stderr, /outline_missing_file 2/);
 });
 
-test('--allow counts and prints the allowed problems', (t) => {
-  const r = run('validate', '--root', rootWithMissingFiles(t), '--allow', 'outline_missing_file');
-  assert.equal(r.status, 0, r.stderr);
-  assert.match(r.stdout, /not-written-yet/);
-  assert.match(r.stdout, /nor-this-one/);
-  assert.match(r.stdout.trim().split('\n').at(-1), /^ok with 2 allowed problems: outline_missing_file 2$/);
-});
-
-test('--allow does not hide other codes', (t) => {
-  const root = rootWithMissingFiles(t);
-  const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
-  outline.units[0].name = '';
-  writeFileSync(join(root, 'course.json'), JSON.stringify(outline));
-  const r = run('validate', '--root', root, '--allow', 'outline_missing_file');
-  assert.equal(r.status, 1);
-  // The failing count names only the code that was not allowed; the allowed ones are counted on their own line.
-  assert.match(r.stderr, /^1 problem: field_type 1$/m);
-  assert.match(r.stderr, /^allowed: outline_missing_file 2$/m);
-});
-
-test('--allow needs a value', () => {
-  for (const args of [['validate', '--allow'], ['validate', '--allow', '--root', MINI_ROOT]]) {
+test('--allow is no longer an option', () => {
+  for (const args of [['validate', '--allow', 'outline_missing_file'], ['validate', '--root', MINI_ROOT, '--allow', 'outline_missing_file']]) {
     const r = run(...args);
     assert.equal(r.status, 2, args.join(' '));
     assert.equal(r.stdout, '');
+    assert.match(r.stderr, /usage/);
   }
 });
 
-test('the default content folder validates with today\'s allowance', () => {
-  const r = run('validate', '--allow', 'outline_missing_file');
+test('the default content folder validates clean', () => {
+  const r = run('validate');
   assert.equal(r.status, 0, r.stderr);
-  // Task 6 wrote the lessons, practice sets and unit exams; the 5 guides, 11 readings and 9 Reference pages are
-  // Task 7's, which removes the allowance.
-  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok with 25 allowed problems: outline_missing_file 25');
-  const missing = r.stdout.split('\n').filter((l) => l.startsWith('allowed ')).map((l) => l.match(/modules\/([^.]+)\.json/)?.[1] ?? l);
-  const kinds = JSON.parse(readFileSync(new URL('../../../content/fr/course.json', import.meta.url), 'utf8'));
-  assert.equal(missing.length, 25);
-  assert.ok(kinds.shelf.pages.every((k) => missing.includes(k)), 'every Reference page is still Task 7’s');
+  // Every module of the outline has its file: 146 lessons, practice sets and unit exams, 5 guides, 11 readings and
+  // 9 Reference pages. Translations outside Unit 1 still print as warnings.
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 171 modules');
+  assert.match(r.stdout, /^\d+ warnings: translate_outside_unit1 \d+$/m);
 });
 
 test('an explicit root that is missing is an error', () => {

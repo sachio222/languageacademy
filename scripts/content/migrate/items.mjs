@@ -167,7 +167,7 @@ export function placeBlanks(text, blanks) {
 }
 
 // A wrong answer as a mistake. A bare string shows the live screen's own words, `Expected: "<answer>"`.
-function mistakesOf(wrongAnswers, expected, mark) {
+export function mistakesOf(wrongAnswers, expected, mark) {
   const out = [];
   for (const w of Array.isArray(wrongAnswers) ? wrongAnswers : []) {
     const answer = typeof w === 'string' ? w : w?.answer;
@@ -179,7 +179,7 @@ function mistakesOf(wrongAnswers, expected, mark) {
   return out;
 }
 
-function acceptOf(list, answer) {
+export function acceptOf(list, answer) {
   const out = [];
   for (const a of Array.isArray(list) ? list : []) if (isStr(a) && !out.includes(a.trim())) out.push(a.trim());
   return out.filter((a) => a !== answer);

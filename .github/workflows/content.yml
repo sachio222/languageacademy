@@ -20,11 +20,10 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      # Task 7 removes --allow once every module file is written.
-      - run: pnpm content:validate --allow outline_missing_file
+      - run: pnpm content:validate
       - run: pnpm content:test
-      # The module files match a rerun of the migration (hand fixes kept); exit 1 if any file would change.
-      - run: pnpm content:migrate modules --check
+      # Every module file (every kind) matches a rerun of the migration, hand fixes kept; exit 1 if any file would change.
+      - run: pnpm content:migrate --check
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test
       # Task 10 replaces this with a blocking `pnpm graph:check --budget`.

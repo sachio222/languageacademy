@@ -4,7 +4,7 @@
   "description": "Interactive French learning platform with grammar linting",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm content:validate --allow outline_missing_file && ./prepare-historical-css.sh",
+    "build": "pnpm content:validate && ./prepare-historical-css.sh",
     "vite:build": "vite build",
     "dev": "vite",
     "preview": "vite preview",

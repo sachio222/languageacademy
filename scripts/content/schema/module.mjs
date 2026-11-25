@@ -94,8 +94,10 @@ const CHECK = OBJ(
   ['id', 'ask', 'options', 'why'],
 );
 const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w', 'h', 'alt']);
-const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('native'), img: IMG }, ['id']);
-const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
+// layout: the story's dateline, scene heading or closing line (stories/readingN.html), drawn apart from the text.
+const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('native'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
+// example: a section made from a concept card keeps the card's example line.
+const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY }, ['words', 'constructions', 'source']);
 
 const KIND_SCHEMAS = {

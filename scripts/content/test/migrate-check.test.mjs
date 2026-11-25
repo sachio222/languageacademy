@@ -1,4 +1,4 @@
-// Task 6: `modules --check` exits 0 on the committed content and 1 when a rerun would change a file, writing nothing.
+// Tasks 6 and 7: `--check` (every kind: lessons, practice sets, unit exams, guides, readings, Reference pages) exits 0 on the committed content and 1 when a rerun would change a file, writing nothing.
 // It reads live ids from main through a git worktree, so it needs main's history (CI: fetch-depth 0).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -19,7 +19,7 @@ const hasMain = ['origin/main', 'main'].some((ref) => {
   }
 });
 
-test('modules --check: exit 0 as committed, 1 when a file would change', { skip: !hasMain && 'no main in this checkout' }, (t) => {
+test('--check: exit 0 as committed, 1 when a file would change', { skip: !hasMain && 'no main in this checkout' }, (t) => {
   const root = mkdtempSync(join(tmpdir(), 'la-check-'));
   const work = mkdtempSync(join(tmpdir(), 'la-check-wt-'));
   t.after(() => {
@@ -27,9 +27,11 @@ test('modules --check: exit 0 as committed, 1 when a file would change', { skip:
     rmSync(work, { recursive: true, force: true });
   });
   cpSync(join(REPO, 'content/fr'), root, { recursive: true });
-  const check = () => spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', RUN, 'modules', '--check', '--root', root, '--tmp', work], { cwd: REPO, encoding: 'utf8' });
+  const check = () => spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', RUN, '--check', '--root', root, '--tmp', work], { cwd: REPO, encoding: 'utf8' });
   const ok = check();
   assert.equal(ok.status, 0, ok.stdout + ok.stderr);
+  for (const key of ['2024-10-21-cognates-help', '2026-11-24-negation-guide', '2024-01-09-reading1', '2024-04-01-alphabet'])
+    assert.match(ok.stdout, new RegExp(`unchanged .*modules/${key}\\.json`), `--check covers ${key}`);
 
   // A title edited by hand is kept, but the report and hand-fixes.json would record it: a change.
   const file = join(root, 'modules', '2024-01-02-etre.json');

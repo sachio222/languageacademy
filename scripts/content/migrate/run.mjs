@@ -10,13 +10,20 @@
 //     content/fr/legacy/positions-<sha7>.json: the live positions on <commit>, read from a temporary
 //     `git worktree add` of that commit under <dir> (default: the system temp folder), removed afterwards.
 //     The table is frozen: a file that differs is kept unless --force; --check exits 1 if it would change.
-//   node scripts/content/migrate/run.mjs modules [--root <content dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force]
-//     content/fr/modules/<key>.json for every lesson, practice set and unit exam in the outline, plus
-//     legacy/live-ids.json, legacy/migration-sources.json (each part's source and last output), legacy/hand-fixes.json
-//     and migration-report.md. Three-way merge (spec 8.2): a part the file holds as the converter last wrote it takes
-//     the new output; a part edited by hand stays. Live ids come from lessonData.js on --live-ref (default: the main commit last merged
-//     here, `git merge-base HEAD origin/main`), read from a temporary worktree. --check exits 1 if a file would change.
-//     --force converts from the source alone, then applies legacy/hand-fixes.json again.
+//   node scripts/content/migrate/run.mjs [modules|lessons|guides|readings|reference ...] [--root <content dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force]
+//     content/fr/modules/<key>.json for every module in the outline: lessons, practice sets and unit exams (module.mjs),
+//     guides (guide.mjs), readings (reading.mjs) and Reference pages (reference.mjs), in one course-order walk so word
+//     ids are minted where a word is first taught, units first and the shelf after them. No command, or `modules`,
+//     means every kind; kind words limit which module files are written or checked, while legacy/live-ids.json,
+//     legacy/migration-sources.json (each part's source and last output), legacy/hand-fixes.json and
+//     migration-report.md always cover the whole course. Three-way merge (spec 8.2): a part the file holds as the
+//     converter last wrote it takes the new output; a part edited by hand stays. Live ids come from lessonData.js on
+//     --live-ref (default: the main commit last merged here, `git merge-base HEAD origin/main`), read from a temporary
+//     worktree. --check exits 1 if a file would change. --force converts from the source alone, then applies
+//     legacy/hand-fixes.json again. Guides and readings read prototype L's data from legacy/l-sources.json.
+//   node scripts/content/migrate/run.mjs l-sources [--l <prototype L folder>] [--check]
+//     content/fr/legacy/l-sources.json: L's GUIDES (j-guides.js) and LA_STORIES (stories-data.js), evaluated in a vm
+//     with a stub window. Default folder: $LA_L_DIR, else the vault's prototypes/l/. --check exits 1 if it would change.
 import '../vite-shim.mjs'; // lets Node import src/ files written for Vite
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
@@ -28,6 +35,11 @@ import { ContentError, problem } from '../problems.mjs';
 import { outlineFromUnitConfigs, checkOutline, mergeOutline } from './outline.mjs';
 import { frozenPositions, checkAgainstLessons } from './positions.mjs';
 import { convertModule, kindOf } from './module.mjs';
+import { convertGuide } from './guide.mjs';
+import { readingFrom } from './reading.mjs';
+import { referenceFrom } from './reference.mjs';
+import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
+import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms } from './sources.mjs';
 import { liveIdMatch } from './live-ids.mjs';
 import { renderReport } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
@@ -220,21 +232,31 @@ async function dictionaryMap() {
   return map;
 }
 
-// The checker's word test, so French spans are marked where today's checker reads French.
-function wordTest() {
-  const graph = loadGraph(join(REPO_ROOT, 'curriculum-graph'), 'fr');
-  return frenchWordTest(graph, buildFormIndex(graph));
+// Module kinds by the source's own flags; a Reference page is whatever the outline puts on the shelf.
+function sourceKind(old, onShelf) {
+  if (onShelf) return 'reference';
+  if (old.isHelpModule || old.guide) return 'guide';
+  if (old.isReadingComprehension) return 'reading';
+  return kindOf(old);
 }
+// Kind words on the command line choose which module files are written (or checked); the walk, the word ids and the
+// shared files (records, hand fixes, live ids, report) always cover the whole course.
+const KIND_WORDS = { modules: null, lessons: ['lesson', 'practice', 'unit_exam'], guides: ['guide'], readings: ['reading'], reference: ['reference'] };
 
-async function modules(args, flags) {
+async function modules(args, flags, kindWords = ['modules']) {
   const rootArg = option(args, '--root');
   const ROOT = rootArg === undefined ? CONTENT_ROOT : resolve(rootArg);
   const outline = readJson(join(ROOT, 'course.json'));
   if (!outline) throw new UsageError('content/fr/course.json is missing; run `outline` first');
-  const { unitConfigs } = await quietly(() => importFrom(REPO_ROOT, 'src/lessons/unitConfigLoader.js'));
-  const configs = new Map(unitConfigs.flatMap((u) => u.modules).map((m) => [m.moduleKey, m]));
+  const wanted = kindWords.some((w) => KIND_WORDS[w] === null) ? null : new Set(kindWords.flatMap((w) => KIND_WORDS[w]));
+  const { unitConfigs, configs } = await todaysModules();
   const dictionary = await dictionaryMap();
-  const isWord = wordTest();
+  const graph = loadGraph(join(REPO_ROOT, 'curriculum-graph'), 'fr');
+  const isWord = frenchWordTest(graph, buildFormIndex(graph));
+  const lSources = readLSources(ROOT);
+  const phonics = await frenchPhonics();
+  const forms = await dictionaryForms();
+  const jsx = liaisonJsx();
   const recordFile = join(ROOT, 'legacy', 'migration-sources.json');
   const records = readJson(recordFile) ?? {};
   // Every part the module files hold differently from the converter's output, as data, so --force can apply
@@ -245,10 +267,50 @@ async function modules(args, flags) {
   const seenBySpelling = new Map();
   const lines = [];
   const converted = new Map();
+  const kinds = new Map();
   const newRecords = {};
   let itemCount = 0;
   let heldCount = 0;
   const byUnit = [];
+  const minted = new Set();
+  const needL = () => {
+    if (!lSources) throw new UsageError(`${rel(join(ROOT, L_SOURCES_FILE))} is missing; run \`pnpm content:migrate l-sources\` first`);
+    return lSources;
+  };
+
+  const convert = (key, old, kind, unitInfo) => {
+    // --force converts from the source alone, as if nothing were written, then applies hand-fixes.json again.
+    const existing = flags.force ? null : readJson(join(ROOT, 'modules', `${key}.json`));
+    const record = flags.force ? null : records[key] ?? null;
+    const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null };
+    if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx });
+    if (kind === 'reading') {
+      const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;
+      return readingFrom(old, story, { ...common, dictionary, seenBySpelling, dictionaryForms: forms, names: graph.names, minted });
+    }
+    if (kind === 'reference') return referenceFrom(old, { ...common, phonics, dictionary, seenBySpelling });
+    return convertModule(old, { ...common, unitKey: unitInfo.key, dictionary, seenBySpelling });
+  };
+  const take = (key, kind, r, counts) => {
+    if (Object.keys(r.handFixes).length) newFixes[key] = r.handFixes;
+    lines.push(...r.report);
+    (r.mod.items || []).forEach((item, i) => {
+      for (const p of checkItemPassable(item, defaultCheckAnswer, { file: key, path: `items[${i}]` }))
+        lines.push({ module_key: key, path: p.path, kind: 'answer_fails', detail: `${item.id}: ${p.message}` });
+    });
+    converted.set(key, r.mod);
+    kinds.set(key, kind);
+    if (counts) {
+      const framed = new Set(r.report.filter((l) => l.kind === 'framed_respond').map((l) => l.path));
+      (r.mod.items || []).forEach((item, i) => {
+        if (item.type === 'translate') counts.translate += 1;
+        else if (item.type === 'respond' && framed.has(`items[${i}]`)) counts.respond += 1;
+      });
+    }
+    newRecords[key] = r.record;
+    itemCount += (r.mod.items || []).length;
+    heldCount += (r.held || []).length;
+  };
 
   for (const [ui, unit] of outline.units.entries()) {
     const counts = { unit: `${unit.unit_key} ${unit.name}`, translate: 0, respond: 0 };
@@ -256,35 +318,15 @@ async function modules(args, flags) {
     for (const key of unit.entries) {
       const old = configs.get(key);
       if (!old) continue; // written in content/ only, with no source in src/lessons/modules/
-      const kind = kindOf(old);
-      if (!kind) {
-        // A reading teaches the words in its own table, so its spellings join the course-order walk and a later
-        // lesson's proposals know them. Task 7 writes the reading files with the same walk.
-        if (old.isReadingComprehension)
-          for (const v of old.vocabularyReference || [])
-            proposeWordId({ french: v.french, english: v.english, note: v.note, module_key: key }, seenBySpelling, dictionary);
-        continue;
-      }
-      // --force converts from the source alone, as if nothing were written, then applies hand-fixes.json again.
-      const existing = flags.force ? null : readJson(join(ROOT, 'modules', `${key}.json`));
-      const record = flags.force ? null : records[key] ?? null;
-      const r = convertModule(old, { unitKey: unit.unit_key, unitIndex: ui + 1, existing, record, dictionary, seenBySpelling, isWord, handFixes: allFixes[key] ?? {} });
-      if (Object.keys(r.handFixes).length) newFixes[key] = r.handFixes;
-      lines.push(...r.report);
-      r.mod.items.forEach((item, i) => {
-        for (const p of checkItemPassable(item, defaultCheckAnswer, { file: key, path: `items[${i}]` }))
-          lines.push({ module_key: key, path: p.path, kind: 'answer_fails', detail: `${item.id}: ${p.message}` });
-      });
-      converted.set(key, r.mod);
-      const framed = new Set(r.report.filter((l) => l.kind === 'framed_respond').map((l) => l.path));
-      r.mod.items.forEach((item, i) => {
-        if (item.type === 'translate') counts.translate += 1;
-        else if (item.type === 'respond' && framed.has(`items[${i}]`)) counts.respond += 1;
-      });
-      newRecords[key] = r.record;
-      itemCount += r.mod.items.length;
-      heldCount += r.held.length;
+      const kind = sourceKind(old, false);
+      take(key, kind, convert(key, old, kind, { key: unit.unit_key, index: ui + 1 }), counts);
     }
+  }
+  // The shelf sits outside the numbered units, so its pages take word ids after every unit.
+  for (const key of outline.shelf?.pages || []) {
+    const old = configs.get(key);
+    if (!old) continue;
+    take(key, 'reference', convert(key, old, 'reference', null), null);
   }
 
   const liveRef = option(args, '--live-ref') ?? defaultLiveRef();
@@ -309,28 +351,61 @@ async function modules(args, flags) {
 
   const sorted = (o) => Object.fromEntries(Object.keys(o).sort().map((k) => [k, o[k]]));
   const always = { ...flags, force: true }; // these files are rebuilt from what is written, so a rerun keeps edits
+  const byKind = (k) => [...kinds.values()].filter((x) => x === k).length;
+  const kindsOf = (l) => kinds.get(l.module_key);
+  const count = (kind, test = () => true) => lines.filter((l) => l.kind === kind && test(l)).length;
+  const summary = {
+    modules: converted.size,
+    items: itemCount,
+    held: heldCount,
+    byUnit,
+    kinds: { lesson: byKind('lesson'), practice: byKind('practice'), unit_exam: byKind('unit_exam'), guide: byKind('guide'), reading: byKind('reading'), reference: byKind('reference') },
+    readingMinted: minted.size,
+  };
   let status = 0;
-  for (const [key, mod] of converted) status |= writeFile(join(ROOT, 'modules', `${key}.json`), json(mod), always);
+  for (const [key, mod] of converted) if (!wanted || wanted.has(kinds.get(key))) status |= writeFile(join(ROOT, 'modules', `${key}.json`), json(mod), always);
   status |= writeFile(join(ROOT, 'legacy', 'live-ids.json'), json(sorted(map)), always);
   status |= writeFile(recordFile, json(sorted(newRecords)), always);
   status |= writeFile(fixesFile, json(sorted(newFixes)), always);
-  status |= writeFile(join(ROOT, 'migration-report.md'), renderReport(lines, { modules: converted.size, items: itemCount, held: heldCount, byUnit }), always);
-  const byKind = new Map();
-  for (const l of lines) byKind.set(l.kind, (byKind.get(l.kind) || 0) + 1);
+  status |= writeFile(join(ROOT, 'migration-report.md'), renderReport(lines, summary), always);
+  const lineKinds = new Map();
+  for (const l of lines) lineKinds.set(l.kind, (lineKinds.get(l.kind) || 0) + 1);
   const fixCount = Object.values(newFixes).reduce((n, f) => n + Object.keys(f).length, 0);
-  console.log(`modules: ${converted.size} files, ${itemCount} items, ${heldCount} held out, ${fixCount} hand-fixed parts`);
-  console.log(`report: ${[...byKind].map(([k, n]) => `${k} ${n}`).join(', ')}`);
+  const k = summary.kinds;
+  console.log(`modules: ${converted.size} files (${k.lesson} lessons, ${k.practice} practice sets, ${k.unit_exam} unit exams, ${k.guide} guides, ${k.reading} readings, ${k.reference} Reference pages), ${itemCount} items, ${heldCount} held out, ${fixCount} hand-fixed parts`);
+  const readingStory = (l) => kindsOf(l) === 'reading' && /^story text:/.test(l.detail);
+  const fixedPositions = (l) => ['guide', 'reading', 'reference'].includes(kindsOf(l)) && /\(fixed by hand\)$/.test(l.detail);
+  console.log(
+    `guides, readings, Reference pages: ${count('text_changed', readingStory)} story sentences changed, ${count('story_missing')} story_missing, ` +
+      `${count('reading_word_no_popup')} passage words with no pop-up, ${count('position_word', fixedPositions)} position words fixed by hand, ${minted.size} word ids first minted in reading tables`,
+  );
+  console.log(`report: ${[...lineKinds].map(([kind, n]) => `${kind} ${n}`).join(', ')}`);
   return status;
 }
 
-const COMMANDS = { outline, positions, modules };
-const USAGE = 'usage: node scripts/content/migrate/run.mjs outline|positions|modules [--ref <commit>] [--live-ref <commit>] [--tmp <dir>] [--check] [--force]';
+// content/fr/legacy/l-sources.json from prototype L's folder (LA_L_DIR or --l <dir>): its guides and stories, frozen.
+async function lSourcesCommand(args, flags) {
+  const rootArg = option(args, '--root');
+  const ROOT = rootArg === undefined ? CONTENT_ROOT : resolve(rootArg);
+  const data = readLFolder(option(args, '--l') ?? L_DIR);
+  console.log(`L: ${data.guides.length} guides, ${data.stories.length} stories`);
+  return writeFile(join(ROOT, L_SOURCES_FILE), json(data), { check: flags.check, force: true });
+}
 
-const [command, ...args] = process.argv.slice(2);
+const COMMANDS = { outline, positions, 'l-sources': lSourcesCommand };
+const USAGE =
+  'usage: node scripts/content/migrate/run.mjs [outline|positions|l-sources|modules|lessons|guides|readings|reference ...] [--ref <commit>] [--live-ref <commit>] [--l <dir>] [--tmp <dir>] [--check] [--force]';
+
+const argv = process.argv.slice(2);
+// No command means `modules`: every kind. Kind words (modules, lessons, guides, readings, reference) may be combined.
+const words = [];
+while (argv.length && !argv[0].startsWith('--')) words.push(argv.shift());
+const args = argv;
 try {
-  if (!COMMANDS[command]) throw new UsageError(USAGE);
   const flags = { check: args.includes('--check'), force: args.includes('--force') };
-  process.exitCode = await COMMANDS[command](args, flags);
+  if (words.length === 1 && COMMANDS[words[0]]) process.exitCode = await COMMANDS[words[0]](args, flags);
+  else if (words.every((w) => w in KIND_WORDS)) process.exitCode = await modules(args, flags, words.length ? words : ['modules']);
+  else throw new UsageError(USAGE);
 } catch (e) {
   if (e instanceof ContentError) {
     for (const p of e.problems) console.error(`${p.file}:${p.path} ${p.code} ${p.message}`);

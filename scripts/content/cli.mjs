@@ -1,7 +1,5 @@
-// Content CLI. `node scripts/content/cli.mjs validate [--root <dir>] [--allow <code>]...` prints `ok <n> modules`,
+// Content CLI. `node scripts/content/cli.mjs validate [--root <dir>]` prints `ok <n> modules`,
 // or every problem as `file:path code message` and a count by code, and exits 1.
-// --allow <code> (until plan Task 7 writes every module file; Task 7 removes it): problems with that code are
-// still printed, to stdout, and counted, but do not fail the run. Any other problem still fails it.
 // Warnings (translate outside Unit 1) never fail a run: a warnings section lists each one as `warning <problem>`
 // and a count by code, before the closing line.
 import { existsSync } from 'node:fs';
@@ -23,16 +21,15 @@ function printWarnings(warnings) {
   console.log(`${plural(warnings.length, 'warning')}: ${countByCode(warnings)}`);
 }
 
+const USAGE = 'usage: node scripts/content/cli.mjs validate [--root <content dir>]';
+
 function validate(args) {
-  const allowed = new Set();
   for (let j = 0; j < args.length; j++) {
-    if (args[j] !== '--allow') continue;
-    const code = args[j + 1];
-    if (code === undefined || code.startsWith('--')) {
-      console.error('--allow needs a problem code');
+    if (args[j] === '--root') j++;
+    else {
+      console.error(`${args[j]}: not an option here\n${USAGE}`);
       return 2;
     }
-    allowed.add(code);
   }
   const i = args.indexOf('--root');
   let root = CONTENT_ROOT;
@@ -56,21 +53,13 @@ function validate(args) {
   } catch (e) {
     if (!(e instanceof ContentError)) throw e;
     printWarnings(e.warnings);
-    const allow = e.problems.filter((p) => allowed.has(p.code));
-    const fail = e.problems.filter((p) => !allowed.has(p.code));
-    for (const p of allow) console.log(`allowed ${line(p)}`);
-    if (fail.length === 0) {
-      console.log(`ok with ${plural(allow.length, 'allowed problem')}: ${countByCode(allow)}`);
-      return 0;
-    }
-    for (const p of fail) console.error(line(p));
-    console.error(`${plural(fail.length, 'problem')}: ${countByCode(fail)}`);
-    if (allow.length) console.error(`allowed: ${countByCode(allow)}`);
+    for (const p of e.problems) console.error(line(p));
+    console.error(`${plural(e.problems.length, 'problem')}: ${countByCode(e.problems)}`);
     return 1;
   }
 }
 
 const [command, ...args] = process.argv.slice(2);
 if (command === 'validate') process.exit(validate(args));
-console.error('usage: node scripts/content/cli.mjs validate [--root <content dir>] [--allow <problem code>]...');
+console.error(USAGE);
 process.exit(2);

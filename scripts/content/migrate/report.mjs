@@ -4,6 +4,8 @@
 // kind -> [heading, one sentence on what the lines mean]
 const SECTIONS = [
   ['held_out', 'Needs Jake', 'These exercises are left out of the converted files, because fixing them takes a teaching decision. Each stays out on every rerun until it is decided.'],
+  ['guide_checks_by_hand', 'Guide checks written by hand', 'The source guide has no checks, so its three are written by hand in the module file. A rerun keeps them, and hand-fixes.json records them.'],
+  ['story_missing', 'Readings with no story', 'Prototype L has no illustrated story for these readings, so the passage is today’s readingPassage text, without its pictures. Story art is a separate piece of work.'],
   ['answer_fails', 'Answers the checker rejects', 'The app’s answer checker rejects a declared answer, or accepts a listed mistake. Each needs a fix in its module file.'],
   ['word_sense', 'Spellings taught more than once', 'Each line proposes whether a spelling taught again is the same meaning (same word_id) or a new one (a sense suffix). Confirm or change the word_id in the module file; a rerun keeps it.'],
   ['type_guess', 'Item types to confirm', 'The classifier had no clear rule for these items, so the type is its best guess.'],
@@ -11,6 +13,8 @@ const SECTIONS = [
   ['position_word', 'Position words', 'Learner text that names a module, unit or reading by number. The source says it this way; the module file names the subject instead, and each line fixed so says "fixed by hand".'],
   ['rewritten', 'Exercises rewritten as Jake ruled', 'No conversion of today’s text fits these, so each is written as Jake ruled, in its place.'],
   ['framed_respond', 'English prompts written as respond items', 'An English prompt framed by its instruction ("Say \'you would do it\' (informal)") or by a context note ("I know Marie (person)") is a respond item, with the whole frame as the situation, since the context does the teaching (Jake, 2026-11-25). A bare English sentence is a translate item; outside Unit 1 each is a checker warning, rewritten over time.'],
+  ['reading_word_no_popup', 'Passage words with no pop-up', 'Each word below appears in the reading’s passage and has no dictionary entry (src/data/dictionary/), no row in the reading’s glossary or vocabulary table, and is not a name in curriculum-graph/languages/fr/names.json. Each needs one of the three, so every word a learner taps opens a pop-up.'],
+  ['estimate', 'Estimates to confirm', 'The source sets no value, so the conversion wrote an estimate.'],
   ['hand_edit', 'Hand edits kept', 'The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.'],
   ['merge_conflict', 'Hand edits the source or converter changed under', 'A hand edit is kept, and the source or the converter now gives something else for the same part. Compare the two and settle it in the module file; the line stays until the file matches the new output.'],
   ['source_changed', 'Source changes since the last run', 'The source changed, so these parts were converted again; their ids stay.'],
@@ -35,14 +39,20 @@ function groupOf(l) {
 
 /**
  * @param lines   ReportLine[] ({ module_key, path, kind, detail }), course order
- * @param summary { modules, items, held, byUnit?: [{ unit, translate, respond }] }
+ * @param summary { modules, items, held, byUnit?: [{ unit, translate, respond }], kinds?: { lesson, practice, unit_exam, guide, reading, reference }, readingMinted? }
  */
 export function renderReport(lines, summary) {
   const out = [];
-  out.push('# Converting lessons, practice sets and unit exams to module files', '');
+  out.push('# Converting today’s modules to module files', '');
+  const k = summary.kinds;
+  const made = k
+    ? ` (${k.lesson} lessons, ${k.practice} practice sets, ${k.unit_exam} unit exams, ${k.guide} guides, ${k.reading} readings and ${k.reference} Reference pages)`
+    : '';
   out.push(
-    `\`pnpm content:migrate modules\` wrote ${summary.modules} module files under \`content/fr/modules/\` from today’s lessons, practice sets and unit exams in \`src/lessons/modules/\`, with ${summary.items} items. ` +
+    `\`pnpm content:migrate\` wrote ${summary.modules} module files${made} under \`content/fr/modules/\` from today’s modules in \`src/lessons/modules/\`, with ${summary.items} items. ` +
+      'Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). ' +
       (summary.held ? `${summary.held} exercises are held out until Jake decides them (first section). ` : '') +
+      (summary.readingMinted ? `${summary.readingMinted} word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. ` : '') +
       'The sections below list every guess the conversion made and every place where the written files differ from today’s source.',
     '',
   );
@@ -64,7 +74,12 @@ export function renderReport(lines, summary) {
     let current = null;
     let groups = null;
     const flush = () => {
-      for (const [g, ls] of groups || []) out.push(`- ${ls.length} × ${g}: ${ls.map((l) => `\`${l.path}\``).join(', ')}`);
+      for (const [g, ls] of groups || [])
+        out.push(
+          g === 'words'
+            ? `- ${ls.length} ${ls.length === 1 ? 'word' : 'words'}: ${ls.map((l) => l.detail).join(', ')}`
+            : `- ${ls.length} × ${g}: ${ls.map((l) => `\`${l.path}\``).join(', ')}`,
+        );
       groups = null;
     };
     for (const l of mine) {
@@ -72,6 +87,11 @@ export function renderReport(lines, summary) {
         flush();
         current = l.module_key;
         out.push('', `**${current ?? 'course'}**`, '');
+      }
+      if (l.kind === 'reading_word_no_popup') {
+        groups = groups || new Map();
+        groups.set('words', [...(groups.get('words') || []), l]);
+        continue;
       }
       const g = groupOf(l);
       if (g) {

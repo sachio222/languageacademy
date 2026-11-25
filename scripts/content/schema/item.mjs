@@ -15,7 +15,8 @@ const SHAPES = {
   // instruction: a question that says more than "what does it mean" ("… at the end of a sentence?").
   meaning: { req: ['shown', 'answer'], opt: ['instruction', 'accept'] },
   choice: { req: ['question', 'options'], opt: [] },
-  comprehension: { req: ['question'], opt: ['answer', 'accept', 'options'] },
+  // cue: the line under the question ("Sophie is in ___"), as respond has; L shows it as the question's second line.
+  comprehension: { req: ['question'], opt: ['cue', 'answer', 'accept', 'options'] },
 };
 
 // [role, typed] for each plain string field, by type.
@@ -27,7 +28,7 @@ const FIELD_ROLES = {
   meaning: { instruction: ['native_fr', false], shown: ['fr', false], answer: ['native', true], accept: ['native', true] },
   choice: { question: ['native_fr', false] },
   // Readings are answered in French (ruling: reading-6 "prendre le train", reading-3 "Café de la Paix").
-  comprehension: { question: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
+  comprehension: { question: ['native_fr', false], cue: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
 };
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
