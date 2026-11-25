@@ -3,12 +3,13 @@
 // fsio.mjs: the durable write and the durable append the store and the event log rest on.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readdirSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { appendLineDurable, writeDurable } from '../fsio.mjs';
 import { canonicalSha256, sha256Hex } from '../hash.mjs';
 import { createStore, StoreCorruptError } from '../store.mjs';
+import { recordingIo } from './helpers/recording-io.mjs';
 
 function tempDir(t) {
   const dir = mkdtempSync(join(tmpdir(), 'la-store-'));
@@ -72,6 +73,44 @@ test('a blob edited on disk is refused on read, and put repairs it', (t) => {
   // put of the true content rewrites the file, since its name says what it must hold.
   assert.equal(store.put('original'), sha);
   assert.equal(store.get(sha), 'original');
+});
+
+test('store put refuses a value canonical JSON would change, and writes nothing', (t) => {
+  const dir = tempDir(t);
+  const store = createStore(dir);
+  for (const bad of [
+    { a: undefined },
+    { n: Number.NaN },
+    [Number.NEGATIVE_INFINITY],
+    { when: new Date(0) },
+    { f: () => 1 },
+    { s: 'half \uD83D pair' },
+    { ['k\uDC00']: 1 },
+    'lone \uDC00 surrogate in a text blob',
+  ])
+    assert.throws(() => store.put(bad), TypeError, JSON.stringify(bad));
+  assert.equal(existsSync(join(dir, 'sha256')), false);
+  // A whole surrogate pair is fine.
+  assert.equal(store.get(store.put('\u{1F600}')), '\u{1F600}');
+});
+
+test('store has verifies the blob: a missing one is false, an edited one throws', (t) => {
+  const store = createStore(tempDir(t));
+  const sha = store.put('original');
+  assert.equal(store.has(sha), true);
+  writeFileSync(store.path(sha), 'edited');
+  assert.throws(() => store.has(sha), (e) => e instanceof StoreCorruptError && e.sha256 === sha);
+  assert.equal(store.has('b'.repeat(64)), false);
+});
+
+test('store put makes each folder it creates durable, through the io seam', (t) => {
+  const dir = realpathSync(tempDir(t));
+  const { io, calls } = recordingIo();
+  const store = createStore(dir, { io });
+  const sha = store.put('Le chat qui dort.');
+  const synced = calls.filter((c) => c.op === 'fsync').map((c) => c.path);
+  for (const d of [join(dir, 'sha256', sha.slice(0, 2)), join(dir, 'sha256'), dir]) assert.ok(synced.includes(d), `${d} fsynced: ${synced.join(', ')}`);
+  assert.equal(calls.filter((c) => c.op === 'rename').length, 1);
 });
 
 test('store leaves no temporary file behind', (t) => {

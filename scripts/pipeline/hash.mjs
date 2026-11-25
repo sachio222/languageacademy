@@ -34,6 +34,39 @@ const isPlainObject = (v) => {
 };
 
 /**
+ * Throws TypeError unless `value` is exactly a JSON value: null, a boolean, a finite number, a well-formed string, an
+ * array or a plain object of those, with well-formed keys. Canonical JSON would otherwise change the value without a
+ * word: undefined drops out, NaN and Infinity become null, a Date becomes its toJSON text, and a lone surrogate turns
+ * into U+FFFD once encoded as UTF-8, so the hash would cover something other than what the caller holds.
+ * @param {unknown} value
+ * @param {string} [who] names the caller in the message, e.g. 'store.put'
+ */
+export function assertJsonValue(value, who = 'assertJsonValue') {
+  const walk = (v, at) => {
+    if (v === null || typeof v === 'boolean') return;
+    if (typeof v === 'string') {
+      if (!v.isWellFormed()) throw new TypeError(`${who}: the string at '${at}' holds a lone surrogate, which UTF-8 cannot carry`);
+      return;
+    }
+    if (typeof v === 'number') {
+      if (!Number.isFinite(v)) throw new TypeError(`${who}: ${v} at '${at}' has no JSON form`);
+      return;
+    }
+    if (Array.isArray(v)) return v.forEach((x, i) => walk(x, `${at}/${i}`));
+    if (typeof v === 'object' && isPlainObject(v)) {
+      for (const [k, x] of Object.entries(v)) {
+        if (!k.isWellFormed()) throw new TypeError(`${who}: a key at '${at}' holds a lone surrogate, which UTF-8 cannot carry`);
+        walk(x, `${at}/${k}`);
+      }
+      return;
+    }
+    const what = v === undefined ? 'undefined' : typeof v === 'object' ? v.constructor?.name ?? 'object' : typeof v;
+    throw new TypeError(`${who}: ${what} at '${at}' has no JSON form`);
+  };
+  walk(value, '');
+}
+
+/**
  * A deep copy of a JSON value with every string and every key in NFC. Refuses values JSON cannot hold, and an object
  * whose keys become equal once normalized (the document would be ambiguous).
  */

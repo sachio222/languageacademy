@@ -5,13 +5,16 @@
 //
 // put(data) stores a string as given, or an object as its canonical JSON, so put(obj) === canonicalSha256(obj). It
 // does not normalize: text from an engine is NFC-normalized at ingest, before it is hashed anywhere.
+// It refuses (TypeError) a value canonical JSON would change: undefined, NaN, a Date, a function, a lone surrogate.
 // get(sha) returns the text, or null when no blob has that name; a blob whose bytes no longer hash to its name throws
-// StoreCorruptError rather than hand back something other than what was stored.
+// StoreCorruptError rather than hand back something other than what was stored. has(sha) verifies the same way: false
+// when absent, StoreCorruptError when edited, so `has` never vouches for a blob `get` would refuse.
+// createStore(dir, { io }) takes the io seam fsio uses (node:fs by default), for tests that count fsyncs.
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { canonicalJson } from '../content/bundle.mjs';
-import { writeDurable } from './fsio.mjs';
-import { sha256Hex } from './hash.mjs';
+import { createFsio } from './fsio.mjs';
+import { assertJsonValue, sha256Hex } from './hash.mjs';
 
 const SHA256 = /^[0-9a-f]{64}$/;
 
@@ -28,22 +31,21 @@ export class StoreCorruptError extends Error {
 
 /** The text a value is stored as: a string as given, any other JSON object or array as canonical JSON. */
 function textOf(data) {
-  if (typeof data === 'string') return data;
-  if (data !== null && typeof data === 'object') {
-    const json = canonicalJson(data);
-    if (typeof json === 'string') return json;
-  }
-  const what = data === null ? 'null' : typeof data;
-  throw new TypeError(`store.put takes a string, an object or an array, not ${what}`);
+  if (data === null || (typeof data !== 'string' && typeof data !== 'object'))
+    throw new TypeError(`store.put takes a string, an object or an array, not ${data === null ? 'null' : typeof data}`);
+  assertJsonValue(data, 'store.put');
+  return typeof data === 'string' ? data : canonicalJson(data);
 }
 
 /**
  * @param {string} dir the store's root, e.g. <worktree>/.pipeline/store
+ * @param {{ io?: typeof import('node:fs') }} [options]
  * @returns {{ put(data: string|object): string, get(sha: string): string|null, getJson(sha: string): any,
  *   has(sha: string): boolean, path(sha: string): string }}
  */
-export function createStore(dir) {
+export function createStore(dir, { io } = {}) {
   if (typeof dir !== 'string' || dir === '') throw new TypeError('createStore needs a folder');
+  const { writeDurable } = createFsio(io);
 
   /** The blob's file. A name that is not 64 lowercase hex is a programming error, and could escape the folder. */
   function path(sha) {
@@ -81,7 +83,7 @@ export function createStore(dir) {
       return bytes === null ? null : JSON.parse(bytes.toString('utf8'));
     },
     has(sha) {
-      return existsSync(path(sha));
+      return read(sha) !== null;
     },
   };
 }

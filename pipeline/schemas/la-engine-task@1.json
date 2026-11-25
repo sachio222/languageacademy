@@ -32,11 +32,11 @@
     "self_check": { "type": "boolean" }
   },
   "allOf": [
-    { "if": { "properties": { "role": { "enum": ["draft", "repair"] } } },
+    { "if": { "required": ["role"], "properties": { "role": { "enum": ["draft", "repair"] } } },
       "then": { "properties": { "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "lens": { "const": null }, "header_phase": { "const": null }, "output_schema": { "const": "la-draft@1" } } } },
-    { "if": { "properties": { "role": { "const": "review" } } },
+    { "if": { "required": ["role"], "properties": { "role": { "const": "review" } } },
       "then": { "properties": { "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "lens": { "enum": ["primary", "french", "method"] }, "header_phase": { "const": null }, "output_schema": { "const": "la-review-verdict@1" } } } },
-    { "if": { "properties": { "role": { "const": "header" } } },
+    { "if": { "required": ["role"], "properties": { "role": { "const": "header" } } },
       "then": { "properties": { "module_key": { "type": "string", "pattern": "^header:unit[0-9]+:(interim|final)$" }, "lens": { "const": null }, "header_phase": { "enum": ["interim", "final"] }, "output_schema": { "const": "la-unit-header@1" } } } },
     { "if": { "required": ["role", "header_phase"], "properties": { "role": { "const": "header" }, "header_phase": { "const": "interim" } } },
       "then": { "properties": { "module_key": { "pattern": ":interim$" } } } },

@@ -395,6 +395,16 @@ test('the draft task fixture names the real SHA-256 of the brief fixture it poin
   assert.equal(fixture('la-engine-task@1.review.json').input_sha256, canonicalSha256(fixture('la-review-request@1.primary.json')));
 });
 
+test('an engine task without a role reports only the missing role, not every role rule at once', () => {
+  for (const name of ['la-engine-task@1.draft.json', 'la-engine-task@1.review.json']) {
+    const { role, ...noRole } = fixture(name);
+    assert.deepEqual(validateContract('la-engine-task@1', noRole), [': missing role'], name);
+  }
+  const header = { ...fixture('la-engine-task@1.draft.json'), module_key: 'header:unit13:final', header_phase: 'final', output_schema: 'la-unit-header@1' };
+  const { role, ...headerNoRole } = header;
+  assert.deepEqual(validateContract('la-engine-task@1', headerNoRole), [': missing role']);
+});
+
 test('the ten schemas the design prints match its JSON blocks byte for byte', (t) => {
   if (!existsSync(DESIGN)) {
     t.skip(`design not found at ${DESIGN}; set LA_PIPELINE_DESIGN to pin the schemas`);

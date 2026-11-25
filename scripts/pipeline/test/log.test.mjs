@@ -3,6 +3,8 @@
 // before it. A crash can tear only the last line, which is set aside; a bad line anywhere earlier is an edit and halts.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { fork } from 'node:child_process';
+import * as fs from 'node:fs';
 import { appendFileSync, existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { basename, join } from 'node:path';
@@ -262,14 +264,164 @@ test('appendEvent refuses to write after a torn line until it is repaired', (t) 
   assert.equal(readLog(file).events.length, 3);
 });
 
-test('appendEvent sees a log changed by another writer since its last append', (t) => {
+test('appendEvent halts on a log that lost the event this process last appended', (t) => {
+  const { file, ctx, events } = logOf(t, 5);
+  // Another process (or a hand) truncates the log to two whole lines between two appends.
+  const kept = `${events.slice(0, 2).map((e) => canonicalJson(e)).join('\n')}\n`;
+  writeFileSync(file, kept);
+  assert.throws(
+    () => appendEvent(file, transition('m', 'planned', 'briefed'), ctx),
+    (e) => e instanceof LogCorruptError && e.file === file && e.seq === 5 && /shrank or was rewritten/.test(e.message),
+  );
+  assert.equal(readFileSync(file, 'utf8'), kept, 'nothing was appended');
+  // Rewritten in place to a different fifth event: the same halt.
+  const { file: f2, ctx: c2, events: e2 } = logOf(t, 5);
+  rewriteLine(f2, 4, (e) => {
+    e.data.note = 'replaced';
+  }, { reseal: true });
+  assert.ok(readLog(f2).events[4].sha256 !== e2[4].sha256, 'the rewritten log is itself a valid chain');
+  assert.throws(() => appendEvent(f2, transition('m', 'planned', 'briefed'), c2), (e) => e instanceof LogCorruptError && e.seq === 5);
+});
+
+test('appendEvent accepts a log another writer extended correctly since its last append', (t) => {
   const { file, ctx, events } = logOf(t, 2);
-  // Another process (or a hand) truncates the log to its first line between two appends.
-  writeFileSync(file, `${canonicalJson(events[0])}\n`);
-  const next = appendEvent(file, transition('m', 'planned', 'briefed'), ctx);
-  assert.equal(next.seq, 2);
-  assert.equal(next.prev_sha256, events[0].sha256);
-  assert.doesNotThrow(() => readLog(file));
+  // The other writer is another process: it appends a correctly sealed and linked seq 3 straight to the file.
+  const other = { ...events[1], event_id: '01JDQ7Y3M2C8K4Z6T9V0B1N2P3', seq: 3, prev_sha256: events[1].sha256, run_id: 'run-other', to: 'drafting' };
+  other.sha256 = eventSha256(other);
+  appendFileSync(file, `${canonicalJson(other)}\n`);
+  // This process's cache still names seq 2; the log now holds seq 2 unchanged and a valid seq 3.
+  const next = appendEvent(file, transition('m', 'drafting', 'drafted'), ctx);
+  assert.equal(next.seq, 4);
+  assert.equal(next.prev_sha256, other.sha256);
+  assert.equal(readLog(file).events[1].sha256, events[1].sha256);
+});
+
+test('a line another writer adds between the tail read and the write makes appendEvent throw, not report success', (t) => {
+  const { file, ctx, events } = logOf(t, 2);
+  // The fence runs after the tail is read and before the line is written: the exact window a second writer races in.
+  const rival = { ...events[1], event_id: '01JDQ7Y3M2C8K4Z6T9V0B1N2P3', seq: 3, prev_sha256: events[1].sha256, run_id: 'run-rival' };
+  rival.sha256 = eventSha256(rival);
+  const race = () => appendFileSync(file, `${canonicalJson(rival)}\n`);
+  assert.throws(
+    () => appendEvent(file, transition('m', 'planned', 'briefed'), { ...ctx, fence: race }),
+    (e) => e instanceof LogCorruptError && e.file === file && e.seq === 3 && /another writer/.test(e.message),
+  );
+  // The log now holds two seq 3 lines; the reader halts on the second, so the fork is never folded.
+  assert.throws(() => readLog(file), (e) => e instanceof LogCorruptError && e.seq === 4);
+  // The cache was dropped: the next append rereads and halts too.
+  assert.throws(() => appendEvent(file, transition('m', 'briefed', 'drafting'), ctx), LogCorruptError);
+});
+
+test('a log replaced between the write and the check, losing this event, makes appendEvent throw', (t) => {
+  const { file, ctx, events } = logOf(t, 3);
+  // Another writer renames a valid two-event log over this one just after this process's line lands.
+  const replacement = join(tempDir(t), 'older.jsonl');
+  writeFileSync(replacement, `${events.slice(0, 2).map((e) => canonicalJson(e)).join('\n')}\n`);
+  let logFd = null;
+  const io = {
+    ...fs,
+    openSync: (path, flags, mode) => {
+      const fd = fs.openSync(path, flags, mode);
+      if (path === file && flags === 'a') logFd = fd;
+      return fd;
+    },
+    closeSync: (fd) => {
+      fs.closeSync(fd);
+      if (fd === logFd) fs.renameSync(replacement, file);
+    },
+  };
+  assert.throws(
+    () => appendEvent(file, transition('m', 'planned', 'briefed'), { ...ctx, io }),
+    (e) => e instanceof LogCorruptError && e.seq === 4 && /another writer/.test(e.message) && /line 4 holds another event/.test(e.message),
+  );
+  assert.deepEqual(readLog(file).events, events.slice(0, 2));
+});
+
+/** The longest prefix of the log's lines that is a valid chain, as the reader's rules would accept it. */
+function validPrefix(file) {
+  const out = [];
+  for (const line of readFileSync(file, 'utf8').split('\n').slice(0, -1)) {
+    let event;
+    try {
+      event = JSON.parse(line);
+    } catch {
+      break;
+    }
+    const prev = out.length === 0 ? ZERO_SHA256 : out.at(-1).sha256;
+    if (canonicalJson(event) !== line || eventSha256(event) !== event.sha256 || event.seq !== out.length + 1 || event.prev_sha256 !== prev) break;
+    out.push(event);
+  }
+  return out;
+}
+
+test('two writers with no lock: every append reported as done is a valid link of the chain', async (t) => {
+  const child = fileURLToPath(new URL('./helpers/append-child.mjs', import.meta.url));
+  for (let round = 0; round < 3; round++) {
+    const file = join(tempDir(t), 'events', 'course.jsonl');
+    const kids = ['A', 'B'].map((id) => fork(child, [file, id, '150'], { stdio: ['ignore', 'ignore', 'inherit', 'ipc'] }));
+    await Promise.all(kids.map((k) => new Promise((res) => k.once('message', res))));
+    const results = Promise.all(kids.map((k) => new Promise((res) => k.once('message', res))));
+    for (const k of kids) k.send('go');
+    const reports = await results;
+    await Promise.all(kids.map((k) => (k.exitCode === null ? new Promise((res) => k.once('exit', res)) : null)));
+    const prefix = validPrefix(file);
+    for (const { id, ok } of reports)
+      for (const { seq, sha256 } of ok) assert.equal(prefix[seq - 1]?.sha256, sha256, `round ${round}: writer ${id} was told seq ${seq} succeeded, but it is not in the valid chain (${prefix.length} valid of ${lines(file).length} lines)`);
+    // When nobody was told of a failure, the whole log is a clean chain of every append.
+    if (reports.every((r) => r.failed === 0)) assert.deepEqual(readLog(file).events.length, 300, `round ${round}`);
+  }
+});
+
+test('repairTorn saves the evidence before it cuts the log: a failed save leaves the log untouched', (t) => {
+  const { file } = logOf(t, 2);
+  appendFileSync(file, '{"schema":"la-pipel');
+  const before = readFileSync(file);
+  const notAFolder = join(tempDir(t), 'torn');
+  writeFileSync(notAFolder, 'a file where the torn folder should be');
+  assert.throws(() => repairTorn(file, notAFolder));
+  assert.deepEqual(readFileSync(file), before, 'the torn line is still in the log');
+  assert.equal(readLog(file).torn, '{"schema":"la-pipel');
+});
+
+/** Ways to write an event's line that parse to the same event but are not its canonical JSON. */
+const NON_CANONICAL = {
+  'extra spaces': (line) => line.replace('{"actor":', '{ "actor": '),
+  'reordered keys': (line) => {
+    const { schema, ...rest } = JSON.parse(line);
+    return JSON.stringify({ ...JSON.parse(canonicalJson(rest)), schema });
+  },
+  CRLF: (line) => `${line}\r`,
+  'duplicate keys': (line) => line.replace('{', '{"type":"forged",'),
+};
+
+test('a line that is not its canonical JSON, before the last, is LogCorruptError', (t) => {
+  for (const [name, rewrite] of Object.entries(NON_CANONICAL)) {
+    const { file } = logOf(t, 3);
+    const all = lines(file);
+    all[1] = rewrite(all[1]);
+    assert.deepEqual(JSON.parse(all[1]).seq, 2, `${name}: still parses to the same event`);
+    writeFileSync(file, `${all.join('\n')}\n`);
+    assert.throws(() => readLog(file), (e) => e instanceof LogCorruptError && e.seq === 2 && /canonical/.test(e.message), name);
+  }
+});
+
+test('a last line that is not its canonical JSON is torn', (t) => {
+  for (const [name, rewrite] of Object.entries(NON_CANONICAL)) {
+    const { file, events } = logOf(t, 3);
+    const all = lines(file);
+    all[2] = rewrite(all[2]);
+    writeFileSync(file, `${all.join('\n')}\n`);
+    const read = readLog(file);
+    assert.deepEqual(read.events, events.slice(0, 2), name);
+    assert.equal(read.torn, all[2], name);
+  }
+});
+
+test('appendEvent refuses a lone surrogate anywhere in the event', (t) => {
+  const { file, ctx } = logOf(t, 1);
+  assert.throws(() => appendEvent(file, { ...transition('m', 'planned', 'briefed'), data: { text: 'caf\uD800' } }, ctx), TypeError);
+  assert.throws(() => appendEvent(file, { ...transition('m', 'planned', 'briefed'), data: { ['\uDC00']: 1 } }, ctx), TypeError);
+  assert.equal(readLog(file).events.length, 1);
 });
 
 test('verifyChain refuses a broken link, a bad seal and a seq that does not start at 1', (t) => {

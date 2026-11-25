@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { canonicalJson } from '../../content/bundle.mjs';
-import { canonicalSha256, normalizeNfc, sha256Hex, taskIdFor, ulid } from '../hash.mjs';
+import { assertJsonValue, canonicalSha256, normalizeNfc, sha256Hex, taskIdFor, ulid } from '../hash.mjs';
 
 const HEX = (n) => new RegExp(`^[0-9a-f]{${n}}$`);
 const sha = (c) => c.repeat(64);
@@ -140,6 +140,26 @@ test('ulid encodes the spec vector and refuses bad input', () => {
   assert.throws(() => ulid(1.5, Buffer.alloc(10)), TypeError);
   assert.throws(() => ulid(1, Buffer.alloc(9)), TypeError);
   assert.throws(() => ulid(1, 'random'), TypeError);
+});
+
+test('assertJsonValue refuses what canonical JSON would drop or change, at its pointer', () => {
+  assert.doesNotThrow(() => assertJsonValue({ a: [1, 'é', null, true, { b: -0.5 }], 'clé': '\u{1F600}' }));
+  assert.doesNotThrow(() => assertJsonValue(JSON.parse('{"__proto__": 1}')));
+  const refused = [
+    [undefined, "''"],
+    [{ a: undefined }, "'/a'"],
+    [[1, Number.NaN], "'/1'"],
+    [{ x: Number.POSITIVE_INFINITY }, "'/x'"],
+    [{ when: new Date(0) }, "'/when'"],
+    [{ f: () => 1 }, "'/f'"],
+    [{ n: 10n }, "'/n'"],
+    [{ m: new Map() }, "'/m'"],
+    [{ s: 'half \uD83D pair' }, "'/s'"],
+    [{ ['k\uDC00']: 1 }, 'key'],
+    ['\uDFFF', "''"],
+  ];
+  for (const [value, where] of refused) assert.throws(() => assertJsonValue(value), (e) => e instanceof TypeError && e.message.includes(where), String(where));
+  assert.throws(() => assertJsonValue({ a: undefined }, 'store.put'), /^TypeError: store\.put: /);
 });
 
 test('this file writes every combining mark as a \\u escape, so an editor cannot recompose an NFD string unseen', () => {

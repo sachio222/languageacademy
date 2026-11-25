@@ -4,23 +4,26 @@
 // number, from 1, with no gaps. So the log is a hash chain: an edit to any line breaks it.
 //
 // - readLog(file) -> { events, torn }. A crash can only tear the last line, so the last line is `torn` (and left out
-//   of events) when it has no newline, is not JSON, or its sha256 does not match. Every other problem, on any line,
-//   is an edit and throws LogCorruptError { file, seq }: a bad sha256 before the last line, a broken prev_sha256 link,
-//   a seq gap, or a line the schema refuses. Recovery halts on it with a log_corrupt alert.
+//   of events) when it has no newline, is not JSON, is not exactly canonicalJson(event), or its sha256 does not
+//   match. Every other problem, on any line, is an edit and throws LogCorruptError { file, seq }: one of those before
+//   the last line, a broken prev_sha256 link, a seq gap, or a line the schema refuses. Recovery halts on it with a
+//   log_corrupt alert.
 // - repairTorn(file, tornDir) saves the torn text to <tornDir>/<basename>.<seq>.<sha256 of the text>.txt, rewrites
 //   the log without it (durably), and returns the saved path; null when nothing is torn. The caller records
 //   log.repaired.
 // - appendEvent(file, partial, ctx) fills schema, event_id (a ULID from ctx.now and ctx.random), seq, prev_sha256,
 //   ts, tenant, run_id, lock_epoch and actor, seals the event, validates it, calls ctx.fence() (the lock's epoch
 //   check, Task 28), then appends one line durably. It refuses to append after a torn line: recovery repairs first.
+//   It throws LogCorruptError when the log no longer holds the event this process last appended to it (truncated or
+//   rewritten), and when another writer's line raced its own so that its event is not a valid link at its seq.
 // - verifyChain(events, file?) applies the same per-event rules to a list that starts at seq 1.
 import { randomBytes } from 'node:crypto';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { canonicalJson } from '../content/bundle.mjs';
 import { ContractError, assertContract, validateContract } from './contracts/index.mjs';
-import { appendLineDurable, writeDurable } from './fsio.mjs';
-import { canonicalSha256, sha256Hex, ulid } from './hash.mjs';
+import { appendLineDurable, createFsio, writeDurable } from './fsio.mjs';
+import { assertJsonValue, canonicalSha256, sha256Hex, ulid } from './hash.mjs';
 
 export const ZERO_SHA256 = '0'.repeat(64);
 const SCHEMA = 'la-pipeline-event@1';
@@ -90,20 +93,26 @@ function scan(file) {
   }
   let torn = start < bytes.length ? [start, bytes.length] : null;
   let keep = start;
+  /** The line's event, or why the line itself is bad: not JSON, not the event's canonical JSON, or a bad seal. */
   const parse = ([s, e]) => {
+    const text = bytes.toString('utf8', s, e);
+    let event;
     try {
-      return { event: JSON.parse(bytes.toString('utf8', s, e)) };
+      event = JSON.parse(text);
     } catch (err) {
       return { problem: `not JSON (${err.message})` };
     }
+    // The log writes canonicalJson(event); extra spaces, reordered or repeated keys, or a CR are not its writing.
+    if (canonicalJson(event) !== text) return { event, problem: 'the line is not the canonical JSON of its event' };
+    return { event, problem: sealProblem(event) };
   };
 
-  // With no torn tail, the last whole line is still torn when it is not JSON or its seal is bad: the write that
-  // produced it did not finish as written (a block of zeros, a partial sector).
+  // With no torn tail, the last whole line is still torn when it is not JSON, not canonical, or its seal is bad: the
+  // write that produced it did not finish as written (a block of zeros, a partial sector).
   if (torn === null && whole.length > 0) {
     const last = whole[whole.length - 1];
-    const { event, problem } = parse(last);
-    if (problem || sealProblem(event)) {
+    const { problem } = parse(last);
+    if (problem) {
       torn = last;
       keep = last[0];
       whole.pop();
@@ -113,8 +122,8 @@ function scan(file) {
   const events = [];
   let prev = ZERO_SHA256;
   whole.forEach((range, i) => {
-    const { event, problem: parseProblem } = parse(range);
-    const problem = parseProblem ?? sealProblem(event) ?? chainProblem(event, i + 1, prev);
+    const { event, problem: lineProblem } = parse(range);
+    const problem = lineProblem ?? chainProblem(event, i + 1, prev);
     if (problem) throw new LogCorruptError(file, i + 1, problem);
     events.push(event);
     prev = event.sha256;
@@ -129,7 +138,12 @@ export function readLog(file) {
   return { events, torn };
 }
 
-/** The tail each log had after this process last appended to it, so an append need not reread the whole file. */
+/**
+ * The tail each log had after this process last appended to it, with the file's stat at that moment, so an append
+ * need not reread the whole file. The stat is kept only when the file grew by exactly this process's line; when the
+ * file has changed since, the full read must still hold the cached event at its seq, or the log shrank or was
+ * rewritten under this process and appending would fork the chain.
+ */
 const tails = new Map();
 const statOf = (file) => {
   try {
@@ -145,13 +159,19 @@ const sameFile = (a, b) => a !== null && b !== null && a.ino === b.ino && a.size
 /** The last event's seq and sha256: from the cache when the file is as this process left it, else from a full read. */
 function tailOf(file) {
   const st = statOf(file);
-  if (st === null) return { seq: 0, sha256: ZERO_SHA256 };
   const cached = tails.get(file);
+  const shrank = () => new LogCorruptError(file, cached.seq, `the log shrank or was rewritten since this process appended event ${cached.seq}`);
+  if (st === null) {
+    if (cached) throw shrank();
+    return { seq: 0, sha256: ZERO_SHA256, st: null };
+  }
   if (cached && sameFile(cached.st, st)) return cached;
-  const { events, torn } = scan(file);
+  const { events, torn, bytes } = scan(file);
+  if (cached && events[cached.seq - 1]?.sha256 !== cached.sha256) throw shrank();
   if (torn !== null) throw new Error(`appendEvent: ${file} ends in a torn line; recovery sets it aside with repairTorn before anything is appended`);
   const last = events[events.length - 1];
-  const tail = last ? { seq: last.seq, sha256: last.sha256, st } : { seq: 0, sha256: ZERO_SHA256, st };
+  // The size is what was read, so a line another writer adds between the stat and the read still shows as a change.
+  const tail = { seq: last?.seq ?? 0, sha256: last?.sha256 ?? ZERO_SHA256, st: { ...st, size: bytes.length } };
   tails.set(file, tail);
   return tail;
 }
@@ -169,35 +189,20 @@ export function repairTorn(file, tornDir) {
   return saved;
 }
 
-/** Refuses what JSON cannot hold exactly, so nothing drops out of the canonical JSON the seal covers. */
-function assertJsonValue(value, at) {
-  if (value === null || typeof value === 'string' || typeof value === 'boolean') return;
-  if (typeof value === 'number') {
-    if (!Number.isFinite(value)) throw new TypeError(`appendEvent: ${value} at '${at}' has no JSON form`);
-    return;
-  }
-  if (Array.isArray(value)) return value.forEach((x, i) => assertJsonValue(x, `${at}/${i}`));
-  if (isPlainObject(value)) {
-    for (const [k, x] of Object.entries(value)) assertJsonValue(x, `${at}/${k}`);
-    return;
-  }
-  const what = value === undefined ? 'undefined' : typeof value === 'object' ? value.constructor?.name ?? 'object' : typeof value;
-  throw new TypeError(`appendEvent: ${what} at '${at}' has no JSON form`);
-}
-
 /**
  * @param {string} file the log, e.g. pipeline/fr/events/unit13.jsonl
  * @param {{ type: string, subject: object, data: object, from?: string|null, to?: string|null, round?: number|null,
  *   reason?: string|null, refs?: string[] }} partial
  * @param {{ tenant: string, run_id: string, lock_epoch: number, actor: { kind: 'core'|'human', id: string },
- *   now: () => string, fence?: () => void, random?: (n: number) => Uint8Array }} ctx
+ *   now: () => string, fence?: () => void, random?: (n: number) => Uint8Array, io?: typeof import('node:fs') }} ctx
+ *   `io` is the fsio seam for the append itself (node:fs by default), for tests.
  * @returns {object} the event as written
  */
 export function appendEvent(file, partial, ctx) {
   if (!isPlainObject(partial)) throw new TypeError('appendEvent: the event must be an object');
   for (const field of CORE_FIELDS)
     if (Object.hasOwn(partial, field)) throw new TypeError(`appendEvent: ${field} is set by the core, not by the caller`);
-  const { tenant, run_id, lock_epoch, actor, now, fence, random = randomBytes } = ctx ?? {};
+  const { tenant, run_id, lock_epoch, actor, now, fence, random = randomBytes, io } = ctx ?? {};
   if (typeof now !== 'function') throw new TypeError('appendEvent: ctx.now must be the core clock, a function returning an ISO time');
 
   const tail = tailOf(file);
@@ -216,13 +221,30 @@ export function appendEvent(file, partial, ctx) {
     actor,
     ...partial,
   };
-  assertJsonValue(event, '');
+  assertJsonValue(event, 'appendEvent');
   event.sha256 = canonicalSha256(event);
   assertContract(SCHEMA, event);
 
   fence?.();
   const line = canonicalJson(event);
-  appendLineDurable(file, line);
-  tails.set(file, { seq: event.seq, sha256: event.sha256, st: statOf(file) });
+  const written = (io ? createFsio(io).appendLineDurable : appendLineDurable)(file, line);
+  const after = statOf(file);
+  const grewByThisLine = after !== null && after.size === (tail.st?.size ?? 0) + written && (tail.st === null || after.ino === tail.st.ino);
+  if (grewByThisLine) {
+    tails.set(file, { seq: event.seq, sha256: event.sha256, st: after });
+  } else {
+    // Another writer changed the log while this append was in flight. Report success only if this event stands as a
+    // valid link at the seq it was written for; a forked chain throws here (or in the read) instead.
+    tails.delete(file);
+    const raced = (why) => new LogCorruptError(file, event.seq, `another writer appended at the same time, so this event is not a valid link at its seq (${why})`);
+    let events;
+    try {
+      ({ events } = scan(file));
+    } catch (e) {
+      if (e instanceof LogCorruptError) throw raced(`line ${e.seq}: ${e.reason}`);
+      throw e;
+    }
+    if (events[event.seq - 1]?.sha256 !== event.sha256) throw raced(`line ${event.seq} holds another event`);
+  }
   return JSON.parse(line);
 }
