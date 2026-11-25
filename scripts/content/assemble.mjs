@@ -3,6 +3,7 @@
 import { problem, ContentError } from './problems.mjs';
 import { validateModule, defaultSteps } from './schema/module.mjs';
 import { validateOutline } from './outline.mjs';
+import { checkItemPassable } from './passable.mjs';
 
 // Unit 1 is free; every other unit is Premium (spec 5.1, L rule LRN-4). Never written in a file.
 export const FREE_UNIT_KEY = 'unit1';
@@ -16,7 +17,8 @@ const keyOfFile = (file) => file.replace(/^.*[\\/]/, '').replace(/\.json$/, '');
  * @param files    Array<{ file, json }> or Array<{ file, text }>; a file is named <module_key>.json.
  *                 An entry with a `json` key is taken as parsed, whatever its value.
  * @param opts     { outlineFile?: string, checkAnswer?: (item, typed) => boolean }
- *                 checkAnswer is accepted for Task 4's item_unpassable and mistake_accepted rules.
+ *                 checkAnswer(item, typed, { blank? }) runs every declared answer of every well-formed item
+ *                 through the app's checker (item_unpassable, mistake_accepted; spec 5.4). Omitted: nothing is checked.
  */
 export function assembleCourse(outline, files, opts = {}) {
   const outlineFile = opts.outlineFile || 'course.json';
@@ -50,7 +52,11 @@ export function assembleCourse(outline, files, opts = {}) {
     if (!parsed) continue;
     if (isObj(json) && typeof json.module_key === 'string' && json.module_key !== key)
       problems.push(problem(file, 'module_key', 'module_key_mismatch', `module_key ${json.module_key} does not match the file name ${key}.json`));
-    problems.push(...validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null }));
+    const own = validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null });
+    problems.push(...own);
+    // Only a module whose items are well formed can have its answers checked.
+    if (opts.checkAnswer && own.length === 0 && isObj(json) && Array.isArray(json.items))
+      json.items.forEach((item, i) => problems.push(...checkItemPassable(item, opts.checkAnswer, { file, path: `items[${i}]` })));
   }
 
   // The outline sees a usable module object, or null for a file that exists but holds none (unparseable

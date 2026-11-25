@@ -4,42 +4,11 @@
 // app's own checker (src/lessons/testRunner.js) against the exercise as lessonData.js exports it.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { registerHooks } from 'node:module';
+import './vite-shim.mjs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
-
-// The app is bundled by Vite: extensionless relative imports and import.meta.env. Teach Node both,
-// for files under src/ only (same shim as src/lessons/exerciseAnswers.test.mjs).
-registerHooks({
-  resolve(specifier, context, nextResolve) {
-    try {
-      return nextResolve(specifier, context);
-    } catch (error) {
-      if (!specifier.startsWith('.')) throw error;
-      for (const suffix of ['.js', '.jsx', '/index.js']) {
-        try {
-          return nextResolve(specifier + suffix, context);
-        } catch {
-          // try the next suffix
-        }
-      }
-      throw error;
-    }
-  },
-  load(url, context, nextLoad) {
-    const result = nextLoad(url, context);
-    if (!url.startsWith('file:') || !url.includes('/src/')) return result;
-    const source = String(result.source);
-    if (!source.includes('import.meta.env')) return result;
-    return {
-      ...result,
-      format: result.format || 'module',
-      source: source.replaceAll('import.meta.env', '({ DEV: false, PROD: true, MODE: "test" })'),
-    };
-  },
-});
 
 const imp = (p) => import(pathToFileURL(path.join(repo, p)).href);
 const { unitConfigs } = await imp('src/lessons/unitConfigLoader.js');

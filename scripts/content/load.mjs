@@ -5,6 +5,7 @@ import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assembleCourse } from './assemble.mjs';
 import { problem, ContentError } from './problems.mjs';
+import { defaultCheckAnswer } from './passable.mjs';
 
 export const REPO_ROOT = fileURLToPath(new URL('../../', import.meta.url));
 export const CONTENT_ROOT = join(REPO_ROOT, 'content', 'fr');
@@ -24,7 +25,7 @@ export function readContent(root = CONTENT_ROOT) {
   return { outlineFile: rel(outlinePath), outlineText: existsSync(outlinePath) ? readFileSync(outlinePath, 'utf8') : null, files };
 }
 
-export function loadCourse({ root = CONTENT_ROOT, checkAnswer } = {}) {
+export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer } = {}) {
   const { outlineFile, outlineText, files } = readContent(root);
   if (outlineText === null) throw new ContentError([problem(outlineFile, '', 'file_missing', 'course.json does not exist')]);
   let outline;

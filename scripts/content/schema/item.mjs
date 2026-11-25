@@ -132,6 +132,9 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
   }
 
   if (item.options !== undefined) checkOptions(item, bad);
+  // A pick-one item is chosen, not typed, so it has no typed mistakes.
+  if (item.mistakes !== undefined && (item.type === 'choice' || (item.type === 'comprehension' && item.options !== undefined)))
+    bad('mistakes', 'mistakes_not_allowed', `a ${item.type} item that is picked has no mistakes`);
   if (item.type === 'comprehension' && item.answer === undefined && item.options === undefined)
     bad('answer', 'field_missing', 'comprehension needs answer or options');
   if (item.type === 'comprehension' && item.answer !== undefined && item.options !== undefined)
