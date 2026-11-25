@@ -101,3 +101,67 @@ export function outlineFromUnitConfigs(unitConfigs, { opensWords = [] } = {}) {
     report,
   };
 }
+
+// Where each key sits in an outline: 'unit3', 'shelf' or 'retired', one place per listing.
+function placesOf(outline) {
+  const at = new Map();
+  const add = (key, where) => at.set(key, [...(at.get(key) || []), where]);
+  for (const u of outline.units || []) for (const k of u.entries || []) add(k, u.unit_key);
+  for (const k of outline.shelf?.pages || []) add(k, 'shelf');
+  for (const r of outline.retired || []) add(r.module_key, 'retired');
+  return at;
+}
+
+// The written outline against today's configs (spec 8.2 item 2). `generated` is outlineFromUnitConfigs' outline.
+// A problem is a config key that the outline lacks, lists more than once, or puts in a different unit (or on
+// or off the shelf) from its config. A retired key counts as placed. Units, entries and shelf pages that are
+// not in the configs (new guides, unit13 onward) are hand edits and never a problem.
+export function checkOutline(existing, generated) {
+  const at = placesOf(existing);
+  const problems = [];
+  for (const [key, want] of placesOf(generated)) {
+    const got = at.get(key) || [];
+    if (got.length === 0) problems.push({ code: 'config_key_missing', key, detail: `${key} (${want[0]} in today's configs) is not in the outline` });
+    else if (got.length > 1) problems.push({ code: 'config_key_twice', key, detail: `${key} is listed ${got.length} times (${got.join(', ')})` });
+    else if (got[0] !== want[0] && got[0] !== 'retired')
+      problems.push({ code: 'config_key_moved', key, detail: `${key} is in ${got[0]} but today's configs put it in ${want[0]}` });
+  }
+  return problems;
+}
+
+// Keeps every hand edit in `existing` and adds only what is missing: a config key the outline lacks goes after
+// its nearest config neighbour already in that list (else before the next one, else first), and a unit the
+// outline lacks goes after the unit before it in the configs. Moved and doubled keys are left as they are;
+// checkOutline reports them. Returns { outline, report }.
+export function mergeOutline(existing, generated) {
+  const out = JSON.parse(JSON.stringify(existing));
+  const report = [];
+  const at = placesOf(out);
+  const insert = (list, want, key, label) => {
+    const i = want.indexOf(key);
+    const before = want.slice(0, i).reverse().find((k) => list.includes(k));
+    const after = want.slice(i + 1).find((k) => list.includes(k));
+    const pos = before !== undefined ? list.indexOf(before) + 1 : after !== undefined ? list.indexOf(after) : 0;
+    list.splice(pos, 0, key);
+    report.push(`${label}: inserted ${key} ${before !== undefined ? `after ${before}` : after !== undefined ? `before ${after}` : 'first'}`);
+  };
+  out.units = out.units || [];
+  generated.units.forEach((g, gi) => {
+    const missing = g.entries.filter((k) => !at.has(k));
+    let unit = out.units.find((u) => u.unit_key === g.unit_key);
+    if (!unit) {
+      if (missing.length === 0) return;
+      unit = { ...g, entries: [...missing] };
+      const prev = generated.units.slice(0, gi).reverse().map((p) => out.units.findIndex((u) => u.unit_key === p.unit_key)).find((i) => i !== -1);
+      out.units.splice(prev === undefined ? 0 : prev + 1, 0, unit);
+      report.push(`${g.unit_key}: unit added from today's configs with ${missing.length} entries`);
+      return;
+    }
+    unit.entries = unit.entries || [];
+    for (const k of missing) insert(unit.entries, g.entries, k, g.unit_key);
+  });
+  out.shelf = out.shelf || { pages: [], opens_words: [] };
+  out.shelf.pages = out.shelf.pages || [];
+  for (const k of generated.shelf.pages) if (!at.has(k)) insert(out.shelf.pages, generated.shelf.pages, k, 'shelf');
+  return { outline: out, report };
+}

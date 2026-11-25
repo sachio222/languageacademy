@@ -64,6 +64,8 @@ test('--allow needs a value', () => {
 test('the default content folder validates with today\'s allowance', () => {
   const r = run('validate', '--allow', 'outline_missing_file');
   assert.equal(r.status, 0, r.stderr);
+  // Until Task 6 writes module files, every listed module is missing. Tasks 6 and 7 update this count.
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok with 171 allowed problems: outline_missing_file 171');
 });
 
 test('an explicit root that is missing is an error', () => {

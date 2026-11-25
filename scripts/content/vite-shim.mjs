@@ -1,7 +1,7 @@
-// Test helper: lets Node import files under src/ that Vite normally bundles (extensionless relative
-// imports and import.meta.env). Import this module first, then import app files dynamically.
-// Shared by unit9-guard.test.mjs. testRunner.js itself needs no shim (passable.mjs imports it directly);
-// lessonData.js and unitConfigLoader.js do.
+// Lets Node import files under src/ that Vite normally bundles (extensionless relative imports and
+// import.meta.env). Import this module first, then import app files dynamically. Used by migrate/run.mjs
+// and the tests that read today's lessons. testRunner.js itself needs no shim (passable.mjs imports it
+// directly); lessonData.js and unitConfigLoader.js do.
 import { registerHooks } from 'node:module';
 
 registerHooks({

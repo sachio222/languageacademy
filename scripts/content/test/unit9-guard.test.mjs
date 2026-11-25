@@ -4,7 +4,7 @@
 // app's own checker (src/lessons/testRunner.js) against the exercise as lessonData.js exports it.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import './vite-shim.mjs';
+import '../vite-shim.mjs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 

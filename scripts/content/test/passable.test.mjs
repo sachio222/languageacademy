@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import './vite-shim.mjs';
+import '../vite-shim.mjs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { checkItemPassable, defaultCheckAnswer } from '../passable.mjs';
