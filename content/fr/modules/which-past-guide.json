@@ -1,0 +1,181 @@
+{
+  "schema": "la-module@1",
+  "module_key": "which-past-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Which Past? - Scene or Event",
+  "description": "Choose between {j'étais} and {j'ai mangé} when you talk about the past.",
+  "can_do": [
+    "Say how things were in the past with {j'étais} and {j'avais}.",
+    "Say what happened with {j'ai mangé}."
+  ],
+  "minutes": 4,
+  "line": "The imparfait sets the scene, and the passé composé tells what happened.",
+  "parts": [
+    {
+      "id": "p-two-pasts",
+      "heading": "Two pasts, two jobs",
+      "text": [
+        "French has two tenses for telling a story in the past. The imparfait ({j'étais}, {j'avais}) sets the scene: how things were. The passé composé ({j'ai mangé}) tells the events: what happened."
+      ],
+      "blocks": [
+        {
+          "cmp": {
+            "left": "The scene: imparfait",
+            "right": "The event: passé composé",
+            "rows": [
+              [
+                {
+                  "fr": "j'étais",
+                  "en": "I was"
+                },
+                {
+                  "fr": "j'ai mangé",
+                  "en": "I ate"
+                }
+              ],
+              [
+                {
+                  "fr": "nous avions",
+                  "en": "we had"
+                },
+                {
+                  "fr": "nous avons mangé",
+                  "en": "we ate"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-scene-then-event",
+      "heading": "The scene, then the event",
+      "text": [
+        "A past story often starts with the scene and then moves to what happened."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "The scene",
+              "fr": "J'avais faim",
+              "en": "I was hungry"
+            },
+            {
+              "k": "The event",
+              "fr": "j'ai mangé une pomme",
+              "en": "I ate an apple"
+            },
+            {
+              "k": "Together",
+              "fr": "J'avais faim, et j'ai mangé une pomme.",
+              "en": "I was hungry, and I ate an apple."
+            }
+          ]
+        },
+        {
+          "lines": [
+            [
+              "Hier soir, nous étions au café. Nous avons mangé un croissant.",
+              "Last night we were at the café. We ate a croissant."
+            ],
+            [
+              "Marie avait faim, et elle a mangé une banane.",
+              "Marie was hungry, and she ate a banana."
+            ],
+            [
+              "J'ai mangé une pizza. C'était très bon.",
+              "I ate a pizza. It was very good."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-one-question",
+      "heading": "One question to ask",
+      "text": [
+        "Ask yourself: is this how things were, or something that happened?"
+      ],
+      "note": "How things were takes the imparfait: {j'étais}, {il avait}. Something that happened takes the passé composé: {j'ai mangé}.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "Le vin était bon.",
+              "The wine was good."
+            ],
+            [
+              "Ils avaient faim.",
+              "They were hungry."
+            ],
+            [
+              "Ils ont mangé.",
+              "They ate."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Listen. Does this set the scene or tell what happened?",
+      "say": "J'avais faim.",
+      "show": "J'avais faim.",
+      "options": [
+        {
+          "text": "It sets the scene",
+          "right": true
+        },
+        {
+          "text": "It tells what happened"
+        }
+      ],
+      "why": "{J'avais faim} says how things were, so it takes the imparfait."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one means “I ate an apple”?",
+      "options": [
+        {
+          "text": "J'avais une pomme.",
+          "fr": true
+        },
+        {
+          "text": "J'ai mangé une pomme.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je mange une pomme.",
+          "fr": true
+        }
+      ],
+      "why": "Eating the apple is something that happened, so it takes the passé composé: {j'ai mangé}."
+    },
+    {
+      "id": "k3",
+      "ask": "Which one means “Yesterday, Paul was hungry”?",
+      "options": [
+        {
+          "text": "Hier, Paul a faim.",
+          "fr": true
+        },
+        {
+          "text": "Hier, Paul a mangé.",
+          "fr": true
+        },
+        {
+          "text": "Hier, Paul avait faim.",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "Being hungry is how things were, so it takes the imparfait: {Paul avait faim}."
+    }
+  ]
+}
