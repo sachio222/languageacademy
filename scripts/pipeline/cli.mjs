@@ -2,11 +2,45 @@
 // own entry. A command's run(args) returns the exit code: 0 done, 1 the command found a problem, 2 a usage error.
 import { realpathSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { SCHEMA_DIR } from './contracts/index.mjs';
+import { checkModuleSchemas, writeModuleSchemas } from './contracts/module-schema.mjs';
 
 /** @type {Record<string, { args: string, summary: string, run: (args: string[]) => number | Promise<number> }>} */
 const COMMANDS = {
   help: { args: '', summary: 'print this list', run: () => (console.log(usage()), 0) },
+  'module-schemas': {
+    args: '--write|--check [--dir <folder>]',
+    summary: 'write pipeline/schemas/la-module@1.<kind>.json from the content validator, or check the committed files',
+    run: moduleSchemas,
+  },
 };
+
+/** `module-schemas --write|--check [--dir <folder>]`: exit 1 on --check when a file is missing or differs. */
+function moduleSchemas(args) {
+  let mode = null;
+  let dir = SCHEMA_DIR;
+  for (let i = 0; i < args.length; i++) {
+    const a = args[i];
+    if ((a === '--write' || a === '--check') && mode === null) mode = a;
+    else if (a === '--dir' && i + 1 < args.length) dir = args[++i];
+    else {
+      console.error(`module-schemas: ${a === '--write' || a === '--check' ? 'give --write or --check, not both' : `${a}: not an option`}\nusage: pnpm pipeline module-schemas ${COMMANDS['module-schemas'].args}`);
+      return 2;
+    }
+  }
+  if (mode === null) {
+    console.error(`module-schemas: give --write or --check\nusage: pnpm pipeline module-schemas ${COMMANDS['module-schemas'].args}`);
+    return 2;
+  }
+  if (mode === '--write') {
+    for (const file of writeModuleSchemas(dir)) console.log(`wrote ${file}`);
+    return 0;
+  }
+  const stale = checkModuleSchemas(dir);
+  for (const file of stale) console.error(`${file}: missing or differs from a fresh generation; run pnpm pipeline module-schemas --write`);
+  if (stale.length === 0) console.log('module schemas match the content validator');
+  return stale.length === 0 ? 0 : 1;
+}
 
 function usage() {
   const rows = Object.entries(COMMANDS).map(([name, c]) => [`${name}${c.args ? ` ${c.args}` : ''}`, c.summary]);

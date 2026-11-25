@@ -1,0 +1,465 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-module@1/reading",
+  "description": "A written reading module (la-module@1), status written and no plan. Generated from scripts/content/schema/ by pnpm pipeline module-schemas --write; do not edit.",
+  "type": "object",
+  "required": [
+    "schema",
+    "module_key",
+    "kind",
+    "status",
+    "title",
+    "description",
+    "story_id",
+    "vocabulary",
+    "passage",
+    "items"
+  ],
+  "properties": {
+    "schema": {
+      "const": "la-module@1"
+    },
+    "module_key": {
+      "type": "string",
+      "pattern": "^([0-9]{4}-[0-9]{2}-[0-9]{2}-)?[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "kind": {
+      "const": "reading"
+    },
+    "status": {
+      "const": "written"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "can_do": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "teaches": {
+      "type": "object",
+      "required": [
+        "constructions"
+      ],
+      "properties": {
+        "constructions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "words": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "tests": {
+      "type": "object",
+      "required": [
+        "constructions"
+      ],
+      "properties": {
+        "constructions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "story_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "word_id",
+          "fr",
+          "gloss"
+        ],
+        "properties": {
+          "word_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "fr": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "gloss": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "example_fr": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "example_en": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "part_of_speech": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "info_card": {
+            "type": "object",
+            "required": [
+              "name",
+              "description",
+              "image",
+              "image_credit",
+              "url"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "image": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^\\/img\\/[A-Za-z0-9._%/-]+\\.(jpg|jpeg|png|webp)$"
+                  }
+                ]
+              },
+              "image_credit": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                ]
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https:\\/\\/"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "passage": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "fr": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "speaker": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "img": {
+            "type": "object",
+            "required": [
+              "src",
+              "w",
+              "h",
+              "alt"
+            ],
+            "properties": {
+              "src": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "w": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "h": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "additionalProperties": false
+          },
+          "layout": {
+            "enum": [
+              "dateline",
+              "scene",
+              "end"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "fr"
+            ]
+          },
+          {
+            "required": [
+              "img"
+            ]
+          }
+        ],
+        "if": {
+          "required": [
+            "fr"
+          ]
+        },
+        "then": {
+          "required": [
+            "en"
+          ]
+        }
+      }
+    },
+    "glossary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fr",
+          "en"
+        ],
+        "properties": {
+          "fr": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "items": {
+      "$ref": "#/$defs/items"
+    },
+    "preview_blocks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "item_comprehension": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "question"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "type": {
+          "const": "comprehension"
+        },
+        "hint": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "mistakes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "answer",
+              "feedback"
+            ],
+            "properties": {
+              "answer": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "feedback": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "word_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "cue": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "accept": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "options": {
+          "$ref": "#/$defs/options"
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "answer"
+          ]
+        },
+        {
+          "required": [
+            "options"
+          ]
+        }
+      ]
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/item_comprehension"
+          }
+        ]
+      }
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "fr": {
+            "type": "boolean"
+          },
+          "right": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
