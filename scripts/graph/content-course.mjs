@@ -225,6 +225,7 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
   return out;
 }
 
+// Reference rows never carry review: the schema rejects it there, so every vocab row here teaches its word.
 // The Reference shelf's pages, each with the French of its vocabulary table: [{ moduleKey, title, vocab }].
 export function referenceModulesFromContent(course) {
   return course.shelf.pages.map((mod) => ({

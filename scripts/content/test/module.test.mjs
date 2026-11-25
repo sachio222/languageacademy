@@ -376,7 +376,7 @@ test('review is not a field on reference rows, and a lesson row takes it as true
   assert.deepEqual(validateModule(ref).map((p) => [p.code, p.path]), [['field_unknown', 'vocabulary[0].review']]);
   const lesson = miniModule(MINI_KEYS.lesson);
   lesson.vocabulary[0].review = 'yes';
-  assert.ok(validateModule(lesson).some((p) => p.path === 'vocabulary[0].review' && p.code !== 'field_unknown'));
+  assert.deepEqual(validateModule(lesson).filter((p) => p.path === 'vocabulary[0].review').map((p) => p.code), ['field_type']);
   lesson.vocabulary[0].review = false;
   assert.deepEqual(validateModule(lesson, { file: 'l.json', unitIndex: 1 }), []);
 });

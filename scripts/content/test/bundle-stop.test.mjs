@@ -23,11 +23,28 @@ const copy = (t) => {
 };
 const bundleCheck = (root) => spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', CLI, 'bundle', '--root', root, '--check'], { encoding: 'utf8', maxBuffer: 64 << 20 });
 
+// The stop is one of two: a unit holding a stub (planned), or a fully written unit whose reading has no art yet
+// (story_missing). The pipeline approves a unit before L's art exists, so no unit could reach approved if the test
+// demanded the first.
+const assertValidStop = (course, report) => {
+  const unit = course.units.find((u) => u.unit_key === report.units_stopped_at);
+  assert.ok(unit, `stopped at a unit of the course: ${report.units_stopped_at}`);
+  assert.ok(['planned', 'story_missing'].includes(report.stopped_because.code), report.stopped_because.code);
+  if (report.stopped_because.code === 'story_missing') assert.ok(unit.modules.every((m) => m.status === 'written'), 'story_missing stops only a fully written unit');
+};
+
+test('the real bundle stops at a unit holding a stub, or at a fully written unit whose reading has no art', async () => {
+  const course = loadCourse();
+  const { report } = buildBundleWithReport(course, await loadBundleSources());
+  assertValidStop(course, report);
+});
+
 test('a written reading with no story art: the real bundle stops before its unit, and --check passes', async (t) => {
   const root = copy(t);
   writeUnit12(root, { story: false });
   const course = loadCourse({ root });
   const { bundle, report } = buildBundleWithReport(course, await loadBundleSources({ root }));
+  assertValidStop(course, report);
   assert.equal(report.units_stopped_at, 'unit12');
   assert.deepEqual(report.stopped_because, { code: 'story_missing', module_key: 'unit12-reading', story_id: 'reading12' });
   assert.equal(bundle.entries.some((e) => e.unit_key === 'unit12'), false);
