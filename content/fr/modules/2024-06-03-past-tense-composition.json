@@ -422,6 +422,27 @@
           "feedback": "Parce que needs a CLAUSE! Use '{à cause de la pluie}' (because of THE RAIN - noun)."
         }
       ]
+    },
+    {
+      "id": "i-j-en-ai-mange",
+      "type": "gapfill",
+      "text": "Il y avait du pain, alors j'en ___.",
+      "gloss": "There was some bread, so I ate some.",
+      "blanks": [
+        {
+          "answer": "ai mangé",
+          "accept": [
+            "ai mange"
+          ]
+        }
+      ],
+      "hint": "Scene, then event",
+      "mistakes": [
+        {
+          "answer": "mangeais",
+          "feedback": "Eating the bread is the event, so use the passé composé: {j'en ai mangé}."
+        }
+      ]
     }
   ]
 }

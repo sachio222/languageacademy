@@ -527,6 +527,87 @@
       }
     ]
   },
+  "2024-03-24-everyday-nouns": {
+    "concepts": [
+      {
+        "id": "c-abstract-vs-concrete-nouns",
+        "term": "Abstract vs Concrete Nouns",
+        "definition": "Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.",
+        "example": "{la vie} (life - abstract), {le pain} (bread - concrete)"
+      },
+      {
+        "id": "c-using-in-real-conversations",
+        "term": "Using in Real Conversations",
+        "definition": "These are the nouns you'll use constantly in French - combine with verbs you know!",
+        "example": "{je veux du pain, j'ai le temps, il parle du monde}"
+      },
+      {
+        "id": "c-remember-the-gender",
+        "term": "Remember the Gender!",
+        "definition": "Always learn the article with the noun - it shows the gender",
+        "example": "{le temps} (masculine), {la vie} (feminine)"
+      },
+      {
+        "id": "c-pas-de",
+        "term": "{pas de}: no, not any",
+        "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are. After {être} they stay: {ce n'est pas un livre}.",
+        "example": "{J'ai du pain.} becomes {Je n'ai pas de pain.} (I don't have any bread.)"
+      }
+    ],
+    "items/i-je-n-ai-pas-de-pain": {
+      "id": "i-je-n-ai-pas-de-pain",
+      "type": "transform",
+      "instruction": "Make the sentence negative.",
+      "shown": "J'ai du pain.",
+      "answer": "je n'ai pas de pain",
+      "accept": [
+        "je n ai pas de pain"
+      ],
+      "hint": "{du} becomes {de} after {ne … pas}",
+      "mistakes": [
+        {
+          "answer": "je n'ai pas du pain",
+          "feedback": "After {ne … pas}, {du} becomes {de}: {je n'ai pas de pain}."
+        }
+      ]
+    },
+    "items/i-je-n-ai-pas-de-voiture": {
+      "id": "i-je-n-ai-pas-de-voiture",
+      "type": "gapfill",
+      "text": "Je n'ai pas ___ voiture.",
+      "gloss": "I don't have a car.",
+      "blanks": [
+        {
+          "answer": "de"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "une",
+          "feedback": "After {ne … pas}, {une} becomes {de}: {je n'ai pas de voiture}."
+        }
+      ]
+    },
+    "items/i-je-ne-veux-pas-d-eau": {
+      "id": "i-je-ne-veux-pas-d-eau",
+      "type": "respond",
+      "situation": "A waiter asks {Vous voulez de l'eau ?} Say no, you don't want any water.",
+      "answer": "non, je ne veux pas d'eau",
+      "accept": [
+        "je ne veux pas d'eau",
+        "non je ne veux pas d eau",
+        "je ne veux pas d eau",
+        "non merci, je ne veux pas d'eau"
+      ],
+      "hint": "{de l'} becomes {d'} after {ne … pas}",
+      "mistakes": [
+        {
+          "answer": "non, je ne veux pas de l'eau",
+          "feedback": "After {ne … pas}, {de l'} becomes {d'}: {je ne veux pas d'eau}."
+        }
+      ]
+    }
+  },
   "2024-03-25-multi-clause-questions": {
     "concepts": [
       {
@@ -1020,12 +1101,194 @@
     "description": "Complete sentences using cognitive verbs, on, discourse markers, and essential vocabulary from this unit!",
     "title": "Knowledge & Learning Practice - Fill in the Blanks"
   },
+  "2024-05-12-commands-pronouns": {
+    "can_do": [
+      "Give commands with object pronouns (Give it to me!)",
+      "Use pronouns with affirmative and negative commands",
+      "Form complex commands like 'Don't do it!' or 'Look at me!'",
+      "Say some or how many with {en}: {j'en veux}, {j'en ai trois}."
+    ],
+    "concepts": [
+      {
+        "id": "c-affirmative-commands-attach-with",
+        "term": "Affirmative Commands: Attach with Hyphens",
+        "definition": "In positive commands, pronouns attach to the verb with hyphens",
+        "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!)"
+      },
+      {
+        "id": "c-negative-commands-separate-with",
+        "term": "Negative Commands: Separate with ne...pas",
+        "definition": "In negative commands, pronouns go BEFORE the verb (normal position)",
+        "example": "{Ne le fais pas!} (Don't do it!), {Ne me regarde pas!} (Don't look at me!)"
+      },
+      {
+        "id": "c-pronoun-order-in-commands",
+        "term": "Pronoun Order in Commands",
+        "definition": "Object pronouns: le/la/les come first, then moi/toi",
+        "example": "{Donne-le-moi!} (Give it to me! - le before moi), {Montre-la-moi!} (Show it to me!)"
+      },
+      {
+        "id": "c-en-some",
+        "term": "{en}: some, of them",
+        "definition": "{en} stands for something you already named with {du}, {de la}, {de l'}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
+        "example": "{Tu veux du café ? Oui, j'en veux.} (Do you want some coffee? Yes, I want some.), {Prends-en !} (Take some!)"
+      }
+    ],
+    "items/i-oui-j-en-ai-trois": {
+      "id": "i-oui-j-en-ai-trois",
+      "type": "respond",
+      "situation": "A friend asks {Tu as des livres ?} Say yes, you have three. Use {en}.",
+      "answer": "oui, j'en ai trois",
+      "accept": [
+        "j'en ai trois",
+        "oui j en ai trois",
+        "j en ai trois"
+      ],
+      "hint": "{en} before the verb, the number at the end",
+      "mistakes": [
+        {
+          "answer": "oui, j'ai trois",
+          "feedback": "Keep {en} before the verb, even with a number: {j'en ai trois}."
+        }
+      ]
+    },
+    "items/i-oui-j-en-veux": {
+      "id": "i-oui-j-en-veux",
+      "type": "respond",
+      "situation": "A friend asks {Tu veux du café ?} Say yes, you want some. Use {en}.",
+      "answer": "oui, j'en veux",
+      "accept": [
+        "j'en veux",
+        "oui j en veux",
+        "j en veux",
+        "oui, j'en veux bien"
+      ],
+      "hint": "{en} goes before the verb",
+      "mistakes": [
+        {
+          "answer": "oui, je veux en",
+          "feedback": "{en} goes before the verb: {j'en veux}."
+        }
+      ]
+    },
+    "items/i-prends-en": {
+      "id": "i-prends-en",
+      "type": "respond",
+      "situation": "Offer a friend some of your bread. Say “Take some!” with {en}.",
+      "answer": "prends-en",
+      "accept": [
+        "prends en"
+      ],
+      "hint": "Like {donne-le}: the pronoun goes after the verb, with a hyphen",
+      "mistakes": [
+        {
+          "answer": "en prends",
+          "feedback": "In a positive command, {en} goes after the verb: {prends-en}."
+        }
+      ]
+    }
+  },
   "2024-05-17-getting-ready": {
     "vocabulary/je-me-lave-fr.i-wash-myself": {
       "word_id": "je-me-lave-fr",
       "fr": "je me lave",
       "gloss": "I wash myself",
       "note": "daily routine"
+    }
+  },
+  "2024-05-18-irregular-commands": {
+    "concepts": [
+      {
+        "id": "c-most-common-verbs-irregular",
+        "term": "Most Common Verbs = Irregular Commands",
+        "definition": "être, avoir, aller, and faire don't follow normal command patterns",
+        "example": "{Sois gentil!} (Be nice!), {Aie courage!} (Have courage!), {Va là-bas!} (Go over there!)"
+      },
+      {
+        "id": "c-must-memorize-these",
+        "term": "Must Memorize These",
+        "definition": "These irregular forms are used constantly - worth memorizing!",
+        "example": "{Vas-y!} (Go ahead! / Go for it!) - extremely common phrase"
+      },
+      {
+        "id": "c-etre-commands",
+        "term": "être Commands",
+        "definition": "{tu: Sois! vous: Soyez! nous: Soyons!}",
+        "example": "{Sois sage!} (Be good!), {Soyez gentil!} (Be kind!)"
+      },
+      {
+        "id": "c-avoir-commands",
+        "term": "avoir Commands",
+        "definition": "{tu: Aie! vous: Ayez! nous: Ayons!}",
+        "example": "{Aie confiance!} (Have confidence!), {Ayez patience!} (Have patience!)"
+      },
+      {
+        "id": "c-aller-commands",
+        "term": "aller Commands",
+        "definition": "tu: Va! vous: Allez! nous: Allons! Special: Vas-y!",
+        "example": "{Va là-bas!} (Go over there!), {Allons-y!} (Let's go!), {Vas-y!} (Go ahead!)"
+      },
+      {
+        "id": "c-faire-commands",
+        "term": "faire Commands",
+        "definition": "{tu: Fais! vous: Faites! nous: Faisons!}",
+        "example": "{Fais attention!} (Pay attention! / Be careful!), {Faites ça!} (Do that!)"
+      },
+      {
+        "id": "c-y-there",
+        "term": "{y}: there",
+        "definition": "{y} stands for a place you already named, like {au café} or {chez Paul}. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the {y} in {vas-y} comes from.",
+        "example": "{Tu vas au café ? Oui, j'y vais.} (Are you going to the café? Yes, I'm going there.)"
+      }
+    ],
+    "items/i-non-je-n-y-vais-pas": {
+      "id": "i-non-je-n-y-vais-pas",
+      "type": "respond",
+      "situation": "A friend asks {Tu vas chez Paul ?} Say no, you're not going there. Use {y}.",
+      "answer": "non, je n'y vais pas",
+      "accept": [
+        "je n'y vais pas",
+        "non je n y vais pas",
+        "je n y vais pas"
+      ],
+      "hint": "{ne} goes before {y}, and {pas} after the verb",
+      "mistakes": [
+        {
+          "answer": "non, je ne vais pas y",
+          "feedback": "{y} stays before the verb, after {ne}: {je n'y vais pas}."
+        }
+      ]
+    },
+    "items/i-nous-y-allons": {
+      "id": "i-nous-y-allons",
+      "type": "transform",
+      "instruction": "Swap the place for {y}.",
+      "shown": "Nous allons à Paris.",
+      "answer": "nous y allons",
+      "mistakes": [
+        {
+          "answer": "nous allons y",
+          "feedback": "{y} goes before the verb: {nous y allons}."
+        }
+      ]
+    },
+    "items/i-oui-j-y-vais": {
+      "id": "i-oui-j-y-vais",
+      "type": "respond",
+      "situation": "A friend asks {Tu vas au café ?} Say yes, you're going there. Use {y}.",
+      "answer": "oui, j'y vais",
+      "accept": [
+        "j'y vais",
+        "oui j y vais",
+        "j y vais"
+      ],
+      "hint": "{y} goes before the verb",
+      "mistakes": [
+        {
+          "answer": "oui, je vais y",
+          "feedback": "{y} goes before the verb: {j'y vais}."
+        }
+      ]
     }
   },
   "2024-05-20-reading-8": {
@@ -1089,7 +1352,41 @@
     ]
   },
   "2024-05-24-unit-8-exam": {
-    "description": "Test everything from this unit! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions."
+    "description": "Test everything from this unit! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions.",
+    "items/i-non-je-n-en-mange-pas": {
+      "id": "i-non-je-n-en-mange-pas",
+      "type": "respond",
+      "situation": "A friend asks {Tu manges de la viande ?} Say no, you don't eat any. Use {en}.",
+      "answer": "non, je n'en mange pas",
+      "accept": [
+        "je n'en mange pas",
+        "non je n en mange pas",
+        "je n en mange pas"
+      ],
+      "mistakes": [
+        {
+          "answer": "non, je ne mange pas en",
+          "feedback": "{en} goes before the verb, after {ne}: {je n'en mange pas}."
+        }
+      ]
+    },
+    "items/i-oui-j-y-vais-ce-soir": {
+      "id": "i-oui-j-y-vais-ce-soir",
+      "type": "respond",
+      "situation": "A friend asks {Tu vas chez Marie ce soir ?} Say yes, you're going there tonight. Use {y}.",
+      "answer": "oui, j'y vais ce soir",
+      "accept": [
+        "j'y vais ce soir",
+        "oui j y vais ce soir",
+        "j y vais ce soir"
+      ],
+      "mistakes": [
+        {
+          "answer": "oui, je vais y ce soir",
+          "feedback": "{y} goes before the verb: {j'y vais ce soir}."
+        }
+      ]
+    }
   },
   "2024-05-25-unit-8-practice": {
     "description": "Complete sentences using temporal words, reflexive verbs, and commands from this unit!",
@@ -1125,6 +1422,42 @@
       ],
       "gloss": "First, I eat. Then, I leave.",
       "hint": "first / first of all / then / next"
+    },
+    "items/i-nous-en-avons-deux": {
+      "id": "i-nous-en-avons-deux",
+      "type": "gapfill",
+      "text": "Des chats ? Nous ___ avons deux.",
+      "gloss": "Cats? We have two.",
+      "blanks": [
+        {
+          "answer": "en"
+        }
+      ],
+      "hint": "the pronoun for some or how many",
+      "mistakes": [
+        {
+          "answer": "y",
+          "feedback": "With a number, use {en}: {nous en avons deux}."
+        }
+      ]
+    },
+    "items/i-nous-y-allons-demain": {
+      "id": "i-nous-y-allons-demain",
+      "type": "gapfill",
+      "text": "Le café ? Nous ___ allons demain.",
+      "gloss": "The café? We're going there tomorrow.",
+      "blanks": [
+        {
+          "answer": "y"
+        }
+      ],
+      "hint": "the pronoun for a place",
+      "mistakes": [
+        {
+          "answer": "en",
+          "feedback": "For a place, use {y}: {nous y allons}."
+        }
+      ]
     },
     "title": "Daily Life & Actions Practice - Fill in the Blanks"
   },
@@ -1169,6 +1502,27 @@
     ]
   },
   "2024-06-03-past-tense-composition": {
+    "items/i-j-en-ai-mange": {
+      "id": "i-j-en-ai-mange",
+      "type": "gapfill",
+      "text": "Il y avait du pain, alors j'en ___.",
+      "gloss": "There was some bread, so I ate some.",
+      "blanks": [
+        {
+          "answer": "ai mangé",
+          "accept": [
+            "ai mange"
+          ]
+        }
+      ],
+      "hint": "Scene, then event",
+      "mistakes": [
+        {
+          "answer": "mangeais",
+          "feedback": "Eating the bread is the event, so use the passé composé: {j'en ai mangé}."
+        }
+      ]
+    },
     "items/i-parce-que": {
       "id": "i-parce-que",
       "type": "gapfill",
@@ -1201,6 +1555,110 @@
   "2024-06-10-unit-9-practice": {
     "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
     "title": "Discourse & Past Tense Practice - Fill in the Blanks"
+  },
+  "2024-10-22-donner": {
+    "concepts": [
+      {
+        "id": "c-donner-to-give",
+        "term": "{donner} = to give",
+        "definition": "Very common verb for giving things, offering help, providing information",
+        "example": "{je donne le livre} (I give the book), {tu donnes ton nom} (you give your name)"
+      },
+      {
+        "id": "c-regular-er-conjugation",
+        "term": "Regular -er conjugation",
+        "definition": "Present tense: je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent",
+        "example": "Regular pattern: donn- + endings (-e, -{es}, -e, -ons, -ez, -ent)"
+      },
+      {
+        "id": "c-common-uses-of-donner",
+        "term": "Common uses of donner",
+        "definition": "Giving objects (donner un cadeau), giving information (donner l'adresse), giving help (donner de l'aide)",
+        "example": "{je donne mon numéro} (I give my number), {ça donne faim} (it makes you hungry)"
+      },
+      {
+        "id": "c-donner-vs-prendre",
+        "term": "Donner vs Prendre",
+        "definition": "Perfect opposites - donner (to give) and prendre (to take)",
+        "example": "{je donne le livre à Marie, elle prend le livre} (I give the book to Marie, she takes the book)"
+      },
+      {
+        "id": "c-with-prepositions",
+        "term": "With prepositions",
+        "definition": "Often used with 'à' (to) - donner quelque chose à quelqu'un",
+        "example": "{je donne le livre à mon ami} (I give the book to my friend)"
+      },
+      {
+        "id": "c-ne-rien",
+        "term": "{ne … rien}: nothing",
+        "definition": "{rien} takes the place of {pas}: {ne} goes before the verb and {rien} after it.",
+        "example": "{Il ne donne rien.} (He doesn't give anything.), {Je ne vois rien.} (I don't see anything.)"
+      }
+    ],
+    "items/i-il-ne-dit-rien": {
+      "id": "i-il-ne-dit-rien",
+      "type": "gapfill",
+      "text": "Il ne dit ___.",
+      "gloss": "He doesn't say anything.",
+      "blanks": [
+        {
+          "answer": "rien"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "pas",
+          "feedback": "For nothing, {rien} takes the place of {pas}: {il ne dit rien}."
+        }
+      ]
+    },
+    "items/i-il-ne-donne-rien": {
+      "id": "i-il-ne-donne-rien",
+      "type": "translate",
+      "prompt": "he doesn't give anything",
+      "answer": "il ne donne rien",
+      "hint": "{ne} + {donne} + {rien}",
+      "mistakes": [
+        {
+          "answer": "il ne donne pas",
+          "feedback": "For nothing, {rien} takes the place of {pas}: {il ne donne rien}."
+        }
+      ]
+    },
+    "items/i-je-ne-fais-rien": {
+      "id": "i-je-ne-fais-rien",
+      "type": "respond",
+      "situation": "A friend asks {Qu'est-ce que tu fais ?} Say you're not doing anything.",
+      "answer": "je ne fais rien",
+      "mistakes": [
+        {
+          "answer": "je fais rien",
+          "feedback": "People often drop {ne} when they speak, but write it here: {je ne fais rien}."
+        }
+      ],
+      "accept": [
+        "je ne fais rien du tout"
+      ]
+    },
+    "items/i-je-ne-vois-rien": {
+      "id": "i-je-ne-vois-rien",
+      "type": "transform",
+      "instruction": "Say the opposite with {ne … rien}.",
+      "shown": "Je vois quelque chose.",
+      "answer": "je ne vois rien",
+      "mistakes": [
+        {
+          "answer": "je ne vois pas rien",
+          "feedback": "{rien} takes the place of {pas}: {je ne vois rien}."
+        }
+      ]
+    },
+    "vocabulary/rien-fr": {
+      "word_id": "rien-fr",
+      "fr": "rien",
+      "gloss": "nothing",
+      "note": "with {ne}: {je ne vois rien}"
+    }
   },
   "2026-11-24-negation-guide": {
     "checks": [

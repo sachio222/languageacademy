@@ -4,14 +4,13 @@
     "claim-untaught": 25,
     "exam_item_copied": 94,
     "function-unreachable": 1,
-    "guide_only_teaching": 14,
     "level-order": 37,
     "reading_word_no_popup": 10,
-    "reuse-missed": 710,
+    "reuse-missed": 706,
     "taught-twice": 139,
     "translate-item": 946,
     "unknown-word": 86,
-    "untaught-construction": 78,
+    "untaught-construction": 76,
     "untaught-word": 330
   },
   "new": {}

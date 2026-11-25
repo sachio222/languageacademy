@@ -12,7 +12,8 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:verb.er.present"
+      "fr:cx:verb.er.present",
+      "fr:cx:neg.ne-rien"
     ]
   },
   "vocabulary": [
@@ -81,6 +82,12 @@
       "fr": "donne-moi",
       "gloss": "give me",
       "note": "imperative + object pronoun"
+    },
+    {
+      "word_id": "rien-fr",
+      "fr": "rien",
+      "gloss": "nothing",
+      "note": "with {ne}: {je ne vois rien}"
     }
   ],
   "concepts": [
@@ -113,6 +120,12 @@
       "term": "With prepositions",
       "definition": "Often used with 'à' (to) - donner quelque chose à quelqu'un",
       "example": "{je donne le livre à mon ami} (I give the book to my friend)"
+    },
+    {
+      "id": "c-ne-rien",
+      "term": "{ne … rien}: nothing",
+      "definition": "{rien} takes the place of {pas}: {ne} goes before the verb and {rien} after it.",
+      "example": "{Il ne donne rien.} (He doesn't give anything.), {Je ne vois rien.} (I don't see anything.)"
     }
   ],
   "items": [
@@ -262,10 +275,58 @@
       "type": "translate",
       "prompt": "he doesn't give anything",
       "answer": "il ne donne rien",
-      "accept": [
-        "il ne donne pas"
+      "hint": "{ne} + {donne} + {rien}",
+      "mistakes": [
+        {
+          "answer": "il ne donne pas",
+          "feedback": "For nothing, {rien} takes the place of {pas}: {il ne donne rien}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-vois-rien",
+      "type": "transform",
+      "instruction": "Say the opposite with {ne … rien}.",
+      "shown": "Je vois quelque chose.",
+      "answer": "je ne vois rien",
+      "mistakes": [
+        {
+          "answer": "je ne vois pas rien",
+          "feedback": "{rien} takes the place of {pas}: {je ne vois rien}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-fais-rien",
+      "type": "respond",
+      "situation": "A friend asks {Qu'est-ce que tu fais ?} Say you're not doing anything.",
+      "answer": "je ne fais rien",
+      "mistakes": [
+        {
+          "answer": "je fais rien",
+          "feedback": "People often drop {ne} when they speak, but write it here: {je ne fais rien}."
+        }
       ],
-      "hint": "il + ne + donne + pas + anything"
+      "accept": [
+        "je ne fais rien du tout"
+      ]
+    },
+    {
+      "id": "i-il-ne-dit-rien",
+      "type": "gapfill",
+      "text": "Il ne dit ___.",
+      "gloss": "He doesn't say anything.",
+      "blanks": [
+        {
+          "answer": "rien"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "pas",
+          "feedback": "For nothing, {rien} takes the place of {pas}: {il ne dit rien}."
+        }
+      ]
     },
     {
       "id": "i-nous-donnons-toujours",
