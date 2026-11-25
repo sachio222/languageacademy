@@ -19,21 +19,23 @@ const str = (v) => (typeof v === 'string' && v.trim() !== '' ? v.trim() : null);
 /* ---------- IPA ---------- */
 
 // Symbols of English transcription that French IPA never uses: the Cambridge scrape wrote English IPA for some
-// French words ("/ˈɜːθ ˌtəʊn/", earth tone, on elles). Stress marks count too: French IPA marks no word stress.
+// French words ("/ˈɜːθ ˌtəʊn/", earth tone, on elles).
 const ENGLISH_ONLY = [
   ['ɜ', 'ɜ (English vowel)'],
   ['əʊ', 'əʊ (English diphthong)'],
-  ['ˈ', 'ˈ (stress mark)'],
-  ['ˌ', 'ˌ (stress mark)'],
   ['θ', 'θ (English consonant)'],
   ['ð', 'ð (English consonant)'],
   ['ʌ', 'ʌ (English vowel)'],
   ['æ', 'æ (English vowel)'],
 ];
+// French IPA marks no word stress, so stress marks are stripped: ˈ and ˌ, and the ASCII apostrophe the scrape used
+// for one ("'wi" on oui).
+const STRESS_MARKS = /[ˈˌ']/g;
 
 /**
- * A dictionary phonetic string as French IPA for the bundle, or why it is refused. Slashes are stripped
- * ("/ʒə/" -> "ʒə"); a string with an English-only symbol is refused, so a phrase shows no IPA rather than wrong IPA.
+ * A dictionary phonetic string as French IPA for the bundle, or why it is refused. Slashes and stress marks are
+ * stripped ("/ʒə/" -> "ʒə", "ˈɥi(t)" -> "ɥi(t)"); a string with an English-only symbol is refused, so a phrase shows
+ * no IPA rather than wrong IPA.
  * @returns { ipa: string|null, refused: string|null }
  */
 export function frenchIpa(phonetic) {
@@ -41,7 +43,7 @@ export function frenchIpa(phonetic) {
   if (!raw) return { ipa: null, refused: null };
   const found = ENGLISH_ONLY.filter(([s]) => raw.includes(s)).map(([, why]) => why);
   if (found.length) return { ipa: null, refused: found.join(', ') };
-  return { ipa: str(raw.replace(/\//g, '')), refused: null };
+  return { ipa: str(raw.replace(/\//g, '').replace(STRESS_MARKS, '')), refused: null };
 }
 
 // File and line of an entry's phonetic field, for the dictionary owner: the first `phonetic` after its id line.
@@ -57,7 +59,8 @@ function phoneticLine(file, id) {
 
 let dictionaryCache = null;
 /**
- * The live dictionary's French entries as { byId, bySpelling, refused }: Map<id, { id, ipa, part_of_speech }>,
+ * The live dictionary's French entries as { byId, bySpelling, refused }:
+ * Map<id, { id, word, ipa, part_of_speech, source: { file, line() } }>,
  * Map<spelling, the same entry> (the first entry of an id or a spelling wins, as the migration's word ids did), and
  * every refused IPA string as { id, word, phonetic, why, file, line }.
  */
@@ -74,7 +77,8 @@ export async function loadDictionary() {
       if (w?.lang !== 'fr' || byId.has(id)) continue;
       const { ipa, refused: why } = frenchIpa(w.phonetic);
       if (why) refused.push({ id, word: w.word, phonetic: w.phonetic, why, file, line: phoneticLine(file, id) });
-      const entry = { id, ipa, part_of_speech: str(w.partOfSpeech) };
+      // source.line() is looked up only when a phrase's IPA is reported (a file scan per call).
+      const entry = { id, word: str(w.word), ipa, part_of_speech: str(w.partOfSpeech), source: { file, line: () => phoneticLine(file, id) } };
       byId.set(id, entry);
       const spelling = str(w.word)?.toLowerCase();
       if (spelling && !bySpelling.has(spelling)) bySpelling.set(spelling, entry);

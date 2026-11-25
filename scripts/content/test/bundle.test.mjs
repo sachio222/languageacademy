@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { loadCourse, readContent, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
 import { assembleCourse } from '../assemble.mjs';
 import { defaultCheckAnswer } from '../passable.mjs';
-import { buildBundle, buildBundleWithReport, bundleHash, canonicalJson, splitBlankMistakes } from '../bundle.mjs';
+import { buildBundle, buildBundleWithReport, bundleHash, canonicalJson, splitBlankMistakes, ipaMismatch } from '../bundle.mjs';
 import { releaseProblems } from '../release-checks.mjs';
 import { loadBundleSources, frenchIpa } from '../bundle-sources.mjs';
 import { runChecker, sourceCommitField, DEFAULT_OUT } from '../bundle-cli.mjs';
@@ -102,8 +102,15 @@ test('IPA with English-only symbols is refused and reported with its file and li
   assert.deepEqual(frenchIpa('/ˈɜːθ ˌtəʊn/').ipa, null);
   assert.match(frenchIpa('/ˈɜːθ ˌtəʊn/').refused, /ɜ/);
   assert.deepEqual(frenchIpa('/ʒə sɥi/'), { ipa: 'ʒə sɥi', refused: null });
-  for (const s of ['θ', 'ð', 'ʌ', 'æ', 'ˈa', 'təʊ']) assert.equal(frenchIpa(s).ipa, null, s);
+  for (const s of ['θ', 'ð', 'ʌ', 'æ', 'təʊ']) assert.equal(frenchIpa(s).ipa, null, s);
   assert.deepEqual(frenchIpa(''), { ipa: null, refused: null });
+  // Stress marks are stripped, not refused: ˈ, ˌ and the ASCII apostrophe used as one.
+  assert.deepEqual(frenchIpa('ˈɥi(t)'), { ipa: 'ɥi(t)', refused: null });
+  assert.deepEqual(frenchIpa("'wi"), { ipa: 'wi', refused: null });
+  assert.deepEqual(frenchIpa('ˌbɔ̃ˈʒuʀ'), { ipa: 'bɔ̃ʒuʀ', refused: null });
+  assert.ok(!sources.dictionary.refused.some((r) => r.id === 'huit-fr'), 'huit is back');
+  const ph = (key, wordId) => contentOf(bundle, key).phrases.find((p) => p.word_id === wordId);
+  assert.equal(ph('2024-01-01-famous-words', 'oui-fr').sounds, 'wi');
   const elles = sources.dictionary.refused.find((r) => r.id === 'elles-fr');
   assert.ok(elles, 'elles carries "earth tone"');
   assert.equal(elles.file, 'src/data/dictionary/words/cambridge/pronouns.js');
@@ -113,18 +120,45 @@ test('IPA with English-only symbols is refused and reported with its file and li
     if (p.sounds) assert.deepEqual(frenchIpa(p.sounds), { ipa: p.sounds, refused: null }, p.phrase_id);
 });
 
-test('source_commit is marked -dirty only where L allows it, and the hash ignores the build', (t) => {
+test('IPA that belongs to another word is suspect and not emitted', () => {
+  // va's own dictionary entry carries aller's "ale" (verbs.js:3200); livres carries demi-livre's.
+  for (const [key, wordId] of [['2024-02-09-directions-navigation', 'va-fr'], ['2024-05-18-irregular-commands', 'va-fr'], ['2024-01-07-plurals', 'livres-fr']]) {
+    const p = contentOf(bundle, key).phrases.find((x) => x.word_id === wordId);
+    assert.equal(p.sounds, null, `${key}.${wordId}`);
+    const n = report.notes.find((x) => x.code === 'ipa_suspect' && x.detail.startsWith(`${key}.${wordId}:`));
+    assert.ok(n, `${key}.${wordId} is reported`);
+  }
+  assert.match(report.notes.find((x) => x.detail.startsWith('2024-02-09-directions-navigation.va-fr:')).detail, /verbs\.js:3200\)$/);
+  // The rule on its own: the headword must be the phrase's French, and the IPA must be able to start it.
+  assert.match(ipaMismatch('va', { word: 'va', ipa: 'ale' }), /cannot start/);
+  assert.match(ipaMismatch('le chat', { word: 'chat', ipa: 'ʃa' }), /entry is "chat"/);
+  assert.equal(ipaMismatch('Va!', { word: 'va', ipa: 'va' }), null);
+  assert.equal(ipaMismatch('huit', { word: 'huit', ipa: 'ɥi(t)' }), null);
+  assert.equal(ipaMismatch('être', { word: 'être', ipa: 'ɛtʀ' }), null);
+  assert.equal(ipaMismatch('oui', { word: 'oui', ipa: 'wi' }), null);
+  assert.equal(ipaMismatch('x', null), null);
+});
+
+test('a dirty tree gives <hash>-dirty, which passes L checker; the hash ignores the build', (t) => {
   assert.deepEqual(sourceCommitField({ commit: 'abc1234', dirty: false }), { value: 'abc1234', warning: null });
-  // la-bundle@1 allows a bare hash only today: the field stays valid and the run warns.
-  const today = sourceCommitField({ commit: 'abc1234', dirty: true });
-  assert.equal(today.value, 'abc1234');
-  assert.match(today.warning, /uncommitted changes/);
-  // Once L's pattern takes the mark, it is written.
+  // la-bundle@1 (L 683ae82) takes the mark, so a dirty tree is marked and nothing warns.
+  const commit = 'e059c5900000000000000000000000000000abcd';
+  const dirty = sourceCommitField({ commit, dirty: true });
+  assert.deepEqual(dirty, { value: `${commit}-dirty`, warning: null });
+  const b = buildBundle(course, { ...sources, units: ['unit1'], build: { source_commit: dirty.value, built_at: BUILD.built_at } });
+  assert.equal(b.build.source_commit, `${commit}-dirty`);
+  const r = runChecker(b);
+  assert.equal(r.error, undefined, r.error);
+  assert.deepEqual(r.problems.filter((p) => p.severity === 'error'), []);
+  assert.equal(r.status, 0);
+  // A schema that refuses the mark keeps the bare hash and warns.
   const schema = JSON.parse(readFileSync(join(VENDOR, 'contracts', 'curriculum.bundle.schema.json'), 'utf8'));
-  schema.properties.build.properties.source_commit.pattern = '^[0-9a-f]{7,40}(-dirty)?$';
+  schema.properties.build.properties.source_commit.pattern = '^[0-9a-f]{7,40}$';
   const file = join(tempDir(t), 'schema.json');
   writeFileSync(file, JSON.stringify(schema));
-  assert.deepEqual(sourceCommitField({ commit: 'abc1234', dirty: true }, file), { value: 'abc1234-dirty', warning: null });
+  const strict = sourceCommitField({ commit, dirty: true }, file);
+  assert.equal(strict.value, commit);
+  assert.match(strict.warning, /uncommitted changes/);
   // The hash names the content only.
   assert.equal(bundleHash({ ...bundle, build: { source_commit: 'fff0000', built_at: '2030-01-01T00:00:00Z' } }), bundleHash(bundle));
   const { build, ...noBuild } = bundle;

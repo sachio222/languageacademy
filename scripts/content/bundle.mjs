@@ -221,17 +221,44 @@ function lessonWords(m, dictionary) {
   });
 }
 
+// The sound a French spelling can start with, by its first letter (accents folded, a silent h skipped): IPA that
+// starts elsewhere belongs to another word, as aller's "ale" on va, "dəmilivʀ" (demi-livre) on livres.
+const FIRST_SOUNDS = {
+  a: 'aɑɛeoɔ', b: 'b', c: 'ksʃ', d: 'd', e: 'eɛəøœaɑo', f: 'f', g: 'gʒɲ', i: 'iɛj', j: 'ʒd', k: 'k', l: 'l', m: 'm', n: 'n',
+  o: 'oɔwuɛ', p: 'pf', q: 'k', r: 'ʀrʁ', s: 'szʃ', t: 't', u: 'yœɥu', v: 'v', w: 'wv', x: 'kgsz', y: 'ji', z: 'z',
+};
+const foldFr = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe').replace(/æ/g, 'ae');
+const headword = (s) => foldFr(s).replace(/[’ʼ‘`]/g, "'").replace(/[^a-z0-9' -]+/g, ' ').replace(/\s+/g, ' ').trim();
+
+/**
+ * Why an entry's IPA cannot be this phrase's, or null when it can: the entry's headword is not the phrase's French
+ * (the IPA of "chat" is not that of "le chat"), or the IPA cannot start the phrase's first letter.
+ */
+export function ipaMismatch(text, entry) {
+  if (!entry?.ipa) return null;
+  if (headword(entry.word ?? '') !== headword(text)) return `the dictionary entry is "${entry.word}", not "${text}"`;
+  let letters = foldFr(text).replace(/^[^a-z]+/, '');
+  if (letters[0] === 'h') letters = letters.slice(1);
+  const allowed = FIRST_SOUNDS[letters[0]];
+  const first = entry.ipa.replace(/^[^\p{L}]+/u, '')[0];
+  if (allowed && !allowed.includes(first)) return `"${entry.ipa}" cannot start "${text}"`;
+  return null;
+}
+
 /** Pronunciation phrases: `phrases[]` when written, else one per word; IPA from the dictionary, no reviewed tips. */
-function phrasesOf(m, words) {
+function phrasesOf(m, words, note) {
   const byId = new Map(words.map((w) => [w.word_id, w]));
   const one = (suffix, text, wordId) => {
     const w = wordId ? byId.get(wordId) : null;
+    const entry = w?.dictionary;
+    const why = ipaMismatch(text, entry);
+    if (why) note('ipa_suspect', `${m.module_key}.${suffix}: ${why}; no IPA emitted (${entry.source.file}:${entry.source.line() ?? '?'})`);
     return {
       phrase_id: `${m.module_key}.${suffix}`,
       text,
       reference_text: text,
       word_id: wordId ?? null,
-      sounds: w?.dictionary?.ipa ?? null,
+      sounds: why ? null : (entry?.ipa ?? null),
       parts: [],
       general_tip: null,
       audio_path: null,
@@ -380,7 +407,7 @@ function contentOf(m, unitKey, { dictionary, storyOf, note }) {
     module_key: m.module_key,
     kind: m.kind,
     words,
-    phrases: m.kind === 'lesson' ? phrasesOf(m, words) : [],
+    phrases: m.kind === 'lesson' ? phrasesOf(m, words, note) : [],
     items,
     steps,
   };

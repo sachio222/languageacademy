@@ -149,7 +149,8 @@
       "properties": {
         "source_commit": {
           "type": "string",
-          "pattern": "^[0-9a-f]{7,40}$"
+          "pattern": "^[0-9a-f]{7,40}(-dirty)?$",
+          "description": "The content commit the bundle was built from; -dirty when the working tree had uncommitted changes."
         },
         "built_at": {
           "type": "string",
