@@ -35,13 +35,14 @@ test('accept that the checker rejects', () => {
 });
 
 test('accept with a curly apostrophe', () => {
-  // The live checker strips the straight apostrophe only, so the answer alone rejects a curly one ...
-  assert.equal(live("j'ai", 'j’ai'), false);
-  // ... but the accept list is part of what the app grades against, so the declared accept passes.
+  // The live checker folds U+2018, U+2019 and U+02BC to a straight apostrophe on both sides (main 0095d15).
+  assert.equal(live("j'ai", 'j’ai'), true);
+  assert.equal(live('j’ai', "j'ai"), true);
   assert.deepEqual(run({ id: 'a', type: 'respond', situation: 's', answer: "j'ai", accept: ['j’ai'] }), []);
-  // A curly mistake therefore is not accepted unless it is also an accept, and a straight one is.
-  const ps = run({ id: 'a', type: 'respond', situation: 's', answer: "j'ai", mistakes: [{ answer: "j'ai", feedback: 'x' }, { answer: 'j’ai', feedback: 'y' }] });
-  assert.deepEqual(ps.map((p) => p.path), ['items[0].mistakes[0].answer']);
+  assert.deepEqual(run({ id: 'a', type: 'respond', situation: 's', answer: 'j’ai', accept: ["j'ai"] }), []);
+  // A mistake that differs only by apostrophe style now passes, so it is reported.
+  const ps = run({ id: 'a', type: 'respond', situation: 's', answer: "j'ai", mistakes: [{ answer: 'j’ai', feedback: 'y' }] });
+  assert.deepEqual(ps.map((p) => p.code), ['mistake_accepted']);
 });
 
 test('an answer the checker rejects is reported at answer', () => {
