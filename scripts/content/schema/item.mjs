@@ -44,6 +44,16 @@ export const FIELD_ROLES = {
   comprehension: { question: ['native_fr', false], cue: ['native_fr', false], answer: ['fr', true], accept: ['fr', true] },
 };
 
+// The pipeline generates its JSON Schemas from these tables, so nothing may change them at run time.
+function deepFreeze(v) {
+  if (v !== null && typeof v === 'object' && !Object.isFrozen(v)) {
+    Object.freeze(v);
+    for (const x of Object.values(v)) deepFreeze(x);
+  }
+  return v;
+}
+for (const table of [COMMON, PART_FIELDS, SHAPES, FIELD_ROLES]) deepFreeze(table);
+
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 

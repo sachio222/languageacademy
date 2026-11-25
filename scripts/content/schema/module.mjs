@@ -36,8 +36,12 @@ export const ITEM_TYPES_BY_KIND = Object.fromEntries(
 ITEM_TYPES_BY_KIND.reading = ['comprehension'];
 
 export const MODULE_SCHEMA = 'la-module@1';
-// BundleEntry.short_title maxLength (L contracts/curriculum.bundle.schema.json).
-const SHORT_TITLE_MAX = 40;
+// BundleEntry.short_title maxLength (L contracts/curriculum.bundle.schema.json), counted in characters (code points) as
+// JSON Schema counts them.
+export const SHORT_TITLE_MAX = 40;
+// A guide asks exactly this many checks; a lesson's speed_match lists exactly this many of its word_ids.
+export const GUIDE_CHECKS = 3;
+export const SPEED_MATCH_WORDS = 6;
 export const MODULE_KEY_PATTERN = /^([0-9]{4}-[0-9]{2}-[0-9]{2}-)?[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 export const STATUSES = ['written', 'planned'];
 
@@ -204,6 +208,16 @@ export const TEST_KINDS = ['practice', 'unit_exam'];
 // A planned module holds only what the course plan settles (plan Task 17).
 export const PLANNED_FIELDS = { schema: null, module_key: null, kind: null, status: null, title: S('native_fr'), teaches: TEACHES, plan: PLAN };
 
+// The pipeline generates its JSON Schemas from these tables, so nothing may change them at run time.
+function deepFreeze(v) {
+  if (v !== null && typeof v === 'object' && !(v instanceof RegExp) && !Object.isFrozen(v)) {
+    Object.freeze(v);
+    for (const x of Object.values(v)) deepFreeze(x);
+  }
+  return v;
+}
+for (const table of [COMMON_FIELDS, KIND_SCHEMAS, REQUIRED_WRITTEN, TEACHING_FIELDS, TEST_KINDS, PLANNED_FIELDS]) deepFreeze(table);
+
 /* ---------- the walk ---------- */
 function walk(node, v, path, cx, parent) {
   const bad = cx.bad;
@@ -257,9 +271,10 @@ function walk(node, v, path, cx, parent) {
       if (types.length !== 1 || !BLOCK_TYPES.includes(type) || !(Array.isArray(v[type]) || isObj(v[type])))
         return bad(path, 'block_invalid', `${path} must be one example block: { ${BLOCK_TYPES.join(' | ')}: …, heading? }`);
       const shape = BLOCK_SHAPES[type](v[type]);
-      if (shape) return bad(join(path, type), 'block_invalid', `${join(path, type)} must be ${shape}, the shape L draws`);
+      if (shape) bad(join(path, type), 'block_invalid', `${join(path, type)} must be ${shape}, the shape L draws`);
+      // The heading is checked whatever the value's shape, so a bad value never hides a bad heading.
       if (v.heading !== undefined) walk(S('native_fr'), v.heading, join(path, 'heading'), cx, v);
-      collectStrings(v[type], join(path, type), cx.texts);
+      if (!shape) collectStrings(v[type], join(path, type), cx.texts);
       return;
     }
     case 'options':
@@ -278,7 +293,8 @@ function walk(node, v, path, cx, parent) {
 }
 
 function walkFields(fields, required, v, path, cx) {
-  for (const k of Object.keys(v)) if (!(k in fields)) cx.bad(join(path, k), 'field_unknown', `${k} is not a field here`);
+  // Own keys only: `k in fields` would let constructor, toString or __proto__ through as known fields.
+  for (const k of Object.keys(v)) if (!Object.hasOwn(fields, k)) cx.bad(join(path, k), 'field_unknown', `${k} is not a field here`);
   for (const k of required) if (v[k] === undefined) cx.bad(join(path, k), 'field_missing', `${join(path, k)} is required`);
   for (const [k, node] of Object.entries(fields)) if (node && v[k] !== undefined) walk(node, v[k], join(path, k), cx, v);
 }
@@ -326,15 +342,17 @@ function kindRules(mod, cx) {
     if (isObj(mod.teaches) && Array.isArray(mod.teaches.words) && mod.teaches.words.length > 0)
       bad('teaches.words', 'teaches_in_test', `a ${kind} teaches nothing, so it teaches no words`);
   }
-  if (kind === 'guide' && typeof mod.short_title === 'string' && mod.short_title.length > SHORT_TITLE_MAX)
-    bad('short_title', 'short_title_long', `short_title has ${mod.short_title.length} characters; L shows at most ${SHORT_TITLE_MAX}`);
-  if (kind === 'guide' && Array.isArray(mod.checks) && mod.checks.length !== 3)
+  const titleLength = typeof mod.short_title === 'string' ? [...mod.short_title].length : 0;
+  if (kind === 'guide' && titleLength > SHORT_TITLE_MAX)
+    bad('short_title', 'short_title_long', `short_title has ${titleLength} characters; L shows at most ${SHORT_TITLE_MAX}`);
+  if (kind === 'guide' && Array.isArray(mod.checks) && mod.checks.length !== GUIDE_CHECKS)
     bad('checks', 'guide_checks_count', `a guide has exactly three checks, found ${mod.checks.length}`);
   stepRules(mod, cx);
   if (kind === 'lesson' && Array.isArray(mod.speed_match)) {
     const words = new Set((Array.isArray(mod.vocabulary) ? mod.vocabulary : []).map((w) => isObj(w) && w.word_id));
-    if (mod.speed_match.length !== 6 || !mod.speed_match.every((w) => words.has(w)))
-      bad('speed_match', 'speed_match_invalid', 'speed_match lists six word_ids from this lesson’s vocabulary');
+    if (mod.speed_match.length !== SPEED_MATCH_WORDS) bad('speed_match', 'speed_match_invalid', 'speed_match lists six word_ids');
+    else if (!mod.speed_match.every((w) => words.has(w)))
+      bad('speed_match', 'speed_match_invalid', 'speed_match lists only word_ids from this lesson’s vocabulary');
   }
   if (kind === 'reading' && Array.isArray(mod.passage)) {
     mod.passage.forEach((b, i) => {
