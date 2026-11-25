@@ -75,21 +75,42 @@ function walk(windows, taught, uses, limit) {
   return { firstMissEnd, pendingEnd: null, lastUse };
 }
 
+// Course plan stubs (status planned) by position. The checker reads no stub (content-course.mjs), so a stub holds no use
+// yet; with no content layer (a test course) there are none.
+function plannedAt(ctx) {
+  const out = new Map();
+  for (const u of ctx.content?.units ?? []) for (const m of u.modules ?? []) if (m.status === 'planned') out.set(m.position, m);
+  return out;
+}
+
+// The written module whose position closes a window: the one at `end`, else the last one before it.
+function closingModule(ctx, end) {
+  let best = null;
+  for (const m of ctx.course) if (m.position <= end && (!best || m.position > best.position)) best = m;
+  return best;
+}
+
 export function ruleReuse(ctx) {
   const windows = windowsOf(ctx);
   const uses = usesByNode(ctx);
   const last = lastPosition(ctx);
   const moduleAt = new Map(ctx.course.map((m) => [m.position, m]));
+  const planned = plannedAt(ctx);
   const issues = [];
   for (const [nodeId, taught] of reusableNodes(ctx)) {
     // One warning per node, for its first missed window.
     const { firstMissEnd, lastUse } = walk(windows, taught, uses.get(nodeId) ?? [], Infinity);
     if (firstMissEnd === null || firstMissEnd > last) continue;
+    // A window that closes at a stub waits for it: once written, the stub may hold the use.
+    if (planned.has(firstMissEnd)) continue;
     const m = moduleAt.get(taught);
     issues.push(issue({
       rule: 'reuse-missed',
       severity: 'warning',
       moduleKey: m?.moduleKey,
+      // The budget counts the miss where its window closes (budget.mjs countByPart): writing that module meets it, so
+      // a word taught in Unit 12 and missed in Unit 13 is Unit 13's, never the legacy units'.
+      budgetModuleKey: closingModule(ctx, firstMissEnd)?.moduleKey,
       position: taught,
       nodeId,
       message: `${nodeId} (taught at position ${taught}) expected by position ${firstMissEnd}; `
@@ -97,6 +118,17 @@ export function ruleReuse(ctx) {
     }));
   }
   return issues;
+}
+
+/**
+ * dueAt for a module named by key or position, written or a course plan stub (a stub keeps its place in the course):
+ * { position, due }, or null when nothing matches.
+ */
+export function dueFor(ctx, arg) {
+  const byPosition = /^\d+$/.test(String(arg));
+  const match = (m) => (byPosition ? m.position === Number(arg) : m.moduleKey === arg);
+  const m = ctx.course.find(match) ?? [...plannedAt(ctx).values()].map((p) => ({ position: p.position, moduleKey: p.module_key })).find(match);
+  return m ? { position: m.position, due: dueAt(ctx, m.position) } : null;
 }
 
 // What the lesson at `position` should reuse: nodes with no use yet inside their current window, when that window

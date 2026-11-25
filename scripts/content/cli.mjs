@@ -7,15 +7,8 @@
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadCourse, CONTENT_ROOT } from './load.mjs';
-import { ContentError } from './problems.mjs';
+import { ContentError, countByCode, plural, problemLine as line } from './problems.mjs';
 
-const countByCode = (ps) => {
-  const byCode = new Map();
-  for (const p of ps) byCode.set(p.code, (byCode.get(p.code) || 0) + 1);
-  return [...byCode].sort(([a], [b]) => a.localeCompare(b)).map(([c, n]) => `${c} ${n}`).join(', ');
-};
-const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
-const line = (p) => `${p.file}:${p.path} ${p.code} ${p.message}`;
 function printWarnings(warnings) {
   if (!warnings?.length) return;
   console.log('warnings:');

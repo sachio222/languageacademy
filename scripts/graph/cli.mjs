@@ -3,14 +3,16 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { runCheck } from './check.mjs';
 import { renderFixList, summarize, checkSummaryLines } from './report.mjs';
-import { dueAt } from './rules/reuse.mjs';
+import { dueFor } from './rules/reuse.mjs';
+import { loadCourse } from '../content/load.mjs';
+import { ContentError, countByCode, plural, problemLine } from '../content/problems.mjs';
 import { writeSortedJson } from './write-json.mjs';
 import { writeReportData } from './report-data.mjs';
 import { readBudget, writeBudget, checkBudgetParts, loweredParts, BUDGET_PARTS } from './budget.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
-const USAGE = 'usage: cli.mjs <check|due|report> <lang> [arg] [--native <code>] [--budget] [--lower-budget]';
+const USAGE = 'usage: cli.mjs <check|due|report> <lang> [arg] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
 const BUDGET_FILE = join(repoRoot, 'curriculum-graph/reports/issue-budget.json');
 
 async function main() {
@@ -22,6 +24,16 @@ async function main() {
     native = args[flag + 1];
     if (!native || native.startsWith('--')) { console.error(USAGE); process.exit(2); }
     args.splice(flag, 2);
+  }
+  // --content <dir>: the content folder to check (default content/<lang>), for check and due. The budget file stays
+  // the committed one, so --lower-budget and report take no --content.
+  let contentDir = null;
+  const cflag = args.indexOf('--content');
+  if (cflag >= 0) {
+    contentDir = args[cflag + 1];
+    if (!contentDir || contentDir.startsWith('--')) { console.error(USAGE); process.exit(2); }
+    contentDir = resolve(contentDir);
+    args.splice(cflag, 2);
   }
   // --budget: exit 1 only when a rule's count rises above curriculum-graph/reports/issue-budget.json (budget.mjs), in
   // either part: legacy (Units 1 to 12, the shelf) or new (Unit 13 onward, every rule at zero).
@@ -35,11 +47,22 @@ async function main() {
   const lower = takeFlag('--lower-budget');
   const budget = takeFlag('--budget') || lower;
   const [cmd, lang = 'fr', arg] = args;
-  if (!['check', 'due', 'report'].includes(cmd)) {
+  if (!['check', 'due', 'report'].includes(cmd) || (contentDir && (lower || cmd === 'report'))) {
     console.error(USAGE);
     process.exit(2);
   }
-  const { ctx, issues, stats } = await runCheck({ repoRoot, lang, native });
+  // Content that does not load is listed as content:validate lists it: each problem, then a count by code.
+  let content;
+  try {
+    content = loadCourse({ root: contentDir ?? join(repoRoot, 'content', lang), graphDir: join(repoRoot, 'curriculum-graph', 'languages', lang) });
+  } catch (e) {
+    if (!(e instanceof ContentError)) throw e;
+    for (const p of e.problems) console.error(problemLine(p));
+    console.error(`${plural(e.problems.length, 'problem')}: ${countByCode(e.problems)}`);
+    console.error('the checker reads only content that loads: fix these first (pnpm content:validate lists them with its warnings)');
+    process.exit(1);
+  }
+  const { ctx, issues, stats } = await runCheck({ repoRoot, lang, native, content });
   const summary = summarize(issues, stats);
 
   if (cmd === 'check') {
@@ -63,11 +86,10 @@ async function main() {
 
   if (cmd === 'due') {
     if (!arg) { console.error('due needs a moduleKey or a position number'); process.exit(2); }
-    const m = /^\d+$/.test(arg)
-      ? ctx.course.find((x) => x.position === Number(arg))
-      : ctx.course.find((x) => x.moduleKey === arg);
-    if (!m) { console.error(`no module matches "${arg}"`); process.exit(2); }
-    for (const d of dueAt(ctx, m.position)) {
+    // A course plan stub too: what it should reuse before it is written.
+    const found = dueFor(ctx, arg);
+    if (!found) { console.error(`no module matches "${arg}"`); process.exit(2); }
+    for (const d of found.due) {
       console.log(`${d.nodeId}\ttaught at ${d.taughtAt}\tlast use ${d.lastUse ?? 'none'}\twindow end ${d.windowEnd}`);
     }
     return;

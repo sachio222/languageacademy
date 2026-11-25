@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
-import { ruleReuse, usesByNode, dueAt } from '../rules/reuse.mjs';
+import { ruleReuse, usesByNode, dueAt, dueFor } from '../rules/reuse.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const base = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
@@ -109,4 +109,36 @@ test('a use in shown text counts for reuse like a typed one', () => {
   }));
   const ctx = makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course });
   assert.deepEqual(usesByNode(ctx).get(PARLER), [3]);
+});
+
+// The budget counts a miss where its window closes (final re-review N2): writing the module there is what meets it.
+test('a missed window names the module where it closes (budgetModuleKey)', () => {
+  const issues = ruleReuse(ctxFor(1, []));
+  assert.equal(issues[0].moduleKey, 'm1');
+  assert.equal(issues[0].budgetModuleKey, 'm3');
+  assert.equal(ruleReuse(ctxFor(1, [2, 6, 17]))[0].budgetModuleKey, 'm47');
+});
+
+// A course plan stub is not read (content-course.mjs), so nothing it will hold counts yet. A window that closes at a
+// stub waits for it: the miss is reported once the stub is written, and charged to it.
+const withPlanned = (course, planned) => ({
+  units: [{ unit_key: 'unit1', modules: [...course.map((m) => ({ module_key: m.moduleKey, position: m.position, status: 'written' })), ...planned.map((p) => ({ module_key: `m${p}`, position: p, status: 'planned' }))] }],
+});
+test('a window that closes at a planned module is no miss until that module is written', () => {
+  const written = course50([]).filter((m) => ![3, 4].includes(m.position));
+  const ctx = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: written }), content: withPlanned(written, [3, 4]) };
+  assert.deepEqual(ruleReuse(ctx), []);
+  // Written, the module at 3 does not use parler: the miss is its own.
+  const all = course50([]);
+  const done = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: all }), content: withPlanned(all, []) };
+  assert.deepEqual(ruleReuse(done).map((i) => [i.moduleKey, i.budgetModuleKey]), [['m1', 'm3']]);
+});
+
+test('dueFor finds a planned module by key, so a writer sees what it should reuse before writing it', () => {
+  const written = course50([]).filter((m) => m.position !== 3);
+  const ctx = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: written }), content: withPlanned(written, [3]) };
+  assert.deepEqual(dueFor(ctx, 'm3'), { position: 3, due: [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }] });
+  assert.deepEqual(dueFor(ctx, '3'), dueFor(ctx, 'm3'));
+  assert.equal(dueFor(ctx, 'm2').position, 2);
+  assert.equal(dueFor(ctx, 'nowhere'), null);
 });

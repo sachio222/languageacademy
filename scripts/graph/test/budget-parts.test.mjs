@@ -1,11 +1,16 @@
 // The issue budget in two parts (final review triage, ledger ruling 2026-11-25): legacy (Units 1 to 12 and the shelf,
-// today's counts, which can only go down) and new (Unit 13 onward, every rule at zero), so a module written in a new
-// unit can never hide behind the old units' headroom.
+// today's counts as a ceiling that only --lower-budget moves, and only down) and new (Unit 13 onward, every rule at
+// zero), so a module written in a new unit can never hide behind the old units' headroom.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { budgetPartOf, checkBudgetParts, BUDGET_PARTS } from '../budget.mjs';
+import { budgetPartOf, checkBudgetParts, countByPart, BUDGET_PARTS } from '../budget.mjs';
+import { loadCourse, CONTENT_ROOT } from '../../content/load.mjs';
+import { runCheck } from '../check.mjs';
+import { repoRoot } from './content-helpers.mjs';
 
 const issue = (rule, moduleKey) => ({ rule, moduleKey, severity: 'error' });
 const units = new Map([['a', 'unit3'], ['b', 'unit12'], ['c', 'unit13'], ['d', null]]);
@@ -35,4 +40,46 @@ test('the committed budget is in two parts, the new units at zero', () => {
   assert.deepEqual(Object.keys(budget).sort(), ['about', 'legacy', 'new']);
   assert.deepEqual(budget.new, {});
   assert.ok(Object.values(budget.legacy).every((n) => Number.isInteger(n) && n > 0));
+});
+
+test('an issue that names the module it is charged to (budgetModuleKey) counts in that module\'s part', () => {
+  // A reuse miss of a word taught in Unit 12 whose window closes in Unit 13 is Unit 13's to fix.
+  const miss = { rule: 'reuse-missed', moduleKey: 'b', budgetModuleKey: 'c', severity: 'warning' };
+  const r = checkBudgetParts([miss], unitOf, { legacy: { 'reuse-missed': 1 }, new: {} });
+  assert.deepEqual(r.counts, { legacy: {}, new: { 'reuse-missed': 1 } });
+  assert.deepEqual(r.new.over, [{ rule: 'reuse-missed', count: 1, budget: 0 }]);
+  // Charged back to Unit 12, it fits the legacy budget.
+  assert.deepEqual(checkBudgetParts([{ ...miss, budgetModuleKey: 'b' }], unitOf, { legacy: { 'reuse-missed': 1 }, new: {} }).new.over, []);
+});
+
+// The reviewer's sim (final re-review N2): a clean lesson written in Unit 13 while Unit 12's reading, practice set and
+// exam are still stubs. Moving the end of the written course past those stubs must charge nothing to Units 1 to 12.
+test('writing a clean Unit 13 lesson leaves every legacy count as it is', async (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-u13-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(CONTENT_ROOT, root, { recursive: true });
+  const key = 'qui-and-que-after-a-noun';
+  const stub = JSON.parse(readFileSync(join(root, 'modules', `${key}.json`), 'utf8'));
+  assert.equal(stub.status, 'planned');
+  const lesson = {
+    schema: stub.schema, module_key: key, kind: 'lesson', status: 'written', title: stub.title,
+    description: 'Join two ideas with {qui}.',
+    teaches: { words: [], constructions: ['fr:cx:relative.qui'] },
+    vocabulary: [{ word_id: 'chanter-fr', fr: 'chanter', gloss: 'to sing' }],
+    items: [{ id: 'i-l-homme-qui-chante', type: 'respond', situation: 'Describe the man.', cue: 'the man who sings', answer: "l'homme qui chante",
+      mistakes: [{ answer: "l'homme que chante", feedback: 'Use {qui} before a verb.' }] }],
+  };
+  writeFileSync(join(root, 'modules', `${key}.json`), JSON.stringify(lesson, null, 2) + '\n');
+  const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
+  Object.assign(outline.units.find((u) => u.unit_key === 'unit13'), { description: 'Join two ideas.', can_do: 'join two ideas', can_do_short: 'join ideas', can_do_example_fr: "L'homme qui parle." });
+  writeFileSync(join(root, 'course.json'), JSON.stringify(outline, null, 2) + '\n');
+  const graphDir = join(repoRoot, 'curriculum-graph', 'languages', 'fr');
+  const partsOf = async (dir) => {
+    const content = loadCourse({ root: dir, graphDir });
+    const { issues } = await runCheck({ repoRoot, lang: 'fr', content });
+    return countByPart(issues, (k) => content.modules.get(k)?.unit_key ?? null);
+  };
+  const [before, after] = [await partsOf(CONTENT_ROOT), await partsOf(root)];
+  assert.deepEqual(after.legacy, before.legacy);
+  assert.deepEqual(after.new, {}, 'the lesson is clean');
 });

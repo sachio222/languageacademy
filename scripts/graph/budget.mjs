@@ -1,6 +1,6 @@
 // The issue budget (curriculum-graph/reports/issue-budget.json): the most issues of each rule the course may have.
-// `graph:check --budget` fails when any rule's count rises above its budget, so counts can only go down; a rule the
-// budget does not name has a budget of 0. `--lower-budget` writes each lower count back, never a higher one.
+// `graph:check --budget` fails when any rule's count rises above its budget, and `--lower-budget` keeps every fall; a
+// rule the budget does not name has a budget of 0. `--lower-budget` writes each lower count back, never a higher one.
 import { existsSync, readFileSync } from 'node:fs';
 import { writeSortedJson } from './write-json.mjs';
 
@@ -41,8 +41,9 @@ export function writeBudget(file, budget) {
 /* ---------- two parts: legacy units and new units ---------- */
 
 // The budget file holds { about, legacy: { rule: n }, new: { rule: n } }. Legacy is Units 1 to 12, the Reference
-// shelf and course-wide issues, at the counts the conversion left (they can only go down); new is Unit 13 onward, at
-// zero, so a module written in a new unit can never hide behind the old units' headroom (ledger ruling 2026-11-25).
+// shelf and course-wide issues, at the counts the conversion left (a count above them fails; --lower-budget keeps a
+// fall); new is Unit 13 onward, at zero, so a module written in a new unit can never hide behind the old units'
+// headroom (ledger ruling 2026-11-25).
 export const BUDGET_PARTS = ['legacy', 'new'];
 export const LAST_LEGACY_UNIT = 12;
 
@@ -52,11 +53,16 @@ export function budgetPartOf(unitKey) {
   return m && Number(m[1]) > LAST_LEGACY_UNIT ? 'new' : 'legacy';
 }
 
-/** { legacy: { rule: count }, new: { rule: count } } of the issues; unitOf(moduleKey) gives a module's unit_key. */
+/**
+ * { legacy: { rule: count }, new: { rule: count } } of the issues; unitOf(moduleKey) gives a module's unit_key. An issue
+ * counts in the part of the module it is charged to: its budgetModuleKey when it names one (a reuse miss, where its
+ * window closes), else its moduleKey.
+ */
 export function countByPart(issues, unitOf) {
   const out = Object.fromEntries(BUDGET_PARTS.map((p) => [p, {}]));
   for (const i of issues) {
-    const part = budgetPartOf(i.moduleKey ? unitOf(i.moduleKey) : null);
+    const key = i.budgetModuleKey ?? i.moduleKey;
+    const part = budgetPartOf(key ? unitOf(key) : null);
     out[part][i.rule] = (out[part][i.rule] ?? 0) + 1;
   }
   return out;
