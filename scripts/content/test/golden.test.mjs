@@ -95,7 +95,7 @@ function run(mutate = null, edits = {}) {
   const adapt = adaptIn(c);
   const checks = {
     ...goldenChecks({ liveIds, course: c, lSources, handFixes: fixes, rewrites: REWRITES, plain, adapt }),
-    hand_fix_recorded: handFixCheck({ course: c, handFixes: fixes, handFixed: since.handFixed }),
+    hand_fix_recorded: handFixCheck({ course: c, handFixes: fixes, handFixed: since.handFixed, liveIds }),
   };
   const diffs = [];
   const stats = { lessons: 0, fields: 0 };
@@ -228,6 +228,57 @@ test('an edit with no recorded fix, or a module that differs from its fix, is st
     m.items = m.items.map((it) => (it.id === id ? { ...it, hint: 'Junk.' } : it));
     assert.ok(run(null, { modules: { '2024-01-06-basic-nouns': m } }).unexplained.length > 0 || run(null, { modules: { '2024-01-06-basic-nouns': m } }).off.length > 0);
   }
+});
+
+// C2 and C4 add items, concept cards and vocabulary cards to converted lessons (C0 fix round). content:migrate records
+// each as a hand fix; the golden test lets an added exercise, concept or card through only when it is recorded and no
+// live id maps to it.
+function writerAdds(key) {
+  const mod = structuredClone(course.modules.get(key));
+  const inserted = { id: 'i-added-by-hand-1', type: 'respond', situation: 'Say hello.', cue: 'hello', answer: 'bonjour' };
+  const appended = { id: 'i-added-by-hand-2', type: 'gapfill', text: '___ !', gloss: 'Hello!', blanks: [{ answer: 'bonjour' }] };
+  mod.items.splice(1, 0, inserted);
+  mod.items.push(appended);
+  const concept = { id: 'c-added-by-hand', term: '{bonjour} = hello', definition: 'A greeting for the day.', example: '{bonjour, Marie}' };
+  mod.concepts = [...(mod.concepts || []), concept];
+  const card = { word_id: 'added-by-hand-fr', fr: 'bonjour à tous', gloss: 'hello everyone' };
+  mod.vocabulary = [...(mod.vocabulary || []), card];
+  const parts = { [`items/${inserted.id}`]: inserted, [`items/${appended.id}`]: appended, concepts: mod.concepts, [`vocabulary/${card.word_id}`]: card };
+  return { mod, parts, fixes: { ...handFixes, [key]: { ...(handFixes[key] || {}), ...parts } } };
+}
+
+test('items, a concept card and a vocabulary card added to a converted lesson pass once content:migrate records them', () => {
+  const { mod, fixes } = writerAdds(TARGET);
+  const r = run(null, { modules: { [TARGET]: mod }, handFixes: fixes });
+  assert.deepEqual(r.unexplained.map(describe), []);
+  assert.deepEqual(r.off, []);
+  assert.ok(r.since.changed.has(TARGET));
+});
+
+test('an added item, concept card or vocabulary card that is not recorded still fails', () => {
+  const { mod, parts, fixes } = writerAdds(TARGET);
+  for (const part of Object.keys(parts)) {
+    const { [part]: _, ...rest } = fixes[TARGET];
+    const r = run(null, { modules: { [TARGET]: mod }, handFixes: { ...fixes, [TARGET]: rest } });
+    assert.ok(r.unexplained.length > 0, `${part} unrecorded`);
+  }
+  // Nothing recorded at all.
+  assert.ok(run(null, { modules: { [TARGET]: mod } }).unexplained.length > 0);
+});
+
+test('an added exercise or concept card that a live id maps to is no hand addition', () => {
+  const key = TARGET;
+  const { mod, parts } = writerAdds(key);
+  const c = { modules: new Map([[key, mod]]) };
+  const handFixed = new Map([[key, new Set(Object.keys(parts))]]);
+  const fixes = { [key]: parts };
+  const added = { module_key: key, path: 'exercises[+1]', live: undefined, converted: { id: `${key}.i-added-by-hand-1`, displayNumber: 2 } };
+  const card = { module_key: key, path: `concepts[+${mod.concepts.length - 1}]`, live: undefined, converted: {} };
+  const check = (ids) => handFixCheck({ course: c, handFixes: fixes, handFixed, liveIds: ids });
+  assert.equal(check({})(added), true);
+  assert.equal(check({})(card), true);
+  assert.equal(check({ [key]: { items: { [`${key}.2`]: 'i-added-by-hand-1' }, concepts: {} } })(added), false);
+  assert.equal(check({ [key]: { items: {}, concepts: { 9: 'c-added-by-hand' } } })(card), false);
 });
 
 test("a module whose source changed on main keeps no frozen counts; its differences still need a class", () => {

@@ -774,19 +774,43 @@ export function changedSince(baseline, { handFixes = {}, records = {} } = {}) {
  * whose fix in hand-fixes.json is new since the freeze, and the module holds exactly that fix there, so the learner sees
  * what the fix says. Parts: title, description, concepts, a vocabulary card (by word_id), an item (by its place, as the
  * adapter numbers it), a practice sentence (its item), a guide part (parts/<id>) and a passage block (passage/<id>).
+ * An item, concept card or vocabulary card added by hand passes when it is recorded and no live id maps to it, and so
+ * do the later live exercises it renumbers, by exactly the recorded additions before them.
  */
-export function handFixCheck({ course, handFixes = {}, handFixed = new Map() }) {
+export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), liveIds = {} }) {
   const mod = (key) => course?.modules.get(key) ?? null;
   const strip = (item) => (isObj(item) ? Object.fromEntries(Object.entries(item).filter(([k]) => k !== 'steps')) : item);
   const holds = (key, part, value) => handFixed.get(key)?.has(part) && JSON.stringify(canon(strip(value))) === JSON.stringify(canon(strip(handFixes[key]?.[part])));
+  // An item or concept card added by hand: no live exercise or card maps to it (live-ids.json), and hand-fixes.json
+  // records it, the item under its own id.
+  const liveItem = (key, id) => Object.values(liveIds[key]?.items ?? {}).includes(id);
+  const liveConcept = (key, id) => Object.values(liveIds[key]?.concepts ?? {}).includes(id);
+  const addedItem = (key, item) => !!item && !liveItem(key, item.id) && holds(key, `items/${item.id}`, item);
   return (d) => {
     const m = mod(d.module_key);
     if (!m || !handFixed.has(d.module_key)) return false;
     let p;
     if (d.path === 'title' || d.path === 'description') return holds(d.module_key, d.path, m[d.path]);
+    // An added card: the module holds the recorded concepts and no live card maps to the new one.
+    if ((p = /^concepts\[\+(\d+)\]$/.exec(d.path)) && d.live === undefined) {
+      const c = m.concepts?.[+p[1]];
+      return !!c && !liveConcept(d.module_key, c.id) && holds(d.module_key, 'concepts', m.concepts);
+    }
     if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts);
+    // An added exercise: the item it is drawn from was added by hand and is recorded.
+    if (/^exercises\[\+\d+\]$/.test(d.path) && d.live === undefined && isObj(d.converted))
+      return addedItem(d.module_key, m.items?.[d.converted.displayNumber - 1]);
+    // A live exercise numbered later because recorded added items now come before it: the same exercise (its live id),
+    // moved by exactly that many.
+    if (/^exercises\[\d+\]\.displayNumber$/.test(d.path) && d.exercise?.live && d.exercise?.converted) {
+      const { live, converted } = d.exercise;
+      if (live.id !== converted.id || !Number.isInteger(live.displayNumber) || !Number.isInteger(converted.displayNumber)) return false;
+      const before = (m.items ?? []).slice(0, converted.displayNumber - 1).filter((it) => addedItem(d.module_key, it)).length;
+      return before > 0 && converted.displayNumber - live.displayNumber === before;
+    }
     if ((p = /^vocabularyReference\[\+?(\d+)\]/.exec(d.path))) {
-      const card = d.path.includes('[+') ? d.cards?.converted?.[+p[1]] : d.cards?.live?.[+p[1]];
+      // An added card's row carries the card itself (compareLesson attaches the tables to paired rows only).
+      const card = d.path.includes('[+') ? (d.cards?.converted?.[+p[1]] ?? (d.live === undefined ? d.converted : undefined)) : d.cards?.live?.[+p[1]];
       const w = (m.vocabulary || []).find((x) => x.fr === card?.french && x.gloss === card?.english);
       return !!w && holds(d.module_key, `vocabulary/${w.word_id}`, w);
     }

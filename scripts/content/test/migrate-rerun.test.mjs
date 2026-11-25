@@ -267,3 +267,30 @@ test('the report holds no news of one run: source changes, additions and removal
   assert.equal(renderReport([keep, ...news], summary), renderReport([keep], summary));
   assert.deepEqual([...RUN_ONLY_KINDS].sort(), ['conflict_accepted', 'id_new_answer', 'source_added', 'source_changed', 'source_removed']);
 });
+
+// C2 and C4 add items and cards by hand to converted lessons: each is a hand fix under its own id, and --force gives
+// it back in its place (C0 fix round).
+test('an item and a vocabulary card added by hand are recorded as hand fixes, and --force gives them back in place', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  const added = { id: 'i-tu-es-la', type: 'respond', situation: 'Say your friend is here.', cue: 'you are here', answer: 'tu es là' };
+  edited.items.splice(1, 0, added);
+  const card = { word_id: 'la-fr', fr: 'là', gloss: 'there, here' };
+  edited.vocabulary.push(card);
+  const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
+  assert.deepEqual(second.mod, edited, 'a normal run keeps the additions where they are written');
+  assert.deepEqual(second.handFixes['items/i-tu-es-la'], added);
+  assert.deepEqual(second.handFixes['vocabulary/la-fr'], card);
+  assert.equal(second.record.items['i-tu-es-la'], undefined, 'an added item has no source, so no record entry');
+  // A rerun keeps them recorded; --force, from the source and the hand fixes alone, writes the same file.
+  const rerun = convertModule(old, { ...ctx, existing: clone(second.mod), record: second.record });
+  assert.deepEqual(rerun.mod, edited);
+  assert.deepEqual(rerun.handFixes, second.handFixes);
+  const forced = convertModule(old, { ...ctx, existing: null, record: null, handFixes: second.handFixes, written: second.mod, idRecord: second.record });
+  assert.deepEqual(forced.mod, edited);
+  assert.deepEqual(forced.handFixes, second.handFixes);
+  // Removed again by hand, the addition leaves the hand fixes.
+  const third = convertModule(old, { ...ctx, existing: clone(first.mod), record: second.record });
+  assert.equal('items/i-tu-es-la' in third.handFixes, false);
+  assert.equal('vocabulary/la-fr' in third.handFixes, false);
+});

@@ -278,6 +278,9 @@ export function convertModule(old, opts = {}) {
   // and the removed one is reported.
   const exItems = Array.isArray(ex?.items) ? ex.items : [];
   const exIndex = new Map(exItems.map((it, i) => [it.id, i]));
+  // Where each item sits: the file's order, and under --force the written file's (read for ids), so --force gives the
+  // file back in its written order, hand-added items in their places.
+  const sortIndex = ex ? exIndex : new Map((Array.isArray(merger.idEx?.items) ? merger.idEx.items : []).map((it, i) => [it.id, i]));
   const recItems = Object.fromEntries(Object.entries(rec?.items ?? {}).map(([id, e]) => [id, baseOf(e)]));
   // Ids come from the written file and its record under --force too (merge.mjs createMerger idExisting, idRecord).
   const idItems = Array.isArray(merger.idEx?.items) ? merger.idEx.items : [];
@@ -342,7 +345,7 @@ export function convertModule(old, opts = {}) {
       const value = `items/${id}` in fixes && !ex ? clone(fixes[`items/${id}`]) : { id, ...withoutId(f.item) };
       outRecord.items[id] = { src: f.hash, key: f.key, answer: f.answer, out: hashOf({ id, ...withoutId(f.item) }), ref: f.src.ref };
       // A replacement takes the place of the item it replaces.
-      const sort = f.replaces && exIndex.has(f.replaces.id) ? exIndex.get(f.replaces.id) : null;
+      const sort = f.replaces && sortIndex.has(f.replaces.id) ? sortIndex.get(f.replaces.id) : null;
       if (f.replaces) {
         const shown = (xs) => xs.map((x) => `"${x}"`).join(', ');
         add(sort === null ? f.src.ref : `items[${sort}]`, 'id_new_answer',
@@ -357,7 +360,7 @@ export function convertModule(old, opts = {}) {
     const r = mergePart(`items/${f.id}`, `items[${exIndex.get(f.id) ?? '?'}]`, fileHas, exItems[exIndex.get(f.id)], freshItem, base, f.hash);
     outRecord.items[f.id] = { src: r.src ?? f.hash, key: f.key, answer: f.answer, out: r.out, ref: f.src.ref };
     // An item removed by hand stays removed; the record keeps its id.
-    if (r.value) entries.push({ f, id: f.id, item: r.value, sort: exIndex.get(f.id) ?? null, state: 'merged', freshItem });
+    if (r.value) entries.push({ f, id: f.id, item: r.value, sort: sortIndex.get(f.id) ?? null, state: 'merged', freshItem });
     else if (!fileHas && base?.out !== undefined) noteFix(`items/${f.id}`, undefined, freshItem);
   }
   // Items written by hand (never made by a run) stay; items whose source exercise is gone go.
@@ -366,6 +369,18 @@ export function convertModule(old, opts = {}) {
     if (!(it.id in recItems)) entries.push({ f: null, id: it.id, item: clone(it), sort: exIndex.get(it.id), state: 'hand' });
     else if (!replaced.has(it.id)) add(`items[${exIndex.get(it.id)}]`, 'source_removed', `${it.id}: its source exercise is gone, so the item is removed`);
   }
+  // --force: items added by hand come back from the hand fixes, in their written places.
+  if (!ex) {
+    const have = new Set(entries.map((e) => e.id));
+    for (const [k, v] of Object.entries(fixes)) {
+      const id = k.startsWith('items/') ? k.slice('items/'.length) : null;
+      if (!id || v === null || have.has(id) || id in idRecItems) continue;
+      entries.push({ f: null, id, item: clone(v), sort: sortIndex.get(id) ?? Infinity, state: 'hand' });
+    }
+  }
+  // An item added by hand is a hand fix too (hand-fixes.json, under its id), so --force gives it back and the golden
+  // test can tell a recorded addition from a stray one.
+  for (const e of entries) if (e.state === 'hand') noteFix(`items/${e.id}`, e.item, undefined);
 
   // Order: written order; a new item follows the item made from the source exercise before it.
   const bySource = new Map(entries.filter((e) => e.f).map((e) => [e.f, e]));

@@ -418,11 +418,19 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
       add(`vocabulary/${w.word_id}`, 'source_removed', `"${w.fr}" (${w.word_id}): its source card is gone, so the card is removed`);
     }
   }
-  // Cards written by hand, with no source card, stay (a normal run; --force brings them back from the hand fixes).
-  for (const w of fileVocab) {
-    if (usedFile.has(w)) continue;
+  // Cards written by hand, with no source card, stay (a normal run; --force brings them back from the hand fixes). Each
+  // is a hand fix under its word id, so --force gives it back and the golden test can tell a recorded addition.
+  const handCards = fileVocab.filter((w) => !usedFile.has(w));
+  if (!ex) {
+    const have = new Set(vocab.map((w) => w.word_id));
+    const recorded = new Set((idRec?.vocabulary ?? []).map((r) => r.id).filter(Boolean));
+    for (const [k, v] of Object.entries(m.fixes))
+      if (k.startsWith('vocabulary/') && isObj(v) && isStr(v.word_id) && k === `vocabulary/${v.word_id}` && !have.has(v.word_id) && !recorded.has(v.word_id)) handCards.push(v);
+  }
+  for (const w of handCards) {
     vocab.push(clone(w));
     rememberWord(w, key, seenBySpelling);
+    noteFix(`vocabulary/${w.word_id}`, w, undefined);
   }
   return { vocab, record: outRecord };
 }
