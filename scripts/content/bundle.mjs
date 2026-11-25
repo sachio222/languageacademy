@@ -428,22 +428,30 @@ const unitText = (u) => ({
  * @param course  loadCourse() / assembleCourse() output
  * @param opts    { dictionary: { byId, bySpelling } (bundle-sources.mjs loadDictionary), stories: L story records (l-sources.json),
  *                  legacyPositions: { "<live position>": module_key }, previous: an earlier bundle or null,
- *                  units: unit_keys to include (null: every unit up to the first with a planned module),
+ *                  units: unit_keys to include (null: every unit up to the first that is not ready),
+ *                  stopAtUnready: true stops before the first unit holding a planned module or a reading whose story has no
+ *                  record in `stories` (story art still to come); false builds every unit (the written-course check),
  *                  build: { source_commit, built_at } or null }
  * @returns { bundle, report }  report lists what the builder defaulted or could not carry, for the CLI and the task report
  */
 export function buildBundleWithReport(course, opts = {}) {
-  const { dictionary = NO_DICTIONARY, stories = [], legacyPositions = {}, previous = null, units: onlyUnits = null, build = null } = opts;
-  const report = { topic_defaulted: [], units_stopped_at: null, stories_missing: [], notes: [] };
+  const { dictionary = NO_DICTIONARY, stories = [], legacyPositions = {}, previous = null, units: onlyUnits = null, build = null, stopAtUnready = true } = opts;
+  const report = { topic_defaulted: [], units_stopped_at: null, stopped_because: null, stories_missing: [], notes: [] };
   const note = (code, detail) => report.notes.push({ code, detail });
   const storyRecord = (id) => stories.find((s) => `reading${s.n}` === id) ?? null;
   const ctx = { dictionary, storyOf: storyRecord, note };
 
-  // Units in outline order, up to the first that still holds a planned module (spec 7).
+  // Units in outline order, up to the first that is not ready (spec 7): one that still holds a planned module, or a
+  // reading whose story art L does not have yet (a story_missing L would refuse; final review I7).
   const units = [];
   for (const u of course.units) {
-    if (u.modules.some((m) => m.status === 'planned')) {
+    const planned = u.modules.find((m) => m.status === 'planned');
+    const storyless = u.modules.find((m) => m.kind === 'reading' && !storyRecord(m.story_id));
+    if (stopAtUnready && (planned || storyless)) {
       report.units_stopped_at = u.unit_key;
+      report.stopped_because = planned
+        ? { code: 'planned', module_key: planned.module_key }
+        : { code: 'story_missing', module_key: storyless.module_key, story_id: storyless.story_id ?? null };
       break;
     }
     if (!onlyUnits || onlyUnits.includes(u.unit_key)) units.push(u);

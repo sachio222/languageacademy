@@ -159,7 +159,12 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
   console.log(`hash ${bundleHash(bundle)}`);
   console.log(`bytes ${Buffer.byteLength(text)}`);
   console.log(`entries ${bundle.entries.length} (units ${bundle.units.length}, reference pages ${bundle.shelf.pages.length}, items ${items}, words ${bundle.words.length})`);
-  if (report.units_stopped_at) console.log(`stopped before ${report.units_stopped_at}, which holds a planned module`);
+  if (report.stopped_because?.code === 'planned') console.log(`stopped before ${report.units_stopped_at}, which holds a planned module (${report.stopped_because.module_key})`);
+  else if (report.stopped_because?.code === 'story_missing')
+    console.log(
+      `stopped before ${report.units_stopped_at}: ${report.stopped_because.module_key} names story ${report.stopped_because.story_id}, which has no record in legacy/l-sources.json ` +
+        '(its story art is not in L yet; `pnpm content:migrate l-sources` adds it once L has it)',
+    );
   if (report.topic_defaulted.length) console.log(`topic defaulted to the unit name for ${report.topic_defaulted.length} entries`);
   for (const n of report.notes) console.log(`note ${n.code} ${n.detail}`);
   // IPA refused for the dictionary owner: those phrases go out with no IPA.
@@ -182,21 +187,30 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
     }
     for (const p of checked.problems) console.error(`checker ${p.severity} ${p.code} ${p.pointer} ${p.detail}`);
     console.log(checked.ok ? "checker ok (L's check_bundle.py)" : "checker FAIL (L's check_bundle.py)");
-    // The bundle stops before the first unit with a planned module, so the written modules of that unit and later
-    // ones are not in it. The written course alone (planned modules left out) is built and checked too, never written.
+    // The bundle stops before the first unit that is not ready, so the written modules of that unit and later ones
+    // are not in it. The written course alone (planned modules left out, no stop) is built and checked too, never
+    // written. A reading there waiting for its story art is a warning (story_missing), since it cannot publish yet.
     let writtenOk = true;
     if (report.units_stopped_at && !units) {
-      const written = buildBundleWithReport(loadCourse({ root, planned: false }), { ...sources, previous, build }).bundle;
-      const wp = releaseProblems(written, previous);
+      const written = buildBundleWithReport(loadCourse({ root, planned: false }), { ...sources, previous, build, stopAtUnready: false }).bundle;
+      const reached = new Set(bundle.units.map((u) => u.unit_key));
+      const warnUnits = new Set(written.units.map((u) => u.unit_key).filter((k) => !reached.has(k)));
+      const wp = releaseProblems(written, previous, { warnUnits });
       for (const p of wp) console.error(`written course: ${p.severity} ${p.code} ${p.module_key ?? ''} ${p.detail}`);
       const wc = runChecker(written);
       if (wc.error) {
         console.error(`written course: ${wc.error}`);
         return 1;
       }
-      for (const p of wc.problems) console.error(`written course: checker ${p.severity} ${p.code} ${p.pointer} ${p.detail}`);
-      writtenOk = wc.ok && !wp.some((p) => p.severity === 'error');
-      console.log(`written course (planned modules left out): entries ${written.entries.length} (units ${written.units.length}); checker ${wc.ok ? 'ok' : 'FAIL'}`);
+      // L's checker reports the same story_missing at /entries/<i>/story_id; it is a warning there too.
+      const unreached = (p) => {
+        const m = /^\/entries\/(\d+)\/story_id$/.exec(p.pointer ?? '');
+        return p.code === 'story_missing' && !!m && warnUnits.has(written.entries[+m[1]]?.unit_key);
+      };
+      for (const p of wc.problems) console.error(`written course: checker ${unreached(p) ? 'warning' : p.severity} ${p.code} ${p.pointer} ${p.detail}`);
+      const checkerOk = !wc.problems.some((p) => p.severity === 'error' && !unreached(p));
+      writtenOk = checkerOk && !wp.some((p) => p.severity === 'error');
+      console.log(`written course (planned modules left out): entries ${written.entries.length} (units ${written.units.length}); checker ${checkerOk ? 'ok' : 'FAIL'}`);
     }
     return errors.length || !checked.ok || !writtenOk ? 1 : 0;
   }

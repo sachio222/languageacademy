@@ -40,8 +40,10 @@ function answerChanged(now, before) {
 /**
  * @param bundle    a la-bundle@1 bundle
  * @param previous  the last published bundle, or null (then module_key_missing and item_id_reused are not checked)
+ * @param opts      { warnUnits: Set of unit_keys whose story_missing is a warning: units of the written course the real
+ *                  bundle does not reach yet, so a reading waiting for its story art never fails CI (final review I7) }
  */
-export function releaseProblems(bundle, previous = null) {
+export function releaseProblems(bundle, previous = null, { warnUnits = new Set() } = {}) {
   const out = [];
   const retired = new Set([...bundle.retired, ...(previous?.retired || [])].map((r) => r.module_key));
 
@@ -65,7 +67,9 @@ export function releaseProblems(bundle, previous = null) {
   const stories = new Set(bundle.stories.map((s) => s.story_id));
   for (const e of bundle.entries)
     if (e.kind === 'reading' && (!e.story_id || !stories.has(e.story_id)))
-      out.push(problem('story_missing', e.module_key, 'reading-passage', e.story_id ? `story ${e.story_id} has no row in stories` : 'the reading names no story'));
+      out.push(
+        problem('story_missing', e.module_key, 'reading-passage', e.story_id ? `story ${e.story_id} has no row in stories` : 'the reading names no story', warnUnits.has(e.unit_key) ? 'warning' : 'error'),
+      );
 
   // section_id_invalid, estimate_invalid, access_rule_broken
   for (const e of bundle.entries) {
