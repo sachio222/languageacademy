@@ -432,6 +432,10 @@ export function checkAnswer(userAnswer, expectedAnswer, options = {}) {
   let user = userAnswer.trim();
   let expected = expectedAnswer.trim();
 
+  // Fold curly/modifier apostrophes (iPhone and Mac keyboards type U+2019) to a straight one
+  user = user.replace(/[\u2018\u2019\u02BC]/g, "'");
+  expected = expected.replace(/[\u2018\u2019\u02BC]/g, "'");
+
   if (!caseSensitive) {
     user = user.toLowerCase();
     expected = expected.toLowerCase();
