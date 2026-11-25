@@ -20,7 +20,7 @@
         "name": "Paris",
         "description": "Capital and largest city of France, known as the City of Light",
         "image": "/img/external/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques__Paris_ao_t_2014__2_-085432.jpg",
-        "image_credit": null,
+        "image_credit": "Yann Caradec, CC BY-SA 2.0, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Paris"
       }
     },
@@ -32,7 +32,7 @@
         "name": "Notre-Dame de Paris",
         "description": "Medieval Catholic cathedral built 1163-1345, Gothic architecture masterpiece on Île de la Cité",
         "image": "/img/wikipedia/Notre-Dame_de_Paris__4_October_2017-b92c2e.jpg",
-        "image_credit": null,
+        "image_credit": "Ali Sabbagh, public domain, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
       }
     },
@@ -44,7 +44,7 @@
         "name": "Montmartre",
         "description": "Historic hilltop neighborhood famous for artists, Sacré-Cœur Basilica, and bohemian culture since 1800s",
         "image": "/img/external/sacre-coeur-montmartre.jpg",
-        "image_credit": "Gio Terra (Terragio67, WikiCommons), CC BY-SA 4.0",
+        "image_credit": "Terragio67 (Gio Terra), CC BY-SA 4.0, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Montmartre"
       }
     },
@@ -56,7 +56,7 @@
         "name": "Nice",
         "description": "Mediterranean resort city on French Riviera, known for Promenade des Anglais and beautiful beaches",
         "image": "/img/wikipedia/CollineDuChateau_NiceFrance2022-b921bd.png",
-        "image_credit": null,
+        "image_credit": "3602kiva, public domain, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Nice"
       }
     },
@@ -67,8 +67,8 @@
       "info_card": {
         "name": "Bordeaux",
         "description": "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
-        "image": "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
-        "image_credit": null,
+        "image": "/img/wikipedia/Bordeaux_Place_de_la_Bourse_nuit_683778.jpg",
+        "image_credit": "Mariette, public domain, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Bordeaux"
       }
     },
@@ -80,7 +80,7 @@
         "name": "Louvre Museum",
         "description": "World's largest art museum, 782,910 sq ft, houses Mona Lisa, opened 1793, 8.9 million visitors/year",
         "image": "/img/external/Louvre_Museum_Wikimedia_Commons-1851e9.jpg",
-        "image_credit": null,
+        "image_credit": "Benh LIEU SONG, CC BY-SA 3.0, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Louvre"
       }
     },
@@ -92,7 +92,7 @@
         "name": "Seine River",
         "description": "777 km river flowing through Paris, divides Left Bank from Right Bank, integral to city's history",
         "image": "/img/external/Paris_-_Eiffelturm_und_Marsfeld2-4d8187.jpg",
-        "image_credit": null,
+        "image_credit": "Wladyslaw (Taxiarchos228), CC BY 3.0, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Seine"
       }
     },
@@ -104,7 +104,7 @@
         "name": "Eiffel Tower",
         "description": "Iron lattice tower built 1887-1889, 330m tall, symbol of Paris, 7 million visitors per year",
         "image": "/img/external/Tour_Eiffel_Wikimedia_Commons__cropped_-302994.jpg",
-        "image_credit": null,
+        "image_credit": "Benh LIEU SONG, CC BY-SA 3.0, via Wikimedia Commons",
         "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
       }
     },

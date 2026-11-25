@@ -461,7 +461,7 @@ test('Reading 10 words carry their info card in the bundle', () => {
   const withCard = bundle.words.filter((w) => w.info_card);
   assert.deepEqual(withCard.map((w) => w.word_id).sort(), [...cards.keys()].sort());
   for (const w of withCard) assert.deepEqual(w.info_card, cards.get(w.word_id), w.word_id);
-  assert.equal(cards.get('montmartre-fr').image_credit, 'Gio Terra (Terragio67, WikiCommons), CC BY-SA 4.0');
+  assert.equal(cards.get('montmartre-fr').image_credit, 'Terragio67 (Gio Terra), CC BY-SA 4.0, via Wikimedia Commons');
   // The entry's own word list stays as L's schema has it: the card is on the word only (as serialized).
   assert.ok(!JSON.parse(JSON.stringify(contentOf(bundle, '2024-02-01-reading-10').words)).some((w) => 'info_card' in w));
   assert.ok(!unit1.words.some((w) => w.info_card));
