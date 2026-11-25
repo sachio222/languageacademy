@@ -18,6 +18,8 @@ export const plainFieldMessage = (t) => `${t.path} is ${t.role === 'fr' ? 'Frenc
 
 // Per type: required and optional fields. Roles/typed for the simple string fields live in FIELD_ROLES.
 export const COMMON = ['id', 'type', 'hint', 'mistakes', 'word_ids', 'steps'];
+// The fields of a mistakes entry, a gap-fill blank and an option (guide checks share options). Any other is field_unknown.
+export const PART_FIELDS = { mistake: ['answer', 'feedback'], blank: ['answer', 'accept'], option: ['text', 'fr', 'right'] };
 export const SHAPES = {
   translate: { req: ['prompt', 'answer'], opt: ['accept'] },
   respond: { req: ['situation', 'answer'], opt: ['cue', 'accept'] },
@@ -117,7 +119,7 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
     else
       item.mistakes.forEach((m, i) => {
         if (!isObj(m) || !isStr(m.answer) || !isStr(m.feedback)) return bad(`mistakes[${i}]`, 'field_type', 'mistake needs answer and feedback strings');
-        for (const k of Object.keys(m)) if (k !== 'answer' && k !== 'feedback') bad(`mistakes[${i}].${k}`, 'field_unknown', `${k} is not a field of a mistake`);
+        for (const k of Object.keys(m)) if (!PART_FIELDS.mistake.includes(k)) bad(`mistakes[${i}].${k}`, 'field_unknown', `${k} is not a field of a mistake`);
       });
   }
   if (item.word_ids !== undefined && !(Array.isArray(item.word_ids) && item.word_ids.every(isStr))) bad('word_ids', 'field_type', 'word_ids must be a list of strings');
@@ -137,7 +139,7 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
       else {
         item.blanks.forEach((b, i) => {
           if (!isObj(b) || !isStr(b.answer)) return bad(`blanks[${i}]`, 'field_type', 'blank needs an answer string');
-          for (const k of Object.keys(b)) if (k !== 'answer' && k !== 'accept') bad(`blanks[${i}].${k}`, 'field_unknown', `${k} is not a field of a blank`);
+          for (const k of Object.keys(b)) if (!PART_FIELDS.blank.includes(k)) bad(`blanks[${i}].${k}`, 'field_unknown', `${k} is not a field of a blank`);
           if (b.accept !== undefined && !(Array.isArray(b.accept) && b.accept.every(isStr))) bad(`blanks[${i}].accept`, 'field_type', 'accept must be a list of strings');
         });
         if (typeof item.text === 'string') {
@@ -180,7 +182,7 @@ export function checkOptions(item, bad) {
   let right = 0;
   o.forEach((opt, i) => {
     if (!isObj(opt) || !isStr(opt.text)) return bad(`options[${i}]`, 'options_invalid', 'option needs a text string');
-    for (const k of Object.keys(opt)) if (!['text', 'fr', 'right'].includes(k)) bad(`options[${i}].${k}`, 'field_unknown', `${k} is not a field of an option`);
+    for (const k of Object.keys(opt)) if (!PART_FIELDS.option.includes(k)) bad(`options[${i}].${k}`, 'field_unknown', `${k} is not a field of an option`);
     for (const k of ['fr', 'right']) if (opt[k] !== undefined && typeof opt[k] !== 'boolean') bad(`options[${i}].${k}`, 'options_invalid', `${k} is true or false`);
     if (opt.right === true) right++;
   });

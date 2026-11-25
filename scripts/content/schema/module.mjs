@@ -199,8 +199,8 @@ export const KIND_SCHEMAS = {
 // A unit exam's title comes from the outline when the file has none (spec 5.8).
 export const REQUIRED_WRITTEN = { default: ['title', 'description'], unit_exam: ['description'] };
 // Practice sets and exams teach nothing (spec 5.8): these fields on them are teaches_in_test, not field_unknown.
-const TEACHING_FIELDS = ['vocabulary', 'concepts', 'tables'];
-const TEST_KINDS = ['practice', 'unit_exam'];
+export const TEACHING_FIELDS = ['vocabulary', 'concepts', 'tables'];
+export const TEST_KINDS = ['practice', 'unit_exam'];
 // A planned module holds only what the course plan settles (plan Task 17).
 export const PLANNED_FIELDS = { schema: null, module_key: null, kind: null, status: null, title: S('native_fr'), teaches: TEACHES, plan: PLAN };
 
