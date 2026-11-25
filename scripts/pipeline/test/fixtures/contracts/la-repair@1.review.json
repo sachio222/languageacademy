@@ -1,0 +1,19 @@
+{
+  "schema": "la-repair@1",
+  "module_key": "qui-and-que-after-a-noun",
+  "round": 2,
+  "reviewer_source": "review",
+  "previous_draft_sha256": "71aa4c834e61bf1ee83ba110693cf65837ab138db94960cce22393f42e32a139",
+  "brief_sha256": "e3b7a76fae01618e9cb718c25e7c8a23ef8a8379c37dba093d37230897849dd3",
+  "reasons": [
+    {
+      "source": "review",
+      "code": "R3",
+      "path": "/items/4/accept",
+      "detail": "A learner who writes the equally correct « voilà le film que j'ai vu » is marked wrong.",
+      "required_fix": "Add the voilà version to accept."
+    }
+  ],
+  "rounds_left": 2,
+  "keep_item_ids": false
+}

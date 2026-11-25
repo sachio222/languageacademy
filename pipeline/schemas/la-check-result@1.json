@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-check-result@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "check", "check_version", "module_key", "round", "draft_sha256", "context_fingerprint", "status", "duration_ms", "findings"],
+  "properties": {
+    "schema": { "const": "la-check-result@1" },
+    "check": { "type": "string", "description": "check id from the table below, e.g. C6" },
+    "check_version": { "type": "string" },
+    "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+    "round": { "type": "integer" },
+    "draft_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "context_fingerprint": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "status": { "enum": ["pass", "fail", "error", "skipped"], "description": "error: the check itself could not run (missing Python, a checker crash); never the draft's fault and never a repair round" },
+    "duration_ms": { "type": "integer" },
+    "findings": { "type": "array", "items": { "$ref": "la-pipeline-common@1#/$defs/finding" } },
+    "metrics": { "type": "object", "description": "check-specific numbers, e.g. patterns_used, patterns_known, distinct_words" },
+    "error": { "type": ["string", "null"] }
+  }
+}

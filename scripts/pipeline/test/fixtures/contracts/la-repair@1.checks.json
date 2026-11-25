@@ -1,0 +1,26 @@
+{
+  "schema": "la-repair@1",
+  "module_key": "qui-and-que-after-a-noun",
+  "round": 2,
+  "reviewer_source": "checks",
+  "previous_draft_sha256": "71aa4c834e61bf1ee83ba110693cf65837ab138db94960cce22393f42e32a139",
+  "brief_sha256": "e3b7a76fae01618e9cb718c25e7c8a23ef8a8379c37dba093d37230897849dd3",
+  "reasons": [
+    {
+      "source": "check",
+      "code": "untaught-word",
+      "path": "/items/7/answer",
+      "detail": "fr:lex:rencontrer is not taught before position 173",
+      "required_fix": "Use a verb taught before position 173, such as voir or connaître."
+    },
+    {
+      "source": "check",
+      "code": "reuse-missed",
+      "path": "",
+      "detail": "fr:lex:arbre (taught at position 124) expected by position 173; last use at position 158",
+      "required_fix": "Use arbre in one item."
+    }
+  ],
+  "rounds_left": 3,
+  "keep_item_ids": false
+}

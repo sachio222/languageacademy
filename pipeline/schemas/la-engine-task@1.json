@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-engine-task@1",
+  "description": "The task file the core writes for an engine (design section 5.1, EngineTask). Every field is required; module_key, lens, header_phase and output_schema follow from the role. A header task's module_key is header:<unit_key>:<header_phase>; contracts/index.mjs checks the unit_key part, which JSON Schema cannot compare.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "task_id", "role", "tenant", "module_key", "unit_key", "header_phase", "lens", "round", "input_sha256", "input_path", "result_path", "prompt", "output_schema", "model", "effort", "deadline", "self_check"],
+  "properties": {
+    "schema": { "const": "la-engine-task@1" },
+    "task_id": { "$ref": "la-pipeline-common@1#/$defs/taskId" },
+    "role": { "enum": ["draft", "repair", "review", "header"] },
+    "tenant": { "type": "string", "pattern": "^[a-z]{2}-[a-z]{2}$" },
+    "module_key": { "anyOf": [
+      { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+      { "type": "string", "pattern": "^header:unit[0-9]+:(interim|final)$", "description": "a header task's subject key" } ] },
+    "unit_key": { "$ref": "la-pipeline-common@1#/$defs/unitKey" },
+    "header_phase": { "enum": ["interim", "final", null] },
+    "lens": { "enum": ["primary", "french", "method", null] },
+    "round": { "type": "integer", "minimum": 1 },
+    "input_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "SHA-256 of the input file as written: brief, repair request or review request" },
+    "input_path": { "type": "string", "minLength": 1 },
+    "result_path": { "type": "string", "minLength": 1, "description": "the one file the engine may write" },
+    "prompt": { "type": "object", "additionalProperties": false, "required": ["id", "version", "sha256", "path"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "version": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+        "path": { "type": "string", "minLength": 1 } } },
+    "output_schema": { "enum": ["la-draft@1", "la-review-verdict@1", "la-unit-header@1"] },
+    "model": { "type": ["string", "null"] },
+    "effort": { "type": ["string", "null"] },
+    "deadline": { "$ref": "la-pipeline-common@1#/$defs/time" },
+    "self_check": { "type": "boolean" }
+  },
+  "allOf": [
+    { "if": { "required": ["role"], "properties": { "role": { "enum": ["draft", "repair"] } } },
+      "then": { "properties": { "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "lens": { "const": null }, "header_phase": { "const": null }, "output_schema": { "const": "la-draft@1" } } } },
+    { "if": { "required": ["role"], "properties": { "role": { "const": "review" } } },
+      "then": { "properties": { "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" }, "lens": { "enum": ["primary", "french", "method"] }, "header_phase": { "const": null }, "output_schema": { "const": "la-review-verdict@1" } } } },
+    { "if": { "required": ["role"], "properties": { "role": { "const": "header" } } },
+      "then": { "properties": { "module_key": { "type": "string", "pattern": "^header:unit[0-9]+:(interim|final)$" }, "lens": { "const": null }, "header_phase": { "enum": ["interim", "final"] }, "output_schema": { "const": "la-unit-header@1" } } } },
+    { "if": { "required": ["role", "header_phase"], "properties": { "role": { "const": "header" }, "header_phase": { "const": "interim" } } },
+      "then": { "properties": { "module_key": { "pattern": ":interim$" } } } },
+    { "if": { "required": ["role", "header_phase"], "properties": { "role": { "const": "header" }, "header_phase": { "const": "final" } } },
+      "then": { "properties": { "module_key": { "pattern": ":final$" } } } }
+  ]
+}

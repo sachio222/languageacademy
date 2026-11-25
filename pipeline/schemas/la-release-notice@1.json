@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-release-notice@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "language", "bundle_file_sha256", "bundle_hash", "bundle_path", "source_commit", "built_at", "units", "previous_release_sha256", "diff", "checks", "stopped_before", "story_handoffs"],
+  "properties": {
+    "schema": { "const": "la-release-notice@1" },
+    "language": { "type": "string" },
+    "bundle_file_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "SHA-256 of the file bytes as written; acknowledgement matches on this" },
+    "bundle_hash": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "bundleHash(): canonical JSON of the content without build" },
+    "bundle_path": { "type": "string" },
+    "source_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "built_at": { "$ref": "la-pipeline-common@1#/$defs/time" },
+    "units": { "type": "array", "items": { "$ref": "la-pipeline-common@1#/$defs/unitKey" } },
+    "previous_release_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "diff": { "type": "object", "additionalProperties": false, "required": ["added", "changed", "moved", "retired"],
+      "properties": { "added": { "type": "array", "items": { "type": "string" } }, "changed": { "type": "array", "items": { "type": "string" } },
+        "moved": { "type": "array", "items": { "type": "string" } }, "retired": { "type": "array", "items": { "type": "string" } } } },
+    "checks": { "type": "object", "additionalProperties": false, "required": ["release", "l_checker"],
+      "properties": { "release": { "const": "ok" }, "l_checker": { "const": "ok" } } },
+    "stopped_before": { "type": ["object", "null"], "description": "the first unit the bundle does not reach, and why (planned, story_missing)" },
+    "story_handoffs": { "type": "array", "description": "approved readings whose story L has not made yet",
+      "items": { "type": "object", "additionalProperties": false, "required": ["story_id", "module_key", "blocks_sha256"], "properties": {
+        "story_id": { "type": "string" }, "module_key": { "type": "string" }, "blocks_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" } } } }
+  }
+}

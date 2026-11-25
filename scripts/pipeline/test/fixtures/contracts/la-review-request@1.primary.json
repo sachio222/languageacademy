@@ -1,0 +1,271 @@
+{
+  "schema": "la-review-request@1",
+  "task_id": "9c02c8490df418bc1cf7b506",
+  "module_key": "qui-and-que-after-a-noun",
+  "round": 1,
+  "lens": "primary",
+  "draft_sha256": "71aa4c834e61bf1ee83ba110693cf65837ab138db94960cce22393f42e32a139",
+  "module": {
+    "schema": "la-module@1",
+    "module_key": "qui-and-que-after-a-noun",
+    "kind": "lesson",
+    "status": "written",
+    "title": "{qui} and {que} after a noun",
+    "description": "Join two sentences about one person or thing: {la fille qui parle}, {le livre que je lis}.",
+    "teaches": {
+      "constructions": [
+        "fr:cx:relative.qui",
+        "fr:cx:relative.que"
+      ]
+    },
+    "vocabulary": [
+      {
+        "word_id": "un-livre-fr",
+        "fr": "un livre",
+        "gloss": "a book",
+        "review": true
+      }
+    ],
+    "items": [
+      {
+        "id": "i-la-fille-qui-parle",
+        "type": "gapfill",
+        "text": "C'est la fille ___ parle français.",
+        "blanks": [
+          {
+            "answer": "qui"
+          }
+        ],
+        "gloss": "That's the girl who speaks French.",
+        "mistakes": [
+          {
+            "answer": "que",
+            "feedback": "The girl does the speaking, so use {qui}."
+          }
+        ]
+      }
+    ]
+  },
+  "brief": {
+    "schema": "la-brief@1",
+    "brief_id": "brief-qui-and-que-after-a-noun-r1",
+    "tenant": {
+      "language": "fr",
+      "native": "en"
+    },
+    "module": {
+      "module_key": "qui-and-que-after-a-noun",
+      "kind": "lesson",
+      "unit_key": "unit13",
+      "position": 173,
+      "unit_position": 1,
+      "title": "qui and que after a noun (le livre que je lis, la fille qui parle)"
+    },
+    "plan": {
+      "words": [],
+      "constructions": [
+        {
+          "id": "fr:cx:relative.qui",
+          "label": "relative qui",
+          "examples": [
+            "la fille qui parle"
+          ]
+        },
+        {
+          "id": "fr:cx:relative.que",
+          "label": "relative que",
+          "examples": [
+            "le livre que je lis"
+          ]
+        }
+      ],
+      "note": null,
+      "draft_text": null,
+      "source": {
+        "file": "plan.json",
+        "sha256": "5d1ce3d9be745762f839dd3d311524f222e91c362c47b42c52f61cb7b4fcd20d",
+        "version": 1,
+        "n": 4
+      }
+    },
+    "context": {
+      "content_commit": "80ec74b",
+      "graph_sha256": "9b0e0d80e3e881772550ffb971f05b2ffe756c3298ffa749b0e2b220ec60ffb0",
+      "dictionary_version": "live-dictionary:3f2a10c78973b5c61b1e9c4e7d9ee1d1ac15898784bd4372124f6fed286f9552",
+      "fingerprint": "c71dd67f3a4965ddf2a261ed0a371eae7c18c822dec1fb727a011269ac786ed9",
+      "basis": "approved"
+    },
+    "taught": {
+      "words": [
+        {
+          "id": "fr:lex:je",
+          "word_id": "je-fr",
+          "lemma": "je",
+          "pos": "pronoun",
+          "gloss": "I",
+          "level": "A1",
+          "taught_at": 2
+        },
+        {
+          "id": "fr:lex:etre",
+          "word_id": "etre-fr",
+          "lemma": "être",
+          "pos": "verb",
+          "gloss": "to be",
+          "level": "A1",
+          "taught_at": 3
+        }
+      ],
+      "constructions": [
+        {
+          "id": "fr:cx:q.embedded",
+          "label": "embedded question",
+          "taught_at": 167
+        }
+      ],
+      "always_open": [
+        "fr:lex:lundi"
+      ],
+      "cognates_allowed": true
+    },
+    "due": [
+      {
+        "node_id": "fr:cx:chunk.nest-ce-pas",
+        "taught_at": 168,
+        "last_use": null,
+        "window_end": 173,
+        "must_use_here": true
+      },
+      {
+        "node_id": "fr:cx:neg.ne-pas-infinitive",
+        "taught_at": 168,
+        "last_use": null,
+        "window_end": 173,
+        "must_use_here": true
+      },
+      {
+        "node_id": "fr:cx:q.negative-inversion",
+        "taught_at": 168,
+        "last_use": null,
+        "window_end": 173,
+        "must_use_here": true
+      },
+      {
+        "node_id": "fr:cx:q.qui-est-ce-que",
+        "taught_at": 164,
+        "last_use": 165,
+        "window_end": 173,
+        "must_use_here": true
+      },
+      {
+        "node_id": "fr:cx:q.qui-est-ce-qui",
+        "taught_at": 164,
+        "last_use": 165,
+        "window_end": 173,
+        "must_use_here": true
+      },
+      {
+        "node_id": "fr:lex:arbre",
+        "taught_at": 124,
+        "last_use": 158,
+        "window_end": 173,
+        "must_use_here": true
+      },
+      {
+        "node_id": "fr:lex:blanc",
+        "taught_at": 162,
+        "last_use": 166,
+        "window_end": 174,
+        "must_use_here": false
+      },
+      {
+        "node_id": "fr:lex:nuage",
+        "taught_at": 162,
+        "last_use": 166,
+        "window_end": 174,
+        "must_use_here": false
+      }
+    ],
+    "unit": {
+      "unit_key": "unit13",
+      "kind": "standard",
+      "name": "Joining sentences",
+      "header": null,
+      "modules": [
+        {
+          "module_key": "qui-and-que-after-a-noun",
+          "kind": "lesson",
+          "state": "briefed"
+        },
+        {
+          "module_key": "ou-after-a-place-or-a-time",
+          "kind": "lesson",
+          "state": "planned"
+        }
+      ],
+      "reading_target": null
+    },
+    "neighbours": {
+      "previous": {
+        "module_key": "unit12-exam",
+        "kind": "unit_exam"
+      },
+      "next": {
+        "module_key": "ou-after-a-place-or-a-time",
+        "title": "où after a place or a time"
+      }
+    },
+    "avoid": [],
+    "kind_rules": {
+      "items": {
+        "min": 12,
+        "max": 20
+      },
+      "item_types": [
+        "respond",
+        "transform",
+        "gapfill",
+        "meaning",
+        "choice"
+      ],
+      "teaches_exactly_plan": true
+    },
+    "style": {
+      "prompt": {
+        "id": "style.fr-en",
+        "version": 1,
+        "sha256": "aa01a2d0a6286b524c53ee404a9bab4c3a7bb1fe2d6646f0fb30069c39a1ebd1"
+      },
+      "rules": [
+        "French inside English text goes in braces: Use {qui} for the subject.",
+        "No bare English sentence to translate after Unit 1.",
+        "Rules with exceptions say most or usually."
+      ]
+    },
+    "output": {
+      "draft_schema": "la-draft@1",
+      "module_schema": {
+        "$ref": "la-module@1/lesson"
+      },
+      "result_path": ".pipeline/mailbox/fr/results/4be1c0a9d2f3e8a7b6c5d4e3.json"
+    },
+    "round": 1,
+    "repair": null
+  },
+  "rubric": {
+    "id": "fr-review",
+    "version": 1,
+    "sha256": "d4e50b534512ac9cf0f14d6df4d3b10cbb1900be9ff648accd720b47f5d2c390"
+  },
+  "check_metrics": {
+    "C6": {
+      "new_issues": 0,
+      "issues_before": 1489,
+      "issues_after": 1489
+    },
+    "C7": {},
+    "C11": {
+      "fields_checked": 41
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "la-engine-task@1",
+  "task_id": "4be1c0a9d2f3e8a7b6c5d4e3",
+  "role": "draft",
+  "tenant": "fr-en",
+  "module_key": "qui-and-que-after-a-noun",
+  "unit_key": "unit13",
+  "header_phase": null,
+  "lens": null,
+  "round": 1,
+  "input_sha256": "73658303279c050e0e14699f27a3e0e0fdbf0861a4a6824f25d61a91f5ee464c",
+  "input_path": ".pipeline/mailbox/fr/inputs/4be1c0a9d2f3e8a7b6c5d4e3.json",
+  "result_path": ".pipeline/mailbox/fr/results/4be1c0a9d2f3e8a7b6c5d4e3.json",
+  "prompt": {
+    "id": "drafter.lesson",
+    "version": 1,
+    "sha256": "0c9d804733741e99c7526b85c210d525a5978b569b0eb6f1a13591eed8b08386",
+    "path": "pipeline/prompts/fr-en/drafter.lesson.v1.md"
+  },
+  "output_schema": "la-draft@1",
+  "model": "opus",
+  "effort": "high",
+  "deadline": "2026-11-26T14:32:10.114Z",
+  "self_check": true
+}

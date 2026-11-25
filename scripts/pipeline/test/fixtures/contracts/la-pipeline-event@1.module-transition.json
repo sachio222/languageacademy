@@ -1,0 +1,34 @@
+{
+  "schema": "la-pipeline-event@1",
+  "event_id": "01JDQ7Y3M2C8K4Z6T9V0B1N2P3",
+  "seq": 41,
+  "prev_sha256": "6a1f692ac79f57e9cb7799924b64ef7dfbc1ccd706dacc9c10ee8b018a5938c0",
+  "sha256": "3b84a11319e29e9dd34d086d8b88efab85066d1437c313cce3abe499968cbce5",
+  "ts": "2026-11-26T14:10:02.551Z",
+  "tenant": "fr-en",
+  "run_id": "run-20261126-1402",
+  "lock_epoch": 7,
+  "actor": {
+    "kind": "core",
+    "id": "pipeline@0.1.0"
+  },
+  "type": "module.transition",
+  "subject": {
+    "unit_key": "unit13",
+    "module_key": "qui-and-que-after-a-noun"
+  },
+  "from": "drafted",
+  "to": "repairing",
+  "round": 1,
+  "reason": "check_failed:C6",
+  "refs": [
+    "71aa4c834e61bf1ee83ba110693cf65837ab138db94960cce22393f42e32a139",
+    "5e0b478da630e46d5a7b2c261bed9b59a793d2f6bfb1dc8f784374dd6805cc17"
+  ],
+  "data": {
+    "failed_checks": [
+      "C6"
+    ],
+    "new_issues": 2
+  }
+}

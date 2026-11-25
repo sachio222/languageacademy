@@ -380,3 +380,41 @@ test('review is not a field on reference rows, and a lesson row takes it as true
   lesson.vocabulary[0].review = false;
   assert.deepEqual(validateModule(lesson, { file: 'l.json', unitIndex: 1 }), []);
 });
+
+// Fix round 1 of the la-module@1 schema agreement (pipeline Task 6B review).
+test('a key named like an Object.prototype member is field_unknown, at every closed object', () => {
+  const own = (o, k) => Object.defineProperty(o, k, { value: 'x', enumerable: true, writable: true, configurable: true });
+  for (const k of ['constructor', 'toString', 'hasOwnProperty', 'valueOf', '__proto__']) {
+    const lesson = miniModule(MINI_KEYS.lesson);
+    own(lesson, k);
+    own(lesson.vocabulary[0], k);
+    lesson.teaches = own({ constructions: [] }, k);
+    const ps = validateModule(lesson, { file: 'l.json', unitIndex: 1 }).map((p) => [p.code, p.path]);
+    assert.deepEqual(ps, [['field_unknown', k], ['field_unknown', `teaches.${k}`], ['field_unknown', `vocabulary[0].${k}`]], k);
+  }
+});
+
+test('a short title is measured in characters (code points), as L\'s bundle schema measures it', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  mod.short_title = '😀'.repeat(40); // 80 UTF-16 code units, 40 characters
+  assert.deepEqual(codes(mod, 2), []);
+  mod.short_title = '😀'.repeat(41);
+  assert.deepEqual(codes(mod, 2), ['short_title_long']);
+});
+
+test('speed match: a wrong count and a word from elsewhere are told apart', () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  const messages = (m) => validateModule(m, { file: 'l.json', unitIndex: 1 }).filter((p) => p.code === 'speed_match_invalid').map((p) => p.message);
+  const five = { ...mod, speed_match: mod.speed_match.slice(0, 5) };
+  const stranger = { ...mod, speed_match: mod.speed_match.slice(0, 5).concat(['chat-fr']) };
+  assert.deepEqual(messages(five), ['speed_match lists six word_ids']);
+  assert.deepEqual(messages(stranger), ['speed_match lists only word_ids from this lesson’s vocabulary']);
+});
+
+test('a block heading is checked even when the block value has a shape L cannot draw', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  const part = mod.parts.find((p) => p.blocks) ?? Object.assign(mod.parts[0], { blocks: [] });
+  part.blocks[0] = { pairs: [['x']], heading: 5 };
+  const ps = codes(mod, 2);
+  assert.ok(ps.includes('block_invalid') && ps.includes('field_type'), ps.join(', '));
+});

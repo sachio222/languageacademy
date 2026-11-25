@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-pipeline-common@1",
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "taskId": { "type": "string", "pattern": "^[0-9a-f]{24}$" },
+    "moduleKey": { "type": "string", "pattern": "^([0-9]{4}-[0-9]{2}-[0-9]{2}-)?[a-z][a-z0-9]*(-[a-z0-9]+)*$" },
+    "unitKey": { "type": "string", "pattern": "^unit[0-9]+$" },
+    "graphId": { "type": "string", "pattern": "^[a-z]{2}:(lex|cx|form):[a-z0-9.-]+$" },
+    "time": { "type": "string", "format": "date-time" },
+    "kind": { "enum": ["lesson", "guide", "reading", "practice", "unit_exam"] },
+    "promptRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "version", "sha256"],
+      "properties": { "id": { "type": "string" }, "version": { "type": "integer", "minimum": 1 }, "sha256": { "$ref": "#/$defs/sha256" } }
+    },
+    "usage": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "input_tokens": { "type": ["integer", "null"] },
+        "cache_read_input_tokens": { "type": ["integer", "null"] },
+        "cache_creation_input_tokens": { "type": ["integer", "null"] },
+        "output_tokens": { "type": ["integer", "null"] },
+        "cost_usd": { "type": ["number", "null"] }
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["engine", "adapter", "model", "prompt", "brief_sha256", "task_id", "issued_at", "received_at"],
+      "properties": {
+        "engine": { "enum": ["agent", "api", "fake", "replay", "human"] },
+        "adapter": { "type": "string", "description": "adapter name and version, e.g. pipeline-agent@1.0.0" },
+        "model": {
+          "type": "object", "additionalProperties": false, "required": ["requested", "reported", "attested"],
+          "properties": {
+            "requested": { "type": ["string", "null"] },
+            "reported": { "type": ["string", "null"], "description": "the model id the engine reported; the API's response.model for adapter B" },
+            "attested": { "type": "boolean", "description": "true only when the id comes from the API response, not from the agent's own statement" }
+          }
+        },
+        "prompt": { "$ref": "#/$defs/promptRef" },
+        "brief_sha256": { "$ref": "#/$defs/sha256" },
+        "task_id": { "$ref": "#/$defs/taskId" },
+        "issued_at": { "$ref": "#/$defs/time" },
+        "received_at": { "$ref": "#/$defs/time" },
+        "attempt": { "type": "integer", "minimum": 1 },
+        "usage": { "$ref": "#/$defs/usage" },
+        "self_checks": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "finding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["code", "severity", "path", "message", "fingerprint"],
+      "properties": {
+        "code": { "type": "string", "description": "loader problem code or checker rule, e.g. untaught-word, item_unpassable" },
+        "severity": { "enum": ["error", "warning"] },
+        "path": { "type": "string", "description": "JSON pointer into the module, or '' for the whole module" },
+        "node_id": { "type": ["string", "null"] },
+        "message": { "type": "string" },
+        "fingerprint": { "$ref": "#/$defs/sha256", "description": "SHA-256 of code, module key, charged module key, node id and item id; never of the message text or a position" },
+        "repair_hint": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-pipeline-event@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "event_id", "seq", "prev_sha256", "sha256", "ts", "tenant", "run_id", "lock_epoch", "actor", "type", "subject", "data"],
+  "properties": {
+    "schema": { "const": "la-pipeline-event@1" },
+    "event_id": { "type": "string", "description": "ULID" },
+    "seq": { "type": "integer", "minimum": 1, "description": "position in this log file, no gaps" },
+    "prev_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "sha256 of the previous event, or 64 zeros for the first" },
+    "sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256", "description": "over this event's canonical JSON without the sha256 field" },
+    "ts": { "$ref": "la-pipeline-common@1#/$defs/time" },
+    "tenant": { "type": "string", "pattern": "^[a-z]{2}-[a-z]{2}$" },
+    "run_id": { "type": "string" },
+    "lock_epoch": { "type": "integer", "minimum": 1 },
+    "actor": { "type": "object", "additionalProperties": false, "required": ["kind", "id"],
+      "properties": { "kind": { "enum": ["core", "human"] }, "id": { "type": "string" } } },
+    "type": { "type": "string", "description": "see the table in section 8.1" },
+    "subject": { "type": "object", "additionalProperties": false,
+      "properties": { "unit_key": { "type": "string" }, "module_key": { "type": "string" }, "task_id": { "type": "string" }, "bundle_sha256": { "type": "string" } } },
+    "from": { "type": ["string", "null"] },
+    "to": { "type": ["string", "null"] },
+    "round": { "type": ["integer", "null"] },
+    "reason": { "type": ["string", "null"], "description": "a reason code, for parks, failures and alerts" },
+    "refs": { "type": "array", "items": { "type": "string" }, "description": "SHA-256 of blobs this event relies on" },
+    "data": { "type": "object" }
+  }
+}

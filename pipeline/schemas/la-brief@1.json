@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-brief@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "brief_id", "tenant", "module", "plan", "context", "taught", "due", "unit", "neighbours", "kind_rules", "style", "output", "round"],
+  "properties": {
+    "schema": { "const": "la-brief@1" },
+    "brief_id": { "type": "string" },
+    "tenant": { "type": "object", "additionalProperties": false, "required": ["language", "native"],
+      "properties": { "language": { "const": "fr" }, "native": { "const": "en" } } },
+    "module": { "type": "object", "additionalProperties": false, "required": ["module_key", "kind", "unit_key", "position", "unit_position", "title"],
+      "properties": {
+        "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+        "kind": { "$ref": "la-pipeline-common@1#/$defs/kind" },
+        "unit_key": { "$ref": "la-pipeline-common@1#/$defs/unitKey" },
+        "position": { "type": "integer" }, "unit_position": { "type": "integer" },
+        "title": { "type": ["string", "null"] } } },
+    "plan": { "type": "object", "additionalProperties": false, "required": ["words", "constructions", "note", "source"],
+      "properties": {
+        "words": { "type": "array", "items": { "$ref": "#/$defs/word" } },
+        "constructions": { "type": "array", "items": { "$ref": "#/$defs/construction" } },
+        "note": { "type": ["string", "null"], "description": "the reading's story brief, or the plan's note" },
+        "draft_text": { "type": ["object", "null"], "description": "a plan draft converted to la-module@1 JSON once, by a reviewed script; never a .js file" },
+        "source": { "type": "object", "additionalProperties": false, "required": ["file", "sha256"],
+          "properties": { "file": { "type": "string" }, "sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" }, "version": { "type": "integer" }, "n": { "type": "integer" } } } } },
+    "context": { "type": "object", "additionalProperties": false, "required": ["content_commit", "graph_sha256", "dictionary_version", "fingerprint", "basis"],
+      "properties": {
+        "content_commit": { "type": "string" },
+        "graph_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+        "dictionary_version": { "type": "string" },
+        "fingerprint": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+        "basis": { "enum": ["approved", "projected"], "description": "projected: some earlier modules are counted from their plan blocks because they are not approved yet" } } },
+    "taught": { "type": "object", "additionalProperties": false, "required": ["words", "constructions", "always_open", "cognates_allowed"],
+      "properties": {
+        "words": { "type": "array", "description": "every word taught before this module, in the order taught", "items": { "$ref": "#/$defs/word" } },
+        "constructions": { "type": "array", "items": { "$ref": "#/$defs/construction" } },
+        "always_open": { "type": "array", "description": "Reference shelf words that count as known", "items": { "type": "string" } },
+        "cognates_allowed": { "type": "boolean" } } },
+    "due": { "type": "array", "description": "graph:due for this module", "items": { "type": "object", "additionalProperties": false,
+      "required": ["node_id", "taught_at", "last_use", "window_end", "must_use_here"],
+      "properties": { "node_id": { "type": "string" }, "taught_at": { "type": "integer" }, "last_use": { "type": ["integer", "null"] },
+        "window_end": { "type": "integer" }, "must_use_here": { "type": "boolean", "description": "true when the window closes at this module" } } } },
+    "unit": { "type": "object", "additionalProperties": false, "required": ["unit_key", "kind", "name", "header", "modules"],
+      "properties": {
+        "unit_key": { "type": "string" }, "kind": { "enum": ["standard", "completion"] }, "name": { "type": "string" },
+        "header": { "type": ["object", "null"], "description": "the unit's current can-do lines, if written" },
+        "modules": { "type": "array", "description": "the unit's modules in order with kind, title and state", "items": { "type": "object" } },
+        "reading_target": { "type": ["object", "null"], "description": "for a reading: distinct-word target and pattern floor" } } },
+    "neighbours": { "type": "object", "additionalProperties": false, "required": ["previous", "next"],
+      "properties": { "previous": { "type": ["object", "null"] }, "next": { "type": ["object", "null"] } } },
+    "avoid": { "type": "array", "description": "for an exam or practice set: every item answer of this unit's lessons, which must not be copied", "items": { "type": "string" } },
+    "kind_rules": { "type": "object", "description": "the rules for this kind, from pipeline/fr/config.json (section 4.2 table)" },
+    "style": { "type": "object", "additionalProperties": false, "required": ["prompt", "rules"],
+      "properties": { "prompt": { "$ref": "la-pipeline-common@1#/$defs/promptRef" }, "rules": { "type": "array", "items": { "type": "string" } } } },
+    "output": { "type": "object", "additionalProperties": false, "required": ["draft_schema", "module_schema"],
+      "properties": {
+        "draft_schema": { "const": "la-draft@1" },
+        "module_schema": { "type": "object", "description": "the JSON Schema of la-module@1 for this kind, generated from scripts/content/schema/module.mjs" },
+        "result_path": { "type": ["string", "null"], "description": "adapter A only: the one file the agent may write" } } },
+    "round": { "type": "integer", "minimum": 1 },
+    "repair": { "type": ["object", "null"], "description": "the la-repair@1 request when round > 1" }
+  },
+  "$defs": {
+    "word": { "type": "object", "additionalProperties": false, "required": ["id", "lemma", "pos"],
+      "properties": { "id": { "type": "string" }, "word_id": { "type": ["string", "null"] }, "lemma": { "type": "string" }, "pos": { "type": "string" },
+        "gloss": { "type": ["string", "null"] }, "level": { "type": ["string", "null"] }, "taught_at": { "type": ["integer", "null"] } } },
+    "construction": { "type": "object", "additionalProperties": false, "required": ["id", "label"],
+      "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "examples": { "type": "array", "items": { "type": "string" } }, "taught_at": { "type": ["integer", "null"] } } }
+  }
+}

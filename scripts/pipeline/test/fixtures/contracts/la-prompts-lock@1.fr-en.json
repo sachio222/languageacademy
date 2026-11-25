@@ -1,0 +1,23 @@
+{
+  "schema": "la-prompts-lock@1",
+  "files": [
+    {
+      "path": "pipeline/prompts/fr-en/drafter.lesson.v1.md",
+      "id": "drafter.lesson",
+      "version": 1,
+      "sha256": "0c9d804733741e99c7526b85c210d525a5978b569b0eb6f1a13591eed8b08386"
+    },
+    {
+      "path": "pipeline/prompts/fr-en/reviewer.fr.v1.md",
+      "id": "reviewer.fr",
+      "version": 1,
+      "sha256": "1e9052ac26c51b6bf8517bf1f4a88bfe4799b21e57aa2f69186dc0c5bba9bb75"
+    },
+    {
+      "path": "pipeline/rubrics/fr-review.v1.json",
+      "id": "fr-review",
+      "version": 1,
+      "sha256": "d4e50b534512ac9cf0f14d6df4d3b10cbb1900be9ff648accd720b47f5d2c390"
+    }
+  ]
+}

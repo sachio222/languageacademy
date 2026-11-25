@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-draft@1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "task_id", "module_key", "brief_sha256", "round", "outcome"],
+  "properties": {
+    "schema": { "const": "la-draft@1" },
+    "task_id": { "$ref": "la-pipeline-common@1#/$defs/taskId" },
+    "module_key": { "$ref": "la-pipeline-common@1#/$defs/moduleKey" },
+    "brief_sha256": { "$ref": "la-pipeline-common@1#/$defs/sha256" },
+    "round": { "type": "integer", "minimum": 1 },
+    "outcome": { "enum": ["module", "cannot_satisfy"] },
+    "module": { "type": "object", "description": "a complete la-module@1 document with status written and no plan block; required when outcome is module" },
+    "cannot_satisfy": { "type": "object", "additionalProperties": false, "required": ["reason_code", "detail"],
+      "properties": {
+        "reason_code": { "enum": ["construction_untaught", "word_untaught", "word_missing_from_graph", "forms_missing", "plan_contradiction", "other"] },
+        "detail": { "type": "string" },
+        "plan_refs": { "type": "array", "items": { "type": "string" } } } },
+    "drafter_notes": { "type": ["string", "null"], "maxLength": 4000, "description": "kept for Jake when a module parks; never shown to the reviewer" },
+    "provenance": { "$ref": "la-pipeline-common@1#/$defs/provenance", "description": "stamped by the core on ingest, never taken from the engine" },
+    "reported": { "type": "object", "description": "what the engine said about itself: model, times; stored, not trusted" }
+  },
+  "allOf": [
+    { "if": { "properties": { "outcome": { "const": "module" } } }, "then": { "required": ["module"] } },
+    { "if": { "properties": { "outcome": { "const": "cannot_satisfy" } } }, "then": { "required": ["cannot_satisfy"] } }
+  ]
+}

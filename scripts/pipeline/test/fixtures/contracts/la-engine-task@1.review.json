@@ -1,0 +1,25 @@
+{
+  "schema": "la-engine-task@1",
+  "task_id": "9c02c8490df418bc1cf7b506",
+  "role": "review",
+  "tenant": "fr-en",
+  "module_key": "qui-and-que-after-a-noun",
+  "unit_key": "unit13",
+  "header_phase": null,
+  "lens": "primary",
+  "round": 1,
+  "input_sha256": "74c3281bb59d79be1fc10f6c38b4aea11e54facd88839d7e5e24afcf91a28eb9",
+  "input_path": ".pipeline/mailbox/fr/inputs/9c02c8490df418bc1cf7b506.json",
+  "result_path": ".pipeline/mailbox/fr/results/9c02c8490df418bc1cf7b506.json",
+  "prompt": {
+    "id": "reviewer.fr",
+    "version": 1,
+    "sha256": "1e9052ac26c51b6bf8517bf1f4a88bfe4799b21e57aa2f69186dc0c5bba9bb75",
+    "path": "pipeline/prompts/fr-en/reviewer.fr.v1.md"
+  },
+  "output_schema": "la-review-verdict@1",
+  "model": "opus",
+  "effort": "high",
+  "deadline": "2026-11-26T14:40:00.000Z",
+  "self_check": false
+}

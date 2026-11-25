@@ -1,0 +1,16 @@
+{
+  "schema": "la-draft@1",
+  "task_id": "63f7e35c8524546e1cb43bf6",
+  "module_key": "ou-after-a-place-or-a-time",
+  "brief_sha256": "57630574e6f893d68786f04c59f4b42a15c0005f4e2030ccb305e9e86d4beb31",
+  "round": 1,
+  "outcome": "cannot_satisfy",
+  "cannot_satisfy": {
+    "reason_code": "construction_untaught",
+    "detail": "The plan asks for où after a time (le jour où), but no earlier module teaches a time noun this lesson could use.",
+    "plan_refs": [
+      "fr:cx:relative.ou"
+    ]
+  },
+  "drafter_notes": null
+}

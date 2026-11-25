@@ -1,0 +1,18 @@
+{
+  "schema": "la-unit-header@1",
+  "task_id": "1f0e2d3c4b5a69788796a5b4",
+  "unit_key": "unit13",
+  "phase": "final",
+  "brief_sha256": "aa9ce9cbc0e6ece56679dc87af56f464eb9df8b6b877a946526624c1a005e014",
+  "header": {
+    "name": "Joining sentences",
+    "description": "Join two ideas in one sentence with {qui}, {que}, {où}, {dont}, {ce qui} and {ce que}, and say what happens if something is true.",
+    "can_do": "describe people, places and things in one sentence and make plans that depend on something else",
+    "can_do_short": "join two ideas",
+    "can_do_example_fr": "Je suis {name}. C'est mon amie qui parle français. Si tu veux, on y va.",
+    "theme": {
+      "icon": "🔗",
+      "color": "#0ea5e9"
+    }
+  }
+}
