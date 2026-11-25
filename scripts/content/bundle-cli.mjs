@@ -10,7 +10,7 @@
 //
 // The bundles live in dist-content/, outside Vite's dist/. Vercel serves dist/, and a release bundle holds every answer
 // key and all Premium text, so it must never ship with the site. L's prototype adapter reads it from dist-content/.
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
@@ -20,6 +20,7 @@ import { ContentError } from './problems.mjs';
 import { buildBundleWithReport, bundleHash, canonicalJson } from './bundle.mjs';
 import { releaseProblems, diffBundles } from './release-checks.mjs';
 import { loadBundleSources, sourceCommit } from './bundle-sources.mjs';
+import { writeFileAtomic } from './atomic-write.mjs';
 
 export const OUT_DIR = join(REPO_ROOT, 'dist-content');
 export const DEFAULT_OUT = join(OUT_DIR, 'bundle.json');
@@ -204,8 +205,7 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
     return 1;
   }
   const out = opts['--out'] ? resolve(opts['--out']) : units ? join(dirname(DEFAULT_OUT), `bundle-${units.join('-')}.json`) : DEFAULT_OUT;
-  mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, text);
+  writeFileAtomic(out, text);
   console.log(`wrote ${relative(process.cwd(), out) || out}`);
   return 0;
 }

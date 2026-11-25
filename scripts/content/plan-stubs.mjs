@@ -12,13 +12,14 @@
 // when a stub on disk differs from what it would write (a writer's hand edit), unless --force. --check writes nothing
 // and exits 1 if a stub or the outline differs. The plan is $LA_COURSE_PLAN, else the vault's
 // research/course-plan/plan.json.
-import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, rmSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { loadCourse, CONTENT_ROOT, GRAPH_LANG_DIR, REPO_ROOT } from './load.mjs';
 import { ContentError } from './problems.mjs';
 import { MODULE_SCHEMA, hasPositionWord } from './schema/module.mjs';
+import { writeFileAtomic } from './atomic-write.mjs';
 
 export const PLAN_SOURCE = 'plan.json';
 // The plan's folder, relative to the vault's curriculum folder (projects/product/curriculum/); a draft the plan names
@@ -293,7 +294,9 @@ export function main(args) {
     console.error('nothing written; rerun with --force to overwrite or remove these stubs');
     return 1;
   }
-  for (const f of changed) writeFileSync(f, files.get(f));
+  // Stubs first, the outline last: an interrupted run leaves every file whole, and an outline that lists no stub it lacks.
+  for (const f of changed.filter((x) => x !== outlineFile)) writeFileAtomic(f, files.get(f));
+  if (changed.includes(outlineFile)) writeFileAtomic(outlineFile, files.get(outlineFile));
   for (const k of stale) rmSync(stubFile(k));
   console.log(`wrote ${changed.length} files${stale.length ? `, removed ${stale.length} stale stubs: ${stale.join(', ')}` : ''}`);
   return 0;

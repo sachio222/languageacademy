@@ -35,11 +35,12 @@
 //     with a stub window. Default folder: $LA_L_DIR, else the vault's prototypes/l/. --check exits 1 if it would change.
 import '../vite-shim.mjs'; // lets Node import src/ files written for Vite
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { dirname, join, relative, resolve } from 'node:path';
+import { join, relative, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { REPO_ROOT, CONTENT_ROOT } from '../load.mjs';
+import { writeFileAtomic } from '../atomic-write.mjs';
 import { ContentError, problem } from '../problems.mjs';
 import { outlineFromUnitConfigs, checkOutline, mergeOutline } from './outline.mjs';
 import { frozenPositions, checkAgainstLessons } from './positions.mjs';
@@ -86,10 +87,7 @@ function writeFile(file, text, { check, force }) {
     console.error(`${rel(file)} differs from what this command writes; it is kept. Rerun with --force to overwrite it.`);
     return 1;
   }
-  mkdirSync(dirname(file), { recursive: true });
-  const tmp = `${file}.tmp`;
-  writeFileSync(tmp, text);
-  renameSync(tmp, file);
+  writeFileAtomic(file, text);
   console.log(`wrote ${rel(file)}`);
   return 0;
 }
