@@ -56,3 +56,16 @@ test('400 modules fit', async (t) => {
   assert.ok(bytes < 10_000_000, `${bytes} bytes`);
   assert.equal(bundle.entries.length + bundle.shelf.pages.length, TARGET);
 });
+
+test('the checker runs on the 400-module course in under 60 seconds (spec 9.1)', async (t) => {
+  const { runCheck } = await import('../../graph/check.mjs');
+  const { REPO_ROOT } = await import('../load.mjs');
+  const root = syntheticRoot(t);
+  const course = loadCourse({ root });
+  assert.equal(course.modules.size, TARGET);
+  const started = performance.now();
+  const { issues } = await runCheck({ repoRoot: REPO_ROOT, lang: 'fr', content: course });
+  const s = (performance.now() - started) / 1000;
+  assert.ok(Array.isArray(issues) && issues.length > 0, 'the checker read the course');
+  assert.ok(s < 60, `checked in ${s.toFixed(1)} s`);
+});

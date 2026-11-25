@@ -4,7 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { cpSync, mkdtempSync, rmSync } from 'node:fs';
+import { cpSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -58,4 +58,30 @@ test('story_missing is a warning only in units the real bundle does not reach', 
   const as = (warnUnits) => releaseProblems(written, null, { warnUnits }).filter((p) => p.code === 'story_missing').map((p) => [p.module_key, p.severity]);
   assert.deepEqual(as(new Set()), [['unit12-reading', 'error']]);
   assert.deepEqual(as(new Set(['unit12'])), [['unit12-reading', 'warning']]);
+});
+
+test('bundle --check compares with the last release (legacy/last-release.json): an item id that changed its answer fails', (t) => {
+  const root = copy(t);
+  // A writer reuses an item id for another question (C-ID-4: a changed meaning needs a new id).
+  const file = join(root, 'modules', '2024-01-02-etre.json');
+  const mod = JSON.parse(readFileSync(file, 'utf8'));
+  const item = mod.items.find((i) => typeof i.answer === 'string');
+  item.answer = 'nous sommes ici';
+  delete item.accept;
+  delete item.mistakes;
+  writeFileSync(file, JSON.stringify(mod, null, 2) + '\n');
+  const r = bundleCheck(root);
+  assert.equal(r.status, 1, 'a reused item id passed');
+  assert.match(r.stderr, new RegExp(`error item_id_reused 2024-01-02-etre ${item.id} keeps its id`));
+  assert.match(r.stdout, /^changed 1: 2024-01-02-etre$/m, 'the changed keys against the last release are listed');
+});
+
+test('the committed last release is a la-bundle@1 bundle the current content matches', async () => {
+  const last = JSON.parse(readFileSync(join(CONTENT_ROOT, 'legacy', 'last-release.json'), 'utf8'));
+  const { bundleHash } = await import('../bundle.mjs');
+  assert.equal(last.schema, 'la-bundle@1');
+  const { bundle } = buildBundleWithReport(loadCourse(), await loadBundleSources());
+  assert.deepEqual(releaseProblems(bundle, last), []);
+  // The hash the release notes name (content:bundle prints it).
+  assert.match(bundleHash(last), /^[0-9a-f]{64}$/);
 });

@@ -6,7 +6,9 @@
 // counts. With --previous it also prints the module keys added, retired, moved and changed since that bundle, and runs
 // the release checks that need it. A content problem prints like `validate` and writes nothing; so does a release
 // problem. --check builds the bundle, runs the release checks and L's checker (vendored in vendor/la-bundle, Python
-// 3.9+) on it, and writes nothing.
+// 3.9+) on it, and writes nothing. Without --previous (and without --units), --check compares with the last release,
+// <content root>/legacy/last-release.json, so item_id_reused, module_key_missing and the changed keys run in CI.
+// After L imports a new release, that bundle replaces last-release.json.
 //
 // The bundles live in dist-content/, outside Vite's dist/. Vercel serves dist/, and a release bundle holds every answer
 // key and all Premium text, so it must never ship with the site. L's prototype adapter reads it from dist-content/.
@@ -24,6 +26,7 @@ import { writeFileAtomic } from './atomic-write.mjs';
 
 export const OUT_DIR = join(REPO_ROOT, 'dist-content');
 export const DEFAULT_OUT = join(OUT_DIR, 'bundle.json');
+export const LAST_RELEASE_FILE = 'legacy/last-release.json'; // in the content root
 export const CHECKER = fileURLToPath(new URL('./vendor/la-bundle/check/check_bundle.py', import.meta.url));
 const BUNDLE_SCHEMA = fileURLToPath(new URL('./vendor/la-bundle/contracts/curriculum.bundle.schema.json', import.meta.url));
 
@@ -113,18 +116,22 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
     return 1;
   }
   let previous = null;
-  if (opts['--previous']) {
+  const lastRelease = join(root, LAST_RELEASE_FILE);
+  const previousFile = opts['--previous'] ? resolve(opts['--previous']) : opts['--check'] && !opts['--units'] && existsSync(lastRelease) ? lastRelease : null;
+  if (previousFile) {
+    const name = opts['--previous'] ?? relative(process.cwd(), previousFile);
     try {
-      previous = JSON.parse(readFileSync(resolve(opts['--previous']), 'utf8'));
+      previous = JSON.parse(readFileSync(previousFile, 'utf8'));
     } catch (e) {
-      console.error(`${opts['--previous']}: cannot read a bundle (${e.message})`);
+      console.error(`${name}: cannot read a bundle (${e.message})`);
       return 1;
     }
     const lacks = notABundle(previous);
     if (lacks) {
-      console.error(`${opts['--previous']}: not a la-bundle@1 bundle (${lacks})`);
+      console.error(`${name}: not a la-bundle@1 bundle (${lacks})`);
       return 1;
     }
+    console.log(`previous ${name} (hash ${bundleHash(previous)})`);
   }
 
   let course;
