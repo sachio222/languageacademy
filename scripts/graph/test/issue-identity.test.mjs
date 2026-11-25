@@ -66,6 +66,19 @@ test('fingerprintCounts is a multiset: one more copy of an issue is one more cou
   assert.equal(fingerprintCounts([]).size, 0);
 });
 
+test('level-order adds its sorted node ids: a changed node list is a new fingerprint, a reordered one is not', () => {
+  const lo = { rule: 'level-order', moduleKey: 'm', position: 40, nodes: ['fr:lex:b', 'fr:lex:a'], message: 'teaches 2 words' };
+  const base = { rule: 'level-order', module_key: 'm', charged_module_key: 'm', node_id: null, item_id: null, surface: null };
+  assert.equal(issueFingerprint(lo), createHash('sha256').update(canonicalJson({ ...base, nodes: ['fr:lex:a', 'fr:lex:b'] })).digest('hex'));
+  assert.equal(issueFingerprint({ ...lo, nodes: ['fr:lex:a', 'fr:lex:b'], position: 41, nodeLevels: [] }), issueFingerprint(lo));
+  assert.notEqual(issueFingerprint({ ...lo, nodes: ['fr:lex:a', 'fr:lex:b', 'fr:lex:c'] }), issueFingerprint(lo));
+  assert.notEqual(issueFingerprint({ ...lo, nodes: ['fr:lex:a'] }), issueFingerprint(lo));
+  assert.deepEqual(lo.nodes, ['fr:lex:b', 'fr:lex:a'], 'the issue is not changed');
+  // Another rule never takes a nodes field into its fingerprint.
+  const other = { rule: 'taught-twice', moduleKey: 'm', nodeId: 'fr:lex:a' };
+  assert.equal(issueFingerprint({ ...other, nodes: ['fr:lex:z'] }), issueFingerprint(other));
+});
+
 test('real course: fingerprints are unchanged when an unrelated module is edited', async (t) => {
   const root = mkdtempSync(join(tmpdir(), 'la-fp-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));

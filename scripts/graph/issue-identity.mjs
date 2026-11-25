@@ -6,8 +6,24 @@
 // It never reads message, position, severity or any *At field, so the same issue keeps its fingerprint when the
 // course around it moves. Two issues alike in all six fields share a fingerprint; fingerprintCounts keeps them as a
 // multiset, so a second copy counts as one more issue (plan Review Focus 3).
+//
+// Extra fields by rule (controller's ruling, 2026-11-25): a rule whose stable detail sits outside the six base fields
+// adds it, so the pipeline sees a change inside an existing issue. Extras are module keys or graph ids only, never
+// positions; every rule not listed keeps the base tuple unchanged.
+//   level-order   nodes: the sorted node ids it reports (issue.nodes), so a changed node list is a new fingerprint.
+// Not yet extended, since the issue object does not carry the field (NEEDS_CONTEXT, Task 2 report):
+//   taught-twice        the module keys of every module that teaches the node (the issue names only the second one)
+//   level-label         the label or level that tells a module's up to three issues apart (only in the message)
+//   level-data-missing  the ids of the nodes with no level (only a count, in the message)
 import { createHash } from 'node:crypto';
 import { canonicalJson } from '../content/bundle.mjs';
+
+const sortedIds = (ids) => (Array.isArray(ids) ? [...ids].sort() : []);
+
+// rule -> (issue) -> extra identity fields.
+const EXTRA = {
+  'level-order': (issue) => ({ nodes: sortedIds(issue.nodes) }),
+};
 
 // "<module_key>#<item path>" -> "<item path>"; null without a ref or a '#'.
 const itemIdOf = (itemRef) => {
@@ -25,6 +41,7 @@ export function issueFingerprint(issue) {
     node_id: issue.nodeId ?? null,
     item_id: itemIdOf(issue.itemRef),
     surface: issue.surface ?? null,
+    ...(Object.hasOwn(EXTRA, issue.rule) ? EXTRA[issue.rule](issue) : {}),
   };
   return createHash('sha256').update(canonicalJson(identity)).digest('hex');
 }
