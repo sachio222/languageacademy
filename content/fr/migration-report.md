@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2557 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 538 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2572 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 538 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 825 |
 | Passage words with no pop-up | 10 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 135 |
+| Hand edits kept | 140 |
 | Live ids with no converted item | 315 (0 real misses) |
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
@@ -1441,7 +1441,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-03-24-everyday-nouns**
 
-- 2 × framed by its instruction: `items[5]`, `items[19]`
+- 2 × framed by its instruction: `items[5]`, `items[22]`
 
 **2024-04-02-unit-4-exam**
 
@@ -1503,7 +1503,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-10-22-donner**
 
-- 7 × framed by its instruction: `items[1]`, `items[5]`, `items[8]`, `items[10]`, `items[11]`, `items[14]`, `items[15]`
+- 7 × framed by its instruction: `items[1]`, `items[5]`, `items[8]`, `items[10]`, `items[11]`, `items[17]`, `items[18]`
 
 **2024-04-21-mettre**
 
@@ -1838,6 +1838,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations." → "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
 
+**2024-03-24-everyday-nouns**
+
+- `concepts` "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)"]" → "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)","id":"c-pas-de","term":"pas de: no, not any","definition":"After ne … pas, un, une, des, du, de la and de l' usually become de, or d' before a vowel. le, la and les stay as they are.","example":"J'ai du pain. becomes Je n'ai pas de pain. (I don't have any bread.)"]"
+
 **2024-03-30-reading-4**
 
 - `title` "Reading Comprehension 4 - La nouvelle époque de Marie" → "Reading Comprehension - La nouvelle époque de Marie"
@@ -1879,6 +1883,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-04-14-unit-5-exam**
 
 - `description` "Test everything from Unit 5! Comparisons, slang, past tense, conditionals, and food vocabulary." → "Test everything from this unit! Comparisons, slang, past tense, conditionals, and food vocabulary."
+
+**2024-10-22-donner**
+
+- `concepts` "["id":"c-donner-to-give","term":"donner = to give","definition":"Very common verb for giving things, offering help, providing information","example":"je donne le livre (I give the book), tu donnes ton nom (you give your name)","id":"c-regular-er-conjugation","term":"Regular -er conjugation","definition":"Present tense: je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","example":"Regular pattern: donn- + endings (-e, -es, -e, -ons, -ez, -ent)","id":"c-common-uses-of-donner","term":"Common uses of donner","definition":"Giving objects (donner un cadeau), giving information (donner l'adresse), giving help (donner de l'aide)","example":"je donne mon numéro (I give my number), ça donne faim (it makes you hungry)","id":"c-donner-vs-prendre","term":"Donner vs Prendre","definition":"Perfect opposites - donner (to give) and prendre (to take)","example":"je donne le livre à Marie, elle prend le livre (I give the book to Marie, she takes the book)","id":"c-with-prepositions","term":"With prepositions","definition":"Often used with 'à' (to) - donner quelque chose à quelqu'un","example":"je donne le livre à mon ami (I give the book to my friend)"]" → "["id":"c-donner-to-give","term":"donner = to give","definition":"Very common verb for giving things, offering help, providing information","example":"je donne le livre (I give the book), tu donnes ton nom (you give your name)","id":"c-regular-er-conjugation","term":"Regular -er conjugation","definition":"Present tense: je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","example":"Regular pattern: donn- + endings (-e, -es, -e, -ons, -ez, -ent)","id":"c-common-uses-of-donner","term":"Common uses of donner","definition":"Giving objects (donner un cadeau), giving information (donner l'adresse), giving help (donner de l'aide)","example":"je donne mon numéro (I give my number), ça donne faim (it makes you hungry)","id":"c-donner-vs-prendre","term":"Donner vs Prendre","definition":"Perfect opposites - donner (to give) and prendre (to take)","example":"je donne le livre à Marie, elle prend le livre (I give the book to Marie, she takes the book)","id":"c-with-prepositions","term":"With prepositions","definition":"Often used with 'à' (to) - donner quelque chose à quelqu'un","example":"je donne le livre à mon ami (I give the book to my friend)","id":"c-ne-rien","term":"ne … rien: nothing","definition":"rien takes the place of pas: ne goes before the verb and rien after it.","example":"Il ne donne rien. (He doesn't give anything.), Je ne vois rien. (I don't see anything.)"]"
+- `items[12].hint` "il + ne + donne + pas + anything" → "ne + donne + rien"
 
 **2024-04-18-commander**
 
@@ -1956,6 +1965,14 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-05-17-getting-ready**
 
 - `vocabulary[1].word_id` "je-me-lave-fr.i-wash-myself" → "je-me-lave-fr"
+
+**2024-05-18-irregular-commands**
+
+- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)","id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café or chez Paul. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the y in vas-y comes from.","example":"Tu vas au café ? Oui, j'y vais. (Are you going to the café? Yes, I'm going there.)"]"
+
+**2024-05-12-commands-pronouns**
+
+- `concepts` "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)"]" → "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)","id":"c-en-some","term":"en: some, of them","definition":"en stands for something you already named after du, de la, des or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.","example":"Tu veux du café ? Oui, j'en veux. (Do you want some coffee? Yes, I want some.), Prends-en ! (Take some!)"]"
 
 **2024-05-20-reading-8**
 

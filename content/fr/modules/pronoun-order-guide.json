@@ -8,10 +8,11 @@
   "description": "Put two object pronouns in order before the verb: {je te le donne}, {je le lui donne}.",
   "can_do": [
     "Put two pronouns before the verb in order: {je te le donne}.",
-    "Replace both objects of a sentence: {je donne le livre à Marie} becomes {je le lui donne}."
+    "Replace both objects of a sentence: {je donne le livre à Marie} becomes {je le lui donne}.",
+    "Put {y} and {en} after the other pronouns: {je lui en donne}."
   ],
   "minutes": 5,
-  "line": "In a statement, object pronouns go before the verb, and two pronouns come in a fixed order: {te le}, {le lui}.",
+  "line": "In a statement, object pronouns go before the verb, and two pronouns come in a fixed order: {te le}, {le lui}, {lui en}.",
   "parts": [
     {
       "id": "p-one-pronoun",
@@ -94,6 +95,31 @@
       ]
     },
     {
+      "id": "p-y-en-last",
+      "heading": "{y} and {en} come last",
+      "text": [
+        "{y} and {en} go after every other pronoun, and {en} comes last of all. The full order is {me}, {te}, {se}, {nous}, {vous}, then {le}, {la}, {les}, then {lui}, {leur}, then {y}, then {en}."
+      ],
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "Je lui en donne.",
+              "I give him some."
+            ],
+            [
+              "Il y en a deux.",
+              "There are two of them."
+            ],
+            [
+              "On s'y voit demain ?",
+              "Shall we see each other there tomorrow?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "id": "p-with-ne-pas",
       "heading": "With {ne … pas}",
       "text": [
@@ -110,6 +136,10 @@
             [
               "Je ne le lui donne pas.",
               "I'm not giving it to him."
+            ],
+            [
+              "Je ne lui en donne pas.",
+              "I'm not giving him any."
             ]
           ]
         }

@@ -12,7 +12,8 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:imperative.pronouns"
+      "fr:cx:imperative.pronouns",
+      "fr:cx:pronoun.en"
     ]
   },
   "vocabulary": [
@@ -65,6 +66,12 @@
       "term": "Pronoun Order in Commands",
       "definition": "Object pronouns: le/la/les come first, then moi/toi",
       "example": "{Donne-le-moi!} (Give it to me! - le before moi), {Montre-la-moi!} (Show it to me!)"
+    },
+    {
+      "id": "c-en-some",
+      "term": "{en}: some, of them",
+      "definition": "{en} stands for something you already named after {du}, {de la}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
+      "example": "{Tu veux du café ? Oui, j'en veux.} (Do you want some coffee? Yes, I want some.), {Prends-en !} (Take some!)"
     }
   ],
   "items": [
@@ -126,6 +133,58 @@
         "donne le moi"
       ],
       "hint": "Donne-le-moi! (verb-object-recipient)"
+    },
+    {
+      "id": "i-oui-j-en-veux",
+      "type": "respond",
+      "situation": "A friend asks {Tu veux du café ?} Say yes, you want some.",
+      "answer": "oui, j'en veux",
+      "accept": [
+        "j'en veux",
+        "oui j en veux",
+        "j en veux"
+      ],
+      "hint": "{en} goes before the verb",
+      "mistakes": [
+        {
+          "answer": "oui, je veux en",
+          "feedback": "{en} goes before the verb: {j'en veux}."
+        }
+      ]
+    },
+    {
+      "id": "i-oui-j-en-ai-trois",
+      "type": "respond",
+      "situation": "A friend asks {Tu as des livres ?} Say yes, you have three.",
+      "answer": "oui, j'en ai trois",
+      "accept": [
+        "j'en ai trois",
+        "oui j en ai trois",
+        "j en ai trois"
+      ],
+      "hint": "{en} before the verb, the number at the end",
+      "mistakes": [
+        {
+          "answer": "oui, j'ai trois",
+          "feedback": "Keep {en} before the verb, even with a number: {j'en ai trois}."
+        }
+      ]
+    },
+    {
+      "id": "i-prends-en",
+      "type": "respond",
+      "situation": "Offer a friend some of your bread. Say “Take some!”",
+      "answer": "prends-en",
+      "accept": [
+        "prends en"
+      ],
+      "hint": "Like {donne-le}: the pronoun goes after the verb, with a hyphen",
+      "mistakes": [
+        {
+          "answer": "en prends",
+          "feedback": "In a positive command, {en} goes after the verb: {prends-en}."
+        }
+      ]
     }
   ]
 }

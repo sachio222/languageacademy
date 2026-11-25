@@ -15,7 +15,8 @@
       "fr:cx:imperative.irregular",
       "fr:cx:imperative.nous",
       "fr:cx:chunk.vas-y",
-      "fr:cx:chunk.allons-y"
+      "fr:cx:chunk.allons-y",
+      "fr:cx:pronoun.y"
     ]
   },
   "vocabulary": [
@@ -134,6 +135,12 @@
       "term": "faire Commands",
       "definition": "{tu: Fais! vous: Faites! nous: Faisons!}",
       "example": "{Fais attention!} (Pay attention! / Be careful!), {Faites ça!} (Do that!)"
+    },
+    {
+      "id": "c-y-there",
+      "term": "{y}: there",
+      "definition": "{y} stands for a place you already named, like {au café} or {chez Paul}. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the {y} in {vas-y} comes from.",
+      "example": "{Tu vas au café ? Oui, j'y vais.} (Are you going to the café? Yes, I'm going there.)"
     }
   ],
   "items": [
@@ -205,6 +212,55 @@
         "allons y"
       ],
       "hint": "{Allons + -y!}"
+    },
+    {
+      "id": "i-oui-j-y-vais",
+      "type": "respond",
+      "situation": "A friend asks {Tu vas au café ?} Say yes, you're going there.",
+      "answer": "oui, j'y vais",
+      "accept": [
+        "j'y vais",
+        "oui j y vais",
+        "j y vais"
+      ],
+      "hint": "{y} goes before the verb",
+      "mistakes": [
+        {
+          "answer": "oui, je vais y",
+          "feedback": "{y} goes before the verb: {j'y vais}."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-y-allons",
+      "type": "transform",
+      "instruction": "Swap the place for {y}.",
+      "shown": "Nous allons à Paris.",
+      "answer": "nous y allons",
+      "mistakes": [
+        {
+          "answer": "nous allons y",
+          "feedback": "{y} goes before the verb: {nous y allons}."
+        }
+      ]
+    },
+    {
+      "id": "i-non-je-n-y-vais-pas",
+      "type": "respond",
+      "situation": "A friend asks {Tu vas chez Paul ?} Say no, you're not going there.",
+      "answer": "non, je n'y vais pas",
+      "accept": [
+        "je n'y vais pas",
+        "non je n y vais pas",
+        "je n y vais pas"
+      ],
+      "hint": "{ne} goes before {y}, and {pas} after the verb",
+      "mistakes": [
+        {
+          "answer": "non, je ne vais pas y",
+          "feedback": "{y} stays before the verb, after {ne}: {je n'y vais pas}."
+        }
+      ]
     }
   ]
 }

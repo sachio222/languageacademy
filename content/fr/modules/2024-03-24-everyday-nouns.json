@@ -14,7 +14,8 @@
     "constructions": [
       "fr:cx:chunk.quelque-chose",
       "fr:cx:chunk.tout-le-monde",
-      "fr:cx:neg.ne-personne"
+      "fr:cx:neg.ne-personne",
+      "fr:cx:neg.de"
     ]
   },
   "vocabulary": [
@@ -193,6 +194,12 @@
       "term": "Remember the Gender!",
       "definition": "Always learn the article with the noun - it shows the gender",
       "example": "{le temps} (masculine), {la vie} (feminine)"
+    },
+    {
+      "id": "c-pas-de",
+      "term": "{pas de}: no, not any",
+      "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are.",
+      "example": "{J'ai du pain.} becomes {Je n'ai pas de pain.} (I don't have any bread.)"
     }
   ],
   "items": [
@@ -295,6 +302,58 @@
         {
           "answer": "il n'a pas l'argent",
           "feedback": "With negation and partitive, use '{pas d'argent}' not 'pas l'argent'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas-de-pain",
+      "type": "transform",
+      "instruction": "Make the sentence negative.",
+      "shown": "J'ai du pain.",
+      "answer": "je n'ai pas de pain",
+      "accept": [
+        "je n ai pas de pain"
+      ],
+      "hint": "{du} becomes {de} after {ne … pas}",
+      "mistakes": [
+        {
+          "answer": "je n'ai pas du pain",
+          "feedback": "After {ne … pas}, {du} becomes {de}: {je n'ai pas de pain}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-veux-pas-d-eau",
+      "type": "respond",
+      "situation": "A waiter asks {Vous voulez de l'eau ?} Say no, you don't want any water.",
+      "answer": "non, je ne veux pas d'eau",
+      "accept": [
+        "je ne veux pas d'eau",
+        "non je ne veux pas d eau",
+        "je ne veux pas d eau"
+      ],
+      "hint": "{de l'} becomes {d'} after {ne … pas}",
+      "mistakes": [
+        {
+          "answer": "non, je ne veux pas de l'eau",
+          "feedback": "After {ne … pas}, {de l'} becomes {d'}: {je ne veux pas d'eau}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas-de-voiture",
+      "type": "gapfill",
+      "text": "Je n'ai pas ___ voiture.",
+      "gloss": "I don't have a car.",
+      "blanks": [
+        {
+          "answer": "de"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "une",
+          "feedback": "After {ne … pas}, {une} becomes {de}: {je n'ai pas de voiture}."
         }
       ]
     },
