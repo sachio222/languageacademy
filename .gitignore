@@ -1,5 +1,7 @@
 # Dependencies
 node_modules/
+# a worktree links node_modules to another checkout (a symlink, which node_modules/ does not match)
+/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

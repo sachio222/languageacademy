@@ -14,7 +14,7 @@
     "graph:due": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/cli.mjs due fr",
     "graph:report": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/cli.mjs report fr",
     "graph:extract": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/extract-teaches.mjs",
-    "content:validate": "node scripts/content/cli.mjs validate",
+    "content:validate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/cli.mjs validate",
     "content:bundle": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/cli.mjs bundle",
     "content:vendor-check": "node scripts/content/vendor-check.mjs",
     "content:migrate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/migrate/run.mjs",
