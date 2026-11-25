@@ -174,6 +174,49 @@ function buildVocabularyExercises(moduleId, vocabularyReference) {
 }
 
 /**
+ * Bring a hand-written exercise to the shape every consumer reads.
+ * Older modules (most of Unit 9) put the correct answer in `answer`, but
+ * runTests, ModuleExam, StudyMode and progress saving all read `expectedAnswer`.
+ * Wrong answers as `{ answer, feedback }` objects or plain strings are both
+ * already understood by runTests, so they pass through.
+ */
+export function normalizeExercise(exercise) {
+  return {
+    ...exercise,
+    expectedAnswer: exercise.expectedAnswer ?? exercise.answer,
+    acceptableAnswers: exercise.acceptableAnswers || [],
+    wrongAnswers: exercise.wrongAnswers || [],
+  };
+}
+
+/**
+ * Find built exercises with no expected answer. No learner can pass such an
+ * exercise, so each lesson that has one is logged as an error (in production
+ * too) instead of failing silently in front of the learner.
+ */
+export function reportExercisesWithoutAnswer(lessons, log = logger) {
+  const problems = [];
+  for (const lesson of lessons) {
+    const missing = (lesson.exercises || []).filter(
+      (ex) => typeof ex.expectedAnswer !== "string" || ex.expectedAnswer.trim() === ""
+    );
+    if (missing.length === 0) continue;
+    const problem = {
+      lessonId: lesson.id,
+      moduleKey: lesson.moduleKey,
+      missing: missing.length,
+      total: lesson.exercises.length,
+      exerciseIds: missing.map((ex) => ex.id),
+    };
+    problems.push(problem);
+    log.error(
+      `[lessons] ${problem.moduleKey} (lesson ${problem.lessonId}): ${problem.missing} of ${problem.total} exercises have no expectedAnswer, so no answer can pass them. First: ${problem.exerciseIds[0]}`
+    );
+  }
+  return problems;
+}
+
+/**
  * Build complete lesson from module config
  * Note: id will be set dynamically in lessonData.js
  */
@@ -204,7 +247,8 @@ export function buildLesson(moduleConfig, moduleNumber = null) {
       );
     }
   } else if (moduleConfig.exercises && moduleConfig.exercises.length > 0) {
-    exercises = moduleConfig.exercises;
+    // Same count and order as written: saved answers are keyed by position.
+    exercises = moduleConfig.exercises.map(normalizeExercise);
   } else if (
     moduleConfig.vocabularyReference &&
     moduleConfig.vocabularyReference.length > 0
