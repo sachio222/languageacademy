@@ -305,7 +305,7 @@ export function convertGuide(old, opts = {}) {
   const mod = { schema: MODULE_SCHEMA, module_key: key, kind: 'guide', status: 'written' };
   const fields = {};
   for (const f of ['title', 'description', 'can_do']) mergeField(m, f, fresh[f], sourceOf[f], { mod, outFields: fields });
-  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields });
+  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields, written: opts.written });
   for (const f of ['minutes', 'line']) mergeField(m, f, fresh[f], sourceOf[f], { mod, outFields: fields });
   const sourceParts = old.guide ? old.guide.sections : fresh.parts;
   const parts = mergeList(
@@ -322,7 +322,7 @@ export function convertGuide(old, opts = {}) {
   if (!Array.isArray(mod.checks)) mod.checks = [];
   if (old.guide)
     add('checks', 'guide_checks_by_hand', mod.checks.length === 3 ? 'three checks, written by hand in the module file (kept on rerun)' : `the source has no checks; write three by hand (the file has ${mod.checks.length})`);
-  mergeDeclared(m, opts.declaration, 'tests', { mod, outFields: fields });
+  mergeDeclared(m, opts.declaration, 'tests', { mod, outFields: fields, written: opts.written });
 
   finishReport(m, lines, add, moduleTexts(fresh, { unitIndex: opts.unitIndex ?? null }), hasPositionWord);
   return { mod, report: lines, record: { fields: sortKeys(fields), lists: { parts: parts.record } }, handFixes: sortKeys(m.outFixes) };

@@ -113,7 +113,7 @@ export function referenceFrom(old, opts = {}) {
   const fields = {};
   const sources = { title: old.title, description: old.description, can_do: old.emailMetadata?.capabilities ?? null, screen: cfg?.type ?? null };
   for (const f of ['title', 'description', 'can_do']) mergeField(m, f, fresh[f], sources[f], { mod, outFields: fields });
-  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields });
+  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields, written: opts.written });
   const v = mergeVocabulary(m, old.vocabularyReference || [], { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add });
   if (v.vocab.length) mod.vocabulary = v.vocab;
   const sections = mergeList(

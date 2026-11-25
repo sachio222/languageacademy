@@ -259,7 +259,7 @@ export function convertModule(old, opts = {}) {
   };
 
   for (const f of ['title', 'description', 'can_do']) fieldPart(f, fresh[f]);
-  mergeDeclared(merger, opts.declaration, 'teaches', { mod, outFields: outRecord.fields });
+  mergeDeclared(merger, opts.declaration, 'teaches', { mod, outFields: outRecord.fields, written: opts.written });
 
   // Vocabulary: one part per source card, word ids in course order (merge.mjs mergeVocabulary).
   if (teaches) {
@@ -373,7 +373,7 @@ export function convertModule(old, opts = {}) {
   for (const h of held) add(h.ref, 'held_out', `"${h.prompt ?? ''}" → "${h.answer ?? ''}": ${h.reason}`);
 
   fieldPart('options', fresh.options);
-  mergeDeclared(merger, opts.declaration, 'tests', { mod, outFields: outRecord.fields, testsBefore: fresh.tests });
+  mergeDeclared(merger, opts.declaration, 'tests', { mod, outFields: outRecord.fields, testsBefore: fresh.tests, written: opts.written });
 
   // Position words in what the source says (spec 5.2): reported, written as they are, fixed by hand.
   // The vocabulary as the source gives it, so a note fixed by hand is still listed, marked "(fixed by hand)".

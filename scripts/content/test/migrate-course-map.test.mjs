@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { splitCourseMap, preTeachRows, isSplit, TEACHING_FIELDS } from '../migrate/course-map.mjs';
+import { splitCourseMap, correctionsOf, preTeachRows, isSplit, resplitProblem, TEACHING_FIELDS } from '../migrate/course-map.mjs';
 import { convertModule } from '../migrate/module.mjs';
 import { loadCourse, graphIds } from '../load.mjs';
 import { todaysModules, readLSources } from '../migrate/sources.mjs';
@@ -331,4 +331,47 @@ test('a live number the migration record places elsewhere in the source is repor
   const { corrections, report } = splitCourseMap({ [key]: { overrides: { [ref]: { ignore: ['fr:lex:merci'] } } } }, course, { liveIds: LIVE_IDS, sources: configs, records });
   assert.deepEqual(corrections, {});
   assert.match(report.find((l) => l.path === ref).detail, /^no_target: live exercise .* made from exerciseConfig\.items\[9\]/);
+});
+
+/* ---------- fix round 2: a course map split before is never split again ---------- */
+
+const CORRECTIONS = readJson('curriculum-graph/languages/fr/course-map.corrections.json');
+
+test('teachesWords alone does not make a course map unsplit', () => {
+  const withWords = structuredClone(CORRECTIONS);
+  withWords['2024-01-01-famous-words'].teachesWords = ['fr:lex:bonjour'];
+  assert.equal(isSplit(CORRECTIONS), true);
+  assert.equal(isSplit(withWords), true);
+  assert.equal(isSplit({ ...withWords, '2024-01-19-questions-help': { screen: 'src/components/QuestionsHelp.jsx' } }), false);
+});
+
+test('keys already in the id shape pass through unchanged', () => {
+  const { corrections, report } = split(CORRECTIONS);
+  assert.deepEqual(corrections, CORRECTIONS);
+  assert.deepEqual(report.filter((l) => /^(no_item_id|no_target|text_dropped|rekeyed)/.test(l.detail)), []);
+  const c = correctionsOf(CORRECTIONS, course.modules, { liveIds: LIVE_IDS, sources: configs, records: RECORDS }).counts;
+  assert.deepEqual(c, { rekeyed: 0, kept: 35, dropped: 0, textDropped: 0 });
+  // An old dotted path is not an id key.
+  const odd = correctionsOf({ '2024-01-13-ca-survival': { overrides: { '2024-01-13-ca-survival#readingPassage.title': { ignore: ['x'] } } } }, course.modules, { liveIds: LIVE_IDS }).counts;
+  assert.equal(odd.dropped, 1);
+});
+
+test('a course map with no teaching of its own is not split over files that declare teaching', () => {
+  const written = [...course.modules.values()];
+  const screenOnly = { ...CORRECTIONS, '2024-01-19-questions-help': { screen: 'src/components/QuestionsHelp.jsx' } };
+  assert.match(resplitProblem(screenOnly, written), /no teachesConstructions or tests, while 124 module files already declare/);
+  assert.equal(resplitProblem(COURSE_MAP, written), null);
+  assert.equal(resplitProblem(screenOnly, written.map((m) => ({ ...m, teaches: undefined, tests: undefined }))), null);
+});
+
+test('two places that are one place now merge every field of their overrides', () => {
+  const key = '2024-01-01-famous-words';
+  const id = LIVE_IDS[key].items[`${key}.6`];
+  const { corrections, counts } = correctionsOf(
+    { [key]: { overrides: { [`${key}#exerciseConfig.items[5]`]: { ignore: ['fr:cx:elision'], note: 'a' }, [`${key}#${id}`]: { ignore: ['fr:lex:merci'], why: 'b' } } } },
+    course.modules,
+    { liveIds: LIVE_IDS, sources: configs, records: RECORDS },
+  );
+  assert.deepEqual(corrections[key].overrides, { [`${key}#${id}`]: { ignore: ['fr:cx:elision', 'fr:lex:merci'], note: 'a', why: 'b' } });
+  assert.deepEqual(counts, { rekeyed: 1, kept: 1, dropped: 0, textDropped: 0 });
 });

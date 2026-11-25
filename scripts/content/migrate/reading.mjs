@@ -253,7 +253,7 @@ export function readingFrom(old, story, opts = {}) {
   const fields = {};
   const sources = { title: old.title, description: old.description, can_do: old.emailMetadata?.capabilities ?? null, story_id: story?.n ?? null };
   for (const f of ['title', 'description', 'can_do']) mergeField(m, f, fresh[f], sources[f], { mod, outFields: fields });
-  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields });
+  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields, written: opts.written });
   mergeField(m, 'story_id', fresh.story_id, sources.story_id, { mod, outFields: fields });
 
   // The course map's preTeach words in the passage join the table as cards after today's (course-map.mjs).
@@ -304,7 +304,7 @@ export function readingFrom(old, story, opts = {}) {
     },
   );
   mod.items = items.list;
-  mergeDeclared(m, opts.declaration, 'tests', { mod, outFields: fields });
+  mergeDeclared(m, opts.declaration, 'tests', { mod, outFields: fields, written: opts.written });
 
   // What the source says, unmerged, so a position word fixed by hand is still listed, marked "(fixed by hand)".
   const freshMod = {

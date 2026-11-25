@@ -50,7 +50,7 @@ import { referenceFrom } from './reference.mjs';
 import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
 import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses, imageCredit } from './sources.mjs';
 import { liveIdMatch } from './live-ids.mjs';
-import { declarationsOf, correctionsOf, isSplit } from './course-map.mjs';
+import { declarationsOf, correctionsOf, isSplit, resplitProblem } from './course-map.mjs';
 import { renderReport } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
 import { checkItemPassable, defaultCheckAnswer } from '../passable.mjs';
@@ -301,6 +301,11 @@ async function modules(args, flags, kindWords = ['modules']) {
   const kindsBefore = new Map();
   for (const unit of outline.units) for (const key of unit.entries) if (configs.has(key)) kindsBefore.set(key, sourceKind(configs.get(key), false));
   for (const key of outline.shelf?.pages || []) if (configs.has(key)) kindsBefore.set(key, 'reference');
+  // A map with no teaching of its own must not be split over files that already declare it (course-map.mjs).
+  if (splitting) {
+    const why = resplitProblem(courseMap, [...kindsBefore.keys()].map((key) => readJson(join(ROOT, 'modules', `${key}.json`))));
+    if (why) throw new ContentError([problem(rel(join(graphDir, 'languages/fr/course-map.json')), '', 'course_map_resplit', why)]);
+  }
   const declared = splitting ? declarationsOf(courseMap, kindsBefore) : null;
   const wordOf = wordLookup(graph, await dictionaryGlosses());
   const lSources = readLSources(ROOT);
@@ -332,10 +337,13 @@ async function modules(args, flags, kindWords = ['modules']) {
 
   const convert = (key, old, kind, unitInfo) => {
     // --force converts from the source alone, as if nothing were written, then applies hand-fixes.json again.
-    const existing = flags.force ? null : readJson(join(ROOT, 'modules', `${key}.json`));
+    // `written`: the file as it is on disk, read even under --force, for what only the file holds once the course
+    // map is split (teaches and tests; merge.mjs mergeDeclared).
+    const written = readJson(join(ROOT, 'modules', `${key}.json`));
+    const existing = flags.force ? null : written;
     const record = flags.force ? null : records[key] ?? null;
     const declaration = declared ? declared.declarations[key] ?? {} : undefined;
-    const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf };
+    const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf, written };
     if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
       const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;
@@ -466,7 +474,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     console.log(
       `course map: ${mods.filter((m) => m.teaches).length} modules declare teaches, ${mods.filter((m) => m.tests).length} declare tests, ` +
         `${code('pre_teach_row')} preTeach rows, ${code('already_in_table')} already_in_table, ${code('screen_dropped')} screens dropped, ` +
-        `${corrected.counts.rekeyed} corrections re-keyed, ${corrected.counts.textDropped} about text no module holds, ${corrected.counts.dropped} with no item id or target (${rel(correctionsFile)})`,
+        `${corrected.counts.rekeyed} corrections re-keyed, ${corrected.counts.kept} already keyed by id, ${corrected.counts.textDropped} about text no module holds, ${corrected.counts.dropped} with no item id or target (${rel(correctionsFile)})`,
     );
   } else console.log(`course map: split already (no teaching field in ${rel(join(graphDir, 'languages/fr/course-map.json'))}); teaches and tests kept as written`);
   console.log(`report: ${[...lineKinds].map(([kind, n]) => `${kind} ${n}`).join(', ')}`);

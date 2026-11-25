@@ -97,17 +97,29 @@ export function mergeField(m, f, freshVal, sourceVal, { mod, outFields, prior })
 export const priorBase = (m, prior) => (m.rec && prior ? { out: hashOf(prior.value) } : null);
 
 /**
- * `teaches` or `tests` (spec 5.2), declared in the course map until Task 10 (course-map.mjs declarationsOf).
- * `decl` undefined: nothing declares them (the course map is split already), so the file's value stays and its base
- * carries forward. Otherwise the field is a part: the declaration is the new output, and a hand edit to the file
- * stays. `testsBefore`: what earlier runs wrote for tests without a base ({ constructions: [] } on practice sets and
- * unit exams, nothing elsewhere).
+ * `teaches` or `tests` (spec 5.2).
+ *
+ * While the course map still declares teaching (`decl` is an object, course-map.mjs declarationsOf), the field is a
+ * part: the declaration is the new output, and a hand edit to the file stays.
+ *
+ * Once the course map is split (`decl` undefined), no source gives these fields: they are authored content, and the
+ * run writes the module file's value. That holds under --force too: --force converts every other part from its
+ * source alone, but keeps the file's teaches and tests, since no source could give them back. `written` is the
+ * module file as it is on disk, read even under --force. Without it (a caller with no file at hand) the merge's own
+ * copy of the file is used, and with no file at all a hand fix of the field.
+ *
+ * `testsBefore`: what earlier runs wrote for tests without a base ({ constructions: [] } on practice sets and unit
+ * exams, nothing elsewhere). A practice set or exam with no tests anywhere gets it, since the schema needs one.
  */
-export function mergeDeclared(m, decl, field, { mod, outFields, testsBefore }) {
+export function mergeDeclared(m, decl, field, { mod, outFields, testsBefore, written }) {
   if (decl === undefined) {
-    // --force (no file): a hand fix of the field, else what earlier runs wrote.
-    const kept = m.ex?.[field] ?? (!m.ex && field in m.fixes ? m.fixes[field] ?? undefined : field === 'tests' ? testsBefore : undefined);
-    if (kept !== undefined) mod[field] = clone(kept);
+    const file = isObj(written) ? written : m.ex;
+    let value;
+    if (file && file[field] !== undefined) value = file[field];
+    else if (!file && m.fixes[field] !== undefined && m.fixes[field] !== null) value = m.fixes[field];
+    else if (field === 'tests') value = testsBefore;
+    if (value !== undefined) mod[field] = clone(value);
+    // The record's base carries forward, so a later run that declares again still tells a hand edit from its output.
     if (m.rec?.fields?.[field] !== undefined) outFields[field] = clone(m.rec.fields[field]);
     return;
   }

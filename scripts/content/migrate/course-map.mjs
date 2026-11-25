@@ -40,10 +40,34 @@ const MODULE_FIELDS = ['title', 'description'];
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 const line = (module_key, path, detail) => ({ module_key, path, kind: 'course_map', detail });
 
-// True when the course map holds no teaching field and no screen: it is the corrections file already, so there is
-// nothing to split (after Task 10 renames course-map.corrections.json over course-map.json).
+// True when the course map declares no teaching and names no screen: it is the corrections file already, so there is
+// nothing to split (after Task 10 renames course-map.corrections.json over course-map.json). teachesWords does not
+// count: it is derived from the vocabulary tables, never written to a module, and `pnpm graph:extract` and
+// scripts/graph/fr/build/course-map.mjs write it into every course map, split or not.
+const SPLIT_FIELDS = [...TEACHING_FIELDS.filter((f) => f !== 'teachesWords'), 'screen'];
 export function isSplit(courseMap) {
-  return Object.values(courseMap ?? {}).every((e) => !isObj(e) || ![...TEACHING_FIELDS, 'screen'].some((f) => f in e));
+  return Object.values(courseMap ?? {}).every((e) => !isObj(e) || !SPLIT_FIELDS.some((f) => f in e));
+}
+
+/**
+ * Before a split: refuses to split again when module files already declare teaches or tests and the course map has
+ * neither teachesConstructions nor tests of its own. Splitting such a map would treat its silence as "teaches nothing"
+ * and empty every declaration. Returns the problem's message, or null when the split may go ahead.
+ * @param {object} courseMap  the parsed course map
+ * @param {Iterable<object | null>} written  the module files as they are on disk
+ * @returns {string | null}
+ */
+export function resplitProblem(courseMap, written) {
+  const mapDeclares = Object.values(courseMap ?? {}).some((e) => isObj(e) && ('teachesConstructions' in e || 'tests' in e));
+  if (mapDeclares) return null;
+  const declaring = [...written].filter((m) => isObj(m) && (m.teaches !== undefined || m.tests !== undefined)).map((m) => m.module_key);
+  if (!declaring.length) return null;
+  const fields = [...new Set(Object.values(courseMap ?? {}).flatMap((e) => (isObj(e) ? Object.keys(e).filter((f) => SPLIT_FIELDS.includes(f)) : [])))];
+  return (
+    `the course map lists ${fields.join(', ')} but no teachesConstructions or tests, while ${declaring.length} module files already declare ` +
+    `teaches or tests (${declaring.slice(0, 3).join(', ')}${declaring.length > 3 ? ', …' : ''}). Splitting it again would empty those declarations. ` +
+    'Teaching now lives in the module files: remove these fields from the course map, or declare the teaching there.'
+  );
 }
 
 function checkFields(key, entry) {
@@ -125,10 +149,18 @@ export function preTeachRows(key, ids, mod, { wordOf }) {
   return { rows, report };
 }
 
+// A key part in the id shape: an item id with an optional path under it, or a concepts/, vocabulary/ or parts/ path.
+// Every old place has a bracketed index or a dotted field path (readingPassage.title), which no id shape has.
+const isIdKey = (path) =>
+  !path.includes('[') && (/^(concepts|vocabulary|parts)\/[^/\s]+\/[^\s]+$/.test(path) || /^[a-z0-9][a-z0-9-]*(\/[a-z0-9-]+)*$/.test(path));
+
 // The new key for one correction, or { reason } when it has none.
 function rekey(key, ref, mod, { liveIds, sources, records }) {
   if (!ref.startsWith(`${key}#`)) return { reason: `no_item_id: ${ref} names another module` };
   const path = ref.slice(key.length + 1);
+  // Already keyed by ids (a course map split before), in one of the shapes above: the key stays as it is. title and
+  // description read the same in both shapes.
+  if (isIdKey(path)) return { ref, kept: true };
   const live = liveIds[key] ?? { items: {}, concepts: {} };
   const ex = new RegExp(`^(${EXERCISE_LISTS.map((l) => l.replace('.', '\\.')).join('|')})\\[(\\d+)\\](.*)$`).exec(path);
   if (ex) {
@@ -217,16 +249,16 @@ function sourceExercise(old, list, n) {
  * @param {{ liveIds?: object, sources?: Map<string, object> | null, records?: object | null }} [opts]
  *   liveIds: live-ids.json. sources: today's modules (for mistakes and guide examples). records:
  *   legacy/migration-sources.json, which names what each source place became (items, cards, guide parts).
- * @returns {{ corrections: object, report: object[], counts: { rekeyed: number, dropped: number, textDropped: number } }}
+ * @returns {{ corrections: object, report: object[], counts: { rekeyed: number, kept: number, dropped: number, textDropped: number } }}
  */
 export function correctionsOf(courseMap, modules, { liveIds = {}, sources = null, records = null } = {}) {
   const corrections = {};
   const report = [];
-  const counts = { rekeyed: 0, dropped: 0, textDropped: 0 };
-  const keys = [...modules.keys(), ...Object.keys(courseMap).filter((k) => !modules.has(k))];
-  for (const key of keys) {
+  const counts = { rekeyed: 0, kept: 0, dropped: 0, textDropped: 0 };
+  // A course-map key that names no module is reported by declarationsOf (module_unknown); it has no corrections.
+  for (const key of modules.keys()) {
     const entry = courseMap[key];
-    if (entry === undefined || !modules.has(key)) continue;
+    if (entry === undefined) continue;
     checkFields(key, entry);
     const out = {};
     for (const f of MODULE_CORRECTIONS) if (entry[f] !== undefined) out[f] = structuredClone(entry[f]);
@@ -240,11 +272,25 @@ export function correctionsOf(courseMap, modules, { liveIds = {}, sources = null
           report.push(line(key, ref, `${r.reason}; the ${f === 'overrides' ? 'override' : 'item kind'} ${JSON.stringify(value)} is kept nowhere`));
           continue;
         }
-        counts.rekeyed++;
-        if (keyed[r.ref] === undefined) keyed[r.ref] = structuredClone(value);
-        else if (f === 'overrides') keyed[r.ref] = { ...keyed[r.ref], ignore: [...new Set([...(keyed[r.ref].ignore ?? []), ...(value.ignore ?? [])])] };
-        else if (keyed[r.ref] !== value) report.push(line(key, ref, `item_kind_clash: ${r.ref} is already ${JSON.stringify(keyed[r.ref])}; ${JSON.stringify(value)} is kept nowhere`));
-        report.push(line(key, ref, `rekeyed: ${f} now under ${r.ref}`));
+        const moved = r.kept ? `kept: ${f} already keyed by id` : `rekeyed: ${f} now under ${r.ref}`;
+        if (keyed[r.ref] === undefined) {
+          keyed[r.ref] = structuredClone(value);
+        } else if (f === 'overrides') {
+          // Two old places that are one place now (an item and its copy): one override with every field of both,
+          // and the union of their ignore lists.
+          keyed[r.ref] = { ...keyed[r.ref], ...structuredClone(value), ignore: [...new Set([...(keyed[r.ref].ignore ?? []), ...(value.ignore ?? [])])] };
+          if (r.kept) counts.kept++;
+          else counts.rekeyed++;
+          report.push(line(key, ref, `${moved}, merged with the override already there`));
+          continue;
+        } else if (keyed[r.ref] !== value) {
+          counts.dropped++;
+          report.push(line(key, ref, `item_kind_clash: ${r.ref} is already ${JSON.stringify(keyed[r.ref])}; ${JSON.stringify(value)} is kept nowhere`));
+          continue;
+        }
+        if (r.kept) counts.kept++;
+        else counts.rekeyed++;
+        if (!r.kept) report.push(line(key, ref, moved));
       }
       if (Object.keys(keyed).length) out[f] = keyed;
     }
