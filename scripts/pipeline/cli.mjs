@@ -32,11 +32,18 @@ function moduleSchemas(args) {
     console.error(`module-schemas: give --write or --check\nusage: pnpm pipeline module-schemas ${COMMANDS['module-schemas'].args}`);
     return 2;
   }
-  if (mode === '--write') {
-    for (const file of writeModuleSchemas(dir)) console.log(`wrote ${file}`);
-    return 0;
+  // A content table the generator has no rule for (a new item field, say) throws; report it, not a stack trace.
+  let stale;
+  try {
+    if (mode === '--write') {
+      for (const file of writeModuleSchemas(dir)) console.log(`wrote ${file}`);
+      return 0;
+    }
+    stale = checkModuleSchemas(dir);
+  } catch (e) {
+    console.error(`module-schemas: cannot generate the schemas from the content validator's tables: ${e.message}`);
+    return 1;
   }
-  const stale = checkModuleSchemas(dir);
   for (const file of stale) console.error(`${file}: missing or differs from a fresh generation; run pnpm pipeline module-schemas --write`);
   if (stale.length === 0) console.log('module schemas match the content validator');
   return stale.length === 0 ? 0 : 1;

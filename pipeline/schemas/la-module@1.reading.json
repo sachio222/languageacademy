@@ -327,102 +327,147 @@
   "additionalProperties": false,
   "$defs": {
     "item_comprehension": {
-      "type": "object",
-      "required": [
-        "id",
-        "type",
-        "question"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "pattern": "^[a-z0-9][a-z0-9-]*$"
-        },
-        "type": {
-          "const": "comprehension"
-        },
-        "hint": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        },
-        "mistakes": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "answer",
-              "feedback"
-            ],
-            "properties": {
-              "answer": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              },
-              "feedback": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "type",
+            "question",
+            "answer"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            },
+            "type": {
+              "const": "comprehension"
+            },
+            "hint": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "mistakes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "answer",
+                  "feedback"
+                ],
+                "properties": {
+                  "answer": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "feedback": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "word_ids": {
+              "type": "array",
+              "items": {
                 "type": "string",
                 "minLength": 1,
                 "pattern": "\\S"
               }
             },
-            "additionalProperties": false
-          }
-        },
-        "word_ids": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "\\S"
-          }
-        },
-        "steps": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "\\S"
-          }
-        },
-        "question": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        },
-        "cue": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        },
-        "answer": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        },
-        "accept": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "\\S"
-          }
-        },
-        "options": {
-          "$ref": "#/$defs/options"
-        }
-      },
-      "additionalProperties": false,
-      "anyOf": [
-        {
-          "required": [
-            "answer"
-          ]
+            "steps": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            },
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "cue": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "accept": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          },
+          "additionalProperties": false
         },
         {
+          "type": "object",
           "required": [
+            "id",
+            "type",
+            "question",
             "options"
-          ]
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            },
+            "type": {
+              "const": "comprehension"
+            },
+            "hint": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "word_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "steps": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            },
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "cue": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "options": {
+              "$ref": "#/$defs/options"
+            }
+          },
+          "additionalProperties": false
         }
       ]
     },

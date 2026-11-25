@@ -121,29 +121,6 @@
           "minLength": 1,
           "pattern": "\\S"
         },
-        "mistakes": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "answer",
-              "feedback"
-            ],
-            "properties": {
-              "answer": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              },
-              "feedback": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              }
-            },
-            "additionalProperties": false
-          }
-        },
         "word_ids": {
           "type": "array",
           "items": {
@@ -158,7 +135,8 @@
             "type": "string",
             "minLength": 1,
             "pattern": "\\S"
-          }
+          },
+          "minItems": 1
         },
         "question": {
           "type": "string",
@@ -229,7 +207,8 @@
             "type": "string",
             "minLength": 1,
             "pattern": "\\S"
-          }
+          },
+          "minItems": 1
         },
         "text": {
           "type": "string",
@@ -329,7 +308,8 @@
             "type": "string",
             "minLength": 1,
             "pattern": "\\S"
-          }
+          },
+          "minItems": 1
         },
         "instruction": {
           "type": "string",

@@ -97,7 +97,8 @@
     "short_title": {
       "type": "string",
       "minLength": 1,
-      "pattern": "\\S"
+      "pattern": "\\S",
+      "maxLength": 40
     },
     "minutes": {
       "type": "integer",
@@ -197,7 +198,9 @@
           }
         },
         "additionalProperties": false
-      }
+      },
+      "minItems": 3,
+      "maxItems": 3
     }
   },
   "additionalProperties": false,
@@ -210,7 +213,13 @@
             "pairs"
           ],
           "properties": {
-            "pairs": true,
+            "pairs": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -225,7 +234,13 @@
             "ties"
           ],
           "properties": {
-            "ties": true,
+            "ties": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -240,7 +255,13 @@
             "cmp"
           ],
           "properties": {
-            "cmp": true,
+            "cmp": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -255,7 +276,13 @@
             "build"
           ],
           "properties": {
-            "build": true,
+            "build": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -270,7 +297,13 @@
             "rise"
           ],
           "properties": {
-            "rise": true,
+            "rise": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -285,7 +318,13 @@
             "flip"
           ],
           "properties": {
-            "flip": true,
+            "flip": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -300,7 +339,13 @@
             "ways"
           ],
           "properties": {
-            "ways": true,
+            "ways": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -315,7 +360,13 @@
             "verbs"
           ],
           "properties": {
-            "verbs": true,
+            "verbs": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -330,7 +381,13 @@
             "table"
           ],
           "properties": {
-            "table": true,
+            "table": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -345,7 +402,13 @@
             "list"
           ],
           "properties": {
-            "list": true,
+            "list": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,
@@ -360,7 +423,13 @@
             "lines"
           ],
           "properties": {
-            "lines": true,
+            "lines": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "additionalProperties": true
+            },
             "heading": {
               "type": "string",
               "minLength": 1,

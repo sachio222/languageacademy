@@ -4,20 +4,30 @@
 //
 // Generated from the content validator's own tables (scripts/content/schema/module.mjs and item.mjs), never written
 // by hand: `pnpm pipeline module-schemas --write` writes the files and `--check` fails when a committed file differs.
-// The walk turns each schema node (the `t:` types) into JSON Schema. The few rules the validator keeps in code
-// beside its tables are stated here, each next to the code it mirrors:
+// The walk turns each schema node (the `t:` types) into JSON Schema. The rules the validator keeps in code beside its
+// tables are stated here too, each next to the code it mirrors:
 //   - a practice set or unit exam has no teaching field and teaches nothing (module.mjs kindRules, teaches_in_test);
 //   - a reading's passage block has fr or img, and en beside fr (kindRules);
-//   - an item's common fields, a mistake, a blank, an option (item.mjs validateItem, checkOptions);
-//   - a comprehension item has answer or options (validateItem).
-// The agreement test (scripts/pipeline/test/module-schema.test.mjs) proves the two validators agree on shape: the
-// schema refuses a module whenever validateModule reports a shape code, and only when it reports a structural one.
-// What JSON Schema cannot state stays the validator's alone: one right option, the cells of a guide block, unique ids,
-// spans, position words, steps.
+//   - a guide has exactly GUIDE_CHECKS checks and a short_title of at most SHORT_TITLE_MAX characters, a lesson's
+//     speed_match exactly SPEED_MATCH_WORDS word ids (kindRules);
+//   - an item's common fields, a mistake, a blank, an option, a non-empty steps list (item.mjs validateItem, checkOptions);
+//   - a choice item and a picked comprehension item have no mistakes; a comprehension item has answer (and maybe
+//     accept) or options, never both (validateItem).
+// The agreement test (scripts/pipeline/test/module-schema.test.mjs) classifies every problem the content validator
+// can report and proves: the schema refuses a module exactly when validateModule reports a problem the schema states.
+// The rest stays the validator's alone:
+//   - what this JSON Schema subset has no keyword for (no contains, no uniqueItems): exactly one right option, unique
+//     ids, a step named twice;
+//   - which steps a type may use in a kind: the validator checks that only on a list without repeats, so a schema
+//     enum would refuse a list the validator reports only as a repeat;
+//   - the cells inside a guide block (the brief's ruling: the value is a list or an object, its cells L's business);
+//   - rules that compare one value with another or read the text: blank counts and markers, speed_match words from
+//     the vocabulary, preview blocks naming passage blocks, a step with no item, spans, braces, position words, graph ids.
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  BLOCK_TYPES, COMMON_FIELDS, ITEM_TYPES_BY_KIND, KIND_SCHEMAS, MODULE_KEY_PATTERN, MODULE_SCHEMA, REQUIRED_WRITTEN, TEACHING_FIELDS, TEST_KINDS,
+  BLOCK_TYPES, COMMON_FIELDS, GUIDE_CHECKS, ITEM_TYPES_BY_KIND, KIND_SCHEMAS, MODULE_KEY_PATTERN, MODULE_SCHEMA, REQUIRED_WRITTEN, SHORT_TITLE_MAX,
+  SPEED_MATCH_WORDS, TEACHING_FIELDS, TEST_KINDS,
 } from '../../content/schema/module.mjs';
 import { COMMON, FIELD_ROLES, ID_PATTERN, PART_FIELDS, SHAPES } from '../../content/schema/item.mjs';
 import { writeDurable } from '../fsio.mjs';
@@ -68,7 +78,8 @@ const COMMON_NODES = {
   hint: STR,
   mistakes: () => ({ type: 'array', items: part('mistake') }),
   word_ids: LIST_OF_STR,
-  steps: LIST_OF_STR,
+  // steps_invalid: at least one step (a repeated step is left to the validator).
+  steps: () => ({ ...LIST_OF_STR(), minItems: 1 }),
 };
 
 function itemField(type, field) {
@@ -82,13 +93,26 @@ function itemSchema(type) {
   const shape = SHAPES[type];
   const properties = {};
   for (const f of COMMON) {
-    if (!(f in COMMON_NODES)) throw new Error(`item field ${f} (COMMON) has no rule in module-schema.mjs`);
+    if (!Object.hasOwn(COMMON_NODES, f)) throw new Error(`item field ${f} (COMMON) has no rule in module-schema.mjs`);
     properties[f] = f === 'id' ? { type: 'string', pattern: pattern(ID_PATTERN) } : f === 'type' ? { const: type } : COMMON_NODES[f]();
   }
   for (const f of [...shape.req, ...shape.opt]) properties[f] = itemField(type, f);
-  // validateItem: an item with no id is id_invalid; a comprehension item needs answer or options (field_missing).
-  const extra = type === 'comprehension' ? { anyOf: [{ required: ['answer'] }, { required: ['options'] }] } : {};
-  return closed(properties, ['id', 'type', ...shape.req], extra);
+  const required = ['id', 'type', ...shape.req]; // validateItem: an item with no id is id_invalid
+  const without = (keys) => Object.fromEntries(Object.entries(properties).filter(([k]) => !keys.includes(k)));
+  // validateItem: a pick-one item is chosen, not typed, so it has no mistakes (mistakes_not_allowed).
+  if (type === 'choice') return closed(without(['mistakes']), required);
+  if (type === 'comprehension') {
+    for (const f of ['answer', 'accept', 'options', 'mistakes']) if (!Object.hasOwn(properties, f)) throw new Error(`comprehension has no ${f} field`);
+    // validateItem: answer or options (field_missing), never both, and accept only beside answer (options_invalid).
+    // A picked question has no mistakes (mistakes_not_allowed).
+    return {
+      oneOf: [
+        closed(without(['options']), [...required, 'answer']),
+        closed(without(['answer', 'accept', 'mistakes']), [...required, 'options']),
+      ],
+    };
+  }
+  return closed(properties, required);
 }
 
 /* ---------- modules (module.mjs) ---------- */
@@ -119,7 +143,10 @@ function node(n, defs) {
       return { $ref: '#/$defs/options' };
     case 'block':
       // One block type key with L's value, and an optional heading. The value's shape is the validator's job.
-      defs.block = { oneOf: BLOCK_TYPES.map((b) => closed({ [b]: true, heading: STR() }, [b])) };
+      // The value is a list or an object (block_invalid at the block); the cells inside it are the validator's job,
+      // so the value is left open on purpose.
+      const value = { type: ['array', 'object'], additionalProperties: true };
+      defs.block = { oneOf: BLOCK_TYPES.map((b) => closed({ [b]: value, heading: STR() }, [b])) };
       return { $ref: '#/$defs/block' };
     case 'items':
       return { $ref: '#/$defs/items' };
@@ -155,6 +182,17 @@ export function moduleJsonSchema(kind) {
       if (teaches[f]?.type !== 'array') throw new Error(`teaches.${f} is no list in COMMON_FIELDS`);
       teaches[f].maxItems = 0;
     }
+  }
+  if (kind === 'guide') {
+    // kindRules: exactly GUIDE_CHECKS checks (guide_checks_count), a short_title of at most SHORT_TITLE_MAX
+    // characters (short_title_long).
+    Object.assign(properties.checks, { minItems: GUIDE_CHECKS, maxItems: GUIDE_CHECKS });
+    properties.short_title.maxLength = SHORT_TITLE_MAX;
+  }
+  if (kind === 'lesson') {
+    // kindRules: speed_match lists exactly SPEED_MATCH_WORDS word ids (speed_match_invalid). That they are this
+    // lesson's words is the validator's job.
+    Object.assign(properties.speed_match, { minItems: SPEED_MATCH_WORDS, maxItems: SPEED_MATCH_WORDS });
   }
   if (kind === 'reading') {
     // kindRules: a passage block has fr text or an img, and fr text needs its en translation (field_missing).
