@@ -3,7 +3,7 @@
   "module_key": "2024-01-22-reading2",
   "kind": "reading",
   "status": "written",
-  "title": "Reading Comprehension 2 - {Rendez-vous en Normandie}",
+  "title": "Reading Comprehension - {Rendez-vous en Normandie}",
   "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far.",
   "can_do": [
     "Read engaging French stories with cultural context",
@@ -364,7 +364,7 @@
       "question": "Who is with Sophie?",
       "cue": "Sophie is with her friend ___",
       "answer": "Thomas",
-      "hint": "Look for '{un ami ___}'",
+      "hint": "Look for {un ami ___}",
       "mistakes": [
         {
           "answer": "Pierre",

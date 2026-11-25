@@ -20,34 +20,32 @@
       ],
       "blocks": [
         {
-          "table": {
-            "rows": [
-              {
-                "fr": "je ne suis pas",
-                "en": "I'm not"
-              },
-              {
-                "fr": "tu n'es pas",
-                "en": "you're not"
-              },
-              {
-                "fr": "elle n'est pas",
-                "en": "she isn't"
-              },
-              {
-                "fr": "je n'ai pas",
-                "en": "I don't have"
-              },
-              {
-                "fr": "nous n'avons pas",
-                "en": "we don't have"
-              },
-              {
-                "fr": "ils n'ont pas",
-                "en": "they don't have"
-              }
+          "pairs": [
+            [
+              "je ne suis pas",
+              "I'm not"
+            ],
+            [
+              "tu n'es pas",
+              "you're not"
+            ],
+            [
+              "elle n'est pas",
+              "she isn't"
+            ],
+            [
+              "je n'ai pas",
+              "I don't have"
+            ],
+            [
+              "nous n'avons pas",
+              "we don't have"
+            ],
+            [
+              "ils n'ont pas",
+              "they don't have"
             ]
-          }
+          ]
         },
         {
           "lines": [
@@ -69,34 +67,31 @@
       "text": [
         "After {pas}, the articles {un}, {une} and {des} become {de}, or {d'} before a vowel."
       ],
+      "note": "{Le}, {la} and {les} stay as they are. After {être}, {un} and {une} stay as they are.",
       "blocks": [
         {
-          "table": {
-            "rows": [
-              {
-                "fr": "Je n'ai pas de chat.",
-                "en": "I don't have a cat."
-              },
-              {
-                "fr": "Il n'a pas de voiture.",
-                "en": "He doesn't have a car."
-              },
-              {
-                "fr": "Nous n'avons pas d'amis.",
-                "en": "We don't have any friends."
-              },
-              {
-                "fr": "Je n'ai pas le livre.",
-                "en": "I don't have the book.",
-                "note": "{Le}, {la} and {les} stay as they are."
-              },
-              {
-                "fr": "Paul n'est pas un enfant.",
-                "en": "Paul isn't a child.",
-                "note": "After {être}, {un} and {une} stay as they are."
-              }
+          "lines": [
+            [
+              "Je n'ai pas de chat.",
+              "I don't have a cat."
+            ],
+            [
+              "Il n'a pas de voiture.",
+              "He doesn't have a car."
+            ],
+            [
+              "Nous n'avons pas d'amis.",
+              "We don't have any friends."
+            ],
+            [
+              "Je n'ai pas le livre.",
+              "I don't have the book."
+            ],
+            [
+              "Paul n'est pas un enfant.",
+              "Paul isn't a child."
             ]
-          }
+          ]
         },
         {
           "lines": [
@@ -116,26 +111,24 @@
       ],
       "blocks": [
         {
-          "table": {
-            "rows": [
-              {
-                "fr": "ne … pas",
-                "en": "not"
-              },
-              {
-                "fr": "ne … plus",
-                "en": "not anymore, no more"
-              },
-              {
-                "fr": "ne … rien",
-                "en": "nothing"
-              },
-              {
-                "fr": "ne … jamais",
-                "en": "never"
-              }
+          "pairs": [
+            [
+              "ne … pas",
+              "not"
+            ],
+            [
+              "ne … plus",
+              "not anymore, no more"
+            ],
+            [
+              "ne … rien",
+              "nothing"
+            ],
+            [
+              "ne … jamais",
+              "never"
             ]
-          }
+          ]
         },
         {
           "lines": [
@@ -219,7 +212,7 @@
           "right": true
         }
       ],
-      "why": "Put {plus} where {pas} goes to say anymore. {jamais} means never, and {pas} means not."
+      "why": "{plus} takes the place of {pas} and means anymore."
     }
   ]
 }

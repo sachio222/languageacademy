@@ -27,15 +27,15 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Spellings taught more than once | 375 |
 | Item types to confirm | 260 |
 | Practice blanks that were in the wrong place | 58 |
-| Position words | 114 |
+| Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 825 |
 | Passage words with no pop-up | 10 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 131 |
-| Live ids with no converted item | 315 |
+| Hand edits kept | 135 |
+| Live ids with no converted item | 315 (0 real misses) |
 | Fields with no place in a module file | 1956 |
-| Text written differently | 670 |
+| Text written differently | 673 |
 | Outline | 16 |
 
 ## Guide checks written by hand
@@ -1085,6 +1085,7 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 **2024-01-22-reading2**
 
+- `title` "Reading Comprehension 2 - Rendez-vous en Normandie" (fixed by hand)
 - `description` "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2." (fixed by hand)
 
 **2024-01-23-unit2-practice**
@@ -1103,6 +1104,10 @@ Learner text that names a module, unit or reading by number. The source says it 
 - `items[10].hint` "Combine venir (M17) + avec (M14) + moi" (fixed by hand)
 - `items[11].hint` "Combine aller (M18) + partir infinitive (M19) - future construction!" (fixed by hand)
 
+**2024-02-03-reading3**
+
+- `title` "Reading Comprehension 3 - La Première Page" (fixed by hand)
+
 **2024-02-04-unit3-practice**
 
 - `title` "Unit 3 Practice - Fill in the Blanks" (fixed by hand)
@@ -1115,6 +1120,7 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 **2024-03-30-reading-4**
 
+- `title` "Reading Comprehension 4 - La nouvelle époque de Marie" (fixed by hand)
 - `description` "Unit 4 mastery! A natural conversation using all your vocabulary." (fixed by hand)
 
 **2024-04-03-unit-4-practice**
@@ -1128,6 +1134,7 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 **2024-04-13-reading-5**
 
+- `title` "Reading Comprehension 5 - La fée verte (The Green Fairy)" (fixed by hand)
 - `description` "Unit 5 mastery! A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin." (fixed by hand)
 - `vocabulary[15].note` "Unit 5 verb" (fixed by hand)
 - `vocabulary[16].note` "Unit 4 verb" (fixed by hand)
@@ -1155,6 +1162,7 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 **2024-04-24-reading-6**
 
+- `title` "Reading Comprehension 6 - Un Voyage en Famille" (fixed by hand)
 - `description` "A family plans a trip to Paris. Uses Unit 6 vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin." (fixed by hand)
 - `vocabulary[9].note` "Unit 5 verb" (fixed by hand)
 - `vocabulary[29].note` "feminine; from Unit 4 everyday-nouns" (fixed by hand)
@@ -1771,10 +1779,6 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `concepts[2].definition` "Every exercise combines plurals with verbs from M2-M3" → "Every exercise combines plurals with être and avoir"
 
-**2024-10-20-liaison-help**
-
-- `parts[5].note` "A silent h counts as a vowel, so homme takes "l'" as well. The same happens to si before il in s'il vous plaît. Elision and liaison work together. One friend is l'ami. More than one is les amis, where les keeps its s and links with a z sound." → "A silent h counts as a vowel, so homme takes l' as well. The same happens to si before il in s'il vous plaît. Elision and liaison work together. One friend is l'ami. More than one is les amis, where les keeps its s and links with a z sound."
-
 **2024-01-10-unit1-practice**
 
 - `title` "Unit 1 Practice - Fill in the Blanks" → "Essential Grammar Practice - Fill in the Blanks"
@@ -1783,7 +1787,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2026-11-24-negation-guide**
 
-- `checks` "[]" → "["id":"k1","ask":"Which one means “I don't have a cat”?","options":["text":"Je n'ai pas de chat.","fr":true,"right":true,"text":"Je n'ai pas un chat.","fr":true,"text":"Je ne ai pas de chat.","fr":true],"why":"After pas, un becomes de, and ne becomes n' before a vowel: Je n'ai pas de chat.","id":"k2","ask":"Which one means “You aren't a child”?","options":["text":"Tu ne pas es un enfant.","fr":true,"text":"Tu n'es pas un enfant.","fr":true,"right":true,"text":"Tu n'es pas d'enfant.","fr":true],"why":"ne goes before the verb and pas after it. After être, un stays as it is: Tu n'es pas un enfant.","id":"k3","ask":"Which one means “I don't have a car anymore”?","options":["text":"Je n'ai jamais de voiture.","fr":true,"text":"Je n'ai pas de voiture.","fr":true,"text":"Je n'ai plus de voiture.","fr":true,"right":true],"why":"Put plus where pas goes to say anymore. jamais means never, and pas means not."]"
+- `checks` "[]" → "["id":"k1","ask":"Which one means “I don't have a cat”?","options":["text":"Je n'ai pas de chat.","fr":true,"right":true,"text":"Je n'ai pas un chat.","fr":true,"text":"Je ne ai pas de chat.","fr":true],"why":"After pas, un becomes de, and ne becomes n' before a vowel: Je n'ai pas de chat.","id":"k2","ask":"Which one means “You aren't a child”?","options":["text":"Tu ne pas es un enfant.","fr":true,"text":"Tu n'es pas un enfant.","fr":true,"right":true,"text":"Tu n'es pas d'enfant.","fr":true],"why":"ne goes before the verb and pas after it. After être, un stays as it is: Tu n'es pas un enfant.","id":"k3","ask":"Which one means “I don't have a car anymore”?","options":["text":"Je n'ai jamais de voiture.","fr":true,"text":"Je n'ai pas de voiture.","fr":true,"text":"Je n'ai plus de voiture.","fr":true,"right":true],"why":"plus takes the place of pas and means anymore."]"
 
 **2024-01-13-ca-survival**
 
@@ -1795,6 +1799,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-22-reading2**
 
+- `title` "Reading Comprehension 2 - Rendez-vous en Normandie" → "Reading Comprehension - Rendez-vous en Normandie"
 - `description` "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2." → "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far."
 
 **2024-01-23-unit2-practice**
@@ -1818,6 +1823,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[10].hint` "Combine venir (M17) + avec (M14) + moi" → "Combine venir + avec + moi"
 - `items[11].hint` "Combine aller (M18) + partir infinitive (M19) - future construction!" → "Combine aller + partir infinitive - future construction!"
 
+**2024-02-03-reading3**
+
+- `title` "Reading Comprehension 3 - La Première Page" → "Reading Comprehension - La Première Page"
+
 **2024-02-04-unit3-practice**
 
 - `title` "Unit 3 Practice - Fill in the Blanks" → "Movement & Possession Practice - Fill in the Blanks"
@@ -1830,6 +1839,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-30-reading-4**
 
+- `title` "Reading Comprehension 4 - La nouvelle époque de Marie" → "Reading Comprehension - La nouvelle époque de Marie"
 - `description` "Unit 4 mastery! A natural conversation using all your vocabulary." → "A natural conversation using all your vocabulary."
 
 **2024-04-03-unit-4-practice**
@@ -1843,6 +1853,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-04-13-reading-5**
 
+- `title` "Reading Comprehension 5 - La fée verte (The Green Fairy)" → "Reading Comprehension - La fée verte (The Green Fairy)"
 - `description` "Unit 5 mastery! A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin." → "A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin."
 - `vocabulary[15].note` ""Unit 5 verb"" → "(removed)"
 - `vocabulary[16].note` ""Unit 4 verb"" → "(removed)"
@@ -1874,6 +1885,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-04-24-reading-6**
 
+- `title` "Reading Comprehension 6 - Un Voyage en Famille" → "Reading Comprehension - Un Voyage en Famille"
 - `description` "A family plans a trip to Paris. Uses Unit 6 vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin." → "A family plans a trip to Paris. Uses this unit's vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin."
 - `vocabulary[9].note` ""Unit 5 verb"" → "(removed)"
 - `vocabulary[29].note` "feminine; from Unit 4 everyday-nouns" → "feminine"
@@ -2039,442 +2051,61 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 ## Live ids with no converted item
 
-The live app stores answers under these exercise ids and concept indexes, and no converted item or concept has the same content, so live-ids.json has no entry for them.
-
-**2024-01-09-reading1**
-
-- `concepts[0]` concept "First Reading Milestone"
-- `concepts[1]` concept "Comprehension Achievement"
-- `concepts[2]` concept "Functional Literacy"
-
-**2024-01-10-unit1-practice**
-
-- `concepts[0]` concept "Foundation Reinforcement"
-- `concepts[1]` concept "Composition Practice"
-- `concepts[2]` concept "Scaffolded Learning"
-
-**2024-01-11-unit1-exam**
-
-- `concepts[0]` concept "Foundation Layer Complete"
-- `concepts[1]` concept "Functional Composition"
-- `concepts[2]` concept "Immediate Utility"
-
-**2024-01-22-reading2**
-
-- `concepts[0]` concept "Adventure Reading Milestone"
-- `concepts[1]` concept "Conversational French"
-- `concepts[2]` concept "Cultural Context"
-
-**2024-01-23-unit2-practice**
-
-- `concepts[0]` concept "Composition Practice"
-- `concepts[1]` concept "Essential Verb Mastery"
-- `concepts[2]` concept "Question Building"
-
-**2024-01-24-unit2-exam**
-
-- `concepts[0]` concept "Composition Layer Mastery"
-- `concepts[1]` concept "Essential Communication Verbs"
-- `concepts[2]` concept "Question Formation"
-- `concepts[3]` concept "Descriptive Language"
-
-**2024-02-03-reading3**
-
-- `concepts[0]` concept "Advanced Reading Milestone"
-- `concepts[1]` concept "Natural French Flow"
-- `concepts[2]` concept "Complex Relationships"
-
-**2024-02-04-unit3-practice**
-
-- `concepts[0]` concept "Movement & Possession Practice"
-- `concepts[1]` concept "Motion Verb Fluency"
-- `concepts[2]` concept "Pronoun Mastery"
-
-**2024-02-05-unit3-exam**
-
-- `concepts[0]` concept "Movement & Possession Mastery"
-- `concepts[1]` concept "Motion and Movement"
-- `concepts[2]` concept "Object Pronouns"
-- `concepts[3]` concept "Possession and Ownership"
-- `concepts[4]` concept "Contractions"
-
-**2024-03-30-reading-4**
-
-- `concepts[0]` concept "Café Conversation Milestone"
-- `concepts[1]` concept "Real-World French"
-- `concepts[2]` concept "Cultural Integration"
-
-**2024-04-03-unit-4-practice**
-
-- `concepts[0]` concept "Survival French Practice"
-- `concepts[1]` concept "Action Verb Mastery"
-- `concepts[2]` concept "Negation and Politeness"
-
-**2024-04-02-unit-4-exam**
-
-- `concepts[0]` concept "Everyday Communication Mastery"
-- `concepts[1]` concept "Essential Action Verbs"
-- `concepts[2]` concept "Negation and Politeness"
-- `concepts[3]` concept "Time and Space Orientation"
-- `concepts[4]` concept "Daily Life Vocabulary"
-
-**2024-04-13-reading-5**
-
-- `concepts[0]` concept "Art and History Milestone"
-- `concepts[1]` concept "French Art Culture"
-- `concepts[2]` concept "Past Tense Narrative"
-
-**2024-04-15-unit-5-practice**
-
-- `concepts[0]` concept "Taste and Time Practice"
-- `concepts[1]` concept "Past Tense Mastery"
-- `concepts[2]` concept "Comparative Language"
-
-**2024-04-14-unit-5-exam**
-
-- `concepts[0]` concept "Time and Taste Mastery"
-- `concepts[1]` concept "Past Tense Foundation"
-- `concepts[2]` concept "Comparisons and Preferences"
-- `concepts[3]` concept "Conditional Thinking"
-- `concepts[4]` concept "Food and Time Vocabulary"
-
-**2024-04-24-reading-6**
-
-- `concepts[0]` concept "Advanced Communication Milestone"
-- `concepts[1]` concept "Real-World Scenarios"
-- `concepts[2]` concept "Fluency Integration"
-
-**2024-04-27-unit-6-practice**
-
-- `concepts[0]` concept "Fluency Practice"
-- `concepts[1]` concept "Progressive Tense Mastery"
-- `concepts[2]` concept "Communication Verb Fluency"
-
-**2024-04-26-unit-6-exam**
-
-- `concepts[0]` concept "Fluency and Mastery Achievement"
-- `concepts[1]` concept "Progressive Tenses"
-- `concepts[2]` concept "Essential Communication Verbs"
-- `concepts[3]` concept "Expressing Needs and Wants"
-- `concepts[4]` concept "Extensive Vocabulary"
-
-**2024-05-07-reading-7**
-
-- `concepts[0]` concept "Academic Reading Milestone"
-- `concepts[1]` concept "Educational Context"
-- `concepts[2]` concept "Cognitive Language Integration"
-
-**2024-05-11-unit-7-practice**
-
-- `concepts[0]` concept "Cognitive Practice"
-- `concepts[1]` concept "Knowledge Verb Mastery"
-- `concepts[2]` concept "Learning Context Integration"
-
-**2024-05-10-unit-7-exam**
-
-- `concepts[0]` concept "Knowledge and Learning Mastery"
-- `concepts[1]` concept "Cognitive Verb Mastery"
-- `concepts[2]` concept "Learning and Teaching"
-- `concepts[3]` concept "On vs Nous Usage"
-- `concepts[4]` concept "Cultural and Academic Vocabulary"
-
-**2024-05-20-reading-8**
-
-- `concepts[0]` concept "Daily Life Reading Milestone"
-- `concepts[1]` concept "Routine and Relationships"
-- `concepts[2]` concept "Temporal Narrative Integration"
-
-**2024-05-25-unit-8-practice**
-
-- `concepts[0]` concept "Daily Life Practice"
-- `concepts[1]` concept "Temporal Fluency"
-- `concepts[2]` concept "Reflexive Mastery"
-
-**2024-05-24-unit-8-exam**
-
-- `concepts[0]` concept "Daily Life and Actions Mastery"
-- `concepts[1]` concept "Temporal Mastery"
-- `concepts[2]` concept "Reflexive Verbs"
-- `concepts[3]` concept "Routine and Commands"
-- `concepts[4]` concept "Reciprocal Actions"
-
-**2024-06-05-reading-9**
-
-- `concepts[0]` concept "Narrative Reading Milestone"
-- `concepts[1]` concept "Past Tense Narrative"
-- `concepts[2]` concept "Discourse Integration"
-
-**2024-06-10-unit-9-practice**
-
-- `concepts[0]` concept "Past Tense Practice"
-- `concepts[1]` concept "Imparfait Mastery"
-- `concepts[2]` concept "Discourse Integration"
-
-**2024-06-09-unit-9-exam**
-
-- `concepts[0]` concept "Past Tenses and Discourse Mastery"
-- `concepts[1]` concept "Imparfait Mastery"
-- `concepts[2]` concept "Past Tense Contrast"
-- `concepts[3]` concept "Plus-que-parfait"
-- `concepts[4]` concept "Discourse Markers"
-
-**2024-02-01-reading-10**
-
-- `concepts[0]` concept "Expertise Reading Milestone"
-- `concepts[1]` concept "Sophisticated Discourse"
-- `concepts[2]` concept "Mastery Integration"
-
-**2024-02-05-unit-10-practice**
-
-- `concepts[0]` concept "Mastery Practice"
-- `concepts[1]` concept "Relative Pronoun Mastery"
-- `concepts[2]` concept "Subjunctive Integration"
-
-**2024-02-04-unit-10-exam**
-
-- `concepts[0]` concept "Mastery and Nuance Achievement"
-- `concepts[1]` concept "Relative Pronouns Mastery"
-- `concepts[2]` concept "Subjunctive Mood"
-- `concepts[3]` concept "Indefinite Pronouns"
-- `concepts[4]` concept "Advanced Hypotheticals"
-
-**2024-02-12-reading-11**
-
-- `concepts[0]` concept "Final Reading Milestone"
-- `concepts[1]` concept "Complete French Mastery"
-- `concepts[2]` concept "B2+ Level Achievement"
-
-**2024-02-16-unit-11-practice**
-
-- `concepts[0]` concept "Advanced Structures Practice"
-- `concepts[1]` concept "Future and Conditional Mastery"
-- `concepts[2]` concept "Passive and Causative Integration"
-
-**2024-02-15-unit-11-exam**
-
-- `concepts[0]` concept "Advanced Structures Mastery"
-- `concepts[1]` concept "Future Tense Mastery"
-- `concepts[2]` concept "Conditional Mood"
-- `concepts[3]` concept "Passive Voice"
-- `concepts[4]` concept "Causative Faire"
-- `concepts[5]` concept "Gerunds and Transitions"
-
-**2024-04-01-alphabet**
-
-- `2024-04-01-alphabet.1` exercise "A (letter)" → "a"
-- `2024-04-01-alphabet.2` exercise "B (letter)" → "b"
-- `2024-04-01-alphabet.3` exercise "C (letter)" → "c"
-- `2024-04-01-alphabet.4` exercise "D (letter)" → "d"
-- `2024-04-01-alphabet.5` exercise "E (letter)" → "e"
-- `2024-04-01-alphabet.6` exercise "F (letter)" → "f"
-- `2024-04-01-alphabet.7` exercise "G (letter)" → "g"
-- `2024-04-01-alphabet.8` exercise "H (letter)" → "h"
-- `2024-04-01-alphabet.9` exercise "I (letter)" → "i"
-- `2024-04-01-alphabet.10` exercise "J (letter)" → "j"
-- `2024-04-01-alphabet.11` exercise "K (letter)" → "k"
-- `2024-04-01-alphabet.12` exercise "L (letter)" → "l"
-- `2024-04-01-alphabet.13` exercise "M (letter)" → "m"
-- `2024-04-01-alphabet.14` exercise "N (letter)" → "n"
-- `2024-04-01-alphabet.15` exercise "O (letter)" → "o"
-- `2024-04-01-alphabet.16` exercise "P (letter)" → "p"
-- `2024-04-01-alphabet.17` exercise "Q (letter)" → "q"
-- `2024-04-01-alphabet.18` exercise "R (letter)" → "r"
-- `2024-04-01-alphabet.19` exercise "S (letter)" → "s"
-- `2024-04-01-alphabet.20` exercise "T (letter)" → "t"
-- `2024-04-01-alphabet.21` exercise "U (letter)" → "u"
-- `2024-04-01-alphabet.22` exercise "V (letter)" → "v"
-- `2024-04-01-alphabet.23` exercise "W (letter)" → "w"
-- `2024-04-01-alphabet.24` exercise "X (letter)" → "x"
-- `2024-04-01-alphabet.25` exercise "Y (letter)" → "y"
-- `2024-04-01-alphabet.26` exercise "Z (letter)" → "z"
-- `2024-04-01-alphabet.27` exercise "the alphabet" → "l'alphabet"
-- `2024-04-01-alphabet.28` exercise "a letter" → "une lettre"
-- `2024-04-01-alphabet.29` exercise "an accent" → "un accent"
-- `2024-04-01-alphabet.30` exercise "a vowel" → "une voyelle"
-- `2024-04-01-alphabet.31` exercise "a consonant" → "une consonne"
-- `2024-04-01-alphabet.32` exercise "to spell" → "épeler"
-- `2024-04-01-alphabet.33` exercise "How do you write that?" → "Comment ça s'écrit?"
-
-**2024-04-02-numbers**
-
-- `2024-04-02-numbers.1` exercise "zero" → "zéro"
-- `2024-04-02-numbers.2` exercise "one" → "un"
-- `2024-04-02-numbers.3` exercise "two" → "deux"
-- `2024-04-02-numbers.4` exercise "three" → "trois"
-- `2024-04-02-numbers.5` exercise "four" → "quatre"
-- `2024-04-02-numbers.6` exercise "five" → "cinq"
-- `2024-04-02-numbers.7` exercise "six" → "six"
-- `2024-04-02-numbers.8` exercise "seven" → "sept"
-- `2024-04-02-numbers.9` exercise "eight" → "huit"
-- `2024-04-02-numbers.10` exercise "nine" → "neuf"
-- `2024-04-02-numbers.11` exercise "ten" → "dix"
-- `2024-04-02-numbers.12` exercise "twenty" → "vingt"
-- `2024-04-02-numbers.13` exercise "twenty-one" → "vingt-et-un"
-- `2024-04-02-numbers.14` exercise "twenty-two" → "vingt-deux"
-- `2024-04-02-numbers.15` exercise "thirty" → "trente"
-- `2024-04-02-numbers.16` exercise "thirty-one" → "trente-et-un"
-- `2024-04-02-numbers.17` exercise "thirty-five" → "trente-cinq"
-- `2024-04-02-numbers.18` exercise "forty" → "quarante"
-- `2024-04-02-numbers.19` exercise "forty-one" → "quarante-et-un"
-- `2024-04-02-numbers.20` exercise "fifty" → "cinquante"
-- `2024-04-02-numbers.21` exercise "fifty-one" → "cinquante-et-un"
-- `2024-04-02-numbers.22` exercise "sixty" → "soixante"
-- `2024-04-02-numbers.23` exercise "sixty-one" → "soixante-et-un"
-- `2024-04-02-numbers.24` exercise "sixty-nine" → "soixante-neuf"
-- `2024-04-02-numbers.25` exercise "seventy" → "soixante-dix"
-- `2024-04-02-numbers.26` exercise "seventy-one" → "soixante-et-onze"
-- `2024-04-02-numbers.27` exercise "seventy-five" → "soixante-quinze"
-- `2024-04-02-numbers.28` exercise "seventy-nine" → "soixante-dix-neuf"
-- `2024-04-02-numbers.29` exercise "eighty" → "quatre-vingts"
-- `2024-04-02-numbers.30` exercise "eighty-one" → "quatre-vingt-un"
-- `2024-04-02-numbers.31` exercise "ninety" → "quatre-vingt-dix"
-- `2024-04-02-numbers.32` exercise "ninety-one" → "quatre-vingt-onze"
-- `2024-04-02-numbers.33` exercise "ninety-nine" → "quatre-vingt-dix-neuf"
-- `2024-04-02-numbers.34` exercise "one hundred" → "cent"
-- `2024-04-02-numbers.35` exercise "two hundred" → "deux cents"
-- `2024-04-02-numbers.36` exercise "two hundred one" → "deux cent un"
-- `2024-04-02-numbers.37` exercise "one thousand" → "mille"
-- `2024-04-02-numbers.38` exercise "three thousand" → "trois mille"
-- `2024-04-02-numbers.39` exercise "one million" → "un million"
-
-**2024-04-03-days-months**
-
-- `2024-04-03-days-months.1` exercise "Monday" → "lundi"
-- `2024-04-03-days-months.2` exercise "Tuesday" → "mardi"
-- `2024-04-03-days-months.3` exercise "Wednesday" → "mercredi"
-- `2024-04-03-days-months.4` exercise "Thursday" → "jeudi"
-- `2024-04-03-days-months.5` exercise "Friday" → "vendredi"
-- `2024-04-03-days-months.6` exercise "Saturday" → "samedi"
-- `2024-04-03-days-months.7` exercise "Sunday" → "dimanche"
-- `2024-04-03-days-months.8` exercise "January" → "janvier"
-- `2024-04-03-days-months.9` exercise "February" → "février"
-- `2024-04-03-days-months.10` exercise "March" → "mars"
-- `2024-04-03-days-months.11` exercise "April" → "avril"
-- `2024-04-03-days-months.12` exercise "May" → "mai"
-- `2024-04-03-days-months.13` exercise "June" → "juin"
-- `2024-04-03-days-months.14` exercise "July" → "juillet"
-- `2024-04-03-days-months.15` exercise "August" → "août"
-- `2024-04-03-days-months.16` exercise "September" → "septembre"
-- `2024-04-03-days-months.17` exercise "October" → "octobre"
-- `2024-04-03-days-months.18` exercise "November" → "novembre"
-- `2024-04-03-days-months.19` exercise "December" → "décembre"
-- `2024-04-03-days-months.20` exercise "spring" → "le printemps"
-- `2024-04-03-days-months.21` exercise "summer" → "l'été"
-- `2024-04-03-days-months.22` exercise "fall / autumn" → "l'automne"
-- `2024-04-03-days-months.23` exercise "winter" → "l'hiver"
-- `2024-04-03-days-months.24` exercise "today" → "aujourd'hui"
-- `2024-04-03-days-months.25` exercise "tomorrow" → "demain"
-- `2024-04-03-days-months.26` exercise "yesterday" → "hier"
-- `2024-04-03-days-months.27` exercise "this week" → "cette semaine"
-- `2024-04-03-days-months.28` exercise "the weekend" → "le week-end"
-
-**2024-04-04-holidays**
-
-- `2024-04-04-holidays.1` exercise "a holiday / party / celebration" → "une fête"
-- `2024-04-04-holidays.2` exercise "a public holiday / day off" → "un jour férié"
-- `2024-04-04-holidays.3` exercise "New Year's Day" → "le Nouvel An"
-- `2024-04-04-holidays.4` exercise "Easter" → "Pâques"
-- `2024-04-04-holidays.5` exercise "Labor Day" → "la Fête du Travail"
-- `2024-04-04-holidays.6` exercise "Bastille Day / National Day" → "la Fête Nationale"
-- `2024-04-04-holidays.7` exercise "All Saints' Day" → "la Toussaint"
-- `2024-04-04-holidays.8` exercise "Christmas" → "Noël"
-- `2024-04-04-holidays.9` exercise "Candlemas / Crêpe Day" → "la Chandeleur"
-- `2024-04-04-holidays.10` exercise "April Fools' Day" → "le Poisson d'Avril"
-- `2024-04-04-holidays.11` exercise "Music Festival Day" → "la Fête de la Musique"
-- `2024-04-04-holidays.12` exercise "Christmas/New Year's Eve dinner" → "le Réveillon"
-- `2024-04-04-holidays.13` exercise "King Cake" → "la Galette des Rois"
-- `2024-04-04-holidays.14` exercise "Valentine's Day" → "la Saint-Valentin"
-- `2024-04-04-holidays.15` exercise "Halloween" → "Halloween"
-- `2024-04-04-holidays.16` exercise "Merry Christmas!" → "Joyeux Noël!"
-- `2024-04-04-holidays.17` exercise "Happy New Year!" → "Bonne année!"
-- `2024-04-04-holidays.18` exercise "Happy Easter!" → "Joyeuses Pâques!"
-- `2024-04-04-holidays.19` exercise "Happy Holidays!" → "Bonnes fêtes!"
-- `2024-04-04-holidays.20` exercise "Happy Birthday!" → "Bon anniversaire!"
-
-**2024-04-05-colors**
-
-- `2024-04-05-colors.1` exercise "blue" → "bleu / bleue"
-- `2024-04-05-colors.2` exercise "red" → "rouge"
-- `2024-04-05-colors.3` exercise "green" → "vert / verte"
-- `2024-04-05-colors.4` exercise "yellow" → "jaune"
-- `2024-04-05-colors.5` exercise "white" → "blanc / blanche"
-- `2024-04-05-colors.6` exercise "black" → "noir / noire"
-- `2024-04-05-colors.7` exercise "orange" → "orange"
-- `2024-04-05-colors.8` exercise "purple/violet" → "violet / violette"
-- `2024-04-05-colors.9` exercise "pink" → "rose"
-- `2024-04-05-colors.10` exercise "gray" → "gris / grise"
-- `2024-04-05-colors.11` exercise "brown" → "marron"
-- `2024-04-05-colors.12` exercise "beige" → "beige"
-- `2024-04-05-colors.13` exercise "light (shade)" → "clair"
-- `2024-04-05-colors.14` exercise "dark (shade)" → "foncé"
-- `2024-04-05-colors.15` exercise "bright/vivid" → "vif / vive"
-- `2024-04-05-colors.16` exercise "pale" → "pâle"
-- `2024-04-05-colors.17` exercise "golden" → "doré"
-- `2024-04-05-colors.18` exercise "silver" → "argenté"
-- `2024-04-05-colors.19` exercise "multicolored" → "multicolore"
-- `2024-04-05-colors.20` exercise "colorful" → "coloré / colorée"
-- `2024-04-05-colors.21` exercise "the color" → "la couleur"
-- `2024-04-05-colors.22` exercise "What color?" → "De quelle couleur?"
-- `2024-04-05-colors.23` exercise "What color is...?" → "De quelle couleur est...?"
-- `2024-04-05-colors.24` exercise "the sky" → "le ciel"
-- `2024-04-05-colors.25` exercise "the grass" → "l'herbe"
-- `2024-04-05-colors.26` exercise "the clouds" → "les nuages"
-- `2024-04-05-colors.27` exercise "the sun" → "le soleil"
-- `2024-04-05-colors.28` exercise "the sea" → "la mer"
-- `2024-04-05-colors.29` exercise "the snow" → "la neige"
-- `2024-04-05-colors.30` exercise "a tree" → "un arbre"
-- `2024-04-05-colors.31` exercise "a flower" → "une fleur"
-- `2024-04-05-colors.32` exercise "the leaves" → "les feuilles"
-- `2024-04-05-colors.33` exercise "to see life through rose-colored glasses" → "voir la vie en rose"
-- `2024-04-05-colors.34` exercise "to be in the red (in debt)" → "être dans le rouge"
-- `2024-04-05-colors.35` exercise "to be scared stiff" → "avoir une peur bleue"
-- `2024-04-05-colors.36` exercise "to laugh nervously/fake laugh" → "rire jaune"
-
-**2024-04-06-french-countries**
-
-- `2024-04-06-french-countries.1` exercise "the French-speaking world" → "la Francophonie"
-- `2024-04-06-french-countries.2` exercise "French-speaking" → "francophone"
-- `2024-04-06-french-countries.3` exercise "a country" → "un pays"
-- `2024-04-06-french-countries.4` exercise "a language" → "une langue"
-- `2024-04-06-french-countries.5` exercise "the official language" → "la langue officielle"
-- `2024-04-06-french-countries.6` exercise "to speak French" → "parler français"
-- `2024-04-06-french-countries.7` exercise "Africa" → "l'Afrique"
-- `2024-04-06-french-countries.8` exercise "Europe" → "l'Europe"
-- `2024-04-06-french-countries.9` exercise "North America" → "l'Amérique du Nord"
-- `2024-04-06-french-countries.10` exercise "the Caribbean" → "les Caraïbes"
-- `2024-04-06-french-countries.11` exercise "Quebec" → "le Québec"
-- `2024-04-06-french-countries.12` exercise "Congo (DRC)" → "le Congo"
-- `2024-04-06-french-countries.13` exercise "France" → "la France"
-- `2024-04-06-french-countries.14` exercise "Belgium" → "la Belgique"
-- `2024-04-06-french-countries.15` exercise "Switzerland" → "la Suisse"
-- `2024-04-06-french-countries.16` exercise "Senegal" → "le Sénégal"
-- `2024-04-06-french-countries.17` exercise "Ivory Coast" → "la Côte d'Ivoire"
-- `2024-04-06-french-countries.18` exercise "Haiti" → "Haïti"
-- `2024-04-06-french-countries.19` exercise "Morocco" → "le Maroc"
-- `2024-04-06-french-countries.20` exercise "Lebanon" → "le Liban"
-
-**2024-04-07-language-stats**
-
-- `2024-04-07-language-stats.1` exercise "a phoneme (distinct sound)" → "un phonème"
-- `2024-04-07-language-stats.2` exercise "a vowel" → "une voyelle"
-- `2024-04-07-language-stats.3` exercise "a consonant" → "une consonne"
-- `2024-04-07-language-stats.4` exercise "a syllable" → "une syllabe"
-- `2024-04-07-language-stats.5` exercise "an accent / diacritical mark" → "un accent"
-- `2024-04-07-language-stats.6` exercise "the linking (of words)" → "la liaison"
-- `2024-04-07-language-stats.7` exercise "a word" → "un mot"
-- `2024-04-07-language-stats.8` exercise "a sentence" → "une phrase"
-- `2024-04-07-language-stats.9` exercise "the vocabulary" → "le vocabulaire"
-- `2024-04-07-language-stats.10` exercise "the grammar" → "la grammaire"
-- `2024-04-07-language-stats.11` exercise "a verb" → "un verbe"
-- `2024-04-07-language-stats.12` exercise "a noun" → "un nom"
-- `2024-04-07-language-stats.13` exercise "an adjective" → "un adjectif"
-- `2024-04-07-language-stats.14` exercise "masculine" → "masculin"
-- `2024-04-07-language-stats.15` exercise "feminine" → "féminin"
-- `2024-04-07-language-stats.16` exercise "the conjugation" → "la conjugaison"
-- `2024-04-07-language-stats.17` exercise "irregular" → "irrégulier"
-- `2024-04-07-language-stats.18` exercise "the French Academy" → "l'Académie française"
-- `2024-04-07-language-stats.19` exercise "French-speaking" → "francophone"
-- `2024-04-07-language-stats.20` exercise "to speak fast" → "parler vite"
+The live app stores answers under these exercise ids and concept indexes, and no converted item, concept or section has the same content, so live-ids.json has no entry for them. Real misses come first: each needs a look. The other two groups are expected, since the new files hold nothing for those ids.
+
+### Real misses
+
+None.
+
+### Reference word lists
+
+The live app builds an exercise from each word of a Reference page; a Reference page has no items.
+
+- **2024-04-01-alphabet**: 33 exercises
+- **2024-04-02-numbers**: 39 exercises
+- **2024-04-03-days-months**: 28 exercises
+- **2024-04-04-holidays**: 20 exercises
+- **2024-04-05-colors**: 36 exercises
+- **2024-04-06-french-countries**: 20 exercises
+- **2024-04-07-language-stats**: 20 exercises
+
+### Concept cards of modules that hold none
+
+Practice sets, unit exams and readings hold no concept cards, so the live ticks on their cards have no new id.
+
+- **2024-01-09-reading1**: 3 concept cards
+- **2024-01-10-unit1-practice**: 3 concept cards
+- **2024-01-11-unit1-exam**: 3 concept cards
+- **2024-01-22-reading2**: 3 concept cards
+- **2024-01-23-unit2-practice**: 3 concept cards
+- **2024-01-24-unit2-exam**: 4 concept cards
+- **2024-02-03-reading3**: 3 concept cards
+- **2024-02-04-unit3-practice**: 3 concept cards
+- **2024-02-05-unit3-exam**: 5 concept cards
+- **2024-03-30-reading-4**: 3 concept cards
+- **2024-04-03-unit-4-practice**: 3 concept cards
+- **2024-04-02-unit-4-exam**: 5 concept cards
+- **2024-04-13-reading-5**: 3 concept cards
+- **2024-04-15-unit-5-practice**: 3 concept cards
+- **2024-04-14-unit-5-exam**: 5 concept cards
+- **2024-04-24-reading-6**: 3 concept cards
+- **2024-04-27-unit-6-practice**: 3 concept cards
+- **2024-04-26-unit-6-exam**: 5 concept cards
+- **2024-05-07-reading-7**: 3 concept cards
+- **2024-05-11-unit-7-practice**: 3 concept cards
+- **2024-05-10-unit-7-exam**: 5 concept cards
+- **2024-05-20-reading-8**: 3 concept cards
+- **2024-05-25-unit-8-practice**: 3 concept cards
+- **2024-05-24-unit-8-exam**: 5 concept cards
+- **2024-06-05-reading-9**: 3 concept cards
+- **2024-06-10-unit-9-practice**: 3 concept cards
+- **2024-06-09-unit-9-exam**: 5 concept cards
+- **2024-02-01-reading-10**: 3 concept cards
+- **2024-02-05-unit-10-practice**: 3 concept cards
+- **2024-02-04-unit-10-exam**: 5 concept cards
+- **2024-02-12-reading-11**: 3 concept cards
+- **2024-02-16-unit-11-practice**: 3 concept cards
+- **2024-02-15-unit-11-exam**: 6 concept cards
 
 ## Fields with no place in a module file
 
@@ -3228,7 +2859,7 @@ Today’s objects hold these, and the module schema has no field for them.
 - `concepts[2]` concept "Fluency Integration": a reading has no concept cards
 - `skipStudyMode` true (Study Mode belongs to lessons only)
 - `readingPassage.title` "Un Voyage en Famille" (the story's title comes from stories/)
-- `exerciseConfig.items[5].prompt` "What will Marie see for the first time?" (says only where the answer is)
+- `exerciseConfig.items[5].prompt` "What will Marie see for the first time?" (repeats the question)
 
 **2024-04-27-unit-6-practice**
 
@@ -3967,6 +3598,7 @@ The same words, moved into a field of the new shape.
 
 **2026-11-24-negation-guide**
 
+- `guide.sections[1].rows` 2 row notes joined into the part's note (L's lines have no note cell)
 - `line` the guide row line is the description (the source has no line)
 
 **2024-01-17-voir**
@@ -4002,6 +3634,8 @@ The same words, moved into a field of the new shape.
 
 **2024-02-03-reading3**
 
+- `passage[2].fr` italic markup removed: *Le Comte de Monte-Cristo*
+- `passage[6].fr` italic markup removed: *Vingt mille lieues sous les mers*
 - `passage` story text: added: "Sophie et Marc à Paris."
 - `passage` story text: added: "Le nouveau livre de Sophie."
 - `passage` story text: added: "Paul et son jeune enfant à Montmartre."

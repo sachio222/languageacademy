@@ -629,7 +629,7 @@
         "questions",
         "poser des questions"
       ],
-      "hint": "Look for '{D'abord}'",
+      "hint": "Look for {D'abord}",
       "mistakes": [
         {
           "answer": "réviser",
@@ -648,7 +648,7 @@
         "mieux",
         "on voit les choses entre les idées"
       ],
-      "hint": "The text says '{on comprend...}'"
+      "hint": "The text says {on comprend...}"
     },
     {
       "id": "reading-7-5",
@@ -660,7 +660,7 @@
         "croire en soi",
         "en soi"
       ],
-      "hint": "Look for '{croire en...}'",
+      "hint": "Look for {croire en...}",
       "mistakes": [
         {
           "answer": "le professeur",
@@ -679,7 +679,7 @@
         "question de méthode",
         "méthode"
       ],
-      "hint": "Look for '{tout le monde peut...}'",
+      "hint": "Look for {tout le monde peut...}",
       "mistakes": [
         {
           "answer": "c'est facile",
@@ -698,7 +698,7 @@
         "meilleures avec le temps",
         "elles sont meilleures"
       ],
-      "hint": "Look for '{même les choses sont...}'"
+      "hint": "Look for {même les choses sont...}"
     },
     {
       "id": "reading-7-8",
@@ -709,7 +709,7 @@
       "accept": [
         "voyage"
       ],
-      "hint": "Near the end: '{l'apprentissage est un...}'",
+      "hint": "Near the end: {l'apprentissage est un...}",
       "mistakes": [
         {
           "answer": "problème",
@@ -731,7 +731,7 @@
         "je comprends les idées",
         "vous comprendez les idées"
       ],
-      "hint": "Last paragraph: '{C'est la preuve que...}'",
+      "hint": "Last paragraph: {C'est la preuve que...}",
       "mistakes": [
         {
           "answer": "parlez français",
@@ -750,7 +750,7 @@
         "en train d'apprendre",
         "je suis en train d'apprendre"
       ],
-      "hint": "Last paragraph: '{vous êtes en train de...}'",
+      "hint": "Last paragraph: {vous êtes en train de...}",
       "mistakes": [
         {
           "answer": "étudier seulement",

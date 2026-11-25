@@ -3,7 +3,7 @@
   "module_key": "2024-02-03-reading3",
   "kind": "reading",
   "status": "written",
-  "title": "Reading Comprehension 3 - {La Première Page}",
+  "title": "Reading Comprehension - {La Première Page}",
   "description": "See how much you've mastered! Motion, possession, and complex pronouns in action.",
   "can_do": [
     "Read complex French stories with advanced grammar",
@@ -28,7 +28,7 @@
     {
       "id": "b-oui-je-vais-au",
       "speaker": "Marc",
-      "fr": "Oui ! Je vais au café avec toi. Tu as *Le Comte de Monte-Cristo* ? C'est le livre rouge et jaune.",
+      "fr": "Oui ! Je vais au café avec toi. Tu as Le Comte de Monte-Cristo ? C'est le livre rouge et jaune.",
       "en": "Yes! I'm going to the café with you. Do you have the Count of Monte Cristo? It's the red and yellow book."
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "b-non-merci-j-ai",
       "speaker": "Sophie",
-      "fr": "Non, merci ! J'ai mon livre de Jules Verne, *Vingt mille lieues sous les mers*. Il est nouveau. Tu veux le voir ?",
+      "fr": "Non, merci ! J'ai mon livre de Jules Verne, Vingt mille lieues sous les mers. Il est nouveau. Tu veux le voir ?",
       "en": "No, thank you! I have my Jules Verne book. Twenty Thousand Leagues Under the Sea. It's new, do you want to see it?"
     },
     {
@@ -323,7 +323,7 @@
         "au café",
         "au Café de la Paix"
       ],
-      "hint": "Look for '{tu viens au ___}' - what's the full café name?",
+      "hint": "Look for {tu viens au ___} - what's the full café name?",
       "mistakes": [
         {
           "answer": "à la maison",
@@ -335,7 +335,7 @@
         },
         {
           "answer": "à la café",
-          "feedback": "café is masculine, use '{au}' not 'à la'"
+          "feedback": "café is masculine, use {au} not 'à la'"
         }
       ]
     },
@@ -353,11 +353,11 @@
       "mistakes": [
         {
           "answer": "Non merci",
-          "feedback": "Marc accepts the invitation - he says '{Oui! Je vais au café avec toi}'"
+          "feedback": "Marc accepts the invitation - he says {Oui! Je vais au café avec toi}"
         },
         {
           "answer": "Je ne peux pas",
-          "feedback": "Marc agrees to go - he says '{Oui! Je vais au café avec toi}'"
+          "feedback": "Marc agrees to go - he says {Oui! Je vais au café avec toi}"
         }
       ]
     },
@@ -399,7 +399,7 @@
       "mistakes": [
         {
           "answer": "c'est ton",
-          "feedback": "Use possessive pronoun '{le tien}' not adjective 'ton'"
+          "feedback": "Use possessive pronoun {le tien} not adjective 'ton'"
         }
       ]
     },
@@ -417,7 +417,7 @@
       "mistakes": [
         {
           "answer": "c'est mon",
-          "feedback": "Use possessive pronoun '{le mien}' not adjective 'mon'"
+          "feedback": "Use possessive pronoun {le mien} not adjective 'mon'"
         }
       ]
     },
@@ -520,7 +520,7 @@
         },
         {
           "answer": "nouvelle",
-          "feedback": "a book is masculine, use '{nouveau}' not 'nouvelle'"
+          "feedback": "a book is masculine, use {nouveau} not 'nouvelle'"
         }
       ]
     },
@@ -543,7 +543,7 @@
         },
         {
           "answer": "vielle",
-          "feedback": "Book is masculine, use '{vieux}' not 'vielle'"
+          "feedback": "Book is masculine, use {vieux} not 'vielle'"
         }
       ]
     },
@@ -588,7 +588,7 @@
       "mistakes": [
         {
           "answer": "Non merci",
-          "feedback": "Sophie is excited and grateful, she says '{Oh! Pour moi? Merci!}'"
+          "feedback": "Sophie is excited and grateful, she says {Oh! Pour moi? Merci!}"
         },
         {
           "answer": "Je ne veux pas",

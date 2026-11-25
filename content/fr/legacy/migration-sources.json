@@ -1480,63 +1480,63 @@
           "id": "i-paul",
           "src": "743c2233178e",
           "key": "what is the narrator's name|paul",
-          "out": "89ba56cbb0e1",
+          "out": "2175d4a90c41",
           "at": 0
         },
         {
           "id": "i-un-chat-et-un",
           "src": "58545c98878f",
           "key": "what animals does paul have|un chat et un chien",
-          "out": "ba218a57873f",
+          "out": "a23468912873",
           "at": 1
         },
         {
           "id": "i-marie",
           "src": "77390c183327",
           "key": "who is tu you|marie",
-          "out": "14ba9ee3ef8a",
+          "out": "9a80ccd1b567",
           "at": 2
         },
         {
           "id": "i-une-maison-et-une",
           "src": "a740c83273c7",
           "key": "what does marie have|une maison et une voiture",
-          "out": "824d7be06574",
+          "out": "e49d7d4238d4",
           "at": 3
         },
         {
           "id": "i-des-livres",
           "src": "86f81e23775b",
           "key": "what does paul's male friend have|des livres",
-          "out": "9bd3b806c2f8",
+          "out": "b1a615a24ab0",
           "at": 4
         },
         {
           "id": "i-des-chats-et-des",
           "src": "cea801a888e5",
           "key": "what does paul's female friend have|des chats et des livres",
-          "out": "38cf88ca18a6",
+          "out": "f0bd0d255881",
           "at": 5
         },
         {
           "id": "i-des-enfants-et-des",
           "src": "20b03bdce95d",
           "key": "what do nous we have|des enfants et des chiens",
-          "out": "d0cf6a88d8b3",
+          "out": "8e88f7edf68f",
           "at": 6
         },
         {
           "id": "i-tres",
           "src": "8958786fba2b",
           "key": "what word intensifies bon in the phrase about the day|très",
-          "out": "8cd8f1aca2a1",
+          "out": "02f75455897b",
           "at": 7
         },
         {
           "id": "i-mais",
           "src": "9e70072b95df",
           "key": "which connector word is used to contrast dogs and cats|mais",
-          "out": "c81b45cc950a",
+          "out": "93a9f3f117f7",
           "at": 8
         }
       ]
@@ -4503,7 +4503,7 @@
           "id": "i-thomas",
           "src": "c68c45e66d98",
           "key": "who is with sophie|thomas",
-          "out": "47872ac2b3a0",
+          "out": "d4970541f9f0",
           "at": 1
         },
         {
@@ -9519,7 +9519,7 @@
           "id": "b-oui-je-vais-au",
           "src": "96f69d0b552c",
           "key": "marc oui je vais au café avec toi tu as le comte de monte cristo c'est le livre rouge et jaune",
-          "out": "d4a76a59af70",
+          "out": "4752d07c2a35",
           "at": 2
         },
         {
@@ -9547,7 +9547,7 @@
           "id": "b-non-merci-j-ai",
           "src": "6ec0f84b0dbc",
           "key": "sophie non merci j'ai mon livre de jules verne vingt mille lieues sous les mers il est nouveau tu veux le voir",
-          "out": "dd0ca30111f1",
+          "out": "1aad7bde4fdb",
           "at": 6
         },
         {
@@ -9640,14 +9640,14 @@
           "id": "i-cafe-de-la-paix",
           "src": "ca03cb6d1a75",
           "key": "where does sophie invite marc|café de la paix",
-          "out": "72621fab50f1",
+          "out": "582b6778e4da",
           "at": 0
         },
         {
           "id": "i-oui-je-vais-au",
           "src": "35f7fb1a1ad9",
           "key": "how does marc respond to sophie's invitation|oui je vais au café avec toi",
-          "out": "165fb45f5738",
+          "out": "fbc1354ae68a",
           "at": 1
         },
         {
@@ -9661,14 +9661,14 @@
           "id": "i-c-est-le-tien",
           "src": "708e9ed81522",
           "key": "how does sophie ask if the book belongs to marc|c'est le tien",
-          "out": "a2c2d519e474",
+          "out": "26ba64a1baab",
           "at": 3
         },
         {
           "id": "i-c-est-le-mien",
           "src": "5cc61ccc5b45",
           "key": "how does marc confirm ownership|c'est le mien",
-          "out": "efec1c756783",
+          "out": "9190a7b48cca",
           "at": 4
         },
         {
@@ -9696,14 +9696,14 @@
           "id": "i-il-est-nouveau",
           "src": "1452e3e5b468",
           "key": "how does sophie describe her book|il est nouveau",
-          "out": "6e6abfb577b6",
+          "out": "77ff5def94a1",
           "at": 8
         },
         {
           "id": "i-vieux",
           "src": "ca6201488521",
           "key": "how does sophie describe marc's book|vieux",
-          "out": "15de99766975",
+          "out": "d6828fc8b2b4",
           "at": 9
         },
         {
@@ -9717,7 +9717,7 @@
           "id": "i-pour-moi-merci",
           "src": "e2567317cdf0",
           "key": "how does sophie react when marc offers her a book|pour moi merci",
-          "out": "1e5f10462a8e",
+          "out": "5733a15cb4fb",
           "at": 11
         }
       ]
@@ -24960,213 +24960,213 @@
     "lists": {
       "sections": [
         {
-          "id": "s-basic-vowel-sounds-a",
+          "id": "s-a",
           "src": "73c96f946a5e",
           "key": "basic vowel sounds a",
-          "out": "1240cc85a4f0",
+          "out": "b8e0bb71319f",
           "at": 0
         },
         {
-          "id": "s-basic-vowel-sounds-e",
+          "id": "s-e-closed",
           "src": "cf389f27e2af",
           "key": "basic vowel sounds e",
-          "out": "fcada42463a7",
+          "out": "26ebd86db934",
           "at": 1
         },
         {
-          "id": "s-basic-vowel-sounds",
+          "id": "s-e-open",
           "src": "3572472733ae",
           "key": "basic vowel sounds ɛ",
-          "out": "abbf15cf7286",
+          "out": "6c9c4bb10ef3",
           "at": 2
         },
         {
-          "id": "s-basic-vowel-sounds-2",
+          "id": "s-schwa",
           "src": "5708a3de843c",
           "key": "basic vowel sounds ə",
-          "out": "53e89f0c9fd2",
+          "out": "8848d4b1c2da",
           "at": 3
         },
         {
-          "id": "s-basic-vowel-sounds-i",
+          "id": "s-i",
           "src": "adfc733fe931",
           "key": "basic vowel sounds i",
-          "out": "ea82fd2f0d91",
+          "out": "8dcdb82e030c",
           "at": 4
         },
         {
-          "id": "s-basic-vowel-sounds-o",
+          "id": "s-o-closed",
           "src": "d7e15c6ee820",
           "key": "basic vowel sounds o",
-          "out": "8c5a4093e8d7",
+          "out": "ad6e8baded92",
           "at": 5
         },
         {
-          "id": "s-basic-vowel-sounds-3",
+          "id": "s-o-open",
           "src": "15a725fd07fd",
           "key": "basic vowel sounds ɔ",
-          "out": "a28227adda91",
+          "out": "153c6cd2f25a",
           "at": 6
         },
         {
-          "id": "s-basic-vowel-sounds-u",
+          "id": "s-u",
           "src": "c211f5d2c53e",
           "key": "basic vowel sounds u",
-          "out": "f47d8d63ee2b",
+          "out": "c1190067462a",
           "at": 7
         },
         {
-          "id": "s-basic-vowel-sounds-y",
+          "id": "s-y",
           "src": "6d8fbac26033",
           "key": "basic vowel sounds y",
-          "out": "3e7dd3499f36",
+          "out": "434f847c64a4",
           "at": 8
         },
         {
-          "id": "s-nasal-vowels",
+          "id": "s-a-nasal",
           "src": "a72df5d3a44f",
           "key": "nasal vowels ɑ̃",
-          "out": "453ea9f99723",
+          "out": "8f4c555cf0d3",
           "at": 9
         },
         {
-          "id": "s-nasal-vowels-2",
+          "id": "s-e-nasal",
           "src": "7fef691d78d8",
           "key": "nasal vowels ɛ̃",
-          "out": "9f8342b45cf0",
+          "out": "8c18b4f63127",
           "at": 10
         },
         {
-          "id": "s-nasal-vowels-3",
+          "id": "s-o-nasal",
           "src": "dabf0d6910fa",
           "key": "nasal vowels ɔ̃",
-          "out": "d47d3228f3a6",
+          "out": "4f6d3bb0cd61",
           "at": 11
         },
         {
-          "id": "s-compound-vowels-diphthongs-wa",
+          "id": "s-wa",
           "src": "121d03dc5ae5",
           "key": "compound vowels & diphthongs wa",
-          "out": "1a28753f6118",
+          "out": "9a4f23d5ae56",
           "at": 12
         },
         {
-          "id": "s-compound-vowels-diphthongs-w",
+          "id": "s-we-nasal",
           "src": "af8758858e6c",
           "key": "compound vowels & diphthongs wɛ̃",
-          "out": "eb9f2a94e42d",
+          "out": "14de854edeb0",
           "at": 13
         },
         {
-          "id": "s-compound-vowels-diphthongs-i",
+          "id": "s-ui",
           "src": "52cc643628e3",
           "key": "compound vowels & diphthongs ɥi",
-          "out": "961f5755cafa",
+          "out": "d82c69d655ce",
           "at": 14
         },
         {
-          "id": "s-compound-vowels-diphthongs-j",
+          "id": "s-j",
           "src": "f15f1a52e970",
           "key": "compound vowels & diphthongs j",
-          "out": "b761a3911335",
+          "out": "c34489faadeb",
           "at": 15
         },
         {
-          "id": "s-consonant-sounds-s",
+          "id": "s-s",
           "src": "6918f8a7533a",
           "key": "consonant sounds s",
-          "out": "1dfea6494679",
+          "out": "91d551db88e6",
           "at": 16
         },
         {
-          "id": "s-consonant-sounds-z",
+          "id": "s-z",
           "src": "5c7a58bece9c",
           "key": "consonant sounds z",
-          "out": "4d7717dee513",
+          "out": "3aaa4368fae8",
           "at": 17
         },
         {
-          "id": "s-consonant-sounds-k",
+          "id": "s-k",
           "src": "f1dab809356f",
           "key": "consonant sounds k",
-          "out": "3d2d7f1d4b96",
+          "out": "3be9e8506111",
           "at": 18
         },
         {
-          "id": "s-consonant-sounds",
+          "id": "s-zh",
           "src": "8014c10d34ce",
           "key": "consonant sounds ʒ",
-          "out": "0c5b8c12d945",
+          "out": "5e384068328b",
           "at": 19
         },
         {
-          "id": "s-consonant-sounds-2",
+          "id": "s-sh",
           "src": "59bc6e8da3c1",
           "key": "consonant sounds ʃ",
-          "out": "731a7ad4e4d3",
+          "out": "35755ae58af1",
           "at": 20
         },
         {
-          "id": "s-consonant-sounds-3",
+          "id": "s-gn",
           "src": "9644e171e4b4",
           "key": "consonant sounds ɲ",
-          "out": "e2bdbe74510b",
+          "out": "7e35bc8f430a",
           "at": 21
         },
         {
-          "id": "s-consonant-sounds-4",
+          "id": "s-r",
           "src": "baab47d1ada2",
           "key": "consonant sounds ʁ",
-          "out": "d878eb00e7c6",
+          "out": "e7f0977bdee5",
           "at": 22
         },
         {
-          "id": "s-consonant-sounds-g",
+          "id": "s-g",
           "src": "3ddfaafba02c",
           "key": "consonant sounds g",
-          "out": "0e309b434598",
+          "out": "8f7ad2005bc0",
           "at": 23
         },
         {
-          "id": "s-silent-letters-silent-final",
+          "id": "s-silent-final-consonants",
           "src": "2fe784f78790",
           "key": "silent letters silent final consonants",
-          "out": "f1f15963a805",
+          "out": "678fd6cacef0",
           "at": 24
         },
         {
-          "id": "s-silent-letters-silent-h",
+          "id": "s-silent-h",
           "src": "c8cf92f9ab6d",
           "key": "silent letters silent h",
-          "out": "d9188c6c5c30",
+          "out": "6f63c9fb2c08",
           "at": 25
         },
         {
-          "id": "s-silent-letters-silent-e",
+          "id": "s-silent-e",
           "src": "e31ddfbf5740",
           "key": "silent letters silent e",
-          "out": "b6595f9fffb5",
+          "out": "0865f2b79350",
           "at": 26
         },
         {
-          "id": "s-special-patterns-liaison",
+          "id": "s-liaison",
           "src": "998f7ba89760",
           "key": "special patterns liaison",
-          "out": "9e30fa60e613",
+          "out": "b6b94366bcb2",
           "at": 27
         },
         {
-          "id": "s-special-patterns-elision",
+          "id": "s-elision",
           "src": "e17f08a46974",
           "key": "special patterns elision",
-          "out": "656b02413974",
+          "out": "d1255d76e47c",
           "at": 28
         },
         {
-          "id": "s-special-patterns-double-consonants",
+          "id": "s-double-consonants",
           "src": "b8016a97f12b",
           "key": "special patterns double consonants",
-          "out": "18b10c42b5be",
+          "out": "5b9885883dac",
           "at": 29
         }
       ]
@@ -31212,70 +31212,70 @@
           "id": "i-prendre-le-train",
           "src": "cc787333434d",
           "key": "what is the father doing at the beginning|prendre le train",
-          "out": "3ee1f24ba323",
+          "out": "4b1a0cd18472",
           "at": 0
         },
         {
           "id": "i-trois-heures",
           "src": "42a37ac92649",
           "key": "how long does the train take to paris|trois heures",
-          "out": "b293b6357c60",
+          "out": "d15380af5e79",
           "at": 1
         },
         {
           "id": "i-ton-manteau",
           "src": "f4addd7016f8",
           "key": "what does marie's mother say she needs|ton manteau",
-          "out": "75b464a05f18",
+          "out": "863a4a18481f",
           "at": 2
         },
         {
           "id": "i-du-pain-et-du",
           "src": "ba8af23a8b68",
           "key": "what are they going to eat on the train|du pain et du fromage",
-          "out": "75e02287dca5",
+          "out": "1308d5ab025d",
           "at": 3
         },
         {
           "id": "i-paris-est-la-plus",
           "src": "d9c5b88c7e94",
           "key": "what does the father say about paris|paris est la plus belle ville du monde",
-          "out": "2f051e3c1f98",
+          "out": "218680d62f3b",
           "at": 4
         },
         {
           "id": "i-la-tour-eiffel",
           "src": "e015bee9f52a",
           "key": "what will marie see for the first time|la tour eiffel",
-          "out": "310f3fe42754",
+          "out": "787452117b18",
           "at": 5
         },
         {
           "id": "i-toute-la-famille",
           "src": "de8fb7df672b",
           "key": "who else is going on the trip|toute la famille",
-          "out": "3e0e9579c1f6",
+          "out": "07d3f4857c10",
           "at": 6
         },
         {
           "id": "i-prendre-ses-livres",
           "src": "7bd4c93dfa1f",
           "key": "what is marie's brother doing right now|prendre ses livres",
-          "out": "0317234fe7de",
+          "out": "ec121e64e735",
           "at": 7
         },
         {
           "id": "i-apprendre-quelques-mots-en",
           "src": "175ab35cb403",
           "key": "what does marie need to do before leaving|apprendre quelques mots en français",
-          "out": "056e0d83dd9a",
+          "out": "1e20d49e86ab",
           "at": 8
         },
         {
           "id": "i-mon-livre-de-francais",
           "src": "75abaf839a25",
           "key": "what is marie going to take at the end|mon livre de français",
-          "out": "adeeae1445cd",
+          "out": "91353f06c44d",
           "at": 9
         }
       ]
@@ -35252,56 +35252,56 @@
           "id": "reading-7-3",
           "src": "81485bbc38ad",
           "key": "what is the first thing we must do to learn well|demander des questions",
-          "out": "65981ed1224c",
+          "out": "32c5adb7e9fe",
           "at": 2
         },
         {
           "id": "reading-7-4",
           "src": "3c682dcad571",
           "key": "what happens when we review|on comprend mieux",
-          "out": "8b09fe43e37c",
+          "out": "af1112cb52a0",
           "at": 3
         },
         {
           "id": "reading-7-5",
           "src": "cd4dcf8766a8",
           "key": "what must we believe in to learn|soi",
-          "out": "13b147b308d0",
+          "out": "fe9cfd882f08",
           "at": 4
         },
         {
           "id": "reading-7-6",
           "src": "e224f9243990",
           "key": "according to the author can everyone learn|oui",
-          "out": "326ca6e1c462",
+          "out": "95013c928ee1",
           "at": 5
         },
         {
           "id": "reading-7-7",
           "src": "984c007025a8",
           "key": "things do what over time according to the text|les choses sont meilleures avec le temps",
-          "out": "3db230d7c90f",
+          "out": "aa92f6439dd6",
           "at": 6
         },
         {
           "id": "reading-7-8",
           "src": "3567e597c661",
           "key": "what is learning described as|un voyage",
-          "out": "c8f3c4a68e53",
+          "out": "2680773fe563",
           "at": 7
         },
         {
           "id": "reading-7-9",
           "src": "ddf0d0834b3e",
           "key": "what is the proof that you can learn|vous comprenez mes idées",
-          "out": "b57562290693",
+          "out": "52a0951c1014",
           "at": 8
         },
         {
           "id": "reading-7-10",
           "src": "af170e3d8b28",
           "key": "what are you doing right now according to the text|apprendre",
-          "out": "4aeada94e834",
+          "out": "a9d93e8b27d9",
           "at": 9
         }
       ]
@@ -38286,7 +38286,7 @@
           "id": "reading-8-3",
           "src": "525d54a98f11",
           "key": "how has marie's french comprehension changed over time|maintenant elle sait beaucoup de choses",
-          "out": "4102b22789ff",
+          "out": "6e08bb23f3ad",
           "at": 2
         },
         {
@@ -38328,7 +38328,7 @@
           "id": "reading-8-9",
           "src": "352cf3c38db9",
           "key": "why does marie call her french experience magnifique|on se parle en français",
-          "out": "d0d3c3698db8",
+          "out": "f7115c73a11c",
           "at": 8
         },
         {
@@ -44455,9 +44455,9 @@
       "parts": [
         {
           "id": "p-silent-letters-at-the",
-          "src": "081f9f33f43b",
+          "src": "91978bfe66f6",
           "key": "silent letters at the end",
-          "out": "c92dff2c04d0",
+          "out": "ec1dcbad36b9",
           "at": 0
         },
         {
@@ -44490,9 +44490,9 @@
         },
         {
           "id": "p-elision-l-ami-j",
-          "src": "ac5e1563a510",
+          "src": "52b449e4ef83",
           "key": "elision l'ami j'ai",
-          "out": "95a7cab2b972",
+          "out": "2ce902c72992",
           "at": 5
         }
       ]
@@ -45319,21 +45319,21 @@
           "id": "p-not-ne-pas",
           "src": "2b28f3b95b36",
           "key": "not ne pas",
-          "out": "968fb0132658",
+          "out": "503009342b41",
           "at": 0
         },
         {
           "id": "p-not-any-pas-de",
           "src": "de2135f595de",
           "key": "not any pas de",
-          "out": "ed15d24aebc1",
+          "out": "75e112bcde3e",
           "at": 1
         },
         {
           "id": "p-no-more-nothing-never",
           "src": "bb04545d40a5",
           "key": "no more nothing never swap pas",
-          "out": "4e9df4f3fbd8",
+          "out": "304bf2313265",
           "at": 2
         }
       ]

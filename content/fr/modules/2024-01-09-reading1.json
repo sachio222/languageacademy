@@ -202,13 +202,13 @@
       "id": "i-paul",
       "type": "comprehension",
       "question": "What is the narrator's name?",
-      "cue": "Who is '{je}'?",
+      "cue": "Who is {je}?",
       "answer": "Paul",
-      "hint": "Second sentence - '{je suis ___}'",
+      "hint": "Second sentence - {je suis ___}",
       "mistakes": [
         {
           "answer": "Marie",
-          "feedback": "That's '{tu}', not 'je'"
+          "feedback": "That's {tu}, not 'je'"
         }
       ]
     },
@@ -224,11 +224,11 @@
         "il a un chat et un chien",
         "il a un chien et un chat"
       ],
-      "hint": "Look for '{j'ai un chat et...}'",
+      "hint": "Look for {j'ai un chat et...}",
       "mistakes": [
         {
           "answer": "des livres",
-          "feedback": "That's what '{il}' (he) has, not Paul"
+          "feedback": "That's what {il} (he) has, not Paul"
         },
         {
           "answer": "un chat",
@@ -243,14 +243,14 @@
     {
       "id": "i-marie",
       "type": "comprehension",
-      "question": "Who is '{tu}' (you)?",
-      "cue": "What is '{tu}' called?",
+      "question": "Who is {tu} (you)?",
+      "cue": "What is {tu} called?",
       "answer": "Marie",
-      "hint": "Second paragraph - '{tu es ___}' (a name!)",
+      "hint": "Second paragraph - {tu es ___} (a name!)",
       "mistakes": [
         {
           "answer": "Paul",
-          "feedback": "That's '{je}', not 'tu'"
+          "feedback": "That's {je}, not 'tu'"
         }
       ]
     },
@@ -268,7 +268,7 @@
         "elle a une maison et une voiture",
         "elle a une voiture et une maison"
       ],
-      "hint": "Look for '{tu as ___}' - she has two things"
+      "hint": "Look for {tu as ___} - she has two things"
     },
     {
       "id": "i-des-livres",
@@ -276,7 +276,7 @@
       "question": "What does Paul's male friend have?",
       "cue": "The male friend has...",
       "answer": "des livres",
-      "hint": "Third paragraph - '{il a ___}'",
+      "hint": "Third paragraph - {il a ___}",
       "mistakes": [
         {
           "answer": "un chat",
@@ -295,7 +295,7 @@
         "des livres et des chats",
         "chats et livres"
       ],
-      "hint": "Look for '{elle a ___}' - she has two things connected by '{et}'",
+      "hint": "Look for {elle a ___} - she has two things connected by {et}",
       "mistakes": [
         {
           "answer": "une voiture",
@@ -306,7 +306,7 @@
     {
       "id": "i-des-enfants-et-des",
       "type": "comprehension",
-      "question": "What do '{nous}' (we) have?",
+      "question": "What do {nous} (we) have?",
       "answer": "des enfants et des chiens",
       "accept": [
         "des enfants",
@@ -316,21 +316,21 @@
         "ils ont des enfants et des chiens",
         "ils ont des chiens et des enfants"
       ],
-      "hint": "Fourth paragraph - '{nous avons ___}' - we have two things",
+      "hint": "Fourth paragraph - {nous avons ___} - we have two things",
       "mistakes": [
         {
           "answer": "des livres",
-          "feedback": "That's what '{il}' has"
+          "feedback": "That's what {il} has"
         }
       ]
     },
     {
       "id": "i-tres",
       "type": "comprehension",
-      "question": "What word intensifies '{bon}' in the phrase about the day?",
+      "question": "What word intensifies {bon} in the phrase about the day?",
       "cue": "It's a ___ good day",
       "answer": "très",
-      "hint": "Look for '{c'est un ___ bon jour}'",
+      "hint": "Look for {c'est un ___ bon jour}",
       "mistakes": [
         {
           "answer": "bon",
@@ -344,7 +344,7 @@
       "question": "Which connector word is used to contrast dogs and cats?",
       "cue": "The dogs are good, ___ the cats are good too",
       "answer": "mais",
-      "hint": "Look for the word showing contrast: '{très bon, ___ les chats}'",
+      "hint": "Look for the word showing contrast: {très bon, ___ les chats}",
       "mistakes": [
         {
           "answer": "et",

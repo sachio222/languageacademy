@@ -200,7 +200,8 @@
     }
   },
   "2024-01-22-reading2": {
-    "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far."
+    "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far.",
+    "title": "Reading Comprehension - {Rendez-vous en Normandie}"
   },
   "2024-01-23-common-special-forms-1": {
     "concepts": [
@@ -382,6 +383,9 @@
       ]
     }
   },
+  "2024-02-03-reading3": {
+    "title": "Reading Comprehension - {La Première Page}"
+  },
   "2024-02-04-unit-10-exam": {
     "description": "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions.",
     "items/i-perdu-espoir": {
@@ -558,7 +562,8 @@
     ]
   },
   "2024-03-30-reading-4": {
-    "description": "A natural conversation using all your vocabulary."
+    "description": "A natural conversation using all your vocabulary.",
+    "title": "Reading Comprehension - {La nouvelle époque de Marie}"
   },
   "2024-04-02-unit-4-exam": {
     "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
@@ -597,6 +602,7 @@
   },
   "2024-04-13-reading-5": {
     "description": "A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin.",
+    "title": "Reading Comprehension - {La fée verte} (The Green Fairy)",
     "vocabulary/aimer-fr": {
       "word_id": "aimer-fr",
       "fr": "aimer",
@@ -718,6 +724,7 @@
   },
   "2024-04-24-reading-6": {
     "description": "A family plans a trip to Paris. Uses this unit's vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin.",
+    "title": "Reading Comprehension - {Un Voyage en Famille}",
     "vocabulary/avoir-fr": {
       "word_id": "avoir-fr",
       "fr": "avoir",
@@ -1195,47 +1202,6 @@
     "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
     "title": "Discourse & Past Tense Practice - Fill in the Blanks"
   },
-  "2024-10-20-liaison-help": {
-    "parts/p-elision-l-ami-j": {
-      "id": "p-elision-l-ami-j",
-      "heading": "Elision: {l'ami, j'ai}",
-      "text": [
-        "Before a vowel sound, {le}, {la} and {je} drop their vowel and take an apostrophe. The two words then sound like one."
-      ],
-      "note": "A silent h counts as a vowel, so {homme} takes {l'} as well. The same happens to {si} before {il} in {s'il vous plaît}. Elision and liaison work together. One friend is {l'ami}. More than one is {les amis}, where {les} keeps its s and links with a z sound.",
-      "blocks": [
-        {
-          "pairs": [
-            [
-              "l'ami",
-              "le + ami"
-            ],
-            [
-              "l'amie",
-              "la + amie"
-            ],
-            [
-              "l'enfant",
-              "le + enfant"
-            ],
-            [
-              "l'homme",
-              "le + homme"
-            ],
-            [
-              "j'ai",
-              "je + ai"
-            ],
-            [
-              "s'il vous plaît",
-              "si + il"
-            ]
-          ],
-          "heading": "Words You Know"
-        }
-      ]
-    }
-  },
   "2026-11-24-negation-guide": {
     "checks": [
       {
@@ -1296,7 +1262,7 @@
             "right": true
           }
         ],
-        "why": "Put {plus} where {pas} goes to say anymore. {jamais} means never, and {pas} means not."
+        "why": "{plus} takes the place of {pas} and means anymore."
       }
     ]
   }

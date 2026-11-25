@@ -7,7 +7,7 @@
   "description": "Complete guide to French sound-to-spelling correspondences",
   "sections": [
     {
-      "id": "s-basic-vowel-sounds-a",
+      "id": "s-a",
       "heading": "Basic Vowel Sounds: /a/",
       "text": "As in 'father'",
       "rows": [
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-e",
+      "id": "s-e-closed",
       "heading": "Basic Vowel Sounds: /e/",
       "text": "As in 'day' (closed e)",
       "rows": [
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds",
+      "id": "s-e-open",
       "heading": "Basic Vowel Sounds: /ɛ/",
       "text": "As in 'bed' (open e)",
       "rows": [
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-2",
+      "id": "s-schwa",
       "heading": "Basic Vowel Sounds: /ə/",
       "text": "Schwa - the neutral 'uh' sound",
       "rows": [
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-i",
+      "id": "s-i",
       "heading": "Basic Vowel Sounds: /i/",
       "text": "As in 'see'",
       "rows": [
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-o",
+      "id": "s-o-closed",
       "heading": "Basic Vowel Sounds: /o/",
       "text": "As in 'go' (closed o)",
       "rows": [
@@ -164,7 +164,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-3",
+      "id": "s-o-open",
       "heading": "Basic Vowel Sounds: /ɔ/",
       "text": "As in 'off' (open o)",
       "rows": [
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-u",
+      "id": "s-u",
       "heading": "Basic Vowel Sounds: /u/",
       "text": "As in 'food'",
       "rows": [
@@ -203,7 +203,7 @@
       ]
     },
     {
-      "id": "s-basic-vowel-sounds-y",
+      "id": "s-y",
       "heading": "Basic Vowel Sounds: /y/",
       "text": "Like German 'ü' - say 'ee' with rounded lips",
       "rows": [
@@ -225,7 +225,7 @@
       ]
     },
     {
-      "id": "s-nasal-vowels",
+      "id": "s-a-nasal",
       "heading": "Nasal Vowels: /ɑ̃/",
       "text": "Nasal 'ah' - as in French 'en'",
       "rows": [
@@ -252,7 +252,7 @@
       ]
     },
     {
-      "id": "s-nasal-vowels-2",
+      "id": "s-e-nasal",
       "heading": "Nasal Vowels: /ɛ̃/",
       "text": "Nasal 'eh' - as in French 'un'",
       "rows": [
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "id": "s-nasal-vowels-3",
+      "id": "s-o-nasal",
       "heading": "Nasal Vowels: /ɔ̃/",
       "text": "Nasal 'oh' - as in French 'bon'",
       "rows": [
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "s-compound-vowels-diphthongs-wa",
+      "id": "s-wa",
       "heading": "Compound Vowels & Diphthongs: /wa/",
       "text": "As in 'wah'",
       "rows": [
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "id": "s-compound-vowels-diphthongs-w",
+      "id": "s-we-nasal",
       "heading": "Compound Vowels & Diphthongs: /wɛ̃/",
       "text": "Nasal 'weh'",
       "rows": [
@@ -345,7 +345,7 @@
       ]
     },
     {
-      "id": "s-compound-vowels-diphthongs-i",
+      "id": "s-ui",
       "heading": "Compound Vowels & Diphthongs: /ɥi/",
       "text": "Like 'wee' with rounded lips",
       "rows": [
@@ -357,7 +357,7 @@
       ]
     },
     {
-      "id": "s-compound-vowels-diphthongs-j",
+      "id": "s-j",
       "heading": "Compound Vowels & Diphthongs: /j/",
       "text": "Y sound - as in 'yes'",
       "rows": [
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-s",
+      "id": "s-s",
       "heading": "Consonant Sounds: /s/",
       "text": "As in 'sun'",
       "rows": [
@@ -421,7 +421,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-z",
+      "id": "s-z",
       "heading": "Consonant Sounds: /z/",
       "text": "As in 'zoo'",
       "rows": [
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-k",
+      "id": "s-k",
       "heading": "Consonant Sounds: /k/",
       "text": "As in 'cat'",
       "rows": [
@@ -480,7 +480,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds",
+      "id": "s-zh",
       "heading": "Consonant Sounds: /ʒ/",
       "text": "As in 'measure'",
       "rows": [
@@ -502,7 +502,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-2",
+      "id": "s-sh",
       "heading": "Consonant Sounds: /ʃ/",
       "text": "As in 'shoe'",
       "rows": [
@@ -519,7 +519,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-3",
+      "id": "s-gn",
       "heading": "Consonant Sounds: /ɲ/",
       "text": "As in 'onion' (Spanish ñ)",
       "rows": [
@@ -531,7 +531,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-4",
+      "id": "s-r",
       "heading": "Consonant Sounds: /ʁ/",
       "text": "French R - guttural sound",
       "rows": [
@@ -548,7 +548,7 @@
       ]
     },
     {
-      "id": "s-consonant-sounds-g",
+      "id": "s-g",
       "heading": "Consonant Sounds: /g/",
       "text": "As in 'go'",
       "rows": [
@@ -570,7 +570,7 @@
       ]
     },
     {
-      "id": "s-silent-letters-silent-final",
+      "id": "s-silent-final-consonants",
       "heading": "Silent Letters: Silent final consonants",
       "text": "Usually not pronounced at word end",
       "rows": [
@@ -607,7 +607,7 @@
       ]
     },
     {
-      "id": "s-silent-letters-silent-h",
+      "id": "s-silent-h",
       "heading": "Silent Letters: Silent h",
       "text": "Never pronounced in French",
       "rows": [
@@ -619,7 +619,7 @@
       ]
     },
     {
-      "id": "s-silent-letters-silent-e",
+      "id": "s-silent-e",
       "heading": "Silent Letters: Silent e",
       "text": "Often dropped in speech",
       "rows": [
@@ -636,7 +636,7 @@
       ]
     },
     {
-      "id": "s-special-patterns-liaison",
+      "id": "s-liaison",
       "heading": "Special Patterns: Liaison",
       "text": "Connecting final consonant to next vowel",
       "rows": [
@@ -668,7 +668,7 @@
       ]
     },
     {
-      "id": "s-special-patterns-elision",
+      "id": "s-elision",
       "heading": "Special Patterns: Elision",
       "text": "Dropping vowel before another vowel",
       "rows": [
@@ -695,7 +695,7 @@
       ]
     },
     {
-      "id": "s-special-patterns-double-consonants",
+      "id": "s-double-consonants",
       "heading": "Special Patterns: Double consonants",
       "text": "Often affect preceding vowel sound",
       "rows": [

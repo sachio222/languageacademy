@@ -3,7 +3,7 @@
   "module_key": "2024-04-24-reading-6",
   "kind": "reading",
   "status": "written",
-  "title": "Reading Comprehension 6 - {Un Voyage en Famille}",
+  "title": "Reading Comprehension - {Un Voyage en Famille}",
   "description": "A family plans a trip to Paris. Uses this unit's vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin.",
   "can_do": [
     "Read complex stories with advanced communication verbs",
@@ -626,7 +626,7 @@
         "je prends le train",
         "il est en train de prendre le train"
       ],
-      "hint": "He says '{je suis en train de...}'"
+      "hint": "He says {je suis en train de...}"
     },
     {
       "id": "i-trois-heures",
@@ -637,7 +637,7 @@
       "accept": [
         "3 heures"
       ],
-      "hint": "The father says '{ça prend...}'"
+      "hint": "The father says {ça prend...}"
     },
     {
       "id": "i-ton-manteau",
@@ -649,7 +649,7 @@
         "manteau",
         "son manteau"
       ],
-      "hint": "Mother says '{tu as besoin de...}'"
+      "hint": "Mother says {tu as besoin de...}"
     },
     {
       "id": "i-du-pain-et-du",
@@ -660,7 +660,7 @@
       "accept": [
         "du fromage et du pain"
       ],
-      "hint": "Father says '{nous allons manger...}'"
+      "hint": "Father says {nous allons manger...}"
     },
     {
       "id": "i-paris-est-la-plus",
@@ -673,7 +673,7 @@
         "plus belle ville du monde",
         "la plus belle ville"
       ],
-      "hint": "Marie reminds him: '{qu'est-ce que tu me dis toujours?}'"
+      "hint": "Marie reminds him: {qu'est-ce que tu me dis toujours?}"
     },
     {
       "id": "i-la-tour-eiffel",
@@ -683,7 +683,7 @@
       "accept": [
         "Tour Eiffel"
       ],
-      "hint": "Father says '{pour la première fois}'"
+      "hint": "Father says {pour la première fois}"
     },
     {
       "id": "i-toute-la-famille",
@@ -697,7 +697,7 @@
         "son frère",
         "le frère"
       ],
-      "hint": "Mother says '{toute la...}'"
+      "hint": "Mother says {toute la...}"
     },
     {
       "id": "i-prendre-ses-livres",
@@ -709,7 +709,7 @@
         "il prend ses livres",
         "il est en train de prendre ses livres"
       ],
-      "hint": "Mother says '{en ce moment}'"
+      "hint": "Mother says {en ce moment}"
     },
     {
       "id": "i-apprendre-quelques-mots-en",
@@ -722,7 +722,7 @@
         "apprendre le français",
         "elle doit apprendre"
       ],
-      "hint": "She says '{j'ai besoin d'apprendre...}'"
+      "hint": "She says {j'ai besoin d'apprendre...}"
     },
     {
       "id": "i-mon-livre-de-francais",
@@ -737,7 +737,7 @@
         "un livre de français",
         "un livre de français pour apprendre"
       ],
-      "hint": "She says '{je vais prendre...}'"
+      "hint": "She says {je vais prendre...}"
     }
   ]
 }

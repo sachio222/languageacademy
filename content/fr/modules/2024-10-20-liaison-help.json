@@ -24,22 +24,27 @@
           "pairs": [
             [
               "les",
+              "the (plural)",
               "lay"
             ],
             [
               "vous",
+              "you (formal/plural)",
               "voo"
             ],
             [
               "chat",
+              "cat (male)",
               "sha"
             ],
             [
               "salut",
+              "hi / bye",
               "sa-loo"
             ],
             [
               "enfant",
+              "child",
               "ahn-fahn"
             ]
           ],
@@ -49,14 +54,17 @@
           "pairs": [
             [
               "bonjour",
+              "hello / good day",
               "bon-zhoor"
             ],
             [
               "bonsoir",
+              "good evening",
               "bon-swahr"
             ],
             [
               "il",
+              "he",
               "eel"
             ]
           ],
@@ -221,26 +229,32 @@
           "pairs": [
             [
               "l'ami",
+              "the friend (masc)",
               "le + ami"
             ],
             [
               "l'amie",
+              "the friend (fem)",
               "la + amie"
             ],
             [
               "l'enfant",
+              "the child",
               "le + enfant"
             ],
             [
               "l'homme",
+              "the man",
               "le + homme"
             ],
             [
               "j'ai",
+              "I have",
               "je + ai"
             ],
             [
               "s'il vous plaît",
+              "please",
               "si + il"
             ]
           ],

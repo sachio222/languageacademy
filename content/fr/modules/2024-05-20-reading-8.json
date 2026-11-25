@@ -414,7 +414,7 @@
         "je sais beaucoup de choses",
         "maintenant, je sais beaucoup de choses"
       ],
-      "hint": "Look for '{Avant, je ne comprenais pas... mais maintenant}'"
+      "hint": "Look for {Avant, je ne comprenais pas... mais maintenant}"
     },
     {
       "id": "reading-8-4",
@@ -478,7 +478,7 @@
     {
       "id": "reading-8-9",
       "type": "comprehension",
-      "question": "Why does Marie call her French experience '{magnifique}'?",
+      "question": "Why does Marie call her French experience {magnifique}?",
       "cue": "It's magnificent because...",
       "answer": "on se parle en français",
       "accept": [
