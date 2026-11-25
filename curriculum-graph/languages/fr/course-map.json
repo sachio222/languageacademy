@@ -1133,7 +1133,10 @@
       "fr:lex:le.pronoun",
       "fr:form:le.pronoun.f",
       "fr:form:le.pronoun.pl",
-      "fr:form:le.pronoun.elided"
+      "fr:form:le.pronoun.elided",
+      "fr:lex:tenir",
+      "fr:form:tenir.sbjv.1sg",
+      "fr:form:tenir.sbjv.3sg"
     ],
     "teachesConstructions": [
       "fr:cx:possessive.pronoun"

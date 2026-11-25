@@ -14,5 +14,6 @@
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:planter"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:porter"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:preter"},
+  {"cells": ["ptcp"], "id": "fr:lex:taire"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:telephoner"}
 ]

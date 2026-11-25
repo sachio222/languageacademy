@@ -410,8 +410,11 @@
     "id": "fr:lex:admettre",
     "lemma": "admettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -1490,8 +1493,12 @@
     "id": "fr:lex:appuyer",
     "lemma": "appuyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -2334,7 +2341,15 @@
     "dictionaryId": null,
     "id": "fr:lex:avertir",
     "lemma": "avertir",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.ir.present",
+      "fr:cx:ptcp.ir",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.ir.subjunctive",
+      "fr:cx:prsptcp.ir"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -2727,8 +2742,13 @@
     "id": "fr:lex:battre",
     "lemma": "battre",
     "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -4672,6 +4692,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:chauffage",
+    "lemma": "chauffage",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "heating"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -7751,6 +7788,28 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "id": "fr:lex:depanner",
+    "lemma": "dépanner",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to fix (a breakdown); to help someone out"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -8156,7 +8215,15 @@
     "dictionaryId": null,
     "id": "fr:lex:detendre",
     "lemma": "détendre",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -8280,6 +8347,21 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:devis",
+    "lemma": "devis",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "quote, estimate (for a job)"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -8524,6 +8606,22 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "id": "fr:lex:disponible",
+    "lemma": "disponible",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "available, free"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -9440,6 +9538,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:electricien",
+    "lemma": "électricien",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "electrician"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -9670,8 +9785,12 @@
     "id": "fr:lex:employer",
     "lemma": "employer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -9781,7 +9900,11 @@
     "dictionaryId": null,
     "id": "fr:lex:endormir",
     "lemma": "endormir",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:ptcp.ir",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -9886,6 +10009,7 @@
     "id": "fr:lex:enfuir",
     "lemma": "enfuir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -9959,8 +10083,12 @@
     "id": "fr:lex:ennuyer",
     "lemma": "ennuyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -10261,8 +10389,12 @@
     "id": "fr:lex:envoyer",
     "lemma": "envoyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -10547,8 +10679,12 @@
     "id": "fr:lex:essuyer",
     "lemma": "essuyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -11430,6 +11566,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:facture",
+    "lemma": "facture",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "bill, invoice"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -12507,6 +12660,7 @@
     "id": "fr:lex:fuir",
     "lemma": "fuir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -13439,10 +13593,7 @@
     "dictionaryId": null,
     "id": "fr:lex:hair",
     "lemma": "haïr",
-    "paradigms": [
-      "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
-    ],
+    "paradigms": [],
     "pos": "verb",
     "senses": []
   },
@@ -14730,8 +14881,13 @@
     "id": "fr:lex:interrompre",
     "lemma": "interrompre",
     "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -17972,7 +18128,15 @@
     "dictionaryId": null,
     "id": "fr:lex:mordre",
     "lemma": "mordre",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -19479,6 +19643,23 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:panne",
+    "lemma": "panne",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "breakdown (en panne: out of order, broken down)"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:panneau",
@@ -20940,6 +21121,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:plombier",
+    "lemma": "plombier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "plumber"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -21184,6 +21382,23 @@
     "paradigms": [],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:pompier",
+    "lemma": "pompier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "firefighter"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -21880,7 +22095,15 @@
     "dictionaryId": null,
     "id": "fr:lex:pretendre",
     "lemma": "prétendre",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -22282,8 +22505,11 @@
     "id": "fr:lex:promettre",
     "lemma": "promettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -22357,6 +22583,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:proprietaire",
+    "lemma": "propriétaire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "owner; landlord"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -23222,7 +23465,14 @@
     "dictionaryId": null,
     "id": "fr:lex:reagir",
     "lemma": "réagir",
-    "paradigms": [],
+    "paradigms": [
+      "fr:cx:verb.ir.present",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.ir.subjunctive",
+      "fr:cx:prsptcp.ir"
+    ],
     "pos": "verb",
     "senses": []
   },
@@ -23834,8 +24084,11 @@
     "id": "fr:lex:remettre",
     "lemma": "remettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -24025,12 +24278,33 @@
     "id": "fr:lex:renvoyer",
     "lemma": "renvoyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:reparateur",
+    "lemma": "réparateur",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "repairer, repair person"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -24057,6 +24331,7 @@
     "id": "fr:lex:repartir",
     "lemma": "repartir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -24338,6 +24613,7 @@
     "id": "fr:lex:ressentir",
     "lemma": "ressentir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -24822,6 +25098,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:robinet",
+    "lemma": "robinet",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "tap, faucet"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -24888,8 +25181,13 @@
     "id": "fr:lex:rompre",
     "lemma": "rompre",
     "paradigms": [
+      "fr:cx:verb.re.present",
+      "fr:cx:ptcp.re",
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -25625,6 +25923,7 @@
     "id": "fr:lex:sentir",
     "lemma": "sentir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -25734,6 +26033,40 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:serrure",
+    "lemma": "serrure",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "lock"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:serrurier",
+    "lemma": "serrurier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "locksmith"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "serveur-fr",
@@ -25776,6 +26109,7 @@
     "id": "fr:lex:servir",
     "lemma": "servir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -27054,8 +27388,11 @@
     "id": "fr:lex:survivre",
     "lemma": "survivre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []
@@ -28180,8 +28517,11 @@
     "id": "fr:lex:transmettre",
     "lemma": "transmettre",
     "paradigms": [
+      "fr:cx:verb.re.impf",
       "fr:cx:verb.future",
-      "fr:cx:verb.conditional"
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.re.subjunctive",
+      "fr:cx:prsptcp.re"
     ],
     "pos": "verb",
     "senses": []

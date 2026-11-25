@@ -108,7 +108,9 @@ Run these from the repository root.
 
 `pnpm graph:test` fails when a vocabulary table lists a form whose tense puts the module above the level of everything else it teaches, such as sois (a subjunctive form of être) in a lesson that credits no subjunctive. List the construction that builds that tense in `teachesConstructions`, here `fr:cx:subj.il-faut-que`, or take the form out of the table.
 
-Many of the verbs added for the core lists (see Levels and core lists) have only some of their forms. Verbs in -yer such as envoyer, appuyer and employer have only their imperfect, past participle and present participle, and irregular verbs such as écrire, offrir and conduire have only their future and conditional, so the checker reads j'envoie and j'écris as unknown words. Before a lesson teaches one of these verbs, add its missing forms to `forms.json` (see Adding an irregular form).
+Every verb has all six present forms except the verbs in `reading-limits.json` (see Level and function reports), falloir and pleuvoir, which have only il, and suivre, whose suis is left to être. A new irregular verb follows a verb of the same family (see Adding an irregular form): tenir and its compounds like venir, sentir like partir, employer and essuyer like nettoyer. A verb that never agrees, such as rire, mentir or réagir, has one past participle (ri, menti, réagi) and no ptcp.f, ptcp.pl or ptcp.fpl.
+
+Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in `excludeWords` and the noun in `teachesWordsManual` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne.
 
 ## Course-map fields
 
@@ -143,7 +145,9 @@ Add an object to `headwords.json` and keep the file sorted by `id`:
 - `pos` is the part of speech: noun, verb, adjective, adverb, pronoun, preposition, conjunction, article, determiner, interjection, interrogative, or alphabet for a letter.
 - `paradigms` lists the patterns in `paradigms.json` that generate the word's regular forms. A regular -er verb takes the same seven patterns as `fr:lex:parler`; a noun takes `fr:cx:noun.plural`; an adjective takes the `fr:cx:adj.*` pattern that fits its endings. An irregular verb lists only the patterns its regular cells follow and gets the rest as irregular forms.
 - `dictionaryId` is the word's key in `src/data/dictionary/`, or null.
-- `cefr` and `cefrSource` give the word's level and how it was decided (see Levels and core lists). Every headword needs both. When you choose the level yourself, write `cefrSource` as `team: ` followed by a few words, such as `team: teacher review, 2026-12`.
+- `senses` lists the word's meanings as `{ "gloss": "plumber" }`, in English. Most headwords still have an empty list; give a new headword at least one gloss.
+- `gender` is `"m"` or `"f"` for a noun, or `"m/f"` for a noun with one form for both genders (un or une propriétaire). Leave it out for other parts of speech. No rule reads `gender` or `senses` yet; they are there for lesson writers and the app.
+- `cefr` and `cefrSource` give the word's level and how it was decided (see Levels and core lists). Every headword needs both. When you choose the level yourself, write `cefrSource` as `team: ` followed by a few words, such as `team: teacher review, 2026-12`. A level an agent set under Jake's delegation is written `team: set by agent, Jake delegated 2026-11-25`.
 
 A new headword does not go into a core list, even at A1, A2 or B1. The core lists change only when the team changes a level's target (see Levels and core lists).
 
@@ -235,7 +239,7 @@ Every headword, construction and paradigm has a CEFR level in `cefr`, and `cefrS
 | `agent: Eaquals grammar` | The level where the Eaquals inventory lists the grammar point as key: passé composé A1, imparfait A2, il faut que with the subjunctive A2, other uses of the subjunctive B1, conditionnel passé B2. A grammar word takes the level of its grammar point, so dont is B1 and donc is A2. |
 | `agent: judgment` | Our own call where the sources say nothing direct: fixed phrases, slang, grammar terms such as verbe, and words a frequency rank places too low or too high. |
 
-Anyone on the team may change a level. Write `cefrSource` as `team: ` and a few words on why, such as `team: teacher review, 2026-12`. A source in any other form, or a level with no source, is the error `cefr-source-bad` in `pnpm graph:check` and fails `pnpm graph:test`.
+Anyone on the team may change a level. Write `cefrSource` as `team: ` and a few words on why, such as `team: teacher review, 2026-12`. On 2026-11-25 Jake delegated levels to agents, judged by accuracy; those levels read `team: set by agent, Jake delegated 2026-11-25`. A source in any other form, or a level with no source, is the error `cefr-source-bad` in `pnpm graph:check` and fails `pnpm graph:test`.
 
 A form has no stored level. It takes the higher of its headword's level and the level of the construction that builds its tense: subjunctive forms take `fr:cx:subj.il-faut-que`, conditional forms `fr:cx:conditionnel-present`, future forms `fr:cx:futur-simple`, imperfect forms `fr:cx:imparfait` and present participles `fr:cx:gerondif`. Present-tense forms, past participles and agreement forms take the headword's level. Two exceptions keep beginner forms at their level:
 
@@ -279,7 +283,7 @@ The reports add three warnings. Where they use the highest level the course has 
 - `level-order`: a module teaches a word or pattern two or more levels above the highest level reached before it. Until the course reaches a level, the count starts from A1, so the warning names every B1 or higher node. One line per module lists the nodes. A form is left out when the same line already names its headword or the pattern that builds its tense.
 - `function-unreachable`: no exponent of an A1 or A2 function is fully taught by the end of the course. The line names what the closest exponent still needs. While the Reference unit is open its words are available, so they never appear there. With `reference.openFrom` set to null, the line marks words that no lesson teaches and only the Reference unit lists, such as huit in "Il est huit heures".
 
-`languages/fr/reading-limits.json` lists verbs the checker cannot yet tell from a noun or adjective with the same spelling. Their present, past participle and subjunctive forms were left out of the graph because they are spelled like an older entry: il porte reads as the noun porte, and j'ai téléphoné does not read as téléphoner. For intéresser only the present participle is left out, because intéressant is also an adjective. Each entry gives the headword and the cells left out:
+`languages/fr/reading-limits.json` lists verbs the checker cannot yet tell from a noun or adjective with the same spelling. Their present, past participle and subjunctive forms were left out of the graph because they are spelled like an older entry: il porte reads as the noun porte, and j'ai téléphoné does not read as téléphoner. For intéresser only the present participle is left out, because intéressant is also an adjective. For taire only the past participle is left out: tu is the subject pronoun and tue a form of tuer, and a participle reading on tu would make the checker read a passé composé into as-tu. Each entry gives the headword and the cells left out:
 
 ```json
 { "cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:porter" }
