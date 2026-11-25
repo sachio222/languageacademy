@@ -47,6 +47,12 @@ export const adjectives = {
         "These common adjectives usually go BEFORE the noun (unlike most French adjectives)",
       example: "un petit chat (a small cat), NOT un chat petit",
     },
+    {
+      term: "Before a Vowel: bel, nouvel, vieil",
+      definition:
+        "'Beau', 'bon', 'grand', 'petit', 'nouveau' and 'vieux' go before the noun. Before a masculine noun that starts with a vowel sound, 'beau', 'nouveau' and 'vieux' become 'bel', 'nouvel' and 'vieil'. Feminine forms do not change: 'une nouvelle amie'.",
+      example: "un bel enfant, un nouvel ami, un vieil homme",
+    },
   ],
 
   vocabularyReference: [
@@ -89,6 +95,16 @@ export const adjectives = {
       french: "autre / autre",
       english: "other",
       note: "un autre livre / une autre maison (same both)",
+    },
+    {
+      french: "bel / nouvel / vieil",
+      english: "beautiful / new / old, before a vowel sound",
+      note: "un bel enfant / un nouvel ami / un vieil homme",
+    },
+    {
+      french: "belles / vieilles",
+      english: "beautiful / old, feminine plural",
+      note: "les belles maisons / les vieilles maisons",
     },
   ],
 
@@ -289,6 +305,86 @@ export const adjectives = {
           {
             answer: "tu as un autre voiture",
             feedback: "voiture is feminine, use 'une autre'",
+          },
+        ],
+      },
+      {
+        instruction: "Complete the phrase with 'petit' in its place",
+        prompt: "une maison + petit →",
+        hint: "'Petit' goes before the noun, and 'maison' is feminine",
+        expectedAnswer: "une petite maison",
+        wrongAnswers: [
+          {
+            answer: "une maison petite",
+            feedback: "'Petit' goes before the noun: une petite maison",
+          },
+          {
+            answer: "une petit maison",
+            feedback: "'Maison' is feminine, so use 'petite'",
+          },
+        ],
+      },
+      {
+        instruction: "Complete the phrase with 'bon' in its place",
+        prompt: "un ami + bon →",
+        hint: "'Bon' goes before the noun",
+        expectedAnswer: "un bon ami",
+        wrongAnswers: [
+          {
+            answer: "un ami bon",
+            feedback: "'Bon' goes before the noun: un bon ami",
+          },
+        ],
+      },
+      {
+        instruction: "Complete the phrase with 'nouveau' in its place",
+        prompt: "un ami + nouveau →",
+        hint: "'Ami' starts with a vowel",
+        expectedAnswer: "un nouvel ami",
+        wrongAnswers: [
+          {
+            answer: "un nouveau ami",
+            feedback: "'Ami' starts with a vowel, so 'nouveau' becomes 'nouvel': un nouvel ami",
+          },
+          {
+            answer: "un ami nouveau",
+            feedback: "'Nouveau' goes before the noun: un nouvel ami",
+          },
+        ],
+      },
+      {
+        instruction: "Complete the phrase with 'beau' in its place",
+        prompt: "un enfant + beau →",
+        hint: "'Enfant' starts with a vowel",
+        expectedAnswer: "un bel enfant",
+        wrongAnswers: [
+          {
+            answer: "un beau enfant",
+            feedback: "'Enfant' starts with a vowel, so 'beau' becomes 'bel': un bel enfant",
+          },
+        ],
+      },
+      {
+        instruction: "Complete the phrase with 'vieux' in its place",
+        prompt: "un homme + vieux →",
+        hint: "The h in 'homme' is silent, so it counts as a vowel",
+        expectedAnswer: "un vieil homme",
+        wrongAnswers: [
+          {
+            answer: "un vieux homme",
+            feedback: "The h in 'homme' is silent and counts as a vowel, so 'vieux' becomes 'vieil': un vieil homme",
+          },
+        ],
+      },
+      {
+        instruction: "Complete the phrase with 'nouveau' in its place",
+        prompt: "une amie + nouveau →",
+        hint: "'Amie' is feminine",
+        expectedAnswer: "une nouvelle amie",
+        wrongAnswers: [
+          {
+            answer: "une nouvel amie",
+            feedback: "'Nouvel' is only for masculine nouns. 'Amie' is feminine, so use 'nouvelle', even before a vowel",
           },
         ],
       },

@@ -61,10 +61,13 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
     { id: 'french-words-connect', title: 'French Words Connect', index: 0 },
     { id: 'silent-letters-wake-up', title: 'Silent Letters Wake Up', index: 1 },
     { id: 'you-already-know', title: 'You Already Know This!', index: 2 },
-    { id: 'listen-practice', title: 'Listen and Practice', index: 3 }
+    { id: 'listen-practice', title: 'Listen and Practice', index: 3 },
+    // Added later: the index is the saved tick, so new sections take the next index wherever they render.
+    { id: 'silent-final-letters', title: 'Silent Final Letters', index: 4 },
+    { id: 'elision', title: 'Elision', index: 5 }
   ];
 
-  // Derive total sections from array (indices 0-3 = 4 sections)
+  // Derive total sections from array (indices 0-5 = 6 sections)
   const totalSections = liaisonSections.length;
 
   // Load understood sections from database when component loads
@@ -163,13 +166,104 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
           <div className="module-prefix">Module {moduleId}</div>
           <h1>French Flow - Liaison</h1>
           <p className="liaison-subtitle">
-            When words in French flow together smoothly, there are rules that help them connect. Let's discover how this works using words you already know!
+            Many French words end in a letter you don't say. This page shows which letters stay silent, how they wake up before a vowel (liaison), and how short words drop their vowel (elision). Every example uses words you already know.
           </p>
           <div className="listen-prompt">
             <span className="speaker-icon">🔊</span>
             <h3>Listen! Use your ears to hear the connections</h3>
           </div>
         </header>
+
+        {/* Silent final letters (saved as section 4; shown first because liaison builds on it) */}
+        <section className="liaison-section">
+          <h2>Silent letters at the end</h2>
+          <p className="section-intro">
+            Most consonants at the end of a French word are silent. You write them, but you don't say them.
+          </p>
+
+          <div className="examples-grid">
+            <div className="example-group">
+              <h3>Silent at the end</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("les")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">les</div>
+                    <div className="phrase-pronunciation">lay</div>
+                  </div>
+                  <SpeakButton text="les" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("vous")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">vous</div>
+                    <div className="phrase-pronunciation">voo</div>
+                  </div>
+                  <SpeakButton text="vous" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("chat")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">chat</div>
+                    <div className="phrase-pronunciation">sha</div>
+                  </div>
+                  <SpeakButton text="chat" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("salut")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">salut</div>
+                    <div className="phrase-pronunciation">sa-loo</div>
+                  </div>
+                  <SpeakButton text="salut" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("enfant")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">enfant</div>
+                    <div className="phrase-pronunciation">ahn-fahn</div>
+                  </div>
+                  <SpeakButton text="enfant" language="fr-FR" size="small" />
+                </div>
+              </div>
+            </div>
+
+            <div className="example-group">
+              <h3>Heard at the end</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("bonjour")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">bonjour</div>
+                    <div className="phrase-pronunciation">bon-zhoor</div>
+                  </div>
+                  <SpeakButton text="bonjour" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("bonsoir")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">bonsoir</div>
+                    <div className="phrase-pronunciation">bon-swahr</div>
+                  </div>
+                  <SpeakButton text="bonsoir" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("il")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">il</div>
+                    <div className="phrase-pronunciation">eel</div>
+                  </div>
+                  <SpeakButton text="il" language="fr-FR" size="small" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="insight-box">
+            <p>
+              <strong>Final s, t, x and d are usually silent.</strong> The plural s is silent too, so "ami" and "amis" sound the same. A final r or l is often heard, as in "bonjour" and "il".
+            </p>
+          </div>
+
+          <div className="section-footer">
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(4)}
+              onClick={() => toggleUnderstood(4)}
+            />
+          </div>
+        </section>
 
         {/* Section 1: The Rules of Liaison */}
         <section className="liaison-section">
@@ -415,6 +509,83 @@ const LiaisonHelp = ({ onComplete, moduleId, lesson, onModuleComplete }) => {
             <UnderstoodButton
               isUnderstood={understoodSections.has(3)}
               onClick={() => toggleUnderstood(3)}
+            />
+          </div>
+        </section>
+
+        {/* Elision (saved as section 5) */}
+        <section className="liaison-section">
+          <h2>Elision: l'ami, j'ai</h2>
+          <p className="section-intro">
+            Before a vowel sound, "le", "la" and "je" drop their vowel and take an apostrophe. The two words then sound like one.
+          </p>
+
+          <div className="comparison-layout">
+            <div className="comparison-column">
+              <h3>Words You Know</h3>
+              <div className="phrase-list">
+                <div className="phrase-item" onClick={() => speakText("l'ami")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">l'ami</div>
+                    <div className="phrase-pronunciation">le + ami</div>
+                  </div>
+                  <SpeakButton text="l'ami" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("l'amie")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">l'amie</div>
+                    <div className="phrase-pronunciation">la + amie</div>
+                  </div>
+                  <SpeakButton text="l'amie" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("l'enfant")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">l'enfant</div>
+                    <div className="phrase-pronunciation">le + enfant</div>
+                  </div>
+                  <SpeakButton text="l'enfant" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("l'homme")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">l'homme</div>
+                    <div className="phrase-pronunciation">le + homme</div>
+                  </div>
+                  <SpeakButton text="l'homme" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("j'ai")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">j'ai</div>
+                    <div className="phrase-pronunciation">je + ai</div>
+                  </div>
+                  <SpeakButton text="j'ai" language="fr-FR" size="small" />
+                </div>
+                <div className="phrase-item" onClick={() => speakText("s'il vous plaît")}>
+                  <div className="phrase-content">
+                    <div className="phrase-french">s'il vous plaît</div>
+                    <div className="phrase-pronunciation">si + il</div>
+                  </div>
+                  <SpeakButton text="s'il vous plaît" language="fr-FR" size="small" />
+                </div>
+              </div>
+            </div>
+
+            <div className="comparison-column">
+              <h3>What's Happening</h3>
+              <div className="insight-box">
+                <p>
+                  <strong>A silent h counts as a vowel,</strong> so "homme" takes "l'" as well. The same happens to "si" before "il" in "s'il vous plaît".
+                </p>
+                <p>
+                  <strong>Elision and liaison work together.</strong> One friend is "l'ami". More than one is "les amis", where "les" keeps its s and links with a z sound.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="section-footer">
+            <UnderstoodButton
+              isUnderstood={understoodSections.has(5)}
+              onClick={() => toggleUnderstood(5)}
             />
           </div>
         </section>

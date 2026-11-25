@@ -561,7 +561,12 @@
       "fr:lex:jeune",
       "fr:lex:beau",
       "fr:form:beau.f",
-      "fr:lex:autre"
+      "fr:lex:autre",
+      "fr:form:beau.mv",
+      "fr:form:nouveau.mv",
+      "fr:form:vieux.mv",
+      "fr:form:beau.fpl",
+      "fr:form:vieux.fpl"
     ]
   },
   "2024-01-21-before-phrases": {
