@@ -232,6 +232,8 @@ export function ruleLevels(ctx) {
   const issues = [];
   const { report, taughtNodes, missing, labelTexts } = analyse(ctx);
   const name = (m) => `${m.position}. ${m.title}`;
+  // A unit's unit_key by its index: the identity a unit label carries, since an inserted unit moves the index.
+  const unitKeys = new Map(ctx.course.map((m) => [m.unitId, m.unitKey]));
 
   for (const m of report.modules) {
     if (!m.label) continue;
@@ -241,6 +243,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: m.moduleKey,
         position: m.position,
+        levelLabel: { of: 'module', label: labelTexts.get(m.position), against: 'computed', value: m.computed },
         message: `${name(m)} is labelled ${labelTexts.get(m.position)} but teaches at most ${m.computed}`,
       }));
     }
@@ -253,6 +256,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: m.moduleKey,
         position: m.position,
+        levelLabel: { of: 'module', label: labelTexts.get(m.position), against: 'reached', value: reached ?? null },
         message: `${name(m)} is labelled ${labelTexts.get(m.position)} but teaches nothing, and by this position the course has `
           + (reached ? `reached ${reached}` : 'reached no level yet'),
       }));
@@ -266,6 +270,8 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: first.moduleKey,
         position: first.position,
+        // of names the unit by its unit_key, which an inserted unit never moves (a course without keys: its index).
+        levelLabel: { of: `unit:${unitKeys.get(u.unitId) ?? u.unitId}`, label: labelTexts.get(`unit:${u.unitId}`), against: 'computed', value: u.computed },
         message: `unit ${u.unitId} "${u.title}" is labelled ${labelTexts.get(`unit:${u.unitId}`)} but its modules teach at most ${u.computed}`,
       }));
     }
@@ -300,6 +306,7 @@ export function ruleLevels(ctx) {
     issues.push(issue({
       rule: 'level-data-missing',
       severity: 'warning',
+      nodes: [...missing].sort(),
       message: `${missing.size} taught words and grammar patterns have no level (A1 to C2) yet, so level labels cannot be checked`,
     }));
   }

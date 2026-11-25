@@ -5,13 +5,19 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { cpSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { loadGraph } from '../load.mjs';
+import { ruleDuplicates } from '../rules/duplicates.mjs';
+import { ruleLevels } from '../rules/levels.mjs';
+import { makeModule, makeCtx } from './helpers.mjs';
 import { issueFingerprint, fingerprintCounts } from '../issue-identity.mjs';
 import { canonicalJson } from '../../content/bundle.mjs';
 import { loadCourse, CONTENT_ROOT } from '../../content/load.mjs';
 import { runCheck } from '../check.mjs';
-import { repoRoot } from './content-helpers.mjs';
+import { repoRoot, miniCourse } from './content-helpers.mjs';
+import { readCourseFromContent } from '../content-course.mjs';
 
 test('the fingerprint ignores message and positions', () => {
   const a = { rule: 'untaught-word', moduleKey: 'm', nodeId: 'fr:lex:x', itemRef: 'm#i-1', message: 'at 12', position: 12 };
@@ -35,8 +41,8 @@ test('the fingerprint is SHA-256 of the canonical tuple, with missing fields as 
   const tuple = { rule: 'untaught-word', module_key: 'm', charged_module_key: 'm', node_id: null, item_id: 'i-1/hint', surface: 'chat' };
   assert.equal(issueFingerprint(i), createHash('sha256').update(canonicalJson(tuple)).digest('hex'));
   // No item ref, or a ref without '#', gives item_id null; a course-wide issue has no module at all.
-  const wide = { rule: 'level-data-missing', message: '12 taught words have no level' };
-  const none = { rule: 'level-data-missing', module_key: null, charged_module_key: null, node_id: null, item_id: null, surface: null };
+  const wide = { rule: 'course-map-field', message: 'course-map.json has a field the checker does not know' };
+  const none = { rule: 'course-map-field', module_key: null, charged_module_key: null, node_id: null, item_id: null, surface: null };
   assert.equal(issueFingerprint(wide), createHash('sha256').update(canonicalJson(none)).digest('hex'));
   assert.equal(issueFingerprint({ ...wide, itemRef: 'no-hash' }), issueFingerprint(wide));
 });
@@ -77,6 +83,89 @@ test('level-order adds its sorted node ids: a changed node list is a new fingerp
   // Another rule never takes a nodes field into its fingerprint.
   const other = { rule: 'taught-twice', moduleKey: 'm', nodeId: 'fr:lex:a' };
   assert.equal(issueFingerprint({ ...other, nodes: ['fr:lex:z'] }), issueFingerprint(other));
+});
+
+// The three rules whose stable detail was only in the message now carry it as a field (controller's ruling).
+const here = dirname(fileURLToPath(import.meta.url));
+const mini = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');
+const ctxOf = (course, courseMap = {}, cefrByNode = {}) => {
+  const nodes = new Map(mini.nodes);
+  for (const [id, cefr] of Object.entries(cefrByNode)) nodes.set(id, { ...nodes.get(id), id, cefr });
+  return makeCtx({ graph: { ...mini, nodes, courseMap }, course });
+};
+// m5 carries parler in its vocabulary table, so its teachesWords entry counts as a teaching.
+const lessons = (n) => Array.from({ length: n }, (_, i) => makeModule({ position: i + 1, vocab: i === 4 ? ['parler'] : [] }));
+const fps = (issues) => issues.map(issueFingerprint);
+
+test('taught-twice carries every teaching module, so a third teaching is a new fingerprint', () => {
+  const twice = ruleDuplicates(ctxOf(lessons(9), { m5: { teachesWords: ['fr:lex:parler'] }, m9: { teachesWordsManual: ['fr:lex:parler'] } }));
+  assert.equal(twice.length, 1);
+  assert.deepEqual(twice[0].teachingModuleKeys, ['m5', 'm9']);
+  assert.equal(twice[0].moduleKey, 'm9');
+  // A third teaching after the second leaves moduleKey where it was; only the extra field tells.
+  const before = ruleDuplicates(ctxOf(lessons(9), { m5: { teachesWords: ['fr:lex:parler'] }, m6: { teachesWordsManual: ['fr:lex:parler'] } }));
+  const after = ruleDuplicates(ctxOf(lessons(9), {
+    m5: { teachesWords: ['fr:lex:parler'] }, m6: { teachesWordsManual: ['fr:lex:parler'] }, m9: { teachesWordsManual: ['fr:lex:parler'] },
+  }));
+  assert.equal(after.length, 1);
+  assert.deepEqual(after[0].teachingModuleKeys, ['m5', 'm6', 'm9']);
+  assert.equal(after[0].moduleKey, before[0].moduleKey);
+  assert.notEqual(issueFingerprint(after[0]), issueFingerprint(before[0]));
+  const fp = { rule: 'taught-twice', moduleKey: 'm6', nodeId: 'fr:lex:parler', teachingModuleKeys: ['m9', 'm5', 'm6'] };
+  assert.equal(issueFingerprint(fp), issueFingerprint({ ...fp, teachingModuleKeys: ['m5', 'm6', 'm9'], message: 'x', position: 1 }));
+});
+
+test('level-label carries its label and what it is compared with: two labels on one module never share a fingerprint', () => {
+  const teach = { m1: { teachesWords: ['fr:lex:parler', 'fr:lex:aller'] } };
+  const levels = { 'fr:lex:parler': 'A1', 'fr:lex:aller': 'A2' };
+  const labelOf = (course) => ruleLevels(ctxOf(course, teach, levels)).filter((i) => i.rule === 'level-label');
+  const b2 = labelOf([makeModule({ position: 1, title: 'B2 Level Phrases' })]);
+  assert.equal(b2.length, 1);
+  assert.deepEqual(b2[0].levelLabel, { of: 'module', label: 'B2', against: 'computed', value: 'A2' });
+  const c1 = labelOf([makeModule({ position: 1, title: 'C1 Level Phrases' })]);
+  assert.notEqual(issueFingerprint(c1[0]), issueFingerprint(b2[0]));
+  // A unit label and a module label with the same text and level land on the same module and stay apart.
+  const both = labelOf([makeModule({ position: 1, title: 'B2 Level Phrases', unitTitle: 'B2 Unit' })]);
+  assert.equal(both.length, 2);
+  assert.deepEqual(both.map((i) => i.moduleKey), ['m1', 'm1']);
+  assert.deepEqual(both[1].levelLabel, { of: 'unit:1', label: 'B2', against: 'computed', value: 'A2' });
+  assert.equal(new Set(fps(both)).size, 2);
+  // A module that teaches nothing is compared with the level reached by then.
+  const none = ruleLevels(ctxOf([makeModule({ position: 1, title: 'B1 Reading', kind: 'reading' })], {}, levels))
+    .filter((i) => i.rule === 'level-label');
+  assert.deepEqual(none[0].levelLabel, { of: 'module', label: 'B1', against: 'reached', value: null });
+});
+
+test('a unit label is identified by its unit_key: inserting a unit earlier keeps a later unit label fingerprint', () => {
+  const teach = { places: { teachesWords: ['fr:lex:parler'] } };
+  const levels = { 'fr:lex:parler': 'A1' };
+  const place = (position, unitId) => makeModule({ position, moduleKey: 'places', unitId, unitKey: 'unit7', unitTitle: 'B2 Places' });
+  const labelOf = (course) => ruleLevels(ctxOf(course, teach, levels)).filter((i) => i.rule === 'level-label');
+  const alone = labelOf([place(1, 1)]);
+  // A unit inserted ahead moves the labelled unit to index 2 and its module to position 2; the message still says
+  // "unit 2", but the fingerprint names the unit by its key.
+  const after = labelOf([makeModule({ position: 1, moduleKey: 'first', unitId: 1, unitKey: 'unit6', unitTitle: 'Greetings' }), place(2, 2)]);
+  assert.equal(alone.length, 1);
+  assert.equal(after.length, 1);
+  assert.deepEqual(after[0].levelLabel, { of: 'unit:unit7', label: 'B2', against: 'computed', value: 'A1' });
+  assert.match(after[0].message, /^unit 2 "B2 Places"/);
+  assert.equal(issueFingerprint(after[0]), issueFingerprint(alone[0]));
+});
+
+test('the content course carries each module\'s unit_key as unitKey', () => {
+  const course = readCourseFromContent(miniCourse());
+  assert.deepEqual(course.map((m) => [m.unitId, m.unitKey]), [[1, 'unit1'], [1, 'unit1'], [2, 'unit2'], [2, 'unit2'], [3, 'unit3']]);
+});
+
+test('level-data-missing carries the sorted ids with no level, so a changed set is a new fingerprint', () => {
+  const missingOf = (courseMap) => ruleLevels(ctxOf([makeModule({ position: 1 })], courseMap)).filter((i) => i.rule === 'level-data-missing');
+  const two = missingOf({ m1: { teachesWords: ['fr:lex:parler', 'fr:lex:aller'] } });
+  assert.deepEqual(two[0].nodes, ['fr:lex:aller', 'fr:lex:parler']);
+  const one = missingOf({ m1: { teachesWords: ['fr:lex:parler'] } });
+  assert.deepEqual(one[0].nodes, ['fr:lex:parler']);
+  assert.notEqual(issueFingerprint(one[0]), issueFingerprint(two[0]));
+  const same = missingOf({ m1: { teachesWords: ['fr:lex:aller', 'fr:lex:parler'] } });
+  assert.equal(issueFingerprint(same[0]), issueFingerprint(two[0]));
 });
 
 test('real course: fingerprints are unchanged when an unrelated module is edited', async (t) => {

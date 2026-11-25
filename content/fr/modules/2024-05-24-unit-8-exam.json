@@ -353,6 +353,40 @@
         "regarde moi"
       ],
       "hint": "{Regarde-moi!}"
+    },
+    {
+      "id": "i-oui-j-y-vais-ce-soir",
+      "type": "respond",
+      "situation": "A friend asks {Tu vas chez Marie ce soir ?} Say yes, you're going there tonight. Use {y}.",
+      "answer": "oui, j'y vais ce soir",
+      "accept": [
+        "j'y vais ce soir",
+        "oui j y vais ce soir",
+        "j y vais ce soir"
+      ],
+      "mistakes": [
+        {
+          "answer": "oui, je vais y ce soir",
+          "feedback": "{y} goes before the verb: {j'y vais ce soir}."
+        }
+      ]
+    },
+    {
+      "id": "i-non-je-n-en-mange-pas",
+      "type": "respond",
+      "situation": "A friend asks {Tu manges de la viande ?} Say no, you don't eat any. Use {en}.",
+      "answer": "non, je n'en mange pas",
+      "accept": [
+        "je n'en mange pas",
+        "non je n en mange pas",
+        "je n en mange pas"
+      ],
+      "mistakes": [
+        {
+          "answer": "non, je ne mange pas en",
+          "feedback": "{en} goes before the verb, after {ne}: {je n'en mange pas}."
+        }
+      ]
     }
   ],
   "tests": {
@@ -360,7 +394,9 @@
       "fr:cx:pronoun.reflexive",
       "fr:cx:reciprocal",
       "fr:cx:imperative.tu",
-      "fr:cx:imperative.vous"
+      "fr:cx:imperative.vous",
+      "fr:cx:pronoun.y",
+      "fr:cx:pronoun.en"
     ]
   }
 }

@@ -8297,7 +8297,7 @@
         "at": 0,
         "word_id": "paris-fr",
         "id": "paris-fr",
-        "out": "66469569df1f"
+        "out": "0e620cb391f8"
       },
       {
         "src": "de7fd495a212",
@@ -8305,7 +8305,7 @@
         "at": 1,
         "word_id": "notre-dame-fr",
         "id": "notre-dame-fr",
-        "out": "6b7787264670"
+        "out": "f3c6beea15e7"
       },
       {
         "src": "1b9b693a9e59",
@@ -8313,7 +8313,7 @@
         "at": 2,
         "word_id": "montmartre-fr",
         "id": "montmartre-fr",
-        "out": "fa2ef034e5da"
+        "out": "8c094b32bd60"
       },
       {
         "src": "ab2fee2cb106",
@@ -8321,15 +8321,15 @@
         "at": 3,
         "word_id": "nice-fr",
         "id": "nice-fr",
-        "out": "bf1db36f5541"
+        "out": "c298418886c9"
       },
       {
-        "src": "14c4767cc6c8",
+        "src": "b83377e0223a",
         "key": "bordeaux|bordeaux famous wine city in southwest france",
         "at": 4,
         "word_id": "bordeaux-fr",
         "id": "bordeaux-fr",
-        "out": "69f93f6fec4b"
+        "out": "69b3ce5c2a5e"
       },
       {
         "src": "53316140da0b",
@@ -8337,7 +8337,7 @@
         "at": 5,
         "word_id": "le-louvre-fr",
         "id": "le-louvre-fr",
-        "out": "04278a448075"
+        "out": "1910f3f711bd"
       },
       {
         "src": "bebf94f65f84",
@@ -8345,7 +8345,7 @@
         "at": 6,
         "word_id": "la-seine-fr",
         "id": "la-seine-fr",
-        "out": "7ca61a1ef60e"
+        "out": "73c20b0e353a"
       },
       {
         "src": "e53a96c16112",
@@ -8353,7 +8353,7 @@
         "at": 7,
         "word_id": "la-tour-eiffel-fr",
         "id": "la-tour-eiffel-fr",
-        "out": "3a309eb11698"
+        "out": "3e0f3b8c1024"
       },
       {
         "src": "df25252700dc",

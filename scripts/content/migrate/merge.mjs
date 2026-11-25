@@ -262,8 +262,8 @@ function alternatives0(gloss) {
  *
  * infoCards: for a reading, a function (image path -> { credit, stated }, sources.mjs imageCredit). Each card keeps today's `wikipedia`
  * object as `info_card` ({ name, description, image, image_credit, url }; L 20991bf, ledger ruling 2026-11-25
- * Task 8). The credit is what the picture's own file states (its author and licence), never invented; a picture
- * with none gets null and a note line (image_without_credit).
+ * Task 8). The credit comes from legacy/image-credits.json (author and licence), never invented; a picture
+ * with no entry gets null and a note line (image_without_credit).
  *
  * @returns { vocab, record } with record the per-card bases for migration-sources.json
  */
@@ -302,7 +302,7 @@ export function mergeVocabulary(m, src, { key, seenBySpelling, dictionary, add, 
         add(
           `vocabularyReference[${i}].wikipedia.image`,
           'note',
-          `image_without_credit: ${image} ("${w.info_card.name}"): the picture's file ${credit.stated ? `states only ${credit.stated}` : 'states no author or licence'}`,
+          `image_without_credit: ${image} ("${w.info_card.name}"): no entry in legacy/image-credits.json; the picture's file ${credit.stated ? `states only ${credit.stated}` : 'states no author or licence'}`,
         );
     }
     // The same card twice (same French, same gloss) is one card, its notes joined.

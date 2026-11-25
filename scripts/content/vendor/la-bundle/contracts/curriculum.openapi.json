@@ -2807,6 +2807,11 @@
               "string",
               "null"
             ]
+          },
+          "review": {
+            "type": "boolean",
+            "default": false,
+            "description": "True for a word taught in an earlier lesson and shown again here as an example, as in a lesson that teaches only grammar. Vocabulary Intro shows it tagged Review; it does not count as a word learned in this lesson and does not enter review from this lesson."
           }
         }
       },

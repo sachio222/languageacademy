@@ -59,19 +59,24 @@ export const liaisonJsx = () => readFileSync(join(REPO_ROOT, 'src/components/Lia
 export const frenchPhonics = async () => (await importFrom('src/data/frenchPhonics.js')).frenchPhonics;
 
 /**
- * The credit a site picture (/img/…, under public/) states about itself, from its EXIF Artist and Copyright tags (a
- * JPEG's IFD0): { credit, stated }. credit is "<artist>, <licence>" only when the file names both an author and a
- * licence (CC BY-SA and CC BY ask for both); otherwise null, with `stated` saying what the file does name (or null).
- * Nothing is guessed from the file name (ledger ruling 2026-11-25 Task 8).
+ * The credit for a site picture (/img/…, under public/), from content/fr/legacy/image-credits.json (one entry per
+ * picture: author and licence, checked against Wikimedia Commons): { credit, stated }. credit is
+ * "<author>, <licence>, via Wikimedia Commons", and "<author>, public domain, via Wikimedia Commons" for CC0 and
+ * public domain. A picture with no entry, or an entry without both an author and a licence, has credit null, with
+ * `stated` saying what the picture's own EXIF names (or null). Nothing is guessed from the file name.
  */
-const LICENCE = /\bCC[\s-]|creative ?commons|public domain|licen[cs]e|GFDL/i;
-export function imageCredit(sitePath) {
+const PUBLIC_DOMAIN = /^(CC0\b|PD\b|PD-|public domain)/i;
+export function readImageCredits(root = CONTENT_ROOT) {
+  const file = join(root, 'legacy', 'image-credits.json');
+  return existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : {};
+}
+export function imageCredit(sitePath, credits = readImageCredits()) {
+  const entry = credits[sitePath];
+  const author = typeof entry?.author === 'string' ? entry.author.trim() : '';
+  const licence = typeof entry?.licence === 'string' ? entry.licence.trim() : '';
+  if (author && licence) return { credit: `${author}, ${PUBLIC_DOMAIN.test(licence) ? 'public domain' : licence}, via Wikimedia Commons`, stated: null };
   const tags = exifTags(sitePath);
-  const artist = tags?.artist || null;
-  const copyright = tags?.copyright || null;
-  const licence = copyright && copyright !== artist && LICENCE.test(copyright) ? copyright : null;
-  if (artist && licence) return { credit: `${artist}, ${licence}`, stated: null };
-  const stated = [artist && `author "${artist}"`, copyright && `copyright "${copyright}"`].filter(Boolean).join(' and ');
+  const stated = [tags?.artist && `author "${tags.artist}"`, tags?.copyright && `copyright "${tags.copyright}"`].filter(Boolean).join(' and ');
   return { credit: null, stated: stated || null };
 }
 function exifTags(sitePath) {

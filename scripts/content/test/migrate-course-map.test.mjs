@@ -207,6 +207,25 @@ test('preTeach: a passage word becomes a vocabulary row, a table word needs none
 
 /* ---------- the committed files ---------- */
 
+// Teaching a writer added by hand after the split (content Task C2): a lesson that first uses pas de, ne … rien, y or
+// en now teaches it, and the Unit 8 practice set and exam test y and en. Each id must be in the file, after what the
+// split declared.
+const TEACHING_ADDED_AFTER_SPLIT = {
+  '2024-03-24-everyday-nouns': { teaches: ['fr:cx:neg.de'] },
+  '2024-10-22-donner': { teaches: ['fr:cx:neg.ne-rien'] },
+  '2024-05-18-irregular-commands': { teaches: ['fr:cx:pronoun.y'] },
+  '2024-05-12-commands-pronouns': { teaches: ['fr:cx:pronoun.en'] },
+  '2024-05-24-unit-8-exam': { tests: ['fr:cx:pronoun.y', 'fr:cx:pronoun.en'] },
+  '2024-05-25-unit-8-practice': { tests: ['fr:cx:pronoun.y', 'fr:cx:pronoun.en'] },
+};
+function withoutAddedTeaching(key, field, declared) {
+  const added = TEACHING_ADDED_AFTER_SPLIT[key]?.[field];
+  if (!added) return declared;
+  const ids = declared.constructions;
+  assert.deepEqual(ids.slice(-added.length), added, `${key} ${field} ends with the ids added after the split`);
+  return { ...declared, constructions: ids.slice(0, -added.length) };
+}
+
 test('every module file declares what the course map says it teaches and tests', () => {
   const { declarations } = split(COURSE_MAP);
   let n = 0;
@@ -215,8 +234,8 @@ test('every module file declares what the course map says it teaches and tests',
     // written in content/ since.
     if (mod.status === 'planned' || !(key in RECORDS)) continue;
     const d = declarations[key] ?? {};
-    assert.deepEqual(mod.teaches, d.teaches, `${key} teaches`);
-    assert.deepEqual(mod.tests, d.tests, `${key} tests`);
+    assert.deepEqual(withoutAddedTeaching(key, 'teaches', mod.teaches), d.teaches, `${key} teaches`);
+    assert.deepEqual(withoutAddedTeaching(key, 'tests', mod.tests), d.tests, `${key} tests`);
     if (d.teaches || d.tests) n++;
   }
   // 102 lessons and guides teach, and the 11 practice sets and 11 unit exams test.

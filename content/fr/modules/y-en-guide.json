@@ -1,0 +1,207 @@
+{
+  "schema": "la-module@1",
+  "module_key": "y-en-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "{y} and {en} - There and Some",
+  "short_title": "y and en",
+  "description": "Say there and some without repeating the place or the thing.",
+  "can_do": [
+    "Say “I'm going there” with {j'y vais}.",
+    "Say how many you have with {j'en ai deux}."
+  ],
+  "teaches": {
+    "constructions": [
+      "fr:cx:pronoun.y",
+      "fr:cx:pronoun.en"
+    ]
+  },
+  "minutes": 4,
+  "line": "Use {y} for a place and {en} for some, so you don't repeat what was just said.",
+  "parts": [
+    {
+      "id": "p-y-there",
+      "heading": "{y}: there",
+      "text": [
+        "{y} stands for a place you already named, usually after {à}, {au}, {dans} or {chez}. It goes before the verb, where {le} and {la} go."
+      ],
+      "note": "Before a vowel, {je} becomes {j'}: {j'y vais}.",
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "A sentence",
+              "fr": "Je vais à Paris",
+              "en": "I'm going to Paris"
+            },
+            {
+              "k": "Swap the place for",
+              "fr": "y",
+              "en": "there"
+            },
+            {
+              "k": "The new sentence",
+              "fr": "J'y vais",
+              "en": "I'm going there"
+            }
+          ]
+        },
+        {
+          "lines": [
+            [
+              "Tu vas au café ? Oui, j'y vais.",
+              "Are you going to the café? Yes, I'm going there."
+            ],
+            [
+              "Vous allez chez Paul ? Oui, nous y allons.",
+              "Are you going to Paul's? Yes, we're going there."
+            ],
+            [
+              "Le chat est dans la maison ? Oui, il y est.",
+              "Is the cat in the house? Yes, it's in there."
+            ],
+            [
+              "On y va ?",
+              "Shall we go?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-en-some",
+      "heading": "{en}: some, of them",
+      "text": [
+        "{en} stands for something you already named with {de}, {du}, {de la}, {de l'} or {des}, or with a number. It goes before the verb too."
+      ],
+      "note": "With a number, the number goes at the end: {j'en ai deux}. English can drop “of them”, but French keeps {en}.",
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Tu veux du café ? Oui, j'en veux.",
+              "Do you want some coffee? Yes, I want some."
+            ],
+            [
+              "Tu as des chats ? Oui, j'en ai deux.",
+              "Do you have cats? Yes, I have two."
+            ],
+            [
+              "Tu as besoin d'aide ? Oui, j'en ai besoin.",
+              "Do you need help? Yes, I do."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-with-ne-pas",
+      "heading": "With {ne … pas}",
+      "text": [
+        "{ne} goes before {y} or {en}, and {pas} goes after the verb."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Non, je n'y vais pas.",
+              "No, I'm not going there."
+            ],
+            [
+              "Non, je n'en veux pas.",
+              "No, I don't want any."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-commands-phrases",
+      "heading": "In commands",
+      "text": [
+        "In a positive command, {y} and {en} go after the verb with a hyphen, like {le} in {donne-le}."
+      ],
+      "note": "Before {y} and {en}, {va} and {tu} commands ending in {-e} take an {s}: {vas-y}, {manges-en}.",
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Vas-y !",
+              "Go ahead!"
+            ],
+            [
+              "Allons-y !",
+              "Let's go!"
+            ],
+            [
+              "Prends-en !",
+              "Take some!"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which one means “Yes, I'm going there”?",
+      "options": [
+        {
+          "text": "Oui, j'y vais.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Oui, je vais y.",
+          "fr": true
+        },
+        {
+          "text": "Oui, j'en vais.",
+          "fr": true
+        }
+      ],
+      "why": "{y} stands for the place and goes before the verb: {j'y vais}."
+    },
+    {
+      "id": "k2",
+      "ask": "{Tu veux du café ?} Which answer means “Yes, I want some”?",
+      "options": [
+        {
+          "text": "Oui, j'y veux.",
+          "fr": true
+        },
+        {
+          "text": "Oui, j'en veux.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Oui, je veux en.",
+          "fr": true
+        }
+      ],
+      "why": "{en} stands for {du café} and goes before the verb: {j'en veux}."
+    },
+    {
+      "id": "k3",
+      "ask": "{Tu as des chiens ?} Which answer means “Yes, I have two”?",
+      "options": [
+        {
+          "text": "Oui, j'y ai deux.",
+          "fr": true
+        },
+        {
+          "text": "Oui, j'ai deux en.",
+          "fr": true
+        },
+        {
+          "text": "Oui, j'en ai deux.",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "With a number, {en} still goes before the verb, and the number comes at the end: {j'en ai deux}."
+    }
+  ]
+}

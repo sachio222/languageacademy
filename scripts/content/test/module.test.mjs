@@ -355,3 +355,28 @@ test('a brace in a French or plain native module field is span_in_plain_field', 
   b.en = `${b.en} {x}`;
   assert.deepEqual(codes(reading, 1), ['span_in_plain_field']);
 });
+
+// A review row (design §1, §17 item 11) shows a lesson's learner a word taught earlier, as an example; it teaches
+// nothing, and it counts toward the lesson's non-empty vocabulary table.
+test('a lesson of review rows only is valid', () => {
+  const m = miniModule(MINI_KEYS.lesson);
+  m.vocabulary = m.vocabulary.map((w) => ({ ...w, review: true }));
+  assert.deepEqual(validateModule(m).filter((p) => p.severity !== 'warning'), []);
+});
+
+test('review is not a field on reading rows', () => {
+  const m = miniModule(MINI_KEYS.reading);
+  m.vocabulary[0].review = true;
+  assert.ok(validateModule(m).some((p) => p.code === 'field_unknown' && /vocabulary\[0\]\.review/.test(p.path)));
+});
+
+test('review is not a field on reference rows, and a lesson row takes it as true or false only', () => {
+  const ref = miniModule(MINI_KEYS.reference);
+  ref.vocabulary[0].review = true;
+  assert.deepEqual(validateModule(ref).map((p) => [p.code, p.path]), [['field_unknown', 'vocabulary[0].review']]);
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.vocabulary[0].review = 'yes';
+  assert.deepEqual(validateModule(lesson).filter((p) => p.path === 'vocabulary[0].review').map((p) => p.code), ['field_type']);
+  lesson.vocabulary[0].review = false;
+  assert.deepEqual(validateModule(lesson, { file: 'l.json', unitIndex: 1 }), []);
+});

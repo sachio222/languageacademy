@@ -75,6 +75,8 @@ The modules with dated keys (`2024-01-02-etre`) were converted from `src/lessons
 
 The live app does not show these edits. It keeps showing the lesson as `main` builds it, until L replaces it.
 
+A reading's place cards (`info_card`) take their `image_credit` from `legacy/image-credits.json`: one entry per picture path, with `author` and `licence`. The credit reads "<author>, <licence>, via Wikimedia Commons", or "<author>, public domain, via Wikimedia Commons" for CC0 and public domain. A picture with no entry keeps `image_credit: null`, and `pnpm content:migrate` reports it as `image_without_credit`; add the entry and run it again.
+
 ## Adding a story for a reading
 
 A reading shows one of L's illustrated stories, named by its `story_id` (`reading12`). The story records come from prototype L's folder: once L has the story, run `pnpm content:migrate l-sources` (it reads `$LA_L_DIR`, or pass `--l <folder>`), check the new record in `legacy/l-sources.json`, and commit it.

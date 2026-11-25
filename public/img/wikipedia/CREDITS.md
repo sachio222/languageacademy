@@ -1,0 +1,1 @@
+Bordeaux_Place_de_la_Bourse_nuit_683778.jpg — File:Bordeaux Place de la Bourse de nuit.jpg (https://commons.wikimedia.org/wiki/File:Bordeaux_Place_de_la_Bourse_de_nuit.jpg) — Mariette — Public domain, {{PD-self}} (https://commons.wikimedia.org/wiki/Template:PD-self)
