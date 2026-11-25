@@ -20,7 +20,8 @@ export const UNIT12_STORY = {
   vocab: [],
 };
 
-/** Writes unit12-reading, unit12-practice and unit12-exam as written modules under `root`; `story` adds story 12. */
+/** Writes unit12-reading, unit12-practice and unit12-exam as written modules under `root`; `story` adds story 12, and
+ * without it story 12 is taken out (the art not in L yet). */
 export function writeUnit12(root, { story = true } = {}) {
   write(root, {
     schema: 'la-module@1',
@@ -60,10 +61,9 @@ export function writeUnit12(root, { story = true } = {}) {
     items: [{ id: 'x-pourquoi', type: 'respond', situation: 'Ask your grandfather why.', cue: 'Why?', answer: 'pourquoi ?', accept: ['pourquoi'] }],
     tests: { constructions: [] },
   });
-  if (story) {
-    const file = join(root, 'legacy', 'l-sources.json');
-    const l = JSON.parse(readFileSync(file, 'utf8'));
-    if (!l.stories.some((s) => s.n === UNIT12_STORY.n)) l.stories.push(UNIT12_STORY);
-    writeFileSync(file, JSON.stringify(l, null, 2) + '\n');
-  }
+  const file = join(root, 'legacy', 'l-sources.json');
+  const l = JSON.parse(readFileSync(file, 'utf8'));
+  l.stories = l.stories.filter((s) => s.n !== UNIT12_STORY.n);
+  if (story) l.stories.push(UNIT12_STORY);
+  writeFileSync(file, JSON.stringify(l, null, 2) + '\n');
 }

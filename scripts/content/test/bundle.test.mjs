@@ -52,7 +52,11 @@ test('bundle validates against its schema', () => {
 });
 
 test("L's checker passes the written course's bundle, the real course's bundle and the Unit 1 sample", () => {
-  assert.ok(bundle.units.some((u) => u.unit_key === 'unit12'), "the written course's bundle holds Unit 12");
+  // Every unit with a written module, up to the first whose reading still waits for its story art.
+  const stories = new Set(sources.stories.map((s) => `reading${s.n}`));
+  const blocked = course.units.findIndex((u) => u.modules.some((m) => m.kind === 'reading' && !stories.has(m.story_id)));
+  const ready = blocked === -1 ? course.units : course.units.slice(0, blocked);
+  assert.deepEqual(bundle.units.map((u) => u.unit_key), ready.map((u) => u.unit_key), "the written course's bundle holds every ready unit");
   for (const [name, b] of [['written', bundle], ['real', real], ['unit1', unit1]]) {
     const r = runChecker(b);
     assert.equal(r.error, undefined, `${name}: ${r.error}`);
@@ -85,13 +89,15 @@ test('multi-blank mistakes that can match travel as item-level mistakes; the res
   const rewrite = report.notes.filter((n) => n.code === 'mistake_needs_rewrite');
   assert.ok(rewrite.some((n) => n.detail.includes('i-ai-aime') && n.detail.includes('"ai pas aimer"')));
   // Every source mistake on a multi-blank gap-fill is emitted or reported, none both.
-  const multi = [...course.modules.values()].flatMap((m) =>
+  const bundled = new Set(bundle.content.map((c) => c.module_key));
+  const multi = [...course.modules.values()].filter((m) => bundled.has(m.module_key)).flatMap((m) =>
     (m.items || []).filter((i) => i.type === 'gapfill' && i.blanks.length > 1 && i.mistakes?.length).map((i) => [m.module_key, i]),
   );
   const emitted = multi.reduce((n, [mk, i]) => n + (itemOf(bundle, mk, i.id).answer_key.mistakes?.length || 0), 0);
   const total = multi.reduce((n, [, i]) => n + i.mistakes.length, 0);
   assert.equal(emitted + rewrite.length, total);
-  assert.equal(emitted, 14);
+  // Fourteen of the converted Unit 7 to 9 gap-fills' mistakes can match (Task 11 fix round 1); a later one may add more.
+  assert.ok(emitted >= 14, `${emitted} emitted`);
   // The rule on its own: one word for two blanks, the right answer itself, or a fixed word, never match.
   const { matchable, unmatchable } = splitBlankMistakes({
     text: 'Il ___ beau ___ je suis sorti',
@@ -277,7 +283,9 @@ test('item kinds and answer keys', () => {
 });
 
 test('a respond cue is the English to say, not a scene line', () => {
-  const sources = course.units.flatMap((u) => u.modules).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
+  // The modules the bundle holds (a unit whose reading waits for its story art is not in it yet).
+  const bundled = new Set(bundle.entries.map((e) => e.module_key));
+  const sources = course.units.flatMap((u) => u.modules).filter((m) => bundled.has(m.module_key)).flatMap((m) => (m.items || []).map((i) => [m.module_key, i]));
   const withCue = sources.filter(([, i]) => i.type === 'respond' && i.cue !== undefined);
   assert.ok(withCue.length > 0);
   for (const [key, src] of withCue) {

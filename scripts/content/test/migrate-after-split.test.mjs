@@ -66,7 +66,9 @@ test('after the rename and graph:extract, a normal run keeps every teaches, test
   const r = run();
   assert.match(r.stdout, /course map: split already/);
   assert.deepEqual(declarations(), declared);
-  assert.ok(Object.values(declared).filter((d) => d.teaches).length === 102 && Object.values(declared).filter((d) => d.tests).length === 22);
+  // The modules converted from the live app (the migration record's): 102 teach, the 11 practice sets and 11 exams test.
+  const converted = Object.entries(declared).filter(([k]) => k in readJson(join(root, 'legacy', 'migration-sources.json'))).map(([, d]) => d);
+  assert.ok(converted.filter((d) => d.teaches).length === 102 && converted.filter((d) => d.tests).length === 22);
   // The corrections stay where the rename put them, keys and all; no second corrections file appears.
   assert.equal(readFileSync(join(FR(), 'course-map.json'), 'utf8'), courseMapText);
   assert.ok(!existsSync(join(FR(), 'course-map.corrections.json')));
@@ -85,7 +87,10 @@ test('a split map that gains a screen again is refused, not split over the decla
   try {
     const r = spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', RUN, '--root', root, '--graph', graph, '--tmp', work], { cwd: REPO, encoding: 'utf8' });
     assert.equal(r.status, 1, r.stdout + r.stderr);
-    assert.match(r.stderr, /course_map_resplit .*no teachesConstructions or tests, while 124 module files already declare/);
+    // The run counts the files of modules converted from the live app.
+    const records = readJson(join(root, 'legacy', 'migration-sources.json'));
+    const declaring = Object.entries(declared).filter(([k, d]) => k in records && (d.teaches || d.tests)).length;
+    assert.match(r.stderr, new RegExp(`course_map_resplit .*no teachesConstructions or tests, while ${declaring} module files already declare`));
     assert.deepEqual(declarations(), declared);
   } finally {
     writeFileSync(join(FR(), 'course-map.json'), courseMapText);

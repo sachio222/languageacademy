@@ -222,11 +222,12 @@ test('mergeOutline puts back a whole missing unit in config order', () => {
   const o = JSON.parse(JSON.stringify(outline));
   o.units.splice(4, 1); // unit5
   o.units.push({ unit_key: 'unit13', name: 'Stories', entries: ['story-one'] });
-  assert.deepEqual(checkOutline(o, outline).map((p) => p.code), Array(13).fill('config_key_missing'));
+  const n = outline.units[4].entries.length; // unit5's entries in today's configs
+  assert.deepEqual(checkOutline(o, outline).map((p) => p.code), Array(n).fill('config_key_missing'));
   const { outline: merged, report: added } = mergeOutline(o, outline);
   assert.deepEqual(merged.units.map((u) => u.unit_key), [...outline.units.map((u) => u.unit_key), 'unit13']);
   assert.deepEqual(merged.units[4], outline.units[4]);
-  assert.deepEqual(added, ['unit5: unit added from today\'s configs with 13 entries']);
+  assert.deepEqual(added, [`unit5: unit added from today's configs with ${n} entries`]);
   assert.deepEqual(checkOutline(merged, outline), []);
 });
 

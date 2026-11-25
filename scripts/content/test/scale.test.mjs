@@ -50,7 +50,8 @@ test('400 modules fit', async (t) => {
   const ms = performance.now() - started;
   assert.equal(course.modules.size, TARGET);
   assert.ok(ms < 5000, `loaded in ${Math.round(ms)} ms`);
-  const bundle = buildBundle(course, { ...(await loadBundleSources({ root })), build: { source_commit: 'e059c59', built_at: '2026-11-25T00:00:00Z' } });
+  // Every unit built: a written reading still waiting for its story art would stop the real bundle (spec 7).
+  const bundle = buildBundle(course, { ...(await loadBundleSources({ root })), stopAtUnready: false, build: { source_commit: 'e059c59', built_at: '2026-11-25T00:00:00Z' } });
   const bytes = Buffer.byteLength(canonicalJson(bundle));
   assert.ok(bytes < 10_000_000, `${bytes} bytes`);
   assert.equal(bundle.entries.length + bundle.shelf.pages.length, TARGET);

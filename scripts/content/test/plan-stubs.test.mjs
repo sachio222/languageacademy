@@ -255,6 +255,8 @@ test('small plan: a mapped key that is a Reference shelf page counts as written 
 const course = loadCourse();
 const planned = [...course.modules.values()].filter((m) => m.status === 'planned');
 const keys = readPlanKeys();
+// Plan modules a writer has written since the stubs (each keeps its key; the stub is gone).
+const writtenPlan = planKeyList(keys).filter((k) => course.modules.get(k)?.status === 'written');
 const hasPlan = existsSync(DEFAULT_PLAN_FILE);
 const needsPlan = { skip: !hasPlan && `the course plan is not on this machine (${DEFAULT_PLAN_FILE})` };
 
@@ -281,8 +283,8 @@ test('the key map: 194 short keys, unique, with no counter, each a planned stub 
 test('stubs for every planned module', needsPlan, () => {
   const plan = JSON.parse(readFileSync(DEFAULT_PLAN_FILE, 'utf8'));
   const want = plan.versions.slice(0, 2).reduce((n, v) => n + v.units.reduce((k, u) => k + u.modules.length, 0), 0);
-  assert.equal(want, 194);
-  assert.equal(planned.length, want);
+  assert.equal(planKeyList(keys).length, want, 'one key per plan module');
+  assert.equal(planned.length + writtenPlan.length, want, 'each plan module is a stub or written');
   // The committed stubs and outline are exactly what the script writes from the plan and the key map.
   const r = planToStubs(plan, course, { graph: planGraph(), keys });
   assert.deepEqual(planned.map((m) => m.module_key), r.modules.map((m) => m.module_key));
@@ -320,7 +322,7 @@ test('once every stub is written, a run adds nothing', needsPlan, () => {
   };
   const r = planToStubs(plan, allWritten, { graph: planGraph(), keys });
   assert.deepEqual(r.modules, []);
-  assert.equal(r.report.written.length, 194);
+  assert.equal(r.report.written.length, planKeyList(keys).length);
   const outline = JSON.parse(readFileSync(join(CONTENT_ROOT, 'course.json'), 'utf8'));
   assert.deepEqual(applyStubs(outline, r.units), outline);
 });
@@ -369,7 +371,6 @@ test('--write refuses to overwrite a stub edited by hand, and --force overwrites
 });
 
 test('slugs unique and dateless', () => {
-  assert.ok(planned.length > 0, 'the outline holds planned stubs');
   const list = planned.map((m) => m.module_key);
   assert.equal(new Set(list).size, list.length);
   for (const k of list) assert.match(k, SHORT_KEY);
@@ -386,41 +387,52 @@ test('slugs unique and dateless', () => {
 
 test('Unit 12 gains its planned ending, and Units 13 to 29 follow it', () => {
   assert.deepEqual(course.units.map((u) => u.unit_key).slice(11), Array.from({ length: 18 }, (_, i) => `unit${12 + i}`));
+  // Unit 12 ends with plan modules 1 to 3 of version 1, each a stub or written since; a stub keeps what the plan says.
   const u12 = course.units[11].modules;
-  assert.deepEqual(u12.slice(-3).map((m) => [m.module_key, m.kind, m.status]), [
-    ['unit12-reading', 'reading', 'planned'],
-    ['unit12-practice', 'practice', 'planned'],
-    ['unit12-exam', 'unit_exam', 'planned'],
+  const ending = ['1', '2', '3'].map((n) => keys.versions['1'][n]);
+  assert.deepEqual(u12.slice(-3).map((m) => [m.module_key, m.kind]), [
+    [ending[0], 'reading'],
+    [ending[1], 'practice'],
+    [ending[2], 'unit_exam'],
   ]);
-  assert.equal(u12.filter((m) => m.status === 'planned').length, 3);
-  assert.equal(u12.at(-3).plan.draft, 'research/course-plan/reading-12-draft.js');
-  assert.equal(u12.at(-3).title, "Reading · {Les Questions d'Amélie}");
-  assert.equal(u12.at(-1).plan.note, 'Ask about anything');
-  assert.match(course.modules.get('unit17-reading').plan.note, /plumber/);
-  for (const u of course.units.slice(12)) assert.ok(u.modules.every((m) => m.status === 'planned'), u.unit_key);
+  assert.ok(u12.slice(0, -3).every((m) => m.status === 'written' && !planKeyList(keys).includes(m.module_key)), 'Unit 12 opens with its lessons from before the plan');
+  const stub = (k) => (course.modules.get(k).status === 'planned' ? course.modules.get(k) : null);
+  if (stub(ending[0])) {
+    assert.equal(stub(ending[0]).plan.draft, 'research/course-plan/reading-12-draft.js');
+    assert.equal(stub(ending[0]).title, "Reading · {Les Questions d'Amélie}");
+  }
+  if (stub(ending[2])) assert.equal(stub(ending[2]).plan.note, 'Ask about anything');
+  if (stub('unit17-reading')) assert.match(stub('unit17-reading').plan.note, /plumber/);
+  // Units 13 onward hold plan modules only.
+  for (const u of course.units.slice(12)) assert.ok(u.modules.every((m) => planKeyList(keys).includes(m.module_key)), u.unit_key);
 });
 
 const sources = await loadBundleSources();
 
 test('bundle stops at first incomplete unit', () => {
   const { bundle, report } = buildBundleWithReport(course, sources);
-  assert.equal(report.units_stopped_at, 'unit12');
-  assert.equal(bundle.units.at(-1).unit_key, 'unit11');
-  const later = new Set(course.units.slice(11).map((u) => u.unit_key));
+  // The first unit that holds a plan stub, or a reading whose story L does not have (bundle-stop.test.mjs).
+  const stories = new Set(sources.stories.map((s) => `reading${s.n}`));
+  const at = course.units.findIndex((u) => u.modules.some((m) => m.status === 'planned' || (m.kind === 'reading' && !stories.has(m.story_id))));
+  assert.ok(at > 0, 'the course holds a unit still being written');
+  assert.equal(report.units_stopped_at, course.units[at].unit_key);
+  assert.equal(bundle.units.at(-1).unit_key, course.units[at - 1].unit_key);
+  const later = new Set(course.units.slice(at).map((u) => u.unit_key));
   assert.deepEqual(bundle.entries.filter((e) => later.has(e.unit_key)).map((e) => e.module_key), []);
   assert.equal(bundle.entries.some((e) => course.modules.get(e.module_key).status === 'planned'), false);
-  assert.equal(bundle.entries.length, 157);
-  // The Unit 1 sample is unchanged.
+  assert.equal(bundle.entries.length, course.units.slice(0, at).reduce((n, u) => n + u.modules.length, 0));
+  // The Unit 1 sample is Unit 1.
   const unit1 = buildBundleWithReport(course, { ...sources, units: ['unit1'] }).bundle;
-  assert.equal(unit1.entries.length, 13);
-  // The written course alone holds Unit 12's written modules (bundle.test.mjs runs the bundle tests on it).
-  const written = buildBundleWithReport(loadCourse({ planned: false }), sources).bundle;
-  assert.equal(written.entries.length, 169);
-  assert.equal(written.units.at(-1).unit_key, 'unit12');
+  assert.equal(unit1.entries.length, course.units[0].modules.length);
+  // The written course alone, every unit built, holds every written module of the units (bundle.test.mjs runs the
+  // bundle tests on it).
+  const written = buildBundleWithReport(loadCourse({ planned: false }), { ...sources, stopAtUnready: false }).bundle;
+  const writtenInUnits = course.units.flatMap((u) => u.modules).filter((m) => m.status === 'written');
+  assert.equal(written.entries.length, writtenInUnits.length);
+  assert.equal(written.units.at(-1).unit_key, [...course.units].reverse().find((u) => u.modules.some((m) => m.status === 'written')).unit_key);
 });
 
 test('checker ignores planned', async () => {
-  assert.ok(planned.length > 0, 'the outline holds planned stubs');
   const without = loadCourse({ planned: false });
   assert.equal(without.modules.size, course.modules.size - planned.length);
   const a = await runCheck({ repoRoot: REPO_ROOT, lang: 'fr', content: course });

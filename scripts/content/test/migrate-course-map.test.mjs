@@ -211,7 +211,9 @@ test('every module file declares what the course map says it teaches and tests',
   const { declarations } = split(COURSE_MAP);
   let n = 0;
   for (const [key, mod] of course.modules) {
-    if (mod.status === 'planned') continue; // a course plan stub (Task 17) was never in the course map
+    // Only modules converted from the live app were ever in the course map: not a plan stub (Task 17), nor a module
+    // written in content/ since.
+    if (mod.status === 'planned' || !(key in RECORDS)) continue;
     const d = declarations[key] ?? {};
     assert.deepEqual(mod.teaches, d.teaches, `${key} teaches`);
     assert.deepEqual(mod.tests, d.tests, `${key} tests`);
@@ -377,7 +379,8 @@ test('keys already in the id shape pass through unchanged', () => {
 test('a course map with no teaching of its own is not split over files that declare teaching', () => {
   const written = [...course.modules.values()];
   const screenOnly = { ...CORRECTIONS, '2024-01-19-questions-help': { screen: 'src/components/QuestionsHelp.jsx' } };
-  assert.match(resplitProblem(screenOnly, written), /no teachesConstructions or tests, while 124 module files already declare/);
+  const declaring = written.filter((m) => m.teaches || m.tests).length;
+  assert.match(resplitProblem(screenOnly, written), new RegExp(`no teachesConstructions or tests, while ${declaring} module files already declare`));
   assert.equal(resplitProblem(COURSE_MAP, written), null);
   assert.equal(resplitProblem(screenOnly, written.map((m) => ({ ...m, teaches: undefined, tests: undefined }))), null);
 });

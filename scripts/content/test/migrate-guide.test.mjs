@@ -20,10 +20,15 @@ const CHECKS = [
   { id: 'k3', ask: 'c', options: [{ text: 'a', right: true }, { text: 'b' }], why: 'x' },
 ];
 
-test('l-sources.json holds L’s four guides and eleven stories', () => {
+test('l-sources.json holds L’s four guides and a story for every converted reading', () => {
   assert.ok(L, 'content/fr/legacy/l-sources.json is written by `pnpm content:migrate l-sources`');
   assert.deepEqual(L.guides.map((g) => g.slug), ['cognates', 'liaison', 'questions', 'verb-patterns']);
-  assert.equal(L.stories.length, 11);
+  // The eleven readings converted from the live app have their stories; later readings add theirs.
+  const frozen = JSON.parse(readFileSync(new URL('../../../content/fr/legacy/reading-stories.json', import.meta.url), 'utf8')).readings;
+  const have = new Set(L.stories.map((s) => `reading${s.n}`));
+  assert.equal(Object.keys(frozen).length, 11);
+  for (const [key, story] of Object.entries(frozen)) assert.ok(have.has(story), `${key}: ${story}`);
+  assert.equal(have.size, L.stories.length, 'one record per story');
   assert.ok(L.stories.every((s) => !('questions' in s)), 'questions come from the module files');
 });
 
