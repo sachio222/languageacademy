@@ -3988,19 +3988,19 @@ What each module teaches and tests now sits in its module file (`teaches`, `test
 
 **2024-01-11-unit1-exam**
 
-- `2024-01-11-unit1-exam#concepts[2].example` no_item_id: live-ids.json has no concept for concepts[2]; the override {"ignore":["fr:lex:express","possession"]} is kept nowhere
+- `2024-01-11-unit1-exam#concepts[2].example` text_dropped: a unit_exam holds no concept cards, so concepts[2].example is in no module file; the override {"ignore":["fr:lex:express","possession"]} is kept nowhere
 
 **2026-11-24-negation-guide**
 
-- `2026-11-24-negation-guide#guide.sections[1].heading` no_item_id: live-ids.json gives no id for guide.sections[1].heading; the override {"ignore":["fr:lex:de"]} is kept nowhere
-- `2026-11-24-negation-guide#guide.sections[1].rule` no_item_id: live-ids.json gives no id for guide.sections[1].rule; the override {"ignore":["fr:lex:de"]} is kept nowhere
-- `2026-11-24-negation-guide#guide.sections[2].examples[0].french` no_item_id: live-ids.json gives no id for guide.sections[2].examples[0].french; the override {"ignore":["fr:cx:comparative"]} is kept nowhere
+- `2026-11-24-negation-guide#guide.sections[1].heading` rekeyed: overrides now under 2026-11-24-negation-guide#parts/p-not-any-pas-de/heading
+- `2026-11-24-negation-guide#guide.sections[1].rule` rekeyed: overrides now under 2026-11-24-negation-guide#parts/p-not-any-pas-de/text/0
+- `2026-11-24-negation-guide#guide.sections[2].examples[0].french` rekeyed: overrides now under 2026-11-24-negation-guide#parts/p-no-more-nothing-never/blocks/1/lines/0/0
 
 **2024-01-13-ca-survival**
 
 - `2024-01-13-ca-survival#exerciseConfig.items[4].hint` rekeyed: overrides now under 2024-01-13-ca-survival#i-tu-as-ca/hint
 - `2024-01-13-ca-survival#exerciseConfig.items[5].hint` rekeyed: overrides now under 2024-01-13-ca-survival#i-il-a-ca/hint
-- `2024-01-13-ca-survival#vocabularyReference[2].note` no_item_id: live-ids.json gives no id for vocabularyReference[2].note; the override {"ignore":["fr:cx:frame.aller-infinitive"]} is kept nowhere
+- `2024-01-13-ca-survival#vocabularyReference[2].note` rekeyed: overrides now under 2024-01-13-ca-survival#vocabulary/ca-va-fr/note
 
 **2024-01-19-questions-help**
 
@@ -4031,7 +4031,7 @@ What each module teaches and tests now sits in its module file (`teaches`, `test
 
 **2024-04-03-unit-4-practice**
 
-- `2024-04-03-unit-4-practice#sentences[0]` no_item_id: live-ids.json has no item for sentences[0] (live exercise 2024-04-03-unit-4-practice.1); the override {"ignore":["fr:cx:conditionnel-present"]} is kept nowhere
+- `2024-04-03-unit-4-practice#sentences[0]` rekeyed: overrides now under 2024-04-03-unit-4-practice#i-je-voudrais
 
 **2024-04-02-unit-4-exam**
 
@@ -4040,18 +4040,18 @@ What each module teaches and tests now sits in its module file (`teaches`, `test
 
 **2024-04-24-reading-6**
 
-- `2024-04-24-reading-6#vocabularyReference[32].note` no_item_id: live-ids.json gives no id for vocabularyReference[32].note; the override {"ignore":["fr:lex:question","fr:lex:phrase"]} is kept nowhere
+- `2024-04-24-reading-6#vocabularyReference[32].note` rekeyed: overrides now under 2024-04-24-reading-6#vocabulary/qu-est-ce-que-fr/note
 
 **2024-05-05-on-and-people**
 
 - `2024-05-05-on-and-people#exercises[0]` rekeyed: overrides now under 2024-05-05-on-and-people#on-people-1
 - `2024-05-05-on-and-people#exercises[0].hint` rekeyed: overrides now under 2024-05-05-on-and-people#on-people-1/hint
 - `2024-05-05-on-and-people#exercises[0].wrongAnswers[0].feedback` rekeyed: overrides now under 2024-05-05-on-and-people#on-people-1/mistakes/0/feedback
-- `2024-05-05-on-and-people#vocabularyReference[3].note` no_item_id: live-ids.json gives no id for vocabularyReference[3].note; the override {"ignore":["fr:cx:pronoun.y"]} is kept nowhere
+- `2024-05-05-on-and-people#vocabularyReference[3].note` rekeyed: overrides now under 2024-05-05-on-and-people#vocabulary/on-va-fr/note
 
 **2024-05-11-unit-7-practice**
 
-- `2024-05-11-unit-7-practice#sentences[1]` no_item_id: live-ids.json has no item for sentences[1] (live exercise 2024-05-11-unit-7-practice.2); the override {"ignore":["fr:cx:pronoun.y"]} is kept nowhere
+- `2024-05-11-unit-7-practice#sentences[1]` rekeyed: overrides now under 2024-05-11-unit-7-practice#i-on-2
 
 **2024-05-10-unit-7-exam**
 

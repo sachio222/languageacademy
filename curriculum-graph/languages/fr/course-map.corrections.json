@@ -50,6 +50,11 @@
           "fr:lex:combiner",
           "fr:cx:imperative.tu"
         ]
+      },
+      "2024-01-13-ca-survival#vocabulary/ca-va-fr/note": {
+        "ignore": [
+          "fr:cx:frame.aller-infinitive"
+        ]
       }
     }
   },
@@ -338,6 +343,15 @@
       }
     }
   },
+  "2024-04-03-unit-4-practice": {
+    "overrides": {
+      "2024-04-03-unit-4-practice#i-je-voudrais": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      }
+    }
+  },
   "2024-04-07-comparisons-slang": {
     "excludeWords": [
       "fr:lex:le.pronoun",
@@ -399,6 +413,16 @@
       "fr:lex:boire",
       "fr:form:boire.ptcp.pl"
     ]
+  },
+  "2024-04-24-reading-6": {
+    "overrides": {
+      "2024-04-24-reading-6#vocabulary/qu-est-ce-que-fr/note": {
+        "ignore": [
+          "fr:lex:question",
+          "fr:lex:phrase"
+        ]
+      }
+    }
   },
   "2024-04-25-top-200-nouns": {
     "excludeWords": [
@@ -469,6 +493,11 @@
         "ignore": [
           "fr:cx:pronoun.y"
         ]
+      },
+      "2024-05-05-on-and-people#vocabulary/on-va-fr/note": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
       }
     }
   },
@@ -493,6 +522,15 @@
         ]
       },
       "2024-05-10-unit-7-exam#i-on-y-va/hint": {
+        "ignore": [
+          "fr:cx:pronoun.y"
+        ]
+      }
+    }
+  },
+  "2024-05-11-unit-7-practice": {
+    "overrides": {
+      "2024-05-11-unit-7-practice#i-on-2": {
         "ignore": [
           "fr:cx:pronoun.y"
         ]
@@ -622,6 +660,25 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ]
+  },
+  "2026-11-24-negation-guide": {
+    "overrides": {
+      "2026-11-24-negation-guide#parts/p-no-more-nothing-never/blocks/1/lines/0/0": {
+        "ignore": [
+          "fr:cx:comparative"
+        ]
+      },
+      "2026-11-24-negation-guide#parts/p-not-any-pas-de/heading": {
+        "ignore": [
+          "fr:lex:de"
+        ]
+      },
+      "2026-11-24-negation-guide#parts/p-not-any-pas-de/text/0": {
+        "ignore": [
+          "fr:lex:de"
+        ]
+      }
+    }
   },
   "2026-11-24-numbers": {
     "excludeWords": [
