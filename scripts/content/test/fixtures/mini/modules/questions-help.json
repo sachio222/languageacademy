@@ -8,7 +8,7 @@
   "description": "Three ways to turn any sentence into a question.",
   "teaches": {
     "constructions": [
-      "fr:cx:question.est-ce-que"
+      "fr:cx:q.est-ce-que"
     ]
   },
   "minutes": 5,

@@ -106,13 +106,17 @@ const ITEMS = { t: 'items' };
 const NULLABLE = (of) => ({ t: 'nullable', of }); // the value or null
 const MATCH = (re) => ({ t: 'match', re }); // a string no learner reads (a path, a link) matching re
 
+// teaches: the constructions a module teaches (graph ids), and the words it teaches that its vocabulary table does not
+// show the checker (graph headword or form ids: a guide's words, a homograph the table's spelling misreads). Taught
+// words are otherwise the module's own vocabulary (spec 5.2). tests: the constructions a practice set or exam checks.
 const CONSTRUCTIONS = OBJ({ constructions: LIST(KEY) }, ['constructions']);
+const TEACHES = OBJ({ constructions: LIST(KEY), words: LIST(KEY) }, ['constructions']);
 const COMMON_FIELDS = {
   title: S('native_fr'),
   topic: S('native_fr'),
   description: S('native_fr'),
   can_do: LIST(S('native_fr')),
-  teaches: CONSTRUCTIONS,
+  teaches: TEACHES,
   tests: CONSTRUCTIONS,
 };
 const WORD = OBJ(
@@ -187,7 +191,7 @@ const REQUIRED_WRITTEN = { default: ['title', 'description'], unit_exam: ['descr
 const TEACHING_FIELDS = ['vocabulary', 'concepts', 'tables'];
 const TEST_KINDS = ['practice', 'unit_exam'];
 // A planned module holds only what the course plan settles (plan Task 17).
-const PLANNED_FIELDS = { schema: null, module_key: null, kind: null, status: null, title: S('native_fr'), teaches: CONSTRUCTIONS, plan: PLAN };
+const PLANNED_FIELDS = { schema: null, module_key: null, kind: null, status: null, title: S('native_fr'), teaches: TEACHES, plan: PLAN };
 
 /* ---------- the walk ---------- */
 function walk(node, v, path, cx, parent) {
@@ -308,6 +312,8 @@ function kindRules(mod, cx) {
     for (const f of TEACHING_FIELDS) if (mod[f] !== undefined) bad(f, 'teaches_in_test', `a ${kind} teaches nothing, so it has no ${f}`);
     if (isObj(mod.teaches) && Array.isArray(mod.teaches.constructions) && mod.teaches.constructions.length > 0)
       bad('teaches.constructions', 'teaches_in_test', `a ${kind} teaches nothing; list what it checks in tests.constructions`);
+    if (isObj(mod.teaches) && Array.isArray(mod.teaches.words) && mod.teaches.words.length > 0)
+      bad('teaches.words', 'teaches_in_test', `a ${kind} teaches nothing, so it teaches no words`);
   }
   if (kind === 'guide' && Array.isArray(mod.checks) && mod.checks.length !== 3)
     bad('checks', 'guide_checks_count', `a guide has exactly three checks, found ${mod.checks.length}`);
@@ -331,6 +337,25 @@ function kindRules(mod, cx) {
   }
 }
 
+// Graph ids in teaches and tests. ctx.graphIds ({ constructions: Set, words: Set }) comes from
+// curriculum-graph/languages/<lang>; loadCourse passes it. Without it only the shape is checked, so a caller with no
+// graph at hand (Vite) still validates.
+function graphRules(mod, cx) {
+  const ids = cx.graphIds;
+  if (!ids || !isObj(mod)) return;
+  const check = (path, list, known, code, what) => {
+    if (!Array.isArray(list)) return;
+    list.forEach((id, i) => {
+      if (isStr(id) && !known.has(id)) cx.bad(`${path}[${i}]`, code, `${id} is not a ${what} in the graph`);
+    });
+  };
+  if (isObj(mod.teaches)) {
+    check('teaches.constructions', mod.teaches.constructions, ids.constructions, 'construction_unknown', 'construction');
+    check('teaches.words', mod.teaches.words, ids.words, 'word_unknown', 'headword or form');
+  }
+  if (isObj(mod.tests)) check('tests.constructions', mod.tests.constructions, ids.constructions, 'construction_unknown', 'construction');
+}
+
 function textRules(cx) {
   for (const t of cx.texts) {
     if (t.role === 'native_fr' && !t.inItem) for (const code of spanProblems(t.text)) cx.bad(t.path, code, `bad French span in ${t.path}`);
@@ -338,9 +363,9 @@ function textRules(cx) {
   }
 }
 
-function inspect(mod, { file, unitIndex = null } = {}) {
+function inspect(mod, { file, unitIndex = null, graphIds = null } = {}) {
   const problems = [];
-  const cx = { file, unitIndex, kind: null, texts: [], problems, bad: (path, code, msg) => problems.push(problem(file, path, code, msg)) };
+  const cx = { file, unitIndex, graphIds, kind: null, texts: [], problems, bad: (path, code, msg) => problems.push(problem(file, path, code, msg)) };
   if (!isObj(mod)) {
     cx.bad('', 'field_type', 'a module file holds one JSON object');
     return cx;
@@ -366,6 +391,7 @@ function inspect(mod, { file, unitIndex = null } = {}) {
     walkFields(fields, required, mod, '', cx);
     kindRules(mod, cx);
   }
+  graphRules(mod, cx);
   textRules(cx);
   return cx;
 }

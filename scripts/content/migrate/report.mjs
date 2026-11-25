@@ -24,6 +24,7 @@ const SECTIONS = [
   ['dropped_field', 'Fields with no place in a module file', 'Today’s objects hold these, and the module schema has no field for them.'],
   ['text_changed', 'Text written differently', 'The same words, moved into a field of the new shape.'],
   ['note', 'Notes', 'Things the conversion keeps or drops on a ruling, listed so nothing changes unseen (ledger ruling 2026-11-25 Task 8).'],
+  ['course_map', 'Course map split', 'What each module teaches and tests now sits in its module file (`teaches`, `tests`). `curriculum-graph/languages/fr/course-map.corrections.json` keeps the checker’s corrections, each under its module key and item id. These lines list every course-map entry that moved to a new key or has no place in either file.'],
   ['outline', 'Outline', 'Changes the outline step made when it wrote course.json from today’s unit configs.'],
 ];
 

@@ -31,6 +31,7 @@ const HEADINGS = {
   'Fields with no place in a module file': 'dropped_field',
   Notes: 'note',
   'Text written differently': 'text_changed',
+  'Course map split': 'course_map',
   Outline: 'outline',
 };
 

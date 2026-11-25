@@ -10,7 +10,7 @@
 //     content/fr/legacy/positions-<sha7>.json: the live positions on <commit>, read from a temporary
 //     `git worktree add` of that commit under <dir> (default: the system temp folder), removed afterwards.
 //     The table is frozen: a file that differs is kept unless --force; --check exits 1 if it would change.
-//   node scripts/content/migrate/run.mjs [modules|lessons|guides|readings|reference ...] [--root <content dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force]
+//   node scripts/content/migrate/run.mjs [modules|course-map|lessons|guides|readings|reference ...] [--root <content dir>] [--graph <dir>] [--check] [--live-ref <commit>] [--tmp <dir>] [--force]
 //     content/fr/modules/<key>.json for every module in the outline: lessons, practice sets and unit exams (module.mjs),
 //     guides (guide.mjs), readings (reading.mjs) and Reference pages (reference.mjs), in one course-order walk so word
 //     ids are minted where a word is first taught, units first and the shelf after them. No command, or `modules`,
@@ -21,6 +21,11 @@
 //     --live-ref (default: the main commit last merged here, `git merge-base HEAD origin/main`), read from a temporary
 //     worktree. --check exits 1 if a file would change. --force converts from the source alone, then applies
 //     legacy/hand-fixes.json again. Guides and readings read prototype L's data from legacy/l-sources.json.
+//     The course map (<graph>/languages/fr/course-map.json, --graph default curriculum-graph/) is split on the same walk
+//     (course-map.mjs): each module's teaches and tests are parts of its file, merged like any other, and
+//     <graph>/languages/fr/course-map.corrections.json gets the checker's corrections, keyed by module key and item id.
+//     `course-map` is the same walk as `modules` (every kind holds a declaration). A course map that holds no
+//     teaching field is split already: the walk keeps each file's teaches and tests and writes no corrections file.
 //   node scripts/content/migrate/run.mjs golden [--check]
 //     scripts/content/test/fixtures/golden-lessons.json: today's lessons[] as this checkout's lessonData.js builds
 //     them, for the golden test (scripts/content/test/golden.test.mjs). Rewritten whenever it differs; --check exits
@@ -45,6 +50,7 @@ import { referenceFrom } from './reference.mjs';
 import { readLFolder, L_DIR, L_SOURCES_FILE } from './l-sources.mjs';
 import { todaysModules, readLSources, liaisonJsx, frenchPhonics, dictionaryForms, addGlosses, imageCredit } from './sources.mjs';
 import { liveIdMatch } from './live-ids.mjs';
+import { declarationsOf, correctionsOf, isSplit } from './course-map.mjs';
 import { renderReport } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
 import { checkItemPassable, defaultCheckAnswer } from '../passable.mjs';
@@ -236,6 +242,36 @@ async function dictionaryMap() {
   return map;
 }
 
+// Object keys sorted at every depth, as curriculum-graph's other files are written (scripts/graph/write-json.mjs).
+const sortDeep = (v) =>
+  Array.isArray(v) ? v.map(sortDeep) : v && typeof v === 'object' ? Object.fromEntries(Object.keys(v).sort().map((k) => [k, sortDeep(v[k])])) : v;
+
+// Dictionary id -> the first English translation (src/data/dictionary/words/cambridge), for preTeach rows.
+async function dictionaryGlosses() {
+  const d = await importFrom(REPO_ROOT, 'src/data/dictionary/words/cambridge/index.js');
+  const map = new Map();
+  for (const words of Object.values(d))
+    for (const [id, w] of words) {
+      const en = (w?.translations || []).find((t) => t?.lang === 'en' && typeof t.text === 'string' && t.text.trim());
+      if (en && !map.has(id)) map.set(id, en.text.trim());
+    }
+  return map;
+}
+
+// A preTeach id (a graph headword or form) -> { fr, gloss }: the headword's lemma or the form's spelling, and the
+// headword's first sense, else its dictionary entry's English (a form gets its headword's English).
+function wordLookup(graph, glosses) {
+  return (id) => {
+    const node = graph.nodes.get(id);
+    if (!node) return null;
+    const form = typeof node.surface === 'string' ? node : null;
+    const head = form ? graph.nodes.get(form.of) : node;
+    if (!form && typeof node.lemma !== 'string') return null;
+    const gloss = head?.senses?.[0]?.gloss ?? (head?.dictionaryId ? glosses.get(head.dictionaryId) : null) ?? null;
+    return { fr: form ? form.surface : node.lemma, gloss };
+  };
+}
+
 // Module kinds by the source's own flags; a Reference page is whatever the outline puts on the shelf.
 function sourceKind(old, onShelf) {
   if (onShelf) return 'reference';
@@ -245,7 +281,7 @@ function sourceKind(old, onShelf) {
 }
 // Kind words on the command line choose which module files are written (or checked); the walk, the word ids and the
 // shared files (records, hand fixes, live ids, report) always cover the whole course.
-const KIND_WORDS = { modules: null, lessons: ['lesson', 'practice', 'unit_exam'], guides: ['guide'], readings: ['reading'], reference: ['reference'] };
+const KIND_WORDS = { modules: null, 'course-map': null, lessons: ['lesson', 'practice', 'unit_exam'], guides: ['guide'], readings: ['reading'], reference: ['reference'] };
 
 async function modules(args, flags, kindWords = ['modules']) {
   const rootArg = option(args, '--root');
@@ -255,8 +291,18 @@ async function modules(args, flags, kindWords = ['modules']) {
   const wanted = kindWords.some((w) => KIND_WORDS[w] === null) ? null : new Set(kindWords.flatMap((w) => KIND_WORDS[w]));
   const { unitConfigs, configs } = await todaysModules();
   const dictionary = await dictionaryMap();
-  const graph = loadGraph(join(REPO_ROOT, 'curriculum-graph'), 'fr');
+  const graphArg = option(args, '--graph');
+  const graphDir = graphArg === undefined ? join(REPO_ROOT, 'curriculum-graph') : resolve(graphArg);
+  const graph = loadGraph(graphDir, 'fr');
   const isWord = frenchWordTest(graph, buildFormIndex(graph));
+  // The course map split (course-map.mjs): declarations go to the converters, corrections are written after the walk.
+  const courseMap = graph.courseMap ?? {};
+  const splitting = !isSplit(courseMap);
+  const kindsBefore = new Map();
+  for (const unit of outline.units) for (const key of unit.entries) if (configs.has(key)) kindsBefore.set(key, sourceKind(configs.get(key), false));
+  for (const key of outline.shelf?.pages || []) if (configs.has(key)) kindsBefore.set(key, 'reference');
+  const declared = splitting ? declarationsOf(courseMap, kindsBefore) : null;
+  const wordOf = wordLookup(graph, await dictionaryGlosses());
   const lSources = readLSources(ROOT);
   const phonics = await frenchPhonics();
   const forms = await dictionaryForms();
@@ -288,7 +334,8 @@ async function modules(args, flags, kindWords = ['modules']) {
     // --force converts from the source alone, as if nothing were written, then applies hand-fixes.json again.
     const existing = flags.force ? null : readJson(join(ROOT, 'modules', `${key}.json`));
     const record = flags.force ? null : records[key] ?? null;
-    const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null };
+    const declaration = declared ? declared.declarations[key] ?? {} : undefined;
+    const common = { existing, record, handFixes: allFixes[key] ?? {}, isWord, unitIndex: unitInfo?.index ?? null, declaration, wordOf };
     if (kind === 'guide') return convertGuide(old, { ...common, lGuides: needL().guides, liaisonJsx: jsx, meanings: new Map(glosses) });
     if (kind === 'reading') {
       const story = needL().stories.find((s) => s.unit === unitInfo.index) ?? null;
@@ -367,6 +414,16 @@ async function modules(args, flags, kindWords = ['modules']) {
   for (const u of unmatched)
     lines.push({ module_key: u.module_key, path: u.what === 'concept' ? `concepts[${u.live_id}]` : u.live_id, kind: 'live_unmatched', reason: reasonOf(u), detail: `${u.what} ${u.detail}` });
 
+  // The course map's corrections, re-keyed through the live ids just matched; report lines in course order.
+  const correctionsFile = join(graphDir, 'languages', 'fr', 'course-map.corrections.json');
+  let corrected = null;
+  if (splitting) {
+    corrected = correctionsOf(courseMap, converted, { liveIds: map, sources: configs, records: newRecords });
+    const order = new Map([...converted.keys()].map((k, i) => [k, i]));
+    const at = (l) => (l.module_key === null ? -1 : order.get(l.module_key) ?? Infinity);
+    lines.push(...[...declared.report, ...corrected.report].map((l, i) => ({ l, i })).sort((a, b) => at(a.l) - at(b.l) || a.i - b.i).map(({ l }) => l));
+  }
+
   const settings = readJson(join(REPO_ROOT, 'curriculum-graph/core/settings.json'));
   for (const line of outlineFromUnitConfigs(unitConfigs, { opensWords: settings.reference.modules }).report)
     lines.push({ module_key: null, path: 'course.json', kind: 'outline', detail: line });
@@ -390,6 +447,7 @@ async function modules(args, flags, kindWords = ['modules']) {
   status |= writeFile(recordFile, json(sorted(newRecords)), always);
   status |= writeFile(fixesFile, json(sorted(newFixes)), always);
   status |= writeFile(join(ROOT, 'migration-report.md'), renderReport(lines, summary), always);
+  if (corrected) status |= writeFile(correctionsFile, json(sortDeep(corrected.corrections)), always);
   const lineKinds = new Map();
   for (const l of lines) lineKinds.set(l.kind, (lineKinds.get(l.kind) || 0) + 1);
   const fixCount = Object.values(newFixes).reduce((n, f) => n + Object.keys(f).length, 0);
@@ -401,6 +459,16 @@ async function modules(args, flags, kindWords = ['modules']) {
     `guides, readings, Reference pages: ${count('text_changed', readingStory)} story sentences changed, ${count('story_missing')} story_missing, ` +
       `${count('reading_word_no_popup')} passage words with no pop-up, ${count('position_word', fixedPositions)} position words fixed by hand, ${minted.size} word ids first minted in reading tables`,
   );
+  if (corrected) {
+    const mapLines = lines.filter((l) => l.kind === 'course_map');
+    const code = (c) => mapLines.filter((l) => l.detail.startsWith(`${c}:`)).length;
+    const mods = [...converted.values()];
+    console.log(
+      `course map: ${mods.filter((m) => m.teaches).length} modules declare teaches, ${mods.filter((m) => m.tests).length} declare tests, ` +
+        `${code('pre_teach_row')} preTeach rows, ${code('already_in_table')} already_in_table, ${code('screen_dropped')} screens dropped, ` +
+        `${corrected.counts.rekeyed} corrections re-keyed, ${corrected.counts.dropped} with no item id or target (${rel(correctionsFile)})`,
+    );
+  } else console.log(`course map: split already (no teaching field in ${rel(join(graphDir, 'languages/fr/course-map.json'))}); teaches and tests kept as written`);
   console.log(`report: ${[...lineKinds].map(([kind, n]) => `${kind} ${n}`).join(', ')}`);
   return status;
 }

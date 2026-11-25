@@ -7,7 +7,7 @@
   "topic": "être",
   "description": "Say who and what you are: {je suis}, {tu es}, {il est}.",
   "can_do": ["Say who you are with {je suis}."],
-  "teaches": { "constructions": ["fr:cx:etre.present"] },
+  "teaches": { "constructions": ["fr:cx:pronoun.subject"] },
   "tests": { "constructions": [] },
   "vocabulary": [
     { "word_id": "je-suis-fr", "fr": "je suis", "gloss": "I am", "part_of_speech": "verb", "example_fr": "Je suis Paul.", "example_en": "I am Paul." },

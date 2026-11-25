@@ -25,7 +25,25 @@ export function readContent(root = CONTENT_ROOT) {
   return { outlineFile: rel(outlinePath), outlineText: existsSync(outlinePath) ? readFileSync(outlinePath, 'utf8') : null, files };
 }
 
-export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer } = {}) {
+export const GRAPH_LANG_DIR = join(REPO_ROOT, 'curriculum-graph', 'languages', 'fr');
+
+// The graph ids teaches and tests may name: constructions (constructions.json, and the regular patterns in
+// paradigms.json, which share the fr:cx: ids and which the course map lists among taught constructions, such as
+// fr:cx:noun.plural) and words (headwords.json and forms.json). Read once per folder.
+const graphIdCache = new Map();
+export function graphIds(dir = GRAPH_LANG_DIR) {
+  if (!graphIdCache.has(dir)) {
+    const ids = (f) => JSON.parse(readFileSync(join(dir, f), 'utf8')).map((n) => n.id);
+    graphIdCache.set(dir, {
+      constructions: new Set([...ids('constructions.json'), ...ids('paradigms.json')]),
+      words: new Set([...ids('headwords.json'), ...ids('forms.json')]),
+    });
+  }
+  return graphIdCache.get(dir);
+}
+
+// graphDir: the graph language folder whose ids teaches and tests are checked against; null checks only their shape.
+export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer, graphDir = GRAPH_LANG_DIR } = {}) {
   const { outlineFile, outlineText, files } = readContent(root);
   if (outlineText === null) throw new ContentError([problem(outlineFile, '', 'file_missing', 'course.json does not exist')]);
   let outline;
@@ -43,5 +61,5 @@ export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnsw
     }
     throw new ContentError(ps);
   }
-  return assembleCourse(outline, files, { outlineFile, checkAnswer });
+  return assembleCourse(outline, files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir) });
 }

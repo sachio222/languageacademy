@@ -11,7 +11,7 @@ import { readModule } from '../../graph/course.mjs';
 import { convertTyped, convertFillblank, convertSentence, normText } from './items.mjs';
 import { markFrench, unmark } from './mark-french.mjs';
 import { makeItemId, makeConceptId, makeTableId } from '../item-ids.mjs';
-import { createMerger, mergeVocabulary, diffs, hashOf, clone, pairByContent, sourceCards } from './merge.mjs';
+import { createMerger, mergeVocabulary, mergeDeclared, diffs, hashOf, clone, pairByContent, sourceCards } from './merge.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { HOLDS, REWRITES } from './holds.mjs';
 
@@ -118,7 +118,9 @@ export function contentKey(item) {
 
 /**
  * @param old   today's module object (evaluated export of src/lessons/modules/…)
- * @param opts  { unitKey, unitIndex, existing?, record?, dictionary?: Map, seenBySpelling?: Map, isWord? }
+ * @param opts  { unitKey, unitIndex, existing?, record?, dictionary?: Map, seenBySpelling?: Map, isWord?, declaration? }
+ *              declaration: { teaches?, tests? } from the course map (course-map.mjs declarationsOf); undefined keeps
+ *              what the file declares
  * @returns { mod, report: ReportLine[], record, held: [{ ref, reason, answer }] }
  *          ReportLine = { module_key, path, kind, detail }
  */
@@ -257,7 +259,7 @@ export function convertModule(old, opts = {}) {
   };
 
   for (const f of ['title', 'description', 'can_do']) fieldPart(f, fresh[f]);
-  if (ex?.teaches !== undefined) put('teaches', clone(ex.teaches));
+  mergeDeclared(merger, opts.declaration, 'teaches', { mod, outFields: outRecord.fields });
 
   // Vocabulary: one part per source card, word ids in course order (merge.mjs mergeVocabulary).
   if (teaches) {
@@ -371,8 +373,7 @@ export function convertModule(old, opts = {}) {
   for (const h of held) add(h.ref, 'held_out', `"${h.prompt ?? ''}" → "${h.answer ?? ''}": ${h.reason}`);
 
   fieldPart('options', fresh.options);
-  if (ex?.tests !== undefined) put('tests', clone(ex.tests));
-  else put('tests', fresh.tests);
+  mergeDeclared(merger, opts.declaration, 'tests', { mod, outFields: outRecord.fields, testsBefore: fresh.tests });
 
   // Position words in what the source says (spec 5.2): reported, written as they are, fixed by hand.
   // The vocabulary as the source gives it, so a note fixed by hand is still listed, marked "(fixed by hand)".

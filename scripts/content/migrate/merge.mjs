@@ -82,14 +82,37 @@ export function createMerger({ existing = null, record = null, handFixes = null,
 
 /**
  * One module field as a part. Puts the merged value into `mod` and the base into `outFields`.
+ * `prior` ({ value }): what the converter wrote for the field before the record kept a base for it. A record
+ * without the field then takes that as its base, so a file still holding the old output takes the new one, and a
+ * file edited by hand keeps the edit (Task 9: `teaches` and `tests`, which earlier runs wrote unrecorded).
  */
-export function mergeField(m, f, freshVal, sourceVal, { mod, outFields }) {
+export function mergeField(m, f, freshVal, sourceVal, { mod, outFields, prior }) {
   const srcHash = hashOf(sourceVal);
-  const r = m.mergePart(f, f, m.ex ? f in m.ex : false, m.ex?.[f], freshVal, baseOf(m.rec?.fields?.[f]), srcHash);
+  const r = m.mergePart(f, f, m.ex ? f in m.ex : false, m.ex?.[f], freshVal, baseOf(m.rec?.fields?.[f]) ?? priorBase(m, prior), srcHash);
   outFields[f] = { src: r.src ?? srcHash, out: r.out };
   if (r.value !== undefined) mod[f] = r.value;
   if (r.value !== undefined || freshVal !== undefined) diffs(r.value, freshVal, f, m.handEdits);
   m.noteFix(f, r.value, freshVal);
+}
+export const priorBase = (m, prior) => (m.rec && prior ? { out: hashOf(prior.value) } : null);
+
+/**
+ * `teaches` or `tests` (spec 5.2), declared in the course map until Task 10 (course-map.mjs declarationsOf).
+ * `decl` undefined: nothing declares them (the course map is split already), so the file's value stays and its base
+ * carries forward. Otherwise the field is a part: the declaration is the new output, and a hand edit to the file
+ * stays. `testsBefore`: what earlier runs wrote for tests without a base ({ constructions: [] } on practice sets and
+ * unit exams, nothing elsewhere).
+ */
+export function mergeDeclared(m, decl, field, { mod, outFields, testsBefore }) {
+  if (decl === undefined) {
+    // --force (no file): a hand fix of the field, else what earlier runs wrote.
+    const kept = m.ex?.[field] ?? (!m.ex && field in m.fixes ? m.fixes[field] ?? undefined : field === 'tests' ? testsBefore : undefined);
+    if (kept !== undefined) mod[field] = clone(kept);
+    if (m.rec?.fields?.[field] !== undefined) outFields[field] = clone(m.rec.fields[field]);
+    return;
+  }
+  const prior = { value: field === 'tests' ? testsBefore : undefined };
+  mergeField(m, field, decl[field], decl[field] ?? null, { mod, outFields, prior });
 }
 
 /**

@@ -109,6 +109,43 @@ test('constructions taught by a practice set', () => {
   assert.deepEqual(codes(mod, 2), ['teaches_in_test']);
 });
 
+// Task 9: teaches and tests name graph ids. With the graph's ids given, an id the graph lacks is an error.
+const GRAPH_IDS = { constructions: new Set(['fr:cx:elision', 'fr:cx:q.est-ce-que']), words: new Set(['fr:lex:ne', 'fr:form:ne.elided']) };
+const graphCodes = (mod, unitIndex) => validateModule(mod, { file: 'm.json', unitIndex, graphIds: GRAPH_IDS }).map((p) => [p.code, p.path]);
+
+test('teaches and tests name constructions and words the graph has', () => {
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.teaches = { constructions: ['fr:cx:elision', 'fr:cx:nope'], words: ['fr:lex:ne', 'fr:form:ne.elided', 'fr:lex:nope'] };
+  assert.deepEqual(graphCodes(lesson, 1), [
+    ['construction_unknown', 'teaches.constructions[1]'],
+    ['word_unknown', 'teaches.words[2]'],
+  ]);
+  const practice = miniModule(MINI_KEYS.practice);
+  practice.tests = { constructions: ['fr:cx:q.est-ce-que', 'fr:lex:ne'] };
+  assert.deepEqual(graphCodes(practice, 2), [['construction_unknown', 'tests.constructions[1]']]);
+  // Without the graph's ids (Vite, or a caller that opts out) only the shape is checked.
+  assert.deepEqual(codes(lesson, 1), []);
+});
+
+test('teaches.words is a list of ids, and a practice set teaches no words', () => {
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.teaches = { constructions: [], words: 'fr:lex:ne' };
+  assert.deepEqual(codes(lesson, 1), ['field_type']);
+  const practice = miniModule(MINI_KEYS.practice);
+  practice.teaches = { constructions: [], words: ['fr:lex:ne'] };
+  assert.deepEqual(codes(practice, 2), ['teaches_in_test']);
+});
+
+test('the content loader checks graph ids', () => {
+  const files = miniFiles();
+  const etre = files.find((f) => f.file.endsWith('2024-01-02-etre.json'));
+  const mod = JSON.parse(etre.text ?? JSON.stringify(etre.json));
+  mod.teaches = { constructions: ['fr:cx:nope'] };
+  const swapped = files.map((f) => (f === etre ? { file: f.file, json: mod } : f));
+  assert.throws(() => assembleCourse(miniOutline(), swapped, { outlineFile: OUTLINE_FILE, graphIds: GRAPH_IDS }), (e) =>
+    e.problems.some((p) => p.code === 'construction_unknown' && p.path === 'teaches.constructions[0]'));
+});
+
 test('position word in title', () => {
   const mod = miniModule(MINI_KEYS.lesson);
   mod.title = 'Module 14: être';

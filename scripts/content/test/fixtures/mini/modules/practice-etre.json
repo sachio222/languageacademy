@@ -6,7 +6,7 @@
   "title": "Practice · {être}",
   "topic": "être",
   "description": "Fill in the right form of {être}.",
-  "tests": { "constructions": ["fr:cx:etre.present"] },
+  "tests": { "constructions": ["fr:cx:pronoun.subject"] },
   "items": [
     { "id": "p-je-suis", "type": "gapfill", "text": "Je ___ Paul.", "blanks": [{ "answer": "suis" }] },
     { "id": "p-nous-vous", "type": "gapfill", "text": "Nous ___ là et vous ___ ici.", "blanks": [{ "answer": "sommes" }, { "answer": "êtes" }] }

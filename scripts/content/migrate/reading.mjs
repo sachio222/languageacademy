@@ -7,7 +7,8 @@
 import { markFrench, unmark } from './mark-french.mjs';
 import { normText, mistakesOf, acceptOf } from './items.mjs';
 import { slugify, freeId, makeItemId } from '../item-ids.mjs';
-import { createMerger, mergeField, mergeList, mergeVocabulary, finishReport, clone, sortKeys, sourceCards } from './merge.mjs';
+import { createMerger, mergeField, mergeList, mergeVocabulary, mergeDeclared, finishReport, clone, sortKeys, sourceCards } from './merge.mjs';
+import { preTeachRows } from './course-map.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { tokenize, fold } from '../../graph/fr/tokenize.mjs';
 
@@ -252,10 +253,18 @@ export function readingFrom(old, story, opts = {}) {
   const fields = {};
   const sources = { title: old.title, description: old.description, can_do: old.emailMetadata?.capabilities ?? null, story_id: story?.n ?? null };
   for (const f of ['title', 'description', 'can_do']) mergeField(m, f, fresh[f], sources[f], { mod, outFields: fields });
-  if (m.ex?.teaches !== undefined) mod.teaches = clone(m.ex.teaches);
+  mergeDeclared(m, opts.declaration, 'teaches', { mod, outFields: fields });
   mergeField(m, 'story_id', fresh.story_id, sources.story_id, { mod, outFields: fields });
 
-  const v = mergeVocabulary(m, old.vocabularyReference || [], { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add, minted: opts.minted ?? null, infoCards: opts.imageCredit ?? (() => ({ credit: null, stated: null })) });
+  // The course map's preTeach words in the passage join the table as cards after today's (course-map.mjs).
+  const table = [...(old.vocabularyReference || [])];
+  if (opts.declaration?.pre_teach?.length) {
+    const passageNow = { passage: freshPassage, vocabulary: sourceCards(old.vocabularyReference) };
+    const pre = preTeachRows(key, opts.declaration.pre_teach, passageNow, { wordOf: opts.wordOf ?? (() => null) });
+    lines.push(...pre.report);
+    for (const r of pre.rows) table.push({ french: r.fr, english: r.gloss });
+  }
+  const v = mergeVocabulary(m, table, { key, seenBySpelling: opts.seenBySpelling ?? new Map(), dictionary: opts.dictionary ?? new Map(), add, minted: opts.minted ?? null, infoCards: opts.imageCredit ?? (() => ({ credit: null, stated: null })) });
   mod.vocabulary = v.vocab;
 
   const passage = mergeList(
@@ -295,7 +304,7 @@ export function readingFrom(old, story, opts = {}) {
     },
   );
   mod.items = items.list;
-  if (m.ex?.tests !== undefined) mod.tests = clone(m.ex.tests);
+  mergeDeclared(m, opts.declaration, 'tests', { mod, outFields: fields });
 
   // What the source says, unmerged, so a position word fixed by hand is still listed, marked "(fixed by hand)".
   const freshMod = {
