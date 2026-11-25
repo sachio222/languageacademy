@@ -550,7 +550,7 @@
       {
         "id": "c-pas-de",
         "term": "{pas de}: no, not any",
-        "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are.",
+        "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are. After {être} they stay: {ce n'est pas un livre}.",
         "example": "{J'ai du pain.} becomes {Je n'ai pas de pain.} (I don't have any bread.)"
       }
     ],
@@ -596,7 +596,8 @@
       "accept": [
         "je ne veux pas d'eau",
         "non je ne veux pas d eau",
-        "je ne veux pas d eau"
+        "je ne veux pas d eau",
+        "non merci, je ne veux pas d'eau"
       ],
       "hint": "{de l'} becomes {d'} after {ne … pas}",
       "mistakes": [
@@ -1101,6 +1102,12 @@
     "title": "Knowledge & Learning Practice - Fill in the Blanks"
   },
   "2024-05-12-commands-pronouns": {
+    "can_do": [
+      "Give commands with object pronouns (Give it to me!)",
+      "Use pronouns with affirmative and negative commands",
+      "Form complex commands like 'Don't do it!' or 'Look at me!'",
+      "Say some or how many with {en}: {j'en veux}, {j'en ai trois}."
+    ],
     "concepts": [
       {
         "id": "c-affirmative-commands-attach-with",
@@ -1123,14 +1130,14 @@
       {
         "id": "c-en-some",
         "term": "{en}: some, of them",
-        "definition": "{en} stands for something you already named after {du}, {de la}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
+        "definition": "{en} stands for something you already named with {du}, {de la}, {de l'}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
         "example": "{Tu veux du café ? Oui, j'en veux.} (Do you want some coffee? Yes, I want some.), {Prends-en !} (Take some!)"
       }
     ],
     "items/i-oui-j-en-ai-trois": {
       "id": "i-oui-j-en-ai-trois",
       "type": "respond",
-      "situation": "A friend asks {Tu as des livres ?} Say yes, you have three.",
+      "situation": "A friend asks {Tu as des livres ?} Say yes, you have three. Use {en}.",
       "answer": "oui, j'en ai trois",
       "accept": [
         "j'en ai trois",
@@ -1148,12 +1155,13 @@
     "items/i-oui-j-en-veux": {
       "id": "i-oui-j-en-veux",
       "type": "respond",
-      "situation": "A friend asks {Tu veux du café ?} Say yes, you want some.",
+      "situation": "A friend asks {Tu veux du café ?} Say yes, you want some. Use {en}.",
       "answer": "oui, j'en veux",
       "accept": [
         "j'en veux",
         "oui j en veux",
-        "j en veux"
+        "j en veux",
+        "oui, j'en veux bien"
       ],
       "hint": "{en} goes before the verb",
       "mistakes": [
@@ -1166,7 +1174,7 @@
     "items/i-prends-en": {
       "id": "i-prends-en",
       "type": "respond",
-      "situation": "Offer a friend some of your bread. Say “Take some!”",
+      "situation": "Offer a friend some of your bread. Say “Take some!” with {en}.",
       "answer": "prends-en",
       "accept": [
         "prends en"
@@ -1236,7 +1244,7 @@
     "items/i-non-je-n-y-vais-pas": {
       "id": "i-non-je-n-y-vais-pas",
       "type": "respond",
-      "situation": "A friend asks {Tu vas chez Paul ?} Say no, you're not going there.",
+      "situation": "A friend asks {Tu vas chez Paul ?} Say no, you're not going there. Use {y}.",
       "answer": "non, je n'y vais pas",
       "accept": [
         "je n'y vais pas",
@@ -1267,7 +1275,7 @@
     "items/i-oui-j-y-vais": {
       "id": "i-oui-j-y-vais",
       "type": "respond",
-      "situation": "A friend asks {Tu vas au café ?} Say yes, you're going there.",
+      "situation": "A friend asks {Tu vas au café ?} Say yes, you're going there. Use {y}.",
       "answer": "oui, j'y vais",
       "accept": [
         "j'y vais",
@@ -1348,7 +1356,7 @@
     "items/i-non-je-n-en-mange-pas": {
       "id": "i-non-je-n-en-mange-pas",
       "type": "respond",
-      "situation": "A friend asks {Tu manges de la viande ?} Say no, you don't eat any.",
+      "situation": "A friend asks {Tu manges de la viande ?} Say no, you don't eat any. Use {en}.",
       "answer": "non, je n'en mange pas",
       "accept": [
         "je n'en mange pas",
@@ -1365,7 +1373,7 @@
     "items/i-oui-j-y-vais-ce-soir": {
       "id": "i-oui-j-y-vais-ce-soir",
       "type": "respond",
-      "situation": "A friend asks {Tu vas chez Marie ce soir ?} Say yes, you're going there tonight.",
+      "situation": "A friend asks {Tu vas chez Marie ce soir ?} Say yes, you're going there tonight. Use {y}.",
       "answer": "oui, j'y vais ce soir",
       "accept": [
         "j'y vais ce soir",
@@ -1414,6 +1422,42 @@
       ],
       "gloss": "First, I eat. Then, I leave.",
       "hint": "first / first of all / then / next"
+    },
+    "items/i-nous-en-avons-deux": {
+      "id": "i-nous-en-avons-deux",
+      "type": "gapfill",
+      "text": "Des chats ? Nous ___ avons deux.",
+      "gloss": "Cats? We have two.",
+      "blanks": [
+        {
+          "answer": "en"
+        }
+      ],
+      "hint": "the pronoun for some or how many",
+      "mistakes": [
+        {
+          "answer": "y",
+          "feedback": "With a number, use {en}: {nous en avons deux}."
+        }
+      ]
+    },
+    "items/i-nous-y-allons-demain": {
+      "id": "i-nous-y-allons-demain",
+      "type": "gapfill",
+      "text": "Le café ? Nous ___ allons demain.",
+      "gloss": "The café? We're going there tomorrow.",
+      "blanks": [
+        {
+          "answer": "y"
+        }
+      ],
+      "hint": "the pronoun for a place",
+      "mistakes": [
+        {
+          "answer": "en",
+          "feedback": "For a place, use {y}: {nous y allons}."
+        }
+      ]
     },
     "title": "Daily Life & Actions Practice - Fill in the Blanks"
   },
@@ -1573,10 +1617,13 @@
       "type": "translate",
       "prompt": "he doesn't give anything",
       "answer": "il ne donne rien",
-      "accept": [
-        "il ne donne pas"
-      ],
-      "hint": "{ne} + {donne} + {rien}"
+      "hint": "{ne} + {donne} + {rien}",
+      "mistakes": [
+        {
+          "answer": "il ne donne pas",
+          "feedback": "For nothing, {rien} takes the place of {pas}: {il ne donne rien}."
+        }
+      ]
     },
     "items/i-je-ne-fais-rien": {
       "id": "i-je-ne-fais-rien",
@@ -1588,6 +1635,9 @@
           "answer": "je fais rien",
           "feedback": "People often drop {ne} when they speak, but write it here: {je ne fais rien}."
         }
+      ],
+      "accept": [
+        "je ne fais rien du tout"
       ]
     },
     "items/i-je-ne-vois-rien": {

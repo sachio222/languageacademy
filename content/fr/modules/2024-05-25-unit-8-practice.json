@@ -271,12 +271,50 @@
       ],
       "gloss": "After coffee, I wash and I get dressed",
       "hint": "temporal: after / se laver for {je} / s'habiller for {je}"
+    },
+    {
+      "id": "i-nous-y-allons-demain",
+      "type": "gapfill",
+      "text": "Le café ? Nous ___ allons demain.",
+      "gloss": "The café? We're going there tomorrow.",
+      "blanks": [
+        {
+          "answer": "y"
+        }
+      ],
+      "hint": "the pronoun for a place",
+      "mistakes": [
+        {
+          "answer": "en",
+          "feedback": "For a place, use {y}: {nous y allons}."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-en-avons-deux",
+      "type": "gapfill",
+      "text": "Des chats ? Nous ___ avons deux.",
+      "gloss": "Cats? We have two.",
+      "blanks": [
+        {
+          "answer": "en"
+        }
+      ],
+      "hint": "the pronoun for some or how many",
+      "mistakes": [
+        {
+          "answer": "y",
+          "feedback": "With a number, use {en}: {nous en avons deux}."
+        }
+      ]
     }
   ],
   "tests": {
     "constructions": [
       "fr:cx:pronoun.reflexive",
-      "fr:cx:reciprocal"
+      "fr:cx:reciprocal",
+      "fr:cx:pronoun.y",
+      "fr:cx:pronoun.en"
     ]
   }
 }

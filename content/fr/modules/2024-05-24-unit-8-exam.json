@@ -357,7 +357,7 @@
     {
       "id": "i-oui-j-y-vais-ce-soir",
       "type": "respond",
-      "situation": "A friend asks {Tu vas chez Marie ce soir ?} Say yes, you're going there tonight.",
+      "situation": "A friend asks {Tu vas chez Marie ce soir ?} Say yes, you're going there tonight. Use {y}.",
       "answer": "oui, j'y vais ce soir",
       "accept": [
         "j'y vais ce soir",
@@ -374,7 +374,7 @@
     {
       "id": "i-non-je-n-en-mange-pas",
       "type": "respond",
-      "situation": "A friend asks {Tu manges de la viande ?} Say no, you don't eat any.",
+      "situation": "A friend asks {Tu manges de la viande ?} Say no, you don't eat any. Use {en}.",
       "answer": "non, je n'en mange pas",
       "accept": [
         "je n'en mange pas",

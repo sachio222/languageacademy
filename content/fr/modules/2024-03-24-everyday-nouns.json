@@ -198,7 +198,7 @@
     {
       "id": "c-pas-de",
       "term": "{pas de}: no, not any",
-      "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are.",
+      "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are. After {être} they stay: {ce n'est pas un livre}.",
       "example": "{J'ai du pain.} becomes {Je n'ai pas de pain.} (I don't have any bread.)"
     }
   ],
@@ -330,7 +330,8 @@
       "accept": [
         "je ne veux pas d'eau",
         "non je ne veux pas d eau",
-        "je ne veux pas d eau"
+        "je ne veux pas d eau",
+        "non merci, je ne veux pas d'eau"
       ],
       "hint": "{de l'} becomes {d'} after {ne … pas}",
       "mistakes": [

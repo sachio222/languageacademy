@@ -8,7 +8,8 @@
   "can_do": [
     "Give commands with object pronouns (Give it to me!)",
     "Use pronouns with affirmative and negative commands",
-    "Form complex commands like 'Don't do it!' or 'Look at me!'"
+    "Form complex commands like 'Don't do it!' or 'Look at me!'",
+    "Say some or how many with {en}: {j'en veux}, {j'en ai trois}."
   ],
   "teaches": {
     "constructions": [
@@ -70,7 +71,7 @@
     {
       "id": "c-en-some",
       "term": "{en}: some, of them",
-      "definition": "{en} stands for something you already named after {du}, {de la}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
+      "definition": "{en} stands for something you already named with {du}, {de la}, {de l'}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
       "example": "{Tu veux du café ? Oui, j'en veux.} (Do you want some coffee? Yes, I want some.), {Prends-en !} (Take some!)"
     }
   ],
@@ -137,12 +138,13 @@
     {
       "id": "i-oui-j-en-veux",
       "type": "respond",
-      "situation": "A friend asks {Tu veux du café ?} Say yes, you want some.",
+      "situation": "A friend asks {Tu veux du café ?} Say yes, you want some. Use {en}.",
       "answer": "oui, j'en veux",
       "accept": [
         "j'en veux",
         "oui j en veux",
-        "j en veux"
+        "j en veux",
+        "oui, j'en veux bien"
       ],
       "hint": "{en} goes before the verb",
       "mistakes": [
@@ -155,7 +157,7 @@
     {
       "id": "i-oui-j-en-ai-trois",
       "type": "respond",
-      "situation": "A friend asks {Tu as des livres ?} Say yes, you have three.",
+      "situation": "A friend asks {Tu as des livres ?} Say yes, you have three. Use {en}.",
       "answer": "oui, j'en ai trois",
       "accept": [
         "j'en ai trois",
@@ -173,7 +175,7 @@
     {
       "id": "i-prends-en",
       "type": "respond",
-      "situation": "Offer a friend some of your bread. Say “Take some!”",
+      "situation": "Offer a friend some of your bread. Say “Take some!” with {en}.",
       "answer": "prends-en",
       "accept": [
         "prends en"

@@ -275,10 +275,13 @@
       "type": "translate",
       "prompt": "he doesn't give anything",
       "answer": "il ne donne rien",
-      "accept": [
-        "il ne donne pas"
-      ],
-      "hint": "{ne} + {donne} + {rien}"
+      "hint": "{ne} + {donne} + {rien}",
+      "mistakes": [
+        {
+          "answer": "il ne donne pas",
+          "feedback": "For nothing, {rien} takes the place of {pas}: {il ne donne rien}."
+        }
+      ]
     },
     {
       "id": "i-je-ne-vois-rien",
@@ -303,6 +306,9 @@
           "answer": "je fais rien",
           "feedback": "People often drop {ne} when they speak, but write it here: {je ne fais rien}."
         }
+      ],
+      "accept": [
+        "je ne fais rien du tout"
       ]
     },
     {

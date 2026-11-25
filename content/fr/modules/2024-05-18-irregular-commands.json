@@ -216,7 +216,7 @@
     {
       "id": "i-oui-j-y-vais",
       "type": "respond",
-      "situation": "A friend asks {Tu vas au café ?} Say yes, you're going there.",
+      "situation": "A friend asks {Tu vas au café ?} Say yes, you're going there. Use {y}.",
       "answer": "oui, j'y vais",
       "accept": [
         "j'y vais",
@@ -247,7 +247,7 @@
     {
       "id": "i-non-je-n-y-vais-pas",
       "type": "respond",
-      "situation": "A friend asks {Tu vas chez Paul ?} Say no, you're not going there.",
+      "situation": "A friend asks {Tu vas chez Paul ?} Say no, you're not going there. Use {y}.",
       "answer": "non, je n'y vais pas",
       "accept": [
         "je n'y vais pas",

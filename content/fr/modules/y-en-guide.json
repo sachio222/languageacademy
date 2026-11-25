@@ -59,6 +59,10 @@
             [
               "Le chat est dans la maison ? Oui, il y est.",
               "Is the cat in the house? Yes, it's in there."
+            ],
+            [
+              "On y va ?",
+              "Shall we go?"
             ]
           ]
         }
@@ -68,7 +72,7 @@
       "id": "p-en-some",
       "heading": "{en}: some, of them",
       "text": [
-        "{en} stands for something you already named after {de}, {du}, {de la} or {des}, or with a number. It goes before the verb too."
+        "{en} stands for something you already named with {de}, {du}, {de la}, {de l'} or {des}, or with a number. It goes before the verb too."
       ],
       "note": "With a number, the number goes at the end: {j'en ai deux}. English can drop “of them”, but French keeps {en}.",
       "blocks": [
@@ -84,7 +88,7 @@
             ],
             [
               "Tu as besoin d'aide ? Oui, j'en ai besoin.",
-              "Do you need help? Yes, I need some."
+              "Do you need help? Yes, I do."
             ]
           ]
         }
@@ -113,11 +117,11 @@
     },
     {
       "id": "p-commands-phrases",
-      "heading": "In commands and set phrases",
+      "heading": "In commands",
       "text": [
-        "In a positive command, {y} and {en} go after the verb with a hyphen, like {le} in {donne-le}. A few phrases you already know are built this way."
+        "In a positive command, {y} and {en} go after the verb with a hyphen, like {le} in {donne-le}."
       ],
-      "note": "Before {y}, {va} takes an {s}: {vas-y}.",
+      "note": "Before {y} and {en}, {va} and {tu} commands ending in {-e} take an {s}: {vas-y}, {manges-en}.",
       "blocks": [
         {
           "lines": [
@@ -128,10 +132,6 @@
             [
               "Allons-y !",
               "Let's go!"
-            ],
-            [
-              "On y va ?",
-              "Shall we go?"
             ],
             [
               "Prends-en !",
