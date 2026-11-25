@@ -42,7 +42,7 @@
       "word_id": "je-voudrais-fr",
       "fr": "je voudrais",
       "gloss": "I would like",
-      "note": "The polite way to ask for something in a shop or a café.",
+      "note": "Use it to ask politely for something in a shop or café.",
       "example_fr": "Je voudrais un croissant, s'il vous plaît.",
       "example_en": "I would like a croissant, please."
     },
@@ -89,7 +89,7 @@
     {
       "id": "s-greeting",
       "heading": "Saying hello",
-      "text": "Ask how someone is with {ça va ?} or {comment ça va ?}. Answer with {ça va}.",
+      "text": "{ça va ?} and {comment ça va ?} ask how someone is, and {ça va} answers.",
       "example": "{Salut, ça va ? Oui, ça va bien.}"
     },
     {

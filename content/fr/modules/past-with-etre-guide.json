@@ -11,7 +11,7 @@
     "Make the participle agree after {être}: {elle est allée}, {ils sont allés}."
   ],
   "minutes": 5,
-  "line": "A small group of verbs and every reflexive verb build the past with {être}, and the participle then agrees with the subject.",
+  "line": "A small group of verbs and every reflexive verb build the past with {être}, and the participle usually agrees with the subject.",
   "parts": [
     {
       "id": "p-avoir-or-etre",
@@ -65,7 +65,7 @@
       "id": "p-reflexive",
       "heading": "Reflexive verbs take {être}",
       "text": [
-        "Every reflexive verb builds its past with {être}. The small pronoun stays in front of {être}: {je me suis levé}."
+        "Every reflexive verb builds its past with {être}. The reflexive pronoun stays in front of {être}: {je me suis levé}."
       ],
       "blocks": [
         {
@@ -152,7 +152,7 @@
       "id": "p-in-a-story",
       "heading": "In a short story",
       "text": [
-        "Here are both rules together: {être} for coming and going, and an ending that matches the subject."
+        "Here are both rules together: {être} as the helper verb, and an ending that matches the subject."
       ],
       "blocks": [
         {

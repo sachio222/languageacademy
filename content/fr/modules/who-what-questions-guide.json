@@ -3,7 +3,7 @@
   "module_key": "who-what-questions-guide",
   "kind": "guide",
   "status": "written",
-  "title": "Who and What Questions - One Table",
+  "title": "Who and What Questions - {qui} or {que}",
   "short_title": "Who and what questions",
   "description": "Put {qui est-ce qui}, {qui est-ce que}, {qu'est-ce qui} and {qu'est-ce que} in one table.",
   "can_do": [
@@ -15,7 +15,7 @@
   "parts": [
     {
       "id": "p-one-table",
-      "heading": "Four questions, one table",
+      "heading": "Who and what, side by side",
       "text": [
         "Each question has two halves. The start, {qui} or {qu'}, asks about a person or a thing. The end, {qui} or {que}, says whether that person or thing does the action or receives it."
       ],
@@ -114,9 +114,9 @@
     },
     {
       "id": "p-all-four",
-      "heading": "All four in use",
+      "heading": "The questions in use",
       "text": [
-        "Read the start for a person or a thing, then the end for who does the action."
+        "Read the start to tell a person from a thing. Then read the end to tell whether that person or thing does the action or receives it."
       ],
       "blocks": [
         {

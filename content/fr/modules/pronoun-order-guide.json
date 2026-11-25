@@ -11,7 +11,7 @@
     "Replace both objects of a sentence: {je donne le livre à Marie} becomes {je le lui donne}."
   ],
   "minutes": 5,
-  "line": "Object pronouns go before the verb, and two pronouns always come in the same order: {te le}, {le lui}.",
+  "line": "In a statement, object pronouns go before the verb, and two pronouns come in a fixed order: {te le}, {le lui}.",
   "parts": [
     {
       "id": "p-one-pronoun",
@@ -44,9 +44,9 @@
     },
     {
       "id": "p-me-te-first",
-      "heading": "{me}, {te}, {nous} and {vous} come first",
+      "heading": "{me}, {te}, {se}, {nous} and {vous} come first",
       "text": [
-        "When a sentence has {me}, {te}, {nous} or {vous} and also {le}, {la} or {les}, the first group goes first."
+        "When a sentence has {le}, {la} or {les} and also {me}, {te}, {se}, {nous} or {vous}, those come first."
       ],
       "blocks": [
         {

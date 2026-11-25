@@ -15,7 +15,7 @@
   "parts": [
     {
       "id": "p-one-verb-two-forms",
-      "heading": "One verb, two forms",
+      "heading": "A special form after {que}",
       "text": [
         "After some phrases with {que}, the next verb takes a special form called the subjunctive: {tu partes} in place of {tu pars}. After other phrases, the verb stays as it is."
       ],
@@ -181,7 +181,7 @@
       "id": "p-every-phrase",
       "heading": "Every phrase in one list",
       "text": [
-        "The verb after {que} takes the subjunctive after each of these phrases."
+        "The verb after {que} takes the subjunctive after these phrases."
       ],
       "blocks": [
         {

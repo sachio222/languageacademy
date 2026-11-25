@@ -63,6 +63,10 @@ test('phrasebook opens nothing', async () => {
   // still untaught on the lesson path: quelque chose in a Unit 2 lesson before any lesson teaches it.
   const phrasebook = JSON.parse(readFileSync(join(repoRoot, 'content/fr/modules/phrasebook.json'), 'utf8'));
   assert.equal(phrasebook.kind, 'reference');
+  // In the real course it is on the shelf and opens no words.
+  const { shelf } = JSON.parse(readFileSync(join(repoRoot, 'content/fr/course.json'), 'utf8'));
+  assert.ok(shelf.pages.includes('phrasebook'));
+  assert.ok(!shelf.opens_words.includes('phrasebook'));
   const withPhrasebook = (open) => miniCourse((modules, outline) => {
     modules.set('phrasebook', phrasebook);
     outline.shelf.pages.push('phrasebook');
