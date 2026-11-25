@@ -6,45 +6,109 @@
   "title": "The Power to Ask Anything",
   "topic": "questions",
   "description": "Three ways to turn any sentence into a question.",
-  "teaches": { "constructions": ["fr:cx:question.est-ce-que"] },
+  "teaches": {
+    "constructions": [
+      "fr:cx:question.est-ce-que"
+    ]
+  },
   "minutes": 5,
   "line": "Three ways to turn any sentence into a question, and when to use each one.",
   "parts": [
     {
       "id": "p-three-ways-to-ask",
       "heading": "Three ways to ask",
-      "text": ["Every French question uses one of three methods."],
-      "block": {
-        "ways": [
-          { "n": 1, "fr": "Est-ce que", "t": "Works for every question", "d": "Anywhere" },
-          { "n": 2, "fr": "", "t": "A rising voice", "d": "With friends and family" },
-          { "n": 3, "fr": "", "t": "Inversion: the verb first", "d": "Formal speech and writing" }
-        ]
-      },
+      "text": [
+        "Every French question uses one of three methods."
+      ],
+      "blocks": [
+        {
+          "ways": [
+            {
+              "n": 1,
+              "fr": "Est-ce que",
+              "t": "Works for every question",
+              "d": "Anywhere"
+            },
+            {
+              "n": 2,
+              "fr": "",
+              "t": "A rising voice",
+              "d": "With friends and family"
+            },
+            {
+              "n": 3,
+              "fr": "",
+              "t": "Inversion: the verb first",
+              "d": "Formal speech and writing"
+            }
+          ]
+        }
+      ],
       "note": "Start with {est-ce que}. It works for every question."
     },
     {
       "id": "p-est-ce-que",
       "heading": "{Est-ce que}",
-      "text": ["Put {est-ce que} in front of any statement and the statement becomes a question."],
-      "block": {
-        "build": [
-          { "k": "A statement", "fr": "Tu as un chat", "en": "You have a cat" },
-          { "k": "Add", "fr": "Est-ce que", "en": "is it that" },
-          { "k": "A question", "fr": "Est-ce que tu as un chat ?", "en": "Do you have a cat?" }
-        ]
-      }
+      "text": [
+        "Put {est-ce que} in front of any statement and the statement becomes a question."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "A statement",
+              "fr": "Tu as un chat",
+              "en": "You have a cat"
+            },
+            {
+              "k": "Add",
+              "fr": "Est-ce que",
+              "en": "is it that"
+            },
+            {
+              "k": "A question",
+              "fr": "Est-ce que tu as un chat ?",
+              "en": "Do you have a cat?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            [
+              "Où est-ce que tu es ?",
+              "Where are you?"
+            ],
+            [
+              "Quand est-ce que tu viens ?",
+              "When are you coming?"
+            ]
+          ],
+          "heading": "With a question word in front"
+        }
+      ]
     },
     {
       "id": "p-raise-your-voice",
       "heading": "Raise your voice",
-      "text": ["In everyday speech, French speakers often keep the statement as it is and raise their voice at the end."],
-      "block": {
-        "rise": [
-          { "fr": "Tu viens ce soir.", "en": "You are coming tonight.", "tone": "flat" },
-          { "fr": "Tu viens ce soir ?", "en": "Are you coming tonight?", "tone": "up" }
-        ]
-      }
+      "text": [
+        "In everyday speech, French speakers often keep the statement as it is and raise their voice at the end."
+      ],
+      "blocks": [
+        {
+          "rise": [
+            {
+              "fr": "Tu viens ce soir.",
+              "en": "You are coming tonight.",
+              "tone": "flat"
+            },
+            {
+              "fr": "Tu viens ce soir ?",
+              "en": "Are you coming tonight?",
+              "tone": "up"
+            }
+          ]
+        }
+      ]
     }
   ],
   "checks": [
@@ -52,9 +116,19 @@
       "id": "k1",
       "ask": "Which one turns {Tu as un chat} into a question?",
       "options": [
-        { "text": "Est-ce que tu as un chat ?", "fr": true, "right": true },
-        { "text": "Tu est-ce que as un chat ?", "fr": true },
-        { "text": "Tu as un chat est-ce que ?", "fr": true }
+        {
+          "text": "Est-ce que tu as un chat ?",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Tu est-ce que as un chat ?",
+          "fr": true
+        },
+        {
+          "text": "Tu as un chat est-ce que ?",
+          "fr": true
+        }
       ],
       "why": "{Est-ce que} goes in front, and the rest of the sentence stays the same."
     },
@@ -64,9 +138,16 @@
       "say": "Tu viens ce soir ?",
       "sound": "tu vee-en suh swahr",
       "options": [
-        { "text": "With est-ce que" },
-        { "text": "With a rising voice", "right": true },
-        { "text": "By flipping the verb" }
+        {
+          "text": "With est-ce que"
+        },
+        {
+          "text": "With a rising voice",
+          "right": true
+        },
+        {
+          "text": "By flipping the verb"
+        }
       ],
       "why": "The words are the same as the statement. The voice rises at the end."
     },
@@ -74,11 +155,20 @@
       "id": "k3",
       "ask": "Which question works anywhere?",
       "options": [
-        { "text": "Est-ce que tu viens ?", "fr": true, "right": true },
-        { "text": "Viens-tu ?", "fr": true }
+        {
+          "text": "Est-ce que tu viens ?",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Viens-tu ?",
+          "fr": true
+        }
       ],
       "why": "{Est-ce que} works for every question, formal or not."
     }
   ],
-  "can_do": ["Turn any sentence into a question with {est-ce que}."]
+  "can_do": [
+    "Turn any sentence into a question with {est-ce que}."
+  ]
 }

@@ -39,7 +39,8 @@ export const MODULE_SCHEMA = 'la-module@1';
 export const MODULE_KEY_PATTERN = /^([0-9]{4}-[0-9]{2}-[0-9]{2}-)?[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 export const STATUSES = ['written', 'planned'];
 
-// L's guide example blocks (prototypes/l/j-guides.js). A part's block is { <type>: <L's value> }.
+// L's guide example blocks (prototypes/l/j-guides.js). A part's blocks are an ordered list; each block is
+// { <type>: <L's value>, heading?: native_fr } with exactly one type key (L's linesH becomes a heading).
 export const BLOCK_TYPES = ['pairs', 'ties', 'cmp', 'build', 'rise', 'flip', 'ways', 'verbs', 'table', 'list', 'lines'];
 
 // "Module 14", "M12", "Unit 3", "Reading 7" (and "Lesson 5", French "Unité 2", "Leçon 4").
@@ -87,7 +88,7 @@ const CONCEPTS = LIST(
   { unique: 'id' },
 );
 const PHRASES = LIST(OBJ({ phrase_id_suffix: ID, fr: S('fr'), word_id: KEY }, ['phrase_id_suffix', 'fr']), { unique: 'phrase_id_suffix' });
-const PART = OBJ({ id: ID, heading: S('native_fr'), text: LIST(S('native_fr')), note: S('native_fr'), block: BLOCK }, ['id', 'heading']);
+const PART = OBJ({ id: ID, heading: S('native_fr'), text: LIST(S('native_fr')), note: S('native_fr'), blocks: LIST(BLOCK, { nonEmpty: true }) }, ['id', 'heading']);
 const CHECK = OBJ(
   { id: ID, ask: S('native_fr'), say: S('fr'), sound: S('native'), show: S('fr'), options: OPTIONS, why: S('native_fr') },
   ['id', 'ask', 'options', 'why'],
@@ -174,9 +175,12 @@ function walk(node, v, path, cx, parent) {
       return walkFields(node.fields, node.required, v, path, cx);
     case 'block': {
       const keys = isObj(v) ? Object.keys(v) : [];
-      if (keys.length !== 1 || !BLOCK_TYPES.includes(keys[0]) || !(Array.isArray(v[keys[0]]) || isObj(v[keys[0]])))
-        return bad(path, 'block_invalid', `${path} must be one example block: { ${BLOCK_TYPES.join(' | ')}: … }`);
-      collectStrings(v[keys[0]], join(path, keys[0]), cx.texts);
+      const types = keys.filter((k) => k !== 'heading');
+      const type = types[0];
+      if (types.length !== 1 || !BLOCK_TYPES.includes(type) || !(Array.isArray(v[type]) || isObj(v[type])))
+        return bad(path, 'block_invalid', `${path} must be one example block: { ${BLOCK_TYPES.join(' | ')}: …, heading? }`);
+      if (v.heading !== undefined) walk(S('native_fr'), v.heading, join(path, 'heading'), cx, v);
+      collectStrings(v[type], join(path, type), cx.texts);
       return;
     }
     case 'options':

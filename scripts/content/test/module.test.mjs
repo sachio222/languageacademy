@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { KINDS, STEPS_BY_KIND, validateModule, defaultSteps } from '../schema/module.mjs';
+import { KINDS, STEPS_BY_KIND, validateModule, defaultSteps, moduleTexts } from '../schema/module.mjs';
 import { assembleCourse } from '../assemble.mjs';
 import { miniModule, miniOutline, miniFiles, MINI_KEYS, OUTLINE_FILE } from './mini-fixture.mjs';
 
@@ -45,8 +45,55 @@ test('guide check needs exactly one right option', () => {
 
 test('guide block must be one of L example blocks', () => {
   const mod = miniModule(MINI_KEYS.guide);
-  mod.parts[0].block = { carousel: [] };
+  mod.parts[0].blocks = [{ carousel: [] }];
+  const ps = validateModule(mod, { file: 'g.json', unitIndex: 2 });
+  assert.deepEqual(ps.map((p) => [p.code, p.path]), [['block_invalid', 'parts[0].blocks[0]']]);
+});
+
+test('a guide part keeps several blocks in order, a block may have a heading', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  const part = mod.parts[1];
+  assert.deepEqual(part.blocks.map((b) => Object.keys(b).filter((k) => k !== 'heading')[0]), ['build', 'lines']);
+  assert.equal(part.blocks[1].heading, 'With a question word in front');
+  assert.deepEqual(codes(mod, 2), []);
+  const heading = moduleTexts(mod).find((t) => t.path === 'parts[1].blocks[1].heading');
+  assert.deepEqual(heading, { path: 'parts[1].blocks[1].heading', role: 'native_fr', text: 'With a question word in front' });
+});
+
+test('two block types in one block', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  const [build, lines] = mod.parts[1].blocks;
+  mod.parts[1].blocks = [{ ...build, ...lines }];
+  const ps = validateModule(mod, { file: 'g.json', unitIndex: 2 });
+  assert.deepEqual(ps.map((p) => [p.code, p.path]), [['block_invalid', 'parts[1].blocks[0]']]);
+});
+
+test('a block heading is native text with French spans', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  mod.parts[1].blocks[1].heading = 'With {où in front';
+  const ps = validateModule(mod, { file: 'g.json', unitIndex: 2 });
+  assert.deepEqual(ps.map((p) => [p.code, p.path]), [['span_unclosed', 'parts[1].blocks[1].heading']]);
+  mod.parts[1].blocks[1].heading = '';
+  assert.deepEqual(codes(mod, 2), ['field_type']);
+});
+
+test('a heading alone is not a block, and blocks is a non-empty list', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  mod.parts[0].blocks = [{ heading: 'Three ways' }];
   assert.deepEqual(codes(mod, 2), ['block_invalid']);
+  mod.parts[0].blocks = [];
+  assert.deepEqual(codes(mod, 2), ['field_type']);
+  delete mod.parts[0].blocks;
+  mod.parts[0].block = { ways: [] };
+  assert.deepEqual(codes(mod, 2), ['field_unknown']);
+});
+
+test('guide checks may show French', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  mod.checks[1].show = 'Tu viens ce soir ?';
+  assert.deepEqual(codes(mod, 2), []);
+  const show = moduleTexts(mod).find((t) => t.path === 'checks[1].show');
+  assert.deepEqual(show, { path: 'checks[1].show', role: 'fr', text: 'Tu viens ce soir ?' });
 });
 
 test('vocabulary on an exam', () => {

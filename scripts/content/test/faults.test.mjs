@@ -37,7 +37,7 @@ test('the fixture assembles', () => {
 });
 
 test('truncated JSON', () => {
-  const ps = fails((o, files) => editText(files, MINI_KEYS.reading, (t) => t.slice(0, Math.floor(t.length / 2))));
+  const ps = fails((_, files) => editText(files, MINI_KEYS.reading, (t) => t.slice(0, Math.floor(t.length / 2))));
   assert.equal(ps[0].file, fileOf(MINI_KEYS.reading));
   assert.equal(ps[0].path, '');
   assert.equal(ps[0].code, 'json_invalid');
@@ -45,12 +45,12 @@ test('truncated JSON', () => {
 });
 
 test('unknown field', () => {
-  const ps = fails((o, files) => editJson(files, MINI_KEYS.practice, (j) => { j.colour = 'blue'; }));
+  const ps = fails((_, files) => editJson(files, MINI_KEYS.practice, (j) => { j.colour = 'blue'; }));
   assert.deepEqual([ps[0].file, ps[0].path, ps[0].code], [fileOf(MINI_KEYS.practice), 'colour', 'field_unknown']);
 });
 
 test('duplicate item id', () => {
-  const ps = fails((o, files) => editJson(files, MINI_KEYS.unit_exam, (j) => { j.items[2].id = j.items[0].id; }));
+  const ps = fails((_, files) => editJson(files, MINI_KEYS.unit_exam, (j) => { j.items[2].id = j.items[0].id; }));
   assert.deepEqual([ps[0].file, ps[0].path, ps[0].code], [fileOf(MINI_KEYS.unit_exam), 'items[2].id', 'id_duplicate']);
 });
 
@@ -60,17 +60,17 @@ test('module listed twice', () => {
 });
 
 test('missing file', () => {
-  const ps = fails((o, files) => files.filter((f) => f.file !== fileOf(MINI_KEYS.practice)));
+  const ps = fails((_, files) => files.filter((f) => f.file !== fileOf(MINI_KEYS.practice)));
   assert.deepEqual([ps[0].file, ps[0].path, ps[0].code], [OUTLINE_FILE, 'units[1].entries[1]', 'outline_missing_file']);
 });
 
 test('stray brace', () => {
-  const ps = fails((o, files) => editJson(files, MINI_KEYS.lesson, (j) => { j.title = 'Essential Verb · {être (to be)'; }));
+  const ps = fails((_, files) => editJson(files, MINI_KEYS.lesson, (j) => { j.title = 'Essential Verb · {être (to be)'; }));
   assert.deepEqual([ps[0].file, ps[0].path, ps[0].code], [fileOf(MINI_KEYS.lesson), 'title', 'span_unclosed']);
 });
 
 test('file name and module_key disagree', () => {
-  const ps = fails((o, files) => editJson(files, MINI_KEYS.practice, (j) => { j.module_key = 'practice-avoir'; }));
+  const ps = fails((_, files) => editJson(files, MINI_KEYS.practice, (j) => { j.module_key = 'practice-avoir'; }));
   assert.deepEqual([ps[0].file, ps[0].path, ps[0].code], [fileOf(MINI_KEYS.practice), 'module_key', 'module_key_mismatch']);
 });
 
