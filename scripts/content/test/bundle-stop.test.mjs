@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadCourse, CONTENT_ROOT } from '../load.mjs';
 import { buildBundleWithReport } from '../bundle.mjs';
-import { releaseProblems } from '../release-checks.mjs';
+import { diffBundles, releaseProblems } from '../release-checks.mjs';
 import { loadBundleSources } from '../bundle-sources.mjs';
 import { writeUnit12 } from './written-unit12.mjs';
 
@@ -60,8 +60,12 @@ test('story_missing is a warning only in units the real bundle does not reach', 
   assert.deepEqual(as(new Set(['unit12'])), [['unit12-reading', 'warning']]);
 });
 
-test('bundle --check compares with the last release (legacy/last-release.json): an item id that changed its answer fails', (t) => {
+test('bundle --check compares with the last release (legacy/last-release.json): an item id that changed its answer fails', async (t) => {
   const root = copy(t);
+  // The keys that already differ from the last release (a recorded hand fix, a merged live fix): the edit below adds
+  // its own module to them and nothing else.
+  const previous = JSON.parse(readFileSync(join(root, 'legacy', 'last-release.json'), 'utf8'));
+  const before = diffBundles(buildBundleWithReport(loadCourse({ root }), { ...(await loadBundleSources({ root })), previous }).bundle, previous).changed;
   // A writer reuses an item id for another question (C-ID-4: a changed meaning needs a new id).
   const file = join(root, 'modules', '2024-01-02-etre.json');
   const mod = JSON.parse(readFileSync(file, 'utf8'));
@@ -73,7 +77,11 @@ test('bundle --check compares with the last release (legacy/last-release.json): 
   const r = bundleCheck(root);
   assert.equal(r.status, 1, 'a reused item id passed');
   assert.match(r.stderr, new RegExp(`error item_id_reused 2024-01-02-etre ${item.id} keeps its id`));
-  assert.match(r.stdout, /^changed 1: 2024-01-02-etre$/m, 'the changed keys against the last release are listed');
+  const listed = /^changed (\d+)(?:: (.*))?$/m.exec(r.stdout);
+  assert.ok(listed, 'the changed keys against the last release are listed');
+  const keys = listed[2] ? listed[2].split(', ') : [];
+  assert.equal(Number(listed[1]), keys.length);
+  assert.deepEqual([...keys].sort(), [...new Set([...before, '2024-01-02-etre'])].sort());
 });
 
 test('the committed last release is a la-bundle@1 bundle the current content matches', async () => {
