@@ -119,28 +119,32 @@ test('a missed window names the module where it closes (budgetModuleKey)', () =>
   assert.equal(ruleReuse(ctxFor(1, [2, 6, 17]))[0].budgetModuleKey, 'm47');
 });
 
-// A course plan stub is not read (content-course.mjs), so nothing it will hold counts yet. A window that closes at a
-// stub waits for it: the miss is reported once the stub is written, and charged to it.
+// A course plan stub is not read (content-course.mjs) and holds no use, so windows count the written modules a learner
+// meets. With stubs at 3 and 4, the two modules after m1 are m2 and m5: the window closes at m5, which can meet it.
 const withPlanned = (course, planned) => ({
   units: [{ unit_key: 'unit1', modules: [...course.map((m) => ({ module_key: m.moduleKey, position: m.position, status: 'written' })), ...planned.map((p) => ({ module_key: `m${p}`, position: p, status: 'planned' }))] }],
 });
-test('a window that closes at a planned module is no miss until that module is written', () => {
+test('reuse windows count written modules: a window past two stubs closes at the next written module', () => {
   const written = course50([]).filter((m) => ![3, 4].includes(m.position));
   const ctx = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: written }), content: withPlanned(written, [3, 4]) };
-  assert.deepEqual(ruleReuse(ctx), []);
-  // Written, the module at 3 does not use parler: the miss is its own.
-  const all = course50([]);
-  const done = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: all }), content: withPlanned(all, []) };
-  assert.deepEqual(ruleReuse(done).map((i) => [i.moduleKey, i.budgetModuleKey]), [['m1', 'm3']]);
+  const issues = ruleReuse(ctx);
+  assert.deepEqual(issues.map((i) => [i.moduleKey, i.budgetModuleKey]), [['m1', 'm5']]);
+  assert.match(issues[0].message, /expected by position 5; never used again/);
+  // A use at m5 meets it.
+  const used = written.map((m) => (m.position === 5 ? { ...m, items: [{ ref: 'm5#1', source: 'x', french: ['parler'], lenient: [], englishPrompt: '', instruction: '' }] } : m));
+  assert.deepEqual(ruleReuse({ ...ctx, ...makeCtx({ graph: ctx.graph, course: used }) }).filter((i) => i.position === 1 && /position 5;/.test(i.message)), []);
 });
 
 test('dueFor finds a planned module by key, so a writer sees what it should reuse before writing it', () => {
   const written = course50([]).filter((m) => m.position !== 3);
   const ctx = { ...makeCtx({ graph: { ...base, courseMap: { m1: { teachesWords: [PARLER] } } }, course: written }), content: withPlanned(written, [3]) };
-  assert.deepEqual(dueFor(ctx, 'm3'), { position: 3, due: [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }], ended: 0 });
+  // The stub at 3, once written, is the third module a learner meets: the window from m1 closes there.
+  const parler = { nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 };
+  assert.deepEqual(dueFor(ctx, 'm3'), { position: 3, due: [parler], ended: 0 });
   assert.deepEqual(dueFor(ctx, '3'), dueFor(ctx, 'm3'));
-  assert.deepEqual(dueFor(ctx, 'm2'), { position: 2, due: [{ nodeId: PARLER, taughtAt: 1, lastUse: null, windowEnd: 3 }], ended: 0 });
+  // Seen from m2 today, the third written module is m4.
+  assert.deepEqual(dueFor(ctx, 'm2'), { position: 2, due: [{ ...parler, windowEnd: 4 }], ended: 0 });
   assert.equal(dueFor(ctx, 'nowhere'), null);
-  // Past its window, the miss is counted, not due: no use at 10 meets a window that closed at 3.
+  // Past its window, the miss is counted, not due: no use at 10 meets a window that closed at m4.
   assert.deepEqual(dueFor(ctx, 'm10'), { position: 10, due: [], ended: 1 });
 });

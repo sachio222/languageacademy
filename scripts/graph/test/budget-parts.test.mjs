@@ -52,8 +52,10 @@ test('an issue that names the module it is charged to (budgetModuleKey) counts i
   assert.deepEqual(checkBudgetParts([{ ...miss, budgetModuleKey: 'b' }], unitOf, { legacy: { 'reuse-missed': 1 }, new: {} }).new.over, []);
 });
 
-// The reviewer's sim (final re-review N2): a clean lesson written in Unit 13 while Unit 12's reading, practice set and
-// exam are still stubs. Moving the end of the written course past those stubs must charge nothing to Units 1 to 12.
+// The reviewer's sim (final re-review N2): a lesson written in Unit 13 while Unit 12's reading, practice set and exam
+// are still stubs. Its reuse windows count written modules, so the constructions Unit 12's last lessons taught come due
+// in this lesson (pnpm graph:due lists them) and count in Unit 13. A lesson that reuses them is clean, and moving the
+// end of the written course past the stubs charges nothing to Units 1 to 12.
 test('writing a clean Unit 13 lesson leaves every legacy count as it is', async (t) => {
   const root = mkdtempSync(join(tmpdir(), 'la-u13-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
@@ -61,25 +63,40 @@ test('writing a clean Unit 13 lesson leaves every legacy count as it is', async 
   const key = 'qui-and-que-after-a-noun';
   const stub = JSON.parse(readFileSync(join(root, 'modules', `${key}.json`), 'utf8'));
   assert.equal(stub.status, 'planned');
+  const say = (id, situation, cue, answer, extra = {}) => ({ id, type: 'respond', situation, cue, answer, ...extra });
   const lesson = {
     schema: stub.schema, module_key: key, kind: 'lesson', status: 'written', title: stub.title,
     description: 'Join two ideas with {qui}.',
     teaches: { words: [], constructions: ['fr:cx:relative.qui'] },
     vocabulary: [{ word_id: 'chanter-fr', fr: 'chanter', gloss: 'to sing' }],
-    items: [{ id: 'i-l-homme-qui-chante', type: 'respond', situation: 'Describe the man.', cue: 'the man who sings', answer: "l'homme qui chante",
-      mistakes: [{ answer: "l'homme que chante", feedback: 'Use {qui} before a verb.' }] }],
+    items: [
+      say('i-l-homme-qui-chante', 'Describe the man.', 'the man who sings', "l'homme qui chante", { mistakes: [{ answer: "l'homme que chante", feedback: 'Use {qui} before a verb.' }] }),
+      say('i-qui-est-ce-qui-chante', 'Ask who is singing.', 'Who is singing?', 'qui est-ce qui chante?'),
+      say('i-qui-est-ce-que-tu-vois', 'Ask who your friend sees.', 'Who do you see?', 'qui est-ce que tu vois?'),
+      say('i-ne-chante-t-il-pas', "Ask, surprised, whether he isn't singing.", "Isn't he singing?", 'ne chante-t-il pas?'),
+      say('i-j-aime-mieux-ne-pas-chanter', 'Say you would rather not sing.', 'I would rather not sing.', "j'aime mieux ne pas chanter"),
+      say('i-il-chante-bien-n-est-ce-pas', 'Check that your friend agrees.', "He sings well, doesn't he?", "il chante bien, n'est-ce pas?"),
+    ],
   };
   writeFileSync(join(root, 'modules', `${key}.json`), JSON.stringify(lesson, null, 2) + '\n');
   const outline = JSON.parse(readFileSync(join(root, 'course.json'), 'utf8'));
   Object.assign(outline.units.find((u) => u.unit_key === 'unit13'), { description: 'Join two ideas.', can_do: 'join two ideas', can_do_short: 'join ideas', can_do_example_fr: "L'homme qui parle." });
   writeFileSync(join(root, 'course.json'), JSON.stringify(outline, null, 2) + '\n');
   const graphDir = join(repoRoot, 'curriculum-graph', 'languages', 'fr');
-  const partsOf = async (dir) => {
-    const content = loadCourse({ root: dir, graphDir });
+  const partsOf = async (dir, planned = true) => {
+    const content = loadCourse({ root: dir, graphDir, planned });
     const { issues } = await runCheck({ repoRoot, lang: 'fr', content });
     return countByPart(issues, (k) => content.modules.get(k)?.unit_key ?? null);
   };
   const [before, after] = [await partsOf(CONTENT_ROOT), await partsOf(root)];
   assert.deepEqual(after.legacy, before.legacy);
   assert.deepEqual(after.new, {}, 'the lesson is clean');
+  // Without the five reuses graph:due lists, the misses are the lesson's own, in Unit 13.
+  writeFileSync(join(root, 'modules', `${key}.json`), JSON.stringify({ ...lesson, items: lesson.items.slice(0, 1) }, null, 2) + '\n');
+  const bare = await partsOf(root);
+  assert.deepEqual(bare.legacy, before.legacy);
+  assert.deepEqual(bare.new, { 'reuse-missed': 5 });
+  writeFileSync(join(root, 'modules', `${key}.json`), JSON.stringify(lesson, null, 2) + '\n');
+  // The stubs change nothing: the same counts with them left out of the load (plan-stubs.test.mjs, checker ignores planned).
+  assert.deepEqual(await partsOf(root, false), after);
 });
