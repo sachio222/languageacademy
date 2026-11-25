@@ -287,7 +287,7 @@ function comparePassage(live, conv, out, ctx) {
       if (ctx.stats) ctx.stats.fields += 1;
       if (i !== null && j !== null && a[i].s === b[j].s) continue;
       const d = { path: `readingPassage.${f}#sentence`, live: i === null ? null : a[i].s, converted: j === null ? null : b[j].s };
-      if (f === 'translation') Object.assign(d, { fr: [...(i === null ? [] : liveFr(a[i].p.i)), ...(j === null ? [] : convFr(b[j].p.i))], frConv: j === null ? [] : convFr(b[j].p.i) });
+      if (f === 'translation') Object.assign(d, { fr: [...(i === null ? [] : liveFr(a[i].p.i)), ...(j === null ? [] : convFr(b[j].p.i))], frConv: j === null ? [] : convFr(b[j].p.i), enConv: j === null ? [] : sentences(b[j].p.body) });
       out.push(d);
     }
     if (f === 'text') {
@@ -308,7 +308,7 @@ function comparePassage(live, conv, out, ctx) {
       if (ctx.stats) ctx.stats.fields += 1;
       if (i !== null && j !== null && lh[i].s === ch[j].s) continue;
       const d = { path: `readingPassage.${f}#scene`, live: i === null ? null : lh[i].s, converted: j === null ? null : ch[j].s };
-      if (f === 'translation') Object.assign(d, { fr: [...(i === null ? [] : liveFr(lh[i].i)), ...(j === null ? [] : convFr(ch[j].i))], frConv: j === null ? [] : convFr(ch[j].i) });
+      if (f === 'translation') Object.assign(d, { fr: [...(i === null ? [] : liveFr(lh[i].i)), ...(j === null ? [] : convFr(ch[j].i))], frConv: j === null ? [] : convFr(ch[j].i), enConv: j === null ? [] : sentences((cp.find((p) => p.i === ch[j].i)?.body ?? '').replace(/^##\s*/, '')) });
       out.push(d);
     }
     const ls = lp.filter((p) => p.label);
@@ -600,7 +600,8 @@ export function goldenChecks({ liveIds = {}, course = null, lSources = null, han
       const art = story.blocks.filter((b) => b.img).map((b) => b.img);
       return art.length === d.pictures.length && art.every((a, i) => a === d.pictures[i]) && (d.converted === null || art.includes(d.converted));
     },
-    // The English of its own block: the L block whose French is this paragraph's French.
+    // The English of its own block, exactly and in order: the converted paragraph's English sentences are the
+    // sentences of the L block whose French is this paragraph's French.
     story_translation_l: (d, l) => {
       if (!RELATIONS.story_translation(d, l)) return false;
       if (d.converted === null) return true;
@@ -610,7 +611,10 @@ export function goldenChecks({ liveIds = {}, course = null, lSources = null, han
         const t = b.fr ?? b.scene ?? b.end;
         return isStr(t) && sentences(t).join(' ') === fr;
       });
-      return !!fr && !!block && isStr(block.en) && sentences(block.en).includes(d.converted);
+      if (!fr || !block || !isStr(block.en)) return false;
+      const want = sentences(block.en);
+      const have = d.enConv || [];
+      return want.length === have.length && want.every((s, k) => s === have[k]) && have.includes(d.converted);
     },
     // The hand-fixed value at the difference's own place: the field, the concept card (by id), the word card (by
     // word_id) or the item (by id, drawn through the adapter as the live screen reads it).

@@ -165,6 +165,13 @@ const PLANTED = [
   ["a caption's English swapped for another block's (story_translation, own block)", only('2024-01-09-reading1', (c) => {
     c.readingPassage.translation = c.readingPassage.translation.replace('Paul, a cat and a dog.', 'Thank you and goodbye!');
   })],
+  ['an English sentence of a Reading 5 block replaced by its neighbour (story_translation, exact block)', only('2024-04-13-reading-5', (c) => {
+    c.readingPassage.translation = c.readingPassage.translation.replace('They drink a lot.', 'They like it.');
+  })],
+  ["two English sentences of Reading 5's subtitle block swapped (story_translation, in order)", only('2024-04-13-reading-5', (c) => {
+    const [a, b] = ['The city of Arles.', 'It is sometimes said to make one see green fairies.'];
+    c.readingPassage.translation = c.readingPassage.translation.replace(a, '\u0000').replace(b, a).replace('\u0000', b);
+  })],
   ['two concept ids swapped in a module main lacks (concept_id_added)', only('2026-11-24-numbers', (c) => {
     [c.concepts[0].id, c.concepts[1].id] = [c.concepts[1].id, c.concepts[0].id];
   })],
