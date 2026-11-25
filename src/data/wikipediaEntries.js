@@ -385,7 +385,7 @@ export const wikipediaEntries = {
     description:
       "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
     image:
-      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
+      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_nuit_683778.jpg",
     url: "https://en.wikipedia.org/wiki/Bordeaux",
   },
   Bordeaux: {
@@ -393,7 +393,7 @@ export const wikipediaEntries = {
     description:
       "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
     image:
-      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
+      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_nuit_683778.jpg",
     url: "https://en.wikipedia.org/wiki/Bordeaux",
   },
   "à Bordeaux": {
@@ -401,7 +401,7 @@ export const wikipediaEntries = {
     description:
       "Port city in southwest France, world capital of wine, UNESCO World Heritage Site since 2007",
     image:
-      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_de_nuit-9d3d63.jpg",
+      "/img/wikipedia/Bordeaux_Place_de_la_Bourse_nuit_683778.jpg",
     url: "https://en.wikipedia.org/wiki/Bordeaux",
   },
   louvre: {
