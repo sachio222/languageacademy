@@ -80,7 +80,8 @@
     {
       "word_id": "marie-habite-a-paris-fr",
       "fr": "Marie habite à Paris",
-      "gloss": "Marie lives in Paris"
+      "gloss": "Marie lives in Paris",
+      "note": "same meaning as {vit}; {habiter} names where you live"
     },
     {
       "word_id": "la-place-fr",

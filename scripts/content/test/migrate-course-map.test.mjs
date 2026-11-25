@@ -219,7 +219,20 @@ const TEACHING_ADDED_AFTER_SPLIT = {
   '2024-05-24-unit-8-exam': { tests: ['fr:cx:pronoun.y', 'fr:cx:pronoun.en'] },
   '2024-05-25-unit-8-practice': { tests: ['fr:cx:pronoun.y', 'fr:cx:pronoun.en'] },
   '2024-03-17-natural-phenomena': { teaches: ['fr:cx:neg.ne-plus'] },
+  // Content Task C4b: Basic Nouns teaches c'est, which it already shows in its table and items.
+  '2024-01-06-basic-nouns': { teaches: ['fr:cx:cest'] },
 };
+// Teaching a writer moved to an earlier lesson after the split (content Task C4b): the ça lesson no longer teaches
+// c'est, which Basic Nouns now teaches. Each id was in what the split declared and is gone from the file.
+const TEACHING_MOVED_EARLIER_AFTER_SPLIT = {
+  '2024-01-13-ca-survival': { teaches: ['fr:cx:cest'] },
+};
+function withoutMovedTeaching(key, field, expected) {
+  const moved = TEACHING_MOVED_EARLIER_AFTER_SPLIT[key]?.[field];
+  if (!moved) return expected;
+  for (const id of moved) assert.ok(expected.constructions.includes(id), `${key} ${field} declared ${id} at the split`);
+  return { ...expected, constructions: expected.constructions.filter((id) => !moved.includes(id)) };
+}
 function withoutAddedTeaching(key, field, declared) {
   const added = TEACHING_ADDED_AFTER_SPLIT[key]?.[field];
   if (!added) return declared;
@@ -236,7 +249,7 @@ test('every module file declares what the course map says it teaches and tests',
     // written in content/ since.
     if (mod.status === 'planned' || !(key in RECORDS)) continue;
     const d = declarations[key] ?? {};
-    assert.deepEqual(withoutAddedTeaching(key, 'teaches', mod.teaches), d.teaches, `${key} teaches`);
+    assert.deepEqual(withoutAddedTeaching(key, 'teaches', mod.teaches), withoutMovedTeaching(key, 'teaches', d.teaches), `${key} teaches`);
     assert.deepEqual(withoutAddedTeaching(key, 'tests', mod.tests), d.tests, `${key} tests`);
     if (d.teaches || d.tests) n++;
   }

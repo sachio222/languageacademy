@@ -45,7 +45,13 @@
         "id": "c-practical-usage",
         "term": "Practical Usage",
         "definition": "Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".",
-        "example": "{Je suis heureux} (I am happy), {Je suis Paul} (I am Paul), {Il est bon} (it is good)"
+        "example": "{Je suis heureux} (I am happy), {Il est heureux} (he is happy), {Je suis Paul} (I am Paul), {Tu es bon !} (you're good at this!)"
+      },
+      {
+        "id": "c-at-the-cafe",
+        "term": "At the café",
+        "definition": "The words from the first lesson already answer a waiter.",
+        "example": "{Bonjour ! Café ?} (Hello! Coffee?) {Oui, merci !} (Yes, thanks!)"
       }
     ],
     "vocabulary/heureux-fr": {
@@ -129,7 +135,8 @@
     "vocabulary/c-est-fr": {
       "word_id": "c-est-fr",
       "fr": "c'est",
-      "gloss": "it is / this is"
+      "gloss": "it is / this is",
+      "note": "point at something and name it: {c'est une maison}, {c'est un chat}"
     }
   },
   "2024-01-07-plurals": {
@@ -138,7 +145,7 @@
         "id": "c-basic-plural-rule",
         "term": "Basic Plural Rule",
         "definition": "Add -s to most nouns (just like English!)",
-        "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}"
+        "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}; {c'est un livre} (it's a book) → {ce sont des livres} (they're books)"
       },
       {
         "id": "c-plural-articles",
@@ -192,7 +199,7 @@
         "id": "c-vouloir-to-want",
         "term": "{vouloir} = to want",
         "definition": "Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French.",
-        "example": "'I want that' ({Je veux ça}), 'Do you want a book?' ({Veux-tu un livre?}), 'We want to have a house' ({Nous voulons avoir une maison}), 'How are you? Do you want a coffee?' ({Ça va ? Tu veux un café ?})"
+        "example": "'I want that' ({Je veux ça}), 'Do you want a book?' ({Veux-tu un livre ?}), 'We want to have a house' ({Nous voulons avoir une maison}), 'How are you? Do you want a coffee?' ({Ça va ? Tu veux un café ?})"
       },
       {
         "id": "c-irregular-conjugation-pattern",
@@ -219,7 +226,7 @@
         "id": "c-voir-to-see",
         "term": "{voir} = to see",
         "definition": "Irregular verb for seeing and perceiving",
-        "example": "Very common, often after {vouloir}: {je veux voir} (I want to see). The next module uses it with object pronouns."
+        "example": "Very common, often after {vouloir}: {je veux voir} (I want to see). The next lesson uses it with object pronouns."
       },
       {
         "id": "c-irregular-conjugation",
@@ -886,7 +893,7 @@
           "list": [
             "Different spellings often share one sound, so the forms you hear keep coming back.",
             "{être}, {avoir} and {aller} are among the most irregular verbs in French, and you know them already.",
-            "Most verbs you meet next follow these patterns, starting with the verb in the next lesson."
+            "Most verbs you meet next follow these patterns, starting with the verb for 'to leave' in the next lesson."
           ]
         }
       ]
@@ -3113,7 +3120,8 @@
     "vocabulary/marie-habite-a-paris-fr": {
       "word_id": "marie-habite-a-paris-fr",
       "fr": "Marie habite à Paris",
-      "gloss": "Marie lives in Paris"
+      "gloss": "Marie lives in Paris",
+      "note": "same meaning as {vit}; {habiter} names where you live"
     },
     "vocabulary/marie-vit-a-paris-fr": {
       "word_id": "marie-vit-a-paris-fr",
@@ -3463,7 +3471,7 @@
         "id": "c-ne-jamais-never",
         "term": "{ne...jamais} (never)",
         "definition": "Replace '{pas}' with '{jamais}' to mean 'never'",
-        "example": "{je vais} → {je ne vais jamais} (I never go), {je mange toujours} → {je ne mange jamais} (I never eat)"
+        "example": "{je vais} → {je ne vais jamais} (I never go), {je mange toujours ici} → {je ne mange jamais ici} (I never eat here)"
       },
       {
         "id": "c-with-object-pronouns",
@@ -3546,8 +3554,9 @@
     },
     "vocabulary/la-fin-fr": {
       "word_id": "la-fin-fr",
-      "fr": "fin",
-      "gloss": "the end"
+      "fr": "la fin",
+      "gloss": "the end",
+      "note": "feminine; {Fin} alone ends a story"
     },
     "vocabulary/six-heures-fr": {
       "word_id": "six-heures-fr",
@@ -3879,7 +3888,8 @@
     "vocabulary/mes-peintures-fr": {
       "word_id": "mes-peintures-fr",
       "fr": "mes peintures",
-      "gloss": "my paints / my paintings"
+      "gloss": "my paints / my paintings",
+      "note": "feminine (peinture)"
     },
     "vocabulary/nous-avons-mange-fr": {
       "word_id": "nous-avons-mange-fr",
@@ -3944,7 +3954,8 @@
     "vocabulary/l-espace-fr": {
       "word_id": "l-espace-fr",
       "fr": "l'espace",
-      "gloss": "space"
+      "gloss": "space",
+      "note": "masculine"
     },
     "vocabulary/le-sommeil-fr": {
       "word_id": "le-sommeil-fr",
@@ -4104,7 +4115,8 @@
     "vocabulary/l-anglais-fr": {
       "word_id": "l-anglais-fr",
       "fr": "l'anglais",
-      "gloss": "English (the language)"
+      "gloss": "English (the language)",
+      "note": "masculine"
     },
     "vocabulary/nous-apprenons-fr": {
       "word_id": "nous-apprenons-fr",

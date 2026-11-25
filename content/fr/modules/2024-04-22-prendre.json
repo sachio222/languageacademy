@@ -97,7 +97,8 @@
     {
       "word_id": "l-anglais-fr",
       "fr": "l'anglais",
-      "gloss": "English (the language)"
+      "gloss": "English (the language)",
+      "note": "masculine"
     },
     {
       "word_id": "elle-apprend-fr",

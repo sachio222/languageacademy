@@ -12,7 +12,8 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:noun.gender"
+      "fr:cx:noun.gender",
+      "fr:cx:cest"
     ]
   },
   "vocabulary": [
@@ -55,7 +56,8 @@
     {
       "word_id": "c-est-fr",
       "fr": "c'est",
-      "gloss": "it is / this is"
+      "gloss": "it is / this is",
+      "note": "point at something and name it: {c'est une maison}, {c'est un chat}"
     },
     {
       "word_id": "une-voiture-fr",

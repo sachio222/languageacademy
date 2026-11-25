@@ -194,7 +194,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-04-25-top-200-nouns**
 
-- `vocabulary[6]` "la fin": la-fin-fr already names "fin", a different spelling: la-fin-fr.end (written: la-fin-fr)
+- `vocabulary[6]` "la fin": same meaning as "the end" in 2024-03-30-reading-4: kept la-fin-fr
 - `vocabulary[21]` "le problème": same meaning as "problem" in 2024-03-30-reading-4: kept le-probleme-fr
 
 **2024-04-24-reading-6**
@@ -1806,8 +1806,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-02-etre**
 
-- `concepts[2].definition` "Use with adjectives: "I am happy" or professions: "I am a student", or locations: "I am in Paris"" → "Use it with an adjective, as in "I am happy", or with your name, as in "I am Paul"."
-- `concepts[2].example` "Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)" → "Je suis heureux (I am happy), Je suis Paul (I am Paul), Il est bon (it is good)"
+- `concepts` "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"","example":"Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)"]" → "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".","example":"Je suis heureux (I am happy), Il est heureux (he is happy), Je suis Paul (I am Paul), Tu es bon ! (you're good at this!)","id":"c-at-the-cafe","term":"At the café","definition":"The words from the first lesson already answer a waiter.","example":"Bonjour ! Café ? (Hello! Coffee?) Oui, merci ! (Yes, thanks!)"]"
 
 **2024-10-21-cognates-help**
 
@@ -1824,6 +1823,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-07-plurals**
 
+- `concepts[0].example` "chat → chats, livre → livres, ami → amis" → "chat → chats, livre → livres, ami → amis; c'est un livre (it's a book) → ce sont des livres (they're books)"
 - `concepts[2].definition` "Every exercise combines plurals with verbs from M2-M3" → "Every exercise combines plurals with être and avoir"
 
 **2024-01-10-unit1-practice**
@@ -1842,11 +1842,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-15-vouloir**
 
-- `concepts[0].example` "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)" → "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison), 'How are you? Do you want a coffee?' (Ça va ? Tu veux un café ?)"
+- `concepts[0].example` "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)" → "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre ?), 'We want to have a house' (Nous voulons avoir une maison), 'How are you? Do you want a coffee?' (Ça va ? Tu veux un café ?)"
 
 **2024-01-17-voir**
 
-- `concepts[0].example` "Very common! Essential for object pronouns in next module" → "Very common, often after vouloir: je veux voir (I want to see). The next module uses it with object pronouns."
+- `concepts[0].example` "Very common! Essential for object pronouns in next module" → "Very common, often after vouloir: je veux voir (I want to see). The next lesson uses it with object pronouns."
 - `concepts[3].example` "Foundation for: je le vois, je la vois, je les vois" → "Foundation for: je le vois, je la vois, je les vois, je te vois (I see you)"
 
 **2024-01-18-questions**
@@ -1912,7 +1912,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-01-28-verb-pattern-help**
 
 - `parts[3].note` "The -ent is written but never spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut." → "The -ent is written but not spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut."
-- `parts[7].blocks[0].list[2]` "Most verbs you meet next follow these patterns, starting with partir in the next lesson." → "Most verbs you meet next follow these patterns, starting with the verb in the next lesson."
+- `parts[7].blocks[0].list[2]` "Most verbs you meet next follow these patterns, starting with partir in the next lesson." → "Most verbs you meet next follow these patterns, starting with the verb for 'to leave' in the next lesson."
 - `checks[1].why` "The -ent is written but never spoken." → "The -ent is written but not spoken."
 
 **2024-01-31-possessive-adjectives**
@@ -1954,7 +1954,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-27-negation-2**
 
-- `concepts[1].example` "je vais → je ne vais jamais (I never go)" → "je vais → je ne vais jamais (I never go), je mange toujours → je ne mange jamais (I never eat)"
+- `concepts[1].example` "je vais → je ne vais jamais (I never go)" → "je vais → je ne vais jamais (I never go), je mange toujours ici → je ne mange jamais ici (I never eat here)"
 
 **2024-03-26-location-adverbs**
 

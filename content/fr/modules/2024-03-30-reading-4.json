@@ -339,8 +339,9 @@
     },
     {
       "word_id": "la-fin-fr",
-      "fr": "fin",
-      "gloss": "the end"
+      "fr": "la fin",
+      "gloss": "the end",
+      "note": "feminine; {Fin} alone ends a story"
     }
   ],
   "passage": [

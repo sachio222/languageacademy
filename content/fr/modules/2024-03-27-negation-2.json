@@ -94,7 +94,7 @@
       "id": "c-ne-jamais-never",
       "term": "{ne...jamais} (never)",
       "definition": "Replace '{pas}' with '{jamais}' to mean 'never'",
-      "example": "{je vais} → {je ne vais jamais} (I never go), {je mange toujours} → {je ne mange jamais} (I never eat)"
+      "example": "{je vais} → {je ne vais jamais} (I never go), {je mange toujours ici} → {je ne mange jamais ici} (I never eat here)"
     },
     {
       "id": "c-with-object-pronouns",

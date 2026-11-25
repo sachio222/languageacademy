@@ -72,7 +72,7 @@
       "id": "c-basic-plural-rule",
       "term": "Basic Plural Rule",
       "definition": "Add -s to most nouns (just like English!)",
-      "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}"
+      "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}; {c'est un livre} (it's a book) → {ce sont des livres} (they're books)"
     },
     {
       "id": "c-plural-articles",
