@@ -89,11 +89,17 @@ export function blockCellRole(path) {
   return 'native';
 }
 
+// A lesson's review row (review: true) shows a word taught earlier and teaches nothing (design §1, §17 item 11).
+const isReview = (v) => v?.review === true;
+
 // Where a module text sits, as an item source. null: not read as an item (the vocabulary word itself is what the
 // module teaches; glossary rows are pop-up sources; info cards are native text outside the rule; a check's sound is a
-// respelling).
-function moduleSource(path, role) {
+// respelling). A review row's word teaches nothing, so it is read as French the learner sees ('vocab-review'): the
+// taught-before rule checks it and it counts as a use for the reuse windows.
+function moduleSource(mod, path, role) {
   const top = path.split(/[.[]/)[0];
+  const word = /^vocabulary\[(\d+)\]\.fr$/.exec(path);
+  if (word && isReview(mod.vocabulary?.[Number(word[1])])) return 'vocab-review';
   if (/^vocabulary\[\d+\]\.(fr$|info_card\b)/.test(path)) return null;
   if (top === 'glossary') return null;
   if (/^checks\[\d+\]\.sound$/.test(path)) return null;
@@ -117,7 +123,7 @@ function moduleItems(key, mod) {
   const out = [];
   for (const t of moduleTexts(mod)) {
     if (t.path.startsWith('items[')) continue;
-    const source = moduleSource(t.path, t.role);
+    const source = moduleSource(mod, t.path, t.role);
     if (source === null) continue;
     const fr = t.role === 'fr' || (t.role === 'block' && blockCellRole(t.path) === 'fr');
     out.push(textItem(`${key}#${refPath(mod, t.path)}`, source, fr ? [t.text.trim()] : spansOf(t.text)));
@@ -203,7 +209,8 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         unitDescription: unit.description ?? null,
         kind: KIND[mod.kind] ?? mod.kind,
         guide: mod.kind === 'guide',
-        vocab: (mod.vocabulary ?? []).map((v) => v.fr).filter((f) => typeof f === 'string'),
+        // The words the module's table teaches: review rows teach nothing, so extractTeaches never credits them.
+        vocab: (mod.vocabulary ?? []).filter((v) => !isReview(v)).map((v) => v.fr).filter((f) => typeof f === 'string'),
         conceptTerms: (mod.concepts ?? []).map((c) => plain(c.term)).filter(Boolean),
         items,
         shapes,

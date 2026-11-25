@@ -126,6 +126,9 @@ const WORD = OBJ(
   ['word_id', 'fr', 'gloss'],
 );
 const VOCABULARY = LIST(WORD, { unique: 'word_id' });
+// A lesson's row may be a review row (review: true): it shows a word taught earlier, as an example, and teaches nothing
+// (design §1, §17 item 11). It counts toward the lesson's non-empty table; reading and reference rows take no review.
+const LESSON_WORD = OBJ({ ...WORD.fields, review: BOOL }, WORD.required);
 // A reading's word card may carry an info card: the short card about a place or person the word names, which today's
 // reading shows from vocabularyReference `wikipedia` (L 20991bf BundleWord.info_card). image is a site path and
 // image_credit the picture's author and licence; either may be null (a picture with no credit in the source).
@@ -167,7 +170,7 @@ const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draf
 const KIND_SCHEMAS = {
   lesson: {
     // A lesson teaches at least one word: Flash Cards, Speed Match and Pronunciation are made from its vocabulary.
-    fields: { vocabulary: LIST(WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }) },
+    fields: { vocabulary: LIST(LESSON_WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }) },
     required: ['vocabulary', 'items'],
   },
   guide: {
