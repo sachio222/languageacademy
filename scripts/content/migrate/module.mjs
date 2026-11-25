@@ -306,8 +306,9 @@ export function convertModule(old, opts = {}) {
   if (ex?.teaches !== undefined) put('teaches', clone(ex.teaches));
 
   // Vocabulary: one part per source card. A source card finds its written card by content (the record's source
-  // hash, then French and gloss, then French alone when it is unique), and by place only when it was edited in place
-  // between unchanged neighbours (pairByContent). Word ids are frozen once written: a written card keeps its id
+  // hash, then French and gloss, then French alone when it is unique), and by place only for a spelling fix of the
+  // same word (same folded French) between unchanged neighbours (pairByContent); a different word in a card's place
+  // is a new card, and the old one is reported removed. Word ids are frozen once written: a written card keeps its id
   // whatever the converter proposes; a new card takes the proposal. Ids are proposed in course order, and each
   // written card joins the walk as written.
   if (teaches) {
@@ -351,6 +352,8 @@ export function convertModule(old, opts = {}) {
       srcInfo,
       recCards,
       [(s, r) => r.src === s.src, (s, r) => r.key === s.key, { unique: (s, r) => r.fr === s.fr }],
+      // By place only a spelling fix of the same word (same folded French); another word there is a new card.
+      { samePlace: (s, r) => slugify(r.fr ?? '') !== '' && slugify(r.fr) === slugify(s.fr) },
     );
     const fileById = new Map(fileVocab.map((w) => [w.word_id, w]));
     const usedFile = new Set();
@@ -439,8 +442,10 @@ export function convertModule(old, opts = {}) {
   fieldPart('tables', keepIds('tables', fresh.tables));
 
   // Items: a source exercise finds its written item by content first (the record's source hash, then its prompt
-  // and answer, then its answer when that is unique), and by place only when it was edited in place between
-  // unchanged neighbours. An exercise nothing pairs with is new and gets a new id, never a removed one's.
+  // and answer, then its answer when that is unique). By place only when it was edited in place between unchanged
+  // neighbours and kept its prompt or its answer: an exercise that changed both asks something else, so it is new
+  // (spec 8.1: a changed meaning needs a new id). An exercise nothing pairs with gets a new id, never a removed one's,
+  // and the removed one is reported.
   const exItems = Array.isArray(ex?.items) ? ex.items : [];
   const exIndex = new Map(exItems.map((it, i) => [it.id, i]));
   const recItems = Object.fromEntries(Object.entries(rec?.items ?? {}).map(([id, e]) => [id, baseOf(e)]));
@@ -454,7 +459,13 @@ export function convertModule(old, opts = {}) {
   const recList = Object.entries(recItems).map(([id, b]) => ({ ...b, id, ...refAt(b.ref) }));
   const srcList = freshItems.map((f) => ({ f, src: f.hash, key: f.key, answer: f.answer, ...refAt(f.src.ref) }));
   if (rec) {
-    const pairs = pairByContent(srcList, recList, [(s, r) => r.src === s.src, (s, r) => r.key !== undefined && r.key === s.key, { unique: (s, r) => r.answer !== undefined && r.answer === s.answer }]);
+    const promptOf = (k) => String(k ?? '').split('|')[0];
+    const pairs = pairByContent(
+      srcList,
+      recList,
+      [(s, r) => r.src === s.src, (s, r) => r.key !== undefined && r.key === s.key, { unique: (s, r) => r.answer !== undefined && r.answer === s.answer }],
+      { samePlace: (s, r) => r.key !== undefined && (promptOf(r.key) === promptOf(s.key) || r.answer === s.answer) },
+    );
     for (const s of srcList) {
       const r = pairs.get(s.at);
       if (r) {
@@ -570,11 +581,12 @@ function alternatives0(gloss) {
  * Pairs each new entry with at most one recorded entry, by content first. `tests` run in order; a test written
  * { unique: fn } pairs only when exactly one unpaired new and one unpaired recorded entry match each other. Last,
  * an entry edited in place pairs by place: its nearest paired neighbours bound exactly one unpaired recorded
- * entry, at the same distance from the neighbour before it (or after it, at the start of the list). Entries carry `at` (their
+ * entry, at the same distance from the neighbour before it (or after it, at the start of the list), and
+ * `samePlace(new, recorded)` holds: an entry replaced in place by a different one is new, and the old one is gone. Entries carry `at` (their
  * place in their list); recorded entries carry the `at` they had, and `list` when places belong to several lists.
  * Returns Map<new at, recorded entry>.
  */
-export function pairByContent(news, recs, tests) {
+export function pairByContent(news, recs, tests, { samePlace = () => true } = {}) {
   const pairs = new Map();
   const usedR = new Set();
   const freeN = () => news.filter((n) => !pairs.has(n.at));
@@ -610,7 +622,8 @@ export function pairByContent(news, recs, tests) {
     const hi = next ? pairs.get(next.at).at : Infinity;
     if (lo >= hi) return;
     const between = freeR().filter((r) => sameList(r, n) && r.at > lo && r.at < hi);
-    if (between.length !== 1) return;
+    // A place pairs only an edit of the same thing (samePlace): a different word or question there is new.
+    if (between.length !== 1 || !samePlace(n, between[0])) return;
     const fromPrev = n.at - (prev ? prev.at : -1) === between[0].at - lo;
     const fromNext = !prev && next && next.at - n.at === hi - between[0].at;
     if (!fromPrev && !fromNext) return;

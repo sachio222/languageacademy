@@ -193,3 +193,32 @@ test('an exercise nothing pairs with gets a new id, never a removed one', () => 
   assert.ok(!ids.includes('i-je-suis') && !ids.includes('i-tu-es'), ids.join(' '));
   assert.deepEqual(ids, ['i-nous-sommes', 'i-il-est']);
 });
+
+test('a card replaced in place by another word takes a new id; the old one is removed', () => {
+  const first = convertModule(three, ctx);
+  const changed = clone(three);
+  changed.vocabularyReference[1] = { french: 'nous sommes', english: 'we are', note: '' };
+  const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(words(second.mod), ['je-suis-fr=je suis=I am', 'nous-sommes-fr=nous sommes=we are', 'il-est-fr=il est=he is']);
+  assert.ok(second.report.some((l) => l.kind === 'source_removed' && /tu-es-fr/.test(l.detail)), JSON.stringify(second.report));
+  // A spelling fix of the same word in its place keeps the id.
+  const fixed = clone(three);
+  fixed.vocabularyReference[1] = { french: 'tu és', english: 'you are, informal', note: '' };
+  const third = convertModule(fixed, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.equal(third.mod.vocabulary[1].word_id, 'tu-es-fr');
+  assert.equal(third.mod.vocabulary[1].fr, 'tu és');
+});
+
+test('an exercise replaced in place by a different question takes a new id; the old one is removed', () => {
+  const first = convertModule(old, ctx);
+  const changed = clone(old);
+  changed.exerciseConfig.items[1] = { instruction: 'Translate:', prompt: 'she is', expectedAnswer: 'elle est' };
+  const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(second.mod.items.map((i) => `${i.id}=${i.answer}`), ['i-je-suis=je suis', 'i-elle-est=elle est', 'i-il-est=il est']);
+  assert.ok(second.report.some((l) => l.kind === 'source_removed' && /i-tu-es/.test(l.detail)));
+  // Same prompt, corrected answer: an edit, so the id stays (spec 8.1).
+  const edited = clone(old);
+  edited.exerciseConfig.items[1] = { instruction: 'Translate:', prompt: 'you are', expectedAnswer: 'vous êtes' };
+  const third = convertModule(edited, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(third.mod.items.map((i) => `${i.id}=${i.answer}`), ['i-je-suis=je suis', 'i-tu-es=vous êtes', 'i-il-est=il est']);
+});
