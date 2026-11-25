@@ -27,7 +27,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Spellings taught more than once | 375 |
 | Item types to confirm | 260 |
 | Practice blanks that were in the wrong place | 58 |
-| Position words | 113 |
+| Position words | 114 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 825 |
 | Passage words with no pop-up | 10 |
@@ -1157,6 +1157,7 @@ Learner text that names a module, unit or reading by number. The source says it 
 
 - `description` "A family plans a trip to Paris. Uses Unit 6 vocabulary: progressive tenses, dire, prendre, mettre, demander, commander, besoin." (fixed by hand)
 - `vocabulary[9].note` "Unit 5 verb" (fixed by hand)
+- `vocabulary[29].note` "feminine; from Unit 4 everyday-nouns" (fixed by hand)
 - `vocabulary[38].note` "from Unit 6 mettre module" (fixed by hand)
 - `vocabulary[39].note` "from Unit 1" (fixed by hand)
 - `vocabulary[48].note` "from Unit 5 food-nouns" (fixed by hand)
