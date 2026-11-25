@@ -220,7 +220,7 @@
     {
       "id": "i-vous-etes",
       "type": "transform",
-      "instruction": "Address someone formally. Say \"you are (formal/plural)\"",
+      "instruction": "Address someone formally. Say \"you are (formal/plural)\": you are (formal or plural)",
       "shown": "être",
       "answer": "vous êtes",
       "hint": "{vous + être = ?}",
@@ -238,7 +238,7 @@
     {
       "id": "i-ils-sont",
       "type": "transform",
-      "instruction": "Describe a group of men. Say \"they are (masculine)\"",
+      "instruction": "Describe a group of men. Say \"they are (masculine)\": they are (masculine or mixed)",
       "shown": "être",
       "answer": "ils sont",
       "hint": "{ils + être = ?}",
@@ -256,7 +256,7 @@
     {
       "id": "i-elles-sont",
       "type": "transform",
-      "instruction": "Describe a group of women. Say \"they are (feminine)\"",
+      "instruction": "Describe a group of women. Say \"they are (feminine)\": they are (all feminine)",
       "shown": "être",
       "answer": "elles sont",
       "hint": "{elles + être = ?}",

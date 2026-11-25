@@ -244,7 +244,7 @@
     {
       "id": "i-vous-pensez",
       "type": "transform",
-      "instruction": "Ask formally for an opinion. Say \"you think (formal/plural)\"",
+      "instruction": "Ask formally for an opinion. Say \"you think (formal/plural)\": you think (formal or plural)",
       "shown": "penser",
       "answer": "vous pensez",
       "hint": "{vous + penser = ?}",
@@ -262,7 +262,7 @@
     {
       "id": "i-ils-pensent",
       "type": "transform",
-      "instruction": "They think it's important. Say \"they think (masculine)\"",
+      "instruction": "They think it's important. Say \"they think (masculine)\": they think (masculine or mixed)",
       "shown": "penser",
       "answer": "ils pensent",
       "hint": "{ils + penser = ?}",
@@ -280,7 +280,7 @@
     {
       "id": "i-elles-pensent",
       "type": "transform",
-      "instruction": "They (feminine) are thinking. Say \"they think (feminine)\"",
+      "instruction": "They (feminine) are thinking. Say \"they think (feminine)\": they think (all feminine)",
       "shown": "penser",
       "answer": "elles pensent",
       "hint": "{elles + penser = ?}",

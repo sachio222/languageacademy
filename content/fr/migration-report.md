@@ -23,16 +23,16 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 
 | Section | Lines |
 |---|---|
-| Spellings taught more than once | 124 |
+| Spellings taught more than once | 128 |
 | Item types to confirm | 260 |
 | Practice blanks that were in the wrong place | 58 |
 | Position words | 56 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 825 |
-| Hand edits kept | 70 |
+| Hand edits kept | 75 |
 | Live ids with no converted item | 86 |
-| Fields with no place in a module file | 1833 |
-| Text written differently | 538 |
+| Fields with no place in a module file | 1832 |
+| Text written differently | 577 |
 | Outline | 16 |
 
 ## Spellings taught more than once
@@ -51,12 +51,12 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-01-13-ca-survival**
 
 - `vocabulary[0]` "ça": same meaning as "that/it (informal)" in 2024-01-12-demonstratives: kept ca-fr
-- `vocabulary[3]` "ça va?": new meaning "how's it going?": ca-va-fr.how-s-it; met before as "it goes/OK" (ca-va-fr, 2024-01-13-ca-survival) (fixed by hand)
+- `vocabulary[3]` "ça va?": new meaning "how's it going?": ca-va-fr.question; met before as "it goes/OK" (ca-va-fr, 2024-01-13-ca-survival)
 
 **2024-01-18-questions**
 
 - `vocabulary[2]` "où": ou-fr already names "ou", a different spelling: ou-fr.where
-- `vocabulary[11]` "ça va?": new meaning "you good?": ca-va-fr.you-good; met before as "it goes/OK" (ca-va-fr, 2024-01-13-ca-survival); "how's it going?" (ca-va-fr.question, 2024-01-13-ca-survival) (fixed by hand)
+- `vocabulary[11]` "ça va?": new meaning "you good?": ca-va-fr.question-2; met before as "it goes/OK" (ca-va-fr, 2024-01-13-ca-survival); "how's it going?" (ca-va-fr.question, 2024-01-13-ca-survival) (written: ca-va-fr.question) (fixed by hand)
 
 **2024-01-19-stressed-pronouns**
 
@@ -122,7 +122,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-04-18-commander**
 
-- `vocabulary[11]` "vous commandez?": new meaning "are you ready to order?": vous-commandez-fr.are-you-ready; met before as "you order (formal/plural)" (vous-commandez-fr, 2024-04-18-commander)
+- `vocabulary[11]` "vous commandez?": new meaning "are you ready to order?": vous-commandez-fr.question; met before as "you order (formal/plural)" (vous-commandez-fr, 2024-04-18-commander) (written: vous-commandez-fr.are-you-ready) (fixed by hand)
 
 **2024-04-25-top-200-nouns**
 
@@ -144,8 +144,21 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[0]` "comprendre": same meaning as "to understand" in 2024-04-22-prendre: kept comprendre-fr
 - `vocabulary[1]` "je comprends": same meaning as "I understand" in 2024-04-22-prendre: kept je-comprends-fr
-- `vocabulary[2]` "tu comprends": same meaning as "do you understand?" in 2024-04-22-prendre: kept tu-comprends-fr
+- `vocabulary[2]` "tu comprends": new meaning "you understand (informal)": tu-comprends-fr.you-understand; met before as "do you understand?" (tu-comprends-fr, 2024-04-22-prendre) (written: tu-comprends-fr) (fixed by hand)
 - `vocabulary[7]` "Je ne comprends pas": same meaning as "I don't understand" in 2024-04-22-prendre: kept je-ne-comprends-pas-fr
+- `vocabulary[8]` "Tu comprends?": same meaning as "do you understand?" in 2024-04-22-prendre: kept tu-comprends-fr (written: tu-comprends-fr.question)
+
+**2024-05-08-savoir**
+
+- `vocabulary[8]` "Tu sais?": new meaning "Do you know? / You know?": tu-sais-fr.question; met before as "you know (informal)" (tu-sais-fr, 2024-05-08-savoir)
+
+**2024-04-30-connaitre**
+
+- `vocabulary[9]` "Tu connais?": new meaning "Do you know (it/him/her)?": tu-connais-fr.question; met before as "you know (informal)" (tu-connais-fr, 2024-04-30-connaitre)
+
+**2024-05-01-croire**
+
+- `vocabulary[9]` "Tu crois?": new meaning "Do you think so? / Do you believe it?": tu-crois-fr.question; met before as "you believe (informal)" (tu-crois-fr, 2024-05-01-croire)
 
 **2024-05-03-knowledge-nouns**
 
@@ -185,7 +198,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-05-17-getting-ready**
 
-- `vocabulary[1]` "je me lave": new meaning "I wash myself": je-me-lave-fr.i-wash-myself; met before as "I wash myself" (je-me-lave-fr, 2024-05-21-reflexive-pronouns) (fixed by hand)
+- `vocabulary[1]` "je me lave": new meaning "I wash myself": je-me-lave-fr.i-wash-myself; met before as "I wash myself" (je-me-lave-fr, 2024-05-21-reflexive-pronouns) (written: je-me-lave-fr) (fixed by hand)
 
 **2024-06-06-reciprocal-reflexives**
 
@@ -247,7 +260,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-01-25-emotion-phrases**
 
-- `vocabulary[0]` "je suis content que tu sois là": new meaning "I'm happy you're here": je-suis-content-que-tu-sois-la-fr.i-m-happy; met before as "I'm glad you're here" (je-suis-content-que-tu-sois-la-fr, 2024-06-05-reading-9) (fixed by hand)
+- `vocabulary[0]` "je suis content que tu sois là": new meaning "I'm happy you're here": je-suis-content-que-tu-sois-la-fr.i-m-happy; met before as "I'm glad you're here" (je-suis-content-que-tu-sois-la-fr, 2024-06-05-reading-9) (written: je-suis-content-que-tu-sois-la-fr) (fixed by hand)
 
 **2024-01-22-common-adverbs**
 
@@ -309,7 +322,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-03-15-questce-qui-que**
 
-- `vocabulary[1]` "qu'est-ce que": new meaning "what (object)": qu-est-ce-que-fr.object-pronoun; met before as "what" (qu-est-ce-que-fr, 2024-04-24-reading-6) (fixed by hand)
+- `vocabulary[1]` "qu'est-ce que": new meaning "what (object)": qu-est-ce-que-fr.object-pronoun; met before as "what" (qu-est-ce-que-fr, 2024-04-24-reading-6) (written: qu-est-ce-que-fr) (fixed by hand)
 
 **2024-03-22-inversion-questions**
 
@@ -1354,12 +1367,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-13-ca-survival**
 
-- `vocabulary[3].word_id` "ca-va-fr.how-s-it" → "ca-va-fr.question"
 - `items[1].hint` "Combine: it is + that (using être from M3)" → "Combine: it is + that (using être)"
 
 **2024-01-18-questions**
 
-- `vocabulary[11].word_id` "ca-va-fr.you-good" → "ca-va-fr.question"
+- `vocabulary[11].word_id` "ca-va-fr.question-2" → "ca-va-fr.question"
 
 **2024-01-23-unit2-practice**
 
@@ -1411,6 +1423,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 5! Comparisons, slang, past tense, conditionals, and food vocabulary." → "Test everything from this unit! Comparisons, slang, past tense, conditionals, and food vocabulary."
 
+**2024-04-18-commander**
+
+- `vocabulary[11].word_id` "vous-commandez-fr.question" → "vous-commandez-fr.are-you-ready"
+
 **2024-04-27-unit-6-practice**
 
 - `title` "Unit 6 Practice - Fill in the Blanks" → "Basic Fluency Practice - Fill in the Blanks"
@@ -1420,6 +1436,23 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-04-26-unit-6-exam**
 
 - `description` "Test everything from Unit 6! Progressive tenses, future forms, communication verbs, and essential vocabulary." → "Test everything from this unit! Progressive tenses, future forms, communication verbs, and essential vocabulary."
+
+**2024-04-29-comprendre**
+
+- `vocabulary[2].word_id` "tu-comprends-fr.you-understand" → "tu-comprends-fr"
+- `vocabulary[2].note` "most common in questions" → "most common in questions; essential question for learning"
+
+**2024-05-08-savoir**
+
+- `vocabulary[2].note` "same sound as je sais" → "same sound as je sais; super common question"
+
+**2024-04-30-connaitre**
+
+- `vocabulary[2].note` "Tu connais Marie?" → "Tu connais Marie?; asking if familiar"
+
+**2024-05-01-croire**
+
+- `vocabulary[2].note` "same sound as je crois" → "same sound as je crois; asking for opinion/belief"
 
 **2024-05-11-unit-7-practice**
 
@@ -2431,7 +2464,6 @@ Today’s objects hold these, and the module schema has no field for them.
 - `concepts[4]` concept "Cultural and Academic Vocabulary": a unit exam teaches nothing
 - `skipStudyMode` true (Study Mode belongs to lessons only)
 - `unitNumber` 7 (the outline places the exam)
-- `exerciseConfig.items[43].instruction` i-you-know: instruction "What does 'quoi' mean at the end of a sentence?" (a meaning item shows only the French)
 - 56 × generic instruction dropped (Translate to French): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`, `exerciseConfig.items[8].instruction`, `exerciseConfig.items[9].instruction`, `exerciseConfig.items[10].instruction`, `exerciseConfig.items[11].instruction`, `exerciseConfig.items[12].instruction`, `exerciseConfig.items[13].instruction`, `exerciseConfig.items[14].instruction`, `exerciseConfig.items[15].instruction`, `exerciseConfig.items[16].instruction`, `exerciseConfig.items[17].instruction`, `exerciseConfig.items[19].instruction`, `exerciseConfig.items[20].instruction`, `exerciseConfig.items[21].instruction`, `exerciseConfig.items[22].instruction`, `exerciseConfig.items[24].instruction`, `exerciseConfig.items[25].instruction`, `exerciseConfig.items[26].instruction`, `exerciseConfig.items[27].instruction`, `exerciseConfig.items[28].instruction`, `exerciseConfig.items[29].instruction`, `exerciseConfig.items[30].instruction`, `exerciseConfig.items[31].instruction`, `exerciseConfig.items[32].instruction`, `exerciseConfig.items[33].instruction`, `exerciseConfig.items[34].instruction`, `exerciseConfig.items[35].instruction`, `exerciseConfig.items[36].instruction`, `exerciseConfig.items[37].instruction`, `exerciseConfig.items[38].instruction`, `exerciseConfig.items[39].instruction`, `exerciseConfig.items[40].instruction`, `exerciseConfig.items[41].instruction`, `exerciseConfig.items[42].instruction`, `exerciseConfig.items[46].instruction`, `exerciseConfig.items[47].instruction`, `exerciseConfig.items[48].instruction`, `exerciseConfig.items[49].instruction`, `exerciseConfig.items[50].instruction`, `exerciseConfig.items[51].instruction`, `exerciseConfig.items[52].instruction`, `exerciseConfig.items[53].instruction`, `exerciseConfig.items[54].instruction`, `exerciseConfig.items[55].instruction`, `exerciseConfig.items[56].instruction`, `exerciseConfig.items[57].instruction`, `exerciseConfig.items[58].instruction`, `exerciseConfig.items[59].instruction`, `exerciseConfig.items[60].instruction`, `exerciseConfig.items[61].instruction`
 - 1 × generic instruction dropped (What does '…' mean?): `exerciseConfig.items[5].instruction`
 
@@ -2921,6 +2953,18 @@ Today’s objects hold these, and the module schema has no field for them.
 
 The same words, moved into a field of the new shape.
 
+**2024-01-02-etre**
+
+- `items[5].prompt` i-vous-etes: prompt "you are (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-sont: prompt "they are (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-sont: prompt "they are (all feminine)" joined to the instruction (a transform has no cue field)
+
+**2024-01-04-avoir**
+
+- `items[5].prompt` i-vous-avez: prompt "you have (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-ont: prompt "they have (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-ont: prompt "they have (all feminine)" joined to the instruction (a transform has no cue field)
+
 **2024-01-10-unit1-practice**
 
 - `items[4].blanks` i-un-et: 2 blank hints joined into one hint
@@ -2928,6 +2972,17 @@ The same words, moved into a field of the new shape.
 - `items[10].blanks` i-mais-aussi: 2 blank hints joined into one hint
 - `items[11].blanks` i-la-ou: 2 blank hints joined into one hint
 - 12 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`
+
+**2024-01-17-voir**
+
+- `items[0].prompt` i-je-vois: prompt "I see / I am seeing" joined to the instruction (a transform has no cue field)
+- `items[1].prompt` i-tu-vois: prompt "you see / you are seeing (informal)" joined to the instruction (a transform has no cue field)
+- `items[2].prompt` i-il-voit: prompt "he sees / he is seeing" joined to the instruction (a transform has no cue field)
+- `items[3].prompt` i-elle-voit: prompt "she sees / she is seeing" joined to the instruction (a transform has no cue field)
+- `items[4].prompt` i-nous-voyons: prompt "we see / we are seeing" joined to the instruction (a transform has no cue field)
+- `items[5].prompt` i-vous-voyez: prompt "you see / you are seeing (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-voient: prompt "they see / they are seeing (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-voient: prompt "they see / they are seeing (all feminine)" joined to the instruction (a transform has no cue field)
 
 **2024-01-23-unit2-practice**
 
@@ -2950,6 +3005,17 @@ The same words, moved into a field of the new shape.
 - `items[17].blanks` i-le-au: 2 blank hints joined into one hint
 - `items[18].blanks` i-pars-ton-au: 3 blank hints joined into one hint
 - 20 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`
+
+**2024-03-29-parler**
+
+- `items[0].prompt` i-je-parle: prompt "I speak / I talk" joined to the instruction (a transform has no cue field)
+- `items[1].prompt` i-tu-parles: prompt "you speak / you talk (informal)" joined to the instruction (a transform has no cue field)
+- `items[2].prompt` i-il-parle: prompt "he speaks / he talks" joined to the instruction (a transform has no cue field)
+- `items[3].prompt` i-elle-parle: prompt "she speaks / she talks" joined to the instruction (a transform has no cue field)
+- `items[4].prompt` i-nous-parlons: prompt "we speak / we talk" joined to the instruction (a transform has no cue field)
+- `items[5].prompt` i-vous-parlez: prompt "you speak / you talk (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-parlent: prompt "they speak / they talk (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-parlent: prompt "they speak / they talk (all feminine)" joined to the instruction (a transform has no cue field)
 
 **2024-04-03-unit-4-practice**
 
@@ -2976,19 +3042,38 @@ The same words, moved into a field of the new shape.
 
 **2024-04-29-comprendre**
 
-- `vocabularyReference[8]` "Tu comprends?" ("Do you understand?") is listed twice with one meaning; one word, notes joined
+- `items[5].prompt` i-vous-comprenez: prompt "you understand (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-comprennent: prompt "they understand (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-comprennent: prompt "they understand (all feminine)" joined to the instruction (a transform has no cue field)
 
 **2024-05-08-savoir**
 
-- `vocabularyReference[8]` "Tu sais?" ("Do you know? / You know?") is listed twice with one meaning; one word, notes joined
+- `items[5].prompt` i-vous-savez: prompt "you know (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-savent: prompt "they know (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-savent: prompt "they know (all feminine)" joined to the instruction (a transform has no cue field)
 
 **2024-04-30-connaitre**
 
-- `vocabularyReference[9]` "Tu connais?" ("Do you know (it/him/her)?") is listed twice with one meaning; one word, notes joined
+- `items[0].prompt` i-je-connais: prompt "I know (people/places)" joined to the instruction (a transform has no cue field)
+- `items[5].prompt` i-vous-connaissez: prompt "you know (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-connaissent: prompt "they know (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-connaissent: prompt "they know (all feminine)" joined to the instruction (a transform has no cue field)
+
+**2024-05-06-penser**
+
+- `items[5].prompt` i-vous-pensez: prompt "you think (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-pensent: prompt "they think (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-pensent: prompt "they think (all feminine)" joined to the instruction (a transform has no cue field)
 
 **2024-05-01-croire**
 
-- `vocabularyReference[9]` "Tu crois?" ("Do you think so? / Do you believe it?") is listed twice with one meaning; one word, notes joined
+- `items[1].prompt` i-tu-crois: prompt "you believe / you think (informal)" joined to the instruction (a transform has no cue field)
+- `items[2].prompt` i-il-croit: prompt "he believes / he thinks" joined to the instruction (a transform has no cue field)
+- `items[3].prompt` i-elle-croit: prompt "she believes / she thinks" joined to the instruction (a transform has no cue field)
+- `items[4].prompt` i-nous-croyons: prompt "we believe / we think" joined to the instruction (a transform has no cue field)
+- `items[5].prompt` i-vous-croyez: prompt "you believe / you think (formal or plural)" joined to the instruction (a transform has no cue field)
+- `items[6].prompt` i-ils-croient: prompt "they believe / they think (masculine or mixed)" joined to the instruction (a transform has no cue field)
+- `items[7].prompt` i-elles-croient: prompt "they believe / they think (all feminine)" joined to the instruction (a transform has no cue field)
 
 **2024-05-11-unit-7-practice**
 
@@ -2996,9 +3081,13 @@ The same words, moved into a field of the new shape.
 - `items[23].blanks` i-on-pense-apprendre: 2 blank hints joined into one hint
 - 24 × instruction written as the gloss ("Complete:" and quotes dropped): `items[0].instruction`, `items[1].instruction`, `items[2].instruction`, `items[3].instruction`, `items[4].instruction`, `items[5].instruction`, `items[6].instruction`, `items[7].instruction`, `items[8].instruction`, `items[9].instruction`, `items[10].instruction`, `items[11].instruction`, `items[12].instruction`, `items[13].instruction`, `items[14].instruction`, `items[15].instruction`, `items[16].instruction`, `items[17].instruction`, `items[18].instruction`, `items[19].instruction`, `items[20].instruction`, `items[21].instruction`, `items[22].instruction`, `items[23].instruction`
 
+**2024-05-10-unit-7-exam**
+
+- `items[43].prompt` i-you-know: prompt "quoi (at end)": the instruction says it, and the French "quoi" is shown
+
 **2024-05-23-temporal-words**
 
-- `vocabularyReference[7]` "après" ("after / afterwards") is listed twice with one meaning; one word, notes joined
+- `vocabularyReference[7]` "après" ("after / afterwards") is listed twice; one card, notes joined
 
 **2024-05-25-unit-8-practice**
 

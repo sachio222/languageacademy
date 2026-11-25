@@ -60,6 +60,12 @@
       "note": "⭐ MOST IMPORTANT PHRASE!"
     },
     {
+      "word_id": "tu-comprends-fr.question",
+      "fr": "Tu comprends?",
+      "gloss": "Do you understand?",
+      "note": "essential question for learning"
+    },
+    {
       "word_id": "je-comprends-bien-fr",
       "fr": "je comprends bien",
       "gloss": "I understand well",
@@ -232,7 +238,7 @@
     {
       "id": "i-vous-comprenez",
       "type": "transform",
-      "instruction": "Ask formally if they understand. Say \"you understand (formal/plural)\"",
+      "instruction": "Ask formally if they understand. Say \"you understand (formal/plural)\": you understand (formal or plural)",
       "shown": "comprendre",
       "answer": "vous comprenez",
       "hint": "{vous + comprendre = ?}",
@@ -250,7 +256,7 @@
     {
       "id": "i-ils-comprennent",
       "type": "transform",
-      "instruction": "They understand the question. Say \"they understand (masculine)\"",
+      "instruction": "They understand the question. Say \"they understand (masculine)\": they understand (masculine or mixed)",
       "shown": "comprendre",
       "answer": "ils comprennent",
       "hint": "{ils + comprendre = ?}",
@@ -268,7 +274,7 @@
     {
       "id": "i-elles-comprennent",
       "type": "transform",
-      "instruction": "They (feminine) understand everything. Say \"they understand (feminine)\"",
+      "instruction": "They (feminine) understand everything. Say \"they understand (feminine)\": they understand (all feminine)",
       "shown": "comprendre",
       "answer": "elles comprennent",
       "hint": "{elles + comprendre = ?}",

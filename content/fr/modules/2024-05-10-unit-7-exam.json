@@ -371,6 +371,7 @@
     {
       "id": "i-you-know",
       "type": "meaning",
+      "instruction": "What does '{quoi}' mean at the end of a sentence?",
       "shown": "quoi",
       "answer": "you know",
       "accept": [

@@ -1,0 +1,957 @@
+{
+  "2024-01-02-etre": {
+    "concepts": [
+      {
+        "id": "c-etre-to-be",
+        "term": "{être} = to be",
+        "definition": "The most important verb. Describes states and identity.",
+        "example": "Express: I am, you are, he is, she is, we are, they are"
+      },
+      {
+        "id": "c-conjugation-pattern",
+        "term": "Conjugation Pattern",
+        "definition": "Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!",
+        "example": "{je suis}, {tu es}, {il est}, {elle est}, {nous sommes}, {vous êtes}, {ils sont}, {elles sont}"
+      },
+      {
+        "id": "c-practical-usage",
+        "term": "Practical Usage",
+        "definition": "Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"",
+        "example": "{Je suis heureux} (I am happy), {Je suis étudiant} (I am a student), {Je suis à Paris} (I am in Paris)"
+      }
+    ]
+  },
+  "2024-01-05-articles": {
+    "concepts": [
+      {
+        "id": "c-why-articles-matter",
+        "term": "Why Articles Matter",
+        "definition": "You can NEVER say a noun alone in French - must use an article!",
+        "example": "English: 'book', French: MUST say 'a book' or 'the book'"
+      },
+      {
+        "id": "c-indefinite-articles-a-an",
+        "term": "Indefinite Articles (a/an)",
+        "definition": "un (masculine), une (feminine) = a/an",
+        "example": "Use when talking about any one thing, not a specific thing"
+      },
+      {
+        "id": "c-definite-articles-the",
+        "term": "Definite Articles (the)",
+        "definition": "le (masculine), la (feminine), les (plural) = the",
+        "example": "Use when talking about a specific thing"
+      },
+      {
+        "id": "c-gender-agreement",
+        "term": "Gender Agreement",
+        "definition": "Article must match the noun's gender - this is critical!",
+        "example": "Masculine nouns use un/le, feminine nouns use une/{la}"
+      }
+    ]
+  },
+  "2024-01-06-basic-nouns": {
+    "concepts": [
+      {
+        "id": "c-noun-gender-critical-concept",
+        "term": "Noun Gender - Critical Concept!",
+        "definition": "Every French noun is either masculine or feminine - you must memorize this!",
+        "example": "Masculine nouns use '{le/un}', feminine use 'la/{une'}"
+      },
+      {
+        "id": "c-using-with-etre-and",
+        "term": "Using With être and avoir",
+        "definition": "Combine nouns with {être} and {avoir}, the verbs you already know",
+        "example": "Pattern: pronoun + verb + article + noun"
+      },
+      {
+        "id": "c-practice-previous-modules",
+        "term": "Practice Previous Modules!",
+        "definition": "Every exercise uses être or avoir - reinforcing what you learned!",
+        "example": "Learn nouns WHILE practicing your verbs"
+      },
+      {
+        "id": "c-rule-identifying-vs-profession",
+        "term": "Rule: Identifying vs. Profession",
+        "definition": "When you identify someone with a noun (like 'man' or 'friend'), you MUST use an article (un, une). NOTE: A special rule for professions and nationalities will be taught later.",
+        "example": "Correct for now: '{elle est une amie}'. Future rule: '{elle est avocate}' (she is a lawyer)."
+      }
+    ],
+    "items/i-j-ai-un-livre": {
+      "id": "i-j-ai-un-livre",
+      "type": "translate",
+      "prompt": "I have a book",
+      "answer": "j'ai un livre",
+      "hint": "Combine {avoir} + article + noun - all from earlier lessons!",
+      "mistakes": [
+        {
+          "answer": "j'ai une livre",
+          "feedback": "livre is masculine, use '{un}' not 'une'"
+        },
+        {
+          "answer": "j'ai le livre",
+          "feedback": "Use '{un}' (a), not 'le' (the)"
+        }
+      ]
+    }
+  },
+  "2024-01-07-plurals": {
+    "concepts": [
+      {
+        "id": "c-basic-plural-rule",
+        "term": "Basic Plural Rule",
+        "definition": "Add -s to most nouns (just like English!)",
+        "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}"
+      },
+      {
+        "id": "c-plural-articles",
+        "term": "Plural Articles",
+        "definition": "les = the (plural), des = some/plural a",
+        "example": "Pattern: [pronoun] + [verb] + [des/les] + [plural noun]"
+      },
+      {
+        "id": "c-practice-with-etre-avoir",
+        "term": "Practice With être & avoir!",
+        "definition": "Every exercise combines plurals with {être} and {avoir}",
+        "example": "Learn plurals WHILE reinforcing your verb conjugations"
+      }
+    ]
+  },
+  "2024-01-10-unit1-practice": {
+    "can_do": [
+      "Compose complete French sentences from scratch",
+      "Combine pronouns, verbs, articles, and nouns naturally",
+      "Apply everything from this unit in context"
+    ],
+    "description": "Complete sentences using everything you've learned in this unit. Fill in the blanks to create correct French sentences!",
+    "title": "Essential Grammar Practice - Fill in the Blanks"
+  },
+  "2024-01-13-ca-survival": {
+    "items/i-c-est-ca": {
+      "id": "i-c-est-ca",
+      "type": "respond",
+      "situation": "Someone shows you what they meant. Confirm by saying 'that's it'",
+      "cue": "that's it / that's right",
+      "answer": "c'est ça",
+      "hint": "Combine: it is + that (using {être})",
+      "mistakes": [
+        {
+          "answer": "ça c'est",
+          "feedback": "Wrong order - use: c'est ça"
+        }
+      ]
+    }
+  },
+  "2024-01-18-questions": {
+    "concepts": [
+      {
+        "id": "c-three-ways-to-ask",
+        "term": "Three Ways to Ask Questions in French",
+        "definition": "French has 3 methods for asking questions. Start with the easiest!",
+        "example": "1) {Est-ce que} (easiest), 2) Intonation (informal), 3) Inversion (formal)"
+      },
+      {
+        "id": "c-method-1-est-ce",
+        "term": "Method 1: {Est-ce que} (Beginner-Friendly!)",
+        "definition": "Add '{est-ce que}' before ANY statement to make it a question. No word order change needed!",
+        "example": "Statement: '{tu as un chat}' → Question: '{est-ce que tu as un chat?}' (do you have a cat?)"
+      },
+      {
+        "id": "c-with-question-words-est",
+        "term": "With Question Words + Est-ce que",
+        "definition": "Put question word first, then '{est-ce que}', then statement",
+        "example": "{où est-ce que tu es?} (where are you?), {quand est-ce que tu as le livre?} (when do you have the book?)"
+      },
+      {
+        "id": "c-method-2-rising-intonation",
+        "term": "Method 2: Rising Intonation (Spoken French)",
+        "definition": "Just say a statement with rising voice at the end - super informal!",
+        "example": "{Tu as un chat? ↗} (you have a cat?), {Tu es où? ↗} (you are where?)"
+      },
+      {
+        "id": "c-method-3-inversion-formal",
+        "term": "Method 3: Inversion (Formal)",
+        "definition": "Flip verb and subject, add hyphen. Used in formal/written French",
+        "example": "{As-tu un chat?} (have you a cat?), {Où es-tu?} (where are you?)"
+      },
+      {
+        "id": "c-the-7-essential-question",
+        "term": "The 7 Essential Question Words",
+        "definition": "These words unlock every question you need: what, who, where, when, how, why, how much",
+        "example": "{que}/{quoi} (what), {qui} (who), {où} (where), {quand} (when), {comment} (how), {pourquoi} (why), {combien} (how much/many)"
+      },
+      {
+        "id": "c-que-vs-quoi-both",
+        "term": "Que vs Quoi (both mean 'what')",
+        "definition": "'{Que}' starts questions, '{quoi}' ends them or stands alone",
+        "example": "{Que fais-tu?} (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)"
+      },
+      {
+        "id": "c-common-question-phrases-memorize",
+        "term": "Common Question Phrases - Memorize These!",
+        "definition": "Some questions are used so often they become fixed phrases",
+        "example": "{qu'est-ce que c'est?} (what is it?), {comment ça va?} (how's it going?), {ça va?} (you good?), {qu'est-ce que tu veux?} (what do you want?), {est-ce que tu peux?} (can you?)"
+      }
+    ],
+    "vocabulary/11": {
+      "word_id": "ca-va-fr.question",
+      "fr": "ça va?",
+      "gloss": "you good?",
+      "note": "super informal"
+    }
+  },
+  "2024-01-23-common-special-forms-1": {
+    "concepts": [
+      {
+        "id": "c-why-these-forms-exist",
+        "term": "Why These Forms Exist",
+        "definition": "French uses different verb forms after phrases like '{il faut que}' (someone needs to), '{je veux que}' (I want someone to), '{je suis content que}' (I'm happy that someone...). These express wishes, needs, or emotions about OTHER PEOPLE's actions.",
+        "example": "Normal statement: {Tu es sage} (You are good). Wish about you: {Il faut que tu sois sage} (You need to be good - different form!)"
+      },
+      {
+        "id": "c-where-you-can-use",
+        "term": "Where You CAN Use These Forms",
+        "definition": "ONLY after certain phrases: il faut que, je veux que, je suis content que, j'ai peur que, avant que, pour que, bien que, etc.",
+        "example": "✓ {Il faut que tu sois sage} (You need to be good), ✓ {Je veux qu'il aille} (I want him to go)"
+      },
+      {
+        "id": "c-where-you-cannot-use",
+        "term": "Where You CANNOT Use These Forms",
+        "definition": "DON'T use these for normal statements, questions, or with just il faut/je veux (no '{que}')",
+        "example": "✗ {Tu sois content?} (Wrong! Say: {Tu es content?}). ✗ {Il faut aller} (Correct - no '{que}' = normal form)"
+      },
+      {
+        "id": "c-the-trigger-look-for",
+        "term": "The Trigger: Look for '{que}'",
+        "definition": "If you see '{que}' + a person after these starter phrases, use these forms!",
+        "example": "{il faut QUE tu} → use sois/{aies}/{ailles}/{fasses, je veux QUE tu} → use sois/aies/ailles/{fasses}"
+      }
+    ]
+  },
+  "2024-01-23-unit2-practice": {
+    "can_do": [
+      "Compose complex sentences with wants, abilities, and questions",
+      "Combine demonstratives, verbs, and adjectives naturally",
+      "Apply this unit's vocabulary in realistic contexts"
+    ],
+    "description": "Complete sentences using demonstratives, questions, prepositions, and adjectives from this unit!",
+    "title": "Asking & Describing Practice - Fill in the Blanks"
+  },
+  "2024-01-24-common-special-forms-2": {
+    "concepts": [
+      {
+        "id": "c-more-verbs-that-change",
+        "term": "More Verbs That Change After '{que}'",
+        "definition": "Like the previous special forms module, these verbs change ONLY after phrases with '{que}' (il faut que, je veux que, je suis content que, etc.)",
+        "example": "Normal: {tu viens} (you come) → After '{je veux que}': {tu viennes. Normal}: {tu peux} (you can) → After '{il faut que}': {tu puisses}"
+      },
+      {
+        "id": "c-when-to-use-vs",
+        "term": "When To Use vs When NOT To Use",
+        "definition": "USE: After '{que}' in wish/need/emotion phrases. DON'T USE: For normal statements or questions.",
+        "example": "✓ {Je veux que tu viennes} (I want you to come). ✗ {Tu viennes ici?} (Wrong! Say: {Tu viens ici?})"
+      },
+      {
+        "id": "c-the-trigger-look-for",
+        "term": "The Trigger: Look for '{que}'",
+        "definition": "If you see 'il faut/je veux/je suis content + QUE + person', use these forms. No '{que}' = normal forms.",
+        "example": "{Il faut partir} (leave - normal). {Il faut QUE tu partes} (you leave - changed form!)"
+      }
+    ]
+  },
+  "2024-01-24-unit2-exam": {
+    "description": "Test everything from this unit! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences.",
+    "items/i-elles-sont-chez-laduree": {
+      "id": "i-elles-sont-chez-laduree",
+      "type": "respond",
+      "situation": "they (feminine) are at Ladurée",
+      "answer": "elles sont chez Ladurée",
+      "accept": [
+        "elles sont à Ladurée"
+      ],
+      "hint": "elles sont + chez + Ladurée (famous macaron shop)"
+    }
+  },
+  "2024-01-25-emotion-phrases": {
+    "vocabulary/0": {
+      "word_id": "je-suis-content-que-tu-sois-la-fr",
+      "fr": "je suis content que tu sois là",
+      "gloss": "I'm happy you're here",
+      "note": "⭐ welcoming someone"
+    }
+  },
+  "2024-01-27-aller": {
+    "items/i-qu-est-ce-que-2": {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask what someone is going to have",
+      "cue": "What are you going to have?",
+      "answer": "qu'est-ce que tu vas avoir?",
+      "hint": "{qu'est-ce que tu vas avoir}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu as?",
+          "feedback": "This needs aller! Try: qu'est-ce que tu vas avoir?"
+        }
+      ]
+    }
+  },
+  "2024-01-28-necessity-phrases": {
+    "concepts": [
+      {
+        "id": "c-il-faut-que-directed",
+        "term": "{Il faut que...} - Directed Necessity",
+        "definition": "Tell SOMEONE SPECIFIC what needs to happen. More direct than 'il faut + verb'",
+        "example": "{Il faut manger} (general: someone should eat) → {Il faut que tu manges} (YOU specifically need to eat)"
+      },
+      {
+        "id": "c-parent-friend-language",
+        "term": "Parent/Friend Language",
+        "definition": "These phrases are used constantly in daily life!",
+        "example": "Parent to kid: '{Il faut que tu finisses tes devoirs}' (You need to finish homework)"
+      }
+    ]
+  },
+  "2024-02-02-combining": {
+    "items/i-il-va-partir": {
+      "id": "i-il-va-partir",
+      "type": "respond",
+      "situation": "Say he's going to leave (aller + infinitive)",
+      "cue": "he's going to leave",
+      "answer": "il va partir",
+      "hint": "Combine {aller} + {partir} infinitive - future construction!",
+      "mistakes": [
+        {
+          "answer": "il part",
+          "feedback": "Use '{va partir}' to express future intention"
+        },
+        {
+          "answer": "il vient partir",
+          "feedback": "Use aller (va), not venir"
+        }
+      ]
+    },
+    "items/i-je-le-veux": {
+      "id": "i-je-le-veux",
+      "type": "respond",
+      "situation": "Say you want something using object pronoun (vouloir + object)",
+      "cue": "I want it",
+      "answer": "je le veux",
+      "accept": [
+        "je le veux ?",
+        "je la veux"
+      ],
+      "hint": "Combine {vouloir} + object pronoun BEFORE verb",
+      "mistakes": [
+        {
+          "answer": "je veux le",
+          "feedback": "Object pronoun goes BEFORE: je LE veux"
+        },
+        {
+          "answer": "je veux la",
+          "feedback": "Object pronoun goes BEFORE: je LE veux"
+        },
+        {
+          "answer": "je veux ça",
+          "feedback": "Use object pronoun '{le}' or '{la}', not ça"
+        }
+      ]
+    },
+    "items/i-tu-viens-avec-moi": {
+      "id": "i-tu-viens-avec-moi",
+      "type": "respond",
+      "situation": "Tell your friend to come with you (venir + preposition)",
+      "cue": "you are coming with me. (informal)",
+      "answer": "tu viens avec moi",
+      "hint": "Combine {venir} + {avec} + {moi}",
+      "mistakes": [
+        {
+          "answer": "tu vas avec moi",
+          "feedback": "Use venir (come), not aller (go)"
+        },
+        {
+          "answer": "vous venez avec moi",
+          "feedback": "vous is correct for 'you' (formal/plural), not 'tu' (informal)"
+        }
+      ]
+    }
+  },
+  "2024-02-04-unit-10-exam": {
+    "description": "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions.",
+    "items/i-perdu-espoir": {
+      "id": "i-perdu-espoir",
+      "type": "transform",
+      "instruction": "From the reading {Mes Rêves et Mes Espoirs}: What had Sophie already done before talking to Marc?",
+      "shown": "J'avais déjà _____",
+      "answer": "perdu espoir",
+      "accept": [
+        "essayé",
+        "perdu l'espoir"
+      ],
+      "hint": "What Sophie had lost"
+    },
+    "items/i-saura": {
+      "id": "i-saura",
+      "type": "transform",
+      "instruction": "Complete the philosophical thought",
+      "shown": "Si on ne fait rien, on ne _____ jamais",
+      "answer": "saura",
+      "accept": [
+        "sait",
+        "savoir"
+      ],
+      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If we don't do anything, we'll never _____'"
+    },
+    "items/i-soit-differente": {
+      "id": "i-soit-differente",
+      "type": "transform",
+      "instruction": "From the reading {Mes Rêves et Mes Espoirs}: What did Sophie want about her life?",
+      "shown": "Je veux que ma vie _____",
+      "answer": "soit différente",
+      "hint": "Sophie's main wish"
+    }
+  },
+  "2024-02-04-unit3-practice": {
+    "can_do": [
+      "Compose sentences with motion verbs and object pronouns",
+      "Use possessives and contractions naturally",
+      "Apply this unit's advanced structures in context"
+    ],
+    "description": "Master contractions, motion verbs, object pronouns, and possessive forms from this unit!",
+    "title": "Movement & Possession Practice - Fill in the Blanks"
+  },
+  "2024-02-05-unit-10-practice": {
+    "description": "Complete sentences using this unit's B2 level phrases: necessity, wishes, emotions, hypotheticals, and more!",
+    "title": "Mastery & Nuance Practice - Fill in the Blanks"
+  },
+  "2024-02-05-unit3-exam": {
+    "description": "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
+  },
+  "2024-02-08-age-personal-info": {
+    "description": "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information."
+  },
+  "2024-02-15-unit-11-exam": {
+    "description": "Final test for this unit! Demonstrate mastery of age expressions, all missing top 100 verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), directions, and practical communication. Achieve complete French foundation!",
+    "items/i-la-france-a-soixante": {
+      "id": "i-la-france-a-soixante",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: France's population",
+      "cue": "France has 68 million inhabitants",
+      "answer": "la France a soixante-huit millions d'habitants",
+      "accept": [
+        "la France a 68 millions d'habitants"
+      ],
+      "hint": "la France + a + number + millions + habitants"
+    },
+    "items/i-la-france-moderne-combine": {
+      "id": "i-la-france-moderne-combine",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: Modern France combines what?",
+      "cue": "Modern France combines tradition and innovation",
+      "answer": "la France moderne combine tradition et innovation",
+      "hint": "{la France moderne + combine + tradition + et + innovation}"
+    },
+    "items/i-les-artistes-francais-vivent": {
+      "id": "i-les-artistes-francais-vivent",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: Where artists live",
+      "cue": "French artists often live in neighborhoods like Montmartre",
+      "answer": "les artistes français vivent souvent dans des quartiers comme Montmartre",
+      "hint": "{les artistes français + vivent + souvent + dans + quartiers + comme + Montmartre}"
+    },
+    "items/i-les-touristes-cherchent-des": {
+      "id": "i-les-touristes-cherchent-des",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: What tourists look for",
+      "cue": "Tourists look for directions to find monuments",
+      "answer": "les touristes cherchent des directions pour trouver les monuments",
+      "hint": "{les touristes + cherchent + directions + pour trouver + monuments}"
+    }
+  },
+  "2024-02-16-unit-11-practice": {
+    "description": "Complete sentences using this unit's essential vocabulary: age expressions, missing top 100 verbs, and directions!",
+    "title": "Daily Essentials Practice - Fill in the Blanks"
+  },
+  "2024-03-15-questce-qui-que": {
+    "vocabulary/1": {
+      "word_id": "qu-est-ce-que-fr",
+      "fr": "qu'est-ce que",
+      "gloss": "what (object)",
+      "note": "⭐⭐⭐ OBJECT: what DO you verb"
+    }
+  },
+  "2024-03-19-pourquoi-complex": {
+    "concepts": [
+      {
+        "id": "c-pourquoi-any-structure",
+        "term": "pourquoi + ANY Structure",
+        "definition": "You already know pourquoi - now compose it with EVERYTHING you've learned so far!",
+        "example": "{Pourquoi + être}, {avoir}, action verbs, progressive, past tense, reflexive, modal verbs = infinite questions"
+      },
+      {
+        "id": "c-basic-pattern-pourquoi-est",
+        "term": "Basic Pattern: pourquoi est-ce que + statement",
+        "definition": "Take any statement and add pourquoi est-ce que before it",
+        "example": "Statement: {Le ciel est bleu} → Question: {Pourquoi est-ce que le ciel est bleu?}"
+      },
+      {
+        "id": "c-nature-curiosity-questions",
+        "term": "Nature Curiosity Questions",
+        "definition": "Ask why about natural phenomena using vocabulary from previous modules",
+        "example": "{Pourquoi est-ce que le soleil brille? Pourquoi est-ce que l'herbe est verte? Pourquoi est-ce que les nuages sont blancs?}"
+      },
+      {
+        "id": "c-with-all-tenses",
+        "term": "With All Tenses",
+        "definition": "Pourquoi works with present, past, imparfait, and all verb forms",
+        "example": "Present: Pourquoi tu fais ça? Past: Pourquoi as-tu fait ça? Progressive: {Pourquoi es-tu en train de faire ça?}"
+      },
+      {
+        "id": "c-infinite-composition-power",
+        "term": "Infinite Composition Power",
+        "definition": "Once you master pourquoi, you can ask 'why' about literally anything you can say in French!",
+        "example": "Any vocabulary × pourquoi × any tense = unlimited curiosity questions"
+      }
+    ]
+  },
+  "2024-03-25-multi-clause-questions": {
+    "concepts": [
+      {
+        "id": "c-questions-unit-10-structures",
+        "term": "Questions + Mastery & Nuance Structures",
+        "definition": "Combine question words with all the sophisticated structures from the Mastery & Nuance unit",
+        "example": "{Pourquoi est-ce qu'il faut que je fasse ça?} (Why do I have to do that? - necessity + question)"
+      },
+      {
+        "id": "c-questions-subjunctive-phrases",
+        "term": "Questions + Subjunctive Phrases",
+        "definition": "Ask questions about wishes, emotions, necessity using subjunctive",
+        "example": "{Comment est-ce que tu veux que je le fasse?} (How do you want me to do it?)"
+      },
+      {
+        "id": "c-questions-opinion-phrases",
+        "term": "Questions + Opinion Phrases",
+        "definition": "Ask about what people think using penser/croire patterns",
+        "example": "{Pourquoi est-ce que tu penses que c'est comme ça?} (Why do you think it's like that?)"
+      },
+      {
+        "id": "c-questions-conditional",
+        "term": "Questions + Conditional",
+        "definition": "Ask hypothetical questions using conditional mood",
+        "example": "{Qu'est-ce qui rendrait l'herbe plus verte?} (What would make grass greener?)"
+      },
+      {
+        "id": "c-native-level-complexity",
+        "term": "Native-Level Complexity",
+        "definition": "These questions demonstrate complete mastery of French question formation",
+        "example": "Can ask ANY question about ANY thought - you've reached full competency!"
+      }
+    ]
+  },
+  "2024-04-02-unit-4-exam": {
+    "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
+  },
+  "2024-04-03-unit-4-practice": {
+    "description": "Practice survival phrases, negation, time/location adverbs, and essential verbs from this unit!",
+    "title": "Everyday Words Practice - Fill in the Blanks"
+  },
+  "2024-04-07-comparisons-slang": {
+    "concepts": [
+      {
+        "id": "c-french-slang-france",
+        "term": "French Slang (France)",
+        "definition": "Informal expressions you'll hear on the streets of Paris and throughout France",
+        "example": "{c'est ouf} (it's crazy - verlan for '{fou}'), {c'est chelou} (it's weird - verlan for '{louche}')"
+      },
+      {
+        "id": "c-quebec-french",
+        "term": "Quebec French",
+        "definition": "Unique expressions from Quebec - very different from France!",
+        "example": "{c'est malade} (it's sick/awesome), {c'est capot} (it's crazy), {c'est écœurant} (it's disgusting/amazing)"
+      },
+      {
+        "id": "c-african-french",
+        "term": "African French",
+        "definition": "Expressions from French-speaking Africa (Senegal, Ivory Coast, etc.)",
+        "example": "{c'est gnama} (it's good - West Africa), {c'est grave} (it's serious/intense)"
+      },
+      {
+        "id": "c-verlan-french-slang-technique",
+        "term": "Verlan - French Slang Technique",
+        "definition": "Reversing syllables - très (very) becomes trop, fou (crazy) becomes ouf",
+        "example": "{c'est ouf} = {c'est fou} (it's crazy), {chelou} = louche (weird)"
+      }
+    ]
+  },
+  "2024-04-14-unit-5-exam": {
+    "description": "Test everything from this unit! Comparisons, slang, past tense, conditionals, and food vocabulary."
+  },
+  "2024-04-15-unit-5-practice": {
+    "can_do": [
+      "Compose sentences with past tense and comparisons",
+      "Use conditional forms and food vocabulary naturally",
+      "Apply this unit's sophistication in context"
+    ],
+    "description": "Complete sentences using comparisons, past tense, conditionals, and food vocabulary from this unit!",
+    "title": "Time & Taste Practice - Fill in the Blanks"
+  },
+  "2024-04-18-commander": {
+    "concepts": [
+      {
+        "id": "c-commander-to-order",
+        "term": "{commander} = to order",
+        "definition": "Order food at restaurants, drinks at cafés, products online - regular -ER verb",
+        "example": "{je commande un café} (I order a coffee), {nous commandons une pizza} (we order a pizza)"
+      },
+      {
+        "id": "c-regular-er-verb-pattern",
+        "term": "Regular -ER verb pattern",
+        "definition": "Follows same pattern as parler, demander - drop -er, add endings",
+        "example": "{je commande}, {tu commandes}, {il commande}, {nous commandons}, {vous commandez}, {ils commandent}"
+      },
+      {
+        "id": "c-restaurant-cafe-context",
+        "term": "Restaurant/café context",
+        "definition": "Most common use - ordering food and drinks in restaurants",
+        "example": "{je commande un steak} (I order a steak), {vous commandez le menu?} (are you ordering the set menu?)"
+      },
+      {
+        "id": "c-online-shopping",
+        "term": "Online shopping",
+        "definition": "Also used for ordering products online or by phone",
+        "example": "{je commande en ligne} (I order online), {commander sur Amazon} (to order on Amazon)"
+      },
+      {
+        "id": "c-similar-to-demander",
+        "term": "Similar to demander",
+        "definition": "Both mean 'to ask for', but commander specifically means 'to order' (more formal/transactional)",
+        "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
+      }
+    ],
+    "vocabulary/11": {
+      "word_id": "vous-commandez-fr.are-you-ready",
+      "fr": "vous commandez?",
+      "gloss": "are you ready to order?",
+      "note": "waiter's question"
+    }
+  },
+  "2024-04-25-top-200-nouns": {
+    "concepts": [
+      {
+        "id": "c-time-nouns",
+        "term": "Time nouns",
+        "definition": "Express time periods and moments: année, fois, moment, heure, minute",
+        "example": "{une année} (a year), {une fois} (once/one time), {un moment} (a moment)"
+      },
+      {
+        "id": "c-people-relationships",
+        "term": "People & relationships",
+        "definition": "Family and general people: famille, père, mère, personne",
+        "example": "{ma famille} (my family), {mon père} (my father), {une personne} (a person)"
+      },
+      {
+        "id": "c-body-parts",
+        "term": "Body parts",
+        "definition": "Beyond basic body parts: yeux (eyes), visage (face), corps (body), cœur (heart)",
+        "example": "{les yeux} (the eyes), {le visage} (the face), {le cœur} (the heart)"
+      },
+      {
+        "id": "c-abstract-concepts",
+        "term": "Abstract concepts",
+        "definition": "Ideas and concepts: histoire, problème, question, raison, fait",
+        "example": "{une histoire} (a story), {un problème} (a problem), {la raison} (the reason)"
+      },
+      {
+        "id": "c-special-plurals",
+        "term": "Special plurals",
+        "definition": "Some nouns have irregular plurals: œil → yeux (eye → eyes)",
+        "example": "{un œil} (one eye), {les yeux} (the eyes - irregular!)"
+      }
+    ]
+  },
+  "2024-04-26-unit-6-exam": {
+    "description": "Test everything from this unit! Progressive tenses, future forms, communication verbs, and essential vocabulary."
+  },
+  "2024-04-27-unit-6-practice": {
+    "can_do": [
+      "Use progressive and future tenses naturally",
+      "Combine communication verbs in complex sentences",
+      "Apply this unit's advanced structures in context"
+    ],
+    "description": "Complete sentences using progressive tenses, communication verbs, and essential vocabulary from this unit!",
+    "title": "Basic Fluency Practice - Fill in the Blanks"
+  },
+  "2024-04-29-comprendre": {
+    "vocabulary/2": {
+      "word_id": "tu-comprends-fr",
+      "fr": "tu comprends",
+      "gloss": "you understand (informal)",
+      "note": "most common in questions; essential question for learning"
+    }
+  },
+  "2024-04-30-connaitre": {
+    "concepts": [
+      {
+        "id": "c-connaitre-to-know-people",
+        "term": "{connaître} = to know (people or places)",
+        "definition": "CRITICAL distinction: connaître is for people you know or places you're familiar with",
+        "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris)"
+      },
+      {
+        "id": "c-irregular-conjugation-with-i",
+        "term": "Irregular conjugation with î",
+        "definition": "Present: je connais, tu connais, il connaît, nous connaissons, vous connaissez, ils connaissent",
+        "example": "Notice: î with circumflex accent in il/elle form, double -ss- in plural"
+      },
+      {
+        "id": "c-the-key-distinction-savoir",
+        "term": "THE KEY DISTINCTION: savoir vs connaître",
+        "definition": "savoir = facts/skills (learned), connaître = people/places (familiarity)",
+        "example": "{je sais la réponse} (I know the answer) BUT je connais Marie (I know Marie)"
+      },
+      {
+        "id": "c-never-use-connaitre-infinitive",
+        "term": "NEVER use connaître + infinitive",
+        "definition": "You CANNOT say '{je connais parler}' - use savoir for skills!",
+        "example": "✓ {je sais parler} (I know how to speak), ✗ {je connais parler} (WRONG!)"
+      },
+      {
+        "id": "c-common-uses",
+        "term": "Common uses",
+        "definition": "Know people, know places, be familiar with things (movies, books, brands)",
+        "example": "{je connais ce film} (I know this movie), {tu connais ce restaurant?} (do you know this restaurant?)"
+      }
+    ],
+    "title": "{connaître} - To Know (People/Places)",
+    "vocabulary/2": {
+      "word_id": "tu-connais-fr",
+      "fr": "tu connais",
+      "gloss": "you know (informal)",
+      "note": "Tu connais Marie?; asking if familiar"
+    }
+  },
+  "2024-05-01-croire": {
+    "vocabulary/2": {
+      "word_id": "tu-crois-fr",
+      "fr": "tu crois",
+      "gloss": "you believe (informal)",
+      "note": "same sound as je crois; asking for opinion/belief"
+    }
+  },
+  "2024-05-03-knowledge-nouns": {
+    "concepts": [
+      {
+        "id": "c-academic-nouns",
+        "term": "Academic nouns",
+        "definition": "Essential vocabulary for school, university, and learning contexts",
+        "example": "{le cours} (class), {la leçon} (lesson), {l'école} (school), {l'université} (university)"
+      },
+      {
+        "id": "c-knowledge-nouns",
+        "term": "Knowledge nouns",
+        "definition": "Abstract nouns related to knowing and understanding",
+        "example": "{la connaissance} (knowledge - what you know), {le savoir} (knowledge - abstract), {la pensée} (thought)"
+      },
+      {
+        "id": "c-communication-nouns",
+        "term": "Communication nouns",
+        "definition": "Question-and-answer vocabulary - essential for learning!",
+        "example": "{la question} (question), {la réponse} (answer), {l'idée} (idea)"
+      },
+      {
+        "id": "c-complete-sentence-composition",
+        "term": "Complete sentence composition",
+        "definition": "Now you can build full sentences about learning and knowing",
+        "example": "{J'ai une question} (I have a question), {C'est une bonne idée} (That's a good idea), {Je vais au cours} (I'm going to class)"
+      }
+    ]
+  },
+  "2024-05-08-savoir": {
+    "vocabulary/2": {
+      "word_id": "tu-sais-fr",
+      "fr": "tu sais",
+      "gloss": "you know (informal)",
+      "note": "same sound as je sais; super common question"
+    }
+  },
+  "2024-05-10-unit-7-exam": {
+    "description": "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers."
+  },
+  "2024-05-11-unit-7-practice": {
+    "description": "Complete sentences using cognitive verbs, on, discourse markers, and essential vocabulary from this unit!",
+    "title": "Knowledge & Learning Practice - Fill in the Blanks"
+  },
+  "2024-05-17-getting-ready": {
+    "vocabulary/1": {
+      "word_id": "je-me-lave-fr",
+      "fr": "je me lave",
+      "gloss": "I wash myself",
+      "note": "daily routine"
+    }
+  },
+  "2024-05-21-reflexive-pronouns": {
+    "concepts": [
+      {
+        "id": "c-reflexive-pronouns",
+        "term": "Reflexive Pronouns",
+        "definition": "Pronouns that refer back to the subject - 'myself', 'yourself', 'himself', etc.",
+        "example": "{je me lave} (I wash myself), {tu te lèves} (you get yourself up), {il se prépare} (he prepares himself)"
+      },
+      {
+        "id": "c-parallel-to-object-pronouns",
+        "term": "Parallel to Object Pronouns",
+        "definition": "Same forms as object pronouns, but refer back to the subject",
+        "example": "Object: {il me voit} (he sees me). Reflexive: {je me vois} (I see myself)"
+      },
+      {
+        "id": "c-position-before-the-verb",
+        "term": "Position: Before the Verb",
+        "definition": "Reflexive pronouns go BEFORE the conjugated verb, just like object pronouns",
+        "example": "{je me lave} (not je lave me), {tu te lèves} (not tu lèves te)"
+      },
+      {
+        "id": "c-the-reflexive-pronoun-set",
+        "term": "The Reflexive Pronoun Set",
+        "definition": "me (myself), te (yourself), se (himself/herself/oneself), nous (ourselves), vous (yourselves), se (themselves)",
+        "example": "Each pronoun matches a subject: {je} → {me}, {tu} → {te}, {il}/{elle} → {se}, {nous} → nous, {vous} → vous, {ils}/{elles} → se"
+      }
+    ]
+  },
+  "2024-05-22-s-appeler": {
+    "concepts": [
+      {
+        "id": "c-s-appeler-to-be",
+        "term": "{s'appeler} = to be called / to call oneself",
+        "definition": "THE way to say your name in French! Literally 'to call oneself'",
+        "example": "{Je m'appelle Marie} (I call myself Marie = My name is Marie), {Comment tu t'appelles?} (What do you call yourself? = What's your name?)"
+      },
+      {
+        "id": "c-this-should-ve-been",
+        "term": "The Most Basic Introduction",
+        "definition": "You've been waiting to learn this - the most basic introduction!",
+        "example": "Now you can finally properly introduce yourself in French!"
+      },
+      {
+        "id": "c-reflexive-pattern",
+        "term": "Reflexive Pattern",
+        "definition": "Uses reflexive pronouns: je m'appelle, tu t'appelles, il s'appelle",
+        "example": "Notice the elision: {je m'appelle} (not je me appelle), {tu t'appelles} (not tu te appelles)"
+      },
+      {
+        "id": "c-regular-er-verb-conjugation",
+        "term": "Regular -ER verb conjugation",
+        "definition": "Once you know the reflexive pronouns, the verb part is easy - regular -ER pattern!",
+        "example": "{appelle}, {appelles}, appelle, {appelons}, {appelez}, {appellent}"
+      }
+    ]
+  },
+  "2024-05-24-unit-8-exam": {
+    "description": "Test everything from this unit! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions."
+  },
+  "2024-05-25-unit-8-practice": {
+    "description": "Complete sentences using temporal words, reflexive verbs, and commands from this unit!",
+    "items/i-apres-m-habille-me": {
+      "id": "i-apres-m-habille-me",
+      "type": "gapfill",
+      "text": "___ le café, je ___ et je ___.",
+      "blanks": [
+        {
+          "answer": "après"
+        },
+        {
+          "answer": "me lave"
+        },
+        {
+          "answer": "m'habille"
+        }
+      ],
+      "gloss": "After coffee, I wash and I get dressed",
+      "hint": "temporal: after / se laver for {je} / s'habiller for {je}"
+    },
+    "items/i-d-abord-ensuite": {
+      "id": "i-d-abord-ensuite",
+      "type": "gapfill",
+      "text": "___, je mange. ___, je pars.",
+      "blanks": [
+        {
+          "answer": "d'abord"
+        },
+        {
+          "answer": "ensuite"
+        }
+      ],
+      "gloss": "First, I eat. Then, I leave.",
+      "hint": "first / first of all / then / next"
+    },
+    "title": "Daily Life & Actions Practice - Fill in the Blanks"
+  },
+  "2024-05-30-passe-compose-er": {
+    "concepts": [
+      {
+        "id": "c-passe-compose-avoir-past",
+        "term": "{Passé Composé} = avoir + past participle",
+        "definition": "Compound past tense for completed actions: auxiliary verb '{avoir}' + past participle",
+        "example": "{j'ai parlé} (I spoke), {tu as mangé} (you ate), {il a étudié} (he studied)"
+      },
+      {
+        "id": "c-regular-er-verbs-e",
+        "term": "Regular -ER verbs → -é past participle",
+        "definition": "Remove -er, add -é: parler → parlé, manger → mangé, étudier → étudié",
+        "example": "{parler} → {parlé} (spoken), {manger} → {mangé} (eaten), {aimer} → {aimé} (loved)"
+      },
+      {
+        "id": "c-formation-j-ai-past",
+        "term": "Formation: j'ai + past participle",
+        "definition": "Use present tense of avoir + past participle ending in -é",
+        "example": "{j'ai parlé}, {tu as parlé}, {il}/{elle a parlé}, {nous avons parlé}, {vous avez parlé}, {ils}/{elles ont parlé}"
+      },
+      {
+        "id": "c-negation-ne-pas-around",
+        "term": "Negation: ne...pas around avoir",
+        "definition": "Place ne and pas around the auxiliary verb avoir",
+        "example": "{je n'ai pas parlé} (I didn't speak), {tu n'as pas mangé} (you didn't eat)"
+      },
+      {
+        "id": "c-questions-inversion-or-est",
+        "term": "Questions: inversion or {Est-ce que}",
+        "definition": "Invert avoir with subject, or use est-ce que",
+        "example": "{As-tu parlé?} (Did you speak?), {Est-ce que tu as mangé?} (Did you eat?)"
+      },
+      {
+        "id": "c-when-to-use-passe",
+        "term": "When to use Passé Composé",
+        "definition": "For specific completed actions in the past, countable events",
+        "example": "{Hier, j'ai parlé avec Marie} (Yesterday, I spoke with Marie), {J'ai mangé à 8h} (I ate at 8)"
+      }
+    ]
+  },
+  "2024-06-03-past-tense-composition": {
+    "items/i-parce-que": {
+      "id": "i-parce-que",
+      "type": "gapfill",
+      "text": "___ j'avais faim, j'ai mangé",
+      "blanks": [
+        {
+          "answer": "Parce que"
+        }
+      ],
+      "gloss": "Because I was hungry, I ate",
+      "mistakes": [
+        {
+          "answer": "Grâce à",
+          "feedback": "Grâce à is POSITIVE and needs a NOUN! Use '{Parce que}' + clause for hunger."
+        },
+        {
+          "answer": "À cause de",
+          "feedback": "À cause de needs a NOUN! Use '{Parce que j'avais faim}' (because I was hungry)."
+        }
+      ]
+    }
+  },
+  "2024-06-09-unit-9-exam": {
+    "description": "Test everything from this unit! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery."
+  },
+  "2024-06-10-unit-9-practice": {
+    "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
+    "title": "Discourse & Past Tense Practice - Fill in the Blanks"
+  }
+}

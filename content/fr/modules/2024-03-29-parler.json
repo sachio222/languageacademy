@@ -142,7 +142,7 @@
     {
       "id": "i-je-parle",
       "type": "transform",
-      "instruction": "Say what language you speak. Say \"I speak\"",
+      "instruction": "Say what language you speak. Say \"I speak\": I speak / I talk",
       "shown": "parler",
       "answer": "je parle",
       "hint": "{je + parler = ?}",
@@ -160,7 +160,7 @@
     {
       "id": "i-tu-parles",
       "type": "transform",
-      "instruction": "Tell your friend what they speak. Say \"you speak (informal)\"",
+      "instruction": "Tell your friend what they speak. Say \"you speak (informal)\": you speak / you talk (informal)",
       "shown": "parler",
       "answer": "tu parles",
       "hint": "{tu + parler = ?}",
@@ -178,7 +178,7 @@
     {
       "id": "i-il-parle",
       "type": "transform",
-      "instruction": "Say what a man speaks. Say \"he speaks\"",
+      "instruction": "Say what a man speaks. Say \"he speaks\": he speaks / he talks",
       "shown": "parler",
       "answer": "il parle",
       "hint": "{il + parler = ?}",
@@ -196,7 +196,7 @@
     {
       "id": "i-elle-parle",
       "type": "transform",
-      "instruction": "Say what a woman speaks. Say \"she speaks\"",
+      "instruction": "Say what a woman speaks. Say \"she speaks\": she speaks / she talks",
       "shown": "parler",
       "answer": "elle parle",
       "hint": "{elle + parler = ?}",
@@ -214,7 +214,7 @@
     {
       "id": "i-nous-parlons",
       "type": "transform",
-      "instruction": "Say what your group speaks. Say \"we speak\"",
+      "instruction": "Say what your group speaks. Say \"we speak\": we speak / we talk",
       "shown": "parler",
       "answer": "nous parlons",
       "hint": "{nous + parler = ?}",
@@ -232,7 +232,7 @@
     {
       "id": "i-vous-parlez",
       "type": "transform",
-      "instruction": "Ask formally what someone speaks. Say \"you speak (formal/plural)\"",
+      "instruction": "Ask formally what someone speaks. Say \"you speak (formal/plural)\": you speak / you talk (formal or plural)",
       "shown": "parler",
       "answer": "vous parlez",
       "hint": "{vous + parler = ?}",
@@ -250,7 +250,7 @@
     {
       "id": "i-ils-parlent",
       "type": "transform",
-      "instruction": "Say what they speak (masculine). Say \"they speak (masculine)\"",
+      "instruction": "Say what they speak (masculine). Say \"they speak (masculine)\": they speak / they talk (masculine or mixed)",
       "shown": "parler",
       "answer": "ils parlent",
       "hint": "{ils + parler = ?}",
@@ -268,7 +268,7 @@
     {
       "id": "i-elles-parlent",
       "type": "transform",
-      "instruction": "Say what they speak (feminine). Say \"they speak (feminine)\"",
+      "instruction": "Say what they speak (feminine). Say \"they speak (feminine)\": they speak / they talk (all feminine)",
       "shown": "parler",
       "answer": "elles parlent",
       "hint": "{elles + parler = ?}",

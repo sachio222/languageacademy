@@ -64,6 +64,12 @@
       "fr": "je ne crois pas",
       "gloss": "I don't believe so / I don't think so",
       "note": "common negative response"
+    },
+    {
+      "word_id": "tu-crois-fr.question",
+      "fr": "Tu crois?",
+      "gloss": "Do you think so? / Do you believe it?",
+      "note": "asking for opinion/belief"
     }
   ],
   "concepts": [
@@ -160,7 +166,7 @@
     {
       "id": "i-tu-crois",
       "type": "transform",
-      "instruction": "Ask if someone believes it. Say \"you believe (informal)\"",
+      "instruction": "Ask if someone believes it. Say \"you believe (informal)\": you believe / you think (informal)",
       "shown": "croire",
       "answer": "tu crois",
       "hint": "{tu + croire = ?}",
@@ -178,7 +184,7 @@
     {
       "id": "i-il-croit",
       "type": "transform",
-      "instruction": "He believes that's true. Say \"he believes\"",
+      "instruction": "He believes that's true. Say \"he believes\": he believes / he thinks",
       "shown": "croire",
       "answer": "il croit",
       "hint": "{il + croire = ?}",
@@ -196,7 +202,7 @@
     {
       "id": "i-elle-croit",
       "type": "transform",
-      "instruction": "She believes in you. Say \"she believes\"",
+      "instruction": "She believes in you. Say \"she believes\": she believes / she thinks",
       "shown": "croire",
       "answer": "elle croit",
       "hint": "{elle + croire = ?}",
@@ -214,7 +220,7 @@
     {
       "id": "i-nous-croyons",
       "type": "transform",
-      "instruction": "We believe it's possible. Say \"we believe\"",
+      "instruction": "We believe it's possible. Say \"we believe\": we believe / we think",
       "shown": "croire",
       "answer": "nous croyons",
       "hint": "{nous + croire = ?}",
@@ -232,7 +238,7 @@
     {
       "id": "i-vous-croyez",
       "type": "transform",
-      "instruction": "Ask formally if they believe. Say \"you believe (formal/plural)\"",
+      "instruction": "Ask formally if they believe. Say \"you believe (formal/plural)\": you believe / you think (formal or plural)",
       "shown": "croire",
       "answer": "vous croyez",
       "hint": "{vous + croire = ?}",
@@ -250,7 +256,7 @@
     {
       "id": "i-ils-croient",
       "type": "transform",
-      "instruction": "They believe the story. Say \"they believe (masculine)\"",
+      "instruction": "They believe the story. Say \"they believe (masculine)\": they believe / they think (masculine or mixed)",
       "shown": "croire",
       "answer": "ils croient",
       "hint": "{ils + croire = ?}",
@@ -268,7 +274,7 @@
     {
       "id": "i-elles-croient",
       "type": "transform",
-      "instruction": "They (feminine) believe so. Say \"they believe (feminine)\"",
+      "instruction": "They (feminine) believe so. Say \"they believe (feminine)\": they believe / they think (all feminine)",
       "shown": "croire",
       "answer": "elles croient",
       "hint": "{elles + croire = ?}",

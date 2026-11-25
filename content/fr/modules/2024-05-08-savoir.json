@@ -60,6 +60,12 @@
       "note": "⭐⭐⭐ MOST IMPORTANT! Rank 21!"
     },
     {
+      "word_id": "tu-sais-fr.question",
+      "fr": "Tu sais?",
+      "gloss": "Do you know? / You know?",
+      "note": "super common question"
+    },
+    {
       "word_id": "je-sais-parler-fr",
       "fr": "je sais parler",
       "gloss": "I know how to speak / I can speak",
@@ -228,7 +234,7 @@
     {
       "id": "i-vous-savez",
       "type": "transform",
-      "instruction": "Ask formally if they know. Say \"you know (formal/plural)\"",
+      "instruction": "Ask formally if they know. Say \"you know (formal/plural)\": you know (formal or plural)",
       "shown": "savoir",
       "answer": "vous savez",
       "hint": "{vous + savoir = ?}",
@@ -246,7 +252,7 @@
     {
       "id": "i-ils-savent",
       "type": "transform",
-      "instruction": "They know everything. Say \"they know (masculine)\"",
+      "instruction": "They know everything. Say \"they know (masculine)\": they know (masculine or mixed)",
       "shown": "savoir",
       "answer": "ils savent",
       "hint": "{ils + savoir = ?}",
@@ -264,7 +270,7 @@
     {
       "id": "i-elles-savent",
       "type": "transform",
-      "instruction": "They (feminine) know how to cook. Say \"they know (feminine)\"",
+      "instruction": "They (feminine) know how to cook. Say \"they know (feminine)\": they know (all feminine)",
       "shown": "savoir",
       "answer": "elles savent",
       "hint": "{elles + savoir = ?}",

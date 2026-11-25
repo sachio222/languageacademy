@@ -220,7 +220,7 @@
     {
       "id": "i-vous-avez",
       "type": "transform",
-      "instruction": "Tell someone formally what they have. Say \"you have (formal/plural)\"",
+      "instruction": "Tell someone formally what they have. Say \"you have (formal/plural)\": you have (formal or plural)",
       "shown": "avoir",
       "answer": "vous avez",
       "hint": "{vous + avoir = ?}",
@@ -238,7 +238,7 @@
     {
       "id": "i-ils-ont",
       "type": "transform",
-      "instruction": "Say what a group of men has. Say \"they have (masculine)\"",
+      "instruction": "Say what a group of men has. Say \"they have (masculine)\": they have (masculine or mixed)",
       "shown": "avoir",
       "answer": "ils ont",
       "hint": "{ils + avoir = ?}",
@@ -256,7 +256,7 @@
     {
       "id": "i-elles-ont",
       "type": "transform",
-      "instruction": "Say what a group of women has. Say \"they have (feminine)\"",
+      "instruction": "Say what a group of women has. Say \"they have (feminine)\": they have (all feminine)",
       "shown": "avoir",
       "answer": "elles ont",
       "hint": "{elles + avoir = ?}",

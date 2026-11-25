@@ -136,7 +136,7 @@
     {
       "id": "i-je-vois",
       "type": "transform",
-      "instruction": "Say what you see. Say \"I see\"",
+      "instruction": "Say what you see. Say \"I see\": I see / I am seeing",
       "shown": "voir",
       "answer": "je vois",
       "hint": "{je + voir = ?}",
@@ -154,7 +154,7 @@
     {
       "id": "i-tu-vois",
       "type": "transform",
-      "instruction": "Say what you see (informal). Say \"you see (informal)\"",
+      "instruction": "Say what you see (informal). Say \"you see (informal)\": you see / you are seeing (informal)",
       "shown": "voir",
       "answer": "tu vois",
       "hint": "{tu + voir = ?}",
@@ -172,7 +172,7 @@
     {
       "id": "i-il-voit",
       "type": "transform",
-      "instruction": "Say what he sees. Say \"he sees\"",
+      "instruction": "Say what he sees. Say \"he sees\": he sees / he is seeing",
       "shown": "voir",
       "answer": "il voit",
       "hint": "{il + voir = ?}",
@@ -190,7 +190,7 @@
     {
       "id": "i-elle-voit",
       "type": "transform",
-      "instruction": "Say what she sees. Say \"she sees\"",
+      "instruction": "Say what she sees. Say \"she sees\": she sees / she is seeing",
       "shown": "voir",
       "answer": "elle voit",
       "hint": "{elle + voir = ?}",
@@ -208,7 +208,7 @@
     {
       "id": "i-nous-voyons",
       "type": "transform",
-      "instruction": "Say what we see. Say \"we see\"",
+      "instruction": "Say what we see. Say \"we see\": we see / we are seeing",
       "shown": "voir",
       "answer": "nous voyons",
       "hint": "{nous + voir = ?}",
@@ -226,7 +226,7 @@
     {
       "id": "i-vous-voyez",
       "type": "transform",
-      "instruction": "Say what you see (formal). Say \"you see (formal/plural)\"",
+      "instruction": "Say what you see (formal). Say \"you see (formal/plural)\": you see / you are seeing (formal or plural)",
       "shown": "voir",
       "answer": "vous voyez",
       "hint": "{vous + voir = ?}",
@@ -244,7 +244,7 @@
     {
       "id": "i-ils-voient",
       "type": "transform",
-      "instruction": "Say what they see (masculine). Say \"they see (masculine)\"",
+      "instruction": "Say what they see (masculine). Say \"they see (masculine)\": they see / they are seeing (masculine or mixed)",
       "shown": "voir",
       "answer": "ils voient",
       "hint": "{ils + voir = ?}",
@@ -262,7 +262,7 @@
     {
       "id": "i-elles-voient",
       "type": "transform",
-      "instruction": "Say what they see (feminine). Say \"they see (feminine)\"",
+      "instruction": "Say what they see (feminine). Say \"they see (feminine)\": they see / they are seeing (all feminine)",
       "shown": "voir",
       "answer": "elles voient",
       "hint": "{elles + voir = ?}",

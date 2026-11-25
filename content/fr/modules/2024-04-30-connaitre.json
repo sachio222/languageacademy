@@ -64,6 +64,12 @@
       "fr": "je connais Paris",
       "gloss": "I know Paris / I'm familiar with Paris",
       "note": "⭐ places - use connaître"
+    },
+    {
+      "word_id": "tu-connais-fr.question",
+      "fr": "Tu connais?",
+      "gloss": "Do you know (it/him/her)?",
+      "note": "asking if familiar"
     }
   ],
   "concepts": [
@@ -89,7 +95,7 @@
       "id": "c-never-use-connaitre-infinitive",
       "term": "NEVER use connaître + infinitive",
       "definition": "You CANNOT say '{je connais parler}' - use savoir for skills!",
-      "example": "{✓ je sais parler} (I know how to speak), {✗ je connais parler} (WRONG!)"
+      "example": "✓ {je sais parler} (I know how to speak), ✗ {je connais parler} (WRONG!)"
     },
     {
       "id": "c-common-uses",
@@ -142,7 +148,7 @@
     {
       "id": "i-je-connais",
       "type": "transform",
-      "instruction": "You know a person. Say \"I know\"",
+      "instruction": "You know a person. Say \"I know\": I know (people/places)",
       "shown": "connaître",
       "answer": "je connais",
       "hint": "{je + connaître = ?}",
@@ -228,7 +234,7 @@
     {
       "id": "i-vous-connaissez",
       "type": "transform",
-      "instruction": "Ask formally if they know someone. Say \"you know (formal/plural)\"",
+      "instruction": "Ask formally if they know someone. Say \"you know (formal/plural)\": you know (formal or plural)",
       "shown": "connaître",
       "answer": "vous connaissez",
       "hint": "{vous + connaître = ?}",
@@ -246,7 +252,7 @@
     {
       "id": "i-ils-connaissent",
       "type": "transform",
-      "instruction": "They know the city. Say \"they know (masculine)\"",
+      "instruction": "They know the city. Say \"they know (masculine)\": they know (masculine or mixed)",
       "shown": "connaître",
       "answer": "ils connaissent",
       "hint": "{ils + connaître = ?}",
@@ -264,7 +270,7 @@
     {
       "id": "i-elles-connaissent",
       "type": "transform",
-      "instruction": "They (feminine) know Marie. Say \"they know (feminine)\"",
+      "instruction": "They (feminine) know Marie. Say \"they know (feminine)\": they know (all feminine)",
       "shown": "connaître",
       "answer": "elles connaissent",
       "hint": "{elles + connaître = ?}",
