@@ -6,7 +6,7 @@ import { renderFixList, summarize, checkSummaryLines } from './report.mjs';
 import { dueAt } from './rules/reuse.mjs';
 import { writeSortedJson } from './write-json.mjs';
 import { writeReportData } from './report-data.mjs';
-import { compareBudget, readBudget, lowered, writeBudget } from './budget.mjs';
+import { readBudget, writeBudget, checkBudgetParts, loweredParts, BUDGET_PARTS } from './budget.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -23,7 +23,8 @@ async function main() {
     if (!native || native.startsWith('--')) { console.error(USAGE); process.exit(2); }
     args.splice(flag, 2);
   }
-  // --budget: exit 1 only when a rule's count rises above curriculum-graph/reports/issue-budget.json (budget.mjs).
+  // --budget: exit 1 only when a rule's count rises above curriculum-graph/reports/issue-budget.json (budget.mjs), in
+  // either part: legacy (Units 1 to 12, the shelf) or new (Unit 13 onward, every rule at zero).
   // --lower-budget: the same, then write every count that fell into the budget.
   const takeFlag = (name) => {
     const at = args.indexOf(name);
@@ -45,11 +46,15 @@ async function main() {
     for (const line of checkSummaryLines(summary)) console.log(line);
     if (!budget) process.exit(summary.errors > 0 ? 1 : 0);
     const limits = readBudget(BUDGET_FILE);
-    const { over, under } = compareBudget(summary.byRule, limits);
-    for (const o of over) console.log(`over budget: ${o.rule}: ${o.count} (budget ${o.budget})`);
-    for (const u of under) console.log(`under budget: ${u.rule}: ${u.count} (budget ${u.budget})`);
+    const unitOf = (key) => ctx.content?.modules?.get(key)?.unit_key ?? null;
+    const parts = checkBudgetParts(issues, unitOf, limits);
+    const label = { legacy: 'Units 1 to 12 and the shelf', new: 'Unit 13 onward' };
+    const over = BUDGET_PARTS.flatMap((p) => parts[p].over.map((o) => ({ ...o, part: p })));
+    const under = BUDGET_PARTS.flatMap((p) => parts[p].under.map((u) => ({ ...u, part: p })));
+    for (const o of over) console.log(`over budget (${label[o.part]}): ${o.rule}: ${o.count} (budget ${o.budget})`);
+    for (const u of under) console.log(`under budget (${label[u.part]}): ${u.rule}: ${u.count} (budget ${u.budget})`);
     if (lower && !over.length && under.length) {
-      writeBudget(BUDGET_FILE, lowered(summary.byRule, limits));
+      writeBudget(BUDGET_FILE, loweredParts(parts.counts, limits));
       console.log(`lowered the budget for ${under.length} rule${under.length === 1 ? '' : 's'}`);
     } else if (under.length && !over.length) console.log('run graph:check --lower-budget to keep these gains');
     console.log(over.length ? `budget: ${over.length} rule${over.length === 1 ? '' : 's'} over` : 'budget: ok');

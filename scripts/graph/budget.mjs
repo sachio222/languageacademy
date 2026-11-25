@@ -37,3 +37,42 @@ export function lowered(byRule, budget) {
 export function writeBudget(file, budget) {
   writeSortedJson(file, budget);
 }
+
+/* ---------- two parts: legacy units and new units ---------- */
+
+// The budget file holds { about, legacy: { rule: n }, new: { rule: n } }. Legacy is Units 1 to 12, the Reference
+// shelf and course-wide issues, at the counts the conversion left (they can only go down); new is Unit 13 onward, at
+// zero, so a module written in a new unit can never hide behind the old units' headroom (ledger ruling 2026-11-25).
+export const BUDGET_PARTS = ['legacy', 'new'];
+export const LAST_LEGACY_UNIT = 12;
+
+/** 'legacy' or 'new' for a module's unit_key (null: the shelf, or an issue of the whole course). */
+export function budgetPartOf(unitKey) {
+  const m = /^unit(\d+)$/.exec(unitKey ?? '');
+  return m && Number(m[1]) > LAST_LEGACY_UNIT ? 'new' : 'legacy';
+}
+
+/** { legacy: { rule: count }, new: { rule: count } } of the issues; unitOf(moduleKey) gives a module's unit_key. */
+export function countByPart(issues, unitOf) {
+  const out = Object.fromEntries(BUDGET_PARTS.map((p) => [p, {}]));
+  for (const i of issues) {
+    const part = budgetPartOf(i.moduleKey ? unitOf(i.moduleKey) : null);
+    out[part][i.rule] = (out[part][i.rule] ?? 0) + 1;
+  }
+  return out;
+}
+
+/** compareBudget for each part: { legacy: { over, under }, new: { over, under }, counts }. */
+export function checkBudgetParts(issues, unitOf, budget) {
+  const counts = countByPart(issues, unitOf);
+  const out = { counts };
+  for (const p of BUDGET_PARTS) out[p] = compareBudget(counts[p], budget[p] ?? {});
+  return out;
+}
+
+/** The two-part budget with every count that fell written down (lowered, per part); `about` kept. */
+export function loweredParts(counts, budget) {
+  const out = { ...(budget.about ? { about: budget.about } : {}) };
+  for (const p of BUDGET_PARTS) out[p] = lowered(counts[p] ?? {}, budget[p] ?? {});
+  return out;
+}

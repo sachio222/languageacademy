@@ -1,14 +1,18 @@
 {
-  "claim-untaught": 25,
-  "exam_item_copied": 94,
-  "function-unreachable": 1,
-  "guide_only_teaching": 14,
-  "level-order": 37,
-  "reading_word_no_popup": 10,
-  "reuse-missed": 710,
-  "taught-twice": 139,
-  "translate-item": 946,
-  "unknown-word": 86,
-  "untaught-construction": 78,
-  "untaught-word": 330
+  "about": "The most issues of each rule graph:check --budget allows, in two parts: legacy is Units 1 to 12, the Reference shelf and course-wide issues, at the counts the conversion left, which can only go down (graph:check --lower-budget); new is Unit 13 onward, where every rule is at zero, so a module written in a new unit is never hidden by the old units (ledger ruling 2026-11-25). A rule a part does not name has a budget of 0.",
+  "legacy": {
+    "claim-untaught": 25,
+    "exam_item_copied": 94,
+    "function-unreachable": 1,
+    "guide_only_teaching": 14,
+    "level-order": 37,
+    "reading_word_no_popup": 10,
+    "reuse-missed": 710,
+    "taught-twice": 139,
+    "translate-item": 946,
+    "unknown-word": 86,
+    "untaught-construction": 78,
+    "untaught-word": 330
+  },
+  "new": {}
 }
