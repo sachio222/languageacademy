@@ -5124,10 +5124,13 @@
     ]
   },
   "2026-11-24-numbers": {
-    "teachesWords": [
-      "fr:lex:zero",
+    "excludeWords": [
       "fr:lex:un",
       "fr:form:un.f",
+      "fr:lex:et"
+    ],
+    "teachesWords": [
+      "fr:lex:zero",
       "fr:lex:deux",
       "fr:lex:trois",
       "fr:lex:quatre",
@@ -5144,7 +5147,6 @@
       "fr:lex:quinze",
       "fr:lex:seize",
       "fr:lex:vingt",
-      "fr:lex:et",
       "fr:lex:trente",
       "fr:lex:quarante",
       "fr:lex:cinquante",

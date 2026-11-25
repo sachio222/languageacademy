@@ -5,7 +5,9 @@
  */
 
 // One fill-in-the-blank item. `words` lists the accepted spellings of the number, the preferred one first;
-// the learner may type the number alone or the whole sentence.
+// the learner may type the number alone or the whole sentence. A wrong answer given as `blank` (what the learner
+// might write in the blank) gets its feedback both typed alone and inside the sentence; one given as `answer` is
+// a whole sentence and is matched as written.
 const fill = (sentence, digits, words, { hint, wrongAnswers = [] }) => {
   const withWord = (w) => {
     const s = sentence.replace("___", w);
@@ -17,7 +19,10 @@ const fill = (sentence, digits, words, { hint, wrongAnswers = [] }) => {
     hint,
     expectedAnswer: withWord(words[0]),
     acceptableAnswers: [...words, ...words.slice(1).map(withWord)],
-    wrongAnswers,
+    wrongAnswers: wrongAnswers.flatMap(({ blank, answer, feedback }) =>
+      blank === undefined
+        ? [{ answer, feedback }]
+        : [{ answer: blank, feedback }, { answer: withWord(blank), feedback }]),
   };
 };
 
@@ -76,7 +81,7 @@ export const numbersLesson = {
     {
       term: "70 to 79",
       definition:
-        "French says 70 as sixty-ten, then counts on with 11 to 19: sixty-eleven, sixty-twelve, up to sixty-nineteen.",
+        "French says 70 as sixty-ten, then counts on with 11 to 19: sixty-eleven, sixty-twelve, up to sixty-nineteen. 71 keeps 'et': 'soixante et onze'.",
       example:
         "soixante-dix (70), soixante et onze (71), soixante-douze (72), soixante-quinze (75), soixante-dix-neuf (79)",
     },
@@ -144,27 +149,27 @@ export const numbersLesson = {
     items: [
       fill("Il a ___ chats.", 3, ["trois"], {
         hint: "3 is 'trois'.",
-        wrongAnswers: [{ answer: "Il a deux chats.", feedback: "'Deux' is 2. Write 3." }],
+        wrongAnswers: [{ blank: "deux", feedback: "'Deux' is 2. Write 3." }],
       }),
       fill("Nous avons ___ enfants.", 2, ["deux"], {
         hint: "2 is 'deux'.",
         wrongAnswers: [
-          { answer: "Nous avons des enfants.", feedback: "'Des' gives no number. Write 2." },
+          { blank: "des", feedback: "'Des' gives no number. Write 2." },
         ],
       }),
       fill("J'ai ___ voiture.", 1, ["une"], {
         hint: "'Voiture' is feminine.",
         wrongAnswers: [
-          { answer: "J'ai un voiture.", feedback: "'Voiture' is feminine, so 1 is 'une'." },
+          { blank: "un", feedback: "'Voiture' is feminine, so 1 is 'une'." },
         ],
       }),
       fill("Elle a ___ livres.", 12, ["douze"], {
         hint: "12 has its own word.",
-        wrongAnswers: [{ answer: "Elle a deux livres.", feedback: "'Deux' is 2. 12 is 'douze'." }],
+        wrongAnswers: [{ blank: "deux", feedback: "'Deux' is 2. 12 is 'douze'." }],
       }),
       fill("Le chien a ___ ans.", 16, ["seize"], {
         hint: "16 has its own word, like 11 to 15.",
-        wrongAnswers: [{ answer: "Le chien a six ans.", feedback: "'Six' is 6. 16 is 'seize'." }],
+        wrongAnswers: [{ blank: "six", feedback: "'Six' is 6. 16 is 'seize'." }],
       }),
       next("quinze, seize", ["dix-sept", "dix sept"], {
         hint: "Ten, then seven.",
@@ -172,7 +177,7 @@ export const numbersLesson = {
       }),
       fill("Marie a ___ ans.", 19, ["dix-neuf", "dix neuf"], {
         hint: "Ten, then nine.",
-        wrongAnswers: [{ answer: "Marie a neuf ans.", feedback: "'Neuf' is 9. 19 is 'dix-neuf'." }],
+        wrongAnswers: [{ blank: "neuf", feedback: "'Neuf' is 9. 19 is 'dix-neuf'." }],
       }),
       fill("J'ai ___ ans.", 20, ["vingt"], {
         hint: "For age, French uses avoir and 'ans'.",
@@ -183,13 +188,13 @@ export const numbersLesson = {
       fill("Tu as ___ ans.", 21, ["vingt et un", "vingt-et-un"], {
         hint: "21 puts 'et' between 'vingt' and 'un'.",
         wrongAnswers: [
-          { answer: "Tu as vingt-un ans.", feedback: "21 needs 'et': 'vingt et un'." },
+          { blank: "vingt-un", feedback: "21 needs 'et': 'vingt et un'." },
         ],
       }),
       fill("Vous avez ___ amis.", 35, ["trente-cinq", "trente cinq"], {
         hint: "30 is 'trente'. Join 5 with a hyphen.",
         wrongAnswers: [
-          { answer: "Vous avez trente et cinq amis.", feedback: "Only 1 takes 'et'. 35 is 'trente-cinq'." },
+          { blank: "trente et cinq", feedback: "Only 21, 31, 41, 51, 61 and 71 take 'et'. 35 is 'trente-cinq'." },
         ],
       }),
       fill("Paul a ___ ans.", 48, ["quarante-huit", "quarante huit"], {
@@ -199,7 +204,7 @@ export const numbersLesson = {
         hint: "50 is 'cinquante'. 'Voiture' is feminine.",
         wrongAnswers: [
           {
-            answer: "Elles ont cinquante et un voitures.",
+            blank: "cinquante et un",
             feedback: "'Voiture' is feminine, so 51 ends in 'une': 'cinquante et une voitures'.",
           },
         ],
@@ -216,26 +221,26 @@ export const numbersLesson = {
       fill("Il a ___ ans.", 71, ["soixante et onze", "soixante-et-onze"], {
         hint: "Sixty, then eleven, with 'et'.",
         wrongAnswers: [
-          { answer: "Il a soixante-dix-un ans.", feedback: "71 is sixty and eleven: 'soixante et onze'." },
+          { blank: "soixante-dix-un", feedback: "71 is sixty and eleven: 'soixante et onze'." },
         ],
       }),
       fill("Nous avons ___ livres.", 75, ["soixante-quinze", "soixante quinze"], {
         hint: "Sixty, then fifteen.",
         wrongAnswers: [
-          { answer: "Nous avons soixante-dix-cinq livres.", feedback: "75 is sixty and fifteen: 'soixante-quinze'." },
+          { blank: "soixante-dix-cinq", feedback: "75 is sixty and fifteen: 'soixante-quinze'." },
         ],
       }),
       fill("J'ai ___ livres.", 80, ["quatre-vingts", "quatre vingts"], {
         hint: "Four twenties, with an s.",
         wrongAnswers: [
-          { answer: "J'ai quatre-vingt livres.", feedback: "80 alone keeps its s: 'quatre-vingts'." },
+          { blank: "quatre-vingt", feedback: "80 alone keeps its s: 'quatre-vingts'." },
         ],
       }),
       fill("Elle a ___ ans.", 85, ["quatre-vingt-cinq", "quatre vingt cinq"], {
         hint: "Four twenties, then five. The s goes.",
         wrongAnswers: [
           {
-            answer: "Elle a quatre-vingts-cinq ans.",
+            blank: "quatre-vingts-cinq",
             feedback: "The s goes when a number follows: 'quatre-vingt-cinq'.",
           },
         ],
@@ -246,7 +251,7 @@ export const numbersLesson = {
       fill("Il a ___ ans.", 91, ["quatre-vingt-onze", "quatre vingt onze"], {
         hint: "Four twenties, then eleven. No 'et' after 80.",
         wrongAnswers: [
-          { answer: "Il a quatre-vingt-et-onze ans.", feedback: "There is no 'et' after 80: 'quatre-vingt-onze'." },
+          { blank: "quatre-vingt-et-onze", feedback: "There is no 'et' after 80: 'quatre-vingt-onze'." },
         ],
       }),
       fill("Le livre a ___ ans.", 99, ["quatre-vingt-dix-neuf", "quatre vingt dix neuf"], {
@@ -254,7 +259,7 @@ export const numbersLesson = {
       }),
       fill("La maison a ___ ans.", 100, ["cent"], {
         hint: "100 is one word.",
-        wrongAnswers: [{ answer: "La maison a un cent ans.", feedback: "100 is 'cent', with no 'un'." }],
+        wrongAnswers: [{ blank: "un cent", feedback: "100 is 'cent', with no 'un'." }],
       }),
     ],
   },

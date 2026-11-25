@@ -72,10 +72,12 @@ test('the numbers lesson opens Unit 2, teaches 0 to 100 and the word ans, and sh
   assert.equal(ctx.course[14].moduleKey, '2026-11-24-negation-guide');
   // the Reference unit opens number words for lookup, but the lesson still credits every number it teaches
   const taught = new Set(ctx.graph.courseMap[key]?.teachesWords ?? []);
-  for (const n of ['zero', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze',
-    'treize', 'quatorze', 'quinze', 'seize', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'cent', 'an', 'et']) {
+  for (const n of ['zero', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze',
+    'treize', 'quatorze', 'quinze', 'seize', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'cent', 'an']) {
     assert.ok(taught.has(`fr:lex:${n}`), `fr:lex:${n}`);
   }
+  // un, une (articles, position 5) and et (connectors) are taught before; the lesson lists them but does not claim them
+  for (const id of ['fr:lex:un', 'fr:form:un.f', 'fr:lex:et']) assert.ok(!taught.has(id), id);
   const bad = issues.filter((i) => i.moduleKey === key
     && (i.rule.startsWith('untaught-') || ['translate-item', 'unknown-word', 'claim-untaught'].includes(i.rule)));
   assert.deepEqual(bad.map((i) => i.message), []);
