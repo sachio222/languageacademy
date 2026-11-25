@@ -69,14 +69,51 @@ test('a letter-typo fix in a vocabulary card keeps its word id when the gloss is
   assert.notEqual(third.mod.vocabulary[0].word_id, id);
 });
 
-test('an answer correction keeps its item id when the prompt is unchanged, even next to a removed exercise', () => {
+test('an answer correction that still accepts the old answer keeps its item id, even next to a removed exercise', () => {
+  const heLeaves = { instruction: 'Translate:', prompt: 'he leaves', expectedAnswer: 'il part' };
+  const first = convertModule(lesson([leave, youLeave, heLeaves]), ctx);
+  const id = first.mod.items[2].id;
+  // main removes "you leave" and makes "il s'en va" the answer, still accepting "il part".
+  const corrected = { ...heLeaves, expectedAnswer: "il s'en va", acceptableAnswers: ['il part'] };
+  const second = convertModule(lesson([leave, corrected]), { ...ctx, existing: clone(first.mod), record: first.record });
+  const he = second.mod.items.find((i) => i.prompt === 'he leaves');
+  assert.equal(he.id, id);
+  assert.equal(he.answer, "il s'en va");
+  assert.deepEqual(he.accept, ['il part']);
+  assert.equal(second.mod.items.some((i) => i.prompt === 'you leave'), false);
+  assert.equal(second.report.some((l) => l.kind === 'id_new_answer'), false);
+});
+
+// content:bundle --check fails an item id whose answers share nothing with the last release's (item_id_reused): the
+// id would name another question. So a correction that accepts none of the old answers takes a new id, reported.
+test('main corrects "tu pars" to "toi, tu pars": the item takes a new id, and the run reports it', () => {
+  const first = convertModule(lesson([leave, youLeave]), ctx);
+  const old = first.mod.items.find((i) => i.prompt === 'you leave');
+  assert.equal(old.id, 'i-tu-pars');
+  // main removes "I leave" and corrects the answer under the same prompt (the reviewer's answer-correction sim).
+  const second = convertModule(lesson([{ ...youLeave, expectedAnswer: 'toi, tu pars' }]), { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(second.mod.items.map((i) => [i.id, i.prompt, i.answer]), [['i-toi-tu-pars', 'you leave', 'toi, tu pars']]);
+  const news = second.report.filter((l) => l.kind === 'id_new_answer');
+  assert.equal(news.length, 1);
+  assert.match(news[0].detail, /^i-toi-tu-pars: replaces i-tu-pars/);
+  assert.match(news[0].detail, /"toi, tu pars" accepts none of its answers \("tu pars"\)/);
+  // The old id is reported once, as replaced, not also as a removed source exercise.
+  assert.equal(second.report.some((l) => l.kind === 'source_removed' && /i-tu-pars/.test(l.detail)), false);
+  // A rerun, and --force, keep the new id and report nothing new.
+  const rerun = convertModule(lesson([{ ...youLeave, expectedAnswer: 'toi, tu pars' }]), { ...ctx, existing: clone(second.mod), record: second.record });
+  assert.deepEqual(rerun.mod, second.mod);
+  assert.equal(rerun.report.some((l) => l.kind === 'id_new_answer'), false);
+  const forced = convertModule(lesson([{ ...youLeave, expectedAnswer: 'toi, tu pars' }]), { ...ctx, existing: null, record: null, handFixes: second.handFixes, written: second.mod, idRecord: second.record });
+  assert.deepEqual(forced.mod, second.mod);
+});
+
+test('a spelling fix of an answer the old one no longer matches ("il par" to "il part") takes a new id too', () => {
   const heIs = { instruction: 'Translate:', prompt: 'he leaves', expectedAnswer: 'il par' };
   const first = convertModule(lesson([leave, youLeave, heIs]), ctx);
   const id = first.mod.items[2].id;
-  // main removes "you leave" and corrects "il par" to "il part".
   const second = convertModule(lesson([leave, { ...heIs, expectedAnswer: 'il part' }]), { ...ctx, existing: clone(first.mod), record: first.record });
   const he = second.mod.items.find((i) => i.prompt === 'he leaves');
-  assert.equal(he.id, id);
+  assert.notEqual(he.id, id);
   assert.equal(he.answer, 'il part');
-  assert.equal(second.mod.items.some((i) => i.prompt === 'you leave'), false);
+  assert.ok(second.report.some((l) => l.kind === 'id_new_answer' && l.detail.startsWith(`${he.id}: replaces ${id}`)));
 });

@@ -66,3 +66,27 @@ export function makeTableId(title, taken) {
   const slug = slugify(String(title).replace(/[{}]/g, ''), { words: 4 });
   return freeId(slug ? `t-${slug}` : 't-table', taken);
 }
+
+// What a learner may type or pick to be right, per blank: the strings content:bundle --check compares with the last
+// release (release-checks.mjs answersOf reads the same from a bundle item).
+export function acceptedAnswers(item) {
+  if (Array.isArray(item?.blanks)) return item.blanks.map((b) => [b?.answer, ...(b?.accept || [])]);
+  if (Array.isArray(item?.options)) return [[item.options.find((o) => o?.right)?.text]];
+  if (typeof item?.answer === 'string') return [[item.answer, ...(item.accept || [])]];
+  return [];
+}
+
+const foldAnswer = (s) => String(s ?? '').normalize('NFC').toLowerCase().replace(/\s+/g, ' ').trim();
+
+/**
+ * Does `now` still accept something `before` accepted, in every blank? An id may stay on its item only then: one whose
+ * answers share nothing with the last release's names another question (C-ID-4), and fails item_id_reused.
+ */
+export function acceptsAnOldAnswer(now, before) {
+  const [a, b] = [acceptedAnswers(now), acceptedAnswers(before)];
+  if (a.length !== b.length) return false;
+  return a.every((accept, i) => {
+    const old = new Set(b[i].filter((x) => typeof x === 'string').map(foldAnswer));
+    return accept.some((x) => typeof x === 'string' && old.has(foldAnswer(x)));
+  });
+}

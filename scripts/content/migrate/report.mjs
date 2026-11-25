@@ -25,9 +25,10 @@ const SECTIONS = [
   ['outline', 'Outline', 'Changes the outline step made when it wrote course.json from today’s unit configs.'],
 ];
 
-// What one run changed (a source change converted again, an exercise added or removed, a conflict accepted): news for
-// that run, which `content:migrate` prints. The report never holds them, so it is the same on every rerun and under --force.
-export const RUN_ONLY_KINDS = ['source_changed', 'source_added', 'source_removed', 'conflict_accepted'];
+// What one run changed (a source change converted again, an exercise added or removed, a conflict accepted, a corrected
+// answer given a new id): news for that run, which `content:migrate` prints. The report never holds them, so it is the
+// same on every rerun and under --force.
+export const RUN_ONLY_KINDS = ['source_changed', 'source_added', 'source_removed', 'conflict_accepted', 'id_new_answer'];
 
 const count = (lines, kind) => lines.filter((l) => l.kind === kind).length;
 

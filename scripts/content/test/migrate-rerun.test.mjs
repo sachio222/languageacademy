@@ -52,7 +52,9 @@ test('rerun with no edits changes nothing', () => {
 test('a source change reaches the file, ids kept', () => {
   const first = convertModule(old, ctx);
   const changed = clone(old);
+  // A changed answer that still accepts the old one keeps its id (an answer accepting none takes a new id: migrate-ids).
   changed.exerciseConfig.items[2].expectedAnswer = 'il est là';
+  changed.exerciseConfig.items[2].acceptableAnswers = ['il est'];
   changed.exerciseConfig.items.push({ instruction: 'Translate:', prompt: 'she is', expectedAnswer: 'elle est' });
   const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
   assert.equal(second.mod.items.length, 4);
@@ -77,6 +79,7 @@ test('a hand edit on one item survives a source change on another', () => {
   edited.items[0].hint = 'Hand hint';
   const changed = clone(old);
   changed.exerciseConfig.items[1].expectedAnswer = 'tu es là';
+  changed.exerciseConfig.items[1].acceptableAnswers = ['tu es'];
   const second = convertModule(changed, { ...ctx, existing: edited, record: first.record });
   assert.equal(second.mod.items[0].hint, 'Hand hint');
   assert.equal(second.mod.items[1].answer, 'tu es là');
@@ -216,11 +219,17 @@ test('an exercise replaced in place by a different question takes a new id; the 
   const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
   assert.deepEqual(second.mod.items.map((i) => `${i.id}=${i.answer}`), ['i-je-suis=je suis', 'i-elle-est=elle est', 'i-il-est=il est']);
   assert.ok(second.report.some((l) => l.kind === 'source_removed' && /i-tu-es/.test(l.detail)));
-  // Same prompt, corrected answer: an edit, so the id stays (spec 8.1).
+  // Same prompt, corrected answer that still accepts the old one: an edit, so the id stays (spec 8.1).
   const edited = clone(old);
-  edited.exerciseConfig.items[1] = { instruction: 'Translate:', prompt: 'you are', expectedAnswer: 'vous êtes' };
+  edited.exerciseConfig.items[1] = { instruction: 'Translate:', prompt: 'you are', expectedAnswer: 'vous êtes', acceptableAnswers: ['tu es'] };
   const third = convertModule(edited, { ...ctx, existing: clone(first.mod), record: first.record });
   assert.deepEqual(third.mod.items.map((i) => `${i.id}=${i.answer}`), ['i-je-suis=je suis', 'i-tu-es=vous êtes', 'i-il-est=il est']);
+  // Accepting none of the old answers, it asks another question: a new id in the old one's place, reported.
+  const other = clone(old);
+  other.exerciseConfig.items[1] = { instruction: 'Translate:', prompt: 'you are', expectedAnswer: 'vous êtes' };
+  const fourth = convertModule(other, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(fourth.mod.items.map((i) => `${i.id}=${i.answer}`), ['i-je-suis=je suis', 'i-vous-etes=vous êtes', 'i-il-est=il est']);
+  assert.ok(fourth.report.some((l) => l.kind === 'id_new_answer' && l.path === 'items[1]' && l.detail.startsWith('i-vous-etes: replaces i-tu-es')));
 });
 
 test('a conflict names its part, stays until accepted, and --force reports it too (final review M3)', () => {
@@ -256,5 +265,5 @@ test('the report holds no news of one run: source changes, additions and removal
   const news = RUN_ONLY_KINDS.map((kind) => ({ module_key: 'm', path: 'items[1]', kind, detail: 'this run' }));
   const summary = { modules: 1, items: 2, held: 0 };
   assert.equal(renderReport([keep, ...news], summary), renderReport([keep], summary));
-  assert.deepEqual([...RUN_ONLY_KINDS].sort(), ['conflict_accepted', 'source_added', 'source_changed', 'source_removed']);
+  assert.deepEqual([...RUN_ONLY_KINDS].sort(), ['conflict_accepted', 'id_new_answer', 'source_added', 'source_changed', 'source_removed']);
 });

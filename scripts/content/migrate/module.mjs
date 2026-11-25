@@ -10,7 +10,7 @@ import '../vite-shim.mjs';
 import { readModule } from '../../graph/course.mjs';
 import { convertTyped, convertFillblank, convertSentence, normText } from './items.mjs';
 import { markFrench, unmark } from './mark-french.mjs';
-import { makeItemId, makeConceptId, makeTableId } from '../item-ids.mjs';
+import { makeItemId, makeConceptId, makeTableId, acceptedAnswers, acceptsAnOldAnswer } from '../item-ids.mjs';
 import { createMerger, mergeVocabulary, mergeDeclared, diffs, hashOf, clone, pairByContent, sourceCards } from './merge.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { HOLDS, REWRITES } from './holds.mjs';
@@ -306,14 +306,25 @@ export function convertModule(old, opts = {}) {
       ],
       { samePlace: (s, r) => r.key !== undefined && (promptOf(r.key) === promptOf(s.key) || r.answer === s.answer) },
     );
+    // A changed answer keeps the id only while it still accepts an answer the written item accepted (content:bundle
+    // --check's item_id_reused). One that accepts none asks another question: it takes a new id, and the run says so.
+    const writtenById = new Map(idItems.map((it) => [it.id, it]));
     for (const s of srcList) {
       const r = pairs.get(s.at);
-      if (r) {
-        used.add(r.id);
-        s.f.id = r.id;
+      if (!r) continue;
+      if (r.answer !== s.answer) {
+        const before = writtenById.get(r.id) ?? { answer: r.answer };
+        const now = writtenById.has(r.id) ? s.f.item : { answer: s.answer };
+        if (!acceptsAnOldAnswer(now, before)) {
+          s.f.replaces = { id: r.id, answers: acceptedAnswers(before).flat().filter(isStr) };
+          continue;
+        }
       }
+      used.add(r.id);
+      s.f.id = r.id;
     }
   }
+  const replaced = new Set(freshItems.filter((f) => f.replaces).map((f) => f.replaces.id));
   // With no record (or an item the record never had), a written item with the same content.
   for (const f of freshItems.filter((x) => !x.id)) {
     const k2 = contentKey(f.item);
@@ -330,7 +341,14 @@ export function convertModule(old, opts = {}) {
       f.id = id;
       const value = `items/${id}` in fixes && !ex ? clone(fixes[`items/${id}`]) : { id, ...withoutId(f.item) };
       outRecord.items[id] = { src: f.hash, key: f.key, answer: f.answer, out: hashOf({ id, ...withoutId(f.item) }), ref: f.src.ref };
-      if (value) entries.push({ f, id, item: value, sort: null, state: ex ? 'added' : 'new', freshItem: { id, ...withoutId(f.item) } });
+      // A replacement takes the place of the item it replaces.
+      const sort = f.replaces && exIndex.has(f.replaces.id) ? exIndex.get(f.replaces.id) : null;
+      if (f.replaces) {
+        const shown = (xs) => xs.map((x) => `"${x}"`).join(', ');
+        add(sort === null ? f.src.ref : `items[${sort}]`, 'id_new_answer',
+          `${id}: replaces ${f.replaces.id}, since the corrected answer ${shown(acceptedAnswers(f.item).flat().filter(isStr))} accepts none of its answers (${shown(f.replaces.answers)}); a changed meaning takes a new id`);
+      }
+      if (value) entries.push({ f, id, item: value, sort, state: ex ? 'added' : 'new', freshItem: { id, ...withoutId(f.item) } });
       continue;
     }
     // The record's base (under --force too, where it only tells a conflict).
@@ -346,7 +364,7 @@ export function convertModule(old, opts = {}) {
   for (const it of exItems) {
     if (used.has(it.id)) continue;
     if (!(it.id in recItems)) entries.push({ f: null, id: it.id, item: clone(it), sort: exIndex.get(it.id), state: 'hand' });
-    else add(`items[${exIndex.get(it.id)}]`, 'source_removed', `${it.id}: its source exercise is gone, so the item is removed`);
+    else if (!replaced.has(it.id)) add(`items[${exIndex.get(it.id)}]`, 'source_removed', `${it.id}: its source exercise is gone, so the item is removed`);
   }
 
   // Order: written order; a new item follows the item made from the source exercise before it.
@@ -368,7 +386,7 @@ export function convertModule(old, opts = {}) {
     if (!e.f) return;
     const at = `items[${i}]`;
     for (const l of e.f.lines) lines.push({ module_key: key, path: l.kind === 'dropped_field' ? l.path : l.path.replace(e.f.src.ref, at), kind: l.kind, detail: `${e.id}: ${l.detail}` });
-    if (e.state === 'added') add(at, 'source_added', `${e.id}: new source exercise ${e.f.src.ref}`);
+    if (e.state === 'added' && !e.f.replaces) add(at, 'source_added', `${e.id}: new source exercise ${e.f.src.ref}`);
     diffs(e.item, e.freshItem, at, handEdits);
     noteFix(`items/${e.id}`, e.item, e.freshItem);
   });
