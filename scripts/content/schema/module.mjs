@@ -3,7 +3,7 @@
 // module and lists its learner-facing text (moduleTexts) for the span and position-word rules.
 import { problem } from '../problems.mjs';
 import { spanProblems } from '../spans.mjs';
-import { validateItem, itemTexts, checkOptions, ITEM_TYPES, ID_PATTERN } from './item.mjs';
+import { validateItem, itemTexts, checkOptions, ITEM_TYPES, ID_PATTERN, BRACE, plainFieldMessage } from './item.mjs';
 
 export const KINDS = ['lesson', 'guide', 'reading', 'practice', 'unit_exam', 'reference'];
 
@@ -166,7 +166,8 @@ const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draf
 
 const KIND_SCHEMAS = {
   lesson: {
-    fields: { vocabulary: VOCABULARY, concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }) },
+    // A lesson teaches at least one word: Flash Cards, Speed Match and Pronunciation are made from its vocabulary.
+    fields: { vocabulary: LIST(WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }) },
     required: ['vocabulary', 'items'],
   },
   guide: {
@@ -326,6 +327,7 @@ function kindRules(mod, cx) {
     bad('short_title', 'short_title_long', `short_title has ${mod.short_title.length} characters; L shows at most ${SHORT_TITLE_MAX}`);
   if (kind === 'guide' && Array.isArray(mod.checks) && mod.checks.length !== 3)
     bad('checks', 'guide_checks_count', `a guide has exactly three checks, found ${mod.checks.length}`);
+  stepRules(mod, cx);
   if (kind === 'lesson' && Array.isArray(mod.speed_match)) {
     const words = new Set((Array.isArray(mod.vocabulary) ? mod.vocabulary : []).map((w) => isObj(w) && w.word_id));
     if (mod.speed_match.length !== 6 || !mod.speed_match.every((w) => words.has(w)))
@@ -344,6 +346,20 @@ function kindRules(mod, cx) {
       });
     }
   }
+}
+
+// The scored steps made from a module's items. Each step its kind runs must ask at least one item, or L would open an
+// empty step (step_empty). An item's `steps` can move it out of a step, so the defaults alone do not settle it.
+const ITEM_STEPS = ['lesson-exam', 'exam-questions', 'practice-exercises', 'reading-passage'];
+function stepRules(mod, cx) {
+  const { kind, bad } = cx;
+  if (!Array.isArray(mod.items) || mod.items.length === 0) return; // walkItems reports an empty list
+  const asked = new Set();
+  for (const item of mod.items)
+    if (isObj(item) && ITEM_TYPES.includes(item.type) && (item.steps === undefined || (Array.isArray(item.steps) && item.steps.every(isStr))))
+      for (const s of defaultSteps(item, kind)) asked.add(s);
+  for (const s of STEPS_BY_KIND[kind] || [])
+    if (ITEM_STEPS.includes(s) && !asked.has(s)) bad('items', 'step_empty', `no item is asked in ${s}, so the step would be empty; leave ${s} in at least one item's steps`);
 }
 
 // Graph ids in teaches and tests. ctx.graphIds ({ constructions: Set, words: Set }) comes from
@@ -373,6 +389,8 @@ function graphRules(mod, cx) {
 function textRules(cx) {
   for (const t of cx.texts) {
     if (t.role === 'native_fr' && !t.inItem) for (const code of spanProblems(t.text)) cx.bad(t.path, code, `bad French span in ${t.path}`);
+    // validateItem reports braces in item text; guide block cells mix French and English and are read by type.
+    if ((t.role === 'fr' || t.role === 'native') && !t.inItem && BRACE.test(t.text)) cx.bad(t.path, 'span_in_plain_field', plainFieldMessage(t));
     if (hasPositionWord(t.text)) cx.bad(t.path, 'position_word', `${t.path} names a position ("${t.text}"); name the subject instead`);
   }
 }

@@ -9,6 +9,7 @@
 import { createHash } from 'node:crypto';
 import { FREE_UNIT_KEY } from './assemble.mjs';
 import { STEPS_BY_KIND } from './schema/module.mjs';
+import { BLANK_MARKER, blankCount } from './schema/item.mjs';
 
 export const FORMAT = 'la-bundle@1';
 export const REFERENCE_PART = 'reference-content';
@@ -39,7 +40,6 @@ export const accessTier = (unitKey, sectionId) => (unitKey === FREE_UNIT_KEY || 
 const MISS_TYPED = { text: 'You wrote {answer}. It’s {expected}.' };
 const SPEED_MATCH_ID = 'speed-match';
 const SPEED_MATCH_SIZE = 6;
-const BLANK_MARKER = /_{3,}/g;
 
 /* ---------- canonical JSON and the hash ---------- */
 
@@ -79,7 +79,7 @@ const wordsOf = (s) => String(s).toLowerCase().normalize('NFC').replace(/[’ʼ�
  * mistake carries `why`, for the writers.
  */
 export function splitBlankMistakes(item) {
-  const fixed = new Set(wordsOf(item.text.replace(/_{3,}/g, ' ')));
+  const fixed = new Set(wordsOf(item.text.replace(BLANK_MARKER, ' ')));
   const inBlanks = new Set(item.blanks.flatMap((b) => [b.answer, ...(b.accept || [])]).flatMap(wordsOf));
   const right = wordsOf(item.blanks.map((b) => b.answer).join(' ')).join(' ');
   const matchable = [];
@@ -143,7 +143,7 @@ function bundleItem(item, note) {
           note('mistake_needs_rewrite', `${item.id}: "${m.answer}" can never match the ${blanks.length} blanks of "${item.text}" (${m.why})`);
       }
       const text = `{${item.text}}`;
-      const markers = (text.match(BLANK_MARKER) || []).length;
+      const markers = blankCount(text);
       if (markers !== blanks.length) note('blank_markers', `${item.id}: ${markers} ___ marker(s) for ${blanks.length} blank(s)`);
       return { ...base, kind: 'typed', prompt: defined({ text, en: item.gloss, hint }), answer_key: key, miss_text: MISS_TYPED };
     }

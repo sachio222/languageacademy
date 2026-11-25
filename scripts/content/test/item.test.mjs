@@ -108,3 +108,68 @@ test('itemTexts roles: comprehension', () => {
   assert.equal(o[1].role, 'fr');
   assert.equal(o[2].role, 'native');
 });
+
+/* ---------- final review: blanks, spans in plain fields, comprehension, steps, option flags ---------- */
+
+test('a gap-fill blank is exactly three underscores; four or more is a bad marker, not a blank', () => {
+  const gap = (text, n) => ({ id: 'g', type: 'gapfill', text, blanks: Array.from({ length: n }, () => ({ answer: 'suis' })) });
+  assert.deepEqual(codes(gap('Je ___ fatigué.', 1)), []);
+  assert.deepEqual(codes(gap('Je ___fatigué.', 1)), []);
+  assert.deepEqual(codes(gap('Je ___ ___ fatigué.', 2)), []);
+  // A run of four or more underscores: the schema used to count it as one blank, the bundle as one marker.
+  assert.deepEqual(codes(gap('Je ____ fatigué.', 1)), ['blank_marker_invalid']);
+  assert.deepEqual(codes(gap('Je ______ fatigué.', 2)), ['blank_marker_invalid']);
+  // An extra blank and no marker at all both miscount.
+  assert.deepEqual(codes(gap('Je ___ fatigué.', 2)), ['blank_count']);
+  assert.deepEqual(codes(gap('Je suis fatigué.', 1)), ['blank_count']);
+});
+
+test('the schema and the bundle count blank markers with one definition', async () => {
+  const { BLANK_MARKER, blankCount } = await import('../schema/item.mjs');
+  assert.equal(blankCount('a ___ b ___ c'), 2);
+  assert.equal(blankCount('a ___b'), 1);
+  assert.equal(blankCount('a ____ b'), 0, 'four underscores are not a blank');
+  assert.ok(BLANK_MARKER instanceof RegExp && BLANK_MARKER.global);
+});
+
+test('a brace in a French or plain native field is span_in_plain_field', () => {
+  // Braces mark French inside native text (native_fr); in an fr or native field they would show as braces.
+  const bad = [
+    [{ id: 'a', type: 'translate', prompt: 'I am', answer: '{je suis}' }, 'answer'],
+    [{ id: 'a', type: 'translate', prompt: 'I am', answer: 'je suis', accept: ['je {suis}'] }, 'accept[0]'],
+    [{ id: 'a', type: 'transform', instruction: 'Plural.', shown: 'il {est}', answer: 'ils sont' }, 'shown'],
+    [{ id: 'a', type: 'gapfill', text: 'Je ___ {ici}.', blanks: [{ answer: 'suis' }] }, 'text'],
+    [{ id: 'a', type: 'gapfill', text: 'Je ___ ici.', blanks: [{ answer: 'suis}' }] }, 'blanks[0].answer'],
+    [{ id: 'a', type: 'meaning', shown: 'je suis', answer: 'I {am}' }, 'answer'],
+    [{ id: 'a', type: 'choice', question: 'Pick', options: [{ text: '{suis}', fr: true, right: true }, { text: 'es', fr: true }] }, 'options[0].text'],
+    [{ id: 'a', type: 'translate', prompt: 'I am', answer: 'je suis', mistakes: [{ answer: 'je {es}', feedback: 'Use {suis}.' }] }, 'mistakes[0].answer'],
+  ];
+  for (const [item, path] of bad) {
+    const ps = validateItem(item, ctx);
+    assert.deepEqual(ps.map((p) => [p.code, p.path]), [['span_in_plain_field', `items[0].${path}`]], JSON.stringify(item));
+  }
+  // native_fr fields keep their spans.
+  assert.deepEqual(codes({ id: 'a', type: 'respond', situation: 'Say {bonjour}.', cue: '{je suis} tired', answer: 'je suis fatigué' }), []);
+});
+
+test('comprehension: accept needs answer, and a picked question has no accept', () => {
+  const q = (more) => ({ id: 'q', type: 'comprehension', question: 'Who?', ...more });
+  assert.deepEqual(codes(q({ answer: 'Anna', accept: ['anna'] }), { stepsAllowed: ['reading-passage'] }), []);
+  assert.deepEqual(codes(q({ accept: ['Anna'] }), { stepsAllowed: ['reading-passage'] }), ['field_missing']);
+  const picked = q({ options: [{ text: 'Anna', right: true }, { text: 'Bo' }], accept: ['Anna'] });
+  assert.deepEqual(codes(picked, { stepsAllowed: ['reading-passage'] }), ['options_invalid']);
+});
+
+test('steps: an empty or repeated list is an error', () => {
+  const item = (steps) => ({ id: 'a', type: 'translate', prompt: 'I am', answer: 'je suis', steps });
+  assert.deepEqual(codes(item(['writing'])), []);
+  assert.deepEqual(codes(item([])), ['steps_invalid']);
+  assert.deepEqual(codes(item(['writing', 'writing'])), ['steps_invalid']);
+});
+
+test('an option flag is true or false, never a string', () => {
+  const choice = (o) => ({ id: 'a', type: 'choice', question: 'Pick', options: [{ text: 'suis', right: true, ...o }, { text: 'es' }] });
+  assert.deepEqual(codes(choice({ fr: true })), []);
+  assert.deepEqual(codes(choice({ fr: 'yes' })), ['options_invalid']);
+  assert.deepEqual(codes(choice({ right: 'true' })), ['options_invalid', 'options_invalid']);
+});

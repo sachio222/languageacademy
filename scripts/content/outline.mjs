@@ -78,6 +78,9 @@ export function validateOutline(outline, modulesByKey, { file = 'course.json' } 
             if (k !== 'icon' && k !== 'color') bad(`${p}.theme.${k}`, 'field_unknown', `${k} is not a field of a theme`);
             else if (!isStr(u.theme[k])) bad(`${p}.theme.${k}`, 'field_type', `${k} must be a non-empty string`);
       }
+      // can_do_example_fr is French: braces only mark where the learner's name goes ({name}, L's bundle schema).
+      if (isStr(u.can_do_example_fr) && /[{}]/.test(u.can_do_example_fr.replaceAll('{name}', '')))
+        bad(`${p}.can_do_example_fr`, 'span_in_plain_field', `${p}.can_do_example_fr is French, so its only braces are the {name} marker`);
       for (const k of ['name', ...UNIT_TEXT_FIELDS])
         if (isStr(u[k]) && hasPositionWord(u[k])) bad(`${p}.${k}`, 'position_word', `${p}.${k} names a position ("${u[k]}")`);
 

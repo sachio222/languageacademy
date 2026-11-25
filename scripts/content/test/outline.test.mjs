@@ -113,3 +113,11 @@ test('outline schema and top-level fields', () => {
     ['field_unknown', 'colour'],
   ]);
 });
+
+test("can_do_example_fr holds French and the {name} marker only", () => {
+  const o = miniOutline();
+  o.units[0].can_do_example_fr = 'Je suis {name}. J’ai un chat.';
+  assert.deepEqual(run(o), []);
+  o.units[0].can_do_example_fr = 'Je suis {name}. J’ai un {chat}.';
+  assert.deepEqual(run(o), [['span_in_plain_field', 'units[0].can_do_example_fr']]);
+});

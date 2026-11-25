@@ -5,6 +5,17 @@ import { spanProblems } from '../spans.mjs';
 export const ITEM_TYPES = ['translate', 'respond', 'transform', 'gapfill', 'meaning', 'choice', 'comprehension'];
 export const ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 
+// A gap-fill blank is exactly three underscores; the bundle counts markers with this same pattern. A run of four or
+// more underscores is no blank at all (blank_marker_invalid), so the schema and the bundle can never disagree.
+export const BLANK = '___';
+export const BLANK_MARKER = /(?<!_)___(?!_)/g;
+const LONG_UNDERSCORES = /_{4,}/;
+export const blankCount = (text) => (String(text).match(BLANK_MARKER) || []).length;
+// Braces mark French inside native text (native_fr). In an fr or native field they would reach the learner as braces.
+export const BRACE = /[{}]/;
+/** The span_in_plain_field message for a text { path, role } (module texts use it too). */
+export const plainFieldMessage = (t) => `${t.path} is ${t.role === 'fr' ? 'French' : 'native'} text, so it takes no {…} span; write it without braces`;
+
 // Per type: required and optional fields. Roles/typed for the simple string fields live in FIELD_ROLES.
 const COMMON = ['id', 'type', 'hint', 'mistakes', 'word_ids', 'steps'];
 const SHAPES = {
@@ -113,6 +124,8 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
 
   if (item.steps !== undefined) {
     if (!Array.isArray(item.steps) || !item.steps.every(isStr)) bad('steps', 'field_type', 'steps must be a list of step ids');
+    else if (item.steps.length === 0) bad('steps', 'steps_invalid', 'steps lists at least one step; leave it out for the default steps');
+    else if (new Set(item.steps).size !== item.steps.length) bad('steps', 'steps_invalid', 'steps names a step twice');
     else
       for (const s of item.steps)
         if (Array.isArray(stepsAllowed) && !stepsAllowed.includes(s)) bad('steps', 'step_not_allowed', `step ${s} is not allowed in a ${kind} module`);
@@ -128,8 +141,11 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
           if (b.accept !== undefined && !(Array.isArray(b.accept) && b.accept.every(isStr))) bad(`blanks[${i}].accept`, 'field_type', 'accept must be a list of strings');
         });
         if (typeof item.text === 'string') {
-          const n = item.text.split('___').length - 1;
-          if (n !== item.blanks.length) bad('blanks', 'blank_count', `text has ${n} ___ markers but ${item.blanks.length} blanks`);
+          if (LONG_UNDERSCORES.test(item.text)) bad('text', 'blank_marker_invalid', `a blank is exactly ${BLANK}; text has a run of four or more underscores`);
+          else {
+            const n = blankCount(item.text);
+            if (n !== item.blanks.length) bad('blanks', 'blank_count', `text has ${n} ${BLANK} markers but ${item.blanks.length} blanks`);
+          }
         }
       }
     }
@@ -143,10 +159,16 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
     bad('answer', 'field_missing', 'comprehension needs answer or options');
   if (item.type === 'comprehension' && item.answer !== undefined && item.options !== undefined)
     bad('options', 'options_invalid', 'comprehension takes answer or options, not both');
+  // accept lists other ways to type the answer, so it needs answer, and a picked question is never typed: accept with
+  // neither answer nor options is the field_missing above, and accept beside options is this.
+  if (item.type === 'comprehension' && item.accept !== undefined && item.options !== undefined)
+    bad('accept', 'options_invalid', 'a picked comprehension item has options, never a typed accept');
 
-  // French spans in native_fr text.
-  for (const t of itemTexts(item))
+  // French spans in native_fr text; no braces at all in fr and native text.
+  for (const t of itemTexts(item)) {
     if (t.role === 'native_fr') for (const code of spanProblems(t.text)) bad(t.path, code, `bad French span in ${t.path}`);
+    else if (BRACE.test(t.text)) bad(t.path, 'span_in_plain_field', plainFieldMessage(t));
+  }
 
   return ps;
 }
@@ -159,6 +181,7 @@ export function checkOptions(item, bad) {
   o.forEach((opt, i) => {
     if (!isObj(opt) || !isStr(opt.text)) return bad(`options[${i}]`, 'options_invalid', 'option needs a text string');
     for (const k of Object.keys(opt)) if (!['text', 'fr', 'right'].includes(k)) bad(`options[${i}].${k}`, 'field_unknown', `${k} is not a field of an option`);
+    for (const k of ['fr', 'right']) if (opt[k] !== undefined && typeof opt[k] !== 'boolean') bad(`options[${i}].${k}`, 'options_invalid', `${k} is true or false`);
     if (opt.right === true) right++;
   });
   if (right !== 1) bad('options', 'options_invalid', `options need exactly one right, found ${right}`);

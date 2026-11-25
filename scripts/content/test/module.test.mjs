@@ -324,3 +324,34 @@ test('bad French span in a module field', () => {
   const ps = validateModule(mod, { file: 'g.json', unitIndex: 2 });
   assert.deepEqual(ps.map((p) => [p.code, p.path]), [['span_unclosed', 'parts[1].text[0]']]);
 });
+
+/* ---------- final review: empty steps, empty vocabulary, braces in plain module fields ---------- */
+
+test('a scored step with no item is step_empty', () => {
+  const lesson = miniModule(MINI_KEYS.lesson);
+  // Every item moved to Writing (a meaning item is asked only in the lesson exam, so it goes).
+  lesson.items = lesson.items.filter((it) => it.type !== 'meaning');
+  for (const it of lesson.items) it.steps = ['writing'];
+  assert.deepEqual(validateModule(lesson, { file: 'l.json', unitIndex: 1 }).map((p) => [p.code, p.path]), [['step_empty', 'items']]);
+});
+
+test('a lesson needs at least one word', () => {
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.vocabulary = [];
+  delete lesson.speed_match;
+  assert.deepEqual(validateModule(lesson, { file: 'l.json', unitIndex: 1 }).map((p) => [p.code, p.path]), [['field_type', 'vocabulary']]);
+});
+
+test('a brace in a French or plain native module field is span_in_plain_field', () => {
+  const lesson = miniModule(MINI_KEYS.lesson);
+  lesson.vocabulary[0].fr = '{' + lesson.vocabulary[0].fr + '}';
+  lesson.vocabulary[0].gloss = 'to {be}';
+  assert.deepEqual(validateModule(lesson, { file: 'l.json', unitIndex: 1 }).map((p) => [p.code, p.path]), [
+    ['span_in_plain_field', 'vocabulary[0].fr'],
+    ['span_in_plain_field', 'vocabulary[0].gloss'],
+  ]);
+  const reading = miniModule(MINI_KEYS.reading);
+  const b = reading.passage.find((x) => x.fr);
+  b.en = `${b.en} {x}`;
+  assert.deepEqual(codes(reading, 1), ['span_in_plain_field']);
+});
