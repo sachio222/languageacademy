@@ -715,3 +715,95 @@ export function classify(diffs, classes, report, extra = {}) {
 }
 
 export const describe = (d) => `${d.module_key} ${d.path}: live ${show(d.live)} | converted ${show(d.converted)}`;
+
+/* ---------- after the conversion: the frozen baseline and later recorded edits ---------- */
+
+// Final review I1. The conversion-era classes above hold exact counts, frozen per module in
+// scripts/content/test/fixtures/golden-baseline.json at the end of the conversion. A module changed since the freeze
+// (a hand fix recorded in content/fr/legacy/hand-fixes.json, or its source changed on main, as the migration record
+// content/fr/legacy/migration-sources.json shows) is excused from its frozen counts, but every difference in it still
+// needs a class: a conversion-era relation, checked against the regenerated report, or a recorded hand fix.
+
+const canon = (v) => (Array.isArray(v) ? v.map(canon) : isObj(v) ? Object.fromEntries(Object.keys(v).sort().map((k) => [k, canon(v[k])])) : v);
+/** A short fingerprint of a JSON value, keys in any order. */
+export const fingerprint = (v) => {
+  // A small FNV-1a over the canonical JSON: no crypto import, so the module stays pure.
+  let h = 0x811c9dc5;
+  for (const ch of JSON.stringify(canon(v ?? null))) {
+    h ^= ch.codePointAt(0);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(16).padStart(8, '0');
+};
+/** Every source hash a module's migration record holds, in a fixed order: it moves only when the source does. */
+export function sourcesFingerprint(record) {
+  const srcs = [];
+  const walk = (v) => {
+    if (Array.isArray(v)) v.forEach(walk);
+    else if (isObj(v)) for (const k of Object.keys(v).sort()) k === 'src' ? srcs.push(String(v[k])) : walk(v[k]);
+  };
+  walk(record ?? null);
+  return fingerprint(srcs);
+}
+/** { module_key: { part: fingerprint } } of hand-fixes.json. */
+export const handFixPrints = (handFixes) => Object.fromEntries(Object.entries(handFixes || {}).map(([k, parts]) => [k, Object.fromEntries(Object.entries(parts).map(([p, v]) => [p, fingerprint(v)]))]));
+
+/**
+ * What changed after the freeze: { handFixed: Map<module_key, Set<part>> (parts whose recorded fix is new or
+ * different), sourceChanged: Set<module_key>, changed: Set<module_key> (either, or a fix removed) }.
+ */
+export function changedSince(baseline, { handFixes = {}, records = {} } = {}) {
+  const handFixed = new Map();
+  const changed = new Set();
+  const now = handFixPrints(handFixes);
+  for (const key of new Set([...Object.keys(now), ...Object.keys(baseline.hand_fixes || {})])) {
+    const a = now[key] || {};
+    const b = baseline.hand_fixes?.[key] || {};
+    const parts = new Set(Object.keys(a).filter((p) => a[p] !== b[p]));
+    if (parts.size) handFixed.set(key, parts);
+    if (parts.size || Object.keys(b).some((p) => !(p in a))) changed.add(key);
+  }
+  const sourceChanged = new Set();
+  for (const [key, print] of Object.entries(baseline.sources || {})) if (records[key] && sourcesFingerprint(records[key]) !== print) sourceChanged.add(key);
+  for (const key of sourceChanged) changed.add(key);
+  return { handFixed, sourceChanged, changed };
+}
+
+/**
+ * The data check for differences a recorded hand fix explains (class hand_fix_recorded): the difference sits in a part
+ * whose fix in hand-fixes.json is new since the freeze, and the module holds exactly that fix there, so the learner sees
+ * what the fix says. Parts: title, description, concepts, a vocabulary card (by word_id), an item (by its place, as the
+ * adapter numbers it), a practice sentence (its item), a guide part (parts/<id>) and a passage block (passage/<id>).
+ */
+export function handFixCheck({ course, handFixes = {}, handFixed = new Map() }) {
+  const mod = (key) => course?.modules.get(key) ?? null;
+  const strip = (item) => (isObj(item) ? Object.fromEntries(Object.entries(item).filter(([k]) => k !== 'steps')) : item);
+  const holds = (key, part, value) => handFixed.get(key)?.has(part) && JSON.stringify(canon(strip(value))) === JSON.stringify(canon(strip(handFixes[key]?.[part])));
+  return (d) => {
+    const m = mod(d.module_key);
+    if (!m || !handFixed.has(d.module_key)) return false;
+    let p;
+    if (d.path === 'title' || d.path === 'description') return holds(d.module_key, d.path, m[d.path]);
+    if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts);
+    if ((p = /^vocabularyReference\[\+?(\d+)\]/.exec(d.path))) {
+      const card = d.path.includes('[+') ? d.cards?.converted?.[+p[1]] : d.cards?.live?.[+p[1]];
+      const w = (m.vocabulary || []).find((x) => x.fr === card?.french && x.gloss === card?.english);
+      return !!w && holds(d.module_key, `vocabulary/${w.word_id}`, w);
+    }
+    if ((p = /^(?:exercises|sentences)\[\+?(\d+)\]/.exec(d.path))) {
+      const n = d.exercise?.converted?.displayNumber ?? (d.path.startsWith('sentences') ? +p[1] + 1 : null);
+      const item = n ? m.items?.[n - 1] : null;
+      return !!item && holds(d.module_key, `items/${item.id}`, item);
+    }
+    if ((p = /^guide\.sections\[(\d+)\]/.exec(d.path))) {
+      const part = m.parts?.[+p[1]];
+      return !!part && holds(d.module_key, `parts/${part.id}`, part);
+    }
+    if (/^readingPassage\.(text|translation)#sentence$/.test(d.path) && isStr(d.converted)) {
+      const field = d.path.includes('translation') ? 'en' : 'fr';
+      const block = (m.passage || []).find((b) => isStr(b[field]) && sentences(b[field]).includes(d.converted));
+      return !!block && holds(d.module_key, `passage/${block.id}`, block);
+    }
+    return false;
+  };
+}

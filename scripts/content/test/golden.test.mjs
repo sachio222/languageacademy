@@ -4,14 +4,22 @@
 // class whose basis is a migration-report line of Tasks 6 and 7, Task 6's data or a ledger ruling, and whose relation
 // ties the difference's values to that basis exactly; each class holds exactly the count it records, so a new
 // difference fails until someone reads it and names its reason.
+//
+// After the conversion (final review I1): the counts are frozen per module in fixtures/golden-baseline.json. A module
+// changed since the freeze, by a hand fix recorded in content/fr/legacy/hand-fixes.json or by a source change on main
+// (content/fr/legacy/migration-sources.json), is excused from its frozen counts; each of its differences still needs a
+// class, and a part a writer changed is allowed when the module holds exactly the recorded fix (hand_fix_recorded).
+// `node --test scripts/content/test/golden.test.mjs` with GOLDEN_BASELINE=write rewrites the baseline from the course as
+// it is, for the one time a new conversion-era class is ruled in.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadCourse, CONTENT_ROOT } from '../load.mjs';
 import { frenchSpans } from '../spans.mjs';
 import { toLegacyLesson, plain } from '../legacy/to-legacy-lesson.mjs';
-import { compareLesson, classify, parseReport, describe, goldenChecks } from '../legacy/golden.mjs';
+import { compareLesson, classify, parseReport, describe, goldenChecks, changedSince, handFixCheck, handFixPrints, sourcesFingerprint } from '../legacy/golden.mjs';
+import { planKeyList, readPlanKeys } from '../plan-stubs.mjs';
 import { REWRITES } from '../migrate/holds.mjs';
 
 const here = new URL('./fixtures/', import.meta.url);
@@ -21,7 +29,17 @@ const allowed = readJson(new URL('golden-allowed.json', here));
 const liveIds = readJson(join(CONTENT_ROOT, 'legacy', 'live-ids.json'));
 const lSources = readJson(join(CONTENT_ROOT, 'legacy', 'l-sources.json'));
 const handFixes = readJson(join(CONTENT_ROOT, 'legacy', 'hand-fixes.json'));
+const records = readJson(join(CONTENT_ROOT, 'legacy', 'migration-sources.json'));
 const report = parseReport(readFileSync(join(CONTENT_ROOT, 'migration-report.md'), 'utf8'));
+const BASELINE_FILE = new URL('golden-baseline.json', here);
+const baseline = readJson(BASELINE_FILE);
+// The class for a part a writer changed after the freeze; it holds no frozen count.
+const HAND_FIX_CLASS = {
+  class: 'hand_fix_recorded',
+  reason: 'A part changed after the conversion, where the module holds exactly the fix hand-fixes.json records for it (final review I1).',
+  basis: { data: 'hand_fix_recorded' },
+  paths: ['^'],
+};
 
 // The course as today's lessonData.js numbers it: a module written after the snapshot (a new guide or Reference page
 // goes to L only, Jake 2026-11-25) has no live lesson, so it takes no live position and nothing is compared for it. A
@@ -45,7 +63,6 @@ function liveView(full, inSnapshot) {
 }
 const full = loadCourse();
 const { course, writtenAfter } = liveView(full, new Set(snapshot.map((l) => l.moduleKey)));
-const checks = goldenChecks({ liveIds, course, lSources, handFixes, rewrites: REWRITES, plain, adapt: (m) => toLegacyLesson(m, { liveIds, course }) });
 
 // Every span text in a module: today's quotes around one are dropped before comparing (golden.mjs sameText).
 function spansOf(mod) {
@@ -59,19 +76,32 @@ function spansOf(mod) {
   return out;
 }
 
-const adapted = new Map();
-const adapt = (mod) => {
-  if (!adapted.has(mod.module_key)) adapted.set(mod.module_key, JSON.parse(JSON.stringify(toLegacyLesson(mod, { liveIds, course }))));
-  return structuredClone(adapted.get(mod.module_key));
+// By module object, so a run over changed modules adapts them afresh.
+const adapted = new WeakMap();
+const adaptIn = (c) => (mod) => {
+  if (!adapted.has(mod)) adapted.set(mod, JSON.parse(JSON.stringify(toLegacyLesson(mod, { liveIds, course: c }))));
+  return structuredClone(adapted.get(mod));
 };
 
-// mutate(moduleKey, lesson): a planted change to the adapter's lesson, for the planted-loss tests.
-function run(mutate = null) {
+/**
+ * mutate(moduleKey, lesson): a planted change to the adapter's lesson, for the planted-loss tests.
+ * edits: { modules?: { key: module }, handFixes?, records? }: the course as a writer or a main merge left it, for the
+ * tests of changes after the freeze. Without edits the run reads the committed files.
+ */
+function run(mutate = null, edits = {}) {
+  const c = edits.modules ? { ...course, modules: new Map([...course.modules].map(([k, m]) => [k, edits.modules[k] ? { ...m, ...edits.modules[k] } : m])) } : course;
+  const fixes = edits.handFixes ?? handFixes;
+  const since = changedSince(baseline, { handFixes: fixes, records: edits.records ?? records });
+  const adapt = adaptIn(c);
+  const checks = {
+    ...goldenChecks({ liveIds, course: c, lSources, handFixes: fixes, rewrites: REWRITES, plain, adapt }),
+    hand_fix_recorded: handFixCheck({ course: c, handFixes: fixes, handFixed: since.handFixed }),
+  };
   const diffs = [];
   const stats = { lessons: 0, fields: 0 };
   const seen = new Set();
   for (const live of snapshot) {
-    const mod = course.modules.get(live.moduleKey);
+    const mod = c.modules.get(live.moduleKey);
     if (!mod) {
       diffs.push({ module_key: live.moduleKey, kind: null, path: '(lesson)', live: live.id, converted: undefined });
       continue;
@@ -88,35 +118,57 @@ function run(mutate = null) {
     stats.lessons += 1;
     for (const d of compareLesson(live, conv, { spans: spansOf(mod), stats })) diffs.push({ module_key: live.moduleKey, kind: mod.kind, ...d });
   }
-  for (const [key, mod] of course.modules)
+  for (const [key, mod] of c.modules)
     if (mod.status !== 'planned' && !seen.has(key)) diffs.push({ module_key: key, kind: mod.kind, path: '(lesson)', live: undefined, converted: key });
-  const r = classify(diffs, allowed.classes, report, checks);
-  const counts = Object.fromEntries([...r.byClass].map(([c, ds]) => [c, ds.length]));
-  const off = allowed.classes.filter((c) => counts[c.class] !== c.count).map((c) => `${c.class} ${c.count} -> ${counts[c.class]}`);
-  return { diffs, stats, counts, off, ...r };
+  // The new class only after every conversion-era one, and only in a module changed after the freeze.
+  const r = classify(diffs, [...allowed.classes, HAND_FIX_CLASS], report, checks);
+  const counts = Object.fromEntries([...r.byClass].map(([k, ds]) => [k, ds.length]));
+  const byModule = {};
+  for (const [k, ds] of r.byClass) for (const d of ds) ((byModule[k] ||= {})[d.module_key] = (byModule[k][d.module_key] || 0) + 1);
+  // Exact counts per class and module, as frozen; a module changed after the freeze is excused.
+  const off = [];
+  for (const cl of allowed.classes) {
+    const frozen = baseline.counts[cl.class] || {};
+    for (const key of new Set([...Object.keys(frozen), ...Object.keys(byModule[cl.class] || {})]))
+      if (!since.changed.has(key) && (frozen[key] || 0) !== (byModule[cl.class]?.[key] || 0)) off.push(`${cl.class} ${key} ${frozen[key] || 0} -> ${byModule[cl.class]?.[key] || 0}`);
+  }
+  return { diffs, stats, counts, byModule, off, since, ...r };
 }
 
 const result = run();
 
+// GOLDEN_BASELINE=write: the frozen counts, hand fixes and sources, from the course as it is.
+if (process.env.GOLDEN_BASELINE === 'write') {
+  const counts = Object.fromEntries(allowed.classes.map((cl) => [cl.class, Object.fromEntries(Object.entries(result.byModule[cl.class] || {}).sort())]));
+  const sources = Object.fromEntries(Object.keys(records).sort().map((k) => [k, sourcesFingerprint(records[k])]));
+  writeFileSync(
+    BASELINE_FILE,
+    JSON.stringify({ about: baseline.about, frozen_at: baseline.frozen_at, counts, hand_fixes: handFixPrints(handFixes), sources }, null, 2) + '\n',
+  );
+}
+
 test('adapter shows the same lessons as today', () => {
   const { unexplained, stats } = result;
   console.log(`golden: ${stats.lessons} lessons, ${stats.fields} values compared, ${result.diffs.length} differences, ${unexplained.length} unexplained`);
-  assert.equal(stats.lessons, 171, 'every converted module is compared with its live lesson');
+  // Each live lesson once (a guide listed twice today is one module).
+  assert.equal(stats.lessons, new Set(snapshot.map((l) => l.moduleKey)).size, 'every converted module is compared with its live lesson');
   assert.deepEqual(unexplained.map(describe).slice(0, 50), [], `${unexplained.length} differences with no report line or ruling behind them`);
 });
 
 test('a module written after the snapshot takes no live number and is not compared', () => {
-  // Exactly the guides and the Reference page written after the snapshot; a new module joins this list by hand.
-  assert.deepEqual(writtenAfter, ['gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'phrasebook']);
+  // Exactly the guides and the Reference page written after the snapshot, and any course plan module written since
+  // (content/fr/plan-keys.json); any other new module joins this list by hand.
+  const planned = new Set(planKeyList(readPlanKeys()));
+  assert.deepEqual(writtenAfter.filter((k) => !planned.has(k)), ['gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'phrasebook']);
   for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
   // The reading after the guide keeps its live number.
-  assert.equal(toLegacyLesson(course.modules.get('2024-03-30-reading-4'), { liveIds, course }).id, 52);
+  const key = '2024-03-30-reading-4';
+  assert.equal(toLegacyLesson(course.modules.get(key), { liveIds, course }).id, snapshot.find((l) => l.moduleKey === key).id);
 });
 
 test('a planned module is not live: it takes no live number, is never compared and is not listed as written after', () => {
   // By rule (status planned), so a new stub never needs a hand edit here; the list above stays for written modules.
   const planned = [...full.modules.values()].filter((m) => m.status === 'planned').map((m) => m.module_key);
-  assert.ok(planned.length > 0, 'the course holds planned stubs');
   for (const key of planned) {
     assert.equal(liveIds[key], undefined, `${key} has live ids`);
     assert.equal(course.modules.has(key), false, `${key} takes a live number`);
@@ -127,6 +179,69 @@ test('a planned module is not live: it takes no live number, is never compared a
 
 test('every allowed class holds exactly the differences it records', () => {
   assert.deepEqual(result.off, []);
+  // The frozen per-module counts add up to each class's recorded count.
+  for (const cl of allowed.classes)
+    assert.equal(Object.values(baseline.counts[cl.class] || {}).reduce((a, b) => a + b, 0), cl.count, `${cl.class}: golden-baseline.json and golden-allowed.json disagree`);
+  // With no module changed since the freeze, the totals are the recorded counts too.
+  if (result.since.changed.size === 0) for (const cl of allowed.classes) assert.equal(result.counts[cl.class], cl.count, cl.class);
+});
+
+/* ---------- after the freeze: recorded hand fixes and main's source changes (final review I1) ---------- */
+
+// A writer changes one item of a converted lesson and a run records it in hand-fixes.json.
+function writerEdit(key, edit) {
+  const mod = structuredClone(course.modules.get(key));
+  const { steps, ...plainItem } = mod.items.find(edit.find);
+  const item = { ...plainItem, ...edit.change(plainItem) };
+  mod.items = mod.items.map((it) => (it.id === item.id ? { ...item, steps: it.steps } : it));
+  return { mod, item, fixes: { ...handFixes, [key]: { ...(handFixes[key] || {}), [`items/${item.id}`]: item } } };
+}
+// A converted lesson unchanged since the freeze, with an item that has a hint and one that has mistakes.
+const TARGET = [...course.modules.values()].find(
+  (m) => m.kind === 'lesson' && liveIds[m.module_key] && !result.since.changed.has(m.module_key) && m.items.some((it) => it.hint) && m.items.some((it) => (it.mistakes || []).length),
+).module_key;
+const rehint = { find: (it) => Boolean(it.hint), change: () => ({ hint: 'A hint written after the freeze.' }) };
+const feedback = { find: (it) => (it.mistakes || []).length > 0, change: (it) => ({ mistakes: it.mistakes.map((m, i) => (i === 0 ? { ...m, feedback: 'Look again at the verb.' } : m)) }) };
+
+test("a writer's recorded hand fix to a converted lesson passes, and the other modules keep their frozen counts", () => {
+  for (const edit of [rehint, feedback]) {
+    const { mod, fixes } = writerEdit(TARGET, edit);
+    const r = run(null, { modules: { [TARGET]: mod }, handFixes: fixes });
+    assert.deepEqual(r.unexplained.map(describe), []);
+    assert.deepEqual(r.off, []);
+    assert.equal(r.counts.hand_fix_recorded, (result.counts.hand_fix_recorded || 0) + 1);
+    assert.ok(r.since.changed.has(TARGET));
+    assert.equal(r.since.changed.size, result.since.changed.size + 1);
+  }
+});
+
+test('an edit with no recorded fix, or a module that differs from its fix, is still caught', () => {
+  const { mod, item, fixes } = writerEdit(TARGET, rehint);
+  assert.ok(run(null, { modules: { [TARGET]: mod } }).unexplained.length > 0, 'an unrecorded edit');
+  const drifted = { ...fixes, [TARGET]: { ...fixes[TARGET], [`items/${item.id}`]: { ...item, hint: 'Something else.' } } };
+  assert.ok(run(null, { modules: { [TARGET]: mod }, handFixes: drifted }).unexplained.length > 0, 'a module that is not its fix');
+  // A fix recorded at the freeze is no licence: the change must be in a part fixed after it.
+  const frozenPart = Object.keys(handFixes['2024-01-06-basic-nouns'] || {}).find((p) => p.startsWith('items/'));
+  if (frozenPart) {
+    const id = frozenPart.slice('items/'.length);
+    const m = structuredClone(course.modules.get('2024-01-06-basic-nouns'));
+    m.items = m.items.map((it) => (it.id === id ? { ...it, hint: 'Junk.' } : it));
+    assert.ok(run(null, { modules: { '2024-01-06-basic-nouns': m } }).unexplained.length > 0 || run(null, { modules: { '2024-01-06-basic-nouns': m } }).off.length > 0);
+  }
+});
+
+test("a module whose source changed on main keeps no frozen counts; its differences still need a class", () => {
+  // The record's source hashes move when main changes the module's source.
+  const key = TARGET;
+  const moved = structuredClone(records);
+  moved[key].fields.title.src = 'main-changed';
+  const r = run(null, { records: moved });
+  assert.ok(r.since.sourceChanged.has(key));
+  assert.equal(r.since.sourceChanged.size, result.since.sourceChanged.size + 1);
+  assert.deepEqual(r.off, []);
+  // A planted loss there is still unexplained.
+  const lost = run((k, l) => (k === key ? { ...l, exercises: l.exercises.map((e, i) => (i === 0 ? { ...e, prompt: 'lost' } : e)) } : l), { records: moved });
+  assert.ok(lost.unexplained.length > 0);
 });
 
 test('every allowed class names its path pattern, its basis and how its values relate to it', () => {

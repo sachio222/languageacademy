@@ -1,0 +1,946 @@
+{
+  "about": "The golden test's frozen baseline (final review I1): for each conversion-era class in golden-allowed.json, how many differences each module held when the conversion ended; and, per module, a fingerprint of each hand fix (content/fr/legacy/hand-fixes.json) and of its recorded sources (content/fr/legacy/migration-sources.json) at that time. A module whose hand fixes or sources move later is excused from its frozen counts (scripts/content/test/golden.test.mjs). Written by GOLDEN_BASELINE=write node --test scripts/content/test/golden.test.mjs; never edited by hand.",
+  "frozen_at": "content at 536d61b (the end of the conversion), unchanged by the final fix wave",
+  "counts": {
+    "shelf_copy_removed": {
+      "2024-01-28-verb-pattern-help": 1,
+      "2024-10-20-liaison-help": 1,
+      "2024-10-21-cognates-help": 1
+    },
+    "concept_id_added": {
+      "2024-01-01-famous-words": 3,
+      "2024-01-01-pronouns": 4,
+      "2024-01-02-etre": 3,
+      "2024-01-04-avoir": 3,
+      "2024-01-05-articles": 4,
+      "2024-01-06-basic-nouns": 4,
+      "2024-01-07-plurals": 3,
+      "2024-01-08-connectors": 6,
+      "2024-01-12-demonstratives": 4,
+      "2024-01-13-ca-survival": 4,
+      "2024-01-14-determiners-nouns": 3,
+      "2024-01-15-vouloir": 3,
+      "2024-01-16-pouvoir": 3,
+      "2024-01-17-voir": 4,
+      "2024-01-18-questions": 8,
+      "2024-01-19-stressed-pronouns": 3,
+      "2024-01-20-although-phrases": 2,
+      "2024-01-20-prepositions": 5,
+      "2024-01-21-adjectives": 5,
+      "2024-01-21-before-phrases": 2,
+      "2024-01-22-common-adverbs": 2,
+      "2024-01-23-common-special-forms-1": 4,
+      "2024-01-24-common-special-forms-2": 3,
+      "2024-01-25-contractions": 4,
+      "2024-01-25-emotion-phrases": 2,
+      "2024-01-26-had-already-phrases": 2,
+      "2024-01-26-venir": 4,
+      "2024-01-27-aller": 3,
+      "2024-01-27-hypothetical-phrases": 2,
+      "2024-01-28-necessity-phrases": 2,
+      "2024-01-29-opinion-phrases": 3,
+      "2024-01-29-partir": 3,
+      "2024-01-30-object-pronouns": 3,
+      "2024-01-30-past-regret-phrases": 2,
+      "2024-01-31-possessive-adjectives": 5,
+      "2024-01-31-possibility-phrases": 3,
+      "2024-02-01-possessive-pronouns": 3,
+      "2024-02-02-combining": 3,
+      "2024-02-02-service-phrases": 2,
+      "2024-02-03-so-that-phrases": 2,
+      "2024-02-06-while-doing-phrases": 2,
+      "2024-02-07-wish-phrases": 2,
+      "2024-02-08-age-personal-info": 4,
+      "2024-02-09-directions-navigation": 5,
+      "2024-02-10-donner": 4,
+      "2024-02-11-perception-verbs": 4,
+      "2024-02-13-search-and-find": 4,
+      "2024-02-14-social-situations": 4,
+      "2024-03-15-nature-animals": 5,
+      "2024-03-15-questce-qui-que": 5,
+      "2024-03-16-movement-verbs": 5,
+      "2024-03-16-quiest-qui-que": 4,
+      "2024-03-17-natural-phenomena": 5,
+      "2024-03-19-pourquoi-complex": 5,
+      "2024-03-20-comment-complex": 5,
+      "2024-03-22-inversion-questions": 5,
+      "2024-03-23-devoir": 3,
+      "2024-03-23-embedded-questions": 5,
+      "2024-03-24-everyday-nouns": 3,
+      "2024-03-24-rhetorical-negative": 5,
+      "2024-03-25-faire": 3,
+      "2024-03-25-multi-clause-questions": 5,
+      "2024-03-26-location-adverbs": 4,
+      "2024-03-27-negation-2": 4,
+      "2024-03-28-negation": 4,
+      "2024-03-29-parler": 5,
+      "2024-03-31-survival-phrases": 4,
+      "2024-04-01-alphabet": 7,
+      "2024-04-01-time-adverbs": 3,
+      "2024-04-02-numbers": 9,
+      "2024-04-03-days-months": 4,
+      "2024-04-04-aimer": 5,
+      "2024-04-04-holidays": 8,
+      "2024-04-05-avoir-past": 5,
+      "2024-04-05-colors": 7,
+      "2024-04-06-boire": 5,
+      "2024-04-06-french-countries": 12,
+      "2024-04-07-comparisons-slang": 4,
+      "2024-04-07-language-stats": 12,
+      "2024-04-08-comparisons": 4,
+      "2024-04-09-conditionals": 4,
+      "2024-04-10-etre-past": 5,
+      "2024-04-11-food-nouns": 4,
+      "2024-04-12-manger": 5,
+      "2024-04-16-would-conditionals": 4,
+      "2024-04-17-besoin": 5,
+      "2024-04-18-commander": 5,
+      "2024-04-19-demander": 6,
+      "2024-04-20-dire": 5,
+      "2024-04-21-mettre": 5,
+      "2024-04-22-prendre": 5,
+      "2024-04-23-progressive-tenses": 5,
+      "2024-04-25-top-200-nouns": 5,
+      "2024-04-28-comparison-modifiers": 5,
+      "2024-04-29-comprendre": 5,
+      "2024-04-30-connaitre": 5,
+      "2024-05-01-croire": 5,
+      "2024-05-02-discourse-markers": 6,
+      "2024-05-03-knowledge-nouns": 4,
+      "2024-05-04-learning-verbs": 5,
+      "2024-05-05-on-and-people": 6,
+      "2024-05-06-penser": 5,
+      "2024-05-08-savoir": 5,
+      "2024-05-09-studying-verbs": 5,
+      "2024-05-12-commands-pronouns": 3,
+      "2024-05-13-commands-tu": 4,
+      "2024-05-14-commands-vous": 3,
+      "2024-05-15-daily-actions-1": 4,
+      "2024-05-16-daily-reflexives": 3,
+      "2024-05-17-getting-ready": 4,
+      "2024-05-18-irregular-commands": 6,
+      "2024-05-19-morning-routine": 4,
+      "2024-05-21-reflexive-pronouns": 4,
+      "2024-05-22-s-appeler": 4,
+      "2024-05-23-temporal-words": 4,
+      "2024-05-26-causal-words": 6,
+      "2024-05-27-imparfait-all-verbs": 6,
+      "2024-05-28-more-spatial-relations": 8,
+      "2024-05-29-passe-compose-agreement": 7,
+      "2024-05-30-passe-compose-er": 6,
+      "2024-05-31-passe-compose-etre": 6,
+      "2024-06-01-passe-compose-irregular-1": 6,
+      "2024-06-02-passe-compose-irregular-2": 6,
+      "2024-06-03-past-tense-composition": 5,
+      "2024-06-04-pc-vs-imparfait": 7,
+      "2024-06-06-reciprocal-reflexives": 4,
+      "2024-06-07-reflexive-past": 4,
+      "2024-06-08-spatial-prepositions": 7,
+      "2024-10-22-donner": 5,
+      "2024-10-22-search-find": 4,
+      "2024-12-18-pronunciation-test": 3,
+      "2026-11-24-numbers": 8
+    },
+    "new_item_ids": {
+      "2024-01-21-adjectives": 6,
+      "2026-11-24-numbers": 22
+    },
+    "generic_instruction_dropped": {
+      "2024-01-06-basic-nouns": 8,
+      "2024-01-07-plurals": 8,
+      "2024-01-08-connectors": 6,
+      "2024-01-11-unit1-exam": 24,
+      "2024-01-14-determiners-nouns": 11,
+      "2024-01-19-stressed-pronouns": 2,
+      "2024-01-20-prepositions": 12,
+      "2024-01-21-adjectives": 16,
+      "2024-01-24-unit2-exam": 33,
+      "2024-01-25-contractions": 3,
+      "2024-02-04-unit-10-exam": 30,
+      "2024-02-05-unit3-exam": 26,
+      "2024-02-09-directions-navigation": 13,
+      "2024-02-10-donner": 9,
+      "2024-02-11-perception-verbs": 12,
+      "2024-02-13-search-and-find": 11,
+      "2024-02-14-social-situations": 15,
+      "2024-02-15-unit-11-exam": 4,
+      "2024-03-15-nature-animals": 15,
+      "2024-03-16-movement-verbs": 18,
+      "2024-03-17-natural-phenomena": 13,
+      "2024-03-19-pourquoi-complex": 16,
+      "2024-03-20-comment-complex": 13,
+      "2024-03-23-embedded-questions": 13,
+      "2024-03-24-everyday-nouns": 21,
+      "2024-03-24-rhetorical-negative": 5,
+      "2024-03-25-multi-clause-questions": 14,
+      "2024-03-26-location-adverbs": 9,
+      "2024-03-27-negation-2": 10,
+      "2024-03-28-negation": 5,
+      "2024-04-01-time-adverbs": 23,
+      "2024-04-02-unit-4-exam": 40,
+      "2024-04-04-aimer": 10,
+      "2024-04-05-avoir-past": 9,
+      "2024-04-06-boire": 15,
+      "2024-04-08-comparisons": 10,
+      "2024-04-09-conditionals": 13,
+      "2024-04-10-etre-past": 15,
+      "2024-04-11-food-nouns": 21,
+      "2024-04-12-manger": 14,
+      "2024-04-14-unit-5-exam": 65,
+      "2024-04-16-would-conditionals": 14,
+      "2024-04-17-besoin": 22,
+      "2024-04-18-commander": 20,
+      "2024-04-19-demander": 22,
+      "2024-04-20-dire": 18,
+      "2024-04-21-mettre": 17,
+      "2024-04-22-prendre": 22,
+      "2024-04-23-progressive-tenses": 21,
+      "2024-04-25-top-200-nouns": 33,
+      "2024-04-26-unit-6-exam": 76,
+      "2024-04-28-comparison-modifiers": 6,
+      "2024-05-02-discourse-markers": 10,
+      "2024-05-03-knowledge-nouns": 6,
+      "2024-05-04-learning-verbs": 6,
+      "2024-05-05-on-and-people": 4,
+      "2024-05-09-studying-verbs": 6,
+      "2024-05-10-unit-7-exam": 57,
+      "2024-05-15-daily-actions-1": 14,
+      "2024-05-16-daily-reflexives": 3,
+      "2024-05-17-getting-ready": 4,
+      "2024-05-19-morning-routine": 5,
+      "2024-05-21-reflexive-pronouns": 1,
+      "2024-05-22-s-appeler": 3,
+      "2024-05-23-temporal-words": 7,
+      "2024-05-24-unit-8-exam": 31,
+      "2024-06-06-reciprocal-reflexives": 3,
+      "2024-06-07-reflexive-past": 2,
+      "2024-06-09-unit-9-exam": 35,
+      "2024-10-22-donner": 9,
+      "2024-10-22-search-find": 7
+    },
+    "position_words_fixed": {
+      "2024-01-06-basic-nouns": 2,
+      "2024-01-07-plurals": 1,
+      "2024-01-10-unit1-practice": 2,
+      "2024-01-13-ca-survival": 1,
+      "2024-01-22-reading2": 2,
+      "2024-01-23-unit2-practice": 2,
+      "2024-01-24-unit2-exam": 1,
+      "2024-02-01-reading-10": 2,
+      "2024-02-02-combining": 3,
+      "2024-02-03-reading3": 1,
+      "2024-02-04-unit-10-exam": 4,
+      "2024-02-04-unit3-practice": 2,
+      "2024-02-05-unit-10-practice": 2,
+      "2024-02-05-unit3-exam": 1,
+      "2024-02-08-age-personal-info": 1,
+      "2024-02-12-reading-11": 1,
+      "2024-02-15-unit-11-exam": 5,
+      "2024-02-16-unit-11-practice": 2,
+      "2024-03-19-pourquoi-complex": 1,
+      "2024-03-25-multi-clause-questions": 2,
+      "2024-03-30-reading-4": 2,
+      "2024-04-02-unit-4-exam": 1,
+      "2024-04-03-unit-4-practice": 2,
+      "2024-04-13-reading-5": 15,
+      "2024-04-14-unit-5-exam": 1,
+      "2024-04-15-unit-5-practice": 2,
+      "2024-04-24-reading-6": 22,
+      "2024-04-26-unit-6-exam": 1,
+      "2024-04-27-unit-6-practice": 2,
+      "2024-05-07-reading-7": 13,
+      "2024-05-10-unit-7-exam": 1,
+      "2024-05-11-unit-7-practice": 2,
+      "2024-05-20-reading-8": 2,
+      "2024-05-22-s-appeler": 1,
+      "2024-05-24-unit-8-exam": 1,
+      "2024-05-25-unit-8-practice": 2,
+      "2024-06-05-reading-9": 2,
+      "2024-06-09-unit-9-exam": 1,
+      "2024-06-10-unit-9-practice": 2
+    },
+    "unit_exam_title_derived": {
+      "2024-01-11-unit1-exam": 1,
+      "2024-01-24-unit2-exam": 1,
+      "2024-02-04-unit-10-exam": 1,
+      "2024-02-05-unit3-exam": 1,
+      "2024-02-15-unit-11-exam": 1,
+      "2024-04-02-unit-4-exam": 1,
+      "2024-04-14-unit-5-exam": 1,
+      "2024-04-26-unit-6-exam": 1,
+      "2024-05-10-unit-7-exam": 1,
+      "2024-05-24-unit-8-exam": 1,
+      "2024-06-09-unit-9-exam": 1
+    },
+    "guide_title_from_l": {
+      "2024-10-20-liaison-help": 1,
+      "2024-10-21-cognates-help": 1
+    },
+    "test_modules_hold_no_concepts": {
+      "2024-01-09-reading1": 3,
+      "2024-01-10-unit1-practice": 3,
+      "2024-01-11-unit1-exam": 3,
+      "2024-01-22-reading2": 3,
+      "2024-01-23-unit2-practice": 3,
+      "2024-01-24-unit2-exam": 4,
+      "2024-02-01-reading-10": 3,
+      "2024-02-03-reading3": 3,
+      "2024-02-04-unit-10-exam": 5,
+      "2024-02-04-unit3-practice": 3,
+      "2024-02-05-unit-10-practice": 3,
+      "2024-02-05-unit3-exam": 5,
+      "2024-02-12-reading-11": 3,
+      "2024-02-15-unit-11-exam": 6,
+      "2024-02-16-unit-11-practice": 3,
+      "2024-03-30-reading-4": 3,
+      "2024-04-02-unit-4-exam": 5,
+      "2024-04-03-unit-4-practice": 3,
+      "2024-04-13-reading-5": 3,
+      "2024-04-14-unit-5-exam": 5,
+      "2024-04-15-unit-5-practice": 3,
+      "2024-04-24-reading-6": 3,
+      "2024-04-26-unit-6-exam": 5,
+      "2024-04-27-unit-6-practice": 3,
+      "2024-05-07-reading-7": 3,
+      "2024-05-10-unit-7-exam": 5,
+      "2024-05-11-unit-7-practice": 3,
+      "2024-05-20-reading-8": 3,
+      "2024-05-24-unit-8-exam": 5,
+      "2024-05-25-unit-8-practice": 3,
+      "2024-06-05-reading-9": 3,
+      "2024-06-09-unit-9-exam": 5,
+      "2024-06-10-unit-9-practice": 3
+    },
+    "study_mode_lessons_only": {
+      "2024-01-09-reading1": 1,
+      "2024-01-10-unit1-practice": 1,
+      "2024-01-11-unit1-exam": 1,
+      "2024-01-22-reading2": 1,
+      "2024-01-23-unit2-practice": 1,
+      "2024-01-24-unit2-exam": 1,
+      "2024-02-01-reading-10": 1,
+      "2024-02-03-reading3": 1,
+      "2024-02-04-unit-10-exam": 1,
+      "2024-02-04-unit3-practice": 1,
+      "2024-02-05-unit-10-practice": 1,
+      "2024-02-05-unit3-exam": 1,
+      "2024-02-12-reading-11": 1,
+      "2024-02-15-unit-11-exam": 1,
+      "2024-02-16-unit-11-practice": 1,
+      "2024-03-30-reading-4": 1,
+      "2024-04-02-unit-4-exam": 1,
+      "2024-04-03-unit-4-practice": 1,
+      "2024-04-13-reading-5": 1,
+      "2024-04-14-unit-5-exam": 1,
+      "2024-04-15-unit-5-practice": 1,
+      "2024-04-24-reading-6": 1,
+      "2024-04-26-unit-6-exam": 1,
+      "2024-04-27-unit-6-practice": 1,
+      "2024-05-07-reading-7": 1,
+      "2024-05-10-unit-7-exam": 1,
+      "2024-05-11-unit-7-practice": 1,
+      "2024-05-20-reading-8": 1,
+      "2024-05-24-unit-8-exam": 1,
+      "2024-05-25-unit-8-practice": 1,
+      "2024-06-05-reading-9": 1,
+      "2024-06-09-unit-9-exam": 1,
+      "2024-06-10-unit-9-practice": 1
+    },
+    "practice_instruction_as_gloss": {
+      "2024-01-10-unit1-practice": 12,
+      "2024-01-23-unit2-practice": 20,
+      "2024-02-04-unit3-practice": 20,
+      "2024-02-05-unit-10-practice": 20,
+      "2024-02-16-unit-11-practice": 19,
+      "2024-04-03-unit-4-practice": 20,
+      "2024-04-15-unit-5-practice": 37,
+      "2024-04-27-unit-6-practice": 50,
+      "2024-05-11-unit-7-practice": 24,
+      "2024-05-25-unit-8-practice": 21,
+      "2024-06-10-unit-9-practice": 21
+    },
+    "practice_blank_misplaced": {
+      "2024-01-10-unit1-practice": 1,
+      "2024-01-23-unit2-practice": 2,
+      "2024-02-05-unit-10-practice": 6,
+      "2024-02-16-unit-11-practice": 7,
+      "2024-04-03-unit-4-practice": 7,
+      "2024-04-15-unit-5-practice": 6,
+      "2024-04-27-unit-6-practice": 6,
+      "2024-05-11-unit-7-practice": 8,
+      "2024-05-25-unit-8-practice": 6,
+      "2024-06-10-unit-9-practice": 5
+    },
+    "practice_blank_hints_joined": {
+      "2024-05-25-unit-8-practice": 2
+    },
+    "fillblank_complete_prefix_dropped": {
+      "2024-05-26-causal-words": 18,
+      "2024-05-28-more-spatial-relations": 18,
+      "2024-06-08-spatial-prepositions": 18
+    },
+    "fillblank_hand_edit": {
+      "2024-06-03-past-tense-composition": 1
+    },
+    "comprehension_prompt_dropped": {
+      "2024-01-09-reading1": 4,
+      "2024-04-24-reading-6": 1
+    },
+    "meaning_prompt_in_instruction": {
+      "2024-05-10-unit-7-exam": 1
+    },
+    "savoir_connaitre_choice": {
+      "2024-05-10-unit-7-exam": 15
+    },
+    "removed_by_hand": {
+      "2024-01-24-unit2-exam": 1,
+      "2024-01-27-aller": 1
+    },
+    "vocabulary_usage_into_note": {
+      "2024-05-28-more-spatial-relations": 4,
+      "2024-05-29-passe-compose-agreement": 10,
+      "2024-05-30-passe-compose-er": 10,
+      "2024-06-01-passe-compose-irregular-1": 2
+    },
+    "vocabulary_speech_and_wikipedia_dropped": {
+      "2024-01-20-prepositions": 1
+    },
+    "vocabulary_card_listed_twice": {
+      "2024-02-01-reading-10": 1,
+      "2024-04-24-reading-6": 1,
+      "2024-05-23-temporal-words": 2,
+      "2024-06-05-reading-9": 1
+    },
+    "story_sentences": {
+      "2024-01-09-reading1": 5,
+      "2024-01-22-reading2": 6,
+      "2024-02-01-reading-10": 6,
+      "2024-02-03-reading3": 5,
+      "2024-02-12-reading-11": 6,
+      "2024-03-30-reading-4": 7,
+      "2024-04-13-reading-5": 14,
+      "2024-04-24-reading-6": 4,
+      "2024-05-07-reading-7": 5,
+      "2024-05-20-reading-8": 7,
+      "2024-06-05-reading-9": 6
+    },
+    "story_translation": {
+      "2024-01-09-reading1": 5,
+      "2024-01-22-reading2": 6,
+      "2024-02-01-reading-10": 6,
+      "2024-02-03-reading3": 5,
+      "2024-02-12-reading-11": 6,
+      "2024-03-30-reading-4": 7,
+      "2024-04-13-reading-5": 14,
+      "2024-04-24-reading-6": 4,
+      "2024-05-07-reading-7": 5,
+      "2024-05-20-reading-8": 7,
+      "2024-06-05-reading-9": 6
+    },
+    "story_speaker_in_french": {
+      "2024-03-30-reading-4": 2,
+      "2024-04-24-reading-6": 10
+    },
+    "story_title_from_stories": {
+      "2024-01-09-reading1": 1,
+      "2024-01-22-reading2": 1,
+      "2024-02-01-reading-10": 1,
+      "2024-02-03-reading3": 1,
+      "2024-02-12-reading-11": 1,
+      "2024-03-30-reading-4": 1,
+      "2024-04-13-reading-5": 1,
+      "2024-04-24-reading-6": 1,
+      "2024-05-07-reading-7": 1,
+      "2024-05-20-reading-8": 1,
+      "2024-06-05-reading-9": 1
+    },
+    "story_subtitle_in_passage": {
+      "2024-04-13-reading-5": 2
+    },
+    "negation_row_notes_joined": {
+      "2026-11-24-negation-guide": 3
+    },
+    "fillblank_suffix_now_hint_prompt": {
+      "2024-05-27-imparfait-all-verbs": 18,
+      "2024-05-29-passe-compose-agreement": 18,
+      "2024-05-30-passe-compose-er": 18,
+      "2024-05-31-passe-compose-etre": 18,
+      "2024-06-01-passe-compose-irregular-1": 18,
+      "2024-06-02-passe-compose-irregular-2": 18,
+      "2024-06-03-past-tense-composition": 14,
+      "2024-06-04-pc-vs-imparfait": 18
+    },
+    "fillblank_suffix_now_hint_hint": {
+      "2024-05-27-imparfait-all-verbs": 18,
+      "2024-05-29-passe-compose-agreement": 18,
+      "2024-05-30-passe-compose-er": 18,
+      "2024-05-31-passe-compose-etre": 18,
+      "2024-06-01-passe-compose-irregular-1": 18,
+      "2024-06-02-passe-compose-irregular-2": 18,
+      "2024-06-03-past-tense-composition": 14,
+      "2024-06-04-pc-vs-imparfait": 18
+    },
+    "fillblank_answer_blank_words_only": {
+      "2024-05-30-passe-compose-er": 4,
+      "2024-05-31-passe-compose-etre": 2,
+      "2024-06-01-passe-compose-irregular-1": 3,
+      "2024-06-02-passe-compose-irregular-2": 2
+    },
+    "story_pictures": {
+      "2024-01-09-reading1": 5,
+      "2024-01-22-reading2": 5,
+      "2024-02-01-reading-10": 5,
+      "2024-02-03-reading3": 5,
+      "2024-02-12-reading-11": 5,
+      "2024-03-30-reading-4": 5,
+      "2024-04-13-reading-5": 5,
+      "2024-04-24-reading-6": 4,
+      "2024-05-07-reading-7": 4,
+      "2024-05-20-reading-8": 5,
+      "2024-06-05-reading-9": 5
+    },
+    "story_speaker_colour_dropped": {
+      "2024-03-30-reading-4": 3
+    },
+    "story_english_typo_fixed": {
+      "2024-03-30-reading-4": 1
+    }
+  },
+  "hand_fixes": {
+    "2024-01-02-etre": {
+      "concepts": "6a482fb3"
+    },
+    "2024-01-05-articles": {
+      "concepts": "ba7989d3"
+    },
+    "2024-01-06-basic-nouns": {
+      "concepts": "d2bfde07",
+      "items/i-j-ai-un-livre": "e97e4970"
+    },
+    "2024-01-07-plurals": {
+      "concepts": "019dcb24"
+    },
+    "2024-01-10-unit1-practice": {
+      "can_do": "8ff13ce7",
+      "description": "1aa20da8",
+      "title": "6beb71b4"
+    },
+    "2024-01-13-ca-survival": {
+      "items/i-c-est-ca": "0185a0d3"
+    },
+    "2024-01-18-questions": {
+      "concepts": "c796f889",
+      "vocabulary/ca-va-fr.question-2": "6c6e6cc4"
+    },
+    "2024-01-22-reading2": {
+      "description": "419f7758",
+      "title": "b2c0b4f4"
+    },
+    "2024-01-23-common-special-forms-1": {
+      "concepts": "37c1d33a"
+    },
+    "2024-01-23-unit2-practice": {
+      "can_do": "bbe6fc8f",
+      "description": "48562742",
+      "title": "bf689a20"
+    },
+    "2024-01-24-common-special-forms-2": {
+      "concepts": "18d739fc"
+    },
+    "2024-01-24-unit2-exam": {
+      "description": "5ef7181c",
+      "items/i-elles-sont-chez-laduree": "fd37e633"
+    },
+    "2024-01-25-emotion-phrases": {
+      "vocabulary/je-suis-content-que-tu-sois-la-fr.i-m-happy": "4af48a9e"
+    },
+    "2024-01-27-aller": {
+      "items/i-qu-est-ce-que-2": "d5f8107a"
+    },
+    "2024-01-28-necessity-phrases": {
+      "concepts": "0482240c"
+    },
+    "2024-02-01-reading-10": {
+      "description": "87a4ec45",
+      "title": "0e350f78"
+    },
+    "2024-02-02-combining": {
+      "items/i-il-va-partir": "97b2980c",
+      "items/i-je-le-veux": "5ad144f1",
+      "items/i-tu-viens-avec-moi": "03914922"
+    },
+    "2024-02-03-reading3": {
+      "title": "0638936e"
+    },
+    "2024-02-04-unit-10-exam": {
+      "description": "f3975d63",
+      "items/i-perdu-espoir": "a8b6a542",
+      "items/i-saura": "06d96428",
+      "items/i-soit-differente": "d5123c41"
+    },
+    "2024-02-04-unit3-practice": {
+      "can_do": "2a670317",
+      "description": "fac6aef4",
+      "title": "16c076be"
+    },
+    "2024-02-05-unit-10-practice": {
+      "description": "14d26fb0",
+      "title": "79711a5c"
+    },
+    "2024-02-05-unit3-exam": {
+      "description": "1028e9b1"
+    },
+    "2024-02-08-age-personal-info": {
+      "description": "a1b2d941"
+    },
+    "2024-02-12-reading-11": {
+      "title": "3275289c"
+    },
+    "2024-02-15-unit-11-exam": {
+      "description": "355350d0",
+      "items/i-la-france-a-soixante": "821cdcf2",
+      "items/i-la-france-moderne-combine": "57feee1b",
+      "items/i-les-artistes-francais-vivent": "563b354a",
+      "items/i-les-touristes-cherchent-des": "b9986741"
+    },
+    "2024-02-16-unit-11-practice": {
+      "description": "eba48c7a",
+      "title": "e7eee7d3"
+    },
+    "2024-03-15-questce-qui-que": {
+      "vocabulary/qu-est-ce-que-fr.object-pronoun": "5834d7fd"
+    },
+    "2024-03-19-pourquoi-complex": {
+      "concepts": "861b3bf3"
+    },
+    "2024-03-25-multi-clause-questions": {
+      "concepts": "ebe3ebbd"
+    },
+    "2024-03-30-reading-4": {
+      "description": "21388fa6",
+      "title": "fe64a8a7"
+    },
+    "2024-04-02-unit-4-exam": {
+      "description": "440e3d88"
+    },
+    "2024-04-03-unit-4-practice": {
+      "description": "1fc1ab31",
+      "title": "b0bf9003"
+    },
+    "2024-04-07-comparisons-slang": {
+      "concepts": "4c587364"
+    },
+    "2024-04-13-reading-5": {
+      "description": "89717428",
+      "title": "5b32d863",
+      "vocabulary/aimer-fr": "d5cfa315",
+      "vocabulary/aller-fr": "15dcef8d",
+      "vocabulary/appeler-fr": "2bcdde23",
+      "vocabulary/boire-fr": "d93b1649",
+      "vocabulary/chercher-fr": "345484ed",
+      "vocabulary/continuer-fr": "314d4658",
+      "vocabulary/excusez-moi-fr": "955b48b0",
+      "vocabulary/faire-fr": "05ac36db",
+      "vocabulary/parler-fr": "a4cf5fb0",
+      "vocabulary/partir-fr": "72fcbf7c",
+      "vocabulary/venir-fr": "9fd76143",
+      "vocabulary/voir-fr": "c4eed2e8",
+      "vocabulary/vouloir-fr": "ebe1c6e1"
+    },
+    "2024-04-14-unit-5-exam": {
+      "description": "72908b7d"
+    },
+    "2024-04-15-unit-5-practice": {
+      "can_do": "db1158e1",
+      "description": "e270ac66",
+      "title": "cf1e32f1"
+    },
+    "2024-04-18-commander": {
+      "concepts": "10e786cc",
+      "vocabulary/vous-commandez-fr.question": "0166ac8e"
+    },
+    "2024-04-24-reading-6": {
+      "description": "536c699e",
+      "title": "97b5918b",
+      "vocabulary/avoir-fr": "196be679",
+      "vocabulary/belle-fr": "e4295a8d",
+      "vocabulary/bonne-idee-fr": "c746cbce",
+      "vocabulary/de-bons-restaurants-fr": "1d08cafc",
+      "vocabulary/du-fromage-fr": "3da96bc8",
+      "vocabulary/du-pain-fr": "3754b77d",
+      "vocabulary/en-ce-moment-fr": "793c95db",
+      "vocabulary/faire-fr": "1d0676fc",
+      "vocabulary/la-ville-fr": "3415e4c7",
+      "vocabulary/maintenant-fr": "8f533f9c",
+      "vocabulary/manger-fr": "f29155d1",
+      "vocabulary/merci-fr": "264503ab",
+      "vocabulary/mon-livre-fr": "bc28598c",
+      "vocabulary/parler-francais-fr": "c07688ec",
+      "vocabulary/plus-belle-fr": "5ec6c079",
+      "vocabulary/pour-fr": "dc0bdedd",
+      "vocabulary/ton-manteau-fr": "89da091b",
+      "vocabulary/toujours-fr": "347ed3ab",
+      "vocabulary/toute-fr": "c21bcb03",
+      "vocabulary/tu-parles-fr": "c2164e28",
+      "vocabulary/voir-fr": "c4eed2e8"
+    },
+    "2024-04-25-top-200-nouns": {
+      "concepts": "60b32924"
+    },
+    "2024-04-26-unit-6-exam": {
+      "description": "9689435d"
+    },
+    "2024-04-27-unit-6-practice": {
+      "can_do": "96ad5843",
+      "description": "3a588e8f",
+      "title": "d5438d9f"
+    },
+    "2024-04-29-comprendre": {
+      "vocabulary/tu-comprends-fr.you-understand": "67365de3"
+    },
+    "2024-04-30-connaitre": {
+      "concepts": "293f0bcc",
+      "title": "bee7191b"
+    },
+    "2024-05-03-knowledge-nouns": {
+      "concepts": "b1f0dff2"
+    },
+    "2024-05-07-reading-7": {
+      "description": "7cfda40d",
+      "title": "3c9e0464",
+      "vocabulary/apprendre-fr": "39fd2f41",
+      "vocabulary/chercher-fr": "345484ed",
+      "vocabulary/comprendre-fr": "b11ceed1",
+      "vocabulary/connaitre-fr": "67a5bb16",
+      "vocabulary/croire-fr": "41ac1a67",
+      "vocabulary/demander-fr": "4f41333a",
+      "vocabulary/etudier-fr": "cc0e81c2",
+      "vocabulary/penser-fr": "66fabb3f",
+      "vocabulary/reviser-fr": "8b793c07",
+      "vocabulary/savoir-fr": "4f2ae7c2",
+      "vocabulary/trouver-fr": "b6a25946"
+    },
+    "2024-05-10-unit-7-exam": {
+      "description": "d4087128"
+    },
+    "2024-05-11-unit-7-practice": {
+      "description": "29aafa11",
+      "title": "bf2967c5"
+    },
+    "2024-05-17-getting-ready": {
+      "vocabulary/je-me-lave-fr.i-wash-myself": "aec7ecb5"
+    },
+    "2024-05-20-reading-8": {
+      "description": "5f4610a5",
+      "title": "90e2f0bc"
+    },
+    "2024-05-21-reflexive-pronouns": {
+      "concepts": "8ccaaca8"
+    },
+    "2024-05-22-s-appeler": {
+      "concepts": "617b8598"
+    },
+    "2024-05-24-unit-8-exam": {
+      "description": "dfdc0d41"
+    },
+    "2024-05-25-unit-8-practice": {
+      "description": "921681f7",
+      "items/i-apres-m-habille-me": "1cd41e42",
+      "items/i-d-abord-ensuite": "b9fa57b4",
+      "title": "3bcc43c5"
+    },
+    "2024-05-30-passe-compose-er": {
+      "concepts": "88a099b9"
+    },
+    "2024-06-03-past-tense-composition": {
+      "items/i-parce-que": "9680a031"
+    },
+    "2024-06-05-reading-9": {
+      "description": "7fdd88df",
+      "title": "19a40c52"
+    },
+    "2024-06-09-unit-9-exam": {
+      "description": "9bfce3a5"
+    },
+    "2024-06-10-unit-9-practice": {
+      "description": "29103ed5",
+      "title": "7d00af1b"
+    },
+    "2026-11-24-negation-guide": {
+      "checks": "4c40a792"
+    }
+  },
+  "sources": {
+    "2024-01-01-famous-words": "a2e84a14",
+    "2024-01-01-pronouns": "b805f571",
+    "2024-01-02-etre": "3c3db10e",
+    "2024-01-04-avoir": "1aeadd06",
+    "2024-01-05-articles": "bfdd846b",
+    "2024-01-06-basic-nouns": "e025d6a9",
+    "2024-01-07-plurals": "280b3b63",
+    "2024-01-08-connectors": "aba3aceb",
+    "2024-01-09-reading1": "5b0ec8b4",
+    "2024-01-10-unit1-practice": "9f77b080",
+    "2024-01-11-unit1-exam": "ddda61e8",
+    "2024-01-12-demonstratives": "e05e4bb8",
+    "2024-01-13-ca-survival": "249b04c3",
+    "2024-01-14-determiners-nouns": "aa535d17",
+    "2024-01-15-vouloir": "b2b840d0",
+    "2024-01-16-pouvoir": "55bde5bd",
+    "2024-01-17-voir": "b5cd2737",
+    "2024-01-18-questions": "4fb54c91",
+    "2024-01-19-questions-help": "32b49fe5",
+    "2024-01-19-stressed-pronouns": "c6daa178",
+    "2024-01-20-although-phrases": "f3622f0a",
+    "2024-01-20-prepositions": "9d729f44",
+    "2024-01-21-adjectives": "a7d8224c",
+    "2024-01-21-before-phrases": "47655414",
+    "2024-01-22-common-adverbs": "3738828b",
+    "2024-01-22-reading2": "9fbafe62",
+    "2024-01-23-common-special-forms-1": "846f2c4c",
+    "2024-01-23-unit2-practice": "c0b12582",
+    "2024-01-24-common-special-forms-2": "25cdf31e",
+    "2024-01-24-unit2-exam": "f1cd6e0c",
+    "2024-01-25-contractions": "bec088f3",
+    "2024-01-25-emotion-phrases": "53b19a0b",
+    "2024-01-26-had-already-phrases": "cfbc6fc4",
+    "2024-01-26-venir": "ff4b0098",
+    "2024-01-27-aller": "f8de37a7",
+    "2024-01-27-hypothetical-phrases": "3f275d76",
+    "2024-01-28-necessity-phrases": "8e97a01d",
+    "2024-01-28-verb-pattern-help": "e9736866",
+    "2024-01-29-opinion-phrases": "7c0c962a",
+    "2024-01-29-partir": "4c0f4a43",
+    "2024-01-30-object-pronouns": "93ce0d43",
+    "2024-01-30-past-regret-phrases": "e8972b40",
+    "2024-01-31-possessive-adjectives": "1facf84f",
+    "2024-01-31-possibility-phrases": "ab893354",
+    "2024-02-01-possessive-pronouns": "98c1b971",
+    "2024-02-01-reading-10": "947517c8",
+    "2024-02-02-combining": "51ace339",
+    "2024-02-02-service-phrases": "cc6b6442",
+    "2024-02-03-reading3": "0bba7faf",
+    "2024-02-03-so-that-phrases": "c42c21af",
+    "2024-02-04-unit-10-exam": "d0e772a4",
+    "2024-02-04-unit3-practice": "b214480b",
+    "2024-02-05-unit-10-practice": "da0456c1",
+    "2024-02-05-unit3-exam": "567d851d",
+    "2024-02-06-while-doing-phrases": "dc1f905a",
+    "2024-02-07-wish-phrases": "11e290cf",
+    "2024-02-08-age-personal-info": "3168c210",
+    "2024-02-09-directions-navigation": "f6075d75",
+    "2024-02-10-donner": "65dce826",
+    "2024-02-11-perception-verbs": "94d1f99a",
+    "2024-02-12-reading-11": "f68a5645",
+    "2024-02-13-search-and-find": "174c2313",
+    "2024-02-14-social-situations": "b2ad2bdf",
+    "2024-02-15-unit-11-exam": "3b960117",
+    "2024-02-16-unit-11-practice": "e9d48665",
+    "2024-03-15-nature-animals": "42b6f3d5",
+    "2024-03-15-questce-qui-que": "d7f12414",
+    "2024-03-16-movement-verbs": "3a0026bf",
+    "2024-03-16-quiest-qui-que": "8b24c876",
+    "2024-03-17-natural-phenomena": "54b008b4",
+    "2024-03-19-pourquoi-complex": "5b9fafa8",
+    "2024-03-20-comment-complex": "376fe246",
+    "2024-03-22-inversion-questions": "05ab881e",
+    "2024-03-23-devoir": "4ff2121c",
+    "2024-03-23-embedded-questions": "b8584e69",
+    "2024-03-24-everyday-nouns": "6fde7040",
+    "2024-03-24-rhetorical-negative": "61cd68d3",
+    "2024-03-25-faire": "f5afe325",
+    "2024-03-25-multi-clause-questions": "c0c11e7d",
+    "2024-03-26-location-adverbs": "eba4725f",
+    "2024-03-27-negation-2": "e2d1c062",
+    "2024-03-28-negation": "ce10a616",
+    "2024-03-29-parler": "f59194ed",
+    "2024-03-30-reading-4": "7a5e7c7d",
+    "2024-03-31-survival-phrases": "b55d5327",
+    "2024-04-01-alphabet": "9eabe231",
+    "2024-04-01-time-adverbs": "5c6d3fff",
+    "2024-04-02-numbers": "06ffe482",
+    "2024-04-02-unit-4-exam": "7eed691f",
+    "2024-04-03-days-months": "b7ad631a",
+    "2024-04-03-unit-4-practice": "50f5328e",
+    "2024-04-04-aimer": "7c30e737",
+    "2024-04-04-holidays": "05dd5519",
+    "2024-04-05-avoir-past": "2293da35",
+    "2024-04-05-colors": "82ba32e0",
+    "2024-04-06-boire": "adfa1a9e",
+    "2024-04-06-french-countries": "45bb9825",
+    "2024-04-07-comparisons-slang": "5699567c",
+    "2024-04-07-language-stats": "47e4eb03",
+    "2024-04-08-comparisons": "fd8a048a",
+    "2024-04-08-spelling-patterns": "5c62edc8",
+    "2024-04-09-conditionals": "b61b1a59",
+    "2024-04-10-etre-past": "6d143812",
+    "2024-04-11-food-nouns": "b2272b4d",
+    "2024-04-12-manger": "1daf51fd",
+    "2024-04-13-reading-5": "2e7fff94",
+    "2024-04-14-unit-5-exam": "335c324f",
+    "2024-04-15-unit-5-practice": "2b797211",
+    "2024-04-16-would-conditionals": "63d6385f",
+    "2024-04-17-besoin": "c27e698a",
+    "2024-04-18-commander": "19277662",
+    "2024-04-19-demander": "7b159c6f",
+    "2024-04-20-dire": "6358e670",
+    "2024-04-21-mettre": "6a664b45",
+    "2024-04-22-prendre": "3a5cdc5c",
+    "2024-04-23-progressive-tenses": "eb251795",
+    "2024-04-24-reading-6": "e99390bc",
+    "2024-04-25-top-200-nouns": "9bc4b9cc",
+    "2024-04-26-unit-6-exam": "628ac379",
+    "2024-04-27-unit-6-practice": "e490196e",
+    "2024-04-28-comparison-modifiers": "180d3803",
+    "2024-04-29-comprendre": "201bdf65",
+    "2024-04-30-connaitre": "b333c8fd",
+    "2024-05-01-croire": "dfbb0792",
+    "2024-05-02-discourse-markers": "0845de00",
+    "2024-05-03-knowledge-nouns": "84e620df",
+    "2024-05-04-learning-verbs": "a54b5c47",
+    "2024-05-05-on-and-people": "c2390aaa",
+    "2024-05-06-penser": "9245c978",
+    "2024-05-07-reading-7": "65b6f2b1",
+    "2024-05-08-savoir": "708eff63",
+    "2024-05-09-studying-verbs": "0c3fc9c7",
+    "2024-05-10-unit-7-exam": "58db8269",
+    "2024-05-11-unit-7-practice": "46d1329e",
+    "2024-05-12-commands-pronouns": "a5970680",
+    "2024-05-13-commands-tu": "2baca921",
+    "2024-05-14-commands-vous": "f7c563aa",
+    "2024-05-15-daily-actions-1": "d22314ba",
+    "2024-05-16-daily-reflexives": "7d12927a",
+    "2024-05-17-getting-ready": "fab71050",
+    "2024-05-18-irregular-commands": "466baf16",
+    "2024-05-19-morning-routine": "6b028782",
+    "2024-05-20-reading-8": "36e62f36",
+    "2024-05-21-reflexive-pronouns": "02ac53fe",
+    "2024-05-22-s-appeler": "771ce66c",
+    "2024-05-23-temporal-words": "b1eba5d3",
+    "2024-05-24-unit-8-exam": "a155a0c5",
+    "2024-05-25-unit-8-practice": "b2676f5f",
+    "2024-05-26-causal-words": "e4c3667a",
+    "2024-05-27-imparfait-all-verbs": "bb3dbc0c",
+    "2024-05-28-more-spatial-relations": "81b2f6fb",
+    "2024-05-29-passe-compose-agreement": "dc7f79f9",
+    "2024-05-30-passe-compose-er": "3f08e1a2",
+    "2024-05-31-passe-compose-etre": "54d0cb01",
+    "2024-06-01-passe-compose-irregular-1": "cccbf0c0",
+    "2024-06-02-passe-compose-irregular-2": "06c93537",
+    "2024-06-03-past-tense-composition": "42256213",
+    "2024-06-04-pc-vs-imparfait": "042838fd",
+    "2024-06-05-reading-9": "c74fd404",
+    "2024-06-06-reciprocal-reflexives": "f06ef3ed",
+    "2024-06-07-reflexive-past": "1f5f80a0",
+    "2024-06-08-spatial-prepositions": "f61ae10e",
+    "2024-06-09-unit-9-exam": "321ac810",
+    "2024-06-10-unit-9-practice": "91c5b429",
+    "2024-10-20-liaison-help": "4d229cdc",
+    "2024-10-21-cognates-help": "92e5b3b9",
+    "2024-10-22-donner": "e189597e",
+    "2024-10-22-search-find": "c37627a7",
+    "2024-12-18-pronunciation-test": "1d2e2cf2",
+    "2026-11-24-negation-guide": "f5978767",
+    "2026-11-24-numbers": "3bae5171"
+  }
+}

@@ -126,4 +126,8 @@ test('a main change under a hand edit stops the run until it is settled or accep
   assert.equal(migrate('--check').status, 0, wouldChange(migrate('--check')));
   const forced = migrate('--force', '--check');
   assert.equal(forced.status, 0, wouldChange(forced));
+  // The live app now shows main's hint, L the writer's: a recorded hand fix, which the golden test allows.
+  const golden = goldenIn(c);
+  assert.ok(ran(golden), 'the golden test ran');
+  assert.equal(golden.status, 0, failures(golden));
 });
