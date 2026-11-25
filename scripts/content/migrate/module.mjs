@@ -241,7 +241,10 @@ export function convertModule(old, opts = {}) {
     }
     if (isStr(src.ttsText)) itemLines.push({ path: `${src.ref}.ttsText`, kind: 'dropped_field', detail: `"${src.ttsText}" (speech override; no field)` });
     if (src.authoredId !== undefined) item.id = src.authoredId; // makeItemId keeps it
-    freshItems.push({ src, hash: hashOf(src.hashPart), item, lines: itemLines });
+    // What the exercise asks and expects, for pairing it with its written item when its source changes.
+    const asked = src.shape === 'sentence' ? src.raw.text : src.live?.prompt ?? src.raw?.prompt ?? '';
+    const expected = src.shape === 'sentence' ? (src.raw.blanks || []).map((b) => b.answer).join(' ') : answerOf ?? '';
+    freshItems.push({ src, hash: hashOf(src.hashPart), item, lines: itemLines, key: `${normText(asked)}|${normText(expected)}`, answer: normText(expected) });
   }
 
   /* ---------- merge with what is written (three-way) ---------- */
@@ -302,16 +305,17 @@ export function convertModule(old, opts = {}) {
   for (const f of ['title', 'description', 'can_do']) fieldPart(f, fresh[f]);
   if (ex?.teaches !== undefined) put('teaches', clone(ex.teaches));
 
-  // Vocabulary: one part per source card. Word ids are frozen once written: a card the file holds keeps its id
+  // Vocabulary: one part per source card. A source card finds its written card by content (the record's source
+  // hash, then French and gloss, then French alone when it is unique), and by place only when it was edited in place
+  // between unchanged neighbours (pairByContent). Word ids are frozen once written: a written card keeps its id
   // whatever the converter proposes; a new card takes the proposal. Ids are proposed in course order, and each
   // written card joins the walk as written.
   if (teaches) {
     const src = old.vocabularyReference || [];
     const fileVocab = Array.isArray(ex?.vocabulary) ? ex.vocabulary : [];
-    const baseVocab = Array.isArray(rec?.vocabulary) ? rec.vocabulary : null;
-    const NULL = hashOf(null);
-    const freshCards = []; // per source card: the card, or null when it repeats an earlier card exactly
     const strip = (w) => (w ? Object.fromEntries(Object.entries(w).filter(([k]) => k !== 'word_id')) : null);
+    const cardKey = (fr, gloss) => `${normText(fr)}|${normText(gloss)}`;
+    const freshCards = []; // per source card: the card, or null when it repeats an earlier card exactly
     for (const [i, v] of src.entries()) {
       const w = { word_id: null, fr: String(v.french).trim(), gloss: String(v.english).trim() };
       const notes = [v.note, v.usage, v.agreement].filter(isStr).map((s) => s.trim());
@@ -329,34 +333,48 @@ export function convertModule(old, opts = {}) {
         freshCards.push(null);
       } else freshCards.push(w);
     }
-    // Which written card belongs to which source card: the record's layout (cards it wrote, in order), or for an
-    // older record the fresh layout.
-    // An older record has no layout: a written card belongs to the source card with its French and gloss.
-    let fileCard;
-    let extra;
-    if (baseVocab) {
+    const srcInfo = src.map((v, i) => ({ src: hashOf(v), key: cardKey(v.french, v.english), fr: normText(v.french), at: i, card: freshCards[i] }));
+
+    // The record's cards: keyed format { src, key, at, word_id, id, out }, or the positional format of earlier runs
+    // (an array by source index, sources unchanged since).
+    let recCards = [];
+    if (Array.isArray(rec?.vocabulary) && rec.vocabulary.length && !('key' in (baseOf(rec.vocabulary[0]) ?? {}))) {
+      // Earlier positional record: entry i belongs to source card i; its written card is the next file card.
       let k = 0;
-      fileCard = src.map((_, i) => (baseOf(baseVocab[i])?.out !== undefined && baseOf(baseVocab[i]).out !== NULL ? fileVocab[k++] : undefined));
-      extra = fileVocab.slice(k);
-    } else {
-      const usedCards = new Set();
-      fileCard = src.map((v) => {
-        const j = fileVocab.findIndex((w, n) => !usedCards.has(n) && w.fr === String(v.french).trim() && w.gloss === String(v.english).trim());
-        if (j === -1) return undefined;
-        usedCards.add(j);
-        return fileVocab[j];
+      recCards = rec.vocabulary.map((e, i) => {
+        const b = baseOf(e) ?? {};
+        const written = b.out !== undefined && b.out !== hashOf(null) ? fileVocab[k++] : undefined;
+        return { ...b, key: srcInfo[i]?.key, fr: srcInfo[i]?.fr, at: i, id: written?.word_id ?? null, legacyCard: written };
       });
-      extra = fileVocab.filter((_, n) => !usedCards.has(n));
-    }
-    // extra: cards written by hand, with no source card
+    } else if (Array.isArray(rec?.vocabulary)) recCards = rec.vocabulary.map((e) => ({ ...baseOf(e), fr: String(baseOf(e)?.key ?? '').split('|')[0] }));
+    const pairs = pairByContent(
+      srcInfo,
+      recCards,
+      [(s, r) => r.src === s.src, (s, r) => r.key === s.key, { unique: (s, r) => r.fr === s.fr }],
+    );
+    const fileById = new Map(fileVocab.map((w) => [w.word_id, w]));
+    const usedFile = new Set();
+    const findWritten = (r) => {
+      if (!r) return undefined;
+      if (r.legacyCard) return r.legacyCard;
+      let w = r.id ? fileById.get(r.id) : undefined;
+      if (!w) w = fileVocab.find((x) => !usedFile.has(x) && cardKey(x.fr, x.gloss) === r.key);
+      return w;
+    };
+    // With no record, a written card belongs to the source card with its French and gloss.
+    const noRecordCard = (s) => fileVocab.find((x) => !usedFile.has(x) && cardKey(x.fr, x.gloss) === s.key);
+
     const vocab = [];
     const usedIds = new Set();
-    for (const [i, card] of freshCards.entries()) {
-      const fileW = fileCard[i];
-      const v = src[i];
+    const NULL = hashOf(null);
+    for (const s of srcInfo) {
+      const r = pairs.get(s.at) ?? null;
+      const fileW = rec ? findWritten(r) : noRecordCard(s);
+      if (fileW) usedFile.add(fileW);
+      const v = src[s.at];
       let freshW = null;
       let proposed = null;
-      if (card) {
+      if (s.card) {
         const { word_id, review } = proposeWordId({ french: v.french, english: v.english, note: v.note, module_key: key }, new Map(seenBySpelling), dictionary);
         let id = fileW?.word_id ?? word_id;
         // A proposal another card of this table already has: the second card is another meaning.
@@ -367,37 +385,50 @@ export function convertModule(old, opts = {}) {
           for (let n = 2; usedIds.has(candidate); n++) candidate = `${stem}.${suffix}-${n}`;
           id = candidate;
         }
-        freshW = { ...card, word_id: id };
-        // The converter's own id for this card: the one it gave when it first wrote the card (recorded), else
-        // this run's choice for a new card, else its proposal.
-        const recorded = baseVocab ? baseOf(baseVocab[i])?.word_id : undefined;
-        proposed = { ...card, word_id: recorded ?? (fileW?.word_id === undefined ? id : word_id) };
-        if (review) add(`vocabulary[${vocab.length}]`, 'word_sense', `"${card.fr}": ${review}${id !== word_id ? ` (written: ${id})` : ''}`);
+        freshW = { ...s.card, word_id: id };
+        // The converter's own id for this card: the one it gave when it first wrote the card (recorded), else this
+        // run's choice for a new card, else its proposal.
+        proposed = { ...s.card, word_id: r?.word_id ?? (fileW?.word_id === undefined ? id : word_id) };
+        if (review) add(`vocabulary[${vocab.length}]`, 'word_sense', `"${s.card.fr}": ${review}${id !== word_id ? ` (written: ${id})` : ''}`);
       }
-      const srcHash = hashOf(v);
-      const base = baseVocab ? baseOf(baseVocab[i]) : rec ? { src: undefined } : null;
-      // Compared without the word id, which is frozen apart from this merge.
+      const fixKey = `vocabulary/${proposed?.word_id ?? r?.word_id ?? s.key}`;
       let value;
-      if (!ex && `vocabulary/${i}` in fixes) {
-        value = fixes[`vocabulary/${i}`] === null ? null : clone(fixes[`vocabulary/${i}`]);
-        outRecord.vocabulary[i] = { src: srcHash, out: hashOf(strip(freshW)), ...(proposed ? { word_id: proposed.word_id } : {}) };
+      let out;
+      let srcRec = s.src;
+      if (!ex && fixKey in fixes) {
+        value = fixes[fixKey] === null ? null : clone(fixes[fixKey]);
+        out = hashOf(strip(freshW));
       } else {
-        const r = mergePart(`vocabulary/${i}`, `vocabulary[${vocab.length}]`, fileW !== undefined, strip(fileW) ?? undefined, strip(freshW), base, srcHash);
-        outRecord.vocabulary[i] = { src: r.src ?? srcHash, out: r.out, ...(proposed ? { word_id: proposed.word_id } : {}) };
-        value = r.value ? { word_id: fileW?.word_id ?? freshW?.word_id, ...r.value } : null;
+        const base = r ? { src: r.src, out: r.out } : rec ? { src: undefined } : null;
+        const m = mergePart(fixKey, `vocabulary[${vocab.length}]`, fileW !== undefined, strip(fileW) ?? undefined, strip(freshW), base, s.src);
+        out = m.out;
+        if (m.src !== undefined) srcRec = m.src;
+        value = m.value ? { word_id: fileW?.word_id ?? freshW?.word_id, ...m.value } : null;
       }
-      // Key order as the converter writes it.
       const ordered = value ? { word_id: value.word_id, fr: value.fr, gloss: value.gloss, ...value } : null;
       if (ordered) {
         diffs(ordered, proposed ?? undefined, `vocabulary[${vocab.length}]`, handEdits);
         vocab.push(ordered);
         usedIds.add(ordered.word_id);
         rememberWord(ordered, key, seenBySpelling);
-      } else if (proposed) diffs(undefined, proposed, `vocabulary/${i}`, handEdits);
-      // A written id that differs from the proposal is kept against the converter, so it is a hand fix too.
-      noteFix(`vocabulary/${i}`, ordered ?? undefined, proposed ?? undefined);
+      } else if (proposed) diffs(undefined, proposed, `vocabulary/${proposed.word_id}`, handEdits);
+      // A written id that differs from the converter's is kept against the converter, so it is a hand fix too.
+      if (s.card || ordered) noteFix(fixKey, ordered ?? undefined, proposed ?? undefined);
+      if (s.card || out !== NULL)
+        outRecord.vocabulary.push({ src: srcRec, key: s.key, at: s.at, word_id: proposed?.word_id ?? r?.word_id ?? null, id: ordered?.word_id ?? fileW?.word_id ?? r?.id ?? null, out });
     }
-    for (const w of extra) {
+    // A recorded card no source card pairs with: its source card is gone, so the written card goes too.
+    for (const r of recCards) {
+      if ([...pairs.values()].includes(r)) continue;
+      const w = findWritten(r);
+      if (w && !usedFile.has(w)) {
+        usedFile.add(w);
+        add(`vocabulary/${w.word_id}`, 'source_removed', `"${w.fr}" (${w.word_id}): its source card is gone, so the card is removed`);
+      }
+    }
+    // Cards written by hand, with no source card, stay.
+    for (const w of fileVocab) {
+      if (usedFile.has(w)) continue;
       vocab.push(clone(w));
       rememberWord(w, key, seenBySpelling);
     }
@@ -407,32 +438,39 @@ export function convertModule(old, opts = {}) {
   fieldPart('concepts', keepIds('concepts', fresh.concepts));
   fieldPart('tables', keepIds('tables', fresh.tables));
 
-  // Items: a source exercise finds its written item by the record (same source hash, else the same source place),
-  // else by content.
+  // Items: a source exercise finds its written item by content first (the record's source hash, then its prompt
+  // and answer, then its answer when that is unique), and by place only when it was edited in place between
+  // unchanged neighbours. An exercise nothing pairs with is new and gets a new id, never a removed one's.
   const exItems = Array.isArray(ex?.items) ? ex.items : [];
   const exIndex = new Map(exItems.map((it, i) => [it.id, i]));
   const recItems = Object.fromEntries(Object.entries(rec?.items ?? {}).map(([id, e]) => [id, baseOf(e)]));
-  const freshHashes = new Set(freshItems.map((f) => f.hash));
   const used = new Set();
   const taken = new Set([...exItems.map((i) => i.id), ...Object.keys(recItems)]);
   const entries = []; // { f, id, item, sort, state }
-  const claim = (f, id) => {
-    used.add(id);
-    f.id = id;
+  const refAt = (ref) => {
+    const m = /^(.*)\[(\d+)\]$/.exec(String(ref ?? ''));
+    return m ? { list: m[1], at: +m[2] } : { list: null, at: -1 };
   };
-  for (const f of freshItems) {
-    const ids = Object.keys(recItems).filter((i) => !used.has(i) && recItems[i].src === f.hash);
-    const id = ids.find((i) => recItems[i].ref === f.src.ref) ?? ids[0];
-    if (id !== undefined) claim(f, id);
+  const recList = Object.entries(recItems).map(([id, b]) => ({ ...b, id, ...refAt(b.ref) }));
+  const srcList = freshItems.map((f) => ({ f, src: f.hash, key: f.key, answer: f.answer, ...refAt(f.src.ref) }));
+  if (rec) {
+    const pairs = pairByContent(srcList, recList, [(s, r) => r.src === s.src, (s, r) => r.key !== undefined && r.key === s.key, { unique: (s, r) => r.answer !== undefined && r.answer === s.answer }]);
+    for (const s of srcList) {
+      const r = pairs.get(s.at);
+      if (r) {
+        used.add(r.id);
+        s.f.id = r.id;
+      }
+    }
   }
-  for (const f of freshItems.filter((x) => !x.id)) {
-    const id = Object.keys(recItems).find((i) => !used.has(i) && recItems[i].ref === f.src.ref && !freshHashes.has(recItems[i].src));
-    if (id !== undefined) claim(f, id);
-  }
+  // With no record (or an item the record never had), a written item with the same content.
   for (const f of freshItems.filter((x) => !x.id)) {
     const k2 = contentKey(f.item);
-    const e = exItems.find((it) => !used.has(it.id) && !(it.id in recItems && freshHashes.has(recItems[it.id].src)) && contentKey(it) === k2);
-    if (e) claim(f, e.id);
+    const e = exItems.find((it) => !used.has(it.id) && !(it.id in recItems) && contentKey(it) === k2);
+    if (e) {
+      used.add(e.id);
+      f.id = e.id;
+    }
   }
   for (const f of freshItems) {
     const freshItem = f.id ? { id: f.id, ...withoutId(f.item) } : null;
@@ -440,14 +478,14 @@ export function convertModule(old, opts = {}) {
       const id = makeItemId(f.item, taken);
       f.id = id;
       const value = `items/${id}` in fixes && !ex ? clone(fixes[`items/${id}`]) : { id, ...withoutId(f.item) };
-      outRecord.items[id] = { src: f.hash, out: hashOf({ id, ...withoutId(f.item) }), ref: f.src.ref };
+      outRecord.items[id] = { src: f.hash, key: f.key, answer: f.answer, out: hashOf({ id, ...withoutId(f.item) }), ref: f.src.ref };
       if (value) entries.push({ f, id, item: value, sort: null, state: ex ? 'added' : 'new', freshItem: { id, ...withoutId(f.item) } });
       continue;
     }
     const base = recItems[f.id] ?? null;
     const fileHas = exIndex.has(f.id);
     const r = mergePart(`items/${f.id}`, `items[${exIndex.get(f.id) ?? '?'}]`, fileHas, exItems[exIndex.get(f.id)], freshItem, base, f.hash);
-    outRecord.items[f.id] = { src: r.src ?? f.hash, out: r.out, ref: f.src.ref };
+    outRecord.items[f.id] = { src: r.src ?? f.hash, key: f.key, answer: f.answer, out: r.out, ref: f.src.ref };
     // An item removed by hand stays removed; the record keeps its id.
     if (r.value) entries.push({ f, id: f.id, item: r.value, sort: exIndex.get(f.id) ?? null, state: 'merged', freshItem });
     else if (!fileHas && base?.out !== undefined) noteFix(`items/${f.id}`, undefined, freshItem);
@@ -526,4 +564,58 @@ function withoutId(item) {
 // The first meaning of a gloss: "that/it (informal)" -> "that".
 function alternatives0(gloss) {
   return String(gloss).replace(/\([^)]*\)/g, ' ').split(/\/|,|;|\bor\b/)[0] ?? '';
+}
+
+/**
+ * Pairs each new entry with at most one recorded entry, by content first. `tests` run in order; a test written
+ * { unique: fn } pairs only when exactly one unpaired new and one unpaired recorded entry match each other. Last,
+ * an entry edited in place pairs by place: its nearest paired neighbours bound exactly one unpaired recorded
+ * entry, at the same distance from the neighbour before it (or after it, at the start of the list). Entries carry `at` (their
+ * place in their list); recorded entries carry the `at` they had, and `list` when places belong to several lists.
+ * Returns Map<new at, recorded entry>.
+ */
+export function pairByContent(news, recs, tests) {
+  const pairs = new Map();
+  const usedR = new Set();
+  const freeN = () => news.filter((n) => !pairs.has(n.at));
+  const freeR = () => recs.filter((r) => !usedR.has(r));
+  for (const t of tests) {
+    if (typeof t === 'function') {
+      for (const n of freeN()) {
+        const r = freeR().find((x) => t(n, x));
+        if (r) {
+          pairs.set(n.at, r);
+          usedR.add(r);
+        }
+      }
+    } else {
+      for (const n of freeN()) {
+        const rs = freeR().filter((x) => t.unique(n, x));
+        if (rs.length !== 1) continue;
+        if (freeN().filter((m) => t.unique(m, rs[0])).length !== 1) continue;
+        pairs.set(n.at, rs[0]);
+        usedR.add(rs[0]);
+      }
+    }
+  }
+  // Edited in place: the nearest paired neighbours (unchanged entries) bound one unpaired recorded entry, and this
+  // entry sits as far from the neighbour before it as that recorded entry did.
+  const sameList = (a, b) => (a?.list ?? null) === (b?.list ?? null);
+  const ordered = [...news].sort((a, b) => a.at - b.at);
+  ordered.forEach((n, i) => {
+    if (pairs.has(n.at)) return;
+    const prev = ordered.slice(0, i).reverse().find((m) => pairs.has(m.at));
+    const next = ordered.slice(i + 1).find((m) => pairs.has(m.at));
+    const lo = prev ? pairs.get(prev.at).at : -1;
+    const hi = next ? pairs.get(next.at).at : Infinity;
+    if (lo >= hi) return;
+    const between = freeR().filter((r) => sameList(r, n) && r.at > lo && r.at < hi);
+    if (between.length !== 1) return;
+    const fromPrev = n.at - (prev ? prev.at : -1) === between[0].at - lo;
+    const fromNext = !prev && next && next.at - n.at === hi - between[0].at;
+    if (!fromPrev && !fromNext) return;
+    pairs.set(n.at, between[0]);
+    usedR.add(between[0]);
+  });
+  return pairs;
 }

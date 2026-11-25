@@ -35,7 +35,10 @@ test('rerun keeps hand edits', () => {
   const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
   assert.deepEqual(second.mod, edited);
   assert.deepEqual(second.mod.items.map((i) => i.id), first.mod.items.map((i) => i.id));
-  assert.deepEqual(second.record, first.record);
+  // The record keeps the hand-set word id as written; a further rerun changes nothing.
+  const third = convertModule(old, { ...ctx, existing: second.mod, record: second.record });
+  assert.deepEqual(third.mod, edited);
+  assert.deepEqual(third.record, second.record);
   // Without a record the written file still wins.
   assert.deepEqual(convertModule(old, { ...ctx, existing: edited }).mod, edited);
 });
@@ -123,4 +126,70 @@ test('--force reapplies the hand fixes', () => {
   const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
   const forced = convertModule(old, { ...ctx, handFixes: second.handFixes });
   assert.deepEqual(forced.mod, edited);
+});
+
+// Word ids stay on their words when the source table changes (review fix round 2).
+const words = (m) => m.vocabulary.map((w) => `${w.word_id}=${w.fr}=${w.gloss}`);
+const three = {
+  ...old,
+  vocabularyReference: [
+    { french: 'je suis', english: 'I am', note: '' },
+    { french: 'tu es', english: 'you are', note: '' },
+    { french: 'il est', english: 'he is', note: '' },
+  ],
+};
+
+test('a source card removed at the front: the other cards keep their ids', () => {
+  const first = convertModule(three, ctx);
+  const changed = clone(three);
+  changed.vocabularyReference.splice(0, 1);
+  const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(words(second.mod), ['tu-es-fr=tu es=you are', 'il-est-fr=il est=he is']);
+  assert.ok(second.report.some((l) => l.kind === 'source_removed' && /je-suis-fr/.test(l.detail)));
+});
+
+test('a source card added at the front takes a new id; the others keep theirs', () => {
+  const first = convertModule(three, ctx);
+  const changed = clone(three);
+  changed.vocabularyReference.unshift({ french: 'nous sommes', english: 'we are', note: '' });
+  const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(words(second.mod), ['nous-sommes-fr=nous sommes=we are', 'je-suis-fr=je suis=I am', 'tu-es-fr=tu es=you are', 'il-est-fr=il est=he is']);
+});
+
+test('a source card edited in place keeps its id and takes the new text', () => {
+  const first = convertModule(three, ctx);
+  const changed = clone(three);
+  changed.vocabularyReference[1] = { french: 'tu es', english: 'you are (informal)', note: 'singular' };
+  const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
+  assert.deepEqual(words(second.mod), ['je-suis-fr=je suis=I am', 'tu-es-fr=tu es=you are (informal)', 'il-est-fr=il est=he is']);
+  assert.equal(second.mod.vocabulary[1].note, 'singular');
+  // A rerun of the same source changes nothing.
+  const third = convertModule(changed, { ...ctx, existing: second.mod, record: second.record });
+  assert.deepEqual(third.mod, second.mod);
+  assert.deepEqual(third.record, second.record);
+});
+
+test('an exercise removed before an edited one: the edited one keeps its own id (review step3)', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  edited.items[1] = { id: edited.items[1].id, type: 'respond', situation: 'Talk to a friend', cue: 'you are', answer: 'tu es' };
+  const changed = clone(old);
+  changed.exerciseConfig.items.splice(0, 1);
+  changed.exerciseConfig.items[0].prompt = 'you are (informal)';
+  const second = convertModule(changed, { ...ctx, existing: edited, record: first.record });
+  assert.deepEqual(second.mod.items.map((i) => i.id), [first.mod.items[1].id, first.mod.items[2].id]);
+  assert.deepEqual(second.mod.items[0], edited.items[1]); // the hand-fixed type stays
+  assert.ok(second.report.some((l) => l.kind === 'source_removed' && /i-je-suis/.test(l.detail)));
+  assert.ok(second.report.some((l) => l.kind === 'merge_conflict'));
+});
+
+test('an exercise nothing pairs with gets a new id, never a removed one', () => {
+  const first = convertModule(old, ctx);
+  const changed = clone(old);
+  changed.exerciseConfig.items.splice(0, 1);
+  changed.exerciseConfig.items[0] = { instruction: 'Translate:', prompt: 'we are', expectedAnswer: 'nous sommes' };
+  const second = convertModule(changed, { ...ctx, existing: clone(first.mod), record: first.record });
+  const ids = second.mod.items.map((i) => i.id);
+  assert.ok(!ids.includes('i-je-suis') && !ids.includes('i-tu-es'), ids.join(' '));
+  assert.deepEqual(ids, ['i-nous-sommes', 'i-il-est']);
 });
