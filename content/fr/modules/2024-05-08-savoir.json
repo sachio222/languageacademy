@@ -1,0 +1,283 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-08-savoir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{savoir} - To Know (Facts/Skills)",
+  "description": "Express knowledge of facts and skills: je sais (I know), je ne sais pas (I don't know), je sais parler (I know how to speak)",
+  "can_do": [
+    "Express knowledge of facts (I know, I don't know)",
+    "Say what skills you have (I know how to speak French)",
+    "Use the most common phrase in French (je ne sais pas)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "savoir-fr",
+      "fr": "savoir",
+      "gloss": "to know (facts/skills)",
+      "note": "infinitive - irregular verb"
+    },
+    {
+      "word_id": "je-sais-fr",
+      "fr": "je sais",
+      "gloss": "I know",
+      "note": "pronounced 'say'"
+    },
+    {
+      "word_id": "tu-sais-fr",
+      "fr": "tu sais",
+      "gloss": "you know (informal)",
+      "note": "same sound as je sais; super common question"
+    },
+    {
+      "word_id": "il-elle-sait-fr",
+      "fr": "il/elle sait",
+      "gloss": "he/she knows",
+      "note": "same sound, different spelling"
+    },
+    {
+      "word_id": "nous-savons-fr",
+      "fr": "nous savons",
+      "gloss": "we know",
+      "note": "pronounced 'sa-von'"
+    },
+    {
+      "word_id": "vous-savez-fr",
+      "fr": "vous savez",
+      "gloss": "you know (formal/plural)",
+      "note": "pronounced 'sa-vay'"
+    },
+    {
+      "word_id": "ils-elles-savent-fr",
+      "fr": "ils/elles savent",
+      "gloss": "they know",
+      "note": "pronounced 'sav' (silent -ent)"
+    },
+    {
+      "word_id": "je-ne-sais-pas-fr",
+      "fr": "Je ne sais pas",
+      "gloss": "I don't know",
+      "note": "⭐⭐⭐ MOST IMPORTANT! Rank 21!"
+    },
+    {
+      "word_id": "je-sais-parler-fr",
+      "fr": "je sais parler",
+      "gloss": "I know how to speak / I can speak",
+      "note": "savoir + infinitive for skills"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-savoir-to-know-facts",
+      "term": "{savoir} = to know (facts or skills)",
+      "definition": "CRITICAL distinction: savoir is for facts you learned or skills you have",
+      "example": "{je sais la réponse} (I know the answer), {je sais nager} (I know how to swim)"
+    },
+    {
+      "id": "c-irregular-conjugation",
+      "term": "Irregular conjugation",
+      "definition": "Must memorize! Present: je sais, tu sais, il sait, nous savons, vous savez, ils savent",
+      "example": "Notice: {je}/{tu}/il all sound the same ('say'), {nous}/vous different"
+    },
+    {
+      "id": "c-je-ne-sais-pas",
+      "term": "'{Je ne sais pas}' - THE phrase",
+      "definition": "Rank 21 = one of most common phrases in ALL of French! You'll use it constantly",
+      "example": "{Je ne sais pas} (I don't know), {Tu sais?} (You know? / Do you know?)"
+    },
+    {
+      "id": "c-savoir-infinitive-know-how",
+      "term": "savoir + infinitive = know how to",
+      "definition": "Use savoir + verb to express skills/abilities",
+      "example": "{je sais parler français} (I know how to speak French), {je sais nager} (I can swim)"
+    },
+    {
+      "id": "c-savoir-vs-connaitre-preview",
+      "term": "savoir vs connaître (preview)",
+      "definition": "savoir = facts/skills, connaître = people/places (you'll learn connaître next!)",
+      "example": "{je sais la réponse} (I know the answer), {je connais Marie} (I know Marie) ← next module!"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-savoir",
+      "title": "{savoir}",
+      "rows": [
+        {
+          "fr": "je sais",
+          "en": "I know"
+        },
+        {
+          "fr": "tu sais",
+          "en": "you know (informal)"
+        },
+        {
+          "fr": "il sait",
+          "en": "he knows"
+        },
+        {
+          "fr": "elle sait",
+          "en": "she knows"
+        },
+        {
+          "fr": "nous savons",
+          "en": "we know"
+        },
+        {
+          "fr": "vous savez",
+          "en": "you know (formal/plural)"
+        },
+        {
+          "fr": "ils savent",
+          "en": "they know (masculine)"
+        },
+        {
+          "fr": "elles savent",
+          "en": "they know (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-sais",
+      "type": "transform",
+      "instruction": "You don't know the answer. Say \"I know\"",
+      "shown": "savoir",
+      "answer": "je sais",
+      "hint": "{je + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "Use '{je sais}' for facts. Connaître is for people/places!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-sais",
+      "type": "transform",
+      "instruction": "Ask if someone knows. Say \"you know (informal)\"",
+      "shown": "savoir",
+      "answer": "tu sais",
+      "hint": "{tu + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"you know (informal)\""
+        },
+        {
+          "answer": "il sait",
+          "feedback": "That's \"he knows\", not \"you know (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-sait",
+      "type": "transform",
+      "instruction": "He knows how to swim. Say \"he knows\"",
+      "shown": "savoir",
+      "answer": "il sait",
+      "hint": "{il + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"he knows\""
+        },
+        {
+          "answer": "tu sais",
+          "feedback": "That's \"you know (informal)\", not \"he knows\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-sait",
+      "type": "transform",
+      "instruction": "She knows the answer. Say \"she knows\"",
+      "shown": "savoir",
+      "answer": "elle sait",
+      "hint": "{elle + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"she knows\""
+        },
+        {
+          "answer": "tu sais",
+          "feedback": "That's \"you know (informal)\", not \"she knows\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-savons",
+      "type": "transform",
+      "instruction": "We know French. Say \"we know\"",
+      "shown": "savoir",
+      "answer": "nous savons",
+      "hint": "{nous + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"we know\""
+        },
+        {
+          "answer": "tu sais",
+          "feedback": "That's \"you know (informal)\", not \"we know\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-savez",
+      "type": "transform",
+      "instruction": "Ask formally if they know. Say \"you know (formal/plural)\"",
+      "shown": "savoir",
+      "answer": "vous savez",
+      "hint": "{vous + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"you know (formal/plural)\""
+        },
+        {
+          "answer": "tu sais",
+          "feedback": "That's \"you know (informal)\", not \"you know (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-savent",
+      "type": "transform",
+      "instruction": "They know everything. Say \"they know (masculine)\"",
+      "shown": "savoir",
+      "answer": "ils savent",
+      "hint": "{ils + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"they know (masculine)\""
+        },
+        {
+          "answer": "tu sais",
+          "feedback": "That's \"you know (informal)\", not \"they know (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-savent",
+      "type": "transform",
+      "instruction": "They (feminine) know how to cook. Say \"they know (feminine)\"",
+      "shown": "savoir",
+      "answer": "elles savent",
+      "hint": "{elles + savoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "That's \"I know\", not \"they know (feminine)\""
+        },
+        {
+          "answer": "tu sais",
+          "feedback": "That's \"you know (informal)\", not \"they know (feminine)\""
+        }
+      ]
+    }
+  ]
+}

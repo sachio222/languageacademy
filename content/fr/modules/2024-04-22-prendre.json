@@ -1,0 +1,717 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-22-prendre",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{prendre} - To Take",
+  "description": "Express taking, learning, and understanding: je prends (I take), j'apprends (I learn), je comprends (I understand)",
+  "can_do": [
+    "Express taking things and transportation (I take the bus)",
+    "Use apprendre to talk about learning",
+    "Use comprendre to express understanding"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "prendre-fr",
+      "fr": "prendre",
+      "gloss": "to take",
+      "note": "infinitive form - irregular verb"
+    },
+    {
+      "word_id": "je-prends-fr",
+      "fr": "je prends",
+      "gloss": "I take",
+      "note": "sounds like 'pran'"
+    },
+    {
+      "word_id": "tu-prends-fr",
+      "fr": "tu prends",
+      "gloss": "you take (informal)",
+      "note": "same sound as je"
+    },
+    {
+      "word_id": "il-elle-prend-fr",
+      "fr": "il/elle prend",
+      "gloss": "he/she takes",
+      "note": "no 's' at end - still sounds like 'pran'"
+    },
+    {
+      "word_id": "nous-prenons-fr",
+      "fr": "nous prenons",
+      "gloss": "we take",
+      "note": "pronounced 'pren-on'"
+    },
+    {
+      "word_id": "vous-prenez-fr",
+      "fr": "vous prenez",
+      "gloss": "you take (formal/plural)",
+      "note": "pronounced 'pren-ay'"
+    },
+    {
+      "word_id": "ils-elles-prennent-fr",
+      "fr": "ils/elles prennent",
+      "gloss": "they take",
+      "note": "double 'n' - sounds like 'pren'"
+    },
+    {
+      "word_id": "prendre-le-bus-fr",
+      "fr": "prendre le bus",
+      "gloss": "to take the bus",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "prendre-un-cafe-fr",
+      "fr": "prendre un café",
+      "gloss": "to have a coffee",
+      "note": "prendre = to have (food/drink)"
+    },
+    {
+      "word_id": "apprendre-fr",
+      "fr": "apprendre",
+      "gloss": "to learn",
+      "note": "follows same pattern as prendre"
+    },
+    {
+      "word_id": "j-apprends-fr",
+      "fr": "j'apprends",
+      "gloss": "I learn",
+      "note": "j' before vowel"
+    },
+    {
+      "word_id": "j-apprends-le-francais-fr",
+      "fr": "j'apprends le français",
+      "gloss": "I learn French / I'm learning French",
+      "note": "very common phrase!"
+    },
+    {
+      "word_id": "comprendre-fr",
+      "fr": "comprendre",
+      "gloss": "to understand",
+      "note": "rank 61 - essential verb!"
+    },
+    {
+      "word_id": "je-comprends-fr",
+      "fr": "je comprends",
+      "gloss": "I understand",
+      "note": "essential phrase"
+    },
+    {
+      "word_id": "tu-comprends-fr",
+      "fr": "tu comprends?",
+      "gloss": "do you understand?",
+      "note": "common question"
+    },
+    {
+      "word_id": "je-ne-comprends-pas-fr",
+      "fr": "je ne comprends pas",
+      "gloss": "I don't understand",
+      "note": "very useful phrase!"
+    },
+    {
+      "word_id": "prends-le-s-il-te-plait-fr",
+      "fr": "prends-le, s'il te plaît",
+      "gloss": "take it please",
+      "note": "imperative + object pronoun + please"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-prendre-to-take",
+      "term": "{prendre} = to take",
+      "definition": "Very common verb for taking things, taking transportation, taking time",
+      "example": "{je prends le bus} (I take the bus), {tu prends ton temps} (you take your time)"
+    },
+    {
+      "id": "c-irregular-conjugation",
+      "term": "Irregular conjugation",
+      "definition": "Present tense: je prends, tu prends, il prend, nous prenons, vous prenez, ils prennent",
+      "example": "Notice: singular sounds like 'pran', plural 'pren-on', 'pren-ay', 'pren'"
+    },
+    {
+      "id": "c-apprendre-to-learn",
+      "term": "{apprendre} = to learn",
+      "definition": "Uses same conjugation pattern as prendre - very useful verb!",
+      "example": "{j'apprends le français} (I learn French), {nous apprenons ensemble} (we learn together)"
+    },
+    {
+      "id": "c-comprendre-to-understand",
+      "term": "{comprendre} = to understand",
+      "definition": "Also follows prendre pattern - essential for communication!",
+      "example": "{je comprends} (I understand), {tu comprends?} (do you understand?)"
+    },
+    {
+      "id": "c-common-uses-of-prendre",
+      "term": "Common uses of prendre",
+      "definition": "Transportation (prendre le bus), food/drink (prendre un café), time (ça prend du temps)",
+      "example": "{je prends un café} (I'm having a coffee), {ça prend deux heures} (it takes two hours)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-prends",
+      "type": "respond",
+      "situation": "I take",
+      "answer": "je prends",
+      "hint": "{je...}",
+      "mistakes": [
+        {
+          "answer": "je prend",
+          "feedback": "Expected: \"{je prends}\""
+        },
+        {
+          "answer": "je prendre",
+          "feedback": "Expected: \"{je prends}\""
+        },
+        {
+          "answer": "je prene",
+          "feedback": "Expected: \"{je prends}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-prends",
+      "type": "respond",
+      "situation": "Say \"you take\" (informal)",
+      "cue": "you take (informal)",
+      "answer": "tu prends",
+      "hint": "{tu...}",
+      "mistakes": [
+        {
+          "answer": "tu prend",
+          "feedback": "Expected: \"{tu prends}\""
+        },
+        {
+          "answer": "tu prendre",
+          "feedback": "Expected: \"{tu prends}\""
+        },
+        {
+          "answer": "tu prenes",
+          "feedback": "Expected: \"{tu prends}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-prend",
+      "type": "respond",
+      "situation": "he takes",
+      "answer": "il prend",
+      "hint": "{il...}",
+      "mistakes": [
+        {
+          "answer": "il prends",
+          "feedback": "Expected: \"{il prend}\""
+        },
+        {
+          "answer": "il prendre",
+          "feedback": "Expected: \"{il prend}\""
+        },
+        {
+          "answer": "il prene",
+          "feedback": "Expected: \"{il prend}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-prenons",
+      "type": "respond",
+      "situation": "we take",
+      "answer": "nous prenons",
+      "hint": "{nous...}",
+      "mistakes": [
+        {
+          "answer": "nous prends",
+          "feedback": "Expected: \"{nous prenons}\""
+        },
+        {
+          "answer": "nous prendre",
+          "feedback": "Expected: \"{nous prenons}\""
+        },
+        {
+          "answer": "nous prenez",
+          "feedback": "Expected: \"{nous prenons}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-prenez",
+      "type": "respond",
+      "situation": "Say \"you take\" (formal)",
+      "cue": "you take (formal)",
+      "answer": "vous prenez",
+      "hint": "{vous...}",
+      "mistakes": [
+        {
+          "answer": "vous prends",
+          "feedback": "Expected: \"{vous prenez}\""
+        },
+        {
+          "answer": "vous prendre",
+          "feedback": "Expected: \"{vous prenez}\""
+        },
+        {
+          "answer": "vous prenons",
+          "feedback": "Expected: \"{vous prenez}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-prennent",
+      "type": "respond",
+      "situation": "they take",
+      "answer": "ils prennent",
+      "hint": "ils... (double n!)",
+      "mistakes": [
+        {
+          "answer": "ils prends",
+          "feedback": "Expected: \"{ils prennent}\""
+        },
+        {
+          "answer": "ils prendre",
+          "feedback": "Expected: \"{ils prennent}\""
+        },
+        {
+          "answer": "ils prenent",
+          "feedback": "Expected: \"{ils prennent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-prends-le-bus",
+      "type": "respond",
+      "situation": "I take the bus",
+      "answer": "je prends le bus",
+      "hint": "{je prends le bus}",
+      "mistakes": [
+        {
+          "answer": "je prend le bus",
+          "feedback": "Expected: \"{je prends le bus}\""
+        },
+        {
+          "answer": "je prendre le bus",
+          "feedback": "Expected: \"{je prends le bus}\""
+        },
+        {
+          "answer": "je prens le bus",
+          "feedback": "Expected: \"{je prends le bus}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-prends-le-train",
+      "type": "respond",
+      "situation": "you take the train",
+      "answer": "tu prends le train",
+      "hint": "{tu prends le train}",
+      "mistakes": [
+        {
+          "answer": "tu prend le train",
+          "feedback": "Expected: \"{tu prends le train}\""
+        },
+        {
+          "answer": "tu prendre le train",
+          "feedback": "Expected: \"{tu prends le train}\""
+        },
+        {
+          "answer": "tu prens le train",
+          "feedback": "Expected: \"{tu prends le train}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-prend-son-temps",
+      "type": "respond",
+      "situation": "she takes her time",
+      "answer": "elle prend son temps",
+      "hint": "{elle prend son temps}",
+      "mistakes": [
+        {
+          "answer": "elle prends son temps",
+          "feedback": "Expected: \"{elle prend son temps}\""
+        },
+        {
+          "answer": "elle prendre son temps",
+          "feedback": "Expected: \"{elle prend son temps}\""
+        },
+        {
+          "answer": "elle prene son temps",
+          "feedback": "Expected: \"{elle prend son temps}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-prends-un-cafe",
+      "type": "respond",
+      "situation": "I'm having a coffee",
+      "answer": "je prends un café",
+      "accept": [
+        "je prends un cafe"
+      ],
+      "hint": "{je prends un café}",
+      "mistakes": [
+        {
+          "answer": "je prend un café",
+          "feedback": "Expected: \"{je prends un café}\""
+        },
+        {
+          "answer": "j'ai un café",
+          "feedback": "Expected: \"{je prends un café}\""
+        },
+        {
+          "answer": "je prendre un café",
+          "feedback": "Expected: \"{je prends un café}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-prenons-la-voiture",
+      "type": "respond",
+      "situation": "we take the car",
+      "answer": "nous prenons la voiture",
+      "hint": "{nous prenons la voiture}",
+      "mistakes": [
+        {
+          "answer": "nous prends la voiture",
+          "feedback": "Expected: \"{nous prenons la voiture}\""
+        },
+        {
+          "answer": "nous prenez la voiture",
+          "feedback": "Expected: \"{nous prenons la voiture}\""
+        },
+        {
+          "answer": "nous prendre la voiture",
+          "feedback": "Expected: \"{nous prenons la voiture}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-apprends",
+      "type": "respond",
+      "situation": "I learn",
+      "answer": "j'apprends",
+      "accept": [
+        "j apprends"
+      ],
+      "hint": "{j'...}",
+      "mistakes": [
+        {
+          "answer": "j'aprends",
+          "feedback": "Expected: \"{j'apprends}\""
+        },
+        {
+          "answer": "j'apprend",
+          "feedback": "Expected: \"{j'apprends}\""
+        },
+        {
+          "answer": "j'apprendre",
+          "feedback": "Expected: \"{j'apprends}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-apprends-le-francais",
+      "type": "respond",
+      "situation": "I learn French",
+      "answer": "j'apprends le français",
+      "accept": [
+        "j apprends le français",
+        "j'apprends le francais"
+      ],
+      "hint": "{j'apprends le français}",
+      "mistakes": [
+        {
+          "answer": "j'aprends le français",
+          "feedback": "Expected: \"{j'apprends le français}\""
+        },
+        {
+          "answer": "j'apprend le français",
+          "feedback": "Expected: \"{j'apprends le français}\""
+        },
+        {
+          "answer": "je apprends le français",
+          "feedback": "Expected: \"{j'apprends le français}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-apprends-vite",
+      "type": "respond",
+      "situation": "you learn quickly",
+      "answer": "tu apprends vite",
+      "hint": "{tu apprends vite}",
+      "mistakes": [
+        {
+          "answer": "tu aprends vite",
+          "feedback": "Expected: \"{tu apprends vite}\""
+        },
+        {
+          "answer": "tu apprend vite",
+          "feedback": "Expected: \"{tu apprends vite}\""
+        },
+        {
+          "answer": "tu apprendre vite",
+          "feedback": "Expected: \"{tu apprends vite}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-apprend-l-anglais",
+      "type": "respond",
+      "situation": "she learns English",
+      "answer": "elle apprend l'anglais",
+      "accept": [
+        "elle apprend l anglais"
+      ],
+      "hint": "{elle apprend l'anglais}",
+      "mistakes": [
+        {
+          "answer": "elle apprends l'anglais",
+          "feedback": "Expected: \"{elle apprend l'anglais}\""
+        },
+        {
+          "answer": "elle aprend l'anglais",
+          "feedback": "Expected: \"{elle apprend l'anglais}\""
+        },
+        {
+          "answer": "elle apprendre l'anglais",
+          "feedback": "Expected: \"{elle apprend l'anglais}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-apprenons-ensemble",
+      "type": "respond",
+      "situation": "we learn together",
+      "answer": "nous apprenons ensemble",
+      "hint": "{nous apprenons ensemble}",
+      "mistakes": [
+        {
+          "answer": "nous apprends ensemble",
+          "feedback": "Expected: \"{nous apprenons ensemble}\""
+        },
+        {
+          "answer": "nous aprenons ensemble",
+          "feedback": "Expected: \"{nous apprenons ensemble}\""
+        },
+        {
+          "answer": "nous apprendre ensemble",
+          "feedback": "Expected: \"{nous apprenons ensemble}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-comprends",
+      "type": "respond",
+      "situation": "I understand",
+      "answer": "je comprends",
+      "hint": "{je...}",
+      "mistakes": [
+        {
+          "answer": "je comprend",
+          "feedback": "Expected: \"{je comprends}\""
+        },
+        {
+          "answer": "je comprendre",
+          "feedback": "Expected: \"{je comprends}\""
+        },
+        {
+          "answer": "je comprene",
+          "feedback": "Expected: \"{je comprends}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-comprends-pas",
+      "type": "respond",
+      "situation": "I don't understand",
+      "answer": "je ne comprends pas",
+      "hint": "{je ne comprends pas}",
+      "mistakes": [
+        {
+          "answer": "je ne comprend pas",
+          "feedback": "Expected: \"{je ne comprends pas}\""
+        },
+        {
+          "answer": "je comprends pas",
+          "feedback": "Expected: \"{je ne comprends pas}\""
+        },
+        {
+          "answer": "je ne comprendre pas",
+          "feedback": "Expected: \"{je ne comprends pas}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-comprends",
+      "type": "respond",
+      "situation": "do you understand?",
+      "answer": "tu comprends?",
+      "accept": [
+        "tu comprends"
+      ],
+      "hint": "{tu comprends?}",
+      "mistakes": [
+        {
+          "answer": "tu comprend?",
+          "feedback": "Expected: \"{tu comprends?}\""
+        },
+        {
+          "answer": "tu comprendre?",
+          "feedback": "Expected: \"{tu comprends?}\""
+        },
+        {
+          "answer": "comprends-tu?",
+          "feedback": "Expected: \"{tu comprends?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-comprend-le-francais",
+      "type": "respond",
+      "situation": "he understands French",
+      "answer": "il comprend le français",
+      "accept": [
+        "il comprend le francais"
+      ],
+      "hint": "{il comprend le français}",
+      "mistakes": [
+        {
+          "answer": "il comprends le français",
+          "feedback": "Expected: \"{il comprend le français}\""
+        },
+        {
+          "answer": "il comprendre le français",
+          "feedback": "Expected: \"{il comprend le français}\""
+        },
+        {
+          "answer": "il comprene le français",
+          "feedback": "Expected: \"{il comprend le français}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-comprenons-la-question",
+      "type": "respond",
+      "situation": "we understand the question",
+      "answer": "nous comprenons la question",
+      "hint": "{nous comprenons la question}",
+      "mistakes": [
+        {
+          "answer": "nous comprends la question",
+          "feedback": "Expected: \"{nous comprenons la question}\""
+        },
+        {
+          "answer": "nous comprenez la question",
+          "feedback": "Expected: \"{nous comprenons la question}\""
+        },
+        {
+          "answer": "nous comprendre la question",
+          "feedback": "Expected: \"{nous comprenons la question}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ne-comprennent-pas",
+      "type": "respond",
+      "situation": "they don't understand",
+      "answer": "ils ne comprennent pas",
+      "hint": "{ils ne comprennent pas}",
+      "mistakes": [
+        {
+          "answer": "ils ne comprends pas",
+          "feedback": "Expected: \"{ils ne comprennent pas}\""
+        },
+        {
+          "answer": "ils comprennent pas",
+          "feedback": "Expected: \"{ils ne comprennent pas}\""
+        },
+        {
+          "answer": "ils ne comprendent pas",
+          "feedback": "Expected: \"{ils ne comprennent pas}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-pris-le",
+      "type": "respond",
+      "situation": "I took the bus",
+      "answer": "j'ai pris le bus",
+      "accept": [
+        "j ai pris le bus"
+      ],
+      "hint": "{j'ai pris le bus}",
+      "mistakes": [
+        {
+          "answer": "j'ai prend le bus",
+          "feedback": "Expected: \"{j'ai pris le bus}\""
+        },
+        {
+          "answer": "j'ai prit le bus",
+          "feedback": "Expected: \"{j'ai pris le bus}\""
+        },
+        {
+          "answer": "je prends le bus",
+          "feedback": "Expected: \"{j'ai pris le bus}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-beaucoup-appris",
+      "type": "respond",
+      "situation": "I learned a lot",
+      "answer": "j'ai beaucoup appris",
+      "accept": [
+        "j ai beaucoup appris"
+      ],
+      "hint": "{j'ai beaucoup appris}",
+      "mistakes": [
+        {
+          "answer": "j'ai appris beaucoup",
+          "feedback": "Expected: \"j'ai beaucoup appris\""
+        },
+        {
+          "answer": "j'ai apprend beaucoup",
+          "feedback": "Expected: \"{j'ai beaucoup appris}\""
+        },
+        {
+          "answer": "j'apprends beaucoup",
+          "feedback": "Expected: \"{j'ai beaucoup appris}\""
+        }
+      ]
+    },
+    {
+      "id": "i-prends-le",
+      "type": "respond",
+      "situation": "Say 'take it' (command form)",
+      "cue": "take it",
+      "answer": "prends-le",
+      "hint": "Imperative form + object pronoun",
+      "mistakes": [
+        {
+          "answer": "je prends",
+          "feedback": "That's 'I take' - use imperative '{prends-le}' for 'take it'"
+        },
+        {
+          "answer": "tu prends",
+          "feedback": "That's 'you take' - use imperative '{prends-le}' for 'take it'"
+        }
+      ]
+    },
+    {
+      "id": "i-prends-le-s-il",
+      "type": "respond",
+      "situation": "Say 'take it please' (informal)",
+      "cue": "take it please",
+      "answer": "prends-le, s'il te plaît",
+      "accept": [
+        "prends-le s'il te plaît"
+      ],
+      "hint": "{prends-le + s'il te plaît}",
+      "mistakes": [
+        {
+          "answer": "prends-le, s'il vous plaît",
+          "feedback": "Use informal '{s'il te plaît}' to match the informal 'prends'"
+        }
+      ]
+    }
+  ]
+}

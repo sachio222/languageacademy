@@ -1,0 +1,361 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-24-unit-8-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Temporal words, reflexive verbs (introductions, routines), commands, and reciprocal actions.",
+  "can_do": [
+    "Describe daily routines (I wake up, I get dressed, I go to bed)",
+    "Give commands and instructions in French",
+    "Express reciprocal actions (we love each other)"
+  ],
+  "items": [
+    {
+      "id": "i-pendant",
+      "type": "respond",
+      "situation": "during / for",
+      "answer": "pendant",
+      "hint": "Temporal preposition - duration"
+    },
+    {
+      "id": "i-avant",
+      "type": "respond",
+      "situation": "before",
+      "answer": "avant",
+      "hint": "Temporal preposition - opposite of après"
+    },
+    {
+      "id": "i-apres",
+      "type": "respond",
+      "situation": "after",
+      "answer": "après",
+      "hint": "Temporal preposition or connector"
+    },
+    {
+      "id": "i-d-abord",
+      "type": "respond",
+      "situation": "first / first of all",
+      "answer": "d'abord",
+      "hint": "Starts a sequence"
+    },
+    {
+      "id": "i-ensuite",
+      "type": "respond",
+      "situation": "then / next",
+      "answer": "ensuite",
+      "hint": "Continues a sequence - most common"
+    },
+    {
+      "id": "i-finalement",
+      "type": "respond",
+      "situation": "finally",
+      "answer": "finalement",
+      "hint": "Ends a sequence"
+    },
+    {
+      "id": "i-d-abord-je-mange",
+      "type": "respond",
+      "situation": "First, I eat. Then, I leave.",
+      "answer": "d'abord, je mange. ensuite, je pars",
+      "accept": [
+        "d abord je mange ensuite je pars"
+      ],
+      "hint": "{D'abord + je mange. Ensuite + je pars.}"
+    },
+    {
+      "id": "i-avant-le-cours-j",
+      "type": "respond",
+      "situation": "Before class, I study",
+      "answer": "avant le cours, j'étudie",
+      "accept": [
+        "avant le cours j etudie"
+      ],
+      "hint": "{Avant + le cours + je étudie}"
+    },
+    {
+      "id": "i-me",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{je}'?",
+      "shown": "je ... lave",
+      "answer": "me",
+      "hint": "First person reflexive"
+    },
+    {
+      "id": "i-te",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{tu}'?",
+      "shown": "tu ... lèves",
+      "answer": "te",
+      "hint": "Second person reflexive"
+    },
+    {
+      "id": "i-se",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{il}'?",
+      "shown": "il ... prépare",
+      "answer": "se",
+      "hint": "Third person reflexive"
+    },
+    {
+      "id": "i-nous",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{nous}'?",
+      "shown": "nous ... aimons",
+      "answer": "nous",
+      "hint": "First person plural - same as subject"
+    },
+    {
+      "id": "i-je-me-lave",
+      "type": "respond",
+      "situation": "I wash myself",
+      "answer": "je me lave",
+      "hint": "{je me + laver}"
+    },
+    {
+      "id": "i-je-m-appelle-marie",
+      "type": "respond",
+      "situation": "My name is Marie",
+      "answer": "je m'appelle Marie",
+      "hint": "je m'appelle + name"
+    },
+    {
+      "id": "i-comment-tu-t-appelles",
+      "type": "respond",
+      "situation": "What's your name? (informal)",
+      "answer": "comment tu t'appelles",
+      "hint": "{Comment tu t'appelles?}"
+    },
+    {
+      "id": "i-il-s-appelle-pierre",
+      "type": "respond",
+      "situation": "His name is Pierre",
+      "answer": "il s'appelle Pierre",
+      "hint": "il s'appelle + name"
+    },
+    {
+      "id": "i-elle-s-appelle-sophie",
+      "type": "respond",
+      "situation": "Her name is Sophie",
+      "answer": "elle s'appelle Sophie",
+      "hint": "elle s'appelle + name"
+    },
+    {
+      "id": "i-je-me-reveille",
+      "type": "respond",
+      "situation": "I wake up",
+      "answer": "je me réveille",
+      "accept": [
+        "je me reveille"
+      ],
+      "hint": "{je me + réveiller}"
+    },
+    {
+      "id": "i-je-me-leve",
+      "type": "respond",
+      "situation": "I get up",
+      "answer": "je me lève",
+      "accept": [
+        "je me leve"
+      ],
+      "hint": "{je me + lever}"
+    },
+    {
+      "id": "i-je-m-habille",
+      "type": "respond",
+      "situation": "I get dressed",
+      "answer": "je m'habille",
+      "hint": "je m' + habiller (elision!)"
+    },
+    {
+      "id": "i-je-me-prepare-pour",
+      "type": "respond",
+      "situation": "I get ready for class",
+      "answer": "je me prépare pour le cours",
+      "accept": [
+        "je me prepare pour le cours"
+      ],
+      "hint": "{je me prépare + pour le cours}"
+    },
+    {
+      "id": "i-tu-te-reveilles-a",
+      "type": "respond",
+      "situation": "You wake up at 7am (informal)",
+      "answer": "tu te réveilles à sept heures",
+      "accept": [
+        "tu te reveilles a sept heures",
+        "tu te réveilles à 7h"
+      ],
+      "hint": "{tu te réveilles + à + sept heures}"
+    },
+    {
+      "id": "i-on-se-leve-tot",
+      "type": "respond",
+      "situation": "We get up early (using on)",
+      "answer": "on se lève tôt",
+      "accept": [
+        "on se leve tot"
+      ],
+      "hint": "{on se lève + tôt}"
+    },
+    {
+      "id": "i-je-me-souviens",
+      "type": "respond",
+      "situation": "I remember",
+      "answer": "je me souviens",
+      "hint": "je me + souvenir (like venir)"
+    },
+    {
+      "id": "i-on-s-amuse",
+      "type": "respond",
+      "situation": "We're having fun (using on)",
+      "answer": "on s'amuse",
+      "hint": "{on s' + amuser}"
+    },
+    {
+      "id": "i-je-me-depeche",
+      "type": "respond",
+      "situation": "I'm hurrying",
+      "answer": "je me dépêche",
+      "accept": [
+        "je me depeche"
+      ],
+      "hint": "{je me + dépêcher}"
+    },
+    {
+      "id": "i-tu-te-souviens",
+      "type": "respond",
+      "situation": "Do you remember? (informal)",
+      "answer": "tu te souviens",
+      "hint": "{tu te souviens?}"
+    },
+    {
+      "id": "i-je-me-suis-reveille",
+      "type": "respond",
+      "situation": "I woke up",
+      "answer": "je me suis réveillé",
+      "accept": [
+        "je me suis reveille",
+        "je me suis réveillée"
+      ],
+      "hint": "Past: je me suis + réveillé"
+    },
+    {
+      "id": "i-elle-s-est-levee",
+      "type": "respond",
+      "situation": "She got up",
+      "answer": "elle s'est levée",
+      "accept": [
+        "elle s est levee"
+      ],
+      "hint": "Past: elle s'est + levée (feminine!)"
+    },
+    {
+      "id": "i-on-s-est-amuse",
+      "type": "respond",
+      "situation": "We had fun",
+      "answer": "on s'est amusé",
+      "accept": [
+        "on s est amuse"
+      ],
+      "hint": "Past: on s'est + amusé"
+    },
+    {
+      "id": "i-ils-se-sont-habilles",
+      "type": "respond",
+      "situation": "They got dressed (masculine)",
+      "answer": "ils se sont habillés",
+      "accept": [
+        "ils se sont habilles"
+      ],
+      "hint": "Past: ils se sont + habillés (plural!)"
+    },
+    {
+      "id": "i-nous-nous-aimons",
+      "type": "respond",
+      "situation": "We love each other",
+      "answer": "nous nous aimons",
+      "hint": "{nous nous + aimer}"
+    },
+    {
+      "id": "i-on-se-voit",
+      "type": "respond",
+      "situation": "We see each other (using on)",
+      "answer": "on se voit",
+      "hint": "{on se + voir}"
+    },
+    {
+      "id": "i-ils-se-parlent",
+      "type": "respond",
+      "situation": "They talk to each other",
+      "answer": "ils se parlent",
+      "hint": "{ils se + parler}"
+    },
+    {
+      "id": "i-on-se-voit-demain",
+      "type": "respond",
+      "situation": "We'll see each other tomorrow",
+      "answer": "on se voit demain",
+      "hint": "{on se voit + demain}"
+    },
+    {
+      "id": "i-mange",
+      "type": "respond",
+      "situation": "Give command: 'Eat!' (informal)",
+      "cue": "Eat! (to a friend)",
+      "answer": "mange",
+      "hint": "manger → drop tu and -s"
+    },
+    {
+      "id": "i-ecoute",
+      "type": "respond",
+      "situation": "Give command: 'Listen!' (informal)",
+      "cue": "Listen! (to a friend)",
+      "answer": "écoute",
+      "accept": [
+        "ecoute"
+      ],
+      "hint": "{écouter → Écoute!}"
+    },
+    {
+      "id": "i-sois-gentil",
+      "type": "respond",
+      "situation": "Give command: 'Be nice!' (informal)",
+      "cue": "Be nice! (to a friend)",
+      "answer": "sois gentil",
+      "hint": "Irregular: Sois + gentil!"
+    },
+    {
+      "id": "i-vas-y",
+      "type": "respond",
+      "situation": "Give command: 'Go ahead!' or 'Go for it!'",
+      "cue": "Go ahead!",
+      "answer": "vas-y",
+      "accept": [
+        "vas y"
+      ],
+      "hint": "Famous phrase: Vas-y!"
+    },
+    {
+      "id": "i-fais-attention",
+      "type": "respond",
+      "situation": "Give command: 'Pay attention!' (informal)",
+      "cue": "Pay attention!",
+      "answer": "fais attention",
+      "hint": "Irregular: Fais + attention!"
+    },
+    {
+      "id": "i-regarde-moi",
+      "type": "respond",
+      "situation": "Give command: 'Look at me!' (informal)",
+      "cue": "Look at me!",
+      "answer": "regarde-moi",
+      "accept": [
+        "regarde moi"
+      ],
+      "hint": "{Regarde-moi!}"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

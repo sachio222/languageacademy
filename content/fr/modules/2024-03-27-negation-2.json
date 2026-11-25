@@ -1,0 +1,270 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-27-negation-2",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Negation Part 2 - I can't, I won't, I never",
+  "description": "Negate modal verbs and use '{ne...jamais}' (never). Express what you can't or won't do!",
+  "can_do": [
+    "Say 'I can't', 'I won't', 'I never do' in French",
+    "Negate modal verbs (vouloir, pouvoir, devoir)",
+    "Use ne...jamais to express never"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-ne-peux-pas-fr",
+      "fr": "je ne peux pas",
+      "gloss": "I can't",
+      "note": "pouvoir negated"
+    },
+    {
+      "word_id": "tu-ne-peux-pas-fr",
+      "fr": "tu ne peux pas",
+      "gloss": "you can't",
+      "note": "informal"
+    },
+    {
+      "word_id": "nous-ne-pouvons-pas-fr",
+      "fr": "nous ne pouvons pas",
+      "gloss": "we can't",
+      "note": "plural form"
+    },
+    {
+      "word_id": "je-ne-veux-pas-fr",
+      "fr": "je ne veux pas",
+      "gloss": "I don't want/won't",
+      "note": "vouloir negated"
+    },
+    {
+      "word_id": "tu-ne-veux-jamais-fr",
+      "fr": "tu ne veux jamais",
+      "gloss": "you never want",
+      "note": "ne...jamais"
+    },
+    {
+      "word_id": "il-ne-fait-jamais-fr",
+      "fr": "il ne fait jamais",
+      "gloss": "he never does",
+      "note": "faire + jamais"
+    },
+    {
+      "word_id": "nous-ne-faisons-pas-fr",
+      "fr": "nous ne faisons pas",
+      "gloss": "we don't do/make",
+      "note": "faire negated"
+    },
+    {
+      "word_id": "ils-ne-sont-pas-fr",
+      "fr": "ils ne sont pas",
+      "gloss": "they are not",
+      "note": "être negated"
+    },
+    {
+      "word_id": "nous-n-allons-pas-fr",
+      "fr": "nous n'allons pas",
+      "gloss": "we don't go",
+      "note": "aller negated"
+    },
+    {
+      "word_id": "elle-ne-voit-jamais-fr",
+      "fr": "elle ne voit jamais",
+      "gloss": "she never sees",
+      "note": "voir + jamais"
+    },
+    {
+      "word_id": "je-ne-le-veux-pas-fr",
+      "fr": "je ne le veux pas",
+      "gloss": "I don't want it",
+      "note": "with object pronoun"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-negating-modal-verbs",
+      "term": "Negating Modal Verbs",
+      "definition": "Apply ne...pas to vouloir, pouvoir, aller, voir",
+      "example": "{je peux} → {je ne peux pas} (I can't), {je veux} → {je ne veux pas} (I won't/don't want)"
+    },
+    {
+      "id": "c-ne-jamais-never",
+      "term": "{ne...jamais} (never)",
+      "definition": "Replace '{pas}' with '{jamais}' to mean 'never'",
+      "example": "{je vais} → {je ne vais jamais} (I never go)"
+    },
+    {
+      "id": "c-with-object-pronouns",
+      "term": "With Object Pronouns",
+      "definition": "Object pronouns stay inside the negation sandwich",
+      "example": "{je le veux} → {je ne le veux pas} (I don't want it)"
+    },
+    {
+      "id": "c-common-patterns",
+      "term": "Common Patterns",
+      "definition": "I can't, I won't, I never go, I don't see it - very useful!",
+      "example": "Master these patterns for real conversations"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-ne-peux-pas",
+      "type": "respond",
+      "situation": "I can't",
+      "answer": "je ne peux pas",
+      "hint": "Negate '{je peux}'",
+      "mistakes": [
+        {
+          "answer": "je ne peux",
+          "feedback": "Need '{pas}' after the verb"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-veux-pas",
+      "type": "respond",
+      "situation": "Say 'I don't want' or 'I won't'",
+      "cue": "I don't want",
+      "answer": "je ne veux pas",
+      "hint": "Negate '{je veux}'"
+    },
+    {
+      "id": "i-tu-ne-peux-pas",
+      "type": "respond",
+      "situation": "Say 'you can't' (informal)",
+      "cue": "you can't (informal)",
+      "answer": "tu ne peux pas",
+      "hint": "Negate '{tu peux}'"
+    },
+    {
+      "id": "i-il-ne-veut-pas",
+      "type": "respond",
+      "situation": "he doesn't want",
+      "answer": "il ne veut pas",
+      "hint": "Negate '{il veut}'"
+    },
+    {
+      "id": "i-je-ne-vais-pas",
+      "type": "respond",
+      "situation": "Say 'I don't go' or 'I won't go'",
+      "cue": "I don't go",
+      "answer": "je ne vais pas",
+      "hint": "Negate '{je vais}'"
+    },
+    {
+      "id": "i-elle-ne-voit-pas",
+      "type": "respond",
+      "situation": "she doesn't see",
+      "answer": "elle ne voit pas",
+      "hint": "Negate '{elle voit}'"
+    },
+    {
+      "id": "i-je-ne-vais-jamais",
+      "type": "respond",
+      "situation": "Say 'I never go' (using jamais instead of pas)",
+      "cue": "I never go",
+      "answer": "je ne vais jamais",
+      "hint": "je ne vais + jamais (replace pas with jamais)",
+      "mistakes": [
+        {
+          "answer": "je ne vais pas",
+          "feedback": "That's 'I don't go' - use '{jamais}' for 'never'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-n-a-jamais",
+      "type": "respond",
+      "situation": "he never has",
+      "answer": "il n'a jamais",
+      "hint": "{il n'a + jamais}"
+    },
+    {
+      "id": "i-nous-ne-voulons-jamais",
+      "type": "respond",
+      "situation": "we never want",
+      "answer": "nous ne voulons jamais",
+      "hint": "{nous ne voulons + jamais}"
+    },
+    {
+      "id": "i-je-ne-le-veux",
+      "type": "respond",
+      "situation": "Say 'I don't want it' (with object pronoun)",
+      "cue": "I don't want it",
+      "answer": "je ne le veux pas",
+      "hint": "Negate '{je le veux}' - object pronoun stays inside",
+      "mistakes": [
+        {
+          "answer": "je le ne veux pas",
+          "feedback": "ne goes BEFORE object pronoun: je NE le veux pas"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-peux-pas-2",
+      "type": "respond",
+      "situation": "I can't see it",
+      "answer": "je ne peux pas le voir",
+      "accept": [
+        "je ne le vois pas"
+      ],
+      "hint": "Negate '{je le vois}' with pouvoir negated"
+    },
+    {
+      "id": "i-tu-ne-veux-jamais",
+      "type": "respond",
+      "situation": "Say 'you never want' (informal)",
+      "cue": "you never want (informal)",
+      "answer": "tu ne veux jamais",
+      "hint": "{tu ne veux + jamais}"
+    },
+    {
+      "id": "i-ils-ne-sont-pas",
+      "type": "respond",
+      "situation": "Say 'they are not here' (masculine)",
+      "cue": "they are not here (masculine)",
+      "answer": "ils ne sont pas ici",
+      "hint": "Negate '{ils sont ici}'"
+    },
+    {
+      "id": "i-nous-n-allons-pas",
+      "type": "respond",
+      "situation": "we cannot go",
+      "answer": "nous n'allons pas",
+      "accept": [
+        "nous ne pouvons pas aller"
+      ],
+      "hint": "Negate '{nous pouvons}' + aller infinitive... wait, simpler: negate '{nous allons}'"
+    },
+    {
+      "id": "i-elle-ne-voit-jamais",
+      "type": "respond",
+      "situation": "she never sees",
+      "answer": "elle ne voit jamais",
+      "hint": "{elle ne voit + jamais}"
+    },
+    {
+      "id": "i-tu-ne-peux-pas-2",
+      "type": "respond",
+      "situation": "Say 'you can't have this' (informal)",
+      "cue": "you can't have this (informal)",
+      "answer": "tu ne peux pas avoir ça",
+      "accept": [
+        "tu n'as pas ça"
+      ],
+      "hint": "Negate '{tu peux avoir ça}'... simpler: negate '{tu as ça}' with pouvoir concept"
+    },
+    {
+      "id": "i-il-ne-fait-jamais",
+      "type": "respond",
+      "situation": "he never does that",
+      "answer": "il ne fait jamais ça",
+      "hint": "{il ne fait jamais + ça}"
+    },
+    {
+      "id": "i-nous-ne-faisons-pas",
+      "type": "respond",
+      "situation": "we don't make this",
+      "answer": "nous ne faisons pas ça",
+      "hint": "Negate '{nous faisons ça}'"
+    }
+  ]
+}

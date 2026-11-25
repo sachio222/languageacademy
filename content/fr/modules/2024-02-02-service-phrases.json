@@ -1,0 +1,122 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-02-service-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Je me fais couper...} - {Service Phrases}",
+  "description": "Talk about services and appointments! '{Je me fais couper les cheveux}' (I'm getting my hair cut), '{Je fais réparer ma voiture}' (I'm having my car repaired). Adult life essentials!",
+  "vocabulary": [
+    {
+      "word_id": "je-me-fais-couper-les-cheveux-fr",
+      "fr": "je me fais couper les cheveux",
+      "gloss": "I'm getting my hair cut",
+      "note": "⭐ salon appointment!"
+    },
+    {
+      "word_id": "je-fais-reparer-ma-voiture-fr",
+      "fr": "je fais réparer ma voiture",
+      "gloss": "I'm having my car repaired",
+      "note": "mechanic service"
+    },
+    {
+      "word_id": "je-me-fais-maquiller-fr",
+      "fr": "je me fais maquiller",
+      "gloss": "I'm getting my makeup done",
+      "note": "makeup artist"
+    },
+    {
+      "word_id": "je-fais-nettoyer-la-maison-fr",
+      "fr": "je fais nettoyer la maison",
+      "gloss": "I'm having the house cleaned",
+      "note": "cleaning service"
+    },
+    {
+      "word_id": "je-me-fais-examiner-fr",
+      "fr": "je me fais examiner",
+      "gloss": "I'm getting examined",
+      "note": "doctor appointment"
+    },
+    {
+      "word_id": "je-fais-construire-une-maison-fr",
+      "fr": "je fais construire une maison",
+      "gloss": "I'm having a house built",
+      "note": "construction project"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-je-me-fais-verb",
+      "term": "Je me fais + verb = Getting Something Done TO YOU",
+      "definition": "Services for yourself: haircut, makeup, medical exams, etc.",
+      "example": "{Je me fais couper les cheveux} (I'm getting my hair cut - at salon)"
+    },
+    {
+      "id": "c-je-fais-verb-having",
+      "term": "Je fais + verb = Having Something Done (Not You)",
+      "definition": "Having something repaired, built, cleaned by someone else",
+      "example": "{Je fais réparer ma voiture} (I'm having my car repaired - by mechanic)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-me-fais-couper",
+      "type": "respond",
+      "situation": "Say you're getting your hair cut (salon appointment!)",
+      "cue": "I'm getting my hair cut",
+      "answer": "je me fais couper les cheveux",
+      "hint": "{je me fais couper les cheveux}",
+      "mistakes": [
+        {
+          "answer": "je coupe mes cheveux",
+          "feedback": "That means YOU cut it yourself! At salon, use: je me fais couper les cheveux"
+        }
+      ]
+    },
+    {
+      "id": "i-je-fais-reparer-ma",
+      "type": "respond",
+      "situation": "Say you're having your car repaired (at mechanic)",
+      "cue": "I'm having my car repaired",
+      "answer": "je fais réparer ma voiture",
+      "hint": "{je fais réparer ma voiture}",
+      "mistakes": [
+        {
+          "answer": "je répare ma voiture",
+          "feedback": "That means YOU repair it! By mechanic, use: je fais réparer ma voiture"
+        }
+      ]
+    },
+    {
+      "id": "i-je-me-fais-maquiller",
+      "type": "respond",
+      "situation": "Say you're getting your makeup done (makeup artist)",
+      "cue": "I'm getting my makeup done",
+      "answer": "je me fais maquiller",
+      "hint": "{je me fais maquiller}"
+    },
+    {
+      "id": "i-je-fais-nettoyer-la",
+      "type": "respond",
+      "situation": "Say you're having the house cleaned (cleaning service)",
+      "cue": "I'm having the house cleaned",
+      "answer": "je fais nettoyer la maison",
+      "hint": "{je fais nettoyer la maison}"
+    },
+    {
+      "id": "i-je-me-fais-examiner",
+      "type": "respond",
+      "situation": "Say you're getting examined (doctor appointment)",
+      "cue": "I'm getting examined",
+      "answer": "je me fais examiner",
+      "hint": "{je me fais examiner}"
+    },
+    {
+      "id": "i-je-fais-construire-une",
+      "type": "respond",
+      "situation": "Say you're having a house built (construction project)",
+      "cue": "I'm having a house built",
+      "answer": "je fais construire une maison",
+      "hint": "{je fais construire une maison}"
+    }
+  ]
+}

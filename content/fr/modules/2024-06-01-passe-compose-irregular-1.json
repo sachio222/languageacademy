@@ -1,0 +1,538 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-01-passe-compose-irregular-1",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Irregular Past Participles - Set 1 (had, was, did, saw)",
+  "description": "Learn the 4 most common irregular past participles: avoir → eu (had), être → été (was/been), faire → fait (did/made), voir → vu (saw)",
+  "can_do": [
+    "Use the 4 most common irregular past forms (had, was, did, saw)",
+    "Say 'I had time', 'It was good', 'I did it', 'I saw him'",
+    "Form past tense with the most frequent verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-ai-eu-fr",
+      "fr": "j'ai eu",
+      "gloss": "I had",
+      "note": "⭐ avoir → eu (irregular!)"
+    },
+    {
+      "word_id": "j-ai-ete-fr",
+      "fr": "j'ai été",
+      "gloss": "I was / I have been",
+      "note": "⭐ être → été (irregular!)"
+    },
+    {
+      "word_id": "j-ai-fait-fr",
+      "fr": "j'ai fait",
+      "gloss": "I did / I made",
+      "note": "⭐ faire → fait (irregular!)"
+    },
+    {
+      "word_id": "j-ai-vu-fr",
+      "fr": "j'ai vu",
+      "gloss": "I saw",
+      "note": "⭐ voir → vu (irregular!)"
+    },
+    {
+      "word_id": "tu-as-eu-fr",
+      "fr": "tu as eu",
+      "gloss": "you had",
+      "note": "avoir → eu conjugated"
+    },
+    {
+      "word_id": "il-a-fait-fr",
+      "fr": "il a fait",
+      "gloss": "he did / he made",
+      "note": "faire → fait conjugated"
+    },
+    {
+      "word_id": "nous-avons-vu-fr",
+      "fr": "nous avons vu",
+      "gloss": "we saw",
+      "note": "voir → vu conjugated"
+    },
+    {
+      "word_id": "ils-ont-ete-fr",
+      "fr": "ils ont été",
+      "gloss": "they were / they have been",
+      "note": "être → été conjugated"
+    },
+    {
+      "word_id": "la-chance-fr",
+      "fr": "la chance",
+      "gloss": "luck",
+      "note": "feminine noun - avoir de la chance = to be lucky",
+      "example_fr": "J'ai eu de la chance"
+    },
+    {
+      "word_id": "les-devoirs-fr",
+      "fr": "les devoirs",
+      "gloss": "homework",
+      "note": "plural noun",
+      "example_fr": "faire ses devoirs"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-avoir-eu-had",
+      "term": "{avoir} → {eu} (had)",
+      "definition": "Irregular past participle: j'ai eu, tu as eu, il a eu",
+      "example": "{J'ai eu le temps} (I had time), {J'ai eu de la chance} (I had luck/I was lucky)"
+    },
+    {
+      "id": "c-etre-ete-was-been",
+      "term": "{être} → {été} (was/been)",
+      "definition": "Irregular past participle: j'ai été, tu as été, il a été",
+      "example": "{J'ai été content} (I was happy), {J'ai été à Paris} (I went to Paris - informal)"
+    },
+    {
+      "id": "c-faire-fait-did-made",
+      "term": "{faire} → {fait} (did/made)",
+      "definition": "Irregular past participle: j'ai fait, tu as fait, il a fait",
+      "example": "{J'ai fait ça} (I did that), {J'ai fait mes devoirs} (I did my homework), {J'ai fait un gâteau} (I made a cake)"
+    },
+    {
+      "id": "c-voir-vu-saw",
+      "term": "{voir} → {vu} (saw)",
+      "definition": "Irregular past participle: j'ai vu, tu as vu, il a vu",
+      "example": "{J'ai vu le film} (I saw the movie), {Tu as vu Marie?} (Did you see Marie?)"
+    },
+    {
+      "id": "c-memory-tip",
+      "term": "Memory tip",
+      "definition": "These 4 verbs are the most common - memorize them!",
+      "example": "{eu}, {été}, {fait}, {vu} - practice these until automatic"
+    },
+    {
+      "id": "c-all-use-avoir-as",
+      "term": "All use AVOIR as auxiliary",
+      "definition": "These 4 verbs all use '{avoir}' (not être) in passé composé",
+      "example": "{j'ai eu}, {j'ai été}, {j'ai fait}, {j'ai vu} (all with '{avoir}')"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-ai-eu",
+      "type": "gapfill",
+      "text": "Hier, j'___ le temps",
+      "blanks": [
+        {
+          "answer": "ai eu"
+        }
+      ],
+      "gloss": "Yesterday, I had time",
+      "hint": "Use '{avoir}'",
+      "mistakes": [
+        {
+          "answer": "ai avoir",
+          "feedback": "The past participle of avoir is '{eu}' (irregular): j'ai eu."
+        },
+        {
+          "answer": "avais",
+          "feedback": "That's imparfait! Use passé composé for specific time: j'ai eu."
+        },
+        {
+          "answer": "ai été",
+          "feedback": "Été is the past participle of être! Use '{eu}' for avoir: j'ai eu."
+        }
+      ]
+    },
+    {
+      "id": "i-as-ete",
+      "type": "gapfill",
+      "text": "Tu ___ content?",
+      "blanks": [
+        {
+          "answer": "as été"
+        }
+      ],
+      "gloss": "Were you happy?",
+      "hint": "Use '{être}'",
+      "mistakes": [
+        {
+          "answer": "as être",
+          "feedback": "The past participle of être is '{été}' (irregular): tu as été."
+        },
+        {
+          "answer": "étais",
+          "feedback": "That's imparfait! Use passé composé for specific moment: tu as été."
+        },
+        {
+          "answer": "es",
+          "feedback": "That's present tense! Use passé composé: tu as été (you were)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-fait",
+      "type": "gapfill",
+      "text": "Elle ___ ses devoirs",
+      "blanks": [
+        {
+          "answer": "a fait"
+        }
+      ],
+      "gloss": "She did her homework",
+      "hint": "Use '{faire}'",
+      "mistakes": [
+        {
+          "answer": "a faire",
+          "feedback": "The past participle of faire is '{fait}' (irregular): elle a fait."
+        },
+        {
+          "answer": "fait",
+          "feedback": "You need the auxiliary verb! It's '{elle a fait}', not just 'fait'."
+        },
+        {
+          "answer": "faisait",
+          "feedback": "That's imparfait! Use passé composé for completed action: elle a fait."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-vu",
+      "type": "gapfill",
+      "text": "J'___ le film hier",
+      "blanks": [
+        {
+          "answer": "ai vu"
+        }
+      ],
+      "gloss": "I saw the movie yesterday",
+      "hint": "Use '{voir}'",
+      "mistakes": [
+        {
+          "answer": "ai voir",
+          "feedback": "The past participle of voir is '{vu}' (irregular): j'ai vu."
+        },
+        {
+          "answer": "vois",
+          "feedback": "That's present tense! Use passé composé: j'ai vu (I saw)."
+        },
+        {
+          "answer": "voyais",
+          "feedback": "That's imparfait! Use passé composé for specific event: j'ai vu."
+        }
+      ]
+    },
+    {
+      "id": "i-avons-eu",
+      "type": "gapfill",
+      "text": "Nous ___ de la chance",
+      "blanks": [
+        {
+          "answer": "avons eu"
+        }
+      ],
+      "gloss": "We were lucky/We had luck",
+      "hint": "Use '{avoir}'",
+      "mistakes": [
+        {
+          "answer": "avons avoir",
+          "feedback": "The past participle of avoir is '{eu}': nous avons eu."
+        },
+        {
+          "answer": "avions",
+          "feedback": "That's imparfait! Use passé composé: nous avons eu (we had)."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-fait",
+      "type": "gapfill",
+      "text": "Vous ___ ça?",
+      "blanks": [
+        {
+          "answer": "avez fait"
+        }
+      ],
+      "gloss": "Did you do/make that?",
+      "hint": "Use '{faire}'",
+      "mistakes": [
+        {
+          "answer": "avez faire",
+          "feedback": "The past participle of faire is '{fait}': vous avez fait."
+        },
+        {
+          "answer": "faites",
+          "feedback": "That's present tense! Use passé composé: vous avez fait (you did)."
+        }
+      ]
+    },
+    {
+      "id": "i-ont-vu",
+      "type": "gapfill",
+      "text": "Ils ___ Marie hier",
+      "blanks": [
+        {
+          "answer": "ont vu"
+        }
+      ],
+      "gloss": "They saw Marie yesterday",
+      "hint": "Use '{voir}'",
+      "mistakes": [
+        {
+          "answer": "ont voir",
+          "feedback": "The past participle of voir is '{vu}': ils ont vu."
+        },
+        {
+          "answer": "voient",
+          "feedback": "That's present tense! Use passé composé: ils ont vu (they saw)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-ete",
+      "type": "gapfill",
+      "text": "On ___ à Paris",
+      "blanks": [
+        {
+          "answer": "a été"
+        }
+      ],
+      "gloss": "We went to Paris / We were in Paris",
+      "hint": "Use '{être}'",
+      "mistakes": [
+        {
+          "answer": "a être",
+          "feedback": "The past participle of être is '{été}': on a été à Paris."
+        },
+        {
+          "answer": "était",
+          "feedback": "That's imparfait! Use passé composé: on a été (we were/went)."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-eu-2",
+      "type": "gapfill",
+      "text": "Je n'___ pas ___ raison",
+      "blanks": [
+        {
+          "answer": "ai"
+        },
+        {
+          "answer": "eu"
+        }
+      ],
+      "gloss": "I wasn't right/I didn't have reason",
+      "hint": "Use '{avoir}'",
+      "mistakes": [
+        {
+          "answer": "ai pas avoir",
+          "feedback": "The past participle of avoir is '{eu}': je n'ai pas eu."
+        },
+        {
+          "answer": "avais pas",
+          "feedback": "That's imparfait! Use passé composé: je n'ai pas eu raison."
+        }
+      ]
+    },
+    {
+      "id": "i-as-ete-2",
+      "type": "gapfill",
+      "text": "Tu n'___ pas ___ content?",
+      "blanks": [
+        {
+          "answer": "as"
+        },
+        {
+          "answer": "été"
+        }
+      ],
+      "gloss": "Weren't you happy?",
+      "hint": "Use '{être}'",
+      "mistakes": [
+        {
+          "answer": "as pas être",
+          "feedback": "The past participle of être is '{été}': tu n'as pas été."
+        },
+        {
+          "answer": "étais pas",
+          "feedback": "That's imparfait! Use passé composé: tu n'as pas été content?"
+        }
+      ]
+    },
+    {
+      "id": "i-as-fait",
+      "type": "gapfill",
+      "text": "Qu'est-ce que tu ___ ?",
+      "blanks": [
+        {
+          "answer": "as fait"
+        }
+      ],
+      "gloss": "What did you do?",
+      "hint": "Use '{faire}'",
+      "mistakes": [
+        {
+          "answer": "as faire",
+          "feedback": "The past participle of faire is '{fait}': tu as fait."
+        },
+        {
+          "answer": "fais",
+          "feedback": "That's present tense! Use passé composé: tu as fait (you did)."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-vu",
+      "type": "gapfill",
+      "text": "Est-ce que vous ___ le problème?",
+      "blanks": [
+        {
+          "answer": "avez vu"
+        }
+      ],
+      "gloss": "Did you see the problem?",
+      "hint": "Use '{voir}'",
+      "mistakes": [
+        {
+          "answer": "avez voir",
+          "feedback": "The past participle of voir is '{vu}': vous avez vu."
+        },
+        {
+          "answer": "voyez",
+          "feedback": "That's present tense! Use passé composé: vous avez vu (you saw)."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-fait",
+      "type": "gapfill",
+      "text": "J'___ un gâteau",
+      "blanks": [
+        {
+          "answer": "ai fait"
+        }
+      ],
+      "gloss": "I made a cake",
+      "hint": "Use '{faire}'",
+      "mistakes": [
+        {
+          "answer": "ai faire",
+          "feedback": "The past participle of faire is '{fait}': j'ai fait."
+        },
+        {
+          "answer": "fais",
+          "feedback": "That's present tense! Use passé composé: j'ai fait (I made)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-ete-2",
+      "type": "gapfill",
+      "text": "Elle ___ très occupée",
+      "blanks": [
+        {
+          "answer": "a été"
+        }
+      ],
+      "gloss": "She was very busy",
+      "hint": "Use '{être}'",
+      "mistakes": [
+        {
+          "answer": "a être",
+          "feedback": "The past participle of être is '{été}': elle a été."
+        },
+        {
+          "answer": "était",
+          "feedback": "That's imparfait! Use passé composé for specific time: elle a été."
+        }
+      ]
+    },
+    {
+      "id": "i-ont-eu",
+      "type": "gapfill",
+      "text": "Ils n'___ pas ___ le temps",
+      "blanks": [
+        {
+          "answer": "ont"
+        },
+        {
+          "answer": "eu"
+        }
+      ],
+      "gloss": "They didn't have time",
+      "hint": "Use '{avoir}'",
+      "mistakes": [
+        {
+          "answer": "ont pas avoir",
+          "feedback": "The past participle of avoir is '{eu}': ils n'ont pas eu."
+        },
+        {
+          "answer": "avaient pas",
+          "feedback": "That's imparfait! Use passé composé: ils n'ont pas eu le temps."
+        }
+      ]
+    },
+    {
+      "id": "i-avons-vu",
+      "type": "gapfill",
+      "text": "Nous ___ un bon film",
+      "blanks": [
+        {
+          "answer": "avons vu"
+        }
+      ],
+      "gloss": "We saw a good movie",
+      "hint": "Use '{voir}'",
+      "mistakes": [
+        {
+          "answer": "avons voir",
+          "feedback": "The past participle of voir is '{vu}': nous avons vu."
+        },
+        {
+          "answer": "voyons",
+          "feedback": "That's present tense! Use passé composé: nous avons vu (we saw)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-fait-2",
+      "type": "gapfill",
+      "text": "On ___ attention",
+      "blanks": [
+        {
+          "answer": "a fait"
+        }
+      ],
+      "gloss": "We paid attention / We were careful",
+      "hint": "Use '{faire}'",
+      "mistakes": [
+        {
+          "answer": "a faire",
+          "feedback": "The past participle of faire is '{fait}': on a fait."
+        },
+        {
+          "answer": "fait",
+          "feedback": "You need avoir! It's '{on a fait attention}', not just 'fait'."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-ete",
+      "type": "gapfill",
+      "text": "J'___ au cinéma hier",
+      "blanks": [
+        {
+          "answer": "ai été"
+        }
+      ],
+      "gloss": "I was at the cinema yesterday / I went to the cinema",
+      "hint": "Use '{être}'",
+      "mistakes": [
+        {
+          "answer": "ai être",
+          "feedback": "The past participle of être is '{été}': j'ai été."
+        },
+        {
+          "answer": "étais",
+          "feedback": "That's imparfait! Use passé composé: j'ai été au cinéma."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-26-venir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {venir} (to come)",
+  "description": "Master arrival through active recall and composition practice!",
+  "can_do": [
+    "Express coming and arriving (I come, you come, they come)",
+    "Say 'I come from Paris' or 'Who is coming?'",
+    "Use venir with vouloir and pouvoir"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "venir-fr",
+      "fr": "venir",
+      "gloss": "to come",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-viens-fr",
+      "fr": "je viens",
+      "gloss": "I come / I'm coming",
+      "note": "venir - irregular!"
+    },
+    {
+      "word_id": "tu-viens-fr",
+      "fr": "tu viens",
+      "gloss": "you come (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-vient-fr",
+      "fr": "il vient",
+      "gloss": "he comes",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-vient-fr",
+      "fr": "elle vient",
+      "gloss": "she comes",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-venons-fr",
+      "fr": "nous venons",
+      "gloss": "we come",
+      "note": "regular -ons pattern"
+    },
+    {
+      "word_id": "vous-venez-fr",
+      "fr": "vous venez",
+      "gloss": "you come (formal)",
+      "note": "regular -ez pattern"
+    },
+    {
+      "word_id": "ils-viennent-fr",
+      "fr": "ils viennent",
+      "gloss": "they come (masc)",
+      "note": "double n!"
+    },
+    {
+      "word_id": "elles-viennent-fr",
+      "fr": "elles viennent",
+      "gloss": "they come (fem)",
+      "note": "double n!"
+    },
+    {
+      "word_id": "revenir-fr",
+      "fr": "revenir",
+      "gloss": "to come back / to return",
+      "note": "re- + venir"
+    },
+    {
+      "word_id": "je-reviens-fr",
+      "fr": "je reviens",
+      "gloss": "I come back / I'm coming back",
+      "note": "revenir - same pattern as venir!"
+    },
+    {
+      "word_id": "tu-reviens-fr",
+      "fr": "tu reviens",
+      "gloss": "you come back (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-revient-fr",
+      "fr": "il revient",
+      "gloss": "he comes back",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-revient-fr",
+      "fr": "elle revient",
+      "gloss": "she comes back",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-revenons-fr",
+      "fr": "nous revenons",
+      "gloss": "we come back",
+      "note": "regular -ons pattern"
+    },
+    {
+      "word_id": "vous-revenez-fr",
+      "fr": "vous revenez",
+      "gloss": "you come back (formal)",
+      "note": "regular -ez pattern"
+    },
+    {
+      "word_id": "ils-reviennent-fr",
+      "fr": "ils reviennent",
+      "gloss": "they come back (masc)",
+      "note": "double n!"
+    },
+    {
+      "word_id": "elles-reviennent-fr",
+      "fr": "elles reviennent",
+      "gloss": "they come back (fem)",
+      "note": "double n!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-venir-to-come",
+      "term": "{venir} = to come",
+      "definition": "Essential irregular verb for coming or arriving! One of the most common verbs in French. Used constantly in conversation.",
+      "example": "'I am coming' ({Je viens}), 'Who is coming?' ({Qui vient?}), 'I come from Paris' ({Je viens de Paris})"
+    },
+    {
+      "id": "c-irregular-conjugation-pattern",
+      "term": "Irregular Conjugation Pattern",
+      "definition": "Notice the pattern: je/tu both use '{viens}', then il/elle use '{vient}', nous uses '{venons}', and ils/elles use '{viennent}' with double 'n'!",
+      "example": "{je viens}, {tu viens}, {il vient}, {nous venons}, {vous venez}, {ils viennent}"
+    },
+    {
+      "id": "c-composition-power",
+      "term": "Composition Power",
+      "definition": "Combine venir with previous modules for infinite expressions. For example, to say 'I want to come' you can say '{je veux venir}'.",
+      "example": "{je viens + de ça, nous venons + avec vous, ils viennent + voir}"
+    },
+    {
+      "id": "c-the-re-prefix",
+      "term": "The re- Prefix",
+      "definition": "Adding 're-' to a verb means 'again' or 'back'. So '{revenir}' means 'to come back' or 'to return'. It follows the same conjugation pattern as '{venir}' - just add 're-' before each form!",
+      "example": "{venir} → {revenir} (to come → to come back), {je viens} → {je reviens}, {il vient} → {il revient}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-viens",
+      "type": "respond",
+      "situation": "Say what you do",
+      "cue": "I come",
+      "answer": "je viens",
+      "hint": "Conjugate '{venir}' in the present for '{je}'.",
+      "mistakes": [
+        {
+          "answer": "je vient",
+          "feedback": "Je takes '{viens}', not 'vient'. Remember: je viens, il vient"
+        },
+        {
+          "answer": "tu viens",
+          "feedback": "That's 'you come', not 'I come'. Focus on the pronoun!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-viens",
+      "type": "respond",
+      "situation": "Say what you do",
+      "cue": "you come (informal)",
+      "answer": "tu viens",
+      "hint": "Conjugate '{venir}' in the present for '{tu}'.",
+      "mistakes": [
+        {
+          "answer": "tu vient",
+          "feedback": "Tu takes '{viens}', not 'vient'. Pattern: je viens, tu viens"
+        }
+      ]
+    },
+    {
+      "id": "i-il-vient",
+      "type": "respond",
+      "situation": "Say what he does",
+      "cue": "he comes",
+      "answer": "il vient",
+      "hint": "Conjugate '{venir}' in the present for '{il}'.",
+      "mistakes": [
+        {
+          "answer": "il viens",
+          "feedback": "Il takes '{vient}', not 'viens'. Remember: il vient, elle vient"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-vient",
+      "type": "respond",
+      "situation": "Say what she does",
+      "cue": "she comes",
+      "answer": "elle vient",
+      "hint": "Conjugate '{venir}' in the present for '{elle}'.",
+      "mistakes": [
+        {
+          "answer": "elle viens",
+          "feedback": "Elle takes '{vient}', not 'viens'. Same as il vient"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-venons",
+      "type": "respond",
+      "situation": "Say what we do",
+      "cue": "we come",
+      "answer": "nous venons",
+      "hint": "Conjugate '{venir}' in the present for '{nous}' (regular -ons ending).",
+      "mistakes": [
+        {
+          "answer": "nous viens",
+          "feedback": "Nous takes '{venons}', not 'viens'. Completely different!"
+        },
+        {
+          "answer": "nous vient",
+          "feedback": "Nous takes '{venons}', not 'vient'. Regular -ons pattern!"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-venez",
+      "type": "respond",
+      "situation": "Say what you do (formal)",
+      "cue": "you come (formal)",
+      "answer": "vous venez",
+      "hint": "Conjugate '{venir}' in the present for '{vous}' (regular -ez ending).",
+      "mistakes": [
+        {
+          "answer": "vous viens",
+          "feedback": "Vous takes '{venez}', not 'viens'. Regular -ez pattern!"
+        },
+        {
+          "answer": "vous vient",
+          "feedback": "Vous takes '{venez}', not 'vient'. Remember: vous venez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-viennent",
+      "type": "respond",
+      "situation": "Say what they do (masculine)",
+      "cue": "they come (masculine)",
+      "answer": "ils viennent",
+      "hint": "Conjugate '{venir}' in the present for '{ils}' with double 'n'.",
+      "mistakes": [
+        {
+          "answer": "ils viens",
+          "feedback": "Ils takes '{viennent}', not 'viens'. Double 'n'!"
+        },
+        {
+          "answer": "ils vient",
+          "feedback": "Ils takes '{viennent}', not 'vient'. Double 'n'!"
+        }
+      ]
+    },
+    {
+      "id": "i-elles-viennent",
+      "type": "respond",
+      "situation": "Say what they do (feminine)",
+      "cue": "they come (feminine)",
+      "answer": "elles viennent",
+      "hint": "Conjugate '{venir}' in the present for '{elles}' with double 'n'.",
+      "mistakes": [
+        {
+          "answer": "elles viens",
+          "feedback": "Elles takes '{viennent}', not 'viens'. Double 'n'!"
+        },
+        {
+          "answer": "elles vient",
+          "feedback": "Elles takes '{viennent}', not 'vient'. Double 'n'!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-viens-avec-ca",
+      "type": "respond",
+      "situation": "Say that you are coming with that",
+      "cue": "I am coming with it",
+      "answer": "je viens avec ça",
+      "hint": "Start with 'I come' in French, then add 'with that'.",
+      "mistakes": [
+        {
+          "answer": "je vient avec ça",
+          "feedback": "Je takes '{viens}', not 'vient'. Remember: je viens, il vient"
+        }
+      ]
+    },
+    {
+      "id": "i-je-viens-de-chez",
+      "type": "respond",
+      "situation": "Say where you are coming from",
+      "cue": "I am coming from my house",
+      "answer": "je viens de chez moi",
+      "accept": [
+        "je viens de ma maison"
+      ],
+      "hint": "Start with 'I come from' in French, then add 'my house'.",
+      "mistakes": [
+        {
+          "answer": "je vient de chez moi",
+          "feedback": "Je takes '{viens}', not 'vient'. Remember: je viens, il vient."
+        }
+      ]
+    },
+    {
+      "id": "i-il-vient-avec-son",
+      "type": "respond",
+      "situation": "Say what he does with her cat",
+      "cue": "He is coming with her cat",
+      "answer": "il vient avec son chat",
+      "hint": "Start with 'he comes' in French, then add 'with her cat'.",
+      "mistakes": [
+        {
+          "answer": "il viens avec son chat",
+          "feedback": "Il takes '{vient}', not 'viens'. Remember: il vient, elle vient"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-venons-avec-vous",
+      "type": "respond",
+      "situation": "Say what we are doing",
+      "cue": "We are coming with you",
+      "answer": "nous venons avec vous",
+      "hint": "Start with 'we come' in French, then add 'with you'.",
+      "mistakes": [
+        {
+          "answer": "nous viens avec vous",
+          "feedback": "Nous takes '{venons}', not 'viens'. Completely different!"
+        }
+      ]
+    },
+    {
+      "id": "i-qui-vient",
+      "type": "respond",
+      "situation": "Ask who is coming",
+      "cue": "Who is coming?",
+      "answer": "qui vient?",
+      "accept": [
+        "qui est-ce qui vient?"
+      ],
+      "hint": "Use '{qui}' as the subject and conjugate '{venir}' like '{il/elle}'.",
+      "mistakes": [
+        {
+          "answer": "quoi vient?",
+          "feedback": "Use '{qui}' for 'who', not 'quoi'. Try: qui vient?"
+        }
+      ]
+    },
+    {
+      "id": "i-d-ou-viens-tu",
+      "type": "respond",
+      "situation": "Ask where someone is coming from",
+      "cue": "Where do you come from?",
+      "answer": "d'où viens-tu?",
+      "accept": [
+        "d'où est-ce que tu viens?"
+      ],
+      "hint": "Use '{d'où}' (from where) and conjugate '{venir}' for '{tu}'.",
+      "mistakes": [
+        {
+          "answer": "où viens-tu?",
+          "feedback": "Need '{de}' with 'où'! Try: d'où viens-tu?"
+        },
+        {
+          "answer": "d'où viens tu?",
+          "feedback": "In questions with inversion, you must use a hyphen: d'où viens-tu?"
+        }
+      ]
+    },
+    {
+      "id": "i-avec-quoi-viens-tu",
+      "type": "respond",
+      "situation": "Ask what someone comes with",
+      "cue": "What do you come with?",
+      "answer": "avec quoi viens-tu?",
+      "accept": [
+        "avec quoi est-ce que tu viens?",
+        "tu viens avec quoi?"
+      ],
+      "hint": "Use '{avec quoi}' (with what) and conjugate '{venir}' for '{tu}'.",
+      "mistakes": [
+        {
+          "answer": "quoi viens-tu?",
+          "feedback": "Need '{avec}'! Try: avec quoi viens-tu?"
+        },
+        {
+          "answer": "avec quoi viens tu?",
+          "feedback": "In questions with inversion, you must use a hyphen: avec quoi viens-tu?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-venir",
+      "type": "respond",
+      "situation": "Say what you want to come",
+      "cue": "I want to come",
+      "answer": "je veux venir",
+      "hint": "Use '{vouloir}' in the present for '{je}' + infinitive '{venir}'.",
+      "mistakes": [
+        {
+          "answer": "je viens",
+          "feedback": "This needs vouloir! Try: je veux venir"
+        },
+        {
+          "answer": "je veux viens",
+          "feedback": "When you use two verbs together in French, the second one usually stays in the infinitive. Here: je veux venir."
+        }
+      ]
+    },
+    {
+      "id": "i-veux-tu-venir",
+      "type": "respond",
+      "situation": "Ask if someone wants to come",
+      "cue": "Do you want to come?",
+      "answer": "veux-tu venir?",
+      "accept": [
+        "est-ce que tu veux venir?"
+      ],
+      "hint": "Turn 'you want to come' into a yes/no question with '{tu}' and '{venir}'.",
+      "mistakes": [
+        {
+          "answer": "viens-tu?",
+          "feedback": "This needs vouloir! Try: veux-tu venir?"
+        },
+        {
+          "answer": "veux tu venir?",
+          "feedback": "In questions with inversion, you must use a hyphen: veux-tu venir?"
+        },
+        {
+          "answer": "veux-tu viens?",
+          "feedback": "When two verbs go together, the second one stays in the infinitive. Here: veux-tu venir?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-venir-avec",
+      "type": "respond",
+      "situation": "Say what you want to come with",
+      "cue": "I want to come with that",
+      "answer": "je veux venir avec ça",
+      "hint": "Use '{vouloir}' in the present for '{je}' + infinitive '{venir}' + 'with that'.",
+      "mistakes": [
+        {
+          "answer": "je viens avec ça",
+          "feedback": "This needs vouloir! Try: je veux venir avec ça"
+        },
+        {
+          "answer": "je veux viens avec ça",
+          "feedback": "When you chain two verbs, the second verb should be in the infinitive. Here: je veux venir avec ça."
+        }
+      ]
+    },
+    {
+      "id": "i-peux-tu-venir",
+      "type": "respond",
+      "situation": "Ask if someone can come",
+      "cue": "Can you come?",
+      "answer": "peux-tu venir?",
+      "accept": [
+        "est-ce que tu peux venir?"
+      ],
+      "hint": "Use '{pouvoir}' in the present for '{tu}' + infinitive '{venir}' and make it a question.",
+      "mistakes": [
+        {
+          "answer": "viens-tu?",
+          "feedback": "This needs pouvoir! Try: peux-tu venir?"
+        },
+        {
+          "answer": "peux tu venir?",
+          "feedback": "In questions with inversion, you must use a hyphen: peux-tu venir?"
+        },
+        {
+          "answer": "peux-tu viens?",
+          "feedback": "In verb + verb combinations, the second verb stays in the infinitive. Here: peux-tu venir?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-venir-a",
+      "type": "respond",
+      "situation": "Say what you can do",
+      "cue": "I can come to the hotel",
+      "answer": "je peux venir à l'hôtel",
+      "hint": "Use '{pouvoir}' in the present for '{je}' + infinitive '{venir}' + 'to the hotel'.",
+      "mistakes": [
+        {
+          "answer": "je viens à l'hôtel",
+          "feedback": "This needs pouvoir! Try: je peux venir à l'hôtel"
+        },
+        {
+          "answer": "je peux viens à l'hôtel",
+          "feedback": "With two verbs together, keep the second one in the infinitive. Here: je peux venir à l'hôtel."
+        }
+      ]
+    },
+    {
+      "id": "i-je-viens-te-voir",
+      "type": "respond",
+      "situation": "Say what you come to see",
+      "cue": "I am coming to see you",
+      "answer": "je viens te voir",
+      "accept": [
+        "je viens vous voir"
+      ],
+      "hint": "Use '{venir}' in the present for '{je}' + infinitive '{voir}' + 'you'.",
+      "mistakes": [
+        {
+          "answer": "je viens voir toi",
+          "feedback": "Use the pronoun before the verb: je viens te voir."
+        },
+        {
+          "answer": "je viens te vois",
+          "feedback": "In verb + verb structures, the second verb is infinitive. Here: je viens te voir."
+        }
+      ]
+    },
+    {
+      "id": "i-pourquoi-viens-tu-me",
+      "type": "respond",
+      "situation": "Ask why someone is coming to see you",
+      "cue": "Why are you coming to see me?",
+      "answer": "pourquoi viens-tu me voir?",
+      "hint": "Use '{pourquoi}' to ask 'why' and '{venir}' in the present for '{tu}' plus 'to see me' (me voir).",
+      "mistakes": [
+        {
+          "answer": "pourquoi es-tu venu me voir?",
+          "feedback": "Use the present for 'are coming': pourquoi viens-tu me voir?"
+        },
+        {
+          "answer": "pourquoi viens tu me voir?",
+          "feedback": "In questions with inversion, you must use a hyphen: pourquoi viens-tu me voir?"
+        }
+      ]
+    }
+  ]
+}

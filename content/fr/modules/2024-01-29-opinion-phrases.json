@@ -1,0 +1,139 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-29-opinion-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Je pense que...} - Opinion Phrases",
+  "description": "Express opinions diplomatically! '{Je pense qu'il vient}' (I think he's coming - belief), '{Je ne pense pas qu'il vienne}' (I don't think he's coming - doubt). Sound sophisticated!",
+  "can_do": [
+    "Express opinions diplomatically (I think that...)",
+    "Use subjunctive with negative opinions to show doubt",
+    "Sound sophisticated when sharing viewpoints"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-pense-qu-il-vient-fr",
+      "fr": "je pense qu'il vient",
+      "gloss": "I think he's coming",
+      "note": "⭐ expressing belief"
+    },
+    {
+      "word_id": "je-ne-pense-pas-qu-il-vienne-fr",
+      "fr": "je ne pense pas qu'il vienne",
+      "gloss": "I don't think he's coming",
+      "note": "diplomatic doubt"
+    },
+    {
+      "word_id": "je-doute-qu-elle-sache-fr",
+      "fr": "je doute qu'elle sache",
+      "gloss": "I doubt she knows",
+      "note": "expressing uncertainty"
+    },
+    {
+      "word_id": "je-ne-crois-pas-qu-il-ait-raison-fr",
+      "fr": "je ne crois pas qu'il ait raison",
+      "gloss": "I don't think he's right",
+      "note": "polite disagreement"
+    },
+    {
+      "word_id": "je-ne-pense-pas-que-ce-soit-vrai-fr",
+      "fr": "je ne pense pas que ce soit vrai",
+      "gloss": "I don't think that's true",
+      "note": "diplomatic correction"
+    },
+    {
+      "word_id": "je-doute-que-ce-soit-possible-fr",
+      "fr": "je doute que ce soit possible",
+      "gloss": "I doubt that's possible",
+      "note": "expressing skepticism"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-positive-opinion-belief",
+      "term": "Positive Opinion = Belief",
+      "definition": "'{Je pense que...}' expresses what you believe is true",
+      "example": "{Je pense qu'il vient} (I think he's coming - I believe it)"
+    },
+    {
+      "id": "c-negative-opinion-doubt",
+      "term": "Negative Opinion = Doubt",
+      "definition": "'{Je ne pense pas que...}' expresses uncertainty - more diplomatic!",
+      "example": "{Je ne pense pas qu'il vienne} (I don't think he's coming - diplomatic disagreement)"
+    },
+    {
+      "id": "c-diplomatic-communication",
+      "term": "Diplomatic Communication",
+      "definition": "'{Je ne pense pas que...}' sounds gentler than saying '{Non!}'",
+      "example": "Instead of 'That's wrong!', say '{Je ne pense pas que ce soit vrai}' (I don't think that's true)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-pense-qu-il",
+      "type": "respond",
+      "situation": "Express belief that someone is coming",
+      "cue": "I think he's coming",
+      "answer": "je pense qu'il vient",
+      "hint": "{je pense qu' + il + vient}"
+    },
+    {
+      "id": "i-je-ne-pense-pas",
+      "type": "respond",
+      "situation": "Diplomatically express doubt someone is coming",
+      "cue": "I don't think he's coming",
+      "answer": "je ne pense pas qu'il vienne",
+      "hint": "{je ne pense pas qu' + il + vienne}",
+      "mistakes": [
+        {
+          "answer": "je ne pense pas qu'il vient",
+          "feedback": "After negative opinion, use '{vienne}': je ne pense pas qu'il vienne"
+        }
+      ]
+    },
+    {
+      "id": "i-je-doute-qu-elle",
+      "type": "respond",
+      "situation": "Express doubt that someone knows something",
+      "cue": "I doubt she knows",
+      "answer": "je doute qu'elle sache",
+      "hint": "{je doute que + elle + sache}",
+      "mistakes": [
+        {
+          "answer": "je doute qu'elle sait",
+          "feedback": "After '{douter}', use '{sache}': je doute qu'elle sache"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-crois-pas",
+      "type": "respond",
+      "situation": "Politely disagree that someone is right",
+      "cue": "I don't think he's right",
+      "answer": "je ne crois pas qu'il ait raison",
+      "hint": "{je ne crois pas qu' + il + ait raison}"
+    },
+    {
+      "id": "i-je-ne-pense-pas-2",
+      "type": "respond",
+      "situation": "Diplomatically say you don't think something is true",
+      "cue": "I don't think that's true",
+      "answer": "je ne pense pas que ce soit vrai",
+      "hint": "{je ne pense pas que + ce + soit vrai}",
+      "mistakes": [
+        {
+          "answer": "je ne pense pas que c'est vrai",
+          "feedback": "After negative opinion, use '{soit}': je ne pense pas que ce soit vrai"
+        }
+      ]
+    },
+    {
+      "id": "i-je-doute-que-ce",
+      "type": "respond",
+      "situation": "Express skepticism that something is possible",
+      "cue": "I doubt that's possible",
+      "answer": "je doute que ce soit possible",
+      "hint": "{je doute que + ce + soit possible}"
+    }
+  ]
+}

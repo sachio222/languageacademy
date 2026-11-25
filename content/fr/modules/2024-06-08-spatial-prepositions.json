@@ -1,0 +1,511 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-08-spatial-prepositions",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Spatial Prepositions - Position & Location",
+  "description": "Learn to describe where things are: devant (in front of), derrière (behind), entre (between), au-dessus (above), au-dessous (below)",
+  "can_do": [
+    "Describe precise locations (in front of, behind, between)",
+    "Give directions and explain positions",
+    "Say 'The café is in front of the park' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "devant-fr",
+      "fr": "devant",
+      "gloss": "in front of",
+      "note": "opposite of derrière"
+    },
+    {
+      "word_id": "derriere-fr",
+      "fr": "derrière",
+      "gloss": "behind",
+      "note": "opposite of devant"
+    },
+    {
+      "word_id": "entre-fr",
+      "fr": "entre",
+      "gloss": "between",
+      "note": "use 'et' to connect: entre A et B"
+    },
+    {
+      "word_id": "parmi-fr",
+      "fr": "parmi",
+      "gloss": "among",
+      "note": "among multiple things/people"
+    },
+    {
+      "word_id": "au-dessus-de-fr",
+      "fr": "au-dessus de",
+      "gloss": "above, over",
+      "note": "compound preposition - higher than"
+    },
+    {
+      "word_id": "au-dessous-de-fr",
+      "fr": "au-dessous de",
+      "gloss": "below, beneath",
+      "note": "compound preposition - lower than"
+    },
+    {
+      "word_id": "dans-fr",
+      "fr": "dans",
+      "gloss": "in, inside",
+      "note": "⭐ very common - inside something"
+    },
+    {
+      "word_id": "sur-fr",
+      "fr": "sur",
+      "gloss": "on, on top of",
+      "note": "⭐ very common - on surface"
+    },
+    {
+      "word_id": "sous-fr",
+      "fr": "sous",
+      "gloss": "under, beneath",
+      "note": "⭐ very common - underneath"
+    },
+    {
+      "word_id": "la-position-fr",
+      "fr": "la position",
+      "gloss": "the position",
+      "note": "feminine noun - where something is"
+    },
+    {
+      "word_id": "l-endroit-m-fr",
+      "fr": "l'endroit (m)",
+      "gloss": "the place, spot",
+      "note": "masculine noun - specific location"
+    },
+    {
+      "word_id": "la-place-fr",
+      "fr": "la place",
+      "gloss": "the place, space, seat",
+      "note": "feminine noun - room/space/seat"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-devant-in-front-of",
+      "term": "{devant} - in front of",
+      "definition": "Indicates position in front of something",
+      "example": "{Je suis devant la porte} (I'm in front of the door), {La voiture est devant la maison} (The car is in front of the house)"
+    },
+    {
+      "id": "c-derriere-behind",
+      "term": "{derrière} - behind",
+      "definition": "Indicates position behind something",
+      "example": "{Le chat est derrière le sofa} (The cat is behind the sofa), {Il est derrière moi} (He's behind me)"
+    },
+    {
+      "id": "c-entre-between",
+      "term": "{entre} - between",
+      "definition": "Indicates position between two things",
+      "example": "{Le café est entre l'école et le parc} (The café is between the school and the park), {Entre toi et moi} (Between you and me)"
+    },
+    {
+      "id": "c-parmi-among",
+      "term": "{parmi} - among",
+      "definition": "Indicates being among multiple things or people",
+      "example": "{Parmi les étudiants} (Among the students), {Il est parmi nous} (He's among us)"
+    },
+    {
+      "id": "c-au-dessus-de-above",
+      "term": "{au-dessus} ({de}) - above, over",
+      "definition": "Indicates position above something",
+      "example": "{Le tableau est au-dessus de la table} (The painting is above the table), {Au-dessus de la ville} (Above the city)"
+    },
+    {
+      "id": "c-au-dessous-de-below",
+      "term": "{au-dessous} ({de}) - below, beneath, under",
+      "definition": "Indicates position below something",
+      "example": "{Au-dessous du niveau} (Below the level), {Le parking est au-dessous} (The parking is below)"
+    },
+    {
+      "id": "c-review-dans-sur-sous",
+      "term": "Review: {dans, sur, sous}",
+      "definition": "Reinforce: dans (in/inside), sur (on/on top of), sous (under/beneath)",
+      "example": "{Le livre est dans le sac} (in the bag), {sur la table} (on the table), {sous la chaise} (under the chair)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-devant",
+      "type": "gapfill",
+      "text": "Je suis ___ la porte",
+      "blanks": [
+        {
+          "answer": "devant"
+        }
+      ],
+      "gloss": "I'm in front of the door",
+      "mistakes": [
+        {
+          "answer": "derrière",
+          "feedback": "Derrière means 'behind'. Use '{devant}' for 'in front of'!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{devant}' for 'in front of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-derriere",
+      "type": "gapfill",
+      "text": "Le chat est ___ le sofa",
+      "blanks": [
+        {
+          "answer": "derrière"
+        }
+      ],
+      "gloss": "The cat is behind the sofa",
+      "mistakes": [
+        {
+          "answer": "devant",
+          "feedback": "Devant means 'in front of'. Use '{derrière}' for 'behind'!"
+        },
+        {
+          "answer": "sous",
+          "feedback": "Sous means 'under'. Use '{derrière}' for 'behind' (back side)!"
+        }
+      ]
+    },
+    {
+      "id": "i-entre",
+      "type": "gapfill",
+      "text": "Le café est ___ l'école et le parc",
+      "blanks": [
+        {
+          "answer": "entre"
+        }
+      ],
+      "gloss": "The café is between the school and the park",
+      "mistakes": [
+        {
+          "answer": "parmi",
+          "feedback": "Parmi means 'among' (many things). Use '{entre}' for 'between' two things!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{entre}' for 'between' two places!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-dessus-de",
+      "type": "gapfill",
+      "text": "Le tableau est ___ la table",
+      "blanks": [
+        {
+          "answer": "au-dessus de"
+        }
+      ],
+      "gloss": "The painting is above the table",
+      "mistakes": [
+        {
+          "answer": "au-dessous de",
+          "feedback": "Au-dessous means 'below'. Use '{au-dessus de}' for 'above'!"
+        },
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on' (touching). Use '{au-dessus de}' for 'above' (not touching)!"
+        }
+      ]
+    },
+    {
+      "id": "i-parmi",
+      "type": "gapfill",
+      "text": "___ les étudiants, il-y-a des français",
+      "blanks": [
+        {
+          "answer": "Parmi"
+        }
+      ],
+      "gloss": "Among the students, there are French people",
+      "mistakes": [
+        {
+          "answer": "Entre",
+          "feedback": "Entre is for TWO things. Use '{parmi}' for 'among' many things!"
+        },
+        {
+          "answer": "Dans",
+          "feedback": "Dans means 'in/inside'. Use '{parmi}' for 'among' a group!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-dessous",
+      "type": "gapfill",
+      "text": "Le parking est ___",
+      "blanks": [
+        {
+          "answer": "au-dessous"
+        }
+      ],
+      "gloss": "The parking is below/downstairs",
+      "mistakes": [
+        {
+          "answer": "au-dessus",
+          "feedback": "Au-dessus means 'above'. Use '{au-dessous}' for 'below'!"
+        },
+        {
+          "answer": "sous",
+          "feedback": "Sous needs a noun after it: '{sous la maison}'. Use '{au-dessous}' alone!"
+        }
+      ]
+    },
+    {
+      "id": "i-dans",
+      "type": "gapfill",
+      "text": "Le livre est ___ le sac",
+      "blanks": [
+        {
+          "answer": "dans"
+        }
+      ],
+      "gloss": "The book is in the bag/inside the bag",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on top of'. Use '{dans}' for 'in/inside' something!"
+        },
+        {
+          "answer": "devant",
+          "feedback": "Devant means 'in front of'. Use '{dans}' for 'in/inside'!"
+        }
+      ]
+    },
+    {
+      "id": "i-sur",
+      "type": "gapfill",
+      "text": "Mes clés sont ___ la table",
+      "blanks": [
+        {
+          "answer": "sur"
+        }
+      ],
+      "gloss": "My keys are on the table",
+      "mistakes": [
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{sur}' for 'on top of' a surface!"
+        },
+        {
+          "answer": "au-dessus de",
+          "feedback": "Au-dessus means 'above' (not touching). Use '{sur}' for '{on}' (touching)!"
+        }
+      ]
+    },
+    {
+      "id": "i-sous",
+      "type": "gapfill",
+      "text": "Le chien est ___ la table",
+      "blanks": [
+        {
+          "answer": "sous"
+        }
+      ],
+      "gloss": "The dog is under the table",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on top of'. Use '{sous}' for 'under/beneath'!"
+        },
+        {
+          "answer": "au-dessous de",
+          "feedback": "Au-dessous is for 'below' in levels. Use '{sous}' for 'under' physically!"
+        }
+      ]
+    },
+    {
+      "id": "i-entre-2",
+      "type": "gapfill",
+      "text": "___ toi et moi, c'est un secret",
+      "blanks": [
+        {
+          "answer": "Entre"
+        }
+      ],
+      "gloss": "Between you and me, it's a secret",
+      "mistakes": [
+        {
+          "answer": "Parmi",
+          "feedback": "Parmi is for many things. Use '{entre}' for 'between' two people!"
+        },
+        {
+          "answer": "Avec",
+          "feedback": "Avec means 'with'. Use '{entre}' for 'between'!"
+        }
+      ]
+    },
+    {
+      "id": "i-derriere-2",
+      "type": "gapfill",
+      "text": "Il y a un jardin ___ la maison",
+      "blanks": [
+        {
+          "answer": "derrière"
+        }
+      ],
+      "gloss": "There's a garden behind the house",
+      "mistakes": [
+        {
+          "answer": "devant",
+          "feedback": "Devant means 'in front of'. Use '{derrière}' for 'behind/in back'!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{derrière}' for 'behind/in back'!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-dessus-du",
+      "type": "gapfill",
+      "text": "La lampe est ___ le lit",
+      "blanks": [
+        {
+          "answer": "au-dessus du"
+        }
+      ],
+      "gloss": "The lamp is above the bed",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on' (touching). Use '{au-dessus de}' for 'above' (hanging)!"
+        },
+        {
+          "answer": "devant",
+          "feedback": "Devant means 'in front of'. Use '{au-dessus de}' for 'above'!"
+        }
+      ]
+    },
+    {
+      "id": "i-devant-2",
+      "type": "gapfill",
+      "text": "Il est assis ___ moi",
+      "blanks": [
+        {
+          "answer": "devant"
+        }
+      ],
+      "gloss": "He's sitting in front of me/facing me",
+      "mistakes": [
+        {
+          "answer": "derrière",
+          "feedback": "Derrière means 'behind'. Use '{devant}' for 'in front of/facing'!"
+        },
+        {
+          "answer": "avec",
+          "feedback": "Avec means 'with'. Use '{devant}' for 'in front of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-parmi-2",
+      "type": "gapfill",
+      "text": "___ nous, il-y-a un bon professeur",
+      "blanks": [
+        {
+          "answer": "Parmi"
+        }
+      ],
+      "gloss": "Among us, there's a good teacher",
+      "mistakes": [
+        {
+          "answer": "Entre",
+          "feedback": "Entre is for between TWO. Use '{parmi}' for 'among' a group!"
+        },
+        {
+          "answer": "Avec",
+          "feedback": "Avec means 'with'. Use '{parmi}' for 'among'!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-dessous-2",
+      "type": "gapfill",
+      "text": "Ma chambre est ___",
+      "blanks": [
+        {
+          "answer": "au-dessous"
+        }
+      ],
+      "gloss": "My bedroom is downstairs/below",
+      "mistakes": [
+        {
+          "answer": "au-dessus",
+          "feedback": "Au-dessus means 'above/upstairs'. Use '{au-dessous}' for 'below/downstairs'!"
+        },
+        {
+          "answer": "en bas",
+          "feedback": "En bas works too! But we're learning '{au-dessous}' here."
+        }
+      ]
+    },
+    {
+      "id": "i-sous-2",
+      "type": "gapfill",
+      "text": "Le chat dort ___ mon lit",
+      "blanks": [
+        {
+          "answer": "sous"
+        }
+      ],
+      "gloss": "The cat sleeps under my bed",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "Sur means 'on top of'. Use '{sous}' for 'under/beneath'!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{sous}' for 'under/beneath'!"
+        }
+      ]
+    },
+    {
+      "id": "i-devant-3",
+      "type": "gapfill",
+      "text": "Il y a un arbre ___ ma fenêtre",
+      "blanks": [
+        {
+          "answer": "devant"
+        }
+      ],
+      "gloss": "There's a tree in front of my window",
+      "mistakes": [
+        {
+          "answer": "derrière",
+          "feedback": "Derrière means 'behind'. Use '{devant}' for 'in front of'!"
+        },
+        {
+          "answer": "entre",
+          "feedback": "Entre is for 'between' two things. Use '{devant}' for 'in front of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-parmi-3",
+      "type": "gapfill",
+      "text": "Ton livre est ___ mes livres",
+      "blanks": [
+        {
+          "answer": "parmi"
+        }
+      ],
+      "gloss": "Your book is among my books",
+      "mistakes": [
+        {
+          "answer": "entre",
+          "feedback": "Entre is for between TWO specific things. Use '{parmi}' for among many!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in/inside'. Use '{parmi}' for 'among' a group!"
+        }
+      ]
+    }
+  ]
+}

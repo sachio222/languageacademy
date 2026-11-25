@@ -1,0 +1,409 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-31-possessive-adjectives",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Possessive Adjectives - My, Your, His, Her",
+  "description": "Show who owns what: 'my book', 'his cat', 'their house' - essential vocabulary!",
+  "can_do": [
+    "Show ownership (my cat, your house, his book, their car)",
+    "Use possessive adjectives with correct gender agreement",
+    "Say 'Where is my book?' or 'I want your car' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "mon-fr",
+      "fr": "mon",
+      "gloss": "my (masculine)",
+      "note": "masculine form - mon livre, mon père, mon ami"
+    },
+    {
+      "word_id": "ma-fr",
+      "fr": "ma",
+      "gloss": "my (feminine)",
+      "note": "feminine form - ma maison, ma mère, ma voiture"
+    },
+    {
+      "word_id": "mes-fr",
+      "fr": "mes",
+      "gloss": "my (plural)",
+      "note": "plural form - mes chats, mes livres, mes amis"
+    },
+    {
+      "word_id": "ton-fr",
+      "fr": "ton",
+      "gloss": "your (masc, informal)",
+      "note": "masculine form - ton chat, ton frère, ton travail"
+    },
+    {
+      "word_id": "ta-fr",
+      "fr": "ta",
+      "gloss": "your (fem, informal)",
+      "note": "feminine form - ta voiture, ta sœur, ta chambre"
+    },
+    {
+      "word_id": "tes-fr",
+      "fr": "tes",
+      "gloss": "your (plural, informal)",
+      "note": "plural form - tes amis, tes parents, tes chaussures"
+    },
+    {
+      "word_id": "son-fr",
+      "fr": "son",
+      "gloss": "his/her (masculine)",
+      "note": "masculine form - son livre, son chien, son bureau"
+    },
+    {
+      "word_id": "sa-fr",
+      "fr": "sa",
+      "gloss": "his/her (feminine)",
+      "note": "feminine form - sa maison, sa fille, sa cuisine"
+    },
+    {
+      "word_id": "ses-fr",
+      "fr": "ses",
+      "gloss": "his/her (plural)",
+      "note": "plural form - ses chats, ses enfants, ses clés"
+    },
+    {
+      "word_id": "notre-fr",
+      "fr": "notre",
+      "gloss": "our (singular)",
+      "note": "singular form - notre maison, notre école, notre jardin"
+    },
+    {
+      "word_id": "nos-fr",
+      "fr": "nos",
+      "gloss": "our (plural)",
+      "note": "plural form - nos chats, nos vacances, nos professeurs"
+    },
+    {
+      "word_id": "votre-fr",
+      "fr": "votre",
+      "gloss": "your (singular, formal)",
+      "note": "singular form - votre livre, votre famille, votre bureau"
+    },
+    {
+      "word_id": "vos-fr",
+      "fr": "vos",
+      "gloss": "your (plural, formal)",
+      "note": "plural form - vos livres, vos enfants, vos bagages"
+    },
+    {
+      "word_id": "leur-fr",
+      "fr": "leur",
+      "gloss": "their (singular)",
+      "note": "singular form - leur chat, leur maison, leur projet"
+    },
+    {
+      "word_id": "leurs-fr",
+      "fr": "leurs",
+      "gloss": "their (plural)",
+      "note": "plural form - leurs chats, leurs amis, leurs idées"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-possessive-adjectives-overview",
+      "term": "Possessive Adjectives Overview",
+      "definition": "Words that show ownership and go directly before the noun they modify",
+      "example": "15 total forms: MY ({mon}/{ma}/{mes}), YOUR informal ({ton}/{ta}/{tes}), HIS/HER ({son}/{sa}/{ses}), OUR ({notre}/{nos}), YOUR formal ({votre}/{vos}), THEIR ({leur}/{leurs})"
+    },
+    {
+      "id": "c-critical-rule-agreement-with",
+      "term": "🔑 CRITICAL RULE: Agreement with the THING owned",
+      "definition": "The possessive adjective matches the gender/number of the THING being owned, NOT the owner",
+      "example": "Marie's book = {SON livre} (masculine '{son}' because '{livre}' is masculine, even though Marie is female). Pierre's house = {SA maison} (feminine '{sa}' because '{maison}' is feminine, even though Pierre is male)"
+    },
+    {
+      "id": "c-formal-vs-informal-your",
+      "term": "Formal vs Informal 'Your'",
+      "definition": "French has two ways to say 'your' depending on relationship and respect level",
+      "example": "INFORMAL with friends/family: {ton}/{ta}/{tes} ({ton frère}, {ta sœur}, {tes amis}). FORMAL with strangers/respect: {votre}/{vos} ({votre bureau}, {vos bagages})"
+    },
+    {
+      "id": "c-gender-neutral-forms",
+      "term": "Gender-Neutral Forms",
+      "definition": "Some possessives don't change for masculine/feminine - only for singular/plural",
+      "example": "{NOTRE}/{NOS} (our): {notre maison}, {notre jardin}, {nos enfants. VOTRE}/{VOS} (your formal): {votre livre}, {votre famille}, {vos idées. LEUR}/{LEURS} (their): {leur chat}, {leur maison}, {leurs amis}"
+    },
+    {
+      "id": "c-memory-trick-the-3",
+      "term": "Memory Trick: The 3-2-2 Pattern",
+      "definition": "Each owner has a predictable number of forms to memorize",
+      "example": "MY, YOUR (informal), HIS/HER = 3 forms each (masc/fem/plural). OUR, YOUR (formal), THEIR = 2 forms each (singular/plural only)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-mon",
+      "type": "respond",
+      "situation": "You're talking about your father. Which possessive?",
+      "cue": "my father → ___ père",
+      "answer": "mon",
+      "hint": "Your possession, père is masculine - check vocab table!",
+      "mistakes": [
+        {
+          "answer": "ma",
+          "feedback": "That's feminine 'my' - père is masculine"
+        },
+        {
+          "answer": "mes",
+          "feedback": "That's plural 'my' - père is singular"
+        }
+      ]
+    },
+    {
+      "id": "i-ma",
+      "type": "respond",
+      "situation": "You're talking about your mother. Which possessive?",
+      "cue": "my mother → ___ mère",
+      "answer": "ma",
+      "hint": "Your possession, mère is feminine - check vocab table!",
+      "mistakes": [
+        {
+          "answer": "mon",
+          "feedback": "That's masculine 'my' - mère is feminine"
+        },
+        {
+          "answer": "mes",
+          "feedback": "That's plural 'my' - mère is singular"
+        }
+      ]
+    },
+    {
+      "id": "i-mes",
+      "type": "respond",
+      "situation": "You're talking about your books (multiple). Which possessive?",
+      "cue": "my books → ___ livres",
+      "answer": "mes",
+      "hint": "Your possession, livres is plural - check vocab table!",
+      "mistakes": [
+        {
+          "answer": "mon",
+          "feedback": "That's singular masculine 'my' - livres is plural"
+        },
+        {
+          "answer": "ma",
+          "feedback": "That's singular feminine 'my' - livres is plural"
+        }
+      ]
+    },
+    {
+      "id": "i-ton",
+      "type": "respond",
+      "situation": "Talking to a friend about their brother. Which possessive?",
+      "cue": "your brother → ___ frère (informal)",
+      "answer": "ton",
+      "hint": "Friend's possession, frère is masculine - informal form",
+      "mistakes": [
+        {
+          "answer": "ta",
+          "feedback": "That's feminine 'your' - frère is masculine"
+        },
+        {
+          "answer": "votre",
+          "feedback": "That's formal 'your' - use informal with friends"
+        }
+      ]
+    },
+    {
+      "id": "i-ta",
+      "type": "respond",
+      "situation": "Talking to a friend about their sister. Which possessive?",
+      "cue": "your sister → ___ sœur (informal)",
+      "answer": "ta",
+      "hint": "Friend's possession, sœur is feminine - informal form",
+      "mistakes": [
+        {
+          "answer": "ton",
+          "feedback": "That's masculine 'your' - sœur is feminine"
+        },
+        {
+          "answer": "votre",
+          "feedback": "That's formal 'your' - use informal with friends"
+        }
+      ]
+    },
+    {
+      "id": "i-tes",
+      "type": "respond",
+      "situation": "Talking to a friend about their parents. Which possessive?",
+      "cue": "your parents → ___ parents (informal)",
+      "answer": "tes",
+      "hint": "Friend's possession, parents is plural - informal form",
+      "mistakes": [
+        {
+          "answer": "ton",
+          "feedback": "That's singular masculine 'your' - parents is plural"
+        },
+        {
+          "answer": "vos",
+          "feedback": "That's formal 'your' - use informal with friends"
+        }
+      ]
+    },
+    {
+      "id": "i-son",
+      "type": "respond",
+      "situation": "Talking about Marie's dog (masculine). Which possessive?",
+      "cue": "her dog → ___ chien",
+      "answer": "son",
+      "hint": "Marie owns it, chien is masculine - matches the thing owned!",
+      "mistakes": [
+        {
+          "answer": "sa",
+          "feedback": "That's feminine 'his/her' - chien is masculine"
+        },
+        {
+          "answer": "ses",
+          "feedback": "That's plural 'his/her' - chien is singular"
+        }
+      ]
+    },
+    {
+      "id": "i-sa",
+      "type": "respond",
+      "situation": "Talking about Pierre's house (feminine). Which possessive?",
+      "cue": "his house → ___ maison",
+      "answer": "sa",
+      "hint": "Pierre owns it, maison is feminine - matches the thing owned!",
+      "mistakes": [
+        {
+          "answer": "son",
+          "feedback": "That's masculine 'his/her' - maison is feminine"
+        },
+        {
+          "answer": "ses",
+          "feedback": "That's plural 'his/her' - maison is singular"
+        }
+      ]
+    },
+    {
+      "id": "i-ses",
+      "type": "respond",
+      "situation": "Talking about someone's children. Which possessive?",
+      "cue": "his/her children → ___ enfants",
+      "answer": "ses",
+      "hint": "Third person owner, enfants is plural",
+      "mistakes": [
+        {
+          "answer": "son",
+          "feedback": "That's singular masculine 'his/her' - enfants is plural"
+        },
+        {
+          "answer": "sa",
+          "feedback": "That's singular feminine 'his/her' - enfants is plural"
+        }
+      ]
+    },
+    {
+      "id": "i-notre",
+      "type": "respond",
+      "situation": "Talking about the house you and your family share. Which possessive?",
+      "cue": "our house → ___ maison",
+      "answer": "notre",
+      "hint": "Group possession, maison is singular - notre/nos?",
+      "mistakes": [
+        {
+          "answer": "nos",
+          "feedback": "That's plural 'our' - maison is singular"
+        },
+        {
+          "answer": "votre",
+          "feedback": "That's 'your' (formal), not 'our'"
+        }
+      ]
+    },
+    {
+      "id": "i-nos",
+      "type": "respond",
+      "situation": "Talking about the vacations you and your family take. Which possessive?",
+      "cue": "our vacations → ___ vacances",
+      "answer": "nos",
+      "hint": "Group possession, vacances is plural - notre/nos?",
+      "mistakes": [
+        {
+          "answer": "notre",
+          "feedback": "That's singular 'our' - vacances is plural"
+        },
+        {
+          "answer": "vos",
+          "feedback": "That's 'your' (formal), not 'our'"
+        }
+      ]
+    },
+    {
+      "id": "i-votre",
+      "type": "respond",
+      "situation": "Speaking formally to someone about their office. Which possessive?",
+      "cue": "your office → ___ bureau (formal)",
+      "answer": "votre",
+      "hint": "Formal situation, bureau is singular - votre/vos?",
+      "mistakes": [
+        {
+          "answer": "vos",
+          "feedback": "That's plural 'your' - bureau is singular"
+        },
+        {
+          "answer": "ton",
+          "feedback": "That's informal 'your' - use formal here"
+        }
+      ]
+    },
+    {
+      "id": "i-vos",
+      "type": "respond",
+      "situation": "Speaking formally to someone about their luggage. Which possessive?",
+      "cue": "your luggage → ___ bagages (formal)",
+      "answer": "vos",
+      "hint": "Formal situation, bagages is plural - votre/vos?",
+      "mistakes": [
+        {
+          "answer": "votre",
+          "feedback": "That's singular 'your' - bagages is plural"
+        },
+        {
+          "answer": "tes",
+          "feedback": "That's informal 'your' - use formal here"
+        }
+      ]
+    },
+    {
+      "id": "i-leur",
+      "type": "respond",
+      "situation": "Talking about a project owned by a group of people. Which possessive?",
+      "cue": "their project → ___ projet",
+      "answer": "leur",
+      "hint": "They own it, projet is singular - leur/leurs?",
+      "mistakes": [
+        {
+          "answer": "leurs",
+          "feedback": "That's plural 'their' - projet is singular"
+        },
+        {
+          "answer": "notre",
+          "feedback": "That's 'our', not 'their'"
+        }
+      ]
+    },
+    {
+      "id": "i-leurs",
+      "type": "respond",
+      "situation": "Talking about ideas owned by a group of people. Which possessive?",
+      "cue": "their ideas → ___ idées",
+      "answer": "leurs",
+      "hint": "They own them, idées is plural - leur/leurs?",
+      "mistakes": [
+        {
+          "answer": "leur",
+          "feedback": "That's singular 'their' - idées is plural"
+        },
+        {
+          "answer": "nos",
+          "feedback": "That's 'our', not 'their'"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-15-nature-animals",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Nature & Animals - Curiosity Vocabulary",
+  "description": "Learn animals and nature vocabulary to ask curious questions about the world: un oiseau (bird), une tortue (turtle), un écureuil (squirrel), le vent (wind), la pluie (rain)",
+  "can_do": [
+    "Talk about animals and nature (birds, turtles, squirrels, wind, rain)",
+    "Ask curious questions about the natural world",
+    "Use nature vocabulary for question practice"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "un-oiseau-fr",
+      "fr": "un oiseau",
+      "gloss": "a bird",
+      "note": "masculine - silent 's' in oiseau"
+    },
+    {
+      "word_id": "les-oiseaux-fr",
+      "fr": "les oiseaux",
+      "gloss": "birds",
+      "note": "plural - silent 'x'"
+    },
+    {
+      "word_id": "une-tortue-fr",
+      "fr": "une tortue",
+      "gloss": "a turtle",
+      "note": "feminine - slow movement example"
+    },
+    {
+      "word_id": "un-ecureuil-fr",
+      "fr": "un écureuil",
+      "gloss": "a squirrel",
+      "note": "masculine - fast movement example"
+    },
+    {
+      "word_id": "un-lapin-fr",
+      "fr": "un lapin",
+      "gloss": "a rabbit",
+      "note": "masculine - hopping example"
+    },
+    {
+      "word_id": "un-papillon-fr",
+      "fr": "un papillon",
+      "gloss": "a butterfly",
+      "note": "masculine - flying insect"
+    },
+    {
+      "word_id": "une-abeille-fr",
+      "fr": "une abeille",
+      "gloss": "a bee",
+      "note": "feminine - buzzing insect"
+    },
+    {
+      "word_id": "un-poisson-fr",
+      "fr": "un poisson",
+      "gloss": "a fish",
+      "note": "masculine - review from food module"
+    },
+    {
+      "word_id": "un-chat-fr",
+      "fr": "un chat",
+      "gloss": "a cat",
+      "note": "masculine - review from basic nouns"
+    },
+    {
+      "word_id": "un-arbre-fr",
+      "fr": "un arbre",
+      "gloss": "a tree",
+      "note": "masculine - review from colors module"
+    },
+    {
+      "word_id": "les-arbres-fr",
+      "fr": "les arbres",
+      "gloss": "trees",
+      "note": "plural"
+    },
+    {
+      "word_id": "une-plante-fr",
+      "fr": "une plante",
+      "gloss": "a plant",
+      "note": "feminine - living vegetation"
+    },
+    {
+      "word_id": "les-plantes-fr",
+      "fr": "les plantes",
+      "gloss": "plants",
+      "note": "plural"
+    },
+    {
+      "word_id": "une-fleur-fr",
+      "fr": "une fleur",
+      "gloss": "a flower",
+      "note": "feminine - review from colors module"
+    },
+    {
+      "word_id": "le-vent-fr",
+      "fr": "le vent",
+      "gloss": "the wind",
+      "note": "masculine - for 'souffler' (to blow)"
+    },
+    {
+      "word_id": "la-pluie-fr",
+      "fr": "la pluie",
+      "gloss": "the rain",
+      "note": "feminine - for 'pleuvoir' (to rain)"
+    },
+    {
+      "word_id": "la-nature-fr",
+      "fr": "la nature",
+      "gloss": "nature",
+      "note": "feminine - abstract concept"
+    },
+    {
+      "word_id": "lent-lente-fr",
+      "fr": "lent / lente",
+      "gloss": "slow",
+      "note": "la tortue est lente (the turtle is slow)"
+    },
+    {
+      "word_id": "rapide-fr",
+      "fr": "rapide",
+      "gloss": "fast",
+      "note": "l'écureuil est rapide (the squirrel is fast)"
+    },
+    {
+      "word_id": "petit-petite-fr",
+      "fr": "petit / petite",
+      "gloss": "small",
+      "note": "review - une abeille est petite"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-animals-for-question-asking",
+      "term": "Animals for Question-Asking",
+      "definition": "These animals are perfect examples for asking 'how does X do Y?' questions",
+      "example": "{Comment est-ce qu'une tortue nage? Comment est-ce qu'un écureuil saute?}"
+    },
+    {
+      "id": "c-learning-animal-genders",
+      "term": "Learning Animal Genders",
+      "definition": "Always learn the article with the animal - gender matters for questions!",
+      "example": "{un oiseau} (masculine), {une tortue} (feminine), {un écureuil} (masculine)"
+    },
+    {
+      "id": "c-nature-elements",
+      "term": "{Nature Elements}",
+      "definition": "Essential nature vocabulary for asking questions about natural phenomena",
+      "example": "{le vent} (wind), {la pluie} (rain), {une plante} (plant), {un arbre} (tree)"
+    },
+    {
+      "id": "c-combining-with-colors",
+      "term": "Combining with Colors",
+      "definition": "Use color vocabulary from Reference module to describe animals",
+      "example": "{un oiseau bleu} (a blue bird), {un papillon jaune} (a yellow butterfly)"
+    },
+    {
+      "id": "c-setting-up-for-questions",
+      "term": "Setting Up for Questions",
+      "definition": "This vocabulary enables curiosity questions in future modules",
+      "example": "After learning this: you can ask '{Pourquoi est-ce que les oiseaux volent?}' (Why do birds fly?)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-un-oiseau",
+      "type": "respond",
+      "situation": "a bird",
+      "answer": "un oiseau",
+      "hint": "masculine article + oiseau",
+      "mistakes": [
+        {
+          "answer": "une oiseau",
+          "feedback": "Oiseau is masculine. Use '{un oiseau}' (the 's' is silent!)"
+        },
+        {
+          "answer": "un oisau",
+          "feedback": "Careful with spelling: oiseau (the 's' is silent)"
+        }
+      ]
+    },
+    {
+      "id": "i-une-tortue",
+      "type": "respond",
+      "situation": "a turtle",
+      "answer": "une tortue",
+      "hint": "feminine article + tortue",
+      "mistakes": [
+        {
+          "answer": "un tortue",
+          "feedback": "Tortue is feminine. Use '{une tortue}'"
+        }
+      ]
+    },
+    {
+      "id": "i-un-ecureuil",
+      "type": "respond",
+      "situation": "a squirrel",
+      "answer": "un écureuil",
+      "accept": [
+        "un ecureuil"
+      ],
+      "hint": "masculine article + écureuil",
+      "mistakes": [
+        {
+          "answer": "une écureuil",
+          "feedback": "Écureuil is masculine. Use '{un écureuil}'"
+        }
+      ]
+    },
+    {
+      "id": "i-un-lapin",
+      "type": "respond",
+      "situation": "a rabbit",
+      "answer": "un lapin",
+      "hint": "masculine article + lapin"
+    },
+    {
+      "id": "i-un-papillon",
+      "type": "respond",
+      "situation": "a butterfly",
+      "answer": "un papillon",
+      "hint": "masculine article + papillon"
+    },
+    {
+      "id": "i-une-abeille",
+      "type": "respond",
+      "situation": "a bee",
+      "answer": "une abeille",
+      "hint": "feminine article + abeille"
+    },
+    {
+      "id": "i-une-plante",
+      "type": "respond",
+      "situation": "a plant",
+      "answer": "une plante",
+      "hint": "feminine article + plante"
+    },
+    {
+      "id": "i-le-vent",
+      "type": "respond",
+      "situation": "the wind",
+      "answer": "le vent",
+      "hint": "masculine article + vent"
+    },
+    {
+      "id": "i-la-pluie",
+      "type": "respond",
+      "situation": "the rain",
+      "answer": "la pluie",
+      "hint": "feminine article + pluie"
+    },
+    {
+      "id": "i-la-tortue-est-lente",
+      "type": "respond",
+      "situation": "The turtle is slow",
+      "answer": "la tortue est lente",
+      "hint": "la tortue + est + lente (feminine)",
+      "mistakes": [
+        {
+          "answer": "la tortue est lent",
+          "feedback": "Lente must agree with feminine 'tortue'. Use '{lente}' with 'e'"
+        }
+      ]
+    },
+    {
+      "id": "i-l-ecureuil-est-rapide",
+      "type": "respond",
+      "situation": "The squirrel is fast",
+      "answer": "l'écureuil est rapide",
+      "accept": [
+        "l'ecureuil est rapide"
+      ],
+      "hint": "{l'écureuil + est + rapide}"
+    },
+    {
+      "id": "i-l-abeille-est-petite",
+      "type": "respond",
+      "situation": "The bee is small",
+      "answer": "l'abeille est petite",
+      "hint": "l'abeille + est + petite (feminine)"
+    },
+    {
+      "id": "i-un-oiseau-bleu",
+      "type": "respond",
+      "situation": "a blue bird",
+      "answer": "un oiseau bleu",
+      "hint": "{un oiseau + bleu}"
+    },
+    {
+      "id": "i-un-papillon-jaune",
+      "type": "respond",
+      "situation": "a yellow butterfly",
+      "answer": "un papillon jaune",
+      "hint": "{un papillon + jaune}"
+    },
+    {
+      "id": "i-je-vois-un-oiseau",
+      "type": "respond",
+      "situation": "I see a bird",
+      "answer": "je vois un oiseau",
+      "hint": "{je vois + un oiseau}"
+    }
+  ]
+}

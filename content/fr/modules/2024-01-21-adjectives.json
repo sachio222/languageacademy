@@ -1,0 +1,413 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-21-adjectives",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Common Adjectives - Describing Things",
+  "description": "Learn essential adjectives WITH gender agreement: un bon livre (a good book), une grande maison (a big house)",
+  "can_do": [
+    "Describe things as big, small, good, bad, new, old",
+    "Use adjectives with correct gender agreement",
+    "Say 'a good book' or 'a big house' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "bon-bonne-fr",
+      "fr": "bon / bonne",
+      "gloss": "good",
+      "note": "un bon livre / une bonne maison"
+    },
+    {
+      "word_id": "grand-grande-fr",
+      "fr": "grand / grande",
+      "gloss": "big, tall",
+      "note": "un grand homme / une grande femme"
+    },
+    {
+      "word_id": "petit-petite-fr",
+      "fr": "petit / petite",
+      "gloss": "small",
+      "note": "un petit chat / une petite maison"
+    },
+    {
+      "word_id": "nouveau-nouvelle-fr",
+      "fr": "nouveau / nouvelle",
+      "gloss": "new",
+      "note": "un nouveau livre / une nouvelle voiture"
+    },
+    {
+      "word_id": "vieux-vieille-fr",
+      "fr": "vieux / vieille",
+      "gloss": "old",
+      "note": "un vieux chat / une vieille maison"
+    },
+    {
+      "word_id": "jeune-jeune-fr",
+      "fr": "jeune / jeune",
+      "gloss": "young",
+      "note": "un jeune homme / une jeune femme (same both)"
+    },
+    {
+      "word_id": "beau-belle-fr",
+      "fr": "beau / belle",
+      "gloss": "beautiful",
+      "note": "un beau livre / une belle maison"
+    },
+    {
+      "word_id": "autre-autre-fr",
+      "fr": "autre / autre",
+      "gloss": "other",
+      "note": "un autre livre / une autre maison (same both)"
+    },
+    {
+      "word_id": "bel-nouvel-vieil-fr",
+      "fr": "bel / nouvel / vieil",
+      "gloss": "beautiful / new / old, before a masculine singular noun with a vowel sound",
+      "note": "un bel enfant / un nouvel ami / un vieil homme"
+    },
+    {
+      "word_id": "belles-vieilles-fr",
+      "fr": "belles / vieilles",
+      "gloss": "beautiful / old, feminine plural",
+      "note": "les belles maisons / les vieilles maisons"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-adjective-gender-agreement-critical",
+      "term": "Adjective Gender Agreement - Critical!",
+      "definition": "Adjectives must match the gender of the noun they describe!",
+      "example": "{bon livre} (masc) BUT bonne maison (fem)"
+    },
+    {
+      "id": "c-regular-vs-irregular-forms",
+      "term": "Regular vs Irregular Forms",
+      "definition": "Most adjectives add -e for feminine (petit→petite), but some are irregular (beau→belle)",
+      "example": "Regular: {grand}/grande. Irregular: {nouveau}/{nouvelle}, {vieux}/{vieille}"
+    },
+    {
+      "id": "c-same-form-both-genders",
+      "term": "Same Form Both Genders",
+      "definition": "A few adjectives like '{jeune}' and '{autre}' don't change",
+      "example": "{un jeune homme} / {une jeune femme} (both use '{jeune}')"
+    },
+    {
+      "id": "c-adjective-placement",
+      "term": "Adjective Placement",
+      "definition": "These common adjectives usually go BEFORE the noun (unlike most French adjectives)",
+      "example": "{un petit chat} (a small cat), NOT un chat petit"
+    },
+    {
+      "id": "c-before-a-vowel-bel",
+      "term": "Before a Vowel: {bel, nouvel, vieil}",
+      "definition": "Before a masculine singular noun that starts with a vowel sound, '{beau}', '{nouveau}' and '{vieux}' become '{bel}', '{nouvel}' and '{vieil}'. Feminine forms do not change: '{une nouvelle amie}'.",
+      "example": "{un bel enfant}, {un nouvel ami}, {un vieil homme}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-un-bon",
+      "type": "respond",
+      "situation": "I have a good book",
+      "answer": "j'ai un bon livre",
+      "hint": "Combine: j'ai + article + bon (masculine form) + livre",
+      "mistakes": [
+        {
+          "answer": "j'ai une bonne livre",
+          "feedback": "livre is masculine, use '{un bon}'"
+        },
+        {
+          "answer": "j'ai un livre bon",
+          "feedback": "bon goes BEFORE the noun: un bon livre"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-une-bonne",
+      "type": "respond",
+      "situation": "she has a good house",
+      "answer": "elle a une bonne maison",
+      "hint": "maison is feminine - use feminine form of 'good'",
+      "mistakes": [
+        {
+          "answer": "elle a un bon maison",
+          "feedback": "maison is feminine, use '{une bonne}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-un-grand",
+      "type": "respond",
+      "situation": "it's a big man",
+      "answer": "c'est un grand homme",
+      "hint": "homme is masculine - use masculine form",
+      "mistakes": [
+        {
+          "answer": "c'est une grande homme",
+          "feedback": "homme is masculine, use '{un grand}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-une-grande",
+      "type": "respond",
+      "situation": "it's a big woman",
+      "answer": "c'est une grande femme",
+      "hint": "femme is feminine - use feminine form",
+      "mistakes": [
+        {
+          "answer": "c'est un grand femme",
+          "feedback": "femme is feminine, use '{une grande}'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-petit",
+      "type": "respond",
+      "situation": "I have a small cat (male)",
+      "answer": "j'ai un petit chat",
+      "hint": "chat is masculine - use masculine form",
+      "mistakes": [
+        {
+          "answer": "j'ai une petite chatte",
+          "feedback": "That's correct for a female cat, but we want male"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-une-petite",
+      "type": "respond",
+      "situation": "she has a small house",
+      "answer": "elle a une petite maison",
+      "hint": "maison is feminine - use feminine form",
+      "mistakes": [
+        {
+          "answer": "elle a un petit maison",
+          "feedback": "maison is feminine, use '{une petite}'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-une-nouvelle",
+      "type": "respond",
+      "situation": "we have a new car",
+      "answer": "nous avons une nouvelle voiture",
+      "hint": "voiture is feminine - nouveau becomes nouvelle",
+      "mistakes": [
+        {
+          "answer": "nous avons un nouveau voiture",
+          "feedback": "voiture is feminine, use '{une nouvelle}'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-un-nouveau",
+      "type": "respond",
+      "situation": "he has a new book",
+      "answer": "il a un nouveau livre",
+      "hint": "livre is masculine - use nouveau",
+      "mistakes": [
+        {
+          "answer": "il a une nouvelle livre",
+          "feedback": "livre is masculine, use '{un nouveau}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-un-vieux",
+      "type": "respond",
+      "situation": "it's an old cat (male)",
+      "answer": "c'est un vieux chat",
+      "hint": "chat is masculine - vieux",
+      "mistakes": [
+        {
+          "answer": "c'est une vieille chatte",
+          "feedback": "That's for a female cat, we want male"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-une-vieille",
+      "type": "respond",
+      "situation": "I have an old house",
+      "answer": "j'ai une vieille maison",
+      "hint": "maison is feminine - vieux becomes vieille",
+      "mistakes": [
+        {
+          "answer": "j'ai un vieux maison",
+          "feedback": "maison is feminine, use '{une vieille}'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-est-un-jeune",
+      "type": "respond",
+      "situation": "he is a young man",
+      "answer": "il est un jeune homme",
+      "hint": "jeune is the same for both genders",
+      "mistakes": [
+        {
+          "answer": "c'est un jeune homme",
+          "feedback": "Both work! But the expected answer uses '{il est}' for occupation/identity"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-est-une-jeune",
+      "type": "respond",
+      "situation": "she is a young woman",
+      "answer": "elle est une jeune femme",
+      "hint": "jeune is the same for both genders",
+      "mistakes": [
+        {
+          "answer": "c'est une jeune femme",
+          "feedback": "Both work! But the expected answer uses '{elle est}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-un-beau",
+      "type": "respond",
+      "situation": "it's a beautiful book",
+      "answer": "c'est un beau livre",
+      "hint": "livre is masculine - use beau",
+      "mistakes": [
+        {
+          "answer": "c'est une belle livre",
+          "feedback": "livre is masculine, use '{un beau}'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-une-belle",
+      "type": "respond",
+      "situation": "we have a beautiful house",
+      "answer": "nous avons une belle maison",
+      "hint": "maison is feminine - beau becomes belle",
+      "mistakes": [
+        {
+          "answer": "nous avons un beau maison",
+          "feedback": "maison is feminine, use '{une belle}'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-autre",
+      "type": "respond",
+      "situation": "I have another book",
+      "answer": "j'ai un autre livre",
+      "hint": "autre is the same for both genders",
+      "mistakes": [
+        {
+          "answer": "j'ai une autre livre",
+          "feedback": "livre is masculine, use '{un autre}'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-une-autre",
+      "type": "respond",
+      "situation": "you have another car (informal)",
+      "answer": "tu as une autre voiture",
+      "hint": "voiture is feminine, autre stays the same",
+      "mistakes": [
+        {
+          "answer": "tu as un autre voiture",
+          "feedback": "voiture is feminine, use '{une autre}'"
+        }
+      ]
+    },
+    {
+      "id": "i-une-petite-maison",
+      "type": "transform",
+      "instruction": "Complete the phrase with '{petit}' in its place",
+      "shown": "une maison + petit →",
+      "answer": "une petite maison",
+      "hint": "'{Petit}' goes before the noun, and '{maison}' is feminine",
+      "mistakes": [
+        {
+          "answer": "une maison petite",
+          "feedback": "'{Petit}' goes before the noun: une petite maison"
+        },
+        {
+          "answer": "une petit maison",
+          "feedback": "'Maison' is feminine, so use '{petite}'"
+        }
+      ]
+    },
+    {
+      "id": "i-un-bon-ami",
+      "type": "transform",
+      "instruction": "Complete the phrase with '{bon}' in its place",
+      "shown": "un ami + bon →",
+      "answer": "un bon ami",
+      "hint": "'{Bon}' goes before the noun",
+      "mistakes": [
+        {
+          "answer": "un ami bon",
+          "feedback": "'Bon' goes before the noun: un bon ami"
+        }
+      ]
+    },
+    {
+      "id": "i-un-nouvel-ami",
+      "type": "transform",
+      "instruction": "Complete the phrase with '{nouveau}' in its place",
+      "shown": "un ami + nouveau →",
+      "answer": "un nouvel ami",
+      "hint": "'{Ami}' starts with a vowel",
+      "mistakes": [
+        {
+          "answer": "un nouveau ami",
+          "feedback": "'Ami' starts with a vowel, so 'nouveau' becomes '{nouvel}': un nouvel ami"
+        },
+        {
+          "answer": "un ami nouveau",
+          "feedback": "'Nouveau' goes before the noun: un nouvel ami"
+        }
+      ]
+    },
+    {
+      "id": "i-un-bel-enfant",
+      "type": "transform",
+      "instruction": "Complete the phrase with '{beau}' in its place",
+      "shown": "un enfant + beau →",
+      "answer": "un bel enfant",
+      "hint": "'{Enfant}' starts with a vowel",
+      "mistakes": [
+        {
+          "answer": "un beau enfant",
+          "feedback": "'Enfant' starts with a vowel, so 'beau' becomes '{bel}': un bel enfant"
+        }
+      ]
+    },
+    {
+      "id": "i-un-vieil-homme",
+      "type": "transform",
+      "instruction": "Complete the phrase with '{vieux}' in its place",
+      "shown": "un homme + vieux →",
+      "answer": "un vieil homme",
+      "hint": "The h in '{homme}' is silent, so it counts as a vowel",
+      "mistakes": [
+        {
+          "answer": "un vieux homme",
+          "feedback": "The h in 'homme' is silent and counts as a vowel, so 'vieux' becomes '{vieil}': un vieil homme"
+        }
+      ]
+    },
+    {
+      "id": "i-une-nouvelle-amie",
+      "type": "transform",
+      "instruction": "Complete the phrase with '{nouveau}' in its place",
+      "shown": "une amie + nouveau →",
+      "answer": "une nouvelle amie",
+      "hint": "'{Amie}' is feminine",
+      "mistakes": [
+        {
+          "answer": "une nouvel amie",
+          "feedback": "'Nouvel' is only for masculine nouns. 'Amie' is feminine, so use '{nouvelle}', even before a vowel"
+        }
+      ]
+    }
+  ]
+}

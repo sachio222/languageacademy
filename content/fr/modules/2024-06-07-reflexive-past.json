@@ -1,0 +1,157 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-07-reflexive-past",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Reflexive Verbs in Past Tense",
+  "description": "Tell stories about your routine in the past: je me suis réveillé(e) (I woke up), elle s'est levée (she got up)",
+  "can_do": [
+    "Describe past routines (I woke up, I got dressed, I left)",
+    "Use être with all reflexive verbs in past tense",
+    "Tell stories about what you did in your daily routine"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-me-suis-reveille-fr",
+      "fr": "je me suis réveillé",
+      "gloss": "I woke up (masc)",
+      "note": "⭐ passé composé with être"
+    },
+    {
+      "word_id": "je-me-suis-reveillee-fr",
+      "fr": "je me suis réveillée",
+      "gloss": "I woke up (fem)",
+      "note": "add -e for feminine"
+    },
+    {
+      "word_id": "tu-t-es-leve-fr",
+      "fr": "tu t'es levé",
+      "gloss": "you got up (masc)",
+      "note": "informal past"
+    },
+    {
+      "word_id": "il-s-est-lave-fr",
+      "fr": "il s'est lavé",
+      "gloss": "he washed himself",
+      "note": "third person past"
+    },
+    {
+      "word_id": "elle-s-est-levee-fr",
+      "fr": "elle s'est levée",
+      "gloss": "she got up",
+      "note": "⭐ feminine agreement -ée"
+    },
+    {
+      "word_id": "nous-nous-sommes-prepares-fr",
+      "fr": "nous nous sommes préparés",
+      "gloss": "we got ready",
+      "note": "plural agreement"
+    },
+    {
+      "word_id": "ils-se-sont-amuses-fr",
+      "fr": "ils se sont amusés",
+      "gloss": "they had fun (masc)",
+      "note": "plural masculine -és"
+    },
+    {
+      "word_id": "elles-se-sont-amusees-fr",
+      "fr": "elles se sont amusées",
+      "gloss": "they had fun (fem)",
+      "note": "feminine plural -ées"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-reflexive-verbs-always-use",
+      "term": "Reflexive Verbs ALWAYS use être in Past",
+      "definition": "CRITICAL: ALL reflexive verbs use être (never avoir) in passé composé",
+      "example": "{je me suis lavé} (I washed myself - uses être), {elle s'est levée} (she got up - uses être)"
+    },
+    {
+      "id": "c-agreement-with-subject",
+      "term": "Agreement with Subject",
+      "definition": "Past participle agrees with the subject (like all être verbs)",
+      "example": "{je me suis réveillé} (masc), {je me suis réveillée} (fem), {ils se sont levés} (masc pl), {elles se sont levées} (fem pl)"
+    },
+    {
+      "id": "c-pronoun-position",
+      "term": "Pronoun Position",
+      "definition": "Reflexive pronoun stays BEFORE the auxiliary être",
+      "example": "{je me suis levé} (not je suis me levé), {tu t'es lavé} (not tu es te lavé)"
+    },
+    {
+      "id": "c-telling-past-routines",
+      "term": "Telling Past Routines",
+      "definition": "Now you can describe what you did this morning!",
+      "example": "{Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé.}"
+    }
+  ],
+  "items": [
+    {
+      "id": "reflex-past-1",
+      "type": "respond",
+      "situation": "Say 'I woke up' (no gender specified)",
+      "cue": "I woke up",
+      "answer": "je me suis réveillé",
+      "accept": [
+        "je me suis reveille",
+        "je me suis réveillée"
+      ],
+      "hint": "{je me suis + réveillé}",
+      "mistakes": [
+        {
+          "answer": "j'ai réveillé",
+          "feedback": "Reflexive verbs use être, not avoir! je me suis réveillé"
+        }
+      ]
+    },
+    {
+      "id": "reflex-past-2",
+      "type": "respond",
+      "situation": "She got up",
+      "answer": "elle s'est levée",
+      "accept": [
+        "elle s est levee"
+      ],
+      "hint": "elle s'est + levée (feminine agreement!)",
+      "mistakes": [
+        {
+          "answer": "elle s'est levé",
+          "feedback": "Add -e for feminine: elle s'est levée"
+        }
+      ]
+    },
+    {
+      "id": "reflex-past-3",
+      "type": "respond",
+      "situation": "He washed himself",
+      "answer": "il s'est lavé",
+      "accept": [
+        "il s est lave"
+      ],
+      "hint": "{il s'est + lavé}"
+    },
+    {
+      "id": "reflex-past-4",
+      "type": "respond",
+      "situation": "Say 'We had fun' (using on)",
+      "cue": "We had fun",
+      "answer": "on s'est amusé",
+      "accept": [
+        "on s est amuse"
+      ],
+      "hint": "{on s'est + amusé}"
+    },
+    {
+      "id": "reflex-past-5",
+      "type": "respond",
+      "situation": "Say 'They got dressed' (masculine)",
+      "cue": "They got dressed (masculine)",
+      "answer": "ils se sont habillés",
+      "accept": [
+        "ils se sont habilles"
+      ],
+      "hint": "ils se sont + habillés (plural agreement!)"
+    }
+  ]
+}

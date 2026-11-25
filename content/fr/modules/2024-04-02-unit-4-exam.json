@@ -1,0 +1,345 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-02-unit-4-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place.",
+  "can_do": [
+    "Navigate daily French situations with confidence",
+    "Express negation, time, and location naturally",
+    "Use survival phrases for real-world France"
+  ],
+  "items": [
+    {
+      "id": "i-je-voudrais",
+      "type": "respond",
+      "situation": "Translate to French (polite)",
+      "cue": "I would like",
+      "answer": "je voudrais",
+      "hint": "Polite way to say 'I want' - conditional form"
+    },
+    {
+      "id": "i-s-il-vous-plait",
+      "type": "respond",
+      "situation": "please (formal)",
+      "answer": "s'il vous plaît",
+      "accept": [
+        "s'il vous plait"
+      ],
+      "hint": "Essential politeness phrase"
+    },
+    {
+      "id": "i-excusez-moi",
+      "type": "respond",
+      "situation": "excuse me / sorry",
+      "answer": "excusez-moi",
+      "accept": [
+        "excusez moi"
+      ],
+      "hint": "To get someone's attention politely"
+    },
+    {
+      "id": "i-c-est-combien",
+      "type": "respond",
+      "situation": "how much is it?",
+      "answer": "c'est combien",
+      "accept": [
+        "combien est-ce"
+      ],
+      "hint": "Shopping phrase with c'est"
+    },
+    {
+      "id": "i-merci-beaucoup",
+      "type": "respond",
+      "situation": "thank you very much",
+      "answer": "merci beaucoup",
+      "hint": "merci + intensity adverb"
+    },
+    {
+      "id": "i-je-fais",
+      "type": "respond",
+      "situation": "I do / I make",
+      "answer": "je fais",
+      "hint": "Verb faire conjugated for je"
+    },
+    {
+      "id": "i-tu-fais",
+      "type": "respond",
+      "situation": "you do (informal)",
+      "answer": "tu fais",
+      "hint": "Verb faire conjugated for tu"
+    },
+    {
+      "id": "i-nous-faisons",
+      "type": "respond",
+      "situation": "we do / we make",
+      "answer": "nous faisons",
+      "hint": "Verb faire conjugated for nous"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "what do you do? (informal)",
+      "answer": "qu'est-ce que tu fais",
+      "accept": [
+        "que fais-tu"
+      ],
+      "hint": "{Question: qu'est-ce que + tu + faire}"
+    },
+    {
+      "id": "i-je-dois",
+      "type": "respond",
+      "situation": "I must / I have to",
+      "answer": "je dois",
+      "hint": "Verb devoir conjugated for je"
+    },
+    {
+      "id": "i-tu-dois",
+      "type": "respond",
+      "situation": "you must (informal)",
+      "answer": "tu dois",
+      "hint": "Verb devoir conjugated for tu"
+    },
+    {
+      "id": "i-nous-devons",
+      "type": "respond",
+      "situation": "we must",
+      "answer": "nous devons",
+      "hint": "Verb devoir conjugated for nous"
+    },
+    {
+      "id": "i-je-dois-partir",
+      "type": "respond",
+      "situation": "I must leave",
+      "answer": "je dois partir",
+      "hint": "je dois + infinitive '{partir}'"
+    },
+    {
+      "id": "i-je-parle",
+      "type": "respond",
+      "situation": "I speak",
+      "answer": "je parle",
+      "hint": "Regular -er verb parler for je"
+    },
+    {
+      "id": "i-tu-parles",
+      "type": "respond",
+      "situation": "you speak (informal)",
+      "answer": "tu parles",
+      "hint": "Regular -er verb parler for tu"
+    },
+    {
+      "id": "i-nous-parlons",
+      "type": "respond",
+      "situation": "we speak",
+      "answer": "nous parlons",
+      "hint": "Regular -er verb parler for nous"
+    },
+    {
+      "id": "i-je-parle-francais",
+      "type": "respond",
+      "situation": "I speak French",
+      "answer": "je parle français",
+      "accept": [
+        "je parle francais"
+      ],
+      "hint": "je parle + language"
+    },
+    {
+      "id": "i-je-cherche",
+      "type": "respond",
+      "situation": "I search / I look for",
+      "answer": "je cherche",
+      "hint": "Verb chercher conjugated for je"
+    },
+    {
+      "id": "i-je-trouve",
+      "type": "respond",
+      "situation": "I find",
+      "answer": "je trouve",
+      "hint": "Verb trouver conjugated for je"
+    },
+    {
+      "id": "i-je-cherche-le-livre",
+      "type": "respond",
+      "situation": "I'm looking for the book",
+      "answer": "je cherche le livre",
+      "hint": "{je cherche + le livre}"
+    },
+    {
+      "id": "i-ne-pas",
+      "type": "respond",
+      "situation": "not",
+      "answer": "ne pas",
+      "accept": [
+        "ne...pas",
+        "pas"
+      ],
+      "hint": "Negation structure: ne...___"
+    },
+    {
+      "id": "i-je-ne-veux-pas",
+      "type": "respond",
+      "situation": "I don't want",
+      "answer": "je ne veux pas",
+      "hint": "Negation: je ne veux pas"
+    },
+    {
+      "id": "i-il-ne-parle-pas",
+      "type": "respond",
+      "situation": "he doesn't speak",
+      "answer": "il ne parle pas",
+      "hint": "Negation: il ne parle pas"
+    },
+    {
+      "id": "i-nous-ne-pouvons-pas",
+      "type": "respond",
+      "situation": "we can't",
+      "answer": "nous ne pouvons pas",
+      "hint": "Negation: nous ne pouvons pas"
+    },
+    {
+      "id": "i-je-ne-mange-jamais",
+      "type": "respond",
+      "situation": "I never eat",
+      "answer": "je ne mange jamais",
+      "hint": "Negation with jamais: je ne mange jamais"
+    },
+    {
+      "id": "i-maintenant",
+      "type": "respond",
+      "situation": "now",
+      "answer": "maintenant",
+      "hint": "Time adverb for present moment"
+    },
+    {
+      "id": "i-toujours",
+      "type": "respond",
+      "situation": "always",
+      "answer": "toujours",
+      "hint": "Frequency adverb - 100% of the time"
+    },
+    {
+      "id": "i-jamais",
+      "type": "respond",
+      "situation": "never",
+      "answer": "jamais",
+      "hint": "Frequency adverb - 0% of the time"
+    },
+    {
+      "id": "i-aujourd-hui",
+      "type": "respond",
+      "situation": "today",
+      "answer": "aujourd'hui",
+      "accept": [
+        "aujourd hui"
+      ],
+      "hint": "Time expression with apostrophe"
+    },
+    {
+      "id": "i-demain",
+      "type": "respond",
+      "situation": "tomorrow",
+      "answer": "demain",
+      "hint": "Future time expression"
+    },
+    {
+      "id": "i-deja",
+      "type": "respond",
+      "situation": "already",
+      "answer": "déjà",
+      "hint": "Time adverb - by now, before this time"
+    },
+    {
+      "id": "i-encore",
+      "type": "respond",
+      "situation": "still",
+      "answer": "encore",
+      "hint": "Time adverb - continuing, not yet finished"
+    },
+    {
+      "id": "i-parfois",
+      "type": "respond",
+      "situation": "sometimes",
+      "answer": "parfois",
+      "hint": "Frequency adverb - occasionally"
+    },
+    {
+      "id": "i-ici",
+      "type": "respond",
+      "situation": "here",
+      "answer": "ici",
+      "hint": "Location adverb - this place"
+    },
+    {
+      "id": "i-la",
+      "type": "respond",
+      "situation": "there",
+      "answer": "là",
+      "accept": [
+        "la"
+      ],
+      "hint": "Location adverb - that place"
+    },
+    {
+      "id": "i-la-bas",
+      "type": "respond",
+      "situation": "over there",
+      "answer": "là-bas",
+      "accept": [
+        "là bas",
+        "la-bas",
+        "la bas"
+      ],
+      "hint": "Location adverb - distant place"
+    },
+    {
+      "id": "i-je-dois-parler-francais",
+      "type": "respond",
+      "situation": "I must speak French here",
+      "answer": "je dois parler français ici",
+      "accept": [
+        "je dois parler francais ici"
+      ],
+      "hint": "{je dois + parler + français + ici}"
+    },
+    {
+      "id": "i-nous-faisons-toujours-des",
+      "type": "respond",
+      "situation": "we always do things here",
+      "answer": "nous faisons toujours des choses ici",
+      "accept": [
+        "nous faisons des choses ici toujours"
+      ],
+      "hint": "nous + frequency adverb + faire + des choses + ici"
+    },
+    {
+      "id": "i-elle-ne-parle-pas",
+      "type": "respond",
+      "situation": "she doesn't speak now",
+      "answer": "elle ne parle pas maintenant",
+      "hint": "elle + negation + parler + maintenant"
+    },
+    {
+      "id": "i-je-voudrais-un-cafe",
+      "type": "respond",
+      "situation": "I would like a coffee, please",
+      "answer": "je voudrais un café s'il vous plaît",
+      "accept": [
+        "je voudrais un café, s'il vous plaît",
+        "je voudrais un cafe s'il vous plait"
+      ],
+      "hint": "Combine survival phrases"
+    },
+    {
+      "id": "i-tu-ne-dois-jamais",
+      "type": "respond",
+      "situation": "you must never leave (informal)",
+      "answer": "tu ne dois jamais partir",
+      "hint": "tu + devoir + jamais + partir - careful with negation!"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-14-determiners-nouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Determiners + Nouns - Building Phrases",
+  "description": "Compose functions! this(book) = ce livre, that(house) = cette maison, these(cats) = ces chats",
+  "can_do": [
+    "Say 'this book', 'that house', 'these cats' in French",
+    "Combine demonstratives with nouns like functions",
+    "Form 3-4 word phrases with specific objects"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-ai-ce-livre-fr",
+      "fr": "j'ai ce livre",
+      "gloss": "I have this book",
+      "note": "avoir + ce + noun"
+    },
+    {
+      "word_id": "elle-a-cette-maison-fr",
+      "fr": "elle a cette maison",
+      "gloss": "she has this house",
+      "note": "avoir + cette + noun"
+    },
+    {
+      "word_id": "nous-avons-ces-livres-fr",
+      "fr": "nous avons ces livres",
+      "gloss": "we have these books",
+      "note": "avoir + ces + plural"
+    },
+    {
+      "word_id": "tu-as-ce-chat-fr",
+      "fr": "tu as ce chat",
+      "gloss": "you have this cat",
+      "note": "combining!"
+    },
+    {
+      "word_id": "ils-ont-ces-chats-fr",
+      "fr": "ils ont ces chats",
+      "gloss": "they have these cats",
+      "note": "avoir + ces"
+    },
+    {
+      "word_id": "c-est-cet-homme-fr",
+      "fr": "c'est cet homme",
+      "gloss": "it's this man",
+      "note": "c'est + cet"
+    },
+    {
+      "word_id": "j-ai-ces-enfants-fr",
+      "fr": "j'ai ces enfants",
+      "gloss": "I have these children",
+      "note": "full phrase"
+    },
+    {
+      "word_id": "j-ai-le-chat-fr",
+      "fr": "j'ai le chat",
+      "gloss": "I have the cat",
+      "note": "avoir + le"
+    },
+    {
+      "word_id": "elle-a-la-maison-fr",
+      "fr": "elle a la maison",
+      "gloss": "she has the house",
+      "note": "avoir + la"
+    },
+    {
+      "word_id": "ils-ont-les-chiens-fr",
+      "fr": "ils ont les chiens",
+      "gloss": "they have the dogs",
+      "note": "avoir + les"
+    },
+    {
+      "word_id": "c-est-ce-livre-fr",
+      "fr": "c'est ce livre",
+      "gloss": "it's this book",
+      "note": "être + ce"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-functional-composition",
+      "term": "Functional Composition",
+      "definition": "Determiners are functions that take nouns as arguments",
+      "example": "{ce}({livre}) → {ce livre}, {cette}({maison}) → {cette maison}"
+    },
+    {
+      "id": "c-full-sentence-practice",
+      "term": "Full Sentence Practice",
+      "definition": "Every exercise uses être, avoir, or vouloir - combining multiple modules!",
+      "example": "Not just 'this book', but 'I have this book' - real usage!"
+    },
+    {
+      "id": "c-using-all-previous-verbs",
+      "term": "Using ALL Previous Verbs",
+      "definition": "Practice with être and avoir from previous modules",
+      "example": "Pattern: [pronoun] + [verb] + [determiner] + [noun]"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-ce-livre",
+      "type": "respond",
+      "situation": "I have this book",
+      "answer": "j'ai ce livre",
+      "hint": "Combine: I have + demonstrative + book",
+      "mistakes": [
+        {
+          "answer": "j'ai cette livre",
+          "feedback": "livre is masculine, use '{ce}' not 'cette'"
+        },
+        {
+          "answer": "j'ai cet livre",
+          "feedback": "Use 'cet' only before vowel sounds"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-cette-maison",
+      "type": "respond",
+      "situation": "she has this house",
+      "answer": "elle a cette maison",
+      "hint": "Combine: she has + demonstrative + house (feminine)",
+      "mistakes": [
+        {
+          "answer": "elle a ce maison",
+          "feedback": "maison is feminine, use '{cette}' not 'ce'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-ces-livres",
+      "type": "respond",
+      "situation": "we have these books",
+      "answer": "nous avons ces livres",
+      "hint": "Combine: we have + plural demonstrative + plural noun",
+      "mistakes": [
+        {
+          "answer": "nous avons ce livres",
+          "feedback": "For plural, use '{ces}' not 'ce'"
+        },
+        {
+          "answer": "nous avons les livres",
+          "feedback": "Use demonstrative '{ces}' (these), not article 'les' (the)"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-ce-chat",
+      "type": "respond",
+      "situation": "you have this cat (informal)",
+      "answer": "tu as ce chat",
+      "hint": "Combine: you have + demonstrative + cat",
+      "mistakes": [
+        {
+          "answer": "tu as cette chat",
+          "feedback": "chat is masculine, use '{ce}' not 'cette'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-ces-chats",
+      "type": "respond",
+      "situation": "they have these cats (masculine)",
+      "answer": "ils ont ces chats",
+      "hint": "Combine: they have + plural demonstrative + cats",
+      "mistakes": [
+        {
+          "answer": "ils ont ce chats",
+          "feedback": "For plural, use '{ces}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-cet-homme",
+      "type": "respond",
+      "situation": "it's this man",
+      "answer": "c'est cet homme",
+      "hint": "Combine: it is + demonstrative (vowel form) + man",
+      "mistakes": [
+        {
+          "answer": "c'est ce homme",
+          "feedback": "homme has silent h, use '{cet}' like before vowels"
+        },
+        {
+          "answer": "il est cet homme",
+          "feedback": "For identification, use '{c'est cet homme}'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-le-chat",
+      "type": "respond",
+      "situation": "I have the cat",
+      "answer": "j'ai le chat",
+      "hint": "Combine: I have + the + cat",
+      "mistakes": [
+        {
+          "answer": "j'ai la chat",
+          "feedback": "chat is masculine, use '{le}' not 'la'"
+        },
+        {
+          "answer": "j'ai un chat",
+          "feedback": "Use '{le}' (the), not 'un' (a)"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-la-maison",
+      "type": "respond",
+      "situation": "she has the house",
+      "answer": "elle a la maison",
+      "hint": "Combine: she has + the + house (feminine)",
+      "mistakes": [
+        {
+          "answer": "elle a le maison",
+          "feedback": "maison is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-les-chiens",
+      "type": "respond",
+      "situation": "they have the dogs (masculine)",
+      "answer": "ils ont les chiens",
+      "hint": "Combine: they have + the + dogs (plural)",
+      "mistakes": [
+        {
+          "answer": "ils ont le chiens",
+          "feedback": "For plural, use '{les}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-ces-enfants",
+      "type": "respond",
+      "situation": "I have these children",
+      "answer": "j'ai ces enfants",
+      "hint": "Combine: I have + plural demonstrative + children",
+      "mistakes": [
+        {
+          "answer": "j'ai cet enfants",
+          "feedback": "For plural, use '{ces}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-ce-livre",
+      "type": "respond",
+      "situation": "it's this book",
+      "answer": "c'est ce livre",
+      "hint": "Combine: it is + demonstrative + book",
+      "mistakes": [
+        {
+          "answer": "c'est cette livre",
+          "feedback": "livre is masculine, use '{ce}'"
+        }
+      ]
+    }
+  ]
+}

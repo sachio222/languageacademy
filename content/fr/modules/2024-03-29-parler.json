@@ -1,0 +1,287 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-29-parler",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {parler} (to speak)",
+  "description": "Express communication! Say what languages you speak and who you talk to. Perfect example of regular -ER verbs!",
+  "can_do": [
+    "Talk about languages you speak (I speak French)",
+    "Discuss communication and conversation",
+    "Master the regular -ER verb pattern used by most verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "parler-fr",
+      "fr": "parler",
+      "gloss": "to speak / to talk",
+      "note": "infinitive form - regular -ER verb"
+    },
+    {
+      "word_id": "je-parle-fr",
+      "fr": "je parle",
+      "gloss": "I speak",
+      "note": "drop -er, add -e (silent)"
+    },
+    {
+      "word_id": "tu-parles-fr",
+      "fr": "tu parles",
+      "gloss": "you speak (informal)",
+      "note": "add -es (silent)"
+    },
+    {
+      "word_id": "il-parle-fr",
+      "fr": "il parle",
+      "gloss": "he speaks",
+      "note": "add -e (sounds same as je)"
+    },
+    {
+      "word_id": "elle-parle-fr",
+      "fr": "elle parle",
+      "gloss": "she speaks",
+      "note": "add -e (sounds same)"
+    },
+    {
+      "word_id": "nous-parlons-fr",
+      "fr": "nous parlons",
+      "gloss": "we speak",
+      "note": "add -ons (pronounced!)"
+    },
+    {
+      "word_id": "vous-parlez-fr",
+      "fr": "vous parlez",
+      "gloss": "you speak (formal)",
+      "note": "add -ez (pronounced!)"
+    },
+    {
+      "word_id": "ils-parlent-fr",
+      "fr": "ils parlent",
+      "gloss": "they speak (masc)",
+      "note": "add -ent (silent!)"
+    },
+    {
+      "word_id": "elles-parlent-fr",
+      "fr": "elles parlent",
+      "gloss": "they speak (fem)",
+      "note": "sounds same as il"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-parler-to-speak-to",
+      "term": "{parler} = to speak / to talk",
+      "definition": "Talk about languages you speak and conversations you have",
+      "example": "{je parle français} (I speak French), {nous parlons ensemble} (we talk together)"
+    },
+    {
+      "id": "c-regular-er-verb-pattern",
+      "term": "Regular -ER Verb Pattern",
+      "definition": "This is THE standard French verb pattern - master it!",
+      "example": "Remove -er, add: -e, -{es}, -e, -ons, -ez, -ent (most verbs follow this!)"
+    },
+    {
+      "id": "c-silent-endings",
+      "term": "Silent Endings",
+      "definition": "je/tu/il/elle/ils/elles all SOUND the same! Only nous/vous are different",
+      "example": "{je parle}, {tu parles}, {il parle}, {elle parle}, {ils parlent} - all sound like 'parl'"
+    },
+    {
+      "id": "c-with-prepositions",
+      "term": "With Prepositions",
+      "definition": "Use 'à' when talking TO someone: parler à quelqu'un",
+      "example": "{je parle à Marie} (I speak to Marie)"
+    },
+    {
+      "id": "c-common-uses",
+      "term": "Common Uses",
+      "definition": "Describe languages (parler français), conversations (parler avec), topics (parler de)",
+      "example": "{je parle français} (I speak French), {nous parlons de toi} (we talk about you)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-parler",
+      "title": "{parler}",
+      "rows": [
+        {
+          "fr": "je parle",
+          "en": "I speak"
+        },
+        {
+          "fr": "tu parles",
+          "en": "you speak (informal)"
+        },
+        {
+          "fr": "il parle",
+          "en": "he speaks"
+        },
+        {
+          "fr": "elle parle",
+          "en": "she speaks"
+        },
+        {
+          "fr": "nous parlons",
+          "en": "we speak"
+        },
+        {
+          "fr": "vous parlez",
+          "en": "you speak (formal/plural)"
+        },
+        {
+          "fr": "ils parlent",
+          "en": "they speak (masculine)"
+        },
+        {
+          "fr": "elles parlent",
+          "en": "they speak (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-parle",
+      "type": "transform",
+      "instruction": "Say what language you speak. Say \"I speak\"",
+      "shown": "parler",
+      "answer": "je parle",
+      "hint": "{je + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"I speak\""
+        },
+        {
+          "answer": "il parle",
+          "feedback": "That's \"he speaks\", not \"I speak\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-parles",
+      "type": "transform",
+      "instruction": "Tell your friend what they speak. Say \"you speak (informal)\"",
+      "shown": "parler",
+      "answer": "tu parles",
+      "hint": "{tu + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"you speak (informal)\""
+        },
+        {
+          "answer": "il parle",
+          "feedback": "That's \"he speaks\", not \"you speak (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-parle",
+      "type": "transform",
+      "instruction": "Say what a man speaks. Say \"he speaks\"",
+      "shown": "parler",
+      "answer": "il parle",
+      "hint": "{il + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"he speaks\""
+        },
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"he speaks\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-parle",
+      "type": "transform",
+      "instruction": "Say what a woman speaks. Say \"she speaks\"",
+      "shown": "parler",
+      "answer": "elle parle",
+      "hint": "{elle + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"she speaks\""
+        },
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"she speaks\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-parlons",
+      "type": "transform",
+      "instruction": "Say what your group speaks. Say \"we speak\"",
+      "shown": "parler",
+      "answer": "nous parlons",
+      "hint": "{nous + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"we speak\""
+        },
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"we speak\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-parlez",
+      "type": "transform",
+      "instruction": "Ask formally what someone speaks. Say \"you speak (formal/plural)\"",
+      "shown": "parler",
+      "answer": "vous parlez",
+      "hint": "{vous + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"you speak (formal/plural)\""
+        },
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"you speak (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-parlent",
+      "type": "transform",
+      "instruction": "Say what they speak (masculine). Say \"they speak (masculine)\"",
+      "shown": "parler",
+      "answer": "ils parlent",
+      "hint": "{ils + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"they speak (masculine)\""
+        },
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"they speak (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-parlent",
+      "type": "transform",
+      "instruction": "Say what they speak (feminine). Say \"they speak (feminine)\"",
+      "shown": "parler",
+      "answer": "elles parlent",
+      "hint": "{elles + parler = ?}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "That's \"I speak\", not \"they speak (feminine)\""
+        },
+        {
+          "answer": "tu parles",
+          "feedback": "That's \"you speak (informal)\", not \"they speak (feminine)\""
+        }
+      ]
+    }
+  ]
+}

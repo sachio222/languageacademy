@@ -1,0 +1,471 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-15-unit-5-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Time & Taste Practice - Fill in the Blanks",
+  "description": "Complete sentences using comparisons, past tense, conditionals, and food vocabulary from this unit!",
+  "can_do": [
+    "Compose sentences with past tense and comparisons",
+    "Use conditional forms and food vocabulary naturally",
+    "Apply this unit's sophistication in context"
+  ],
+  "items": [
+    {
+      "id": "i-etais",
+      "type": "gapfill",
+      "text": "Hier, j' ___ avec mon ami.",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "Yesterday, I was with my friend",
+      "hint": "être in past tense for je"
+    },
+    {
+      "id": "i-etait",
+      "type": "gapfill",
+      "text": "Le restaurant ___ très bon.",
+      "blanks": [
+        {
+          "answer": "était"
+        }
+      ],
+      "gloss": "The restaurant was very good",
+      "hint": "être in past tense for il/elle"
+    },
+    {
+      "id": "i-etions",
+      "type": "gapfill",
+      "text": "Nous ___ au café hier.",
+      "blanks": [
+        {
+          "answer": "étions"
+        }
+      ],
+      "gloss": "We were at the café yesterday",
+      "hint": "être in past tense for nous"
+    },
+    {
+      "id": "i-avais",
+      "type": "gapfill",
+      "text": "J'___ faim hier.",
+      "blanks": [
+        {
+          "answer": "avais"
+        }
+      ],
+      "gloss": "'I was hungry yesterday' (literally: I had hunger)",
+      "hint": "avoir in past tense for je"
+    },
+    {
+      "id": "i-avions",
+      "type": "gapfill",
+      "text": "Nous ___ un chat.",
+      "blanks": [
+        {
+          "answer": "avions"
+        }
+      ],
+      "gloss": "We had a cat",
+      "hint": "avoir in past tense for nous"
+    },
+    {
+      "id": "i-devrais",
+      "type": "gapfill",
+      "text": "Je ___ manger maintenant.",
+      "blanks": [
+        {
+          "answer": "devrais"
+        }
+      ],
+      "gloss": "I should eat now",
+      "hint": "should (conditional of devoir)"
+    },
+    {
+      "id": "i-devrais-2",
+      "type": "gapfill",
+      "text": "Tu ___ aller au restaurant.",
+      "blanks": [
+        {
+          "answer": "devrais"
+        }
+      ],
+      "gloss": "You should go to the restaurant",
+      "hint": "should for tu"
+    },
+    {
+      "id": "i-pourrais",
+      "type": "gapfill",
+      "text": "Je ___ venir avec toi.",
+      "blanks": [
+        {
+          "answer": "pourrais"
+        }
+      ],
+      "gloss": "I could come with you",
+      "hint": "could (conditional of pouvoir)"
+    },
+    {
+      "id": "i-pourrions",
+      "type": "gapfill",
+      "text": "Nous ___ boire du café.",
+      "blanks": [
+        {
+          "answer": "pourrions"
+        }
+      ],
+      "gloss": "We could drink coffee",
+      "hint": "could for nous"
+    },
+    {
+      "id": "i-voudrais",
+      "type": "gapfill",
+      "text": "Je ___ du pain, s'il vous plaît.",
+      "blanks": [
+        {
+          "answer": "voudrais"
+        }
+      ],
+      "gloss": "I would like bread, please",
+      "hint": "would like (polite request)"
+    },
+    {
+      "id": "i-irais",
+      "type": "gapfill",
+      "text": "J'___ à Paris.",
+      "blanks": [
+        {
+          "answer": "irais"
+        }
+      ],
+      "gloss": "I would go to Paris",
+      "hint": "would go (conditional of aller)"
+    },
+    {
+      "id": "i-meilleur",
+      "type": "gapfill",
+      "text": "Ce restaurant est que ___ l'autre restaurant.",
+      "blanks": [
+        {
+          "answer": "meilleur"
+        }
+      ],
+      "gloss": "This restaurant is better than the other restaurant",
+      "hint": "better (comparison)"
+    },
+    {
+      "id": "i-meilleur-2",
+      "type": "gapfill",
+      "text": "C'est le ___ café de Paris!",
+      "blanks": [
+        {
+          "answer": "meilleur"
+        }
+      ],
+      "gloss": "It's the best café in Paris!",
+      "hint": "the best (superlative)"
+    },
+    {
+      "id": "i-trop",
+      "type": "gapfill",
+      "text": "C'est ___ cher!",
+      "blanks": [
+        {
+          "answer": "trop"
+        }
+      ],
+      "gloss": "It's too expensive!",
+      "hint": "too much / too"
+    },
+    {
+      "id": "i-meme",
+      "type": "gapfill",
+      "text": "C'est le ___ restaurant où nous avons mangé.",
+      "blanks": [
+        {
+          "answer": "même"
+        }
+      ],
+      "gloss": "It's the same restaurant where we ate",
+      "hint": "the same"
+    },
+    {
+      "id": "i-aime",
+      "type": "gapfill",
+      "text": "J'___ le café!",
+      "blanks": [
+        {
+          "answer": "aime"
+        }
+      ],
+      "gloss": "I like coffee!",
+      "hint": "to like/love for je"
+    },
+    {
+      "id": "i-aimes",
+      "type": "gapfill",
+      "text": "Tu ___ la pizza?",
+      "blanks": [
+        {
+          "answer": "aimes"
+        }
+      ],
+      "gloss": "You like pizza?",
+      "hint": "to like/love for tu"
+    },
+    {
+      "id": "i-aimons",
+      "type": "gapfill",
+      "text": "Nous ___ ce restaurant.",
+      "blanks": [
+        {
+          "answer": "aimons"
+        }
+      ],
+      "gloss": "We like this restaurant",
+      "hint": "to like/love for nous"
+    },
+    {
+      "id": "i-mange",
+      "type": "gapfill",
+      "text": "Je ___ du pain.",
+      "blanks": [
+        {
+          "answer": "mange"
+        }
+      ],
+      "gloss": "I eat bread",
+      "hint": "to eat for je"
+    },
+    {
+      "id": "i-manges",
+      "type": "gapfill",
+      "text": "Tu ___ une pizza.",
+      "blanks": [
+        {
+          "answer": "manges"
+        }
+      ],
+      "gloss": "You eat a pizza",
+      "hint": "to eat for tu"
+    },
+    {
+      "id": "i-mangeons",
+      "type": "gapfill",
+      "text": "Nous ___ ensemble.",
+      "blanks": [
+        {
+          "answer": "mangeons"
+        }
+      ],
+      "gloss": "We eat together",
+      "hint": "to eat for nous (note: mangeons!)"
+    },
+    {
+      "id": "i-mange-2",
+      "type": "gapfill",
+      "text": "J'ai ___ une baguette hier.",
+      "blanks": [
+        {
+          "answer": "mangé"
+        }
+      ],
+      "gloss": "I ate a baguette yesterday",
+      "hint": "past participle of manger"
+    },
+    {
+      "id": "i-mange-3",
+      "type": "gapfill",
+      "text": "Nous avons ___ du poulet.",
+      "blanks": [
+        {
+          "answer": "mangé"
+        }
+      ],
+      "gloss": "We ate chicken",
+      "hint": "past participle of manger"
+    },
+    {
+      "id": "i-bois",
+      "type": "gapfill",
+      "text": "Je ___ du café.",
+      "blanks": [
+        {
+          "answer": "bois"
+        }
+      ],
+      "gloss": "I drink coffee",
+      "hint": "to drink for je (irregular!)"
+    },
+    {
+      "id": "i-buvons",
+      "type": "gapfill",
+      "text": "Nous ___ de l'eau.",
+      "blanks": [
+        {
+          "answer": "buvons"
+        }
+      ],
+      "gloss": "We drink water",
+      "hint": "to drink for nous (stem change to buv-!)"
+    },
+    {
+      "id": "i-bu",
+      "type": "gapfill",
+      "text": "J'ai ___ du vin hier.",
+      "blanks": [
+        {
+          "answer": "bu"
+        }
+      ],
+      "gloss": "I drank wine yesterday",
+      "hint": "past participle of boire (irregular!)"
+    },
+    {
+      "id": "i-bu-2",
+      "type": "gapfill",
+      "text": "Nous avons ___ du café.",
+      "blanks": [
+        {
+          "answer": "bu"
+        }
+      ],
+      "gloss": "We drank coffee",
+      "hint": "past participle of boire"
+    },
+    {
+      "id": "i-baguette",
+      "type": "gapfill",
+      "text": "Je veux une ___.",
+      "blanks": [
+        {
+          "answer": "baguette"
+        }
+      ],
+      "gloss": "I want a baguette",
+      "hint": "French bread (feminine)"
+    },
+    {
+      "id": "i-express",
+      "type": "gapfill",
+      "text": "Je voudrais un ___, s'il vous plaît.",
+      "blanks": [
+        {
+          "answer": "express"
+        }
+      ],
+      "gloss": "I would like an espresso, please",
+      "hint": "espresso in French"
+    },
+    {
+      "id": "i-genial",
+      "type": "gapfill",
+      "text": "C'est ___!",
+      "blanks": [
+        {
+          "answer": "génial"
+        }
+      ],
+      "gloss": "'It's awesome!' (French slang)",
+      "hint": "France slang for awesome"
+    },
+    {
+      "id": "i-top",
+      "type": "gapfill",
+      "text": "Ce restaurant est ___!",
+      "blanks": [
+        {
+          "answer": "top"
+        }
+      ],
+      "gloss": "'This restaurant is the best!' (universal slang)",
+      "hint": "universal slang for 'the best'"
+    },
+    {
+      "id": "i-devrions-au",
+      "type": "gapfill",
+      "text": "Nous ___ aller ___ restaurant.",
+      "blanks": [
+        {
+          "answer": "devrions"
+        },
+        {
+          "answer": "au"
+        }
+      ],
+      "gloss": "We should go to the restaurant",
+      "hint": "should for nous / contraction: à + le"
+    },
+    {
+      "id": "i-avais-manger",
+      "type": "gapfill",
+      "text": "J'___ faim et je veux ___ maintenant.",
+      "blanks": [
+        {
+          "answer": "avais"
+        },
+        {
+          "answer": "manger"
+        }
+      ],
+      "gloss": "I was hungry and I want to eat now",
+      "hint": "had for je (avoir in past) / to eat (infinitive after veux)"
+    },
+    {
+      "id": "i-etait-mange",
+      "type": "gapfill",
+      "text": "Le pain ___ très bon et j'ai du ___ pain.",
+      "blanks": [
+        {
+          "answer": "était"
+        },
+        {
+          "answer": "mangé"
+        }
+      ],
+      "gloss": "The bread was very good and I ate bread",
+      "hint": "was (être in past) / eaten (past participle)"
+    },
+    {
+      "id": "i-meilleure",
+      "type": "gapfill",
+      "text": "C'est la ___ pizza de ma vie!",
+      "blanks": [
+        {
+          "answer": "meilleure"
+        }
+      ],
+      "gloss": "It's the best pizza of my life!",
+      "hint": "the best (feminine form)"
+    },
+    {
+      "id": "i-mange-4",
+      "type": "gapfill",
+      "text": "Je ne ___ pas de viande.",
+      "blanks": [
+        {
+          "answer": "mange"
+        }
+      ],
+      "gloss": "I don't eat meat",
+      "hint": "eat for je (present tense)"
+    },
+    {
+      "id": "i-avons-bu",
+      "type": "gapfill",
+      "text": "Nous ___ du café hier.",
+      "blanks": [
+        {
+          "answer": "avons bu"
+        }
+      ],
+      "gloss": "We drank coffee yesterday",
+      "hint": "drank (passé composé with irregular bu)"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

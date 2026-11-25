@@ -1,0 +1,197 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-04-learning-verbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Learning & Teaching - {apprendre & enseigner}",
+  "description": "Express learning and teaching: j'apprends le français (I'm learning French), tu m'enseignes? (are you teaching me?)",
+  "can_do": [
+    "Talk about learning and teaching (I learn, you teach)",
+    "Say 'I'm learning French' or 'Who teaches you?'",
+    "Use apprendre (prendre pattern) and enseigner naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "apprendre-fr",
+      "fr": "apprendre",
+      "gloss": "to learn",
+      "note": "infinitive - follows prendre pattern"
+    },
+    {
+      "word_id": "j-apprends-fr",
+      "fr": "j'apprends",
+      "gloss": "I learn / I'm learning",
+      "note": "same pattern as je prends"
+    },
+    {
+      "word_id": "tu-apprends-fr",
+      "fr": "tu apprends",
+      "gloss": "you learn (informal)",
+      "note": "asking what someone is learning"
+    },
+    {
+      "word_id": "il-elle-apprend-fr",
+      "fr": "il/elle apprend",
+      "gloss": "he/she learns",
+      "note": "no final consonant sound"
+    },
+    {
+      "word_id": "nous-apprenons-fr",
+      "fr": "nous apprenons",
+      "gloss": "we learn",
+      "note": "learning together"
+    },
+    {
+      "word_id": "vous-apprenez-fr",
+      "fr": "vous apprenez",
+      "gloss": "you learn (formal/plural)",
+      "note": "polite form"
+    },
+    {
+      "word_id": "ils-elles-apprennent-fr",
+      "fr": "ils/elles apprennent",
+      "gloss": "they learn",
+      "note": "double n, silent -ent"
+    },
+    {
+      "word_id": "enseigner-fr",
+      "fr": "enseigner",
+      "gloss": "to teach",
+      "note": "infinitive - regular -ER verb"
+    },
+    {
+      "word_id": "j-enseigne-fr",
+      "fr": "j'enseigne",
+      "gloss": "I teach",
+      "note": "regular conjugation"
+    },
+    {
+      "word_id": "tu-enseignes-fr",
+      "fr": "tu enseignes",
+      "gloss": "you teach (informal)",
+      "note": "regular -es ending"
+    },
+    {
+      "word_id": "il-elle-enseigne-fr",
+      "fr": "il/elle enseigne",
+      "gloss": "he/she teaches",
+      "note": "teacher profession"
+    },
+    {
+      "word_id": "nous-enseignons-fr",
+      "fr": "nous enseignons",
+      "gloss": "we teach",
+      "note": "team teaching"
+    },
+    {
+      "word_id": "vous-enseignez-fr",
+      "fr": "vous enseignez",
+      "gloss": "you teach (formal/plural)",
+      "note": "polite form"
+    },
+    {
+      "word_id": "ils-elles-enseignent-fr",
+      "fr": "ils/elles enseignent",
+      "gloss": "they teach",
+      "note": "silent -ent ending"
+    },
+    {
+      "word_id": "j-apprends-le-francais-fr",
+      "fr": "j'apprends le français",
+      "gloss": "I'm learning French",
+      "note": "⭐ what you're doing right now!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-apprendre-to-learn",
+      "term": "{apprendre} = to learn",
+      "definition": "Part of prendre family (you already know this pattern!) - essential for education",
+      "example": "{j'apprends le français} (I'm learning French), {nous apprenons ensemble} (we're learning together)"
+    },
+    {
+      "id": "c-same-pattern-as-prendre",
+      "term": "Same pattern as prendre/{comprendre}",
+      "definition": "If you know prendre and comprendre, you know apprendre! Add ap- prefix",
+      "example": "{je prends} → {j'apprends}, {tu comprends} → {tu apprends} (same pattern!)"
+    },
+    {
+      "id": "c-enseigner-to-teach",
+      "term": "{enseigner} = to teach",
+      "definition": "Regular -ER verb - easy! Natural pair with apprendre",
+      "example": "{j'enseigne le français} (I teach French), {il m'enseigne} (he teaches me)"
+    },
+    {
+      "id": "c-beautiful-semantic-progression",
+      "term": "Beautiful semantic progression",
+      "definition": "Teacher teaches → student learns → student understands → student knows",
+      "example": "{Il m'enseigne} → {j'apprends} → {je comprends} → {je sais} (complete learning cycle!)"
+    },
+    {
+      "id": "c-apprendre-a-infinitive",
+      "term": "apprendre à + infinitive",
+      "definition": "Use 'à' before infinitive to say learning how to do something",
+      "example": "{j'apprends à nager} (I'm learning to swim), {j'apprends à parler français} (I'm learning to speak French)"
+    }
+  ],
+  "items": [
+    {
+      "id": "learning-verbs-1",
+      "type": "respond",
+      "situation": "I'm learning French",
+      "answer": "j'apprends le français",
+      "hint": "apprendre conjugated for je + le français",
+      "mistakes": [
+        {
+          "answer": "je prends le français",
+          "feedback": "Use '{apprendre}' (to learn), not 'prendre' (to take)!"
+        },
+        {
+          "answer": "j'enseigne le français",
+          "feedback": "That means 'I teach French' - use '{j'apprends}' for learning!"
+        }
+      ]
+    },
+    {
+      "id": "learning-verbs-2",
+      "type": "respond",
+      "situation": "You teach me (informal)",
+      "answer": "tu m'enseignes",
+      "hint": "enseigner for tu + me (object pronoun)",
+      "mistakes": [
+        {
+          "answer": "tu m'apprends",
+          "feedback": "That means 'you learn me' (incorrect) - use '{enseigner}' for teaching!"
+        }
+      ]
+    },
+    {
+      "id": "learning-verbs-3",
+      "type": "respond",
+      "situation": "He learns English",
+      "answer": "il apprend l'anglais",
+      "hint": "apprendre for il + l'anglais"
+    },
+    {
+      "id": "learning-verbs-4",
+      "type": "respond",
+      "situation": "She teaches French",
+      "answer": "elle enseigne le français",
+      "hint": "enseigner for elle + le français"
+    },
+    {
+      "id": "learning-verbs-5",
+      "type": "respond",
+      "situation": "We're learning together",
+      "answer": "nous apprenons ensemble",
+      "hint": "apprendre for nous + ensemble"
+    },
+    {
+      "id": "learning-verbs-6",
+      "type": "respond",
+      "situation": "They teach at university",
+      "answer": "ils enseignent à l'université",
+      "hint": "enseigner for ils + à l'université"
+    }
+  ]
+}

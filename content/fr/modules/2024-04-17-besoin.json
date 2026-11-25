@@ -1,0 +1,665 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-17-besoin",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{avoir besoin de} - To Need",
+  "description": "Express what you need: j'ai besoin de (I need), avoir besoin d'aide (to need help), avoir besoin de manger (to need to eat)",
+  "can_do": [
+    "Express what you need (I need coffee, you need help)",
+    "Talk about needs and necessities in French",
+    "Use avoir besoin de with nouns and verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "besoin-fr",
+      "fr": "besoin",
+      "gloss": "need",
+      "note": "noun (masculine) - le besoin"
+    },
+    {
+      "word_id": "avoir-besoin-de-fr",
+      "fr": "avoir besoin de",
+      "gloss": "to need / to have need of",
+      "note": "essential expression"
+    },
+    {
+      "word_id": "j-ai-besoin-de-fr",
+      "fr": "j'ai besoin de",
+      "gloss": "I need",
+      "note": "j'ai (I have) + besoin + de"
+    },
+    {
+      "word_id": "tu-as-besoin-de-fr",
+      "fr": "tu as besoin de",
+      "gloss": "you need (informal)",
+      "note": "conjugate avoir"
+    },
+    {
+      "word_id": "il-elle-a-besoin-de-fr",
+      "fr": "il/elle a besoin de",
+      "gloss": "he/she needs",
+      "note": "il/elle a + besoin + de"
+    },
+    {
+      "word_id": "nous-avons-besoin-de-fr",
+      "fr": "nous avons besoin de",
+      "gloss": "we need",
+      "note": "nous avons + besoin + de"
+    },
+    {
+      "word_id": "vous-avez-besoin-de-fr",
+      "fr": "vous avez besoin de",
+      "gloss": "you need (formal/plural)",
+      "note": "vous avez + besoin + de"
+    },
+    {
+      "word_id": "ils-elles-ont-besoin-de-fr",
+      "fr": "ils/elles ont besoin de",
+      "gloss": "they need",
+      "note": "ils/elles ont + besoin + de"
+    },
+    {
+      "word_id": "j-ai-besoin-d-aide-fr",
+      "fr": "j'ai besoin d'aide",
+      "gloss": "I need help",
+      "note": "de → d' before vowel"
+    },
+    {
+      "word_id": "j-ai-besoin-d-argent-fr",
+      "fr": "j'ai besoin d'argent",
+      "gloss": "I need money",
+      "note": "very common phrase"
+    },
+    {
+      "word_id": "j-ai-besoin-de-temps-fr",
+      "fr": "j'ai besoin de temps",
+      "gloss": "I need time",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "je-n-ai-pas-besoin-de-fr",
+      "fr": "je n'ai pas besoin de",
+      "gloss": "I don't need",
+      "note": "negative - ne...pas around avoir"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-avoir-besoin-de-to",
+      "term": "{avoir besoin de} = to need",
+      "definition": "Literally 'to have need of' - use avoir + besoin + de + noun/verb",
+      "example": "{j'ai besoin de café} (I need coffee), {tu as besoin d'aide} (you need help)"
+    },
+    {
+      "id": "c-structure-avoir-besoin-de",
+      "term": "Structure: {avoir + besoin + de}",
+      "definition": "Always use this three-part structure - conjugate avoir, besoin stays the same",
+      "example": "{j'ai besoin}, {tu as besoin}, {il a besoin}, {nous avons besoin}, {vous avez besoin}, {ils ont besoin}"
+    },
+    {
+      "id": "c-with-nouns-de-noun",
+      "term": "With nouns - de + noun",
+      "definition": "After besoin, use '{de}' (or d' before vowel) before the noun",
+      "example": "{j'ai besoin de temps} (I need time), {j'ai besoin d'argent} (I need money)"
+    },
+    {
+      "id": "c-with-verbs-de-infinitive",
+      "term": "With verbs - de + infinitive",
+      "definition": "To say you need TO DO something, use de + infinitive verb",
+      "example": "{j'ai besoin de manger} (I need to eat), {tu as besoin de partir} (you need to leave)"
+    },
+    {
+      "id": "c-negative-form",
+      "term": "Negative form",
+      "definition": "Put ne...pas around avoir: je n'ai pas besoin de...",
+      "example": "{je n'ai pas besoin d'aide} (I don't need help), {tu n'as pas besoin de ça} (you don't need that)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-besoin-d",
+      "type": "respond",
+      "situation": "I need help",
+      "answer": "j'ai besoin d'aide",
+      "accept": [
+        "j ai besoin d'aide",
+        "j'ai besoin d aide"
+      ],
+      "hint": "{j'ai besoin d'aide}",
+      "mistakes": [
+        {
+          "answer": "je besoin d'aide",
+          "feedback": "Expected: \"{j'ai besoin d'aide}\""
+        },
+        {
+          "answer": "j'ai besoin de aide",
+          "feedback": "Expected: \"{j'ai besoin d'aide}\""
+        },
+        {
+          "answer": "je nécessite d'aide",
+          "feedback": "Expected: \"{j'ai besoin d'aide}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-besoin-d",
+      "type": "respond",
+      "situation": "you need money",
+      "answer": "tu as besoin d'argent",
+      "accept": [
+        "tu as besoin d argent"
+      ],
+      "hint": "{tu as besoin d'argent}",
+      "mistakes": [
+        {
+          "answer": "tu besoin d'argent",
+          "feedback": "Expected: \"{tu as besoin d'argent}\""
+        },
+        {
+          "answer": "tu as besoin de argent",
+          "feedback": "Expected: \"{tu as besoin d'argent}\""
+        },
+        {
+          "answer": "tu nécessites d'argent",
+          "feedback": "Expected: \"{tu as besoin d'argent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-besoin-de",
+      "type": "respond",
+      "situation": "I need time",
+      "answer": "j'ai besoin de temps",
+      "accept": [
+        "j ai besoin de temps"
+      ],
+      "hint": "{j'ai besoin de temps}",
+      "mistakes": [
+        {
+          "answer": "je besoin de temps",
+          "feedback": "Expected: \"{j'ai besoin de temps}\""
+        },
+        {
+          "answer": "j'ai besoin temps",
+          "feedback": "Expected: \"{j'ai besoin de temps}\""
+        },
+        {
+          "answer": "j'ai besoin du temps",
+          "feedback": "Expected: \"{j'ai besoin de temps}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-besoin-d",
+      "type": "respond",
+      "situation": "he needs water",
+      "answer": "il a besoin d'eau",
+      "accept": [
+        "il a besoin d eau"
+      ],
+      "hint": "{il a besoin d'eau}",
+      "mistakes": [
+        {
+          "answer": "il besoin d'eau",
+          "feedback": "Expected: \"{il a besoin d'eau}\""
+        },
+        {
+          "answer": "il a besoin de eau",
+          "feedback": "Expected: \"{il a besoin d'eau}\""
+        },
+        {
+          "answer": "il a besoin de l'eau",
+          "feedback": "Expected: \"{il a besoin d'eau}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-besoin-d",
+      "type": "respond",
+      "situation": "she needs a car",
+      "answer": "elle a besoin d'une voiture",
+      "accept": [
+        "elle a besoin d une voiture"
+      ],
+      "hint": "{elle a besoin d'une voiture}",
+      "mistakes": [
+        {
+          "answer": "elle besoin d'une voiture",
+          "feedback": "Expected: \"{elle a besoin d'une voiture}\""
+        },
+        {
+          "answer": "elle a besoin une voiture",
+          "feedback": "Expected: \"{elle a besoin d'une voiture}\""
+        },
+        {
+          "answer": "elle a besoin de la voiture",
+          "feedback": "Expected: \"{elle a besoin d'une voiture}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-besoin-de",
+      "type": "respond",
+      "situation": "we need coffee",
+      "answer": "nous avons besoin de café",
+      "accept": [
+        "nous avons besoin de cafe"
+      ],
+      "hint": "{nous avons besoin de café}",
+      "mistakes": [
+        {
+          "answer": "nous besoin de café",
+          "feedback": "Expected: \"{nous avons besoin de café}\""
+        },
+        {
+          "answer": "nous avons besoin café",
+          "feedback": "Expected: \"{nous avons besoin de café}\""
+        },
+        {
+          "answer": "nous avons besoin du café",
+          "feedback": "Expected: \"{nous avons besoin de café}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-avez-besoin-de",
+      "type": "respond",
+      "situation": "Say \"you need sleep\" (formal)",
+      "cue": "you need sleep (formal)",
+      "answer": "vous avez besoin de sommeil",
+      "hint": "{vous avez besoin de sommeil}",
+      "mistakes": [
+        {
+          "answer": "vous besoin de sommeil",
+          "feedback": "Expected: \"{vous avez besoin de sommeil}\""
+        },
+        {
+          "answer": "vous avez besoin sommeil",
+          "feedback": "Expected: \"{vous avez besoin de sommeil}\""
+        },
+        {
+          "answer": "vous avez besoin du sommeil",
+          "feedback": "Expected: \"{vous avez besoin de sommeil}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-besoin-d",
+      "type": "respond",
+      "situation": "they need space",
+      "answer": "ils ont besoin d'espace",
+      "accept": [
+        "ils ont besoin d espace"
+      ],
+      "hint": "{ils ont besoin d'espace}",
+      "mistakes": [
+        {
+          "answer": "ils besoin d'espace",
+          "feedback": "Expected: \"{ils ont besoin d'espace}\""
+        },
+        {
+          "answer": "ils ont besoin espace",
+          "feedback": "Expected: \"{ils ont besoin d'espace}\""
+        },
+        {
+          "answer": "ils ont besoin de l'espace",
+          "feedback": "Expected: \"{ils ont besoin d'espace}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-besoin-de-2",
+      "type": "respond",
+      "situation": "I need to eat",
+      "answer": "j'ai besoin de manger",
+      "accept": [
+        "j ai besoin de manger"
+      ],
+      "hint": "{j'ai besoin de manger}",
+      "mistakes": [
+        {
+          "answer": "je besoin de manger",
+          "feedback": "Expected: \"{j'ai besoin de manger}\""
+        },
+        {
+          "answer": "j'ai besoin manger",
+          "feedback": "Expected: \"{j'ai besoin de manger}\""
+        },
+        {
+          "answer": "je dois manger",
+          "feedback": "Expected: \"{j'ai besoin de manger}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-besoin-de",
+      "type": "respond",
+      "situation": "you need to leave",
+      "answer": "tu as besoin de partir",
+      "hint": "{tu as besoin de partir}",
+      "mistakes": [
+        {
+          "answer": "tu besoin de partir",
+          "feedback": "Expected: \"{tu as besoin de partir}\""
+        },
+        {
+          "answer": "tu as besoin partir",
+          "feedback": "Expected: \"{tu as besoin de partir}\""
+        },
+        {
+          "answer": "tu dois partir",
+          "feedback": "Expected: \"{tu as besoin de partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-besoin-de-3",
+      "type": "respond",
+      "situation": "I need to sleep",
+      "answer": "j'ai besoin de dormir",
+      "accept": [
+        "j ai besoin de dormir"
+      ],
+      "hint": "{j'ai besoin de dormir}",
+      "mistakes": [
+        {
+          "answer": "je besoin de dormir",
+          "feedback": "Expected: \"{j'ai besoin de dormir}\""
+        },
+        {
+          "answer": "j'ai besoin dormir",
+          "feedback": "Expected: \"{j'ai besoin de dormir}\""
+        },
+        {
+          "answer": "je dois dormir",
+          "feedback": "Expected: \"{j'ai besoin de dormir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-besoin-de",
+      "type": "respond",
+      "situation": "she needs to work",
+      "answer": "elle a besoin de travailler",
+      "hint": "{elle a besoin de travailler}",
+      "mistakes": [
+        {
+          "answer": "elle besoin de travailler",
+          "feedback": "Expected: \"{elle a besoin de travailler}\""
+        },
+        {
+          "answer": "elle a besoin travailler",
+          "feedback": "Expected: \"{elle a besoin de travailler}\""
+        },
+        {
+          "answer": "elle doit travailler",
+          "feedback": "Expected: \"{elle a besoin de travailler}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-besoin-de-2",
+      "type": "respond",
+      "situation": "we need to talk",
+      "answer": "nous avons besoin de parler",
+      "hint": "{nous avons besoin de parler}",
+      "mistakes": [
+        {
+          "answer": "nous besoin de parler",
+          "feedback": "Expected: \"{nous avons besoin de parler}\""
+        },
+        {
+          "answer": "nous avons besoin parler",
+          "feedback": "Expected: \"{nous avons besoin de parler}\""
+        },
+        {
+          "answer": "nous devons parler",
+          "feedback": "Expected: \"{nous avons besoin de parler}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-besoin-de",
+      "type": "respond",
+      "situation": "they need to understand",
+      "answer": "ils ont besoin de comprendre",
+      "hint": "{ils ont besoin de comprendre}",
+      "mistakes": [
+        {
+          "answer": "ils besoin de comprendre",
+          "feedback": "Expected: \"{ils ont besoin de comprendre}\""
+        },
+        {
+          "answer": "ils ont besoin comprendre",
+          "feedback": "Expected: \"{ils ont besoin de comprendre}\""
+        },
+        {
+          "answer": "ils doivent comprendre",
+          "feedback": "Expected: \"{ils ont besoin de comprendre}\""
+        }
+      ]
+    },
+    {
+      "id": "i-de-quoi-tu-as",
+      "type": "respond",
+      "situation": "what do you need?",
+      "answer": "de quoi tu as besoin?",
+      "accept": [
+        "de quoi tu as besoin"
+      ],
+      "hint": "{de quoi tu as besoin?}",
+      "mistakes": [
+        {
+          "answer": "quoi tu as besoin?",
+          "feedback": "Expected: \"{de quoi tu as besoin?}\""
+        },
+        {
+          "answer": "qu'est-ce que tu as besoin?",
+          "feedback": "Expected: \"{de quoi tu as besoin?}\""
+        },
+        {
+          "answer": "de quoi as-tu besoin?",
+          "feedback": "Expected: \"{de quoi tu as besoin?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-besoin-d-2",
+      "type": "respond",
+      "situation": "do you need help?",
+      "answer": "tu as besoin d'aide?",
+      "accept": [
+        "tu as besoin d aide?",
+        "tu as besoin d'aide",
+        "tu as besoin d aide"
+      ],
+      "hint": "{tu as besoin d'aide?}",
+      "mistakes": [
+        {
+          "answer": "as-tu besoin d'aide?",
+          "feedback": "Expected: \"{tu as besoin d'aide?}\""
+        },
+        {
+          "answer": "tu besoin d'aide?",
+          "feedback": "Expected: \"{tu as besoin d'aide?}\""
+        },
+        {
+          "answer": "est-ce que tu as besoin d'aide?",
+          "feedback": "Expected: \"tu as besoin d'aide?\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-besoin-de",
+      "type": "respond",
+      "situation": "does he need that?",
+      "answer": "il a besoin de ça?",
+      "accept": [
+        "il a besoin de ca?",
+        "il a besoin de ça",
+        "il a besoin de ca"
+      ],
+      "hint": "{il a besoin de ça?}",
+      "mistakes": [
+        {
+          "answer": "a-t-il besoin de ça?",
+          "feedback": "Expected: \"{il a besoin de ça?}\""
+        },
+        {
+          "answer": "il besoin de ça?",
+          "feedback": "Expected: \"{il a besoin de ça?}\""
+        },
+        {
+          "answer": "est-ce qu'il a besoin de ça?",
+          "feedback": "Expected: \"il a besoin de ça?\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas",
+      "type": "respond",
+      "situation": "I don't need help",
+      "answer": "je n'ai pas besoin d'aide",
+      "accept": [
+        "je n ai pas besoin d'aide",
+        "je n'ai pas besoin d aide"
+      ],
+      "hint": "{je n'ai pas besoin d'aide}",
+      "mistakes": [
+        {
+          "answer": "je n'ai besoin pas d'aide",
+          "feedback": "Expected: \"je n'ai pas besoin d'aide\""
+        },
+        {
+          "answer": "je ai pas besoin d'aide",
+          "feedback": "Expected: \"{je n'ai pas besoin d'aide}\""
+        },
+        {
+          "answer": "je ne besoin pas d'aide",
+          "feedback": "Expected: \"{je n'ai pas besoin d'aide}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-n-as-pas",
+      "type": "respond",
+      "situation": "you don't need that",
+      "answer": "tu n'as pas besoin de ça",
+      "accept": [
+        "tu n as pas besoin de ça",
+        "tu n'as pas besoin de ca"
+      ],
+      "hint": "{tu n'as pas besoin de ça}",
+      "mistakes": [
+        {
+          "answer": "tu n'as besoin pas de ça",
+          "feedback": "Expected: \"tu n'as pas besoin de ça\""
+        },
+        {
+          "answer": "tu as pas besoin de ça",
+          "feedback": "Expected: \"{tu n'as pas besoin de ça}\""
+        },
+        {
+          "answer": "tu ne besoin pas de ça",
+          "feedback": "Expected: \"{tu n'as pas besoin de ça}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-n-a-pas",
+      "type": "respond",
+      "situation": "she doesn't need to leave",
+      "answer": "elle n'a pas besoin de partir",
+      "accept": [
+        "elle n a pas besoin de partir"
+      ],
+      "hint": "{elle n'a pas besoin de partir}",
+      "mistakes": [
+        {
+          "answer": "elle n'a besoin pas de partir",
+          "feedback": "Expected: \"elle n'a pas besoin de partir\""
+        },
+        {
+          "answer": "elle a pas besoin de partir",
+          "feedback": "Expected: \"{elle n'a pas besoin de partir}\""
+        },
+        {
+          "answer": "elle ne besoin pas de partir",
+          "feedback": "Expected: \"{elle n'a pas besoin de partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-n-avons-pas",
+      "type": "respond",
+      "situation": "we don't need money",
+      "answer": "nous n'avons pas besoin d'argent",
+      "accept": [
+        "nous n avons pas besoin d'argent",
+        "nous n'avons pas besoin d argent"
+      ],
+      "hint": "{nous n'avons pas besoin d'argent}",
+      "mistakes": [
+        {
+          "answer": "nous n'avons besoin pas d'argent",
+          "feedback": "Expected: \"nous n'avons pas besoin d'argent\""
+        },
+        {
+          "answer": "nous avons pas besoin d'argent",
+          "feedback": "Expected: \"{nous n'avons pas besoin d'argent}\""
+        },
+        {
+          "answer": "nous ne besoin pas d'argent",
+          "feedback": "Expected: \"{nous n'avons pas besoin d'argent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-avais-besoin-d",
+      "type": "respond",
+      "situation": "I needed help",
+      "answer": "j'avais besoin d'aide",
+      "accept": [
+        "j avais besoin d'aide",
+        "j'avais besoin d aide"
+      ],
+      "hint": "{j'avais besoin d'aide}",
+      "mistakes": [
+        {
+          "answer": "j'ai eu besoin d'aide",
+          "feedback": "Expected: \"{j'avais besoin d'aide}\""
+        },
+        {
+          "answer": "je besoin d'aide",
+          "feedback": "Expected: \"{j'avais besoin d'aide}\""
+        },
+        {
+          "answer": "j'ai besoin d'aide",
+          "feedback": "Expected: \"{j'avais besoin d'aide}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-avais-besoin-de",
+      "type": "respond",
+      "situation": "you needed time",
+      "answer": "tu avais besoin de temps",
+      "hint": "{tu avais besoin de temps}",
+      "mistakes": [
+        {
+          "answer": "tu as eu besoin de temps",
+          "feedback": "Expected: \"{tu avais besoin de temps}\""
+        },
+        {
+          "answer": "tu besoin de temps",
+          "feedback": "Expected: \"{tu avais besoin de temps}\""
+        },
+        {
+          "answer": "tu as besoin de temps",
+          "feedback": "Expected: \"{tu avais besoin de temps}\""
+        }
+      ]
+    }
+  ]
+}

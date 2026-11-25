@@ -1,0 +1,116 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-26-had-already-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{J'avais déjà...} - Had Already Done Phrases",
+  "description": "Add depth to stories! '{J'avais déjà mangé}' (I had already eaten), '{J'étais déjà parti}' (I had already left). Show what happened FIRST in a story.",
+  "vocabulary": [
+    {
+      "word_id": "j-avais-deja-mange-fr",
+      "fr": "j'avais déjà mangé",
+      "gloss": "I had already eaten",
+      "note": "⭐ very common!"
+    },
+    {
+      "word_id": "j-etais-deja-parti-fr",
+      "fr": "j'étais déjà parti",
+      "gloss": "I had already left",
+      "note": "explaining absence"
+    },
+    {
+      "word_id": "elle-etait-deja-partie-fr",
+      "fr": "elle était déjà partie",
+      "gloss": "she had already left",
+      "note": "she left first"
+    },
+    {
+      "word_id": "j-avais-deja-vu-ce-film-fr",
+      "fr": "j'avais déjà vu ce film",
+      "gloss": "I had already seen this movie",
+      "note": "previous experience"
+    },
+    {
+      "word_id": "il-avait-deja-commence-fr",
+      "fr": "il avait déjà commencé",
+      "gloss": "he had already started",
+      "note": "something began earlier"
+    },
+    {
+      "word_id": "nous-avions-deja-fini-fr",
+      "fr": "nous avions déjà fini",
+      "gloss": "we had already finished",
+      "note": "completed before"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-what-happened-first",
+      "term": "What Happened FIRST",
+      "definition": "Use '{j'avais déjà...}' to show something happened BEFORE another past event",
+      "example": "{Quand il est arrivé} (when he arrived), {j'avais déjà mangé} (I had already eaten) - I ate FIRST, he arrived SECOND"
+    },
+    {
+      "id": "c-deja-already",
+      "term": "'{Déjà}' = Already",
+      "definition": "Often used with these phrases to emphasize 'already done'",
+      "example": "{J'avais déjà fini} (I had already finished)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-avais-deja-mange",
+      "type": "respond",
+      "situation": "Say you had already eaten (when someone arrived)",
+      "cue": "I had already eaten",
+      "answer": "j'avais déjà mangé",
+      "hint": "{j'avais déjà mangé}",
+      "mistakes": [
+        {
+          "answer": "j'ai déjà mangé",
+          "feedback": "That's just 'I ate'! For 'had eaten' (earlier in past), use: j'avais déjà mangé"
+        }
+      ]
+    },
+    {
+      "id": "i-j-etais-deja-parti",
+      "type": "respond",
+      "situation": "Explain you had already left (why you weren't there)",
+      "cue": "I had already left",
+      "answer": "j'étais déjà parti",
+      "hint": "{j'étais déjà parti}"
+    },
+    {
+      "id": "i-elle-etait-deja-partie",
+      "type": "respond",
+      "situation": "Say she had already left (she left first)",
+      "cue": "She had already left",
+      "answer": "elle était déjà partie",
+      "hint": "{elle était déjà partie}"
+    },
+    {
+      "id": "i-j-avais-deja-vu",
+      "type": "respond",
+      "situation": "Say you had already seen a movie (don't need to watch again)",
+      "cue": "I had already seen this movie",
+      "answer": "j'avais déjà vu ce film",
+      "hint": "{j'avais déjà vu ce film}"
+    },
+    {
+      "id": "i-il-avait-deja-commence",
+      "type": "respond",
+      "situation": "Say he had already started (when you arrived)",
+      "cue": "He had already started",
+      "answer": "il avait déjà commencé",
+      "hint": "{il avait déjà commencé}"
+    },
+    {
+      "id": "i-nous-avions-deja-fini",
+      "type": "respond",
+      "situation": "Say you all had already finished (group completed earlier)",
+      "cue": "We had already finished",
+      "answer": "nous avions déjà fini",
+      "hint": "{nous avions déjà fini}"
+    }
+  ]
+}

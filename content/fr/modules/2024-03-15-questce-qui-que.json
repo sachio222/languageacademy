@@ -1,0 +1,323 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-15-questce-qui-que",
+  "kind": "lesson",
+  "status": "written",
+  "title": "qu'est-ce qui vs qu'est-ce que - Master 'What' Questions",
+  "description": "THE BIGGEST distinction in French questions: qu'est-ce qui (what DOES - subject) vs qu'est-ce que (what DO you - object). Master this, ask anything!",
+  "can_do": [
+    "Master the critical 'what' question distinction",
+    "Ask 'What does X?' vs 'What do you?' correctly",
+    "Form perfect questions in any situation"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "qu-est-ce-qui-fr",
+      "fr": "qu'est-ce qui",
+      "gloss": "what (subject)",
+      "note": "⭐⭐⭐ SUBJECT: what DOES something"
+    },
+    {
+      "word_id": "qu-est-ce-que-fr",
+      "fr": "qu'est-ce que",
+      "gloss": "what (object)",
+      "note": "⭐⭐⭐ OBJECT: what DO you verb"
+    },
+    {
+      "word_id": "qu-est-ce-qui-brille-fr",
+      "fr": "Qu'est-ce qui brille?",
+      "gloss": "What shines?",
+      "note": "SUBJECT question - thing is doing the shining"
+    },
+    {
+      "word_id": "qu-est-ce-qui-tombe-fr",
+      "fr": "Qu'est-ce qui tombe?",
+      "gloss": "What falls?",
+      "note": "SUBJECT question - thing is doing the falling"
+    },
+    {
+      "word_id": "qu-est-ce-qui-fait-du-bruit-fr",
+      "fr": "Qu'est-ce qui fait du bruit?",
+      "gloss": "What makes noise?",
+      "note": "SUBJECT question - thing is making noise"
+    },
+    {
+      "word_id": "qu-est-ce-qui-rend-l-herbe-verte-fr",
+      "fr": "Qu'est-ce qui rend l'herbe verte?",
+      "gloss": "What makes grass green?",
+      "note": "SUBJECT question - thing is making grass green"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-vois-fr",
+      "fr": "Qu'est-ce que tu vois?",
+      "gloss": "What do you see?",
+      "note": "OBJECT question - you are seeing WHAT"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-manges-fr",
+      "fr": "Qu'est-ce que tu manges?",
+      "gloss": "What are you eating?",
+      "note": "OBJECT question - you are eating WHAT"
+    },
+    {
+      "word_id": "qu-est-ce-que-les-oiseaux-mangent-fr",
+      "fr": "Qu'est-ce que les oiseaux mangent?",
+      "gloss": "What do birds eat?",
+      "note": "OBJECT question - birds are eating WHAT"
+    },
+    {
+      "word_id": "qu-est-ce-que-le-soleil-fait-fr",
+      "fr": "Qu'est-ce que le soleil fait?",
+      "gloss": "What does the sun do?",
+      "note": "OBJECT question - sun does WHAT"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-the-critical-distinction",
+      "term": "THE Critical Distinction",
+      "definition": "qu'est-ce qui = what DOES something (subject). qu'est-ce que = what DO you verb (object)",
+      "example": "{Qu'est-ce qui brille?} (What shines? - subject) vs Qu'est-ce que tu vois? (What do you see? - object)"
+    },
+    {
+      "id": "c-qu-est-ce-qui",
+      "term": "{qu'est-ce qui} - Subject Questions",
+      "definition": "Use QUI when asking WHAT is doing the action. No other subject after qui!",
+      "example": "{Qu'est-ce qui brille?} (What shines?), {Qu'est-ce qui fait du bruit?} (What makes noise?), {Qu'est-ce qui rend l'herbe verte?} (What makes grass green?)"
+    },
+    {
+      "id": "c-qu-est-ce-que",
+      "term": "{qu'est-ce que} - Object Questions",
+      "definition": "Use QUE when asking what someone/something DOES TO something. Subject comes after que!",
+      "example": "{Qu'est-ce que tu vois?} (What do you see?), {Qu'est-ce que tu manges?} (What are you eating?), {Qu'est-ce que le soleil fait?} (What does the sun do?)"
+    },
+    {
+      "id": "c-visual-pattern-recognition",
+      "term": "Visual Pattern Recognition",
+      "definition": "If verb has NO object → use QUI. If verb has an object → use QUE",
+      "example": "Pattern: [qu'est-ce qui] + [VERB] OR [qu'est-ce que] + [SUBJECT] + [VERB]"
+    },
+    {
+      "id": "c-transform-any-statement-into",
+      "term": "Transform ANY Statement into a Question",
+      "definition": "You can now ask 'what' questions about anything you've learned!",
+      "example": "{Le soleil brille} → {Qu'est-ce qui brille?} (What shines?), {Je vois un oiseau} → {Qu'est-ce que tu vois?} (What do you see?)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-qu-est-ce-qui",
+      "type": "respond",
+      "situation": "Ask 'What shines?' (subject question)",
+      "cue": "What shines?",
+      "answer": "qu'est-ce qui brille?",
+      "accept": [
+        "qu'est-ce qui brille"
+      ],
+      "hint": "qu'est-ce qui + brille (the thing shines)",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que brille?",
+          "feedback": "Use '{qu'est-ce QUI}' when asking what DOES something (subject). 'Brille' has no object! The thing itself shines. Use QUI for subjects, QUE for objects."
+        },
+        {
+          "answer": "qu'est-ce que brille",
+          "feedback": "Use '{qu'est-ce QUI}' when asking what DOES something (subject). The thing itself is doing the shining - that's the subject!"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-2",
+      "type": "respond",
+      "situation": "Ask 'What falls?' (subject question)",
+      "cue": "What falls?",
+      "answer": "qu'est-ce qui tombe?",
+      "accept": [
+        "qu'est-ce qui tombe"
+      ],
+      "hint": "qu'est-ce qui + tombe (the thing falls)",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tombe?",
+          "feedback": "Use '{qu'est-ce QUI}' for subject questions. The thing itself is falling - it's the subject, not an object!"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-3",
+      "type": "respond",
+      "situation": "Ask 'What makes grass green?' (causative subject)",
+      "cue": "What makes grass green?",
+      "answer": "qu'est-ce qui rend l'herbe verte?",
+      "accept": [
+        "qu'est-ce qui rend l'herbe verte"
+      ],
+      "hint": "{qu'est-ce qui + rend l'herbe verte}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que rend l'herbe verte?",
+          "feedback": "Perfect causative question! But use '{qu'est-ce QUI}' because the subject (what) is DOING the action of making grass green."
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-4",
+      "type": "respond",
+      "situation": "Ask 'What makes noise?' (subject question)",
+      "cue": "What makes noise?",
+      "answer": "qu'est-ce qui fait du bruit?",
+      "accept": [
+        "qu'est-ce qui fait du bruit"
+      ],
+      "hint": "{qu'est-ce qui + fait du bruit}"
+    },
+    {
+      "id": "i-qu-est-ce-qui-5",
+      "type": "respond",
+      "situation": "Ask 'What grows in spring?' (subject question)",
+      "cue": "What grows in spring?",
+      "answer": "qu'est-ce qui pousse au printemps?",
+      "accept": [
+        "qu'est-ce qui pousse au printemps"
+      ],
+      "hint": "{qu'est-ce qui + pousse au printemps}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Ask 'What do you see?' (object question)",
+      "cue": "What do you see?",
+      "answer": "qu'est-ce que tu vois?",
+      "accept": [
+        "qu'est-ce que tu vois"
+      ],
+      "hint": "qu'est-ce que + tu vois (you see WHAT)",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce qui tu vois?",
+          "feedback": "Use '{qu'est-ce QUE}' when asking what you DO to something (object). You see SOMETHING. That something is the object. QUI = subject, QUE = object."
+        },
+        {
+          "answer": "qu'est-ce qui tu vois",
+          "feedback": "Use '{qu'est-ce QUE}' for object questions. You are seeing WHAT - that's the object of your seeing!"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask 'What are you eating?' (object question)",
+      "cue": "What are you eating?",
+      "answer": "qu'est-ce que tu manges?",
+      "accept": [
+        "qu'est-ce que tu manges"
+      ],
+      "hint": "{qu'est-ce que + tu manges}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce qui tu manges?",
+          "feedback": "Use '{qu'est-ce QUE}' for object questions. You are eating WHAT - the food is the object!"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-3",
+      "type": "respond",
+      "situation": "Ask 'What do birds eat?' (object question)",
+      "cue": "What do birds eat?",
+      "answer": "qu'est-ce que les oiseaux mangent?",
+      "accept": [
+        "qu'est-ce que les oiseaux mangent"
+      ],
+      "hint": "{qu'est-ce que + les oiseaux mangent}"
+    },
+    {
+      "id": "i-qu-est-ce-que-4",
+      "type": "respond",
+      "situation": "Ask 'What does the sun do?' (object question)",
+      "cue": "What does the sun do?",
+      "answer": "qu'est-ce que le soleil fait?",
+      "accept": [
+        "qu'est-ce que le soleil fait"
+      ],
+      "hint": "{qu'est-ce que + le soleil fait}"
+    },
+    {
+      "id": "i-qu-est-ce-que-5",
+      "type": "respond",
+      "situation": "Ask 'What do you want?' (object question)",
+      "cue": "What do you want?",
+      "answer": "qu'est-ce que tu veux?",
+      "accept": [
+        "qu'est-ce que tu veux"
+      ],
+      "hint": "{qu'est-ce que + tu veux}"
+    },
+    {
+      "id": "i-qu-est-ce-qui-6",
+      "type": "respond",
+      "situation": "Ask 'What shines in the sky?' (subject)",
+      "cue": "What shines in the sky?",
+      "answer": "qu'est-ce qui brille dans le ciel?",
+      "accept": [
+        "qu'est-ce qui brille dans le ciel"
+      ],
+      "hint": "{qu'est-ce qui + brille dans le ciel}"
+    },
+    {
+      "id": "i-qu-est-ce-que-6",
+      "type": "respond",
+      "situation": "Ask 'What do you see in the sky?' (object)",
+      "cue": "What do you see in the sky?",
+      "answer": "qu'est-ce que tu vois dans le ciel?",
+      "accept": [
+        "qu'est-ce que tu vois dans le ciel"
+      ],
+      "hint": "{qu'est-ce que + tu vois dans le ciel}"
+    },
+    {
+      "id": "i-qu-est-ce-qui-7",
+      "type": "respond",
+      "situation": "Ask 'What makes the sun shine?' (subject + causative)",
+      "cue": "What makes the sun shine?",
+      "answer": "qu'est-ce qui fait briller le soleil?",
+      "accept": [
+        "qu'est-ce qui fait briller le soleil"
+      ],
+      "hint": "{qu'est-ce qui + fait briller le soleil}"
+    },
+    {
+      "id": "i-qu-est-ce-qui-8",
+      "type": "respond",
+      "situation": "Ask 'What makes clouds white?' (subject + causative)",
+      "cue": "What makes clouds white?",
+      "answer": "qu'est-ce qui rend les nuages blancs?",
+      "accept": [
+        "qu'est-ce qui rend les nuages blancs"
+      ],
+      "hint": "{qu'est-ce qui + rend les nuages blancs}"
+    },
+    {
+      "id": "i-qu-est-ce-qui-9",
+      "type": "respond",
+      "situation": "Transform: '{Le soleil brille}' → Ask 'What shines?'",
+      "cue": "What shines?",
+      "answer": "qu'est-ce qui brille?",
+      "accept": [
+        "qu'est-ce qui brille"
+      ],
+      "hint": "Statement to question: qu'est-ce qui..."
+    },
+    {
+      "id": "i-qu-est-ce-que-7",
+      "type": "respond",
+      "situation": "Transform: '{Je vois un oiseau}' → Ask 'What do you see?'",
+      "cue": "What do you see?",
+      "answer": "qu'est-ce que tu vois?",
+      "accept": [
+        "qu'est-ce que tu vois"
+      ],
+      "hint": "Statement to question: qu'est-ce que + subject + verb"
+    }
+  ]
+}

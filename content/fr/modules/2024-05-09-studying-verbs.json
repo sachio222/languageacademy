@@ -1,0 +1,193 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-09-studying-verbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Studying & Reviewing - {étudier & réviser}",
+  "description": "Express studying: j'étudie le français (I'm studying French), je révise mes leçons (I'm reviewing my lessons)",
+  "can_do": [
+    "Talk about studying and reviewing (I study, I review)",
+    "Discuss academic work and preparation",
+    "Say 'I'm studying French' or 'I'm reviewing for the exam'"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "etudier-fr",
+      "fr": "étudier",
+      "gloss": "to study",
+      "note": "infinitive - regular -ER verb"
+    },
+    {
+      "word_id": "j-etudie-fr",
+      "fr": "j'étudie",
+      "gloss": "I study / I'm studying",
+      "note": "pronounced 'ay-tu-dee'"
+    },
+    {
+      "word_id": "tu-etudies-fr",
+      "fr": "tu étudies",
+      "gloss": "you study (informal)",
+      "note": "asking about studies"
+    },
+    {
+      "word_id": "il-elle-etudie-fr",
+      "fr": "il/elle étudie",
+      "gloss": "he/she studies",
+      "note": "third person studying"
+    },
+    {
+      "word_id": "nous-etudions-fr",
+      "fr": "nous étudions",
+      "gloss": "we study",
+      "note": "group studying"
+    },
+    {
+      "word_id": "vous-etudiez-fr",
+      "fr": "vous étudiez",
+      "gloss": "you study (formal/plural)",
+      "note": "polite form"
+    },
+    {
+      "word_id": "ils-elles-etudient-fr",
+      "fr": "ils/elles étudient",
+      "gloss": "they study",
+      "note": "silent -ent ending"
+    },
+    {
+      "word_id": "reviser-fr",
+      "fr": "réviser",
+      "gloss": "to review / to revise",
+      "note": "infinitive - regular -ER verb"
+    },
+    {
+      "word_id": "je-revise-fr",
+      "fr": "je révise",
+      "gloss": "I review / I'm reviewing",
+      "note": "going over material"
+    },
+    {
+      "word_id": "tu-revises-fr",
+      "fr": "tu révises",
+      "gloss": "you review (informal)",
+      "note": "asking about review"
+    },
+    {
+      "word_id": "il-elle-revise-fr",
+      "fr": "il/elle révise",
+      "gloss": "he/she reviews",
+      "note": "reviewing lessons"
+    },
+    {
+      "word_id": "nous-revisons-fr",
+      "fr": "nous révisons",
+      "gloss": "we review",
+      "note": "studying together"
+    },
+    {
+      "word_id": "vous-revisez-fr",
+      "fr": "vous révisez",
+      "gloss": "you review (formal/plural)",
+      "note": "polite form"
+    },
+    {
+      "word_id": "ils-elles-revisent-fr",
+      "fr": "ils/elles révisent",
+      "gloss": "they review",
+      "note": "silent -ent ending"
+    },
+    {
+      "word_id": "j-etudie-le-francais-fr",
+      "fr": "j'étudie le français",
+      "gloss": "I'm studying French",
+      "note": "⭐ your current activity!"
+    },
+    {
+      "word_id": "je-revise-mes-lecons-fr",
+      "fr": "je révise mes leçons",
+      "gloss": "I'm reviewing my lessons",
+      "note": "⭐ what you do before exams!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-etudier-to-study",
+      "term": "{étudier} = to study",
+      "definition": "Regular -ER verb - easy! Essential for academic contexts",
+      "example": "{j'étudie à l'université} (I study at university), {j'étudie le français} (I'm studying French)"
+    },
+    {
+      "id": "c-reviser-to-review-to",
+      "term": "{réviser} = to review / to revise",
+      "definition": "Regular -ER verb - going over material you've learned",
+      "example": "{je révise mes leçons} (I'm reviewing my lessons), {je révise pour l'examen} (I'm reviewing for the exam)"
+    },
+    {
+      "id": "c-study-workflow",
+      "term": "Study workflow",
+      "definition": "Natural progression: study → learn → understand → review → know",
+      "example": "{j'étudie} → {j'apprends} → {je comprends} → {je révise} → {je sais}"
+    },
+    {
+      "id": "c-etudier-vs-apprendre",
+      "term": "étudier vs apprendre",
+      "definition": "étudier = the act of studying (action), apprendre = acquiring knowledge (result)",
+      "example": "{j'étudie pendant 2 heures} (I study for 2 hours - action), {j'apprends beaucoup} (I learn a lot - result)"
+    },
+    {
+      "id": "c-complete-learning-narrative",
+      "term": "Complete learning narrative",
+      "definition": "Now you can describe your entire learning journey in French!",
+      "example": "{J'étudie} → {j'apprends} → {je comprends} → {je révise} → {je sais} → {je pense} → {je crois} (I study → learn → understand → review → know → think → believe)"
+    }
+  ],
+  "items": [
+    {
+      "id": "studying-verbs-1",
+      "type": "respond",
+      "situation": "I'm studying French",
+      "answer": "j'étudie le français",
+      "hint": "étudier for je + le français",
+      "mistakes": [
+        {
+          "answer": "j'apprends le français",
+          "feedback": "That's 'I'm learning French' - use '{j'étudie}' for the act of studying!"
+        }
+      ]
+    },
+    {
+      "id": "studying-verbs-2",
+      "type": "respond",
+      "situation": "I'm reviewing my lessons",
+      "answer": "je révise mes leçons",
+      "hint": "réviser for je + mes leçons"
+    },
+    {
+      "id": "studying-verbs-3",
+      "type": "respond",
+      "situation": "You study at university (informal)",
+      "answer": "tu étudies à l'université",
+      "hint": "étudier for tu + à l'université"
+    },
+    {
+      "id": "studying-verbs-4",
+      "type": "respond",
+      "situation": "She reviews for the exam",
+      "answer": "elle révise pour l'examen",
+      "hint": "réviser for elle + pour l'examen"
+    },
+    {
+      "id": "studying-verbs-5",
+      "type": "respond",
+      "situation": "We study together",
+      "answer": "nous étudions ensemble",
+      "hint": "étudier for nous + ensemble"
+    },
+    {
+      "id": "studying-verbs-6",
+      "type": "respond",
+      "situation": "They are reviewing",
+      "answer": "ils révisent",
+      "hint": "réviser for ils"
+    }
+  ]
+}

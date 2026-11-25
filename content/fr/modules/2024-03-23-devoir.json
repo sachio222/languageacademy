@@ -1,0 +1,391 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-23-devoir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {devoir} (must)",
+  "description": "Master expressing obligations through active recall and composition practice!",
+  "can_do": [
+    "Express obligation and necessity (I must, you have to)",
+    "Talk about responsibilities and duties",
+    "Say 'I must go' or 'You have to see this' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "devoir-fr",
+      "fr": "devoir",
+      "gloss": "to have to / must",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-dois-fr",
+      "fr": "je dois",
+      "gloss": "I must",
+      "note": "irregular form"
+    },
+    {
+      "word_id": "tu-dois-fr",
+      "fr": "tu dois",
+      "gloss": "you must (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-doit-fr",
+      "fr": "il doit",
+      "gloss": "he must",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-doit-fr",
+      "fr": "elle doit",
+      "gloss": "she must",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-devons-fr",
+      "fr": "nous devons",
+      "gloss": "we must",
+      "note": "regular ending"
+    },
+    {
+      "word_id": "vous-devez-fr",
+      "fr": "vous devez",
+      "gloss": "you must (formal)",
+      "note": "formal/plural"
+    },
+    {
+      "word_id": "ils-doivent-fr",
+      "fr": "ils doivent",
+      "gloss": "they must (masc)",
+      "note": "irregular"
+    },
+    {
+      "word_id": "elles-doivent-fr",
+      "fr": "elles doivent",
+      "gloss": "they must (fem)",
+      "note": "same as ils"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-devoir-must-to-have",
+      "term": "{devoir} = must / to have to",
+      "definition": "Express obligation, necessity, or moral duty",
+      "example": "Essential for saying 'I must...' or 'I have to...' - very common!"
+    },
+    {
+      "id": "c-key-forms-to-master",
+      "term": "Key Forms to Master",
+      "definition": "je/tu dois (same!), il/elle doit, nous devons",
+      "example": "Notice: je and tu have the SAME form - both '{dois}'"
+    },
+    {
+      "id": "c-composition-power",
+      "term": "Composition Power",
+      "definition": "Combine devoir with previous modules for infinite expressions",
+      "example": "{je dois + ça}, {nous devons + être}, {ils doivent + avoir}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-dois",
+      "type": "respond",
+      "situation": "Say what you must do",
+      "cue": "I must",
+      "answer": "je dois",
+      "hint": "{je dois}",
+      "mistakes": [
+        {
+          "answer": "je doit",
+          "feedback": "Je takes '{dois}', not 'doit'. Remember: je dois, il doit"
+        },
+        {
+          "answer": "tu dois",
+          "feedback": "That's 'you must', not 'I must'. Focus on the pronoun!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-dois",
+      "type": "respond",
+      "situation": "Say what you must do",
+      "cue": "you must (informal)",
+      "answer": "tu dois",
+      "hint": "{tu dois}",
+      "mistakes": [
+        {
+          "answer": "tu doit",
+          "feedback": "Tu takes '{dois}', not 'doit'. Pattern: je dois, tu dois"
+        }
+      ]
+    },
+    {
+      "id": "i-il-doit",
+      "type": "respond",
+      "situation": "Say what he must do",
+      "cue": "he must",
+      "answer": "il doit",
+      "hint": "{il doit}",
+      "mistakes": [
+        {
+          "answer": "il dois",
+          "feedback": "Il takes '{doit}', not 'dois'. Remember: il doit, elle doit"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-doit",
+      "type": "respond",
+      "situation": "Say what she must do",
+      "cue": "she must",
+      "answer": "elle doit",
+      "hint": "{elle doit}",
+      "mistakes": [
+        {
+          "answer": "elle dois",
+          "feedback": "Elle takes '{doit}', not 'dois'. Same as il doit"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-devons",
+      "type": "respond",
+      "situation": "Say what we must do",
+      "cue": "we must",
+      "answer": "nous devons",
+      "hint": "{nous devons}",
+      "mistakes": [
+        {
+          "answer": "nous dois",
+          "feedback": "Nous takes '{devons}', not 'dois'. Regular ending!"
+        },
+        {
+          "answer": "nous doit",
+          "feedback": "Nous takes '{devons}', not 'doit'. Completely different!"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-devez",
+      "type": "respond",
+      "situation": "Say what you must do (formal)",
+      "cue": "you must (formal)",
+      "answer": "vous devez",
+      "hint": "{vous devez}",
+      "mistakes": [
+        {
+          "answer": "vous dois",
+          "feedback": "Vous takes '{devez}', not 'dois'. Another unique form!"
+        },
+        {
+          "answer": "vous doit",
+          "feedback": "Vous takes '{devez}', not 'doit'. Remember: vous devez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-doivent",
+      "type": "respond",
+      "situation": "Say what they must do (masculine)",
+      "cue": "they must (masculine)",
+      "answer": "ils doivent",
+      "hint": "{ils doivent}",
+      "mistakes": [
+        {
+          "answer": "ils dois",
+          "feedback": "Ils takes '{doivent}', not 'dois'. Irregular form!"
+        },
+        {
+          "answer": "ils doit",
+          "feedback": "Ils takes '{doivent}', not 'doit'. Very irregular!"
+        }
+      ]
+    },
+    {
+      "id": "i-elles-doivent",
+      "type": "respond",
+      "situation": "Say what they must do (feminine)",
+      "cue": "they must (feminine)",
+      "answer": "elles doivent",
+      "hint": "{elles doivent}",
+      "mistakes": [
+        {
+          "answer": "elles dois",
+          "feedback": "Elles takes '{doivent}', not 'dois'. Same as ils doivent"
+        },
+        {
+          "answer": "elles doit",
+          "feedback": "Elles takes '{doivent}', not 'doit'. Very irregular!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-dois-faire-ca",
+      "type": "respond",
+      "situation": "Say what you must do with that",
+      "cue": "I must do that",
+      "answer": "je dois faire ça",
+      "hint": "{je dois faire + ça}",
+      "mistakes": [
+        {
+          "answer": "je doit faire ça",
+          "feedback": "Je takes '{dois}', not 'doit'. Remember: je dois, il doit"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Ask what someone must do with that",
+      "cue": "What must you do with that?",
+      "answer": "qu'est-ce que tu dois faire avec ça?",
+      "hint": "{qu'est-ce que tu dois faire + avec ça}",
+      "mistakes": [
+        {
+          "answer": "que dois-tu faire avec ça?",
+          "feedback": "More common: qu'est-ce que tu dois faire avec ça?"
+        }
+      ]
+    },
+    {
+      "id": "i-il-doit-faire-ca",
+      "type": "respond",
+      "situation": "Say what he must do with that",
+      "cue": "He must do that",
+      "answer": "il doit faire ça",
+      "hint": "{il doit faire + ça}",
+      "mistakes": [
+        {
+          "answer": "il dois faire ça",
+          "feedback": "Il takes '{doit}', not 'dois'. Remember: il doit, elle doit"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-devons-faire-ca",
+      "type": "respond",
+      "situation": "Say what we must do with that",
+      "cue": "We must do that",
+      "answer": "nous devons faire ça",
+      "hint": "{nous devons faire + ça}",
+      "mistakes": [
+        {
+          "answer": "nous dois faire ça",
+          "feedback": "Nous takes '{devons}', not 'dois'. Regular ending!"
+        }
+      ]
+    },
+    {
+      "id": "i-pourquoi-dois-tu-aller",
+      "type": "respond",
+      "situation": "Say why you must go",
+      "cue": "Why must you go?",
+      "answer": "pourquoi dois-tu aller?",
+      "hint": "{pourquoi dois-tu aller}",
+      "mistakes": [
+        {
+          "answer": "pourquoi vas-tu?",
+          "feedback": "This needs devoir! Try: pourquoi dois-tu aller?"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-devons-aller-a",
+      "type": "respond",
+      "situation": "Say where you must go",
+      "cue": "We must go to Paris",
+      "answer": "nous devons aller à Paris",
+      "hint": "{nous devons aller + à Paris}",
+      "mistakes": [
+        {
+          "answer": "nous allons à Paris",
+          "feedback": "This needs devoir! Try: nous devons aller à Paris"
+        }
+      ]
+    },
+    {
+      "id": "i-il-doit-partir-maintenant",
+      "type": "respond",
+      "situation": "Say when someone must leave",
+      "cue": "He must leave now",
+      "answer": "il doit partir maintenant",
+      "hint": "{il doit partir + maintenant}",
+      "mistakes": [
+        {
+          "answer": "il part maintenant",
+          "feedback": "This needs devoir! Try: il doit partir maintenant"
+        }
+      ]
+    },
+    {
+      "id": "i-quand-dois-tu-partir",
+      "type": "respond",
+      "situation": "Ask when someone must leave",
+      "cue": "When must you leave?",
+      "answer": "quand dois-tu partir?",
+      "hint": "{quand dois-tu partir}",
+      "mistakes": [
+        {
+          "answer": "quand pars-tu?",
+          "feedback": "This needs devoir! Try: quand dois-tu partir?"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-doivent-l-avoir",
+      "type": "respond",
+      "situation": "Say what they must have",
+      "cue": "They must have it",
+      "answer": "ils doivent l'avoir",
+      "hint": "{ils doivent l'avoir}",
+      "mistakes": [
+        {
+          "answer": "ils l'ont",
+          "feedback": "This needs devoir! Try: ils doivent l'avoir"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask what someone must have",
+      "cue": "What must you have?",
+      "answer": "qu'est-ce que tu dois avoir?",
+      "hint": "{qu'est-ce que tu dois avoir}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu as?",
+          "feedback": "This needs devoir! Try: qu'est-ce que tu dois avoir?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-dois-etre-bon",
+      "type": "respond",
+      "situation": "Say what you must be",
+      "cue": "I must be good",
+      "answer": "je dois être bon",
+      "hint": "{je dois être + bon}",
+      "mistakes": [
+        {
+          "answer": "je suis bon",
+          "feedback": "This needs devoir! Try: je dois être bon"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-3",
+      "type": "respond",
+      "situation": "Ask what someone must be",
+      "cue": "What must you be?",
+      "answer": "qu'est-ce que tu dois être?",
+      "hint": "{qu'est-ce que tu dois être}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu es?",
+          "feedback": "This needs devoir! Try: qu'est-ce que tu dois être?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-20-comment-complex",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Complex comment Questions - Ask How Things Work",
+  "description": "Master asking 'how' about processes: Comment est-ce qu'une tortue nage? Comment est-ce qu'un écureuil saute? Comment est-ce qu'on fait ça?",
+  "vocabulary": [
+    {
+      "word_id": "comment-est-ce-que-fr",
+      "fr": "comment est-ce que",
+      "gloss": "how",
+      "note": "⭐ already learned - now compose with any subject!"
+    },
+    {
+      "word_id": "comment-est-ce-qu-une-tortue-nage-fr",
+      "fr": "Comment est-ce qu'une tortue nage?",
+      "gloss": "How does a turtle swim?",
+      "note": "animal + movement question"
+    },
+    {
+      "word_id": "comment-est-ce-qu-un-oiseau-vole-fr",
+      "fr": "Comment est-ce qu'un oiseau vole?",
+      "gloss": "How does a bird fly?",
+      "note": "animal + movement question"
+    },
+    {
+      "word_id": "comment-est-ce-qu-un-ecureuil-saute-fr",
+      "fr": "Comment est-ce qu'un écureuil saute?",
+      "gloss": "How does a squirrel jump?",
+      "note": "animal + movement question"
+    },
+    {
+      "word_id": "comment-est-ce-qu-un-lapin-saute-fr",
+      "fr": "Comment est-ce qu'un lapin saute?",
+      "gloss": "How does a rabbit jump?",
+      "note": "animal + movement question"
+    },
+    {
+      "word_id": "comment-est-ce-que-les-plantes-poussent-fr",
+      "fr": "Comment est-ce que les plantes poussent?",
+      "gloss": "How do plants grow?",
+      "note": "natural process question"
+    },
+    {
+      "word_id": "comment-est-ce-qu-on-fait-ca-fr",
+      "fr": "Comment est-ce qu'on fait ça?",
+      "gloss": "How do we do that?",
+      "note": "practical question - very common!"
+    },
+    {
+      "word_id": "comment-est-ce-que-tu-fais-ca-fr",
+      "fr": "Comment est-ce que tu fais ça?",
+      "gloss": "How do you do that?",
+      "note": "asking for method"
+    },
+    {
+      "word_id": "comment-est-ce-qu-il-court-si-vite-fr",
+      "fr": "Comment est-ce qu'il court si vite?",
+      "gloss": "How does he run so fast?",
+      "note": "with adverb 'si vite'"
+    },
+    {
+      "word_id": "comment-nage-une-tortue-fr",
+      "fr": "Comment nage une tortue?",
+      "gloss": "How does a turtle swim?",
+      "note": "FORMAL inversion - same meaning"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-comment-est-ce-que",
+      "term": "comment est-ce que + [subject] + [verb]",
+      "definition": "Pattern for asking how something does something - subject does the action",
+      "example": "{Comment est-ce qu'une tortue nage? Comment est-ce qu'un oiseau vole?}"
+    },
+    {
+      "id": "c-animals-movement-questions",
+      "term": "Animals + Movement Questions",
+      "definition": "Perfect for asking how animals perform their characteristic movements",
+      "example": "{Comment est-ce qu'un lapin saute? Comment est-ce qu'un poisson nage?}"
+    },
+    {
+      "id": "c-natural-process-questions",
+      "term": "Natural Process Questions",
+      "definition": "Ask how natural phenomena occur",
+      "example": "{Comment est-ce que les plantes poussent? Comment est-ce que le soleil brille?}"
+    },
+    {
+      "id": "c-people-questions",
+      "term": "People Questions",
+      "definition": "Ask how people do things - very practical!",
+      "example": "{Comment est-ce qu'on fait ça? Comment est-ce que tu fais ça? Comment est-ce qu'il court si vite?}"
+    },
+    {
+      "id": "c-formal-inversion-introduction",
+      "term": "Formal Inversion (Introduction)",
+      "definition": "In formal French, you can invert subject-verb: Comment nage une tortue?",
+      "example": "Informal: Comment est-ce qu'une tortue nage? Formal: {Comment nage une tortue?}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-comment-est-ce-qu",
+      "type": "respond",
+      "situation": "How does a turtle swim?",
+      "answer": "comment est-ce qu'une tortue nage?",
+      "accept": [
+        "comment est-ce qu'une tortue nage"
+      ],
+      "hint": "{comment est-ce que + une tortue nage}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-2",
+      "type": "respond",
+      "situation": "How does a bird fly?",
+      "answer": "comment est-ce qu'un oiseau vole?",
+      "accept": [
+        "comment est-ce qu'un oiseau vole"
+      ],
+      "hint": "{comment est-ce que + un oiseau vole}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-3",
+      "type": "respond",
+      "situation": "How does a squirrel jump?",
+      "answer": "comment est-ce qu'un écureuil saute?",
+      "accept": [
+        "comment est-ce qu'un écureuil saute",
+        "comment est-ce qu'un ecureuil saute",
+        "comment est-ce qu'un ecureuil saute?"
+      ],
+      "hint": "{comment est-ce que + un écureuil saute}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-4",
+      "type": "respond",
+      "situation": "How does a rabbit jump?",
+      "answer": "comment est-ce qu'un lapin saute?",
+      "accept": [
+        "comment est-ce qu'un lapin saute"
+      ],
+      "hint": "{comment est-ce que + un lapin saute}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-5",
+      "type": "respond",
+      "situation": "How does a squirrel climb?",
+      "answer": "comment est-ce qu'un écureuil grimpe?",
+      "accept": [
+        "comment est-ce qu'un écureuil grimpe",
+        "comment est-ce qu'un ecureuil grimpe",
+        "comment est-ce qu'un ecureuil grimpe?"
+      ],
+      "hint": "{comment est-ce que + un écureuil grimpe}"
+    },
+    {
+      "id": "i-comment-est-ce-que",
+      "type": "respond",
+      "situation": "How do plants grow?",
+      "answer": "comment est-ce que les plantes poussent?",
+      "accept": [
+        "comment est-ce que les plantes poussent"
+      ],
+      "hint": "{comment est-ce que + les plantes poussent}"
+    },
+    {
+      "id": "i-comment-est-ce-que-2",
+      "type": "respond",
+      "situation": "How does the sun shine?",
+      "answer": "comment est-ce que le soleil brille?",
+      "accept": [
+        "comment est-ce que le soleil brille"
+      ],
+      "hint": "{comment est-ce que + le soleil brille}"
+    },
+    {
+      "id": "i-comment-est-ce-que-3",
+      "type": "respond",
+      "situation": "How does rain fall?",
+      "answer": "comment est-ce que la pluie tombe?",
+      "accept": [
+        "comment est-ce que la pluie tombe"
+      ],
+      "hint": "{comment est-ce que + la pluie tombe}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-6",
+      "type": "respond",
+      "situation": "How do we do that?",
+      "answer": "comment est-ce qu'on fait ça?",
+      "accept": [
+        "comment est-ce qu'on fait ça"
+      ],
+      "hint": "{comment est-ce que + on fait ça}"
+    },
+    {
+      "id": "i-comment-est-ce-que-4",
+      "type": "respond",
+      "situation": "How do you do that?",
+      "answer": "comment est-ce que tu fais ça?",
+      "accept": [
+        "comment est-ce que tu fais ça"
+      ],
+      "hint": "{comment est-ce que + tu fais ça}"
+    },
+    {
+      "id": "i-comment-est-ce-que-5",
+      "type": "respond",
+      "situation": "How do you swim?",
+      "answer": "comment est-ce que tu nages?",
+      "accept": [
+        "comment est-ce que tu nages"
+      ],
+      "hint": "{comment est-ce que + tu nages}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-7",
+      "type": "respond",
+      "situation": "How does he run so fast?",
+      "answer": "comment est-ce qu'il court si vite?",
+      "accept": [
+        "comment est-ce qu'il court si vite"
+      ],
+      "hint": "{comment est-ce que + il court si vite}"
+    },
+    {
+      "id": "i-comment-est-ce-que-6",
+      "type": "respond",
+      "situation": "How does that make grass green?",
+      "answer": "comment est-ce que ça rend l'herbe verte?",
+      "accept": [
+        "comment est-ce que ça rend l'herbe verte"
+      ],
+      "hint": "{comment est-ce que + ça rend l'herbe verte}"
+    },
+    {
+      "id": "i-comment-nage-une-tortue",
+      "type": "respond",
+      "situation": "Ask 'How does a turtle swim?' (FORMAL inversion)",
+      "cue": "How does a turtle swim? (formal)",
+      "answer": "comment nage une tortue?",
+      "accept": [
+        "comment nage une tortue"
+      ],
+      "hint": "comment + nage + une tortue (invert verb-subject!)"
+    },
+    {
+      "id": "i-comment-vole-un-oiseau",
+      "type": "respond",
+      "situation": "Ask 'How does a bird fly?' (FORMAL inversion)",
+      "cue": "How does a bird fly? (formal)",
+      "answer": "comment vole un oiseau?",
+      "accept": [
+        "comment vole un oiseau"
+      ],
+      "hint": "{comment + vole + un oiseau}"
+    },
+    {
+      "id": "i-comment-est-ce-qu-8",
+      "type": "respond",
+      "situation": "Ask 'How does one do that?' (formal with '{on}')",
+      "cue": "How does one do that?",
+      "answer": "comment est-ce qu'on fait ça?",
+      "accept": [
+        "comment est-ce qu'on fait ça",
+        "comment fait-on ça",
+        "comment fait-on ça?"
+      ],
+      "hint": "{comment est-ce que + on fait ça}"
+    }
+  ]
+}

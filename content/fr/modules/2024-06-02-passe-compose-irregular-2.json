@@ -1,0 +1,539 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-02-passe-compose-irregular-2",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Irregular Past Participles - Set 2 (wanted, could, had to, said)",
+  "description": "Learn modal verbs and -RE verbs in past tense: vouloir → voulu (wanted), pouvoir → pu (could), devoir → dû (had to), dire → dit (said), prendre → pris (took)",
+  "can_do": [
+    "Express past desires, abilities, and obligations (wanted, could, had to)",
+    "Say 'I wanted to go', 'I could come', 'I had to work'",
+    "Use irregular past forms for modal and -RE verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-ai-voulu-fr",
+      "fr": "j'ai voulu",
+      "gloss": "I wanted",
+      "note": "⭐ vouloir → voulu (irregular!)"
+    },
+    {
+      "word_id": "j-ai-pu-fr",
+      "fr": "j'ai pu",
+      "gloss": "I could / I was able to",
+      "note": "⭐ pouvoir → pu (irregular!)"
+    },
+    {
+      "word_id": "j-ai-du-fr",
+      "fr": "j'ai dû",
+      "gloss": "I had to / I must have",
+      "note": "⭐ devoir → dû (irregular! - accent)"
+    },
+    {
+      "word_id": "j-ai-dit-fr",
+      "fr": "j'ai dit",
+      "gloss": "I said",
+      "note": "⭐ dire → dit (irregular!)"
+    },
+    {
+      "word_id": "j-ai-pris-fr",
+      "fr": "j'ai pris",
+      "gloss": "I took",
+      "note": "⭐ prendre → pris (irregular!)"
+    },
+    {
+      "word_id": "j-ai-mis-fr",
+      "fr": "j'ai mis",
+      "gloss": "I put",
+      "note": "mettre → mis (irregular!)"
+    },
+    {
+      "word_id": "j-ai-compris-fr",
+      "fr": "j'ai compris",
+      "gloss": "I understood",
+      "note": "comprendre → compris (like prendre)"
+    },
+    {
+      "word_id": "j-ai-appris-fr",
+      "fr": "j'ai appris",
+      "gloss": "I learned",
+      "note": "apprendre → appris (like prendre)"
+    },
+    {
+      "word_id": "le-manteau-fr",
+      "fr": "le manteau",
+      "gloss": "the coat",
+      "note": "masculine noun - winter clothing"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-modal-verbs-with-u",
+      "term": "Modal verbs with -u ending",
+      "definition": "vouloir → voulu, pouvoir → pu, devoir → dû (all end in -u)",
+      "example": "{J'ai voulu partir} (I wanted to leave), {J'ai pu venir} (I could come), {J'ai dû travailler} (I had to work)"
+    },
+    {
+      "id": "c-dire-dit-said",
+      "term": "{dire} → {dit} (said)",
+      "definition": "Irregular past participle: j'ai dit, tu as dit, il a dit",
+      "example": "{J'ai dit oui} (I said yes), {Tu as dit non} (You said no)"
+    },
+    {
+      "id": "c-prendre-family-is-ending",
+      "term": "prendre family → -is ending",
+      "definition": "{prendre → pris, comprendre → compris, apprendre → appris}",
+      "example": "{J'ai pris le bus} (I took the bus), {J'ai compris} (I understood), {J'ai appris le français} (I learned French)"
+    },
+    {
+      "id": "c-mettre-mis-put",
+      "term": "{mettre} → {mis} (put)",
+      "definition": "Irregular past participle: j'ai mis, tu as mis, il a mis",
+      "example": "{J'ai mis mon manteau} (I put on my coat), {J'ai mis ça là} (I put that there)"
+    },
+    {
+      "id": "c-modal-verbs-infinitive-in",
+      "term": "Modal verbs + infinitive in past",
+      "definition": "Modal verbs can be followed by infinitives in past tense",
+      "example": "{J'ai voulu aller} (I wanted to go), {J'ai pu venir} (I was able to come), {J'ai dû partir} (I had to leave)"
+    },
+    {
+      "id": "c-all-use-avoir-as",
+      "term": "All use AVOIR as auxiliary",
+      "definition": "All these verbs use '{avoir}' (not être) in passé composé",
+      "example": "{j'ai voulu}, {j'ai pu}, {j'ai dû}, {j'ai dit}, {j'ai pris}, {j'ai mis}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-ai-voulu",
+      "type": "gapfill",
+      "text": "J'___ partir mais je n'ai pas pu",
+      "blanks": [
+        {
+          "answer": "ai voulu"
+        }
+      ],
+      "gloss": "I wanted to leave but I couldn't",
+      "hint": "Use '{vouloir}'",
+      "mistakes": [
+        {
+          "answer": "ai vouloir",
+          "feedback": "The past participle of vouloir is '{voulu}': j'ai voulu."
+        },
+        {
+          "answer": "voulais",
+          "feedback": "That's imparfait! Use passé composé: j'ai voulu (I wanted)."
+        },
+        {
+          "answer": "ai pu",
+          "feedback": "'Pu' is for pouvoir (could)! Use '{voulu}' for vouloir (wanted)."
+        }
+      ]
+    },
+    {
+      "id": "i-as-pu",
+      "type": "gapfill",
+      "text": "Tu ___ venir?",
+      "blanks": [
+        {
+          "answer": "as pu"
+        }
+      ],
+      "gloss": "Could you come? / Were you able to come?",
+      "hint": "Use '{pouvoir}'",
+      "mistakes": [
+        {
+          "answer": "as pouvoir",
+          "feedback": "The past participle of pouvoir is '{pu}': tu as pu."
+        },
+        {
+          "answer": "peux",
+          "feedback": "That's present tense! Use passé composé: tu as pu (you could)."
+        },
+        {
+          "answer": "pouvais",
+          "feedback": "That's imparfait! Use passé composé: tu as pu (you were able to)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-du",
+      "type": "gapfill",
+      "text": "Elle ___ travailler hier",
+      "blanks": [
+        {
+          "answer": "a dû"
+        }
+      ],
+      "gloss": "She had to work yesterday",
+      "hint": "Use '{devoir}'",
+      "mistakes": [
+        {
+          "answer": "a devoir",
+          "feedback": "The past participle of devoir is '{dû}': elle a dû."
+        },
+        {
+          "answer": "doit",
+          "feedback": "That's present tense! Use passé composé: elle a dû (she had to)."
+        },
+        {
+          "answer": "devait",
+          "feedback": "That's imparfait! Use passé composé: elle a dû (she had to)."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-dit",
+      "type": "gapfill",
+      "text": "J'___ oui",
+      "blanks": [
+        {
+          "answer": "ai dit"
+        }
+      ],
+      "gloss": "I said yes",
+      "hint": "Use '{dire}'",
+      "mistakes": [
+        {
+          "answer": "ai dire",
+          "feedback": "The past participle of dire is '{dit}': j'ai dit."
+        },
+        {
+          "answer": "dis",
+          "feedback": "That's present tense! Use passé composé: j'ai dit (I said)."
+        },
+        {
+          "answer": "disais",
+          "feedback": "That's imparfait! Use passé composé: j'ai dit (I said yes)."
+        }
+      ]
+    },
+    {
+      "id": "i-avons-pris",
+      "type": "gapfill",
+      "text": "Nous ___ le bus",
+      "blanks": [
+        {
+          "answer": "avons pris"
+        }
+      ],
+      "gloss": "We took the bus",
+      "hint": "Use '{prendre}'",
+      "mistakes": [
+        {
+          "answer": "avons prendre",
+          "feedback": "The past participle of prendre is '{pris}': nous avons pris."
+        },
+        {
+          "answer": "prenons",
+          "feedback": "That's present tense! Use passé composé: nous avons pris (we took)."
+        },
+        {
+          "answer": "prenions",
+          "feedback": "That's imparfait! Use passé composé: nous avons pris (we took)."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-mis",
+      "type": "gapfill",
+      "text": "Vous ___ mon manteau?",
+      "blanks": [
+        {
+          "answer": "avez mis"
+        }
+      ],
+      "gloss": "Did you put my coat somewhere?",
+      "hint": "Use '{mettre}'",
+      "mistakes": [
+        {
+          "answer": "avez mettre",
+          "feedback": "The past participle of mettre is '{mis}': vous avez mis."
+        },
+        {
+          "answer": "mettez",
+          "feedback": "That's present tense! Use passé composé: vous avez mis (you put)."
+        }
+      ]
+    },
+    {
+      "id": "i-ont-compris",
+      "type": "gapfill",
+      "text": "Ils ___ la leçon",
+      "blanks": [
+        {
+          "answer": "ont compris"
+        }
+      ],
+      "gloss": "They understood the lesson",
+      "hint": "Use '{comprendre}'",
+      "mistakes": [
+        {
+          "answer": "ont comprendre",
+          "feedback": "The past participle of comprendre is '{compris}': ils ont compris."
+        },
+        {
+          "answer": "comprennent",
+          "feedback": "That's present tense! Use passé composé: ils ont compris (they understood)."
+        },
+        {
+          "answer": "ont pris",
+          "feedback": "'Pris' is for prendre (took)! Use '{compris}' for comprendre (understood)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-appris",
+      "type": "gapfill",
+      "text": "On ___ le français",
+      "blanks": [
+        {
+          "answer": "a appris"
+        }
+      ],
+      "gloss": "We learned French",
+      "hint": "Use '{apprendre}'",
+      "mistakes": [
+        {
+          "answer": "a apprendre",
+          "feedback": "The past participle of apprendre is '{appris}': on a appris."
+        },
+        {
+          "answer": "apprend",
+          "feedback": "That's present tense! Use passé composé: on a appris (we learned)."
+        },
+        {
+          "answer": "a pris",
+          "feedback": "'Pris' is for prendre (took)! Use '{appris}' for apprendre (learned)."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-pu",
+      "type": "gapfill",
+      "text": "Je n'___ pas ___ aller",
+      "blanks": [
+        {
+          "answer": "ai"
+        },
+        {
+          "answer": "pu"
+        }
+      ],
+      "gloss": "I couldn't go / I wasn't able to go",
+      "hint": "Use '{pouvoir}'",
+      "mistakes": [
+        {
+          "answer": "ai pas pouvoir",
+          "feedback": "The past participle of pouvoir is '{pu}': je n'ai pas pu."
+        },
+        {
+          "answer": "peux pas",
+          "feedback": "That's present tense! Use passé composé: je n'ai pas pu aller."
+        }
+      ]
+    },
+    {
+      "id": "i-as-voulu",
+      "type": "gapfill",
+      "text": "Tu n'___ pas ___ venir?",
+      "blanks": [
+        {
+          "answer": "as"
+        },
+        {
+          "answer": "voulu"
+        }
+      ],
+      "gloss": "Didn't you want to come?",
+      "hint": "Use '{vouloir}'",
+      "mistakes": [
+        {
+          "answer": "as pas vouloir",
+          "feedback": "The past participle of vouloir is '{voulu}': tu n'as pas voulu."
+        },
+        {
+          "answer": "veux pas",
+          "feedback": "That's present tense! Use passé composé: tu n'as pas voulu venir?"
+        }
+      ]
+    },
+    {
+      "id": "i-a-du-2",
+      "type": "gapfill",
+      "text": "Elle ___ partir tôt",
+      "blanks": [
+        {
+          "answer": "a dû"
+        }
+      ],
+      "gloss": "She had to leave early",
+      "hint": "Use '{devoir}'",
+      "mistakes": [
+        {
+          "answer": "a devoir",
+          "feedback": "The past participle of devoir is '{dû}': elle a dû."
+        },
+        {
+          "answer": "doit",
+          "feedback": "That's present tense! Use passé composé: elle a dû partir."
+        }
+      ]
+    },
+    {
+      "id": "i-as-dit",
+      "type": "gapfill",
+      "text": "Qu'est-ce que tu ___ ?",
+      "blanks": [
+        {
+          "answer": "as dit"
+        }
+      ],
+      "gloss": "What did you say?",
+      "hint": "Use '{dire}'",
+      "mistakes": [
+        {
+          "answer": "as dire",
+          "feedback": "The past participle of dire is '{dit}': tu as dit."
+        },
+        {
+          "answer": "dis",
+          "feedback": "That's present tense! Use passé composé: tu as dit (you said)."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-pris",
+      "type": "gapfill",
+      "text": "J'___ un café",
+      "blanks": [
+        {
+          "answer": "ai pris"
+        }
+      ],
+      "gloss": "I had a coffee / I took a coffee",
+      "hint": "Use '{prendre}'",
+      "mistakes": [
+        {
+          "answer": "ai prendre",
+          "feedback": "The past participle of prendre is '{pris}': j'ai pris."
+        },
+        {
+          "answer": "prends",
+          "feedback": "That's present tense! Use passé composé: j'ai pris (I had/took)."
+        }
+      ]
+    },
+    {
+      "id": "i-avons-mis",
+      "type": "gapfill",
+      "text": "Nous ___ nos livres sur la table",
+      "blanks": [
+        {
+          "answer": "avons mis"
+        }
+      ],
+      "gloss": "We put our books on the table",
+      "hint": "Use '{mettre}'",
+      "mistakes": [
+        {
+          "answer": "avons mettre",
+          "feedback": "The past participle of mettre is '{mis}': nous avons mis."
+        },
+        {
+          "answer": "mettons",
+          "feedback": "That's present tense! Use passé composé: nous avons mis (we put)."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-compris",
+      "type": "gapfill",
+      "text": "Vous ___ ?",
+      "blanks": [
+        {
+          "answer": "avez compris"
+        }
+      ],
+      "gloss": "Did you understand?",
+      "hint": "Use '{comprendre}'",
+      "mistakes": [
+        {
+          "answer": "avez comprendre",
+          "feedback": "The past participle of comprendre is '{compris}': vous avez compris."
+        },
+        {
+          "answer": "comprenez",
+          "feedback": "That's present tense! Use passé composé: vous avez compris (you understood)."
+        }
+      ]
+    },
+    {
+      "id": "i-ont-appris",
+      "type": "gapfill",
+      "text": "Ils ___ beaucoup",
+      "blanks": [
+        {
+          "answer": "ont appris"
+        }
+      ],
+      "gloss": "They learned a lot",
+      "hint": "Use '{apprendre}'",
+      "mistakes": [
+        {
+          "answer": "ont apprendre",
+          "feedback": "The past participle of apprendre is '{appris}': ils ont appris."
+        },
+        {
+          "answer": "apprennent",
+          "feedback": "That's present tense! Use passé composé: ils ont appris (they learned)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-dit",
+      "type": "gapfill",
+      "text": "On ___ non",
+      "blanks": [
+        {
+          "answer": "a dit"
+        }
+      ],
+      "gloss": "We said no / One said no",
+      "hint": "Use '{dire}'",
+      "mistakes": [
+        {
+          "answer": "a dire",
+          "feedback": "The past participle of dire is '{dit}': on a dit."
+        },
+        {
+          "answer": "dit",
+          "feedback": "You need the auxiliary 'a'! It's '{on a dit non}', not just '{dit non}'."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-voulu-2",
+      "type": "gapfill",
+      "text": "J'___ aller au cinéma mais je n'ai pas eu le temps",
+      "blanks": [
+        {
+          "answer": "ai voulu"
+        }
+      ],
+      "gloss": "I wanted to go to the cinema but I didn't have time",
+      "hint": "Use '{vouloir}'",
+      "mistakes": [
+        {
+          "answer": "ai vouloir",
+          "feedback": "The past participle of vouloir is '{voulu}': j'ai voulu aller."
+        },
+        {
+          "answer": "voulais",
+          "feedback": "That's imparfait! Use passé composé: j'ai voulu (I wanted)."
+        }
+      ]
+    }
+  ]
+}

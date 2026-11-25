@@ -1,0 +1,259 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-01-pronouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Core Pronouns - The Building Blocks",
+  "description": "Master the 9 most essential words in French. These are your foundation - they communicate who is talking, who they are talking to, and who you're talking about.",
+  "can_do": [
+    "Use all 9 essential French pronouns (I, you, he, she, we, they)",
+    "Distinguish between formal and informal 'you'",
+    "Understand the foundation for all French sentences"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-fr",
+      "fr": "je",
+      "gloss": "I",
+      "note": "first person singular"
+    },
+    {
+      "word_id": "tu-fr",
+      "fr": "tu",
+      "gloss": "you (informal)",
+      "note": "singular, friends/family"
+    },
+    {
+      "word_id": "il-fr",
+      "fr": "il",
+      "gloss": "he",
+      "note": "masculine singular"
+    },
+    {
+      "word_id": "elle-fr",
+      "fr": "elle",
+      "gloss": "she",
+      "note": "feminine singular"
+    },
+    {
+      "word_id": "nous-fr",
+      "fr": "nous",
+      "gloss": "we",
+      "note": "first person plural"
+    },
+    {
+      "word_id": "vous-fr",
+      "fr": "vous",
+      "gloss": "you (formal/plural)",
+      "note": "strangers/groups"
+    },
+    {
+      "word_id": "ils-fr",
+      "fr": "ils",
+      "gloss": "they (masculine)",
+      "note": "masc or mixed group"
+    },
+    {
+      "word_id": "elles-fr",
+      "fr": "elles",
+      "gloss": "they (feminine)",
+      "note": "all feminine group"
+    },
+    {
+      "word_id": "on-fr",
+      "fr": "on",
+      "gloss": "we (informal) / one / people",
+      "note": "⭐ Uses il/elle verb forms! More common than 'nous'!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-subject-pronouns",
+      "term": "Subject Pronouns",
+      "definition": "Words that replace nouns as the subject of a sentence",
+      "example": "9 essential words: I, you, he, she, we, you (formal), they (masc), they (fem), {on}"
+    },
+    {
+      "id": "c-singular-vs-plural",
+      "term": "Singular vs Plural",
+      "definition": "4 singular pronouns (one person) and 4 plural pronouns (multiple people)",
+      "example": "I/you/he/she are singular, we/you all/they are plural"
+    },
+    {
+      "id": "c-formal-vs-informal",
+      "term": "Formal vs Informal",
+      "definition": "French has TWO words for \"you\" - informal (friends) and formal (strangers/bosses)",
+      "example": "Friends vs strangers require different pronouns"
+    },
+    {
+      "id": "c-on-the-special-pronoun",
+      "term": "{On} - The Special Pronoun",
+      "definition": "The most common way to say 'we' in French - more natural than '{nous}'",
+      "example": "{On va au café} (We're going to the café) - uses il/elle verb forms, not nous forms"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je",
+      "type": "respond",
+      "situation": "You're talking about yourself. Use this pronoun",
+      "cue": "I",
+      "answer": "je",
+      "hint": "First person singular",
+      "mistakes": [
+        {
+          "answer": "tu",
+          "feedback": "That's 'you', not 'I'"
+        },
+        {
+          "answer": "il",
+          "feedback": "That's 'he', not 'I'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu",
+      "type": "respond",
+      "situation": "You're talking to a friend. Use this pronoun",
+      "cue": "you (informal - friends/family)",
+      "answer": "tu",
+      "hint": "Informal second person - use with friends",
+      "mistakes": [
+        {
+          "answer": "je",
+          "feedback": "That's 'I', not 'you'"
+        },
+        {
+          "answer": "vous",
+          "feedback": "That's formal 'you' - use tu with friends"
+        }
+      ]
+    },
+    {
+      "id": "i-il",
+      "type": "respond",
+      "situation": "You're talking about a man. Use this pronoun",
+      "cue": "he",
+      "answer": "il",
+      "hint": "Third person masculine",
+      "mistakes": [
+        {
+          "answer": "elle",
+          "feedback": "That's 'she', not 'he'"
+        },
+        {
+          "answer": "ils",
+          "feedback": "That's plural 'they', not 'he'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle",
+      "type": "respond",
+      "situation": "You're talking about a woman. Use this pronoun",
+      "cue": "she",
+      "answer": "elle",
+      "hint": "Third person feminine",
+      "mistakes": [
+        {
+          "answer": "il",
+          "feedback": "That's 'he', not 'she'"
+        },
+        {
+          "answer": "elles",
+          "feedback": "That's plural 'they', not 'she'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous",
+      "type": "respond",
+      "situation": "You're talking about yourself and others. Use this pronoun",
+      "cue": "we",
+      "answer": "nous",
+      "hint": "First person plural - includes yourself",
+      "mistakes": [
+        {
+          "answer": "vous",
+          "feedback": "That's 'you', not 'we'"
+        },
+        {
+          "answer": "ils",
+          "feedback": "That's 'they', not 'we'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous",
+      "type": "respond",
+      "situation": "You're talking to a stranger or your boss. Use this pronoun",
+      "cue": "you (formal or plural - strangers/groups)",
+      "answer": "vous",
+      "hint": "Formal second person - use with strangers or multiple people",
+      "mistakes": [
+        {
+          "answer": "tu",
+          "feedback": "That's informal - use vous with strangers"
+        },
+        {
+          "answer": "nous",
+          "feedback": "That's 'we', not 'you'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils",
+      "type": "respond",
+      "situation": "You're talking about a group of men (or mixed group). Use this pronoun",
+      "cue": "they (masculine or mixed group)",
+      "answer": "ils",
+      "hint": "Third person plural masculine",
+      "mistakes": [
+        {
+          "answer": "elles",
+          "feedback": "That's feminine 'they', use ils for masculine/mixed"
+        },
+        {
+          "answer": "nous",
+          "feedback": "That's 'we', not 'they'"
+        }
+      ]
+    },
+    {
+      "id": "i-elles",
+      "type": "respond",
+      "situation": "You're talking about a group of women. Use this pronoun",
+      "cue": "they (all feminine group)",
+      "answer": "elles",
+      "hint": "Third person plural feminine - only for all-female groups",
+      "mistakes": [
+        {
+          "answer": "ils",
+          "feedback": "That's masculine 'they', use elles for all-feminine"
+        },
+        {
+          "answer": "elle",
+          "feedback": "That's singular 'she', not plural 'they'"
+        }
+      ]
+    },
+    {
+      "id": "i-on",
+      "type": "respond",
+      "situation": "You're talking informally about yourself and others. Use this pronoun",
+      "cue": "we (informal - most common way)",
+      "answer": "on",
+      "hint": "The most natural way to say 'we' in French - uses il/elle verb forms",
+      "mistakes": [
+        {
+          "answer": "nous",
+          "feedback": "That's formal 'we' - on is more common and natural"
+        },
+        {
+          "answer": "ils",
+          "feedback": "That's 'they', not 'we'"
+        }
+      ]
+    }
+  ]
+}

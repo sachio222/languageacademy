@@ -1,0 +1,108 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-14-commands-vous",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Commands - vous form (Formal/Plural)",
+  "description": "Give formal or plural commands: Mangez! (Eat!), Parlez! (Speak!), Écoutez! (Listen!)",
+  "can_do": [
+    "Give formal or plural commands politely",
+    "Instruct groups or strangers (Eat! Speak! Listen!)",
+    "Use vous command form in professional contexts"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "mangez-fr",
+      "fr": "Mangez!",
+      "gloss": "Eat! (formal/plural)",
+      "note": "command from manger"
+    },
+    {
+      "word_id": "parlez-fr",
+      "fr": "Parlez!",
+      "gloss": "Speak! (formal/plural)",
+      "note": "command from parler"
+    },
+    {
+      "word_id": "ecoutez-fr",
+      "fr": "Écoutez!",
+      "gloss": "Listen! (formal/plural)",
+      "note": "⭐ very common!"
+    },
+    {
+      "word_id": "regardez-fr",
+      "fr": "Regardez!",
+      "gloss": "Look! (formal/plural)",
+      "note": "command from regarder"
+    },
+    {
+      "word_id": "venez-fr",
+      "fr": "Venez!",
+      "gloss": "Come! (formal/plural)",
+      "note": "command from venir"
+    },
+    {
+      "word_id": "prenez-fr",
+      "fr": "Prenez!",
+      "gloss": "Take! (formal/plural)",
+      "note": "command from prendre"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-vous-commands-formal-or",
+      "term": "vous Commands = Formal or Groups",
+      "definition": "Use vous form for strangers, bosses, or multiple people",
+      "example": "To strangers: Mangez! To a group: {Venez!} (Come!)"
+    },
+    {
+      "id": "c-easy-formation-drop-the",
+      "term": "Easy Formation: Drop the Pronoun!",
+      "definition": "Just use vous form without saying '{vous}'",
+      "example": "{vous mangez} → {Mangez!}, {vous parlez} → {Parlez!}"
+    },
+    {
+      "id": "c-keep-the-ez-ending",
+      "term": "Keep the -ez Ending",
+      "definition": "Unlike tu commands, vous commands keep all letters!",
+      "example": "{Mangez!} (not Mange!), {Parlez!} (not Parle!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "commands-vous-1",
+      "type": "respond",
+      "situation": "Give the command 'Eat!' (formal)",
+      "cue": "Eat! (formal)",
+      "answer": "mangez",
+      "hint": "{vous mangez → Mangez!}"
+    },
+    {
+      "id": "commands-vous-2",
+      "type": "respond",
+      "situation": "Give the command 'Speak!' (formal)",
+      "cue": "Speak! (formal)",
+      "answer": "parlez",
+      "hint": "{vous parlez → Parlez!}"
+    },
+    {
+      "id": "commands-vous-3",
+      "type": "respond",
+      "situation": "Give the command 'Listen!' (formal)",
+      "cue": "Listen! (formal)",
+      "answer": "écoutez",
+      "accept": [
+        "ecoutez"
+      ],
+      "hint": "{vous écoutez → Écoutez!}"
+    },
+    {
+      "id": "commands-vous-4",
+      "type": "respond",
+      "situation": "Give the command 'Come!' (formal)",
+      "cue": "Come! (formal)",
+      "answer": "venez",
+      "hint": "{vous venez → Venez!}"
+    }
+  ]
+}

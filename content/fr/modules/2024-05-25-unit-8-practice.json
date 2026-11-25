@@ -1,0 +1,279 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-25-unit-8-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Daily Life & Actions Practice - Fill in the Blanks",
+  "description": "Complete sentences using temporal words, reflexive verbs, and commands from this unit!",
+  "can_do": [
+    "Describe daily routines with reflexive verbs",
+    "Use temporal words to sequence events",
+    "Apply commands and routine vocabulary naturally"
+  ],
+  "items": [
+    {
+      "id": "i-d-abord-ensuite",
+      "type": "gapfill",
+      "text": "___, je mange. ___, je pars.",
+      "blanks": [
+        {
+          "answer": "d'abord"
+        },
+        {
+          "answer": "ensuite"
+        }
+      ],
+      "gloss": "First, I eat. Then, I leave.",
+      "hint": "first / first of all / then / next"
+    },
+    {
+      "id": "i-avant",
+      "type": "gapfill",
+      "text": "___ le cours, j'étudie.",
+      "blanks": [
+        {
+          "answer": "avant"
+        }
+      ],
+      "gloss": "Before class, I study",
+      "hint": "before"
+    },
+    {
+      "id": "i-apres",
+      "type": "gapfill",
+      "text": "___ le cours, je révise.",
+      "blanks": [
+        {
+          "answer": "après"
+        }
+      ],
+      "gloss": "After class, I review",
+      "hint": "after"
+    },
+    {
+      "id": "i-m-appelle",
+      "type": "gapfill",
+      "text": "Je ___ Marie.",
+      "blanks": [
+        {
+          "answer": "m'appelle"
+        }
+      ],
+      "gloss": "My name is Marie",
+      "hint": "s'appeler for je"
+    },
+    {
+      "id": "i-t-appelles",
+      "type": "gapfill",
+      "text": "Comment tu ___?",
+      "blanks": [
+        {
+          "answer": "t'appelles"
+        }
+      ],
+      "gloss": "What's your name?",
+      "hint": "s'appeler for tu"
+    },
+    {
+      "id": "i-me-reveille",
+      "type": "gapfill",
+      "text": "Je ___ à sept heures.",
+      "blanks": [
+        {
+          "answer": "me réveille"
+        }
+      ],
+      "gloss": "I wake up at 7am",
+      "hint": "se réveiller for je"
+    },
+    {
+      "id": "i-me-leve",
+      "type": "gapfill",
+      "text": "Ensuite, je ___.",
+      "blanks": [
+        {
+          "answer": "me lève"
+        }
+      ],
+      "gloss": "Then, I get up",
+      "hint": "se lever for je"
+    },
+    {
+      "id": "i-me-lave",
+      "type": "gapfill",
+      "text": "Je ___.",
+      "blanks": [
+        {
+          "answer": "me lave"
+        }
+      ],
+      "gloss": "I wash myself",
+      "hint": "se laver for je"
+    },
+    {
+      "id": "i-m-habille",
+      "type": "gapfill",
+      "text": "Je ___ bien.",
+      "blanks": [
+        {
+          "answer": "m'habille"
+        }
+      ],
+      "gloss": "I get dressed well",
+      "hint": "s'habiller for je"
+    },
+    {
+      "id": "i-se-prepare",
+      "type": "gapfill",
+      "text": "On ___ pour le cours.",
+      "blanks": [
+        {
+          "answer": "se prépare"
+        }
+      ],
+      "gloss": "We get ready for class",
+      "hint": "se préparer with on"
+    },
+    {
+      "id": "i-me-souviens",
+      "type": "gapfill",
+      "text": "Je ___ de ça.",
+      "blanks": [
+        {
+          "answer": "me souviens"
+        }
+      ],
+      "gloss": "I remember that",
+      "hint": "se souvenir for je"
+    },
+    {
+      "id": "i-s-amuse",
+      "type": "gapfill",
+      "text": "On ___ bien.",
+      "blanks": [
+        {
+          "answer": "s'amuse"
+        }
+      ],
+      "gloss": "We're having fun",
+      "hint": "s'amuser with on"
+    },
+    {
+      "id": "i-me-depeche",
+      "type": "gapfill",
+      "text": "Je ___ parce que je suis en retard.",
+      "blanks": [
+        {
+          "answer": "me dépêche"
+        }
+      ],
+      "gloss": "I'm hurrying because I'm late",
+      "hint": "se dépêcher for je"
+    },
+    {
+      "id": "i-me-suis-reveille",
+      "type": "gapfill",
+      "text": "Je ___ à sept heures ce matin.",
+      "blanks": [
+        {
+          "answer": "me suis réveillé"
+        }
+      ],
+      "gloss": "'I woke up at 7am this morning' (past tense)",
+      "hint": "reflexive past: me suis + past participle"
+    },
+    {
+      "id": "i-s-est-levee",
+      "type": "gapfill",
+      "text": "Elle ___ tard.",
+      "blanks": [
+        {
+          "answer": "s'est levée"
+        }
+      ],
+      "gloss": "'She got up late' (past tense)",
+      "hint": "reflexive past with feminine agreement"
+    },
+    {
+      "id": "i-se-voit",
+      "type": "gapfill",
+      "text": "On ___ demain.",
+      "blanks": [
+        {
+          "answer": "se voit"
+        }
+      ],
+      "gloss": "We'll see each other tomorrow",
+      "hint": "reciprocal: on se voir"
+    },
+    {
+      "id": "i-nous-comprenons",
+      "type": "gapfill",
+      "text": "Nous ___ bien.",
+      "blanks": [
+        {
+          "answer": "nous comprenons"
+        }
+      ],
+      "gloss": "We understand each other well",
+      "hint": "reciprocal: nous nous comprendre"
+    },
+    {
+      "id": "i-ecoute",
+      "type": "gapfill",
+      "text": "___!",
+      "blanks": [
+        {
+          "answer": "écoute"
+        }
+      ],
+      "gloss": "'Listen!' (informal command)",
+      "hint": "command from écouter"
+    },
+    {
+      "id": "i-parle",
+      "type": "gapfill",
+      "text": "___ en français!",
+      "blanks": [
+        {
+          "answer": "parle"
+        }
+      ],
+      "gloss": "'Speak in French!' (informal command)",
+      "hint": "command from parler"
+    },
+    {
+      "id": "i-fais",
+      "type": "gapfill",
+      "text": "___ attention!",
+      "blanks": [
+        {
+          "answer": "fais"
+        }
+      ],
+      "gloss": "'Pay attention!' (informal command)",
+      "hint": "irregular command from faire"
+    },
+    {
+      "id": "i-apres-m-habille-me",
+      "type": "gapfill",
+      "text": "___ le café, je ___ et je ___.",
+      "blanks": [
+        {
+          "answer": "après"
+        },
+        {
+          "answer": "me lave"
+        },
+        {
+          "answer": "m'habille"
+        }
+      ],
+      "gloss": "After coffee, I wash and I get dressed",
+      "hint": "temporal: after / se laver for {je} / s'habiller for {je}"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

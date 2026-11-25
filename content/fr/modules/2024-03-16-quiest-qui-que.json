@@ -1,0 +1,289 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-16-quiest-qui-que",
+  "kind": "lesson",
+  "status": "written",
+  "title": "qui est-ce qui vs qui est-ce que - Master 'Who' Questions",
+  "description": "Same pattern as WHAT questions, but for WHO! qui est-ce qui (who DOES - subject) vs qui est-ce que (who DO you - object). Transfer learning!",
+  "vocabulary": [
+    {
+      "word_id": "qui-est-ce-qui-fr",
+      "fr": "qui est-ce qui",
+      "gloss": "who (subject)",
+      "note": "⭐ SUBJECT: who DOES something"
+    },
+    {
+      "word_id": "qui-est-ce-que-fr",
+      "fr": "qui est-ce que",
+      "gloss": "who (object)",
+      "note": "⭐ OBJECT: who DO you verb"
+    },
+    {
+      "word_id": "qui-est-ce-qui-parle-fr",
+      "fr": "Qui est-ce qui parle?",
+      "gloss": "Who speaks?",
+      "note": "SUBJECT question - person is doing the speaking"
+    },
+    {
+      "word_id": "qui-est-ce-qui-fait-ca-fr",
+      "fr": "Qui est-ce qui fait ça?",
+      "gloss": "Who does that?",
+      "note": "SUBJECT question - person is doing that"
+    },
+    {
+      "word_id": "qui-est-ce-qui-nage-fr",
+      "fr": "Qui est-ce qui nage?",
+      "gloss": "Who swims?",
+      "note": "SUBJECT question - person is swimming"
+    },
+    {
+      "word_id": "qui-est-ce-qui-parle-francais-fr",
+      "fr": "Qui est-ce qui parle français?",
+      "gloss": "Who speaks French?",
+      "note": "SUBJECT question"
+    },
+    {
+      "word_id": "qui-est-ce-que-tu-vois-fr",
+      "fr": "Qui est-ce que tu vois?",
+      "gloss": "Who do you see?",
+      "note": "OBJECT question - you are seeing WHOM"
+    },
+    {
+      "word_id": "qui-est-ce-que-tu-aimes-fr",
+      "fr": "Qui est-ce que tu aimes?",
+      "gloss": "Who do you like?",
+      "note": "OBJECT question - you are liking WHOM"
+    },
+    {
+      "word_id": "qui-est-ce-que-je-dois-appeler-fr",
+      "fr": "Qui est-ce que je dois appeler?",
+      "gloss": "Who should I call?",
+      "note": "OBJECT question - I should call WHOM"
+    },
+    {
+      "word_id": "qui-est-ce-que-tu-connais-fr",
+      "fr": "Qui est-ce que tu connais?",
+      "gloss": "Who do you know?",
+      "note": "OBJECT question - you know WHOM"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-same-pattern-as-qu",
+      "term": "Same Pattern as qu'est-ce qui/{que!}",
+      "definition": "You already know this pattern from the qu'est-ce qui module - just change WHAT to WHO!",
+      "example": "{qu'est-ce qui} → {qui est-ce qui} (what DOES → who DOES), {qu'est-ce que} → {qui est-ce que} (what DO you → who DO you)"
+    },
+    {
+      "id": "c-qui-est-ce-qui",
+      "term": "{qui est-ce qui} - Subject Questions",
+      "definition": "Use QUI when asking WHO is doing the action. No other subject after qui!",
+      "example": "{Qui est-ce qui parle?} (Who speaks?), {Qui est-ce qui fait ça?} (Who does that?), {Qui est-ce qui nage?} (Who swims?)"
+    },
+    {
+      "id": "c-qui-est-ce-que",
+      "term": "{qui est-ce que} - Object Questions",
+      "definition": "Use QUE when asking who someone DOES something to. Subject comes after que!",
+      "example": "{Qui est-ce que tu vois?} (Who do you see?), {Qui est-ce que tu aimes?} (Who do you like?), {Qui est-ce que je dois appeler?} (Who should I call?)"
+    },
+    {
+      "id": "c-transfer-learning-from-qu",
+      "term": "Transfer Learning from qu'est-ce qui Module",
+      "definition": "You mastered qu'est-ce qui/que discrimination - same rule applies here!",
+      "example": "Subject (thing doing action) → QUI. Object (thing receiving action) → {QUE}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-qui-est-ce-qui",
+      "type": "respond",
+      "situation": "Ask 'Who speaks?' (subject question)",
+      "cue": "Who speaks?",
+      "answer": "qui est-ce qui parle?",
+      "accept": [
+        "qui est-ce qui parle"
+      ],
+      "hint": "qui est-ce qui + parle (the person speaks)",
+      "mistakes": [
+        {
+          "answer": "qui est-ce que parle?",
+          "feedback": "Use 'qui est-ce QUI' for who DOES something (subject). Same rule as qu'est-ce qui/que!"
+        },
+        {
+          "answer": "qui est-ce que parle",
+          "feedback": "Use 'qui est-ce QUI' when the person is doing the action. QUI = subject!"
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-qui-2",
+      "type": "respond",
+      "situation": "Ask 'Who does that?' (subject question)",
+      "cue": "Who does that?",
+      "answer": "qui est-ce qui fait ça?",
+      "accept": [
+        "qui est-ce qui fait ça"
+      ],
+      "hint": "{qui est-ce qui + fait ça}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-3",
+      "type": "respond",
+      "situation": "Ask 'Who swims?' (subject question)",
+      "cue": "Who swims?",
+      "answer": "qui est-ce qui nage?",
+      "accept": [
+        "qui est-ce qui nage"
+      ],
+      "hint": "{qui est-ce qui + nage}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-4",
+      "type": "respond",
+      "situation": "Ask 'Who speaks French?' (subject question)",
+      "cue": "Who speaks French?",
+      "answer": "qui est-ce qui parle français?",
+      "accept": [
+        "qui est-ce qui parle français",
+        "qui est-ce qui parle francais",
+        "qui est-ce qui parle francais?"
+      ],
+      "hint": "{qui est-ce qui + parle français}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-5",
+      "type": "respond",
+      "situation": "Ask 'Who runs fast?' (subject question)",
+      "cue": "Who runs fast?",
+      "answer": "qui est-ce qui court vite?",
+      "accept": [
+        "qui est-ce qui court vite"
+      ],
+      "hint": "{qui est-ce qui + court vite}"
+    },
+    {
+      "id": "i-qui-est-ce-que",
+      "type": "respond",
+      "situation": "Ask 'Who do you see?' (object question)",
+      "cue": "Who do you see?",
+      "answer": "qui est-ce que tu vois?",
+      "accept": [
+        "qui est-ce que tu vois"
+      ],
+      "hint": "qui est-ce que + tu vois (you see WHOM)",
+      "mistakes": [
+        {
+          "answer": "qui est-ce qui tu vois?",
+          "feedback": "Use '{qui est-ce QUE}' for who you DO something to (object). You see WHOM."
+        },
+        {
+          "answer": "qui est-ce qui tu vois",
+          "feedback": "Use '{qui est-ce QUE}' for object questions. You are seeing WHOM - that's the object!"
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask 'Who do you like?' (object question)",
+      "cue": "Who do you like?",
+      "answer": "qui est-ce que tu aimes?",
+      "accept": [
+        "qui est-ce que tu aimes"
+      ],
+      "hint": "{qui est-ce que + tu aimes}"
+    },
+    {
+      "id": "i-qui-est-ce-que-3",
+      "type": "respond",
+      "situation": "Ask 'Who should I call?' (object question)",
+      "cue": "Who should I call?",
+      "answer": "qui est-ce que je dois appeler?",
+      "accept": [
+        "qui est-ce que je dois appeler"
+      ],
+      "hint": "{qui est-ce que + je dois appeler}"
+    },
+    {
+      "id": "i-qui-est-ce-que-4",
+      "type": "respond",
+      "situation": "Ask 'Who do you know?' (object question)",
+      "cue": "Who do you know?",
+      "answer": "qui est-ce que tu connais?",
+      "accept": [
+        "qui est-ce que tu connais"
+      ],
+      "hint": "{qui est-ce que + tu connais}"
+    },
+    {
+      "id": "i-qui-est-ce-que-5",
+      "type": "respond",
+      "situation": "Ask 'Who are you looking for?' (object question)",
+      "cue": "Who are you looking for?",
+      "answer": "qui est-ce que tu cherches?",
+      "accept": [
+        "qui est-ce que tu cherches"
+      ],
+      "hint": "{qui est-ce que + tu cherches}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-6",
+      "type": "respond",
+      "situation": "Ask 'Who works here?' (subject)",
+      "cue": "Who works here?",
+      "answer": "qui est-ce qui travaille ici?",
+      "accept": [
+        "qui est-ce qui travaille ici"
+      ],
+      "hint": "{qui est-ce qui + travaille ici}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-7",
+      "type": "respond",
+      "situation": "Ask 'Who lives in Paris?' (subject)",
+      "cue": "Who lives in Paris?",
+      "answer": "qui est-ce qui vit à Paris?",
+      "accept": [
+        "qui est-ce qui vit à Paris",
+        "qui est-ce qui vit a Paris",
+        "qui est-ce qui vit a Paris?"
+      ],
+      "hint": "{qui est-ce qui + vit à Paris}"
+    },
+    {
+      "id": "i-qui-est-ce-que-6",
+      "type": "respond",
+      "situation": "Ask 'Who did you meet?' (object, past tense)",
+      "cue": "Who did you meet?",
+      "answer": "qui est-ce que tu as rencontré?",
+      "accept": [
+        "qui est-ce que tu as rencontré",
+        "qui est-ce que tu as rencontre",
+        "qui est-ce que tu as rencontre?"
+      ],
+      "hint": "{qui est-ce que + tu as rencontré}"
+    },
+    {
+      "id": "i-qui-est-ce-qui-8",
+      "type": "respond",
+      "situation": "Compare: 'What does that?' vs 'Who does that?' - use QUI for both!",
+      "cue": "Who does that?",
+      "answer": "qui est-ce qui fait ça?",
+      "accept": [
+        "qui est-ce qui fait ça"
+      ],
+      "hint": "{qui est-ce qui...}"
+    },
+    {
+      "id": "i-qui-est-ce-que-7",
+      "type": "respond",
+      "situation": "Compare: 'What do you see?' vs 'Who do you see?' - use QUE for both!",
+      "cue": "Who do you see?",
+      "answer": "qui est-ce que tu vois?",
+      "accept": [
+        "qui est-ce que tu vois"
+      ],
+      "hint": "{qui est-ce que...}"
+    }
+  ]
+}

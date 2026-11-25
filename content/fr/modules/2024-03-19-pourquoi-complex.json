@@ -1,0 +1,293 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-19-pourquoi-complex",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Complex pourquoi Questions - Ask Why About Anything",
+  "description": "Master asking 'why' about ANY process: Pourquoi est-ce que le ciel est bleu? Pourquoi est-ce que les oiseaux volent? Combine pourquoi with all tenses and structures!",
+  "vocabulary": [
+    {
+      "word_id": "pourquoi-est-ce-que-fr",
+      "fr": "pourquoi est-ce que",
+      "gloss": "why",
+      "note": "⭐ already learned - now compose with everything!"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-le-ciel-est-bleu-fr",
+      "fr": "Pourquoi est-ce que le ciel est bleu?",
+      "gloss": "Why is the sky blue?",
+      "note": "nature curiosity question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-l-herbe-est-verte-fr",
+      "fr": "Pourquoi est-ce que l'herbe est verte?",
+      "gloss": "Why is grass green?",
+      "note": "nature curiosity question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-les-nuages-sont-blancs-fr",
+      "fr": "Pourquoi est-ce que les nuages sont blancs?",
+      "gloss": "Why are clouds white?",
+      "note": "nature curiosity question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-le-soleil-brille-fr",
+      "fr": "Pourquoi est-ce que le soleil brille?",
+      "gloss": "Why does the sun shine?",
+      "note": "natural phenomenon question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-les-oiseaux-volent-fr",
+      "fr": "Pourquoi est-ce que les oiseaux volent?",
+      "gloss": "Why do birds fly?",
+      "note": "animal behavior question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-les-plantes-poussent-fr",
+      "fr": "Pourquoi est-ce que les plantes poussent?",
+      "gloss": "Why do plants grow?",
+      "note": "natural process question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-qu-il-pleut-fr",
+      "fr": "Pourquoi est-ce qu'il pleut?",
+      "gloss": "Why does it rain?",
+      "note": "weather question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-qu-il-fait-ca-fr",
+      "fr": "Pourquoi est-ce qu'il fait ça?",
+      "gloss": "Why does he do that?",
+      "note": "action question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-tu-cours-fr",
+      "fr": "Pourquoi est-ce que tu cours?",
+      "gloss": "Why are you running?",
+      "note": "movement question"
+    },
+    {
+      "word_id": "pourquoi-est-ce-que-c-est-comme-ca-fr",
+      "fr": "Pourquoi est-ce que c'est comme ça?",
+      "gloss": "Why is it like that?",
+      "note": "general question"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-pourquoi-any-structure",
+      "term": "pourquoi + ANY Structure",
+      "definition": "You already know pourquoi - now compose it with EVERYTHING you've learned so far!",
+      "example": "{Pourquoi + être}, {avoir}, action verbs, progressive, past tense, reflexive, modal verbs = infinite questions"
+    },
+    {
+      "id": "c-basic-pattern-pourquoi-est",
+      "term": "Basic Pattern: pourquoi est-ce que + statement",
+      "definition": "Take any statement and add pourquoi est-ce que before it",
+      "example": "Statement: {Le ciel est bleu} → {Question}: {Pourquoi est-ce que le ciel est bleu?}"
+    },
+    {
+      "id": "c-nature-curiosity-questions",
+      "term": "Nature Curiosity Questions",
+      "definition": "Ask why about natural phenomena using vocabulary from previous modules",
+      "example": "{Pourquoi est-ce que le soleil brille? Pourquoi est-ce que l'herbe est verte? Pourquoi est-ce que les nuages sont blancs?}"
+    },
+    {
+      "id": "c-with-all-tenses",
+      "term": "With All Tenses",
+      "definition": "Pourquoi works with present, past, imparfait, and all verb forms",
+      "example": "Present: Pourquoi tu fais ça? Past: Pourquoi as-tu fait ça? Progressive: {Pourquoi es-tu en train de faire ça?}"
+    },
+    {
+      "id": "c-infinite-composition-power",
+      "term": "Infinite Composition Power",
+      "definition": "Once you master pourquoi, you can ask 'why' about literally anything you can say in French!",
+      "example": "Any vocabulary × pourquoi × any tense = unlimited curiosity questions"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-pourquoi-est-ce-que",
+      "type": "respond",
+      "situation": "Why is the sky blue?",
+      "answer": "pourquoi est-ce que le ciel est bleu?",
+      "accept": [
+        "pourquoi est-ce que le ciel est bleu"
+      ],
+      "hint": "{pourquoi est-ce que + le ciel est bleu}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-2",
+      "type": "respond",
+      "situation": "Why is grass green?",
+      "answer": "pourquoi est-ce que l'herbe est verte?",
+      "accept": [
+        "pourquoi est-ce que l'herbe est verte"
+      ],
+      "hint": "{pourquoi est-ce que + l'herbe est verte}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-3",
+      "type": "respond",
+      "situation": "Why are clouds white?",
+      "answer": "pourquoi est-ce que les nuages sont blancs?",
+      "accept": [
+        "pourquoi est-ce que les nuages sont blancs"
+      ],
+      "hint": "{pourquoi est-ce que + les nuages sont blancs}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-4",
+      "type": "respond",
+      "situation": "Why is it like that?",
+      "answer": "pourquoi est-ce que c'est comme ça?",
+      "accept": [
+        "pourquoi est-ce que c'est comme ça"
+      ],
+      "hint": "{pourquoi est-ce que + c'est comme ça}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu",
+      "type": "respond",
+      "situation": "Why does he have that?",
+      "answer": "pourquoi est-ce qu'il a ça?",
+      "accept": [
+        "pourquoi est-ce qu'il a ça"
+      ],
+      "hint": "{pourquoi est-ce que + il a ça}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-5",
+      "type": "respond",
+      "situation": "Why do birds have wings?",
+      "answer": "pourquoi est-ce que les oiseaux ont des ailes?",
+      "accept": [
+        "pourquoi est-ce que les oiseaux ont des ailes"
+      ],
+      "hint": "{pourquoi est-ce que + les oiseaux ont des ailes}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-6",
+      "type": "respond",
+      "situation": "Why does the sun shine?",
+      "answer": "pourquoi est-ce que le soleil brille?",
+      "accept": [
+        "pourquoi est-ce que le soleil brille"
+      ],
+      "hint": "{pourquoi est-ce que + le soleil brille}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-7",
+      "type": "respond",
+      "situation": "Why do birds fly?",
+      "answer": "pourquoi est-ce que les oiseaux volent?",
+      "accept": [
+        "pourquoi est-ce que les oiseaux volent"
+      ],
+      "hint": "{pourquoi est-ce que + les oiseaux volent}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-8",
+      "type": "respond",
+      "situation": "Why do plants grow?",
+      "answer": "pourquoi est-ce que les plantes poussent?",
+      "accept": [
+        "pourquoi est-ce que les plantes poussent"
+      ],
+      "hint": "{pourquoi est-ce que + les plantes poussent}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu-2",
+      "type": "respond",
+      "situation": "Why does it rain?",
+      "answer": "pourquoi est-ce qu'il pleut?",
+      "accept": [
+        "pourquoi est-ce qu'il pleut"
+      ],
+      "hint": "{pourquoi est-ce que + il pleut}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-9",
+      "type": "respond",
+      "situation": "Why are you running?",
+      "answer": "pourquoi est-ce que tu cours?",
+      "accept": [
+        "pourquoi est-ce que tu cours"
+      ],
+      "hint": "{pourquoi est-ce que + tu cours}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu-3",
+      "type": "respond",
+      "situation": "Why does he do that?",
+      "answer": "pourquoi est-ce qu'il fait ça?",
+      "accept": [
+        "pourquoi est-ce qu'il fait ça"
+      ],
+      "hint": "{pourquoi est-ce que + il fait ça}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu-4",
+      "type": "respond",
+      "situation": "Ask 'Why is he doing that?' (progressive)",
+      "cue": "Why is he doing that?",
+      "answer": "pourquoi est-ce qu'il est en train de faire ça?",
+      "accept": [
+        "pourquoi est-ce qu'il est en train de faire ça"
+      ],
+      "hint": "{pourquoi est-ce que + il est en train de faire ça}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-10",
+      "type": "respond",
+      "situation": "Ask 'Why did you do that?' (passé composé)",
+      "cue": "Why did you do that?",
+      "answer": "pourquoi est-ce que tu as fait ça?",
+      "accept": [
+        "pourquoi est-ce que tu as fait ça"
+      ],
+      "hint": "{pourquoi est-ce que + tu as fait ça}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-11",
+      "type": "respond",
+      "situation": "Why do I have to do that?",
+      "answer": "pourquoi est-ce que je dois faire ça?",
+      "accept": [
+        "pourquoi est-ce que je dois faire ça"
+      ],
+      "hint": "{pourquoi est-ce que + je dois faire ça}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu-5",
+      "type": "respond",
+      "situation": "Why can we see the sun?",
+      "answer": "pourquoi est-ce qu'on peut voir le soleil?",
+      "accept": [
+        "pourquoi est-ce qu'on peut voir le soleil"
+      ],
+      "hint": "{pourquoi est-ce que + on peut voir le soleil}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-12",
+      "type": "respond",
+      "situation": "Why are you hurrying?",
+      "answer": "pourquoi est-ce que tu te dépêches?",
+      "accept": [
+        "pourquoi est-ce que tu te dépêches",
+        "pourquoi est-ce que tu te depeches?"
+      ],
+      "hint": "{pourquoi est-ce que + tu te dépêches}"
+    },
+    {
+      "id": "i-pourquoi-est-ce-que-13",
+      "type": "respond",
+      "situation": "Why do plants need water?",
+      "answer": "pourquoi est-ce que les plantes ont besoin d'eau?",
+      "accept": [
+        "pourquoi est-ce que les plantes ont besoin d'eau"
+      ],
+      "hint": "{pourquoi est-ce que + les plantes ont besoin d'eau}"
+    }
+  ]
+}

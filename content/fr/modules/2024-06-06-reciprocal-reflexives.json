@@ -1,0 +1,130 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-06-reciprocal-reflexives",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Reciprocal Reflexives - Each Other",
+  "description": "Express mutual actions: nous nous aimons (we love each other), ils se parlent (they talk to each other), on se voit (we see each other)",
+  "can_do": [
+    "Express mutual actions (we love each other, they see each other)",
+    "Talk about reciprocal relationships",
+    "Use reflexive pronouns for 'each other' meanings"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "nous-nous-aimons-fr",
+      "fr": "nous nous aimons",
+      "gloss": "we love each other",
+      "note": "⭐ reciprocal - mutual love"
+    },
+    {
+      "word_id": "nous-nous-parlons-fr",
+      "fr": "nous nous parlons",
+      "gloss": "we talk to each other",
+      "note": "mutual conversation"
+    },
+    {
+      "word_id": "on-se-voit-fr",
+      "fr": "on se voit",
+      "gloss": "we see each other",
+      "note": "⭐ very common!"
+    },
+    {
+      "word_id": "on-se-voit-demain-fr",
+      "fr": "on se voit demain",
+      "gloss": "we'll see each other tomorrow",
+      "note": "making plans"
+    },
+    {
+      "word_id": "ils-se-connaissent-fr",
+      "fr": "ils se connaissent",
+      "gloss": "they know each other",
+      "note": "acquaintances"
+    },
+    {
+      "word_id": "ils-se-parlent-fr",
+      "fr": "ils se parlent",
+      "gloss": "they talk to each other",
+      "note": "communication"
+    },
+    {
+      "word_id": "vous-vous-comprenez-fr",
+      "fr": "vous vous comprenez",
+      "gloss": "you understand each other",
+      "note": "mutual understanding"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-reciprocal-each-other",
+      "term": "Reciprocal = Each Other",
+      "definition": "Plural reflexive pronouns can mean 'each other' - mutual action!",
+      "example": "{nous nous aimons} (we love each other), {ils se regardent} (they look at each other)"
+    },
+    {
+      "id": "c-only-with-plural-subjects",
+      "term": "Only with Plural Subjects",
+      "definition": "You need nous, vous, ils, elles, or on to have 'each other'",
+      "example": "{nous nous parlons} (we talk to each other), {ils se connaissent} (they know each other)"
+    },
+    {
+      "id": "c-same-form-different-meaning",
+      "term": "Same Form, Different Meaning",
+      "definition": "The reflexive form is the same - context tells you if it's 'ourselves' or 'each other'",
+      "example": "{nous nous préparons} (we prepare ourselves OR we prepare each other - context!)"
+    },
+    {
+      "id": "c-common-reciprocal-expressions",
+      "term": "Common Reciprocal Expressions",
+      "definition": "Very common in relationships and social contexts",
+      "example": "{on se voit demain} (we'll see each other tomorrow), {ils se parlent} (they talk to each other)"
+    }
+  ],
+  "items": [
+    {
+      "id": "reciprocal-1",
+      "type": "respond",
+      "situation": "We love each other",
+      "answer": "nous nous aimons",
+      "hint": "{nous nous + aimer}"
+    },
+    {
+      "id": "reciprocal-2",
+      "type": "respond",
+      "situation": "Say 'We see each other' (using on)",
+      "cue": "We see each other",
+      "answer": "on se voit",
+      "hint": "{on se + voir}"
+    },
+    {
+      "id": "reciprocal-3",
+      "type": "respond",
+      "situation": "Say 'We'll see each other tomorrow' (using on)",
+      "cue": "We'll see each other tomorrow",
+      "answer": "on se voit demain",
+      "hint": "{on se voit + demain}"
+    },
+    {
+      "id": "reciprocal-4",
+      "type": "respond",
+      "situation": "They talk to each other",
+      "answer": "ils se parlent",
+      "hint": "{ils se + parler}"
+    },
+    {
+      "id": "reciprocal-5",
+      "type": "respond",
+      "situation": "They know each other",
+      "answer": "ils se connaissent",
+      "hint": "{ils se + connaître}"
+    },
+    {
+      "id": "reciprocal-6",
+      "type": "respond",
+      "situation": "Say 'You understand each other' (formal/plural)",
+      "cue": "You understand each other",
+      "answer": "vous vous comprenez",
+      "hint": "{vous vous + comprendre}"
+    }
+  ]
+}

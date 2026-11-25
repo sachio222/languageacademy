@@ -1,0 +1,330 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-13-search-and-find",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Search & Find - {chercher, trouver}",
+  "description": "Perfect action pair! chercher (to look for) + trouver (to find). '{Je cherche mes clés}' → '{J'ai trouvé!}' Extremely practical for daily life.",
+  "can_do": [
+    "Express searching and finding things (I'm looking for, I found)",
+    "Talk about lost items and discoveries",
+    "Use the natural search → find sequence"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "chercher-fr",
+      "fr": "chercher",
+      "gloss": "to look for / to search",
+      "note": "⭐ Rank 57 - regular -ER verb"
+    },
+    {
+      "word_id": "je-cherche-fr",
+      "fr": "je cherche",
+      "gloss": "I look for / I'm looking for",
+      "note": "present continuous meaning"
+    },
+    {
+      "word_id": "tu-cherches-fr",
+      "fr": "tu cherches",
+      "gloss": "you look for (informal)",
+      "note": "add -s for tu"
+    },
+    {
+      "word_id": "il-cherche-fr",
+      "fr": "il cherche",
+      "gloss": "he looks for",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-cherche-fr",
+      "fr": "elle cherche",
+      "gloss": "she looks for",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-cherchons-fr",
+      "fr": "nous cherchons",
+      "gloss": "we look for",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-cherchez-fr",
+      "fr": "vous cherchez",
+      "gloss": "you look for (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-cherchent-fr",
+      "fr": "ils cherchent",
+      "gloss": "they look for (masculine)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-cherchent-fr",
+      "fr": "elles cherchent",
+      "gloss": "they look for (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "trouver-fr",
+      "fr": "trouver",
+      "gloss": "to find",
+      "note": "⭐ Rank 58 - regular -ER verb"
+    },
+    {
+      "word_id": "je-trouve-fr",
+      "fr": "je trouve",
+      "gloss": "I find",
+      "note": "also means 'I think' (opinion)"
+    },
+    {
+      "word_id": "tu-trouves-fr",
+      "fr": "tu trouves",
+      "gloss": "you find (informal)",
+      "note": "add -s for tu"
+    },
+    {
+      "word_id": "il-trouve-fr",
+      "fr": "il trouve",
+      "gloss": "he finds",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-trouve-fr",
+      "fr": "elle trouve",
+      "gloss": "she finds",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-trouvons-fr",
+      "fr": "nous trouvons",
+      "gloss": "we find",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-trouvez-fr",
+      "fr": "vous trouvez",
+      "gloss": "you find (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-trouvent-fr",
+      "fr": "ils trouvent",
+      "gloss": "they find (masculine)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-trouvent-fr",
+      "fr": "elles trouvent",
+      "gloss": "they find (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "je-cherche-mes-cles-fr",
+      "fr": "je cherche mes clés",
+      "gloss": "I'm looking for my keys",
+      "note": "⭐ very common daily phrase"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-cherches-fr",
+      "fr": "qu'est-ce que tu cherches?",
+      "gloss": "what are you looking for?",
+      "note": "common question"
+    },
+    {
+      "word_id": "tu-cherches-quoi-fr",
+      "fr": "tu cherches quoi?",
+      "gloss": "what are you looking for? (casual)",
+      "note": "informal version"
+    },
+    {
+      "word_id": "j-ai-trouve-fr",
+      "fr": "j'ai trouvé!",
+      "gloss": "I found it!",
+      "note": "⭐ exclamation when you find something"
+    },
+    {
+      "word_id": "je-trouve-que-fr",
+      "fr": "je trouve que",
+      "gloss": "I think that / I find that",
+      "note": "opinion expression - very common"
+    },
+    {
+      "word_id": "tu-trouves-ca-comment-fr",
+      "fr": "tu trouves ça comment?",
+      "gloss": "what do you think of that?",
+      "note": "asking for opinion"
+    },
+    {
+      "word_id": "chercher-du-travail-fr",
+      "fr": "chercher du travail",
+      "gloss": "to look for work",
+      "note": "job searching"
+    },
+    {
+      "word_id": "trouver-du-travail-fr",
+      "fr": "trouver du travail",
+      "gloss": "to find work",
+      "note": "successful job search"
+    },
+    {
+      "word_id": "chercher-quelqu-un-fr",
+      "fr": "chercher quelqu'un",
+      "gloss": "to look for someone",
+      "note": "searching for a person"
+    },
+    {
+      "word_id": "trouver-quelqu-un-fr",
+      "fr": "trouver quelqu'un",
+      "gloss": "to find someone",
+      "note": "locating a person"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-chercher-to-look-for",
+      "term": "{chercher} = to look for / to search (rank 57)",
+      "definition": "Regular -ER verb for searching - used constantly in daily life",
+      "example": "{Je cherche mes clés} (I'm looking for my keys), {Tu cherches quoi?} (What are you looking for?)"
+    },
+    {
+      "id": "c-trouver-to-find-rank",
+      "term": "{trouver} = to find (rank 58)",
+      "definition": "Regular -ER verb for finding - the successful result of chercher!",
+      "example": "{J'ai trouvé!} (I found it!), {Tu trouves ça comment?} (What do you think of that?)"
+    },
+    {
+      "id": "c-the-perfect-sequence",
+      "term": "The Perfect Sequence",
+      "definition": "These two verbs form a natural action sequence",
+      "example": "{Je cherche} → {Je trouve} (I search → I find). The complete search-and-discovery process!"
+    },
+    {
+      "id": "c-extended-meanings",
+      "term": "Extended Meanings",
+      "definition": "Both verbs have broader meanings beyond physical searching",
+      "example": "{chercher} = try to do, {trouver} = think/consider ({Je trouve que...} = I think that...)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-cherche",
+      "type": "respond",
+      "situation": "I look for",
+      "answer": "je cherche",
+      "hint": "chercher for je"
+    },
+    {
+      "id": "i-tu-cherches",
+      "type": "respond",
+      "situation": "you look for (informal)",
+      "answer": "tu cherches",
+      "hint": "chercher for tu"
+    },
+    {
+      "id": "i-nous-cherchons",
+      "type": "respond",
+      "situation": "we look for",
+      "answer": "nous cherchons",
+      "hint": "chercher for nous"
+    },
+    {
+      "id": "i-je-trouve",
+      "type": "respond",
+      "situation": "I find",
+      "answer": "je trouve",
+      "hint": "trouver for je"
+    },
+    {
+      "id": "i-elle-trouve",
+      "type": "respond",
+      "situation": "she finds",
+      "answer": "elle trouve",
+      "hint": "trouver for elle"
+    },
+    {
+      "id": "i-ils-trouvent",
+      "type": "respond",
+      "situation": "they find",
+      "answer": "ils trouvent",
+      "hint": "trouver for ils"
+    },
+    {
+      "id": "i-je-cherche-mes-cles",
+      "type": "respond",
+      "situation": "I'm looking for my keys",
+      "answer": "je cherche mes clés",
+      "hint": "{je cherche + mes clés}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "What are you looking for?",
+      "answer": "qu'est-ce que tu cherches",
+      "accept": [
+        "tu cherches quoi"
+      ],
+      "hint": "{qu'est-ce que + tu cherches}"
+    },
+    {
+      "id": "i-j-ai-trouve",
+      "type": "respond",
+      "situation": "Exclaim: 'I found it!'",
+      "cue": "I found it!",
+      "answer": "j'ai trouvé!",
+      "accept": [
+        "je l'ai trouvé!"
+      ],
+      "hint": "j'ai trouvé (past tense) + exclamation"
+    },
+    {
+      "id": "i-je-trouve-que-c",
+      "type": "respond",
+      "situation": "Express opinion: 'I think that's good'",
+      "cue": "I think that's good",
+      "answer": "je trouve que c'est bon",
+      "accept": [
+        "je trouve ça bon"
+      ],
+      "hint": "{je trouve que + c'est bon}"
+    },
+    {
+      "id": "i-je-cherche-du-travail",
+      "type": "respond",
+      "situation": "I'm looking for work",
+      "answer": "je cherche du travail",
+      "hint": "{je cherche + du travail}"
+    },
+    {
+      "id": "i-tu-as-trouve-ton",
+      "type": "respond",
+      "situation": "Did you find your phone?",
+      "answer": "tu as trouvé ton téléphone?",
+      "accept": [
+        "as-tu trouvé ton téléphone?"
+      ],
+      "hint": "{tu as trouvé + ton téléphone}"
+    },
+    {
+      "id": "i-tu-trouves-ca-comment",
+      "type": "respond",
+      "situation": "Ask: 'How do you find this?' (opinion)",
+      "cue": "How do you find this? / What do you think of this?",
+      "answer": "tu trouves ça comment?",
+      "accept": [
+        "comment tu trouves ça?"
+      ],
+      "hint": "{tu trouves + ça comment}"
+    },
+    {
+      "id": "i-je-ne-peux-pas",
+      "type": "respond",
+      "situation": "I can't find it",
+      "answer": "je ne peux pas le trouver",
+      "accept": [
+        "je ne le trouve pas"
+      ],
+      "hint": "{je ne peux pas + le trouver}"
+    }
+  ]
+}

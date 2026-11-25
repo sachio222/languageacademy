@@ -1,0 +1,709 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2026-11-24-numbers",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Numbers - 0 to 100",
+  "description": "Count from 0 to 100, say how old you are and how many things you have.",
+  "can_do": [
+    "Count from 0 to 100 in French",
+    "Say how old you are: j'ai vingt ans",
+    "Say how many: nous avons deux enfants"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "zero-fr",
+      "fr": "zéro",
+      "gloss": "zero",
+      "note": "0"
+    },
+    {
+      "word_id": "un-fr.one",
+      "fr": "un",
+      "gloss": "one",
+      "note": "1, before a masculine noun"
+    },
+    {
+      "word_id": "une-fr.one",
+      "fr": "une",
+      "gloss": "one",
+      "note": "1, before a feminine noun"
+    },
+    {
+      "word_id": "deux-fr",
+      "fr": "deux",
+      "gloss": "two",
+      "note": "2"
+    },
+    {
+      "word_id": "trois-fr",
+      "fr": "trois",
+      "gloss": "three",
+      "note": "3"
+    },
+    {
+      "word_id": "quatre-fr",
+      "fr": "quatre",
+      "gloss": "four",
+      "note": "4"
+    },
+    {
+      "word_id": "cinq-fr",
+      "fr": "cinq",
+      "gloss": "five",
+      "note": "5"
+    },
+    {
+      "word_id": "six-fr",
+      "fr": "six",
+      "gloss": "six",
+      "note": "6"
+    },
+    {
+      "word_id": "sept-fr",
+      "fr": "sept",
+      "gloss": "seven",
+      "note": "7"
+    },
+    {
+      "word_id": "huit-fr",
+      "fr": "huit",
+      "gloss": "eight",
+      "note": "8"
+    },
+    {
+      "word_id": "neuf-fr",
+      "fr": "neuf",
+      "gloss": "nine",
+      "note": "9"
+    },
+    {
+      "word_id": "dix-fr",
+      "fr": "dix",
+      "gloss": "ten",
+      "note": "10"
+    },
+    {
+      "word_id": "onze-fr",
+      "fr": "onze",
+      "gloss": "eleven",
+      "note": "11"
+    },
+    {
+      "word_id": "douze-fr",
+      "fr": "douze",
+      "gloss": "twelve",
+      "note": "12"
+    },
+    {
+      "word_id": "treize-fr",
+      "fr": "treize",
+      "gloss": "thirteen",
+      "note": "13"
+    },
+    {
+      "word_id": "quatorze-fr",
+      "fr": "quatorze",
+      "gloss": "fourteen",
+      "note": "14"
+    },
+    {
+      "word_id": "quinze-fr",
+      "fr": "quinze",
+      "gloss": "fifteen",
+      "note": "15"
+    },
+    {
+      "word_id": "seize-fr",
+      "fr": "seize",
+      "gloss": "sixteen",
+      "note": "16"
+    },
+    {
+      "word_id": "dix-sept-fr",
+      "fr": "dix-sept",
+      "gloss": "seventeen",
+      "note": "17, ten-seven"
+    },
+    {
+      "word_id": "dix-huit-fr",
+      "fr": "dix-huit",
+      "gloss": "eighteen",
+      "note": "18"
+    },
+    {
+      "word_id": "dix-neuf-fr",
+      "fr": "dix-neuf",
+      "gloss": "nineteen",
+      "note": "19"
+    },
+    {
+      "word_id": "vingt-fr",
+      "fr": "vingt",
+      "gloss": "twenty",
+      "note": "20"
+    },
+    {
+      "word_id": "vingt-et-un-fr",
+      "fr": "vingt et un",
+      "gloss": "twenty-one",
+      "note": "21, also written vingt-et-un"
+    },
+    {
+      "word_id": "vingt-deux-fr",
+      "fr": "vingt-deux",
+      "gloss": "twenty-two",
+      "note": "22"
+    },
+    {
+      "word_id": "trente-fr",
+      "fr": "trente",
+      "gloss": "thirty",
+      "note": "30"
+    },
+    {
+      "word_id": "quarante-fr",
+      "fr": "quarante",
+      "gloss": "forty",
+      "note": "40"
+    },
+    {
+      "word_id": "cinquante-fr",
+      "fr": "cinquante",
+      "gloss": "fifty",
+      "note": "50"
+    },
+    {
+      "word_id": "soixante-fr",
+      "fr": "soixante",
+      "gloss": "sixty",
+      "note": "60"
+    },
+    {
+      "word_id": "soixante-dix-fr",
+      "fr": "soixante-dix",
+      "gloss": "seventy",
+      "note": "70, sixty-ten"
+    },
+    {
+      "word_id": "soixante-et-onze-fr",
+      "fr": "soixante et onze",
+      "gloss": "seventy-one",
+      "note": "71, sixty-eleven"
+    },
+    {
+      "word_id": "quatre-vingts-fr",
+      "fr": "quatre-vingts",
+      "gloss": "eighty",
+      "note": "80, four twenties"
+    },
+    {
+      "word_id": "quatre-vingt-un-fr",
+      "fr": "quatre-vingt-un",
+      "gloss": "eighty-one",
+      "note": "81, no s and no et"
+    },
+    {
+      "word_id": "quatre-vingt-dix-fr",
+      "fr": "quatre-vingt-dix",
+      "gloss": "ninety",
+      "note": "90, four twenties and ten"
+    },
+    {
+      "word_id": "cent-fr",
+      "fr": "cent",
+      "gloss": "one hundred",
+      "note": "100"
+    },
+    {
+      "word_id": "ans-fr",
+      "fr": "ans",
+      "gloss": "years (of age)",
+      "note": "j'ai vingt ans = I am 20"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-0-to-16",
+      "term": "0 to 16",
+      "definition": "Each number up to 16 has its own word. Learn these by heart.",
+      "example": "{zéro}, {un}, {deux}, {trois}, {quatre}, {cinq}, {six}, {sept}, {huit}, {neuf}, {dix}, {onze}, {douze}, {treize}, {quatorze}, {quinze}, {seize}"
+    },
+    {
+      "id": "c-17-to-19",
+      "term": "17 to 19",
+      "definition": "Say ten, then the number: 17 is ten-seven.",
+      "example": "{dix-sept} (17), {dix-huit} (18), {dix-neuf} (19)"
+    },
+    {
+      "id": "c-tens-up-to-60",
+      "term": "Tens up to 60",
+      "definition": "Learn the tens, then add the numbers 1 to 9 after them.",
+      "example": "{vingt} (20), {trente} (30), {quarante} (40), {cinquante} (50), {soixante} (60)"
+    },
+    {
+      "id": "c-21-31-41-51",
+      "term": "21, 31, 41, 51 and 61",
+      "definition": "Put '{et}' between the ten and '{un}'. From 2 to 9, join them with a hyphen. Before a feminine noun, 'un' becomes '{une}', as in '{une voiture}'.",
+      "example": "{vingt et un} (21), {vingt-deux} (22), {trente et un} (31), {quarante-cinq} (45), {cinquante et une voitures} (51)"
+    },
+    {
+      "id": "c-70-to-79",
+      "term": "70 to 79",
+      "definition": "French says 70 as sixty-ten, then counts on with 11 to 19: sixty-eleven, sixty-twelve, up to sixty-nineteen. 71 keeps '{et}': '{soixante et onze}'.",
+      "example": "{soixante-dix} (70), {soixante et onze} (71), {soixante-douze} (72), {soixante-quinze} (75), {soixante-dix-neuf} (79)"
+    },
+    {
+      "id": "c-80-to-100",
+      "term": "80 to 100",
+      "definition": "80 is four twenties, with an s. From 81 on, the s goes and there is no '{et}'. 90 to 99 add 10 to 19 to four twenties. 100 is '{cent}'.",
+      "example": "{quatre-vingts} (80), {quatre-vingt-un} (81), {quatre-vingt-cinq} (85), {quatre-vingt-dix} (90), {quatre-vingt-onze} (91), {quatre-vingt-dix-neuf} (99), {cent} (100)"
+    },
+    {
+      "id": "c-age-uses-avoir",
+      "term": "Age uses avoir",
+      "definition": "To give an age, French says you have that many years: '{avoir}', the number, then '{ans}'.",
+      "example": "J'ai vingt ans. Paul a trente et un ans. La maison a cent ans."
+    },
+    {
+      "id": "c-more-numbers-in-the",
+      "term": "More numbers in the Reference section",
+      "definition": "The Numbers page in the Reference section lists 200, 1,000 and more, and the words Belgium and Switzerland use for 70 and 90. Open it whenever you need a number.",
+      "example": "{deux cents} (200), {mille} (1,000)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-il-a-trois-chats",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Il a ___ chats. (3)",
+      "answer": "Il a trois chats.",
+      "accept": [
+        "trois"
+      ],
+      "hint": "3 is '{trois}'.",
+      "mistakes": [
+        {
+          "answer": "deux",
+          "feedback": "'Deux' is 2. Write 3."
+        },
+        {
+          "answer": "Il a deux chats.",
+          "feedback": "'Deux' is 2. Write 3."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-deux-enfants",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Nous avons ___ enfants. (2)",
+      "answer": "Nous avons deux enfants.",
+      "accept": [
+        "deux"
+      ],
+      "hint": "2 is '{deux}'.",
+      "mistakes": [
+        {
+          "answer": "des",
+          "feedback": "'Des' gives no number. Write 2."
+        },
+        {
+          "answer": "Nous avons des enfants.",
+          "feedback": "'Des' gives no number. Write 2."
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-une-voiture",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "J'ai ___ voiture. (1)",
+      "answer": "J'ai une voiture.",
+      "accept": [
+        "une"
+      ],
+      "hint": "'{Voiture}' is feminine.",
+      "mistakes": [
+        {
+          "answer": "un",
+          "feedback": "'{Voiture}' is feminine, so 1 is '{une}'."
+        },
+        {
+          "answer": "J'ai un voiture.",
+          "feedback": "'Voiture' is feminine, so 1 is '{une}'."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-douze-livres",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Elle a ___ livres. (12)",
+      "answer": "Elle a douze livres.",
+      "accept": [
+        "douze"
+      ],
+      "hint": "12 has its own word.",
+      "mistakes": [
+        {
+          "answer": "deux",
+          "feedback": "'Deux' is 2. 12 is '{douze}'."
+        },
+        {
+          "answer": "Elle a deux livres.",
+          "feedback": "'Deux' is 2. 12 is '{douze}'."
+        }
+      ]
+    },
+    {
+      "id": "i-le-chien-a-seize",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Le chien a ___ ans. (16)",
+      "answer": "Le chien a seize ans.",
+      "accept": [
+        "seize"
+      ],
+      "hint": "16 has its own word, like 11 to 15.",
+      "mistakes": [
+        {
+          "answer": "six",
+          "feedback": "'Six' is 6. 16 is '{seize}'."
+        },
+        {
+          "answer": "Le chien a six ans.",
+          "feedback": "'Six' is 6. 16 is '{seize}'."
+        }
+      ]
+    },
+    {
+      "id": "i-dix-sept",
+      "type": "transform",
+      "instruction": "Fill in the next number in words",
+      "shown": "quinze, seize, ___",
+      "answer": "dix-sept",
+      "accept": [
+        "dix sept"
+      ],
+      "hint": "Ten, then seven.",
+      "mistakes": [
+        {
+          "answer": "sept",
+          "feedback": "'Sept' is 7. 17 is ten-seven: '{dix-sept}'."
+        }
+      ]
+    },
+    {
+      "id": "i-marie-a-dix-neuf",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Marie a ___ ans. (19)",
+      "answer": "Marie a dix-neuf ans.",
+      "accept": [
+        "dix-neuf",
+        "dix neuf",
+        "Marie a dix neuf ans."
+      ],
+      "hint": "Ten, then nine.",
+      "mistakes": [
+        {
+          "answer": "neuf",
+          "feedback": "'Neuf' is 9. 19 is '{dix-neuf}'."
+        },
+        {
+          "answer": "Marie a neuf ans.",
+          "feedback": "'Neuf' is 9. 19 is '{dix-neuf}'."
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-vingt-ans",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "J'ai ___ ans. (20)",
+      "answer": "J'ai vingt ans.",
+      "accept": [
+        "vingt"
+      ],
+      "hint": "For age, French uses avoir and '{ans}'.",
+      "mistakes": [
+        {
+          "answer": "Je suis vingt ans.",
+          "feedback": "Age uses avoir, not être: '{j'ai vingt ans}'."
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-vingt-et",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Tu as ___ ans. (21)",
+      "answer": "Tu as vingt et un ans.",
+      "accept": [
+        "vingt et un",
+        "vingt-et-un",
+        "Tu as vingt-et-un ans."
+      ],
+      "hint": "21 puts '{et}' between '{vingt}' and '{un}'.",
+      "mistakes": [
+        {
+          "answer": "vingt-un",
+          "feedback": "21 needs '{et}': '{vingt et un}'."
+        },
+        {
+          "answer": "Tu as vingt-un ans.",
+          "feedback": "21 needs '{et}': '{vingt et un}'."
+        }
+      ]
+    },
+    {
+      "id": "i-vous-avez-trente-cinq",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Vous avez ___ amis. (35)",
+      "answer": "Vous avez trente-cinq amis.",
+      "accept": [
+        "trente-cinq",
+        "trente cinq",
+        "Vous avez trente cinq amis."
+      ],
+      "hint": "30 is '{trente}'. Join 5 with a hyphen.",
+      "mistakes": [
+        {
+          "answer": "trente et cinq",
+          "feedback": "Only 21, 31, 41, 51, 61 and 71 take 'et'. 35 is 'trente-cinq'."
+        },
+        {
+          "answer": "Vous avez trente et cinq amis.",
+          "feedback": "Only 21, 31, 41, 51, 61 and 71 take 'et'. 35 is 'trente-cinq'."
+        }
+      ]
+    },
+    {
+      "id": "i-paul-a-quarante-huit",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Paul a ___ ans. (48)",
+      "answer": "Paul a quarante-huit ans.",
+      "accept": [
+        "quarante-huit",
+        "quarante huit",
+        "Paul a quarante huit ans."
+      ],
+      "hint": "40 is '{quarante}'."
+    },
+    {
+      "id": "i-elles-ont-cinquante-et",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Elles ont ___ voitures. (51)",
+      "answer": "Elles ont cinquante et une voitures.",
+      "accept": [
+        "cinquante et une",
+        "cinquante-et-une",
+        "Elles ont cinquante-et-une voitures."
+      ],
+      "hint": "50 is '{cinquante}'. '{Voiture}' is feminine.",
+      "mistakes": [
+        {
+          "answer": "cinquante et un",
+          "feedback": "'{Voiture}' is feminine, so 51 ends in '{une}': '{cinquante et une voitures}'."
+        },
+        {
+          "answer": "Elles ont cinquante et un voitures.",
+          "feedback": "'{Voiture}' is feminine, so 51 ends in '{une}': '{cinquante et une voitures}'."
+        }
+      ]
+    },
+    {
+      "id": "i-la-maison-a-soixante",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "La maison a ___ ans. (60)",
+      "answer": "La maison a soixante ans.",
+      "accept": [
+        "soixante"
+      ],
+      "hint": "60 is the last ten with its own word."
+    },
+    {
+      "id": "i-soixante-dix",
+      "type": "transform",
+      "instruction": "Fill in the next number in words",
+      "shown": "soixante-huit, soixante-neuf, ___",
+      "answer": "soixante-dix",
+      "accept": [
+        "soixante dix"
+      ],
+      "hint": "Sixty, then ten.",
+      "mistakes": [
+        {
+          "answer": "septante",
+          "feedback": "That is the Belgian and Swiss word. In France, 70 is '{soixante-dix}'."
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-soixante-et",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Il a ___ ans. (71)",
+      "answer": "Il a soixante et onze ans.",
+      "accept": [
+        "soixante et onze",
+        "soixante-et-onze",
+        "Il a soixante-et-onze ans."
+      ],
+      "hint": "Sixty, then eleven, with '{et}'.",
+      "mistakes": [
+        {
+          "answer": "soixante-dix-un",
+          "feedback": "71 is sixty and eleven: '{soixante et onze}'."
+        },
+        {
+          "answer": "Il a soixante-dix-un ans.",
+          "feedback": "71 is sixty and eleven: '{soixante et onze}'."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-soixante-quinze",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Nous avons ___ livres. (75)",
+      "answer": "Nous avons soixante-quinze livres.",
+      "accept": [
+        "soixante-quinze",
+        "soixante quinze",
+        "Nous avons soixante quinze livres."
+      ],
+      "hint": "Sixty, then fifteen.",
+      "mistakes": [
+        {
+          "answer": "soixante-dix-cinq",
+          "feedback": "75 is sixty and fifteen: '{soixante-quinze}'."
+        },
+        {
+          "answer": "Nous avons soixante-dix-cinq livres.",
+          "feedback": "75 is sixty and fifteen: '{soixante-quinze}'."
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-quatre-vingts",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "J'ai ___ livres. (80)",
+      "answer": "J'ai quatre-vingts livres.",
+      "accept": [
+        "quatre-vingts",
+        "quatre vingts",
+        "J'ai quatre vingts livres."
+      ],
+      "hint": "Four twenties, with an s.",
+      "mistakes": [
+        {
+          "answer": "quatre-vingt",
+          "feedback": "80 alone keeps its s: '{quatre-vingts}'."
+        },
+        {
+          "answer": "J'ai quatre-vingt livres.",
+          "feedback": "80 alone keeps its s: '{quatre-vingts}'."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-quatre-vingt",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Elle a ___ ans. (85)",
+      "answer": "Elle a quatre-vingt-cinq ans.",
+      "accept": [
+        "quatre-vingt-cinq",
+        "quatre vingt cinq",
+        "Elle a quatre vingt cinq ans."
+      ],
+      "hint": "Four twenties, then five. The s goes.",
+      "mistakes": [
+        {
+          "answer": "quatre-vingts-cinq",
+          "feedback": "The s goes when a number follows: '{quatre-vingt-cinq}'."
+        },
+        {
+          "answer": "Elle a quatre-vingts-cinq ans.",
+          "feedback": "The s goes when a number follows: '{quatre-vingt-cinq}'."
+        }
+      ]
+    },
+    {
+      "id": "i-quatre-vingt-dix",
+      "type": "transform",
+      "instruction": "Fill in the next number in words",
+      "shown": "quatre-vingt-huit, quatre-vingt-neuf, ___",
+      "answer": "quatre-vingt-dix",
+      "accept": [
+        "quatre vingt dix"
+      ],
+      "hint": "Four twenties, then ten."
+    },
+    {
+      "id": "i-il-a-quatre-vingt",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Il a ___ ans. (91)",
+      "answer": "Il a quatre-vingt-onze ans.",
+      "accept": [
+        "quatre-vingt-onze",
+        "quatre vingt onze",
+        "Il a quatre vingt onze ans."
+      ],
+      "hint": "Four twenties, then eleven. No '{et}' after 80.",
+      "mistakes": [
+        {
+          "answer": "quatre-vingt-et-onze",
+          "feedback": "There is no 'et' after 80: 'quatre-vingt-onze'."
+        },
+        {
+          "answer": "Il a quatre-vingt-et-onze ans.",
+          "feedback": "There is no 'et' after 80: 'quatre-vingt-onze'."
+        }
+      ]
+    },
+    {
+      "id": "i-le-livre-a-quatre",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "Le livre a ___ ans. (99)",
+      "answer": "Le livre a quatre-vingt-dix-neuf ans.",
+      "accept": [
+        "quatre-vingt-dix-neuf",
+        "quatre vingt dix neuf",
+        "Le livre a quatre vingt dix neuf ans."
+      ],
+      "hint": "Four twenties, then nineteen."
+    },
+    {
+      "id": "i-la-maison-a-cent",
+      "type": "transform",
+      "instruction": "Fill in the blank with the number in words",
+      "shown": "La maison a ___ ans. (100)",
+      "answer": "La maison a cent ans.",
+      "accept": [
+        "cent"
+      ],
+      "hint": "100 is one word.",
+      "mistakes": [
+        {
+          "answer": "un cent",
+          "feedback": "100 is 'cent', with no 'un'."
+        },
+        {
+          "answer": "La maison a un cent ans.",
+          "feedback": "100 is 'cent', with no 'un'."
+        }
+      ]
+    }
+  ]
+}

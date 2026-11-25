@@ -1,0 +1,283 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-30-connaitre",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{connaître} - To Know (People/{Places})",
+  "description": "Express knowledge of people and places: je connais Marie (I know Marie), tu connais Paris? (do you know Paris?)",
+  "can_do": [
+    "Talk about people you know (I know Marie)",
+    "Discuss places you're familiar with (Do you know Paris?)",
+    "Distinguish between savoir (facts) and connaître (people/places)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "connaitre-fr",
+      "fr": "connaître",
+      "gloss": "to know / to be familiar with",
+      "note": "infinitive - irregular verb"
+    },
+    {
+      "word_id": "je-connais-fr",
+      "fr": "je connais",
+      "gloss": "I know",
+      "note": "for people/places only"
+    },
+    {
+      "word_id": "tu-connais-fr",
+      "fr": "tu connais",
+      "gloss": "you know (informal)",
+      "note": "Tu connais Marie?; asking if familiar"
+    },
+    {
+      "word_id": "il-elle-connait-fr",
+      "fr": "il/elle connaît",
+      "gloss": "he/she knows",
+      "note": "⚠️ circumflex accent î"
+    },
+    {
+      "word_id": "nous-connaissons-fr",
+      "fr": "nous connaissons",
+      "gloss": "we know",
+      "note": "double -ss-"
+    },
+    {
+      "word_id": "vous-connaissez-fr",
+      "fr": "vous connaissez",
+      "gloss": "you know (formal/plural)",
+      "note": "double -ss-"
+    },
+    {
+      "word_id": "ils-elles-connaissent-fr",
+      "fr": "ils/elles connaissent",
+      "gloss": "they know",
+      "note": "double -ss-, silent -ent"
+    },
+    {
+      "word_id": "je-connais-marie-fr",
+      "fr": "je connais Marie",
+      "gloss": "I know Marie",
+      "note": "⭐ people - use connaître"
+    },
+    {
+      "word_id": "je-connais-paris-fr",
+      "fr": "je connais Paris",
+      "gloss": "I know Paris / I'm familiar with Paris",
+      "note": "⭐ places - use connaître"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-connaitre-to-know-people",
+      "term": "{connaître} = to know (people or {places})",
+      "definition": "CRITICAL distinction: connaître is for people you know or places you're familiar with",
+      "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris)"
+    },
+    {
+      "id": "c-irregular-conjugation-with-i",
+      "term": "Irregular conjugation with î",
+      "definition": "Present: je connais, tu connais, il connaît, nous connaissons, vous connaissez, ils connaissent",
+      "example": "Notice: î with circumflex accent in il/elle form, double -ss- in plural"
+    },
+    {
+      "id": "c-the-key-distinction-savoir",
+      "term": "THE KEY DISTINCTION: savoir vs connaître",
+      "definition": "savoir = facts/skills (learned), connaître = people/places (familiarity)",
+      "example": "{je sais la réponse} (I know the answer) BUT je connais Marie (I know Marie)"
+    },
+    {
+      "id": "c-never-use-connaitre-infinitive",
+      "term": "NEVER use connaître + infinitive",
+      "definition": "You CANNOT say '{je connais parler}' - use savoir for skills!",
+      "example": "{✓ je sais parler} (I know how to speak), {✗ je connais parler} (WRONG!)"
+    },
+    {
+      "id": "c-common-uses",
+      "term": "Common uses",
+      "definition": "Know people, know places, be familiar with things (movies, books, brands)",
+      "example": "{je connais ce film} (I know this movie), {tu connais ce restaurant?} (do you know this restaurant?)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-connaitre",
+      "title": "{connaître}",
+      "rows": [
+        {
+          "fr": "je connais",
+          "en": "I know"
+        },
+        {
+          "fr": "tu connais",
+          "en": "you know (informal)"
+        },
+        {
+          "fr": "il connaît",
+          "en": "he knows"
+        },
+        {
+          "fr": "elle connaît",
+          "en": "she knows"
+        },
+        {
+          "fr": "nous connaissons",
+          "en": "we know"
+        },
+        {
+          "fr": "vous connaissez",
+          "en": "you know (formal/plural)"
+        },
+        {
+          "fr": "ils connaissent",
+          "en": "they know (masculine)"
+        },
+        {
+          "fr": "elles connaissent",
+          "en": "they know (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-connais",
+      "type": "transform",
+      "instruction": "You know a person. Say \"I know\"",
+      "shown": "connaître",
+      "answer": "je connais",
+      "hint": "{je + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je sais",
+          "feedback": "Use '{je connais}' for people. Savoir is for facts/skills!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-connais",
+      "type": "transform",
+      "instruction": "Ask if someone knows a place. Say \"you know (informal)\"",
+      "shown": "connaître",
+      "answer": "tu connais",
+      "hint": "{tu + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"you know (informal)\""
+        },
+        {
+          "answer": "il connaît",
+          "feedback": "That's \"he knows\", not \"you know (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-connait",
+      "type": "transform",
+      "instruction": "He knows Paris. Say \"he knows\"",
+      "shown": "connaître",
+      "answer": "il connaît",
+      "hint": "{il + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"he knows\""
+        },
+        {
+          "answer": "tu connais",
+          "feedback": "That's \"you know (informal)\", not \"he knows\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-connait",
+      "type": "transform",
+      "instruction": "She knows my friend. Say \"she knows\"",
+      "shown": "connaître",
+      "answer": "elle connaît",
+      "hint": "{elle + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"she knows\""
+        },
+        {
+          "answer": "tu connais",
+          "feedback": "That's \"you know (informal)\", not \"she knows\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-connaissons",
+      "type": "transform",
+      "instruction": "We know this restaurant. Say \"we know\"",
+      "shown": "connaître",
+      "answer": "nous connaissons",
+      "hint": "{nous + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"we know\""
+        },
+        {
+          "answer": "tu connais",
+          "feedback": "That's \"you know (informal)\", not \"we know\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-connaissez",
+      "type": "transform",
+      "instruction": "Ask formally if they know someone. Say \"you know (formal/plural)\"",
+      "shown": "connaître",
+      "answer": "vous connaissez",
+      "hint": "{vous + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"you know (formal/plural)\""
+        },
+        {
+          "answer": "tu connais",
+          "feedback": "That's \"you know (informal)\", not \"you know (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-connaissent",
+      "type": "transform",
+      "instruction": "They know the city. Say \"they know (masculine)\"",
+      "shown": "connaître",
+      "answer": "ils connaissent",
+      "hint": "{ils + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"they know (masculine)\""
+        },
+        {
+          "answer": "tu connais",
+          "feedback": "That's \"you know (informal)\", not \"they know (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-connaissent",
+      "type": "transform",
+      "instruction": "They (feminine) know Marie. Say \"they know (feminine)\"",
+      "shown": "connaître",
+      "answer": "elles connaissent",
+      "hint": "{elles + connaître = ?}",
+      "mistakes": [
+        {
+          "answer": "je connais",
+          "feedback": "That's \"I know\", not \"they know (feminine)\""
+        },
+        {
+          "answer": "tu connais",
+          "feedback": "That's \"you know (informal)\", not \"they know (feminine)\""
+        }
+      ]
+    }
+  ]
+}

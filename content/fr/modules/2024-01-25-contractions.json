@@ -1,0 +1,232 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-25-contractions",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Contractions - {du, au, de la, à la}",
+  "description": "Learn how '{de}' and 'à' combine with articles! Simple rules that make French flow naturally.",
+  "can_do": [
+    "Use contractions naturally (du, au, de la, à la)",
+    "Say 'some bread', 'at the café', 'of the book' in French",
+    "Make your French flow smoothly with proper contractions"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "du-fr",
+      "fr": "du",
+      "gloss": "of/from the (masc)",
+      "note": "de + le = du (masculine)"
+    },
+    {
+      "word_id": "de-la-fr",
+      "fr": "de la",
+      "gloss": "of/from the (fem)",
+      "note": "no contraction (feminine)"
+    },
+    {
+      "word_id": "de-l-fr",
+      "fr": "de l'",
+      "gloss": "of/from the (vowel)",
+      "note": "before vowel"
+    },
+    {
+      "word_id": "des-fr.of",
+      "fr": "des",
+      "gloss": "of/from the (plural)",
+      "note": "de + les = des (plural)"
+    },
+    {
+      "word_id": "au-fr",
+      "fr": "au",
+      "gloss": "to/at the (masc)",
+      "note": "à + le = au (masculine) - section divider"
+    },
+    {
+      "word_id": "a-la-fr",
+      "fr": "à la",
+      "gloss": "to/at the (fem)",
+      "note": "no contraction (feminine)"
+    },
+    {
+      "word_id": "a-l-fr",
+      "fr": "à l'",
+      "gloss": "to/at the (vowel)",
+      "note": "before vowel"
+    },
+    {
+      "word_id": "aux-fr",
+      "fr": "aux",
+      "gloss": "to/at the (plural)",
+      "note": "à + les = aux (plural)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-contractions-with-de-of",
+      "term": "Contractions with '{de}' (of/from)",
+      "definition": "de + le = du, de + les = des (but de + la stays separate!)",
+      "example": "{du chat} (of the cat), {de la maison} (of the house), {des livres} (of the books)"
+    },
+    {
+      "id": "c-contractions-with-a-to",
+      "term": "Contractions with 'à' (to/at)",
+      "definition": "à + le = au, à + les = aux (but à + la stays separate!)",
+      "example": "{au café} (at the café), {à la maison} (at the house), {aux amis} (to the friends)"
+    },
+    {
+      "id": "c-partitive-articles-some-any",
+      "term": "Partitive Articles (some/any)",
+      "definition": "Use du/de la/de l'/des to mean 'some' (unspecified quantity)",
+      "example": "{du pain} (some bread), {de la viande} (some meat), {de l'eau} (some water)"
+    },
+    {
+      "id": "c-before-vowels",
+      "term": "Before Vowels",
+      "definition": "de + l' and à + l' before vowel sounds (no contraction needed)",
+      "example": "{de l'ami} (of the friend), {à l'école} (at the school)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-du-chat",
+      "type": "respond",
+      "situation": "Combine '{de}' + '{le chat}' (of the cat)",
+      "cue": "of the cat (masculine)",
+      "answer": "du chat",
+      "hint": "de + le contracts to '{du}'",
+      "mistakes": [
+        {
+          "answer": "de le chat",
+          "feedback": "de + le must contract to '{du}'"
+        },
+        {
+          "answer": "de la chat",
+          "feedback": "chat is masculine, and de + le = du"
+        }
+      ]
+    },
+    {
+      "id": "i-de-la-maison",
+      "type": "respond",
+      "situation": "Combine '{de}' + '{la maison}' (of the house)",
+      "cue": "of the house (feminine)",
+      "answer": "de la maison",
+      "hint": "de + la does NOT contract - stays separate",
+      "mistakes": [
+        {
+          "answer": "du maison",
+          "feedback": "maison is feminine, use '{de la}' not 'du'"
+        }
+      ]
+    },
+    {
+      "id": "i-des-livres",
+      "type": "respond",
+      "situation": "Combine '{de}' + '{les livres}' (of the books)",
+      "cue": "of the books (plural)",
+      "answer": "des livres",
+      "hint": "de + les contracts to '{des}'",
+      "mistakes": [
+        {
+          "answer": "de les livres",
+          "feedback": "de + les must contract to '{des}'"
+        }
+      ]
+    },
+    {
+      "id": "i-de-l-ami",
+      "type": "respond",
+      "situation": "Combine '{de}' + '{l'ami}' (of the friend - vowel)",
+      "cue": "of the friend (starts with vowel)",
+      "answer": "de l'ami",
+      "hint": "de + l' stays as is before vowel",
+      "mistakes": [
+        {
+          "answer": "du ami",
+          "feedback": "Before vowels, use '{de l'}' not 'du'"
+        }
+      ]
+    },
+    {
+      "id": "i-au-cafe",
+      "type": "respond",
+      "situation": "Combine 'à' + '{le café}' (to/at the café)",
+      "cue": "to the café (masculine)",
+      "answer": "au café",
+      "hint": "à + le contracts to '{au}'",
+      "mistakes": [
+        {
+          "answer": "à le café",
+          "feedback": "à + le must contract to '{au}'"
+        }
+      ]
+    },
+    {
+      "id": "i-a-la-maison",
+      "type": "respond",
+      "situation": "Combine 'à' + '{la maison}' (to/at the house)",
+      "cue": "to the house (feminine)",
+      "answer": "à la maison",
+      "hint": "à + la does NOT contract - stays separate",
+      "mistakes": [
+        {
+          "answer": "au maison",
+          "feedback": "maison is feminine, use '{à la}' not 'au'"
+        }
+      ]
+    },
+    {
+      "id": "i-aux-amis",
+      "type": "respond",
+      "situation": "Combine 'à' + '{les amis}' (to the friends)",
+      "cue": "to the friends (plural)",
+      "answer": "aux amis",
+      "hint": "à + les contracts to '{aux}'",
+      "mistakes": [
+        {
+          "answer": "à les amis",
+          "feedback": "à + les must contract to '{aux}'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-au-cafe",
+      "type": "respond",
+      "situation": "I am at the café",
+      "answer": "je suis au café",
+      "hint": "je suis + à + le café (contracts!)",
+      "mistakes": [
+        {
+          "answer": "je suis à le café",
+          "feedback": "à + le must contract to '{au}'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-chat-est-a",
+      "type": "respond",
+      "situation": "the cat is at the house",
+      "answer": "le chat est à la maison",
+      "hint": "{le chat + est + à la maison}",
+      "mistakes": [
+        {
+          "answer": "le chat est au maison",
+          "feedback": "maison is feminine, use '{à la}' not 'au'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-avec-les",
+      "type": "respond",
+      "situation": "I am with the friends",
+      "answer": "je suis avec les amis",
+      "hint": "je suis + avec + les amis (avec doesn't contract!)",
+      "mistakes": [
+        {
+          "answer": "je suis aux amis",
+          "feedback": "avec doesn't contract - use '{avec les amis}'"
+        }
+      ]
+    }
+  ]
+}

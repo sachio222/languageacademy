@@ -1,0 +1,356 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-15-daily-actions-1",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Daily Life Essentials - Sleep, Work, Live",
+  "description": "Three essential daily verbs: dormir (to sleep), travailler (to work), vivre (to live). Complete your ability to describe daily life and existence!",
+  "can_do": [
+    "Talk about sleeping, working, and living",
+    "Describe your daily life and existence",
+    "Say 'I sleep 8 hours', 'I work in Paris', 'I live here'"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "dormir-fr",
+      "fr": "dormir",
+      "gloss": "to sleep",
+      "note": "⭐ Rank 54 - regular -IR verb"
+    },
+    {
+      "word_id": "je-dors-fr",
+      "fr": "je dors",
+      "gloss": "I sleep",
+      "note": "drop final consonants"
+    },
+    {
+      "word_id": "tu-dors-fr",
+      "fr": "tu dors",
+      "gloss": "you sleep (informal)",
+      "note": "same as je"
+    },
+    {
+      "word_id": "il-dort-fr",
+      "fr": "il dort",
+      "gloss": "he sleeps",
+      "note": "drop -s from tu form"
+    },
+    {
+      "word_id": "elle-dort-fr",
+      "fr": "elle dort",
+      "gloss": "she sleeps",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-dormons-fr",
+      "fr": "nous dormons",
+      "gloss": "we sleep",
+      "note": "add -ons to stem"
+    },
+    {
+      "word_id": "vous-dormez-fr",
+      "fr": "vous dormez",
+      "gloss": "you sleep (formal/plural)",
+      "note": "add -ez to stem"
+    },
+    {
+      "word_id": "ils-dorment-fr",
+      "fr": "ils dorment",
+      "gloss": "they sleep (masculine)",
+      "note": "add -ent, silent"
+    },
+    {
+      "word_id": "elles-dorment-fr",
+      "fr": "elles dorment",
+      "gloss": "they sleep (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "travailler-fr",
+      "fr": "travailler",
+      "gloss": "to work",
+      "note": "⭐ Rank 55 - regular -ER verb"
+    },
+    {
+      "word_id": "je-travaille-fr",
+      "fr": "je travaille",
+      "gloss": "I work",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-travailles-fr",
+      "fr": "tu travailles",
+      "gloss": "you work (informal)",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-travaille-fr",
+      "fr": "il travaille",
+      "gloss": "he works",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-travaille-fr",
+      "fr": "elle travaille",
+      "gloss": "she works",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-travaillons-fr",
+      "fr": "nous travaillons",
+      "gloss": "we work",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-travaillez-fr",
+      "fr": "vous travaillez",
+      "gloss": "you work (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-travaillent-fr",
+      "fr": "ils travaillent",
+      "gloss": "they work (masculine)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-travaillent-fr",
+      "fr": "elles travaillent",
+      "gloss": "they work (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "vivre-fr",
+      "fr": "vivre",
+      "gloss": "to live",
+      "note": "⭐ Rank 56 - irregular verb"
+    },
+    {
+      "word_id": "je-vis-fr",
+      "fr": "je vis",
+      "gloss": "I live",
+      "note": "irregular - sounds like 'vee'"
+    },
+    {
+      "word_id": "tu-vis-fr",
+      "fr": "tu vis",
+      "gloss": "you live (informal)",
+      "note": "same sound as je"
+    },
+    {
+      "word_id": "il-vit-fr",
+      "fr": "il vit",
+      "gloss": "he lives",
+      "note": "drop -s, sounds like 'vee'"
+    },
+    {
+      "word_id": "elle-vit-fr",
+      "fr": "elle vit",
+      "gloss": "she lives",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-vivons-fr",
+      "fr": "nous vivons",
+      "gloss": "we live",
+      "note": "add -ons to viv-"
+    },
+    {
+      "word_id": "vous-vivez-fr",
+      "fr": "vous vivez",
+      "gloss": "you live (formal/plural)",
+      "note": "add -ez to viv-"
+    },
+    {
+      "word_id": "ils-vivent-fr",
+      "fr": "ils vivent",
+      "gloss": "they live (masculine)",
+      "note": "add -ent to viv-"
+    },
+    {
+      "word_id": "elles-vivent-fr",
+      "fr": "elles vivent",
+      "gloss": "they live (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "bien-dormir-fr",
+      "fr": "bien dormir",
+      "gloss": "to sleep well",
+      "note": "je dors bien"
+    },
+    {
+      "word_id": "travailler-dur-fr",
+      "fr": "travailler dur",
+      "gloss": "to work hard",
+      "note": "je travaille dur"
+    },
+    {
+      "word_id": "vivre-sa-vie-fr",
+      "fr": "vivre sa vie",
+      "gloss": "to live one's life",
+      "note": "philosophical expression"
+    },
+    {
+      "word_id": "ou-travaillez-vous-fr",
+      "fr": "où travaillez-vous?",
+      "gloss": "where do you work?",
+      "note": "common social question"
+    },
+    {
+      "word_id": "je-travaille-a-fr",
+      "fr": "je travaille à",
+      "gloss": "I work at/in",
+      "note": "location of work"
+    },
+    {
+      "word_id": "je-vis-a-fr",
+      "fr": "je vis à",
+      "gloss": "I live in/at",
+      "note": "location of residence"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-dormir-to-sleep-rank",
+      "term": "{dormir} = to sleep (rank 54)",
+      "definition": "Regular -IR verb for sleeping - essential for daily routines",
+      "example": "{je dors} (I sleep), {je dors huit heures} (I sleep 8 hours), {tu dors bien?} (do you sleep well?)"
+    },
+    {
+      "id": "c-travailler-to-work-rank",
+      "term": "{travailler} = to work (rank 55)",
+      "definition": "Regular -ER verb for working - essential for adult life",
+      "example": "{je travaille} (I work), {je travaille à Paris} (I work in Paris), {où travaillez-vous?} (where do you work?)"
+    },
+    {
+      "id": "c-vivre-to-live-rank",
+      "term": "{vivre} = to live (rank 56)",
+      "definition": "Irregular verb for living/being alive - existential and location",
+      "example": "{je vis} (I live), {je vis à Paris} (I live in Paris), {vivre sa vie} (to live one's life)"
+    },
+    {
+      "id": "c-daily-life-integration",
+      "term": "Daily Life Integration",
+      "definition": "These three verbs complete your ability to describe human existence",
+      "example": "{Je vis à Paris, je travaille au centre-ville, et je dors bien} (I live in Paris, work downtown, and sleep well)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-dors",
+      "type": "respond",
+      "situation": "I sleep",
+      "answer": "je dors",
+      "hint": "dormir for je"
+    },
+    {
+      "id": "i-tu-dors",
+      "type": "respond",
+      "situation": "you sleep (informal)",
+      "answer": "tu dors",
+      "hint": "dormir for tu - same as je"
+    },
+    {
+      "id": "i-il-dort",
+      "type": "respond",
+      "situation": "he sleeps",
+      "answer": "il dort",
+      "hint": "dormir for il - drop the -s"
+    },
+    {
+      "id": "i-je-travaille",
+      "type": "respond",
+      "situation": "I work",
+      "answer": "je travaille",
+      "hint": "travailler for je"
+    },
+    {
+      "id": "i-nous-travaillons",
+      "type": "respond",
+      "situation": "we work",
+      "answer": "nous travaillons",
+      "hint": "travailler for nous"
+    },
+    {
+      "id": "i-vous-travaillez",
+      "type": "respond",
+      "situation": "you work (formal)",
+      "answer": "vous travaillez",
+      "hint": "travailler for vous"
+    },
+    {
+      "id": "i-je-vis",
+      "type": "respond",
+      "situation": "I live",
+      "answer": "je vis",
+      "hint": "vivre for je - irregular"
+    },
+    {
+      "id": "i-elle-vit",
+      "type": "respond",
+      "situation": "she lives",
+      "answer": "elle vit",
+      "hint": "vivre for elle - same as je but no -s"
+    },
+    {
+      "id": "i-ils-vivent",
+      "type": "respond",
+      "situation": "they live",
+      "answer": "ils vivent",
+      "hint": "vivre for ils - add -ent to viv-"
+    },
+    {
+      "id": "i-tu-dors-bien",
+      "type": "respond",
+      "situation": "Do you sleep well?",
+      "answer": "tu dors bien?",
+      "accept": [
+        "est-ce que tu dors bien?"
+      ],
+      "hint": "tu + dors + bien + question mark"
+    },
+    {
+      "id": "i-ou-travaillez-vous",
+      "type": "respond",
+      "situation": "Ask: 'Where do you work?' (formal)",
+      "cue": "Where do you work? (formal)",
+      "answer": "où travaillez-vous?",
+      "accept": [
+        "où est-ce que vous travaillez?"
+      ],
+      "hint": "{où + vous + travaillez}"
+    },
+    {
+      "id": "i-je-vis-a-paris",
+      "type": "respond",
+      "situation": "I live in Paris",
+      "answer": "je vis à Paris",
+      "hint": "je vis + à + city"
+    },
+    {
+      "id": "i-je-travaille-dur",
+      "type": "respond",
+      "situation": "I work hard",
+      "answer": "je travaille dur",
+      "hint": "{je travaille + dur}"
+    },
+    {
+      "id": "i-je-dors-huit-heures",
+      "type": "respond",
+      "situation": "I sleep 8 hours",
+      "answer": "je dors huit heures",
+      "hint": "{je dors + huit heures}"
+    },
+    {
+      "id": "i-nous-vivons-notre-vie",
+      "type": "respond",
+      "situation": "We live our life",
+      "answer": "nous vivons notre vie",
+      "accept": [
+        "on vit notre vie"
+      ],
+      "hint": "Fixed expression: vivre sa vie"
+    }
+  ]
+}

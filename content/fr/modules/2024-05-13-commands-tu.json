@@ -1,0 +1,148 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-13-commands-tu",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Commands - tu form (Informal)",
+  "description": "Give informal commands: Mange! (Eat!), Parle! (Speak!), Fais attention! (Be careful!)",
+  "can_do": [
+    "Give informal commands to friends and family",
+    "Tell someone to eat, speak, go, do something",
+    "Use command form with -ER and -IR verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "mange-fr",
+      "fr": "Mange!",
+      "gloss": "Eat!",
+      "note": "⭐ command from manger"
+    },
+    {
+      "word_id": "parle-fr",
+      "fr": "Parle!",
+      "gloss": "Speak!",
+      "note": "command from parler"
+    },
+    {
+      "word_id": "ecoute-fr",
+      "fr": "Écoute!",
+      "gloss": "Listen!",
+      "note": "command from écouter"
+    },
+    {
+      "word_id": "regarde-fr",
+      "fr": "Regarde!",
+      "gloss": "Look! / Watch!",
+      "note": "command from regarder"
+    },
+    {
+      "word_id": "pense-fr",
+      "fr": "Pense!",
+      "gloss": "Think!",
+      "note": "command from penser"
+    },
+    {
+      "word_id": "viens-fr",
+      "fr": "Viens!",
+      "gloss": "Come!",
+      "note": "command from venir"
+    },
+    {
+      "word_id": "pars-fr",
+      "fr": "Pars!",
+      "gloss": "Leave! / Go!",
+      "note": "command from partir"
+    },
+    {
+      "word_id": "prends-fr",
+      "fr": "Prends!",
+      "gloss": "Take!",
+      "note": "command from prendre"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-imperative-mood-commands",
+      "term": "Imperative Mood = Commands",
+      "definition": "Tell someone to do something - no subject pronoun needed!",
+      "example": "{Mange!} (Eat!), {Parle!} (Speak!), {Va!} (Go!)"
+    },
+    {
+      "id": "c-tu-form-just-drop",
+      "term": "tu form: Just Drop the Pronoun!",
+      "definition": "For most verbs, use the tu form without '{tu}'",
+      "example": "{tu manges} → {Mange!} (you eat → Eat!), {tu parles} → {Parle!} (you speak → Speak!)"
+    },
+    {
+      "id": "c-er-verbs-drop-the",
+      "term": "-ER verbs: Drop the final -s",
+      "definition": "For -ER verbs only, also drop the final -s in tu command form",
+      "example": "{tu manges} → {Mange!} (not Manges!), {tu parles} → {Parle!} (not Parles!)"
+    },
+    {
+      "id": "c-use-with-friends-and",
+      "term": "Use with Friends and Family",
+      "definition": "tu commands are informal - use with people you'd call '{tu}'",
+      "example": "To a friend: {Mange!} (Eat!), {Écoute!} (Listen!), {Viens!} (Come!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "commands-tu-1",
+      "type": "respond",
+      "situation": "Give the command 'Eat!' (to a friend)",
+      "cue": "Eat! (informal)",
+      "answer": "mange",
+      "hint": "manger → drop tu and final -s",
+      "mistakes": [
+        {
+          "answer": "manges",
+          "feedback": "Drop the -s for -ER verb commands: Mange! (not Manges!)"
+        }
+      ]
+    },
+    {
+      "id": "commands-tu-2",
+      "type": "respond",
+      "situation": "Give the command 'Speak!' (to a friend)",
+      "cue": "Speak! (informal)",
+      "answer": "parle",
+      "hint": "{parler → Parle!}"
+    },
+    {
+      "id": "commands-tu-3",
+      "type": "respond",
+      "situation": "Give the command 'Listen!' (to a friend)",
+      "cue": "Listen! (informal)",
+      "answer": "écoute",
+      "accept": [
+        "ecoute"
+      ],
+      "hint": "{écouter → Écoute!}"
+    },
+    {
+      "id": "commands-tu-4",
+      "type": "respond",
+      "situation": "Give the command 'Think!' (to a friend)",
+      "cue": "Think! (informal)",
+      "answer": "pense",
+      "hint": "{penser → Pense!}"
+    },
+    {
+      "id": "commands-tu-5",
+      "type": "respond",
+      "situation": "Give the command 'Come!' (to a friend)",
+      "cue": "Come! (informal)",
+      "answer": "viens",
+      "hint": "venir → Viens! (keep the -s, not -ER verb)"
+    },
+    {
+      "id": "commands-tu-6",
+      "type": "respond",
+      "situation": "Give the command 'Take!' (to a friend)",
+      "cue": "Take! (informal)",
+      "answer": "prends",
+      "hint": "{prendre → Prends!}"
+    }
+  ]
+}

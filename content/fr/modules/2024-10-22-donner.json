@@ -1,0 +1,302 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-10-22-donner",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{donner} - To Give",
+  "description": "Express giving and offering: je donne (I give), tu donnes (you give), il donne (he gives) - essential for daily interactions",
+  "can_do": [
+    "Express giving and offering (I give, you give, they give)",
+    "Talk about providing information and help",
+    "Use donner with object pronouns (I give it to him)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "donner-fr",
+      "fr": "donner",
+      "gloss": "to give",
+      "note": "regular -er verb - very common"
+    },
+    {
+      "word_id": "je-donne-fr",
+      "fr": "je donne",
+      "gloss": "I give",
+      "note": "present tense"
+    },
+    {
+      "word_id": "tu-donnes-fr",
+      "fr": "tu donnes",
+      "gloss": "you give (informal)",
+      "note": "add -s for tu"
+    },
+    {
+      "word_id": "il-elle-donne-fr",
+      "fr": "il/elle donne",
+      "gloss": "he/she gives",
+      "note": "same as je form"
+    },
+    {
+      "word_id": "nous-donnons-fr",
+      "fr": "nous donnons",
+      "gloss": "we give",
+      "note": "add -ons for nous"
+    },
+    {
+      "word_id": "vous-donnez-fr",
+      "fr": "vous donnez",
+      "gloss": "you give (formal/plural)",
+      "note": "add -ez for vous"
+    },
+    {
+      "word_id": "ils-elles-donnent-fr",
+      "fr": "ils/elles donnent",
+      "gloss": "they give",
+      "note": "add -ent for ils/elles"
+    },
+    {
+      "word_id": "donner-le-livre-fr",
+      "fr": "donner le livre",
+      "gloss": "to give the book",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "donner-l-adresse-fr",
+      "fr": "donner l'adresse",
+      "gloss": "to give the address",
+      "note": "giving information"
+    },
+    {
+      "word_id": "donner-a-fr",
+      "fr": "donner à",
+      "gloss": "to give to",
+      "note": "donner + à + person"
+    },
+    {
+      "word_id": "donne-moi-fr",
+      "fr": "donne-moi",
+      "gloss": "give me",
+      "note": "imperative + object pronoun"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-donner-to-give",
+      "term": "{donner} = to give",
+      "definition": "Very common verb for giving things, offering help, providing information",
+      "example": "{je donne le livre} (I give the book), {tu donnes ton nom} (you give your name)"
+    },
+    {
+      "id": "c-regular-er-conjugation",
+      "term": "Regular -er conjugation",
+      "definition": "Present tense: je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent",
+      "example": "Regular pattern: donn- + endings (-e, -{es}, -e, -ons, -ez, -ent)"
+    },
+    {
+      "id": "c-common-uses-of-donner",
+      "term": "Common uses of donner",
+      "definition": "Giving objects (donner un cadeau), giving information (donner l'adresse), giving help (donner de l'aide)",
+      "example": "{je donne mon numéro} (I give my number), {ça donne faim} (it makes you hungry)"
+    },
+    {
+      "id": "c-donner-vs-prendre",
+      "term": "Donner vs Prendre",
+      "definition": "Perfect opposites - donner (to give) and prendre (to take)",
+      "example": "{je donne le livre à Marie, elle prend le livre} (I give the book to Marie, she takes the book)"
+    },
+    {
+      "id": "c-with-prepositions",
+      "term": "With prepositions",
+      "definition": "Often used with 'à' (to) - donner quelque chose à quelqu'un",
+      "example": "{je donne le livre à mon ami} (I give the book to my friend)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-donne",
+      "type": "respond",
+      "situation": "I give",
+      "answer": "je donne",
+      "hint": "donner for je",
+      "mistakes": [
+        {
+          "answer": "je prends",
+          "feedback": "That means 'I take' - use '{je donne}' for giving"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-donnes",
+      "type": "respond",
+      "situation": "Say 'you give' (informal)",
+      "cue": "you give",
+      "answer": "tu donnes",
+      "hint": "donner for tu",
+      "mistakes": [
+        {
+          "answer": "tu donne",
+          "feedback": "Add -s for tu: tu donnes"
+        }
+      ]
+    },
+    {
+      "id": "i-il-donne",
+      "type": "respond",
+      "situation": "he gives",
+      "answer": "il donne",
+      "hint": "donner for il"
+    },
+    {
+      "id": "i-elle-donne",
+      "type": "respond",
+      "situation": "she gives",
+      "answer": "elle donne",
+      "hint": "donner for elle"
+    },
+    {
+      "id": "i-nous-donnons",
+      "type": "respond",
+      "situation": "we give",
+      "answer": "nous donnons",
+      "hint": "donner for nous",
+      "mistakes": [
+        {
+          "answer": "nous donnez",
+          "feedback": "Use -ons for nous: nous donnons"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-donnez",
+      "type": "respond",
+      "situation": "Say 'you give' (formal/plural)",
+      "cue": "you give (formal)",
+      "answer": "vous donnez",
+      "hint": "donner for vous",
+      "mistakes": [
+        {
+          "answer": "vous donnons",
+          "feedback": "Use -ez for vous: vous donnez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-donnent",
+      "type": "respond",
+      "situation": "they give",
+      "answer": "ils donnent",
+      "accept": [
+        "elles donnent"
+      ],
+      "hint": "donner for ils/elles",
+      "mistakes": [
+        {
+          "answer": "ils donnez",
+          "feedback": "Use -ent for ils/elles: ils donnent"
+        }
+      ]
+    },
+    {
+      "id": "i-je-donne-le-livre",
+      "type": "respond",
+      "situation": "I give the book",
+      "answer": "je donne le livre",
+      "hint": "{je donne + le livre}",
+      "mistakes": [
+        {
+          "answer": "je prends le livre",
+          "feedback": "That means 'I take the book' - use '{donne}' for giving"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-donnes-le-chat",
+      "type": "respond",
+      "situation": "Say 'you give the cat' (informal)",
+      "cue": "you give the cat",
+      "answer": "tu donnes le chat",
+      "hint": "{tu donnes + le chat}"
+    },
+    {
+      "id": "i-nous-donnons-la-maison",
+      "type": "respond",
+      "situation": "we give the house",
+      "answer": "nous donnons la maison",
+      "hint": "{nous donnons + la maison}"
+    },
+    {
+      "id": "i-je-donne-la-voiture",
+      "type": "respond",
+      "situation": "Say 'I give the car to you' (informal)",
+      "cue": "I give the car to you",
+      "answer": "je donne la voiture à toi",
+      "accept": [
+        "je te donne la voiture"
+      ],
+      "hint": "{je donne + la voiture + à + toi}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Say 'what do you give?' (informal)",
+      "cue": "what do you give?",
+      "answer": "qu'est-ce que tu donnes",
+      "accept": [
+        "que donnes-tu",
+        "tu donnes quoi"
+      ],
+      "hint": "{qu'est-ce que + tu donnes}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu prends",
+          "feedback": "That asks 'what do you take' - use '{donnes}' for giving"
+        }
+      ]
+    },
+    {
+      "id": "i-il-ne-donne-rien",
+      "type": "respond",
+      "situation": "he doesn't give anything",
+      "answer": "il ne donne rien",
+      "accept": [
+        "il ne donne pas"
+      ],
+      "hint": "il + ne + donne + pas + anything"
+    },
+    {
+      "id": "i-nous-donnons-toujours",
+      "type": "respond",
+      "situation": "we always give",
+      "answer": "nous donnons toujours",
+      "accept": [
+        "nous donnons toujours quelque chose"
+      ],
+      "hint": "{nous donnons + toujours}"
+    },
+    {
+      "id": "i-donne-moi",
+      "type": "respond",
+      "situation": "Say 'give me' (command form)",
+      "cue": "give me",
+      "answer": "donne-moi",
+      "hint": "Imperative form + object pronoun",
+      "mistakes": [
+        {
+          "answer": "je donne",
+          "feedback": "That's 'I give' - use imperative '{donne-moi}' for 'give me'"
+        },
+        {
+          "answer": "tu donnes",
+          "feedback": "That's 'you give' - use imperative '{donne-moi}' for 'give me'"
+        }
+      ]
+    },
+    {
+      "id": "i-donne-moi-ta-main",
+      "type": "respond",
+      "situation": "Say 'give me your hand' (informal)",
+      "cue": "give me your hand",
+      "answer": "donne-moi ta main",
+      "hint": "{donne-moi + ta main}"
+    }
+  ]
+}

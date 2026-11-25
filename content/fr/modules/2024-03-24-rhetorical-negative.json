@@ -1,0 +1,229 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-24-rhetorical-negative",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Rhetorical & Negative Questions - Advanced Style",
+  "description": "Add native sophistication: N'est-ce pas vrai? (Isn't that true?), Comment ne pas aimer ça? (How can you not love that?), Qui ne voudrait pas ça? (Who wouldn't want that?)",
+  "vocabulary": [
+    {
+      "word_id": "n-est-ce-pas-vrai-fr",
+      "fr": "N'est-ce pas vrai?",
+      "gloss": "Isn't that true?",
+      "note": "seeking agreement"
+    },
+    {
+      "word_id": "n-est-ce-pas-fr",
+      "fr": "N'est-ce pas?",
+      "gloss": "Isn't it? / Right?",
+      "note": "tag question for confirmation"
+    },
+    {
+      "word_id": "n-es-tu-pas-content-fr",
+      "fr": "N'es-tu pas content?",
+      "gloss": "Aren't you happy?",
+      "note": "negative question with tu"
+    },
+    {
+      "word_id": "n-as-tu-pas-faim-fr",
+      "fr": "N'as-tu pas faim?",
+      "gloss": "Aren't you hungry?",
+      "note": "negative question with avoir"
+    },
+    {
+      "word_id": "ne-veux-tu-pas-essayer-fr",
+      "fr": "Ne veux-tu pas essayer?",
+      "gloss": "Don't you want to try?",
+      "note": "negative question with vouloir"
+    },
+    {
+      "word_id": "comment-ne-pas-aimer-ca-fr",
+      "fr": "Comment ne pas aimer ça?",
+      "gloss": "How can you not love that?",
+      "note": "⭐ rhetorical - implies everyone loves it"
+    },
+    {
+      "word_id": "qui-ne-voudrait-pas-ca-fr",
+      "fr": "Qui ne voudrait pas ça?",
+      "gloss": "Who wouldn't want that?",
+      "note": "⭐ rhetorical - implies everyone wants it"
+    },
+    {
+      "word_id": "pourquoi-ne-pas-essayer-fr",
+      "fr": "Pourquoi ne pas essayer?",
+      "gloss": "Why not try?",
+      "note": "⭐ rhetorical suggestion"
+    },
+    {
+      "word_id": "comment-ne-pas-aimer-le-soleil-fr",
+      "fr": "Comment ne pas aimer le soleil?",
+      "gloss": "How can one not love the sun?",
+      "note": "rhetorical about nature"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-negative-questions-for-agreement",
+      "term": "Negative Questions for Agreement",
+      "definition": "Ask negative questions to seek agreement or confirmation",
+      "example": "{N'est-ce pas vrai?} (Isn't that true?), {N'as-tu pas faim?} (Aren't you hungry?)"
+    },
+    {
+      "id": "c-rhetorical-questions-for-opinion",
+      "term": "Rhetorical Questions for Opinion",
+      "definition": "Ask questions that express opinion rather than seeking actual answers",
+      "example": "{Comment ne pas aimer ça?} (How can you not love that? = Of course you love it!), {Qui ne voudrait pas ça?} (Who wouldn't want that? = Everyone wants it!)"
+    },
+    {
+      "id": "c-ne-pas-pattern-in",
+      "term": "Ne...pas Pattern in Questions",
+      "definition": "In negative questions, ne comes before verb, pas after (or before infinitive)",
+      "example": "{N'es-tu pas content? Ne veux-tu pas essayer? Comment ne pas aimer?}"
+    },
+    {
+      "id": "c-persuasion-and-emphasis",
+      "term": "Persuasion and Emphasis",
+      "definition": "These questions are tools for persuasive speech and emphasizing points",
+      "example": "{Pourquoi ne pas essayer?} (Why not try? = You should try!)"
+    },
+    {
+      "id": "c-native-level-sophistication",
+      "term": "Native-Level Sophistication",
+      "definition": "Using these questions makes your French sound more sophisticated and natural",
+      "example": "From basic: Tu aimes ça? To sophisticated: {Comment ne pas aimer ça?}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-n-est-ce-pas",
+      "type": "respond",
+      "situation": "Isn't that true?",
+      "answer": "n'est-ce pas vrai?",
+      "accept": [
+        "n'est-ce pas vrai"
+      ],
+      "hint": "{n'est-ce pas + vrai}"
+    },
+    {
+      "id": "i-n-est-ce-pas-2",
+      "type": "respond",
+      "situation": "Use tag question: 'Isn't it?' / 'Right?'",
+      "cue": "Isn't it? / Right?",
+      "answer": "n'est-ce pas?",
+      "accept": [
+        "n'est-ce pas"
+      ],
+      "hint": "{n'est-ce pas}"
+    },
+    {
+      "id": "i-n-es-tu-pas",
+      "type": "respond",
+      "situation": "Aren't you happy?",
+      "answer": "n'es-tu pas content?",
+      "accept": [
+        "n'es-tu pas content"
+      ],
+      "hint": "{n'es-tu pas + content}"
+    },
+    {
+      "id": "i-n-as-tu-pas",
+      "type": "respond",
+      "situation": "Aren't you hungry?",
+      "answer": "n'as-tu pas faim?",
+      "accept": [
+        "n'as-tu pas faim"
+      ],
+      "hint": "{n'as-tu pas + faim}"
+    },
+    {
+      "id": "i-ne-veux-tu-pas",
+      "type": "respond",
+      "situation": "Don't you want to try?",
+      "answer": "ne veux-tu pas essayer?",
+      "accept": [
+        "ne veux-tu pas essayer"
+      ],
+      "hint": "{ne veux-tu pas + essayer}"
+    },
+    {
+      "id": "i-comment-ne-pas-aimer",
+      "type": "respond",
+      "situation": "Ask 'How can you not love that?' (rhetorical)",
+      "cue": "How can you not love that?",
+      "answer": "comment ne pas aimer ça?",
+      "accept": [
+        "comment ne pas aimer ça"
+      ],
+      "hint": "{comment ne pas aimer + ça}"
+    },
+    {
+      "id": "i-qui-ne-voudrait-pas",
+      "type": "respond",
+      "situation": "Ask 'Who wouldn't want that?' (rhetorical)",
+      "cue": "Who wouldn't want that?",
+      "answer": "qui ne voudrait pas ça?",
+      "accept": [
+        "qui ne voudrait pas ça"
+      ],
+      "hint": "{qui ne voudrait pas + ça (conditionnel!)}"
+    },
+    {
+      "id": "i-pourquoi-ne-pas-essayer",
+      "type": "respond",
+      "situation": "Ask 'Why not try?' (rhetorical suggestion)",
+      "cue": "Why not try?",
+      "answer": "pourquoi ne pas essayer?",
+      "accept": [
+        "pourquoi ne pas essayer"
+      ],
+      "hint": "{pourquoi ne pas + essayer}"
+    },
+    {
+      "id": "i-comment-ne-pas-aimer-2",
+      "type": "respond",
+      "situation": "Ask 'How can one not love the sun?' (rhetorical)",
+      "cue": "How can one not love the sun?",
+      "answer": "comment ne pas aimer le soleil?",
+      "accept": [
+        "comment ne pas aimer le soleil"
+      ],
+      "hint": "{comment ne pas aimer + le soleil}"
+    },
+    {
+      "id": "i-qui-ne-voudrait-pas-2",
+      "type": "respond",
+      "situation": "Ask 'Who wouldn't want to learn French?' (rhetorical)",
+      "cue": "Who wouldn't want to learn French?",
+      "answer": "qui ne voudrait pas apprendre le français?",
+      "accept": [
+        "qui ne voudrait pas apprendre le français",
+        "qui ne voudrait pas apprendre le francais",
+        "qui ne voudrait pas apprendre le francais?"
+      ],
+      "hint": "{qui ne voudrait pas + apprendre le français}"
+    },
+    {
+      "id": "i-n-est-ce-pas-3",
+      "type": "respond",
+      "situation": "Isn't that magnificent?",
+      "answer": "n'est-ce pas magnifique?",
+      "accept": [
+        "n'est-ce pas magnifique"
+      ],
+      "hint": "{n'est-ce pas + magnifique}"
+    },
+    {
+      "id": "i-pourquoi-ne-pas-aller",
+      "type": "respond",
+      "situation": "Ask 'Why not go there?' (suggestion)",
+      "cue": "Why not go there?",
+      "answer": "pourquoi ne pas aller là-bas?",
+      "accept": [
+        "pourquoi ne pas aller là-bas",
+        "pourquoi ne pas aller la-bas",
+        "pourquoi ne pas aller la-bas?"
+      ],
+      "hint": "{pourquoi ne pas + aller là-bas}"
+    }
+  ]
+}

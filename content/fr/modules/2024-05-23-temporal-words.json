@@ -1,0 +1,216 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-23-temporal-words",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Temporal & Sequential Words - Time & Order",
+  "description": "Organize actions in time: pendant (during), avant (before), après (after), d'abord (first), ensuite (then), finalement (finally)",
+  "can_do": [
+    "Sequence events in time (first, then, finally)",
+    "Describe when things happen (before, during, after)",
+    "Tell stories with proper temporal flow"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "pendant-fr",
+      "fr": "pendant",
+      "gloss": "during / for",
+      "note": "duration - pendant une heure"
+    },
+    {
+      "word_id": "avant-fr",
+      "fr": "avant",
+      "gloss": "before",
+      "note": "time - avant le cours"
+    },
+    {
+      "word_id": "apres-fr",
+      "fr": "après",
+      "gloss": "after / afterwards",
+      "note": "sequence - après le dîner; can be connector or preposition"
+    },
+    {
+      "word_id": "depuis-fr",
+      "fr": "depuis",
+      "gloss": "since / for",
+      "note": "duration from past - depuis trois ans"
+    },
+    {
+      "word_id": "d-abord-fr",
+      "fr": "d'abord",
+      "gloss": "first / first of all",
+      "note": "⭐ starts sequences"
+    },
+    {
+      "word_id": "ensuite-fr",
+      "fr": "ensuite",
+      "gloss": "then / next",
+      "note": "⭐ continues sequence"
+    },
+    {
+      "word_id": "puis-fr",
+      "fr": "puis",
+      "gloss": "then",
+      "note": "another word for 'then'"
+    },
+    {
+      "word_id": "finalement-fr",
+      "fr": "finalement",
+      "gloss": "finally",
+      "note": "⭐ ends sequence"
+    },
+    {
+      "word_id": "enfin-fr",
+      "fr": "enfin",
+      "gloss": "at last / finally",
+      "note": "relief or conclusion"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-temporal-prepositions",
+      "term": "Temporal Prepositions",
+      "definition": "Words that show when or for how long something happens - used with nouns",
+      "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le dîner} (after dinner)"
+    },
+    {
+      "id": "c-sequential-connectors",
+      "term": "Sequential Connectors",
+      "definition": "Words that show the order of actions - connect sentences smoothly",
+      "example": "{D'abord}, {je mange. Ensuite}, {je pars. Finalement}, {j'arrive.} (First, I eat. Then, I leave. Finally, I arrive.)"
+    },
+    {
+      "id": "c-building-smooth-narratives",
+      "term": "Building Smooth Narratives",
+      "definition": "Use these words to tell stories and describe routines naturally",
+      "example": "Before: '{Je mange. Je pars.}' (choppy) After: '{D'abord, je mange. Ensuite, je pars.}' (smooth!)"
+    },
+    {
+      "id": "c-position-in-sentence",
+      "term": "Position in Sentence",
+      "definition": "Sequential connectors usually start sentences. Prepositions go before nouns.",
+      "example": "{D'abord}, {je pars} (First, I leave). {Je pars après le cours} (I leave after class)."
+    }
+  ],
+  "items": [
+    {
+      "id": "temporal-1",
+      "type": "respond",
+      "situation": "Say 'during' or 'for (a duration)'",
+      "cue": "during / for",
+      "answer": "pendant",
+      "hint": "Temporal preposition - pendant une heure",
+      "mistakes": [
+        {
+          "answer": "pour",
+          "feedback": "Use '{pendant}' for duration, 'pour' is for purpose/recipient"
+        }
+      ]
+    },
+    {
+      "id": "temporal-2",
+      "type": "respond",
+      "situation": "before",
+      "answer": "avant",
+      "hint": "Temporal preposition - opposite of après",
+      "mistakes": [
+        {
+          "answer": "après",
+          "feedback": "That's 'after', not 'before'!"
+        }
+      ]
+    },
+    {
+      "id": "temporal-3",
+      "type": "respond",
+      "situation": "after",
+      "answer": "après",
+      "hint": "Temporal word - opposite of avant",
+      "mistakes": [
+        {
+          "answer": "avant",
+          "feedback": "That's 'before', not 'after'!"
+        }
+      ]
+    },
+    {
+      "id": "temporal-4",
+      "type": "respond",
+      "situation": "Say 'since' or 'for (time period from past)'",
+      "cue": "since / for",
+      "answer": "depuis",
+      "hint": "depuis - duration from a point in the past"
+    },
+    {
+      "id": "temporal-5",
+      "type": "respond",
+      "situation": "Say 'first' or 'first of all' (to start a sequence)",
+      "cue": "first / first of all",
+      "answer": "d'abord",
+      "hint": "Starts a sequence - d'..."
+    },
+    {
+      "id": "temporal-6",
+      "type": "respond",
+      "situation": "Say 'then' or 'next'",
+      "cue": "then / next",
+      "answer": "ensuite",
+      "hint": "Continues a sequence - most common word",
+      "mistakes": [
+        {
+          "answer": "puis",
+          "feedback": "That also works, but '{ensuite}' is more common"
+        }
+      ]
+    },
+    {
+      "id": "temporal-7",
+      "type": "respond",
+      "situation": "finally",
+      "answer": "finalement",
+      "hint": "Ends a sequence - finalement",
+      "mistakes": [
+        {
+          "answer": "enfin",
+          "feedback": "That also means 'finally', but '{finalement}' is more common"
+        }
+      ]
+    },
+    {
+      "id": "temporal-8",
+      "type": "respond",
+      "situation": "First, I eat",
+      "answer": "d'abord, je mange",
+      "hint": "D'abord + comma + je mange"
+    },
+    {
+      "id": "temporal-9",
+      "type": "respond",
+      "situation": "Then, I leave",
+      "answer": "ensuite, je pars",
+      "hint": "Ensuite + comma + je pars"
+    },
+    {
+      "id": "temporal-10",
+      "type": "respond",
+      "situation": "Before class, I study",
+      "answer": "avant le cours, j'étudie",
+      "hint": "Avant + le cours + comma + j'étudie"
+    },
+    {
+      "id": "temporal-11",
+      "type": "respond",
+      "situation": "After class, I review",
+      "answer": "après le cours, je révise",
+      "hint": "Après + le cours + comma + je révise"
+    },
+    {
+      "id": "temporal-12",
+      "type": "respond",
+      "situation": "Say 'For an hour' or 'During an hour'",
+      "cue": "for an hour",
+      "answer": "pendant une heure",
+      "hint": "{pendant + une heure}"
+    }
+  ]
+}

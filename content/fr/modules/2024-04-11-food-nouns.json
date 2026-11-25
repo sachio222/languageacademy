@@ -1,0 +1,624 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-11-food-nouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Everyday Food Nouns",
+  "description": "Essential food vocabulary: une baguette, un croissant, un express (espresso), la pizza, le pain, l'eau, le café, la viande, les légumes",
+  "can_do": [
+    "Order specific foods at French establishments",
+    "Talk about bread, coffee, pastries, and meals",
+    "Navigate French bakeries and cafés confidently"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "l-eau-fr",
+      "fr": "l'eau",
+      "gloss": "water",
+      "note": "feminine (l'eau)"
+    },
+    {
+      "word_id": "le-cafe-fr",
+      "fr": "le café",
+      "gloss": "coffee",
+      "note": "masculine - very common!"
+    },
+    {
+      "word_id": "un-express-fr",
+      "fr": "un express",
+      "gloss": "espresso",
+      "note": "masculine - short strong coffee"
+    },
+    {
+      "word_id": "le-the-fr",
+      "fr": "le thé",
+      "gloss": "tea",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-lait-fr",
+      "fr": "le lait",
+      "gloss": "milk",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-vin-fr",
+      "fr": "le vin",
+      "gloss": "wine",
+      "note": "masculine"
+    },
+    {
+      "word_id": "la-biere-fr",
+      "fr": "la bière",
+      "gloss": "beer",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-jus-fr",
+      "fr": "le jus",
+      "gloss": "juice",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-pain-fr",
+      "fr": "le pain",
+      "gloss": "bread",
+      "note": "masculine - essential!"
+    },
+    {
+      "word_id": "une-baguette-fr",
+      "fr": "une baguette",
+      "gloss": "baguette",
+      "note": "feminine - iconic French bread!"
+    },
+    {
+      "word_id": "un-croissant-fr",
+      "fr": "un croissant",
+      "gloss": "croissant",
+      "note": "masculine - classic breakfast!"
+    },
+    {
+      "word_id": "le-beurre-fr",
+      "fr": "le beurre",
+      "gloss": "butter",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-fromage-fr",
+      "fr": "le fromage",
+      "gloss": "cheese",
+      "note": "masculine"
+    },
+    {
+      "word_id": "la-pizza-fr",
+      "fr": "la pizza",
+      "gloss": "pizza",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-sel-fr",
+      "fr": "le sel",
+      "gloss": "salt",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-poivre-fr",
+      "fr": "le poivre",
+      "gloss": "pepper",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-sucre-fr",
+      "fr": "le sucre",
+      "gloss": "sugar",
+      "note": "masculine"
+    },
+    {
+      "word_id": "la-viande-fr",
+      "fr": "la viande",
+      "gloss": "meat",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-poulet-fr",
+      "fr": "le poulet",
+      "gloss": "chicken",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-poisson-fr",
+      "fr": "le poisson",
+      "gloss": "fish",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-boeuf-fr",
+      "fr": "le bœuf",
+      "gloss": "beef",
+      "note": "masculine"
+    },
+    {
+      "word_id": "le-porc-fr",
+      "fr": "le porc",
+      "gloss": "pork",
+      "note": "masculine"
+    },
+    {
+      "word_id": "les-oeufs-fr",
+      "fr": "les œufs",
+      "gloss": "eggs",
+      "note": "masculine plural"
+    },
+    {
+      "word_id": "les-legumes-fr",
+      "fr": "les légumes",
+      "gloss": "vegetables",
+      "note": "masculine plural"
+    },
+    {
+      "word_id": "la-salade-fr",
+      "fr": "la salade",
+      "gloss": "salad/lettuce",
+      "note": "feminine"
+    },
+    {
+      "word_id": "la-tomate-fr",
+      "fr": "la tomate",
+      "gloss": "tomato",
+      "note": "feminine"
+    },
+    {
+      "word_id": "la-pomme-de-terre-fr",
+      "fr": "la pomme de terre",
+      "gloss": "potato",
+      "note": "feminine - literally 'apple of earth'"
+    },
+    {
+      "word_id": "les-frites-fr",
+      "fr": "les frites",
+      "gloss": "fries",
+      "note": "feminine plural"
+    },
+    {
+      "word_id": "les-haricots-fr",
+      "fr": "les haricots",
+      "gloss": "beans",
+      "note": "masculine plural"
+    },
+    {
+      "word_id": "les-fruits-fr",
+      "fr": "les fruits",
+      "gloss": "fruits",
+      "note": "masculine plural"
+    },
+    {
+      "word_id": "la-pomme-fr",
+      "fr": "la pomme",
+      "gloss": "apple",
+      "note": "feminine"
+    },
+    {
+      "word_id": "la-banane-fr",
+      "fr": "la banane",
+      "gloss": "banana",
+      "note": "feminine"
+    },
+    {
+      "word_id": "l-orange-fr",
+      "fr": "l'orange",
+      "gloss": "orange",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-riz-fr",
+      "fr": "le riz",
+      "gloss": "rice",
+      "note": "masculine"
+    },
+    {
+      "word_id": "les-pates-fr",
+      "fr": "les pâtes",
+      "gloss": "pasta",
+      "note": "feminine plural"
+    },
+    {
+      "word_id": "le-gateau-fr",
+      "fr": "le gâteau",
+      "gloss": "cake",
+      "note": "masculine"
+    },
+    {
+      "word_id": "la-glace-fr",
+      "fr": "la glace",
+      "gloss": "ice cream",
+      "note": "feminine"
+    },
+    {
+      "word_id": "le-chocolat-fr",
+      "fr": "le chocolat",
+      "gloss": "chocolate",
+      "note": "masculine"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-food-genders-learn-the",
+      "term": "Food Genders - Learn the article!",
+      "definition": "Always learn food nouns with their article - gender matters!",
+      "example": "{le pain} (masculine), {la viande} (feminine), {l'eau} (feminine)"
+    },
+    {
+      "id": "c-using-partitive-articles",
+      "term": "Using Partitive Articles",
+      "definition": "With food, use du/de la/des for 'some' - je veux du pain (I want some bread)",
+      "example": "{je veux du café} (some coffee), {de la viande} (some meat), {des légumes} (some vegetables)"
+    },
+    {
+      "id": "c-at-the-restaurant",
+      "term": "At the Restaurant",
+      "definition": "These are the foods you'll see and order every day!",
+      "example": "{je voudrais du pain, s'il vous plaît} (I would like some bread, please)"
+    },
+    {
+      "id": "c-with-aimer",
+      "term": "With aimer",
+      "definition": "Use definite article (le/la/les) with aimer - j'aime le pain (I like bread)",
+      "example": "{j'aime le café} (I like coffee), {j'aime la viande} (I like meat)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-veux-de-l",
+      "type": "respond",
+      "situation": "I want water",
+      "answer": "je veux de l'eau",
+      "accept": [
+        "je veux de l eau",
+        "je veux l'eau"
+      ],
+      "hint": "je veux + de l'eau (use partitive!)",
+      "mistakes": [
+        {
+          "answer": "je veux le eau",
+          "feedback": "eau starts with vowel, use l'eau not 'le eau'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-le-cafe",
+      "type": "respond",
+      "situation": "I like coffee",
+      "answer": "j'aime le café",
+      "accept": [
+        "j aime le café"
+      ],
+      "hint": "j'aime + le café (definite article with aimer!)",
+      "mistakes": [
+        {
+          "answer": "j'aime du café",
+          "feedback": "Use '{le}' with aimer, not 'du': j'aime le café"
+        }
+      ]
+    },
+    {
+      "id": "i-je-voudrais-du-pain",
+      "type": "respond",
+      "situation": "Say \"I would like some bread\" (polite)",
+      "cue": "I would like some bread",
+      "answer": "je voudrais du pain",
+      "hint": "{je voudrais + du pain}",
+      "mistakes": [
+        {
+          "answer": "je voudrais le pain",
+          "feedback": "Use partitive '{du}' for some: je voudrais du pain"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-une-baguette",
+      "type": "respond",
+      "situation": "I want a baguette",
+      "answer": "je veux une baguette",
+      "hint": "je veux + une baguette (feminine!)",
+      "mistakes": [
+        {
+          "answer": "je veux un baguette",
+          "feedback": "baguette is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-voudrais-un-croissant",
+      "type": "respond",
+      "situation": "I would like a croissant",
+      "answer": "je voudrais un croissant",
+      "hint": "{je voudrais + un croissant}",
+      "mistakes": [
+        {
+          "answer": "je voudrais une croissant",
+          "feedback": "croissant is masculine, use '{un}' not 'une'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-la-pizza",
+      "type": "respond",
+      "situation": "I like pizza",
+      "answer": "j'aime la pizza",
+      "accept": [
+        "j aime la pizza"
+      ],
+      "hint": "j'aime + la pizza (feminine!)",
+      "mistakes": [
+        {
+          "answer": "j'aime le pizza",
+          "feedback": "pizza is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-un-express",
+      "type": "respond",
+      "situation": "Say \"I want an espresso\" (express)",
+      "cue": "I want an espresso",
+      "answer": "je veux un express",
+      "hint": "{je veux + un express}",
+      "mistakes": [
+        {
+          "answer": "je veux une express",
+          "feedback": "express is masculine, use '{un}' not 'une'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-du-the",
+      "type": "respond",
+      "situation": "I want some tea",
+      "answer": "je veux du thé",
+      "hint": "{je veux + du thé}",
+      "mistakes": [
+        {
+          "answer": "je veux de thé",
+          "feedback": "Use '{du}' (de + le) for masculine: du thé"
+        }
+      ]
+    },
+    {
+      "id": "i-le-pain-est-bon",
+      "type": "respond",
+      "situation": "the bread is good",
+      "answer": "le pain est bon",
+      "hint": "{le pain + est + bon}",
+      "mistakes": [
+        {
+          "answer": "la pain est bon",
+          "feedback": "pain is masculine, use '{le}' not 'la'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-le-fromage",
+      "type": "respond",
+      "situation": "I like cheese",
+      "answer": "j'aime le fromage",
+      "accept": [
+        "j aime le fromage"
+      ],
+      "hint": "{j'aime + le fromage}",
+      "mistakes": [
+        {
+          "answer": "j'aime la fromage",
+          "feedback": "fromage is masculine, use '{le}' not 'la'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-de-la",
+      "type": "respond",
+      "situation": "I want some meat",
+      "answer": "je veux de la viande",
+      "hint": "je veux + de la viande (feminine!)",
+      "mistakes": [
+        {
+          "answer": "je veux du viande",
+          "feedback": "viande is feminine, use '{de la}' not 'du'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-le-poulet",
+      "type": "respond",
+      "situation": "I like chicken",
+      "answer": "j'aime le poulet",
+      "accept": [
+        "j aime le poulet"
+      ],
+      "hint": "{j'aime + le poulet}",
+      "mistakes": [
+        {
+          "answer": "j'aime la poulet",
+          "feedback": "poulet is masculine, use '{le}' not 'la'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-du-poisson",
+      "type": "respond",
+      "situation": "I want some fish",
+      "answer": "je veux du poisson",
+      "hint": "{je veux + du poisson}",
+      "mistakes": [
+        {
+          "answer": "je veux de la poisson",
+          "feedback": "poisson is masculine, use '{du}' not 'de la'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-les-legumes",
+      "type": "respond",
+      "situation": "I like vegetables",
+      "answer": "j'aime les légumes",
+      "accept": [
+        "j aime les légumes"
+      ],
+      "hint": "{j'aime + les légumes}",
+      "mistakes": [
+        {
+          "answer": "j'aime des légumes",
+          "feedback": "Use definite article '{les}' with aimer, not 'des'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-une-salade",
+      "type": "respond",
+      "situation": "I want a salad",
+      "answer": "je veux une salade",
+      "hint": "{je veux + une salade}",
+      "mistakes": [
+        {
+          "answer": "je veux un salade",
+          "feedback": "salade is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-les-frites",
+      "type": "respond",
+      "situation": "I like fries",
+      "answer": "j'aime les frites",
+      "accept": [
+        "j aime les frites"
+      ],
+      "hint": "{j'aime + les frites}",
+      "mistakes": [
+        {
+          "answer": "j'aime des frites",
+          "feedback": "Use '{les}' with aimer, not 'des'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-des-fruits",
+      "type": "respond",
+      "situation": "I want some fruit",
+      "answer": "je veux des fruits",
+      "hint": "je veux + des fruits (plural!)",
+      "mistakes": [
+        {
+          "answer": "je veux les fruits",
+          "feedback": "Use partitive '{des}' for some: je veux des fruits"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-les-pommes",
+      "type": "respond",
+      "situation": "I like apples",
+      "answer": "j'aime les pommes",
+      "accept": [
+        "j aime les pommes"
+      ],
+      "hint": "j'aime + les pommes (plural!)",
+      "mistakes": [
+        {
+          "answer": "j'aime des pommes",
+          "feedback": "Use '{les}' with aimer for general like, not 'des'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-du-riz",
+      "type": "respond",
+      "situation": "I want some rice",
+      "answer": "je veux du riz",
+      "hint": "{je veux + du riz}",
+      "mistakes": [
+        {
+          "answer": "je veux de la riz",
+          "feedback": "riz is masculine, use '{du}' not 'de la'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-les-pates",
+      "type": "respond",
+      "situation": "I like pasta",
+      "answer": "j'aime les pâtes",
+      "accept": [
+        "j aime les pâtes",
+        "j'aime les pates"
+      ],
+      "hint": "j'aime + les pâtes (plural!)",
+      "mistakes": [
+        {
+          "answer": "j'aime la pâtes",
+          "feedback": "pâtes is plural, use '{les}' not 'la'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-du-gateau",
+      "type": "respond",
+      "situation": "I want some cake",
+      "answer": "je veux du gâteau",
+      "accept": [
+        "je veux du gateau"
+      ],
+      "hint": "{je veux + du gâteau}",
+      "mistakes": [
+        {
+          "answer": "je veux de la gâteau",
+          "feedback": "gâteau is masculine, use '{du}' not 'de la'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-la-glace",
+      "type": "respond",
+      "situation": "I like ice cream",
+      "answer": "j'aime la glace",
+      "accept": [
+        "j aime la glace"
+      ],
+      "hint": "{j'aime + la glace}",
+      "mistakes": [
+        {
+          "answer": "j'aime le glace",
+          "feedback": "glace is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-du-chocolat",
+      "type": "respond",
+      "situation": "I want some chocolate",
+      "answer": "je veux du chocolat",
+      "hint": "{je veux + du chocolat}",
+      "mistakes": [
+        {
+          "answer": "je veux de la chocolat",
+          "feedback": "chocolat is masculine, use '{du}' not 'de la'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-aime-pas",
+      "type": "respond",
+      "situation": "Say \"I do not like fish\"",
+      "cue": "I don't like fish",
+      "answer": "je n'aime pas le poisson",
+      "accept": [
+        "je n aime pas le poisson"
+      ],
+      "hint": "{je n'aime pas + le poisson}",
+      "mistakes": [
+        {
+          "answer": "je n'aime pas de poisson",
+          "feedback": "Keep '{le}' with aimer even in negative: je n'aime pas le poisson"
+        }
+      ]
+    }
+  ]
+}

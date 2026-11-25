@@ -1,0 +1,293 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-31-survival-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Survival Phrases - Real-World Essentials",
+  "description": "Essential phrases for bakeries, cafés, shops, and getting around! These will save you in France.",
+  "can_do": [
+    "Order food and drinks politely (Je voudrais...)",
+    "Ask essential questions (How much? Where is...?)",
+    "Navigate shops, cafés, and France successfully"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-voudrais-fr",
+      "fr": "je voudrais",
+      "gloss": "I would like",
+      "note": "polite form!"
+    },
+    {
+      "word_id": "s-il-vous-plait-fr",
+      "fr": "s'il vous plaît",
+      "gloss": "please",
+      "note": "formal politeness"
+    },
+    {
+      "word_id": "s-il-te-plait-fr",
+      "fr": "s'il te plaît",
+      "gloss": "please",
+      "note": "informal politeness"
+    },
+    {
+      "word_id": "excusez-moi-fr",
+      "fr": "excusez-moi",
+      "gloss": "excuse me",
+      "note": "get attention"
+    },
+    {
+      "word_id": "bonne-nuit-fr",
+      "fr": "bonne nuit",
+      "gloss": "good night",
+      "note": "before bed"
+    },
+    {
+      "word_id": "bonne-journee-fr",
+      "fr": "bonne journée",
+      "gloss": "have a good day",
+      "note": "daytime farewell"
+    },
+    {
+      "word_id": "c-est-combien-fr",
+      "fr": "c'est combien",
+      "gloss": "how much is it?",
+      "note": "asking prices"
+    },
+    {
+      "word_id": "combien-ca-coute-fr",
+      "fr": "combien ça coûte",
+      "gloss": "how much does it cost?",
+      "note": "formal"
+    },
+    {
+      "word_id": "ou-sont-fr",
+      "fr": "où sont",
+      "gloss": "where are",
+      "note": "où + être plural"
+    },
+    {
+      "word_id": "les-toilettes-fr",
+      "fr": "les toilettes",
+      "gloss": "the restrooms",
+      "note": "‼️ always plural for restrooms."
+    },
+    {
+      "word_id": "l-addition-fr",
+      "fr": "l'addition",
+      "gloss": "the bill/check",
+      "note": "at restaurants"
+    },
+    {
+      "word_id": "pardon-fr",
+      "fr": "pardon",
+      "gloss": "pardon/sorry",
+      "note": "apology"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-polite-requests",
+      "term": "Polite Requests",
+      "definition": "Use '{je voudrais}' (I would like) instead of '{je veux}' - much more polite!",
+      "example": "At a bakery: '{Je voudrais un croissant, s'il vous plaît}'"
+    },
+    {
+      "id": "c-essential-questions",
+      "term": "Essential Questions",
+      "definition": "Phrases for prices, locations, and understanding",
+      "example": "{C'est combien?} (How much?), {Où sont les toilettes?} (Where's the bathroom?)"
+    },
+    {
+      "id": "c-polite-words",
+      "term": "Polite Words",
+      "definition": "Please, excuse me, good night - essential politeness",
+      "example": "{S'il vous plaît, excusez-moi, bonne nuit}"
+    },
+    {
+      "id": "c-restrooms-always-plural",
+      "term": "Restrooms Always Plural",
+      "definition": "When asking for restrooms, always use plural '{les toilettes}' and '{où sont}'",
+      "example": "{Où + sont + les toilettes?} (Never 'où est la toilette')"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-voudrais-un-livre",
+      "type": "respond",
+      "situation": "Politely order a book at a shop (formal)",
+      "cue": "I would like a book, please",
+      "answer": "je voudrais un livre, s'il vous plaît",
+      "accept": [
+        "je voudrais un livre"
+      ],
+      "hint": "{je voudrais + un livre + s'il vous plaît}",
+      "mistakes": [
+        {
+          "answer": "je veux un livre",
+          "feedback": "Use '{je voudrais}' to be polite, not 'je veux'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-voudrais-un-cafe",
+      "type": "respond",
+      "situation": "At a café, politely order a coffee",
+      "cue": "I would like a coffee, please",
+      "answer": "je voudrais un café, s'il vous plaît",
+      "accept": [
+        "je voudrais un café"
+      ],
+      "hint": "{je voudrais + un café + s'il vous plaît}"
+    },
+    {
+      "id": "i-c-est-combien-le",
+      "type": "respond",
+      "situation": "Ask how much a book costs",
+      "cue": "how much is the book?",
+      "answer": "c'est combien le livre",
+      "accept": [
+        "c'est combien"
+      ],
+      "hint": "c'est combien with definite article + noun"
+    },
+    {
+      "id": "i-excusez-moi",
+      "type": "respond",
+      "situation": "Get someone's attention in a shop",
+      "cue": "excuse me",
+      "answer": "excusez-moi",
+      "hint": "Polite way to get attention",
+      "mistakes": [
+        {
+          "answer": "pardon",
+          "feedback": "Both work, but '{excusez-moi}' is more common for getting attention"
+        }
+      ]
+    },
+    {
+      "id": "i-s-il-vous-plait",
+      "type": "respond",
+      "situation": "Say 'please' when asking for something (formal)",
+      "cue": "please (formal)",
+      "answer": "s'il vous plaît",
+      "hint": "Literally 'if it pleases you'"
+    },
+    {
+      "id": "i-s-il-te-plait",
+      "type": "respond",
+      "situation": "Say 'please' to a friend or family member",
+      "cue": "please (informal)",
+      "answer": "s'il te plaît",
+      "hint": "Informal version with '{te}' instead of '{vous}'",
+      "mistakes": [
+        {
+          "answer": "s'il vous plaît",
+          "feedback": "That's the formal version - use '{s'il te plaît}' for friends and family"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-le-livre",
+      "type": "respond",
+      "situation": "Ask your friend for the book politely (to a friend)",
+      "cue": "I want the book, please (to a friend)",
+      "answer": "je veux le livre, s'il te plaît",
+      "accept": [
+        "je veux le livre"
+      ],
+      "hint": "{Je veux + le livre + s'il te plaît}",
+      "mistakes": [
+        {
+          "answer": "je veux le livre, s'il vous plaît",
+          "feedback": "Use '{s'il te plaît}' with friends and family, not 's'il vous plaît'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-le-chat",
+      "type": "respond",
+      "situation": "Ask your friend for the cat politely (to a friend)",
+      "cue": "I want the cat, please (to a friend)",
+      "answer": "je veux le chat, s'il te plaît",
+      "accept": [
+        "je veux le chat"
+      ],
+      "hint": "{Je veux + le chat + s'il te plaît}",
+      "mistakes": [
+        {
+          "answer": "je veux le chat, s'il vous plaît",
+          "feedback": "Use '{s'il te plaît}' with friends, not 's'il vous plaît'"
+        }
+      ]
+    },
+    {
+      "id": "i-bonne-nuit",
+      "type": "respond",
+      "situation": "Say good night to your host family",
+      "cue": "good night",
+      "answer": "bonne nuit",
+      "hint": "Two words - bonne + nuit",
+      "mistakes": [
+        {
+          "answer": "bonne journée",
+          "feedback": "That's 'have a good day' - use '{bonne nuit}' for night"
+        }
+      ]
+    },
+    {
+      "id": "i-bonne-journee",
+      "type": "respond",
+      "situation": "Say goodbye during the day with a nice wish",
+      "cue": "have a good day",
+      "answer": "bonne journée",
+      "hint": "bonne + journée (feminine)",
+      "mistakes": [
+        {
+          "answer": "bon journée",
+          "feedback": "journée is feminine, use '{bonne}' not 'bon'"
+        }
+      ]
+    },
+    {
+      "id": "i-ou-est-le-cafe",
+      "type": "respond",
+      "situation": "Ask where the café is",
+      "cue": "where is the café?",
+      "answer": "où est le café",
+      "hint": "{où + est + le café}"
+    },
+    {
+      "id": "i-ou-sont-les-toilettes",
+      "type": "respond",
+      "situation": "Ask where the restrooms are",
+      "cue": "where are the restrooms?",
+      "answer": "où sont les toilettes",
+      "hint": "{où + sont + les toilettes}",
+      "mistakes": [
+        {
+          "answer": "où est les toilettes",
+          "feedback": "toilettes is plural, use '{sont}' not 'est'"
+        }
+      ]
+    },
+    {
+      "id": "i-l-addition-s-il",
+      "type": "respond",
+      "situation": "At a restaurant, ask for the check",
+      "cue": "the check, please",
+      "answer": "l'addition, s'il vous plaît",
+      "accept": [
+        "l'addition"
+      ],
+      "hint": "{l'addition + s'il vous plaît}"
+    },
+    {
+      "id": "i-pardon",
+      "type": "respond",
+      "situation": "Apologize when you bump into someone",
+      "cue": "pardon / sorry",
+      "answer": "pardon",
+      "hint": "One word - same as English cognate"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-31-possibility-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Il est possible que...} - Possibility Phrases",
+  "description": "Express possibilities and uncertainties! '{Il est possible qu'il vienne}' (It's possible he'll come), '{Peut-être qu'il viendra}' (Maybe he'll come). Useful for planning!",
+  "vocabulary": [
+    {
+      "word_id": "il-est-possible-qu-il-vienne-fr",
+      "fr": "il est possible qu'il vienne",
+      "gloss": "it's possible he'll come",
+      "note": "⭐ uncertain plan"
+    },
+    {
+      "word_id": "peut-etre-qu-il-viendra-fr",
+      "fr": "peut-être qu'il viendra",
+      "gloss": "maybe he'll come",
+      "note": "simple maybe"
+    },
+    {
+      "word_id": "il-se-peut-que-fr",
+      "fr": "il se peut que",
+      "gloss": "it may be that",
+      "note": "formal possibility"
+    },
+    {
+      "word_id": "il-est-possible-qu-on-parte-fr",
+      "fr": "il est possible qu'on parte",
+      "gloss": "it's possible we'll leave",
+      "note": "group planning"
+    },
+    {
+      "word_id": "peut-etre-demain-fr",
+      "fr": "peut-être demain",
+      "gloss": "maybe tomorrow",
+      "note": "quick hedge"
+    },
+    {
+      "word_id": "peut-etre-pas-fr",
+      "fr": "peut-être pas",
+      "gloss": "maybe not",
+      "note": "uncertainty"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-il-est-possible-que",
+      "term": "{Il est possible que...} - It's Possible That...",
+      "definition": "Express something that MIGHT happen (not certain!)",
+      "example": "{Il est possible qu'il vienne} (It's possible he'll come - not sure!)"
+    },
+    {
+      "id": "c-peut-etre-maybe",
+      "term": "{Peut-être} - Maybe",
+      "definition": "Quick way to express uncertainty",
+      "example": "{Peut-être qu'il viendra} (Maybe he'll come), {Peut-être demain} (Maybe tomorrow)"
+    },
+    {
+      "id": "c-planning-and-hedging",
+      "term": "Planning and Hedging",
+      "definition": "Essential for making flexible plans!",
+      "example": "{Il est possible qu'on parte demain} (We might leave tomorrow)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-il-est-possible-qu",
+      "type": "respond",
+      "situation": "Express possibility: 'It's possible he'll come'",
+      "cue": "It's possible he'll come",
+      "answer": "il est possible qu'il vienne",
+      "hint": "{il est possible qu' + il + vienne}",
+      "mistakes": [
+        {
+          "answer": "il est possible qu'il vient",
+          "feedback": "After '{il est possible que}', use '{vienne}': il est possible qu'il vienne"
+        }
+      ]
+    },
+    {
+      "id": "i-peut-etre-qu-il",
+      "type": "respond",
+      "situation": "Simple maybe: 'Maybe he'll come'",
+      "cue": "Maybe he'll come",
+      "answer": "peut-être qu'il viendra",
+      "hint": "{peut-être qu' + il + viendra}"
+    },
+    {
+      "id": "i-il-se-peut-que",
+      "type": "respond",
+      "situation": "Formal possibility: 'It may be that...' (formal)",
+      "cue": "it may be that",
+      "answer": "il se peut que",
+      "hint": "{il se peut que}"
+    },
+    {
+      "id": "i-il-est-possible-qu-2",
+      "type": "respond",
+      "situation": "Group planning: 'It's possible we'll leave'",
+      "cue": "It's possible we'll leave",
+      "answer": "il est possible qu'on parte",
+      "hint": "{il est possible qu' + on + parte}"
+    },
+    {
+      "id": "i-peut-etre-demain",
+      "type": "respond",
+      "situation": "Quick hedge: 'maybe tomorrow'",
+      "cue": "maybe tomorrow",
+      "answer": "peut-être demain",
+      "hint": "{peut-être + demain}"
+    },
+    {
+      "id": "i-peut-etre-pas",
+      "type": "respond",
+      "situation": "Express uncertainty: 'maybe not'",
+      "cue": "maybe not",
+      "answer": "peut-être pas",
+      "hint": "{peut-être + pas}"
+    }
+  ]
+}

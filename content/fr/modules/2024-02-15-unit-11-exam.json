@@ -1,0 +1,424 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-15-unit-11-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Final test for this unit! Demonstrate mastery of age expressions, all missing top 100 verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), directions, and practical communication. Achieve complete French foundation!",
+  "can_do": [
+    "Use all top 100 French words fluently",
+    "Navigate France with directions and practical phrases",
+    "Understand ~85% of everyday French conversations"
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-vingt-deux",
+      "type": "respond",
+      "situation": "I am 22 years old",
+      "answer": "j'ai vingt-deux ans",
+      "accept": [
+        "j'ai 22 ans"
+      ],
+      "hint": "French uses avoir for age"
+    },
+    {
+      "id": "i-quel-age-avez-vous",
+      "type": "respond",
+      "situation": "Ask someone's age politely",
+      "cue": "How old are you? (formal)",
+      "answer": "quel âge avez-vous?",
+      "hint": "{quel âge + vous + avoir}"
+    },
+    {
+      "id": "i-quel-age-as-tu",
+      "type": "respond",
+      "situation": "Ask someone's age casually",
+      "cue": "How old are you? (informal)",
+      "answer": "quel âge as-tu?",
+      "accept": [
+        "tu as quel âge?"
+      ],
+      "hint": "{quel âge + tu + avoir}"
+    },
+    {
+      "id": "i-je-suis-ne-en",
+      "type": "respond",
+      "situation": "Say you were born in a year (male)",
+      "cue": "I was born in 1995",
+      "answer": "je suis né en mille neuf cent quatre-vingt-quinze",
+      "accept": [
+        "je suis né en 1995"
+      ],
+      "hint": "je suis né + en + year"
+    },
+    {
+      "id": "i-je-suis-nee-a",
+      "type": "respond",
+      "situation": "Say you were born in a place (female)",
+      "cue": "I was born in Nice (female)",
+      "answer": "je suis née à Nice",
+      "hint": "je suis née + à + city"
+    },
+    {
+      "id": "i-je-m-appelle-sophie",
+      "type": "respond",
+      "situation": "Complete introduction",
+      "cue": "My name is Sophie, I'm 28, I was born in Paris",
+      "answer": "je m'appelle Sophie, j'ai vingt-huit ans, je suis née à Paris",
+      "accept": [
+        "je m'appelle Sophie, j'ai 28 ans, je suis née à Paris"
+      ],
+      "hint": "je m'appelle + name + j'ai + age + je suis née + à + city"
+    },
+    {
+      "id": "i-je-donne",
+      "type": "respond",
+      "situation": "Conjugate donner",
+      "cue": "I give",
+      "answer": "je donne",
+      "hint": "donner for je"
+    },
+    {
+      "id": "i-ils-donnent",
+      "type": "respond",
+      "situation": "Conjugate donner",
+      "cue": "they give",
+      "answer": "ils donnent",
+      "hint": "donner for ils"
+    },
+    {
+      "id": "i-je-te-donne-le",
+      "type": "respond",
+      "situation": "Practical usage",
+      "cue": "I give you the book",
+      "answer": "je te donne le livre",
+      "hint": "je + te + donne + object"
+    },
+    {
+      "id": "i-tu-peux-me-donner",
+      "type": "respond",
+      "situation": "Practical usage",
+      "cue": "Can you give me your address?",
+      "answer": "tu peux me donner ton adresse?",
+      "accept": [
+        "vous pouvez me donner votre adresse?"
+      ],
+      "hint": "{tu peux + me donner + ton adresse}"
+    },
+    {
+      "id": "i-donner-rendez-vous",
+      "type": "respond",
+      "situation": "Fixed expression",
+      "cue": "to make an appointment",
+      "answer": "donner rendez-vous",
+      "hint": "fixed phrase with donner"
+    },
+    {
+      "id": "i-je-dors",
+      "type": "respond",
+      "situation": "I sleep",
+      "answer": "je dors",
+      "hint": "dormir for je"
+    },
+    {
+      "id": "i-tu-dors-bien",
+      "type": "respond",
+      "situation": "Ask about sleep quality",
+      "cue": "Do you sleep well?",
+      "answer": "tu dors bien?",
+      "hint": "{tu + dors + bien + question}"
+    },
+    {
+      "id": "i-je-dors-huit-heures",
+      "type": "respond",
+      "situation": "Say duration",
+      "cue": "I sleep 8 hours",
+      "answer": "je dors huit heures",
+      "hint": "{je dors + huit heures}"
+    },
+    {
+      "id": "i-je-travaille",
+      "type": "respond",
+      "situation": "I work",
+      "answer": "je travaille",
+      "hint": "travailler for je"
+    },
+    {
+      "id": "i-ou-travaillez-vous",
+      "type": "respond",
+      "situation": "Ask about work location",
+      "cue": "Where do you work? (formal)",
+      "answer": "où travaillez-vous?",
+      "hint": "{où + vous + travaillez}"
+    },
+    {
+      "id": "i-je-travaille-dur",
+      "type": "respond",
+      "situation": "Say work intensity",
+      "cue": "I work hard",
+      "answer": "je travaille dur",
+      "hint": "{je travaille + dur}"
+    },
+    {
+      "id": "i-je-vis",
+      "type": "respond",
+      "situation": "I live",
+      "answer": "je vis",
+      "hint": "vivre for je - irregular"
+    },
+    {
+      "id": "i-je-vis-a-bordeaux",
+      "type": "respond",
+      "situation": "Say residence location",
+      "cue": "I live in Bordeaux",
+      "answer": "je vis à Bordeaux",
+      "hint": "je vis + à + city"
+    },
+    {
+      "id": "i-vivre-sa-vie",
+      "type": "respond",
+      "situation": "Philosophical expression",
+      "cue": "to live one's life",
+      "answer": "vivre sa vie",
+      "hint": "fixed expression with vivre"
+    },
+    {
+      "id": "i-je-cherche-ma-voiture",
+      "type": "respond",
+      "situation": "Say: I'm looking for my car",
+      "cue": "I'm looking for my car",
+      "answer": "je cherche ma voiture",
+      "hint": "{je cherche + ma voiture}"
+    },
+    {
+      "id": "i-j-ai-trouve",
+      "type": "respond",
+      "situation": "Express success",
+      "cue": "I found it!",
+      "answer": "j'ai trouvé!",
+      "hint": "exclamation with past tense"
+    },
+    {
+      "id": "i-comment-tu-trouves-ca",
+      "type": "respond",
+      "situation": "Ask for opinion using trouver",
+      "cue": "What do you think of this?",
+      "answer": "comment tu trouves ça?",
+      "accept": [
+        "tu trouves ça comment?"
+      ],
+      "hint": "{comment + tu trouves + ça}"
+    },
+    {
+      "id": "i-je-trouve-que-c",
+      "type": "respond",
+      "situation": "Express opinion",
+      "cue": "I think that's good",
+      "answer": "je trouve que c'est bon",
+      "hint": "{je trouve que + c'est bon}"
+    },
+    {
+      "id": "i-j-ecoute-de-la",
+      "type": "respond",
+      "situation": "Say activity",
+      "cue": "I listen to French music",
+      "answer": "j'écoute de la musique française",
+      "hint": "{j'écoute + de la musique française}"
+    },
+    {
+      "id": "i-nous-regardons-des-films",
+      "type": "respond",
+      "situation": "Say activity",
+      "cue": "We watch French movies",
+      "answer": "nous regardons des films français",
+      "hint": "{nous regardons + des films français}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Ask about entertainment",
+      "cue": "What are you watching?",
+      "answer": "qu'est-ce que tu regardes?",
+      "hint": "{qu'est-ce que + tu regardes}"
+    },
+    {
+      "id": "i-ecoute-le-professeur",
+      "type": "respond",
+      "situation": "Give advice using command",
+      "cue": "Listen to the teacher!",
+      "answer": "écoute le professeur!",
+      "accept": [
+        "écoutez le professeur!"
+      ],
+      "hint": "{écoute + le professeur}"
+    },
+    {
+      "id": "i-j-attends-mon-ami",
+      "type": "respond",
+      "situation": "Describe waiting",
+      "cue": "I'm waiting for my friend",
+      "answer": "j'attends mon ami",
+      "hint": "{j'attends + mon ami}"
+    },
+    {
+      "id": "i-a-quelle-heure-tu",
+      "type": "respond",
+      "situation": "Ask about arrival time",
+      "cue": "What time do you arrive?",
+      "answer": "à quelle heure tu arrives?",
+      "accept": [
+        "quand tu arrives?"
+      ],
+      "hint": "{à quelle heure + tu arrives}"
+    },
+    {
+      "id": "i-le-train-arrive-a",
+      "type": "respond",
+      "situation": "State arrival time",
+      "cue": "The train arrives at 6pm",
+      "answer": "le train arrive à dix-huit heures",
+      "accept": [
+        "le train arrive à 18h",
+        "le train arrive à six heures"
+      ],
+      "hint": "le train arrive + à + time"
+    },
+    {
+      "id": "i-je-reste-trois-jours",
+      "type": "respond",
+      "situation": "Express duration of stay",
+      "cue": "I'm staying three days",
+      "answer": "je reste trois jours",
+      "hint": "{je reste + trois jours}"
+    },
+    {
+      "id": "i-combien-de-temps-tu",
+      "type": "respond",
+      "situation": "Ask about stay duration",
+      "cue": "How long are you staying?",
+      "answer": "combien de temps tu restes?",
+      "hint": "{combien de temps + tu restes}"
+    },
+    {
+      "id": "i-j-attends-tu-arrives",
+      "type": "respond",
+      "situation": "Plan coordination",
+      "cue": "I wait, you arrive, we stay together",
+      "answer": "j'attends, tu arrives, on reste ensemble",
+      "hint": "{j'attends + tu arrives + on reste ensemble}"
+    },
+    {
+      "id": "i-tournez-a-gauche",
+      "type": "respond",
+      "situation": "Give direction",
+      "cue": "Turn left",
+      "answer": "tournez à gauche",
+      "accept": [
+        "tourne à gauche"
+      ],
+      "hint": "{tournez + à gauche}"
+    },
+    {
+      "id": "i-tournez-a-droite",
+      "type": "respond",
+      "situation": "Give direction",
+      "cue": "Turn right",
+      "answer": "tournez à droite",
+      "accept": [
+        "tourne à droite"
+      ],
+      "hint": "{tournez + à droite}"
+    },
+    {
+      "id": "i-allez-tout-droit",
+      "type": "respond",
+      "situation": "Give direction",
+      "cue": "Go straight",
+      "answer": "allez tout droit",
+      "accept": [
+        "va tout droit"
+      ],
+      "hint": "{allez + tout droit}"
+    },
+    {
+      "id": "i-ou-est-le-musee",
+      "type": "respond",
+      "situation": "Ask for location",
+      "cue": "Where is the museum?",
+      "answer": "où est le musée?",
+      "hint": "{où est + le musée}"
+    },
+    {
+      "id": "i-c-est-loin",
+      "type": "respond",
+      "situation": "Ask about distance",
+      "cue": "Is it far?",
+      "answer": "c'est loin?",
+      "hint": "{c'est + loin + question}"
+    },
+    {
+      "id": "i-excusez-moi-ou-est",
+      "type": "respond",
+      "situation": "Ask for help politely",
+      "cue": "Excuse me, where is the train station?",
+      "answer": "excusez-moi, où est la gare?",
+      "hint": "{excusez-moi + où est + la gare}"
+    },
+    {
+      "id": "i-c-est-a-cinq",
+      "type": "respond",
+      "situation": "Give distance information",
+      "cue": "It's five minutes on foot",
+      "answer": "c'est à cinq minutes à pied",
+      "hint": "{c'est + à cinq minutes + à pied}"
+    },
+    {
+      "id": "i-allez-tout-droit-puis",
+      "type": "respond",
+      "situation": "Complex directions",
+      "cue": "Go straight, then turn left at the corner",
+      "answer": "allez tout droit, puis tournez à gauche au coin",
+      "accept": [
+        "va tout droit, puis tourne à gauche au coin"
+      ],
+      "hint": "{allez tout droit + puis + tournez à gauche + au coin}"
+    },
+    {
+      "id": "i-la-france-a-soixante",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: France's population",
+      "cue": "France has 68 million inhabitants",
+      "answer": "la France a soixante-huit millions d'habitants",
+      "accept": [
+        "la France a 68 millions d'habitants"
+      ],
+      "hint": "la France + a + number + millions + habitants"
+    },
+    {
+      "id": "i-les-touristes-cherchent-des",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: What tourists look for",
+      "cue": "Tourists look for directions to find monuments",
+      "answer": "les touristes cherchent des directions pour trouver les monuments",
+      "hint": "{les touristes + cherchent + directions + pour trouver + monuments}"
+    },
+    {
+      "id": "i-les-artistes-francais-vivent",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: Where artists live",
+      "cue": "French artists often live in neighborhoods like Montmartre",
+      "answer": "les artistes français vivent souvent dans des quartiers comme Montmartre",
+      "hint": "{les artistes français + vivent + souvent + dans + quartiers + comme + Montmartre}"
+    },
+    {
+      "id": "i-la-france-moderne-combine",
+      "type": "respond",
+      "situation": "From the reading {La France Moderne}: Modern France combines what?",
+      "cue": "Modern France combines tradition and innovation",
+      "answer": "la France moderne combine tradition et innovation",
+      "hint": "{la France moderne + combine + tradition + et + innovation}"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

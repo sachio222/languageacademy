@@ -1,0 +1,422 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-03-past-tense-composition",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Past Tense Composition - Building Complete Stories",
+  "description": "Practice combining everything: passé composé, imparfait, causal words, spatial prepositions for rich storytelling",
+  "can_do": [
+    "Compose complete past tense narratives",
+    "Combine scene-setting, events, reasons, and locations",
+    "Tell rich, sophisticated stories in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "donc-fr",
+      "fr": "donc",
+      "gloss": "so, therefore",
+      "note": "⭐ consequence connector"
+    },
+    {
+      "word_id": "alors-fr",
+      "fr": "alors",
+      "gloss": "so, then",
+      "note": "⭐ result/consequence connector"
+    },
+    {
+      "word_id": "c-etait-fr",
+      "fr": "c'était",
+      "gloss": "it was",
+      "note": "⭐ description - always IMP!"
+    },
+    {
+      "word_id": "il-y-avait-fr",
+      "fr": "il y avait",
+      "gloss": "there was/were",
+      "note": "⭐ description - always IMP!"
+    },
+    {
+      "word_id": "j-ai-decide-de-fr",
+      "fr": "j'ai décidé de",
+      "gloss": "I decided to",
+      "note": "PC decision + infinitive"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-complete-narrative-structure",
+      "term": "Complete Narrative Structure",
+      "definition": "Combine: 1) Scene-setting (IMP), 2) Events (PC), 3) Causal reasoning (parce que, car), 4) Spatial context (près de, devant)",
+      "example": "{Hier, il faisait beau donc je suis allé au parc près de chez moi. J'étais content parce que j'avais du temps libre.}"
+    },
+    {
+      "id": "c-layered-storytelling-pattern",
+      "term": "Layered Storytelling Pattern",
+      "definition": "Background (IMP) → Event (PC) → Reason (parce que) → Next Event (PC)",
+      "example": "{Il faisait beau} (background) {quand je suis sorti} (event). {J'ai décidé d'aller au café} (event) {parce que j'avais faim} (reason)."
+    },
+    {
+      "id": "c-rich-scene-setting",
+      "term": "Rich Scene-Setting",
+      "definition": "Use spatial prepositions + imparfait to paint the picture",
+      "example": "{Le café était près de l'école. Il y avait beaucoup de gens. Ils étaient assis autour des tables.}"
+    },
+    {
+      "id": "c-causal-flow-in-narratives",
+      "term": "Causal Flow in Narratives",
+      "definition": "Use donc, parce que, car, comme to connect events logically",
+      "example": "{Comme il faisait beau, je suis sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait soif.}"
+    },
+    {
+      "id": "c-time-and-space-integration",
+      "term": "Time and Space Integration",
+      "definition": "Combine temporal words (d'abord, ensuite) with spatial (près de, devant)",
+      "example": "{D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma.}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-faisait-donc",
+      "type": "gapfill",
+      "text": "Hier, il ___ beau ___ je suis sorti",
+      "blanks": [
+        {
+          "answer": "faisait"
+        },
+        {
+          "answer": "donc"
+        }
+      ],
+      "gloss": "Yesterday, it was nice so I went out",
+      "hint": "Use '{faire}' + connector",
+      "mistakes": [
+        {
+          "answer": "a fait donc",
+          "feedback": "Weather is background! Use imparfait: il faisait (not a fait)."
+        },
+        {
+          "answer": "faisait parce que",
+          "feedback": "Use '{donc}' for result/consequence! Il faisait beau DONC je suis sorti."
+        }
+      ]
+    },
+    {
+      "id": "i-pres-de-parce-que",
+      "type": "gapfill",
+      "text": "Je suis allé au café ___ l'école ___ j'avais faim",
+      "blanks": [
+        {
+          "answer": "près de"
+        },
+        {
+          "answer": "parce que"
+        }
+      ],
+      "gloss": "I went to the café near the school because I was hungry",
+      "hint": "Spatial + causal",
+      "mistakes": [
+        {
+          "answer": "devant car",
+          "feedback": "Close! But '{près de}' (near) is better than 'devant' (in front) here."
+        },
+        {
+          "answer": "dans parce que",
+          "feedback": "The café is NEAR the school, not IN it! Use '{près de}' (near)."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-parle",
+      "type": "gapfill",
+      "text": "J'___ avec Marie quand tu as appelé",
+      "blanks": [
+        {
+          "answer": "ai parlé"
+        }
+      ],
+      "gloss": "I was talking with Marie when you called",
+      "hint": "Use '{parler}' in correct tense",
+      "mistakes": [
+        {
+          "answer": "parlais",
+          "feedback": "Actually BOTH work! But if thinking of whole conversation as one unit, '{ai parlé}' works. If emphasizing ongoing, 'parlais' is better. Let's accept both!"
+        }
+      ]
+    },
+    {
+      "id": "i-comme",
+      "type": "gapfill",
+      "text": "___ il faisait beau, on est allés au parc",
+      "blanks": [
+        {
+          "answer": "Comme"
+        }
+      ],
+      "gloss": "Since it was nice, we went to the park",
+      "hint": "Use causal word at START",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que rarely starts sentences! Use '{Comme}' at the beginning."
+        },
+        {
+          "answer": "Car",
+          "feedback": "Car CANNOT start a sentence! Use '{Comme}' at the beginning."
+        }
+      ]
+    },
+    {
+      "id": "i-avait-autour",
+      "type": "gapfill",
+      "text": "Il y ___ beaucoup de gens ___ des tables",
+      "blanks": [
+        {
+          "answer": "avait"
+        },
+        {
+          "answer": "autour"
+        }
+      ],
+      "gloss": "There were many people around the tables",
+      "hint": "Description + spatial",
+      "mistakes": [
+        {
+          "answer": "a eu autour",
+          "feedback": "Description of scene! Use imparfait: il y avait (not a eu)."
+        },
+        {
+          "answer": "avait sur",
+          "feedback": "People sit AROUND tables, not ON them! Use '{autour de}' (around)."
+        }
+      ]
+    },
+    {
+      "id": "i-etait",
+      "type": "gapfill",
+      "text": "C'___ super!",
+      "blanks": [
+        {
+          "answer": "était"
+        }
+      ],
+      "gloss": "It was great!",
+      "hint": "Always use imparfait for '{c'était}'",
+      "mistakes": [
+        {
+          "answer": "a été",
+          "feedback": "C'était is ALWAYS imparfait for general evaluation! C'était super."
+        },
+        {
+          "answer": "est",
+          "feedback": "That's present! Use imparfait: c'était (it was)."
+        }
+      ]
+    },
+    {
+      "id": "i-d-parce-que",
+      "type": "gapfill",
+      "text": "J'ai décidé ___ aller au cinéma ___ j'avais du temps",
+      "blanks": [
+        {
+          "answer": "d'"
+        },
+        {
+          "answer": "parce que"
+        }
+      ],
+      "gloss": "I decided to go to the cinema because I had time",
+      "hint": "Infinitive + reason",
+      "mistakes": [
+        {
+          "answer": "de car",
+          "feedback": "Both work! '{Parce que}' or 'car' are both fine for 'because'."
+        },
+        {
+          "answer": "à parce que",
+          "feedback": "'{Décider DE}' (not à)! J'ai décidé D'aller (not à aller)."
+        }
+      ]
+    },
+    {
+      "id": "i-allait",
+      "type": "gapfill",
+      "text": "On ___ au café chaque samedi, mais hier on n'y est pas allé",
+      "blanks": [
+        {
+          "answer": "allait"
+        }
+      ],
+      "gloss": "We used to go to the café every Saturday, but yesterday we didn't go",
+      "hint": "Habit vs specific",
+      "mistakes": [
+        {
+          "answer": "est allé",
+          "feedback": "Chaque samedi = habit! Use imparfait: on allait (we used to go)."
+        },
+        {
+          "answer": "va",
+          "feedback": "That's present! Use imparfait for past habit: on allait."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-vu",
+      "type": "gapfill",
+      "text": "Je marchais tranquillement quand soudain j'___ Marie",
+      "blanks": [
+        {
+          "answer": "ai vu"
+        }
+      ],
+      "gloss": "I was walking peacefully when suddenly I saw Marie",
+      "hint": "Ongoing + event",
+      "mistakes": [
+        {
+          "answer": "voyais",
+          "feedback": "Soudain = sudden event! Use passé composé: j'ai vu (I saw)."
+        },
+        {
+          "answer": "vois",
+          "feedback": "That's present! Use passé composé for past event: j'ai vu."
+        }
+      ]
+    },
+    {
+      "id": "i-parce-que",
+      "type": "gapfill",
+      "text": "___ j'avais faim, j'ai mangé",
+      "blanks": [
+        {
+          "answer": "Parce que"
+        }
+      ],
+      "gloss": "Because I was hungry, I ate",
+      "mistakes": [
+        {
+          "answer": "Grâce à",
+          "feedback": "Grâce à is POSITIVE and needs a NOUN! Use '{Parce que}' + clause for hunger."
+        },
+        {
+          "answer": "À cause de",
+          "feedback": "À cause de needs a NOUN! Use '{Parce que j'avais faim}' (because I was hungry)."
+        }
+      ]
+    },
+    {
+      "id": "i-sur-dans",
+      "type": "gapfill",
+      "text": "Le livre était ___ la table ___ ma chambre",
+      "blanks": [
+        {
+          "answer": "sur"
+        },
+        {
+          "answer": "dans"
+        }
+      ],
+      "gloss": "The book was on the table in my room",
+      "hint": "Two spatial prepositions",
+      "mistakes": [
+        {
+          "answer": "dans sur",
+          "feedback": "Wrong order! The book is ON (sur) the table, IN (dans) the room."
+        },
+        {
+          "answer": "au-dessus dans",
+          "feedback": "Au-dessus means 'above' (hanging). Use '{sur}' for '{on}' (touching surface)."
+        }
+      ]
+    },
+    {
+      "id": "i-etais",
+      "type": "gapfill",
+      "text": "Pendant que je ___, on a parlé pendant une heure",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "While I was there, we talked for an hour",
+      "hint": "Use '{être}' for location",
+      "mistakes": [
+        {
+          "answer": "ai été",
+          "feedback": "Ongoing state (while there)! Use imparfait: j'étais (I was there)."
+        },
+        {
+          "answer": "suis",
+          "feedback": "That's present! Use imparfait for past state: j'étais."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-fait-ensuite",
+      "type": "gapfill",
+      "text": "J'___ mes devoirs ___ j'ai regardé la télé",
+      "blanks": [
+        {
+          "answer": "ai fait"
+        },
+        {
+          "answer": "ensuite"
+        }
+      ],
+      "gloss": "I did my homework then I watched TV",
+      "hint": "Two events in sequence",
+      "mistakes": [
+        {
+          "answer": "faisais ensuite",
+          "feedback": "Completed homework = specific event! Use passé composé: j'ai fait."
+        },
+        {
+          "answer": "ai fait car",
+          "feedback": "'Car' is for reason! Use '{ensuite}' (then) for sequence."
+        }
+      ]
+    },
+    {
+      "id": "i-grace-a",
+      "type": "gapfill",
+      "text": "___ toi, j'ai réussi",
+      "blanks": [
+        {
+          "answer": "Grâce à"
+        }
+      ],
+      "gloss": "Thanks to you, I succeeded",
+      "hint": "Positive attribution",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE! Use '{Grâce à toi}' (thanks to you - NOUN)."
+        },
+        {
+          "answer": "À cause de",
+          "feedback": "Succeeding is POSITIVE! Use '{grâce à}' (not à cause de which is negative/neutral)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-cause-de",
+      "type": "gapfill",
+      "text": "___ la pluie, on est restés à la maison",
+      "blanks": [
+        {
+          "answer": "À cause de"
+        }
+      ],
+      "gloss": "Because of the rain, we stayed home",
+      "hint": "Negative reason + noun",
+      "mistakes": [
+        {
+          "answer": "Grâce à",
+          "feedback": "Rain isn't positive! Use '{à cause de}' for negative/neutral reasons."
+        },
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE! Use '{à cause de la pluie}' (because of THE RAIN - noun)."
+        }
+      ]
+    }
+  ]
+}

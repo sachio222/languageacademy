@@ -1,0 +1,160 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-16-daily-reflexives",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Daily Actions - {se souvenir, s'amuser, se dépêcher}",
+  "description": "Essential reflexive verbs: je me souviens (I remember), je m'amuse (I'm having fun), je me dépêche (I'm hurrying)",
+  "can_do": [
+    "Talk about remembering things (I remember, do you remember?)",
+    "Express having fun and enjoyment (I'm having fun)",
+    "Say you're hurrying or in a rush (I'm hurrying)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "se-souvenir-fr",
+      "fr": "se souvenir",
+      "gloss": "to remember",
+      "note": "infinitive - reflexive"
+    },
+    {
+      "word_id": "je-me-souviens-fr",
+      "fr": "je me souviens",
+      "gloss": "I remember",
+      "note": "⭐ irregular - like venir"
+    },
+    {
+      "word_id": "tu-te-souviens-fr",
+      "fr": "tu te souviens",
+      "gloss": "you remember",
+      "note": "common in questions"
+    },
+    {
+      "word_id": "il-se-souvient-fr",
+      "fr": "il se souvient",
+      "gloss": "he remembers",
+      "note": "third person"
+    },
+    {
+      "word_id": "s-amuser-fr",
+      "fr": "s'amuser",
+      "gloss": "to have fun / to enjoy oneself",
+      "note": "infinitive"
+    },
+    {
+      "word_id": "je-m-amuse-fr",
+      "fr": "je m'amuse",
+      "gloss": "I'm having fun",
+      "note": "⭐ elision"
+    },
+    {
+      "word_id": "tu-t-amuses-fr",
+      "fr": "tu t'amuses",
+      "gloss": "you're having fun",
+      "note": "elision"
+    },
+    {
+      "word_id": "on-s-amuse-fr",
+      "fr": "on s'amuse",
+      "gloss": "we're having fun",
+      "note": "group activity"
+    },
+    {
+      "word_id": "se-depecher-fr",
+      "fr": "se dépêcher",
+      "gloss": "to hurry / to rush",
+      "note": "infinitive"
+    },
+    {
+      "word_id": "je-me-depeche-fr",
+      "fr": "je me dépêche",
+      "gloss": "I'm hurrying",
+      "note": "⭐ time pressure!"
+    },
+    {
+      "word_id": "tu-te-depeches-fr",
+      "fr": "tu te dépêches",
+      "gloss": "you're hurrying",
+      "note": "informal"
+    },
+    {
+      "word_id": "depeche-toi-fr",
+      "fr": "Dépêche-toi!",
+      "gloss": "Hurry up!",
+      "note": "command form (preview!)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-se-souvenir-to-remember",
+      "term": "{se souvenir} = to remember",
+      "definition": "Recall memories - important mental action",
+      "example": "{je me souviens de ça} (I remember that), {tu te souviens?} (do you remember?)"
+    },
+    {
+      "id": "c-s-amuser-to-have",
+      "term": "{s'amuser} = to have fun / to enjoy oneself",
+      "definition": "Enjoying yourself - social/emotional",
+      "example": "{je m'amuse} (I'm having fun), {on s'amuse bien} (we're having a good time)"
+    },
+    {
+      "id": "c-se-depecher-to-hurry",
+      "term": "{se dépêcher} = to hurry / to rush",
+      "definition": "Moving quickly - time pressure!",
+      "example": "{je me dépêche} (I'm hurrying), {dépêche-toi!} (hurry up!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "daily-reflex-1",
+      "type": "respond",
+      "situation": "I remember",
+      "answer": "je me souviens",
+      "hint": "je me + souvenir (like venir)"
+    },
+    {
+      "id": "daily-reflex-2",
+      "type": "respond",
+      "situation": "Ask 'Do you remember?' (informal)",
+      "cue": "Do you remember?",
+      "answer": "tu te souviens",
+      "hint": "{tu te souviens?}"
+    },
+    {
+      "id": "daily-reflex-3",
+      "type": "respond",
+      "situation": "I'm having fun",
+      "answer": "je m'amuse",
+      "hint": "je m' + amuser (elision!)"
+    },
+    {
+      "id": "daily-reflex-4",
+      "type": "respond",
+      "situation": "Say 'We're having fun' (using on)",
+      "cue": "We're having fun",
+      "answer": "on s'amuse",
+      "hint": "{on s' + amuser}"
+    },
+    {
+      "id": "daily-reflex-5",
+      "type": "respond",
+      "situation": "I'm hurrying",
+      "answer": "je me dépêche",
+      "accept": [
+        "je me depeche"
+      ],
+      "hint": "{je me + dépêcher}"
+    },
+    {
+      "id": "daily-reflex-6",
+      "type": "respond",
+      "situation": "Say 'You're hurrying' (informal)",
+      "cue": "You're hurrying",
+      "answer": "tu te dépêches",
+      "accept": [
+        "tu te depeches"
+      ],
+      "hint": "{tu te + dépêcher}"
+    }
+  ]
+}

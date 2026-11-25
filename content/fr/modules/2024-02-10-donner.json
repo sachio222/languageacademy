@@ -1,0 +1,228 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-10-donner",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{donner} - To Give",
+  "description": "Express giving! '{Je te donne}' (I give you), '{Il me donne}' (he gives me). Essential for gifts, help, transactions, and sharing. Rank 24 in top 100 French words!",
+  "can_do": [
+    "Express giving and offering (I give you, he gives me)",
+    "Talk about gifts, help, and sharing",
+    "Use one of the top 25 most common French words"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "donner-fr",
+      "fr": "donner",
+      "gloss": "to give",
+      "note": "⭐ Rank 24 - extremely high frequency"
+    },
+    {
+      "word_id": "je-donne-fr",
+      "fr": "je donne",
+      "gloss": "I give",
+      "note": "regular -ER conjugation"
+    },
+    {
+      "word_id": "tu-donnes-fr",
+      "fr": "tu donnes",
+      "gloss": "you give (informal)",
+      "note": "add -s for tu form"
+    },
+    {
+      "word_id": "il-donne-fr",
+      "fr": "il donne",
+      "gloss": "he gives",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-donne-fr",
+      "fr": "elle donne",
+      "gloss": "she gives",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-donnons-fr",
+      "fr": "nous donnons",
+      "gloss": "we give",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-donnez-fr",
+      "fr": "vous donnez",
+      "gloss": "you give (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-donnent-fr",
+      "fr": "ils donnent",
+      "gloss": "they give (masculine)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-donnent-fr",
+      "fr": "elles donnent",
+      "gloss": "they give (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "je-te-donne-fr",
+      "fr": "je te donne",
+      "gloss": "I give you / I'm giving you",
+      "note": "⭐ very common - giving TO someone"
+    },
+    {
+      "word_id": "tu-me-donnes-fr",
+      "fr": "tu me donnes",
+      "gloss": "you give me",
+      "note": "receiving from someone"
+    },
+    {
+      "word_id": "il-me-donne-fr",
+      "fr": "il me donne",
+      "gloss": "he gives me",
+      "note": "third person giving to me"
+    },
+    {
+      "word_id": "donner-quelque-chose-a-quelqu-un-fr",
+      "fr": "donner quelque chose à quelqu'un",
+      "gloss": "to give something to someone",
+      "note": "full construction pattern"
+    },
+    {
+      "word_id": "donner-rendez-vous-fr",
+      "fr": "donner rendez-vous",
+      "gloss": "to make an appointment",
+      "note": "fixed expression"
+    },
+    {
+      "word_id": "donner-l-heure-fr",
+      "fr": "donner l'heure",
+      "gloss": "to tell the time",
+      "note": "common expression"
+    },
+    {
+      "word_id": "donner-raison-fr",
+      "fr": "donner raison",
+      "gloss": "to agree with / to prove right",
+      "note": "give reason = agree"
+    },
+    {
+      "word_id": "donner-de-l-aide-fr",
+      "fr": "donner de l'aide",
+      "gloss": "to give help",
+      "note": "practical helping"
+    },
+    {
+      "word_id": "donner-de-l-argent-fr",
+      "fr": "donner de l'argent",
+      "gloss": "to give money",
+      "note": "transactions"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-donner-to-give",
+      "term": "{donner} = to give",
+      "definition": "One of the most common verbs - used for gifts, help, information, objects",
+      "example": "{Je donne un cadeau} (I give a gift), {Tu me donnes ton numéro?} (Do you give me your number?)"
+    },
+    {
+      "id": "c-regular-er-conjugation",
+      "term": "Regular -ER Conjugation",
+      "definition": "Follows standard -ER pattern like parler, manger",
+      "example": "{je donne}, {tu donnes}, {il donne}, {nous donnons}, {vous donnez}, {ils donnent}"
+    },
+    {
+      "id": "c-direct-and-indirect-objects",
+      "term": "Direct and Indirect Objects",
+      "definition": "Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un",
+      "example": "{Je donne le livre à Marie} (I give the book to Marie) → {Je lui donne le livre} (I give it to her)"
+    },
+    {
+      "id": "c-common-expressions",
+      "term": "Common Expressions",
+      "definition": "Many fixed phrases use donner in French",
+      "example": "{donner l'heure} (tell the time), {donner raison} (agree with someone), {donner rendez-vous} (make an appointment)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-donne",
+      "type": "respond",
+      "situation": "I give",
+      "answer": "je donne",
+      "hint": "donner for je"
+    },
+    {
+      "id": "i-tu-donnes",
+      "type": "respond",
+      "situation": "you give (informal)",
+      "answer": "tu donnes",
+      "hint": "donner for tu"
+    },
+    {
+      "id": "i-il-donne",
+      "type": "respond",
+      "situation": "he gives",
+      "answer": "il donne",
+      "hint": "donner for il"
+    },
+    {
+      "id": "i-nous-donnons",
+      "type": "respond",
+      "situation": "we give",
+      "answer": "nous donnons",
+      "hint": "donner for nous"
+    },
+    {
+      "id": "i-je-te-donne-le",
+      "type": "respond",
+      "situation": "I give you the book",
+      "answer": "je te donne le livre",
+      "hint": "je + te + donne + object"
+    },
+    {
+      "id": "i-tu-me-donnes-de",
+      "type": "respond",
+      "situation": "You give me help",
+      "answer": "tu me donnes de l'aide",
+      "hint": "{tu + me + donnes + aide}"
+    },
+    {
+      "id": "i-elle-donne-de-l",
+      "type": "respond",
+      "situation": "She gives money to the children",
+      "answer": "elle donne de l'argent aux enfants",
+      "hint": "{elle donne + argent + aux enfants}"
+    },
+    {
+      "id": "i-tu-peux-me-donner",
+      "type": "respond",
+      "situation": "Can you give me your phone number?",
+      "answer": "tu peux me donner ton numéro",
+      "accept": [
+        "vous pouvez me donner votre numéro"
+      ],
+      "hint": "{tu peux + me donner + ton numéro}"
+    },
+    {
+      "id": "i-je-te-donne-rendez",
+      "type": "respond",
+      "situation": "I'm giving you an appointment",
+      "answer": "je te donne rendez-vous",
+      "accept": [
+        "je vous donne rendez-vous"
+      ],
+      "hint": "Fixed expression: donner rendez-vous"
+    },
+    {
+      "id": "i-ils-me-donnent-l",
+      "type": "respond",
+      "situation": "Say: 'They give me the time' (tell me what time it is)",
+      "cue": "They tell me the time",
+      "answer": "ils me donnent l'heure",
+      "hint": "Fixed expression: donner l'heure"
+    }
+  ]
+}

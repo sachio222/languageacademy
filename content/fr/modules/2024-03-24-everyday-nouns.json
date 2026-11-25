@@ -1,0 +1,541 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-24-everyday-nouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Everyday Nouns - Life & World",
+  "description": "Essential nouns for everyday conversations: le monde (world), la vie (life), l'eau (water), le pain (bread)",
+  "can_do": [
+    "Talk about everyday things (world, life, water, bread, time)",
+    "Use high-frequency nouns in conversation",
+    "Express abstract and concrete concepts naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "le-temps-fr",
+      "fr": "le temps",
+      "gloss": "time/weather",
+      "note": "masculine - can mean time OR weather!"
+    },
+    {
+      "word_id": "la-vie-fr",
+      "fr": "la vie",
+      "gloss": "life",
+      "note": "feminine - very common!"
+    },
+    {
+      "word_id": "le-monde-fr",
+      "fr": "le monde",
+      "gloss": "world",
+      "note": "masculine - tout le monde = everyone"
+    },
+    {
+      "word_id": "l-eau-fr",
+      "fr": "l'eau",
+      "gloss": "water",
+      "note": "feminine (eau)"
+    },
+    {
+      "word_id": "le-pain-fr",
+      "fr": "le pain",
+      "gloss": "bread",
+      "note": "masculine - very common!"
+    },
+    {
+      "word_id": "l-argent-fr",
+      "fr": "l'argent",
+      "gloss": "money",
+      "note": "masculine (argent) - also means silver"
+    },
+    {
+      "word_id": "le-travail-fr",
+      "fr": "le travail",
+      "gloss": "work",
+      "note": "masculine - very common noun"
+    },
+    {
+      "word_id": "la-ville-fr",
+      "fr": "la ville",
+      "gloss": "city",
+      "note": "feminine - where you live or visit"
+    },
+    {
+      "word_id": "la-place-fr",
+      "fr": "la place",
+      "gloss": "square/place",
+      "note": "feminine - public square or space"
+    },
+    {
+      "word_id": "la-rue-fr",
+      "fr": "la rue",
+      "gloss": "street",
+      "note": "feminine - dans la rue (in the street)"
+    },
+    {
+      "word_id": "la-table-fr",
+      "fr": "la table",
+      "gloss": "table",
+      "note": "feminine - sur la table (on the table)"
+    },
+    {
+      "word_id": "la-main-fr",
+      "fr": "la main",
+      "gloss": "hand",
+      "note": "feminine - dans la main (in the hand)"
+    },
+    {
+      "word_id": "la-tete-fr",
+      "fr": "la tête",
+      "gloss": "head",
+      "note": "feminine - very common body part"
+    },
+    {
+      "word_id": "le-nom-fr",
+      "fr": "le nom",
+      "gloss": "name",
+      "note": "masculine - mon nom est... (my name is...)"
+    },
+    {
+      "word_id": "la-porte-fr",
+      "fr": "la porte",
+      "gloss": "door",
+      "note": "feminine - la porte est ouverte (door is open)"
+    },
+    {
+      "word_id": "tout-le-monde-fr",
+      "fr": "tout le monde",
+      "gloss": "everybody/everyone",
+      "note": "masculine - literally 'all the world'"
+    },
+    {
+      "word_id": "personne-fr",
+      "fr": "personne",
+      "gloss": "nobody/no one",
+      "note": "feminine - often used with 'ne': je ne vois personne"
+    },
+    {
+      "word_id": "quelqu-un-fr",
+      "fr": "quelqu'un",
+      "gloss": "someone/somebody",
+      "note": "masculine - je vois quelqu'un (I see someone)"
+    },
+    {
+      "word_id": "quelque-chose-fr",
+      "fr": "quelque chose",
+      "gloss": "something",
+      "note": "masculine - je veux quelque chose (I want something)"
+    },
+    {
+      "word_id": "la-carte-de-credit-fr",
+      "fr": "la carte de crédit",
+      "gloss": "credit card",
+      "note": "feminine - essential for shopping!"
+    },
+    {
+      "word_id": "les-especes-fr",
+      "fr": "les espèces",
+      "gloss": "cash",
+      "note": "feminine plural - payer en espèces (pay in cash)"
+    },
+    {
+      "word_id": "une-carafe-d-eau-fr",
+      "fr": "une carafe d'eau",
+      "gloss": "carafe of water",
+      "note": "feminine - free water at restaurants!"
+    },
+    {
+      "word_id": "l-addition-fr",
+      "fr": "l'addition",
+      "gloss": "the bill/check",
+      "note": "feminine (addition) - at restaurants"
+    },
+    {
+      "word_id": "le-tableau-fr",
+      "fr": "le tableau",
+      "gloss": "painting/board/table",
+      "note": "masculine - can mean painting, board, or table"
+    },
+    {
+      "word_id": "l-art-fr",
+      "fr": "l'art",
+      "gloss": "art",
+      "note": "masculine (art) - the arts, visual arts"
+    },
+    {
+      "word_id": "les-tableaux-fr",
+      "fr": "les tableaux",
+      "gloss": "paintings/boards/tables",
+      "note": "masculine plural - plural of tableau"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-abstract-vs-concrete-nouns",
+      "term": "Abstract vs Concrete Nouns",
+      "definition": "Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.",
+      "example": "{la vie} (life - abstract), {le pain} (bread - concrete)"
+    },
+    {
+      "id": "c-using-in-real-conversations",
+      "term": "Using in Real Conversations",
+      "definition": "These are the nouns you'll use constantly in French - combine with verbs you know!",
+      "example": "{je veux du pain, j'ai le temps, il parle du monde}"
+    },
+    {
+      "id": "c-remember-the-gender",
+      "term": "Remember the Gender!",
+      "definition": "Always learn the article with the noun - it shows the gender",
+      "example": "{le temps} (masculine), {la vie} (feminine)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-le-temps",
+      "type": "respond",
+      "situation": "I have time",
+      "answer": "j'ai le temps",
+      "hint": "j'ai + article + temps (masculine)",
+      "mistakes": [
+        {
+          "answer": "j'ai la temps",
+          "feedback": "temps is masculine, use '{le}' not 'la'"
+        },
+        {
+          "answer": "j'ai un temps",
+          "feedback": "Use definite article '{le}' for 'the time'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-vie-est-bonne",
+      "type": "respond",
+      "situation": "life is good",
+      "answer": "la vie est bonne",
+      "hint": "la vie + est + bon/bonne (feminine form!)",
+      "mistakes": [
+        {
+          "answer": "la vie est bon",
+          "feedback": "vie is feminine, adjective needs '{bonne}' not 'bon'"
+        },
+        {
+          "answer": "le vie est bonne",
+          "feedback": "vie is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-monde-est-grand",
+      "type": "respond",
+      "situation": "the world is big",
+      "answer": "le monde est grand",
+      "hint": "le monde + est + grand (masculine)",
+      "mistakes": [
+        {
+          "answer": "la monde est grand",
+          "feedback": "monde is masculine, use '{le}' not 'la'"
+        },
+        {
+          "answer": "le monde est grande",
+          "feedback": "monde is masculine, use '{grand}' not 'grande'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-de-l",
+      "type": "respond",
+      "situation": "I want water",
+      "answer": "je veux de l'eau",
+      "accept": [
+        "je veux l'eau",
+        "je veux de l eau"
+      ],
+      "hint": "je veux + de l'eau (use partitive with food/drink!)",
+      "mistakes": [
+        {
+          "answer": "je veux le eau",
+          "feedback": "eau starts with vowel, use l'eau not 'le eau'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-du-pain",
+      "type": "respond",
+      "situation": "we have bread",
+      "answer": "nous avons du pain",
+      "accept": [
+        "nous avons le pain"
+      ],
+      "hint": "nous avons + du pain (use partitive with food!)",
+      "mistakes": [
+        {
+          "answer": "nous avons la pain",
+          "feedback": "pain is masculine, use '{le/du}' not 'la'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-n-a-pas",
+      "type": "respond",
+      "situation": "Say \"he does not have money\"",
+      "cue": "he doesn't have money",
+      "answer": "il n'a pas d'argent",
+      "accept": [
+        "il n a pas d argent",
+        "il ne a pas d'argent"
+      ],
+      "hint": "il n'a pas + d'argent (negative with partitive!)",
+      "mistakes": [
+        {
+          "answer": "il n'a pas l'argent",
+          "feedback": "With negation and partitive, use '{pas d'argent}' not 'pas l'argent'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-dois-travailler",
+      "type": "respond",
+      "situation": "I must work",
+      "answer": "je dois travailler",
+      "hint": "je dois + travailler (work as a verb!)",
+      "mistakes": [
+        {
+          "answer": "je dois le travail",
+          "feedback": "'work' as verb is '{travailler}', not 'travail' (noun)"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-vit-dans-la",
+      "type": "respond",
+      "situation": "she lives in the city",
+      "answer": "elle vit dans la ville",
+      "accept": [
+        "elle habite dans la ville"
+      ],
+      "hint": "elle + verb vivre (lives) + dans + la ville",
+      "mistakes": [
+        {
+          "answer": "elle vit dans le ville",
+          "feedback": "ville is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-place-est-ici",
+      "type": "respond",
+      "situation": "the square is here",
+      "answer": "la place est ici",
+      "hint": "{la place + est + ici}",
+      "mistakes": [
+        {
+          "answer": "le place est ici",
+          "feedback": "place is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-vois-la-rue",
+      "type": "respond",
+      "situation": "I see the street",
+      "answer": "je vois la rue",
+      "hint": "{je vois + la rue}",
+      "mistakes": [
+        {
+          "answer": "je vois le rue",
+          "feedback": "rue is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-pain-est-sur",
+      "type": "respond",
+      "situation": "the bread is on the table",
+      "answer": "le pain est sur la table",
+      "hint": "{le pain + est + sur + la table}",
+      "mistakes": [
+        {
+          "answer": "le pain est sur le table",
+          "feedback": "table is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-l-ai-dans",
+      "type": "respond",
+      "situation": "I have it in my hand",
+      "answer": "je l'ai dans ma main",
+      "accept": [
+        "je l ai dans ma main"
+      ],
+      "hint": "je l'ai + dans + ma main (possessive!)",
+      "mistakes": [
+        {
+          "answer": "je l'ai dans mon main",
+          "feedback": "main is feminine, use '{ma}' not 'mon'"
+        }
+      ]
+    },
+    {
+      "id": "i-mon-nom-est-marc",
+      "type": "respond",
+      "situation": "my name is Marc",
+      "answer": "mon nom est Marc",
+      "hint": "{mon nom + est + Marc}",
+      "mistakes": [
+        {
+          "answer": "ma nom est Marc",
+          "feedback": "nom is masculine, use '{mon}' not 'ma'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-porte-est-la",
+      "type": "respond",
+      "situation": "the door is there",
+      "answer": "la porte est là",
+      "hint": "{la porte + est + là}",
+      "mistakes": [
+        {
+          "answer": "le porte est là",
+          "feedback": "porte is feminine, use 'la' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-tout-le-monde-est",
+      "type": "respond",
+      "situation": "everybody is here",
+      "answer": "tout le monde est ici",
+      "hint": "tout le monde + est + ici (singular verb!)",
+      "mistakes": [
+        {
+          "answer": "tout le monde sont ici",
+          "feedback": "tout le monde is singular, use '{est}' not 'sont'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-vois-personne",
+      "type": "respond",
+      "situation": "I see nobody",
+      "answer": "je ne vois personne",
+      "hint": "je ne vois personne (negation with personne!)",
+      "mistakes": [
+        {
+          "answer": "je vois personne",
+          "feedback": "Need negation: '{je ne vois personne}'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-payer-avec",
+      "type": "respond",
+      "situation": "I want to pay with credit card",
+      "answer": "je veux payer avec la carte de crédit",
+      "accept": [
+        "je veux payer avec une carte de crédit"
+      ],
+      "hint": "{je veux payer avec + la carte de crédit}",
+      "mistakes": [
+        {
+          "answer": "je veux payer avec le carte de crédit",
+          "feedback": "carte is feminine, use '{la}' not 'le'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-des-especes",
+      "type": "respond",
+      "situation": "I have cash",
+      "answer": "j'ai des espèces",
+      "accept": [
+        "j ai des espèces"
+      ],
+      "hint": "j'ai + des espèces (plural!)",
+      "mistakes": [
+        {
+          "answer": "j'ai les espèces",
+          "feedback": "Use '{des espèces}' (some cash) not 'les espèces'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-voulons-une-carafe",
+      "type": "respond",
+      "situation": "we want a carafe of water",
+      "answer": "nous voulons une carafe d'eau",
+      "accept": [
+        "nous voulons une carafe d eau"
+      ],
+      "hint": "{nous voulons + une carafe d'eau}",
+      "mistakes": [
+        {
+          "answer": "nous voulons un carafe d'eau",
+          "feedback": "carafe is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-l-addition-s-il",
+      "type": "respond",
+      "situation": "Say \"the bill please\" (formal)",
+      "cue": "the bill please",
+      "answer": "l'addition, s'il vous plaît",
+      "accept": [
+        "l addition s il vous plaît",
+        "l'addition s'il vous plaît",
+        "l'addition s il vous plait"
+      ],
+      "hint": "l'addition + s'il vous plaît (formal please!)",
+      "mistakes": [
+        {
+          "answer": "l'addition, s'il te plaît",
+          "feedback": "Use formal '{s'il vous plaît}' when asking for the bill in a restaurant"
+        }
+      ]
+    },
+    {
+      "id": "i-je-vois-quelqu-un",
+      "type": "respond",
+      "situation": "I see someone",
+      "answer": "je vois quelqu'un",
+      "hint": "{je vois + quelqu'un}",
+      "mistakes": [
+        {
+          "answer": "je vois personne",
+          "feedback": "That means 'I see nobody' - use '{quelqu'un}' for someone"
+        },
+        {
+          "answer": "je vois tout le monde",
+          "feedback": "That means 'I see everyone' - use '{quelqu'un}' for someone"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-quelque-chose",
+      "type": "respond",
+      "situation": "I want something",
+      "answer": "je veux quelque chose",
+      "hint": "{je veux + quelque chose}",
+      "mistakes": [
+        {
+          "answer": "je veux quelqu'un",
+          "feedback": "That means 'I want someone' - use '{quelque chose}' for something"
+        }
+      ]
+    },
+    {
+      "id": "i-quelqu-un-a-le",
+      "type": "respond",
+      "situation": "someone has the book",
+      "answer": "quelqu'un a le livre",
+      "hint": "{quelqu'un + a + le livre}",
+      "mistakes": [
+        {
+          "answer": "personne a le livre",
+          "feedback": "That means 'nobody has the book' - use '{quelqu'un}' for someone"
+        }
+      ]
+    }
+  ]
+}

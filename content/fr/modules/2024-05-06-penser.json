@@ -1,0 +1,299 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-06-penser",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{penser} - To Think",
+  "description": "Express thoughts and opinions: je pense que oui (I think so), qu'est-ce que tu penses? (what do you think?)",
+  "can_do": [
+    "Express your thoughts and opinions (I think that...)",
+    "Ask what others think (What do you think?)",
+    "Use penser with que to share ideas"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "penser-fr",
+      "fr": "penser",
+      "gloss": "to think",
+      "note": "infinitive - regular -ER verb"
+    },
+    {
+      "word_id": "je-pense-fr",
+      "fr": "je pense",
+      "gloss": "I think",
+      "note": "first person - most common"
+    },
+    {
+      "word_id": "tu-penses-fr",
+      "fr": "tu penses",
+      "gloss": "you think (informal)",
+      "note": "for asking opinions"
+    },
+    {
+      "word_id": "il-elle-pense-fr",
+      "fr": "il/elle pense",
+      "gloss": "he/she thinks",
+      "note": "third person opinion"
+    },
+    {
+      "word_id": "nous-pensons-fr",
+      "fr": "nous pensons",
+      "gloss": "we think",
+      "note": "group opinion"
+    },
+    {
+      "word_id": "vous-pensez-fr",
+      "fr": "vous pensez",
+      "gloss": "you think (formal/plural)",
+      "note": "polite form"
+    },
+    {
+      "word_id": "ils-elles-pensent-fr",
+      "fr": "ils/elles pensent",
+      "gloss": "they think",
+      "note": "silent -ent ending"
+    },
+    {
+      "word_id": "je-pense-que-oui-fr",
+      "fr": "je pense que oui",
+      "gloss": "I think so",
+      "note": "⭐ super common response"
+    },
+    {
+      "word_id": "je-pense-que-non-fr",
+      "fr": "je pense que non",
+      "gloss": "I don't think so",
+      "note": "negative response"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-penses-fr",
+      "fr": "Qu'est-ce que tu penses?",
+      "gloss": "What do you think?",
+      "note": "asking for opinion"
+    },
+    {
+      "word_id": "je-pense-a-toi-fr",
+      "fr": "je pense à toi",
+      "gloss": "I'm thinking about you",
+      "note": "use à for 'about'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-penser-to-think",
+      "term": "{penser} = to think",
+      "definition": "Core cognitive verb for expressing opinions and thoughts",
+      "example": "{je pense que c'est bon} (I think it's good), {tu penses?} (what do you think?)"
+    },
+    {
+      "id": "c-regular-er-verb",
+      "term": "Regular -ER verb",
+      "definition": "Easy conjugation! Like parler, manger, etc. (verbs you already know)",
+      "example": "{je pense}, {tu penses}, {il pense} - add -e, -{es}, -e endings"
+    },
+    {
+      "id": "c-penser-que-to-think",
+      "term": "{penser que...} (to think that...)",
+      "definition": "Use '{que}' to introduce your opinion - VERY common pattern",
+      "example": "{je pense que oui} (I think so), {je pense que non} (I don't think so)"
+    },
+    {
+      "id": "c-penser-a-to-think",
+      "term": "{penser à...} (to think about...)",
+      "definition": "Use 'à' + person/thing when thinking about something",
+      "example": "{je pense à toi} (I'm thinking about you), {je pense à ça} (I'm thinking about that)"
+    },
+    {
+      "id": "c-asking-opinions",
+      "term": "Asking opinions",
+      "definition": "Qu'est-ce que tu penses? = What do you think? (essential!)",
+      "example": "{Qu'est-ce que tu penses de ça?} (What do you think about that?)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-penser",
+      "title": "{penser}",
+      "rows": [
+        {
+          "fr": "je pense",
+          "en": "I think"
+        },
+        {
+          "fr": "tu penses",
+          "en": "you think (informal)"
+        },
+        {
+          "fr": "il pense",
+          "en": "he thinks"
+        },
+        {
+          "fr": "elle pense",
+          "en": "she thinks"
+        },
+        {
+          "fr": "nous pensons",
+          "en": "we think"
+        },
+        {
+          "fr": "vous pensez",
+          "en": "you think (formal/plural)"
+        },
+        {
+          "fr": "ils pensent",
+          "en": "they think (masculine)"
+        },
+        {
+          "fr": "elles pensent",
+          "en": "they think (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-pense",
+      "type": "transform",
+      "instruction": "Express your opinion. Say \"I think\"",
+      "shown": "penser",
+      "answer": "je pense",
+      "hint": "{je + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"I think\""
+        },
+        {
+          "answer": "il pense",
+          "feedback": "That's \"he thinks\", not \"I think\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-penses",
+      "type": "transform",
+      "instruction": "Ask what someone thinks. Say \"you think (informal)\"",
+      "shown": "penser",
+      "answer": "tu penses",
+      "hint": "{tu + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"you think (informal)\""
+        },
+        {
+          "answer": "il pense",
+          "feedback": "That's \"he thinks\", not \"you think (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-pense",
+      "type": "transform",
+      "instruction": "He thinks it's good. Say \"he thinks\"",
+      "shown": "penser",
+      "answer": "il pense",
+      "hint": "{il + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"he thinks\""
+        },
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"he thinks\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-pense",
+      "type": "transform",
+      "instruction": "She thinks about the question. Say \"she thinks\"",
+      "shown": "penser",
+      "answer": "elle pense",
+      "hint": "{elle + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"she thinks\""
+        },
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"she thinks\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-pensons",
+      "type": "transform",
+      "instruction": "We think that's true. Say \"we think\"",
+      "shown": "penser",
+      "answer": "nous pensons",
+      "hint": "{nous + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"we think\""
+        },
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"we think\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-pensez",
+      "type": "transform",
+      "instruction": "Ask formally for an opinion. Say \"you think (formal/plural)\"",
+      "shown": "penser",
+      "answer": "vous pensez",
+      "hint": "{vous + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"you think (formal/plural)\""
+        },
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"you think (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-pensent",
+      "type": "transform",
+      "instruction": "They think it's important. Say \"they think (masculine)\"",
+      "shown": "penser",
+      "answer": "ils pensent",
+      "hint": "{ils + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"they think (masculine)\""
+        },
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"they think (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-pensent",
+      "type": "transform",
+      "instruction": "They (feminine) are thinking. Say \"they think (feminine)\"",
+      "shown": "penser",
+      "answer": "elles pensent",
+      "hint": "{elles + penser = ?}",
+      "mistakes": [
+        {
+          "answer": "je pense",
+          "feedback": "That's \"I think\", not \"they think (feminine)\""
+        },
+        {
+          "answer": "tu penses",
+          "feedback": "That's \"you think (informal)\", not \"they think (feminine)\""
+        }
+      ]
+    }
+  ]
+}

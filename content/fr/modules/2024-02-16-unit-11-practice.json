@@ -1,0 +1,273 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-16-unit-11-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Daily Essentials Practice - Fill in the Blanks",
+  "description": "Complete sentences using this unit's essential vocabulary: age expressions, missing top 100 verbs, and directions!",
+  "can_do": [
+    "Use all top 100 French words in context",
+    "Apply essential daily verbs naturally",
+    "Navigate and communicate practical information"
+  ],
+  "items": [
+    {
+      "id": "i-j-ai",
+      "type": "gapfill",
+      "text": "___ vingt-cinq ans.",
+      "blanks": [
+        {
+          "answer": "J'ai"
+        }
+      ],
+      "gloss": "I am 25 years old",
+      "hint": "French uses 'have' for age"
+    },
+    {
+      "id": "i-quel-age",
+      "type": "gapfill",
+      "text": "___ avez-vous?",
+      "blanks": [
+        {
+          "answer": "Quel âge"
+        }
+      ],
+      "gloss": "'How old are you?' (formal)",
+      "hint": "what age (formal question)"
+    },
+    {
+      "id": "i-donne",
+      "type": "gapfill",
+      "text": "Je te ___ le livre.",
+      "blanks": [
+        {
+          "answer": "donne"
+        }
+      ],
+      "gloss": "I give you the book",
+      "hint": "to give (je form)"
+    },
+    {
+      "id": "i-donner",
+      "type": "gapfill",
+      "text": "Tu peux me ___ ton numéro?",
+      "blanks": [
+        {
+          "answer": "donner"
+        }
+      ],
+      "gloss": "Can you give me your number?",
+      "hint": "infinitive after '{peux}'"
+    },
+    {
+      "id": "i-dors",
+      "type": "gapfill",
+      "text": "Je ___ huit heures par nuit.",
+      "blanks": [
+        {
+          "answer": "dors"
+        }
+      ],
+      "gloss": "I sleep eight hours per night",
+      "hint": "to sleep (je form)"
+    },
+    {
+      "id": "i-travaillez",
+      "type": "gapfill",
+      "text": "Où ___-vous?",
+      "blanks": [
+        {
+          "answer": "travaillez"
+        }
+      ],
+      "gloss": "'Where do you work?' (formal)",
+      "hint": "to work (vous form)"
+    },
+    {
+      "id": "i-vit",
+      "type": "gapfill",
+      "text": "Elle ___ à Paris depuis dix ans.",
+      "blanks": [
+        {
+          "answer": "vit"
+        }
+      ],
+      "gloss": "She has been living in Paris for ten years",
+      "hint": "to live (elle form - irregular)"
+    },
+    {
+      "id": "i-cherche",
+      "type": "gapfill",
+      "text": "Je ___ mes clés!",
+      "blanks": [
+        {
+          "answer": "cherche"
+        }
+      ],
+      "gloss": "I'm looking for my keys!",
+      "hint": "to look for (je form)"
+    },
+    {
+      "id": "i-trouve",
+      "type": "gapfill",
+      "text": "J'ai ___! Elles étaient dans ma voiture.",
+      "blanks": [
+        {
+          "answer": "trouvé"
+        }
+      ],
+      "gloss": "I found them! They were in my car.",
+      "hint": "found (past participle)"
+    },
+    {
+      "id": "i-ecoute",
+      "type": "gapfill",
+      "text": "J'___ de la musique classique.",
+      "blanks": [
+        {
+          "answer": "écoute"
+        }
+      ],
+      "gloss": "I listen to classical music",
+      "hint": "to listen (je form)"
+    },
+    {
+      "id": "i-regardons",
+      "type": "gapfill",
+      "text": "Nous ___ un film français.",
+      "blanks": [
+        {
+          "answer": "regardons"
+        }
+      ],
+      "gloss": "We're watching a French film",
+      "hint": "to watch (nous form)"
+    },
+    {
+      "id": "i-attends",
+      "type": "gapfill",
+      "text": "Tu ___ le bus depuis combien de temps?",
+      "blanks": [
+        {
+          "answer": "attends"
+        }
+      ],
+      "gloss": "How long have you been waiting for the bus?",
+      "hint": "to wait (tu form)"
+    },
+    {
+      "id": "i-arrives",
+      "type": "gapfill",
+      "text": "À quelle heure tu ___?",
+      "blanks": [
+        {
+          "answer": "arrives"
+        }
+      ],
+      "gloss": "What time do you arrive?",
+      "hint": "to arrive (tu form)"
+    },
+    {
+      "id": "i-reste",
+      "type": "gapfill",
+      "text": "Je ___ ici jusqu'à demain.",
+      "blanks": [
+        {
+          "answer": "reste"
+        }
+      ],
+      "gloss": "I'm staying here until tomorrow",
+      "hint": "to stay (je form)"
+    },
+    {
+      "id": "i-a-gauche",
+      "type": "gapfill",
+      "text": "Tournez ___, puis allez tout droit.",
+      "blanks": [
+        {
+          "answer": "à gauche"
+        }
+      ],
+      "gloss": "Turn left, then go straight",
+      "hint": "to the left"
+    },
+    {
+      "id": "i-coin",
+      "type": "gapfill",
+      "text": "La banque est au ___ de la rue.",
+      "blanks": [
+        {
+          "answer": "coin"
+        }
+      ],
+      "gloss": "The bank is at the corner of the street",
+      "hint": "corner (street intersection)"
+    },
+    {
+      "id": "i-ou-un",
+      "type": "gapfill",
+      "text": "Excusez-moi, ___ est la gare? J'ai ___ rendez-vous là-bas à trois heures.",
+      "blanks": [
+        {
+          "answer": "où"
+        },
+        {
+          "answer": "un"
+        }
+      ],
+      "gloss": "Excuse me, where is the station? I have an appointment there at 3pm.",
+      "hint": "where (question word) / a/an (masculine)"
+    },
+    {
+      "id": "i-attends-arrivent",
+      "type": "gapfill",
+      "text": "Je ___ mes amis au café. Ils ___ généralement vers huit heures.",
+      "blanks": [
+        {
+          "answer": "attends"
+        },
+        {
+          "answer": "arrivent"
+        }
+      ],
+      "gloss": "I wait for my friends at the café. They usually arrive around 8pm.",
+      "hint": "to wait (je form) / to arrive (ils form)"
+    },
+    {
+      "id": "i-evolue-vivent",
+      "type": "gapfill",
+      "text": "La France ___ rapidement. Ses habitants ___ dans des villes modernes.",
+      "blanks": [
+        {
+          "answer": "évolue"
+        },
+        {
+          "answer": "vivent"
+        }
+      ],
+      "gloss": "France evolves rapidly. Its inhabitants live in modern cities.",
+      "hint": "evolves (elle form) / live (ils form)"
+    },
+    {
+      "id": "i-j-ai-vis-travaille",
+      "type": "gapfill",
+      "text": "Je m'appelle Marie, ___ trente ans, et je ___ à Lyon où je ___ comme professeur.",
+      "blanks": [
+        {
+          "answer": "j'ai"
+        },
+        {
+          "answer": "vis"
+        },
+        {
+          "answer": "travaille"
+        }
+      ],
+      "gloss": "Complete personal introduction with age and work",
+      "hint": "I have (for age) / live (je form) / work (je form)"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

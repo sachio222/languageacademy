@@ -1,0 +1,376 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-08-comparisons",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Comparisons & Intensity",
+  "description": "Compare things and express intensity: plus (more), moins (less), meilleur (better), pire (worse), trop (too much), tout (all)",
+  "can_do": [
+    "Compare things (better, worse, more, less)",
+    "Express intensity and quantity (too much, very, all)",
+    "Say 'This is better than that' or 'It's the best' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "plus-fr",
+      "fr": "plus",
+      "gloss": "more",
+      "note": "comparison - plus grand (bigger)"
+    },
+    {
+      "word_id": "moins-fr",
+      "fr": "moins",
+      "gloss": "less",
+      "note": "comparison - moins cher (less expensive)"
+    },
+    {
+      "word_id": "meilleur-meilleure-fr",
+      "fr": "meilleur / meilleure",
+      "gloss": "better",
+      "note": "adjective - agrees with gender"
+    },
+    {
+      "word_id": "le-meilleur-la-meilleure-fr",
+      "fr": "le meilleur / la meilleure",
+      "gloss": "the best",
+      "note": "superlative - with article"
+    },
+    {
+      "word_id": "pire-fr",
+      "fr": "pire",
+      "gloss": "worse",
+      "note": "same form both genders"
+    },
+    {
+      "word_id": "le-la-pire-fr",
+      "fr": "le/la pire",
+      "gloss": "the worst",
+      "note": "superlative - with article"
+    },
+    {
+      "word_id": "trop-fr",
+      "fr": "trop",
+      "gloss": "too much / too",
+      "note": "intensity - trop cher (too expensive)"
+    },
+    {
+      "word_id": "tout-toute-tous-toutes-fr",
+      "fr": "tout / toute / tous / toutes",
+      "gloss": "all / every / everything",
+      "note": "quantifier - agrees with noun"
+    },
+    {
+      "word_id": "meme-fr",
+      "fr": "même",
+      "gloss": "same / even",
+      "note": "comparison - le même livre (the same book)"
+    },
+    {
+      "word_id": "mal-fr",
+      "fr": "mal",
+      "gloss": "badly / bad",
+      "note": "adverb - opposite of 'bien'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-basic-comparisons-plus-moins",
+      "term": "Basic Comparisons - {plus}/{moins}",
+      "definition": "Use '{plus}' (more) and '{moins}' (less) with adjectives to compare things",
+      "example": "{plus grand} (bigger), {moins cher} (less expensive)"
+    },
+    {
+      "id": "c-better-and-worse-meilleur",
+      "term": "Better and Worse - {meilleur}/{pire}",
+      "definition": "Special forms for 'better' and 'worse' - they agree with gender!",
+      "example": "{un meilleur livre} (a better book), {une meilleure maison} (a better house)"
+    },
+    {
+      "id": "c-superlatives-the-best-the",
+      "term": "Superlatives - the best/the worst",
+      "definition": "Add '{le/la/les}' before meilleur/pire for 'the best/the worst'",
+      "example": "{le meilleur} (the best), {la pire} (the worst)"
+    },
+    {
+      "id": "c-intensity-modifiers",
+      "term": "Intensity Modifiers",
+      "definition": "Words like '{trop}' (too much), '{tout}' (all), and '{même}' (same/even) add nuance",
+      "example": "{c'est trop cher} (it's too expensive), {tout le monde} (everyone)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-plus",
+      "type": "respond",
+      "situation": "Say \"more good\" or \"bigger\"",
+      "cue": "more (in comparisons)",
+      "answer": "plus",
+      "hint": "This word makes adjectives comparative",
+      "mistakes": [
+        {
+          "answer": "moins",
+          "feedback": "That's 'less', not 'more'"
+        },
+        {
+          "answer": "aussi",
+          "feedback": "That's 'as/also', not 'more'"
+        }
+      ]
+    },
+    {
+      "id": "i-moins",
+      "type": "respond",
+      "situation": "Say \"less expensive\" or \"smaller\"",
+      "cue": "less (in comparisons)",
+      "answer": "moins",
+      "hint": "Opposite of '{plus}'",
+      "mistakes": [
+        {
+          "answer": "plus",
+          "feedback": "That's 'more', not 'less'"
+        }
+      ]
+    },
+    {
+      "id": "i-ce-livre-est-plus",
+      "type": "respond",
+      "situation": "this book is bigger",
+      "answer": "ce livre est plus grand",
+      "hint": "{ce livre + est + plus + grand}",
+      "mistakes": [
+        {
+          "answer": "ce livre est moins grand",
+          "feedback": "Use '{plus}' for 'more/bigger', not 'moins'"
+        },
+        {
+          "answer": "ce livre est grand plus",
+          "feedback": "Put 'plus' BEFORE the adjective: plus grand"
+        }
+      ]
+    },
+    {
+      "id": "i-cette-maison-est-moins",
+      "type": "respond",
+      "situation": "Say \"this house is smaller\" (less big)",
+      "cue": "this house is smaller",
+      "answer": "cette maison est moins grande",
+      "hint": "cette maison + est + moins + grande (feminine!)",
+      "mistakes": [
+        {
+          "answer": "cette maison est plus grande",
+          "feedback": "Use '{moins}' for 'less/smaller', not 'plus'"
+        },
+        {
+          "answer": "cette maison est moins grand",
+          "feedback": "maison is feminine, use '{grande}' not 'grand'"
+        }
+      ]
+    },
+    {
+      "id": "i-un-meilleur-livre",
+      "type": "respond",
+      "situation": "Say \"a better book\" (masculine)",
+      "cue": "a better book",
+      "answer": "un meilleur livre",
+      "hint": "Use '{meilleur}' for better with masculine nouns",
+      "mistakes": [
+        {
+          "answer": "un plus bon livre",
+          "feedback": "Don't use 'plus bon' - use '{meilleur}' for better"
+        },
+        {
+          "answer": "une meilleure livre",
+          "feedback": "livre is masculine, use '{un meilleur}'"
+        }
+      ]
+    },
+    {
+      "id": "i-une-meilleure-maison",
+      "type": "respond",
+      "situation": "Say \"a better house\" (feminine)",
+      "cue": "a better house",
+      "answer": "une meilleure maison",
+      "hint": "Use '{meilleure}' for better with feminine nouns",
+      "mistakes": [
+        {
+          "answer": "un meilleur maison",
+          "feedback": "maison is feminine, use '{une meilleure}'"
+        },
+        {
+          "answer": "une plus bonne maison",
+          "feedback": "Use '{meilleure}' for better, not 'plus bonne'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-meilleur-livre",
+      "type": "respond",
+      "situation": "Say \"the best book\" (masculine)",
+      "cue": "the best book",
+      "answer": "le meilleur livre",
+      "hint": "Add article: le + meilleur + livre",
+      "mistakes": [
+        {
+          "answer": "la meilleure livre",
+          "feedback": "livre is masculine, use '{le meilleur}'"
+        },
+        {
+          "answer": "un meilleur livre",
+          "feedback": "Use '{le}' (the) for superlative, not 'un' (a)"
+        }
+      ]
+    },
+    {
+      "id": "i-la-meilleure-maison",
+      "type": "respond",
+      "situation": "Say \"the best house\" (feminine)",
+      "cue": "the best house",
+      "answer": "la meilleure maison",
+      "hint": "{la + meilleure + maison}",
+      "mistakes": [
+        {
+          "answer": "le meilleur maison",
+          "feedback": "maison is feminine, use '{la meilleure}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-pire",
+      "type": "respond",
+      "situation": "it's worse",
+      "answer": "c'est pire",
+      "hint": "'{pire}' is same for both genders",
+      "mistakes": [
+        {
+          "answer": "c'est plus mal",
+          "feedback": "Use '{pire}' for worse, not 'plus mal'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-pire-chose",
+      "type": "respond",
+      "situation": "the worst thing",
+      "answer": "la pire chose",
+      "hint": "chose is feminine - la pire chose",
+      "mistakes": [
+        {
+          "answer": "le pire chose",
+          "feedback": "chose is feminine, use '{la pire}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-trop-cher",
+      "type": "respond",
+      "situation": "it's too expensive",
+      "answer": "c'est trop cher",
+      "hint": "{c'est + trop + cher}",
+      "mistakes": [
+        {
+          "answer": "c'est très cher",
+          "feedback": "Use '{trop}' for 'too much', not 'très' (very)"
+        },
+        {
+          "answer": "c'est cher trop",
+          "feedback": "Put 'trop' BEFORE the adjective: trop cher"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-trop-de",
+      "type": "respond",
+      "situation": "I have too much work",
+      "answer": "j'ai trop de travail",
+      "accept": [
+        "j ai trop de travail"
+      ],
+      "hint": "j'ai + trop de + travail (use '{de}' after trop!)",
+      "mistakes": [
+        {
+          "answer": "j'ai trop travail",
+          "feedback": "Need '{de}' after 'trop': trop de travail"
+        }
+      ]
+    },
+    {
+      "id": "i-tout-le-monde",
+      "type": "respond",
+      "situation": "Say \"all the world\" or \"everyone\"",
+      "cue": "everyone",
+      "answer": "tout le monde",
+      "hint": "literally 'all the world' - tout le monde",
+      "mistakes": [
+        {
+          "answer": "tous les gens",
+          "feedback": "The common phrase is '{tout le monde}' (everyone)"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-tout",
+      "type": "respond",
+      "situation": "I want everything",
+      "answer": "je veux tout",
+      "hint": "je veux + tout (everything as object)",
+      "mistakes": [
+        {
+          "answer": "je veux tous",
+          "feedback": "Use '{tout}' for everything, 'tous' is for 'all' (plural)"
+        }
+      ]
+    },
+    {
+      "id": "i-le-meme-livre",
+      "type": "respond",
+      "situation": "the same book",
+      "answer": "le même livre",
+      "hint": "{le + même + livre}",
+      "mistakes": [
+        {
+          "answer": "le livre même",
+          "feedback": "Put 'même' BEFORE the noun: le même livre"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-la-meme",
+      "type": "respond",
+      "situation": "it's the same thing",
+      "answer": "c'est la même chose",
+      "hint": "c'est + la même chose (chose is feminine)",
+      "mistakes": [
+        {
+          "answer": "c'est le même chose",
+          "feedback": "chose is feminine, use '{la même}'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-parle-mal",
+      "type": "respond",
+      "situation": "he speaks badly",
+      "answer": "il parle mal",
+      "hint": "il parle + mal (adverb - opposite of '{bien}')",
+      "mistakes": [
+        {
+          "answer": "il parle mauvais",
+          "feedback": "Use adverb '{mal}' not adjective 'mauvais'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-meilleur",
+      "type": "respond",
+      "situation": "that's better",
+      "answer": "c'est meilleur",
+      "hint": "c'est + meilleur (can use masculine as default)",
+      "mistakes": [
+        {
+          "answer": "c'est mieux",
+          "feedback": "Both work! 'mieux' is also better, but we're learning '{meilleur}'"
+        }
+      ]
+    }
+  ]
+}

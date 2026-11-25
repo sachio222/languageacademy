@@ -1,0 +1,361 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-20-prepositions",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Prepositions - Spatial & Relational Words",
+  "description": "Connect words together! avec (with), dans (in), sur (on), sous (under), devant (in front), derrière (behind), entre (between), à (to/at), de (of/from), pour (for)",
+  "can_do": [
+    "Describe locations (in the house, on the table, under the book)",
+    "Express relationships (with me, for you, to Paris)",
+    "Use stressed pronouns with prepositions naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "avec-fr",
+      "fr": "avec",
+      "gloss": "with",
+      "note": "with friends, with you"
+    },
+    {
+      "word_id": "dans-fr",
+      "fr": "dans",
+      "gloss": "in / inside",
+      "note": "in the house, in the car"
+    },
+    {
+      "word_id": "sur-fr",
+      "fr": "sur",
+      "gloss": "on / on top of",
+      "note": "on the table"
+    },
+    {
+      "word_id": "sous-fr",
+      "fr": "sous",
+      "gloss": "under / beneath",
+      "note": "under the table"
+    },
+    {
+      "word_id": "devant-fr",
+      "fr": "devant",
+      "gloss": "in front of / before",
+      "note": "devant la maison"
+    },
+    {
+      "word_id": "derriere-fr",
+      "fr": "derrière",
+      "gloss": "behind",
+      "note": "derrière la porte"
+    },
+    {
+      "word_id": "entre-fr",
+      "fr": "entre",
+      "gloss": "between",
+      "note": "entre les deux"
+    },
+    {
+      "word_id": "a-fr",
+      "fr": "à",
+      "gloss": "to / at",
+      "note": "to Paris, at the café"
+    },
+    {
+      "word_id": "de-fr",
+      "fr": "de",
+      "gloss": "of / from",
+      "note": "of the house, from Paris"
+    },
+    {
+      "word_id": "pour-fr",
+      "fr": "pour",
+      "gloss": "for",
+      "note": "for you, for friends"
+    },
+    {
+      "word_id": "chez-fr",
+      "fr": "chez",
+      "gloss": "at (someone's place)",
+      "note": "chez Pierre, chez nous"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-prepositions-connect-ideas",
+      "term": "Prepositions Connect Ideas",
+      "definition": "Small words that show relationships between nouns and pronouns",
+      "example": "{avec moi} (with me), {dans la maison} (in the house), {sous la table} (under the table)"
+    },
+    {
+      "id": "c-spatial-prepositions",
+      "term": "Spatial Prepositions",
+      "definition": "Describe physical location: in, on, under, in front, behind, between",
+      "example": "{sur la table} (on the table), {sous le livre} (under the book), {devant la maison} (in front of the house)"
+    },
+    {
+      "id": "c-relational-prepositions",
+      "term": "Relational Prepositions",
+      "definition": "Show relationships: with, for, to, at, of, from",
+      "example": "{avec toi} (with you), {pour moi} (for me), {à Paris} (to/at Paris), {de France} (from France)"
+    },
+    {
+      "id": "c-use-with-stressed-pronouns",
+      "term": "Use with Stressed Pronouns!",
+      "definition": "After prepositions, use moi/toi/lui (NOT je/tu/il)!",
+      "example": "{avec moi ✓} (not avec je ✗), {pour toi ✓} (not pour tu ✗)"
+    },
+    {
+      "id": "c-building-real-sentences",
+      "term": "Building Real Sentences",
+      "definition": "Combine with verbs, nouns, and stressed pronouns",
+      "example": "{le chat est sous la table} (the cat is under the table), {je suis devant la maison} (I am in front of the house)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-avec",
+      "type": "respond",
+      "situation": "You're with someone. Which word means 'with'?",
+      "cue": "with",
+      "answer": "avec",
+      "hint": "High-frequency preposition for accompaniment",
+      "mistakes": [
+        {
+          "answer": "dans",
+          "feedback": "That means 'in', not 'with'"
+        },
+        {
+          "answer": "pour",
+          "feedback": "That means 'for', not 'with'"
+        }
+      ]
+    },
+    {
+      "id": "i-dans",
+      "type": "respond",
+      "situation": "Something is inside a space. Which word means 'in'?",
+      "cue": "in",
+      "answer": "dans",
+      "hint": "Preposition for being inside something",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "That means 'on', not 'in'"
+        },
+        {
+          "answer": "avec",
+          "feedback": "That means 'with', not 'in'"
+        }
+      ]
+    },
+    {
+      "id": "i-sur",
+      "type": "respond",
+      "situation": "Something is on top of a surface. Which word means 'on'?",
+      "cue": "on",
+      "answer": "sur",
+      "hint": "Preposition for surfaces",
+      "mistakes": [
+        {
+          "answer": "dans",
+          "feedback": "That means 'in', not 'on'"
+        }
+      ]
+    },
+    {
+      "id": "i-a",
+      "type": "respond",
+      "situation": "You're going somewhere or something belongs to someone. Which word?",
+      "cue": "to / at",
+      "answer": "à",
+      "hint": "Single letter - shows direction or location",
+      "mistakes": [
+        {
+          "answer": "de",
+          "feedback": "That means 'of/from', not 'to/at'"
+        }
+      ]
+    },
+    {
+      "id": "i-de",
+      "type": "respond",
+      "situation": "Something belongs to or comes from somewhere. Which word?",
+      "cue": "of / from",
+      "answer": "de",
+      "hint": "Shows origin or possession - two letters",
+      "mistakes": [
+        {
+          "answer": "à",
+          "feedback": "That means 'to/at', not 'of/from'"
+        }
+      ]
+    },
+    {
+      "id": "i-pour",
+      "type": "respond",
+      "situation": "Something is intended for someone. Which word means 'for'?",
+      "cue": "for",
+      "answer": "pour",
+      "hint": "Shows purpose or recipient",
+      "mistakes": [
+        {
+          "answer": "avec",
+          "feedback": "That means 'with', not 'for'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-avec-les",
+      "type": "respond",
+      "situation": "Say 'I am with friends' - combine pronoun + verb + preposition + noun",
+      "cue": "I am with friends",
+      "answer": "je suis avec les amis",
+      "hint": "je suis + [with] + les amis",
+      "mistakes": [
+        {
+          "answer": "je suis les amis",
+          "feedback": "Missing '{avec}' (with)!"
+        }
+      ]
+    },
+    {
+      "id": "i-le-chat-est-dans",
+      "type": "respond",
+      "situation": "the cat is in the house",
+      "answer": "le chat est dans la maison",
+      "hint": "le chat + est + [in] + la maison",
+      "mistakes": [
+        {
+          "answer": "le chat est sur la maison",
+          "feedback": "Use '{dans}' (in), not 'sur' (on)"
+        }
+      ]
+    },
+    {
+      "id": "i-la-chose-est-sur",
+      "type": "respond",
+      "situation": "the thing is on the book",
+      "answer": "la chose est sur le livre",
+      "hint": "{la chose + est + [on] + le livre}"
+    },
+    {
+      "id": "i-je-veux-ca-pour",
+      "type": "respond",
+      "situation": "Say 'I want this for you' (informal)",
+      "cue": "I want this for you",
+      "answer": "je veux ça pour toi",
+      "hint": "je veux + ça + pour + [stressed pronoun for 'you' informal]",
+      "mistakes": [
+        {
+          "answer": "je veux ça pour tu",
+          "feedback": "After 'pour', use stressed pronoun '{toi}' not subject pronoun 'tu'"
+        }
+      ]
+    },
+    {
+      "id": "i-sous",
+      "type": "respond",
+      "situation": "under",
+      "answer": "sous",
+      "hint": "Opposite of '{sur}' (on) - beneath",
+      "mistakes": [
+        {
+          "answer": "sur",
+          "feedback": "That's '{on}', not 'under'!"
+        }
+      ]
+    },
+    {
+      "id": "i-le-chat-est-sous",
+      "type": "respond",
+      "situation": "the cat is under the table",
+      "answer": "le chat est sous la table",
+      "hint": "{le chat + est + sous + la table}",
+      "mistakes": [
+        {
+          "answer": "le chat est sur la table",
+          "feedback": "That means 'on the table' - use '{sous}' for under!"
+        }
+      ]
+    },
+    {
+      "id": "i-devant",
+      "type": "respond",
+      "situation": "in front of",
+      "answer": "devant",
+      "hint": "Position - facing something",
+      "mistakes": [
+        {
+          "answer": "derrière",
+          "feedback": "That means 'behind', not 'in front of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-devant-la",
+      "type": "respond",
+      "situation": "I am in front of the house",
+      "answer": "je suis devant la maison",
+      "hint": "{je suis + devant + la maison}"
+    },
+    {
+      "id": "i-derriere",
+      "type": "respond",
+      "situation": "behind",
+      "answer": "derrière",
+      "hint": "Opposite of '{devant}' (in front)",
+      "mistakes": [
+        {
+          "answer": "devant",
+          "feedback": "That means 'in front', not 'behind'!"
+        }
+      ]
+    },
+    {
+      "id": "i-le-livre-est-derriere",
+      "type": "respond",
+      "situation": "the book is behind the door",
+      "answer": "le livre est derrière la porte",
+      "hint": "{le livre + est + derrière + la porte}"
+    },
+    {
+      "id": "i-entre",
+      "type": "respond",
+      "situation": "between",
+      "answer": "entre",
+      "hint": "Position between two things"
+    },
+    {
+      "id": "i-je-suis-entre-les",
+      "type": "respond",
+      "situation": "I am between friends",
+      "answer": "je suis entre les amis",
+      "hint": "{je suis + entre + les amis}"
+    },
+    {
+      "id": "i-je-suis-chez-pierre",
+      "type": "respond",
+      "situation": "I am at Pierre's place",
+      "answer": "je suis chez Pierre",
+      "hint": "{je suis + chez + Pierre}",
+      "mistakes": [
+        {
+          "answer": "je suis à Pierre",
+          "feedback": "Use '{chez}' for people's homes, not 'à'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-chat-est-chez",
+      "type": "respond",
+      "situation": "the cat is at the woman's place",
+      "answer": "le chat est chez la femme",
+      "hint": "{le chat + est + chez + la femme}",
+      "mistakes": [
+        {
+          "answer": "le chat est à la femme",
+          "feedback": "Use '{chez}' for people's homes, not 'à'"
+        }
+      ]
+    }
+  ]
+}

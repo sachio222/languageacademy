@@ -1,0 +1,497 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-26-causal-words",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Causal & Reason Words - Explaining Why",
+  "description": "Learn to explain reasons and causes: parce que (because), car (for), puisque (since), comme (as), grâce à (thanks to), à cause de (because of)",
+  "can_do": [
+    "Explain why things happen (because, since, thanks to)",
+    "Give reasons for your actions and decisions",
+    "Connect cause and effect in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "parce-que-fr",
+      "fr": "parce que",
+      "gloss": "because",
+      "note": "⭐ most common - use with clauses"
+    },
+    {
+      "word_id": "car-fr",
+      "fr": "car",
+      "gloss": "for, because",
+      "note": "formal/literary - never at start!"
+    },
+    {
+      "word_id": "puisque-fr",
+      "fr": "puisque",
+      "gloss": "since, seeing as",
+      "note": "established fact - more formal"
+    },
+    {
+      "word_id": "comme-fr",
+      "fr": "comme",
+      "gloss": "as, since",
+      "note": "MUST start sentence - formal"
+    },
+    {
+      "word_id": "grace-a-fr",
+      "fr": "grâce à",
+      "gloss": "thanks to",
+      "note": "positive reason + noun only"
+    },
+    {
+      "word_id": "a-cause-de-fr",
+      "fr": "à cause de",
+      "gloss": "because of",
+      "note": "negative/neutral reason + noun"
+    },
+    {
+      "word_id": "pourquoi-fr",
+      "fr": "pourquoi",
+      "gloss": "why",
+      "note": "question word - answer with parce que"
+    },
+    {
+      "word_id": "la-raison-fr",
+      "fr": "la raison",
+      "gloss": "the reason",
+      "note": "feminine noun - la raison pour..."
+    },
+    {
+      "word_id": "le-motif-fr",
+      "fr": "le motif",
+      "gloss": "the motive, reason",
+      "note": "masculine noun - formal context"
+    },
+    {
+      "word_id": "la-cause-fr",
+      "fr": "la cause",
+      "gloss": "the cause",
+      "note": "feminine noun - à cause de..."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-parce-que-because-most",
+      "term": "{parce que} - because (most common)",
+      "definition": "Answers '{pourquoi?}' - used in all situations",
+      "example": "{Je mange parce que j'ai faim} (I eat because I'm hungry), {Je ne viens pas parce que je suis malade} (I'm not coming because I'm sick)"
+    },
+    {
+      "id": "c-car-for-because-formal",
+      "term": "{car} - for, because (formal/literary)",
+      "definition": "More formal than '{parce que}', CANNOT start a sentence, common in writing",
+      "example": "{On étudie le français car c'est utile} (We study French for it's useful), {Je reste ici car il pleut} (I'm staying here for it's raining)"
+    },
+    {
+      "id": "c-puisque-since-seeing-as",
+      "term": "{puisque} - since, seeing as",
+      "definition": "Indicates logical conclusion or something already known, slightly formal",
+      "example": "{Puisque tu es là, on commence} (Since you're here, we'll start), {Puisque c'est vrai, je te crois} (Since it's true, I believe you)"
+    },
+    {
+      "id": "c-comme-as-since-at",
+      "term": "{comme} - as, since (at START of sentence)",
+      "definition": "Explains reason, MUST come at beginning of sentence",
+      "example": "{Comme il fait beau, on va au parc} (As it's nice, we're going to the park), {Comme je suis fatigué, je reste à la maison} (As I'm tired, I'm staying home)"
+    },
+    {
+      "id": "c-grace-a-thanks-to",
+      "term": "{grâce à} - thanks to (positive reason + NOUN)",
+      "definition": "Positive attribution, followed by a noun or pronoun",
+      "example": "{Grâce à toi}, {je comprends mieux} (Thanks to you, I understand better), {Grâce au professeur}, {j'ai réussi} (Thanks to the teacher, I succeeded)"
+    },
+    {
+      "id": "c-a-cause-de-because",
+      "term": "{à cause de} - because of (negative/neutral + NOUN)",
+      "definition": "Often negative or neutral, followed by a noun (NOT a clause!)",
+      "example": "{À cause de la pluie, on reste ici} (Because of the rain, we're staying here), {À cause du traffic, je suis en retard} (Because of traffic, I'm late)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-parce-que",
+      "type": "gapfill",
+      "text": "Je ne viens pas ___ je suis malade",
+      "blanks": [
+        {
+          "answer": "parce que"
+        }
+      ],
+      "gloss": "I'm not coming because I'm sick",
+      "mistakes": [
+        {
+          "answer": "car",
+          "feedback": "Car works here! But '{parce que}' is more natural in spoken French."
+        },
+        {
+          "answer": "grâce à",
+          "feedback": "Grâce à is for positive reasons + NOUN: '{grâce à toi}'. Use '{parce que}' + clause here."
+        },
+        {
+          "answer": "à cause de",
+          "feedback": "À cause de needs a NOUN: '{à cause de la maladie}'. Use '{parce que}' + clause here."
+        }
+      ]
+    },
+    {
+      "id": "i-car",
+      "type": "gapfill",
+      "text": "On étudie le français ___ c'est utile",
+      "blanks": [
+        {
+          "answer": "car"
+        }
+      ],
+      "gloss": "We study French for it's useful",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que works! But '{car}' is more elegant in this context."
+        },
+        {
+          "answer": "comme",
+          "feedback": "Comme must come at the START of the sentence: '{Comme c'est utile, on étudie...}'"
+        }
+      ]
+    },
+    {
+      "id": "i-comme",
+      "type": "gapfill",
+      "text": "___ il fait beau, on va au parc",
+      "blanks": [
+        {
+          "answer": "Comme"
+        }
+      ],
+      "gloss": "As it's nice, we're going to the park",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que doesn't typically start sentences. Use '{Comme}' at the beginning!"
+        },
+        {
+          "answer": "Car",
+          "feedback": "Car CANNOT start a sentence! Use '{Comme}' at the beginning."
+        }
+      ]
+    },
+    {
+      "id": "i-puisque",
+      "type": "gapfill",
+      "text": "___ tu es là, on commence",
+      "blanks": [
+        {
+          "answer": "Puisque"
+        }
+      ],
+      "gloss": "Since you're here, we'll start",
+      "mistakes": [
+        {
+          "answer": "Comme",
+          "feedback": "Comme works! But '{puisque}' is perfect for logical conclusions."
+        },
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que is less natural at the start. Use '{puisque}' for 'since'."
+        }
+      ]
+    },
+    {
+      "id": "i-grace-a",
+      "type": "gapfill",
+      "text": "___ toi, je comprends mieux",
+      "blanks": [
+        {
+          "answer": "Grâce à"
+        }
+      ],
+      "gloss": "Thanks to you, I understand better",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE (subject + verb). Use '{grâce à}' + noun here!"
+        },
+        {
+          "answer": "À cause de",
+          "feedback": "À cause de is for negative/neutral! Use '{grâce à}' for positive thanks."
+        }
+      ]
+    },
+    {
+      "id": "i-a-cause-de",
+      "type": "gapfill",
+      "text": "___ la pluie, on reste ici",
+      "blanks": [
+        {
+          "answer": "À cause de"
+        }
+      ],
+      "gloss": "Because of the rain, we're staying here",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE: '{parce qu'il pleut}'. Use '{à cause de}' + noun here!"
+        },
+        {
+          "answer": "Grâce à",
+          "feedback": "Grâce à is for POSITIVE reasons! Use '{à cause de}' for negative/neutral."
+        }
+      ]
+    },
+    {
+      "id": "i-parce-que-2",
+      "type": "gapfill",
+      "text": "Pourquoi tu restes? - ___ je suis fatigué",
+      "blanks": [
+        {
+          "answer": "Parce que"
+        }
+      ],
+      "gloss": "Why are you staying? - Because I'm tired",
+      "mistakes": [
+        {
+          "answer": "Car",
+          "feedback": "Car works but sounds formal. Use '{parce que}' to answer '{pourquoi}'."
+        },
+        {
+          "answer": "Puisque",
+          "feedback": "Puisque is for known facts, not direct answers to '{pourquoi}'. Use '{parce que}'!"
+        }
+      ]
+    },
+    {
+      "id": "i-a-cause-du",
+      "type": "gapfill",
+      "text": "Je suis en retard ___ le traffic",
+      "blanks": [
+        {
+          "answer": "à cause du"
+        }
+      ],
+      "gloss": "I'm late because of traffic",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que needs a CLAUSE: '{parce qu'il y a du traffic}'. Use '{à cause de}' + noun!"
+        },
+        {
+          "answer": "grâce au",
+          "feedback": "Being late isn't positive! Use '{à cause de}' for negative reasons."
+        }
+      ]
+    },
+    {
+      "id": "i-grace-au",
+      "type": "gapfill",
+      "text": "J'ai réussi ___ professeur",
+      "blanks": [
+        {
+          "answer": "grâce au"
+        }
+      ],
+      "gloss": "I succeeded thanks to the teacher",
+      "mistakes": [
+        {
+          "answer": "parce que le",
+          "feedback": "Close! But '{grâce à}' + noun is more elegant than 'parce que' + clause here."
+        },
+        {
+          "answer": "à cause du",
+          "feedback": "Succeeding is positive! Use '{grâce à}' for positive attribution."
+        }
+      ]
+    },
+    {
+      "id": "i-car-2",
+      "type": "gapfill",
+      "text": "Il ne travaille pas ___ il est riche",
+      "blanks": [
+        {
+          "answer": "car"
+        }
+      ],
+      "gloss": "He doesn't work because he's rich",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que works! But '{car}' sounds more sophisticated here."
+        },
+        {
+          "answer": "comme",
+          "feedback": "Comme must be at the START: '{Comme il est riche, il ne travaille pas}'."
+        }
+      ]
+    },
+    {
+      "id": "i-a-cause",
+      "type": "gapfill",
+      "text": "___ du mauvais temps, on annule le match",
+      "blanks": [
+        {
+          "answer": "À cause"
+        }
+      ],
+      "gloss": "Because of bad weather, we're canceling the match",
+      "mistakes": [
+        {
+          "answer": "Grâce à",
+          "feedback": "Bad weather isn't positive! Use '{à cause de}' for negative reasons."
+        },
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE: '{parce qu'il fait mauvais}'. Use '{à cause de}' + noun!"
+        }
+      ]
+    },
+    {
+      "id": "i-puisque-2",
+      "type": "gapfill",
+      "text": "On va partir ___ tu es prêt",
+      "blanks": [
+        {
+          "answer": "puisque"
+        }
+      ],
+      "gloss": "We'll leave since you're ready",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que works! But '{puisque}' emphasizes the logical conclusion better."
+        },
+        {
+          "answer": "car",
+          "feedback": "Car works but '{puisque}' is more natural for 'since'."
+        }
+      ]
+    },
+    {
+      "id": "i-comme-2",
+      "type": "gapfill",
+      "text": "___ c'est ton anniversaire, on va au restaurant",
+      "blanks": [
+        {
+          "answer": "Comme"
+        }
+      ],
+      "gloss": "Since/As it's your birthday, we're going to a restaurant",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que rarely starts sentences. Use '{Comme}' at the beginning!"
+        },
+        {
+          "answer": "Puisque",
+          "feedback": "Puisque works! But '{Comme}' is more natural here."
+        }
+      ]
+    },
+    {
+      "id": "i-parce-que-3",
+      "type": "gapfill",
+      "text": "Je t'aime ___ tu es gentil",
+      "blanks": [
+        {
+          "answer": "parce que"
+        }
+      ],
+      "gloss": "I love you because you're kind",
+      "mistakes": [
+        {
+          "answer": "car",
+          "feedback": "Car works! But '{parce que}' is more natural in speech."
+        },
+        {
+          "answer": "grâce à",
+          "feedback": "Grâce à needs a NOUN, not a clause. Use '{parce que}' here!"
+        }
+      ]
+    },
+    {
+      "id": "i-car-3",
+      "type": "gapfill",
+      "text": "On parle français ___ on est en France",
+      "blanks": [
+        {
+          "answer": "car"
+        }
+      ],
+      "gloss": "We speak French since we're in France",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "Parce que works! Both are correct, but '{car}' is slightly more formal."
+        },
+        {
+          "answer": "puisque",
+          "feedback": "Puisque works! All three work here actually."
+        }
+      ]
+    },
+    {
+      "id": "i-grace-a-2",
+      "type": "gapfill",
+      "text": "___ mon aide, tu as fini à temps",
+      "blanks": [
+        {
+          "answer": "Grâce à"
+        }
+      ],
+      "gloss": "Thanks to my help, you finished on time",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que needs a CLAUSE. Use '{grâce à}' + noun for attribution!"
+        },
+        {
+          "answer": "À cause de",
+          "feedback": "Finishing on time is positive! Use '{grâce à}' for positive reasons."
+        }
+      ]
+    },
+    {
+      "id": "i-a-cause-du-2",
+      "type": "gapfill",
+      "text": "Je ne dors pas bien ___ bruit",
+      "blanks": [
+        {
+          "answer": "à cause du"
+        }
+      ],
+      "gloss": "I don't sleep well because of the noise",
+      "mistakes": [
+        {
+          "answer": "parce que le",
+          "feedback": "Close! But '{à cause de}' + noun is more direct than parce que + clause."
+        },
+        {
+          "answer": "grâce au",
+          "feedback": "Not sleeping well isn't positive! Use '{à cause de}' for problems."
+        }
+      ]
+    },
+    {
+      "id": "i-comme-3",
+      "type": "gapfill",
+      "text": "___ j'ai le temps, je vais t'aider",
+      "blanks": [
+        {
+          "answer": "Comme"
+        }
+      ],
+      "gloss": "Since I have time, I'm going to help you",
+      "mistakes": [
+        {
+          "answer": "Parce que",
+          "feedback": "Parce que rarely starts sentences. '{Comme}' is perfect at the start!"
+        },
+        {
+          "answer": "Puisque",
+          "feedback": "Puisque works! Both comme and puisque work here."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-27-hypothetical-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Si j'étais...} - Daydreaming & Hypotheticals",
+  "description": "Talk about fantasies and what-ifs! '{Si j'étais riche, j'achèterais...}' (If I were rich, I'd buy...), '{Si j'avais le temps, je voyagerais}' (If I had time, I'd travel). Everyone loves daydreaming!",
+  "can_do": [
+    "Express hypothetical situations (If I were..., I would...)",
+    "Talk about daydreams and what-if scenarios",
+    "Use conditional mood naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "si-j-etais-riche-fr",
+      "fr": "si j'étais riche",
+      "gloss": "if I were rich",
+      "note": "⭐ daydreaming!"
+    },
+    {
+      "word_id": "si-j-avais-de-l-argent-fr",
+      "fr": "si j'avais de l'argent",
+      "gloss": "if I had money",
+      "note": "fantasy scenario"
+    },
+    {
+      "word_id": "si-j-etais-toi-fr",
+      "fr": "si j'étais toi",
+      "gloss": "if I were you",
+      "note": "giving advice"
+    },
+    {
+      "word_id": "si-tu-etais-ici-fr",
+      "fr": "si tu étais ici",
+      "gloss": "if you were here",
+      "note": "wishing someone was present"
+    },
+    {
+      "word_id": "si-on-avait-le-temps-fr",
+      "fr": "si on avait le temps",
+      "gloss": "if we had time",
+      "note": "hypothetical plan"
+    },
+    {
+      "word_id": "je-voyagerais-le-monde-fr",
+      "fr": "je voyagerais le monde",
+      "gloss": "I'd travel the world",
+      "note": "result of fantasy"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-daydreaming-in-french",
+      "term": "Daydreaming in French",
+      "definition": "Use 'si + past form' to talk about fantasies and hypotheticals",
+      "example": "{Si j'étais riche...} (If I were rich...), {Si j'avais de l'argent...} (If I had money...)"
+    },
+    {
+      "id": "c-giving-advice-si-j",
+      "term": "Giving Advice: {Si j'étais toi}",
+      "definition": "'If I were you...' - super common for giving advice!",
+      "example": "{Si j'étais toi, je ferais ça} (If I were you, I'd do that)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-si-j-etais-riche",
+      "type": "respond",
+      "situation": "Start a daydream: 'If I were rich...'",
+      "cue": "If I were rich",
+      "answer": "si j'étais riche",
+      "hint": "{si + j'étais riche}",
+      "mistakes": [
+        {
+          "answer": "si je suis riche",
+          "feedback": "For fantasy (you're NOT rich), use past: si j'étais riche"
+        }
+      ]
+    },
+    {
+      "id": "i-si-j-avais-de",
+      "type": "respond",
+      "situation": "Start a fantasy: 'If I had money...'",
+      "cue": "If I had money",
+      "answer": "si j'avais de l'argent",
+      "accept": [
+        "si j'avais l'argent"
+      ],
+      "hint": "{si + j'avais de l'argent}"
+    },
+    {
+      "id": "i-si-j-etais-toi",
+      "type": "respond",
+      "situation": "Give advice starting with 'If I were you...'",
+      "cue": "If I were you",
+      "answer": "si j'étais toi",
+      "hint": "{si + j'étais toi}"
+    },
+    {
+      "id": "i-si-tu-etais-ici",
+      "type": "respond",
+      "situation": "Express wishing someone were present",
+      "cue": "If you were here",
+      "answer": "si tu étais ici",
+      "hint": "{si + tu étais ici}"
+    },
+    {
+      "id": "i-si-on-avait-le",
+      "type": "respond",
+      "situation": "Suggest hypothetical plan 'if we had time'",
+      "cue": "If we had time",
+      "answer": "si on avait le temps",
+      "hint": "{si + on avait le temps}"
+    },
+    {
+      "id": "i-je-voyagerais-le-monde",
+      "type": "respond",
+      "situation": "Say what you'd do in fantasy: 'I'd travel the world'",
+      "cue": "I'd travel the world",
+      "answer": "je voyagerais le monde",
+      "hint": "{je + voyagerais le monde}",
+      "mistakes": [
+        {
+          "answer": "je voyage le monde",
+          "feedback": "That's present! For 'would', use: je voyagerais"
+        }
+      ]
+    }
+  ]
+}

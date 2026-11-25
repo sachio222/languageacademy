@@ -1,0 +1,167 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-13-ca-survival",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{ça} - Survival Phrases",
+  "description": "Learn '{ça}' (that/it) and build your first real conversations! Most useful word in French!",
+  "can_do": [
+    "Greet someone and ask how they're doing (ça va?)",
+    "Agree with people (c'est ça - that's right)",
+    "Use ça in conversation (I have that, it's that)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "ca-fr",
+      "fr": "ça",
+      "gloss": "that/it",
+      "note": "most common word!"
+    },
+    {
+      "word_id": "c-est-ca-fr",
+      "fr": "c'est ça",
+      "gloss": "that's it/right",
+      "note": "être + ça"
+    },
+    {
+      "word_id": "ca-va-fr",
+      "fr": "ça va",
+      "gloss": "it goes/OK",
+      "note": "ça + va (être)"
+    },
+    {
+      "word_id": "ca-va-fr.question",
+      "fr": "ça va?",
+      "gloss": "how's it going?",
+      "note": "greeting!"
+    },
+    {
+      "word_id": "j-ai-ca-fr",
+      "fr": "j'ai ça",
+      "gloss": "I have that",
+      "note": "avoir + ça"
+    },
+    {
+      "word_id": "tu-as-ca-fr",
+      "fr": "tu as ça",
+      "gloss": "you have that",
+      "note": "combining practice"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-ca-that-it",
+      "term": "{ça} = that/it",
+      "definition": "Informal, versatile, used constantly in conversation",
+      "example": "You'll use this word in almost every sentence!"
+    },
+    {
+      "id": "c-c-est-ca",
+      "term": "{c'est ça}",
+      "definition": "That's it / That's right - super common phrase",
+      "example": "Used to confirm, agree, or point to something"
+    },
+    {
+      "id": "c-ca-va",
+      "term": "{ça va?}",
+      "definition": "How's it going? / Are you OK? - most common greeting!",
+      "example": "The first thing you say when meeting someone"
+    },
+    {
+      "id": "c-building-blocks",
+      "term": "Building Blocks",
+      "definition": "Combine with être and avoir from previous modules",
+      "example": "{c'est + ça}, {j'ai + ça} - real useful phrases!"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-ca",
+      "type": "respond",
+      "situation": "Point to something. Use the most versatile word for 'that/it'",
+      "cue": "that/it (informal)",
+      "answer": "ça",
+      "hint": "The most common demonstrative - 2 letters!",
+      "mistakes": [
+        {
+          "answer": "ce",
+          "feedback": "That's for 'this' before masculine nouns"
+        },
+        {
+          "answer": "cela",
+          "feedback": "That's formal - use ça instead"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-ca",
+      "type": "respond",
+      "situation": "Someone shows you what they meant. Confirm by saying 'that's it'",
+      "cue": "that's it / that's right",
+      "answer": "c'est ça",
+      "hint": "Combine: it is + that (using {être})",
+      "mistakes": [
+        {
+          "answer": "ça c'est",
+          "feedback": "Wrong order - use: c'est ça"
+        }
+      ]
+    },
+    {
+      "id": "i-ca-va",
+      "type": "respond",
+      "situation": "Greet a friend casually. Ask how they're doing",
+      "cue": "How's it going? / Are you OK?",
+      "answer": "ça va",
+      "hint": "Literally 'that goes?' - super common greeting!",
+      "mistakes": [
+        {
+          "answer": "comment ça va",
+          "feedback": "Good! But simpler: just 'ça va' works"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-ca",
+      "type": "respond",
+      "situation": "Someone offers you something. Accept by saying you have/want it",
+      "cue": "I have that",
+      "answer": "j'ai ça",
+      "hint": "Combine avoir + ça (both from previous modules)",
+      "mistakes": [
+        {
+          "answer": "je ai ça",
+          "feedback": "Use j'ai with apostrophe"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-ca",
+      "type": "respond",
+      "situation": "Tell your friend they have something. Say 'you have that'",
+      "cue": "you have that (informal)",
+      "answer": "tu as ça",
+      "hint": "{Combine avoir + ça}",
+      "mistakes": [
+        {
+          "answer": "tu a ça",
+          "feedback": "Wrong conjugation: tu AS not tu a"
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-ca",
+      "type": "respond",
+      "situation": "Confirm someone possesses something. Say 'he has that'",
+      "cue": "he has that",
+      "answer": "il a ça",
+      "hint": "{Combine avoir + ça}",
+      "mistakes": [
+        {
+          "answer": "il as ça",
+          "feedback": "Wrong conjugation: il A not il as"
+        }
+      ]
+    }
+  ]
+}

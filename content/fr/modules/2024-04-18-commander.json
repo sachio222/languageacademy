@@ -1,0 +1,633 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-18-commander",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{commander} - To Order",
+  "description": "Order food, drinks, and products: je commande (I order), commander un café (to order a coffee), commander en ligne (to order online)",
+  "can_do": [
+    "Order food and drinks at restaurants",
+    "Order products online or in shops",
+    "Navigate French dining and shopping confidently"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "commander-fr",
+      "fr": "commander",
+      "gloss": "to order",
+      "note": "infinitive form - regular -ER verb"
+    },
+    {
+      "word_id": "je-commande-fr",
+      "fr": "je commande",
+      "gloss": "I order",
+      "note": "regular -ER ending: -e"
+    },
+    {
+      "word_id": "tu-commandes-fr",
+      "fr": "tu commandes",
+      "gloss": "you order (informal)",
+      "note": "regular -ER ending: -es"
+    },
+    {
+      "word_id": "il-elle-commande-fr",
+      "fr": "il/elle commande",
+      "gloss": "he/she orders",
+      "note": "regular -ER ending: -e"
+    },
+    {
+      "word_id": "nous-commandons-fr",
+      "fr": "nous commandons",
+      "gloss": "we order",
+      "note": "regular -ER ending: -ons"
+    },
+    {
+      "word_id": "vous-commandez-fr",
+      "fr": "vous commandez",
+      "gloss": "you order (formal/plural)",
+      "note": "regular -ER ending: -ez"
+    },
+    {
+      "word_id": "ils-elles-commandent-fr",
+      "fr": "ils/elles commandent",
+      "gloss": "they order",
+      "note": "regular -ER ending: -ent (silent)"
+    },
+    {
+      "word_id": "commander-un-cafe-fr",
+      "fr": "commander un café",
+      "gloss": "to order a coffee",
+      "note": "very common at cafés"
+    },
+    {
+      "word_id": "commander-une-pizza-fr",
+      "fr": "commander une pizza",
+      "gloss": "to order a pizza",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "commander-en-ligne-fr",
+      "fr": "commander en ligne",
+      "gloss": "to order online",
+      "note": "modern shopping phrase"
+    },
+    {
+      "word_id": "je-voudrais-commander-fr",
+      "fr": "je voudrais commander",
+      "gloss": "I would like to order",
+      "note": "polite restaurant phrase"
+    },
+    {
+      "word_id": "vous-commandez-fr.are-you-ready",
+      "fr": "vous commandez?",
+      "gloss": "are you ready to order?",
+      "note": "waiter's question"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-commander-to-order",
+      "term": "{commander} = to order",
+      "definition": "Order food at restaurants, drinks at cafés, products online - regular -ER verb",
+      "example": "{je commande un café} (I order a coffee), {nous commandons une pizza} (we order a pizza)"
+    },
+    {
+      "id": "c-regular-er-verb-pattern",
+      "term": "Regular -ER verb pattern",
+      "definition": "Follows same pattern as parler, demander - drop -er, add endings",
+      "example": "{je commande}, {tu commandes}, {il commande}, {nous commandons}, {vous commandez}, {ils commandent}"
+    },
+    {
+      "id": "c-restaurant-cafe-context",
+      "term": "{Restaurant}/café context",
+      "definition": "Most common use - ordering food and drinks in restaurants",
+      "example": "{je commande un steak} (I order a steak), {vous commandez le menu?} (are you ordering the set menu?)"
+    },
+    {
+      "id": "c-online-shopping",
+      "term": "Online shopping",
+      "definition": "Also used for ordering products online or by phone",
+      "example": "{je commande en ligne} (I order online), {commander sur Amazon} (to order on Amazon)"
+    },
+    {
+      "id": "c-similar-to-demander",
+      "term": "Similar to demander",
+      "definition": "Both mean 'to ask for', but commander specifically means 'to order' (more formal/transactional)",
+      "example": "{demander} = ask for (general), {commander} = order ({restaurant}/shop)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-commande",
+      "type": "respond",
+      "situation": "I order",
+      "answer": "je commande",
+      "hint": "{je...}",
+      "mistakes": [
+        {
+          "answer": "je commandes",
+          "feedback": "Expected: \"{je commande}\""
+        },
+        {
+          "answer": "je commander",
+          "feedback": "Expected: \"{je commande}\""
+        },
+        {
+          "answer": "je command",
+          "feedback": "Expected: \"{je commande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-commandes",
+      "type": "respond",
+      "situation": "Say \"you order\" (informal)",
+      "cue": "you order (informal)",
+      "answer": "tu commandes",
+      "hint": "{tu...}",
+      "mistakes": [
+        {
+          "answer": "tu commande",
+          "feedback": "Expected: \"{tu commandes}\""
+        },
+        {
+          "answer": "tu commander",
+          "feedback": "Expected: \"{tu commandes}\""
+        },
+        {
+          "answer": "tu commands",
+          "feedback": "Expected: \"{tu commandes}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-commande",
+      "type": "respond",
+      "situation": "she orders",
+      "answer": "elle commande",
+      "hint": "{elle...}",
+      "mistakes": [
+        {
+          "answer": "elle commandes",
+          "feedback": "Expected: \"{elle commande}\""
+        },
+        {
+          "answer": "elle commander",
+          "feedback": "Expected: \"{elle commande}\""
+        },
+        {
+          "answer": "elle commands",
+          "feedback": "Expected: \"{elle commande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-commandons",
+      "type": "respond",
+      "situation": "we order",
+      "answer": "nous commandons",
+      "hint": "{nous...}",
+      "mistakes": [
+        {
+          "answer": "nous commande",
+          "feedback": "Expected: \"{nous commandons}\""
+        },
+        {
+          "answer": "nous commander",
+          "feedback": "Expected: \"{nous commandons}\""
+        },
+        {
+          "answer": "nous commandez",
+          "feedback": "Expected: \"{nous commandons}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-commandez",
+      "type": "respond",
+      "situation": "Say \"you order\" (formal)",
+      "cue": "you order (formal)",
+      "answer": "vous commandez",
+      "hint": "{vous...}",
+      "mistakes": [
+        {
+          "answer": "vous commande",
+          "feedback": "Expected: \"{vous commandez}\""
+        },
+        {
+          "answer": "vous commander",
+          "feedback": "Expected: \"{vous commandez}\""
+        },
+        {
+          "answer": "vous commandons",
+          "feedback": "Expected: \"{vous commandez}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-commandent",
+      "type": "respond",
+      "situation": "they order",
+      "answer": "ils commandent",
+      "hint": "{ils...}",
+      "mistakes": [
+        {
+          "answer": "ils commande",
+          "feedback": "Expected: \"{ils commandent}\""
+        },
+        {
+          "answer": "ils commander",
+          "feedback": "Expected: \"{ils commandent}\""
+        },
+        {
+          "answer": "ils commandes",
+          "feedback": "Expected: \"{ils commandent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-commande-un-cafe",
+      "type": "respond",
+      "situation": "I order a coffee",
+      "answer": "je commande un café",
+      "accept": [
+        "je commande un cafe"
+      ],
+      "hint": "{je commande un café}",
+      "mistakes": [
+        {
+          "answer": "je commandes un café",
+          "feedback": "Expected: \"{je commande un café}\""
+        },
+        {
+          "answer": "je commander un café",
+          "feedback": "Expected: \"{je commande un café}\""
+        },
+        {
+          "answer": "je demande un café",
+          "feedback": "Expected: \"{je commande un café}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-commandes-une-pizza",
+      "type": "respond",
+      "situation": "you order a pizza",
+      "answer": "tu commandes une pizza",
+      "hint": "{tu commandes une pizza}",
+      "mistakes": [
+        {
+          "answer": "tu commande une pizza",
+          "feedback": "Expected: \"{tu commandes une pizza}\""
+        },
+        {
+          "answer": "tu commander une pizza",
+          "feedback": "Expected: \"{tu commandes une pizza}\""
+        },
+        {
+          "answer": "tu demandes une pizza",
+          "feedback": "Expected: \"{tu commandes une pizza}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-commande-un-steak",
+      "type": "respond",
+      "situation": "he orders a steak",
+      "answer": "il commande un steak",
+      "hint": "{il commande un steak}",
+      "mistakes": [
+        {
+          "answer": "il commandes un steak",
+          "feedback": "Expected: \"{il commande un steak}\""
+        },
+        {
+          "answer": "il commander un steak",
+          "feedback": "Expected: \"{il commande un steak}\""
+        },
+        {
+          "answer": "il demande un steak",
+          "feedback": "Expected: \"{il commande un steak}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-commande-du-vin",
+      "type": "respond",
+      "situation": "she orders wine",
+      "answer": "elle commande du vin",
+      "hint": "{elle commande du vin}",
+      "mistakes": [
+        {
+          "answer": "elle commandes du vin",
+          "feedback": "Expected: \"{elle commande du vin}\""
+        },
+        {
+          "answer": "elle commander du vin",
+          "feedback": "Expected: \"{elle commande du vin}\""
+        },
+        {
+          "answer": "elle commande le vin",
+          "feedback": "Expected: \"{elle commande du vin}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-commandons-le-menu",
+      "type": "respond",
+      "situation": "we order the menu",
+      "answer": "nous commandons le menu",
+      "hint": "{nous commandons le menu}",
+      "mistakes": [
+        {
+          "answer": "nous commande le menu",
+          "feedback": "Expected: \"{nous commandons le menu}\""
+        },
+        {
+          "answer": "nous commandon le menu",
+          "feedback": "Expected: \"{nous commandons le menu}\""
+        },
+        {
+          "answer": "nous demandons le menu",
+          "feedback": "Expected: \"{nous commandons le menu}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-commandent-le-dessert",
+      "type": "respond",
+      "situation": "they order dessert",
+      "answer": "ils commandent le dessert",
+      "hint": "{ils commandent le dessert}",
+      "mistakes": [
+        {
+          "answer": "ils commande le dessert",
+          "feedback": "Expected: \"{ils commandent le dessert}\""
+        },
+        {
+          "answer": "ils commandons le dessert",
+          "feedback": "Expected: \"{ils commandent le dessert}\""
+        },
+        {
+          "answer": "ils demandent le dessert",
+          "feedback": "Expected: \"{ils commandent le dessert}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-voudrais-commander",
+      "type": "respond",
+      "situation": "I would like to order",
+      "answer": "je voudrais commander",
+      "hint": "{je voudrais commander}",
+      "mistakes": [
+        {
+          "answer": "je veux commander",
+          "feedback": "Expected: \"{je voudrais commander}\""
+        },
+        {
+          "answer": "je voudrais commande",
+          "feedback": "Expected: \"{je voudrais commander}\""
+        },
+        {
+          "answer": "je voudrais demander",
+          "feedback": "Expected: \"{je voudrais commander}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-commandez-2",
+      "type": "respond",
+      "situation": "Say \"are you ready to order?\" (formal)",
+      "cue": "are you ready to order? (formal)",
+      "answer": "vous commandez?",
+      "accept": [
+        "vous commandez"
+      ],
+      "hint": "{vous commandez?}",
+      "mistakes": [
+        {
+          "answer": "commandez-vous?",
+          "feedback": "Expected: \"{vous commandez?}\""
+        },
+        {
+          "answer": "vous commander?",
+          "feedback": "Expected: \"{vous commandez?}\""
+        },
+        {
+          "answer": "êtes-vous prêt à commander?",
+          "feedback": "Expected: \"{vous commandez?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "what are you ordering?",
+      "answer": "qu'est-ce que tu commandes?",
+      "accept": [
+        "qu'est-ce que tu commandes",
+        "qu est-ce que tu commandes?"
+      ],
+      "hint": "{qu'est-ce que tu commandes?}",
+      "mistakes": [
+        {
+          "answer": "que tu commandes?",
+          "feedback": "Expected: \"{qu'est-ce que tu commandes?}\""
+        },
+        {
+          "answer": "qu'est-ce que tu commande?",
+          "feedback": "Expected: \"{qu'est-ce que tu commandes?}\""
+        },
+        {
+          "answer": "quoi tu commandes?",
+          "feedback": "Expected: \"{qu'est-ce que tu commandes?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-commande-en-ligne",
+      "type": "respond",
+      "situation": "I order online",
+      "answer": "je commande en ligne",
+      "hint": "{je commande en ligne}",
+      "mistakes": [
+        {
+          "answer": "je commandes en ligne",
+          "feedback": "Expected: \"{je commande en ligne}\""
+        },
+        {
+          "answer": "je commander en ligne",
+          "feedback": "Expected: \"{je commande en ligne}\""
+        },
+        {
+          "answer": "je commande online",
+          "feedback": "Expected: \"{je commande en ligne}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-commandes-sur-amazon",
+      "type": "respond",
+      "situation": "you order on Amazon",
+      "answer": "tu commandes sur Amazon",
+      "hint": "{tu commandes sur Amazon}",
+      "mistakes": [
+        {
+          "answer": "tu commande sur Amazon",
+          "feedback": "Expected: \"{tu commandes sur Amazon}\""
+        },
+        {
+          "answer": "tu commander sur Amazon",
+          "feedback": "Expected: \"{tu commandes sur Amazon}\""
+        },
+        {
+          "answer": "tu commandes à Amazon",
+          "feedback": "Expected: \"{tu commandes sur Amazon}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-commandons-par-telephone",
+      "type": "respond",
+      "situation": "we order by phone",
+      "answer": "nous commandons par téléphone",
+      "accept": [
+        "nous commandons par telephone"
+      ],
+      "hint": "{nous commandons par téléphone}",
+      "mistakes": [
+        {
+          "answer": "nous commande par téléphone",
+          "feedback": "Expected: \"{nous commandons par téléphone}\""
+        },
+        {
+          "answer": "nous commandons en téléphone",
+          "feedback": "Expected: \"{nous commandons par téléphone}\""
+        },
+        {
+          "answer": "nous commandons avec téléphone",
+          "feedback": "Expected: \"{nous commandons par téléphone}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-commande-pas",
+      "type": "respond",
+      "situation": "I'm not ordering",
+      "answer": "je ne commande pas",
+      "hint": "{je ne commande pas}",
+      "mistakes": [
+        {
+          "answer": "je ne commandes pas",
+          "feedback": "Expected: \"{je ne commande pas}\""
+        },
+        {
+          "answer": "je commande pas",
+          "feedback": "Expected: \"{je ne commande pas}\""
+        },
+        {
+          "answer": "je ne commander pas",
+          "feedback": "Expected: \"{je ne commande pas}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-commandes-pas",
+      "type": "respond",
+      "situation": "you don't order that",
+      "answer": "tu ne commandes pas ça",
+      "accept": [
+        "tu ne commandes pas ca"
+      ],
+      "hint": "{tu ne commandes pas ça}",
+      "mistakes": [
+        {
+          "answer": "tu ne commande pas ça",
+          "feedback": "Expected: \"{tu ne commandes pas ça}\""
+        },
+        {
+          "answer": "tu commandes pas ça",
+          "feedback": "Expected: \"{tu ne commandes pas ça}\""
+        },
+        {
+          "answer": "tu ne commander pas ça",
+          "feedback": "Expected: \"{tu ne commandes pas ça}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-commande",
+      "type": "respond",
+      "situation": "I ordered",
+      "answer": "j'ai commandé",
+      "accept": [
+        "j ai commandé",
+        "j'ai commande"
+      ],
+      "hint": "{j'ai commandé}",
+      "mistakes": [
+        {
+          "answer": "je commande",
+          "feedback": "Expected: \"{j'ai commandé}\""
+        },
+        {
+          "answer": "j'ai commander",
+          "feedback": "Expected: \"{j'ai commandé}\""
+        },
+        {
+          "answer": "j'ai commandai",
+          "feedback": "Expected: \"{j'ai commandé}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-commande-une",
+      "type": "respond",
+      "situation": "we ordered a pizza",
+      "answer": "nous avons commandé une pizza",
+      "accept": [
+        "nous avons commande une pizza"
+      ],
+      "hint": "{nous avons commandé une pizza}",
+      "mistakes": [
+        {
+          "answer": "nous commandons une pizza",
+          "feedback": "Expected: \"{nous avons commandé une pizza}\""
+        },
+        {
+          "answer": "nous avons commander une pizza",
+          "feedback": "Expected: \"{nous avons commandé une pizza}\""
+        },
+        {
+          "answer": "nous avons commandes une pizza",
+          "feedback": "Expected: \"{nous avons commandé une pizza}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-commande-le",
+      "type": "respond",
+      "situation": "they ordered dessert",
+      "answer": "ils ont commandé le dessert",
+      "accept": [
+        "ils ont commande le dessert"
+      ],
+      "hint": "{ils ont commandé le dessert}",
+      "mistakes": [
+        {
+          "answer": "ils commandent le dessert",
+          "feedback": "Expected: \"{ils ont commandé le dessert}\""
+        },
+        {
+          "answer": "ils ont commander le dessert",
+          "feedback": "Expected: \"{ils ont commandé le dessert}\""
+        },
+        {
+          "answer": "ils ont commandes le dessert",
+          "feedback": "Expected: \"{ils ont commandé le dessert}\""
+        }
+      ]
+    }
+  ]
+}

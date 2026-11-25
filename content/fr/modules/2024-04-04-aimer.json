@@ -1,0 +1,410 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-04-aimer",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{aimer} - To Like / To Love",
+  "description": "Express what you like and love: j'aime le café (I like coffee), j'aime bien (I like), je t'aime (I love you)",
+  "can_do": [
+    "Express what you like and love (I like coffee, I love you)",
+    "Distinguish between liking and loving in French",
+    "Use aimer with object pronouns (I love him/her)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "aimer-fr",
+      "fr": "aimer",
+      "gloss": "to like / to love",
+      "note": "infinitive form - regular -ER verb"
+    },
+    {
+      "word_id": "j-aime-fr",
+      "fr": "j'aime",
+      "gloss": "I like / I love",
+      "note": "j' before vowel"
+    },
+    {
+      "word_id": "tu-aimes-fr",
+      "fr": "tu aimes",
+      "gloss": "you like / you love (informal)",
+      "note": "regular -ER ending: -es"
+    },
+    {
+      "word_id": "il-elle-aime-fr",
+      "fr": "il/elle aime",
+      "gloss": "he/she likes / loves",
+      "note": "regular -ER ending: -e"
+    },
+    {
+      "word_id": "nous-aimons-fr",
+      "fr": "nous aimons",
+      "gloss": "we like / we love",
+      "note": "regular -ER ending: -ons"
+    },
+    {
+      "word_id": "vous-aimez-fr",
+      "fr": "vous aimez",
+      "gloss": "you like / you love (formal/plural)",
+      "note": "regular -ER ending: -ez"
+    },
+    {
+      "word_id": "ils-elles-aiment-fr",
+      "fr": "ils/elles aiment",
+      "gloss": "they like / they love",
+      "note": "regular -ER ending: -ent (silent)"
+    },
+    {
+      "word_id": "aimer-bien-fr",
+      "fr": "aimer bien",
+      "gloss": "to like (casual)",
+      "note": "less intense than aimer alone"
+    },
+    {
+      "word_id": "je-t-aime-fr",
+      "fr": "je t'aime",
+      "gloss": "I love you",
+      "note": "❤️ famous phrase!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-aimer-to-like-or",
+      "term": "{aimer} = to like OR to love",
+      "definition": "Context determines meaning - can mean both 'like' and 'love'",
+      "example": "{j'aime le café} (I like coffee), {j'aime ma mère} (I love my mother)"
+    },
+    {
+      "id": "c-aimer-bien-to-like",
+      "term": "{aimer bien} = to like (casual)",
+      "definition": "Adding '{bien}' makes it clearly 'like' not 'love' - less intense",
+      "example": "{j'aime bien ce livre} (I like this book)"
+    },
+    {
+      "id": "c-regular-er-verb-pattern",
+      "term": "Regular -ER verb pattern",
+      "definition": "Follows same pattern as parler - drop -er, add endings",
+      "example": "{je parle} → {j'aime}, {tu parles} → {tu aimes}, {il parle} → {il aime}"
+    },
+    {
+      "id": "c-with-people-vs-things",
+      "term": "With people vs things",
+      "definition": "With people often means 'love', with things means 'like'",
+      "example": "{j'aime Pierre} (I love Pierre), {j'aime le pain} (I like bread)"
+    },
+    {
+      "id": "c-with-infinitives",
+      "term": "With infinitives",
+      "definition": "Use aimer + infinitive to say you like doing something",
+      "example": "{j'aime parler français} (I like speaking French)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-aime-le-cafe",
+      "type": "respond",
+      "situation": "I like coffee",
+      "answer": "j'aime le café",
+      "accept": [
+        "j aime le café"
+      ],
+      "hint": "{j'aime + le café}",
+      "mistakes": [
+        {
+          "answer": "je aime le café",
+          "feedback": "Use j' before vowel: j'aime"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-ce-livre",
+      "type": "respond",
+      "situation": "I like this book",
+      "answer": "j'aime ce livre",
+      "accept": [
+        "j aime ce livre"
+      ],
+      "hint": "{j'aime + ce livre}",
+      "mistakes": [
+        {
+          "answer": "j'aime bien ce livre",
+          "feedback": "Both work! But the expected answer is just 'j'aime'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-aimes-le-pain",
+      "type": "respond",
+      "situation": "Say \"you like bread\" (informal)",
+      "cue": "you like bread",
+      "answer": "tu aimes le pain",
+      "hint": "{tu + aimes + le pain}",
+      "mistakes": [
+        {
+          "answer": "tu aime le pain",
+          "feedback": "Add -s for 'tu': tu aimes"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-aimes-paris",
+      "type": "respond",
+      "situation": "Say \"you like Paris\" (informal)",
+      "cue": "you like Paris",
+      "answer": "tu aimes Paris",
+      "hint": "{tu + aimes + Paris}",
+      "mistakes": [
+        {
+          "answer": "tu aime Paris",
+          "feedback": "Add -s for 'tu': tu aimes"
+        }
+      ]
+    },
+    {
+      "id": "i-il-aime-l-eau",
+      "type": "respond",
+      "situation": "he likes water",
+      "answer": "il aime l'eau",
+      "accept": [
+        "il aime l eau"
+      ],
+      "hint": "{il + aime + l'eau}",
+      "mistakes": [
+        {
+          "answer": "il aimes l'eau",
+          "feedback": "Third person uses '{aime}' not 'aimes'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-aime-paris",
+      "type": "respond",
+      "situation": "she loves Paris",
+      "answer": "elle aime Paris",
+      "hint": "{elle + aime + Paris}",
+      "mistakes": [
+        {
+          "answer": "elle aimes Paris",
+          "feedback": "Third person uses '{aime}' not 'aimes'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-aimons-ca",
+      "type": "respond",
+      "situation": "we like this",
+      "answer": "nous aimons ça",
+      "hint": "{nous + aimons + ça}",
+      "mistakes": [
+        {
+          "answer": "nous aime ça",
+          "feedback": "Use '{aimons}' for nous: nous aimons"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-aimons-le-cafe",
+      "type": "respond",
+      "situation": "we love coffee",
+      "answer": "nous aimons le café",
+      "hint": "{nous + aimons + le café}",
+      "mistakes": [
+        {
+          "answer": "nous aimez le café",
+          "feedback": "Use '{aimons}' for nous, not 'aimez'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-aimez-ca",
+      "type": "respond",
+      "situation": "Say \"you like that\" (formal or plural)",
+      "cue": "you like that (formal)",
+      "answer": "vous aimez ça",
+      "hint": "{vous + aimez + ça}",
+      "mistakes": [
+        {
+          "answer": "vous aime ça",
+          "feedback": "Use '{aimez}' for vous: vous aimez"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-aimez-paris",
+      "type": "respond",
+      "situation": "Say \"you love Paris\" (formal)",
+      "cue": "you love Paris (formal)",
+      "answer": "vous aimez Paris",
+      "hint": "{vous + aimez + Paris}",
+      "mistakes": [
+        {
+          "answer": "vous aimons Paris",
+          "feedback": "Use '{aimez}' for vous, not 'aimons'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-aiment-le-pain",
+      "type": "respond",
+      "situation": "they like bread",
+      "answer": "ils aiment le pain",
+      "accept": [
+        "elles aiment le pain"
+      ],
+      "hint": "{ils/elles + aiment + le pain}",
+      "mistakes": [
+        {
+          "answer": "ils aime le pain",
+          "feedback": "Add -nt for ils/elles: ils aiment"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-aiment-paris",
+      "type": "respond",
+      "situation": "they love Paris",
+      "answer": "ils aiment Paris",
+      "accept": [
+        "elles aiment Paris"
+      ],
+      "hint": "{ils/elles + aiment + Paris}",
+      "mistakes": [
+        {
+          "answer": "ils aimes Paris",
+          "feedback": "Use '{aiment}' for ils/elles, not 'aimes'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-parler-francais",
+      "type": "respond",
+      "situation": "I like speaking French",
+      "answer": "j'aime parler français",
+      "accept": [
+        "j aime parler français"
+      ],
+      "hint": "{j'aime + parler français}",
+      "mistakes": [
+        {
+          "answer": "j'aime parle français",
+          "feedback": "Use infinitive '{parler}' not 'parle'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-aimes-aller-a",
+      "type": "respond",
+      "situation": "Say \"you like going to Paris\" (informal)",
+      "cue": "you like going to Paris",
+      "answer": "tu aimes aller à Paris",
+      "hint": "{tu aimes + aller + à Paris}",
+      "mistakes": [
+        {
+          "answer": "tu aimes vas à Paris",
+          "feedback": "Use infinitive '{aller}' not 'vas'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-aimons-travailler",
+      "type": "respond",
+      "situation": "we like working",
+      "answer": "nous aimons travailler",
+      "hint": "{nous aimons + travailler}",
+      "mistakes": [
+        {
+          "answer": "nous aimons travail",
+          "feedback": "Use infinitive '{travailler}' not noun 'travail'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-aime-pas",
+      "type": "respond",
+      "situation": "Say \"I do not like that\"",
+      "cue": "I don't like that",
+      "answer": "je n'aime pas ça",
+      "accept": [
+        "je n aime pas ça"
+      ],
+      "hint": "{je n'aime pas + ça}",
+      "mistakes": [
+        {
+          "answer": "j'aime ne pas ça",
+          "feedback": "Put 'ne' before verb: je n'aime pas"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-n-aimes-pas",
+      "type": "respond",
+      "situation": "Say \"you do not like coffee\" (informal)",
+      "cue": "you don't like coffee",
+      "answer": "tu n'aimes pas le café",
+      "accept": [
+        "tu n aimes pas le café"
+      ],
+      "hint": "{tu n'aimes pas + le café}",
+      "mistakes": [
+        {
+          "answer": "tu ne aimes pas le café",
+          "feedback": "Use n' before vowel: tu n'aimes pas"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-n-aimons-pas",
+      "type": "respond",
+      "situation": "Say \"we do not like that\"",
+      "cue": "we don't like that",
+      "answer": "nous n'aimons pas ça",
+      "accept": [
+        "nous n aimons pas ça"
+      ],
+      "hint": "{nous n'aimons pas + ça}",
+      "mistakes": [
+        {
+          "answer": "nous aimons ne pas ça",
+          "feedback": "Put 'ne' before verb: nous n'aimons pas"
+        }
+      ]
+    },
+    {
+      "id": "i-je-t-aime",
+      "type": "respond",
+      "situation": "Say \"I love you\" (famous phrase!)",
+      "cue": "I love you",
+      "answer": "je t'aime",
+      "accept": [
+        "je t aime"
+      ],
+      "hint": "je t'aime (t' = object pronoun 'you')",
+      "mistakes": [
+        {
+          "answer": "j'aime tu",
+          "feedback": "Use object pronoun 't' before verb: je t'aime"
+        },
+        {
+          "answer": "j'aime toi",
+          "feedback": "Use 't' not 'toi': je t'aime"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-bien-ce",
+      "type": "respond",
+      "situation": "Say \"I really like this book\" (casual like)",
+      "cue": "I really like this book",
+      "answer": "j'aime bien ce livre",
+      "accept": [
+        "j aime bien ce livre"
+      ],
+      "hint": "{j'aime bien + ce livre}",
+      "mistakes": [
+        {
+          "answer": "j'aime ce livre bien",
+          "feedback": "Put 'bien' after 'aime': j'aime bien"
+        }
+      ]
+    }
+  ]
+}

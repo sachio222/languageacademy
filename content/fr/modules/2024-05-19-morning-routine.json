@@ -1,0 +1,187 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-19-morning-routine",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Morning Routine - {se réveiller, se lever}",
+  "description": "Describe your morning: je me réveille (I wake up), je me lève (I get up), tu te réveilles à quelle heure? (what time do you wake up?)",
+  "can_do": [
+    "Describe your morning routine (I wake up, I get up)",
+    "Talk about daily schedules and timing",
+    "Ask what time someone wakes up or gets up"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "se-reveiller-fr",
+      "fr": "se réveiller",
+      "gloss": "to wake up",
+      "note": "infinitive - reflexive verb"
+    },
+    {
+      "word_id": "je-me-reveille-fr",
+      "fr": "je me réveille",
+      "gloss": "I wake up",
+      "note": "⭐ first action of day!"
+    },
+    {
+      "word_id": "tu-te-reveilles-fr",
+      "fr": "tu te réveilles",
+      "gloss": "you wake up (informal)",
+      "note": "asking about routines"
+    },
+    {
+      "word_id": "il-se-reveille-fr",
+      "fr": "il se réveille",
+      "gloss": "he wakes up",
+      "note": "third person"
+    },
+    {
+      "word_id": "elle-se-reveille-fr",
+      "fr": "elle se réveille",
+      "gloss": "she wakes up",
+      "note": "feminine form"
+    },
+    {
+      "word_id": "nous-nous-reveillons-fr",
+      "fr": "nous nous réveillons",
+      "gloss": "we wake up",
+      "note": "nous nous pattern"
+    },
+    {
+      "word_id": "vous-vous-reveillez-fr",
+      "fr": "vous vous réveillez",
+      "gloss": "you wake up (formal/plural)",
+      "note": "polite form"
+    },
+    {
+      "word_id": "se-lever-fr",
+      "fr": "se lever",
+      "gloss": "to get up / to stand up",
+      "note": "infinitive - reflexive verb"
+    },
+    {
+      "word_id": "je-me-leve-fr",
+      "fr": "je me lève",
+      "gloss": "I get up",
+      "note": "⭐ second morning action"
+    },
+    {
+      "word_id": "tu-te-leves-fr",
+      "fr": "tu te lèves",
+      "gloss": "you get up (informal)",
+      "note": "common in questions"
+    },
+    {
+      "word_id": "il-se-leve-fr",
+      "fr": "il se lève",
+      "gloss": "he gets up",
+      "note": "third person"
+    },
+    {
+      "word_id": "elle-se-leve-fr",
+      "fr": "elle se lève",
+      "gloss": "she gets up",
+      "note": "feminine form"
+    },
+    {
+      "word_id": "nous-nous-levons-fr",
+      "fr": "nous nous levons",
+      "gloss": "we get up",
+      "note": "nous nous pattern"
+    },
+    {
+      "word_id": "vous-vous-levez-fr",
+      "fr": "vous vous levez",
+      "gloss": "you get up (formal/plural)",
+      "note": "polite form"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-se-reveiller-to-wake",
+      "term": "{se réveiller} = to wake up",
+      "definition": "First action of the day - reflexive because you wake yourself up",
+      "example": "{je me réveille à 7h} (I wake up at 7am), {tu te réveilles tôt} (you wake up early)"
+    },
+    {
+      "id": "c-se-lever-to-get",
+      "term": "{se lever} = to get up / to stand up",
+      "definition": "After waking, you get yourself up - natural sequence!",
+      "example": "{je me lève à 7h30} (I get up at 7:30), {tu te lèves tard} (you get up late)"
+    },
+    {
+      "id": "c-telling-your-morning-story",
+      "term": "Telling Your Morning Story",
+      "definition": "Now you can describe your morning routine with temporal words!",
+      "example": "{D'abord, je me réveille. Ensuite, je me lève.} (First, I wake up. Then, I get up.)"
+    },
+    {
+      "id": "c-asking-about-morning-routines",
+      "term": "Asking About Morning Routines",
+      "definition": "Common questions about daily schedules",
+      "example": "{À quelle heure tu te réveilles?} (What time do you wake up?), {Tu te lèves tôt?} (Do you get up early?)"
+    }
+  ],
+  "items": [
+    {
+      "id": "morning-1",
+      "type": "respond",
+      "situation": "I wake up",
+      "answer": "je me réveille",
+      "hint": "je me + réveiller conjugated"
+    },
+    {
+      "id": "morning-2",
+      "type": "respond",
+      "situation": "I wake up at 7am",
+      "answer": "je me réveille à sept heures",
+      "accept": [
+        "je me reveille a sept heures",
+        "je me réveille à 7h"
+      ],
+      "hint": "{je me réveille + à + sept heures}"
+    },
+    {
+      "id": "morning-3",
+      "type": "respond",
+      "situation": "Ask 'Do you wake up early?' (informal)",
+      "cue": "Do you wake up early? (informal)",
+      "answer": "tu te réveilles tôt",
+      "accept": [
+        "tu te reveilles tot"
+      ],
+      "hint": "{tu te réveilles + tôt?}"
+    },
+    {
+      "id": "morning-4",
+      "type": "respond",
+      "situation": "I get up",
+      "answer": "je me lève",
+      "accept": [
+        "je me leve"
+      ],
+      "hint": "je me + lever conjugated"
+    },
+    {
+      "id": "morning-5",
+      "type": "respond",
+      "situation": "She gets up at 8am",
+      "answer": "elle se lève à huit heures",
+      "accept": [
+        "elle se leve a huit heures",
+        "elle se lève à 8h"
+      ],
+      "hint": "{elle se lève + à + huit heures}"
+    },
+    {
+      "id": "morning-6",
+      "type": "respond",
+      "situation": "First, I wake up. Then, I get up.",
+      "answer": "d'abord, je me réveille. ensuite, je me lève",
+      "accept": [
+        "d abord je me reveille ensuite je me leve"
+      ],
+      "hint": "{D'abord + je me réveille. Ensuite + je me lève.}"
+    }
+  ]
+}

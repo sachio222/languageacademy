@@ -1,0 +1,545 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-12-manger",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{manger} - To Eat (Present & Past)",
+  "description": "Express what you eat: je mange du pain (I eat bread), j'ai mangé (I ate/have eaten)",
+  "can_do": [
+    "Talk about eating and meals (I eat, I ate, I've eaten)",
+    "Order food and discuss dietary preferences",
+    "Use past tense to describe what you ate"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "manger-fr",
+      "fr": "manger",
+      "gloss": "to eat",
+      "note": "infinitive form - regular -ER verb"
+    },
+    {
+      "word_id": "je-mange-fr",
+      "fr": "je mange",
+      "gloss": "I eat",
+      "note": "present tense"
+    },
+    {
+      "word_id": "tu-manges-fr",
+      "fr": "tu manges",
+      "gloss": "you eat (informal)",
+      "note": "present tense"
+    },
+    {
+      "word_id": "il-elle-mange-fr",
+      "fr": "il/elle mange",
+      "gloss": "he/she eats",
+      "note": "present tense"
+    },
+    {
+      "word_id": "nous-mangeons-fr",
+      "fr": "nous mangeons",
+      "gloss": "we eat",
+      "note": "note: mangeons (not mangons)"
+    },
+    {
+      "word_id": "vous-mangez-fr",
+      "fr": "vous mangez",
+      "gloss": "you eat (formal/plural)",
+      "note": "present tense"
+    },
+    {
+      "word_id": "ils-elles-mangent-fr",
+      "fr": "ils/elles mangent",
+      "gloss": "they eat",
+      "note": "present tense"
+    },
+    {
+      "word_id": "j-ai-mange-fr",
+      "fr": "j'ai mangé",
+      "gloss": "I ate / I have eaten",
+      "note": "passé composé - avoir + mangé"
+    },
+    {
+      "word_id": "tu-as-mange-fr",
+      "fr": "tu as mangé",
+      "gloss": "you ate (informal)",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "il-elle-a-mange-fr",
+      "fr": "il/elle a mangé",
+      "gloss": "he/she ate",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "nous-avons-mange-fr",
+      "fr": "nous avons mangé",
+      "gloss": "we ate",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "vous-avez-mange-fr",
+      "fr": "vous avez mangé",
+      "gloss": "you ate (formal/plural)",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "ils-elles-ont-mange-fr",
+      "fr": "ils/elles ont mangé",
+      "gloss": "they ate",
+      "note": "passé composé"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-manger-to-eat",
+      "term": "{manger} = to eat",
+      "definition": "Essential daily verb - talk about meals and food!",
+      "example": "{je mange du pain} (I eat bread), {nous mangeons ensemble} (we eat together)"
+    },
+    {
+      "id": "c-regular-er-verb",
+      "term": "Regular -ER verb",
+      "definition": "Follows same pattern as parler and aimer",
+      "example": "{je mange}, {tu manges}, {il mange}, {nous mangeons}, {vous mangez}, {ils mangent}"
+    },
+    {
+      "id": "c-passe-compose-past-tense",
+      "term": "{Passé Composé} (Past Tense)",
+      "definition": "Use avoir + mangé to say 'ate' or 'have eaten'",
+      "example": "{j'ai mangé} (I ate/have eaten), {tu as mangé} (you ate), {il a mangé} (he ate)"
+    },
+    {
+      "id": "c-past-participle-mange",
+      "term": "Past Participle: {mangé}",
+      "definition": "For -ER verbs, past participle is -é",
+      "example": "{manger} → {mangé}, {parler} → {parlé}, {aimer} → {aimé}"
+    },
+    {
+      "id": "c-with-food-nouns",
+      "term": "With food nouns",
+      "definition": "Use partitive (du/de la/des) for some, or article for specific items",
+      "example": "{je mange du pain} (I eat some bread), {je mange une pomme} (I eat an apple)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-mange-du-pain",
+      "type": "respond",
+      "situation": "I eat bread",
+      "answer": "je mange du pain",
+      "hint": "{je mange + du pain}",
+      "mistakes": [
+        {
+          "answer": "je manger du pain",
+          "feedback": "Use conjugated form '{mange}' not infinitive 'manger'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-mange-une-baguette",
+      "type": "respond",
+      "situation": "I eat a baguette",
+      "answer": "je mange une baguette",
+      "hint": "{je mange + une baguette}",
+      "mistakes": [
+        {
+          "answer": "je mange un baguette",
+          "feedback": "baguette is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-manges-de-la",
+      "type": "respond",
+      "situation": "Say \"you eat pizza\" (informal)",
+      "cue": "you eat pizza",
+      "answer": "tu manges de la pizza",
+      "accept": [
+        "tu manges la pizza",
+        "tu manges une pizza"
+      ],
+      "hint": "{tu manges + de la pizza}",
+      "mistakes": [
+        {
+          "answer": "tu mange de la pizza",
+          "feedback": "Add -s for tu: tu manges"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-manges-un-croissant",
+      "type": "respond",
+      "situation": "Say \"you eat a croissant\" (informal)",
+      "cue": "you eat a croissant",
+      "answer": "tu manges un croissant",
+      "hint": "{tu manges + un croissant}",
+      "mistakes": [
+        {
+          "answer": "tu mange un croissant",
+          "feedback": "Add -s for tu: tu manges"
+        }
+      ]
+    },
+    {
+      "id": "i-il-mange-de-la",
+      "type": "respond",
+      "situation": "he eats meat",
+      "answer": "il mange de la viande",
+      "accept": [
+        "il mange la viande"
+      ],
+      "hint": "{il mange + de la viande}",
+      "mistakes": [
+        {
+          "answer": "il manges de la viande",
+          "feedback": "Don't add -s for il: il mange"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-mange-du-poisson",
+      "type": "respond",
+      "situation": "she eats fish",
+      "answer": "elle mange du poisson",
+      "accept": [
+        "elle mange le poisson"
+      ],
+      "hint": "{elle mange + du poisson}",
+      "mistakes": [
+        {
+          "answer": "elle manges du poisson",
+          "feedback": "Don't add -s for elle: elle mange"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-mangeons-ensemble",
+      "type": "respond",
+      "situation": "we eat together",
+      "answer": "nous mangeons ensemble",
+      "hint": "{nous mangeons + ensemble}",
+      "mistakes": [
+        {
+          "answer": "nous mangons ensemble",
+          "feedback": "Use '{mangeons}' for nous, not 'mangons'"
+        },
+        {
+          "answer": "nous mange ensemble",
+          "feedback": "Use '{mangeons}' for nous: nous mangeons"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-mangeons-des-legumes",
+      "type": "respond",
+      "situation": "we eat vegetables",
+      "answer": "nous mangeons des légumes",
+      "accept": [
+        "nous mangeons les légumes"
+      ],
+      "hint": "{nous mangeons + des légumes}",
+      "mistakes": [
+        {
+          "answer": "nous mangons des légumes",
+          "feedback": "Use '{mangeons}' for nous, not 'mangons'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-mangez-bien",
+      "type": "respond",
+      "situation": "Say \"you eat well\" (formal)",
+      "cue": "you eat well (formal)",
+      "answer": "vous mangez bien",
+      "hint": "{vous mangez + bien}",
+      "mistakes": [
+        {
+          "answer": "vous mange bien",
+          "feedback": "Use '{mangez}' for vous: vous mangez"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-mangez-une-salade",
+      "type": "respond",
+      "situation": "Say \"you eat a salad\" (formal)",
+      "cue": "you eat a salad (formal)",
+      "answer": "vous mangez une salade",
+      "hint": "{vous mangez + une salade}",
+      "mistakes": [
+        {
+          "answer": "vous mangeons une salade",
+          "feedback": "Use '{mangez}' for vous, not 'mangeons'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-mangent-du-poulet",
+      "type": "respond",
+      "situation": "they eat chicken",
+      "answer": "ils mangent du poulet",
+      "accept": [
+        "elles mangent du poulet",
+        "ils mangent le poulet"
+      ],
+      "hint": "{ils mangent + du poulet}",
+      "mistakes": [
+        {
+          "answer": "ils mange du poulet",
+          "feedback": "Add -nt for ils: ils mangent"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-mangent-des-frites",
+      "type": "respond",
+      "situation": "they eat fries",
+      "answer": "ils mangent des frites",
+      "accept": [
+        "elles mangent des frites",
+        "ils mangent les frites"
+      ],
+      "hint": "{ils mangent + des frites}",
+      "mistakes": [
+        {
+          "answer": "ils manges des frites",
+          "feedback": "Use '{mangent}' for ils, not 'manges'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-mange-pas",
+      "type": "respond",
+      "situation": "Say \"I do not eat meat\"",
+      "cue": "I don't eat meat",
+      "answer": "je ne mange pas de viande",
+      "hint": "je ne mange pas + de viande (use '{de}' after negation!)",
+      "mistakes": [
+        {
+          "answer": "je ne mange pas la viande",
+          "feedback": "After negation, use '{de}' not 'la': pas de viande"
+        },
+        {
+          "answer": "je mange ne pas de viande",
+          "feedback": "Put 'ne' before verb: je ne mange pas"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-manges-pas",
+      "type": "respond",
+      "situation": "Say \"you do not eat fish\" (informal)",
+      "cue": "you don't eat fish",
+      "answer": "tu ne manges pas de poisson",
+      "hint": "{tu ne manges pas + de poisson}",
+      "mistakes": [
+        {
+          "answer": "tu ne manges pas du poisson",
+          "feedback": "After negation, use '{de}' not 'du': pas de poisson"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ne-mangeons-pas",
+      "type": "respond",
+      "situation": "Say \"we do not eat pizza\"",
+      "cue": "we don't eat pizza",
+      "answer": "nous ne mangeons pas de pizza",
+      "hint": "{nous ne mangeons pas + de pizza}",
+      "mistakes": [
+        {
+          "answer": "nous ne mangons pas de pizza",
+          "feedback": "Use '{mangeons}' for nous, not 'mangons'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-manger",
+      "type": "respond",
+      "situation": "I like to eat",
+      "answer": "j'aime manger",
+      "accept": [
+        "j aime manger"
+      ],
+      "hint": "j'aime + manger (infinitive!)",
+      "mistakes": [
+        {
+          "answer": "j'aime mange",
+          "feedback": "Use infinitive '{manger}' after '{aimer}', not 'mange'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-manger",
+      "type": "respond",
+      "situation": "I want to eat",
+      "answer": "je veux manger",
+      "hint": "{je veux + manger}",
+      "mistakes": [
+        {
+          "answer": "je veux mange",
+          "feedback": "Use infinitive '{manger}' after 'veux', not 'mange'"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Say \"what do you eat?\" (informal)",
+      "cue": "what do you eat?",
+      "answer": "qu'est-ce que tu manges",
+      "accept": [
+        "qu est-ce que tu manges",
+        "quest-ce que tu manges"
+      ],
+      "hint": "{qu'est-ce que + tu manges?}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu mange",
+          "feedback": "Add -s for tu: tu manges"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-mange",
+      "type": "respond",
+      "situation": "Say \"I ate\" or \"I have eaten\"",
+      "cue": "I ate",
+      "answer": "j'ai mangé",
+      "accept": [
+        "j ai mangé",
+        "j'ai mange"
+      ],
+      "hint": "j'ai + mangé (past participle)",
+      "mistakes": [
+        {
+          "answer": "je mange",
+          "feedback": "That's present 'I eat' - use '{j'ai mangé}' for past"
+        },
+        {
+          "answer": "j'avais mangé",
+          "feedback": "That's pluperfect - use '{j'ai mangé}' for simple past"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-mange-du",
+      "type": "respond",
+      "situation": "I ate bread",
+      "answer": "j'ai mangé du pain",
+      "accept": [
+        "j ai mangé du pain",
+        "j'ai mange du pain"
+      ],
+      "hint": "{j'ai mangé + du pain}",
+      "mistakes": [
+        {
+          "answer": "je mange du pain",
+          "feedback": "That's present - use '{j'ai mangé}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-mange-une",
+      "type": "respond",
+      "situation": "Say \"you ate pizza\" (informal)",
+      "cue": "you ate pizza",
+      "answer": "tu as mangé une pizza",
+      "accept": [
+        "tu as mange une pizza"
+      ],
+      "hint": "{tu as + mangé + une pizza}",
+      "mistakes": [
+        {
+          "answer": "tu manges une pizza",
+          "feedback": "That's present - use '{tu as mangé}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-mange-du",
+      "type": "respond",
+      "situation": "he ate fish",
+      "answer": "il a mangé du poisson",
+      "accept": [
+        "il a mange du poisson"
+      ],
+      "hint": "{il a + mangé + du poisson}",
+      "mistakes": [
+        {
+          "answer": "il mange du poisson",
+          "feedback": "That's present - use '{il a mangé}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-mange-ensemble",
+      "type": "respond",
+      "situation": "we ate together",
+      "answer": "nous avons mangé ensemble",
+      "accept": [
+        "nous avons mange ensemble"
+      ],
+      "hint": "{nous avons + mangé + ensemble}",
+      "mistakes": [
+        {
+          "answer": "nous mangeons ensemble",
+          "feedback": "That's present - use '{nous avons mangé}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-avez-mange-bien",
+      "type": "respond",
+      "situation": "Say \"you ate well\" (formal)",
+      "cue": "you ate well (formal)",
+      "answer": "vous avez mangé bien",
+      "accept": [
+        "vous avez mange bien"
+      ],
+      "hint": "{vous avez + mangé + bien}",
+      "mistakes": [
+        {
+          "answer": "vous mangez bien",
+          "feedback": "That's present - use '{vous avez mangé}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-mange-du",
+      "type": "respond",
+      "situation": "they ate chicken",
+      "answer": "ils ont mangé du poulet",
+      "accept": [
+        "elles ont mangé du poulet",
+        "ils ont mange du poulet"
+      ],
+      "hint": "{ils ont + mangé + du poulet}",
+      "mistakes": [
+        {
+          "answer": "ils mangent du poulet",
+          "feedback": "That's present - use '{ils ont mangé}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas",
+      "type": "respond",
+      "situation": "Say \"I did not eat\"",
+      "cue": "I didn't eat",
+      "answer": "je n'ai pas mangé",
+      "accept": [
+        "je n ai pas mangé",
+        "je n'ai pas mange"
+      ],
+      "hint": "{je n'ai pas + mangé}",
+      "mistakes": [
+        {
+          "answer": "je ne mange pas",
+          "feedback": "That's present - use '{je n'ai pas mangé}' for past"
+        }
+      ]
+    }
+  ]
+}

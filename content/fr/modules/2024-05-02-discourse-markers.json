@@ -1,0 +1,303 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-02-discourse-markers",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Discourse Markers - Sound Like a Native",
+  "description": "Essential connectors for natural speech: donc (so), en fait (actually), bah (well), quoi (like/you know)",
+  "can_do": [
+    "Sound like a native speaker with donc, en fait, quoi",
+    "Connect ideas naturally in conversation",
+    "Add conversational flow markers that French people use constantly"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "donc-fr",
+      "fr": "donc",
+      "gloss": "so / therefore",
+      "note": "⭐ logical conclusion - very common!"
+    },
+    {
+      "word_id": "ainsi-fr",
+      "fr": "ainsi",
+      "gloss": "thus / in this way",
+      "note": "more formal than donc"
+    },
+    {
+      "word_id": "en-fait-fr",
+      "fr": "en fait",
+      "gloss": "in fact / actually",
+      "note": "⭐⭐ correction/clarification"
+    },
+    {
+      "word_id": "bah-fr",
+      "fr": "bah",
+      "gloss": "well...",
+      "note": "filler/hesitation - informal!"
+    },
+    {
+      "word_id": "bon-fr.discourse",
+      "fr": "bon",
+      "gloss": "well / so (discourse use)",
+      "note": "new use! (you know 'bon' as 'good')"
+    },
+    {
+      "word_id": "alors-fr",
+      "fr": "alors",
+      "gloss": "so / then",
+      "note": "you know this! now discourse use"
+    },
+    {
+      "word_id": "quoi-fr",
+      "fr": "quoi",
+      "gloss": "like / you know (filler at end)",
+      "note": "⭐⭐⭐ end-of-sentence emphasis"
+    },
+    {
+      "word_id": "presque-fr",
+      "fr": "presque",
+      "gloss": "almost",
+      "note": "nearly, not quite"
+    },
+    {
+      "word_id": "peut-etre-fr",
+      "fr": "peut-être",
+      "gloss": "maybe",
+      "note": "perhaps, possibly"
+    },
+    {
+      "word_id": "certainement-fr",
+      "fr": "certainement",
+      "gloss": "definitely",
+      "note": "certainly, for sure"
+    },
+    {
+      "word_id": "seulement-fr",
+      "fr": "seulement",
+      "gloss": "only",
+      "note": "just, merely"
+    },
+    {
+      "word_id": "probablement-fr",
+      "fr": "probablement",
+      "gloss": "probably",
+      "note": "likely, most likely"
+    },
+    {
+      "word_id": "surement-fr",
+      "fr": "sûrement",
+      "gloss": "surely",
+      "note": "certainly, definitely"
+    },
+    {
+      "word_id": "bien-sur-fr",
+      "fr": "bien sûr",
+      "gloss": "of course",
+      "note": "naturally, obviously"
+    },
+    {
+      "word_id": "je-pense-donc-je-suis-fr",
+      "fr": "Je pense, donc je suis",
+      "gloss": "I think, therefore I am",
+      "note": "famous Descartes quote!"
+    },
+    {
+      "word_id": "donc-tu-comprends-fr",
+      "fr": "Donc, tu comprends?",
+      "gloss": "So, do you understand?",
+      "note": "donc at beginning = conclusion"
+    },
+    {
+      "word_id": "en-fait-je-ne-sais-pas-fr",
+      "fr": "En fait, je ne sais pas",
+      "gloss": "Actually, I don't know",
+      "note": "en fait = clarification"
+    },
+    {
+      "word_id": "bah-c-est-comme-ca-fr",
+      "fr": "Bah, c'est comme ça",
+      "gloss": "Well, that's how it is",
+      "note": "bah = informal hesitation"
+    },
+    {
+      "word_id": "c-est-bon-quoi-fr",
+      "fr": "C'est bon, quoi",
+      "gloss": "It's good, you know",
+      "note": "quoi at end = emphasis"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-what-are-discourse-markers",
+      "term": "What are discourse markers?",
+      "definition": "Words that organize speech, show transitions, add emphasis, or fill pauses - natives use them CONSTANTLY!",
+      "example": "Without: '{Je ne comprends pas. Je veux apprendre.}' With: '{Bon, je ne comprends pas, donc je veux apprendre, quoi.}' ← Native!"
+    },
+    {
+      "id": "c-donc-so-therefore",
+      "term": "{donc} = so / therefore",
+      "definition": "Shows logical conclusion - very common! Connects cause and effect",
+      "example": "{Je pense}, {donc je suis} (I think, therefore I am - Descartes!), {Donc}, {tu comprends?} (So, do you understand?)"
+    },
+    {
+      "id": "c-en-fait-in-fact",
+      "term": "{en fait} = in fact / actually",
+      "definition": "Corrects or clarifies something - super common in conversation",
+      "example": "{En fait, je ne sais pas} (Actually, I don't know), {En fait, c'est comme ça} (In fact, that's how it is)"
+    },
+    {
+      "id": "c-bah-well",
+      "term": "{bah} = well...",
+      "definition": "Filler word - shows hesitation or introduces explanation (informal!)",
+      "example": "{Bah, c'est comme ça} (Well, that's how it is), {Bah}, {je sais pas} (Well, I don't know)"
+    },
+    {
+      "id": "c-quoi-like-you-know",
+      "term": "{quoi} = like / you know (at end)",
+      "definition": "End-of-sentence filler - VERY French! Emphasizes or seeks agreement",
+      "example": "{C'est bon}, {quoi} (It's good, you know), {Je pense ça}, quoi (I think that, like)"
+    },
+    {
+      "id": "c-more-discourse-markers",
+      "term": "More discourse markers",
+      "definition": "bon (well, so), alors (so, then), ainsi (thus - formal)",
+      "example": "{Bon}, {on commence?} (Well, shall we start?), {Alors}, {tu viens?} (So, are you coming?)"
+    }
+  ],
+  "items": [
+    {
+      "id": "discourse-markers-1",
+      "type": "respond",
+      "situation": "Say 'So, do you understand?' (using donc)",
+      "cue": "So, do you understand? (informal)",
+      "answer": "donc, tu comprends",
+      "hint": "donc + comma + tu comprends?",
+      "mistakes": [
+        {
+          "answer": "tu comprends donc",
+          "feedback": "Put 'donc' at the beginning for 'so' - 'donc, tu comprends?'"
+        }
+      ]
+    },
+    {
+      "id": "discourse-markers-2",
+      "type": "respond",
+      "situation": "Actually, I don't know",
+      "answer": "en fait, je ne sais pas",
+      "hint": "en fait + comma + je ne sais pas"
+    },
+    {
+      "id": "discourse-markers-3",
+      "type": "respond",
+      "situation": "Say 'Well, that's how it is' (informal, using bah)",
+      "cue": "Well, that's how it is",
+      "answer": "bah, c'est comme ça",
+      "hint": "bah + comma + c'est comme ça"
+    },
+    {
+      "id": "discourse-markers-4",
+      "type": "respond",
+      "situation": "Say 'I think, therefore I am' (Descartes)",
+      "cue": "I think, therefore I am",
+      "answer": "je pense, donc je suis",
+      "hint": "je pense + comma + donc + je suis"
+    },
+    {
+      "id": "discourse-markers-5",
+      "type": "respond",
+      "situation": "Say 'I believe that, like' (adding quoi at end)",
+      "cue": "I believe that, you know (with quoi)",
+      "answer": "je crois ça, quoi",
+      "hint": "je crois ça + comma + quoi"
+    },
+    {
+      "id": "discourse-markers-6",
+      "type": "respond",
+      "situation": "Say 'Well, shall we start?' (using bon)",
+      "cue": "Well, shall we start?",
+      "answer": "bon, on commence",
+      "hint": "bon + comma + on commence?"
+    },
+    {
+      "id": "discourse-markers-7",
+      "type": "respond",
+      "situation": "almost",
+      "answer": "presque",
+      "hint": "Nearly, not quite"
+    },
+    {
+      "id": "discourse-markers-8",
+      "type": "respond",
+      "situation": "maybe",
+      "answer": "peut-être",
+      "hint": "Perhaps, possibly - with hyphen",
+      "mistakes": [
+        {
+          "answer": "peut être",
+          "feedback": "Use hyphen: peut-être"
+        }
+      ]
+    },
+    {
+      "id": "discourse-markers-9",
+      "type": "respond",
+      "situation": "definitely",
+      "answer": "certainement",
+      "hint": "Certainly, for sure",
+      "mistakes": [
+        {
+          "answer": "sûrement",
+          "feedback": "Both work, but use '{certainement}' for this exercise"
+        }
+      ]
+    },
+    {
+      "id": "discourse-markers-10",
+      "type": "respond",
+      "situation": "only",
+      "answer": "seulement",
+      "hint": "Just, merely",
+      "mistakes": [
+        {
+          "answer": "juste",
+          "feedback": "Both work, but use '{seulement}' for this exercise"
+        }
+      ]
+    },
+    {
+      "id": "discourse-markers-11",
+      "type": "respond",
+      "situation": "probably",
+      "answer": "probablement",
+      "hint": "Likely, most likely"
+    },
+    {
+      "id": "discourse-markers-12",
+      "type": "respond",
+      "situation": "surely",
+      "answer": "sûrement",
+      "hint": "Certainly, definitely"
+    },
+    {
+      "id": "discourse-markers-13",
+      "type": "respond",
+      "situation": "of course",
+      "answer": "bien sûr",
+      "hint": "{bien + sûr}"
+    },
+    {
+      "id": "discourse-markers-17",
+      "type": "respond",
+      "situation": "I am almost ready",
+      "answer": "je suis presque prêt",
+      "hint": "{je suis + presque + prêt}"
+    },
+    {
+      "id": "discourse-markers-18",
+      "type": "respond",
+      "situation": "Maybe he understands",
+      "answer": "peut-être il comprend",
+      "hint": "{peut-être + il comprend}"
+    }
+  ]
+}

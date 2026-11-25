@@ -1,0 +1,381 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-16-pouvoir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {pouvoir} (can)",
+  "description": "Express what you can do! Master abilities through active recall and composition practice!",
+  "can_do": [
+    "Express ability and possibility (I can, you can, they can)",
+    "Ask for permission politely in French",
+    "Combine with vouloir to say 'I can want' or 'Can you have?'"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "pouvoir-fr",
+      "fr": "pouvoir",
+      "gloss": "to be able to / can",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-peux-fr",
+      "fr": "je peux",
+      "gloss": "I can",
+      "note": "irregular form"
+    },
+    {
+      "word_id": "tu-peux-fr",
+      "fr": "tu peux",
+      "gloss": "you can (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-peut-fr",
+      "fr": "il peut",
+      "gloss": "he can",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-peut-fr",
+      "fr": "elle peut",
+      "gloss": "she can",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-pouvons-fr",
+      "fr": "nous pouvons",
+      "gloss": "we can",
+      "note": "regular ending"
+    },
+    {
+      "word_id": "vous-pouvez-fr",
+      "fr": "vous pouvez",
+      "gloss": "you can (formal)",
+      "note": "formal/plural"
+    },
+    {
+      "word_id": "ils-peuvent-fr",
+      "fr": "ils peuvent",
+      "gloss": "they can (masc)",
+      "note": "irregular"
+    },
+    {
+      "word_id": "elles-peuvent-fr",
+      "fr": "elles peuvent",
+      "gloss": "they can (fem)",
+      "note": "same as ils"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-pouvoir-can-to-be",
+      "term": "{pouvoir} = can/to be able",
+      "definition": "Essential irregular verb for expressing ability, possibility, and permission! One of the most useful verbs in French.",
+      "example": "'I can have that' ({Je peux avoir ça}), 'Can you be a friend?' ({Peux-tu être un ami?}), 'We can want a house' ({Nous pouvons vouloir une maison})"
+    },
+    {
+      "id": "c-irregular-conjugation-pattern",
+      "term": "Irregular Conjugation Pattern",
+      "definition": "Notice the pattern: je/tu both use '{peux}', then il/elle use '{peut}', nous uses '{pouvons}', and ils/elles use '{peuvent}'!",
+      "example": "{je peux}, {tu peux}, {il peut}, {nous pouvons}, {vous pouvez}, {ils peuvent}"
+    },
+    {
+      "id": "c-composition-power",
+      "term": "Composition Power",
+      "definition": "Combine pouvoir with previous modules for infinite expressions. Use with être, avoir, vouloir, and nouns you've learned!",
+      "example": "{je peux + avoir + ça, nous pouvons + être, ils peuvent + vouloir + un livre}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-peux",
+      "type": "respond",
+      "situation": "Say what you can do",
+      "cue": "I can",
+      "answer": "je peux",
+      "hint": "Conjugate '{pouvoir}' in the present for '{je}'.",
+      "mistakes": [
+        {
+          "answer": "je peut",
+          "feedback": "Je takes '{peux}', not 'peut'. Remember: je peux, il peut"
+        },
+        {
+          "answer": "tu peux",
+          "feedback": "That's 'you can', not 'I can'. Focus on the pronoun!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-peux",
+      "type": "respond",
+      "situation": "Say what you can do",
+      "cue": "you can (informal)",
+      "answer": "tu peux",
+      "hint": "Conjugate '{pouvoir}' in the present for '{tu}'.",
+      "mistakes": [
+        {
+          "answer": "tu peut",
+          "feedback": "Tu takes '{peux}', not 'peut'. Pattern: je peux, tu peux"
+        }
+      ]
+    },
+    {
+      "id": "i-il-peut",
+      "type": "respond",
+      "situation": "Say what he can do",
+      "cue": "he can",
+      "answer": "il peut",
+      "hint": "Conjugate '{pouvoir}' in the present for '{il}'.",
+      "mistakes": [
+        {
+          "answer": "il peux",
+          "feedback": "Il takes '{peut}', not 'peux'. Remember: il peut, elle peut"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-peut",
+      "type": "respond",
+      "situation": "Say what she can do",
+      "cue": "she can",
+      "answer": "elle peut",
+      "hint": "Conjugate '{pouvoir}' in the present for '{elle}'.",
+      "mistakes": [
+        {
+          "answer": "elle peux",
+          "feedback": "Elle takes '{peut}', not 'peux'. Same as il peut"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-pouvons",
+      "type": "respond",
+      "situation": "Say what we can do",
+      "cue": "we can",
+      "answer": "nous pouvons",
+      "hint": "Conjugate '{pouvoir}' in the present for '{nous}' (regular -ons ending).",
+      "mistakes": [
+        {
+          "answer": "nous peux",
+          "feedback": "Nous takes '{pouvons}', not 'peux'. Completely different!"
+        },
+        {
+          "answer": "nous peut",
+          "feedback": "Nous takes '{pouvons}', not 'peut'. Regular -ons pattern!"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-pouvez",
+      "type": "respond",
+      "situation": "Say what you can do (formal)",
+      "cue": "you can (formal)",
+      "answer": "vous pouvez",
+      "hint": "Conjugate '{pouvoir}' in the present for '{vous}' (regular -ez ending).",
+      "mistakes": [
+        {
+          "answer": "vous peux",
+          "feedback": "Vous takes '{pouvez}', not 'peux'. Regular -ez pattern!"
+        },
+        {
+          "answer": "vous peut",
+          "feedback": "Vous takes '{pouvez}', not 'peut'. Remember: vous pouvez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-peuvent",
+      "type": "respond",
+      "situation": "Say what they can do (masculine)",
+      "cue": "they can (masculine)",
+      "answer": "ils peuvent",
+      "hint": "Conjugate '{pouvoir}' in the present for '{ils}'.",
+      "mistakes": [
+        {
+          "answer": "ils peux",
+          "feedback": "Ils takes '{peuvent}', not 'peux'. Irregular ending!"
+        },
+        {
+          "answer": "ils peut",
+          "feedback": "Ils takes '{peuvent}', not 'peut'. Plural form!"
+        }
+      ]
+    },
+    {
+      "id": "i-elles-peuvent",
+      "type": "respond",
+      "situation": "Say what they can do (feminine)",
+      "cue": "they can (feminine)",
+      "answer": "elles peuvent",
+      "hint": "Conjugate '{pouvoir}' in the present for '{elles}'.",
+      "mistakes": [
+        {
+          "answer": "elles peux",
+          "feedback": "Elles takes '{peuvent}', not 'peux'. Same as ils peuvent"
+        },
+        {
+          "answer": "elles peut",
+          "feedback": "Elles takes '{peuvent}', not 'peut'. Plural form!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-avoir-ca",
+      "type": "respond",
+      "situation": "Say that you can have that",
+      "cue": "I can have that",
+      "answer": "je peux avoir ça",
+      "hint": "Start with 'I can' in French, then add infinitive '{avoir}' + 'that'.",
+      "mistakes": [
+        {
+          "answer": "je peut avoir ça",
+          "feedback": "Je takes '{peux}', not 'peut'. Remember: je peux, il peut"
+        },
+        {
+          "answer": "j'ai ça",
+          "feedback": "This needs pouvoir! Try: je peux avoir ça"
+        }
+      ]
+    },
+    {
+      "id": "i-il-peut-avoir-un",
+      "type": "respond",
+      "situation": "Say what he can have",
+      "cue": "He can have a book",
+      "answer": "il peut avoir un livre",
+      "hint": "Start with 'he can' in French, then add infinitive '{avoir}' + 'a book'.",
+      "mistakes": [
+        {
+          "answer": "il peux avoir un livre",
+          "feedback": "Il takes '{peut}', not 'peux'. Remember: il peut, elle peut"
+        },
+        {
+          "answer": "il a un livre",
+          "feedback": "This needs pouvoir! Try: il peut avoir un livre"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-pouvons-avoir-une",
+      "type": "respond",
+      "situation": "Say what we can have",
+      "cue": "We can have a house",
+      "answer": "nous pouvons avoir une maison",
+      "hint": "Start with 'we can' in French, then add infinitive '{avoir}' + 'a house'.",
+      "mistakes": [
+        {
+          "answer": "nous peux avoir une maison",
+          "feedback": "Nous takes '{pouvons}', not 'peux'. Completely different!"
+        },
+        {
+          "answer": "nous avons une maison",
+          "feedback": "This needs pouvoir! Try: nous pouvons avoir une maison"
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-etre-un",
+      "type": "respond",
+      "situation": "Say what you can be",
+      "cue": "I can be a friend",
+      "answer": "je peux être un ami",
+      "accept": [
+        "je peux être une amie"
+      ],
+      "hint": "Use '{pouvoir}' in the present for '{je}' + infinitive '{être}' + 'a friend'.",
+      "mistakes": [
+        {
+          "answer": "je suis un ami",
+          "feedback": "This needs pouvoir! Try: je peux être un ami"
+        },
+        {
+          "answer": "je peux suis un ami",
+          "feedback": "When you use two verbs together, the second one stays in the infinitive. Here: je peux être un ami."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-peut-etre-artiste",
+      "type": "respond",
+      "situation": "Say what she can be",
+      "cue": "She can be an artist",
+      "answer": "elle peut être artiste",
+      "accept": [
+        "elle peut être une artiste"
+      ],
+      "hint": "Use '{pouvoir}' in the present for '{elle}' + infinitive '{être}' + a profession.",
+      "mistakes": [
+        {
+          "answer": "elle est artiste",
+          "feedback": "The English says 'can be', so you need '{pouvoir}' + infinitive: elle peut être artiste."
+        },
+        {
+          "answer": "elle peut être un artiste",
+          "feedback": "In French you usually drop the article with professions, and for 'she' you’d say '{une artiste}' if you use an article at all."
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-vouloir-ca",
+      "type": "respond",
+      "situation": "Say what you can want",
+      "cue": "I can want that",
+      "answer": "je peux vouloir ça",
+      "hint": "Use '{pouvoir}' in the present for '{je}' + infinitive '{vouloir}' + 'that'.",
+      "mistakes": [
+        {
+          "answer": "je veux ça",
+          "feedback": "This needs pouvoir! Try: je peux vouloir ça"
+        },
+        {
+          "answer": "je peux veux ça",
+          "feedback": "When you chain two verbs, the second verb should be in the infinitive. Here: je peux vouloir ça."
+        }
+      ]
+    },
+    {
+      "id": "i-ils-peuvent-vouloir-un",
+      "type": "respond",
+      "situation": "Say what they can want",
+      "cue": "They can want a cat",
+      "answer": "ils peuvent vouloir un chat",
+      "accept": [
+        "elles peuvent vouloir un chat"
+      ],
+      "hint": "Use '{pouvoir}' in the present for '{ils}' + infinitive '{vouloir}' + 'a cat'.",
+      "mistakes": [
+        {
+          "answer": "ils veulent un chat",
+          "feedback": "This needs pouvoir! Try: ils peuvent vouloir un chat"
+        },
+        {
+          "answer": "ils peux vouloir un chat",
+          "feedback": "Ils takes '{peuvent}', not 'peux'. Remember: ils peuvent, elles peuvent."
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-avoir-ca-2",
+      "type": "respond",
+      "situation": "Make a polite request",
+      "cue": "I can have this, please",
+      "answer": "je peux avoir ça, s'il vous plaît",
+      "accept": [
+        "je peux avoir ceci, s'il vous plaît",
+        "je peux avoir ça s'il te plaît",
+        "je peux avoir ceci s'il te plait"
+      ],
+      "hint": "Use '{pouvoir}' for 'I can have this' and add 'please' (s'il vous plaît).",
+      "mistakes": [
+        {
+          "answer": "je peut avoir ça, s'il vous plaît",
+          "feedback": "Je takes '{peux}', not 'peut'. Remember: je peux, il peut."
+        },
+        {
+          "answer": "j'ai ça, s'il vous plaît",
+          "feedback": "This needs pouvoir for politeness! Try: je peux avoir ça, s'il vous plaît"
+        }
+      ]
+    }
+  ]
+}

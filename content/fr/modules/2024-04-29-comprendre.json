@@ -1,0 +1,287 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-29-comprendre",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{comprendre} - To Understand",
+  "description": "Express understanding: je comprends (I understand), tu comprends? (do you understand?), je ne comprends pas (I don't understand)",
+  "can_do": [
+    "Express understanding (I understand, do you understand?)",
+    "Say 'I don't understand' when confused",
+    "Use comprendre with que to show comprehension of ideas"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "comprendre-fr",
+      "fr": "comprendre",
+      "gloss": "to understand",
+      "note": "infinitive - follows prendre pattern"
+    },
+    {
+      "word_id": "je-comprends-fr",
+      "fr": "je comprends",
+      "gloss": "I understand",
+      "note": "same as je prends pattern"
+    },
+    {
+      "word_id": "tu-comprends-fr",
+      "fr": "tu comprends",
+      "gloss": "you understand (informal)",
+      "note": "most common in questions; essential question for learning"
+    },
+    {
+      "word_id": "il-elle-comprend-fr",
+      "fr": "il/elle comprend",
+      "gloss": "he/she understands",
+      "note": "no final -s or -t"
+    },
+    {
+      "word_id": "nous-comprenons-fr",
+      "fr": "nous comprenons",
+      "gloss": "we understand",
+      "note": "pronounced 'kom-pruh-non'"
+    },
+    {
+      "word_id": "vous-comprenez-fr",
+      "fr": "vous comprenez",
+      "gloss": "you understand (formal/plural)",
+      "note": "polite form for strangers"
+    },
+    {
+      "word_id": "ils-elles-comprennent-fr",
+      "fr": "ils/elles comprennent",
+      "gloss": "they understand",
+      "note": "double n, silent -ent"
+    },
+    {
+      "word_id": "je-ne-comprends-pas-fr",
+      "fr": "Je ne comprends pas",
+      "gloss": "I don't understand",
+      "note": "⭐ MOST IMPORTANT PHRASE!"
+    },
+    {
+      "word_id": "je-comprends-bien-fr",
+      "fr": "je comprends bien",
+      "gloss": "I understand well",
+      "note": "adverb after verb"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-comprendre-to-understand",
+      "term": "{comprendre} = to understand",
+      "definition": "Essential learning verb - follows same pattern as prendre (which you already know!)",
+      "example": "{je comprends le français} (I understand French), {tu comprends?} (do you understand?)"
+    },
+    {
+      "id": "c-same-pattern-as-prendre",
+      "term": "Same pattern as prendre",
+      "definition": "If you know prendre, you know comprendre! Just add com- prefix",
+      "example": "{je prends} → {je comprends}, {tu prends} → {tu comprends}, {ils prennent} → {ils comprennent}"
+    },
+    {
+      "id": "c-most-common-use-je",
+      "term": "Most common use: '{Je ne comprends pas}'",
+      "definition": "THE essential phrase for learning - I don't understand",
+      "example": "{Je ne comprends pas} (I don't understand), {Tu comprends?} (Do you understand?)"
+    },
+    {
+      "id": "c-comprendre-noun",
+      "term": "comprendre + noun",
+      "definition": "You can understand things, people, languages, concepts",
+      "example": "{je comprends le français} (I understand French), {je comprends Marie} (I understand Marie)"
+    },
+    {
+      "id": "c-building-on-prendre-knowledge",
+      "term": "Building on prendre knowledge",
+      "definition": "Three verbs in prendre family: prendre (take), apprendre (learn), comprendre (understand)",
+      "example": "{j'apprends} → {je comprends} (I learn → I understand) - natural progression!"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-comprendre",
+      "title": "{comprendre}",
+      "rows": [
+        {
+          "fr": "je comprends",
+          "en": "I understand"
+        },
+        {
+          "fr": "tu comprends",
+          "en": "you understand (informal)"
+        },
+        {
+          "fr": "il comprend",
+          "en": "he understands"
+        },
+        {
+          "fr": "elle comprend",
+          "en": "she understands"
+        },
+        {
+          "fr": "nous comprenons",
+          "en": "we understand"
+        },
+        {
+          "fr": "vous comprenez",
+          "en": "you understand (formal/plural)"
+        },
+        {
+          "fr": "ils comprennent",
+          "en": "they understand (masculine)"
+        },
+        {
+          "fr": "elles comprennent",
+          "en": "they understand (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-comprends",
+      "type": "transform",
+      "instruction": "You don't understand something. Say \"I understand\"",
+      "shown": "comprendre",
+      "answer": "je comprends",
+      "hint": "{je + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"I understand\""
+        },
+        {
+          "answer": "il comprend",
+          "feedback": "That's \"he understands\", not \"I understand\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-comprends",
+      "type": "transform",
+      "instruction": "Ask if someone understands. Say \"you understand (informal)\"",
+      "shown": "comprendre",
+      "answer": "tu comprends",
+      "hint": "{tu + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"you understand (informal)\""
+        },
+        {
+          "answer": "il comprend",
+          "feedback": "That's \"he understands\", not \"you understand (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-comprend",
+      "type": "transform",
+      "instruction": "He understands the lesson. Say \"he understands\"",
+      "shown": "comprendre",
+      "answer": "il comprend",
+      "hint": "{il + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"he understands\""
+        },
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"he understands\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-comprend",
+      "type": "transform",
+      "instruction": "She understands French. Say \"she understands\"",
+      "shown": "comprendre",
+      "answer": "elle comprend",
+      "hint": "{elle + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"she understands\""
+        },
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"she understands\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-comprenons",
+      "type": "transform",
+      "instruction": "We understand the concept. Say \"we understand\"",
+      "shown": "comprendre",
+      "answer": "nous comprenons",
+      "hint": "{nous + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"we understand\""
+        },
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"we understand\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-comprenez",
+      "type": "transform",
+      "instruction": "Ask formally if they understand. Say \"you understand (formal/plural)\"",
+      "shown": "comprendre",
+      "answer": "vous comprenez",
+      "hint": "{vous + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"you understand (formal/plural)\""
+        },
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"you understand (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-comprennent",
+      "type": "transform",
+      "instruction": "They understand the question. Say \"they understand (masculine)\"",
+      "shown": "comprendre",
+      "answer": "ils comprennent",
+      "hint": "{ils + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"they understand (masculine)\""
+        },
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"they understand (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-comprennent",
+      "type": "transform",
+      "instruction": "They (feminine) understand everything. Say \"they understand (feminine)\"",
+      "shown": "comprendre",
+      "answer": "elles comprennent",
+      "hint": "{elles + comprendre = ?}",
+      "mistakes": [
+        {
+          "answer": "je comprends",
+          "feedback": "That's \"I understand\", not \"they understand (feminine)\""
+        },
+        {
+          "answer": "tu comprends",
+          "feedback": "That's \"you understand (informal)\", not \"they understand (feminine)\""
+        }
+      ]
+    }
+  ]
+}

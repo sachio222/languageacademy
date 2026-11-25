@@ -1,0 +1,126 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-12-commands-pronouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Commands with Pronouns",
+  "description": "Give commands with objects: Donne-le-moi! (Give it to me!), Regarde-moi! (Look at me!), Ne le fais pas! (Don't do it!)",
+  "can_do": [
+    "Give commands with object pronouns (Give it to me!)",
+    "Use pronouns with affirmative and negative commands",
+    "Form complex commands like 'Don't do it!' or 'Look at me!'"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "donne-le-moi-fr",
+      "fr": "Donne-le-moi!",
+      "gloss": "Give it to me!",
+      "note": "⭐ command + object + indirect"
+    },
+    {
+      "word_id": "regarde-moi-fr",
+      "fr": "Regarde-moi!",
+      "gloss": "Look at me!",
+      "note": "command + moi"
+    },
+    {
+      "word_id": "ecoute-le-fr",
+      "fr": "Écoute-le!",
+      "gloss": "Listen to him!",
+      "note": "command + object"
+    },
+    {
+      "word_id": "ne-le-fais-pas-fr",
+      "fr": "Ne le fais pas!",
+      "gloss": "Don't do it!",
+      "note": "⭐ negative command"
+    },
+    {
+      "word_id": "ne-me-regarde-pas-fr",
+      "fr": "Ne me regarde pas!",
+      "gloss": "Don't look at me!",
+      "note": "negative with me"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-affirmative-commands-attach-with",
+      "term": "Affirmative Commands: Attach with Hyphens",
+      "definition": "In positive commands, pronouns attach to the verb with hyphens",
+      "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!)"
+    },
+    {
+      "id": "c-negative-commands-separate-with",
+      "term": "Negative Commands: Separate with ne...pas",
+      "definition": "In negative commands, pronouns go BEFORE the verb (normal position)",
+      "example": "{Ne le fais pas!} (Don't do it!), {Ne me regarde pas!} (Don't look at me!)"
+    },
+    {
+      "id": "c-pronoun-order-in-commands",
+      "term": "Pronoun Order in Commands",
+      "definition": "Object pronouns: le/la/les come first, then moi/toi",
+      "example": "{Donne-le-moi!} (Give it to me! - le before moi), {Montre-la-moi!} (Show it to me!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "cmd-pron-1",
+      "type": "respond",
+      "situation": "Command: 'Give it!' (informal - it = masculine)",
+      "cue": "Give it! (le)",
+      "answer": "donne-le",
+      "accept": [
+        "donne le"
+      ],
+      "hint": "Donne + le with hyphen"
+    },
+    {
+      "id": "cmd-pron-2",
+      "type": "respond",
+      "situation": "Command: 'Look at me!' (informal)",
+      "cue": "Look at me!",
+      "answer": "regarde-moi",
+      "accept": [
+        "regarde moi"
+      ],
+      "hint": "Regarde + moi with hyphen"
+    },
+    {
+      "id": "cmd-pron-3",
+      "type": "respond",
+      "situation": "Command: 'Listen to him!' (informal)",
+      "cue": "Listen to him!",
+      "answer": "écoute-le",
+      "accept": [
+        "ecoute-le",
+        "ecoute le"
+      ],
+      "hint": "Écoute + le with hyphen"
+    },
+    {
+      "id": "cmd-pron-4",
+      "type": "respond",
+      "situation": "Negative command: 'Don't do it!' (informal)",
+      "cue": "Don't do it!",
+      "answer": "ne le fais pas",
+      "hint": "Ne + le + fais + pas (pronoun BEFORE verb in negative)",
+      "mistakes": [
+        {
+          "answer": "ne fais pas le",
+          "feedback": "In negative commands, pronoun goes BEFORE: Ne le fais pas!"
+        }
+      ]
+    },
+    {
+      "id": "cmd-pron-5",
+      "type": "respond",
+      "situation": "Command: 'Give it to me!' (informal, it = le)",
+      "cue": "Give it to me!",
+      "answer": "donne-le-moi",
+      "accept": [
+        "donne le moi"
+      ],
+      "hint": "Donne-le-moi! (verb-object-recipient)"
+    }
+  ]
+}

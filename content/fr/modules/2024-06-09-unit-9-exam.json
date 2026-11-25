@@ -1,0 +1,302 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-09-unit-9-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Causal words, spatial prepositions, passé composé, imparfait, and the critical PC vs IMP distinction for complete storytelling mastery.",
+  "can_do": [
+    "Tell complete stories in the past tense",
+    "Distinguish between passé composé and imparfait",
+    "Use discourse markers for natural storytelling"
+  ],
+  "items": [
+    {
+      "id": "i-parce-que",
+      "type": "respond",
+      "situation": "because (most common)",
+      "answer": "parce que",
+      "hint": "Used to explain reasons - que follows"
+    },
+    {
+      "id": "i-a-cause-de",
+      "type": "respond",
+      "situation": "because of (negative reason)",
+      "answer": "à cause de",
+      "hint": "Used with nouns - negative connotation"
+    },
+    {
+      "id": "i-grace-a",
+      "type": "respond",
+      "situation": "thanks to (positive reason)",
+      "answer": "grâce à",
+      "hint": "Used with nouns - positive connotation"
+    },
+    {
+      "id": "i-comme",
+      "type": "respond",
+      "situation": "since / as (formal reason)",
+      "answer": "comme",
+      "hint": "More formal than parce que"
+    },
+    {
+      "id": "i-car",
+      "type": "respond",
+      "situation": "for / because (literary)",
+      "answer": "car",
+      "hint": "Literary/formal style - sounds like English 'car'"
+    },
+    {
+      "id": "i-puisque",
+      "type": "respond",
+      "situation": "since (established fact)",
+      "answer": "puisque",
+      "hint": "Since something is already established"
+    },
+    {
+      "id": "i-devant",
+      "type": "respond",
+      "situation": "in front of",
+      "answer": "devant",
+      "hint": "Opposite of derrière"
+    },
+    {
+      "id": "i-derriere",
+      "type": "respond",
+      "situation": "behind",
+      "answer": "derrière",
+      "hint": "Opposite of devant"
+    },
+    {
+      "id": "i-entre",
+      "type": "respond",
+      "situation": "between",
+      "answer": "entre",
+      "hint": "Among two things"
+    },
+    {
+      "id": "i-au-dessus-de",
+      "type": "respond",
+      "situation": "above / over",
+      "answer": "au-dessus de",
+      "hint": "Compound preposition with dessus"
+    },
+    {
+      "id": "i-au-dessous-de",
+      "type": "respond",
+      "situation": "below / under",
+      "answer": "au-dessous de",
+      "hint": "Compound preposition with dessous"
+    },
+    {
+      "id": "i-pres-de",
+      "type": "respond",
+      "situation": "near / close to",
+      "answer": "près de",
+      "hint": "Proximity - compound with de"
+    },
+    {
+      "id": "i-loin-de",
+      "type": "respond",
+      "situation": "far from",
+      "answer": "loin de",
+      "hint": "Distance - opposite of près de"
+    },
+    {
+      "id": "i-a-cote-de",
+      "type": "respond",
+      "situation": "next to / beside",
+      "answer": "à côté de",
+      "hint": "Right next to - compound with côté"
+    },
+    {
+      "id": "i-j-ai-parle",
+      "type": "respond",
+      "situation": "I spoke",
+      "answer": "j'ai parlé",
+      "hint": "passé composé of parler"
+    },
+    {
+      "id": "i-tu-as-mange",
+      "type": "respond",
+      "situation": "you ate (informal)",
+      "answer": "tu as mangé",
+      "hint": "passé composé of manger"
+    },
+    {
+      "id": "i-nous-avons-ecoute",
+      "type": "respond",
+      "situation": "we listened",
+      "answer": "nous avons écouté",
+      "hint": "passé composé of écouter"
+    },
+    {
+      "id": "i-ils-ont-travaille",
+      "type": "respond",
+      "situation": "they worked (masculine)",
+      "answer": "ils ont travaillé",
+      "hint": "passé composé of travailler"
+    },
+    {
+      "id": "i-j-ai-eu",
+      "type": "respond",
+      "situation": "I had",
+      "answer": "j'ai eu",
+      "hint": "passé composé of avoir - irregular participle"
+    },
+    {
+      "id": "i-elle-a-ete",
+      "type": "respond",
+      "situation": "she was",
+      "answer": "elle a été",
+      "hint": "passé composé of être - irregular participle"
+    },
+    {
+      "id": "i-nous-avons-fait",
+      "type": "respond",
+      "situation": "we did/made",
+      "answer": "nous avons fait",
+      "hint": "passé composé of faire - irregular participle"
+    },
+    {
+      "id": "i-vous-avez-vu",
+      "type": "respond",
+      "situation": "you saw (formal)",
+      "answer": "vous avez vu",
+      "hint": "passé composé of voir - irregular participle"
+    },
+    {
+      "id": "i-il-a-dit",
+      "type": "respond",
+      "situation": "he said",
+      "answer": "il a dit",
+      "hint": "passé composé of dire - irregular participle"
+    },
+    {
+      "id": "i-j-ai-pris",
+      "type": "respond",
+      "situation": "I took",
+      "answer": "j'ai pris",
+      "hint": "passé composé of prendre - irregular participle"
+    },
+    {
+      "id": "i-elle-est-allee",
+      "type": "respond",
+      "situation": "she went",
+      "answer": "elle est allée",
+      "hint": "passé composé of aller - feminine agreement"
+    },
+    {
+      "id": "i-ils-sont-venus",
+      "type": "respond",
+      "situation": "they came (masculine)",
+      "answer": "ils sont venus",
+      "hint": "passé composé of venir - masculine plural"
+    },
+    {
+      "id": "i-je-suis-parti",
+      "type": "respond",
+      "situation": "I left (masculine speaker)",
+      "answer": "je suis parti",
+      "hint": "passé composé of partir"
+    },
+    {
+      "id": "i-nous-sommes-arrives",
+      "type": "respond",
+      "situation": "we arrived (mixed group)",
+      "answer": "nous sommes arrivés",
+      "hint": "passé composé of arriver - mixed group = masculine"
+    },
+    {
+      "id": "i-tu-es-restee",
+      "type": "respond",
+      "situation": "you stayed (feminine, informal)",
+      "answer": "tu es restée",
+      "hint": "passé composé of rester - feminine agreement"
+    },
+    {
+      "id": "i-je-parlais",
+      "type": "respond",
+      "situation": "I was speaking",
+      "answer": "je parlais",
+      "hint": "imparfait of parler"
+    },
+    {
+      "id": "i-tu-etais",
+      "type": "respond",
+      "situation": "you were (informal)",
+      "answer": "tu étais",
+      "hint": "imparfait of être"
+    },
+    {
+      "id": "i-il-faisait",
+      "type": "respond",
+      "situation": "it was (weather)",
+      "answer": "il faisait",
+      "hint": "imparfait of faire - weather expression"
+    },
+    {
+      "id": "i-nous-allions",
+      "type": "respond",
+      "situation": "we used to go",
+      "answer": "nous allions",
+      "hint": "imparfait of aller - habitual action"
+    },
+    {
+      "id": "i-elles-avaient",
+      "type": "respond",
+      "situation": "they had (feminine)",
+      "answer": "elles avaient",
+      "hint": "imparfait of avoir"
+    },
+    {
+      "id": "i-vous-finissiez",
+      "type": "respond",
+      "situation": "you were finishing (formal)",
+      "answer": "vous finissiez",
+      "hint": "imparfait of finir"
+    },
+    {
+      "id": "i-lisais",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'I was reading when he called'",
+      "shown": "je _____ (lire) quand il a téléphoné",
+      "answer": "lisais",
+      "hint": "Ongoing background action - use imparfait"
+    },
+    {
+      "id": "i-ai-achete",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'Yesterday I bought a book'",
+      "shown": "hier j'_____ (acheter) un livre",
+      "answer": "ai acheté",
+      "hint": "Completed action at specific time - use passé composé"
+    },
+    {
+      "id": "i-marchait",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'Every day he walked to school'",
+      "shown": "chaque jour il _____ (marcher) à l'école",
+      "answer": "marchait",
+      "hint": "Repeated habitual action - use imparfait"
+    },
+    {
+      "id": "i-est-ouverte",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'Suddenly the door opened'",
+      "shown": "soudain la porte s'_____ (ouvrir)",
+      "answer": "est ouverte",
+      "hint": "Sudden completed event - use passé composé"
+    },
+    {
+      "id": "i-pleuvait",
+      "type": "transform",
+      "instruction": "Choose the correct tense for: 'While it was raining, I stayed inside'",
+      "shown": "pendant qu'il _____ (pleuvoir), je suis resté dedans",
+      "answer": "pleuvait",
+      "hint": "Background condition/description - use imparfait"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

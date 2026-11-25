@@ -1,0 +1,345 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-04-unit-10-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions.",
+  "can_do": [
+    "Express complex ideas with subjunctive mood",
+    "Use hypothetical and conditional structures fluently",
+    "Communicate at B2 level with nuance and precision"
+  ],
+  "items": [
+    {
+      "id": "i-sois",
+      "type": "transform",
+      "instruction": "Complete the phrase",
+      "shown": "il faut que tu _____ (you need to be)",
+      "answer": "sois",
+      "hint": "Special form of '{être}' after '{il faut que}'"
+    },
+    {
+      "id": "i-ait",
+      "type": "transform",
+      "instruction": "Complete the phrase",
+      "shown": "je veux qu'il _____ (I want him to have)",
+      "answer": "ait",
+      "hint": "Special form of '{avoir}' after '{je veux que}'"
+    },
+    {
+      "id": "i-ailles",
+      "type": "transform",
+      "instruction": "Complete the phrase",
+      "shown": "il faut que tu _____ (you need to go)",
+      "answer": "ailles",
+      "hint": "Special form of '{aller}' after '{il faut que}'"
+    },
+    {
+      "id": "i-fasses",
+      "type": "transform",
+      "instruction": "Complete the phrase",
+      "shown": "je veux que tu _____ tes devoirs (I want you to do your homework)",
+      "answer": "fasses",
+      "hint": "Special form of '{faire}' after '{je veux que}'"
+    },
+    {
+      "id": "i-vienne",
+      "type": "transform",
+      "instruction": "Complete the phrase",
+      "shown": "il faut qu'elle _____ (she needs to come)",
+      "answer": "vienne",
+      "hint": "Special form of '{venir}' after '{il faut que}'"
+    },
+    {
+      "id": "i-parte",
+      "type": "transform",
+      "instruction": "Complete the phrase",
+      "shown": "je veux qu'il _____ (I want him to leave)",
+      "answer": "parte",
+      "hint": "Special form of '{partir}' after '{je veux que}'"
+    },
+    {
+      "id": "i-il-faut-que-tu",
+      "type": "respond",
+      "situation": "You need to eat",
+      "answer": "il faut que tu manges",
+      "hint": "Direct necessity to a specific person"
+    },
+    {
+      "id": "i-il-faut-qu-on",
+      "type": "respond",
+      "situation": "We need to leave",
+      "answer": "il faut qu'on parte",
+      "hint": "Group necessity"
+    },
+    {
+      "id": "i-il-faut-qu-elle",
+      "type": "respond",
+      "situation": "She needs to know",
+      "answer": "il faut qu'elle sache",
+      "hint": "Information necessity"
+    },
+    {
+      "id": "i-il-faut-que-je",
+      "type": "respond",
+      "situation": "I need to be careful",
+      "answer": "il faut que je fasse attention",
+      "accept": [
+        "il faut que je sois sage"
+      ],
+      "hint": "Personal necessity - use '{sage}' or '{attention}'"
+    },
+    {
+      "id": "i-je-veux-que-tu",
+      "type": "respond",
+      "situation": "I want you to come",
+      "answer": "je veux que tu viennes",
+      "hint": "Direct wish to someone"
+    },
+    {
+      "id": "i-j-aimerais-que-tu",
+      "type": "respond",
+      "situation": "I'd like you to be there (polite)",
+      "answer": "j'aimerais que tu sois là",
+      "hint": "Softer version of wish"
+    },
+    {
+      "id": "i-je-veux-qu-il",
+      "type": "respond",
+      "situation": "I want him to understand",
+      "answer": "je veux qu'il comprenne",
+      "hint": "Wish about understanding"
+    },
+    {
+      "id": "i-je-veux-qu-on",
+      "type": "respond",
+      "situation": "I want us to succeed",
+      "answer": "je veux qu'on réussisse",
+      "accept": [
+        "je veux que nous réussissions"
+      ],
+      "hint": "Group wish"
+    },
+    {
+      "id": "i-je-suis-content-que",
+      "type": "respond",
+      "situation": "I'm happy you're here",
+      "answer": "je suis content que tu sois là",
+      "accept": [
+        "je suis heureux que tu sois là",
+        "je suis contente que tu sois là",
+        "je suis heureuse que tu sois là"
+      ],
+      "hint": "Emotion about someone's presence"
+    },
+    {
+      "id": "i-j-ai-peur-qu",
+      "type": "respond",
+      "situation": "I'm afraid he'll leave",
+      "answer": "j'ai peur qu'il parte",
+      "hint": "Worry about someone's action"
+    },
+    {
+      "id": "i-je-suis-desole-que",
+      "type": "respond",
+      "situation": "I'm sorry you're sick",
+      "answer": "je suis désolé que tu sois malade",
+      "accept": [
+        "je suis désolée que tu sois malade"
+      ],
+      "hint": "Sympathy expression"
+    },
+    {
+      "id": "i-je-suis-surpris-que",
+      "type": "respond",
+      "situation": "I'm surprised you know that",
+      "answer": "je suis surpris que tu saches ça",
+      "accept": [
+        "je suis surprise que tu saches ça",
+        "je suis surpris que tu le saches"
+      ],
+      "hint": "Unexpected knowledge"
+    },
+    {
+      "id": "i-je-regrette-que-tu",
+      "type": "respond",
+      "situation": "I regret you can't come",
+      "answer": "je regrette que tu ne puisses pas venir",
+      "hint": "Disappointment expression"
+    },
+    {
+      "id": "i-si-j-etais-riche",
+      "type": "respond",
+      "situation": "If I were rich, I'd travel",
+      "answer": "si j'étais riche, je voyagerais",
+      "hint": "Fantasy/daydream scenario"
+    },
+    {
+      "id": "i-si-j-etais-toi",
+      "type": "respond",
+      "situation": "If I were you, I'd do that",
+      "answer": "si j'étais toi, je ferais ça",
+      "hint": "Giving advice"
+    },
+    {
+      "id": "i-si-on-avait-le",
+      "type": "respond",
+      "situation": "If we had time, we'd walk",
+      "answer": "si on avait le temps, on marcherait",
+      "accept": [
+        "si nous avions le temps, nous marcherions"
+      ],
+      "hint": "Hypothetical group activity"
+    },
+    {
+      "id": "i-si-tu-etais-la",
+      "type": "respond",
+      "situation": "If you were here, I'd be happy",
+      "answer": "si tu étais là, je serais content",
+      "accept": [
+        "si tu étais ici, je serais heureux",
+        "si tu étais là, je serais heureux"
+      ],
+      "hint": "Wishful thinking"
+    },
+    {
+      "id": "i-si-j-avais-su",
+      "type": "respond",
+      "situation": "If I had known, I would have come",
+      "answer": "si j'avais su, je serais venu",
+      "accept": [
+        "si j'avais su, je serais venue"
+      ],
+      "hint": "Past regret - missed opportunity"
+    },
+    {
+      "id": "i-si-j-avais-eu",
+      "type": "respond",
+      "situation": "If I had time, I would have helped",
+      "answer": "si j'avais eu le temps, j'aurais aidé",
+      "hint": "Past conditional regret"
+    },
+    {
+      "id": "i-si-elle-m-avait",
+      "type": "respond",
+      "situation": "If she had told me, I would have understood",
+      "answer": "si elle m'avait dit, j'aurais compris",
+      "hint": "Information regret"
+    },
+    {
+      "id": "i-j-avais-deja-mange",
+      "type": "respond",
+      "situation": "I had already eaten",
+      "answer": "j'avais déjà mangé",
+      "hint": "Show what happened first in past"
+    },
+    {
+      "id": "i-elle-etait-deja-partie",
+      "type": "respond",
+      "situation": "She had already left",
+      "answer": "elle était déjà partie",
+      "hint": "Explaining someone's absence"
+    },
+    {
+      "id": "i-nous-avions-deja-vu",
+      "type": "respond",
+      "situation": "We had already seen this movie",
+      "answer": "nous avions déjà vu ce film",
+      "accept": [
+        "on avait déjà vu ce film"
+      ],
+      "hint": "Previous experience"
+    },
+    {
+      "id": "i-avant-que-tu-partes",
+      "type": "respond",
+      "situation": "Before you leave, call me",
+      "answer": "avant que tu partes, appelle-moi",
+      "hint": "Before someone does something"
+    },
+    {
+      "id": "i-j-explique-pour-que",
+      "type": "respond",
+      "situation": "I'm explaining so you understand",
+      "answer": "j'explique pour que tu comprennes",
+      "hint": "Purpose expression"
+    },
+    {
+      "id": "i-bien-que-ce-soit",
+      "type": "respond",
+      "situation": "Although it's difficult, I continue",
+      "answer": "bien que ce soit difficile, je continue",
+      "hint": "Contrast expression"
+    },
+    {
+      "id": "i-en-mangeant-nous-parlons",
+      "type": "respond",
+      "situation": "While eating, we talk",
+      "answer": "en mangeant, nous parlons",
+      "accept": [
+        "en mangeant, on parle"
+      ],
+      "hint": "Simultaneous actions"
+    },
+    {
+      "id": "i-il-est-possible-qu",
+      "type": "respond",
+      "situation": "It's possible he doesn't understand",
+      "answer": "il est possible qu'il ne comprenne pas",
+      "hint": "Uncertainty expression"
+    },
+    {
+      "id": "i-je-suis-vraiment-content",
+      "type": "respond",
+      "situation": "I'm really happy we're friends",
+      "answer": "je suis vraiment content que nous soyons amis",
+      "accept": [
+        "je suis vraiment heureux qu'on soit amis",
+        "je suis vraiment contente que nous soyons amis"
+      ],
+      "hint": "Strong emotion + relationship"
+    },
+    {
+      "id": "i-je-me-fais-reparer",
+      "type": "respond",
+      "situation": "I'm getting my car repaired",
+      "answer": "je me fais réparer ma voiture",
+      "hint": "Service expression"
+    },
+    {
+      "id": "i-saura",
+      "type": "transform",
+      "instruction": "Complete the philosophical thought",
+      "shown": "Si on ne fait rien, on ne _____ jamais",
+      "answer": "saura",
+      "accept": [
+        "sait",
+        "savoir"
+      ],
+      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If we don't do anything, we'll never _____'"
+    },
+    {
+      "id": "i-soit-differente",
+      "type": "transform",
+      "instruction": "From the reading {Mes Rêves et Mes Espoirs}: What did Sophie want about her life?",
+      "shown": "Je veux que ma vie _____",
+      "answer": "soit différente",
+      "hint": "Sophie's main wish"
+    },
+    {
+      "id": "i-perdu-espoir",
+      "type": "transform",
+      "instruction": "From the reading {Mes Rêves et Mes Espoirs}: What had Sophie already done before talking to Marc?",
+      "shown": "J'avais déjà _____",
+      "answer": "perdu espoir",
+      "accept": [
+        "essayé",
+        "perdu l'espoir"
+      ],
+      "hint": "What Sophie had lost"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

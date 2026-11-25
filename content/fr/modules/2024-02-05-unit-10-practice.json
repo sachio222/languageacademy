@@ -1,0 +1,261 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-05-unit-10-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Mastery & Nuance Practice - Fill in the Blanks",
+  "description": "Complete sentences using this unit's B2 level phrases: necessity, wishes, emotions, hypotheticals, and more!",
+  "can_do": [
+    "Use B2-level expressions naturally",
+    "Apply subjunctive and conditional structures in context",
+    "Express complex ideas with sophistication"
+  ],
+  "items": [
+    {
+      "id": "i-il-faut",
+      "type": "gapfill",
+      "text": "___ que tu manges quelque chose.",
+      "blanks": [
+        {
+          "answer": "Il faut"
+        }
+      ],
+      "gloss": "'You need to eat something' (directed necessity)",
+      "hint": "it's necessary (directed to someone)"
+    },
+    {
+      "id": "i-que",
+      "type": "gapfill",
+      "text": "Il faut ___ tu sois sage!",
+      "blanks": [
+        {
+          "answer": "que"
+        }
+      ],
+      "gloss": "'You need to be good!' (parent to child)",
+      "hint": "connector after '{il faut}'"
+    },
+    {
+      "id": "i-que-2",
+      "type": "gapfill",
+      "text": "Je veux ___ tu viennes avec moi.",
+      "blanks": [
+        {
+          "answer": "que"
+        }
+      ],
+      "gloss": "'I want you to come with me' (expressing a wish)",
+      "hint": "connector after '{je veux}'"
+    },
+    {
+      "id": "i-allions",
+      "type": "gapfill",
+      "text": "J'aimerais que nous ___ ensemble.",
+      "blanks": [
+        {
+          "answer": "allions"
+        }
+      ],
+      "gloss": "'I'd like us to go together' (polite wish)",
+      "hint": "special form of '{aller}' after '{que}'"
+    },
+    {
+      "id": "i-sois",
+      "type": "gapfill",
+      "text": "Je suis content que tu ___ là!",
+      "blanks": [
+        {
+          "answer": "sois"
+        }
+      ],
+      "gloss": "'I'm happy you're here!' (emotion about someone)",
+      "hint": "special form of '{être}' after '{que}'"
+    },
+    {
+      "id": "i-parte",
+      "type": "gapfill",
+      "text": "J'ai peur qu'il ___.",
+      "blanks": [
+        {
+          "answer": "parte"
+        }
+      ],
+      "gloss": "'I'm afraid he'll leave' (worry)",
+      "hint": "special form of '{partir}' after '{que}'"
+    },
+    {
+      "id": "i-si",
+      "type": "gapfill",
+      "text": "___ j'étais riche, j'achèterais une maison.",
+      "blanks": [
+        {
+          "answer": "Si"
+        }
+      ],
+      "gloss": "'If I were rich, I'd buy a house' (daydream)",
+      "hint": "if (for hypothetical situations)"
+    },
+    {
+      "id": "i-voyagerais",
+      "type": "gapfill",
+      "text": "Si j'avais plus de temps, je ___ plus.",
+      "blanks": [
+        {
+          "answer": "voyagerais"
+        }
+      ],
+      "gloss": "'If I had more time, I'd travel more' (hypothetical)",
+      "hint": "would travel (conditional form)"
+    },
+    {
+      "id": "i-aurais",
+      "type": "gapfill",
+      "text": "Si j'avais su, j'___ continué mes études.",
+      "blanks": [
+        {
+          "answer": "aurais"
+        }
+      ],
+      "gloss": "'If I had known, I would have continued my studies' (regret)",
+      "hint": "would have (past conditional)"
+    },
+    {
+      "id": "i-deja",
+      "type": "gapfill",
+      "text": "J'avais ___ fini quand il est arrivé.",
+      "blanks": [
+        {
+          "answer": "déjà"
+        }
+      ],
+      "gloss": "'I had already finished when he arrived' (sequencing past events)",
+      "hint": "already"
+    },
+    {
+      "id": "i-vient",
+      "type": "gapfill",
+      "text": "Je pense qu'il ___.",
+      "blanks": [
+        {
+          "answer": "vient"
+        }
+      ],
+      "gloss": "'I think he's coming' (positive opinion)",
+      "hint": "normal form after positive '{je pense que}'"
+    },
+    {
+      "id": "i-vienne",
+      "type": "gapfill",
+      "text": "Je ne pense pas qu'il ___.",
+      "blanks": [
+        {
+          "answer": "vienne"
+        }
+      ],
+      "gloss": "'I don't think he's coming' (diplomatic doubt)",
+      "hint": "special form after negative '{je ne pense pas que}'"
+    },
+    {
+      "id": "i-avant",
+      "type": "gapfill",
+      "text": "___ qu'on parte, il faut finir.",
+      "blanks": [
+        {
+          "answer": "Avant"
+        }
+      ],
+      "gloss": "'Before we leave, we need to finish' (temporal)",
+      "hint": "before (temporal connector)"
+    },
+    {
+      "id": "i-pour-que",
+      "type": "gapfill",
+      "text": "Je t'explique ___ tu comprennes.",
+      "blanks": [
+        {
+          "answer": "pour que"
+        }
+      ],
+      "gloss": "'I'm explaining so you understand' (purpose)",
+      "hint": "so that (expressing purpose)"
+    },
+    {
+      "id": "i-bien-que",
+      "type": "gapfill",
+      "text": "___ j'aie peu d'argent, je suis content.",
+      "blanks": [
+        {
+          "answer": "Bien que"
+        }
+      ],
+      "gloss": "'Although I have little money, I'm happy' (contrast)",
+      "hint": "although (expressing contrast)"
+    },
+    {
+      "id": "i-vraiment",
+      "type": "gapfill",
+      "text": "Je suis ___ content de te voir!",
+      "blanks": [
+        {
+          "answer": "vraiment"
+        }
+      ],
+      "gloss": "'I'm really happy to see you!' (emphasis)",
+      "hint": "really (emphasis adverb)"
+    },
+    {
+      "id": "i-en",
+      "type": "gapfill",
+      "text": "___ mangeant, nous parlions.",
+      "blanks": [
+        {
+          "answer": "En"
+        }
+      ],
+      "gloss": "'While eating, we were talking' (simultaneous actions)",
+      "hint": "while (doing something)"
+    },
+    {
+      "id": "i-couper",
+      "type": "gapfill",
+      "text": "Je me fais ___ les cheveux demain.",
+      "blanks": [
+        {
+          "answer": "couper"
+        }
+      ],
+      "gloss": "'I'm getting my hair cut tomorrow' (service)",
+      "hint": "cut (service verb)"
+    },
+    {
+      "id": "i-qu-il",
+      "type": "gapfill",
+      "text": "Il est possible ___ soit en retard.",
+      "blanks": [
+        {
+          "answer": "qu'il"
+        }
+      ],
+      "gloss": "'It's possible he's late' (uncertainty)",
+      "hint": "that he (after possibility expression)"
+    },
+    {
+      "id": "i-voudrais-suives",
+      "type": "gapfill",
+      "text": "Si j'étais toi, je ___ que tu ___ tes rêves.",
+      "blanks": [
+        {
+          "answer": "voudrais"
+        },
+        {
+          "answer": "suives"
+        }
+      ],
+      "gloss": "'If I were you, I'd want you to follow your dreams' (advice + wish)",
+      "hint": "would want (conditional) / follow (special form after '{que}')"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

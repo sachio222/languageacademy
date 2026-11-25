@@ -1,0 +1,231 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-08-connectors",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Basic Connectors - {et, mais, ou, aussi, très}",
+  "description": "Connect your thoughts and add emphasis! Learn '{et}' (and), '{mais}' (but), '{ou}' (or), '{aussi}' (also/too), '{très}' (very).",
+  "can_do": [
+    "Connect ideas with 'and', 'but', 'or' in French",
+    "Add emphasis with 'very' and 'also/too'",
+    "Form more natural, flowing sentences"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "et-fr",
+      "fr": "et",
+      "gloss": "and",
+      "note": "most common connector!"
+    },
+    {
+      "word_id": "mais-fr",
+      "fr": "mais",
+      "gloss": "but",
+      "note": "show contrast"
+    },
+    {
+      "word_id": "ou-fr",
+      "fr": "ou",
+      "gloss": "or",
+      "note": "present choices"
+    },
+    {
+      "word_id": "aussi-fr",
+      "fr": "aussi",
+      "gloss": "also/too",
+      "note": "add something extra"
+    },
+    {
+      "word_id": "tres-fr",
+      "fr": "très",
+      "gloss": "very",
+      "note": "intensify adjectives"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-et-and",
+      "term": "{et} = and",
+      "definition": "Connect two things or ideas together",
+      "example": "{un chat et un chien} (a cat and a dog)"
+    },
+    {
+      "id": "c-mais-but",
+      "term": "{mais} = but",
+      "definition": "Show contrast between two ideas",
+      "example": "{je suis un homme, mais tu es une femme} (I am a man, but you are a woman)"
+    },
+    {
+      "id": "c-ou-or",
+      "term": "{ou} = or",
+      "definition": "Present a choice between options",
+      "example": "{un chat ou un chien?} (a cat or a dog?)"
+    },
+    {
+      "id": "c-aussi-also-too",
+      "term": "{aussi} = also / too",
+      "definition": "Add something extra to your statement",
+      "example": "{j'ai un chat aussi} (I have a cat too / also)"
+    },
+    {
+      "id": "c-tres-very",
+      "term": "{très} = very",
+      "definition": "Intensify adjectives - make things stronger!",
+      "example": "{très bon} (very good)"
+    },
+    {
+      "id": "c-making-natural-sentences",
+      "term": "Making Natural Sentences",
+      "definition": "Combine with everything you've learned to sound natural!",
+      "example": "Use with nouns, verbs, and phrases from previous modules"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-un-chat-et-un",
+      "type": "transform",
+      "instruction": "Connect 'a cat and a dog' using the correct word",
+      "shown": "un chat ___ un chien",
+      "answer": "un chat et un chien",
+      "hint": "Which word means 'and'?",
+      "mistakes": [
+        {
+          "answer": "un chat mais un chien",
+          "feedback": "That's 'but', not 'and'"
+        },
+        {
+          "answer": "un chat ou un chien",
+          "feedback": "That's 'or', not 'and'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-livre",
+      "type": "translate",
+      "prompt": "I have a book and a cat",
+      "answer": "j'ai un livre et un chat",
+      "hint": "Combine: j'ai + un livre + connector + un chat",
+      "mistakes": [
+        {
+          "answer": "j'ai un livre mais un chat",
+          "feedback": "Use '{et}' (and), not 'mais' (but)"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-sommes-des-femmes",
+      "type": "translate",
+      "prompt": "we are women and friends",
+      "answer": "nous sommes des femmes et des amies",
+      "hint": "Combine: nous sommes + des femmes + connector + des amies",
+      "mistakes": [
+        {
+          "answer": "nous sommes des femmes ou des amies",
+          "feedback": "Use '{et}' (and), not 'ou' (or)"
+        },
+        {
+          "answer": "elle est une femme et une amie",
+          "feedback": "That's singular 'she is'. The question asks for plural 'we are' - use '{nous sommes des}'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-un-homme",
+      "type": "translate",
+      "prompt": "I am a man, but you are a woman",
+      "answer": "je suis un homme, mais tu es une femme",
+      "hint": "Show contrast with '{mais}'",
+      "mistakes": [
+        {
+          "answer": "je suis un homme et tu es une femme",
+          "feedback": "Use '{mais}' (but) to show contrast"
+        }
+      ]
+    },
+    {
+      "id": "i-un-chat-ou-un",
+      "type": "respond",
+      "situation": "Say 'a cat or a dog?' (asking a question)",
+      "cue": "a cat or a dog",
+      "answer": "un chat ou un chien",
+      "hint": "Present a choice with '{ou}'",
+      "mistakes": [
+        {
+          "answer": "un chat et un chien",
+          "feedback": "Use '{ou}' (or) for choices, not 'et' (and)"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-une-maison",
+      "type": "translate",
+      "prompt": "we have a house and a car",
+      "answer": "nous avons une maison et une voiture",
+      "hint": "Combine: nous avons + une maison + connector + une voiture",
+      "mistakes": [
+        {
+          "answer": "nous avons une maison mais une voiture",
+          "feedback": "Use '{et}' (and), not 'mais' (but)"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-chat",
+      "type": "respond",
+      "situation": "Say 'I have a cat also' or 'I have a cat too'",
+      "cue": "I have a cat also",
+      "answer": "j'ai un chat aussi",
+      "hint": "Add '{aussi}' at the end: j'ai un chat ___",
+      "mistakes": [
+        {
+          "answer": "j'ai aussi un chat",
+          "feedback": "Put 'aussi' at the END: j'ai un chat aussi"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-un-livre",
+      "type": "translate",
+      "prompt": "she has a book too",
+      "answer": "elle a un livre aussi",
+      "hint": "Use '{aussi}' at the end",
+      "mistakes": [
+        {
+          "answer": "elle a aussi un livre",
+          "feedback": "Put 'aussi' at the END: elle a un livre aussi"
+        }
+      ]
+    },
+    {
+      "id": "i-tres-bon",
+      "type": "respond",
+      "situation": "Say 'very good' (describing something as very good)",
+      "cue": "very good",
+      "answer": "très bon",
+      "hint": "Put '{très}' BEFORE the adjective",
+      "mistakes": [
+        {
+          "answer": "bon très",
+          "feedback": "Put 'très' BEFORE: très bon"
+        }
+      ]
+    },
+    {
+      "id": "i-la-maison-est-tres",
+      "type": "translate",
+      "prompt": "the house is very good",
+      "answer": "la maison est très bonne",
+      "hint": "Use être + très + adjective",
+      "mistakes": [
+        {
+          "answer": "la maison est bonne très",
+          "feedback": "Put 'très' BEFORE the adjective: très bonne"
+        },
+        {
+          "answer": "la maison est très bon",
+          "feedback": "Use feminine form '{bonne}' with 'maison'"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-05-on-and-people",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Talking About People in General",
+  "description": "Learn '{on}' (we/one/people) and general people vocabulary: on dit (people say), les gens (people), tout le monde (everyone)",
+  "can_do": [
+    "Use '{on}' like a native speaker (we/people/one)",
+    "Talk about people in general (people say, everyone knows)",
+    "Sound more natural with on instead of nous"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "on-fr",
+      "fr": "on",
+      "gloss": "we / one / people",
+      "note": "⭐⭐⭐ most versatile pronoun!"
+    },
+    {
+      "word_id": "on-est-fr",
+      "fr": "on est",
+      "gloss": "we are / one is",
+      "note": "uses il/elle form 'est'"
+    },
+    {
+      "word_id": "on-a-fr",
+      "fr": "on a",
+      "gloss": "we have / one has",
+      "note": "uses il/elle form 'a'"
+    },
+    {
+      "word_id": "on-va-fr",
+      "fr": "on va",
+      "gloss": "we're going / we go",
+      "note": "⭐ very common! 'On y va?'"
+    },
+    {
+      "word_id": "on-fait-fr",
+      "fr": "on fait",
+      "gloss": "we do / we make",
+      "note": "uses il/elle form"
+    },
+    {
+      "word_id": "on-peut-fr",
+      "fr": "on peut",
+      "gloss": "we can / one can",
+      "note": "On peut apprendre!"
+    },
+    {
+      "word_id": "on-doit-fr",
+      "fr": "on doit",
+      "gloss": "we must / one must",
+      "note": "On doit étudier"
+    },
+    {
+      "word_id": "on-dit-fr",
+      "fr": "on dit",
+      "gloss": "we say / people say",
+      "note": "On dit que... (People say that...)"
+    },
+    {
+      "word_id": "on-voit-fr",
+      "fr": "on voit",
+      "gloss": "we see / one sees",
+      "note": "general observation"
+    },
+    {
+      "word_id": "on-y-va-fr",
+      "fr": "On y va?",
+      "gloss": "Shall we go?",
+      "note": "⭐⭐⭐ extremely common phrase!"
+    },
+    {
+      "word_id": "les-gens-fr",
+      "fr": "les gens",
+      "gloss": "people (in general)",
+      "note": "⭐ plural noun, very common"
+    },
+    {
+      "word_id": "les-gens-disent-fr",
+      "fr": "les gens disent",
+      "gloss": "people say",
+      "note": "plural verb 'disent'"
+    },
+    {
+      "word_id": "les-gens-pensent-fr",
+      "fr": "les gens pensent",
+      "gloss": "people think",
+      "note": "general opinion"
+    },
+    {
+      "word_id": "tout-le-monde-fr",
+      "fr": "tout le monde",
+      "gloss": "everyone / everybody",
+      "note": "⭐ uses SINGULAR verb!"
+    },
+    {
+      "word_id": "tout-le-monde-sait-fr",
+      "fr": "tout le monde sait",
+      "gloss": "everyone knows",
+      "note": "singular 'sait' not 'savent'"
+    },
+    {
+      "word_id": "le-peuple-fr",
+      "fr": "le peuple",
+      "gloss": "the people / the population",
+      "note": "more formal/political"
+    },
+    {
+      "word_id": "la-population-fr",
+      "fr": "la population",
+      "gloss": "the population",
+      "note": "demographic term"
+    },
+    {
+      "word_id": "personne-fr",
+      "fr": "personne",
+      "gloss": "person / nobody (with ne)",
+      "note": "une personne (a person)"
+    },
+    {
+      "word_id": "les-personnes-fr",
+      "fr": "les personnes",
+      "gloss": "people / persons",
+      "note": "more formal than 'les gens'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-on-we-one-people",
+      "term": "{on} = we / one / people",
+      "definition": "THE most versatile pronoun! Used MORE than '{nous}' in everyday French. Three meanings depending on context.",
+      "example": "{on va au cinéma} (we're going to movies), {on dit que} (people say that), {on ne peut pas} (one cannot)"
+    },
+    {
+      "id": "c-on-conjugates-like-il",
+      "term": "on conjugates like il/{elle} (third person singular)",
+      "definition": "CRITICAL: Even though '{on}' means 'we', it uses il/elle verb forms!",
+      "example": "{on est} (we are), {on a} (we have), {on va} (we go), {on fait} (we do) - all use il/elle forms"
+    },
+    {
+      "id": "c-on-vs-nous",
+      "term": "on vs nous",
+      "definition": "on = informal, conversational (90% of speech). nous = formal, written (10%)",
+      "example": "Friends: '{on va manger?}' Formal: '{nous allons manger}' (much less common!)"
+    },
+    {
+      "id": "c-les-gens-people-general",
+      "term": "{les gens} = people (general)",
+      "definition": "Plural noun for referring to people in general - very common!",
+      "example": "{les gens disent} (people say), {les gens pensent} (people think), {les gens sont gentils} (people are nice)"
+    },
+    {
+      "id": "c-tout-le-monde-everyone",
+      "term": "{tout le monde} = everyone",
+      "definition": "Fixed expression (literally 'all the world') - uses SINGULAR verb!",
+      "example": "{tout le monde sait} (everyone knows - singular!), {tout le monde pense} (everyone thinks)"
+    },
+    {
+      "id": "c-making-general-statements",
+      "term": "Making general statements",
+      "definition": "Use '{on}' for universal truths or common wisdom - sounds philosophical!",
+      "example": "{On apprend en faisant des erreurs} (We/One learns by making mistakes), {On ne peut pas tout savoir} (One can't know everything)"
+    }
+  ],
+  "items": [
+    {
+      "id": "on-people-1",
+      "type": "respond",
+      "situation": "Say 'Shall we go?' using '{on}' (super common phrase!)",
+      "cue": "Shall we go? / Let's go",
+      "answer": "on y va",
+      "hint": "{On + y + va + ?}",
+      "mistakes": [
+        {
+          "answer": "nous allons",
+          "feedback": "That's formal! Use '{on y va?}' for informal 'shall we go?'"
+        },
+        {
+          "answer": "on allons",
+          "feedback": "'on' uses il/elle forms - '{on va}' (not 'on allons')!"
+        }
+      ]
+    },
+    {
+      "id": "on-people-2",
+      "type": "respond",
+      "situation": "We must study (using on)",
+      "answer": "on doit étudier",
+      "hint": "on + doit + étudier (on uses il/elle forms)",
+      "mistakes": [
+        {
+          "answer": "nous devons étudier",
+          "feedback": "Use '{on}' for informal - '{on doit étudier}'"
+        },
+        {
+          "answer": "on devons étudier",
+          "feedback": "'on' takes il/elle forms - '{on doit}' (not 'on devons')!"
+        }
+      ]
+    },
+    {
+      "id": "on-people-3",
+      "type": "respond",
+      "situation": "People say that it's good",
+      "answer": "on dit que c'est bon",
+      "hint": "{on dit + que + c'est bon}",
+      "mistakes": [
+        {
+          "answer": "les gens dit que c'est bon",
+          "feedback": "'les gens' is plural - use '{les gens disent}' OR use '{on dit}'"
+        }
+      ]
+    },
+    {
+      "id": "on-people-4",
+      "type": "respond",
+      "situation": "One cannot know everything",
+      "answer": "on ne peut pas tout savoir",
+      "hint": "{on ne peut pas + tout + savoir}",
+      "mistakes": [
+        {
+          "answer": "on ne peut pas savoir tout",
+          "feedback": "Put 'tout' before the infinitive - 'on ne peut pas tout savoir'"
+        }
+      ]
+    },
+    {
+      "id": "on-people-5",
+      "type": "respond",
+      "situation": "Say 'Everyone knows' using the fixed expression",
+      "cue": "Everyone knows",
+      "answer": "tout le monde sait",
+      "hint": "tout le monde + sait (SINGULAR verb!)",
+      "mistakes": [
+        {
+          "answer": "tout le monde savent",
+          "feedback": "'tout le monde' is singular (like 'everyone') - use '{sait}' not 'savent'!"
+        },
+        {
+          "answer": "tous les gens savent",
+          "feedback": "Use the fixed expression '{tout le monde sait}'"
+        }
+      ]
+    },
+    {
+      "id": "on-people-6",
+      "type": "respond",
+      "situation": "People think",
+      "answer": "les gens pensent",
+      "hint": "les gens + pensent (plural verb)",
+      "mistakes": [
+        {
+          "answer": "les gens pense",
+          "feedback": "'les gens' is plural - use '{pensent}' not 'pense'!"
+        },
+        {
+          "answer": "on pense",
+          "feedback": "That works, but the question asks for '{les gens pensent}'"
+        }
+      ]
+    },
+    {
+      "id": "on-people-7",
+      "type": "respond",
+      "situation": "Say 'We learn by practicing' (using on)",
+      "cue": "We learn by practicing (using on)",
+      "answer": "on apprend en pratiquant",
+      "hint": "{on + apprend + en pratiquant}",
+      "mistakes": [
+        {
+          "answer": "nous apprenons en pratiquant",
+          "feedback": "Use '{on}' for informal - '{on apprend}'"
+        }
+      ]
+    },
+    {
+      "id": "on-people-8",
+      "type": "respond",
+      "situation": "Say 'We must believe' (using on)",
+      "cue": "We must believe (using on)",
+      "answer": "on doit croire",
+      "hint": "{on + doit + croire}"
+    }
+  ]
+}

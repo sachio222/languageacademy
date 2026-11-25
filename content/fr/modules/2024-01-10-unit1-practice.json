@@ -1,0 +1,174 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-10-unit1-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Essential Grammar Practice - Fill in the Blanks",
+  "description": "Complete sentences using everything you've learned in this unit. Fill in the blanks to create correct French sentences!",
+  "can_do": [
+    "Compose complete French sentences from scratch",
+    "Combine pronouns, verbs, articles, and nouns naturally",
+    "Apply everything from this unit in context"
+  ],
+  "items": [
+    {
+      "id": "i-je",
+      "type": "gapfill",
+      "text": "___ suis un homme.",
+      "blanks": [
+        {
+          "answer": "je"
+        }
+      ],
+      "gloss": "I am a man",
+      "hint": "pronoun for 'I'"
+    },
+    {
+      "id": "i-as",
+      "type": "gapfill",
+      "text": "Tu ___ un chat.",
+      "blanks": [
+        {
+          "answer": "as"
+        }
+      ],
+      "gloss": "You have a cat",
+      "hint": "avoir conjugated for tu"
+    },
+    {
+      "id": "i-est",
+      "type": "gapfill",
+      "text": "Elle ___ une femme.",
+      "blanks": [
+        {
+          "answer": "est"
+        }
+      ],
+      "gloss": "She is a woman",
+      "hint": "être conjugated for elle"
+    },
+    {
+      "id": "i-avons",
+      "type": "gapfill",
+      "text": "Nous ___ les livres.",
+      "blanks": [
+        {
+          "answer": "avons"
+        }
+      ],
+      "gloss": "We have the books",
+      "hint": "avoir conjugated for nous"
+    },
+    {
+      "id": "i-un-et",
+      "type": "gapfill",
+      "text": "___ chat ___ un chien.",
+      "blanks": [
+        {
+          "answer": "un"
+        },
+        {
+          "answer": "et"
+        }
+      ],
+      "gloss": "A cat and a dog",
+      "hint": "article for masculine singular / connector meaning 'and'"
+    },
+    {
+      "id": "i-ai",
+      "type": "gapfill",
+      "text": "J'___ des chats.",
+      "blanks": [
+        {
+          "answer": "ai"
+        }
+      ],
+      "gloss": "'I have cats' (plural)",
+      "hint": "avoir conjugated for je"
+    },
+    {
+      "id": "i-avez-ou",
+      "type": "gapfill",
+      "text": "Vous ___ un livre ___ une voiture.",
+      "blanks": [
+        {
+          "answer": "avez"
+        },
+        {
+          "answer": "ou"
+        }
+      ],
+      "gloss": "You have a book or a car",
+      "hint": "avoir conjugated for vous / connector meaning 'or'"
+    },
+    {
+      "id": "i-ont",
+      "type": "gapfill",
+      "text": "Ils ___ des amis.",
+      "blanks": [
+        {
+          "answer": "ont"
+        }
+      ],
+      "gloss": "They have friends",
+      "hint": "avoir conjugated for ils"
+    },
+    {
+      "id": "i-tres",
+      "type": "gapfill",
+      "text": "Je suis ___ bon.",
+      "blanks": [
+        {
+          "answer": "très"
+        }
+      ],
+      "gloss": "I am very good",
+      "hint": "connector meaning 'very'"
+    },
+    {
+      "id": "i-mais",
+      "type": "gapfill",
+      "text": "Il a un livre, ___ elle a une maison.",
+      "blanks": [
+        {
+          "answer": "mais"
+        }
+      ],
+      "gloss": "He has a book, but she has a house",
+      "hint": "connector meaning 'but'"
+    },
+    {
+      "id": "i-mais-aussi",
+      "type": "gapfill",
+      "text": "Nous sommes des enfants ___ nous avons des chiens ___.",
+      "blanks": [
+        {
+          "answer": "mais"
+        },
+        {
+          "answer": "aussi"
+        }
+      ],
+      "gloss": "We are children but we have dogs also",
+      "hint": "connector meaning 'but' / connector meaning 'also/too'"
+    },
+    {
+      "id": "i-la-ou",
+      "type": "gapfill",
+      "text": "Elle a ___ maison ___ les chats.",
+      "blanks": [
+        {
+          "answer": "la"
+        },
+        {
+          "answer": "ou"
+        }
+      ],
+      "gloss": "She has the house or the cats",
+      "hint": "definite article for feminine singular / connector meaning 'or'"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

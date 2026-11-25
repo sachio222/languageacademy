@@ -1,0 +1,209 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-23-common-special-forms-1",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Forms Used After '{il faut que}' and '{je veux que}'",
+  "description": "Learn verb forms that appear after '{il faut que...}' and '{je veux que...}' phrases. sois (be), ait (have), aille (go), fasse (do). Essential for telling people what you want them to do!",
+  "can_do": [
+    "Use special verb forms for wishes and necessities",
+    "Form the foundation for subjunctive expressions",
+    "Prepare to express complex ideas at B2 level"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "tu-sois-fr",
+      "fr": "tu sois",
+      "gloss": "you be",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-soit-fr",
+      "fr": "il/elle soit",
+      "gloss": "he/she be",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "je-sois-fr",
+      "fr": "je sois",
+      "gloss": "I be",
+      "note": "used after 'il faut que'"
+    },
+    {
+      "word_id": "tu-aies-fr",
+      "fr": "tu aies",
+      "gloss": "you have",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-ait-fr",
+      "fr": "il/elle ait",
+      "gloss": "he/she have",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "tu-ailles-fr",
+      "fr": "tu ailles",
+      "gloss": "you go",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-aille-fr",
+      "fr": "il/elle aille",
+      "gloss": "he/she go",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "tu-fasses-fr",
+      "fr": "tu fasses",
+      "gloss": "you do/make",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-fasse-fr",
+      "fr": "il/elle fasse",
+      "gloss": "he/she do/make",
+      "note": "used after 'il faut que' / 'je veux que'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-why-these-forms-exist",
+      "term": "Why These Forms Exist",
+      "definition": "French uses different verb forms after phrases like '{il faut que}' (someone needs to), '{je veux que}' (I want someone to), '{je suis content que}' (I'm happy that someone...). These express wishes, needs, or emotions about OTHER PEOPLE's actions.",
+      "example": "Normal statement: {Tu es sage} (You are good). Wish about you: {Il faut que tu sois sage} (You need to be good - different form!)"
+    },
+    {
+      "id": "c-where-you-can-use",
+      "term": "Where You CAN Use These Forms",
+      "definition": "ONLY after certain phrases: il faut que, je veux que, je suis content que, j'ai peur que, avant que, pour que, bien que, etc.",
+      "example": "{✓ Il faut que tu sois sage} (You need to be good), {✓ Je veux qu'il aille} (I want him to go)"
+    },
+    {
+      "id": "c-where-you-cannot-use",
+      "term": "Where You CANNOT Use These Forms",
+      "definition": "DON'T use these for normal statements, questions, or with just il faut/je veux (no '{que}')",
+      "example": "{✗ Tu sois content?} (Wrong! Say: {Tu es content?}). {✗ Il faut aller} ({Correct} - no '{que}' = normal form)"
+    },
+    {
+      "id": "c-the-trigger-look-for",
+      "term": "The Trigger: Look for '{que}'",
+      "definition": "If you see '{que}' + a person after these starter phrases, use these forms!",
+      "example": "{il faut QUE tu} → use sois/{aies}/{ailles}/{fasses, je veux QUE tu} → use sois/aies/ailles/{fasses}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-tu-sois",
+      "type": "respond",
+      "situation": "Translate the special form: tu sois (être)",
+      "cue": "you be",
+      "answer": "tu sois",
+      "hint": "special form of être for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu es",
+          "feedback": "That's the normal form! The special form is: tu sois"
+        }
+      ]
+    },
+    {
+      "id": "i-il-soit",
+      "type": "respond",
+      "situation": "Translate the special form: il soit (être)",
+      "cue": "he be",
+      "answer": "il soit",
+      "hint": "special form of être for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il est",
+          "feedback": "That's the normal form! The special form is: il soit"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-aies",
+      "type": "respond",
+      "situation": "Translate the special form: tu aies (avoir)",
+      "cue": "you have",
+      "answer": "tu aies",
+      "hint": "special form of avoir for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu as",
+          "feedback": "That's the normal form! The special form is: tu aies"
+        }
+      ]
+    },
+    {
+      "id": "i-il-ait",
+      "type": "respond",
+      "situation": "Translate the special form: il ait (avoir)",
+      "cue": "he have",
+      "answer": "il ait",
+      "hint": "special form of avoir for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il a",
+          "feedback": "That's the normal form! The special form is: il ait"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ailles",
+      "type": "respond",
+      "situation": "Translate the special form: tu ailles (aller)",
+      "cue": "you go",
+      "answer": "tu ailles",
+      "hint": "special form of aller for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu vas",
+          "feedback": "That's the normal form! The special form is: tu ailles"
+        }
+      ]
+    },
+    {
+      "id": "i-il-aille",
+      "type": "respond",
+      "situation": "Translate the special form: il aille (aller)",
+      "cue": "he go",
+      "answer": "il aille",
+      "hint": "special form of aller for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il va",
+          "feedback": "That's the normal form! The special form is: il aille"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-fasses",
+      "type": "respond",
+      "situation": "Translate the special form: tu fasses (faire)",
+      "cue": "you do/make",
+      "answer": "tu fasses",
+      "hint": "special form of faire for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu fais",
+          "feedback": "That's the normal form! The special form is: tu fasses"
+        }
+      ]
+    },
+    {
+      "id": "i-il-fasse",
+      "type": "respond",
+      "situation": "Translate the special form: il fasse (faire)",
+      "cue": "he do/make",
+      "answer": "il fasse",
+      "hint": "special form of faire for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il fait",
+          "feedback": "That's the normal form! The special form is: il fasse"
+        }
+      ]
+    }
+  ]
+}

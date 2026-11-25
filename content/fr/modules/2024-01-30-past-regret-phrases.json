@@ -1,0 +1,127 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-30-past-regret-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Si j'avais su...} - Past Regret Phrases",
+  "description": "Express regrets about the past! '{Si j'avais su, je serais venu}' (If I'd known, I'd have come), '{Si j'avais étudié...}' (If I'd studied...). Universal human experience!",
+  "can_do": [
+    "Express past regrets (If I had known...)",
+    "Talk about what you would have done differently",
+    "Use past perfect conditional naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "si-j-avais-su-fr",
+      "fr": "si j'avais su",
+      "gloss": "if I had known",
+      "note": "⭐ most common regret!"
+    },
+    {
+      "word_id": "si-j-avais-etudie-fr",
+      "fr": "si j'avais étudié",
+      "gloss": "if I had studied",
+      "note": "student regret"
+    },
+    {
+      "word_id": "si-j-avais-fait-ca-fr",
+      "fr": "si j'avais fait ça",
+      "gloss": "if I had done that",
+      "note": "general regret"
+    },
+    {
+      "word_id": "je-serais-venu-fr",
+      "fr": "je serais venu",
+      "gloss": "I would have come",
+      "note": "result of regret"
+    },
+    {
+      "word_id": "j-aurais-reussi-fr",
+      "fr": "j'aurais réussi",
+      "gloss": "I would have succeeded",
+      "note": "missed opportunity"
+    },
+    {
+      "word_id": "si-j-avais-pu-fr",
+      "fr": "si j'avais pu",
+      "gloss": "if I could have",
+      "note": "inability regret"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-expressing-regret",
+      "term": "Expressing Regret",
+      "definition": "Use '{si j'avais...}' to talk about things you wish you'd done differently",
+      "example": "{Si j'avais su...} (If I'd known...), {Si j'avais fait ça...} (If I'd done that...)"
+    },
+    {
+      "id": "c-common-regret-phrases",
+      "term": "Common Regret Phrases",
+      "definition": "Everyone regrets not knowing, not studying, not coming, etc.",
+      "example": "{Si j'avais su, je serais venu} (If I'd known, I would have come)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-si-j-avais-su",
+      "type": "respond",
+      "situation": "Express regret: 'If I had known...'",
+      "cue": "If I had known",
+      "answer": "si j'avais su",
+      "hint": "{si + j'avais su}",
+      "mistakes": [
+        {
+          "answer": "si je savais",
+          "feedback": "That's not past enough! For regret, use: si j'avais su (had known)"
+        }
+      ]
+    },
+    {
+      "id": "i-si-j-avais-etudie",
+      "type": "respond",
+      "situation": "Express student regret: 'If I had studied...'",
+      "cue": "If I had studied",
+      "answer": "si j'avais étudié",
+      "hint": "{si + j'avais étudié}"
+    },
+    {
+      "id": "i-si-j-avais-fait",
+      "type": "respond",
+      "situation": "General regret: 'If I had done that...'",
+      "cue": "If I had done that",
+      "answer": "si j'avais fait ça",
+      "hint": "{si + j'avais fait ça}"
+    },
+    {
+      "id": "i-je-serais-venu",
+      "type": "respond",
+      "situation": "Say what you would have done: 'I would have come'",
+      "cue": "I would have come",
+      "answer": "je serais venu",
+      "hint": "{je + serais venu}",
+      "mistakes": [
+        {
+          "answer": "je viendrais",
+          "feedback": "That's not past! For 'would have come', use: je serais venu"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aurais-reussi",
+      "type": "respond",
+      "situation": "Express missed opportunity: 'I would have succeeded'",
+      "cue": "I would have succeeded",
+      "answer": "j'aurais réussi",
+      "hint": "{j'aurais réussi}"
+    },
+    {
+      "id": "i-si-j-avais-pu",
+      "type": "respond",
+      "situation": "Express inability regret: 'If I could have...'",
+      "cue": "If I could have",
+      "answer": "si j'avais pu",
+      "hint": "{si + j'avais pu}"
+    }
+  ]
+}

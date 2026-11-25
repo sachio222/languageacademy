@@ -1,0 +1,269 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-22-inversion-questions",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Inversion Questions - Formal Register",
+  "description": "Master formal French questions with inversion: Pourquoi les nuages sont-ils blancs? Comment fait-on ça? Où vas-tu? Add stylistic range!",
+  "vocabulary": [
+    {
+      "word_id": "comment-fais-tu-ca-fr",
+      "fr": "Comment fais-tu ça?",
+      "gloss": "How do you do that?",
+      "note": "inversion: verb-subject with hyphen"
+    },
+    {
+      "word_id": "ou-vas-tu-fr",
+      "fr": "Où vas-tu?",
+      "gloss": "Where are you going?",
+      "note": "inversion with aller"
+    },
+    {
+      "word_id": "pourquoi-court-il-fr",
+      "fr": "Pourquoi court-il?",
+      "gloss": "Why does he run?",
+      "note": "inversion with courir"
+    },
+    {
+      "word_id": "pourquoi-a-t-il-ca-fr",
+      "fr": "Pourquoi a-t-il ça?",
+      "gloss": "Why does he have that?",
+      "note": "⭐ -t- liaison: vowel verb + il"
+    },
+    {
+      "word_id": "ou-va-t-elle-fr",
+      "fr": "Où va-t-elle?",
+      "gloss": "Where is she going?",
+      "note": "⭐ -t- liaison: va + elle"
+    },
+    {
+      "word_id": "pourquoi-les-nuages-sont-ils-blancs-fr",
+      "fr": "Pourquoi les nuages sont-ils blancs?",
+      "gloss": "Why are clouds white?",
+      "note": "complex subject: noun + inverted pronoun"
+    },
+    {
+      "word_id": "comment-nage-une-tortue-fr",
+      "fr": "Comment nage une tortue?",
+      "gloss": "How does a turtle swim?",
+      "note": "simple inversion with noun"
+    },
+    {
+      "word_id": "ou-vont-les-oiseaux-en-hiver-fr",
+      "fr": "Où vont les oiseaux en hiver?",
+      "gloss": "Where do birds go in winter?",
+      "note": "inversion with plural noun"
+    },
+    {
+      "word_id": "quand-fleurissent-les-plantes-fr",
+      "fr": "Quand fleurissent les plantes?",
+      "gloss": "When do plants bloom?",
+      "note": "formal inversion with plants"
+    },
+    {
+      "word_id": "comment-fait-on-ca-fr",
+      "fr": "Comment fait-on ça?",
+      "gloss": "How does one do that?",
+      "note": "inversion with 'on'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-verb-subject-inversion",
+      "term": "Verb-Subject Inversion",
+      "definition": "In formal French, flip the verb and subject with a hyphen",
+      "example": "Informal: Comment est-ce que tu fais ça? Formal: {Comment fais-tu ça?}"
+    },
+    {
+      "id": "c-when-to-use-inversion",
+      "term": "When to Use Inversion",
+      "definition": "More common in: formal writing, literature, professional settings, with question words",
+      "example": "{Où vas-tu?} (Where are you going?), {Quand arrives-tu?} (When do you arrive?)"
+    },
+    {
+      "id": "c-the-t-liaison-trick",
+      "term": "The -t- Liaison Trick",
+      "definition": "Add -t- between vowel-ending verbs and il/elle/on for pronunciation",
+      "example": "{a + il} → {a-t-il} ({Pourquoi a-t-il ça?}), {va + elle} → {va-t-elle} ({Où va-t-elle?})"
+    },
+    {
+      "id": "c-with-complex-subjects",
+      "term": "With Complex Subjects",
+      "definition": "When subject is a noun phrase, keep noun then add inverted pronoun",
+      "example": "{Les nuages sont-ils blancs?} (noun '{les nuages}' + inverted '{sont-ils}')"
+    },
+    {
+      "id": "c-both-forms-are-correct",
+      "term": "Both Forms Are Correct!",
+      "definition": "Students can choose based on formality level - both are valid French",
+      "example": "Casual: Comment est-ce que tu fais ça? Formal: {Comment fais-tu ça?} (same meaning)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-comment-fais-tu-ca",
+      "type": "respond",
+      "situation": "Ask 'How do you do that?' (FORMAL inversion)",
+      "cue": "How do you do that? (formal)",
+      "answer": "comment fais-tu ça?",
+      "accept": [
+        "comment fais-tu ça"
+      ],
+      "hint": "{comment + fais-tu + ça}"
+    },
+    {
+      "id": "i-ou-vas-tu",
+      "type": "respond",
+      "situation": "Ask 'Where are you going?' (FORMAL inversion)",
+      "cue": "Where are you going? (formal)",
+      "answer": "où vas-tu?",
+      "accept": [
+        "où vas-tu"
+      ],
+      "hint": "{où + vas-tu}"
+    },
+    {
+      "id": "i-quand-arrives-tu",
+      "type": "respond",
+      "situation": "Ask 'When do you arrive?' (FORMAL inversion)",
+      "cue": "When do you arrive? (formal)",
+      "answer": "quand arrives-tu?",
+      "accept": [
+        "quand arrives-tu"
+      ],
+      "hint": "{quand + arrives-tu}"
+    },
+    {
+      "id": "i-pourquoi-court-il",
+      "type": "respond",
+      "situation": "Ask 'Why does he run?' (FORMAL inversion)",
+      "cue": "Why does he run? (formal)",
+      "answer": "pourquoi court-il?",
+      "accept": [
+        "pourquoi court-il"
+      ],
+      "hint": "{pourquoi + court-il}"
+    },
+    {
+      "id": "i-ou-vit-elle",
+      "type": "respond",
+      "situation": "Ask 'Where does she live?' (FORMAL inversion)",
+      "cue": "Where does she live? (formal)",
+      "answer": "où vit-elle?",
+      "accept": [
+        "où vit-elle"
+      ],
+      "hint": "{où + vit-elle}"
+    },
+    {
+      "id": "i-pourquoi-a-t-il",
+      "type": "respond",
+      "situation": "Ask 'Why does he have that?' (FORMAL with -t-)",
+      "cue": "Why does he have that? (formal)",
+      "answer": "pourquoi a-t-il ça?",
+      "accept": [
+        "pourquoi a-t-il ça"
+      ],
+      "hint": "pourquoi + a-t-il + ça (need -t- between 'a' and '{il}'!)"
+    },
+    {
+      "id": "i-ou-va-t-elle",
+      "type": "respond",
+      "situation": "Ask 'Where is she going?' (FORMAL with -t-)",
+      "cue": "Where is she going? (formal)",
+      "answer": "où va-t-elle?",
+      "accept": [
+        "où va-t-elle"
+      ],
+      "hint": "où + va-t-elle (need -t- between '{va}' and '{elle}'!)"
+    },
+    {
+      "id": "i-quand-arrive-t-il",
+      "type": "respond",
+      "situation": "Ask 'When does he arrive?' (FORMAL with -t-)",
+      "cue": "When does he arrive? (formal)",
+      "answer": "quand arrive-t-il?",
+      "accept": [
+        "quand arrive-t-il"
+      ],
+      "hint": "{quand + arrive-t-il}"
+    },
+    {
+      "id": "i-pourquoi-les-nuages-sont",
+      "type": "respond",
+      "situation": "Ask 'Why are clouds white?' (FORMAL with noun)",
+      "cue": "Why are clouds white? (formal)",
+      "answer": "pourquoi les nuages sont-ils blancs?",
+      "accept": [
+        "pourquoi les nuages sont-ils blancs"
+      ],
+      "hint": "{pourquoi + les nuages sont-ils blancs}"
+    },
+    {
+      "id": "i-comment-nage-une-tortue",
+      "type": "respond",
+      "situation": "Ask 'How does a turtle swim?' (FORMAL)",
+      "cue": "How does a turtle swim? (formal)",
+      "answer": "comment nage une tortue?",
+      "accept": [
+        "comment nage une tortue"
+      ],
+      "hint": "{comment + nage une tortue}"
+    },
+    {
+      "id": "i-ou-vont-les-oiseaux",
+      "type": "respond",
+      "situation": "Ask 'Where do birds go in winter?' (FORMAL)",
+      "cue": "Where do birds go in winter? (formal)",
+      "answer": "où vont les oiseaux en hiver?",
+      "accept": [
+        "où vont les oiseaux en hiver"
+      ],
+      "hint": "{où + vont les oiseaux en hiver}"
+    },
+    {
+      "id": "i-comment-fait-on-ca",
+      "type": "respond",
+      "situation": "Ask 'How does one do that?' (FORMAL with '{on}')",
+      "cue": "How does one do that? (formal)",
+      "answer": "comment fait-on ça?",
+      "accept": [
+        "comment fait-on ça"
+      ],
+      "hint": "{comment + fait-on + ça}"
+    },
+    {
+      "id": "i-quand-fleurissent-les-plantes",
+      "type": "respond",
+      "situation": "Ask 'When do plants bloom?' (FORMAL)",
+      "cue": "When do plants bloom? (formal)",
+      "answer": "quand fleurissent les plantes?",
+      "accept": [
+        "quand fleurissent les plantes"
+      ],
+      "hint": "{quand + fleurissent les plantes}"
+    },
+    {
+      "id": "i-comment-vole-un-oiseau",
+      "type": "respond",
+      "situation": "Ask 'How does a bird fly?' (FORMAL)",
+      "cue": "How does a bird fly? (formal)",
+      "answer": "comment vole un oiseau?",
+      "accept": [
+        "comment vole un oiseau"
+      ],
+      "hint": "{comment + vole un oiseau}"
+    },
+    {
+      "id": "i-comment-fais-tu-ca-2",
+      "type": "respond",
+      "situation": "Transform: '{Comment est-ce que tu fais ça?}' → formal inversion",
+      "cue": "How do you do that? (formal)",
+      "answer": "comment fais-tu ça?",
+      "accept": [
+        "comment fais-tu ça"
+      ],
+      "hint": "Remove est-ce que, invert: comment fais-tu ça"
+    }
+  ]
+}

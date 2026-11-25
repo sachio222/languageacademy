@@ -1,0 +1,618 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-27-unit-6-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Basic Fluency Practice - Fill in the Blanks",
+  "description": "Complete sentences using progressive tenses, communication verbs, and essential vocabulary from this unit!",
+  "can_do": [
+    "Use progressive and future tenses naturally",
+    "Combine communication verbs in complex sentences",
+    "Apply this unit's advanced structures in context"
+  ],
+  "items": [
+    {
+      "id": "i-en-train-de",
+      "type": "gapfill",
+      "text": "Je suis ___ manger.",
+      "blanks": [
+        {
+          "answer": "en train de"
+        }
+      ],
+      "gloss": "'I am eating' (progressive present)",
+      "hint": "progressive: in the process of"
+    },
+    {
+      "id": "i-en-train-de-2",
+      "type": "gapfill",
+      "text": "Il est ___ parler français.",
+      "blanks": [
+        {
+          "answer": "en train de"
+        }
+      ],
+      "gloss": "'He is speaking French' (progressive)",
+      "hint": "progressive: in the process of"
+    },
+    {
+      "id": "i-en-train-de-3",
+      "type": "gapfill",
+      "text": "Nous sommes ___ prendre le train.",
+      "blanks": [
+        {
+          "answer": "en train de"
+        }
+      ],
+      "gloss": "'We are taking the train' (progressive)",
+      "hint": "progressive form"
+    },
+    {
+      "id": "i-vais",
+      "type": "gapfill",
+      "text": "Je ___ partir demain.",
+      "blanks": [
+        {
+          "answer": "vais"
+        }
+      ],
+      "gloss": "I am going to leave tomorrow",
+      "hint": "aller conjugated for je"
+    },
+    {
+      "id": "i-vas",
+      "type": "gapfill",
+      "text": "Tu ___ voir le film?",
+      "blanks": [
+        {
+          "answer": "vas"
+        }
+      ],
+      "gloss": "Are you going to see the movie?",
+      "hint": "aller for tu"
+    },
+    {
+      "id": "i-allons",
+      "type": "gapfill",
+      "text": "Nous ___ manger au restaurant.",
+      "blanks": [
+        {
+          "answer": "allons"
+        }
+      ],
+      "gloss": "We are going to eat at the restaurant",
+      "hint": "aller for nous"
+    },
+    {
+      "id": "i-vont",
+      "type": "gapfill",
+      "text": "Ils ___ venir avec nous.",
+      "blanks": [
+        {
+          "answer": "vont"
+        }
+      ],
+      "gloss": "They are going to come with us",
+      "hint": "aller for ils"
+    },
+    {
+      "id": "i-dis",
+      "type": "gapfill",
+      "text": "Je ___ bonjour.",
+      "blanks": [
+        {
+          "answer": "dis"
+        }
+      ],
+      "gloss": "I say hello",
+      "hint": "dire for je"
+    },
+    {
+      "id": "i-dis-2",
+      "type": "gapfill",
+      "text": "Tu ___ la vérité.",
+      "blanks": [
+        {
+          "answer": "dis"
+        }
+      ],
+      "gloss": "You tell the truth",
+      "hint": "dire for tu"
+    },
+    {
+      "id": "i-dit",
+      "type": "gapfill",
+      "text": "Il me ___ que c'est bon.",
+      "blanks": [
+        {
+          "answer": "dit"
+        }
+      ],
+      "gloss": "He tells me that it's good",
+      "hint": "dire for il"
+    },
+    {
+      "id": "i-dites",
+      "type": "gapfill",
+      "text": "Vous ___ toujours ça!",
+      "blanks": [
+        {
+          "answer": "dites"
+        }
+      ],
+      "gloss": "You always say that!",
+      "hint": "dire for vous (irregular!)"
+    },
+    {
+      "id": "i-prends",
+      "type": "gapfill",
+      "text": "Je ___ le train.",
+      "blanks": [
+        {
+          "answer": "prends"
+        }
+      ],
+      "gloss": "I take the train",
+      "hint": "prendre for je"
+    },
+    {
+      "id": "i-prends-2",
+      "type": "gapfill",
+      "text": "Tu ___ le bus?",
+      "blanks": [
+        {
+          "answer": "prends"
+        }
+      ],
+      "gloss": "Are you taking the bus?",
+      "hint": "prendre for tu"
+    },
+    {
+      "id": "i-prenons",
+      "type": "gapfill",
+      "text": "Nous ___ un café.",
+      "blanks": [
+        {
+          "answer": "prenons"
+        }
+      ],
+      "gloss": "We're having a coffee",
+      "hint": "prendre for nous"
+    },
+    {
+      "id": "i-comprends",
+      "type": "gapfill",
+      "text": "Je ___ le français.",
+      "blanks": [
+        {
+          "answer": "comprends"
+        }
+      ],
+      "gloss": "I understand French",
+      "hint": "comprendre for je"
+    },
+    {
+      "id": "i-comprends-2",
+      "type": "gapfill",
+      "text": "Tu ___ la question?",
+      "blanks": [
+        {
+          "answer": "comprends"
+        }
+      ],
+      "gloss": "Do you understand the question?",
+      "hint": "comprendre for tu"
+    },
+    {
+      "id": "i-apprends",
+      "type": "gapfill",
+      "text": "J'___ le français.",
+      "blanks": [
+        {
+          "answer": "apprends"
+        }
+      ],
+      "gloss": "I learn French",
+      "hint": "apprendre for je (j' before vowel)"
+    },
+    {
+      "id": "i-apprenons",
+      "type": "gapfill",
+      "text": "Nous ___ ensemble.",
+      "blanks": [
+        {
+          "answer": "apprenons"
+        }
+      ],
+      "gloss": "We learn together",
+      "hint": "apprendre for nous"
+    },
+    {
+      "id": "i-mets",
+      "type": "gapfill",
+      "text": "Je ___ mon manteau.",
+      "blanks": [
+        {
+          "answer": "mets"
+        }
+      ],
+      "gloss": "I put on my coat",
+      "hint": "mettre for je"
+    },
+    {
+      "id": "i-mets-2",
+      "type": "gapfill",
+      "text": "Tu ___ la table?",
+      "blanks": [
+        {
+          "answer": "mets"
+        }
+      ],
+      "gloss": "Are you setting the table?",
+      "hint": "mettre for tu"
+    },
+    {
+      "id": "i-mettons",
+      "type": "gapfill",
+      "text": "Nous ___ nos livres ici.",
+      "blanks": [
+        {
+          "answer": "mettons"
+        }
+      ],
+      "gloss": "We put our books here",
+      "hint": "mettre for nous (double tt!)"
+    },
+    {
+      "id": "i-demande",
+      "type": "gapfill",
+      "text": "Je ___ de l'aide.",
+      "blanks": [
+        {
+          "answer": "demande"
+        }
+      ],
+      "gloss": "I ask for help",
+      "hint": "demander for je"
+    },
+    {
+      "id": "i-demandes",
+      "type": "gapfill",
+      "text": "Tu ___ le prix?",
+      "blanks": [
+        {
+          "answer": "demandes"
+        }
+      ],
+      "gloss": "Are you asking the price?",
+      "hint": "demander for tu"
+    },
+    {
+      "id": "i-demande-2",
+      "type": "gapfill",
+      "text": "Il me ___ de venir.",
+      "blanks": [
+        {
+          "answer": "demande"
+        }
+      ],
+      "gloss": "He asks me to come",
+      "hint": "demander for il"
+    },
+    {
+      "id": "i-commande",
+      "type": "gapfill",
+      "text": "Je ___ un café.",
+      "blanks": [
+        {
+          "answer": "commande"
+        }
+      ],
+      "gloss": "I order a coffee",
+      "hint": "commander for je"
+    },
+    {
+      "id": "i-commandez",
+      "type": "gapfill",
+      "text": "Vous ___ une pizza?",
+      "blanks": [
+        {
+          "answer": "commandez"
+        }
+      ],
+      "gloss": "Are you ordering a pizza?",
+      "hint": "commander for vous"
+    },
+    {
+      "id": "i-commandons",
+      "type": "gapfill",
+      "text": "Nous ___ du pain.",
+      "blanks": [
+        {
+          "answer": "commandons"
+        }
+      ],
+      "gloss": "We order bread",
+      "hint": "commander for nous"
+    },
+    {
+      "id": "i-besoin",
+      "type": "gapfill",
+      "text": "J'ai ___ d'aide.",
+      "blanks": [
+        {
+          "answer": "besoin"
+        }
+      ],
+      "gloss": "I need help",
+      "hint": "avoir besoin de = to need"
+    },
+    {
+      "id": "i-besoin-2",
+      "type": "gapfill",
+      "text": "Tu as ___ de partir.",
+      "blanks": [
+        {
+          "answer": "besoin"
+        }
+      ],
+      "gloss": "You need to leave",
+      "hint": "{avoir besoin de}"
+    },
+    {
+      "id": "i-besoin-3",
+      "type": "gapfill",
+      "text": "Nous avons ___ de manger.",
+      "blanks": [
+        {
+          "answer": "besoin"
+        }
+      ],
+      "gloss": "We need to eat",
+      "hint": "{avoir besoin de}"
+    },
+    {
+      "id": "i-de",
+      "type": "gapfill",
+      "text": "J'ai besoin ___ manger.",
+      "blanks": [
+        {
+          "answer": "de"
+        }
+      ],
+      "gloss": "'I need to eat' (preposition before verb)",
+      "hint": "preposition used with besoin + infinitive"
+    },
+    {
+      "id": "i-famille",
+      "type": "gapfill",
+      "text": "Ma ___ est grande.",
+      "blanks": [
+        {
+          "answer": "famille"
+        }
+      ],
+      "gloss": "My family is big",
+      "hint": "family (feminine)"
+    },
+    {
+      "id": "i-pere",
+      "type": "gapfill",
+      "text": "Mon ___ est gentil.",
+      "blanks": [
+        {
+          "answer": "père"
+        }
+      ],
+      "gloss": "My father is kind",
+      "hint": "father"
+    },
+    {
+      "id": "i-mere",
+      "type": "gapfill",
+      "text": "Ma ___ parle français.",
+      "blanks": [
+        {
+          "answer": "mère"
+        }
+      ],
+      "gloss": "My mother speaks French",
+      "hint": "mother"
+    },
+    {
+      "id": "i-frere",
+      "type": "gapfill",
+      "text": "Mon ___ a dix ans.",
+      "blanks": [
+        {
+          "answer": "frère"
+        }
+      ],
+      "gloss": "My brother is ten years old",
+      "hint": "brother"
+    },
+    {
+      "id": "i-question",
+      "type": "gapfill",
+      "text": "J'ai une ___.",
+      "blanks": [
+        {
+          "answer": "question"
+        }
+      ],
+      "gloss": "I have a question",
+      "hint": "question (feminine)"
+    },
+    {
+      "id": "i-fois",
+      "type": "gapfill",
+      "text": "C'est la première ___.",
+      "blanks": [
+        {
+          "answer": "fois"
+        }
+      ],
+      "gloss": "It's the first time",
+      "hint": "time/occasion (feminine)"
+    },
+    {
+      "id": "i-annee",
+      "type": "gapfill",
+      "text": "Une ___ a 365 jours.",
+      "blanks": [
+        {
+          "answer": "année"
+        }
+      ],
+      "gloss": "A year has 365 days",
+      "hint": "year (feminine)"
+    },
+    {
+      "id": "i-moment",
+      "type": "gapfill",
+      "text": "En ce ___, je suis occupé.",
+      "blanks": [
+        {
+          "answer": "moment"
+        }
+      ],
+      "gloss": "Right now, I am busy",
+      "hint": "moment (masculine)"
+    },
+    {
+      "id": "i-semaine",
+      "type": "gapfill",
+      "text": "Une ___ a sept jours.",
+      "blanks": [
+        {
+          "answer": "semaine"
+        }
+      ],
+      "gloss": "A week has seven days",
+      "hint": "week (feminine)"
+    },
+    {
+      "id": "i-ville",
+      "type": "gapfill",
+      "text": "Paris est une belle ___.",
+      "blanks": [
+        {
+          "answer": "ville"
+        }
+      ],
+      "gloss": "Paris is a beautiful city",
+      "hint": "city (feminine)"
+    },
+    {
+      "id": "i-monde",
+      "type": "gapfill",
+      "text": "Le ___ est grand.",
+      "blanks": [
+        {
+          "answer": "monde"
+        }
+      ],
+      "gloss": "The world is big",
+      "hint": "world (masculine)"
+    },
+    {
+      "id": "i-d-apprendre",
+      "type": "gapfill",
+      "text": "J'ai besoin ___ le français.",
+      "blanks": [
+        {
+          "answer": "d'apprendre"
+        }
+      ],
+      "gloss": "I need to learn French",
+      "hint": "de + apprendre (elision)"
+    },
+    {
+      "id": "i-demander",
+      "type": "gapfill",
+      "text": "Je vais ___ la question.",
+      "blanks": [
+        {
+          "answer": "demander"
+        }
+      ],
+      "gloss": "I am going to ask the question",
+      "hint": "to ask"
+    },
+    {
+      "id": "i-prendre",
+      "type": "gapfill",
+      "text": "Nous sommes en train de ___ le train.",
+      "blanks": [
+        {
+          "answer": "prendre"
+        }
+      ],
+      "gloss": "We are taking the train",
+      "hint": "to take"
+    },
+    {
+      "id": "i-mettre",
+      "type": "gapfill",
+      "text": "Elle va ___ son manteau.",
+      "blanks": [
+        {
+          "answer": "mettre"
+        }
+      ],
+      "gloss": "She is going to put on her coat",
+      "hint": "to put"
+    },
+    {
+      "id": "i-commander",
+      "type": "gapfill",
+      "text": "Ils vont ___ une pizza.",
+      "blanks": [
+        {
+          "answer": "commander"
+        }
+      ],
+      "gloss": "They are going to order a pizza",
+      "hint": "to order"
+    },
+    {
+      "id": "i-dis-3",
+      "type": "gapfill",
+      "text": "Tu me ___ toujours la vérité.",
+      "blanks": [
+        {
+          "answer": "dis"
+        }
+      ],
+      "gloss": "You always tell me the truth",
+      "hint": "dire for tu"
+    },
+    {
+      "id": "i-comprends-3",
+      "type": "gapfill",
+      "text": "Je ne ___ pas la question.",
+      "blanks": [
+        {
+          "answer": "comprends"
+        }
+      ],
+      "gloss": "I don't understand the question",
+      "hint": "comprendre for je"
+    },
+    {
+      "id": "i-aller",
+      "type": "gapfill",
+      "text": "Ma famille va ___ à Paris.",
+      "blanks": [
+        {
+          "answer": "aller"
+        }
+      ],
+      "gloss": "My family is going to go to Paris",
+      "hint": "infinitive: to go"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

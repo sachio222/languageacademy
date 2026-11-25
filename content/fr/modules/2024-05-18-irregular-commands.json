@@ -1,0 +1,202 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-18-irregular-commands",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Irregular Commands - {être, avoir, aller, faire}",
+  "description": "Essential irregular commands: Sois! (Be!), Aie! (Have!), Va! (Go!), Fais! (Do/Make!)",
+  "can_do": [
+    "Use irregular commands (Be!, Have!, Go!, Do!)",
+    "Say common phrases like '{Vas-y!}' (Go for it!)",
+    "Master the most frequently used command forms"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "sois-fr",
+      "fr": "Sois!",
+      "gloss": "Be! (informal)",
+      "note": "⭐ être command - tu form"
+    },
+    {
+      "word_id": "soyez-fr",
+      "fr": "Soyez!",
+      "gloss": "Be! (formal/plural)",
+      "note": "être command - vous form"
+    },
+    {
+      "word_id": "sois-gentil-fr",
+      "fr": "Sois gentil!",
+      "gloss": "Be nice!",
+      "note": "common command"
+    },
+    {
+      "word_id": "aie-fr",
+      "fr": "Aie!",
+      "gloss": "Have! (informal)",
+      "note": "avoir command - tu form"
+    },
+    {
+      "word_id": "ayez-fr",
+      "fr": "Ayez!",
+      "gloss": "Have! (formal/plural)",
+      "note": "avoir command - vous form"
+    },
+    {
+      "word_id": "aie-confiance-fr",
+      "fr": "Aie confiance!",
+      "gloss": "Have confidence!",
+      "note": "encouragement"
+    },
+    {
+      "word_id": "va-fr",
+      "fr": "Va!",
+      "gloss": "Go! (informal)",
+      "note": "⭐ aller command - tu form"
+    },
+    {
+      "word_id": "allez-fr",
+      "fr": "Allez!",
+      "gloss": "Go! (formal/plural)",
+      "note": "aller command - vous form"
+    },
+    {
+      "word_id": "vas-y-fr",
+      "fr": "Vas-y!",
+      "gloss": "Go ahead! / Go for it!",
+      "note": "⭐⭐⭐ extremely common phrase!"
+    },
+    {
+      "word_id": "allons-y-fr",
+      "fr": "Allons-y!",
+      "gloss": "Let's go!",
+      "note": "⭐ group command"
+    },
+    {
+      "word_id": "fais-fr",
+      "fr": "Fais!",
+      "gloss": "Do! / Make! (informal)",
+      "note": "faire command - tu form"
+    },
+    {
+      "word_id": "faites-fr",
+      "fr": "Faites!",
+      "gloss": "Do! / Make! (formal/plural)",
+      "note": "faire command - vous form"
+    },
+    {
+      "word_id": "fais-attention-fr",
+      "fr": "Fais attention!",
+      "gloss": "Pay attention! / Be careful!",
+      "note": "⭐⭐ safety/warning"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-most-common-verbs-irregular",
+      "term": "Most Common Verbs = Irregular Commands",
+      "definition": "être, avoir, aller, and faire don't follow normal command patterns",
+      "example": "{Sois gentil!} (Be nice!), {Aie courage!} (Have courage!), {Va là-bas!} (Go over there!)"
+    },
+    {
+      "id": "c-must-memorize-these",
+      "term": "Must Memorize These",
+      "definition": "These irregular forms are used constantly - worth memorizing!",
+      "example": "{Vas-y!} (Go ahead! / Go for it!) - extremely common phrase"
+    },
+    {
+      "id": "c-etre-commands",
+      "term": "être Commands",
+      "definition": "{tu: Sois! vous: Soyez! nous: Soyons!}",
+      "example": "{Sois sage!} (Be good!), {Soyez gentil!} (Be kind!)"
+    },
+    {
+      "id": "c-avoir-commands",
+      "term": "avoir Commands",
+      "definition": "{tu: Aie! vous: Ayez! nous: Ayons!}",
+      "example": "{Aie confiance!} (Have confidence!), {Ayez patience!} (Have patience!)"
+    },
+    {
+      "id": "c-aller-commands",
+      "term": "aller Commands",
+      "definition": "tu: Va! vous: Allez! nous: Allons! Special: Vas-y!",
+      "example": "{Va là-bas!} (Go over there!), {Allons-y!} (Let's go!), {Vas-y!} (Go ahead!)"
+    },
+    {
+      "id": "c-faire-commands",
+      "term": "faire Commands",
+      "definition": "{tu: Fais! vous: Faites! nous: Faisons!}",
+      "example": "{Fais attention!} (Pay attention! / Be careful!), {Faites ça!} (Do that!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "irreg-cmd-1",
+      "type": "respond",
+      "situation": "Command: 'Be nice!' (informal)",
+      "cue": "Be nice! (to a friend)",
+      "answer": "sois gentil",
+      "hint": "{Sois + gentil!}",
+      "mistakes": [
+        {
+          "answer": "es gentil",
+          "feedback": "Use command form '{Sois}', not 'es'"
+        }
+      ]
+    },
+    {
+      "id": "irreg-cmd-2",
+      "type": "respond",
+      "situation": "Command: 'Have courage!' (informal)",
+      "cue": "Have courage!",
+      "answer": "aie courage",
+      "hint": "{Aie + courage!}"
+    },
+    {
+      "id": "irreg-cmd-3",
+      "type": "respond",
+      "situation": "Command: 'Go over there!' (informal)",
+      "cue": "Go over there!",
+      "answer": "va là-bas",
+      "accept": [
+        "va la-bas"
+      ],
+      "hint": "{Va + là-bas!}"
+    },
+    {
+      "id": "irreg-cmd-4",
+      "type": "respond",
+      "situation": "Say the famous phrase 'Go ahead!' or 'Go for it!'",
+      "cue": "Go ahead!",
+      "answer": "vas-y",
+      "accept": [
+        "vas y"
+      ],
+      "hint": "Va + -s + -y! (special form)",
+      "mistakes": [
+        {
+          "answer": "va-y",
+          "feedback": "Add -s before -y: Vas-y! (special form)"
+        }
+      ]
+    },
+    {
+      "id": "irreg-cmd-5",
+      "type": "respond",
+      "situation": "Command: 'Pay attention!' or 'Be careful!' (informal)",
+      "cue": "Be careful! / Pay attention!",
+      "answer": "fais attention",
+      "hint": "{Fais + attention!}"
+    },
+    {
+      "id": "irreg-cmd-6",
+      "type": "respond",
+      "situation": "Command: 'Let's go!' (nous form)",
+      "cue": "Let's go!",
+      "answer": "allons-y",
+      "accept": [
+        "allons y"
+      ],
+      "hint": "{Allons + -y!}"
+    }
+  ]
+}

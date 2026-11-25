@@ -1,0 +1,217 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-23-embedded-questions",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Embedded Questions - Polite Indirect Questions",
+  "description": "Soften questions by embedding them: Je me demande pourquoi c'est comme ça. Je ne sais pas comment on fait ça. Natural conversation flow!",
+  "vocabulary": [
+    {
+      "word_id": "je-me-demande-fr",
+      "fr": "je me demande",
+      "gloss": "I wonder",
+      "note": "⭐ followed by question word + statement order"
+    },
+    {
+      "word_id": "je-ne-sais-pas-fr",
+      "fr": "je ne sais pas",
+      "gloss": "I don't know",
+      "note": "⭐ followed by question word + statement order"
+    },
+    {
+      "word_id": "peux-tu-me-dire-fr",
+      "fr": "peux-tu me dire",
+      "gloss": "can you tell me",
+      "note": "⭐ polite way to ask - followed by question"
+    },
+    {
+      "word_id": "je-me-demande-pourquoi-c-est-comme-ca-fr",
+      "fr": "Je me demande pourquoi c'est comme ça",
+      "gloss": "I wonder why it's like that",
+      "note": "embedded question - no est-ce que!"
+    },
+    {
+      "word_id": "je-ne-sais-pas-comment-on-fait-ca-fr",
+      "fr": "Je ne sais pas comment on fait ça",
+      "gloss": "I don't know how we do that",
+      "note": "embedded question - statement order"
+    },
+    {
+      "word_id": "peux-tu-me-dire-ou-est-la-gare-fr",
+      "fr": "Peux-tu me dire où est la gare?",
+      "gloss": "Can you tell me where the station is?",
+      "note": "polite question"
+    },
+    {
+      "word_id": "tu-sais-pourquoi-il-fait-ca-fr",
+      "fr": "Tu sais pourquoi il fait ça?",
+      "gloss": "Do you know why he does that?",
+      "note": "natural conversation"
+    },
+    {
+      "word_id": "on-ne-comprend-pas-comment-ca-marche-fr",
+      "fr": "On ne comprend pas comment ça marche",
+      "gloss": "We don't understand how that works",
+      "note": "embedded understanding question"
+    },
+    {
+      "word_id": "je-me-demande-comment-ca-marche-fr",
+      "fr": "Je me demande comment ça marche",
+      "gloss": "I wonder how that works",
+      "note": "curiosity expression"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-questions-inside-statements",
+      "term": "Questions Inside Statements",
+      "definition": "Embed a question inside a statement to make it softer and more polite",
+      "example": "Direct: Pourquoi est-ce que c'est comme ça? Embedded: {Je me demande pourquoi c'est comme ça.}"
+    },
+    {
+      "id": "c-three-common-starters",
+      "term": "Three Common Starters",
+      "definition": "'{Je me demande}' (I wonder), '{Je ne sais pas}' (I don't know), '{Peux-tu me dire}' (Can you tell me)",
+      "example": "{Je me demande comment..., Je ne sais pas pourquoi..., Peux-tu me dire où...?}"
+    },
+    {
+      "id": "c-no-est-ce-que",
+      "term": "NO est-ce que After These Phrases!",
+      "definition": "After embedding starters, use statement word order - no est-ce que needed",
+      "example": "{Je me demande pourquoi le ciel est bleu} (NOT: {Je me demande pourquoi est-ce que le ciel est bleu})"
+    },
+    {
+      "id": "c-makes-questions-more-polite",
+      "term": "Makes Questions More Polite",
+      "definition": "Embedded questions sound less direct and more conversational",
+      "example": "Direct: Où est la gare? Polite: {Peux-tu me dire où est la gare?}"
+    },
+    {
+      "id": "c-natural-conversation-flow",
+      "term": "Natural Conversation Flow",
+      "definition": "Native speakers use embedded questions constantly in casual speech",
+      "example": "{Tu sais pourquoi il fait ça? On ne comprend pas comment ça marche.}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-me-demande-pourquoi",
+      "type": "respond",
+      "situation": "I wonder why it's like that",
+      "answer": "je me demande pourquoi c'est comme ça",
+      "hint": "je me demande + pourquoi c'est comme ça (no est-ce que!)"
+    },
+    {
+      "id": "i-je-me-demande-comment",
+      "type": "respond",
+      "situation": "I wonder how that works",
+      "answer": "je me demande comment ça marche",
+      "hint": "{je me demande + comment ça marche}"
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-2",
+      "type": "respond",
+      "situation": "I wonder why the sky is blue",
+      "answer": "je me demande pourquoi le ciel est bleu",
+      "hint": "{je me demande + pourquoi le ciel est bleu}"
+    },
+    {
+      "id": "i-je-me-demande-ou",
+      "type": "respond",
+      "situation": "I wonder where he is",
+      "answer": "je me demande où il est",
+      "hint": "{je me demande + où il est}"
+    },
+    {
+      "id": "i-je-ne-sais-pas",
+      "type": "respond",
+      "situation": "I don't know how we do that",
+      "answer": "je ne sais pas comment on fait ça",
+      "hint": "{je ne sais pas + comment on fait ça}"
+    },
+    {
+      "id": "i-je-ne-sais-pas-2",
+      "type": "respond",
+      "situation": "I don't know why he does that",
+      "answer": "je ne sais pas pourquoi il fait ça",
+      "hint": "{je ne sais pas + pourquoi il fait ça}"
+    },
+    {
+      "id": "i-je-ne-sais-pas-3",
+      "type": "respond",
+      "situation": "I don't know how a turtle swims",
+      "answer": "je ne sais pas comment une tortue nage",
+      "hint": "{je ne sais pas + comment une tortue nage}"
+    },
+    {
+      "id": "i-je-ne-sais-pas-4",
+      "type": "respond",
+      "situation": "I don't know where the station is",
+      "answer": "je ne sais pas où est la gare",
+      "hint": "{je ne sais pas + où est la gare}"
+    },
+    {
+      "id": "i-peux-tu-me-dire",
+      "type": "respond",
+      "situation": "Can you tell me where the station is?",
+      "answer": "peux-tu me dire où est la gare?",
+      "accept": [
+        "peux-tu me dire où est la gare"
+      ],
+      "hint": "{peux-tu me dire + où est la gare}"
+    },
+    {
+      "id": "i-peux-tu-me-dire-2",
+      "type": "respond",
+      "situation": "Can you tell me how that works?",
+      "answer": "peux-tu me dire comment ça marche?",
+      "accept": [
+        "peux-tu me dire comment ça marche"
+      ],
+      "hint": "{peux-tu me dire + comment ça marche}"
+    },
+    {
+      "id": "i-peux-tu-me-dire-3",
+      "type": "respond",
+      "situation": "Can you tell me why he does that?",
+      "answer": "peux-tu me dire pourquoi il fait ça?",
+      "accept": [
+        "peux-tu me dire pourquoi il fait ça"
+      ],
+      "hint": "{peux-tu me dire + pourquoi il fait ça}"
+    },
+    {
+      "id": "i-tu-sais-pourquoi-il",
+      "type": "respond",
+      "situation": "Do you know why he does that?",
+      "answer": "tu sais pourquoi il fait ça?",
+      "accept": [
+        "tu sais pourquoi il fait ça"
+      ],
+      "hint": "{tu sais + pourquoi il fait ça}"
+    },
+    {
+      "id": "i-on-ne-comprend-pas",
+      "type": "respond",
+      "situation": "We don't understand why it's like that",
+      "answer": "on ne comprend pas pourquoi c'est comme ça",
+      "hint": "{on ne comprend pas + pourquoi c'est comme ça}"
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-3",
+      "type": "respond",
+      "situation": "Transform: '{Pourquoi est-ce que le ciel est bleu?}' → 'I wonder why...'",
+      "cue": "I wonder why the sky is blue",
+      "answer": "je me demande pourquoi le ciel est bleu",
+      "hint": "je me demande + drop est-ce que"
+    },
+    {
+      "id": "i-je-ne-sais-pas-5",
+      "type": "respond",
+      "situation": "Transform: '{Comment est-ce qu'une tortue nage?}' → 'I don't know how...'",
+      "cue": "I don't know how a turtle swims",
+      "answer": "je ne sais pas comment une tortue nage",
+      "hint": "je ne sais pas + drop est-ce que"
+    }
+  ]
+}

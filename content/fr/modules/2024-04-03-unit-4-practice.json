@@ -1,0 +1,285 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-03-unit-4-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Everyday Words Practice - Fill in the Blanks",
+  "description": "Practice survival phrases, negation, time/location adverbs, and essential verbs from this unit!",
+  "can_do": [
+    "Use survival phrases and negation naturally",
+    "Combine action verbs with time and location context",
+    "Apply everyday vocabulary in realistic scenarios"
+  ],
+  "items": [
+    {
+      "id": "i-je-voudrais",
+      "type": "gapfill",
+      "text": "___ un café, s'il vous plaît.",
+      "blanks": [
+        {
+          "answer": "je voudrais"
+        }
+      ],
+      "gloss": "I would like a coffee, please",
+      "hint": "polite phrase for 'I would like'"
+    },
+    {
+      "id": "i-fais",
+      "type": "gapfill",
+      "text": "Je ___ le travail.",
+      "blanks": [
+        {
+          "answer": "fais"
+        }
+      ],
+      "gloss": "I do the work",
+      "hint": "faire conjugated for je"
+    },
+    {
+      "id": "i-dois",
+      "type": "gapfill",
+      "text": "Tu ___ partir.",
+      "blanks": [
+        {
+          "answer": "dois"
+        }
+      ],
+      "gloss": "You must leave",
+      "hint": "devoir conjugated for tu"
+    },
+    {
+      "id": "i-parlons",
+      "type": "gapfill",
+      "text": "Nous ___ français.",
+      "blanks": [
+        {
+          "answer": "parlons"
+        }
+      ],
+      "gloss": "We speak French",
+      "hint": "parler conjugated for nous"
+    },
+    {
+      "id": "i-ne-pas",
+      "type": "gapfill",
+      "text": "Je ___ veux ___ ça.",
+      "blanks": [
+        {
+          "answer": "ne"
+        },
+        {
+          "answer": "pas"
+        }
+      ],
+      "gloss": "I don't want that",
+      "hint": "first part of negation / second part of negation"
+    },
+    {
+      "id": "i-maintenant",
+      "type": "gapfill",
+      "text": "Je vais ___.",
+      "blanks": [
+        {
+          "answer": "maintenant"
+        }
+      ],
+      "gloss": "I'm going now",
+      "hint": "time adverb meaning 'now'"
+    },
+    {
+      "id": "i-demain",
+      "type": "gapfill",
+      "text": "Il part ___.",
+      "blanks": [
+        {
+          "answer": "demain"
+        }
+      ],
+      "gloss": "He leaves tomorrow",
+      "hint": "time adverb meaning 'tomorrow'"
+    },
+    {
+      "id": "i-hier",
+      "type": "gapfill",
+      "text": "Tu as vu ça ___.",
+      "blanks": [
+        {
+          "answer": "hier"
+        }
+      ],
+      "gloss": "You saw that yesterday",
+      "hint": "time adverb meaning 'yesterday'"
+    },
+    {
+      "id": "i-ici",
+      "type": "gapfill",
+      "text": "Je suis ___.",
+      "blanks": [
+        {
+          "answer": "ici"
+        }
+      ],
+      "gloss": "I am here",
+      "hint": "location adverb meaning 'here'"
+    },
+    {
+      "id": "i-la",
+      "type": "gapfill",
+      "text": "Le livre est ___.",
+      "blanks": [
+        {
+          "answer": "là"
+        }
+      ],
+      "gloss": "The book is there",
+      "hint": "location adverb meaning 'there'"
+    },
+    {
+      "id": "i-le-temps",
+      "type": "gapfill",
+      "text": "Je n'ai pas ___.",
+      "blanks": [
+        {
+          "answer": "le temps"
+        }
+      ],
+      "gloss": "I don't have time",
+      "hint": "everyday noun meaning 'time'"
+    },
+    {
+      "id": "i-l-argent",
+      "type": "gapfill",
+      "text": "Il a ___.",
+      "blanks": [
+        {
+          "answer": "l'argent"
+        }
+      ],
+      "gloss": "He has money",
+      "hint": "everyday noun meaning 'money'"
+    },
+    {
+      "id": "i-ne-pas-2",
+      "type": "gapfill",
+      "text": "Tu ___ fais ___ ça.",
+      "blanks": [
+        {
+          "answer": "ne"
+        },
+        {
+          "answer": "pas"
+        }
+      ],
+      "gloss": "You don't do that",
+      "hint": "first part of negation / second part of negation"
+    },
+    {
+      "id": "i-dois-maintenant",
+      "type": "gapfill",
+      "text": "Je ___ partir ___.",
+      "blanks": [
+        {
+          "answer": "dois"
+        },
+        {
+          "answer": "maintenant"
+        }
+      ],
+      "gloss": "I must leave now",
+      "hint": "devoir conjugated for je / time adverb meaning 'now'"
+    },
+    {
+      "id": "i-parlons-ici",
+      "type": "gapfill",
+      "text": "Nous ___ français ___.",
+      "blanks": [
+        {
+          "answer": "parlons"
+        },
+        {
+          "answer": "ici"
+        }
+      ],
+      "gloss": "We speak French here",
+      "hint": "parler conjugated for nous / location adverb meaning 'here'"
+    },
+    {
+      "id": "i-ne-jamais",
+      "type": "gapfill",
+      "text": "Il ___ va ___ à Paris.",
+      "blanks": [
+        {
+          "answer": "ne"
+        },
+        {
+          "answer": "jamais"
+        }
+      ],
+      "gloss": "He never goes to Paris",
+      "hint": "first part of negation / time adverb meaning 'never' (replaces pas)"
+    },
+    {
+      "id": "i-ne-pas-3",
+      "type": "gapfill",
+      "text": "Je ___ peux ___ voir ça.",
+      "blanks": [
+        {
+          "answer": "ne"
+        },
+        {
+          "answer": "pas"
+        }
+      ],
+      "gloss": "I can't see that",
+      "hint": "first part of negation / second part of negation"
+    },
+    {
+      "id": "i-c-est-combien",
+      "type": "gapfill",
+      "text": "___, s'il vous plaît ?",
+      "blanks": [
+        {
+          "answer": "c'est combien"
+        }
+      ],
+      "gloss": "How much is it, please?",
+      "hint": "survival phrase for 'how much is it'"
+    },
+    {
+      "id": "i-fais-demain",
+      "type": "gapfill",
+      "text": "Je ___ mon travail ___.",
+      "blanks": [
+        {
+          "answer": "fais"
+        },
+        {
+          "answer": "demain"
+        }
+      ],
+      "gloss": "I do my work tomorrow",
+      "hint": "faire conjugated for je / time adverb meaning 'tomorrow'"
+    },
+    {
+      "id": "i-n-pas-ici",
+      "type": "gapfill",
+      "text": "Nous ___avons ___ l'argent ___.",
+      "blanks": [
+        {
+          "answer": "n'"
+        },
+        {
+          "answer": "pas"
+        },
+        {
+          "answer": "ici"
+        }
+      ],
+      "gloss": "We don't have the money here",
+      "hint": "ne with apostrophe before vowel / second part of negation / location adverb meaning 'here'"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

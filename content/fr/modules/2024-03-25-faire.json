@@ -1,0 +1,391 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-25-faire",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {faire} (to do/make)",
+  "description": "Master the most versatile French verb through active recall and composition practice!",
+  "can_do": [
+    "Express doing and making (I do, you make, they do)",
+    "Talk about activities and tasks in French",
+    "Use faire in common expressions and daily activities"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "faire-fr",
+      "fr": "faire",
+      "gloss": "to do / to make",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-fais-fr",
+      "fr": "je fais",
+      "gloss": "I do/make",
+      "note": "irregular form"
+    },
+    {
+      "word_id": "tu-fais-fr",
+      "fr": "tu fais",
+      "gloss": "you do/make (informal)",
+      "note": "same as je"
+    },
+    {
+      "word_id": "il-fait-fr",
+      "fr": "il fait",
+      "gloss": "he does/makes",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-fait-fr",
+      "fr": "elle fait",
+      "gloss": "she does/makes",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-faisons-fr",
+      "fr": "nous faisons",
+      "gloss": "we do/make",
+      "note": "unique form"
+    },
+    {
+      "word_id": "vous-faites-fr",
+      "fr": "vous faites",
+      "gloss": "you do/make (formal)",
+      "note": "unique form"
+    },
+    {
+      "word_id": "ils-font-fr",
+      "fr": "ils font",
+      "gloss": "they do/make (masc)",
+      "note": "irregular"
+    },
+    {
+      "word_id": "elles-font-fr",
+      "fr": "elles font",
+      "gloss": "they do/make (fem)",
+      "note": "same as ils"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-faire-to-do-make",
+      "term": "{faire} = to do/make",
+      "definition": "Extremely versatile verb - doing actions and making things",
+      "example": "Used constantly in daily life - one of the top 15 words!"
+    },
+    {
+      "id": "c-irregular-pattern",
+      "term": "Irregular Pattern",
+      "definition": "faire is irregular - but you've seen a pattern like this before!",
+      "example": "je fais, tu fais, il fait, elle fait, are all the same sounding, but different spellings. Nous faisons, vous faites, ils font, elles font are like the other irregular verbs you've learned. Easy!"
+    },
+    {
+      "id": "c-composition-power",
+      "term": "Composition Power",
+      "definition": "Combine faire with previous modules for infinite expressions",
+      "example": "{je fais + ça, nous faisons + le travail, ils font + attention}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-fais",
+      "type": "respond",
+      "situation": "Say what you do",
+      "cue": "I do",
+      "answer": "je fais",
+      "hint": "{je fais}",
+      "mistakes": [
+        {
+          "answer": "je fait",
+          "feedback": "Je takes '{fais}', not 'fait'. Remember: je fais, il fait"
+        },
+        {
+          "answer": "tu fais",
+          "feedback": "That's 'you do', not 'I do'. Focus on the pronoun!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-fais",
+      "type": "respond",
+      "situation": "Say what you do",
+      "cue": "you do (informal)",
+      "answer": "tu fais",
+      "hint": "{tu fais}",
+      "mistakes": [
+        {
+          "answer": "tu fait",
+          "feedback": "Tu takes '{fais}', not 'fait'. Pattern: je fais, tu fais"
+        }
+      ]
+    },
+    {
+      "id": "i-il-fait",
+      "type": "respond",
+      "situation": "Say what he does",
+      "cue": "he does",
+      "answer": "il fait",
+      "hint": "{il fait}",
+      "mistakes": [
+        {
+          "answer": "il fais",
+          "feedback": "Il takes '{fait}', not 'fais'. Remember: il fait, elle fait"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-fait",
+      "type": "respond",
+      "situation": "Say what she does",
+      "cue": "she does",
+      "answer": "elle fait",
+      "hint": "{elle fait}",
+      "mistakes": [
+        {
+          "answer": "elle fais",
+          "feedback": "Elle takes '{fait}', not 'fais'. Same as il fait"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-faisons",
+      "type": "respond",
+      "situation": "Say what we do",
+      "cue": "we do",
+      "answer": "nous faisons",
+      "hint": "{nous faisons}",
+      "mistakes": [
+        {
+          "answer": "nous fais",
+          "feedback": "Nous takes '{faisons}', not 'fais'. Unique form!"
+        },
+        {
+          "answer": "nous fait",
+          "feedback": "Nous takes '{faisons}', not 'fait'. Completely different!"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-faites",
+      "type": "respond",
+      "situation": "Say what you do (formal)",
+      "cue": "you do (formal)",
+      "answer": "vous faites",
+      "hint": "{vous faites}",
+      "mistakes": [
+        {
+          "answer": "vous fais",
+          "feedback": "Vous takes '{faites}', not 'fais'. Another unique form!"
+        },
+        {
+          "answer": "vous fait",
+          "feedback": "Vous takes '{faites}', not 'fait'. Remember: vous faites"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-font",
+      "type": "respond",
+      "situation": "Say what they do (masculine)",
+      "cue": "they do (masculine)",
+      "answer": "ils font",
+      "hint": "{ils font}",
+      "mistakes": [
+        {
+          "answer": "ils fais",
+          "feedback": "Ils takes '{font}', not 'fais'. Completely irregular!"
+        },
+        {
+          "answer": "ils fait",
+          "feedback": "Ils takes '{font}', not 'fait'. Very irregular form!"
+        }
+      ]
+    },
+    {
+      "id": "i-elles-font",
+      "type": "respond",
+      "situation": "Say what they do (feminine)",
+      "cue": "they do (feminine)",
+      "answer": "elles font",
+      "hint": "{elles font}",
+      "mistakes": [
+        {
+          "answer": "elles fais",
+          "feedback": "Elles takes '{font}', not 'fais'. Same as ils font"
+        },
+        {
+          "answer": "elles fait",
+          "feedback": "Elles takes '{font}', not 'fait'. Very irregular!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-fais-ca",
+      "type": "respond",
+      "situation": "Say what you do with that",
+      "cue": "I do that",
+      "answer": "je fais ça",
+      "hint": "{je fais + ça}",
+      "mistakes": [
+        {
+          "answer": "je fait ça",
+          "feedback": "Je takes '{fais}', not 'fait'. Remember: je fais, il fait"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Ask what someone does with that",
+      "cue": "What do you do with that?",
+      "answer": "qu'est-ce que tu fais avec ça?",
+      "hint": "{qu'est-ce que tu fais + avec ça}",
+      "mistakes": [
+        {
+          "answer": "que fais-tu avec ça?",
+          "feedback": "More common: qu'est-ce que tu fais avec ça?"
+        }
+      ]
+    },
+    {
+      "id": "i-il-fait-ca",
+      "type": "respond",
+      "situation": "Say what he does with that",
+      "cue": "He does that",
+      "answer": "il fait ça",
+      "hint": "{il fait + ça}",
+      "mistakes": [
+        {
+          "answer": "il fais ça",
+          "feedback": "Il takes '{fait}', not 'fais'. Remember: il fait, elle fait"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-faisons-ca",
+      "type": "respond",
+      "situation": "Say what we do with that",
+      "cue": "We do that",
+      "answer": "nous faisons ça",
+      "hint": "{nous faisons + ça}",
+      "mistakes": [
+        {
+          "answer": "nous fais ça",
+          "feedback": "Nous takes '{faisons}', not 'fais'. Unique form!"
+        }
+      ]
+    },
+    {
+      "id": "i-que-veux-tu-faire",
+      "type": "respond",
+      "situation": "Ask what someone wants to do",
+      "cue": "What do you want to do?",
+      "answer": "que veux-tu faire?",
+      "hint": "{que veux-tu faire}",
+      "mistakes": [
+        {
+          "answer": "que fais-tu?",
+          "feedback": "This needs vouloir! Try: que veux-tu faire?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-faire-ca",
+      "type": "respond",
+      "situation": "Say what you want to do",
+      "cue": "I want to do that",
+      "answer": "je veux faire ça",
+      "hint": "{je veux faire + ça}",
+      "mistakes": [
+        {
+          "answer": "je fais ça",
+          "feedback": "This needs vouloir! Try: je veux faire ça"
+        }
+      ]
+    },
+    {
+      "id": "i-peux-tu-faire-ca",
+      "type": "respond",
+      "situation": "Ask if someone can do something",
+      "cue": "Can you do that?",
+      "answer": "peux-tu faire ça?",
+      "hint": "{peux-tu faire + ça}",
+      "mistakes": [
+        {
+          "answer": "fais-tu ça?",
+          "feedback": "This needs pouvoir! Try: peux-tu faire ça?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-faire-ca",
+      "type": "respond",
+      "situation": "Say what you can do",
+      "cue": "I can do that",
+      "answer": "je peux faire ça",
+      "hint": "{je peux faire + ça}",
+      "mistakes": [
+        {
+          "answer": "je fais ça",
+          "feedback": "This needs pouvoir! Try: je peux faire ça"
+        }
+      ]
+    },
+    {
+      "id": "i-je-vais-faire-ca",
+      "type": "respond",
+      "situation": "Say what you are going to do",
+      "cue": "I am going to do that",
+      "answer": "je vais faire ça",
+      "hint": "{je vais faire + ça}",
+      "mistakes": [
+        {
+          "answer": "je fais ça",
+          "feedback": "This needs aller! Try: je vais faire ça"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask what someone is going to do",
+      "cue": "What are you going to do?",
+      "answer": "qu'est-ce que tu vas faire?",
+      "hint": "{qu'est-ce que tu vas faire}",
+      "mistakes": [
+        {
+          "answer": "que fais-tu?",
+          "feedback": "This needs aller! Try: qu'est-ce que tu vas faire?"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-lui-faisons-voir",
+      "type": "respond",
+      "situation": "Say what you make someone see",
+      "cue": "We make him see our house",
+      "answer": "nous lui faisons voir notre maison",
+      "hint": "{nous lui faisons voir + notre maison}",
+      "mistakes": [
+        {
+          "answer": "nous lui voyons notre maison",
+          "feedback": "This needs faire! Try: nous lui faisons voir notre maison"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-3",
+      "type": "respond",
+      "situation": "Ask what someone makes you see",
+      "cue": "What do you make me see?",
+      "answer": "qu'est-ce que tu me fais voir?",
+      "hint": "{qu'est-ce que tu me fais voir}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu me vois?",
+          "feedback": "This needs faire! Try: qu'est-ce que tu me fais voir?"
+        }
+      ]
+    }
+  ]
+}

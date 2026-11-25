@@ -1,0 +1,187 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-26-location-adverbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Location Adverbs - here, there, everywhere",
+  "description": "Express where things are! From 'here' to 'over there' to 'everywhere'.",
+  "can_do": [
+    "Point to locations (here, there, over there, everywhere)",
+    "Express presence across different places",
+    "Say 'I'm here' or 'It's over there' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "ici-fr",
+      "fr": "ici",
+      "gloss": "here",
+      "note": "this location, nearby"
+    },
+    {
+      "word_id": "la-fr.there",
+      "fr": "là",
+      "gloss": "there",
+      "note": "that location"
+    },
+    {
+      "word_id": "la-bas-fr",
+      "fr": "là-bas",
+      "gloss": "over there",
+      "note": "farther away"
+    },
+    {
+      "word_id": "partout-fr",
+      "fr": "partout",
+      "gloss": "everywhere",
+      "note": "all places"
+    },
+    {
+      "word_id": "quelque-part-fr",
+      "fr": "quelque part",
+      "gloss": "somewhere",
+      "note": "some place"
+    },
+    {
+      "word_id": "nulle-part-fr",
+      "fr": "nulle part",
+      "gloss": "nowhere (with ne)",
+      "note": "no place"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-basic-location",
+      "term": "Basic Location",
+      "definition": "ici (here) vs là (there) - pointing to places",
+      "example": "{je suis ici} (I am here), {le chat est là} (the cat is there)"
+    },
+    {
+      "id": "c-distance-with-la-bas",
+      "term": "Distance with là-bas",
+      "definition": "là-bas means 'over there' (farther away than '{là}')",
+      "example": "{le café est là-bas} (the café is over there)"
+    },
+    {
+      "id": "c-quantity-of-places",
+      "term": "Quantity of Places",
+      "definition": "partout (everywhere), quelque part (somewhere), nulle part (nowhere)",
+      "example": "Express presence or absence across locations"
+    },
+    {
+      "id": "c-position-in-sentence",
+      "term": "Position in Sentence",
+      "definition": "Usually placed AFTER the verb",
+      "example": "{je vais là} (I go there), {il est ici} (he is here)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-ici",
+      "type": "respond",
+      "situation": "here",
+      "answer": "ici",
+      "hint": "This location - nearby",
+      "mistakes": [
+        {
+          "answer": "là",
+          "feedback": "That's 'there', not 'here'"
+        }
+      ]
+    },
+    {
+      "id": "i-la",
+      "type": "respond",
+      "situation": "there",
+      "answer": "là",
+      "hint": "That location",
+      "mistakes": [
+        {
+          "answer": "ici",
+          "feedback": "That's 'here', not 'there'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-bas",
+      "type": "respond",
+      "situation": "Say 'over there' (farther away)",
+      "cue": "over there",
+      "answer": "là-bas",
+      "hint": "là + bas (over there, in the distance)",
+      "mistakes": [
+        {
+          "answer": "là",
+          "feedback": "That's just 'there' - use '{là-bas}' for 'over there'"
+        }
+      ]
+    },
+    {
+      "id": "i-partout",
+      "type": "respond",
+      "situation": "everywhere",
+      "answer": "partout",
+      "hint": "All places - par + tout"
+    },
+    {
+      "id": "i-quelque-part",
+      "type": "respond",
+      "situation": "somewhere",
+      "answer": "quelque part",
+      "hint": "quelque + part (some place)"
+    },
+    {
+      "id": "i-nulle-part",
+      "type": "respond",
+      "situation": "Say 'nowhere' (used with ne)",
+      "cue": "nowhere",
+      "answer": "nulle part",
+      "hint": "nulle + part (no place)"
+    },
+    {
+      "id": "i-je-suis-ici",
+      "type": "respond",
+      "situation": "I am here",
+      "answer": "je suis ici",
+      "hint": "{je suis + ici}"
+    },
+    {
+      "id": "i-le-chat-est-la",
+      "type": "respond",
+      "situation": "the cat is there",
+      "answer": "le chat est là",
+      "hint": "{le chat + est + là}"
+    },
+    {
+      "id": "i-le-cafe-est-la",
+      "type": "respond",
+      "situation": "the café is over there",
+      "answer": "le café est là-bas",
+      "hint": "{le café + est + là-bas}"
+    },
+    {
+      "id": "i-je-vais-partout",
+      "type": "respond",
+      "situation": "I go everywhere",
+      "answer": "je vais partout",
+      "hint": "{je vais + partout}"
+    },
+    {
+      "id": "i-je-ne-vais-jamais",
+      "type": "respond",
+      "situation": "Say 'I never go nowhere' (double negative for 'I never go anywhere')",
+      "cue": "I never go anywhere",
+      "answer": "je ne vais jamais nulle part",
+      "accept": [
+        "je ne vais nulle part"
+      ],
+      "hint": "{je ne vais jamais + nulle part}"
+    },
+    {
+      "id": "i-le-livre-est-quelque",
+      "type": "respond",
+      "situation": "the book is somewhere",
+      "answer": "le livre est quelque part",
+      "hint": "{le livre + est + quelque part}"
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-15-vouloir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {vouloir} (to want)",
+  "description": "Express what you want! Master desires through active recall and composition practice!",
+  "can_do": [
+    "Express what you want (I want, you want, they want)",
+    "Make polite requests and express desires",
+    "Say 'I want this book' or 'Do you want that?' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "vouloir-fr",
+      "fr": "vouloir",
+      "gloss": "to want",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-veux-fr",
+      "fr": "je veux",
+      "gloss": "I want",
+      "note": "irregular form"
+    },
+    {
+      "word_id": "tu-veux-fr",
+      "fr": "tu veux",
+      "gloss": "you want (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-veut-fr",
+      "fr": "il veut",
+      "gloss": "he wants",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-veut-fr",
+      "fr": "elle veut",
+      "gloss": "she wants",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-voulons-fr",
+      "fr": "nous voulons",
+      "gloss": "we want",
+      "note": "regular ending"
+    },
+    {
+      "word_id": "vous-voulez-fr",
+      "fr": "vous voulez",
+      "gloss": "you want (formal)",
+      "note": "formal/plural"
+    },
+    {
+      "word_id": "ils-veulent-fr",
+      "fr": "ils veulent",
+      "gloss": "they want (masc)",
+      "note": "irregular"
+    },
+    {
+      "word_id": "elles-veulent-fr",
+      "fr": "elles veulent",
+      "gloss": "they want (fem)",
+      "note": "same as ils"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-vouloir-to-want",
+      "term": "{vouloir} = to want",
+      "definition": "Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French.",
+      "example": "'I want that' ({Je veux ça}), 'Do you want a book?' ({Veux-tu un livre?}), 'We want to have a house' ({Nous voulons avoir une maison})"
+    },
+    {
+      "id": "c-irregular-conjugation-pattern",
+      "term": "Irregular Conjugation Pattern",
+      "definition": "Notice the pattern: je/tu both use '{veux}', then il/elle use '{veut}', nous uses '{voulons}', and ils/elles use '{veulent}'!",
+      "example": "{je veux}, {tu veux}, {il veut}, {nous voulons}, {vous voulez}, {ils veulent}"
+    },
+    {
+      "id": "c-composition-power",
+      "term": "Composition Power",
+      "definition": "Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!",
+      "example": "{je veux + ça, nous voulons + être, ils veulent + avoir + un livre}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-veux",
+      "type": "respond",
+      "situation": "Say what you want",
+      "cue": "I want",
+      "answer": "je veux",
+      "hint": "Conjugate '{vouloir}' in the present for '{je}'.",
+      "mistakes": [
+        {
+          "answer": "je veut",
+          "feedback": "Je takes '{veux}', not 'veut'. Remember: je veux, il veut"
+        },
+        {
+          "answer": "tu veux",
+          "feedback": "That's 'you want', not 'I want'. Focus on the pronoun!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-veux",
+      "type": "respond",
+      "situation": "Say what you want",
+      "cue": "you want (informal)",
+      "answer": "tu veux",
+      "hint": "Conjugate '{vouloir}' in the present for '{tu}'.",
+      "mistakes": [
+        {
+          "answer": "tu veut",
+          "feedback": "Tu takes '{veux}', not 'veut'. Pattern: je veux, tu veux"
+        }
+      ]
+    },
+    {
+      "id": "i-il-veut",
+      "type": "respond",
+      "situation": "Say what he wants",
+      "cue": "he wants",
+      "answer": "il veut",
+      "hint": "Conjugate '{vouloir}' in the present for '{il}'.",
+      "mistakes": [
+        {
+          "answer": "il veux",
+          "feedback": "Il takes '{veut}', not 'veux'. Remember: il veut, elle veut"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-veut",
+      "type": "respond",
+      "situation": "Say what she wants",
+      "cue": "she wants",
+      "answer": "elle veut",
+      "hint": "Conjugate '{vouloir}' in the present for '{elle}'.",
+      "mistakes": [
+        {
+          "answer": "elle veux",
+          "feedback": "Elle takes '{veut}', not 'veux'. Same as il veut"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-voulons",
+      "type": "respond",
+      "situation": "Say what we want",
+      "cue": "we want",
+      "answer": "nous voulons",
+      "hint": "Conjugate '{vouloir}' in the present for '{nous}' (regular -ons ending).",
+      "mistakes": [
+        {
+          "answer": "nous veux",
+          "feedback": "Nous takes '{voulons}', not 'veux'. Completely different!"
+        },
+        {
+          "answer": "nous veut",
+          "feedback": "Nous takes '{voulons}', not 'veut'. Regular -ons pattern!"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-voulez",
+      "type": "respond",
+      "situation": "Say what you want (formal)",
+      "cue": "you want (formal)",
+      "answer": "vous voulez",
+      "hint": "Conjugate '{vouloir}' in the present for '{vous}' (regular -ez ending).",
+      "mistakes": [
+        {
+          "answer": "vous veux",
+          "feedback": "Vous takes '{voulez}', not 'veux'. Regular -ez pattern!"
+        },
+        {
+          "answer": "vous veut",
+          "feedback": "Vous takes '{voulez}', not 'veut'. Remember: vous voulez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-veulent",
+      "type": "respond",
+      "situation": "Say what they want (masculine)",
+      "cue": "they want (masculine)",
+      "answer": "ils veulent",
+      "hint": "Conjugate '{vouloir}' in the present for '{ils}'.",
+      "mistakes": [
+        {
+          "answer": "ils veux",
+          "feedback": "Ils takes '{veulent}', not 'veux'. Irregular ending!"
+        },
+        {
+          "answer": "ils veut",
+          "feedback": "Ils takes '{veulent}', not 'veut'. Plural form!"
+        }
+      ]
+    },
+    {
+      "id": "i-elles-veulent",
+      "type": "respond",
+      "situation": "Say what they want (feminine)",
+      "cue": "they want (feminine)",
+      "answer": "elles veulent",
+      "hint": "Conjugate '{vouloir}' in the present for '{elles}'.",
+      "mistakes": [
+        {
+          "answer": "elles veux",
+          "feedback": "Elles takes '{veulent}', not 'veux'. Same as ils veulent"
+        },
+        {
+          "answer": "elles veut",
+          "feedback": "Elles takes '{veulent}', not 'veut'. Plural form!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-ca",
+      "type": "respond",
+      "situation": "Say that you want that",
+      "cue": "I want that",
+      "answer": "je veux ça",
+      "hint": "Start with 'I want' in French, then add 'that'.",
+      "mistakes": [
+        {
+          "answer": "je veut ça",
+          "feedback": "Je takes '{veux}', not 'veut'. Remember: je veux, il veut"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-voulons-ce-livre",
+      "type": "respond",
+      "situation": "Say what we want",
+      "cue": "We want this book",
+      "answer": "nous voulons ce livre",
+      "hint": "Start with 'we want' in French, then add 'this book'.",
+      "mistakes": [
+        {
+          "answer": "nous veux ce livre",
+          "feedback": "Nous takes '{voulons}', not 'veux'. Completely different!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-etre-un",
+      "type": "respond",
+      "situation": "Say what you want to be",
+      "cue": "I want to be a friend",
+      "answer": "je veux être un ami",
+      "accept": [
+        "je veux être une amie"
+      ],
+      "hint": "Use '{vouloir}' in the present for '{je}' + infinitive '{être}' + 'a friend'.",
+      "mistakes": [
+        {
+          "answer": "je suis un ami",
+          "feedback": "This needs vouloir! Try: je veux être un ami"
+        },
+        {
+          "answer": "je veux suis un ami",
+          "feedback": "When you use two verbs together, the second one stays in the infinitive. Here: je veux être un ami."
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-avoir-un",
+      "type": "respond",
+      "situation": "Say what you want to have",
+      "cue": "I want to have a cat",
+      "answer": "je veux avoir un chat",
+      "hint": "Use '{vouloir}' in the present for '{je}' + infinitive '{avoir}' + 'a cat'.",
+      "mistakes": [
+        {
+          "answer": "j'ai un chat",
+          "feedback": "This needs vouloir! Try: je veux avoir un chat"
+        },
+        {
+          "answer": "je veux ai un chat",
+          "feedback": "When you chain two verbs, the second verb should be in the infinitive. Here: je veux avoir un chat."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-veut-avoir-une",
+      "type": "respond",
+      "situation": "Say what she wants to have",
+      "cue": "She wants to have a house",
+      "answer": "elle veut avoir une maison",
+      "hint": "Use '{vouloir}' in the present for '{elle}' + infinitive '{avoir}' + 'a house'.",
+      "mistakes": [
+        {
+          "answer": "elle a une maison",
+          "feedback": "This needs vouloir! Try: elle veut avoir une maison"
+        },
+        {
+          "answer": "elle veux avoir une maison",
+          "feedback": "Elle takes '{veut}', not 'veux'. Remember: elle veut, il veut."
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-ca-s",
+      "type": "respond",
+      "situation": "Make a polite request",
+      "cue": "I want this, please",
+      "answer": "je veux ça, s'il vous plaît",
+      "accept": [
+        "je veux ceci, s'il vous plaît",
+        "je veux ça s'il te plaît",
+        "je veux ceci s'il te plait"
+      ],
+      "hint": "Use '{vouloir}' for 'I want this' and add 'please' (s'il vous plaît).",
+      "mistakes": [
+        {
+          "answer": "je veut ça, s'il vous plaît",
+          "feedback": "Je takes '{veux}', not 'veut'. Remember: je veux, il veut."
+        }
+      ]
+    }
+  ]
+}

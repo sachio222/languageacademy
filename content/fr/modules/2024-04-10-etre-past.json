@@ -1,0 +1,412 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-10-etre-past",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{être} - Past Tense (was / were)",
+  "description": "Talk about how things were in the past: j'étais (I was), tu étais (you were), il était (he was)",
+  "can_do": [
+    "Talk about the past (I was, you were, they were)",
+    "Describe past states and conditions",
+    "Say 'I was happy' or 'We were in Paris' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-etais-fr",
+      "fr": "j'étais",
+      "gloss": "I was",
+      "note": "imperfect tense"
+    },
+    {
+      "word_id": "tu-etais-fr",
+      "fr": "tu étais",
+      "gloss": "you were (informal)",
+      "note": "sounds same as j'étais"
+    },
+    {
+      "word_id": "il-elle-etait-fr",
+      "fr": "il/elle était",
+      "gloss": "he/she was",
+      "note": "sounds similar to j'étais/tu étais"
+    },
+    {
+      "word_id": "nous-etions-fr",
+      "fr": "nous étions",
+      "gloss": "we were",
+      "note": "imperfect tense"
+    },
+    {
+      "word_id": "vous-etiez-fr",
+      "fr": "vous étiez",
+      "gloss": "you were (formal/plural)",
+      "note": "imperfect tense"
+    },
+    {
+      "word_id": "ils-elles-etaient-fr",
+      "fr": "ils/elles étaient",
+      "gloss": "they were",
+      "note": "sounds like 'étè'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-past-tense-imperfect-imparfait",
+      "term": "Past Tense = Imperfect (Imparfait)",
+      "definition": "Describes ongoing states or repeated actions in the past",
+      "example": "{j'étais heureux} (I was happy), {nous étions à Paris} (we were in Paris)"
+    },
+    {
+      "id": "c-etait-was-singular",
+      "term": "{était} = was (singular)",
+      "definition": "For je, tu, il/elle - describing past states",
+      "example": "{j'étais jeune} (I was young), {tu étais là} (you were there), {il était bon} (it was good)"
+    },
+    {
+      "id": "c-etions-etiez-etaient-were",
+      "term": "{étions, étiez, étaient} = were (plural)",
+      "definition": "For nous, vous, ils/elles - plural past states",
+      "example": "{nous étions contents} (we were happy), {ils étaient ici} (they were here)"
+    },
+    {
+      "id": "c-pattern-recognition",
+      "term": "Pattern Recognition",
+      "definition": "Notice: j'étais, tu étais, il/elle était all sound the same!",
+      "example": "All singular forms end in -ais, -ais, -ait (similar sound)"
+    },
+    {
+      "id": "c-with-negation",
+      "term": "With Negation",
+      "definition": "Use ne...pas around the past tense verb",
+      "example": "{je n'étais pas} (I was not), {il n'était pas} (he was not)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-etais-ici",
+      "type": "respond",
+      "situation": "I was here",
+      "answer": "j'étais ici",
+      "accept": [
+        "j étais ici"
+      ],
+      "hint": "{j'étais + ici}",
+      "mistakes": [
+        {
+          "answer": "je suis ici",
+          "feedback": "That's present tense 'I am' - use '{j'étais}' for past 'I was'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-etais-content",
+      "type": "respond",
+      "situation": "I was happy",
+      "answer": "j'étais content",
+      "accept": [
+        "j étais content",
+        "j'étais contente"
+      ],
+      "hint": "{j'étais + content/contente}",
+      "mistakes": [
+        {
+          "answer": "je suis content",
+          "feedback": "That's 'I am' - use '{j'étais}' for 'I was'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-etais-la",
+      "type": "respond",
+      "situation": "Say \"you were there\" (informal)",
+      "cue": "you were there",
+      "answer": "tu étais là",
+      "hint": "{tu étais + là}",
+      "mistakes": [
+        {
+          "answer": "tu es là",
+          "feedback": "That's 'you are' - use '{tu étais}' for 'you were'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-etais-jeune",
+      "type": "respond",
+      "situation": "Say \"you were young\" (informal)",
+      "cue": "you were young",
+      "answer": "tu étais jeune",
+      "hint": "{tu étais + jeune}",
+      "mistakes": [
+        {
+          "answer": "tu es jeune",
+          "feedback": "That's 'you are' - use '{tu étais}' for 'you were'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-etait-ici",
+      "type": "respond",
+      "situation": "he was here",
+      "answer": "il était ici",
+      "hint": "{il était + ici}",
+      "mistakes": [
+        {
+          "answer": "il est ici",
+          "feedback": "That's 'he is' - use '{il était}' for 'he was'"
+        },
+        {
+          "answer": "il étais ici",
+          "feedback": "Use '{était}' (with -t) for il/elle, not 'étais'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-etait-contente",
+      "type": "respond",
+      "situation": "she was happy",
+      "answer": "elle était contente",
+      "hint": "elle était + contente (feminine form)",
+      "mistakes": [
+        {
+          "answer": "elle est contente",
+          "feedback": "That's 'she is' - use '{elle était}' for 'she was'"
+        },
+        {
+          "answer": "elle était content",
+          "feedback": "Use feminine '{contente}' with elle"
+        }
+      ]
+    },
+    {
+      "id": "i-c-etait-bon",
+      "type": "respond",
+      "situation": "it was good",
+      "answer": "c'était bon",
+      "accept": [
+        "c était bon"
+      ],
+      "hint": "c'était + bon (use c'était for 'it was')",
+      "mistakes": [
+        {
+          "answer": "c'est bon",
+          "feedback": "That's 'it is' - use '{c'était}' for 'it was'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-etait-la",
+      "type": "respond",
+      "situation": "it was there",
+      "answer": "c'était là",
+      "accept": [
+        "c était là"
+      ],
+      "hint": "{c'était + là}",
+      "mistakes": [
+        {
+          "answer": "il était là",
+          "feedback": "Both work! But '{c'était}' is more common for 'it was'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-etions-ici",
+      "type": "respond",
+      "situation": "we were here",
+      "answer": "nous étions ici",
+      "hint": "{nous étions + ici}",
+      "mistakes": [
+        {
+          "answer": "nous sommes ici",
+          "feedback": "That's 'we are' - use '{nous étions}' for 'we were'"
+        },
+        {
+          "answer": "nous était ici",
+          "feedback": "Use '{étions}' for nous, not 'était'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-etions-contents",
+      "type": "respond",
+      "situation": "we were happy",
+      "answer": "nous étions contents",
+      "hint": "{nous étions + contents}",
+      "mistakes": [
+        {
+          "answer": "nous sommes contents",
+          "feedback": "That's 'we are' - use '{nous étions}' for 'we were'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-etiez-la",
+      "type": "respond",
+      "situation": "Say \"you were there\" (formal or plural)",
+      "cue": "you were there (formal)",
+      "answer": "vous étiez là",
+      "hint": "{vous étiez + là}",
+      "mistakes": [
+        {
+          "answer": "vous êtes là",
+          "feedback": "That's 'you are' - use '{vous étiez}' for 'you were'"
+        },
+        {
+          "answer": "vous étions là",
+          "feedback": "Use '{étiez}' for vous, not 'étions'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-etiez-jeune",
+      "type": "respond",
+      "situation": "Say \"you were young\" (formal)",
+      "cue": "you were young (formal)",
+      "answer": "vous étiez jeune",
+      "hint": "{vous étiez + jeune}",
+      "mistakes": [
+        {
+          "answer": "vous êtes jeune",
+          "feedback": "That's 'you are' - use '{vous étiez}' for 'you were'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-etaient-ici",
+      "type": "respond",
+      "situation": "they were here",
+      "answer": "ils étaient ici",
+      "accept": [
+        "elles étaient ici"
+      ],
+      "hint": "{ils/elles étaient + ici}",
+      "mistakes": [
+        {
+          "answer": "ils sont ici",
+          "feedback": "That's 'they are' - use '{ils étaient}' for 'they were'"
+        },
+        {
+          "answer": "ils était ici",
+          "feedback": "Use '{étaient}' for ils/elles, not 'était'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-etaient-contents",
+      "type": "respond",
+      "situation": "they were happy",
+      "answer": "ils étaient contents",
+      "accept": [
+        "elles étaient contentes"
+      ],
+      "hint": "{ils/elles étaient + contents}",
+      "mistakes": [
+        {
+          "answer": "ils sont contents",
+          "feedback": "That's 'they are' - use '{ils étaient}' for 'they were'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-etais-pas",
+      "type": "respond",
+      "situation": "I was not here",
+      "answer": "je n'étais pas ici",
+      "accept": [
+        "je n étais pas ici"
+      ],
+      "hint": "{je n'étais pas + ici}",
+      "mistakes": [
+        {
+          "answer": "je ne suis pas ici",
+          "feedback": "Use past tense '{n'étais pas}' for 'was not'"
+        },
+        {
+          "answer": "j'étais ne pas ici",
+          "feedback": "Put 'ne' before verb: je n'étais pas"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-n-etais-pas",
+      "type": "respond",
+      "situation": "Say \"you were not there\" (informal)",
+      "cue": "you were not there",
+      "answer": "tu n'étais pas là",
+      "accept": [
+        "tu n étais pas là"
+      ],
+      "hint": "{tu n'étais pas + là}",
+      "mistakes": [
+        {
+          "answer": "tu n'es pas là",
+          "feedback": "Use past tense '{n'étais pas}' for 'were not'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-n-etait-pas",
+      "type": "respond",
+      "situation": "he was not happy",
+      "answer": "il n'était pas content",
+      "accept": [
+        "il n était pas content"
+      ],
+      "hint": "{il n'était pas + content}",
+      "mistakes": [
+        {
+          "answer": "il n'est pas content",
+          "feedback": "Use past tense '{n'était pas}' for 'was not'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-n-etions-pas",
+      "type": "respond",
+      "situation": "we were not there",
+      "answer": "nous n'étions pas là",
+      "accept": [
+        "nous n étions pas là"
+      ],
+      "hint": "{nous n'étions pas + là}",
+      "mistakes": [
+        {
+          "answer": "nous ne sommes pas là",
+          "feedback": "Use past tense '{n'étions pas}' for 'were not'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-n-etaient-pas",
+      "type": "respond",
+      "situation": "they were not here",
+      "answer": "ils n'étaient pas ici",
+      "accept": [
+        "elles n'étaient pas ici",
+        "ils n étaient pas ici"
+      ],
+      "hint": "{ils n'étaient pas + ici}",
+      "mistakes": [
+        {
+          "answer": "ils ne sont pas ici",
+          "feedback": "Use past tense '{n'étaient pas}' for 'were not'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-etais-a-paris",
+      "type": "respond",
+      "situation": "I was in Paris",
+      "answer": "j'étais à Paris",
+      "accept": [
+        "j étais à Paris"
+      ],
+      "hint": "{j'étais + à Paris}",
+      "mistakes": [
+        {
+          "answer": "je suis à Paris",
+          "feedback": "That's 'I am in Paris' - use '{j'étais}' for 'I was'"
+        }
+      ]
+    }
+  ]
+}

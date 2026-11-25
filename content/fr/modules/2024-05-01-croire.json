@@ -1,0 +1,287 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-01-croire",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{croire} - To Believe",
+  "description": "Express belief and softer opinions: je crois que oui (I believe so), tu crois? (do you believe it?)",
+  "can_do": [
+    "Express beliefs and tentative opinions (I believe that...)",
+    "Sound more tentative than penser (I think)",
+    "Use croire with que for softer assertions"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "croire-fr",
+      "fr": "croire",
+      "gloss": "to believe / to think",
+      "note": "infinitive - irregular verb"
+    },
+    {
+      "word_id": "je-crois-fr",
+      "fr": "je crois",
+      "gloss": "I believe / I think",
+      "note": "pronounced 'krwa'"
+    },
+    {
+      "word_id": "tu-crois-fr",
+      "fr": "tu crois",
+      "gloss": "you believe (informal)",
+      "note": "same sound as je crois; asking for opinion/belief"
+    },
+    {
+      "word_id": "il-elle-croit-fr",
+      "fr": "il/elle croit",
+      "gloss": "he/she believes",
+      "note": "same sound, different spelling"
+    },
+    {
+      "word_id": "nous-croyons-fr",
+      "fr": "nous croyons",
+      "gloss": "we believe",
+      "note": "pronounced 'krwa-yon' with y sound"
+    },
+    {
+      "word_id": "vous-croyez-fr",
+      "fr": "vous croyez",
+      "gloss": "you believe (formal/plural)",
+      "note": "pronounced 'krwa-yay' with y sound"
+    },
+    {
+      "word_id": "ils-elles-croient-fr",
+      "fr": "ils/elles croient",
+      "gloss": "they believe",
+      "note": "pronounced 'krwa' (silent -ent)"
+    },
+    {
+      "word_id": "je-crois-que-oui-fr",
+      "fr": "je crois que oui",
+      "gloss": "I believe so / I think so",
+      "note": "⭐ softer than 'je pense que oui'"
+    },
+    {
+      "word_id": "je-ne-crois-pas-fr",
+      "fr": "je ne crois pas",
+      "gloss": "I don't believe so / I don't think so",
+      "note": "common negative response"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-croire-to-believe-to",
+      "term": "{croire} = to believe / to think",
+      "definition": "Express belief or softer opinions - often used like penser but more tentative",
+      "example": "{je crois que c'est vrai} (I believe it's true), {tu crois?} (do you think so?)"
+    },
+    {
+      "id": "c-irregular-conjugation",
+      "term": "Irregular conjugation",
+      "definition": "Present: je crois, tu crois, il croit, nous croyons, vous croyez, ils croient",
+      "example": "Notice: singular all same sound ('kwa'), {nous}/vous have y, ils have -ient"
+    },
+    {
+      "id": "c-croire-que-to-believe",
+      "term": "{croire que...} (to believe that...)",
+      "definition": "Like penser que, use with '{que}' to introduce what you believe",
+      "example": "{je crois que oui} (I believe so), {je ne crois pas} (I don't believe so / I don't think so)"
+    },
+    {
+      "id": "c-croire-a-croire-en",
+      "term": "{croire à} / {croire en} (to believe in)",
+      "definition": "Use à or en to express belief in concepts or things",
+      "example": "{je crois en toi} (I believe in you), {je crois à ça} (I believe in that)"
+    },
+    {
+      "id": "c-penser-vs-croire",
+      "term": "penser vs croire",
+      "definition": "penser = think (more definite), croire = believe (more tentative/hopeful)",
+      "example": "{je pense qu'il vient} (I think he's coming - pretty sure), {je crois qu'il vient} (I believe he's coming - less certain)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-croire",
+      "title": "{croire}",
+      "rows": [
+        {
+          "fr": "je crois",
+          "en": "I believe / I think"
+        },
+        {
+          "fr": "tu crois",
+          "en": "you believe (informal)"
+        },
+        {
+          "fr": "il croit",
+          "en": "he believes"
+        },
+        {
+          "fr": "elle croit",
+          "en": "she believes"
+        },
+        {
+          "fr": "nous croyons",
+          "en": "we believe"
+        },
+        {
+          "fr": "vous croyez",
+          "en": "you believe (formal/plural)"
+        },
+        {
+          "fr": "ils croient",
+          "en": "they believe (masculine)"
+        },
+        {
+          "fr": "elles croient",
+          "en": "they believe (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-crois",
+      "type": "transform",
+      "instruction": "Express that you believe something. Say \"I believe / I think\"",
+      "shown": "croire",
+      "answer": "je crois",
+      "hint": "{je + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"I believe / I think\""
+        },
+        {
+          "answer": "il croit",
+          "feedback": "That's \"he believes\", not \"I believe / I think\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-crois",
+      "type": "transform",
+      "instruction": "Ask if someone believes it. Say \"you believe (informal)\"",
+      "shown": "croire",
+      "answer": "tu crois",
+      "hint": "{tu + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"you believe (informal)\""
+        },
+        {
+          "answer": "il croit",
+          "feedback": "That's \"he believes\", not \"you believe (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-croit",
+      "type": "transform",
+      "instruction": "He believes that's true. Say \"he believes\"",
+      "shown": "croire",
+      "answer": "il croit",
+      "hint": "{il + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"he believes\""
+        },
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"he believes\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-croit",
+      "type": "transform",
+      "instruction": "She believes in you. Say \"she believes\"",
+      "shown": "croire",
+      "answer": "elle croit",
+      "hint": "{elle + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"she believes\""
+        },
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"she believes\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-croyons",
+      "type": "transform",
+      "instruction": "We believe it's possible. Say \"we believe\"",
+      "shown": "croire",
+      "answer": "nous croyons",
+      "hint": "{nous + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"we believe\""
+        },
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"we believe\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-croyez",
+      "type": "transform",
+      "instruction": "Ask formally if they believe. Say \"you believe (formal/plural)\"",
+      "shown": "croire",
+      "answer": "vous croyez",
+      "hint": "{vous + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"you believe (formal/plural)\""
+        },
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"you believe (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-croient",
+      "type": "transform",
+      "instruction": "They believe the story. Say \"they believe (masculine)\"",
+      "shown": "croire",
+      "answer": "ils croient",
+      "hint": "{ils + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"they believe (masculine)\""
+        },
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"they believe (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-croient",
+      "type": "transform",
+      "instruction": "They (feminine) believe so. Say \"they believe (feminine)\"",
+      "shown": "croire",
+      "answer": "elles croient",
+      "hint": "{elles + croire = ?}",
+      "mistakes": [
+        {
+          "answer": "je crois",
+          "feedback": "That's \"I believe / I think\", not \"they believe (feminine)\""
+        },
+        {
+          "answer": "tu crois",
+          "feedback": "That's \"you believe (informal)\", not \"they believe (feminine)\""
+        }
+      ]
+    }
+  ]
+}

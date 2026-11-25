@@ -1,0 +1,279 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-23-unit2-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Asking & Describing Practice - Fill in the Blanks",
+  "description": "Complete sentences using demonstratives, questions, prepositions, and adjectives from this unit!",
+  "can_do": [
+    "Compose complex sentences with wants, abilities, and questions",
+    "Combine demonstratives, verbs, and adjectives naturally",
+    "Apply this unit's vocabulary in realistic contexts"
+  ],
+  "items": [
+    {
+      "id": "i-c",
+      "type": "gapfill",
+      "text": "Qu'est-ce que c'est ? ___'est un livre.",
+      "blanks": [
+        {
+          "answer": "c"
+        }
+      ],
+      "gloss": "What is it? It is a book",
+      "hint": "contraction of '{ce}' - use with être"
+    },
+    {
+      "id": "i-cette",
+      "type": "gapfill",
+      "text": "J'ai ___ voiture.",
+      "blanks": [
+        {
+          "answer": "cette"
+        }
+      ],
+      "gloss": "'I have this car' (feminine)",
+      "hint": "demonstrative for feminine singular"
+    },
+    {
+      "id": "i-veux",
+      "type": "gapfill",
+      "text": "Je ___ ça.",
+      "blanks": [
+        {
+          "answer": "veux"
+        }
+      ],
+      "gloss": "I want that",
+      "hint": "vouloir conjugated for je"
+    },
+    {
+      "id": "i-peux",
+      "type": "gapfill",
+      "text": "Tu ___ voir le chat.",
+      "blanks": [
+        {
+          "answer": "peux"
+        }
+      ],
+      "gloss": "You can see the cat",
+      "hint": "pouvoir conjugated for tu"
+    },
+    {
+      "id": "i-ou",
+      "type": "gapfill",
+      "text": "___ est le livre ?",
+      "blanks": [
+        {
+          "answer": "où"
+        }
+      ],
+      "gloss": "Where is the book?",
+      "hint": "question word meaning 'where'"
+    },
+    {
+      "id": "i-qui",
+      "type": "gapfill",
+      "text": "___ est-ce ?",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "gloss": "Who is it?",
+      "hint": "question word meaning 'who'"
+    },
+    {
+      "id": "i-moi",
+      "type": "gapfill",
+      "text": "Il est avec ___.",
+      "blanks": [
+        {
+          "answer": "moi"
+        }
+      ],
+      "gloss": "He is with me",
+      "hint": "stressed pronoun for 'me'"
+    },
+    {
+      "id": "i-dans",
+      "type": "gapfill",
+      "text": "Le chat est ___ la maison.",
+      "blanks": [
+        {
+          "answer": "dans"
+        }
+      ],
+      "gloss": "The cat is in the house",
+      "hint": "preposition meaning 'in'"
+    },
+    {
+      "id": "i-bonne",
+      "type": "gapfill",
+      "text": "C'est une ___ chose.",
+      "blanks": [
+        {
+          "answer": "bonne"
+        }
+      ],
+      "gloss": "'It's a good thing' (feminine)",
+      "hint": "adjective 'good' in feminine form"
+    },
+    {
+      "id": "i-grand",
+      "type": "gapfill",
+      "text": "Il est un ___ homme.",
+      "blanks": [
+        {
+          "answer": "grand"
+        }
+      ],
+      "gloss": "He is a big/tall man",
+      "hint": "adjective meaning 'big/tall' (masculine)"
+    },
+    {
+      "id": "i-veux-cette",
+      "type": "gapfill",
+      "text": "Tu ___ voir ___ maison.",
+      "blanks": [
+        {
+          "answer": "veux"
+        },
+        {
+          "answer": "cette"
+        }
+      ],
+      "gloss": "'You want to see this house' (feminine)",
+      "hint": "vouloir conjugated for tu / demonstrative for feminine singular"
+    },
+    {
+      "id": "i-sous-voiture",
+      "type": "gapfill",
+      "text": "Le chien est ___ la ___.",
+      "blanks": [
+        {
+          "answer": "sous"
+        },
+        {
+          "answer": "voiture"
+        }
+      ],
+      "gloss": "The dog is under the car",
+      "hint": "preposition meaning 'under' / noun meaning 'car'"
+    },
+    {
+      "id": "i-que-tu",
+      "type": "gapfill",
+      "text": "___ veux- ___?",
+      "blanks": [
+        {
+          "answer": "que"
+        },
+        {
+          "answer": "tu"
+        }
+      ],
+      "gloss": "What do you want?",
+      "hint": "question word meaning 'what' / pronoun meaning 'you'"
+    },
+    {
+      "id": "i-peut-voir",
+      "type": "gapfill",
+      "text": "Il ___ ___ la maison.",
+      "blanks": [
+        {
+          "answer": "peut"
+        },
+        {
+          "answer": "voir"
+        }
+      ],
+      "gloss": "He can see the house",
+      "hint": "pouvoir conjugated for il / infinitive meaning 'to see'"
+    },
+    {
+      "id": "i-ce-ces",
+      "type": "gapfill",
+      "text": "Nous avons ___ livre et ___ chiens.",
+      "blanks": [
+        {
+          "answer": "ce"
+        },
+        {
+          "answer": "ces"
+        }
+      ],
+      "gloss": "We have this book and these dogs",
+      "hint": "demonstrative for masculine singular / demonstrative for plural"
+    },
+    {
+      "id": "i-voulons",
+      "type": "gapfill",
+      "text": "Nous ___ le livre.",
+      "blanks": [
+        {
+          "answer": "voulons"
+        }
+      ],
+      "gloss": "We want the book",
+      "hint": "vouloir conjugated for nous"
+    },
+    {
+      "id": "i-voit",
+      "type": "gapfill",
+      "text": "Elle ___ cette maison.",
+      "blanks": [
+        {
+          "answer": "voit"
+        }
+      ],
+      "gloss": "She sees this house",
+      "hint": "voir conjugated for elle"
+    },
+    {
+      "id": "i-voir",
+      "type": "gapfill",
+      "text": "Nous voulons ___ Mont-Saint-Michel.",
+      "blanks": [
+        {
+          "answer": "voir"
+        }
+      ],
+      "gloss": "We want to see Mont-Saint-Michel",
+      "hint": "infinitive meaning 'to see'"
+    },
+    {
+      "id": "i-avoir-ces",
+      "type": "gapfill",
+      "text": "Tu peux ___ ___ choses.",
+      "blanks": [
+        {
+          "answer": "avoir"
+        },
+        {
+          "answer": "ces"
+        }
+      ],
+      "gloss": "You can have these things",
+      "hint": "infinitive meaning 'to have' / demonstrative for plural"
+    },
+    {
+      "id": "i-chez-toi",
+      "type": "gapfill",
+      "text": "Est-ce que le chien est ___ ___?",
+      "blanks": [
+        {
+          "answer": "chez"
+        },
+        {
+          "answer": "toi"
+        }
+      ],
+      "gloss": "Is the dog at your house?",
+      "hint": "preposition meaning 'at (someone's place)' / stressed pronoun meaning 'you' (informal)"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

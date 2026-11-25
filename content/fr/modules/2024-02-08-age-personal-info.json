@@ -1,0 +1,259 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-08-age-personal-info",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Age & Personal Information",
+  "description": "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information.",
+  "can_do": [
+    "Say your age and ask someone's age (I'm 25 years old)",
+    "Share personal information and birthdate",
+    "Handle essential personal conversations"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-ai-ans-fr",
+      "fr": "j'ai ... ans",
+      "gloss": "I am ... years old",
+      "note": "⭐ Essential: literally 'I have X years'"
+    },
+    {
+      "word_id": "quel-age-avez-vous-fr",
+      "fr": "quel âge avez-vous?",
+      "gloss": "how old are you? (formal)",
+      "note": "polite way to ask age"
+    },
+    {
+      "word_id": "quel-age-as-tu-fr",
+      "fr": "quel âge as-tu?",
+      "gloss": "how old are you? (informal)",
+      "note": "with friends/family"
+    },
+    {
+      "word_id": "j-ai-vingt-ans-fr",
+      "fr": "j'ai vingt ans",
+      "gloss": "I'm twenty years old",
+      "note": "example with number"
+    },
+    {
+      "word_id": "tu-as-quel-age-fr",
+      "fr": "tu as quel âge?",
+      "gloss": "how old are you?",
+      "note": "casual question order"
+    },
+    {
+      "word_id": "il-a-quinze-ans-fr",
+      "fr": "il a quinze ans",
+      "gloss": "he's fifteen years old",
+      "note": "describing someone else"
+    },
+    {
+      "word_id": "elle-a-trente-ans-fr",
+      "fr": "elle a trente ans",
+      "gloss": "she's thirty years old",
+      "note": "describing a woman"
+    },
+    {
+      "word_id": "je-suis-ne-fr",
+      "fr": "je suis né",
+      "gloss": "I was born (masculine)",
+      "note": "for males"
+    },
+    {
+      "word_id": "je-suis-nee-fr",
+      "fr": "je suis née",
+      "gloss": "I was born (feminine)",
+      "note": "for females - add 'e'"
+    },
+    {
+      "word_id": "en-mille-neuf-cent-quatre-vingt-quinze-fr",
+      "fr": "en mille neuf cent quatre-vingt-quinze",
+      "gloss": "in nineteen ninety-five",
+      "note": "birth year example"
+    },
+    {
+      "word_id": "ne-en-fr",
+      "fr": "né en",
+      "gloss": "born in (year)",
+      "note": "temporal preposition"
+    },
+    {
+      "word_id": "ne-a-fr",
+      "fr": "né à",
+      "gloss": "born in/at (place)",
+      "note": "location preposition"
+    },
+    {
+      "word_id": "quelle-est-votre-date-de-naissance-fr",
+      "fr": "quelle est votre date de naissance?",
+      "gloss": "what is your date of birth? (formal)",
+      "note": "official/formal question"
+    },
+    {
+      "word_id": "ma-date-de-naissance-fr",
+      "fr": "ma date de naissance",
+      "gloss": "my date of birth",
+      "note": "for forms/documents"
+    },
+    {
+      "word_id": "l-age-fr",
+      "fr": "l'âge",
+      "gloss": "age (noun)",
+      "note": "masculine noun"
+    },
+    {
+      "word_id": "les-ans-fr",
+      "fr": "les ans",
+      "gloss": "years (for age)",
+      "note": "always plural with numbers"
+    },
+    {
+      "word_id": "la-naissance-fr",
+      "fr": "la naissance",
+      "gloss": "birth",
+      "note": "feminine noun"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-french-age-expression-j",
+      "term": "French Age Expression: {J'ai ... ans}",
+      "definition": "French uses '{avoir}' (to have) + number + '{ans}' (years) to express age",
+      "example": "{J'ai vingt-cinq ans} (I am 25 years old - literally 'I have 25 years')"
+    },
+    {
+      "id": "c-asking-age-quel-age",
+      "term": "Asking Age: {Quel âge...?}",
+      "definition": "Use '{quel âge}' (what age) to ask someone's age politely",
+      "example": "{Quel âge avez-vous?} (How old are you? - formal), {Quel âge as-tu?} (informal)"
+    },
+    {
+      "id": "c-birth-information",
+      "term": "Birth Information",
+      "definition": "Express when and where you were born using être + né(e)",
+      "example": "{Je suis né en 1995} (I was born in 1995), {Je suis née à Paris} (I was born in Paris - feminine)"
+    },
+    {
+      "id": "c-personal-details-integration",
+      "term": "Personal Details Integration",
+      "definition": "Combine with s'appeler, être, avoir for complete self-introduction",
+      "example": "{Je m'appelle Marie, j'ai 30 ans, je suis née à Lyon} (My name is Marie, I'm 30, I was born in Lyon)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-vingt-deux",
+      "type": "respond",
+      "situation": "Say your age: 'I am 22 years old'",
+      "cue": "I am 22 years old",
+      "answer": "j'ai vingt-deux ans",
+      "accept": [
+        "j'ai 22 ans"
+      ],
+      "hint": "Use avoir: j'ai + number + ans",
+      "mistakes": [
+        {
+          "answer": "je suis vingt-deux ans",
+          "feedback": "Use '{avoir}' for age in French: j'ai vingt-deux ans"
+        }
+      ]
+    },
+    {
+      "id": "i-quel-age-as-tu",
+      "type": "respond",
+      "situation": "Ask someone's age (informal)",
+      "cue": "How old are you? (informal)",
+      "answer": "quel âge as-tu",
+      "accept": [
+        "tu as quel âge"
+      ],
+      "hint": "quel âge + informal you + avoir"
+    },
+    {
+      "id": "i-quel-age-avez-vous",
+      "type": "respond",
+      "situation": "Ask someone's age (formal)",
+      "cue": "How old are you? (formal)",
+      "answer": "quel âge avez-vous",
+      "hint": "quel âge + formal you + avoir"
+    },
+    {
+      "id": "i-elle-a-dix-huit",
+      "type": "respond",
+      "situation": "Say someone else's age",
+      "cue": "She is 18 years old",
+      "answer": "elle a dix-huit ans",
+      "accept": [
+        "elle a 18 ans"
+      ],
+      "hint": "elle + avoir + number + ans"
+    },
+    {
+      "id": "i-je-suis-ne-en",
+      "type": "respond",
+      "situation": "Say you were born in a year",
+      "cue": "I was born in 2000 (male)",
+      "answer": "je suis né en deux mille",
+      "accept": [
+        "je suis né en 2000"
+      ],
+      "hint": "je suis né + en + year"
+    },
+    {
+      "id": "i-je-suis-nee-en",
+      "type": "respond",
+      "situation": "Say you were born in a year (female)",
+      "cue": "I was born in 2000 (female)",
+      "answer": "je suis née en deux mille",
+      "accept": [
+        "je suis née en 2000"
+      ],
+      "hint": "je suis née + en + year (add 'e' for feminine)"
+    },
+    {
+      "id": "i-je-suis-ne-a",
+      "type": "respond",
+      "situation": "Say you were born in a place",
+      "cue": "I was born in Paris",
+      "answer": "je suis né à Paris",
+      "accept": [
+        "je suis née à Paris"
+      ],
+      "hint": "je suis né/née + à + city"
+    },
+    {
+      "id": "i-je-m-appelle-sophie",
+      "type": "respond",
+      "situation": "Complete self-introduction",
+      "cue": "My name is Sophie, I'm 28 years old",
+      "answer": "je m'appelle Sophie, j'ai vingt-huit ans",
+      "accept": [
+        "je m'appelle Sophie, j'ai 28 ans"
+      ],
+      "hint": "je m'appelle + name + j'ai + age + ans"
+    },
+    {
+      "id": "i-en-quelle-annee-etes",
+      "type": "respond",
+      "situation": "Ask about someone's birth year",
+      "cue": "What year were you born?",
+      "answer": "en quelle année êtes-vous né",
+      "accept": [
+        "en quelle année es-tu né",
+        "en quelle année êtes-vous née"
+      ],
+      "hint": "{en quelle année + être + né(e)}"
+    },
+    {
+      "id": "i-j-ai-trente-ans",
+      "type": "respond",
+      "situation": "Respond to age question",
+      "cue": "Answer: I'm 30 years old",
+      "answer": "j'ai trente ans",
+      "accept": [
+        "j'ai 30 ans"
+      ],
+      "hint": "Direct response with avoir"
+    }
+  ]
+}

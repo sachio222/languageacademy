@@ -1,0 +1,178 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-21-reflexive-pronouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Reflexive Pronouns - {me, te, se, nous, vous}",
+  "description": "Learn reflexive pronouns for daily actions: je me lave (I wash myself), tu te lèves (you get up), il se prépare (he gets ready)",
+  "can_do": [
+    "Use reflexive pronouns for daily actions",
+    "Understand the pattern for reflexive verbs",
+    "Prepare to describe daily routines in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "me-fr.reflexive",
+      "fr": "me",
+      "gloss": "myself",
+      "note": "je me... (I ...myself)"
+    },
+    {
+      "word_id": "te-fr.reflexive",
+      "fr": "te",
+      "gloss": "yourself (informal)",
+      "note": "tu te... (you ...yourself)"
+    },
+    {
+      "word_id": "se-fr",
+      "fr": "se",
+      "gloss": "himself / herself / oneself / themselves",
+      "note": "il/elle/on se... ils/elles se..."
+    },
+    {
+      "word_id": "nous-fr.reflexive",
+      "fr": "nous",
+      "gloss": "ourselves",
+      "note": "nous nous... (we ...ourselves)"
+    },
+    {
+      "word_id": "vous-fr.reflexive",
+      "fr": "vous",
+      "gloss": "yourselves / yourself (formal)",
+      "note": "vous vous... (you ...yourselves)"
+    },
+    {
+      "word_id": "je-me-lave-fr",
+      "fr": "je me lave",
+      "gloss": "I wash myself",
+      "note": "⭐ example reflexive verb"
+    },
+    {
+      "word_id": "tu-te-leves-fr",
+      "fr": "tu te lèves",
+      "gloss": "you get (yourself) up",
+      "note": "example with tu"
+    },
+    {
+      "word_id": "il-se-prepare-fr",
+      "fr": "il se prépare",
+      "gloss": "he prepares himself / he gets ready",
+      "note": "example with il"
+    },
+    {
+      "word_id": "nous-nous-aimons-fr",
+      "fr": "nous nous aimons",
+      "gloss": "we love ourselves / we love each other",
+      "note": "reciprocal use"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-reflexive-pronouns",
+      "term": "Reflexive Pronouns",
+      "definition": "Pronouns that refer back to the subject - 'myself', 'yourself', 'himself', etc.",
+      "example": "{je me lave} (I wash myself), {tu te lèves} (you get yourself up), {il se prépare} (he prepares himself)"
+    },
+    {
+      "id": "c-parallel-to-object-pronouns",
+      "term": "Parallel to Object Pronouns",
+      "definition": "Same forms as object pronouns, but refer back to the subject",
+      "example": "Object: {il me voit} (he sees me). Reflexive: {je me vois} (I see myself)"
+    },
+    {
+      "id": "c-position-before-the-verb",
+      "term": "{Position}: Before the Verb",
+      "definition": "Reflexive pronouns go BEFORE the conjugated verb, just like object pronouns",
+      "example": "{je me lave} (not je lave me), {tu te lèves} (not tu lèves te)"
+    },
+    {
+      "id": "c-the-reflexive-pronoun-set",
+      "term": "The Reflexive Pronoun Set",
+      "definition": "me (myself), te (yourself), se (himself/herself/oneself), nous (ourselves), vous (yourselves), se (themselves)",
+      "example": "Each pronoun matches a subject: {je} → {me}, {tu} → {te}, {il}/{elle} → {se}, {nous} → nous, {vous} → vous, {ils}/{elles} → se"
+    }
+  ],
+  "items": [
+    {
+      "id": "reflexive-pronouns-1",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{je}'?",
+      "shown": "je ... lave (I wash myself)",
+      "answer": "me",
+      "hint": "Reflexive for first person singular",
+      "mistakes": [
+        {
+          "answer": "te",
+          "feedback": "That's for '{tu}' - use '{me}' for '{je}'"
+        }
+      ]
+    },
+    {
+      "id": "reflexive-pronouns-2",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{tu}'?",
+      "shown": "tu ... lèves (you get up)",
+      "answer": "te",
+      "hint": "Reflexive for second person singular",
+      "mistakes": [
+        {
+          "answer": "me",
+          "feedback": "That's for '{je}' - use '{te}' for '{tu}'"
+        }
+      ]
+    },
+    {
+      "id": "reflexive-pronouns-3",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{il}'?",
+      "shown": "il ... prépare (he prepares himself)",
+      "answer": "se",
+      "hint": "Reflexive for third person - same for il/elle/on"
+    },
+    {
+      "id": "reflexive-pronouns-4",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{elle}'?",
+      "shown": "elle ... habille (she gets dressed)",
+      "answer": "se",
+      "hint": "Same as for '{il}' - third person reflexive"
+    },
+    {
+      "id": "reflexive-pronouns-5",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{nous}'?",
+      "shown": "nous ... levons (we get up)",
+      "answer": "nous",
+      "hint": "First person plural - same as subject pronoun"
+    },
+    {
+      "id": "reflexive-pronouns-6",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{vous}'?",
+      "shown": "vous ... préparez (you get ready)",
+      "answer": "vous",
+      "hint": "Second person plural - same as subject pronoun"
+    },
+    {
+      "id": "reflexive-pronouns-7",
+      "type": "transform",
+      "instruction": "Which reflexive pronoun goes with '{ils}'?",
+      "shown": "ils ... amusent (they have fun)",
+      "answer": "se",
+      "hint": "Third person plural - same as singular '{il}'"
+    },
+    {
+      "id": "reflexive-pronouns-8",
+      "type": "respond",
+      "situation": "I wash myself",
+      "answer": "je me lave",
+      "hint": "je + me + laver conjugated",
+      "mistakes": [
+        {
+          "answer": "je lave me",
+          "feedback": "Reflexive pronoun goes BEFORE the verb: je me lave"
+        }
+      ]
+    }
+  ]
+}

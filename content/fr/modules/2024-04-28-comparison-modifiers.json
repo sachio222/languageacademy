@@ -1,0 +1,181 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-28-comparison-modifiers",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Modifiers - {tout, même, mal}",
+  "description": "Complete your comparison words: tout le monde (everyone), c'est la même chose (it's the same thing), je comprends mal (I understand poorly)",
+  "can_do": [
+    "Use tout for 'all' and 'everyone' (tout le monde)",
+    "Express sameness with même (the same thing)",
+    "Describe how well or poorly you do things (mal, bien)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "tout-fr",
+      "fr": "tout",
+      "gloss": "all / everything (pronoun)",
+      "note": "⭐ rank 49 - very common!"
+    },
+    {
+      "word_id": "toute-fr",
+      "fr": "toute",
+      "gloss": "all (feminine singular adjective)",
+      "note": "agrees with feminine nouns"
+    },
+    {
+      "word_id": "tous-fr",
+      "fr": "tous",
+      "gloss": "all (masculine plural adjective/pronoun)",
+      "note": "pronounced 'too' (adjective) or 'toos' (pronoun)"
+    },
+    {
+      "word_id": "toutes-fr",
+      "fr": "toutes",
+      "gloss": "all (feminine plural adjective)",
+      "note": "agrees with feminine plural nouns"
+    },
+    {
+      "word_id": "tout-le-monde-fr",
+      "fr": "tout le monde",
+      "gloss": "everyone / everybody",
+      "note": "⭐⭐⭐ fixed expression!"
+    },
+    {
+      "word_id": "toute-la-classe-fr",
+      "fr": "toute la classe",
+      "gloss": "the whole class",
+      "note": "feminine 'toute' + la classe"
+    },
+    {
+      "word_id": "tout-petit-fr",
+      "fr": "tout petit",
+      "gloss": "very small",
+      "note": "adverb use - intensifier"
+    },
+    {
+      "word_id": "meme-fr",
+      "fr": "même",
+      "gloss": "same",
+      "note": "rank 85 - comparison"
+    },
+    {
+      "word_id": "le-la-meme-fr",
+      "fr": "le/la même",
+      "gloss": "the same (one)",
+      "note": "with article"
+    },
+    {
+      "word_id": "meme-moi-fr",
+      "fr": "même moi",
+      "gloss": "even me",
+      "note": "emphasis - 'même' before word"
+    },
+    {
+      "word_id": "mal-fr",
+      "fr": "mal",
+      "gloss": "badly / poorly",
+      "note": "rank 87 - opposite of 'bien'"
+    },
+    {
+      "word_id": "je-comprends-mal-fr",
+      "fr": "je comprends mal",
+      "gloss": "I understand poorly",
+      "note": "adverb after verb"
+    },
+    {
+      "word_id": "aller-mal-fr",
+      "fr": "aller mal",
+      "gloss": "to go badly / to be unwell",
+      "note": "Ça va mal (It's going badly)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-tout-all-everything",
+      "term": "{tout} = all / everything",
+      "definition": "VERY versatile word! Can be pronoun, adjective, or adverb - rank 49",
+      "example": "{tout} (everything), {tout le monde} (everyone), {toute la classe} (the whole class), {tout petit} (very small)"
+    },
+    {
+      "id": "c-tout-le-monde-everyone",
+      "term": "{tout le monde} = everyone",
+      "definition": "Fixed expression! Literally 'all the world' but means 'everyone'",
+      "example": "{Tout le monde sait} (Everyone knows), {Tout le monde comprend} (Everyone understands)"
+    },
+    {
+      "id": "c-meme-same-even",
+      "term": "{même} = same / even",
+      "definition": "Expresses sameness OR emphasis - rank 85, very common!",
+      "example": "{C'est la même chose} (It's the same thing), {Même moi}, {je sais} (Even I know)"
+    },
+    {
+      "id": "c-mal-badly-poorly",
+      "term": "{mal} = badly / poorly",
+      "definition": "Opposite of '{bien}' (well) - rank 87, for negative descriptions",
+      "example": "{Je comprends mal} (I understand poorly), {Ça va mal} (It's going badly)"
+    },
+    {
+      "id": "c-complete-comparison-toolkit",
+      "term": "Complete comparison toolkit",
+      "definition": "Now you have: plus, moins, trop, très, aussi, tout, même, mal - full range!",
+      "example": "{Je comprends très bien} (very well), {Je comprends mal} (poorly), {C'est la même chose} (same), {Tout le monde comprend} (everyone)"
+    }
+  ],
+  "items": [
+    {
+      "id": "comparison-modifiers-1",
+      "type": "respond",
+      "situation": "Everyone knows",
+      "answer": "tout le monde sait",
+      "hint": "tout le monde + sait (savoir for il/elle/on form)",
+      "mistakes": [
+        {
+          "answer": "tout le monde savent",
+          "feedback": "'Tout le monde' is singular (like 'everyone') - use '{sait}' not 'savent'!"
+        }
+      ]
+    },
+    {
+      "id": "comparison-modifiers-2",
+      "type": "respond",
+      "situation": "It's the same thing",
+      "answer": "c'est la même chose",
+      "hint": "c'est + la même chose (feminine)"
+    },
+    {
+      "id": "comparison-modifiers-3",
+      "type": "respond",
+      "situation": "Even I know",
+      "answer": "même moi, je sais",
+      "hint": "même + moi + comma + je sais"
+    },
+    {
+      "id": "comparison-modifiers-4",
+      "type": "respond",
+      "situation": "I understand poorly",
+      "answer": "je comprends mal",
+      "hint": "je comprends + mal (adverb after verb)",
+      "mistakes": [
+        {
+          "answer": "je mal comprends",
+          "feedback": "Put 'mal' AFTER the verb - 'je comprends mal'!"
+        }
+      ]
+    },
+    {
+      "id": "comparison-modifiers-5",
+      "type": "respond",
+      "situation": "Everyone understands",
+      "answer": "tout le monde comprend",
+      "hint": "tout le monde + comprend (singular verb)"
+    },
+    {
+      "id": "comparison-modifiers-6",
+      "type": "respond",
+      "situation": "I know everything",
+      "answer": "je sais tout",
+      "hint": "je sais + tout (pronoun)"
+    }
+  ]
+}

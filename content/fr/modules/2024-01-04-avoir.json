@@ -1,0 +1,275 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-04-avoir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {avoir} (to have)",
+  "description": "Learn \"I have\", \"you have\" - express possession and needs. Super practical!",
+  "can_do": [
+    "Express possession (I have, you have, they have)",
+    "Talk about age and physical states in French",
+    "Use both être and avoir to form different sentences"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "avoir-fr",
+      "fr": "avoir",
+      "gloss": "to have",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "j-ai-fr",
+      "fr": "j'ai",
+      "gloss": "I have",
+      "note": "use apostrophe!"
+    },
+    {
+      "word_id": "tu-as-fr",
+      "fr": "tu as",
+      "gloss": "you have (informal)",
+      "note": "singular"
+    },
+    {
+      "word_id": "il-a-fr",
+      "fr": "il a",
+      "gloss": "he has",
+      "note": "masculine"
+    },
+    {
+      "word_id": "elle-a-fr",
+      "fr": "elle a",
+      "gloss": "she has",
+      "note": "feminine"
+    },
+    {
+      "word_id": "nous-avons-fr",
+      "fr": "nous avons",
+      "gloss": "we have",
+      "note": "plural"
+    },
+    {
+      "word_id": "vous-avez-fr",
+      "fr": "vous avez",
+      "gloss": "you have (formal/plural)",
+      "note": "formal or groups"
+    },
+    {
+      "word_id": "ils-ont-fr",
+      "fr": "ils ont",
+      "gloss": "they have (masculine)",
+      "note": "masc or mixed"
+    },
+    {
+      "word_id": "elles-ont-fr",
+      "fr": "elles ont",
+      "gloss": "they have (feminine)",
+      "note": "all feminine"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-avoir-to-have",
+      "term": "{avoir} = to have",
+      "definition": "Express possession, age, and physical states",
+      "example": "Use to say what you have, your age, or physical sensations"
+    },
+    {
+      "id": "c-elision-with-first-person",
+      "term": "Elision with First Person",
+      "definition": "When 'I' meets a verb starting with vowel, letters merge with apostrophe",
+      "example": "The 'e' disappears and apostrophe appears for smooth pronunciation"
+    },
+    {
+      "id": "c-common-uses",
+      "term": "Common Uses",
+      "definition": "Possession: \"I have a cat\", Age: \"I have 20 years\" (French way to say age!)",
+      "example": "Possession and age are the most common uses"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-avoir",
+      "title": "{avoir}",
+      "rows": [
+        {
+          "fr": "j'ai",
+          "en": "I have"
+        },
+        {
+          "fr": "tu as",
+          "en": "you have (informal)"
+        },
+        {
+          "fr": "il a",
+          "en": "he has"
+        },
+        {
+          "fr": "elle a",
+          "en": "she has"
+        },
+        {
+          "fr": "nous avons",
+          "en": "we have"
+        },
+        {
+          "fr": "vous avez",
+          "en": "you have (formal/plural)"
+        },
+        {
+          "fr": "ils ont",
+          "en": "they have (masculine)"
+        },
+        {
+          "fr": "elles ont",
+          "en": "they have (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai",
+      "type": "transform",
+      "instruction": "Talk about something you possess. Say \"I have\"",
+      "shown": "avoir",
+      "answer": "j'ai",
+      "hint": "{je + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "je ai",
+          "feedback": "Use j'ai with an apostrophe, not 'je ai'"
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's 'you have', not 'I have'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as",
+      "type": "transform",
+      "instruction": "Tell your friend what they have. Say \"you have (informal)\"",
+      "shown": "avoir",
+      "answer": "tu as",
+      "hint": "{tu + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"you have (informal)\""
+        },
+        {
+          "answer": "il a",
+          "feedback": "That's \"he has\", not \"you have (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-a",
+      "type": "transform",
+      "instruction": "Say what a man has. Say \"he has\"",
+      "shown": "avoir",
+      "answer": "il a",
+      "hint": "{il + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"he has\""
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's \"you have (informal)\", not \"he has\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a",
+      "type": "transform",
+      "instruction": "Say what a woman has. Say \"she has\"",
+      "shown": "avoir",
+      "answer": "elle a",
+      "hint": "{elle + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"she has\""
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's \"you have (informal)\", not \"she has\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons",
+      "type": "transform",
+      "instruction": "Talk about what your group has. Say \"we have\"",
+      "shown": "avoir",
+      "answer": "nous avons",
+      "hint": "{nous + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"we have\""
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's \"you have (informal)\", not \"we have\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-avez",
+      "type": "transform",
+      "instruction": "Tell someone formally what they have. Say \"you have (formal/plural)\"",
+      "shown": "avoir",
+      "answer": "vous avez",
+      "hint": "{vous + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"you have (formal/plural)\""
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's \"you have (informal)\", not \"you have (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont",
+      "type": "transform",
+      "instruction": "Say what a group of men has. Say \"they have (masculine)\"",
+      "shown": "avoir",
+      "answer": "ils ont",
+      "hint": "{ils + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"they have (masculine)\""
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's \"you have (informal)\", not \"they have (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-ont",
+      "type": "transform",
+      "instruction": "Say what a group of women has. Say \"they have (feminine)\"",
+      "shown": "avoir",
+      "answer": "elles ont",
+      "hint": "{elles + avoir = ?}",
+      "mistakes": [
+        {
+          "answer": "j'ai",
+          "feedback": "That's \"I have\", not \"they have (feminine)\""
+        },
+        {
+          "answer": "tu as",
+          "feedback": "That's \"you have (informal)\", not \"they have (feminine)\""
+        }
+      ]
+    }
+  ]
+}

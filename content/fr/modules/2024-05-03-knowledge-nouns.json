@@ -1,0 +1,175 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-03-knowledge-nouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Knowledge & Learning - Essential Nouns",
+  "description": "Essential nouns for learning: la question (question), la réponse (answer), l'idée (idea), le cours (class)",
+  "can_do": [
+    "Talk about academic concepts (question, answer, idea, class)",
+    "Discuss learning and educational contexts",
+    "Use knowledge nouns with cognitive verbs naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "la-connaissance-fr",
+      "fr": "la connaissance",
+      "gloss": "knowledge (what you know)",
+      "note": "feminine noun - from connaître"
+    },
+    {
+      "word_id": "le-savoir-fr",
+      "fr": "le savoir",
+      "gloss": "knowledge (abstract)",
+      "note": "masculine noun - from savoir"
+    },
+    {
+      "word_id": "l-apprentissage-m-fr",
+      "fr": "l'apprentissage (m)",
+      "gloss": "learning (the process)",
+      "note": "masculine noun - from apprendre"
+    },
+    {
+      "word_id": "l-etude-f-fr",
+      "fr": "l'étude (f)",
+      "gloss": "study",
+      "note": "feminine noun - from étudier"
+    },
+    {
+      "word_id": "la-lecon-fr",
+      "fr": "la leçon",
+      "gloss": "lesson",
+      "note": "feminine noun ⭐ what you're doing now!"
+    },
+    {
+      "word_id": "le-cours-fr",
+      "fr": "le cours",
+      "gloss": "class / course",
+      "note": "masculine noun"
+    },
+    {
+      "word_id": "l-ecole-f-fr",
+      "fr": "l'école (f)",
+      "gloss": "school",
+      "note": "feminine noun - primary/secondary"
+    },
+    {
+      "word_id": "l-universite-f-fr",
+      "fr": "l'université (f)",
+      "gloss": "university",
+      "note": "feminine noun - higher education"
+    },
+    {
+      "word_id": "la-pensee-fr",
+      "fr": "la pensée",
+      "gloss": "thought / thinking",
+      "note": "feminine noun - from penser"
+    },
+    {
+      "word_id": "l-idee-f-fr",
+      "fr": "l'idée (f)",
+      "gloss": "idea",
+      "note": "feminine noun ⭐ very common!"
+    },
+    {
+      "word_id": "la-question-fr",
+      "fr": "la question",
+      "gloss": "question",
+      "note": "⭐ essential for learning!"
+    },
+    {
+      "word_id": "la-reponse-fr",
+      "fr": "la réponse",
+      "gloss": "answer",
+      "note": "feminine noun"
+    },
+    {
+      "word_id": "allons-y-fr",
+      "fr": "Allons-y!",
+      "gloss": "Let's go!",
+      "note": "imperative phrase ⭐ very common expression"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-academic-nouns",
+      "term": "Academic nouns",
+      "definition": "Essential vocabulary for school, university, and learning contexts",
+      "example": "{le cours} (class), {la leçon} (lesson), {l'école} (school), {l'université} (university)"
+    },
+    {
+      "id": "c-knowledge-nouns",
+      "term": "Knowledge nouns",
+      "definition": "Abstract nouns related to knowing and understanding",
+      "example": "{la connaissance} (knowledge - what you know), {le savoir} (knowledge - abstract), {la pensée} (thought)"
+    },
+    {
+      "id": "c-communication-nouns",
+      "term": "Communication nouns",
+      "definition": "Question-and-answer vocabulary - essential for learning!",
+      "example": "{la question} ({question}), {la réponse} (answer), {l'idée} (idea)"
+    },
+    {
+      "id": "c-complete-sentence-composition",
+      "term": "Complete sentence composition",
+      "definition": "Now you can build full sentences about learning and knowing",
+      "example": "{J'ai une question} (I have a question), {C'est une bonne idée} (That's a good idea), {Je vais au cours} (I'm going to class)"
+    }
+  ],
+  "items": [
+    {
+      "id": "knowledge-nouns-1",
+      "type": "respond",
+      "situation": "I have a question",
+      "answer": "j'ai une question",
+      "hint": "j'ai + une question (feminine)",
+      "mistakes": [
+        {
+          "answer": "j'ai un question",
+          "feedback": "'Question' is feminine - use '{une question}'!"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-nouns-2",
+      "type": "respond",
+      "situation": "That's a good idea",
+      "answer": "c'est une bonne idée",
+      "hint": "c'est + une bonne idée (feminine adjective agrees)"
+    },
+    {
+      "id": "knowledge-nouns-3",
+      "type": "respond",
+      "situation": "I go to university",
+      "answer": "je vais à l'université",
+      "hint": "je vais + à l'université (use à l' before vowel)"
+    },
+    {
+      "id": "knowledge-nouns-4",
+      "type": "respond",
+      "situation": "I know the answer",
+      "answer": "je sais la réponse",
+      "hint": "je sais + la réponse (use savoir for facts)",
+      "mistakes": [
+        {
+          "answer": "je connais la réponse",
+          "feedback": "Use '{je sais}' for facts/knowledge, not 'je connais'!"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-nouns-5",
+      "type": "respond",
+      "situation": "I'm learning my lessons",
+      "answer": "j'apprends mes leçons",
+      "hint": "{j'apprends + mes leçons}"
+    },
+    {
+      "id": "knowledge-nouns-6",
+      "type": "respond",
+      "situation": "I understand the question",
+      "answer": "je comprends la question",
+      "hint": "{je comprends + la question}"
+    }
+  ]
+}

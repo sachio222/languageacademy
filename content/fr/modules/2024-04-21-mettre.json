@@ -1,0 +1,610 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-21-mettre",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{mettre} - To Put / To Set",
+  "description": "Express putting and setting: je mets (I put), mettre la table (to set the table), mettre un pantalon (to put on pants)",
+  "can_do": [
+    "Express putting and placing things (I put, you set)",
+    "Talk about setting the table and putting on clothes",
+    "Use mettre in common daily expressions"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "mettre-fr",
+      "fr": "mettre",
+      "gloss": "to put / to set / to wear",
+      "note": "infinitive form - irregular verb"
+    },
+    {
+      "word_id": "je-mets-fr",
+      "fr": "je mets",
+      "gloss": "I put / I set / I wear",
+      "note": "single 't' - silent 's'"
+    },
+    {
+      "word_id": "tu-mets-fr",
+      "fr": "tu mets",
+      "gloss": "you put / you set / you wear (informal)",
+      "note": "same as je mets"
+    },
+    {
+      "word_id": "il-elle-met-fr",
+      "fr": "il/elle met",
+      "gloss": "he/she puts / sets / wears",
+      "note": "no 's' - single 't'"
+    },
+    {
+      "word_id": "nous-mettons-fr",
+      "fr": "nous mettons",
+      "gloss": "we put / we set / we wear",
+      "note": "double 'tt' + ons"
+    },
+    {
+      "word_id": "vous-mettez-fr",
+      "fr": "vous mettez",
+      "gloss": "you put / you set / you wear (formal/plural)",
+      "note": "double 'tt' + ez"
+    },
+    {
+      "word_id": "ils-elles-mettent-fr",
+      "fr": "ils/elles mettent",
+      "gloss": "they put / they set / they wear",
+      "note": "double 'tt' + ent (silent)"
+    },
+    {
+      "word_id": "mettre-la-table-fr",
+      "fr": "mettre la table",
+      "gloss": "to set the table",
+      "note": "very common expression"
+    },
+    {
+      "word_id": "mettre-un-pantalon-fr",
+      "fr": "mettre un pantalon",
+      "gloss": "to put on pants",
+      "note": "mettre + clothing"
+    },
+    {
+      "word_id": "mettre-un-manteau-fr",
+      "fr": "mettre un manteau",
+      "gloss": "to put on a coat",
+      "note": "mettre + clothing"
+    },
+    {
+      "word_id": "mettre-du-temps-fr",
+      "fr": "mettre du temps",
+      "gloss": "to take time",
+      "note": "ça met du temps (it takes time)"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-mets-fr",
+      "fr": "qu'est-ce que tu mets?",
+      "gloss": "what are you wearing?",
+      "note": "asking about clothes"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-mettre-to-put-to",
+      "term": "{mettre} = to put / to set / to wear",
+      "definition": "Versatile verb - put things somewhere, set the table, put on clothes",
+      "example": "{je mets le livre sur la table} (I put the book on the table), {je mets un pantalon} (I put on pants)"
+    },
+    {
+      "id": "c-irregular-conjugation",
+      "term": "Irregular conjugation",
+      "definition": "Present tense: je mets, tu mets, il met, nous mettons, vous mettez, ils mettent",
+      "example": "Notice: singular has single 't', plural has double 'tt'"
+    },
+    {
+      "id": "c-mettre-la-table",
+      "term": "{mettre la table}",
+      "definition": "Common expression meaning 'to set the table'",
+      "example": "{je mets la table} (I set the table), {tu peux mettre la table?} (can you set the table?)"
+    },
+    {
+      "id": "c-mettre-clothing",
+      "term": "mettre + clothing",
+      "definition": "Use mettre to say you're putting on or wearing clothes",
+      "example": "{je mets un manteau} (I put on a coat), {qu'est-ce que tu mets?} (what are you wearing?)"
+    },
+    {
+      "id": "c-other-common-uses",
+      "term": "Other common uses",
+      "definition": "mettre du temps (to take time), se mettre à (to start doing something)",
+      "example": "{ça met deux heures} (it takes two hours), {je me mets à travailler} (I start working)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-mets",
+      "type": "respond",
+      "situation": "I put",
+      "answer": "je mets",
+      "hint": "{je...}",
+      "mistakes": [
+        {
+          "answer": "je met",
+          "feedback": "Expected: \"{je mets}\""
+        },
+        {
+          "answer": "je mettre",
+          "feedback": "Expected: \"{je mets}\""
+        },
+        {
+          "answer": "je mette",
+          "feedback": "Expected: \"{je mets}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-mets",
+      "type": "respond",
+      "situation": "Say \"you put\" (informal)",
+      "cue": "you put (informal)",
+      "answer": "tu mets",
+      "hint": "{tu...}",
+      "mistakes": [
+        {
+          "answer": "tu met",
+          "feedback": "Expected: \"{tu mets}\""
+        },
+        {
+          "answer": "tu mettre",
+          "feedback": "Expected: \"{tu mets}\""
+        },
+        {
+          "answer": "tu mettes",
+          "feedback": "Expected: \"{tu mets}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-met",
+      "type": "respond",
+      "situation": "she puts",
+      "answer": "elle met",
+      "hint": "{elle...}",
+      "mistakes": [
+        {
+          "answer": "elle mets",
+          "feedback": "Expected: \"{elle met}\""
+        },
+        {
+          "answer": "elle mettre",
+          "feedback": "Expected: \"{elle met}\""
+        },
+        {
+          "answer": "elle mette",
+          "feedback": "Expected: \"{elle met}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-mettons",
+      "type": "respond",
+      "situation": "we put",
+      "answer": "nous mettons",
+      "hint": "nous... (double t!)",
+      "mistakes": [
+        {
+          "answer": "nous mets",
+          "feedback": "Expected: \"{nous mettons}\""
+        },
+        {
+          "answer": "nous mettre",
+          "feedback": "Expected: \"{nous mettons}\""
+        },
+        {
+          "answer": "nous metez",
+          "feedback": "Expected: \"{nous mettons}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-mettez",
+      "type": "respond",
+      "situation": "Say \"you put\" (formal)",
+      "cue": "you put (formal)",
+      "answer": "vous mettez",
+      "hint": "vous... (double t!)",
+      "mistakes": [
+        {
+          "answer": "vous mets",
+          "feedback": "Expected: \"{vous mettez}\""
+        },
+        {
+          "answer": "vous mettre",
+          "feedback": "Expected: \"{vous mettez}\""
+        },
+        {
+          "answer": "vous metons",
+          "feedback": "Expected: \"{vous mettez}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-mettent",
+      "type": "respond",
+      "situation": "they put",
+      "answer": "ils mettent",
+      "hint": "ils... (double t!)",
+      "mistakes": [
+        {
+          "answer": "ils mets",
+          "feedback": "Expected: \"{ils mettent}\""
+        },
+        {
+          "answer": "ils mettre",
+          "feedback": "Expected: \"{ils mettent}\""
+        },
+        {
+          "answer": "ils metent",
+          "feedback": "Expected: \"{ils mettent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-mets-la-table",
+      "type": "respond",
+      "situation": "I set the table",
+      "answer": "je mets la table",
+      "hint": "{je mets la table}",
+      "mistakes": [
+        {
+          "answer": "je met la table",
+          "feedback": "Expected: \"{je mets la table}\""
+        },
+        {
+          "answer": "je mettre la table",
+          "feedback": "Expected: \"{je mets la table}\""
+        },
+        {
+          "answer": "je pose la table",
+          "feedback": "Expected: \"{je mets la table}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-peux-mettre-la",
+      "type": "respond",
+      "situation": "can you set the table?",
+      "answer": "tu peux mettre la table?",
+      "accept": [
+        "tu peux mettre la table"
+      ],
+      "hint": "{tu peux mettre la table?}",
+      "mistakes": [
+        {
+          "answer": "tu mets la table?",
+          "feedback": "Expected: \"{tu peux mettre la table?}\""
+        },
+        {
+          "answer": "peux-tu mettre la table?",
+          "feedback": "Expected: \"{tu peux mettre la table?}\""
+        },
+        {
+          "answer": "tu peut mettre la table?",
+          "feedback": "Expected: \"{tu peux mettre la table?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-mettons-la-table",
+      "type": "respond",
+      "situation": "we are setting the table",
+      "answer": "nous mettons la table",
+      "hint": "{nous mettons la table}",
+      "mistakes": [
+        {
+          "answer": "nous mets la table",
+          "feedback": "Expected: \"{nous mettons la table}\""
+        },
+        {
+          "answer": "nous mettons le table",
+          "feedback": "Expected: \"{nous mettons la table}\""
+        },
+        {
+          "answer": "nous mettre la table",
+          "feedback": "Expected: \"{nous mettons la table}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-mets-le-livre",
+      "type": "respond",
+      "situation": "I put the book on the table",
+      "answer": "je mets le livre sur la table",
+      "hint": "{je mets le livre sur la table}",
+      "mistakes": [
+        {
+          "answer": "je met le livre sur la table",
+          "feedback": "Expected: \"{je mets le livre sur la table}\""
+        },
+        {
+          "answer": "je pose le livre sur la table",
+          "feedback": "Expected: \"{je mets le livre sur la table}\""
+        },
+        {
+          "answer": "je mettre le livre sur la table",
+          "feedback": "Expected: \"{je mets le livre sur la table}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-mets-ca-ici",
+      "type": "respond",
+      "situation": "you put that here",
+      "answer": "tu mets ça ici",
+      "accept": [
+        "tu mets ca ici"
+      ],
+      "hint": "{tu mets ça ici}",
+      "mistakes": [
+        {
+          "answer": "tu met ça ici",
+          "feedback": "Expected: \"{tu mets ça ici}\""
+        },
+        {
+          "answer": "tu mettre ça ici",
+          "feedback": "Expected: \"{tu mets ça ici}\""
+        },
+        {
+          "answer": "tu poses ça ici",
+          "feedback": "Expected: \"{tu mets ça ici}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-met-son-sac",
+      "type": "respond",
+      "situation": "she puts her bag in the car",
+      "answer": "elle met son sac dans la voiture",
+      "hint": "{elle met son sac dans la voiture}",
+      "mistakes": [
+        {
+          "answer": "elle mets son sac dans la voiture",
+          "feedback": "Expected: \"{elle met son sac dans la voiture}\""
+        },
+        {
+          "answer": "elle mettre son sac dans la voiture",
+          "feedback": "Expected: \"{elle met son sac dans la voiture}\""
+        },
+        {
+          "answer": "elle met sa sac dans la voiture",
+          "feedback": "Expected: \"{elle met son sac dans la voiture}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-mets-un-manteau",
+      "type": "respond",
+      "situation": "I put on a coat",
+      "answer": "je mets un manteau",
+      "hint": "{je mets un manteau}",
+      "mistakes": [
+        {
+          "answer": "je met un manteau",
+          "feedback": "Expected: \"{je mets un manteau}\""
+        },
+        {
+          "answer": "je porte un manteau",
+          "feedback": "Expected: \"{je mets un manteau}\""
+        },
+        {
+          "answer": "je mettre un manteau",
+          "feedback": "Expected: \"{je mets un manteau}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-mets-un-pantalon",
+      "type": "respond",
+      "situation": "you put on pants",
+      "answer": "tu mets un pantalon",
+      "hint": "{tu mets un pantalon}",
+      "mistakes": [
+        {
+          "answer": "tu met un pantalon",
+          "feedback": "Expected: \"{tu mets un pantalon}\""
+        },
+        {
+          "answer": "tu portes un pantalon",
+          "feedback": "Expected: \"{tu mets un pantalon}\""
+        },
+        {
+          "answer": "tu mettre un pantalon",
+          "feedback": "Expected: \"{tu mets un pantalon}\""
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "what are you wearing?",
+      "answer": "qu'est-ce que tu mets?",
+      "accept": [
+        "qu'est-ce que tu mets",
+        "qu est-ce que tu mets?"
+      ],
+      "hint": "{qu'est-ce que tu mets?}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu portes?",
+          "feedback": "Expected: \"{qu'est-ce que tu mets?}\""
+        },
+        {
+          "answer": "qu'est-ce que tu met?",
+          "feedback": "Expected: \"{qu'est-ce que tu mets?}\""
+        },
+        {
+          "answer": "que tu mets?",
+          "feedback": "Expected: \"{qu'est-ce que tu mets?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-met-une-chemise",
+      "type": "respond",
+      "situation": "he is putting on a shirt",
+      "answer": "il met une chemise",
+      "hint": "{il met une chemise}",
+      "mistakes": [
+        {
+          "answer": "il mets une chemise",
+          "feedback": "Expected: \"{il met une chemise}\""
+        },
+        {
+          "answer": "il porte une chemise",
+          "feedback": "Expected: \"{il met une chemise}\""
+        },
+        {
+          "answer": "il mettre une chemise",
+          "feedback": "Expected: \"{il met une chemise}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-mettons-nos-chaussures",
+      "type": "respond",
+      "situation": "we put on our shoes",
+      "answer": "nous mettons nos chaussures",
+      "hint": "{nous mettons nos chaussures}",
+      "mistakes": [
+        {
+          "answer": "nous mets nos chaussures",
+          "feedback": "Expected: \"{nous mettons nos chaussures}\""
+        },
+        {
+          "answer": "nous portons nos chaussures",
+          "feedback": "Expected: \"{nous mettons nos chaussures}\""
+        },
+        {
+          "answer": "nous mettre nos chaussures",
+          "feedback": "Expected: \"{nous mettons nos chaussures}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ca-met-du-temps",
+      "type": "respond",
+      "situation": "it takes time",
+      "answer": "ça met du temps",
+      "accept": [
+        "ca met du temps"
+      ],
+      "hint": "{ça met du temps}",
+      "mistakes": [
+        {
+          "answer": "ça prend du temps",
+          "feedback": "Expected: \"{ça met du temps}\""
+        },
+        {
+          "answer": "ça mets du temps",
+          "feedback": "Expected: \"{ça met du temps}\""
+        },
+        {
+          "answer": "ça mettre du temps",
+          "feedback": "Expected: \"{ça met du temps}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ca-met-deux-heures",
+      "type": "respond",
+      "situation": "it takes two hours",
+      "answer": "ça met deux heures",
+      "accept": [
+        "ca met deux heures"
+      ],
+      "hint": "{ça met deux heures}",
+      "mistakes": [
+        {
+          "answer": "ça mets deux heures",
+          "feedback": "Expected: \"{ça met deux heures}\""
+        },
+        {
+          "answer": "ça mettre deux heures",
+          "feedback": "Expected: \"{ça met deux heures}\""
+        },
+        {
+          "answer": "il met deux heures",
+          "feedback": "Expected: \"{ça met deux heures}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-mis",
+      "type": "respond",
+      "situation": "Say \"I put\" (past)",
+      "cue": "I put (past)",
+      "answer": "j'ai mis",
+      "accept": [
+        "j ai mis"
+      ],
+      "hint": "{j'ai mis}",
+      "mistakes": [
+        {
+          "answer": "j'ai met",
+          "feedback": "Expected: \"{j'ai mis}\""
+        },
+        {
+          "answer": "j'ai mets",
+          "feedback": "Expected: \"{j'ai mis}\""
+        },
+        {
+          "answer": "je mets",
+          "feedback": "Expected: \"{j'ai mis}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-mis-la",
+      "type": "respond",
+      "situation": "Say \"I set the table\" (past)",
+      "cue": "I set the table (past)",
+      "answer": "j'ai mis la table",
+      "accept": [
+        "j ai mis la table"
+      ],
+      "hint": "{j'ai mis la table}",
+      "mistakes": [
+        {
+          "answer": "j'ai met la table",
+          "feedback": "Expected: \"{j'ai mis la table}\""
+        },
+        {
+          "answer": "j'ai mets la table",
+          "feedback": "Expected: \"{j'ai mis la table}\""
+        },
+        {
+          "answer": "je mets la table",
+          "feedback": "Expected: \"{j'ai mis la table}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-mis-un",
+      "type": "respond",
+      "situation": "Say \"you put on a coat\" (past)",
+      "cue": "you put on a coat (past)",
+      "answer": "tu as mis un manteau",
+      "hint": "{tu as mis un manteau}",
+      "mistakes": [
+        {
+          "answer": "tu as met un manteau",
+          "feedback": "Expected: \"{tu as mis un manteau}\""
+        },
+        {
+          "answer": "tu as mets un manteau",
+          "feedback": "Expected: \"{tu as mis un manteau}\""
+        },
+        {
+          "answer": "tu mets un manteau",
+          "feedback": "Expected: \"{tu as mis un manteau}\""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-29-partir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {partir} (to leave)",
+  "description": "Master departures through active recall and composition practice!",
+  "can_do": [
+    "Express leaving and departing (I leave, you leave, they leave)",
+    "Talk about departures and travel",
+    "Combine with venir and aller for complete movement vocabulary"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "partir-fr",
+      "fr": "partir",
+      "gloss": "to leave / to depart",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-pars-fr",
+      "fr": "je pars",
+      "gloss": "I leave / I'm leaving",
+      "note": "partir"
+    },
+    {
+      "word_id": "tu-pars-fr",
+      "fr": "tu pars",
+      "gloss": "you leave (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-part-fr",
+      "fr": "il part",
+      "gloss": "he leaves",
+      "note": "drops -s"
+    },
+    {
+      "word_id": "elle-part-fr",
+      "fr": "elle part",
+      "gloss": "she leaves",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-partons-fr",
+      "fr": "nous partons",
+      "gloss": "we leave",
+      "note": "add -ons to stem"
+    },
+    {
+      "word_id": "vous-partez-fr",
+      "fr": "vous partez",
+      "gloss": "you leave (formal)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-partent-fr",
+      "fr": "ils partent",
+      "gloss": "they leave (masc)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-partent-fr",
+      "fr": "elles partent",
+      "gloss": "they leave (fem)",
+      "note": "same as ils"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-partir-to-leave-to",
+      "term": "{partir} = to leave / to depart",
+      "definition": "Common verb for leaving a place or departing",
+      "example": "Essential for talking about travel and movement away from places"
+    },
+    {
+      "id": "c-regular-ir-conjugation",
+      "term": "Regular -ir Conjugation",
+      "definition": "Follows standard -ir pattern (drop singular endings)",
+      "example": "Singular: {je}/{tu pars}, il part. Plural: {nous partons}, {vous partez}"
+    },
+    {
+      "id": "c-composition-power",
+      "term": "Composition Power",
+      "definition": "Combine partir with previous modules for infinite expressions",
+      "example": "{je pars + ça}, {nous partons + être}, {ils partent + avoir}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-pars",
+      "type": "respond",
+      "situation": "Say what you do",
+      "cue": "I leave",
+      "answer": "je pars",
+      "hint": "{je pars}",
+      "mistakes": [
+        {
+          "answer": "je part",
+          "feedback": "Je takes '{pars}', not 'part'. Remember: je pars, il part"
+        },
+        {
+          "answer": "tu pars",
+          "feedback": "That's 'you leave', not 'I leave'. Focus on the pronoun!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-pars",
+      "type": "respond",
+      "situation": "Say what you do",
+      "cue": "you leave (informal)",
+      "answer": "tu pars",
+      "hint": "{tu pars}",
+      "mistakes": [
+        {
+          "answer": "tu part",
+          "feedback": "Tu takes '{pars}', not 'part'. Pattern: je pars, tu pars"
+        }
+      ]
+    },
+    {
+      "id": "i-il-part",
+      "type": "respond",
+      "situation": "Say what he does",
+      "cue": "he leaves",
+      "answer": "il part",
+      "hint": "{il part}",
+      "mistakes": [
+        {
+          "answer": "il pars",
+          "feedback": "Il takes '{part}', not 'pars'. Remember: il part, elle part"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-part",
+      "type": "respond",
+      "situation": "Say what she does",
+      "cue": "she leaves",
+      "answer": "elle part",
+      "hint": "{elle part}",
+      "mistakes": [
+        {
+          "answer": "elle pars",
+          "feedback": "Elle takes '{part}', not 'pars'. Same as il part"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-partons",
+      "type": "respond",
+      "situation": "Say what we do",
+      "cue": "we leave",
+      "answer": "nous partons",
+      "hint": "{nous partons}",
+      "mistakes": [
+        {
+          "answer": "nous pars",
+          "feedback": "Nous takes '{partons}', not 'pars'. Regular ending!"
+        },
+        {
+          "answer": "nous part",
+          "feedback": "Nous takes '{partons}', not 'part'. Completely different!"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-partez",
+      "type": "respond",
+      "situation": "Say what you do (formal)",
+      "cue": "you leave (formal)",
+      "answer": "vous partez",
+      "hint": "{vous partez}",
+      "mistakes": [
+        {
+          "answer": "vous pars",
+          "feedback": "Vous takes '{partez}', not 'pars'. Regular ending!"
+        },
+        {
+          "answer": "vous part",
+          "feedback": "Vous takes '{partez}', not 'part'. Remember: vous partez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-partent",
+      "type": "respond",
+      "situation": "Say what they do (masculine)",
+      "cue": "they leave (masculine)",
+      "answer": "ils partent",
+      "hint": "{ils partent}",
+      "mistakes": [
+        {
+          "answer": "ils pars",
+          "feedback": "Ils takes '{partent}', not 'pars'. Regular ending!"
+        },
+        {
+          "answer": "ils part",
+          "feedback": "Ils takes '{partent}', not 'part'. Regular ending!"
+        }
+      ]
+    },
+    {
+      "id": "i-elles-partent",
+      "type": "respond",
+      "situation": "Say what they do (feminine)",
+      "cue": "they leave (feminine)",
+      "answer": "elles partent",
+      "hint": "{elles partent}",
+      "mistakes": [
+        {
+          "answer": "elles pars",
+          "feedback": "Elles takes '{partent}', not 'pars'. Same as ils partent"
+        },
+        {
+          "answer": "elles part",
+          "feedback": "Elles takes '{partent}', not 'part'. Regular ending!"
+        }
+      ]
+    },
+    {
+      "id": "i-je-pars-de-ca",
+      "type": "respond",
+      "situation": "Say what you do with that",
+      "cue": "I leave that",
+      "answer": "je pars de ça",
+      "hint": "{je pars + de ça}",
+      "mistakes": [
+        {
+          "answer": "je part de ça",
+          "feedback": "Je takes '{pars}', not 'part'. Remember: je pars, il part"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Ask what someone does with that",
+      "cue": "What do you leave?",
+      "answer": "qu'est-ce que tu pars?",
+      "hint": "{qu'est-ce que tu pars}",
+      "mistakes": [
+        {
+          "answer": "que pars-tu?",
+          "feedback": "More common: qu'est-ce que tu pars?"
+        }
+      ]
+    },
+    {
+      "id": "i-il-part-de-ca",
+      "type": "respond",
+      "situation": "Say what he does with that",
+      "cue": "He leaves that",
+      "answer": "il part de ça",
+      "hint": "{il part + de ça}",
+      "mistakes": [
+        {
+          "answer": "il pars de ça",
+          "feedback": "Il takes '{part}', not 'pars'. Remember: il part, elle part"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-partons-de-ca",
+      "type": "respond",
+      "situation": "Say what we do with that",
+      "cue": "We leave that",
+      "answer": "nous partons de ça",
+      "hint": "{nous partons + de ça}",
+      "mistakes": [
+        {
+          "answer": "nous pars de ça",
+          "feedback": "Nous takes '{partons}', not 'pars'. Regular ending!"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "Ask what someone wants to leave",
+      "cue": "What do you want to leave?",
+      "answer": "qu'est-ce que tu veux partir?",
+      "hint": "{qu'est-ce que tu veux partir}",
+      "mistakes": [
+        {
+          "answer": "que veux-tu partir?",
+          "feedback": "More common: qu'est-ce que tu veux partir?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-partir-de",
+      "type": "respond",
+      "situation": "Say what you want to leave",
+      "cue": "I want to leave that",
+      "answer": "je veux partir de ça",
+      "hint": "{je veux partir + de ça}",
+      "mistakes": [
+        {
+          "answer": "je pars de ça",
+          "feedback": "This needs vouloir! Try: je veux partir de ça"
+        }
+      ]
+    },
+    {
+      "id": "i-peux-tu-partir",
+      "type": "respond",
+      "situation": "Ask if someone can leave",
+      "cue": "Can you leave?",
+      "answer": "peux-tu partir?",
+      "hint": "{peux-tu partir}",
+      "mistakes": [
+        {
+          "answer": "pars-tu?",
+          "feedback": "This needs pouvoir! Try: peux-tu partir?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-peux-partir-de",
+      "type": "respond",
+      "situation": "Say what you can leave",
+      "cue": "I can leave that",
+      "answer": "je peux partir de ça",
+      "hint": "{je peux partir + de ça}",
+      "mistakes": [
+        {
+          "answer": "je pars de ça",
+          "feedback": "This needs pouvoir! Try: je peux partir de ça"
+        }
+      ]
+    },
+    {
+      "id": "i-je-vais-partir-de",
+      "type": "respond",
+      "situation": "Say what you are going to leave",
+      "cue": "I am going to leave that",
+      "answer": "je vais partir de ça",
+      "hint": "{je vais partir + de ça}",
+      "mistakes": [
+        {
+          "answer": "je pars de ça",
+          "feedback": "This needs aller! Try: je vais partir de ça"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-3",
+      "type": "respond",
+      "situation": "Ask what someone is going to leave",
+      "cue": "What are you going to leave?",
+      "answer": "qu'est-ce que tu vas partir?",
+      "hint": "{qu'est-ce que tu vas partir}",
+      "mistakes": [
+        {
+          "answer": "que pars-tu?",
+          "feedback": "This needs aller! Try: qu'est-ce que tu vas partir?"
+        }
+      ]
+    },
+    {
+      "id": "i-je-viens-partir-de",
+      "type": "respond",
+      "situation": "Say what you come to leave",
+      "cue": "I come to leave that",
+      "answer": "je viens partir de ça",
+      "hint": "{je viens partir + de ça}",
+      "mistakes": [
+        {
+          "answer": "je pars de ça",
+          "feedback": "This needs venir! Try: je viens partir de ça"
+        }
+      ]
+    },
+    {
+      "id": "i-pourquoi-viens-tu-partir",
+      "type": "respond",
+      "situation": "Ask why someone comes to leave",
+      "cue": "Why do you come to leave?",
+      "answer": "pourquoi viens-tu partir?",
+      "hint": "{pourquoi viens-tu partir}",
+      "mistakes": [
+        {
+          "answer": "pourquoi pars-tu?",
+          "feedback": "This needs venir! Try: pourquoi viens-tu partir?"
+        }
+      ]
+    }
+  ]
+}

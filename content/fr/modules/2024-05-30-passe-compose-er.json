@@ -1,0 +1,568 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-30-passe-compose-er",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Passé Composé} - Regular -ER Verbs (I spoke, I ate)",
+  "description": "Learn to talk about completed past actions with regular -ER verbs: j'ai parlé (I spoke), j'ai mangé (I ate), j'ai étudié (I studied)",
+  "can_do": [
+    "Talk about completed past actions (I spoke, I ate, I studied)",
+    "Form past tense with regular -ER verbs",
+    "Begin telling stories about what you did"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-ai-parle-fr",
+      "fr": "j'ai parlé",
+      "gloss": "I spoke / I have spoken",
+      "note": "⭐ regular -ER verb pattern"
+    },
+    {
+      "word_id": "j-ai-mange-fr",
+      "fr": "j'ai mangé",
+      "gloss": "I ate / I have eaten",
+      "note": "⭐ very common - manger → mangé"
+    },
+    {
+      "word_id": "j-ai-etudie-fr",
+      "fr": "j'ai étudié",
+      "gloss": "I studied / I have studied",
+      "note": "étudier → étudié"
+    },
+    {
+      "word_id": "j-ai-aime-fr",
+      "fr": "j'ai aimé",
+      "gloss": "I loved / I liked",
+      "note": "⭐ aimer → aimé"
+    },
+    {
+      "word_id": "j-ai-cherche-fr",
+      "fr": "j'ai cherché",
+      "gloss": "I looked for / I searched",
+      "note": "chercher → cherché"
+    },
+    {
+      "word_id": "j-ai-trouve-fr",
+      "fr": "j'ai trouvé",
+      "gloss": "I found",
+      "note": "⭐ trouver → trouvé"
+    },
+    {
+      "word_id": "j-ai-travaille-fr",
+      "fr": "j'ai travaillé",
+      "gloss": "I worked",
+      "note": "⭐ travailler → travaillé",
+      "example_fr": "J'ai travaillé hier"
+    },
+    {
+      "word_id": "j-ai-ecoute-fr",
+      "fr": "j'ai écouté",
+      "gloss": "I listened",
+      "note": "écouter → écouté; past action",
+      "example_fr": "J'ai écouté de la musique"
+    },
+    {
+      "word_id": "j-ai-regarde-fr",
+      "fr": "j'ai regardé",
+      "gloss": "I watched / I looked at",
+      "note": "past action",
+      "example_fr": "J'ai regardé la télé"
+    },
+    {
+      "word_id": "j-ai-demande-fr",
+      "fr": "j'ai demandé",
+      "gloss": "I asked",
+      "note": "past action",
+      "example_fr": "J'ai demandé une question"
+    },
+    {
+      "word_id": "hier-fr",
+      "fr": "hier",
+      "gloss": "yesterday",
+      "note": "time marker",
+      "example_fr": "Hier, j'ai mangé"
+    },
+    {
+      "word_id": "deja-fr",
+      "fr": "déjà",
+      "gloss": "already",
+      "note": "adverb (between avoir and past participle)",
+      "example_fr": "J'ai déjà mangé"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-passe-compose-avoir-past",
+      "term": "{Passé Composé} = avoir + past participle",
+      "definition": "Compound past tense for completed actions: auxiliary verb '{avoir}' + past participle",
+      "example": "{j'ai parlé} (I spoke), {tu as mangé} (you ate), {il a étudié} (he studied)"
+    },
+    {
+      "id": "c-regular-er-verbs-e",
+      "term": "Regular -ER verbs → -é past participle",
+      "definition": "Remove -er, add -é: parler → parlé, manger → mangé, étudier → étudié",
+      "example": "{parler} → {parlé} (spoken), {manger} → {mangé} (eaten), {aimer} → {aimé} (loved)"
+    },
+    {
+      "id": "c-formation-j-ai-past",
+      "term": "Formation: j'ai + past participle",
+      "definition": "Use present tense of avoir + past participle ending in -é",
+      "example": "{j'ai parlé}, {tu as parlé}, {il}/{elle a parlé}, {nous avons parlé}, {vous avez parlé}, {ils}/{elles ont parlé}"
+    },
+    {
+      "id": "c-negation-ne-pas-around",
+      "term": "Negation: ne...pas around avoir",
+      "definition": "Place ne and pas around the auxiliary verb avoir",
+      "example": "{je n'ai pas parlé} (I didn't speak), {tu n'as pas mangé} (you didn't eat)"
+    },
+    {
+      "id": "c-questions-inversion-or-est",
+      "term": "{Questions}: inversion or {Est-ce que}",
+      "definition": "Invert avoir with subject, or use est-ce que",
+      "example": "{As-tu parlé?} (Did you speak?), {Est-ce que tu as mangé?} (Did you eat?)"
+    },
+    {
+      "id": "c-when-to-use-passe",
+      "term": "When to use Passé Composé",
+      "definition": "For specific completed actions in the past, countable events",
+      "example": "{Hier, j'ai parlé avec Marie} (Yesterday, I spoke with Marie), {J'ai mangé à 8h} (I ate at 8)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-ai-parle",
+      "type": "gapfill",
+      "text": "Hier, j'___ français",
+      "blanks": [
+        {
+          "answer": "ai parlé"
+        }
+      ],
+      "gloss": "Yesterday, I spoke French",
+      "hint": "Use '{parler}'",
+      "mistakes": [
+        {
+          "answer": "ai parler",
+          "feedback": "Remove -er and add -é! The past participle is '{parlé}', not 'parler'."
+        },
+        {
+          "answer": "parle",
+          "feedback": "That's present tense! Use passé composé: j'ai parlé (I spoke)."
+        },
+        {
+          "answer": "parlais",
+          "feedback": "That's imparfait! Use passé composé for specific past action: j'ai parlé."
+        }
+      ]
+    },
+    {
+      "id": "i-as-mange",
+      "type": "gapfill",
+      "text": "Tu ___ au restaurant",
+      "blanks": [
+        {
+          "answer": "as mangé"
+        }
+      ],
+      "gloss": "You ate at the restaurant",
+      "hint": "Use '{manger}'",
+      "mistakes": [
+        {
+          "answer": "manges",
+          "feedback": "That's present tense! Use passé composé: tu as mangé (you ate)."
+        },
+        {
+          "answer": "as manger",
+          "feedback": "Change -er to -é! The past participle is '{mangé}', not 'manger'."
+        },
+        {
+          "answer": "a mangé",
+          "feedback": "'A' is for il/elle! Use '{as}' for '{tu}': tu as mangé (you ate)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-etudie",
+      "type": "gapfill",
+      "text": "Elle ___ le français",
+      "blanks": [
+        {
+          "answer": "a étudié"
+        }
+      ],
+      "gloss": "She studied French",
+      "hint": "Use '{étudier}'",
+      "mistakes": [
+        {
+          "answer": "étudie",
+          "feedback": "That's present tense! Use passé composé: elle a étudié (she studied)."
+        },
+        {
+          "answer": "as étudié",
+          "feedback": "'As' is for '{tu}'! Use 'a' for il/elle: elle a étudié (she studied)."
+        },
+        {
+          "answer": "a étudier",
+          "feedback": "Change -er to -é! The past participle is '{étudié}', not 'étudier'."
+        }
+      ]
+    },
+    {
+      "id": "i-avons-voyage",
+      "type": "gapfill",
+      "text": "Nous ___ à Paris",
+      "blanks": [
+        {
+          "answer": "avons voyagé"
+        }
+      ],
+      "gloss": "We traveled to Paris",
+      "hint": "Use '{voyager}'",
+      "mistakes": [
+        {
+          "answer": "voyageons",
+          "feedback": "That's present tense! Use passé composé: nous avons voyagé (we traveled)."
+        },
+        {
+          "answer": "avons voyager",
+          "feedback": "Change -er to -é! The past participle is '{voyagé}', not 'voyager'."
+        },
+        {
+          "answer": "avez voyagé",
+          "feedback": "'Avez' is for '{vous}'! Use '{avons}' for nous: nous avons voyagé."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-cherche",
+      "type": "gapfill",
+      "text": "Vous ___ mes clés?",
+      "blanks": [
+        {
+          "answer": "avez cherché"
+        }
+      ],
+      "gloss": "Did you look for my keys?",
+      "hint": "Use '{chercher}'",
+      "mistakes": [
+        {
+          "answer": "cherchez",
+          "feedback": "That's present tense! Use passé composé: vous avez cherché (you looked for)."
+        },
+        {
+          "answer": "avez chercher",
+          "feedback": "Change -er to -é! The past participle is '{cherché}', not 'chercher'."
+        },
+        {
+          "answer": "avons cherché",
+          "feedback": "'Avons' is for '{nous}'! Use '{avez}' for vous: vous avez cherché."
+        }
+      ]
+    },
+    {
+      "id": "i-ont-trouve",
+      "type": "gapfill",
+      "text": "Ils ___ la réponse",
+      "blanks": [
+        {
+          "answer": "ont trouvé"
+        }
+      ],
+      "gloss": "They found the answer",
+      "hint": "Use '{trouver}'",
+      "mistakes": [
+        {
+          "answer": "trouvent",
+          "feedback": "That's present tense! Use passé composé: ils ont trouvé (they found)."
+        },
+        {
+          "answer": "ont trouver",
+          "feedback": "Change -er to -é! The past participle is '{trouvé}', not 'trouver'."
+        },
+        {
+          "answer": "avez trouvé",
+          "feedback": "'Avez' is for '{vous}'! Use '{ont}' for ils/elles: ils ont trouvé."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-aime",
+      "type": "gapfill",
+      "text": "Je n'___ pas ___ le film",
+      "blanks": [
+        {
+          "answer": "ai"
+        },
+        {
+          "answer": "aimé"
+        }
+      ],
+      "gloss": "I didn't like the movie",
+      "hint": "Use '{aimer}'",
+      "mistakes": [
+        {
+          "answer": "ai pas aimer",
+          "feedback": "Change -er to -é! The past participle is '{aimé}', not 'aimer'."
+        },
+        {
+          "answer": "aime pas",
+          "feedback": "That's present tense! Use passé composé: je n'ai pas aimé."
+        }
+      ]
+    },
+    {
+      "id": "i-as-travaille",
+      "type": "gapfill",
+      "text": "Tu n'___ pas ___ hier",
+      "blanks": [
+        {
+          "answer": "as"
+        },
+        {
+          "answer": "travaillé"
+        }
+      ],
+      "gloss": "You didn't work yesterday",
+      "hint": "Use '{travailler}'",
+      "mistakes": [
+        {
+          "answer": "as pas travailler",
+          "feedback": "Change -er to -é! The past participle is '{travaillé}', not 'travailler'."
+        },
+        {
+          "answer": "travailles pas",
+          "feedback": "That's present tense! Use passé composé: tu n'as pas travaillé."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-ecoute",
+      "type": "gapfill",
+      "text": "Est-ce que vous ___ de la musique?",
+      "blanks": [
+        {
+          "answer": "avez écouté"
+        }
+      ],
+      "gloss": "Did you listen to music?",
+      "hint": "Use '{écouter}'",
+      "mistakes": [
+        {
+          "answer": "écoutez",
+          "feedback": "That's present tense! Use passé composé: vous avez écouté."
+        },
+        {
+          "answer": "avez écouter",
+          "feedback": "Change -er to -é! The past participle is '{écouté}', not 'écouter'."
+        }
+      ]
+    },
+    {
+      "id": "i-a-regarde",
+      "type": "gapfill",
+      "text": "On ___ la télé hier soir",
+      "blanks": [
+        {
+          "answer": "a regardé"
+        }
+      ],
+      "gloss": "We watched TV last night",
+      "hint": "Use '{regarder}'",
+      "mistakes": [
+        {
+          "answer": "regarde",
+          "feedback": "That's present tense! Use passé composé: on a regardé (we watched)."
+        },
+        {
+          "answer": "a regarder",
+          "feedback": "Change -er to -é! The past participle is '{regardé}', not 'regarder'."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-demande",
+      "type": "gapfill",
+      "text": "J'___ une question",
+      "blanks": [
+        {
+          "answer": "ai demandé"
+        }
+      ],
+      "gloss": "I asked a question",
+      "hint": "Use '{demander}'",
+      "mistakes": [
+        {
+          "answer": "ai demander",
+          "feedback": "Change -er to -é! The past participle is '{demandé}', not 'demander'."
+        },
+        {
+          "answer": "demande",
+          "feedback": "That's present tense! Use passé composé: j'ai demandé (I asked)."
+        }
+      ]
+    },
+    {
+      "id": "i-a-etudie-2",
+      "type": "gapfill",
+      "text": "Il ___ à l'université",
+      "blanks": [
+        {
+          "answer": "a étudié"
+        }
+      ],
+      "gloss": "He studied at the university",
+      "hint": "Use '{étudier}'",
+      "mistakes": [
+        {
+          "answer": "étudie",
+          "feedback": "That's present tense! Use passé composé: il a étudié (he studied)."
+        },
+        {
+          "answer": "a étudier",
+          "feedback": "Change -er to -é! The past participle is '{étudié}', not 'étudier'."
+        }
+      ]
+    },
+    {
+      "id": "i-avons-mange",
+      "type": "gapfill",
+      "text": "Nous n'___ pas ___",
+      "blanks": [
+        {
+          "answer": "avons"
+        },
+        {
+          "answer": "mangé"
+        }
+      ],
+      "gloss": "We didn't eat",
+      "hint": "Use '{manger}'",
+      "mistakes": [
+        {
+          "answer": "avons pas manger",
+          "feedback": "Change -er to -é! The past participle is '{mangé}', not 'manger'."
+        },
+        {
+          "answer": "mangeons pas",
+          "feedback": "That's present tense! Use passé composé: nous n'avons pas mangé."
+        }
+      ]
+    },
+    {
+      "id": "i-ont-parle",
+      "type": "gapfill",
+      "text": "Elles ___ français",
+      "blanks": [
+        {
+          "answer": "ont parlé"
+        }
+      ],
+      "gloss": "They spoke French",
+      "hint": "Use '{parler}'",
+      "mistakes": [
+        {
+          "answer": "parlent",
+          "feedback": "That's present tense! Use passé composé: elles ont parlé (they spoke)."
+        },
+        {
+          "answer": "ont parler",
+          "feedback": "Change -er to -é! The past participle is '{parlé}', not 'parler'."
+        }
+      ]
+    },
+    {
+      "id": "i-as-trouve",
+      "type": "gapfill",
+      "text": "___ tu ___ le livre?",
+      "blanks": [
+        {
+          "answer": "As"
+        },
+        {
+          "answer": "trouvé"
+        }
+      ],
+      "gloss": "Did you find the book?",
+      "hint": "Use '{trouver}'",
+      "mistakes": [
+        {
+          "answer": "Trouves",
+          "feedback": "That's present tense! Use passé composé: As-tu trouvé? (Did you find?)"
+        },
+        {
+          "answer": "As trouver",
+          "feedback": "Change -er to -é! The past participle is '{trouvé}', not 'trouver'."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-mange",
+      "type": "gapfill",
+      "text": "J'___ déjà ___",
+      "blanks": [
+        {
+          "answer": "ai"
+        },
+        {
+          "answer": "mangé"
+        }
+      ],
+      "gloss": "I already ate",
+      "hint": "Use '{manger}'",
+      "mistakes": [
+        {
+          "answer": "ai mangé déjà",
+          "feedback": "Déjà goes BETWEEN avoir and the past participle: j'ai déjà mangé."
+        },
+        {
+          "answer": "ai déjà manger",
+          "feedback": "Change -er to -é! The past participle is '{mangé}', not 'manger'."
+        }
+      ]
+    },
+    {
+      "id": "i-a-travaille",
+      "type": "gapfill",
+      "text": "On ___ tard hier",
+      "blanks": [
+        {
+          "answer": "a travaillé"
+        }
+      ],
+      "gloss": "We worked late yesterday",
+      "hint": "Use '{travailler}'",
+      "mistakes": [
+        {
+          "answer": "travaille",
+          "feedback": "That's present tense! Use passé composé: on a travaillé (we worked)."
+        },
+        {
+          "answer": "a travailler",
+          "feedback": "Change -er to -é! The past participle is '{travaillé}', not 'travailler'."
+        }
+      ]
+    },
+    {
+      "id": "i-avez-voyage",
+      "type": "gapfill",
+      "text": "Vous ___ bien?",
+      "blanks": [
+        {
+          "answer": "avez voyagé"
+        }
+      ],
+      "gloss": "Did you travel well?",
+      "hint": "Use '{voyager}'",
+      "mistakes": [
+        {
+          "answer": "voyagez",
+          "feedback": "That's present tense! Use passé composé: vous avez voyagé (you traveled)."
+        },
+        {
+          "answer": "avez voyager",
+          "feedback": "Change -er to -é! The past participle is '{voyagé}', not 'voyager'."
+        }
+      ]
+    }
+  ]
+}

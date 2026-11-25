@@ -1,0 +1,153 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-28-necessity-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Il faut que...} - Saying What's Necessary",
+  "description": "Learn to tell people what needs to happen! Essential phrases for parents, friends, work. '{Il faut que tu manges}' (You need to eat), '{Il faut qu'on parte}' (We need to leave).",
+  "can_do": [
+    "Express necessity and requirements (It's necessary that...)",
+    "Tell people what needs to happen",
+    "Use '{il faut que}' with subjunctive forms naturally"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "il-faut-que-tu-manges-fr",
+      "fr": "il faut que tu manges",
+      "gloss": "you need to eat",
+      "note": "⭐ parent to kid"
+    },
+    {
+      "word_id": "il-faut-que-tu-partes-fr",
+      "fr": "il faut que tu partes",
+      "gloss": "you need to leave",
+      "note": "telling someone to go"
+    },
+    {
+      "word_id": "il-faut-que-j-aille-fr",
+      "fr": "il faut que j'aille",
+      "gloss": "I need to go",
+      "note": "saying you must leave"
+    },
+    {
+      "word_id": "il-faut-qu-on-parte-fr",
+      "fr": "il faut qu'on parte",
+      "gloss": "we need to leave",
+      "note": "group decision"
+    },
+    {
+      "word_id": "il-faut-que-tu-sois-sage-fr",
+      "fr": "il faut que tu sois sage",
+      "gloss": "you need to be good",
+      "note": "parent to child"
+    },
+    {
+      "word_id": "il-faut-que-tu-fasses-attention-fr",
+      "fr": "il faut que tu fasses attention",
+      "gloss": "you need to pay attention",
+      "note": "be careful!"
+    },
+    {
+      "word_id": "il-faut-qu-elle-vienne-fr",
+      "fr": "il faut qu'elle vienne",
+      "gloss": "she needs to come",
+      "note": "expecting someone"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-il-faut-que-directed",
+      "term": "{Il faut que...} - Directed Necessity",
+      "definition": "Tell SOMEONE SPECIFIC what needs to happen. More direct than 'il faut + verb'",
+      "example": "{Il faut manger} (general: someone should eat) → {Il faut que tu manges} (YOU specifically need to eat)"
+    },
+    {
+      "id": "c-parent-friend-language",
+      "term": "{Parent}/Friend Language",
+      "definition": "These phrases are used constantly in daily life!",
+      "example": "Parent to kid: '{Il faut que tu finisses tes devoirs}' (You need to finish homework)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-il-faut-que-tu",
+      "type": "respond",
+      "situation": "Tell your kid they need to eat (lunch is ready!)",
+      "cue": "You need to eat",
+      "answer": "il faut que tu manges",
+      "hint": "{il faut que + tu + manges}",
+      "mistakes": [
+        {
+          "answer": "il faut manger",
+          "feedback": "That's general! To tell SOMEONE specific, use: il faut que tu manges"
+        }
+      ]
+    },
+    {
+      "id": "i-il-faut-que-tu-2",
+      "type": "respond",
+      "situation": "Tell your friend they need to leave now",
+      "cue": "You need to leave",
+      "answer": "il faut que tu partes",
+      "hint": "{il faut que + tu + partes}"
+    },
+    {
+      "id": "i-il-faut-que-j",
+      "type": "respond",
+      "situation": "Tell your group 'I need to go' (have to leave early)",
+      "cue": "I need to go",
+      "answer": "il faut que j'aille",
+      "hint": "{il faut que + je + aille}",
+      "mistakes": [
+        {
+          "answer": "il faut que je vais",
+          "feedback": "Use '{aille}' not 'vais' after il faut que: j'aille"
+        }
+      ]
+    },
+    {
+      "id": "i-il-faut-qu-on",
+      "type": "respond",
+      "situation": "Tell your friends 'we need to leave' (time to go!)",
+      "cue": "We need to leave",
+      "answer": "il faut qu'on parte",
+      "hint": "{il faut que + on + parte}"
+    },
+    {
+      "id": "i-il-faut-que-tu-3",
+      "type": "respond",
+      "situation": "Tell a child they need to be good (parent language!)",
+      "cue": "You need to be good",
+      "answer": "il faut que tu sois sage",
+      "hint": "{il faut que + tu + sois sage}",
+      "mistakes": [
+        {
+          "answer": "il faut que tu es sage",
+          "feedback": "Use '{sois}' not 'es' after il faut que: tu sois sage"
+        }
+      ]
+    },
+    {
+      "id": "i-il-faut-que-tu-4",
+      "type": "respond",
+      "situation": "Tell someone they need to pay attention (be careful!)",
+      "cue": "You need to pay attention",
+      "answer": "il faut que tu fasses attention",
+      "hint": "{il faut que + tu + fasses attention}"
+    },
+    {
+      "id": "i-il-faut-qu-elle",
+      "type": "respond",
+      "situation": "Say 'she needs to come' (expecting someone to arrive)",
+      "cue": "She needs to come",
+      "answer": "il faut qu'elle vienne",
+      "hint": "{il faut que + elle + vienne}",
+      "mistakes": [
+        {
+          "answer": "il faut qu'elle vient",
+          "feedback": "Use '{vienne}' not 'vient' after il faut que: elle vienne"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-10-unit-7-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers.",
+  "can_do": [
+    "Express thinking, knowing, and understanding in French",
+    "Use discourse markers for natural speech (donc, en fait, quoi)",
+    "Discuss learning, beliefs, and knowledge naturally"
+  ],
+  "items": [
+    {
+      "id": "i-on-va",
+      "type": "respond",
+      "situation": "we go (using on)",
+      "answer": "on va",
+      "hint": "on + il/elle form of aller"
+    },
+    {
+      "id": "i-on-doit-etudier",
+      "type": "respond",
+      "situation": "we must study (using on)",
+      "answer": "on doit étudier",
+      "hint": "{on doit + étudier}"
+    },
+    {
+      "id": "i-on-y-va",
+      "type": "respond",
+      "situation": "Shall we go? (using on)",
+      "answer": "on y va",
+      "hint": "{On y va + ?}"
+    },
+    {
+      "id": "i-on-peut-apprendre",
+      "type": "respond",
+      "situation": "we can learn (using on)",
+      "answer": "on peut apprendre",
+      "hint": "{on + peut + apprendre}"
+    },
+    {
+      "id": "i-on-dit",
+      "type": "respond",
+      "situation": "people say (using on)",
+      "answer": "on dit",
+      "hint": "on + dire for il/elle"
+    },
+    {
+      "id": "i-we",
+      "type": "meaning",
+      "shown": "on",
+      "answer": "we",
+      "accept": [
+        "one",
+        "people",
+        "we/one",
+        "we/people"
+      ],
+      "hint": "Three meanings: we (informal), one, or people"
+    },
+    {
+      "id": "i-tout-le-monde",
+      "type": "respond",
+      "situation": "everyone",
+      "answer": "tout le monde",
+      "hint": "Fixed expression - literally 'all the world'"
+    },
+    {
+      "id": "i-les-gens",
+      "type": "respond",
+      "situation": "people (general - plural noun)",
+      "answer": "les gens",
+      "hint": "{les + ...}"
+    },
+    {
+      "id": "i-je-comprends",
+      "type": "respond",
+      "situation": "I understand",
+      "answer": "je comprends",
+      "hint": "comprendre for je"
+    },
+    {
+      "id": "i-tu-comprends",
+      "type": "respond",
+      "situation": "Do you understand? (informal)",
+      "answer": "tu comprends",
+      "hint": "{tu + comprendre}"
+    },
+    {
+      "id": "i-je-ne-comprends-pas",
+      "type": "respond",
+      "situation": "I don't understand",
+      "answer": "je ne comprends pas",
+      "hint": "Essential learning phrase!"
+    },
+    {
+      "id": "i-on-comprend",
+      "type": "respond",
+      "situation": "we understand (using on)",
+      "answer": "on comprend",
+      "hint": "{on + comprendre}"
+    },
+    {
+      "id": "i-elle-comprend",
+      "type": "respond",
+      "situation": "she understands",
+      "answer": "elle comprend",
+      "hint": "comprendre for elle"
+    },
+    {
+      "id": "i-je-sais",
+      "type": "respond",
+      "situation": "I know (facts)",
+      "answer": "je sais",
+      "hint": "savoir for je"
+    },
+    {
+      "id": "i-je-ne-sais-pas",
+      "type": "respond",
+      "situation": "I don't know",
+      "answer": "je ne sais pas",
+      "hint": "Rank 21 - most common phrase!"
+    },
+    {
+      "id": "i-je-sais-parler-francais",
+      "type": "respond",
+      "situation": "I know how to speak French",
+      "answer": "je sais parler français",
+      "accept": [
+        "je sais parler francais"
+      ],
+      "hint": "savoir + infinitive for skills"
+    },
+    {
+      "id": "i-tu-sais",
+      "type": "respond",
+      "situation": "you know (informal)",
+      "answer": "tu sais",
+      "hint": "savoir for tu"
+    },
+    {
+      "id": "i-tout-le-monde-sait",
+      "type": "respond",
+      "situation": "everyone knows",
+      "answer": "tout le monde sait",
+      "hint": "tout le monde + singular verb!"
+    },
+    {
+      "id": "i-je-connais-marie",
+      "type": "respond",
+      "situation": "I know Marie (person)",
+      "answer": "je connais Marie",
+      "hint": "connaître for people - NOT savoir!"
+    },
+    {
+      "id": "i-je-connais-paris",
+      "type": "respond",
+      "situation": "I know Paris (place)",
+      "answer": "je connais Paris",
+      "hint": "connaître for places"
+    },
+    {
+      "id": "i-tu-connais-ce-restaurant",
+      "type": "respond",
+      "situation": "Do you know this restaurant? (informal)",
+      "answer": "tu connais ce restaurant",
+      "hint": "{tu + connaître + ce restaurant}"
+    },
+    {
+      "id": "i-on-connait-les-gens",
+      "type": "respond",
+      "situation": "we know people (using on)",
+      "answer": "on connaît les gens",
+      "accept": [
+        "on connait les gens"
+      ],
+      "hint": "{on + connaître + les gens}"
+    },
+    {
+      "id": "i-je-pense",
+      "type": "respond",
+      "situation": "I think",
+      "answer": "je pense",
+      "hint": "penser for je"
+    },
+    {
+      "id": "i-je-pense-que-oui",
+      "type": "respond",
+      "situation": "I think so",
+      "answer": "je pense que oui",
+      "hint": "{je pense que + oui}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "What do you think? (informal)",
+      "answer": "qu'est-ce que tu penses",
+      "hint": "{Qu'est-ce que tu + ...?}"
+    },
+    {
+      "id": "i-on-pense",
+      "type": "respond",
+      "situation": "we think (using on)",
+      "answer": "on pense",
+      "hint": "{on + penser}"
+    },
+    {
+      "id": "i-je-crois",
+      "type": "respond",
+      "situation": "I believe",
+      "answer": "je crois",
+      "hint": "croire for je"
+    },
+    {
+      "id": "i-je-crois-que-oui",
+      "type": "respond",
+      "situation": "I believe so",
+      "answer": "je crois que oui",
+      "hint": "{je crois que + oui}"
+    },
+    {
+      "id": "i-on-doit-croire-en",
+      "type": "respond",
+      "situation": "we must believe in ourselves",
+      "answer": "on doit croire en soi",
+      "hint": "{on doit + croire en soi}"
+    },
+    {
+      "id": "i-elle-croit",
+      "type": "respond",
+      "situation": "she believes",
+      "answer": "elle croit",
+      "hint": "croire for elle"
+    },
+    {
+      "id": "i-j-apprends-le-francais",
+      "type": "respond",
+      "situation": "I'm learning French",
+      "answer": "j'apprends le français",
+      "accept": [
+        "j apprends le francais",
+        "j'apprends le francais"
+      ],
+      "hint": "apprendre for je + le français"
+    },
+    {
+      "id": "i-elle-enseigne-le-francais",
+      "type": "respond",
+      "situation": "she teaches French",
+      "answer": "elle enseigne le français",
+      "accept": [
+        "elle enseigne le francais"
+      ],
+      "hint": "enseigner for elle"
+    },
+    {
+      "id": "i-j-etudie-a-l",
+      "type": "respond",
+      "situation": "I'm studying at university",
+      "answer": "j'étudie à l'université",
+      "accept": [
+        "j etudie a l universite",
+        "j'étudie à l'universite"
+      ],
+      "hint": "{étudier + à l'université}"
+    },
+    {
+      "id": "i-je-revise-mes-lecons",
+      "type": "respond",
+      "situation": "I'm reviewing my lessons",
+      "answer": "je révise mes leçons",
+      "accept": [
+        "je revise mes lecons"
+      ],
+      "hint": "{réviser + mes leçons}"
+    },
+    {
+      "id": "i-j-ai-une-question",
+      "type": "respond",
+      "situation": "I have a question",
+      "answer": "j'ai une question",
+      "hint": "j'ai + une question (feminine)"
+    },
+    {
+      "id": "i-la-reponse",
+      "type": "respond",
+      "situation": "the answer",
+      "answer": "la réponse",
+      "accept": [
+        "la reponse"
+      ],
+      "hint": "feminine noun with la"
+    },
+    {
+      "id": "i-une-bonne-idee",
+      "type": "respond",
+      "situation": "a good idea",
+      "answer": "une bonne idée",
+      "accept": [
+        "une bonne idee"
+      ],
+      "hint": "une bonne + ... (feminine)"
+    },
+    {
+      "id": "i-la-lecon",
+      "type": "respond",
+      "situation": "the lesson",
+      "answer": "la leçon",
+      "accept": [
+        "la lecon"
+      ],
+      "hint": "feminine noun with la"
+    },
+    {
+      "id": "i-le-cours",
+      "type": "respond",
+      "situation": "the class / the course",
+      "answer": "le cours",
+      "hint": "masculine noun"
+    },
+    {
+      "id": "i-donc",
+      "type": "respond",
+      "situation": "so / therefore",
+      "answer": "donc",
+      "hint": "Logical conclusion connector"
+    },
+    {
+      "id": "i-en-fait",
+      "type": "respond",
+      "situation": "actually / in fact",
+      "answer": "en fait",
+      "hint": "Two words - clarification marker"
+    },
+    {
+      "id": "i-you-know",
+      "type": "meaning",
+      "shown": "quoi",
+      "answer": "you know",
+      "accept": [
+        "like",
+        "you know?"
+      ],
+      "hint": "Filler word for emphasis"
+    },
+    {
+      "id": "i-donc-tu-comprends",
+      "type": "respond",
+      "situation": "Complete: 'So, do you understand?' (Start with donc)",
+      "cue": "So, do you understand? (informal)",
+      "answer": "donc, tu comprends",
+      "hint": "donc + comma + tu comprends"
+    },
+    {
+      "id": "i-c-est-bon-quoi",
+      "type": "respond",
+      "situation": "Complete: 'That's good, you know' (End with quoi)",
+      "cue": "That's good, you know",
+      "answer": "c'est bon, quoi",
+      "hint": "c'est bon + comma + quoi"
+    },
+    {
+      "id": "i-peut-etre",
+      "type": "respond",
+      "situation": "maybe",
+      "answer": "peut-être",
+      "hint": "Perhaps, possibly - with hyphen"
+    },
+    {
+      "id": "i-certainement",
+      "type": "respond",
+      "situation": "definitely",
+      "answer": "certainement",
+      "hint": "Certainly, for sure"
+    },
+    {
+      "id": "i-bien-sur",
+      "type": "respond",
+      "situation": "of course",
+      "answer": "bien sûr",
+      "hint": "Two words - bien + sûr"
+    },
+    {
+      "id": "i-tout-le-monde-2",
+      "type": "respond",
+      "situation": "everyone",
+      "answer": "tout le monde",
+      "hint": "Fixed expression - tout le monde"
+    },
+    {
+      "id": "i-meme-moi",
+      "type": "respond",
+      "situation": "even me",
+      "answer": "même moi",
+      "hint": "{même + moi}"
+    },
+    {
+      "id": "i-la-meme-chose",
+      "type": "respond",
+      "situation": "the same thing",
+      "answer": "la même chose",
+      "accept": [
+        "la meme chose"
+      ],
+      "hint": "{la même + ...}"
+    },
+    {
+      "id": "i-je-comprends-mal",
+      "type": "respond",
+      "situation": "I understand poorly",
+      "answer": "je comprends mal",
+      "hint": "je comprends + mal (adverb after verb)"
+    },
+    {
+      "id": "i-je-sais-tout",
+      "type": "respond",
+      "situation": "I know everything",
+      "answer": "je sais tout",
+      "hint": "je sais + tout (pronoun)"
+    },
+    {
+      "id": "i-on-etudie-donc-on",
+      "type": "respond",
+      "situation": "We study, so we learn",
+      "answer": "on étudie, donc on apprend",
+      "accept": [
+        "on etudie donc on apprend",
+        "on étudie donc on apprend"
+      ],
+      "hint": "{on étudie + donc + on apprend}"
+    },
+    {
+      "id": "i-je-pense-que-tout",
+      "type": "respond",
+      "situation": "I think that everyone can learn",
+      "answer": "je pense que tout le monde peut apprendre",
+      "hint": "{je pense que + tout le monde peut apprendre}"
+    },
+    {
+      "id": "i-en-fait-je-ne",
+      "type": "respond",
+      "situation": "Actually, I don't know the answer",
+      "answer": "en fait, je ne sais pas la réponse",
+      "accept": [
+        "en fait je ne sais pas la reponse"
+      ],
+      "hint": "En fait + comma + je ne sais pas la réponse"
+    },
+    {
+      "id": "i-je-connais-marie-mais",
+      "type": "respond",
+      "situation": "I know Marie but I don't know Paris",
+      "answer": "je connais Marie mais je ne connais pas Paris",
+      "hint": "{je connais + Marie + mais + je ne connais pas + Paris}"
+    },
+    {
+      "id": "i-tu-comprends-la-question",
+      "type": "respond",
+      "situation": "Do you understand the question? (informal)",
+      "answer": "tu comprends la question",
+      "hint": "{tu comprends + la question?}"
+    },
+    {
+      "id": "i-je-crois-qu-on",
+      "type": "respond",
+      "situation": "I believe that we can learn",
+      "answer": "je crois qu'on peut apprendre",
+      "accept": [
+        "je crois que on peut apprendre"
+      ],
+      "hint": "{je crois que + on peut apprendre}"
+    },
+    {
+      "id": "i-j-etudie-le-francais",
+      "type": "respond",
+      "situation": "I'm studying French at university",
+      "answer": "j'étudie le français à l'université",
+      "accept": [
+        "j etudie le francais a l universite"
+      ],
+      "hint": "{j'étudie + le français + à l'université}"
+    },
+    {
+      "id": "i-je-revise-mes-lecons-2",
+      "type": "respond",
+      "situation": "I'm reviewing my lessons because I have an exam",
+      "answer": "je révise mes leçons parce que j'ai un examen",
+      "accept": [
+        "je revise mes lecons parce que j ai un examen"
+      ],
+      "hint": "{je révise mes leçons + parce que + j'ai un examen}"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

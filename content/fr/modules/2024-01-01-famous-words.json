@@ -1,0 +1,275 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-01-famous-words",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Famous Words & Greetings",
+  "description": "Start here! Learn greetings and internationally known words. You might already know some of these!",
+  "can_do": [
+    "Greet someone in French (bonjour, bonsoir)",
+    "Say thank you, please, excuse me",
+    "Recognize internationally known French words"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "bonjour-fr",
+      "fr": "bonjour",
+      "gloss": "hello / good day",
+      "note": "greeting (literally: good day)"
+    },
+    {
+      "word_id": "bonsoir-fr",
+      "fr": "bonsoir",
+      "gloss": "good evening",
+      "note": "evening greeting (literally: good evening)"
+    },
+    {
+      "word_id": "merci-fr",
+      "fr": "merci",
+      "gloss": "thank you",
+      "note": "gratitude"
+    },
+    {
+      "word_id": "oui-fr",
+      "fr": "oui",
+      "gloss": "yes",
+      "note": "affirmative"
+    },
+    {
+      "word_id": "non-fr",
+      "fr": "non",
+      "gloss": "no",
+      "note": "negative"
+    },
+    {
+      "word_id": "s-il-vous-plait-fr",
+      "fr": "s'il vous plaît",
+      "gloss": "please",
+      "note": "formal politeness"
+    },
+    {
+      "word_id": "pardon-fr",
+      "fr": "pardon",
+      "gloss": "excuse me / sorry",
+      "note": "apology"
+    },
+    {
+      "word_id": "au-revoir-fr",
+      "fr": "au revoir",
+      "gloss": "goodbye",
+      "note": "farewell (literally: until seeing again)"
+    },
+    {
+      "word_id": "voila-fr",
+      "fr": "voilà",
+      "gloss": "there it is / here you go",
+      "note": "very common!"
+    },
+    {
+      "word_id": "cafe-fr",
+      "fr": "café",
+      "gloss": "coffee",
+      "note": "cognate - same in many languages"
+    },
+    {
+      "word_id": "bon-fr",
+      "fr": "bon",
+      "gloss": "good",
+      "note": "used in many phrases"
+    },
+    {
+      "word_id": "bien-fr",
+      "fr": "bien",
+      "gloss": "well",
+      "note": "adverb"
+    },
+    {
+      "word_id": "salut-fr",
+      "fr": "salut",
+      "gloss": "hi / bye",
+      "note": "informal greeting"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-internationally-recognized-words",
+      "term": "Internationally Recognized Words",
+      "definition": "Many words are used across languages and cultures",
+      "example": "Some of these words may be familiar from movies, restaurants, or everyday use"
+    },
+    {
+      "id": "c-essential-greetings-politeness",
+      "term": "Essential Greetings & Politeness",
+      "definition": "Basic phrases needed for any conversation",
+      "example": "Hello, thank you, yes, no, please, goodbye - universal communication"
+    },
+    {
+      "id": "c-building-your-foundation",
+      "term": "Building Your Foundation",
+      "definition": "Starting with common, useful words builds confidence",
+      "example": "These common words appear in daily conversation"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-bonjour",
+      "type": "respond",
+      "situation": "You're entering a shop. Greet the shopkeeper",
+      "cue": "hello / good day",
+      "answer": "bonjour",
+      "hint": "Famous greeting - literally 'good day'",
+      "mistakes": [
+        {
+          "answer": "bon",
+          "feedback": "That's just 'good' - need the full greeting"
+        },
+        {
+          "answer": "salut",
+          "feedback": "That's informal 'hi' - use bonjour for hello"
+        }
+      ]
+    },
+    {
+      "id": "i-bonsoir",
+      "type": "respond",
+      "situation": "You're arriving at a restaurant in the evening. Greet the host",
+      "cue": "good evening",
+      "answer": "bonsoir",
+      "hint": "Evening greeting - literally 'good evening'",
+      "mistakes": [
+        {
+          "answer": "bonjour",
+          "feedback": "That's for daytime - use bonsoir for evening"
+        },
+        {
+          "answer": "bon",
+          "feedback": "That's just 'good' - need the full evening greeting"
+        }
+      ]
+    },
+    {
+      "id": "i-merci",
+      "type": "respond",
+      "situation": "Someone hands you something. How do you thank them?",
+      "cue": "thank you",
+      "answer": "merci",
+      "hint": "Expression of gratitude - used worldwide!"
+    },
+    {
+      "id": "i-oui",
+      "type": "respond",
+      "situation": "Someone offers you coffee. Accept the offer",
+      "cue": "yes",
+      "answer": "oui",
+      "hint": "Simple affirmative - 3 letters",
+      "mistakes": [
+        {
+          "answer": "non",
+          "feedback": "That means 'no', not 'yes'"
+        }
+      ]
+    },
+    {
+      "id": "i-non",
+      "type": "respond",
+      "situation": "Someone offers you something. Decline politely",
+      "cue": "no",
+      "answer": "non",
+      "hint": "Simple negative - 3 letters",
+      "mistakes": [
+        {
+          "answer": "oui",
+          "feedback": "That means 'yes', not 'no'"
+        }
+      ]
+    },
+    {
+      "id": "i-s-il-vous-plait",
+      "type": "respond",
+      "situation": "You're making a request. Add this word to be polite",
+      "cue": "please (formal)",
+      "answer": "s'il vous plaît",
+      "hint": "Literally 'if it pleases you' - makes any request polite"
+    },
+    {
+      "id": "i-pardon",
+      "type": "respond",
+      "situation": "You accidentally bump into someone. Apologize",
+      "cue": "excuse me / sorry",
+      "answer": "pardon",
+      "hint": "Same word in English! Universal apology"
+    },
+    {
+      "id": "i-au-revoir",
+      "type": "respond",
+      "situation": "You're leaving a place or conversation. Say farewell",
+      "cue": "goodbye",
+      "answer": "au revoir",
+      "hint": "Literally 'until seeing again' - formal farewell",
+      "mistakes": [
+        {
+          "answer": "salut",
+          "feedback": "That's informal - use au revoir for goodbye"
+        }
+      ]
+    },
+    {
+      "id": "i-voila",
+      "type": "respond",
+      "situation": "A waiter brings your order. What do they often say?",
+      "cue": "there it is / here you go",
+      "answer": "voilà",
+      "hint": "Very French expression - presenting with flair!"
+    },
+    {
+      "id": "i-cafe",
+      "type": "respond",
+      "situation": "You're at a café. Order this popular drink",
+      "cue": "coffee",
+      "answer": "café",
+      "hint": "Cognate - spelled almost the same, just add accent!"
+    },
+    {
+      "id": "i-bon",
+      "type": "respond",
+      "situation": "Wish someone well on their trip. Use this adjective",
+      "cue": "good",
+      "answer": "bon",
+      "hint": "Used in '{bon voyage}', '{bon appétit}'",
+      "mistakes": [
+        {
+          "answer": "bien",
+          "feedback": "That means 'well' (adverb), not 'good' (adjective)"
+        }
+      ]
+    },
+    {
+      "id": "i-bien",
+      "type": "respond",
+      "situation": "Someone asks how you are. Respond positively",
+      "cue": "well",
+      "answer": "bien",
+      "hint": "Adverb - '{très bien}' = very well",
+      "mistakes": [
+        {
+          "answer": "bon",
+          "feedback": "That means 'good' (adjective), not 'well' (adverb)"
+        }
+      ]
+    },
+    {
+      "id": "i-salut",
+      "type": "respond",
+      "situation": "You see a friend on the street. Greet them casually",
+      "cue": "hi / bye (informal)",
+      "answer": "salut",
+      "hint": "Casual greeting - use with friends only!",
+      "mistakes": [
+        {
+          "answer": "bonjour",
+          "feedback": "That's more formal - salut is casual"
+        }
+      ]
+    }
+  ]
+}

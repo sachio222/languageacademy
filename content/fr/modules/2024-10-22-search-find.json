@@ -1,0 +1,299 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-10-22-search-find",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verbs - {chercher & trouver}",
+  "description": "Learn to search and find! chercher (to search/look for) and trouver (to find) - essential for daily life.",
+  "can_do": [
+    "Express searching and finding (I'm looking for, I found)",
+    "Talk about looking for lost items or locations",
+    "Say 'I'm looking for my keys' or 'I found it!' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "chercher-fr",
+      "fr": "chercher",
+      "gloss": "to search/look for",
+      "note": "regular -er verb"
+    },
+    {
+      "word_id": "je-cherche-fr",
+      "fr": "je cherche",
+      "gloss": "I search/look for",
+      "note": "present tense"
+    },
+    {
+      "word_id": "tu-cherches-fr",
+      "fr": "tu cherches",
+      "gloss": "you search/look for",
+      "note": "present tense"
+    },
+    {
+      "word_id": "il-elle-cherche-fr",
+      "fr": "il/elle cherche",
+      "gloss": "he/she searches/looks for",
+      "note": "present tense"
+    },
+    {
+      "word_id": "nous-cherchons-fr",
+      "fr": "nous cherchons",
+      "gloss": "we search/look for",
+      "note": "present tense"
+    },
+    {
+      "word_id": "vous-cherchez-fr",
+      "fr": "vous cherchez",
+      "gloss": "you search/look for",
+      "note": "present tense"
+    },
+    {
+      "word_id": "ils-elles-cherchent-fr",
+      "fr": "ils/elles cherchent",
+      "gloss": "they search/look for",
+      "note": "present tense"
+    },
+    {
+      "word_id": "trouver-fr",
+      "fr": "trouver",
+      "gloss": "to find",
+      "note": "regular -er verb"
+    },
+    {
+      "word_id": "je-trouve-fr",
+      "fr": "je trouve",
+      "gloss": "I find",
+      "note": "present tense"
+    },
+    {
+      "word_id": "tu-trouves-fr",
+      "fr": "tu trouves",
+      "gloss": "you find",
+      "note": "present tense"
+    },
+    {
+      "word_id": "il-elle-trouve-fr",
+      "fr": "il/elle trouve",
+      "gloss": "he/she finds",
+      "note": "present tense"
+    },
+    {
+      "word_id": "nous-trouvons-fr",
+      "fr": "nous trouvons",
+      "gloss": "we find",
+      "note": "present tense"
+    },
+    {
+      "word_id": "vous-trouvez-fr",
+      "fr": "vous trouvez",
+      "gloss": "you find",
+      "note": "present tense"
+    },
+    {
+      "word_id": "ils-elles-trouvent-fr",
+      "fr": "ils/elles trouvent",
+      "gloss": "they find",
+      "note": "present tense"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-chercher-to-search-look",
+      "term": "{chercher} - to search/look for",
+      "definition": "Active searching - when you're looking for something but haven't found it yet",
+      "example": "{je cherche mes clés} (I'm looking for my keys), {tu cherches quoi?} (what are you looking for?)"
+    },
+    {
+      "id": "c-trouver-to-find",
+      "term": "{trouver} - to find",
+      "definition": "Successfully locating something - the result of searching",
+      "example": "{j'ai trouvé!} (I found it!), {tu trouves ça où?} (where do you find that?)"
+    },
+    {
+      "id": "c-common-usage-patterns",
+      "term": "Common Usage Patterns",
+      "definition": "These verbs are used constantly in daily French conversation",
+      "example": "je cherche + noun (I'm looking for...), je trouve + noun (I find...)"
+    },
+    {
+      "id": "c-with-prepositions",
+      "term": "With Prepositions",
+      "definition": "chercher takes direct objects, trouver can use various prepositions",
+      "example": "{je cherche le livre} (I'm looking for the book), {je trouve dans la maison} (I find in the house)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-cherche",
+      "type": "respond",
+      "situation": "Say 'I search' or 'I look for'",
+      "cue": "I search/look for",
+      "answer": "je cherche",
+      "hint": "chercher for je",
+      "mistakes": [
+        {
+          "answer": "je trouve",
+          "feedback": "That means 'I find' - use '{je cherche}' for searching"
+        }
+      ]
+    },
+    {
+      "id": "i-je-trouve",
+      "type": "respond",
+      "situation": "I find",
+      "answer": "je trouve",
+      "hint": "trouver for je",
+      "mistakes": [
+        {
+          "answer": "je cherche",
+          "feedback": "That means 'I search' - use '{je trouve}' for finding"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-cherches",
+      "type": "respond",
+      "situation": "Say 'you search' (informal)",
+      "cue": "you search",
+      "answer": "tu cherches",
+      "hint": "chercher for tu",
+      "mistakes": [
+        {
+          "answer": "tu cherche",
+          "feedback": "Add -s for tu: tu cherches"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-trouves",
+      "type": "respond",
+      "situation": "Say 'you find' (informal)",
+      "cue": "you find",
+      "answer": "tu trouves",
+      "hint": "trouver for tu",
+      "mistakes": [
+        {
+          "answer": "tu trouve",
+          "feedback": "Add -s for tu: tu trouves"
+        }
+      ]
+    },
+    {
+      "id": "i-il-cherche",
+      "type": "respond",
+      "situation": "he searches",
+      "answer": "il cherche",
+      "hint": "chercher for il"
+    },
+    {
+      "id": "i-elle-trouve",
+      "type": "respond",
+      "situation": "she finds",
+      "answer": "elle trouve",
+      "hint": "trouver for elle"
+    },
+    {
+      "id": "i-nous-cherchons",
+      "type": "respond",
+      "situation": "Say 'we search' (formal)",
+      "cue": "we search",
+      "answer": "nous cherchons",
+      "hint": "chercher for nous",
+      "mistakes": [
+        {
+          "answer": "nous cherchez",
+          "feedback": "Use -ons for nous: nous cherchons"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-trouvez",
+      "type": "respond",
+      "situation": "Say 'you find' (formal/plural)",
+      "cue": "you find (formal)",
+      "answer": "vous trouvez",
+      "hint": "trouver for vous",
+      "mistakes": [
+        {
+          "answer": "vous trouvons",
+          "feedback": "Use -ez for vous: vous trouvez"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-cherchent",
+      "type": "respond",
+      "situation": "they search",
+      "answer": "ils cherchent",
+      "accept": [
+        "elles cherchent"
+      ],
+      "hint": "chercher for ils/elles",
+      "mistakes": [
+        {
+          "answer": "ils cherchez",
+          "feedback": "Use -ent for ils/elles: ils cherchent"
+        }
+      ]
+    },
+    {
+      "id": "i-je-cherche-le-livre",
+      "type": "respond",
+      "situation": "I'm looking for the book",
+      "answer": "je cherche le livre",
+      "hint": "{je cherche + le livre}",
+      "mistakes": [
+        {
+          "answer": "je trouve le livre",
+          "feedback": "That means 'I find the book' - use '{cherche}' for looking"
+        }
+      ]
+    },
+    {
+      "id": "i-je-trouve-le-chat",
+      "type": "respond",
+      "situation": "I find the cat",
+      "answer": "je trouve le chat",
+      "hint": "{je trouve + le chat}",
+      "mistakes": [
+        {
+          "answer": "je cherche le chat",
+          "feedback": "That means 'I'm looking for the cat' - use '{trouve}' for finding"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-cherchons-la-maison",
+      "type": "respond",
+      "situation": "we're looking for the house",
+      "answer": "nous cherchons la maison",
+      "hint": "{nous cherchons + la maison}"
+    },
+    {
+      "id": "i-tu-trouves-la-voiture",
+      "type": "respond",
+      "situation": "Say 'you find the car' (informal)",
+      "cue": "you find the car",
+      "answer": "tu trouves la voiture",
+      "hint": "{tu trouves + la voiture}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Say 'what are you looking for?' (informal)",
+      "cue": "what are you looking for?",
+      "answer": "qu'est-ce que tu cherches",
+      "accept": [
+        "que cherches-tu",
+        "tu cherches quoi"
+      ],
+      "hint": "{qu'est-ce que + tu cherches}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu trouves",
+          "feedback": "That asks 'what do you find' - use '{cherches}' for looking"
+        }
+      ]
+    }
+  ]
+}

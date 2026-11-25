@@ -1,0 +1,512 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-07-comparisons-slang",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Slang - Comparisons & Intensity",
+  "description": "Real-world slang from France, Quebec, and Africa: c'est ouf (crazy), c'est génial (awesome), c'est nul (it sucks), c'est malade (sick)",
+  "can_do": [
+    "Understand real French slang (c'est ouf, c'est génial)",
+    "Sound natural with Quebec and African French expressions",
+    "Connect with native speakers using authentic language"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "c-est-ouf-fr",
+      "fr": "c'est ouf",
+      "gloss": "it's crazy/insane",
+      "note": "🇫🇷 France - verlan for 'fou' (crazy)"
+    },
+    {
+      "word_id": "c-est-chelou-fr",
+      "fr": "c'est chelou",
+      "gloss": "it's weird/sketchy",
+      "note": "🇫🇷 France - verlan for 'louche' (weird)"
+    },
+    {
+      "word_id": "c-est-genial-fr",
+      "fr": "c'est génial",
+      "gloss": "it's awesome/great",
+      "note": "🇫🇷 France - very common!"
+    },
+    {
+      "word_id": "c-est-nul-fr",
+      "fr": "c'est nul",
+      "gloss": "it sucks/it's lame",
+      "note": "🇫🇷 France - negative slang"
+    },
+    {
+      "word_id": "c-est-cool-fr",
+      "fr": "c'est cool",
+      "gloss": "it's cool",
+      "note": "🇫🇷 France - borrowed from English"
+    },
+    {
+      "word_id": "c-est-dingue-fr",
+      "fr": "c'est dingue",
+      "gloss": "it's crazy/wild",
+      "note": "🇫🇷 France - informal for crazy"
+    },
+    {
+      "word_id": "c-est-grave-fr",
+      "fr": "c'est grave",
+      "gloss": "it's serious/intense",
+      "note": "🇫🇷 France & Africa - used for emphasis"
+    },
+    {
+      "word_id": "trop-fr",
+      "fr": "trop",
+      "gloss": "too/very (slang usage)",
+      "note": "🇫🇷 France - c'est trop bien (it's really good)"
+    },
+    {
+      "word_id": "vachement-fr",
+      "fr": "vachement",
+      "gloss": "really/very",
+      "note": "🇫🇷 France - c'est vachement bon (it's really good)"
+    },
+    {
+      "word_id": "hyper-fr",
+      "fr": "hyper",
+      "gloss": "super/really",
+      "note": "🇫🇷 France - c'est hyper bon (it's super good)"
+    },
+    {
+      "word_id": "c-est-malade-fr",
+      "fr": "c'est malade",
+      "gloss": "it's sick/awesome",
+      "note": "🇨🇦 Quebec - positive meaning!"
+    },
+    {
+      "word_id": "c-est-capot-fr",
+      "fr": "c'est capot",
+      "gloss": "it's crazy/nuts",
+      "note": "🇨🇦 Quebec - very informal"
+    },
+    {
+      "word_id": "c-est-ecoeurant-fr",
+      "fr": "c'est écœurant",
+      "gloss": "it's disgusting/amazing",
+      "note": "🇨🇦 Quebec - can be positive OR negative!"
+    },
+    {
+      "word_id": "c-est-le-fun-fr",
+      "fr": "c'est le fun",
+      "gloss": "it's fun",
+      "note": "🇨🇦 Quebec - borrowed from English"
+    },
+    {
+      "word_id": "c-est-poche-fr",
+      "fr": "c'est poche",
+      "gloss": "it sucks/it's bad",
+      "note": "🇨🇦 Quebec - negative"
+    },
+    {
+      "word_id": "c-est-ben-correct-fr",
+      "fr": "c'est ben correct",
+      "gloss": "it's really good/fine",
+      "note": "🇨🇦 Quebec - 'ben' = 'bien'"
+    },
+    {
+      "word_id": "c-est-gnama-fr",
+      "fr": "c'est gnama",
+      "gloss": "it's good/tasty",
+      "note": "🌍 West Africa (Senegal, Ivory Coast)"
+    },
+    {
+      "word_id": "c-est-fort-fr",
+      "fr": "c'est fort",
+      "gloss": "it's strong/intense",
+      "note": "🌍 Africa - used for emphasis"
+    },
+    {
+      "word_id": "c-est-chaud-fr",
+      "fr": "c'est chaud",
+      "gloss": "it's hot/difficult/intense",
+      "note": "🌍 Africa & France - figurative meaning"
+    },
+    {
+      "word_id": "c-est-top-fr",
+      "fr": "c'est top",
+      "gloss": "it's top/the best",
+      "note": "Universal - borrowed from English"
+    },
+    {
+      "word_id": "c-est-mortel-fr",
+      "fr": "c'est mortel",
+      "gloss": "it's deadly/awesome",
+      "note": "France - positive slang"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-french-slang-france",
+      "term": "French Slang ({France})",
+      "definition": "Informal expressions you'll hear on the streets of Paris and throughout France",
+      "example": "{c'est ouf} (it's crazy - verlan for '{fou}'), {c'est chelou} (it's weird - verlan for '{louche}')"
+    },
+    {
+      "id": "c-quebec-french",
+      "term": "Quebec French",
+      "definition": "Unique expressions from Quebec - very different from France!",
+      "example": "{c'est malade} (it's sick/awesome), {c'est capot} (it's crazy), {c'est écœurant} (it's disgusting/amazing)"
+    },
+    {
+      "id": "c-african-french",
+      "term": "African French",
+      "definition": "Expressions from French-speaking Africa (Senegal, Ivory Coast, etc.)",
+      "example": "{c'est gnama} (it's good - West Africa), {c'est grave} (it's serious/intense)"
+    },
+    {
+      "id": "c-verlan-french-slang-technique",
+      "term": "Verlan - French Slang Technique",
+      "definition": "Reversing syllables - très (very) becomes trop, fou (crazy) becomes ouf",
+      "example": "{c'est ouf} = {c'est fou} (it's crazy), {chelou} = louche (weird)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-c-est-ouf",
+      "type": "respond",
+      "situation": "Say \"it's crazy\" (French slang - verlan)",
+      "cue": "it's crazy (slang)",
+      "answer": "c'est ouf",
+      "accept": [
+        "c est ouf",
+        "cest ouf"
+      ],
+      "hint": "c'est ouf (verlan for '{fou}')",
+      "mistakes": [
+        {
+          "answer": "c'est fou",
+          "feedback": "That's correct but formal - slang is '{ouf}' (verlan/reversed)"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-chelou",
+      "type": "respond",
+      "situation": "Say \"it's weird\" (French slang - verlan)",
+      "cue": "it's weird (slang)",
+      "answer": "c'est chelou",
+      "accept": [
+        "c est chelou",
+        "cest chelou"
+      ],
+      "hint": "c'est chelou (verlan for '{louche}')",
+      "mistakes": [
+        {
+          "answer": "c'est bizarre",
+          "feedback": "That's formal - slang is '{chelou}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-genial",
+      "type": "respond",
+      "situation": "Say \"it's awesome\" (French)",
+      "cue": "it's awesome",
+      "answer": "c'est génial",
+      "accept": [
+        "c est génial",
+        "cest génial",
+        "c'est genial"
+      ],
+      "hint": "{c'est génial}",
+      "mistakes": [
+        {
+          "answer": "c'est bon",
+          "feedback": "That means 'it's good' - use '{génial}' for awesome"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-nul",
+      "type": "respond",
+      "situation": "Say \"it sucks\" (French slang)",
+      "cue": "it sucks",
+      "answer": "c'est nul",
+      "accept": [
+        "c est nul",
+        "cest nul"
+      ],
+      "hint": "{c'est nul}",
+      "mistakes": [
+        {
+          "answer": "c'est mauvais",
+          "feedback": "That's formal - slang is '{nul}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-cool",
+      "type": "respond",
+      "situation": "Say \"it's cool\" (used in France)",
+      "cue": "it's cool",
+      "answer": "c'est cool",
+      "accept": [
+        "c est cool",
+        "cest cool"
+      ],
+      "hint": "c'est cool (borrowed from English)",
+      "mistakes": [
+        {
+          "answer": "c'est froid",
+          "feedback": "That means 'it's cold' - use '{cool}' for the slang meaning"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-vachement-bon",
+      "type": "respond",
+      "situation": "Say \"it's really good\" using vachement (France)",
+      "cue": "it's really good (vachement)",
+      "answer": "c'est vachement bon",
+      "accept": [
+        "c est vachement bon",
+        "cest vachement bon"
+      ],
+      "hint": "{c'est vachement bon}",
+      "mistakes": [
+        {
+          "answer": "c'est très bon",
+          "feedback": "That works but '{vachement}' is more slangy/informal"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-hyper-bon",
+      "type": "respond",
+      "situation": "Say \"it's super good\" using hyper (France)",
+      "cue": "it's super good (hyper)",
+      "answer": "c'est hyper bon",
+      "accept": [
+        "c est hyper bon",
+        "cest hyper bon"
+      ],
+      "hint": "{c'est hyper bon}",
+      "mistakes": [
+        {
+          "answer": "c'est super bon",
+          "feedback": "Both work! But we're learning '{hyper}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-trop-bien",
+      "type": "respond",
+      "situation": "Say \"it's really good\" using trop (France)",
+      "cue": "it's really good (trop)",
+      "answer": "c'est trop bien",
+      "accept": [
+        "c est trop bien",
+        "cest trop bien"
+      ],
+      "hint": "{c'est trop bien}",
+      "mistakes": [
+        {
+          "answer": "c'est trop bon",
+          "feedback": "Both work! But the common phrase is '{trop bien}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-malade",
+      "type": "respond",
+      "situation": "Say \"it's sick/awesome\" (Quebec slang)",
+      "cue": "it's sick/awesome (Quebec)",
+      "answer": "c'est malade",
+      "accept": [
+        "c est malade",
+        "cest malade"
+      ],
+      "hint": "c'est malade (Quebec - positive meaning!)",
+      "mistakes": [
+        {
+          "answer": "c'est génial",
+          "feedback": "That's France - Quebec says '{malade}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-capot",
+      "type": "respond",
+      "situation": "Say \"it's crazy\" (Quebec slang)",
+      "cue": "it's crazy (Quebec)",
+      "answer": "c'est capot",
+      "accept": [
+        "c est capot",
+        "cest capot"
+      ],
+      "hint": "{c'est capot}",
+      "mistakes": [
+        {
+          "answer": "c'est ouf",
+          "feedback": "That's France slang - Quebec says '{capot}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-le-fun",
+      "type": "respond",
+      "situation": "Say \"it's fun\" (Quebec - from English)",
+      "cue": "it's fun (Quebec)",
+      "answer": "c'est le fun",
+      "accept": [
+        "c est le fun",
+        "cest le fun"
+      ],
+      "hint": "c'est le fun (Quebec borrows from English)",
+      "mistakes": [
+        {
+          "answer": "c'est amusant",
+          "feedback": "That's formal French - Quebec says '{c'est le fun}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-poche",
+      "type": "respond",
+      "situation": "Say \"it sucks\" (Quebec slang)",
+      "cue": "it sucks (Quebec)",
+      "answer": "c'est poche",
+      "accept": [
+        "c est poche",
+        "cest poche"
+      ],
+      "hint": "{c'est poche}",
+      "mistakes": [
+        {
+          "answer": "c'est nul",
+          "feedback": "That's France - Quebec says '{poche}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-ben-correct",
+      "type": "respond",
+      "situation": "Say \"it's really good\" (Quebec - ben = bien)",
+      "cue": "it's really good (Quebec)",
+      "answer": "c'est ben correct",
+      "accept": [
+        "c est ben correct",
+        "cest ben correct"
+      ],
+      "hint": "c'est ben correct (ben = bien in Quebec)",
+      "mistakes": [
+        {
+          "answer": "c'est bien correct",
+          "feedback": "Quebec shortens 'bien' to '{ben}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-gnama",
+      "type": "respond",
+      "situation": "Say \"it's good/tasty\" (West Africa)",
+      "cue": "it's good/tasty (Africa)",
+      "answer": "c'est gnama",
+      "accept": [
+        "c est gnama",
+        "cest gnama"
+      ],
+      "hint": "c'est gnama (West African French)",
+      "mistakes": [
+        {
+          "answer": "c'est bon",
+          "feedback": "That's standard - West Africa says '{gnama}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-chaud",
+      "type": "respond",
+      "situation": "Say \"it's intense/difficult\" (Africa & France)",
+      "cue": "it's intense (slang)",
+      "answer": "c'est chaud",
+      "accept": [
+        "c est chaud",
+        "cest chaud"
+      ],
+      "hint": "c'est chaud (figurative - not temperature!)",
+      "mistakes": [
+        {
+          "answer": "c'est difficile",
+          "feedback": "That's formal - slang is '{chaud}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-grave",
+      "type": "respond",
+      "situation": "Say \"it's serious/intense\" (Africa & France)",
+      "cue": "it's serious/intense",
+      "answer": "c'est grave",
+      "accept": [
+        "c est grave",
+        "cest grave"
+      ],
+      "hint": "{c'est grave}",
+      "mistakes": [
+        {
+          "answer": "c'est sérieux",
+          "feedback": "That's formal - '{grave}' is more slangy/emphatic"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-top",
+      "type": "respond",
+      "situation": "Say \"it's the best\" (top)",
+      "cue": "it's the best (top)",
+      "answer": "c'est top",
+      "accept": [
+        "c est top",
+        "cest top"
+      ],
+      "hint": "c'est top (from English)",
+      "mistakes": [
+        {
+          "answer": "c'est le meilleur",
+          "feedback": "That's formal - slang is just '{c'est top}'"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-mortel",
+      "type": "respond",
+      "situation": "Say \"it's deadly/awesome\" (France)",
+      "cue": "it's deadly/awesome",
+      "answer": "c'est mortel",
+      "accept": [
+        "c est mortel",
+        "cest mortel"
+      ],
+      "hint": "c'est mortel (positive slang!)",
+      "mistakes": [
+        {
+          "answer": "c'est dangereux",
+          "feedback": "That's 'dangerous' literally - '{mortel}' is positive slang for awesome"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-dingue",
+      "type": "respond",
+      "situation": "Say \"it's wild/crazy\" (France)",
+      "cue": "it's wild/crazy",
+      "answer": "c'est dingue",
+      "accept": [
+        "c est dingue",
+        "cest dingue"
+      ],
+      "hint": "{c'est dingue}",
+      "mistakes": [
+        {
+          "answer": "c'est sauvage",
+          "feedback": "That's 'wild' literally - '{dingue}' is slang for crazy"
+        }
+      ]
+    }
+  ]
+}

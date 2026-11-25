@@ -1,0 +1,702 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-19-demander",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{demander} - To Ask",
+  "description": "Ask for things and information: je demande (I ask), demander de l'aide (to ask for help), demander à quelqu'un (to ask someone)",
+  "can_do": [
+    "Ask for things and help (I ask, you ask, they ask)",
+    "Request information and assistance",
+    "Use demander with à and de correctly"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "demander-fr",
+      "fr": "demander",
+      "gloss": "to ask / to ask for",
+      "note": "infinitive form - regular -ER verb"
+    },
+    {
+      "word_id": "je-demande-fr",
+      "fr": "je demande",
+      "gloss": "I ask / I ask for",
+      "note": "regular -ER ending: -e"
+    },
+    {
+      "word_id": "tu-demandes-fr",
+      "fr": "tu demandes",
+      "gloss": "you ask / you ask for (informal)",
+      "note": "regular -ER ending: -es"
+    },
+    {
+      "word_id": "il-elle-demande-fr",
+      "fr": "il/elle demande",
+      "gloss": "he/she asks / asks for",
+      "note": "regular -ER ending: -e"
+    },
+    {
+      "word_id": "nous-demandons-fr",
+      "fr": "nous demandons",
+      "gloss": "we ask / we ask for",
+      "note": "regular -ER ending: -ons"
+    },
+    {
+      "word_id": "vous-demandez-fr",
+      "fr": "vous demandez",
+      "gloss": "you ask / you ask for (formal/plural)",
+      "note": "regular -ER ending: -ez"
+    },
+    {
+      "word_id": "ils-elles-demandent-fr",
+      "fr": "ils/elles demandent",
+      "gloss": "they ask / they ask for",
+      "note": "regular -ER ending: -ent (silent)"
+    },
+    {
+      "word_id": "demander-de-l-aide-fr",
+      "fr": "demander de l'aide",
+      "gloss": "to ask for help",
+      "note": "very common phrase - rank 63!"
+    },
+    {
+      "word_id": "demander-pardon-fr",
+      "fr": "demander pardon",
+      "gloss": "to ask forgiveness / to apologize",
+      "note": "polite expression"
+    },
+    {
+      "word_id": "demander-la-permission-fr",
+      "fr": "demander la permission",
+      "gloss": "to ask permission",
+      "note": "formal phrase"
+    },
+    {
+      "word_id": "demander-a-quelqu-un-fr",
+      "fr": "demander à quelqu'un",
+      "gloss": "to ask someone",
+      "note": "use 'à' + person"
+    },
+    {
+      "word_id": "je-te-demande-fr",
+      "fr": "je te demande",
+      "gloss": "I ask you",
+      "note": "with object pronoun"
+    },
+    {
+      "word_id": "il-me-demande-fr",
+      "fr": "il me demande",
+      "gloss": "he asks me",
+      "note": "object pronoun before verb"
+    },
+    {
+      "word_id": "demander-de-faire-fr",
+      "fr": "demander de faire",
+      "gloss": "to ask to do",
+      "note": "de + infinitive"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-demander-to-ask-for",
+      "term": "{demander} = to ask (for)",
+      "definition": "Request things, ask questions, ask for help - regular -ER verb",
+      "example": "{je demande de l'aide} (I ask for help), {tu demandes pourquoi?} (you ask why?)"
+    },
+    {
+      "id": "c-regular-er-verb-pattern",
+      "term": "Regular -ER verb pattern",
+      "definition": "Follows same pattern as parler - drop -er, add endings: -e, -es, -e, -ons, -ez, -ent",
+      "example": "{je demande}, {tu demandes}, {il demande}, {nous demandons}, {vous demandez}, {ils demandent}"
+    },
+    {
+      "id": "c-demander-quelque-chose-to",
+      "term": "{demander quelque chose} (to ask for something)",
+      "definition": "Ask for objects, favors, information - direct object",
+      "example": "{je demande un café} (I ask for a coffee), {il demande ton nom} (he asks for your name)"
+    },
+    {
+      "id": "c-demander-a-quelqu-un",
+      "term": "{demander à quelqu'un} (to ask someone)",
+      "definition": "Use 'à' when specifying who you're asking",
+      "example": "{je demande à Marie} (I ask Marie), {tu demandes à ton père} (you ask your father)"
+    },
+    {
+      "id": "c-demander-de-infinitive",
+      "term": "demander de + infinitive",
+      "definition": "Ask someone TO DO something - use '{de}' before verb",
+      "example": "{je demande de partir} (I ask to leave), {il me demande de venir} (he asks me to come)"
+    },
+    {
+      "id": "c-common-uses",
+      "term": "Common uses",
+      "definition": "demander de l'aide (ask for help), demander pardon (ask forgiveness), demander la permission (ask permission)",
+      "example": "{je demande de l'aide} (I ask for help), {tu demandes pardon} (you ask forgiveness)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-demande",
+      "type": "respond",
+      "situation": "I ask",
+      "answer": "je demande",
+      "hint": "{je...}",
+      "mistakes": [
+        {
+          "answer": "je demandes",
+          "feedback": "Expected: \"{je demande}\""
+        },
+        {
+          "answer": "je demander",
+          "feedback": "Expected: \"{je demande}\""
+        },
+        {
+          "answer": "je demand",
+          "feedback": "Expected: \"{je demande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-demandes",
+      "type": "respond",
+      "situation": "Say \"you ask\" (informal)",
+      "cue": "you ask (informal)",
+      "answer": "tu demandes",
+      "hint": "{tu...}",
+      "mistakes": [
+        {
+          "answer": "tu demande",
+          "feedback": "Expected: \"{tu demandes}\""
+        },
+        {
+          "answer": "tu demander",
+          "feedback": "Expected: \"{tu demandes}\""
+        },
+        {
+          "answer": "tu demands",
+          "feedback": "Expected: \"{tu demandes}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-demande",
+      "type": "respond",
+      "situation": "he asks",
+      "answer": "il demande",
+      "hint": "{il...}",
+      "mistakes": [
+        {
+          "answer": "il demandes",
+          "feedback": "Expected: \"{il demande}\""
+        },
+        {
+          "answer": "il demander",
+          "feedback": "Expected: \"{il demande}\""
+        },
+        {
+          "answer": "il demands",
+          "feedback": "Expected: \"{il demande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-demandons",
+      "type": "respond",
+      "situation": "we ask",
+      "answer": "nous demandons",
+      "hint": "{nous...}",
+      "mistakes": [
+        {
+          "answer": "nous demande",
+          "feedback": "Expected: \"{nous demandons}\""
+        },
+        {
+          "answer": "nous demander",
+          "feedback": "Expected: \"{nous demandons}\""
+        },
+        {
+          "answer": "nous demandez",
+          "feedback": "Expected: \"{nous demandons}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-demandez",
+      "type": "respond",
+      "situation": "Say \"you ask\" (formal)",
+      "cue": "you ask (formal)",
+      "answer": "vous demandez",
+      "hint": "{vous...}",
+      "mistakes": [
+        {
+          "answer": "vous demande",
+          "feedback": "Expected: \"{vous demandez}\""
+        },
+        {
+          "answer": "vous demander",
+          "feedback": "Expected: \"{vous demandez}\""
+        },
+        {
+          "answer": "vous demandons",
+          "feedback": "Expected: \"{vous demandez}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-demandent",
+      "type": "respond",
+      "situation": "they ask",
+      "answer": "ils demandent",
+      "hint": "{ils...}",
+      "mistakes": [
+        {
+          "answer": "ils demande",
+          "feedback": "Expected: \"{ils demandent}\""
+        },
+        {
+          "answer": "ils demander",
+          "feedback": "Expected: \"{ils demandent}\""
+        },
+        {
+          "answer": "ils demandes",
+          "feedback": "Expected: \"{ils demandent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-demande-de-l",
+      "type": "respond",
+      "situation": "I ask for help",
+      "answer": "je demande de l'aide",
+      "accept": [
+        "je demande de l aide"
+      ],
+      "hint": "{je demande de l'aide}",
+      "mistakes": [
+        {
+          "answer": "je demandes de l'aide",
+          "feedback": "Expected: \"{je demande de l'aide}\""
+        },
+        {
+          "answer": "je demander de l'aide",
+          "feedback": "Expected: \"{je demande de l'aide}\""
+        },
+        {
+          "answer": "je demande l'aide",
+          "feedback": "Expected: \"{je demande de l'aide}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-demandes-un-cafe",
+      "type": "respond",
+      "situation": "you ask for a coffee",
+      "answer": "tu demandes un café",
+      "accept": [
+        "tu demandes un cafe"
+      ],
+      "hint": "{tu demandes un café}",
+      "mistakes": [
+        {
+          "answer": "tu demande un café",
+          "feedback": "Expected: \"{tu demandes un café}\""
+        },
+        {
+          "answer": "tu demander un café",
+          "feedback": "Expected: \"{tu demandes un café}\""
+        },
+        {
+          "answer": "tu demandes pour un café",
+          "feedback": "Expected: \"tu demandes un café\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-demande-l-addition",
+      "type": "respond",
+      "situation": "she asks for the bill",
+      "answer": "elle demande l'addition",
+      "accept": [
+        "elle demande l addition"
+      ],
+      "hint": "{elle demande l'addition}",
+      "mistakes": [
+        {
+          "answer": "elle demandes l'addition",
+          "feedback": "Expected: \"{elle demande l'addition}\""
+        },
+        {
+          "answer": "elle demander l'addition",
+          "feedback": "Expected: \"{elle demande l'addition}\""
+        },
+        {
+          "answer": "elle demande la facture",
+          "feedback": "Expected: \"{elle demande l'addition}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-demandons-la-permission",
+      "type": "respond",
+      "situation": "we ask for permission",
+      "answer": "nous demandons la permission",
+      "hint": "{nous demandons la permission}",
+      "mistakes": [
+        {
+          "answer": "nous demande la permission",
+          "feedback": "Expected: \"{nous demandons la permission}\""
+        },
+        {
+          "answer": "nous demandon la permission",
+          "feedback": "Expected: \"{nous demandons la permission}\""
+        },
+        {
+          "answer": "nous demandons le permission",
+          "feedback": "Expected: \"{nous demandons la permission}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-demande-pardon",
+      "type": "respond",
+      "situation": "I ask forgiveness",
+      "answer": "je demande pardon",
+      "hint": "{je demande pardon}",
+      "mistakes": [
+        {
+          "answer": "je demandes pardon",
+          "feedback": "Expected: \"{je demande pardon}\""
+        },
+        {
+          "answer": "je demander pardon",
+          "feedback": "Expected: \"{je demande pardon}\""
+        },
+        {
+          "answer": "je demande le pardon",
+          "feedback": "Expected: \"je demande pardon\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-demande-a-marie",
+      "type": "respond",
+      "situation": "I ask Marie",
+      "answer": "je demande à Marie",
+      "accept": [
+        "je demande a Marie"
+      ],
+      "hint": "{je demande à Marie}",
+      "mistakes": [
+        {
+          "answer": "je demande Marie",
+          "feedback": "Expected: \"{je demande à Marie}\""
+        },
+        {
+          "answer": "je demandes à Marie",
+          "feedback": "Expected: \"{je demande à Marie}\""
+        },
+        {
+          "answer": "je demander à Marie",
+          "feedback": "Expected: \"{je demande à Marie}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-demandes-a-ton",
+      "type": "respond",
+      "situation": "you ask your father",
+      "answer": "tu demandes à ton père",
+      "accept": [
+        "tu demandes a ton pere"
+      ],
+      "hint": "{tu demandes à ton père}",
+      "mistakes": [
+        {
+          "answer": "tu demandes ton père",
+          "feedback": "Expected: \"{tu demandes à ton père}\""
+        },
+        {
+          "answer": "tu demande à ton père",
+          "feedback": "Expected: \"{tu demandes à ton père}\""
+        },
+        {
+          "answer": "tu demander à ton père",
+          "feedback": "Expected: \"{tu demandes à ton père}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-demande-a-sa",
+      "type": "respond",
+      "situation": "he asks his mother",
+      "answer": "il demande à sa mère",
+      "accept": [
+        "il demande a sa mere"
+      ],
+      "hint": "{il demande à sa mère}",
+      "mistakes": [
+        {
+          "answer": "il demande sa mère",
+          "feedback": "Expected: \"{il demande à sa mère}\""
+        },
+        {
+          "answer": "il demandes à sa mère",
+          "feedback": "Expected: \"{il demande à sa mère}\""
+        },
+        {
+          "answer": "il demander à sa mère",
+          "feedback": "Expected: \"{il demande à sa mère}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-te-demande",
+      "type": "respond",
+      "situation": "Say \"I ask you\" (informal)",
+      "cue": "I ask you (informal)",
+      "answer": "je te demande",
+      "hint": "{je te demande}",
+      "mistakes": [
+        {
+          "answer": "je demande te",
+          "feedback": "Expected: \"je te demande\""
+        },
+        {
+          "answer": "je te demandes",
+          "feedback": "Expected: \"{je te demande}\""
+        },
+        {
+          "answer": "je demande tu",
+          "feedback": "Expected: \"{je te demande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-me-demandes",
+      "type": "respond",
+      "situation": "you ask me",
+      "answer": "tu me demandes",
+      "hint": "{tu me demandes}",
+      "mistakes": [
+        {
+          "answer": "tu demandes me",
+          "feedback": "Expected: \"tu me demandes\""
+        },
+        {
+          "answer": "tu me demande",
+          "feedback": "Expected: \"{tu me demandes}\""
+        },
+        {
+          "answer": "tu demande me",
+          "feedback": "Expected: \"{tu me demandes}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-me-demande",
+      "type": "respond",
+      "situation": "he asks me",
+      "answer": "il me demande",
+      "hint": "{il me demande}",
+      "mistakes": [
+        {
+          "answer": "il demande me",
+          "feedback": "Expected: \"il me demande\""
+        },
+        {
+          "answer": "il me demandes",
+          "feedback": "Expected: \"{il me demande}\""
+        },
+        {
+          "answer": "il demandes me",
+          "feedback": "Expected: \"{il me demande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-nous-demande",
+      "type": "respond",
+      "situation": "she asks us",
+      "answer": "elle nous demande",
+      "hint": "{elle nous demande}",
+      "mistakes": [
+        {
+          "answer": "elle demande nous",
+          "feedback": "Expected: \"elle nous demande\""
+        },
+        {
+          "answer": "elle nous demandes",
+          "feedback": "Expected: \"{elle nous demande}\""
+        },
+        {
+          "answer": "elle demandes nous",
+          "feedback": "Expected: \"{elle nous demande}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-demande-de-partir",
+      "type": "respond",
+      "situation": "I ask to leave",
+      "answer": "je demande de partir",
+      "hint": "{je demande de partir}",
+      "mistakes": [
+        {
+          "answer": "je demande partir",
+          "feedback": "Expected: \"{je demande de partir}\""
+        },
+        {
+          "answer": "je demandes de partir",
+          "feedback": "Expected: \"{je demande de partir}\""
+        },
+        {
+          "answer": "je demande à partir",
+          "feedback": "Expected: \"{je demande de partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-me-demande-de",
+      "type": "respond",
+      "situation": "he asks me to come",
+      "answer": "il me demande de venir",
+      "hint": "{il me demande de venir}",
+      "mistakes": [
+        {
+          "answer": "il me demande venir",
+          "feedback": "Expected: \"{il me demande de venir}\""
+        },
+        {
+          "answer": "il demande me de venir",
+          "feedback": "Expected: \"il me demande de venir\""
+        },
+        {
+          "answer": "il me demande à venir",
+          "feedback": "Expected: \"{il me demande de venir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-nous-demande-d",
+      "type": "respond",
+      "situation": "she asks us to wait",
+      "answer": "elle nous demande d'attendre",
+      "accept": [
+        "elle nous demande d attendre"
+      ],
+      "hint": "{elle nous demande d'attendre}",
+      "mistakes": [
+        {
+          "answer": "elle nous demande attendre",
+          "feedback": "Expected: \"{elle nous demande d'attendre}\""
+        },
+        {
+          "answer": "elle demande nous d'attendre",
+          "feedback": "Expected: \"elle nous demande d'attendre\""
+        },
+        {
+          "answer": "elle nous demande à attendre",
+          "feedback": "Expected: \"{elle nous demande d'attendre}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-te-demandent-d",
+      "type": "respond",
+      "situation": "they ask you to help",
+      "answer": "ils te demandent d'aider",
+      "accept": [
+        "ils te demandent d aider"
+      ],
+      "hint": "{ils te demandent d'aider}",
+      "mistakes": [
+        {
+          "answer": "ils te demandent aider",
+          "feedback": "Expected: \"{ils te demandent d'aider}\""
+        },
+        {
+          "answer": "ils demandent te d'aider",
+          "feedback": "Expected: \"ils te demandent d'aider\""
+        },
+        {
+          "answer": "ils te demande d'aider",
+          "feedback": "Expected: \"{ils te demandent d'aider}\""
+        }
+      ]
+    },
+    {
+      "id": "i-pourquoi-tu-demandes",
+      "type": "respond",
+      "situation": "why do you ask?",
+      "answer": "pourquoi tu demandes?",
+      "accept": [
+        "pourquoi tu demandes"
+      ],
+      "hint": "{pourquoi tu demandes?}",
+      "mistakes": [
+        {
+          "answer": "pourquoi demandes-tu?",
+          "feedback": "Expected: \"{pourquoi tu demandes?}\""
+        },
+        {
+          "answer": "pourquoi tu demande?",
+          "feedback": "Expected: \"{pourquoi tu demandes?}\""
+        },
+        {
+          "answer": "pourquoi demander?",
+          "feedback": "Expected: \"{pourquoi tu demandes?}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-demande",
+      "type": "respond",
+      "situation": "I asked",
+      "answer": "j'ai demandé",
+      "accept": [
+        "j ai demandé",
+        "j'ai demande"
+      ],
+      "hint": "{j'ai demandé}",
+      "mistakes": [
+        {
+          "answer": "je demande",
+          "feedback": "Expected: \"{j'ai demandé}\""
+        },
+        {
+          "answer": "j'ai demander",
+          "feedback": "Expected: \"{j'ai demandé}\""
+        },
+        {
+          "answer": "j'ai demandai",
+          "feedback": "Expected: \"{j'ai demandé}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-m-as-demande",
+      "type": "respond",
+      "situation": "you asked me",
+      "answer": "tu m'as demandé",
+      "accept": [
+        "tu m as demandé",
+        "tu m'as demande"
+      ],
+      "hint": "{tu m'as demandé}",
+      "mistakes": [
+        {
+          "answer": "tu me demandes",
+          "feedback": "Expected: \"{tu m'as demandé}\""
+        },
+        {
+          "answer": "tu as me demandé",
+          "feedback": "Expected: \"{tu m'as demandé}\""
+        },
+        {
+          "answer": "tu m'ai demandé",
+          "feedback": "Expected: \"{tu m'as demandé}\""
+        }
+      ]
+    }
+  ]
+}

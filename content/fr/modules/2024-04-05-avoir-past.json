@@ -1,0 +1,432 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-05-avoir-past",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{avoir} - Past Tense (had)",
+  "description": "Talk about what you had in the past: j'avais (I had), tu avais (you had), il avait (he had)",
+  "can_do": [
+    "Express past possession (I had, you had, they had)",
+    "Describe what you possessed in the past",
+    "Combine with être past to tell complete stories"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "j-avais-fr",
+      "fr": "j'avais",
+      "gloss": "I had",
+      "note": "imperfect tense"
+    },
+    {
+      "word_id": "tu-avais-fr",
+      "fr": "tu avais",
+      "gloss": "you had (informal)",
+      "note": "sounds same as j'avais"
+    },
+    {
+      "word_id": "il-elle-avait-fr",
+      "fr": "il/elle avait",
+      "gloss": "he/she had",
+      "note": "slightly different pronunciation"
+    },
+    {
+      "word_id": "nous-avions-fr",
+      "fr": "nous avions",
+      "gloss": "we had",
+      "note": "imperfect tense"
+    },
+    {
+      "word_id": "vous-aviez-fr",
+      "fr": "vous aviez",
+      "gloss": "you had (formal/plural)",
+      "note": "imperfect tense"
+    },
+    {
+      "word_id": "ils-elles-avaient-fr",
+      "fr": "ils/elles avaient",
+      "gloss": "they had",
+      "note": "sounds like 'avè'"
+    },
+    {
+      "word_id": "avoir-faim-fr",
+      "fr": "avoir faim",
+      "gloss": "to be hungry",
+      "note": "literally 'to have hunger'"
+    },
+    {
+      "word_id": "avoir-raison-fr",
+      "fr": "avoir raison",
+      "gloss": "to be right",
+      "note": "literally 'to have reason'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-past-tense-imperfect-imparfait",
+      "term": "Past Tense = Imperfect (Imparfait)",
+      "definition": "Describes what you possessed or experienced in the past",
+      "example": "{j'avais un chat} (I had a cat), {nous avions une maison} (we had a house)"
+    },
+    {
+      "id": "c-avais-had-singular",
+      "term": "{avais} = had (singular)",
+      "definition": "For je, tu - describing past possession",
+      "example": "{j'avais un livre} (I had a book), {tu avais raison} (you were right - literally 'had reason')"
+    },
+    {
+      "id": "c-avait-had-third-person",
+      "term": "{avait} = had (third person singular)",
+      "definition": "For il/elle - describing what he/she/it had",
+      "example": "{il avait un chien} (he had a dog), {elle avait le temps} (she had time)"
+    },
+    {
+      "id": "c-avions-aviez-avaient-had",
+      "term": "{avions, aviez, avaient} = had (plural)",
+      "definition": "For nous, vous, ils/elles - plural past possession",
+      "example": "{nous avions une voiture} (we had a car), {ils avaient faim} (they were hungry)"
+    },
+    {
+      "id": "c-common-expressions-with-avoir",
+      "term": "Common expressions with avoir",
+      "definition": "Many French expressions use avoir (not être!): avoir faim (to be hungry), avoir raison (to be right)",
+      "example": "{j'avais faim} (I was hungry), {tu avais raison} (you were right)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-avais-un-chat",
+      "type": "respond",
+      "situation": "I had a cat",
+      "answer": "j'avais un chat",
+      "accept": [
+        "j avais un chat"
+      ],
+      "hint": "{j'avais + un chat}",
+      "mistakes": [
+        {
+          "answer": "j'ai un chat",
+          "feedback": "That's present 'I have' - use '{j'avais}' for past 'I had'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-avais-un-livre",
+      "type": "respond",
+      "situation": "I had a book",
+      "answer": "j'avais un livre",
+      "accept": [
+        "j avais un livre"
+      ],
+      "hint": "{j'avais + un livre}",
+      "mistakes": [
+        {
+          "answer": "j'ai un livre",
+          "feedback": "That's 'I have' - use '{j'avais}' for 'I had'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-avais-un-chien",
+      "type": "respond",
+      "situation": "Say \"you had a dog\" (informal)",
+      "cue": "you had a dog",
+      "answer": "tu avais un chien",
+      "hint": "{tu avais + un chien}",
+      "mistakes": [
+        {
+          "answer": "tu as un chien",
+          "feedback": "That's 'you have' - use '{tu avais}' for 'you had'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-avais-le-temps",
+      "type": "respond",
+      "situation": "Say \"you had time\" (informal)",
+      "cue": "you had time",
+      "answer": "tu avais le temps",
+      "hint": "{tu avais + le temps}",
+      "mistakes": [
+        {
+          "answer": "tu as le temps",
+          "feedback": "That's 'you have' - use '{tu avais}' for 'you had'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-avait-une-voiture",
+      "type": "respond",
+      "situation": "he had a car",
+      "answer": "il avait une voiture",
+      "hint": "{il avait + une voiture}",
+      "mistakes": [
+        {
+          "answer": "il a une voiture",
+          "feedback": "That's 'he has' - use '{il avait}' for 'he had'"
+        },
+        {
+          "answer": "il avais une voiture",
+          "feedback": "Use '{avait}' (with -t) for il/elle, not 'avais'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-avait-une-maison",
+      "type": "respond",
+      "situation": "she had a house",
+      "answer": "elle avait une maison",
+      "hint": "{elle avait + une maison}",
+      "mistakes": [
+        {
+          "answer": "elle a une maison",
+          "feedback": "That's 'she has' - use '{elle avait}' for 'she had'"
+        },
+        {
+          "answer": "elle avais une maison",
+          "feedback": "Use '{avait}' for elle, not 'avais'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avions-un-chat",
+      "type": "respond",
+      "situation": "we had a cat",
+      "answer": "nous avions un chat",
+      "hint": "{nous avions + un chat}",
+      "mistakes": [
+        {
+          "answer": "nous avons un chat",
+          "feedback": "That's 'we have' - use '{nous avions}' for 'we had'"
+        },
+        {
+          "answer": "nous avait un chat",
+          "feedback": "Use '{avions}' for nous, not 'avait'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avions-le-temps",
+      "type": "respond",
+      "situation": "we had time",
+      "answer": "nous avions le temps",
+      "hint": "{nous avions + le temps}",
+      "mistakes": [
+        {
+          "answer": "nous avons le temps",
+          "feedback": "That's 'we have' - use '{nous avions}' for 'we had'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-aviez-un-livre",
+      "type": "respond",
+      "situation": "Say \"you had a book\" (formal or plural)",
+      "cue": "you had a book (formal)",
+      "answer": "vous aviez un livre",
+      "hint": "{vous aviez + un livre}",
+      "mistakes": [
+        {
+          "answer": "vous avez un livre",
+          "feedback": "That's 'you have' - use '{vous aviez}' for 'you had'"
+        },
+        {
+          "answer": "vous avions un livre",
+          "feedback": "Use '{aviez}' for vous, not 'avions'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-aviez-de-l",
+      "type": "respond",
+      "situation": "Say \"you had money\" (formal)",
+      "cue": "you had money (formal)",
+      "answer": "vous aviez de l'argent",
+      "accept": [
+        "vous aviez de l argent",
+        "vous aviez l'argent"
+      ],
+      "hint": "{vous aviez + de l'argent}",
+      "mistakes": [
+        {
+          "answer": "vous avez de l'argent",
+          "feedback": "That's 'you have' - use '{vous aviez}' for 'you had'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-avaient-une-maison",
+      "type": "respond",
+      "situation": "they had a house",
+      "answer": "ils avaient une maison",
+      "accept": [
+        "elles avaient une maison"
+      ],
+      "hint": "{ils/elles avaient + une maison}",
+      "mistakes": [
+        {
+          "answer": "ils ont une maison",
+          "feedback": "That's 'they have' - use '{ils avaient}' for 'they had'"
+        },
+        {
+          "answer": "ils avait une maison",
+          "feedback": "Use '{avaient}' for ils/elles, not 'avait'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-avaient-des-enfants",
+      "type": "respond",
+      "situation": "they had children",
+      "answer": "ils avaient des enfants",
+      "accept": [
+        "elles avaient des enfants"
+      ],
+      "hint": "{ils/elles avaient + des enfants}",
+      "mistakes": [
+        {
+          "answer": "ils ont des enfants",
+          "feedback": "That's 'they have' - use '{ils avaient}' for 'they had'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-avais-faim",
+      "type": "respond",
+      "situation": "Say \"I was hungry\" (literally: I had hunger)",
+      "cue": "I was hungry",
+      "answer": "j'avais faim",
+      "accept": [
+        "j avais faim"
+      ],
+      "hint": "j'avais + faim (avoir faim = to be hungry)",
+      "mistakes": [
+        {
+          "answer": "j'ai faim",
+          "feedback": "That's 'I am hungry' - use '{j'avais faim}' for 'I was hungry'"
+        },
+        {
+          "answer": "j'étais faim",
+          "feedback": "Use '{avais}' not 'étais' - it's avoir faim, not être faim"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-avais-faim",
+      "type": "respond",
+      "situation": "Say \"you were hungry\" (informal)",
+      "cue": "you were hungry",
+      "answer": "tu avais faim",
+      "hint": "{tu avais + faim}",
+      "mistakes": [
+        {
+          "answer": "tu as faim",
+          "feedback": "That's 'you are hungry' - use '{tu avais faim}' for 'you were hungry'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avions-faim",
+      "type": "respond",
+      "situation": "we were hungry",
+      "answer": "nous avions faim",
+      "hint": "{nous avions + faim}",
+      "mistakes": [
+        {
+          "answer": "nous avons faim",
+          "feedback": "That's 'we are hungry' - use '{nous avions faim}' for 'we were hungry'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-avais-raison",
+      "type": "respond",
+      "situation": "Say \"you were right\" (informal - literally: you had reason)",
+      "cue": "you were right",
+      "answer": "tu avais raison",
+      "hint": "tu avais + raison (avoir raison = to be right)",
+      "mistakes": [
+        {
+          "answer": "tu as raison",
+          "feedback": "That's 'you are right' - use '{tu avais raison}' for 'you were right'"
+        },
+        {
+          "answer": "tu étais raison",
+          "feedback": "Use '{avais}' not 'étais' - it's avoir raison, not être raison"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-avais-pas",
+      "type": "respond",
+      "situation": "Say \"I did not have a cat\"",
+      "cue": "I didn't have a cat",
+      "answer": "je n'avais pas de chat",
+      "accept": [
+        "je n avais pas de chat"
+      ],
+      "hint": "je n'avais pas + de chat (use '{de}' after negation!)",
+      "mistakes": [
+        {
+          "answer": "je n'ai pas de chat",
+          "feedback": "Use past tense '{n'avais pas}' for 'didn't have'"
+        },
+        {
+          "answer": "je n'avais pas un chat",
+          "feedback": "Use '{de}' after negation, not 'un': pas de chat"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-n-avais-pas",
+      "type": "respond",
+      "situation": "Say \"you did not have time\" (informal)",
+      "cue": "you didn't have time",
+      "answer": "tu n'avais pas le temps",
+      "accept": [
+        "tu n avais pas le temps"
+      ],
+      "hint": "{tu n'avais pas + le temps}",
+      "mistakes": [
+        {
+          "answer": "tu n'as pas le temps",
+          "feedback": "Use past tense '{n'avais pas}' for 'didn't have'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-n-avait-pas",
+      "type": "respond",
+      "situation": "Say \"he did not have a car\"",
+      "cue": "he didn't have a car",
+      "answer": "il n'avait pas de voiture",
+      "accept": [
+        "il n avait pas de voiture"
+      ],
+      "hint": "{il n'avait pas + de voiture}",
+      "mistakes": [
+        {
+          "answer": "il n'a pas de voiture",
+          "feedback": "Use past tense '{n'avait pas}' for 'didn't have'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-n-avions-pas",
+      "type": "respond",
+      "situation": "Say \"we did not have money\"",
+      "cue": "we didn't have money",
+      "answer": "nous n'avions pas d'argent",
+      "accept": [
+        "nous n avions pas d'argent",
+        "nous n'avions pas d argent"
+      ],
+      "hint": "{nous n'avions pas + d'argent}",
+      "mistakes": [
+        {
+          "answer": "nous n'avons pas d'argent",
+          "feedback": "Use past tense '{n'avions pas}' for 'didn't have'"
+        }
+      ]
+    }
+  ]
+}

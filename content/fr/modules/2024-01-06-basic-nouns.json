@@ -1,0 +1,335 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-06-basic-nouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Basic Nouns - People & Things",
+  "description": "Learn essential nouns WITH articles: un livre (a book), une maison (a house) - includes both genders!",
+  "can_do": [
+    "Talk about real things (books, cats, cars, houses)",
+    "Say 'I have a cat' or 'It's a book' in French",
+    "Combine articles + nouns with être and avoir"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "un-livre-fr",
+      "fr": "un livre",
+      "gloss": "a book",
+      "note": "masculine (livre)"
+    },
+    {
+      "word_id": "un-chat-fr",
+      "fr": "un chat",
+      "gloss": "a cat (male)",
+      "note": "masculine (chat)"
+    },
+    {
+      "word_id": "une-chatte-fr",
+      "fr": "une chatte",
+      "gloss": "a cat (female)",
+      "note": "feminine (chatte)"
+    },
+    {
+      "word_id": "un-chien-fr",
+      "fr": "un chien",
+      "gloss": "a dog (male)",
+      "note": "masculine (chien)"
+    },
+    {
+      "word_id": "une-chienne-fr",
+      "fr": "une chienne",
+      "gloss": "a dog (female)",
+      "note": "feminine (chienne)"
+    },
+    {
+      "word_id": "une-maison-fr",
+      "fr": "une maison",
+      "gloss": "a house",
+      "note": "feminine (maison)"
+    },
+    {
+      "word_id": "une-voiture-fr",
+      "fr": "une voiture",
+      "gloss": "a car",
+      "note": "feminine (voiture)"
+    },
+    {
+      "word_id": "un-ami-fr",
+      "fr": "un ami",
+      "gloss": "a friend (masc)",
+      "note": "masculine (ami)"
+    },
+    {
+      "word_id": "une-amie-fr",
+      "fr": "une amie",
+      "gloss": "a friend (fem)",
+      "note": "feminine (amie)"
+    },
+    {
+      "word_id": "un-homme-fr",
+      "fr": "un homme",
+      "gloss": "a man",
+      "note": "masculine, silent h (homme)"
+    },
+    {
+      "word_id": "une-femme-fr",
+      "fr": "une femme",
+      "gloss": "a woman",
+      "note": "feminine (femme)"
+    },
+    {
+      "word_id": "un-enfant-fr",
+      "fr": "un enfant",
+      "gloss": "a child",
+      "note": "masculine or feminine (enfant)"
+    },
+    {
+      "word_id": "une-chose-fr",
+      "fr": "une chose",
+      "gloss": "a thing",
+      "note": "feminine (chose)"
+    },
+    {
+      "word_id": "un-jour-fr",
+      "fr": "un jour",
+      "gloss": "a day",
+      "note": "masculine (jour)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-noun-gender-critical-concept",
+      "term": "Noun Gender - Critical Concept!",
+      "definition": "Every French noun is either masculine or feminine - you must memorize this!",
+      "example": "Masculine nouns use '{le/un}', feminine use 'la/{une'}"
+    },
+    {
+      "id": "c-using-with-etre-and",
+      "term": "Using With être and avoir",
+      "definition": "Combine nouns with {être} and {avoir}, the verbs you already know",
+      "example": "Pattern: pronoun + verb + article + noun"
+    },
+    {
+      "id": "c-practice-previous-modules",
+      "term": "Practice Previous Modules!",
+      "definition": "Every exercise uses être or avoir - reinforcing what you learned!",
+      "example": "Learn nouns WHILE practicing your verbs"
+    },
+    {
+      "id": "c-rule-identifying-vs-profession",
+      "term": "Rule: Identifying vs. Profession",
+      "definition": "When you identify someone with a noun (like 'man' or 'friend'), you MUST use an article (un, une). NOTE: A special rule for professions and nationalities will be taught later.",
+      "example": "Correct for now: '{elle est une amie}'. Future rule: '{elle est avocate}' (she is a lawyer)."
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-un-livre",
+      "type": "translate",
+      "prompt": "I have a book",
+      "answer": "j'ai un livre",
+      "hint": "Combine {avoir} + article + noun - all from earlier lessons!",
+      "mistakes": [
+        {
+          "answer": "j'ai une livre",
+          "feedback": "livre is masculine, use '{un}' not 'une'"
+        },
+        {
+          "answer": "j'ai le livre",
+          "feedback": "Use '{un}' (a), not 'le' (the)"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-chat",
+      "type": "respond",
+      "situation": "Say \"I have a cat\" (male)",
+      "cue": "I have a cat (male)",
+      "answer": "j'ai un chat",
+      "hint": "Combine: I have + masculine article + masculine cat",
+      "mistakes": [
+        {
+          "answer": "j'ai une chatte",
+          "feedback": "That's a female cat - use masculine for male"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-une-chatte",
+      "type": "respond",
+      "situation": "Say \"she has a cat\" (female)",
+      "cue": "she has a cat (female)",
+      "answer": "elle a une chatte",
+      "hint": "Combine: she has + feminine article + feminine cat",
+      "mistakes": [
+        {
+          "answer": "elle a un chat",
+          "feedback": "That's a male cat - use feminine for female"
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-un-chien",
+      "type": "translate",
+      "prompt": "he has a dog",
+      "answer": "il a un chien",
+      "hint": "Combine: he has + article + dog (masculine)",
+      "mistakes": [
+        {
+          "answer": "il a une chienne",
+          "feedback": "That's a female dog - use masculine"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-une-chienne",
+      "type": "respond",
+      "situation": "Say \"we have a dog\" (female)",
+      "cue": "we have a dog (female)",
+      "answer": "nous avons une chienne",
+      "hint": "Combine: we have + article + dog (feminine)",
+      "mistakes": [
+        {
+          "answer": "nous avons un chien",
+          "feedback": "That's a male dog - use feminine"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-une-maison",
+      "type": "translate",
+      "prompt": "it's a house",
+      "answer": "c'est une maison",
+      "hint": "Combine: it is + article + house (feminine)",
+      "mistakes": [
+        {
+          "answer": "c'est un maison",
+          "feedback": "maison is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-une-voiture",
+      "type": "translate",
+      "prompt": "you have a car (informal)",
+      "answer": "tu as une voiture",
+      "hint": "Combine: you have + article + car (feminine)",
+      "mistakes": [
+        {
+          "answer": "tu as un voiture",
+          "feedback": "voiture is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-ami",
+      "type": "respond",
+      "situation": "Say \"I have a friend\" (male)",
+      "cue": "I have a friend (male)",
+      "answer": "j'ai un ami",
+      "hint": "Combine: I have + article + friend (masculine)",
+      "mistakes": [
+        {
+          "answer": "j'ai une amie",
+          "feedback": "For masculine friend, use '{un ami}'"
+        },
+        {
+          "answer": "il est un ami",
+          "feedback": "That means 'he is a friend'. The question asks for 'he has a friend'."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-une-amie",
+      "type": "respond",
+      "situation": "Say \"she has a friend\" (female)",
+      "cue": "she has a friend (female)",
+      "answer": "elle a une amie",
+      "hint": "Combine: she has + article + friend (feminine)",
+      "mistakes": [
+        {
+          "answer": "elle a un ami",
+          "feedback": "For feminine friend, use '{une amie}'"
+        },
+        {
+          "answer": "elle est une amie",
+          "feedback": "That means 'she is a friend'. The question asks for 'she has a friend'."
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-un-homme",
+      "type": "translate",
+      "prompt": "I am a man",
+      "answer": "je suis un homme",
+      "hint": "Combine: I am + article + man (silent h)",
+      "mistakes": [
+        {
+          "answer": "je suis une homme",
+          "feedback": "homme is masculine, use '{un}' not 'une'"
+        },
+        {
+          "answer": "il est un homme",
+          "feedback": "That means 'he is a man'. The question asks for 'I am a man'."
+        }
+      ]
+    },
+    {
+      "id": "i-tu-es-une-femme",
+      "type": "respond",
+      "situation": "Say \"you are a woman\" (informal)",
+      "cue": "you are a woman (informal)",
+      "answer": "tu es une femme",
+      "hint": "Combine: you are + article + woman",
+      "mistakes": [
+        {
+          "answer": "tu es un femme",
+          "feedback": "femme is feminine, use '{une}' not 'un'"
+        },
+        {
+          "answer": "elle est une femme",
+          "feedback": "That means 'she is a woman'. The question asks for 'you are a woman'."
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-un-enfant",
+      "type": "translate",
+      "prompt": "I have a child",
+      "answer": "j'ai un enfant",
+      "hint": "Combine: I have + article + child",
+      "mistakes": [
+        {
+          "answer": "je ai un enfant",
+          "feedback": "Use j'ai with apostrophe"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-une-chose",
+      "type": "translate",
+      "prompt": "you have a thing (informal)",
+      "answer": "tu as une chose",
+      "hint": "Combine: you have + article + thing (feminine)",
+      "mistakes": [
+        {
+          "answer": "tu as un chose",
+          "feedback": "chose is feminine, use '{une}' not 'un'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-un-jour",
+      "type": "translate",
+      "prompt": "we have a day",
+      "answer": "nous avons un jour",
+      "hint": "Combine: we have + article + day (masculine)",
+      "mistakes": [
+        {
+          "answer": "nous avons une jour",
+          "feedback": "jour is masculine, use '{un}' not 'une'"
+        }
+      ]
+    }
+  ]
+}

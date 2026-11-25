@@ -1,0 +1,254 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-28-negation",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Negation - {ne...pas} (not)",
+  "description": "Say what you DON'T want, DON'T have, or DON'T do! Simple pattern: wrap your verb with ne...pas.",
+  "can_do": [
+    "Say what you don't do, don't have, or don't want",
+    "Negate any French sentence with ne...pas",
+    "Express disagreement and refusal politely"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "ne-pas-fr",
+      "fr": "ne...pas",
+      "gloss": "not",
+      "note": "wraps around verb"
+    },
+    {
+      "word_id": "je-ne-suis-pas-fr",
+      "fr": "je ne suis pas",
+      "gloss": "I am not",
+      "note": "être negated"
+    },
+    {
+      "word_id": "je-n-ai-pas-fr",
+      "fr": "je n'ai pas",
+      "gloss": "I don't have",
+      "note": "avoir negated"
+    },
+    {
+      "word_id": "je-ne-veux-pas-fr",
+      "fr": "je ne veux pas",
+      "gloss": "I don't want",
+      "note": "vouloir negated"
+    },
+    {
+      "word_id": "je-ne-fais-pas-fr",
+      "fr": "je ne fais pas",
+      "gloss": "I don't do/make",
+      "note": "faire negated"
+    },
+    {
+      "word_id": "tu-ne-vas-pas-fr",
+      "fr": "tu ne vas pas",
+      "gloss": "you don't go",
+      "note": "aller negated"
+    },
+    {
+      "word_id": "il-ne-voit-pas-fr",
+      "fr": "il ne voit pas",
+      "gloss": "he doesn't see",
+      "note": "voir negated"
+    },
+    {
+      "word_id": "je-ne-le-vois-pas-fr",
+      "fr": "je ne le vois pas",
+      "gloss": "I don't see it",
+      "note": "with object pronoun"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-the-negation-sandwich",
+      "term": "The Negation Sandwich",
+      "definition": "Put '{ne}' BEFORE the verb and '{pas}' AFTER the verb",
+      "example": "{je suis} → {je ne suis pas} (I am → I am not)"
+    },
+    {
+      "id": "c-ne-contracts-to-n",
+      "term": "ne contracts to n'",
+      "definition": "Before vowels or silent h, '{ne}' becomes 'n''",
+      "example": "{je ai} → {je n'ai pas} (I don't have)"
+    },
+    {
+      "id": "c-works-with-all-verbs",
+      "term": "Works with ALL Verbs",
+      "definition": "Any verb you've learned can be negated with ne...pas",
+      "example": "{je veux} → {je ne veux pas, tu vas} → {tu ne vas pas}"
+    },
+    {
+      "id": "c-with-object-pronouns",
+      "term": "With Object Pronouns",
+      "definition": "Object pronouns stay BEFORE the verb, inside the sandwich",
+      "example": "{je le vois} → {je ne le vois pas} (I don't see it)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-ne-suis-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{je suis}'",
+      "cue": "I am not",
+      "answer": "je ne suis pas",
+      "hint": "Add ne before suis and pas after",
+      "mistakes": [
+        {
+          "answer": "je ne suis",
+          "feedback": "Need '{pas}' after the verb too"
+        },
+        {
+          "answer": "je suis pas",
+          "feedback": "Need '{ne}' before the verb too"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{j'ai}'",
+      "cue": "I don't have",
+      "answer": "je n'ai pas",
+      "hint": "ne becomes n' before vowel: je n'ai pas",
+      "mistakes": [
+        {
+          "answer": "je ne ai pas",
+          "feedback": "Use n' before vowels, not 'ne'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-n-es-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{tu es}'",
+      "cue": "you are not (informal)",
+      "answer": "tu n'es pas",
+      "hint": "ne...pas around '{es}'",
+      "mistakes": [
+        {
+          "answer": "tu ne es pas",
+          "feedback": "Use n' before vowels"
+        }
+      ]
+    },
+    {
+      "id": "i-il-n-a-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{il a}'",
+      "cue": "he doesn't have",
+      "answer": "il n'a pas",
+      "hint": "ne...pas around 'a'"
+    },
+    {
+      "id": "i-je-ne-veux-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{je veux}'",
+      "cue": "I don't want",
+      "answer": "je ne veux pas",
+      "hint": "ne...pas around '{veux}'",
+      "mistakes": [
+        {
+          "answer": "je n'veux pas",
+          "feedback": "veux starts with consonant, use '{ne}' not 'n''"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-vas-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{tu vas}'",
+      "cue": "you don't go (informal)",
+      "answer": "tu ne vas pas",
+      "hint": "ne...pas around '{vas}'"
+    },
+    {
+      "id": "i-nous-n-avons-pas",
+      "type": "respond",
+      "situation": "Negate this sentence: '{nous avons}'",
+      "cue": "we don't have",
+      "answer": "nous n'avons pas",
+      "hint": "ne...pas around '{avons}'",
+      "mistakes": [
+        {
+          "answer": "nous ne avons pas",
+          "feedback": "Use n' before vowels"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas-2",
+      "type": "respond",
+      "situation": "I don't have a cat",
+      "answer": "je n'ai pas un chat",
+      "hint": "Negate '{j'ai un chat}'"
+    },
+    {
+      "id": "i-elle-n-est-pas",
+      "type": "respond",
+      "situation": "she is not a woman",
+      "answer": "elle n'est pas une femme",
+      "hint": "Negate '{elle est une femme}'"
+    },
+    {
+      "id": "i-je-ne-le-vois",
+      "type": "respond",
+      "situation": "Negate '{je le vois}' (with object pronoun)",
+      "cue": "I don't see it",
+      "answer": "je ne le vois pas",
+      "hint": "Object pronoun stays inside: je ne LE vois pas",
+      "mistakes": [
+        {
+          "answer": "je le ne vois pas",
+          "feedback": "ne goes BEFORE object pronoun: je NE le vois pas"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-n-es-pas-2",
+      "type": "respond",
+      "situation": "Say 'you are not' (informal)",
+      "cue": "you are not (informal)",
+      "answer": "tu n'es pas",
+      "hint": "Negate '{tu es}'"
+    },
+    {
+      "id": "i-ils-n-ont-pas",
+      "type": "respond",
+      "situation": "Say 'they don't have' (masculine)",
+      "cue": "they don't have (masculine)",
+      "answer": "ils n'ont pas",
+      "hint": "Negate '{ils ont}'"
+    },
+    {
+      "id": "i-nous-ne-sommes-pas",
+      "type": "respond",
+      "situation": "we are not at the café",
+      "answer": "nous ne sommes pas au café",
+      "hint": "Negate '{nous sommes au café}'"
+    },
+    {
+      "id": "i-elle-ne-veut-pas",
+      "type": "respond",
+      "situation": "she doesn't want this",
+      "answer": "elle ne veut pas ça",
+      "hint": "Negate '{elle veut ça}'"
+    },
+    {
+      "id": "i-je-ne-fais-pas",
+      "type": "respond",
+      "situation": "I don't do that",
+      "answer": "je ne fais pas ça",
+      "hint": "Negate '{je fais ça}'"
+    },
+    {
+      "id": "i-tu-ne-fais-pas",
+      "type": "respond",
+      "situation": "Say 'you don't make this' (informal)",
+      "cue": "you don't make this (informal)",
+      "answer": "tu ne fais pas ça",
+      "hint": "Negate '{tu fais ça}'"
+    }
+  ]
+}

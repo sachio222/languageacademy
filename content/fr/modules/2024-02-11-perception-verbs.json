@@ -1,0 +1,329 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-11-perception-verbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Perception Verbs - {écouter, regarder}",
+  "description": "Beyond commands! Full conjugations of écouter (to listen) and regarder (to watch/look at). '{J'écoute de la musique}' (I listen to music), '{Je regarde la télé}' (I watch TV).",
+  "can_do": [
+    "Talk about listening and watching (I listen to music, I watch TV)",
+    "Use perception verbs beyond commands",
+    "Express sensory experiences fully"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "ecouter-fr",
+      "fr": "écouter",
+      "gloss": "to listen",
+      "note": "⭐ Rank 65 - regular -ER verb"
+    },
+    {
+      "word_id": "j-ecoute-fr",
+      "fr": "j'écoute",
+      "gloss": "I listen / I'm listening",
+      "note": "active listening"
+    },
+    {
+      "word_id": "tu-ecoutes-fr",
+      "fr": "tu écoutes",
+      "gloss": "you listen (informal)",
+      "note": "add -s for tu"
+    },
+    {
+      "word_id": "il-ecoute-fr",
+      "fr": "il écoute",
+      "gloss": "he listens",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-ecoute-fr",
+      "fr": "elle écoute",
+      "gloss": "she listens",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-ecoutons-fr",
+      "fr": "nous écoutons",
+      "gloss": "we listen",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-ecoutez-fr",
+      "fr": "vous écoutez",
+      "gloss": "you listen (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-ecoutent-fr",
+      "fr": "ils écoutent",
+      "gloss": "they listen (masculine)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-ecoutent-fr",
+      "fr": "elles écoutent",
+      "gloss": "they listen (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "regarder-fr",
+      "fr": "regarder",
+      "gloss": "to watch / to look at",
+      "note": "⭐ Rank 66 - regular -ER verb"
+    },
+    {
+      "word_id": "je-regarde-fr",
+      "fr": "je regarde",
+      "gloss": "I watch / I look at",
+      "note": "visual attention"
+    },
+    {
+      "word_id": "tu-regardes-fr",
+      "fr": "tu regardes",
+      "gloss": "you watch (informal)",
+      "note": "add -s for tu"
+    },
+    {
+      "word_id": "il-regarde-fr",
+      "fr": "il regarde",
+      "gloss": "he watches",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-regarde-fr",
+      "fr": "elle regarde",
+      "gloss": "she watches",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-regardons-fr",
+      "fr": "nous regardons",
+      "gloss": "we watch",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-regardez-fr",
+      "fr": "vous regardez",
+      "gloss": "you watch (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-regardent-fr",
+      "fr": "ils regardent",
+      "gloss": "they watch (masculine)",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-regardent-fr",
+      "fr": "elles regardent",
+      "gloss": "they watch (feminine)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "ecouter-de-la-musique-fr",
+      "fr": "écouter de la musique",
+      "gloss": "to listen to music",
+      "note": "⭐ very common activity"
+    },
+    {
+      "word_id": "regarder-la-tele-fr",
+      "fr": "regarder la télé",
+      "gloss": "to watch TV",
+      "note": "⭐ very common activity"
+    },
+    {
+      "word_id": "regarder-un-film-fr",
+      "fr": "regarder un film",
+      "gloss": "to watch a movie",
+      "note": "entertainment activity"
+    },
+    {
+      "word_id": "ecouter-le-professeur-fr",
+      "fr": "écouter le professeur",
+      "gloss": "to listen to the teacher",
+      "note": "school/learning context"
+    },
+    {
+      "word_id": "regarder-par-la-fenetre-fr",
+      "fr": "regarder par la fenêtre",
+      "gloss": "to look out the window",
+      "note": "common observation action"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-ecoutes-fr",
+      "fr": "qu'est-ce que tu écoutes?",
+      "gloss": "what are you listening to?",
+      "note": "asking about music/audio"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-regardes-fr",
+      "fr": "qu'est-ce que tu regardes?",
+      "gloss": "what are you watching?",
+      "note": "asking about visual content"
+    },
+    {
+      "word_id": "je-trouve-que-fr",
+      "fr": "je trouve que",
+      "gloss": "I think that / I find that",
+      "note": "opinion expression using trouver"
+    },
+    {
+      "word_id": "comment-tu-trouves-ca-fr",
+      "fr": "comment tu trouves ça?",
+      "gloss": "what do you think of that?",
+      "note": "asking for opinion"
+    },
+    {
+      "word_id": "bien-ecouter-fr",
+      "fr": "bien écouter",
+      "gloss": "to listen well / carefully",
+      "note": "quality listening"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-ecouter-to-listen-rank",
+      "term": "{écouter} = to listen (rank 65)",
+      "definition": "Regular -ER verb for active listening - music, people, sounds",
+      "example": "{J'écoute de la musique} (I listen to music), {Tu écoutes le professeur} (You listen to the teacher)"
+    },
+    {
+      "id": "c-regarder-to-watch-to",
+      "term": "{regarder} = to watch / to look at (rank 66)",
+      "definition": "Regular -ER verb for visual attention - TV, people, things",
+      "example": "{Je regarde la télé} (I watch TV), {Il regarde par la fenêtre} (He looks out the window)"
+    },
+    {
+      "id": "c-beyond-commands",
+      "term": "Beyond Commands",
+      "definition": "You know '{Écoute!}' and '{Regarde!}' - now learn full conjugations",
+      "example": "From commands to conversations: '{Regarde!}' → '{Je regarde souvent des films}' (I often watch movies)"
+    },
+    {
+      "id": "c-perception-integration",
+      "term": "Perception Integration",
+      "definition": "Complete your five senses with voir (see), écouter (hear), sentir (smell/feel)",
+      "example": "{Je vois} (I see), {j'écoute} (I listen), {je regarde} (I look at) - complete visual and auditory perception"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ecoute",
+      "type": "respond",
+      "situation": "I listen",
+      "answer": "j'écoute",
+      "hint": "écouter for je"
+    },
+    {
+      "id": "i-tu-ecoutes",
+      "type": "respond",
+      "situation": "you listen (informal)",
+      "answer": "tu écoutes",
+      "hint": "écouter for tu"
+    },
+    {
+      "id": "i-nous-ecoutons",
+      "type": "respond",
+      "situation": "we listen",
+      "answer": "nous écoutons",
+      "hint": "écouter for nous"
+    },
+    {
+      "id": "i-je-regarde",
+      "type": "respond",
+      "situation": "I watch",
+      "answer": "je regarde",
+      "hint": "regarder for je"
+    },
+    {
+      "id": "i-il-regarde",
+      "type": "respond",
+      "situation": "he watches",
+      "answer": "il regarde",
+      "hint": "regarder for il"
+    },
+    {
+      "id": "i-vous-regardez",
+      "type": "respond",
+      "situation": "you watch (formal)",
+      "answer": "vous regardez",
+      "hint": "regarder for vous"
+    },
+    {
+      "id": "i-j-ecoute-de-la",
+      "type": "respond",
+      "situation": "I listen to music",
+      "answer": "j'écoute de la musique",
+      "hint": "{j'écoute + de la musique}"
+    },
+    {
+      "id": "i-je-regarde-la-tele",
+      "type": "respond",
+      "situation": "I watch TV",
+      "answer": "je regarde la télé",
+      "accept": [
+        "je regarde la télévision"
+      ],
+      "hint": "{je regarde + la télé}"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "What are you listening to?",
+      "answer": "qu'est-ce que tu écoutes?",
+      "accept": [
+        "tu écoutes quoi?"
+      ],
+      "hint": "{qu'est-ce que + tu écoutes}"
+    },
+    {
+      "id": "i-qu-est-ce-que-2",
+      "type": "respond",
+      "situation": "What are you watching?",
+      "answer": "qu'est-ce que tu regardes?",
+      "accept": [
+        "tu regardes quoi?"
+      ],
+      "hint": "{qu'est-ce que + tu regardes}"
+    },
+    {
+      "id": "i-je-regarde-des-films",
+      "type": "respond",
+      "situation": "I watch movies",
+      "answer": "je regarde des films",
+      "hint": "{je regarde + des films}"
+    },
+    {
+      "id": "i-ecoute-le-professeur",
+      "type": "respond",
+      "situation": "Listen to the teacher!",
+      "answer": "écoute le professeur!",
+      "accept": [
+        "écoutez le professeur!"
+      ],
+      "hint": "Command + le professeur"
+    },
+    {
+      "id": "i-je-trouve-que-c",
+      "type": "respond",
+      "situation": "Express opinion: 'I think that's interesting'",
+      "cue": "I think that's interesting",
+      "answer": "je trouve que c'est intéressant",
+      "accept": [
+        "je trouve ça intéressant"
+      ],
+      "hint": "{je trouve que + c'est intéressant}"
+    },
+    {
+      "id": "i-comment-tu-trouves-ca",
+      "type": "respond",
+      "situation": "Ask opinion: 'What do you think of this?'",
+      "cue": "What do you think of this?",
+      "answer": "comment tu trouves ça?",
+      "accept": [
+        "tu trouves ça comment?"
+      ],
+      "hint": "{comment + tu trouves + ça}"
+    }
+  ]
+}

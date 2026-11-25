@@ -1,0 +1,164 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-22-s-appeler",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{s'appeler} - To Be Called (Your Name!)",
+  "description": "Finally learn how to say your name properly! Je m'appelle Marie (My name is Marie), Comment tu t'appelles? (What's your name?)",
+  "can_do": [
+    "Introduce yourself properly (My name is...)",
+    "Ask someone's name (What's your name?)",
+    "Use the most important reflexive verb in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "s-appeler-fr",
+      "fr": "s'appeler",
+      "gloss": "to be called / to call oneself",
+      "note": "⭐⭐⭐ essential for introductions!"
+    },
+    {
+      "word_id": "je-m-appelle-fr",
+      "fr": "je m'appelle",
+      "gloss": "my name is / I'm called",
+      "note": "⭐ elision: m' not me"
+    },
+    {
+      "word_id": "tu-t-appelles-fr",
+      "fr": "tu t'appelles",
+      "gloss": "your name is (informal)",
+      "note": "elision: t' not te"
+    },
+    {
+      "word_id": "il-s-appelle-fr",
+      "fr": "il s'appelle",
+      "gloss": "his name is / he's called",
+      "note": "common form"
+    },
+    {
+      "word_id": "elle-s-appelle-fr",
+      "fr": "elle s'appelle",
+      "gloss": "her name is / she's called",
+      "note": "feminine form"
+    },
+    {
+      "word_id": "nous-nous-appelons-fr",
+      "fr": "nous nous appelons",
+      "gloss": "our names are / we're called",
+      "note": "nous nous pattern"
+    },
+    {
+      "word_id": "vous-vous-appelez-fr",
+      "fr": "vous vous appelez",
+      "gloss": "your name is (formal)",
+      "note": "vous vous pattern"
+    },
+    {
+      "word_id": "ils-s-appellent-fr",
+      "fr": "ils s'appellent",
+      "gloss": "their names are (masc)",
+      "note": "plural form"
+    },
+    {
+      "word_id": "elles-s-appellent-fr",
+      "fr": "elles s'appellent",
+      "gloss": "their names are (fem)",
+      "note": "feminine plural"
+    },
+    {
+      "word_id": "comment-tu-t-appelles-fr",
+      "fr": "Comment tu t'appelles?",
+      "gloss": "What's your name? (informal)",
+      "note": "⭐⭐⭐ most common question!"
+    },
+    {
+      "word_id": "comment-vous-vous-appelez-fr",
+      "fr": "Comment vous vous appelez?",
+      "gloss": "What's your name? (formal)",
+      "note": "polite form"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-s-appeler-to-be",
+      "term": "{s'appeler} = to be called / to call oneself",
+      "definition": "THE way to say your name in French! Literally 'to call oneself'",
+      "example": "{Je m'appelle Marie} (I call myself Marie = My name is Marie), {Comment tu t'appelles?} (What do you call yourself? = What's your name?)"
+    },
+    {
+      "id": "c-this-should-ve-been",
+      "term": "The Most Basic Introduction",
+      "definition": "You've been waiting to learn this - the most basic introduction!",
+      "example": "Now you can finally properly introduce yourself in French!"
+    },
+    {
+      "id": "c-reflexive-pattern",
+      "term": "Reflexive Pattern",
+      "definition": "Uses reflexive pronouns: je m'appelle, tu t'appelles, il s'appelle",
+      "example": "Notice the elision: {je m'appelle} (not je me appelle), {tu t'appelles} (not tu te appelles)"
+    },
+    {
+      "id": "c-regular-er-verb-conjugation",
+      "term": "Regular -ER verb conjugation",
+      "definition": "Once you know the reflexive pronouns, the verb part is easy - regular -ER pattern!",
+      "example": "{appelle}, {appelles}, appelle, {appelons}, {appelez}, {appellent}"
+    }
+  ],
+  "items": [
+    {
+      "id": "s-appeler-1",
+      "type": "respond",
+      "situation": "My name is Marie",
+      "answer": "je m'appelle Marie",
+      "hint": "je m'appelle + name",
+      "mistakes": [
+        {
+          "answer": "je suis Marie",
+          "feedback": "That means 'I am Marie' - use '{je m'appelle Marie}' for 'my name is'"
+        },
+        {
+          "answer": "mon nom est Marie",
+          "feedback": "French uses '{je m'appelle}' not 'mon nom est'"
+        }
+      ]
+    },
+    {
+      "id": "s-appeler-2",
+      "type": "respond",
+      "situation": "Ask 'What's your name?' (informal)",
+      "cue": "What's your name? (informal)",
+      "answer": "comment tu t'appelles",
+      "hint": "{Comment + tu t'appelles?}"
+    },
+    {
+      "id": "s-appeler-3",
+      "type": "respond",
+      "situation": "His name is Pierre",
+      "answer": "il s'appelle Pierre",
+      "hint": "il s'appelle + name"
+    },
+    {
+      "id": "s-appeler-4",
+      "type": "respond",
+      "situation": "Her name is Sophie",
+      "answer": "elle s'appelle Sophie",
+      "hint": "elle s'appelle + name"
+    },
+    {
+      "id": "s-appeler-5",
+      "type": "respond",
+      "situation": "Ask 'What's your name?' (formal)",
+      "cue": "What's your name? (formal)",
+      "answer": "comment vous vous appelez",
+      "hint": "{Comment + vous vous appelez?}"
+    },
+    {
+      "id": "s-appeler-6",
+      "type": "respond",
+      "situation": "Say 'They're called...' (masculine)",
+      "cue": "They're called the students",
+      "answer": "ils s'appellent les étudiants",
+      "hint": "{ils s'appellent + les étudiants}"
+    }
+  ]
+}

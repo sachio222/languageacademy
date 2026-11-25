@@ -1,0 +1,505 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-04-pc-vs-imparfait",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Passé Composé vs Imparfait - The Golden Rule",
+  "description": "Learn when to use each past tense: Passé composé for specific events (J'ai mangé - I ate), Imparfait for descriptions/habits (Il faisait beau - It was nice, Je mangeais tous les jours - I used to eat every day)",
+  "can_do": [
+    "Choose the right past tense for every situation",
+    "Tell complete stories mixing actions and descriptions",
+    "Master the most important past tense distinction in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "quand-fr",
+      "fr": "quand",
+      "gloss": "when",
+      "note": "⭐ connects PC event + IMP background"
+    },
+    {
+      "word_id": "pendant-que-fr",
+      "fr": "pendant que",
+      "gloss": "while",
+      "note": "⭐ IMP ongoing + PC interruption"
+    },
+    {
+      "word_id": "soudain-tout-a-coup-fr",
+      "fr": "soudain / tout à coup",
+      "gloss": "suddenly",
+      "note": "⭐ signals PC - sudden event!"
+    },
+    {
+      "word_id": "tous-les-jours-fr",
+      "fr": "tous les jours",
+      "gloss": "every day",
+      "note": "signals IMP - repeated habit"
+    },
+    {
+      "word_id": "d-habitude-fr",
+      "fr": "d'habitude",
+      "gloss": "usually, normally",
+      "note": "signals IMP - habitual action"
+    },
+    {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always",
+      "note": "signals IMP - continuous state"
+    },
+    {
+      "word_id": "hier-fr",
+      "fr": "hier",
+      "gloss": "yesterday",
+      "note": "⭐ signals PC - specific time"
+    },
+    {
+      "word_id": "a-ce-moment-la-fr",
+      "fr": "à ce moment-là",
+      "gloss": "at that moment",
+      "note": "signals PC - precise moment"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-the-golden-rule",
+      "term": "The Golden Rule",
+      "definition": "PASSÉ COMPOSÉ = Specific completed action (What happened?). IMPARFAIT = Ongoing state/description/habit (How things were/used to be)",
+      "example": "{J'ai mangé} (I ate - specific event) vs Je mangeais (I was eating/used to eat - ongoing or habit)"
+    },
+    {
+      "id": "c-passe-compose-specific-events",
+      "term": "{Passé Composé} - Specific Events",
+      "definition": "Completed actions, countable events, things that started/stopped, main storyline",
+      "example": "{J'ai vu Marie} (I saw Marie - one time), {Je suis allé au café} (I went to the café - completed)"
+    },
+    {
+      "id": "c-imparfait-background-habits",
+      "term": "Imparfait - Background & Habits",
+      "definition": "Descriptions, ongoing states, repeated habits ('used to'), scene-setting, background information",
+      "example": "{Il faisait beau} (It was nice - description), {Je parlais français tous les jours} (I used to speak French every day - habit)"
+    },
+    {
+      "id": "c-pattern-background-imp-event",
+      "term": "Pattern: Background (IMP) + Event (PC)",
+      "definition": "Use imparfait to set the scene, passé composé for what happened",
+      "example": "{Il faisait beau} (background - IMP) {quand je suis arrivé} (event - PC) = It was nice when I arrived"
+    },
+    {
+      "id": "c-time-expressions-help",
+      "term": "Time expressions help",
+      "definition": "PC: hier (yesterday), soudain (suddenly), à 8h (at 8). IMP: tous les jours (every day), toujours (always), d'habitude (usually)",
+      "example": "{Hier}, {j'ai mangé} (PC - specific time) vs Je mangeais tous les jours (IMP - habit)"
+    },
+    {
+      "id": "c-was-doing-interrupted-by",
+      "term": "'Was doing' interrupted by event",
+      "definition": "Use imparfait for ongoing action, passé composé for interruption",
+      "example": "{Je parlais avec Marie} (I was talking - IMP) {quand tu as appelé} (you called - PC event)"
+    },
+    {
+      "id": "c-mental-vs-physical-age",
+      "term": "Mental vs Physical age",
+      "definition": "Physical age/description = IMP. Mental state at moment = can be PC",
+      "example": "{J'avais 20 ans} (I was 20 - IMP description) vs J'ai eu peur (I got scared - {PC reaction})"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-faisait",
+      "type": "gapfill",
+      "text": "Il ___ beau quand je suis arrivé",
+      "blanks": [
+        {
+          "answer": "faisait"
+        }
+      ],
+      "gloss": "It was nice when I arrived",
+      "hint": "Choose correct tense for '{faire}'",
+      "mistakes": [
+        {
+          "answer": "a fait",
+          "feedback": "Weather description is background! Use imparfait: il faisait beau."
+        },
+        {
+          "answer": "fait",
+          "feedback": "That's present! Use imparfait for description: il faisait."
+        }
+      ]
+    },
+    {
+      "id": "i-suis-alle",
+      "type": "gapfill",
+      "text": "Hier, j'___ au café",
+      "blanks": [
+        {
+          "answer": "suis allé"
+        }
+      ],
+      "gloss": "Yesterday, I went to the café",
+      "hint": "Choose correct tense for '{aller}'",
+      "mistakes": [
+        {
+          "answer": "allais",
+          "feedback": "Hier = specific time! Use passé composé: je suis allé (I went)."
+        },
+        {
+          "answer": "vais",
+          "feedback": "That's present! Use passé composé for yesterday: je suis allé."
+        }
+      ]
+    },
+    {
+      "id": "i-parlais",
+      "type": "gapfill",
+      "text": "Je ___ français tous les jours",
+      "blanks": [
+        {
+          "answer": "parlais"
+        }
+      ],
+      "gloss": "I used to speak French every day",
+      "hint": "Choose correct tense for '{parler}'",
+      "mistakes": [
+        {
+          "answer": "ai parlé",
+          "feedback": "Tous les jours = habit! Use imparfait: je parlais (I used to speak)."
+        },
+        {
+          "answer": "parle",
+          "feedback": "That's present! Use imparfait for past habit: je parlais."
+        }
+      ]
+    },
+    {
+      "id": "i-parlais-2",
+      "type": "gapfill",
+      "text": "Je ___ avec Marie quand tu as appelé",
+      "blanks": [
+        {
+          "answer": "parlais"
+        }
+      ],
+      "gloss": "I was talking with Marie when you called",
+      "hint": "Choose correct tense for '{parler}'",
+      "mistakes": [
+        {
+          "answer": "ai parlé",
+          "feedback": "Ongoing action interrupted! Use imparfait: je parlais (I was talking)."
+        },
+        {
+          "answer": "parle",
+          "feedback": "That's present! Use imparfait for ongoing past: je parlais."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-vu",
+      "type": "gapfill",
+      "text": "Soudain, j'___ Marie",
+      "blanks": [
+        {
+          "answer": "ai vu"
+        }
+      ],
+      "gloss": "Suddenly, I saw Marie",
+      "hint": "Choose correct tense for '{voir}'",
+      "mistakes": [
+        {
+          "answer": "voyais",
+          "feedback": "Soudain = sudden event! Use passé composé: j'ai vu (I saw)."
+        },
+        {
+          "answer": "vois",
+          "feedback": "That's present! Use passé composé for past event: j'ai vu."
+        }
+      ]
+    },
+    {
+      "id": "i-jouais",
+      "type": "gapfill",
+      "text": "Quand j'étais jeune, je ___ au foot",
+      "blanks": [
+        {
+          "answer": "jouais"
+        }
+      ],
+      "gloss": "When I was young, I used to play soccer",
+      "hint": "Choose correct tense for '{jouer}'",
+      "mistakes": [
+        {
+          "answer": "ai joué",
+          "feedback": "Repeated past action (habit)! Use imparfait: je jouais (I used to play)."
+        },
+        {
+          "answer": "joue",
+          "feedback": "That's present! Use imparfait for past habit: je jouais."
+        }
+      ]
+    },
+    {
+      "id": "i-etais",
+      "type": "gapfill",
+      "text": "J'___ content hier",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "I was happy yesterday",
+      "hint": "Choose correct tense for '{être}'",
+      "mistakes": [
+        {
+          "answer": "ai été",
+          "feedback": "Both work! But '{étais}' is more natural for ongoing state that day."
+        },
+        {
+          "answer": "suis",
+          "feedback": "That's present! Use imparfait: j'étais content (I was happy)."
+        }
+      ]
+    },
+    {
+      "id": "i-avait",
+      "type": "gapfill",
+      "text": "Il y ___ beaucoup de gens",
+      "blanks": [
+        {
+          "answer": "avait"
+        }
+      ],
+      "gloss": "There were many people",
+      "hint": "Choose correct tense for '{avoir}'",
+      "mistakes": [
+        {
+          "answer": "a eu",
+          "feedback": "Description of scene! Use imparfait: il y avait (there were)."
+        },
+        {
+          "answer": "a",
+          "feedback": "That's present! Use imparfait for description: il y avait."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-mange",
+      "type": "gapfill",
+      "text": "À 8h, j'___",
+      "blanks": [
+        {
+          "answer": "ai mangé"
+        }
+      ],
+      "gloss": "At 8 o'clock, I ate",
+      "hint": "Choose correct tense for '{manger}'",
+      "mistakes": [
+        {
+          "answer": "mangeais",
+          "feedback": "Specific time (at 8h) = specific event! Use passé composé: j'ai mangé."
+        },
+        {
+          "answer": "mange",
+          "feedback": "That's present! Use passé composé for past event: j'ai mangé."
+        }
+      ]
+    },
+    {
+      "id": "i-mangeais",
+      "type": "gapfill",
+      "text": "Pendant que je ___, tu as appelé",
+      "blanks": [
+        {
+          "answer": "mangeais"
+        }
+      ],
+      "gloss": "While I was eating, you called",
+      "hint": "Choose correct tense for '{manger}'",
+      "mistakes": [
+        {
+          "answer": "ai mangé",
+          "feedback": "Ongoing action (while)! Use imparfait: je mangeais (I was eating)."
+        },
+        {
+          "answer": "mange",
+          "feedback": "That's present! Use imparfait for ongoing past: je mangeais."
+        }
+      ]
+    },
+    {
+      "id": "i-allait",
+      "type": "gapfill",
+      "text": "D'habitude, on ___ au café",
+      "blanks": [
+        {
+          "answer": "allait"
+        }
+      ],
+      "gloss": "Usually, we used to go to the café",
+      "hint": "Choose correct tense for '{aller}'",
+      "mistakes": [
+        {
+          "answer": "est allé",
+          "feedback": "D'habitude = habit! Use imparfait: on allait (we used to go)."
+        },
+        {
+          "answer": "va",
+          "feedback": "That's present! Use imparfait for past habit: on allait."
+        }
+      ]
+    },
+    {
+      "id": "i-suis-tombe",
+      "type": "gapfill",
+      "text": "Ce jour-là, j'___ malade",
+      "blanks": [
+        {
+          "answer": "suis tombé"
+        }
+      ],
+      "gloss": "That day, I got sick",
+      "hint": "Choose correct tense for '{tomber}' (tomber malade = get sick)",
+      "mistakes": [
+        {
+          "answer": "tombais",
+          "feedback": "Getting sick is an event! Use passé composé: je suis tombé malade."
+        },
+        {
+          "answer": "tombe",
+          "feedback": "That's present! Use passé composé for past event: je suis tombé."
+        }
+      ]
+    },
+    {
+      "id": "i-habitaient",
+      "type": "gapfill",
+      "text": "Ils ___ dans un grand appartement",
+      "blanks": [
+        {
+          "answer": "habitaient"
+        }
+      ],
+      "gloss": "They used to live in a big apartment",
+      "hint": "Choose correct tense for '{habiter}'",
+      "mistakes": [
+        {
+          "answer": "ont habité",
+          "feedback": "Ongoing past state! Use imparfait: ils habitaient (they used to live)."
+        },
+        {
+          "answer": "habitent",
+          "feedback": "That's present! Use imparfait for past state: ils habitaient."
+        }
+      ]
+    },
+    {
+      "id": "i-prenais",
+      "type": "gapfill",
+      "text": "Je ___ le bus tous les matins",
+      "blanks": [
+        {
+          "answer": "prenais"
+        }
+      ],
+      "gloss": "I used to take the bus every morning",
+      "hint": "Choose correct tense for '{prendre}'",
+      "mistakes": [
+        {
+          "answer": "ai pris",
+          "feedback": "Tous les matins = habit! Use imparfait: je prenais (I used to take)."
+        },
+        {
+          "answer": "prends",
+          "feedback": "That's present! Use imparfait for past habit: je prenais."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-pris",
+      "type": "gapfill",
+      "text": "Hier matin, j'___ le bus",
+      "blanks": [
+        {
+          "answer": "ai pris"
+        }
+      ],
+      "gloss": "Yesterday morning, I took the bus",
+      "hint": "Choose correct tense for '{prendre}'",
+      "mistakes": [
+        {
+          "answer": "prenais",
+          "feedback": "Hier matin = specific time! Use passé composé: j'ai pris (I took)."
+        },
+        {
+          "answer": "prends",
+          "feedback": "That's present! Use passé composé for yesterday: j'ai pris."
+        }
+      ]
+    },
+    {
+      "id": "i-etait",
+      "type": "gapfill",
+      "text": "Elle ___ toujours en retard",
+      "blanks": [
+        {
+          "answer": "était"
+        }
+      ],
+      "gloss": "She was always late",
+      "hint": "Choose correct tense for '{être}'",
+      "mistakes": [
+        {
+          "answer": "a été",
+          "feedback": "Toujours = repeated state! Use imparfait: elle était toujours en retard."
+        },
+        {
+          "answer": "est",
+          "feedback": "That's present! Use imparfait for past habit: elle était."
+        }
+      ]
+    },
+    {
+      "id": "i-ai-compris",
+      "type": "gapfill",
+      "text": "À ce moment-là, j'___",
+      "blanks": [
+        {
+          "answer": "ai compris"
+        }
+      ],
+      "gloss": "At that moment, I understood",
+      "hint": "Choose correct tense for '{comprendre}'",
+      "mistakes": [
+        {
+          "answer": "comprenais",
+          "feedback": "À ce moment-là = specific moment! Use passé composé: j'ai compris."
+        },
+        {
+          "answer": "comprends",
+          "feedback": "That's present! Use passé composé for past event: j'ai compris."
+        }
+      ]
+    },
+    {
+      "id": "i-buvait",
+      "type": "gapfill",
+      "text": "Il ___ du café quand je suis arrivé",
+      "blanks": [
+        {
+          "answer": "buvait"
+        }
+      ],
+      "gloss": "He was drinking coffee when I arrived",
+      "hint": "Choose correct tense for '{boire}'",
+      "mistakes": [
+        {
+          "answer": "a bu",
+          "feedback": "Ongoing action (was drinking)! Use imparfait: il buvait."
+        },
+        {
+          "answer": "boit",
+          "feedback": "That's present! Use imparfait for ongoing past: il buvait."
+        }
+      ]
+    }
+  ]
+}

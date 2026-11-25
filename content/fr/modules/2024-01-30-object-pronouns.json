@@ -1,0 +1,205 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-30-object-pronouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Object Pronouns - Him, Her, It, Them",
+  "description": "Express 'I see HIM', 'She likes IT' - pronouns as objects of verbs.",
+  "can_do": [
+    "Say 'I see him/her/it/them' with object pronouns",
+    "Form more concise sentences (I want it vs. I want the book)",
+    "Understand French word order with object pronouns"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "me-fr",
+      "fr": "me",
+      "gloss": "me",
+      "note": "object pronoun"
+    },
+    {
+      "word_id": "te-fr",
+      "fr": "te",
+      "gloss": "you (informal)",
+      "note": "object, singular"
+    },
+    {
+      "word_id": "le-fr.object-pronoun",
+      "fr": "le",
+      "gloss": "him/it (masculine)",
+      "note": "masculine object"
+    },
+    {
+      "word_id": "la-fr.object-pronoun",
+      "fr": "la",
+      "gloss": "her/it (feminine)",
+      "note": "feminine object"
+    },
+    {
+      "word_id": "nous-fr.object-pronoun",
+      "fr": "nous",
+      "gloss": "us",
+      "note": "object pronoun"
+    },
+    {
+      "word_id": "vous-fr.object-pronoun",
+      "fr": "vous",
+      "gloss": "you (formal/plural)",
+      "note": "object, formal or groups"
+    },
+    {
+      "word_id": "les-fr.object-pronoun",
+      "fr": "les",
+      "gloss": "them",
+      "note": "plural object (all genders)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-object-pronouns",
+      "term": "Object Pronouns",
+      "definition": "Pronouns that receive the action of a verb (me, you, him, her, us, them)",
+      "example": "7 object pronouns to learn - different from subject pronouns!"
+    },
+    {
+      "id": "c-critical-placement-rule",
+      "term": "Critical Placement Rule",
+      "definition": "Object pronouns go BEFORE the verb in French (opposite of English!)",
+      "example": "English: 'I see HIM', French: 'I HIM see' - pronoun comes first"
+    },
+    {
+      "id": "c-subject-vs-object",
+      "term": "Subject vs Object",
+      "definition": "Subject does action (he/she), object receives action (him/her)",
+      "example": "Don't confuse subject and object pronouns - they're different words!"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-il-me-voit",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "il ___ voit (he sees me)",
+      "answer": "il me voit",
+      "hint": "Object pronouns go BEFORE the verb. Which pronoun means 'me'?",
+      "mistakes": [
+        {
+          "answer": "il te voit",
+          "feedback": "That's 'you', not 'me'"
+        },
+        {
+          "answer": "il le voit",
+          "feedback": "That's 'him/it', not 'me'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-te-veux",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "je ___ veux (I want you - informal)",
+      "answer": "je te veux",
+      "hint": "Object pronoun for 'you' (informal) goes before '{veux}'",
+      "mistakes": [
+        {
+          "answer": "je me veux",
+          "feedback": "That's 'me', not 'you'"
+        },
+        {
+          "answer": "je vous veux",
+          "feedback": "That's formal 'you', need informal '{te}'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-l-a",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "elle ___ a (she has him/it - masculine)",
+      "answer": "elle l'a",
+      "hint": "Masculine object pronoun goes before 'a'. Remember: contracts to l'!",
+      "mistakes": [
+        {
+          "answer": "elle la a",
+          "feedback": "That's feminine. Need masculine '{le}' (contracts to l'a)"
+        },
+        {
+          "answer": "elle les a",
+          "feedback": "That's plural 'them', not singular 'him/it'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-l-avons",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "nous ___ avons (we have her/it - feminine)",
+      "answer": "nous l'avons",
+      "hint": "Feminine object pronoun goes before '{avons}'. Contracts to l'!",
+      "mistakes": [
+        {
+          "answer": "nous le avons",
+          "feedback": "That's masculine. Need feminine '{la}' (contracts to l')"
+        },
+        {
+          "answer": "nous les avons",
+          "feedback": "That's plural 'them', not singular 'her/it'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-nous-vois",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "tu ___ vois (you see us)",
+      "answer": "tu nous vois",
+      "hint": "Object pronoun for 'us' goes before '{vois}'",
+      "mistakes": [
+        {
+          "answer": "tu vous vois",
+          "feedback": "That's 'you', not 'us'"
+        },
+        {
+          "answer": "tu les vois",
+          "feedback": "That's 'them', not 'us'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-vous-veut",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "il ___ veut (he wants you - formal/plural)",
+      "answer": "il vous veut",
+      "hint": "Formal/plural object pronoun for 'you' goes before '{veut}'",
+      "mistakes": [
+        {
+          "answer": "il nous veut",
+          "feedback": "That's 'us', not 'you'"
+        },
+        {
+          "answer": "il te veut",
+          "feedback": "That's informal 'you', need formal '{vous}'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-les-ai",
+      "type": "transform",
+      "instruction": "Fill in the blank with the correct object pronoun",
+      "shown": "je ___ ai (I have them)",
+      "answer": "je les ai",
+      "hint": "Plural object pronoun 'them' goes before '{ai}'",
+      "mistakes": [
+        {
+          "answer": "je le ai",
+          "feedback": "That's singular masculine 'him/it'. Need plural '{les}'"
+        },
+        {
+          "answer": "je la ai",
+          "feedback": "That's singular feminine 'her/it'. Need plural '{les}'"
+        }
+      ]
+    }
+  ]
+}

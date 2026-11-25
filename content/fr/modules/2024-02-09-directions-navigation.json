@@ -1,0 +1,354 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-09-directions-navigation",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Directions & Navigation",
+  "description": "Essential navigation skills! North/south/east/west, turn left/right, give directions. Perfect for traveling and helping tourists!",
+  "can_do": [
+    "Give and understand directions in French",
+    "Use compass directions (north, south, east, west)",
+    "Navigate France and help tourists confidently"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "le-nord-fr",
+      "fr": "le nord",
+      "gloss": "north",
+      "note": "masculine - vers le nord (towards the north)"
+    },
+    {
+      "word_id": "le-sud-fr",
+      "fr": "le sud",
+      "gloss": "south",
+      "note": "masculine - au sud de Paris (south of Paris)"
+    },
+    {
+      "word_id": "l-est-fr",
+      "fr": "l'est",
+      "gloss": "east",
+      "note": "masculine - à l'est (in/to the east)"
+    },
+    {
+      "word_id": "l-ouest-fr",
+      "fr": "l'ouest",
+      "gloss": "west",
+      "note": "masculine - vers l'ouest (towards the west)"
+    },
+    {
+      "word_id": "a-gauche-fr",
+      "fr": "à gauche",
+      "gloss": "to the left / on the left",
+      "note": "⭐ essential for directions"
+    },
+    {
+      "word_id": "a-droite-fr",
+      "fr": "à droite",
+      "gloss": "to the right / on the right",
+      "note": "⭐ essential for directions"
+    },
+    {
+      "word_id": "tout-droit-fr",
+      "fr": "tout droit",
+      "gloss": "straight ahead",
+      "note": "⭐ keep going forward"
+    },
+    {
+      "word_id": "tournez-fr",
+      "fr": "tournez",
+      "gloss": "turn (formal command)",
+      "note": "from tourner - vous form"
+    },
+    {
+      "word_id": "tourne-fr",
+      "fr": "tourne",
+      "gloss": "turn (informal command)",
+      "note": "from tourner - tu form"
+    },
+    {
+      "word_id": "tournez-a-gauche-fr",
+      "fr": "tournez à gauche",
+      "gloss": "turn left",
+      "note": "complete direction instruction"
+    },
+    {
+      "word_id": "tournez-a-droite-fr",
+      "fr": "tournez à droite",
+      "gloss": "turn right",
+      "note": "complete direction instruction"
+    },
+    {
+      "word_id": "allez-fr",
+      "fr": "allez",
+      "gloss": "go (formal command)",
+      "note": "from aller - directions context"
+    },
+    {
+      "word_id": "va-fr",
+      "fr": "va",
+      "gloss": "go (informal command)",
+      "note": "from aller - casual directions"
+    },
+    {
+      "word_id": "continuez-fr",
+      "fr": "continuez",
+      "gloss": "continue (formal)",
+      "note": "keep going forward"
+    },
+    {
+      "word_id": "continue-fr",
+      "fr": "continue",
+      "gloss": "continue (informal)",
+      "note": "keep going forward"
+    },
+    {
+      "word_id": "pres-de-fr",
+      "fr": "près de",
+      "gloss": "near / close to",
+      "note": "already learned, used in directions"
+    },
+    {
+      "word_id": "loin-de-fr",
+      "fr": "loin de",
+      "gloss": "far from",
+      "note": "distance indication"
+    },
+    {
+      "word_id": "a-cote-de-fr",
+      "fr": "à côté de",
+      "gloss": "next to / beside",
+      "note": "already learned, precise location"
+    },
+    {
+      "word_id": "en-face-de-fr",
+      "fr": "en face de",
+      "gloss": "across from / opposite",
+      "note": "already learned, opposite side"
+    },
+    {
+      "word_id": "au-coin-de-fr",
+      "fr": "au coin de",
+      "gloss": "at the corner of",
+      "note": "street intersection"
+    },
+    {
+      "word_id": "a-cinq-minutes-fr",
+      "fr": "à cinq minutes",
+      "gloss": "five minutes away",
+      "note": "time-based distance"
+    },
+    {
+      "word_id": "a-pied-fr",
+      "fr": "à pied",
+      "gloss": "on foot / walking",
+      "note": "mode of transport"
+    },
+    {
+      "word_id": "en-voiture-fr",
+      "fr": "en voiture",
+      "gloss": "by car",
+      "note": "mode of transport"
+    },
+    {
+      "word_id": "ou-est-fr",
+      "fr": "où est...?",
+      "gloss": "where is...?",
+      "note": "⭐ basic location question"
+    },
+    {
+      "word_id": "comment-aller-a-fr",
+      "fr": "comment aller à...?",
+      "gloss": "how do you get to...?",
+      "note": "asking for directions"
+    },
+    {
+      "word_id": "excusez-moi-ou-est-fr",
+      "fr": "excusez-moi, où est...?",
+      "gloss": "excuse me, where is...?",
+      "note": "polite way to ask directions"
+    },
+    {
+      "word_id": "c-est-loin-fr",
+      "fr": "c'est loin?",
+      "gloss": "is it far?",
+      "note": "distance inquiry"
+    },
+    {
+      "word_id": "c-est-pres-fr",
+      "fr": "c'est près?",
+      "gloss": "is it close/near?",
+      "note": "proximity inquiry"
+    },
+    {
+      "word_id": "c-est-par-la-fr",
+      "fr": "c'est par là",
+      "gloss": "it's that way",
+      "note": "pointing in a direction"
+    },
+    {
+      "word_id": "c-est-par-ici-fr",
+      "fr": "c'est par ici",
+      "gloss": "it's this way",
+      "note": "indicating nearby direction"
+    },
+    {
+      "word_id": "vous-voyez-fr",
+      "fr": "vous voyez",
+      "gloss": "you see / do you see",
+      "note": "in direction-giving context"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-cardinal-directions",
+      "term": "Cardinal Directions",
+      "definition": "The four main compass directions in French",
+      "example": "{le nord} (north), {le sud} (south), {l'est} (east), {l'ouest} (west)"
+    },
+    {
+      "id": "c-turn-directions",
+      "term": "Turn Directions",
+      "definition": "Essential for giving and following directions",
+      "example": "{tournez à gauche} (turn left), {tournez à droite} (turn right), {tout droit} (straight ahead)"
+    },
+    {
+      "id": "c-location-descriptions",
+      "term": "Location Descriptions",
+      "definition": "Describe where things are relative to other things",
+      "example": "{à côté de} (next to), {en face de} (across from), {près de} (near), {loin de} (far from)"
+    },
+    {
+      "id": "c-giving-directions",
+      "term": "Giving Directions",
+      "definition": "Complete phrases for helping someone navigate",
+      "example": "{Allez tout droit, puis tournez à gauche} (Go straight, then turn left)"
+    },
+    {
+      "id": "c-asking-for-directions",
+      "term": "Asking for Directions",
+      "definition": "How to ask for help when lost",
+      "example": "{Excusez-moi}, {où est...?} ({Excuse me}, where is...?), {Comment aller à...?} (How do you get to...?)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-attends",
+      "type": "respond",
+      "situation": "I wait",
+      "answer": "j'attends",
+      "hint": "attendre for je"
+    },
+    {
+      "id": "i-tu-arrives",
+      "type": "respond",
+      "situation": "you arrive (informal)",
+      "answer": "tu arrives",
+      "hint": "arriver for tu"
+    },
+    {
+      "id": "i-nous-restons",
+      "type": "respond",
+      "situation": "we stay",
+      "answer": "nous restons",
+      "hint": "rester for nous"
+    },
+    {
+      "id": "i-le-nord",
+      "type": "respond",
+      "situation": "north",
+      "answer": "le nord",
+      "hint": "masculine direction"
+    },
+    {
+      "id": "i-le-sud",
+      "type": "respond",
+      "situation": "south",
+      "answer": "le sud",
+      "hint": "masculine direction"
+    },
+    {
+      "id": "i-tournez-a-gauche",
+      "type": "respond",
+      "situation": "turn left",
+      "answer": "tournez à gauche",
+      "accept": [
+        "tourne à gauche"
+      ],
+      "hint": "{tournez + à gauche}"
+    },
+    {
+      "id": "i-tournez-a-droite",
+      "type": "respond",
+      "situation": "turn right",
+      "answer": "tournez à droite",
+      "accept": [
+        "tourne à droite"
+      ],
+      "hint": "{tournez + à droite}"
+    },
+    {
+      "id": "i-j-attends-le-bus",
+      "type": "respond",
+      "situation": "I'm waiting for the bus",
+      "answer": "j'attends le bus",
+      "hint": "{j'attends + le bus}"
+    },
+    {
+      "id": "i-le-train-arrive-a",
+      "type": "respond",
+      "situation": "The train arrives at 3pm",
+      "answer": "le train arrive à trois heures",
+      "accept": [
+        "le train arrive à 15h"
+      ],
+      "hint": "le train arrive + à + time"
+    },
+    {
+      "id": "i-ou-est-la-gare",
+      "type": "respond",
+      "situation": "Where is the train station?",
+      "answer": "où est la gare?",
+      "hint": "{où est + la gare}"
+    },
+    {
+      "id": "i-allez-tout-droit-puis",
+      "type": "respond",
+      "situation": "Give direction: 'Go straight, then turn left'",
+      "cue": "Go straight, then turn left",
+      "answer": "allez tout droit, puis tournez à gauche",
+      "accept": [
+        "va tout droit, puis tourne à gauche"
+      ],
+      "hint": "{allez tout droit + puis + tournez à gauche}"
+    },
+    {
+      "id": "i-excusez-moi-comment-aller",
+      "type": "respond",
+      "situation": "Ask politely: 'Excuse me, how do you get to the museum?'",
+      "cue": "Excuse me, how do you get to the museum?",
+      "answer": "excusez-moi, comment aller au musée?",
+      "hint": "{excusez-moi + comment aller + au musée}"
+    },
+    {
+      "id": "i-c-est-loin",
+      "type": "respond",
+      "situation": "Is it far?",
+      "answer": "c'est loin?",
+      "hint": "{c'est + loin + question}"
+    },
+    {
+      "id": "i-c-est-a-cinq",
+      "type": "respond",
+      "situation": "It's five minutes on foot",
+      "answer": "c'est à cinq minutes à pied",
+      "hint": "{c'est + à cinq minutes + à pied}"
+    },
+    {
+      "id": "i-je-reste-a-paris",
+      "type": "respond",
+      "situation": "I'm staying in Paris for three days",
+      "answer": "je reste à Paris pendant trois jours",
+      "hint": "je reste + à Paris + pendant + duration"
+    }
+  ]
+}

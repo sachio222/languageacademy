@@ -1,0 +1,611 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-06-boire",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{boire} - To Drink (Present & Past)",
+  "description": "Express what you drink: je bois du café (I drink coffee), j'ai bu (I drank/have drunk)",
+  "can_do": [
+    "Talk about drinking and beverages (I drink, I drank)",
+    "Order drinks at cafés and restaurants",
+    "Describe what you drank using past tense"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "boire-fr",
+      "fr": "boire",
+      "gloss": "to drink",
+      "note": "infinitive form - irregular"
+    },
+    {
+      "word_id": "je-bois-fr",
+      "fr": "je bois",
+      "gloss": "I drink",
+      "note": "present - boi- stem"
+    },
+    {
+      "word_id": "tu-bois-fr",
+      "fr": "tu bois",
+      "gloss": "you drink (informal)",
+      "note": "present - boi- stem"
+    },
+    {
+      "word_id": "il-elle-boit-fr",
+      "fr": "il/elle boit",
+      "gloss": "he/she drinks",
+      "note": "present - boi- stem + t"
+    },
+    {
+      "word_id": "nous-buvons-fr",
+      "fr": "nous buvons",
+      "gloss": "we drink",
+      "note": "present - buv- stem change!"
+    },
+    {
+      "word_id": "vous-buvez-fr",
+      "fr": "vous buvez",
+      "gloss": "you drink (formal/plural)",
+      "note": "present - buv- stem"
+    },
+    {
+      "word_id": "ils-elles-boivent-fr",
+      "fr": "ils/elles boivent",
+      "gloss": "they drink",
+      "note": "present - boi- stem + vent"
+    },
+    {
+      "word_id": "j-ai-bu-fr",
+      "fr": "j'ai bu",
+      "gloss": "I drank / I have drunk",
+      "note": "passé composé - avoir + bu (irregular!)"
+    },
+    {
+      "word_id": "tu-as-bu-fr",
+      "fr": "tu as bu",
+      "gloss": "you drank (informal)",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "il-elle-a-bu-fr",
+      "fr": "il/elle a bu",
+      "gloss": "he/she drank",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "nous-avons-bu-fr",
+      "fr": "nous avons bu",
+      "gloss": "we drank",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "vous-avez-bu-fr",
+      "fr": "vous avez bu",
+      "gloss": "you drank (formal/plural)",
+      "note": "passé composé"
+    },
+    {
+      "word_id": "ils-elles-ont-bu-fr",
+      "fr": "ils/elles ont bu",
+      "gloss": "they drank",
+      "note": "passé composé"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-boire-to-drink",
+      "term": "{boire} = to drink",
+      "definition": "Essential daily verb - talk about beverages!",
+      "example": "{je bois du café} (I drink coffee), {nous buvons de l'eau} (we drink water)"
+    },
+    {
+      "id": "c-irregular-verb-changes-stem",
+      "term": "Irregular verb - changes stem!",
+      "definition": "Uses 'boi-' for singular, 'buv-' for plural forms",
+      "example": "je bois, tu bois, il boit BUT nous buvons, vous buvez, ils boivent"
+    },
+    {
+      "id": "c-passe-compose-past-tense",
+      "term": "{Passé Composé} (Past Tense)",
+      "definition": "Use avoir + bu to say 'drank' or 'have drunk'",
+      "example": "{j'ai bu} (I drank/have drunk), {tu as bu} (you drank), {il a bu} (he drank)"
+    },
+    {
+      "id": "c-past-participle-bu-irregular",
+      "term": "Past Participle: {bu} (irregular!)",
+      "definition": "Irregular past participle - NOT 'buvé'!",
+      "example": "{boire} → {bu} (short and irregular)"
+    },
+    {
+      "id": "c-with-drink-nouns",
+      "term": "With drink nouns",
+      "definition": "Use partitive (du/de la/de l') for some, or article for specific items",
+      "example": "{je bois du café} (I drink some coffee), {j'ai bu de l'eau} (I drank water)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-bois-du-cafe",
+      "type": "respond",
+      "situation": "I drink coffee",
+      "answer": "je bois du café",
+      "accept": [
+        "je bois le café"
+      ],
+      "hint": "{je bois + du café}",
+      "mistakes": [
+        {
+          "answer": "je boire du café",
+          "feedback": "Use conjugated form '{bois}' not infinitive 'boire'"
+        },
+        {
+          "answer": "je buvons du café",
+          "feedback": "Use '{bois}' for je, not 'buvons'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-bois-de-l",
+      "type": "respond",
+      "situation": "I drink water",
+      "answer": "je bois de l'eau",
+      "accept": [
+        "je bois de l eau",
+        "je bois l'eau"
+      ],
+      "hint": "{je bois + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "je bois du eau",
+          "feedback": "eau starts with vowel, use de l'eau not 'du eau'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-bois-du-the",
+      "type": "respond",
+      "situation": "Say \"you drink tea\" (informal)",
+      "cue": "you drink tea",
+      "answer": "tu bois du thé",
+      "accept": [
+        "tu bois le thé"
+      ],
+      "hint": "{tu bois + du thé}",
+      "mistakes": [
+        {
+          "answer": "tu boit du thé",
+          "feedback": "Use '{bois}' for tu, not 'boit'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-bois-du-vin",
+      "type": "respond",
+      "situation": "Say \"you drink wine\" (informal)",
+      "cue": "you drink wine",
+      "answer": "tu bois du vin",
+      "accept": [
+        "tu bois le vin"
+      ],
+      "hint": "{tu bois + du vin}",
+      "mistakes": [
+        {
+          "answer": "tu buvez du vin",
+          "feedback": "Use '{bois}' for tu, not 'buvez'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-boit-de-la",
+      "type": "respond",
+      "situation": "he drinks beer",
+      "answer": "il boit de la bière",
+      "accept": [
+        "il boit la bière",
+        "il boit de la biere"
+      ],
+      "hint": "{il boit + de la bière}",
+      "mistakes": [
+        {
+          "answer": "il bois de la bière",
+          "feedback": "Add -t for il: il boit"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-boit-du-jus",
+      "type": "respond",
+      "situation": "she drinks juice",
+      "answer": "elle boit du jus",
+      "accept": [
+        "elle boit le jus"
+      ],
+      "hint": "{elle boit + du jus}",
+      "mistakes": [
+        {
+          "answer": "elle bois du jus",
+          "feedback": "Add -t for elle: elle boit"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-buvons-de-l",
+      "type": "respond",
+      "situation": "we drink water",
+      "answer": "nous buvons de l'eau",
+      "accept": [
+        "nous buvons de l eau",
+        "nous buvons l'eau"
+      ],
+      "hint": "nous buvons + de l'eau (stem changes to buv-!)",
+      "mistakes": [
+        {
+          "answer": "nous bois de l'eau",
+          "feedback": "Use '{buvons}' for nous, not 'bois' - stem changes!"
+        },
+        {
+          "answer": "nous boivons de l'eau",
+          "feedback": "Use '{buvons}' for nous, not 'boivons'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-buvons-du-cafe",
+      "type": "respond",
+      "situation": "we drink coffee",
+      "answer": "nous buvons du café",
+      "accept": [
+        "nous buvons le café"
+      ],
+      "hint": "{nous buvons + du café}",
+      "mistakes": [
+        {
+          "answer": "nous boit du café",
+          "feedback": "Use '{buvons}' for nous, not 'boit'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-buvez-du-vin",
+      "type": "respond",
+      "situation": "Say \"you drink wine\" (formal)",
+      "cue": "you drink wine (formal)",
+      "answer": "vous buvez du vin",
+      "accept": [
+        "vous buvez le vin"
+      ],
+      "hint": "vous buvez + du vin (stem changes to buv-!)",
+      "mistakes": [
+        {
+          "answer": "vous bois du vin",
+          "feedback": "Use '{buvez}' for vous, not 'bois'"
+        },
+        {
+          "answer": "vous boivez du vin",
+          "feedback": "Use '{buvez}' for vous, not 'boivez'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-buvez-de-l",
+      "type": "respond",
+      "situation": "Say \"you drink water\" (formal)",
+      "cue": "you drink water (formal)",
+      "answer": "vous buvez de l'eau",
+      "accept": [
+        "vous buvez de l eau",
+        "vous buvez l'eau"
+      ],
+      "hint": "{vous buvez + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "vous buvons de l'eau",
+          "feedback": "Use '{buvez}' for vous, not 'buvons'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-boivent-de-la",
+      "type": "respond",
+      "situation": "they drink beer",
+      "answer": "ils boivent de la bière",
+      "accept": [
+        "elles boivent de la bière",
+        "ils boivent la bière",
+        "ils boivent de la biere"
+      ],
+      "hint": "ils boivent + de la bière (stem back to boi- + vent!)",
+      "mistakes": [
+        {
+          "answer": "ils bois de la bière",
+          "feedback": "Use '{boivent}' for ils, not 'bois'"
+        },
+        {
+          "answer": "ils boit de la bière",
+          "feedback": "Use '{boivent}' for ils, not 'boit'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-boivent-du-the",
+      "type": "respond",
+      "situation": "they drink tea",
+      "answer": "ils boivent du thé",
+      "accept": [
+        "elles boivent du thé",
+        "ils boivent le thé"
+      ],
+      "hint": "{ils boivent + du thé}",
+      "mistakes": [
+        {
+          "answer": "ils buvez du thé",
+          "feedback": "Use '{boivent}' for ils, not 'buvez'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-bois-pas",
+      "type": "respond",
+      "situation": "Say \"I do not drink coffee\"",
+      "cue": "I don't drink coffee",
+      "answer": "je ne bois pas de café",
+      "hint": "{je ne bois pas + de café}",
+      "mistakes": [
+        {
+          "answer": "je ne bois pas du café",
+          "feedback": "After negation, use '{de}' not 'du': pas de café"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-bois-pas",
+      "type": "respond",
+      "situation": "Say \"you do not drink wine\" (informal)",
+      "cue": "you don't drink wine",
+      "answer": "tu ne bois pas de vin",
+      "hint": "{tu ne bois pas + de vin}",
+      "mistakes": [
+        {
+          "answer": "tu ne bois pas du vin",
+          "feedback": "After negation, use '{de}' not 'du': pas de vin"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ne-buvons-pas",
+      "type": "respond",
+      "situation": "Say \"we do not drink beer\"",
+      "cue": "we don't drink beer",
+      "answer": "nous ne buvons pas de bière",
+      "accept": [
+        "nous ne buvons pas de biere"
+      ],
+      "hint": "{nous ne buvons pas + de bière}",
+      "mistakes": [
+        {
+          "answer": "nous ne bois pas de bière",
+          "feedback": "Use '{buvons}' for nous, not 'bois'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-aime-boire-du",
+      "type": "respond",
+      "situation": "I like to drink coffee",
+      "answer": "j'aime boire du café",
+      "accept": [
+        "j aime boire du café",
+        "j'aime boire le café"
+      ],
+      "hint": "{j'aime + boire + du café}",
+      "mistakes": [
+        {
+          "answer": "j'aime bois du café",
+          "feedback": "Use infinitive '{boire}' after 'aime', not 'bois'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-boire-de",
+      "type": "respond",
+      "situation": "I want to drink water",
+      "answer": "je veux boire de l'eau",
+      "accept": [
+        "je veux boire de l eau",
+        "je veux boire l'eau"
+      ],
+      "hint": "{je veux + boire + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "je veux bois de l'eau",
+          "feedback": "Use infinitive '{boire}' after 'veux', not 'bois'"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Say \"what do you drink?\" (informal)",
+      "cue": "what do you drink?",
+      "answer": "qu'est-ce que tu bois",
+      "accept": [
+        "qu est-ce que tu bois",
+        "quest-ce que tu bois"
+      ],
+      "hint": "{qu'est-ce que + tu bois?}",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que tu boit",
+          "feedback": "Use '{bois}' for tu, not 'boit'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-bu",
+      "type": "respond",
+      "situation": "Say \"I drank\" or \"I have drunk\"",
+      "cue": "I drank",
+      "answer": "j'ai bu",
+      "accept": [
+        "j ai bu"
+      ],
+      "hint": "j'ai + bu (irregular past participle!)",
+      "mistakes": [
+        {
+          "answer": "je bois",
+          "feedback": "That's present 'I drink' - use '{j'ai bu}' for past"
+        },
+        {
+          "answer": "j'ai buvé",
+          "feedback": "Irregular! Past participle is '{bu}', not 'buvé'"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-bu-du",
+      "type": "respond",
+      "situation": "I drank coffee",
+      "answer": "j'ai bu du café",
+      "accept": [
+        "j ai bu du café"
+      ],
+      "hint": "{j'ai bu + du café}",
+      "mistakes": [
+        {
+          "answer": "je bois du café",
+          "feedback": "That's present - use '{j'ai bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-bu-de",
+      "type": "respond",
+      "situation": "Say \"you drank water\" (informal)",
+      "cue": "you drank water",
+      "answer": "tu as bu de l'eau",
+      "accept": [
+        "tu as bu de l eau"
+      ],
+      "hint": "{tu as + bu + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "tu bois de l'eau",
+          "feedback": "That's present - use '{tu as bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-il-a-bu-du",
+      "type": "respond",
+      "situation": "he drank wine",
+      "answer": "il a bu du vin",
+      "hint": "{il a + bu + du vin}",
+      "mistakes": [
+        {
+          "answer": "il boit du vin",
+          "feedback": "That's present - use '{il a bu}' for past"
+        },
+        {
+          "answer": "il a buvé du vin",
+          "feedback": "Past participle is '{bu}', not 'buvé'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-bu-du",
+      "type": "respond",
+      "situation": "she drank tea",
+      "answer": "elle a bu du thé",
+      "accept": [
+        "elle a bu du the"
+      ],
+      "hint": "{elle a + bu + du thé}",
+      "mistakes": [
+        {
+          "answer": "elle boit du thé",
+          "feedback": "That's present - use '{elle a bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-bu-de",
+      "type": "respond",
+      "situation": "we drank beer",
+      "answer": "nous avons bu de la bière",
+      "accept": [
+        "nous avons bu de la biere"
+      ],
+      "hint": "{nous avons + bu + de la bière}",
+      "mistakes": [
+        {
+          "answer": "nous buvons de la bière",
+          "feedback": "That's present - use '{nous avons bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-avez-bu-du",
+      "type": "respond",
+      "situation": "Say \"you drank juice\" (formal)",
+      "cue": "you drank juice (formal)",
+      "answer": "vous avez bu du jus",
+      "hint": "{vous avez + bu + du jus}",
+      "mistakes": [
+        {
+          "answer": "vous buvez du jus",
+          "feedback": "That's present - use '{vous avez bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-bu-de",
+      "type": "respond",
+      "situation": "they drank water",
+      "answer": "ils ont bu de l'eau",
+      "accept": [
+        "elles ont bu de l'eau",
+        "ils ont bu de l eau"
+      ],
+      "hint": "{ils ont + bu + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "ils boivent de l'eau",
+          "feedback": "That's present - use '{ils ont bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-ai-pas",
+      "type": "respond",
+      "situation": "Say \"I did not drink\"",
+      "cue": "I didn't drink",
+      "answer": "je n'ai pas bu",
+      "accept": [
+        "je n ai pas bu"
+      ],
+      "hint": "{je n'ai pas + bu}",
+      "mistakes": [
+        {
+          "answer": "je ne bois pas",
+          "feedback": "That's present - use '{je n'ai pas bu}' for past"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-n-avons-pas",
+      "type": "respond",
+      "situation": "Say \"we did not drink coffee\"",
+      "cue": "we didn't drink coffee",
+      "answer": "nous n'avons pas bu de café",
+      "accept": [
+        "nous n avons pas bu de café"
+      ],
+      "hint": "{nous n'avons pas + bu + de café}",
+      "mistakes": [
+        {
+          "answer": "nous ne buvons pas de café",
+          "feedback": "That's present - use '{nous n'avons pas bu}' for past"
+        }
+      ]
+    }
+  ]
+}

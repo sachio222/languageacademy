@@ -1,0 +1,454 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-16-would-conditionals",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Would Forms - Hypotheticals and Desires",
+  "description": "Express hypothetical actions: je voudrais (I would like), j'irais (I would go), je ferais (I would do)",
+  "can_do": [
+    "Make very polite requests (I would like...)",
+    "Express hypothetical actions (I would go, I would do)",
+    "Sound more sophisticated and polite in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-voudrais-fr",
+      "fr": "je voudrais",
+      "gloss": "I would like",
+      "note": "conditional of vouloir (review!)"
+    },
+    {
+      "word_id": "tu-voudrais-fr",
+      "fr": "tu voudrais",
+      "gloss": "you would like (informal)",
+      "note": "conditional of vouloir"
+    },
+    {
+      "word_id": "il-elle-voudrait-fr",
+      "fr": "il/elle voudrait",
+      "gloss": "he/she would like",
+      "note": "conditional of vouloir"
+    },
+    {
+      "word_id": "nous-voudrions-fr",
+      "fr": "nous voudrions",
+      "gloss": "we would like",
+      "note": "conditional of vouloir"
+    },
+    {
+      "word_id": "vous-voudriez-fr",
+      "fr": "vous voudriez",
+      "gloss": "you would like (formal/plural)",
+      "note": "conditional of vouloir"
+    },
+    {
+      "word_id": "ils-elles-voudraient-fr",
+      "fr": "ils/elles voudraient",
+      "gloss": "they would like",
+      "note": "conditional of vouloir"
+    },
+    {
+      "word_id": "j-irais-fr",
+      "fr": "j'irais",
+      "gloss": "I would go",
+      "note": "conditional of aller"
+    },
+    {
+      "word_id": "tu-irais-fr",
+      "fr": "tu irais",
+      "gloss": "you would go (informal)",
+      "note": "conditional of aller"
+    },
+    {
+      "word_id": "il-elle-irait-fr",
+      "fr": "il/elle irait",
+      "gloss": "he/she would go",
+      "note": "conditional of aller"
+    },
+    {
+      "word_id": "nous-irions-fr",
+      "fr": "nous irions",
+      "gloss": "we would go",
+      "note": "conditional of aller"
+    },
+    {
+      "word_id": "vous-iriez-fr",
+      "fr": "vous iriez",
+      "gloss": "you would go (formal/plural)",
+      "note": "conditional of aller"
+    },
+    {
+      "word_id": "ils-elles-iraient-fr",
+      "fr": "ils/elles iraient",
+      "gloss": "they would go",
+      "note": "conditional of aller"
+    },
+    {
+      "word_id": "je-ferais-fr",
+      "fr": "je ferais",
+      "gloss": "I would do",
+      "note": "conditional of faire"
+    },
+    {
+      "word_id": "tu-ferais-fr",
+      "fr": "tu ferais",
+      "gloss": "you would do (informal)",
+      "note": "conditional of faire"
+    },
+    {
+      "word_id": "il-elle-ferait-fr",
+      "fr": "il/elle ferait",
+      "gloss": "he/she would do",
+      "note": "conditional of faire"
+    },
+    {
+      "word_id": "nous-ferions-fr",
+      "fr": "nous ferions",
+      "gloss": "we would do",
+      "note": "conditional of faire"
+    },
+    {
+      "word_id": "vous-feriez-fr",
+      "fr": "vous feriez",
+      "gloss": "you would do (formal/plural)",
+      "note": "conditional of faire"
+    },
+    {
+      "word_id": "ils-elles-feraient-fr",
+      "fr": "ils/elles feraient",
+      "gloss": "they would do",
+      "note": "conditional of faire"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-would-like-voudrais-conditional",
+      "term": "Would like = {voudrais} (conditional of vouloir)",
+      "definition": "Express polite desires - more polite than '{je veux}' (I want)",
+      "example": "{je voudrais un café} (I would like a coffee), {nous voudrions partir} (we would like to leave)"
+    },
+    {
+      "id": "c-would-go-irais-conditional",
+      "term": "Would go = {irais} (conditional of aller)",
+      "definition": "Express hypothetical movement or future possibility",
+      "example": "{j'irais à Paris} (I would go to Paris), {ils iraient avec toi} (they would go with you)"
+    },
+    {
+      "id": "c-would-do-ferais-conditional",
+      "term": "Would do = {ferais} (conditional of faire)",
+      "definition": "Express hypothetical actions",
+      "example": "{je ferais ça} (I would do that), {vous feriez quoi?} (what would you do?)"
+    },
+    {
+      "id": "c-negation-with-would",
+      "term": "Negation with Would",
+      "definition": "Use ne...pas around the conditional verb",
+      "example": "{je ne voudrais pas} (I would not like), {il n'irait pas} (he would not go)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-voudrais-de-l",
+      "type": "respond",
+      "situation": "Say \"I would like water\" (polite request - review!)",
+      "cue": "I would like water",
+      "answer": "je voudrais de l'eau",
+      "accept": [
+        "je voudrais l'eau",
+        "je voudrais de l eau"
+      ],
+      "hint": "{je + voudrais + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "je veux de l'eau",
+          "feedback": "That works but '{je voudrais}' is more polite"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-voudrais-du-cafe",
+      "type": "respond",
+      "situation": "Say \"you would like coffee\" (informal)",
+      "cue": "you would like coffee",
+      "answer": "tu voudrais du café",
+      "hint": "{tu + voudrais + du café}",
+      "mistakes": [
+        {
+          "answer": "tu veux du café",
+          "feedback": "Use '{voudrais}' (would like) for more politeness"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-voudrait-ca",
+      "type": "respond",
+      "situation": "she would like that",
+      "answer": "elle voudrait ça",
+      "hint": "{elle + voudrait + ça}",
+      "mistakes": [
+        {
+          "answer": "elle voudrais ça",
+          "feedback": "Third person uses '{voudrait}' not 'voudrais'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-voudrions-de-l",
+      "type": "respond",
+      "situation": "we would like water",
+      "answer": "nous voudrions de l'eau",
+      "accept": [
+        "nous voudrions de l eau",
+        "nous voudrions l'eau"
+      ],
+      "hint": "{nous + voudrions + de l'eau}",
+      "mistakes": [
+        {
+          "answer": "nous voulons de l'eau",
+          "feedback": "Use '{voudrions}' (would like) for more politeness"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-voudriez-du-cafe",
+      "type": "respond",
+      "situation": "Say \"you would like coffee\" (formal)",
+      "cue": "you would like coffee (formal)",
+      "answer": "vous voudriez du café",
+      "hint": "{vous + voudriez + du café}",
+      "mistakes": [
+        {
+          "answer": "vous voulez du café",
+          "feedback": "Use '{voudriez}' (would like) for more politeness"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-voudraient-ca",
+      "type": "respond",
+      "situation": "they would like that",
+      "answer": "ils voudraient ça",
+      "accept": [
+        "elles voudraient ça"
+      ],
+      "hint": "{ils/elles + voudraient + ça}",
+      "mistakes": [
+        {
+          "answer": "ils veulent ça",
+          "feedback": "Use '{voudraient}' (would like) for conditional"
+        }
+      ]
+    },
+    {
+      "id": "i-j-irais-a-paris",
+      "type": "respond",
+      "situation": "I would go to Paris",
+      "answer": "j'irais à Paris",
+      "accept": [
+        "j irais à Paris"
+      ],
+      "hint": "{j'irais + à Paris}",
+      "mistakes": [
+        {
+          "answer": "je vais à Paris",
+          "feedback": "That's 'I go/am going' - use '{j'irais}' for 'would go'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-irais-la",
+      "type": "respond",
+      "situation": "Say \"you would go there\" (informal)",
+      "cue": "you would go there",
+      "answer": "tu irais là",
+      "hint": "{tu + irais + là}",
+      "mistakes": [
+        {
+          "answer": "tu vas là",
+          "feedback": "That's 'you go/are going' - use '{irais}' for 'would go'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-irait",
+      "type": "respond",
+      "situation": "he would go",
+      "answer": "il irait",
+      "hint": "{il + irait}",
+      "mistakes": [
+        {
+          "answer": "il irais",
+          "feedback": "Third person uses '{irait}' not 'irais'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-irions-a-paris",
+      "type": "respond",
+      "situation": "we would go to Paris",
+      "answer": "nous irions à Paris",
+      "hint": "{nous + irions + à Paris}",
+      "mistakes": [
+        {
+          "answer": "nous allons à Paris",
+          "feedback": "That's 'we go/are going' - use '{irions}' for 'would go'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-iriez-la",
+      "type": "respond",
+      "situation": "Say \"you would go there\" (formal)",
+      "cue": "you would go there (formal)",
+      "answer": "vous iriez là",
+      "hint": "{vous + iriez + là}",
+      "mistakes": [
+        {
+          "answer": "vous allez là",
+          "feedback": "That's 'you go/are going' - use '{iriez}' for 'would go'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-iraient",
+      "type": "respond",
+      "situation": "they would go",
+      "answer": "ils iraient",
+      "accept": [
+        "elles iraient"
+      ],
+      "hint": "{ils/elles + iraient}",
+      "mistakes": [
+        {
+          "answer": "ils vont",
+          "feedback": "That's 'they go/are going' - use '{iraient}' for 'would go'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ferais-ca",
+      "type": "respond",
+      "situation": "I would do that",
+      "answer": "je ferais ça",
+      "hint": "{je ferais + ça}",
+      "mistakes": [
+        {
+          "answer": "je fais ça",
+          "feedback": "That's 'I do that' - use '{ferais}' for 'would do'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ferais-ca",
+      "type": "respond",
+      "situation": "Say \"you would do it\" (informal)",
+      "cue": "you would do it",
+      "answer": "tu ferais ça",
+      "hint": "{tu + ferais + ça}",
+      "mistakes": [
+        {
+          "answer": "tu fais ça",
+          "feedback": "That's 'you do it' - use '{ferais}' for 'would do'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-ferait-ca",
+      "type": "respond",
+      "situation": "she would do that",
+      "answer": "elle ferait ça",
+      "hint": "{elle + ferait + ça}",
+      "mistakes": [
+        {
+          "answer": "elle ferais ça",
+          "feedback": "Third person uses '{ferait}' not 'ferais'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ferions-ca",
+      "type": "respond",
+      "situation": "we would do that",
+      "answer": "nous ferions ça",
+      "hint": "{nous + ferions + ça}",
+      "mistakes": [
+        {
+          "answer": "nous faisons ça",
+          "feedback": "That's 'we do that' - use '{ferions}' for 'would do'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-feriez-ca",
+      "type": "respond",
+      "situation": "Say \"you would do it\" (formal)",
+      "cue": "you would do it (formal)",
+      "answer": "vous feriez ça",
+      "hint": "{vous + feriez + ça}",
+      "mistakes": [
+        {
+          "answer": "vous faites ça",
+          "feedback": "That's 'you do it' - use '{feriez}' for 'would do'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-feraient-ca",
+      "type": "respond",
+      "situation": "they would do that",
+      "answer": "ils feraient ça",
+      "accept": [
+        "elles feraient ça"
+      ],
+      "hint": "{ils/elles + feraient + ça}",
+      "mistakes": [
+        {
+          "answer": "ils font ça",
+          "feedback": "That's 'they do that' - use '{feraient}' for 'would do'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-voudrais-pas",
+      "type": "respond",
+      "situation": "I would not like that",
+      "answer": "je ne voudrais pas ça",
+      "hint": "{je ne voudrais pas + ça}",
+      "mistakes": [
+        {
+          "answer": "je ne veux pas ça",
+          "feedback": "Use conditional '{voudrais}' for 'would not like'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-n-irais-pas",
+      "type": "respond",
+      "situation": "I would not go",
+      "answer": "je n'irais pas",
+      "accept": [
+        "je n irais pas"
+      ],
+      "hint": "{je n'irais pas}",
+      "mistakes": [
+        {
+          "answer": "je ne vais pas",
+          "feedback": "Use conditional '{irais}' for 'would not go'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ne-ferions-pas",
+      "type": "respond",
+      "situation": "we would not do that",
+      "answer": "nous ne ferions pas ça",
+      "hint": "{nous ne ferions pas + ça}",
+      "mistakes": [
+        {
+          "answer": "nous ne faisons pas ça",
+          "feedback": "Use conditional '{ferions}' for 'would not do'"
+        }
+      ]
+    }
+  ]
+}

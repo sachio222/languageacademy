@@ -1,0 +1,237 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-24-common-special-forms-2",
+  "kind": "lesson",
+  "status": "written",
+  "title": "More Forms for '{il faut que}' and '{je veux que}' Phrases",
+  "description": "More verb forms that appear after '{il faut que...}' and '{je veux que...}' phrases. vienne (come), parte (leave), puisse (can), sache (know), comprenne (understand). Essential for wishes and commands!",
+  "can_do": [
+    "Use more special forms for complex expressions",
+    "Express wishes with motion and modal verbs",
+    "Complete your subjunctive verb repertoire"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "tu-viennes-fr",
+      "fr": "tu viennes",
+      "gloss": "you come",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-vienne-fr",
+      "fr": "il/elle vienne",
+      "gloss": "he/she come",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "tu-partes-fr",
+      "fr": "tu partes",
+      "gloss": "you leave",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-parte-fr",
+      "fr": "il/elle parte",
+      "gloss": "he/she leave",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "tu-puisses-fr",
+      "fr": "tu puisses",
+      "gloss": "you can",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-puisse-fr",
+      "fr": "il/elle puisse",
+      "gloss": "he/she can",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "tu-saches-fr",
+      "fr": "tu saches",
+      "gloss": "you know",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-sache-fr",
+      "fr": "il/elle sache",
+      "gloss": "he/she know",
+      "note": "used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "tu-comprennes-fr",
+      "fr": "tu comprennes",
+      "gloss": "you understand",
+      "note": "⭐ used after 'il faut que' / 'je veux que'"
+    },
+    {
+      "word_id": "il-elle-comprenne-fr",
+      "fr": "il/elle comprenne",
+      "gloss": "he/she understand",
+      "note": "used after 'il faut que' / 'je veux que'"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-more-verbs-that-change",
+      "term": "More Verbs That Change After '{que}'",
+      "definition": "Like the previous special forms module, these verbs change ONLY after phrases with '{que}' (il faut que, je veux que, je suis content que, etc.)",
+      "example": "Normal: {tu viens} (you come) → After '{je veux que}': {tu viennes. Normal}: {tu peux} (you can) → After '{il faut que}': {tu puisses}"
+    },
+    {
+      "id": "c-when-to-use-vs",
+      "term": "When To Use vs When NOT To Use",
+      "definition": "USE: After '{que}' in wish/need/emotion phrases. DON'T USE: For normal statements or questions.",
+      "example": "{✓ Je veux que tu viennes} (I want you to come). {✗ Tu viennes ici?} (Wrong! Say: {Tu viens ici?})"
+    },
+    {
+      "id": "c-the-trigger-look-for",
+      "term": "The Trigger: Look for '{que}'",
+      "definition": "If you see 'il faut/je veux/je suis content + QUE + person', use these forms. No '{que}' = normal forms.",
+      "example": "{Il faut partir} (leave - normal). {Il faut QUE tu partes} (you leave - changed form!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-tu-viennes",
+      "type": "respond",
+      "situation": "Translate the special form: tu viennes (venir)",
+      "cue": "you come",
+      "answer": "tu viennes",
+      "hint": "special form of venir for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu viens",
+          "feedback": "That's the normal form! The special form is: tu viennes"
+        }
+      ]
+    },
+    {
+      "id": "i-il-vienne",
+      "type": "respond",
+      "situation": "Translate the special form: il vienne (venir)",
+      "cue": "he come",
+      "answer": "il vienne",
+      "hint": "special form of venir for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il vient",
+          "feedback": "That's the normal form! The special form is: il vienne"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-partes",
+      "type": "respond",
+      "situation": "Translate the special form: tu partes (partir)",
+      "cue": "you leave",
+      "answer": "tu partes",
+      "hint": "special form of partir for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu pars",
+          "feedback": "That's the normal form! The special form is: tu partes"
+        }
+      ]
+    },
+    {
+      "id": "i-il-parte",
+      "type": "respond",
+      "situation": "Translate the special form: il parte (partir)",
+      "cue": "he leave",
+      "answer": "il parte",
+      "hint": "special form of partir for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il part",
+          "feedback": "That's the normal form! The special form is: il parte"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-puisses",
+      "type": "respond",
+      "situation": "Translate the special form: tu puisses (pouvoir)",
+      "cue": "you can",
+      "answer": "tu puisses",
+      "hint": "special form of pouvoir for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu peux",
+          "feedback": "That's the normal form! The special form is: tu puisses"
+        }
+      ]
+    },
+    {
+      "id": "i-il-puisse",
+      "type": "respond",
+      "situation": "Translate the special form: il puisse (pouvoir)",
+      "cue": "he can",
+      "answer": "il puisse",
+      "hint": "special form of pouvoir for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il peut",
+          "feedback": "That's the normal form! The special form is: il puisse"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-saches",
+      "type": "respond",
+      "situation": "Translate the special form: tu saches (savoir)",
+      "cue": "you know",
+      "answer": "tu saches",
+      "hint": "special form of savoir for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu sais",
+          "feedback": "That's the normal form! The special form is: tu saches"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-sache",
+      "type": "respond",
+      "situation": "Translate the special form: elle sache (savoir)",
+      "cue": "she know",
+      "answer": "elle sache",
+      "hint": "special form of savoir for '{elle}'",
+      "mistakes": [
+        {
+          "answer": "elle sait",
+          "feedback": "That's the normal form! The special form is: elle sache"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-comprennes",
+      "type": "respond",
+      "situation": "Translate the special form: tu comprennes (comprendre)",
+      "cue": "you understand",
+      "answer": "tu comprennes",
+      "hint": "special form of comprendre for '{tu}'",
+      "mistakes": [
+        {
+          "answer": "tu comprends",
+          "feedback": "That's the normal form! The special form is: tu comprennes"
+        }
+      ]
+    },
+    {
+      "id": "i-il-comprenne",
+      "type": "respond",
+      "situation": "Translate the special form: il comprenne (comprendre)",
+      "cue": "he understand",
+      "answer": "il comprenne",
+      "hint": "special form of comprendre for '{il}'",
+      "mistakes": [
+        {
+          "answer": "il comprend",
+          "feedback": "That's the normal form! The special form is: il comprenne"
+        }
+      ]
+    }
+  ]
+}

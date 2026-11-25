@@ -1,0 +1,3498 @@
+{
+  "2024-01-01-famous-words": {
+    "items": {
+      "2024-01-01-famous-words.1": "i-bonjour",
+      "2024-01-01-famous-words.2": "i-bonsoir",
+      "2024-01-01-famous-words.3": "i-merci",
+      "2024-01-01-famous-words.4": "i-oui",
+      "2024-01-01-famous-words.5": "i-non",
+      "2024-01-01-famous-words.6": "i-s-il-vous-plait",
+      "2024-01-01-famous-words.7": "i-pardon",
+      "2024-01-01-famous-words.8": "i-au-revoir",
+      "2024-01-01-famous-words.9": "i-voila",
+      "2024-01-01-famous-words.10": "i-cafe",
+      "2024-01-01-famous-words.11": "i-bon",
+      "2024-01-01-famous-words.12": "i-bien",
+      "2024-01-01-famous-words.13": "i-salut"
+    },
+    "concepts": {
+      "0": "c-internationally-recognized-words",
+      "1": "c-essential-greetings-politeness",
+      "2": "c-building-your-foundation"
+    }
+  },
+  "2024-01-01-pronouns": {
+    "items": {
+      "2024-01-01-pronouns.1": "i-je",
+      "2024-01-01-pronouns.2": "i-tu",
+      "2024-01-01-pronouns.3": "i-il",
+      "2024-01-01-pronouns.4": "i-elle",
+      "2024-01-01-pronouns.5": "i-nous",
+      "2024-01-01-pronouns.6": "i-vous",
+      "2024-01-01-pronouns.7": "i-ils",
+      "2024-01-01-pronouns.8": "i-elles",
+      "2024-01-01-pronouns.9": "i-on"
+    },
+    "concepts": {
+      "0": "c-subject-pronouns",
+      "1": "c-singular-vs-plural",
+      "2": "c-formal-vs-informal",
+      "3": "c-on-the-special-pronoun"
+    }
+  },
+  "2024-01-02-etre": {
+    "items": {
+      "2024-01-02-etre.1": "i-je-suis",
+      "2024-01-02-etre.2": "i-tu-es",
+      "2024-01-02-etre.3": "i-il-est",
+      "2024-01-02-etre.4": "i-elle-est",
+      "2024-01-02-etre.5": "i-nous-sommes",
+      "2024-01-02-etre.6": "i-vous-etes",
+      "2024-01-02-etre.7": "i-ils-sont",
+      "2024-01-02-etre.8": "i-elles-sont"
+    },
+    "concepts": {
+      "0": "c-etre-to-be",
+      "1": "c-conjugation-pattern",
+      "2": "c-practical-usage"
+    }
+  },
+  "2024-01-04-avoir": {
+    "items": {
+      "2024-01-04-avoir.1": "i-j-ai",
+      "2024-01-04-avoir.2": "i-tu-as",
+      "2024-01-04-avoir.3": "i-il-a",
+      "2024-01-04-avoir.4": "i-elle-a",
+      "2024-01-04-avoir.5": "i-nous-avons",
+      "2024-01-04-avoir.6": "i-vous-avez",
+      "2024-01-04-avoir.7": "i-ils-ont",
+      "2024-01-04-avoir.8": "i-elles-ont"
+    },
+    "concepts": {
+      "0": "c-avoir-to-have",
+      "1": "c-elision-with-first-person",
+      "2": "c-common-uses"
+    }
+  },
+  "2024-01-05-articles": {
+    "items": {
+      "2024-01-05-articles.1": "i-un",
+      "2024-01-05-articles.2": "i-une",
+      "2024-01-05-articles.3": "i-le",
+      "2024-01-05-articles.4": "i-la",
+      "2024-01-05-articles.5": "i-les",
+      "2024-01-05-articles.6": "i-l"
+    },
+    "concepts": {
+      "0": "c-why-articles-matter",
+      "1": "c-indefinite-articles-a-an",
+      "2": "c-definite-articles-the",
+      "3": "c-gender-agreement"
+    }
+  },
+  "2024-01-06-basic-nouns": {
+    "items": {
+      "2024-01-06-basic-nouns.1": "i-j-ai-un-livre",
+      "2024-01-06-basic-nouns.2": "i-j-ai-un-chat",
+      "2024-01-06-basic-nouns.3": "i-elle-a-une-chatte",
+      "2024-01-06-basic-nouns.4": "i-il-a-un-chien",
+      "2024-01-06-basic-nouns.5": "i-nous-avons-une-chienne",
+      "2024-01-06-basic-nouns.6": "i-c-est-une-maison",
+      "2024-01-06-basic-nouns.7": "i-tu-as-une-voiture",
+      "2024-01-06-basic-nouns.8": "i-j-ai-un-ami",
+      "2024-01-06-basic-nouns.9": "i-elle-a-une-amie",
+      "2024-01-06-basic-nouns.10": "i-je-suis-un-homme",
+      "2024-01-06-basic-nouns.11": "i-tu-es-une-femme",
+      "2024-01-06-basic-nouns.12": "i-j-ai-un-enfant",
+      "2024-01-06-basic-nouns.13": "i-tu-as-une-chose",
+      "2024-01-06-basic-nouns.14": "i-nous-avons-un-jour"
+    },
+    "concepts": {
+      "0": "c-noun-gender-critical-concept",
+      "1": "c-using-with-etre-and",
+      "2": "c-practice-previous-modules",
+      "3": "c-rule-identifying-vs-profession"
+    }
+  },
+  "2024-01-07-plurals": {
+    "items": {
+      "2024-01-07-plurals.1": "i-j-ai-des-chats",
+      "2024-01-07-plurals.2": "i-tu-as-des-chats",
+      "2024-01-07-plurals.3": "i-nous-avons-les-livres",
+      "2024-01-07-plurals.4": "i-ils-ont-les-chats",
+      "2024-01-07-plurals.5": "i-j-ai-des-chiens",
+      "2024-01-07-plurals.6": "i-ils-sont-les-amis",
+      "2024-01-07-plurals.7": "i-vous-avez-les-choses",
+      "2024-01-07-plurals.8": "i-elle-a-les-enfants"
+    },
+    "concepts": {
+      "0": "c-basic-plural-rule",
+      "1": "c-plural-articles",
+      "2": "c-practice-with-etre-avoir"
+    }
+  },
+  "2024-01-08-connectors": {
+    "items": {
+      "2024-01-08-connectors.1": "i-un-chat-et-un",
+      "2024-01-08-connectors.2": "i-j-ai-un-livre",
+      "2024-01-08-connectors.3": "i-nous-sommes-des-femmes",
+      "2024-01-08-connectors.4": "i-je-suis-un-homme",
+      "2024-01-08-connectors.5": "i-un-chat-ou-un",
+      "2024-01-08-connectors.6": "i-nous-avons-une-maison",
+      "2024-01-08-connectors.7": "i-j-ai-un-chat",
+      "2024-01-08-connectors.8": "i-elle-a-un-livre",
+      "2024-01-08-connectors.9": "i-tres-bon",
+      "2024-01-08-connectors.10": "i-la-maison-est-tres"
+    },
+    "concepts": {
+      "0": "c-et-and",
+      "1": "c-mais-but",
+      "2": "c-ou-or",
+      "3": "c-aussi-also-too",
+      "4": "c-tres-very",
+      "5": "c-making-natural-sentences"
+    }
+  },
+  "2024-01-10-unit1-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-01-11-unit1-exam": {
+    "items": {
+      "2024-01-11-unit1-exam.1": "i-je-suis",
+      "2024-01-11-unit1-exam.2": "i-tu-as",
+      "2024-01-11-unit1-exam.3": "i-elle-est",
+      "2024-01-11-unit1-exam.4": "i-ils-ont",
+      "2024-01-11-unit1-exam.5": "i-nous-sommes",
+      "2024-01-11-unit1-exam.6": "i-j-ai",
+      "2024-01-11-unit1-exam.7": "i-vous-etes",
+      "2024-01-11-unit1-exam.8": "i-il-a",
+      "2024-01-11-unit1-exam.9": "i-un-chat",
+      "2024-01-11-unit1-exam.10": "i-le-livre",
+      "2024-01-11-unit1-exam.11": "i-une-femme",
+      "2024-01-11-unit1-exam.12": "i-la-maison",
+      "2024-01-11-unit1-exam.13": "i-les-chats",
+      "2024-01-11-unit1-exam.14": "i-des-livres",
+      "2024-01-11-unit1-exam.15": "i-j-ai-un-chien",
+      "2024-01-11-unit1-exam.16": "i-tu-es-une-femme",
+      "2024-01-11-unit1-exam.17": "i-un-chat-et-un",
+      "2024-01-11-unit1-exam.18": "i-j-ai-un-livre",
+      "2024-01-11-unit1-exam.19": "i-je-suis-un-homme",
+      "2024-01-11-unit1-exam.20": "i-nous-avons-les-livres",
+      "2024-01-11-unit1-exam.21": "i-ils-sont-les-chats",
+      "2024-01-11-unit1-exam.22": "i-tu-as-une-maison",
+      "2024-01-11-unit1-exam.23": "i-je-suis-un-homme-2",
+      "2024-01-11-unit1-exam.24": "i-nous-avons-les-chats"
+    },
+    "concepts": {}
+  },
+  "2024-01-12-demonstratives": {
+    "items": {
+      "2024-01-12-demonstratives.1": "i-ca",
+      "2024-01-12-demonstratives.2": "i-ce-livre",
+      "2024-01-12-demonstratives.3": "i-ce-chat",
+      "2024-01-12-demonstratives.4": "i-cet-homme",
+      "2024-01-12-demonstratives.5": "i-cette-maison",
+      "2024-01-12-demonstratives.6": "i-cette-femme",
+      "2024-01-12-demonstratives.7": "i-ces-chats",
+      "2024-01-12-demonstratives.8": "i-ces-livres",
+      "2024-01-12-demonstratives.9": "i-ces-maisons",
+      "2024-01-12-demonstratives.10": "i-ce-chien"
+    },
+    "concepts": {
+      "0": "c-ca-the-most-useful",
+      "1": "c-demonstrative-forms",
+      "2": "c-gender-and-sound-agreement",
+      "3": "c-next-functional-composition"
+    }
+  },
+  "2024-01-13-ca-survival": {
+    "items": {
+      "2024-01-13-ca-survival.1": "i-ca",
+      "2024-01-13-ca-survival.2": "i-c-est-ca",
+      "2024-01-13-ca-survival.3": "i-ca-va",
+      "2024-01-13-ca-survival.4": "i-j-ai-ca",
+      "2024-01-13-ca-survival.5": "i-tu-as-ca",
+      "2024-01-13-ca-survival.6": "i-il-a-ca"
+    },
+    "concepts": {
+      "0": "c-ca-that-it",
+      "1": "c-c-est-ca",
+      "2": "c-ca-va",
+      "3": "c-building-blocks"
+    }
+  },
+  "2024-01-14-determiners-nouns": {
+    "items": {
+      "2024-01-14-determiners-nouns.1": "i-j-ai-ce-livre",
+      "2024-01-14-determiners-nouns.2": "i-elle-a-cette-maison",
+      "2024-01-14-determiners-nouns.3": "i-nous-avons-ces-livres",
+      "2024-01-14-determiners-nouns.4": "i-tu-as-ce-chat",
+      "2024-01-14-determiners-nouns.5": "i-ils-ont-ces-chats",
+      "2024-01-14-determiners-nouns.6": "i-c-est-cet-homme",
+      "2024-01-14-determiners-nouns.7": "i-j-ai-le-chat",
+      "2024-01-14-determiners-nouns.8": "i-elle-a-la-maison",
+      "2024-01-14-determiners-nouns.9": "i-ils-ont-les-chiens",
+      "2024-01-14-determiners-nouns.10": "i-j-ai-ces-enfants",
+      "2024-01-14-determiners-nouns.11": "i-c-est-ce-livre"
+    },
+    "concepts": {
+      "0": "c-functional-composition",
+      "1": "c-full-sentence-practice",
+      "2": "c-using-all-previous-verbs"
+    }
+  },
+  "2024-01-15-vouloir": {
+    "items": {
+      "2024-01-15-vouloir.1": "i-je-veux",
+      "2024-01-15-vouloir.2": "i-tu-veux",
+      "2024-01-15-vouloir.3": "i-il-veut",
+      "2024-01-15-vouloir.4": "i-elle-veut",
+      "2024-01-15-vouloir.5": "i-nous-voulons",
+      "2024-01-15-vouloir.6": "i-vous-voulez",
+      "2024-01-15-vouloir.7": "i-ils-veulent",
+      "2024-01-15-vouloir.8": "i-elles-veulent",
+      "2024-01-15-vouloir.9": "i-je-veux-ca",
+      "2024-01-15-vouloir.10": "i-nous-voulons-ce-livre",
+      "2024-01-15-vouloir.11": "i-je-veux-etre-un",
+      "2024-01-15-vouloir.12": "i-je-veux-avoir-un",
+      "2024-01-15-vouloir.13": "i-elle-veut-avoir-une",
+      "2024-01-15-vouloir.14": "i-je-veux-ca-s"
+    },
+    "concepts": {
+      "0": "c-vouloir-to-want",
+      "1": "c-irregular-conjugation-pattern",
+      "2": "c-composition-power"
+    }
+  },
+  "2024-01-16-pouvoir": {
+    "items": {
+      "2024-01-16-pouvoir.1": "i-je-peux",
+      "2024-01-16-pouvoir.2": "i-tu-peux",
+      "2024-01-16-pouvoir.3": "i-il-peut",
+      "2024-01-16-pouvoir.4": "i-elle-peut",
+      "2024-01-16-pouvoir.5": "i-nous-pouvons",
+      "2024-01-16-pouvoir.6": "i-vous-pouvez",
+      "2024-01-16-pouvoir.7": "i-ils-peuvent",
+      "2024-01-16-pouvoir.8": "i-elles-peuvent",
+      "2024-01-16-pouvoir.9": "i-je-peux-avoir-ca",
+      "2024-01-16-pouvoir.10": "i-il-peut-avoir-un",
+      "2024-01-16-pouvoir.11": "i-nous-pouvons-avoir-une",
+      "2024-01-16-pouvoir.12": "i-je-peux-etre-un",
+      "2024-01-16-pouvoir.13": "i-elle-peut-etre-artiste",
+      "2024-01-16-pouvoir.14": "i-je-peux-vouloir-ca",
+      "2024-01-16-pouvoir.15": "i-ils-peuvent-vouloir-un",
+      "2024-01-16-pouvoir.16": "i-je-peux-avoir-ca-2"
+    },
+    "concepts": {
+      "0": "c-pouvoir-can-to-be",
+      "1": "c-irregular-conjugation-pattern",
+      "2": "c-composition-power"
+    }
+  },
+  "2024-01-17-voir": {
+    "items": {
+      "2024-01-17-voir.1": "i-je-vois",
+      "2024-01-17-voir.2": "i-tu-vois",
+      "2024-01-17-voir.3": "i-il-voit",
+      "2024-01-17-voir.4": "i-elle-voit",
+      "2024-01-17-voir.5": "i-nous-voyons",
+      "2024-01-17-voir.6": "i-vous-voyez",
+      "2024-01-17-voir.7": "i-ils-voient",
+      "2024-01-17-voir.8": "i-elles-voient"
+    },
+    "concepts": {
+      "0": "c-voir-to-see",
+      "1": "c-irregular-conjugation",
+      "2": "c-building-on-previous-vocabulary",
+      "3": "c-prepares-for-object-pronouns"
+    }
+  },
+  "2024-01-18-questions": {
+    "items": {
+      "2024-01-18-questions.1": "i-que",
+      "2024-01-18-questions.2": "i-qui",
+      "2024-01-18-questions.3": "i-ou",
+      "2024-01-18-questions.4": "i-quand",
+      "2024-01-18-questions.5": "i-comment",
+      "2024-01-18-questions.6": "i-pourquoi",
+      "2024-01-18-questions.7": "i-combien",
+      "2024-01-18-questions.8": "i-qu-est-ce-que",
+      "2024-01-18-questions.9": "i-comment-ca-va",
+      "2024-01-18-questions.10": "i-ou-est-ce",
+      "2024-01-18-questions.11": "i-est-ce-que-tu",
+      "2024-01-18-questions.12": "i-ou-est-ce-que",
+      "2024-01-18-questions.13": "i-quand-est-ce-que",
+      "2024-01-18-questions.14": "i-est-ce-que-elle",
+      "2024-01-18-questions.15": "i-combien-est-ce",
+      "2024-01-18-questions.16": "i-combien-est-ce-que",
+      "2024-01-18-questions.17": "i-quel-livre",
+      "2024-01-18-questions.18": "i-quelle-maison",
+      "2024-01-18-questions.19": "i-quel-chat-est-ce"
+    },
+    "concepts": {
+      "0": "c-three-ways-to-ask",
+      "1": "c-method-1-est-ce",
+      "2": "c-with-question-words-est",
+      "3": "c-method-2-rising-intonation",
+      "4": "c-method-3-inversion-formal",
+      "5": "c-the-7-essential-question",
+      "6": "c-que-vs-quoi-both",
+      "7": "c-common-question-phrases-memorize"
+    }
+  },
+  "2024-01-19-stressed-pronouns": {
+    "items": {
+      "2024-01-19-stressed-pronouns.1": "i-moi",
+      "2024-01-19-stressed-pronouns.2": "i-toi",
+      "2024-01-19-stressed-pronouns.3": "i-lui",
+      "2024-01-19-stressed-pronouns.4": "i-elle",
+      "2024-01-19-stressed-pronouns.5": "i-nous",
+      "2024-01-19-stressed-pronouns.6": "i-vous",
+      "2024-01-19-stressed-pronouns.7": "i-eux",
+      "2024-01-19-stressed-pronouns.8": "i-elles",
+      "2024-01-19-stressed-pronouns.9": "i-avec-moi",
+      "2024-01-19-stressed-pronouns.10": "i-pour-toi",
+      "2024-01-19-stressed-pronouns.11": "i-avec-lui",
+      "2024-01-19-stressed-pronouns.12": "i-pour-eux"
+    },
+    "concepts": {
+      "0": "c-stressed-pronouns-pronoms-toniques",
+      "1": "c-when-to-use-stressed",
+      "2": "c-subject-vs-stressed"
+    }
+  },
+  "2024-01-20-although-phrases": {
+    "items": {
+      "2024-01-20-although-phrases.1": "i-bien-que-je-sois",
+      "2024-01-20-although-phrases.2": "i-bien-qu-il-fasse",
+      "2024-01-20-although-phrases.3": "i-bien-que-tu-sois",
+      "2024-01-20-although-phrases.4": "i-bien-qu-elle-soit",
+      "2024-01-20-although-phrases.5": "i-bien-qu-on-ait"
+    },
+    "concepts": {
+      "0": "c-bien-que-although-even",
+      "1": "c-showing-determination"
+    }
+  },
+  "2024-01-20-prepositions": {
+    "items": {
+      "2024-01-20-prepositions.1": "i-avec",
+      "2024-01-20-prepositions.2": "i-dans",
+      "2024-01-20-prepositions.3": "i-sur",
+      "2024-01-20-prepositions.4": "i-a",
+      "2024-01-20-prepositions.5": "i-de",
+      "2024-01-20-prepositions.6": "i-pour",
+      "2024-01-20-prepositions.7": "i-je-suis-avec-les",
+      "2024-01-20-prepositions.8": "i-le-chat-est-dans",
+      "2024-01-20-prepositions.9": "i-la-chose-est-sur",
+      "2024-01-20-prepositions.10": "i-je-veux-ca-pour",
+      "2024-01-20-prepositions.11": "i-sous",
+      "2024-01-20-prepositions.12": "i-le-chat-est-sous",
+      "2024-01-20-prepositions.13": "i-devant",
+      "2024-01-20-prepositions.14": "i-je-suis-devant-la",
+      "2024-01-20-prepositions.15": "i-derriere",
+      "2024-01-20-prepositions.16": "i-le-livre-est-derriere",
+      "2024-01-20-prepositions.17": "i-entre",
+      "2024-01-20-prepositions.18": "i-je-suis-entre-les",
+      "2024-01-20-prepositions.19": "i-je-suis-chez-pierre",
+      "2024-01-20-prepositions.20": "i-le-chat-est-chez"
+    },
+    "concepts": {
+      "0": "c-prepositions-connect-ideas",
+      "1": "c-spatial-prepositions",
+      "2": "c-relational-prepositions",
+      "3": "c-use-with-stressed-pronouns",
+      "4": "c-building-real-sentences"
+    }
+  },
+  "2024-01-21-adjectives": {
+    "items": {
+      "2024-01-21-adjectives.1": "i-j-ai-un-bon",
+      "2024-01-21-adjectives.2": "i-elle-a-une-bonne",
+      "2024-01-21-adjectives.3": "i-c-est-un-grand",
+      "2024-01-21-adjectives.4": "i-c-est-une-grande",
+      "2024-01-21-adjectives.5": "i-j-ai-un-petit",
+      "2024-01-21-adjectives.6": "i-elle-a-une-petite",
+      "2024-01-21-adjectives.7": "i-nous-avons-une-nouvelle",
+      "2024-01-21-adjectives.8": "i-il-a-un-nouveau",
+      "2024-01-21-adjectives.9": "i-c-est-un-vieux",
+      "2024-01-21-adjectives.10": "i-j-ai-une-vieille",
+      "2024-01-21-adjectives.11": "i-il-est-un-jeune",
+      "2024-01-21-adjectives.12": "i-elle-est-une-jeune",
+      "2024-01-21-adjectives.13": "i-c-est-un-beau",
+      "2024-01-21-adjectives.14": "i-nous-avons-une-belle",
+      "2024-01-21-adjectives.15": "i-j-ai-un-autre",
+      "2024-01-21-adjectives.16": "i-tu-as-une-autre"
+    },
+    "concepts": {
+      "0": "c-adjective-gender-agreement-critical",
+      "1": "c-regular-vs-irregular-forms",
+      "2": "c-same-form-both-genders",
+      "3": "c-adjective-placement"
+    }
+  },
+  "2024-01-21-before-phrases": {
+    "items": {
+      "2024-01-21-before-phrases.1": "i-avant-que-tu-partes",
+      "2024-01-21-before-phrases.2": "i-avant-qu-il-arrive",
+      "2024-01-21-before-phrases.3": "i-avant-qu-elle-vienne",
+      "2024-01-21-before-phrases.4": "i-avant-qu-on-parte",
+      "2024-01-21-before-phrases.5": "i-avant-qu-il-soit"
+    },
+    "concepts": {
+      "0": "c-avant-que-before-someone",
+      "1": "c-common-in-daily-life"
+    }
+  },
+  "2024-01-22-common-adverbs": {
+    "items": {
+      "2024-01-22-common-adverbs.1": "i-vraiment-bon",
+      "2024-01-22-common-adverbs.2": "i-serieusement-fatigue",
+      "2024-01-22-common-adverbs.3": "i-parler-lentement",
+      "2024-01-22-common-adverbs.4": "i-courir-rapidement",
+      "2024-01-22-common-adverbs.5": "i-comprendre-facilement",
+      "2024-01-22-common-adverbs.6": "i-completement-fini",
+      "2024-01-22-common-adverbs.7": "i-probablement"
+    },
+    "concepts": {
+      "0": "c-add-nuance-to-any",
+      "1": "c-most-common-adverbs"
+    }
+  },
+  "2024-01-23-common-special-forms-1": {
+    "items": {
+      "2024-01-23-common-special-forms-1.1": "i-tu-sois",
+      "2024-01-23-common-special-forms-1.2": "i-il-soit",
+      "2024-01-23-common-special-forms-1.3": "i-tu-aies",
+      "2024-01-23-common-special-forms-1.4": "i-il-ait",
+      "2024-01-23-common-special-forms-1.5": "i-tu-ailles",
+      "2024-01-23-common-special-forms-1.6": "i-il-aille",
+      "2024-01-23-common-special-forms-1.7": "i-tu-fasses",
+      "2024-01-23-common-special-forms-1.8": "i-il-fasse"
+    },
+    "concepts": {
+      "0": "c-why-these-forms-exist",
+      "1": "c-where-you-can-use",
+      "2": "c-where-you-cannot-use",
+      "3": "c-the-trigger-look-for"
+    }
+  },
+  "2024-01-23-unit2-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-01-24-common-special-forms-2": {
+    "items": {
+      "2024-01-24-common-special-forms-2.1": "i-tu-viennes",
+      "2024-01-24-common-special-forms-2.2": "i-il-vienne",
+      "2024-01-24-common-special-forms-2.3": "i-tu-partes",
+      "2024-01-24-common-special-forms-2.4": "i-il-parte",
+      "2024-01-24-common-special-forms-2.5": "i-tu-puisses",
+      "2024-01-24-common-special-forms-2.6": "i-il-puisse",
+      "2024-01-24-common-special-forms-2.7": "i-tu-saches",
+      "2024-01-24-common-special-forms-2.8": "i-elle-sache",
+      "2024-01-24-common-special-forms-2.9": "i-tu-comprennes",
+      "2024-01-24-common-special-forms-2.10": "i-il-comprenne"
+    },
+    "concepts": {
+      "0": "c-more-verbs-that-change",
+      "1": "c-when-to-use-vs",
+      "2": "c-the-trigger-look-for"
+    }
+  },
+  "2024-01-24-unit2-exam": {
+    "items": {
+      "2024-01-24-unit2-exam.1": "i-ce-livre",
+      "2024-01-24-unit2-exam.2": "i-cette-maison",
+      "2024-01-24-unit2-exam.3": "i-ces-chats",
+      "2024-01-24-unit2-exam.4": "i-j-ai-ce-chat",
+      "2024-01-24-unit2-exam.5": "i-c-est-ca",
+      "2024-01-24-unit2-exam.6": "i-ou",
+      "2024-01-24-unit2-exam.7": "i-que",
+      "2024-01-24-unit2-exam.8": "i-qui",
+      "2024-01-24-unit2-exam.9": "i-combien",
+      "2024-01-24-unit2-exam.10": "i-ou-est-le-chat",
+      "2024-01-24-unit2-exam.11": "i-combien-est-ce",
+      "2024-01-24-unit2-exam.12": "i-moi",
+      "2024-01-24-unit2-exam.13": "i-toi",
+      "2024-01-24-unit2-exam.14": "i-lui",
+      "2024-01-24-unit2-exam.15": "i-avec-moi",
+      "2024-01-24-unit2-exam.16": "i-pour-toi",
+      "2024-01-24-unit2-exam.17": "i-avec-lui",
+      "2024-01-24-unit2-exam.18": "i-le-chat-est-dans",
+      "2024-01-24-unit2-exam.19": "i-bon",
+      "2024-01-24-unit2-exam.20": "i-grand",
+      "2024-01-24-unit2-exam.21": "i-petit",
+      "2024-01-24-unit2-exam.22": "i-un-bon-livre",
+      "2024-01-24-unit2-exam.23": "i-je-veux-ca-pour",
+      "2024-01-24-unit2-exam.24": "i-elle-est-avec-moi",
+      "2024-01-24-unit2-exam.25": "i-j-ai-une-petite",
+      "2024-01-24-unit2-exam.26": "i-ou-est-le-grand",
+      "2024-01-24-unit2-exam.27": "i-je-veux",
+      "2024-01-24-unit2-exam.28": "i-tu-peux",
+      "2024-01-24-unit2-exam.29": "i-je-vois",
+      "2024-01-24-unit2-exam.30": "i-elle-voit",
+      "2024-01-24-unit2-exam.31": "i-je-veux-voir-ca",
+      "2024-01-24-unit2-exam.32": "i-tu-peux-voir-la",
+      "2024-01-24-unit2-exam.33": "i-elles-sont-chez-laduree"
+    },
+    "concepts": {}
+  },
+  "2024-01-25-contractions": {
+    "items": {
+      "2024-01-25-contractions.1": "i-du-chat",
+      "2024-01-25-contractions.2": "i-de-la-maison",
+      "2024-01-25-contractions.3": "i-des-livres",
+      "2024-01-25-contractions.4": "i-de-l-ami",
+      "2024-01-25-contractions.5": "i-au-cafe",
+      "2024-01-25-contractions.6": "i-a-la-maison",
+      "2024-01-25-contractions.7": "i-aux-amis",
+      "2024-01-25-contractions.8": "i-je-suis-au-cafe",
+      "2024-01-25-contractions.9": "i-le-chat-est-a",
+      "2024-01-25-contractions.10": "i-je-suis-avec-les"
+    },
+    "concepts": {
+      "0": "c-contractions-with-de-of",
+      "1": "c-contractions-with-a-to",
+      "2": "c-partitive-articles-some-any",
+      "3": "c-before-vowels"
+    }
+  },
+  "2024-01-25-emotion-phrases": {
+    "items": {
+      "2024-01-25-emotion-phrases.1": "i-je-suis-content-que",
+      "2024-01-25-emotion-phrases.2": "i-je-suis-triste-que",
+      "2024-01-25-emotion-phrases.3": "i-j-ai-peur-qu",
+      "2024-01-25-emotion-phrases.4": "i-je-suis-desole-que",
+      "2024-01-25-emotion-phrases.5": "i-je-suis-surpris-que",
+      "2024-01-25-emotion-phrases.6": "i-je-regrette-que-tu"
+    },
+    "concepts": {
+      "0": "c-expressing-emotions-about-others",
+      "1": "c-common-emotion-phrases"
+    }
+  },
+  "2024-01-26-had-already-phrases": {
+    "items": {
+      "2024-01-26-had-already-phrases.1": "i-j-avais-deja-mange",
+      "2024-01-26-had-already-phrases.2": "i-j-etais-deja-parti",
+      "2024-01-26-had-already-phrases.3": "i-elle-etait-deja-partie",
+      "2024-01-26-had-already-phrases.4": "i-j-avais-deja-vu",
+      "2024-01-26-had-already-phrases.5": "i-il-avait-deja-commence",
+      "2024-01-26-had-already-phrases.6": "i-nous-avions-deja-fini"
+    },
+    "concepts": {
+      "0": "c-what-happened-first",
+      "1": "c-deja-already"
+    }
+  },
+  "2024-01-26-venir": {
+    "items": {
+      "2024-01-26-venir.1": "i-je-viens",
+      "2024-01-26-venir.2": "i-tu-viens",
+      "2024-01-26-venir.3": "i-il-vient",
+      "2024-01-26-venir.4": "i-elle-vient",
+      "2024-01-26-venir.5": "i-nous-venons",
+      "2024-01-26-venir.6": "i-vous-venez",
+      "2024-01-26-venir.7": "i-ils-viennent",
+      "2024-01-26-venir.8": "i-elles-viennent",
+      "2024-01-26-venir.9": "i-je-viens-avec-ca",
+      "2024-01-26-venir.10": "i-je-viens-de-chez",
+      "2024-01-26-venir.11": "i-il-vient-avec-son",
+      "2024-01-26-venir.12": "i-nous-venons-avec-vous",
+      "2024-01-26-venir.13": "i-qui-vient",
+      "2024-01-26-venir.14": "i-d-ou-viens-tu",
+      "2024-01-26-venir.15": "i-avec-quoi-viens-tu",
+      "2024-01-26-venir.16": "i-je-veux-venir",
+      "2024-01-26-venir.17": "i-veux-tu-venir",
+      "2024-01-26-venir.18": "i-je-veux-venir-avec",
+      "2024-01-26-venir.19": "i-peux-tu-venir",
+      "2024-01-26-venir.20": "i-je-peux-venir-a",
+      "2024-01-26-venir.21": "i-je-viens-te-voir",
+      "2024-01-26-venir.22": "i-pourquoi-viens-tu-me"
+    },
+    "concepts": {
+      "0": "c-venir-to-come",
+      "1": "c-irregular-conjugation-pattern",
+      "2": "c-composition-power",
+      "3": "c-the-re-prefix"
+    }
+  },
+  "2024-01-27-aller": {
+    "items": {
+      "2024-01-27-aller.1": "i-je-vais",
+      "2024-01-27-aller.2": "i-tu-vas",
+      "2024-01-27-aller.3": "i-il-va",
+      "2024-01-27-aller.4": "i-elle-va",
+      "2024-01-27-aller.5": "i-nous-allons",
+      "2024-01-27-aller.6": "i-vous-allez",
+      "2024-01-27-aller.7": "i-ils-vont",
+      "2024-01-27-aller.8": "i-elles-vont",
+      "2024-01-27-aller.9": "i-je-vais-avec-eux",
+      "2024-01-27-aller.10": "i-tu-vas-avec-quoi",
+      "2024-01-27-aller.11": "i-il-va-avec-moi",
+      "2024-01-27-aller.12": "i-nous-allons-avec-ma",
+      "2024-01-27-aller.13": "i-qui-est-ce-que",
+      "2024-01-27-aller.14": "i-je-veux-aller-avec",
+      "2024-01-27-aller.15": "i-peux-tu-aller",
+      "2024-01-27-aller.16": "i-je-peux-aller-avec",
+      "2024-01-27-aller.17": "i-je-vais-etre-bon",
+      "2024-01-27-aller.18": "i-qu-est-ce-que",
+      "2024-01-27-aller.19": "i-je-vais-avoir-ca"
+    },
+    "concepts": {
+      "0": "c-aller-to-go",
+      "1": "c-irregular-conjugation",
+      "2": "c-composition-power"
+    }
+  },
+  "2024-01-27-hypothetical-phrases": {
+    "items": {
+      "2024-01-27-hypothetical-phrases.1": "i-si-j-etais-riche",
+      "2024-01-27-hypothetical-phrases.2": "i-si-j-avais-de",
+      "2024-01-27-hypothetical-phrases.3": "i-si-j-etais-toi",
+      "2024-01-27-hypothetical-phrases.4": "i-si-tu-etais-ici",
+      "2024-01-27-hypothetical-phrases.5": "i-si-on-avait-le",
+      "2024-01-27-hypothetical-phrases.6": "i-je-voyagerais-le-monde"
+    },
+    "concepts": {
+      "0": "c-daydreaming-in-french",
+      "1": "c-giving-advice-si-j"
+    }
+  },
+  "2024-01-28-necessity-phrases": {
+    "items": {
+      "2024-01-28-necessity-phrases.1": "i-il-faut-que-tu",
+      "2024-01-28-necessity-phrases.2": "i-il-faut-que-tu-2",
+      "2024-01-28-necessity-phrases.3": "i-il-faut-que-j",
+      "2024-01-28-necessity-phrases.4": "i-il-faut-qu-on",
+      "2024-01-28-necessity-phrases.5": "i-il-faut-que-tu-3",
+      "2024-01-28-necessity-phrases.6": "i-il-faut-que-tu-4",
+      "2024-01-28-necessity-phrases.7": "i-il-faut-qu-elle"
+    },
+    "concepts": {
+      "0": "c-il-faut-que-directed",
+      "1": "c-parent-friend-language"
+    }
+  },
+  "2024-01-29-opinion-phrases": {
+    "items": {
+      "2024-01-29-opinion-phrases.1": "i-je-pense-qu-il",
+      "2024-01-29-opinion-phrases.2": "i-je-ne-pense-pas",
+      "2024-01-29-opinion-phrases.3": "i-je-doute-qu-elle",
+      "2024-01-29-opinion-phrases.4": "i-je-ne-crois-pas",
+      "2024-01-29-opinion-phrases.5": "i-je-ne-pense-pas-2",
+      "2024-01-29-opinion-phrases.6": "i-je-doute-que-ce"
+    },
+    "concepts": {
+      "0": "c-positive-opinion-belief",
+      "1": "c-negative-opinion-doubt",
+      "2": "c-diplomatic-communication"
+    }
+  },
+  "2024-01-29-partir": {
+    "items": {
+      "2024-01-29-partir.1": "i-je-pars",
+      "2024-01-29-partir.2": "i-tu-pars",
+      "2024-01-29-partir.3": "i-il-part",
+      "2024-01-29-partir.4": "i-elle-part",
+      "2024-01-29-partir.5": "i-nous-partons",
+      "2024-01-29-partir.6": "i-vous-partez",
+      "2024-01-29-partir.7": "i-ils-partent",
+      "2024-01-29-partir.8": "i-elles-partent",
+      "2024-01-29-partir.9": "i-je-pars-de-ca",
+      "2024-01-29-partir.10": "i-qu-est-ce-que",
+      "2024-01-29-partir.11": "i-il-part-de-ca",
+      "2024-01-29-partir.12": "i-nous-partons-de-ca",
+      "2024-01-29-partir.13": "i-qu-est-ce-que-2",
+      "2024-01-29-partir.14": "i-je-veux-partir-de",
+      "2024-01-29-partir.15": "i-peux-tu-partir",
+      "2024-01-29-partir.16": "i-je-peux-partir-de",
+      "2024-01-29-partir.17": "i-je-vais-partir-de",
+      "2024-01-29-partir.18": "i-qu-est-ce-que-3",
+      "2024-01-29-partir.19": "i-je-viens-partir-de",
+      "2024-01-29-partir.20": "i-pourquoi-viens-tu-partir"
+    },
+    "concepts": {
+      "0": "c-partir-to-leave-to",
+      "1": "c-regular-ir-conjugation",
+      "2": "c-composition-power"
+    }
+  },
+  "2024-01-30-object-pronouns": {
+    "items": {
+      "2024-01-30-object-pronouns.1": "i-il-me-voit",
+      "2024-01-30-object-pronouns.2": "i-je-te-veux",
+      "2024-01-30-object-pronouns.3": "i-elle-l-a",
+      "2024-01-30-object-pronouns.4": "i-nous-l-avons",
+      "2024-01-30-object-pronouns.5": "i-tu-nous-vois",
+      "2024-01-30-object-pronouns.6": "i-il-vous-veut",
+      "2024-01-30-object-pronouns.7": "i-je-les-ai"
+    },
+    "concepts": {
+      "0": "c-object-pronouns",
+      "1": "c-critical-placement-rule",
+      "2": "c-subject-vs-object"
+    }
+  },
+  "2024-01-30-past-regret-phrases": {
+    "items": {
+      "2024-01-30-past-regret-phrases.1": "i-si-j-avais-su",
+      "2024-01-30-past-regret-phrases.2": "i-si-j-avais-etudie",
+      "2024-01-30-past-regret-phrases.3": "i-si-j-avais-fait",
+      "2024-01-30-past-regret-phrases.4": "i-je-serais-venu",
+      "2024-01-30-past-regret-phrases.5": "i-j-aurais-reussi",
+      "2024-01-30-past-regret-phrases.6": "i-si-j-avais-pu"
+    },
+    "concepts": {
+      "0": "c-expressing-regret",
+      "1": "c-common-regret-phrases"
+    }
+  },
+  "2024-01-31-possessive-adjectives": {
+    "items": {
+      "2024-01-31-possessive-adjectives.1": "i-mon",
+      "2024-01-31-possessive-adjectives.2": "i-ma",
+      "2024-01-31-possessive-adjectives.3": "i-mes",
+      "2024-01-31-possessive-adjectives.4": "i-ton",
+      "2024-01-31-possessive-adjectives.5": "i-ta",
+      "2024-01-31-possessive-adjectives.6": "i-tes",
+      "2024-01-31-possessive-adjectives.7": "i-son",
+      "2024-01-31-possessive-adjectives.8": "i-sa",
+      "2024-01-31-possessive-adjectives.9": "i-ses",
+      "2024-01-31-possessive-adjectives.10": "i-notre",
+      "2024-01-31-possessive-adjectives.11": "i-nos",
+      "2024-01-31-possessive-adjectives.12": "i-votre",
+      "2024-01-31-possessive-adjectives.13": "i-vos",
+      "2024-01-31-possessive-adjectives.14": "i-leur",
+      "2024-01-31-possessive-adjectives.15": "i-leurs"
+    },
+    "concepts": {
+      "0": "c-possessive-adjectives-overview",
+      "1": "c-critical-rule-agreement-with",
+      "2": "c-formal-vs-informal-your",
+      "3": "c-gender-neutral-forms",
+      "4": "c-memory-trick-the-3"
+    }
+  },
+  "2024-01-31-possibility-phrases": {
+    "items": {
+      "2024-01-31-possibility-phrases.1": "i-il-est-possible-qu",
+      "2024-01-31-possibility-phrases.2": "i-peut-etre-qu-il",
+      "2024-01-31-possibility-phrases.3": "i-il-se-peut-que",
+      "2024-01-31-possibility-phrases.4": "i-il-est-possible-qu-2",
+      "2024-01-31-possibility-phrases.5": "i-peut-etre-demain",
+      "2024-01-31-possibility-phrases.6": "i-peut-etre-pas"
+    },
+    "concepts": {
+      "0": "c-il-est-possible-que",
+      "1": "c-peut-etre-maybe",
+      "2": "c-planning-and-hedging"
+    }
+  },
+  "2024-02-01-possessive-pronouns": {
+    "items": {
+      "2024-02-01-possessive-pronouns.1": "i-le-mien",
+      "2024-02-01-possessive-pronouns.2": "i-la-mienne",
+      "2024-02-01-possessive-pronouns.3": "i-le-tien",
+      "2024-02-01-possessive-pronouns.4": "i-le-leur",
+      "2024-02-01-possessive-pronouns.5": "i-la-tienne",
+      "2024-02-01-possessive-pronouns.6": "i-le-sien",
+      "2024-02-01-possessive-pronouns.7": "i-la-sienne",
+      "2024-02-01-possessive-pronouns.8": "i-le-notre",
+      "2024-02-01-possessive-pronouns.9": "i-la-notre",
+      "2024-02-01-possessive-pronouns.10": "i-le-votre",
+      "2024-02-01-possessive-pronouns.11": "i-la-votre",
+      "2024-02-01-possessive-pronouns.12": "i-la-leur"
+    },
+    "concepts": {
+      "0": "c-possessive-pronouns",
+      "1": "c-with-article",
+      "2": "c-gender-agreement"
+    }
+  },
+  "2024-02-02-combining": {
+    "items": {
+      "2024-02-02-combining.1": "i-il-l-a",
+      "2024-02-02-combining.2": "i-elle-l-a",
+      "2024-02-02-combining.3": "i-ils-les-ont",
+      "2024-02-02-combining.4": "i-c-est-le-mien",
+      "2024-02-02-combining.5": "i-c-est-le-sien",
+      "2024-02-02-combining.6": "i-c-est-le-leur",
+      "2024-02-02-combining.7": "i-est-ce-le-tien",
+      "2024-02-02-combining.8": "i-est-ce-le-sien",
+      "2024-02-02-combining.9": "i-est-ce-la-sienne",
+      "2024-02-02-combining.10": "i-je-le-veux",
+      "2024-02-02-combining.11": "i-tu-viens-avec-moi",
+      "2024-02-02-combining.12": "i-il-va-partir"
+    },
+    "concepts": {
+      "0": "c-sentence-building",
+      "1": "c-object-pronoun-placement",
+      "2": "c-possessive-constructions"
+    }
+  },
+  "2024-02-02-service-phrases": {
+    "items": {
+      "2024-02-02-service-phrases.1": "i-je-me-fais-couper",
+      "2024-02-02-service-phrases.2": "i-je-fais-reparer-ma",
+      "2024-02-02-service-phrases.3": "i-je-me-fais-maquiller",
+      "2024-02-02-service-phrases.4": "i-je-fais-nettoyer-la",
+      "2024-02-02-service-phrases.5": "i-je-me-fais-examiner",
+      "2024-02-02-service-phrases.6": "i-je-fais-construire-une"
+    },
+    "concepts": {
+      "0": "c-je-me-fais-verb",
+      "1": "c-je-fais-verb-having"
+    }
+  },
+  "2024-02-03-so-that-phrases": {
+    "items": {
+      "2024-02-03-so-that-phrases.1": "i-pour-que-tu-comprennes",
+      "2024-02-03-so-that-phrases.2": "i-pour-qu-elle-sache",
+      "2024-02-03-so-that-phrases.3": "i-pour-qu-on-puisse",
+      "2024-02-03-so-that-phrases.4": "i-pour-que-tu-sois",
+      "2024-02-03-so-that-phrases.5": "i-pour-qu-il-vienne"
+    },
+    "concepts": {
+      "0": "c-pour-que-so-that",
+      "1": "c-explaining-why-you-re"
+    }
+  },
+  "2024-02-04-unit-10-exam": {
+    "items": {
+      "2024-02-04-unit-10-exam.1": "i-sois",
+      "2024-02-04-unit-10-exam.2": "i-ait",
+      "2024-02-04-unit-10-exam.3": "i-ailles",
+      "2024-02-04-unit-10-exam.4": "i-fasses",
+      "2024-02-04-unit-10-exam.5": "i-vienne",
+      "2024-02-04-unit-10-exam.6": "i-parte",
+      "2024-02-04-unit-10-exam.7": "i-il-faut-que-tu",
+      "2024-02-04-unit-10-exam.8": "i-il-faut-qu-on",
+      "2024-02-04-unit-10-exam.9": "i-il-faut-qu-elle",
+      "2024-02-04-unit-10-exam.10": "i-il-faut-que-je",
+      "2024-02-04-unit-10-exam.11": "i-je-veux-que-tu",
+      "2024-02-04-unit-10-exam.12": "i-j-aimerais-que-tu",
+      "2024-02-04-unit-10-exam.13": "i-je-veux-qu-il",
+      "2024-02-04-unit-10-exam.14": "i-je-veux-qu-on",
+      "2024-02-04-unit-10-exam.15": "i-je-suis-content-que",
+      "2024-02-04-unit-10-exam.16": "i-j-ai-peur-qu",
+      "2024-02-04-unit-10-exam.17": "i-je-suis-desole-que",
+      "2024-02-04-unit-10-exam.18": "i-je-suis-surpris-que",
+      "2024-02-04-unit-10-exam.19": "i-je-regrette-que-tu",
+      "2024-02-04-unit-10-exam.20": "i-si-j-etais-riche",
+      "2024-02-04-unit-10-exam.21": "i-si-j-etais-toi",
+      "2024-02-04-unit-10-exam.22": "i-si-on-avait-le",
+      "2024-02-04-unit-10-exam.23": "i-si-tu-etais-la",
+      "2024-02-04-unit-10-exam.24": "i-si-j-avais-su",
+      "2024-02-04-unit-10-exam.25": "i-si-j-avais-eu",
+      "2024-02-04-unit-10-exam.26": "i-si-elle-m-avait",
+      "2024-02-04-unit-10-exam.27": "i-j-avais-deja-mange",
+      "2024-02-04-unit-10-exam.28": "i-elle-etait-deja-partie",
+      "2024-02-04-unit-10-exam.29": "i-nous-avions-deja-vu",
+      "2024-02-04-unit-10-exam.30": "i-avant-que-tu-partes",
+      "2024-02-04-unit-10-exam.31": "i-j-explique-pour-que",
+      "2024-02-04-unit-10-exam.32": "i-bien-que-ce-soit",
+      "2024-02-04-unit-10-exam.33": "i-en-mangeant-nous-parlons",
+      "2024-02-04-unit-10-exam.34": "i-il-est-possible-qu",
+      "2024-02-04-unit-10-exam.35": "i-je-suis-vraiment-content",
+      "2024-02-04-unit-10-exam.36": "i-je-me-fais-reparer",
+      "2024-02-04-unit-10-exam.37": "i-saura",
+      "2024-02-04-unit-10-exam.38": "i-soit-differente",
+      "2024-02-04-unit-10-exam.39": "i-perdu-espoir"
+    },
+    "concepts": {}
+  },
+  "2024-02-04-unit3-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-02-05-unit-10-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-02-05-unit3-exam": {
+    "items": {
+      "2024-02-05-unit3-exam.1": "i-au-cafe",
+      "2024-02-05-unit3-exam.2": "i-du-chat",
+      "2024-02-05-unit3-exam.3": "i-je-suis-a-la",
+      "2024-02-05-unit3-exam.4": "i-je-viens",
+      "2024-02-05-unit3-exam.5": "i-tu-vas",
+      "2024-02-05-unit3-exam.6": "i-il-part",
+      "2024-02-05-unit3-exam.7": "i-je-vois",
+      "2024-02-05-unit3-exam.8": "i-tu-viens-avec-moi",
+      "2024-02-05-unit3-exam.9": "i-je-le-vois",
+      "2024-02-05-unit3-exam.10": "i-elle-l-a",
+      "2024-02-05-unit3-exam.11": "i-nous-les-avons",
+      "2024-02-05-unit3-exam.12": "i-je-le-veux",
+      "2024-02-05-unit3-exam.13": "i-mon-livre",
+      "2024-02-05-unit3-exam.14": "i-ta-maison",
+      "2024-02-05-unit3-exam.15": "i-son-chat",
+      "2024-02-05-unit3-exam.16": "i-nos-livres",
+      "2024-02-05-unit3-exam.17": "i-leur-maison",
+      "2024-02-05-unit3-exam.18": "i-c-est-le-mien",
+      "2024-02-05-unit3-exam.19": "i-c-est-le-tien",
+      "2024-02-05-unit3-exam.20": "i-c-est-le-sien",
+      "2024-02-05-unit3-exam.21": "i-il-l-a",
+      "2024-02-05-unit3-exam.22": "i-j-ai-mon-chat",
+      "2024-02-05-unit3-exam.23": "i-elle-les-voit",
+      "2024-02-05-unit3-exam.24": "i-est-ce-le-tien",
+      "2024-02-05-unit3-exam.25": "i-il-va-partir",
+      "2024-02-05-unit3-exam.26": "i-je-le-veux-pour"
+    },
+    "concepts": {}
+  },
+  "2024-02-06-while-doing-phrases": {
+    "items": {
+      "2024-02-06-while-doing-phrases.1": "i-en-mangeant",
+      "2024-02-06-while-doing-phrases.2": "i-en-parlant",
+      "2024-02-06-while-doing-phrases.3": "i-en-travaillant",
+      "2024-02-06-while-doing-phrases.4": "i-en-ecoutant",
+      "2024-02-06-while-doing-phrases.5": "i-en-marchant",
+      "2024-02-06-while-doing-phrases.6": "i-en-pratiquant"
+    },
+    "concepts": {
+      "0": "c-en-ant-while-doing",
+      "1": "c-common-uses"
+    }
+  },
+  "2024-02-07-wish-phrases": {
+    "items": {
+      "2024-02-07-wish-phrases.1": "i-je-veux-que-tu",
+      "2024-02-07-wish-phrases.2": "i-je-veux-qu-il",
+      "2024-02-07-wish-phrases.3": "i-je-veux-que-tu-2",
+      "2024-02-07-wish-phrases.4": "i-j-aimerais-que-tu",
+      "2024-02-07-wish-phrases.5": "i-je-veux-qu-on",
+      "2024-02-07-wish-phrases.6": "i-je-veux-qu-elle"
+    },
+    "concepts": {
+      "0": "c-je-veux-que-directing",
+      "1": "c-softer-version-j-aimerais"
+    }
+  },
+  "2024-02-08-age-personal-info": {
+    "items": {
+      "2024-02-08-age-personal-info.1": "i-j-ai-vingt-deux",
+      "2024-02-08-age-personal-info.2": "i-quel-age-as-tu",
+      "2024-02-08-age-personal-info.3": "i-quel-age-avez-vous",
+      "2024-02-08-age-personal-info.4": "i-elle-a-dix-huit",
+      "2024-02-08-age-personal-info.5": "i-je-suis-ne-en",
+      "2024-02-08-age-personal-info.6": "i-je-suis-nee-en",
+      "2024-02-08-age-personal-info.7": "i-je-suis-ne-a",
+      "2024-02-08-age-personal-info.8": "i-je-m-appelle-sophie",
+      "2024-02-08-age-personal-info.9": "i-en-quelle-annee-etes",
+      "2024-02-08-age-personal-info.10": "i-j-ai-trente-ans"
+    },
+    "concepts": {
+      "0": "c-french-age-expression-j",
+      "1": "c-asking-age-quel-age",
+      "2": "c-birth-information",
+      "3": "c-personal-details-integration"
+    }
+  },
+  "2024-02-09-directions-navigation": {
+    "items": {
+      "2024-02-09-directions-navigation.1": "i-j-attends",
+      "2024-02-09-directions-navigation.2": "i-tu-arrives",
+      "2024-02-09-directions-navigation.3": "i-nous-restons",
+      "2024-02-09-directions-navigation.4": "i-le-nord",
+      "2024-02-09-directions-navigation.5": "i-le-sud",
+      "2024-02-09-directions-navigation.6": "i-tournez-a-gauche",
+      "2024-02-09-directions-navigation.7": "i-tournez-a-droite",
+      "2024-02-09-directions-navigation.8": "i-j-attends-le-bus",
+      "2024-02-09-directions-navigation.9": "i-le-train-arrive-a",
+      "2024-02-09-directions-navigation.10": "i-ou-est-la-gare",
+      "2024-02-09-directions-navigation.11": "i-allez-tout-droit-puis",
+      "2024-02-09-directions-navigation.12": "i-excusez-moi-comment-aller",
+      "2024-02-09-directions-navigation.13": "i-c-est-loin",
+      "2024-02-09-directions-navigation.14": "i-c-est-a-cinq",
+      "2024-02-09-directions-navigation.15": "i-je-reste-a-paris"
+    },
+    "concepts": {
+      "0": "c-cardinal-directions",
+      "1": "c-turn-directions",
+      "2": "c-location-descriptions",
+      "3": "c-giving-directions",
+      "4": "c-asking-for-directions"
+    }
+  },
+  "2024-02-10-donner": {
+    "items": {
+      "2024-02-10-donner.1": "i-je-donne",
+      "2024-02-10-donner.2": "i-tu-donnes",
+      "2024-02-10-donner.3": "i-il-donne",
+      "2024-02-10-donner.4": "i-nous-donnons",
+      "2024-02-10-donner.5": "i-je-te-donne-le",
+      "2024-02-10-donner.6": "i-tu-me-donnes-de",
+      "2024-02-10-donner.7": "i-elle-donne-de-l",
+      "2024-02-10-donner.8": "i-tu-peux-me-donner",
+      "2024-02-10-donner.9": "i-je-te-donne-rendez",
+      "2024-02-10-donner.10": "i-ils-me-donnent-l"
+    },
+    "concepts": {
+      "0": "c-donner-to-give",
+      "1": "c-regular-er-conjugation",
+      "2": "c-direct-and-indirect-objects",
+      "3": "c-common-expressions"
+    }
+  },
+  "2024-02-11-perception-verbs": {
+    "items": {
+      "2024-02-11-perception-verbs.1": "i-j-ecoute",
+      "2024-02-11-perception-verbs.2": "i-tu-ecoutes",
+      "2024-02-11-perception-verbs.3": "i-nous-ecoutons",
+      "2024-02-11-perception-verbs.4": "i-je-regarde",
+      "2024-02-11-perception-verbs.5": "i-il-regarde",
+      "2024-02-11-perception-verbs.6": "i-vous-regardez",
+      "2024-02-11-perception-verbs.7": "i-j-ecoute-de-la",
+      "2024-02-11-perception-verbs.8": "i-je-regarde-la-tele",
+      "2024-02-11-perception-verbs.9": "i-qu-est-ce-que",
+      "2024-02-11-perception-verbs.10": "i-qu-est-ce-que-2",
+      "2024-02-11-perception-verbs.11": "i-je-regarde-des-films",
+      "2024-02-11-perception-verbs.12": "i-ecoute-le-professeur",
+      "2024-02-11-perception-verbs.13": "i-je-trouve-que-c",
+      "2024-02-11-perception-verbs.14": "i-comment-tu-trouves-ca"
+    },
+    "concepts": {
+      "0": "c-ecouter-to-listen-rank",
+      "1": "c-regarder-to-watch-to",
+      "2": "c-beyond-commands",
+      "3": "c-perception-integration"
+    }
+  },
+  "2024-02-13-search-and-find": {
+    "items": {
+      "2024-02-13-search-and-find.1": "i-je-cherche",
+      "2024-02-13-search-and-find.2": "i-tu-cherches",
+      "2024-02-13-search-and-find.3": "i-nous-cherchons",
+      "2024-02-13-search-and-find.4": "i-je-trouve",
+      "2024-02-13-search-and-find.5": "i-elle-trouve",
+      "2024-02-13-search-and-find.6": "i-ils-trouvent",
+      "2024-02-13-search-and-find.7": "i-je-cherche-mes-cles",
+      "2024-02-13-search-and-find.8": "i-qu-est-ce-que",
+      "2024-02-13-search-and-find.9": "i-j-ai-trouve",
+      "2024-02-13-search-and-find.10": "i-je-trouve-que-c",
+      "2024-02-13-search-and-find.11": "i-je-cherche-du-travail",
+      "2024-02-13-search-and-find.12": "i-tu-as-trouve-ton",
+      "2024-02-13-search-and-find.13": "i-tu-trouves-ca-comment",
+      "2024-02-13-search-and-find.14": "i-je-ne-peux-pas"
+    },
+    "concepts": {
+      "0": "c-chercher-to-look-for",
+      "1": "c-trouver-to-find-rank",
+      "2": "c-the-perfect-sequence",
+      "3": "c-extended-meanings"
+    }
+  },
+  "2024-02-14-social-situations": {
+    "items": {
+      "2024-02-14-social-situations.1": "i-j-attends",
+      "2024-02-14-social-situations.2": "i-tu-attends",
+      "2024-02-14-social-situations.3": "i-elle-attend",
+      "2024-02-14-social-situations.4": "i-j-arrive",
+      "2024-02-14-social-situations.5": "i-il-arrive",
+      "2024-02-14-social-situations.6": "i-ils-arrivent",
+      "2024-02-14-social-situations.7": "i-je-reste",
+      "2024-02-14-social-situations.8": "i-nous-restons",
+      "2024-02-14-social-situations.9": "i-vous-restez",
+      "2024-02-14-social-situations.10": "i-j-attends-le-bus",
+      "2024-02-14-social-situations.11": "i-tu-attends-quelqu-un",
+      "2024-02-14-social-situations.12": "i-j-arrive-a-neuf",
+      "2024-02-14-social-situations.13": "i-quand-tu-arrives",
+      "2024-02-14-social-situations.14": "i-je-reste-ici",
+      "2024-02-14-social-situations.15": "i-combien-de-temps-tu"
+    },
+    "concepts": {
+      "0": "c-attendre-to-wait-rank",
+      "1": "c-arriver-to-arrive-rank",
+      "2": "c-rester-to-stay-rank",
+      "3": "c-social-coordination"
+    }
+  },
+  "2024-02-15-unit-11-exam": {
+    "items": {
+      "2024-02-15-unit-11-exam.1": "i-j-ai-vingt-deux",
+      "2024-02-15-unit-11-exam.2": "i-quel-age-avez-vous",
+      "2024-02-15-unit-11-exam.3": "i-quel-age-as-tu",
+      "2024-02-15-unit-11-exam.4": "i-je-suis-ne-en",
+      "2024-02-15-unit-11-exam.5": "i-je-suis-nee-a",
+      "2024-02-15-unit-11-exam.6": "i-je-m-appelle-sophie",
+      "2024-02-15-unit-11-exam.7": "i-je-donne",
+      "2024-02-15-unit-11-exam.8": "i-ils-donnent",
+      "2024-02-15-unit-11-exam.9": "i-je-te-donne-le",
+      "2024-02-15-unit-11-exam.10": "i-tu-peux-me-donner",
+      "2024-02-15-unit-11-exam.11": "i-donner-rendez-vous",
+      "2024-02-15-unit-11-exam.12": "i-je-dors",
+      "2024-02-15-unit-11-exam.13": "i-tu-dors-bien",
+      "2024-02-15-unit-11-exam.14": "i-je-dors-huit-heures",
+      "2024-02-15-unit-11-exam.15": "i-je-travaille",
+      "2024-02-15-unit-11-exam.16": "i-ou-travaillez-vous",
+      "2024-02-15-unit-11-exam.17": "i-je-travaille-dur",
+      "2024-02-15-unit-11-exam.18": "i-je-vis",
+      "2024-02-15-unit-11-exam.19": "i-je-vis-a-bordeaux",
+      "2024-02-15-unit-11-exam.20": "i-vivre-sa-vie",
+      "2024-02-15-unit-11-exam.21": "i-je-cherche-ma-voiture",
+      "2024-02-15-unit-11-exam.22": "i-j-ai-trouve",
+      "2024-02-15-unit-11-exam.23": "i-comment-tu-trouves-ca",
+      "2024-02-15-unit-11-exam.24": "i-je-trouve-que-c",
+      "2024-02-15-unit-11-exam.25": "i-j-ecoute-de-la",
+      "2024-02-15-unit-11-exam.26": "i-nous-regardons-des-films",
+      "2024-02-15-unit-11-exam.27": "i-qu-est-ce-que",
+      "2024-02-15-unit-11-exam.28": "i-ecoute-le-professeur",
+      "2024-02-15-unit-11-exam.29": "i-j-attends-mon-ami",
+      "2024-02-15-unit-11-exam.30": "i-a-quelle-heure-tu",
+      "2024-02-15-unit-11-exam.31": "i-le-train-arrive-a",
+      "2024-02-15-unit-11-exam.32": "i-je-reste-trois-jours",
+      "2024-02-15-unit-11-exam.33": "i-combien-de-temps-tu",
+      "2024-02-15-unit-11-exam.34": "i-j-attends-tu-arrives",
+      "2024-02-15-unit-11-exam.35": "i-tournez-a-gauche",
+      "2024-02-15-unit-11-exam.36": "i-tournez-a-droite",
+      "2024-02-15-unit-11-exam.37": "i-allez-tout-droit",
+      "2024-02-15-unit-11-exam.38": "i-ou-est-le-musee",
+      "2024-02-15-unit-11-exam.39": "i-c-est-loin",
+      "2024-02-15-unit-11-exam.40": "i-excusez-moi-ou-est",
+      "2024-02-15-unit-11-exam.41": "i-c-est-a-cinq",
+      "2024-02-15-unit-11-exam.42": "i-allez-tout-droit-puis",
+      "2024-02-15-unit-11-exam.43": "i-la-france-a-soixante",
+      "2024-02-15-unit-11-exam.44": "i-les-touristes-cherchent-des",
+      "2024-02-15-unit-11-exam.45": "i-les-artistes-francais-vivent",
+      "2024-02-15-unit-11-exam.46": "i-la-france-moderne-combine"
+    },
+    "concepts": {}
+  },
+  "2024-02-16-unit-11-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-03-15-nature-animals": {
+    "items": {
+      "2024-03-15-nature-animals.1": "i-un-oiseau",
+      "2024-03-15-nature-animals.2": "i-une-tortue",
+      "2024-03-15-nature-animals.3": "i-un-ecureuil",
+      "2024-03-15-nature-animals.4": "i-un-lapin",
+      "2024-03-15-nature-animals.5": "i-un-papillon",
+      "2024-03-15-nature-animals.6": "i-une-abeille",
+      "2024-03-15-nature-animals.7": "i-une-plante",
+      "2024-03-15-nature-animals.8": "i-le-vent",
+      "2024-03-15-nature-animals.9": "i-la-pluie",
+      "2024-03-15-nature-animals.10": "i-la-tortue-est-lente",
+      "2024-03-15-nature-animals.11": "i-l-ecureuil-est-rapide",
+      "2024-03-15-nature-animals.12": "i-l-abeille-est-petite",
+      "2024-03-15-nature-animals.13": "i-un-oiseau-bleu",
+      "2024-03-15-nature-animals.14": "i-un-papillon-jaune",
+      "2024-03-15-nature-animals.15": "i-je-vois-un-oiseau"
+    },
+    "concepts": {
+      "0": "c-animals-for-question-asking",
+      "1": "c-learning-animal-genders",
+      "2": "c-nature-elements",
+      "3": "c-combining-with-colors",
+      "4": "c-setting-up-for-questions"
+    }
+  },
+  "2024-03-15-questce-qui-que": {
+    "items": {
+      "2024-03-15-questce-qui-que.1": "i-qu-est-ce-qui",
+      "2024-03-15-questce-qui-que.2": "i-qu-est-ce-qui-2",
+      "2024-03-15-questce-qui-que.3": "i-qu-est-ce-qui-3",
+      "2024-03-15-questce-qui-que.4": "i-qu-est-ce-qui-4",
+      "2024-03-15-questce-qui-que.5": "i-qu-est-ce-qui-5",
+      "2024-03-15-questce-qui-que.6": "i-qu-est-ce-que",
+      "2024-03-15-questce-qui-que.7": "i-qu-est-ce-que-2",
+      "2024-03-15-questce-qui-que.8": "i-qu-est-ce-que-3",
+      "2024-03-15-questce-qui-que.9": "i-qu-est-ce-que-4",
+      "2024-03-15-questce-qui-que.10": "i-qu-est-ce-que-5",
+      "2024-03-15-questce-qui-que.11": "i-qu-est-ce-qui-6",
+      "2024-03-15-questce-qui-que.12": "i-qu-est-ce-que-6",
+      "2024-03-15-questce-qui-que.13": "i-qu-est-ce-qui-7",
+      "2024-03-15-questce-qui-que.14": "i-qu-est-ce-qui-8",
+      "2024-03-15-questce-qui-que.15": "i-qu-est-ce-qui-9",
+      "2024-03-15-questce-qui-que.16": "i-qu-est-ce-que-7"
+    },
+    "concepts": {
+      "0": "c-the-critical-distinction",
+      "1": "c-qu-est-ce-qui",
+      "2": "c-qu-est-ce-que",
+      "3": "c-visual-pattern-recognition",
+      "4": "c-transform-any-statement-into"
+    }
+  },
+  "2024-03-16-movement-verbs": {
+    "items": {
+      "2024-03-16-movement-verbs.1": "i-je-nage",
+      "2024-03-16-movement-verbs.2": "i-tu-nages",
+      "2024-03-16-movement-verbs.3": "i-nous-nageons",
+      "2024-03-16-movement-verbs.4": "i-je-saute",
+      "2024-03-16-movement-verbs.5": "i-ils-sautent",
+      "2024-03-16-movement-verbs.6": "i-il-vole",
+      "2024-03-16-movement-verbs.7": "i-nous-volons",
+      "2024-03-16-movement-verbs.8": "i-je-cours",
+      "2024-03-16-movement-verbs.9": "i-tu-cours",
+      "2024-03-16-movement-verbs.10": "i-il-court",
+      "2024-03-16-movement-verbs.11": "i-je-marche",
+      "2024-03-16-movement-verbs.12": "i-elle-grimpe",
+      "2024-03-16-movement-verbs.13": "i-la-tortue-nage",
+      "2024-03-16-movement-verbs.14": "i-l-oiseau-vole",
+      "2024-03-16-movement-verbs.15": "i-l-ecureuil-saute",
+      "2024-03-16-movement-verbs.16": "i-le-lapin-saute",
+      "2024-03-16-movement-verbs.17": "i-tu-cours-vite",
+      "2024-03-16-movement-verbs.18": "i-je-nage-dans-la",
+      "2024-03-16-movement-verbs.19": "i-j-ai-nage"
+    },
+    "concepts": {
+      "0": "c-six-essential-movement-verbs",
+      "1": "c-regular-er-verbs-pattern",
+      "2": "c-courir-irregular-ir-verb",
+      "3": "c-animals-movement",
+      "4": "c-works-in-all-tenses"
+    }
+  },
+  "2024-03-16-quiest-qui-que": {
+    "items": {
+      "2024-03-16-quiest-qui-que.1": "i-qui-est-ce-qui",
+      "2024-03-16-quiest-qui-que.2": "i-qui-est-ce-qui-2",
+      "2024-03-16-quiest-qui-que.3": "i-qui-est-ce-qui-3",
+      "2024-03-16-quiest-qui-que.4": "i-qui-est-ce-qui-4",
+      "2024-03-16-quiest-qui-que.5": "i-qui-est-ce-qui-5",
+      "2024-03-16-quiest-qui-que.6": "i-qui-est-ce-que",
+      "2024-03-16-quiest-qui-que.7": "i-qui-est-ce-que-2",
+      "2024-03-16-quiest-qui-que.8": "i-qui-est-ce-que-3",
+      "2024-03-16-quiest-qui-que.9": "i-qui-est-ce-que-4",
+      "2024-03-16-quiest-qui-que.10": "i-qui-est-ce-que-5",
+      "2024-03-16-quiest-qui-que.11": "i-qui-est-ce-qui-6",
+      "2024-03-16-quiest-qui-que.12": "i-qui-est-ce-qui-7",
+      "2024-03-16-quiest-qui-que.13": "i-qui-est-ce-que-6",
+      "2024-03-16-quiest-qui-que.14": "i-qui-est-ce-qui-8",
+      "2024-03-16-quiest-qui-que.15": "i-qui-est-ce-que-7"
+    },
+    "concepts": {
+      "0": "c-same-pattern-as-qu",
+      "1": "c-qui-est-ce-qui",
+      "2": "c-qui-est-ce-que",
+      "3": "c-transfer-learning-from-qu"
+    }
+  },
+  "2024-03-17-natural-phenomena": {
+    "items": {
+      "2024-03-17-natural-phenomena.1": "i-il-brille",
+      "2024-03-17-natural-phenomena.2": "i-le-soleil-brille",
+      "2024-03-17-natural-phenomena.3": "i-ils-poussent",
+      "2024-03-17-natural-phenomena.4": "i-les-plantes-poussent",
+      "2024-03-17-natural-phenomena.5": "i-les-plantes-poussent-au",
+      "2024-03-17-natural-phenomena.6": "i-il-pleut",
+      "2024-03-17-natural-phenomena.7": "i-il-a-plu",
+      "2024-03-17-natural-phenomena.8": "i-le-vent-souffle",
+      "2024-03-17-natural-phenomena.9": "i-je-rends",
+      "2024-03-17-natural-phenomena.10": "i-il-rend",
+      "2024-03-17-natural-phenomena.11": "i-ils-rendent",
+      "2024-03-17-natural-phenomena.12": "i-le-soleil-rend-l",
+      "2024-03-17-natural-phenomena.13": "i-le-froid-rend-l",
+      "2024-03-17-natural-phenomena.14": "i-la-pluie-rend-la",
+      "2024-03-17-natural-phenomena.15": "i-le-soleil-brille-dans"
+    },
+    "concepts": {
+      "0": "c-natural-process-verbs",
+      "1": "c-pleuvoir-impersonal-verb",
+      "2": "c-rendre-critical-causative-verb",
+      "3": "c-causative-pattern-rendre-adjective",
+      "4": "c-setting-up-question-patterns"
+    }
+  },
+  "2024-03-19-pourquoi-complex": {
+    "items": {
+      "2024-03-19-pourquoi-complex.1": "i-pourquoi-est-ce-que",
+      "2024-03-19-pourquoi-complex.2": "i-pourquoi-est-ce-que-2",
+      "2024-03-19-pourquoi-complex.3": "i-pourquoi-est-ce-que-3",
+      "2024-03-19-pourquoi-complex.4": "i-pourquoi-est-ce-que-4",
+      "2024-03-19-pourquoi-complex.5": "i-pourquoi-est-ce-qu",
+      "2024-03-19-pourquoi-complex.6": "i-pourquoi-est-ce-que-5",
+      "2024-03-19-pourquoi-complex.7": "i-pourquoi-est-ce-que-6",
+      "2024-03-19-pourquoi-complex.8": "i-pourquoi-est-ce-que-7",
+      "2024-03-19-pourquoi-complex.9": "i-pourquoi-est-ce-que-8",
+      "2024-03-19-pourquoi-complex.10": "i-pourquoi-est-ce-qu-2",
+      "2024-03-19-pourquoi-complex.11": "i-pourquoi-est-ce-que-9",
+      "2024-03-19-pourquoi-complex.12": "i-pourquoi-est-ce-qu-3",
+      "2024-03-19-pourquoi-complex.13": "i-pourquoi-est-ce-qu-4",
+      "2024-03-19-pourquoi-complex.14": "i-pourquoi-est-ce-que-10",
+      "2024-03-19-pourquoi-complex.15": "i-pourquoi-est-ce-que-11",
+      "2024-03-19-pourquoi-complex.16": "i-pourquoi-est-ce-qu-5",
+      "2024-03-19-pourquoi-complex.17": "i-pourquoi-est-ce-que-12",
+      "2024-03-19-pourquoi-complex.18": "i-pourquoi-est-ce-que-13"
+    },
+    "concepts": {
+      "0": "c-pourquoi-any-structure",
+      "1": "c-basic-pattern-pourquoi-est",
+      "2": "c-nature-curiosity-questions",
+      "3": "c-with-all-tenses",
+      "4": "c-infinite-composition-power"
+    }
+  },
+  "2024-03-20-comment-complex": {
+    "items": {
+      "2024-03-20-comment-complex.1": "i-comment-est-ce-qu",
+      "2024-03-20-comment-complex.2": "i-comment-est-ce-qu-2",
+      "2024-03-20-comment-complex.3": "i-comment-est-ce-qu-3",
+      "2024-03-20-comment-complex.4": "i-comment-est-ce-qu-4",
+      "2024-03-20-comment-complex.5": "i-comment-est-ce-qu-5",
+      "2024-03-20-comment-complex.6": "i-comment-est-ce-que",
+      "2024-03-20-comment-complex.7": "i-comment-est-ce-que-2",
+      "2024-03-20-comment-complex.8": "i-comment-est-ce-que-3",
+      "2024-03-20-comment-complex.9": "i-comment-est-ce-qu-6",
+      "2024-03-20-comment-complex.10": "i-comment-est-ce-que-4",
+      "2024-03-20-comment-complex.11": "i-comment-est-ce-que-5",
+      "2024-03-20-comment-complex.12": "i-comment-est-ce-qu-7",
+      "2024-03-20-comment-complex.13": "i-comment-est-ce-que-6",
+      "2024-03-20-comment-complex.14": "i-comment-nage-une-tortue",
+      "2024-03-20-comment-complex.15": "i-comment-vole-un-oiseau",
+      "2024-03-20-comment-complex.16": "i-comment-est-ce-qu-8"
+    },
+    "concepts": {
+      "0": "c-comment-est-ce-que",
+      "1": "c-animals-movement-questions",
+      "2": "c-natural-process-questions",
+      "3": "c-people-questions",
+      "4": "c-formal-inversion-introduction"
+    }
+  },
+  "2024-03-22-inversion-questions": {
+    "items": {
+      "2024-03-22-inversion-questions.1": "i-comment-fais-tu-ca",
+      "2024-03-22-inversion-questions.2": "i-ou-vas-tu",
+      "2024-03-22-inversion-questions.3": "i-quand-arrives-tu",
+      "2024-03-22-inversion-questions.4": "i-pourquoi-court-il",
+      "2024-03-22-inversion-questions.5": "i-ou-vit-elle",
+      "2024-03-22-inversion-questions.6": "i-pourquoi-a-t-il",
+      "2024-03-22-inversion-questions.7": "i-ou-va-t-elle",
+      "2024-03-22-inversion-questions.8": "i-quand-arrive-t-il",
+      "2024-03-22-inversion-questions.9": "i-pourquoi-les-nuages-sont",
+      "2024-03-22-inversion-questions.10": "i-comment-nage-une-tortue",
+      "2024-03-22-inversion-questions.11": "i-ou-vont-les-oiseaux",
+      "2024-03-22-inversion-questions.12": "i-comment-fait-on-ca",
+      "2024-03-22-inversion-questions.13": "i-quand-fleurissent-les-plantes",
+      "2024-03-22-inversion-questions.14": "i-comment-vole-un-oiseau",
+      "2024-03-22-inversion-questions.15": "i-comment-fais-tu-ca-2"
+    },
+    "concepts": {
+      "0": "c-verb-subject-inversion",
+      "1": "c-when-to-use-inversion",
+      "2": "c-the-t-liaison-trick",
+      "3": "c-with-complex-subjects",
+      "4": "c-both-forms-are-correct"
+    }
+  },
+  "2024-03-23-devoir": {
+    "items": {
+      "2024-03-23-devoir.1": "i-je-dois",
+      "2024-03-23-devoir.2": "i-tu-dois",
+      "2024-03-23-devoir.3": "i-il-doit",
+      "2024-03-23-devoir.4": "i-elle-doit",
+      "2024-03-23-devoir.5": "i-nous-devons",
+      "2024-03-23-devoir.6": "i-vous-devez",
+      "2024-03-23-devoir.7": "i-ils-doivent",
+      "2024-03-23-devoir.8": "i-elles-doivent",
+      "2024-03-23-devoir.9": "i-je-dois-faire-ca",
+      "2024-03-23-devoir.10": "i-qu-est-ce-que",
+      "2024-03-23-devoir.11": "i-il-doit-faire-ca",
+      "2024-03-23-devoir.12": "i-nous-devons-faire-ca",
+      "2024-03-23-devoir.13": "i-pourquoi-dois-tu-aller",
+      "2024-03-23-devoir.14": "i-nous-devons-aller-a",
+      "2024-03-23-devoir.15": "i-il-doit-partir-maintenant",
+      "2024-03-23-devoir.16": "i-quand-dois-tu-partir",
+      "2024-03-23-devoir.17": "i-ils-doivent-l-avoir",
+      "2024-03-23-devoir.18": "i-qu-est-ce-que-2",
+      "2024-03-23-devoir.19": "i-je-dois-etre-bon",
+      "2024-03-23-devoir.20": "i-qu-est-ce-que-3"
+    },
+    "concepts": {
+      "0": "c-devoir-must-to-have",
+      "1": "c-key-forms-to-master",
+      "2": "c-composition-power"
+    }
+  },
+  "2024-03-23-embedded-questions": {
+    "items": {
+      "2024-03-23-embedded-questions.1": "i-je-me-demande-pourquoi",
+      "2024-03-23-embedded-questions.2": "i-je-me-demande-comment",
+      "2024-03-23-embedded-questions.3": "i-je-me-demande-pourquoi-2",
+      "2024-03-23-embedded-questions.4": "i-je-me-demande-ou",
+      "2024-03-23-embedded-questions.5": "i-je-ne-sais-pas",
+      "2024-03-23-embedded-questions.6": "i-je-ne-sais-pas-2",
+      "2024-03-23-embedded-questions.7": "i-je-ne-sais-pas-3",
+      "2024-03-23-embedded-questions.8": "i-je-ne-sais-pas-4",
+      "2024-03-23-embedded-questions.9": "i-peux-tu-me-dire",
+      "2024-03-23-embedded-questions.10": "i-peux-tu-me-dire-2",
+      "2024-03-23-embedded-questions.11": "i-peux-tu-me-dire-3",
+      "2024-03-23-embedded-questions.12": "i-tu-sais-pourquoi-il",
+      "2024-03-23-embedded-questions.13": "i-on-ne-comprend-pas",
+      "2024-03-23-embedded-questions.14": "i-je-me-demande-pourquoi-3",
+      "2024-03-23-embedded-questions.15": "i-je-ne-sais-pas-5"
+    },
+    "concepts": {
+      "0": "c-questions-inside-statements",
+      "1": "c-three-common-starters",
+      "2": "c-no-est-ce-que",
+      "3": "c-makes-questions-more-polite",
+      "4": "c-natural-conversation-flow"
+    }
+  },
+  "2024-03-24-everyday-nouns": {
+    "items": {
+      "2024-03-24-everyday-nouns.1": "i-j-ai-le-temps",
+      "2024-03-24-everyday-nouns.2": "i-la-vie-est-bonne",
+      "2024-03-24-everyday-nouns.3": "i-le-monde-est-grand",
+      "2024-03-24-everyday-nouns.4": "i-je-veux-de-l",
+      "2024-03-24-everyday-nouns.5": "i-nous-avons-du-pain",
+      "2024-03-24-everyday-nouns.6": "i-il-n-a-pas",
+      "2024-03-24-everyday-nouns.7": "i-je-dois-travailler",
+      "2024-03-24-everyday-nouns.8": "i-elle-vit-dans-la",
+      "2024-03-24-everyday-nouns.9": "i-la-place-est-ici",
+      "2024-03-24-everyday-nouns.10": "i-je-vois-la-rue",
+      "2024-03-24-everyday-nouns.11": "i-le-pain-est-sur",
+      "2024-03-24-everyday-nouns.12": "i-je-l-ai-dans",
+      "2024-03-24-everyday-nouns.13": "i-mon-nom-est-marc",
+      "2024-03-24-everyday-nouns.14": "i-la-porte-est-la",
+      "2024-03-24-everyday-nouns.15": "i-tout-le-monde-est",
+      "2024-03-24-everyday-nouns.16": "i-je-ne-vois-personne",
+      "2024-03-24-everyday-nouns.17": "i-je-veux-payer-avec",
+      "2024-03-24-everyday-nouns.18": "i-j-ai-des-especes",
+      "2024-03-24-everyday-nouns.19": "i-nous-voulons-une-carafe",
+      "2024-03-24-everyday-nouns.20": "i-l-addition-s-il",
+      "2024-03-24-everyday-nouns.21": "i-je-vois-quelqu-un",
+      "2024-03-24-everyday-nouns.22": "i-je-veux-quelque-chose",
+      "2024-03-24-everyday-nouns.23": "i-quelqu-un-a-le"
+    },
+    "concepts": {
+      "0": "c-abstract-vs-concrete-nouns",
+      "1": "c-using-in-real-conversations",
+      "2": "c-remember-the-gender"
+    }
+  },
+  "2024-03-24-rhetorical-negative": {
+    "items": {
+      "2024-03-24-rhetorical-negative.1": "i-n-est-ce-pas",
+      "2024-03-24-rhetorical-negative.2": "i-n-est-ce-pas-2",
+      "2024-03-24-rhetorical-negative.3": "i-n-es-tu-pas",
+      "2024-03-24-rhetorical-negative.4": "i-n-as-tu-pas",
+      "2024-03-24-rhetorical-negative.5": "i-ne-veux-tu-pas",
+      "2024-03-24-rhetorical-negative.6": "i-comment-ne-pas-aimer",
+      "2024-03-24-rhetorical-negative.7": "i-qui-ne-voudrait-pas",
+      "2024-03-24-rhetorical-negative.8": "i-pourquoi-ne-pas-essayer",
+      "2024-03-24-rhetorical-negative.9": "i-comment-ne-pas-aimer-2",
+      "2024-03-24-rhetorical-negative.10": "i-qui-ne-voudrait-pas-2",
+      "2024-03-24-rhetorical-negative.11": "i-n-est-ce-pas-3",
+      "2024-03-24-rhetorical-negative.12": "i-pourquoi-ne-pas-aller"
+    },
+    "concepts": {
+      "0": "c-negative-questions-for-agreement",
+      "1": "c-rhetorical-questions-for-opinion",
+      "2": "c-ne-pas-pattern-in",
+      "3": "c-persuasion-and-emphasis",
+      "4": "c-native-level-sophistication"
+    }
+  },
+  "2024-03-25-faire": {
+    "items": {
+      "2024-03-25-faire.1": "i-je-fais",
+      "2024-03-25-faire.2": "i-tu-fais",
+      "2024-03-25-faire.3": "i-il-fait",
+      "2024-03-25-faire.4": "i-elle-fait",
+      "2024-03-25-faire.5": "i-nous-faisons",
+      "2024-03-25-faire.6": "i-vous-faites",
+      "2024-03-25-faire.7": "i-ils-font",
+      "2024-03-25-faire.8": "i-elles-font",
+      "2024-03-25-faire.9": "i-je-fais-ca",
+      "2024-03-25-faire.10": "i-qu-est-ce-que",
+      "2024-03-25-faire.11": "i-il-fait-ca",
+      "2024-03-25-faire.12": "i-nous-faisons-ca",
+      "2024-03-25-faire.13": "i-que-veux-tu-faire",
+      "2024-03-25-faire.14": "i-je-veux-faire-ca",
+      "2024-03-25-faire.15": "i-peux-tu-faire-ca",
+      "2024-03-25-faire.16": "i-je-peux-faire-ca",
+      "2024-03-25-faire.17": "i-je-vais-faire-ca",
+      "2024-03-25-faire.18": "i-qu-est-ce-que-2",
+      "2024-03-25-faire.19": "i-nous-lui-faisons-voir",
+      "2024-03-25-faire.20": "i-qu-est-ce-que-3"
+    },
+    "concepts": {
+      "0": "c-faire-to-do-make",
+      "1": "c-irregular-pattern",
+      "2": "c-composition-power"
+    }
+  },
+  "2024-03-25-multi-clause-questions": {
+    "items": {
+      "2024-03-25-multi-clause-questions.1": "i-pourquoi-est-ce-qu",
+      "2024-03-25-multi-clause-questions.2": "i-pourquoi-est-ce-qu-2",
+      "2024-03-25-multi-clause-questions.3": "i-pourquoi-est-ce-que",
+      "2024-03-25-multi-clause-questions.4": "i-comment-est-ce-que",
+      "2024-03-25-multi-clause-questions.5": "i-pourquoi-est-ce-que-2",
+      "2024-03-25-multi-clause-questions.6": "i-pourquoi-est-ce-que-3",
+      "2024-03-25-multi-clause-questions.7": "i-comment-est-ce-que-2",
+      "2024-03-25-multi-clause-questions.8": "i-qu-est-ce-que",
+      "2024-03-25-multi-clause-questions.9": "i-qu-est-ce-qui",
+      "2024-03-25-multi-clause-questions.10": "i-pourquoi-est-ce-que-4",
+      "2024-03-25-multi-clause-questions.11": "i-pourquoi-est-ce-que-5",
+      "2024-03-25-multi-clause-questions.12": "i-pourquoi-est-ce-qu-3",
+      "2024-03-25-multi-clause-questions.13": "i-pourquoi-est-ce-que-6",
+      "2024-03-25-multi-clause-questions.14": "i-comment-est-ce-que-3"
+    },
+    "concepts": {
+      "0": "c-questions-unit-10-structures",
+      "1": "c-questions-subjunctive-phrases",
+      "2": "c-questions-opinion-phrases",
+      "3": "c-questions-conditional",
+      "4": "c-native-level-complexity"
+    }
+  },
+  "2024-03-26-location-adverbs": {
+    "items": {
+      "2024-03-26-location-adverbs.1": "i-ici",
+      "2024-03-26-location-adverbs.2": "i-la",
+      "2024-03-26-location-adverbs.3": "i-la-bas",
+      "2024-03-26-location-adverbs.4": "i-partout",
+      "2024-03-26-location-adverbs.5": "i-quelque-part",
+      "2024-03-26-location-adverbs.6": "i-nulle-part",
+      "2024-03-26-location-adverbs.7": "i-je-suis-ici",
+      "2024-03-26-location-adverbs.8": "i-le-chat-est-la",
+      "2024-03-26-location-adverbs.9": "i-le-cafe-est-la",
+      "2024-03-26-location-adverbs.10": "i-je-vais-partout",
+      "2024-03-26-location-adverbs.11": "i-je-ne-vais-jamais",
+      "2024-03-26-location-adverbs.12": "i-le-livre-est-quelque"
+    },
+    "concepts": {
+      "0": "c-basic-location",
+      "1": "c-distance-with-la-bas",
+      "2": "c-quantity-of-places",
+      "3": "c-position-in-sentence"
+    }
+  },
+  "2024-03-27-negation-2": {
+    "items": {
+      "2024-03-27-negation-2.1": "i-je-ne-peux-pas",
+      "2024-03-27-negation-2.2": "i-je-ne-veux-pas",
+      "2024-03-27-negation-2.3": "i-tu-ne-peux-pas",
+      "2024-03-27-negation-2.4": "i-il-ne-veut-pas",
+      "2024-03-27-negation-2.5": "i-je-ne-vais-pas",
+      "2024-03-27-negation-2.6": "i-elle-ne-voit-pas",
+      "2024-03-27-negation-2.7": "i-je-ne-vais-jamais",
+      "2024-03-27-negation-2.8": "i-il-n-a-jamais",
+      "2024-03-27-negation-2.9": "i-nous-ne-voulons-jamais",
+      "2024-03-27-negation-2.10": "i-je-ne-le-veux",
+      "2024-03-27-negation-2.11": "i-je-ne-peux-pas-2",
+      "2024-03-27-negation-2.12": "i-tu-ne-veux-jamais",
+      "2024-03-27-negation-2.13": "i-ils-ne-sont-pas",
+      "2024-03-27-negation-2.14": "i-nous-n-allons-pas",
+      "2024-03-27-negation-2.15": "i-elle-ne-voit-jamais",
+      "2024-03-27-negation-2.16": "i-tu-ne-peux-pas-2",
+      "2024-03-27-negation-2.17": "i-il-ne-fait-jamais",
+      "2024-03-27-negation-2.18": "i-nous-ne-faisons-pas"
+    },
+    "concepts": {
+      "0": "c-negating-modal-verbs",
+      "1": "c-ne-jamais-never",
+      "2": "c-with-object-pronouns",
+      "3": "c-common-patterns"
+    }
+  },
+  "2024-03-28-negation": {
+    "items": {
+      "2024-03-28-negation.1": "i-je-ne-suis-pas",
+      "2024-03-28-negation.2": "i-je-n-ai-pas",
+      "2024-03-28-negation.3": "i-tu-n-es-pas",
+      "2024-03-28-negation.4": "i-il-n-a-pas",
+      "2024-03-28-negation.5": "i-je-ne-veux-pas",
+      "2024-03-28-negation.6": "i-tu-ne-vas-pas",
+      "2024-03-28-negation.7": "i-nous-n-avons-pas",
+      "2024-03-28-negation.8": "i-je-n-ai-pas-2",
+      "2024-03-28-negation.9": "i-elle-n-est-pas",
+      "2024-03-28-negation.10": "i-je-ne-le-vois",
+      "2024-03-28-negation.11": "i-tu-n-es-pas-2",
+      "2024-03-28-negation.12": "i-ils-n-ont-pas",
+      "2024-03-28-negation.13": "i-nous-ne-sommes-pas",
+      "2024-03-28-negation.14": "i-elle-ne-veut-pas",
+      "2024-03-28-negation.15": "i-je-ne-fais-pas",
+      "2024-03-28-negation.16": "i-tu-ne-fais-pas"
+    },
+    "concepts": {
+      "0": "c-the-negation-sandwich",
+      "1": "c-ne-contracts-to-n",
+      "2": "c-works-with-all-verbs",
+      "3": "c-with-object-pronouns"
+    }
+  },
+  "2024-03-29-parler": {
+    "items": {
+      "2024-03-29-parler.1": "i-je-parle",
+      "2024-03-29-parler.2": "i-tu-parles",
+      "2024-03-29-parler.3": "i-il-parle",
+      "2024-03-29-parler.4": "i-elle-parle",
+      "2024-03-29-parler.5": "i-nous-parlons",
+      "2024-03-29-parler.6": "i-vous-parlez",
+      "2024-03-29-parler.7": "i-ils-parlent",
+      "2024-03-29-parler.8": "i-elles-parlent"
+    },
+    "concepts": {
+      "0": "c-parler-to-speak-to",
+      "1": "c-regular-er-verb-pattern",
+      "2": "c-silent-endings",
+      "3": "c-with-prepositions",
+      "4": "c-common-uses"
+    }
+  },
+  "2024-03-31-survival-phrases": {
+    "items": {
+      "2024-03-31-survival-phrases.1": "i-je-voudrais-un-livre",
+      "2024-03-31-survival-phrases.2": "i-je-voudrais-un-cafe",
+      "2024-03-31-survival-phrases.3": "i-c-est-combien-le",
+      "2024-03-31-survival-phrases.4": "i-excusez-moi",
+      "2024-03-31-survival-phrases.5": "i-s-il-vous-plait",
+      "2024-03-31-survival-phrases.6": "i-s-il-te-plait",
+      "2024-03-31-survival-phrases.7": "i-je-veux-le-livre",
+      "2024-03-31-survival-phrases.8": "i-je-veux-le-chat",
+      "2024-03-31-survival-phrases.9": "i-bonne-nuit",
+      "2024-03-31-survival-phrases.10": "i-bonne-journee",
+      "2024-03-31-survival-phrases.11": "i-ou-est-le-cafe",
+      "2024-03-31-survival-phrases.12": "i-ou-sont-les-toilettes",
+      "2024-03-31-survival-phrases.13": "i-l-addition-s-il",
+      "2024-03-31-survival-phrases.14": "i-pardon"
+    },
+    "concepts": {
+      "0": "c-polite-requests",
+      "1": "c-essential-questions",
+      "2": "c-polite-words",
+      "3": "c-restrooms-always-plural"
+    }
+  },
+  "2024-04-01-time-adverbs": {
+    "items": {
+      "2024-04-01-time-adverbs.1": "i-maintenant",
+      "2024-04-01-time-adverbs.2": "i-aujourd-hui",
+      "2024-04-01-time-adverbs.3": "i-demain",
+      "2024-04-01-time-adverbs.4": "i-hier",
+      "2024-04-01-time-adverbs.5": "i-avant-hier",
+      "2024-04-01-time-adverbs.6": "i-toujours",
+      "2024-04-01-time-adverbs.7": "i-jamais",
+      "2024-04-01-time-adverbs.8": "i-je-suis-maintenant",
+      "2024-04-01-time-adverbs.9": "i-il-va-aujourd-hui",
+      "2024-04-01-time-adverbs.10": "i-je-veux-ca-demain",
+      "2024-04-01-time-adverbs.11": "i-nous-sommes-toujours-ici",
+      "2024-04-01-time-adverbs.12": "i-pour-toujours",
+      "2024-04-01-time-adverbs.13": "i-souvent",
+      "2024-04-01-time-adverbs.14": "i-parfois",
+      "2024-04-01-time-adverbs.15": "i-de-temps-en-temps",
+      "2024-04-01-time-adverbs.16": "i-rarement",
+      "2024-04-01-time-adverbs.17": "i-tres-rarement",
+      "2024-04-01-time-adverbs.18": "i-je-vais-souvent",
+      "2024-04-01-time-adverbs.19": "i-il-parle-rarement",
+      "2024-04-01-time-adverbs.20": "i-je-mange-parfois",
+      "2024-04-01-time-adverbs.21": "i-deja",
+      "2024-04-01-time-adverbs.22": "i-encore",
+      "2024-04-01-time-adverbs.23": "i-juste",
+      "2024-04-01-time-adverbs.24": "i-je-veux-juste-ca"
+    },
+    "concepts": {
+      "0": "c-frequency-adverbs",
+      "1": "c-time-expressions",
+      "2": "c-position-in-sentence"
+    }
+  },
+  "2024-04-02-unit-4-exam": {
+    "items": {
+      "2024-04-02-unit-4-exam.1": "i-je-voudrais",
+      "2024-04-02-unit-4-exam.2": "i-s-il-vous-plait",
+      "2024-04-02-unit-4-exam.3": "i-excusez-moi",
+      "2024-04-02-unit-4-exam.4": "i-c-est-combien",
+      "2024-04-02-unit-4-exam.5": "i-merci-beaucoup",
+      "2024-04-02-unit-4-exam.6": "i-je-fais",
+      "2024-04-02-unit-4-exam.7": "i-tu-fais",
+      "2024-04-02-unit-4-exam.8": "i-nous-faisons",
+      "2024-04-02-unit-4-exam.9": "i-qu-est-ce-que",
+      "2024-04-02-unit-4-exam.10": "i-je-dois",
+      "2024-04-02-unit-4-exam.11": "i-tu-dois",
+      "2024-04-02-unit-4-exam.12": "i-nous-devons",
+      "2024-04-02-unit-4-exam.13": "i-je-dois-partir",
+      "2024-04-02-unit-4-exam.14": "i-je-parle",
+      "2024-04-02-unit-4-exam.15": "i-tu-parles",
+      "2024-04-02-unit-4-exam.16": "i-nous-parlons",
+      "2024-04-02-unit-4-exam.17": "i-je-parle-francais",
+      "2024-04-02-unit-4-exam.18": "i-je-cherche",
+      "2024-04-02-unit-4-exam.19": "i-je-trouve",
+      "2024-04-02-unit-4-exam.20": "i-je-cherche-le-livre",
+      "2024-04-02-unit-4-exam.21": "i-ne-pas",
+      "2024-04-02-unit-4-exam.22": "i-je-ne-veux-pas",
+      "2024-04-02-unit-4-exam.23": "i-il-ne-parle-pas",
+      "2024-04-02-unit-4-exam.24": "i-nous-ne-pouvons-pas",
+      "2024-04-02-unit-4-exam.25": "i-je-ne-mange-jamais",
+      "2024-04-02-unit-4-exam.26": "i-maintenant",
+      "2024-04-02-unit-4-exam.27": "i-toujours",
+      "2024-04-02-unit-4-exam.28": "i-jamais",
+      "2024-04-02-unit-4-exam.29": "i-aujourd-hui",
+      "2024-04-02-unit-4-exam.30": "i-demain",
+      "2024-04-02-unit-4-exam.31": "i-deja",
+      "2024-04-02-unit-4-exam.32": "i-encore",
+      "2024-04-02-unit-4-exam.33": "i-parfois",
+      "2024-04-02-unit-4-exam.34": "i-ici",
+      "2024-04-02-unit-4-exam.35": "i-la",
+      "2024-04-02-unit-4-exam.36": "i-la-bas",
+      "2024-04-02-unit-4-exam.37": "i-je-dois-parler-francais",
+      "2024-04-02-unit-4-exam.38": "i-nous-faisons-toujours-des",
+      "2024-04-02-unit-4-exam.39": "i-elle-ne-parle-pas",
+      "2024-04-02-unit-4-exam.40": "i-je-voudrais-un-cafe",
+      "2024-04-02-unit-4-exam.41": "i-tu-ne-dois-jamais"
+    },
+    "concepts": {}
+  },
+  "2024-04-03-unit-4-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-04-04-aimer": {
+    "items": {
+      "2024-04-04-aimer.1": "i-j-aime-le-cafe",
+      "2024-04-04-aimer.2": "i-j-aime-ce-livre",
+      "2024-04-04-aimer.3": "i-tu-aimes-le-pain",
+      "2024-04-04-aimer.4": "i-tu-aimes-paris",
+      "2024-04-04-aimer.5": "i-il-aime-l-eau",
+      "2024-04-04-aimer.6": "i-elle-aime-paris",
+      "2024-04-04-aimer.7": "i-nous-aimons-ca",
+      "2024-04-04-aimer.8": "i-nous-aimons-le-cafe",
+      "2024-04-04-aimer.9": "i-vous-aimez-ca",
+      "2024-04-04-aimer.10": "i-vous-aimez-paris",
+      "2024-04-04-aimer.11": "i-ils-aiment-le-pain",
+      "2024-04-04-aimer.12": "i-ils-aiment-paris",
+      "2024-04-04-aimer.13": "i-j-aime-parler-francais",
+      "2024-04-04-aimer.14": "i-tu-aimes-aller-a",
+      "2024-04-04-aimer.15": "i-nous-aimons-travailler",
+      "2024-04-04-aimer.16": "i-je-n-aime-pas",
+      "2024-04-04-aimer.17": "i-tu-n-aimes-pas",
+      "2024-04-04-aimer.18": "i-nous-n-aimons-pas",
+      "2024-04-04-aimer.19": "i-je-t-aime",
+      "2024-04-04-aimer.20": "i-j-aime-bien-ce"
+    },
+    "concepts": {
+      "0": "c-aimer-to-like-or",
+      "1": "c-aimer-bien-to-like",
+      "2": "c-regular-er-verb-pattern",
+      "3": "c-with-people-vs-things",
+      "4": "c-with-infinitives"
+    }
+  },
+  "2024-04-05-avoir-past": {
+    "items": {
+      "2024-04-05-avoir-past.1": "i-j-avais-un-chat",
+      "2024-04-05-avoir-past.2": "i-j-avais-un-livre",
+      "2024-04-05-avoir-past.3": "i-tu-avais-un-chien",
+      "2024-04-05-avoir-past.4": "i-tu-avais-le-temps",
+      "2024-04-05-avoir-past.5": "i-il-avait-une-voiture",
+      "2024-04-05-avoir-past.6": "i-elle-avait-une-maison",
+      "2024-04-05-avoir-past.7": "i-nous-avions-un-chat",
+      "2024-04-05-avoir-past.8": "i-nous-avions-le-temps",
+      "2024-04-05-avoir-past.9": "i-vous-aviez-un-livre",
+      "2024-04-05-avoir-past.10": "i-vous-aviez-de-l",
+      "2024-04-05-avoir-past.11": "i-ils-avaient-une-maison",
+      "2024-04-05-avoir-past.12": "i-ils-avaient-des-enfants",
+      "2024-04-05-avoir-past.13": "i-j-avais-faim",
+      "2024-04-05-avoir-past.14": "i-tu-avais-faim",
+      "2024-04-05-avoir-past.15": "i-nous-avions-faim",
+      "2024-04-05-avoir-past.16": "i-tu-avais-raison",
+      "2024-04-05-avoir-past.17": "i-je-n-avais-pas",
+      "2024-04-05-avoir-past.18": "i-tu-n-avais-pas",
+      "2024-04-05-avoir-past.19": "i-il-n-avait-pas",
+      "2024-04-05-avoir-past.20": "i-nous-n-avions-pas"
+    },
+    "concepts": {
+      "0": "c-past-tense-imperfect-imparfait",
+      "1": "c-avais-had-singular",
+      "2": "c-avait-had-third-person",
+      "3": "c-avions-aviez-avaient-had",
+      "4": "c-common-expressions-with-avoir"
+    }
+  },
+  "2024-04-06-boire": {
+    "items": {
+      "2024-04-06-boire.1": "i-je-bois-du-cafe",
+      "2024-04-06-boire.2": "i-je-bois-de-l",
+      "2024-04-06-boire.3": "i-tu-bois-du-the",
+      "2024-04-06-boire.4": "i-tu-bois-du-vin",
+      "2024-04-06-boire.5": "i-il-boit-de-la",
+      "2024-04-06-boire.6": "i-elle-boit-du-jus",
+      "2024-04-06-boire.7": "i-nous-buvons-de-l",
+      "2024-04-06-boire.8": "i-nous-buvons-du-cafe",
+      "2024-04-06-boire.9": "i-vous-buvez-du-vin",
+      "2024-04-06-boire.10": "i-vous-buvez-de-l",
+      "2024-04-06-boire.11": "i-ils-boivent-de-la",
+      "2024-04-06-boire.12": "i-ils-boivent-du-the",
+      "2024-04-06-boire.13": "i-je-ne-bois-pas",
+      "2024-04-06-boire.14": "i-tu-ne-bois-pas",
+      "2024-04-06-boire.15": "i-nous-ne-buvons-pas",
+      "2024-04-06-boire.16": "i-j-aime-boire-du",
+      "2024-04-06-boire.17": "i-je-veux-boire-de",
+      "2024-04-06-boire.18": "i-qu-est-ce-que",
+      "2024-04-06-boire.19": "i-j-ai-bu",
+      "2024-04-06-boire.20": "i-j-ai-bu-du",
+      "2024-04-06-boire.21": "i-tu-as-bu-de",
+      "2024-04-06-boire.22": "i-il-a-bu-du",
+      "2024-04-06-boire.23": "i-elle-a-bu-du",
+      "2024-04-06-boire.24": "i-nous-avons-bu-de",
+      "2024-04-06-boire.25": "i-vous-avez-bu-du",
+      "2024-04-06-boire.26": "i-ils-ont-bu-de",
+      "2024-04-06-boire.27": "i-je-n-ai-pas",
+      "2024-04-06-boire.28": "i-nous-n-avons-pas"
+    },
+    "concepts": {
+      "0": "c-boire-to-drink",
+      "1": "c-irregular-verb-changes-stem",
+      "2": "c-passe-compose-past-tense",
+      "3": "c-past-participle-bu-irregular",
+      "4": "c-with-drink-nouns"
+    }
+  },
+  "2024-04-07-comparisons-slang": {
+    "items": {
+      "2024-04-07-comparisons-slang.1": "i-c-est-ouf",
+      "2024-04-07-comparisons-slang.2": "i-c-est-chelou",
+      "2024-04-07-comparisons-slang.3": "i-c-est-genial",
+      "2024-04-07-comparisons-slang.4": "i-c-est-nul",
+      "2024-04-07-comparisons-slang.5": "i-c-est-cool",
+      "2024-04-07-comparisons-slang.6": "i-c-est-vachement-bon",
+      "2024-04-07-comparisons-slang.7": "i-c-est-hyper-bon",
+      "2024-04-07-comparisons-slang.8": "i-c-est-trop-bien",
+      "2024-04-07-comparisons-slang.9": "i-c-est-malade",
+      "2024-04-07-comparisons-slang.10": "i-c-est-capot",
+      "2024-04-07-comparisons-slang.11": "i-c-est-le-fun",
+      "2024-04-07-comparisons-slang.12": "i-c-est-poche",
+      "2024-04-07-comparisons-slang.13": "i-c-est-ben-correct",
+      "2024-04-07-comparisons-slang.14": "i-c-est-gnama",
+      "2024-04-07-comparisons-slang.15": "i-c-est-chaud",
+      "2024-04-07-comparisons-slang.16": "i-c-est-grave",
+      "2024-04-07-comparisons-slang.17": "i-c-est-top",
+      "2024-04-07-comparisons-slang.18": "i-c-est-mortel",
+      "2024-04-07-comparisons-slang.19": "i-c-est-dingue"
+    },
+    "concepts": {
+      "0": "c-french-slang-france",
+      "1": "c-quebec-french",
+      "2": "c-african-french",
+      "3": "c-verlan-french-slang-technique"
+    }
+  },
+  "2024-04-08-comparisons": {
+    "items": {
+      "2024-04-08-comparisons.1": "i-plus",
+      "2024-04-08-comparisons.2": "i-moins",
+      "2024-04-08-comparisons.3": "i-ce-livre-est-plus",
+      "2024-04-08-comparisons.4": "i-cette-maison-est-moins",
+      "2024-04-08-comparisons.5": "i-un-meilleur-livre",
+      "2024-04-08-comparisons.6": "i-une-meilleure-maison",
+      "2024-04-08-comparisons.7": "i-le-meilleur-livre",
+      "2024-04-08-comparisons.8": "i-la-meilleure-maison",
+      "2024-04-08-comparisons.9": "i-c-est-pire",
+      "2024-04-08-comparisons.10": "i-la-pire-chose",
+      "2024-04-08-comparisons.11": "i-c-est-trop-cher",
+      "2024-04-08-comparisons.12": "i-j-ai-trop-de",
+      "2024-04-08-comparisons.13": "i-tout-le-monde",
+      "2024-04-08-comparisons.14": "i-je-veux-tout",
+      "2024-04-08-comparisons.15": "i-le-meme-livre",
+      "2024-04-08-comparisons.16": "i-c-est-la-meme",
+      "2024-04-08-comparisons.17": "i-il-parle-mal",
+      "2024-04-08-comparisons.18": "i-c-est-meilleur"
+    },
+    "concepts": {
+      "0": "c-basic-comparisons-plus-moins",
+      "1": "c-better-and-worse-meilleur",
+      "2": "c-superlatives-the-best-the",
+      "3": "c-intensity-modifiers"
+    }
+  },
+  "2024-04-09-conditionals": {
+    "items": {
+      "2024-04-09-conditionals.1": "i-je-devrais-partir",
+      "2024-04-09-conditionals.2": "i-je-pourrais-venir",
+      "2024-04-09-conditionals.3": "i-tu-devrais-parler",
+      "2024-04-09-conditionals.4": "i-tu-pourrais-voir",
+      "2024-04-09-conditionals.5": "i-il-devrait-travailler",
+      "2024-04-09-conditionals.6": "i-elle-pourrait-le-faire",
+      "2024-04-09-conditionals.7": "i-nous-devrions-partir",
+      "2024-04-09-conditionals.8": "i-nous-pourrions-aller",
+      "2024-04-09-conditionals.9": "i-vous-devriez-venir",
+      "2024-04-09-conditionals.10": "i-vous-pourriez-voir",
+      "2024-04-09-conditionals.11": "i-ils-devraient-travailler",
+      "2024-04-09-conditionals.12": "i-ils-pourraient-venir",
+      "2024-04-09-conditionals.13": "i-je-ne-devrais-pas",
+      "2024-04-09-conditionals.14": "i-je-ne-pourrais-pas",
+      "2024-04-09-conditionals.15": "i-tu-ne-devrais-pas",
+      "2024-04-09-conditionals.16": "i-tu-ne-pourrais-pas",
+      "2024-04-09-conditionals.17": "i-nous-ne-devrions-pas",
+      "2024-04-09-conditionals.18": "i-ils-ne-pourraient-pas",
+      "2024-04-09-conditionals.19": "i-est-ce-que-je",
+      "2024-04-09-conditionals.20": "i-est-ce-que-tu"
+    },
+    "concepts": {
+      "0": "c-should-devrais-conditional-of",
+      "1": "c-could-pourrais-conditional-of",
+      "2": "c-pattern-alternating-should-could",
+      "3": "c-negation"
+    }
+  },
+  "2024-04-10-etre-past": {
+    "items": {
+      "2024-04-10-etre-past.1": "i-j-etais-ici",
+      "2024-04-10-etre-past.2": "i-j-etais-content",
+      "2024-04-10-etre-past.3": "i-tu-etais-la",
+      "2024-04-10-etre-past.4": "i-tu-etais-jeune",
+      "2024-04-10-etre-past.5": "i-il-etait-ici",
+      "2024-04-10-etre-past.6": "i-elle-etait-contente",
+      "2024-04-10-etre-past.7": "i-c-etait-bon",
+      "2024-04-10-etre-past.8": "i-c-etait-la",
+      "2024-04-10-etre-past.9": "i-nous-etions-ici",
+      "2024-04-10-etre-past.10": "i-nous-etions-contents",
+      "2024-04-10-etre-past.11": "i-vous-etiez-la",
+      "2024-04-10-etre-past.12": "i-vous-etiez-jeune",
+      "2024-04-10-etre-past.13": "i-ils-etaient-ici",
+      "2024-04-10-etre-past.14": "i-ils-etaient-contents",
+      "2024-04-10-etre-past.15": "i-je-n-etais-pas",
+      "2024-04-10-etre-past.16": "i-tu-n-etais-pas",
+      "2024-04-10-etre-past.17": "i-il-n-etait-pas",
+      "2024-04-10-etre-past.18": "i-nous-n-etions-pas",
+      "2024-04-10-etre-past.19": "i-ils-n-etaient-pas",
+      "2024-04-10-etre-past.20": "i-j-etais-a-paris"
+    },
+    "concepts": {
+      "0": "c-past-tense-imperfect-imparfait",
+      "1": "c-etait-was-singular",
+      "2": "c-etions-etiez-etaient-were",
+      "3": "c-pattern-recognition",
+      "4": "c-with-negation"
+    }
+  },
+  "2024-04-11-food-nouns": {
+    "items": {
+      "2024-04-11-food-nouns.1": "i-je-veux-de-l",
+      "2024-04-11-food-nouns.2": "i-j-aime-le-cafe",
+      "2024-04-11-food-nouns.3": "i-je-voudrais-du-pain",
+      "2024-04-11-food-nouns.4": "i-je-veux-une-baguette",
+      "2024-04-11-food-nouns.5": "i-je-voudrais-un-croissant",
+      "2024-04-11-food-nouns.6": "i-j-aime-la-pizza",
+      "2024-04-11-food-nouns.7": "i-je-veux-un-express",
+      "2024-04-11-food-nouns.8": "i-je-veux-du-the",
+      "2024-04-11-food-nouns.9": "i-le-pain-est-bon",
+      "2024-04-11-food-nouns.10": "i-j-aime-le-fromage",
+      "2024-04-11-food-nouns.11": "i-je-veux-de-la",
+      "2024-04-11-food-nouns.12": "i-j-aime-le-poulet",
+      "2024-04-11-food-nouns.13": "i-je-veux-du-poisson",
+      "2024-04-11-food-nouns.14": "i-j-aime-les-legumes",
+      "2024-04-11-food-nouns.15": "i-je-veux-une-salade",
+      "2024-04-11-food-nouns.16": "i-j-aime-les-frites",
+      "2024-04-11-food-nouns.17": "i-je-veux-des-fruits",
+      "2024-04-11-food-nouns.18": "i-j-aime-les-pommes",
+      "2024-04-11-food-nouns.19": "i-je-veux-du-riz",
+      "2024-04-11-food-nouns.20": "i-j-aime-les-pates",
+      "2024-04-11-food-nouns.21": "i-je-veux-du-gateau",
+      "2024-04-11-food-nouns.22": "i-j-aime-la-glace",
+      "2024-04-11-food-nouns.23": "i-je-veux-du-chocolat",
+      "2024-04-11-food-nouns.24": "i-je-n-aime-pas"
+    },
+    "concepts": {
+      "0": "c-food-genders-learn-the",
+      "1": "c-using-partitive-articles",
+      "2": "c-at-the-restaurant",
+      "3": "c-with-aimer"
+    }
+  },
+  "2024-04-12-manger": {
+    "items": {
+      "2024-04-12-manger.1": "i-je-mange-du-pain",
+      "2024-04-12-manger.2": "i-je-mange-une-baguette",
+      "2024-04-12-manger.3": "i-tu-manges-de-la",
+      "2024-04-12-manger.4": "i-tu-manges-un-croissant",
+      "2024-04-12-manger.5": "i-il-mange-de-la",
+      "2024-04-12-manger.6": "i-elle-mange-du-poisson",
+      "2024-04-12-manger.7": "i-nous-mangeons-ensemble",
+      "2024-04-12-manger.8": "i-nous-mangeons-des-legumes",
+      "2024-04-12-manger.9": "i-vous-mangez-bien",
+      "2024-04-12-manger.10": "i-vous-mangez-une-salade",
+      "2024-04-12-manger.11": "i-ils-mangent-du-poulet",
+      "2024-04-12-manger.12": "i-ils-mangent-des-frites",
+      "2024-04-12-manger.13": "i-je-ne-mange-pas",
+      "2024-04-12-manger.14": "i-tu-ne-manges-pas",
+      "2024-04-12-manger.15": "i-nous-ne-mangeons-pas",
+      "2024-04-12-manger.16": "i-j-aime-manger",
+      "2024-04-12-manger.17": "i-je-veux-manger",
+      "2024-04-12-manger.18": "i-qu-est-ce-que",
+      "2024-04-12-manger.19": "i-j-ai-mange",
+      "2024-04-12-manger.20": "i-j-ai-mange-du",
+      "2024-04-12-manger.21": "i-tu-as-mange-une",
+      "2024-04-12-manger.22": "i-il-a-mange-du",
+      "2024-04-12-manger.23": "i-nous-avons-mange-ensemble",
+      "2024-04-12-manger.24": "i-vous-avez-mange-bien",
+      "2024-04-12-manger.25": "i-ils-ont-mange-du",
+      "2024-04-12-manger.26": "i-je-n-ai-pas"
+    },
+    "concepts": {
+      "0": "c-manger-to-eat",
+      "1": "c-regular-er-verb",
+      "2": "c-passe-compose-past-tense",
+      "3": "c-past-participle-mange",
+      "4": "c-with-food-nouns"
+    }
+  },
+  "2024-04-14-unit-5-exam": {
+    "items": {
+      "2024-04-14-unit-5-exam.1": "i-plus",
+      "2024-04-14-unit-5-exam.2": "i-moins",
+      "2024-04-14-unit-5-exam.3": "i-c-est-meilleur",
+      "2024-04-14-unit-5-exam.4": "i-le-meilleur-livre",
+      "2024-04-14-unit-5-exam.5": "i-trop-cher",
+      "2024-04-14-unit-5-exam.6": "i-la-meme-chose",
+      "2024-04-14-unit-5-exam.7": "i-c-est-genial",
+      "2024-04-14-unit-5-exam.8": "i-c-est-ouf",
+      "2024-04-14-unit-5-exam.9": "i-c-est-top",
+      "2024-04-14-unit-5-exam.10": "i-c-est-vachement-bon",
+      "2024-04-14-unit-5-exam.11": "i-c-est-malade",
+      "2024-04-14-unit-5-exam.12": "i-je-devrais",
+      "2024-04-14-unit-5-exam.13": "i-tu-devrais",
+      "2024-04-14-unit-5-exam.14": "i-nous-devrions-aller",
+      "2024-04-14-unit-5-exam.15": "i-je-pourrais",
+      "2024-04-14-unit-5-exam.16": "i-tu-pourrais-voir",
+      "2024-04-14-unit-5-exam.17": "i-je-ne-devrais-pas",
+      "2024-04-14-unit-5-exam.18": "i-je-voudrais",
+      "2024-04-14-unit-5-exam.19": "i-nous-voudrions-de-l",
+      "2024-04-14-unit-5-exam.20": "i-j-irais",
+      "2024-04-14-unit-5-exam.21": "i-tu-irais-la",
+      "2024-04-14-unit-5-exam.22": "i-je-ferais-ca",
+      "2024-04-14-unit-5-exam.23": "i-j-etais",
+      "2024-04-14-unit-5-exam.24": "i-tu-etais",
+      "2024-04-14-unit-5-exam.25": "i-c-etait-bon",
+      "2024-04-14-unit-5-exam.26": "i-nous-etions-ici",
+      "2024-04-14-unit-5-exam.27": "i-ils-etaient-contents",
+      "2024-04-14-unit-5-exam.28": "i-j-avais",
+      "2024-04-14-unit-5-exam.29": "i-tu-avais",
+      "2024-04-14-unit-5-exam.30": "i-j-avais-faim",
+      "2024-04-14-unit-5-exam.31": "i-nous-avions-un-chat",
+      "2024-04-14-unit-5-exam.32": "i-elle-avait-le-temps",
+      "2024-04-14-unit-5-exam.33": "i-j-aime-le-cafe",
+      "2024-04-14-unit-5-exam.34": "i-tu-aimes-le-pain",
+      "2024-04-14-unit-5-exam.35": "i-nous-aimons-la-pizza",
+      "2024-04-14-unit-5-exam.36": "i-je-t-aime",
+      "2024-04-14-unit-5-exam.37": "i-je-mange",
+      "2024-04-14-unit-5-exam.38": "i-tu-manges",
+      "2024-04-14-unit-5-exam.39": "i-nous-mangeons",
+      "2024-04-14-unit-5-exam.40": "i-j-ai-mange",
+      "2024-04-14-unit-5-exam.41": "i-nous-avons-mange-du",
+      "2024-04-14-unit-5-exam.42": "i-je-bois",
+      "2024-04-14-unit-5-exam.43": "i-tu-bois",
+      "2024-04-14-unit-5-exam.44": "i-nous-buvons",
+      "2024-04-14-unit-5-exam.45": "i-j-ai-bu",
+      "2024-04-14-unit-5-exam.46": "i-nous-avons-bu-du",
+      "2024-04-14-unit-5-exam.47": "i-le-pain",
+      "2024-04-14-unit-5-exam.48": "i-une-baguette",
+      "2024-04-14-unit-5-exam.49": "i-un-express",
+      "2024-04-14-unit-5-exam.50": "i-la-pizza",
+      "2024-04-14-unit-5-exam.51": "i-l-eau",
+      "2024-04-14-unit-5-exam.52": "i-le-vin",
+      "2024-04-14-unit-5-exam.53": "i-je-voudrais-un-cafe",
+      "2024-04-14-unit-5-exam.54": "i-j-ai-mange-une",
+      "2024-04-14-unit-5-exam.55": "i-nous-avons-bu-du-2",
+      "2024-04-14-unit-5-exam.56": "i-ce-restaurant-est-meilleur",
+      "2024-04-14-unit-5-exam.57": "i-tu-devrais-manger-ici",
+      "2024-04-14-unit-5-exam.58": "i-j-etais-tres-content",
+      "2024-04-14-unit-5-exam.59": "i-nous-pourrions-aller-au",
+      "2024-04-14-unit-5-exam.60": "i-j-aime-manger-de",
+      "2024-04-14-unit-5-exam.61": "i-je-n-ai-pas",
+      "2024-04-14-unit-5-exam.62": "i-nous-n-avons-pas",
+      "2024-04-14-unit-5-exam.63": "i-je-n-etais-pas",
+      "2024-04-14-unit-5-exam.64": "i-je-ne-devrais-pas-2",
+      "2024-04-14-unit-5-exam.65": "i-tout-le-monde",
+      "2024-04-14-unit-5-exam.66": "i-je-n-aime-pas",
+      "2024-04-14-unit-5-exam.67": "i-nous-mangeons-ensemble",
+      "2024-04-14-unit-5-exam.68": "i-ils-etaient-au-restaurant",
+      "2024-04-14-unit-5-exam.69": "i-c-est-la-meilleure",
+      "2024-04-14-unit-5-exam.70": "i-tu-pourrais-boire-du"
+    },
+    "concepts": {}
+  },
+  "2024-04-15-unit-5-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-04-16-would-conditionals": {
+    "items": {
+      "2024-04-16-would-conditionals.1": "i-je-voudrais-de-l",
+      "2024-04-16-would-conditionals.2": "i-tu-voudrais-du-cafe",
+      "2024-04-16-would-conditionals.3": "i-elle-voudrait-ca",
+      "2024-04-16-would-conditionals.4": "i-nous-voudrions-de-l",
+      "2024-04-16-would-conditionals.5": "i-vous-voudriez-du-cafe",
+      "2024-04-16-would-conditionals.6": "i-ils-voudraient-ca",
+      "2024-04-16-would-conditionals.7": "i-j-irais-a-paris",
+      "2024-04-16-would-conditionals.8": "i-tu-irais-la",
+      "2024-04-16-would-conditionals.9": "i-il-irait",
+      "2024-04-16-would-conditionals.10": "i-nous-irions-a-paris",
+      "2024-04-16-would-conditionals.11": "i-vous-iriez-la",
+      "2024-04-16-would-conditionals.12": "i-ils-iraient",
+      "2024-04-16-would-conditionals.13": "i-je-ferais-ca",
+      "2024-04-16-would-conditionals.14": "i-tu-ferais-ca",
+      "2024-04-16-would-conditionals.15": "i-elle-ferait-ca",
+      "2024-04-16-would-conditionals.16": "i-nous-ferions-ca",
+      "2024-04-16-would-conditionals.17": "i-vous-feriez-ca",
+      "2024-04-16-would-conditionals.18": "i-ils-feraient-ca",
+      "2024-04-16-would-conditionals.19": "i-je-ne-voudrais-pas",
+      "2024-04-16-would-conditionals.20": "i-je-n-irais-pas",
+      "2024-04-16-would-conditionals.21": "i-nous-ne-ferions-pas"
+    },
+    "concepts": {
+      "0": "c-would-like-voudrais-conditional",
+      "1": "c-would-go-irais-conditional",
+      "2": "c-would-do-ferais-conditional",
+      "3": "c-negation-with-would"
+    }
+  },
+  "2024-04-17-besoin": {
+    "items": {
+      "2024-04-17-besoin.1": "i-j-ai-besoin-d",
+      "2024-04-17-besoin.2": "i-tu-as-besoin-d",
+      "2024-04-17-besoin.3": "i-j-ai-besoin-de",
+      "2024-04-17-besoin.4": "i-il-a-besoin-d",
+      "2024-04-17-besoin.5": "i-elle-a-besoin-d",
+      "2024-04-17-besoin.6": "i-nous-avons-besoin-de",
+      "2024-04-17-besoin.7": "i-vous-avez-besoin-de",
+      "2024-04-17-besoin.8": "i-ils-ont-besoin-d",
+      "2024-04-17-besoin.9": "i-j-ai-besoin-de-2",
+      "2024-04-17-besoin.10": "i-tu-as-besoin-de",
+      "2024-04-17-besoin.11": "i-j-ai-besoin-de-3",
+      "2024-04-17-besoin.12": "i-elle-a-besoin-de",
+      "2024-04-17-besoin.13": "i-nous-avons-besoin-de-2",
+      "2024-04-17-besoin.14": "i-ils-ont-besoin-de",
+      "2024-04-17-besoin.15": "i-de-quoi-tu-as",
+      "2024-04-17-besoin.16": "i-tu-as-besoin-d-2",
+      "2024-04-17-besoin.17": "i-il-a-besoin-de",
+      "2024-04-17-besoin.18": "i-je-n-ai-pas",
+      "2024-04-17-besoin.19": "i-tu-n-as-pas",
+      "2024-04-17-besoin.20": "i-elle-n-a-pas",
+      "2024-04-17-besoin.21": "i-nous-n-avons-pas",
+      "2024-04-17-besoin.22": "i-j-avais-besoin-d",
+      "2024-04-17-besoin.23": "i-tu-avais-besoin-de"
+    },
+    "concepts": {
+      "0": "c-avoir-besoin-de-to",
+      "1": "c-structure-avoir-besoin-de",
+      "2": "c-with-nouns-de-noun",
+      "3": "c-with-verbs-de-infinitive",
+      "4": "c-negative-form"
+    }
+  },
+  "2024-04-18-commander": {
+    "items": {
+      "2024-04-18-commander.1": "i-je-commande",
+      "2024-04-18-commander.2": "i-tu-commandes",
+      "2024-04-18-commander.3": "i-elle-commande",
+      "2024-04-18-commander.4": "i-nous-commandons",
+      "2024-04-18-commander.5": "i-vous-commandez",
+      "2024-04-18-commander.6": "i-ils-commandent",
+      "2024-04-18-commander.7": "i-je-commande-un-cafe",
+      "2024-04-18-commander.8": "i-tu-commandes-une-pizza",
+      "2024-04-18-commander.9": "i-il-commande-un-steak",
+      "2024-04-18-commander.10": "i-elle-commande-du-vin",
+      "2024-04-18-commander.11": "i-nous-commandons-le-menu",
+      "2024-04-18-commander.12": "i-ils-commandent-le-dessert",
+      "2024-04-18-commander.13": "i-je-voudrais-commander",
+      "2024-04-18-commander.14": "i-vous-commandez-2",
+      "2024-04-18-commander.15": "i-qu-est-ce-que",
+      "2024-04-18-commander.16": "i-je-commande-en-ligne",
+      "2024-04-18-commander.17": "i-tu-commandes-sur-amazon",
+      "2024-04-18-commander.18": "i-nous-commandons-par-telephone",
+      "2024-04-18-commander.19": "i-je-ne-commande-pas",
+      "2024-04-18-commander.20": "i-tu-ne-commandes-pas",
+      "2024-04-18-commander.21": "i-j-ai-commande",
+      "2024-04-18-commander.22": "i-nous-avons-commande-une",
+      "2024-04-18-commander.23": "i-ils-ont-commande-le"
+    },
+    "concepts": {
+      "0": "c-commander-to-order",
+      "1": "c-regular-er-verb-pattern",
+      "2": "c-restaurant-cafe-context",
+      "3": "c-online-shopping",
+      "4": "c-similar-to-demander"
+    }
+  },
+  "2024-04-19-demander": {
+    "items": {
+      "2024-04-19-demander.1": "i-je-demande",
+      "2024-04-19-demander.2": "i-tu-demandes",
+      "2024-04-19-demander.3": "i-il-demande",
+      "2024-04-19-demander.4": "i-nous-demandons",
+      "2024-04-19-demander.5": "i-vous-demandez",
+      "2024-04-19-demander.6": "i-ils-demandent",
+      "2024-04-19-demander.7": "i-je-demande-de-l",
+      "2024-04-19-demander.8": "i-tu-demandes-un-cafe",
+      "2024-04-19-demander.9": "i-elle-demande-l-addition",
+      "2024-04-19-demander.10": "i-nous-demandons-la-permission",
+      "2024-04-19-demander.11": "i-je-demande-pardon",
+      "2024-04-19-demander.12": "i-je-demande-a-marie",
+      "2024-04-19-demander.13": "i-tu-demandes-a-ton",
+      "2024-04-19-demander.14": "i-il-demande-a-sa",
+      "2024-04-19-demander.15": "i-je-te-demande",
+      "2024-04-19-demander.16": "i-tu-me-demandes",
+      "2024-04-19-demander.17": "i-il-me-demande",
+      "2024-04-19-demander.18": "i-elle-nous-demande",
+      "2024-04-19-demander.19": "i-je-demande-de-partir",
+      "2024-04-19-demander.20": "i-il-me-demande-de",
+      "2024-04-19-demander.21": "i-elle-nous-demande-d",
+      "2024-04-19-demander.22": "i-ils-te-demandent-d",
+      "2024-04-19-demander.23": "i-pourquoi-tu-demandes",
+      "2024-04-19-demander.24": "i-j-ai-demande",
+      "2024-04-19-demander.25": "i-tu-m-as-demande"
+    },
+    "concepts": {
+      "0": "c-demander-to-ask-for",
+      "1": "c-regular-er-verb-pattern",
+      "2": "c-demander-quelque-chose-to",
+      "3": "c-demander-a-quelqu-un",
+      "4": "c-demander-de-infinitive",
+      "5": "c-common-uses"
+    }
+  },
+  "2024-04-20-dire": {
+    "items": {
+      "2024-04-20-dire.1": "i-je-dis",
+      "2024-04-20-dire.2": "i-tu-dis",
+      "2024-04-20-dire.3": "i-il-dit",
+      "2024-04-20-dire.4": "i-nous-disons",
+      "2024-04-20-dire.5": "i-vous-dites",
+      "2024-04-20-dire.6": "i-ils-disent",
+      "2024-04-20-dire.7": "i-je-dis-bonjour",
+      "2024-04-20-dire.8": "i-tu-dis-la-verite",
+      "2024-04-20-dire.9": "i-elle-dit-oui",
+      "2024-04-20-dire.10": "i-nous-disons-une-histoire",
+      "2024-04-20-dire.11": "i-je-dis-que-c",
+      "2024-04-20-dire.12": "i-il-dit-qu-il",
+      "2024-04-20-dire.13": "i-ils-disent-que-c",
+      "2024-04-20-dire.14": "i-je-te-dis",
+      "2024-04-20-dire.15": "i-tu-me-dis",
+      "2024-04-20-dire.16": "i-il-me-dit",
+      "2024-04-20-dire.17": "i-elle-nous-dit",
+      "2024-04-20-dire.18": "i-c-est-a-dire",
+      "2024-04-20-dire.19": "i-on-dit-que",
+      "2024-04-20-dire.20": "i-comme-on-dit",
+      "2024-04-20-dire.21": "i-j-ai-dit",
+      "2024-04-20-dire.22": "i-tu-m-as-dit"
+    },
+    "concepts": {
+      "0": "c-dire-to-say-or",
+      "1": "c-irregular-conjugation",
+      "2": "c-dire-que-to-say",
+      "3": "c-dire-a-quelqu-un",
+      "4": "c-common-expressions"
+    }
+  },
+  "2024-04-21-mettre": {
+    "items": {
+      "2024-04-21-mettre.1": "i-je-mets",
+      "2024-04-21-mettre.2": "i-tu-mets",
+      "2024-04-21-mettre.3": "i-elle-met",
+      "2024-04-21-mettre.4": "i-nous-mettons",
+      "2024-04-21-mettre.5": "i-vous-mettez",
+      "2024-04-21-mettre.6": "i-ils-mettent",
+      "2024-04-21-mettre.7": "i-je-mets-la-table",
+      "2024-04-21-mettre.8": "i-tu-peux-mettre-la",
+      "2024-04-21-mettre.9": "i-nous-mettons-la-table",
+      "2024-04-21-mettre.10": "i-je-mets-le-livre",
+      "2024-04-21-mettre.11": "i-tu-mets-ca-ici",
+      "2024-04-21-mettre.12": "i-elle-met-son-sac",
+      "2024-04-21-mettre.13": "i-je-mets-un-manteau",
+      "2024-04-21-mettre.14": "i-tu-mets-un-pantalon",
+      "2024-04-21-mettre.15": "i-qu-est-ce-que",
+      "2024-04-21-mettre.16": "i-il-met-une-chemise",
+      "2024-04-21-mettre.17": "i-nous-mettons-nos-chaussures",
+      "2024-04-21-mettre.18": "i-ca-met-du-temps",
+      "2024-04-21-mettre.19": "i-ca-met-deux-heures",
+      "2024-04-21-mettre.20": "i-j-ai-mis",
+      "2024-04-21-mettre.21": "i-j-ai-mis-la",
+      "2024-04-21-mettre.22": "i-tu-as-mis-un"
+    },
+    "concepts": {
+      "0": "c-mettre-to-put-to",
+      "1": "c-irregular-conjugation",
+      "2": "c-mettre-la-table",
+      "3": "c-mettre-clothing",
+      "4": "c-other-common-uses"
+    }
+  },
+  "2024-04-22-prendre": {
+    "items": {
+      "2024-04-22-prendre.1": "i-je-prends",
+      "2024-04-22-prendre.2": "i-tu-prends",
+      "2024-04-22-prendre.3": "i-il-prend",
+      "2024-04-22-prendre.4": "i-nous-prenons",
+      "2024-04-22-prendre.5": "i-vous-prenez",
+      "2024-04-22-prendre.6": "i-ils-prennent",
+      "2024-04-22-prendre.7": "i-je-prends-le-bus",
+      "2024-04-22-prendre.8": "i-tu-prends-le-train",
+      "2024-04-22-prendre.9": "i-elle-prend-son-temps",
+      "2024-04-22-prendre.10": "i-je-prends-un-cafe",
+      "2024-04-22-prendre.11": "i-nous-prenons-la-voiture",
+      "2024-04-22-prendre.12": "i-j-apprends",
+      "2024-04-22-prendre.13": "i-j-apprends-le-francais",
+      "2024-04-22-prendre.14": "i-tu-apprends-vite",
+      "2024-04-22-prendre.15": "i-elle-apprend-l-anglais",
+      "2024-04-22-prendre.16": "i-nous-apprenons-ensemble",
+      "2024-04-22-prendre.17": "i-je-comprends",
+      "2024-04-22-prendre.18": "i-je-ne-comprends-pas",
+      "2024-04-22-prendre.19": "i-tu-comprends",
+      "2024-04-22-prendre.20": "i-il-comprend-le-francais",
+      "2024-04-22-prendre.21": "i-nous-comprenons-la-question",
+      "2024-04-22-prendre.22": "i-ils-ne-comprennent-pas",
+      "2024-04-22-prendre.23": "i-j-ai-pris-le",
+      "2024-04-22-prendre.24": "i-j-ai-beaucoup-appris",
+      "2024-04-22-prendre.25": "i-prends-le",
+      "2024-04-22-prendre.26": "i-prends-le-s-il"
+    },
+    "concepts": {
+      "0": "c-prendre-to-take",
+      "1": "c-irregular-conjugation",
+      "2": "c-apprendre-to-learn",
+      "3": "c-comprendre-to-understand",
+      "4": "c-common-uses-of-prendre"
+    }
+  },
+  "2024-04-23-progressive-tenses": {
+    "items": {
+      "2024-04-23-progressive-tenses.1": "i-je-suis-en-train",
+      "2024-04-23-progressive-tenses.2": "i-elle-est-en-train",
+      "2024-04-23-progressive-tenses.3": "i-nous-sommes-en-train",
+      "2024-04-23-progressive-tenses.4": "i-j-etais-en-train",
+      "2024-04-23-progressive-tenses.5": "i-ils-etaient-en-train",
+      "2024-04-23-progressive-tenses.6": "i-je-vais-manger",
+      "2024-04-23-progressive-tenses.7": "i-tu-vas-parler",
+      "2024-04-23-progressive-tenses.8": "i-nous-allons-partir",
+      "2024-04-23-progressive-tenses.9": "i-ils-vont-venir",
+      "2024-04-23-progressive-tenses.10": "i-je-parlerai",
+      "2024-04-23-progressive-tenses.11": "i-tu-mangeras",
+      "2024-04-23-progressive-tenses.12": "i-il-partira",
+      "2024-04-23-progressive-tenses.13": "i-nous-viendrons",
+      "2024-04-23-progressive-tenses.14": "i-j-irai",
+      "2024-04-23-progressive-tenses.15": "i-je-ne-peux-pas",
+      "2024-04-23-progressive-tenses.16": "i-je-ne-vais-pas",
+      "2024-04-23-progressive-tenses.17": "i-je-ne-devrais-pas",
+      "2024-04-23-progressive-tenses.18": "i-tu-ne-peux-pas",
+      "2024-04-23-progressive-tenses.19": "i-il-ne-le-fera",
+      "2024-04-23-progressive-tenses.20": "i-j-allais-partir",
+      "2024-04-23-progressive-tenses.21": "i-nous-ne-pourrons-pas"
+    },
+    "concepts": {
+      "0": "c-etre-en-train-de",
+      "1": "c-aller-infinitive-near-future",
+      "2": "c-future-tense-je-rai",
+      "3": "c-negative-modals",
+      "4": "c-j-etais-en-train"
+    }
+  },
+  "2024-04-25-top-200-nouns": {
+    "items": {
+      "2024-04-25-top-200-nouns.1": "i-une-annee",
+      "2024-04-25-top-200-nouns.2": "i-une-fois",
+      "2024-04-25-top-200-nouns.3": "i-un-moment",
+      "2024-04-25-top-200-nouns.4": "i-une-heure",
+      "2024-04-25-top-200-nouns.5": "i-une-minute",
+      "2024-04-25-top-200-nouns.6": "i-le-debut",
+      "2024-04-25-top-200-nouns.7": "i-la-fin",
+      "2024-04-25-top-200-nouns.8": "i-une-personne",
+      "2024-04-25-top-200-nouns.9": "i-ma-famille",
+      "2024-04-25-top-200-nouns.10": "i-mon-pere",
+      "2024-04-25-top-200-nouns.11": "i-ma-mere",
+      "2024-04-25-top-200-nouns.12": "i-mon-frere",
+      "2024-04-25-top-200-nouns.13": "i-ma-soeur",
+      "2024-04-25-top-200-nouns.14": "i-un-fils",
+      "2024-04-25-top-200-nouns.15": "i-une-fille",
+      "2024-04-25-top-200-nouns.16": "i-les-yeux",
+      "2024-04-25-top-200-nouns.17": "i-le-visage",
+      "2024-04-25-top-200-nouns.18": "i-le-corps",
+      "2024-04-25-top-200-nouns.19": "i-le-coeur",
+      "2024-04-25-top-200-nouns.20": "i-la-voix",
+      "2024-04-25-top-200-nouns.21": "i-une-histoire",
+      "2024-04-25-top-200-nouns.22": "i-un-probleme",
+      "2024-04-25-top-200-nouns.23": "i-une-question",
+      "2024-04-25-top-200-nouns.24": "i-la-raison",
+      "2024-04-25-top-200-nouns.25": "i-un-fait",
+      "2024-04-25-top-200-nouns.26": "i-une-partie",
+      "2024-04-25-top-200-nouns.27": "i-le-cote",
+      "2024-04-25-top-200-nouns.28": "i-j-ai-un-probleme",
+      "2024-04-25-top-200-nouns.29": "i-j-ai-une-question",
+      "2024-04-25-top-200-nouns.30": "i-c-est-une-longue",
+      "2024-04-25-top-200-nouns.31": "i-toute-ma-famille",
+      "2024-04-25-top-200-nouns.32": "i-au-debut",
+      "2024-04-25-top-200-nouns.33": "i-a-la-fin"
+    },
+    "concepts": {
+      "0": "c-time-nouns",
+      "1": "c-people-relationships",
+      "2": "c-body-parts",
+      "3": "c-abstract-concepts",
+      "4": "c-special-plurals"
+    }
+  },
+  "2024-04-26-unit-6-exam": {
+    "items": {
+      "2024-04-26-unit-6-exam.1": "i-je-suis-en-train",
+      "2024-04-26-unit-6-exam.2": "i-il-est-en-train",
+      "2024-04-26-unit-6-exam.3": "i-nous-sommes-en-train",
+      "2024-04-26-unit-6-exam.4": "i-j-etais-en-train",
+      "2024-04-26-unit-6-exam.5": "i-tu-etais-en-train",
+      "2024-04-26-unit-6-exam.6": "i-in-the-process-of",
+      "2024-04-26-unit-6-exam.7": "i-je-vais-manger",
+      "2024-04-26-unit-6-exam.8": "i-tu-vas-partir",
+      "2024-04-26-unit-6-exam.9": "i-nous-allons-voir",
+      "2024-04-26-unit-6-exam.10": "i-ils-vont-venir",
+      "2024-04-26-unit-6-exam.11": "i-je-ne-vais-pas",
+      "2024-04-26-unit-6-exam.12": "i-je-parlerai",
+      "2024-04-26-unit-6-exam.13": "i-tu-mangeras",
+      "2024-04-26-unit-6-exam.14": "i-il-ira",
+      "2024-04-26-unit-6-exam.15": "i-je-ne-peux-pas",
+      "2024-04-26-unit-6-exam.16": "i-je-ne-devrais-pas",
+      "2024-04-26-unit-6-exam.17": "i-je-dis",
+      "2024-04-26-unit-6-exam.18": "i-tu-dis",
+      "2024-04-26-unit-6-exam.19": "i-il-dit",
+      "2024-04-26-unit-6-exam.20": "i-vous-dites",
+      "2024-04-26-unit-6-exam.21": "i-je-te-dis",
+      "2024-04-26-unit-6-exam.22": "i-il-me-dit",
+      "2024-04-26-unit-6-exam.23": "i-je-prends",
+      "2024-04-26-unit-6-exam.24": "i-il-prend",
+      "2024-04-26-unit-6-exam.25": "i-nous-prenons",
+      "2024-04-26-unit-6-exam.26": "i-ils-prennent",
+      "2024-04-26-unit-6-exam.27": "i-je-comprends",
+      "2024-04-26-unit-6-exam.28": "i-tu-comprends",
+      "2024-04-26-unit-6-exam.29": "i-j-apprends",
+      "2024-04-26-unit-6-exam.30": "i-j-apprends-le-francais",
+      "2024-04-26-unit-6-exam.31": "i-je-donne",
+      "2024-04-26-unit-6-exam.32": "i-tu-donnes",
+      "2024-04-26-unit-6-exam.33": "i-donne-moi-ta-main",
+      "2024-04-26-unit-6-exam.34": "i-je-mets",
+      "2024-04-26-unit-6-exam.35": "i-il-met",
+      "2024-04-26-unit-6-exam.36": "i-nous-mettons",
+      "2024-04-26-unit-6-exam.37": "i-mettre-la-table",
+      "2024-04-26-unit-6-exam.38": "i-je-mets-un-manteau",
+      "2024-04-26-unit-6-exam.39": "i-je-demande",
+      "2024-04-26-unit-6-exam.40": "i-tu-demandes",
+      "2024-04-26-unit-6-exam.41": "i-demander-de-l-aide",
+      "2024-04-26-unit-6-exam.42": "i-je-te-demande",
+      "2024-04-26-unit-6-exam.43": "i-il-me-demande-de",
+      "2024-04-26-unit-6-exam.44": "i-je-commande",
+      "2024-04-26-unit-6-exam.45": "i-nous-commandons",
+      "2024-04-26-unit-6-exam.46": "i-commander-un-cafe",
+      "2024-04-26-unit-6-exam.47": "i-je-voudrais-commander",
+      "2024-04-26-unit-6-exam.48": "i-j-ai-besoin-de",
+      "2024-04-26-unit-6-exam.49": "i-tu-as-besoin-de",
+      "2024-04-26-unit-6-exam.50": "i-j-ai-besoin-d",
+      "2024-04-26-unit-6-exam.51": "i-j-ai-besoin-de-2",
+      "2024-04-26-unit-6-exam.52": "i-nous-avons-besoin-de",
+      "2024-04-26-unit-6-exam.53": "i-je-n-ai-pas",
+      "2024-04-26-unit-6-exam.54": "i-la-famille",
+      "2024-04-26-unit-6-exam.55": "i-le-pere",
+      "2024-04-26-unit-6-exam.56": "i-la-mere",
+      "2024-04-26-unit-6-exam.57": "i-le-frere",
+      "2024-04-26-unit-6-exam.58": "i-toute-ma-famille",
+      "2024-04-26-unit-6-exam.59": "i-la-question",
+      "2024-04-26-unit-6-exam.60": "i-la-fois",
+      "2024-04-26-unit-6-exam.61": "i-l-annee",
+      "2024-04-26-unit-6-exam.62": "i-le-moment",
+      "2024-04-26-unit-6-exam.63": "i-la-semaine",
+      "2024-04-26-unit-6-exam.64": "i-le-monde",
+      "2024-04-26-unit-6-exam.65": "i-la-ville",
+      "2024-04-26-unit-6-exam.66": "i-le-mot",
+      "2024-04-26-unit-6-exam.67": "i-je-vais-prendre-le",
+      "2024-04-26-unit-6-exam.68": "i-j-ai-besoin-d-2",
+      "2024-04-26-unit-6-exam.69": "i-nous-sommes-en-train-2",
+      "2024-04-26-unit-6-exam.70": "i-qu-est-ce-que",
+      "2024-04-26-unit-6-exam.71": "i-il-ne-comprend-pas",
+      "2024-04-26-unit-6-exam.72": "i-je-vais-demander-a",
+      "2024-04-26-unit-6-exam.73": "i-tu-me-dis-toujours",
+      "2024-04-26-unit-6-exam.74": "i-ca-prend-trois-heures",
+      "2024-04-26-unit-6-exam.75": "i-la-premiere-fois",
+      "2024-04-26-unit-6-exam.76": "i-en-ce-moment"
+    },
+    "concepts": {}
+  },
+  "2024-04-27-unit-6-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-04-28-comparison-modifiers": {
+    "items": {
+      "2024-04-28-comparison-modifiers.1": "comparison-modifiers-1",
+      "2024-04-28-comparison-modifiers.2": "comparison-modifiers-2",
+      "2024-04-28-comparison-modifiers.3": "comparison-modifiers-3",
+      "2024-04-28-comparison-modifiers.4": "comparison-modifiers-4",
+      "2024-04-28-comparison-modifiers.5": "comparison-modifiers-5",
+      "2024-04-28-comparison-modifiers.6": "comparison-modifiers-6"
+    },
+    "concepts": {
+      "0": "c-tout-all-everything",
+      "1": "c-tout-le-monde-everyone",
+      "2": "c-meme-same-even",
+      "3": "c-mal-badly-poorly",
+      "4": "c-complete-comparison-toolkit"
+    }
+  },
+  "2024-04-29-comprendre": {
+    "items": {
+      "2024-04-29-comprendre.1": "i-je-comprends",
+      "2024-04-29-comprendre.2": "i-tu-comprends",
+      "2024-04-29-comprendre.3": "i-il-comprend",
+      "2024-04-29-comprendre.4": "i-elle-comprend",
+      "2024-04-29-comprendre.5": "i-nous-comprenons",
+      "2024-04-29-comprendre.6": "i-vous-comprenez",
+      "2024-04-29-comprendre.7": "i-ils-comprennent",
+      "2024-04-29-comprendre.8": "i-elles-comprennent"
+    },
+    "concepts": {
+      "0": "c-comprendre-to-understand",
+      "1": "c-same-pattern-as-prendre",
+      "2": "c-most-common-use-je",
+      "3": "c-comprendre-noun",
+      "4": "c-building-on-prendre-knowledge"
+    }
+  },
+  "2024-04-30-connaitre": {
+    "items": {
+      "2024-04-30-connaitre.1": "i-je-connais",
+      "2024-04-30-connaitre.2": "i-tu-connais",
+      "2024-04-30-connaitre.3": "i-il-connait",
+      "2024-04-30-connaitre.4": "i-elle-connait",
+      "2024-04-30-connaitre.5": "i-nous-connaissons",
+      "2024-04-30-connaitre.6": "i-vous-connaissez",
+      "2024-04-30-connaitre.7": "i-ils-connaissent",
+      "2024-04-30-connaitre.8": "i-elles-connaissent"
+    },
+    "concepts": {
+      "0": "c-connaitre-to-know-people",
+      "1": "c-irregular-conjugation-with-i",
+      "2": "c-the-key-distinction-savoir",
+      "3": "c-never-use-connaitre-infinitive",
+      "4": "c-common-uses"
+    }
+  },
+  "2024-05-01-croire": {
+    "items": {
+      "2024-05-01-croire.1": "i-je-crois",
+      "2024-05-01-croire.2": "i-tu-crois",
+      "2024-05-01-croire.3": "i-il-croit",
+      "2024-05-01-croire.4": "i-elle-croit",
+      "2024-05-01-croire.5": "i-nous-croyons",
+      "2024-05-01-croire.6": "i-vous-croyez",
+      "2024-05-01-croire.7": "i-ils-croient",
+      "2024-05-01-croire.8": "i-elles-croient"
+    },
+    "concepts": {
+      "0": "c-croire-to-believe-to",
+      "1": "c-irregular-conjugation",
+      "2": "c-croire-que-to-believe",
+      "3": "c-croire-a-croire-en",
+      "4": "c-penser-vs-croire"
+    }
+  },
+  "2024-05-02-discourse-markers": {
+    "items": {
+      "2024-05-02-discourse-markers.1": "discourse-markers-1",
+      "2024-05-02-discourse-markers.2": "discourse-markers-2",
+      "2024-05-02-discourse-markers.3": "discourse-markers-3",
+      "2024-05-02-discourse-markers.4": "discourse-markers-4",
+      "2024-05-02-discourse-markers.5": "discourse-markers-5",
+      "2024-05-02-discourse-markers.6": "discourse-markers-6",
+      "2024-05-02-discourse-markers.7": "discourse-markers-7",
+      "2024-05-02-discourse-markers.8": "discourse-markers-8",
+      "2024-05-02-discourse-markers.9": "discourse-markers-9",
+      "2024-05-02-discourse-markers.10": "discourse-markers-10",
+      "2024-05-02-discourse-markers.11": "discourse-markers-11",
+      "2024-05-02-discourse-markers.12": "discourse-markers-12",
+      "2024-05-02-discourse-markers.13": "discourse-markers-13",
+      "2024-05-02-discourse-markers.14": "discourse-markers-17",
+      "2024-05-02-discourse-markers.15": "discourse-markers-18"
+    },
+    "concepts": {
+      "0": "c-what-are-discourse-markers",
+      "1": "c-donc-so-therefore",
+      "2": "c-en-fait-in-fact",
+      "3": "c-bah-well",
+      "4": "c-quoi-like-you-know",
+      "5": "c-more-discourse-markers"
+    }
+  },
+  "2024-05-03-knowledge-nouns": {
+    "items": {
+      "2024-05-03-knowledge-nouns.1": "knowledge-nouns-1",
+      "2024-05-03-knowledge-nouns.2": "knowledge-nouns-2",
+      "2024-05-03-knowledge-nouns.3": "knowledge-nouns-3",
+      "2024-05-03-knowledge-nouns.4": "knowledge-nouns-4",
+      "2024-05-03-knowledge-nouns.5": "knowledge-nouns-5",
+      "2024-05-03-knowledge-nouns.6": "knowledge-nouns-6"
+    },
+    "concepts": {
+      "0": "c-academic-nouns",
+      "1": "c-knowledge-nouns",
+      "2": "c-communication-nouns",
+      "3": "c-complete-sentence-composition"
+    }
+  },
+  "2024-05-04-learning-verbs": {
+    "items": {
+      "2024-05-04-learning-verbs.1": "learning-verbs-1",
+      "2024-05-04-learning-verbs.2": "learning-verbs-2",
+      "2024-05-04-learning-verbs.3": "learning-verbs-3",
+      "2024-05-04-learning-verbs.4": "learning-verbs-4",
+      "2024-05-04-learning-verbs.5": "learning-verbs-5",
+      "2024-05-04-learning-verbs.6": "learning-verbs-6"
+    },
+    "concepts": {
+      "0": "c-apprendre-to-learn",
+      "1": "c-same-pattern-as-prendre",
+      "2": "c-enseigner-to-teach",
+      "3": "c-beautiful-semantic-progression",
+      "4": "c-apprendre-a-infinitive"
+    }
+  },
+  "2024-05-05-on-and-people": {
+    "items": {
+      "2024-05-05-on-and-people.1": "on-people-1",
+      "2024-05-05-on-and-people.2": "on-people-2",
+      "2024-05-05-on-and-people.3": "on-people-3",
+      "2024-05-05-on-and-people.4": "on-people-4",
+      "2024-05-05-on-and-people.5": "on-people-5",
+      "2024-05-05-on-and-people.6": "on-people-6",
+      "2024-05-05-on-and-people.7": "on-people-7",
+      "2024-05-05-on-and-people.8": "on-people-8"
+    },
+    "concepts": {
+      "0": "c-on-we-one-people",
+      "1": "c-on-conjugates-like-il",
+      "2": "c-on-vs-nous",
+      "3": "c-les-gens-people-general",
+      "4": "c-tout-le-monde-everyone",
+      "5": "c-making-general-statements"
+    }
+  },
+  "2024-05-06-penser": {
+    "items": {
+      "2024-05-06-penser.1": "i-je-pense",
+      "2024-05-06-penser.2": "i-tu-penses",
+      "2024-05-06-penser.3": "i-il-pense",
+      "2024-05-06-penser.4": "i-elle-pense",
+      "2024-05-06-penser.5": "i-nous-pensons",
+      "2024-05-06-penser.6": "i-vous-pensez",
+      "2024-05-06-penser.7": "i-ils-pensent",
+      "2024-05-06-penser.8": "i-elles-pensent"
+    },
+    "concepts": {
+      "0": "c-penser-to-think",
+      "1": "c-regular-er-verb",
+      "2": "c-penser-que-to-think",
+      "3": "c-penser-a-to-think",
+      "4": "c-asking-opinions"
+    }
+  },
+  "2024-05-08-savoir": {
+    "items": {
+      "2024-05-08-savoir.1": "i-je-sais",
+      "2024-05-08-savoir.2": "i-tu-sais",
+      "2024-05-08-savoir.3": "i-il-sait",
+      "2024-05-08-savoir.4": "i-elle-sait",
+      "2024-05-08-savoir.5": "i-nous-savons",
+      "2024-05-08-savoir.6": "i-vous-savez",
+      "2024-05-08-savoir.7": "i-ils-savent",
+      "2024-05-08-savoir.8": "i-elles-savent"
+    },
+    "concepts": {
+      "0": "c-savoir-to-know-facts",
+      "1": "c-irregular-conjugation",
+      "2": "c-je-ne-sais-pas",
+      "3": "c-savoir-infinitive-know-how",
+      "4": "c-savoir-vs-connaitre-preview"
+    }
+  },
+  "2024-05-09-studying-verbs": {
+    "items": {
+      "2024-05-09-studying-verbs.1": "studying-verbs-1",
+      "2024-05-09-studying-verbs.2": "studying-verbs-2",
+      "2024-05-09-studying-verbs.3": "studying-verbs-3",
+      "2024-05-09-studying-verbs.4": "studying-verbs-4",
+      "2024-05-09-studying-verbs.5": "studying-verbs-5",
+      "2024-05-09-studying-verbs.6": "studying-verbs-6"
+    },
+    "concepts": {
+      "0": "c-etudier-to-study",
+      "1": "c-reviser-to-review-to",
+      "2": "c-study-workflow",
+      "3": "c-etudier-vs-apprendre",
+      "4": "c-complete-learning-narrative"
+    }
+  },
+  "2024-05-10-unit-7-exam": {
+    "items": {
+      "2024-05-10-unit-7-exam.1": "i-on-va",
+      "2024-05-10-unit-7-exam.2": "i-on-doit-etudier",
+      "2024-05-10-unit-7-exam.3": "i-on-y-va",
+      "2024-05-10-unit-7-exam.4": "i-on-peut-apprendre",
+      "2024-05-10-unit-7-exam.5": "i-on-dit",
+      "2024-05-10-unit-7-exam.6": "i-we",
+      "2024-05-10-unit-7-exam.7": "i-tout-le-monde",
+      "2024-05-10-unit-7-exam.8": "i-les-gens",
+      "2024-05-10-unit-7-exam.9": "i-je-comprends",
+      "2024-05-10-unit-7-exam.10": "i-tu-comprends",
+      "2024-05-10-unit-7-exam.11": "i-je-ne-comprends-pas",
+      "2024-05-10-unit-7-exam.12": "i-on-comprend",
+      "2024-05-10-unit-7-exam.13": "i-elle-comprend",
+      "2024-05-10-unit-7-exam.14": "i-je-sais",
+      "2024-05-10-unit-7-exam.15": "i-je-ne-sais-pas",
+      "2024-05-10-unit-7-exam.16": "i-je-sais-parler-francais",
+      "2024-05-10-unit-7-exam.17": "i-tu-sais",
+      "2024-05-10-unit-7-exam.18": "i-tout-le-monde-sait",
+      "2024-05-10-unit-7-exam.20": "i-je-connais-marie",
+      "2024-05-10-unit-7-exam.21": "i-je-connais-paris",
+      "2024-05-10-unit-7-exam.22": "i-tu-connais-ce-restaurant",
+      "2024-05-10-unit-7-exam.23": "i-on-connait-les-gens",
+      "2024-05-10-unit-7-exam.25": "i-je-pense",
+      "2024-05-10-unit-7-exam.26": "i-je-pense-que-oui",
+      "2024-05-10-unit-7-exam.27": "i-qu-est-ce-que",
+      "2024-05-10-unit-7-exam.28": "i-on-pense",
+      "2024-05-10-unit-7-exam.29": "i-je-crois",
+      "2024-05-10-unit-7-exam.30": "i-je-crois-que-oui",
+      "2024-05-10-unit-7-exam.31": "i-on-doit-croire-en",
+      "2024-05-10-unit-7-exam.32": "i-elle-croit",
+      "2024-05-10-unit-7-exam.33": "i-j-apprends-le-francais",
+      "2024-05-10-unit-7-exam.34": "i-elle-enseigne-le-francais",
+      "2024-05-10-unit-7-exam.35": "i-j-etudie-a-l",
+      "2024-05-10-unit-7-exam.36": "i-je-revise-mes-lecons",
+      "2024-05-10-unit-7-exam.37": "i-j-ai-une-question",
+      "2024-05-10-unit-7-exam.38": "i-la-reponse",
+      "2024-05-10-unit-7-exam.39": "i-une-bonne-idee",
+      "2024-05-10-unit-7-exam.40": "i-la-lecon",
+      "2024-05-10-unit-7-exam.41": "i-le-cours",
+      "2024-05-10-unit-7-exam.42": "i-donc",
+      "2024-05-10-unit-7-exam.43": "i-en-fait",
+      "2024-05-10-unit-7-exam.44": "i-you-know",
+      "2024-05-10-unit-7-exam.45": "i-donc-tu-comprends",
+      "2024-05-10-unit-7-exam.46": "i-c-est-bon-quoi",
+      "2024-05-10-unit-7-exam.47": "i-peut-etre",
+      "2024-05-10-unit-7-exam.48": "i-certainement",
+      "2024-05-10-unit-7-exam.49": "i-bien-sur",
+      "2024-05-10-unit-7-exam.50": "i-tout-le-monde-2",
+      "2024-05-10-unit-7-exam.51": "i-meme-moi",
+      "2024-05-10-unit-7-exam.52": "i-la-meme-chose",
+      "2024-05-10-unit-7-exam.53": "i-je-comprends-mal",
+      "2024-05-10-unit-7-exam.54": "i-je-sais-tout",
+      "2024-05-10-unit-7-exam.55": "i-on-etudie-donc-on",
+      "2024-05-10-unit-7-exam.56": "i-je-pense-que-tout",
+      "2024-05-10-unit-7-exam.57": "i-en-fait-je-ne",
+      "2024-05-10-unit-7-exam.58": "i-je-connais-marie-mais",
+      "2024-05-10-unit-7-exam.59": "i-tu-comprends-la-question",
+      "2024-05-10-unit-7-exam.60": "i-je-crois-qu-on",
+      "2024-05-10-unit-7-exam.61": "i-j-etudie-le-francais",
+      "2024-05-10-unit-7-exam.62": "i-je-revise-mes-lecons-2"
+    },
+    "concepts": {}
+  },
+  "2024-05-11-unit-7-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-05-12-commands-pronouns": {
+    "items": {
+      "2024-05-12-commands-pronouns.1": "cmd-pron-1",
+      "2024-05-12-commands-pronouns.2": "cmd-pron-2",
+      "2024-05-12-commands-pronouns.3": "cmd-pron-3",
+      "2024-05-12-commands-pronouns.4": "cmd-pron-4",
+      "2024-05-12-commands-pronouns.5": "cmd-pron-5"
+    },
+    "concepts": {
+      "0": "c-affirmative-commands-attach-with",
+      "1": "c-negative-commands-separate-with",
+      "2": "c-pronoun-order-in-commands"
+    }
+  },
+  "2024-05-13-commands-tu": {
+    "items": {
+      "2024-05-13-commands-tu.1": "commands-tu-1",
+      "2024-05-13-commands-tu.2": "commands-tu-2",
+      "2024-05-13-commands-tu.3": "commands-tu-3",
+      "2024-05-13-commands-tu.4": "commands-tu-4",
+      "2024-05-13-commands-tu.5": "commands-tu-5",
+      "2024-05-13-commands-tu.6": "commands-tu-6"
+    },
+    "concepts": {
+      "0": "c-imperative-mood-commands",
+      "1": "c-tu-form-just-drop",
+      "2": "c-er-verbs-drop-the",
+      "3": "c-use-with-friends-and"
+    }
+  },
+  "2024-05-14-commands-vous": {
+    "items": {
+      "2024-05-14-commands-vous.1": "commands-vous-1",
+      "2024-05-14-commands-vous.2": "commands-vous-2",
+      "2024-05-14-commands-vous.3": "commands-vous-3",
+      "2024-05-14-commands-vous.4": "commands-vous-4"
+    },
+    "concepts": {
+      "0": "c-vous-commands-formal-or",
+      "1": "c-easy-formation-drop-the",
+      "2": "c-keep-the-ez-ending"
+    }
+  },
+  "2024-05-15-daily-actions-1": {
+    "items": {
+      "2024-05-15-daily-actions-1.1": "i-je-dors",
+      "2024-05-15-daily-actions-1.2": "i-tu-dors",
+      "2024-05-15-daily-actions-1.3": "i-il-dort",
+      "2024-05-15-daily-actions-1.4": "i-je-travaille",
+      "2024-05-15-daily-actions-1.5": "i-nous-travaillons",
+      "2024-05-15-daily-actions-1.6": "i-vous-travaillez",
+      "2024-05-15-daily-actions-1.7": "i-je-vis",
+      "2024-05-15-daily-actions-1.8": "i-elle-vit",
+      "2024-05-15-daily-actions-1.9": "i-ils-vivent",
+      "2024-05-15-daily-actions-1.10": "i-tu-dors-bien",
+      "2024-05-15-daily-actions-1.11": "i-ou-travaillez-vous",
+      "2024-05-15-daily-actions-1.12": "i-je-vis-a-paris",
+      "2024-05-15-daily-actions-1.13": "i-je-travaille-dur",
+      "2024-05-15-daily-actions-1.14": "i-je-dors-huit-heures",
+      "2024-05-15-daily-actions-1.15": "i-nous-vivons-notre-vie"
+    },
+    "concepts": {
+      "0": "c-dormir-to-sleep-rank",
+      "1": "c-travailler-to-work-rank",
+      "2": "c-vivre-to-live-rank",
+      "3": "c-daily-life-integration"
+    }
+  },
+  "2024-05-16-daily-reflexives": {
+    "items": {
+      "2024-05-16-daily-reflexives.1": "daily-reflex-1",
+      "2024-05-16-daily-reflexives.2": "daily-reflex-2",
+      "2024-05-16-daily-reflexives.3": "daily-reflex-3",
+      "2024-05-16-daily-reflexives.4": "daily-reflex-4",
+      "2024-05-16-daily-reflexives.5": "daily-reflex-5",
+      "2024-05-16-daily-reflexives.6": "daily-reflex-6"
+    },
+    "concepts": {
+      "0": "c-se-souvenir-to-remember",
+      "1": "c-s-amuser-to-have",
+      "2": "c-se-depecher-to-hurry"
+    }
+  },
+  "2024-05-17-getting-ready": {
+    "items": {
+      "2024-05-17-getting-ready.1": "getting-ready-1",
+      "2024-05-17-getting-ready.2": "getting-ready-2",
+      "2024-05-17-getting-ready.3": "getting-ready-3",
+      "2024-05-17-getting-ready.4": "getting-ready-4",
+      "2024-05-17-getting-ready.5": "getting-ready-5",
+      "2024-05-17-getting-ready.6": "getting-ready-6"
+    },
+    "concepts": {
+      "0": "c-se-laver-to-wash",
+      "1": "c-s-habiller-to-get",
+      "2": "c-se-preparer-to-get",
+      "3": "c-complete-morning-sequence"
+    }
+  },
+  "2024-05-18-irregular-commands": {
+    "items": {
+      "2024-05-18-irregular-commands.1": "irreg-cmd-1",
+      "2024-05-18-irregular-commands.2": "irreg-cmd-2",
+      "2024-05-18-irregular-commands.3": "irreg-cmd-3",
+      "2024-05-18-irregular-commands.4": "irreg-cmd-4",
+      "2024-05-18-irregular-commands.5": "irreg-cmd-5",
+      "2024-05-18-irregular-commands.6": "irreg-cmd-6"
+    },
+    "concepts": {
+      "0": "c-most-common-verbs-irregular",
+      "1": "c-must-memorize-these",
+      "2": "c-etre-commands",
+      "3": "c-avoir-commands",
+      "4": "c-aller-commands",
+      "5": "c-faire-commands"
+    }
+  },
+  "2024-05-19-morning-routine": {
+    "items": {
+      "2024-05-19-morning-routine.1": "morning-1",
+      "2024-05-19-morning-routine.2": "morning-2",
+      "2024-05-19-morning-routine.3": "morning-3",
+      "2024-05-19-morning-routine.4": "morning-4",
+      "2024-05-19-morning-routine.5": "morning-5",
+      "2024-05-19-morning-routine.6": "morning-6"
+    },
+    "concepts": {
+      "0": "c-se-reveiller-to-wake",
+      "1": "c-se-lever-to-get",
+      "2": "c-telling-your-morning-story",
+      "3": "c-asking-about-morning-routines"
+    }
+  },
+  "2024-05-21-reflexive-pronouns": {
+    "items": {
+      "2024-05-21-reflexive-pronouns.1": "reflexive-pronouns-1",
+      "2024-05-21-reflexive-pronouns.2": "reflexive-pronouns-2",
+      "2024-05-21-reflexive-pronouns.3": "reflexive-pronouns-3",
+      "2024-05-21-reflexive-pronouns.4": "reflexive-pronouns-4",
+      "2024-05-21-reflexive-pronouns.5": "reflexive-pronouns-5",
+      "2024-05-21-reflexive-pronouns.6": "reflexive-pronouns-6",
+      "2024-05-21-reflexive-pronouns.7": "reflexive-pronouns-7",
+      "2024-05-21-reflexive-pronouns.8": "reflexive-pronouns-8"
+    },
+    "concepts": {
+      "0": "c-reflexive-pronouns",
+      "1": "c-parallel-to-object-pronouns",
+      "2": "c-position-before-the-verb",
+      "3": "c-the-reflexive-pronoun-set"
+    }
+  },
+  "2024-05-22-s-appeler": {
+    "items": {
+      "2024-05-22-s-appeler.1": "s-appeler-1",
+      "2024-05-22-s-appeler.2": "s-appeler-2",
+      "2024-05-22-s-appeler.3": "s-appeler-3",
+      "2024-05-22-s-appeler.4": "s-appeler-4",
+      "2024-05-22-s-appeler.5": "s-appeler-5",
+      "2024-05-22-s-appeler.6": "s-appeler-6"
+    },
+    "concepts": {
+      "0": "c-s-appeler-to-be",
+      "1": "c-this-should-ve-been",
+      "2": "c-reflexive-pattern",
+      "3": "c-regular-er-verb-conjugation"
+    }
+  },
+  "2024-05-23-temporal-words": {
+    "items": {
+      "2024-05-23-temporal-words.1": "temporal-1",
+      "2024-05-23-temporal-words.2": "temporal-2",
+      "2024-05-23-temporal-words.3": "temporal-3",
+      "2024-05-23-temporal-words.4": "temporal-4",
+      "2024-05-23-temporal-words.5": "temporal-5",
+      "2024-05-23-temporal-words.6": "temporal-6",
+      "2024-05-23-temporal-words.7": "temporal-7",
+      "2024-05-23-temporal-words.8": "temporal-8",
+      "2024-05-23-temporal-words.9": "temporal-9",
+      "2024-05-23-temporal-words.10": "temporal-10",
+      "2024-05-23-temporal-words.11": "temporal-11",
+      "2024-05-23-temporal-words.12": "temporal-12"
+    },
+    "concepts": {
+      "0": "c-temporal-prepositions",
+      "1": "c-sequential-connectors",
+      "2": "c-building-smooth-narratives",
+      "3": "c-position-in-sentence"
+    }
+  },
+  "2024-05-24-unit-8-exam": {
+    "items": {
+      "2024-05-24-unit-8-exam.1": "i-pendant",
+      "2024-05-24-unit-8-exam.2": "i-avant",
+      "2024-05-24-unit-8-exam.3": "i-apres",
+      "2024-05-24-unit-8-exam.4": "i-d-abord",
+      "2024-05-24-unit-8-exam.5": "i-ensuite",
+      "2024-05-24-unit-8-exam.6": "i-finalement",
+      "2024-05-24-unit-8-exam.7": "i-d-abord-je-mange",
+      "2024-05-24-unit-8-exam.8": "i-avant-le-cours-j",
+      "2024-05-24-unit-8-exam.9": "i-me",
+      "2024-05-24-unit-8-exam.10": "i-te",
+      "2024-05-24-unit-8-exam.11": "i-se",
+      "2024-05-24-unit-8-exam.12": "i-nous",
+      "2024-05-24-unit-8-exam.13": "i-je-me-lave",
+      "2024-05-24-unit-8-exam.14": "i-je-m-appelle-marie",
+      "2024-05-24-unit-8-exam.15": "i-comment-tu-t-appelles",
+      "2024-05-24-unit-8-exam.16": "i-il-s-appelle-pierre",
+      "2024-05-24-unit-8-exam.17": "i-elle-s-appelle-sophie",
+      "2024-05-24-unit-8-exam.18": "i-je-me-reveille",
+      "2024-05-24-unit-8-exam.19": "i-je-me-leve",
+      "2024-05-24-unit-8-exam.20": "i-je-m-habille",
+      "2024-05-24-unit-8-exam.21": "i-je-me-prepare-pour",
+      "2024-05-24-unit-8-exam.22": "i-tu-te-reveilles-a",
+      "2024-05-24-unit-8-exam.23": "i-on-se-leve-tot",
+      "2024-05-24-unit-8-exam.24": "i-je-me-souviens",
+      "2024-05-24-unit-8-exam.25": "i-on-s-amuse",
+      "2024-05-24-unit-8-exam.26": "i-je-me-depeche",
+      "2024-05-24-unit-8-exam.27": "i-tu-te-souviens",
+      "2024-05-24-unit-8-exam.28": "i-je-me-suis-reveille",
+      "2024-05-24-unit-8-exam.29": "i-elle-s-est-levee",
+      "2024-05-24-unit-8-exam.30": "i-on-s-est-amuse",
+      "2024-05-24-unit-8-exam.31": "i-ils-se-sont-habilles",
+      "2024-05-24-unit-8-exam.32": "i-nous-nous-aimons",
+      "2024-05-24-unit-8-exam.33": "i-on-se-voit",
+      "2024-05-24-unit-8-exam.34": "i-ils-se-parlent",
+      "2024-05-24-unit-8-exam.35": "i-on-se-voit-demain",
+      "2024-05-24-unit-8-exam.36": "i-mange",
+      "2024-05-24-unit-8-exam.37": "i-ecoute",
+      "2024-05-24-unit-8-exam.38": "i-sois-gentil",
+      "2024-05-24-unit-8-exam.39": "i-vas-y",
+      "2024-05-24-unit-8-exam.40": "i-fais-attention",
+      "2024-05-24-unit-8-exam.41": "i-regarde-moi"
+    },
+    "concepts": {}
+  },
+  "2024-05-25-unit-8-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-05-26-causal-words": {
+    "items": {
+      "2024-05-26-causal-words.1": "i-parce-que",
+      "2024-05-26-causal-words.2": "i-car",
+      "2024-05-26-causal-words.3": "i-comme",
+      "2024-05-26-causal-words.4": "i-puisque",
+      "2024-05-26-causal-words.5": "i-grace-a",
+      "2024-05-26-causal-words.6": "i-a-cause-de",
+      "2024-05-26-causal-words.7": "i-parce-que-2",
+      "2024-05-26-causal-words.8": "i-a-cause-du",
+      "2024-05-26-causal-words.9": "i-grace-au",
+      "2024-05-26-causal-words.10": "i-car-2",
+      "2024-05-26-causal-words.11": "i-a-cause",
+      "2024-05-26-causal-words.12": "i-puisque-2",
+      "2024-05-26-causal-words.13": "i-comme-2",
+      "2024-05-26-causal-words.14": "i-parce-que-3",
+      "2024-05-26-causal-words.15": "i-car-3",
+      "2024-05-26-causal-words.16": "i-grace-a-2",
+      "2024-05-26-causal-words.17": "i-a-cause-du-2",
+      "2024-05-26-causal-words.18": "i-comme-3"
+    },
+    "concepts": {
+      "0": "c-parce-que-because-most",
+      "1": "c-car-for-because-formal",
+      "2": "c-puisque-since-seeing-as",
+      "3": "c-comme-as-since-at",
+      "4": "c-grace-a-thanks-to",
+      "5": "c-a-cause-de-because"
+    }
+  },
+  "2024-05-27-imparfait-all-verbs": {
+    "items": {
+      "2024-05-27-imparfait-all-verbs.1": "i-parlais",
+      "2024-05-27-imparfait-all-verbs.2": "i-faisait",
+      "2024-05-27-imparfait-all-verbs.3": "i-allait",
+      "2024-05-27-imparfait-all-verbs.4": "i-voulais",
+      "2024-05-27-imparfait-all-verbs.5": "i-avait",
+      "2024-05-27-imparfait-all-verbs.6": "i-prenais",
+      "2024-05-27-imparfait-all-verbs.7": "i-etions",
+      "2024-05-27-imparfait-all-verbs.8": "i-etais",
+      "2024-05-27-imparfait-all-verbs.9": "i-etudiait",
+      "2024-05-27-imparfait-all-verbs.10": "i-allaient",
+      "2024-05-27-imparfait-all-verbs.11": "i-vouliez",
+      "2024-05-27-imparfait-all-verbs.12": "i-faisait-2",
+      "2024-05-27-imparfait-all-verbs.13": "i-allais",
+      "2024-05-27-imparfait-all-verbs.14": "i-habitaient",
+      "2024-05-27-imparfait-all-verbs.15": "i-travaillait",
+      "2024-05-27-imparfait-all-verbs.16": "i-etais-2",
+      "2024-05-27-imparfait-all-verbs.17": "i-etions-2",
+      "2024-05-27-imparfait-all-verbs.18": "i-etais-3"
+    },
+    "concepts": {
+      "0": "c-the-golden-rule-nous",
+      "1": "c-step-1-find-the",
+      "2": "c-step-2-remove-ons",
+      "3": "c-step-3-add-imparfait",
+      "4": "c-one-exception-etre",
+      "5": "c-when-to-use-imparfait"
+    }
+  },
+  "2024-05-28-more-spatial-relations": {
+    "items": {
+      "2024-05-28-more-spatial-relations.1": "i-pres-de",
+      "2024-05-28-more-spatial-relations.2": "i-loin-de",
+      "2024-05-28-more-spatial-relations.3": "i-a-cote-de",
+      "2024-05-28-more-spatial-relations.4": "i-en-face-du",
+      "2024-05-28-more-spatial-relations.5": "i-autour-de-la",
+      "2024-05-28-more-spatial-relations.6": "i-le-long-de-la",
+      "2024-05-28-more-spatial-relations.7": "i-au-milieu-de-la",
+      "2024-05-28-more-spatial-relations.8": "i-au-bout-de-la",
+      "2024-05-28-more-spatial-relations.9": "i-pres-d",
+      "2024-05-28-more-spatial-relations.10": "i-loin-d",
+      "2024-05-28-more-spatial-relations.11": "i-a-cote-du",
+      "2024-05-28-more-spatial-relations.12": "i-en-face-de",
+      "2024-05-28-more-spatial-relations.13": "i-autour-de-la-2",
+      "2024-05-28-more-spatial-relations.14": "i-le-long-de-la-2",
+      "2024-05-28-more-spatial-relations.15": "i-au-milieu-de-la-2",
+      "2024-05-28-more-spatial-relations.16": "i-au-bout-du",
+      "2024-05-28-more-spatial-relations.17": "i-loin-de-la",
+      "2024-05-28-more-spatial-relations.18": "i-a-cote-de-2"
+    },
+    "concepts": {
+      "0": "c-pres-de-near-close",
+      "1": "c-loin-de-far-from",
+      "2": "c-a-cote-de-next",
+      "3": "c-en-face-de-across",
+      "4": "c-autour-de-around",
+      "5": "c-le-long-de-along",
+      "6": "c-au-milieu-de-in",
+      "7": "c-au-bout-de-at"
+    }
+  },
+  "2024-05-29-passe-compose-agreement": {
+    "items": {
+      "2024-05-29-passe-compose-agreement.1": "i-est-allee",
+      "2024-05-29-passe-compose-agreement.2": "i-sont-alles",
+      "2024-05-29-passe-compose-agreement.3": "i-sont-allees",
+      "2024-05-29-passe-compose-agreement.4": "i-est-venue",
+      "2024-05-29-passe-compose-agreement.5": "i-sommes-partis",
+      "2024-05-29-passe-compose-agreement.6": "i-sont-arrivees",
+      "2024-05-29-passe-compose-agreement.7": "i-est-alle",
+      "2024-05-29-passe-compose-agreement.8": "i-etes-allee",
+      "2024-05-29-passe-compose-agreement.9": "i-sont-partis",
+      "2024-05-29-passe-compose-agreement.10": "i-est-allee-2",
+      "2024-05-29-passe-compose-agreement.11": "i-sont-rentres",
+      "2024-05-29-passe-compose-agreement.12": "i-sommes-restees",
+      "2024-05-29-passe-compose-agreement.13": "i-est-montee",
+      "2024-05-29-passe-compose-agreement.14": "i-sont-arrives",
+      "2024-05-29-passe-compose-agreement.15": "i-sont-tombees",
+      "2024-05-29-passe-compose-agreement.16": "i-est-sorti",
+      "2024-05-29-passe-compose-agreement.17": "i-etes-allees",
+      "2024-05-29-passe-compose-agreement.18": "i-est-venu"
+    },
+    "concepts": {
+      "0": "c-agreement-rule-with-etre",
+      "1": "c-masculine-singular-no-change",
+      "2": "c-feminine-singular-add-e",
+      "3": "c-masculine-plural-add-s",
+      "4": "c-feminine-plural-add-es",
+      "5": "c-mixed-group-use-masculine",
+      "6": "c-remember-only-with-etre"
+    }
+  },
+  "2024-05-30-passe-compose-er": {
+    "items": {
+      "2024-05-30-passe-compose-er.1": "i-ai-parle",
+      "2024-05-30-passe-compose-er.2": "i-as-mange",
+      "2024-05-30-passe-compose-er.3": "i-a-etudie",
+      "2024-05-30-passe-compose-er.4": "i-avons-voyage",
+      "2024-05-30-passe-compose-er.5": "i-avez-cherche",
+      "2024-05-30-passe-compose-er.6": "i-ont-trouve",
+      "2024-05-30-passe-compose-er.7": "i-ai-aime",
+      "2024-05-30-passe-compose-er.8": "i-as-travaille",
+      "2024-05-30-passe-compose-er.9": "i-avez-ecoute",
+      "2024-05-30-passe-compose-er.10": "i-a-regarde",
+      "2024-05-30-passe-compose-er.11": "i-ai-demande",
+      "2024-05-30-passe-compose-er.12": "i-a-etudie-2",
+      "2024-05-30-passe-compose-er.13": "i-avons-mange",
+      "2024-05-30-passe-compose-er.14": "i-ont-parle",
+      "2024-05-30-passe-compose-er.15": "i-as-trouve",
+      "2024-05-30-passe-compose-er.16": "i-ai-mange",
+      "2024-05-30-passe-compose-er.17": "i-a-travaille",
+      "2024-05-30-passe-compose-er.18": "i-avez-voyage"
+    },
+    "concepts": {
+      "0": "c-passe-compose-avoir-past",
+      "1": "c-regular-er-verbs-e",
+      "2": "c-formation-j-ai-past",
+      "3": "c-negation-ne-pas-around",
+      "4": "c-questions-inversion-or-est",
+      "5": "c-when-to-use-passe"
+    }
+  },
+  "2024-05-31-passe-compose-etre": {
+    "items": {
+      "2024-05-31-passe-compose-etre.1": "i-suis-alle",
+      "2024-05-31-passe-compose-etre.2": "i-es-venu",
+      "2024-05-31-passe-compose-etre.3": "i-est-parti",
+      "2024-05-31-passe-compose-etre.4": "i-sommes-arrives",
+      "2024-05-31-passe-compose-etre.5": "i-etes-sortis",
+      "2024-05-31-passe-compose-etre.6": "i-sont-entrees",
+      "2024-05-31-passe-compose-etre.7": "i-est-rentre",
+      "2024-05-31-passe-compose-etre.8": "i-suis-reste",
+      "2024-05-31-passe-compose-etre.9": "i-es-monte",
+      "2024-05-31-passe-compose-etre.10": "i-est-descendue",
+      "2024-05-31-passe-compose-etre.11": "i-suis-tombe",
+      "2024-05-31-passe-compose-etre.12": "i-est-devenu",
+      "2024-05-31-passe-compose-etre.13": "i-suis-alle-2",
+      "2024-05-31-passe-compose-etre.14": "i-sommes-alles",
+      "2024-05-31-passe-compose-etre.15": "i-sont-venus",
+      "2024-05-31-passe-compose-etre.16": "i-etes-partis",
+      "2024-05-31-passe-compose-etre.17": "i-est-arrive",
+      "2024-05-31-passe-compose-etre.18": "i-est-venue"
+    },
+    "concepts": {
+      "0": "c-dr-mrs-vandertramp-mnemonic",
+      "1": "c-formation-etre-past-participle",
+      "2": "c-the-dr-mrs-vandertramp",
+      "3": "c-key-motion-verbs-most",
+      "4": "c-agreement-with-subject-important",
+      "5": "c-negation-ne-pas-around"
+    }
+  },
+  "2024-06-01-passe-compose-irregular-1": {
+    "items": {
+      "2024-06-01-passe-compose-irregular-1.1": "i-ai-eu",
+      "2024-06-01-passe-compose-irregular-1.2": "i-as-ete",
+      "2024-06-01-passe-compose-irregular-1.3": "i-a-fait",
+      "2024-06-01-passe-compose-irregular-1.4": "i-ai-vu",
+      "2024-06-01-passe-compose-irregular-1.5": "i-avons-eu",
+      "2024-06-01-passe-compose-irregular-1.6": "i-avez-fait",
+      "2024-06-01-passe-compose-irregular-1.7": "i-ont-vu",
+      "2024-06-01-passe-compose-irregular-1.8": "i-a-ete",
+      "2024-06-01-passe-compose-irregular-1.9": "i-ai-eu-2",
+      "2024-06-01-passe-compose-irregular-1.10": "i-as-ete-2",
+      "2024-06-01-passe-compose-irregular-1.11": "i-as-fait",
+      "2024-06-01-passe-compose-irregular-1.12": "i-avez-vu",
+      "2024-06-01-passe-compose-irregular-1.13": "i-ai-fait",
+      "2024-06-01-passe-compose-irregular-1.14": "i-a-ete-2",
+      "2024-06-01-passe-compose-irregular-1.15": "i-ont-eu",
+      "2024-06-01-passe-compose-irregular-1.16": "i-avons-vu",
+      "2024-06-01-passe-compose-irregular-1.17": "i-a-fait-2",
+      "2024-06-01-passe-compose-irregular-1.18": "i-ai-ete"
+    },
+    "concepts": {
+      "0": "c-avoir-eu-had",
+      "1": "c-etre-ete-was-been",
+      "2": "c-faire-fait-did-made",
+      "3": "c-voir-vu-saw",
+      "4": "c-memory-tip",
+      "5": "c-all-use-avoir-as"
+    }
+  },
+  "2024-06-02-passe-compose-irregular-2": {
+    "items": {
+      "2024-06-02-passe-compose-irregular-2.1": "i-ai-voulu",
+      "2024-06-02-passe-compose-irregular-2.2": "i-as-pu",
+      "2024-06-02-passe-compose-irregular-2.3": "i-a-du",
+      "2024-06-02-passe-compose-irregular-2.4": "i-ai-dit",
+      "2024-06-02-passe-compose-irregular-2.5": "i-avons-pris",
+      "2024-06-02-passe-compose-irregular-2.6": "i-avez-mis",
+      "2024-06-02-passe-compose-irregular-2.7": "i-ont-compris",
+      "2024-06-02-passe-compose-irregular-2.8": "i-a-appris",
+      "2024-06-02-passe-compose-irregular-2.9": "i-ai-pu",
+      "2024-06-02-passe-compose-irregular-2.10": "i-as-voulu",
+      "2024-06-02-passe-compose-irregular-2.11": "i-a-du-2",
+      "2024-06-02-passe-compose-irregular-2.12": "i-as-dit",
+      "2024-06-02-passe-compose-irregular-2.13": "i-ai-pris",
+      "2024-06-02-passe-compose-irregular-2.14": "i-avons-mis",
+      "2024-06-02-passe-compose-irregular-2.15": "i-avez-compris",
+      "2024-06-02-passe-compose-irregular-2.16": "i-ont-appris",
+      "2024-06-02-passe-compose-irregular-2.17": "i-a-dit",
+      "2024-06-02-passe-compose-irregular-2.18": "i-ai-voulu-2"
+    },
+    "concepts": {
+      "0": "c-modal-verbs-with-u",
+      "1": "c-dire-dit-said",
+      "2": "c-prendre-family-is-ending",
+      "3": "c-mettre-mis-put",
+      "4": "c-modal-verbs-infinitive-in",
+      "5": "c-all-use-avoir-as"
+    }
+  },
+  "2024-06-03-past-tense-composition": {
+    "items": {
+      "2024-06-03-past-tense-composition.1": "i-faisait-donc",
+      "2024-06-03-past-tense-composition.2": "i-pres-de-parce-que",
+      "2024-06-03-past-tense-composition.3": "i-ai-parle",
+      "2024-06-03-past-tense-composition.4": "i-comme",
+      "2024-06-03-past-tense-composition.5": "i-avait-autour",
+      "2024-06-03-past-tense-composition.6": "i-etait",
+      "2024-06-03-past-tense-composition.7": "i-d-parce-que",
+      "2024-06-03-past-tense-composition.8": "i-allait",
+      "2024-06-03-past-tense-composition.9": "i-ai-vu",
+      "2024-06-03-past-tense-composition.10": "i-parce-que",
+      "2024-06-03-past-tense-composition.11": "i-sur-dans",
+      "2024-06-03-past-tense-composition.12": "i-etais",
+      "2024-06-03-past-tense-composition.13": "i-ai-fait-ensuite",
+      "2024-06-03-past-tense-composition.14": "i-grace-a",
+      "2024-06-03-past-tense-composition.15": "i-a-cause-de"
+    },
+    "concepts": {
+      "0": "c-complete-narrative-structure",
+      "1": "c-layered-storytelling-pattern",
+      "2": "c-rich-scene-setting",
+      "3": "c-causal-flow-in-narratives",
+      "4": "c-time-and-space-integration"
+    }
+  },
+  "2024-06-04-pc-vs-imparfait": {
+    "items": {
+      "2024-06-04-pc-vs-imparfait.1": "i-faisait",
+      "2024-06-04-pc-vs-imparfait.2": "i-suis-alle",
+      "2024-06-04-pc-vs-imparfait.3": "i-parlais",
+      "2024-06-04-pc-vs-imparfait.4": "i-parlais-2",
+      "2024-06-04-pc-vs-imparfait.5": "i-ai-vu",
+      "2024-06-04-pc-vs-imparfait.6": "i-jouais",
+      "2024-06-04-pc-vs-imparfait.7": "i-etais",
+      "2024-06-04-pc-vs-imparfait.8": "i-avait",
+      "2024-06-04-pc-vs-imparfait.9": "i-ai-mange",
+      "2024-06-04-pc-vs-imparfait.10": "i-mangeais",
+      "2024-06-04-pc-vs-imparfait.11": "i-allait",
+      "2024-06-04-pc-vs-imparfait.12": "i-suis-tombe",
+      "2024-06-04-pc-vs-imparfait.13": "i-habitaient",
+      "2024-06-04-pc-vs-imparfait.14": "i-prenais",
+      "2024-06-04-pc-vs-imparfait.15": "i-ai-pris",
+      "2024-06-04-pc-vs-imparfait.16": "i-etait",
+      "2024-06-04-pc-vs-imparfait.17": "i-ai-compris",
+      "2024-06-04-pc-vs-imparfait.18": "i-buvait"
+    },
+    "concepts": {
+      "0": "c-the-golden-rule",
+      "1": "c-passe-compose-specific-events",
+      "2": "c-imparfait-background-habits",
+      "3": "c-pattern-background-imp-event",
+      "4": "c-time-expressions-help",
+      "5": "c-was-doing-interrupted-by",
+      "6": "c-mental-vs-physical-age"
+    }
+  },
+  "2024-06-06-reciprocal-reflexives": {
+    "items": {
+      "2024-06-06-reciprocal-reflexives.1": "reciprocal-1",
+      "2024-06-06-reciprocal-reflexives.2": "reciprocal-2",
+      "2024-06-06-reciprocal-reflexives.3": "reciprocal-3",
+      "2024-06-06-reciprocal-reflexives.4": "reciprocal-4",
+      "2024-06-06-reciprocal-reflexives.5": "reciprocal-5",
+      "2024-06-06-reciprocal-reflexives.6": "reciprocal-6"
+    },
+    "concepts": {
+      "0": "c-reciprocal-each-other",
+      "1": "c-only-with-plural-subjects",
+      "2": "c-same-form-different-meaning",
+      "3": "c-common-reciprocal-expressions"
+    }
+  },
+  "2024-06-07-reflexive-past": {
+    "items": {
+      "2024-06-07-reflexive-past.1": "reflex-past-1",
+      "2024-06-07-reflexive-past.2": "reflex-past-2",
+      "2024-06-07-reflexive-past.3": "reflex-past-3",
+      "2024-06-07-reflexive-past.4": "reflex-past-4",
+      "2024-06-07-reflexive-past.5": "reflex-past-5"
+    },
+    "concepts": {
+      "0": "c-reflexive-verbs-always-use",
+      "1": "c-agreement-with-subject",
+      "2": "c-pronoun-position",
+      "3": "c-telling-past-routines"
+    }
+  },
+  "2024-06-08-spatial-prepositions": {
+    "items": {
+      "2024-06-08-spatial-prepositions.1": "i-devant",
+      "2024-06-08-spatial-prepositions.2": "i-derriere",
+      "2024-06-08-spatial-prepositions.3": "i-entre",
+      "2024-06-08-spatial-prepositions.4": "i-au-dessus-de",
+      "2024-06-08-spatial-prepositions.5": "i-parmi",
+      "2024-06-08-spatial-prepositions.6": "i-au-dessous",
+      "2024-06-08-spatial-prepositions.7": "i-dans",
+      "2024-06-08-spatial-prepositions.8": "i-sur",
+      "2024-06-08-spatial-prepositions.9": "i-sous",
+      "2024-06-08-spatial-prepositions.10": "i-entre-2",
+      "2024-06-08-spatial-prepositions.11": "i-derriere-2",
+      "2024-06-08-spatial-prepositions.12": "i-au-dessus-du",
+      "2024-06-08-spatial-prepositions.13": "i-devant-2",
+      "2024-06-08-spatial-prepositions.14": "i-parmi-2",
+      "2024-06-08-spatial-prepositions.15": "i-au-dessous-2",
+      "2024-06-08-spatial-prepositions.16": "i-sous-2",
+      "2024-06-08-spatial-prepositions.17": "i-devant-3",
+      "2024-06-08-spatial-prepositions.18": "i-parmi-3"
+    },
+    "concepts": {
+      "0": "c-devant-in-front-of",
+      "1": "c-derriere-behind",
+      "2": "c-entre-between",
+      "3": "c-parmi-among",
+      "4": "c-au-dessus-de-above",
+      "5": "c-au-dessous-de-below",
+      "6": "c-review-dans-sur-sous"
+    }
+  },
+  "2024-06-09-unit-9-exam": {
+    "items": {
+      "2024-06-09-unit-9-exam.1": "i-parce-que",
+      "2024-06-09-unit-9-exam.2": "i-a-cause-de",
+      "2024-06-09-unit-9-exam.3": "i-grace-a",
+      "2024-06-09-unit-9-exam.4": "i-comme",
+      "2024-06-09-unit-9-exam.5": "i-car",
+      "2024-06-09-unit-9-exam.6": "i-puisque",
+      "2024-06-09-unit-9-exam.7": "i-devant",
+      "2024-06-09-unit-9-exam.8": "i-derriere",
+      "2024-06-09-unit-9-exam.9": "i-entre",
+      "2024-06-09-unit-9-exam.10": "i-au-dessus-de",
+      "2024-06-09-unit-9-exam.11": "i-au-dessous-de",
+      "2024-06-09-unit-9-exam.12": "i-pres-de",
+      "2024-06-09-unit-9-exam.13": "i-loin-de",
+      "2024-06-09-unit-9-exam.14": "i-a-cote-de",
+      "2024-06-09-unit-9-exam.15": "i-j-ai-parle",
+      "2024-06-09-unit-9-exam.16": "i-tu-as-mange",
+      "2024-06-09-unit-9-exam.17": "i-nous-avons-ecoute",
+      "2024-06-09-unit-9-exam.18": "i-ils-ont-travaille",
+      "2024-06-09-unit-9-exam.19": "i-j-ai-eu",
+      "2024-06-09-unit-9-exam.20": "i-elle-a-ete",
+      "2024-06-09-unit-9-exam.21": "i-nous-avons-fait",
+      "2024-06-09-unit-9-exam.22": "i-vous-avez-vu",
+      "2024-06-09-unit-9-exam.23": "i-il-a-dit",
+      "2024-06-09-unit-9-exam.24": "i-j-ai-pris",
+      "2024-06-09-unit-9-exam.25": "i-elle-est-allee",
+      "2024-06-09-unit-9-exam.26": "i-ils-sont-venus",
+      "2024-06-09-unit-9-exam.27": "i-je-suis-parti",
+      "2024-06-09-unit-9-exam.28": "i-nous-sommes-arrives",
+      "2024-06-09-unit-9-exam.29": "i-tu-es-restee",
+      "2024-06-09-unit-9-exam.30": "i-je-parlais",
+      "2024-06-09-unit-9-exam.31": "i-tu-etais",
+      "2024-06-09-unit-9-exam.32": "i-il-faisait",
+      "2024-06-09-unit-9-exam.33": "i-nous-allions",
+      "2024-06-09-unit-9-exam.34": "i-elles-avaient",
+      "2024-06-09-unit-9-exam.35": "i-vous-finissiez",
+      "2024-06-09-unit-9-exam.36": "i-lisais",
+      "2024-06-09-unit-9-exam.37": "i-ai-achete",
+      "2024-06-09-unit-9-exam.38": "i-marchait",
+      "2024-06-09-unit-9-exam.39": "i-est-ouverte",
+      "2024-06-09-unit-9-exam.40": "i-pleuvait"
+    },
+    "concepts": {}
+  },
+  "2024-06-10-unit-9-practice": {
+    "items": {},
+    "concepts": {}
+  },
+  "2024-10-22-donner": {
+    "items": {
+      "2024-10-22-donner.1": "i-je-donne",
+      "2024-10-22-donner.2": "i-tu-donnes",
+      "2024-10-22-donner.3": "i-il-donne",
+      "2024-10-22-donner.4": "i-elle-donne",
+      "2024-10-22-donner.5": "i-nous-donnons",
+      "2024-10-22-donner.6": "i-vous-donnez",
+      "2024-10-22-donner.7": "i-ils-donnent",
+      "2024-10-22-donner.8": "i-je-donne-le-livre",
+      "2024-10-22-donner.9": "i-tu-donnes-le-chat",
+      "2024-10-22-donner.10": "i-nous-donnons-la-maison",
+      "2024-10-22-donner.11": "i-je-donne-la-voiture",
+      "2024-10-22-donner.12": "i-qu-est-ce-que",
+      "2024-10-22-donner.13": "i-il-ne-donne-rien",
+      "2024-10-22-donner.14": "i-nous-donnons-toujours",
+      "2024-10-22-donner.15": "i-donne-moi",
+      "2024-10-22-donner.16": "i-donne-moi-ta-main"
+    },
+    "concepts": {
+      "0": "c-donner-to-give",
+      "1": "c-regular-er-conjugation",
+      "2": "c-common-uses-of-donner",
+      "3": "c-donner-vs-prendre",
+      "4": "c-with-prepositions"
+    }
+  },
+  "2024-10-22-search-find": {
+    "items": {
+      "2024-10-22-search-find.1": "i-je-cherche",
+      "2024-10-22-search-find.2": "i-je-trouve",
+      "2024-10-22-search-find.3": "i-tu-cherches",
+      "2024-10-22-search-find.4": "i-tu-trouves",
+      "2024-10-22-search-find.5": "i-il-cherche",
+      "2024-10-22-search-find.6": "i-elle-trouve",
+      "2024-10-22-search-find.7": "i-nous-cherchons",
+      "2024-10-22-search-find.8": "i-vous-trouvez",
+      "2024-10-22-search-find.9": "i-ils-cherchent",
+      "2024-10-22-search-find.10": "i-je-cherche-le-livre",
+      "2024-10-22-search-find.11": "i-je-trouve-le-chat",
+      "2024-10-22-search-find.12": "i-nous-cherchons-la-maison",
+      "2024-10-22-search-find.13": "i-tu-trouves-la-voiture",
+      "2024-10-22-search-find.14": "i-qu-est-ce-que"
+    },
+    "concepts": {
+      "0": "c-chercher-to-search-look",
+      "1": "c-trouver-to-find",
+      "2": "c-common-usage-patterns",
+      "3": "c-with-prepositions"
+    }
+  }
+}

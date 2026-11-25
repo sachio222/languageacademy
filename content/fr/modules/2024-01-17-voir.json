@@ -1,0 +1,281 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-17-voir",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {voir} (to see)",
+  "description": "Essential perception verb: je vois (I see), tu vois (you see), il voit (he sees)",
+  "can_do": [
+    "Talk about what you see (I see, you see, they see)",
+    "Express perception and observation in French",
+    "Prepare for object pronouns (I see him/her/it)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "voir-fr",
+      "fr": "voir",
+      "gloss": "to see",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-vois-fr",
+      "fr": "je vois",
+      "gloss": "I see",
+      "note": "voir - irregular"
+    },
+    {
+      "word_id": "tu-vois-fr",
+      "fr": "tu vois",
+      "gloss": "you see (informal)",
+      "note": "same as je!"
+    },
+    {
+      "word_id": "il-voit-fr",
+      "fr": "il voit",
+      "gloss": "he sees",
+      "note": "different ending"
+    },
+    {
+      "word_id": "elle-voit-fr",
+      "fr": "elle voit",
+      "gloss": "she sees",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-voyons-fr",
+      "fr": "nous voyons",
+      "gloss": "we see",
+      "note": "stem changes to voy-!"
+    },
+    {
+      "word_id": "vous-voyez-fr",
+      "fr": "vous voyez",
+      "gloss": "you see (formal)",
+      "note": "also voy-"
+    },
+    {
+      "word_id": "ils-voient-fr",
+      "fr": "ils voient",
+      "gloss": "they see (masc)",
+      "note": "back to voi- stem"
+    },
+    {
+      "word_id": "elles-voient-fr",
+      "fr": "elles voient",
+      "gloss": "they see (fem)",
+      "note": "same as ils"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-voir-to-see",
+      "term": "{voir} = to see",
+      "definition": "Irregular verb for seeing and perceiving",
+      "example": "Very common! Essential for object pronouns in next module"
+    },
+    {
+      "id": "c-irregular-conjugation",
+      "term": "Irregular Conjugation",
+      "definition": "Stem changes throughout conjugation",
+      "example": "{je}/{tu vois}, {il voit}, {nous voyons}, {vous voyez}, {ils voient}"
+    },
+    {
+      "id": "c-building-on-previous-vocabulary",
+      "term": "Building on Previous Vocabulary",
+      "definition": "Combine with nouns, adjectives, and phrases you already know",
+      "example": "Pattern: '{je vois}' + articles + nouns + adjectives"
+    },
+    {
+      "id": "c-prepares-for-object-pronouns",
+      "term": "Prepares for Object Pronouns",
+      "definition": "Next module teaches 'I see HIM/HER/IT/THEM' - need voir first!",
+      "example": "Foundation for: {je le vois}, {je la vois}, {je les vois}"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-voir",
+      "title": "{voir}",
+      "rows": [
+        {
+          "fr": "je vois",
+          "en": "I see"
+        },
+        {
+          "fr": "tu vois",
+          "en": "you see (informal)"
+        },
+        {
+          "fr": "il voit",
+          "en": "he sees"
+        },
+        {
+          "fr": "elle voit",
+          "en": "she sees"
+        },
+        {
+          "fr": "nous voyons",
+          "en": "we see"
+        },
+        {
+          "fr": "vous voyez",
+          "en": "you see (formal/plural)"
+        },
+        {
+          "fr": "ils voient",
+          "en": "they see (masculine)"
+        },
+        {
+          "fr": "elles voient",
+          "en": "they see (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-vois",
+      "type": "transform",
+      "instruction": "Say what you see. Say \"I see\"",
+      "shown": "voir",
+      "answer": "je vois",
+      "hint": "{je + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"I see\""
+        },
+        {
+          "answer": "il voit",
+          "feedback": "That's \"he sees\", not \"I see\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-vois",
+      "type": "transform",
+      "instruction": "Say what you see (informal). Say \"you see (informal)\"",
+      "shown": "voir",
+      "answer": "tu vois",
+      "hint": "{tu + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"you see (informal)\""
+        },
+        {
+          "answer": "il voit",
+          "feedback": "That's \"he sees\", not \"you see (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-voit",
+      "type": "transform",
+      "instruction": "Say what he sees. Say \"he sees\"",
+      "shown": "voir",
+      "answer": "il voit",
+      "hint": "{il + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"he sees\""
+        },
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"he sees\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-voit",
+      "type": "transform",
+      "instruction": "Say what she sees. Say \"she sees\"",
+      "shown": "voir",
+      "answer": "elle voit",
+      "hint": "{elle + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"she sees\""
+        },
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"she sees\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-voyons",
+      "type": "transform",
+      "instruction": "Say what we see. Say \"we see\"",
+      "shown": "voir",
+      "answer": "nous voyons",
+      "hint": "{nous + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"we see\""
+        },
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"we see\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-voyez",
+      "type": "transform",
+      "instruction": "Say what you see (formal). Say \"you see (formal/plural)\"",
+      "shown": "voir",
+      "answer": "vous voyez",
+      "hint": "{vous + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"you see (formal/plural)\""
+        },
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"you see (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-voient",
+      "type": "transform",
+      "instruction": "Say what they see (masculine). Say \"they see (masculine)\"",
+      "shown": "voir",
+      "answer": "ils voient",
+      "hint": "{ils + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"they see (masculine)\""
+        },
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"they see (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-voient",
+      "type": "transform",
+      "instruction": "Say what they see (feminine). Say \"they see (feminine)\"",
+      "shown": "voir",
+      "answer": "elles voient",
+      "hint": "{elles + voir = ?}",
+      "mistakes": [
+        {
+          "answer": "je vois",
+          "feedback": "That's \"I see\", not \"they see (feminine)\""
+        },
+        {
+          "answer": "tu vois",
+          "feedback": "That's \"you see (informal)\", not \"they see (feminine)\""
+        }
+      ]
+    }
+  ]
+}

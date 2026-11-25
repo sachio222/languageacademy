@@ -1,0 +1,116 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-06-while-doing-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{En mangeant...} - While Doing Phrases",
+  "description": "Describe multitasking! '{En mangeant, je regarde la télé}' (While eating, I watch TV), '{On apprend en pratiquant}' (We learn by practicing). Natural speech patterns!",
+  "vocabulary": [
+    {
+      "word_id": "en-mangeant-fr",
+      "fr": "en mangeant",
+      "gloss": "while eating",
+      "note": "⭐ very common!"
+    },
+    {
+      "word_id": "en-parlant-fr",
+      "fr": "en parlant",
+      "gloss": "while speaking",
+      "note": "during conversation"
+    },
+    {
+      "word_id": "en-travaillant-fr",
+      "fr": "en travaillant",
+      "gloss": "while working / by working",
+      "note": "can mean method or simultaneous"
+    },
+    {
+      "word_id": "en-ecoutant-fr",
+      "fr": "en écoutant",
+      "gloss": "while listening",
+      "note": "multitasking"
+    },
+    {
+      "word_id": "en-marchant-fr",
+      "fr": "en marchant",
+      "gloss": "while walking",
+      "note": "walking and talking"
+    },
+    {
+      "word_id": "en-pratiquant-fr",
+      "fr": "en pratiquant",
+      "gloss": "by practicing",
+      "note": "method of learning"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-en-ant-while-doing",
+      "term": "En + -ant = While Doing",
+      "definition": "Describe two actions happening at the same time, or the METHOD you use",
+      "example": "{En mangeant} (while eating), {en parlant} (while speaking), {en travaillant} (while working)"
+    },
+    {
+      "id": "c-common-uses",
+      "term": "Common Uses",
+      "definition": "Multitasking, explaining method, simultaneous actions",
+      "example": "{Je travaille en écoutant de la musique} (I work while listening to music)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-en-mangeant",
+      "type": "respond",
+      "situation": "Say 'while eating' (during a meal)",
+      "cue": "while eating",
+      "answer": "en mangeant",
+      "hint": "{en + mangeant}",
+      "mistakes": [
+        {
+          "answer": "mangeant",
+          "feedback": "Need '{en}' before! It's: en mangeant"
+        }
+      ]
+    },
+    {
+      "id": "i-en-parlant",
+      "type": "respond",
+      "situation": "Say 'while speaking' (during conversation)",
+      "cue": "while speaking",
+      "answer": "en parlant",
+      "hint": "{en + parlant}"
+    },
+    {
+      "id": "i-en-travaillant",
+      "type": "respond",
+      "situation": "Say 'while working' or 'by working' (method/simultaneous)",
+      "cue": "while working",
+      "answer": "en travaillant",
+      "hint": "{en + travaillant}"
+    },
+    {
+      "id": "i-en-ecoutant",
+      "type": "respond",
+      "situation": "Say 'while listening' (multitasking)",
+      "cue": "while listening",
+      "answer": "en écoutant",
+      "hint": "{en + écoutant}"
+    },
+    {
+      "id": "i-en-marchant",
+      "type": "respond",
+      "situation": "Say 'while walking' (walking and doing something else)",
+      "cue": "while walking",
+      "answer": "en marchant",
+      "hint": "{en + marchant}"
+    },
+    {
+      "id": "i-en-pratiquant",
+      "type": "respond",
+      "situation": "Say 'by practicing' (the method of learning)",
+      "cue": "by practicing",
+      "answer": "en pratiquant",
+      "hint": "{en + pratiquant}"
+    }
+  ]
+}

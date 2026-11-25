@@ -1,0 +1,398 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-01-time-adverbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Time & Frequency - now, always, never, today",
+  "description": "Express when and how often! Add time context to everything you've learned.",
+  "can_do": [
+    "Add time context to sentences (now, today, tomorrow, yesterday)",
+    "Express frequency (always, never, sometimes, often)",
+    "Say 'I always go' or 'I never want that' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "toujours-fr",
+      "fr": "toujours",
+      "gloss": "always",
+      "note": "100% of the time"
+    },
+    {
+      "word_id": "pour-toujours-fr",
+      "fr": "pour toujours",
+      "gloss": "forever",
+      "note": "for all time"
+    },
+    {
+      "word_id": "souvent-fr",
+      "fr": "souvent",
+      "gloss": "often",
+      "note": "frequently"
+    },
+    {
+      "word_id": "parfois-fr",
+      "fr": "parfois",
+      "gloss": "sometimes",
+      "note": "occasionally"
+    },
+    {
+      "word_id": "de-temps-en-temps-fr",
+      "fr": "de temps en temps",
+      "gloss": "from time to time",
+      "note": "occasionally"
+    },
+    {
+      "word_id": "rarement-fr",
+      "fr": "rarement",
+      "gloss": "rarely",
+      "note": "not often"
+    },
+    {
+      "word_id": "tres-rarement-fr",
+      "fr": "très rarement",
+      "gloss": "very rarely",
+      "note": "almost never"
+    },
+    {
+      "word_id": "jamais-fr",
+      "fr": "jamais",
+      "gloss": "never (with ne)",
+      "note": "0% of the time"
+    },
+    {
+      "word_id": "deja-fr",
+      "fr": "déjà",
+      "gloss": "already",
+      "note": "by now, before this time"
+    },
+    {
+      "word_id": "encore-fr",
+      "fr": "encore",
+      "gloss": "still",
+      "note": "continuing, not yet finished"
+    },
+    {
+      "word_id": "juste-fr",
+      "fr": "juste",
+      "gloss": "just",
+      "note": "only, simply"
+    },
+    {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now",
+      "note": "present time"
+    },
+    {
+      "word_id": "aujourd-hui-fr",
+      "fr": "aujourd'hui",
+      "gloss": "today",
+      "note": "this day"
+    },
+    {
+      "word_id": "demain-fr",
+      "fr": "demain",
+      "gloss": "tomorrow",
+      "note": "next day"
+    },
+    {
+      "word_id": "hier-fr",
+      "fr": "hier",
+      "gloss": "yesterday",
+      "note": "previous day"
+    },
+    {
+      "word_id": "avant-hier-fr",
+      "fr": "avant-hier",
+      "gloss": "the day before yesterday",
+      "note": "two days ago"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-frequency-adverbs",
+      "term": "Frequency Adverbs",
+      "definition": "Words that express how often something happens",
+      "example": "{toujours} (always), {jamais} (never)"
+    },
+    {
+      "id": "c-time-expressions",
+      "term": "Time Expressions",
+      "definition": "Words that express when something happens",
+      "example": "{maintenant} (now), {aujourd'hui} (today), {demain} (tomorrow), {hier} (yesterday)"
+    },
+    {
+      "id": "c-position-in-sentence",
+      "term": "Position in Sentence",
+      "definition": "Usually placed AFTER the verb in French",
+      "example": "{je vais maintenant} (I go now), {il a toujours} (he always has)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-maintenant",
+      "type": "respond",
+      "situation": "now",
+      "answer": "maintenant",
+      "hint": "Present moment"
+    },
+    {
+      "id": "i-aujourd-hui",
+      "type": "respond",
+      "situation": "today",
+      "answer": "aujourd'hui",
+      "hint": "This day - literally 'of today'",
+      "mistakes": [
+        {
+          "answer": "demain",
+          "feedback": "That's 'tomorrow', not 'today'"
+        }
+      ]
+    },
+    {
+      "id": "i-demain",
+      "type": "respond",
+      "situation": "tomorrow",
+      "answer": "demain",
+      "hint": "Next day",
+      "mistakes": [
+        {
+          "answer": "hier",
+          "feedback": "That's 'yesterday', not 'tomorrow'"
+        }
+      ]
+    },
+    {
+      "id": "i-hier",
+      "type": "respond",
+      "situation": "yesterday",
+      "answer": "hier",
+      "hint": "Previous day"
+    },
+    {
+      "id": "i-avant-hier",
+      "type": "respond",
+      "situation": "the day before yesterday",
+      "answer": "avant-hier",
+      "hint": "avant + hier (before yesterday)",
+      "mistakes": [
+        {
+          "answer": "hier",
+          "feedback": "That's just 'yesterday' - use '{avant-hier}' for the day before yesterday"
+        }
+      ]
+    },
+    {
+      "id": "i-toujours",
+      "type": "respond",
+      "situation": "always",
+      "answer": "toujours",
+      "hint": "100% of the time",
+      "mistakes": [
+        {
+          "answer": "jamais",
+          "feedback": "That's 'never', not 'always'"
+        }
+      ]
+    },
+    {
+      "id": "i-jamais",
+      "type": "respond",
+      "situation": "Say 'never' (will use with negation)",
+      "cue": "never",
+      "answer": "jamais",
+      "hint": "0% of the time - used with '{ne}'",
+      "mistakes": [
+        {
+          "answer": "toujours",
+          "feedback": "That's 'always', not 'never'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-maintenant",
+      "type": "respond",
+      "situation": "I am now",
+      "answer": "je suis maintenant",
+      "hint": "{je suis + maintenant}"
+    },
+    {
+      "id": "i-il-va-aujourd-hui",
+      "type": "respond",
+      "situation": "he goes today",
+      "answer": "il va aujourd'hui",
+      "hint": "{il va + aujourd'hui}"
+    },
+    {
+      "id": "i-je-veux-ca-demain",
+      "type": "respond",
+      "situation": "I want this tomorrow",
+      "answer": "je veux ça demain",
+      "hint": "{je veux + ça + demain}"
+    },
+    {
+      "id": "i-nous-sommes-toujours-ici",
+      "type": "respond",
+      "situation": "we are always here",
+      "answer": "nous sommes toujours ici",
+      "hint": "{nous sommes + toujours + ici}"
+    },
+    {
+      "id": "i-pour-toujours",
+      "type": "respond",
+      "situation": "forever",
+      "answer": "pour toujours",
+      "hint": "pour + toujours (for always)",
+      "mistakes": [
+        {
+          "answer": "toujours",
+          "feedback": "That's 'always' - use '{pour toujours}' for forever"
+        }
+      ]
+    },
+    {
+      "id": "i-souvent",
+      "type": "respond",
+      "situation": "often",
+      "answer": "souvent",
+      "hint": "Frequency adverb - happens frequently",
+      "mistakes": [
+        {
+          "answer": "toujours",
+          "feedback": "That's 'always' - use '{souvent}' for often"
+        },
+        {
+          "answer": "rarement",
+          "feedback": "That's 'rarely' - opposite of often"
+        }
+      ]
+    },
+    {
+      "id": "i-parfois",
+      "type": "respond",
+      "situation": "sometimes",
+      "answer": "parfois",
+      "hint": "Occasionally - not always, not never",
+      "mistakes": [
+        {
+          "answer": "souvent",
+          "feedback": "That's 'often' - use '{parfois}' for sometimes"
+        },
+        {
+          "answer": "toujours",
+          "feedback": "That's 'always' - use '{parfois}' for sometimes"
+        }
+      ]
+    },
+    {
+      "id": "i-de-temps-en-temps",
+      "type": "respond",
+      "situation": "from time to time",
+      "answer": "de temps en temps",
+      "hint": "de temps en temps - occasionally",
+      "mistakes": [
+        {
+          "answer": "parfois",
+          "feedback": "Both mean similar things, but use '{de temps en temps}' for this phrase"
+        }
+      ]
+    },
+    {
+      "id": "i-rarement",
+      "type": "respond",
+      "situation": "rarely",
+      "answer": "rarement",
+      "hint": "Not often - infrequent",
+      "mistakes": [
+        {
+          "answer": "souvent",
+          "feedback": "That's 'often' - opposite of rarely"
+        },
+        {
+          "answer": "jamais",
+          "feedback": "That's 'never' - use '{rarement}' for rarely"
+        }
+      ]
+    },
+    {
+      "id": "i-tres-rarement",
+      "type": "respond",
+      "situation": "very rarely",
+      "answer": "très rarement",
+      "hint": "{très + rarement}",
+      "mistakes": [
+        {
+          "answer": "rarement",
+          "feedback": "That's just 'rarely' - add '{très}' for very rarely"
+        }
+      ]
+    },
+    {
+      "id": "i-je-vais-souvent",
+      "type": "respond",
+      "situation": "I go often",
+      "answer": "je vais souvent",
+      "hint": "{je vais + souvent}",
+      "mistakes": [
+        {
+          "answer": "je vais toujours",
+          "feedback": "That's 'I always go' - use '{souvent}' for often"
+        }
+      ]
+    },
+    {
+      "id": "i-il-parle-rarement",
+      "type": "respond",
+      "situation": "he speaks rarely",
+      "answer": "il parle rarement",
+      "hint": "{il parle + rarement}",
+      "mistakes": [
+        {
+          "answer": "il parle souvent",
+          "feedback": "That's 'he speaks often' - use '{rarement}' for rarely"
+        }
+      ]
+    },
+    {
+      "id": "i-je-mange-parfois",
+      "type": "respond",
+      "situation": "I eat sometimes",
+      "answer": "je mange parfois",
+      "hint": "{je mange + parfois}",
+      "mistakes": [
+        {
+          "answer": "je mange toujours",
+          "feedback": "That's 'I always eat' - use '{parfois}' for sometimes"
+        }
+      ]
+    },
+    {
+      "id": "i-deja",
+      "type": "respond",
+      "situation": "already",
+      "answer": "déjà",
+      "hint": "By now, before this time"
+    },
+    {
+      "id": "i-encore",
+      "type": "respond",
+      "situation": "still",
+      "answer": "encore",
+      "hint": "Continuing, not yet finished"
+    },
+    {
+      "id": "i-juste",
+      "type": "respond",
+      "situation": "just",
+      "answer": "juste",
+      "hint": "Only, simply"
+    },
+    {
+      "id": "i-je-veux-juste-ca",
+      "type": "respond",
+      "situation": "I just want this",
+      "answer": "je veux juste ça",
+      "hint": "{je veux + juste + ça}"
+    }
+  ]
+}

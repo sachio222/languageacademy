@@ -1,0 +1,424 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-17-natural-phenomena",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Natural Phenomena - How Nature Works",
+  "description": "Learn how nature works: le soleil brille (the sun shines), les plantes poussent (plants grow), il pleut (it rains) + CAUSATIVE: rendre (to make/render)",
+  "vocabulary": [
+    {
+      "word_id": "briller-fr",
+      "fr": "briller",
+      "gloss": "to shine",
+      "note": "regular -ER verb - light emission"
+    },
+    {
+      "word_id": "je-brille-fr",
+      "fr": "je brille",
+      "gloss": "I shine",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-brilles-fr",
+      "fr": "tu brilles",
+      "gloss": "you shine",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-brille-fr",
+      "fr": "il brille",
+      "gloss": "he/it shines",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-brillons-fr",
+      "fr": "nous brillons",
+      "gloss": "we shine",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-brillez-fr",
+      "fr": "vous brillez",
+      "gloss": "you shine (formal)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-brillent-fr",
+      "fr": "ils brillent",
+      "gloss": "they shine",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "le-soleil-brille-fr",
+      "fr": "le soleil brille",
+      "gloss": "the sun shines",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "pousser-fr",
+      "fr": "pousser",
+      "gloss": "to grow / to push",
+      "note": "regular -ER verb - plant growth or pushing"
+    },
+    {
+      "word_id": "je-pousse-fr",
+      "fr": "je pousse",
+      "gloss": "I grow / I push",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-pousses-fr",
+      "fr": "tu pousses",
+      "gloss": "you grow / push",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-pousse-fr",
+      "fr": "il pousse",
+      "gloss": "he/it grows / pushes",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-poussons-fr",
+      "fr": "nous poussons",
+      "gloss": "we grow / push",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-poussez-fr",
+      "fr": "vous poussez",
+      "gloss": "you grow / push (formal)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-poussent-fr",
+      "fr": "ils poussent",
+      "gloss": "they grow / push",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "les-plantes-poussent-fr",
+      "fr": "les plantes poussent",
+      "gloss": "plants grow",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "pleuvoir-fr",
+      "fr": "pleuvoir",
+      "gloss": "to rain",
+      "note": "⭐ irregular - ONLY uses 'il' form!"
+    },
+    {
+      "word_id": "il-pleut-fr",
+      "fr": "il pleut",
+      "gloss": "it rains / it's raining",
+      "note": "impersonal - only this form exists in present"
+    },
+    {
+      "word_id": "il-a-plu-fr",
+      "fr": "il a plu",
+      "gloss": "it rained",
+      "note": "passé composé - irregular past participle"
+    },
+    {
+      "word_id": "il-pleuvait-fr",
+      "fr": "il pleuvait",
+      "gloss": "it was raining",
+      "note": "imparfait - regular formation"
+    },
+    {
+      "word_id": "souffler-fr",
+      "fr": "souffler",
+      "gloss": "to blow",
+      "note": "regular -ER verb - wind action or blowing"
+    },
+    {
+      "word_id": "je-souffle-fr",
+      "fr": "je souffle",
+      "gloss": "I blow",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-souffles-fr",
+      "fr": "tu souffles",
+      "gloss": "you blow",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-souffle-fr",
+      "fr": "il souffle",
+      "gloss": "he/it blows",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-soufflons-fr",
+      "fr": "nous soufflons",
+      "gloss": "we blow",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-soufflez-fr",
+      "fr": "vous soufflez",
+      "gloss": "you blow (formal)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-soufflent-fr",
+      "fr": "ils soufflent",
+      "gloss": "they blow",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "le-vent-souffle-fr",
+      "fr": "le vent souffle",
+      "gloss": "the wind blows",
+      "note": "common phrase"
+    },
+    {
+      "word_id": "tomber-fr",
+      "fr": "tomber",
+      "gloss": "to fall",
+      "note": "regular -ER verb - uses être in passé composé!"
+    },
+    {
+      "word_id": "je-tombe-fr",
+      "fr": "je tombe",
+      "gloss": "I fall",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "il-tombe-fr",
+      "fr": "il tombe",
+      "gloss": "he/it falls",
+      "note": "base form"
+    },
+    {
+      "word_id": "je-suis-tombe-e-fr",
+      "fr": "je suis tombé(e)",
+      "gloss": "I fell",
+      "note": "uses être in past!"
+    },
+    {
+      "word_id": "la-pluie-tombe-fr",
+      "fr": "la pluie tombe",
+      "gloss": "rain falls / it's raining",
+      "note": "common expression"
+    },
+    {
+      "word_id": "rendre-fr",
+      "fr": "rendre",
+      "gloss": "to make / to render",
+      "note": "⭐⭐⭐ CRITICAL - irregular like prendre - CAUSATIVE!"
+    },
+    {
+      "word_id": "je-rends-fr",
+      "fr": "je rends",
+      "gloss": "I make / render",
+      "note": "drop -re, add -s"
+    },
+    {
+      "word_id": "tu-rends-fr",
+      "fr": "tu rends",
+      "gloss": "you make / render",
+      "note": "same as je"
+    },
+    {
+      "word_id": "il-rend-fr",
+      "fr": "il rend",
+      "gloss": "he/it makes / renders",
+      "note": "drop -s from tu form"
+    },
+    {
+      "word_id": "nous-rendons-fr",
+      "fr": "nous rendons",
+      "gloss": "we make / render",
+      "note": "add -ons to rend-"
+    },
+    {
+      "word_id": "vous-rendez-fr",
+      "fr": "vous rendez",
+      "gloss": "you make / render (formal)",
+      "note": "add -ez to rend-"
+    },
+    {
+      "word_id": "ils-rendent-fr",
+      "fr": "ils rendent",
+      "gloss": "they make / render",
+      "note": "add -ent to rend-"
+    },
+    {
+      "word_id": "rendre-adjective-fr",
+      "fr": "rendre + adjective",
+      "gloss": "to make [something] [adjective]",
+      "note": "⭐ CAUSATIVE PATTERN: le soleil rend l'herbe verte"
+    },
+    {
+      "word_id": "le-soleil-rend-l-herbe-verte-fr",
+      "fr": "le soleil rend l'herbe verte",
+      "gloss": "the sun makes grass green",
+      "note": "CAUSATIVE: sun + rend + grass + green"
+    },
+    {
+      "word_id": "le-froid-rend-l-eau-glacee-fr",
+      "fr": "le froid rend l'eau glacée",
+      "gloss": "cold makes water frozen",
+      "note": "CAUSATIVE: cold + rend + water + frozen"
+    },
+    {
+      "word_id": "la-pluie-rend-la-terre-humide-fr",
+      "fr": "la pluie rend la terre humide",
+      "gloss": "rain makes the earth wet",
+      "note": "CAUSATIVE: rain + rend + earth + wet"
+    },
+    {
+      "word_id": "qu-est-ce-qui-rend-fr",
+      "fr": "qu'est-ce qui rend...?",
+      "gloss": "what makes...?",
+      "note": "⭐ QUESTION PATTERN with causative!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-natural-process-verbs",
+      "term": "Natural Process Verbs",
+      "definition": "Verbs that describe what happens in nature - shining, growing, raining",
+      "example": "{Le soleil brille} (the sun shines), {Les plantes poussent} (plants grow), {Le vent souffle} (the wind blows)"
+    },
+    {
+      "id": "c-pleuvoir-impersonal-verb",
+      "term": "{pleuvoir} - Impersonal Verb",
+      "definition": "Pleuvoir (to rain) only uses '{il}' form - il pleut (it rains)",
+      "example": "{il pleut} (it rains), {il a plu} (it rained), {il pleuvait} (it was raining)"
+    },
+    {
+      "id": "c-rendre-critical-causative-verb",
+      "term": "{rendre} - CRITICAL Causative Verb!",
+      "definition": "Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!",
+      "example": "{Le soleil rend l'herbe verte} (the sun makes grass green), {Le froid rend l'eau glacée} (cold makes water frozen)"
+    },
+    {
+      "id": "c-causative-pattern-rendre-adjective",
+      "term": "Causative Pattern: rendre + adjective",
+      "definition": "Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]",
+      "example": "{Qu'est-ce qui rend le ciel bleu?} (What makes the sky blue?) → {La lumière rend le ciel bleu} (Light makes the sky blue)"
+    },
+    {
+      "id": "c-setting-up-question-patterns",
+      "term": "Setting Up Question Patterns",
+      "definition": "These verbs enable sophisticated 'why' and 'what makes' questions",
+      "example": "{Pourquoi est-ce que le soleil brille? Qu'est-ce qui rend l'herbe verte? Comment est-ce que les plantes poussent?}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-il-brille",
+      "type": "respond",
+      "situation": "he shines",
+      "answer": "il brille",
+      "hint": "briller for il"
+    },
+    {
+      "id": "i-le-soleil-brille",
+      "type": "respond",
+      "situation": "The sun shines",
+      "answer": "le soleil brille",
+      "hint": "{le soleil + brille}"
+    },
+    {
+      "id": "i-ils-poussent",
+      "type": "respond",
+      "situation": "they grow",
+      "answer": "ils poussent",
+      "hint": "pousser for ils"
+    },
+    {
+      "id": "i-les-plantes-poussent",
+      "type": "respond",
+      "situation": "Plants grow",
+      "answer": "les plantes poussent",
+      "hint": "{les plantes + poussent}"
+    },
+    {
+      "id": "i-les-plantes-poussent-au",
+      "type": "respond",
+      "situation": "Plants grow in spring",
+      "answer": "les plantes poussent au printemps",
+      "hint": "{les plantes poussent + au printemps}"
+    },
+    {
+      "id": "i-il-pleut",
+      "type": "respond",
+      "situation": "Say 'It rains' / 'It's raining'",
+      "cue": "It rains",
+      "answer": "il pleut",
+      "hint": "impersonal verb - only il pleut"
+    },
+    {
+      "id": "i-il-a-plu",
+      "type": "respond",
+      "situation": "Say 'It rained' (passé composé)",
+      "cue": "It rained",
+      "answer": "il a plu",
+      "hint": "il + a + plu (irregular past participle!)"
+    },
+    {
+      "id": "i-le-vent-souffle",
+      "type": "respond",
+      "situation": "The wind blows",
+      "answer": "le vent souffle",
+      "hint": "{le vent + souffle}"
+    },
+    {
+      "id": "i-je-rends",
+      "type": "respond",
+      "situation": "I make / I render",
+      "answer": "je rends",
+      "hint": "rendre for je - like prendre!"
+    },
+    {
+      "id": "i-il-rend",
+      "type": "respond",
+      "situation": "it makes / renders",
+      "answer": "il rend",
+      "hint": "rendre for il"
+    },
+    {
+      "id": "i-ils-rendent",
+      "type": "respond",
+      "situation": "they make / render",
+      "answer": "ils rendent",
+      "hint": "rendre for ils"
+    },
+    {
+      "id": "i-le-soleil-rend-l",
+      "type": "respond",
+      "situation": "The sun makes grass green",
+      "answer": "le soleil rend l'herbe verte",
+      "hint": "{le soleil + rend + l'herbe + verte}"
+    },
+    {
+      "id": "i-le-froid-rend-l",
+      "type": "respond",
+      "situation": "Cold makes water frozen",
+      "answer": "le froid rend l'eau glacée",
+      "accept": [
+        "le froid rend l'eau glacee"
+      ],
+      "hint": "{le froid + rend + l'eau + glacée}"
+    },
+    {
+      "id": "i-la-pluie-rend-la",
+      "type": "respond",
+      "situation": "Rain makes the earth wet",
+      "answer": "la pluie rend la terre humide",
+      "hint": "{la pluie + rend + la terre + humide}"
+    },
+    {
+      "id": "i-le-soleil-brille-dans",
+      "type": "respond",
+      "situation": "The sun shines in the sky",
+      "answer": "le soleil brille dans le ciel",
+      "hint": "{le soleil brille + dans le ciel}"
+    }
+  ]
+}

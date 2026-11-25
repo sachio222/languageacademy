@@ -1,0 +1,520 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-28-more-spatial-relations",
+  "kind": "lesson",
+  "status": "written",
+  "title": "More Spatial Relations - Distance & Proximity",
+  "description": "Learn to describe distance and proximity: près de (near), loin de (far from), à côté de (next to), en face de (across from), autour de (around)",
+  "can_do": [
+    "Describe distance and proximity (near, far from, next to)",
+    "Give detailed directions with spatial relations",
+    "Say 'The café is next to the park' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "pres-de-fr",
+      "fr": "près de",
+      "gloss": "near, close to",
+      "note": "⭐ very common - proximity"
+    },
+    {
+      "word_id": "loin-de-fr",
+      "fr": "loin de",
+      "gloss": "far from",
+      "note": "opposite of près de - distance"
+    },
+    {
+      "word_id": "a-cote-de-fr",
+      "fr": "à côté de",
+      "gloss": "next to, beside",
+      "note": "⭐ very common - right beside"
+    },
+    {
+      "word_id": "en-face-de-fr",
+      "fr": "en face de",
+      "gloss": "across from, opposite",
+      "note": "facing - directly opposite"
+    },
+    {
+      "word_id": "autour-de-fr",
+      "fr": "autour de",
+      "gloss": "around",
+      "note": "surrounding - all around"
+    },
+    {
+      "word_id": "le-long-de-fr",
+      "fr": "le long de",
+      "gloss": "along",
+      "note": "following a length/path"
+    },
+    {
+      "word_id": "au-milieu-de-fr",
+      "fr": "au milieu de",
+      "gloss": "in the middle of",
+      "note": "center position - compound prep"
+    },
+    {
+      "word_id": "au-bout-de-fr",
+      "fr": "au bout de",
+      "gloss": "at the end of",
+      "note": "end position - compound prep"
+    },
+    {
+      "word_id": "la-distance-fr",
+      "fr": "la distance",
+      "gloss": "the distance",
+      "note": "feminine noun - how far"
+    },
+    {
+      "word_id": "proche-fr",
+      "fr": "proche",
+      "gloss": "close, near",
+      "note": "adjective - être proche de",
+      "example_fr": "C'est proche"
+    },
+    {
+      "word_id": "lointain-e-fr",
+      "fr": "lointain(e)",
+      "gloss": "distant, faraway",
+      "note": "adjective - opposite of proche; adjective",
+      "example_fr": "un pays lointain"
+    },
+    {
+      "word_id": "ici-fr",
+      "fr": "ici",
+      "gloss": "here",
+      "note": "⭐ here - this location; adverb",
+      "example_fr": "près d'ici"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-pres-de-near-close",
+      "term": "{près de} - near, close to",
+      "definition": "Indicates proximity, nearness",
+      "example": "{Le café est près de l'école} (The café is near the school), {J'habite près d'ici} (I live near here)"
+    },
+    {
+      "id": "c-loin-de-far-from",
+      "term": "{loin de} - far from",
+      "definition": "Indicates distance, remoteness",
+      "example": "{La gare est loin de la maison} (The station is far from the house), {C'est loin d'ici?} (Is it far from here?)"
+    },
+    {
+      "id": "c-a-cote-de-next",
+      "term": "{à côté de} - next to, beside",
+      "definition": "Indicates immediate proximity, side-by-side position",
+      "example": "{Je suis à côté de toi} (I'm next to you), {Le restaurant est à côté du cinéma} (The restaurant is next to the cinema)"
+    },
+    {
+      "id": "c-en-face-de-across",
+      "term": "{en face de} - across from, opposite",
+      "definition": "Indicates facing position, directly opposite",
+      "example": "{Ma maison est en face du parc} (My house is across from the park), {Il est assis en face de moi} (He's sitting across from me)"
+    },
+    {
+      "id": "c-autour-de-around",
+      "term": "{autour de} - around",
+      "definition": "Indicates surrounding position",
+      "example": "{Les gens sont autour de la table} (People are around the table), {Autour de la ville} (Around the city)"
+    },
+    {
+      "id": "c-le-long-de-along",
+      "term": "{le long de} - along",
+      "definition": "Indicates position along a length",
+      "example": "{Le long de la rue} (Along the street), {On marche le long de la rivière} (We walk along the river)"
+    },
+    {
+      "id": "c-au-milieu-de-in",
+      "term": "{au milieu de} - in the middle of",
+      "definition": "Indicates center position",
+      "example": "{Au milieu de la pièce} (In the middle of the room), {Il est au milieu} (He's in the middle)"
+    },
+    {
+      "id": "c-au-bout-de-at",
+      "term": "{au bout de} - at the end of",
+      "definition": "Indicates end position",
+      "example": "{Au bout de la rue} (At the end of the street), {C'est au bout} (It's at the end)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-pres-de",
+      "type": "gapfill",
+      "text": "Le café est ___ l'école",
+      "blanks": [
+        {
+          "answer": "près de"
+        }
+      ],
+      "gloss": "The café is near the school",
+      "mistakes": [
+        {
+          "answer": "loin de",
+          "feedback": "Loin de means 'far from'. Use '{près de}' for 'near/close to'!"
+        },
+        {
+          "answer": "devant",
+          "feedback": "Devant means 'in front of'. Use '{près de}' for 'near/close to'!"
+        }
+      ]
+    },
+    {
+      "id": "i-loin-de",
+      "type": "gapfill",
+      "text": "La gare est ___ la maison",
+      "blanks": [
+        {
+          "answer": "loin de"
+        }
+      ],
+      "gloss": "The station is far from the house",
+      "mistakes": [
+        {
+          "answer": "près de",
+          "feedback": "Près de means 'near/close to'. Use '{loin de}' for 'far from'!"
+        },
+        {
+          "answer": "à côté de",
+          "feedback": "À côté de means 'next to'. Use '{loin de}' for 'far from'!"
+        }
+      ]
+    },
+    {
+      "id": "i-a-cote-de",
+      "type": "gapfill",
+      "text": "Je suis ___ toi",
+      "blanks": [
+        {
+          "answer": "à côté de"
+        }
+      ],
+      "gloss": "I'm next to you/I'm sitting beside you",
+      "mistakes": [
+        {
+          "answer": "près de",
+          "feedback": "Près de means 'near' (general). Use '{à côté de}' for 'right next to/beside'!"
+        },
+        {
+          "answer": "avec",
+          "feedback": "Avec means 'with'. Use '{à côté de}' for 'next to'!"
+        }
+      ]
+    },
+    {
+      "id": "i-en-face-du",
+      "type": "gapfill",
+      "text": "Ma maison est ___ parc",
+      "blanks": [
+        {
+          "answer": "en face du"
+        }
+      ],
+      "gloss": "My house is across from the park",
+      "mistakes": [
+        {
+          "answer": "à côté du",
+          "feedback": "À côté de means 'next to' (same side). Use '{en face de}' for 'across from' (opposite side)!"
+        },
+        {
+          "answer": "devant le",
+          "feedback": "Devant means 'in front of' (blocking). Use '{en face de}' for 'across from' (facing)!"
+        }
+      ]
+    },
+    {
+      "id": "i-autour-de-la",
+      "type": "gapfill",
+      "text": "Les gens sont ___ table",
+      "blanks": [
+        {
+          "answer": "autour de la"
+        }
+      ],
+      "gloss": "People are around the table",
+      "mistakes": [
+        {
+          "answer": "sur la",
+          "feedback": "Sur means 'on top of'. Use '{autour de}' for 'around/surrounding'!"
+        },
+        {
+          "answer": "près de la",
+          "feedback": "Près de means 'near' (close). Use '{autour de}' for 'around' (surrounding)!"
+        }
+      ]
+    },
+    {
+      "id": "i-le-long-de-la",
+      "type": "gapfill",
+      "text": "On marche ___ rivière",
+      "blanks": [
+        {
+          "answer": "le long de la"
+        }
+      ],
+      "gloss": "We walk along the river",
+      "mistakes": [
+        {
+          "answer": "près de la",
+          "feedback": "Près de means 'near'. Use '{le long de}' for 'along' (following the length)!"
+        },
+        {
+          "answer": "autour de la",
+          "feedback": "Autour de means 'around' (circling). Use '{le long de}' for 'along' (following)!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-milieu-de-la",
+      "type": "gapfill",
+      "text": "La table est ___ pièce",
+      "blanks": [
+        {
+          "answer": "au milieu de la"
+        }
+      ],
+      "gloss": "The table is in the middle of the room",
+      "mistakes": [
+        {
+          "answer": "dans la",
+          "feedback": "Dans means 'in' (general). Use '{au milieu de}' for 'in the middle of'!"
+        },
+        {
+          "answer": "sur la",
+          "feedback": "Sur means 'on'. Use '{au milieu de}' for 'in the middle of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-bout-de-la",
+      "type": "gapfill",
+      "text": "Le restaurant est ___ rue",
+      "blanks": [
+        {
+          "answer": "au bout de la"
+        }
+      ],
+      "gloss": "The restaurant is at the end of the street",
+      "mistakes": [
+        {
+          "answer": "dans la",
+          "feedback": "Dans means 'in/on' (general). Use '{au bout de}' for 'at the end of'!"
+        },
+        {
+          "answer": "près de la",
+          "feedback": "Près de means 'near'. Use '{au bout de}' for 'at the end of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-pres-d",
+      "type": "gapfill",
+      "text": "J'habite ___ ici",
+      "blanks": [
+        {
+          "answer": "près d'"
+        }
+      ],
+      "gloss": "I live near here/I live close by",
+      "mistakes": [
+        {
+          "answer": "loin d'",
+          "feedback": "Loin de means 'far from'. Use '{près de}' for 'near'!"
+        },
+        {
+          "answer": "dans",
+          "feedback": "Dans means 'in'. Use '{près d'ici}' for 'near here'!"
+        }
+      ]
+    },
+    {
+      "id": "i-loin-d",
+      "type": "gapfill",
+      "text": "C'est ___ ici?",
+      "blanks": [
+        {
+          "answer": "loin d'"
+        }
+      ],
+      "gloss": "Is it far from here?",
+      "mistakes": [
+        {
+          "answer": "près d'",
+          "feedback": "Près de means 'near'. Use '{loin de}' for 'far from'!"
+        },
+        {
+          "answer": "à côté d'",
+          "feedback": "À côté de means 'next to'. Use '{loin de}' for 'far from'!"
+        }
+      ]
+    },
+    {
+      "id": "i-a-cote-du",
+      "type": "gapfill",
+      "text": "Le cinéma est ___ restaurant",
+      "blanks": [
+        {
+          "answer": "à côté du"
+        }
+      ],
+      "gloss": "The cinema is next to the restaurant",
+      "mistakes": [
+        {
+          "answer": "en face du",
+          "feedback": "En face de means 'across from'. Use '{à côté de}' for 'next to/beside'!"
+        },
+        {
+          "answer": "dans le",
+          "feedback": "Dans means 'in/inside'. Use '{à côté de}' for 'next to'!"
+        }
+      ]
+    },
+    {
+      "id": "i-en-face-de",
+      "type": "gapfill",
+      "text": "Il est assis ___ moi",
+      "blanks": [
+        {
+          "answer": "en face de"
+        }
+      ],
+      "gloss": "He's sitting across from me/facing me",
+      "mistakes": [
+        {
+          "answer": "à côté de",
+          "feedback": "À côté de means 'next to' (same side). Use '{en face de}' for 'across from' (opposite)!"
+        },
+        {
+          "answer": "devant",
+          "feedback": "Devant works but '{en face de}' is more specific for facing position!"
+        }
+      ]
+    },
+    {
+      "id": "i-autour-de-la-2",
+      "type": "gapfill",
+      "text": "Il y a un jardin ___ maison",
+      "blanks": [
+        {
+          "answer": "autour de la"
+        }
+      ],
+      "gloss": "There's a garden around the house",
+      "mistakes": [
+        {
+          "answer": "dans la",
+          "feedback": "Dans means 'in/inside'. Use '{autour de}' for 'around/surrounding'!"
+        },
+        {
+          "answer": "près de la",
+          "feedback": "Près de means 'near'. Use '{autour de}' for 'around' (all sides)!"
+        }
+      ]
+    },
+    {
+      "id": "i-le-long-de-la-2",
+      "type": "gapfill",
+      "text": "Il y a des arbres ___ route",
+      "blanks": [
+        {
+          "answer": "le long de la"
+        }
+      ],
+      "gloss": "There are trees along the road",
+      "mistakes": [
+        {
+          "answer": "sur la",
+          "feedback": "Sur means 'on'. Use '{le long de}' for 'along' (following the length)!"
+        },
+        {
+          "answer": "autour de la",
+          "feedback": "Autour de means 'around' (surrounding). Use '{le long de}' for 'along'!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-milieu-de-la-2",
+      "type": "gapfill",
+      "text": "Il y a une fontaine ___ place",
+      "blanks": [
+        {
+          "answer": "au milieu de la"
+        }
+      ],
+      "gloss": "There's a fountain in the middle of the square",
+      "mistakes": [
+        {
+          "answer": "dans la",
+          "feedback": "Dans means 'in' (general). Use '{au milieu de}' for 'in the middle of'!"
+        },
+        {
+          "answer": "sur la",
+          "feedback": "Sur means 'on'. Use '{au milieu de}' for 'in the middle of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-au-bout-du",
+      "type": "gapfill",
+      "text": "La porte est ___ couloir",
+      "blanks": [
+        {
+          "answer": "au bout du"
+        }
+      ],
+      "gloss": "The door is at the end of the hallway",
+      "mistakes": [
+        {
+          "answer": "dans le",
+          "feedback": "Dans means 'in' (general). Use '{au bout de}' for 'at the end of'!"
+        },
+        {
+          "answer": "près du",
+          "feedback": "Près de means 'near'. Use '{au bout de}' for 'at the end of'!"
+        }
+      ]
+    },
+    {
+      "id": "i-loin-de-la",
+      "type": "gapfill",
+      "text": "Le parc est ___ ville",
+      "blanks": [
+        {
+          "answer": "loin de la"
+        }
+      ],
+      "gloss": "The park is far from the city",
+      "mistakes": [
+        {
+          "answer": "près de la",
+          "feedback": "Près de means 'near'. Use '{loin de}' for 'far from'!"
+        },
+        {
+          "answer": "dans la",
+          "feedback": "Dans means 'in'. Use '{loin de}' for 'far from' (outside)!"
+        }
+      ]
+    },
+    {
+      "id": "i-a-cote-de-2",
+      "type": "gapfill",
+      "text": "Assieds-toi ___ moi",
+      "blanks": [
+        {
+          "answer": "à côté de"
+        }
+      ],
+      "gloss": "Sit next to me/Sit beside me",
+      "mistakes": [
+        {
+          "answer": "avec",
+          "feedback": "Avec means 'with'. Use '{à côté de}' for physical position 'next to'!"
+        },
+        {
+          "answer": "près de",
+          "feedback": "Près de means 'near' (general). Use '{à côté de}' for 'right next to'!"
+        }
+      ]
+    }
+  ]
+}

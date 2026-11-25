@@ -1,0 +1,275 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-02-etre",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb - {être} (to be)",
+  "description": "Build your first real sentences! \"I am\", \"you are\", \"he is\" - the most useful pattern in French.",
+  "can_do": [
+    "Say 'I am', 'you are', 'he/she is' in French",
+    "Introduce yourself and describe others",
+    "Form your first complete French sentences"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "etre-fr",
+      "fr": "être",
+      "gloss": "to be",
+      "note": "infinitive form"
+    },
+    {
+      "word_id": "je-suis-fr",
+      "fr": "je suis",
+      "gloss": "I am",
+      "note": "être conjugated"
+    },
+    {
+      "word_id": "tu-es-fr",
+      "fr": "tu es",
+      "gloss": "you are (informal)",
+      "note": "singular"
+    },
+    {
+      "word_id": "il-est-fr",
+      "fr": "il est",
+      "gloss": "he is",
+      "note": "masculine"
+    },
+    {
+      "word_id": "elle-est-fr",
+      "fr": "elle est",
+      "gloss": "she is",
+      "note": "feminine"
+    },
+    {
+      "word_id": "nous-sommes-fr",
+      "fr": "nous sommes",
+      "gloss": "we are",
+      "note": "plural"
+    },
+    {
+      "word_id": "vous-etes-fr",
+      "fr": "vous êtes",
+      "gloss": "you are (formal/plural)",
+      "note": "formal or groups"
+    },
+    {
+      "word_id": "ils-sont-fr",
+      "fr": "ils sont",
+      "gloss": "they are (masculine)",
+      "note": "masc or mixed"
+    },
+    {
+      "word_id": "elles-sont-fr",
+      "fr": "elles sont",
+      "gloss": "they are (feminine)",
+      "note": "all feminine"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-etre-to-be",
+      "term": "{être} = to be",
+      "definition": "The most important verb. Describes states and identity.",
+      "example": "{Express}: I am, you are, he is, she is, we are, they are"
+    },
+    {
+      "id": "c-conjugation-pattern",
+      "term": "Conjugation Pattern",
+      "definition": "Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!",
+      "example": "{je suis}, {tu es}, {il est}, {elle est}, {nous sommes}, {vous êtes}, {ils sont}, {elles sont}"
+    },
+    {
+      "id": "c-practical-usage",
+      "term": "Practical Usage",
+      "definition": "Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"",
+      "example": "{Je suis heureux} (I am happy), {Je suis étudiant} (I am a student), {Je suis à Paris} (I am in Paris)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-etre",
+      "title": "{être}",
+      "rows": [
+        {
+          "fr": "je suis",
+          "en": "I am"
+        },
+        {
+          "fr": "tu es",
+          "en": "you are (informal)"
+        },
+        {
+          "fr": "il est",
+          "en": "he is"
+        },
+        {
+          "fr": "elle est",
+          "en": "she is"
+        },
+        {
+          "fr": "nous sommes",
+          "en": "we are"
+        },
+        {
+          "fr": "vous êtes",
+          "en": "you are (formal/plural)"
+        },
+        {
+          "fr": "ils sont",
+          "en": "they are (masculine)"
+        },
+        {
+          "fr": "elles sont",
+          "en": "they are (feminine)"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-suis",
+      "type": "transform",
+      "instruction": "Introduce yourself. Say \"I am\"",
+      "shown": "être",
+      "answer": "je suis",
+      "hint": "{je + être = ?}",
+      "mistakes": [
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"I am\""
+        },
+        {
+          "answer": "il est",
+          "feedback": "That's \"he is\", not \"I am\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-es",
+      "type": "transform",
+      "instruction": "Tell your friend what they are. Say \"you are (informal)\"",
+      "shown": "être",
+      "answer": "tu es",
+      "hint": "{tu + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"you are (informal)\""
+        },
+        {
+          "answer": "il est",
+          "feedback": "That's \"he is\", not \"you are (informal)\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-est",
+      "type": "transform",
+      "instruction": "Describe a man. Say \"he is\"",
+      "shown": "être",
+      "answer": "il est",
+      "hint": "{il + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"he is\""
+        },
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"he is\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-est",
+      "type": "transform",
+      "instruction": "Describe a woman. Say \"she is\"",
+      "shown": "être",
+      "answer": "elle est",
+      "hint": "{elle + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"she is\""
+        },
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"she is\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-sommes",
+      "type": "transform",
+      "instruction": "Describe your group. Say \"we are\"",
+      "shown": "être",
+      "answer": "nous sommes",
+      "hint": "{nous + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"we are\""
+        },
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"we are\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-etes",
+      "type": "transform",
+      "instruction": "Address someone formally. Say \"you are (formal/plural)\"",
+      "shown": "être",
+      "answer": "vous êtes",
+      "hint": "{vous + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"you are (formal/plural)\""
+        },
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"you are (formal/plural)\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-sont",
+      "type": "transform",
+      "instruction": "Describe a group of men. Say \"they are (masculine)\"",
+      "shown": "être",
+      "answer": "ils sont",
+      "hint": "{ils + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"they are (masculine)\""
+        },
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"they are (masculine)\""
+        }
+      ]
+    },
+    {
+      "id": "i-elles-sont",
+      "type": "transform",
+      "instruction": "Describe a group of women. Say \"they are (feminine)\"",
+      "shown": "être",
+      "answer": "elles sont",
+      "hint": "{elles + être = ?}",
+      "mistakes": [
+        {
+          "answer": "je suis",
+          "feedback": "That's \"I am\", not \"they are (feminine)\""
+        },
+        {
+          "answer": "tu es",
+          "feedback": "That's \"you are (informal)\", not \"they are (feminine)\""
+        }
+      ]
+    }
+  ]
+}

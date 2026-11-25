@@ -1,0 +1,661 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-26-unit-6-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Progressive tenses, future forms, communication verbs, and essential vocabulary.",
+  "can_do": [
+    "Express ongoing actions (I'm eating, you're speaking)",
+    "Use advanced communication verbs (say, take, give, put, ask)",
+    "Understand ~70% of everyday French conversations"
+  ],
+  "items": [
+    {
+      "id": "i-je-suis-en-train",
+      "type": "respond",
+      "situation": "I am eating",
+      "answer": "je suis en train de manger",
+      "hint": "Progressive present: je suis + en train de + infinitive"
+    },
+    {
+      "id": "i-il-est-en-train",
+      "type": "respond",
+      "situation": "he is speaking",
+      "answer": "il est en train de parler",
+      "hint": "Progressive: il est en train de + parler"
+    },
+    {
+      "id": "i-nous-sommes-en-train",
+      "type": "respond",
+      "situation": "we are leaving",
+      "answer": "nous sommes en train de partir",
+      "hint": "Progressive: nous sommes en train de + partir"
+    },
+    {
+      "id": "i-j-etais-en-train",
+      "type": "respond",
+      "situation": "I was eating",
+      "answer": "j'étais en train de manger",
+      "accept": [
+        "j etais en train de manger"
+      ],
+      "hint": "Past progressive: j'étais en train de + infinitive"
+    },
+    {
+      "id": "i-tu-etais-en-train",
+      "type": "respond",
+      "situation": "you were talking (informal)",
+      "answer": "tu étais en train de parler",
+      "accept": [
+        "tu etais en train de parler"
+      ],
+      "hint": "{tu étais en train de + parler}"
+    },
+    {
+      "id": "i-in-the-process-of",
+      "type": "meaning",
+      "shown": "en train de",
+      "answer": "in the process of",
+      "accept": [
+        "in the process of doing",
+        "in the act of"
+      ],
+      "hint": "Progressive construction - literally 'in the process of'"
+    },
+    {
+      "id": "i-je-vais-manger",
+      "type": "respond",
+      "situation": "I am going to eat",
+      "answer": "je vais manger",
+      "hint": "Near future: je vais + infinitive"
+    },
+    {
+      "id": "i-tu-vas-partir",
+      "type": "respond",
+      "situation": "you are going to leave (informal)",
+      "answer": "tu vas partir",
+      "hint": "{tu vas + partir}"
+    },
+    {
+      "id": "i-nous-allons-voir",
+      "type": "respond",
+      "situation": "we are going to see",
+      "answer": "nous allons voir",
+      "hint": "{nous allons + voir}"
+    },
+    {
+      "id": "i-ils-vont-venir",
+      "type": "respond",
+      "situation": "they are going to come",
+      "answer": "ils vont venir",
+      "hint": "{ils vont + venir}"
+    },
+    {
+      "id": "i-je-ne-vais-pas",
+      "type": "respond",
+      "situation": "I'm not going to go",
+      "answer": "je ne vais pas aller",
+      "hint": "Negative near future: je ne vais pas + aller"
+    },
+    {
+      "id": "i-je-parlerai",
+      "type": "respond",
+      "situation": "I will speak",
+      "answer": "je parlerai",
+      "hint": "Simple future: parler + ai"
+    },
+    {
+      "id": "i-tu-mangeras",
+      "type": "respond",
+      "situation": "you will eat",
+      "answer": "tu mangeras",
+      "hint": "Simple future: manger + as"
+    },
+    {
+      "id": "i-il-ira",
+      "type": "respond",
+      "situation": "he will go",
+      "answer": "il ira",
+      "hint": "Irregular future of aller: il ira"
+    },
+    {
+      "id": "i-je-ne-peux-pas",
+      "type": "respond",
+      "situation": "I can't",
+      "answer": "je ne peux pas",
+      "hint": "Negative modal: je ne peux pas"
+    },
+    {
+      "id": "i-je-ne-devrais-pas",
+      "type": "respond",
+      "situation": "I shouldn't",
+      "answer": "je ne devrais pas",
+      "hint": "Negative conditional: je ne devrais pas"
+    },
+    {
+      "id": "i-je-dis",
+      "type": "respond",
+      "situation": "I say",
+      "answer": "je dis",
+      "hint": "dire for je"
+    },
+    {
+      "id": "i-tu-dis",
+      "type": "respond",
+      "situation": "you say (informal)",
+      "answer": "tu dis",
+      "hint": "dire for tu - same as je"
+    },
+    {
+      "id": "i-il-dit",
+      "type": "respond",
+      "situation": "he says",
+      "answer": "il dit",
+      "hint": "dire for il"
+    },
+    {
+      "id": "i-vous-dites",
+      "type": "respond",
+      "situation": "you say (formal)",
+      "answer": "vous dites",
+      "hint": "Irregular! vous dites (not disez)"
+    },
+    {
+      "id": "i-je-te-dis",
+      "type": "respond",
+      "situation": "I tell you (informal)",
+      "answer": "je te dis",
+      "hint": "Object pronoun + dire: je te dis"
+    },
+    {
+      "id": "i-il-me-dit",
+      "type": "respond",
+      "situation": "he tells me",
+      "answer": "il me dit",
+      "hint": "{il me dit}"
+    },
+    {
+      "id": "i-je-prends",
+      "type": "respond",
+      "situation": "I take",
+      "answer": "je prends",
+      "hint": "prendre for je"
+    },
+    {
+      "id": "i-il-prend",
+      "type": "respond",
+      "situation": "he takes",
+      "answer": "il prend",
+      "hint": "prendre for il - no 's'"
+    },
+    {
+      "id": "i-nous-prenons",
+      "type": "respond",
+      "situation": "we take",
+      "answer": "nous prenons",
+      "hint": "prendre for nous"
+    },
+    {
+      "id": "i-ils-prennent",
+      "type": "respond",
+      "situation": "they take",
+      "answer": "ils prennent",
+      "hint": "prendre for ils - double 'n'!"
+    },
+    {
+      "id": "i-je-comprends",
+      "type": "respond",
+      "situation": "I understand",
+      "answer": "je comprends",
+      "hint": "comprendre for je"
+    },
+    {
+      "id": "i-tu-comprends",
+      "type": "respond",
+      "situation": "do you understand? (informal)",
+      "answer": "tu comprends?",
+      "accept": [
+        "tu comprends",
+        "est-ce que tu comprends?",
+        "est-ce que tu comprends"
+      ],
+      "hint": "Question with tu comprends"
+    },
+    {
+      "id": "i-j-apprends",
+      "type": "respond",
+      "situation": "I learn",
+      "answer": "j'apprends",
+      "accept": [
+        "j apprends"
+      ],
+      "hint": "apprendre for je - j' before vowel"
+    },
+    {
+      "id": "i-j-apprends-le-francais",
+      "type": "respond",
+      "situation": "I learn French",
+      "answer": "j'apprends le français",
+      "accept": [
+        "j apprends le français",
+        "j'apprends le francais"
+      ],
+      "hint": "{j'apprends + le français}"
+    },
+    {
+      "id": "i-je-donne",
+      "type": "respond",
+      "situation": "I give",
+      "answer": "je donne",
+      "hint": "Regular -ER verb: donner"
+    },
+    {
+      "id": "i-tu-donnes",
+      "type": "respond",
+      "situation": "you give (informal)",
+      "answer": "tu donnes",
+      "hint": "donner for tu"
+    },
+    {
+      "id": "i-donne-moi-ta-main",
+      "type": "respond",
+      "situation": "give me your hand please",
+      "answer": "donne-moi ta main, s'il te plaît",
+      "accept": [
+        "donne-moi ta main s'il te plaît"
+      ],
+      "hint": "{donne-moi + ta main + s'il te plaît}"
+    },
+    {
+      "id": "i-je-mets",
+      "type": "respond",
+      "situation": "I put",
+      "answer": "je mets",
+      "hint": "mettre for je"
+    },
+    {
+      "id": "i-il-met",
+      "type": "respond",
+      "situation": "he puts",
+      "answer": "il met",
+      "hint": "mettre for il - no 's'"
+    },
+    {
+      "id": "i-nous-mettons",
+      "type": "respond",
+      "situation": "we put",
+      "answer": "nous mettons",
+      "hint": "mettre for nous - double 'tt'!"
+    },
+    {
+      "id": "i-mettre-la-table",
+      "type": "respond",
+      "situation": "to set the table",
+      "answer": "mettre la table",
+      "hint": "{mettre + la table}"
+    },
+    {
+      "id": "i-je-mets-un-manteau",
+      "type": "respond",
+      "situation": "I put on a coat",
+      "answer": "je mets un manteau",
+      "hint": "{je mets + un manteau}"
+    },
+    {
+      "id": "i-je-demande",
+      "type": "respond",
+      "situation": "I ask",
+      "answer": "je demande",
+      "hint": "Regular -ER verb: demander"
+    },
+    {
+      "id": "i-tu-demandes",
+      "type": "respond",
+      "situation": "you ask (informal)",
+      "answer": "tu demandes",
+      "hint": "demander for tu"
+    },
+    {
+      "id": "i-demander-de-l-aide",
+      "type": "respond",
+      "situation": "to ask for help",
+      "answer": "demander de l'aide",
+      "accept": [
+        "demander de l aide"
+      ],
+      "hint": "{demander + de l'aide}"
+    },
+    {
+      "id": "i-je-te-demande",
+      "type": "respond",
+      "situation": "I ask you (informal)",
+      "answer": "je te demande",
+      "hint": "Object pronoun before verb: je te demande"
+    },
+    {
+      "id": "i-il-me-demande-de",
+      "type": "respond",
+      "situation": "he asks me to come",
+      "answer": "il me demande de venir",
+      "hint": "il me demande de + infinitive"
+    },
+    {
+      "id": "i-je-commande",
+      "type": "respond",
+      "situation": "I order",
+      "answer": "je commande",
+      "hint": "Regular -ER verb: commander"
+    },
+    {
+      "id": "i-nous-commandons",
+      "type": "respond",
+      "situation": "we order",
+      "answer": "nous commandons",
+      "hint": "commander for nous"
+    },
+    {
+      "id": "i-commander-un-cafe",
+      "type": "respond",
+      "situation": "to order a coffee",
+      "answer": "commander un café",
+      "accept": [
+        "commander un cafe"
+      ],
+      "hint": "{commander + un café}"
+    },
+    {
+      "id": "i-je-voudrais-commander",
+      "type": "respond",
+      "situation": "I would like to order",
+      "answer": "je voudrais commander",
+      "hint": "{je voudrais + commander}"
+    },
+    {
+      "id": "i-j-ai-besoin-de",
+      "type": "respond",
+      "situation": "I need",
+      "answer": "j'ai besoin de",
+      "accept": [
+        "j ai besoin de"
+      ],
+      "hint": "avoir besoin de for je"
+    },
+    {
+      "id": "i-tu-as-besoin-de",
+      "type": "respond",
+      "situation": "you need (informal)",
+      "answer": "tu as besoin de",
+      "hint": "avoir besoin de for tu"
+    },
+    {
+      "id": "i-j-ai-besoin-d",
+      "type": "respond",
+      "situation": "I need help",
+      "answer": "j'ai besoin d'aide",
+      "accept": [
+        "j ai besoin d'aide",
+        "j'ai besoin d aide"
+      ],
+      "hint": "j'ai besoin de + aide (d' before vowel)"
+    },
+    {
+      "id": "i-j-ai-besoin-de-2",
+      "type": "respond",
+      "situation": "I need to eat",
+      "answer": "j'ai besoin de manger",
+      "accept": [
+        "j ai besoin de manger"
+      ],
+      "hint": "{j'ai besoin de + manger}"
+    },
+    {
+      "id": "i-nous-avons-besoin-de",
+      "type": "respond",
+      "situation": "we need time",
+      "answer": "nous avons besoin de temps",
+      "hint": "{nous avons besoin de + temps}"
+    },
+    {
+      "id": "i-je-n-ai-pas",
+      "type": "respond",
+      "situation": "I don't need that",
+      "answer": "je n'ai pas besoin de ça",
+      "accept": [
+        "je n ai pas besoin de ça",
+        "je n'ai pas besoin de ca"
+      ],
+      "hint": "Negative: je n'ai pas besoin de + ça"
+    },
+    {
+      "id": "i-la-famille",
+      "type": "respond",
+      "situation": "family",
+      "answer": "la famille",
+      "accept": [
+        "famille"
+      ],
+      "hint": "Feminine noun"
+    },
+    {
+      "id": "i-le-pere",
+      "type": "respond",
+      "situation": "father",
+      "answer": "le père",
+      "accept": [
+        "père",
+        "pere"
+      ],
+      "hint": "Masculine - mon père"
+    },
+    {
+      "id": "i-la-mere",
+      "type": "respond",
+      "situation": "mother",
+      "answer": "la mère",
+      "accept": [
+        "mère",
+        "mere"
+      ],
+      "hint": "Feminine - ma mère"
+    },
+    {
+      "id": "i-le-frere",
+      "type": "respond",
+      "situation": "brother",
+      "answer": "le frère",
+      "accept": [
+        "frère",
+        "frere"
+      ],
+      "hint": "Masculine - mon frère"
+    },
+    {
+      "id": "i-toute-ma-famille",
+      "type": "respond",
+      "situation": "my whole family",
+      "answer": "toute ma famille",
+      "hint": "{toute + ma famille}"
+    },
+    {
+      "id": "i-la-question",
+      "type": "respond",
+      "situation": "question",
+      "answer": "la question",
+      "accept": [
+        "question"
+      ],
+      "hint": "Feminine noun"
+    },
+    {
+      "id": "i-la-fois",
+      "type": "respond",
+      "situation": "time/occasion",
+      "answer": "la fois",
+      "accept": [
+        "fois"
+      ],
+      "hint": "Feminine - une fois = once"
+    },
+    {
+      "id": "i-l-annee",
+      "type": "respond",
+      "situation": "year",
+      "answer": "l'année",
+      "accept": [
+        "année",
+        "annee",
+        "l annee"
+      ],
+      "hint": "Feminine - une année"
+    },
+    {
+      "id": "i-le-moment",
+      "type": "respond",
+      "situation": "moment",
+      "answer": "le moment",
+      "accept": [
+        "moment"
+      ],
+      "hint": "Masculine - en ce moment"
+    },
+    {
+      "id": "i-la-semaine",
+      "type": "respond",
+      "situation": "week",
+      "answer": "la semaine",
+      "accept": [
+        "semaine"
+      ],
+      "hint": "Feminine - une semaine"
+    },
+    {
+      "id": "i-le-monde",
+      "type": "respond",
+      "situation": "world",
+      "answer": "le monde",
+      "accept": [
+        "monde"
+      ],
+      "hint": "Masculine - le monde"
+    },
+    {
+      "id": "i-la-ville",
+      "type": "respond",
+      "situation": "city",
+      "answer": "la ville",
+      "accept": [
+        "ville"
+      ],
+      "hint": "Feminine - une ville"
+    },
+    {
+      "id": "i-le-mot",
+      "type": "respond",
+      "situation": "word",
+      "answer": "le mot",
+      "accept": [
+        "mot"
+      ],
+      "hint": "Masculine - un mot"
+    },
+    {
+      "id": "i-je-vais-prendre-le",
+      "type": "respond",
+      "situation": "I am going to take the train",
+      "answer": "je vais prendre le train",
+      "hint": "Near future: je vais + prendre le train"
+    },
+    {
+      "id": "i-j-ai-besoin-d-2",
+      "type": "respond",
+      "situation": "I need to learn French",
+      "answer": "j'ai besoin d'apprendre le français",
+      "accept": [
+        "j ai besoin d'apprendre le français",
+        "j'ai besoin d apprendre le français",
+        "j'ai besoin d'apprendre le francais"
+      ],
+      "hint": "j'ai besoin de + apprendre (d' before vowel)"
+    },
+    {
+      "id": "i-nous-sommes-en-train-2",
+      "type": "respond",
+      "situation": "we are setting the table",
+      "answer": "nous sommes en train de mettre la table",
+      "accept": [
+        "nous mettons la table"
+      ],
+      "hint": "Progressive: nous sommes en train de mettre la table"
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "what are you going to order?",
+      "answer": "qu'est-ce que tu vas commander?",
+      "accept": [
+        "qu'est-ce que tu vas commander",
+        "qu est-ce que tu vas commander?",
+        "que vas-tu commander?"
+      ],
+      "hint": "{qu'est-ce que + tu vas commander}"
+    },
+    {
+      "id": "i-il-ne-comprend-pas",
+      "type": "respond",
+      "situation": "he doesn't understand the question",
+      "answer": "il ne comprend pas la question",
+      "hint": "Negative: il ne comprend pas + la question"
+    },
+    {
+      "id": "i-je-vais-demander-a",
+      "type": "respond",
+      "situation": "I'm going to ask my father",
+      "answer": "je vais demander à mon père",
+      "accept": [
+        "je vais demander à mon pere",
+        "je vais demander a mon père"
+      ],
+      "hint": "{je vais demander à + mon père}"
+    },
+    {
+      "id": "i-tu-me-dis-toujours",
+      "type": "respond",
+      "situation": "you always tell me that",
+      "answer": "tu me dis toujours ça",
+      "accept": [
+        "tu me dis toujours ca"
+      ],
+      "hint": "{tu me dis toujours + ça}"
+    },
+    {
+      "id": "i-ca-prend-trois-heures",
+      "type": "respond",
+      "situation": "it takes three hours",
+      "answer": "ça prend trois heures",
+      "accept": [
+        "ca prend trois heures"
+      ],
+      "hint": "Impersonal: ça prend + trois heures"
+    },
+    {
+      "id": "i-la-premiere-fois",
+      "type": "respond",
+      "situation": "the first time",
+      "answer": "la première fois",
+      "accept": [
+        "la premiere fois"
+      ],
+      "hint": "{la première + fois}"
+    },
+    {
+      "id": "i-en-ce-moment",
+      "type": "respond",
+      "situation": "right now",
+      "answer": "en ce moment",
+      "hint": "Time expression: en ce moment"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-09-conditionals",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Should & Could - Advice and Possibility",
+  "description": "Give advice and express possibility: je devrais (I should), je pourrais (I could)",
+  "can_do": [
+    "Give advice with 'should' (tu devrais partir)",
+    "Express possibility with 'could' (je pourrais venir)",
+    "Make suggestions and polite requests"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-devrais-fr",
+      "fr": "je devrais",
+      "gloss": "I should",
+      "note": "conditional of devoir"
+    },
+    {
+      "word_id": "tu-devrais-fr",
+      "fr": "tu devrais",
+      "gloss": "you should (informal)",
+      "note": "conditional of devoir"
+    },
+    {
+      "word_id": "il-elle-devrait-fr",
+      "fr": "il/elle devrait",
+      "gloss": "he/she should",
+      "note": "conditional of devoir"
+    },
+    {
+      "word_id": "nous-devrions-fr",
+      "fr": "nous devrions",
+      "gloss": "we should",
+      "note": "conditional of devoir"
+    },
+    {
+      "word_id": "vous-devriez-fr",
+      "fr": "vous devriez",
+      "gloss": "you should (formal/plural)",
+      "note": "conditional of devoir"
+    },
+    {
+      "word_id": "ils-elles-devraient-fr",
+      "fr": "ils/elles devraient",
+      "gloss": "they should",
+      "note": "conditional of devoir"
+    },
+    {
+      "word_id": "je-pourrais-fr",
+      "fr": "je pourrais",
+      "gloss": "I could",
+      "note": "conditional of pouvoir"
+    },
+    {
+      "word_id": "tu-pourrais-fr",
+      "fr": "tu pourrais",
+      "gloss": "you could (informal)",
+      "note": "conditional of pouvoir"
+    },
+    {
+      "word_id": "il-elle-pourrait-fr",
+      "fr": "il/elle pourrait",
+      "gloss": "he/she could",
+      "note": "conditional of pouvoir"
+    },
+    {
+      "word_id": "nous-pourrions-fr",
+      "fr": "nous pourrions",
+      "gloss": "we could",
+      "note": "conditional of pouvoir"
+    },
+    {
+      "word_id": "vous-pourriez-fr",
+      "fr": "vous pourriez",
+      "gloss": "you could (formal/plural)",
+      "note": "conditional of pouvoir"
+    },
+    {
+      "word_id": "ils-elles-pourraient-fr",
+      "fr": "ils/elles pourraient",
+      "gloss": "they could",
+      "note": "conditional of pouvoir"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-should-devrais-conditional-of",
+      "term": "Should = {devrais} (conditional of devoir)",
+      "definition": "Give advice, suggestions, or express obligation softly",
+      "example": "{tu devrais partir} (you should leave), {nous devrions parler} (we should talk)"
+    },
+    {
+      "id": "c-could-pourrais-conditional-of",
+      "term": "Could = {pourrais} (conditional of pouvoir)",
+      "definition": "Express possibility or make polite requests",
+      "example": "{je pourrais venir} (I could come), {vous pourriez m'aider} (you could help me)"
+    },
+    {
+      "id": "c-pattern-alternating-should-could",
+      "term": "Pattern: Alternating Should & Could",
+      "definition": "Practice both forms together - they work the same way!",
+      "example": "{je devrais} / {je pourrais}, {tu devrais} / {tu pourrais}, {il devrait} / {il pourrait}"
+    },
+    {
+      "id": "c-negation",
+      "term": "Negation",
+      "definition": "Use ne...pas around the conditional verb",
+      "example": "{je ne devrais pas} (I should not), {tu ne pourrais pas} (you could not)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-devrais-partir",
+      "type": "respond",
+      "situation": "I should go",
+      "answer": "je devrais partir",
+      "hint": "{je + devrais + partir}",
+      "mistakes": [
+        {
+          "answer": "je dois partir",
+          "feedback": "That's 'I must go' - use conditional '{devrais}' for 'should'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-pourrais-venir",
+      "type": "respond",
+      "situation": "I could come",
+      "answer": "je pourrais venir",
+      "hint": "{je + pourrais + venir}",
+      "mistakes": [
+        {
+          "answer": "je peux venir",
+          "feedback": "That's 'I can come' - use conditional '{pourrais}' for 'could'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-devrais-parler",
+      "type": "respond",
+      "situation": "Say \"you should speak\" (informal)",
+      "cue": "you should speak",
+      "answer": "tu devrais parler",
+      "hint": "{tu + devrais + parler}",
+      "mistakes": [
+        {
+          "answer": "tu dois parler",
+          "feedback": "That's 'you must speak' - use '{devrais}' for 'should'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-pourrais-voir",
+      "type": "respond",
+      "situation": "Say \"you could see\" (informal)",
+      "cue": "you could see",
+      "answer": "tu pourrais voir",
+      "hint": "{tu + pourrais + voir}",
+      "mistakes": [
+        {
+          "answer": "tu peux voir",
+          "feedback": "That's 'you can see' - use '{pourrais}' for 'could'"
+        }
+      ]
+    },
+    {
+      "id": "i-il-devrait-travailler",
+      "type": "respond",
+      "situation": "he should work",
+      "answer": "il devrait travailler",
+      "hint": "{il + devrait + travailler}",
+      "mistakes": [
+        {
+          "answer": "il devrais travailler",
+          "feedback": "Third person uses '{devrait}' not 'devrais'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-pourrait-le-faire",
+      "type": "respond",
+      "situation": "she could do it",
+      "answer": "elle pourrait le faire",
+      "hint": "{elle + pourrait + le faire}",
+      "mistakes": [
+        {
+          "answer": "elle pourrais le faire",
+          "feedback": "Third person uses '{pourrait}' not 'pourrais'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-devrions-partir",
+      "type": "respond",
+      "situation": "we should leave",
+      "answer": "nous devrions partir",
+      "hint": "{nous + devrions + partir}",
+      "mistakes": [
+        {
+          "answer": "nous devons partir",
+          "feedback": "That's 'we must leave' - use '{devrions}' for 'should'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-pourrions-aller",
+      "type": "respond",
+      "situation": "we could go",
+      "answer": "nous pourrions aller",
+      "hint": "{nous + pourrions + aller}",
+      "mistakes": [
+        {
+          "answer": "nous pouvons aller",
+          "feedback": "That's 'we can go' - use '{pourrions}' for 'could'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-devriez-venir",
+      "type": "respond",
+      "situation": "Say \"you should come\" (formal or plural)",
+      "cue": "you should come (formal)",
+      "answer": "vous devriez venir",
+      "hint": "{vous + devriez + venir}",
+      "mistakes": [
+        {
+          "answer": "vous devez venir",
+          "feedback": "That's 'you must come' - use '{devriez}' for 'should'"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-pourriez-voir",
+      "type": "respond",
+      "situation": "Say \"you could see\" (formal or plural)",
+      "cue": "you could see (formal)",
+      "answer": "vous pourriez voir",
+      "hint": "{vous + pourriez + voir}",
+      "mistakes": [
+        {
+          "answer": "vous pouvez voir",
+          "feedback": "That's 'you can see' - use '{pourriez}' for 'could'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-devraient-travailler",
+      "type": "respond",
+      "situation": "they should work",
+      "answer": "ils devraient travailler",
+      "accept": [
+        "elles devraient travailler"
+      ],
+      "hint": "{ils/elles + devraient + travailler}",
+      "mistakes": [
+        {
+          "answer": "ils doivent travailler",
+          "feedback": "That's 'they must work' - use '{devraient}' for 'should'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-pourraient-venir",
+      "type": "respond",
+      "situation": "they could come",
+      "answer": "ils pourraient venir",
+      "accept": [
+        "elles pourraient venir"
+      ],
+      "hint": "{ils/elles + pourraient + venir}",
+      "mistakes": [
+        {
+          "answer": "ils peuvent venir",
+          "feedback": "That's 'they can come' - use '{pourraient}' for 'could'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-devrais-pas",
+      "type": "respond",
+      "situation": "I should not go",
+      "answer": "je ne devrais pas partir",
+      "hint": "{je ne devrais pas + partir}",
+      "mistakes": [
+        {
+          "answer": "je ne dois pas partir",
+          "feedback": "Use conditional '{devrais}' for 'should not'"
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-pourrais-pas",
+      "type": "respond",
+      "situation": "I could not see",
+      "answer": "je ne pourrais pas voir",
+      "hint": "{je ne pourrais pas + voir}",
+      "mistakes": [
+        {
+          "answer": "je ne peux pas voir",
+          "feedback": "Use conditional '{pourrais}' for 'could not'"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-devrais-pas",
+      "type": "respond",
+      "situation": "Say \"you should not speak\" (informal)",
+      "cue": "you should not speak",
+      "answer": "tu ne devrais pas parler",
+      "hint": "{tu ne devrais pas + parler}",
+      "mistakes": [
+        {
+          "answer": "tu devrais pas parler",
+          "feedback": "Need both '{ne}' and 'pas': tu ne devrais pas"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-pourrais-pas",
+      "type": "respond",
+      "situation": "Say \"you could not do that\" (informal)",
+      "cue": "you could not do that",
+      "answer": "tu ne pourrais pas faire ça",
+      "hint": "{tu ne pourrais pas + faire ça}",
+      "mistakes": [
+        {
+          "answer": "tu ne peux pas faire ça",
+          "feedback": "Use conditional '{pourrais}' for 'could not'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ne-devrions-pas",
+      "type": "respond",
+      "situation": "we should not go",
+      "answer": "nous ne devrions pas partir",
+      "hint": "{nous ne devrions pas + partir}",
+      "mistakes": [
+        {
+          "answer": "nous ne devons pas partir",
+          "feedback": "Use conditional '{devrions}' for 'should not'"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ne-pourraient-pas",
+      "type": "respond",
+      "situation": "they could not come",
+      "answer": "ils ne pourraient pas venir",
+      "accept": [
+        "elles ne pourraient pas venir"
+      ],
+      "hint": "{ils ne pourraient pas + venir}",
+      "mistakes": [
+        {
+          "answer": "ils ne peuvent pas venir",
+          "feedback": "Use conditional '{pourraient}' for 'could not'"
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-que-je",
+      "type": "respond",
+      "situation": "should I go?",
+      "answer": "est-ce que je devrais partir",
+      "hint": "{est-ce que + je devrais + partir?}",
+      "mistakes": [
+        {
+          "answer": "est-ce que je dois partir",
+          "feedback": "Use conditional '{devrais}' for 'should'"
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-que-tu",
+      "type": "respond",
+      "situation": "Say \"could you help me?\" (informal - polite request)",
+      "cue": "could you help me?",
+      "answer": "est-ce que tu pourrais m'aider",
+      "accept": [
+        "est-ce que tu pourrais m aider"
+      ],
+      "hint": "{est-ce que tu pourrais + m'aider?}",
+      "mistakes": [
+        {
+          "answer": "est-ce que tu peux m'aider",
+          "feedback": "Use '{pourrais}' (could) for more polite request than 'peux' (can)"
+        }
+      ]
+    }
+  ]
+}

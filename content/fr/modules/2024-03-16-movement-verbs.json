@@ -1,0 +1,469 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-03-16-movement-verbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Movement Verbs - Actions in Nature",
+  "description": "Learn how things move: nager (to swim), sauter (to jump), voler (to fly), courir (to run), marcher (to walk), grimper (to climb)",
+  "vocabulary": [
+    {
+      "word_id": "nager-fr",
+      "fr": "nager",
+      "gloss": "to swim",
+      "note": "regular -ER verb - aquatic movement"
+    },
+    {
+      "word_id": "je-nage-fr",
+      "fr": "je nage",
+      "gloss": "I swim",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-nages-fr",
+      "fr": "tu nages",
+      "gloss": "you swim",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-nage-fr",
+      "fr": "il nage",
+      "gloss": "he swims",
+      "note": "base form"
+    },
+    {
+      "word_id": "elle-nage-fr",
+      "fr": "elle nage",
+      "gloss": "she swims",
+      "note": "same as il"
+    },
+    {
+      "word_id": "nous-nageons-fr",
+      "fr": "nous nageons",
+      "gloss": "we swim",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-nagez-fr",
+      "fr": "vous nagez",
+      "gloss": "you swim (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-nagent-fr",
+      "fr": "ils nagent",
+      "gloss": "they swim",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "elles-nagent-fr",
+      "fr": "elles nagent",
+      "gloss": "they swim (f)",
+      "note": "same as ils"
+    },
+    {
+      "word_id": "sauter-fr",
+      "fr": "sauter",
+      "gloss": "to jump",
+      "note": "regular -ER verb - vertical movement"
+    },
+    {
+      "word_id": "je-saute-fr",
+      "fr": "je saute",
+      "gloss": "I jump",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-sautes-fr",
+      "fr": "tu sautes",
+      "gloss": "you jump",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-saute-fr",
+      "fr": "il saute",
+      "gloss": "he jumps",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-sautons-fr",
+      "fr": "nous sautons",
+      "gloss": "we jump",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-sautez-fr",
+      "fr": "vous sautez",
+      "gloss": "you jump (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-sautent-fr",
+      "fr": "ils sautent",
+      "gloss": "they jump",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "voler-fr",
+      "fr": "voler",
+      "gloss": "to fly",
+      "note": "regular -ER verb - aerial movement"
+    },
+    {
+      "word_id": "je-vole-fr",
+      "fr": "je vole",
+      "gloss": "I fly",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-voles-fr",
+      "fr": "tu voles",
+      "gloss": "you fly",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-vole-fr",
+      "fr": "il vole",
+      "gloss": "he flies",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-volons-fr",
+      "fr": "nous volons",
+      "gloss": "we fly",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-volez-fr",
+      "fr": "vous volez",
+      "gloss": "you fly (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-volent-fr",
+      "fr": "ils volent",
+      "gloss": "they fly",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "courir-fr",
+      "fr": "courir",
+      "gloss": "to run",
+      "note": "⭐ irregular -IR verb - fast ground movement"
+    },
+    {
+      "word_id": "je-cours-fr",
+      "fr": "je cours",
+      "gloss": "I run",
+      "note": "irregular - sounds like 'coor'"
+    },
+    {
+      "word_id": "tu-cours-fr",
+      "fr": "tu cours",
+      "gloss": "you run",
+      "note": "same as je - sounds like 'coor'"
+    },
+    {
+      "word_id": "il-court-fr",
+      "fr": "il court",
+      "gloss": "he runs",
+      "note": "drop -s, sounds like 'coor'"
+    },
+    {
+      "word_id": "nous-courons-fr",
+      "fr": "nous courons",
+      "gloss": "we run",
+      "note": "add -ons to cour-"
+    },
+    {
+      "word_id": "vous-courez-fr",
+      "fr": "vous courez",
+      "gloss": "you run (formal/plural)",
+      "note": "add -ez to cour-"
+    },
+    {
+      "word_id": "ils-courent-fr",
+      "fr": "ils courent",
+      "gloss": "they run",
+      "note": "add -ent to cour-"
+    },
+    {
+      "word_id": "marcher-fr",
+      "fr": "marcher",
+      "gloss": "to walk",
+      "note": "regular -ER verb - slow ground movement"
+    },
+    {
+      "word_id": "je-marche-fr",
+      "fr": "je marche",
+      "gloss": "I walk",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-marches-fr",
+      "fr": "tu marches",
+      "gloss": "you walk",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-marche-fr",
+      "fr": "il marche",
+      "gloss": "he walks",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-marchons-fr",
+      "fr": "nous marchons",
+      "gloss": "we walk",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-marchez-fr",
+      "fr": "vous marchez",
+      "gloss": "you walk (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-marchent-fr",
+      "fr": "ils marchent",
+      "gloss": "they walk",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "grimper-fr",
+      "fr": "grimper",
+      "gloss": "to climb",
+      "note": "regular -ER verb - upward movement"
+    },
+    {
+      "word_id": "je-grimpe-fr",
+      "fr": "je grimpe",
+      "gloss": "I climb",
+      "note": "regular -ER ending"
+    },
+    {
+      "word_id": "tu-grimpes-fr",
+      "fr": "tu grimpes",
+      "gloss": "you climb",
+      "note": "add -s"
+    },
+    {
+      "word_id": "il-grimpe-fr",
+      "fr": "il grimpe",
+      "gloss": "he climbs",
+      "note": "base form"
+    },
+    {
+      "word_id": "nous-grimpons-fr",
+      "fr": "nous grimpons",
+      "gloss": "we climb",
+      "note": "add -ons"
+    },
+    {
+      "word_id": "vous-grimpez-fr",
+      "fr": "vous grimpez",
+      "gloss": "you climb (formal/plural)",
+      "note": "add -ez"
+    },
+    {
+      "word_id": "ils-grimpent-fr",
+      "fr": "ils grimpent",
+      "gloss": "they climb",
+      "note": "add -ent"
+    },
+    {
+      "word_id": "nager-dans-la-mer-fr",
+      "fr": "nager dans la mer",
+      "gloss": "to swim in the sea",
+      "note": "je nage dans la mer"
+    },
+    {
+      "word_id": "courir-vite-fr",
+      "fr": "courir vite",
+      "gloss": "to run fast",
+      "note": "tu cours vite!"
+    },
+    {
+      "word_id": "marcher-lentement-fr",
+      "fr": "marcher lentement",
+      "gloss": "to walk slowly",
+      "note": "il marche lentement"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-six-essential-movement-verbs",
+      "term": "Six Essential Movement Verbs",
+      "definition": "These verbs describe all basic types of movement in nature and daily life",
+      "example": "{nager} (swim), {sauter} (jump), {voler} (fly), {courir} (run), {marcher} (walk), {grimper} (climb)"
+    },
+    {
+      "id": "c-regular-er-verbs-pattern",
+      "term": "Regular -ER Verbs Pattern",
+      "definition": "Most movement verbs follow the regular -ER pattern you already know",
+      "example": "{nager}: {je nage}, {tu nages}, {il nage}, {nous nageons}, {vous nagez}, {ils nagent}"
+    },
+    {
+      "id": "c-courir-irregular-ir-verb",
+      "term": "{courir} - Irregular -IR Verb",
+      "definition": "Courir (to run) is irregular but common - memorize the pattern",
+      "example": "{je cours}, {tu cours}, {il court}, {nous courons}, {vous courez}, {ils courent}"
+    },
+    {
+      "id": "c-animals-movement",
+      "term": "Animals + Movement",
+      "definition": "Combine with animal vocabulary to describe how animals move",
+      "example": "{La tortue nage} (the turtle swims), {L'oiseau vole} (the bird flies), {L'écureuil saute} (the squirrel jumps)"
+    },
+    {
+      "id": "c-works-in-all-tenses",
+      "term": "Works in All Tenses",
+      "definition": "These verbs work in all tenses you've learned - present, past, imparfait",
+      "example": "{Je nage} (I swim), {J'ai nagé} (I swam), {Je nageais} (I was swimming)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-nage",
+      "type": "respond",
+      "situation": "I swim",
+      "answer": "je nage",
+      "hint": "nager for je"
+    },
+    {
+      "id": "i-tu-nages",
+      "type": "respond",
+      "situation": "you swim (informal)",
+      "answer": "tu nages",
+      "hint": "nager for tu"
+    },
+    {
+      "id": "i-nous-nageons",
+      "type": "respond",
+      "situation": "we swim",
+      "answer": "nous nageons",
+      "hint": "nager for nous - careful with spelling!"
+    },
+    {
+      "id": "i-je-saute",
+      "type": "respond",
+      "situation": "I jump",
+      "answer": "je saute",
+      "hint": "sauter for je"
+    },
+    {
+      "id": "i-ils-sautent",
+      "type": "respond",
+      "situation": "they jump",
+      "answer": "ils sautent",
+      "hint": "sauter for ils"
+    },
+    {
+      "id": "i-il-vole",
+      "type": "respond",
+      "situation": "he flies",
+      "answer": "il vole",
+      "hint": "voler for il"
+    },
+    {
+      "id": "i-nous-volons",
+      "type": "respond",
+      "situation": "we fly",
+      "answer": "nous volons",
+      "hint": "voler for nous"
+    },
+    {
+      "id": "i-je-cours",
+      "type": "respond",
+      "situation": "I run",
+      "answer": "je cours",
+      "hint": "courir for je - irregular!"
+    },
+    {
+      "id": "i-tu-cours",
+      "type": "respond",
+      "situation": "you run (informal)",
+      "answer": "tu cours",
+      "hint": "courir for tu - same as je"
+    },
+    {
+      "id": "i-il-court",
+      "type": "respond",
+      "situation": "he runs",
+      "answer": "il court",
+      "hint": "courir for il - drop the -s"
+    },
+    {
+      "id": "i-je-marche",
+      "type": "respond",
+      "situation": "I walk",
+      "answer": "je marche",
+      "hint": "marcher for je"
+    },
+    {
+      "id": "i-elle-grimpe",
+      "type": "respond",
+      "situation": "she climbs",
+      "answer": "elle grimpe",
+      "hint": "grimper for elle"
+    },
+    {
+      "id": "i-la-tortue-nage",
+      "type": "respond",
+      "situation": "The turtle swims",
+      "answer": "la tortue nage",
+      "hint": "{la tortue + nage}"
+    },
+    {
+      "id": "i-l-oiseau-vole",
+      "type": "respond",
+      "situation": "The bird flies",
+      "answer": "l'oiseau vole",
+      "hint": "{l'oiseau + vole}"
+    },
+    {
+      "id": "i-l-ecureuil-saute",
+      "type": "respond",
+      "situation": "The squirrel jumps",
+      "answer": "l'écureuil saute",
+      "accept": [
+        "l'ecureuil saute"
+      ],
+      "hint": "{l'écureuil + saute}"
+    },
+    {
+      "id": "i-le-lapin-saute",
+      "type": "respond",
+      "situation": "The rabbit jumps",
+      "answer": "le lapin saute",
+      "hint": "{le lapin + saute}"
+    },
+    {
+      "id": "i-tu-cours-vite",
+      "type": "respond",
+      "situation": "You run fast!",
+      "answer": "tu cours vite",
+      "accept": [
+        "tu cours vite!"
+      ],
+      "hint": "{tu cours + vite}"
+    },
+    {
+      "id": "i-je-nage-dans-la",
+      "type": "respond",
+      "situation": "I swim in the sea",
+      "answer": "je nage dans la mer",
+      "hint": "{je nage + dans la mer}"
+    },
+    {
+      "id": "i-j-ai-nage",
+      "type": "respond",
+      "situation": "Say 'I swam' (passé composé)",
+      "cue": "I swam",
+      "answer": "j'ai nagé",
+      "accept": [
+        "j'ai nage"
+      ],
+      "hint": "j'ai + past participle of nager"
+    }
+  ]
+}

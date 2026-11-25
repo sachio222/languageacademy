@@ -1,0 +1,114 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-03-so-that-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Pour que...} - So That Phrases",
+  "description": "Explain your purpose! '{Pour que tu comprennes}' (So that you understand), '{Je t'explique pour que tu saches}' (I'm explaining so you know). Goal-oriented communication!",
+  "vocabulary": [
+    {
+      "word_id": "pour-que-tu-comprennes-fr",
+      "fr": "pour que tu comprennes",
+      "gloss": "so that you understand",
+      "note": "⭐ explaining purpose!"
+    },
+    {
+      "word_id": "pour-qu-elle-sache-fr",
+      "fr": "pour qu'elle sache",
+      "gloss": "so that she knows",
+      "note": "sharing information"
+    },
+    {
+      "word_id": "pour-qu-on-puisse-fr",
+      "fr": "pour qu'on puisse",
+      "gloss": "so that we can",
+      "note": "group goal"
+    },
+    {
+      "word_id": "pour-que-tu-sois-content-fr",
+      "fr": "pour que tu sois content",
+      "gloss": "so that you're happy",
+      "note": "pleasing someone"
+    },
+    {
+      "word_id": "pour-qu-il-vienne-fr",
+      "fr": "pour qu'il vienne",
+      "gloss": "so that he comes",
+      "note": "invitation purpose"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-pour-que-so-that",
+      "term": "{Pour que...} - So That Someone Can...",
+      "definition": "Express your PURPOSE or GOAL for someone else",
+      "example": "{Pour que tu comprennes} (So that you understand), {Pour qu'elle sache} (So that she knows)"
+    },
+    {
+      "id": "c-explaining-why-you-re",
+      "term": "Explaining Why You're Doing Something",
+      "definition": "Super useful for explaining your intentions!",
+      "example": "{Je parle lentement pour que tu comprennes} (I speak slowly so you understand)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-pour-que-tu-comprennes",
+      "type": "respond",
+      "situation": "Explain your purpose: 'so that you understand'",
+      "cue": "so that you understand",
+      "answer": "pour que tu comprennes",
+      "hint": "{pour que + tu + comprennes}",
+      "mistakes": [
+        {
+          "answer": "pour que tu comprends",
+          "feedback": "After 'pour que', use '{comprennes}': pour que tu comprennes"
+        }
+      ]
+    },
+    {
+      "id": "i-pour-qu-elle-sache",
+      "type": "respond",
+      "situation": "Express goal: 'so that she knows'",
+      "cue": "so that she knows",
+      "answer": "pour qu'elle sache",
+      "hint": "{pour qu' + elle + sache}",
+      "mistakes": [
+        {
+          "answer": "pour qu'elle sait",
+          "feedback": "After '{pour que}', use '{sache}': pour qu'elle sache"
+        }
+      ]
+    },
+    {
+      "id": "i-pour-qu-on-puisse",
+      "type": "respond",
+      "situation": "Group goal: 'so that we can' (ability)",
+      "cue": "so that we can",
+      "answer": "pour qu'on puisse",
+      "hint": "{pour qu' + on + puisse}"
+    },
+    {
+      "id": "i-pour-que-tu-sois",
+      "type": "respond",
+      "situation": "Express intention: 'so that you're happy'",
+      "cue": "so that you're happy",
+      "answer": "pour que tu sois content",
+      "hint": "{pour que + tu + sois content}"
+    },
+    {
+      "id": "i-pour-qu-il-vienne",
+      "type": "respond",
+      "situation": "Invitation purpose: 'so that he comes'",
+      "cue": "so that he comes",
+      "answer": "pour qu'il vienne",
+      "hint": "{pour qu' + il + vienne}",
+      "mistakes": [
+        {
+          "answer": "pour qu'il vient",
+          "feedback": "After '{pour que}', use '{vienne}': pour qu'il vienne"
+        }
+      ]
+    }
+  ]
+}

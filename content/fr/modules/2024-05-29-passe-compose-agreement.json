@@ -1,0 +1,550 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-29-passe-compose-agreement",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Past Participle Agreement with être",
+  "description": "Learn agreement rules: il est allé (he went) vs elle est allée (she went - add e), ils sont allés (they went - add s) vs elles sont allées (add es)",
+  "can_do": [
+    "Make past participles agree with gender and number",
+    "Understand when to add e, s, or es to past participles",
+    "Use agreement rules correctly with être verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "il-est-alle-fr",
+      "fr": "il est allé",
+      "gloss": "he went",
+      "note": "masculine singular - no change"
+    },
+    {
+      "word_id": "elle-est-allee-fr",
+      "fr": "elle est allée",
+      "gloss": "she went",
+      "note": "⭐ feminine singular - add e"
+    },
+    {
+      "word_id": "ils-sont-alles-fr",
+      "fr": "ils sont allés",
+      "gloss": "they went",
+      "note": "masculine plural - add s"
+    },
+    {
+      "word_id": "elles-sont-allees-fr",
+      "fr": "elles sont allées",
+      "gloss": "they went",
+      "note": "⭐ feminine plural - add es"
+    },
+    {
+      "word_id": "nous-sommes-alles-fr",
+      "fr": "nous sommes allés",
+      "gloss": "we went",
+      "note": "mixed/masc group - add s; masculine or mixed plural (+s)",
+      "example_fr": "Pierre et moi, nous sommes allés"
+    },
+    {
+      "word_id": "nous-sommes-allees-fr",
+      "fr": "nous sommes allées",
+      "gloss": "we went",
+      "note": "all feminine group - add es"
+    },
+    {
+      "word_id": "vous-etes-alle-fr",
+      "fr": "vous êtes allé",
+      "gloss": "you went (singular formal, masculine)",
+      "note": "formal singular masculine; masculine singular (no change)",
+      "example_fr": "Monsieur, vous êtes allé où?"
+    },
+    {
+      "word_id": "vous-etes-allee-fr",
+      "fr": "vous êtes allée",
+      "gloss": "you went (singular formal, feminine)",
+      "note": "feminine singular (+e)",
+      "example_fr": "Madame, vous êtes allée où?"
+    },
+    {
+      "word_id": "vous-etes-alles-fr",
+      "fr": "vous êtes allés",
+      "gloss": "you went (plural, masculine/mixed)",
+      "note": "masculine plural (+s)",
+      "example_fr": "Les garçons, vous êtes allés où?"
+    },
+    {
+      "word_id": "vous-etes-allees-fr",
+      "fr": "vous êtes allées",
+      "gloss": "you went (plural, all feminine)",
+      "note": "feminine plural (+es)",
+      "example_fr": "Les filles, vous êtes allées où?"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-agreement-rule-with-etre",
+      "term": "Agreement Rule with être",
+      "definition": "When using ÊTRE in passé composé, past participle MUST agree with subject in gender and number",
+      "example": "{il est allé} (masculine), {elle est allée} (+e), {ils sont allés} (+s), {elles sont allées} ({+es})"
+    },
+    {
+      "id": "c-masculine-singular-no-change",
+      "term": "Masculine singular - No change",
+      "definition": "Il/On: No change to past participle (base form)",
+      "example": "{il est allé}, {il est venu}, {il est parti}, {on est resté}"
+    },
+    {
+      "id": "c-feminine-singular-add-e",
+      "term": "Feminine singular - Add e",
+      "definition": "Elle: Add -e to past participle",
+      "example": "{elle est allée}, {elle est venue}, {elle est partie}, {elle est restée}"
+    },
+    {
+      "id": "c-masculine-plural-add-s",
+      "term": "Masculine plural - Add s",
+      "definition": "Ils/Nous/Vous (masculine): Add -s to past participle",
+      "example": "{ils sont allés}, {nous sommes venus}, {vous êtes partis}"
+    },
+    {
+      "id": "c-feminine-plural-add-es",
+      "term": "Feminine plural - Add es",
+      "definition": "Elles/Nous/Vous (feminine): Add -es to past participle",
+      "example": "{elles sont allées}, {nous sommes venues} (all feminine), {vous êtes parties} (all feminine)"
+    },
+    {
+      "id": "c-mixed-group-use-masculine",
+      "term": "Mixed group - Use masculine form",
+      "definition": "When group has both masculine and feminine, use masculine plural (-s)",
+      "example": "{Pierre et Marie sont allés} (masculine plural wins)"
+    },
+    {
+      "id": "c-remember-only-with-etre",
+      "term": "Remember: Only with ÊTRE verbs!",
+      "definition": "This rule ONLY applies to être verbs (DR MRS VANDERTRAMP + reflexives)",
+      "example": "{j'ai mangé} (no change with avoir!), BUT je suis allé/{allée} (agrees with être)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-est-allee",
+      "type": "gapfill",
+      "text": "Elle ___ au café",
+      "blanks": [
+        {
+          "answer": "est allée"
+        }
+      ],
+      "gloss": "She went to the café",
+      "hint": "Add agreement!",
+      "mistakes": [
+        {
+          "answer": "est allé",
+          "feedback": "Elle is feminine! Add -e for feminine singular: elle est allée."
+        },
+        {
+          "answer": "est allés",
+          "feedback": "That's plural! Elle is singular: elle est allée (just add -e)."
+        },
+        {
+          "answer": "a allée",
+          "feedback": "Aller uses ÊTRE, not avoir! It's '{elle est allée}', not 'a allée'."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-alles",
+      "type": "gapfill",
+      "text": "Ils ___ hier",
+      "blanks": [
+        {
+          "answer": "sont allés"
+        }
+      ],
+      "gloss": "They went yesterday",
+      "hint": "Masculine plural agreement!",
+      "mistakes": [
+        {
+          "answer": "sont allé",
+          "feedback": "Ils is plural! Add -s for masculine plural: ils sont allés."
+        },
+        {
+          "answer": "sont allées",
+          "feedback": "That's feminine plural! Use masculine -s for '{ils}': ils sont allés."
+        },
+        {
+          "answer": "ont allés",
+          "feedback": "Aller uses ÊTRE, not avoir! It's '{ils sont allés}', not 'ont allés'."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-allees",
+      "type": "gapfill",
+      "text": "Mes sœurs ___ à Paris",
+      "blanks": [
+        {
+          "answer": "sont allées"
+        }
+      ],
+      "gloss": "My sisters went to Paris",
+      "hint": "Feminine plural agreement!",
+      "mistakes": [
+        {
+          "answer": "sont allés",
+          "feedback": "Sœurs (sisters) is feminine! Add -es for feminine plural: sont allées."
+        },
+        {
+          "answer": "sont allé",
+          "feedback": "Sœurs is plural! Add -es for feminine plural: sont allées."
+        },
+        {
+          "answer": "ont allées",
+          "feedback": "Aller uses ÊTRE, not avoir! It's '{sont allées}', not 'ont allées'."
+        }
+      ]
+    },
+    {
+      "id": "i-est-venue",
+      "type": "gapfill",
+      "text": "Marie ___ hier",
+      "blanks": [
+        {
+          "answer": "est venue"
+        }
+      ],
+      "gloss": "Marie came yesterday",
+      "hint": "Use '{venir}' with agreement!",
+      "mistakes": [
+        {
+          "answer": "est venu",
+          "feedback": "Marie is feminine! Add -e for feminine: Marie est venue."
+        },
+        {
+          "answer": "est venus",
+          "feedback": "That's plural! Marie is singular: est venue (just -e)."
+        },
+        {
+          "answer": "a venue",
+          "feedback": "Venir uses ÊTRE, not avoir! It's '{est venue}', not 'a venue'."
+        }
+      ]
+    },
+    {
+      "id": "i-sommes-partis",
+      "type": "gapfill",
+      "text": "Nous ___ tôt",
+      "blanks": [
+        {
+          "answer": "sommes partis"
+        }
+      ],
+      "gloss": "We left early",
+      "hint": "Mixed group (Pierre et moi), use masculine!",
+      "mistakes": [
+        {
+          "answer": "sommes parti",
+          "feedback": "Nous is plural! Add -s for masculine plural: sommes partis."
+        },
+        {
+          "answer": "sommes parties",
+          "feedback": "Mixed group uses masculine! Use -s (not -es): sommes partis."
+        },
+        {
+          "answer": "avons partis",
+          "feedback": "Partir uses ÊTRE, not avoir! It's '{sommes partis}', not 'avons partis'."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-arrivees",
+      "type": "gapfill",
+      "text": "Les filles ___ hier soir",
+      "blanks": [
+        {
+          "answer": "sont arrivées"
+        }
+      ],
+      "gloss": "The girls arrived last night",
+      "hint": "Feminine plural!",
+      "mistakes": [
+        {
+          "answer": "sont arrivés",
+          "feedback": "Filles (girls) is feminine! Add -es for feminine plural: sont arrivées."
+        },
+        {
+          "answer": "sont arrivé",
+          "feedback": "Les filles is plural! Add -es for feminine plural: sont arrivées."
+        },
+        {
+          "answer": "ont arrivées",
+          "feedback": "Arriver uses ÊTRE, not avoir! It's '{sont arrivées}', not 'ont arrivées'."
+        }
+      ]
+    },
+    {
+      "id": "i-est-alle",
+      "type": "gapfill",
+      "text": "Mon frère ___ en France",
+      "blanks": [
+        {
+          "answer": "est allé"
+        }
+      ],
+      "gloss": "My brother went to France",
+      "hint": "Masculine singular!",
+      "mistakes": [
+        {
+          "answer": "est allée",
+          "feedback": "Frère (brother) is masculine! No -e needed: mon frère est allé."
+        },
+        {
+          "answer": "est allés",
+          "feedback": "Mon frère is singular! No -s needed: est allé (base form)."
+        }
+      ]
+    },
+    {
+      "id": "i-etes-allee",
+      "type": "gapfill",
+      "text": "Vous ___ où, Madame?",
+      "blanks": [
+        {
+          "answer": "êtes allée"
+        }
+      ],
+      "gloss": "Where did you go, Madam?",
+      "hint": "Formal singular feminine!",
+      "mistakes": [
+        {
+          "answer": "êtes allé",
+          "feedback": "Madame is feminine! Add -e for feminine: vous êtes allée."
+        },
+        {
+          "answer": "êtes allées",
+          "feedback": "Addressing one person! Use singular -e (not plural -es): êtes allée."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-partis",
+      "type": "gapfill",
+      "text": "Pierre et Marie ___ ensemble",
+      "blanks": [
+        {
+          "answer": "sont partis"
+        }
+      ],
+      "gloss": "Pierre and Marie left together",
+      "hint": "Mixed group!",
+      "mistakes": [
+        {
+          "answer": "sont parties",
+          "feedback": "Mixed group (boy + girl) uses masculine! Use -s: sont partis."
+        },
+        {
+          "answer": "sont parti",
+          "feedback": "Two people = plural! Add -s for plural: sont partis."
+        }
+      ]
+    },
+    {
+      "id": "i-est-allee-2",
+      "type": "gapfill",
+      "text": "Ma mère ___ au marché",
+      "blanks": [
+        {
+          "answer": "est allée"
+        }
+      ],
+      "gloss": "My mother went to the market",
+      "hint": "Feminine singular!",
+      "mistakes": [
+        {
+          "answer": "est allé",
+          "feedback": "Mère (mother) is feminine! Add -e for feminine: ma mère est allée."
+        },
+        {
+          "answer": "est allées",
+          "feedback": "Ma mère is singular! Just add -e (not plural -es): est allée."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-rentres",
+      "type": "gapfill",
+      "text": "Les garçons ___ tard",
+      "blanks": [
+        {
+          "answer": "sont rentrés"
+        }
+      ],
+      "gloss": "The boys came home late",
+      "hint": "Use '{rentrer}', masculine plural!",
+      "mistakes": [
+        {
+          "answer": "sont rentré",
+          "feedback": "Les garçons is plural! Add -s for masculine plural: sont rentrés."
+        },
+        {
+          "answer": "sont rentrées",
+          "feedback": "Garçons (boys) is masculine! Use -s (not -es): sont rentrés."
+        },
+        {
+          "answer": "ont rentrés",
+          "feedback": "Rentrer uses ÊTRE, not avoir! It's '{sont rentrés}', not 'ont rentrés'."
+        }
+      ]
+    },
+    {
+      "id": "i-sommes-restees",
+      "type": "gapfill",
+      "text": "Nous ___ à la maison",
+      "blanks": [
+        {
+          "answer": "sommes restées"
+        }
+      ],
+      "gloss": "We stayed at home",
+      "hint": "All girls (Marie et moi), feminine plural!",
+      "mistakes": [
+        {
+          "answer": "sommes restés",
+          "feedback": "All girls = feminine plural! Add -es (not -s): sommes restées."
+        },
+        {
+          "answer": "sommes resté",
+          "feedback": "Nous is plural! Add -es for feminine plural: sommes restées."
+        }
+      ]
+    },
+    {
+      "id": "i-est-montee",
+      "type": "gapfill",
+      "text": "Elle ___ dans le bus",
+      "blanks": [
+        {
+          "answer": "est montée"
+        }
+      ],
+      "gloss": "She got on the bus",
+      "hint": "Use '{monter}', feminine!",
+      "mistakes": [
+        {
+          "answer": "est monté",
+          "feedback": "Elle is feminine! Add -e for feminine: elle est montée."
+        },
+        {
+          "answer": "est montés",
+          "feedback": "That's plural masculine! Elle is singular feminine: est montée."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-arrives",
+      "type": "gapfill",
+      "text": "Ils ___ à 8h",
+      "blanks": [
+        {
+          "answer": "sont arrivés"
+        }
+      ],
+      "gloss": "They arrived at 8",
+      "hint": "Masculine plural!",
+      "mistakes": [
+        {
+          "answer": "sont arrivé",
+          "feedback": "Ils is plural! Add -s for masculine plural: sont arrivés."
+        },
+        {
+          "answer": "sont arrivées",
+          "feedback": "Ils is masculine! Use -s (not feminine -es): sont arrivés."
+        }
+      ]
+    },
+    {
+      "id": "i-sont-tombees",
+      "type": "gapfill",
+      "text": "Elles ___ hier",
+      "blanks": [
+        {
+          "answer": "sont tombées"
+        }
+      ],
+      "gloss": "They fell yesterday",
+      "hint": "Use '{tomber}', feminine plural!",
+      "mistakes": [
+        {
+          "answer": "sont tombés",
+          "feedback": "Elles is feminine! Add -es for feminine plural: sont tombées."
+        },
+        {
+          "answer": "sont tombé",
+          "feedback": "Elles is plural! Add -es for feminine plural: sont tombées."
+        }
+      ]
+    },
+    {
+      "id": "i-est-sorti",
+      "type": "gapfill",
+      "text": "On ___ ensemble",
+      "blanks": [
+        {
+          "answer": "est sorti"
+        }
+      ],
+      "gloss": "We went out together",
+      "hint": "Use '{sortir}', '{on}' = masculine singular!",
+      "mistakes": [
+        {
+          "answer": "est sortis",
+          "feedback": "On is grammatically singular! Use base form: on est sorti (no -s)."
+        },
+        {
+          "answer": "est sortie",
+          "feedback": "On is grammatically masculine! Use base form: on est sorti (no -e)."
+        }
+      ]
+    },
+    {
+      "id": "i-etes-allees",
+      "type": "gapfill",
+      "text": "Vous ___ où, les filles?",
+      "blanks": [
+        {
+          "answer": "êtes allées"
+        }
+      ],
+      "gloss": "Where did you go, girls?",
+      "hint": "Plural feminine!",
+      "mistakes": [
+        {
+          "answer": "êtes allés",
+          "feedback": "Les filles (girls) is feminine! Add -es for feminine plural: êtes allées."
+        },
+        {
+          "answer": "êtes allée",
+          "feedback": "Les filles is plural! Add -es for plural feminine: êtes allées."
+        }
+      ]
+    },
+    {
+      "id": "i-est-venu",
+      "type": "gapfill",
+      "text": "Ton ami ___ hier?",
+      "blanks": [
+        {
+          "answer": "est venu"
+        }
+      ],
+      "gloss": "Did your friend come yesterday?",
+      "hint": "Masculine singular!",
+      "mistakes": [
+        {
+          "answer": "est venue",
+          "feedback": "Ami (friend - male) is masculine! No -e: ton ami est venu."
+        },
+        {
+          "answer": "est venus",
+          "feedback": "Ton ami is singular! Use base form: est venu (no -s)."
+        }
+      ]
+    }
+  ]
+}

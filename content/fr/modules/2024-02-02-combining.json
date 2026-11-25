@@ -1,0 +1,293 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-02-combining",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Putting It Together - Who Has What?",
+  "description": "Combine everything you've learned: 'He has it', 'Is that yours?', 'It's theirs' - real French!",
+  "can_do": [
+    "Combine object pronouns and possessives in sentences",
+    "Say 'He has it', 'I want it', 'It's mine' naturally",
+    "Form complex sentences with movement, possession, and objects"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "il-l-a-fr",
+      "fr": "il l'a",
+      "gloss": "he has it",
+      "note": "l' = le/la (avoir)"
+    },
+    {
+      "word_id": "elle-l-a-fr",
+      "fr": "elle l'a",
+      "gloss": "she has it",
+      "note": "l' = le/la (avoir)"
+    },
+    {
+      "word_id": "ils-les-ont-fr",
+      "fr": "ils les ont",
+      "gloss": "they have them",
+      "note": "plural (avoir)"
+    },
+    {
+      "word_id": "je-le-veux-fr",
+      "fr": "je le veux",
+      "gloss": "I want it",
+      "note": "vouloir + object"
+    },
+    {
+      "word_id": "c-est-le-mien-fr",
+      "fr": "c'est le mien",
+      "gloss": "it's mine",
+      "note": "masculine thing"
+    },
+    {
+      "word_id": "c-est-le-sien-fr",
+      "fr": "c'est le sien",
+      "gloss": "it's his/hers",
+      "note": "masculine thing"
+    },
+    {
+      "word_id": "c-est-le-leur-fr",
+      "fr": "c'est le leur",
+      "gloss": "it's theirs",
+      "note": "masculine thing"
+    },
+    {
+      "word_id": "est-ce-le-tien-fr",
+      "fr": "est-ce le tien",
+      "gloss": "is it yours?",
+      "note": "question"
+    },
+    {
+      "word_id": "tu-viens-avec-moi-fr",
+      "fr": "tu viens avec moi",
+      "gloss": "you are coming with me",
+      "note": "venir + preposition"
+    },
+    {
+      "word_id": "il-va-partir-fr",
+      "fr": "il va partir",
+      "gloss": "he's going to leave",
+      "note": "aller + infinitive"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-sentence-building",
+      "term": "Sentence Building",
+      "definition": "Combine subject + verb + object/possessive to make real sentences",
+      "example": "Use everything from previous 9 modules together!"
+    },
+    {
+      "id": "c-object-pronoun-placement",
+      "term": "Object Pronoun Placement",
+      "definition": "Object pronouns go BEFORE the verb in French (opposite of English!)",
+      "example": "English: 'I see IT', French: 'I IT see' - pronoun comes first"
+    },
+    {
+      "id": "c-possessive-constructions",
+      "term": "Possessive Constructions",
+      "definition": "Multiple ways to express ownership in French",
+      "example": "Choose between possessive adjectives and possessive pronouns"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-il-l-a",
+      "type": "respond",
+      "situation": "Someone asks about an object. Confirm the person possesses it",
+      "cue": "He has it",
+      "answer": "il l'a",
+      "hint": "Object pronoun goes BEFORE verb. Use contracted form with apostrophe",
+      "mistakes": [
+        {
+          "answer": "il a le",
+          "feedback": "Object pronoun goes BEFORE verb: il L'a"
+        },
+        {
+          "answer": "il a ça",
+          "feedback": "Use object pronoun, not ça here"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-l-a",
+      "type": "respond",
+      "situation": "Confirm a woman possesses something concisely",
+      "cue": "She has it",
+      "answer": "elle l'a",
+      "hint": "Same pattern - object pronoun before verb",
+      "mistakes": [
+        {
+          "answer": "elle a le",
+          "feedback": "Object pronoun goes BEFORE verb"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-les-ont",
+      "type": "respond",
+      "situation": "A group possesses multiple objects. Use pronouns for both",
+      "cue": "They have them",
+      "answer": "ils les ont",
+      "hint": "Masculine 'they' + plural object pronoun + avoir",
+      "mistakes": [
+        {
+          "answer": "ils ont les",
+          "feedback": "Object pronoun goes BEFORE verb"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-le-mien",
+      "type": "respond",
+      "situation": "Someone asks whose book it is. Claim ownership of it (masculine)",
+      "cue": "It's mine (masculine thing)",
+      "answer": "c'est le mien",
+      "hint": "Use possessive pronoun (not adjective) with article",
+      "mistakes": [
+        {
+          "answer": "c'est mien",
+          "feedback": "Need article: c'est LE mien"
+        },
+        {
+          "answer": "c'est mon",
+          "feedback": "Use possessive pronoun, not adjective"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-le-sien",
+      "type": "respond",
+      "situation": "Identify ownership of something belonging to him/her (masculine thing)",
+      "cue": "It's his/hers (masculine thing)",
+      "answer": "c'est le sien",
+      "hint": "Possessive pronoun for his/her with masculine article",
+      "mistakes": [
+        {
+          "answer": "c'est son",
+          "feedback": "Use possessive pronoun, not adjective"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-le-leur",
+      "type": "respond",
+      "situation": "Identify something as belonging to a group (masculine thing)",
+      "cue": "It's theirs (masculine thing)",
+      "answer": "c'est le leur",
+      "hint": "Possessive pronoun for 'their' with masculine article",
+      "mistakes": [
+        {
+          "answer": "c'est leur",
+          "feedback": "Need article: c'est LE leur"
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-le-tien",
+      "type": "respond",
+      "situation": "Ask a friend if something belongs to them (masculine thing)",
+      "cue": "Is it yours? (masculine thing, informal)",
+      "answer": "est-ce le tien",
+      "hint": "Question form: est-ce + possessive pronoun (informal, masculine)",
+      "mistakes": [
+        {
+          "answer": "c'est le tien ?",
+          "feedback": "For questions, use: est-ce (not c'est). However, it is OK to use in spoken french"
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-le-sien",
+      "type": "respond",
+      "situation": "Ask if something belongs to a third person (masculine thing)",
+      "cue": "Is it his? (masculine thing)",
+      "answer": "est-ce le sien",
+      "hint": "Question form: est-ce + possessive pronoun for his/her",
+      "mistakes": [
+        {
+          "answer": "c'est le sien ?",
+          "feedback": "For questions, use: est-ce (not c'est). However, it is OK to use in spoken french"
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-la-sienne",
+      "type": "respond",
+      "situation": "Ask if something belongs to a third person (feminine thing)",
+      "cue": "Is that hers? (feminine thing)",
+      "answer": "est-ce la sienne",
+      "hint": "Question form: est-ce possessive pronoun for his/her",
+      "mistakes": [
+        {
+          "answer": "c'est la sienne ?",
+          "feedback": "For questions, use: est-ce (not c'est). However, it is OK to use in spoken french"
+        }
+      ]
+    },
+    {
+      "id": "i-je-le-veux",
+      "type": "respond",
+      "situation": "Say you want something using object pronoun (vouloir + object)",
+      "cue": "I want it",
+      "answer": "je le veux",
+      "accept": [
+        "je le veux ?",
+        "je la veux"
+      ],
+      "hint": "Combine {vouloir} + object pronoun BEFORE verb",
+      "mistakes": [
+        {
+          "answer": "je veux le",
+          "feedback": "Object pronoun goes BEFORE: je LE veux"
+        },
+        {
+          "answer": "je veux la",
+          "feedback": "Object pronoun goes BEFORE: je LE veux"
+        },
+        {
+          "answer": "je veux ça",
+          "feedback": "Use object pronoun '{le}' or '{la}', not ça"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-viens-avec-moi",
+      "type": "respond",
+      "situation": "Tell your friend to come with you (venir + preposition)",
+      "cue": "you are coming with me. (informal)",
+      "answer": "tu viens avec moi",
+      "hint": "Combine {venir} + {avec} + {moi}",
+      "mistakes": [
+        {
+          "answer": "tu vas avec moi",
+          "feedback": "Use venir (come), not aller (go)"
+        },
+        {
+          "answer": "vous venez avec moi",
+          "feedback": "vous is correct for 'you' (formal/plural), not 'tu' (informal)"
+        }
+      ]
+    },
+    {
+      "id": "i-il-va-partir",
+      "type": "respond",
+      "situation": "Say he's going to leave (aller + infinitive)",
+      "cue": "he's going to leave",
+      "answer": "il va partir",
+      "hint": "Combine {aller} + {partir} infinitive - future construction!",
+      "mistakes": [
+        {
+          "answer": "il part",
+          "feedback": "Use '{va partir}' to express future intention"
+        },
+        {
+          "answer": "il vient partir",
+          "feedback": "Use aller (va), not venir"
+        }
+      ]
+    }
+  ]
+}

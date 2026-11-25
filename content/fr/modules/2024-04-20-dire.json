@@ -1,0 +1,621 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-20-dire",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{dire} - To Say / To Tell",
+  "description": "Express what you say and tell: je dis (I say), tu dis la vérité (you tell the truth), il me dit (he tells me)",
+  "can_do": [
+    "Express what you say and tell (I say, you tell, they say)",
+    "Report speech and convey information",
+    "Use dire with que to quote what people say"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "dire-fr",
+      "fr": "dire",
+      "gloss": "to say / to tell",
+      "note": "infinitive form - irregular verb"
+    },
+    {
+      "word_id": "je-dis-fr",
+      "fr": "je dis",
+      "gloss": "I say / I tell",
+      "note": "irregular - sounds like 'dee'"
+    },
+    {
+      "word_id": "tu-dis-fr",
+      "fr": "tu dis",
+      "gloss": "you say / you tell (informal)",
+      "note": "same form as je dis"
+    },
+    {
+      "word_id": "il-elle-dit-fr",
+      "fr": "il/elle dit",
+      "gloss": "he/she says / tells",
+      "note": "same sound as je/tu"
+    },
+    {
+      "word_id": "nous-disons-fr",
+      "fr": "nous disons",
+      "gloss": "we say / we tell",
+      "note": "add -ons to 'dis'"
+    },
+    {
+      "word_id": "vous-dites-fr",
+      "fr": "vous dites",
+      "gloss": "you say / you tell (formal/plural)",
+      "note": "⚠️ IRREGULAR! Not 'disez'!"
+    },
+    {
+      "word_id": "ils-elles-disent-fr",
+      "fr": "ils/elles disent",
+      "gloss": "they say / they tell",
+      "note": "add -ent (silent)"
+    },
+    {
+      "word_id": "dire-que-fr",
+      "fr": "dire que",
+      "gloss": "to say that",
+      "note": "introduce what someone says"
+    },
+    {
+      "word_id": "dire-a-quelqu-un-fr",
+      "fr": "dire à quelqu'un",
+      "gloss": "to tell someone",
+      "note": "use à + person"
+    },
+    {
+      "word_id": "je-te-dis-fr",
+      "fr": "je te dis",
+      "gloss": "I tell you",
+      "note": "te = you (object pronoun)"
+    },
+    {
+      "word_id": "il-me-dit-fr",
+      "fr": "il me dit",
+      "gloss": "he tells me",
+      "note": "me = me (object pronoun)"
+    },
+    {
+      "word_id": "c-est-a-dire-fr",
+      "fr": "c'est-à-dire",
+      "gloss": "that is to say / i.e.",
+      "note": "useful connector - abbreviated as 'càd'"
+    },
+    {
+      "word_id": "on-dit-que-fr",
+      "fr": "on dit que",
+      "gloss": "they say that / people say that",
+      "note": "on = people in general"
+    },
+    {
+      "word_id": "comme-on-dit-fr",
+      "fr": "comme on dit",
+      "gloss": "as they say",
+      "note": "common expression"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-dire-to-say-or",
+      "term": "{dire} = to say OR to tell",
+      "definition": "Essential communication verb - irregular conjugation in present tense",
+      "example": "{je dis bonjour} (I say hello), {tu dis la vérité} (you tell the truth)"
+    },
+    {
+      "id": "c-irregular-conjugation",
+      "term": "Irregular conjugation",
+      "definition": "Present tense: je dis, tu dis, il dit, nous disons, vous dites, ils disent",
+      "example": "Notice: {vous dites} (NOT disez!), {nous disons} (regular), {ils disent} (regular)"
+    },
+    {
+      "id": "c-dire-que-to-say",
+      "term": "{dire que...} (to say that...)",
+      "definition": "Use '{que}' to introduce what someone says",
+      "example": "{je dis que c'est bon} (I say that it's good), {il dit qu'il vient} (he says he's coming)"
+    },
+    {
+      "id": "c-dire-a-quelqu-un",
+      "term": "{dire à quelqu'un} (to tell someone)",
+      "definition": "Use 'à' + person to say who you're telling",
+      "example": "{je dis à Marie} (I tell Marie), {tu me dis} (you tell me), {il lui dit} (he tells him/her)"
+    },
+    {
+      "id": "c-common-expressions",
+      "term": "Common expressions",
+      "definition": "Useful phrases: c'est-à-dire (that is to say), on dit que (they say that), comme on dit (as they say)",
+      "example": "{c'est-à-dire que...} (that is to say...), {on dit que c'est bon} (they say it's good)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-dis",
+      "type": "respond",
+      "situation": "I say",
+      "answer": "je dis",
+      "hint": "{je...}",
+      "mistakes": [
+        {
+          "answer": "je dise",
+          "feedback": "Expected: \"{je dis}\""
+        },
+        {
+          "answer": "je dire",
+          "feedback": "Expected: \"{je dis}\""
+        },
+        {
+          "answer": "je dit",
+          "feedback": "Expected: \"{je dis}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-dis",
+      "type": "respond",
+      "situation": "Say \"you say\" (informal)",
+      "cue": "you say (informal)",
+      "answer": "tu dis",
+      "hint": "{tu...}",
+      "mistakes": [
+        {
+          "answer": "tu dises",
+          "feedback": "Expected: \"{tu dis}\""
+        },
+        {
+          "answer": "tu dire",
+          "feedback": "Expected: \"{tu dis}\""
+        },
+        {
+          "answer": "tu dit",
+          "feedback": "Expected: \"{tu dis}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-dit",
+      "type": "respond",
+      "situation": "he says",
+      "answer": "il dit",
+      "hint": "{il...}",
+      "mistakes": [
+        {
+          "answer": "il dis",
+          "feedback": "Expected: \"{il dit}\""
+        },
+        {
+          "answer": "il dire",
+          "feedback": "Expected: \"{il dit}\""
+        },
+        {
+          "answer": "il dise",
+          "feedback": "Expected: \"{il dit}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-disons",
+      "type": "respond",
+      "situation": "we say",
+      "answer": "nous disons",
+      "hint": "{nous...}",
+      "mistakes": [
+        {
+          "answer": "nous dire",
+          "feedback": "Expected: \"{nous disons}\""
+        },
+        {
+          "answer": "nous dis",
+          "feedback": "Expected: \"{nous disons}\""
+        },
+        {
+          "answer": "nous dites",
+          "feedback": "Expected: \"{nous disons}\""
+        }
+      ]
+    },
+    {
+      "id": "i-vous-dites",
+      "type": "respond",
+      "situation": "Say \"you say\" (formal)",
+      "cue": "you say (formal)",
+      "answer": "vous dites",
+      "hint": "vous... (careful - irregular!)",
+      "mistakes": [
+        {
+          "answer": "vous disez",
+          "feedback": "Expected: \"{vous dites}\""
+        },
+        {
+          "answer": "vous dire",
+          "feedback": "Expected: \"{vous dites}\""
+        },
+        {
+          "answer": "vous dis",
+          "feedback": "Expected: \"{vous dites}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-disent",
+      "type": "respond",
+      "situation": "they say",
+      "answer": "ils disent",
+      "hint": "{ils...}",
+      "mistakes": [
+        {
+          "answer": "ils dis",
+          "feedback": "Expected: \"{ils disent}\""
+        },
+        {
+          "answer": "ils dire",
+          "feedback": "Expected: \"{ils disent}\""
+        },
+        {
+          "answer": "ils dit",
+          "feedback": "Expected: \"{ils disent}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-dis-bonjour",
+      "type": "respond",
+      "situation": "I say hello",
+      "answer": "je dis bonjour",
+      "hint": "{je dis...}",
+      "mistakes": [
+        {
+          "answer": "je dit bonjour",
+          "feedback": "Expected: \"{je dis bonjour}\""
+        },
+        {
+          "answer": "je dise bonjour",
+          "feedback": "Expected: \"{je dis bonjour}\""
+        },
+        {
+          "answer": "je dire bonjour",
+          "feedback": "Expected: \"{je dis bonjour}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-dis-la-verite",
+      "type": "respond",
+      "situation": "you tell the truth",
+      "answer": "tu dis la vérité",
+      "accept": [
+        "tu dis la verite"
+      ],
+      "hint": "{tu dis la vérité}",
+      "mistakes": [
+        {
+          "answer": "tu dit la vérité",
+          "feedback": "Expected: \"{tu dis la vérité}\""
+        },
+        {
+          "answer": "tu dises la vérité",
+          "feedback": "Expected: \"{tu dis la vérité}\""
+        },
+        {
+          "answer": "tu dire la vérité",
+          "feedback": "Expected: \"{tu dis la vérité}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-dit-oui",
+      "type": "respond",
+      "situation": "she says yes",
+      "answer": "elle dit oui",
+      "hint": "{elle dit oui}",
+      "mistakes": [
+        {
+          "answer": "elle dis oui",
+          "feedback": "Expected: \"{elle dit oui}\""
+        },
+        {
+          "answer": "elle dire oui",
+          "feedback": "Expected: \"{elle dit oui}\""
+        },
+        {
+          "answer": "elle dise oui",
+          "feedback": "Expected: \"{elle dit oui}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-disons-une-histoire",
+      "type": "respond",
+      "situation": "we tell a story",
+      "answer": "nous disons une histoire",
+      "hint": "{nous disons une histoire}",
+      "mistakes": [
+        {
+          "answer": "nous dis une histoire",
+          "feedback": "Expected: \"{nous disons une histoire}\""
+        },
+        {
+          "answer": "nous dit une histoire",
+          "feedback": "Expected: \"{nous disons une histoire}\""
+        },
+        {
+          "answer": "nous dire une histoire",
+          "feedback": "Expected: \"{nous disons une histoire}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-dis-que-c",
+      "type": "respond",
+      "situation": "I say that it's good",
+      "answer": "je dis que c'est bon",
+      "accept": [
+        "je dis que c est bon"
+      ],
+      "hint": "{je dis que c'est bon}",
+      "mistakes": [
+        {
+          "answer": "je dis c'est bon",
+          "feedback": "Expected: \"{je dis que c'est bon}\""
+        },
+        {
+          "answer": "je dit que c'est bon",
+          "feedback": "Expected: \"{je dis que c'est bon}\""
+        },
+        {
+          "answer": "je dise que c'est bon",
+          "feedback": "Expected: \"{je dis que c'est bon}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-dit-qu-il",
+      "type": "respond",
+      "situation": "he says that he is coming",
+      "answer": "il dit qu'il vient",
+      "accept": [
+        "il dit qu il vient"
+      ],
+      "hint": "{il dit qu'il vient}",
+      "mistakes": [
+        {
+          "answer": "il dis qu'il vient",
+          "feedback": "Expected: \"{il dit qu'il vient}\""
+        },
+        {
+          "answer": "il dit il vient",
+          "feedback": "Expected: \"{il dit qu'il vient}\""
+        },
+        {
+          "answer": "il dise qu'il vient",
+          "feedback": "Expected: \"{il dit qu'il vient}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-disent-que-c",
+      "type": "respond",
+      "situation": "they say that it's true",
+      "answer": "ils disent que c'est vrai",
+      "accept": [
+        "ils disent que c est vrai"
+      ],
+      "hint": "{ils disent que c'est vrai}",
+      "mistakes": [
+        {
+          "answer": "ils dis que c'est vrai",
+          "feedback": "Expected: \"{ils disent que c'est vrai}\""
+        },
+        {
+          "answer": "ils dit que c'est vrai",
+          "feedback": "Expected: \"{ils disent que c'est vrai}\""
+        },
+        {
+          "answer": "ils disent c'est vrai",
+          "feedback": "Expected: \"{ils disent que c'est vrai}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-te-dis",
+      "type": "respond",
+      "situation": "Say \"I tell you\" (informal)",
+      "cue": "I tell you (informal)",
+      "answer": "je te dis",
+      "hint": "{je te dis}",
+      "mistakes": [
+        {
+          "answer": "je dis te",
+          "feedback": "Expected: \"je te dis\""
+        },
+        {
+          "answer": "je te dit",
+          "feedback": "Expected: \"{je te dis}\""
+        },
+        {
+          "answer": "je dis tu",
+          "feedback": "Expected: \"{je te dis}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-me-dis",
+      "type": "respond",
+      "situation": "you tell me",
+      "answer": "tu me dis",
+      "hint": "{tu me dis}",
+      "mistakes": [
+        {
+          "answer": "tu dis me",
+          "feedback": "Expected: \"tu me dis\""
+        },
+        {
+          "answer": "tu me dit",
+          "feedback": "Expected: \"{tu me dis}\""
+        },
+        {
+          "answer": "tu dis je",
+          "feedback": "Expected: \"{tu me dis}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-me-dit",
+      "type": "respond",
+      "situation": "he tells me",
+      "answer": "il me dit",
+      "hint": "{il me dit}",
+      "mistakes": [
+        {
+          "answer": "il dis me",
+          "feedback": "Expected: \"{il me dit}\""
+        },
+        {
+          "answer": "il dit me",
+          "feedback": "Expected: \"il me dit\""
+        },
+        {
+          "answer": "il me dis",
+          "feedback": "Expected: \"{il me dit}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-nous-dit",
+      "type": "respond",
+      "situation": "she tells us",
+      "answer": "elle nous dit",
+      "hint": "{elle nous dit}",
+      "mistakes": [
+        {
+          "answer": "elle dit nous",
+          "feedback": "Expected: \"elle nous dit\""
+        },
+        {
+          "answer": "elle nous dis",
+          "feedback": "Expected: \"{elle nous dit}\""
+        },
+        {
+          "answer": "elle dis nous",
+          "feedback": "Expected: \"{elle nous dit}\""
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-a-dire",
+      "type": "respond",
+      "situation": "that is to say",
+      "answer": "c'est-à-dire",
+      "accept": [
+        "c est a dire",
+        "c'est à dire"
+      ],
+      "hint": "{c'est-à-dire}",
+      "mistakes": [
+        {
+          "answer": "c'est dire",
+          "feedback": "Expected: \"{c'est-à-dire}\""
+        },
+        {
+          "answer": "c'est de dire",
+          "feedback": "Expected: \"{c'est-à-dire}\""
+        },
+        {
+          "answer": "c'est pour dire",
+          "feedback": "Expected: \"{c'est-à-dire}\""
+        }
+      ]
+    },
+    {
+      "id": "i-on-dit-que",
+      "type": "respond",
+      "situation": "Say \"they say that\" (people say that)",
+      "cue": "they say that (people say)",
+      "answer": "on dit que",
+      "hint": "{on dit que}",
+      "mistakes": [
+        {
+          "answer": "on dis que",
+          "feedback": "Expected: \"{on dit que}\""
+        },
+        {
+          "answer": "ils disent que",
+          "feedback": "Expected: \"{on dit que}\""
+        },
+        {
+          "answer": "on dise que",
+          "feedback": "Expected: \"{on dit que}\""
+        }
+      ]
+    },
+    {
+      "id": "i-comme-on-dit",
+      "type": "respond",
+      "situation": "as they say",
+      "answer": "comme on dit",
+      "hint": "{comme on dit}",
+      "mistakes": [
+        {
+          "answer": "comme on dis",
+          "feedback": "Expected: \"{comme on dit}\""
+        },
+        {
+          "answer": "comme ils disent",
+          "feedback": "Expected: \"{comme on dit}\""
+        },
+        {
+          "answer": "comment on dit",
+          "feedback": "Expected: \"{comme on dit}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-dit",
+      "type": "respond",
+      "situation": "I said",
+      "answer": "j'ai dit",
+      "accept": [
+        "j ai dit"
+      ],
+      "hint": "{j'ai dit}",
+      "mistakes": [
+        {
+          "answer": "je dis",
+          "feedback": "Expected: \"{j'ai dit}\""
+        },
+        {
+          "answer": "je disais",
+          "feedback": "Expected: \"{j'ai dit}\""
+        },
+        {
+          "answer": "j'ai dis",
+          "feedback": "Expected: \"{j'ai dit}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-m-as-dit",
+      "type": "respond",
+      "situation": "you told me",
+      "answer": "tu m'as dit",
+      "accept": [
+        "tu m as dit"
+      ],
+      "hint": "{tu m'as dit}",
+      "mistakes": [
+        {
+          "answer": "tu me dis",
+          "feedback": "Expected: \"{tu m'as dit}\""
+        },
+        {
+          "answer": "tu as me dit",
+          "feedback": "Expected: \"{tu m'as dit}\""
+        },
+        {
+          "answer": "tu m'ai dit",
+          "feedback": "Expected: \"{tu m'as dit}\""
+        }
+      ]
+    }
+  ]
+}

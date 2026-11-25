@@ -1,0 +1,138 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-22-common-adverbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{vraiment, sérieusement...} - Common Adverbs",
+  "description": "Add nuance to EVERYTHING you say! '{vraiment}' (really), '{sérieusement}' (seriously), '{lentement}' (slowly), '{rapidement}' (quickly). Make your French sound sophisticated!",
+  "can_do": [
+    "Add nuance with common adverbs (really, seriously, slowly)",
+    "Modify any verb or adjective for emphasis",
+    "Sound more natural and expressive in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "vraiment-fr",
+      "fr": "vraiment",
+      "gloss": "really, truly",
+      "note": "⭐ most common!"
+    },
+    {
+      "word_id": "serieusement-fr",
+      "fr": "sérieusement",
+      "gloss": "seriously",
+      "note": "emphasis"
+    },
+    {
+      "word_id": "lentement-fr",
+      "fr": "lentement",
+      "gloss": "slowly",
+      "note": "parler lentement"
+    },
+    {
+      "word_id": "rapidement-fr",
+      "fr": "rapidement",
+      "gloss": "quickly",
+      "note": "courir rapidement"
+    },
+    {
+      "word_id": "facilement-fr",
+      "fr": "facilement",
+      "gloss": "easily",
+      "note": "comprendre facilement"
+    },
+    {
+      "word_id": "completement-fr",
+      "fr": "complètement",
+      "gloss": "completely",
+      "note": "complètement fini"
+    },
+    {
+      "word_id": "probablement-fr",
+      "fr": "probablement",
+      "gloss": "probably",
+      "note": "expressing likelihood"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-add-nuance-to-any",
+      "term": "Add Nuance to Any Verb",
+      "definition": "Adverbs describe HOW you do something",
+      "example": "{parler} (speak) → {parler lentement} (speak slowly), {parler rapidement} (speak quickly)"
+    },
+    {
+      "id": "c-most-common-adverbs",
+      "term": "Most Common Adverbs",
+      "definition": "Learn the top ones - you'll use these constantly!",
+      "example": "{vraiment bon} (really good), {sérieusement fatigué} (seriously tired)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-vraiment-bon",
+      "type": "respond",
+      "situation": "Emphasize something is 'really good'",
+      "cue": "really good",
+      "answer": "vraiment bon",
+      "hint": "{vraiment + bon}"
+    },
+    {
+      "id": "i-serieusement-fatigue",
+      "type": "respond",
+      "situation": "Say you're 'seriously tired' (emphasis!)",
+      "cue": "seriously tired",
+      "answer": "sérieusement fatigué",
+      "hint": "{sérieusement + fatigué}"
+    },
+    {
+      "id": "i-parler-lentement",
+      "type": "respond",
+      "situation": "Ask someone to speak slowly",
+      "cue": "speak slowly",
+      "answer": "parler lentement",
+      "accept": [
+        "parle lentement"
+      ],
+      "hint": "{parler + lentement}"
+    },
+    {
+      "id": "i-courir-rapidement",
+      "type": "respond",
+      "situation": "Say someone runs quickly",
+      "cue": "run quickly",
+      "answer": "courir rapidement",
+      "accept": [
+        "court rapidement"
+      ],
+      "hint": "{courir + rapidement}"
+    },
+    {
+      "id": "i-comprendre-facilement",
+      "type": "respond",
+      "situation": "Say you understand easily",
+      "cue": "understand easily",
+      "answer": "comprendre facilement",
+      "accept": [
+        "je comprends facilement"
+      ],
+      "hint": "{comprendre + facilement}"
+    },
+    {
+      "id": "i-completement-fini",
+      "type": "respond",
+      "situation": "Say something is completely finished",
+      "cue": "completely finished",
+      "answer": "complètement fini",
+      "hint": "{complètement + fini}"
+    },
+    {
+      "id": "i-probablement",
+      "type": "respond",
+      "situation": "Say something will probably happen",
+      "cue": "probably",
+      "answer": "probablement",
+      "hint": "one word!"
+    }
+  ]
+}

@@ -1,0 +1,661 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-23-progressive-tenses",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Progressive & Future - Expressing Time",
+  "description": "Say what you're doing now, what you're going to do, and what you can't/won't/shouldn't do",
+  "can_do": [
+    "Express ongoing actions (I'm eating, you're speaking)",
+    "Talk about future plans (I'm going to go, we're going to eat)",
+    "Use future tense for definite future actions"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "etre-en-train-de-fr",
+      "fr": "être en train de",
+      "gloss": "to be in the process of",
+      "note": "en train = in the train/process - literally 'in the act of'"
+    },
+    {
+      "word_id": "je-suis-en-train-de-manger-fr",
+      "fr": "je suis en train de manger",
+      "gloss": "I am eating",
+      "note": "present progressive - happening now!"
+    },
+    {
+      "word_id": "j-etais-en-train-de-parler-fr",
+      "fr": "j'étais en train de parler",
+      "gloss": "I was talking",
+      "note": "past progressive - was happening then"
+    },
+    {
+      "word_id": "je-vais-partir-fr",
+      "fr": "je vais partir",
+      "gloss": "I am going to leave",
+      "note": "near future - aller + infinitive"
+    },
+    {
+      "word_id": "je-vais-manger-fr",
+      "fr": "je vais manger",
+      "gloss": "I am going to eat",
+      "note": "near future"
+    },
+    {
+      "word_id": "je-parlerai-fr",
+      "fr": "je parlerai",
+      "gloss": "I will speak",
+      "note": "future tense - parler + ai"
+    },
+    {
+      "word_id": "tu-mangeras-fr",
+      "fr": "tu mangeras",
+      "gloss": "you will eat",
+      "note": "future tense - manger + as"
+    },
+    {
+      "word_id": "il-ira-fr",
+      "fr": "il ira",
+      "gloss": "he will go",
+      "note": "irregular future - from aller"
+    },
+    {
+      "word_id": "je-ne-peux-pas-fr",
+      "fr": "je ne peux pas",
+      "gloss": "I can't",
+      "note": "negative modal - pouvoir"
+    },
+    {
+      "word_id": "je-ne-vais-pas-fr",
+      "fr": "je ne vais pas",
+      "gloss": "I'm not going to",
+      "note": "negative near future"
+    },
+    {
+      "word_id": "je-ne-devrais-pas-fr",
+      "fr": "je ne devrais pas",
+      "gloss": "I shouldn't",
+      "note": "negative conditional - devoir"
+    },
+    {
+      "word_id": "je-ne-ferai-pas-fr",
+      "fr": "je ne ferai pas",
+      "gloss": "I won't do",
+      "note": "negative future tense"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-etre-en-train-de",
+      "term": "être en train de + infinitive",
+      "definition": "Express an action happening RIGHT NOW - like English 'I am doing...'",
+      "example": "{je suis en train de manger} (I am eating), {il est en train de parler} (he is talking)"
+    },
+    {
+      "id": "c-aller-infinitive-near-future",
+      "term": "aller + infinitive (near future)",
+      "definition": "Express what you're GOING TO DO - aller (to go) + verb infinitive",
+      "example": "{je vais manger} (I'm going to eat), {tu vas parler} (you're going to speak)"
+    },
+    {
+      "id": "c-future-tense-je-rai",
+      "term": "Future tense - je ...-rai",
+      "definition": "Express what you WILL do - add -rai, -ras, -ra, -rons, -rez, -ront to infinitive",
+      "example": "{je parlerai} (I will speak), {tu mangeras} (you will eat), {il ira} (he will go - irregular)"
+    },
+    {
+      "id": "c-negative-modals",
+      "term": "Negative modals",
+      "definition": "Express can't, won't, shouldn't - je ne peux pas, je ne vais pas, je ne devrais pas",
+      "example": "{je ne peux pas partir} (I can't leave), {je ne devrais pas manger ça} (I shouldn't eat that)"
+    },
+    {
+      "id": "c-j-etais-en-train",
+      "term": "{J'étais en train de...} (past progressive)",
+      "definition": "Say what you WERE doing - use past tense of être + en train de",
+      "example": "{j'étais en train de manger} (I was eating), {ils étaient en train de parler} (they were talking)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-suis-en-train",
+      "type": "respond",
+      "situation": "I am eating",
+      "answer": "je suis en train de manger",
+      "hint": "{je suis en train de...}",
+      "mistakes": [
+        {
+          "answer": "je mange",
+          "feedback": "Expected: \"{je suis en train de manger}\""
+        },
+        {
+          "answer": "j'ai mangé",
+          "feedback": "Expected: \"{je suis en train de manger}\""
+        },
+        {
+          "answer": "je vais manger",
+          "feedback": "Expected: \"{je suis en train de manger}\""
+        },
+        {
+          "answer": "je mangerai",
+          "feedback": "Expected: \"{je suis en train de manger}\""
+        }
+      ]
+    },
+    {
+      "id": "i-elle-est-en-train",
+      "type": "respond",
+      "situation": "she is talking",
+      "answer": "elle est en train de parler",
+      "hint": "{elle est en train de...}",
+      "mistakes": [
+        {
+          "answer": "elle parle",
+          "feedback": "Expected: \"{elle est en train de parler}\""
+        },
+        {
+          "answer": "elle parlait",
+          "feedback": "Expected: \"{elle est en train de parler}\""
+        },
+        {
+          "answer": "elle va parler",
+          "feedback": "Expected: \"{elle est en train de parler}\""
+        },
+        {
+          "answer": "elle parlera",
+          "feedback": "Expected: \"{elle est en train de parler}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-sommes-en-train",
+      "type": "respond",
+      "situation": "we are leaving",
+      "answer": "nous sommes en train de partir",
+      "hint": "{nous sommes en train de...}",
+      "mistakes": [
+        {
+          "answer": "nous partons",
+          "feedback": "Expected: \"{nous sommes en train de partir}\""
+        },
+        {
+          "answer": "nous allons partir",
+          "feedback": "Expected: \"{nous sommes en train de partir}\""
+        },
+        {
+          "answer": "nous partirons",
+          "feedback": "Expected: \"{nous sommes en train de partir}\""
+        },
+        {
+          "answer": "nous partions",
+          "feedback": "Expected: \"{nous sommes en train de partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-etais-en-train",
+      "type": "respond",
+      "situation": "I was eating",
+      "answer": "j'étais en train de manger",
+      "accept": [
+        "j étais en train de manger"
+      ],
+      "hint": "{j'étais en train de...}",
+      "mistakes": [
+        {
+          "answer": "je mangeais",
+          "feedback": "Expected: \"{j'étais en train de manger}\""
+        },
+        {
+          "answer": "j'ai mangé",
+          "feedback": "Expected: \"{j'étais en train de manger}\""
+        },
+        {
+          "answer": "je suis en train de manger",
+          "feedback": "Expected: \"{j'étais en train de manger}\""
+        },
+        {
+          "answer": "j'avais mangé",
+          "feedback": "Expected: \"{j'étais en train de manger}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-etaient-en-train",
+      "type": "respond",
+      "situation": "they were talking",
+      "answer": "ils étaient en train de parler",
+      "hint": "{ils étaient en train de...}",
+      "mistakes": [
+        {
+          "answer": "ils parlaient",
+          "feedback": "Expected: \"{ils étaient en train de parler}\""
+        },
+        {
+          "answer": "ils ont parlé",
+          "feedback": "Expected: \"{ils étaient en train de parler}\""
+        },
+        {
+          "answer": "ils sont en train de parler",
+          "feedback": "Expected: \"{ils étaient en train de parler}\""
+        },
+        {
+          "answer": "ils avaient parlé",
+          "feedback": "Expected: \"{ils étaient en train de parler}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-vais-manger",
+      "type": "respond",
+      "situation": "I am going to eat",
+      "answer": "je vais manger",
+      "hint": "je vais + infinitive",
+      "mistakes": [
+        {
+          "answer": "je mange",
+          "feedback": "Expected: \"{je vais manger}\""
+        },
+        {
+          "answer": "je mangerai",
+          "feedback": "Expected: \"{je vais manger}\""
+        },
+        {
+          "answer": "j'ai mangé",
+          "feedback": "Expected: \"{je vais manger}\""
+        },
+        {
+          "answer": "je suis en train de manger",
+          "feedback": "Expected: \"{je vais manger}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-vas-parler",
+      "type": "respond",
+      "situation": "you are going to speak",
+      "answer": "tu vas parler",
+      "hint": "tu vas + infinitive",
+      "mistakes": [
+        {
+          "answer": "tu parles",
+          "feedback": "Expected: \"{tu vas parler}\""
+        },
+        {
+          "answer": "tu parleras",
+          "feedback": "Expected: \"{tu vas parler}\""
+        },
+        {
+          "answer": "tu as parlé",
+          "feedback": "Expected: \"{tu vas parler}\""
+        },
+        {
+          "answer": "tu es en train de parler",
+          "feedback": "Expected: \"{tu vas parler}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-allons-partir",
+      "type": "respond",
+      "situation": "we are going to leave",
+      "answer": "nous allons partir",
+      "hint": "nous allons + infinitive",
+      "mistakes": [
+        {
+          "answer": "nous partons",
+          "feedback": "Expected: \"{nous allons partir}\""
+        },
+        {
+          "answer": "nous partirons",
+          "feedback": "Expected: \"{nous allons partir}\""
+        },
+        {
+          "answer": "nous sommes partis",
+          "feedback": "Expected: \"{nous allons partir}\""
+        },
+        {
+          "answer": "nous sommes en train de partir",
+          "feedback": "Expected: \"{nous allons partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-ils-vont-venir",
+      "type": "respond",
+      "situation": "they are going to come",
+      "answer": "ils vont venir",
+      "hint": "ils vont + infinitive",
+      "mistakes": [
+        {
+          "answer": "ils viennent",
+          "feedback": "Expected: \"{ils vont venir}\""
+        },
+        {
+          "answer": "ils viendront",
+          "feedback": "Expected: \"{ils vont venir}\""
+        },
+        {
+          "answer": "ils sont venus",
+          "feedback": "Expected: \"{ils vont venir}\""
+        },
+        {
+          "answer": "ils sont en train de venir",
+          "feedback": "Expected: \"{ils vont venir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-parlerai",
+      "type": "respond",
+      "situation": "I will speak",
+      "answer": "je parlerai",
+      "hint": "{parler + ai}",
+      "mistakes": [
+        {
+          "answer": "je parle",
+          "feedback": "Expected: \"{je parlerai}\""
+        },
+        {
+          "answer": "je vais parler",
+          "feedback": "Expected: \"{je parlerai}\""
+        },
+        {
+          "answer": "j'ai parlé",
+          "feedback": "Expected: \"{je parlerai}\""
+        },
+        {
+          "answer": "je parlais",
+          "feedback": "Expected: \"{je parlerai}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-mangeras",
+      "type": "respond",
+      "situation": "you will eat",
+      "answer": "tu mangeras",
+      "hint": "{manger + as}",
+      "mistakes": [
+        {
+          "answer": "tu manges",
+          "feedback": "Expected: \"{tu mangeras}\""
+        },
+        {
+          "answer": "tu vas manger",
+          "feedback": "Expected: \"{tu mangeras}\""
+        },
+        {
+          "answer": "tu as mangé",
+          "feedback": "Expected: \"{tu mangeras}\""
+        },
+        {
+          "answer": "tu mangeais",
+          "feedback": "Expected: \"{tu mangeras}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-partira",
+      "type": "respond",
+      "situation": "he will leave",
+      "answer": "il partira",
+      "hint": "{partir + a}",
+      "mistakes": [
+        {
+          "answer": "il part",
+          "feedback": "Expected: \"{il partira}\""
+        },
+        {
+          "answer": "il va partir",
+          "feedback": "Expected: \"{il partira}\""
+        },
+        {
+          "answer": "il est parti",
+          "feedback": "Expected: \"{il partira}\""
+        },
+        {
+          "answer": "il partait",
+          "feedback": "Expected: \"{il partira}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-viendrons",
+      "type": "respond",
+      "situation": "we will come",
+      "answer": "nous viendrons",
+      "hint": "venir + ons",
+      "mistakes": [
+        {
+          "answer": "nous venons",
+          "feedback": "Expected: \"{nous viendrons}\""
+        },
+        {
+          "answer": "nous allons venir",
+          "feedback": "Expected: \"{nous viendrons}\""
+        },
+        {
+          "answer": "nous sommes venus",
+          "feedback": "Expected: \"{nous viendrons}\""
+        },
+        {
+          "answer": "nous venions",
+          "feedback": "Expected: \"{nous viendrons}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-irai",
+      "type": "respond",
+      "situation": "I will go",
+      "answer": "j'irai",
+      "accept": [
+        "j irai"
+      ],
+      "hint": "aller is irregular: j'irai",
+      "mistakes": [
+        {
+          "answer": "je vais",
+          "feedback": "Expected: \"{j'irai}\""
+        },
+        {
+          "answer": "je vais aller",
+          "feedback": "Expected: \"{j'irai}\""
+        },
+        {
+          "answer": "je suis allé",
+          "feedback": "Expected: \"{j'irai}\""
+        },
+        {
+          "answer": "j'allais",
+          "feedback": "Expected: \"{j'irai}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-peux-pas",
+      "type": "respond",
+      "situation": "I can't leave",
+      "answer": "je ne peux pas partir",
+      "hint": "{je ne peux pas...}",
+      "mistakes": [
+        {
+          "answer": "je peux partir",
+          "feedback": "Expected: \"{je ne peux pas partir}\""
+        },
+        {
+          "answer": "je ne pars pas",
+          "feedback": "Expected: \"{je ne peux pas partir}\""
+        },
+        {
+          "answer": "je ne vais pas partir",
+          "feedback": "Expected: \"{je ne peux pas partir}\""
+        },
+        {
+          "answer": "je ne suis pas parti",
+          "feedback": "Expected: \"{je ne peux pas partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-vais-pas",
+      "type": "respond",
+      "situation": "I won't go",
+      "answer": "je ne vais pas aller",
+      "hint": "{je ne vais pas...}",
+      "mistakes": [
+        {
+          "answer": "je vais aller",
+          "feedback": "Expected: \"{je ne vais pas aller}\""
+        },
+        {
+          "answer": "je ne vais pas",
+          "feedback": "Expected: \"{je ne vais pas aller}\""
+        },
+        {
+          "answer": "je n'irai pas",
+          "feedback": "Expected: \"{je ne vais pas aller}\""
+        },
+        {
+          "answer": "je ne suis pas allé",
+          "feedback": "Expected: \"{je ne vais pas aller}\""
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-devrais-pas",
+      "type": "respond",
+      "situation": "I shouldn't eat that",
+      "answer": "je ne devrais pas manger ça",
+      "accept": [
+        "je ne devrais pas manger ca"
+      ],
+      "hint": "{je ne devrais pas...}",
+      "mistakes": [
+        {
+          "answer": "je devrais manger ça",
+          "feedback": "Expected: \"{je ne devrais pas manger ça}\""
+        },
+        {
+          "answer": "je ne mange pas ça",
+          "feedback": "Expected: \"{je ne devrais pas manger ça}\""
+        },
+        {
+          "answer": "je ne vais pas manger ça",
+          "feedback": "Expected: \"{je ne devrais pas manger ça}\""
+        },
+        {
+          "answer": "je ne mangerai pas ça",
+          "feedback": "Expected: \"{je ne devrais pas manger ça}\""
+        }
+      ]
+    },
+    {
+      "id": "i-tu-ne-peux-pas",
+      "type": "respond",
+      "situation": "you can't do that",
+      "answer": "tu ne peux pas faire ça",
+      "accept": [
+        "tu ne peux pas faire ca"
+      ],
+      "hint": "{tu ne peux pas faire ça}",
+      "mistakes": [
+        {
+          "answer": "tu peux faire ça",
+          "feedback": "Expected: \"{tu ne peux pas faire ça}\""
+        },
+        {
+          "answer": "tu ne fais pas ça",
+          "feedback": "Expected: \"{tu ne peux pas faire ça}\""
+        },
+        {
+          "answer": "tu ne vas pas faire ça",
+          "feedback": "Expected: \"{tu ne peux pas faire ça}\""
+        },
+        {
+          "answer": "tu n'as pas fait ça",
+          "feedback": "Expected: \"{tu ne peux pas faire ça}\""
+        }
+      ]
+    },
+    {
+      "id": "i-il-ne-le-fera",
+      "type": "respond",
+      "situation": "he won't do it",
+      "answer": "il ne le fera pas",
+      "hint": "{il ne le fera pas}",
+      "mistakes": [
+        {
+          "answer": "il le fera",
+          "feedback": "Expected: \"{il ne le fera pas}\""
+        },
+        {
+          "answer": "il ne le fait pas",
+          "feedback": "Expected: \"{il ne le fera pas}\""
+        },
+        {
+          "answer": "il ne va pas le faire",
+          "feedback": "Expected: \"{il ne le fera pas}\""
+        },
+        {
+          "answer": "il ne l'a pas fait",
+          "feedback": "Expected: \"{il ne le fera pas}\""
+        }
+      ]
+    },
+    {
+      "id": "i-j-allais-partir",
+      "type": "respond",
+      "situation": "I was going to leave",
+      "answer": "j'allais partir",
+      "accept": [
+        "j allais partir"
+      ],
+      "hint": "j'allais + infinitive",
+      "mistakes": [
+        {
+          "answer": "je vais partir",
+          "feedback": "Expected: \"{j'allais partir}\""
+        },
+        {
+          "answer": "j'étais en train de partir",
+          "feedback": "Expected: \"{j'allais partir}\""
+        },
+        {
+          "answer": "je partais",
+          "feedback": "Expected: \"{j'allais partir}\""
+        },
+        {
+          "answer": "je suis parti",
+          "feedback": "Expected: \"{j'allais partir}\""
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ne-pourrons-pas",
+      "type": "respond",
+      "situation": "we will not be able to come",
+      "answer": "nous ne pourrons pas venir",
+      "hint": "{nous ne pourrons pas...}",
+      "mistakes": [
+        {
+          "answer": "nous pouvons venir",
+          "feedback": "Expected: \"{nous ne pourrons pas venir}\""
+        },
+        {
+          "answer": "nous ne pouvons pas venir",
+          "feedback": "Expected: \"{nous ne pourrons pas venir}\""
+        },
+        {
+          "answer": "nous ne viendrons pas",
+          "feedback": "Expected: \"{nous ne pourrons pas venir}\""
+        },
+        {
+          "answer": "nous ne sommes pas venus",
+          "feedback": "Expected: \"{nous ne pourrons pas venir}\""
+        }
+      ]
+    }
+  ]
+}

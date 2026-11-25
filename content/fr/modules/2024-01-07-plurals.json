@@ -1,0 +1,197 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-07-plurals",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Plurals - More Than One",
+  "description": "Learn to make nouns plural: chat → chats, livre → livres. Essential for 'these' and 'those'!",
+  "can_do": [
+    "Talk about multiple things (cats, books, friends)",
+    "Transform singular nouns to plural forms",
+    "Say 'I have cats' or 'We have books' in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "des-fr",
+      "fr": "des",
+      "gloss": "some / plural a",
+      "note": "indefinite plural"
+    },
+    {
+      "word_id": "les-fr",
+      "fr": "les",
+      "gloss": "the (plural)",
+      "note": "definite plural"
+    },
+    {
+      "word_id": "chats-fr",
+      "fr": "chats",
+      "gloss": "cats",
+      "note": "plural of chat"
+    },
+    {
+      "word_id": "chiens-fr",
+      "fr": "chiens",
+      "gloss": "dogs",
+      "note": "plural of chien"
+    },
+    {
+      "word_id": "livres-fr",
+      "fr": "livres",
+      "gloss": "books",
+      "note": "plural of livre"
+    },
+    {
+      "word_id": "amis-fr",
+      "fr": "amis",
+      "gloss": "friends",
+      "note": "plural of ami"
+    },
+    {
+      "word_id": "choses-fr",
+      "fr": "choses",
+      "gloss": "things",
+      "note": "plural of chose"
+    },
+    {
+      "word_id": "enfants-fr",
+      "fr": "enfants",
+      "gloss": "children",
+      "note": "plural of enfant"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-basic-plural-rule",
+      "term": "Basic Plural Rule",
+      "definition": "Add -s to most nouns (just like English!)",
+      "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}"
+    },
+    {
+      "id": "c-plural-articles",
+      "term": "Plural Articles",
+      "definition": "les = the (plural), des = some/plural a",
+      "example": "Pattern: [pronoun] + [verb] + [des/les] + [plural noun]"
+    },
+    {
+      "id": "c-practice-with-etre-avoir",
+      "term": "Practice With être & avoir!",
+      "definition": "Every exercise combines plurals with {être} and {avoir}",
+      "example": "Learn plurals WHILE reinforcing your verb conjugations"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-j-ai-des-chats",
+      "type": "translate",
+      "prompt": "I have some cats",
+      "answer": "j'ai des chats",
+      "hint": "Combine: I have + plural article + plural noun",
+      "mistakes": [
+        {
+          "answer": "j'ai les chats",
+          "feedback": "Use '{des}' (some), not 'les' (the)"
+        },
+        {
+          "answer": "j'ai un chat",
+          "feedback": "That's singular - use plural!"
+        }
+      ]
+    },
+    {
+      "id": "i-tu-as-des-chats",
+      "type": "translate",
+      "prompt": "you have some cats (informal)",
+      "answer": "tu as des chats",
+      "hint": "Combine: you have + des + cats",
+      "mistakes": [
+        {
+          "answer": "tu as un chat",
+          "feedback": "That's singular - need plural"
+        }
+      ]
+    },
+    {
+      "id": "i-nous-avons-les-livres",
+      "type": "translate",
+      "prompt": "we have the books",
+      "answer": "nous avons les livres",
+      "hint": "Combine: we have + the + books (plural)",
+      "mistakes": [
+        {
+          "answer": "nous avons des livres",
+          "feedback": "Use '{les}' (the), not 'des' (some)"
+        },
+        {
+          "answer": "nous avons le livre",
+          "feedback": "That's singular - use plural!"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-ont-les-chats",
+      "type": "translate",
+      "prompt": "they have the cats (masculine)",
+      "answer": "ils ont les chats",
+      "hint": "Combine: they have + the + cats",
+      "mistakes": [
+        {
+          "answer": "ils ont des chats",
+          "feedback": "Use '{les}' (the), not 'des' (some)"
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-des-chiens",
+      "type": "translate",
+      "prompt": "I have some dogs",
+      "answer": "j'ai des chiens",
+      "hint": "Combine: I have + some + dogs",
+      "mistakes": [
+        {
+          "answer": "j'ai les chiens",
+          "feedback": "Use '{des}' (some), not 'les' (the)"
+        }
+      ]
+    },
+    {
+      "id": "i-ils-sont-les-amis",
+      "type": "translate",
+      "prompt": "they are the friends (masculine)",
+      "answer": "ils sont les amis",
+      "hint": "Combine: they are + the + friends (plural)",
+      "mistakes": [
+        {
+          "answer": "ils sont des amis",
+          "feedback": "Use '{les}' (the), not 'des' (some)"
+        }
+      ]
+    },
+    {
+      "id": "i-vous-avez-les-choses",
+      "type": "translate",
+      "prompt": "you have the things (formal)",
+      "answer": "vous avez les choses",
+      "hint": "Combine: you have + the + things (plural)",
+      "mistakes": [
+        {
+          "answer": "vous avez des choses",
+          "feedback": "Use '{les}' (the), not 'des' (some)"
+        }
+      ]
+    },
+    {
+      "id": "i-elle-a-les-enfants",
+      "type": "translate",
+      "prompt": "she has the children",
+      "answer": "elle a les enfants",
+      "hint": "Combine: she has + the + children (plural)",
+      "mistakes": [
+        {
+          "answer": "elle a des enfants",
+          "feedback": "Use '{les}' (the), not 'des' (some)"
+        }
+      ]
+    }
+  ]
+}

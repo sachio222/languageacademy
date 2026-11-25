@@ -1,0 +1,187 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-05-articles",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Articles - The, A, An",
+  "description": "Learn 'the' and 'a/an' in French - essential before learning any nouns!",
+  "can_do": [
+    "Use 'the' (le, la, les) with masculine, feminine, and plural nouns",
+    "Use 'a/an' (un, une) correctly based on gender",
+    "Understand why French requires articles with every noun"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "un-fr",
+      "fr": "un",
+      "gloss": "a/an (masculine)",
+      "note": "indefinite, masculine"
+    },
+    {
+      "word_id": "une-fr",
+      "fr": "une",
+      "gloss": "a/an (feminine)",
+      "note": "indefinite, feminine"
+    },
+    {
+      "word_id": "le-fr",
+      "fr": "le",
+      "gloss": "the (masculine)",
+      "note": "definite, masculine"
+    },
+    {
+      "word_id": "la-fr",
+      "fr": "la",
+      "gloss": "the (feminine)",
+      "note": "definite, feminine"
+    },
+    {
+      "word_id": "les-fr",
+      "fr": "les",
+      "gloss": "the (plural)",
+      "note": "definite, plural both genders"
+    },
+    {
+      "word_id": "l-fr",
+      "fr": "l'",
+      "gloss": "the (before vowel)",
+      "note": "le/la → l' before vowel/silent h"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-why-articles-matter",
+      "term": "Why Articles Matter",
+      "definition": "You can NEVER say a noun alone in French - must use an article!",
+      "example": "English: 'book', French: MUST say 'a book' or 'the book'"
+    },
+    {
+      "id": "c-indefinite-articles-a-an",
+      "term": "Indefinite Articles (a/{an})",
+      "definition": "un (masculine), une (feminine) = a/an",
+      "example": "Use when talking about any one thing, not a specific thing"
+    },
+    {
+      "id": "c-definite-articles-the",
+      "term": "Definite Articles (the)",
+      "definition": "le (masculine), la (feminine), les (plural) = the",
+      "example": "Use when talking about a specific thing"
+    },
+    {
+      "id": "c-gender-agreement",
+      "term": "Gender Agreement",
+      "definition": "Article must match the noun's gender - this is critical!",
+      "example": "Masculine nouns use un/le, feminine nouns use une/{la}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-un",
+      "type": "respond",
+      "situation": "You want to say 'a book' (masculine noun). Which article?",
+      "cue": "a/an (masculine thing)",
+      "answer": "un",
+      "hint": "Indefinite article for masculine nouns",
+      "mistakes": [
+        {
+          "answer": "une",
+          "feedback": "That's feminine 'a/an'"
+        },
+        {
+          "answer": "le",
+          "feedback": "That's 'the', not 'a/an'"
+        }
+      ]
+    },
+    {
+      "id": "i-une",
+      "type": "respond",
+      "situation": "You want to say 'a house' (feminine noun). Which article?",
+      "cue": "a/an (feminine thing)",
+      "answer": "une",
+      "hint": "Indefinite article for feminine nouns",
+      "mistakes": [
+        {
+          "answer": "un",
+          "feedback": "That's masculine 'a/an'"
+        },
+        {
+          "answer": "la",
+          "feedback": "That's 'the', not 'a/an'"
+        }
+      ]
+    },
+    {
+      "id": "i-le",
+      "type": "respond",
+      "situation": "You're referring to a specific book (masculine). Which article?",
+      "cue": "the (masculine thing)",
+      "answer": "le",
+      "hint": "Definite article for masculine singular nouns",
+      "mistakes": [
+        {
+          "answer": "la",
+          "feedback": "That's feminine 'the'"
+        },
+        {
+          "answer": "les",
+          "feedback": "That's plural 'the'"
+        }
+      ]
+    },
+    {
+      "id": "i-la",
+      "type": "respond",
+      "situation": "You're referring to a specific house (feminine). Which article?",
+      "cue": "the (feminine thing)",
+      "answer": "la",
+      "hint": "Definite article for feminine singular nouns",
+      "mistakes": [
+        {
+          "answer": "le",
+          "feedback": "That's masculine 'the'"
+        },
+        {
+          "answer": "les",
+          "feedback": "That's plural 'the'"
+        }
+      ]
+    },
+    {
+      "id": "i-les",
+      "type": "respond",
+      "situation": "You're talking about multiple specific things. Which article?",
+      "cue": "the (plural things)",
+      "answer": "les",
+      "hint": "Definite article for plural nouns (any gender)",
+      "mistakes": [
+        {
+          "answer": "le",
+          "feedback": "That's singular masculine 'the'"
+        },
+        {
+          "answer": "la",
+          "feedback": "That's singular feminine 'the'"
+        }
+      ]
+    },
+    {
+      "id": "i-l",
+      "type": "respond",
+      "situation": "The noun starts with a vowel sound. How does 'the' change?",
+      "cue": "the (before vowel sound)",
+      "answer": "l'",
+      "hint": "Le/la become this before vowels - with apostrophe",
+      "mistakes": [
+        {
+          "answer": "le",
+          "feedback": "Use l' before vowels"
+        },
+        {
+          "answer": "la",
+          "feedback": "Use l' before vowels"
+        }
+      ]
+    }
+  ]
+}

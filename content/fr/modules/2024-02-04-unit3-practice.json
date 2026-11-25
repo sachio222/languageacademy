@@ -1,0 +1,282 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-04-unit3-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Movement & Possession Practice - Fill in the Blanks",
+  "description": "Master contractions, motion verbs, object pronouns, and possessive forms from this unit!",
+  "can_do": [
+    "Compose sentences with motion verbs and object pronouns",
+    "Use possessives and contractions naturally",
+    "Apply this unit's advanced structures in context"
+  ],
+  "items": [
+    {
+      "id": "i-au",
+      "type": "gapfill",
+      "text": "Je vais ___ café.",
+      "blanks": [
+        {
+          "answer": "au"
+        }
+      ],
+      "gloss": "'I go to the café' (use contraction)",
+      "hint": "{à + le = ?}"
+    },
+    {
+      "id": "i-du",
+      "type": "gapfill",
+      "text": "Il vient ___ restaurant.",
+      "blanks": [
+        {
+          "answer": "du"
+        }
+      ],
+      "gloss": "'He comes from the restaurant' (use contraction)",
+      "hint": "{de + le = ?}"
+    },
+    {
+      "id": "i-vas",
+      "type": "gapfill",
+      "text": "Tu ___ à Paris.",
+      "blanks": [
+        {
+          "answer": "vas"
+        }
+      ],
+      "gloss": "You go to Paris",
+      "hint": "aller conjugated for tu"
+    },
+    {
+      "id": "i-viens",
+      "type": "gapfill",
+      "text": "Je ___ de la maison.",
+      "blanks": [
+        {
+          "answer": "viens"
+        }
+      ],
+      "gloss": "I come from the house",
+      "hint": "venir conjugated for je"
+    },
+    {
+      "id": "i-partons",
+      "type": "gapfill",
+      "text": "Nous ___ demain.",
+      "blanks": [
+        {
+          "answer": "partons"
+        }
+      ],
+      "gloss": "We leave tomorrow",
+      "hint": "partir conjugated for nous"
+    },
+    {
+      "id": "i-vois",
+      "type": "gapfill",
+      "text": "Je ___ le chat.",
+      "blanks": [
+        {
+          "answer": "vois"
+        }
+      ],
+      "gloss": "I see the cat",
+      "hint": "voir conjugated for je"
+    },
+    {
+      "id": "i-le",
+      "type": "gapfill",
+      "text": "Je ___ vois.",
+      "blanks": [
+        {
+          "answer": "le"
+        }
+      ],
+      "gloss": "'I see it/him' (masculine)",
+      "hint": "object pronoun for masculine singular"
+    },
+    {
+      "id": "i-la",
+      "type": "gapfill",
+      "text": "Tu ___ vois.",
+      "blanks": [
+        {
+          "answer": "la"
+        }
+      ],
+      "gloss": "'You see it/her' (feminine)",
+      "hint": "object pronoun for feminine singular"
+    },
+    {
+      "id": "i-mon",
+      "type": "gapfill",
+      "text": "C'est ___ livre.",
+      "blanks": [
+        {
+          "answer": "mon"
+        }
+      ],
+      "gloss": "'It's my book' (masculine)",
+      "hint": "possessive adjective for 'my' (masculine)"
+    },
+    {
+      "id": "i-ton",
+      "type": "gapfill",
+      "text": "J'ai ___ chat.",
+      "blanks": [
+        {
+          "answer": "ton"
+        }
+      ],
+      "gloss": "'I have your cat' (masculine)",
+      "hint": "possessive adjective for 'your' (masculine)"
+    },
+    {
+      "id": "i-sa",
+      "type": "gapfill",
+      "text": "Il voit ___ maison.",
+      "blanks": [
+        {
+          "answer": "sa"
+        }
+      ],
+      "gloss": "'He sees his house' (feminine)",
+      "hint": "possessive adjective for 'his/her' (feminine)"
+    },
+    {
+      "id": "i-le-mien",
+      "type": "gapfill",
+      "text": "C'est ___.",
+      "blanks": [
+        {
+          "answer": "le mien"
+        }
+      ],
+      "gloss": "'It's mine' (masculine)",
+      "hint": "possessive pronoun for 'mine' (masculine)"
+    },
+    {
+      "id": "i-vas-au",
+      "type": "gapfill",
+      "text": "Tu ___ ___ parc.",
+      "blanks": [
+        {
+          "answer": "vas"
+        },
+        {
+          "answer": "au"
+        }
+      ],
+      "gloss": "'You go to the park' (use contraction)",
+      "hint": "aller conjugated for tu / à + le = ?"
+    },
+    {
+      "id": "i-les-vois",
+      "type": "gapfill",
+      "text": "Je ___ ___.",
+      "blanks": [
+        {
+          "answer": "les"
+        },
+        {
+          "answer": "vois"
+        }
+      ],
+      "gloss": "'I see them' (plural)",
+      "hint": "object pronoun for plural / voir conjugated for je"
+    },
+    {
+      "id": "i-vient-du",
+      "type": "gapfill",
+      "text": "Elle ___ ___ magasin.",
+      "blanks": [
+        {
+          "answer": "vient"
+        },
+        {
+          "answer": "du"
+        }
+      ],
+      "gloss": "'She comes from the store' (use contraction)",
+      "hint": "venir conjugated for elle / de + le = ?"
+    },
+    {
+      "id": "i-ton-ta",
+      "type": "gapfill",
+      "text": "Nous voulons voir ___ livre et ___ maison.",
+      "blanks": [
+        {
+          "answer": "ton"
+        },
+        {
+          "answer": "ta"
+        }
+      ],
+      "gloss": "We want to see your book and your house",
+      "hint": "possessive for 'your' (masculine) / possessive for 'your' (feminine)"
+    },
+    {
+      "id": "i-vont-ses",
+      "type": "gapfill",
+      "text": "Ils ___ avec ___ amis.",
+      "blanks": [
+        {
+          "answer": "vont"
+        },
+        {
+          "answer": "ses"
+        }
+      ],
+      "gloss": "They go with their friends",
+      "hint": "aller conjugated for ils / possessive for 'his/her/their' (plural)"
+    },
+    {
+      "id": "i-le-au",
+      "type": "gapfill",
+      "text": "Je ___ vois ___ café.",
+      "blanks": [
+        {
+          "answer": "le"
+        },
+        {
+          "answer": "au"
+        }
+      ],
+      "gloss": "'I see it at the café' (use contraction)",
+      "hint": "object pronoun for masculine singular / à + le = ?"
+    },
+    {
+      "id": "i-pars-ton-au",
+      "type": "gapfill",
+      "text": "Tu ___ avec ___ livre ___ restaurant.",
+      "blanks": [
+        {
+          "answer": "pars"
+        },
+        {
+          "answer": "ton"
+        },
+        {
+          "answer": "au"
+        }
+      ],
+      "gloss": "You leave with your book to the restaurant",
+      "hint": "partir conjugated for tu / possessive for 'your' (masculine) / à + le = ?"
+    },
+    {
+      "id": "i-le-mien-2",
+      "type": "gapfill",
+      "text": "Est-ce ___ ou le tien ?",
+      "blanks": [
+        {
+          "answer": "le mien"
+        }
+      ],
+      "gloss": "'Is it mine or yours?' (masculine)",
+      "hint": "possessive pronoun for 'mine' (masculine)"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

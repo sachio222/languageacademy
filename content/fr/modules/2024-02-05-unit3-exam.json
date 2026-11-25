@@ -1,0 +1,199 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-05-unit3-exam",
+  "kind": "unit_exam",
+  "status": "written",
+  "description": "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations.",
+  "can_do": [
+    "Express movement and travel naturally in French",
+    "Use object pronouns and possessives fluently",
+    "Understand ~60% of everyday French conversations"
+  ],
+  "items": [
+    {
+      "id": "i-au-cafe",
+      "type": "respond",
+      "situation": "to the café (masculine)",
+      "answer": "au café",
+      "hint": "à + le contracts to '{au}'"
+    },
+    {
+      "id": "i-du-chat",
+      "type": "respond",
+      "situation": "of the cat (masculine)",
+      "answer": "du chat",
+      "hint": "de + le contracts to '{du}'"
+    },
+    {
+      "id": "i-je-suis-a-la",
+      "type": "respond",
+      "situation": "I am at the house (feminine)",
+      "answer": "je suis à la maison",
+      "hint": "je suis + à la maison (no contraction)"
+    },
+    {
+      "id": "i-je-viens",
+      "type": "respond",
+      "situation": "I come",
+      "answer": "je viens",
+      "hint": "venir conjugated with je"
+    },
+    {
+      "id": "i-tu-vas",
+      "type": "respond",
+      "situation": "you go (informal)",
+      "answer": "tu vas",
+      "hint": "aller conjugated with tu"
+    },
+    {
+      "id": "i-il-part",
+      "type": "respond",
+      "situation": "he leaves",
+      "answer": "il part",
+      "hint": "partir conjugated with il"
+    },
+    {
+      "id": "i-je-vois",
+      "type": "respond",
+      "situation": "I see",
+      "answer": "je vois",
+      "hint": "voir conjugated with je"
+    },
+    {
+      "id": "i-tu-viens-avec-moi",
+      "type": "respond",
+      "situation": "you are coming (you come) with me (informal)",
+      "answer": "tu viens avec moi",
+      "hint": "venir + avec + stressed pronoun"
+    },
+    {
+      "id": "i-je-le-vois",
+      "type": "respond",
+      "situation": "I see it (masculine)",
+      "answer": "je le vois",
+      "hint": "Object pronoun BEFORE verb"
+    },
+    {
+      "id": "i-elle-l-a",
+      "type": "respond",
+      "situation": "she has it (feminine)",
+      "answer": "elle l'a",
+      "hint": "Object pronoun contracts with avoir"
+    },
+    {
+      "id": "i-nous-les-avons",
+      "type": "respond",
+      "situation": "we have them",
+      "answer": "nous les avons",
+      "hint": "Plural object pronoun before verb"
+    },
+    {
+      "id": "i-je-le-veux",
+      "type": "respond",
+      "situation": "I want it (masculine)",
+      "answer": "je le veux",
+      "hint": "Object pronoun before vouloir"
+    },
+    {
+      "id": "i-mon-livre",
+      "type": "respond",
+      "situation": "my book (masculine)",
+      "answer": "mon livre",
+      "hint": "Possessive adjective for 'my' + masculine noun"
+    },
+    {
+      "id": "i-ta-maison",
+      "type": "respond",
+      "situation": "your house (informal, feminine)",
+      "answer": "ta maison",
+      "hint": "Possessive adjective for 'your' informal + feminine noun"
+    },
+    {
+      "id": "i-son-chat",
+      "type": "respond",
+      "situation": "his cat (masculine)",
+      "answer": "son chat",
+      "hint": "Possessive adjective for 'his/her' + masculine noun"
+    },
+    {
+      "id": "i-nos-livres",
+      "type": "respond",
+      "situation": "our books (plural)",
+      "answer": "nos livres",
+      "hint": "Possessive adjective for 'our' + plural noun"
+    },
+    {
+      "id": "i-leur-maison",
+      "type": "respond",
+      "situation": "their house (singular)",
+      "answer": "leur maison",
+      "hint": "Possessive adjective for 'their' + singular noun"
+    },
+    {
+      "id": "i-c-est-le-mien",
+      "type": "respond",
+      "situation": "it's mine (masculine thing)",
+      "answer": "c'est le mien",
+      "hint": "c'est + article + possessive pronoun"
+    },
+    {
+      "id": "i-c-est-le-tien",
+      "type": "respond",
+      "situation": "it's yours (informal, masculine thing)",
+      "answer": "c'est le tien",
+      "hint": "c'est + article + possessive pronoun for 'yours' informal"
+    },
+    {
+      "id": "i-c-est-le-sien",
+      "type": "respond",
+      "situation": "it's his/hers (masculine thing)",
+      "answer": "c'est le sien",
+      "hint": "c'est + article + possessive pronoun for 'his/her'"
+    },
+    {
+      "id": "i-il-l-a",
+      "type": "respond",
+      "situation": "he has it",
+      "answer": "il l'a",
+      "hint": "Object pronoun before avoir, contracts to l'"
+    },
+    {
+      "id": "i-j-ai-mon-chat",
+      "type": "respond",
+      "situation": "I have my cat",
+      "answer": "j'ai mon chat",
+      "hint": "avoir + possessive adjective + noun"
+    },
+    {
+      "id": "i-elle-les-voit",
+      "type": "respond",
+      "situation": "she sees them",
+      "answer": "elle les voit",
+      "hint": "Plural object pronoun before voir"
+    },
+    {
+      "id": "i-est-ce-le-tien",
+      "type": "respond",
+      "situation": "is it yours? (informal, masculine thing)",
+      "answer": "est-ce le tien",
+      "hint": "Question: est-ce + possessive pronoun"
+    },
+    {
+      "id": "i-il-va-partir",
+      "type": "respond",
+      "situation": "he's going to leave",
+      "answer": "il va partir",
+      "hint": "aller + infinitive for future meaning"
+    },
+    {
+      "id": "i-je-le-veux-pour",
+      "type": "respond",
+      "situation": "I want it for you (informal)",
+      "answer": "je le veux pour toi",
+      "hint": "je veux + object pronoun + pour + stressed pronoun"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

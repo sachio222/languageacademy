@@ -1,0 +1,288 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-06-10-unit-9-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Discourse & Past Tense Practice - Fill in the Blanks",
+  "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
+  "can_do": [
+    "Compose stories with passé composé and imparfait",
+    "Use causal words to explain why things happened",
+    "Apply past tense mastery in realistic narratives"
+  ],
+  "items": [
+    {
+      "id": "i-parce-que",
+      "type": "gapfill",
+      "text": "Je suis en retard ___ j'ai raté le bus.",
+      "blanks": [
+        {
+          "answer": "parce que"
+        }
+      ],
+      "gloss": "I'm late because I missed the bus",
+      "hint": "because (most common)"
+    },
+    {
+      "id": "i-a-cause-de",
+      "type": "gapfill",
+      "text": "Il est fatigué ___ du travail.",
+      "blanks": [
+        {
+          "answer": "à cause de"
+        }
+      ],
+      "gloss": "He's tired because of work",
+      "hint": "because of (negative reason)"
+    },
+    {
+      "id": "i-grace-a",
+      "type": "gapfill",
+      "text": "___ à toi, j'ai réussi.",
+      "blanks": [
+        {
+          "answer": "grâce à"
+        }
+      ],
+      "gloss": "Thanks to you, I succeeded",
+      "hint": "thanks to (positive reason)"
+    },
+    {
+      "id": "i-devant",
+      "type": "gapfill",
+      "text": "La banque est ___ de l'école.",
+      "blanks": [
+        {
+          "answer": "devant"
+        }
+      ],
+      "gloss": "The bank is in front of the school",
+      "hint": "in front of"
+    },
+    {
+      "id": "i-entre",
+      "type": "gapfill",
+      "text": "Le chat est ___ les deux chaises.",
+      "blanks": [
+        {
+          "answer": "entre"
+        }
+      ],
+      "gloss": "The cat is between the two chairs",
+      "hint": "between"
+    },
+    {
+      "id": "i-pres",
+      "type": "gapfill",
+      "text": "Elle habite ___ du parc.",
+      "blanks": [
+        {
+          "answer": "près"
+        }
+      ],
+      "gloss": "She lives near the park",
+      "hint": "near / close to"
+    },
+    {
+      "id": "i-ai-lu",
+      "type": "gapfill",
+      "text": "Hier, j'___ un livre.",
+      "blanks": [
+        {
+          "answer": "ai lu"
+        }
+      ],
+      "gloss": "Yesterday, I read a book",
+      "hint": "passé composé of lire (to read)"
+    },
+    {
+      "id": "i-as-fini",
+      "type": "gapfill",
+      "text": "Tu ___ ton travail?",
+      "blanks": [
+        {
+          "answer": "as fini"
+        }
+      ],
+      "gloss": "Did you finish your work?",
+      "hint": "passé composé of finir (to finish)"
+    },
+    {
+      "id": "i-avons-mange",
+      "type": "gapfill",
+      "text": "Nous ___ au restaurant.",
+      "blanks": [
+        {
+          "answer": "avons mangé"
+        }
+      ],
+      "gloss": "We ate at the restaurant",
+      "hint": "passé composé of manger (to eat)"
+    },
+    {
+      "id": "i-est-allee",
+      "type": "gapfill",
+      "text": "Elle ___ à Paris.",
+      "blanks": [
+        {
+          "answer": "est allée"
+        }
+      ],
+      "gloss": "She went to Paris",
+      "hint": "passé composé of aller - feminine agreement"
+    },
+    {
+      "id": "i-sont-venus",
+      "type": "gapfill",
+      "text": "Ils ___ de France.",
+      "blanks": [
+        {
+          "answer": "sont venus"
+        }
+      ],
+      "gloss": "They came from France",
+      "hint": "passé composé of venir - masculine plural"
+    },
+    {
+      "id": "i-suis-parti",
+      "type": "gapfill",
+      "text": "Je ___ à 8 heures.",
+      "blanks": [
+        {
+          "answer": "suis parti"
+        }
+      ],
+      "gloss": "I left at 8 o'clock",
+      "hint": "passé composé of partir"
+    },
+    {
+      "id": "i-jouais",
+      "type": "gapfill",
+      "text": "Quand j'étais petit, je ___ beaucoup.",
+      "blanks": [
+        {
+          "answer": "jouais"
+        }
+      ],
+      "gloss": "When I was little, I used to play a lot",
+      "hint": "imparfait of jouer (to play)"
+    },
+    {
+      "id": "i-faisait",
+      "type": "gapfill",
+      "text": "Il ___ beau hier.",
+      "blanks": [
+        {
+          "answer": "faisait"
+        }
+      ],
+      "gloss": "The weather was nice yesterday",
+      "hint": "imparfait of faire - weather expression"
+    },
+    {
+      "id": "i-allions",
+      "type": "gapfill",
+      "text": "Nous ___ en France chaque été.",
+      "blanks": [
+        {
+          "answer": "allions"
+        }
+      ],
+      "gloss": "We used to go to France every summer",
+      "hint": "imparfait of aller (repeated action)"
+    },
+    {
+      "id": "i-lisais-es-arrive",
+      "type": "gapfill",
+      "text": "Je ___ quand tu ___.",
+      "blanks": [
+        {
+          "answer": "lisais"
+        },
+        {
+          "answer": "es arrivé"
+        }
+      ],
+      "gloss": "I was reading when you arrived",
+      "hint": "imparfait - ongoing action / passé composé - completed action"
+    },
+    {
+      "id": "i-courait-a-marche",
+      "type": "gapfill",
+      "text": "Il ___ tous les jours, mais hier il ___.",
+      "blanks": [
+        {
+          "answer": "courait"
+        },
+        {
+          "answer": "a marché"
+        }
+      ],
+      "gloss": "He used to run every day, but yesterday he walked",
+      "hint": "imparfait - habitual action / passé composé - specific completed action"
+    },
+    {
+      "id": "i-cuisinais-ai-entendu",
+      "type": "gapfill",
+      "text": "Pendant que je ___, j'___ un bruit.",
+      "blanks": [
+        {
+          "answer": "cuisinais"
+        },
+        {
+          "answer": "ai entendu"
+        }
+      ],
+      "gloss": "While I was cooking, I heard a noise",
+      "hint": "imparfait - ongoing background action / passé composé - sudden event"
+    },
+    {
+      "id": "i-comme-sommes-restes",
+      "type": "gapfill",
+      "text": "___ il pleuvait, nous ___ à la maison.",
+      "blanks": [
+        {
+          "answer": "comme"
+        },
+        {
+          "answer": "sommes restés"
+        }
+      ],
+      "gloss": "Since it was raining, we stayed home",
+      "hint": "since/as (causal connector) / passé composé of rester (être verb)"
+    },
+    {
+      "id": "i-sur-ai-vu",
+      "type": "gapfill",
+      "text": "Le livre était ___ la table quand je l'___.",
+      "blanks": [
+        {
+          "answer": "sur"
+        },
+        {
+          "answer": "ai vu"
+        }
+      ],
+      "gloss": "The book was on the table when I saw it",
+      "hint": "on (spatial preposition) / passé composé of voir"
+    },
+    {
+      "id": "i-s-est-cachee-pour",
+      "type": "gapfill",
+      "text": "Elle ___ derrière l'arbre ___ personne ne la voie.",
+      "blanks": [
+        {
+          "answer": "s'est cachée"
+        },
+        {
+          "answer": "pour que"
+        }
+      ],
+      "gloss": "She hid behind the tree so that nobody would see her",
+      "hint": "passé composé of se cacher (reflexive) / so that (purpose)"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

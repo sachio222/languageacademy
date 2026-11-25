@@ -1,0 +1,566 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-27-imparfait-all-verbs",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Imparfait Formation - All Verbs (was doing, used to do)",
+  "description": "Learn to form imparfait for ALL verbs using the 'nous stem' rule: je parlais (I was speaking/used to speak), il faisait beau (it was nice), on allait (we used to go)",
+  "can_do": [
+    "Form imparfait for any French verb (was doing, used to do)",
+    "Describe ongoing past actions and habits",
+    "Use the 'nous stem' rule to conjugate all verbs"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-parlais-fr",
+      "fr": "je parlais",
+      "gloss": "I was speaking / I used to speak",
+      "note": "⭐ regular -ER verb imparfait"
+    },
+    {
+      "word_id": "il-faisait-fr",
+      "fr": "il faisait",
+      "gloss": "it was (weather) / he was doing",
+      "note": "⭐ very common - weather + actions"
+    },
+    {
+      "word_id": "on-allait-fr",
+      "fr": "on allait",
+      "gloss": "we were going / we used to go",
+      "note": "⭐ common - habitual actions"
+    },
+    {
+      "word_id": "je-voulais-fr",
+      "fr": "je voulais",
+      "gloss": "I wanted / I was wanting",
+      "note": "vouloir in imparfait"
+    },
+    {
+      "word_id": "il-y-avait-fr",
+      "fr": "il y avait",
+      "gloss": "there was / there were",
+      "note": "⭐ very common - description"
+    },
+    {
+      "word_id": "je-prenais-fr",
+      "fr": "je prenais",
+      "gloss": "I was taking / I used to take",
+      "note": "prendre in imparfait"
+    },
+    {
+      "word_id": "nous-etions-fr",
+      "fr": "nous étions",
+      "gloss": "we were",
+      "note": "être in imparfait (irregular stem)"
+    },
+    {
+      "word_id": "tous-les-jours-fr",
+      "fr": "tous les jours",
+      "gloss": "every day",
+      "note": "⭐ signals habitual action (imparfait)"
+    },
+    {
+      "word_id": "chaque-fr",
+      "fr": "chaque",
+      "gloss": "each, every",
+      "note": "signals repetition - use with singular",
+      "example_fr": "chaque jour, chaque samedi"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-the-golden-rule-nous",
+      "term": "The Golden Rule: nous stem + -ais endings",
+      "definition": "Take '{nous}' form of present tense, remove -ons, add -ais endings to ALL verbs (except être)",
+      "example": "{parler}: {nous parlons} → parl- → {je parlais}, {tu parlais}, {il parlait}"
+    },
+    {
+      "id": "c-step-1-find-the",
+      "term": "Step 1: Find the nous form",
+      "definition": "Take the present tense '{nous}' form of the verb",
+      "example": "{parler} → {nous parlons}, {faire} → {nous faisons}, {aller} → {nous allons}"
+    },
+    {
+      "id": "c-step-2-remove-ons",
+      "term": "Step 2: Remove -ons",
+      "definition": "Drop the -ons ending to get the stem",
+      "example": "{nous parlons} → {parl}-, {nous faisons} → {fais}-, {nous allons} → all-"
+    },
+    {
+      "id": "c-step-3-add-imparfait",
+      "term": "Step 3: Add imparfait endings",
+      "definition": "Add: -ais, -ais, -ait, -ions, -iez, -aient (same for ALL verbs!)",
+      "example": "parl- → {je parlais}, {tu parlais}, {il parlait}, {nous parlions}, {vous parliez}, {ils parlaient}"
+    },
+    {
+      "id": "c-one-exception-etre",
+      "term": "ONE EXCEPTION: {être}",
+      "definition": "être is irregular: ét- stem (not nous sommes) → j'étais, tu étais...",
+      "example": "{j'étais}, {tu étais}, {il était}, {nous étions}, {vous étiez}, {ils étaient}"
+    },
+    {
+      "id": "c-when-to-use-imparfait",
+      "term": "When to use Imparfait",
+      "definition": "Descriptions, habits/repeated actions, ongoing states in past, background/scene-setting",
+      "example": "{Il faisait beau} (it was nice - description), {Je parlais français tous les jours} (I spoke French every day - habit)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-parlais",
+      "type": "gapfill",
+      "text": "Je ___ français tous les jours",
+      "blanks": [
+        {
+          "answer": "parlais"
+        }
+      ],
+      "gloss": "I used to speak French every day",
+      "hint": "Use '{parler}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "ai parlé",
+          "feedback": "That's passé composé! Use imparfait for habits: je parlais (I used to speak)."
+        },
+        {
+          "answer": "parle",
+          "feedback": "That's present tense! Use imparfait: je parlais (I was speaking/used to speak)."
+        },
+        {
+          "answer": "parlions",
+          "feedback": "That's '{nous}' form! Use '{je}' form: je parlais (not parlions)."
+        }
+      ]
+    },
+    {
+      "id": "i-faisait",
+      "type": "gapfill",
+      "text": "Il ___ beau",
+      "blanks": [
+        {
+          "answer": "faisait"
+        }
+      ],
+      "gloss": "It was nice [weather]",
+      "hint": "Use '{faire}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "a fait",
+          "feedback": "That's passé composé! Use imparfait for description: il faisait beau."
+        },
+        {
+          "answer": "fait",
+          "feedback": "That's present tense! Use imparfait: il faisait (it was)."
+        },
+        {
+          "answer": "faisions",
+          "feedback": "That's '{nous}' form! Use '{il}' form: il faisait (not faisions)."
+        }
+      ]
+    },
+    {
+      "id": "i-allait",
+      "type": "gapfill",
+      "text": "On ___ au café chaque samedi",
+      "blanks": [
+        {
+          "answer": "allait"
+        }
+      ],
+      "gloss": "We used to go to the café every Saturday",
+      "hint": "Use '{aller}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "est allé",
+          "feedback": "That's passé composé! Use imparfait for habits: on allait (we used to go)."
+        },
+        {
+          "answer": "va",
+          "feedback": "That's present tense! Use imparfait: on allait (we used to go)."
+        },
+        {
+          "answer": "allions",
+          "feedback": "On uses il/elle form! Use '{on allait}', not 'allions' (which is nous)."
+        }
+      ]
+    },
+    {
+      "id": "i-voulais",
+      "type": "gapfill",
+      "text": "Je ___ partir",
+      "blanks": [
+        {
+          "answer": "voulais"
+        }
+      ],
+      "gloss": "I wanted to leave",
+      "hint": "Use '{vouloir}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "ai voulu",
+          "feedback": "That's passé composé! Use imparfait for ongoing desire: je voulais."
+        },
+        {
+          "answer": "veux",
+          "feedback": "That's present tense! Use imparfait: je voulais (I wanted)."
+        },
+        {
+          "answer": "voulions",
+          "feedback": "That's '{nous}' form! Use '{je}' form: je voulais (not voulions)."
+        }
+      ]
+    },
+    {
+      "id": "i-avait",
+      "type": "gapfill",
+      "text": "Il y ___ beaucoup de gens",
+      "blanks": [
+        {
+          "answer": "avait"
+        }
+      ],
+      "gloss": "There were many people",
+      "hint": "Use '{avoir}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "a eu",
+          "feedback": "That's passé composé! Use imparfait for description: il y avait."
+        },
+        {
+          "answer": "a",
+          "feedback": "That's present tense! Use imparfait: il y avait (there were)."
+        },
+        {
+          "answer": "avions",
+          "feedback": "'{Il y a}' uses singular form! Use '{il y avait}', not 'avions'."
+        }
+      ]
+    },
+    {
+      "id": "i-prenais",
+      "type": "gapfill",
+      "text": "Je ___ le bus tous les jours",
+      "blanks": [
+        {
+          "answer": "prenais"
+        }
+      ],
+      "gloss": "I used to take the bus every day",
+      "hint": "Use '{prendre}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "ai pris",
+          "feedback": "That's passé composé! Use imparfait for habits: je prenais."
+        },
+        {
+          "answer": "prends",
+          "feedback": "That's present tense! Use imparfait: je prenais (I used to take)."
+        },
+        {
+          "answer": "prenions",
+          "feedback": "That's '{nous}' form! Use '{je}' form: je prenais (not prenions)."
+        }
+      ]
+    },
+    {
+      "id": "i-etions",
+      "type": "gapfill",
+      "text": "Nous ___ contents",
+      "blanks": [
+        {
+          "answer": "étions"
+        }
+      ],
+      "gloss": "We were happy",
+      "hint": "Use '{être}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "avons été",
+          "feedback": "That's passé composé! Use imparfait for state: nous étions."
+        },
+        {
+          "answer": "sommes",
+          "feedback": "That's present tense! Use imparfait: nous étions (we were)."
+        },
+        {
+          "answer": "étais",
+          "feedback": "That's '{je}' form! Use '{nous}' form: nous étions (not étais)."
+        }
+      ]
+    },
+    {
+      "id": "i-etais",
+      "type": "gapfill",
+      "text": "Tu ___ où?",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "Where were you? / Where did you use to live?",
+      "hint": "Use '{être}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "as été",
+          "feedback": "That's passé composé! Use imparfait for state: tu étais où?"
+        },
+        {
+          "answer": "es",
+          "feedback": "That's present tense! Use imparfait: tu étais (you were)."
+        },
+        {
+          "answer": "était",
+          "feedback": "That's il/elle form! Use '{tu}' form: tu étais (not était)."
+        }
+      ]
+    },
+    {
+      "id": "i-etudiait",
+      "type": "gapfill",
+      "text": "Elle ___ français à l'école",
+      "blanks": [
+        {
+          "answer": "étudiait"
+        }
+      ],
+      "gloss": "She used to study French at school",
+      "hint": "Use '{étudier}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "a étudié",
+          "feedback": "That's passé composé! Use imparfait for habits: elle étudiait."
+        },
+        {
+          "answer": "étudie",
+          "feedback": "That's present tense! Use imparfait: elle étudiait (she used to study)."
+        },
+        {
+          "answer": "étudiions",
+          "feedback": "That's '{nous}' form! Use '{elle}' form: elle étudiait (not étudiions)."
+        }
+      ]
+    },
+    {
+      "id": "i-allaient",
+      "type": "gapfill",
+      "text": "Ils ___ au parc",
+      "blanks": [
+        {
+          "answer": "allaient"
+        }
+      ],
+      "gloss": "They used to go to the park / They were going to the park",
+      "hint": "Use '{aller}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "sont allés",
+          "feedback": "That's passé composé! Use imparfait for habits: ils allaient."
+        },
+        {
+          "answer": "vont",
+          "feedback": "That's present tense! Use imparfait: ils allaient (they used to go)."
+        },
+        {
+          "answer": "allions",
+          "feedback": "That's '{nous}' form! Use '{ils}' form: ils allaient (not allions)."
+        }
+      ]
+    },
+    {
+      "id": "i-vouliez",
+      "type": "gapfill",
+      "text": "Vous ___ du café?",
+      "blanks": [
+        {
+          "answer": "vouliez"
+        }
+      ],
+      "gloss": "Did you want coffee? / Were you wanting coffee?",
+      "hint": "Use '{vouloir}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "avez voulu",
+          "feedback": "That's passé composé! Use imparfait for ongoing state: vous vouliez."
+        },
+        {
+          "answer": "voulez",
+          "feedback": "That's present tense! Use imparfait: vous vouliez (you wanted)."
+        },
+        {
+          "answer": "voulions",
+          "feedback": "That's '{nous}' form! Use '{vous}' form: vous vouliez (not voulions)."
+        }
+      ]
+    },
+    {
+      "id": "i-faisait-2",
+      "type": "gapfill",
+      "text": "On ___ nos devoirs chaque soir",
+      "blanks": [
+        {
+          "answer": "faisait"
+        }
+      ],
+      "gloss": "We used to do our homework each evening",
+      "hint": "Use '{faire}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "a fait",
+          "feedback": "That's passé composé! Use imparfait for habits: on faisait."
+        },
+        {
+          "answer": "fait",
+          "feedback": "That's present tense! Use imparfait: on faisait (we used to do)."
+        },
+        {
+          "answer": "faisions",
+          "feedback": "On uses il/elle form! Use '{on faisait}', not 'faisions'."
+        }
+      ]
+    },
+    {
+      "id": "i-allais",
+      "type": "gapfill",
+      "text": "Je ___ au café quand tu m'as appelé",
+      "blanks": [
+        {
+          "answer": "allais"
+        }
+      ],
+      "gloss": "I was going to the café when you called me",
+      "hint": "Use '{aller}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "suis allé",
+          "feedback": "That's passé composé! Use imparfait for ongoing action: j'allais."
+        },
+        {
+          "answer": "vais",
+          "feedback": "That's present tense! Use imparfait: j'allais (I was going)."
+        },
+        {
+          "answer": "allions",
+          "feedback": "That's '{nous}' form! Use '{je}' form: j'allais (not allions)."
+        }
+      ]
+    },
+    {
+      "id": "i-habitaient",
+      "type": "gapfill",
+      "text": "Ils ___ dans un grand appartement",
+      "blanks": [
+        {
+          "answer": "habitaient"
+        }
+      ],
+      "gloss": "They used to live in a big apartment",
+      "hint": "Use '{habiter}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "ont habité",
+          "feedback": "That's passé composé! Use imparfait for ongoing past state: ils habitaient."
+        },
+        {
+          "answer": "habitent",
+          "feedback": "That's present tense! Use imparfait: ils habitaient (they used to live)."
+        },
+        {
+          "answer": "habitions",
+          "feedback": "That's '{nous}' form! Use '{ils}' form: ils habitaient (not habitions)."
+        }
+      ]
+    },
+    {
+      "id": "i-travaillait",
+      "type": "gapfill",
+      "text": "Elle ___ beaucoup",
+      "blanks": [
+        {
+          "answer": "travaillait"
+        }
+      ],
+      "gloss": "She used to work a lot",
+      "hint": "Use '{travailler}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "a travaillé",
+          "feedback": "That's passé composé! Use imparfait for habits: elle travaillait."
+        },
+        {
+          "answer": "travaille",
+          "feedback": "That's present tense! Use imparfait: elle travaillait (she used to work)."
+        }
+      ]
+    },
+    {
+      "id": "i-etais-2",
+      "type": "gapfill",
+      "text": "Quand j'___ jeune, je jouais au foot",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "When I was young, I used to play soccer",
+      "hint": "Use '{être}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "ai été",
+          "feedback": "That's passé composé! Use imparfait for description: j'étais jeune."
+        },
+        {
+          "answer": "suis",
+          "feedback": "That's present tense! Use imparfait: j'étais (I was)."
+        },
+        {
+          "answer": "était",
+          "feedback": "That's il/elle form! Use '{je}' form: j'étais (not était)."
+        }
+      ]
+    },
+    {
+      "id": "i-etions-2",
+      "type": "gapfill",
+      "text": "Nous ___ très fatigués",
+      "blanks": [
+        {
+          "answer": "étions"
+        }
+      ],
+      "gloss": "We were very tired",
+      "hint": "Use '{être}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "avons été",
+          "feedback": "That's passé composé! Use imparfait for state: nous étions fatigués."
+        },
+        {
+          "answer": "sommes",
+          "feedback": "That's present tense! Use imparfait: nous étions (we were)."
+        }
+      ]
+    },
+    {
+      "id": "i-etais-3",
+      "type": "gapfill",
+      "text": "Tu ___ toujours en retard",
+      "blanks": [
+        {
+          "answer": "étais"
+        }
+      ],
+      "gloss": "You were always late",
+      "hint": "Use '{être}' in imparfait",
+      "mistakes": [
+        {
+          "answer": "as été",
+          "feedback": "That's passé composé! Use imparfait for habit: tu étais toujours en retard."
+        },
+        {
+          "answer": "es",
+          "feedback": "That's present tense! Use imparfait: tu étais (you were)."
+        }
+      ]
+    }
+  ]
+}

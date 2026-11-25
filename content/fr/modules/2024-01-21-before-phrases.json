@@ -1,0 +1,114 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-21-before-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Avant que...} - Before Phrases",
+  "description": "Talk about timing! '{Avant que tu partes}' (Before you leave), '{Appelle-moi avant qu'il arrive}' (Call me before he arrives). Sequence your actions!",
+  "vocabulary": [
+    {
+      "word_id": "avant-que-tu-partes-fr",
+      "fr": "avant que tu partes",
+      "gloss": "before you leave",
+      "note": "⭐ very common!"
+    },
+    {
+      "word_id": "avant-qu-il-arrive-fr",
+      "fr": "avant qu'il arrive",
+      "gloss": "before he arrives",
+      "note": "timing coordination"
+    },
+    {
+      "word_id": "avant-qu-elle-vienne-fr",
+      "fr": "avant qu'elle vienne",
+      "gloss": "before she comes",
+      "note": "expecting someone"
+    },
+    {
+      "word_id": "avant-qu-on-parte-fr",
+      "fr": "avant qu'on parte",
+      "gloss": "before we leave",
+      "note": "group departure"
+    },
+    {
+      "word_id": "avant-qu-il-soit-trop-tard-fr",
+      "fr": "avant qu'il soit trop tard",
+      "gloss": "before it's too late",
+      "note": "urgency!"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-avant-que-before-someone",
+      "term": "{Avant que...} - Before Someone Does Something",
+      "definition": "Use to talk about timing relative to someone else's action",
+      "example": "{Avant que tu partes} (Before you leave), {Avant qu'il arrive} (Before he arrives)"
+    },
+    {
+      "id": "c-common-in-daily-life",
+      "term": "Common in Daily Life",
+      "definition": "Coordinating actions, giving warnings, setting deadlines",
+      "example": "{Finis avant que papa rentre!} (Finish before dad gets home!)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-avant-que-tu-partes",
+      "type": "respond",
+      "situation": "Say 'before you leave' (timing)",
+      "cue": "before you leave",
+      "answer": "avant que tu partes",
+      "hint": "{avant que + tu + partes}",
+      "mistakes": [
+        {
+          "answer": "avant que tu pars",
+          "feedback": "After 'avant que', use '{partes}': avant que tu partes"
+        }
+      ]
+    },
+    {
+      "id": "i-avant-qu-il-arrive",
+      "type": "respond",
+      "situation": "Say 'before he arrives' (waiting for someone)",
+      "cue": "before he arrives",
+      "answer": "avant qu'il arrive",
+      "hint": "{avant qu' + il + arrive}"
+    },
+    {
+      "id": "i-avant-qu-elle-vienne",
+      "type": "respond",
+      "situation": "Say 'before she comes' (expecting someone)",
+      "cue": "before she comes",
+      "answer": "avant qu'elle vienne",
+      "hint": "{avant qu' + elle + vienne}",
+      "mistakes": [
+        {
+          "answer": "avant qu'elle vient",
+          "feedback": "After '{avant que}', use '{vienne}': avant qu'elle vienne"
+        }
+      ]
+    },
+    {
+      "id": "i-avant-qu-on-parte",
+      "type": "respond",
+      "situation": "Say 'before we leave' (group timing)",
+      "cue": "before we leave",
+      "answer": "avant qu'on parte",
+      "hint": "{avant qu' + on + parte}"
+    },
+    {
+      "id": "i-avant-qu-il-soit",
+      "type": "respond",
+      "situation": "Express urgency: 'before it's too late'",
+      "cue": "before it's too late",
+      "answer": "avant qu'il soit trop tard",
+      "hint": "{avant qu' + il + soit trop tard}",
+      "mistakes": [
+        {
+          "answer": "avant qu'il est trop tard",
+          "feedback": "After '{avant que}', use '{soit}': avant qu'il soit trop tard"
+        }
+      ]
+    }
+  ]
+}

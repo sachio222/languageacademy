@@ -1,0 +1,133 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-07-wish-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Je veux que...} - Expressing Wishes",
+  "description": "Say what you want OTHERS to do! '{Je veux que tu viennes}' (I want you to come), '{Je veux qu'il parte}' (I want him to leave). Essential for relationships and work.",
+  "can_do": [
+    "Express what you want others to do (I want you to...)",
+    "Use subjunctive with wish expressions",
+    "Communicate desires about other people's actions"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-veux-que-tu-viennes-fr",
+      "fr": "je veux que tu viennes",
+      "gloss": "I want you to come",
+      "note": "⭐ inviting someone"
+    },
+    {
+      "word_id": "je-veux-qu-il-parte-fr",
+      "fr": "je veux qu'il parte",
+      "gloss": "I want him to leave",
+      "note": "wanting someone to go"
+    },
+    {
+      "word_id": "je-veux-que-tu-comprennes-fr",
+      "fr": "je veux que tu comprennes",
+      "gloss": "I want you to understand",
+      "note": "explaining something important"
+    },
+    {
+      "word_id": "j-aimerais-que-tu-sois-la-fr",
+      "fr": "j'aimerais que tu sois là",
+      "gloss": "I'd like you to be there",
+      "note": "polite wish"
+    },
+    {
+      "word_id": "je-veux-qu-on-aille-ensemble-fr",
+      "fr": "je veux qu'on aille ensemble",
+      "gloss": "I want us to go together",
+      "note": "group plan"
+    },
+    {
+      "word_id": "je-veux-qu-elle-sache-fr",
+      "fr": "je veux qu'elle sache",
+      "gloss": "I want her to know",
+      "note": "sharing information"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-je-veux-que-directing",
+      "term": "{Je veux que...} - Directing Wishes",
+      "definition": "Express what you want SOMEONE ELSE to do (not yourself!)",
+      "example": "{Je veux manger} (I want to eat - {me}) → {Je veux que tu manges} (I want YOU to eat - you)"
+    },
+    {
+      "id": "c-softer-version-j-aimerais",
+      "term": "Softer Version: {J'aimerais que...}",
+      "definition": "More polite way to express wishes",
+      "example": "{J'aimerais que tu viennes} (I'd like you to come)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-veux-que-tu",
+      "type": "respond",
+      "situation": "Tell your friend you want them to come to the party",
+      "cue": "I want you to come",
+      "answer": "je veux que tu viennes",
+      "hint": "{je veux que + tu + viennes}",
+      "mistakes": [
+        {
+          "answer": "je veux venir",
+          "feedback": "That's YOU coming! For THEM coming, use: je veux que tu viennes"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-qu-il",
+      "type": "respond",
+      "situation": "Say you want someone annoying to leave",
+      "cue": "I want him to leave",
+      "answer": "je veux qu'il parte",
+      "hint": "{je veux que + il + parte}"
+    },
+    {
+      "id": "i-je-veux-que-tu-2",
+      "type": "respond",
+      "situation": "Tell someone you want them to understand something important",
+      "cue": "I want you to understand",
+      "answer": "je veux que tu comprennes",
+      "hint": "{je veux que + tu + comprennes}"
+    },
+    {
+      "id": "i-j-aimerais-que-tu",
+      "type": "respond",
+      "situation": "Politely say you'd like someone to be there (softer!)",
+      "cue": "I'd like you to be there",
+      "answer": "j'aimerais que tu sois là",
+      "hint": "{j'aimerais que + tu + sois là}",
+      "mistakes": [
+        {
+          "answer": "j'aimerais que tu es là",
+          "feedback": "Use '{sois}' not 'es': j'aimerais que tu sois là"
+        }
+      ]
+    },
+    {
+      "id": "i-je-veux-qu-on",
+      "type": "respond",
+      "situation": "Suggest going together to your friend",
+      "cue": "I want us to go together",
+      "answer": "je veux qu'on aille ensemble",
+      "hint": "{je veux que + on + aille ensemble}"
+    },
+    {
+      "id": "i-je-veux-qu-elle",
+      "type": "respond",
+      "situation": "Say you want her to know something (sharing info)",
+      "cue": "I want her to know",
+      "answer": "je veux qu'elle sache",
+      "hint": "{je veux que + elle + sache}",
+      "mistakes": [
+        {
+          "answer": "je veux qu'elle sait",
+          "feedback": "Use '{sache}' not 'sait': je veux qu'elle sache"
+        }
+      ]
+    }
+  ]
+}

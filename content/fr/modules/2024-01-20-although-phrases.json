@@ -1,0 +1,114 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-20-although-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Bien que...} - Although Phrases",
+  "description": "Express contrasts! '{Bien que je sois fatigué}' (Although I'm tired), '{Bien qu'il fasse froid}' (Even though it's cold). Sophisticated expression!",
+  "vocabulary": [
+    {
+      "word_id": "bien-que-je-sois-fatigue-fr",
+      "fr": "bien que je sois fatigué",
+      "gloss": "although I'm tired",
+      "note": "⭐ working despite tiredness"
+    },
+    {
+      "word_id": "bien-qu-il-fasse-froid-fr",
+      "fr": "bien qu'il fasse froid",
+      "gloss": "even though it's cold",
+      "note": "weather doesn't stop you"
+    },
+    {
+      "word_id": "bien-que-tu-sois-occupe-fr",
+      "fr": "bien que tu sois occupé",
+      "gloss": "although you're busy",
+      "note": "despite being busy"
+    },
+    {
+      "word_id": "bien-qu-elle-soit-malade-fr",
+      "fr": "bien qu'elle soit malade",
+      "gloss": "although she's sick",
+      "note": "persevering despite illness"
+    },
+    {
+      "word_id": "bien-qu-on-ait-peu-de-temps-fr",
+      "fr": "bien qu'on ait peu de temps",
+      "gloss": "although we have little time",
+      "note": "time pressure"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-bien-que-although-even",
+      "term": "{Bien que...} - Although / Even Though",
+      "definition": "Express doing something DESPITE another condition",
+      "example": "{Bien que je sois fatigué, je travaille} (Although I'm tired, I'm working)"
+    },
+    {
+      "id": "c-showing-determination",
+      "term": "Showing Determination",
+      "definition": "Doing something despite obstacles - shows perseverance!",
+      "example": "{Bien qu'il fasse froid, on sort} (Even though it's cold, we're going out)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-bien-que-je-sois",
+      "type": "respond",
+      "situation": "Say 'although I'm tired' (working despite tiredness)",
+      "cue": "although I'm tired",
+      "answer": "bien que je sois fatigué",
+      "hint": "{bien que + je + sois fatigué}",
+      "mistakes": [
+        {
+          "answer": "bien que je suis fatigué",
+          "feedback": "After 'bien que', use '{sois}': bien que je sois fatigué"
+        }
+      ]
+    },
+    {
+      "id": "i-bien-qu-il-fasse",
+      "type": "respond",
+      "situation": "Say 'even though it's cold' (going out anyway)",
+      "cue": "even though it's cold",
+      "answer": "bien qu'il fasse froid",
+      "hint": "{bien qu' + il + fasse froid}",
+      "mistakes": [
+        {
+          "answer": "bien qu'il fait froid",
+          "feedback": "After '{bien que}', use '{fasse}': bien qu'il fasse froid"
+        }
+      ]
+    },
+    {
+      "id": "i-bien-que-tu-sois",
+      "type": "respond",
+      "situation": "Say 'although you're busy' (asking favor despite)",
+      "cue": "although you're busy",
+      "answer": "bien que tu sois occupé",
+      "hint": "{bien que + tu + sois occupé}"
+    },
+    {
+      "id": "i-bien-qu-elle-soit",
+      "type": "respond",
+      "situation": "Say 'although she's sick' (persevering despite illness)",
+      "cue": "although she's sick",
+      "answer": "bien qu'elle soit malade",
+      "hint": "{bien qu' + elle + soit malade}"
+    },
+    {
+      "id": "i-bien-qu-on-ait",
+      "type": "respond",
+      "situation": "Say 'although we have little time' (time pressure)",
+      "cue": "although we have little time",
+      "answer": "bien qu'on ait peu de temps",
+      "hint": "{bien qu' + on + ait peu de temps}",
+      "mistakes": [
+        {
+          "answer": "bien qu'on a peu de temps",
+          "feedback": "After '{bien que}', use '{ait}': bien qu'on ait peu de temps"
+        }
+      ]
+    }
+  ]
+}

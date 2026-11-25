@@ -1,0 +1,249 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-19-stressed-pronouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Stressed Pronouns - {moi, toi, lui...}",
+  "description": "Learn the special pronouns used after words like 'with', 'for', 'without' - different from subject pronouns!",
+  "can_do": [
+    "Use special pronouns after 'with', 'for', 'without' (avec moi, pour toi)",
+    "Emphasize who you're talking about (c'est moi - it's me)",
+    "Give short emphatic answers (Moi? - Me?)"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "moi-fr",
+      "fr": "moi",
+      "gloss": "me (stressed)",
+      "note": "after prepositions"
+    },
+    {
+      "word_id": "toi-fr",
+      "fr": "toi",
+      "gloss": "you (stressed, informal)",
+      "note": "pour toi = for you"
+    },
+    {
+      "word_id": "lui-fr",
+      "fr": "lui",
+      "gloss": "him (stressed)",
+      "note": "avec lui = with him"
+    },
+    {
+      "word_id": "elle-fr.stressed",
+      "fr": "elle",
+      "gloss": "her (stressed)",
+      "note": "same as subject pronoun"
+    },
+    {
+      "word_id": "nous-fr.stressed",
+      "fr": "nous",
+      "gloss": "us (stressed)",
+      "note": "same as subject pronoun"
+    },
+    {
+      "word_id": "vous-fr.stressed",
+      "fr": "vous",
+      "gloss": "you (stressed, formal/plural)",
+      "note": "same as subject pronoun"
+    },
+    {
+      "word_id": "eux-fr",
+      "fr": "eux",
+      "gloss": "them (stressed, masculine)",
+      "note": "avec eux = with them"
+    },
+    {
+      "word_id": "elles-fr.stressed",
+      "fr": "elles",
+      "gloss": "them (stressed, feminine)",
+      "note": "same as subject pronoun"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-stressed-pronouns-pronoms-toniques",
+      "term": "Stressed Pronouns (Pronoms Toniques)",
+      "definition": "Special pronouns used after prepositions, for emphasis, and alone",
+      "example": "Can't use '{je}' or '{tu}' after '{avec}' or '{pour}' - need '{moi}' and '{toi}'!"
+    },
+    {
+      "id": "c-when-to-use-stressed",
+      "term": "When to Use Stressed Pronouns",
+      "definition": "After prepositions (avec, pour, sans, chez), for emphasis, or alone",
+      "example": "{avec moi} (with me), {pour toi} (for you), {c'est lui} (it's him), {Moi?} ({Me?})"
+    },
+    {
+      "id": "c-subject-vs-stressed",
+      "term": "Subject vs. Stressed",
+      "definition": "Subject pronouns go before verbs. Stressed pronouns go after prepositions.",
+      "example": "{je suis} (I am) BUT avec moi (with me) - different pronouns!"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-moi",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'I/me'?",
+      "cue": "me (stressed - after prepositions)",
+      "answer": "moi",
+      "hint": "Different from '{je}' - three letters",
+      "mistakes": [
+        {
+          "answer": "je",
+          "feedback": "That's subject pronoun. Use stressed form '{moi}'"
+        },
+        {
+          "answer": "me",
+          "feedback": "That's object pronoun. Use stressed form '{moi}'"
+        }
+      ]
+    },
+    {
+      "id": "i-toi",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'you' (informal, after prepositions)?",
+      "cue": "you (stressed, informal)",
+      "answer": "toi",
+      "hint": "Different from '{tu}' - three letters",
+      "mistakes": [
+        {
+          "answer": "tu",
+          "feedback": "That's subject pronoun. Use stressed form '{toi}'"
+        },
+        {
+          "answer": "te",
+          "feedback": "That's object pronoun. Use stressed form '{toi}'"
+        }
+      ]
+    },
+    {
+      "id": "i-lui",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'him' (after prepositions)?",
+      "cue": "him (stressed)",
+      "answer": "lui",
+      "hint": "Different from '{il}' - three letters",
+      "mistakes": [
+        {
+          "answer": "il",
+          "feedback": "That's subject pronoun. Use stressed form '{lui}'"
+        },
+        {
+          "answer": "le",
+          "feedback": "That's object pronoun. Use stressed form '{lui}'"
+        }
+      ]
+    },
+    {
+      "id": "i-elle",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'her'?",
+      "cue": "her (stressed)",
+      "answer": "elle",
+      "hint": "Same as subject pronoun - four letters",
+      "mistakes": [
+        {
+          "answer": "la",
+          "feedback": "That's object pronoun. Use stressed form '{elle}'"
+        }
+      ]
+    },
+    {
+      "id": "i-nous",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'us'?",
+      "cue": "us (stressed)",
+      "answer": "nous",
+      "hint": "Same as subject pronoun"
+    },
+    {
+      "id": "i-vous",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'you' (formal/plural)?",
+      "cue": "you (stressed, formal/plural)",
+      "answer": "vous",
+      "hint": "Same as subject pronoun"
+    },
+    {
+      "id": "i-eux",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'them' (masculine)?",
+      "cue": "them (stressed, masculine)",
+      "answer": "eux",
+      "hint": "Different from '{ils}' - three letters",
+      "mistakes": [
+        {
+          "answer": "ils",
+          "feedback": "That's subject pronoun. Use stressed form '{eux}'"
+        },
+        {
+          "answer": "les",
+          "feedback": "That's object pronoun. Use stressed form '{eux}'"
+        }
+      ]
+    },
+    {
+      "id": "i-elles",
+      "type": "respond",
+      "situation": "What is the stressed pronoun for 'them' (feminine)?",
+      "cue": "them (stressed, feminine)",
+      "answer": "elles",
+      "hint": "Same as subject pronoun"
+    },
+    {
+      "id": "i-avec-moi",
+      "type": "respond",
+      "situation": "with me",
+      "answer": "avec moi",
+      "hint": "avec + stressed pronoun for 'me'",
+      "mistakes": [
+        {
+          "answer": "avec je",
+          "feedback": "Can't use subject pronoun after 'avec'. Use '{moi}'"
+        }
+      ]
+    },
+    {
+      "id": "i-pour-toi",
+      "type": "respond",
+      "situation": "Say 'for you' (informal)",
+      "cue": "for you (informal)",
+      "answer": "pour toi",
+      "hint": "pour + stressed pronoun for 'you' informal",
+      "mistakes": [
+        {
+          "answer": "pour tu",
+          "feedback": "Can't use subject pronoun after 'pour'. Use '{toi}'"
+        }
+      ]
+    },
+    {
+      "id": "i-avec-lui",
+      "type": "respond",
+      "situation": "with him",
+      "answer": "avec lui",
+      "hint": "avec + stressed pronoun for 'him'",
+      "mistakes": [
+        {
+          "answer": "avec il",
+          "feedback": "Can't use subject pronoun after 'avec'. Use '{lui}'"
+        }
+      ]
+    },
+    {
+      "id": "i-pour-eux",
+      "type": "respond",
+      "situation": "Say 'for them' (masculine)",
+      "cue": "for them (masculine)",
+      "answer": "pour eux",
+      "hint": "pour + stressed pronoun for 'them' masculine",
+      "mistakes": [
+        {
+          "answer": "pour ils",
+          "feedback": "Can't use subject pronoun after 'pour'. Use '{eux}'"
+        }
+      ]
+    }
+  ]
+}

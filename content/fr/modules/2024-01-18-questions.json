@@ -1,0 +1,425 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-18-questions",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Question Words - Ask Anything!",
+  "description": "The power to ask questions! How, what, where, when, who, why - unlock conversations.",
+  "can_do": [
+    "Ask questions with where, what, when, who, how, why",
+    "Say 'Where is the book?' or 'What do you want?'",
+    "Have actual two-way conversations in French"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "que-quoi-fr",
+      "fr": "que / quoi",
+      "gloss": "what",
+      "note": "most common question"
+    },
+    {
+      "word_id": "qui-fr",
+      "fr": "qui",
+      "gloss": "who",
+      "note": "ask about people"
+    },
+    {
+      "word_id": "ou-fr.where",
+      "fr": "où",
+      "gloss": "where",
+      "note": "with accent!"
+    },
+    {
+      "word_id": "quand-fr",
+      "fr": "quand",
+      "gloss": "when",
+      "note": "ask about time"
+    },
+    {
+      "word_id": "comment-fr",
+      "fr": "comment",
+      "gloss": "how",
+      "note": "ask about method"
+    },
+    {
+      "word_id": "pourquoi-fr",
+      "fr": "pourquoi",
+      "gloss": "why",
+      "note": "ask for reasons"
+    },
+    {
+      "word_id": "combien-fr",
+      "fr": "combien",
+      "gloss": "how much/many",
+      "note": "ask about quantity/price"
+    },
+    {
+      "word_id": "quel-quelle-fr",
+      "fr": "quel/quelle",
+      "gloss": "which/what",
+      "note": "agrees with noun: quel livre? quelle maison?"
+    },
+    {
+      "word_id": "est-ce-que-fr",
+      "fr": "est-ce que",
+      "gloss": "question maker",
+      "note": "put before statement to make question"
+    },
+    {
+      "word_id": "qu-est-ce-que-c-est-fr",
+      "fr": "qu'est-ce que c'est",
+      "gloss": "what is it?",
+      "note": "fixed phrase - memorize!"
+    },
+    {
+      "word_id": "comment-ca-va-fr",
+      "fr": "comment ça va",
+      "gloss": "how's it going?",
+      "note": "informal greeting"
+    },
+    {
+      "word_id": "ca-va-fr.question",
+      "fr": "ça va?",
+      "gloss": "you good?",
+      "note": "super informal"
+    },
+    {
+      "word_id": "qu-est-ce-que-tu-veux-fr",
+      "fr": "qu'est-ce que tu veux",
+      "gloss": "what do you want?",
+      "note": "essential question"
+    },
+    {
+      "word_id": "est-ce-que-tu-peux-fr",
+      "fr": "est-ce que tu peux",
+      "gloss": "can you?",
+      "note": "asking for ability/permission"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-three-ways-to-ask",
+      "term": "Three Ways to Ask Questions in French",
+      "definition": "French has 3 methods for asking questions. Start with the easiest!",
+      "example": "1) {Est-ce que} (easiest), 2) Intonation (informal), 3) Inversion (formal)"
+    },
+    {
+      "id": "c-method-1-est-ce",
+      "term": "Method 1: {Est-ce que} (Beginner-Friendly!)",
+      "definition": "Add '{est-ce que}' before ANY statement to make it a question. No word order change needed!",
+      "example": "Statement: '{tu as un chat}' → {Question}: '{est-ce que tu as un chat?}' (do you have a cat?)"
+    },
+    {
+      "id": "c-with-question-words-est",
+      "term": "With Question Words + Est-ce que",
+      "definition": "Put question word first, then '{est-ce que}', then statement",
+      "example": "{où est-ce que tu es?} (where are you?), {quand est-ce que tu as le livre?} (when do you have the book?)"
+    },
+    {
+      "id": "c-method-2-rising-intonation",
+      "term": "Method 2: Rising Intonation (Spoken French)",
+      "definition": "Just say a statement with rising voice at the end - super informal!",
+      "example": "{Tu as un chat? ↗} (you have a cat?), {Tu es où? ↗} (you are where?)"
+    },
+    {
+      "id": "c-method-3-inversion-formal",
+      "term": "Method 3: Inversion (Formal)",
+      "definition": "Flip verb and subject, add hyphen. Used in formal/written French",
+      "example": "{As-tu un chat?} (have you a cat?), {Où es-tu?} (where are you?)"
+    },
+    {
+      "id": "c-the-7-essential-question",
+      "term": "The 7 Essential Question Words",
+      "definition": "These words unlock every question you need: what, who, where, when, how, why, how much",
+      "example": "{que}/{quoi} (what), {qui} (who), {où} (where), {quand} (when), {comment} (how), {pourquoi} (why), {combien} (how much/many)"
+    },
+    {
+      "id": "c-que-vs-quoi-both",
+      "term": "Que vs Quoi (both mean 'what')",
+      "definition": "'{Que}' starts questions, '{quoi}' ends them or stands alone",
+      "example": "{Que fais-tu?} (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)"
+    },
+    {
+      "id": "c-common-question-phrases-memorize",
+      "term": "Common Question Phrases - Memorize These!",
+      "definition": "Some questions are used so often they become fixed phrases",
+      "example": "{qu'est-ce que c'est?} (what is it?), {comment ça va?} (how's it going?), {ça va?} (you good?), {qu'est-ce que tu veux?} (what do you want?), {est-ce que tu peux?} (can you?)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-que",
+      "type": "respond",
+      "situation": "You see an object and don't know what it is. Ask this question word",
+      "cue": "what",
+      "answer": "que",
+      "hint": "Most common question word - que or quoi",
+      "mistakes": [
+        {
+          "answer": "qui",
+          "feedback": "That means 'who', not 'what'"
+        },
+        {
+          "answer": "où",
+          "feedback": "That means 'where', not 'what'"
+        }
+      ]
+    },
+    {
+      "id": "i-qui",
+      "type": "respond",
+      "situation": "Someone's at the door. Ask which person it is",
+      "cue": "who",
+      "answer": "qui",
+      "hint": "Used to ask about people",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "That means 'what', not 'who'"
+        },
+        {
+          "answer": "quoi",
+          "feedback": "That means 'what', not 'who'"
+        }
+      ]
+    },
+    {
+      "id": "i-ou",
+      "type": "respond",
+      "situation": "You can't find your cat. Ask about location",
+      "cue": "where",
+      "answer": "où",
+      "hint": "Remember the accent: où"
+    },
+    {
+      "id": "i-quand",
+      "type": "respond",
+      "situation": "You want to know the time. Ask about timing",
+      "cue": "when",
+      "answer": "quand",
+      "hint": "Sounds like 'con' in English",
+      "mistakes": [
+        {
+          "answer": "comment",
+          "feedback": "That means 'how', not 'when'"
+        }
+      ]
+    },
+    {
+      "id": "i-comment",
+      "type": "respond",
+      "situation": "You don't understand a process. Ask about the method",
+      "cue": "how",
+      "answer": "comment",
+      "hint": "Longer word, sounds like English 'comment'",
+      "mistakes": [
+        {
+          "answer": "quand",
+          "feedback": "That means 'when', not 'how'"
+        }
+      ]
+    },
+    {
+      "id": "i-pourquoi",
+      "type": "respond",
+      "situation": "You want to know the reason. Ask this question",
+      "cue": "why",
+      "answer": "pourquoi",
+      "hint": "Compound word literally meaning 'for what'",
+      "mistakes": [
+        {
+          "answer": "comment",
+          "feedback": "That means 'how', not 'why'"
+        }
+      ]
+    },
+    {
+      "id": "i-combien",
+      "type": "respond",
+      "situation": "You want to know the quantity or price. Ask 'how much' or 'how many'",
+      "cue": "how much/many",
+      "answer": "combien",
+      "hint": "Essential for shopping and counting",
+      "mistakes": [
+        {
+          "answer": "comment",
+          "feedback": "That means 'how', not 'how much'"
+        },
+        {
+          "answer": "quand",
+          "feedback": "That means 'when', not 'how much'"
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que",
+      "type": "respond",
+      "situation": "Someone shows you an object you don't recognize. Ask what it is",
+      "cue": "What is it?",
+      "answer": "qu'est-ce que c'est",
+      "hint": "Very common phrase - check vocab table for full expression!"
+    },
+    {
+      "id": "i-comment-ca-va",
+      "type": "respond",
+      "situation": "Greet a friend and ask how they're doing (informal)",
+      "cue": "How are you?",
+      "answer": "comment ça va",
+      "hint": "Very common greeting combining 'how' + 'that/it' + 'goes'"
+    },
+    {
+      "id": "i-ou-est-ce",
+      "type": "respond",
+      "situation": "You're looking for something. Ask about its location",
+      "cue": "Where is it?",
+      "answer": "où est-ce",
+      "hint": "Combine 'where' + est-ce - remember the accent!"
+    },
+    {
+      "id": "i-est-ce-que-tu",
+      "type": "respond",
+      "situation": "Turn this statement into a question using est-ce que: \"{tu as un chat}\"",
+      "cue": "do you have a cat?",
+      "answer": "est-ce que tu as un chat",
+      "hint": "Add est-ce que before the statement: est-ce que + tu as un chat",
+      "mistakes": [
+        {
+          "answer": "tu as un chat",
+          "feedback": "Need to add '{est-ce que}' at the beginning!"
+        }
+      ]
+    },
+    {
+      "id": "i-ou-est-ce-que",
+      "type": "respond",
+      "situation": "Ask \"where are you?\" using où + est-ce que method",
+      "cue": "where are you?",
+      "answer": "où est-ce que tu es",
+      "hint": "{où + est-ce que + tu es}",
+      "mistakes": [
+        {
+          "answer": "où tu es",
+          "feedback": "Add '{est-ce que}' between où and tu es"
+        }
+      ]
+    },
+    {
+      "id": "i-quand-est-ce-que",
+      "type": "respond",
+      "situation": "Ask \"when do you have the book?\" using quand + est-ce que",
+      "cue": "when do you have the book?",
+      "answer": "quand est-ce que tu as le livre",
+      "hint": "{quand + est-ce que + tu as le livre}",
+      "mistakes": [
+        {
+          "answer": "quand tu as le livre",
+          "feedback": "Add '{est-ce que}' between quand and tu as"
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-que-elle",
+      "type": "respond",
+      "situation": "Ask \"is she a woman?\" using est-ce que method",
+      "cue": "is she a woman?",
+      "answer": "est-ce que elle est une femme",
+      "accept": [
+        "est-ce qu'elle est une femme"
+      ],
+      "hint": "{est-ce que + elle est une femme}",
+      "mistakes": [
+        {
+          "answer": "elle est une femme",
+          "feedback": "Add '{est-ce que}' at the beginning to make it a question!"
+        }
+      ]
+    },
+    {
+      "id": "i-combien-est-ce",
+      "type": "respond",
+      "situation": "You're shopping and want to know the price. Ask \"how much is it?\" using combien",
+      "cue": "how much is it?",
+      "answer": "combien est-ce",
+      "accept": [
+        "c'est combien"
+      ],
+      "hint": "combien + est-ce - a very useful shopping phrase!",
+      "mistakes": [
+        {
+          "answer": "comment est-ce",
+          "feedback": "Use '{combien}' for quantity/price, not 'comment'"
+        }
+      ]
+    },
+    {
+      "id": "i-combien-est-ce-que",
+      "type": "respond",
+      "situation": "Ask \"how many books do you have?\" using combien + est-ce que",
+      "cue": "how many books do you have?",
+      "answer": "combien est-ce que tu as de livres",
+      "accept": [
+        "combien de livres est-ce que tu as"
+      ],
+      "hint": "combien + est-ce que + tu as de livres (de = of)",
+      "mistakes": [
+        {
+          "answer": "comment est-ce que tu as de livres",
+          "feedback": "Use '{combien}' for counting, not 'comment'"
+        }
+      ]
+    },
+    {
+      "id": "i-quel-livre",
+      "type": "respond",
+      "situation": "Ask 'which book?' (masculine noun)",
+      "cue": "which book?",
+      "answer": "quel livre",
+      "hint": "quel + masculine noun",
+      "mistakes": [
+        {
+          "answer": "quelle livre",
+          "feedback": "livre is masculine, use '{quel}' not 'quelle'"
+        },
+        {
+          "answer": "que livre",
+          "feedback": "Use '{quel}' for 'which', not 'que'"
+        }
+      ]
+    },
+    {
+      "id": "i-quelle-maison",
+      "type": "respond",
+      "situation": "Ask 'which house?' (feminine noun)",
+      "cue": "which house?",
+      "answer": "quelle maison",
+      "hint": "quelle + feminine noun",
+      "mistakes": [
+        {
+          "answer": "quel maison",
+          "feedback": "maison is feminine, use '{quelle}' not 'quel'"
+        },
+        {
+          "answer": "que maison",
+          "feedback": "Use '{quelle}' for 'which', not 'que'"
+        }
+      ]
+    },
+    {
+      "id": "i-quel-chat-est-ce",
+      "type": "respond",
+      "situation": "Ask 'which cat do you want?' (masculine)",
+      "cue": "which cat do you want?",
+      "answer": "quel chat est-ce que tu veux",
+      "accept": [
+        "quel chat tu veux"
+      ],
+      "hint": "{quel + chat + est-ce que + tu veux}",
+      "mistakes": [
+        {
+          "answer": "quelle chat est-ce que tu veux",
+          "feedback": "chat is masculine, use '{quel}' not 'quelle'"
+        }
+      ]
+    }
+  ]
+}

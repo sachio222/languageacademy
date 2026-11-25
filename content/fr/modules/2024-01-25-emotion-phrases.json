@@ -1,0 +1,130 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-25-emotion-phrases",
+  "kind": "lesson",
+  "status": "written",
+  "title": "{Je suis content que...} - Emotion Phrases",
+  "description": "Express how you feel about what OTHERS do! '{Je suis content que tu sois là}' (I'm happy you're here), '{J'ai peur qu'il parte}' (I'm afraid he'll leave). Real relationship language!",
+  "can_do": [
+    "Express emotions about what others do (I'm happy that...)",
+    "Use subjunctive with emotion expressions",
+    "Communicate feelings about other people's actions"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "je-suis-content-que-tu-sois-la-fr",
+      "fr": "je suis content que tu sois là",
+      "gloss": "I'm happy you're here",
+      "note": "⭐ welcoming someone"
+    },
+    {
+      "word_id": "je-suis-triste-que-tu-partes-fr",
+      "fr": "je suis triste que tu partes",
+      "gloss": "I'm sad you're leaving",
+      "note": "goodbye emotion"
+    },
+    {
+      "word_id": "j-ai-peur-qu-il-parte-fr",
+      "fr": "j'ai peur qu'il parte",
+      "gloss": "I'm afraid he'll leave",
+      "note": "worry about someone"
+    },
+    {
+      "word_id": "je-suis-desole-que-tu-sois-malade-fr",
+      "fr": "je suis désolé que tu sois malade",
+      "gloss": "I'm sorry you're sick",
+      "note": "sympathy"
+    },
+    {
+      "word_id": "je-suis-surpris-que-tu-saches-ca-fr",
+      "fr": "je suis surpris que tu saches ça",
+      "gloss": "I'm surprised you know that",
+      "note": "unexpected knowledge"
+    },
+    {
+      "word_id": "je-regrette-que-tu-ne-puisses-pas-venir-fr",
+      "fr": "je regrette que tu ne puisses pas venir",
+      "gloss": "I regret you can't come",
+      "note": "disappointment"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-expressing-emotions-about-others",
+      "term": "Expressing Emotions About Others",
+      "definition": "Your feelings are usually about what OTHER PEOPLE do or say!",
+      "example": "{Je suis content} (I'm happy - about what?) → {Je suis content que tu sois là} (I'm happy YOU'RE here!)"
+    },
+    {
+      "id": "c-common-emotion-phrases",
+      "term": "Common Emotion Phrases",
+      "definition": "Happy, sad, afraid, sorry - all followed by 'que + person + action'",
+      "example": "{Je suis triste que tu partes} (I'm sad you're leaving), {J'ai peur qu'elle ne comprenne pas} (I'm afraid she won't understand)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-suis-content-que",
+      "type": "respond",
+      "situation": "Tell your friend you're happy they're here (welcoming!)",
+      "cue": "I'm happy you're here",
+      "answer": "je suis content que tu sois là",
+      "hint": "{je suis content que + tu + sois là}",
+      "mistakes": [
+        {
+          "answer": "je suis content que tu es là",
+          "feedback": "Use '{sois}' not 'es': je suis content que tu sois là"
+        }
+      ]
+    },
+    {
+      "id": "i-je-suis-triste-que",
+      "type": "respond",
+      "situation": "Express sadness that someone is leaving",
+      "cue": "I'm sad you're leaving",
+      "answer": "je suis triste que tu partes",
+      "hint": "{je suis triste que + tu + partes}"
+    },
+    {
+      "id": "i-j-ai-peur-qu",
+      "type": "respond",
+      "situation": "Say you're afraid someone will leave (worry)",
+      "cue": "I'm afraid he'll leave",
+      "answer": "j'ai peur qu'il parte",
+      "hint": "{j'ai peur que + il + parte}"
+    },
+    {
+      "id": "i-je-suis-desole-que",
+      "type": "respond",
+      "situation": "Express sympathy that someone is sick",
+      "cue": "I'm sorry you're sick",
+      "answer": "je suis désolé que tu sois malade",
+      "hint": "{je suis désolé que + tu + sois malade}"
+    },
+    {
+      "id": "i-je-suis-surpris-que",
+      "type": "respond",
+      "situation": "Express surprise that someone knows something",
+      "cue": "I'm surprised you know that",
+      "answer": "je suis surpris que tu saches ça",
+      "hint": "{je suis surpris que + tu + saches ça}",
+      "mistakes": [
+        {
+          "answer": "je suis surpris que tu sais ça",
+          "feedback": "Use '{saches}' not 'sais': je suis surpris que tu saches"
+        }
+      ]
+    },
+    {
+      "id": "i-je-regrette-que-tu",
+      "type": "respond",
+      "situation": "Express regret that someone can't come",
+      "cue": "I regret you can't come",
+      "answer": "je regrette que tu ne puisses pas venir",
+      "accept": [
+        "je regrette que tu ne puisses pas"
+      ],
+      "hint": "{je regrette que + tu + ne puisses pas venir}"
+    }
+  ]
+}

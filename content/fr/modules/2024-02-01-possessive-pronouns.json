@@ -1,0 +1,325 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-02-01-possessive-pronouns",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Possessive Pronouns - Mine, Yours, Theirs",
+  "description": "Say 'It's MINE!' or 'That's HERS' - express ownership without repeating the noun.",
+  "can_do": [
+    "Say 'It's mine', 'It's yours', 'It's his/hers' in French",
+    "Express ownership without repeating the noun",
+    "Ask 'Is that yours?' or answer 'No, it's theirs'"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "le-mien-fr",
+      "fr": "le mien",
+      "gloss": "mine (masc thing)",
+      "note": "le livre est le mien"
+    },
+    {
+      "word_id": "la-mienne-fr",
+      "fr": "la mienne",
+      "gloss": "mine (fem thing)",
+      "note": "feminine - la voiture est la mienne"
+    },
+    {
+      "word_id": "le-tien-fr",
+      "fr": "le tien",
+      "gloss": "yours (masc, informal)",
+      "note": "masculine thing"
+    },
+    {
+      "word_id": "la-tienne-fr",
+      "fr": "la tienne",
+      "gloss": "yours (fem, informal)",
+      "note": "feminine thing"
+    },
+    {
+      "word_id": "le-sien-fr",
+      "fr": "le sien",
+      "gloss": "his/hers (masc thing)",
+      "note": "masculine thing owned"
+    },
+    {
+      "word_id": "la-sienne-fr",
+      "fr": "la sienne",
+      "gloss": "his/hers (fem thing)",
+      "note": "feminine thing owned"
+    },
+    {
+      "word_id": "le-notre-fr",
+      "fr": "le nôtre",
+      "gloss": "ours (masc thing)",
+      "note": "with circumflex"
+    },
+    {
+      "word_id": "la-notre-fr",
+      "fr": "la nôtre",
+      "gloss": "ours (fem thing)",
+      "note": "feminine - with circumflex"
+    },
+    {
+      "word_id": "le-votre-fr",
+      "fr": "le vôtre",
+      "gloss": "yours formal (masc)",
+      "note": "with circumflex"
+    },
+    {
+      "word_id": "la-votre-fr",
+      "fr": "la vôtre",
+      "gloss": "yours formal (fem)",
+      "note": "feminine - with circumflex"
+    },
+    {
+      "word_id": "le-leur-fr",
+      "fr": "le leur",
+      "gloss": "theirs (masc thing)",
+      "note": "masculine thing owned"
+    },
+    {
+      "word_id": "la-leur-fr",
+      "fr": "la leur",
+      "gloss": "theirs (fem thing)",
+      "note": "feminine thing owned"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-possessive-pronouns",
+      "term": "Possessive Pronouns",
+      "definition": "Stand-alone words meaning 'mine', 'yours', 'his', etc.",
+      "example": "{C'est le mien} = It's mine, C'est la sienne = It's his/hers"
+    },
+    {
+      "id": "c-with-article",
+      "term": "With Article",
+      "definition": "Always use '{le}' or '{la}' before the possessive pronoun",
+      "example": "{LE mien} (mine-masc), {LA mienne} (mine-fem)"
+    },
+    {
+      "id": "c-gender-agreement",
+      "term": "Gender Agreement",
+      "definition": "Agrees with the THING owned, not the owner",
+      "example": "{le sien} = his/hers (masculine thing), {la sienne} = his/hers (feminine thing)"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-le-mien",
+      "type": "respond",
+      "situation": "You're pointing to your book. Say 'it's mine' (masculine thing)",
+      "cue": "mine (masculine)",
+      "answer": "le mien",
+      "hint": "Possessive pronoun for 'I', masculine thing",
+      "mistakes": [
+        {
+          "answer": "la mienne",
+          "feedback": "That's for feminine things"
+        },
+        {
+          "answer": "le tien",
+          "feedback": "That's 'yours', not 'mine'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-mienne",
+      "type": "respond",
+      "situation": "You're pointing to your house. Say 'it's mine' (feminine thing)",
+      "cue": "mine (feminine)",
+      "answer": "la mienne",
+      "hint": "Possessive pronoun for 'I', feminine thing",
+      "mistakes": [
+        {
+          "answer": "le mien",
+          "feedback": "That's for masculine things"
+        },
+        {
+          "answer": "la tienne",
+          "feedback": "That's 'yours', not 'mine'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-tien",
+      "type": "respond",
+      "situation": "Pointing to a friend's book. Ask 'is it yours?' (masculine, informal)",
+      "cue": "yours (masc, informal)",
+      "answer": "le tien",
+      "hint": "Possessive pronoun for '{tu}', masculine thing",
+      "mistakes": [
+        {
+          "answer": "la tienne",
+          "feedback": "That's for feminine things"
+        },
+        {
+          "answer": "le sien",
+          "feedback": "That's 'his/hers', not 'yours'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-leur",
+      "type": "respond",
+      "situation": "Pointing to someone else's house. Say 'it's theirs' (masculine thing)",
+      "cue": "theirs (masculine)",
+      "answer": "le leur",
+      "hint": "Possessive pronoun for 'they', masculine thing",
+      "mistakes": [
+        {
+          "answer": "la leur",
+          "feedback": "That's for feminine things"
+        },
+        {
+          "answer": "le sien",
+          "feedback": "That's singular 'his/hers', not plural 'theirs'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-tienne",
+      "type": "respond",
+      "situation": "Pointing to a friend's car. Ask 'is it yours?' (feminine, informal)",
+      "cue": "yours (fem, informal)",
+      "answer": "la tienne",
+      "hint": "Possessive pronoun for '{tu}', feminine thing",
+      "mistakes": [
+        {
+          "answer": "le tien",
+          "feedback": "That's for masculine things"
+        },
+        {
+          "answer": "la sienne",
+          "feedback": "That's 'his/hers', not 'yours'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-sien",
+      "type": "respond",
+      "situation": "Pointing to Pierre's book. Say 'it's his' (masculine thing)",
+      "cue": "his (masculine)",
+      "answer": "le sien",
+      "hint": "Possessive pronoun for 'he', masculine thing",
+      "mistakes": [
+        {
+          "answer": "la sienne",
+          "feedback": "That's for feminine things"
+        },
+        {
+          "answer": "le tien",
+          "feedback": "That's 'yours', not 'his'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-sienne",
+      "type": "respond",
+      "situation": "Pointing to Marie's house. Say 'it's hers' (feminine thing)",
+      "cue": "hers (feminine)",
+      "answer": "la sienne",
+      "hint": "Possessive pronoun for 'she', feminine thing",
+      "mistakes": [
+        {
+          "answer": "le sien",
+          "feedback": "That's for masculine things"
+        },
+        {
+          "answer": "la tienne",
+          "feedback": "That's 'yours', not 'hers'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-notre",
+      "type": "respond",
+      "situation": "Pointing to your group's car. Say 'it's ours' (masculine thing)",
+      "cue": "ours (masculine)",
+      "answer": "le nôtre",
+      "hint": "Possessive pronoun for 'we', masculine thing",
+      "mistakes": [
+        {
+          "answer": "la nôtre",
+          "feedback": "That's for feminine things"
+        },
+        {
+          "answer": "le leur",
+          "feedback": "That's 'theirs', not 'ours'"
+        }
+      ]
+    },
+    {
+      "id": "i-la-notre",
+      "type": "respond",
+      "situation": "Pointing to your group's house. Say 'it's ours' (feminine thing)",
+      "cue": "ours (feminine)",
+      "answer": "la nôtre",
+      "hint": "Possessive pronoun for 'we', feminine thing",
+      "mistakes": [
+        {
+          "answer": "le nôtre",
+          "feedback": "That's for masculine things"
+        },
+        {
+          "answer": "la leur",
+          "feedback": "That's 'theirs', not 'ours'"
+        }
+      ]
+    },
+    {
+      "id": "i-le-votre",
+      "type": "respond",
+      "situation": "Politely asking about someone's book. Say 'is it yours?' (masculine, formal)",
+      "cue": "yours (masc, formal)",
+      "answer": "le vôtre",
+      "hint": "Possessive pronoun for '{vous}', masculine thing",
+      "mistakes": [
+        {
+          "answer": "la vôtre",
+          "feedback": "That's for feminine things"
+        },
+        {
+          "answer": "le tien",
+          "feedback": "That's informal 'yours', use formal"
+        }
+      ]
+    },
+    {
+      "id": "i-la-votre",
+      "type": "respond",
+      "situation": "Politely asking about someone's house. Say 'is it yours?' (feminine, formal)",
+      "cue": "yours (fem, formal)",
+      "answer": "la vôtre",
+      "hint": "Possessive pronoun for '{vous}', feminine thing",
+      "mistakes": [
+        {
+          "answer": "le vôtre",
+          "feedback": "That's for masculine things"
+        },
+        {
+          "answer": "la tienne",
+          "feedback": "That's informal 'yours', use formal"
+        }
+      ]
+    },
+    {
+      "id": "i-la-leur",
+      "type": "respond",
+      "situation": "Pointing to their house. Say 'it's theirs' (feminine thing)",
+      "cue": "theirs (feminine)",
+      "answer": "la leur",
+      "hint": "Possessive pronoun for 'they', feminine thing",
+      "mistakes": [
+        {
+          "answer": "le leur",
+          "feedback": "That's for masculine things"
+        },
+        {
+          "answer": "la sienne",
+          "feedback": "That's singular 'hers', not plural 'theirs'"
+        }
+      ]
+    }
+  ]
+}

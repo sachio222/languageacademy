@@ -1,0 +1,312 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-05-11-unit-7-practice",
+  "kind": "practice",
+  "status": "written",
+  "title": "Knowledge & Learning Practice - Fill in the Blanks",
+  "description": "Complete sentences using cognitive verbs, on, discourse markers, and essential vocabulary from this unit!",
+  "can_do": [
+    "Use cognitive verbs naturally in conversation",
+    "Apply discourse markers for conversational flow",
+    "Express knowledge, thoughts, and beliefs fluently"
+  ],
+  "items": [
+    {
+      "id": "i-on",
+      "type": "gapfill",
+      "text": "___ doit étudier le français.",
+      "blanks": [
+        {
+          "answer": "on"
+        }
+      ],
+      "gloss": "'We must study French' (using on)",
+      "hint": "informal 'we' - uses il/elle verb forms"
+    },
+    {
+      "id": "i-on-2",
+      "type": "gapfill",
+      "text": "___ y va?",
+      "blanks": [
+        {
+          "answer": "on"
+        }
+      ],
+      "gloss": "'Shall we go?' (using on)",
+      "hint": "very common phrase with on"
+    },
+    {
+      "id": "i-etudie",
+      "type": "gapfill",
+      "text": "J'___ le français à l'université.",
+      "blanks": [
+        {
+          "answer": "étudie"
+        }
+      ],
+      "gloss": "I study French at university",
+      "hint": "étudier conjugated for je"
+    },
+    {
+      "id": "i-revise",
+      "type": "gapfill",
+      "text": "Je ___ mes leçons.",
+      "blanks": [
+        {
+          "answer": "révise"
+        }
+      ],
+      "gloss": "I review my lessons",
+      "hint": "réviser conjugated for je"
+    },
+    {
+      "id": "i-apprends",
+      "type": "gapfill",
+      "text": "Tu ___ le français.",
+      "blanks": [
+        {
+          "answer": "apprends"
+        }
+      ],
+      "gloss": "You're learning French",
+      "hint": "apprendre conjugated for tu"
+    },
+    {
+      "id": "i-comprends",
+      "type": "gapfill",
+      "text": "Je ne ___ pas.",
+      "blanks": [
+        {
+          "answer": "comprends"
+        }
+      ],
+      "gloss": "I don't understand",
+      "hint": "comprendre conjugated for je"
+    },
+    {
+      "id": "i-comprends-2",
+      "type": "gapfill",
+      "text": "Tu ___?",
+      "blanks": [
+        {
+          "answer": "comprends"
+        }
+      ],
+      "gloss": "Do you understand?",
+      "hint": "comprendre for tu in a question"
+    },
+    {
+      "id": "i-sais",
+      "type": "gapfill",
+      "text": "Je ne ___ pas.",
+      "blanks": [
+        {
+          "answer": "sais"
+        }
+      ],
+      "gloss": "'I don't know' (most common phrase!)",
+      "hint": "savoir conjugated for je - rank 21!"
+    },
+    {
+      "id": "i-sais-2",
+      "type": "gapfill",
+      "text": "Je ___ parler français.",
+      "blanks": [
+        {
+          "answer": "sais"
+        }
+      ],
+      "gloss": "I know how to speak French",
+      "hint": "savoir + infinitive for skills"
+    },
+    {
+      "id": "i-connais",
+      "type": "gapfill",
+      "text": "Je ___ Paris.",
+      "blanks": [
+        {
+          "answer": "connais"
+        }
+      ],
+      "gloss": "I know Paris",
+      "hint": "connaître for places - NOT savoir!"
+    },
+    {
+      "id": "i-connais-2",
+      "type": "gapfill",
+      "text": "Tu ___ Marie?",
+      "blanks": [
+        {
+          "answer": "connais"
+        }
+      ],
+      "gloss": "Do you know Marie?",
+      "hint": "connaître for people - NOT savoir!"
+    },
+    {
+      "id": "i-pense",
+      "type": "gapfill",
+      "text": "Je ___ que c'est bon.",
+      "blanks": [
+        {
+          "answer": "pense"
+        }
+      ],
+      "gloss": "I think it's good",
+      "hint": "penser conjugated for je"
+    },
+    {
+      "id": "i-penses",
+      "type": "gapfill",
+      "text": "Qu'est-ce que tu ___?",
+      "blanks": [
+        {
+          "answer": "penses"
+        }
+      ],
+      "gloss": "What do you think?",
+      "hint": "penser conjugated for tu"
+    },
+    {
+      "id": "i-crois",
+      "type": "gapfill",
+      "text": "Je ___ que oui.",
+      "blanks": [
+        {
+          "answer": "crois"
+        }
+      ],
+      "gloss": "I believe so",
+      "hint": "croire conjugated for je"
+    },
+    {
+      "id": "i-croire",
+      "type": "gapfill",
+      "text": "On doit ___ en soi.",
+      "blanks": [
+        {
+          "answer": "croire"
+        }
+      ],
+      "gloss": "We must believe in ourselves",
+      "hint": "infinitive form after doit"
+    },
+    {
+      "id": "i-sais-connais",
+      "type": "gapfill",
+      "text": "Je ___ la réponse mais je ne ___ pas Paris.",
+      "blanks": [
+        {
+          "answer": "sais"
+        },
+        {
+          "answer": "connais"
+        }
+      ],
+      "gloss": "I know the answer but I don't know Paris",
+      "hint": "savoir for facts / connaître for places"
+    },
+    {
+      "id": "i-donc",
+      "type": "gapfill",
+      "text": "Je pense, ___ je suis.",
+      "blanks": [
+        {
+          "answer": "donc"
+        }
+      ],
+      "gloss": "'I think, therefore I am' (Descartes)",
+      "hint": "therefore / so"
+    },
+    {
+      "id": "i-en-fait",
+      "type": "gapfill",
+      "text": "___, je ne sais pas.",
+      "blanks": [
+        {
+          "answer": "en fait"
+        }
+      ],
+      "gloss": "Actually, I don't know",
+      "hint": "discourse marker: actually / in fact"
+    },
+    {
+      "id": "i-question",
+      "type": "gapfill",
+      "text": "J'ai une ___.",
+      "blanks": [
+        {
+          "answer": "question"
+        }
+      ],
+      "gloss": "I have a question",
+      "hint": "feminine noun"
+    },
+    {
+      "id": "i-idee",
+      "type": "gapfill",
+      "text": "C'est une bonne ___.",
+      "blanks": [
+        {
+          "answer": "idée"
+        }
+      ],
+      "gloss": "That's a good idea",
+      "hint": "feminine noun - idea"
+    },
+    {
+      "id": "i-tout-le-monde",
+      "type": "gapfill",
+      "text": "___ peut apprendre.",
+      "blanks": [
+        {
+          "answer": "tout le monde"
+        }
+      ],
+      "gloss": "Everyone can learn",
+      "hint": "fixed expression - everyone"
+    },
+    {
+      "id": "i-meme",
+      "type": "gapfill",
+      "text": "___ moi, je sais.",
+      "blanks": [
+        {
+          "answer": "même"
+        }
+      ],
+      "gloss": "Even I know",
+      "hint": "emphasis - even"
+    },
+    {
+      "id": "i-mal",
+      "type": "gapfill",
+      "text": "Je comprends ___.",
+      "blanks": [
+        {
+          "answer": "mal"
+        }
+      ],
+      "gloss": "I understand poorly",
+      "hint": "adverb - opposite of bien"
+    },
+    {
+      "id": "i-on-pense-apprendre",
+      "type": "gapfill",
+      "text": "___ que tout le monde peut ___.",
+      "blanks": [
+        {
+          "answer": "on pense"
+        },
+        {
+          "answer": "apprendre"
+        }
+      ],
+      "gloss": "We think that everyone can learn",
+      "hint": "on + penser / infinitive after peut"
+    }
+  ],
+  "tests": {
+    "constructions": []
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-12-demonstratives",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Demonstratives - It, That, This",
+  "description": "Point to things and say 'this' or 'that' - essential for everyday communication!",
+  "can_do": [
+    "Point to specific things (this, that, these, those)",
+    "Use ça (that/it) in everyday conversation",
+    "Prepare to specify exactly which object you mean"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "ca-fr",
+      "fr": "ça",
+      "gloss": "that/it (informal)",
+      "note": "most common! use this 90% of the time"
+    },
+    {
+      "word_id": "ce-fr",
+      "fr": "ce",
+      "gloss": "this/that (masc + consonant)",
+      "note": "before b, c, d, f, g, k, l, m, n, p, r, s, t, v, w, z"
+    },
+    {
+      "word_id": "cet-fr",
+      "fr": "cet",
+      "gloss": "this/that (masc + vowel)",
+      "note": "before a, e, i, o, u, silent h"
+    },
+    {
+      "word_id": "cette-fr",
+      "fr": "cette",
+      "gloss": "this/that (feminine)",
+      "note": "any feminine noun"
+    },
+    {
+      "word_id": "ces-fr",
+      "fr": "ces",
+      "gloss": "these/those (plural)",
+      "note": "any plural"
+    },
+    {
+      "word_id": "ceci-fr",
+      "fr": "ceci",
+      "gloss": "this (formal)",
+      "note": "formal, rare"
+    },
+    {
+      "word_id": "cela-fr",
+      "fr": "cela",
+      "gloss": "that (formal)",
+      "note": "formal, use ça instead"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-ca-the-most-useful",
+      "term": "{ça} - The Most Useful Word!",
+      "definition": "Informal 'that/it' - you'll use this constantly!",
+      "example": "Used standalone or in phrases constantly in conversation"
+    },
+    {
+      "id": "c-demonstrative-forms",
+      "term": "Demonstrative Forms",
+      "definition": "Learn the standalone forms: ce, cet, cette, ces",
+      "example": "Like variables in programming - you'll compose them with nouns soon!"
+    },
+    {
+      "id": "c-gender-and-sound-agreement",
+      "term": "Gender and Sound Agreement",
+      "definition": "Choose based on: 1) gender of noun, 2) sound it starts with",
+      "example": "masculine + consonant = {ce}, masculine + vowel = {cet}, feminine = {cette}, plural = {ces}"
+    },
+    {
+      "id": "c-next-functional-composition",
+      "term": "Next: Functional Composition!",
+      "definition": "After practicing ça, you'll compose demonstratives with nouns",
+      "example": "Coming soon: {ce}({livre}) = {ce livre}, {ces}({chats}) = {ces chats}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-ca",
+      "type": "respond",
+      "situation": "Point to something nearby in conversation",
+      "cue": "that/it (informal - most common!)",
+      "answer": "ça",
+      "hint": "Informal, versatile - 2 letters",
+      "mistakes": [
+        {
+          "answer": "ceci",
+          "feedback": "That's formal 'this' - use ça"
+        },
+        {
+          "answer": "cela",
+          "feedback": "That's formal 'that' - use ça"
+        }
+      ]
+    },
+    {
+      "id": "i-ce-livre",
+      "type": "respond",
+      "situation": "Point to a book on the table. Say 'this book' (le livre - masc)",
+      "cue": "this book",
+      "answer": "ce livre",
+      "hint": "Masculine noun starting with consonant: ce + livre",
+      "mistakes": [
+        {
+          "answer": "cet livre",
+          "feedback": "Use ce before consonants (not cet)"
+        },
+        {
+          "answer": "cette livre",
+          "feedback": "That's feminine - livre is masculine"
+        }
+      ]
+    },
+    {
+      "id": "i-ce-chat",
+      "type": "respond",
+      "situation": "Point to a cat nearby. Say 'this cat' (le chat - masc)",
+      "cue": "this cat",
+      "answer": "ce chat",
+      "hint": "Masculine noun starting with consonant: ce + chat",
+      "mistakes": [
+        {
+          "answer": "cet chat",
+          "feedback": "Use ce before consonants (not cet)"
+        },
+        {
+          "answer": "cette chat",
+          "feedback": "That's feminine - chat is masculine"
+        }
+      ]
+    },
+    {
+      "id": "i-cet-homme",
+      "type": "respond",
+      "situation": "Point to a man across the room. Say 'this man' (l'homme - masc, silent h)",
+      "cue": "this man",
+      "answer": "cet homme",
+      "hint": "Masculine noun with silent h (vowel sound): cet + homme",
+      "mistakes": [
+        {
+          "answer": "ce homme",
+          "feedback": "Use cet before vowel sounds/silent h"
+        },
+        {
+          "answer": "cette homme",
+          "feedback": "That's feminine - homme is masculine"
+        }
+      ]
+    },
+    {
+      "id": "i-cette-maison",
+      "type": "respond",
+      "situation": "Point to a house on the street. Say 'this house' (la maison - fem)",
+      "cue": "this house",
+      "answer": "cette maison",
+      "hint": "Feminine noun: cette + maison",
+      "mistakes": [
+        {
+          "answer": "ce maison",
+          "feedback": "That's masculine - maison is feminine"
+        },
+        {
+          "answer": "cet maison",
+          "feedback": "That's masculine - maison is feminine"
+        }
+      ]
+    },
+    {
+      "id": "i-cette-femme",
+      "type": "respond",
+      "situation": "Point to a woman standing there. Say 'this woman' (la femme - fem)",
+      "cue": "this woman",
+      "answer": "cette femme",
+      "hint": "Feminine noun: cette + femme",
+      "mistakes": [
+        {
+          "answer": "ce femme",
+          "feedback": "That's masculine - femme is feminine"
+        },
+        {
+          "answer": "cet femme",
+          "feedback": "That's masculine - femme is feminine"
+        }
+      ]
+    },
+    {
+      "id": "i-ces-chats",
+      "type": "respond",
+      "situation": "Point to multiple cats. Say 'these cats' (les chats - plural)",
+      "cue": "these cats",
+      "answer": "ces chats",
+      "hint": "Plural noun: ces + chats",
+      "mistakes": [
+        {
+          "answer": "ce chats",
+          "feedback": "That's singular - use ces for plural"
+        },
+        {
+          "answer": "cette chats",
+          "feedback": "That's singular - use ces for plural"
+        }
+      ]
+    },
+    {
+      "id": "i-ces-livres",
+      "type": "respond",
+      "situation": "Point to several books. Say 'these books' (les livres - plural)",
+      "cue": "these books",
+      "answer": "ces livres",
+      "hint": "Plural noun: ces + livres",
+      "mistakes": [
+        {
+          "answer": "ce livres",
+          "feedback": "That's singular - use ces for plural"
+        },
+        {
+          "answer": "cet livres",
+          "feedback": "That's singular - use ces for plural"
+        }
+      ]
+    },
+    {
+      "id": "i-ces-maisons",
+      "type": "respond",
+      "situation": "Point to multiple houses. Say 'these houses' (les maisons - plural)",
+      "cue": "these houses",
+      "answer": "ces maisons",
+      "hint": "Plural noun: ces + maisons",
+      "mistakes": [
+        {
+          "answer": "cette maisons",
+          "feedback": "That's singular - use ces for plural"
+        },
+        {
+          "answer": "ce maisons",
+          "feedback": "That's singular - use ces for plural"
+        }
+      ]
+    },
+    {
+      "id": "i-ce-chien",
+      "type": "respond",
+      "situation": "Point to a dog nearby. Say 'this dog' (le chien - masc)",
+      "cue": "this dog",
+      "answer": "ce chien",
+      "hint": "Masculine noun starting with consonant: ce + chien",
+      "mistakes": [
+        {
+          "answer": "cet chien",
+          "feedback": "Use ce before consonants (not cet)"
+        },
+        {
+          "answer": "cette chien",
+          "feedback": "That's feminine - chien is masculine"
+        }
+      ]
+    }
+  ]
+}
