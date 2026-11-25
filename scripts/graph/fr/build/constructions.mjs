@@ -40,14 +40,17 @@ const ADV = { any: [{ pos: 'adverb' }, { surface: 'rien|tout' }] };
 const OBJ = S("le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en");
 const PTCP = { cell: 'ptcp*' };
 // Past participles of the verbs that take être (DR & MRS VANDERTRAMP), with agreement endings.
-const ETRE_VERB_PTCP = '(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?';
+const ETRE_VERB_PTCP = '(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu)(e|s|es)?';
 const ETRE_PTCP = { cell: 'ptcp*', surface: ETRE_VERB_PTCP };
 // Auxiliary + optional inverted subject + up to two adverbs ("n'ai pas encore", "a-t-il bien").
 const REL_PRONOUN = "celui|celle|ceux|celles|quelqu'un|moi|toi|lui|elle|nous|vous|eux|elles";
 const QUE_CLAUSE_NOUNS = 'est|parce|fait|temps|moment|peur|preuve|surprise|idee|impression|espoir|chance|dommage';
 // an adjective after the antecedent noun; most words are both noun and adjective in the graph, so the step only needs an adjective reading
 const ADJ_STEP = { pos: 'adjective' };
-const ADJ_PTCP = 'fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete';
+// Participles that after être normally describe a state, not a passive (je suis fatigué, c'est interdit, le ciel est
+// couvert). A participle belongs here only when "je suis X" or "c'est X" is usually read as a state.
+const ADJ_PTCP = 'fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete'
+  + '|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu';
 const PASSIVE_PTCP = { cell: 'ptcp*', surface: '(?!(' + ETRE_VERB_PTCP.slice(1, ETRE_VERB_PTCP.indexOf(')')) + '|' + ADJ_PTCP + ')(e|s|es)?$).+' };
 const AUX_TAIL = [opt(CL_SUBJ), opt(ADV), opt(ADV)];
 const ETRE_PRS = { headword: 'fr:lex:etre', cell: 'prs.*' };
@@ -375,8 +378,9 @@ const C = [
     ['J\'ai un chat.', 'Il a faim.', 'Je mange une pomme.']),
   node('passe-compose.etre', 'Passé composé with être for the DR & MRS VANDERTRAMP verbs (je suis allé, elle est venue)', ['fr:lex:etre', 'passe-compose.avoir'],
     [ETRE_PRS, ...AUX_TAIL, ETRE_PTCP],
-    ['Je suis allé au café.', 'Elle est venue hier.', 'Ils ne sont pas partis.'],
-    ['Je suis grand.', 'Je vais au café.', 'Il est content.']),
+    ['Je suis allé au café.', 'Elle est venue hier.', 'Ils ne sont pas partis.', 'Il est apparu à la fenêtre.', 'Elle est intervenue.',
+      'Ils sont intervenus.', 'Il est mort en 1990.'],
+    ['Je suis grand.', 'Je vais au café.', 'Il est content.', 'Je suis convaincu.']),
   node('passe-compose.reflexive', 'Passé composé of pronominal verbs with être (je me suis levé, elle s\'est lavée, nous nous sommes préparés, vous vous êtes amusés)', ['passe-compose.etre', 'pronoun.reflexive'],
     [
       [S("me|te|se|m'|t'|s'"), ETRE_PRS, ...AUX_TAIL, PTCP],
@@ -638,7 +642,8 @@ const C = [
       [{ headword: 'fr:lex:avoir' }, opt(ADV), S('ete'), opt(ADV), PASSIVE_PTCP],
     ],
     ['Je suis aimé.', 'La maison est construite par mon père.', 'Nous sommes aidés.', 'Il a été compris.'],
-    ['Je suis allé au café.', 'Je me suis lavé.', 'Nous nous sommes levés.', 'Je suis fatigué.', 'Elle a mangé.']),
+    ['Je suis allé au café.', 'Je me suis lavé.', 'Nous nous sommes levés.', 'Je suis fatigué.', 'Elle a mangé.',
+      'Il est apparu.', 'Elle est intervenue.', 'Je suis convaincu.', 'Il est endormi.', 'Je suis inscrite.', 'C\'est interdit.']),
 ];
 
 checkLevels(C.map((c) => c.id));

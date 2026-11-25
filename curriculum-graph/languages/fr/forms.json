@@ -4752,6 +4752,216 @@
     "surface": "croie"
   },
   {
+    "cell": "cond.1pl",
+    "id": "fr:form:cueillir.cond.1pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:cueillir.cond.1sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:cueillir.cond.2pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilleriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:cueillir.cond.2sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:cueillir.cond.3pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilleraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:cueillir.cond.3sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:cueillir.fut.1pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:cueillir.fut.1sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:cueillir.fut.2pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillerez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:cueillir.fut.2sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilleras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:cueillir.fut.3pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilleront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:cueillir.fut.3sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillera"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:cueillir.impf.1pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:cueillir.impf.1sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:cueillir.impf.2pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilliez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:cueillir.impf.2sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:cueillir.impf.3pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:cueillir.impf.3sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:cueillir.prs.1pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:cueillir.prs.1sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueille"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:cueillir.prs.2pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:cueillir.prs.2sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilles"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:cueillir.prs.3pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:cueillir.prs.3sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueille"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:cueillir.prsptcp",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:cueillir.ptcp",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilli"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:cueillir.ptcp.f",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillie"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:cueillir.ptcp.fpl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillies"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:cueillir.ptcp.pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillis"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:cueillir.sbjv.1pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:cueillir.sbjv.1sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueille"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:cueillir.sbjv.2pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilliez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:cueillir.sbjv.2sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueilles"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:cueillir.sbjv.3pl",
+    "of": "fr:lex:cueillir",
+    "surface": "cueillent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:cueillir.sbjv.3sg",
+    "of": "fr:lex:cueillir",
+    "surface": "cueille"
+  },
+  {
     "cell": "impf.1pl",
     "id": "fr:form:cuire.impf.1pl",
     "of": "fr:lex:cuire",
@@ -6924,6 +7134,126 @@
     "surface": "emmène"
   },
   {
+    "cell": "cond.1pl",
+    "id": "fr:form:employer.cond.1pl",
+    "of": "fr:lex:employer",
+    "surface": "emploierions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:employer.cond.1sg",
+    "of": "fr:lex:employer",
+    "surface": "emploierais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:employer.cond.2pl",
+    "of": "fr:lex:employer",
+    "surface": "emploieriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:employer.cond.2sg",
+    "of": "fr:lex:employer",
+    "surface": "emploierais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:employer.cond.3pl",
+    "of": "fr:lex:employer",
+    "surface": "emploieraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:employer.cond.3sg",
+    "of": "fr:lex:employer",
+    "surface": "emploierait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:employer.fut.1pl",
+    "of": "fr:lex:employer",
+    "surface": "emploierons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:employer.fut.1sg",
+    "of": "fr:lex:employer",
+    "surface": "emploierai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:employer.fut.2pl",
+    "of": "fr:lex:employer",
+    "surface": "emploierez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:employer.fut.2sg",
+    "of": "fr:lex:employer",
+    "surface": "emploieras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:employer.fut.3pl",
+    "of": "fr:lex:employer",
+    "surface": "emploieront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:employer.fut.3sg",
+    "of": "fr:lex:employer",
+    "surface": "emploiera"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:employer.prs.1sg",
+    "of": "fr:lex:employer",
+    "surface": "emploie"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:employer.prs.2sg",
+    "of": "fr:lex:employer",
+    "surface": "emploies"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:employer.prs.3pl",
+    "of": "fr:lex:employer",
+    "surface": "emploient"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:employer.prs.3sg",
+    "of": "fr:lex:employer",
+    "surface": "emploie"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:employer.sbjv.1sg",
+    "of": "fr:lex:employer",
+    "surface": "emploie"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:employer.sbjv.2sg",
+    "of": "fr:lex:employer",
+    "surface": "emploies"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:employer.sbjv.3pl",
+    "of": "fr:lex:employer",
+    "surface": "emploient"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:employer.sbjv.3sg",
+    "of": "fr:lex:employer",
+    "surface": "emploie"
+  },
+  {
     "cell": "impf.1sg",
     "id": "fr:form:encourager.impf.1sg",
     "of": "fr:lex:encourager",
@@ -7906,6 +8236,126 @@
     "id": "fr:form:essayer.sbjv.3sg",
     "of": "fr:lex:essayer",
     "surface": "essaie"
+  },
+  {
+    "cell": "cond.1pl",
+    "id": "fr:form:essuyer.cond.1pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:essuyer.cond.1sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:essuyer.cond.2pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuieriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:essuyer.cond.2sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:essuyer.cond.3pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuieraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:essuyer.cond.3sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:essuyer.fut.1pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:essuyer.fut.1sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:essuyer.fut.2pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuierez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:essuyer.fut.2sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuieras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:essuyer.fut.3pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuieront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:essuyer.fut.3sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuiera"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:essuyer.prs.1sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuie"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:essuyer.prs.2sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuies"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:essuyer.prs.3pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuient"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:essuyer.prs.3sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuie"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:essuyer.sbjv.1sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuie"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:essuyer.sbjv.2sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuies"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:essuyer.sbjv.3pl",
+    "of": "fr:lex:essuyer",
+    "surface": "essuient"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:essuyer.sbjv.3sg",
+    "of": "fr:lex:essuyer",
+    "surface": "essuie"
   },
   {
     "cell": "impf.1pl",
@@ -10662,6 +11112,12 @@
     "surface": "mentant"
   },
   {
+    "cell": "ptcp",
+    "id": "fr:form:mentir.ptcp",
+    "of": "fr:lex:mentir",
+    "surface": "menti"
+  },
+  {
     "cell": "sbjv.1pl",
     "id": "fr:form:mentir.sbjv.1pl",
     "of": "fr:lex:mentir",
@@ -10786,6 +11242,216 @@
     "id": "fr:form:mon.pl",
     "of": "fr:lex:mon",
     "surface": "mes"
+  },
+  {
+    "cell": "cond.1pl",
+    "id": "fr:form:mourir.cond.1pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourrions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:mourir.cond.1sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourrais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:mourir.cond.2pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:mourir.cond.2sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourrais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:mourir.cond.3pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:mourir.cond.3sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourrait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:mourir.fut.1pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourrons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:mourir.fut.1sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourrai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:mourir.fut.2pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourrez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:mourir.fut.2sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:mourir.fut.3pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:mourir.fut.3sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourra"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:mourir.impf.1pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:mourir.impf.1sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:mourir.impf.2pl",
+    "of": "fr:lex:mourir",
+    "surface": "mouriez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:mourir.impf.2sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:mourir.impf.3pl",
+    "of": "fr:lex:mourir",
+    "surface": "mouraient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:mourir.impf.3sg",
+    "of": "fr:lex:mourir",
+    "surface": "mourait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:mourir.prs.1pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:mourir.prs.1sg",
+    "of": "fr:lex:mourir",
+    "surface": "meurs"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:mourir.prs.2pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:mourir.prs.2sg",
+    "of": "fr:lex:mourir",
+    "surface": "meurs"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:mourir.prs.3pl",
+    "of": "fr:lex:mourir",
+    "surface": "meurent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:mourir.prs.3sg",
+    "of": "fr:lex:mourir",
+    "surface": "meurt"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:mourir.prsptcp",
+    "of": "fr:lex:mourir",
+    "surface": "mourant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:mourir.ptcp",
+    "of": "fr:lex:mourir",
+    "surface": "mort"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:mourir.ptcp.f",
+    "of": "fr:lex:mourir",
+    "surface": "morte"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:mourir.ptcp.fpl",
+    "of": "fr:lex:mourir",
+    "surface": "mortes"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:mourir.ptcp.pl",
+    "of": "fr:lex:mourir",
+    "surface": "morts"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:mourir.sbjv.1pl",
+    "of": "fr:lex:mourir",
+    "surface": "mourions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:mourir.sbjv.1sg",
+    "of": "fr:lex:mourir",
+    "surface": "meure"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:mourir.sbjv.2pl",
+    "of": "fr:lex:mourir",
+    "surface": "mouriez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:mourir.sbjv.2sg",
+    "of": "fr:lex:mourir",
+    "surface": "meures"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:mourir.sbjv.3pl",
+    "of": "fr:lex:mourir",
+    "surface": "meurent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:mourir.sbjv.3sg",
+    "of": "fr:lex:mourir",
+    "surface": "meure"
   },
   {
     "cell": "impf.1sg",
@@ -11812,6 +12478,216 @@
     "id": "fr:form:paraitre.sbjv.3sg",
     "of": "fr:lex:paraitre",
     "surface": "paraisse"
+  },
+  {
+    "cell": "cond.1pl",
+    "id": "fr:form:parcourir.cond.1pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:parcourir.cond.1sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:parcourir.cond.2pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:parcourir.cond.2sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:parcourir.cond.3pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:parcourir.cond.3sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:parcourir.fut.1pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:parcourir.fut.1sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:parcourir.fut.2pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourrez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:parcourir.fut.2sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:parcourir.fut.3pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:parcourir.fut.3sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourra"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:parcourir.impf.1pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:parcourir.impf.1sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:parcourir.impf.2pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcouriez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:parcourir.impf.2sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:parcourir.impf.3pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcouraient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:parcourir.impf.3sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:parcourir.prs.1pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:parcourir.prs.1sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcours"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:parcourir.prs.2pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:parcourir.prs.2sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcours"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:parcourir.prs.3pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:parcourir.prs.3sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourt"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:parcourir.prsptcp",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:parcourir.ptcp",
+    "of": "fr:lex:parcourir",
+    "surface": "parcouru"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:parcourir.ptcp.f",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourue"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:parcourir.ptcp.fpl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourues"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:parcourir.ptcp.pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourus"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:parcourir.sbjv.1pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:parcourir.sbjv.1sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcoure"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:parcourir.sbjv.2pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcouriez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:parcourir.sbjv.2sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcoures"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:parcourir.sbjv.3pl",
+    "of": "fr:lex:parcourir",
+    "surface": "parcourent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:parcourir.sbjv.3sg",
+    "of": "fr:lex:parcourir",
+    "surface": "parcoure"
   },
   {
     "cell": "impf.1sg",
@@ -14374,6 +15250,12 @@
     "id": "fr:form:rappeler.sbjv.3sg",
     "of": "fr:lex:rappeler",
     "surface": "rappelle"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:reagir.ptcp",
+    "of": "fr:lex:reagir",
+    "surface": "réagi"
   },
   {
     "cell": "cond.1pl",
@@ -17494,6 +18376,120 @@
     "id": "fr:form:se.elided",
     "of": "fr:lex:se",
     "surface": "s'"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:sentir.impf.1pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:sentir.impf.1sg",
+    "of": "fr:lex:sentir",
+    "surface": "sentais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:sentir.impf.2pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentiez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:sentir.impf.2sg",
+    "of": "fr:lex:sentir",
+    "surface": "sentais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:sentir.impf.3pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:sentir.impf.3sg",
+    "of": "fr:lex:sentir",
+    "surface": "sentait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:sentir.prs.1pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:sentir.prs.1sg",
+    "of": "fr:lex:sentir",
+    "surface": "sens"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:sentir.prs.2pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentez"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:sentir.prs.2sg",
+    "of": "fr:lex:sentir",
+    "surface": "sens"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:sentir.prs.3pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:sentir.prs.3sg",
+    "of": "fr:lex:sentir",
+    "surface": "sent"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:sentir.prsptcp",
+    "of": "fr:lex:sentir",
+    "surface": "sentant"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:sentir.sbjv.1pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:sentir.sbjv.1sg",
+    "of": "fr:lex:sentir",
+    "surface": "sente"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:sentir.sbjv.2pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentiez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:sentir.sbjv.2sg",
+    "of": "fr:lex:sentir",
+    "surface": "sentes"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:sentir.sbjv.3pl",
+    "of": "fr:lex:sentir",
+    "surface": "sentent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:sentir.sbjv.3sg",
+    "of": "fr:lex:sentir",
+    "surface": "sente"
   },
   {
     "cell": "impf.1pl",

@@ -11,9 +11,12 @@ import { buildFormIndex, lookupToken, lookupTokenStrict } from '../fr/forms.mjs'
 import { tokenize } from '../fr/tokenize.mjs';
 import { matchPattern, detectConstructions } from '../fr/detect.mjs';
 import { validCefrSource } from '../levels-data.mjs';
+import { readCourse } from '../course.mjs';
+import { extractTeaches } from '../extract-teaches.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const graph = loadGraph(join(here, '..', '..', '..', 'curriculum-graph'), 'fr');
+const repoRoot = join(here, '..', '..', '..');
+const graph = loadGraph(join(repoRoot, 'curriculum-graph'), 'fr');
 const index = buildFormIndex(graph);
 const isWord = (f) => index.has(f) || graph.names.has(f);
 const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
@@ -31,7 +34,7 @@ test('the Getting things done headwords are in the graph with a part of speech, 
     const h = graph.headwords.find((x) => x.lemma === lemma && x.pos === pos);
     assert.ok(h, `${lemma} (${pos}) is a headword`);
     assert.ok(LEVELS.includes(h.cefr), `${lemma} has a level`);
-    assert.ok(validCefrSource(h.cefrSource), `${lemma} says how its level was decided`);
+    assert.ok(validCefrSource(h.cefrSource) && h.cefrSource.startsWith('team: '), `${lemma} has a team level source`);
     assert.ok(typeof h.senses?.[0]?.gloss === 'string' && h.senses[0].gloss.length > 0, `${lemma} has an English gloss`);
     if (gender) assert.equal(h.gender, gender, `${lemma} gender`);
     const [token] = tokenize(lemma, { isWord });
@@ -165,6 +168,16 @@ const VERBS = {
   éteindre: ['éteins éteins éteint éteignons éteignez éteignent', 'éteint'],
 };
 
+// Six more verbs that had no present tense; the plan does not list them yet.
+const MORE_VERBS = {
+  mourir: ['meurs meurs meurt mourons mourez meurent', 'mort'],
+  sentir: ['sens sens sent sentons sentez sentent', 'senti'],
+  cueillir: ['cueille cueilles cueille cueillons cueillez cueillent', 'cueilli'],
+  employer: ['emploie emploies emploie employons employez emploient', 'employé'],
+  essuyer: ['essuie essuies essuie essuyons essuyez essuient', 'essuyé'],
+  parcourir: ['parcours parcours parcourt parcourons parcourez parcourent', 'parcouru'],
+};
+
 // The -er verbs whose present is spelled like a noun, adjective or name already in the graph (la porte, la garde,
 // Marie). Their forms stay out of the graph (reading-limits.json) until the checker can tell the two apart.
 const READING_LIMITED = new Set(['adresser', 'causer', 'durer', 'fêter', 'garder', 'garer', 'marier', 'neiger', 'occuper',
@@ -195,7 +208,7 @@ test('the plan lists 86 verbs, 14 of them reading-limited', () => {
   }
 });
 
-for (const [lemma, [present, participle]] of Object.entries(VERBS)) {
+for (const [lemma, [present, participle]] of Object.entries({ ...VERBS, ...MORE_VERBS })) {
   const todo = READING_LIMITED.has(lemma) ? 'spelled like a noun or name; needs a checker change (reading-limits.json)' : undefined;
   test(`${lemma}: the six present forms and the past participle read as ${lemma}`, { todo }, () => {
     const h = headwordOf(lemma);
@@ -223,7 +236,40 @@ test('the participle tu of taire stays out, so the pronoun tu and as-tu never re
   assert.equal(matchPattern(tokens, tokens.map((t) => lookupToken(index, t)), pc.detect, graph.names), false);
 });
 
-test('a vocabulary table that lists la tienne does not credit tenir', () => {
-  const exclude = graph.courseMap['2024-02-01-possessive-pronouns']?.excludeWords ?? [];
-  for (const id of ['fr:lex:tenir', 'fr:form:tenir.sbjv.1sg', 'fr:form:tenir.sbjv.3sg']) assert.ok(exclude.includes(id), id);
+test('extraction of the possessive pronouns table credits le tien, not tenir, and matches course-map.json', async () => {
+  const key = '2024-02-01-possessive-pronouns';
+  const course = await readCourse(repoRoot);
+  const { courseMap } = extractTeaches(graph, course, index);
+  const taught = courseMap[key].teachesWords;
+  assert.ok(taught.includes('fr:form:tien.f'), 'la tienne is credited to le tien');
+  for (const id of ['fr:lex:tenir', 'fr:form:tenir.sbjv.1sg', 'fr:form:tenir.sbjv.3sg']) assert.ok(!taught.includes(id), `${id} is not credited`);
+  assert.deepEqual([...taught].sort(), [...graph.courseMap[key].teachesWords].sort());
+});
+
+const detected = (text) => {
+  const tokens = tokenize(text, { isWord });
+  return detectConstructions(tokens, tokens.map((t) => lookupToken(index, t)), graph.constructions, graph.names);
+};
+
+test('the participle of an être verb after être reads as passé composé with être, not passive', () => {
+  for (const s of ['Il est apparu.', 'Elle est apparue.', 'Elle est intervenue.', 'Ils sont intervenus.', 'Il est mort.', 'Elle est repartie.']) {
+    const cx = detected(s);
+    assert.ok(cx.includes('fr:cx:passe-compose.etre'), `${s} reads as passe-compose.etre`);
+    assert.ok(!cx.includes('fr:cx:passive'), `${s} does not read as passive`);
+  }
+});
+
+test('participles used as everyday adjectives after être do not read as passive', () => {
+  for (const s of ['Je suis convaincu.', 'Il est endormi.', 'Je suis inscrite.', 'Je suis détendu.', 'La lumière est éteinte.',
+    'C\'est interdit.', 'Le ciel est couvert.', 'C\'est prévu.', 'Le problème est résolu.', 'Mon chat est disparu.']) {
+    assert.ok(!detected(s).includes('fr:cx:passive'), `${s} does not read as passive`);
+  }
+  // a real passive with a new verb still reads as passive
+  assert.ok(detected('La lettre est écrite par Marie.').includes('fr:cx:passive'));
+});
+
+test('mentir and réagir have one participle, as verbs that never agree', () => {
+  for (const s of ['mentie', 'menties', 'réagie', 'réagies']) {
+    assert.ok(!lastReadings(`il a ${s}`).some((r) => r.cell?.startsWith('ptcp')), `${s} is not a participle`);
+  }
 });

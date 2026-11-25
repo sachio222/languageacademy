@@ -4695,7 +4695,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:chauffage",
@@ -7789,7 +7789,7 @@
   },
   {
     "cefr": "B1",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "id": "fr:lex:depanner",
     "lemma": "dépanner",
@@ -8350,7 +8350,7 @@
   },
   {
     "cefr": "B1",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:devis",
@@ -8609,7 +8609,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "id": "fr:lex:disponible",
     "lemma": "disponible",
@@ -9539,7 +9539,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:electricien",
@@ -9785,8 +9785,12 @@
     "id": "fr:lex:employer",
     "lemma": "employer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -10675,8 +10679,12 @@
     "id": "fr:lex:essuyer",
     "lemma": "essuyer",
     "paradigms": [
+      "fr:cx:verb.er.present",
       "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -11561,7 +11569,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:facture",
@@ -17326,7 +17334,6 @@
     "id": "fr:lex:mentir",
     "lemma": "mentir",
     "paradigms": [
-      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -19636,7 +19643,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:panne",
@@ -21115,7 +21122,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:plombier",
@@ -21378,7 +21385,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:pompier",
@@ -22579,7 +22586,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m/f",
     "id": "fr:lex:proprietaire",
@@ -23460,7 +23467,6 @@
     "lemma": "réagir",
     "paradigms": [
       "fr:cx:verb.ir.present",
-      "fr:cx:ptcp.ir",
       "fr:cx:verb.ir.impf",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional",
@@ -24285,7 +24291,7 @@
   },
   {
     "cefr": "B1",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:reparateur",
@@ -25093,7 +25099,7 @@
   },
   {
     "cefr": "A2",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:robinet",
@@ -25917,6 +25923,7 @@
     "id": "fr:lex:sentir",
     "lemma": "sentir",
     "paradigms": [
+      "fr:cx:ptcp.ir",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional"
     ],
@@ -26027,7 +26034,7 @@
   },
   {
     "cefr": "B1",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:serrure",
@@ -26044,7 +26051,7 @@
   },
   {
     "cefr": "B1",
-    "cefrSource": "agent: judgment",
+    "cefrSource": "team: set by agent, Jake delegated 2026-11-25",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:serrurier",

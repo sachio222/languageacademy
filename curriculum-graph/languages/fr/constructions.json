@@ -1274,7 +1274,7 @@
       },
       {
         "cell": "ptcp*",
-        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?"
+        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu)(e|s|es)?"
       }
     ],
     "examples": {
@@ -2011,7 +2011,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?"
+          "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu)(e|s|es)?"
         }
       ]
     ],
@@ -2802,19 +2802,24 @@
       },
       {
         "cell": "ptcp*",
-        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?"
+        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu)(e|s|es)?"
       }
     ],
     "examples": {
       "match": [
         "Je suis allé au café.",
         "Elle est venue hier.",
-        "Ils ne sont pas partis."
+        "Ils ne sont pas partis.",
+        "Il est apparu à la fenêtre.",
+        "Elle est intervenue.",
+        "Ils sont intervenus.",
+        "Il est mort en 1990."
       ],
       "noMatch": [
         "Je suis grand.",
         "Je vais au café.",
-        "Il est content."
+        "Il est content.",
+        "Je suis convaincu."
       ]
     },
     "id": "fr:cx:passe-compose.etre",
@@ -3034,7 +3039,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete)(e|s|es)?$).+"
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu)(e|s|es)?$).+"
         }
       ],
       [
@@ -3078,7 +3083,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete)(e|s|es)?$).+"
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu)(e|s|es)?$).+"
         }
       ],
       [
@@ -3112,7 +3117,7 @@
         },
         {
           "cell": "ptcp*",
-          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete)(e|s|es)?$).+"
+          "surface": "(?!(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu|fatigue|occupe|surpris|marie|assis|ferme|ouvert|perdu|connu|interesse|presse|decu|ravi|etonne|fache|desole|habille|leve|couche|reveille|prepare|pret|ete|convaincu|endormi|inscrit|detendu|ennuye|eteint|interdit|couvert|prevu|cuit|resolu|convenu|disparu)(e|s|es)?$).+"
         }
       ]
     ],
@@ -3128,7 +3133,13 @@
         "Je me suis lavé.",
         "Nous nous sommes levés.",
         "Je suis fatigué.",
-        "Elle a mangé."
+        "Elle a mangé.",
+        "Il est apparu.",
+        "Elle est intervenue.",
+        "Je suis convaincu.",
+        "Il est endormi.",
+        "Je suis inscrite.",
+        "C'est interdit."
       ]
     },
     "id": "fr:cx:passive",
@@ -3235,7 +3246,7 @@
       },
       {
         "cell": "ptcp*",
-        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?"
+        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu)(e|s|es)?"
       }
     ],
     "examples": {
@@ -3831,7 +3842,7 @@
       },
       {
         "cell": "ptcp.*",
-        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu)(e|s|es)?"
+        "surface": "(alle|venu|parti|arrive|sorti|entre|rentre|reste|monte|descendu|tombe|devenu|revenu|retourne|ne|mort|passe|reparti|ressorti|remonte|redescendu|retombe|parvenu|apparu|intervenu)(e|s|es)?"
       }
     ],
     "examples": {
