@@ -241,6 +241,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: m.moduleKey,
         position: m.position,
+        levelLabel: { of: 'module', label: labelTexts.get(m.position), against: 'computed', value: m.computed },
         message: `${name(m)} is labelled ${labelTexts.get(m.position)} but teaches at most ${m.computed}`,
       }));
     }
@@ -253,6 +254,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: m.moduleKey,
         position: m.position,
+        levelLabel: { of: 'module', label: labelTexts.get(m.position), against: 'reached', value: reached ?? null },
         message: `${name(m)} is labelled ${labelTexts.get(m.position)} but teaches nothing, and by this position the course has `
           + (reached ? `reached ${reached}` : 'reached no level yet'),
       }));
@@ -266,6 +268,7 @@ export function ruleLevels(ctx) {
         severity: 'warning',
         moduleKey: first.moduleKey,
         position: first.position,
+        levelLabel: { of: `unit:${u.unitId}`, label: labelTexts.get(`unit:${u.unitId}`), against: 'computed', value: u.computed },
         message: `unit ${u.unitId} "${u.title}" is labelled ${labelTexts.get(`unit:${u.unitId}`)} but its modules teach at most ${u.computed}`,
       }));
     }
@@ -300,6 +303,7 @@ export function ruleLevels(ctx) {
     issues.push(issue({
       rule: 'level-data-missing',
       severity: 'warning',
+      nodes: [...missing].sort(),
       message: `${missing.size} taught words and grammar patterns have no level (A1 to C2) yet, so level labels cannot be checked`,
     }));
   }

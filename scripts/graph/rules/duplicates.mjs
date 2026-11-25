@@ -64,6 +64,8 @@ export function ruleDuplicates(ctx) {
       position: second.position,
       nodeId: ids[0],
       ...(ids.length > 1 ? { nodeIds: ids } : {}),
+      // Every module that teaches the node or its twins, sorted: a third teaching changes the issue's identity.
+      teachingModuleKeys: [...new Set(ids.flatMap((id) => where.get(id).map((x) => x.moduleKey)))].sort(),
       message: ids.map((id, i) => (i === 0 ? `${id} is taught at positions ${positions(id)}` : `${id} at positions ${positions(id)}`)).join('; '),
       fix: { kind: 'merge-duplicate', moduleKey: first.moduleKey },
     }));
