@@ -62,6 +62,11 @@
       "note": "intensity - trop cher (too expensive)"
     },
     {
+      "word_id": "cher-fr",
+      "fr": "cher",
+      "gloss": "expensive"
+    },
+    {
       "word_id": "tout-toute-tous-toutes-fr",
       "fr": "tout / toute / tous / toutes",
       "gloss": "all / every / everything",

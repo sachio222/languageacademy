@@ -1,4 +1,32 @@
 {
+  "2024-01-01-pronouns": {
+    "concepts": [
+      {
+        "id": "c-subject-pronouns",
+        "term": "Subject Pronouns",
+        "definition": "Words that replace nouns as the subject of a sentence",
+        "example": "9 essential words: I, you, he, she, we, you (formal), they (masc), they (fem), {on}"
+      },
+      {
+        "id": "c-singular-vs-plural",
+        "term": "Singular vs Plural",
+        "definition": "4 singular pronouns (one person) and 4 plural pronouns (multiple people)",
+        "example": "I/you/he/she are singular, we/you all/they are plural"
+      },
+      {
+        "id": "c-formal-vs-informal",
+        "term": "Formal vs Informal",
+        "definition": "French has TWO words for \"you\" - informal (friends) and formal (strangers/bosses)",
+        "example": "Friends vs strangers require different pronouns"
+      },
+      {
+        "id": "c-on-the-special-pronoun",
+        "term": "{On} - The Special Pronoun",
+        "definition": "The most common way to say 'we' in French - more natural than '{nous}'",
+        "example": "{On} means 'we' when friends talk, or 'people' in general. It takes the same verb form as {il} and {elle}."
+      }
+    ]
+  },
   "2024-01-02-etre": {
     "concepts": [
       {
@@ -16,10 +44,15 @@
       {
         "id": "c-practical-usage",
         "term": "Practical Usage",
-        "definition": "Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"",
-        "example": "{Je suis heureux} (I am happy), {Je suis étudiant} (I am a student), {Je suis à Paris} (I am in Paris)"
+        "definition": "Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".",
+        "example": "{Je suis heureux} (I am happy), {Je suis Paul} (I am Paul), {Il est bon} (it is good)"
       }
-    ]
+    ],
+    "vocabulary/heureux-fr": {
+      "word_id": "heureux-fr",
+      "fr": "heureux",
+      "gloss": "happy"
+    }
   },
   "2024-01-05-articles": {
     "concepts": [
@@ -92,6 +125,11 @@
           "feedback": "Use '{un}' (a), not 'le' (the)"
         }
       ]
+    },
+    "vocabulary/c-est-fr": {
+      "word_id": "c-est-fr",
+      "fr": "c'est",
+      "gloss": "it is / this is"
     }
   },
   "2024-01-07-plurals": {
@@ -115,6 +153,13 @@
         "example": "Learn plurals WHILE reinforcing your verb conjugations"
       }
     ]
+  },
+  "2024-01-09-reading1": {
+    "vocabulary/bons-fr": {
+      "word_id": "bons-fr",
+      "fr": "bons",
+      "gloss": "good (plural)"
+    }
   },
   "2024-01-10-unit1-practice": {
     "can_do": [
@@ -140,6 +185,61 @@
         }
       ]
     }
+  },
+  "2024-01-15-vouloir": {
+    "concepts": [
+      {
+        "id": "c-vouloir-to-want",
+        "term": "{vouloir} = to want",
+        "definition": "Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French.",
+        "example": "'I want that' ({Je veux ça}), 'Do you want a book?' ({Veux-tu un livre?}), 'We want to have a house' ({Nous voulons avoir une maison}), 'How are you? Do you want a coffee?' ({Ça va ? Tu veux un café ?})"
+      },
+      {
+        "id": "c-irregular-conjugation-pattern",
+        "term": "Irregular Conjugation Pattern",
+        "definition": "Notice the pattern: je/tu both use '{veux}', then il/elle use '{veut}', nous uses '{voulons}', and ils/elles use '{veulent}'!",
+        "example": "{je veux}, {tu veux}, {il veut}, {nous voulons}, {vous voulez}, {ils veulent}"
+      },
+      {
+        "id": "c-composition-power",
+        "term": "Composition Power",
+        "definition": "Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!",
+        "example": "{je veux + ça, nous voulons + être, ils veulent + avoir + un livre}"
+      }
+    ],
+    "vocabulary/s-il-te-plait-fr": {
+      "word_id": "s-il-te-plait-fr",
+      "fr": "s'il te plaît",
+      "gloss": "please (to a friend)"
+    }
+  },
+  "2024-01-17-voir": {
+    "concepts": [
+      {
+        "id": "c-voir-to-see",
+        "term": "{voir} = to see",
+        "definition": "Irregular verb for seeing and perceiving",
+        "example": "Very common, often after {vouloir}: {je veux voir} (I want to see). The next module uses it with object pronouns."
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "Irregular Conjugation",
+        "definition": "Stem changes throughout conjugation",
+        "example": "{je}/{tu vois}, {il voit}, {nous voyons}, {vous voyez}, {ils voient}"
+      },
+      {
+        "id": "c-building-on-previous-vocabulary",
+        "term": "Building on Previous Vocabulary",
+        "definition": "Combine with nouns, adjectives, and phrases you already know",
+        "example": "Pattern: '{je vois}' + articles + nouns + adjectives"
+      },
+      {
+        "id": "c-prepares-for-object-pronouns",
+        "term": "Prepares for Object Pronouns",
+        "definition": "Next module teaches 'I see HIM/HER/IT/THEM' - need voir first!",
+        "example": "Foundation for: {je le vois}, {je la vois}, {je les vois}, {je te vois} (I see you)"
+      }
+    ]
   },
   "2024-01-18-questions": {
     "concepts": [
@@ -183,7 +283,7 @@
         "id": "c-que-vs-quoi-both",
         "term": "Que vs Quoi (both mean 'what')",
         "definition": "'{Que}' starts questions, '{quoi}' ends them or stands alone",
-        "example": "{Que fais-tu?} (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)"
+        "example": "{Que veux-tu?} (what do you want?) vs {Tu veux quoi?} (you want what?) vs {Quoi?} (what?!)"
       },
       {
         "id": "c-common-question-phrases-memorize",
@@ -197,11 +297,254 @@
       "fr": "ça va?",
       "gloss": "you good?",
       "note": "super informal"
+    },
+    "vocabulary/combien-de-fr": {
+      "word_id": "combien-de-fr",
+      "fr": "combien de",
+      "gloss": "how many / how much"
+    }
+  },
+  "2024-01-19-questions-help": {
+    "checks": [
+      {
+        "id": "k1",
+        "ask": "Which one turns {Tu as un chat} into a question?",
+        "options": [
+          {
+            "text": "Est-ce que tu as un chat ?",
+            "fr": true,
+            "right": true
+          },
+          {
+            "text": "Tu est-ce que as un chat ?",
+            "fr": true
+          },
+          {
+            "text": "Tu as un chat est-ce que ?",
+            "fr": true
+          }
+        ],
+        "why": "{Est-ce que} goes in front, and the rest of the sentence stays the same."
+      },
+      {
+        "id": "k2",
+        "ask": "Listen. How is this question made?",
+        "say": "Tu veux un café ?",
+        "show": "Tu veux un café ?",
+        "options": [
+          {
+            "text": "With est-ce que"
+          },
+          {
+            "text": "With a rising voice",
+            "right": true
+          },
+          {
+            "text": "By flipping the verb"
+          }
+        ],
+        "why": "The words are the same as the statement. The voice rises at the end."
+      },
+      {
+        "id": "k3-fatigue",
+        "ask": "Which one is the formal question?",
+        "options": [
+          {
+            "text": "Tu es fatigué ?",
+            "fr": true
+          },
+          {
+            "text": "Es-tu fatigué ?",
+            "fr": true,
+            "right": true
+          },
+          {
+            "text": "Est-ce que tu es fatigué ?",
+            "fr": true
+          }
+        ],
+        "why": "The verb comes first, joined to {tu} with a hyphen: {Es-tu fatigué ?}"
+      }
+    ],
+    "parts/p-est-ce-que": {
+      "id": "p-est-ce-que",
+      "heading": "{Est-ce que}",
+      "text": [
+        "{Est-ce que} means roughly “is it that”. Put it in front of any statement and the statement becomes a question."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "A statement",
+              "fr": "Tu as un chat",
+              "en": "You have a cat"
+            },
+            {
+              "k": "Add",
+              "fr": "Est-ce que",
+              "en": "is it that"
+            },
+            {
+              "k": "A question",
+              "fr": "Est-ce que tu as un chat ?",
+              "en": "Do you have a cat?"
+            }
+          ]
+        },
+        {
+          "lines": [
+            [
+              "Où est-ce que tu es ?",
+              "Where are you?"
+            ],
+            [
+              "Quand est-ce que tu veux un café ?",
+              "When do you want a coffee?"
+            ],
+            [
+              "Qu'est-ce que c'est ?",
+              "What is it?"
+            ],
+            [
+              "Qu'est-ce que tu vois ?",
+              "What do you see?"
+            ],
+            [
+              "Combien de livres est-ce que tu as ?",
+              "How many books do you have?"
+            ]
+          ],
+          "heading": "With a question word in front"
+        }
+      ]
+    },
+    "parts/p-flip-the-verb": {
+      "id": "p-flip-the-verb",
+      "heading": "Flip the verb",
+      "text": [
+        "For formal speech and writing, put the verb before the subject and join them with a hyphen. This is called inversion."
+      ],
+      "note": "You will see it in books, formal emails and the news.",
+      "blocks": [
+        {
+          "flip": [
+            {
+              "fr": "Tu es fatigué.",
+              "en": "You are tired.",
+              "parts": [
+                [
+                  "Tu",
+                  "s"
+                ],
+                [
+                  "es",
+                  "v"
+                ],
+                [
+                  "fatigué",
+                  ""
+                ]
+              ]
+            },
+            {
+              "fr": "Es-tu fatigué ?",
+              "en": "Are you tired?",
+              "parts": [
+                [
+                  "Es",
+                  "v"
+                ],
+                [
+                  "-",
+                  "h"
+                ],
+                [
+                  "tu",
+                  "s"
+                ],
+                [
+                  "fatigué ?",
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "parts/p-raise-your-voice": {
+      "id": "p-raise-your-voice",
+      "heading": "Raise your voice",
+      "text": [
+        "In everyday speech, French speakers often keep the statement as it is and raise their voice at the end."
+      ],
+      "note": "Same words, different tone. This is how friends talk to each other.",
+      "blocks": [
+        {
+          "rise": [
+            {
+              "fr": "Tu veux un café.",
+              "en": "You want a coffee.",
+              "tone": "flat"
+            },
+            {
+              "fr": "Tu veux un café ?",
+              "en": "Do you want a coffee?",
+              "tone": "up"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "2024-01-19-stressed-pronouns": {
+    "vocabulary/c-est-pour-toi-fr": {
+      "word_id": "c-est-pour-toi-fr",
+      "fr": "c'est pour toi",
+      "gloss": "it's for you"
+    },
+    "vocabulary/il-est-avec-moi-fr": {
+      "word_id": "il-est-avec-moi-fr",
+      "fr": "il est avec moi",
+      "gloss": "he is with me"
+    }
+  },
+  "2024-01-20-prepositions": {
+    "vocabulary/c-est-derriere-la-porte-fr": {
+      "word_id": "c-est-derriere-la-porte-fr",
+      "fr": "c'est derrière la porte",
+      "gloss": "it's behind the door"
     }
   },
   "2024-01-22-reading2": {
     "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far.",
-    "title": "Reading Comprehension - {Rendez-vous en Normandie}"
+    "title": "Reading Comprehension - {Rendez-vous en Normandie}",
+    "vocabulary/en-normandie-fr": {
+      "word_id": "en-normandie-fr",
+      "fr": "en Normandie",
+      "gloss": "in Normandy"
+    },
+    "vocabulary/la-ville-fr": {
+      "word_id": "la-ville-fr",
+      "fr": "la ville",
+      "gloss": "the town / the city"
+    },
+    "vocabulary/ma-voiture-fr": {
+      "word_id": "ma-voiture-fr",
+      "fr": "ma voiture",
+      "gloss": "my car"
+    },
+    "vocabulary/mon-chien-fr": {
+      "word_id": "mon-chien-fr",
+      "fr": "mon chien",
+      "gloss": "my dog"
+    },
+    "vocabulary/sa-voiture-fr": {
+      "word_id": "sa-voiture-fr",
+      "fr": "sa voiture",
+      "gloss": "his car / her car"
+    }
   },
   "2024-01-23-common-special-forms-1": {
     "concepts": [
@@ -238,6 +581,42 @@
       "Apply this unit's vocabulary in realistic contexts"
     ],
     "description": "Complete sentences using demonstratives, questions, prepositions, and adjectives from this unit!",
+    "items/i-cette": {
+      "id": "i-cette",
+      "type": "gapfill",
+      "text": "J'ai ___ belle voiture.",
+      "blanks": [
+        {
+          "answer": "cette"
+        }
+      ],
+      "gloss": "'I have this beautiful car' (feminine)",
+      "hint": "demonstrative for feminine singular"
+    },
+    "items/i-voit": {
+      "id": "i-voit",
+      "type": "gapfill",
+      "text": "Elle ___ cette petite maison.",
+      "blanks": [
+        {
+          "answer": "voit"
+        }
+      ],
+      "gloss": "She sees this little house",
+      "hint": "voir conjugated for elle"
+    },
+    "items/i-voulons": {
+      "id": "i-voulons",
+      "type": "gapfill",
+      "text": "Nous ___ le nouveau livre.",
+      "blanks": [
+        {
+          "answer": "voulons"
+        }
+      ],
+      "gloss": "We want the new book",
+      "hint": "vouloir conjugated for nous"
+    },
     "title": "Asking & Describing Practice - Fill in the Blanks"
   },
   "2024-01-24-common-special-forms-2": {
@@ -275,6 +654,34 @@
       "hint": "elles sont + chez + Ladurée (famous macaron shop)"
     }
   },
+  "2024-01-25-contractions": {
+    "concepts": [
+      {
+        "id": "c-contractions-with-de-of",
+        "term": "Contractions with '{de}' (of/from)",
+        "definition": "de + le = du, de + les = des (but de + la stays separate!)",
+        "example": "{du chat} (of the cat), {de la maison} (of the house), {des livres} (of the books)"
+      },
+      {
+        "id": "c-contractions-with-a-to",
+        "term": "Contractions with 'à' (to/at)",
+        "definition": "à + le = au, à + les = aux (but à + la stays separate!)",
+        "example": "{au café} (at the café), {à la maison} (at the house), {aux amis} (to the friends)"
+      },
+      {
+        "id": "c-partitive-articles-some-any",
+        "term": "Partitive Articles (some/any)",
+        "definition": "Use du/de la/de l'/des to mean 'some' (unspecified quantity)",
+        "example": "{du café} (some coffee), {de la musique} (some music), {des livres} (some books)"
+      },
+      {
+        "id": "c-before-vowels",
+        "term": "Before Vowels",
+        "definition": "de + l' and à + l' before vowel sounds (no contraction needed)",
+        "example": "{de l'ami} (of the friend), {à l'hôtel} (at the hotel)"
+      }
+    ]
+  },
   "2024-01-25-emotion-phrases": {
     "vocabulary/je-suis-content-que-tu-sois-la-fr.i-m-happy": {
       "word_id": "je-suis-content-que-tu-sois-la-fr",
@@ -283,7 +690,39 @@
       "note": "⭐ welcoming someone"
     }
   },
+  "2024-01-26-venir": {
+    "vocabulary/d-ou-fr": {
+      "word_id": "d-ou-fr",
+      "fr": "d'où",
+      "gloss": "from where"
+    },
+    "vocabulary/tu-viens-me-voir-fr": {
+      "word_id": "tu-viens-me-voir-fr",
+      "fr": "tu viens me voir ?",
+      "gloss": "are you coming to see me?"
+    }
+  },
   "2024-01-27-aller": {
+    "concepts": [
+      {
+        "id": "c-aller-to-go",
+        "term": "{aller} = to go",
+        "definition": "Completely irregular verb - one of the most common in French! Essential for talking about movement and future plans.",
+        "example": "'I am going in the house' ({Je vais dans la maison}), 'I am going to see Paul' ({Je vais voir Paul})"
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "Irregular Conjugation",
+        "definition": "Every form is different - but it shouldn't be too hard to remember!",
+        "example": "{je vais}, {tu vas}, {il va}, {nous allons}, {vous allez}, {ils vont}"
+      },
+      {
+        "id": "c-composition-power",
+        "term": "Composition Power",
+        "definition": "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to come' you can say '{je vais venir}'.",
+        "example": "{je vais + ça}, {nous allons + être}, {ils vont + avoir}, {tu vas + me voir}"
+      }
+    ],
     "items/i-qu-est-ce-que-2": {
       "id": "i-qu-est-ce-que-2",
       "type": "respond",
@@ -437,7 +876,55 @@
           ]
         }
       ]
+    },
+    "parts/p-why-this-helps": {
+      "id": "p-why-this-helps",
+      "heading": "Why this helps",
+      "text": [],
+      "blocks": [
+        {
+          "list": [
+            "Different spellings often share one sound, so the forms you hear keep coming back.",
+            "{être}, {avoir} and {aller} are among the most irregular verbs in French, and you know them already.",
+            "Most verbs you meet next follow these patterns, starting with the verb in the next lesson."
+          ]
+        }
+      ]
     }
+  },
+  "2024-01-31-possessive-adjectives": {
+    "concepts": [
+      {
+        "id": "c-possessive-adjectives-overview",
+        "term": "Possessive Adjectives Overview",
+        "definition": "Words that show ownership and go directly before the noun they modify",
+        "example": "15 total forms: MY ({mon}/{ma}/{mes}), YOUR informal ({ton}/{ta}/{tes}), HIS/HER ({son}/{sa}/{ses}), OUR ({notre}/{nos}), YOUR formal ({votre}/{vos}), THEIR ({leur}/{leurs})"
+      },
+      {
+        "id": "c-critical-rule-agreement-with",
+        "term": "🔑 CRITICAL RULE: Agreement with the THING owned",
+        "definition": "The possessive adjective matches the gender/number of the THING being owned, NOT the owner",
+        "example": "Marie's book = {SON livre} (masculine '{son}' because '{livre}' is masculine, even though Marie is female). Pierre's house = {SA maison} (feminine '{sa}' because '{maison}' is feminine, even though Pierre is male)"
+      },
+      {
+        "id": "c-formal-vs-informal-your",
+        "term": "Formal vs Informal 'Your'",
+        "definition": "French has two ways to say 'your' depending on relationship and respect level",
+        "example": "INFORMAL with friends/family: {ton}/{ta}/{tes} ({ton ami}, {ta maison}, {tes livres}). FORMAL with strangers/respect: {votre}/{vos} ({votre maison}, {vos amis})"
+      },
+      {
+        "id": "c-gender-neutral-forms",
+        "term": "Gender-Neutral Forms",
+        "definition": "Some possessives don't change for masculine/feminine - only for singular/plural",
+        "example": "{NOTRE}/{NOS} (our): {notre maison}, {notre ami}, {nos enfants. VOTRE}/{VOS} (your formal): {votre livre}, {votre famille}, {vos idées. LEUR}/{LEURS} (their): {leur chat}, {leur maison}, {leurs amis}"
+      },
+      {
+        "id": "c-memory-trick-the-3",
+        "term": "Memory Trick: The 3-2-2 Pattern",
+        "definition": "Each owner has a predictable number of forms to memorize",
+        "example": "MY, YOUR (informal), HIS/HER = 3 forms each (masc/fem/plural). OUR, YOUR (formal), THEIR = 2 forms each (singular/plural only)"
+      }
+    ]
   },
   "2024-02-01-reading-10": {
     "description": "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more",
@@ -508,7 +995,12 @@
     }
   },
   "2024-02-03-reading3": {
-    "title": "Reading Comprehension - {La Première Page}"
+    "title": "Reading Comprehension - {La Première Page}",
+    "vocabulary/aujourd-hui-fr": {
+      "word_id": "aujourd-hui-fr",
+      "fr": "aujourd'hui",
+      "gloss": "today"
+    }
   },
   "2024-02-04-unit-10-exam": {
     "description": "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions.",
@@ -552,6 +1044,33 @@
       "Apply this unit's advanced structures in context"
     ],
     "description": "Master contractions, motion verbs, object pronouns, and possessive forms from this unit!",
+    "items/i-partons": {
+      "id": "i-partons",
+      "type": "gapfill",
+      "text": "Nous ___ avec Paul.",
+      "blanks": [
+        {
+          "answer": "partons"
+        }
+      ],
+      "gloss": "We leave with Paul",
+      "hint": "partir conjugated for nous"
+    },
+    "items/i-vient-du": {
+      "id": "i-vient-du",
+      "type": "gapfill",
+      "text": "Elle ___ ___ café.",
+      "blanks": [
+        {
+          "answer": "vient"
+        },
+        {
+          "answer": "du"
+        }
+      ],
+      "gloss": "'She comes from the café' (use contraction)",
+      "hint": "venir conjugated for elle / de + le = ?"
+    },
     "title": "Movement & Possession Practice - Fill in the Blanks"
   },
   "2024-02-05-unit-10-practice": {
@@ -2305,6 +2824,13 @@
       ]
     }
   },
+  "2024-03-23-devoir": {
+    "vocabulary/partir-maintenant-fr": {
+      "word_id": "partir-maintenant-fr",
+      "fr": "partir maintenant",
+      "gloss": "to leave now"
+    }
+  },
   "2024-03-23-embedded-questions": {
     "items/i-je-me-demande-comment": {
       "id": "i-je-me-demande-comment",
@@ -2583,6 +3109,21 @@
           "feedback": "After {ne … pas}, {de l'} becomes {d'}: {je ne veux pas d'eau}."
         }
       ]
+    },
+    "vocabulary/marie-habite-a-paris-fr": {
+      "word_id": "marie-habite-a-paris-fr",
+      "fr": "Marie habite à Paris",
+      "gloss": "Marie lives in Paris"
+    },
+    "vocabulary/marie-vit-a-paris-fr": {
+      "word_id": "marie-vit-a-paris-fr",
+      "fr": "Marie vit à Paris",
+      "gloss": "Marie lives in Paris"
+    },
+    "vocabulary/travailler-fr": {
+      "word_id": "travailler-fr",
+      "fr": "travailler",
+      "gloss": "to work"
     }
   },
   "2024-03-24-rhetorical-negative": {
@@ -2882,16 +3423,257 @@
       ]
     }
   },
+  "2024-03-26-location-adverbs": {
+    "concepts": [
+      {
+        "id": "c-basic-location",
+        "term": "Basic Location",
+        "definition": "ici (here) vs là (there) - pointing to places",
+        "example": "{je suis ici} (I am here), {le chat est là} (the cat is there)"
+      },
+      {
+        "id": "c-distance-with-la-bas",
+        "term": "Distance with là-bas",
+        "definition": "là-bas means 'over there' (farther away than '{là}')",
+        "example": "{le café est là-bas} (the café is over there)"
+      },
+      {
+        "id": "c-quantity-of-places",
+        "term": "Quantity of Places",
+        "definition": "partout (everywhere), quelque part (somewhere), nulle part (nowhere)",
+        "example": "Express presence or absence across locations"
+      },
+      {
+        "id": "c-position-in-sentence",
+        "term": "Position in Sentence",
+        "definition": "Usually placed AFTER the verb",
+        "example": "{je vais là} (I go there), {il est ici} (he is here), {demain, il est là-bas} (tomorrow he is over there)"
+      }
+    ]
+  },
+  "2024-03-27-negation-2": {
+    "concepts": [
+      {
+        "id": "c-negating-modal-verbs",
+        "term": "Negating Modal Verbs",
+        "definition": "Apply ne...pas to vouloir, pouvoir, aller, voir",
+        "example": "{je peux} → {je ne peux pas} (I can't), {je veux} → {je ne veux pas} (I won't/don't want)"
+      },
+      {
+        "id": "c-ne-jamais-never",
+        "term": "{ne...jamais} (never)",
+        "definition": "Replace '{pas}' with '{jamais}' to mean 'never'",
+        "example": "{je vais} → {je ne vais jamais} (I never go), {je mange toujours} → {je ne mange jamais} (I never eat)"
+      },
+      {
+        "id": "c-with-object-pronouns",
+        "term": "With Object Pronouns",
+        "definition": "Object pronouns stay inside the negation sandwich",
+        "example": "{je le veux} → {je ne le veux pas} (I don't want it)"
+      },
+      {
+        "id": "c-common-patterns",
+        "term": "Common Patterns",
+        "definition": "I can't, I won't, I never go, I don't see it - very useful!",
+        "example": "Master these patterns for real conversations"
+      }
+    ]
+  },
+  "2024-03-29-parler": {
+    "concepts": [
+      {
+        "id": "c-parler-to-speak-to",
+        "term": "{parler} = to speak / to talk",
+        "definition": "Talk about languages you speak and conversations you have",
+        "example": "{je parle français} (I speak French), {nous parlons ensemble} (we talk together)"
+      },
+      {
+        "id": "c-regular-er-verb-pattern",
+        "term": "Regular -ER Verb Pattern",
+        "definition": "This is THE standard French verb pattern - master it!",
+        "example": "Remove -er, add: -e, -{es}, -e, -ons, -ez, -ent (most verbs follow this!)"
+      },
+      {
+        "id": "c-silent-endings",
+        "term": "Silent Endings",
+        "definition": "je/tu/il/elle/ils/elles all SOUND the same! Only nous/vous are different",
+        "example": "{je parle}, {tu parles}, {il parle}, {elle parle}, {ils parlent} - all sound like 'parl'"
+      },
+      {
+        "id": "c-with-prepositions",
+        "term": "With Prepositions",
+        "definition": "Use 'à' when talking TO someone: parler à quelqu'un",
+        "example": "{je parle à Marie} (I speak to Marie)"
+      },
+      {
+        "id": "c-common-uses",
+        "term": "Common Uses",
+        "definition": "Describe languages (parler français), conversations (parler avec), topics (parler de)",
+        "example": "{je parle français maintenant} (I speak French now), {nous parlons de toi} (we talk about you)"
+      }
+    ],
+    "vocabulary/ensemble-fr": {
+      "word_id": "ensemble-fr",
+      "fr": "ensemble",
+      "gloss": "together"
+    }
+  },
   "2024-03-30-reading-4": {
     "description": "A natural conversation using all your vocabulary.",
-    "title": "Reading Comprehension - {La nouvelle époque de Marie}"
+    "items/i-travail": {
+      "id": "i-travail",
+      "type": "comprehension",
+      "question": "Why can't Marie go with Paul now?",
+      "cue": "{Je dois aller au ___}",
+      "answer": "travail",
+      "accept": [
+        "au travail",
+        "elle doit aller au travail",
+        "elle doit travailler"
+      ],
+      "hint": "Look at what Marie must do"
+    },
+    "title": "Reading Comprehension - {La nouvelle époque de Marie}",
+    "vocabulary/alors-fr": {
+      "word_id": "alors-fr",
+      "fr": "alors",
+      "gloss": "so / then"
+    },
+    "vocabulary/gentil-fr": {
+      "word_id": "gentil-fr",
+      "fr": "gentil",
+      "gloss": "kind / nice"
+    },
+    "vocabulary/la-fin-fr": {
+      "word_id": "la-fin-fr",
+      "fr": "fin",
+      "gloss": "the end"
+    },
+    "vocabulary/six-heures-fr": {
+      "word_id": "six-heures-fr",
+      "fr": "six heures",
+      "gloss": "six o'clock"
+    }
+  },
+  "2024-03-31-survival-phrases": {
+    "vocabulary/beaucoup-fr": {
+      "word_id": "beaucoup-fr",
+      "fr": "beaucoup",
+      "gloss": "a lot / very much",
+      "note": "{merci beaucoup}: thank you very much"
+    }
+  },
+  "2024-04-01-time-adverbs": {
+    "vocabulary/ici-fr": {
+      "word_id": "ici-fr",
+      "fr": "ici",
+      "gloss": "here"
+    },
+    "vocabulary/je-mange-fr": {
+      "word_id": "je-mange-fr",
+      "fr": "je mange",
+      "gloss": "I eat"
+    }
   },
   "2024-04-02-unit-4-exam": {
-    "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
+    "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place.",
+    "items/i-la-bas": {
+      "id": "i-la-bas",
+      "type": "translate",
+      "prompt": "over there",
+      "answer": "là-bas",
+      "accept": [
+        "la-bas"
+      ],
+      "hint": "Location adverb - distant place"
+    }
   },
   "2024-04-03-unit-4-practice": {
     "description": "Practice survival phrases, negation, time/location adverbs, and essential verbs from this unit!",
+    "items/i-hier": {
+      "id": "i-hier",
+      "type": "gapfill",
+      "text": "J'ai trouvé ça ___.",
+      "blanks": [
+        {
+          "answer": "hier"
+        }
+      ],
+      "gloss": "I found that yesterday",
+      "hint": "time adverb meaning 'yesterday'"
+    },
     "title": "Everyday Words Practice - Fill in the Blanks"
+  },
+  "2024-04-04-aimer": {
+    "vocabulary/j-aime-ma-mere-fr": {
+      "word_id": "j-aime-ma-mere-fr",
+      "fr": "j'aime ma mère",
+      "gloss": "I love my mother"
+    }
+  },
+  "2024-04-06-boire": {
+    "concepts": [
+      {
+        "id": "c-boire-to-drink",
+        "term": "{boire} = to drink",
+        "definition": "Essential daily verb - talk about beverages!",
+        "example": "{je bois du café} (I drink coffee), {nous buvons de l'eau} (we drink water)"
+      },
+      {
+        "id": "c-irregular-verb-changes-stem",
+        "term": "Irregular verb - changes stem!",
+        "definition": "Uses 'boi-' for singular, 'buv-' for plural forms",
+        "example": "je bois, tu bois, il boit BUT nous buvons, vous buvez, ils boivent"
+      },
+      {
+        "id": "c-passe-compose-past-tense",
+        "term": "Passé Composé (Past Tense)",
+        "definition": "Use avoir + bu to say 'drank' or 'have drunk'",
+        "example": "{j'ai bu} (I drank/have drunk), {tu as bu} (you drank), {il a bu} (he drank)"
+      },
+      {
+        "id": "c-past-participle-bu-irregular",
+        "term": "Past Participle: {bu} (irregular!)",
+        "definition": "Irregular past participle - NOT 'buvé'!",
+        "example": "{boire} → {bu} (short and irregular)"
+      },
+      {
+        "id": "c-with-drink-nouns",
+        "term": "With drink nouns",
+        "definition": "Use partitive (du/de la/de l') for some, or article for specific items",
+        "example": "{je bois du café} (I drink some coffee), {j'ai bu de l'eau} (I drank water)"
+      }
+    ],
+    "vocabulary/il-elle-a-bu-fr": {
+      "word_id": "il-elle-a-bu-fr",
+      "fr": "il/elle a bu",
+      "gloss": "he/she drank",
+      "note": "passé composé"
+    },
+    "vocabulary/ils-elles-ont-bu-fr": {
+      "word_id": "ils-elles-ont-bu-fr",
+      "fr": "ils/elles ont bu",
+      "gloss": "they drank",
+      "note": "passé composé"
+    },
+    "vocabulary/nous-avons-bu-fr": {
+      "word_id": "nous-avons-bu-fr",
+      "fr": "nous avons bu",
+      "gloss": "we drank",
+      "note": "passé composé"
+    },
+    "vocabulary/tu-as-bu-fr": {
+      "word_id": "tu-as-bu-fr",
+      "fr": "tu as bu",
+      "gloss": "you drank (informal)",
+      "note": "passé composé"
+    },
+    "vocabulary/vous-avez-bu-fr": {
+      "word_id": "vous-avez-bu-fr",
+      "fr": "vous avez bu",
+      "gloss": "you drank (formal/plural)",
+      "note": "passé composé"
+    }
   },
   "2024-04-07-comparisons-slang": {
     "concepts": [
@@ -2919,7 +3701,96 @@
         "definition": "Reversing syllables - très (very) becomes trop, fou (crazy) becomes ouf",
         "example": "{c'est ouf} = {c'est fou} (it's crazy), {chelou} = louche (weird)"
       }
-    ]
+    ],
+    "vocabulary/fou-fr": {
+      "word_id": "fou-fr",
+      "fr": "fou",
+      "gloss": "crazy"
+    }
+  },
+  "2024-04-08-comparisons": {
+    "vocabulary/cher-fr": {
+      "word_id": "cher-fr",
+      "fr": "cher",
+      "gloss": "expensive"
+    }
+  },
+  "2024-04-09-conditionals": {
+    "vocabulary/tu-pourrais-m-aider-fr": {
+      "word_id": "tu-pourrais-m-aider-fr",
+      "fr": "tu pourrais m'aider ?",
+      "gloss": "could you help me?"
+    }
+  },
+  "2024-04-12-manger": {
+    "concepts": [
+      {
+        "id": "c-manger-to-eat",
+        "term": "{manger} = to eat",
+        "definition": "Essential daily verb - talk about meals and food!",
+        "example": "{je mange du pain} (I eat bread), {nous mangeons ensemble} (we eat together)"
+      },
+      {
+        "id": "c-regular-er-verb",
+        "term": "Regular -ER verb",
+        "definition": "Follows same pattern as parler and aimer",
+        "example": "{je mange}, {tu manges}, {il mange}, {nous mangeons}, {vous mangez}, {ils mangent}"
+      },
+      {
+        "id": "c-passe-compose-past-tense",
+        "term": "Passé Composé (Past Tense)",
+        "definition": "Use avoir + mangé to say 'ate' or 'have eaten'",
+        "example": "{j'ai mangé} (I ate/have eaten), {tu as mangé} (you ate), {il a mangé} (he ate)"
+      },
+      {
+        "id": "c-past-participle-mange",
+        "term": "Past Participle: {mangé}",
+        "definition": "For -ER verbs, past participle is -é",
+        "example": "{manger} → {mangé}, {parler} → {parlé}, {aimer} → {aimé}"
+      },
+      {
+        "id": "c-with-food-nouns",
+        "term": "With food nouns",
+        "definition": "Use partitive (du/de la/des) for some, or article for specific items",
+        "example": "{je mange du pain} (I eat some bread), {je mange une pomme} (I eat an apple)"
+      }
+    ],
+    "vocabulary/il-elle-a-mange-fr": {
+      "word_id": "il-elle-a-mange-fr",
+      "fr": "il/elle a mangé",
+      "gloss": "he/she ate",
+      "note": "passé composé"
+    },
+    "vocabulary/ils-elles-ont-mange-fr": {
+      "word_id": "ils-elles-ont-mange-fr",
+      "fr": "ils/elles ont mangé",
+      "gloss": "they ate",
+      "note": "passé composé"
+    },
+    "vocabulary/j-ai-mange-fr": {
+      "word_id": "j-ai-mange-fr",
+      "fr": "j'ai mangé",
+      "gloss": "I ate / I have eaten",
+      "note": "passé composé: {avoir} + {mangé}"
+    },
+    "vocabulary/nous-avons-mange-fr": {
+      "word_id": "nous-avons-mange-fr",
+      "fr": "nous avons mangé",
+      "gloss": "we ate",
+      "note": "passé composé"
+    },
+    "vocabulary/tu-as-mange-fr": {
+      "word_id": "tu-as-mange-fr",
+      "fr": "tu as mangé",
+      "gloss": "you ate (informal)",
+      "note": "passé composé"
+    },
+    "vocabulary/vous-avez-mange-fr": {
+      "word_id": "vous-avez-mange-fr",
+      "fr": "vous avez mangé",
+      "gloss": "you ate (formal/plural)",
+      "note": "passé composé"
+    }
   },
   "2024-04-13-reading-5": {
     "description": "A story about Vincent van Gogh painting his famous 'Café Terrace at Night' in Arles with Paul Gauguin.",
@@ -2938,6 +3809,11 @@
       "word_id": "appeler-fr",
       "fr": "appeler",
       "gloss": "to call"
+    },
+    "vocabulary/autour-du-cafe-fr": {
+      "word_id": "autour-du-cafe-fr",
+      "fr": "autour du café",
+      "gloss": "around the café"
     },
     "vocabulary/boire-fr": {
       "word_id": "boire-fr",
@@ -2965,6 +3841,57 @@
       "fr": "faire",
       "gloss": "to do/make"
     },
+    "vocabulary/il-apporte-fr": {
+      "word_id": "il-apporte-fr",
+      "fr": "il apporte",
+      "gloss": "he brings"
+    },
+    "vocabulary/il-demande-fr": {
+      "word_id": "il-demande-fr",
+      "fr": "il demande",
+      "gloss": "he asks"
+    },
+    "vocabulary/il-regarde-fr": {
+      "word_id": "il-regarde-fr",
+      "fr": "il regarde",
+      "gloss": "he looks / he looks at"
+    },
+    "vocabulary/il-sourit-fr": {
+      "word_id": "il-sourit-fr",
+      "fr": "il sourit",
+      "gloss": "he smiles"
+    },
+    "vocabulary/ils-se-retrouvent-fr": {
+      "word_id": "ils-se-retrouvent-fr",
+      "fr": "ils se retrouvent",
+      "gloss": "they meet up"
+    },
+    "vocabulary/je-l-appelle-fr": {
+      "word_id": "je-l-appelle-fr",
+      "fr": "je l'appelle",
+      "gloss": "I call it"
+    },
+    "vocabulary/les-gens-fr": {
+      "word_id": "les-gens-fr",
+      "fr": "les gens",
+      "gloss": "people"
+    },
+    "vocabulary/mes-peintures-fr": {
+      "word_id": "mes-peintures-fr",
+      "fr": "mes peintures",
+      "gloss": "my paints / my paintings"
+    },
+    "vocabulary/nous-avons-mange-fr": {
+      "word_id": "nous-avons-mange-fr",
+      "fr": "nous avons mangé",
+      "gloss": "we ate",
+      "note": "passé composé"
+    },
+    "vocabulary/on-dit-fr": {
+      "word_id": "on-dit-fr",
+      "fr": "on dit",
+      "gloss": "people say"
+    },
     "vocabulary/parler-fr": {
       "word_id": "parler-fr",
       "fr": "parler",
@@ -2974,6 +3901,11 @@
       "word_id": "partir-fr",
       "fr": "partir",
       "gloss": "to leave"
+    },
+    "vocabulary/plus-tard-fr": {
+      "word_id": "plus-tard-fr",
+      "fr": "plus tard",
+      "gloss": "later"
     },
     "vocabulary/venir-fr": {
       "word_id": "venir-fr",
@@ -3002,6 +3934,23 @@
     ],
     "description": "Complete sentences using comparisons, past tense, conditionals, and food vocabulary from this unit!",
     "title": "Time & Taste Practice - Fill in the Blanks"
+  },
+  "2024-04-17-besoin": {
+    "vocabulary/j-ai-besoin-de-dormir-fr": {
+      "word_id": "j-ai-besoin-de-dormir-fr",
+      "fr": "j'ai besoin de dormir",
+      "gloss": "I need to sleep"
+    },
+    "vocabulary/l-espace-fr": {
+      "word_id": "l-espace-fr",
+      "fr": "l'espace",
+      "gloss": "space"
+    },
+    "vocabulary/le-sommeil-fr": {
+      "word_id": "le-sommeil-fr",
+      "fr": "le sommeil",
+      "gloss": "sleep"
+    }
   },
   "2024-04-18-commander": {
     "concepts": [
@@ -3036,11 +3985,168 @@
         "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
       }
     ],
+    "vocabulary/par-telephone-fr": {
+      "word_id": "par-telephone-fr",
+      "fr": "par téléphone",
+      "gloss": "by phone"
+    },
     "vocabulary/vous-commandez-fr.question": {
       "word_id": "vous-commandez-fr.are-you-ready",
       "fr": "vous commandez?",
       "gloss": "are you ready to order?",
       "note": "waiter's question"
+    }
+  },
+  "2024-04-19-demander": {
+    "vocabulary/demander-a-ton-pere-fr": {
+      "word_id": "demander-a-ton-pere-fr",
+      "fr": "demander à ton père",
+      "gloss": "to ask your father"
+    },
+    "vocabulary/demander-d-attendre-fr": {
+      "word_id": "demander-d-attendre-fr",
+      "fr": "demander d'attendre",
+      "gloss": "to ask someone to wait"
+    }
+  },
+  "2024-04-20-dire": {
+    "vocabulary/c-est-une-histoire-fr": {
+      "word_id": "c-est-une-histoire-fr",
+      "fr": "c'est une histoire",
+      "gloss": "it's a story"
+    },
+    "vocabulary/c-est-vrai-fr": {
+      "word_id": "c-est-vrai-fr",
+      "fr": "c'est vrai",
+      "gloss": "that's true"
+    },
+    "vocabulary/dire-la-verite-fr": {
+      "word_id": "dire-la-verite-fr",
+      "fr": "dire la vérité",
+      "gloss": "to tell the truth"
+    }
+  },
+  "2024-04-21-mettre": {
+    "concepts": [
+      {
+        "id": "c-mettre-to-put-to",
+        "term": "{mettre} = to put / to set / to wear",
+        "definition": "Versatile verb - put things somewhere, set the table, put on clothes",
+        "example": "{je mets le livre sur la table} (I put the book on the table), {je mets un pantalon} (I put on pants)"
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "Irregular conjugation",
+        "definition": "Present tense: je mets, tu mets, il met, nous mettons, vous mettez, ils mettent",
+        "example": "Notice: singular has single 't', plural has double 'tt'"
+      },
+      {
+        "id": "c-mettre-la-table",
+        "term": "{mettre la table}",
+        "definition": "Common expression meaning 'to set the table'",
+        "example": "{je mets la table} (I set the table), {tu peux mettre la table?} (can you set the table?)"
+      },
+      {
+        "id": "c-mettre-clothing",
+        "term": "mettre + clothing",
+        "definition": "Use mettre to say you're putting on or wearing clothes",
+        "example": "{je mets un manteau} (I put on a coat), {qu'est-ce que tu mets?} (what are you wearing?)"
+      },
+      {
+        "id": "c-other-common-uses",
+        "term": "Other common uses",
+        "definition": "mettre du temps (to take time), se mettre à (to start doing something)",
+        "example": "{ça met deux heures} (it takes two hours, like {ça prend deux heures}), {je me mets à travailler} (I start working), {je me mets à apprendre le français} (I start learning French)"
+      }
+    ],
+    "vocabulary/j-ai-mis-fr": {
+      "word_id": "j-ai-mis-fr",
+      "fr": "j'ai mis",
+      "gloss": "I put / I put on"
+    },
+    "vocabulary/mettre-ses-chaussures-fr": {
+      "word_id": "mettre-ses-chaussures-fr",
+      "fr": "mettre ses chaussures",
+      "gloss": "to put on your shoes"
+    },
+    "vocabulary/mettre-une-chemise-fr": {
+      "word_id": "mettre-une-chemise-fr",
+      "fr": "mettre une chemise",
+      "gloss": "to put on a shirt"
+    }
+  },
+  "2024-04-22-prendre": {
+    "vocabulary/elle-apprend-fr": {
+      "word_id": "elle-apprend-fr",
+      "fr": "elle apprend",
+      "gloss": "she learns"
+    },
+    "vocabulary/il-comprend-fr": {
+      "word_id": "il-comprend-fr",
+      "fr": "il comprend",
+      "gloss": "he understands"
+    },
+    "vocabulary/ils-comprennent-fr": {
+      "word_id": "ils-comprennent-fr",
+      "fr": "ils comprennent",
+      "gloss": "they understand"
+    },
+    "vocabulary/j-ai-appris-fr": {
+      "word_id": "j-ai-appris-fr",
+      "fr": "j'ai appris",
+      "gloss": "I learned"
+    },
+    "vocabulary/j-ai-pris-fr": {
+      "word_id": "j-ai-pris-fr",
+      "fr": "j'ai pris",
+      "gloss": "I took"
+    },
+    "vocabulary/l-anglais-fr": {
+      "word_id": "l-anglais-fr",
+      "fr": "l'anglais",
+      "gloss": "English (the language)"
+    },
+    "vocabulary/nous-apprenons-fr": {
+      "word_id": "nous-apprenons-fr",
+      "fr": "nous apprenons",
+      "gloss": "we learn"
+    },
+    "vocabulary/nous-comprenons-fr": {
+      "word_id": "nous-comprenons-fr",
+      "fr": "nous comprenons",
+      "gloss": "we understand"
+    },
+    "vocabulary/vite-fr": {
+      "word_id": "vite-fr",
+      "fr": "vite",
+      "gloss": "quickly / fast"
+    }
+  },
+  "2024-04-23-progressive-tenses": {
+    "vocabulary/il-fera-fr": {
+      "word_id": "il-fera-fr",
+      "fr": "il fera",
+      "gloss": "he will do / he will make"
+    },
+    "vocabulary/j-allais-fr": {
+      "word_id": "j-allais-fr",
+      "fr": "j'allais",
+      "gloss": "I was going"
+    },
+    "vocabulary/j-irai-fr": {
+      "word_id": "j-irai-fr",
+      "fr": "j'irai",
+      "gloss": "I will go"
+    },
+    "vocabulary/nous-pourrons-fr": {
+      "word_id": "nous-pourrons-fr",
+      "fr": "nous pourrons",
+      "gloss": "we will be able to"
+    },
+    "vocabulary/nous-viendrons-fr": {
+      "word_id": "nous-viendrons-fr",
+      "fr": "nous viendrons",
+      "gloss": "we will come"
     }
   },
   "2024-04-24-reading-6": {
@@ -3190,7 +4296,12 @@
         "definition": "Some nouns have irregular plurals: œil → yeux (eye → eyes)",
         "example": "{un œil} (one eye), {les yeux} (the eyes - irregular!)"
       }
-    ]
+    ],
+    "vocabulary/c-est-une-longue-histoire-fr": {
+      "word_id": "c-est-une-longue-histoire-fr",
+      "fr": "c'est une longue histoire",
+      "gloss": "it's a long story"
+    }
   },
   "2024-04-26-unit-6-exam": {
     "description": "Test everything from this unit! Progressive tenses, future forms, communication verbs, and essential vocabulary."
@@ -3796,6 +4907,30 @@
     "description": "Complete sentences using causal words, spatial prepositions, and past tenses from this unit!",
     "title": "Discourse & Past Tense Practice - Fill in the Blanks"
   },
+  "2024-10-21-cognates-help": {
+    "parts/p-keep-the-article": {
+      "id": "p-keep-the-article",
+      "heading": "Keep the article",
+      "text": [
+        "Every French noun is masculine or feminine, so learn each cognate with its article, {un} or {une}. French does not drop the article the way English does in “Coffee is good”."
+      ],
+      "note": "Every time you recognize a cognate, you add a French word without studying it.",
+      "blocks": [
+        {
+          "lines": [
+            [
+              "J'ai un café.",
+              "I have a coffee."
+            ],
+            [
+              "Le café est bon.",
+              "Coffee is good."
+            ]
+          ]
+        }
+      ]
+    }
+  },
   "2024-10-22-donner": {
     "concepts": [
       {
@@ -3898,6 +5033,39 @@
       "fr": "rien",
       "gloss": "nothing",
       "note": "with {ne}: {je ne vois rien}"
+    }
+  },
+  "2024-10-22-search-find": {
+    "concepts": [
+      {
+        "id": "c-chercher-to-search-look",
+        "term": "{chercher} - to search/look for",
+        "definition": "Active searching - when you're looking for something but haven't found it yet",
+        "example": "{je cherche mon livre} (I'm looking for my book), {tu cherches quoi?} (what are you looking for?)"
+      },
+      {
+        "id": "c-trouver-to-find",
+        "term": "{trouver} - to find",
+        "definition": "Successfully locating something - the result of searching",
+        "example": "{j'ai trouvé!} (I found it!), {tu trouves ça où?} (where do you find that?)"
+      },
+      {
+        "id": "c-common-usage-patterns",
+        "term": "Common Usage Patterns",
+        "definition": "These verbs are used constantly in daily French conversation",
+        "example": "je cherche + noun (I'm looking for...), je trouve + noun (I find...)"
+      },
+      {
+        "id": "c-with-prepositions",
+        "term": "With Prepositions",
+        "definition": "chercher takes direct objects, trouver can use various prepositions",
+        "example": "{je cherche le livre} (I'm looking for the book), {je trouve dans la maison} (I find in the house)"
+      }
+    ],
+    "vocabulary/j-ai-trouve-fr": {
+      "word_id": "j-ai-trouve-fr",
+      "fr": "j'ai trouvé",
+      "gloss": "I found / I have found"
     }
   },
   "2026-11-24-negation-guide": {

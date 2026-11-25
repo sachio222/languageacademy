@@ -245,8 +245,12 @@ test('every module file declares what the course map says it teaches and tests',
 });
 
 // Corrections added by hand after the split (Task 10 fix round 1): reading tables that list a noun spelled like a
-// verb form exclude the verb, so the noun is credited.
+// verb form exclude the verb, so the noun is credited. C4: two tables before Object Pronouns that now list a la + noun
+// phrase exclude the object pronoun le, so the article does not teach it.
+const LE_PRONOUN = ['fr:lex:le.pronoun', 'fr:form:le.pronoun.f', 'fr:form:le.pronoun.pl', 'fr:form:le.pronoun.elided'];
 const ADDED_AFTER_SPLIT = {
+  '2024-01-20-prepositions': LE_PRONOUN,
+  '2024-01-22-reading2': LE_PRONOUN,
   '2024-05-20-reading-8': ['fr:lex:cuisiner'],
   '2024-06-05-reading-9': ['fr:lex:cuisiner', 'fr:lex:rencontrer', 'fr:lex:sortir'],
 };

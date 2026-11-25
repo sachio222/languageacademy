@@ -53,6 +53,11 @@
       "note": "feminine (maison)"
     },
     {
+      "word_id": "c-est-fr",
+      "fr": "c'est",
+      "gloss": "it is / this is"
+    },
+    {
       "word_id": "une-voiture-fr",
       "fr": "une voiture",
       "gloss": "a car",

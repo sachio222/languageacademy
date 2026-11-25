@@ -105,8 +105,10 @@ test('reading table teaches', async () => {
   const { ctx, issues } = await runCheck({ repoRoot, lang: 'fr' });
   const r6 = ctx.course.find((m) => m.moduleKey === '2024-04-24-reading-6');
   assert.equal(r6.kind, 'reading');
-  assert.equal(ctx.timeline.taughtAt.get('fr:lex:beaucoup'), r6.position);
-  assert.ok(!issues.some((i) => i.rule === 'untaught-word' && i.moduleKey === r6.moduleKey && i.nodeId === 'fr:lex:beaucoup'));
+  // semaine: no lesson teaches it before Reading 6, whose table does (beaucoup was the example until Survival
+  // Phrases taught it for merci beaucoup, C4)
+  assert.equal(ctx.timeline.taughtAt.get('fr:lex:semaine'), r6.position);
+  assert.ok(!issues.some((i) => i.rule === 'untaught-word' && i.moduleKey === r6.moduleKey && i.nodeId === 'fr:lex:semaine'));
 
   // In the mini reading: vélo is in the passage, in no table and taught nowhere earlier; chat is in the table.
   const mini = miniCourse((modules) => {

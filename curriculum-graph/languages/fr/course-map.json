@@ -79,7 +79,19 @@
     "excludeWords": [
       "fr:lex:devoir",
       "fr:form:devoir.prsptcp",
-      "fr:lex:entrer"
+      "fr:lex:entrer",
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
+    ]
+  },
+  "2024-01-22-reading2": {
+    "excludeWords": [
+      "fr:lex:le.pronoun",
+      "fr:form:le.pronoun.f",
+      "fr:form:le.pronoun.pl",
+      "fr:form:le.pronoun.elided"
     ]
   },
   "2024-01-25-contractions": {

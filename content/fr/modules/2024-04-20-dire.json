@@ -66,6 +66,11 @@
       "note": "introduce what someone says"
     },
     {
+      "word_id": "dire-la-verite-fr",
+      "fr": "dire la vérité",
+      "gloss": "to tell the truth"
+    },
+    {
       "word_id": "dire-a-quelqu-un-fr",
       "fr": "dire à quelqu'un",
       "gloss": "to tell someone",
@@ -100,6 +105,16 @@
       "fr": "comme on dit",
       "gloss": "as they say",
       "note": "common expression"
+    },
+    {
+      "word_id": "c-est-une-histoire-fr",
+      "fr": "c'est une histoire",
+      "gloss": "it's a story"
+    },
+    {
+      "word_id": "c-est-vrai-fr",
+      "fr": "c'est vrai",
+      "gloss": "that's true"
     }
   ],
   "concepts": [

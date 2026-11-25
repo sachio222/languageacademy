@@ -90,6 +90,31 @@
       "fr": "je ne ferai pas",
       "gloss": "I won't do",
       "note": "negative future tense"
+    },
+    {
+      "word_id": "nous-viendrons-fr",
+      "fr": "nous viendrons",
+      "gloss": "we will come"
+    },
+    {
+      "word_id": "j-irai-fr",
+      "fr": "j'irai",
+      "gloss": "I will go"
+    },
+    {
+      "word_id": "il-fera-fr",
+      "fr": "il fera",
+      "gloss": "he will do / he will make"
+    },
+    {
+      "word_id": "j-allais-fr",
+      "fr": "j'allais",
+      "gloss": "I was going"
+    },
+    {
+      "word_id": "nous-pourrons-fr",
+      "fr": "nous pourrons",
+      "gloss": "we will be able to"
     }
   ],
   "concepts": [

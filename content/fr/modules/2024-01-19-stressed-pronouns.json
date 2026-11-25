@@ -63,6 +63,16 @@
       "fr": "elles",
       "gloss": "them (stressed, feminine)",
       "note": "same as subject pronoun"
+    },
+    {
+      "word_id": "il-est-avec-moi-fr",
+      "fr": "il est avec moi",
+      "gloss": "he is with me"
+    },
+    {
+      "word_id": "c-est-pour-toi-fr",
+      "fr": "c'est pour toi",
+      "gloss": "it's for you"
     }
   ],
   "concepts": [

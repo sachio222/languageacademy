@@ -48,9 +48,10 @@ test('a limited run carries the other modules’ records and hand fixes forward'
   assert.deepEqual(read('legacy/migration-sources.json')[KEY], before.record);
   assert.deepEqual(read('legacy/hand-fixes.json')[KEY], before.fixes);
 
-  // The full run that follows takes L's change, as a source change, not a hand fix.
+  // The full run that follows takes L's change, as a source change, not a hand fix: the guide's hand fixes (one
+  // part, since C4) stay exactly as they were.
   run();
   const guide = read(`modules/${KEY}.json`);
   assert.equal(guide.parts[1].note, 'L rewrote this note.');
-  assert.equal(read('legacy/hand-fixes.json')[KEY], undefined);
+  assert.deepEqual(read('legacy/hand-fixes.json')[KEY], before.fixes);
 });

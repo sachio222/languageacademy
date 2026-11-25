@@ -6,12 +6,12 @@
     "function-unreachable": 1,
     "level-order": 37,
     "reading_word_no_popup": 10,
-    "reuse-missed": 682,
+    "reuse-missed": 678,
     "taught-twice": 139,
     "translate-item": 841,
-    "unknown-word": 85,
-    "untaught-construction": 75,
-    "untaught-word": 329
+    "unknown-word": 82,
+    "untaught-construction": 73,
+    "untaught-word": 175
   },
   "new": {}
 }

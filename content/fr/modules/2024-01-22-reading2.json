@@ -11,7 +11,33 @@
     "Comprehend French at a conversational level"
   ],
   "story_id": "reading2",
-  "vocabulary": [],
+  "vocabulary": [
+    {
+      "word_id": "mon-chien-fr",
+      "fr": "mon chien",
+      "gloss": "my dog"
+    },
+    {
+      "word_id": "ma-voiture-fr",
+      "fr": "ma voiture",
+      "gloss": "my car"
+    },
+    {
+      "word_id": "sa-voiture-fr",
+      "fr": "sa voiture",
+      "gloss": "his car / her car"
+    },
+    {
+      "word_id": "en-normandie-fr",
+      "fr": "en Normandie",
+      "gloss": "in Normandy"
+    },
+    {
+      "word_id": "la-ville-fr",
+      "fr": "la ville",
+      "gloss": "the town / the city"
+    }
+  ],
   "passage": [
     {
       "id": "b-bonjour-sophie-comment-ca",
@@ -235,10 +261,6 @@
     {
       "fr": "de vieilles",
       "en": "old"
-    },
-    {
-      "fr": "la ville",
-      "en": "the town, the city"
     },
     {
       "fr": "tu veux",

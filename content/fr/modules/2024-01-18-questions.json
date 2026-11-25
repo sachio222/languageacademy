@@ -66,6 +66,11 @@
       "note": "ask about quantity/price"
     },
     {
+      "word_id": "combien-de-fr",
+      "fr": "combien de",
+      "gloss": "how many / how much"
+    },
+    {
       "word_id": "quel-quelle-fr",
       "fr": "quel/quelle",
       "gloss": "which/what",
@@ -149,7 +154,7 @@
       "id": "c-que-vs-quoi-both",
       "term": "Que vs Quoi (both mean 'what')",
       "definition": "'{Que}' starts questions, '{quoi}' ends them or stands alone",
-      "example": "{Que fais-tu?} (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)"
+      "example": "{Que veux-tu?} (what do you want?) vs {Tu veux quoi?} (you want what?) vs {Quoi?} (what?!)"
     },
     {
       "id": "c-common-question-phrases-memorize",

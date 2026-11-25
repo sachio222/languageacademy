@@ -321,6 +321,26 @@
       "fr": "manger",
       "gloss": "to eat",
       "note": "verb"
+    },
+    {
+      "word_id": "alors-fr",
+      "fr": "alors",
+      "gloss": "so / then"
+    },
+    {
+      "word_id": "gentil-fr",
+      "fr": "gentil",
+      "gloss": "kind / nice"
+    },
+    {
+      "word_id": "six-heures-fr",
+      "fr": "six heures",
+      "gloss": "six o'clock"
+    },
+    {
+      "word_id": "la-fin-fr",
+      "fr": "fin",
+      "gloss": "the end"
     }
   ],
   "passage": [
@@ -646,10 +666,6 @@
     {
       "fr": "ça va",
       "en": "OK, that's fine"
-    },
-    {
-      "fr": "six heures",
-      "en": "six o'clock"
     },
     {
       "fr": "quel café",
@@ -978,6 +994,19 @@
         "bonsoir paul"
       ],
       "hint": "Evening greeting"
+    },
+    {
+      "id": "i-travail",
+      "type": "comprehension",
+      "question": "Why can't Marie go with Paul now?",
+      "cue": "{Je dois aller au ___}",
+      "answer": "travail",
+      "accept": [
+        "au travail",
+        "elle doit aller au travail",
+        "elle doit travailler"
+      ],
+      "hint": "Look at what Marie must do"
     }
   ]
 }

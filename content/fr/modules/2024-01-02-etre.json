@@ -64,6 +64,11 @@
       "fr": "elles sont",
       "gloss": "they are (feminine)",
       "note": "all feminine"
+    },
+    {
+      "word_id": "heureux-fr",
+      "fr": "heureux",
+      "gloss": "happy"
     }
   ],
   "concepts": [
@@ -82,8 +87,8 @@
     {
       "id": "c-practical-usage",
       "term": "Practical Usage",
-      "definition": "Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"",
-      "example": "{Je suis heureux} (I am happy), {Je suis étudiant} (I am a student), {Je suis à Paris} (I am in Paris)"
+      "definition": "Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".",
+      "example": "{Je suis heureux} (I am happy), {Je suis Paul} (I am Paul), {Il est bon} (it is good)"
     }
   ],
   "tables": [

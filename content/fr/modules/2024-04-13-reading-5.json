@@ -70,7 +70,7 @@
       "word_id": "nous-avons-mange-fr",
       "fr": "nous avons mangé",
       "gloss": "we ate",
-      "note": "{passé composé}"
+      "note": "passé composé"
     },
     {
       "word_id": "hier-fr",
@@ -233,6 +233,61 @@
       "fr": "encore",
       "gloss": "more / again",
       "note": "adverb"
+    },
+    {
+      "word_id": "les-gens-fr",
+      "fr": "les gens",
+      "gloss": "people"
+    },
+    {
+      "word_id": "ils-se-retrouvent-fr",
+      "fr": "ils se retrouvent",
+      "gloss": "they meet up"
+    },
+    {
+      "word_id": "on-dit-fr",
+      "fr": "on dit",
+      "gloss": "people say"
+    },
+    {
+      "word_id": "il-demande-fr",
+      "fr": "il demande",
+      "gloss": "he asks"
+    },
+    {
+      "word_id": "il-regarde-fr",
+      "fr": "il regarde",
+      "gloss": "he looks / he looks at"
+    },
+    {
+      "word_id": "autour-du-cafe-fr",
+      "fr": "autour du café",
+      "gloss": "around the café"
+    },
+    {
+      "word_id": "mes-peintures-fr",
+      "fr": "mes peintures",
+      "gloss": "my paints / my paintings"
+    },
+    {
+      "word_id": "plus-tard-fr",
+      "fr": "plus tard",
+      "gloss": "later"
+    },
+    {
+      "word_id": "je-l-appelle-fr",
+      "fr": "je l'appelle",
+      "gloss": "I call it"
+    },
+    {
+      "word_id": "il-apporte-fr",
+      "fr": "il apporte",
+      "gloss": "he brings"
+    },
+    {
+      "word_id": "il-sourit-fr",
+      "fr": "il sourit",
+      "gloss": "he smiles"
     }
   ],
   "passage": [

@@ -287,9 +287,7 @@
       "prompt": "over there",
       "answer": "là-bas",
       "accept": [
-        "là bas",
-        "la-bas",
-        "la bas"
+        "la-bas"
       ],
       "hint": "Location adverb - distant place"
     },

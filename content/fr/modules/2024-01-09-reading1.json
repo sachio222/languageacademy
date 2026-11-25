@@ -11,7 +11,13 @@
     "Comprehend French stories and basic conversations"
   ],
   "story_id": "reading1",
-  "vocabulary": [],
+  "vocabulary": [
+    {
+      "word_id": "bons-fr",
+      "fr": "bons",
+      "gloss": "good (plural)"
+    }
+  ],
   "passage": [
     {
       "id": "b-bonjour-je-suis-paul",

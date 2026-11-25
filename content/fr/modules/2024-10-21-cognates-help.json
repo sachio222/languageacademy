@@ -231,19 +231,19 @@
       "id": "p-keep-the-article",
       "heading": "Keep the article",
       "text": [
-        "Every French noun is masculine or feminine, so learn each cognate with its article, {un} or {une}. French does not drop the article the way English does in “I want coffee”."
+        "Every French noun is masculine or feminine, so learn each cognate with its article, {un} or {une}. French does not drop the article the way English does in “Coffee is good”."
       ],
       "note": "Every time you recognize a cognate, you add a French word without studying it.",
       "blocks": [
         {
           "lines": [
             [
-              "Je veux un café.",
-              "I want a coffee."
+              "J'ai un café.",
+              "I have a coffee."
             ],
             [
-              "Je veux du café.",
-              "I want some coffee."
+              "Le café est bon.",
+              "Coffee is good."
             ]
           ]
         }

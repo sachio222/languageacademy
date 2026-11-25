@@ -123,6 +123,16 @@
       "fr": "elles reviennent",
       "gloss": "they come back (fem)",
       "note": "double n!"
+    },
+    {
+      "word_id": "d-ou-fr",
+      "fr": "d'où",
+      "gloss": "from where"
+    },
+    {
+      "word_id": "tu-viens-me-voir-fr",
+      "fr": "tu viens me voir ?",
+      "gloss": "are you coming to see me?"
     }
   ],
   "concepts": [

@@ -62,13 +62,13 @@
     {
       "id": "i-partons",
       "type": "gapfill",
-      "text": "Nous ___ demain.",
+      "text": "Nous ___ avec Paul.",
       "blanks": [
         {
           "answer": "partons"
         }
       ],
-      "gloss": "We leave tomorrow",
+      "gloss": "We leave with Paul",
       "hint": "partir conjugated for nous"
     },
     {
@@ -188,7 +188,7 @@
     {
       "id": "i-vient-du",
       "type": "gapfill",
-      "text": "Elle ___ ___ magasin.",
+      "text": "Elle ___ ___ café.",
       "blanks": [
         {
           "answer": "vient"
@@ -197,7 +197,7 @@
           "answer": "du"
         }
       ],
-      "gloss": "'She comes from the store' (use contraction)",
+      "gloss": "'She comes from the café' (use contraction)",
       "hint": "venir conjugated for elle / de + le = ?"
     },
     {

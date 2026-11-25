@@ -57,9 +57,11 @@ test('the negation guide shows nothing untaught and teaches de only inside pas d
   const key = '2026-11-24-negation-guide';
   assert.deepEqual(issues.filter((i) => i.moduleKey === key && i.rule.startsWith('untaught-')).map((i) => i.message), []);
   assert.ok(!(ctx.graph.courseMap[key].teachesWordsManual ?? []).includes('fr:lex:de'));
-  // the preposition de stays untaught until the prepositions lesson: "combien … de livres", "d'où viens-tu"
+  // the preposition de is taught where a lesson first uses it, never by the guide: the questions lesson teaches
+  // "combien de" (for "combien … de livres") and venir teaches "d'où" (C4)
   const de = issues.filter((i) => i.rule === 'untaught-word' && i.nodeId === 'fr:lex:de').map((i) => i.moduleKey);
-  for (const moduleKey of ['2024-01-18-questions', '2024-01-26-venir']) assert.ok(de.includes(moduleKey), moduleKey);
+  for (const moduleKey of ['2024-01-18-questions', '2024-01-26-venir']) assert.ok(!de.includes(moduleKey), moduleKey);
+  assert.equal(ctx.timeline.taughtAt.get('fr:lex:de'), ctx.course.find((m) => m.moduleKey === '2024-01-18-questions').position);
 });
 
 test('the numbers lesson opens Unit 2, teaches 0 to 100 and the word ans, and shows nothing untaught', async () => {

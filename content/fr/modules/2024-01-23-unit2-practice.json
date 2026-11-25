@@ -26,13 +26,13 @@
     {
       "id": "i-cette",
       "type": "gapfill",
-      "text": "J'ai ___ voiture.",
+      "text": "J'ai ___ belle voiture.",
       "blanks": [
         {
           "answer": "cette"
         }
       ],
-      "gloss": "'I have this car' (feminine)",
+      "gloss": "'I have this beautiful car' (feminine)",
       "hint": "demonstrative for feminine singular"
     },
     {
@@ -209,25 +209,25 @@
     {
       "id": "i-voulons",
       "type": "gapfill",
-      "text": "Nous ___ le livre.",
+      "text": "Nous ___ le nouveau livre.",
       "blanks": [
         {
           "answer": "voulons"
         }
       ],
-      "gloss": "We want the book",
+      "gloss": "We want the new book",
       "hint": "vouloir conjugated for nous"
     },
     {
       "id": "i-voit",
       "type": "gapfill",
-      "text": "Elle ___ cette maison.",
+      "text": "Elle ___ cette petite maison.",
       "blanks": [
         {
           "answer": "voit"
         }
       ],
-      "gloss": "She sees this house",
+      "gloss": "She sees this little house",
       "hint": "voir conjugated for elle"
     },
     {

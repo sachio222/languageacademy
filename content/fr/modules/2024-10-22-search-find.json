@@ -94,6 +94,11 @@
       "fr": "ils/elles trouvent",
       "gloss": "they find",
       "note": "present tense"
+    },
+    {
+      "word_id": "j-ai-trouve-fr",
+      "fr": "j'ai trouvé",
+      "gloss": "I found / I have found"
     }
   ],
   "concepts": [
@@ -101,7 +106,7 @@
       "id": "c-chercher-to-search-look",
       "term": "{chercher} - to search/look for",
       "definition": "Active searching - when you're looking for something but haven't found it yet",
-      "example": "{je cherche mes clés} (I'm looking for my keys), {tu cherches quoi?} (what are you looking for?)"
+      "example": "{je cherche mon livre} (I'm looking for my book), {tu cherches quoi?} (what are you looking for?)"
     },
     {
       "id": "c-trouver-to-find",

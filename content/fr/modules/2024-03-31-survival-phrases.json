@@ -90,6 +90,12 @@
       "fr": "pardon",
       "gloss": "pardon/sorry",
       "note": "apology"
+    },
+    {
+      "word_id": "beaucoup-fr",
+      "fr": "beaucoup",
+      "gloss": "a lot / very much",
+      "note": "{merci beaucoup}: thank you very much"
     }
   ],
   "concepts": [

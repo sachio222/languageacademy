@@ -101,13 +101,13 @@
     {
       "id": "i-hier",
       "type": "gapfill",
-      "text": "Tu as vu ça ___.",
+      "text": "J'ai trouvé ça ___.",
       "blanks": [
         {
           "answer": "hier"
         }
       ],
-      "gloss": "You saw that yesterday",
+      "gloss": "I found that yesterday",
       "hint": "time adverb meaning 'yesterday'"
     },
     {

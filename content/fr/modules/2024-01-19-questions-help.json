@@ -85,8 +85,20 @@
               "Where are you?"
             ],
             [
-              "Quand est-ce que tu viens ?",
-              "When are you coming?"
+              "Quand est-ce que tu veux un café ?",
+              "When do you want a coffee?"
+            ],
+            [
+              "Qu'est-ce que c'est ?",
+              "What is it?"
+            ],
+            [
+              "Qu'est-ce que tu vois ?",
+              "What do you see?"
+            ],
+            [
+              "Combien de livres est-ce que tu as ?",
+              "How many books do you have?"
             ]
           ],
           "heading": "With a question word in front"
@@ -104,13 +116,13 @@
         {
           "rise": [
             {
-              "fr": "Tu viens ce soir.",
-              "en": "You are coming tonight.",
+              "fr": "Tu veux un café.",
+              "en": "You want a coffee.",
               "tone": "flat"
             },
             {
-              "fr": "Tu viens ce soir ?",
-              "en": "Are you coming tonight?",
+              "fr": "Tu veux un café ?",
+              "en": "Do you want a coffee?",
               "tone": "up"
             }
           ]
@@ -128,8 +140,8 @@
         {
           "flip": [
             {
-              "fr": "Tu es prêt.",
-              "en": "You are ready.",
+              "fr": "Tu es fatigué.",
+              "en": "You are tired.",
               "parts": [
                 [
                   "Tu",
@@ -140,14 +152,14 @@
                   "v"
                 ],
                 [
-                  "prêt",
+                  "fatigué",
                   ""
                 ]
               ]
             },
             {
-              "fr": "Es-tu prêt ?",
-              "en": "Are you ready?",
+              "fr": "Es-tu fatigué ?",
+              "en": "Are you tired?",
               "parts": [
                 [
                   "Es",
@@ -162,7 +174,7 @@
                   "s"
                 ],
                 [
-                  "prêt ?",
+                  "fatigué ?",
                   ""
                 ]
               ]
@@ -226,8 +238,8 @@
     {
       "id": "k2",
       "ask": "Listen. How is this question made?",
-      "say": "Tu viens ce soir ?",
-      "show": "Tu viens ce soir ?",
+      "say": "Tu veux un café ?",
+      "show": "Tu veux un café ?",
       "options": [
         {
           "text": "With est-ce que"
@@ -243,24 +255,24 @@
       "why": "The words are the same as the statement. The voice rises at the end."
     },
     {
-      "id": "k3",
+      "id": "k3-fatigue",
       "ask": "Which one is the formal question?",
       "options": [
         {
-          "text": "Tu es prêt ?",
+          "text": "Tu es fatigué ?",
           "fr": true
         },
         {
-          "text": "Es-tu prêt ?",
+          "text": "Es-tu fatigué ?",
           "fr": true,
           "right": true
         },
         {
-          "text": "Est-ce que tu es prêt ?",
+          "text": "Est-ce que tu es fatigué ?",
           "fr": true
         }
       ],
-      "why": "The verb comes first, joined to {tu} with a hyphen: {Es-tu prêt ?}"
+      "why": "The verb comes first, joined to {tu} with a hyphen: {Es-tu fatigué ?}"
     }
   ]
 }

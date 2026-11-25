@@ -90,6 +90,21 @@
       "fr": "je n'ai pas besoin de",
       "gloss": "I don't need",
       "note": "negative - ne...pas around avoir"
+    },
+    {
+      "word_id": "j-ai-besoin-de-dormir-fr",
+      "fr": "j'ai besoin de dormir",
+      "gloss": "I need to sleep"
+    },
+    {
+      "word_id": "le-sommeil-fr",
+      "fr": "le sommeil",
+      "gloss": "sleep"
+    },
+    {
+      "word_id": "l-espace-fr",
+      "fr": "l'espace",
+      "gloss": "space"
     }
   ],
   "concepts": [

@@ -18,6 +18,11 @@
       "note": "🇫🇷 France - verlan for '{fou}' (crazy)"
     },
     {
+      "word_id": "fou-fr",
+      "fr": "fou",
+      "gloss": "crazy"
+    },
+    {
       "word_id": "c-est-chelou-fr",
       "fr": "c'est chelou",
       "gloss": "it's weird/sketchy",

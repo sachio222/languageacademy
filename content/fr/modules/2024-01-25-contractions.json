@@ -85,13 +85,13 @@
       "id": "c-partitive-articles-some-any",
       "term": "Partitive Articles (some/any)",
       "definition": "Use du/de la/de l'/des to mean 'some' (unspecified quantity)",
-      "example": "{du pain} (some bread), {de la viande} (some meat), {de l'eau} (some water)"
+      "example": "{du café} (some coffee), {de la musique} (some music), {des livres} (some books)"
     },
     {
       "id": "c-before-vowels",
       "term": "Before Vowels",
       "definition": "de + l' and à + l' before vowel sounds (no contraction needed)",
-      "example": "{de l'ami} (of the friend), {à l'école} (at the school)"
+      "example": "{de l'ami} (of the friend), {à l'hôtel} (at the hotel)"
     }
   ],
   "items": [

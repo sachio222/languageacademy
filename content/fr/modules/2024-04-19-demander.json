@@ -102,6 +102,16 @@
       "fr": "demander de faire",
       "gloss": "to ask to do",
       "note": "de + infinitive"
+    },
+    {
+      "word_id": "demander-d-attendre-fr",
+      "fr": "demander d'attendre",
+      "gloss": "to ask someone to wait"
+    },
+    {
+      "word_id": "demander-a-ton-pere-fr",
+      "fr": "demander à ton père",
+      "gloss": "to ask your father"
     }
   ],
   "concepts": [

@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2621 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 538 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2622 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 532 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -24,7 +24,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Section | Lines |
 |---|---|
 | Guide checks written by hand | 1 |
-| Spellings taught more than once | 375 |
+| Spellings taught more than once | 398 |
 | Item types to confirm | 260 |
 | Practice blanks that were in the wrong place | 58 |
 | Position words | 119 |
@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 825 |
 | Passage words with no pop-up | 10 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 860 |
+| Hand edits kept | 918 |
 | Live ids with no converted item | 315 (0 real misses) |
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
@@ -92,7 +92,12 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-03-31-survival-phrases**
 
 - `vocabulary[1]` "s'il vous plaît": same meaning as "please" in 2024-01-01-famous-words: kept s-il-vous-plait-fr
+- `vocabulary[2]` "s'il te plaît": same meaning as "please (to a friend)" in 2024-01-15-vouloir: kept s-il-te-plait-fr
 - `vocabulary[11]` "pardon": same meaning as "excuse me / sorry" in 2024-01-01-famous-words: kept pardon-fr
+
+**2024-04-01-time-adverbs**
+
+- `vocabulary[12]` "aujourd'hui": same meaning as "today" in 2024-02-03-reading3: kept aujourd-hui-fr
 
 **2024-03-27-negation-2**
 
@@ -100,10 +105,12 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-03-26-location-adverbs**
 
+- `vocabulary[0]` "ici": same meaning as "here" in 2024-04-01-time-adverbs: kept ici-fr
 - `vocabulary[1]` "là": la-fr already names "la", a different spelling: la-fr.there
 
 **2024-03-24-everyday-nouns**
 
+- `vocabulary[7]` "la ville": same meaning as "the town / the city" in 2024-01-22-reading2: kept la-ville-fr
 - `vocabulary[22]` "l'addition": same meaning as "the bill/check" in 2024-03-31-survival-phrases: kept l-addition-fr
 
 **2024-03-30-reading-4**
@@ -113,7 +120,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[5]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr
 - `vocabulary[6]` "je dois": same meaning as "I must" in 2024-03-23-devoir: kept je-dois-fr
 - `vocabulary[7]` "le travail": same meaning as "work" in 2024-03-24-everyday-nouns: kept le-travail-fr
-- `vocabulary[8]` "aujourd'hui": same meaning as "today" in 2024-04-01-time-adverbs: kept aujourd-hui-fr
+- `vocabulary[8]` "aujourd'hui": same meaning as "today" in 2024-02-03-reading3: kept aujourd-hui-fr
 - `vocabulary[9]` "demain": same meaning as "tomorrow" in 2024-04-01-time-adverbs: kept demain-fr
 - `vocabulary[10]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr
 - `vocabulary[13]` "venir": same meaning as "to come" in 2024-01-26-venir: kept venir-fr
@@ -130,7 +137,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[36]` "s'il vous plaît": same meaning as "please" in 2024-01-01-famous-words: kept s-il-vous-plait-fr
 - `vocabulary[37]` "voilà": new meaning "there you go": voila-fr.there-you-go; met before as "there it is / here you go" (voila-fr, 2024-01-01-famous-words)
 - `vocabulary[38]` "jamais": same meaning as "never (with ne)" in 2024-04-01-time-adverbs: kept jamais-fr
-- `vocabulary[44]` "la ville": same meaning as "city" in 2024-03-24-everyday-nouns: kept la-ville-fr
+- `vocabulary[44]` "la ville": same meaning as "the town / the city" in 2024-01-22-reading2: kept la-ville-fr
 - `vocabulary[45]` "personne": same meaning as "nobody/no one" in 2024-03-24-everyday-nouns: kept personne-fr
 - `vocabulary[48]` "la vie": same meaning as "life" in 2024-03-24-everyday-nouns: kept la-vie-fr
 
@@ -155,13 +162,14 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-04-12-manger**
 
 - `vocabulary[0]` "manger": same meaning as "to eat" in 2024-03-30-reading-4: kept manger-fr
+- `vocabulary[1]` "je mange": same meaning as "I eat" in 2024-04-01-time-adverbs: kept je-mange-fr
 
 **2024-04-13-reading-5**
 
 - `vocabulary[5]` "café": new meaning "café": cafe-fr.caf; met before as "coffee" (cafe-fr, 2024-01-01-famous-words)
 - `vocabulary[9]` "nous avons mangé": same meaning as "we ate" in 2024-04-12-manger: kept nous-avons-mange-fr
 - `vocabulary[10]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
-- `vocabulary[11]` "aujourd'hui": same meaning as "today" in 2024-04-01-time-adverbs: kept aujourd-hui-fr
+- `vocabulary[11]` "aujourd'hui": same meaning as "today" in 2024-02-03-reading3: kept aujourd-hui-fr
 - `vocabulary[15]` "boire": same meaning as "to drink" in 2024-04-06-boire: kept boire-fr (fixed by hand)
 - `vocabulary[16]` "faire": same meaning as "to do / to make" in 2024-03-25-faire: kept faire-fr (fixed by hand)
 - `vocabulary[17]` "aimer": same meaning as "to like / to love" in 2024-04-04-aimer: kept aimer-fr (fixed by hand)
@@ -186,6 +194,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-04-25-top-200-nouns**
 
+- `vocabulary[6]` "la fin": la-fin-fr already names "fin", a different spelling: la-fin-fr.end (written: la-fin-fr)
 - `vocabulary[21]` "le problème": same meaning as "problem" in 2024-03-30-reading-4: kept le-probleme-fr
 
 **2024-04-24-reading-6**
@@ -203,15 +212,17 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[21]` "la mère": same meaning as "mother" in 2024-04-25-top-200-nouns: kept la-mere-fr
 - `vocabulary[25]` "le moment": same meaning as "moment" in 2024-04-25-top-200-nouns: kept le-moment-fr
 - `vocabulary[28]` "le monde": same meaning as "world" in 2024-03-24-everyday-nouns: kept le-monde-fr
-- `vocabulary[29]` "la ville": same meaning as "city" in 2024-03-24-everyday-nouns: kept la-ville-fr (fixed by hand)
+- `vocabulary[29]` "la ville": same meaning as "the town / the city" in 2024-01-22-reading2: kept la-ville-fr (fixed by hand)
 - `vocabulary[34]` "dans": same meaning as "in / inside" in 2024-01-20-prepositions: kept dans-fr
 - `vocabulary[41]` "oui": same meaning as "yes" in 2024-01-01-famous-words: kept oui-fr
 - `vocabulary[45]` "trois": same meaning as "three" in 2026-11-24-numbers: kept trois-fr
 - `vocabulary[46]` "est-ce que": new meaning "question marker": est-ce-que-fr.question-marker; met before as "question maker" (est-ce-que-fr, 2024-01-18-questions)
 - `vocabulary[47]` "quelque chose": same meaning as "something" in 2024-03-24-everyday-nouns: kept quelque-chose-fr
 - `vocabulary[51]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr (fixed by hand)
+- `vocabulary[52]` "c'est vrai": same meaning as "that's true" in 2024-04-20-dire: kept c-est-vrai-fr
 - `vocabulary[53]` "voir": same meaning as "to see" in 2024-01-17-voir: kept voir-fr (fixed by hand)
 - `vocabulary[57]` "faire": same meaning as "to do / to make" in 2024-03-25-faire: kept faire-fr (fixed by hand)
+- `vocabulary[59]` "beaucoup": same meaning as "a lot / very much" in 2024-03-31-survival-phrases: kept beaucoup-fr
 - `vocabulary[64]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
 - `vocabulary[65]` "tu parles": same meaning as "you speak (informal)" in 2024-03-29-parler: kept tu-parles-fr (fixed by hand)
 - `vocabulary[67]` "merci": same meaning as "thank you" in 2024-01-01-famous-words: kept merci-fr (fixed by hand)
@@ -222,6 +233,8 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-05-05-on-and-people**
 
 - `vocabulary[0]` "on": same meaning as "we (informal) / one / people" in 2024-01-01-pronouns: kept on-fr
+- `vocabulary[7]` "on dit": same meaning as "people say" in 2024-04-13-reading-5: kept on-dit-fr
+- `vocabulary[10]` "les gens": same meaning as "people" in 2024-04-13-reading-5: kept les-gens-fr
 - `vocabulary[13]` "tout le monde": same meaning as "everybody/everyone" in 2024-03-24-everyday-nouns: kept tout-le-monde-fr
 - `vocabulary[17]` "personne": same meaning as "nobody/no one" in 2024-03-24-everyday-nouns: kept personne-fr
 
@@ -229,6 +242,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 - `vocabulary[0]` "apprendre": same meaning as "to learn" in 2024-04-22-prendre: kept apprendre-fr
 - `vocabulary[1]` "j'apprends": same meaning as "I learn" in 2024-04-22-prendre: kept j-apprends-fr
+- `vocabulary[4]` "nous apprenons": same meaning as "we learn" in 2024-04-22-prendre: kept nous-apprenons-fr
 - `vocabulary[14]` "j'apprends le français": same meaning as "I learn French / I'm learning French" in 2024-04-22-prendre: kept j-apprends-le-francais-fr
 
 **2024-04-29-comprendre**
@@ -236,6 +250,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[0]` "comprendre": same meaning as "to understand" in 2024-04-22-prendre: kept comprendre-fr
 - `vocabulary[1]` "je comprends": same meaning as "I understand" in 2024-04-22-prendre: kept je-comprends-fr
 - `vocabulary[2]` "tu comprends": new meaning "you understand (informal)": tu-comprends-fr.you-understand; met before as "do you understand?" (tu-comprends-fr, 2024-04-22-prendre) (written: tu-comprends-fr) (fixed by hand)
+- `vocabulary[4]` "nous comprenons": same meaning as "we understand" in 2024-04-22-prendre: kept nous-comprenons-fr
 - `vocabulary[7]` "Je ne comprends pas": same meaning as "I don't understand" in 2024-04-22-prendre: kept je-ne-comprends-pas-fr
 - `vocabulary[8]` "Tu comprends?": same meaning as "do you understand?" in 2024-04-22-prendre: kept tu-comprends-fr (written: tu-comprends-fr.question)
 
@@ -258,6 +273,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-05-02-discourse-markers**
 
 - `vocabulary[4]` "bon": new meaning "well / so (discourse use)": bon-fr.discourse; met before as "good" (bon-fr, 2024-01-01-famous-words)
+- `vocabulary[5]` "alors": same meaning as "so / then" in 2024-03-30-reading-4: kept alors-fr
 - `vocabulary[8]` "peut-être": same meaning as "maybe" in 2024-04-13-reading-5: kept peut-etre-fr
 - `vocabulary[13]` "bien sûr": same meaning as "of course" in 2024-04-24-reading-6: kept bien-sur-fr
 
@@ -284,16 +300,17 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[37]` "donc": same meaning as "so / therefore" in 2024-05-02-discourse-markers: kept donc-fr
 - `vocabulary[38]` "en fait": same meaning as "in fact / actually" in 2024-05-02-discourse-markers: kept en-fait-fr
 - `vocabulary[39]` "bon": new meaning "well": bon-fr.well; met before as "good" (bon-fr, 2024-01-01-famous-words); "well / so (discourse use)" (bon-fr.discourse, 2024-05-02-discourse-markers)
-- `vocabulary[40]` "alors": same meaning as "so / then" in 2024-05-02-discourse-markers: kept alors-fr
+- `vocabulary[40]` "alors": same meaning as "so / then" in 2024-03-30-reading-4: kept alors-fr
 - `vocabulary[41]` "quoi": same meaning as "like / you know (filler at end)" in 2024-05-02-discourse-markers: kept quoi-fr
 - `vocabulary[42]` "tout le monde": same meaning as "everybody/everyone" in 2024-03-24-everyday-nouns: kept tout-le-monde-fr
 - `vocabulary[43]` "même": same meaning as "same / even" in 2024-04-08-comparisons: kept meme-fr
 - `vocabulary[44]` "mal": same meaning as "badly / bad" in 2024-04-08-comparisons: kept mal-fr
 - `vocabulary[49]` "comment": same meaning as "how" in 2024-01-18-questions: kept comment-fr
 - `vocabulary[55]` "demander": same meaning as "to ask / to ask for" in 2024-04-19-demander: kept demander-fr (fixed by hand)
+- `vocabulary[60]` "bons": same meaning as "good (plural)" in 2024-01-09-reading1: kept bons-fr
 - `vocabulary[62]` "meilleures": same meaning as "better (plural)" in 2024-04-13-reading-5: kept meilleures-fr
 - `vocabulary[64]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr
-- `vocabulary[65]` "beaucoup": same meaning as "a lot/much" in 2024-04-24-reading-6: kept beaucoup-fr
+- `vocabulary[65]` "beaucoup": same meaning as "a lot / very much" in 2024-03-31-survival-phrases: kept beaucoup-fr
 - `vocabulary[75]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
 
 **2024-05-23-temporal-words**
@@ -379,13 +396,20 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-05-28-more-spatial-relations**
 
-- `vocabulary[11]` "ici": same meaning as "here" in 2024-03-26-location-adverbs: kept ici-fr
+- `vocabulary[11]` "ici": same meaning as "here" in 2024-04-01-time-adverbs: kept ici-fr
 
 **2024-05-30-passe-compose-er**
 
 - `vocabulary[1]` "j'ai mangé": same meaning as "I ate / I have eaten" in 2024-04-12-manger: kept j-ai-mange-fr
+- `vocabulary[5]` "j'ai trouvé": same meaning as "I found / I have found" in 2024-10-22-search-find: kept j-ai-trouve-fr
 - `vocabulary[10]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
 - `vocabulary[11]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
+
+**2024-06-02-passe-compose-irregular-2**
+
+- `vocabulary[4]` "j'ai pris": same meaning as "I took" in 2024-04-22-prendre: kept j-ai-pris-fr
+- `vocabulary[5]` "j'ai mis": same meaning as "I put / I put on" in 2024-04-21-mettre: kept j-ai-mis-fr
+- `vocabulary[7]` "j'ai appris": same meaning as "I learned" in 2024-04-22-prendre: kept j-ai-appris-fr
 
 **2024-05-27-imparfait-all-verbs**
 
@@ -401,7 +425,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-06-03-past-tense-composition**
 
 - `vocabulary[0]` "donc": same meaning as "so / therefore" in 2024-05-02-discourse-markers: kept donc-fr
-- `vocabulary[1]` "alors": same meaning as "so / then" in 2024-05-02-discourse-markers: kept alors-fr
+- `vocabulary[1]` "alors": same meaning as "so / then" in 2024-03-30-reading-4: kept alors-fr
 - `vocabulary[2]` "c'était": same meaning as "it was" in 2024-04-13-reading-5: kept c-etait-fr
 - `vocabulary[3]` "il y avait": same meaning as "there was / there were" in 2024-05-27-imparfait-all-verbs: kept il-y-avait-fr
 
@@ -417,6 +441,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[17]` "d'abord": same meaning as "first" in 2024-05-07-reading-7: kept d-abord-fr
 - `vocabulary[18]` "je me suis réveillé": same meaning as "I woke up (masc)" in 2024-06-07-reflexive-past: kept je-me-suis-reveille-fr
 - `vocabulary[19]` "d'habitude": same meaning as "usually, normally" in 2024-06-04-pc-vs-imparfait: kept d-habitude-fr
+- `vocabulary[21]` "plus tard": same meaning as "later" in 2024-04-13-reading-5: kept plus-tard-fr
 - `vocabulary[23]` "j'ai voulu": same meaning as "I wanted" in 2024-06-02-passe-compose-irregular-2: kept j-ai-voulu-fr
 - `vocabulary[25]` "le temps": same meaning as "time/weather" in 2024-03-24-everyday-nouns: kept le-temps-fr
 - `vocabulary[30]` "près de": same meaning as "near, close to" in 2024-05-28-more-spatial-relations: kept pres-de-fr
@@ -425,7 +450,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[39]` "j'ai vu": same meaning as "I saw" in 2024-06-01-passe-compose-irregular-1: kept j-ai-vu-fr
 - `vocabulary[41]` "Pierre": same meaning as "Pierre (friend's name)" in 2024-06-05-reading-9: kept pierre-fr (written: pierre-fr.pierre)
 - `vocabulary[50]` "salut": same meaning as "hi / bye" in 2024-01-01-famous-words: kept salut-fr
-- `vocabulary[52]` "ici": same meaning as "here" in 2024-03-26-location-adverbs: kept ici-fr
+- `vocabulary[52]` "ici": same meaning as "here" in 2024-04-01-time-adverbs: kept ici-fr
 - `vocabulary[53]` "j'ai demandé": same meaning as "I asked" in 2024-05-30-passe-compose-er: kept j-ai-demande-fr
 - `vocabulary[68]` "car": same meaning as "for, because" in 2024-05-26-causal-words: kept car-fr
 - `vocabulary[69]` "j'ai eu": same meaning as "I had" in 2024-06-01-passe-compose-irregular-1: kept j-ai-eu-fr
@@ -439,6 +464,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[91]` "pendant que": same meaning as "while" in 2024-06-04-pc-vs-imparfait: kept pendant-que-fr
 - `vocabulary[94]` "Marie": same meaning as "Marie (friend's name)" in 2024-06-05-reading-9: kept marie-fr (written: marie-fr.marie)
 - `vocabulary[111]` "grâce à": same meaning as "thanks to" in 2024-05-26-causal-words: kept grace-a-fr
+- `vocabulary[117]` "ensemble": same meaning as "together" in 2024-03-29-parler: kept ensemble-fr
 - `vocabulary[118]` "nous sommes allés": same meaning as "we went" in 2024-05-29-passe-compose-agreement: kept nous-sommes-alles-fr
 - `vocabulary[137]` "derrière": same meaning as "behind" in 2024-01-20-prepositions: kept derriere-fr
 - `vocabulary[138]` "nous avons mangé": same meaning as "we ate" in 2024-04-12-manger: kept nous-avons-mange-fr
@@ -446,6 +472,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[149]` "à cause de": same meaning as "because of" in 2024-05-26-causal-words: kept a-cause-de-fr
 - `vocabulary[160]` "finalement": same meaning as "finally" in 2024-05-07-reading-7: kept finalement-fr
 - `vocabulary[162]` "chez moi": same meaning as "to my place / home" in 2024-05-20-reading-8: kept chez-moi-fr
+- `vocabulary[167]` "heureux": same meaning as "happy" in 2024-01-02-etre: kept heureux-fr
 - `vocabulary[170]` "parfois": same meaning as "sometimes" in 2024-04-01-time-adverbs: kept parfois-fr
 
 **2024-01-25-emotion-phrases**
@@ -490,6 +517,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-05-15-daily-actions-1**
 
 - `vocabulary[0]` "dormir": same meaning as "to sleep" in 2024-06-05-reading-9: kept dormir-fr
+- `vocabulary[9]` "travailler": same meaning as "to work" in 2024-03-24-everyday-nouns: kept travailler-fr
 
 **2024-02-13-search-and-find**
 
@@ -503,10 +531,11 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[11]` "tu trouves": same meaning as "you find" in 2024-10-22-search-find: kept tu-trouves-fr
 - `vocabulary[14]` "nous trouvons": same meaning as "we find" in 2024-10-22-search-find: kept nous-trouvons-fr
 - `vocabulary[15]` "vous trouvez": same meaning as "you find" in 2024-10-22-search-find: kept vous-trouvez-fr
-- `vocabulary[21]` "j'ai trouvé!": same meaning as "I found" in 2024-05-30-passe-compose-er: kept j-ai-trouve-fr
+- `vocabulary[21]` "j'ai trouvé!": same meaning as "I found / I have found" in 2024-10-22-search-find: kept j-ai-trouve-fr
 
 **2024-02-11-perception-verbs**
 
+- `vocabulary[12]` "il regarde": new meaning "he watches": il-regarde-fr.he-watches; met before as "he looks / he looks at" (il-regarde-fr, 2024-04-13-reading-5) (written: il-regarde-fr)
 - `vocabulary[25]` "je trouve que": same meaning as "I think that / I find that" in 2024-02-13-search-and-find: kept je-trouve-que-fr
 
 **2024-02-09-directions-navigation**
@@ -592,7 +621,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-04-03-days-months**
 
 - `vocabulary[5]` "samedi": same meaning as "Saturday" in 2024-06-05-reading-9: kept samedi-fr
-- `vocabulary[23]` "aujourd'hui": same meaning as "today" in 2024-04-01-time-adverbs: kept aujourd-hui-fr
+- `vocabulary[23]` "aujourd'hui": same meaning as "today" in 2024-02-03-reading3: kept aujourd-hui-fr
 - `vocabulary[24]` "demain": same meaning as "tomorrow" in 2024-04-01-time-adverbs: kept demain-fr
 - `vocabulary[25]` "hier": same meaning as "yesterday" in 2024-04-01-time-adverbs: kept hier-fr
 - `vocabulary[27]` "le week-end": same meaning as "the weekend" in 2024-06-05-reading-9: kept le-week-end-fr
@@ -633,7 +662,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[19]` "comment": same meaning as "how" in 2024-01-18-questions: kept comment-fr
 - `vocabulary[20]` "très bien": new meaning "very good": tres-bien-fr.very-good; met before as "very well" (tres-bien-fr, 2024-04-24-reading-6)
 - `vocabulary[21]` "peut-être": same meaning as "maybe" in 2024-04-13-reading-5: kept peut-etre-fr
-- `vocabulary[22]` "beaucoup": same meaning as "a lot/much" in 2024-04-24-reading-6: kept beaucoup-fr
+- `vocabulary[22]` "beaucoup": same meaning as "a lot / very much" in 2024-03-31-survival-phrases: kept beaucoup-fr
 - `vocabulary[24]` "nuit": same meaning as "night" in 2024-02-01-reading-10: kept nuit-fr
 
 ## Item types to confirm
@@ -985,7 +1014,7 @@ The practice screen shows a blank in place of the character at its position, so 
 **2024-04-03-unit-4-practice**
 
 - `items[6]` i-demain: the blank for "demain" at position 8 sits on the mark ".", which the app drops; placed as the checker reads it: "Il part ___."
-- `items[7]` i-hier: the blank for "hier" at position 13 sits after the end of the sentence; placed as the checker reads it: "Tu as vu ça ___."
+- `items[7]` i-hier: the blank for "hier" at position 13 sits after the end of the sentence; placed as the checker reads it: "Tu as vu ça ___." (fixed by hand)
 - `items[8]` i-ici: the blank for "ici" at position 8 sits on the mark ".", which the app drops; placed as the checker reads it: "Je suis ___."
 - `items[9]` i-la: the blank for "là" at position 13 sits on the mark ".", which the app drops; placed as the checker reads it: "Le livre est ___."
 - `items[14]` i-parlons-ici: the blank for "ici" at position 22 sits after the end of the sentence; placed as the checker reads it: "Nous ___ français ___."
@@ -1771,6 +1800,23 @@ The source sets no value, so the conversion wrote an estimate.
 
 The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.
 
+**2024-01-01-pronouns**
+
+- `concepts[3].example` "On va au café (We're going to the café) - uses il/elle verb forms, not nous forms" → "On means 'we' when friends talk, or 'people' in general. It takes the same verb form as il and elle."
+
+**2024-01-02-etre**
+
+- `concepts[2].definition` "Use with adjectives: "I am happy" or professions: "I am a student", or locations: "I am in Paris"" → "Use it with an adjective, as in "I am happy", or with your name, as in "I am Paul"."
+- `concepts[2].example` "Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)" → "Je suis heureux (I am happy), Je suis Paul (I am Paul), Il est bon (it is good)"
+
+**2024-10-21-cognates-help**
+
+- `parts[4].text[0]` "Every French noun is masculine or feminine, so learn each cognate with its article, un or une. French does not drop the article the way English does in “I want coffee”." → "Every French noun is masculine or feminine, so learn each cognate with its article, un or une. French does not drop the article the way English does in “Coffee is good”."
+- `parts[4].blocks[0].lines[0][0]` "Je veux un café." → "J'ai un café."
+- `parts[4].blocks[0].lines[0][1]` "I want a coffee." → "I have a coffee."
+- `parts[4].blocks[0].lines[1][0]` "Je veux du café." → "Le café est bon."
+- `parts[4].blocks[0].lines[1][1]` "I want some coffee." → "Coffee is good."
+
 **2024-01-06-basic-nouns**
 
 - `concepts[1].definition` "Combine nouns with verbs you already know from M2-M3" → "Combine nouns with être and avoir, the verbs you already know"
@@ -1794,9 +1840,40 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `items[1].hint` "Combine: it is + that (using être from M3)" → "Combine: it is + that (using être)"
 
+**2024-01-15-vouloir**
+
+- `concepts[0].example` "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)" → "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison), 'How are you? Do you want a coffee?' (Ça va ? Tu veux un café ?)"
+
+**2024-01-17-voir**
+
+- `concepts[0].example` "Very common! Essential for object pronouns in next module" → "Very common, often after vouloir: je veux voir (I want to see). The next module uses it with object pronouns."
+- `concepts[3].example` "Foundation for: je le vois, je la vois, je les vois" → "Foundation for: je le vois, je la vois, je les vois, je te vois (I see you)"
+
 **2024-01-18-questions**
 
 - `vocabulary[11].word_id` "ca-va-fr.question-2" → "ca-va-fr.question"
+- `concepts[6].example` "Que fais-tu? (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)" → "Que veux-tu? (what do you want?) vs Tu veux quoi? (you want what?) vs Quoi? (what?!)"
+
+**2024-01-19-questions-help**
+
+- `parts[1].blocks[1].lines` "[["Où est-ce que tu es ?","Where are you?"],["Quand est-ce que tu viens ?","When are you coming?"]]" → "[["Où est-ce que tu es ?","Where are you?"],["Quand est-ce que tu veux un café ?","When do you want a coffee?"],["Qu'est-ce que c'est ?","What is it?"],["Qu'est-ce que tu vois ?","What do you see?"],["Combien de livres est-ce que tu as ?","How many books do you have?"]]"
+- `parts[2].blocks[0].rise[0].fr` "Tu viens ce soir." → "Tu veux un café."
+- `parts[2].blocks[0].rise[0].en` "You are coming tonight." → "You want a coffee."
+- `parts[2].blocks[0].rise[1].fr` "Tu viens ce soir ?" → "Tu veux un café ?"
+- `parts[2].blocks[0].rise[1].en` "Are you coming tonight?" → "Do you want a coffee?"
+- `parts[3].blocks[0].flip[0].fr` "Tu es prêt." → "Tu es fatigué."
+- `parts[3].blocks[0].flip[0].en` "You are ready." → "You are tired."
+- `parts[3].blocks[0].flip[0].parts[2][0]` "prêt" → "fatigué"
+- `parts[3].blocks[0].flip[1].fr` "Es-tu prêt ?" → "Es-tu fatigué ?"
+- `parts[3].blocks[0].flip[1].en` "Are you ready?" → "Are you tired?"
+- `parts[3].blocks[0].flip[1].parts[3][0]` "prêt ?" → "fatigué ?"
+- `checks[1].say` "Tu viens ce soir ?" → "Tu veux un café ?"
+- `checks[1].show` "Tu viens ce soir ?" → "Tu veux un café ?"
+- `checks[2].id` "k3" → "k3-fatigue"
+- `checks[2].options[0].text` "Tu es prêt ?" → "Tu es fatigué ?"
+- `checks[2].options[1].text` "Es-tu prêt ?" → "Es-tu fatigué ?"
+- `checks[2].options[2].text` "Est-ce que tu es prêt ?" → "Est-ce que tu es fatigué ?"
+- `checks[2].why` "The verb comes first, joined to tu with a hyphen: Es-tu prêt ?" → "The verb comes first, joined to tu with a hyphen: Es-tu fatigué ?"
 
 **2024-01-22-reading2**
 
@@ -1808,20 +1885,40 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `title` "Unit 2 Practice - Fill in the Blanks" → "Asking & Describing Practice - Fill in the Blanks"
 - `description` "Complete sentences using demonstratives, questions, prepositions, and adjectives from Unit 2!" → "Complete sentences using demonstratives, questions, prepositions, and adjectives from this unit!"
 - `can_do[2]` "Apply Unit 2 vocabulary in realistic contexts" → "Apply this unit's vocabulary in realistic contexts"
+- `items[1].text` "J'ai ___ voiture." → "J'ai ___ belle voiture."
+- `items[1].gloss` "'I have this car' (feminine)" → "'I have this beautiful car' (feminine)"
+- `items[15].text` "Nous ___ le livre." → "Nous ___ le nouveau livre."
+- `items[15].gloss` "We want the book" → "We want the new book"
+- `items[16].text` "Elle ___ cette maison." → "Elle ___ cette petite maison."
+- `items[16].gloss` "She sees this house" → "She sees this little house"
 
 **2024-01-24-unit2-exam**
 
 - `description` "Test everything from Unit 2! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences." → "Test everything from this unit! Demonstratives, essential verbs (vouloir/pouvoir/voir), questions, stressed pronouns, prepositions, and descriptive sentences."
 - `items[32].mistakes` "["answer":"elles sont à Ladurée","feedback":"That's acceptable but 'chez' is more natural for shops/businesses - use 'chez Ladurée'"]" → "(removed)"
 
+**2024-01-25-contractions**
+
+- `concepts[2].example` "du pain (some bread), de la viande (some meat), de l'eau (some water)" → "du café (some coffee), de la musique (some music), des livres (some books)"
+- `concepts[3].example` "de l'ami (of the friend), à l'école (at the school)" → "de l'ami (of the friend), à l'hôtel (at the hotel)"
+
 **2024-01-27-aller**
 
+- `concepts[0].example` "'I am going in the house' (Je vais dans la maison), 'I am going to eat' (Je vais manger)" → "'I am going in the house' (Je vais dans la maison), 'I am going to see Paul' (Je vais voir Paul)"
+- `concepts[2].definition` "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to leave' you can say 'je vais partir'." → "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to come' you can say 'je vais venir'."
+- `concepts[2].example` "je vais + ça, nous allons + être, ils vont + avoir" → "je vais + ça, nous allons + être, ils vont + avoir, tu vas + me voir"
 - `items[19].accept` "["qu'est-ce que tu as?"]" → "(removed)"
 
 **2024-01-28-verb-pattern-help**
 
 - `parts[3].note` "The -ent is written but never spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut." → "The -ent is written but not spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut."
+- `parts[7].blocks[0].list[2]` "Most verbs you meet next follow these patterns, starting with partir in the next lesson." → "Most verbs you meet next follow these patterns, starting with the verb in the next lesson."
 - `checks[1].why` "The -ent is written but never spoken." → "The -ent is written but not spoken."
+
+**2024-01-31-possessive-adjectives**
+
+- `concepts[2].example` "INFORMAL with friends/family: ton/ta/tes (ton frère, ta sœur, tes amis). FORMAL with strangers/respect: votre/vos (votre bureau, vos bagages)" → "INFORMAL with friends/family: ton/ta/tes (ton ami, ta maison, tes livres). FORMAL with strangers/respect: votre/vos (votre maison, vos amis)"
+- `concepts[3].example` "NOTRE/NOS (our): notre maison, notre jardin, nos enfants. VOTRE/VOS (your formal): votre livre, votre famille, vos idées. LEUR/LEURS (their): leur chat, leur maison, leurs amis" → "NOTRE/NOS (our): notre maison, notre ami, nos enfants. VOTRE/VOS (your formal): votre livre, votre famille, vos idées. LEUR/LEURS (their): leur chat, leur maison, leurs amis"
 
 **2024-02-02-combining**
 
@@ -1838,10 +1935,30 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `title` "Unit 3 Practice - Fill in the Blanks" → "Movement & Possession Practice - Fill in the Blanks"
 - `description` "Master contractions, motion verbs, object pronouns, and possessive forms from Unit 3!" → "Master contractions, motion verbs, object pronouns, and possessive forms from this unit!"
 - `can_do[2]` "Apply Unit 3 advanced structures in context" → "Apply this unit's advanced structures in context"
+- `items[4].text` "Nous ___ demain." → "Nous ___ avec Paul."
+- `items[4].gloss` "We leave tomorrow" → "We leave with Paul"
+- `items[14].text` "Elle ___ ___ magasin." → "Elle ___ ___ café."
+- `items[14].gloss` "'She comes from the store' (use contraction)" → "'She comes from the café' (use contraction)"
 
 **2024-02-05-unit3-exam**
 
 - `description` "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations." → "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
+
+**2024-03-29-parler**
+
+- `concepts[4].example` "je parle français (I speak French), nous parlons de toi (we talk about you)" → "je parle français maintenant (I speak French now), nous parlons de toi (we talk about you)"
+
+**2024-10-22-search-find**
+
+- `concepts[0].example` "je cherche mes clés (I'm looking for my keys), tu cherches quoi? (what are you looking for?)" → "je cherche mon livre (I'm looking for my book), tu cherches quoi? (what are you looking for?)"
+
+**2024-03-27-negation-2**
+
+- `concepts[1].example` "je vais → je ne vais jamais (I never go)" → "je vais → je ne vais jamais (I never go), je mange toujours → je ne mange jamais (I never eat)"
+
+**2024-03-26-location-adverbs**
+
+- `concepts[3].example` "je vais là (I go there), il est ici (he is here)" → "je vais là (I go there), il est ici (he is here), demain, il est là-bas (tomorrow he is over there)"
 
 **2024-03-24-everyday-nouns**
 
@@ -1851,15 +1968,23 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading Comprehension 4 - La nouvelle époque de Marie" → "Reading Comprehension - La nouvelle époque de Marie"
 - `description` "Unit 4 mastery! A natural conversation using all your vocabulary." → "A natural conversation using all your vocabulary."
+- `items[16]` "(none)" → ""id":"i-travail","type":"comprehension","question":"Why can't Marie go with Paul now?","cue":"Je dois aller au ___","answer":"travail","accept":["au travail","elle doit aller au travail","elle doit travailler"],"hint":"Look at what Marie must do""
 
 **2024-04-03-unit-4-practice**
 
 - `title` "Unit 4 Practice - Fill in the Blanks" → "Everyday Words Practice - Fill in the Blanks"
 - `description` "Practice survival phrases, negation, time/location adverbs, and essential verbs from Unit 4!" → "Practice survival phrases, negation, time/location adverbs, and essential verbs from this unit!"
+- `items[7].text` "Tu as vu ça ___." → "J'ai trouvé ça ___."
+- `items[7].gloss` "You saw that yesterday" → "I found that yesterday"
 
 **2024-04-02-unit-4-exam**
 
 - `description` "Test everything from Unit 4! Survival phrases, essential verbs, negation, and expressing time and place." → "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
+- `items[35].accept` "["là bas","la-bas","la bas"]" → "["la-bas"]"
+
+**2024-04-12-manger**
+
+- `vocabulary[7].note` "passé composé - avoir + mangé" → "passé composé: avoir + mangé"
 
 **2024-04-13-reading-5**
 
@@ -1895,6 +2020,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[12].hint` "il + ne + donne + pas + anything" → "ne + donne + rien"
 - `items[12].mistakes` "(none)" → "["answer":"il ne donne pas","feedback":"For nothing, rien takes the place of pas: il ne donne rien."]"
 - `items[12].accept` "["il ne donne pas"]" → "(removed)"
+
+**2024-04-21-mettre**
+
+- `concepts[4].example` "ça met deux heures (it takes two hours), je me mets à travailler (I start working)" → "ça met deux heures (it takes two hours, like ça prend deux heures), je me mets à travailler (I start working), je me mets à apprendre le français (I start learning French)"
 
 **2024-04-18-commander**
 

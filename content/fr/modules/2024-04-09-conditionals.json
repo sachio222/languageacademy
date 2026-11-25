@@ -87,6 +87,11 @@
       "fr": "ils/elles pourraient",
       "gloss": "they could",
       "note": "conditional of pouvoir"
+    },
+    {
+      "word_id": "tu-pourrais-m-aider-fr",
+      "fr": "tu pourrais m'aider ?",
+      "gloss": "could you help me?"
     }
   ],
   "concepts": [

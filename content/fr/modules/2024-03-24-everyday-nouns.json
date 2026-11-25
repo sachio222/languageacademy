@@ -62,10 +62,25 @@
       "note": "masculine - very common noun"
     },
     {
+      "word_id": "travailler-fr",
+      "fr": "travailler",
+      "gloss": "to work"
+    },
+    {
       "word_id": "la-ville-fr",
       "fr": "la ville",
       "gloss": "city",
       "note": "feminine - where you live or visit"
+    },
+    {
+      "word_id": "marie-vit-a-paris-fr",
+      "fr": "Marie vit à Paris",
+      "gloss": "Marie lives in Paris"
+    },
+    {
+      "word_id": "marie-habite-a-paris-fr",
+      "fr": "Marie habite à Paris",
+      "gloss": "Marie lives in Paris"
     },
     {
       "word_id": "la-place-fr",

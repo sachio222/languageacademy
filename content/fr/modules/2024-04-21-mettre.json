@@ -72,6 +72,16 @@
       "note": "mettre + clothing"
     },
     {
+      "word_id": "mettre-une-chemise-fr",
+      "fr": "mettre une chemise",
+      "gloss": "to put on a shirt"
+    },
+    {
+      "word_id": "mettre-ses-chaussures-fr",
+      "fr": "mettre ses chaussures",
+      "gloss": "to put on your shoes"
+    },
+    {
       "word_id": "mettre-du-temps-fr",
       "fr": "mettre du temps",
       "gloss": "to take time",
@@ -82,6 +92,11 @@
       "fr": "qu'est-ce que tu mets?",
       "gloss": "what are you wearing?",
       "note": "asking about clothes"
+    },
+    {
+      "word_id": "j-ai-mis-fr",
+      "fr": "j'ai mis",
+      "gloss": "I put / I put on"
     }
   ],
   "concepts": [
@@ -113,7 +128,7 @@
       "id": "c-other-common-uses",
       "term": "Other common uses",
       "definition": "mettre du temps (to take time), se mettre à (to start doing something)",
-      "example": "{ça met deux heures} (it takes two hours), {je me mets à travailler} (I start working)"
+      "example": "{ça met deux heures} (it takes two hours, like {ça prend deux heures}), {je me mets à travailler} (I start working), {je me mets à apprendre le français} (I start learning French)"
     }
   ],
   "items": [

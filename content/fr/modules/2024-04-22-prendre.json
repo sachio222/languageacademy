@@ -72,6 +72,11 @@
       "note": "prendre = to have (food/drink)"
     },
     {
+      "word_id": "j-ai-pris-fr",
+      "fr": "j'ai pris",
+      "gloss": "I took"
+    },
+    {
       "word_id": "apprendre-fr",
       "fr": "apprendre",
       "gloss": "to learn",
@@ -88,6 +93,31 @@
       "fr": "j'apprends le français",
       "gloss": "I learn French / I'm learning French",
       "note": "very common phrase!"
+    },
+    {
+      "word_id": "l-anglais-fr",
+      "fr": "l'anglais",
+      "gloss": "English (the language)"
+    },
+    {
+      "word_id": "elle-apprend-fr",
+      "fr": "elle apprend",
+      "gloss": "she learns"
+    },
+    {
+      "word_id": "nous-apprenons-fr",
+      "fr": "nous apprenons",
+      "gloss": "we learn"
+    },
+    {
+      "word_id": "j-ai-appris-fr",
+      "fr": "j'ai appris",
+      "gloss": "I learned"
+    },
+    {
+      "word_id": "vite-fr",
+      "fr": "vite",
+      "gloss": "quickly / fast"
     },
     {
       "word_id": "comprendre-fr",
@@ -112,6 +142,21 @@
       "fr": "je ne comprends pas",
       "gloss": "I don't understand",
       "note": "very useful phrase!"
+    },
+    {
+      "word_id": "il-comprend-fr",
+      "fr": "il comprend",
+      "gloss": "he understands"
+    },
+    {
+      "word_id": "nous-comprenons-fr",
+      "fr": "nous comprenons",
+      "gloss": "we understand"
+    },
+    {
+      "word_id": "ils-comprennent-fr",
+      "fr": "ils comprennent",
+      "gloss": "they understand"
     },
     {
       "word_id": "prends-le-s-il-te-plait-fr",

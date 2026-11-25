@@ -82,6 +82,11 @@
       "fr": "vous commandez?",
       "gloss": "are you ready to order?",
       "note": "waiter's question"
+    },
+    {
+      "word_id": "par-telephone-fr",
+      "fr": "par téléphone",
+      "gloss": "by phone"
     }
   ],
   "concepts": [

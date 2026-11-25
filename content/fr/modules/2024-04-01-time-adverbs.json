@@ -112,6 +112,16 @@
       "fr": "avant-hier",
       "gloss": "the day before yesterday",
       "note": "two days ago"
+    },
+    {
+      "word_id": "ici-fr",
+      "fr": "ici",
+      "gloss": "here"
+    },
+    {
+      "word_id": "je-mange-fr",
+      "fr": "je mange",
+      "gloss": "I eat"
     }
   ],
   "concepts": [

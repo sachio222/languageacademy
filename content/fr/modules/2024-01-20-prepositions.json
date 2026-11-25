@@ -83,6 +83,11 @@
       "fr": "chez",
       "gloss": "at (someone's place)",
       "note": "{chez Pierre, chez nous}"
+    },
+    {
+      "word_id": "c-est-derriere-la-porte-fr",
+      "fr": "c'est derrière la porte",
+      "gloss": "it's behind the door"
     }
   ],
   "concepts": [

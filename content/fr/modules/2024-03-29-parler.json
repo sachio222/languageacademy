@@ -69,6 +69,11 @@
       "fr": "elles parlent",
       "gloss": "they speak (fem)",
       "note": "sounds same as il"
+    },
+    {
+      "word_id": "ensemble-fr",
+      "fr": "ensemble",
+      "gloss": "together"
     }
   ],
   "concepts": [
@@ -100,7 +105,7 @@
       "id": "c-common-uses",
       "term": "Common Uses",
       "definition": "Describe languages (parler français), conversations (parler avec), topics (parler de)",
-      "example": "{je parle français} (I speak French), {nous parlons de toi} (we talk about you)"
+      "example": "{je parle français maintenant} (I speak French now), {nous parlons de toi} (we talk about you)"
     }
   ],
   "tables": [

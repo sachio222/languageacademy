@@ -11,7 +11,13 @@
     "Comprehend authentic French narrative flow"
   ],
   "story_id": "reading3",
-  "vocabulary": [],
+  "vocabulary": [
+    {
+      "word_id": "aujourd-hui-fr",
+      "fr": "aujourd'hui",
+      "gloss": "today"
+    }
+  ],
   "passage": [
     {
       "id": "b-paris-1871-belle-epoque",
