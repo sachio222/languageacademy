@@ -388,7 +388,7 @@ test('Unit 12 gains its planned ending, and Units 13 to 29 follow it', () => {
   assert.deepEqual(course.units.map((u) => u.unit_key).slice(11), Array.from({ length: 18 }, (_, i) => `unit${12 + i}`));
   const u12 = course.units[11].modules;
   assert.deepEqual(u12.slice(-3).map((m) => [m.module_key, m.kind, m.status]), [
-    ['reading-questions-amelie', 'reading', 'planned'],
+    ['unit12-reading', 'reading', 'planned'],
     ['unit12-practice', 'practice', 'planned'],
     ['unit12-exam', 'unit_exam', 'planned'],
   ]);
@@ -430,4 +430,19 @@ test('checker ignores planned', async () => {
   assert.deepEqual(sa.byRule, sb.byRule);
   assert.deepEqual([sa.errors, sa.warnings, sa.modulesWithErrors], [sb.errors, sb.warnings, sb.modulesWithErrors]);
   assert.deepEqual(a.stats, b.stats);
+});
+
+test("a unit's own reading, practice set and exam are keyed <unit_key>-<kind> (spec 8.1)", () => {
+  // Final readings and reviews that cover the whole course keep their own names; a unit's ordinary one does not.
+  const own = { reading: /^Reading · /, practice: /^Practice · / };
+  let n = 0;
+  for (const u of course.units)
+    for (const m of u.modules) {
+      if (!planKeyList(keys).includes(m.module_key)) continue;
+      const ordinary = m.kind === 'unit_exam' || (own[m.kind] && own[m.kind].test(m.title ?? ''));
+      if (!ordinary) continue;
+      n += 1;
+      assert.equal(m.module_key, `${u.unit_key}-${m.kind === 'unit_exam' ? 'exam' : m.kind}`, `${m.module_key} (${m.title ?? 'exam'})`);
+    }
+  assert.ok(n > 40, `${n} unit readings, practice sets and exams`);
 });
