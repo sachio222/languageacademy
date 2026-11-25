@@ -629,7 +629,7 @@
       "type": "comprehension",
       "question": "What is the first thing we must do to learn well?",
       "cue": "First, we must...",
-      "answer": "demander des questions",
+      "answer": "poser des questions",
       "accept": [
         "demander",
         "questions",

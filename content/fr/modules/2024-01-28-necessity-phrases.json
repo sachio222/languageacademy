@@ -21,43 +21,55 @@
       "word_id": "il-faut-que-tu-manges-fr",
       "fr": "il faut que tu manges",
       "gloss": "you need to eat",
-      "note": "⭐ parent to kid"
+      "note": "⭐ parent to kid",
+      "review": true
     },
     {
       "word_id": "il-faut-que-tu-partes-fr",
       "fr": "il faut que tu partes",
       "gloss": "you need to leave",
-      "note": "telling someone to go"
+      "note": "telling someone to go",
+      "review": true
     },
     {
       "word_id": "il-faut-que-j-aille-fr",
       "fr": "il faut que j'aille",
       "gloss": "I need to go",
-      "note": "saying you must leave"
+      "note": "saying you must leave",
+      "review": true
     },
     {
       "word_id": "il-faut-qu-on-parte-fr",
       "fr": "il faut qu'on parte",
       "gloss": "we need to leave",
-      "note": "group decision"
+      "note": "group decision",
+      "review": true
     },
     {
       "word_id": "il-faut-que-tu-sois-sage-fr",
       "fr": "il faut que tu sois sage",
       "gloss": "you need to be good",
-      "note": "parent to child"
+      "note": "parent to child",
+      "review": true
+    },
+    {
+      "word_id": "sage-fr",
+      "fr": "sage",
+      "gloss": "good, well-behaved (of a child); wise"
     },
     {
       "word_id": "il-faut-que-tu-fasses-attention-fr",
       "fr": "il faut que tu fasses attention",
       "gloss": "you need to pay attention",
-      "note": "be careful!"
+      "note": "be careful!",
+      "review": true
     },
     {
       "word_id": "il-faut-qu-elle-vienne-fr",
       "fr": "il faut qu'elle vienne",
       "gloss": "she needs to come",
-      "note": "expecting someone"
+      "note": "expecting someone",
+      "review": true
     }
   ],
   "concepts": [

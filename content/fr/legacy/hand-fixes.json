@@ -45,12 +45,12 @@
         "id": "c-practical-usage",
         "term": "Practical Usage",
         "definition": "Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".",
-        "example": "{Je suis heureux} (I am happy), {Il est heureux} (he is happy), {Je suis Paul} (I am Paul), {Tu es bon !} (you're good at this!)"
+        "example": "{Je suis heureux} (I am happy), {Il est heureux} (he is happy), {Je suis Paul} (I am Paul), {Tu es bon !} (you're good!)"
       },
       {
         "id": "c-at-the-cafe",
         "term": "At the café",
-        "definition": "The words from the first lesson already answer a waiter.",
+        "definition": "With the words from the first lesson, you can already answer a waiter.",
         "example": "{Bonjour ! Café ?} (Hello! Coffee?) {Oui, merci !} (Yes, thanks!)"
       }
     ],
@@ -523,7 +523,7 @@
         "id": "c-bien-que-although-even",
         "term": "{Bien que...} - Although / Even Though",
         "definition": "Express doing something DESPITE another condition",
-        "example": "{Bien que je sois fatigué, je travaille} (Although I'm tired, I'm working), {Bien que tu sois fatigué, je t'aide pour que tu partes avant qu'il soit tard} (Although you're tired, I'm helping you so that you leave before it's late)"
+        "example": "{Bien que je sois fatigué, je travaille} (Although I'm tired, I'm working), {Bien que je sois fatigué, je t'aide pour que tu partes avant qu'il soit trop tard} (Although I'm tired, I'm helping you so you can leave before it's too late)"
       },
       {
         "id": "c-showing-determination",
@@ -552,7 +552,7 @@
         "id": "c-common-in-daily-life",
         "term": "Common in Daily Life",
         "definition": "Coordinating actions, giving warnings, setting deadlines",
-        "example": "{Finis avant que papa rentre!} (Finish before dad gets home!), {Avant que tu partes, on parle en mangeant} (Before you leave, let's talk while we eat)"
+        "example": "{Finis avant que papa rentre!} (Finish before dad gets home!), {Avant que tu partes, parlons en mangeant} (Before you leave, let's talk while we eat)"
       }
     ]
   },
@@ -846,7 +846,61 @@
         "definition": "These phrases are used constantly in daily life!",
         "example": "Parent to kid: '{Il faut que tu finisses tes devoirs}' (You need to finish homework)"
       }
-    ]
+    ],
+    "vocabulary/il-faut-qu-elle-vienne-fr": {
+      "word_id": "il-faut-qu-elle-vienne-fr",
+      "fr": "il faut qu'elle vienne",
+      "gloss": "she needs to come",
+      "note": "expecting someone",
+      "review": true
+    },
+    "vocabulary/il-faut-qu-on-parte-fr": {
+      "word_id": "il-faut-qu-on-parte-fr",
+      "fr": "il faut qu'on parte",
+      "gloss": "we need to leave",
+      "note": "group decision",
+      "review": true
+    },
+    "vocabulary/il-faut-que-j-aille-fr": {
+      "word_id": "il-faut-que-j-aille-fr",
+      "fr": "il faut que j'aille",
+      "gloss": "I need to go",
+      "note": "saying you must leave",
+      "review": true
+    },
+    "vocabulary/il-faut-que-tu-fasses-attention-fr": {
+      "word_id": "il-faut-que-tu-fasses-attention-fr",
+      "fr": "il faut que tu fasses attention",
+      "gloss": "you need to pay attention",
+      "note": "be careful!",
+      "review": true
+    },
+    "vocabulary/il-faut-que-tu-manges-fr": {
+      "word_id": "il-faut-que-tu-manges-fr",
+      "fr": "il faut que tu manges",
+      "gloss": "you need to eat",
+      "note": "⭐ parent to kid",
+      "review": true
+    },
+    "vocabulary/il-faut-que-tu-partes-fr": {
+      "word_id": "il-faut-que-tu-partes-fr",
+      "fr": "il faut que tu partes",
+      "gloss": "you need to leave",
+      "note": "telling someone to go",
+      "review": true
+    },
+    "vocabulary/il-faut-que-tu-sois-sage-fr": {
+      "word_id": "il-faut-que-tu-sois-sage-fr",
+      "fr": "il faut que tu sois sage",
+      "gloss": "you need to be good",
+      "note": "parent to child",
+      "review": true
+    },
+    "vocabulary/sage-fr": {
+      "word_id": "sage-fr",
+      "fr": "sage",
+      "gloss": "good, well-behaved (of a child); wise"
+    }
   },
   "2024-01-28-verb-pattern-help": {
     "checks": [
@@ -1040,6 +1094,20 @@
         "en": "would buy"
       }
     ],
+    "items/reading-10-4": {
+      "id": "reading-10-4",
+      "type": "comprehension",
+      "question": "{Si tu étais Sophie, qu'est-ce que tu achèterais ?}",
+      "cue": "If you were Sophie, what would you buy?",
+      "answer": "une petite maison à Montmartre",
+      "accept": [
+        "Montmartre",
+        "montmartre",
+        "une maison à Montmartre",
+        "maison"
+      ],
+      "hint": "{Une petite maison à...}"
+    },
     "title": "Reading - {Mes Rêves et Mes Espoirs}",
     "vocabulary/je-me-sens-mieux-fr": {
       "word_id": "je-me-sens-mieux-fr",
@@ -1150,16 +1218,17 @@
       ],
       "hint": "What Sophie had lost"
     },
-    "items/i-saura": {
-      "id": "i-saura",
+    "items/i-saura": null,
+    "items/i-sauras": {
+      "id": "i-sauras",
       "type": "transform",
       "instruction": "Complete the philosophical thought",
-      "shown": "Si on ne fait rien, on ne _____ jamais",
-      "answer": "saura",
+      "shown": "Si tu ne fais rien, tu ne _____ jamais",
+      "answer": "sauras",
       "accept": [
-        "sait"
+        "sais"
       ],
-      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If we don't do anything, we'll never _____'"
+      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If you don't do anything, you'll never _____'"
     },
     "items/i-soit-differente": {
       "id": "i-soit-differente",
@@ -1220,7 +1289,7 @@
           "answer": "sois"
         }
       ],
-      "gloss": "'If I were your mother, I'd want you to be happy' (advice + wish)",
+      "gloss": "'If I were your mother, I'd want you to be happy' (hypothetical + wish)",
       "hint": "would want (conditional) / be (special form after '{que}')"
     },
     "items/i-voudrais-suives": null,
@@ -1241,7 +1310,7 @@
         "id": "c-common-uses",
         "term": "Common Uses",
         "definition": "Multitasking, explaining method, simultaneous actions",
-        "example": "{Je travaille en écoutant de la musique} (I work while listening to music), {On parle lentement en mangeant} (We talk slowly while eating)"
+        "example": "{Je travaille en écoutant de la musique} (I work while listening to music), {Je mange lentement en regardant un film} (I eat slowly while watching a film)"
       }
     ],
     "description": "Describe multitasking! '{En mangeant, je regarde un film}' (While eating, I watch a film), '{On apprend en pratiquant}' (We learn by practicing). Natural speech patterns!"
@@ -4997,6 +5066,25 @@
         "en": "to ask questions"
       }
     ],
+    "items/reading-7-3": {
+      "id": "reading-7-3",
+      "type": "comprehension",
+      "question": "What is the first thing we must do to learn well?",
+      "cue": "First, we must...",
+      "answer": "poser des questions",
+      "accept": [
+        "demander",
+        "questions",
+        "poser des questions"
+      ],
+      "hint": "Look for {D'abord}",
+      "mistakes": [
+        {
+          "answer": "réviser",
+          "feedback": "Asking questions comes first, review comes later"
+        }
+      ]
+    },
     "title": "Reading - {L'Art d'Apprendre}",
     "vocabulary/apprendre-fr": {
       "word_id": "apprendre-fr",
@@ -5274,7 +5362,7 @@
         "id": "c-vous-commands-formal-or",
         "term": "vous Commands = Formal or Groups",
         "definition": "Use vous form for strangers, bosses, or multiple people",
-        "example": "To strangers: Mangez! To a group: {Venez!} (Come!), {On se voit demain!} (See you tomorrow!)"
+        "example": "To strangers: Mangez! To a group: {Venez ! On se voit demain !} (Come! See you tomorrow!)"
       },
       {
         "id": "c-easy-formation-drop-the",
@@ -5391,8 +5479,8 @@
       {
         "id": "c-must-memorize-these",
         "term": "Must Memorize These",
-        "definition": "These irregular forms are used constantly - worth memorizing!",
-        "example": "{Vas-y!} (Go ahead! / Go for it!) - extremely common phrase"
+        "definition": "These irregular forms are used constantly, so they are worth memorizing!",
+        "example": "{Vas-y!} (Go ahead! / Go for it!), an extremely common phrase"
       },
       {
         "id": "c-etre-commands",
@@ -5474,17 +5562,65 @@
         }
       ]
     },
-    "vocabulary/ayons-fr": {
-      "word_id": "ayons-fr",
-      "fr": "Ayons!",
-      "gloss": "Let's have!",
-      "note": "avoir command - nous form"
+    "vocabulary/aie-fr": {
+      "word_id": "aie-fr",
+      "fr": "Aie!",
+      "gloss": "Have! (informal)",
+      "note": "avoir command, tu form"
     },
-    "vocabulary/soyons-fr": {
-      "word_id": "soyons-fr",
-      "fr": "Soyons!",
-      "gloss": "Let's be!",
-      "note": "être command - nous form"
+    "vocabulary/allez-fr": {
+      "word_id": "allez-fr",
+      "fr": "Allez!",
+      "gloss": "Go! (formal/plural)",
+      "note": "aller command, vous form"
+    },
+    "vocabulary/ayez-fr": {
+      "word_id": "ayez-fr",
+      "fr": "Ayez!",
+      "gloss": "Have! (formal/plural)",
+      "note": "avoir command, vous form"
+    },
+    "vocabulary/ayons-confiance-fr": {
+      "word_id": "ayons-confiance-fr",
+      "fr": "Ayons confiance !",
+      "gloss": "Let's trust ourselves!",
+      "note": "avoir command, nous form"
+    },
+    "vocabulary/fais-fr": {
+      "word_id": "fais-fr",
+      "fr": "Fais!",
+      "gloss": "Do! / Make! (informal)",
+      "note": "faire command, tu form"
+    },
+    "vocabulary/faites-fr": {
+      "word_id": "faites-fr",
+      "fr": "Faites!",
+      "gloss": "Do! / Make! (formal/plural)",
+      "note": "faire command, vous form"
+    },
+    "vocabulary/sois-fr": {
+      "word_id": "sois-fr",
+      "fr": "Sois!",
+      "gloss": "Be! (informal)",
+      "note": "⭐ être command, tu form"
+    },
+    "vocabulary/soyez-fr": {
+      "word_id": "soyez-fr",
+      "fr": "Soyez!",
+      "gloss": "Be! (formal/plural)",
+      "note": "être command, vous form"
+    },
+    "vocabulary/soyons-gentils-fr": {
+      "word_id": "soyons-gentils-fr",
+      "fr": "Soyons gentils !",
+      "gloss": "Let's be nice!",
+      "note": "être command, nous form"
+    },
+    "vocabulary/va-fr": {
+      "word_id": "va-fr",
+      "fr": "Va!",
+      "gloss": "Go! (informal)",
+      "note": "⭐ aller command, tu form"
     }
   },
   "2024-05-19-morning-routine": {
@@ -5602,7 +5738,13 @@
         "id": "c-temporal-prepositions",
         "term": "Temporal Prepositions",
         "definition": "Words that show when or for how long something happens - used with nouns",
-        "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le travail} (after work), {une fois} (once), {cette année} (this year), {en ce moment} (right now); {Après le travail, je bois un café} (After work, I have a coffee)"
+        "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le travail} (after work); {Après le travail, je bois un café} (After work, I have a coffee)"
+      },
+      {
+        "id": "c-time-phrases",
+        "term": "Time Phrases",
+        "definition": "Short phrases that say when or how often",
+        "example": "{une fois} (once), {cette année} (this year), {en ce moment} (right now)"
       },
       {
         "id": "c-sequential-connectors",
@@ -5786,11 +5928,11 @@
       "mistakes": [
         {
           "answer": "Grâce à",
-          "feedback": "Bad weather isn't positive! Use '{à cause de}' for negative reasons."
+          "feedback": "Work isn't a positive reason here. Use '{à cause de}'."
         },
         {
           "answer": "Parce que",
-          "feedback": "Parce que needs a CLAUSE: '{parce qu'il fait mauvais}'. Use '{à cause de}' + noun!"
+          "feedback": "Parce que needs a CLAUSE: '{parce que j'ai du travail}'. Use '{à cause de}' + noun!"
         }
       ]
     },
@@ -5828,7 +5970,7 @@
       "mistakes": [
         {
           "answer": "parce que",
-          "feedback": "Parce que needs a CLAUSE: '{parce qu'il y a du traffic}'. Use '{à cause de}' + noun!"
+          "feedback": "Parce que needs a CLAUSE: '{parce que le bus est en retard}'. Use '{à cause de}' + noun!"
         },
         {
           "answer": "grâce au",
@@ -6199,13 +6341,13 @@
     "items/i-a-regarde": {
       "id": "i-a-regarde",
       "type": "gapfill",
-      "text": "On ___ les enfants hier soir",
+      "text": "On ___ un film hier soir",
       "blanks": [
         {
           "answer": "a regardé"
         }
       ],
-      "gloss": "We watched the children last night",
+      "gloss": "We watched a film last night",
       "hint": "Use '{regarder}'",
       "mistakes": [
         {
@@ -6287,7 +6429,12 @@
           "answer": "Êtes"
         },
         {
-          "answer": "entrés"
+          "answer": "entrés",
+          "accept": [
+            "entré",
+            "entrée",
+            "entrées"
+          ]
         }
       ],
       "gloss": "Did you go into the café?",
@@ -6310,7 +6457,12 @@
       "text": "Vous ___ à la maison ?",
       "blanks": [
         {
-          "answer": "êtes restés"
+          "answer": "êtes restés",
+          "accept": [
+            "êtes resté",
+            "êtes restée",
+            "êtes restées"
+          ]
         }
       ],
       "gloss": "Did you stay home?",
@@ -6433,11 +6585,11 @@
       "mistakes": [
         {
           "answer": "Grâce à",
-          "feedback": "Rain isn't positive! Use '{à cause de}' for negative/neutral reasons."
+          "feedback": "The party is the cause here, not a thanks. Use '{à cause de}'."
         },
         {
           "answer": "Parce que",
-          "feedback": "Parce que needs a CLAUSE! Use '{à cause de la pluie}' (because of THE RAIN - noun)."
+          "feedback": "Use '{à cause de la fête}' (because of THE PARTY, a noun)."
         }
       ]
     },
@@ -6776,7 +6928,7 @@
       "mistakes": [
         {
           "answer": "sur",
-          "feedback": "Sur means 'on' (touching). Use '{au-dessus de}' for 'above' (hanging)!"
+          "feedback": "Use '{au-dessus de}' for 'above'."
         },
         {
           "answer": "devant",
@@ -6978,19 +7130,22 @@
       "hint": "imparfait - habitual action / passé composé - specific completed action"
     },
     "items/i-s-est-cachee-pour": null,
-    "items/i-s-est-levee-parce-qu": {
-      "id": "i-s-est-levee-parce-qu",
+    "items/i-s-est-levee-parce-que": {
+      "id": "i-s-est-levee-parce-que",
       "type": "gapfill",
-      "text": "Elle ___ à sept heures ___ elle avait un cours.",
+      "text": "Elle ___ à sept heures ___ son cours était à huit heures.",
       "blanks": [
         {
           "answer": "s'est levée"
         },
         {
-          "answer": "parce qu'"
+          "answer": "parce que",
+          "accept": [
+            "car"
+          ]
         }
       ],
-      "gloss": "She got up at seven because she had a class",
+      "gloss": "She got up at seven because her class was at eight",
       "hint": "passé composé of se lever (reflexive) / because"
     },
     "items/i-travaillais-a-appele": {

@@ -71,7 +71,13 @@
       "id": "c-temporal-prepositions",
       "term": "Temporal Prepositions",
       "definition": "Words that show when or for how long something happens - used with nouns",
-      "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le travail} (after work), {une fois} (once), {cette année} (this year), {en ce moment} (right now); {Après le travail, je bois un café} (After work, I have a coffee)"
+      "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le travail} (after work); {Après le travail, je bois un café} (After work, I have a coffee)"
+    },
+    {
+      "id": "c-time-phrases",
+      "term": "Time Phrases",
+      "definition": "Short phrases that say when or how often",
+      "example": "{une fois} (once), {cette année} (this year), {en ce moment} (right now)"
     },
     {
       "id": "c-sequential-connectors",

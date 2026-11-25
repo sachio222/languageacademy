@@ -2,6 +2,7 @@
 // back into lines, compare a live lesson with the adapter's lesson field by field, and sort each difference into an
 // allowed class from scripts/content/test/fixtures/golden-allowed.json. Pure: no fs, no app imports.
 import { sentences } from '../migrate/reading.mjs';
+import { normText } from '../migrate/items.mjs';
 
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 const isStr = (v) => typeof v === 'string';
@@ -777,7 +778,7 @@ export function changedSince(baseline, { handFixes = {}, records = {} } = {}) {
  * An item, concept card or vocabulary card added by hand passes when it is recorded and no live id maps to it, and so
  * do the later live exercises it renumbers, by exactly the recorded additions before them.
  */
-export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), liveIds = {} }) {
+export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), liveIds = {}, records = {} }) {
   const mod = (key) => course?.modules.get(key) ?? null;
   const strip = (item) => (isObj(item) ? Object.fromEntries(Object.entries(item).filter(([k]) => k !== 'steps')) : item);
   const holds = (key, part, value) => handFixed.get(key)?.has(part) && JSON.stringify(canon(strip(value))) === JSON.stringify(canon(strip(handFixes[key]?.[part])));
@@ -810,12 +811,25 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
     }
     if ((p = /^vocabularyReference\[\+?(\d+)\]/.exec(d.path))) {
       // An added card's row carries the card itself (compareLesson attaches the tables to paired rows only).
-      // A paired card is found by its live text, or by its converted text when the recorded fix rewrote the card's
-      // French or English (C4b: Reading 7's "étudiant(s)" card became "étudiant").
-      const cards = d.path.includes('[+')
-        ? [d.cards?.converted?.[+p[1]] ?? (d.live === undefined ? d.converted : undefined)]
-        : [d.cards?.live?.[+p[1]], d.cards?.converted?.[+p[1]]];
-      const w = (m.vocabulary || []).find((x) => cards.some((card) => x.fr === card?.french && x.gloss === card?.english));
+      const i = +p[1];
+      if (d.path.includes('[+')) {
+        const card = d.cards?.converted?.[i] ?? (d.live === undefined ? d.converted : undefined);
+        const w = (m.vocabulary || []).find((x) => x.fr === card?.french && x.gloss === card?.english);
+        return !!w && holds(d.module_key, `vocabulary/${w.word_id}`, w);
+      }
+      // A paired card is the module row with the live card's text. When the recorded fix rewrote that text (C4b:
+      // Reading 7's "étudiant(s)" became "étudiant"), it is the row with the word id the migration record gives the
+      // live card, and only when that row is the converted card in the live card's own place: a card lost from the
+      // module moves a neighbour into that place, and the neighbour's fix never explains the loss.
+      const live = d.cards?.live?.[i];
+      const conv = d.cards?.converted?.[i];
+      let w = (m.vocabulary || []).find((x) => x.fr === live?.french && x.gloss === live?.english);
+      if (!w && live) {
+        const key = `${normText(live.french)}|${normText(live.english)}`;
+        const ids = (records[d.module_key]?.vocabulary ?? []).filter((r) => r.key === key).map((r) => r.word_id);
+        const row = ids.length === 1 ? (m.vocabulary || []).find((x) => x.word_id === ids[0]) : null;
+        if (row && conv && conv.french === row.fr && conv.english === row.gloss) w = row;
+      }
       return !!w && holds(d.module_key, `vocabulary/${w.word_id}`, w);
     }
     if ((p = /^(?:exercises|sentences)\[\+?(\d+)\]/.exec(d.path))) {

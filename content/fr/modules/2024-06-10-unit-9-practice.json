@@ -267,18 +267,21 @@
       "hint": "on (spatial preposition) / passé composé of voir"
     },
     {
-      "id": "i-s-est-levee-parce-qu",
+      "id": "i-s-est-levee-parce-que",
       "type": "gapfill",
-      "text": "Elle ___ à sept heures ___ elle avait un cours.",
+      "text": "Elle ___ à sept heures ___ son cours était à huit heures.",
       "blanks": [
         {
           "answer": "s'est levée"
         },
         {
-          "answer": "parce qu'"
+          "answer": "parce que",
+          "accept": [
+            "car"
+          ]
         }
       ],
-      "gloss": "She got up at seven because she had a class",
+      "gloss": "She got up at seven because her class was at eight",
       "hint": "passé composé of se lever (reflexive) / because"
     }
   ],

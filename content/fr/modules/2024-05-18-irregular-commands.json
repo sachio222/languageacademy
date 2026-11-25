@@ -24,13 +24,13 @@
       "word_id": "sois-fr",
       "fr": "Sois!",
       "gloss": "Be! (informal)",
-      "note": "⭐ être command - tu form"
+      "note": "⭐ être command, tu form"
     },
     {
       "word_id": "soyez-fr",
       "fr": "Soyez!",
       "gloss": "Be! (formal/plural)",
-      "note": "être command - vous form"
+      "note": "être command, vous form"
     },
     {
       "word_id": "sois-gentil-fr",
@@ -39,22 +39,22 @@
       "note": "common command"
     },
     {
-      "word_id": "soyons-fr",
-      "fr": "Soyons!",
-      "gloss": "Let's be!",
-      "note": "être command - nous form"
+      "word_id": "soyons-gentils-fr",
+      "fr": "Soyons gentils !",
+      "gloss": "Let's be nice!",
+      "note": "être command, nous form"
     },
     {
       "word_id": "aie-fr",
       "fr": "Aie!",
       "gloss": "Have! (informal)",
-      "note": "avoir command - tu form"
+      "note": "avoir command, tu form"
     },
     {
       "word_id": "ayez-fr",
       "fr": "Ayez!",
       "gloss": "Have! (formal/plural)",
-      "note": "avoir command - vous form"
+      "note": "avoir command, vous form"
     },
     {
       "word_id": "aie-confiance-fr",
@@ -63,22 +63,22 @@
       "note": "encouragement"
     },
     {
-      "word_id": "ayons-fr",
-      "fr": "Ayons!",
-      "gloss": "Let's have!",
-      "note": "avoir command - nous form"
+      "word_id": "ayons-confiance-fr",
+      "fr": "Ayons confiance !",
+      "gloss": "Let's trust ourselves!",
+      "note": "avoir command, nous form"
     },
     {
       "word_id": "va-fr",
       "fr": "Va!",
       "gloss": "Go! (informal)",
-      "note": "⭐ aller command - tu form"
+      "note": "⭐ aller command, tu form"
     },
     {
       "word_id": "allez-fr",
       "fr": "Allez!",
       "gloss": "Go! (formal/plural)",
-      "note": "aller command - vous form"
+      "note": "aller command, vous form"
     },
     {
       "word_id": "vas-y-fr",
@@ -96,13 +96,13 @@
       "word_id": "fais-fr",
       "fr": "Fais!",
       "gloss": "Do! / Make! (informal)",
-      "note": "faire command - tu form"
+      "note": "faire command, tu form"
     },
     {
       "word_id": "faites-fr",
       "fr": "Faites!",
       "gloss": "Do! / Make! (formal/plural)",
-      "note": "faire command - vous form"
+      "note": "faire command, vous form"
     },
     {
       "word_id": "fais-attention-fr",
@@ -121,8 +121,8 @@
     {
       "id": "c-must-memorize-these",
       "term": "Must Memorize These",
-      "definition": "These irregular forms are used constantly - worth memorizing!",
-      "example": "{Vas-y!} (Go ahead! / Go for it!) - extremely common phrase"
+      "definition": "These irregular forms are used constantly, so they are worth memorizing!",
+      "example": "{Vas-y!} (Go ahead! / Go for it!), an extremely common phrase"
     },
     {
       "id": "c-etre-commands",

@@ -91,11 +91,12 @@ const adaptIn = (c) => (mod) => {
 function run(mutate = null, edits = {}) {
   const c = edits.modules ? { ...course, modules: new Map([...course.modules].map(([k, m]) => [k, edits.modules[k] ? { ...m, ...edits.modules[k] } : m])) } : course;
   const fixes = edits.handFixes ?? handFixes;
-  const since = changedSince(baseline, { handFixes: fixes, records: edits.records ?? records });
+  const recs = edits.records ?? records;
+  const since = changedSince(baseline, { handFixes: fixes, records: recs });
   const adapt = adaptIn(c);
   const checks = {
     ...goldenChecks({ liveIds, course: c, lSources, handFixes: fixes, rewrites: REWRITES, plain, adapt }),
-    hand_fix_recorded: handFixCheck({ course: c, handFixes: fixes, handFixed: since.handFixed, liveIds }),
+    hand_fix_recorded: handFixCheck({ course: c, handFixes: fixes, handFixed: since.handFixed, liveIds, records: recs }),
   };
   const diffs = [];
   const stats = { lessons: 0, fields: 0 };
@@ -399,3 +400,47 @@ for (const [name, mutate] of PLANTED)
     const r = run(mutate);
     assert.ok(r.unexplained.length > 0 || r.off.length > 0, `${name} passed the golden test`);
   });
+
+// A live card lost from the module itself moves its neighbours up one place; a neighbour's recorded fix must never
+// explain the loss (C4b review C1). Reading 7's étudiant card was rewritten by a recorded fix; Morning Routine's tôt
+// card was added by hand; Basic Nouns has neither.
+const dropCard = (key, wordId) => {
+  const m = course.modules.get(key);
+  assert.ok(m.vocabulary.some((w) => w.word_id === wordId), `${key} has ${wordId}`);
+  return run(null, { modules: { [key]: { vocabulary: m.vocabulary.filter((w) => w.word_id !== wordId) } } });
+};
+for (const [key, wordId, where] of [
+  ['2024-05-07-reading-7', 'etudie-fr', 'the card before a rewritten card'],
+  ['2024-05-07-reading-7', 'etudiant-s-fr', 'the rewritten card itself'],
+  ['2024-05-07-reading-7', 'comprendre-fr', 'the card after a rewritten card'],
+  ['2024-05-19-morning-routine', 'vous-vous-reveillez-fr', 'the card before an added card'],
+  ['2024-05-19-morning-routine', 'se-lever-fr', 'the card after an added card'],
+  ['2024-01-06-basic-nouns', 'une-maison-fr', 'a card in a module with no new vocabulary fix'],
+])
+  test(`a planted loss is caught: a live card lost from the module (${where}, ${key} ${wordId})`, () => {
+    const r = dropCard(key, wordId);
+    assert.ok(r.unexplained.some((d) => d.module_key === key) || r.off.length > 0, `${key} lost ${wordId} and passed`);
+  });
+
+test('a planted loss is caught: every live card beside a newly fixed or added card, lost from its module', () => {
+  const slipped = [];
+  let tried = 0;
+  for (const [key, parts] of result.since.handFixed) {
+    const m = course.modules.get(key);
+    const live = snapshot.find((l) => l.moduleKey === key)?.vocabularyReference;
+    if (!m?.vocabulary || !live) continue;
+    const isLive = (w) => (records[key]?.vocabulary ?? []).some((r) => r.word_id === w.word_id);
+    for (const part of parts) {
+      if (!part.startsWith('vocabulary/')) continue;
+      const at = m.vocabulary.findIndex((w) => `vocabulary/${w.word_id}` === part);
+      for (const n of [m.vocabulary[at - 1], m.vocabulary[at + 1]]) {
+        if (at < 0 || !n || !isLive(n)) continue;
+        tried += 1;
+        const r = dropCard(key, n.word_id);
+        if (!r.unexplained.some((d) => d.module_key === key) && !r.off.length) slipped.push(`${key} ${n.word_id}`);
+      }
+    }
+  }
+  assert.ok(tried > 20, `only ${tried} cards tried`);
+  assert.deepEqual(slipped, []);
+});

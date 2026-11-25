@@ -307,15 +307,15 @@
       "hint": "Service expression"
     },
     {
-      "id": "i-saura",
+      "id": "i-sauras",
       "type": "transform",
       "instruction": "Complete the philosophical thought",
-      "shown": "Si on ne fait rien, on ne _____ jamais",
-      "answer": "saura",
+      "shown": "Si tu ne fais rien, tu ne _____ jamais",
+      "answer": "sauras",
       "accept": [
-        "sait"
+        "sais"
       ],
-      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If we don't do anything, we'll never _____'"
+      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If you don't do anything, you'll never _____'"
     },
     {
       "id": "i-soit-differente",

@@ -366,13 +366,13 @@
     {
       "id": "i-a-regarde",
       "type": "gapfill",
-      "text": "On ___ les enfants hier soir",
+      "text": "On ___ un film hier soir",
       "blanks": [
         {
           "answer": "a regardé"
         }
       ],
-      "gloss": "We watched the children last night",
+      "gloss": "We watched a film last night",
       "hint": "Use '{regarder}'",
       "mistakes": [
         {

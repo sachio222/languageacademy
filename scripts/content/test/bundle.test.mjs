@@ -492,10 +492,13 @@ test('a review row carries review: true into the bundle; ordinary rows carry no 
   const ok = runChecker(b);
   assert.equal(ok.status, 0, JSON.stringify(ok));
   assert.equal(ok.ok, true);
-  // In the real course only review rows carry the key: today the one in Units 1 to 11, toujours in the Unit 9 lesson
-  // that sets the two past tenses side by side (C4b; toujours is taught at 49).
+  // In the real course a word carries the key exactly when its row is a review row (C4b: toujours in the Unit 9 lesson
+  // that sets the two past tenses side by side, taught at 49; the il faut que rows of the necessity lesson, taught at 129).
   const reviewed = real.content.flatMap((c) => c.words.filter((w) => 'review' in w).map((w) => `${c.module_key} ${w.word_id} ${w.review}`));
-  assert.deepEqual(reviewed, ['2024-06-04-pc-vs-imparfait toujours-fr true']);
+  const reviewRows = [...course.modules.values()].filter((m) => real.content.some((c) => c.module_key === m.module_key))
+    .flatMap((m) => (m.vocabulary ?? []).filter((w) => w.review === true).map((w) => `${m.module_key} ${w.word_id} true`));
+  assert.deepEqual([...reviewed].sort(), [...reviewRows].sort());
+  assert.ok(reviewed.includes('2024-06-04-pc-vs-imparfait toujours-fr true'));
 });
 
 test("a guide's Read more link reaches its GuideBody.more; a guide without one bundles exactly as before", (t) => {

@@ -917,8 +917,8 @@
     {
       "id": "reading-10-4",
       "type": "comprehension",
-      "question": "{Si Sophie était riche, qu'est-ce qu'elle achèterait?}",
-      "cue": "If Sophie were rich, what would she buy?",
+      "question": "{Si tu étais Sophie, qu'est-ce que tu achèterais ?}",
+      "cue": "If you were Sophie, what would you buy?",
       "answer": "une petite maison à Montmartre",
       "accept": [
         "Montmartre",

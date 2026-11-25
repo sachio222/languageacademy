@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2622 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 529 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2622 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -24,7 +24,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Section | Lines |
 |---|---|
 | Guide checks written by hand | 1 |
-| Spellings taught more than once | 402 |
+| Spellings taught more than once | 401 |
 | Item types to confirm | 259 |
 | Practice blanks that were in the wrong place | 51 |
 | Position words | 119 |
@@ -32,8 +32,8 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 822 |
 | Passage words with no pop-up | 7 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1047 |
-| Live ids with no converted item | 337 (22 real misses) |
+| Hand edits kept | 1069 |
+| Live ids with no converted item | 339 (24 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 659 |
 | Notes | 3 |
@@ -348,8 +348,8 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-05-18-irregular-commands**
 
 - `vocabulary[9]` "Allons-y!": same meaning as "Let's go!" in 2024-05-03-knowledge-nouns: kept allons-y-fr
-- `vocabulary[10]` "Fais!": same meaning as "do/make (you)" in 2024-04-24-reading-6: kept fais-fr
-- `vocabulary[11]` "Faites!": same meaning as "do/make" in 2024-05-07-reading-7: kept faites-fr
+- `vocabulary[10]` "Fais!": same meaning as "do/make (you)" in 2024-04-24-reading-6: kept fais-fr (fixed by hand)
+- `vocabulary[11]` "Faites!": same meaning as "do/make" in 2024-05-07-reading-7: kept faites-fr (fixed by hand)
 
 **2024-05-20-reading-8**
 
@@ -492,7 +492,6 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[7]` "la Tour Eiffel": same meaning as "Eiffel Tower" in 2024-04-24-reading-6: kept la-tour-eiffel-fr
 - `vocabulary[16]` "il faut que": same meaning as "it's necessary that / someone needs to" in 2024-01-23-common-special-forms-1: kept il-faut-que-fr
 - `vocabulary[23]` "sois": same meaning as "Be! (informal)" in 2024-05-18-irregular-commands: kept sois-fr
-- `vocabulary[24]` "soyons": same meaning as "Let's be!" in 2024-05-18-irregular-commands: kept soyons-fr
 - `vocabulary[42]` "depuis": same meaning as "since / for" in 2024-05-23-temporal-words: kept depuis-fr
 - `vocabulary[43]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr
 - `vocabulary[54]` "en train de": same meaning as "in the process of" in 2024-05-07-reading-7: kept en-train-de-fr
@@ -1292,7 +1291,7 @@ Learner text that names a module, unit or reading by number. The source says it 
 **2024-02-04-unit-10-exam**
 
 - `description` "Test everything from Unit 10! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions." (fixed by hand)
-- `items[36].hint` "Marc's wisdom from Reading 10: 'If we don't do anything, we'll never _____'" (fixed by hand)
+- `items[36].hint` "Marc's wisdom from Reading 10: 'If we don't do anything, we'll never _____'"
 - `items[37].instruction` "From Reading 10: What did Sophie want about her life?" (fixed by hand)
 - `items[38].instruction` "From Reading 10: What had Sophie already done before talking to Marc?" (fixed by hand)
 
@@ -1801,7 +1800,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-02-etre**
 
-- `concepts` "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"","example":"Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)"]" → "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".","example":"Je suis heureux (I am happy), Il est heureux (he is happy), Je suis Paul (I am Paul), Tu es bon ! (you're good at this!)","id":"c-at-the-cafe","term":"At the café","definition":"The words from the first lesson already answer a waiter.","example":"Bonjour ! Café ? (Hello! Coffee?) Oui, merci ! (Yes, thanks!)"]"
+- `concepts` "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"","example":"Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)"]" → "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".","example":"Je suis heureux (I am happy), Il est heureux (he is happy), Je suis Paul (I am Paul), Tu es bon ! (you're good!)","id":"c-at-the-cafe","term":"At the café","definition":"With the words from the first lesson, you can already answer a waiter.","example":"Bonjour ! Café ? (Hello! Coffee?) Oui, merci ! (Yes, thanks!)"]"
 
 **2024-10-21-cognates-help**
 
@@ -2121,6 +2120,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[55].note` ""Unit 6 verb"" → "(removed)"
 - `glossary[0].fr` "étudiant(s)" → "poser des questions"
 - `glossary[0].en` "student(s)" → "to ask questions"
+- `items[2].answer` "demander des questions" → "poser des questions"
 
 **2024-05-11-unit-7-practice**
 
@@ -2133,7 +2133,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-05-23-temporal-words**
 
-- `concepts[0].example` "pendant des heures (for hours), avant le cours (before class), après le dîner (after dinner)" → "pendant des heures (for hours), avant le cours (before class), après le travail (after work), une fois (once), cette année (this year), en ce moment (right now); Après le travail, je bois un café (After work, I have a coffee)"
+- `concepts` "["id":"c-temporal-prepositions","term":"Temporal Prepositions","definition":"Words that show when or for how long something happens - used with nouns","example":"pendant des heures (for hours), avant le cours (before class), après le dîner (after dinner)","id":"c-sequential-connectors","term":"Sequential Connectors","definition":"Words that show the order of actions - connect sentences smoothly","example":"D'abord, je mange. Ensuite, je pars. Finalement, j'arrive. (First, I eat. Then, I leave. Finally, I arrive.)","id":"c-building-smooth-narratives","term":"Building Smooth Narratives","definition":"Use these words to tell stories and describe routines naturally","example":"Before: 'Je mange. Je pars.' (choppy) After: 'D'abord, je mange. Ensuite, je pars.' (smooth!)","id":"c-position-in-sentence","term":"Position in Sentence","definition":"Sequential connectors usually start sentences. Prepositions go before nouns.","example":"D'abord, je pars (First, I leave). Je pars après le cours (I leave after class)."]" → "["id":"c-temporal-prepositions","term":"Temporal Prepositions","definition":"Words that show when or for how long something happens - used with nouns","example":"pendant des heures (for hours), avant le cours (before class), après le travail (after work); Après le travail, je bois un café (After work, I have a coffee)","id":"c-time-phrases","term":"Time Phrases","definition":"Short phrases that say when or how often","example":"une fois (once), cette année (this year), en ce moment (right now)","id":"c-sequential-connectors","term":"Sequential Connectors","definition":"Words that show the order of actions - connect sentences smoothly","example":"D'abord, je mange. Ensuite, je pars. Finalement, j'arrive. (First, I eat. Then, I leave. Finally, I arrive.)","id":"c-building-smooth-narratives","term":"Building Smooth Narratives","definition":"Use these words to tell stories and describe routines naturally","example":"Before: 'Je mange. Je pars.' (choppy) After: 'D'abord, je mange. Ensuite, je pars.' (smooth!)","id":"c-position-in-sentence","term":"Position in Sentence","definition":"Sequential connectors usually start sentences. Prepositions go before nouns.","example":"D'abord, je pars (First, I leave). Je pars après le cours (I leave after class)."]"
 
 **2024-05-21-reflexive-pronouns**
 
@@ -2167,11 +2167,19 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-05-14-commands-vous**
 
-- `concepts[0].example` "To strangers: Mangez! To a group: Venez! (Come!)" → "To strangers: Mangez! To a group: Venez! (Come!), On se voit demain! (See you tomorrow!)"
+- `concepts[0].example` "To strangers: Mangez! To a group: Venez! (Come!)" → "To strangers: Mangez! To a group: Venez ! On se voit demain ! (Come! See you tomorrow!)"
 
 **2024-05-18-irregular-commands**
 
-- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois là à six heures! (Be there at six!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), N'ayez pas peur! (Don't be afraid!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)","id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café or chez Paul. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the y in vas-y comes from.","example":"Tu vas au café ? Oui, j'y vais. (Are you going to the café? Yes, I'm going there.)"]"
+- `vocabulary[0].note` "⭐ être command - tu form" → "⭐ être command, tu form"
+- `vocabulary[1].note` "être command - vous form" → "être command, vous form"
+- `vocabulary[3].note` "avoir command - tu form" → "avoir command, tu form"
+- `vocabulary[4].note` "avoir command - vous form" → "avoir command, vous form"
+- `vocabulary[6].note` "⭐ aller command - tu form" → "⭐ aller command, tu form"
+- `vocabulary[7].note` "aller command - vous form" → "aller command, vous form"
+- `vocabulary[10].note` "faire command - tu form" → "faire command, tu form"
+- `vocabulary[11].note` "faire command - vous form" → "faire command, vous form"
+- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly, so they are worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!), an extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois là à six heures! (Be there at six!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), N'ayez pas peur! (Don't be afraid!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)","id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café or chez Paul. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the y in vas-y comes from.","example":"Tu vas au café ? Oui, j'y vais. (Are you going to the café? Yes, I'm going there.)"]"
 
 **2024-05-12-commands-pronouns**
 
@@ -2213,10 +2221,13 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[6].gloss` "Why are you staying? - Because I'm tired" → "Why aren't you coming? - Because I'm tired"
 - `items[7].text` "Je suis en retard ___ le traffic" → "Je suis en retard ___ bus"
 - `items[7].gloss` "I'm late because of traffic" → "I'm late because of the bus"
+- `items[7].mistakes[0].feedback` "Parce que needs a CLAUSE: 'parce qu'il y a du traffic'. Use 'à cause de' + noun!" → "Parce que needs a CLAUSE: 'parce que le bus est en retard'. Use 'à cause de' + noun!"
 - `items[8].text` "J'ai réussi ___ professeur" → "Je comprends ___ professeur"
 - `items[8].gloss` "I succeeded thanks to the teacher" → "I understand thanks to the teacher"
 - `items[10].text` "___ du mauvais temps, on annule le match" → "___ du travail, je ne peux pas venir"
 - `items[10].gloss` "Because of bad weather, we're canceling the match" → "Because of work, I can't come"
+- `items[10].mistakes[0].feedback` "Bad weather isn't positive! Use 'à cause de' for negative reasons." → "Work isn't a positive reason here. Use 'à cause de'."
+- `items[10].mistakes[1].feedback` "Parce que needs a CLAUSE: 'parce qu'il fait mauvais'. Use 'à cause de' + noun!" → "Parce que needs a CLAUSE: 'parce que j'ai du travail'. Use 'à cause de' + noun!"
 - `items[11].text` "On va partir ___ tu es prêt" → "On va partir ___ tu es là"
 - `items[11].gloss` "We'll leave since you're ready" → "We'll leave since you're here"
 - `items[16].text` "Je ne dors pas bien ___ bruit" → "Je suis fatigué ___ travail"
@@ -2230,6 +2241,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[7].gloss` "My keys are on the table" → "My phone is on the table"
 - `items[11].text` "La lampe est ___ le lit" → "J'habite ___ café"
 - `items[11].gloss` "The lamp is above the bed" → "I live above the café"
+- `items[11].mistakes[0].feedback` "Sur means 'on' (touching). Use 'au-dessus de' for 'above' (hanging)!" → "Use 'au-dessus de' for 'above'."
 - `items[14].text` "Ma chambre est ___" → "La cuisine est ___"
 - `items[14].gloss` "My bedroom is downstairs/below" → "The kitchen is downstairs/below"
 - `items[15].text` "Le chat dort ___ mon lit" → "Le chat est ___ la voiture"
@@ -2250,8 +2262,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[8].example_fr` "J'ai regardé la télé" → "J'ai regardé la ville"
 - `items[4].text` "Vous ___ mes clés?" → "Vous ___ mon livre ?"
 - `items[4].gloss` "Did you look for my keys?" → "Did you look for my book?"
-- `items[9].text` "On ___ la télé hier soir" → "On ___ les enfants hier soir"
-- `items[9].gloss` "We watched TV last night" → "We watched the children last night"
+- `items[9].text` "On ___ la télé hier soir" → "On ___ un film hier soir"
+- `items[9].gloss` "We watched TV last night" → "We watched a film last night"
 
 **2024-06-01-passe-compose-irregular-1**
 
@@ -2294,6 +2306,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[13].gloss` "Thanks to you, I succeeded" → "Thanks to you, I learned French"
 - `items[14].text` "___ la pluie, on est restés à la maison" → "___ la fête, on est rentrés tard"
 - `items[14].gloss` "Because of the rain, we stayed home" → "Because of the party, we got home late"
+- `items[14].mistakes[0].feedback` "Rain isn't positive! Use 'à cause de' for negative/neutral reasons." → "The party is the cause here, not a thanks. Use 'à cause de'."
+- `items[14].mistakes[1].feedback` "Parce que needs a CLAUSE! Use 'à cause de la pluie' (because of THE RAIN - noun)." → "Use 'à cause de la fête' (because of THE PARTY, a noun)."
 
 **2024-06-05-reading-9**
 
@@ -2324,6 +2338,13 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-28-necessity-phrases**
 
+- `vocabulary[0].review` "(none)" → "true"
+- `vocabulary[1].review` "(none)" → "true"
+- `vocabulary[2].review` "(none)" → "true"
+- `vocabulary[3].review` "(none)" → "true"
+- `vocabulary[4].review` "(none)" → "true"
+- `vocabulary[5].review` "(none)" → "true"
+- `vocabulary[6].review` "(none)" → "true"
 - `concepts[0].example` "Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat)" → "Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat); Il faut qu'on aille au parc (We need to go to the park)"
 
 **2024-02-07-wish-phrases**
@@ -2346,11 +2367,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-02-06-while-doing-phrases**
 
 - `description` "Describe multitasking! 'En mangeant, je regarde la télé' (While eating, I watch TV), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!" → "Describe multitasking! 'En mangeant, je regarde un film' (While eating, I watch a film), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!"
-- `concepts[1].example` "Je travaille en écoutant de la musique (I work while listening to music)" → "Je travaille en écoutant de la musique (I work while listening to music), On parle lentement en mangeant (We talk slowly while eating)"
+- `concepts[1].example` "Je travaille en écoutant de la musique (I work while listening to music)" → "Je travaille en écoutant de la musique (I work while listening to music), Je mange lentement en regardant un film (I eat slowly while watching a film)"
 
 **2024-01-21-before-phrases**
 
-- `concepts[1].example` "Finis avant que papa rentre! (Finish before dad gets home!)" → "Finis avant que papa rentre! (Finish before dad gets home!), Avant que tu partes, on parle en mangeant (Before you leave, let's talk while we eat)"
+- `concepts[1].example` "Finis avant que papa rentre! (Finish before dad gets home!)" → "Finis avant que papa rentre! (Finish before dad gets home!), Avant que tu partes, parlons en mangeant (Before you leave, let's talk while we eat)"
 
 **2024-02-03-so-that-phrases**
 
@@ -2358,7 +2379,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-20-although-phrases**
 
-- `concepts[0].example` "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working)" → "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working), Bien que tu sois fatigué, je t'aide pour que tu partes avant qu'il soit tard (Although you're tired, I'm helping you so that you leave before it's late)"
+- `concepts[0].example` "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working)" → "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working), Bien que je sois fatigué, je t'aide pour que tu partes avant qu'il soit trop tard (Although I'm tired, I'm helping you so you can leave before it's too late)"
 - `concepts[1].example` "Bien qu'il fasse froid, on sort (Even though it's cold, we're going out)" → "Bien qu'il fasse froid, on va au parc (Even though it's cold, we're going to the park)"
 
 **2024-02-01-reading-10**
@@ -2366,6 +2387,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `title` "Reading 10 - Mes Rêves et Mes Espoirs" → "Reading - Mes Rêves et Mes Espoirs"
 - `description` "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more" → "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more"
 - `glossary` "(none)" → "["fr":"assise","en":"sitting (feminine)","fr":"savait","en":"knew","fr":"saura","en":"will know","fr":"achèterait","en":"would buy"]"
+- `items[3].question` "Si Sophie était riche, qu'est-ce qu'elle achèterait?" → "Si tu étais Sophie, qu'est-ce que tu achèterais ?"
+- `items[3].cue` "If Sophie were rich, what would she buy?" → "If you were Sophie, what would you buy?"
 
 **2024-02-05-unit-10-practice**
 
@@ -2375,8 +2398,6 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-02-04-unit-10-exam**
 
 - `description` "Test everything from Unit 10! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions." → "Test everything from this unit! Master B2 level phrases: necessity (il faut que), wishes (je veux que), emotions (je suis content que), hypotheticals (si j'étais...), regrets (si j'avais su...), and more advanced expressions."
-- `items[36].accept` "["sait","savoir"]" → "["sait"]"
-- `items[36].hint` "Marc's wisdom from Reading 10: 'If we don't do anything, we'll never _____'" → "Marc's wisdom from the reading Mes Rêves et Mes Espoirs: 'If we don't do anything, we'll never _____'"
 - `items[37].instruction` "From Reading 10: What did Sophie want about her life?" → "From the reading Mes Rêves et Mes Espoirs: What did Sophie want about her life?"
 - `items[38].instruction` "From Reading 10: What had Sophie already done before talking to Marc?" → "From the reading Mes Rêves et Mes Espoirs: What had Sophie already done before talking to Marc?"
 
@@ -3187,6 +3208,10 @@ The live app stores answers under these exercise ids and concept indexes, and no
 
 - `2024-05-02-discourse-markers.14` exercise "I am almost ready" → "je suis presque prêt"
 
+**2024-05-07-reading-7**
+
+- `2024-05-07-reading-7.3` exercise "First, we must..." → "demander des questions"
+
 **2024-05-10-unit-7-exam**
 
 - `2024-05-10-unit-7-exam.62` exercise "I'm reviewing my lessons because I have an exam" → "je révise mes leçons parce que j'ai un examen"
@@ -3235,6 +3260,10 @@ The live app stores answers under these exercise ids and concept indexes, and no
 **2024-01-22-common-adverbs**
 
 - `2024-01-22-common-adverbs.4` exercise "run quickly" → "courir rapidement"
+
+**2024-02-04-unit-10-exam**
+
+- `2024-02-04-unit-10-exam.37` exercise "Si on ne fait rien, on ne _____ jamais" → "saura"
 
 ### Reference word lists
 

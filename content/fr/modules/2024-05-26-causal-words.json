@@ -282,7 +282,7 @@
       "mistakes": [
         {
           "answer": "parce que",
-          "feedback": "Parce que needs a CLAUSE: '{parce qu'il y a du traffic}'. Use '{à cause de}' + noun!"
+          "feedback": "Parce que needs a CLAUSE: '{parce que le bus est en retard}'. Use '{à cause de}' + noun!"
         },
         {
           "answer": "grâce au",
@@ -345,11 +345,11 @@
       "mistakes": [
         {
           "answer": "Grâce à",
-          "feedback": "Bad weather isn't positive! Use '{à cause de}' for negative reasons."
+          "feedback": "Work isn't a positive reason here. Use '{à cause de}'."
         },
         {
           "answer": "Parce que",
-          "feedback": "Parce que needs a CLAUSE: '{parce qu'il fait mauvais}'. Use '{à cause de}' + noun!"
+          "feedback": "Parce que needs a CLAUSE: '{parce que j'ai du travail}'. Use '{à cause de}' + noun!"
         }
       ]
     },

@@ -415,11 +415,11 @@
       "mistakes": [
         {
           "answer": "Grâce à",
-          "feedback": "Rain isn't positive! Use '{à cause de}' for negative/neutral reasons."
+          "feedback": "The party is the cause here, not a thanks. Use '{à cause de}'."
         },
         {
           "answer": "Parce que",
-          "feedback": "Parce que needs a CLAUSE! Use '{à cause de la pluie}' (because of THE RAIN - noun)."
+          "feedback": "Use '{à cause de la fête}' (because of THE PARTY, a noun)."
         }
       ]
     },

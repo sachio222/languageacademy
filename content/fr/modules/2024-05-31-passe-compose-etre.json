@@ -253,7 +253,12 @@
       "text": "Vous ___ à la maison ?",
       "blanks": [
         {
-          "answer": "êtes restés"
+          "answer": "êtes restés",
+          "accept": [
+            "êtes resté",
+            "êtes restée",
+            "êtes restées"
+          ]
         }
       ],
       "gloss": "Did you stay home?",
@@ -501,7 +506,12 @@
           "answer": "Êtes"
         },
         {
-          "answer": "entrés"
+          "answer": "entrés",
+          "accept": [
+            "entré",
+            "entrée",
+            "entrées"
+          ]
         }
       ],
       "gloss": "Did you go into the café?",
