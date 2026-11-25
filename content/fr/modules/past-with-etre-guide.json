@@ -1,0 +1,239 @@
+{
+  "schema": "la-module@1",
+  "module_key": "past-with-etre-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Past with {être} - Which Verbs, Which Endings",
+  "short_title": "Past with être",
+  "description": "See which verbs build the past with {être}, and when the participle adds -e or -s.",
+  "can_do": [
+    "Choose {avoir} or {être} for the past: {j'ai mangé}, {je suis allé}.",
+    "Make the participle agree after {être}: {elle est allée}, {ils sont allés}."
+  ],
+  "minutes": 5,
+  "line": "A small group of verbs and every reflexive verb build the past with {être}, and the participle then agrees with the subject.",
+  "parts": [
+    {
+      "id": "p-avoir-or-etre",
+      "heading": "{avoir} or {être}",
+      "text": [
+        "Most verbs build the passé composé with {avoir}: {j'ai mangé}. A small group of verbs, most of them about coming and going, use {être}: {je suis allé}."
+      ],
+      "note": "Many {être} verbs come in opposite pairs: {aller} and {venir}, {arriver} and {partir}, {entrer} and {sortir}, {monter} and {descendre}.",
+      "blocks": [
+        {
+          "cmp": {
+            "left": "With avoir",
+            "right": "With être",
+            "rows": [
+              [
+                {
+                  "fr": "j'ai mangé",
+                  "en": "I ate"
+                },
+                {
+                  "fr": "je suis allé",
+                  "en": "I went"
+                }
+              ],
+              [
+                {
+                  "fr": "j'ai vu",
+                  "en": "I saw"
+                },
+                {
+                  "fr": "je suis venu",
+                  "en": "I came"
+                }
+              ],
+              [
+                {
+                  "fr": "j'ai fait",
+                  "en": "I did"
+                },
+                {
+                  "fr": "je suis parti",
+                  "en": "I left"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-reflexive",
+      "heading": "Reflexive verbs take {être}",
+      "text": [
+        "Every reflexive verb builds its past with {être}. The small pronoun stays in front of {être}: {je me suis levé}."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "Present",
+              "fr": "je me lève",
+              "en": "I get up"
+            },
+            {
+              "k": "Past: me + suis + levé",
+              "fr": "je me suis levé",
+              "en": "I got up"
+            }
+          ]
+        },
+        {
+          "lines": [
+            [
+              "Ce matin, je me suis réveillé.",
+              "This morning I woke up."
+            ],
+            [
+              "Nous nous sommes préparés.",
+              "We got ready."
+            ],
+            [
+              "Tu t'es levé ?",
+              "Did you get up?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-agreement",
+      "heading": "The participle agrees",
+      "text": [
+        "After {être}, the participle agrees with the subject, the way an adjective does. Add -e for a woman or a feminine noun, and -s for more than one. Reflexive verbs usually follow the same rule."
+      ],
+      "note": "A group of men and women takes the masculine: {Pierre et Marie sont allés}. After {avoir}, the participle does not agree with the subject: {elle a mangé}.",
+      "blocks": [
+        {
+          "cmp": {
+            "left": "Masculine",
+            "right": "Feminine",
+            "rows": [
+              [
+                {
+                  "fr": "il est allé",
+                  "en": "he went"
+                },
+                {
+                  "fr": "elle est allée",
+                  "en": "she went"
+                }
+              ],
+              [
+                {
+                  "fr": "il est parti",
+                  "en": "he left"
+                },
+                {
+                  "fr": "elle est partie",
+                  "en": "she left"
+                }
+              ],
+              [
+                {
+                  "fr": "ils se sont amusés",
+                  "en": "they had fun"
+                },
+                {
+                  "fr": "elles se sont amusées",
+                  "en": "they had fun"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-in-a-story",
+      "heading": "In a short story",
+      "text": [
+        "Here are both rules together: {être} for coming and going, and an ending that matches the subject."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Hier, Marie est arrivée à Paris.",
+              "Yesterday Marie arrived in Paris."
+            ],
+            [
+              "Elle est restée chez Paul.",
+              "She stayed at Paul's."
+            ],
+            [
+              "Ce matin, elle s'est levée et elle est partie.",
+              "This morning she got up and she left."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Which verb builds its passé composé with {être}?",
+      "options": [
+        {
+          "text": "manger",
+          "fr": true
+        },
+        {
+          "text": "arriver",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "regarder",
+          "fr": true
+        }
+      ],
+      "why": "{arriver} is a verb of coming and going: {je suis arrivé}. {manger} and {regarder} take {avoir}."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one means “She went to the café”?",
+      "options": [
+        {
+          "text": "Il est allé au café.",
+          "fr": true
+        },
+        {
+          "text": "Elle va au café.",
+          "fr": true
+        },
+        {
+          "text": "Elle est allée au café.",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "{aller} takes {être}, and the participle adds -e for {elle}: {elle est allée}."
+    },
+    {
+      "id": "k3",
+      "ask": "Which one means “We got ready”?",
+      "options": [
+        {
+          "text": "Nous nous sommes préparés.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Nous nous préparons.",
+          "fr": true
+        },
+        {
+          "text": "Nous allons nous préparer.",
+          "fr": true
+        }
+      ],
+      "why": "{se préparer} is reflexive, so its past takes {être}, and the participle adds -s for {nous}."
+    }
+  ]
+}
