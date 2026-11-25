@@ -1,0 +1,280 @@
+{
+  "schema": "la-module@1",
+  "module_key": "gender-endings-guide",
+  "kind": "guide",
+  "status": "written",
+  "title": "Masculine or Feminine - Clues in the Ending",
+  "description": "Tell from its last letters whether a noun takes {un} or {une}.",
+  "can_do": [
+    "Guess {un} or {une} for a noun from its ending, as in {une situation} and {un moment}.",
+    "Make an adjective match the noun, as in {une nouvelle voiture}."
+  ],
+  "minutes": 4,
+  "line": "The end of a noun often tells you whether it takes {un} or {une}.",
+  "parts": [
+    {
+      "id": "p-the-ending-is-a-clue",
+      "heading": "The ending is a clue",
+      "text": [
+        "Every French noun is masculine or feminine, and you learn each one with {un} or {une}. Some endings almost always go with one gender, so a new noun with one of these endings tells you its article."
+      ],
+      "note": "Most nouns with these endings follow the pattern. Learn the few that don't with their article.",
+      "blocks": [
+        {
+          "cmp": {
+            "left": "Feminine",
+            "right": "Masculine",
+            "rows": [
+              [
+                {
+                  "fr": "une situation",
+                  "en": "a situation",
+                  "sub": "-tion"
+                },
+                {
+                  "fr": "un moment",
+                  "en": "a moment",
+                  "sub": "-ment"
+                }
+              ],
+              [
+                {
+                  "fr": "la réalité",
+                  "en": "reality",
+                  "sub": "-té"
+                },
+                {
+                  "fr": "un garage",
+                  "en": "a garage",
+                  "sub": "-age"
+                }
+              ],
+              [
+                {
+                  "fr": "une voiture",
+                  "en": "a car",
+                  "sub": "-ure"
+                },
+                {
+                  "fr": "un tableau",
+                  "en": "a painting",
+                  "sub": "-eau"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-feminine-endings",
+      "heading": "Feminine: -tion, -té, -ure",
+      "text": [
+        "Nouns that end in -tion, -té or -ure take {une} and {la}."
+      ],
+      "blocks": [
+        {
+          "heading": "-tion",
+          "pairs": [
+            [
+              "une situation",
+              "a situation"
+            ],
+            [
+              "une question",
+              "a question"
+            ],
+            [
+              "une conversation",
+              "a conversation"
+            ],
+            [
+              "une station",
+              "a station"
+            ]
+          ]
+        },
+        {
+          "heading": "-té",
+          "pairs": [
+            [
+              "la beauté",
+              "beauty"
+            ],
+            [
+              "la réalité",
+              "reality"
+            ],
+            [
+              "une université",
+              "a university"
+            ]
+          ]
+        },
+        {
+          "heading": "-ure",
+          "pairs": [
+            [
+              "une voiture",
+              "a car"
+            ],
+            [
+              "la culture",
+              "culture"
+            ],
+            [
+              "la littérature",
+              "literature"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-masculine-endings",
+      "heading": "Masculine: -ment, -age, -eau",
+      "text": [
+        "Nouns that end in -ment, -age or -eau take {un} and {le}."
+      ],
+      "note": "Watch out for {l'eau} (water). It ends in -eau, but it is feminine.",
+      "blocks": [
+        {
+          "heading": "-ment",
+          "pairs": [
+            [
+              "un moment",
+              "a moment"
+            ],
+            [
+              "un appartement",
+              "an apartment"
+            ],
+            [
+              "un monument",
+              "a monument"
+            ]
+          ]
+        },
+        {
+          "heading": "-age",
+          "pairs": [
+            [
+              "un garage",
+              "a garage"
+            ],
+            [
+              "le courage",
+              "courage"
+            ]
+          ]
+        },
+        {
+          "heading": "-eau",
+          "pairs": [
+            [
+              "un tableau",
+              "a painting"
+            ],
+            [
+              "un château",
+              "a castle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-why-gender-helps",
+      "heading": "Why the gender helps",
+      "text": [
+        "A noun's gender sets its article and the form of any adjective that goes with it."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "C'est une bonne question.",
+              "That's a good question."
+            ],
+            [
+              "J'ai une nouvelle voiture.",
+              "I have a new car."
+            ],
+            [
+              "C'est un grand moment.",
+              "It's a big moment."
+            ],
+            [
+              "Nous avons un petit appartement.",
+              "We have a small apartment."
+            ],
+            [
+              "C'est un beau château.",
+              "It's a beautiful castle."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Listen. Does this noun take {un} or {une}?",
+      "say": "conversation",
+      "show": "conversation",
+      "options": [
+        {
+          "text": "un",
+          "fr": true
+        },
+        {
+          "text": "une",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "Nouns that end in -tion are feminine: {une conversation}."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one means “a new car”?",
+      "options": [
+        {
+          "text": "un nouveau voiture",
+          "fr": true
+        },
+        {
+          "text": "une nouvelle voiture",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "une nouveau voiture",
+          "fr": true
+        }
+      ],
+      "why": "{voiture} ends in -ure, so it is feminine, and the adjective is feminine too: {une nouvelle voiture}."
+    },
+    {
+      "id": "k3",
+      "ask": "Which noun is masculine?",
+      "options": [
+        {
+          "text": "réalité",
+          "fr": true
+        },
+        {
+          "text": "culture",
+          "fr": true
+        },
+        {
+          "text": "monument",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "Nouns that end in -ment are masculine: {un monument}. {la réalité} and {la culture} are feminine."
+    }
+  ]
+}

@@ -63,9 +63,9 @@ test('--allow is no longer an option', () => {
 test('the default content folder validates clean', () => {
   const r = run('validate');
   assert.equal(r.status, 0, r.stderr);
-  // Every module of the outline has its file: 146 lessons, practice sets and unit exams, 5 guides, 11 readings and
+  // Every module of the outline has its file: 146 lessons, practice sets and unit exams, 6 guides, 11 readings and
   // 9 Reference pages. Translations outside Unit 1 still print as warnings.
-  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 171 modules');
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 172 modules');
   assert.match(r.stdout, /^\d+ warnings: translate_outside_unit1 \d+$/m);
 });
 

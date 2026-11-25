@@ -22,7 +22,26 @@ const liveIds = readJson(join(CONTENT_ROOT, 'legacy', 'live-ids.json'));
 const lSources = readJson(join(CONTENT_ROOT, 'legacy', 'l-sources.json'));
 const handFixes = readJson(join(CONTENT_ROOT, 'legacy', 'hand-fixes.json'));
 const report = parseReport(readFileSync(join(CONTENT_ROOT, 'migration-report.md'), 'utf8'));
-const course = loadCourse();
+
+// The course as today's lessonData.js numbers it: a module written after the snapshot (a new guide goes to L only,
+// Jake 2026-11-25) has no live lesson, so it takes no live position and nothing is compared for it. A module the
+// migration converted from the live app (it has live ids) is never left out this way.
+function liveView(full, inSnapshot) {
+  const modules = new Map();
+  let position = 0;
+  const units = full.units.map((u) => ({
+    ...u,
+    modules: u.modules.filter((m) => inSnapshot.has(m.module_key) || liveIds[m.module_key]).map((m) => {
+      const live = { ...m, position: (position += 1) };
+      modules.set(m.module_key, live);
+      return live;
+    }),
+  }));
+  for (const p of full.shelf.pages) modules.set(p.module_key, p);
+  const writtenAfter = [...full.modules.keys()].filter((k) => !modules.has(k));
+  return { course: { ...full, units, modules }, writtenAfter };
+}
+const { course, writtenAfter } = liveView(loadCourse(), new Set(snapshot.map((l) => l.moduleKey)));
 const checks = goldenChecks({ liveIds, course, lSources, handFixes, rewrites: REWRITES, plain, adapt: (m) => toLegacyLesson(m, { liveIds, course }) });
 
 // Every span text in a module: today's quotes around one are dropped before comparing (golden.mjs sameText).
@@ -81,6 +100,13 @@ test('adapter shows the same lessons as today', () => {
   console.log(`golden: ${stats.lessons} lessons, ${stats.fields} values compared, ${result.diffs.length} differences, ${unexplained.length} unexplained`);
   assert.equal(stats.lessons, 171, 'every converted module is compared with its live lesson');
   assert.deepEqual(unexplained.map(describe).slice(0, 50), [], `${unexplained.length} differences with no report line or ruling behind them`);
+});
+
+test('a module written after the snapshot takes no live number and is not compared', () => {
+  assert.ok(writtenAfter.includes('gender-endings-guide'), writtenAfter.join(', '));
+  for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
+  // The reading after the guide keeps its live number.
+  assert.equal(toLegacyLesson(course.modules.get('2024-03-30-reading-4'), { liveIds, course }).id, 52);
 });
 
 test('every allowed class holds exactly the differences it records', () => {
