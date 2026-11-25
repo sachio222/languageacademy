@@ -2,11 +2,368 @@
   "schema": "la-module@1",
   "module_key": "unit12-practice",
   "kind": "practice",
-  "status": "planned",
+  "status": "written",
   "title": "Practice · Questions in context",
-  "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "plan.json"
-  }
+  "description": "Turn statements into every kind of question, pick {qui} or {que}, and use the unit's nature and movement verbs in three tenses.",
+  "can_do": [
+    "Turn a statement into a question with {est-ce que}, with inversion or inside a sentence",
+    "Choose {qu'est-ce qui}, {qu'est-ce que}, {qui est-ce qui} or {qui est-ce que}",
+    "Describe how animals and the weather move, in the present and the past"
+  ],
+  "tests": {
+    "constructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.inversion",
+      "fr:cx:q.quest-ce-qui",
+      "fr:cx:q.quest-ce-que",
+      "fr:cx:q.qui-est-ce-qui",
+      "fr:cx:q.qui-est-ce-que",
+      "fr:cx:q.embedded",
+      "fr:cx:q.negative-inversion",
+      "fr:cx:neg.ne-pas-infinitive",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:imparfait"
+    ]
+  },
+  "items": [
+    {
+      "id": "i-est-ce-que-les-oiseaux-volent",
+      "type": "transform",
+      "instruction": "Ask it with {est-ce que}.",
+      "shown": "Les oiseaux volent.",
+      "answer": "est-ce que les oiseaux volent ?",
+      "accept": [
+        "est-ce que les oiseaux volent"
+      ]
+    },
+    {
+      "id": "i-pourquoi-les-oiseaux-volent-ils",
+      "type": "transform",
+      "instruction": "Ask why, with inversion.",
+      "shown": "Les oiseaux volent.",
+      "answer": "pourquoi les oiseaux volent-ils ?",
+      "accept": [
+        "pourquoi les oiseaux volent-ils"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi les oiseaux volent ?",
+          "feedback": "With a noun subject, keep the noun and add a pronoun after the verb: {volent-ils}."
+        }
+      ]
+    },
+    {
+      "id": "i-pourquoi-la-lune-brille-t-elle",
+      "type": "transform",
+      "instruction": "Ask why, with inversion.",
+      "shown": "La lune brille.",
+      "answer": "pourquoi la lune brille-t-elle ?",
+      "accept": [
+        "pourquoi la lune brille-t-elle"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi la lune brille-elle ?",
+          "feedback": "Between two vowels, add {-t-}: {brille-t-elle}."
+        }
+      ]
+    },
+    {
+      "id": "i-est-ce-que-le-grand-pere-connait-la-nature",
+      "type": "transform",
+      "instruction": "Ask it with {est-ce que}.",
+      "shown": "Le grand-père connaît bien la nature.",
+      "answer": "est-ce que le grand-père connaît bien la nature ?",
+      "accept": [
+        "est-ce que le grand-père connaît bien la nature",
+        "est-ce que le grand-pere connait bien la nature"
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-fait-ce-bruit",
+      "type": "gapfill",
+      "text": "___ fait ce bruit dans l'arbre ? Un écureuil.",
+      "blanks": [
+        {
+          "answer": "qu'est-ce qui"
+        }
+      ],
+      "gloss": "What is making that noise in the tree? A squirrel.",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que",
+          "feedback": "The thing asked about does the action, so it is the subject: {qui} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-tu-vois",
+      "type": "gapfill",
+      "text": "___ tu vois dans le ciel ? La lune et des étoiles.",
+      "blanks": [
+        {
+          "answer": "qu'est-ce que"
+        }
+      ],
+      "gloss": "What do you see in the sky? The moon and some stars.",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce qui",
+          "feedback": "Another subject comes next, so the thing asked about is the object: {que} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-rend-le-ciel-bleu",
+      "type": "gapfill",
+      "text": "___ rend le ciel bleu ? L'air.",
+      "blanks": [
+        {
+          "answer": "qu'est-ce qui"
+        }
+      ],
+      "gloss": "What makes the sky blue? The air."
+    },
+    {
+      "id": "i-qui-est-ce-que-tu-attends",
+      "type": "gapfill",
+      "text": "___ tu attends ? Mon grand-père.",
+      "blanks": [
+        {
+          "answer": "qui est-ce que"
+        }
+      ],
+      "gloss": "Who are you waiting for? My grandfather.",
+      "mistakes": [
+        {
+          "answer": "qui est-ce qui",
+          "feedback": "Another subject comes next, so the person asked about is the object: {que} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-qui-a-peur-de-l-eau",
+      "type": "gapfill",
+      "text": "___ a peur de l'eau ? Mon petit frère.",
+      "blanks": [
+        {
+          "answer": "qui est-ce qui"
+        }
+      ],
+      "gloss": "Who is afraid of the water? My little brother.",
+      "mistakes": [
+        {
+          "answer": "qui est-ce que",
+          "feedback": "The person asked about does the action, so it is the subject: {qui} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-que-tu-as-vu-au-parc",
+      "type": "gapfill",
+      "text": "___ tu as vu au parc ? Paul et Marie.",
+      "blanks": [
+        {
+          "answer": "qui est-ce que"
+        }
+      ],
+      "gloss": "Who did you see at the park? Paul and Marie."
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-l-oiseau-est-si-leger",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi l'oiseau est-il si léger ?",
+      "answer": "je me demande pourquoi l'oiseau est si léger",
+      "accept": [
+        "je me demande pourquoi l'oiseau est si leger"
+      ],
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi l'oiseau est-il si léger",
+          "feedback": "Inside the sentence, use statement order with no inversion."
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-sais-pas-comment-la-tortue-nage",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Comment la tortue nage-t-elle ?",
+      "answer": "je ne sais pas comment la tortue nage",
+      "accept": [
+        "je ne sais pas comment nage la tortue"
+      ]
+    },
+    {
+      "id": "i-je-ne-sais-pas-quand-les-arbres-fleurissent",
+      "type": "transform",
+      "instruction": "Start with {Je ne sais pas}.",
+      "shown": "Quand est-ce que les arbres fleurissent ?",
+      "answer": "je ne sais pas quand les arbres fleurissent",
+      "accept": [
+        "je ne sais pas quand fleurissent les arbres"
+      ],
+      "mistakes": [
+        {
+          "answer": "je ne sais pas quand est-ce que les arbres fleurissent",
+          "feedback": "After {je ne sais pas}, drop {est-ce que}."
+        }
+      ]
+    },
+    {
+      "id": "i-n-as-tu-pas-peur",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu n'as pas peur ?",
+      "answer": "n'as-tu pas peur ?",
+      "accept": [
+        "n'as-tu pas peur"
+      ]
+    },
+    {
+      "id": "i-pourquoi-ne-pas-aller-au-parc",
+      "type": "transform",
+      "instruction": "Turn it into a suggestion with {pourquoi ne pas}.",
+      "shown": "On va au parc ?",
+      "answer": "pourquoi ne pas aller au parc ?",
+      "accept": [
+        "pourquoi ne pas aller au parc"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi ne pas va au parc ?",
+          "feedback": "After {pourquoi ne pas}, use the infinitive: {aller}."
+        }
+      ]
+    },
+    {
+      "id": "i-hiver",
+      "type": "gapfill",
+      "text": "En ___, il fait froid et beaucoup d'oiseaux partent.",
+      "blanks": [
+        {
+          "answer": "hiver"
+        }
+      ],
+      "gloss": "In winter, it is cold and many birds leave."
+    },
+    {
+      "id": "i-brille",
+      "type": "gapfill",
+      "text": "Regarde, la lune ___ !",
+      "blanks": [
+        {
+          "answer": "brille"
+        }
+      ],
+      "gloss": "Look, the moon is shining!"
+    },
+    {
+      "id": "i-souffle",
+      "type": "gapfill",
+      "text": "Le vent ___ fort ce matin.",
+      "blanks": [
+        {
+          "answer": "souffle"
+        }
+      ],
+      "gloss": "The wind is blowing hard this morning."
+    },
+    {
+      "id": "i-a-vole",
+      "type": "gapfill",
+      "text": "Hier, l'oiseau ___ très haut.",
+      "blanks": [
+        {
+          "answer": "a volé",
+          "accept": [
+            "a vole"
+          ]
+        }
+      ],
+      "gloss": "Yesterday, the bird flew very high.",
+      "mistakes": [
+        {
+          "answer": "volait",
+          "feedback": "For one finished flight yesterday, use the passé composé: {a volé}."
+        }
+      ]
+    },
+    {
+      "id": "i-a-plu",
+      "type": "gapfill",
+      "text": "Hier, il ___ toute la journée.",
+      "blanks": [
+        {
+          "answer": "a plu"
+        }
+      ],
+      "gloss": "Yesterday it rained all day."
+    },
+    {
+      "id": "i-courait",
+      "type": "gapfill",
+      "text": "Quand il était jeune, mon grand-père ___ très vite.",
+      "blanks": [
+        {
+          "answer": "courait"
+        }
+      ],
+      "gloss": "When he was young, my grandfather ran very fast.",
+      "mistakes": [
+        {
+          "answer": "a couru",
+          "feedback": "To describe how things used to be, use the imparfait: {courait}."
+        }
+      ]
+    },
+    {
+      "id": "i-a-saute",
+      "type": "gapfill",
+      "text": "Hier, le chat ___ sur la table.",
+      "blanks": [
+        {
+          "answer": "a sauté",
+          "accept": [
+            "a saute"
+          ]
+        }
+      ],
+      "gloss": "Yesterday, the cat jumped onto the table."
+    },
+    {
+      "id": "i-lourd",
+      "type": "gapfill",
+      "text": "Ce sac est trop ___ pour moi.",
+      "blanks": [
+        {
+          "answer": "lourd"
+        }
+      ],
+      "gloss": "This bag is too heavy for me."
+    },
+    {
+      "id": "i-animal",
+      "type": "gapfill",
+      "text": "La tortue est un ___ très lent.",
+      "blanks": [
+        {
+          "answer": "animal"
+        }
+      ],
+      "gloss": "The turtle is a very slow animal."
+    },
+    {
+      "id": "i-poussent",
+      "type": "gapfill",
+      "text": "Au printemps, les plantes ___ vite.",
+      "blanks": [
+        {
+          "answer": "poussent"
+        }
+      ],
+      "gloss": "In spring, plants grow fast."
+    }
+  ]
 }

@@ -2,11 +2,409 @@
   "schema": "la-module@1",
   "module_key": "unit12-exam",
   "kind": "unit_exam",
-  "status": "planned",
-  "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "Ask about anything"
-  }
+  "status": "written",
+  "description": "Ask any kind of question about people, animals and the weather, and answer with this unit's nature and movement words.",
+  "can_do": [
+    "Ask any question in French, casual or formal, including polite ones inside a sentence",
+    "Talk about how animals move and what the weather does"
+  ],
+  "tests": {
+    "constructions": [
+      "fr:cx:q.est-ce-que",
+      "fr:cx:q.inversion",
+      "fr:cx:q.quest-ce-qui",
+      "fr:cx:q.quest-ce-que",
+      "fr:cx:q.qui-est-ce-qui",
+      "fr:cx:q.qui-est-ce-que",
+      "fr:cx:q.embedded",
+      "fr:cx:q.negative-inversion",
+      "fr:cx:neg.ne-pas-infinitive",
+      "fr:cx:chunk.nest-ce-pas",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:pronoun.indirect-object"
+    ]
+  },
+  "items": [
+    {
+      "id": "i-pourquoi-est-ce-que-la-mer-est-bleue",
+      "type": "respond",
+      "situation": "Your friend says the sea is very blue today. Ask why, with {pourquoi est-ce que}.",
+      "answer": "pourquoi est-ce que la mer est bleue ?",
+      "accept": [
+        "pourquoi est-ce que la mer est bleue",
+        "pourquoi est-ce que la mer est bleue aujourd'hui ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que la mer est bleu ?",
+          "feedback": "{la mer} is feminine, so the color adds -e: {bleue}."
+        }
+      ]
+    },
+    {
+      "id": "i-sais-tu-nager",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu sais nager.",
+      "answer": "sais-tu nager ?",
+      "accept": [
+        "sais-tu nager"
+      ]
+    },
+    {
+      "id": "i-comment-les-ecureuils-grimpent-ils",
+      "type": "transform",
+      "instruction": "Ask how, with inversion.",
+      "shown": "Les écureuils grimpent aux arbres.",
+      "answer": "comment les écureuils grimpent-ils aux arbres ?",
+      "accept": [
+        "comment les écureuils grimpent-ils aux arbres",
+        "comment les ecureuils grimpent-ils aux arbres"
+      ]
+    },
+    {
+      "id": "i-pourquoi-a-t-il-plu-toute-la-nuit",
+      "type": "transform",
+      "instruction": "Ask why, with inversion.",
+      "shown": "Il a plu toute la nuit.",
+      "answer": "pourquoi a-t-il plu toute la nuit ?",
+      "accept": [
+        "pourquoi a-t-il plu toute la nuit"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi a-il plu toute la nuit ?",
+          "feedback": "Between two vowels, add {-t-}: {a-t-il}."
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-brille-la-nuit",
+      "type": "choice",
+      "question": "Which start fits {… brille dans le ciel la nuit ?}",
+      "options": [
+        {
+          "text": "Qu'est-ce qui",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Qu'est-ce que",
+          "fr": true
+        },
+        {
+          "text": "Qui est-ce que",
+          "fr": true
+        }
+      ],
+      "hint": "The thing asked about does the shining."
+    },
+    {
+      "id": "i-qu-est-ce-que-tu-cherches",
+      "type": "gapfill",
+      "text": "___ tu cherches dans le jardin ? Mon chat.",
+      "blanks": [
+        {
+          "answer": "qu'est-ce que"
+        }
+      ],
+      "gloss": "What are you looking for in the garden? My cat.",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce qui",
+          "feedback": "Another subject comes next, so the thing asked about is the object: {que} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-qui-t-a-donne-ce-livre",
+      "type": "gapfill",
+      "text": "___ t'a donné ce livre ? Mon grand-père.",
+      "blanks": [
+        {
+          "answer": "qui est-ce qui"
+        }
+      ],
+      "gloss": "Who gave you this book? My grandfather.",
+      "mistakes": [
+        {
+          "answer": "qui est-ce que",
+          "feedback": "The person asked about does the action, so it is the subject: {qui} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-que-vous-attendez",
+      "type": "gapfill",
+      "text": "___ vous attendez ? Notre professeur.",
+      "blanks": [
+        {
+          "answer": "qui est-ce que"
+        }
+      ],
+      "gloss": "Who are you waiting for? Our teacher.",
+      "mistakes": [
+        {
+          "answer": "qui est-ce qui",
+          "feedback": "Another subject comes next, so the person asked about is the object: {que} at the end."
+        }
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-est-tombe",
+      "type": "respond",
+      "situation": "You hear something fall in the kitchen. Ask what fell, with {qu'est-ce qui}.",
+      "answer": "qu'est-ce qui est tombé ?",
+      "accept": [
+        "qu'est-ce qui est tombé",
+        "qu'est-ce qui est tombe"
+      ],
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que est tombé ?",
+          "feedback": "The thing did the falling, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-qui-est-ce-que-tu-appelles",
+      "type": "choice",
+      "question": "Which start fits {… tu appelles ce soir ?}",
+      "options": [
+        {
+          "text": "Qui est-ce que",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Qui est-ce qui",
+          "fr": true
+        },
+        {
+          "text": "Qu'est-ce qui",
+          "fr": true
+        }
+      ],
+      "hint": "Another subject, {tu}, comes next."
+    },
+    {
+      "id": "i-je-me-demande-pourquoi-la-lune-brille",
+      "type": "transform",
+      "instruction": "Start with {Je me demande}.",
+      "shown": "Pourquoi la lune brille-t-elle ?",
+      "answer": "je me demande pourquoi la lune brille",
+      "mistakes": [
+        {
+          "answer": "je me demande pourquoi la lune brille-t-elle",
+          "feedback": "Inside the sentence, use statement order with no inversion."
+        }
+      ]
+    },
+    {
+      "id": "i-peux-tu-me-dire-ou-tu-as-vu-le-chat",
+      "type": "transform",
+      "instruction": "Start with {Peux-tu me dire}.",
+      "shown": "Où est-ce que tu as vu le chat ?",
+      "answer": "peux-tu me dire où tu as vu le chat ?",
+      "accept": [
+        "peux-tu me dire où tu as vu le chat"
+      ],
+      "mistakes": [
+        {
+          "answer": "peux-tu me dire où est-ce que tu as vu le chat ?",
+          "feedback": "After {peux-tu me dire}, drop {est-ce que}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-ne-sais-pas-pourquoi-les-oiseaux-peuvent-voler",
+      "type": "respond",
+      "situation": "A child asks you why birds can fly. Say that you don't know why, with {je ne sais pas}.",
+      "answer": "je ne sais pas pourquoi les oiseaux peuvent voler",
+      "accept": [
+        "je ne sais pas pourquoi les oiseaux volent"
+      ]
+    },
+    {
+      "id": "i-ne-veux-tu-pas-venir-avec-nous",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Tu ne veux pas venir avec nous ?",
+      "answer": "ne veux-tu pas venir avec nous ?",
+      "accept": [
+        "ne veux-tu pas venir avec nous"
+      ]
+    },
+    {
+      "id": "i-pourquoi-ne-pas-aller-a-la-mer",
+      "type": "respond",
+      "situation": "Your friend is bored at home on a sunny day. Suggest going to the sea, with {pourquoi ne pas}.",
+      "answer": "pourquoi ne pas aller à la mer ?",
+      "accept": [
+        "pourquoi ne pas aller à la mer",
+        "pourquoi ne pas aller a la mer"
+      ]
+    },
+    {
+      "id": "i-pourquoi-est-ce-qu-il-faut-que-je-parte",
+      "type": "transform",
+      "instruction": "Ask why, with {pourquoi est-ce que}.",
+      "shown": "Il faut que je parte.",
+      "answer": "pourquoi est-ce qu'il faut que je parte ?",
+      "accept": [
+        "pourquoi est-ce qu'il faut que je parte"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce qu'il faut que je pars ?",
+          "feedback": "After {il faut que}, use the subjunctive: {que je parte}."
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-une-belle-journee-n-est-ce-pas",
+      "type": "transform",
+      "instruction": "Ask for agreement with {n'est-ce pas}.",
+      "shown": "C'est une belle journée.",
+      "answer": "c'est une belle journée, n'est-ce pas ?",
+      "accept": [
+        "c'est une belle journée, n'est-ce pas",
+        "c'est une belle journée n'est-ce pas",
+        "c'est une belle journee, n'est-ce pas"
+      ]
+    },
+    {
+      "id": "i-leger",
+      "type": "gapfill",
+      "text": "Un petit oiseau est ___, mais un grand chien est lourd.",
+      "blanks": [
+        {
+          "answer": "léger",
+          "accept": [
+            "leger"
+          ]
+        }
+      ],
+      "gloss": "A small bird is light, but a big dog is heavy."
+    },
+    {
+      "id": "i-la-lune",
+      "type": "gapfill",
+      "text": "La nuit, ___ brille dans le ciel.",
+      "blanks": [
+        {
+          "answer": "la lune"
+        }
+      ],
+      "gloss": "At night, the moon shines in the sky."
+    },
+    {
+      "id": "i-air",
+      "type": "gapfill",
+      "text": "Les oiseaux poussent l'___ avec leurs ailes.",
+      "blanks": [
+        {
+          "answer": "air"
+        }
+      ],
+      "gloss": "Birds push the air with their wings."
+    },
+    {
+      "id": "i-grimpe",
+      "type": "gapfill",
+      "text": "Regarde l'écureuil : il ___ en haut de l'arbre !",
+      "blanks": [
+        {
+          "answer": "grimpe"
+        }
+      ],
+      "gloss": "Look at the squirrel: it is climbing to the top of the tree!"
+    },
+    {
+      "id": "i-nageais",
+      "type": "gapfill",
+      "text": "Chaque été, je ___ dans la mer avec mon grand-père.",
+      "blanks": [
+        {
+          "answer": "nageais"
+        }
+      ],
+      "gloss": "Every summer, I used to swim in the sea with my grandfather.",
+      "mistakes": [
+        {
+          "answer": "ai nagé",
+          "feedback": "For what you did again and again in the past, use the imparfait: {je nageais}."
+        }
+      ]
+    },
+    {
+      "id": "i-a-souffle",
+      "type": "gapfill",
+      "text": "Hier, le vent ___ toute la nuit.",
+      "blanks": [
+        {
+          "answer": "a soufflé",
+          "accept": [
+            "a souffle"
+          ]
+        }
+      ],
+      "gloss": "Yesterday the wind blew all night."
+    },
+    {
+      "id": "i-haut",
+      "type": "gapfill",
+      "text": "Le chat a sauté très ___ !",
+      "blanks": [
+        {
+          "answer": "haut"
+        }
+      ],
+      "gloss": "The cat jumped very high!"
+    },
+    {
+      "id": "i-viennes",
+      "type": "gapfill",
+      "text": "Je veux que tu ___ avec moi.",
+      "blanks": [
+        {
+          "answer": "viennes"
+        }
+      ],
+      "gloss": "I want you to come with me.",
+      "mistakes": [
+        {
+          "answer": "viens",
+          "feedback": "After {je veux que}, use the subjunctive: {que tu viennes}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-lui-donne-une-fleur",
+      "type": "transform",
+      "instruction": "Replace {à Marie} with a pronoun.",
+      "shown": "Je donne une fleur à Marie.",
+      "answer": "je lui donne une fleur",
+      "mistakes": [
+        {
+          "answer": "je la donne une fleur",
+          "feedback": "{Marie} comes after {à}, so use the indirect pronoun {lui}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-leur-parle",
+      "type": "transform",
+      "instruction": "Replace {à mes amis} with a pronoun.",
+      "shown": "Je parle à mes amis.",
+      "answer": "je leur parle",
+      "mistakes": [
+        {
+          "answer": "je les parle",
+          "feedback": "{parler} takes {à}, so use the indirect pronoun {leur}."
+        }
+      ]
+    }
+  ]
 }

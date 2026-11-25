@@ -2,20 +2,666 @@
   "schema": "la-module@1",
   "module_key": "unit12-reading",
   "kind": "reading",
-  "status": "planned",
+  "status": "written",
   "title": "Reading · {Les Questions d'Amélie}",
-  "plan": {
-    "words": [
-      "fr:lex:air",
-      "fr:lex:animal",
-      "fr:lex:grand-pere",
-      "fr:lex:haut",
-      "fr:lex:leger",
-      "fr:lex:lourd",
-      "fr:lex:lune"
-    ],
-    "constructions": [],
-    "source": "plan.json",
-    "draft": "research/course-plan/reading-12-draft.js"
-  }
+  "description": "A summer day in Normandy: Amélie asks her grandfather why the sky is blue, how birds fly, where rain comes from and why the stars do not fall.",
+  "can_do": [
+    "Read a long story told almost entirely in questions and answers",
+    "Follow plain explanations of how nature works",
+    "Recognize every way of asking a question you have learned so far"
+  ],
+  "story_id": "reading12",
+  "vocabulary": [
+    {
+      "word_id": "la-lumiere-fr",
+      "fr": "la lumière",
+      "gloss": "light",
+      "note": "Feminine. {La lumière du soleil} is sunlight."
+    },
+    {
+      "word_id": "l-air-fr",
+      "fr": "l'air",
+      "gloss": "air",
+      "note": "Masculine. {le} shortens to {l'} before a vowel: {dans l'air}."
+    },
+    {
+      "word_id": "une-aile-fr",
+      "fr": "une aile",
+      "gloss": "a wing",
+      "note": "Feminine. A bird pushes the air with its wings: {avec leurs ailes}."
+    },
+    {
+      "word_id": "une-etoile-fr",
+      "fr": "une étoile",
+      "gloss": "a star",
+      "note": "Feminine. At night Amélie sees {des étoiles partout}, stars everywhere."
+    },
+    {
+      "word_id": "la-lune-fr",
+      "fr": "la lune",
+      "gloss": "the moon",
+      "note": "Feminine. {La lune brille}: the moon shines."
+    },
+    {
+      "word_id": "le-grand-pere-fr",
+      "fr": "le grand-père",
+      "gloss": "grandfather",
+      "note": "{Chez son grand-père} means at her grandfather's house. Amélie calls him {Grand-père}."
+    },
+    {
+      "word_id": "un-animal-fr",
+      "fr": "un animal",
+      "gloss": "an animal",
+      "note": "Masculine. Most nouns ending in -al make their plural in -aux."
+    },
+    {
+      "word_id": "haut-fr",
+      "fr": "haut",
+      "gloss": "high",
+      "note": "After a verb it means high up: {voler très haut}, to fly very high."
+    },
+    {
+      "word_id": "leger-fr",
+      "fr": "léger",
+      "gloss": "light (not heavy)",
+      "note": "It describes weight, so it is a different word from {la lumière}. The feminine ends in -ère."
+    },
+    {
+      "word_id": "lourd-fr",
+      "fr": "lourd",
+      "gloss": "heavy",
+      "note": "Feminine {lourde}: {Toi, tu es plus lourde !}"
+    },
+    {
+      "word_id": "le-ciel-fr",
+      "fr": "le ciel",
+      "gloss": "the sky",
+      "note": "Masculine: {le ciel bleu}, {dans le ciel}."
+    },
+    {
+      "word_id": "un-nuage-fr",
+      "fr": "un nuage",
+      "gloss": "a cloud",
+      "note": "Masculine. {Il n'y avait pas de nuages}: there were no clouds."
+    },
+    {
+      "word_id": "un-oiseau-fr",
+      "fr": "un oiseau",
+      "gloss": "a bird",
+      "note": "Masculine. The plural adds -x: {les oiseaux}."
+    },
+    {
+      "word_id": "un-ecureuil-fr",
+      "fr": "un écureuil",
+      "gloss": "a squirrel",
+      "note": "Masculine. {Les écureuils courent et sautent très vite}."
+    },
+    {
+      "word_id": "une-tortue-fr",
+      "fr": "une tortue",
+      "gloss": "a turtle",
+      "note": "Feminine. {La tortue sait nager}: the turtle can swim."
+    },
+    {
+      "word_id": "un-lapin-fr",
+      "fr": "un lapin",
+      "gloss": "a rabbit",
+      "note": "Masculine: {un lapin et une tortue}."
+    },
+    {
+      "word_id": "l-herbe-fr",
+      "fr": "l'herbe",
+      "gloss": "grass",
+      "note": "Feminine. The h is silent, so {la} shortens to {l'}: {dans l'herbe}."
+    },
+    {
+      "word_id": "le-vent-fr",
+      "fr": "le vent",
+      "gloss": "the wind",
+      "note": "Masculine. {Le vent souffle}: the wind blows."
+    },
+    {
+      "word_id": "la-pluie-fr",
+      "fr": "la pluie",
+      "gloss": "the rain",
+      "note": "Feminine. The verb is {pleuvoir}: {il pleut}, it rains."
+    },
+    {
+      "word_id": "voler-fr",
+      "fr": "voler",
+      "gloss": "to fly",
+      "note": "A regular -er verb: {un oiseau vole}, {les oiseaux volent}."
+    },
+    {
+      "word_id": "grimper-fr",
+      "fr": "grimper",
+      "gloss": "to climb",
+      "note": "A regular -er verb. {Il est en train de grimper}: he is climbing right now."
+    },
+    {
+      "word_id": "souffler-fr",
+      "fr": "souffler",
+      "gloss": "to blow",
+      "note": "A regular -er verb, used for the wind: {le vent souffle}."
+    },
+    {
+      "word_id": "briller-fr",
+      "fr": "briller",
+      "gloss": "to shine",
+      "note": "A regular -er verb, used for the sun, the moon and the stars: {la lune brille}."
+    },
+    {
+      "word_id": "pousser-fr",
+      "fr": "pousser",
+      "gloss": "to grow / to push",
+      "note": "Two meanings here: plants grow ({le soleil fait pousser les plantes}) and wings push ({leurs ailes poussent l'air})."
+    },
+    {
+      "word_id": "rendre-fr",
+      "fr": "rendre",
+      "gloss": "to make / to render",
+      "note": "{rendre} with a noun and an adjective means to make something that way: {L'air rend le ciel bleu}."
+    },
+    {
+      "word_id": "il-devient-ils-deviennent-fr",
+      "fr": "il devient / ils deviennent",
+      "gloss": "it becomes / they become",
+      "note": "From {devenir}, to become: {le ciel devient rouge}, {les nuages deviennent trop lourds}."
+    }
+  ],
+  "passage": [
+    {
+      "id": "b-amelie-a-huit-ans",
+      "fr": "Amélie a huit ans. Elle vit à Paris avec ses parents, mais cet été, elle est en Normandie, chez son grand-père. Son grand-père est vieux et très gentil. Il connaît bien la nature.",
+      "en": "Amélie is eight years old. She lives in Paris with her parents, but this summer she is in Normandy, at her grandfather's house. Her grandfather is old and very kind. He knows nature well."
+    },
+    {
+      "id": "b-aujourd-hui-amelie-s",
+      "fr": "Aujourd'hui, Amélie s'est réveillée avant son grand-père. Elle s'est habillée, elle est allée devant la maison et elle a regardé le ciel. Il n'y avait pas de nuages. Le ciel était bleu, très bleu.",
+      "en": "Today Amélie woke up before her grandfather. She got dressed, went in front of the house and looked at the sky. There were no clouds. The sky was blue, very blue."
+    },
+    {
+      "id": "b-grand-pere-pourquoi-le",
+      "fr": "« Grand-père, pourquoi le ciel est-il bleu ? »",
+      "en": "\"Grandpa, why is the sky blue?\""
+    },
+    {
+      "id": "b-son-grand-pere-est",
+      "fr": "Son grand-père est content. « C'est une bonne question. Je suis content que tu aimes la nature. Viens avec moi, je vais t'expliquer. Ne regarde jamais le soleil, mais regarde sa lumière. La lumière du soleil a toutes les couleurs : le rouge, le jaune, le vert et le bleu. Quand elle entre dans l'air, le bleu change de direction plus que le rouge. C'est pour ça que nous voyons un ciel bleu. L'air rend le ciel bleu. »",
+      "en": "Her grandfather is happy. \"That's a good question. I'm glad you love nature. Come with me, I'll explain. Never look at the sun, but look at its light. Sunlight has all the colors: red, yellow, green and blue. When it enters the air, blue changes direction more than red. That's why we see a blue sky. The air makes the sky blue.\""
+    },
+    {
+      "id": "b-et-a-la-fin",
+      "fr": "« Et à la fin de la journée, pourquoi est-ce que le ciel devient rouge ? »",
+      "en": "\"And at the end of the day, why does the sky turn red?\""
+    },
+    {
+      "id": "b-a-la-fin-de",
+      "fr": "« À la fin de la journée, la lumière du soleil voyage plus loin dans l'air. Le bleu ne reste pas avec elle. Seulement le rouge et l'orange arrivent à nos yeux. »",
+      "en": "\"At the end of the day, sunlight travels farther through the air. The blue doesn't stay with it. Only the red and orange reach our eyes.\""
+    },
+    {
+      "id": "b-un-oiseau-vole-au",
+      "fr": "Un oiseau vole au-dessus de la maison. Amélie le regarde.",
+      "en": "A bird flies over the house. Amélie watches it."
+    },
+    {
+      "id": "b-qu-est-ce-qui",
+      "fr": "« Qu'est-ce qui aide les oiseaux à voler ? Moi, je ne peux pas voler ! »",
+      "en": "\"What helps birds fly? I can't fly!\""
+    },
+    {
+      "id": "b-les-oiseaux-ont-des",
+      "fr": "« Les oiseaux ont des ailes. En poussant l'air avec leurs ailes, ils montent : leurs ailes poussent l'air, et l'air les fait monter. Et puis, un oiseau est très léger. Un petit oiseau n'est pas plus lourd qu'une pomme. Toi, tu es plus lourde ! »",
+      "en": "\"Birds have wings. By pushing the air with their wings, they rise: their wings push the air, and the air makes them rise. And a bird is very light. A small bird is no heavier than an apple. You are heavier!\""
+    },
+    {
+      "id": "b-est-ce-que-les",
+      "fr": "« Est-ce que les petits oiseaux savent voler à leur naissance ? »",
+      "en": "\"Do little birds know how to fly when they're born?\""
+    },
+    {
+      "id": "b-non-ils-apprennent-a",
+      "fr": "« Non. Ils apprennent à voler. Au début, ils tombent souvent, mais leurs parents les aident. »",
+      "en": "\"No. They learn to fly. At first they often fall, but their parents help them.\""
+    },
+    {
+      "id": "b-si-j-etais-un",
+      "fr": "« Si j'étais un oiseau, je volerais très haut dans le ciel, avec les nuages. »",
+      "en": "\"If I were a bird, I would fly very high in the sky, with the clouds.\""
+    },
+    {
+      "id": "b-ils-marchent-ensemble-pres",
+      "fr": "Ils marchent ensemble près de la rivière. Il y a un bruit dans un arbre.",
+      "en": "They walk together near the river. There is a noise in a tree."
+    },
+    {
+      "id": "b-mais-qui-est-ce",
+      "fr": "« Mais qui est-ce qui fait ce bruit ? »",
+      "en": "\"But who is making that noise?\""
+    },
+    {
+      "id": "b-c-est-un-ecureuil",
+      "fr": "« C'est un écureuil. Regarde-le, il est en train de grimper ! Les écureuils courent et sautent très vite. »",
+      "en": "\"It's a squirrel. Look at it, it's climbing! Squirrels run and jump very fast.\""
+    },
+    {
+      "id": "b-et-la-qui-est",
+      "fr": "« Et là, qui est-ce que tu vois dans l'herbe ? »",
+      "en": "\"And there, who do you see in the grass?\""
+    },
+    {
+      "id": "b-je-vois-un-lapin",
+      "fr": "« Je vois un lapin et une tortue. La tortue est l'animal le plus lent du monde, mais elle sait nager. »",
+      "en": "\"I see a rabbit and a turtle. The turtle is the slowest animal in the world, but it can swim.\""
+    },
+    {
+      "id": "b-est-ce-que-les-2",
+      "fr": "« Est-ce que les poissons peuvent voler aussi ? »",
+      "en": "\"Can fish fly too?\""
+    },
+    {
+      "id": "b-non-dit-son-grand",
+      "fr": "« Non ! dit son grand-père. Je doute que les poissons sachent voler ! Je ne pense pas qu'un poisson puisse vivre dans l'air. Chaque animal a sa place. »",
+      "en": "\"No!\" says her grandfather. \"I doubt fish know how to fly! I don't think a fish could live in the air. Every animal has its place.\""
+    },
+    {
+      "id": "b-le-vent-souffle-et",
+      "fr": "Le vent souffle et de grands nuages arrivent. Le ciel n'est plus bleu.",
+      "en": "The wind blows and big clouds arrive. The sky is no longer blue."
+    },
+    {
+      "id": "b-il-est-possible-qu",
+      "fr": "« Il est possible qu'il pleuve. Il faut que nous rentrions avant qu'il pleuve. Rentrons ! »",
+      "en": "\"It might rain. We have to go home before it rains. Let's go home!\""
+    },
+    {
+      "id": "b-mais-pourquoi-est-ce",
+      "fr": "« Mais pourquoi est-ce qu'il pleut ? D'où vient l'eau ? »",
+      "en": "\"But why does it rain? Where does the water come from?\""
+    },
+    {
+      "id": "b-quand-il-fait-chaud",
+      "fr": "« Quand il fait chaud, l'eau de la mer monte dans l'air. Dans le ciel, il fait froid, et l'eau devient des nuages. Quand les nuages deviennent trop lourds, l'eau tombe : c'est la pluie. Les plantes ont besoin de la pluie et du soleil. Le soleil fait pousser les plantes. »",
+      "en": "\"When it's hot, water from the sea rises into the air. In the sky it's cold, and the water becomes clouds. When the clouds become too heavy, the water falls: that's rain. Plants need rain and sun. The sun makes plants grow.\""
+    },
+    {
+      "id": "b-a-la-maison-amelie",
+      "fr": "À la maison, Amélie demande à son grand-père de lui expliquer tout ça encore une fois. Il lui dit : « Quand j'étais petit, je demandais toujours pourquoi à mon père. Il m'avait déjà expliqué tout ça avant mes dix ans. Pourquoi ne pas chercher les réponses dans un livre, toi aussi ? »",
+      "en": "At home, Amélie asks her grandfather to explain all that to her once more. He tells her: \"When I was little, I always asked my father why. He had already explained all that to me before I was ten. Why not look for the answers in a book, you too?\""
+    },
+    {
+      "id": "b-cette-nuit-il-n",
+      "fr": "Cette nuit, il n'y a plus de nuages. D'abord, Amélie ne voit rien. Puis la lune brille et on voit des étoiles partout.",
+      "en": "Tonight there are no more clouds. At first Amélie sees nothing. Then the moon shines and you can see stars everywhere."
+    },
+    {
+      "id": "b-il-y-a-des",
+      "fr": "« Il y a des étoiles ? Combien ? »",
+      "en": "\"Are there stars? How many?\""
+    },
+    {
+      "id": "b-il-y-en-a",
+      "fr": "« Il y en a des millions. »",
+      "en": "\"There are millions of them.\""
+    },
+    {
+      "id": "b-pourquoi-les-etoiles-ne",
+      "fr": "« Pourquoi les étoiles ne tombent-elles pas ? N'ont-elles pas peur de tomber ? »",
+      "en": "\"Why don't the stars fall? Aren't they afraid of falling?\""
+    },
+    {
+      "id": "b-je-ne-sais-pas",
+      "fr": "« Je ne sais pas tout, Amélie. Personne ne sait tout. Mais je sais que les étoiles sont très loin. Ce sont des soleils, comme le nôtre. Notre soleil est l'étoile la plus proche de la Terre. »",
+      "en": "\"I don't know everything, Amélie. Nobody knows everything. But I know that the stars are very far away. They are suns, like ours. Our sun is the star closest to the Earth.\""
+    },
+    {
+      "id": "b-je-voudrais-comprendre-tout",
+      "fr": "« Je voudrais comprendre tout ça. »",
+      "en": "\"I'd like to understand all that.\""
+    },
+    {
+      "id": "b-tu-comprendras-tu-es",
+      "fr": "« Tu comprendras. Tu es en train d'apprendre. Je veux que tu continues à chercher des réponses. Pour que tu trouves les réponses, il faut regarder et écouter. Demain, nous irons à la mer, et tu pourras regarder les oiseaux. Tu y verras aussi des poissons. »",
+      "en": "\"You will. You are learning. I want you to keep looking for answers. For you to find the answers, you have to look and listen. Tomorrow we'll go to the sea, and you can watch the birds. You'll see fish there too.\""
+    },
+    {
+      "id": "b-bien-qu-elle-soit",
+      "fr": "Bien qu'elle soit fatiguée, Amélie ne veut pas dormir. Elle aime regarder la lune. Elle se demande comment un oiseau sait où il va.",
+      "en": "Even though she is tired, Amélie doesn't want to sleep. She likes looking at the moon. She wonders how a bird knows where it is going."
+    },
+    {
+      "id": "b-le-grand-pere-et",
+      "fr": "Le grand-père et Amélie se disent bonne nuit. « Sois sage et va dormir. Dors bien ! »",
+      "en": "Grandpa and Amélie say good night to each other. \"Be good and go to sleep. Sleep well!\""
+    },
+    {
+      "id": "b-et-vous-regardez-le",
+      "fr": "Et vous ? Regardez le ciel cette nuit. Qu'est-ce que vous voyez ?",
+      "en": "And you? Look at the sky tonight. What do you see?"
+    }
+  ],
+  "glossary": [
+    {
+      "fr": "connaît",
+      "en": "knows"
+    },
+    {
+      "fr": "s'est réveillée",
+      "en": "woke up"
+    },
+    {
+      "fr": "s'est habillée",
+      "en": "got dressed"
+    },
+    {
+      "fr": "est allée",
+      "en": "went"
+    },
+    {
+      "fr": "nuages",
+      "en": "clouds"
+    },
+    {
+      "fr": "bleu",
+      "en": "blue"
+    },
+    {
+      "fr": "expliquer",
+      "en": "to explain"
+    },
+    {
+      "fr": "vert",
+      "en": "green"
+    },
+    {
+      "fr": "direction",
+      "en": "direction"
+    },
+    {
+      "fr": "rend",
+      "en": "makes"
+    },
+    {
+      "fr": "yeux",
+      "en": "eyes"
+    },
+    {
+      "fr": "vole",
+      "en": "flies"
+    },
+    {
+      "fr": "au-dessus de",
+      "en": "above, over"
+    },
+    {
+      "fr": "ailes",
+      "en": "wings"
+    },
+    {
+      "fr": "en poussant",
+      "en": "by pushing"
+    },
+    {
+      "fr": "poussent",
+      "en": "push, grow"
+    },
+    {
+      "fr": "lourde",
+      "en": "heavy"
+    },
+    {
+      "fr": "savent",
+      "en": "know how to"
+    },
+    {
+      "fr": "tombent",
+      "en": "fall"
+    },
+    {
+      "fr": "volerais",
+      "en": "would fly"
+    },
+    {
+      "fr": "rivière",
+      "en": "river"
+    },
+    {
+      "fr": "bruit",
+      "en": "noise"
+    },
+    {
+      "fr": "écureuils",
+      "en": "squirrels"
+    },
+    {
+      "fr": "courent",
+      "en": "run"
+    },
+    {
+      "fr": "sautent",
+      "en": "jump"
+    },
+    {
+      "fr": "vite",
+      "en": "fast"
+    },
+    {
+      "fr": "lent",
+      "en": "slow"
+    },
+    {
+      "fr": "nager",
+      "en": "to swim"
+    },
+    {
+      "fr": "poissons",
+      "en": "fish"
+    },
+    {
+      "fr": "doute",
+      "en": "doubt"
+    },
+    {
+      "fr": "sachent",
+      "en": "know how to (after je doute que)"
+    },
+    {
+      "fr": "souffle",
+      "en": "blows"
+    },
+    {
+      "fr": "possible",
+      "en": "possible"
+    },
+    {
+      "fr": "pleuve",
+      "en": "rains (after il est possible que)"
+    },
+    {
+      "fr": "pleut",
+      "en": "rains"
+    },
+    {
+      "fr": "chaud",
+      "en": "hot"
+    },
+    {
+      "fr": "lourds",
+      "en": "heavy"
+    },
+    {
+      "fr": "tombe",
+      "en": "falls"
+    },
+    {
+      "fr": "plantes",
+      "en": "plants"
+    },
+    {
+      "fr": "expliqué",
+      "en": "explained"
+    },
+    {
+      "fr": "brille",
+      "en": "shines"
+    },
+    {
+      "fr": "tomber",
+      "en": "to fall"
+    },
+    {
+      "fr": "soleils",
+      "en": "suns"
+    },
+    {
+      "fr": "Terre",
+      "en": "Earth"
+    },
+    {
+      "fr": "fatiguée",
+      "en": "tired"
+    },
+    {
+      "fr": "sage",
+      "en": "good, well behaved"
+    },
+    {
+      "fr": "dors",
+      "en": "sleep"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-huit-ans",
+      "type": "comprehension",
+      "question": "{Quel âge a Amélie ?}",
+      "cue": "How old is Amélie?",
+      "answer": "huit ans",
+      "accept": [
+        "huit",
+        "8 ans",
+        "elle a huit ans"
+      ],
+      "hint": "{Elle a… ans.}"
+    },
+    {
+      "id": "i-chez-son-grand-pere",
+      "type": "comprehension",
+      "question": "{Chez qui est Amélie cet été ?}",
+      "cue": "Whose house is Amélie staying at this summer?",
+      "answer": "chez son grand-père",
+      "accept": [
+        "son grand-père",
+        "chez son grand-pere",
+        "elle est chez son grand-père"
+      ],
+      "hint": "{Chez son…}"
+    },
+    {
+      "id": "i-l-air",
+      "type": "comprehension",
+      "question": "{Qu'est-ce qui rend le ciel bleu ?}",
+      "cue": "What makes the sky blue?",
+      "answer": "l'air",
+      "accept": [
+        "air",
+        "c'est l'air",
+        "l'air rend le ciel bleu"
+      ],
+      "hint": "{L'…}"
+    },
+    {
+      "id": "i-le-rouge-et-l-orange",
+      "type": "comprehension",
+      "question": "{Qu'est-ce qui arrive à nos yeux à la fin de la journée ?}",
+      "cue": "What reaches our eyes at the end of the day?",
+      "answer": "le rouge et l'orange",
+      "accept": [
+        "rouge et orange",
+        "l'orange et le rouge",
+        "seulement le rouge et l'orange"
+      ],
+      "hint": "{Le rouge et…}"
+    },
+    {
+      "id": "i-avec-leurs-ailes",
+      "type": "comprehension",
+      "question": "{Avec quoi les oiseaux poussent-ils l'air ?}",
+      "cue": "What do birds push the air with?",
+      "answer": "avec leurs ailes",
+      "accept": [
+        "leurs ailes",
+        "les ailes",
+        "ailes"
+      ],
+      "hint": "{Avec leurs…}"
+    },
+    {
+      "id": "i-un-ecureuil",
+      "type": "comprehension",
+      "question": "{Qui est-ce qui fait le bruit dans l'arbre ?}",
+      "cue": "Who is making the noise in the tree?",
+      "answer": "un écureuil",
+      "accept": [
+        "l'écureuil",
+        "écureuil",
+        "un ecureuil",
+        "c'est un écureuil"
+      ],
+      "hint": "{Un…}"
+    },
+    {
+      "id": "i-la-tortue",
+      "type": "comprehension",
+      "question": "{Quel est l'animal le plus lent du monde ?}",
+      "cue": "Which is the slowest animal in the world?",
+      "answer": "la tortue",
+      "accept": [
+        "tortue",
+        "une tortue",
+        "c'est la tortue"
+      ],
+      "hint": "{La…}"
+    },
+    {
+      "id": "i-les-nuages-deviennent-trop-lourds",
+      "type": "comprehension",
+      "question": "{Pourquoi l'eau tombe-t-elle des nuages ?}",
+      "cue": "Why does water fall from the clouds?",
+      "answer": "les nuages deviennent trop lourds",
+      "accept": [
+        "ils deviennent trop lourds",
+        "trop lourds",
+        "parce que les nuages deviennent trop lourds",
+        "parce qu'ils deviennent trop lourds"
+      ],
+      "hint": "{Les nuages deviennent trop…}"
+    },
+    {
+      "id": "i-des-millions",
+      "type": "comprehension",
+      "question": "{Combien d'étoiles y a-t-il ?}",
+      "cue": "How many stars are there?",
+      "answer": "des millions",
+      "accept": [
+        "il y en a des millions",
+        "millions"
+      ],
+      "hint": "{Des…}"
+    },
+    {
+      "id": "i-a-la-mer",
+      "type": "comprehension",
+      "question": "{Où vont-ils demain ?}",
+      "cue": "Where are they going tomorrow?",
+      "answer": "à la mer",
+      "accept": [
+        "la mer",
+        "ils vont à la mer",
+        "a la mer"
+      ],
+      "hint": "{À la…}"
+    }
+  ]
 }
