@@ -192,7 +192,7 @@
         "example": "{qu'est-ce que c'est?} (what is it?), {comment ça va?} (how's it going?), {ça va?} (you good?), {qu'est-ce que tu veux?} (what do you want?), {est-ce que tu peux?} (can you?)"
       }
     ],
-    "vocabulary/11": {
+    "vocabulary/ca-va-fr.question-2": {
       "word_id": "ca-va-fr.question",
       "fr": "ça va?",
       "gloss": "you good?",
@@ -272,7 +272,7 @@
     }
   },
   "2024-01-25-emotion-phrases": {
-    "vocabulary/0": {
+    "vocabulary/je-suis-content-que-tu-sois-la-fr.i-m-happy": {
       "word_id": "je-suis-content-que-tu-sois-la-fr",
       "fr": "je suis content que tu sois là",
       "gloss": "I'm happy you're here",
@@ -472,7 +472,7 @@
     "title": "Daily Essentials Practice - Fill in the Blanks"
   },
   "2024-03-15-questce-qui-que": {
-    "vocabulary/1": {
+    "vocabulary/qu-est-ce-que-fr.object-pronoun": {
       "word_id": "qu-est-ce-que-fr",
       "fr": "qu'est-ce que",
       "gloss": "what (object)",
@@ -627,7 +627,7 @@
         "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
       }
     ],
-    "vocabulary/11": {
+    "vocabulary/vous-commandez-fr.question": {
       "word_id": "vous-commandez-fr.are-you-ready",
       "fr": "vous commandez?",
       "gloss": "are you ready to order?",
@@ -681,11 +681,11 @@
     "title": "Basic Fluency Practice - Fill in the Blanks"
   },
   "2024-04-29-comprendre": {
-    "vocabulary/2": {
+    "vocabulary/tu-comprends-fr.you-understand": {
       "word_id": "tu-comprends-fr",
       "fr": "tu comprends",
       "gloss": "you understand (informal)",
-      "note": "most common in questions; essential question for learning"
+      "note": "most common in questions"
     }
   },
   "2024-04-30-connaitre": {
@@ -721,21 +721,7 @@
         "example": "{je connais ce film} (I know this movie), {tu connais ce restaurant?} (do you know this restaurant?)"
       }
     ],
-    "title": "{connaître} - To Know (People/Places)",
-    "vocabulary/2": {
-      "word_id": "tu-connais-fr",
-      "fr": "tu connais",
-      "gloss": "you know (informal)",
-      "note": "Tu connais Marie?; asking if familiar"
-    }
-  },
-  "2024-05-01-croire": {
-    "vocabulary/2": {
-      "word_id": "tu-crois-fr",
-      "fr": "tu crois",
-      "gloss": "you believe (informal)",
-      "note": "same sound as je crois; asking for opinion/belief"
-    }
+    "title": "{connaître} - To Know (People/Places)"
   },
   "2024-05-03-knowledge-nouns": {
     "concepts": [
@@ -765,14 +751,6 @@
       }
     ]
   },
-  "2024-05-08-savoir": {
-    "vocabulary/2": {
-      "word_id": "tu-sais-fr",
-      "fr": "tu sais",
-      "gloss": "you know (informal)",
-      "note": "same sound as je sais; super common question"
-    }
-  },
   "2024-05-10-unit-7-exam": {
     "description": "Test everything from this unit! Cognitive verbs (understand, know, think, believe), on pronoun, discourse markers, and modifiers."
   },
@@ -781,7 +759,7 @@
     "title": "Knowledge & Learning Practice - Fill in the Blanks"
   },
   "2024-05-17-getting-ready": {
-    "vocabulary/1": {
+    "vocabulary/je-me-lave-fr.i-wash-myself": {
       "word_id": "je-me-lave-fr",
       "fr": "je me lave",
       "gloss": "I wash myself",

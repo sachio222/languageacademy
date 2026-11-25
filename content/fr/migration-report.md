@@ -29,7 +29,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Position words | 56 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 825 |
-| Hand edits kept | 75 |
+| Hand edits kept | 71 |
 | Live ids with no converted item | 86 |
 | Fields with no place in a module file | 1832 |
 | Text written differently | 577 |
@@ -1440,19 +1440,6 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-04-29-comprendre**
 
 - `vocabulary[2].word_id` "tu-comprends-fr.you-understand" → "tu-comprends-fr"
-- `vocabulary[2].note` "most common in questions" → "most common in questions; essential question for learning"
-
-**2024-05-08-savoir**
-
-- `vocabulary[2].note` "same sound as je sais" → "same sound as je sais; super common question"
-
-**2024-04-30-connaitre**
-
-- `vocabulary[2].note` "Tu connais Marie?" → "Tu connais Marie?; asking if familiar"
-
-**2024-05-01-croire**
-
-- `vocabulary[2].note` "same sound as je crois" → "same sound as je crois; asking for opinion/belief"
 
 **2024-05-11-unit-7-practice**
 
