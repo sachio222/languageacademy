@@ -37,7 +37,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
 | Notes | 10 |
-| Course map split | 41 |
+| Course map split | 40 |
 | Outline | 16 |
 
 ## Guide checks written by hand
@@ -4068,10 +4068,6 @@ What each module teaches and tests now sits in its module file (`teaches`, `test
 **2024-05-24-unit-8-exam**
 
 - `2024-05-24-unit-8-exam#exerciseConfig.items[38]` rekeyed: overrides now under 2024-05-24-unit-8-exam#i-vas-y
-
-**2024-02-02-service-phrases**
-
-- `2024-02-02-service-phrases#title` rekeyed: overrides now under 2024-02-02-service-phrases#title
 
 ## Outline
 
