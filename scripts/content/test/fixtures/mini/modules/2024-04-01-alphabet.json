@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-04-01-alphabet",
+  "kind": "reference",
+  "status": "written",
+  "title": "The French Alphabet",
+  "description": "Every letter and how French says it.",
+  "vocabulary": [
+    { "word_id": "a-fr", "fr": "a", "gloss": "the letter a" },
+    { "word_id": "e-accent-aigu-fr", "fr": "é", "gloss": "the letter e with an acute accent" }
+  ],
+  "tables": [
+    { "id": "t-vowels", "title": "Vowels", "rows": [{ "fr": "a", "en": "ah" }, { "fr": "e", "en": "uh" }] }
+  ],
+  "sections": [
+    { "id": "s-accents", "heading": "Accents", "text": "An accent can change the sound: {é} sounds like ay.", "rows": [{ "fr": "é", "en": "ay" }] }
+  ],
+  "screen": "pronunciation-test"
+}

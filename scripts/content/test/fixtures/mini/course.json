@@ -1,0 +1,44 @@
+{
+  "schema": "la-course@1",
+  "language": "fr",
+  "native": "en",
+  "units": [
+    {
+      "unit_key": "unit1",
+      "name": "Essentials",
+      "description": "Who you are, what you have, and the words around you.",
+      "can_do": "introduce yourself and say what you have",
+      "can_do_short": "introduce yourself",
+      "can_do_example_fr": "Je suis {name}. J'ai un chat.",
+      "theme": { "icon": "u-essentials", "color": "unit-1" },
+      "entries": ["2024-01-02-etre", "reading-cafe"]
+    },
+    {
+      "unit_key": "unit2",
+      "name": "Questions",
+      "description": "Ask what you want to know.",
+      "can_do": "ask simple questions",
+      "can_do_short": "ask questions",
+      "can_do_example_fr": "Est-ce que tu as un chat ?",
+      "theme": { "icon": "u-questions", "color": "unit-2" },
+      "entries": ["questions-help", "practice-etre"]
+    },
+    {
+      "unit_key": "unit3",
+      "name": "Places",
+      "description": "Say where you are and where things are.",
+      "can_do": "say where you are",
+      "can_do_short": "say where you are",
+      "can_do_example_fr": "Je suis au café.",
+      "theme": { "icon": "u-places", "color": "unit-3" },
+      "entries": ["exam-places"]
+    }
+  ],
+  "shelf": {
+    "pages": ["2024-04-01-alphabet"],
+    "opens_words": ["2024-04-01-alphabet"]
+  },
+  "retired": [
+    { "module_key": "2024-01-03-old-avoir", "reason": "merged into the être lesson", "replaced_by": "2024-01-02-etre" }
+  ]
+}

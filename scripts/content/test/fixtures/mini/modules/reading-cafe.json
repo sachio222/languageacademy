@@ -1,0 +1,26 @@
+{
+  "schema": "la-module@1",
+  "module_key": "reading-cafe",
+  "kind": "reading",
+  "status": "written",
+  "title": "Paul at the café",
+  "topic": "the café",
+  "description": "Paul says hello at a café.",
+  "can_do": ["Follow a short scene at a café."],
+  "story_id": "cafe",
+  "vocabulary": [
+    { "word_id": "cafe-fr", "fr": "un café", "gloss": "a coffee, a café" },
+    { "word_id": "bonjour-fr", "fr": "bonjour", "gloss": "hello" }
+  ],
+  "passage": [
+    { "id": "b1", "img": { "src": "stories/cafe/1.webp", "w": 800, "h": 600, "alt": "Paul at a café table" } },
+    { "id": "b2", "fr": "Bonjour ! Je suis Paul.", "en": "Hello! I am Paul.", "speaker": "Paul" },
+    { "id": "b3", "fr": "Je suis au café.", "en": "I am at the café." }
+  ],
+  "glossary": [{ "fr": "au", "en": "at the" }],
+  "items": [
+    { "id": "q-who", "type": "comprehension", "question": "Who says hello?", "answer": "Paul" },
+    { "id": "q-where", "type": "comprehension", "question": "Where is Paul?", "options": [{ "text": "au café", "fr": true, "right": true }, { "text": "à la gare", "fr": true }] }
+  ],
+  "preview_blocks": ["b1", "b2", "b3"]
+}

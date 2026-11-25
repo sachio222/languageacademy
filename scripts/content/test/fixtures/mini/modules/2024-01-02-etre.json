@@ -1,0 +1,48 @@
+{
+  "schema": "la-module@1",
+  "module_key": "2024-01-02-etre",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Essential Verb · {être} (to be)",
+  "topic": "être",
+  "description": "Say who and what you are: {je suis}, {tu es}, {il est}.",
+  "can_do": ["Say who you are with {je suis}."],
+  "teaches": { "constructions": ["fr:cx:etre.present"] },
+  "tests": { "constructions": [] },
+  "vocabulary": [
+    { "word_id": "je-suis-fr", "fr": "je suis", "gloss": "I am", "part_of_speech": "verb", "example_fr": "Je suis Paul.", "example_en": "I am Paul." },
+    { "word_id": "tu-es-fr", "fr": "tu es", "gloss": "you are", "note": "Use it with a friend." },
+    { "word_id": "il-est-fr", "fr": "il est", "gloss": "he is, it is" },
+    { "word_id": "elle-est-fr", "fr": "elle est", "gloss": "she is, it is" },
+    { "word_id": "nous-sommes-fr", "fr": "nous sommes", "gloss": "we are" },
+    { "word_id": "vous-etes-fr", "fr": "vous êtes", "gloss": "you are (formal or plural)" }
+  ],
+  "concepts": [
+    { "id": "c-etre-forms", "term": "{être} changes with the subject", "definition": "Say {je suis} for I am and {tu es} for you are.", "example": "{Je suis Paul.}" }
+  ],
+  "tables": [
+    {
+      "id": "t-etre-present",
+      "title": "{être} in the present",
+      "rows": [
+        { "fr": "je suis", "en": "I am" },
+        { "fr": "tu es", "en": "you are" },
+        { "fr": "il est", "en": "he is", "note": "{elle est} for she" }
+      ]
+    }
+  ],
+  "phrases": [
+    { "phrase_id_suffix": "je-suis", "fr": "je suis", "word_id": "je-suis-fr" },
+    { "phrase_id_suffix": "je-suis-paul", "fr": "Je suis Paul." }
+  ],
+  "speed_match": ["je-suis-fr", "tu-es-fr", "il-est-fr", "elle-est-fr", "nous-sommes-fr", "vous-etes-fr"],
+  "items": [
+    { "id": "i-je-suis", "type": "translate", "prompt": "I am", "answer": "je suis", "mistakes": [{ "answer": "je es", "feedback": "With {je}, say {suis}." }] },
+    { "id": "i-paul", "type": "respond", "situation": "Someone asks your name. Say you are Paul.", "answer": "je suis Paul", "accept": ["Je suis Paul."], "hint": "Start with {je suis}." },
+    { "id": "i-tu-es", "type": "gapfill", "text": "Tu ___ Paul ?", "blanks": [{ "answer": "es" }], "gloss": "Are you Paul?" },
+    { "id": "i-il-est", "type": "meaning", "shown": "il est", "answer": "he is", "accept": ["it is"] },
+    { "id": "i-plural", "type": "transform", "instruction": "Say it for {nous}.", "shown": "je suis", "answer": "nous sommes", "steps": ["writing", "lesson-exam"] },
+    { "id": "i-which", "type": "choice", "question": "Which one means you are?", "options": [{ "text": "tu es", "fr": true, "right": true }, { "text": "il est", "fr": true }] }
+  ],
+  "options": { "study_mode": true }
+}

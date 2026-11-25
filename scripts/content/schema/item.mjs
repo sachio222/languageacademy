@@ -144,7 +144,8 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
   return ps;
 }
 
-function checkOptions(item, bad) {
+// Shared with guide checks (schema/module.mjs), which take the same options shape.
+export function checkOptions(item, bad) {
   const o = item.options;
   if (!Array.isArray(o) || o.length < 2) return bad('options', 'options_invalid', 'options must be a list of at least two');
   let right = 0;

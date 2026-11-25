@@ -17,6 +17,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm content:validate
       - run: pnpm content:test
       - run: node --test src/lessons/exerciseAnswers.test.mjs
       - run: pnpm graph:test

@@ -1,0 +1,123 @@
+// assembleCourse: outline + module files -> Course (spec 7). Pure: no fs, so Vite can import it.
+// Collects every problem from every file before throwing one ContentError.
+import { problem, ContentError } from './problems.mjs';
+import { validateModule, defaultSteps } from './schema/module.mjs';
+import { validateOutline } from './outline.mjs';
+
+// Unit 1 is free; every other unit is Premium (spec 5.1, L rule LRN-4). Never written in a file.
+export const FREE_UNIT_KEY = 'unit1';
+export const accessFor = (unitKey) => (unitKey === FREE_UNIT_KEY ? 'free' : 'premium');
+
+const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
+const keyOfFile = (file) => file.replace(/^.*[\\/]/, '').replace(/\.json$/, '');
+
+/**
+ * @param outline  parsed course.json
+ * @param files    Array<{ file, json }> or Array<{ file, text }>; a file is named <module_key>.json
+ * @param opts     { outlineFile?: string, checkAnswer?: (item, typed) => boolean }
+ *                 checkAnswer is accepted for Task 4's item_unpassable and mistake_accepted rules.
+ */
+export function assembleCourse(outline, files, opts = {}) {
+  const outlineFile = opts.outlineFile || 'course.json';
+  const problems = [];
+
+  const sources = new Map(); // module_key -> { file, json | null }
+  for (const f of files) {
+    let json = f.json;
+    if (json === undefined) {
+      try {
+        json = JSON.parse(f.text);
+      } catch (e) {
+        problems.push(problem(f.file, '', 'json_invalid', `not valid JSON: ${e.message}`));
+        json = null;
+      }
+    }
+    const key = keyOfFile(f.file);
+    if (sources.has(key)) {
+      problems.push(problem(f.file, '', 'module_duplicate', `${key} already comes from ${sources.get(key).file}`));
+      continue;
+    }
+    sources.set(key, { file: f.file, json });
+  }
+
+  const unitIndexOf = unitIndexes(outline);
+  for (const [key, { file, json }] of sources) {
+    if (json === null) continue;
+    if (isObj(json) && typeof json.module_key === 'string' && json.module_key !== key)
+      problems.push(problem(file, 'module_key', 'module_key_mismatch', `module_key ${json.module_key} does not match the file name ${key}.json`));
+    problems.push(...validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null }));
+  }
+
+  const modulesByKey = new Map([...sources].map(([k, s]) => [k, s.json]));
+  problems.push(...validateOutline(outline, modulesByKey, { file: outlineFile }));
+
+  if (problems.length) throw new ContentError(problems);
+  return build(outline, sources);
+}
+
+// module_key -> 1-based unit index, from the first listing (the outline check reports any second one).
+function unitIndexes(outline) {
+  const out = new Map();
+  if (!isObj(outline) || !Array.isArray(outline.units)) return out;
+  outline.units.forEach((u, i) => {
+    if (isObj(u) && Array.isArray(u.entries)) for (const k of u.entries) if (!out.has(k)) out.set(k, i + 1);
+  });
+  return out;
+}
+
+function toModule(src, place, unit) {
+  const m = structuredClone(src.json);
+  if (Array.isArray(m.items)) m.items = m.items.map((item) => ({ ...item, steps: defaultSteps(item, m.kind) }));
+  if (m.kind === 'unit_exam' && m.title === undefined && unit) m.title = `Unit exam · ${unit.name}`;
+  return Object.assign(m, place, { file: src.file });
+}
+
+const NO_PLACE = { position: null, unit_position: null, display_number: null, unit_key: null, unit_index: null };
+
+function build(outline, sources) {
+  const modules = new Map();
+  let position = 0;
+  const units = outline.units.map((u, i) => {
+    const index = i + 1;
+    const unitModules = u.entries.map((key, j) => {
+      position += 1;
+      // position: course-wide order across units (the checker's taught-before order).
+      // unit_position: L's position, the order inside the unit, guides included; display_number equals it.
+      const place = { position, unit_position: j + 1, display_number: j + 1, unit_key: u.unit_key, unit_index: index };
+      const m = toModule(sources.get(key), place, u);
+      modules.set(key, m);
+      return m;
+    });
+    return {
+      unit_key: u.unit_key,
+      ordinal: index,
+      index,
+      name: u.name,
+      description: u.description ?? null,
+      can_do: u.can_do ?? null,
+      can_do_short: u.can_do_short ?? null,
+      can_do_example_fr: u.can_do_example_fr ?? null,
+      theme: u.theme ? { ...u.theme } : null,
+      access: accessFor(u.unit_key),
+      modules: unitModules,
+    };
+  });
+
+  const pages = outline.shelf.pages.map((key) => {
+    const m = toModule(sources.get(key), NO_PLACE, null);
+    modules.set(key, m);
+    return m;
+  });
+  const guides = units.flatMap((u) => u.modules).filter((m) => m.kind === 'guide').map((m) => m.module_key);
+  const retired = (outline.retired || []).map((r) => ({ ...r }));
+
+  return {
+    language: outline.language,
+    native: outline.native,
+    units,
+    shelf: { pages, guides, opens_words: [...(outline.shelf.opens_words || [])] },
+    modules,
+    registry: new Set([...modules.keys(), ...retired.map((r) => r.module_key)]),
+    retired,
+  };
+}

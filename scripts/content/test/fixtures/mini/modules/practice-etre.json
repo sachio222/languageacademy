@@ -1,0 +1,14 @@
+{
+  "schema": "la-module@1",
+  "module_key": "practice-etre",
+  "kind": "practice",
+  "status": "written",
+  "title": "Practice · {être}",
+  "topic": "être",
+  "description": "Fill in the right form of {être}.",
+  "tests": { "constructions": ["fr:cx:etre.present"] },
+  "items": [
+    { "id": "p-je-suis", "type": "gapfill", "text": "Je ___ Paul.", "blanks": [{ "answer": "suis" }] },
+    { "id": "p-nous-vous", "type": "gapfill", "text": "Nous ___ là et vous ___ ici.", "blanks": [{ "answer": "sommes" }, { "answer": "êtes" }] }
+  ]
+}
