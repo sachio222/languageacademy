@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 825 |
 | Passage words with no pop-up | 10 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 845 |
+| Hand edits kept | 858 |
 | Live ids with no converted item | 315 (0 real misses) |
 | Fields with no place in a module file | 1956 |
 | Text written differently | 673 |
@@ -2059,6 +2059,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-15-nature-animals**
 
+- `vocabulary[0].note` "masculine - silent 's' in oiseau" → "masculine: the s sounds like z"
 - `vocabulary[14].note` "masculine - for 'souffler' (to blow)" → "masculine: le vent"
 - `vocabulary[15].note` "feminine - for 'pleuvoir' (to rain)" → "feminine: la pluie"
 - `concepts[0].definition` "These animals are perfect examples for asking 'how does X do Y?' questions" → "The next lessons ask how and why these animals move. Start with what each one is like."
@@ -2070,6 +2071,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[0].text` "(none)" → ""Je vois ___ : il est petit et bleu.""
 - `items[0].blanks` "(none)" → "["answer":"un oiseau"]"
 - `items[0].gloss` "(none)" → ""I see a bird: it is small and blue.""
+- `items[0].mistakes[0].feedback` "Oiseau is masculine. Use 'un oiseau' (the 's' is silent!)" → "Oiseau is masculine: un oiseau."
+- `items[0].mistakes[1].feedback` "Careful with spelling: oiseau (the 's' is silent)" → "Check the spelling: oiseau."
 - `items[0].prompt` ""a bird"" → "(removed)"
 - `items[0].answer` ""un oiseau"" → "(removed)"
 - `items[0].hint` ""masculine article + oiseau"" → "(removed)"
@@ -2133,17 +2136,17 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[8].answer` ""la pluie"" → "(removed)"
 - `items[8].hint` ""feminine article + pluie"" → "(removed)"
 - `items[9].type` "translate" → "transform"
-- `items[9].instruction` "(none)" → ""Say the opposite: the turtle is slow.""
+- `items[9].instruction` "(none)" → ""Say the opposite.""
 - `items[9].shown` "(none)" → ""La tortue est rapide.""
 - `items[9].prompt` ""The turtle is slow"" → "(removed)"
 - `items[9].hint` ""la tortue + est + lente (feminine)"" → "(removed)"
 - `items[10].type` "translate" → "transform"
-- `items[10].instruction` "(none)" → ""Say the opposite: the squirrel is fast.""
+- `items[10].instruction` "(none)" → ""Say the opposite.""
 - `items[10].shown` "(none)" → ""L'écureuil est lent.""
 - `items[10].prompt` ""The squirrel is fast"" → "(removed)"
 - `items[10].hint` ""l'écureuil + est + rapide"" → "(removed)"
 - `items[11].type` "translate" → "transform"
-- `items[11].instruction` "(none)" → ""Say the opposite: the bee is small.""
+- `items[11].instruction` "(none)" → ""Say the opposite.""
 - `items[11].shown` "(none)" → ""L'abeille est grande.""
 - `items[11].mistakes` "(none)" → "["answer":"l'abeille est petit","feedback":"abeille is feminine, so the adjective adds -e: petite."]"
 - `items[11].prompt` ""The bee is small"" → "(removed)"
@@ -2170,7 +2173,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-16-movement-verbs**
 
-- `concepts` "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), L'oiseau vole (the bird flies), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in all tenses you've learned - present, past, imparfait","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming)"]" → "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), Les oiseaux volent (birds fly), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming, I used to swim)","id":"c-savoir-infinitive","term":"savoir + infinitive: know how to","definition":"Use savoir with an infinitive for a skill someone has learned, and pouvoir for whether they are able to at that moment.","example":"Je sais nager. (I can swim, I know how.) Les petits oiseaux ne savent pas encore voler. (Baby birds can't fly yet.)"]"
+- `concepts` "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), L'oiseau vole (the bird flies), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in all tenses you've learned - present, past, imparfait","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming)"]" → "["id":"c-six-essential-movement-verbs","term":"Six Essential Movement Verbs","definition":"These verbs describe all basic types of movement in nature and daily life","example":"nager (swim), sauter (jump), voler (fly), courir (run), marcher (walk), grimper (climb)","id":"c-regular-er-verbs-pattern","term":"Regular -ER Verbs Pattern","definition":"Most movement verbs follow the regular -ER pattern you already know","example":"nager: je nage, tu nages, il nage, nous nageons, vous nagez, ils nagent","id":"c-courir-irregular-ir-verb","term":"courir - Irregular -IR Verb","definition":"Courir (to run) is irregular but common - memorize the pattern","example":"je cours, tu cours, il court, nous courons, vous courez, ils courent","id":"c-animals-movement","term":"Animals + Movement","definition":"Combine with animal vocabulary to describe how animals move","example":"La tortue nage (the turtle swims), Les oiseaux volent (birds fly), L'écureuil saute (the squirrel jumps)","id":"c-works-in-all-tenses","term":"Works in All Tenses","definition":"These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.","example":"Je nage (I swim), J'ai nagé (I swam), Je nageais (I was swimming, I used to swim)","id":"c-savoir-infinitive","term":"savoir + infinitive: know how to","definition":"Use savoir with an infinitive for a skill someone has learned, and pouvoir for whether they are able to at that moment.","example":"Je sais nager. (I can swim, I know how.) Les jeunes oiseaux ne savent pas encore voler. (Baby birds can't fly yet.)"]"
 - `tables` "(none)" → "["id":"t-three-tenses","title":"nager and courir in the present and the past","rows":["fr":"je nage","en":"I swim","note":"present","fr":"j'ai nagé","en":"I swam","note":"passé composé, with avoir","fr":"je nageais","en":"I was swimming, I used to swim","note":"imparfait: nage- keeps its e before -ais","fr":"il court","en":"he runs","note":"present","fr":"il a couru","en":"he ran","note":"passé composé, with avoir","fr":"il courait","en":"he was running, he used to run","note":"imparfait"]]"
 - `items[0].type` "translate" → "gapfill"
 - `items[0].text` "(none)" → ""Le matin, je ___ avec mon frère.""
@@ -2230,7 +2233,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[7].hint` ""courir for je - irregular!"" → "(removed)"
 - `items[8].type` "respond" → "transform"
 - `items[8].instruction` "(none)" → ""Change the subject to tu.""
-- `items[8].shown` "(none)" → ""Je cours.""
+- `items[8].shown` "(none)" → ""Il court.""
+- `items[8].mistakes` "(none)" → "["answer":"tu court","feedback":"With tu, write cours, with an s."]"
 - `items[8].situation` ""you run (informal)"" → "(removed)"
 - `items[8].hint` ""courir for tu - same as je"" → "(removed)"
 - `items[9].type` "translate" → "gapfill"
@@ -2268,7 +2272,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[13].hint` ""l'oiseau + vole"" → "(removed)"
 - `items[14].type` "translate" → "respond"
 - `items[14].situation` "(none)" → ""Your friend asks: Qu'est-ce que l'écureuil fait ? Say that the squirrel is jumping.""
-- `items[14].accept` "["l'ecureuil saute"]" → "["l'ecureuil saute","il saute"]"
+- `items[14].accept` "["l'ecureuil saute"]" → "["l'ecureuil saute","il saute","il est en train de sauter","l'écureuil est en train de sauter"]"
 - `items[14].prompt` ""The squirrel jumps"" → "(removed)"
 - `items[14].hint` ""l'écureuil + saute"" → "(removed)"
 - `items[15].type` "translate" → "transform"
@@ -2283,7 +2287,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[16].hint` ""tu cours + vite"" → "(removed)"
 - `items[17].type` "translate" → "respond"
 - `items[17].situation` "(none)" → ""Your friend asks: Qu'est-ce que tu fais en été ? Say that you swim in the sea.""
-- `items[17].accept` "(none)" → "["en été, je nage dans la mer"]"
+- `items[17].accept` "(none)" → "["en été, je nage dans la mer","l'été, je nage dans la mer"]"
 - `items[17].prompt` ""I swim in the sea"" → "(removed)"
 - `items[17].hint` ""je nage + dans la mer"" → "(removed)"
 - `items[18].type` "respond" → "transform"
@@ -2296,8 +2300,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-17-natural-phenomena**
 
+- `vocabulary[33].note` "⭐⭐⭐ CRITICAL - irregular like prendre - CAUSATIVE!" → "a regular -re verb, like attendre: nous rendons, ils rendent"
 - `vocabulary[44].note` "⭐ QUESTION PATTERN with causative!" → "a preview of the next lesson, which teaches this question"
-- `concepts` "["id":"c-natural-process-verbs","term":"Natural Process Verbs","definition":"Verbs that describe what happens in nature - shining, growing, raining","example":"Le soleil brille (the sun shines), Les plantes poussent (plants grow), Le vent souffle (the wind blows)","id":"c-pleuvoir-impersonal-verb","term":"pleuvoir - Impersonal Verb","definition":"Pleuvoir (to rain) only uses 'il' form - il pleut (it rains)","example":"il pleut (it rains), il a plu (it rained), il pleuvait (it was raining)","id":"c-rendre-critical-causative-verb","term":"rendre - CRITICAL Causative Verb!","definition":"Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!","example":"Le soleil rend l'herbe verte (the sun makes grass green), Le froid rend l'eau glacée (cold makes water frozen)","id":"c-causative-pattern-rendre-adjective","term":"Causative Pattern: rendre + adjective","definition":"Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]","example":"Qu'est-ce qui rend le ciel bleu? (What makes the sky blue?) → La lumière rend le ciel bleu (Light makes the sky blue)","id":"c-setting-up-question-patterns","term":"Setting Up Question Patterns","definition":"These verbs enable sophisticated 'why' and 'what makes' questions","example":"Pourquoi est-ce que le soleil brille? Qu'est-ce qui rend l'herbe verte? Comment est-ce que les plantes poussent?"]" → "["id":"c-natural-process-verbs","term":"Natural Process Verbs","definition":"Verbs that describe what happens in nature - shining, growing, raining","example":"Le soleil brille (the sun shines), Les plantes poussent (plants grow), Le vent souffle (the wind blows)","id":"c-pleuvoir-impersonal-verb","term":"pleuvoir - Impersonal Verb","definition":"Pleuvoir (to rain) only uses 'il' form - il pleut (it rains)","example":"il pleut (it rains), il a plu (it rained), il pleuvait (it was raining)","id":"c-rendre-critical-causative-verb","term":"rendre - CRITICAL Causative Verb!","definition":"Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!","example":"Le soleil rend l'herbe verte (the sun makes grass green), Le froid rend l'eau glacée (cold makes water frozen)","id":"c-causative-pattern-rendre-adjective","term":"Causative Pattern: rendre + adjective","definition":"Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]","example":"La pluie rend la terre humide (rain makes the earth wet), Le soleil rend l'herbe verte (the sun makes grass green)","id":"c-setting-up-question-patterns","term":"Setting Up Question Patterns","definition":"The next lessons use these verbs to ask why and how.","example":"Pourquoi est-ce que le soleil brille ? Comment est-ce que les plantes poussent ?","id":"c-ne-plus-no-longer","term":"ne … plus: no longer","definition":"Put ne before the verb and plus after it to say that something has stopped. It works like ne … pas.","example":"Il ne pleut plus. (It isn't raining any more.) Le vent ne souffle plus. (The wind isn't blowing any more.)"]"
+- `concepts` "["id":"c-natural-process-verbs","term":"Natural Process Verbs","definition":"Verbs that describe what happens in nature - shining, growing, raining","example":"Le soleil brille (the sun shines), Les plantes poussent (plants grow), Le vent souffle (the wind blows)","id":"c-pleuvoir-impersonal-verb","term":"pleuvoir - Impersonal Verb","definition":"Pleuvoir (to rain) only uses 'il' form - il pleut (it rains)","example":"il pleut (it rains), il a plu (it rained), il pleuvait (it was raining)","id":"c-rendre-critical-causative-verb","term":"rendre - CRITICAL Causative Verb!","definition":"Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!","example":"Le soleil rend l'herbe verte (the sun makes grass green), Le froid rend l'eau glacée (cold makes water frozen)","id":"c-causative-pattern-rendre-adjective","term":"Causative Pattern: rendre + adjective","definition":"Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]","example":"Qu'est-ce qui rend le ciel bleu? (What makes the sky blue?) → La lumière rend le ciel bleu (Light makes the sky blue)","id":"c-setting-up-question-patterns","term":"Setting Up Question Patterns","definition":"These verbs enable sophisticated 'why' and 'what makes' questions","example":"Pourquoi est-ce que le soleil brille? Qu'est-ce qui rend l'herbe verte? Comment est-ce que les plantes poussent?"]" → "["id":"c-natural-process-verbs","term":"Natural Process Verbs","definition":"Verbs that describe what happens in nature - shining, growing, raining","example":"Le soleil brille (the sun shines), Les plantes poussent (plants grow), Le vent souffle (the wind blows)","id":"c-pleuvoir-impersonal-verb","term":"pleuvoir - Impersonal Verb","definition":"Pleuvoir (to rain) only uses 'il' form - il pleut (it rains)","example":"il pleut (it rains), il a plu (it rained), il pleuvait (it was raining)","id":"c-rendre-critical-causative-verb","term":"rendre - CRITICAL Causative Verb!","definition":"rendre with an adjective means to make something that way. It is a regular -re verb, like attendre: nous rendons, ils rendent.","example":"Le soleil rend l'herbe verte (the sun makes grass green), Le froid rend l'eau glacée (cold makes water frozen)","id":"c-causative-pattern-rendre-adjective","term":"Causative Pattern: rendre + adjective","definition":"Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]","example":"La pluie rend la terre humide (rain makes the earth wet), Le soleil rend l'herbe verte (the sun makes grass green)","id":"c-setting-up-question-patterns","term":"Setting Up Question Patterns","definition":"The next lessons use these verbs to ask why and how.","example":"Pourquoi est-ce que le soleil brille ? Comment est-ce que les plantes poussent ?","id":"c-ne-plus-no-longer","term":"ne … plus: no longer","definition":"Put ne before the verb and plus after it to say that something has stopped. It works like ne … pas.","example":"Il ne pleut plus. (It isn't raining any more.) Le vent ne souffle plus. (The wind isn't blowing any more.)"]"
 - `items[0].type` "translate" → "gapfill"
 - `items[0].text` "(none)" → ""Il fait beau : le soleil ___.""
 - `items[0].blanks` "(none)" → "["answer":"brille"]"
@@ -2367,7 +2372,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[10].answer` ""ils rendent"" → "(removed)"
 - `items[10].hint` ""rendre for ils"" → "(removed)"
 - `items[11].type` "translate" → "transform"
-- `items[11].instruction` "(none)" → ""Say it with rendre: the sun makes the grass green.""
+- `items[11].instruction` "(none)" → ""Say it with rendre.""
 - `items[11].shown` "(none)" → ""le soleil / l'herbe / verte""
 - `items[11].prompt` ""The sun makes grass green"" → "(removed)"
 - `items[11].hint` ""le soleil + rend + l'herbe + verte"" → "(removed)"
@@ -2390,6 +2395,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-03-15-questce-qui-que**
 
 - `vocabulary[1].word_id` "qu-est-ce-que-fr.object-pronoun" → "qu-est-ce-que-fr"
+- `concepts[3].definition` "If verb has NO object → use QUI. If verb has an object → use QUE" → "If 'what' is the subject (no other subject follows) → qui. If another subject follows → que."
+- `items[0].mistakes[0].feedback` "Use 'qu'est-ce QUI' when asking what DOES something (subject). 'Brille' has no object! The thing itself shines. Use QUI for subjects, QUE for objects." → "Use qu'est-ce qui here: 'what' is the subject, and no other subject follows. Use qu'est-ce que when another subject follows."
 
 **2024-03-19-pourquoi-complex**
 
@@ -2420,8 +2427,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[3].prompt` ""Why is it like that?"" → "(removed)"
 - `items[3].hint` ""pourquoi est-ce que + c'est comme ça"" → "(removed)"
 - `items[4].type` "translate" → "respond"
-- `items[4].situation` "(none)" → ""Your little brother has your phone. Ask your mother why he has that, with pourquoi est-ce que.""
+- `items[4].situation` "(none)" → ""Your little brother has your phone. Ask your mother why he has it, with pourquoi est-ce que.""
 - `items[4].answer` "pourquoi est-ce qu'il a ça?" → "pourquoi est-ce qu'il a ça ?"
+- `items[4].accept` "["pourquoi est-ce qu'il a ça"]" → "["pourquoi est-ce qu'il a ça","pourquoi est-ce qu'il a mon téléphone ?"]"
 - `items[4].prompt` ""Why does he have that?"" → "(removed)"
 - `items[4].hint` ""pourquoi est-ce que + il a ça"" → "(removed)"
 - `items[5].type` "translate" → "transform"
@@ -2458,6 +2466,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[10].type` "translate" → "respond"
 - `items[10].situation` "(none)" → ""Your little brother is running in the house. Ask him why he is running, with pourquoi est-ce que.""
 - `items[10].answer` "pourquoi est-ce que tu cours?" → "pourquoi est-ce que tu cours ?"
+- `items[10].accept` "["pourquoi est-ce que tu cours"]" → "["pourquoi est-ce que tu cours","pourquoi est-ce que tu cours dans la maison ?"]"
 - `items[10].prompt` ""Why are you running?"" → "(removed)"
 - `items[10].hint` ""pourquoi est-ce que + tu cours"" → "(removed)"
 - `items[11].type` "translate" → "transform"
@@ -2561,6 +2570,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[10].type` "translate" → "respond"
 - `items[10].situation` "(none)" → ""Your friend swims very well. Ask how they swim, with comment est-ce que.""
 - `items[10].answer` "comment est-ce que tu nages?" → "comment est-ce que tu nages ?"
+- `items[10].accept` "["comment est-ce que tu nages"]" → "["comment est-ce que tu nages","comment est-ce que tu nages si bien ?"]"
 - `items[10].prompt` ""How do you swim?"" → "(removed)"
 - `items[10].hint` ""comment est-ce que + tu nages"" → "(removed)"
 - `items[11].type` "translate" → "transform"
@@ -2617,6 +2627,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[3].hint` ""je me demande + où il est"" → "(removed)"
 - `items[4].type` "translate" → "respond"
 - `items[4].situation` "(none)" → ""Someone asks you: Comment est-ce qu'on fait ça ? You have no idea. Say you don't know how we do that.""
+- `items[4].accept` "(none)" → "["je ne sais pas comment on fait"]"
 - `items[4].prompt` ""I don't know how we do that"" → "(removed)"
 - `items[4].hint` ""je ne sais pas + comment on fait ça"" → "(removed)"
 - `items[5].type` "translate" → "transform"
@@ -2627,7 +2638,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[6].type` "translate" → "respond"
 - `items[6].situation` "(none)" → ""A child asks you: Comment est-ce qu'une tortue nage ? You have no idea. Say so, starting with Je ne sais pas.""
 - `items[6].cue` "(none)" → ""I don't know how a turtle swims""
-- `items[6].accept` "(none)" → "["je ne sais pas comment nage une tortue"]"
+- `items[6].accept` "(none)" → "["je ne sais pas comment nage une tortue","je ne sais pas comment elle nage"]"
 - `items[6].mistakes` "(none)" → "["answer":"je ne sais pas comment est-ce qu'une tortue nage","feedback":"After je ne sais pas, drop est-ce que."]"
 - `items[6].prompt` ""I don't know how a turtle swims"" → "(removed)"
 - `items[6].hint` ""je ne sais pas + comment une tortue nage"" → "(removed)"
@@ -2670,8 +2681,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-03-24-rhetorical-negative**
 
 - `items[0].type` "translate" → "respond"
-- `items[0].situation` "(none)" → ""Your friend doubts that French bread is the best. Ask a negative question to get them to agree: isn't that true?""
+- `items[0].situation` "(none)" → ""Your friend doubts that French bread is the best. Ask a negative question to get them to agree.""
 - `items[0].answer` "n'est-ce pas vrai?" → "n'est-ce pas vrai ?"
+- `items[0].accept` "["n'est-ce pas vrai"]" → "["n'est-ce pas vrai","c'est vrai, n'est-ce pas ?"]"
 - `items[0].prompt` ""Isn't that true?"" → "(removed)"
 - `items[0].hint` ""n'est-ce pas + vrai"" → "(removed)"
 - `items[2].type` "translate" → "transform"
@@ -2701,6 +2713,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `items[10].answer` "n'est-ce pas magnifique?" → "n'est-ce pas magnifique ?"
 - `items[10].prompt` ""Isn't that magnificent?"" → "(removed)"
 - `items[10].hint` ""n'est-ce pas + magnifique"" → "(removed)"
+- `items[11].accept` "["pourquoi ne pas aller là-bas","pourquoi ne pas aller la-bas","pourquoi ne pas aller la-bas?"]" → "["pourquoi ne pas aller là-bas","pourquoi ne pas aller la-bas","pourquoi ne pas aller la-bas?","pourquoi ne pas y aller ?"]"
 
 **2024-03-25-multi-clause-questions**
 

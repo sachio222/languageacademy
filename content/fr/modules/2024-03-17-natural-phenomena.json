@@ -214,7 +214,7 @@
       "word_id": "rendre-fr",
       "fr": "rendre",
       "gloss": "to make / to render",
-      "note": "⭐⭐⭐ CRITICAL - irregular like prendre - CAUSATIVE!"
+      "note": "a regular -re verb, like {attendre}: {nous rendons}, {ils rendent}"
     },
     {
       "word_id": "je-rends-fr",
@@ -299,7 +299,7 @@
     {
       "id": "c-rendre-critical-causative-verb",
       "term": "{rendre} - CRITICAL Causative Verb!",
-      "definition": "Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!",
+      "definition": "{rendre} with an adjective means to make something that way. It is a regular -re verb, like {attendre}: {nous rendons}, {ils rendent}.",
       "example": "{Le soleil rend l'herbe verte} (the sun makes grass green), {Le froid rend l'eau glacée} (cold makes water frozen)"
     },
     {
@@ -443,7 +443,7 @@
     {
       "id": "i-le-soleil-rend-l",
       "type": "transform",
-      "instruction": "Say it with {rendre}: the sun makes the grass green.",
+      "instruction": "Say it with {rendre}.",
       "shown": "le soleil / l'herbe / verte",
       "answer": "le soleil rend l'herbe verte"
     },

@@ -19,6 +19,7 @@
       "fr:cx:q.embedded",
       "fr:cx:q.negative-inversion",
       "fr:cx:neg.ne-pas-infinitive",
+      "fr:cx:neg.ne-plus",
       "fr:cx:chunk.nest-ce-pas",
       "fr:cx:subj.vouloir-que",
       "fr:cx:subj.il-faut-que",
@@ -33,7 +34,11 @@
       "answer": "pourquoi est-ce que la mer est bleue ?",
       "accept": [
         "pourquoi est-ce que la mer est bleue",
-        "pourquoi est-ce que la mer est bleue aujourd'hui ?"
+        "pourquoi est-ce que la mer est bleue aujourd'hui ?",
+        "pourquoi est-ce que la mer est si bleue ?",
+        "pourquoi est-ce que la mer est si bleue aujourd'hui ?",
+        "pourquoi est-ce que la mer est très bleue aujourd'hui ?",
+        "pourquoi est-ce qu'elle est bleue ?"
       ],
       "mistakes": [
         {
@@ -103,13 +108,13 @@
     {
       "id": "i-qu-est-ce-que-tu-cherches",
       "type": "gapfill",
-      "text": "___ tu cherches dans le jardin ? Mon chat.",
+      "text": "___ tu cherches dans le jardin ? Mon livre.",
       "blanks": [
         {
           "answer": "qu'est-ce que"
         }
       ],
-      "gloss": "What are you looking for in the garden? My cat.",
+      "gloss": "What are you looking for in the garden? My book.",
       "mistakes": [
         {
           "answer": "qu'est-ce qui",
@@ -158,7 +163,8 @@
       "answer": "qu'est-ce qui est tombé ?",
       "accept": [
         "qu'est-ce qui est tombé",
-        "qu'est-ce qui est tombe"
+        "qu'est-ce qui est tombe",
+        "qu'est-ce qui est tombé dans la cuisine ?"
       ],
       "mistakes": [
         {
@@ -189,14 +195,14 @@
       "hint": "Another subject, {tu}, comes next."
     },
     {
-      "id": "i-je-me-demande-pourquoi-la-lune-brille",
+      "id": "i-je-me-demande-pourquoi-les-etoiles-ne-tombent-pas",
       "type": "transform",
       "instruction": "Start with {Je me demande}.",
-      "shown": "Pourquoi la lune brille-t-elle ?",
-      "answer": "je me demande pourquoi la lune brille",
+      "shown": "Pourquoi les étoiles ne tombent-elles pas ?",
+      "answer": "je me demande pourquoi les étoiles ne tombent pas",
       "mistakes": [
         {
-          "answer": "je me demande pourquoi la lune brille-t-elle",
+          "answer": "je me demande pourquoi les étoiles ne tombent-elles pas",
           "feedback": "Inside the sentence, use statement order with no inversion."
         }
       ]
@@ -223,7 +229,9 @@
       "situation": "A child asks you why birds can fly. Say that you don't know why, with {je ne sais pas}.",
       "answer": "je ne sais pas pourquoi les oiseaux peuvent voler",
       "accept": [
-        "je ne sais pas pourquoi les oiseaux volent"
+        "je ne sais pas pourquoi les oiseaux volent",
+        "je ne sais pas pourquoi ils peuvent voler",
+        "je ne sais pas pourquoi ils volent"
       ]
     },
     {
@@ -243,22 +251,23 @@
       "answer": "pourquoi ne pas aller à la mer ?",
       "accept": [
         "pourquoi ne pas aller à la mer",
-        "pourquoi ne pas aller a la mer"
+        "pourquoi ne pas aller a la mer",
+        "pourquoi ne pas aller à la mer aujourd'hui ?"
       ]
     },
     {
-      "id": "i-pourquoi-est-ce-qu-il-faut-que-je-parte",
+      "id": "i-pourquoi-est-ce-qu-il-faut-que-nous-rentrions",
       "type": "transform",
       "instruction": "Ask why, with {pourquoi est-ce que}.",
-      "shown": "Il faut que je parte.",
-      "answer": "pourquoi est-ce qu'il faut que je parte ?",
+      "shown": "Il faut que nous rentrions.",
+      "answer": "pourquoi est-ce qu'il faut que nous rentrions ?",
       "accept": [
-        "pourquoi est-ce qu'il faut que je parte"
+        "pourquoi est-ce qu'il faut que nous rentrions"
       ],
       "mistakes": [
         {
-          "answer": "pourquoi est-ce qu'il faut que je pars ?",
-          "feedback": "After {il faut que}, use the subjunctive: {que je parte}."
+          "answer": "pourquoi est-ce qu'il faut que nous rentrons ?",
+          "feedback": "After {il faut que}, use the subjunctive: {que nous rentrions}."
         }
       ]
     },
@@ -291,13 +300,13 @@
     {
       "id": "i-la-lune",
       "type": "gapfill",
-      "text": "La nuit, ___ brille dans le ciel.",
+      "text": "La nuit, ___ brille dans le ciel avec les étoiles.",
       "blanks": [
         {
           "answer": "la lune"
         }
       ],
-      "gloss": "At night, the moon shines in the sky."
+      "gloss": "At night, the moon shines in the sky with the stars."
     },
     {
       "id": "i-air",
@@ -316,24 +325,27 @@
       "text": "Regarde l'écureuil : il ___ en haut de l'arbre !",
       "blanks": [
         {
-          "answer": "grimpe"
+          "answer": "grimpe",
+          "accept": [
+            "monte"
+          ]
         }
       ],
       "gloss": "Look at the squirrel: it is climbing to the top of the tree!"
     },
     {
-      "id": "i-nageais",
+      "id": "i-je-nageais",
       "type": "gapfill",
-      "text": "Chaque été, je ___ dans la mer avec mon grand-père.",
+      "text": "Chaque été, ___ dans la mer avec mon grand-père.",
       "blanks": [
         {
-          "answer": "nageais"
+          "answer": "je nageais"
         }
       ],
       "gloss": "Every summer, I used to swim in the sea with my grandfather.",
       "mistakes": [
         {
-          "answer": "ai nagé",
+          "answer": "j'ai nagé",
           "feedback": "For what you did again and again in the past, use the imparfait: {je nageais}."
         }
       ]
@@ -341,16 +353,17 @@
     {
       "id": "i-a-souffle",
       "type": "gapfill",
-      "text": "Hier, le vent ___ toute la nuit.",
+      "text": "Le vent ___ toute la nuit.",
       "blanks": [
         {
           "answer": "a soufflé",
           "accept": [
-            "a souffle"
+            "a souffle",
+            "soufflait"
           ]
         }
       ],
-      "gloss": "Yesterday the wind blew all night."
+      "gloss": "The wind blew all night."
     },
     {
       "id": "i-haut",
@@ -362,6 +375,19 @@
         }
       ],
       "gloss": "The cat jumped very high!"
+    },
+    {
+      "id": "i-la-lune-ne-brille-plus",
+      "type": "transform",
+      "instruction": "Say that it has stopped shining, with {ne … plus}.",
+      "shown": "La lune brille.",
+      "answer": "la lune ne brille plus",
+      "mistakes": [
+        {
+          "answer": "la lune ne brille pas",
+          "feedback": "{ne … pas} says it is not shining. To say it has stopped, use {ne … plus}."
+        }
+      ]
     },
     {
       "id": "i-viennes",

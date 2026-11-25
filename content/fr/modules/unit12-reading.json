@@ -28,7 +28,7 @@
       "word_id": "une-aile-fr",
       "fr": "une aile",
       "gloss": "a wing",
-      "note": "Feminine. A bird pushes the air with its wings: {avec leurs ailes}."
+      "note": "Feminine. Birds push the air with their wings: {avec leurs ailes}."
     },
     {
       "word_id": "une-etoile-fr",
@@ -37,7 +37,7 @@
       "note": "Feminine. At night Amélie sees {des étoiles partout}, stars everywhere."
     },
     {
-      "word_id": "la-lune-fr",
+      "word_id": "lune-fr",
       "fr": "la lune",
       "gloss": "the moon",
       "note": "Feminine. {La lune brille}: the moon shines."
@@ -50,9 +50,9 @@
     },
     {
       "word_id": "un-animal-fr",
-      "fr": "un animal",
-      "gloss": "an animal",
-      "note": "Masculine. Most nouns ending in -al make their plural in -aux."
+      "fr": "un animal / des animaux",
+      "gloss": "an animal / animals",
+      "note": "Masculine. The plural is {des animaux}: most nouns ending in -al make their plural in -aux."
     },
     {
       "word_id": "haut-fr",
@@ -62,15 +62,27 @@
     },
     {
       "word_id": "leger-fr",
-      "fr": "léger",
+      "fr": "léger / légère",
       "gloss": "light (not heavy)",
-      "note": "It describes weight, so it is a different word from {la lumière}. The feminine ends in -ère."
+      "note": "Light as in not heavy. The light you see is {la lumière}. The feminine is {légère}."
     },
     {
       "word_id": "lourd-fr",
       "fr": "lourd",
       "gloss": "heavy",
       "note": "Feminine {lourde}: {Toi, tu es plus lourde !}"
+    },
+    {
+      "word_id": "seul-fr",
+      "fr": "seul / seuls",
+      "gloss": "only, alone",
+      "note": "{Seuls le rouge et l'orange arrivent}: only the red and the orange get there."
+    },
+    {
+      "word_id": "jusqu-a-fr",
+      "fr": "jusqu'à",
+      "gloss": "as far as, all the way to",
+      "note": "{jusqu'à nos yeux}: all the way to our eyes."
     },
     {
       "word_id": "le-ciel-fr",
@@ -94,7 +106,7 @@
       "word_id": "un-ecureuil-fr",
       "fr": "un écureuil",
       "gloss": "a squirrel",
-      "note": "Masculine. {Les écureuils courent et sautent très vite}."
+      "note": "Masculine. {Les écureuils courent et sautent très vite}: squirrels run and jump very fast."
     },
     {
       "word_id": "une-tortue-fr",
@@ -136,7 +148,7 @@
       "word_id": "grimper-fr",
       "fr": "grimper",
       "gloss": "to climb",
-      "note": "A regular -er verb. {Il est en train de grimper}: he is climbing right now."
+      "note": "A regular -er verb. {Il est en train de grimper}: it is climbing right now."
     },
     {
       "word_id": "souffler-fr",
@@ -159,7 +171,7 @@
     {
       "word_id": "rendre-fr",
       "fr": "rendre",
-      "gloss": "to make / to render",
+      "gloss": "to make (+ adjective)",
       "note": "{rendre} with a noun and an adjective means to make something that way: {L'air rend le ciel bleu}."
     },
     {
@@ -197,8 +209,8 @@
     },
     {
       "id": "b-a-la-fin-de",
-      "fr": "« À la fin de la journée, la lumière du soleil voyage plus loin dans l'air. Le bleu ne reste pas avec elle. Seulement le rouge et l'orange arrivent à nos yeux. »",
-      "en": "\"At the end of the day, sunlight travels farther through the air. The blue doesn't stay with it. Only the red and orange reach our eyes.\""
+      "fr": "« À la fin de la journée, la lumière du soleil voyage plus loin dans l'air. Le bleu ne reste pas avec elle. Seuls le rouge et l'orange arrivent jusqu'à nos yeux. »",
+      "en": "\"At the end of the day, sunlight travels farther through the air. The blue doesn't stay with it. Only the red and the orange make it all the way to our eyes.\""
     },
     {
       "id": "b-un-oiseau-vole-au",
@@ -464,7 +476,7 @@
     },
     {
       "fr": "sachent",
-      "en": "know how to (after je doute que)"
+      "en": "know how to (subjunctive of savoir)"
     },
     {
       "fr": "souffle",
@@ -476,7 +488,7 @@
     },
     {
       "fr": "pleuve",
-      "en": "rains (after il est possible que)"
+      "en": "rains (subjunctive of pleuvoir)"
     },
     {
       "fr": "pleut",
@@ -553,6 +565,7 @@
       "answer": "chez son grand-père",
       "accept": [
         "son grand-père",
+        "grand-père",
         "chez son grand-pere",
         "elle est chez son grand-père"
       ],
@@ -572,17 +585,18 @@
       "hint": "{L'…}"
     },
     {
-      "id": "i-le-rouge-et-l-orange",
+      "id": "i-rouge",
       "type": "comprehension",
-      "question": "{Qu'est-ce qui arrive à nos yeux à la fin de la journée ?}",
-      "cue": "What reaches our eyes at the end of the day?",
-      "answer": "le rouge et l'orange",
+      "question": "{De quelle couleur est le ciel à la fin de la journée ?}",
+      "cue": "What color is the sky at the end of the day?",
+      "answer": "rouge",
       "accept": [
+        "il est rouge",
+        "le ciel est rouge",
         "rouge et orange",
-        "l'orange et le rouge",
-        "seulement le rouge et l'orange"
+        "le rouge et l'orange"
       ],
-      "hint": "{Le rouge et…}"
+      "hint": "{Il est…}"
     },
     {
       "id": "i-avec-leurs-ailes",
@@ -620,7 +634,8 @@
       "accept": [
         "tortue",
         "une tortue",
-        "c'est la tortue"
+        "c'est la tortue",
+        "c'est une tortue"
       ],
       "hint": "{La…}"
     },
@@ -646,7 +661,8 @@
       "answer": "des millions",
       "accept": [
         "il y en a des millions",
-        "millions"
+        "millions",
+        "il y a des millions d'étoiles"
       ],
       "hint": "{Des…}"
     },

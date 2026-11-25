@@ -166,10 +166,11 @@
     {
       "id": "i-pourquoi-est-ce-qu",
       "type": "respond",
-      "situation": "Your little brother has your phone. Ask your mother why he has that, with {pourquoi est-ce que}.",
+      "situation": "Your little brother has your phone. Ask your mother why he has it, with {pourquoi est-ce que}.",
       "answer": "pourquoi est-ce qu'il a ça ?",
       "accept": [
-        "pourquoi est-ce qu'il a ça"
+        "pourquoi est-ce qu'il a ça",
+        "pourquoi est-ce qu'il a mon téléphone ?"
       ]
     },
     {
@@ -234,7 +235,8 @@
       "situation": "Your little brother is running in the house. Ask him why he is running, with {pourquoi est-ce que}.",
       "answer": "pourquoi est-ce que tu cours ?",
       "accept": [
-        "pourquoi est-ce que tu cours"
+        "pourquoi est-ce que tu cours",
+        "pourquoi est-ce que tu cours dans la maison ?"
       ]
     },
     {
@@ -357,7 +359,8 @@
       "situation": "The dog next door is barking at night. Ask why it is making noise, with {pourquoi est-ce que}.",
       "answer": "pourquoi est-ce que le chien fait du bruit ?",
       "accept": [
-        "pourquoi est-ce que le chien fait du bruit"
+        "pourquoi est-ce que le chien fait du bruit",
+        "pourquoi est-ce qu'il fait du bruit ?"
       ]
     },
     {

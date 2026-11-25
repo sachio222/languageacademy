@@ -82,13 +82,13 @@
     {
       "id": "i-qu-est-ce-qui-fait-ce-bruit",
       "type": "gapfill",
-      "text": "___ fait ce bruit dans l'arbre ? Un écureuil.",
+      "text": "___ fait ce bruit dans l'arbre ? Le vent.",
       "blanks": [
         {
           "answer": "qu'est-ce qui"
         }
       ],
-      "gloss": "What is making that noise in the tree? A squirrel.",
+      "gloss": "What is making that noise in the tree? The wind.",
       "mistakes": [
         {
           "answer": "qu'est-ce que",
@@ -240,13 +240,13 @@
     {
       "id": "i-hiver",
       "type": "gapfill",
-      "text": "En ___, il fait froid et beaucoup d'oiseaux partent.",
+      "text": "En décembre, c'est l'___ : il fait très froid.",
       "blanks": [
         {
           "answer": "hiver"
         }
       ],
-      "gloss": "In winter, it is cold and many birds leave."
+      "gloss": "In December, it's winter: it is very cold."
     },
     {
       "id": "i-brille",
@@ -304,13 +304,13 @@
     {
       "id": "i-courait",
       "type": "gapfill",
-      "text": "Quand il était jeune, mon grand-père ___ très vite.",
+      "text": "Quand il était jeune, mon grand-père ___ jusqu'à la mer.",
       "blanks": [
         {
           "answer": "courait"
         }
       ],
-      "gloss": "When he was young, my grandfather ran very fast.",
+      "gloss": "When he was young, my grandfather used to run all the way to the sea.",
       "mistakes": [
         {
           "answer": "a couru",
@@ -321,7 +321,7 @@
     {
       "id": "i-a-saute",
       "type": "gapfill",
-      "text": "Hier, le chat ___ sur la table.",
+      "text": "Hier, le chat ___ tout seul sur la table.",
       "blanks": [
         {
           "answer": "a sauté",
@@ -330,7 +330,7 @@
           ]
         }
       ],
-      "gloss": "Yesterday, the cat jumped onto the table."
+      "gloss": "Yesterday, the cat jumped onto the table all by itself."
     },
     {
       "id": "i-lourd",

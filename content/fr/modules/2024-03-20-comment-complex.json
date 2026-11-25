@@ -222,7 +222,8 @@
       "situation": "Your friend swims very well. Ask how they swim, with {comment est-ce que}.",
       "answer": "comment est-ce que tu nages ?",
       "accept": [
-        "comment est-ce que tu nages"
+        "comment est-ce que tu nages",
+        "comment est-ce que tu nages si bien ?"
       ]
     },
     {

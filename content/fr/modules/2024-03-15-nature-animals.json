@@ -15,7 +15,7 @@
       "word_id": "un-oiseau-fr",
       "fr": "un oiseau",
       "gloss": "a bird",
-      "note": "masculine - silent 's' in oiseau"
+      "note": "masculine: the s sounds like z"
     },
     {
       "word_id": "les-oiseaux-fr",
@@ -178,11 +178,11 @@
       "mistakes": [
         {
           "answer": "une oiseau",
-          "feedback": "Oiseau is masculine. Use '{un oiseau}' (the 's' is silent!)"
+          "feedback": "Oiseau is masculine: {un oiseau}."
         },
         {
           "answer": "un oisau",
-          "feedback": "Careful with spelling: oiseau (the 's' is silent)"
+          "feedback": "Check the spelling: {oiseau}."
         }
       ]
     },
@@ -304,7 +304,7 @@
     {
       "id": "i-la-tortue-est-lente",
       "type": "transform",
-      "instruction": "Say the opposite: the turtle is slow.",
+      "instruction": "Say the opposite.",
       "shown": "La tortue est rapide.",
       "answer": "la tortue est lente",
       "mistakes": [
@@ -317,7 +317,7 @@
     {
       "id": "i-l-ecureuil-est-rapide",
       "type": "transform",
-      "instruction": "Say the opposite: the squirrel is fast.",
+      "instruction": "Say the opposite.",
       "shown": "L'écureuil est lent.",
       "answer": "l'écureuil est rapide",
       "accept": [
@@ -327,7 +327,7 @@
     {
       "id": "i-l-abeille-est-petite",
       "type": "transform",
-      "instruction": "Say the opposite: the bee is small.",
+      "instruction": "Say the opposite.",
       "shown": "L'abeille est grande.",
       "answer": "l'abeille est petite",
       "mistakes": [

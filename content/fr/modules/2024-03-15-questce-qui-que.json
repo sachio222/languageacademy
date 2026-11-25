@@ -100,7 +100,7 @@
     {
       "id": "c-visual-pattern-recognition",
       "term": "Visual Pattern Recognition",
-      "definition": "If verb has NO object → use QUI. If verb has an object → use QUE",
+      "definition": "If 'what' is the subject (no other subject follows) → {qui}. If another subject follows → {que}.",
       "example": "Pattern: [qu'est-ce qui] + [VERB] OR [qu'est-ce que] + [SUBJECT] + [VERB]"
     },
     {
@@ -124,7 +124,7 @@
       "mistakes": [
         {
           "answer": "qu'est-ce que brille?",
-          "feedback": "Use '{qu'est-ce QUI}' when asking what DOES something (subject). 'Brille' has no object! The thing itself shines. Use QUI for subjects, QUE for objects."
+          "feedback": "Use {qu'est-ce qui} here: 'what' is the subject, and no other subject follows. Use {qu'est-ce que} when another subject follows."
         },
         {
           "answer": "qu'est-ce que brille",

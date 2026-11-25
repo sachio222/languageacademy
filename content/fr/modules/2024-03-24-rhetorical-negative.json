@@ -104,10 +104,11 @@
     {
       "id": "i-n-est-ce-pas",
       "type": "respond",
-      "situation": "Your friend doubts that French bread is the best. Ask a negative question to get them to agree: isn't that true?",
+      "situation": "Your friend doubts that French bread is the best. Ask a negative question to get them to agree.",
       "answer": "n'est-ce pas vrai ?",
       "accept": [
-        "n'est-ce pas vrai"
+        "n'est-ce pas vrai",
+        "c'est vrai, n'est-ce pas ?"
       ]
     },
     {
@@ -241,7 +242,8 @@
       "accept": [
         "pourquoi ne pas aller là-bas",
         "pourquoi ne pas aller la-bas",
-        "pourquoi ne pas aller la-bas?"
+        "pourquoi ne pas aller la-bas?",
+        "pourquoi ne pas y aller ?"
       ],
       "hint": "{pourquoi ne pas + aller là-bas}"
     }

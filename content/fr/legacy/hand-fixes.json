@@ -543,7 +543,7 @@
     "items/i-l-abeille-est-petite": {
       "id": "i-l-abeille-est-petite",
       "type": "transform",
-      "instruction": "Say the opposite: the bee is small.",
+      "instruction": "Say the opposite.",
       "shown": "L'abeille est grande.",
       "answer": "l'abeille est petite",
       "mistakes": [
@@ -556,7 +556,7 @@
     "items/i-l-ecureuil-est-rapide": {
       "id": "i-l-ecureuil-est-rapide",
       "type": "transform",
-      "instruction": "Say the opposite: the squirrel is fast.",
+      "instruction": "Say the opposite.",
       "shown": "L'écureuil est lent.",
       "answer": "l'écureuil est rapide",
       "accept": [
@@ -577,7 +577,7 @@
     "items/i-la-tortue-est-lente": {
       "id": "i-la-tortue-est-lente",
       "type": "transform",
-      "instruction": "Say the opposite: the turtle is slow.",
+      "instruction": "Say the opposite.",
       "shown": "La tortue est rapide.",
       "answer": "la tortue est lente",
       "mistakes": [
@@ -661,11 +661,11 @@
       "mistakes": [
         {
           "answer": "une oiseau",
-          "feedback": "Oiseau is masculine. Use '{un oiseau}' (the 's' is silent!)"
+          "feedback": "Oiseau is masculine: {un oiseau}."
         },
         {
           "answer": "un oisau",
-          "feedback": "Careful with spelling: oiseau (the 's' is silent)"
+          "feedback": "Check the spelling: {oiseau}."
         }
       ]
     },
@@ -766,9 +766,68 @@
       "fr": "le vent",
       "gloss": "the wind",
       "note": "masculine: {le vent}"
+    },
+    "vocabulary/un-oiseau-fr": {
+      "word_id": "un-oiseau-fr",
+      "fr": "un oiseau",
+      "gloss": "a bird",
+      "note": "masculine: the s sounds like z"
     }
   },
   "2024-03-15-questce-qui-que": {
+    "concepts": [
+      {
+        "id": "c-the-critical-distinction",
+        "term": "THE Critical Distinction",
+        "definition": "qu'est-ce qui = what DOES something (subject). qu'est-ce que = what DO you verb (object)",
+        "example": "{Qu'est-ce qui brille?} (What shines? - subject) vs Qu'est-ce que tu vois? (What do you see? - object)"
+      },
+      {
+        "id": "c-qu-est-ce-qui",
+        "term": "{qu'est-ce qui} - Subject Questions",
+        "definition": "Use QUI when asking WHAT is doing the action. No other subject after qui!",
+        "example": "{Qu'est-ce qui brille?} (What shines?), {Qu'est-ce qui fait du bruit?} (What makes noise?), {Qu'est-ce qui rend l'herbe verte?} (What makes grass green?)"
+      },
+      {
+        "id": "c-qu-est-ce-que",
+        "term": "{qu'est-ce que} - Object Questions",
+        "definition": "Use QUE when asking what someone/something DOES TO something. Subject comes after que!",
+        "example": "{Qu'est-ce que tu vois?} (What do you see?), {Qu'est-ce que tu manges?} (What are you eating?), {Qu'est-ce que le soleil fait?} (What does the sun do?)"
+      },
+      {
+        "id": "c-visual-pattern-recognition",
+        "term": "Visual Pattern Recognition",
+        "definition": "If 'what' is the subject (no other subject follows) → {qui}. If another subject follows → {que}.",
+        "example": "Pattern: [qu'est-ce qui] + [VERB] OR [qu'est-ce que] + [SUBJECT] + [VERB]"
+      },
+      {
+        "id": "c-transform-any-statement-into",
+        "term": "Transform ANY Statement into a Question",
+        "definition": "You can now ask 'what' questions about anything you've learned!",
+        "example": "{Le soleil brille} → {Qu'est-ce qui brille?} (What shines?), {Je vois un oiseau} → {Qu'est-ce que tu vois?} (What do you see?)"
+      }
+    ],
+    "items/i-qu-est-ce-qui": {
+      "id": "i-qu-est-ce-qui",
+      "type": "respond",
+      "situation": "Ask 'What shines?' (subject question)",
+      "cue": "What shines?",
+      "answer": "qu'est-ce qui brille?",
+      "accept": [
+        "qu'est-ce qui brille"
+      ],
+      "hint": "qu'est-ce qui + brille (the thing shines)",
+      "mistakes": [
+        {
+          "answer": "qu'est-ce que brille?",
+          "feedback": "Use {qu'est-ce qui} here: 'what' is the subject, and no other subject follows. Use {qu'est-ce que} when another subject follows."
+        },
+        {
+          "answer": "qu'est-ce que brille",
+          "feedback": "Use '{qu'est-ce QUI}' when asking what DOES something (subject). The thing itself is doing the shining - that's the subject!"
+        }
+      ]
+    },
     "items/i-qu-est-ce-qui-court-tres-vite": {
       "id": "i-qu-est-ce-qui-court-tres-vite",
       "type": "transform",
@@ -856,7 +915,7 @@
         "id": "c-savoir-infinitive",
         "term": "{savoir} + infinitive: know how to",
         "definition": "Use {savoir} with an infinitive for a skill someone has learned, and {pouvoir} for whether they are able to at that moment.",
-        "example": "{Je sais nager.} (I can swim, I know how.) {Les petits oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
+        "example": "{Je sais nager.} (I can swim, I know how.) {Les jeunes oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
       }
     ],
     "items/i-avons-couru": {
@@ -957,7 +1016,10 @@
       "id": "i-j-aime-marcher-dans-la-nature",
       "type": "respond",
       "situation": "A friend asks: {Qu'est-ce que tu aimes faire le week-end ?} Say you like walking in nature.",
-      "answer": "j'aime marcher dans la nature"
+      "answer": "j'aime marcher dans la nature",
+      "accept": [
+        "le week-end, j'aime marcher dans la nature"
+      ]
     },
     "items/i-je-cours": {
       "id": "i-je-cours",
@@ -1010,13 +1072,14 @@
       "situation": "Your friend asks: {Qu'est-ce que tu fais en été ?} Say that you swim in the sea.",
       "answer": "je nage dans la mer",
       "accept": [
-        "en été, je nage dans la mer"
+        "en été, je nage dans la mer",
+        "l'été, je nage dans la mer"
       ]
     },
     "items/i-je-ne-sais-pas-nager": {
       "id": "i-je-ne-sais-pas-nager",
       "type": "transform",
-      "instruction": "Say it with {savoir}: you don't know how to swim.",
+      "instruction": "Say it with {savoir}.",
       "shown": "Je ne nage pas.",
       "answer": "je ne sais pas nager",
       "mistakes": [
@@ -1040,7 +1103,9 @@
       "answer": "l'écureuil saute",
       "accept": [
         "l'ecureuil saute",
-        "il saute"
+        "il saute",
+        "il est en train de sauter",
+        "l'écureuil est en train de sauter"
       ]
     },
     "items/i-l-oiseau-vole": {
@@ -1073,7 +1138,7 @@
     "items/i-le-poisson-sait-nager": {
       "id": "i-le-poisson-sait-nager",
       "type": "transform",
-      "instruction": "Say it with {savoir}: the fish knows how to swim.",
+      "instruction": "Say it with {savoir}.",
       "shown": "Le poisson nage.",
       "answer": "le poisson sait nager"
     },
@@ -1143,8 +1208,14 @@
       "id": "i-tu-cours",
       "type": "transform",
       "instruction": "Change the subject to {tu}.",
-      "shown": "Je cours.",
-      "answer": "tu cours"
+      "shown": "Il court.",
+      "answer": "tu cours",
+      "mistakes": [
+        {
+          "answer": "tu court",
+          "feedback": "With {tu}, write {cours}, with an s."
+        }
+      ]
     },
     "items/i-tu-cours-vite": {
       "id": "i-tu-cours-vite",
@@ -1298,7 +1369,7 @@
       {
         "id": "c-rendre-critical-causative-verb",
         "term": "{rendre} - CRITICAL Causative Verb!",
-        "definition": "Rendre means 'to make/render' - conjugates like prendre. Use with adjectives to show cause!",
+        "definition": "{rendre} with an adjective means to make something that way. It is a regular -re verb, like {attendre}: {nous rendons}, {ils rendent}.",
         "example": "{Le soleil rend l'herbe verte} (the sun makes grass green), {Le froid rend l'eau glacée} (cold makes water frozen)"
       },
       {
@@ -1453,7 +1524,7 @@
     "items/i-le-soleil-rend-l": {
       "id": "i-le-soleil-rend-l",
       "type": "transform",
-      "instruction": "Say it with {rendre}: the sun makes the grass green.",
+      "instruction": "Say it with {rendre}.",
       "shown": "le soleil / l'herbe / verte",
       "answer": "le soleil rend l'herbe verte"
     },
@@ -1556,6 +1627,12 @@
       "fr": "qu'est-ce qui rend...?",
       "gloss": "what makes...?",
       "note": "a preview of the next lesson, which teaches this question"
+    },
+    "vocabulary/rendre-fr": {
+      "word_id": "rendre-fr",
+      "fr": "rendre",
+      "gloss": "to make / to render",
+      "note": "a regular -re verb, like {attendre}: {nous rendons}, {ils rendent}"
     }
   },
   "2024-03-19-pourquoi-complex": {
@@ -1594,10 +1671,11 @@
     "items/i-pourquoi-est-ce-qu": {
       "id": "i-pourquoi-est-ce-qu",
       "type": "respond",
-      "situation": "Your little brother has your phone. Ask your mother why he has that, with {pourquoi est-ce que}.",
+      "situation": "Your little brother has your phone. Ask your mother why he has it, with {pourquoi est-ce que}.",
       "answer": "pourquoi est-ce qu'il a ça ?",
       "accept": [
-        "pourquoi est-ce qu'il a ça"
+        "pourquoi est-ce qu'il a ça",
+        "pourquoi est-ce qu'il a mon téléphone ?"
       ]
     },
     "items/i-pourquoi-est-ce-qu-2": {
@@ -1769,7 +1847,8 @@
       "situation": "Your little brother is running in the house. Ask him why he is running, with {pourquoi est-ce que}.",
       "answer": "pourquoi est-ce que tu cours ?",
       "accept": [
-        "pourquoi est-ce que tu cours"
+        "pourquoi est-ce que tu cours",
+        "pourquoi est-ce que tu cours dans la maison ?"
       ]
     },
     "items/i-pourquoi-est-ce-que-l-eau-est-glacee": {
@@ -1799,7 +1878,8 @@
       "situation": "The dog next door is barking at night. Ask why it is making noise, with {pourquoi est-ce que}.",
       "answer": "pourquoi est-ce que le chien fait du bruit ?",
       "accept": [
-        "pourquoi est-ce que le chien fait du bruit"
+        "pourquoi est-ce que le chien fait du bruit",
+        "pourquoi est-ce qu'il fait du bruit ?"
       ]
     },
     "items/i-pourquoi-est-ce-que-le-vent-souffle": {
@@ -1966,7 +2046,8 @@
       "situation": "Your friend swims very well. Ask how they swim, with {comment est-ce que}.",
       "answer": "comment est-ce que tu nages ?",
       "accept": [
-        "comment est-ce que tu nages"
+        "comment est-ce que tu nages",
+        "comment est-ce que tu nages si bien ?"
       ]
     },
     "items/i-comment-est-ce-que-6": {
@@ -2178,7 +2259,10 @@
       "id": "i-je-ne-sais-pas",
       "type": "respond",
       "situation": "Someone asks you: {Comment est-ce qu'on fait ça ?} You have no idea. Say you don't know how we do that.",
-      "answer": "je ne sais pas comment on fait ça"
+      "answer": "je ne sais pas comment on fait ça",
+      "accept": [
+        "je ne sais pas comment on fait"
+      ]
     },
     "items/i-je-ne-sais-pas-2": {
       "id": "i-je-ne-sais-pas-2",
@@ -2194,7 +2278,8 @@
       "cue": "I don't know how a turtle swims",
       "answer": "je ne sais pas comment une tortue nage",
       "accept": [
-        "je ne sais pas comment nage une tortue"
+        "je ne sais pas comment nage une tortue",
+        "je ne sais pas comment elle nage"
       ],
       "mistakes": [
         {
@@ -2414,10 +2499,11 @@
     "items/i-n-est-ce-pas": {
       "id": "i-n-est-ce-pas",
       "type": "respond",
-      "situation": "Your friend doubts that French bread is the best. Ask a negative question to get them to agree: isn't that true?",
+      "situation": "Your friend doubts that French bread is the best. Ask a negative question to get them to agree.",
       "answer": "n'est-ce pas vrai ?",
       "accept": [
-        "n'est-ce pas vrai"
+        "n'est-ce pas vrai",
+        "c'est vrai, n'est-ce pas ?"
       ]
     },
     "items/i-n-est-ce-pas-3": {
@@ -2439,6 +2525,20 @@
       "accept": [
         "ne veux-tu pas essayer"
       ]
+    },
+    "items/i-pourquoi-ne-pas-aller": {
+      "id": "i-pourquoi-ne-pas-aller",
+      "type": "respond",
+      "situation": "Ask 'Why not go there?' (suggestion)",
+      "cue": "Why not go there?",
+      "answer": "pourquoi ne pas aller là-bas?",
+      "accept": [
+        "pourquoi ne pas aller là-bas",
+        "pourquoi ne pas aller la-bas",
+        "pourquoi ne pas aller la-bas?",
+        "pourquoi ne pas y aller ?"
+      ],
+      "hint": "{pourquoi ne pas + aller là-bas}"
     }
   },
   "2024-03-25-multi-clause-questions": {

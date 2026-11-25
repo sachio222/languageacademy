@@ -342,7 +342,7 @@
       "id": "c-savoir-infinitive",
       "term": "{savoir} + infinitive: know how to",
       "definition": "Use {savoir} with an infinitive for a skill someone has learned, and {pouvoir} for whether they are able to at that moment.",
-      "example": "{Je sais nager.} (I can swim, I know how.) {Les petits oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
+      "example": "{Je sais nager.} (I can swim, I know how.) {Les jeunes oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
     }
   ],
   "tables": [
@@ -492,8 +492,14 @@
       "id": "i-tu-cours",
       "type": "transform",
       "instruction": "Change the subject to {tu}.",
-      "shown": "Je cours.",
-      "answer": "tu cours"
+      "shown": "Il court.",
+      "answer": "tu cours",
+      "mistakes": [
+        {
+          "answer": "tu court",
+          "feedback": "With {tu}, write {cours}, with an s."
+        }
+      ]
     },
     {
       "id": "i-il-court",
@@ -561,7 +567,9 @@
       "answer": "l'écureuil saute",
       "accept": [
         "l'ecureuil saute",
-        "il saute"
+        "il saute",
+        "il est en train de sauter",
+        "l'écureuil est en train de sauter"
       ]
     },
     {
@@ -586,7 +594,8 @@
       "situation": "Your friend asks: {Qu'est-ce que tu fais en été ?} Say that you swim in the sea.",
       "answer": "je nage dans la mer",
       "accept": [
-        "en été, je nage dans la mer"
+        "en été, je nage dans la mer",
+        "l'été, je nage dans la mer"
       ]
     },
     {
@@ -620,7 +629,10 @@
       "id": "i-j-aime-marcher-dans-la-nature",
       "type": "respond",
       "situation": "A friend asks: {Qu'est-ce que tu aimes faire le week-end ?} Say you like walking in nature.",
-      "answer": "j'aime marcher dans la nature"
+      "answer": "j'aime marcher dans la nature",
+      "accept": [
+        "le week-end, j'aime marcher dans la nature"
+      ]
     },
     {
       "id": "i-avons-couru",
@@ -685,14 +697,14 @@
     {
       "id": "i-le-poisson-sait-nager",
       "type": "transform",
-      "instruction": "Say it with {savoir}: the fish knows how to swim.",
+      "instruction": "Say it with {savoir}.",
       "shown": "Le poisson nage.",
       "answer": "le poisson sait nager"
     },
     {
       "id": "i-je-ne-sais-pas-nager",
       "type": "transform",
-      "instruction": "Say it with {savoir}: you don't know how to swim.",
+      "instruction": "Say it with {savoir}.",
       "shown": "Je ne nage pas.",
       "answer": "je ne sais pas nager",
       "mistakes": [

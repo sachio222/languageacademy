@@ -152,7 +152,10 @@
       "id": "i-je-ne-sais-pas",
       "type": "respond",
       "situation": "Someone asks you: {Comment est-ce qu'on fait ça ?} You have no idea. Say you don't know how we do that.",
-      "answer": "je ne sais pas comment on fait ça"
+      "answer": "je ne sais pas comment on fait ça",
+      "accept": [
+        "je ne sais pas comment on fait"
+      ]
     },
     {
       "id": "i-je-ne-sais-pas-2",
@@ -168,7 +171,8 @@
       "cue": "I don't know how a turtle swims",
       "answer": "je ne sais pas comment une tortue nage",
       "accept": [
-        "je ne sais pas comment nage une tortue"
+        "je ne sais pas comment nage une tortue",
+        "je ne sais pas comment elle nage"
       ],
       "mistakes": [
         {
