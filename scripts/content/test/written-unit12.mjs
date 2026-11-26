@@ -1,5 +1,5 @@
 // A writer's day, for tests that must hold when the course moves on (final review I1, I7): Unit 12's three planned
-// stubs written in a copy of the content folder, and, when the story art exists, L's story record for the reading
+// stubs written in a copy of the content folder, and, when L has the story, L's story record for the reading
 // added to that copy's legacy/l-sources.json (as `pnpm content:migrate l-sources` would add it).
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -21,7 +21,7 @@ export const UNIT12_STORY = {
 };
 
 /** Writes unit12-reading, unit12-practice and unit12-exam as written modules under `root`; `story` adds story 12, and
- * without it story 12 is taken out (the art not in L yet). */
+ * without it story 12 is taken out (the story not in L yet). */
 export function writeUnit12(root, { story = true } = {}) {
   write(root, {
     schema: 'la-module@1',

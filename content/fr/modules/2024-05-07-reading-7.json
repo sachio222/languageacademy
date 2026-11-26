@@ -338,6 +338,12 @@
       "gloss": "to ask"
     },
     {
+      "word_id": "poser-fr",
+      "fr": "poser",
+      "gloss": "to put; to ask (a question)",
+      "note": "French asks a question with {poser}: {poser une question}. {demander} is to ask for something."
+    },
+    {
       "word_id": "demande-fr",
       "fr": "demande",
       "gloss": "ask(s)",
@@ -504,12 +510,12 @@
     },
     {
       "id": "b-d-abord-on-doit",
-      "fr": "D'abord, on doit demander des questions. Socrate pense que les questions sont essentielles. Si on ne demande pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.",
+      "fr": "D'abord, on doit poser des questions. Socrate pense que les questions sont essentielles. Si on ne pose pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.",
       "en": "First, we must ask questions. Socrates thinks that questions are essential. If we don't ask questions, we don't think. And if we don't think, we don't understand."
     },
     {
       "id": "img-socrates",
-      "fr": "Socrate demande des questions à ses étudiants.",
+      "fr": "Socrate pose des questions à ses étudiants.",
       "en": "Socrates asks his students questions.",
       "img": {
         "src": "img/reading7/socrates",
@@ -580,6 +586,14 @@
     {
       "fr": "poser des questions",
       "en": "to ask questions"
+    },
+    {
+      "fr": "pose",
+      "en": "asks"
+    },
+    {
+      "fr": "demande du temps",
+      "en": "takes time"
     }
   ],
   "items": [
@@ -633,8 +647,7 @@
       "accept": [
         "demander",
         "questions",
-        "poser des questions",
-        "demander des questions"
+        "poser des questions"
       ],
       "hint": "Look for {D'abord}",
       "mistakes": [

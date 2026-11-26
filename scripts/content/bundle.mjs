@@ -491,7 +491,8 @@ export function buildBundleWithReport(course, opts = {}) {
         const s = storyRecord(m.story_id);
         if (!s) report.stories_missing.push(m.module_key);
         else if (!storyRows.some((r) => r.story_id === m.story_id))
-          storyRows.push({ story_id: m.story_id, title: s.title, title_en: s.titleEn, cover: `/stories/${s.cover}`, credit: s.credit ?? null });
+          // A story L ships with text only while its art is made has cover null (L d8714f1, BundleStory.cover).
+          storyRows.push({ story_id: m.story_id, title: s.title, title_en: s.titleEn, cover: isStr(s.cover) ? `/stories/${s.cover}` : null, credit: s.credit ?? null });
       }
     });
 

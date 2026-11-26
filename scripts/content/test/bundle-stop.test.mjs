@@ -1,6 +1,7 @@
 // Where the real bundle stops (spec 7; final review I7): before the first unit that holds a planned module or a reading
-// whose story has no art yet, so a written reading waiting for its story never fails CI and never publishes. The
-// written course, checked beside it, reports that reading's story_missing as a warning.
+// whose story L does not have yet, so a written reading waiting for its story never fails CI and never publishes. The
+// written course, checked beside it, reports that reading's story_missing as a warning. A story with text and no art
+// (cover null, L d8714f1) is a story: it publishes.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
@@ -23,8 +24,8 @@ const copy = (t) => {
 };
 const bundleCheck = (root) => spawnSync(process.execPath, ['--disable-warning=MODULE_TYPELESS_PACKAGE_JSON', CLI, 'bundle', '--root', root, '--check'], { encoding: 'utf8', maxBuffer: 64 << 20 });
 
-// The stop is one of two: a unit holding a stub (planned), or a fully written unit whose reading has no art yet
-// (story_missing). The pipeline approves a unit before L's art exists, so no unit could reach approved if the test
+// The stop is one of two: a unit holding a stub (planned), or a fully written unit whose reading has no story in L yet
+// (story_missing). The pipeline approves a unit before L's story exists, so no unit could reach approved if the test
 // demanded the first.
 const assertValidStop = (course, report) => {
   const unit = course.units.find((u) => u.unit_key === report.units_stopped_at);
@@ -34,13 +35,18 @@ const assertValidStop = (course, report) => {
   if (report.stopped_because.code === 'story_missing') assert.ok(unit.modules.every((m) => m.status === 'written'), 'story_missing stops only a fully written unit');
 };
 
-test('the real bundle stops at a unit holding a stub, or at a fully written unit whose reading has no art', async () => {
+test('the real bundle stops at a unit holding a stub, or at a fully written unit whose reading has no story', async () => {
   const course = loadCourse();
-  const { report } = buildBundleWithReport(course, await loadBundleSources());
+  const { bundle, report } = buildBundleWithReport(course, await loadBundleSources());
   assertValidStop(course, report);
+  // Today (L cf55739): Reading 12's story is in L as text only, so Units 1 to 12 publish and the stop is Unit 13's stubs.
+  assert.deepEqual(bundle.units.map((u) => u.unit_key), Array.from({ length: 12 }, (_, i) => `unit${i + 1}`));
+  assert.equal(report.units_stopped_at, 'unit13');
+  assert.equal(report.stopped_because.code, 'planned');
+  assert.deepEqual(bundle.stories.find((s) => s.story_id === 'reading12')?.cover, null, 'a text-only story has cover null');
 });
 
-test('a written reading with no story art: the real bundle stops before its unit, and --check passes', async (t) => {
+test('a written reading with no story in L: the real bundle stops before its unit, and --check passes', async (t) => {
   const root = copy(t);
   writeUnit12(root, { story: false });
   const course = loadCourse({ root });

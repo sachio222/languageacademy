@@ -32,10 +32,10 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 822 |
 | Passage words with no pop-up | 7 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1072 |
+| Hand edits kept | 1073 |
 | Live ids with no converted item | 339 (24 real misses) |
 | Fields with no place in a module file | 1954 |
-| Text written differently | 659 |
+| Text written differently | 661 |
 | Notes | 3 |
 | Outline | 16 |
 
@@ -2120,8 +2120,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[55].note` ""Unit 6 verb"" → "(removed)"
 - `glossary[0].fr` "étudiant(s)" → "poser des questions"
 - `glossary[0].en` "student(s)" → "to ask questions"
+- `glossary[1].fr` "poser des questions" → "pose"
+- `glossary[1].en` "to ask questions" → "asks"
 - `items[2].answer` "demander des questions" → "poser des questions"
-- `items[2].accept` "["demander","questions","poser des questions"]" → "["demander","questions","poser des questions","demander des questions"]"
 
 **2024-05-11-unit-7-practice**
 
@@ -4172,7 +4173,7 @@ Today’s objects hold these, and the module schema has no field for them.
 - `concepts[2]` concept "Cognitive Language Integration": a reading has no concept cards
 - `skipStudyMode` true (Study Mode belongs to lessons only)
 - `readingPassage.title` "L'Art d'Apprendre" (the story's title comes from stories/)
-- `glossary` 1 story glossary notes (a glossary row holds fr and en)
+- `glossary` 3 story glossary notes (a glossary row holds fr and en)
 
 **2024-05-11-unit-7-practice**
 
@@ -4984,7 +4985,9 @@ The same words, moved into a field of the new shape.
 **2024-05-07-reading-7**
 
 - `passage` story text: added: "Une étudiante pense à une grande question."
-- `passage` story text: added: "Socrate demande des questions à ses étudiants."
+- `passage` story text: "D'abord, on doit demander des questions." → "D'abord, on doit poser des questions."
+- `passage` story text: "Si on ne demande pas de questions, on ne pense pas." → "Si on ne pose pas de questions, on ne pense pas."
+- `passage` story text: added: "Socrate pose des questions à ses étudiants."
 - `passage` story text: added: "Elle révise."
 - `passage` story text: added: "Elle voit les choses entre les idées."
 - `passage` story text: added: "L'apprentissage est un voyage."

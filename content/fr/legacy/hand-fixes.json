@@ -5064,6 +5064,14 @@
       {
         "fr": "poser des questions",
         "en": "to ask questions"
+      },
+      {
+        "fr": "pose",
+        "en": "asks"
+      },
+      {
+        "fr": "demande du temps",
+        "en": "takes time"
       }
     ],
     "items/reading-7-3": {
@@ -5075,8 +5083,7 @@
       "accept": [
         "demander",
         "questions",
-        "poser des questions",
-        "demander des questions"
+        "poser des questions"
       ],
       "hint": "Look for {D'abord}",
       "mistakes": [
@@ -5132,6 +5139,12 @@
       "word_id": "penser-fr",
       "fr": "penser",
       "gloss": "to think"
+    },
+    "vocabulary/poser-fr": {
+      "word_id": "poser-fr",
+      "fr": "poser",
+      "gloss": "to put; to ask (a question)",
+      "note": "French asks a question with {poser}: {poser une question}. {demander} is to ask for something."
     },
     "vocabulary/reviser-fr": {
       "word_id": "reviser-fr",

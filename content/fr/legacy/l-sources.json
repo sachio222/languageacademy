@@ -3857,7 +3857,7 @@
           "en": "So, how do we learn well? Here are my thoughts:"
         },
         {
-          "fr": "D'abord, on doit demander des questions. Socrate pense que les questions sont essentielles. Si on ne demande pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.",
+          "fr": "D'abord, on doit poser des questions. Socrate pense que les questions sont essentielles. Si on ne pose pas de questions, on ne pense pas. Et si on ne pense pas, on ne comprend pas.",
           "en": "First, we must ask questions. Socrates thinks that questions are essential. If we don't ask questions, we don't think. And if we don't think, we don't understand."
         },
         {
@@ -3865,7 +3865,7 @@
           "w": 1600,
           "h": 1067,
           "alt": "Socrates, white-bearded, raises a finger as he questions a group of young students under a stone colonnade.",
-          "fr": "Socrate demande des questions à ses étudiants.",
+          "fr": "Socrate pose des questions à ses étudiants.",
           "en": "Socrates asks his students questions."
         },
         {
@@ -4190,14 +4190,19 @@
           "note": "sequence"
         },
         {
-          "fr": "demander",
-          "en": "to ask",
-          "note": "Unit 6 verb"
+          "fr": "poser des questions",
+          "en": "to ask questions",
+          "note": "French asks a question with {poser}: {poser une question}. {demander} is to ask for something."
         },
         {
-          "fr": "demande",
+          "fr": "pose",
           "en": "ask(s)",
-          "note": "present"
+          "note": "From {poser}: {Socrate pose des questions}."
+        },
+        {
+          "fr": "demande du temps",
+          "en": "takes time",
+          "note": "{demander} also means to require: {L'étude demande du temps}, studying takes time."
         },
         {
           "fr": "mieux",
@@ -6767,6 +6772,306 @@
         {
           "fr": "bouillabaisse",
           "en": "bouillabaisse (Marseille fish stew)"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "unit": 12,
+      "title": "Les Questions d'Amélie",
+      "titleEn": "Amélie’s Questions",
+      "style": "",
+      "credit": "",
+      "ext": "webp",
+      "cover": null,
+      "href": "reading12.html",
+      "blocks": [
+        {
+          "fr": "*Une journée en Normandie*",
+          "en": "A day in Normandy",
+          "dateline": true
+        },
+        {
+          "fr": "Amélie a huit ans. Elle vit à Paris avec ses parents, mais cet été, elle est en Normandie, chez son grand-père. Son grand-père est vieux et très gentil. Il connaît bien la nature.",
+          "en": "Amélie is eight years old. She lives in Paris with her parents, but this summer she is in Normandy, at her grandfather's house. Her grandfather is old and very kind. He knows nature well."
+        },
+        {
+          "fr": "Aujourd'hui, Amélie s'est réveillée avant son grand-père. Elle s'est habillée, elle est allée devant la maison et elle a regardé le ciel. Il n'y avait pas de nuages. Le ciel était bleu, très bleu.",
+          "en": "Today Amélie woke up before her grandfather. She got dressed, went in front of the house and looked at the sky. There were no clouds. The sky was blue, very blue."
+        },
+        {
+          "fr": "« Grand-père, pourquoi le ciel est-il bleu ? »",
+          "en": "\"Grandpa, why is the sky blue?\""
+        },
+        {
+          "fr": "Son grand-père est content. « C'est une bonne question. Je suis content que tu aimes la nature. Viens avec moi, je vais t'expliquer. Ne regarde jamais le soleil, mais regarde sa lumière. La lumière du soleil a toutes les couleurs : le rouge, le jaune, le vert et le bleu. Quand elle entre dans l'air, le bleu change de direction plus que le rouge. C'est pour ça que nous voyons un ciel bleu. L'air rend le ciel bleu. »",
+          "en": "Her grandfather is happy. \"That's a good question. I'm glad you love nature. Come with me, I'll explain. Never look at the sun, but look at its light. Sunlight has all the colors: red, yellow, green and blue. When it enters the air, blue changes direction more than red. That's why we see a blue sky. The air makes the sky blue.\""
+        },
+        {
+          "fr": "« Et à la fin de la journée, pourquoi est-ce que le ciel devient rouge ? »",
+          "en": "\"And at the end of the day, why does the sky turn red?\""
+        },
+        {
+          "fr": "« À la fin de la journée, la lumière du soleil voyage plus loin dans l'air. Le bleu ne reste pas avec elle. Seuls le rouge et l'orange arrivent jusqu'à nos yeux. »",
+          "en": "\"At the end of the day, sunlight travels farther through the air. The blue doesn't stay with it. Only the red and the orange make it all the way to our eyes.\""
+        },
+        {
+          "fr": "Un oiseau vole au-dessus de la maison. Amélie le regarde.",
+          "en": "A bird flies over the house. Amélie watches it."
+        },
+        {
+          "fr": "« Qu'est-ce qui aide les oiseaux à voler ? Moi, je ne peux pas voler ! »",
+          "en": "\"What helps birds fly? I can't fly!\""
+        },
+        {
+          "fr": "« Les oiseaux ont des ailes. En poussant l'air avec leurs ailes, ils montent : leurs ailes poussent l'air, et l'air les fait monter. Et puis, un oiseau est très léger. Un petit oiseau n'est pas plus lourd qu'une pomme. Toi, tu es plus lourde ! »",
+          "en": "\"Birds have wings. By pushing the air with their wings, they rise: their wings push the air, and the air makes them rise. And a bird is very light. A small bird is no heavier than an apple. You are heavier!\""
+        },
+        {
+          "fr": "« Est-ce que les petits oiseaux savent voler à leur naissance ? »",
+          "en": "\"Do little birds know how to fly when they're born?\""
+        },
+        {
+          "fr": "« Non. Ils apprennent à voler. Au début, ils tombent souvent, mais leurs parents les aident. »",
+          "en": "\"No. They learn to fly. At first they often fall, but their parents help them.\""
+        },
+        {
+          "fr": "« Si j'étais un oiseau, je volerais très haut dans le ciel, avec les nuages. »",
+          "en": "\"If I were a bird, I would fly very high in the sky, with the clouds.\""
+        },
+        {
+          "fr": "Ils marchent ensemble près de la rivière. Il y a un bruit dans un arbre.",
+          "en": "They walk together near the river. There is a noise in a tree."
+        },
+        {
+          "fr": "« Mais qui est-ce qui fait ce bruit ? »",
+          "en": "\"But who is making that noise?\""
+        },
+        {
+          "fr": "« C'est un écureuil. Regarde-le, il est en train de grimper ! Les écureuils courent et sautent très vite. »",
+          "en": "\"It's a squirrel. Look at it, it's climbing! Squirrels run and jump very fast.\""
+        },
+        {
+          "fr": "« Et là, qui est-ce que tu vois dans l'herbe ? »",
+          "en": "\"And there, who do you see in the grass?\""
+        },
+        {
+          "fr": "« Je vois un lapin et une tortue. La tortue est l'animal le plus lent du monde, mais elle sait nager. »",
+          "en": "\"I see a rabbit and a turtle. The turtle is the slowest animal in the world, but it can swim.\""
+        },
+        {
+          "fr": "« Est-ce que les poissons peuvent voler aussi ? »",
+          "en": "\"Can fish fly too?\""
+        },
+        {
+          "fr": "« Non ! dit son grand-père. Je doute que les poissons sachent voler ! Je ne pense pas qu'un poisson puisse vivre dans l'air. Chaque animal a sa place. »",
+          "en": "\"No!\" says her grandfather. \"I doubt fish know how to fly! I don't think a fish could live in the air. Every animal has its place.\""
+        },
+        {
+          "fr": "Le vent souffle et de grands nuages arrivent. Le ciel n'est plus bleu.",
+          "en": "The wind blows and big clouds arrive. The sky is no longer blue."
+        },
+        {
+          "fr": "« Il est possible qu'il pleuve. Il faut que nous rentrions avant qu'il pleuve. Rentrons ! »",
+          "en": "\"It might rain. We have to go home before it rains. Let's go home!\""
+        },
+        {
+          "fr": "« Mais pourquoi est-ce qu'il pleut ? D'où vient l'eau ? »",
+          "en": "\"But why does it rain? Where does the water come from?\""
+        },
+        {
+          "fr": "« Quand il fait chaud, l'eau de la mer monte dans l'air. Dans le ciel, il fait froid, et l'eau devient des nuages. Quand les nuages deviennent trop lourds, l'eau tombe : c'est la pluie. Les plantes ont besoin de la pluie et du soleil. Le soleil fait pousser les plantes. »",
+          "en": "\"When it's hot, water from the sea rises into the air. In the sky it's cold, and the water becomes clouds. When the clouds become too heavy, the water falls: that's rain. Plants need rain and sun. The sun makes plants grow.\""
+        },
+        {
+          "fr": "À la maison, Amélie demande à son grand-père de lui expliquer tout ça encore une fois. Il lui dit : « Quand j'étais petit, je demandais toujours pourquoi à mon père. Il m'avait déjà expliqué tout ça avant mes dix ans. Pourquoi ne pas chercher les réponses dans un livre, toi aussi ? »",
+          "en": "At home, Amélie asks her grandfather to explain all that to her once more. He tells her: \"When I was little, I always asked my father why. He had already explained all that to me before I was ten. Why not look for the answers in a book, you too?\""
+        },
+        {
+          "fr": "Cette nuit, il n'y a plus de nuages. D'abord, Amélie ne voit rien. Puis la lune brille et on voit des étoiles partout.",
+          "en": "Tonight there are no more clouds. At first Amélie sees nothing. Then the moon shines and you can see stars everywhere."
+        },
+        {
+          "fr": "« Il y a des étoiles ? Combien ? »",
+          "en": "\"Are there stars? How many?\""
+        },
+        {
+          "fr": "« Il y en a des millions. »",
+          "en": "\"There are millions of them.\""
+        },
+        {
+          "fr": "« Pourquoi les étoiles ne tombent-elles pas ? N'ont-elles pas peur de tomber ? »",
+          "en": "\"Why don't the stars fall? Aren't they afraid of falling?\""
+        },
+        {
+          "fr": "« Je ne sais pas tout, Amélie. Personne ne sait tout. Mais je sais que les étoiles sont très loin. Ce sont des soleils, comme le nôtre. Notre soleil est l'étoile la plus proche de la Terre. »",
+          "en": "\"I don't know everything, Amélie. Nobody knows everything. But I know that the stars are very far away. They are suns, like ours. Our sun is the star closest to the Earth.\""
+        },
+        {
+          "fr": "« Je voudrais comprendre tout ça. »",
+          "en": "\"I'd like to understand all that.\""
+        },
+        {
+          "fr": "« Tu comprendras. Tu es en train d'apprendre. Je veux que tu continues à chercher des réponses. Pour que tu trouves les réponses, il faut regarder et écouter. Demain, nous irons à la mer, et tu pourras regarder les oiseaux. Tu y verras aussi des poissons. »",
+          "en": "\"You will. You are learning. I want you to keep looking for answers. For you to find the answers, you have to look and listen. Tomorrow we'll go to the sea, and you can watch the birds. You'll see fish there too.\""
+        },
+        {
+          "fr": "Bien qu'elle soit fatiguée, Amélie ne veut pas dormir. Elle aime regarder la lune. Elle se demande comment un oiseau sait où il va.",
+          "en": "Even though she is tired, Amélie doesn't want to sleep. She likes looking at the moon. She wonders how a bird knows where it is going."
+        },
+        {
+          "fr": "Le grand-père et Amélie se disent bonne nuit. « Sois sage et va dormir. Dors bien ! »",
+          "en": "Grandpa and Amélie say good night to each other. \"Be good and go to sleep. Sleep well!\""
+        },
+        {
+          "fr": "Et vous ? Regardez le ciel cette nuit. Qu'est-ce que vous voyez ?",
+          "en": "And you? Look at the sky tonight. What do you see?"
+        },
+        {
+          "end": "Fin !",
+          "en": "The End!"
+        }
+      ],
+      "vocab": [
+        {
+          "fr": "la lumière",
+          "en": "light",
+          "note": "Feminine. {La lumière du soleil} is sunlight."
+        },
+        {
+          "fr": "l'air",
+          "en": "air",
+          "note": "Masculine. {le} shortens to {l'} before a vowel: {dans l'air}."
+        },
+        {
+          "fr": "une aile",
+          "en": "a wing",
+          "note": "Feminine. Birds push the air with their wings: {avec leurs ailes}."
+        },
+        {
+          "fr": "une étoile",
+          "en": "a star",
+          "note": "Feminine. At night Amélie sees {des étoiles partout}, stars everywhere."
+        },
+        {
+          "fr": "la lune",
+          "en": "the moon",
+          "note": "Feminine. {La lune brille}: the moon shines."
+        },
+        {
+          "fr": "le grand-père",
+          "en": "grandfather",
+          "note": "{Chez son grand-père} means at her grandfather's house. Amélie calls him {Grand-père}."
+        },
+        {
+          "fr": "un animal / des animaux",
+          "en": "an animal / animals",
+          "note": "Masculine. The plural is {des animaux}: most nouns ending in -al make their plural in -aux."
+        },
+        {
+          "fr": "haut",
+          "en": "high",
+          "note": "After a verb it means high up: {voler très haut}, to fly very high."
+        },
+        {
+          "fr": "léger / légère",
+          "en": "light (not heavy)",
+          "note": "Light as in not heavy. The light you see is {la lumière}. The feminine is {légère}."
+        },
+        {
+          "fr": "lourd",
+          "en": "heavy",
+          "note": "Feminine {lourde}: {Toi, tu es plus lourde !}"
+        },
+        {
+          "fr": "seul / seuls",
+          "en": "only, alone",
+          "note": "{Seuls le rouge et l'orange arrivent}: only the red and the orange get there."
+        },
+        {
+          "fr": "jusqu'à",
+          "en": "as far as, all the way to",
+          "note": "{jusqu'à nos yeux}: all the way to our eyes."
+        },
+        {
+          "fr": "le ciel",
+          "en": "the sky",
+          "note": "Masculine: {le ciel bleu}, {dans le ciel}."
+        },
+        {
+          "fr": "un nuage",
+          "en": "a cloud",
+          "note": "Masculine. {Il n'y avait pas de nuages}: there were no clouds."
+        },
+        {
+          "fr": "un oiseau",
+          "en": "a bird",
+          "note": "Masculine. The plural adds -x: {les oiseaux}."
+        },
+        {
+          "fr": "un écureuil",
+          "en": "a squirrel",
+          "note": "Masculine. {Les écureuils courent et sautent très vite}: squirrels run and jump very fast."
+        },
+        {
+          "fr": "une tortue",
+          "en": "a turtle",
+          "note": "Feminine. {La tortue sait nager}: the turtle can swim."
+        },
+        {
+          "fr": "un lapin",
+          "en": "a rabbit",
+          "note": "Masculine: {un lapin et une tortue}."
+        },
+        {
+          "fr": "l'herbe",
+          "en": "grass",
+          "note": "Feminine. The h is silent, so {la} shortens to {l'}: {dans l'herbe}."
+        },
+        {
+          "fr": "le vent",
+          "en": "the wind",
+          "note": "Masculine. {Le vent souffle}: the wind blows."
+        },
+        {
+          "fr": "la pluie",
+          "en": "the rain",
+          "note": "Feminine. The verb is {pleuvoir}: {il pleut}, it rains."
+        },
+        {
+          "fr": "voler",
+          "en": "to fly",
+          "note": "A regular -er verb: {un oiseau vole}, {les oiseaux volent}."
+        },
+        {
+          "fr": "grimper",
+          "en": "to climb",
+          "note": "A regular -er verb. {Il est en train de grimper}: it is climbing right now."
+        },
+        {
+          "fr": "souffler",
+          "en": "to blow",
+          "note": "A regular -er verb, used for the wind: {le vent souffle}."
+        },
+        {
+          "fr": "briller",
+          "en": "to shine",
+          "note": "A regular -er verb, used for the sun, the moon and the stars: {la lune brille}."
+        },
+        {
+          "fr": "pousser",
+          "en": "to grow, to push",
+          "note": "Two meanings here: plants grow ({le soleil fait pousser les plantes}) and wings push ({leurs ailes poussent l'air})."
+        },
+        {
+          "fr": "rendre",
+          "en": "to make (+ adjective)",
+          "note": "{rendre} with a noun and an adjective means to make something that way: {L'air rend le ciel bleu}."
+        },
+        {
+          "fr": "il devient / ils deviennent",
+          "en": "it becomes / they become",
+          "note": "From {devenir}, to become: {le ciel devient rouge}, {les nuages deviennent trop lourds}."
         }
       ]
     }

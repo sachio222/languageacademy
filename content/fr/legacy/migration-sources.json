@@ -35480,8 +35480,8 @@
         "out": "e659a6a4fb6a"
       },
       "glossary": {
-        "src": "441a9a1b4d77",
-        "out": "0b2b667b9e06"
+        "src": "474e8bfa353d",
+        "out": "03195b688967"
       },
       "story_id": {
         "src": "902ba3cda188",
@@ -36165,16 +36165,16 @@
         },
         {
           "id": "b-d-abord-on-doit",
-          "src": "985be59a8eb2",
-          "key": "d'abord on doit demander des questions socrate pense que les questions sont essentielles si on ne demande pas de questions on ne pense pas et si on ne pense pas on ne comprend pas",
-          "out": "de96824581f3",
+          "src": "2215c86ffcc0",
+          "key": "d'abord on doit poser des questions socrate pense que les questions sont essentielles si on ne pose pas de questions on ne pense pas et si on ne pense pas on ne comprend pas",
+          "out": "c859755f0a8e",
           "at": 5
         },
         {
           "id": "img-socrates",
-          "src": "ae6b5afd9e36",
+          "src": "cccd59c5e7e0",
           "key": "img reading7 socrates",
-          "out": "3fa05849d4e3",
+          "out": "f6bec2b2dfef",
           "at": 6
         },
         {
