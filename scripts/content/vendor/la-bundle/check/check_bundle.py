@@ -20,8 +20,8 @@ What it checks, in order (domains/curriculum.md section 3, Release validation):
   release checks   position_duplicate, unit_empty, story_missing (the story record only),
                    shelf_invalid, item_placement_invalid, section_id_invalid, estimate_invalid,
                    access_rule_broken (steps only), module_key_reused (against this bundle's own
-                   retired list), item_shape_invalid (the parts that need no answer checker), and
-                   phrases_missing as a warning.
+                   retired list), item_shape_invalid (the parts that need no answer checker),
+                   gloss_taught, and phrases_missing as a warning.
 
 NOT_CHECKED lists what needs a database, an earlier published version or the shared JavaScript
 answer checker. Every report repeats it, so a pass here is never read as a full validation.
@@ -58,8 +58,9 @@ NOT_CHECKED = [
      "what": "an item_id whose question changed meaning"},
     {"code": "content_unreviewed", "needs": "the database and the release diff",
      "what": "lesson content that changed with no entry in the release's diff"},
-    {"code": "story_missing", "needs": "the story image files",
-     "what": "story art; only the story record is checked here"},
+    {"code": "story_missing", "needs": "the story file",
+     "what": "that the story's text exists; only the story record is checked here. Art is not required: "
+             "a story with cover null ships text-only"},
     {"code": "item_shape_invalid", "needs": "the shared JavaScript answer checker (C-LAY-5)",
      "what": "an accepted answer the checker rejects or a named mistake it accepts, and legacy-mode "
              "item shapes; blank keys, key shapes, choice ids and ___ markers are checked here"},
@@ -92,6 +93,13 @@ SHAPES_BY_ITEM_KIND = {
     "guide_check": {"ChoiceAnswerKey"},
 }
 BLANK_MARKER = re.compile(r"_{3,}")
+# A gloss and a word are the same form when they match after this: lower case, every apostrophe a keyboard types
+# as ', and each run of spaces as one space (the prototype's tap-a-word matcher reads text the same way).
+APOSTROPHES = re.compile("[\u2019\u2018\u02bc`]")
+
+
+def same_form(text):
+    return re.sub(r"\s+", " ", APOSTROPHES.sub("'", text.lower())).strip()
 
 # The one body definition each of these steps holds (BundleStepContent.body). The schema's anyOf
 # also allows any object, so format_rules validates these bodies again against their own definition.
@@ -723,7 +731,8 @@ def release_checks(b, report):
                              f"{s['access_tier']}; {rule} (LRN-4)")
 
     # ---------------------------------------------------------------- item_placement_invalid,
-    #                                                                  item_shape_invalid, phrases_missing
+    #                                                                  item_shape_invalid, gloss_taught,
+    #                                                                  phrases_missing
     for i, c in enumerate(b["content"]):
         at = join("/content", i)
         key = c["module_key"]
@@ -764,6 +773,15 @@ def release_checks(b, report):
 
         for j, item in enumerate(c["items"]):
             item_shape(item, join(at, "items", j), key, report)
+
+        # A word new to the learner is taught as a card; a gloss is a form the learner already knows. A form that
+        # is both would be taught and glossed in the same module.
+        taught = {same_form(w["text"]): n for n, w in enumerate(c["words"])}
+        for j, g in enumerate(c.get("glosses", [])):
+            if same_form(g["fr"]) in taught:
+                report.error("gloss_taught", join(at, "glosses", j, "fr"),
+                             f"gloss {g['fr']!r} of {key} is the word {join(at, 'words', taught[same_form(g['fr'])])}; "
+                             "a word of the module is taught as a card, so it is never also glossed")
 
         if entry is not None and entry["kind"] == "lesson" and not c["phrases"]:
             report.warning("phrases_missing", join(at, "phrases"),

@@ -492,8 +492,11 @@
           "type": "string"
         },
         "cover": {
-          "type": "string",
-          "description": "Static path under /stories/img/."
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Static path under /stories/img/. null for a story that ships with text only while its art is made; reading art is a final pass (Jake, 26 November 2026)."
         },
         "credit": {
           "type": [
@@ -534,6 +537,40 @@
           "description": "Pronunciation phrases. A lesson with none gets its Pronunciation step marked Soon (phrases_missing).",
           "items": {
             "$ref": "#/$defs/BundlePhrase"
+          }
+        },
+        "glosses": {
+          "type": "array",
+          "description": "Forms of words the learner already knows, such as ils comprennent after comprendre or bons after bon. Each shows its meaning on tap wherever it appears in this module's French, and is never studied, reviewed, counted as a word or tested. A form that is also one of this module's words fails release (gloss_taught). Optional.",
+          "items": {
+            "type": "object",
+            "required": [
+              "fr",
+              "en"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "fr": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "The form exactly as the French text spells it: bons."
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200,
+                "description": "Its meaning in English: good (plural)."
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 200,
+                "description": "How the form relates to the word the learner knows; French marked with braces: plural of {bon}. Optional."
+              }
+            }
           }
         },
         "items": {

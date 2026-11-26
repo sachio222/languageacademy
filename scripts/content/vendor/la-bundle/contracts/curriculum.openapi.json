@@ -3592,7 +3592,8 @@
               "shelf_invalid",
               "item_placement_invalid",
               "item_shape_invalid",
-              "phrases_missing"
+              "phrases_missing",
+              "gloss_taught"
             ]
           },
           "module_key": {
