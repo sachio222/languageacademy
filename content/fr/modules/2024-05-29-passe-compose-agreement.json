@@ -386,22 +386,22 @@
     {
       "id": "i-sont-rentres",
       "type": "gapfill",
-      "text": "Les enfants ___ tard",
+      "text": "Paul et Marc ___ tard",
       "blanks": [
         {
           "answer": "sont rentrés"
         }
       ],
-      "gloss": "The children came home late",
+      "gloss": "Paul and Marc came home late",
       "hint": "Use '{rentrer}', masculine plural!",
       "mistakes": [
         {
           "answer": "sont rentré",
-          "feedback": "Les garçons is plural! Add -s for masculine plural: sont rentrés."
+          "feedback": "Paul et Marc is plural! Add -s for masculine plural: {sont rentrés}."
         },
         {
           "answer": "sont rentrées",
-          "feedback": "Garçons (boys) is masculine! Use -s (not -es): sont rentrés."
+          "feedback": "Paul and Marc are men, so use -s (not -es): {sont rentrés}."
         },
         {
           "answer": "ont rentrés",

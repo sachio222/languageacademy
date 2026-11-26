@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 822 |
 | Passage words with no pop-up | 7 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1069 |
+| Hand edits kept | 1072 |
 | Live ids with no converted item | 339 (24 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 659 |
@@ -2121,6 +2121,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `glossary[0].fr` "étudiant(s)" → "poser des questions"
 - `glossary[0].en` "student(s)" → "to ask questions"
 - `items[2].answer` "demander des questions" → "poser des questions"
+- `items[2].accept` "["demander","questions","poser des questions"]" → "["demander","questions","poser des questions","demander des questions"]"
 
 **2024-05-11-unit-7-practice**
 
@@ -2277,8 +2278,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `vocabulary[6].example_fr` "Monsieur, vous êtes allé où?" → "Paul, vous êtes allé où ?"
 - `vocabulary[8].example_fr` "Les garçons, vous êtes allés où?" → "Les enfants, vous êtes allés où ?"
-- `items[10].text` "Les garçons ___ tard" → "Les enfants ___ tard"
-- `items[10].gloss` "The boys came home late" → "The children came home late"
+- `items[10].text` "Les garçons ___ tard" → "Paul et Marc ___ tard"
+- `items[10].gloss` "The boys came home late" → "Paul and Marc came home late"
+- `items[10].mistakes[0].feedback` "Les garçons is plural! Add -s for masculine plural: sont rentrés." → "Paul et Marc is plural! Add -s for masculine plural: sont rentrés."
+- `items[10].mistakes[1].feedback` "Garçons (boys) is masculine! Use -s (not -es): sont rentrés." → "Paul and Marc are men, so use -s (not -es): sont rentrés."
 
 **2024-05-27-imparfait-all-verbs**
 

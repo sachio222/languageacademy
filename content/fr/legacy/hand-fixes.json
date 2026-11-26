@@ -1228,7 +1228,7 @@
       "accept": [
         "sais"
       ],
-      "hint": "Marc's wisdom from the reading {Mes Rêves et Mes Espoirs}: 'If you don't do anything, you'll never _____'"
+      "hint": "Sophie's advice to Marc from the reading {Mes Rêves et Mes Espoirs}: 'If you don't do anything, you'll never _____'"
     },
     "items/i-soit-differente": {
       "id": "i-soit-differente",
@@ -5075,7 +5075,8 @@
       "accept": [
         "demander",
         "questions",
-        "poser des questions"
+        "poser des questions",
+        "demander des questions"
       ],
       "hint": "Look for {D'abord}",
       "mistakes": [
@@ -6249,22 +6250,22 @@
     "items/i-sont-rentres": {
       "id": "i-sont-rentres",
       "type": "gapfill",
-      "text": "Les enfants ___ tard",
+      "text": "Paul et Marc ___ tard",
       "blanks": [
         {
           "answer": "sont rentrés"
         }
       ],
-      "gloss": "The children came home late",
+      "gloss": "Paul and Marc came home late",
       "hint": "Use '{rentrer}', masculine plural!",
       "mistakes": [
         {
           "answer": "sont rentré",
-          "feedback": "Les garçons is plural! Add -s for masculine plural: sont rentrés."
+          "feedback": "Paul et Marc is plural! Add -s for masculine plural: {sont rentrés}."
         },
         {
           "answer": "sont rentrées",
-          "feedback": "Garçons (boys) is masculine! Use -s (not -es): sont rentrés."
+          "feedback": "Paul and Marc are men, so use -s (not -es): {sont rentrés}."
         },
         {
           "answer": "ont rentrés",

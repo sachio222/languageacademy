@@ -633,7 +633,8 @@
       "accept": [
         "demander",
         "questions",
-        "poser des questions"
+        "poser des questions",
+        "demander des questions"
       ],
       "hint": "Look for {D'abord}",
       "mistakes": [
