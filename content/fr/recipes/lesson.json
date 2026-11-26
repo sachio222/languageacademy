@@ -1,0 +1,59 @@
+{
+  "schema": "la-recipe@1",
+  "kind": "lesson",
+  "version": 1,
+  "about": "How a lesson is built (unit-prep design section 6.2). Numbers are working numbers; basis names where each one comes from.",
+  "skeleton": [
+    { "part": "vocabulary", "from": "card:teach/words", "rule": "One card per new lemma the card places here, in the card's order. Each new word is first met in a sentence made of known words; a word taught earlier gets a review row, never a second card." },
+    { "part": "concepts", "from": "card:teach/constructions", "rule": "One concept card per construction, with a French example built from words the learner already knows." },
+    { "part": "tables", "rule": "A conjugation table for each new verb; its forms need no cards." },
+    { "part": "phrases", "from": "card:sound/focus", "rule": "Pronunciation phrases include at least one word with the card's sound focus." },
+    { "part": "items", "order": ["situation", "practice", "situation"], "rule": "Open and close with items set in a card situation." }
+  ],
+  "size": {
+    "new_words": { "max": 12 },
+    "items": { "min": 12, "max": 20 },
+    "first_pass_minutes": { "max": "five_day_minutes" }
+  },
+  "mix": {
+    "types": ["respond", "transform", "gapfill", "meaning", "choice"],
+    "types_min": 3,
+    "no_translate": true,
+    "situation_share_min": 0.5,
+    "production_share_min": 0.6,
+    "production_types": ["respond", "transform", "gapfill", "translate"],
+    "typical": { "respond": 0.3, "transform": 0.3, "gapfill": 0.2, "meaning": 0.1, "choice": 0.1 },
+    "carry_share_min": 0.2
+  },
+  "goal_verbs": ["Say", "Ask", "Answer", "Write", "Tell", "Describe", "Understand", "Choose", "Order", "Name"],
+  "accept": [
+    { "id": "register", "rule": "When the situation does not say who is spoken to, accept both {tu} and {vous}.", "check": "accept-register" },
+    { "id": "question-form", "rule": "When the situation does not fix the question form, accept intonation, {est-ce que} and inversion.", "check": null },
+    { "id": "speaker-gender", "rule": "When the speaker's gender is not fixed, accept both agreements.", "check": null },
+    { "id": "elision", "rule": "Accept both apostrophes and spacing variants; the answer checker already does.", "check": null }
+  ],
+  "mistakes": { "from": "card", "items_with_mistakes_min": 0.4, "each_cites_card": true },
+  "glosses": { "fill": "content:glosses", "hand_rows": false },
+  "drafter_rules": [
+    "The card's words are this lesson's only new cards.",
+    "If the lesson needs another new word, a small grammar word included, name it in drafter_notes or return cannot_satisfy with word_untaught.",
+    "A word taught earlier never gets a second card; to show it again, use a review row.",
+    "Names, cognates and sound words may appear without a card.",
+    "Introduce each new word in a sentence made of words the learner already knows, so its meaning comes from what they own.",
+    "Teach the words the card lists first before the words that build on them, in the card's order.",
+    "At least a fifth of the exercises use a word new in this lesson to carry the next new word, so each new word is used again before the lesson ends.",
+    "A different form of a word already taught gets a gloss row, never a card, with the fields fr, en and note.",
+    "A gloss row's fr is the form exactly as the text spells it, en gives its meaning, and note names the form: for {volerait}, \"would fly (conditional of {voler})\".",
+    "A gloss row's fr never repeats the fr of a vocabulary card in the same module."
+  ],
+  "basis": {
+    "size.new_words": "working",
+    "size.items": "working",
+    "mix.types_min": "working",
+    "mix.situation_share_min": "working",
+    "mix.production_share_min": "working",
+    "mix.typical": "working",
+    "mix.carry_share_min": "jake:2026-11-26 new words carry the next ones; share is a working number",
+    "mistakes.items_with_mistakes_min": "working"
+  }
+}

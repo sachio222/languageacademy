@@ -1,0 +1,40 @@
+{
+  "schema": "la-recipe@1",
+  "kind": "unit_exam",
+  "version": 1,
+  "about": "How a unit exam is built (unit-prep design section 6.2). The exam must fit one sitting.",
+  "skeleton": [
+    { "part": "items", "from": "card:blueprint/exam", "rule": "Items per goal as the blueprint sets, interleaved; each item names its goal." }
+  ],
+  "size": {
+    "cap_items": 30,
+    "cap_minutes": 25,
+    "first_pass_minutes": { "max": "five_day_minutes" }
+  },
+  "blueprint": { "items_per_goal": 3, "production_min": 0.6, "target_success": [0.8, 0.85] },
+  "mix": {
+    "types": ["respond", "transform", "gapfill", "meaning", "choice"],
+    "no_translate": true,
+    "production_share_min": 0.6,
+    "production_types": ["respond", "transform", "gapfill", "translate"],
+    "typical": { "respond": 0.3, "transform": 0.3, "gapfill": 0.2, "meaning": 0.1, "choice": 0.1 },
+    "run_max": 3
+  },
+  "accept": [],
+  "mistakes": { "from": "card", "each_cites_card": true },
+  "glosses": { "fill": "none", "hand_rows": false },
+  "drafter_rules": [
+    "No item copies or nearly copies a lesson or practice item; the avoid list holds the unit's lesson answers.",
+    "Each item names the goal it tests."
+  ],
+  "basis": {
+    "size.cap_items": "controller 2026-11-26: about 3 questions per goal, capped at about 30 (research check pending)",
+    "size.cap_minutes": "working",
+    "blueprint.items_per_goal": "controller 2026-11-26: about 3 questions per goal (research check pending)",
+    "blueprint.production_min": "working",
+    "blueprint.target_success": "working",
+    "mix.production_share_min": "working",
+    "mix.typical": "working",
+    "mix.run_max": "working"
+  }
+}

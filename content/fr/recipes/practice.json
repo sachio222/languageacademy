@@ -1,0 +1,37 @@
+{
+  "schema": "la-recipe@1",
+  "kind": "practice",
+  "version": 1,
+  "about": "How a unit's practice set is built (unit-prep design section 6.2).",
+  "skeleton": [
+    { "part": "items", "from": "card:blueprint/practice", "rule": "Items grouped by goal and interleaved across goals; each item names its goal." }
+  ],
+  "size": {
+    "items": { "min": 16, "max": 24 },
+    "first_pass_minutes": { "max": "five_day_minutes" }
+  },
+  "blueprint": { "per_goal": 2, "target_success": [0.8, 0.85] },
+  "mix": {
+    "types": ["transform", "gapfill", "choice", "respond", "meaning"],
+    "no_translate": true,
+    "production_share_min": 0.6,
+    "production_types": ["respond", "transform", "gapfill", "translate"],
+    "typical": { "transform": 0.4, "gapfill": 0.4, "choice": 0.2 },
+    "run_max": 3
+  },
+  "accept": [],
+  "mistakes": { "from": "card", "each_cites_card": true },
+  "glosses": { "fill": "none", "hand_rows": false },
+  "drafter_rules": [
+    "Each item names the goal it practises.",
+    "No more than three items in a row practise the same goal."
+  ],
+  "basis": {
+    "size.items": "working",
+    "blueprint.per_goal": "working",
+    "blueprint.target_success": "working (research check: Wilson and others 2019, training rather than testing)",
+    "mix.production_share_min": "working",
+    "mix.typical": "working",
+    "mix.run_max": "working"
+  }
+}

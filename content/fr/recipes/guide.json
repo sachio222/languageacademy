@@ -1,0 +1,24 @@
+{
+  "schema": "la-recipe@1",
+  "kind": "guide",
+  "version": 1,
+  "about": "How a guide is built (unit-prep design section 6.2).",
+  "skeleton": [
+    { "part": "minutes", "rule": "The guide's own reading time in minutes." },
+    { "part": "line", "rule": "One sentence saying what the guide explains." },
+    { "part": "parts", "rule": "Parts use L's block shapes." },
+    { "part": "checks", "rule": "Exactly three checks." },
+    { "part": "more", "rule": "At most one outside link, as a Read more card." }
+  ],
+  "size": {
+    "parts": { "max": 6 },
+    "checks": { "min": 3, "max": 3 },
+    "first_pass_minutes": { "max": "five_day_minutes" }
+  },
+  "mix": { "types": [], "typical": {} },
+  "accept": [],
+  "mistakes": { "from": "none" },
+  "glosses": { "fill": "none", "hand_rows": false },
+  "drafter_rules": ["A guide teaches nothing a later lesson needs."],
+  "basis": { "size.parts": "working", "size.checks": "content-layer design: a guide asks exactly three checks" }
+}
