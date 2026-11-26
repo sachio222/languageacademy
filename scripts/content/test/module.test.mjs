@@ -441,3 +441,50 @@ test('a block heading is checked even when the block value has a shape L cannot 
   const ps = codes(mod, 2);
   assert.ok(ps.includes('block_invalid') && ps.includes('field_type'), ps.join(', '));
 });
+
+test("a lesson, reading or guide may carry glosses { fr, en, note? } on L's BundleContent.glosses limits", () => {
+  const gloss = { fr: 'nous sommes allés', en: 'we went', note: 'past of {aller}' };
+  for (const [kind, unit] of [['lesson', 1], ['reading', 1], ['guide', 2]]) {
+    const mod = miniModule(MINI_KEYS[kind]);
+    mod.glosses = [{ ...gloss }];
+    assert.deepEqual(codes(mod, unit), [], kind);
+    assert.deepEqual(moduleTexts(mod).filter((t) => t.path.startsWith('glosses')), [
+      { path: 'glosses[0].fr', role: 'fr', text: gloss.fr },
+      { path: 'glosses[0].en', role: 'native', text: gloss.en },
+      { path: 'glosses[0].note', role: 'native_fr', text: gloss.note },
+    ]);
+  }
+  const mod = miniModule(MINI_KEYS.lesson);
+  const withGlosses = (glosses) => codes({ ...mod, glosses }, 1);
+  assert.deepEqual(withGlosses([]), []);
+  assert.deepEqual(withGlosses([{ fr: 'allés', en: 'went' }]), [], 'note is optional');
+  assert.deepEqual(withGlosses([{ fr: 'x'.repeat(101), en: 'went' }]), ['field_type'], 'fr is at most 100 characters');
+  assert.deepEqual(withGlosses([{ fr: 'x'.repeat(100), en: 'y'.repeat(200), note: 'z'.repeat(200) }]), []);
+  assert.deepEqual(withGlosses([{ fr: 'allés', en: 'y'.repeat(201) }]), ['field_type'], 'en is at most 200 characters');
+  assert.deepEqual(withGlosses([{ fr: 'allés', en: 'went', note: 'z'.repeat(201) }]), ['field_type'], 'note is at most 200 characters');
+  assert.deepEqual(withGlosses([{ fr: 'allés' }]), ['field_missing']);
+  assert.deepEqual(withGlosses([{ fr: 'allés', en: 'went', zz: 1 }]), ['field_unknown']);
+  assert.deepEqual(withGlosses([{ fr: 'allés', en: '{went}' }]), ['span_in_plain_field'], 'en is plain English');
+  assert.deepEqual(withGlosses([{ fr: '{allés}', en: 'went' }]), ['span_in_plain_field'], 'fr is French with no braces');
+  assert.deepEqual(withGlosses([{ fr: 'allés', en: 'went' }, { fr: 'allés', en: 'gone' }]), ['id_duplicate'], 'a form is glossed once');
+  for (const kind of ['practice', 'unit_exam', 'reference']) {
+    const m = miniModule(MINI_KEYS[kind]);
+    m.glosses = [{ ...gloss }];
+    assert.ok(codes(m, unitOf[kind] ?? 1).includes('field_unknown'), `a ${kind} takes no glosses`);
+  }
+});
+
+test("gloss_is_card: a gloss that spells one of the module's word cards, compared as L's gloss_taught compares", () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  const card = mod.vocabulary[0].fr; // je suis
+  for (const fr of [card, card.toUpperCase(), `  ${card.replace(' ', '   ')} `])
+    assert.deepEqual(validateModule({ ...mod, glosses: [{ fr, en: 'I am' }] }, { file: 'm.json', unitIndex: 1 }).map((p) => [p.code, p.path]), [['gloss_is_card', 'glosses[0].fr']], JSON.stringify(fr));
+  const apostrophe = { ...mod, vocabulary: [...mod.vocabulary, { word_id: 'j-ai-fr', fr: 'j’ai', gloss: 'I have' }] };
+  assert.deepEqual(codes({ ...apostrophe, glosses: [{ fr: "J'ai", en: 'I have' }] }), ['gloss_is_card'], 'every apostrophe reads as one');
+  const review = { ...mod, vocabulary: mod.vocabulary.map((w, i) => (i === 1 ? { ...w, review: true } : w)) };
+  assert.deepEqual(codes({ ...review, glosses: [{ fr: 'tu es', en: 'you are' }] }), ['gloss_is_card'], 'a review card is a card too');
+  assert.deepEqual(codes({ ...mod, glosses: [{ fr: 'je suis allé', en: 'I went' }] }), [], 'a longer form is not the card');
+  const reading = miniModule(MINI_KEYS.reading);
+  assert.ok(reading.vocabulary.length > 0);
+  assert.deepEqual(codes({ ...reading, glosses: [{ fr: reading.vocabulary[0].fr, en: 'x' }] }), ['gloss_is_card']);
+});

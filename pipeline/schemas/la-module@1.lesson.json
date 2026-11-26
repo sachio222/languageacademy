@@ -278,6 +278,37 @@
         }
       },
       "additionalProperties": false
+    },
+    "glosses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fr",
+          "en"
+        ],
+        "properties": {
+          "fr": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S",
+            "maxLength": 100
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S",
+            "maxLength": 200
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S",
+            "maxLength": 200
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "additionalProperties": false,

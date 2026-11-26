@@ -32,9 +32,9 @@ Every written module needs `title` and `description`. A unit exam has no title o
 
 | Kind | Required fields | Notes |
 |---|---|---|
-| `lesson` | `vocabulary` (at least one word), `items` | Optional `concepts`, `tables`, `phrases`, `speed_match` (six word ids from the lesson's vocabulary), `options` |
+| `lesson` | `vocabulary` (at least one word), `items` | Optional `concepts`, `tables`, `phrases`, `speed_match` (six word ids from the lesson's vocabulary), `options`, `glosses` (see Glosses below) |
 | `guide` | `minutes`, `line`, `parts`, `checks` (exactly three) | A part's `blocks` use L's example block shapes; no lesson may use something only a guide teaches. Optional `short_title` and `more`: one outside link, `{ "label": "…", "url": "https://…" }`, shown as a Read more card at the end of the guide page. The label is plain English of at most 80 characters; leave `more` out when there is no link |
-| `reading` | `story_id`, `vocabulary`, `passage`, `items` | `items` are `comprehension` questions; optional `glossary`, `preview_blocks` |
+| `reading` | `story_id`, `vocabulary`, `passage`, `items` | `items` are `comprehension` questions; optional `glossary`, `preview_blocks`, `glosses` |
 | `practice` | `items`, `tests` | Teaches nothing, so no vocabulary, concepts or tables |
 | `unit_exam` | `items`, `tests` | Teaches nothing |
 | `reference` | none beyond title and description | Lives on the shelf, never in a unit |
@@ -56,6 +56,12 @@ Each item has a `type`, and the type fixes its fields:
 Any item may add `hint`, `mistakes` (`{ answer, feedback }` pairs) and `steps`. A lesson item goes to the lesson exam by default, and also to Writing when it has a mistake. Leave `steps` out unless you mean to move an item; a step that ends up with no item fails the check.
 
 Every answer and accept must pass the app's answer checker, and no listed mistake may pass it. A blank is exactly three underscores.
+
+## Glosses
+
+A word new to the learner is taught as a vocabulary card where it is first used. A different form of a word already taught (*ils comprennent* after *comprendre*, *bons* after *bon*) gets a gloss instead: a `glosses` row `{ "fr": "ils comprennent", "en": "they understand", "note": "plural of {il comprend}" }` on the lesson, reading or guide. L shows its meaning when the learner taps the form, and never studies, reviews or tests it. `fr` is the form as the text spells it (at most 100 characters), `en` its meaning (at most 200), and the optional `note` names the form, with French in braces (at most 200). A gloss that spells one of the module's own word cards fails the check (`gloss_is_card`).
+
+In a lesson, L glosses the French in braces in prompts, concept cards, tables and examples, never the answer side. In a reading, it glosses the passage.
 
 ## French inside English text
 

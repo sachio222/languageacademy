@@ -412,6 +412,8 @@ function contentOf(m, unitKey, { dictionary, storyOf, note }) {
     kind: m.kind,
     words,
     phrases: m.kind === 'lesson' ? phrasesOf(m, words, note) : [],
+    // BundleContent.glosses (L c3da2c0), only when the module has one: a module without glosses bundles as before.
+    ...(m.glosses?.length ? { glosses: m.glosses.map((g) => defined({ fr: g.fr, en: g.en, note: g.note })) } : {}),
     items,
     steps,
   };

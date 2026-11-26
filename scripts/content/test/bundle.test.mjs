@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -533,4 +533,52 @@ test("a guide's Read more link reaches its GuideBody.more; a guide without one b
     if (src.more) assert.deepEqual(body.more, src.more, c.module_key);
     else assert.equal('more' in body, false, c.module_key);
   }
+});
+
+test("a module's glosses reach its BundleContent.glosses; a module with none bundles exactly as before", (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'la-content-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  cpSync(CONTENT_ROOT, root, { recursive: true });
+  const strip = (m) => {
+    const { glosses, ...rest } = m;
+    return rest;
+  };
+  // The course without a single gloss, as the base: each module that carries glosses is written without them.
+  const files = (dir) => readdirSync(dir).filter((f) => f.endsWith('.json'));
+  for (const f of files(join(root, 'modules'))) {
+    const file = join(root, 'modules', f);
+    const m = JSON.parse(readFileSync(file, 'utf8'));
+    if ('glosses' in m) writeFileSync(file, JSON.stringify(strip(m)));
+  }
+  const base = buildBundle(loadCourse({ root, planned: false }), { ...sources, build: BUILD });
+  assert.ok(base.content.every((c) => !('glosses' in c)), 'a module with no glosses carries no glosses key');
+  const lessonKey = '2024-01-02-etre';
+  const readingKey = '2024-01-09-reading1';
+  const rows = {
+    [lessonKey]: [{ fr: 'étais', en: 'was', note: 'past of {être}' }, { fr: 'sommes', en: 'are' }],
+    [readingKey]: [{ fr: 'suis', en: 'am' }],
+  };
+  for (const [key, glosses] of Object.entries(rows)) {
+    const file = join(root, 'modules', `${key}.json`);
+    writeFileSync(file, JSON.stringify({ ...JSON.parse(readFileSync(file, 'utf8')), glosses }));
+  }
+  const edited = buildBundle(loadCourse({ root, planned: false }), { ...sources, build: BUILD });
+  assert.deepEqual(contentOf(edited, lessonKey).glosses, rows[lessonKey]);
+  assert.deepEqual(contentOf(edited, readingKey).glosses, rows[readingKey]);
+  const v = schemaValidator(join(VENDOR, 'contracts'), 'curriculum.bundle.schema.json');
+  assert.deepEqual(v.validate(edited).slice(0, 20), []);
+  const ok = runChecker(edited);
+  assert.equal(ok.status, 0, JSON.stringify(ok.problems?.slice(0, 5)));
+  // Without the glosses, the same modules bundle byte for byte as the base: glosses are the only difference.
+  for (const key of Object.keys(rows)) delete contentOf(edited, key).glosses;
+  assert.equal(canonicalJson(edited), canonicalJson(base));
+});
+
+test("L's checker refuses a gloss that is one of the module's word cards (gloss_taught), as the content check does", () => {
+  const b = structuredClone(bundle);
+  const c = b.content.find((x) => x.kind === 'lesson' && x.words.length > 0);
+  c.glosses = [{ fr: c.words[0].text.toUpperCase(), en: 'x', note: null }];
+  const r = runChecker(b);
+  assert.equal(r.status, 1);
+  assert.ok(r.problems.some((p) => p.code === 'gloss_taught'), JSON.stringify(r.problems?.slice(0, 3)));
 });

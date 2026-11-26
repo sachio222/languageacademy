@@ -173,12 +173,17 @@ const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), exa
 // optionally, the draft it will be written from and a note for its writer (a unit exam's subtitle, a reading's theme
 // brief). source and draft are paths relative to the vault's curriculum folder, projects/product/curriculum/
 // (plan.json sits at research/course-plan/plan.json there; draft names research/course-plan/<file>).
+// Forms of words the learner already knows (L c3da2c0, BundleContent.glosses): bons after bon, ils comprennent after
+// comprendre. L shows each one's meaning on tap in the module's French and never studies, reviews, counts or tests it.
+// fr is the form as the French spells it (1 to 100 characters), en its meaning (1 to 200), note how it relates to the
+// word the learner knows, French in braces (at most 200). A form the module teaches as a card is gloss_is_card.
+const GLOSSES = LIST(OBJ({ fr: S('fr', 100), en: S('native', 200), note: S('native_fr', 200) }, ['fr', 'en']), { unique: 'fr' });
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY, note: S('native') }, ['words', 'constructions', 'source']);
 
 export const KIND_SCHEMAS = {
   lesson: {
     // A lesson teaches at least one word: Flash Cards, Speed Match and Pronunciation are made from its vocabulary.
-    fields: { vocabulary: LIST(LESSON_WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }) },
+    fields: { vocabulary: LIST(LESSON_WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }), glosses: GLOSSES },
     required: ['vocabulary', 'items'],
   },
   guide: {
@@ -187,6 +192,7 @@ export const KIND_SCHEMAS = {
     fields: {
       short_title: S('native'), minutes: INT(1), line: S('native_fr'), parts: LIST(PART, { nonEmpty: true, unique: 'id' }), checks: LIST(CHECK, { unique: 'id' }),
       more: MORE,
+      glosses: GLOSSES,
     },
     required: ['minutes', 'line', 'parts', 'checks'],
   },
@@ -198,6 +204,7 @@ export const KIND_SCHEMAS = {
       glossary: LIST(OBJ({ fr: S('fr'), en: S('native') }, ['fr', 'en'])),
       items: ITEMS,
       preview_blocks: LIST(KEY),
+      glosses: GLOSSES,
     },
     required: ['story_id', 'vocabulary', 'passage', 'items'],
   },
@@ -358,6 +365,7 @@ function kindRules(mod, cx) {
   if (kind === 'guide' && Array.isArray(mod.checks) && mod.checks.length !== GUIDE_CHECKS)
     bad('checks', 'guide_checks_count', `a guide has exactly three checks, found ${mod.checks.length}`);
   stepRules(mod, cx);
+  glossRules(mod, cx);
   if (kind === 'lesson' && Array.isArray(mod.speed_match)) {
     const words = new Set((Array.isArray(mod.vocabulary) ? mod.vocabulary : []).map((w) => isObj(w) && w.word_id));
     if (mod.speed_match.length !== SPEED_MATCH_WORDS) bad('speed_match', 'speed_match_invalid', 'speed_match lists six word_ids');
@@ -377,6 +385,25 @@ function kindRules(mod, cx) {
       });
     }
   }
+}
+
+// A gloss and a word card are the same form when they match after this: lower case, every apostrophe as ', and each
+// run of spaces as one space. It is L's same_form (check/check_bundle.py, gloss_taught), so the content check refuses
+// exactly the glosses L's checker would.
+export const sameForm = (text) => String(text).toLowerCase().replace(/[\u2019\u2018\u02bc`]/g, "'").replace(/\s+/g, ' ').trim();
+
+// A word new to the learner is taught as a card; a gloss is a form the learner already knows. A form that is both
+// would be taught and glossed in the same module (L's gloss_taught), so it is gloss_is_card.
+function glossRules(mod, cx) {
+  if (!Array.isArray(mod.glosses)) return;
+  const cards = new Map();
+  for (const [k, w] of (Array.isArray(mod.vocabulary) ? mod.vocabulary : []).entries())
+    if (isObj(w) && isStr(w.fr) && !cards.has(sameForm(w.fr))) cards.set(sameForm(w.fr), k);
+  mod.glosses.forEach((g, i) => {
+    if (!isObj(g) || !isStr(g.fr) || !cards.has(sameForm(g.fr))) return;
+    const k = cards.get(sameForm(g.fr));
+    cx.bad(`glosses[${i}].fr`, 'gloss_is_card', `the gloss ${g.fr} is the word card vocabulary[${k}] (${mod.vocabulary[k].fr}); a word the module teaches as a card is never also glossed, so drop the gloss`);
+  });
 }
 
 // The scored steps made from a module's items. Each step its kind runs must ask at least one item, or L would open an

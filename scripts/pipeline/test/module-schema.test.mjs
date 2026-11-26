@@ -47,7 +47,7 @@ const SPLIT_CODES = {
 };
 const VALIDATOR_CODES = new Set([
   'id_duplicate', 'step_not_allowed', 'step_empty', 'blank_count', 'blank_marker_invalid', 'preview_block_unknown', 'position_word',
-  'span_nested', 'span_empty', 'span_unclosed', 'span_in_plain_field', 'construction_unknown', 'word_unknown',
+  'span_nested', 'span_empty', 'span_unclosed', 'span_in_plain_field', 'construction_unknown', 'word_unknown', 'gloss_is_card',
 ]);
 const WARNING_CODES = new Set(['translate_outside_unit1']);
 
@@ -163,6 +163,8 @@ function fullModule(kind) {
     m.checks = ['a', 'b', 'c'].map((id) => ({ ...m.checks[0], id }));
   }
   if (kind === 'reading') m.preview_blocks = [m.passage[0].id];
+  // A gloss is a form the module does not teach as a card (gloss_is_card), so it spells another form than the cards.
+  if (m.glosses) m.glosses = [{ ...m.glosses[0], fr: 'mots' }];
   if (ks.fields.items) m.items = ITEM_TYPES_BY_KIND[kind].flatMap((t) => fullItems(t, kind));
   return m;
 }
@@ -400,6 +402,10 @@ test('faults the schema states: both validators refuse, and validateModule names
     ['a Read more url of 501 characters', edit(full.guide, (m) => { m.more.url = `https://example.org/${'a'.repeat(481)}`; }), 'field_type'],
     ['a Read more url on http', edit(full.guide, (m) => { m.more.url = 'http://example.org/a'; }), 'field_type'],
     ['a Read more link of null', edit(full.guide, (m) => { m.more = null; }), 'field_type'],
+    ['a gloss of 101 characters', edit(full.lesson, (m) => { m.glosses[0].fr = 'x'.repeat(101); }), 'field_type'],
+    ['a gloss meaning of 201 characters', edit(full.reading, (m) => { m.glosses[0].en = 'x'.repeat(201); }), 'field_type'],
+    ['a gloss with no meaning', edit(full.guide, (m) => { delete m.glosses[0].en; }), 'field_missing'],
+    ['a gloss on a practice set', edit(full.practice, (m) => { m.glosses = [{ fr: 'mots', en: 'words' }]; }), 'field_unknown'],
     ['an empty steps list', edit(lesson, (m) => { m.items[0].steps = []; }), 'steps_invalid'],
     ['speed_match of five words', edit(full.lesson, (m) => { m.speed_match = m.speed_match.slice(0, 5); }), 'speed_match_invalid'],
     ['a choice item with mistakes', edit(withChoice, (m) => { m.items[ci].mistakes = [{ answer: 'x', feedback: 'y' }]; }), 'mistakes_not_allowed'],
@@ -482,6 +488,7 @@ test('every code left to the content validator is pinned: the schema accepts, va
     ['a brace in a French field', edit(full.lesson, (m) => { m.items[translate].answer = 'je {suis}'; }), 'span_in_plain_field'],
     ['a construction the graph lacks', edit(lesson, (m) => { m.teaches = { constructions: ['zz-none'] }; }), 'construction_unknown', graph],
     ['a word the graph lacks', edit(lesson, (m) => { m.teaches = { constructions: [], words: ['zz-none'] }; }), 'word_unknown', graph],
+    ['a gloss that is a word card', edit(full.lesson, (m) => { m.glosses[0].fr = m.vocabulary[0].fr; }), 'gloss_is_card'],
     ['a translation outside Unit 1 (a warning)', clone(full.lesson), 'translate_outside_unit1', { unitIndex: 2 }],
   ];
   const pinned = new Set();
