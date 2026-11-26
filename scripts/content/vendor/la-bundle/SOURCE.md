@@ -5,8 +5,8 @@ Copied from prototype L's build spec in the product vault, so `pnpm content:test
 | | |
 |---|---|
 | Source | `projects/product/mockups/2026-11-23-dashboard-revisions/prototypes/build-spec/` in the product vault |
-| L commit that last changed these files | `c3da2c0 2026-11-25T18:30:08-05:00` |
-| Vault HEAD when copied | `c3da2c0` |
+| L commit that last changed these files | `d8714f1 2026-11-26T16:59:50-05:00` |
+| Vault HEAD when copied | `cf55739` |
 
 | File | SHA-256 |
 |---|---|
