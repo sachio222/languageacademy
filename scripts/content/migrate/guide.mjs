@@ -9,7 +9,7 @@
 import { markFrench, unmark } from './mark-french.mjs';
 import { normText } from './items.mjs';
 import { slugify, freeId } from '../item-ids.mjs';
-import { createMerger, mergeField, mergeList, mergeDeclared, finishReport, clone, sortKeys } from './merge.mjs';
+import { createMerger, mergeField, mergeList, mergeDeclared, finishReport, clone, sortKeys, authoredPart } from './merge.mjs';
 import { MODULE_SCHEMA, BLOCK_TYPES, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
@@ -324,6 +324,8 @@ export function convertGuide(old, opts = {}) {
   );
   mod.parts = parts.list;
   mergeField(m, 'checks', fresh.checks, sourceOf.checks, { mod, outFields: fields });
+  // Glosses (BundleContent.glosses) have no source: a writer adds them, kept as a hand edit.
+  if (authoredPart(m, 'glosses')) mergeField(m, 'glosses', undefined, null, { mod, outFields: fields });
   if (!Array.isArray(mod.checks)) mod.checks = [];
   if (old.guide)
     add('checks', 'guide_checks_by_hand', mod.checks.length === 3 ? 'three checks, written by hand in the module file (kept on rerun)' : `the source has no checks; write three by hand (the file has ${mod.checks.length})`);

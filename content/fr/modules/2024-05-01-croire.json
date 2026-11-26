@@ -294,5 +294,12 @@
         }
       ]
     }
+  ],
+  "glosses": [
+    {
+      "fr": "croyais",
+      "en": "believed, thought",
+      "note": "imparfait of {croire}: {je croyais que…}"
+    }
   ]
 }

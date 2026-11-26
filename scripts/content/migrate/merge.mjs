@@ -132,6 +132,13 @@ export function mergeField(m, f, freshVal, sourceVal, { mod, outFields, prior })
 export const priorBase = (m, prior) => (m.rec && prior ? { out: hashOf(prior.value) } : null);
 
 /**
+ * Whether an authored field with no source (glosses) is a part of this module: the file holds it, a hand fix records
+ * it, or the record has a base for it. A module that never had the field keeps a record without it, so adding the
+ * field to the converter changes no other module's record.
+ */
+export const authoredPart = (m, f) => Boolean((m.ex && f in m.ex) || f in m.fixes || m.idRec?.fields?.[f] !== undefined);
+
+/**
  * `teaches` or `tests` (spec 5.2).
  *
  * While the course map still declares teaching (`decl` is an object, course-map.mjs declarationsOf), the field is a

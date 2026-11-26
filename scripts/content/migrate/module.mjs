@@ -11,7 +11,7 @@ import { readModule } from '../../graph/course.mjs';
 import { convertTyped, convertFillblank, convertSentence, normText } from './items.mjs';
 import { markFrench, unmark } from './mark-french.mjs';
 import { makeItemId, makeConceptId, makeTableId, acceptedAnswers, acceptsAnOldAnswer } from '../item-ids.mjs';
-import { createMerger, mergeVocabulary, mergeDeclared, diffs, hashOf, clone, pairByContent, sourceCards } from './merge.mjs';
+import { createMerger, mergeVocabulary, mergeDeclared, diffs, hashOf, clone, pairByContent, sourceCards, authoredPart } from './merge.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { HOLDS, REWRITES } from './holds.mjs';
 
@@ -453,6 +453,9 @@ export function convertModule(old, opts = {}) {
   for (const h of held) add(h.ref, 'held_out', `"${h.prompt ?? ''}" → "${h.answer ?? ''}": ${h.reason}`);
 
   fieldPart('options', fresh.options);
+  // Glosses (BundleContent.glosses) have no source in the live app: content:glosses or a writer adds them, and each
+  // module's list is kept and recorded as a hand edit.
+  if (authoredPart(merger, 'glosses')) fieldPart('glosses', undefined);
   mergeDeclared(merger, opts.declaration, 'tests', { mod, outFields: outRecord.fields, testsBefore: fresh.tests, written: opts.written });
 
   // Position words in what the source says (spec 5.2): reported, written as they are, fixed by hand.

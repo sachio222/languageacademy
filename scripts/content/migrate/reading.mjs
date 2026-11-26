@@ -7,7 +7,7 @@
 import { markFrench, unmark } from './mark-french.mjs';
 import { normText, mistakesOf, acceptOf } from './items.mjs';
 import { slugify, freeId, makeItemId } from '../item-ids.mjs';
-import { createMerger, mergeField, mergeList, mergeVocabulary, mergeDeclared, finishReport, clone, sortKeys, sourceCards } from './merge.mjs';
+import { createMerger, mergeField, mergeList, mergeVocabulary, mergeDeclared, finishReport, clone, sortKeys, sourceCards, authoredPart } from './merge.mjs';
 import { preTeachRows } from './course-map.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { tokenize, fold } from '../../graph/fr/tokenize.mjs';
@@ -304,6 +304,8 @@ export function readingFrom(old, story, opts = {}) {
   }
   if (notes) add('glossary', 'dropped_field', `${notes} story glossary notes (a glossary row holds fr and en)`);
   mergeField(m, 'glossary', glossary.length ? glossary : undefined, story?.vocab ?? null, { mod, outFields: fields });
+  // Glosses (BundleContent.glosses) have no source: content:glosses or a writer adds them, kept as a hand edit.
+  if (authoredPart(m, 'glosses')) mergeField(m, 'glosses', undefined, null, { mod, outFields: fields });
 
   const srcItems = old.exerciseConfig.items || [];
   const items = mergeList(

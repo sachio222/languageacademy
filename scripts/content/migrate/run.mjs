@@ -505,6 +505,15 @@ async function modules(args, flags, kindWords = ['modules']) {
     );
   } else console.log(`course map: split already (no teaching field in ${rel(join(graphDir, 'languages/fr/course-map.json'))}); teaches and tests kept as written`);
   console.log(`report: ${[...lineKinds].map(([kind, n]) => `${kind} ${n}`).join(', ')}`);
+  // --check covers the glosses too (content:glosses): a lesson or reading missing a gloss for a form of a taught word
+  // would change.
+  if (flags.check) {
+    const { planGlosses } = await import('../glosses.mjs');
+    const changes = await planGlosses({ root: ROOT, graphDir: join(graphDir, 'languages', 'fr') });
+    for (const c of changes) console.log(`would change ${rel(c.file)} (glosses; run pnpm content:glosses)`);
+    if (changes.length) status |= 1;
+    else console.log('glosses: every lesson and reading holds its glosses');
+  }
   return status;
 }
 

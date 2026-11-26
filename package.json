@@ -18,6 +18,7 @@
     "content:bundle": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/cli.mjs bundle",
     "content:vendor-check": "node scripts/content/vendor-check.mjs",
     "content:src-guard": "node scripts/content/src-guard.mjs",
+    "content:glosses": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/glosses.mjs",
     "content:migrate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/migrate/run.mjs",
     "content:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/content/test/**/*.test.mjs\"",
     "graph:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/graph/test/**/*.test.mjs\"",

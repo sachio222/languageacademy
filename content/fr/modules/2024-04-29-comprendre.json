@@ -289,5 +289,12 @@
         }
       ]
     }
+  ],
+  "glosses": [
+    {
+      "fr": "compris",
+      "en": "understood",
+      "note": "past participle of {comprendre}, like {pris}: {j'ai compris}"
+    }
   ]
 }

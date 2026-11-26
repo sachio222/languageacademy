@@ -1094,6 +1094,23 @@
         "en": "would buy"
       }
     ],
+    "glosses": [
+      {
+        "fr": "assise",
+        "en": "sitting",
+        "note": "past participle of {asseoir}"
+      },
+      {
+        "fr": "savait",
+        "en": "knew",
+        "note": "imparfait of {savoir}"
+      },
+      {
+        "fr": "saura",
+        "en": "will know",
+        "note": "future of {savoir}"
+      }
+    ],
     "items/reading-10-4": {
       "id": "reading-10-4",
       "type": "comprehension",
@@ -1463,6 +1480,18 @@
       {
         "fr": "quels",
         "en": "which"
+      }
+    ],
+    "glosses": [
+      {
+        "fr": "étrangères",
+        "en": "foreign",
+        "note": "feminine plural of {étranger}"
+      },
+      {
+        "fr": "françaises",
+        "en": "French",
+        "note": "feminine plural of {français}"
       }
     ],
     "title": "Reading - {La France Moderne}"
@@ -4757,6 +4786,25 @@
     "description": "Complete sentences using progressive tenses, communication verbs, and essential vocabulary from this unit!",
     "title": "Basic Fluency Practice - Fill in the Blanks"
   },
+  "2024-04-28-comparison-modifiers": {
+    "glosses": [
+      {
+        "fr": "enchantée",
+        "en": "pleased to meet you",
+        "note": "feminine of {enchanté}"
+      },
+      {
+        "fr": "études",
+        "en": "studies",
+        "note": "plural of {étude}: {tes études}, your studies"
+      },
+      {
+        "fr": "compris",
+        "en": "understood",
+        "note": "past participle of {comprendre}: {Paul a compris}"
+      }
+    ]
+  },
   "2024-04-29-comprendre": {
     "concepts": [
       {
@@ -4788,6 +4836,13 @@
         "term": "Building on prendre knowledge",
         "definition": "Three verbs in prendre family: prendre (take), apprendre (learn), comprendre (understand)",
         "example": "{j'apprends} → {je comprends} (I learn → I understand) - natural progression!"
+      }
+    ],
+    "glosses": [
+      {
+        "fr": "compris",
+        "en": "understood",
+        "note": "past participle of {comprendre}, like {pris}: {j'ai compris}"
       }
     ],
     "vocabulary/tu-comprends-fr.you-understand": {
@@ -4831,6 +4886,15 @@
       }
     ],
     "title": "{connaître} - To Know (People/Places)"
+  },
+  "2024-05-01-croire": {
+    "glosses": [
+      {
+        "fr": "croyais",
+        "en": "believed, thought",
+        "note": "imparfait of {croire}: {je croyais que…}"
+      }
+    ]
   },
   "2024-05-02-discourse-markers": {
     "concepts": [
@@ -4908,6 +4972,13 @@
         "term": "Complete sentence composition",
         "definition": "Now you can build full sentences about learning and knowing",
         "example": "{J'ai une question} (I have a question), {C'est une bonne idée} (That's a good idea), {Je vais au cours} (I'm going to class)"
+      }
+    ],
+    "glosses": [
+      {
+        "fr": "enchantée",
+        "en": "pleased to meet you",
+        "note": "feminine of {enchanté}, said or written by a woman"
       }
     ]
   },
@@ -5066,12 +5137,25 @@
         "en": "to ask questions"
       },
       {
-        "fr": "pose",
-        "en": "asks"
-      },
-      {
         "fr": "demande du temps",
         "en": "takes time"
+      }
+    ],
+    "glosses": [
+      {
+        "fr": "étudiante",
+        "en": "student (a woman)",
+        "note": "feminine of {étudiant}"
+      },
+      {
+        "fr": "étudiants",
+        "en": "students",
+        "note": "plural of {étudiant}"
+      },
+      {
+        "fr": "pose",
+        "en": "asks",
+        "note": "present of {poser}: {Socrate pose des questions}"
       }
     ],
     "items/reading-7-3": {
@@ -5193,6 +5277,13 @@
         "term": "savoir vs connaître (preview)",
         "definition": "savoir = facts/skills, connaître = people/places (you'll learn connaître next!)",
         "example": "{je sais la réponse} (I know the answer). To know Marie, a person, the next lesson uses another verb."
+      }
+    ],
+    "glosses": [
+      {
+        "fr": "savais",
+        "en": "knew",
+        "note": "imparfait of {savoir}: {je ne savais pas}"
       }
     ]
   },
@@ -5651,6 +5742,13 @@
       {
         "fr": "comprenais",
         "en": "understood (was understanding)"
+      }
+    ],
+    "glosses": [
+      {
+        "fr": "comprenais",
+        "en": "understood",
+        "note": "imparfait of {comprendre}"
       }
     ],
     "items/i-pense-a-demain": {

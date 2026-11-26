@@ -691,5 +691,37 @@
       ],
       "hint": "{À la…}"
     }
+  ],
+  "glosses": [
+    {
+      "fr": "volerais",
+      "en": "would fly",
+      "note": "conditional of {voler}"
+    },
+    {
+      "fr": "sachent",
+      "en": "know how to",
+      "note": "subjunctive of {savoir}"
+    },
+    {
+      "fr": "pleuve",
+      "en": "rains",
+      "note": "subjunctive of {pleuvoir}"
+    },
+    {
+      "fr": "irons",
+      "en": "will go",
+      "note": "future of {aller}"
+    },
+    {
+      "fr": "pourras",
+      "en": "will be able to",
+      "note": "future of {pouvoir}"
+    },
+    {
+      "fr": "verras",
+      "en": "will see",
+      "note": "future of {voir}"
+    }
   ]
 }

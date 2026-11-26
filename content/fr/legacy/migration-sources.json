@@ -8273,6 +8273,10 @@
         "src": "a5648aafaa09",
         "out": "2be88ca4242c"
       },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "story_id": {
         "src": "b1d5781111d8",
         "out": "c7230878be83"
@@ -12644,6 +12648,10 @@
       },
       "glossary": {
         "src": "30902fab2c74",
+        "out": "2be88ca4242c"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
       "story_id": {
@@ -33652,6 +33660,10 @@
         "src": "1d3f18456300",
         "out": "1d3f18456300"
       },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "options": {
         "src": "7cb6efb98ba5",
         "out": "2be88ca4242c"
@@ -33837,6 +33849,10 @@
       "description": {
         "src": "8ef9f8c0f0d3",
         "out": "8ef9f8c0f0d3"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "options": {
         "src": "7cb6efb98ba5",
@@ -34189,6 +34205,10 @@
       "description": {
         "src": "3839c5560301",
         "out": "3839c5560301"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "options": {
         "src": "7cb6efb98ba5",
@@ -34662,6 +34682,10 @@
       "description": {
         "src": "413784a8545c",
         "out": "413784a8545c"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "options": {
         "src": "7cb6efb98ba5",
@@ -35482,6 +35506,10 @@
       "glossary": {
         "src": "474e8bfa353d",
         "out": "03195b688967"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "story_id": {
         "src": "902ba3cda188",
@@ -36328,6 +36356,10 @@
       "description": {
         "src": "91ce205f1938",
         "out": "91ce205f1938"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "options": {
         "src": "7cb6efb98ba5",
@@ -38905,6 +38937,10 @@
       },
       "glossary": {
         "src": "4b915c574a5d",
+        "out": "2be88ca4242c"
+      },
+      "glosses": {
+        "src": "2be88ca4242c",
         "out": "2be88ca4242c"
       },
       "story_id": {

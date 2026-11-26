@@ -30,9 +30,9 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 822 |
-| Passage words with no pop-up | 7 |
+| Passage words with no pop-up | 6 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1073 |
+| Hand edits kept | 1079 |
 | Live ids with no converted item | 339 (24 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
@@ -1774,10 +1774,6 @@ Each word below appears in the reading’s passage and has no dictionary entry (
 
 - 5 words: boisson, favorite, fées, vertes, Terrasse
 
-**2024-05-07-reading-7**
-
-- 1 word: étudiante
-
 **2024-02-12-reading-11**
 
 - 1 word: tram
@@ -2081,12 +2077,14 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `vocabulary[2].word_id` "tu-comprends-fr.you-understand" → "tu-comprends-fr"
 - `concepts[3].example` "je comprends le français (I understand French), je comprends Marie (I understand Marie)" → "je comprends le français (I understand French), je comprends Marie (I understand Marie), je comprends la leçon (I understand the lesson)"
+- `glosses` "(none)" → "["fr":"compris","en":"understood","note":"past participle of comprendre, like pris: j'ai compris"]"
 
 **2024-05-08-savoir**
 
 - `concepts[0].example` "je sais la réponse (I know the answer), je sais nager (I know how to swim)" → "je sais la réponse (I know the answer), je sais parler anglais (I can speak English)"
 - `concepts[3].example` "je sais parler français (I know how to speak French), je sais nager (I can swim)" → "je sais parler français (I know how to speak French), je sais faire du café (I know how to make coffee)"
 - `concepts[4].example` "je sais la réponse (I know the answer), je connais Marie (I know Marie) ← next module!" → "je sais la réponse (I know the answer). To know Marie, a person, the next lesson uses another verb."
+- `glosses` "(none)" → "["fr":"savais","en":"knew","note":"imparfait of savoir: je ne savais pas"]"
 
 **2024-04-30-connaitre**
 
@@ -2096,9 +2094,21 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `concepts[2].example` "je pense que oui (I think so), je pense que non (I don't think so)" → "je pense que oui (I think so), je pense que non (I don't think so), je pense que je connais Marie (I think I know Marie), je pense qu'il sait parler anglais (I think he can speak English)"
 
+**2024-05-01-croire**
+
+- `glosses` "(none)" → "["fr":"croyais","en":"believed, thought","note":"imparfait of croire: je croyais que…"]"
+
+**2024-05-03-knowledge-nouns**
+
+- `glosses` "(none)" → "["fr":"enchantée","en":"pleased to meet you","note":"feminine of enchanté, said or written by a woman"]"
+
 **2024-05-02-discourse-markers**
 
 - `concepts[5].example` "Bon, on commence? (Well, shall we start?), Alors, tu viens? (So, are you coming?)" → "Bon, on commence? (Well, shall we start?), Alors, tu viens? (So, are you coming?), Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui. (So, are you going to the university? Actually, I don't have class today.), Bon, voilà la réponse. (Well, there's the answer.)"
+
+**2024-04-28-comparison-modifiers**
+
+- `glosses` "(none)" → "["fr":"enchantée","en":"pleased to meet you","note":"feminine of enchanté","fr":"études","en":"studies","note":"plural of étude: tes études, your studies","fr":"compris","en":"understood","note":"past participle of comprendre: Paul a compris"]"
 
 **2024-05-07-reading-7**
 
@@ -2118,10 +2128,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[23].note` ""Unit 6 verb"" → "(removed)"
 - `vocabulary[25].note` ""Unit 6 verb"" → "(removed)"
 - `vocabulary[55].note` ""Unit 6 verb"" → "(removed)"
-- `glossary[0].fr` "étudiant(s)" → "poser des questions"
-- `glossary[0].en` "student(s)" → "to ask questions"
-- `glossary[1].fr` "poser des questions" → "pose"
-- `glossary[1].en` "to ask questions" → "asks"
+- `glossary` "["fr":"étudiant(s)","en":"student(s)","fr":"poser des questions","en":"to ask questions","fr":"demande du temps","en":"takes time"]" → "["fr":"poser des questions","en":"to ask questions","fr":"demande du temps","en":"takes time"]"
+- `glosses` "(none)" → "["fr":"étudiante","en":"student (a woman)","note":"feminine of étudiant","fr":"étudiants","en":"students","note":"plural of étudiant","fr":"pose","en":"asks","note":"present of poser: Socrate pose des questions"]"
 - `items[2].answer` "demander des questions" → "poser des questions"
 
 **2024-05-11-unit-7-practice**
@@ -2193,6 +2201,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `title` "Reading 8 - Ma Journée" → "Reading - Ma Journée"
 - `description` "A story about a typical day. Uses temporal words, reflexive verbs, and all Unit 8 vocabulary!" → "A story about a typical day. Uses temporal words, reflexive verbs, and all this unit's vocabulary!"
 - `glossary` "(none)" → "["fr":"comprenais","en":"understood (was understanding)"]"
+- `glosses` "(none)" → "["fr":"comprenais","en":"understood","note":"imparfait of comprendre"]"
 - `items[9]` "(none)" → ""id":"i-pense-a-demain","type":"comprehension","question":"What pattern shows Marie's daily commitment to learning?","cue":"She goes from morning preparation to...","answer":"elle rentre contente et pense à demain","accept":["je rentre contente et pense à demain","contente et pense à demain","elle pense à demain"],"hint":"What cycle does her day show from morning to evening?""
 
 **2024-05-25-unit-8-practice**
@@ -2391,6 +2400,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `title` "Reading 10 - Mes Rêves et Mes Espoirs" → "Reading - Mes Rêves et Mes Espoirs"
 - `description` "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more" → "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more"
 - `glossary` "(none)" → "["fr":"assise","en":"sitting (feminine)","fr":"savait","en":"knew","fr":"saura","en":"will know","fr":"achèterait","en":"would buy"]"
+- `glosses` "(none)" → "["fr":"assise","en":"sitting","note":"past participle of asseoir","fr":"savait","en":"knew","note":"imparfait of savoir","fr":"saura","en":"will know","note":"future of savoir"]"
 - `items[3].question` "Si Sophie était riche, qu'est-ce qu'elle achèterait?" → "Si tu étais Sophie, qu'est-ce que tu achèterais ?"
 - `items[3].cue` "If Sophie were rich, what would she buy?" → "If you were Sophie, what would you buy?"
 
@@ -2433,6 +2443,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading 11 - La France Moderne" → "Reading - La France Moderne"
 - `glossary` "(none)" → "["fr":"compte","en":"has (in number)","fr":"attire","en":"attracts","fr":"lieux","en":"places","fr":"étrangères","en":"foreign","fr":"peintres","en":"painters","fr":"mémoire","en":"memory","fr":"également","en":"also, as well","fr":"inoubliables","en":"unforgettable","fr":"plusieurs","en":"several","fr":"françaises","en":"French","fr":"au-delà","en":"beyond","fr":"traverse","en":"crosses","fr":"au bord de","en":"on the shore of","fr":"vélo","en":"bike","fr":"quels","en":"which"]"
+- `glosses` "(none)" → "["fr":"étrangères","en":"foreign","note":"feminine plural of étranger","fr":"françaises","en":"French","note":"feminine plural of français"]"
 
 **2024-02-16-unit-11-practice**
 

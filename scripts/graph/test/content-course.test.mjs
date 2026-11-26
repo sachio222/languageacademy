@@ -217,6 +217,7 @@ test('every learner-facing string of the real course has a ref, and only deliber
           : /^vocabulary\[\d+\]\.fr$/.test(t.path) ? 'vocabulary word (taught)'
           : /^vocabulary\[\d+\]\.info_card\./.test(t.path) ? 'info card (native)'
             : /^glossary\[/.test(t.path) ? 'glossary (pop-up source)'
+            : /^glosses\[/.test(t.path) ? 'gloss (pop-up source; it covers forms in the module\'s French)'
               : /^checks\[\d+\]\.sound$/.test(t.path) ? 'check sound (respelling)'
                 : t.role === 'block' && blockCellRole(t.path) === 'none' ? 'block cell, neither French nor native'
                   : `UNREAD ${t.path}`;

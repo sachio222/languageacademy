@@ -588,12 +588,25 @@
       "en": "to ask questions"
     },
     {
-      "fr": "pose",
-      "en": "asks"
-    },
-    {
       "fr": "demande du temps",
       "en": "takes time"
+    }
+  ],
+  "glosses": [
+    {
+      "fr": "étudiante",
+      "en": "student (a woman)",
+      "note": "feminine of {étudiant}"
+    },
+    {
+      "fr": "étudiants",
+      "en": "students",
+      "note": "plural of {étudiant}"
+    },
+    {
+      "fr": "pose",
+      "en": "asks",
+      "note": "present of {poser}: {Socrate pose des questions}"
     }
   ],
   "items": [

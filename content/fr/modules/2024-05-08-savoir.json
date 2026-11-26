@@ -291,5 +291,12 @@
         }
       ]
     }
+  ],
+  "glosses": [
+    {
+      "fr": "savais",
+      "en": "knew",
+      "note": "imparfait of {savoir}: {je ne savais pas}"
+    }
   ]
 }

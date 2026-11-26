@@ -329,3 +329,48 @@ function run(ctx) {
   results.set(ctx, out);
   return out;
 }
+
+// The forms content:glosses glosses (Jake, 2026-11-25): in each lesson and reading, every token of French L glosses
+// (an item's `glossable` texts, never a typed word) that the taught-before rule would report because the form is not
+// taught, while its word is taught at or before the module. Elided tokens (j', l') and clitics (-il) are left out, since
+// L's matcher cannot tap them. Existing glosses are not read, so the answer is the same however often it is asked.
+// Returns Map<moduleKey, Array<{ surface, key, reading, lemma, itemRef }>>, each module's forms in order of first use,
+// once per key (the form lower-cased, apostrophes straight).
+export function glossCandidates(ctx, kinds = ['lesson', 'reading']) {
+  const { graph, timeline, index } = ctx;
+  const analysis = analyzeItems(ctx);
+  const cognate = cognateTest(ctx);
+  const isWord = (f) => index.has(f) || graph.names.has(f);
+  const out = new Map();
+  for (const m of ctx.course) {
+    if (!kinds.includes(m.kind)) continue;
+    const found = new Map();
+    for (const it of m.items) {
+      if (OUTSIDE.has(it.source) || !(it.glossable ?? []).length) continue;
+      const ignore = suppressions(ctx, m.moduleKey, it.ref);
+      for (const a of analysis.get(it.ref) ?? []) {
+        if (!it.glossable.includes(a.text)) continue;
+        const typedAt = typedTest(it, a, isWord);
+        a.tokens.forEach((t, i) => {
+          if (typedAt(i)) return;
+          const lk = lookupKey(t);
+          if (graph.names.has(t.fold) || graph.names.has(lk)) return;
+          if (/['’]$/.test(t.surface) || t.surface.startsWith('-')) return;
+          const rs = a.readings[i];
+          if (!rs.length || ignore.has(lk) || ignore.has(t.fold) || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
+          if (timeline.isTokenAvailable(rs, m.position) || cognate.isCognate(rs, m.position)) return;
+          if ((a.licenses ?? []).some((l) => l.at.has(i) && timeline.isAvailable(l.id, m.position) && rs.some((r) => l.heads.has(r.headwordId)))) return;
+          const heads = [...new Set(rs.map((r) => r.headwordId))];
+          const known = (h) => timeline.isTaught(h, m.position) || (heads.length === 1 && timeline.isAvailable(h, m.position));
+          const reading = rs.find((r) => known(r.headwordId) && r.via !== 'lemma') ?? rs.find((r) => known(r.headwordId));
+          if (!reading) return;
+          const key = t.norm;
+          if (!found.has(key))
+            found.set(key, { surface: t.surface, key, reading, lemma: graph.nodes.get(reading.headwordId)?.lemma ?? null, itemRef: it.ref });
+        });
+      }
+    }
+    if (found.size) out.set(m.moduleKey, [...found.values()]);
+  }
+  return out;
+}

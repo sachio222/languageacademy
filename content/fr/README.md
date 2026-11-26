@@ -61,7 +61,9 @@ Every answer and accept must pass the app's answer checker, and no listed mistak
 
 A word new to the learner is taught as a vocabulary card where it is first used. A different form of a word already taught (*ils comprennent* after *comprendre*, *bons* after *bon*) gets a gloss instead: a `glosses` row `{ "fr": "ils comprennent", "en": "they understand", "note": "plural of {il comprend}" }` on the lesson, reading or guide. L shows its meaning when the learner taps the form, and never studies, reviews or tests it. `fr` is the form as the text spells it (at most 100 characters), `en` its meaning (at most 200), and the optional `note` names the form, with French in braces (at most 200). A gloss that spells one of the module's own word cards fails the check (`gloss_is_card`).
 
-In a lesson, L glosses the French in braces in prompts, concept cards, tables and examples, never the answer side. In a reading, it glosses the passage.
+In a lesson, L glosses the French in braces in prompts, concept cards, tables and examples, never the answer side. In a reading, it glosses the passage. The checker reads the same French: a form a gloss covers counts as allowed when its word is taught at or before the module. A gloss over a word no lesson has taught yet is `gloss_of_untaught`, since a gloss never stands in for teaching the word; in a reading that word stays an `untaught-word` issue, as a glossary word does.
+
+`pnpm content:glosses` adds the glosses the course needs: in each lesson and reading, a row for every form of a taught word that this French uses before the form is taught. It takes the English from the reading's glossary row or the dictionary, else from the word's card, and its note names the form ("conditional of {voler}"). Rows already in a module stay as written, so edit a row it wrote freely. It then runs `pnpm content:migrate` to record the edits. `pnpm content:migrate --check` fails while a gloss is missing.
 
 ## French inside English text
 
@@ -105,7 +107,7 @@ A change to the live app's lessons is made on `main`. To bring it here:
 ```
 pnpm content:validate          # every file loads, with every problem listed
 pnpm content:test
-pnpm content:migrate --check   # the converted modules, records and report match a rerun
+pnpm content:migrate --check   # the converted modules, records and report match a rerun, and no gloss is missing
 pnpm content:bundle --check    # the bundle for L, its release checks and L's own checker
 pnpm graph:check --budget      # the language-graph checker within its issue budget
 pnpm build

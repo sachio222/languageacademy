@@ -871,6 +871,23 @@
       "en": "would buy"
     }
   ],
+  "glosses": [
+    {
+      "fr": "assise",
+      "en": "sitting",
+      "note": "past participle of {asseoir}"
+    },
+    {
+      "fr": "savait",
+      "en": "knew",
+      "note": "imparfait of {savoir}"
+    },
+    {
+      "fr": "saura",
+      "en": "will know",
+      "note": "future of {savoir}"
+    }
+  ],
   "items": [
     {
       "id": "reading-10-1",

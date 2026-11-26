@@ -1021,6 +1021,18 @@
       "en": "which"
     }
   ],
+  "glosses": [
+    {
+      "fr": "étrangères",
+      "en": "foreign",
+      "note": "feminine plural of {étranger}"
+    },
+    {
+      "fr": "françaises",
+      "en": "French",
+      "note": "feminine plural of {français}"
+    }
+  ],
   "items": [
     {
       "id": "reading-11-1",

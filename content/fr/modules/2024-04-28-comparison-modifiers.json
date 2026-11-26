@@ -182,5 +182,22 @@
       "answer": "je sais tout",
       "hint": "je sais + tout (pronoun)"
     }
+  ],
+  "glosses": [
+    {
+      "fr": "enchantée",
+      "en": "pleased to meet you",
+      "note": "feminine of {enchanté}"
+    },
+    {
+      "fr": "études",
+      "en": "studies",
+      "note": "plural of {étude}: {tes études}, your studies"
+    },
+    {
+      "fr": "compris",
+      "en": "understood",
+      "note": "past participle of {comprendre}: {Paul a compris}"
+    }
   ]
 }
