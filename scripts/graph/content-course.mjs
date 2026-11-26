@@ -93,7 +93,7 @@ export function blockCellRole(path) {
 const isReview = (v) => v?.review === true;
 
 // Where a module text sits, as an item source. null: not read as an item (the vocabulary word itself is what the
-// module teaches; glossary rows are pop-up sources; info cards are native text outside the rule; a check's sound is a
+// module teaches; glossary rows and glosses are pop-up sources; info cards are native text outside the rule; a check's sound is a
 // respelling). A review row's word teaches nothing, so it is read as French the learner sees ('vocab-review'): the
 // taught-before rule checks it and it counts as a use for the reuse windows.
 function moduleSource(mod, path, role) {
@@ -101,7 +101,7 @@ function moduleSource(mod, path, role) {
   const word = /^vocabulary\[(\d+)\]\.fr$/.exec(path);
   if (word && isReview(mod.vocabulary?.[Number(word[1])])) return 'vocab-review';
   if (/^vocabulary\[\d+\]\.(fr$|info_card\b)/.test(path)) return null;
-  if (top === 'glossary') return null;
+  if (top === 'glossary' || top === 'glosses') return null;
   if (/^checks\[\d+\]\.sound$/.test(path)) return null;
   if (role === 'block' && blockCellRole(path) === 'none') return null;
   if (top === 'title' || top === 'topic' || /^tables\[\d+\]\.title$/.test(path)) return 'title';
@@ -119,6 +119,13 @@ function moduleSource(mod, path, role) {
 
 const textItem = (ref, source, shown) => ({ ref, source, type: null, french: [], shown, lenient: [], englishPrompt: null, instruction: null });
 
+// The module texts whose French L glosses with the module's glosses (L c3da2c0, j-stories.js J.gloss): in a lesson the
+// French in concept cards, tables and Vocabulary Intro examples; in a guide its parts and checks; in a reading the
+// passage only. An item's own glossable French (its prompt and shown French, never an answer or a choice) is set in
+// readItem. `glossable` on a normalized item lists the texts a gloss may cover.
+const GLOSSED_SOURCES = { lesson: new Set(['concept', 'table', 'vocab-example']), guide: new Set(['guide', 'check']), reading: new Set(['passage']) };
+const glossesItems = (kind) => kind === 'lesson';
+
 function moduleItems(key, mod) {
   const out = [];
   for (const t of moduleTexts(mod)) {
@@ -126,7 +133,9 @@ function moduleItems(key, mod) {
     const source = moduleSource(mod, t.path, t.role);
     if (source === null) continue;
     const fr = t.role === 'fr' || (t.role === 'block' && blockCellRole(t.path) === 'fr');
-    out.push(textItem(`${key}#${refPath(mod, t.path)}`, source, fr ? [t.text.trim()] : spansOf(t.text)));
+    const item = textItem(`${key}#${refPath(mod, t.path)}`, source, fr ? [t.text.trim()] : spansOf(t.text));
+    if (GLOSSED_SOURCES[mod.kind]?.has(source)) item.glossable = [...item.shown];
+    out.push(item);
   }
   return out;
 }
@@ -137,9 +146,10 @@ function fillBlanks(text, answers) {
   return tidy(text.replace(/___/g, () => answers[i++] ?? ''));
 }
 
-function readItem(key, item) {
+function readItem(key, item, kind) {
   const base = `${key}#${item.id}`;
   const own = { ...textItem(base, 'items', []), type: item.type };
+  const options = new Set();
   const extra = [];
   for (const t of itemTexts(item)) {
     const field = t.path.split(/[.[]/)[0];
@@ -156,6 +166,7 @@ function readItem(key, item) {
     } else if (t.role === 'fr') {
       // shown, a French option; a gap-fill text is read filled with its answers below
       if (!(item.type === 'gapfill' && field === 'text')) own.shown.push(t.text.trim());
+      if (field === 'options') options.add(t.text.trim());
     } else if (t.role === 'native_fr') {
       if (PROMPT_FIELDS.has(field)) own.shown.push(...spansOf(t.text));
       else extra.push(textItem(`${base}/${field}`, 'instruction', spansOf(t.text)));
@@ -167,6 +178,9 @@ function readItem(key, item) {
     own.blankAnswers = answers;
     own.gapFill = true;
   }
+  // L glosses a lesson item's prompt and shown French, and the words of a gap-fill around its blanks (the rule leaves
+  // the typed blanks out); never a choice, which is a button, nor an answer.
+  if (glossesItems(kind)) own.glossable = [...own.shown.filter((x) => !options.has(x)), ...(item.type === 'gapfill' ? [own.french[0]] : [])];
   own.englishPrompt = item.prompt ?? item.situation ?? item.gloss ?? null;
   own.instruction = item.instruction ?? item.question ?? item.situation ?? null;
   return [own, ...extra];
@@ -185,7 +199,7 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
     written.forEach((mod, j) => {
       const key = mod.module_key;
       const items = [];
-      for (const item of mod.items ?? []) items.push(...readItem(key, item));
+      for (const item of mod.items ?? []) items.push(...readItem(key, item, mod.kind));
       items.push(...moduleItems(key, mod));
       // The unit's can-do lines and description (outline, native text with spans) and its French can-do example say
       // what the unit promises the learner can do: checked where the unit's written modules end.
@@ -219,6 +233,9 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         blankProblems: [],
         teaches: { words: [...(mod.teaches?.words ?? [])], constructions: [...(mod.teaches?.constructions ?? [])] },
         tests: [...(mod.tests?.constructions ?? [])],
+        // The module's glosses (fr only): forms of known words the learner taps for a meaning; taught-before counts a
+        // token they cover as allowed.
+        glosses: (mod.glosses ?? []).map((g) => g.fr).filter((f) => typeof f === 'string'),
       });
     });
   }

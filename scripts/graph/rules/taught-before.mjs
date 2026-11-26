@@ -140,6 +140,22 @@ function typedTest(it, a, isWord) {
 
 const results = new WeakMap();
 
+// For one analyzed text of an item in module m: Map<token index, gloss fr> of the tokens a gloss row of m covers, the
+// way L's tap-a-word matcher reads the text (whole words, case and apostrophes ignored, accents kept; a longer gloss
+// wins). Only French L glosses is covered: the item's `glossable` texts, and in a gap-fill the words around the blanks.
+function glossCover(m, it, a, typedAt, glossTokens) {
+  const out = new Map();
+  if (!glossTokens.length || !(it.glossable ?? []).includes(a.text)) return out;
+  const keys = a.tokens.map((t) => t.norm);
+  for (const { fr, seq } of glossTokens) {
+    for (let j = 0; j + seq.length <= keys.length; j++) {
+      if (!seq.every((k, n) => keys[j + n] === k)) continue;
+      for (let n = 0; n < seq.length; n++) if (!typedAt(j + n) && !out.has(j + n)) out.set(j + n, fr);
+    }
+  }
+  return out;
+}
+
 export function ruleTaughtBefore(ctx) {
   return run(ctx).issues;
 }
@@ -183,12 +199,19 @@ function run(ctx) {
       else seenLenient.add(lk);
     };
     const seenCx = new Set();
+    // The module's glosses as token sequences, longest first; each gloss over a word not taught yet is reported once.
+    const glossTokens = (m.glosses ?? [])
+      .map((fr) => ({ fr, seq: tokenize(fr, { isWord }).map((t) => t.norm) }))
+      .filter((g) => g.seq.length)
+      .sort((x, y) => y.seq.length - x.seq.length);
+    const seenGloss = new Set();
     for (const it of m.items) {
       // Hints, feedback, instructions and titles stay outside this rule (Jake); their French still counts for reuse.
       if (OUTSIDE.has(it.source)) continue;
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
         const typedAt = typedTest(it, a, isWord);
+        const glossed = glossCover(m, it, a, typedAt, glossTokens);
         a.tokens.forEach((t, i) => {
           const lk = lookupKey(t);
           if (graph.names.has(t.fold) || graph.names.has(lk)) return;
@@ -216,8 +239,34 @@ function run(ctx) {
           // a word a taught construction licenses inside its own match (the de of "pas de")
           if ((a.licenses ?? []).some((l) => l.at.has(i) && timeline.isAvailable(l.id, m.position)
             && rs.some((r) => l.heads.has(r.headwordId)))) return;
-          markWord(a, t, lk);
           const heads = [...new Set(rs.map((r) => r.headwordId))];
+          // A form a gloss covers is allowed, neither untaught nor taught, when its word is taught at or before this
+          // module (Jake, 2026-11-25). A gloss over a word not taught yet would skip its teaching: gloss_of_untaught,
+          // once per gloss row. A reading keeps its glossary rules: there the word stays an untaught-word issue.
+          const gloss = glossed.get(i);
+          if (gloss !== undefined) {
+            const known = heads.some((h) => timeline.isTaught(h, m.position) || (heads.length === 1 && timeline.isAvailable(h, m.position)));
+            if (known) return;
+            if (m.kind !== 'reading') {
+              if (!seenGloss.has(gloss)) {
+                seenGloss.add(gloss);
+                const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);
+                const named = laters.length ? heads.find((h) => laterNote(h, m.position) === Math.min(...laters)) : heads[0];
+                issues.push(issue({
+                  moduleKey: m.moduleKey, position: m.position, itemRef: it.ref, surface: t.surface,
+                  rule: 'gloss_of_untaught', nodeId: named,
+                  reason: laters.length ? 'later' : 'nowhere',
+                  taughtLaterAt: laters.length ? at(Math.min(...laters)) : null,
+                  lemma: graph.nodes.get(named)?.lemma ?? null,
+                  text: a.text,
+                  message: `the gloss "${gloss}" of ${m.moduleKey} covers "${t.surface}", whose word is not taught yet (${it.ref}: ${a.text}); ${laters.length ? taughtClause(Math.min(...laters)) : 'it is not taught anywhere in the course'}. A gloss is for a form of a word already taught: teach the word as a card here or earlier, or drop the gloss`,
+                  fix: { kind: 'teach-earlier', moduleKey: m.moduleKey },
+                }));
+              }
+              return;
+            }
+          }
+          markWord(a, t, lk);
           const laters = heads.map((h) => laterNote(h, m.position)).filter((x) => x !== null);
           // A headword open only through the Reference counts as taught earlier only when the token reads as no other
           // word, as in timeline.isTokenAvailable.

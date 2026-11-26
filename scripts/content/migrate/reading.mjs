@@ -151,12 +151,13 @@ const foldTok = (t) => fold(t.surface.replace(/[’ʼ‘]/g, "'").replace(/^-(?:
 
 /**
  * The distinct passage words with no pop-up (spec 5.7): not in the dictionary (`dictionaryForms`, folded spellings
- * and forms), the reading's glossary or vocabulary table, and not a name (`names`, folded). Capitalised words count
+ * and forms), the reading's glossary, glosses or vocabulary table, and not a name (`names`, folded). Capitalised words count
  * as names only when names.json lists them.
  */
 export function wordsWithoutPopup(mod, { dictionaryForms = new Set(), names = new Set() } = {}) {
   const covered = new Set();
-  for (const row of [...(mod.glossary || []), ...(mod.vocabulary || [])]) for (const t of tokenize(row.fr)) covered.add(foldTok(t));
+  // A gloss (a form of a known word, L c3da2c0) opens the same pop-up as a glossary row.
+  for (const row of [...(mod.glossary || []), ...(mod.glosses || []), ...(mod.vocabulary || [])]) for (const t of tokenize(row.fr)) covered.add(foldTok(t));
   const missing = new Map();
   for (const b of mod.passage || []) {
     if (!isStr(b.fr)) continue;
