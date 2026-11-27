@@ -3300,6 +3300,12 @@
     "surface": "bat"
   },
   {
+    "cell": "pl",
+    "id": "fr:form:beau-pere.pl",
+    "of": "fr:lex:beau-pere",
+    "surface": "beaux-pères"
+  },
+  {
     "cell": "f",
     "id": "fr:form:beau.f",
     "of": "fr:lex:beau",
@@ -3322,6 +3328,12 @@
     "id": "fr:form:beau.pl",
     "of": "fr:lex:beau",
     "surface": "beaux"
+  },
+  {
+    "cell": "pl",
+    "id": "fr:form:belle-mere.pl",
+    "of": "fr:lex:belle-mere",
+    "surface": "belles-mères"
   },
   {
     "cell": "f",
@@ -6078,6 +6090,42 @@
     "surface": "coopère"
   },
   {
+    "cell": "impf.1sg",
+    "id": "fr:form:corriger.impf.1sg",
+    "of": "fr:lex:corriger",
+    "surface": "corrigeais"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:corriger.impf.2sg",
+    "of": "fr:lex:corriger",
+    "surface": "corrigeais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:corriger.impf.3pl",
+    "of": "fr:lex:corriger",
+    "surface": "corrigeaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:corriger.impf.3sg",
+    "of": "fr:lex:corriger",
+    "surface": "corrigeait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:corriger.prs.1pl",
+    "of": "fr:lex:corriger",
+    "surface": "corrigeons"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:corriger.prsptcp",
+    "of": "fr:lex:corriger",
+    "surface": "corrigeant"
+  },
+  {
     "cell": "prs.3sg",
     "id": "fr:form:corrompre.prs.3sg",
     "of": "fr:lex:corrompre",
@@ -7858,6 +7906,216 @@
     "id": "fr:form:deduire.sbjv.3sg",
     "of": "fr:lex:deduire",
     "surface": "déduise"
+  },
+  {
+    "cell": "cond.1pl",
+    "id": "fr:form:defaire.cond.1pl",
+    "of": "fr:lex:defaire",
+    "surface": "déferions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:defaire.cond.1sg",
+    "of": "fr:lex:defaire",
+    "surface": "déferais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:defaire.cond.2pl",
+    "of": "fr:lex:defaire",
+    "surface": "déferiez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:defaire.cond.2sg",
+    "of": "fr:lex:defaire",
+    "surface": "déferais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:defaire.cond.3pl",
+    "of": "fr:lex:defaire",
+    "surface": "déferaient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:defaire.cond.3sg",
+    "of": "fr:lex:defaire",
+    "surface": "déferait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:defaire.fut.1pl",
+    "of": "fr:lex:defaire",
+    "surface": "déferons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:defaire.fut.1sg",
+    "of": "fr:lex:defaire",
+    "surface": "déferai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:defaire.fut.2pl",
+    "of": "fr:lex:defaire",
+    "surface": "déferez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:defaire.fut.2sg",
+    "of": "fr:lex:defaire",
+    "surface": "déferas"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:defaire.fut.3pl",
+    "of": "fr:lex:defaire",
+    "surface": "déferont"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:defaire.fut.3sg",
+    "of": "fr:lex:defaire",
+    "surface": "défera"
+  },
+  {
+    "cell": "impf.1pl",
+    "id": "fr:form:defaire.impf.1pl",
+    "of": "fr:lex:defaire",
+    "surface": "défaisions"
+  },
+  {
+    "cell": "impf.1sg",
+    "id": "fr:form:defaire.impf.1sg",
+    "of": "fr:lex:defaire",
+    "surface": "défaisais"
+  },
+  {
+    "cell": "impf.2pl",
+    "id": "fr:form:defaire.impf.2pl",
+    "of": "fr:lex:defaire",
+    "surface": "défaisiez"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:defaire.impf.2sg",
+    "of": "fr:lex:defaire",
+    "surface": "défaisais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:defaire.impf.3pl",
+    "of": "fr:lex:defaire",
+    "surface": "défaisaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:defaire.impf.3sg",
+    "of": "fr:lex:defaire",
+    "surface": "défaisait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:defaire.prs.1pl",
+    "of": "fr:lex:defaire",
+    "surface": "défaisons"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:defaire.prs.1sg",
+    "of": "fr:lex:defaire",
+    "surface": "défais"
+  },
+  {
+    "cell": "prs.2pl",
+    "id": "fr:form:defaire.prs.2pl",
+    "of": "fr:lex:defaire",
+    "surface": "défaites"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:defaire.prs.2sg",
+    "of": "fr:lex:defaire",
+    "surface": "défais"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:defaire.prs.3pl",
+    "of": "fr:lex:defaire",
+    "surface": "défont"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:defaire.prs.3sg",
+    "of": "fr:lex:defaire",
+    "surface": "défait"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:defaire.prsptcp",
+    "of": "fr:lex:defaire",
+    "surface": "défaisant"
+  },
+  {
+    "cell": "ptcp",
+    "id": "fr:form:defaire.ptcp",
+    "of": "fr:lex:defaire",
+    "surface": "défait"
+  },
+  {
+    "cell": "ptcp.f",
+    "id": "fr:form:defaire.ptcp.f",
+    "of": "fr:lex:defaire",
+    "surface": "défaite"
+  },
+  {
+    "cell": "ptcp.fpl",
+    "id": "fr:form:defaire.ptcp.fpl",
+    "of": "fr:lex:defaire",
+    "surface": "défaites"
+  },
+  {
+    "cell": "ptcp.pl",
+    "id": "fr:form:defaire.ptcp.pl",
+    "of": "fr:lex:defaire",
+    "surface": "défaits"
+  },
+  {
+    "cell": "sbjv.1pl",
+    "id": "fr:form:defaire.sbjv.1pl",
+    "of": "fr:lex:defaire",
+    "surface": "défassions"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:defaire.sbjv.1sg",
+    "of": "fr:lex:defaire",
+    "surface": "défasse"
+  },
+  {
+    "cell": "sbjv.2pl",
+    "id": "fr:form:defaire.sbjv.2pl",
+    "of": "fr:lex:defaire",
+    "surface": "défassiez"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:defaire.sbjv.2sg",
+    "of": "fr:lex:defaire",
+    "surface": "défasses"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:defaire.sbjv.3pl",
+    "of": "fr:lex:defaire",
+    "surface": "défassent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:defaire.sbjv.3sg",
+    "of": "fr:lex:defaire",
+    "surface": "défasse"
   },
   {
     "cell": "impf.1sg",
@@ -16549,6 +16807,42 @@
   },
   {
     "cell": "impf.1sg",
+    "id": "fr:form:melanger.impf.1sg",
+    "of": "fr:lex:melanger",
+    "surface": "mélangeais"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:melanger.impf.2sg",
+    "of": "fr:lex:melanger",
+    "surface": "mélangeais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:melanger.impf.3pl",
+    "of": "fr:lex:melanger",
+    "surface": "mélangeaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:melanger.impf.3sg",
+    "of": "fr:lex:melanger",
+    "surface": "mélangeait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:melanger.prs.1pl",
+    "of": "fr:lex:melanger",
+    "surface": "mélangeons"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:melanger.prsptcp",
+    "of": "fr:lex:melanger",
+    "surface": "mélangeant"
+  },
+  {
+    "cell": "impf.1sg",
     "id": "fr:form:menacer.impf.1sg",
     "of": "fr:lex:menacer",
     "surface": "menaçais"
@@ -19474,6 +19768,126 @@
     "id": "fr:form:permettre.ptcp.pl",
     "of": "fr:lex:permettre",
     "surface": "permis"
+  },
+  {
+    "cell": "cond.1pl",
+    "id": "fr:form:peser.cond.1pl",
+    "of": "fr:lex:peser",
+    "surface": "pèserions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:peser.cond.1sg",
+    "of": "fr:lex:peser",
+    "surface": "pèserais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:peser.cond.2pl",
+    "of": "fr:lex:peser",
+    "surface": "pèseriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:peser.cond.2sg",
+    "of": "fr:lex:peser",
+    "surface": "pèserais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:peser.cond.3pl",
+    "of": "fr:lex:peser",
+    "surface": "pèseraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:peser.cond.3sg",
+    "of": "fr:lex:peser",
+    "surface": "pèserait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:peser.fut.1pl",
+    "of": "fr:lex:peser",
+    "surface": "pèserons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:peser.fut.1sg",
+    "of": "fr:lex:peser",
+    "surface": "pèserai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:peser.fut.2pl",
+    "of": "fr:lex:peser",
+    "surface": "pèserez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:peser.fut.2sg",
+    "of": "fr:lex:peser",
+    "surface": "pèseras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:peser.fut.3pl",
+    "of": "fr:lex:peser",
+    "surface": "pèseront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:peser.fut.3sg",
+    "of": "fr:lex:peser",
+    "surface": "pèsera"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:peser.prs.1sg",
+    "of": "fr:lex:peser",
+    "surface": "pèse"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:peser.prs.2sg",
+    "of": "fr:lex:peser",
+    "surface": "pèses"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:peser.prs.3pl",
+    "of": "fr:lex:peser",
+    "surface": "pèsent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:peser.prs.3sg",
+    "of": "fr:lex:peser",
+    "surface": "pèse"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:peser.sbjv.1sg",
+    "of": "fr:lex:peser",
+    "surface": "pèse"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:peser.sbjv.2sg",
+    "of": "fr:lex:peser",
+    "surface": "pèses"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:peser.sbjv.3pl",
+    "of": "fr:lex:peser",
+    "surface": "pèsent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:peser.sbjv.3sg",
+    "of": "fr:lex:peser",
+    "surface": "pèse"
   },
   {
     "cell": "impf.1sg",
@@ -23616,6 +24030,42 @@
     "surface": "redevienne"
   },
   {
+    "cell": "impf.1sg",
+    "id": "fr:form:rediger.impf.1sg",
+    "of": "fr:lex:rediger",
+    "surface": "rédigeais"
+  },
+  {
+    "cell": "impf.2sg",
+    "id": "fr:form:rediger.impf.2sg",
+    "of": "fr:lex:rediger",
+    "surface": "rédigeais"
+  },
+  {
+    "cell": "impf.3pl",
+    "id": "fr:form:rediger.impf.3pl",
+    "of": "fr:lex:rediger",
+    "surface": "rédigeaient"
+  },
+  {
+    "cell": "impf.3sg",
+    "id": "fr:form:rediger.impf.3sg",
+    "of": "fr:lex:rediger",
+    "surface": "rédigeait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:rediger.prs.1pl",
+    "of": "fr:lex:rediger",
+    "surface": "rédigeons"
+  },
+  {
+    "cell": "prsptcp",
+    "id": "fr:form:rediger.prsptcp",
+    "of": "fr:lex:rediger",
+    "surface": "rédigeant"
+  },
+  {
     "cell": "impf.1pl",
     "id": "fr:form:reduire.impf.1pl",
     "of": "fr:lex:reduire",
@@ -27060,6 +27510,54 @@
     "surface": "s'"
   },
   {
+    "cell": "prs.1sg",
+    "id": "fr:form:secher.prs.1sg",
+    "of": "fr:lex:secher",
+    "surface": "sèche"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:secher.prs.2sg",
+    "of": "fr:lex:secher",
+    "surface": "sèches"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:secher.prs.3pl",
+    "of": "fr:lex:secher",
+    "surface": "sèchent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:secher.prs.3sg",
+    "of": "fr:lex:secher",
+    "surface": "sèche"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:secher.sbjv.1sg",
+    "of": "fr:lex:secher",
+    "surface": "sèche"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:secher.sbjv.2sg",
+    "of": "fr:lex:secher",
+    "surface": "sèches"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:secher.sbjv.3pl",
+    "of": "fr:lex:secher",
+    "surface": "sèchent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:secher.sbjv.3sg",
+    "of": "fr:lex:secher",
+    "surface": "sèche"
+  },
+  {
     "cell": "impf.1pl",
     "id": "fr:form:seduire.impf.1pl",
     "of": "fr:lex:seduire",
@@ -29670,6 +30168,126 @@
     "surface": "trompeuses"
   },
   {
+    "cell": "cond.1pl",
+    "id": "fr:form:tutoyer.cond.1pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:tutoyer.cond.1sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:tutoyer.cond.2pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoieriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:tutoyer.cond.2sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:tutoyer.cond.3pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoieraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:tutoyer.cond.3sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:tutoyer.fut.1pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:tutoyer.fut.1sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:tutoyer.fut.2pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoierez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:tutoyer.fut.2sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoieras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:tutoyer.fut.3pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoieront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:tutoyer.fut.3sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoiera"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:tutoyer.prs.1sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoie"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:tutoyer.prs.2sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoies"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:tutoyer.prs.3pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoient"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:tutoyer.prs.3sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoie"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:tutoyer.sbjv.1sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoie"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:tutoyer.sbjv.2sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoies"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:tutoyer.sbjv.3pl",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoient"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:tutoyer.sbjv.3sg",
+    "of": "fr:lex:tutoyer",
+    "surface": "tutoie"
+  },
+  {
     "cell": "f",
     "id": "fr:form:un.f",
     "of": "fr:lex:un",
@@ -30730,6 +31348,126 @@
     "id": "fr:form:vouloir.sbjv.3sg",
     "of": "fr:lex:vouloir",
     "surface": "veuille"
+  },
+  {
+    "cell": "cond.1pl",
+    "id": "fr:form:vouvoyer.cond.1pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierions"
+  },
+  {
+    "cell": "cond.1sg",
+    "id": "fr:form:vouvoyer.cond.1sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierais"
+  },
+  {
+    "cell": "cond.2pl",
+    "id": "fr:form:vouvoyer.cond.2pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoieriez"
+  },
+  {
+    "cell": "cond.2sg",
+    "id": "fr:form:vouvoyer.cond.2sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierais"
+  },
+  {
+    "cell": "cond.3pl",
+    "id": "fr:form:vouvoyer.cond.3pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoieraient"
+  },
+  {
+    "cell": "cond.3sg",
+    "id": "fr:form:vouvoyer.cond.3sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierait"
+  },
+  {
+    "cell": "fut.1pl",
+    "id": "fr:form:vouvoyer.fut.1pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierons"
+  },
+  {
+    "cell": "fut.1sg",
+    "id": "fr:form:vouvoyer.fut.1sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierai"
+  },
+  {
+    "cell": "fut.2pl",
+    "id": "fr:form:vouvoyer.fut.2pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoierez"
+  },
+  {
+    "cell": "fut.2sg",
+    "id": "fr:form:vouvoyer.fut.2sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoieras"
+  },
+  {
+    "cell": "fut.3pl",
+    "id": "fr:form:vouvoyer.fut.3pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoieront"
+  },
+  {
+    "cell": "fut.3sg",
+    "id": "fr:form:vouvoyer.fut.3sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoiera"
+  },
+  {
+    "cell": "prs.1sg",
+    "id": "fr:form:vouvoyer.prs.1sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoie"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:vouvoyer.prs.2sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoies"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:vouvoyer.prs.3pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoient"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:vouvoyer.prs.3sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoie"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:vouvoyer.sbjv.1sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoie"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:vouvoyer.sbjv.2sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoies"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:vouvoyer.sbjv.3pl",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoient"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:vouvoyer.sbjv.3sg",
+    "of": "fr:lex:vouvoyer",
+    "surface": "vouvoie"
   },
   {
     "cell": "impf.1sg",

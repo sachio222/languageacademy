@@ -699,6 +699,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:accueil",
+    "lemma": "accueil",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "welcome; reception desk"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -764,6 +781,23 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:achat",
+    "lemma": "achat",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "purchase"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -857,6 +891,22 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:actif",
+    "lemma": "actif",
+    "paradigms": [
+      "fr:cx:adj.if"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "active"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -921,6 +971,22 @@
     "senses": [
       {
         "gloss": "current events, the news"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:actuel",
+    "lemma": "actuel",
+    "paradigms": [
+      "fr:cx:adj.double"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "current, present"
       }
     ]
   },
@@ -2349,6 +2415,23 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:ambiance",
+    "lemma": "ambiance",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "atmosphere, mood"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -2418,6 +2501,28 @@
     "senses": [
       {
         "gloss": "improvement"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:ameliorer",
+    "lemma": "améliorer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to improve"
       }
     ]
   },
@@ -3199,6 +3304,28 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:applaudir",
+    "lemma": "applaudir",
+    "paradigms": [
+      "fr:cx:verb.ir.present",
+      "fr:cx:ptcp.ir",
+      "fr:cx:verb.ir.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.ir.subjunctive",
+      "fr:cx:prsptcp.ir"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to applaud, clap"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -3497,6 +3624,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:architecte",
+    "lemma": "architecte",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "architect"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -5289,6 +5433,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:banlieue",
+    "lemma": "banlieue",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "suburbs, outskirts"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "banque-fr",
@@ -5437,6 +5598,22 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:bavard",
+    "lemma": "bavard",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "talkative, chatty"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:bavarder",
@@ -5462,6 +5639,21 @@
     "paradigms": [],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:beau-pere",
+    "lemma": "beau-père",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "father-in-law; stepfather"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -5520,6 +5712,21 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:belle-mere",
+    "lemma": "belle-mère",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "mother-in-law; stepmother"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -5927,6 +6134,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:blog",
+    "lemma": "blog",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "blog"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -6529,6 +6753,22 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:bruyant",
+    "lemma": "bruyant",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "noisy"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -6762,6 +7002,20 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:calmement",
+    "lemma": "calmement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "calmly"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -7405,6 +7659,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:caution",
+    "lemma": "caution",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "deposit (on a rented flat)"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -7497,6 +7768,22 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:celibataire",
+    "lemma": "célibataire",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "single, unmarried"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -8911,6 +9198,20 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:clairement",
+    "lemma": "clairement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "clearly"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -8966,6 +9267,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:clavier",
+    "lemma": "clavier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "keyboard"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -9164,6 +9482,21 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:colis",
+    "lemma": "colis",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "parcel"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -9418,6 +9751,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:comedien",
+    "lemma": "comédien",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "actor"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -9472,6 +9822,23 @@
     "paradigms": [],
     "pos": "adverb",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:commentaire",
+    "lemma": "commentaire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "comment, remark"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -10010,6 +10377,23 @@
   {
     "cefr": "A2",
     "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:comptable",
+    "lemma": "comptable",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "accountant"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": "compte-fr",
     "id": "fr:lex:compte",
     "lemma": "compte",
@@ -10160,6 +10544,28 @@
     "senses": [
       {
         "gloss": "concerning, regarding"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:concerner",
+    "lemma": "concerner",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to concern, be about"
       }
     ]
   },
@@ -10493,6 +10899,22 @@
     "senses": [
       {
         "gloss": "comfort"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:confortable",
+    "lemma": "confortable",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "comfortable"
       }
     ]
   },
@@ -10941,6 +11363,28 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:consoler",
+    "lemma": "consoler",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to comfort, console"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -11247,6 +11691,23 @@
     "senses": [
       {
         "gloss": "context"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:continent",
+    "lemma": "continent",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "continent"
       }
     ]
   },
@@ -11701,6 +12162,23 @@
     "senses": []
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:copine",
+    "lemma": "copine",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "friend (female); girlfriend"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "coq-fr",
@@ -11747,6 +12225,20 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:correctement",
+    "lemma": "correctement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "correctly, properly"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -11763,6 +12255,28 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:corriger",
+    "lemma": "corriger",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to correct"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -12090,6 +12604,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:cousine",
+    "lemma": "cousine",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "cousin (female)"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -13475,6 +14006,28 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:decouper",
+    "lemma": "découper",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to cut up, cut out"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -13576,6 +14129,20 @@
     "senses": [
       {
         "gloss": "to deduce; to deduct"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:defaire",
+    "lemma": "défaire",
+    "paradigms": [],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to undo; to unpack"
       }
     ]
   },
@@ -14782,6 +15349,22 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:desagreable",
+    "lemma": "désagréable",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "unpleasant"
+      }
+    ]
+  },
+  {
     "cefr": "C1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -15537,6 +16120,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:dialogue",
+    "lemma": "dialogue",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "dialogue"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -15598,6 +16198,20 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:difficilement",
+    "lemma": "difficilement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "with difficulty"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -15787,6 +16401,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:diplome",
+    "lemma": "diplôme",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "diploma, degree"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "dire-fr",
@@ -15938,6 +16569,23 @@
     "senses": [
       {
         "gloss": "to discriminate"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:discussion",
+    "lemma": "discussion",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "discussion, talk"
       }
     ]
   },
@@ -16664,6 +17312,23 @@
     "senses": [
       {
         "gloss": "to equip, provide"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:douane",
+    "lemma": "douane",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "customs"
       }
     ]
   },
@@ -17582,6 +18247,20 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:effectivement",
+    "lemma": "effectivement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "indeed, that's right"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -17909,6 +18588,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:electricite",
+    "lemma": "électricité",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "electricity"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -18171,6 +18867,23 @@
     "senses": [
       {
         "gloss": "hiring, recruitment"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:embouteillage",
+    "lemma": "embouteillage",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "traffic jam"
       }
     ]
   },
@@ -18959,6 +19672,20 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:enormement",
+    "lemma": "énormément",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "a great deal, enormously"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -19439,6 +20166,23 @@
     ]
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:enveloppe",
+    "lemma": "enveloppe",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "envelope"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
@@ -19464,6 +20208,45 @@
     "paradigms": [],
     "pos": "preposition",
     "senses": []
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:envie",
+    "lemma": "envie",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "wish, desire (avoir envie de: to feel like)"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:envier",
+    "lemma": "envier",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to envy"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -19700,6 +20483,23 @@
     "senses": [
       {
         "gloss": "epidemic"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:episode",
+    "lemma": "épisode",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "episode"
       }
     ]
   },
@@ -20332,6 +21132,23 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:etiquette",
+    "lemma": "étiquette",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "label, tag"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "étoile-fr",
     "id": "fr:lex:etoile",
@@ -20680,6 +21497,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:evier",
+    "lemma": "évier",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "kitchen sink"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -20989,6 +21823,23 @@
     "senses": [
       {
         "gloss": "exclusively"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:excursion",
+    "lemma": "excursion",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "trip, outing"
       }
     ]
   },
@@ -21447,6 +22298,23 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:exposition",
+    "lemma": "exposition",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "exhibition"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:express",
@@ -21484,6 +22352,22 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:exterieur",
+    "lemma": "extérieur",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "outside, outer"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -21561,6 +22445,20 @@
     "senses": [
       {
         "gloss": "extreme"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:extremement",
+    "lemma": "extrêmement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "extremely"
       }
     ]
   },
@@ -22157,6 +23055,23 @@
     "senses": [
       {
         "gloss": "closing, closure"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:festival",
+    "lemma": "festival",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "festival"
       }
     ]
   },
@@ -23016,6 +23931,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:formulaire",
+    "lemma": "formulaire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "form (to fill in)"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -23700,6 +24632,23 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:galerie",
+    "lemma": "galerie",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "gallery"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -24163,6 +25112,20 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:gentiment",
+    "lemma": "gentiment",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "kindly, nicely"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:geographie",
@@ -24388,6 +25351,22 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:gourmand",
+    "lemma": "gourmand",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "fond of good food"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:gout",
@@ -24559,6 +25538,22 @@
     "paradigms": [],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:gratuit",
+    "lemma": "gratuit",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "free (of charge)"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -24872,6 +25867,20 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:habituellement",
+    "lemma": "habituellement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "usually"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -25344,6 +26353,23 @@
   },
   {
     "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:honneur",
+    "lemma": "honneur",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "honour"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:honte",
@@ -25381,6 +26407,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:horaire",
+    "lemma": "horaire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "timetable; working hours"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -25567,6 +26610,23 @@
     "senses": [
       {
         "gloss": "humiliation"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:humour",
+    "lemma": "humour",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "humour"
       }
     ]
   },
@@ -25962,6 +27022,22 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:immediat",
+    "lemma": "immédiat",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "immediate"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -26279,6 +27355,45 @@
     "senses": [
       {
         "gloss": "unexpected event"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:imprimante",
+    "lemma": "imprimante",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "printer"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:imprimer",
+    "lemma": "imprimer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to print"
       }
     ]
   },
@@ -27113,6 +28228,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:ingredient",
+    "lemma": "ingrédient",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "ingredient"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -27335,6 +28467,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:inscription",
+    "lemma": "inscription",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "enrolment, registration"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -27607,6 +28756,22 @@
     "senses": [
       {
         "gloss": "insufficient"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:insupportable",
+    "lemma": "insupportable",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "unbearable"
       }
     ]
   },
@@ -28111,6 +29276,23 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:invention",
+    "lemma": "invention",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "invention"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
@@ -28182,6 +29364,39 @@
     "senses": [
       {
         "gloss": "investment"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:invisible",
+    "lemma": "invisible",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "invisible"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:invitation",
+    "lemma": "invitation",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "invitation"
       }
     ]
   },
@@ -28314,6 +29529,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:itineraire",
+    "lemma": "itinéraire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "route, itinerary"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -29006,6 +30238,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:laboratoire",
+    "lemma": "laboratoire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "laboratory"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "lac-fr",
@@ -29463,6 +30712,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:lessive",
+    "lemma": "lessive",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "washing, laundry; washing powder"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "lettre-fr",
@@ -29918,6 +31184,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:logement",
+    "lemma": "logement",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "housing, accommodation"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -29997,6 +31280,23 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:loisir",
+    "lemma": "loisir",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "leisure; leisure activity"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -30126,6 +31426,23 @@
     "senses": [
       {
         "gloss": "loyalty"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:loyer",
+    "lemma": "loyer",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "rent"
       }
     ]
   },
@@ -31346,6 +32663,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:medecine",
+    "lemma": "médecine",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "medicine (the science)"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -31448,6 +32782,45 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:melange",
+    "lemma": "mélange",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "mixture, mix"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:melanger",
+    "lemma": "mélanger",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to mix"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -32136,6 +33509,23 @@
   },
   {
     "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:milliard",
+    "lemma": "milliard",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "billion"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:millier",
@@ -32378,6 +33768,23 @@
     "senses": [
       {
         "gloss": "mobility"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:mode",
+    "lemma": "mode",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "fashion"
       }
     ]
   },
@@ -33299,6 +34706,23 @@
   },
   {
     "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:nationalite",
+    "lemma": "nationalité",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "nationality"
+      }
+    ]
+  },
+  {
+    "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "nature-fr",
     "id": "fr:lex:nature",
@@ -33414,6 +34838,22 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:negatif",
+    "lemma": "négatif",
+    "paradigms": [
+      "fr:cx:adj.if"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "negative"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -33759,6 +35199,20 @@
     "paradigms": [],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:normalement",
+    "lemma": "normalement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "normally, usually"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -35484,6 +36938,22 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:pareil",
+    "lemma": "pareil",
+    "paradigms": [
+      "fr:cx:adj.double"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "the same, alike"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "parents-fr",
@@ -35896,6 +37366,21 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:passe-temps",
+    "lemma": "passe-temps",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "hobby, pastime"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -36634,6 +38119,20 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:personnellement",
+    "lemma": "personnellement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "personally"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -36736,6 +38235,28 @@
     "senses": [
       {
         "gloss": "to disrupt, disturb"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:peser",
+    "lemma": "peser",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to weigh"
       }
     ]
   },
@@ -36870,6 +38391,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:pharmacien",
+    "lemma": "pharmacien",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "pharmacist, chemist"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -36933,6 +38471,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:photographe",
+    "lemma": "photographe",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "photographer"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -36943,6 +38498,28 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:photographier",
+    "lemma": "photographier",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to photograph"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -37592,6 +39169,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:poeme",
+    "lemma": "poème",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "poem"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -37716,6 +39310,22 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:poli",
+    "lemma": "poli",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "polite"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:police",
@@ -37737,6 +39347,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:politesse",
+    "lemma": "politesse",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "politeness"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -38074,6 +39701,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:possibilite",
+    "lemma": "possibilité",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "possibility"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -38218,6 +39862,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:pourboire",
+    "lemma": "pourboire",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "tip (for service)"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -38335,6 +39996,20 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:pratiquement",
+    "lemma": "pratiquement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "practically, almost"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -38456,6 +40131,20 @@
     ],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:precisement",
+    "lemma": "précisément",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "precisely, exactly"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -38777,6 +40466,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:presentation",
+    "lemma": "présentation",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "presentation; introduction"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -39300,6 +41006,22 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:probable",
+    "lemma": "probable",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "likely, probable"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "probablement-fr",
@@ -39586,6 +41308,22 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:profond",
+    "lemma": "profond",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "deep"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -40278,6 +42016,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:publicite",
+    "lemma": "publicité",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "advertising; advertisement"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -40728,6 +42483,20 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:quotidiennement",
+    "lemma": "quotidiennement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "daily, every day"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "r-fr",
@@ -40848,6 +42617,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:rage",
+    "lemma": "rage",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "rage, fury"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -41390,6 +43176,36 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:recemment",
+    "lemma": "récemment",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "recently"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:recent",
+    "lemma": "récent",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "recent"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -41850,6 +43666,28 @@
     "senses": [
       {
         "gloss": "to become again"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:rediger",
+    "lemma": "rédiger",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to write, draft"
       }
     ]
   },
@@ -43392,6 +45230,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:reservation",
+    "lemma": "réservation",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "booking, reservation"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -44032,6 +45887,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:reussite",
+    "lemma": "réussite",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "success"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
@@ -44502,6 +46374,22 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:romantique",
+    "lemma": "romantique",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "romantic"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -44950,6 +46838,28 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:saluer",
+    "lemma": "saluer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to greet, say hello to"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "salut-fr",
@@ -45286,6 +47196,22 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:scolaire",
+    "lemma": "scolaire",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "school (year, holidays)"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -45360,6 +47286,28 @@
     "paradigms": [],
     "pos": "adjective",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:secher",
+    "lemma": "sécher",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to dry"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -46347,6 +48295,20 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:sincerement",
+    "lemma": "sincèrement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "sincerely"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -46384,6 +48346,23 @@
     "paradigms": [],
     "pos": "conjunction",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:site",
+    "lemma": "site",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "site; website"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -47266,6 +49245,20 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:specialement",
+    "lemma": "spécialement",
+    "paradigms": [],
+    "pos": "adverb",
+    "senses": [
+      {
+        "gloss": "specially, especially"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -47279,6 +49272,23 @@
     "senses": [
       {
         "gloss": "specialist"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:specialite",
+    "lemma": "spécialité",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "speciality"
       }
     ]
   },
@@ -47307,6 +49317,23 @@
     "senses": [
       {
         "gloss": "spectacular"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:spectateur",
+    "lemma": "spectateur",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "spectator, member of the audience"
       }
     ]
   },
@@ -47351,6 +49378,22 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:sportif",
+    "lemma": "sportif",
+    "paradigms": [
+      "fr:cx:adj.if"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "sporty, athletic; sports"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -48026,6 +50069,28 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:supprimer",
+    "lemma": "supprimer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to delete, remove"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "sûr-fr",
@@ -48409,6 +50474,22 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:sympathique",
+    "lemma": "sympathique",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "nice, friendly"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -48544,6 +50625,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:tablette",
+    "lemma": "tablette",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "tablet"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
@@ -48557,6 +50655,23 @@
     "senses": [
       {
         "gloss": "task"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:tache.stain",
+    "lemma": "tache",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "stain, mark"
       }
     ]
   },
@@ -48692,6 +50807,23 @@
     "paradigms": [],
     "pos": "adverb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:tarif",
+    "lemma": "tarif",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "price, rate"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -48996,6 +51128,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:tempete",
+    "lemma": "tempête",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "storm"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -49352,6 +51501,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:theme",
+    "lemma": "thème",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "theme, topic"
+      }
+    ]
   },
   {
     "cefr": "B1",
@@ -49762,6 +51928,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:tourisme",
+    "lemma": "tourisme",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "tourism"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "touriste-fr",
@@ -49772,6 +51955,22 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:touristique",
+    "lemma": "touristique",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "tourist, popular with tourists"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -49812,6 +52011,21 @@
     "paradigms": [],
     "pos": "adverb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:toux",
+    "lemma": "toux",
+    "paradigms": [],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "cough"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -49999,6 +52213,23 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:trajet",
+    "lemma": "trajet",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "journey, trip"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -50658,6 +52889,45 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:tutoyer",
+    "lemma": "tutoyer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to say \"tu\" to"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:tuyau",
+    "lemma": "tuyau",
+    "paradigms": [
+      "fr:cx:noun.plural.x"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "pipe, hose"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -51110,6 +53380,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:vaisselle",
+    "lemma": "vaisselle",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "dishes; washing-up"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -51319,6 +53606,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:vendeuse",
+    "lemma": "vendeuse",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "saleswoman, shop assistant"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -51550,6 +53854,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:version",
+    "lemma": "version",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "version"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -51601,6 +53922,28 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:vexer",
+    "lemma": "vexer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to upset, offend"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -51918,6 +54261,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:visa",
+    "lemma": "visa",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "visa"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "visage-fr",
@@ -51948,6 +54308,22 @@
     "senses": [
       {
         "gloss": "to aim at"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:visible",
+    "lemma": "visible",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "visible"
       }
     ]
   },
@@ -52053,6 +54429,23 @@
     "senses": [
       {
         "gloss": "vital"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:vitamine",
+    "lemma": "vitamine",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "vitamin"
       }
     ]
   },
@@ -52254,6 +54647,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:voisine",
+    "lemma": "voisine",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "neighbour (female)"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "voiture-fr",
@@ -52371,6 +54781,28 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:voter",
+    "lemma": "voter",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to vote"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: Eaquals grammar",
     "dictionaryId": "vôtre-fr",
@@ -52421,6 +54853,28 @@
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:vouvoyer",
+    "lemma": "vouvoyer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to say \"vous\" to"
+      }
+    ]
   },
   {
     "cefr": "A1",

@@ -62,6 +62,7 @@ export const ENGLISH_ONLY = new Set(`
   beginner friendly method softer advice directed directing necessity wishes
   cat cats dog dogs problem problems fact facts elision sequence stem command commands statement presence
   pretty sure infinite causative universal physical real general authentic ongoing fixed emotion
+  presentation
 `.split(/\s+/).filter(Boolean));
 
 // French words that only French text uses. Text with one of them is French even when some of its words are missing
