@@ -5,6 +5,7 @@
 //   node scripts/plan/cli.mjs page  <lang> [--out <file>]          the course page: every unit, lesson and word (page.mjs)
 //   node scripts/plan/cli.mjs stubs <lang> [--write | --check]     planned module files and the outline, from the plan (stubs.mjs)
 //   node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]   writer briefs, one file per module (brief.mjs)
+//   node scripts/plan/cli.mjs method <lang> [--out <dir>]          the course scored against the teaching method (method-score.mjs)
 //
 // Each reads only content/<lang>/ and curriculum-graph/ for that language. md, page and brief write under
 // .plan-out/<lang>/ unless --out says where; that folder is not committed.
@@ -25,6 +26,7 @@ const USAGE = [
   '       node scripts/plan/cli.mjs page <lang> [--out <file>]',
   '       node scripts/plan/cli.mjs stubs <lang> [--write | --check]',
   '       node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]',
+  '       node scripts/plan/cli.mjs method <lang> [--out <dir>]',
 ].join('\n');
 
 export const outDir = (repoRoot, lang) => join(repoRoot, '.plan-out', lang);
@@ -135,7 +137,7 @@ function writeOut(file, text) {
 async function main(argv) {
   const args = [...argv];
   const [cmd, lang] = args.splice(0, 2);
-  if (!['check', 'md', 'page', 'stubs', 'brief'].includes(cmd) || !/^[a-z]{2,3}$/.test(lang ?? '')) {
+  if (!['check', 'md', 'page', 'stubs', 'brief', 'method'].includes(cmd) || !/^[a-z]{2,3}$/.test(lang ?? '')) {
     console.error(USAGE);
     return 2;
   }
@@ -146,6 +148,15 @@ async function main(argv) {
       return await stubsCommand({ repoRoot: REPO_ROOT, lang, write: takeFlag(args, '--write'), check: takeFlag(args, '--check') });
     }
     const out = takeOption(args, '--out');
+    if (cmd === 'method') {
+      const { methodCommand } = await import('./method-report.mjs');
+      const { text, data } = await methodCommand({ repoRoot: REPO_ROOT, lang });
+      const dir = resolve(out ?? join(outDir(REPO_ROOT, lang), 'method'));
+      writeOut(join(dir, 'method-score.json'), `${JSON.stringify(data, null, 1)}\n`);
+      writeOut(join(dir, 'method-score.txt'), text);
+      console.log(text.split('\n## ')[0]);
+      return 0;
+    }
     const checked = await loadChecked({ lang });
     if (checked.problems.some((p) => p.code === 'schema')) {
       for (const p of checked.problems) console.error(`${p.where}: ${p.code} ${p.message}`);

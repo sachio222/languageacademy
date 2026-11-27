@@ -1,0 +1,21 @@
+{
+  "note": "How this language's patterns map to the roles of the teaching method (scripts/plan/method-score.mjs). Families are the text of a construction id before its first dot. The first matching rule wins: chunk, guide-covered, paradigm, kernel, wrapper, operator, else frame. Slots say which word classes a pattern accepts: N noun, V verb, A adjective, D adverb, P preposition, F other function word, I interjection, L letter.",
+  "kernelNeededBy": 8,
+  "kernelVerbNeeds": 3,
+  "chunkFamilies": ["chunk"],
+  "guideCovered": { "prefixes": ["neg."], "levels": ["A1", "A2"], "ids": ["pronoun.y", "pronoun.en"] },
+  "wrapperFamilies": ["subj", "si", "relative", "connector", "reported-speech", "mise-en-relief", "hypothesis", "consequence", "tel-que"],
+  "wrapperIds": ["frame.verb-que-clause", "q.embedded"],
+  "operatorFamilies": ["q", "neg", "passe-compose", "plus-que-parfait", "futur-anterieur", "futur-simple", "conditionnel-present", "conditionnel-passe", "imparfait", "imperative", "passive", "gerondif", "causative", "reciprocal", "ptcp", "elision", "inversion", "passe-simple", "participe-present", "conditional"],
+  "slotExact": {
+    "pronoun.stressed": ["P"], "possessive.pronoun": [], "comparative": ["A", "D"], "comparative.irregular": [],
+    "cest": ["N", "A"], "frame.avoir-besoin-de": ["N", "V"], "age.avoir-ans": [], "neg.de": ["N"], "elision": [],
+    "il-y-a": ["N"], "rendre-adjective": ["A"]
+  },
+  "slotFamily": {
+    "chunk": [], "article": ["N"], "noun": ["N"], "contraction": ["N"], "demonstrative": ["N"], "possessive": ["N"],
+    "adj": ["A"], "superlative": ["A"], "adverb": ["D"], "relative": ["N", "V"], "nominalisation": ["N"]
+  },
+  "slotDefault": ["V"],
+  "wordClass": { "noun": "N", "verb": "V", "adjective": "A", "adverb": "D", "preposition": "P", "interjection": "I", "alphabet": "L" }
+}

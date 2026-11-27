@@ -83,3 +83,19 @@ Each part of a reading names a type from `reading-types.json`: the human situati
 `plan:stubs` replaced `scripts/content/plan-stubs.mjs` and its key map, `content/fr/plan-keys.json`, which made planned
 module files from an earlier plan kept outside the repository. Both are retired: the plan file holds the keys, and the
 planned files in `content/fr/modules/` are `plan:stubs` output.
+
+## plan:method: the course scored against the teaching method
+
+`pnpm plan:method` (or `node scripts/plan/cli.mjs method <lang>`) measures the whole course, written and planned,
+by the method's own rule: each lesson adds the piece that opens the most new sentences from what the learner knows.
+It writes `.plan-out/<lang>/method/method-score.txt` and `.json`.
+
+- **Shape, every module.** Patterns known on arrival, the reach each new word arrives with (known patterns whose slot
+  takes it), the words a new pattern takes at once, known words a pattern gives a new job, how long a pattern waited
+  after its needs were met, and the patterns the course never teaches though their needs are met.
+- **Writing, written modules.** New words as a share of the words the exercises use, the sentence each new word is
+  first met in, whether it then carries a later new word, and whether the next modules lean on it. The written
+  course before the plan's first unit is the baseline.
+
+Each language says how its patterns map to the method's roles and slots in
+`curriculum-graph/languages/<lang>/method-roles.json`. The report is a measure, not a gate: it never fails a run.
