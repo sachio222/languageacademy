@@ -3,12 +3,12 @@
   "module_key": "unit13-reading",
   "kind": "reading",
   "status": "written",
-  "title": "Reading · {Mon quartier, pour Maya}",
-  "description": "Maya has just moved from Montréal into Léa's building in Lyon. Léa slides a guide to the neighbourhood under her door, with a plan for every kind of weather and an invitation.",
+  "title": "Reading · {Mon nouveau quartier}",
+  "description": "After Léa's party, Maya answers her best friend in Montréal, who wants to know everything: the neighbours, the bakery, the plans for every kind of weather, the way people talk here, and the party.",
   "can_do": [
-    "Read a letter that shows a newcomer round a neighbourhood",
+    "Read messages between two friends about a new neighbourhood",
     "Follow who lives where and what happens in each place",
-    "Pick out plans that depend on the weather"
+    "Pick out plans that depend on the weather, and what is done differently here"
   ],
   "story_id": "reading13",
   "vocabulary": [
@@ -45,86 +45,66 @@
   ],
   "passage": [
     {
-      "id": "b-pour-maya",
-      "fr": "Pour Maya, qui habite au-dessus de chez moi",
-      "en": "For Maya, who lives upstairs from me",
+      "id": "b-de-rosalie",
+      "fr": "De Rosalie, à Montréal",
+      "en": "From Rosalie, in Montréal",
       "layout": "dateline"
     },
     {
-      "id": "b-salut-maya",
-      "fr": "Salut Maya ! Je m'appelle Léa. J'ai quinze ans, comme toi (c'est ma mère qui me l'a dit), et j'habite juste sous toi, à l'étage du dessous. Hier, je t'ai vue à ta fenêtre. Tu avais l'air un peu triste. Je comprends : tu es arrivée de Montréal il y a trois jours, et tu ne connais encore personne. Du coup, je t'ai préparé ces quelques lignes sur le quartier. Lis-les, et tu vas voir : la Croix-Rousse, c'est le quartier le plus sympa de Lyon !",
-      "en": "Hi Maya! My name is Léa. I'm fifteen, like you (my mother told me), and I live just below you, on the floor underneath. Yesterday I saw you at your window. You looked a bit sad. I understand: you arrived from Montréal three days ago, and you don't know anyone yet. So I put together these few lines about the neighbourhood for you. Read them, and you'll see: the Croix-Rousse is the nicest neighbourhood in Lyon!"
+      "id": "b-rosalie",
+      "fr": "Salut Maya ! Ça va ? Tu es à Lyon depuis trois semaines, et tu ne m'as presque rien dit ! C'est comment, ton quartier ? Tu as des amis ? Qu'est-ce que tu fais le samedi ? Et les Français, ils parlent comme nous ?",
+      "en": "Hi Maya! How are you? You've been in Lyon for three weeks, and you've told me almost nothing! What's your neighbourhood like? Have you got friends? What do you do on Saturdays? And the French, do they talk like us?"
     },
     {
-      "id": "b-bonjour",
-      "fr": "D'abord, il y a une chose que tu dois savoir. Dans notre immeuble, on dit bonjour à chaque voisin qu'on voit, même à un voisin qu'on ne connaît pas. Si tu passes devant quelqu'un et que tu ne dis rien, il va penser que tu n'es pas gentille. Ici, c'est très important ! Et ne fais pas trop de bruit le matin : ma mère travaille la nuit, alors elle dort.",
-      "en": "First, there's one thing you need to know. In our building, you say hello to every neighbour you see, even a neighbour you don't know. If you walk past someone and say nothing, they'll think you're not nice. Here, that's very important! And don't make too much noise in the morning: my mother works nights, so she's asleep."
-    },
-    {
-      "id": "b-mme-garnier",
-      "fr": "Quand tu entres dans l'immeuble, la première porte, c'est chez Madame Garnier. C'est une petite dame aux cheveux blancs qui a soixante-dix-huit ans. Elle est arrivée ici il y a cinquante ans, et avant, elle était professeur de français. Elle connaît toutes les histoires de la rue. Derrière l'immeuble, elle a un petit jardin avec des oiseaux et un vieux banc. Elle adore le voir fleurir. C'est une voisine dont je suis très fière.",
-      "en": "When you come into the building, the first door is Madame Garnier's. She's a small lady with white hair, and she's seventy-eight. She came here fifty years ago, and before, she was a French teacher. She knows every story about the street. Behind the building she has a little garden with birds and an old bench. She loves to see it flower. She's a neighbour I'm very proud of."
-    },
-    {
-      "id": "b-vous",
-      "fr": "Attention : avec Madame Garnier, on dit vous. À Montréal, on dit souvent tu, n'est-ce pas ? Ici, avec une voisine comme elle, on dit vous jusqu'au jour où elle te dit : « Tu peux me dire tu. » Moi, je la connais depuis toujours, et je lui dis encore vous !",
-      "en": "Careful: with Madame Garnier, you say vous. In Montréal people often say tu, don't they? Here, with a neighbour like her, you say vous until the day she tells you: \"You can call me tu.\" I've known her all my life, and I still say vous to her!"
-    },
-    {
-      "id": "b-neige",
-      "fr": "En hiver, il neige parfois à Lyon. S'il neige, passe chez elle : elle fait le meilleur chocolat chaud du monde, et elle est toujours contente quand on vient la voir.",
-      "en": "In winter it sometimes snows in Lyon. If it snows, drop by her place: she makes the best hot chocolate in the world, and she's always happy when someone comes to see her."
-    },
-    {
-      "id": "b-boulangerie",
-      "fr": "Au coin de la rue, il y a la boulangerie de Karim. Elle ouvre à sept heures du matin et elle ferme à huit heures du soir. Karim, c'est le monsieur qui fait les meilleurs croissants du quartier. Franchement, ce sont les meilleurs de Lyon !",
-      "en": "On the corner of the street is Karim's bakery. It opens at seven in the morning and closes at eight in the evening. Karim is the man who makes the best croissants in the neighbourhood. Honestly, they're the best in Lyon!"
-    },
-    {
-      "id": "b-pain-au-chocolat",
-      "fr": "Prends un pain au chocolat si tu passes avant l'école : c'est ce que je prends tous les matins.",
-      "en": "Get a pain au chocolat if you stop by before school: that's what I get every morning."
-    },
-    {
-      "id": "b-bibliotheque",
-      "fr": "La bibliothèque est en haut de la rue. C'est l'endroit où je fais mes devoirs après l'école. Il y a des livres en français, bien sûr, mais aussi en anglais. On y lit, on y travaille, et personne n'y parle fort. S'il pleut, viens avec moi : c'est facile, on y va ensemble !",
-      "en": "The library is at the top of the street. It's the place where I do my homework after school. There are books in French, of course, but in English too. People read there and work there, and nobody talks loudly. If it rains, come with me: it's easy, we'll go together!"
-    },
-    {
-      "id": "b-marche",
-      "fr": "Le week-end, il y a le marché, avec des fruits, des légumes et des fleurs. J'aime surtout le monsieur qui a les meilleurs fromages de la ville. Il connaît tout le monde, et tout le monde le connaît ! Dis-lui que tu es la nouvelle voisine de Léa : il va être content de te rencontrer.",
-      "en": "At the weekend there's the market, with fruit, vegetables and flowers. I like the man with the best cheeses in town most of all. He knows everyone, and everyone knows him! Tell him you're Léa's new neighbour: he'll be happy to meet you."
-    },
-    {
-      "id": "b-velos",
-      "fr": "Et s'il fait beau, on prend les vélos et on descend jusqu'au parc, près de l'eau. Mais attention : pour revenir, ça monte beaucoup ! Mon petit frère Noé, lui, préfère la piscine qui est derrière le parc. Il y va avec maman le week-end.",
-      "en": "And if it's sunny, we take the bikes and ride down to the park by the water. But careful: the way back is all uphill! My little brother Noé would rather go to the pool behind the park. He goes there with Mum at the weekend."
-    },
-    {
-      "id": "b-anniversaire",
-      "fr": "Une dernière chose : samedi prochain, c'est mon anniversaire. Je vais avoir seize ans ! Je fais une fête chez moi, à huit heures du soir, et je t'invite. Je vais te présenter mes amis, et surtout Hugo, mon meilleur ami depuis l'école primaire. Il va chanter : il chante très mal et très fort, mais il adore ça ! Après, tout le monde va danser. Moi, je déteste danser… mais à mon anniversaire, je danse quand même ! Même Noé, qui a neuf ans, va danser.",
-      "en": "One last thing: next Saturday is my birthday. I'm turning sixteen! I'm having a party at my place at eight in the evening, and I'm inviting you. I'll introduce you to my friends, and above all to Hugo, my best friend since primary school. He's going to sing: he sings very badly and very loudly, but he loves it! After that, everyone is going to dance. Me, I hate dancing… but at my birthday I dance anyway! Even Noé, who is nine, is going to dance."
-    },
-    {
-      "id": "b-a-bientot",
-      "fr": "Si tu veux venir, mets un petit mot sous ma porte. À bientôt !",
-      "en": "If you want to come, put a little note under my door. See you soon!"
-    },
-    {
-      "id": "b-lea",
-      "fr": "Léa",
-      "en": "Léa"
+      "id": "b-dis-moi",
+      "fr": "Dis-moi tout !",
+      "en": "Tell me everything!"
     },
     {
       "id": "b-le-soir",
-      "fr": "Le soir, ces lignes reviennent sous la porte de Léa. En dessous, il y a maintenant quelques mots en bleu.",
-      "en": "That evening, these lines come back under Léa's door. Underneath, there are now a few words in blue.",
+      "fr": "Le soir, après la fête de Léa, Maya prend son téléphone.",
+      "en": "That evening, after Léa's party, Maya picks up her phone.",
       "layout": "scene"
     },
     {
-      "id": "b-reponse-maya",
-      "fr": "Merci, Léa ! Tout ça, c'est génial. Ce matin, dans l'immeuble, j'ai dit à Madame Garnier : « Bonjour, comment allez-vous ? » Et elle m'a souri ! Pour samedi, j'accepte avec plaisir. En fait, moi, j'adore danser. Et s'il neige, pas de problème : à Montréal, il neige tout l'hiver ! Qu'est-ce que j'apporte ? Un gâteau ? Un truc de Montréal ? Dis-moi !",
-      "en": "Thank you, Léa! It's all great. This morning, in the building, I said to Madame Garnier: \"Bonjour, comment allez-vous?\" And she smiled at me! For Saturday, I'd love to come. Actually, I love dancing. And if it snows, no problem: in Montréal it snows all winter! What should I bring? A cake? Something from Montréal? Tell me!"
+      "id": "b-salut",
+      "fr": "Salut Rosalie ! Au début, j'étais un peu triste : je ne connaissais personne, j'étais toute seule. Mais il y a une fille de quinze ans, comme moi, qui habite juste en dessous de chez moi. Elle s'appelle Léa. Le jour où je suis arrivée, elle m'a vue à ma fenêtre : j'avais l'air un peu triste. Alors elle est montée me dire bonjour, et après, elle m'a montré tout le quartier. Maintenant, c'est ma meilleure amie ici.",
+      "en": "Hi Rosalie! At first I was a bit sad: I didn't know anyone, I was all alone. But there's a girl of fifteen, like me, who lives just below me. Her name is Léa. The day I arrived, she saw me at my window: I looked a bit sad. So she came up to say hello, and then she showed me the whole neighbourhood. Now she's my best friend here."
+    },
+    {
+      "id": "b-bonjour",
+      "fr": "Tu demandes si les Français parlent comme nous. Pas vraiment ! Ici, dans l'immeuble, on dit bonjour à chaque voisin qu'on voit, même à un voisin qu'on ne connaît pas. Si tu ne dis rien, les gens pensent que tu n'es pas gentille. Et avec Madame Garnier, notre vieille voisine, on dit vous, jusqu'au jour où elle te dit : « Tu peux me dire tu. » Léa la connaît depuis toujours, et elle lui dit encore vous !",
+      "en": "You ask if the French talk like us. Not really! Here, in the building, you say hello to every neighbour you see, even a neighbour you don't know. If you say nothing, people think you're not nice. And with Madame Garnier, our old neighbour, you say vous, until the day she tells you: \"You can call me tu.\" Léa has known her all her life, and she still says vous to her!"
+    },
+    {
+      "id": "b-mme-garnier",
+      "fr": "Madame Garnier a soixante-dix-huit ans et les cheveux blancs. Avant, elle était professeur de français. C'est une dame dont tout le quartier est fier. Derrière l'immeuble, elle a un petit jardin avec un vieux banc, et elle adore voir son jardin fleurir.",
+      "en": "Madame Garnier is seventy-eight and has white hair. Before, she was a French teacher. She's a lady the whole neighbourhood is proud of. Behind the building she has a little garden with an old bench, and she loves to see her garden flower."
+    },
+    {
+      "id": "b-du-coup",
+      "fr": "Et les mots ! Ici, les jeunes disent « du coup » tout le temps. Ça veut dire « alors ». Léa dit aussi « un truc » pour une chose. Et ce qui est drôle, c'est qu'ici, personne ne dit « la fin de semaine » : on dit « le week-end » ! Franchement, après trois semaines, moi aussi, je dis « du coup » !",
+      "en": "And the words! Here, young people say \"du coup\" all the time. It means \"so\". Léa also says \"un truc\" for a thing. And what's funny is that here, nobody says \"la fin de semaine\": they say \"le week-end\"! Honestly, after three weeks, I say \"du coup\" too!"
+    },
+    {
+      "id": "b-boulangerie",
+      "fr": "Le matin, je passe à la boulangerie de Karim, au coin de la rue. Elle ouvre à sept heures. Karim, c'est le monsieur qui fait les meilleurs croissants de Lyon. Mais ce que je prends tous les matins, c'est un pain au chocolat.",
+      "en": "In the morning I drop by Karim's bakery, on the corner of the street. It opens at seven. Karim is the man who makes the best croissants in Lyon. But what I get every morning is a pain au chocolat."
+    },
+    {
+      "id": "b-samedi",
+      "fr": "Tu demandes ce que je fais le samedi. Ça change avec la météo ! S'il pleut, on va à la bibliothèque en haut de la rue, où Léa fait ses devoirs. S'il fait beau, on prend les vélos et on descend jusqu'au parc, près de l'eau. Pour revenir, c'est moins facile : ça monte beaucoup ! Et s'il neige, on passe chez Madame Garnier : elle fait le meilleur chocolat chaud du monde. Noé, le petit frère de Léa, préfère la piscine, à côté de la bibliothèque. Il y va tous les samedis.",
+      "en": "You ask what I do on Saturdays. It changes with the weather! If it rains, we go to the library at the top of the street, where Léa does her homework. If it's sunny, we take the bikes and ride down to the park, by the water. Coming back is harder: it's all uphill! And if it snows, we drop by Madame Garnier's: she makes the best hot chocolate in the world. Noé, Léa's little brother, would rather go to the pool, next to the library. He goes there every Saturday."
+    },
+    {
+      "id": "b-fete",
+      "fr": "Et ce soir, c'était l'anniversaire de Léa : elle a seize ans ! Je suis arrivée à huit heures avec un gâteau. Léa m'a présentée à ses amis, et surtout à Hugo, son meilleur ami depuis l'école primaire. Hugo a chanté très mal et très fort, mais il adore ça ! Moi, je ne voulais pas danser : je ne connaissais presque personne. Mais Noé est venu me chercher, et on a dansé ensemble. Il était très fier ! Léa déteste danser, mais ce soir, elle a dansé aussi. Madame Garnier n'est pas venue à la fête, mais elle est passée dire bonjour.",
+      "en": "And tonight was Léa's birthday: she's sixteen! I arrived at eight with a cake. Léa introduced me to her friends, and above all to Hugo, her best friend since primary school. Hugo sang very badly and very loudly, but he loves it! Me, I didn't want to dance: I hardly knew anyone. But Noé came to get me, and we danced together. He was very proud! Léa hates dancing, but tonight she danced too. Madame Garnier didn't come to the party, but she dropped by to say hello."
+    },
+    {
+      "id": "b-viens",
+      "fr": "Viens me voir bientôt : la Croix-Rousse, c'est le quartier le plus sympa de Lyon ! Samedi prochain, je vais aller au marché avec Léa. Tu vois, j'ai déjà une vie ici. À bientôt !",
+      "en": "Come and see me soon: the Croix-Rousse is the nicest neighbourhood in Lyon! Next Saturday I'm going to go to the market with Léa. You see, I already have a life here. See you soon!"
     },
     {
       "id": "b-maya",
@@ -133,15 +113,27 @@
     },
     {
       "id": "b-fin",
-      "fr": "Léa sourit. Samedi, ça va être une très bonne soirée.",
-      "en": "Léa smiles. Saturday is going to be a very good evening.",
+      "fr": "Une minute après, il y a déjà une réponse de Rosalie : « Du coup, je viens quand ? »",
+      "en": "A minute later, there's already an answer from Rosalie: \"So when am I coming?\"",
       "layout": "end"
     }
   ],
   "glossary": [
     {
-      "fr": "au-dessus de",
-      "en": "above, upstairs from"
+      "fr": "semaines",
+      "en": "weeks"
+    },
+    {
+      "fr": "presque",
+      "en": "almost"
+    },
+    {
+      "fr": "triste",
+      "en": "sad"
+    },
+    {
+      "fr": "seule",
+      "en": "alone"
     },
     {
       "fr": "quinze",
@@ -152,36 +144,20 @@
       "en": "just, right"
     },
     {
-      "fr": "du dessous",
-      "en": "underneath, below"
-    },
-    {
-      "fr": "fenêtre",
-      "en": "window"
-    },
-    {
-      "fr": "avoir l'air",
-      "en": "to look, to seem"
-    },
-    {
-      "fr": "triste",
-      "en": "sad"
+      "fr": "en dessous de",
+      "en": "below, underneath"
     },
     {
       "fr": "arrivée",
       "en": "arrived"
     },
     {
-      "fr": "du coup",
-      "en": "so, as a result"
+      "fr": "montée",
+      "en": "came up"
     },
     {
-      "fr": "lignes",
-      "en": "lines"
-    },
-    {
-      "fr": "la Croix-Rousse",
-      "en": "a hillside neighbourhood of Lyon"
+      "fr": "demandes",
+      "en": "ask"
     },
     {
       "fr": "voisin",
@@ -192,172 +168,12 @@
       "en": "knows"
     },
     {
-      "fr": "passes",
-      "en": "pass, go past"
-    },
-    {
-      "fr": "bruit",
-      "en": "noise"
-    },
-    {
-      "fr": "dort",
-      "en": "sleeps"
-    },
-    {
-      "fr": "entres",
-      "en": "come in, go in"
-    },
-    {
-      "fr": "histoires",
-      "en": "stories"
-    },
-    {
       "fr": "voisine",
       "en": "neighbour (a woman)"
     },
     {
-      "fr": "fière",
-      "en": "proud"
-    },
-    {
-      "fr": "attention",
-      "en": "careful, watch out"
-    },
-    {
       "fr": "jusqu'à",
       "en": "until, as far as"
-    },
-    {
-      "fr": "passe",
-      "en": "drop by"
-    },
-    {
-      "fr": "chaud",
-      "en": "hot"
-    },
-    {
-      "fr": "coin",
-      "en": "corner"
-    },
-    {
-      "fr": "boulangerie",
-      "en": "bakery"
-    },
-    {
-      "fr": "ferme",
-      "en": "closes"
-    },
-    {
-      "fr": "monsieur",
-      "en": "man, gentleman"
-    },
-    {
-      "fr": "croissants",
-      "en": "croissants"
-    },
-    {
-      "fr": "franchement",
-      "en": "honestly, frankly"
-    },
-    {
-      "fr": "matins",
-      "en": "mornings"
-    },
-    {
-      "fr": "bibliothèque",
-      "en": "library"
-    },
-    {
-      "fr": "en haut de",
-      "en": "at the top of"
-    },
-    {
-      "fr": "endroit",
-      "en": "place"
-    },
-    {
-      "fr": "devoirs",
-      "en": "homework"
-    },
-    {
-      "fr": "anglais",
-      "en": "English"
-    },
-    {
-      "fr": "fort",
-      "en": "loudly"
-    },
-    {
-      "fr": "pleut",
-      "en": "rains"
-    },
-    {
-      "fr": "surtout",
-      "en": "especially, above all"
-    },
-    {
-      "fr": "fromages",
-      "en": "cheeses"
-    },
-    {
-      "fr": "vélos",
-      "en": "bikes"
-    },
-    {
-      "fr": "descend",
-      "en": "go down"
-    },
-    {
-      "fr": "anniversaire",
-      "en": "birthday"
-    },
-    {
-      "fr": "seize",
-      "en": "sixteen"
-    },
-    {
-      "fr": "invite",
-      "en": "invite"
-    },
-    {
-      "fr": "présenter",
-      "en": "to introduce"
-    },
-    {
-      "fr": "chanter",
-      "en": "to sing"
-    },
-    {
-      "fr": "chante",
-      "en": "sings"
-    },
-    {
-      "fr": "danser",
-      "en": "to dance"
-    },
-    {
-      "fr": "déteste",
-      "en": "hate"
-    },
-    {
-      "fr": "danse",
-      "en": "dance"
-    },
-    {
-      "fr": "mets",
-      "en": "put"
-    },
-    {
-      "fr": "bleu",
-      "en": "blue"
-    },
-    {
-      "fr": "accepte",
-      "en": "accept"
-    },
-    {
-      "fr": "truc",
-      "en": "thing"
     },
     {
       "fr": "cheveux",
@@ -368,54 +184,177 @@
       "en": "white"
     },
     {
-      "fr": "jardin",
-      "en": "garden"
-    },
-    {
-      "fr": "fleurs",
-      "en": "flowers"
-    },
-    {
-      "fr": "banc",
-      "en": "bench"
-    },
-    {
-      "fr": "légumes",
-      "en": "vegetables"
-    },
-    {
-      "fr": "piscine",
-      "en": "swimming pool"
-    },
-    {
-      "fr": "reviennent",
-      "en": "come back"
+      "fr": "fier",
+      "en": "proud"
     },
     {
       "fr": "fleurir",
       "en": "to flower, to bloom"
     },
     {
+      "fr": "du coup",
+      "en": "so, as a result"
+    },
+    {
+      "fr": "truc",
+      "en": "thing"
+    },
+    {
+      "fr": "drôle",
+      "en": "funny"
+    },
+    {
+      "fr": "franchement",
+      "en": "honestly, frankly"
+    },
+    {
+      "fr": "passe",
+      "en": "drop by"
+    },
+    {
+      "fr": "boulangerie",
+      "en": "bakery"
+    },
+    {
+      "fr": "coin",
+      "en": "corner"
+    },
+    {
+      "fr": "ouvre",
+      "en": "opens"
+    },
+    {
+      "fr": "monsieur",
+      "en": "man, gentleman"
+    },
+    {
+      "fr": "croissants",
+      "en": "croissants"
+    },
+    {
+      "fr": "matins",
+      "en": "mornings"
+    },
+    {
+      "fr": "météo",
+      "en": "weather, forecast"
+    },
+    {
+      "fr": "pleut",
+      "en": "rains"
+    },
+    {
+      "fr": "bibliothèque",
+      "en": "library"
+    },
+    {
+      "fr": "en haut de",
+      "en": "at the top of"
+    },
+    {
+      "fr": "devoirs",
+      "en": "homework"
+    },
+    {
+      "fr": "vélos",
+      "en": "bikes"
+    },
+    {
+      "fr": "descend",
+      "en": "go down"
+    },
+    {
+      "fr": "chaud",
+      "en": "hot"
+    },
+    {
+      "fr": "piscine",
+      "en": "swimming pool"
+    },
+    {
+      "fr": "anniversaire",
+      "en": "birthday"
+    },
+    {
+      "fr": "seize",
+      "en": "sixteen"
+    },
+    {
+      "fr": "présentée",
+      "en": "introduced"
+    },
+    {
+      "fr": "surtout",
+      "en": "above all, especially"
+    },
+    {
+      "fr": "chanté",
+      "en": "sang"
+    },
+    {
+      "fr": "fort",
+      "en": "loudly"
+    },
+    {
+      "fr": "danser",
+      "en": "to dance"
+    },
+    {
+      "fr": "dansé",
+      "en": "danced"
+    },
+    {
+      "fr": "déteste",
+      "en": "hates"
+    },
+    {
+      "fr": "passée",
+      "en": "dropped by"
+    },
+    {
+      "fr": "la Croix-Rousse",
+      "en": "a hillside neighbourhood of Lyon"
+    },
+    {
       "fr": "facile",
       "en": "easy"
+    },
+    {
+      "fr": "avoir l'air",
+      "en": "to look, to seem"
+    },
+    {
+      "fr": "fenêtre",
+      "en": "window"
     }
   ],
   "items": [
     {
-      "id": "i-maya-avait-l-air-triste",
+      "id": "i-pourquoi-triste",
       "type": "comprehension",
-      "question": "{Qu'est-ce que Léa a pensé quand elle a vu Maya à sa fenêtre ?}",
-      "cue": "What did Léa think when she saw Maya at her window?",
-      "answer": "Maya avait l'air triste",
+      "question": "{Pourquoi Maya était un peu triste au début ?}",
+      "cue": "Why was Maya a bit sad at first?",
+      "answer": "Elle était seule.",
       "accept": [
-        "elle avait l'air triste",
-        "qu'elle avait l'air triste",
-        "que Maya avait l'air triste",
-        "elle a l'air triste",
-        "triste",
-        "elle est triste"
+        "elle était toute seule",
+        "parce qu'elle était seule",
+        "parce qu'elle était toute seule",
+        "elle était un peu seule",
+        "Maya était seule"
       ],
-      "hint": "{Maya avait l'air…}"
+      "hint": "{Elle était…}"
+    },
+    {
+      "id": "i-qui-habite-en-dessous",
+      "type": "comprehension",
+      "question": "{Qui est la fille qui habite juste en dessous de chez Maya ?}",
+      "cue": "Who is the girl who lives just below Maya?",
+      "answer": "Léa",
+      "accept": [
+        "c'est Léa",
+        "Léa !"
+      ],
+      "hint": "{C'est…}"
     },
     {
       "id": "i-bonjour",
@@ -442,23 +381,37 @@
       "hint": "{On dit…}"
     },
     {
-      "id": "i-mme-garnier",
+      "id": "i-dame-dont-tout-le-quartier-est-fier",
       "type": "comprehension",
-      "question": "{Qui est la voisine dont Léa est très fière ?}",
-      "cue": "Who is the neighbour Léa is very proud of?",
+      "question": "{Qui est la dame dont tout le quartier est fier ?}",
+      "cue": "Who is the lady the whole neighbourhood is proud of?",
       "answer": "Madame Garnier",
       "accept": [
-        "madame Garnier",
-        "Garnier",
-        "c'est Madame Garnier"
+        "c'est Madame Garnier",
+        "Mme Garnier",
+        "c'est Mme Garnier",
+        "la vieille voisine"
       ],
       "hint": "{Madame…}"
     },
     {
+      "id": "i-du-coup",
+      "type": "comprehension",
+      "question": "{Qu'est-ce que les jeunes disent tout le temps, ici ?}",
+      "cue": "What do young people say all the time here?",
+      "answer": "du coup",
+      "accept": [
+        "ils disent du coup",
+        "« du coup »",
+        "du coup !"
+      ],
+      "hint": "{Ils disent…}"
+    },
+    {
       "id": "i-karim",
       "type": "comprehension",
-      "question": "{Qui est le monsieur qui fait les meilleurs croissants du quartier ?}",
-      "cue": "Who is the man who makes the best croissants in the neighbourhood?",
+      "question": "{Qui est le monsieur qui fait les meilleurs croissants de Lyon ?}",
+      "cue": "Who is the man who makes the best croissants in Lyon?",
       "answer": "Karim",
       "accept": [
         "c'est Karim"
@@ -466,99 +419,71 @@
       "hint": "{C'est…}"
     },
     {
-      "id": "i-la-bibliotheque",
-      "type": "comprehension",
-      "question": "{Quel est l'endroit où Léa fait ses devoirs ?}",
-      "cue": "Where does Léa do her homework?",
-      "answer": "la bibliothèque",
-      "accept": [
-        "bibliothèque",
-        "c'est la bibliothèque",
-        "à la bibliothèque"
-      ],
-      "hint": "{La…}"
-    },
-    {
-      "id": "i-au-marche",
-      "type": "comprehension",
-      "question": "{Où est le monsieur qui connaît tout le monde ?}",
-      "cue": "Where is the man who knows everyone?",
-      "answer": "au marché",
-      "accept": [
-        "le marché",
-        "marché",
-        "il est au marché"
-      ],
-      "hint": "{Au…}"
-    },
-    {
       "id": "i-s-il-pleut",
       "type": "comprehension",
-      "question": "{S'il pleut, où vont Léa et Maya ?}",
-      "cue": "If it rains, where do Léa and Maya go?",
+      "question": "{S'il pleut, où vont Maya et Léa ?}",
+      "cue": "If it rains, where do Maya and Léa go?",
       "answer": "à la bibliothèque",
       "accept": [
         "la bibliothèque",
-        "bibliothèque",
-        "elles vont à la bibliothèque"
+        "elles vont à la bibliothèque",
+        "à la bibliothèque en haut de la rue"
       ],
       "hint": "{À la…}"
     },
     {
-      "id": "i-s-il-fait-beau",
-      "type": "comprehension",
-      "question": "{S'il fait beau, qu'est-ce qu'elles prennent ?}",
-      "cue": "If it's sunny, what do they take?",
-      "answer": "les vélos",
-      "accept": [
-        "des vélos",
-        "vélos",
-        "elles prennent les vélos",
-        "le vélo"
-      ],
-      "hint": "{Les…}"
-    },
-    {
       "id": "i-s-il-neige",
       "type": "comprehension",
-      "question": "{S'il neige, chez qui est-ce que Maya peut passer ?}",
-      "cue": "If it snows, whose place can Maya drop by?",
+      "question": "{S'il neige, chez qui est-ce qu'elles passent ?}",
+      "cue": "If it snows, whose place do they drop by?",
       "answer": "chez Madame Garnier",
       "accept": [
         "Madame Garnier",
-        "chez Garnier",
-        "chez elle"
+        "chez Mme Garnier",
+        "chez elle",
+        "elles passent chez Madame Garnier"
       ],
       "hint": "{Chez…}"
     },
     {
-      "id": "i-son-anniversaire",
+      "id": "i-avec-qui-maya-a-danse",
       "type": "comprehension",
-      "question": "{À quoi Léa invite-t-elle Maya ?}",
-      "cue": "What does Léa invite Maya to?",
-      "answer": "à son anniversaire",
+      "question": "{À la fête, avec qui Maya a dansé ?}",
+      "cue": "At the party, who did Maya dance with?",
+      "answer": "avec Noé",
       "accept": [
-        "son anniversaire",
-        "à sa fête",
-        "sa fête",
-        "à une fête",
-        "à la fête"
+        "Noé",
+        "avec le petit frère de Léa",
+        "elle a dansé avec Noé"
       ],
-      "hint": "{À son…}"
+      "hint": "{Avec…}"
     },
     {
-      "id": "i-un-gateau",
+      "id": "i-qui-a-chante",
       "type": "comprehension",
-      "question": "{Maya accepte. Qu'est-ce qu'elle pense apporter ?}",
-      "cue": "Maya says yes. What is she thinking of bringing?",
-      "answer": "un gâteau",
+      "question": "{Qui a chanté très mal et très fort ?}",
+      "cue": "Who sang very badly and very loudly?",
+      "answer": "Hugo",
       "accept": [
-        "gâteau",
-        "un truc de Montréal",
-        "un gâteau ou un truc de Montréal",
-        "un gâteau, un truc de Montréal"
+        "c'est Hugo",
+        "Hugo a chanté"
       ],
-      "hint": "{Un…}"
+      "hint": "{C'est…}"
+    },
+    {
+      "id": "i-rosalie-demande",
+      "type": "comprehension",
+      "question": "{À la fin, qu'est-ce que Rosalie demande ?}",
+      "cue": "At the end, what does Rosalie ask?",
+      "answer": "quand elle vient",
+      "accept": [
+        "quand elle peut venir",
+        "quand elle vient à Lyon",
+        "du coup, je viens quand ?",
+        "je viens quand ?",
+        "quand elle va venir"
+      ],
+      "hint": "{Elle demande quand…}"
     }
   ],
   "glosses": [
@@ -568,29 +493,14 @@
       "note": "feminine of {gentil}"
     },
     {
+      "fr": "connaissais",
+      "en": "knew",
+      "note": "imparfait of {connaître}"
+    },
+    {
       "fr": "préfère",
-      "en": "lived/resided",
+      "en": "prefers",
       "note": "present of {préférer}"
-    },
-    {
-      "fr": "souri",
-      "en": "smiled",
-      "note": "past participle of {sourire}"
-    },
-    {
-      "fr": "lis",
-      "en": "read",
-      "note": "present of {lire}"
-    },
-    {
-      "fr": "ouvre",
-      "en": "open",
-      "note": "present of {ouvrir}"
-    },
-    {
-      "fr": "lit",
-      "en": "read",
-      "note": "present of {lire}"
     }
   ]
 }

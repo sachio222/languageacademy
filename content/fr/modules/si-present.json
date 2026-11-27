@@ -64,7 +64,7 @@
     {
       "id": "c-si-present",
       "term": "{si} + present: a plan that depends on something",
-      "definition": "Say the condition with {si} and a verb in the present, then say the plan. The plan can be in the present, with {aller} + infinitive, or an order. The condition stays in the present, even when it is about next Saturday. It can also come after the plan.",
+      "definition": "Say the condition with {si} and a verb in the present, then say the plan. The plan can be in the present, in the future, with {aller} + infinitive, or an order. When {si} means if, the condition stays in the present, even when it is about next Saturday. It can also come after the plan.",
       "example": "{Si tu veux, on y va.} (If you want, let's go.) {Je passe chez toi si j'ai le temps.} (I'll drop by if I have time.)"
     },
     {
@@ -109,8 +109,8 @@
           "en": "If it's nice, we'll take the bikes."
         },
         {
-          "fr": "S'il fait chaud, on regarde les animaux du parc : les abeilles, les papillons.",
-          "en": "If it's hot, we'll watch the animals in the park: the bees, the butterflies."
+          "fr": "S'il fait chaud, on va au parc voir les animaux.",
+          "en": "If it's hot, we'll go to the park to see the animals."
         },
         {
           "fr": "S'il pleut, on va à la bibliothèque.",
@@ -215,7 +215,7 @@
         },
         {
           "answer": "voudras",
-          "feedback": "No future after {si}: {si tu veux}, even for Saturday."
+          "feedback": "When {si} means if, no future after it: {si tu veux}, even for Saturday."
         }
       ]
     },
@@ -249,7 +249,7 @@
       "mistakes": [
         {
           "answer": "S'il pleuvra, on va à la bibliothèque.",
-          "feedback": "No future after {si}: {s'il pleut}, even for Saturday."
+          "feedback": "When {si} means if, no future after it: {s'il pleut}, even for Saturday."
         }
       ]
     },
@@ -266,7 +266,7 @@
       "mistakes": [
         {
           "answer": "S'il va neiger, on reste à la maison.",
-          "feedback": "For the condition, use the present: {s'il neige}. The plan can use {aller}: {on va rester à la maison}."
+          "feedback": "That is French, but it means if it is going to snow. For a plan that depends on snow, use the present: {s'il neige}. The plan itself can use {aller}: {on va rester à la maison}."
         }
       ]
     },
@@ -279,7 +279,7 @@
       "mistakes": [
         {
           "answer": "Je viens si j'aurai le temps.",
-          "feedback": "No future after {si}: {si j'ai le temps}."
+          "feedback": "When {si} means if, no future after it: {si j'ai le temps}."
         }
       ]
     },
@@ -403,13 +403,16 @@
         "Oui, on y va s'il fait beau.",
         "Oui, s'il fait beau, on y va.",
         "S'il fait beau, oui.",
-        "S'il fait beau, on y va."
+        "S'il fait beau, on y va.",
+        "Ouais, s'il fait beau.",
+        "Ouais, on y va s'il fait beau.",
+        "Ouais, s'il fait beau, on y va."
       ]
     },
     {
       "id": "i-marche-si-tu-veux",
       "type": "respond",
-      "situation": "Hugo wants to go to the Sunday market. Tell him: if you want, let's go.",
+      "situation": "Hugo wants to go to the market. You don't mind either way, so you leave the choice to him. Answer with a plan that starts with {si tu veux}.",
       "answer": "Si tu veux, on y va.",
       "accept": [
         "On y va si tu veux.",
@@ -430,7 +433,8 @@
       "answer": "S'il fait beau, on prend les vélos.",
       "accept": [
         "On prend les vélos s'il fait beau.",
-        "S'il fait beau, nous prenons les vélos."
+        "S'il fait beau, nous prenons les vélos.",
+        "S'il fait beau, on va prendre les vélos."
       ]
     },
     {
@@ -440,12 +444,13 @@
       "answer": "S'il pleut, on va à la bibliothèque.",
       "accept": [
         "On va à la bibliothèque s'il pleut.",
-        "S'il pleut, nous allons à la bibliothèque."
+        "S'il pleut, nous allons à la bibliothèque.",
+        "S'il pleut, on va aller à la bibliothèque."
       ],
       "mistakes": [
         {
           "answer": "S'il pleuvra, on va à la bibliothèque.",
-          "feedback": "No future after {si}: {s'il pleut}."
+          "feedback": "When {si} means if, no future after it: {s'il pleut}."
         }
       ]
     },
@@ -456,12 +461,13 @@
       "answer": "S'il neige, on reste à la maison et on regarde un film.",
       "accept": [
         "On reste à la maison et on regarde un film s'il neige.",
-        "S'il neige, nous restons à la maison et nous regardons un film."
+        "S'il neige, nous restons à la maison et nous regardons un film.",
+        "S'il neige, on va rester à la maison et regarder un film."
       ],
       "mistakes": [
         {
           "answer": "S'il neigera, on reste à la maison et on regarde un film.",
-          "feedback": "No future after {si}: {s'il neige}."
+          "feedback": "When {si} means if, no future after it: {s'il neige}."
         }
       ]
     }

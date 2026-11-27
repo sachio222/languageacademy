@@ -166,7 +166,7 @@
           "module_key": "ce-que-and-ce-qui",
           "kind": "lesson",
           "title": "{ce que} and {ce qui}: saying what (ce que j'aime, ce qui est drôle)",
-          "goal": "You can say what you like, what is important and what is hard without naming the thing first: Ce que j'aime surtout, c'est le marché. Ce qui est drôle, c'est Hugo.",
+          "goal": "You can say what you like, what is important and what is hard without naming the thing first: Ce que j'aime surtout, c'est le marché. Ce qui est drôle, c'est quand Hugo parle anglais.",
           "situation": "Opens with Maya asking what there is to do here; closes with Léa's list of favourite things and Maya saying what she loved in Montréal.",
           "teaches": {
             "words": [
@@ -292,7 +292,7 @@
         {
           "module_key": "unit13-reading",
           "kind": "reading",
-          "title": "Reading · {Mon quartier, pour Maya}",
+          "title": "Reading · {Mon nouveau quartier}",
           "teaches": {
             "words": [
               "fr:lex:etage",
@@ -315,12 +315,12 @@
               {
                 "kind": "learning-alongside",
                 "type": "a-new-place",
-                "title": "Mon quartier, pour Maya",
-                "title_native": "My neighbourhood, for Maya"
+                "title": "Mon nouveau quartier",
+                "title_native": "My new neighbourhood"
               }
             ],
-            "genre": "a guide written as a letter, second person",
-            "premise": "Maya, fifteen, has just moved from Montréal into the flat above Léa's in the Croix-Rousse, and she knows nobody. Léa writes her a guide to the neighbourhood and slips it under her door: Karim's bakery, which opens at seven, the library where Léa does her homework, the market whose cheese seller knows everyone, and Mme Garnier on the ground floor, a neighbour Léa is proud of. Because Maya comes from Québec, Léa also explains what is done here: you say bonjour to every neighbour you pass on the stairs, you say vous to Mme Garnier until she tells you otherwise, and the meal Maya calls souper is called dîner. Each place comes with a plan for the weather: if it rains, the library; if it is sunny, bikes along the river; if it snows, hot chocolate at Mme Garnier's. The guide ends with an invitation to Léa's birthday party on Saturday, where Hugo will sing and everyone will dance, and under it a short reply in Maya's handwriting: she accepts, and asks what she should bring.",
+            "genre": "messages between two friends: questions, then a long answer",
+            "premise": "The evening after Léa's sixteenth birthday party, Maya answers Rosalie, her best friend in Montréal, who wants to know everything: what the neighbourhood is like, whether she has friends, what she does on Saturdays, and whether the French talk like them. Maya tells her how Léa came up to say hello and showed her round; what is done here (bonjour to every neighbour, vous to Mme Garnier until she offers tu); the words she has picked up (du coup, truc, le week-end for la fin de semaine); Karim's bakery and its croissants; the plans for every kind of weather; and the party, where Hugo sang badly, Maya would not dance until Noé came to get her, and Mme Garnier dropped by to say hello. It ends with Rosalie's reply, a minute later: \"Du coup, je viens quand ?\"",
             "must_use": [
               "fr:cx:relative.qui",
               "fr:cx:relative.que",

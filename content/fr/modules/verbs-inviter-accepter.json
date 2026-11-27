@@ -24,7 +24,7 @@
       "word_id": "accepter-fr",
       "fr": "accepter",
       "gloss": "to accept, to say yes",
-      "note": "a regular -er verb: {j'accepte}. {J'accepte avec plaisir} is the warm way to say yes.",
+      "note": "a regular -er verb: {j'accepte}. {J'accepte avec plaisir} is the polite way to say yes, in writing or to an adult. Friends just say {Avec plaisir !} or {Je viens !}",
       "example_fr": "Hugo accepte avec plaisir.",
       "example_en": "Hugo accepts with pleasure."
     },
@@ -57,7 +57,7 @@
     {
       "id": "c-yes-or-no-to-an-invitation",
       "term": "Saying yes or no to an invitation",
-      "definition": "To say yes, thank the person and accept. To say no, thank them, say sorry and say you can't come. {Je refuse} to someone's face sounds cold.",
+      "definition": "To say yes, thank the person and accept: friends say {Merci, avec plaisir !} or {Je viens !}; in writing or to an adult, {j'accepte avec plaisir}. To say no, thank them, say sorry and say you can't come. {Je refuse} to someone's face sounds cold.",
       "example": "{Merci, j'accepte avec plaisir !} (Thanks, I'd love to!) {Je te remercie, mais je ne peux pas venir.} (Thank you, but I can't come.)"
     }
   ],
@@ -114,7 +114,8 @@
         "je t'invite à mon anniversaire, samedi",
         "samedi, je t'invite à mon anniversaire",
         "Maya, je t'invite à mon anniversaire samedi",
-        "je t'invite à mon anniversaire ce samedi"
+        "je t'invite à mon anniversaire ce samedi",
+        "je t'invite samedi à mon anniversaire"
       ],
       "mistakes": [
         {
@@ -136,7 +137,8 @@
         "madame, je vous invite à mon anniversaire samedi",
         "Madame Garnier, je vous invite à mon anniversaire samedi",
         "je vous invite à mon anniversaire, samedi",
-        "samedi, je vous invite à mon anniversaire"
+        "samedi, je vous invite à mon anniversaire",
+        "je vous invite samedi à mon anniversaire"
       ],
       "mistakes": [
         {
@@ -201,7 +203,7 @@
     {
       "id": "i-du-coup-maya",
       "type": "transform",
-      "instruction": "Join the two sentences with {du coup}, so the second one is the result.",
+      "instruction": "Léa explains to Noé why she is inviting Maya. Join the two sentences with {du coup}, so the second one is the result.",
       "shown": "Maya ne connaît personne ici. Léa l'invite.",
       "answer": "Maya ne connaît personne ici, du coup Léa l'invite",
       "accept": [
@@ -238,46 +240,47 @@
     {
       "id": "i-hugo-accepte",
       "type": "gapfill",
-      "text": "Super ! Merci, Léa, j'___ avec plaisir !",
+      "text": "Hugo lit le mot de Léa et il ___ : il vient samedi !",
       "blanks": [
         {
           "answer": "accepte"
         }
       ],
-      "gloss": "Hugo's answer: Great! Thanks, Léa, I'd love to!",
+      "gloss": "Hugo reads Léa's note and says yes: he's coming on Saturday!",
       "mistakes": [
         {
           "answer": "accepter",
-          "feedback": "After {j'}, use the present: {j'accepte}."
+          "feedback": "Conjugate the verb after {il}: {il accepte}."
         },
         {
           "answer": "acceptes",
-          "feedback": "{acceptes} goes with {tu}. With {je}: {j'accepte}."
+          "feedback": "{acceptes} goes with {tu}. With {il}: {il accepte}."
         }
       ]
     },
     {
       "id": "i-accept-a-friend",
       "type": "respond",
-      "situation": "A friend invites you to a party on Saturday evening. Thank them and say yes, warmly.",
-      "answer": "merci, j'accepte avec plaisir",
+      "situation": "Hugo invites you to a party on Saturday evening. Thank him and say yes, warmly, the way friends do.",
+      "answer": "merci, avec plaisir !",
       "accept": [
+        "oui, avec plaisir !",
+        "avec plaisir !",
+        "merci, je viens avec plaisir",
+        "merci, je viens !",
+        "super, merci, je viens !",
+        "merci, avec plaisir, je viens !",
+        "ouais, avec plaisir !",
+        "merci, j'accepte avec plaisir",
         "j'accepte avec plaisir, merci",
-        "merci beaucoup, j'accepte avec plaisir",
-        "merci, j'accepte",
-        "je te remercie, j'accepte avec plaisir",
-        "je vous remercie, j'accepte avec plaisir",
-        "super, merci, j'accepte avec plaisir",
-        "oui, merci, j'accepte avec plaisir"
+        "merci beaucoup, avec plaisir !",
+        "super, merci !",
+        "oui, merci, je viens !"
       ],
       "mistakes": [
         {
           "answer": "merci, je accepte avec plaisir",
-          "feedback": "{je} drops its e before a vowel: {j'accepte}."
-        },
-        {
-          "answer": "merci, j'accepter avec plaisir",
-          "feedback": "After {j'}, use the present: {j'accepte}."
+          "feedback": "{je} drops its e before a vowel: {j'accepte}. Between friends, {Merci, avec plaisir !} is enough."
         }
       ]
     },
@@ -440,7 +443,13 @@
         "Hugo a accepté et elle, elle a refusé",
         "Hugo a accepté, et elle, elle a refusé",
         "Hugo a accepté, mais elle, elle a refusé",
-        "Hugo a accepté, elle a refusé"
+        "Hugo a accepté, elle a refusé",
+        "Hugo a accepté et Madame Garnier a refusé",
+        "Hugo a accepté, mais Madame Garnier a refusé",
+        "Hugo a accepté, et Madame Garnier a refusé",
+        "Hugo a accepté, Madame Garnier a refusé",
+        "Hugo a accepté mais Madame Garnier a refusé",
+        "Hugo a accepté mais elle a refusé"
       ],
       "mistakes": [
         {

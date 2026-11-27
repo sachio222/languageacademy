@@ -45,13 +45,20 @@
     {
       "id": "i-s-il-fait-beau-au-parc",
       "type": "respond",
-      "situation": "Tell Maya: if it's nice next Saturday, we go to the park.",
+      "situation": "Maya asks what you will do next Saturday. Make a plan that depends on the sun: the park. Start with {S'il fait beau}.",
       "answer": "S'il fait beau samedi prochain, on va au parc.",
       "accept": [
         "S'il fait beau samedi prochain, nous allons au parc.",
         "On va au parc s'il fait beau samedi prochain.",
         "Nous allons au parc s'il fait beau samedi prochain.",
-        "Samedi prochain, s'il fait beau, on va au parc."
+        "Samedi prochain, s'il fait beau, on va au parc.",
+        "S'il fait beau samedi prochain, on ira au parc.",
+        "S'il fait beau samedi prochain, on va aller au parc.",
+        "S'il fait beau, on va au parc.",
+        "S'il fait beau, on ira au parc.",
+        "S'il fait beau, on va aller au parc.",
+        "S'il fait beau, nous allons au parc.",
+        "S'il fait beau samedi, on va au parc."
       ],
       "mistakes": [
         {
@@ -80,7 +87,7 @@
     {
       "id": "i-ce-que-je-deteste-le-bruit",
       "type": "transform",
-      "instruction": "Say it with what you hate first. Start with {Ce que}.",
+      "instruction": "Maman comes home after a night at work, and the neighbours are noisy. She says it with what she hates first. Start with {Ce que}.",
       "shown": "Je déteste le bruit.",
       "answer": "Ce que je déteste, c'est le bruit.",
       "mistakes": [
@@ -93,13 +100,19 @@
     {
       "id": "i-elle-ferme-a-six-heures",
       "type": "respond",
-      "situation": "Maya asks when the library closes. Tell her: it closes at six in the evening.",
+      "situation": "Maya wants to study at the library after school, and asks when it closes. You know it closes at six in the evening. Answer her.",
       "answer": "Elle ferme à six heures du soir.",
       "accept": [
         "La bibliothèque ferme à six heures du soir.",
         "Elle ferme à dix-huit heures.",
         "La bibliothèque ferme à dix-huit heures.",
-        "Elle ferme à six heures."
+        "Elle ferme à six heures.",
+        "Elle ferme à 18 heures.",
+        "Elle ferme à 18 h.",
+        "La bibliothèque ferme à 18 heures.",
+        "À six heures du soir.",
+        "À dix-huit heures.",
+        "Elle ferme à 6 heures du soir."
       ]
     },
     {
@@ -127,7 +140,8 @@
       "accept": [
         "Madame Garnier, je vous invite à la fête samedi soir.",
         "Je vous invite à la fête, samedi soir.",
-        "Je vous invite samedi soir à la fête."
+        "Je vous invite samedi soir à la fête.",
+        "Je vous invite à ma fête samedi soir."
       ],
       "mistakes": [
         {
@@ -139,7 +153,7 @@
     {
       "id": "i-rue-que-maya-cherche",
       "type": "transform",
-      "instruction": "Join the two sentences with {que}.",
+      "instruction": "Léa tells Noé about the street Maya is looking for. Join the two sentences with {que}.",
       "shown": "Maya cherche une rue. La rue est longue.",
       "answer": "La rue que Maya cherche est longue.",
       "mistakes": [
@@ -152,24 +166,27 @@
     {
       "id": "i-maman-je-te-presente",
       "type": "gapfill",
-      "text": "Maman, je te ___ Hugo, un copain de l'école.",
+      "text": "Maman, je te ___ Maya, notre nouvelle voisine.",
       "blanks": [
         {
           "answer": "présente"
         }
       ],
-      "gloss": "Mum, this is Hugo, a friend from school."
+      "gloss": "Léa: Mum, this is Maya, our new neighbour."
     },
     {
       "id": "i-je-passe-vers-huit-heures",
       "type": "gapfill",
-      "text": "Je ___ chez toi vers huit heures ce soir.",
+      "text": "Je ___ chez toi vers huit heures ce soir, juste pour dire bonjour.",
       "blanks": [
         {
-          "answer": "passe"
+          "answer": "passe",
+          "accept": [
+            "passerai"
+          ]
         }
       ],
-      "gloss": "I'll drop by your place at about eight tonight."
+      "gloss": "I'll drop by your place at about eight tonight, just to say hello."
     },
     {
       "id": "i-si-tu-as-le-temps",
@@ -229,7 +246,7 @@
     {
       "id": "i-frere-dont-elle-est-fiere",
       "type": "transform",
-      "instruction": "Join the two sentences with {dont}.",
+      "instruction": "Maya tells her mother about Léa and Noé. Join the two sentences with {dont}.",
       "shown": "Léa a un frère. Elle est fière de son frère.",
       "answer": "Léa a un frère dont elle est fière.",
       "mistakes": [
@@ -257,14 +274,14 @@
     {
       "id": "i-noe-a-oublie-son-livre",
       "type": "transform",
-      "instruction": "Put it in the past.",
+      "instruction": "Léa tells Maman what happened at the pool yesterday. Put Noé's sentence in the past.",
       "shown": "Noé oublie son livre à la piscine.",
       "answer": "Noé a oublié son livre à la piscine."
     },
     {
       "id": "i-le-soir-ou-hugo-a-chante",
       "type": "transform",
-      "instruction": "Join the two sentences with {où}. Start with {Le soir}.",
+      "instruction": "Noé remembers the party. Join the two sentences with {où}. Start with {Le soir}.",
       "shown": "Hugo a chanté un soir. Ce soir-là, tout le monde a dansé.",
       "answer": "Le soir où Hugo a chanté, tout le monde a dansé.",
       "mistakes": [
@@ -275,20 +292,20 @@
       ]
     },
     {
-      "id": "i-maya-deteste-danser",
+      "id": "i-lea-deteste-danser",
       "type": "gapfill",
-      "text": "Maya ___ danser, mais elle adore chanter.",
+      "text": "Léa ___ danser, mais elle adore chanter.",
       "blanks": [
         {
           "answer": "déteste"
         }
       ],
-      "gloss": "Maya hates dancing, but she loves singing."
+      "gloss": "Léa hates dancing, but she loves singing."
     },
     {
       "id": "i-s-il-neige-les-enfants-restent",
       "type": "transform",
-      "instruction": "Join the two sentences with {s'il}.",
+      "instruction": "Madame Garnier explains what the children of the building do in winter. Join the two sentences with {s'il}.",
       "shown": "Il neige. Les enfants restent dans l'immeuble.",
       "answer": "S'il neige, les enfants restent dans l'immeuble.",
       "accept": [
@@ -304,11 +321,14 @@
     {
       "id": "i-chanter-ce-que-tu-veux",
       "type": "respond",
-      "situation": "Hugo asks what he should sing at the party. Tell him: you can sing what you want.",
+      "situation": "Hugo asks what he should sing at the party. You don't mind: leave the choice to him, with {ce que}.",
       "answer": "Tu peux chanter ce que tu veux.",
       "accept": [
         "Chante ce que tu veux.",
-        "Tu peux chanter ce que tu veux, Hugo."
+        "Tu peux chanter ce que tu veux, Hugo.",
+        "Tu chantes ce que tu veux.",
+        "Chante ce que tu veux !",
+        "Tu peux chanter ce que tu veux !"
       ],
       "mistakes": [
         {
@@ -341,7 +361,7 @@
     {
       "id": "i-hugo-accepte-de-chanter",
       "type": "transform",
-      "instruction": "Say the opposite with {accepter}.",
+      "instruction": "Hugo said no to singing, then changes his mind. Say what he does now, with {accepter}.",
       "shown": "Hugo refuse de chanter.",
       "answer": "Hugo accepte de chanter."
     },
@@ -363,15 +383,15 @@
       ]
     },
     {
-      "id": "i-hugo-et-maya-chantent",
+      "id": "i-hugo-chante-joyeux-anniversaire",
       "type": "gapfill",
-      "text": "Ce soir, Hugo et Maya ___ ensemble pour Léa.",
+      "text": "Ce soir, Hugo ___ « Joyeux anniversaire » pour Léa.",
       "blanks": [
         {
-          "answer": "chantent"
+          "answer": "chante"
         }
       ],
-      "gloss": "Tonight Hugo and Maya are singing together for Léa."
+      "gloss": "Tonight Hugo is singing Happy Birthday for Léa."
     },
     {
       "id": "i-il-faut-que-tu-sois-a-l-heure",
@@ -393,7 +413,7 @@
     {
       "id": "i-habitez-vous-dans-cet-immeuble",
       "type": "transform",
-      "instruction": "Ask it with inversion.",
+      "instruction": "Maya meets a man on the stairs and asks him politely if he lives in this building. Ask it with inversion.",
       "shown": "Vous habitez dans cet immeuble.",
       "answer": "Habitez-vous dans cet immeuble ?",
       "accept": [
@@ -403,13 +423,13 @@
     {
       "id": "i-cle-nulle-part",
       "type": "gapfill",
-      "text": "J'ai oublié ma clé ? Je ne la trouve ___ !",
+      "text": "Où est ma clé ? Je l'ai cherchée partout, mais je ne la trouve ___ !",
       "blanks": [
         {
           "answer": "nulle part"
         }
       ],
-      "gloss": "Did I forget my key? I can't find it anywhere!"
+      "gloss": "Where's my key? I've looked everywhere, but I can't find it anywhere!"
     },
     {
       "id": "i-noe-apprend-a-nager",
@@ -425,12 +445,13 @@
     {
       "id": "i-qu-est-ce-qui-fait-ce-bruit-la-nuit",
       "type": "respond",
-      "situation": "You hear a noise in the building at night. Ask Léa what is making that noise.",
+      "situation": "You are Maya. You hear a noise in the building at night. Ask Léa what is making that noise. Use {qu'est-ce qui}.",
       "answer": "Qu'est-ce qui fait ce bruit ?",
       "accept": [
         "Qu'est-ce qui fait ce bruit la nuit ?",
         "Qu'est-ce qui fait ce bruit, Léa ?",
-        "Qu'est-ce qui fait du bruit ?"
+        "Qu'est-ce qui fait du bruit ?",
+        "Léa, qu'est-ce qui fait ce bruit ?"
       ],
       "mistakes": [
         {

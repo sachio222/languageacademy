@@ -73,7 +73,7 @@
       "word_id": "y-a-fr",
       "fr": "y'a",
       "gloss": "there is, there are",
-      "note": "{il y a} said fast. You will hear it everywhere; write {il y a}.",
+      "note": "{il y a} said fast, also written {y a}. With the {ne} dropped, {y'a plus} means there's no more. You will hear it everywhere; write {il y a}.",
       "example_fr": "Y'a du gâteau dans la cuisine !",
       "example_en": "There's cake in the kitchen!"
     },
@@ -81,7 +81,7 @@
       "word_id": "chais-fr",
       "fr": "chais",
       "gloss": "I know; chais pas: dunno",
-      "note": "{je sais} said fast, nearly always in {chais pas}. You need to understand it, not say it.",
+      "note": "{je sais} said fast, nearly always in {chais pas}. Fast speech also turns {tu as} into {t'as}. You need to understand them, not say them.",
       "example_fr": "Il est où, Hugo ? Chais pas.",
       "example_en": "Where's Hugo? Dunno."
     }
@@ -172,13 +172,13 @@
     {
       "id": "i-le-frere-dont-je-t-ai-parle",
       "type": "gapfill",
-      "text": "Maya, je te présente Noé, le frère ___ je t'ai parlé.",
+      "text": "Maya, je te présente Noé, le petit frère ___ je t'ai parlé.",
       "blanks": [
         {
           "answer": "dont"
         }
       ],
-      "gloss": "Maya, this is Noé, the brother I told you about.",
+      "gloss": "Maya, this is Noé, the little brother I told you about.",
       "word_ids": [
         "presenter-fr"
       ],
@@ -213,7 +213,8 @@
       "accept": [
         "est-ce que tu chantes ce soir ?",
         "chantes-tu ce soir ?",
-        "Hugo, tu chantes ce soir ?"
+        "Hugo, tu chantes ce soir ?",
+        "tu vas chanter ce soir ?"
       ],
       "word_ids": [
         "chanter-fr"
@@ -387,7 +388,7 @@
     {
       "id": "i-t-as-means-tu-as",
       "type": "choice",
-      "question": "Noé shouts {T'as vu ? Hugo danse !} Maya answers {Chais pas danser, moi.} Which words do {t'as} and {chais} stand for?",
+      "question": "Noé asks his sister {T'as vu Hugo ?} Léa answers {Chais pas où il est, moi.} Which words do {t'as} and {chais} stand for?",
       "options": [
         {
           "text": "tu as, je sais",
@@ -426,13 +427,13 @@
     {
       "id": "i-je-doute-qu-il-chante-bien",
       "type": "gapfill",
-      "text": "Hugo veut chanter pour Léa. Je doute qu'il ___ bien !",
+      "text": "Maman : Hugo veut chanter pour Léa ? Je doute qu'il ___ bien !",
       "blanks": [
         {
           "answer": "chante"
         }
       ],
-      "gloss": "Hugo wants to sing for Léa. I doubt he sings well!",
+      "gloss": "Mum: Hugo wants to sing for Léa? I doubt he sings well!",
       "word_ids": [
         "chanter-fr"
       ],
@@ -446,13 +447,13 @@
     {
       "id": "i-des-gens-partout",
       "type": "gapfill",
-      "text": "Y'a des gens ___ chez Léa : y'a plus de place pour danser !",
+      "text": "Hugo : Y'a des gens ___ chez toi, Léa : y'a plus de place pour danser !",
       "blanks": [
         {
           "answer": "partout"
         }
       ],
-      "gloss": "Noé: There are people everywhere at Léa's: there's no more room to dance!",
+      "gloss": "Hugo: There are people everywhere at your place, Léa: there's no room left to dance! ({y'a plus} = {il n'y a plus})",
       "word_ids": [
         "danser-fr"
       ],
@@ -471,7 +472,8 @@
       "accept": [
         "est-ce qu'on change de musique ?",
         "on peut changer de musique ?",
-        "est-ce qu'on peut changer de musique ?"
+        "est-ce qu'on peut changer de musique ?",
+        "on peut mettre une autre musique ?"
       ]
     },
     {
@@ -480,12 +482,18 @@
       "text": "Hugo va chanter pour Léa ? Ça va ___ drôle !",
       "blanks": [
         {
-          "answer": "devenir"
+          "answer": "être"
         }
       ],
       "gloss": "Hugo is going to sing for Léa? This is going to get funny!",
       "word_ids": [
         "chanter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "devenir",
+          "feedback": "English says get funny, but French says {ça va être drôle}."
+        }
       ]
     },
     {

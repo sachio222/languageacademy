@@ -48,7 +48,7 @@
       "word_id": "madame-fr",
       "fr": "madame",
       "gloss": "Mrs; madam",
-      "note": "The polite word for a woman: {Bonjour, madame.} Before a name it is written {Mme}: {Mme Garnier}.",
+      "note": "The polite word for a woman: {Bonjour, madame.} Before a name it is often written {Mme}: {Mme Garnier}.",
       "example_fr": "Madame Garnier, c'est la voisine qui a un chat.",
       "example_en": "Madame Garnier is the neighbour who has a cat.",
       "part_of_speech": "noun"
@@ -231,7 +231,7 @@
     {
       "id": "i-mec-meaning",
       "type": "meaning",
-      "instruction": "Maya asks Léa about someone in the street. What does {mec} mean here?",
+      "instruction": "Hugo, at the window with Léa, asks about someone in the street. What does {mec} mean here?",
       "shown": "C'est qui, le mec qui parle à Karim ?",
       "answer": "guy",
       "accept": [
@@ -441,13 +441,13 @@
     {
       "id": "i-toi-que-je-cherche",
       "type": "gapfill",
-      "text": "Ah, c'est toi ___ je cherche ! Tu veux un gâteau ?",
+      "text": "Ah, c'est toi ___ je cherchais ! Tu veux un gâteau ?",
       "blanks": [
         {
           "answer": "que"
         }
       ],
-      "gloss": "Mme Garnier: Ah, you're the one I'm looking for! Would you like a cake?"
+      "gloss": "Mme Garnier: Ah, you're the one I was looking for! Would you like a cake?"
     },
     {
       "id": "i-truc-que-tu-cherches",
@@ -515,16 +515,18 @@
     {
       "id": "i-maya-copain-que-tu-cherches",
       "type": "respond",
-      "situation": "Léa asks: {Et Hugo, il est où ?} Maya sees him in front of the café. Answer as Maya. Start with {Le copain que tu cherches}.",
-      "answer": "Le copain que tu cherches est devant le café.",
+      "situation": "Léa says she is looking for a friend, but she doesn't say who. Maya sees a boy waving in front of the café. Ask Léa, as Maya, if he is the one. Start with {Le copain que tu cherches}.",
+      "answer": "Le copain que tu cherches, c'est lui, devant le café ?",
       "accept": [
-        "Le copain que tu cherches, il est devant le café.",
-        "Le copain que tu cherches est là, devant le café.",
-        "Le copain que tu cherches, il est là, devant le café."
+        "Le copain que tu cherches, c'est lui ?",
+        "Le copain que tu cherches, il est devant le café ?",
+        "Le copain que tu cherches est devant le café ?",
+        "Le copain que tu cherches, c'est lui devant le café ?",
+        "Le copain que tu cherches, est-ce que c'est lui ?"
       ],
       "mistakes": [
         {
-          "answer": "Le copain qui tu cherches est devant le café.",
+          "answer": "Le copain qui tu cherches, c'est lui, devant le café ?",
           "feedback": "{tu} is the subject: you are looking for him. Use {que}."
         }
       ]
@@ -532,17 +534,17 @@
     {
       "id": "i-au-revoir-livre-que-tu-me-donnes",
       "type": "gapfill",
-      "text": "Bon, je monte. Au revoir, Léa ! Et merci pour le livre ___ tu me donnes !",
+      "text": "Bon, je monte. Salut, Léa ! Et merci pour le livre ___ tu m'as donné !",
       "blanks": [
         {
           "answer": "que"
         }
       ],
-      "gloss": "Maya: Right, I'm going up. Bye, Léa! And thanks for the book you're giving me!",
+      "gloss": "Maya: Right, I'm going up. Bye, Léa! And thanks for the book you gave me!",
       "mistakes": [
         {
           "answer": "qui",
-          "feedback": "{tu} is the subject: Léa gives the book. Use {que}."
+          "feedback": "{tu} is the subject: Léa gave the book. Use {que}."
         }
       ]
     }

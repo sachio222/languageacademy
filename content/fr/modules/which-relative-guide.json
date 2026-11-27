@@ -11,7 +11,7 @@
     "Say what you mean without naming the thing: {Je fais ce que je veux.} {Tu sais ce qui est drôle ?}"
   ],
   "minutes": 6,
-  "line": "Choose the word by what follows the noun: a verb takes {qui}, a new subject takes {que}, a place or a time takes {où}, a word used with {de} takes {dont}, and with no noun you say {ce qui} or {ce que}.",
+  "line": "Choose the word by the job of the noun: if it does the next verb, {qui}; if the clause has its own subject, usually right after, {que}; a place or a time takes {où}; a word used with {de} takes {dont}; with no noun, say {ce qui} or {ce que}.",
   "parts": [
     {
       "id": "p-one-table",
@@ -28,8 +28,8 @@
               [
                 {
                   "fr": "qui",
-                  "en": "who, that",
-                  "sub": "a verb comes next"
+                  "en": "who, which, that",
+                  "sub": "the noun does the next verb"
                 },
                 {
                   "fr": "le voisin qui parle",
@@ -39,8 +39,8 @@
               [
                 {
                   "fr": "que",
-                  "en": "who, that",
-                  "sub": "a new subject comes next"
+                  "en": "whom, which, that",
+                  "sub": "a new subject, usually right after"
                 },
                 {
                   "fr": "le livre que je lis",
@@ -73,7 +73,7 @@
                 {
                   "fr": "ce qui",
                   "en": "what",
-                  "sub": "no noun, and a verb comes next"
+                  "sub": "no noun; it does the next verb"
                 },
                 {
                   "fr": "ce qui est drôle",
@@ -84,7 +84,7 @@
                 {
                   "fr": "ce que",
                   "en": "what",
-                  "sub": "no noun, and a new subject comes next"
+                  "sub": "no noun; a new subject, usually right after"
                 },
                 {
                   "fr": "ce que j'aime",
@@ -100,9 +100,9 @@
       "id": "p-qui-que",
       "heading": "{qui} or {que}: a verb or a new subject",
       "text": [
-        "In questions, {qui est-ce qui} asks who does the action and {qui est-ce que} asks who receives it. After a noun the split is the same. {qui} means the noun does the action, so the verb comes next. {que} means the noun receives the action, so a new subject comes next, such as {je}, {tu} or {on}."
+        "In questions, {qui est-ce qui} asks who does the action and {qui est-ce que} asks who receives it. After a noun the split is the same. {qui} means the noun does the action: it is the subject of the verb that follows, and a small word such as {me} or {ne} can sit between. {que} means the noun receives the action: the clause has its own subject, usually right after {que}, such as {je}, {tu} or {on}."
       ],
-      "note": "{que} becomes {qu'} before a vowel: {le livre qu'elle lit}. {qui} never shortens: {la voisine qui a un chien}.",
+      "note": "{que} becomes {qu'} before a vowel: {le livre qu'elle lit}. {qui} never shortens: {la voisine qui a un chien}. One noun can take both: {la voisine qui a refusé de venir, mais que je remercie}.",
       "blocks": [
         {
           "pairs": [
@@ -139,8 +139,8 @@
               "Hugo is the mate who said yes. So he's coming on Saturday."
             ],
             [
-              "Madame Garnier, c'est la voisine qui a refusé et que je remercie quand même.",
-              "Madame Garnier is the neighbour who said no, and I thank her all the same."
+              "Madame Garnier, c'est la voisine qui a refusé de venir, mais que je remercie pour son gâteau.",
+              "Madame Garnier is the neighbour who said she couldn't come, but whom I thank for her cake."
             ]
           ]
         }
@@ -158,7 +158,7 @@
           "lines": [
             [
               "la bibliothèque où je travaille",
-              "the library where I work"
+              "the library where I study"
             ],
             [
               "la boulangerie où je vais tous les matins",
@@ -197,7 +197,7 @@
           "build": [
             {
               "k": "With de",
-              "fr": "Je t'ai parlé de Hugo.",
+              "fr": "Je t'ai parlé d'Hugo.",
               "en": "I told you about Hugo."
             },
             {
@@ -213,7 +213,7 @@
       "id": "p-ce",
       "heading": "{ce qui} and {ce que}: no noun",
       "text": [
-        "When you do not name the thing first, {ce} takes the place of the noun, and the English is usually what. The same split holds: a verb next takes {ce qui}, a new subject next takes {ce que}."
+        "When you do not name the thing first, {ce} takes the place of the noun, and the English is usually what. The same split holds: {ce qui} does the next verb, and after {ce que} comes a new subject, usually right after."
       ],
       "blocks": [
         {
@@ -274,7 +274,7 @@
           "fr": true
         }
       ],
-      "why": "You talk about someone with {parler de}, so the word is {dont}. It stands for {de Hugo}."
+      "why": "You talk about someone with {parler de}, so the word is {dont}. It stands for {d'Hugo}."
     },
     {
       "id": "k3",

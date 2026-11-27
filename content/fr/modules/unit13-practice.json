@@ -25,14 +25,17 @@
     {
       "id": "i-monsieur-premier-etage",
       "type": "transform",
-      "instruction": "Léa tells Maya who lives where. Join the two sentences with {qui}.",
-      "shown": "Le monsieur habite au premier étage. Il a un chien.",
-      "answer": "Le monsieur qui habite au premier étage a un chien.",
+      "instruction": "Léa tells Maya who lives where in the building. Join the two sentences with {qui}.",
+      "shown": "La voisine habite au premier étage. Elle a un chien.",
+      "answer": "La voisine qui habite au premier étage a un chien.",
       "mistakes": [
         {
-          "answer": "Le monsieur que habite au premier étage a un chien.",
-          "feedback": "The man does the living, so the verb comes next: {qui habite}."
+          "answer": "La voisine que habite au premier étage a un chien.",
+          "feedback": "The neighbour does the living, so the verb comes next: {qui habite}."
         }
+      ],
+      "accept": [
+        "La voisine qui a un chien habite au premier étage."
       ]
     },
     {
@@ -88,7 +91,7 @@
     {
       "id": "i-livre-que-lea-lit",
       "type": "transform",
-      "instruction": "Join the two sentences with {que}.",
+      "instruction": "Noé asks Maya about the book Léa is reading. Answer him: join the two sentences with {que}.",
       "shown": "Léa lit un livre. Le livre est très long.",
       "answer": "Le livre que Léa lit est très long.",
       "mistakes": [
@@ -124,7 +127,7 @@
           "answer": "dont"
         }
       ],
-      "gloss": "My grandfather, whom I often talk about, lives near Lyon.",
+      "gloss": "Léa: My grandfather, whom I often talk about, lives near Lyon.",
       "mistakes": [
         {
           "answer": "que",
@@ -135,13 +138,16 @@
     {
       "id": "i-ce-qui-est-lourd",
       "type": "gapfill",
-      "text": "Ce ___ est lourd, c'est ce vieux livre ; le livre de Noé est léger.",
+      "text": "Ce ___ est léger, c'est pour Noé, et ce ___ est lourd, c'est pour Hugo !",
       "blanks": [
+        {
+          "answer": "qui"
+        },
         {
           "answer": "qui"
         }
       ],
-      "gloss": "What's heavy is this old book; Noé's book is light.",
+      "gloss": "Léa shares out the bags for the party: what's light is for Noé, and what's heavy is for Hugo!",
       "mistakes": [
         {
           "answer": "que",
@@ -163,14 +169,14 @@
     {
       "id": "i-maya-refuse-de-danser",
       "type": "transform",
-      "instruction": "Hugo asks Maya to dance. Say the opposite with {refuser}.",
+      "instruction": "At first Maya is shy: Hugo asks her to dance, and she says no. Say what she does with {refuser}.",
       "shown": "Maya accepte de danser.",
       "answer": "Maya refuse de danser."
     },
     {
       "id": "i-voisine-qui-dame-dont",
       "type": "gapfill",
-      "text": "La voisine ___ habite au premier étage, c'est la dame ___ je t'ai parlé.",
+      "text": "Le chien ___ dort devant la porte ? C'est le chien ___ Noé a peur !",
       "blanks": [
         {
           "answer": "qui"
@@ -179,21 +185,22 @@
           "answer": "dont"
         }
       ],
-      "gloss": "The neighbour who lives on the first floor is the lady I told you about."
+      "gloss": "Léa to Maya: The dog sleeping in front of the door? That's the dog Noé is scared of!"
     },
     {
       "id": "i-s-il-neige-on-reste",
       "type": "transform",
-      "instruction": "Noé asks about Saturday. Join the two sentences with {s'il}.",
-      "shown": "Il neige samedi. On reste chez Léa.",
-      "answer": "S'il neige samedi, on reste chez Léa.",
+      "instruction": "Noé asks Léa about Saturday. Answer as Léa: join the two sentences with {s'il}.",
+      "shown": "Il neige samedi. On reste chez nous.",
+      "answer": "S'il neige samedi, on reste chez nous.",
       "accept": [
-        "On reste chez Léa s'il neige samedi.",
-        "Samedi, s'il neige, on reste chez Léa."
+        "On reste chez nous s'il neige samedi.",
+        "Samedi, s'il neige, on reste chez nous.",
+        "S'il neige samedi, on reste à la maison."
       ],
       "mistakes": [
         {
-          "answer": "Si il neige samedi, on reste chez Léa.",
+          "answer": "Si il neige samedi, on reste chez nous.",
           "feedback": "{si} shortens before {il}: {s'il}."
         }
       ]
@@ -201,13 +208,13 @@
     {
       "id": "i-a-bientot",
       "type": "gapfill",
-      "text": "À ___ ! Je passe chez toi samedi prochain.",
+      "text": "À ___, Madame Garnier ! Je passe vous voir la semaine prochaine.",
       "blanks": [
         {
           "answer": "bientôt"
         }
       ],
-      "gloss": "See you soon! I'll drop by your place next Saturday."
+      "gloss": "Léa: See you soon, Madame Garnier! I'll drop by to see you next week."
     },
     {
       "id": "i-karim-est-sympa",
@@ -229,7 +236,7 @@
     {
       "id": "i-le-jour-ou-maya-est-arrivee",
       "type": "transform",
-      "instruction": "Join the two sentences with {où}. Start with {Le jour}.",
+      "instruction": "Léa remembers the day Maya arrived. Join the two sentences with {où}. Start with {Le jour}.",
       "shown": "Maya est arrivée un jour. Ce jour-là, il pleuvait.",
       "answer": "Le jour où Maya est arrivée, il pleuvait.",
       "mistakes": [
@@ -240,25 +247,15 @@
       ]
     },
     {
-      "id": "i-film-qu-on-regarde",
+      "id": "i-n-est-ce-pas-nouvelle-voisine",
       "type": "gapfill",
-      "text": "Le film ___ on regarde ce soir est très long.",
+      "text": "Madame Garnier : Bonjour ! Tu es la nouvelle voisine, ___ ?",
       "blanks": [
         {
-          "answer": "qu'"
+          "answer": "n'est-ce pas"
         }
       ],
-      "gloss": "The film we're watching tonight is very long.",
-      "mistakes": [
-        {
-          "answer": "que",
-          "feedback": "{que} shortens before a vowel: {qu'on}."
-        },
-        {
-          "answer": "qui",
-          "feedback": "A new subject comes next, {on}, so the word is {que}, shortened to {qu'}."
-        }
-      ]
+      "gloss": "Madame Garnier, meeting Maya on the stairs: Hello! You're the new neighbour, aren't you? (a polite tag, said by older people)"
     },
     {
       "id": "i-ce-qui-est-sympa-le-marche",

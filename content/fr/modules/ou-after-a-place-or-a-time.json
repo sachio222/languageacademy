@@ -29,7 +29,7 @@
       "fr": "la bibliothèque",
       "gloss": "the library",
       "example_fr": "C'est la bibliothèque où je travaille le samedi.",
-      "example_en": "That's the library where I work on Saturdays.",
+      "example_en": "That's the library where I study on Saturdays.",
       "part_of_speech": "noun"
     },
     {
@@ -62,7 +62,7 @@
       "word_id": "hein-fr",
       "fr": "hein",
       "gloss": "right? eh?",
-      "note": "At the end of a sentence it checks that the listener agrees. Said alone, {Hein ?} means what? and sounds rude.",
+      "note": "At the end of a sentence it checks that the listener agrees. Said alone, {Hein ?} means what?: blunt between friends, rude to someone you say {vous} to.",
       "example_fr": "La boulangerie où je vais est super, hein ?",
       "example_en": "The bakery I go to is great, right?",
       "part_of_speech": "interjection"
@@ -90,7 +90,7 @@
     {
       "id": "c-ou-after-a-place-or-a-time",
       "term": "{où} after a place or a time",
-      "definition": "Put {où} after a noun for a place or a time, then say what happens there or then. English says where for a place and when for a time; French says {où} for both, never {quand}. {Où} already means there, so the verb after it takes no {y}. When the verb takes the noun itself as its object, use {que}: {la ville que j'aime}. You can put one or two adjectives before {où}: {le petit parc où on joue}.",
+      "definition": "Put {où} after a noun for a place or a time, then say what happens there or then. English says where for a place and when for a time; French says {où} for both, never {quand}. {Où} already means there, so the verb after it takes no {y}. When the verb takes the noun itself as its object, use {que}: {la ville que j'aime}. The noun can keep its adjectives: {le petit parc où on joue}.",
       "example": "{La ville où j'habite est belle.} (The town where I live is beautiful.) {Le jour où Maya est arrivée, il pleuvait.} (The day Maya arrived, it was raining.)"
     }
   ],
@@ -189,6 +189,9 @@
           "answer": "Voilà la boulangerie que je vais tous les matins.",
           "feedback": "You go to the bakery; the bakery is where you go. Use {où}, not {que}."
         }
+      ],
+      "accept": [
+        "Voilà la boulangerie où je vais chaque matin."
       ]
     },
     {

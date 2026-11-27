@@ -4,10 +4,10 @@
   "kind": "lesson",
   "status": "written",
   "title": "{ce que} and {ce qui}: saying what ({ce que j'aime}, {ce qui est drôle})",
-  "description": "Say what you like, what is easy and what is hard without naming the thing first: {Ce que j'aime surtout, c'est le marché.} {Ce qui est drôle, c'est Hugo.}",
+  "description": "Say what you like, what is easy and what is hard without naming the thing first: {Ce que j'aime surtout, c'est le marché.} {Ce qui est drôle, c'est quand Hugo parle anglais.}",
   "can_do": [
     "Say what you like with {ce que}: {Ce que j'aime, c'est le marché.}",
-    "Say what is easy, hard or funny with {ce qui}: {Ce qui est drôle, c'est Hugo.}"
+    "Say what is easy, hard or funny with {ce qui}: {Ce qui est difficile ici, c'est le vélo.}"
   ],
   "teaches": {
     "constructions": [
@@ -44,7 +44,7 @@
       "word_id": "genre-fr",
       "fr": "genre",
       "gloss": "kind, type; in speech, like",
-      "note": "a masculine noun ({un genre}); friends also drop it into a sentence before a rough number or an example, as English speakers say 'like'",
+      "note": "a masculine noun ({un genre}); friends also drop it into a sentence before a rough number or an example, or to soften a word, as English speakers say 'like': {il est genre super drôle}",
       "example_fr": "Il y a, genre, dix boulangeries dans le quartier.",
       "example_en": "There are, like, ten bakeries in the neighbourhood."
     },
@@ -62,13 +62,13 @@
     {
       "id": "c-ce-que-ce-qui",
       "term": "{ce que} and {ce qui}: what",
-      "definition": "To say 'what' inside a sentence, French puts {ce} before {que} or {qui}, as after a noun. {Ce qui} is the subject, so the verb comes straight after it: {ce qui est difficile}. {Ce que} is the object, so a subject comes after it: {ce que j'aime}. {Que} becomes {qu'} before a vowel; {qui} never does. {Qu'est-ce que} asks a question; {ce que} sits inside a statement.",
+      "definition": "To say 'what' inside a sentence, French puts {ce} before {que} or {qui}, as after a noun. {Ce qui} is the subject of the verb that follows, so the verb usually comes straight after it; a small word such as {me} can sit between: {ce qui me plaît}. {Ce que} is the object, so the clause has its own subject, usually right after {que}: {ce que j'aime}. {Que} becomes {qu'} before a vowel; {qui} never does. {Qu'est-ce que} asks a question; {ce que} sits inside a statement. To repeat someone's question back, start with {ce que}: {Ce qu'il y a à faire ici ?} After {tout}, keep {ce}: {tout ce que tu veux}.",
       "example": "{Ce que j'aime, c'est le marché.} (What I like is the market.) {Ce qui est difficile, c'est le vélo.} (What's hard is cycling.)"
     },
     {
       "id": "c-ce-que-cest",
       "term": "{Ce que …, c'est …}: the idea first, then the thing",
-      "definition": "To put weight on one thing, French says the idea first and names the thing after {c'est}. {J'aime le marché} becomes {Ce que j'aime, c'est le marché.} With {ce qui}: {Hugo est drôle} becomes {Ce qui est drôle, c'est Hugo.} French speakers use this shape all the time. Before a plural you will also hear {ce sont}: {Ce que Noé préfère, ce sont les animaux.}",
+      "definition": "To put weight on one thing, French says the idea first and names the thing after {c'est}. {J'aime le marché} becomes {Ce que j'aime, c'est le marché.} With {ce qui}: {Le vélo est difficile ici} becomes {Ce qui est difficile ici, c'est le vélo.} After {c'est}, the thing can also be a whole moment, with {quand}: {Ce qui est drôle, c'est quand Hugo parle anglais.} French speakers use this shape all the time. Before a plural you will also hear {ce sont}: {Ce que Noé préfère, ce sont les animaux.}",
       "example": "{Ce que j'aime surtout, c'est le marché.} (What I like most is the market.) {Ce qui est difficile ici, c'est le vélo.} (What's hard here is cycling.)"
     }
   ],
@@ -80,12 +80,12 @@
         {
           "fr": "ce qui",
           "en": "what (it does the action)",
-          "note": "a verb follows: {ce qui est facile}, {ce qui me plaît}"
+          "note": "a verb follows, sometimes after {me} or {te}: {ce qui est facile}, {ce qui me plaît}"
         },
         {
           "fr": "ce que",
           "en": "what (someone does something to it)",
-          "note": "a subject follows: {ce que j'aime}, {ce que tu veux}"
+          "note": "a subject usually follows: {ce que j'aime}, {ce que tu veux}"
         },
         {
           "fr": "ce qu'",
@@ -102,7 +102,7 @@
     },
     {
       "phrase_id_suffix": "ce-qui-est-drole",
-      "fr": "Ce qui est drôle, c'est Hugo.",
+      "fr": "Ce qui est drôle, c'est quand Hugo parle anglais.",
       "word_id": "drole-fr"
     },
     {
@@ -177,16 +177,16 @@
     {
       "id": "i-hugo-is-what-is-funny",
       "type": "transform",
-      "instruction": "Léa tells Maya about Hugo, her best friend. Start with {Ce qui} and end with Hugo.",
-      "shown": "Hugo est drôle.",
-      "answer": "Ce qui est drôle, c'est Hugo.",
+      "instruction": "Léa tells Maya about Hugo, her best friend, and his English. Start with {Ce qui} and put the moment after {c'est}.",
+      "shown": "Quand Hugo parle anglais, c'est drôle.",
+      "answer": "Ce qui est drôle, c'est quand Hugo parle anglais.",
       "mistakes": [
         {
-          "answer": "Ce que est drôle, c'est Hugo.",
+          "answer": "Ce que est drôle, c'est quand Hugo parle anglais.",
           "feedback": "No other subject comes before {est}, so 'what' is the subject: {ce qui est drôle}."
         },
         {
-          "answer": "Ce qu'est drôle, c'est Hugo.",
+          "answer": "Ce qu'est drôle, c'est quand Hugo parle anglais.",
           "feedback": "{Qui} never shortens before a vowel: {ce qui est}."
         }
       ]
@@ -266,19 +266,19 @@
     {
       "id": "i-telling-not-asking",
       "type": "choice",
-      "question": "Léa is telling Maya, not asking her. Which sentence says 'What's funny is Hugo'?",
+      "question": "Léa is telling Maya, not asking her. Which sentence says 'What's funny is when Hugo speaks English'?",
       "options": [
         {
-          "text": "Ce qui est drôle, c'est Hugo.",
+          "text": "Ce qui est drôle, c'est quand Hugo parle anglais.",
           "fr": true,
           "right": true
         },
         {
-          "text": "Qu'est-ce qui est drôle ? Hugo.",
+          "text": "Qu'est-ce qui est drôle ? Quand Hugo parle anglais.",
           "fr": true
         },
         {
-          "text": "Ce que est drôle, c'est Hugo.",
+          "text": "Ce que est drôle, c'est quand Hugo parle anglais.",
           "fr": true
         }
       ]
@@ -286,8 +286,8 @@
     {
       "id": "i-what-the-forecast-says",
       "type": "gapfill",
-      "text": "Tu as vu ce ___ dit la météo ? Il va neiger samedi !",
-      "gloss": "Hugo to Léa: Have you seen what the forecast says? It's going to snow on Saturday!",
+      "text": "Tu as vu ce ___ la météo dit pour samedi ? Il va neiger !",
+      "gloss": "Hugo to Léa: Have you seen what the forecast says for Saturday? It's going to snow!",
       "blanks": [
         {
           "answer": "que"
@@ -296,7 +296,7 @@
       "mistakes": [
         {
           "answer": "qui",
-          "feedback": "{La météo} is the subject of {dit}, so 'what' is the object: {ce que dit la météo}."
+          "feedback": "{La météo} is the subject of {dit}, so 'what' is the object: {ce que la météo dit}."
         }
       ]
     },
@@ -384,7 +384,7 @@
     {
       "id": "i-if-it-rains-noe",
       "type": "respond",
-      "situation": "Noé, Léa's brother, is 9. He asks what you will do on Saturday if it rains. Tell him: if it rains, we do what you want.",
+      "situation": "Noé, Léa's brother, is 9. He asks what you will do on Saturday if it rains. You let him choose: answer with {s'il pleut} and {ce que tu veux}.",
       "answer": "S'il pleut, on fait ce que tu veux.",
       "accept": [
         "On fait ce que tu veux s'il pleut.",
@@ -408,8 +408,8 @@
     {
       "id": "i-two-blanks-hugo-market",
       "type": "gapfill",
-      "text": "Ce ___ est drôle, c'est Hugo, et ce ___ j'aime surtout, c'est le marché.",
-      "gloss": "Léa sums up for Maya: what's funny is Hugo, and what I like especially is the market.",
+      "text": "Ce ___ est drôle, c'est quand Hugo parle anglais, et ce ___ j'aime surtout, c'est le marché.",
+      "gloss": "Léa sums up for Maya: what's funny is when Hugo speaks English, and what I like especially is the market.",
       "blanks": [
         {
           "answer": "qui"
@@ -443,17 +443,18 @@
     {
       "id": "i-lea-list-noe",
       "type": "respond",
-      "situation": "Léa writes Maya a list of her favourite things in the neighbourhood. The last line is about Noé. Write: what's funny, in fact, is my brother.",
-      "answer": "Ce qui est drôle, en fait, c'est mon frère.",
+      "situation": "Léa writes Maya a list of her favourite things in the neighbourhood. The last line is about Noé, who chats to Madame Garnier's cat. Write that what's funny, in fact, is when your brother talks to the cat.",
+      "answer": "Ce qui est drôle, en fait, c'est quand mon frère parle au chat.",
       "accept": [
-        "En fait, ce qui est drôle, c'est mon frère.",
-        "Ce qui est drôle en fait, c'est mon frère.",
-        "Ce qui est drôle, en fait, c'est mon frère Noé.",
-        "En fait, ce qui est drôle, c'est mon frère Noé."
+        "En fait, ce qui est drôle, c'est quand mon frère parle au chat.",
+        "Ce qui est drôle en fait, c'est quand mon frère parle au chat.",
+        "Ce qui est drôle, en fait, c'est quand Noé parle au chat.",
+        "En fait, ce qui est drôle, c'est quand Noé parle au chat.",
+        "Ce qui est drôle, en fait, c'est quand mon frère parle avec le chat."
       ],
       "mistakes": [
         {
-          "answer": "Ce que est drôle, en fait, c'est mon frère.",
+          "answer": "Ce que est drôle, en fait, c'est quand mon frère parle au chat.",
           "feedback": "{Est} follows straight after 'what', so 'what' is the subject: {ce qui est drôle}."
         }
       ]
@@ -488,7 +489,10 @@
       "answer": "Ce qui était facile, c'était le métro.",
       "accept": [
         "Ce qui était facile à Montréal, c'était le métro.",
-        "À Montréal, ce qui était facile, c'était le métro."
+        "À Montréal, ce qui était facile, c'était le métro.",
+        "Ce qui était facile, c'est le métro.",
+        "À Montréal, ce qui était facile, c'est le métro.",
+        "Ce qui était facile à Montréal, c'est le métro."
       ],
       "mistakes": [
         {

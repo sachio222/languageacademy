@@ -65,8 +65,8 @@
               "Noé is tall, well, taller than last year."
             ],
             [
-              "Ouais, j'ai oublié ma clé. Bref, je peux pas entrer.",
-              "Yeah, I forgot my key. Anyway, I can't get in."
+              "Le marché, la piscine, la boulangerie… Bref, il y a tout ici.",
+              "The market, the pool, the bakery… Anyway, there's everything here."
             ],
             [
               "Bon, au revoir, madame !",
@@ -82,7 +82,7 @@
       "text": [
         "{hein} at the end of a sentence asks the listener to agree: right? {tu vois} means you see. {quoi} at the end of a sentence rounds the thought off, like you know or that's all."
       ],
-      "note": "Alone, {Hein ?} means what? and sounds rude. With someone you say {vous} to, say {Pardon ?}",
+      "note": "Alone, {Hein ?} means what?: blunt between friends, rude to someone you say {vous} to. With them, say {Pardon ?}",
       "blocks": [
         {
           "lines": [
@@ -116,11 +116,15 @@
               "Actually, the pool closes at eight."
             ],
             [
+              "En fait, j'ai oublié ma clé chez Léa.",
+              "Actually, I left my key at Léa's."
+            ],
+            [
               "Je déteste danser, en fait.",
               "I hate dancing, actually."
             ],
             [
-              "Maya n'a rien dit. Du coup, je sais pas si elle vient.",
+              "Maya a rien dit. Du coup, je sais pas si elle vient.",
               "Maya didn't say anything. So I don't know if she's coming."
             ],
             [
@@ -236,7 +240,7 @@
       "id": "p-when-it-fits",
       "heading": "When each form fits",
       "text": [
-        "With friends and family, use the small words freely. With a stranger, a teacher or a boss, {euh}, {bon}, {alors}, {en fait} and {enfin} are still fine, but say {oui} for {ouais} and leave out {bof}, {genre}, {hein} and {quoi}.",
+        "With friends and family, use the small words freely. With a stranger, a teacher or a boss, {euh}, {bon}, {alors}, {en fait}, {enfin}, {du coup}, {bref} and {franchement} are still fine in speech, but say {oui} for {ouais}, and leave out {ben}, {bah}, {bof}, {genre}, {hein} and {quoi}.",
         "In writing, keep {ne} and the full forms. In a text message to a friend, people often write {je sais pas} and {t'as} too."
       ],
       "blocks": [
@@ -271,7 +275,7 @@
                   "en": "It's far, right?"
                 },
                 {
-                  "fr": "C'est loin, n'est-ce pas ?",
+                  "fr": "C'est loin, non ?",
                   "en": "It's far, isn't it?"
                 }
               ],

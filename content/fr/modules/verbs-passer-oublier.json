@@ -56,9 +56,9 @@
       "word_id": "bref-fr",
       "fr": "bref",
       "gloss": "in short; anyway",
-      "note": "Spoken: it ends a story and gets to the point.",
-      "example_fr": "J'ai oublié ma clé, maman travaille ce soir. Bref, je peux pas entrer.",
-      "example_en": "I forgot my key, Mum is working tonight. Anyway, I can't get in.",
+      "note": "Spoken: after a list or a long story, it cuts to the point.",
+      "example_fr": "Il y a la boulangerie, la bibliothèque, la piscine, le marché… Bref, il y a tout !",
+      "example_en": "There's the bakery, the library, the pool, the market… In short, there's everything!",
       "part_of_speech": "adverb"
     },
     {
@@ -143,8 +143,8 @@
     {
       "id": "c-bref",
       "term": "{Bref,} to get to the point",
-      "definition": "At the start of a sentence, {bref} sums up what came before and gives the main point. It is common in speech.",
-      "example": "{J'ai oublié ma clé, maman travaille ce soir. Bref, je peux pas entrer.} (I forgot my key, Mum is working tonight. Anyway, I can't get in.)"
+      "definition": "At the start of a sentence, {bref} cuts a list or a long story short and gives the main point. It is common in speech.",
+      "example": "{J'ai cherché partout : chez Léa, à la boulangerie, à la piscine… Bref, je n'ai plus ma clé.} (I looked everywhere: at Léa's, at the bakery, at the pool… Anyway, I haven't got my key any more.)"
     }
   ],
   "phrases": [
@@ -181,7 +181,10 @@
       "accept": [
         "la boulangerie ouvre à sept heures",
         "ça ouvre à sept heures",
-        "elle ouvre à 7 heures"
+        "elle ouvre à 7 heures",
+        "à sept heures",
+        "elle ouvre à 7 h",
+        "elle ouvre à sept heures du matin"
       ],
       "mistakes": [
         {
@@ -335,7 +338,9 @@
       "answer": "je passe chez toi ce soir",
       "accept": [
         "je vais passer chez toi ce soir",
-        "ce soir, je passe chez toi"
+        "ce soir, je passe chez toi",
+        "je passerai chez toi ce soir",
+        "je passe ce soir"
       ],
       "mistakes": [
         {
@@ -352,17 +357,20 @@
       "id": "i-j-ai-passe-le-samedi-a-la-piscine",
       "type": "transform",
       "instruction": "Noé tells Maya about last Saturday. Put his sentence in the past.",
-      "shown": "Je passe le samedi à la piscine.",
-      "answer": "j'ai passé le samedi à la piscine",
+      "shown": "Je passe samedi à la piscine.",
+      "answer": "j'ai passé samedi à la piscine",
       "mistakes": [
         {
-          "answer": "je suis passé le samedi à la piscine",
-          "feedback": "Spending time takes {avoir}: {j'ai passé le samedi}."
+          "answer": "je suis passé samedi à la piscine",
+          "feedback": "That means you dropped by the pool. Spending time takes {avoir}: {j'ai passé samedi à la piscine}."
         },
         {
-          "answer": "j'ai passer le samedi à la piscine",
+          "answer": "j'ai passer samedi à la piscine",
           "feedback": "After {j'ai}, use the participle: {passé}."
         }
+      ],
+      "accept": [
+        "j'ai passé la journée à la piscine samedi"
       ]
     },
     {
@@ -373,7 +381,8 @@
       "accept": [
         "ouais, je passe à huit heures",
         "ouais, je passe chez toi à huit heures",
-        "ouais, à 8 heures"
+        "ouais, à 8 heures",
+        "ouais, vers huit heures"
       ],
       "mistakes": [
         {
@@ -423,7 +432,8 @@
       "answer": "n'oublie pas de passer à la boulangerie",
       "accept": [
         "oublie pas de passer à la boulangerie",
-        "noé, n'oublie pas de passer à la boulangerie"
+        "noé, n'oublie pas de passer à la boulangerie",
+        "n'oublie pas de passer à la boulangerie, Noé"
       ],
       "mistakes": [
         {
@@ -443,7 +453,9 @@
       "answer": "ferme la porte, s'il te plaît",
       "accept": [
         "ferme la porte s'il te plaît",
-        "ferme la porte"
+        "ferme la porte",
+        "Noé, ferme la porte, s'il te plaît",
+        "ferme la porte, Noé, s'il te plaît"
       ],
       "mistakes": [
         {
@@ -476,7 +488,7 @@
     {
       "id": "i-ouais-j-ai-oublie-ma-cle",
       "type": "respond",
-      "situation": "Léa sees Maya stuck at the door and asks: {Ça va, Maya ?} Answer as Maya, the way friends talk: yeah, I forgot my key.",
+      "situation": "Léa comes back an hour later and finds Maya still at the door. She asks: {Tu es encore là, Maya ?} Answer as Maya, the way friends talk: yeah, you forgot your key.",
       "answer": "ouais, j'ai oublié ma clé",
       "accept": [
         "ouais j'ai oublié ma clé"
@@ -495,13 +507,13 @@
     {
       "id": "i-bref-je-peux-pas-entrer",
       "type": "gapfill",
-      "text": "Maya : Mes parents travaillent ce soir. ___, je peux pas entrer.",
+      "text": "Maya : J'ai cherché chez Léa, à la boulangerie, à la piscine… ___, j'ai oublié ma clé et je peux pas entrer.",
       "blanks": [
         {
           "answer": "bref"
         }
       ],
-      "gloss": "Maya: My parents are working tonight. Anyway, I can't get in.",
+      "gloss": "Maya: I looked at Léa's, at the bakery, at the pool… Anyway, I forgot my key and I can't get in.",
       "mistakes": [
         {
           "answer": "ouais",
@@ -512,10 +524,10 @@
     {
       "id": "i-what-bref-means",
       "type": "choice",
-      "question": "Maya says: {J'ai oublié ma clé. Bref, je peux pas entrer.} What does {bref} do here?",
+      "question": "Maya says: {J'ai cherché chez Léa, à la piscine, au marché… Bref, je peux pas entrer.} What does {bref} do here?",
       "options": [
         {
-          "text": "It sums up and gets to the point.",
+          "text": "It cuts the list short and gets to the point.",
           "right": true
         },
         {
