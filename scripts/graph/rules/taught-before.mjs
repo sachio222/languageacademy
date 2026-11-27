@@ -175,6 +175,11 @@ function run(ctx) {
   const readOnlyMatch = (id, a, typedAt) => recognizeSpans(id, a).some((form) => form.every((i) => !typedAt(i)));
   const typedFormMatch = (id, a, typedAt) => recognizeSpans(id, a).some((form) => form.some((i) => typedAt(i)));
 
+  // A recognition-only word (use: 'recognize' on its headword, such as slang): the learner reads and hears it but is
+  // never asked to produce it. recognize-typed warns where a token the learner types reads only as such words.
+  const recognizeWords = new Set((graph.headwords ?? []).filter((h) => h.use === 'recognize').map((h) => h.id));
+  const lemmaOf = new Map((graph.headwords ?? []).map((h) => [h.id, h.lemma]));
+
   const laterNote = (id, position) => {
     const at = timeline.taughtAt.get(id);
     return at !== undefined && at > position ? at : null;
@@ -208,6 +213,18 @@ function run(ctx) {
           const rs = a.readings[i];
           if (ignore.has(lk) || ignore.has(t.fold)
             || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
+          if (recognizeWords.size && rs.length > 0 && rs.every((r) => recognizeWords.has(r.headwordId)) && typedAt(i)) {
+            const id = rs[0].headwordId;
+            if (!seenTyped.has(id)) {
+              seenTyped.add(id);
+              issues.push(issue({
+                rule: 'recognize-typed', severity: 'warning', moduleKey: m.moduleKey, position: m.position,
+                itemRef: it.ref, nodeId: id, surface: t.surface, text: a.text,
+                message: `${lemmaOf.get(id) ?? id} is a word the learner only reads and hears, but ${it.ref} asks the learner to type it (${a.text}); make it French the learner reads, or change the answer`,
+                fix: { kind: 'rewrite-item', moduleKey: m.moduleKey },
+              }));
+            }
+          }
           const untaughtCognate = rs.length > 0 && !timeline.isTokenAvailable(rs, m.position)
             && cognate.isCognate(rs, m.position);
           if (untaughtCognate && (cognate.allowTyped || !typedAt(i))) {
