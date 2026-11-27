@@ -6,6 +6,7 @@
 //   node scripts/plan/cli.mjs stubs <lang> [--write | --check]     planned module files and the outline, from the plan (stubs.mjs)
 //   node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]   writer briefs, one file per module (brief.mjs)
 //   node scripts/plan/cli.mjs method <lang> [--out <dir>]          the course scored against the teaching method (method-score.mjs)
+//   node scripts/plan/cli.mjs speed <lang> [--out <dir>] [--seeds n] the course against other orders of the same items, at equal time (speed.mjs)
 //
 // Each reads only content/<lang>/ and curriculum-graph/ for that language. md, page and brief write under
 // .plan-out/<lang>/ unless --out says where; that folder is not committed.
@@ -28,6 +29,7 @@ const USAGE = [
   '       node scripts/plan/cli.mjs stubs <lang> [--write | --check]',
   '       node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]',
   '       node scripts/plan/cli.mjs method <lang> [--out <dir>]',
+  '       node scripts/plan/cli.mjs speed <lang> [--out <dir>] [--seeds n]',
 ].join('\n');
 
 export const outDir = (repoRoot, lang) => join(repoRoot, '.plan-out', lang);
@@ -144,7 +146,7 @@ function writeOut(file, text) {
 async function main(argv) {
   const args = [...argv];
   const [cmd, lang] = args.splice(0, 2);
-  if (!['check', 'md', 'page', 'stubs', 'brief', 'method'].includes(cmd) || !/^[a-z]{2,3}$/.test(lang ?? '')) {
+  if (!['check', 'md', 'page', 'stubs', 'brief', 'method', 'speed'].includes(cmd) || !/^[a-z]{2,3}$/.test(lang ?? '')) {
     console.error(USAGE);
     return 2;
   }
@@ -155,6 +157,16 @@ async function main(argv) {
       return await stubsCommand({ repoRoot: REPO_ROOT, lang, write: takeFlag(args, '--write'), check: takeFlag(args, '--check') });
     }
     const out = takeOption(args, '--out');
+    if (cmd === 'speed') {
+      const { speedCommand } = await import('./speed-report.mjs');
+      const seeds = Number(takeOption(args, '--seeds') ?? 200);
+      const { text, data } = await speedCommand({ repoRoot: REPO_ROOT, lang, seeds });
+      const dir = resolve(out ?? join(outDir(REPO_ROOT, lang), 'speed'));
+      writeOut(join(dir, 'speed.json'), `${JSON.stringify(data)}\n`);
+      writeOut(join(dir, 'speed.txt'), text);
+      console.log(text);
+      return 0;
+    }
     if (cmd === 'method') {
       const { methodCommand } = await import('./method-report.mjs');
       const { text, data } = await methodCommand({ repoRoot: REPO_ROOT, lang });
