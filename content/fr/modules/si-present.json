@@ -142,7 +142,7 @@
     },
     {
       "phrase_id_suffix": "copain-maison",
-      "fr": "S'il pleut, mon copain reste à la maison."
+      "fr": "S'il pleut, Hugo reste à la maison."
     },
     {
       "phrase_id_suffix": "copine-temps",
@@ -363,8 +363,8 @@
     {
       "id": "i-gap-si-on-a-boulangerie",
       "type": "gapfill",
-      "text": "Si on ___ le temps, on passe à la boulangerie.",
-      "gloss": "Hugo: if we have time, we'll drop by the bakery.",
+      "text": "Si on ___ le temps, on passe au marché.",
+      "gloss": "Hugo: if we have time, we'll drop by the market.",
       "blanks": [
         {
           "answer": "a"

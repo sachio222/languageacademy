@@ -14,15 +14,6 @@
     "constructions": [
       "fr:cx:relative.qui",
       "fr:cx:relative.que"
-    ],
-    "words": [
-      "fr:form:lire.prs.1sg",
-      "fr:form:lire.prs.2sg",
-      "fr:form:lire.prs.3sg",
-      "fr:form:lire.prs.1pl",
-      "fr:form:lire.prs.2pl",
-      "fr:form:lire.prs.3pl",
-      "fr:form:lire.ptcp"
     ]
   },
   "vocabulary": [
@@ -51,6 +42,15 @@
       "note": "The polite word for a man: {le monsieur}, {Bonjour, monsieur.} The first syllable sounds like {me}.",
       "example_fr": "Le monsieur qui parle à mon voisin, c'est Karim.",
       "example_en": "The man talking to my neighbour is Karim.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "madame-fr",
+      "fr": "madame",
+      "gloss": "Mrs; madam",
+      "note": "The polite word for a woman: {Bonjour, madame.} Before a name it is written {Mme}: {Mme Garnier}.",
+      "example_fr": "Madame Garnier, c'est la voisine qui a un chat.",
+      "example_en": "Madame Garnier is the neighbour who has a cat.",
       "part_of_speech": "noun"
     },
     {
@@ -246,13 +246,13 @@
     {
       "id": "i-vieille-dame-qui-lit",
       "type": "gapfill",
-      "text": "La vieille dame qui ___ sur le banc, c'est notre voisine.",
+      "text": "La vieille dame qui ___ sur le banc, c'est Madame Garnier.",
       "blanks": [
         {
           "answer": "lit"
         }
       ],
-      "gloss": "The old woman reading on the bench is our neighbour.",
+      "gloss": "The old woman reading on the bench is Madame Garnier.",
       "mistakes": [
         {
           "answer": "lis",

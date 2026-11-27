@@ -11,16 +11,8 @@
     "Say what someone forgot: {J'ai oublié ma clé.}"
   ],
   "teaches": {
-    "constructions": ["fr:cx:connector.summary"],
-    "words": [
-      "fr:form:ouvrir.prs.1sg",
-      "fr:form:ouvrir.prs.2sg",
-      "fr:form:ouvrir.prs.3sg",
-      "fr:form:ouvrir.prs.1pl",
-      "fr:form:ouvrir.prs.2pl",
-      "fr:form:ouvrir.prs.3pl",
-      "fr:form:ouvrir.ptcp",
-      "fr:form:ouvrir.ptcp.f"
+    "constructions": [
+      "fr:cx:connector.summary"
     ]
   },
   "vocabulary": [
@@ -102,16 +94,48 @@
       "id": "t-ouvrir",
       "title": "{ouvrir}: present",
       "rows": [
-        { "fr": "j'ouvre", "en": "I open" },
-        { "fr": "tu ouvres", "en": "you open" },
-        { "fr": "il ouvre", "en": "he opens" },
-        { "fr": "elle ouvre", "en": "she opens" },
-        { "fr": "nous ouvrons", "en": "we open" },
-        { "fr": "vous ouvrez", "en": "you open (formal or plural)" },
-        { "fr": "ils ouvrent", "en": "they open" },
-        { "fr": "elles ouvrent", "en": "they open (feminine)" },
-        { "fr": "j'ai ouvert", "en": "I opened", "note": "past participle {ouvert}" },
-        { "fr": "la porte est ouverte", "en": "the door is open", "note": "feminine {ouverte}" }
+        {
+          "fr": "j'ouvre",
+          "en": "I open"
+        },
+        {
+          "fr": "tu ouvres",
+          "en": "you open"
+        },
+        {
+          "fr": "il ouvre",
+          "en": "he opens"
+        },
+        {
+          "fr": "elle ouvre",
+          "en": "she opens"
+        },
+        {
+          "fr": "nous ouvrons",
+          "en": "we open"
+        },
+        {
+          "fr": "vous ouvrez",
+          "en": "you open (formal or plural)"
+        },
+        {
+          "fr": "ils ouvrent",
+          "en": "they open"
+        },
+        {
+          "fr": "elles ouvrent",
+          "en": "they open (feminine)"
+        },
+        {
+          "fr": "j'ai ouvert",
+          "en": "I opened",
+          "note": "past participle {ouvert}"
+        },
+        {
+          "fr": "la porte est ouverte",
+          "en": "the door is open",
+          "note": "feminine {ouverte}"
+        }
       ]
     }
   ],
@@ -124,11 +148,30 @@
     }
   ],
   "phrases": [
-    { "phrase_id_suffix": "passe-chez-ma-voisine", "fr": "Je passe chez ma voisine ce soir.", "word_id": "passer-fr" },
-    { "phrase_id_suffix": "mon-copain-a-oublie", "fr": "Mon copain a oublié sa clé.", "word_id": "oublier-fr" },
-    { "phrase_id_suffix": "ma-copine-ouvre", "fr": "Ma copine ouvre la porte.", "word_id": "ouvrir-fr" }
+    {
+      "phrase_id_suffix": "passe-chez-ma-voisine",
+      "fr": "Je passe chez ma voisine ce soir.",
+      "word_id": "passer-fr"
+    },
+    {
+      "phrase_id_suffix": "mon-copain-a-oublie",
+      "fr": "Mon copain a oublié sa clé.",
+      "word_id": "oublier-fr"
+    },
+    {
+      "phrase_id_suffix": "ma-copine-ouvre",
+      "fr": "Ma copine ouvre la porte.",
+      "word_id": "ouvrir-fr"
+    }
   ],
-  "speed_match": ["passer-fr", "oublier-fr", "ouvrir-fr", "fermer-fr", "bref-fr", "ouais-fr"],
+  "speed_match": [
+    "passer-fr",
+    "oublier-fr",
+    "ouvrir-fr",
+    "fermer-fr",
+    "bref-fr",
+    "ouais-fr"
+  ],
   "items": [
     {
       "id": "i-elle-ouvre-a-sept-heures",
@@ -155,7 +198,11 @@
       "id": "i-elle-ferme-a-quelle-heure",
       "type": "gapfill",
       "text": "Noé : Euh, et elle ___ à quelle heure ? Maya : À vingt heures.",
-      "blanks": [{ "answer": "ferme" }],
+      "blanks": [
+        {
+          "answer": "ferme"
+        }
+      ],
       "gloss": "Noé: Um, and what time does it close? Maya: At eight in the evening.",
       "mistakes": [
         {
@@ -172,7 +219,11 @@
       "id": "i-le-monsieur-qui-ouvre",
       "type": "gapfill",
       "text": "Le monsieur qui ___ la boulangerie à sept heures, c'est Karim.",
-      "blanks": [{ "answer": "ouvre" }],
+      "blanks": [
+        {
+          "answer": "ouvre"
+        }
+      ],
       "gloss": "The man who opens the bakery at seven is Karim.",
       "mistakes": [
         {
@@ -187,7 +238,9 @@
       "instruction": "It is hot in Léa's flat, and Léa and Noé open the window together. Start the sentence with {nous}.",
       "shown": "Il fait chaud et humide, j'ouvre la fenêtre.",
       "answer": "il fait chaud et humide, nous ouvrons la fenêtre",
-      "accept": ["il fait chaud et humide nous ouvrons la fenêtre"],
+      "accept": [
+        "il fait chaud et humide nous ouvrons la fenêtre"
+      ],
       "mistakes": [
         {
           "answer": "il fait chaud et humide, nous ouvrez la fenêtre",
@@ -203,7 +256,11 @@
       "id": "i-ferme-la-fenetre-une-abeille",
       "type": "gapfill",
       "text": "Noé : ___ la fenêtre, il y a une abeille ! Léa : Mais non, c'est un papillon.",
-      "blanks": [{ "answer": "Ferme" }],
+      "blanks": [
+        {
+          "answer": "Ferme"
+        }
+      ],
       "gloss": "Noé: Close the window, there's a bee! Léa: No, it's a butterfly.",
       "mistakes": [
         {
@@ -220,7 +277,11 @@
       "id": "i-bibliotheque-et-piscine-ouvrent",
       "type": "gapfill",
       "text": "Le samedi, la bibliothèque et la piscine ___ à neuf heures.",
-      "blanks": [{ "answer": "ouvrent" }],
+      "blanks": [
+        {
+          "answer": "ouvrent"
+        }
+      ],
       "gloss": "On Saturdays, the library and the pool open at nine.",
       "mistakes": [
         {
@@ -255,9 +316,16 @@
       "type": "choice",
       "question": "Noé tells Léa: {Hugo est passé chez nous ce matin.} What did Hugo do?",
       "options": [
-        { "text": "He dropped by their flat this morning.", "right": true },
-        { "text": "He spent the whole morning at their flat." },
-        { "text": "He forgot about them this morning." }
+        {
+          "text": "He dropped by their flat this morning.",
+          "right": true
+        },
+        {
+          "text": "He spent the whole morning at their flat."
+        },
+        {
+          "text": "He forgot about them this morning."
+        }
       ]
     },
     {
@@ -265,7 +333,10 @@
       "type": "respond",
       "situation": "Maya wants to see Léa's flat. Tell Léa you will drop by her place tonight.",
       "answer": "je passe chez toi ce soir",
-      "accept": ["je vais passer chez toi ce soir", "ce soir, je passe chez toi"],
+      "accept": [
+        "je vais passer chez toi ce soir",
+        "ce soir, je passe chez toi"
+      ],
       "mistakes": [
         {
           "answer": "je passe à toi ce soir",
@@ -299,7 +370,11 @@
       "type": "respond",
       "situation": "Hugo asks Léa: {Tu passes chez moi ce soir, hein ?} Answer as Léa, the way friends talk: yeah, at eight.",
       "answer": "ouais, à huit heures",
-      "accept": ["ouais, je passe à huit heures", "ouais, je passe chez toi à huit heures", "ouais, à 8 heures"],
+      "accept": [
+        "ouais, je passe à huit heures",
+        "ouais, je passe chez toi à huit heures",
+        "ouais, à 8 heures"
+      ],
       "mistakes": [
         {
           "answer": "ouais, je passes à huit heures",
@@ -312,16 +387,27 @@
       "type": "choice",
       "question": "Hugo says: {Ouais, mec, je passe chez toi ce soir.} Who is he talking to?",
       "options": [
-        { "text": "A friend his age.", "right": true },
-        { "text": "Mme Garnier, the neighbour downstairs." },
-        { "text": "Karim, at the bakery." }
+        {
+          "text": "A friend his age.",
+          "right": true
+        },
+        {
+          "text": "Mme Garnier, the neighbour downstairs."
+        },
+        {
+          "text": "Karim, at the bakery."
+        }
       ]
     },
     {
       "id": "i-j-ai-oublie-un-truc",
       "type": "gapfill",
       "text": "Léa : J'ai ___ un truc chez Hugo : le livre que je lis.",
-      "blanks": [{ "answer": "oublié" }],
+      "blanks": [
+        {
+          "answer": "oublié"
+        }
+      ],
       "gloss": "Léa: I left something at Hugo's: the book I'm reading.",
       "mistakes": [
         {
@@ -335,7 +421,10 @@
       "type": "respond",
       "situation": "Maman is leaving for work. She asks Noé not to forget to drop by the bakery. What does she say?",
       "answer": "n'oublie pas de passer à la boulangerie",
-      "accept": ["oublie pas de passer à la boulangerie", "noé, n'oublie pas de passer à la boulangerie"],
+      "accept": [
+        "oublie pas de passer à la boulangerie",
+        "noé, n'oublie pas de passer à la boulangerie"
+      ],
       "mistakes": [
         {
           "answer": "n'oublies pas de passer à la boulangerie",
@@ -352,7 +441,10 @@
       "type": "respond",
       "situation": "Noé says {Au revoir !} and runs out, leaving the building door open. Mme Garnier asks him to close the door, please. What does she say?",
       "answer": "ferme la porte, s'il te plaît",
-      "accept": ["ferme la porte s'il te plaît", "ferme la porte"],
+      "accept": [
+        "ferme la porte s'il te plaît",
+        "ferme la porte"
+      ],
       "mistakes": [
         {
           "answer": "fermes la porte, s'il te plaît",
@@ -368,7 +460,11 @@
       "id": "i-maya-est-seule-lea-passe",
       "type": "gapfill",
       "text": "Maya est seule devant la porte rouge. Tout à coup, Léa ___ par là.",
-      "blanks": [{ "answer": "passe" }],
+      "blanks": [
+        {
+          "answer": "passe"
+        }
+      ],
       "gloss": "Maya is alone at the red front door. All of a sudden, Léa comes by.",
       "mistakes": [
         {
@@ -382,7 +478,9 @@
       "type": "respond",
       "situation": "Léa sees Maya stuck at the door and asks: {Ça va, Maya ?} Answer as Maya, the way friends talk: yeah, I forgot my key.",
       "answer": "ouais, j'ai oublié ma clé",
-      "accept": ["ouais j'ai oublié ma clé"],
+      "accept": [
+        "ouais j'ai oublié ma clé"
+      ],
       "mistakes": [
         {
           "answer": "ouais, j'ai oublier ma clé",
@@ -398,7 +496,11 @@
       "id": "i-bref-je-peux-pas-entrer",
       "type": "gapfill",
       "text": "Maya : Mes parents travaillent ce soir. ___, je peux pas entrer.",
-      "blanks": [{ "answer": "bref" }],
+      "blanks": [
+        {
+          "answer": "bref"
+        }
+      ],
       "gloss": "Maya: My parents are working tonight. Anyway, I can't get in.",
       "mistakes": [
         {
@@ -412,9 +514,16 @@
       "type": "choice",
       "question": "Maya says: {J'ai oublié ma clé. Bref, je peux pas entrer.} What does {bref} do here?",
       "options": [
-        { "text": "It sums up and gets to the point.", "right": true },
-        { "text": "It says yes." },
-        { "text": "It asks a question." }
+        {
+          "text": "It sums up and gets to the point.",
+          "right": true
+        },
+        {
+          "text": "It says yes."
+        },
+        {
+          "text": "It asks a question."
+        }
       ]
     },
     {

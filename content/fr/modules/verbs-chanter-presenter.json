@@ -68,6 +68,22 @@
       "example_fr": "Noé danse avec Maya, et il est très fier.",
       "example_en": "Noé is dancing with Maya, and he is very proud.",
       "review": true
+    },
+    {
+      "word_id": "y-a-fr",
+      "fr": "y'a",
+      "gloss": "there is, there are",
+      "note": "{il y a} said fast. You will hear it everywhere; write {il y a}.",
+      "example_fr": "Y'a du gâteau dans la cuisine !",
+      "example_en": "There's cake in the kitchen!"
+    },
+    {
+      "word_id": "chais-fr",
+      "fr": "chais",
+      "gloss": "I know; chais pas: dunno",
+      "note": "{je sais} said fast, nearly always in {chais pas}. You need to understand it, not say it.",
+      "example_fr": "Il est où, Hugo ? Chais pas.",
+      "example_en": "Where's Hugo? Dunno."
     }
   ],
   "concepts": [
@@ -371,24 +387,25 @@
     {
       "id": "i-t-as-means-tu-as",
       "type": "choice",
-      "question": "Noé shouts {T'as vu ? Hugo danse !} Which words does {t'as} stand for?",
+      "question": "Noé shouts {T'as vu ? Hugo danse !} Maya answers {Chais pas danser, moi.} Which words do {t'as} and {chais} stand for?",
       "options": [
         {
-          "text": "tu as",
+          "text": "tu as, je sais",
           "fr": true,
           "right": true
         },
         {
-          "text": "tu es",
+          "text": "tu es, je suis",
           "fr": true
         },
         {
-          "text": "tu vas",
+          "text": "tu vas, je sais",
           "fr": true
         }
       ],
       "word_ids": [
-        "danser-fr"
+        "danser-fr",
+        "chais-fr"
       ]
     },
     {
@@ -429,13 +446,13 @@
     {
       "id": "i-des-gens-partout",
       "type": "gapfill",
-      "text": "Il y a des gens ___ chez Léa : il n'y a plus de place pour danser !",
+      "text": "Y'a des gens ___ chez Léa : y'a plus de place pour danser !",
       "blanks": [
         {
           "answer": "partout"
         }
       ],
-      "gloss": "There are people everywhere at Léa's: there's no more room to dance!",
+      "gloss": "Noé: There are people everywhere at Léa's: there's no more room to dance!",
       "word_ids": [
         "danser-fr"
       ],

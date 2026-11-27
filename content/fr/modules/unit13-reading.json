@@ -62,8 +62,8 @@
     },
     {
       "id": "b-mme-garnier",
-      "fr": "Quand tu entres dans l'immeuble, la première porte, c'est chez Madame Garnier. C'est une petite dame aux cheveux blancs qui a soixante-dix-huit ans. Elle est arrivée ici il y a cinquante ans, et avant, elle était professeur de français. Elle connaît toutes les histoires de la rue. Derrière l'immeuble, elle a un petit jardin avec des fleurs, des oiseaux et un vieux banc. C'est une voisine dont je suis très fière.",
-      "en": "When you come into the building, the first door is Madame Garnier's. She's a small lady with white hair, and she's seventy-eight. She came here fifty years ago, and before, she was a French teacher. She knows every story about the street. Behind the building she has a little garden with flowers, birds and an old bench. She's a neighbour I'm very proud of."
+      "fr": "Quand tu entres dans l'immeuble, la première porte, c'est chez Madame Garnier. C'est une petite dame aux cheveux blancs qui a soixante-dix-huit ans. Elle est arrivée ici il y a cinquante ans, et avant, elle était professeur de français. Elle connaît toutes les histoires de la rue. Derrière l'immeuble, elle a un petit jardin avec des oiseaux et un vieux banc. Elle adore le voir fleurir. C'est une voisine dont je suis très fière.",
+      "en": "When you come into the building, the first door is Madame Garnier's. She's a small lady with white hair, and she's seventy-eight. She came here fifty years ago, and before, she was a French teacher. She knows every story about the street. Behind the building she has a little garden with birds and an old bench. She loves to see it flower. She's a neighbour I'm very proud of."
     },
     {
       "id": "b-vous",
@@ -87,8 +87,8 @@
     },
     {
       "id": "b-bibliotheque",
-      "fr": "La bibliothèque est en haut de la rue. C'est l'endroit où je fais mes devoirs après l'école. Il y a des livres en français, bien sûr, mais aussi en anglais. On y lit, on y travaille, et personne n'y parle fort. S'il pleut, viens avec moi : on y va ensemble !",
-      "en": "The library is at the top of the street. It's the place where I do my homework after school. There are books in French, of course, but in English too. People read there and work there, and nobody talks loudly. If it rains, come with me: we'll go together!"
+      "fr": "La bibliothèque est en haut de la rue. C'est l'endroit où je fais mes devoirs après l'école. Il y a des livres en français, bien sûr, mais aussi en anglais. On y lit, on y travaille, et personne n'y parle fort. S'il pleut, viens avec moi : c'est facile, on y va ensemble !",
+      "en": "The library is at the top of the street. It's the place where I do my homework after school. There are books in French, of course, but in English too. People read there and work there, and nobody talks loudly. If it rains, come with me: it's easy, we'll go together!"
     },
     {
       "id": "b-marche",
@@ -390,6 +390,14 @@
     {
       "fr": "reviennent",
       "en": "come back"
+    },
+    {
+      "fr": "fleurir",
+      "en": "to flower, to bloom"
+    },
+    {
+      "fr": "facile",
+      "en": "easy"
     }
   ],
   "items": [

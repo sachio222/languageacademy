@@ -23,9 +23,18 @@
       "blocks": [
         {
           "lines": [
-            ["Euh… on va où, d'abord ?", "Um… where are we going first?"],
-            ["Ben, à la boulangerie.", "Well, to the bakery."],
-            ["Tu viens samedi ? Bah oui !", "Are you coming on Saturday? Well, yes!"]
+            [
+              "Euh… on va où, d'abord ?",
+              "Um… where are we going first?"
+            ],
+            [
+              "Ben, à la boulangerie.",
+              "Well, to the bakery."
+            ],
+            [
+              "Tu viens samedi ? Bah oui !",
+              "Are you coming on Saturday? Well, yes!"
+            ]
           ]
         }
       ]
@@ -39,12 +48,30 @@
       "blocks": [
         {
           "lines": [
-            ["Bon, je te présente Maya.", "Right, this is Maya."],
-            ["Alors, à gauche, c'est la bibliothèque.", "So, on the left, that's the library."],
-            ["Et voilà, c'est mon quartier.", "And there you go, that's my neighbourhood."],
-            ["Noé est grand, enfin, plus grand que l'année dernière.", "Noé is tall, well, taller than last year."],
-            ["Ouais, j'ai oublié ma clé. Bref, je peux pas entrer.", "Yeah, I forgot my key. Anyway, I can't get in."],
-            ["Bon, au revoir, madame !", "Right, goodbye!"]
+            [
+              "Bon, je te présente Maya.",
+              "Right, this is Maya."
+            ],
+            [
+              "Alors, à gauche, c'est la bibliothèque.",
+              "So, on the left, that's the library."
+            ],
+            [
+              "Et voilà, c'est mon quartier.",
+              "And there you go, that's my neighbourhood."
+            ],
+            [
+              "Noé est grand, enfin, plus grand que l'année dernière.",
+              "Noé is tall, well, taller than last year."
+            ],
+            [
+              "Ouais, j'ai oublié ma clé. Bref, je peux pas entrer.",
+              "Yeah, I forgot my key. Anyway, I can't get in."
+            ],
+            [
+              "Bon, au revoir, madame !",
+              "Right, goodbye!"
+            ]
           ]
         }
       ]
@@ -59,9 +86,18 @@
       "blocks": [
         {
           "lines": [
-            ["Il fait humide aujourd'hui, hein ?", "It's damp today, isn't it?"],
-            ["C'est Hugo, le pote dont je t'ai parlé, tu vois ?", "That's Hugo, the mate I told you about, you see?"],
-            ["Il chante mal et fort, mais il adore ça, quoi.", "He sings badly and loudly, but he loves it, you know."]
+            [
+              "Il fait humide aujourd'hui, hein ?",
+              "It's damp today, isn't it?"
+            ],
+            [
+              "C'est Hugo, le pote dont je t'ai parlé, tu vois ?",
+              "That's Hugo, the mate I told you about, you see?"
+            ],
+            [
+              "Il chante mal et fort, mais il adore ça, quoi.",
+              "He sings badly and loudly, but he loves it, you know."
+            ]
           ]
         }
       ]
@@ -75,10 +111,22 @@
       "blocks": [
         {
           "lines": [
-            ["En fait, la piscine ferme à huit heures.", "Actually, the pool closes at eight."],
-            ["Je déteste danser, en fait.", "I hate dancing, actually."],
-            ["Maya n'a rien dit. Du coup, je sais pas si elle vient.", "Maya didn't say anything. So I don't know if she's coming."],
-            ["Il pleut. Du coup, on va à la bibliothèque.", "It's raining. So we're going to the library."]
+            [
+              "En fait, la piscine ferme à huit heures.",
+              "Actually, the pool closes at eight."
+            ],
+            [
+              "Je déteste danser, en fait.",
+              "I hate dancing, actually."
+            ],
+            [
+              "Maya n'a rien dit. Du coup, je sais pas si elle vient.",
+              "Maya didn't say anything. So I don't know if she's coming."
+            ],
+            [
+              "La météo dit qu'il va pleuvoir. Du coup, on va à la bibliothèque.",
+              "The forecast says it's going to rain. So we're going to the library."
+            ]
           ]
         }
       ]
@@ -92,10 +140,22 @@
       "blocks": [
         {
           "lines": [
-            ["On prend les vélos ? Ouais !", "Shall we take the bikes? Yeah!"],
-            ["Tu aimes la piscine ? Bof.", "Do you like the pool? Meh."],
-            ["Franchement, tu danses trop bien !", "Honestly, you dance really well!"],
-            ["Il y a, genre, dix boulangeries.", "There are, like, ten bakeries."]
+            [
+              "On prend les vélos ? Ouais !",
+              "Shall we take the bikes? Yeah!"
+            ],
+            [
+              "Tu aimes la piscine ? Bof.",
+              "Do you like the pool? Meh."
+            ],
+            [
+              "Franchement, tu danses trop bien !",
+              "Honestly, you dance really well!"
+            ],
+            [
+              "Il y a, genre, dix boulangeries.",
+              "There are, like, ten bakeries."
+            ]
           ]
         }
       ]
@@ -113,12 +173,60 @@
             "left": "What people say",
             "right": "The full form",
             "rows": [
-              [{ "fr": "Je sais pas.", "en": "I don't know." }, { "fr": "Je ne sais pas." }],
-              [{ "fr": "Chais pas.", "en": "I don't know." }, { "fr": "Je ne sais pas." }],
-              [{ "fr": "On part à huit heures.", "en": "We leave at eight." }, { "fr": "Nous partons à huit heures." }],
-              [{ "fr": "T'as faim ?", "en": "Are you hungry?" }, { "fr": "Tu as faim ?" }],
-              [{ "fr": "T'es fatiguée ?", "en": "Are you tired?" }, { "fr": "Tu es fatiguée ?" }],
-              [{ "fr": "En hiver, y'a personne à la piscine.", "en": "In winter, there's nobody at the pool." }, { "fr": "En hiver, il n'y a personne à la piscine." }]
+              [
+                {
+                  "fr": "Je sais pas.",
+                  "en": "I don't know."
+                },
+                {
+                  "fr": "Je ne sais pas."
+                }
+              ],
+              [
+                {
+                  "fr": "Chais pas.",
+                  "en": "I don't know."
+                },
+                {
+                  "fr": "Je ne sais pas."
+                }
+              ],
+              [
+                {
+                  "fr": "On part à huit heures.",
+                  "en": "We leave at eight."
+                },
+                {
+                  "fr": "Nous partons à huit heures."
+                }
+              ],
+              [
+                {
+                  "fr": "T'as faim ?",
+                  "en": "Are you hungry?"
+                },
+                {
+                  "fr": "Tu as faim ?"
+                }
+              ],
+              [
+                {
+                  "fr": "T'es fatiguée ?",
+                  "en": "Are you tired?"
+                },
+                {
+                  "fr": "Tu es fatiguée ?"
+                }
+              ],
+              [
+                {
+                  "fr": "En hiver, y'a personne à la piscine.",
+                  "en": "In winter, there's nobody at the pool."
+                },
+                {
+                  "fr": "En hiver, il n'y a personne à la piscine."
+                }
+              ]
             ]
           }
         }
@@ -137,11 +245,56 @@
             "left": "With a friend",
             "right": "With a stranger or a boss",
             "rows": [
-              [{ "fr": "Ouais.", "en": "Yeah." }, { "fr": "Oui.", "en": "Yes." }],
-              [{ "fr": "Bof.", "en": "Meh." }, { "fr": "Pas vraiment.", "en": "Not really." }],
-              [{ "fr": "C'est loin, hein ?", "en": "It's far, right?" }, { "fr": "C'est loin, n'est-ce pas ?", "en": "It's far, isn't it?" }],
-              [{ "fr": "T'as le temps ?", "en": "Have you got time?" }, { "fr": "Vous avez le temps ?", "en": "Do you have time?" }],
-              [{ "fr": "Je sais pas.", "en": "I don't know." }, { "fr": "Je ne sais pas.", "en": "I don't know." }]
+              [
+                {
+                  "fr": "Ouais.",
+                  "en": "Yeah."
+                },
+                {
+                  "fr": "Oui.",
+                  "en": "Yes."
+                }
+              ],
+              [
+                {
+                  "fr": "Bof.",
+                  "en": "Meh."
+                },
+                {
+                  "fr": "Pas vraiment.",
+                  "en": "Not really."
+                }
+              ],
+              [
+                {
+                  "fr": "C'est loin, hein ?",
+                  "en": "It's far, right?"
+                },
+                {
+                  "fr": "C'est loin, n'est-ce pas ?",
+                  "en": "It's far, isn't it?"
+                }
+              ],
+              [
+                {
+                  "fr": "T'as le temps ?",
+                  "en": "Have you got time?"
+                },
+                {
+                  "fr": "Vous avez le temps ?",
+                  "en": "Do you have time?"
+                }
+              ],
+              [
+                {
+                  "fr": "Je sais pas.",
+                  "en": "I don't know."
+                },
+                {
+                  "fr": "Je ne sais pas.",
+                  "en": "I don't know."
+                }
+              ]
             ]
           }
         }
@@ -153,9 +306,19 @@
       "id": "k1",
       "ask": "Hugo asks if you liked the film. It was not great. Which answer fits?",
       "options": [
-        { "text": "Bof.", "fr": true, "right": true },
-        { "text": "Voilà.", "fr": true },
-        { "text": "Du coup.", "fr": true }
+        {
+          "text": "Bof.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Voilà.",
+          "fr": true
+        },
+        {
+          "text": "Du coup.",
+          "fr": true
+        }
       ],
       "why": "{bof} says not really, not great. Hugo is a friend, so it fits."
     },
@@ -163,9 +326,19 @@
       "id": "k2",
       "ask": "Léa writes a note to Mme Garnier. Which sentence fits the note?",
       "options": [
-        { "text": "Chais pas si Noé est chez vous.", "fr": true },
-        { "text": "Je sais pas si Noé est chez vous.", "fr": true },
-        { "text": "Je ne sais pas si Noé est chez vous.", "fr": true, "right": true }
+        {
+          "text": "Chais pas si Noé est chez vous.",
+          "fr": true
+        },
+        {
+          "text": "Je sais pas si Noé est chez vous.",
+          "fr": true
+        },
+        {
+          "text": "Je ne sais pas si Noé est chez vous.",
+          "fr": true,
+          "right": true
+        }
       ],
       "why": "A note is writing, and Léa says {vous} to Mme Garnier, so {ne} stays: {Je ne sais pas}."
     },
@@ -175,9 +348,16 @@
       "say": "T'as faim ?",
       "show": "T'as faim ?",
       "options": [
-        { "text": "Are you hungry?", "right": true },
-        { "text": "Is he hungry?" },
-        { "text": "Do you have a key?" }
+        {
+          "text": "Are you hungry?",
+          "right": true
+        },
+        {
+          "text": "Is he hungry?"
+        },
+        {
+          "text": "Do you have a key?"
+        }
       ],
       "why": "{t'as} is {tu as} said fast, so {T'as faim ?} is {Tu as faim ?}: are you hungry?"
     }

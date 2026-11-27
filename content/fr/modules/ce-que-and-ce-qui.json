@@ -11,7 +11,8 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:relative.ce-que"
+      "fr:cx:relative.ce-que",
+      "fr:cx:mise-en-relief.ce-qui-cest"
     ]
   },
   "vocabulary": [
@@ -61,8 +62,14 @@
     {
       "id": "c-ce-que-ce-qui",
       "term": "{ce que} and {ce qui}: what",
-      "definition": "To say 'what' inside a sentence, French puts {ce} before {que} or {qui}, as after a noun. {Ce qui} is the subject, so the verb comes straight after it: {ce qui est difficile}. {Ce que} is the object, so a subject comes after it: {ce que j'aime}. {Que} becomes {qu'} before a vowel; {qui} never does. To say the thing at the end, add {c'est}. {Qu'est-ce que} asks a question; {ce que} sits inside a statement.",
+      "definition": "To say 'what' inside a sentence, French puts {ce} before {que} or {qui}, as after a noun. {Ce qui} is the subject, so the verb comes straight after it: {ce qui est difficile}. {Ce que} is the object, so a subject comes after it: {ce que j'aime}. {Que} becomes {qu'} before a vowel; {qui} never does. {Qu'est-ce que} asks a question; {ce que} sits inside a statement.",
       "example": "{Ce que j'aime, c'est le marché.} (What I like is the market.) {Ce qui est difficile, c'est le vélo.} (What's hard is cycling.)"
+    },
+    {
+      "id": "c-ce-que-cest",
+      "term": "{Ce que …, c'est …}: the idea first, then the thing",
+      "definition": "To put weight on one thing, French says the idea first and names the thing after {c'est}. {J'aime le marché} becomes {Ce que j'aime, c'est le marché.} With {ce qui}: {Hugo est drôle} becomes {Ce qui est drôle, c'est Hugo.} French speakers use this shape all the time. Before a plural you will also hear {ce sont}: {Ce que Noé préfère, ce sont les animaux.}",
+      "example": "{Ce que j'aime surtout, c'est le marché.} (What I like most is the market.) {Ce qui est difficile ici, c'est le vélo.} (What's hard here is cycling.)"
     }
   ],
   "tables": [
@@ -273,6 +280,23 @@
         {
           "text": "Ce que est drôle, c'est Hugo.",
           "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-what-the-forecast-says",
+      "type": "gapfill",
+      "text": "Tu as vu ce ___ dit la météo ? Il va neiger samedi !",
+      "gloss": "Hugo to Léa: Have you seen what the forecast says? It's going to snow on Saturday!",
+      "blanks": [
+        {
+          "answer": "que"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "qui",
+          "feedback": "{La météo} is the subject of {dit}, so 'what' is the object: {ce que dit la météo}."
         }
       ]
     },

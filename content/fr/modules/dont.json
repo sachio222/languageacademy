@@ -237,17 +237,17 @@
     {
       "id": "i-tu-sais-ce-que-j-aime-la-rue-dont",
       "type": "gapfill",
-      "text": "Tu sais ___ j'aime surtout ? La rue ___ elle m'a parlé.",
+      "text": "Ce ___ j'aime surtout, c'est la rue ___ elle m'a parlé.",
       "blanks": [
         {
-          "answer": "ce que"
+          "answer": "que"
         },
         {
           "answer": "dont"
         }
       ],
-      "gloss": "Do you know what I like most? The street she told me about.",
-      "hint": "Léa tells Maya about the street Mme Garnier showed her. First blank: what I like, with no noun before it. Second blank: {parler de}."
+      "gloss": "What I like most is the street she told me about.",
+      "hint": "Léa tells Maya about the street Mme Garnier showed her. First blank: what I like, with a subject after it. Second blank: {parler de}."
     },
     {
       "id": "i-karim-fier-lea-fiere",

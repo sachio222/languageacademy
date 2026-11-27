@@ -62,6 +62,7 @@
               "fr:lex:voisin",
               "fr:lex:copain",
               "fr:lex:monsieur",
+              "fr:lex:madame",
               "fr:lex:lire",
               "fr:lex:voisine",
               "fr:lex:copine",
@@ -176,7 +177,8 @@
               "fr:lex:en-fait"
             ],
             "constructions": [
-              "fr:cx:relative.ce-que"
+              "fr:cx:relative.ce-que",
+              "fr:cx:mise-en-relief.ce-qui-cest"
             ]
           },
           "minutes": 30,
@@ -259,7 +261,9 @@
               "fr:lex:chanter",
               "fr:lex:danser",
               "fr:lex:detester",
-              "fr:lex:franchement"
+              "fr:lex:franchement",
+              "fr:lex:y-a",
+              "fr:lex:chais"
             ],
             "constructions": []
           },
@@ -267,7 +271,9 @@
           "spoken": [
             "franchement",
             "trop",
-            "t'as"
+            "t'as",
+            "y'a",
+            "chais pas"
           ],
           "spoken_example": "Franchement, tu danses trop bien !",
           "note": "The reading that follows reuses all four verbs, inside the two-module reuse window."
