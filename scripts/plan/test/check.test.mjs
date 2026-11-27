@@ -9,7 +9,7 @@ const lesson = (key, words = [], constructions = [], more = {}) => ({ module_key
 const exam = (key, items = 20, minutes = 20) => ({ module_key: key, kind: 'unit_exam', title: 'Unit exam', teaches: { words: [], constructions: [] }, minutes, exam: { items, minutes } });
 const reading = (key, words = [], must_use = []) => ({
   module_key: key, kind: 'reading', title: key, teaches: { words, constructions: [] }, minutes: 20,
-  reading: { parts: [{ kind: 'story', title: 't', title_native: 't' }], premise: 'p', must_use },
+  reading: { parts: [{ kind: 'story', type: 'a-mystery', title: 't', title_native: 't' }], premise: 'p', must_use },
 });
 const unit = (key, modules) => ({ unit_key: key, title: key, can_do: 'You can.', setting: { cast: ['A'] }, modules });
 const planOf = (units, more = {}) => ({ schema: 'la-course-plan@1', language: 'xx', native: 'en', units, ...more });
@@ -31,8 +31,9 @@ function run(plan, { taught = new Map(), reached = {}, previous = null, written 
     position.set(m.module_key, ++p);
     for (const id of [...(m.kind === 'reading' ? [] : m.teaches.constructions), ...m.teaches.words]) if (!at.has(id)) at.set(id, p);
   }
-  return checkPlan({ plan, limits: LIMITS, lookups: LOOKUPS, taughtAt: taught, isAvailable: (id, pos) => at.has(id) && at.get(id) <= pos, position, written, reached, previous });
+  return checkPlan({ plan, readingTypes: READING_TYPES, limits: LIMITS, lookups: LOOKUPS, taughtAt: taught, isAvailable: (id, pos) => at.has(id) && at.get(id) <= pos, position, written, reached, previous });
 }
+const READING_TYPES = new Set(['a-mystery', 'a-debate']);
 const codes = (result) => result.problems.map((p) => p.code);
 
 test('a plan that keeps every rule has no problems and reports what it holds', () => {
@@ -126,4 +127,26 @@ test('a repeated key is reported, and a written module is skipped', () => {
   const { problems, report } = run(plan, { written: new Set(['l1']), taught: new Map([['xx:lex:old', 9]]) });
   assert.deepEqual(problems, []);
   assert.equal(report.modules, 1);
+});
+
+test('every part of a reading names its type, and the type is one of the shared catalog', () => {
+  const withType = (type) => planOf([unit('u1', [{ ...reading('r1'), reading: { parts: [{ kind: 'article', type, title: 't', title_native: 't' }], premise: 'p', must_use: [] } }])]);
+  const untyped = planOf([unit('u1', [{ ...reading('r1'), reading: { parts: [{ kind: 'story', title: 't', title_native: 't' }], premise: 'p', must_use: [] } }])]);
+  assert.ok(schemaProblems(untyped).some((m) => /type/.test(m)), 'a part with no type is a schema problem');
+  assert.deepEqual(codes(run(withType('a-debate'))), []);
+  const unknown = run(withType('a-viking-saga'));
+  assert.deepEqual(codes(unknown), ['reading_type_unknown']);
+  assert.match(unknown.problems[0].message, /a-viking-saga/);
+});
+
+test('a reading may say in one line why it picked its type, and the check never asks for the type another plan used', () => {
+  const noted = planOf([unit('u1', [{ ...reading('r1'), reading: { parts: [{ kind: 'story', type: 'a-debate', title: 't', title_native: 't' }], type_note: 'a debate fits this town better than a mystery', premise: 'p', must_use: [] } }])]);
+  assert.deepEqual(schemaProblems(noted), []);
+  assert.deepEqual(codes(run(noted)), []);
+});
+
+test('the report counts where each reading type is used', () => {
+  const plan = planOf([unit('u1', [reading('r1'), exam('e1')]), unit('u2', [reading('r2'), exam('e2')])]);
+  const { report } = run(plan);
+  assert.deepEqual(report.reading_types, { 'a-mystery': ['u1', 'u2'] });
 });

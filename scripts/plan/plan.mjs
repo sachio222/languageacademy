@@ -7,6 +7,7 @@
 //   schemaProblems(plan)           every schema problem as "<json pointer>: <message>"
 //   planModules(plan)              every module in plan order, each with its unit: [{ unit, module, nth }]
 //   readMethod()                   the limits every plan keeps (method.json), the same for every language
+//   readReadingTypes()             the shared catalog of reading types (reading-types.json): { types, byId, written }
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -56,6 +57,11 @@ export function schemaProblems(plan) {
 export const planModules = (plan) => plan.units.flatMap((unit) => unit.modules.map((module, nth) => ({ unit, module, nth })));
 
 export const readMethod = () => JSON.parse(readFileSync(join(HERE, 'method.json'), 'utf8'));
+
+export function readReadingTypes() {
+  const catalog = JSON.parse(readFileSync(join(HERE, 'reading-types.json'), 'utf8'));
+  return { ...catalog, byId: new Map(catalog.types.map((t) => [t.id, t])) };
+}
 
 /** A title or line as plain text: braces mark words of the language taught and are dropped. */
 export const plain = (text) => String(text ?? '').replace(/[{}]/g, '');

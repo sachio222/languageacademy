@@ -17,7 +17,7 @@ import { checkPlan } from './check.mjs';
 import { levelsReached, planContext } from './context.mjs';
 import { frequencyDir, frequencyTrend, readRanks } from './frequency.mjs';
 import { readLimits } from './limits.mjs';
-import { PLAN_FILE, PlanError, REPO_ROOT, planModules, readMethod, readPlan } from './plan.mjs';
+import { PLAN_FILE, PlanError, REPO_ROOT, planModules, readMethod, readPlan, readReadingTypes } from './plan.mjs';
 
 const USAGE = [
   'usage: node scripts/plan/cli.mjs check <lang> [--against <git ref>]',
@@ -58,16 +58,17 @@ function planAt(repoRoot, lang, ref) {
 export async function loadChecked({ repoRoot = REPO_ROOT, lang, previous = null }) {
   const plan = readPlan(repoRoot, lang);
   const method = readMethod();
+  const readingTypes = readReadingTypes();
   const limits = readLimits(repoRoot, lang);
   const context = await planContext({ repoRoot, lang, plan });
   const { base, projected, position, written, lookups } = context;
   const result = checkPlan({
-    plan, limits, lookups, written, position, previous,
+    plan, readingTypes: readingTypes.byId, limits, lookups, written, position, previous,
     taughtAt: base.timeline.taughtAt,
     isAvailable: (id, at) => projected.timeline.isAvailable(id, at),
     reached: levelsReached(projected),
   });
-  return { plan, method, limits, context, ...result };
+  return { plan, method, readingTypes, limits, context, ...result };
 }
 
 /** The frequency trend by unit, as bands, or null when this machine has no frequency file for the language. */
@@ -110,6 +111,8 @@ async function check(lang, args) {
       console.log('frequency, the band of each unit\'s middle new word:');
       for (const t of trend) console.log(`  ${t.unit_key}: ${t.band ?? 'no ranked word'}${t.steps_back ? '  (more common than the unit before)' : ''}`);
     }
+    const types = Object.entries(report.reading_types);
+    console.log(`reading types: ${types.length} of ${checked.readingTypes.types.length} used (${types.map(([t, u]) => `${t} ${u.length}`).join(', ')})`);
     if (previous) console.log(`against ${against}: ${problems.filter((p) => p.code === 'word_dropped').length} words dropped`);
   }
   if (!problems.length) {

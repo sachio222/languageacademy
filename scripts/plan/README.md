@@ -50,6 +50,7 @@ The plan's modules are counted as if written, in plan order, after the last writ
 | Rules and tools | `scripts/plan/*.mjs` | yes |
 | Method a writer follows, by module kind | `scripts/plan/templates/*.md` | yes |
 | What the method fixes beyond the recipes | `scripts/plan/method.json` | yes |
+| Reading types: the human situations a reading can be about, and the types of readings already written | `scripts/plan/reading-types.json` | yes |
 | The plan | `content/<lang>/course-plan.json` | no |
 | Sizes and rules of each module kind | `content/<lang>/recipes/*.json` | no |
 | Notes for writers of this language | `content/<lang>/writing-notes.md` | no |
@@ -72,6 +73,10 @@ No tool changes.
 
 A reading is one module with one word table and one position. A long reading has `parts`, each of its own kind (story,
 article, exposition, learning-alongside) and each read in one sitting; `minutes` and `running_words` describe one part.
+
+## Reading types
+
+Each part of a reading names a type from `reading-types.json`: the human situation it is about, such as a new place, a mystery or cultures meeting. The list is the same for every language. A type guides the feel of a reading; it is not a rule. Each language writes its own country's instance, and a plan may choose a different type at the same point when its culture fits another better, saying why in `type_note`. `plan:check` asks that every part name a type the list has, and never that it match another language's plan. It prints how many types the plan uses and where.
 
 ## The earlier stub tool
 

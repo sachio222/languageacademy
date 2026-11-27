@@ -4,7 +4,7 @@
 // each unit's band; it never shows a frequency value, and the page is not committed.
 //
 // renderPage({ plan, report, context, lang, repoRoot, trend }) -> html
-import { READING_KIND } from './md.mjs';
+import { READING_KIND, typeName } from './md.mjs';
 import { wordReader } from './words.mjs';
 
 const E = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -89,7 +89,7 @@ export function renderPage({ plan, report, context, lang, repoRoot, trend = null
       extra += `<p class="set"><b>Setting.</b> ${E(u.plan.setting.cast.join('; '))}</p>`;
       for (const m of u.plan.modules.filter((x) => x.reading)) {
         const r = m.reading;
-        const parts = r.parts.map((p) => `<span lang="${lang}">${E(p.title)}</span> <span class="rk">${E(READING_KIND[p.kind])}</span>`).join(' and ');
+        const parts = r.parts.map((p) => `<span lang="${lang}">${E(p.title)}</span> <span class="rk">${E(READING_KIND[p.kind])} · ${E(typeName(p.type))}</span>`).join(' and ');
         extra += `<p class="rd"><b>Reading: ${parts}</b> (${E(r.parts.map((p) => p.title_native).join('; '))}${r.genre ? `, ${E(r.genre)}` : ''}). ${E(r.premise)}</p>`;
       }
       const cu = u.plan.culture ?? {};

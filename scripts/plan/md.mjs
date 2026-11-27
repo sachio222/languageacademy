@@ -1,11 +1,14 @@
 // plan:md: the course plan as a document a person reads, made from the plan file and nothing else that could drift.
 //
 // renderMd({ plan, report, context, lang, repoRoot }) -> markdown
-import { REPO_ROOT, plain } from './plan.mjs';
+import { REPO_ROOT, plain, readReadingTypes } from './plan.mjs';
 import { wordReader } from './words.mjs';
 
 const KIND = { lesson: 'Lesson', guide: 'Guide', reading: 'Reading', practice: 'Practice set', unit_exam: 'Unit exam' };
 export const READING_KIND = { story: 'story', article: 'article', exposition: 'exposition', 'learning-alongside': 'a character learns alongside the reader' };
+const TYPES = readReadingTypes().byId;
+/** A reading part's type by its name, as a reader sees it. */
+export const typeName = (id) => TYPES.get(id)?.name ?? id;
 const short = (id) => id.split(':').slice(2).join(':');
 const fr = (text) => String(text ?? '').replace(/\{([^}]+)\}/g, '*$1*');
 
@@ -49,7 +52,8 @@ export function renderMd({ plan, report, context, repoRoot = REPO_ROOT }) {
       if (m.practises?.length) line('Leans on', m.practises.map(short).join(', '));
       if (m.reading) {
         const r = m.reading;
-        line('Parts', r.parts.map((p) => `*${p.title}* (${p.title_native}), ${READING_KIND[p.kind]}`).join('; '));
+        line('Parts', r.parts.map((p) => `*${p.title}* (${p.title_native}), ${READING_KIND[p.kind]}, type: ${typeName(p.type)}`).join('; '));
+        line('Why this type', r.type_note);
         line('Genre', r.genre);
         line('Premise', r.premise);
         if (r.must_use.length) line('Must use', r.must_use.map(short).join(', '));

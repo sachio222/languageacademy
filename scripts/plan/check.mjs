@@ -1,7 +1,8 @@
 // plan:check, the whole-course check of a course plan. A pure function over the plan and what it is checked against,
 // so the same rules hold for every language.
 //
-// checkPlan({ plan, limits, lookups, taughtAt, isAvailable, position, written, reached, previous }) -> { problems, report }
+// checkPlan({ plan, readingTypes, limits, lookups, taughtAt, isAvailable, position, written, reached, previous }) -> { problems, report }
+//   readingTypes the ids of the shared catalog of reading types (Set or Map)
 //   limits      the sizes a module may have (limits.mjs), read from the language's recipes
 //   lookups     { headwords, forms, constructions }: Map<id, node> of the language's graph
 //   taughtAt    Map<id, position>: what the written course teaches (the base timeline), words and constructions
@@ -25,11 +26,12 @@
 //   lesson_words_over, table_words_over, minutes_over, exam_items_over, exam_minutes_over, guides_over   sizes
 //   level_late                         a level reached after the unit the plan names, or never
 //   word_dropped                       a word the previous plan taught that no module teaches now
+//   reading_type_unknown               a reading part names a type the shared catalog does not have
 import { planModules, schemaProblems, TEACHES } from './plan.mjs';
 
 const problem = (code, where, message) => ({ code, where, message });
 
-export function checkPlan({ plan, limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null }) {
+export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null }) {
   const problems = schemaProblems(plan).map((m) => problem('schema', 'course-plan.json', m));
   if (problems.length) return { problems, report: null };
 
@@ -139,6 +141,16 @@ export function checkPlan({ plan, limits, lookups, taughtAt, isAvailable, positi
     }
   }
 
+  // reading types: every part names one the shared catalog has; no plan is held to another language's choice
+  const typeUse = {};
+  for (const { unit, module } of open) {
+    for (const part of module.reading?.parts ?? []) {
+      if (!readingTypes.has(part.type)) problems.push(problem('reading_type_unknown', module.module_key, `${part.type} is not a type in scripts/plan/reading-types.json`));
+      const where = (typeUse[part.type] ??= []);
+      if (!where.includes(unit.unit_key)) where.push(unit.unit_key);
+    }
+  }
+
   // nothing dropped
   if (previous) {
     const before = new Set(planModules(previous).flatMap(({ module }) => module.teaches.words));
@@ -157,6 +169,7 @@ export function checkPlan({ plan, limits, lookups, taughtAt, isAvailable, positi
     first_position: open.length ? Math.min(...open.map(({ module }) => position.get(module.module_key))) : null,
     last_position: open.length ? Math.max(...open.map(({ module }) => position.get(module.module_key))) : null,
     levels,
+    reading_types: typeUse,
     by_unit: plan.units.map((u) => ({
       unit_key: u.unit_key,
       lessons: u.modules.filter((m) => m.kind === 'lesson').length,

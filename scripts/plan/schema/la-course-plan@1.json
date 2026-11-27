@@ -108,14 +108,16 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["kind", "title", "title_native"],
+            "required": ["kind", "type", "title", "title_native"],
             "properties": {
+              "type": { "type": "string", "pattern": "^[a-z][a-z-]*$", "description": "The human situation the part is about: an id from the shared catalog, scripts/plan/reading-types.json." },
               "kind": { "enum": ["story", "article", "exposition", "learning-alongside"], "description": "story; article on a custom, a piece of history or a place; exposition with no characters or plot; learning-alongside, where a character learns with the reader." },
               "title": { "$ref": "#/$defs/text" },
               "title_native": { "$ref": "#/$defs/text" }
             }
           }
         },
+        "type_note": { "$ref": "#/$defs/text", "description": "One line on why this reading took its type, when the language's culture fits a different type better than the guide suggests at this point." },
         "genre": { "$ref": "#/$defs/text" },
         "premise": { "$ref": "#/$defs/text" },
         "must_use": { "description": "Patterns the text must use.", "type": "array", "items": { "$ref": "#/$defs/node" } },

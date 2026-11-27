@@ -303,6 +303,7 @@
             "parts": [
               {
                 "kind": "learning-alongside",
+                "type": "a-new-place",
                 "title": "Mon quartier, pour Maya",
                 "title_native": "My neighbourhood, for Maya"
               }
@@ -627,6 +628,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "at-work",
                 "title": "Une semaine à la boulangerie",
                 "title_native": "A week at the bakery"
               }
@@ -957,6 +959,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-family-celebration",
                 "title": "Mon journal de Saint-Malo",
                 "title_native": "My Saint-Malo diary"
               }
@@ -1446,6 +1449,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-family-celebration",
                 "title": "La surprise d'Henri",
                 "title_native": "Henri's surprise"
               }
@@ -1948,6 +1952,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "at-work",
                 "title": "Vingt ans après",
                 "title_native": "Twenty years on"
               }
@@ -2421,6 +2426,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-trip-away",
                 "title": "Le journal de la classe verte",
                 "title_native": "The class-trip newspaper"
               }
@@ -2916,6 +2922,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "an-emergency",
                 "title": "Une fuite le dimanche soir",
                 "title_native": "A leak on a Sunday evening"
               }
@@ -3412,6 +3419,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-mystery",
                 "title": "Le mystère de la cour",
                 "title_native": "The mystery of the courtyard"
               }
@@ -3549,6 +3557,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-national-celebration",
                 "title": "Le soir de la Fête de la musique",
                 "title_native": "The night of the music festival"
               }
@@ -3839,6 +3848,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-new-place",
                 "title": "Messages de la Croix-Rousse",
                 "title_native": "Messages from the Croix-Rousse"
               }
@@ -4127,11 +4137,13 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-mystery",
                 "title": "Le portrait disparu",
                 "title_native": "The Missing Portrait"
               },
               {
                 "kind": "article",
+                "type": "a-moment-in-history",
                 "title": "Lyon, capitale de la Résistance",
                 "title_native": "Lyon, Capital of the Resistance"
               }
@@ -4475,11 +4487,13 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-debate",
                 "title": "Faut-il fermer le Familia ?",
                 "title_native": "Should Le Familia Close?"
               },
               {
                 "kind": "article",
+                "type": "how-others-see-us",
                 "title": "Paris n'est pas une carte postale",
                 "title_native": "Paris Is Not a Postcard"
               }
@@ -4860,11 +4874,13 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-friendship",
                 "title": "Le voisin de chambre",
                 "title_native": "The Man in the Next Bed"
               },
               {
                 "kind": "story",
+                "type": "a-friendship",
                 "title": "Le voisin de chambre",
                 "title_native": "The Man in the Next Bed"
               }
@@ -5291,11 +5307,13 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "a-trip-away",
                 "title": "La nuit de l'orage",
                 "title_native": "The Night of the Storm"
               },
               {
                 "kind": "learning-alongside",
+                "type": "a-moment-in-history",
                 "title": "La grotte de Lina",
                 "title_native": "Lina's Cave"
               }
@@ -5677,6 +5695,7 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "choosing-a-life",
                 "title": "Quarante ans de chantiers",
                 "title_native": "Forty Years on Building Sites"
               }
@@ -6035,11 +6054,13 @@
             "parts": [
               {
                 "kind": "story",
+                "type": "getting-things-sorted",
                 "title": "Madame, Monsieur",
                 "title_native": "Dear Sir or Madam"
               },
               {
                 "kind": "story",
+                "type": "getting-things-sorted",
                 "title": "Madame, Monsieur",
                 "title_native": "Dear Sir or Madam"
               }
@@ -6410,11 +6431,13 @@
             "parts": [
               {
                 "kind": "learning-alongside",
+                "type": "cultures-meet",
                 "title": "Les meilleurs ennemis",
                 "title_native": "The Best of Enemies"
               },
               {
                 "kind": "exposition",
+                "type": "cultures-meet",
                 "title": "Des Américains à Paris",
                 "title_native": "Americans in Paris"
               }
@@ -6525,11 +6548,13 @@
             "parts": [
               {
                 "kind": "exposition",
+                "type": "a-debate",
                 "title": "Faut-il encore apprendre une langue ?",
                 "title_native": "Is It Still Worth Learning a Language?, part 1: the opinion piece"
               },
               {
                 "kind": "exposition",
+                "type": "a-debate",
                 "title": "Faut-il encore apprendre une langue ?",
                 "title_native": "Is It Still Worth Learning a Language?, part 2: the reply"
               }
@@ -6941,6 +6966,7 @@
     "The Hundred Years' War and Napoleon told from the French side and the English side, as two texts to compare.",
     "May 1968 and the French habit of protest.",
     "The regions and their languages: Brittany, Alsace, the Basque Country, Corsica and the north Élodie comes from.",
-    "The Académie française and the argument over English words in French."
+    "The Académie française and the argument over English words in French.",
+    "Vikings in Normandy (reading type cultures-meet): how Norse raiders settled the lower Seine, took land by the treaty of 911 and became the Normans who took England in 1066; a reading on what French kept from them, in place names such as those ending in -bec and -tot."
   ]
 }

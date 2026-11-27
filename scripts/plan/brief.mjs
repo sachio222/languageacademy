@@ -19,6 +19,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dueFor } from '../graph/rules/reuse.mjs';
 import { READING_KIND } from './md.mjs';
+import { readReadingTypes } from './plan.mjs';
 import { PlanError, plain, planPaths } from './plan.mjs';
 import { wordReader } from './words.mjs';
 
@@ -71,7 +72,12 @@ function briefText({ plan, unit, module, context, limits, lang, repoRoot, word }
   if (module.reading) {
     const r = module.reading;
     section('The reading', [
-      ...r.parts.map((p, i) => `- **Part ${i + 1}.** *${p.title}* (${p.title_native}): ${READING_KIND[p.kind]}.`),
+      ...r.parts.map((p, i) => {
+        const t = readReadingTypes().byId.get(p.type);
+        return `- **Part ${i + 1}.** *${p.title}* (${p.title_native}): ${READING_KIND[p.kind]}. Type: ${t ? `${t.name}. ${t.situation} It suits ${t.practises}` : p.type}.`;
+      }),
+      field('Why this type', r.type_note),
+      "- **The type is a guide to the feel, not a rule.** Tell this country's own instance of it; never translate or adapt a reading from another language's course.",
       field('Genre', r.genre), field('Premise', r.premise),
       r.must_use.length ? `- **Patterns the text must use.**\n${r.must_use.map((id) => `  - ${cx(id)}`).join('\n')}` : null,
       field('Length', [r.distinct_words && `about ${r.distinct_words} distinct words`, r.running_words && `about ${r.running_words} running words${r.parts.length > 1 ? ' for each part' : ''}`].filter(Boolean).join('; ')),
