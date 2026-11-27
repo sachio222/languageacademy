@@ -7,8 +7,8 @@ const FUNCTION_POS = new Set(['article', 'determiner', 'pronoun', 'preposition',
 
 // Headwords a vocabulary entry is about: every reading of its only token, or of its first content token (not an
 // elision, not only function words). An entry made of function words alone ("il y a") is headed by its first token.
-function entryHeads(text, ctx, isWord) {
-  const toks = entryReadings(text, ctx.index, isWord);
+function entryHeads(text, ctx, isWord, pos = null) {
+  const toks = entryReadings(text, ctx.index, isWord, null, pos);
   if (!toks.length) return [];
   const content = (t) => !/['’]$/.test(t.token.surface)
     && (t.readings.length === 0 || t.readings.some((r) => !FUNCTION_POS.has(r.pos)));
@@ -20,7 +20,7 @@ function entryHeads(text, ctx, isWord) {
 // teachesWordsManual and teachesConstructions are explicit, so they always count.
 function taughtHere(ctx, m, isWord) {
   const entry = ctx.graph.courseMap?.[m.moduleKey];
-  const heads = new Set((m.vocab ?? []).flatMap((text) => entryHeads(text, ctx, isWord)));
+  const heads = new Set((m.vocab ?? []).flatMap((text, i) => entryHeads(text, ctx, isWord, m.vocabPos?.[i] ?? null)));
   const out = new Set();
   for (const id of entry?.teachesWords ?? []) if (heads.has(id)) out.add(id);
   for (const id of [...(entry?.teachesWordsManual ?? []), ...(entry?.teachesConstructions ?? [])]) out.add(id);

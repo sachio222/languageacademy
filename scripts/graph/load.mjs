@@ -75,9 +75,14 @@ export function loadGraph(graphDir, lang, opts = {}) {
   }
   // levelOrder: how many levels above the highest level the course has reached a lesson may teach, for words and for
   // patterns (constructions, paradigms and forms). 1, the default, suits a course ordered by level; a course ordered by
-  // its own method, such as grammar first and common words first, allows more. The level-order rule reads it.
-  settings.levelOrder = { ...DEFAULT_SETTINGS.levelOrder, ...settings.levelOrder };
-  for (const kind of ['words', 'patterns']) {
+  // its own method, such as grammar first and common words first, allows more. "off": the course orders by its own
+  // method and the only order rule is taught before used, so level-order reports nothing; levels still say where each
+  // level is reached. The level-order rule reads it.
+  if (typeof settings.levelOrder === 'string' && settings.levelOrder !== 'off') {
+    throw new Error(`settings.json: levelOrder must be "off" or { words, patterns }, not ${JSON.stringify(settings.levelOrder)}`);
+  }
+  if (settings.levelOrder !== 'off') settings.levelOrder = { ...DEFAULT_SETTINGS.levelOrder, ...settings.levelOrder };
+  for (const kind of settings.levelOrder === 'off' ? [] : ['words', 'patterns']) {
     const n = settings.levelOrder[kind];
     if (!(Number.isInteger(n) && n >= 1)) {
       throw new Error(`settings.json: levelOrder.${kind} must be a whole number of levels (1 or more), not ${JSON.stringify(n)}`);

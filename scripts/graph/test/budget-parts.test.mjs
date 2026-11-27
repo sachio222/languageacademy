@@ -59,9 +59,21 @@ test('an issue that names the module it is charged to (budgetModuleKey) counts i
 // reading, practice set and exam are stubs, constructions its last lessons taught come due here; once they are written
 // they reuse most of them, so the bare lesson's misses are exactly the due entries whose window closes at its place.
 test('writing a clean Unit 13 lesson leaves every legacy count as it is', async (t) => {
+  // The test needs Unit 13 unwritten, so it puts every Unit 13 module back to a planned stub in a copy (base), and
+  // compares that copy with the lesson written (root).
+  const base = mkdtempSync(join(tmpdir(), 'la-u13-base-'));
   const root = mkdtempSync(join(tmpdir(), 'la-u13-'));
-  t.after(() => rmSync(root, { recursive: true, force: true }));
-  cpSync(CONTENT_ROOT, root, { recursive: true });
+  t.after(() => { rmSync(base, { recursive: true, force: true }); rmSync(root, { recursive: true, force: true }); });
+  cpSync(CONTENT_ROOT, base, { recursive: true });
+  const unit13 = JSON.parse(readFileSync(join(base, 'course.json'), 'utf8')).units.find((u) => u.unit_key === 'unit13');
+  for (const e of unit13.entries) {
+    const file = join(base, 'modules', `${typeof e === 'string' ? e : e.module_key ?? e.module}.json`);
+    const mod = JSON.parse(readFileSync(file, 'utf8'));
+    if (mod.status === 'planned') continue;
+    const stubOf = { schema: mod.schema, module_key: mod.module_key, kind: mod.kind, status: 'planned', title: mod.title, plan: { words: [], constructions: [], source: 'course-plan.json' } };
+    writeFileSync(file, JSON.stringify(stubOf, null, 2) + '\n');
+  }
+  cpSync(base, root, { recursive: true });
   const key = 'qui-and-que-after-a-noun';
   const stub = JSON.parse(readFileSync(join(root, 'modules', `${key}.json`), 'utf8'));
   assert.equal(stub.status, 'planned');
@@ -90,7 +102,7 @@ test('writing a clean Unit 13 lesson leaves every legacy count as it is', async 
     const { issues } = await runCheck({ repoRoot, lang: 'fr', content });
     return countByPart(issues, (k) => content.modules.get(k)?.unit_key ?? null);
   };
-  const [before, after] = [await partsOf(CONTENT_ROOT), await partsOf(root)];
+  const [before, after] = [await partsOf(base), await partsOf(root)];
   assert.deepEqual(after.legacy, before.legacy);
   assert.deepEqual(after.new, {}, 'the lesson is clean');
   // What graph:due lists for the stub with a window that closes at its place: each one is a miss when nothing reuses it.
@@ -105,7 +117,7 @@ test('writing a clean Unit 13 lesson leaves every legacy count as it is', async 
   writeLesson({ ...lesson, items: lesson.items.slice(0, 1) });
   const bare = await partsOf(root);
   assert.deepEqual(bare.legacy, before.legacy);
-  assert.deepEqual(bare.new, misses(await closingAt(CONTENT_ROOT)));
+  assert.deepEqual(bare.new, misses(await closingAt(base)));
   // With Unit 12's reading, practice set and exam back to stubs, the constructions its last lessons taught come due in
   // the bare lesson, and its misses count in Unit 13.
   const unit12End = [['unit12-reading', 'reading'], ['unit12-practice', 'practice'], ['unit12-exam', 'unit_exam']];

@@ -79,7 +79,8 @@ test('story_missing is a warning only in units the real bundle does not reach', 
   const root = copy(t);
   writeUnit12(root, { story: false });
   const written = buildBundleWithReport(loadCourse({ root, planned: false }), { ...(await loadBundleSources({ root })), stopAtUnready: false }).bundle;
-  const as = (warnUnits) => releaseProblems(written, null, { warnUnits }).filter((p) => p.code === 'story_missing').map((p) => [p.module_key, p.severity]);
+  // Unit 12's reading alone: a later reading being written may lack its story too.
+  const as = (warnUnits) => releaseProblems(written, null, { warnUnits }).filter((p) => p.code === 'story_missing' && p.module_key === 'unit12-reading').map((p) => [p.module_key, p.severity]);
   assert.deepEqual(as(new Set()), [['unit12-reading', 'error']]);
   assert.deepEqual(as(new Set(['unit12'])), [['unit12-reading', 'warning']]);
 });

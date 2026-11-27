@@ -27,11 +27,31 @@
 //   level_late                         a level reached after the unit the plan names, or never
 //   word_dropped                       a word the previous plan taught that no module teaches now
 //   reading_type_unknown               a reading part names a type the shared catalog does not have
+//   cast_name_unknown                  a name in a unit's cast that names.json lacks
+//   unit_outline_missing               a unit with a written module lacks its course.json description and can-do lines
 import { planModules, schemaProblems, TEACHES } from './plan.mjs';
 
 const problem = (code, where, message) => ({ code, where, message });
 
-export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null }) {
+// Titles that come before a name in a cast line (not names themselves), and the words after which no name follows
+// (a Japanese student, an Italian couple).
+const TITLES = new Set(['mme', 'mlle', 'm', 'mr', 'mrs', 'ms', 'dr', 'madame', 'monsieur', 'captain', 'tante', 'oncle', 'uncle', 'aunt', 'grandpa', 'grandma', 'the', 'their', 'her', 'his']);
+const NO_NAME_AFTER = new Set(['a', 'an']);
+const foldName = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\.$/, '');
+/** The names a cast line gives: the capitalised words at its start, or after a title, before its first comma or bracket. */
+export function castNames(line) {
+  const words = String(line).split(/[,(]/)[0].trim().split(/\s+/).filter(Boolean);
+  const out = [];
+  let i = 0;
+  while (i < words.length && TITLES.has(foldName(words[i]))) i++;
+  if (i > 0 && NO_NAME_AFTER.has(foldName(words[i - 1]))) return out;
+  if (i === 0 && NO_NAME_AFTER.has(foldName(words[0] ?? ''))) return out;
+  for (; i < words.length && /^[\p{Lu}]/u.test(words[i]); i++) out.push(words[i].replace(/['’]s$/, '').replace(/[^\p{L}'-]/gu, ''));
+  return out;
+}
+const OUTLINE_FIELDS = ['description', 'can_do', 'can_do_short', 'can_do_example_fr'];
+
+export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null, names = null, writtenUnits = new Set(), outlineUnits = new Map() }) {
   const problems = schemaProblems(plan).map((m) => problem('schema', 'course-plan.json', m));
   if (problems.length) return { problems, report: null };
 
@@ -108,6 +128,23 @@ export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, tau
   for (const unit of plan.units) {
     const guides = unit.modules.filter((m) => m.kind === 'guide').length;
     if (guides > limits.guides) problems.push(problem('guides_over', unit.unit_key, `${guides} guides; a unit holds at most ${limits.guides}`));
+  }
+
+  // cast names: every name a cast line gives is one the graph knows (names.json), so the French can use it
+  if (names) {
+    for (const unit of plan.units) {
+      for (const line of unit.setting?.cast ?? []) {
+        for (const n of castNames(line)) if (!names.has(foldName(n))) problems.push(problem('cast_name_unknown', unit.unit_key, `${n} is in the cast but not in names.json`));
+      }
+    }
+  }
+  // outline fields: a unit with a written module needs them in course.json, from the plan's outline or written there
+  for (const unit of plan.units) {
+    if (!writtenUnits.has(unit.unit_key)) continue;
+    const have = new Set(Object.keys(outlineUnits.get(unit.unit_key) ?? {}).filter((k) => OUTLINE_FIELDS.includes(k)));
+    if (unit.outline) for (const k of ['description', 'can_do_short', 'can_do_example_fr', 'can_do']) if (k === 'can_do' || unit.outline[k]) have.add(k);
+    const missing = OUTLINE_FIELDS.filter((k) => !have.has(k));
+    if (missing.length) problems.push(problem('unit_outline_missing', unit.unit_key, `a module of this unit is written, so course.json needs ${missing.join(', ')}: put them in the unit's outline in the plan`));
   }
 
   // words to add

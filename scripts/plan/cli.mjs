@@ -17,7 +17,7 @@ import { checkPlan } from './check.mjs';
 import { levelsReached, planContext } from './context.mjs';
 import { frequencyDir, frequencyTrend, readRanks } from './frequency.mjs';
 import { readLimits } from './limits.mjs';
-import { PLAN_FILE, PlanError, REPO_ROOT, planModules, readMethod, readPlan, readReadingTypes } from './plan.mjs';
+import { PLAN_FILE, PlanError, REPO_ROOT, planModules, planPaths, readMethod, readPlan, readReadingTypes } from './plan.mjs';
 
 const USAGE = [
   'usage: node scripts/plan/cli.mjs check <lang> [--against <git ref>]',
@@ -67,6 +67,10 @@ export async function loadChecked({ repoRoot = REPO_ROOT, lang, previous = null 
     taughtAt: base.timeline.taughtAt,
     isAvailable: (id, at) => projected.timeline.isAvailable(id, at),
     reached: levelsReached(projected),
+    // every cast name is one the graph knows, and a unit with a written module has its outline lines
+    names: base.graph.names,
+    writtenUnits: new Set(base.course.map((m) => m.unitKey)),
+    outlineUnits: new Map((base.content?.units ?? []).map((u) => [u.unit_key, u])),
   });
   return { plan, method, readingTypes, limits, context, ...result };
 }
@@ -164,7 +168,13 @@ async function main(argv) {
     const target = args.shift();
     if (!target || args.length) throw new PlanError(USAGE);
     const { briefsFor } = await import('./brief.mjs');
-    const briefs = briefsFor({ ...checked, lang, repoRoot: REPO_ROOT, target });
+    // The checker's own context over the content as it stands (stubs included), the one graph:due reads, so a brief
+    // lists the same words due for reuse as graph:due.
+    const { loadCourse } = await import('../content/load.mjs');
+    const { runCheck } = await import('../graph/check.mjs');
+    const paths = planPaths(REPO_ROOT, lang);
+    const live = (await runCheck({ repoRoot: REPO_ROOT, lang, content: loadCourse({ root: paths.content, graphDir: paths.graphLang }) })).ctx;
+    const briefs = briefsFor({ ...checked, context: { ...checked.context, live }, lang, repoRoot: REPO_ROOT, target });
     const dir = resolve(out ?? join(outDir(REPO_ROOT, lang), 'briefs'));
     for (const b of briefs) writeOut(join(dir, b.file), b.text);
     return 0;

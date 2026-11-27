@@ -205,3 +205,39 @@ test('an excluded headword is dropped before ranking, so the noun spelled like i
   assert.ok(!words.some((id) => id.startsWith('fr:lex:etre') || id.startsWith('fr:form:etre')), words.join(' '));
   assert.ok(words.includes('fr:lex:il'));
 });
+
+test("a vocabulary card's part of speech picks its reading: the noun le marché is not also a form of marcher", () => {
+  const r = (via, id, pos) => ({ nodeId: id, headwordId: id.startsWith('fr:form:') ? 'fr:lex:marcher' : id, cell: 'c', via, paradigmId: null, pos });
+  const fake = new Map([['marche', [r('lemma', 'fr:lex:marche', 'noun'), r('lemma', 'fr:form:marcher.ptcp', 'verb')]]]);
+  const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['marché'], vocabPos: ['noun'] })];
+  const { courseMap } = extractTeaches(graph, course, fake);
+  assert.deepEqual(courseMap.a.teachesWords, ['fr:lex:marche']);
+});
+
+test('a conjugation table teaches the forms it shows, not the words around them', () => {
+  const course = [makeModule({ position: 1, moduleKey: 'a', vocab: [], tableForms: ['je vais', 'nous parlons'] })];
+  const { courseMap } = extractTeaches(graph, course, index);
+  const words = courseMap.a.teachesWords;
+  for (const id of ['fr:form:aller.prs.1sg', 'fr:form:parler.prs.1pl']) assert.ok(words.includes(id), id);
+  for (const id of ['fr:lex:je', 'fr:lex:aller', 'fr:lex:parler']) assert.ok(!words.includes(id), id);
+});
+
+test('after an article, a vocabulary entry reads its noun: la neige teaches neige, not a form of neiger', () => {
+  const r = (via, id, pos, head) => ({ nodeId: id, headwordId: head ?? id, cell: 'c', via, paradigmId: null, pos });
+  const fake = new Map([
+    ['la', [r('lemma', 'fr:lex:la', 'article')]],
+    ['neige', [r('lemma', 'fr:lex:neige', 'noun'), r('generated', 'fr:form:neiger.prs.3sg', 'verb', 'fr:lex:neiger')]],
+  ]);
+  const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['la neige'] }), makeModule({ position: 2, moduleKey: 'b', vocab: ['neige'] })];
+  const { courseMap } = extractTeaches(graph, course, fake);
+  assert.deepEqual(courseMap.a.teachesWords.sort(), ['fr:lex:la', 'fr:lex:neige']);
+  assert.ok(courseMap.b.teachesWords.includes('fr:form:neiger.prs.3sg'), 'alone, the best-ranked reading still wins');
+});
+
+test('a vocabulary entry teaches a headword of several words when it holds them all: du coup', () => {
+  const g = { ...graph, headwords: [...graph.headwords, { id: 'fr:lex:en-fait', lemma: 'en fait', pos: 'adverb' }] };
+  const course = [makeModule({ position: 1, moduleKey: 'a', vocab: ['En fait, je ne sais pas'] }), makeModule({ position: 2, moduleKey: 'b', vocab: ['je fais'] })];
+  const { courseMap } = extractTeaches(g, course, index);
+  assert.ok(courseMap.a.teachesWords.includes('fr:lex:en-fait'));
+  assert.ok(!(courseMap.b?.teachesWords ?? []).includes('fr:lex:en-fait'));
+});

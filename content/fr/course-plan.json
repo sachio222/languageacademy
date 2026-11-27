@@ -13,6 +13,11 @@
       "unit_key": "unit13",
       "title": "Joining sentences",
       "can_do": "You can show a newcomer round your neighbourhood: who lives where, when places open, what you like there, and what you will do if it rains.",
+      "outline": {
+        "description": "Join your sentences: say who and what you mean with qui, que, où and dont, plan around the weather with si, and talk the way French teenagers really talk.",
+        "can_do_short": "show a newcomer round",
+        "can_do_example_fr": "La boulangerie où je vais ouvre à sept heures. S'il pleut, on va à la bibliothèque."
+      },
       "setting": {
         "cast": [
           "Léa, 15, the narrator, who turns 16 at the end of the unit; lives on the third floor of a building in the Croix-Rousse, a hillside neighbourhood of Lyon",

@@ -4907,7 +4907,52 @@
         "surface": "ce"
       },
       {
-        "surface": "qui|que|qu'|dont"
+        "surface": "dont"
+      },
+      {
+        "surface": ".+"
+      },
+      {
+        "skip": 7,
+        "surface": "c'|ce"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "surface": "est|etait|sera|serait|sont|seront"
+      }
+    ],
+    "examples": {
+      "match": [
+        "Ce dont je rêve, c'est d'une maison au bord de la mer.",
+        "Ce dont j'ai besoin, c'est de dormir."
+      ],
+      "noMatch": [
+        "Ce que je pense, c'est que tu as raison.",
+        "Dis-moi ce dont tu as besoin.",
+        "C'est ce dont je parle."
+      ]
+    },
+    "id": "fr:cx:mise-en-relief.ce-dont-cest",
+    "label": "Mise en relief with ce dont … c'est: the idea first, then what it is (ce dont je rêve, c'est d'une maison au bord de la mer); ce starts the sentence",
+    "needs": [
+      "fr:cx:relative.ce-dont",
+      "fr:cx:mise-en-relief.ce-qui-cest"
+    ]
+  },
+  {
+    "cefr": "B2",
+    "cefrSource": "agent: Eaquals grammar",
+    "contrastsWith": [],
+    "detect": [
+      {
+        "start": true,
+        "surface": "ce"
+      },
+      {
+        "surface": "qui|que|qu'"
       },
       {
         "surface": ".+"
@@ -4928,7 +4973,7 @@
       "match": [
         "Ce qui compte, c'est la santé.",
         "Ce que je pense, c'est que tu as raison.",
-        "Ce dont je rêve, c'est d'une maison au bord de la mer."
+        "Ce que j'aime surtout, c'est le marché."
       ],
       "noMatch": [
         "Je fais ce que je veux.",
@@ -4936,15 +4981,14 @@
         "Ce qui est sur la table est à moi.",
         "Je ne sais pas ce que c'est.",
         "Je ne comprends pas ce qui se passe, c'est bizarre.",
-        "Dis-moi ce que tu veux. C'est important."
+        "Dis-moi ce que tu veux. C'est important.",
+        "Ce dont je rêve, c'est d'une maison au bord de la mer."
       ]
     },
     "id": "fr:cx:mise-en-relief.ce-qui-cest",
-    "label": "Mise en relief with ce qui, ce que or ce dont … c'est: the idea first, then what it is (ce qui compte, c'est la santé; ce que je pense, c'est que tu as raison; ce dont je rêve, c'est d'une maison au bord de la mer); ce starts the sentence",
+    "label": "Mise en relief with ce qui or ce que … c'est: the idea first, then what it is (ce qui compte, c'est la santé; ce que je pense, c'est que tu as raison); ce starts the sentence",
     "needs": [
-      "fr:cx:mise-en-relief",
-      "fr:cx:relative.ce-que",
-      "fr:cx:relative.ce-dont"
+      "fr:cx:relative.ce-que"
     ]
   },
   {

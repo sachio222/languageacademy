@@ -113,7 +113,11 @@ function briefText({ plan, unit, module, context, limits, lang, repoRoot, word }
     if (!byUnit.has(key)) byUnit.set(key, []);
     byUnit.get(key).push(lookups.headwords.get(id).lemma);
   }
-  const due = dueFor(projected, module.module_key)?.due ?? [];
+  // Words due for reuse, as the checker computes them (graph:due, context.live) when every module before this one in
+  // the course is written, so the brief and the checker agree; otherwise from the plan counted as written.
+  const lastWritten = Math.max(0, ...(context.base?.course ?? []).map((m) => m.position));
+  const checkerKnows = context.live && at === lastWritten + 1;
+  const due = (checkerKnows ? dueFor(context.live, module.module_key) : dueFor(projected, module.module_key))?.due ?? [];
   const dueWords = due.filter((d) => lookups.headwords.has(d.nodeId)).map((d) => lookups.headwords.get(d.nodeId).lemma);
   const duePatterns = due.filter((d) => lookups.constructions.has(d.nodeId)).map((d) => `\`${d.nodeId}\``);
   section('What the learner knows by now', [
@@ -125,7 +129,11 @@ function briefText({ plan, unit, module, context, limits, lang, repoRoot, word }
     ...[...byUnit].map(([key, lemmas]) => `- ${key}: ${lemmas.join(', ')}`),
   ]);
 
-  section('Rules of every module', [template('house')]);
+  section('Rules of every module', [
+    template('house'),
+    `- **Check as you go.** \`pnpm graph:check ${module.module_key}\` lists this module's findings in full; \`pnpm graph:due ${module.module_key}\` gives the current words due for reuse, which change as other modules are written.`,
+    `- **Your own scratch folder.** Writers work side by side and share one scratch directory: keep every scratch file in a folder named \`${module.module_key}/\` inside it, never at its top.`,
+  ]);
   const notes = join(planPaths(repoRoot, lang).content, 'writing-notes.md');
   if (existsSync(notes)) out.push(readFileSync(notes, 'utf8').trim().replace(/^# /, '## ').replace(/^## (?!Writing)/gm, '### '), '');
   const body = out.join('\n').replace(/\n{3,}/g, '\n\n');

@@ -3,6 +3,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from './load.mjs';
 import { tokenize } from './fr/tokenize.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict } from './fr/forms.mjs';
+import { fold } from './fold.mjs';
 
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
 // A reading teaches the words of its own vocabulary table, at its own position (Jake's ruling, spec 5.7).
@@ -14,12 +15,24 @@ const TEACHING_KINDS = new Set(['lesson', 'help', 'reading']);
 // exclude: IDs the module does not teach (its excludeWords). A reading of an excluded headword is dropped before the
 // best kind is chosen, so "la cuisine" with fr:lex:cuisiner excluded credits the noun cuisine, not a form of
 // cuisiner. An excluded form ID is only left out of the result (extractTeaches), so its headword still counts.
-export function entryReadings(text, index, isWord, exclude = null) {
+// pos: the entry's part_of_speech when the card names one. Among a token's readings, those of that part of speech win
+// when there are any, so the noun card "le marché" reads as marché, never as a form of marcher; the other tokens of
+// the entry ("le") keep their readings.
+// After an article or determiner, a token that can be a noun is read as the noun: "la neige" is the noun neige, never
+// a form of neiger, whatever the rank of the form.
+const DETERMINER_POS = new Set(['article', 'determiner']);
+
+export function entryReadings(text, index, isWord, exclude = null, pos = null) {
+  let afterDeterminer = false;
   return tokenize(text, { isWord }).map((token) => {
     const keep = (rs) => (exclude ? rs.filter((r) => !exclude.has(r.headwordId)) : rs);
     let readings = keep(lookupTokenStrict(index, token));
     if (!readings.length) readings = keep(lookupToken(index, token));
+    const wasAfter = afterDeterminer;
+    afterDeterminer = readings.some((r) => DETERMINER_POS.has(r.pos));
     if (!readings.length) return { token, readings };
+    const want = pos ?? (wasAfter ? 'noun' : null);
+    if (want && readings.some((r) => r.pos === want) && readings.some((r) => r.pos !== want)) readings = readings.filter((r) => r.pos === want);
     const best = Math.min(...readings.map((r) => RANK[r.via]));
     return { token, readings: readings.filter((x) => RANK[x.via] === best) };
   });
@@ -28,8 +41,22 @@ export function entryReadings(text, index, isWord, exclude = null) {
 // Words each lesson, help module or reading teaches, read from its vocabulary table.
 // excludeWords lists over-taught homograph IDs to drop from the result.
 // Only teachesWords is rewritten; every other course-map field is kept.
+// Headwords of several words that work as one word, which the tokenizer reads word by word (en fait, du coup, tandis
+// que), as [id, folded words with spaces between]. A reflexive verb (se souvenir) is read whole already; a compound
+// noun (pomme de terre) is taught and used through its head noun, as before; a phrase the graph also holds as a
+// fixed-phrase pattern (chunk.en-fait) is taught and reused as that pattern, so it is not counted twice.
+export function multiWordHeadwords(graph) {
+  const chunks = new Set((graph.constructions ?? []).map((c) => c.id));
+  return (graph.headwords ?? [])
+    .filter((h) => / /.test(h.lemma) && !/^se /.test(h.lemma) && h.pos !== 'noun')
+    .filter((h) => !chunks.has(h.id.replace(':lex:', ':cx:chunk.')))
+    .map((h) => [h.id, fold(h.lemma).split(/\s+/).join(' ')]);
+}
+export const wordsOf = (text) => ` ${fold(text).replace(/[^\p{L}\p{N}'-]+/gu, ' ').trim()} `;
+
 export function extractTeaches(graph, course, index) {
   const isWord = (f) => index.has(f);
+  const multi = multiWordHeadwords(graph);
   const courseMap = { ...(graph.courseMap ?? {}) };
   const unknown = [];
   for (const mod of course) {
@@ -37,8 +64,8 @@ export function extractTeaches(graph, course, index) {
     const ids = new Set();
     const missing = new Set();
     const exclude = new Set(courseMap[mod.moduleKey]?.excludeWords ?? []);
-    for (const text of mod.vocab ?? []) {
-      for (const { token, readings } of entryReadings(text, index, isWord, exclude)) {
+    (mod.vocab ?? []).forEach((text, i) => {
+      for (const { token, readings } of entryReadings(text, index, isWord, exclude, mod.vocabPos?.[i] ?? null)) {
         if (!readings.length) {
           // a token whose only readings are excluded is known, so it is not reported
           if (!graph.names?.has(token.fold) && !lookupToken(index, token).length) missing.add(token.surface);
@@ -48,6 +75,18 @@ export function extractTeaches(graph, course, index) {
           ids.add(r.headwordId);
           if (r.via !== 'lemma') ids.add(r.nodeId);
         }
+      }
+    });
+    // A headword of several words is taught where an entry holds its words in order (the card "en fait").
+    for (const text of mod.vocab ?? []) {
+      const words = wordsOf(text);
+      for (const [id, lemma] of multi) if (words.includes(` ${lemma} `) && !exclude.has(id)) ids.add(id);
+    }
+    // A lesson's conjugation table teaches the forms it shows (the recipe: "its forms need no cards"), never the
+    // headwords or the pronouns around them, which are taught where their cards are.
+    for (const text of mod.tableForms ?? []) {
+      for (const { readings } of entryReadings(text, index, isWord, exclude)) {
+        for (const r of readings) if (r.via !== 'lemma') ids.add(r.nodeId);
       }
     }
     for (const surface of missing) unknown.push({ moduleKey: mod.moduleKey, surface });

@@ -522,3 +522,11 @@ test('a recognition-only word warns where the learner must type it, never where 
   const ignored = { ...graph, courseMap: { m1: { overrides: { 'm1#1': { ignore: ['fr:lex:cafe'] } } } } };
   assert.deepEqual(ruleTaughtBefore(makeCtx({ graph: ignored, course: [mod(1, [item(['Je parle au café.'])])] })).filter((i) => i.rule === 'recognize-typed'), []);
 });
+
+test('a name spelled like a word excuses only the capitalised name: Claire, not claire', () => {
+  const course = [mod(1, [item('Je parle à Café.'), item('je parle au café')]), mod(5, [item('café')])];
+  const ctx = setup({ m1: { teachesWords: ['fr:lex:je', 'fr:lex:parler'], teachesConstructions: ['fr:cx:verb.er.present'] }, m5: { teachesWords: ['fr:lex:cafe'] } },
+    course, { names: new Set([...base.names, 'cafe']) });
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-word' && /caf/i.test(i.surface ?? ''));
+  assert.deepEqual(hits.map((h) => h.surface), ['café']);
+});

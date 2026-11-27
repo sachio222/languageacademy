@@ -51,6 +51,16 @@ export function planToStubs(plan, { graphIds, written = new Set() }) {
   return { stubs, pending };
 }
 
+// A plan unit's outline fields for course.json: description, can_do_short and can_do_example_fr as the plan writes
+// them, and can_do from the unit's can_do ("You can show a newcomer round." -> "show a newcomer round"). Only when the
+// plan holds an outline.
+export function outlineFields(unit) {
+  if (!unit.outline) return {};
+  const canDo = String(unit.can_do ?? '').replace(/^you can\s+/i, '').replace(/[.\s]+$/, '');
+  return { ...unit.outline.description && { description: unit.outline.description }, ...canDo && { can_do: canDo },
+    ...unit.outline.can_do_short && { can_do_short: unit.outline.can_do_short }, ...unit.outline.can_do_example_fr && { can_do_example_fr: unit.outline.can_do_example_fr } };
+}
+
 export function planOutline(outline, plan, { stale = new Set(), writtenIn = () => false } = {}) {
   const planKeys = new Set(plan.units.flatMap((u) => u.modules.map((m) => m.module_key)));
   const planUnits = new Set(plan.units.map((u) => u.unit_key));
@@ -61,7 +71,12 @@ export function planOutline(outline, plan, { stale = new Set(), writtenIn = () =
   const planned = plan.units.map((pu) => {
     const unit = have.get(pu.unit_key) ?? { unit_key: pu.unit_key, name: pu.title, entries: [] };
     if (!unit.entries.some(writtenIn)) unit.name = pu.title;
+    Object.assign(unit, outlineFields(pu));
     unit.entries = [...unit.entries, ...pu.modules.map((m) => m.module_key)];
+    // entries stay last, as in the rest of the outline
+    const { entries } = unit;
+    delete unit.entries;
+    unit.entries = entries;
     return unit;
   });
   out.units = [...out.units.filter((u) => !planUnits.has(u.unit_key)), ...planned].filter((u) => u.entries.length > 0);

@@ -16602,6 +16602,12 @@
     "surface": "longues"
   },
   {
+    "cell": "abbr",
+    "id": "fr:form:madame.abbr",
+    "of": "fr:lex:madame",
+    "surface": "Mme"
+  },
+  {
     "cell": "pl",
     "id": "fr:form:madame.pl",
     "of": "fr:lex:madame",
@@ -17704,6 +17710,12 @@
     "id": "fr:form:neiger.impf.3sg",
     "of": "fr:lex:neiger",
     "surface": "neigeait"
+  },
+  {
+    "cell": "prs.1pl",
+    "id": "fr:form:neiger.prs.1pl",
+    "of": "fr:lex:neiger",
+    "surface": "neigeons"
   },
   {
     "cell": "prsptcp",

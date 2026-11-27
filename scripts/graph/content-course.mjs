@@ -91,6 +91,7 @@ export function blockCellRole(path) {
 
 // A lesson's review row (review: true) shows a word taught earlier and teaches nothing (design §1, §17 item 11).
 const isReview = (v) => v?.review === true;
+const teachingRows = (mod) => (mod.vocabulary ?? []).filter((v) => !isReview(v) && typeof v.fr === 'string');
 
 // Where a module text sits, as an item source. null: not read as an item (the vocabulary word itself is what the
 // module teaches; glossary rows and glosses are pop-up sources; info cards are native text outside the rule; a check's sound is a
@@ -225,7 +226,11 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         kind: KIND[mod.kind] ?? mod.kind,
         guide: mod.kind === 'guide',
         // The words the module's table teaches: review rows teach nothing, so extractTeaches never credits them.
-        vocab: (mod.vocabulary ?? []).filter((v) => !isReview(v)).map((v) => v.fr).filter((f) => typeof f === 'string'),
+        vocab: teachingRows(mod).map((v) => v.fr),
+        // Each vocab entry's part_of_speech (or null), in step with vocab.
+        vocabPos: teachingRows(mod).map((v) => v.part_of_speech ?? null),
+        // The French of a lesson's conjugation tables: the forms they show count as taught (extract-teaches.mjs).
+        tableForms: mod.kind === 'lesson' ? (mod.tables ?? []).flatMap((t) => (t.rows ?? []).map((r) => r.fr)).filter((f) => typeof f === 'string') : [],
         conceptTerms: (mod.concepts ?? []).map((c) => plain(c.term)).filter(Boolean),
         items,
         shapes,

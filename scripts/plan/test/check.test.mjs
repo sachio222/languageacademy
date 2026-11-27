@@ -150,3 +150,24 @@ test('the report counts where each reading type is used', () => {
   const { report } = run(plan);
   assert.deepEqual(report.reading_types, { 'a-mystery': ['u1', 'u2'] });
 });
+
+test('every name in a unit cast is a name the graph knows', () => {
+  const withCast = (cast) => planOf([{ ...unit('u1', [lesson('l1', ['xx:lex:a'])]), setting: { cast } }]);
+  const names = new Set(['lea', 'garnier']);
+  const runNames = (plan) => checkPlan({ plan, readingTypes: READING_TYPES, limits: LIMITS, lookups: LOOKUPS, taughtAt: new Map(), isAvailable: () => true, position: new Map([['l1', 101]]), names });
+  assert.deepEqual(codes(runNames(withCast(['Léa, 15, the narrator', 'Mme Garnier (79), a retired teacher', 'their mother (maman), a nurse']))), []);
+  const r = runNames(withCast(['Léa, 15', 'Hugo Martin (16), her friend', 'a Japanese student on the third floor']));
+  assert.deepEqual(r.problems.filter((p) => p.code === 'cast_name_unknown').map((p) => p.message.split(' ')[0]), ['Hugo', 'Martin']);
+});
+
+test('a unit with a written module needs its outline fields, from the plan or the course outline', () => {
+  const plan = planOf([unit('u1', [lesson('l1', ['xx:lex:a'])])]);
+  const base = { plan, readingTypes: READING_TYPES, limits: LIMITS, lookups: LOOKUPS, taughtAt: new Map(), isAvailable: () => true, position: new Map([['l1', 101]]) };
+  assert.deepEqual(codes(checkPlan({ ...base, writtenUnits: new Set(['u1']), outlineUnits: new Map() })), ['unit_outline_missing']);
+  const fields = { description: 'd', can_do: 'c', can_do_short: 's', can_do_example_fr: 'f' };
+  assert.deepEqual(codes(checkPlan({ ...base, writtenUnits: new Set(['u1']), outlineUnits: new Map([['u1', fields]]) })), []);
+  const planned = planOf([{ ...unit('u1', [lesson('l1', ['xx:lex:a'])]), outline: { description: 'd', can_do_short: 's', can_do_example_fr: 'f' } }]);
+  assert.deepEqual(schemaProblems(planned), []);
+  assert.deepEqual(codes(checkPlan({ ...base, plan: planned, writtenUnits: new Set(['u1']), outlineUnits: new Map() })), []);
+  assert.deepEqual(codes(checkPlan({ ...base, writtenUnits: new Set(), outlineUnits: new Map() })), [], 'an unwritten unit is not flagged yet');
+});

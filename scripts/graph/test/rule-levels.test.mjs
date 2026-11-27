@@ -558,3 +558,10 @@ test('level-order follows settings.levelOrder: words and patterns each have thei
   assert.deepEqual(ctx({ words: 1, patterns: 3 }), [['fr:lex:manger']]);
   assert.deepEqual(ctx({ words: 2, patterns: 3 }), []);
 });
+
+test('levelOrder "off": a course taught by its own method gets no level-order finding; taught before used is the only order', () => {
+  const order = (levelOrder) => ruleLevels(ctxOf({ settings: { ...base.settings, levelThreshold: 0.75, levelOrder } }, COURSE, COURSE_MAP))
+    .filter((i) => i.rule === 'level-order');
+  assert.ok(order({ words: 1, patterns: 1 }).length > 0);
+  assert.deepEqual(order('off'), []);
+});

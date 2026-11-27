@@ -1,6 +1,6 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { runCheck } from './check.mjs';
 import { renderFixList, summarize, checkSummaryLines } from './report.mjs';
 import { dueFor } from './rules/reuse.mjs';
@@ -12,7 +12,21 @@ import { readBudget, writeBudget, checkBudgetParts, loweredParts, BUDGET_PARTS }
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
-const USAGE = 'usage: cli.mjs <check|due|report> <lang> [arg] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
+const USAGE = 'usage: cli.mjs <check|due|report> <lang> [module_key] [--module <key>] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
+
+// A planned stub standing in for a module file that does not load: its key from the file name, its kind and title
+// from the file when they can be read; null when even its kind cannot be read.
+function stubFor(root, file) {
+  const name = file.split('/').pop();
+  const key = name.replace(/\.json$/, '');
+  let json = null;
+  try { json = JSON.parse(readFileSync(join(root, 'modules', name), 'utf8')); } catch { return null; }
+  if (typeof json?.kind !== 'string') return null;
+  return JSON.stringify({
+    schema: 'la-module@1', module_key: key, kind: json.kind, status: 'planned', title: typeof json.title === 'string' ? json.title : key,
+    plan: { words: [], constructions: [], source: 'course-plan.json' },
+  });
+}
 const BUDGET_FILE = join(repoRoot, 'curriculum-graph/reports/issue-budget.json');
 
 async function main() {
@@ -51,23 +65,67 @@ async function main() {
     console.error(USAGE);
     process.exit(2);
   }
-  // Content that does not load is listed as content:validate lists it: each problem, then a count by code.
+  // --module <key> (or the key as the third argument): check prints that module's findings in full.
+  let only = null;
+  const mflag = args.indexOf('--module');
+  if (mflag >= 0) {
+    only = args[mflag + 1];
+    if (!only || only.startsWith('--')) { console.error(USAGE); process.exit(2); }
+    args.splice(mflag, 2);
+  }
+  // Content that does not load is listed as content:validate lists it: each problem, then a count by code. A module
+  // file that does not load is read as a planned stub, so one module mid-edit never stops the check of the rest; the
+  // run still fails. A problem in course.json stops it.
+  const root = contentDir ?? join(repoRoot, 'content', lang);
+  const graphDir = join(repoRoot, 'curriculum-graph', 'languages', lang);
   let content;
-  try {
-    content = loadCourse({ root: contentDir ?? join(repoRoot, 'content', lang), graphDir: join(repoRoot, 'curriculum-graph', 'languages', lang) });
-  } catch (e) {
-    if (!(e instanceof ContentError)) throw e;
-    for (const p of e.problems) console.error(problemLine(p));
-    console.error(`${plural(e.problems.length, 'problem')}: ${countByCode(e.problems)}`);
-    console.error('the checker reads only content that loads: fix these first (pnpm content:validate lists them with its warnings)');
-    process.exit(1);
+  let loadFailed = false;
+  const replace = new Map();
+  for (let attempt = 0; ; attempt++) {
+    try {
+      content = loadCourse({ root, graphDir, replace });
+      break;
+    } catch (e) {
+      if (!(e instanceof ContentError)) throw e;
+      for (const p of e.problems) console.error(problemLine(p));
+      console.error(`${plural(e.problems.length, 'problem')}: ${countByCode(e.problems)}`);
+      const bad = [...new Set(e.problems.map((p) => p.file))];
+      const fixable = attempt < 3 && bad.every((f) => /(^|\/)modules\/[^/]+\.json$/.test(f) && !replace.has(f));
+      const stubs = fixable ? bad.map((f) => [f, stubFor(root, f)]) : null;
+      if (!stubs || stubs.some(([, t]) => t === null)) {
+        console.error('the checker reads only content that loads: fix these first (pnpm content:validate lists them with its warnings)');
+        process.exit(1);
+      }
+      for (const [f, t] of stubs) {
+        replace.set(f, t);
+        console.error(`skipped ${f.split('/').pop().replace(/\.json$/, '')}: it does not load, so it is read as a planned stub (pnpm content:validate lists why)`);
+      }
+      loadFailed = true;
+    }
   }
   const { ctx, issues, stats } = await runCheck({ repoRoot, lang, native, content });
   const summary = summarize(issues, stats);
 
+  if (cmd === 'check' && (only || arg)) {
+    const key = only || arg;
+    if (!ctx.course.some((m) => m.moduleKey === key) && !content.units?.some((u) => u.modules.some((m) => m.module_key === key))) {
+      console.error(`no module matches "${key}"`);
+      process.exit(2);
+    }
+    const mine = issues.filter((i) => i.moduleKey === key || i.budgetModuleKey === key);
+    console.log(`${key}: ${plural(mine.length, 'finding')}`);
+    for (const i of mine) {
+      const what = i.nodeId ?? i.surface ?? '';
+      const where = i.itemRef ? ` [${i.itemRef}]` : '';
+      console.log(`${i.severity} ${i.rule}${what ? ' ' + what : ''}${where}: ${i.message ?? ''}`);
+    }
+    process.exit(loadFailed || mine.some((i) => i.severity === 'error') ? 1 : 0);
+  }
+
   if (cmd === 'check') {
     for (const line of checkSummaryLines(summary)) console.log(line);
-    if (!budget) process.exit(summary.errors > 0 ? 1 : 0);
+    if (!budget) process.exit(loadFailed || summary.errors > 0 ? 1 : 0);
+    if (loadFailed) { console.log('budget: not checked, a module did not load'); process.exit(1); }
     const limits = readBudget(BUDGET_FILE);
     const unitOf = (key) => ctx.content?.modules?.get(key)?.unit_key ?? null;
     const parts = checkBudgetParts(issues, unitOf, limits);

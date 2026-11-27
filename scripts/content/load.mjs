@@ -44,8 +44,12 @@ export function graphIds(dir = GRAPH_LANG_DIR) {
 
 // graphDir: the graph language folder whose ids teaches and tests are checked against; null checks only their shape.
 // planned: false loads the written course only (assemble.mjs withoutPlanned), for checks of what the stubs hide.
-export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer, graphDir = GRAPH_LANG_DIR, planned = true } = {}) {
-  const { outlineFile, outlineText, files } = readContent(root);
+// replace: module file (repo-relative, as problems name it) -> text to read in its place, so a checker can stand a
+// module that does not load in for a planned stub and still read the rest of the course.
+export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer, graphDir = GRAPH_LANG_DIR, planned = true, replace = null } = {}) {
+  const read = readContent(root);
+  const { outlineFile, outlineText } = read;
+  const files = replace ? read.files.map((f) => (replace.has(f.file) ? { ...f, text: replace.get(f.file) } : f)) : read.files;
   if (outlineText === null) throw new ContentError([problem(outlineFile, '', 'file_missing', 'course.json does not exist')]);
   let outline;
   try {

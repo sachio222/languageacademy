@@ -49,3 +49,24 @@ test('graph:check --content checks the given folder, and graph:due names what a 
   assert.match(due.stdout, /^\d+ more closed before position \d+, so no use here meets them/m);
   assert.equal(run('due', 'fr', 'no-such-module', '--content', root).status, 2);
 });
+
+test('graph:check skips a module that does not load, names it, and still checks the rest', (t) => {
+  const root = copy(t);
+  const file = join(root, 'modules', '2024-01-02-etre.json');
+  const mod = JSON.parse(readFileSync(file, 'utf8'));
+  delete mod.items[0].answer;
+  writeFileSync(file, JSON.stringify(mod, null, 2) + '\n');
+  const r = run('check', 'fr', '--content', root);
+  assert.equal(r.status, 1, 'a module that does not load still fails the run');
+  assert.match(r.stderr, /skipped 2024-01-02-etre: it does not load/);
+  assert.match(r.stdout, /^reuse-missed: \d+$/m, 'the other modules are checked');
+});
+
+test('graph:check <module_key> prints that module findings in full', (t) => {
+  const root = copy(t);
+  const r = run('check', 'fr', '2024-01-02-etre', '--content', root);
+  assert.match(r.stdout, /^2024-01-02-etre: \d+ findings?$/m, r.stdout.slice(0, 400) + r.stderr.slice(0, 400));
+  const lines = r.stdout.split('\n').filter((l) => /^(error|warning) /.test(l));
+  for (const l of lines) assert.match(l, /^(error|warning) [a-z_-]+ .+/);
+  assert.equal(run('check', 'fr', '--module', 'no-such-module', '--content', root).status, 2);
+});

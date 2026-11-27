@@ -8,7 +8,6 @@
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:garer"},
   {"cells": ["prsptcp"], "id": "fr:lex:interesser"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:marier"},
-  {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:neiger"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:occuper"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:placer"},
   {"cells": ["prs", "ptcp", "sbjv"], "id": "fr:lex:planter"},

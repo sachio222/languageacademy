@@ -180,8 +180,9 @@ const MORE_VERBS = {
 };
 
 // The -er verbs whose present is spelled like a noun, adjective or name already in the graph (la porte, la garde,
-// Marie). Their forms stay out of the graph (reading-limits.json) until the checker can tell the two apart.
-const READING_LIMITED = new Set(['adresser', 'causer', 'durer', 'fêter', 'garder', 'garer', 'marier', 'neiger', 'occuper',
+// Marie). Their forms stay out of the graph (reading-limits.json) until the checker can tell the two apart. neiger
+// left the list: it is impersonal (il neige), and a vocabulary entry reads the noun after an article (la neige).
+const READING_LIMITED = new Set(['adresser', 'causer', 'durer', 'fêter', 'garder', 'garer', 'marier', 'occuper',
   'placer', 'planter', 'porter', 'prêter', 'téléphoner']);
 
 const PERSONS = [['je', '1sg'], ['tu', '2sg'], ['il', '3sg'], ['nous', '1pl'], ['vous', '2pl'], ['ils', '3pl']];
@@ -200,7 +201,7 @@ const lastReadings = (text) => {
   return lookupTokenStrict(index, tokens[tokens.length - 1]);
 };
 
-test('the plan lists 86 verbs, 14 of them reading-limited', () => {
+test('the plan lists 86 verbs, 13 of them reading-limited', () => {
   assert.equal(Object.keys(VERBS).length, 86);
   for (const lemma of READING_LIMITED) {
     assert.ok(VERBS[lemma], lemma);

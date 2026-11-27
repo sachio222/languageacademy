@@ -39,7 +39,9 @@ for (const lang of languages) {
   test(`${lang}: the report counts each planned word once`, () => {
     const words = planModules(plan).flatMap(({ module }) => module.teaches.words);
     assert.equal(new Set(words).size, words.length);
-    assert.equal(report.words, words.length);
+    // A written module is done and leaves the report: it counts the words the plan's open modules teach.
+    const open = planModules(plan).filter(({ module }) => !context.written.has(module.module_key)).flatMap(({ module }) => module.teaches.words);
+    assert.equal(report.words, open.length);
   });
 
   test(`${lang}: the readable plan names every unit and module`, () => {
@@ -59,18 +61,20 @@ for (const lang of languages) {
   });
 
   test(`${lang}: a unit's briefs hold one file a module, the same on every run`, () => {
-    const unit = plan.units[0];
+    // The first unit with modules left to write: a written module gets no brief.
+    const unit = plan.units.find((u) => u.modules.filter((m) => !context.written.has(m.module_key)).length >= 2);
+    const modules = unit.modules.filter((m) => !context.written.has(m.module_key));
     const make = () => briefsFor({ ...checked, lang, repoRoot: REPO_ROOT, target: unit.unit_key });
     const briefs = make();
-    assert.deepEqual(briefs.map((b) => b.module_key), unit.modules.map((m) => m.module_key));
+    assert.deepEqual(briefs.map((b) => b.module_key), modules.map((m) => m.module_key));
     assert.deepEqual(briefs.map((b) => b.text), make().map((b) => b.text));
     for (const [i, b] of briefs.entries()) {
-      const m = unit.modules[i];
+      const m = modules[i];
       for (const heading of ['## What to write', '## This module', '## The unit', '## Sizes', '## What the learner knows by now', '## Rules of every module']) assert.ok(b.text.includes(heading), `${m.module_key}: ${heading}`);
       if (m.goal) assert.ok(b.text.includes(m.goal), `${m.module_key}: its goal`);
       assert.ok(templatesFor(m).length > 0);
     }
-    const one = briefsFor({ ...checked, lang, repoRoot: REPO_ROOT, target: unit.modules[1].module_key });
+    const one = briefsFor({ ...checked, lang, repoRoot: REPO_ROOT, target: modules[1].module_key });
     assert.equal(one.length, 1);
     assert.equal(one[0].text, briefs[1].text);
     assert.throws(() => briefsFor({ ...checked, lang, repoRoot: REPO_ROOT, target: 'no-such-key' }), /no unit or planned module/);

@@ -1,6 +1,7 @@
 These rules hold for every module of every course.
 
-- **Only what came before.** Use only words and patterns the learner knows by now (listed below) and what this module teaches. Review is built in: reuse what the last modules taught, the words due for reuse first.
+- **A strong foundation for what comes next.** Words and patterns are taught so that every later lesson has a strong foundation to build on. Each new item is met through what the learner already owns, is chosen early for how much later material leans on it, and is soon used as support for the next new items. A module that passes the checker but teaches words in isolation still fails.
+- **Taught before used.** The check that follows from it: use only words and patterns the learner knows by now (listed below) and what this module teaches. Review is built in: reuse what the last modules taught, the words due for reuse first.
 - **Words are taught where they are first used.** A new word gets a vocabulary card in the module that first uses it, and is first met in a sentence made of known words. A form of a word already taught gets a gloss, never a second card.
 - **This module's words are its only new cards.** If the module needs a word the plan does not give it, say so in your notes and do not add the card.
 - **Real situations.** Open and close in the situation the plan names, with the unit's cast and places. Keep each character's age, look and relations as the cast list gives them.

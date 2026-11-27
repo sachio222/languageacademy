@@ -5,6 +5,13 @@ import { issue } from '../issues.mjs';
 import { languageName } from '../pairs.mjs';
 import { OUTSIDE } from '../content-course.mjs';
 
+// A token is a name when names.json holds it, and, if it is also spelled like a word (Claire and claire, Renard and
+// renard), only when it is written with a capital: the word written small still has to be taught.
+export function isName(graph, token, readings = [], key = null) {
+  if (!graph.names.has(token.fold) && !(key && graph.names.has(key))) return false;
+  return !readings?.length || /^\p{Lu}/u.test(token.surface);
+}
+
 const memo = new WeakMap();
 
 // Per item: one entry for each text in french (typed) and shown (read or heard), both strict (accent-sensitive),
@@ -70,7 +77,7 @@ function uses(ctx) {
       for (const a of analysis.get(it.ref) ?? []) {
         const typedAt = typedTest(it, a, isWord);
         a.tokens.forEach((t, i) => {
-          if (ctx.graph.names.has(t.fold)) return;
+          if (isName(ctx.graph, t, a.readings[i])) return;
           const lk = lookupKey(t);
           const rs = a.readings[i];
           if (ignore.has(lk) || ignore.has(t.fold) || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
@@ -232,7 +239,7 @@ function run(ctx) {
         const glossed = glossCover(m, it, a, typedAt, glossTokens);
         a.tokens.forEach((t, i) => {
           const lk = lookupKey(t);
-          if (graph.names.has(t.fold) || graph.names.has(lk)) return;
+          if (isName(graph, t, a.readings[i], lk)) return;
           const rs = a.readings[i];
           if (ignore.has(lk) || ignore.has(t.fold)
             || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
@@ -394,7 +401,7 @@ export function glossCandidates(ctx, kinds = ['lesson', 'reading']) {
         a.tokens.forEach((t, i) => {
           if (typedAt(i)) return;
           const lk = lookupKey(t);
-          if (graph.names.has(t.fold) || graph.names.has(lk)) return;
+          if (isName(graph, t, a.readings[i], lk)) return;
           if (/['’]$/.test(t.surface) || t.surface.startsWith('-')) return;
           const rs = a.readings[i];
           if (!rs.length || ignore.has(lk) || ignore.has(t.fold) || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;

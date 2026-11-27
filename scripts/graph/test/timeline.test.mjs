@@ -170,3 +170,17 @@ test('a reading open only through the Reference counts for a token only when the
   assert.equal(timeline.isTokenAvailable([lemma('fr:lex:parler'), lemma('fr:lex:cafe')], 2), true);
   assert.equal(timeline.isTokenAvailable([], 2), false);
 });
+
+test('a headword of several words is taught where its fixed-phrase twin is (en fait, chunk.en-fait); Mme is known with madame', async () => {
+  const { chunkTwins, buildTimeline: bt } = await import('../timeline.mjs');
+  const g = {
+    headwords: [{ id: 'fr:lex:en-fait', lemma: 'en fait', pos: 'adverb' }, { id: 'fr:lex:madame', lemma: 'madame', pos: 'noun' }],
+    constructions: [{ id: 'fr:cx:chunk.en-fait' }],
+    courseMap: { a: { teachesConstructions: ['fr:cx:chunk.en-fait'], teachesWordsManual: ['fr:lex:madame'] } },
+  };
+  assert.deepEqual(chunkTwins(g), [['fr:lex:en-fait', 'fr:cx:chunk.en-fait']]);
+  const t = bt(g, [{ position: 3, moduleKey: 'a', kind: 'lesson' }]);
+  assert.equal(t.taughtAt.get('fr:lex:en-fait'), 3);
+  assert.ok(t.isReadingAvailable({ headwordId: 'fr:lex:madame', nodeId: 'fr:form:madame.abbr', via: 'irregular', cell: 'abbr' }, 3));
+  assert.ok(!t.isReadingAvailable({ headwordId: 'fr:lex:madame', nodeId: 'fr:form:madame.abbr', via: 'irregular', cell: 'abbr' }, 2));
+});

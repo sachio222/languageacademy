@@ -23,6 +23,7 @@
   {"lemma": "calmement", "pos": "adverb", "level": "A2", "gloss": "calmly"},
   {"lemma": "caution", "pos": "noun", "gender": "f", "level": "B1", "gloss": "deposit (on a rented flat); guarantor"},
   {"lemma": "célibataire", "pos": "adjective", "level": "A2", "gloss": "single, unmarried"},
+  {"lemma": "chais", "pos": "verb", "level": "A2", "gloss": "I know (spoken je sais; chais pas: I don't know)", "register": "spoken", "use": "recognize", "paradigms": []},
   {"lemma": "cimer", "pos": "interjection", "level": "B1", "gloss": "thanks (verlan of merci)", "register": "slang", "use": "recognize"},
   {"lemma": "clairement", "pos": "adverb", "level": "B1", "gloss": "clearly"},
   {"lemma": "clavier", "pos": "noun", "gender": "m", "level": "A2", "gloss": "keyboard"},
@@ -180,5 +181,6 @@
   {"lemma": "voisine", "pos": "noun", "gender": "f", "level": "A2", "gloss": "neighbour (female)"},
   {"lemma": "voter", "pos": "verb", "level": "B1", "gloss": "to vote"},
   {"lemma": "vouvoyer", "pos": "verb", "level": "A2", "gloss": "to say \"vous\" to"},
-  {"lemma": "wesh", "pos": "interjection", "level": "B1", "gloss": "hey, yo; also said in surprise; youth slang, not for a learner to use", "register": "slang", "use": "recognize"}
+  {"lemma": "wesh", "pos": "interjection", "level": "B1", "gloss": "hey, yo; also said in surprise; youth slang, not for a learner to use", "register": "slang", "use": "recognize"},
+  {"lemma": "y'a", "pos": "verb", "level": "A2", "gloss": "there is, there are (spoken il y a)", "register": "spoken", "paradigms": []}
 ]

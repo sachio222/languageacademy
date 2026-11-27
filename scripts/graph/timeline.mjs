@@ -34,6 +34,13 @@ export function moduleTeaches(m, entry) {
 //     taught always counts. A reading open only through the Reference counts only when every reading of the token
 //     belongs to the same word, so the letter y never hides the pronoun y and the season été never hides the past
 //     participle of être.
+// [lexId, chunkId] for each headword of several words whose fixed-phrase pattern the graph also holds.
+export function chunkTwins(graph) {
+  const cx = new Set((graph.constructions ?? []).map((c) => c.id));
+  return (graph.headwords ?? []).filter((h) => / /.test(h.lemma))
+    .map((h) => [h.id, h.id.replace(':lex:', ':cx:chunk.')]).filter(([, c]) => cx.has(c));
+}
+
 export function buildTimeline(graph, course, opts = {}) {
   const taughtAt = new Map();
   const issues = [];
@@ -62,6 +69,10 @@ export function buildTimeline(graph, course, opts = {}) {
     }
   }
 
+  // A headword of several words that the graph also holds as a fixed-phrase pattern (fr:lex:en-fait and
+  // fr:cx:chunk.en-fait) is one phrase: it is taught where its pattern is.
+  for (const [lexId, chunkId] of chunkTwins(graph)) if (taughtAt.has(chunkId)) teach(lexId, taughtAt.get(chunkId));
+
   const openFrom = opts.reference && Number.isInteger(opts.openFrom) ? opts.openFrom : null;
   const availableAt = new Map(taughtAt);
   const openByReference = new Set();
@@ -80,10 +91,11 @@ export function buildTimeline(graph, course, opts = {}) {
   const isAvailable = within(availableAt);
   const isTaught = within(taughtAt);
 
-  // A regular form needs its headword and either the form or its paradigm; an irregular form needs itself too.
+  // A regular form needs its headword and either the form or its paradigm; an irregular form needs itself too. A
+  // written short form (Mme for madame, cell abbr) is known with its headword.
   const readingIn = (has) => (reading, position) => {
     if (!has(reading.headwordId, position)) return false;
-    if (reading.via === 'lemma') return true;
+    if (reading.via === 'lemma' || reading.cell === 'abbr') return true;
     if (reading.via === 'irregular') return has(reading.nodeId, position);
     if (reading.via === 'generated') {
       return has(reading.nodeId, position) || (reading.paradigmId != null && has(reading.paradigmId, position));

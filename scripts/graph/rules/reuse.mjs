@@ -1,6 +1,8 @@
 import { analyzeItems } from './taught-before.mjs';
 import { parseId } from '../ids.mjs';
 import { issue } from '../issues.mjs';
+import { multiWordHeadwords, wordsOf } from '../extract-teaches.mjs';
+import { chunkTwins } from '../timeline.mjs';
 
 const memo = new WeakMap();
 
@@ -10,6 +12,7 @@ export function usesByNode(ctx) {
   const cached = memo.get(ctx);
   if (cached) return cached;
   const analysis = analyzeItems(ctx);
+  const multi = multiWordHeadwords(ctx.graph);
   const sets = new Map();
   const note = (id, position) => {
     if (!sets.has(id)) sets.set(id, new Set());
@@ -26,6 +29,11 @@ export function usesByNode(ctx) {
           }
         }
         for (const id of a.constructions) note(id, m.position);
+      }
+      // A headword of several words (en fait) is read word by word, so its use is its words in order in the text.
+      if (multi.length) {
+        const words = wordsOf([...(it.french ?? []), ...(it.shown ?? [])].join(' / '));
+        for (const [id, lemma] of multi) if (words.includes(` ${lemma} `)) note(id, m.position);
       }
     }
   }
@@ -57,11 +65,13 @@ const windowsOf = (ctx) => {
 };
 
 // Nodes subject to reuse: taught lex and cx nodes (paradigms are cx).
+// A headword with a fixed-phrase twin (en fait) is reused as its pattern, so it is left out here.
 function reusableNodes(ctx) {
   const out = [];
+  const twins = new Set(chunkTwins(ctx.graph).map(([lex]) => lex));
   for (const [id, at] of ctx.timeline.taughtAt) {
     const { kind } = parseId(id);
-    if (kind === 'lex' || kind === 'cx') out.push([id, at]);
+    if ((kind === 'lex' && !twins.has(id)) || kind === 'cx') out.push([id, at]);
   }
   return out;
 }

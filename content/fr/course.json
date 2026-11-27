@@ -348,6 +348,10 @@
     {
       "unit_key": "unit13",
       "name": "Joining sentences",
+      "description": "Join your sentences: say who and what you mean with qui, que, où and dont, plan around the weather with si, and talk the way French teenagers really talk.",
+      "can_do": "show a newcomer round your neighbourhood: who lives where, when places open, what you like there, and what you will do if it rains",
+      "can_do_short": "show a newcomer round",
+      "can_do_example_fr": "La boulangerie où je vais ouvre à sept heures. S'il pleut, on va à la bibliothèque.",
       "entries": [
         "qui-and-que-after-a-noun",
         "ou-after-a-place-or-a-time",

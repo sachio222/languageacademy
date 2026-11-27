@@ -199,6 +199,8 @@ test('settings.levelOrder must give whole numbers of levels', () => {
   assert.deepEqual(settingsOf({ words: 2 }), { words: 2, patterns: 1 });
   assert.throws(() => settingsOf({ words: 0 }), /levelOrder\.words/);
   assert.throws(() => settingsOf({ patterns: 'all' }), /levelOrder\.patterns/);
+  assert.equal(settingsOf('off'), 'off');
+  assert.throws(() => settingsOf('none'), /levelOrder/);
 });
 
 test('a language folder may hold its own settings, which override the shared ones', () => {

@@ -8165,6 +8165,22 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:chais",
+    "lemma": "chais",
+    "paradigms": [],
+    "pos": "verb",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "I know (spoken je sais; chais pas: I don't know)"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "chaise-fr",
@@ -35352,9 +35368,12 @@
     "id": "fr:lex:neiger",
     "lemma": "neiger",
     "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
       "fr:cx:verb.er.impf",
       "fr:cx:verb.future",
       "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
@@ -55714,6 +55733,21 @@
     "paradigms": [],
     "pos": "alphabet",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:y-a",
+    "lemma": "y'a",
+    "paradigms": [],
+    "pos": "verb",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "there is, there are (spoken il y a)"
+      }
+    ]
   },
   {
     "cefr": "A2",

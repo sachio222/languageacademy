@@ -98,3 +98,15 @@ for (const lang of languages) {
     }
   });
 }
+
+test('the outline takes a unit description, can-do lines and French example from the plan', async () => {
+  const { planOutline } = await import('../stubs.mjs');
+  const outline = { units: [] };
+  const plan = { units: [{ unit_key: 'u1', title: 'One', can_do: 'You can show a newcomer round.', outline: { description: 'D.', can_do_short: 'show round', can_do_example_fr: 'Voilà.' }, modules: [{ module_key: 'a' }] }] };
+  const out = planOutline(outline, plan);
+  const u = out.units.find((x) => x.unit_key === 'u1');
+  assert.equal(u.description, 'D.');
+  assert.equal(u.can_do, 'show a newcomer round');
+  assert.equal(u.can_do_short, 'show round');
+  assert.equal(u.can_do_example_fr, 'Voilà.');
+});
