@@ -36,7 +36,7 @@
       "description": "Ask questions, use demonstratives (this/that), essential verbs (want/can/see), add descriptions with adjectives and prepositions",
       "can_do": "ask simple questions, point at things and say what you want and can do",
       "can_do_short": "ask simple questions",
-      "can_do_example_fr": "Qu’est-ce que c’est ? Je veux ça. Je peux venir.",
+      "can_do_example_fr": "Qu’est-ce que c’est ? Je veux ça. Je peux voir ?",
       "theme": {
         "icon": "✍️",
         "color": "#8b5cf6"

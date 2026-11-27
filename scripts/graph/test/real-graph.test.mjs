@@ -32,11 +32,18 @@ test('the real check opens Reference words from the lookup modules only', async 
 });
 
 test('the letter y the Reference opens does not hide the pronoun y in Reading 2', async () => {
-  const { issues } = await runCheck({ repoRoot, lang: 'fr' });
-  // By module key, not position: a module inserted earlier in the course moves every position after it.
-  const y = issues.filter((i) => i.rule === 'untaught-word' && i.moduleKey === '2024-01-22-reading2' && i.surface.toLowerCase() === 'y');
-  assert.equal(y.length, 1);
-  assert.equal(y[0].nodeId, 'fr:lex:y.pronoun');
+  const { ctx } = await runCheck({ repoRoot, lang: 'fr' });
+  // By module key, not position: a module inserted earlier in the course moves every position after it. Reading 2's
+  // text no longer uses y, so the rule is asked directly at its position: the Reference opens the letter, the
+  // pronoun is taught later, and a token y there reads as untaught.
+  const at = ctx.course.find((m) => m.moduleKey === '2024-01-22-reading2').position;
+  const readings = ctx.index.get('y');
+  const letter = readings.find((r) => r.headwordId === 'fr:lex:y');
+  const pronoun = readings.find((r) => r.headwordId === 'fr:lex:y.pronoun');
+  assert.ok(letter && pronoun);
+  assert.equal(ctx.timeline.isReadingAvailable(letter, at), true);
+  assert.equal(ctx.timeline.isReadingAvailable(pronoun, at), false);
+  assert.equal(ctx.timeline.isTokenAvailable(readings, at), false);
 });
 
 test('the real settings count cognates as known in typed and shown French', () => {

@@ -384,6 +384,18 @@
           "feedback": "Both work! 'mieux' is also better, but we're learning '{meilleur}'"
         }
       ]
+    },
+    {
+      "id": "i-miam-c-est-meilleur",
+      "type": "respond",
+      "situation": "You taste the bread at the café. It is better than the bread at home. Say yum, it's better!",
+      "answer": "miam ! c'est meilleur",
+      "accept": [
+        "miam, c'est meilleur",
+        "miam c'est meilleur",
+        "c'est meilleur"
+      ],
+      "hint": "{miam} + c'est + meilleur"
     }
   ]
 }

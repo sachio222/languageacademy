@@ -159,6 +159,40 @@
       }
     }
   },
+  "2024-02-03-reading3": {
+    "overrides": {
+      "2024-02-03-reading3#i-cafe-de-la-paix": {
+        "ignore": [
+          "fr:lex:paix"
+        ]
+      },
+      "2024-02-03-reading3#i-le-comte-de-monte": {
+        "ignore": [
+          "fr:lex:comte"
+        ]
+      },
+      "2024-02-03-reading3#passage/b-bonjour-marc-tu-viens/fr": {
+        "ignore": [
+          "fr:lex:paix"
+        ]
+      },
+      "2024-02-03-reading3#passage/b-non-merci-j-ai/fr": {
+        "ignore": [
+          "fr:lex:lieue"
+        ]
+      },
+      "2024-02-03-reading3#passage/b-oui-je-vais-au/fr": {
+        "ignore": [
+          "fr:lex:comte"
+        ]
+      },
+      "2024-02-03-reading3#passage/img-cafe/fr": {
+        "ignore": [
+          "fr:lex:paix"
+        ]
+      }
+    }
+  },
   "2024-02-08-age-personal-info": {
     "excludeWords": [
       "fr:lex:le.pronoun",
@@ -295,6 +329,31 @@
       "fr:lex:partir",
       "fr:form:partir.prs.3sg"
     ]
+  },
+  "2024-03-30-reading-4": {
+    "overrides": {
+      "2024-03-30-reading-4#i-carrefour-de-l-odeon": {
+        "ignore": [
+          "fr:lex:carrefour"
+        ]
+      },
+      "2024-03-30-reading-4#i-les-editeurs": {
+        "ignore": [
+          "fr:lex:editeur"
+        ]
+      },
+      "2024-03-30-reading-4#passage/b-les-editeurs-il-est/fr": {
+        "ignore": [
+          "fr:lex:editeur",
+          "fr:lex:carrefour"
+        ]
+      },
+      "2024-03-30-reading-4#passage/img-cafe/fr": {
+        "ignore": [
+          "fr:lex:editeur"
+        ]
+      }
+    }
   },
   "2024-03-31-survival-phrases": {
     "excludeWords": [

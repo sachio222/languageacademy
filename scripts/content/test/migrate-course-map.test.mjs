@@ -274,6 +274,13 @@ const ADDED_AFTER_SPLIT = {
   '2024-05-07-reading-7': ['fr:lex:etudier'],
   '2024-05-29-passe-compose-agreement': ['fr:lex:parti'],
 };
+// Overrides added after the split: the proper names Readings 3 and 4 use (a café, two book titles, a café and a
+// square) are read as words, so each item that holds one ignores that word.
+const NAME_OVERRIDES_AFTER_SPLIT = {
+  '2024-02-03-reading3': ['i-cafe-de-la-paix', 'i-le-comte-de-monte', 'passage/b-bonjour-marc-tu-viens/fr',
+    'passage/b-oui-je-vais-au/fr', 'passage/b-non-merci-j-ai/fr', 'passage/img-cafe/fr'],
+  '2024-03-30-reading-4': ['i-les-editeurs', 'i-carrefour-de-l-odeon', 'passage/b-les-editeurs-il-est/fr', 'passage/img-cafe/fr'],
+};
 // Content notes settled after the split (C4b): the être-verbs gap-fill now reads "Elle n'___ pas ___".
 const NOTES_SETTLED_AFTER_SPLIT = ['2024-05-31-passe-compose-etre'];
 
@@ -289,6 +296,14 @@ test('the committed course-map.json is the split of the course map before the sp
     assert.deepEqual(committed[key].excludeWords.filter((id) => ids.includes(id)), ids, key);
     committed[key].excludeWords = committed[key].excludeWords.filter((id) => !ids.includes(id));
     if (!committed[key].excludeWords.length) delete committed[key].excludeWords;
+    if (!Object.keys(committed[key]).length) delete committed[key];
+  }
+  for (const [key, refs] of Object.entries(NAME_OVERRIDES_AFTER_SPLIT)) {
+    for (const ref of refs) {
+      assert.ok(committed[key]?.overrides?.[`${key}#${ref}`], `${key}#${ref}`);
+      delete committed[key].overrides[`${key}#${ref}`];
+    }
+    if (!Object.keys(committed[key].overrides).length) delete committed[key].overrides;
     if (!Object.keys(committed[key]).length) delete committed[key];
   }
   assert.deepEqual(committed, corrections);
@@ -422,7 +437,8 @@ test('keys already in the id shape pass through unchanged', () => {
   assert.deepEqual(corrections, CORRECTIONS);
   assert.deepEqual(report.filter((l) => /^(no_item_id|no_target|text_dropped|rekeyed)/.test(l.detail)), []);
   const c = correctionsOf(CORRECTIONS, course.modules, { liveIds: LIVE_IDS, sources: configs, records: RECORDS }).counts;
-  assert.deepEqual(c, { rekeyed: 0, kept: 35, dropped: 0, textDropped: 0 });
+  // 35 overrides, then 10 for the proper names in Readings 3 and 4 (NAME_OVERRIDES_AFTER_SPLIT).
+  assert.deepEqual(c, { rekeyed: 0, kept: 45, dropped: 0, textDropped: 0 });
   // An old dotted path is not an id key.
   const odd = correctionsOf({ '2024-01-13-ca-survival': { overrides: { '2024-01-13-ca-survival#readingPassage.title': { ignore: ['x'] } } } }, course.modules, { liveIds: LIVE_IDS }).counts;
   assert.equal(odd.dropped, 1);

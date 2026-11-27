@@ -368,6 +368,51 @@
         "la pluie",
         "c'est la pluie"
       ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-attire-les-visiteurs",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose attire les visiteurs dans ces lieux.",
+      "answer": "qu'est-ce qui attire les visiteurs dans ces lieux ?"
+    },
+    {
+      "id": "i-qu-est-ce-que-le-peintre-regarde",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce que}.",
+      "shown": "Le peintre regarde quelque chose.",
+      "answer": "qu'est-ce que le peintre regarde ?",
+      "accept": [
+        "qu'est-ce que le peintre regarde"
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-qui-est-inoubliable",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose est inoubliable à Nice.",
+      "answer": "qu'est-ce qui est inoubliable à Nice ?"
+    },
+    {
+      "id": "i-qu-est-ce-qui-reste-dans-ta-memoire",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce qui reste dans ta mémoire ?} Answer: several places.",
+      "answer": "plusieurs lieux",
+      "accept": [
+        "plusieurs lieux restent dans ma mémoire",
+        "des lieux"
+      ]
+    },
+    {
+      "id": "i-qu-est-ce-que-tu-as-visite-au-dela",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce que tu as visité au-delà de Paris ?} Answer: I also visited Versailles.",
+      "answer": "j'ai également visité Versailles",
+      "accept": [
+        "j'ai aussi visité Versailles",
+        "également Versailles",
+        "Versailles"
+      ]
     }
   ]
 }

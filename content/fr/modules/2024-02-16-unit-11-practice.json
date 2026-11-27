@@ -277,6 +277,66 @@
       ],
       "gloss": "Are you looking for your book? I'm giving it to you.",
       "hint": "two pronouns before the verb: you, then it"
+    },
+    {
+      "id": "i-attire-lieux",
+      "type": "gapfill",
+      "text": "Paris ___ des millions de visiteurs. Ils veulent voir ses ___ historiques.",
+      "blanks": [
+        {
+          "answer": "attire"
+        },
+        {
+          "answer": "lieux"
+        }
+      ],
+      "gloss": "Paris attracts millions of visitors. They want to see its historic places.",
+      "hint": "attracts (il form of attirer) / places (plural of lieu)"
+    },
+    {
+      "id": "i-peintre-memoire",
+      "type": "gapfill",
+      "text": "Monet est un ___ français. Ses œuvres restent dans la ___ de tout le monde.",
+      "blanks": [
+        {
+          "answer": "peintre"
+        },
+        {
+          "answer": "mémoire"
+        }
+      ],
+      "gloss": "Monet is a French painter. His works stay in everyone's memory.",
+      "hint": "painter / memory"
+    },
+    {
+      "id": "i-inoubliables-egalement",
+      "type": "gapfill",
+      "text": "Nos vacances à Nice étaient ___ ! Nous avons ___ visité Marseille.",
+      "blanks": [
+        {
+          "answer": "inoubliables"
+        },
+        {
+          "answer": "également"
+        }
+      ],
+      "gloss": "Our holiday in Nice was unforgettable! We also visited Marseille.",
+      "hint": "unforgettable (plural, like vacances) / also"
+    },
+    {
+      "id": "i-plusieurs-au-dela",
+      "type": "gapfill",
+      "text": "La France exporte ses produits dans ___ pays d'Europe, et ___.",
+      "blanks": [
+        {
+          "answer": "plusieurs"
+        },
+        {
+          "answer": "au-delà"
+        }
+      ],
+      "gloss": "France exports its products to several countries in Europe, and beyond.",
+      "hint": "several / beyond"
     }
   ],
   "tests": {

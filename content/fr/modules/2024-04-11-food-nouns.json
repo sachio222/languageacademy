@@ -624,6 +624,18 @@
           "feedback": "Keep '{le}' with aimer even in negative: je n'aime pas le poisson"
         }
       ]
+    },
+    {
+      "id": "i-miam-un-croissant",
+      "type": "respond",
+      "situation": "Your friend gives you a warm croissant. Say yum, a croissant!",
+      "answer": "miam, un croissant !",
+      "accept": [
+        "miam, un croissant",
+        "miam un croissant",
+        "miam ! un croissant"
+      ],
+      "hint": "{miam} + un croissant"
     }
   ]
 }
