@@ -685,33 +685,33 @@
     },
     {
       "id": "b-mon-ami-marc-est",
-      "fr": "Mon ami Marc est arrivé au café. Il savait que j'aime ce café parce que c'est près de Notre-Dame. Je suis contente qu'il soit venu! On se parle toujours de nos rêves.",
-      "en": "My friend Marc arrived at the café. He knew I like this café because it's near Notre-Dame. I'm glad he came! We always talk to each other about our dreams."
+      "fr": "Mon ami Marc est arrivé au café. Il savait que j'aime ce café parce que c'est près de Notre-Dame. Je suis contente qu'il soit là! On se parle toujours de nos rêves.",
+      "en": "My friend Marc arrived at the café. He knew I like this café because it's near Notre-Dame. I'm glad he's here! We always talk to each other about our dreams."
     },
     {
       "id": "b-salut-sophie-je-savais",
-      "fr": "\"Salut Sophie! Je savais que tu serais ici,\" il a dit.",
-      "en": "\"Hi Sophie! I knew you'd be here,\" he said."
+      "fr": "Il a dit: \"Salut Sophie! Je savais que tu serais ici.\"",
+      "en": "He said: \"Hi Sophie! I knew you'd be here.\""
     },
     {
       "id": "b-bonjour-marc-je-suis",
-      "fr": "\"Bonjour Marc! Je suis heureuse que tu sois là. J'étais en train de penser à mes rêves,\" j'ai dit.",
-      "en": "\"Hello Marc! I'm happy you're here. I was thinking about my dreams,\" I said."
+      "fr": "J'ai dit: \"Bonjour Marc! Je suis heureuse que tu sois là. J'étais en train de penser à mes rêves.\"",
+      "en": "I said: \"Hello Marc! I'm happy you're here. I was thinking about my dreams.\""
     },
     {
       "id": "b-ah-oui-moi-aussi",
-      "fr": "\"Ah oui? Moi aussi, j'ai beaucoup de rêves. Je veux que ma vie change,\" il a dit.",
-      "en": "\"Oh yes? Me too, I have many dreams. I want my life to change,\" he said."
+      "fr": "Il a dit: \"Ah oui? Moi aussi, j'ai beaucoup de rêves. Je veux que ma vie change.\"",
+      "en": "He said: \"Oh yes? Me too, I have many dreams. I want my life to change.\""
     },
     {
       "id": "b-marc-m-a-dit",
-      "fr": "Marc m'a dit qu'il voulait être artiste. Il voulait que les gens voient ses peintures au Louvre un jour. C'est un grand rêve! Le Louvre est le musée le plus célèbre du monde.",
-      "en": "Marc told me he wanted to be an artist. He wanted people to see his paintings at the Louvre one day. It's a big dream! The Louvre is the most famous museum in the world."
+      "fr": "Marc m'a parlé de son rêve: être artiste. Il voulait que les gens voient ses peintures au Louvre un jour. C'est un grand rêve! Le Louvre est le musée le plus célèbre du monde.",
+      "en": "Marc talked to me about his dream: to be an artist. He wanted people to see his paintings at the Louvre one day. It's a big dream! The Louvre is the most famous museum in the world."
     },
     {
       "id": "b-je-veux-qu-un",
-      "fr": "\"Je veux qu'un jour mes peintures soient au Louvre. Mais j'ai peur que ce soit difficile,\" il a dit.",
-      "en": "\"I want my paintings to be at the Louvre one day. But I'm afraid it might be difficult,\" he said."
+      "fr": "Il a dit: \"Je veux qu'un jour mes peintures soient au Louvre. Mais j'ai peur que ce soit difficile.\"",
+      "en": "He said: \"I want my paintings to be at the Louvre one day. But I'm afraid it might be difficult.\""
     },
     {
       "id": "img-louvre",
@@ -726,28 +726,28 @@
     },
     {
       "id": "b-je-comprends-mais-il",
-      "fr": "\"Je comprends. Mais il faut que tu essaies! Si tu ne fais rien, tu ne sauras jamais,\" j'ai dit.",
-      "en": "\"I understand. But you have to try! If you don't do anything, you'll never know,\" I said."
+      "fr": "J'ai dit: \"Je comprends. Mais il faut que tu essaies! Si tu ne fais rien, tu ne sauras jamais.\"",
+      "en": "I said: \"I understand. But you have to try! If you don't do anything, you'll never know.\""
     },
     {
       "id": "b-nous-avons-parle-pendant",
-      "fr": "Nous avons parlé pendant une heure. Je lui ai dit que je voulais être professeur de français. J'aimerais que mes étudiants adorent la langue française comme moi.",
-      "en": "We talked for an hour. I told him I wanted to be a French teacher. I'd like my students to love the French language like me."
+      "fr": "Nous avons parlé pendant une heure. Je lui ai parlé de mon rêve: être professeur de français. J'aimerais que mes étudiants adorent la langue française comme moi.",
+      "en": "We talked for an hour. I talked to him about my dream: to be a French teacher. I'd like my students to love the French language like me."
     },
     {
       "id": "b-je-suis-content-que",
-      "fr": "\"Je suis content que tu aies ce rêve. Tu serais une excellente professeur,\" Marc a dit.",
-      "en": "\"I'm glad you have this dream. You'd be an excellent teacher,\" Marc said."
+      "fr": "Marc a dit: \"Je suis content que tu aies ce rêve. Tu serais une excellente professeur.\"",
+      "en": "Marc said: \"I'm glad you have this dream. You'd be an excellent teacher.\""
     },
     {
       "id": "b-merci-mais-j-ai",
-      "fr": "\"Merci! Mais j'ai peur que ce soit trop difficile. J'avais déjà essayé l'année dernière mais je n'ai pas réussi,\" j'ai dit.",
-      "en": "\"Thank you! But I'm afraid it might be too difficult. I had already tried last year but I didn't succeed,\" I said."
+      "fr": "J'ai dit: \"Merci! Mais j'ai peur que ce soit trop difficile. J'avais déjà essayé l'année dernière mais je n'ai pas réussi.\"",
+      "en": "I said: \"Thank you! But I'm afraid it might be too difficult. I had already tried last year but I didn't succeed.\""
     },
     {
       "id": "b-il-faut-que-tu",
-      "fr": "\"Il faut que tu essaies encore! Si j'étais toi, je ne renoncerais pas,\" il a dit.",
-      "en": "\"You have to try again! If I were you, I wouldn't give up,\" he said."
+      "fr": "Il a dit: \"Il faut que tu essaies encore! Si j'étais toi, je ne renoncerais pas.\"",
+      "en": "He said: \"You have to try again! If I were you, I wouldn't give up.\""
     },
     {
       "id": "b-marc-avait-raison-avant",
@@ -756,18 +756,18 @@
     },
     {
       "id": "b-nous-avons-decide-d",
-      "fr": "Nous avons décidé d'aider l'un l'autre. Je veux qu'il réussisse avec ses peintures, et il veut que je réussisse comme professeur.",
+      "fr": "Nous avons décidé de nous aider l'un l'autre. Je veux qu'il réussisse avec ses peintures, et il veut que je réussisse comme professeur.",
       "en": "We decided to help each other. I want him to succeed with his paintings, and he wants me to succeed as a teacher."
     },
     {
       "id": "b-je-suis-heureux-que",
-      "fr": "\"Je suis heureux que nous soyons amis. On peut s'aider,\" Marc a dit.",
-      "en": "\"I'm happy we're friends. We can help each other,\" Marc said."
+      "fr": "Marc a dit: \"Je suis heureux que nous soyons amis. On peut s'aider.\"",
+      "en": "Marc said: \"I'm happy we're friends. We can help each other.\""
     },
     {
       "id": "b-moi-aussi-j-aimerais",
-      "fr": "\"Moi aussi! J'aimerais que nous réussissions tous les deux,\" j'ai dit.",
-      "en": "\"Me too! I'd like us both to succeed,\" I said."
+      "fr": "J'ai dit: \"Moi aussi! J'aimerais que nous réussissions tous les deux.\"",
+      "en": "I said: \"Me too! I'd like us both to succeed.\""
     },
     {
       "id": "b-apres-notre-cafe-nous",
@@ -787,13 +787,13 @@
     },
     {
       "id": "b-si-on-avait-plus",
-      "fr": "\"Si on avait plus de temps, on pourrait marcher toute la nuit,\" Marc a dit.",
-      "en": "\"If we had more time, we could walk all night,\" Marc said."
+      "fr": "Marc a dit: \"Si on avait plus de temps, on pourrait marcher toute la nuit.\"",
+      "en": "Marc said: \"If we had more time, we could walk all night.\""
     },
     {
       "id": "b-oui-j-adore-paris",
-      "fr": "\"Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie,\" j'ai dit.",
-      "en": "\"Yes! I love Paris at night. That's why I want to stay here all my life,\" I said."
+      "fr": "J'ai dit: \"Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie.\"",
+      "en": "I said: \"Yes! I love Paris at night. That's why I want to stay here all my life.\""
     },
     {
       "id": "b-nous-nous-sommes-dit",
@@ -802,18 +802,18 @@
     },
     {
       "id": "b-sophie-il-faut-que",
-      "fr": "\"Sophie, il faut que tu saches une chose: tes rêves sont importants. Je veux que tu continues à essayer,\" il a dit.",
-      "en": "\"Sophie, you need to know one thing: your dreams are important. I want you to keep trying,\" he said."
+      "fr": "Il a dit: \"Sophie, il faut que tu saches une chose: tes rêves sont importants. Je veux que tu continues à essayer.\"",
+      "en": "He said: \"Sophie, you need to know one thing: your dreams are important. I want you to keep trying.\""
     },
     {
       "id": "b-merci-marc-je-suis",
-      "fr": "\"Merci Marc. Je suis reconnaissante que tu m'aies dit ça. Toi aussi, tu dois continuer avec tes peintures,\" j'ai dit.",
-      "en": "\"Thank you Marc. I'm grateful you told me that. You too, you must continue with your paintings,\" I said."
+      "fr": "J'ai dit: \"Merci Marc. Je suis reconnaissante que tu sois là pour moi. Toi aussi, tu dois continuer avec tes peintures.\"",
+      "en": "I said: \"Thank you Marc. I'm grateful you're here for me. You too, you must continue with your paintings.\""
     },
     {
       "id": "b-en-rentrant-chez-moi",
-      "fr": "En rentrant chez moi, j'ai pensé à notre conversation. Je regrette que j'aie perdu espoir avant. Mais maintenant, je suis contente que Marc soit mon ami.",
-      "en": "Walking home, I thought about our conversation. I regret that I lost hope before. But now, I'm glad Marc is my friend."
+      "fr": "En rentrant chez moi, j'ai pensé à notre conversation. Avant, j'avais perdu espoir, et je le regrette. Mais maintenant, je suis contente que Marc soit mon ami.",
+      "en": "Walking home, I thought about our conversation. Before, I had lost hope, and I regret it. But now, I'm glad Marc is my friend."
     },
     {
       "id": "b-si-j-avais-su",
@@ -843,7 +843,7 @@
     },
     {
       "id": "b-comme-marc-a-dit",
-      "fr": "Comme Marc a dit: il faut essayer! Si on ne fait rien, on ne saura jamais. Et moi, je veux savoir si mes rêves peuvent devenir réalité.",
+      "fr": "Comme Marc l'a dit: il faut essayer! Si on ne fait rien, on ne saura jamais. Et moi, je veux savoir si mes rêves peuvent devenir réalité.",
       "en": "Like Marc said: you have to try! If we don't do anything, we'll never know. And me, I want to know if my dreams can become reality."
     },
     {
@@ -990,14 +990,18 @@
       "type": "comprehension",
       "question": "{Qu'est-ce qu'ils ont décidé de faire?}",
       "cue": "What did they decide to do?",
-      "answer": "aider l'un l'autre",
+      "answer": "s'aider",
       "accept": [
+        "s'aider l'un l'autre",
+        "se aider",
         "l'un l'autre",
-        "s'aider",
         "aider",
-        "ils ont décidé de s'aider"
+        "nous aider",
+        "de s'aider",
+        "ils ont décidé de s'aider",
+        "ils ont décidé de s'aider l'un l'autre"
       ],
-      "hint": "{Aider...}"
+      "hint": "{Ils ont décidé de s'...}"
     },
     {
       "id": "reading-10-9",

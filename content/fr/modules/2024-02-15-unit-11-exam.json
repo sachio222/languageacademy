@@ -416,6 +416,14 @@
       "cue": "Modern France combines tradition and innovation",
       "answer": "la France moderne combine tradition et innovation",
       "hint": "{la France moderne + combine + tradition + et + innovation}"
+    },
+    {
+      "id": "i-il-me-le-donne",
+      "type": "respond",
+      "situation": "Your brother has your book and hands it over. Say that he is giving it to you, with {me} and {le}.",
+      "cue": "He's giving it to me",
+      "answer": "il me le donne",
+      "hint": "{me} comes before {le}"
     }
   ],
   "tests": {

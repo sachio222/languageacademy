@@ -221,6 +221,9 @@ const TEACHING_ADDED_AFTER_SPLIT = {
   '2024-03-17-natural-phenomena': { teaches: ['fr:cx:neg.ne-plus'] },
   // Content Task C4b: Basic Nouns teaches c'est, which it already shows in its table and items.
   '2024-01-06-basic-nouns': { teaches: ['fr:cx:cest'] },
+  // Units 1 to 12 settled for the B2 grammar: donner teaches two pronouns together (je te le donne), which the
+  // pronoun order guide after it explains and only that guide used before.
+  '2024-02-10-donner': { teaches: ['fr:cx:pronoun.double'] },
 };
 // Teaching a writer moved to an earlier lesson after the split (content Task C4b): the ça lesson no longer teaches
 // c'est, which Basic Nouns now teaches. Each id was in what the split declared and is gone from the file.

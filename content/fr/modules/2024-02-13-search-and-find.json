@@ -262,6 +262,14 @@
       "hint": "{je cherche + mes clés}"
     },
     {
+      "id": "i-je-te-les-donne",
+      "type": "respond",
+      "situation": "Your friend is looking for her keys, and you have them. Say you are giving them to her, with {te} and {les}.",
+      "cue": "I'm giving them to you",
+      "answer": "je te les donne",
+      "hint": "{te} comes before {les}"
+    },
+    {
       "id": "i-qu-est-ce-que",
       "type": "translate",
       "prompt": "What are you looking for?",

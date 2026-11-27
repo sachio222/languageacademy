@@ -12,7 +12,8 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:pronoun.indirect-object"
+      "fr:cx:pronoun.indirect-object",
+      "fr:cx:pronoun.double"
     ],
     "words": [
       "fr:lex:aide"
@@ -148,6 +149,12 @@
       "example": "{Je donne le livre à Marie} (I give the book to Marie) → {Je lui donne le livre} (I give it to her)"
     },
     {
+      "id": "c-two-pronouns",
+      "term": "Two pronouns: {je te le donne}",
+      "definition": "When the thing you give becomes {le}, {la} or {les}, it goes after {me}, {te}, {nous} or {vous}, and both stay before the verb",
+      "example": "{Je te donne le livre} (I give you the book) → {Je te le donne} (I give it to you). {Tu me donnes ton numéro ?} (Do you give me your number?) → {Tu me le donnes ?} (Do you give it to me?)"
+    },
+    {
       "id": "c-common-expressions",
       "term": "Common Expressions",
       "definition": "Many fixed phrases use donner in French",
@@ -189,6 +196,32 @@
       "prompt": "I give you the book",
       "answer": "je te donne le livre",
       "hint": "je + te + donne + object"
+    },
+    {
+      "id": "i-je-te-le-donne",
+      "type": "transform",
+      "instruction": "Replace {le livre} with a pronoun.",
+      "shown": "Je te donne le livre.",
+      "answer": "je te le donne",
+      "mistakes": [
+        {
+          "answer": "je le te donne",
+          "feedback": "{te} comes first: {je te le donne}."
+        }
+      ]
+    },
+    {
+      "id": "i-tu-me-le-donnes",
+      "type": "transform",
+      "instruction": "Replace {ton numéro} with a pronoun.",
+      "shown": "Tu me donnes ton numéro.",
+      "answer": "tu me le donnes",
+      "mistakes": [
+        {
+          "answer": "tu le me donnes",
+          "feedback": "{me} comes first: {tu me le donnes}."
+        }
+      ]
     },
     {
       "id": "i-tu-me-donnes-de",

@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2622 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2627 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -32,8 +32,8 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 822 |
 | Passage words with no pop-up | 6 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1079 |
-| Live ids with no converted item | 339 (24 real misses) |
+| Hand edits kept | 1134 |
+| Live ids with no converted item | 340 (25 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
 | Notes | 3 |
@@ -303,7 +303,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[40]` "alors": same meaning as "so / then" in 2024-03-30-reading-4: kept alors-fr
 - `vocabulary[41]` "quoi": same meaning as "like / you know (filler at end)" in 2024-05-02-discourse-markers: kept quoi-fr
 - `vocabulary[42]` "tout le monde": same meaning as "everybody/everyone" in 2024-03-24-everyday-nouns: kept tout-le-monde-fr
-- `vocabulary[43]` "même": same meaning as "same / even" in 2024-04-08-comparisons: kept meme-fr
+- `vocabulary[43]` "même": same meaning as "same / even" in 2024-04-08-comparisons: kept meme-fr (fixed by hand)
 - `vocabulary[44]` "mal": same meaning as "badly / bad" in 2024-04-08-comparisons: kept mal-fr
 - `vocabulary[49]` "comment": same meaning as "how" in 2024-01-18-questions: kept comment-fr
 - `vocabulary[55]` "demander": same meaning as "to ask / to ask for" in 2024-04-19-demander: kept demander-fr (fixed by hand)
@@ -1699,7 +1699,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 **2024-02-10-donner**
 
 - 1 × framed by a context note: `items[1]`
-- 1 × framed by its instruction: `items[9]`
+- 1 × framed by its instruction: `items[11]`
 
 **2024-05-15-daily-actions-1**
 
@@ -1709,7 +1709,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 **2024-02-13-search-and-find**
 
 - 1 × framed by a context note: `items[1]`
-- 3 × framed by its instruction: `items[8]`, `items[9]`, `items[12]`
+- 3 × framed by its instruction: `items[9]`, `items[10]`, `items[13]`
 
 **2024-02-11-perception-verbs**
 
@@ -2127,6 +2127,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[20].note` ""Unit 7 verb"" → "(removed)"
 - `vocabulary[23].note` ""Unit 6 verb"" → "(removed)"
 - `vocabulary[25].note` ""Unit 6 verb"" → "(removed)"
+- `vocabulary[43].note` "modifier" → "adverb or adjective"
 - `vocabulary[55].note` ""Unit 6 verb"" → "(removed)"
 - `glossary` "["fr":"étudiant(s)","en":"student(s)","fr":"poser des questions","en":"to ask questions","fr":"demande du temps","en":"takes time"]" → "["fr":"poser des questions","en":"to ask questions","fr":"demande du temps","en":"takes time"]"
 - `glosses` "(none)" → "["fr":"étudiante","en":"student (a woman)","note":"feminine of étudiant","fr":"étudiants","en":"students","note":"plural of étudiant","fr":"pose","en":"asks","note":"present of poser: Socrate pose des questions"]"
@@ -2200,6 +2201,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading 8 - Ma Journée" → "Reading - Ma Journée"
 - `description` "A story about a typical day. Uses temporal words, reflexive verbs, and all Unit 8 vocabulary!" → "A story about a typical day. Uses temporal words, reflexive verbs, and all this unit's vocabulary!"
+- `vocabulary[32].note` "profession" → "a job"
 - `glossary` "(none)" → "["fr":"comprenais","en":"understood (was understanding)"]"
 - `glosses` "(none)" → "["fr":"comprenais","en":"understood","note":"imparfait of comprendre"]"
 - `items[9]` "(none)" → ""id":"i-pense-a-demain","type":"comprehension","question":"What pattern shows Marie's daily commitment to learning?","cue":"She goes from morning preparation to...","answer":"elle rentre contente et pense à demain","accept":["je rentre contente et pense à demain","contente et pense à demain","elle pense à demain"],"hint":"What cycle does her day show from morning to evening?""
@@ -2326,6 +2328,16 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading 9 - Une Histoire du Passé" → "Reading - Une Histoire du Passé"
 - `description` "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of Unit 9" → "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of this unit"
+- `passage[6].fr` ""Salut Pierre! Qu'est-ce que tu fais ici?" j'ai demandé." → "J'ai demandé: "Salut Pierre! Qu'est-ce que tu fais ici?""
+- `passage[6].en` ""Hi Pierre! What are you doing here?" I asked." → "I asked: "Hi Pierre! What are you doing here?""
+- `passage[7].fr` ""Bonjour! Je voulais être dehors parce qu'il faisait si beau. Je suis content que tu sois là!" il a dit." → "Il a dit: "Bonjour! Je voulais être dehors parce qu'il faisait si beau. Je suis content que tu sois là!""
+- `passage[7].en` ""Hello! I wanted to be outside because it was so nice. I'm glad you're here!" he said." → "He said: "Hello! I wanted to be outside because it was so nice. I'm glad you're here!""
+- `passage[8].fr` "Nous avons parlé pendant une heure. Il m'a dit qu'il voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je lui ai dit que je comprenais car j'ai eu le même problème l'année dernière." → "Nous avons parlé pendant une heure. Pierre voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je le comprenais, car j'ai eu le même problème l'année dernière."
+- `passage[8].en` "We talked for an hour. He told me he wanted a new job at the Sorbonne because he didn't like his job. I told him that I understood because I had the same problem last year." → "We talked for an hour. Pierre wanted a new job at the Sorbonne because he didn't like his job. I understood him, because I had the same problem last year."
+- `passage[12].fr` ""Quelle surprise!" elle a dit. "Je ne savais pas que vous étiez ici!"" → "Elle a dit: "Quelle surprise! Je ne savais pas que vous étiez ici!""
+- `passage[12].en` ""What a surprise!" she said. "I didn't know you were here!"" → "She said: "What a surprise! I didn't know you were here!""
+- `passage[13].fr` "Marie était notre amie de la Sorbonne. Nous ne l'avons pas vue depuis six mois parce qu'elle est maintenant à Lyon. Grâce à cette rencontre, nous avons pu être ensemble pour l'après-midi." → "Marie était notre amie de la Sorbonne. Nous ne la voyons pas souvent parce qu'elle habite maintenant à Lyon. Grâce à cette rencontre, nous avons pu être ensemble pour l'après-midi."
+- `passage[13].en` "Marie was our friend from the Sorbonne. We haven't seen her for six months because she's now in Lyon. Thanks to this meeting, we were able to be together for the afternoon." → "Marie was our friend from the Sorbonne. We don't see her often because she now lives in Lyon. Thanks to this meeting, we were able to be together for the afternoon."
 
 **2024-06-10-unit-9-practice**
 
@@ -2399,10 +2411,51 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading 10 - Mes Rêves et Mes Espoirs" → "Reading - Mes Rêves et Mes Espoirs"
 - `description` "A story about dreams and ambitions using Unit 10's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more" → "A story about dreams and ambitions using this unit's advanced expressions: wishes (je veux que...), emotions (je suis content que...), hypotheticals (si j'étais...), and more"
+- `passage[6].fr` "Mon ami Marc est arrivé au café. Il savait que j'aime ce café parce que c'est près de Notre-Dame. Je suis contente qu'il soit venu! On se parle toujours de nos rêves." → "Mon ami Marc est arrivé au café. Il savait que j'aime ce café parce que c'est près de Notre-Dame. Je suis contente qu'il soit là! On se parle toujours de nos rêves."
+- `passage[6].en` "My friend Marc arrived at the café. He knew I like this café because it's near Notre-Dame. I'm glad he came! We always talk to each other about our dreams." → "My friend Marc arrived at the café. He knew I like this café because it's near Notre-Dame. I'm glad he's here! We always talk to each other about our dreams."
+- `passage[7].fr` ""Salut Sophie! Je savais que tu serais ici," il a dit." → "Il a dit: "Salut Sophie! Je savais que tu serais ici.""
+- `passage[7].en` ""Hi Sophie! I knew you'd be here," he said." → "He said: "Hi Sophie! I knew you'd be here.""
+- `passage[8].fr` ""Bonjour Marc! Je suis heureuse que tu sois là. J'étais en train de penser à mes rêves," j'ai dit." → "J'ai dit: "Bonjour Marc! Je suis heureuse que tu sois là. J'étais en train de penser à mes rêves.""
+- `passage[8].en` ""Hello Marc! I'm happy you're here. I was thinking about my dreams," I said." → "I said: "Hello Marc! I'm happy you're here. I was thinking about my dreams.""
+- `passage[9].fr` ""Ah oui? Moi aussi, j'ai beaucoup de rêves. Je veux que ma vie change," il a dit." → "Il a dit: "Ah oui? Moi aussi, j'ai beaucoup de rêves. Je veux que ma vie change.""
+- `passage[9].en` ""Oh yes? Me too, I have many dreams. I want my life to change," he said." → "He said: "Oh yes? Me too, I have many dreams. I want my life to change.""
+- `passage[10].fr` "Marc m'a dit qu'il voulait être artiste. Il voulait que les gens voient ses peintures au Louvre un jour. C'est un grand rêve! Le Louvre est le musée le plus célèbre du monde." → "Marc m'a parlé de son rêve: être artiste. Il voulait que les gens voient ses peintures au Louvre un jour. C'est un grand rêve! Le Louvre est le musée le plus célèbre du monde."
+- `passage[10].en` "Marc told me he wanted to be an artist. He wanted people to see his paintings at the Louvre one day. It's a big dream! The Louvre is the most famous museum in the world." → "Marc talked to me about his dream: to be an artist. He wanted people to see his paintings at the Louvre one day. It's a big dream! The Louvre is the most famous museum in the world."
+- `passage[11].fr` ""Je veux qu'un jour mes peintures soient au Louvre. Mais j'ai peur que ce soit difficile," il a dit." → "Il a dit: "Je veux qu'un jour mes peintures soient au Louvre. Mais j'ai peur que ce soit difficile.""
+- `passage[11].en` ""I want my paintings to be at the Louvre one day. But I'm afraid it might be difficult," he said." → "He said: "I want my paintings to be at the Louvre one day. But I'm afraid it might be difficult.""
+- `passage[13].fr` ""Je comprends. Mais il faut que tu essaies! Si tu ne fais rien, tu ne sauras jamais," j'ai dit." → "J'ai dit: "Je comprends. Mais il faut que tu essaies! Si tu ne fais rien, tu ne sauras jamais.""
+- `passage[13].en` ""I understand. But you have to try! If you don't do anything, you'll never know," I said." → "I said: "I understand. But you have to try! If you don't do anything, you'll never know.""
+- `passage[14].fr` "Nous avons parlé pendant une heure. Je lui ai dit que je voulais être professeur de français. J'aimerais que mes étudiants adorent la langue française comme moi." → "Nous avons parlé pendant une heure. Je lui ai parlé de mon rêve: être professeur de français. J'aimerais que mes étudiants adorent la langue française comme moi."
+- `passage[14].en` "We talked for an hour. I told him I wanted to be a French teacher. I'd like my students to love the French language like me." → "We talked for an hour. I talked to him about my dream: to be a French teacher. I'd like my students to love the French language like me."
+- `passage[15].fr` ""Je suis content que tu aies ce rêve. Tu serais une excellente professeur," Marc a dit." → "Marc a dit: "Je suis content que tu aies ce rêve. Tu serais une excellente professeur.""
+- `passage[15].en` ""I'm glad you have this dream. You'd be an excellent teacher," Marc said." → "Marc said: "I'm glad you have this dream. You'd be an excellent teacher.""
+- `passage[16].fr` ""Merci! Mais j'ai peur que ce soit trop difficile. J'avais déjà essayé l'année dernière mais je n'ai pas réussi," j'ai dit." → "J'ai dit: "Merci! Mais j'ai peur que ce soit trop difficile. J'avais déjà essayé l'année dernière mais je n'ai pas réussi.""
+- `passage[16].en` ""Thank you! But I'm afraid it might be too difficult. I had already tried last year but I didn't succeed," I said." → "I said: "Thank you! But I'm afraid it might be too difficult. I had already tried last year but I didn't succeed.""
+- `passage[17].fr` ""Il faut que tu essaies encore! Si j'étais toi, je ne renoncerais pas," il a dit." → "Il a dit: "Il faut que tu essaies encore! Si j'étais toi, je ne renoncerais pas.""
+- `passage[17].en` ""You have to try again! If I were you, I wouldn't give up," he said." → "He said: "You have to try again! If I were you, I wouldn't give up.""
+- `passage[19].fr` "Nous avons décidé d'aider l'un l'autre. Je veux qu'il réussisse avec ses peintures, et il veut que je réussisse comme professeur." → "Nous avons décidé de nous aider l'un l'autre. Je veux qu'il réussisse avec ses peintures, et il veut que je réussisse comme professeur."
+- `passage[20].fr` ""Je suis heureux que nous soyons amis. On peut s'aider," Marc a dit." → "Marc a dit: "Je suis heureux que nous soyons amis. On peut s'aider.""
+- `passage[20].en` ""I'm happy we're friends. We can help each other," Marc said." → "Marc said: "I'm happy we're friends. We can help each other.""
+- `passage[21].fr` ""Moi aussi! J'aimerais que nous réussissions tous les deux," j'ai dit." → "J'ai dit: "Moi aussi! J'aimerais que nous réussissions tous les deux.""
+- `passage[21].en` ""Me too! I'd like us both to succeed," I said." → "I said: "Me too! I'd like us both to succeed.""
+- `passage[24].fr` ""Si on avait plus de temps, on pourrait marcher toute la nuit," Marc a dit." → "Marc a dit: "Si on avait plus de temps, on pourrait marcher toute la nuit.""
+- `passage[24].en` ""If we had more time, we could walk all night," Marc said." → "Marc said: "If we had more time, we could walk all night.""
+- `passage[25].fr` ""Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie," j'ai dit." → "J'ai dit: "Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie.""
+- `passage[25].en` ""Yes! I love Paris at night. That's why I want to stay here all my life," I said." → "I said: "Yes! I love Paris at night. That's why I want to stay here all my life.""
+- `passage[27].fr` ""Sophie, il faut que tu saches une chose: tes rêves sont importants. Je veux que tu continues à essayer," il a dit." → "Il a dit: "Sophie, il faut que tu saches une chose: tes rêves sont importants. Je veux que tu continues à essayer.""
+- `passage[27].en` ""Sophie, you need to know one thing: your dreams are important. I want you to keep trying," he said." → "He said: "Sophie, you need to know one thing: your dreams are important. I want you to keep trying.""
+- `passage[28].fr` ""Merci Marc. Je suis reconnaissante que tu m'aies dit ça. Toi aussi, tu dois continuer avec tes peintures," j'ai dit." → "J'ai dit: "Merci Marc. Je suis reconnaissante que tu sois là pour moi. Toi aussi, tu dois continuer avec tes peintures.""
+- `passage[28].en` ""Thank you Marc. I'm grateful you told me that. You too, you must continue with your paintings," I said." → "I said: "Thank you Marc. I'm grateful you're here for me. You too, you must continue with your paintings.""
+- `passage[29].fr` "En rentrant chez moi, j'ai pensé à notre conversation. Je regrette que j'aie perdu espoir avant. Mais maintenant, je suis contente que Marc soit mon ami." → "En rentrant chez moi, j'ai pensé à notre conversation. Avant, j'avais perdu espoir, et je le regrette. Mais maintenant, je suis contente que Marc soit mon ami."
+- `passage[29].en` "Walking home, I thought about our conversation. I regret that I lost hope before. But now, I'm glad Marc is my friend." → "Walking home, I thought about our conversation. Before, I had lost hope, and I regret it. But now, I'm glad Marc is my friend."
+- `passage[34].fr` "Comme Marc a dit: il faut essayer! Si on ne fait rien, on ne saura jamais. Et moi, je veux savoir si mes rêves peuvent devenir réalité." → "Comme Marc l'a dit: il faut essayer! Si on ne fait rien, on ne saura jamais. Et moi, je veux savoir si mes rêves peuvent devenir réalité."
 - `glossary` "(none)" → "["fr":"assise","en":"sitting (feminine)","fr":"savait","en":"knew","fr":"saura","en":"will know","fr":"achèterait","en":"would buy"]"
 - `glosses` "(none)" → "["fr":"assise","en":"sitting","note":"past participle of asseoir","fr":"savait","en":"knew","note":"imparfait of savoir","fr":"saura","en":"will know","note":"future of savoir"]"
 - `items[3].question` "Si Sophie était riche, qu'est-ce qu'elle achèterait?" → "Si tu étais Sophie, qu'est-ce que tu achèterais ?"
 - `items[3].cue` "If Sophie were rich, what would she buy?" → "If you were Sophie, what would you buy?"
+- `items[7].answer` "aider l'un l'autre" → "s'aider"
+- `items[7].accept` "["l'un l'autre","s'aider","aider","ils ont décidé de s'aider"]" → "["s'aider l'un l'autre","se aider","l'un l'autre","aider","nous aider","de s'aider","ils ont décidé de s'aider","ils ont décidé de s'aider l'un l'autre"]"
+- `items[7].hint` "Aider..." → "Ils ont décidé de s'..."
 
 **2024-02-05-unit-10-practice**
 
@@ -2421,7 +2474,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-02-10-donner**
 
-- `concepts[0].example` "Je donne un cadeau (I give a gift), Tu me donnes ton numéro? (Do you give me your number?)" → "Je donne un livre (I give a book), Tu me donnes ton numéro? (Do you give me your number?)"
+- `concepts` "["id":"c-donner-to-give","term":"donner = to give","definition":"One of the most common verbs - used for gifts, help, information, objects","example":"Je donne un cadeau (I give a gift), Tu me donnes ton numéro? (Do you give me your number?)","id":"c-regular-er-conjugation","term":"Regular -ER Conjugation","definition":"Follows standard -ER pattern like parler, manger","example":"je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","id":"c-direct-and-indirect-objects","term":"Direct and Indirect Objects","definition":"Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un","example":"Je donne le livre à Marie (I give the book to Marie) → Je lui donne le livre (I give it to her)","id":"c-common-expressions","term":"Common Expressions","definition":"Many fixed phrases use donner in French","example":"donner l'heure (tell the time), donner raison (agree with someone), donner rendez-vous (make an appointment)"]" → "["id":"c-donner-to-give","term":"donner = to give","definition":"One of the most common verbs - used for gifts, help, information, objects","example":"Je donne un livre (I give a book), Tu me donnes ton numéro? (Do you give me your number?)","id":"c-regular-er-conjugation","term":"Regular -ER Conjugation","definition":"Follows standard -ER pattern like parler, manger","example":"je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","id":"c-direct-and-indirect-objects","term":"Direct and Indirect Objects","definition":"Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un","example":"Je donne le livre à Marie (I give the book to Marie) → Je lui donne le livre (I give it to her)","id":"c-two-pronouns","term":"Two pronouns: je te le donne","definition":"When the thing you give becomes le, la or les, it goes after me, te, nous or vous, and both stay before the verb","example":"Je te donne le livre (I give you the book) → Je te le donne (I give it to you). Tu me donnes ton numéro ? (Do you give me your number?) → Tu me le donnes ? (Do you give it to me?)","id":"c-common-expressions","term":"Common Expressions","definition":"Many fixed phrases use donner in French","example":"donner l'heure (tell the time), donner raison (agree with someone), donner rendez-vous (make an appointment)"]"
 
 **2024-05-15-daily-actions-1**
 
@@ -2437,6 +2490,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-02-09-directions-navigation**
 
+- `vocabulary[9].note` "complete direction instruction" → "a full instruction, ready to say"
+- `vocabulary[10].note` "complete direction instruction" → "a full instruction, ready to say"
 - `concepts[3].example` "Allez tout droit, puis tournez à gauche (Go straight, then turn left)" → "Allez tout droit jusqu'à la gare, puis tournez à gauche (Go straight as far as the station, then turn left)"
 
 **2024-02-12-reading-11**
@@ -3275,6 +3330,10 @@ The live app stores answers under these exercise ids and concept indexes, and no
 **2024-01-22-common-adverbs**
 
 - `2024-01-22-common-adverbs.4` exercise "run quickly" → "courir rapidement"
+
+**2024-02-01-reading-10**
+
+- `2024-02-01-reading-10.8` exercise "What did they decide to do?" → "aider l'un l'autre"
 
 **2024-02-04-unit-10-exam**
 

@@ -1125,6 +1125,124 @@
       ],
       "hint": "{Une petite maison à...}"
     },
+    "items/reading-10-8": {
+      "id": "reading-10-8",
+      "type": "comprehension",
+      "question": "{Qu'est-ce qu'ils ont décidé de faire?}",
+      "cue": "What did they decide to do?",
+      "answer": "s'aider",
+      "accept": [
+        "s'aider l'un l'autre",
+        "se aider",
+        "l'un l'autre",
+        "aider",
+        "nous aider",
+        "de s'aider",
+        "ils ont décidé de s'aider",
+        "ils ont décidé de s'aider l'un l'autre"
+      ],
+      "hint": "{Ils ont décidé de s'...}"
+    },
+    "passage/b-ah-oui-moi-aussi": {
+      "id": "b-ah-oui-moi-aussi",
+      "fr": "Il a dit: \"Ah oui? Moi aussi, j'ai beaucoup de rêves. Je veux que ma vie change.\"",
+      "en": "He said: \"Oh yes? Me too, I have many dreams. I want my life to change.\""
+    },
+    "passage/b-bonjour-marc-je-suis": {
+      "id": "b-bonjour-marc-je-suis",
+      "fr": "J'ai dit: \"Bonjour Marc! Je suis heureuse que tu sois là. J'étais en train de penser à mes rêves.\"",
+      "en": "I said: \"Hello Marc! I'm happy you're here. I was thinking about my dreams.\""
+    },
+    "passage/b-comme-marc-a-dit": {
+      "id": "b-comme-marc-a-dit",
+      "fr": "Comme Marc l'a dit: il faut essayer! Si on ne fait rien, on ne saura jamais. Et moi, je veux savoir si mes rêves peuvent devenir réalité.",
+      "en": "Like Marc said: you have to try! If we don't do anything, we'll never know. And me, I want to know if my dreams can become reality."
+    },
+    "passage/b-en-rentrant-chez-moi": {
+      "id": "b-en-rentrant-chez-moi",
+      "fr": "En rentrant chez moi, j'ai pensé à notre conversation. Avant, j'avais perdu espoir, et je le regrette. Mais maintenant, je suis contente que Marc soit mon ami.",
+      "en": "Walking home, I thought about our conversation. Before, I had lost hope, and I regret it. But now, I'm glad Marc is my friend."
+    },
+    "passage/b-il-faut-que-tu": {
+      "id": "b-il-faut-que-tu",
+      "fr": "Il a dit: \"Il faut que tu essaies encore! Si j'étais toi, je ne renoncerais pas.\"",
+      "en": "He said: \"You have to try again! If I were you, I wouldn't give up.\""
+    },
+    "passage/b-je-comprends-mais-il": {
+      "id": "b-je-comprends-mais-il",
+      "fr": "J'ai dit: \"Je comprends. Mais il faut que tu essaies! Si tu ne fais rien, tu ne sauras jamais.\"",
+      "en": "I said: \"I understand. But you have to try! If you don't do anything, you'll never know.\""
+    },
+    "passage/b-je-suis-content-que": {
+      "id": "b-je-suis-content-que",
+      "fr": "Marc a dit: \"Je suis content que tu aies ce rêve. Tu serais une excellente professeur.\"",
+      "en": "Marc said: \"I'm glad you have this dream. You'd be an excellent teacher.\""
+    },
+    "passage/b-je-suis-heureux-que": {
+      "id": "b-je-suis-heureux-que",
+      "fr": "Marc a dit: \"Je suis heureux que nous soyons amis. On peut s'aider.\"",
+      "en": "Marc said: \"I'm happy we're friends. We can help each other.\""
+    },
+    "passage/b-je-veux-qu-un": {
+      "id": "b-je-veux-qu-un",
+      "fr": "Il a dit: \"Je veux qu'un jour mes peintures soient au Louvre. Mais j'ai peur que ce soit difficile.\"",
+      "en": "He said: \"I want my paintings to be at the Louvre one day. But I'm afraid it might be difficult.\""
+    },
+    "passage/b-marc-m-a-dit": {
+      "id": "b-marc-m-a-dit",
+      "fr": "Marc m'a parlé de son rêve: être artiste. Il voulait que les gens voient ses peintures au Louvre un jour. C'est un grand rêve! Le Louvre est le musée le plus célèbre du monde.",
+      "en": "Marc talked to me about his dream: to be an artist. He wanted people to see his paintings at the Louvre one day. It's a big dream! The Louvre is the most famous museum in the world."
+    },
+    "passage/b-merci-mais-j-ai": {
+      "id": "b-merci-mais-j-ai",
+      "fr": "J'ai dit: \"Merci! Mais j'ai peur que ce soit trop difficile. J'avais déjà essayé l'année dernière mais je n'ai pas réussi.\"",
+      "en": "I said: \"Thank you! But I'm afraid it might be too difficult. I had already tried last year but I didn't succeed.\""
+    },
+    "passage/b-merci-marc-je-suis": {
+      "id": "b-merci-marc-je-suis",
+      "fr": "J'ai dit: \"Merci Marc. Je suis reconnaissante que tu sois là pour moi. Toi aussi, tu dois continuer avec tes peintures.\"",
+      "en": "I said: \"Thank you Marc. I'm grateful you're here for me. You too, you must continue with your paintings.\""
+    },
+    "passage/b-moi-aussi-j-aimerais": {
+      "id": "b-moi-aussi-j-aimerais",
+      "fr": "J'ai dit: \"Moi aussi! J'aimerais que nous réussissions tous les deux.\"",
+      "en": "I said: \"Me too! I'd like us both to succeed.\""
+    },
+    "passage/b-mon-ami-marc-est": {
+      "id": "b-mon-ami-marc-est",
+      "fr": "Mon ami Marc est arrivé au café. Il savait que j'aime ce café parce que c'est près de Notre-Dame. Je suis contente qu'il soit là! On se parle toujours de nos rêves.",
+      "en": "My friend Marc arrived at the café. He knew I like this café because it's near Notre-Dame. I'm glad he's here! We always talk to each other about our dreams."
+    },
+    "passage/b-nous-avons-decide-d": {
+      "id": "b-nous-avons-decide-d",
+      "fr": "Nous avons décidé de nous aider l'un l'autre. Je veux qu'il réussisse avec ses peintures, et il veut que je réussisse comme professeur.",
+      "en": "We decided to help each other. I want him to succeed with his paintings, and he wants me to succeed as a teacher."
+    },
+    "passage/b-nous-avons-parle-pendant": {
+      "id": "b-nous-avons-parle-pendant",
+      "fr": "Nous avons parlé pendant une heure. Je lui ai parlé de mon rêve: être professeur de français. J'aimerais que mes étudiants adorent la langue française comme moi.",
+      "en": "We talked for an hour. I talked to him about my dream: to be a French teacher. I'd like my students to love the French language like me."
+    },
+    "passage/b-oui-j-adore-paris": {
+      "id": "b-oui-j-adore-paris",
+      "fr": "J'ai dit: \"Oui ! J'adore Paris la nuit. C'est pour ça que je veux rester ici toute ma vie.\"",
+      "en": "I said: \"Yes! I love Paris at night. That's why I want to stay here all my life.\""
+    },
+    "passage/b-salut-sophie-je-savais": {
+      "id": "b-salut-sophie-je-savais",
+      "fr": "Il a dit: \"Salut Sophie! Je savais que tu serais ici.\"",
+      "en": "He said: \"Hi Sophie! I knew you'd be here.\""
+    },
+    "passage/b-si-on-avait-plus": {
+      "id": "b-si-on-avait-plus",
+      "fr": "Marc a dit: \"Si on avait plus de temps, on pourrait marcher toute la nuit.\"",
+      "en": "Marc said: \"If we had more time, we could walk all night.\""
+    },
+    "passage/b-sophie-il-faut-que": {
+      "id": "b-sophie-il-faut-que",
+      "fr": "Il a dit: \"Sophie, il faut que tu saches une chose: tes rêves sont importants. Je veux que tu continues à essayer.\"",
+      "en": "He said: \"Sophie, you need to know one thing: your dreams are important. I want you to keep trying.\""
+    },
     "title": "Reading - {Mes Rêves et Mes Espoirs}",
     "vocabulary/je-me-sens-mieux-fr": {
       "word_id": "je-me-sens-mieux-fr",
@@ -1389,6 +1507,18 @@
       "fr": "jusqu'à",
       "gloss": "as far as / until",
       "note": "{jusqu'à la gare} (as far as the station), {jusqu'à demain} (until tomorrow)"
+    },
+    "vocabulary/tournez-a-droite-fr": {
+      "word_id": "tournez-a-droite-fr",
+      "fr": "tournez à droite",
+      "gloss": "turn right",
+      "note": "a full instruction, ready to say"
+    },
+    "vocabulary/tournez-a-gauche-fr": {
+      "word_id": "tournez-a-gauche-fr",
+      "fr": "tournez à gauche",
+      "gloss": "turn left",
+      "note": "a full instruction, ready to say"
     }
   },
   "2024-02-10-donner": {
@@ -1412,12 +1542,44 @@
         "example": "{Je donne le livre à Marie} (I give the book to Marie) → {Je lui donne le livre} (I give it to her)"
       },
       {
+        "id": "c-two-pronouns",
+        "term": "Two pronouns: {je te le donne}",
+        "definition": "When the thing you give becomes {le}, {la} or {les}, it goes after {me}, {te}, {nous} or {vous}, and both stay before the verb",
+        "example": "{Je te donne le livre} (I give you the book) → {Je te le donne} (I give it to you). {Tu me donnes ton numéro ?} (Do you give me your number?) → {Tu me le donnes ?} (Do you give it to me?)"
+      },
+      {
         "id": "c-common-expressions",
         "term": "Common Expressions",
         "definition": "Many fixed phrases use donner in French",
         "example": "{donner l'heure} (tell the time), {donner raison} (agree with someone), {donner rendez-vous} (make an appointment)"
       }
-    ]
+    ],
+    "items/i-je-te-le-donne": {
+      "id": "i-je-te-le-donne",
+      "type": "transform",
+      "instruction": "Replace {le livre} with a pronoun.",
+      "shown": "Je te donne le livre.",
+      "answer": "je te le donne",
+      "mistakes": [
+        {
+          "answer": "je le te donne",
+          "feedback": "{te} comes first: {je te le donne}."
+        }
+      ]
+    },
+    "items/i-tu-me-le-donnes": {
+      "id": "i-tu-me-le-donnes",
+      "type": "transform",
+      "instruction": "Replace {ton numéro} with a pronoun.",
+      "shown": "Tu me donnes ton numéro.",
+      "answer": "tu me le donnes",
+      "mistakes": [
+        {
+          "answer": "tu le me donnes",
+          "feedback": "{me} comes first: {tu me le donnes}."
+        }
+      ]
+    }
   },
   "2024-02-12-reading-11": {
     "glossary": [
@@ -1522,7 +1684,15 @@
         "definition": "Both verbs have broader meanings beyond physical searching",
         "example": "{chercher} = try to do, {trouver} = think/consider ({Je trouve que...} = I think that...)"
       }
-    ]
+    ],
+    "items/i-je-te-les-donne": {
+      "id": "i-je-te-les-donne",
+      "type": "respond",
+      "situation": "Your friend is looking for her keys, and you have them. Say you are giving them to her, with {te} and {les}.",
+      "cue": "I'm giving them to you",
+      "answer": "je te les donne",
+      "hint": "{te} comes before {les}"
+    }
   },
   "2024-02-14-social-situations": {
     "concepts": [
@@ -1554,6 +1724,14 @@
   },
   "2024-02-15-unit-11-exam": {
     "description": "Final test for this unit! Demonstrate mastery of age expressions, all missing top 100 verbs (give, sleep, work, live, search, find, listen, watch, wait, arrive, stay), directions, and practical communication. Achieve complete French foundation!",
+    "items/i-il-me-le-donne": {
+      "id": "i-il-me-le-donne",
+      "type": "respond",
+      "situation": "Your brother has your book and hands it over. Say that he is giving it to you, with {me} and {le}.",
+      "cue": "He's giving it to me",
+      "answer": "il me le donne",
+      "hint": "{me} comes before {le}"
+    },
     "items/i-la-france-a-soixante": {
       "id": "i-la-france-a-soixante",
       "type": "respond",
@@ -1592,6 +1770,18 @@
   },
   "2024-02-16-unit-11-practice": {
     "description": "Complete sentences using this unit's essential vocabulary: age expressions, missing top 100 verbs, and directions!",
+    "items/i-te-le": {
+      "id": "i-te-le",
+      "type": "gapfill",
+      "text": "Tu cherches ton livre? Je ___ donne.",
+      "blanks": [
+        {
+          "answer": "te le"
+        }
+      ],
+      "gloss": "Are you looking for your book? I'm giving it to you.",
+      "hint": "two pronouns before the verb: you, then it"
+    },
     "title": "Daily Essentials Practice - Fill in the Blanks"
   },
   "2024-03-15-nature-animals": {
@@ -5219,6 +5409,12 @@
       "fr": "étudier",
       "gloss": "to study"
     },
+    "vocabulary/meme-fr": {
+      "word_id": "meme-fr",
+      "fr": "même",
+      "gloss": "even / same",
+      "note": "adverb or adjective"
+    },
     "vocabulary/penser-fr": {
       "word_id": "penser-fr",
       "fr": "penser",
@@ -5770,6 +5966,12 @@
       "word_id": "parce-que-fr",
       "fr": "parce que",
       "gloss": "because"
+    },
+    "vocabulary/professeur-fr": {
+      "word_id": "professeur-fr",
+      "fr": "professeur",
+      "gloss": "teacher / professor",
+      "note": "a job"
     }
   },
   "2024-05-21-reflexive-pronouns": {
@@ -6926,6 +7128,31 @@
   },
   "2024-06-05-reading-9": {
     "description": "A story in the past using passé composé, imparfait, causal words, and spatial prepositions - bringing together all of this unit",
+    "passage/b-bonjour-je-voulais-etre": {
+      "id": "b-bonjour-je-voulais-etre",
+      "fr": "Il a dit: \"Bonjour! Je voulais être dehors parce qu'il faisait si beau. Je suis content que tu sois là!\"",
+      "en": "He said: \"Hello! I wanted to be outside because it was so nice. I'm glad you're here!\""
+    },
+    "passage/b-marie-etait-notre-amie": {
+      "id": "b-marie-etait-notre-amie",
+      "fr": "Marie était notre amie de la Sorbonne. Nous ne la voyons pas souvent parce qu'elle habite maintenant à Lyon. Grâce à cette rencontre, nous avons pu être ensemble pour l'après-midi.",
+      "en": "Marie was our friend from the Sorbonne. We don't see her often because she now lives in Lyon. Thanks to this meeting, we were able to be together for the afternoon."
+    },
+    "passage/b-nous-avons-parle-pendant": {
+      "id": "b-nous-avons-parle-pendant",
+      "fr": "Nous avons parlé pendant une heure. Pierre voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je le comprenais, car j'ai eu le même problème l'année dernière.",
+      "en": "We talked for an hour. Pierre wanted a new job at the Sorbonne because he didn't like his job. I understood him, because I had the same problem last year."
+    },
+    "passage/b-quelle-surprise-elle-a": {
+      "id": "b-quelle-surprise-elle-a",
+      "fr": "Elle a dit: \"Quelle surprise! Je ne savais pas que vous étiez ici!\"",
+      "en": "She said: \"What a surprise! I didn't know you were here!\""
+    },
+    "passage/b-salut-pierre-qu-est": {
+      "id": "b-salut-pierre-qu-est",
+      "fr": "J'ai demandé: \"Salut Pierre! Qu'est-ce que tu fais ici?\"",
+      "en": "I asked: \"Hi Pierre! What are you doing here?\""
+    },
     "title": "Reading - {Une Histoire du Passé}",
     "vocabulary/celebre-fr": {
       "word_id": "celebre-fr",

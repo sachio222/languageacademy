@@ -265,6 +265,18 @@
       ],
       "gloss": "Complete personal introduction with age and work",
       "hint": "I have (for age) / live (je form) / work (je form)"
+    },
+    {
+      "id": "i-te-le",
+      "type": "gapfill",
+      "text": "Tu cherches ton livre? Je ___ donne.",
+      "blanks": [
+        {
+          "answer": "te le"
+        }
+      ],
+      "gloss": "Are you looking for your book? I'm giving it to you.",
+      "hint": "two pronouns before the verb: you, then it"
     }
   ],
   "tests": {

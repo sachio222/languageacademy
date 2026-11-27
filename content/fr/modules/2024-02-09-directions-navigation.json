@@ -76,13 +76,13 @@
       "word_id": "tournez-a-gauche-fr",
       "fr": "tournez à gauche",
       "gloss": "turn left",
-      "note": "complete direction instruction"
+      "note": "a full instruction, ready to say"
     },
     {
       "word_id": "tournez-a-droite-fr",
       "fr": "tournez à droite",
       "gloss": "turn right",
-      "note": "complete direction instruction"
+      "note": "a full instruction, ready to say"
     },
     {
       "word_id": "allez-fr",

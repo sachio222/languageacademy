@@ -983,18 +983,18 @@
     },
     {
       "id": "b-salut-pierre-qu-est",
-      "fr": "\"Salut Pierre! Qu'est-ce que tu fais ici?\" j'ai demandé.",
-      "en": "\"Hi Pierre! What are you doing here?\" I asked."
+      "fr": "J'ai demandé: \"Salut Pierre! Qu'est-ce que tu fais ici?\"",
+      "en": "I asked: \"Hi Pierre! What are you doing here?\""
     },
     {
       "id": "b-bonjour-je-voulais-etre",
-      "fr": "\"Bonjour! Je voulais être dehors parce qu'il faisait si beau. Je suis content que tu sois là!\" il a dit.",
-      "en": "\"Hello! I wanted to be outside because it was so nice. I'm glad you're here!\" he said."
+      "fr": "Il a dit: \"Bonjour! Je voulais être dehors parce qu'il faisait si beau. Je suis content que tu sois là!\"",
+      "en": "He said: \"Hello! I wanted to be outside because it was so nice. I'm glad you're here!\""
     },
     {
       "id": "b-nous-avons-parle-pendant",
-      "fr": "Nous avons parlé pendant une heure. Il m'a dit qu'il voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je lui ai dit que je comprenais car j'ai eu le même problème l'année dernière.",
-      "en": "We talked for an hour. He told me he wanted a new job at the Sorbonne because he didn't like his job. I told him that I understood because I had the same problem last year."
+      "fr": "Nous avons parlé pendant une heure. Pierre voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je le comprenais, car j'ai eu le même problème l'année dernière.",
+      "en": "We talked for an hour. Pierre wanted a new job at the Sorbonne because he didn't like his job. I understood him, because I had the same problem last year."
     },
     {
       "id": "b-ensuite-comme-nous-avions",
@@ -1019,13 +1019,13 @@
     },
     {
       "id": "b-quelle-surprise-elle-a",
-      "fr": "\"Quelle surprise!\" elle a dit. \"Je ne savais pas que vous étiez ici!\"",
-      "en": "\"What a surprise!\" she said. \"I didn't know you were here!\""
+      "fr": "Elle a dit: \"Quelle surprise! Je ne savais pas que vous étiez ici!\"",
+      "en": "She said: \"What a surprise! I didn't know you were here!\""
     },
     {
       "id": "b-marie-etait-notre-amie",
-      "fr": "Marie était notre amie de la Sorbonne. Nous ne l'avons pas vue depuis six mois parce qu'elle est maintenant à Lyon. Grâce à cette rencontre, nous avons pu être ensemble pour l'après-midi.",
-      "en": "Marie was our friend from the Sorbonne. We haven't seen her for six months because she's now in Lyon. Thanks to this meeting, we were able to be together for the afternoon."
+      "fr": "Marie était notre amie de la Sorbonne. Nous ne la voyons pas souvent parce qu'elle habite maintenant à Lyon. Grâce à cette rencontre, nous avons pu être ensemble pour l'après-midi.",
+      "en": "Marie was our friend from the Sorbonne. We don't see her often because she now lives in Lyon. Thanks to this meeting, we were able to be together for the afternoon."
     },
     {
       "id": "b-l-apres-midi-nous",

@@ -10378,6 +10378,28 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:completer",
+    "lemma": "compléter",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to complete, fill in"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -34252,6 +34274,28 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:modifier",
+    "lemma": "modifier",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to change, modify"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "moi-fr",
@@ -41689,6 +41733,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:profession",
+    "lemma": "profession",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "profession, occupation"
+      }
+    ]
   },
   {
     "cefr": "A2",

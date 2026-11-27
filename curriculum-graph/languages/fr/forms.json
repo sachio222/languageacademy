@@ -3810,6 +3810,54 @@
     "surface": "commis"
   },
   {
+    "cell": "prs.1sg",
+    "id": "fr:form:completer.prs.1sg",
+    "of": "fr:lex:completer",
+    "surface": "complète"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:completer.prs.2sg",
+    "of": "fr:lex:completer",
+    "surface": "complètes"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:completer.prs.3pl",
+    "of": "fr:lex:completer",
+    "surface": "complètent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:completer.prs.3sg",
+    "of": "fr:lex:completer",
+    "surface": "complète"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:completer.sbjv.1sg",
+    "of": "fr:lex:completer",
+    "surface": "complète"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:completer.sbjv.2sg",
+    "of": "fr:lex:completer",
+    "surface": "complètes"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:completer.sbjv.3pl",
+    "of": "fr:lex:completer",
+    "surface": "complètent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:completer.sbjv.3sg",
+    "of": "fr:lex:completer",
+    "surface": "complète"
+  },
+  {
     "cell": "impf.1pl",
     "id": "fr:form:comprendre.impf.1pl",
     "of": "fr:lex:comprendre",
