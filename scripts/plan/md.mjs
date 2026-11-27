@@ -49,6 +49,9 @@ export function renderMd({ plan, report, context, repoRoot = REPO_ROOT }) {
       if (m.teaches.words.length) {
         line(`${m.kind === 'reading' ? 'Table words' : 'Words'} (${m.teaches.words.length})`, m.teaches.words.map(word).map((w) => `*${w.lemma}*${w.to_add ? '\\*' : ''}${w.gloss ? ` (${w.gloss})` : ''}`).join(', '));
       }
+      if (m.carrier) line('Carrier', short(m.carrier));
+      if (m.reuses?.length) line('New job for', m.reuses.map(short).join(', '));
+      if (m.gathers?.length) line('Gathers', m.gathers.map(short).join(', '));
       if (m.practises?.length) line('Leans on', m.practises.map(short).join(', '));
       if (m.reading) {
         const r = m.reading;

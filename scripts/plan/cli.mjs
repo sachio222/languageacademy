@@ -5,6 +5,7 @@
 //   node scripts/plan/cli.mjs page  <lang> [--out <file>]          the course page: every unit, lesson and word (page.mjs)
 //   node scripts/plan/cli.mjs stubs <lang> [--write | --check]     planned module files and the outline, from the plan (stubs.mjs)
 //   node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]   writer briefs, one file per module (brief.mjs)
+//   node scripts/plan/cli.mjs method <lang> [--out <dir>]          the course scored against the teaching method (method-score.mjs)
 //
 // Each reads only content/<lang>/ and curriculum-graph/ for that language. md, page and brief write under
 // .plan-out/<lang>/ unless --out says where; that folder is not committed.
@@ -17,6 +18,7 @@ import { checkPlan } from './check.mjs';
 import { levelsReached, planContext } from './context.mjs';
 import { frequencyDir, frequencyTrend, readRanks } from './frequency.mjs';
 import { readLimits } from './limits.mjs';
+import { methodRules, readRoles } from './method-score.mjs';
 import { PLAN_FILE, PlanError, REPO_ROOT, planModules, planPaths, readMethod, readPlan, readReadingTypes } from './plan.mjs';
 
 const USAGE = [
@@ -25,6 +27,7 @@ const USAGE = [
   '       node scripts/plan/cli.mjs page <lang> [--out <file>]',
   '       node scripts/plan/cli.mjs stubs <lang> [--write | --check]',
   '       node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]',
+  '       node scripts/plan/cli.mjs method <lang> [--out <dir>]',
 ].join('\n');
 
 export const outDir = (repoRoot, lang) => join(repoRoot, '.plan-out', lang);
@@ -62,8 +65,9 @@ export async function loadChecked({ repoRoot = REPO_ROOT, lang, previous = null 
   const limits = readLimits(repoRoot, lang);
   const context = await planContext({ repoRoot, lang, plan });
   const { base, projected, position, written, lookups } = context;
+  const rules = methodRules(projected.graph, readRoles(repoRoot, lang));
   const result = checkPlan({
-    plan, readingTypes: readingTypes.byId, limits, lookups, written, position, previous,
+    plan, readingTypes: readingTypes.byId, limits, lookups, written, position, previous, method: rules,
     taughtAt: base.timeline.taughtAt,
     isAvailable: (id, at) => projected.timeline.isAvailable(id, at),
     reached: levelsReached(projected),
@@ -116,6 +120,7 @@ async function check(lang, args) {
       for (const t of trend) console.log(`  ${t.unit_key}: ${t.band ?? 'no ranked word'}${t.steps_back ? '  (more common than the unit before)' : ''}`);
     }
     const types = Object.entries(report.reading_types);
+    if (report.structure) console.log(`structure: lessons that teach a pattern, by unit: ${report.structure.map((u) => `${u.unit_key} ${u.lessons_with_a_pattern} of ${u.lessons}`).join(', ')}`);
     console.log(`reading types: ${types.length} of ${checked.readingTypes.types.length} used (${types.map(([t, u]) => `${t} ${u.length}`).join(', ')})`);
     if (previous) console.log(`against ${against}: ${problems.filter((p) => p.code === 'word_dropped').length} words dropped`);
   }
@@ -139,7 +144,7 @@ function writeOut(file, text) {
 async function main(argv) {
   const args = [...argv];
   const [cmd, lang] = args.splice(0, 2);
-  if (!['check', 'md', 'page', 'stubs', 'brief'].includes(cmd) || !/^[a-z]{2,3}$/.test(lang ?? '')) {
+  if (!['check', 'md', 'page', 'stubs', 'brief', 'method'].includes(cmd) || !/^[a-z]{2,3}$/.test(lang ?? '')) {
     console.error(USAGE);
     return 2;
   }
@@ -150,6 +155,15 @@ async function main(argv) {
       return await stubsCommand({ repoRoot: REPO_ROOT, lang, write: takeFlag(args, '--write'), check: takeFlag(args, '--check') });
     }
     const out = takeOption(args, '--out');
+    if (cmd === 'method') {
+      const { methodCommand } = await import('./method-report.mjs');
+      const { text, data } = await methodCommand({ repoRoot: REPO_ROOT, lang });
+      const dir = resolve(out ?? join(outDir(REPO_ROOT, lang), 'method'));
+      writeOut(join(dir, 'method-score.json'), `${JSON.stringify(data, null, 1)}\n`);
+      writeOut(join(dir, 'method-score.txt'), text);
+      console.log(text.split('\n## ')[0]);
+      return 0;
+    }
     const checked = await loadChecked({ lang });
     if (checked.problems.some((p) => p.code === 'schema')) {
       for (const p of checked.problems) console.error(`${p.where}: ${p.code} ${p.message}`);

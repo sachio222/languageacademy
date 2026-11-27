@@ -57,13 +57,12 @@
         "$ref": "#/$defs/word_to_add"
       }
     },
-    "later": {
-      "description": "Topics kept for the level after this plan.",
+    "held_patterns": {
+      "description": "Patterns whose needs are met that the plan leaves for the level after it, each with the reason. plan:check asks every other ready pattern to be taught.",
       "type": "array",
-      "items": {
-        "$ref": "#/$defs/text"
-      }
-    }
+      "items": { "type": "object", "additionalProperties": false, "required": ["id", "why"], "properties": { "id": { "$ref": "#/$defs/node" }, "why": { "$ref": "#/$defs/text" } } }
+    },
+    "later": { "description": "Topics kept for the level after this plan.", "type": "array", "items": { "$ref": "#/$defs/text" } }
   },
   "$defs": {
     "code": {
@@ -157,6 +156,7 @@
             "$ref": "#/$defs/module"
           }
         },
+        "carry": { "description": "Words the unit's practice set and exam must carry, because no later lesson of the unit can use them again.", "type": "array", "items": { "$ref": "#/$defs/node" } },
         "notes": {
           "$ref": "#/$defs/texts",
           "description": "Why the unit is built this way: where its guides sit and why."
@@ -241,42 +241,23 @@
             }
           }
         },
-        "practises": {
-          "description": "Patterns taught earlier that this module leans on.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/node"
-          }
+        "carrier": { "$ref": "#/$defs/node", "description": "What carries the module's new words: the pattern or the verb taught first, which every other new word is met through. A list of six or more new words with no new verb, frame word or pattern fails the check." },
+        "met_through": {
+          "description": "For each new word, the owned material its first sentence is built on: the carrier, earlier words of this module, or words and patterns taught before. Keys are the module's words.",
+          "type": "object",
+          "additionalProperties": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/node" } }
         },
-        "minutes": {
-          "description": "First-pass study minutes for one sitting, by the recipe constants. A reading in parts gives the minutes of one part.",
-          "type": "integer",
-          "minimum": 1
-        },
-        "culture_note": {
-          "$ref": "#/$defs/text",
-          "description": "A short note on a custom, where it meets one of the module's words."
-        },
-        "spoken": {
-          "$ref": "#/$defs/texts",
-          "description": "The small words of speech, short forms and slang the module's dialogue uses."
-        },
-        "spoken_example": {
-          "$ref": "#/$defs/text"
-        },
-        "summary": {
-          "$ref": "#/$defs/text",
-          "description": "One line on a practice set."
-        },
-        "note": {
-          "$ref": "#/$defs/text"
-        },
-        "reading": {
-          "$ref": "#/$defs/reading"
-        },
-        "exam": {
-          "$ref": "#/$defs/exam"
-        }
+        "reuses": { "description": "Words the learner already has that this module's pattern gives a new job.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+        "gathers": { "description": "For a guide: the patterns it gathers into one rule or explains, often for the first time; what it gathers counts as taught from its position.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+        "practises": { "description": "Patterns taught earlier that this module leans on.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+        "minutes": { "description": "First-pass study minutes for one sitting, by the recipe constants. A reading in parts gives the minutes of one part.", "type": "integer", "minimum": 1 },
+        "culture_note": { "$ref": "#/$defs/text", "description": "A short note on a custom, where it meets one of the module's words." },
+        "spoken": { "$ref": "#/$defs/texts", "description": "The small words of speech, short forms and slang the module's dialogue uses." },
+        "spoken_example": { "$ref": "#/$defs/text" },
+        "summary": { "$ref": "#/$defs/text", "description": "One line on a practice set." },
+        "note": { "$ref": "#/$defs/text" },
+        "reading": { "$ref": "#/$defs/reading" },
+        "exam": { "$ref": "#/$defs/exam" }
       },
       "allOf": [
         {

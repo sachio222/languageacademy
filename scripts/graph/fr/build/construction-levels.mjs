@@ -56,6 +56,12 @@ export const LEVELS = new Map([
   ...levels('B2', JD, `subj.passe causative.se-faire causative.laisser gerondif.passe relative.ce-dont
     tel-que subj.de-peur-que conditional.hearsay frame.avoir-beau connector.argument-order connector.summary
     connector.reformulation inversion.literary`),
+  // Added on 2026-11-27: the frames a verb or an adjective opens, and the demonstrative pronoun. The inventory lists
+  // verb + infinitive with and without a preposition from A2 and the demonstrative pronouns at A2; verbs of saying +
+  // que beyond dire and penser are B1, where reported speech begins.
+  ...levels('A2', EG, 'frame.verb-infinitive frame.verb-de-infinitive frame.verb-a-infinitive demonstrative.pronoun'),
+  ...levels('A2', JD, 'frame.il-est-adjective-de-infinitive'),
+  ...levels('B1', JD, 'frame.saying-que-clause'),
   // quiconque belongs to formal written French, beyond what a B2 learner needs.
   ...levels('C1', JD, 'quiconque'),
   // For reading only (use: 'recognize'): literary forms a B2 learner seldom meets.

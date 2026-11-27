@@ -59,11 +59,19 @@ function briefText({ plan, unit, module, context, limits, lang, repoRoot, word }
   section('What to write', templatesFor(module).flatMap((t) => [template(t), '']));
 
   const words = module.teaches.words.map(word);
-  const wordLine = (w) => `- *${w.lemma}*: ${w.gloss || 'no meaning recorded'}${w.level ? ` (${w.level})` : ''}${w.register ? `, ${w.register}` : ''}${w.use === 'recognize' ? ', recognition only' : ''}${w.to_add ? ', not in the graph yet' : ''}`;
+  // A graph id as a writer reads it: a word by its lemma, a pattern by its short id.
+  const name = (id) => (lookups.headwords.has(id) ? `*${lookups.headwords.get(id).lemma}*` : `\`${id.split(':').slice(2).join(':')}\``);
+  const through = (w) => (module.met_through?.[w.id]?.length ? `; first met through ${module.met_through[w.id].map(name).join(' and ')}` : '');
+  const wordLine = (w) => `- *${w.lemma}*: ${w.gloss || 'no meaning recorded'}${w.level ? ` (${w.level})` : ''}${w.register ? `, ${w.register}` : ''}${w.use === 'recognize' ? ', recognition only' : ''}${w.to_add ? ', not in the graph yet' : ''}${through(w)}`;
+  const carry = module.kind === 'practice' || module.kind === 'unit_exam' ? (unit.carry ?? []).map(word) : [];
   section('This module', [
     field('Title', module.title), field('Goal', module.goal), field('Situation', module.situation), field('Summary', module.summary),
     module.teaches.constructions.length ? `- **Patterns it teaches.**\n${module.teaches.constructions.map((id) => `  - ${cx(id)}`).join('\n')}` : null,
-    words.length ? `- **${module.kind === 'reading' ? 'Words its table teaches' : 'Words it teaches'}** (${words.length}):\n${words.map((w) => `  ${wordLine(w)}`).join('\n')}` : null,
+    module.carrier ? `- **Carrier.** ${name(module.carrier)}. Teach it first. Every other new word is first met in a sentence built on it and on the words before it, in the order below, and then carries the next new word.` : null,
+    module.reuses?.length ? `- **Known words it gives a new job.** ${module.reuses.map(name).join(', ')}.` : null,
+    words.length ? `- **${module.kind === 'reading' ? 'Words its table teaches' : 'Words it teaches, in the order to teach them'}** (${words.length}):\n${words.map((w) => `  ${wordLine(w)}`).join('\n')}` : null,
+    module.gathers?.length ? `- **Patterns it gathers**, each taught by a lesson before it:\n${module.gathers.map((id) => `  - ${cx(id)}`).join('\n')}` : null,
+    carry.length ? `- **Words it must carry**, because no later lesson of the unit can use them again: ${carry.map((w) => `*${w.lemma}*`).join(', ')}.` : null,
     module.practises?.length ? `- **Patterns it leans on.** ${module.practises.map((id) => `\`${id}\``).join(', ')}` : null,
     field('Culture note', module.culture_note),
     module.spoken?.length ? `- **Spoken words its dialogue uses.** ${module.spoken.join(', ')}${module.spoken_example ? `. For example: ${module.spoken_example}` : ''}` : null,
