@@ -1,0 +1,198 @@
+{
+  "about": "The kinds of human situation a reading can be about, the same list for every language. A plan names one type for each part of each reading (parts[].type). A type is a guide to the feel of a reading, not a rule: each language tells its own country's instance, and a plan may pick a different type at the same point when its culture has a better fit with a similar feel, saying why in one line (type_note). A type is separate from a part's kind (story, article, exposition, learning-alongside): one type can be told as any kind. The examples are illustrations only, never texts to translate or adapt.",
+  "types": [
+    {
+      "id": "meeting-people",
+      "name": "Meeting people",
+      "situation": "Someone says who they are and introduces the people, animals and things around them.",
+      "practises": "introducing and describing; the present of to be and to have; likes, numbers and colours",
+      "levels": ["A1", "A1"],
+      "examples": ["A student in Seville introduces her flatmates and their cat.", "A boy in Osaka introduces his family before dinner."]
+    },
+    {
+      "id": "a-day-in-a-life",
+      "name": "A day in a life",
+      "situation": "Someone tells one ordinary day, from waking up to going to bed, and one thing that made it different.",
+      "practises": "time and sequence (first, then, after); daily routine; telling a day in the present or the past",
+      "levels": ["A1", "A2"],
+      "examples": ["A nurse in Lisbon works a night shift.", "A schoolgirl in Seoul gets through the day of an exam."]
+    },
+    {
+      "id": "making-plans",
+      "name": "Making plans",
+      "situation": "Friends or a family plan an outing or a trip and settle when, where, how and who pays.",
+      "practises": "inviting, accepting and refusing; the near future; can, must and want; questions",
+      "levels": ["A1", "A2"],
+      "examples": ["Two friends in Berlin plan a Saturday at the lake.", "A family in Mexico City plans a weekend on the coast."]
+    },
+    {
+      "id": "a-trip-away",
+      "name": "A trip away",
+      "situation": "A group or a family goes away for a few days: getting there, what they see, what goes wrong and what they bring home.",
+      "practises": "transport and directions; places; telling events in the past; describing",
+      "levels": ["A1", "B1"],
+      "examples": ["A school class spends a week on a farm in the Swedish countryside.", "Cousins take the night train from Milan to Sicily."]
+    },
+    {
+      "id": "a-new-place",
+      "name": "A new place",
+      "situation": "Someone moves somewhere new, finds their way and makes a first friend.",
+      "practises": "describing a place; asking for and giving help; comparing here and there; who and where in relative clauses",
+      "levels": ["A2", "B1"],
+      "examples": ["A girl moves from Porto to Lisbon and starts at a new school.", "A young engineer moves from Hokkaido to Osaka for her first job."]
+    },
+    {
+      "id": "at-work",
+      "name": "At work",
+      "situation": "Someone learns a job, gets through a working day or handles a client, a team or a deadline.",
+      "practises": "requests and polite forms; instructions; the phone; reporting what was done",
+      "levels": ["A2", "B2"],
+      "examples": ["A teenager works a first summer job at a pizzeria in Naples.", "A junior architect in Copenhagen meets her first client."]
+    },
+    {
+      "id": "a-family-celebration",
+      "name": "A family celebration",
+      "situation": "A family prepares for a big day, something goes wrong, and the day happens anyway.",
+      "practises": "preparations and the future; wishes and toasts; telling the day in the past; family words",
+      "levels": ["A1", "B1"],
+      "examples": ["A grandmother turns ninety in a village in Bavaria.", "Two families meet for a wedding in Kraków."]
+    },
+    {
+      "id": "a-national-celebration",
+      "name": "A national celebration",
+      "situation": "The whole country or a whole town marks a day of the year, and the people in the story spend it together.",
+      "practises": "customs in the general present; dates and times; telling one evening from several points of view",
+      "levels": ["A2", "B2"],
+      "examples": ["The Day of the Dead in Oaxaca.", "Midsummer Eve on a Swedish island.", "Lunar New Year in Taipei."]
+    },
+    {
+      "id": "an-emergency",
+      "name": "An emergency",
+      "situation": "Something goes wrong fast, and people act, call for help and get through it.",
+      "practises": "urgent instructions and the imperative; phone calls; what must be done; telling events hour by hour",
+      "levels": ["A2", "B1"],
+      "examples": ["A pipe bursts at midnight in a flat in Madrid.", "A hiker twists an ankle in the Scottish Highlands."]
+    },
+    {
+      "id": "a-mystery",
+      "name": "A mystery",
+      "situation": "Something strange happens or goes missing, someone asks questions, and the answer surprises everyone.",
+      "practises": "asking questions; describing people and things; the past with background and events; guessing (maybe, must have)",
+      "levels": ["A2", "B2"],
+      "examples": ["A painting vanishes from a small museum in Kraków.", "Footsteps sound in an empty house in a Kyoto alley."]
+    },
+    {
+      "id": "a-friendship",
+      "name": "A friendship",
+      "situation": "Two people who seem to have nothing in common become friends, and each changes the other.",
+      "practises": "character and feelings; telling a life; advice; regret and the past conditional",
+      "levels": ["A2", "B2"],
+      "examples": ["A teenager in Athens and the old man who mends shoes downstairs.", "A newcomer and a retired farmer in a Dutch village."]
+    },
+    {
+      "id": "asking-why",
+      "name": "Asking why",
+      "situation": "Someone who does not know, a child or a newcomer, asks why things are as they are, and someone who knows explains.",
+      "practises": "why and because; explaining how things work; questions of every kind",
+      "levels": ["A1", "B1"],
+      "examples": ["A girl in Norway asks her grandfather why the sun does not set in summer.", "A boy in Cairo asks his aunt why the Nile once flooded every year."]
+    },
+    {
+      "id": "choosing-a-life",
+      "name": "Choosing a life",
+      "situation": "Someone weighs the life they have against the one they want: a dream for later, or a working life looked back on.",
+      "practises": "wishes and the subjunctive; hypotheses with if; the conditional; telling a life in the past",
+      "levels": ["A2", "B2"],
+      "examples": ["A bank clerk in Warsaw dreams of opening a bakery.", "A football coach in Porto Alegre looks back on forty years at one club."]
+    },
+    {
+      "id": "getting-things-sorted",
+      "name": "Getting things sorted",
+      "situation": "Someone deals with an office, a firm or a landlord, by letter or at a desk, and gets what they are owed.",
+      "practises": "formal register and the set phrases of letters; complaining and claiming; explaining what happened; polite insistence",
+      "levels": ["A2", "B2"],
+      "examples": ["A student in Rome renews her residence permit.", "A tenant in Hamburg gets his deposit back."]
+    },
+    {
+      "id": "a-debate",
+      "name": "A debate",
+      "situation": "Two sides argue a question that matters to a town or a country; each admits a point, and someone decides.",
+      "practises": "giving an opinion; agreeing and disagreeing; conceding (although, even if); the connectors of an argument",
+      "levels": ["B1", "B2"],
+      "examples": ["A radio debate in Barcelona on holiday flats.", "Parents in Seoul argue over Saturday classes."]
+    },
+    {
+      "id": "a-big-question",
+      "name": "A big question",
+      "situation": "A short essay on a question people ask everywhere: what learning is, what makes a good life, what we owe each other.",
+      "practises": "abstract nouns; defining and generalising; cause and consequence; the impersonal (one, people)",
+      "levels": ["A2", "B2"],
+      "examples": ["What makes a good teacher? An essay for a Polish school magazine.", "Why keep a promise? A short essay in the manner of the Confucian classics."]
+    },
+    {
+      "id": "known-for",
+      "name": "What the country is known for",
+      "situation": "Something the country is famous for, and proud of, explained: where it comes from, who made it, and what it means to people there today.",
+      "practises": "explaining and defining; the past for origins; the passive; opinions about it",
+      "levels": ["A2", "B2"],
+      "examples": ["German engineering and the Mittelstand workshop.", "Italian food and the Sunday meal.", "Japanese craft and the master who trains an apprentice."]
+    },
+    {
+      "id": "how-people-live",
+      "name": "How people live",
+      "situation": "A custom, a habit or a way of life of the country: what people do, why they do it, and what is changing.",
+      "practises": "the general present; frequency; what is usual; comparing then and now",
+      "levels": ["A2", "B2"],
+      "examples": ["Why Spaniards eat dinner at ten.", "The Swedish coffee break, fika.", "Shoes off at the door in Korea."]
+    },
+    {
+      "id": "a-moment-in-history",
+      "name": "A moment in history",
+      "situation": "A real moment of the country's past, told through the people who lived it or the place that keeps it.",
+      "practises": "the narrative past; dates and centuries; the passive; reported speech",
+      "levels": ["A2", "B2"],
+      "examples": ["The night the Berlin Wall opened.", "The cave of Altamira and the paintings found there.", "A day on the building site of the Great Wall at Shanhaiguan."]
+    },
+    {
+      "id": "cultures-meet",
+      "name": "Cultures meet",
+      "situation": "Two peoples meet, clash and mix, in a real historical moment or through people today who carry that history.",
+      "practises": "comparison and contrast (while, whereas); the narrative past; cause and consequence; two points of view",
+      "levels": ["B1", "B2"],
+      "examples": ["Christians, Muslims and Jews in Moorish Córdoba.", "The Sami and the Swedish settlers in the far north.", "Traders from four empires in the market of Kashgar on the Silk Road."]
+    },
+    {
+      "id": "how-others-see-us",
+      "name": "How others see us",
+      "situation": "How outsiders picture the country, what they get wrong, and what the people who live there make of it.",
+      "practises": "reported opinion; clichés and what lies behind them; concession; humour and irony",
+      "levels": ["B1", "B2"],
+      "examples": ["What Italians make of Hollywood's Tuscany.", "Tokyo residents read a foreign guidebook to their city."]
+    },
+    {
+      "id": "a-place-portrait",
+      "name": "A place portrait",
+      "situation": "A town, a region or a landmark: what it looks like, what people do there, and why it matters to the country.",
+      "practises": "describing places; there is and there are; location; a few dates of history",
+      "levels": ["A1", "B2"],
+      "examples": ["The canals of Amsterdam.", "The market square of Kraków.", "The cave town of Matera."]
+    }
+  ],
+  "written": {
+    "about": "The type of each reading a language's course has already written, recorded here because written modules are not edited to carry one. The plan's readings carry their own type.",
+    "fr": {
+      "2024-01-09-reading1": "meeting-people",
+      "2024-01-22-reading2": "a-trip-away",
+      "2024-02-03-reading3": "a-moment-in-history",
+      "2024-03-30-reading-4": "making-plans",
+      "2024-04-13-reading-5": "a-moment-in-history",
+      "2024-04-24-reading-6": "making-plans",
+      "2024-05-07-reading-7": "a-big-question",
+      "2024-05-20-reading-8": "a-day-in-a-life",
+      "2024-06-05-reading-9": "a-day-in-a-life",
+      "2024-02-01-reading-10": "choosing-a-life",
+      "2024-02-12-reading-11": "how-people-live",
+      "unit12-reading": "asking-why"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "la-time@1",
+  "version": 1,
+  "about": "Time constants for every study-time estimate (unit-prep design section 7.1). Each value is a working number until the research check confirms it or L's measured time on task replaces it.",
+  "smallest_daily_minutes": { "value": 10, "basis": "l:j-plan.js MINS (10, 15, 20, 30, 45)" },
+  "review_minutes_per_session": { "value": 3, "basis": "l:j-plan.js reminder copy (about 3 minutes of reviews)" },
+  "days": { "value": 5, "basis": "jake:2026-11-26 about five days of light study" },
+  "steps": {
+    "vocabulary-intro": {
+      "s_per_word": { "value": 20, "basis": "working" },
+      "s_per_concept": { "value": 40, "basis": "working" },
+      "s_per_table_row": { "value": 5, "basis": "working" }
+    },
+    "pronunciation": { "s_per_phrase": { "value": 20, "basis": "working" } },
+    "flash-cards": { "s_per_word_pass": { "value": 8, "basis": "working" }, "passes": { "value": 2, "basis": "working" } },
+    "speed-match": { "s_per_round": { "value": 60, "basis": "working" }, "round_size": { "value": 6, "basis": "l:SPEED_MATCH_SIZE" } },
+    "items": {
+      "respond": { "value": 50, "basis": "working" },
+      "translate": { "value": 45, "basis": "working" },
+      "transform": { "value": 40, "basis": "working" },
+      "gapfill": { "value": 30, "basis": "working" },
+      "gapfill_extra_blank": { "value": 10, "basis": "working" },
+      "meaning": { "value": 25, "basis": "working" },
+      "choice": { "value": 15, "basis": "working" },
+      "comprehension": { "value": 30, "basis": "working" }
+    },
+    "reading-passage": {
+      "words_per_minute": { "value": 50, "basis": "working" },
+      "s_per_popup": { "value": 10, "basis": "working" },
+      "s_per_question": { "value": 30, "basis": "working" }
+    }
+  },
+  "review": {
+    "reviews_per_word": { "value": 4, "basis": "working" },
+    "s_review_word": { "value": 6, "basis": "working" },
+    "reviews_per_construction": { "value": 3, "basis": "working" },
+    "s_review_construction": { "value": 40, "basis": "working" }
+  }
+}

@@ -113,3 +113,6 @@ Thumbs.db
 .supabase/
 
 
+
+# plan:md, plan:page and plan:brief output (made from content/<lang>/course-plan.json; the page may show frequency bands)
+.plan-out/
