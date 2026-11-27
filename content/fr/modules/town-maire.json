@@ -6,10 +6,6 @@
   "title": "The plan for the cinema {Le projet pour le cinéma}",
   "plan": {
     "words": [
-      "fr:lex:autoriser",
-      "fr:lex:provoquer",
-      "fr:lex:reagir",
-      "fr:lex:imposer",
       "fr:lex:maire",
       "fr:lex:mesure",
       "fr:lex:acces",
@@ -17,9 +13,7 @@
       "fr:lex:principe",
       "fr:lex:limite"
     ],
-    "constructions": [
-      "fr:cx:connector.argument-order"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

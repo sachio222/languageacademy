@@ -7,17 +7,11 @@
   "plan": {
     "words": [
       "fr:lex:battre",
-      "fr:lex:epouser",
-      "fr:lex:elever",
       "fr:lex:jeunesse",
-      "fr:lex:armee",
-      "fr:lex:soldat",
-      "fr:lex:paix",
       "fr:lex:liberte",
       "fr:lex:ennemi",
       "fr:lex:epoux",
-      "fr:lex:fiance",
-      "fr:lex:mort"
+      "fr:lex:fiance"
     ],
     "constructions": [],
     "source": "course-plan.json"

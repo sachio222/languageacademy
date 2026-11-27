@@ -26,6 +26,9 @@
 //   patterns   patterns known (fixed phrases and form tables left out)
 //   reach      sentence shapes: every known word in every known pattern whose slot takes it
 //   core       share of each level list (words and patterns) known
+//   recognised words a learner can recognise: words known (taught or open from the start) plus every member of the
+//              near-cognate families a guide has taught (a lesson's `families`). Recognising is not producing, so
+//              recognised words never fill a pattern's slot in reach
 // No frequency value leaves this file: z is used for ordering and never written to a result.
 import { roles } from './method-score.mjs';
 
@@ -40,7 +43,7 @@ export const weightOfRank = (rank) => (rank ? Math.max(1, 7 - Math.log10(rank)) 
  * taughtAt: Map<id, position>; free: Set<headword id> known from the start; ranks: Map<lemma, rank> | null;
  * core: { [level]: { words: [id], constructions: [id] } }.
  */
-export function universe({ graph, table, taughtAt, free = new Set(), ranks = null, core = {} }) {
+export function universe({ graph, table, taughtAt, free = new Set(), ranks = null, core = {}, families = new Map() }) {
   const r = roles(graph, table);
   const formOf = new Map((graph.forms ?? []).map((f) => [f.id, f.of]));
   const wordAt = new Map();
@@ -73,7 +76,7 @@ export function universe({ graph, table, taughtAt, free = new Set(), ranks = nul
     accepts.set(id, new Set(pool.filter((w) => r.accepts(p, r.hw.get(w)))));
   }
   const coreSets = Object.fromEntries(Object.entries(core).map(([lv, c]) => [lv, { words: new Set(c.words ?? []), constructions: new Set(c.constructions ?? []) }]));
-  return { words, patterns, free: new Set(freeWords), accepts, core: coreSets };
+  return { words, patterns, free: new Set(freeWords), accepts, core: coreSets, families: new Map([...families].map(([k, ids]) => [k, new Set(ids)])) };
 }
 
 /** A sequence that holds `id` and everything it needs before it (needs, required words, one carrier). */
@@ -278,6 +281,7 @@ export function violations(lessons, U) {
 /** The measures after every lesson. */
 export function simulate(lessons, U, cost) {
   const words = new Set(U.free);
+  const recognised = new Set(U.free);
   const pats = [];
   let minutes = 0;
   let reach = 0;
@@ -290,10 +294,12 @@ export function simulate(lessons, U, cost) {
   lessons.forEach((l, i) => {
     minutes += l.minutes ?? ((l.extra ? 0 : cost.c0) + cost.cw * l.words.length + cost.cp * l.patterns.length);
     if (!l.extra) teaching += 1;
+    for (const f of l.families ?? []) for (const id of U.families?.get(f) ?? []) recognised.add(id);
     for (const id of l.order) {
       if (U.words.has(id)) {
         if (words.has(id)) continue;
         words.add(id);
+        recognised.add(id);
         taught += 1;
         reach += pats.filter((p) => U.accepts.get(p).has(id)).length;
         for (const lv of levels) if (U.core[lv].words.has(id)) coreHave[lv] += 1;
@@ -308,7 +314,7 @@ export function simulate(lessons, U, cost) {
     }
     if (l.minutes === undefined && !l.extra && cost.unit && cost.every && teaching % cost.every === 0) minutes += cost.unit;
     out.push({
-      lesson: i + 1, minutes: Math.round(minutes * 10) / 10, words: taught, patterns: pats.length, reach,
+      lesson: i + 1, minutes: Math.round(minutes * 10) / 10, words: taught, patterns: pats.length, reach, recognised: recognised.size,
       core: Object.fromEntries(levels.map((lv) => [lv, coreTotal[lv] ? Math.round((coreHave[lv] / coreTotal[lv]) * 1000) / 1000 : 0])),
     });
   });
@@ -347,7 +353,7 @@ export function valueAt(samples, axis, x, field) {
   return v;
 }
 
-const pick = (s) => ({ minutes: s.minutes, words: s.words, patterns: s.patterns, reach: s.reach, core: s.core });
+const pick = (s) => ({ minutes: s.minutes, words: s.words, patterns: s.patterns, reach: s.reach, recognised: s.recognised, core: s.core });
 
 /** Each order's measures at the given study hours and word counts (null where an order never gets that far). */
 export function summarize(series, { hours = [10, 25, 50, 100, 200], words = [100, 300, 600, 1000] } = {}) {
@@ -358,7 +364,7 @@ export function summarize(series, { hours = [10, 25, 50, 100, 200], words = [100
       total: { hours: Math.round((last.minutes / 60) * 10) / 10, words: last.words, patterns: last.patterns, reach: last.reach },
       hours: hours.map((h) => {
         const s = [...samples].reverse().find((x) => x.minutes <= h * 60);
-        return { hours: h, ...(s ? pick(s) : { minutes: 0, words: 0, patterns: 0, reach: 0, core: {} }) };
+        return { hours: h, ...(s ? pick(s) : { minutes: 0, words: 0, patterns: 0, reach: 0, recognised: 0, core: {} }) };
       }),
       words: words.map((w) => {
         const s = [...samples].reverse().find((x) => x.words <= w);
@@ -366,6 +372,24 @@ export function summarize(series, { hours = [10, 25, 50, 100, 200], words = [100
         return { ...pick(s), words: w, hours: Math.round((s.minutes / 60) * 10) / 10 };
       }),
     };
+  }
+  return out;
+}
+
+/**
+ * `lessons` with a guide lesson for each family group put in where its study time first reaches `at` minutes, so an
+ * order gets the same near-cognate guides at the same hours as another: guides [{ at, minutes, families }].
+ */
+export function withGuides(lessons, U, cost, guides) {
+  const base = simulate(lessons, U, cost);
+  const out = [...lessons];
+  const sorted = [...guides].sort((a, b) => a.at - b.at);
+  let shift = 0;
+  for (const g of sorted) {
+    const i = base.findIndex((s) => s.minutes >= g.at);
+    const at = (i < 0 ? lessons.length : i) + shift;
+    out.splice(at, 0, { words: [], patterns: [], order: [], minutes: g.minutes, families: g.families, extra: true });
+    shift += 1;
   }
   return out;
 }

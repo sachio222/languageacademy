@@ -6,22 +6,14 @@
   "title": "Best enemies {les meilleurs ennemis}",
   "plan": {
     "words": [
-      "fr:lex:envahir",
-      "fr:lex:conquerir",
-      "fr:lex:vaincre",
       "fr:lex:defaite",
-      "fr:lex:alliance",
       "fr:lex:marin",
-      "fr:lex:legende",
       "fr:lex:drame",
       "fr:lex:catastrophe",
-      "fr:lex:consequence",
       "fr:lex:rivalite",
       "fr:lex:fameux"
     ],
-    "constructions": [
-      "fr:cx:passe-simple"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

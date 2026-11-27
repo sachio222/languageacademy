@@ -12,12 +12,10 @@
       "fr:lex:trace",
       "fr:lex:sale",
       "fr:lex:bizarre",
-      "fr:lex:impossible",
       "fr:lex:tranquille",
       "fr:lex:dangereux",
       "fr:lex:terrible",
-      "fr:lex:doucement",
-      "fr:lex:exactement"
+      "fr:lex:doucement"
     ],
     "constructions": [],
     "source": "course-plan.json"

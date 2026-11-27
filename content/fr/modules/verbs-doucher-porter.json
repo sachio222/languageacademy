@@ -6,12 +6,7 @@
   "title": "Before work ({se doucher}, {porter}, {traverser}, {emmener})",
   "plan": {
     "words": [
-      "fr:lex:doucher",
-      "fr:lex:porter",
-      "fr:lex:traverser",
-      "fr:lex:emmener",
-      "fr:lex:bosser",
-      "fr:lex:foot"
+      "fr:lex:doucher"
     ],
     "constructions": [],
     "source": "course-plan.json"

@@ -14,7 +14,8 @@
       "fr:lex:lorsque"
     ],
     "constructions": [
-      "fr:cx:connector.addition"
+      "fr:cx:connector.addition",
+      "fr:cx:neg.nul"
     ],
     "source": "course-plan.json"
   }

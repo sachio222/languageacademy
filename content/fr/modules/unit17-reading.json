@@ -7,15 +7,10 @@
   "plan": {
     "words": [
       "fr:lex:camion",
-      "fr:lex:avancer",
-      "fr:lex:repartir",
       "fr:lex:courageux",
       "fr:lex:rire",
       "fr:lex:reine",
-      "fr:lex:inventer",
-      "fr:lex:attacher",
-      "fr:lex:danger",
-      "fr:lex:silence"
+      "fr:lex:danger"
     ],
     "constructions": [
       "fr:cx:futur-simple",

@@ -7,11 +7,7 @@
   "plan": {
     "words": [
       "fr:lex:chasser",
-      "fr:lex:mordre",
-      "fr:lex:piquer",
-      "fr:lex:nourrir",
       "fr:lex:loup",
-      "fr:lex:chasse",
       "fr:lex:mouche",
       "fr:lex:patte",
       "fr:lex:canard",
@@ -19,7 +15,9 @@
       "fr:lex:souris",
       "fr:lex:sauvage"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:relative.ce-dont"
+    ],
     "source": "course-plan.json"
   }
 }

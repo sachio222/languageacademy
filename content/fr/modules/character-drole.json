@@ -6,7 +6,6 @@
   "title": "Who's who in the class photo {le caractère}",
   "plan": {
     "words": [
-      "fr:lex:serieux",
       "fr:lex:calme",
       "fr:lex:charmant",
       "fr:lex:curieux",
@@ -17,9 +16,12 @@
       "fr:lex:idiot",
       "fr:lex:stupide",
       "fr:lex:malheureux",
-      "fr:lex:pareil"
+      "fr:lex:pareil",
+      "fr:lex:quiconque"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:quiconque"
+    ],
     "source": "course-plan.json"
   }
 }

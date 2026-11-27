@@ -20,7 +20,8 @@
       "fr:lex:tel"
     ],
     "constructions": [
-      "fr:cx:tel-que"
+      "fr:cx:tel-que",
+      "fr:cx:subj.de-peur-que"
     ],
     "source": "course-plan.json"
   }

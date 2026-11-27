@@ -19,7 +19,8 @@
       "fr:lex:canadien"
     ],
     "constructions": [
-      "fr:cx:demonstrative.pronoun"
+      "fr:cx:demonstrative.pronoun",
+      "fr:cx:connector.cause-prep"
     ],
     "source": "course-plan.json"
   }

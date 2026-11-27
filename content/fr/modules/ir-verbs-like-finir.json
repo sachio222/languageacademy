@@ -5,14 +5,7 @@
   "status": "planned",
   "title": "-ir verbs like {finir} (je choisis, nous choisissons)",
   "plan": {
-    "words": [
-      "fr:lex:choisir",
-      "fr:lex:reflechir",
-      "fr:lex:remplir",
-      "fr:lex:grandir",
-      "fr:lex:boulanger",
-      "fr:lex:boulot"
-    ],
+    "words": [],
     "constructions": [
       "fr:cx:verb.ir.present",
       "fr:cx:ptcp.ir",

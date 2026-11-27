@@ -16,11 +16,11 @@
       "fr:lex:compte",
       "fr:lex:botte",
       "fr:lex:responsable",
-      "fr:lex:necessaire",
-      "fr:lex:general"
+      "fr:lex:quoique"
     ],
     "constructions": [
-      "fr:cx:subj.judgment"
+      "fr:cx:subj.judgment",
+      "fr:cx:subj.quoique"
     ],
     "source": "course-plan.json"
   }

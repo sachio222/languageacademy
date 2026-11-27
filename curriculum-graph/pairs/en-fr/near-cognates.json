@@ -1,0 +1,348 @@
+{
+  "about": "Near-cognate families for English speakers learning French: a French ending that regularly answers an English one, so one short guide lets a learner recognise a whole family of words no lesson teaches. A family's members are computed (scripts/plan/cognates.mjs): a headword whose lemma has the French ending, whose part of speech fits, and one of whose English glosses has the English ending on a stem that matches the French stem. Words in falseFriends here or in cognates.json never count. Recognising a word is not producing it: these words count toward words a learner can recognise, never toward words taught.",
+  "families": [
+    {
+      "id": "tion",
+      "fr": "tion$",
+      "en": "tion$",
+      "pos": [
+        "noun"
+      ],
+      "rule": "-tion stays -tion",
+      "example": "la nation, l'information"
+    },
+    {
+      "id": "sion",
+      "fr": "sion$",
+      "en": "sion$",
+      "pos": [
+        "noun"
+      ],
+      "rule": "-sion stays -sion",
+      "example": "la décision, la télévision"
+    },
+    {
+      "id": "ure",
+      "fr": "ure$",
+      "en": "ure$",
+      "pos": [
+        "noun"
+      ],
+      "rule": "-ure stays -ure",
+      "example": "la culture, l'aventure"
+    },
+    {
+      "id": "ance-ence",
+      "fr": "(ance|ence)$",
+      "en": "(ance|ence|ancy|ency)$",
+      "pos": [
+        "noun"
+      ],
+      "rule": "-ance and -ence stay, or become -ancy and -ency",
+      "example": "la chance, la différence"
+    },
+    {
+      "id": "ite-ty",
+      "fr": "ité$",
+      "en": "ty$",
+      "pos": [
+        "noun"
+      ],
+      "rule": "-ité is English -ty",
+      "example": "la liberté, l'université"
+    },
+    {
+      "id": "isme-ism",
+      "fr": "isme$",
+      "en": "ism$",
+      "pos": [
+        "noun"
+      ],
+      "rule": "-isme is English -ism",
+      "example": "le tourisme"
+    },
+    {
+      "id": "iste-ist",
+      "fr": "iste$",
+      "en": "ist$",
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "rule": "-iste is English -ist",
+      "example": "un artiste, un dentiste"
+    },
+    {
+      "id": "ique-ic",
+      "fr": "ique$",
+      "en": "(ic|ical|ics)$",
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "rule": "-ique is English -ic or -ical",
+      "example": "la musique, électrique, pratique"
+    },
+    {
+      "id": "al",
+      "fr": "(al|elle)$",
+      "en": "al$",
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "rule": "-al stays -al",
+      "example": "national, normal"
+    },
+    {
+      "id": "eux-ous",
+      "fr": "eux$",
+      "en": "ous$",
+      "pos": [
+        "adjective"
+      ],
+      "rule": "-eux is English -ous",
+      "example": "dangereux, nerveux"
+    },
+    {
+      "id": "if-ive",
+      "fr": "if$",
+      "en": "ive$",
+      "pos": [
+        "adjective",
+        "noun"
+      ],
+      "rule": "-if (feminine -ive) is English -ive",
+      "example": "actif, positif"
+    },
+    {
+      "id": "able-ible",
+      "fr": "(able|ible)$",
+      "en": "(able|ible)$",
+      "pos": [
+        "adjective"
+      ],
+      "rule": "-able and -ible stay",
+      "example": "possible, confortable"
+    },
+    {
+      "id": "aire-ary",
+      "fr": "aire$",
+      "en": "ary$",
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "rule": "-aire is English -ary",
+      "example": "nécessaire, le dictionnaire"
+    },
+    {
+      "id": "oire-ory",
+      "fr": "oire$",
+      "en": "ory$",
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "rule": "-oire is English -ory",
+      "example": "l'histoire, obligatoire"
+    },
+    {
+      "id": "ment-ly",
+      "fr": "ment$",
+      "en": "ly$",
+      "pos": [
+        "adverb"
+      ],
+      "rule": "-ment on an adjective is English -ly",
+      "example": "rapidement, exactement"
+    },
+    {
+      "id": "er-verbs",
+      "fr": "er$",
+      "en": "^to [a-z]+$",
+      "pos": [
+        "verb"
+      ],
+      "rule": "many -er verbs are English verbs with -er; their past participle in -é is English -ed",
+      "example": "organiser, préparer, j'ai préparé"
+    }
+  ],
+  "falseFriends": [
+    {
+      "lemma": "actuel",
+      "means": "current",
+      "looks_like": "actual"
+    },
+    {
+      "lemma": "éventuellement",
+      "means": "possibly",
+      "looks_like": "eventually"
+    },
+    {
+      "lemma": "éventuel",
+      "means": "possible",
+      "looks_like": "eventual"
+    },
+    {
+      "lemma": "sensible",
+      "means": "sensitive",
+      "looks_like": "sensible"
+    },
+    {
+      "lemma": "librairie",
+      "means": "bookshop",
+      "looks_like": "library"
+    },
+    {
+      "lemma": "location",
+      "means": "rental",
+      "looks_like": "location"
+    },
+    {
+      "lemma": "collège",
+      "means": "lower secondary school",
+      "looks_like": "college"
+    },
+    {
+      "lemma": "lecture",
+      "means": "reading",
+      "looks_like": "lecture"
+    },
+    {
+      "lemma": "rester",
+      "means": "to stay",
+      "looks_like": "to rest"
+    },
+    {
+      "lemma": "assister",
+      "means": "to attend",
+      "looks_like": "to assist"
+    },
+    {
+      "lemma": "attendre",
+      "means": "to wait",
+      "looks_like": "to attend"
+    },
+    {
+      "lemma": "blesser",
+      "means": "to injure",
+      "looks_like": "to bless"
+    },
+    {
+      "lemma": "prétendre",
+      "means": "to claim",
+      "looks_like": "to pretend"
+    },
+    {
+      "lemma": "rater",
+      "means": "to miss, to fail",
+      "looks_like": "to rate"
+    },
+    {
+      "lemma": "supporter",
+      "means": "to put up with",
+      "looks_like": "to support"
+    },
+    {
+      "lemma": "demander",
+      "means": "to ask",
+      "looks_like": "to demand"
+    },
+    {
+      "lemma": "formidable",
+      "means": "great, wonderful",
+      "looks_like": "formidable"
+    },
+    {
+      "lemma": "coin",
+      "means": "corner",
+      "looks_like": "coin"
+    },
+    {
+      "lemma": "car",
+      "means": "coach; because",
+      "looks_like": "car"
+    },
+    {
+      "lemma": "journée",
+      "means": "day",
+      "looks_like": "journey"
+    },
+    {
+      "lemma": "monnaie",
+      "means": "change, currency",
+      "looks_like": "money"
+    },
+    {
+      "lemma": "raisin",
+      "means": "grape",
+      "looks_like": "raisin"
+    },
+    {
+      "lemma": "préservatif",
+      "means": "condom",
+      "looks_like": "preservative"
+    },
+    {
+      "lemma": "excité",
+      "means": "worked up (can be sexual)",
+      "looks_like": "excited"
+    },
+    {
+      "lemma": "envie",
+      "means": "wish, desire",
+      "looks_like": "envy"
+    },
+    {
+      "lemma": "habit",
+      "means": "garment",
+      "looks_like": "habit"
+    },
+    {
+      "lemma": "injure",
+      "means": "insult",
+      "looks_like": "injury"
+    },
+    {
+      "lemma": "ignorer",
+      "means": "not to know",
+      "looks_like": "to ignore"
+    },
+    {
+      "lemma": "commander",
+      "means": "to order",
+      "looks_like": "to command"
+    },
+    {
+      "lemma": "affaire",
+      "means": "business, matter",
+      "looks_like": "affair"
+    },
+    {
+      "lemma": "personnel",
+      "means": "staff; personal",
+      "looks_like": "personnel"
+    },
+    {
+      "lemma": "physicien",
+      "means": "physicist",
+      "looks_like": "physician"
+    },
+    {
+      "lemma": "vacances",
+      "means": "holidays",
+      "looks_like": "vacancies"
+    },
+    {
+      "lemma": "figure",
+      "means": "face; figure",
+      "looks_like": "figure"
+    },
+    {
+      "lemma": "confidence",
+      "means": "secret told in trust",
+      "looks_like": "confidence"
+    }
+  ]
+}

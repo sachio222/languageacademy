@@ -7,19 +7,15 @@
   "plan": {
     "words": [
       "fr:lex:proposer",
-      "fr:lex:conseiller",
-      "fr:lex:choix",
-      "fr:lex:conseil",
-      "fr:lex:facon",
-      "fr:lex:propos",
-      "fr:lex:plan",
       "fr:lex:contraire",
       "fr:lex:difference",
       "fr:lex:justement",
       "fr:lex:absolument",
       "fr:lex:parfaitement"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:subj.doubt-denial"
+    ],
     "source": "course-plan.json"
   }
 }

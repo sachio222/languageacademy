@@ -17,9 +17,7 @@
       "fr:lex:inconnu",
       "fr:lex:ailleurs"
     ],
-    "constructions": [
-      "fr:cx:gerondif.passe"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

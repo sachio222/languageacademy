@@ -7,11 +7,7 @@
   "plan": {
     "words": [
       "fr:lex:attraper",
-      "fr:lex:promener",
-      "fr:lex:deranger",
-      "fr:lex:ramasser",
       "fr:lex:vache",
-      "fr:lex:cheval",
       "fr:lex:cochon",
       "fr:lex:poule",
       "fr:lex:serpent",
@@ -19,7 +15,9 @@
       "fr:lex:nombreux",
       "fr:lex:doux"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.argument-order"
+    ],
     "source": "course-plan.json"
   }
 }

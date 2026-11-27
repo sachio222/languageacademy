@@ -7,21 +7,13 @@
   "plan": {
     "words": [
       "fr:lex:forcer",
-      "fr:lex:effacer",
-      "fr:lex:gardien",
       "fr:lex:portrait",
-      "fr:lex:palais",
       "fr:lex:galerie",
-      "fr:lex:menace",
-      "fr:lex:evenement",
       "fr:lex:foule",
       "fr:lex:visible",
-      "fr:lex:invisible",
-      "fr:lex:quiconque"
+      "fr:lex:invisible"
     ],
-    "constructions": [
-      "fr:cx:quiconque"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

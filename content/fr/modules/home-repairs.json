@@ -6,17 +6,11 @@
   "title": "When something breaks at home {la panne}",
   "plan": {
     "words": [
-      "fr:lex:bloquer",
-      "fr:lex:enfermer",
-      "fr:lex:fuite",
       "fr:lex:robinet",
       "fr:lex:chauffage",
-      "fr:lex:panne",
       "fr:lex:electricien",
       "fr:lex:plombier",
       "fr:lex:reparateur",
-      "fr:lex:proprietaire",
-      "fr:lex:serrure",
       "fr:lex:serrurier"
     ],
     "constructions": [

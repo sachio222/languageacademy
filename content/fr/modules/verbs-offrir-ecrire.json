@@ -6,12 +6,7 @@
   "title": "A birthday cake ({offrir}, {écrire}, {dessiner}, {souhaiter}, {espérer}, {féliciter})",
   "plan": {
     "words": [
-      "fr:lex:souhaiter",
-      "fr:lex:esperer",
-      "fr:lex:offrir",
-      "fr:lex:ecrire",
-      "fr:lex:dessiner",
-      "fr:lex:feliciter"
+      "fr:lex:ecrire"
     ],
     "constructions": [],
     "source": "course-plan.json"

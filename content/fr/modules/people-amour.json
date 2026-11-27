@@ -7,19 +7,15 @@
   "plan": {
     "words": [
       "fr:lex:rejoindre",
-      "fr:lex:accompagner",
-      "fr:lex:amour",
-      "fr:lex:couple",
-      "fr:lex:amitie",
-      "fr:lex:enfance",
-      "fr:lex:camarade",
       "fr:lex:bague",
       "fr:lex:amoureux",
       "fr:lex:mignon",
       "fr:lex:romantique",
       "fr:lex:celibataire"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.cause-consequence"
+    ],
     "source": "course-plan.json"
   }
 }

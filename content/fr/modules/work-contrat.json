@@ -7,10 +7,6 @@
   "plan": {
     "words": [
       "fr:lex:etablir",
-      "fr:lex:accorder",
-      "fr:lex:augmenter",
-      "fr:lex:enregistrer",
-      "fr:lex:convenir",
       "fr:lex:contrat",
       "fr:lex:copie",
       "fr:lex:terme",
@@ -19,9 +15,7 @@
       "fr:lex:mensuel",
       "fr:lex:irregulier"
     ],
-    "constructions": [
-      "fr:cx:neg.nul"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

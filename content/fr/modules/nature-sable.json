@@ -16,8 +16,7 @@
       "fr:lex:source",
       "fr:lex:ombre",
       "fr:lex:flamme",
-      "fr:lex:paysan",
-      "fr:lex:fantastique"
+      "fr:lex:paysan"
     ],
     "constructions": [],
     "source": "course-plan.json"

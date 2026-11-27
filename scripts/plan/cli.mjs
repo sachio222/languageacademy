@@ -17,6 +17,7 @@ import { pathToFileURL } from 'node:url';
 import { ContentError, countByCode, plural, problemLine } from '../content/problems.mjs';
 import { checkPlan } from './check.mjs';
 import { levelsReached, planContext } from './context.mjs';
+import { readFamilies } from './cognates.mjs';
 import { frequencyDir, frequencyTrend, readRanks } from './frequency.mjs';
 import { readLimits } from './limits.mjs';
 import { methodRules, readRoles } from './method-score.mjs';
@@ -77,6 +78,8 @@ export async function loadChecked({ repoRoot = REPO_ROOT, lang, previous = null 
     names: base.graph.names,
     writtenUnits: new Set(base.course.map((m) => m.unitKey)),
     outlineUnits: new Map((base.content?.units ?? []).map((u) => [u.unit_key, u])),
+    writtenAt: new Map(base.course.map((m) => [m.moduleKey, m.position])),
+    families: readFamilies(repoRoot, plan.native, lang, projected.graph)?.members ?? null,
   });
   return { plan, method, readingTypes, limits, context, ...result };
 }

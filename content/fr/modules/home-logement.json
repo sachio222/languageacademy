@@ -6,21 +6,11 @@
   "title": "Finding a flat {le logement}",
   "plan": {
     "words": [
-      "fr:lex:demenager",
-      "fr:lex:signer",
-      "fr:lex:contacter",
-      "fr:lex:appartenir",
-      "fr:lex:posseder",
-      "fr:lex:ascenseur",
-      "fr:lex:toit",
-      "fr:lex:cour",
-      "fr:lex:identite",
-      "fr:lex:contact",
-      "fr:lex:loyer",
       "fr:lex:principal"
     ],
     "constructions": [
-      "fr:cx:subj.condition-que"
+      "fr:cx:subj.condition-que",
+      "fr:cx:ne-expletif"
     ],
     "source": "course-plan.json"
   }

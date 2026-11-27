@@ -6,18 +6,10 @@
   "title": "In court {Au tribunal}",
   "plan": {
     "words": [
-      "fr:lex:juger",
-      "fr:lex:nier",
-      "fr:lex:defense",
-      "fr:lex:prison",
-      "fr:lex:prisonnier",
-      "fr:lex:tribunal",
       "fr:lex:cruel",
       "fr:lex:violent"
     ],
-    "constructions": [
-      "fr:cx:subj.doubt-denial"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

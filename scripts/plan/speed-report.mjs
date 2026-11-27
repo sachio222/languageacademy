@@ -11,7 +11,8 @@ import { planContext } from './context.mjs';
 import { readRanks } from './frequency.mjs';
 import { readRoles } from './method-score.mjs';
 import { planPaths, readPlan } from './plan.mjs';
-import { fitCost, frequencyOrder, pack, randomOrder, ruleOrder, simulate, summarize, textbookOrder, universe, valueAt, violations } from './speed.mjs';
+import { fitCost, frequencyOrder, pack, randomOrder, ruleOrder, simulate, summarize, textbookOrder, universe, valueAt, violations, withGuides } from './speed.mjs';
+import { estimateBeyond, readFamilies } from './cognates.mjs';
 
 const LEVELS = ['A1', 'A2', 'B1'];
 const TEACHING = new Set(['lesson', 'guide']);
@@ -32,7 +33,10 @@ export async function speedCommand({ repoRoot, lang, seeds = 200, caps = { words
     const f = join(repoRoot, 'curriculum-graph', 'core', 'levels', `${lang}-${lv}.json`);
     if (existsSync(f)) { const d = JSON.parse(readFileSync(f, 'utf8')); core[lv] = { words: d.words ?? [], constructions: d.constructions ?? [] }; }
   }
-  const U = universe({ graph, table, taughtAt: projected.timeline.taughtAt, free, ranks, core });
+  const fam = readFamilies(repoRoot, plan.native, lang, graph);
+  const U = universe({ graph, table, taughtAt: projected.timeline.taughtAt, free, ranks, core, families: fam?.members ?? new Map() });
+  // Words the plan adds to written modules: counted where they are taught, and costed like any new word.
+  const added = new Map(Object.entries(plan.additions ?? {}).map(([k, xs]) => [k, new Set(xs.map((x) => x.id))]));
 
   // Our course: its modules as they stand, each with the items first taught there and its own study minutes.
   const content = loadCourse({ root: paths.content, graphDir: paths.graphLang, planned: true });
@@ -49,13 +53,15 @@ export async function speedCommand({ repoRoot, lang, seeds = 200, caps = { words
     }
     const ids = (itemsAt.get(m.position) ?? []).sort((a, b) => (U.patterns.has(a) ? 1 : 0) - (U.patterns.has(b) ? 1 : 0));
     return {
-      position: m.position, unit: m.unitKey, kind: json?.kind ?? m.kind, written: json?.status !== 'planned', minutes,
+      position: m.position, unit: m.unitKey, key: m.moduleKey, kind: json?.kind ?? m.kind, written: json?.status !== 'planned', minutes,
+      added: ids.filter((id) => added.get(m.moduleKey)?.has(id)).length,
       words: ids.filter((id) => U.words.has(id)), patterns: ids.filter((id) => U.patterns.has(id)), order: ids,
     };
   });
 
   // One cost for every order, read off our own written lessons and guides; units close with the same overhead.
-  const fitRows = ours.filter((m) => m.written && TEACHING.has(m.kind) && m.minutes > 0).map((m) => ({ words: m.words.length, patterns: m.patterns.length, minutes: m.minutes }));
+  // (words the plan adds are left out: the minutes are those of the module as written)
+  const fitRows = ours.filter((m) => m.written && TEACHING.has(m.kind) && m.minutes > 0).map((m) => ({ words: m.words.length - m.added, patterns: m.patterns.length, minutes: m.minutes }));
   const fit = fitCost(fitRows);
   const units = [...new Set(ours.map((m) => m.unit))];
   const overheadOf = (u) => ours.filter((m) => m.unit === u && !TEACHING.has(m.kind)).reduce((s, m) => s + m.minutes, 0);
@@ -65,8 +71,13 @@ export async function speedCommand({ repoRoot, lang, seeds = 200, caps = { words
   const cost = { c0: Math.max(0, fit.c0), cw: Math.max(0, fit.cw), cp: Math.max(0, fit.cp), unit, every, r2: fit.r2, from: fitRows.length };
 
   // Our course twice: at its own recipe minutes, and costed like every other order.
-  const ourRecipe = ours.map((m) => ({ words: m.words, patterns: m.patterns, order: m.order, minutes: m.minutes }));
-  const ourModel = ours.filter((m) => m.order.length).map((m) => ({ words: m.words, patterns: m.patterns, order: m.order, extra: !TEACHING.has(m.kind) }));
+  // A written module pays for the words the plan adds to it at the same rate per word as every order.
+  // The near-cognate guides go in after the module each names, at their own minutes.
+  const guidesAfter = new Map();
+  for (const g of plan.cognate_guides ?? []) { if (!guidesAfter.has(g.after)) guidesAfter.set(g.after, []); guidesAfter.get(g.after).push({ words: [], patterns: [], order: [], minutes: g.minutes ?? GUIDE_MINUTES, families: g.families, extra: true }); }
+  const withOurGuides = (list) => list.flatMap((l) => [l, ...(guidesAfter.get(l.key) ?? [])]);
+  const ourRecipe = withOurGuides(ours.map((m) => ({ key: m.key, words: m.words, patterns: m.patterns, order: m.order, minutes: m.minutes + cost.cw * m.added })));
+  const ourModel = withOurGuides(ours.filter((m) => m.order.length || guidesAfter.has(m.key)).map((m) => ({ key: m.key, words: m.words, patterns: m.patterns, order: m.order, extra: !TEACHING.has(m.kind) })));
   const orders = {
     course_recipe: ourRecipe,
     course: ourModel,
@@ -75,7 +86,12 @@ export async function speedCommand({ repoRoot, lang, seeds = 200, caps = { words
     frequency: pack(frequencyOrder(U), U, caps),
     frequency_unpaced: pack(frequencyOrder(U, { pace: false }), U, caps),
   };
-  const problems = Object.fromEntries(Object.entries(orders).filter(([k]) => k !== 'course_recipe' && k !== 'course').map(([k, l]) => [k, violations(l, U).length]));
+  // The other orders again, with the same near-cognate guides at the same hours as our course
+  const ourSeries = simulate(ourModel, U, cost);
+  const guideTimes = [];
+  ourModel.forEach((l, i) => { if (l.families) guideTimes.push({ at: i ? ourSeries[i - 1].minutes : 0, minutes: l.minutes, families: l.families }); });
+  for (const k of ['rule', 'textbook', 'frequency']) orders[`${k}_guides`] = withGuides(orders[k], U, cost, guideTimes);
+  const problems = Object.fromEntries(Object.entries(orders).filter(([k]) => !['course_recipe', 'course'].includes(k) && !k.endsWith('_guides')).map(([k, l]) => [k, violations(l, U).length]));
   const series = Object.fromEntries(Object.entries(orders).map(([k, l]) => [k, simulate(l, U, cost)]));
 
   // Random orders: a band at each hour and at each word count.
@@ -93,12 +109,10 @@ export async function speedCommand({ repoRoot, lang, seeds = 200, caps = { words
 
   // Where our course is ahead or behind: at the end of each of our units, against the others at the same time.
   const unitEnds = [];
-  let ci = 0;
+  const unitOfKey = new Map(ours.map((m) => [m.key, m.unit]));
   for (const u of units) {
-    const lastIdx = ours.map((m, i) => [m, i]).filter(([m]) => m.unit === u && m.order.length).map(([, i]) => i).at(-1);
-    if (lastIdx === undefined) continue;
-    const lessonsSoFar = ours.slice(0, lastIdx + 1).filter((m) => m.order.length).length;
-    ci = lessonsSoFar - 1;
+    const ci = ourModel.findLastIndex((l) => l.key && unitOfKey.get(l.key) === u);
+    if (ci < 0) continue;
     const s = series.course[ci];
     const row = { unit: u, hours: Math.round((s.minutes / 60) * 10) / 10, words: s.words, patterns: s.patterns, reach: s.reach };
     for (const k of ['rule', 'textbook', 'frequency']) {
@@ -130,12 +144,15 @@ export async function speedCommand({ repoRoot, lang, seeds = 200, caps = { words
     items: { words: U.words.size, patterns: U.patterns.size, counted_patterns: [...U.patterns.values()].filter((p) => p.counted).length, free_words: U.free.size },
     cost: { minutes_per_lesson: round2(cost.c0), minutes_per_word: round2(cost.cw), minutes_per_pattern: round2(cost.cp), unit_minutes: round2(cost.unit), lessons_per_unit: cost.every, fit_r2: round2(cost.r2), fit_lessons: cost.from },
     caps, frequency: ranks ? 'local ranks used' : 'no local frequency file: every word weighs the same',
+    families: fam ? estimateBeyond({ families: fam.families, members: fam.members, headwords: graph.headwords, ranks }) : null,
     order_problems: problems, summary, unit_ends: unitEnds, sensitivity, chart, random,
   };
   return { data, text: render(data) };
 }
 
 const round2 = (x) => Math.round(x * 100) / 100;
+/** Minutes a near-cognate guide takes when the plan does not say: a short guide, one rule and its examples. */
+const GUIDE_MINUTES = 10;
 
 /** minutes = cw * words + cp * patterns, fitted with no fixed cost per lesson. */
 function fitThroughOrigin(rows) {
@@ -148,7 +165,7 @@ function fitThroughOrigin(rows) {
   return det ? { cw: Math.max(0, (d * c - b * e) / det), cp: Math.max(0, (a * e - b * d) / det) } : { cw: 0, cp: 0 };
 }
 
-const NAMES = { course_recipe: 'our course, own minutes', course: 'our course', rule: 'method rule', textbook: 'textbook order', frequency: 'frequency list', frequency_unpaced: 'frequency, unpaced' };
+const NAMES = { course_recipe: 'our course, own minutes', course: 'our course', rule: 'method rule', textbook: 'textbook order', frequency: 'frequency list', frequency_unpaced: 'frequency, unpaced', rule_guides: 'method rule + guides', textbook_guides: 'textbook + guides', frequency_guides: 'frequency + guides' };
 
 export function render(d) {
   const L = [];
@@ -162,7 +179,12 @@ export function render(d) {
   d.summary[cols[0]].hours.forEach((_, i) => {
     L.push(pad(d.summary[cols[0]].hours[i].hours, 7) + cols.map((c) => { const x = d.summary[c].hours[i]; return pad(`${x.patterns} / ${x.reach} / ${x.words}w`, 24); }).join(''));
   });
-  L.push('(patterns / reach / words)', '', '## At equal words', '');
+  L.push('(patterns / reach / words)', '', '## Words a learner can recognise (taught, open from the start, and near-cognate families taught by a guide), at equal study hours', '');
+  L.push(pad('hours', 7) + cols.map((c) => pad(NAMES[c] ?? c, 24)).join(''));
+  d.summary[cols[0]].hours.forEach((_, i) => {
+    L.push(pad(d.summary[cols[0]].hours[i].hours, 7) + cols.map((c) => pad(d.summary[c].hours[i].recognised ?? 0, 24)).join(''));
+  });
+  L.push('', '## At equal words', '');
   L.push(pad('words', 7) + cols.map((c) => pad(NAMES[c] ?? c, 24)).join(''));
   d.summary[cols[0]].words.forEach((_, i) => {
     L.push(pad(d.summary[cols[0]].words[i].words, 7) + cols.map((c) => { const x = d.summary[c].words[i]; return pad(x.hours === null ? '-' : `${x.patterns} / ${x.reach} / ${x.hours}h`, 24); }).join(''));
@@ -172,6 +194,10 @@ export function render(d) {
   d.summary[cols[0]].hours.forEach((_, i) => {
     L.push(pad(d.summary[cols[0]].hours[i].hours, 7) + cols.map((c) => { const x = d.summary[c].hours[i].core; return pad(['A1', 'A2', 'B1'].map((lv) => `${Math.round((x[lv] ?? 0) * 100)}%`).join(' / '), 24); }).join(''));
   });
+  if (d.families) {
+    L.push('', '## Near-cognate families: headwords in the graph each covers, and an estimate of words beyond the graph', '');
+    for (const [f, x] of Object.entries(d.families)) L.push(`${pad(f, 12)}${pad(x.in_graph, 6)}about ${x.beyond_estimate} more (estimate: common words with the ending, times the graph's share)`);
+  }
   L.push('', '## Totals', '');
   for (const c of cols) { const t = d.summary[c].total; L.push(`${pad(NAMES[c] ?? c, 26)}${t.hours} h, ${t.words} words, ${t.patterns} patterns, reach ${t.reach}`); }
   L.push('', '## Our course at the end of each unit, against the others at the same study time', '');

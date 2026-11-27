@@ -6,11 +6,7 @@
   "title": "The wedding ({se marier}, {promettre}, {pleurer}, {jeter})",
   "plan": {
     "words": [
-      "fr:lex:promettre",
-      "fr:lex:expliquer",
-      "fr:lex:marier",
-      "fr:lex:pleurer",
-      "fr:lex:jeter"
+      "fr:lex:expliquer"
     ],
     "constructions": [
       "fr:cx:frame.saying-que-clause"

@@ -6,8 +6,6 @@
   "title": "Diplomas and forms {Diplômes et formulaires}",
   "plan": {
     "words": [
-      "fr:lex:corriger",
-      "fr:lex:completer",
       "fr:lex:debutant",
       "fr:lex:chimie",
       "fr:lex:diplome",
@@ -19,9 +17,7 @@
       "fr:lex:scolaire",
       "fr:lex:correctement"
     ],
-    "constructions": [
-      "fr:cx:ptcp.agreement-exceptions"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }
