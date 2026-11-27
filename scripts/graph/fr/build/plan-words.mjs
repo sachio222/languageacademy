@@ -7,7 +7,7 @@
 // The words came from the unit plans (Units 13 to 29), which list each word under the lesson that teaches it: words
 // below B2 that the earlier passes left out (discussion, possibilité, concerner, peser, loisir, gratuit, récent,
 // logement, horaire, imprimante, tutoyer and the like), and four feminine nouns the lessons teach beside their
-// masculines, as the list already keeps ami and amie apart: voisine, copine, vendeuse and cousine. The lists below are
+// masculines, as the list already keeps ami and amie apart: voisine, copine, vendeuse, cousine, comédienne, pharmacienne and spectatrice. The lists below are
 // in alphabetical order and record no frequency value or rank. Every level here is a judgment made by hand: a
 // feminine noun takes the level of its masculine.
 // Four words of the plan were already in the list from the B2 pass and are not repeated here: candidature, chantier,
@@ -66,7 +66,8 @@ const WORDS = {
       blog m: blog
       clavier m: keyboard
       colis m: parcel
-      comédien m: actor
+      comédien m: actor (not comedian)
+      comédienne f: actress (not comedian)
       comptable m/f: accountant
       continent m: continent
       dialogue m: dialogue
@@ -94,6 +95,7 @@ const WORDS = {
       mode f: fashion
       passe-temps m: hobby, pastime
       pharmacien m: pharmacist, chemist
+      pharmacienne f: pharmacist, chemist (female)
       photographe m/f: photographer
       poème m: poem
       possibilité f: possibility
@@ -103,7 +105,7 @@ const WORDS = {
       réservation f: booking, reservation
       site m: site; website
       spécialité f: speciality
-      tablette f: tablet
+      tablette f: tablet; bar (of chocolate)
       tache f: stain, mark
       tarif m: price, rate
       tempête f: storm
@@ -136,6 +138,7 @@ const WORDS = {
       gratuit: free (of charge)
       pareil: the same, alike
       poli: polite
+      récent: recent
       romantique: romantic
       scolaire: school (year, holidays)
       sportif: sporty, athletic; sports
@@ -154,7 +157,7 @@ const WORDS = {
     noun: `
       ambiance f: atmosphere, mood
       banlieue f: suburbs, outskirts
-      caution f: deposit (on a rented flat)
+      caution f: deposit (on a rented flat); guarantor
       commentaire m: comment, remark
       épisode m: episode
       galerie f: gallery
@@ -166,9 +169,10 @@ const WORDS = {
       mélange m: mixture, mix
       milliard m: billion
       politesse f: politeness
-      rage f: rage, fury
+      rage f: rage, fury; rabies
       réussite f: success
       spectateur m: spectator, member of the audience
+      spectatrice f: spectator, member of the audience (female)
       thème m: theme, topic
       tuyau m: pipe, hose
       version f: version`,
@@ -192,7 +196,6 @@ const WORDS = {
       négatif: negative
       probable: likely, probable
       profond: deep
-      récent: recent
       visible: visible`,
     adverb: `
       clairement: clearly

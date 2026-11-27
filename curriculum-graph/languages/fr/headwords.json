@@ -7671,7 +7671,7 @@
     "pos": "noun",
     "senses": [
       {
-        "gloss": "deposit (on a rented flat)"
+        "gloss": "deposit (on a rented flat); guarantor"
       }
     ]
   },
@@ -9763,7 +9763,24 @@
     "pos": "noun",
     "senses": [
       {
-        "gloss": "actor"
+        "gloss": "actor (not comedian)"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:comedienne",
+    "lemma": "comédienne",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "actress (not comedian)"
       }
     ]
   },
@@ -38408,6 +38425,23 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:pharmacienne",
+    "lemma": "pharmacienne",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "pharmacist, chemist (female)"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -42631,7 +42665,7 @@
     "pos": "noun",
     "senses": [
       {
-        "gloss": "rage, fury"
+        "gloss": "rage, fury; rabies"
       }
     ]
   },
@@ -43190,7 +43224,7 @@
     ]
   },
   {
-    "cefr": "B1",
+    "cefr": "A2",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:recent",
@@ -49338,6 +49372,23 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:spectatrice",
+    "lemma": "spectatrice",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "spectator, member of the audience (female)"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -50637,7 +50688,7 @@
     "pos": "noun",
     "senses": [
       {
-        "gloss": "tablet"
+        "gloss": "tablet; bar (of chocolate)"
       }
     ]
   },
