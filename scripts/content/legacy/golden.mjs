@@ -1,7 +1,7 @@
 // The golden test's machinery (spec 8.2, "Proof the live screens see the same lessons"): read the migration report
 // back into lines, compare a live lesson with the adapter's lesson field by field, and sort each difference into an
 // allowed class from scripts/content/test/fixtures/golden-allowed.json. Pure: no fs, no app imports.
-import { sentences } from '../migrate/reading.mjs';
+import { sentences, pairGap } from '../migrate/reading.mjs';
 import { normText } from '../migrate/items.mjs';
 
 const isObj = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
@@ -148,15 +148,18 @@ function lcs(a, b) {
   }
   return out;
 }
-// Pairs of two lists: matched by key in order, and the gaps between matches paired by place.
-function align(a, b, keyOf) {
+// Pairs of two lists: matched by key in order, and the gaps between matches paired by place. textOf, for sentences:
+// a gap with more on one side pairs as the migration report pairs story sentences (reading.mjs pairGap), by the
+// words they share, so a caption added before a reworded line stands alone.
+function align(a, b, keyOf, textOf = null) {
   const pairs = [];
   const common = lcs(a.map(keyOf), b.map(keyOf));
   let i = 0;
   let j = 0;
   for (const [ci, cj] of [...common, [a.length, b.length]]) {
     const n = Math.max(ci - i, cj - j);
-    for (let x = 0; x < n; x++) pairs.push([i + x < ci ? i + x : null, j + x < cj ? j + x : null]);
+    if (textOf) for (const [x, y] of pairGap(a.slice(i, ci).map(textOf), b.slice(j, cj).map(textOf))) pairs.push([x === null ? null : i + x, y === null ? null : j + y]);
+    else for (let x = 0; x < n; x++) pairs.push([i + x < ci ? i + x : null, j + x < cj ? j + x : null]);
     if (ci < a.length) pairs.push([ci, cj]);
     i = ci + 1;
     j = cj + 1;
@@ -285,7 +288,7 @@ function comparePassage(live, conv, out, ctx) {
     const cp = paragraphs(conv[f]);
     const a = lp.flatMap((p) => sentences(p.body).map((s) => ({ s, p })));
     const b = cp.flatMap((p) => sentences(p.body).map((s) => ({ s, p })));
-    for (const [i, j] of align(a, b, (x) => x.s)) {
+    for (const [i, j] of align(a, b, (x) => x.s, (x) => x.s)) {
       if (ctx.stats) ctx.stats.fields += 1;
       if (i !== null && j !== null && a[i].s === b[j].s) continue;
       const d = { path: `readingPassage.${f}#sentence`, live: i === null ? null : a[i].s, converted: j === null ? null : b[j].s };

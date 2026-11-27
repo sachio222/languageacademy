@@ -116,6 +116,25 @@ test('text_changed lists each sentence where the story differs from today’s te
   assert.ok(r.report.some((l) => l.kind === 'text_changed' && l.detail === 'story text: added: "Paul, un chat et un chien."'), JSON.stringify(r.report.filter((l) => l.kind === 'text_changed')));
 });
 
+test('a reworded line right after an added caption pairs with its own old line, not with the caption', () => {
+  const live = 'Il était assis sur un banc.\n\n"Salut Pierre! Tu vas bien?" j\'ai demandé.\n\nNous avons parlé.';
+  const passage = [
+    { fr: 'Il était assis sur un banc.' },
+    { fr: 'Pierre est assis sur un banc, sous un grand arbre.' },
+    { fr: 'J\'ai demandé: "Salut Pierre! Tu vas bien?"' },
+    { fr: 'Nous avons parlé.' },
+  ];
+  assert.deepEqual(changedSentences(live, passage), [
+    { from: null, to: 'Pierre est assis sur un banc, sous un grand arbre.' },
+    { from: '"Salut Pierre!', to: 'J\'ai demandé: "Salut Pierre!' },
+    { from: 'Tu vas bien?" j\'ai demandé.', to: 'Tu vas bien?"' },
+  ]);
+  // sentences with nothing in common keep their place: the first old one pairs with the first new one
+  assert.deepEqual(changedSentences('Un. Deux.', [{ fr: 'Trois. Quatre. Cinq.' }]), [
+    { from: 'Un.', to: 'Trois.' }, { from: 'Deux.', to: 'Quatre.' }, { from: null, to: 'Cinq.' },
+  ]);
+});
+
 test('story_missing: a reading with no story takes its passage from the module', () => {
   const old = configs.get('2024-01-09-reading1');
   const r = readingFrom(old, null, { unitIndex: 1 });

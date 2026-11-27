@@ -124,6 +124,47 @@ function lcs(a, b) {
   return out;
 }
 
+// Words two sentences share, for pairing: letters only, case and accents as written.
+const wordsOf = (s) => new Set(String(s).toLowerCase().match(/\p{L}+/gu) ?? []);
+const shared = (x, y) => {
+  const b = wordsOf(y);
+  let n = 0;
+  for (const w of wordsOf(x)) if (b.has(w)) n += 1;
+  return n;
+};
+
+/**
+ * Pairs the old sentences of a gap with its new ones, as [oldIndex, newIndex] with null for a sentence that has no
+ * partner. Both lists keep their order. With as many old as new, each pairs with the one at its place. With more on
+ * one side, every sentence of the shorter list still gets a partner, and the ones left alone on the longer side are
+ * those that leave the pairs sharing the most words; when no choice is better, the last ones are left alone, as
+ * pairing by place does. A caption added before or between reworded lines then stands alone, and each line pairs
+ * with its own old wording.
+ */
+export function pairGap(gone, added) {
+  const [short, long, swap] = gone.length <= added.length ? [gone, added, false] : [added, gone, true];
+  const n = short.length;
+  const m = long.length;
+  // best[x][y]: the most shared words when short[x..] pairs inside long[y..]; -1 where too few are left.
+  const best = Array.from({ length: n + 1 }, () => new Array(m + 2).fill(-1));
+  for (let y = 0; y <= m; y++) best[n][y] = 0;
+  for (let x = n - 1; x >= 0; x--) {
+    for (let y = m - (n - x); y >= 0; y--) {
+      const pair = shared(short[x], long[y]) + best[x + 1][y + 1];
+      const skip = m - y > n - x ? best[x][y + 1] : -1;
+      best[x][y] = Math.max(pair, skip);
+    }
+  }
+  const out = [];
+  let x = 0;
+  for (let y = 0; y < m; y++) {
+    const pair = x < n && shared(short[x], long[y]) + best[x + 1][y + 1] === best[x][y];
+    out.push(swap ? [y, pair ? x : null] : [pair ? x : null, y]);
+    if (pair) x += 1;
+  }
+  return out;
+}
+
 /** Each sentence where the passage differs from today's text: { from, to } with null for an added or removed one. */
 export function changedSentences(liveText, passage) {
   const live = sentences(liveText);
@@ -135,8 +176,7 @@ export function changedSentences(liveText, passage) {
   for (const [ci, cj] of [...common, [live.length, now.length]]) {
     const gone = live.slice(i, ci);
     const added = now.slice(j, cj);
-    const n = Math.max(gone.length, added.length);
-    for (let x = 0; x < n; x++) out.push({ from: gone[x] ?? null, to: added[x] ?? null });
+    for (const [x, y] of pairGap(gone, added)) out.push({ from: x === null ? null : gone[x], to: y === null ? null : added[y] });
     i = ci + 1;
     j = cj + 1;
   }
