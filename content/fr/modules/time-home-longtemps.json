@@ -3,25 +3,23 @@
   "module_key": "time-home-longtemps",
   "kind": "lesson",
   "status": "planned",
-  "title": "Time and the day and Home (A1)",
+  "title": "Round the house {la maison}",
   "plan": {
     "words": [
-      "fr:lex:longtemps",
-      "fr:lex:bientot",
-      "fr:lex:salle",
-      "fr:lex:cuisine",
       "fr:lex:entree",
-      "fr:lex:etage",
       "fr:lex:salon",
-      "fr:lex:minuit",
+      "fr:lex:salle",
+      "fr:lex:bain",
       "fr:lex:douche",
-      "fr:lex:midi",
-      "fr:lex:saison",
-      "fr:lex:demi-heure",
-      "fr:lex:quart",
-      "fr:lex:canape"
+      "fr:lex:canape",
+      "fr:lex:refrigerateur",
+      "fr:lex:contre",
+      "fr:lex:vue",
+      "fr:lex:meuble",
+      "fr:lex:fauteuil",
+      "fr:lex:placard"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -3,20 +3,22 @@
   "module_key": "nations-americain",
   "kind": "lesson",
   "status": "planned",
-  "title": "Countries and languages (A1)",
+  "title": "Who lives on which floor {les voisins}",
   "plan": {
     "words": [
+      "fr:lex:deuxieme",
+      "fr:lex:troisieme",
+      "fr:lex:quatrieme",
       "fr:lex:americain",
       "fr:lex:allemand",
-      "fr:lex:russe",
+      "fr:lex:belge",
       "fr:lex:italien",
-      "fr:lex:chinois",
       "fr:lex:espagnol",
       "fr:lex:japonais",
-      "fr:lex:belge",
+      "fr:lex:chinois",
       "fr:lex:canadien"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

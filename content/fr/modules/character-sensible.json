@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "character-sensible",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Describing a suspect {Le signalement}",
+  "plan": {
+    "words": [
+      "fr:lex:sensible",
+      "fr:lex:age.adjective",
+      "fr:lex:mince",
+      "fr:lex:brun",
+      "fr:lex:roux",
+      "fr:lex:barbe",
+      "fr:lex:moustache",
+      "fr:lex:jumeau",
+      "fr:lex:decrire",
+      "fr:lex:amical",
+      "fr:lex:chaleureux",
+      "fr:lex:tetu"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "phone-decrocher",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Calling for news {Prendre des nouvelles}",
+  "plan": {
+    "words": [
+      "fr:lex:decrocher",
+      "fr:lex:raccrocher",
+      "fr:lex:renseigner",
+      "fr:lex:inscrire",
+      "fr:lex:recommander",
+      "fr:lex:absent",
+      "fr:lex:chiffre",
+      "fr:lex:carnet",
+      "fr:lex:matinee",
+      "fr:lex:evidemment",
+      "fr:lex:quelquefois",
+      "fr:lex:possibilite"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

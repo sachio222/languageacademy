@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-conduire-amener",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Getting there ({conduire}, {amener}, {manquer}, {s'inquiéter})",
+  "plan": {
+    "words": [
+      "fr:lex:conduire",
+      "fr:lex:amener",
+      "fr:lex:manquer",
+      "fr:lex:inquieter",
+      "fr:lex:oncle",
+      "fr:lex:bagnole"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

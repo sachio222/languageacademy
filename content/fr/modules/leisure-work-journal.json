@@ -3,24 +3,23 @@
   "module_key": "leisure-work-journal",
   "kind": "lesson",
   "status": "planned",
-  "title": "Free time, sport and culture, Work and jobs and more (A1)",
+  "title": "Round the village {le village}",
   "plan": {
     "words": [
-      "fr:lex:journal",
       "fr:lex:village",
-      "fr:lex:surprise",
-      "fr:lex:poste",
       "fr:lex:eglise",
-      "fr:lex:metier",
-      "fr:lex:lycee",
+      "fr:lex:poste",
       "fr:lex:theatre",
-      "fr:lex:ordinateur",
-      "fr:lex:dessin",
-      "fr:lex:piscine",
-      "fr:lex:bibliotheque",
-      "fr:lex:tennis"
+      "fr:lex:librairie",
+      "fr:lex:carrefour",
+      "fr:lex:tennis",
+      "fr:lex:jour-ferie",
+      "fr:lex:sens",
+      "fr:lex:montagne",
+      "fr:lex:normalement",
+      "fr:lex:envie"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

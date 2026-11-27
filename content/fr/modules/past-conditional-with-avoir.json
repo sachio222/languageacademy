@@ -3,12 +3,16 @@
   "module_key": "past-conditional-with-avoir",
   "kind": "lesson",
   "status": "planned",
-  "title": "Past conditional with avoir (j'aurais dû, tu aurais pu)",
+  "title": "Past conditional with {avoir} (j'aurais dû, tu aurais pu)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:valise",
+      "fr:lex:billet",
+      "fr:lex:fric"
+    ],
     "constructions": [
       "fr:cx:conditionnel-passe.avoir"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

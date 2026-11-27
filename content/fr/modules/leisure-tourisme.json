@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "leisure-tourisme",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "At the tourist office {À l'office de tourisme}",
+  "plan": {
+    "words": [
+      "fr:lex:randonnee",
+      "fr:lex:paysage",
+      "fr:lex:tourisme",
+      "fr:lex:touristique",
+      "fr:lex:excursion",
+      "fr:lex:festival",
+      "fr:lex:sportif",
+      "fr:lex:photographier",
+      "fr:lex:teuf"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

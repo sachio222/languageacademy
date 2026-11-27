@@ -3,18 +3,21 @@
   "module_key": "work-materiel",
   "kind": "lesson",
   "status": "planned",
-  "title": "Work and jobs (B1)",
+  "title": "Safety on the site {La sécurité sur le chantier}",
   "plan": {
     "words": [
+      "fr:lex:securite",
+      "fr:lex:controle",
       "fr:lex:materiel",
-      "fr:lex:traiter",
-      "fr:lex:regler",
-      "fr:lex:separer",
-      "fr:lex:representer",
-      "fr:lex:fabriquer",
-      "fr:lex:identifier"
+      "fr:lex:fer",
+      "fr:lex:gaz",
+      "fr:lex:sol",
+      "fr:lex:tenue",
+      "fr:lex:uniforme",
+      "fr:lex:controler",
+      "fr:lex:fabriquer"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

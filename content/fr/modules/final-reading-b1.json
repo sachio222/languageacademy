@@ -3,10 +3,10 @@
   "module_key": "final-reading-b1",
   "kind": "reading",
   "status": "planned",
-  "title": "Final B1 reading: an opinion piece and a reply",
+  "title": "Reading · {Faut-il encore apprendre une langue ?}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

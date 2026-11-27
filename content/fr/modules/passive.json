@@ -3,12 +3,16 @@
   "module_key": "passive",
   "kind": "lesson",
   "status": "planned",
-  "title": "Passive (la maison est construite par mon père)",
+  "title": "The passive (les premiers murs ont été construits au XIIe siècle)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:mur",
+      "fr:lex:guerre",
+      "fr:lex:ancien"
+    ],
     "constructions": [
       "fr:cx:passive"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

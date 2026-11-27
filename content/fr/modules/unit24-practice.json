@@ -3,10 +3,10 @@
   "module_key": "unit24-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · Starting, stopping and changing, Work and jobs and Ideas and arguments",
+  "title": "Practice · Say what you think {dire ce qu'on pense}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

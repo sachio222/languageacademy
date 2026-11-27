@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-offrir-ecrire",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A birthday cake ({offrir}, {écrire}, {dessiner}, {souhaiter}, {espérer}, {féliciter})",
+  "plan": {
+    "words": [
+      "fr:lex:offrir",
+      "fr:lex:ecrire",
+      "fr:lex:dessiner",
+      "fr:lex:souhaiter",
+      "fr:lex:esperer",
+      "fr:lex:feliciter"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

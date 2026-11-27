@@ -3,22 +3,20 @@
   "module_key": "people-epoux",
   "kind": "lesson",
   "status": "planned",
-  "title": "People and family (B1)",
+  "title": "A baby on the way {Un bébé en route}",
   "plan": {
     "words": [
-      "fr:lex:epoux",
-      "fr:lex:membre",
-      "fr:lex:fiance",
-      "fr:lex:menteur",
-      "fr:lex:personnage",
-      "fr:lex:jeunesse",
       "fr:lex:compagnon",
-      "fr:lex:epouser",
-      "fr:lex:eloigner",
-      "fr:lex:accueillir",
-      "fr:lex:mefier"
+      "fr:lex:ceremonie",
+      "fr:lex:voeu",
+      "fr:lex:enceinte",
+      "fr:lex:desir",
+      "fr:lex:passion",
+      "fr:lex:pretre",
+      "fr:lex:interrompre",
+      "fr:lex:sincerement"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

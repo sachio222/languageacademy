@@ -3,21 +3,23 @@
   "module_key": "people-amour",
   "kind": "lesson",
   "status": "planned",
-  "title": "People and family (A2)",
+  "title": "Old friends {l'amitié}",
   "plan": {
     "words": [
       "fr:lex:amour",
-      "fr:lex:mariage",
-      "fr:lex:camarade",
-      "fr:lex:voisin",
       "fr:lex:couple",
-      "fr:lex:invite",
+      "fr:lex:amoureux",
       "fr:lex:amitie",
       "fr:lex:enfance",
+      "fr:lex:camarade",
+      "fr:lex:bague",
       "fr:lex:rejoindre",
-      "fr:lex:accompagner"
+      "fr:lex:accompagner",
+      "fr:lex:mignon",
+      "fr:lex:romantique",
+      "fr:lex:celibataire"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

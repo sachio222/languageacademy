@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "home-logement",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Finding a flat {le logement}",
+  "plan": {
+    "words": [
+      "fr:lex:ascenseur",
+      "fr:lex:toit",
+      "fr:lex:cour",
+      "fr:lex:demenager",
+      "fr:lex:signer",
+      "fr:lex:identite",
+      "fr:lex:contacter",
+      "fr:lex:contact",
+      "fr:lex:loyer",
+      "fr:lex:appartenir",
+      "fr:lex:posseder",
+      "fr:lex:principal"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

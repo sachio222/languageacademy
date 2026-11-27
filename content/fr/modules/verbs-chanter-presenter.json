@@ -3,15 +3,16 @@
   "module_key": "verbs-chanter-presenter",
   "kind": "lesson",
   "status": "planned",
-  "title": "Verbs: chanter, présenter, accepter, refuser",
+  "title": "The party ({présenter}, {chanter}, {danser}, {détester})",
   "plan": {
     "words": [
-      "fr:lex:chanter",
       "fr:lex:presenter",
-      "fr:lex:accepter",
-      "fr:lex:refuser"
+      "fr:lex:chanter",
+      "fr:lex:danser",
+      "fr:lex:detester",
+      "fr:lex:franchement"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

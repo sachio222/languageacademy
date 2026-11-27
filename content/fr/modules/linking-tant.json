@@ -3,24 +3,23 @@
   "module_key": "linking-tant",
   "kind": "lesson",
   "status": "planned",
-  "title": "Linking and degree words (B1)",
+  "title": "Linking your reasons {relier ses idées}",
   "plan": {
     "words": [
-      "fr:lex:tant",
+      "fr:lex:pourtant",
+      "fr:lex:cependant",
+      "fr:lex:malgre",
+      "fr:lex:selon",
+      "fr:lex:sinon",
       "fr:lex:ni",
       "fr:lex:aucun",
-      "fr:lex:sinon",
-      "fr:lex:autant",
-      "fr:lex:des.preposition",
-      "fr:lex:lequel",
       "fr:lex:sauf",
-      "fr:lex:pourtant",
-      "fr:lex:atteindre",
-      "fr:lex:produire",
-      "fr:lex:plonger",
-      "fr:lex:imposer"
+      "fr:lex:tel",
+      "fr:lex:autant",
+      "fr:lex:tant",
+      "fr:lex:lorsque"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

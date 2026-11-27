@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "manners-tutoyer",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Tu or vous? {tutoyer ou vouvoyer}",
+  "plan": {
+    "words": [
+      "fr:lex:aimable",
+      "fr:lex:timide",
+      "fr:lex:caractere",
+      "fr:lex:tutoyer",
+      "fr:lex:vouvoyer",
+      "fr:lex:poli",
+      "fr:lex:gentiment",
+      "fr:lex:presentation",
+      "fr:lex:calmement",
+      "fr:lex:sympathique",
+      "fr:lex:bavard",
+      "fr:lex:habituellement"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

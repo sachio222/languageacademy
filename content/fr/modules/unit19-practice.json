@@ -3,10 +3,10 @@
   "module_key": "unit19-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · Nature, animals and weather, Talking, agreeing and feelings and Body and health",
+  "title": "Practice · Getting things fixed {se débrouiller à Paris}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "spelling-changes-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Spelling changes in -er verbs (j'achète, je répète, j'appelle, nous mangeons)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

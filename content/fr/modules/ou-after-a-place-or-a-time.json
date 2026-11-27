@@ -3,12 +3,19 @@
   "module_key": "ou-after-a-place-or-a-time",
   "kind": "lesson",
   "status": "planned",
-  "title": "où after a place or a time (la ville où j'habite, le jour où il est venu)",
+  "title": "{où} after a place or a time (la bibliothèque où je travaille, le jour où Maya est arrivée)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:boulangerie",
+      "fr:lex:bibliotheque",
+      "fr:lex:piscine",
+      "fr:lex:marche",
+      "fr:lex:euh",
+      "fr:lex:hein"
+    ],
     "constructions": [
       "fr:cx:relative.ou"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

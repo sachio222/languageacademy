@@ -3,18 +3,28 @@
   "module_key": "unit13-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Joining sentences",
+  "title": "Reading · {Mon quartier, pour Maya}",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:etage",
+      "fr:lex:immeuble",
+      "fr:lex:prochain",
+      "fr:lex:sympa",
+      "fr:lex:bientot"
+    ],
     "constructions": [
       "fr:cx:relative.qui",
       "fr:cx:relative.que",
       "fr:cx:relative.ou",
-      "fr:cx:si.present",
       "fr:cx:relative.ce-que",
-      "fr:cx:relative.dont"
+      "fr:cx:relative.dont",
+      "fr:cx:si.present",
+      "fr:cx:imperative.tu",
+      "fr:cx:frame.aller-infinitive",
+      "fr:cx:superlative",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:pronoun.y"
     ],
-    "source": "plan.json",
-    "note": "A neighbourhood guide written by a teenager: the places, people and things she likes, each described with a relative clause, and plans that depend on the weather (si + present)."
+    "source": "course-plan.json"
   }
 }

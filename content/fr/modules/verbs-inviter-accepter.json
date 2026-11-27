@@ -1,0 +1,18 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-inviter-accepter",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "An invitation ({inviter}, {accepter}, {refuser}, {remercier})",
+  "plan": {
+    "words": [
+      "fr:lex:inviter",
+      "fr:lex:accepter",
+      "fr:lex:refuser",
+      "fr:lex:remercier",
+      "fr:lex:du-coup"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

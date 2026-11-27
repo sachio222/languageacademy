@@ -3,21 +3,23 @@
   "module_key": "travel-retour",
   "kind": "lesson",
   "status": "planned",
-  "title": "Travel and transport (A2)",
+  "title": "Guests from abroad {les arrivées}",
   "plan": {
     "words": [
-      "fr:lex:retour",
-      "fr:lex:chemin",
-      "fr:lex:visite",
-      "fr:lex:vol",
-      "fr:lex:depart",
-      "fr:lex:camion",
-      "fr:lex:arret",
       "fr:lex:arrivee",
-      "fr:lex:avancer",
-      "fr:lex:repartir"
+      "fr:lex:depart",
+      "fr:lex:vol",
+      "fr:lex:passager",
+      "fr:lex:passeport",
+      "fr:lex:sejour",
+      "fr:lex:renseignement",
+      "fr:lex:russe",
+      "fr:lex:emporter",
+      "fr:lex:recuperer",
+      "fr:lex:prevenir",
+      "fr:lex:accueillir"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

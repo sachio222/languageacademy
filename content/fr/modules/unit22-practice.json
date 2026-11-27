@@ -3,10 +3,10 @@
   "module_key": "unit22-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · Work and jobs, Shops, money and clothes and Nature, animals and weather",
+  "title": "Practice · A tram for Lyon {un tram pour Lyon}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

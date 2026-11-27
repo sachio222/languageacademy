@@ -3,25 +3,23 @@
   "module_key": "work-affaire",
   "kind": "lesson",
   "status": "planned",
-  "title": "Work and jobs (A2)",
+  "title": "First day at the agency {le bureau}",
   "plan": {
     "words": [
-      "fr:lex:affaire",
-      "fr:lex:chef",
-      "fr:lex:patron",
-      "fr:lex:message",
-      "fr:lex:avocat",
-      "fr:lex:groupe",
-      "fr:lex:appel",
       "fr:lex:directeur",
-      "fr:lex:reunion",
-      "fr:lex:appareil",
+      "fr:lex:patron",
+      "fr:lex:chef",
       "fr:lex:collegue",
+      "fr:lex:equipe",
+      "fr:lex:groupe",
+      "fr:lex:affaire",
+      "fr:lex:organiser",
       "fr:lex:terminer",
-      "fr:lex:taper",
-      "fr:lex:organiser"
+      "fr:lex:ecran",
+      "fr:lex:document",
+      "fr:lex:dossier"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

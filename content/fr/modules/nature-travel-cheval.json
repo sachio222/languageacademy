@@ -3,26 +3,23 @@
   "module_key": "nature-travel-cheval",
   "kind": "lesson",
   "status": "planned",
-  "title": "Nature, animals and weather and Travel and transport (A2)",
+  "title": "Animals on the farm {les animaux}",
   "plan": {
     "words": [
-      "fr:lex:cheval",
-      "fr:lex:bois",
-      "fr:lex:doux",
-      "fr:lex:ile",
       "fr:lex:vache",
-      "fr:lex:sec",
-      "fr:lex:chaleur",
-      "fr:lex:allumer",
-      "fr:lex:planter",
-      "fr:lex:chauffeur",
-      "fr:lex:vitesse",
-      "fr:lex:pilote",
-      "fr:lex:port",
-      "fr:lex:rouler",
-      "fr:lex:promener"
+      "fr:lex:cheval",
+      "fr:lex:cochon",
+      "fr:lex:poule",
+      "fr:lex:serpent",
+      "fr:lex:enorme",
+      "fr:lex:nombreux",
+      "fr:lex:doux",
+      "fr:lex:attraper",
+      "fr:lex:promener",
+      "fr:lex:deranger",
+      "fr:lex:ramasser"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "history-armee",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "History at the museum {L'histoire au musée}",
+  "plan": {
+    "words": [
+      "fr:lex:bataille",
+      "fr:lex:victoire",
+      "fr:lex:militaire",
+      "fr:lex:revolution",
+      "fr:lex:lutter",
+      "fr:lex:eclater",
+      "fr:lex:puissant",
+      "fr:lex:sacre",
+      "fr:lex:intervenir",
+      "fr:lex:rapporter",
+      "fr:lex:nommer",
+      "fr:lex:resistance"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

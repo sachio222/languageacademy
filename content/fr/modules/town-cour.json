@@ -3,21 +3,23 @@
   "module_key": "town-cour",
   "kind": "lesson",
   "status": "planned",
-  "title": "Town and places (A2)",
+  "title": "Round Belleville {le quartier}",
   "plan": {
     "words": [
-      "fr:lex:cour",
+      "fr:lex:avenue",
+      "fr:lex:trottoir",
+      "fr:lex:panneau",
       "fr:lex:bar",
       "fr:lex:usine",
-      "fr:lex:sortie",
       "fr:lex:queue",
-      "fr:lex:panneau",
-      "fr:lex:trottoir",
-      "fr:lex:avenue",
       "fr:lex:indiquer",
-      "fr:lex:vider"
+      "fr:lex:chemin",
+      "fr:lex:arret",
+      "fr:lex:passage",
+      "fr:lex:zone",
+      "fr:lex:terrain"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

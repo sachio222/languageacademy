@@ -3,25 +3,23 @@
   "module_key": "home-mur",
   "kind": "lesson",
   "status": "planned",
-  "title": "Home (A2)",
+  "title": "Moving in {le ménage}",
   "plan": {
     "words": [
-      "fr:lex:mur",
-      "fr:lex:bain",
-      "fr:lex:toit",
-      "fr:lex:couverture",
-      "fr:lex:escalier",
-      "fr:lex:immeuble",
       "fr:lex:menage",
-      "fr:lex:serviette",
-      "fr:lex:ascenseur",
       "fr:lex:poubelle",
-      "fr:lex:reposer",
+      "fr:lex:couverture",
       "fr:lex:installer",
       "fr:lex:refaire",
-      "fr:lex:eteindre"
+      "fr:lex:reposer",
+      "fr:lex:vider",
+      "fr:lex:courrier",
+      "fr:lex:vaisselle",
+      "fr:lex:placer",
+      "fr:lex:arranger",
+      "fr:lex:debarrasser"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

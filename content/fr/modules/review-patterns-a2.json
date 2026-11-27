@@ -3,10 +3,10 @@
   "module_key": "review-patterns-a2",
   "kind": "practice",
   "status": "planned",
-  "title": "Review · Every pattern of the course, one sentence each",
+  "title": "Review 1, part 1: questions, negation, pronouns and relatives",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -3,20 +3,21 @@
   "module_key": "leisure-joueur",
   "kind": "lesson",
   "status": "planned",
-  "title": "Free time, sport and culture (A2)",
+  "title": "What shall we do? {Qu'est-ce qu'on fait ?}",
   "plan": {
     "words": [
-      "fr:lex:joueur",
-      "fr:lex:poupee",
-      "fr:lex:jouet",
-      "fr:lex:peche",
-      "fr:lex:roman",
-      "fr:lex:instrument",
-      "fr:lex:piano",
-      "fr:lex:comedie",
-      "fr:lex:bavarder"
+      "fr:lex:cirque",
+      "fr:lex:rock",
+      "fr:lex:video",
+      "fr:lex:lecture",
+      "fr:lex:promenade",
+      "fr:lex:bavarder",
+      "fr:lex:adolescent",
+      "fr:lex:loisir",
+      "fr:lex:passe-temps",
+      "fr:lex:kiffer"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

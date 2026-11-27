@@ -3,26 +3,23 @@
   "module_key": "talk-facon",
   "kind": "lesson",
   "status": "planned",
-  "title": "Talking, agreeing and feelings (A2)",
+  "title": "Choosing a venue {le choix}",
   "plan": {
     "words": [
-      "fr:lex:facon",
-      "fr:lex:faute",
-      "fr:lex:avis",
-      "fr:lex:propos",
       "fr:lex:choix",
-      "fr:lex:silence",
       "fr:lex:conseil",
-      "fr:lex:danger",
-      "fr:lex:bonheur",
-      "fr:lex:joie",
-      "fr:lex:blague",
-      "fr:lex:tromper",
-      "fr:lex:crier",
-      "fr:lex:disputer",
-      "fr:lex:avertir"
+      "fr:lex:facon",
+      "fr:lex:propos",
+      "fr:lex:plan",
+      "fr:lex:proposer",
+      "fr:lex:conseiller",
+      "fr:lex:contraire",
+      "fr:lex:difference",
+      "fr:lex:justement",
+      "fr:lex:absolument",
+      "fr:lex:parfaitement"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

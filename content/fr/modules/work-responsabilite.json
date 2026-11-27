@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-responsabilite",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The Monday meeting {La réunion du lundi}",
+  "plan": {
+    "words": [
+      "fr:lex:responsabilite",
+      "fr:lex:fonction",
+      "fr:lex:assistant",
+      "fr:lex:partenaire",
+      "fr:lex:compagnie",
+      "fr:lex:base",
+      "fr:lex:periode",
+      "fr:lex:presence",
+      "fr:lex:absence",
+      "fr:lex:informer",
+      "fr:lex:signaler"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

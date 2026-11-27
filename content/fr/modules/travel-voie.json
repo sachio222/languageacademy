@@ -3,26 +3,23 @@
   "module_key": "travel-voie",
   "kind": "lesson",
   "status": "planned",
-  "title": "Travel and transport (B1)",
+  "title": "A train that does not leave {Le train ne part pas}",
   "plan": {
     "words": [
       "fr:lex:voie",
-      "fr:lex:arriere",
-      "fr:lex:piste",
-      "fr:lex:passage",
-      "fr:lex:frontiere",
-      "fr:lex:moteur",
-      "fr:lex:essence",
-      "fr:lex:agence",
-      "fr:lex:vehicule",
-      "fr:lex:fuir",
-      "fr:lex:enfuir",
-      "fr:lex:poursuivre",
-      "fr:lex:depasser",
-      "fr:lex:rattraper",
-      "fr:lex:demarrer"
+      "fr:lex:attente",
+      "fr:lex:greve",
+      "fr:lex:correspondre",
+      "fr:lex:ceder",
+      "fr:lex:retenir",
+      "fr:lex:trajet",
+      "fr:lex:horaire",
+      "fr:lex:code",
+      "fr:lex:contenir",
+      "fr:lex:defaire",
+      "fr:lex:enveloppe"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

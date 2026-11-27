@@ -3,22 +3,23 @@
   "module_key": "food-handling-trou",
   "kind": "lesson",
   "status": "planned",
-  "title": "Food and meals and Moving and handling things (B1)",
+  "title": "Holes, wires and rope {trous, fils et cordes}",
   "plan": {
     "words": [
       "fr:lex:trou",
       "fr:lex:fil",
       "fr:lex:corde",
       "fr:lex:pot",
-      "fr:lex:goutte",
+      "fr:lex:dechirer",
+      "fr:lex:accrocher",
       "fr:lex:tirer",
-      "fr:lex:ramener",
       "fr:lex:lacher",
-      "fr:lex:remettre",
-      "fr:lex:approcher",
-      "fr:lex:charger"
+      "fr:lex:soulever",
+      "fr:lex:serrer",
+      "fr:lex:profond",
+      "fr:lex:couvrir"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

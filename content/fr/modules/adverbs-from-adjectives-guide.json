@@ -3,10 +3,10 @@
   "module_key": "adverbs-from-adjectives-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: Adverbs from adjectives (-ment: doucement, exactement, heureusement)",
+  "title": "Adverbs in -ment {heureusement}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

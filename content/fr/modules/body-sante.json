@@ -3,21 +3,23 @@
   "module_key": "body-sante",
   "kind": "lesson",
   "status": "planned",
-  "title": "Body and health (A2)",
+  "title": "Théo is ill {la santé}",
   "plan": {
     "words": [
       "fr:lex:sante",
-      "fr:lex:peau",
       "fr:lex:maladie",
-      "fr:lex:cigarette",
-      "fr:lex:genou",
-      "fr:lex:cou",
-      "fr:lex:repos",
       "fr:lex:medicament",
-      "fr:lex:fumer",
-      "fr:lex:endormir"
+      "fr:lex:repos",
+      "fr:lex:fievre",
+      "fr:lex:rhume",
+      "fr:lex:gorge",
+      "fr:lex:infirmier",
+      "fr:lex:soigner",
+      "fr:lex:guerir",
+      "fr:lex:faible",
+      "fr:lex:souffrir"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

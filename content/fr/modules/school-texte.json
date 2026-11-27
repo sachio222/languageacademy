@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "school-texte",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Lina's holiday homework {Le devoir de Lina}",
+  "plan": {
+    "words": [
+      "fr:lex:ecriture",
+      "fr:lex:traduire",
+      "fr:lex:arabe",
+      "fr:lex:ski",
+      "fr:lex:piste",
+      "fr:lex:ocean",
+      "fr:lex:desert",
+      "fr:lex:dizaine",
+      "fr:lex:drapeau",
+      "fr:lex:enormement",
+      "fr:lex:recemment"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

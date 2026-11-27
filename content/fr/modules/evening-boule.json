@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "evening-boule",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Evening at the farm {la soirée}",
+  "plan": {
+    "words": [
+      "fr:lex:boule",
+      "fr:lex:allumer",
+      "fr:lex:bouton",
+      "fr:lex:chaine",
+      "fr:lex:frapper",
+      "fr:lex:ranger",
+      "fr:lex:preter",
+      "fr:lex:deposer",
+      "fr:lex:objet",
+      "fr:lex:unique",
+      "fr:lex:ajouter",
+      "fr:lex:recommencer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

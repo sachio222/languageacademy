@@ -3,19 +3,23 @@
   "module_key": "measures-deuxieme",
   "kind": "lesson",
   "status": "planned",
-  "title": "Numbers and measures (A1)",
+  "title": "How much? {un kilo de…}",
   "plan": {
     "words": [
-      "fr:lex:deuxieme",
-      "fr:lex:metre",
-      "fr:lex:demi",
-      "fr:lex:troisieme",
-      "fr:lex:kilometre",
       "fr:lex:kilo",
       "fr:lex:litre",
-      "fr:lex:quatrieme"
+      "fr:lex:metre",
+      "fr:lex:demi",
+      "fr:lex:moitie",
+      "fr:lex:poids",
+      "fr:lex:morceau",
+      "fr:lex:paquet",
+      "fr:lex:boite",
+      "fr:lex:chou",
+      "fr:lex:assez",
+      "fr:lex:peser"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

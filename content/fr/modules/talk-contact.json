@@ -3,23 +3,23 @@
   "module_key": "talk-contact",
   "kind": "lesson",
   "status": "planned",
-  "title": "Talking, agreeing and feelings (A2)",
+  "title": "When it goes wrong {la faute}",
   "plan": {
     "words": [
-      "fr:lex:contact",
+      "fr:lex:faute",
       "fr:lex:tort",
       "fr:lex:dommage",
-      "fr:lex:contraire",
       "fr:lex:excuse",
-      "fr:lex:resultat",
-      "fr:lex:difference",
-      "fr:lex:rencontre",
       "fr:lex:explication",
-      "fr:lex:rire",
-      "fr:lex:proposer",
-      "fr:lex:conseiller"
+      "fr:lex:resultat",
+      "fr:lex:crier",
+      "fr:lex:disputer",
+      "fr:lex:tromper",
+      "fr:lex:avertir",
+      "fr:lex:heureusement",
+      "fr:lex:malheureusement"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

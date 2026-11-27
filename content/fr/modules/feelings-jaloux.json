@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "feelings-jaloux",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Jealous, then sorry {Jaloux, puis désolé}",
+  "plan": {
+    "words": [
+      "fr:lex:regard",
+      "fr:lex:menteur",
+      "fr:lex:malin",
+      "fr:lex:haine",
+      "fr:lex:mefier",
+      "fr:lex:eloigner",
+      "fr:lex:envier",
+      "fr:lex:vexer",
+      "fr:lex:rompre",
+      "fr:lex:hair",
+      "fr:lex:insupportable"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "news-frontiere",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Sold abroad? {Vendu à l'étranger ?}",
+  "plan": {
+    "words": [
+      "fr:lex:frontiere",
+      "fr:lex:vente",
+      "fr:lex:particulier",
+      "fr:lex:precieux",
+      "fr:lex:inconnu",
+      "fr:lex:transporter",
+      "fr:lex:perte",
+      "fr:lex:douane",
+      "fr:lex:exposition"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

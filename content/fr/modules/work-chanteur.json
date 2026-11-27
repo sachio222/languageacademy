@@ -3,20 +3,23 @@
   "module_key": "work-chanteur",
   "kind": "lesson",
   "status": "planned",
-  "title": "Work and jobs (A2)",
+  "title": "The neighbours round the courtyard {les voisins}",
   "plan": {
     "words": [
-      "fr:lex:chanteur",
-      "fr:lex:ingenieur",
-      "fr:lex:conge",
-      "fr:lex:guide",
       "fr:lex:coiffeur",
-      "fr:lex:musicien",
+      "fr:lex:coiffer",
       "fr:lex:facteur",
-      "fr:lex:inscrire",
-      "fr:lex:renseigner"
+      "fr:lex:cuisinier",
+      "fr:lex:danseur",
+      "fr:lex:ecrivain",
+      "fr:lex:instrument",
+      "fr:lex:piano",
+      "fr:lex:auteur",
+      "fr:lex:talent",
+      "fr:lex:succes",
+      "fr:lex:heros"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

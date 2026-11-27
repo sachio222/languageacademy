@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "town-maire",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The plan for the cinema {Le projet pour le cinéma}",
+  "plan": {
+    "words": [
+      "fr:lex:maire",
+      "fr:lex:mesure",
+      "fr:lex:acces",
+      "fr:lex:importance",
+      "fr:lex:principe",
+      "fr:lex:limite",
+      "fr:lex:autoriser",
+      "fr:lex:provoquer",
+      "fr:lex:reagir",
+      "fr:lex:imposer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

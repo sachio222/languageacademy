@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-retraite",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Hélène's farewell {Le départ d'Hélène}",
+  "plan": {
+    "words": [
+      "fr:lex:retraite",
+      "fr:lex:discours",
+      "fr:lex:membre",
+      "fr:lex:modele",
+      "fr:lex:fidele",
+      "fr:lex:genereux",
+      "fr:lex:honnete",
+      "fr:lex:remettre",
+      "fr:lex:representer",
+      "fr:lex:transmettre",
+      "fr:lex:promotion"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

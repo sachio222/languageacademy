@@ -3,20 +3,23 @@
   "module_key": "school-papier",
   "kind": "lesson",
   "status": "planned",
-  "title": "School and language (A2)",
+  "title": "Class in the barn {l'exercice}",
   "plan": {
     "words": [
       "fr:lex:papier",
-      "fr:lex:regle",
-      "fr:lex:liste",
-      "fr:lex:test",
-      "fr:lex:nombre",
       "fr:lex:page",
-      "fr:lex:apprecier",
+      "fr:lex:regle",
+      "fr:lex:test",
+      "fr:lex:exercice",
+      "fr:lex:exemple",
       "fr:lex:deviner",
-      "fr:lex:signifier"
+      "fr:lex:signifier",
+      "fr:lex:maitresse",
+      "fr:lex:texte",
+      "fr:lex:comparer",
+      "fr:lex:prononcer"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

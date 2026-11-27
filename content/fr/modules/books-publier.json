@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "books-publier",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A weekend in Paris with Hemingway {Paris est une fête}",
+  "plan": {
+    "words": [
+      "fr:lex:publier",
+      "fr:lex:editeur",
+      "fr:lex:recit",
+      "fr:lex:chapitre",
+      "fr:lex:poesie",
+      "fr:lex:revue",
+      "fr:lex:atelier",
+      "fr:lex:toile",
+      "fr:lex:collection",
+      "fr:lex:misere",
+      "fr:lex:solitude",
+      "fr:lex:frequenter"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

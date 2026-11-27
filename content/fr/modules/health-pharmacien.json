@@ -1,0 +1,18 @@
+{
+  "schema": "la-module@1",
+  "module_key": "health-pharmacien",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "At the pharmacy {À la pharmacie}",
+  "plan": {
+    "words": [
+      "fr:lex:allergie",
+      "fr:lex:pharmacien",
+      "fr:lex:toux",
+      "fr:lex:vitamine",
+      "fr:lex:accueil"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-manifester",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Strikes and paperwork {grèves et papiers}",
+  "plan": {
+    "words": [
+      "fr:lex:manifester",
+      "fr:lex:protester",
+      "fr:lex:manifestation",
+      "fr:lex:administration",
+      "fr:lex:reglement",
+      "fr:lex:necessite",
+      "fr:lex:circonstance",
+      "fr:lex:penible",
+      "fr:lex:certes",
+      "fr:lex:toutefois",
+      "fr:lex:tandis-que"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

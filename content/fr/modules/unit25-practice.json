@@ -3,10 +3,10 @@
   "module_key": "unit25-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · Emotions and states of mind, Ideas and arguments and Work and jobs",
+  "title": "Practice · Body and mind {le corps et l'esprit}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

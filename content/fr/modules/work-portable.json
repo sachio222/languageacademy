@@ -3,19 +3,22 @@
   "module_key": "work-portable",
   "kind": "lesson",
   "status": "planned",
-  "title": "Work and jobs (A2)",
+  "title": "The new job {le métier}",
   "plan": {
     "words": [
-      "fr:lex:portable",
-      "fr:lex:journaliste",
-      "fr:lex:policier",
-      "fr:lex:secretaire",
       "fr:lex:emploi",
-      "fr:lex:signer",
+      "fr:lex:journaliste",
+      "fr:lex:secretaire",
+      "fr:lex:avocat",
+      "fr:lex:policier",
       "fr:lex:remplacer",
-      "fr:lex:contacter"
+      "fr:lex:taper",
+      "fr:lex:marque",
+      "fr:lex:informatique",
+      "fr:lex:courriel",
+      "fr:lex:ordinateur"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

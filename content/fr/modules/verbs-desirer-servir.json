@@ -1,0 +1,19 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-desirer-servir",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Serving at the counter ({désirer}, {servir}, {tenir}, {garder}, {prier}, {toucher})",
+  "plan": {
+    "words": [
+      "fr:lex:desirer",
+      "fr:lex:servir",
+      "fr:lex:tenir",
+      "fr:lex:garder",
+      "fr:lex:prier",
+      "fr:lex:toucher"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

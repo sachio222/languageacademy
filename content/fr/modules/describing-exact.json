@@ -3,22 +3,23 @@
   "module_key": "describing-exact",
   "kind": "lesson",
   "status": "planned",
-  "title": "Describing things (A2)",
+  "title": "Visiting the château {la visite}",
   "plan": {
     "words": [
-      "fr:lex:exact",
+      "fr:lex:visite",
       "fr:lex:special",
+      "fr:lex:superbe",
       "fr:lex:merveilleux",
       "fr:lex:incroyable",
-      "fr:lex:ancien",
-      "fr:lex:inutile",
       "fr:lex:horrible",
-      "fr:lex:vide",
       "fr:lex:formidable",
-      "fr:lex:superbe",
-      "fr:lex:interdire"
+      "fr:lex:la-haut",
+      "fr:lex:dedans",
+      "fr:lex:bas",
+      "fr:lex:interdire",
+      "fr:lex:exact"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

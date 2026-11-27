@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-coupable",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Whose fault was it? {à qui la faute ?}",
+  "plan": {
+    "words": [
+      "fr:lex:coupable",
+      "fr:lex:innocent",
+      "fr:lex:accuser",
+      "fr:lex:prouver",
+      "fr:lex:admettre",
+      "fr:lex:insister",
+      "fr:lex:supposer",
+      "fr:lex:obliger",
+      "fr:lex:loi",
+      "fr:lex:justice",
+      "fr:lex:juge",
+      "fr:lex:defendre"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

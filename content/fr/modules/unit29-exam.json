@@ -6,7 +6,6 @@
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json",
-    "note": "Final exam against the B1 core"
+    "source": "course-plan.json"
   }
 }

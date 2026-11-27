@@ -3,19 +3,22 @@
   "module_key": "food-fraise",
   "kind": "lesson",
   "status": "planned",
-  "title": "Food and meals (A1)",
+  "title": "What the farm grows {le potager}",
   "plan": {
     "words": [
-      "fr:lex:fraise",
-      "fr:lex:citron",
+      "fr:lex:soupe",
+      "fr:lex:oignon",
+      "fr:lex:pomme-de-terre",
+      "fr:lex:carotte",
       "fr:lex:jambon",
+      "fr:lex:citron",
+      "fr:lex:fraise",
       "fr:lex:raisin",
       "fr:lex:poire",
       "fr:lex:confiture",
-      "fr:lex:cuillere",
-      "fr:lex:carotte"
+      "fr:lex:yaourt"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

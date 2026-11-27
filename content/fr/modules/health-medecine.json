@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "health-medecine",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Getting better {Guérir}",
+  "plan": {
+    "words": [
+      "fr:lex:force",
+      "fr:lex:sain",
+      "fr:lex:manque",
+      "fr:lex:avaler",
+      "fr:lex:supporter",
+      "fr:lex:ressentir",
+      "fr:lex:habituer",
+      "fr:lex:medecine",
+      "fr:lex:laboratoire",
+      "fr:lex:difficilement"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

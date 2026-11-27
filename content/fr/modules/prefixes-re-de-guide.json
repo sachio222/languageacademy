@@ -3,10 +3,10 @@
   "module_key": "prefixes-re-de-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: Prefixes re- and dé- (refaire, recommencer, déménager, décrocher)",
+  "title": "Prefixes re-, dé- and in- (refaire, déménager, inutile)",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

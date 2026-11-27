@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-candidat",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The candidates {Les candidats}",
+  "plan": {
+    "words": [
+      "fr:lex:categorie",
+      "fr:lex:chanceux",
+      "fr:lex:egoiste",
+      "fr:lex:optimiste",
+      "fr:lex:pessimiste",
+      "fr:lex:comptable",
+      "fr:lex:photographe",
+      "fr:lex:architecte",
+      "fr:lex:visa",
+      "fr:lex:continent"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

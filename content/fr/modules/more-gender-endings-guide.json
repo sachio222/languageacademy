@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "more-gender-endings-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "More endings that tell {le} or {la}",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

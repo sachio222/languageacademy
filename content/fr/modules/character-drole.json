@@ -3,21 +3,23 @@
   "module_key": "character-drole",
   "kind": "lesson",
   "status": "planned",
-  "title": "Describing people (A2)",
+  "title": "Who's who in the class photo {le caractère}",
   "plan": {
     "words": [
-      "fr:lex:drole",
       "fr:lex:serieux",
-      "fr:lex:amoureux",
-      "fr:lex:fier",
+      "fr:lex:calme",
+      "fr:lex:charmant",
+      "fr:lex:curieux",
+      "fr:lex:amusant",
+      "fr:lex:inquiet",
+      "fr:lex:mechant",
+      "fr:lex:bete",
       "fr:lex:idiot",
       "fr:lex:stupide",
-      "fr:lex:mignon",
-      "fr:lex:calme",
-      "fr:lex:reprendre",
-      "fr:lex:gouter"
+      "fr:lex:malheureux",
+      "fr:lex:pareil"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-occuper-laisser",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "In charge for an hour ({s'occuper de}, {laisser}, {envoyer}, {quitter}, {arrêter})",
+  "plan": {
+    "words": [
+      "fr:lex:occuper",
+      "fr:lex:laisser",
+      "fr:lex:envoyer",
+      "fr:lex:quitter",
+      "fr:lex:arreter"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

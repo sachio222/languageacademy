@@ -1,0 +1,32 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit29-reading",
+  "kind": "reading",
+  "status": "planned",
+  "title": "Reading · {Les meilleurs ennemis}",
+  "plan": {
+    "words": [
+      "fr:lex:actuellement",
+      "fr:lex:aussitot",
+      "fr:lex:brusquement",
+      "fr:lex:naturellement",
+      "fr:lex:particulierement",
+      "fr:lex:reellement",
+      "fr:lex:entierement",
+      "fr:lex:vieillir",
+      "fr:lex:evoquer",
+      "fr:lex:tendresse"
+    ],
+    "constructions": [
+      "fr:cx:conditionnel-present",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:subj.bien-que",
+      "fr:cx:passive",
+      "fr:cx:q.inversion",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:relative.dont",
+      "fr:cx:futur-anterieur"
+    ],
+    "source": "course-plan.json"
+  }
+}

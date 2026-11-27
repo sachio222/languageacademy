@@ -3,22 +3,29 @@
   "module_key": "unit19-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Nature, animals and weather, Talking, agreeing and feelings and Body and health",
+  "title": "Reading · {Une fuite le dimanche soir}",
   "plan": {
     "words": [
-      "fr:lex:rhume",
-      "fr:lex:grippe",
-      "fr:lex:fievre",
-      "fr:lex:gorge",
-      "fr:lex:joue",
-      "fr:lex:epaule",
-      "fr:lex:infirmier",
-      "fr:lex:os",
-      "fr:lex:ranger",
-      "fr:lex:respirer"
+      "fr:lex:escalier",
+      "fr:lex:serviette",
+      "fr:lex:eteindre",
+      "fr:lex:complet",
+      "fr:lex:aventure",
+      "fr:lex:evier",
+      "fr:lex:tuyau"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Nature, animals and weather and Travel and transport; Body and health; Talking, agreeing and feelings), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:imperative.vous",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:conditionnel-present",
+      "fr:cx:frame.modal-infinitive",
+      "fr:cx:il-y-a",
+      "fr:cx:neg.ne-pas",
+      "fr:cx:si.present",
+      "fr:cx:frame.etre-en-train-de",
+      "fr:cx:pronoun.indirect-object"
+    ],
+    "source": "course-plan.json"
   }
 }

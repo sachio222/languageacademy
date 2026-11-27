@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "travel-chauffeur",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The bus to the farm {l'excursion}",
+  "plan": {
+    "words": [
+      "fr:lex:chauffeur",
+      "fr:lex:vitesse",
+      "fr:lex:rouler",
+      "fr:lex:kilometre",
+      "fr:lex:avance",
+      "fr:lex:seconde",
+      "fr:lex:durer",
+      "fr:lex:endormir",
+      "fr:lex:depasser",
+      "fr:lex:reculer",
+      "fr:lex:rattraper",
+      "fr:lex:moteur"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

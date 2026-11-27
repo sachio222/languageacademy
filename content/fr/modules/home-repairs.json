@@ -3,23 +3,23 @@
   "module_key": "home-repairs",
   "kind": "lesson",
   "status": "planned",
-  "title": "Getting things done: when something breaks at home",
+  "title": "When something breaks at home {la panne}",
   "plan": {
     "words": [
       "fr:lex:fuite",
-      "fr:lex:bloquer",
-      "fr:lex:enfermer",
-      "fr:lex:plombier",
-      "fr:lex:serrurier",
+      "fr:lex:robinet",
+      "fr:lex:chauffage",
+      "fr:lex:panne",
       "fr:lex:electricien",
+      "fr:lex:plombier",
       "fr:lex:reparateur",
       "fr:lex:proprietaire",
-      "fr:lex:panne",
-      "fr:lex:robinet",
+      "fr:lex:bloquer",
+      "fr:lex:enfermer",
       "fr:lex:serrure",
-      "fr:lex:chauffage"
+      "fr:lex:serrurier"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

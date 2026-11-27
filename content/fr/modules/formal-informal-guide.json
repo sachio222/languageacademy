@@ -3,10 +3,10 @@
   "module_key": "formal-informal-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: Formal and informal French (vous and tu, written and spoken words)",
+  "title": "Formal and informal French (tu and vous, letters and messages, spoken and written words)",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

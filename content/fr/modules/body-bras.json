@@ -3,7 +3,7 @@
   "module_key": "body-bras",
   "kind": "lesson",
   "status": "planned",
-  "title": "Body and health (A1)",
+  "title": "Where does it hurt? {avoir mal à}",
   "plan": {
     "words": [
       "fr:lex:bras",
@@ -14,9 +14,12 @@
       "fr:lex:nez",
       "fr:lex:dent",
       "fr:lex:oreille",
-      "fr:lex:ventre"
+      "fr:lex:ventre",
+      "fr:lex:medecin",
+      "fr:lex:course",
+      "fr:lex:blessure"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "travel-agence",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The hire car {La voiture de location}",
+  "plan": {
+    "words": [
+      "fr:lex:agence",
+      "fr:lex:vehicule",
+      "fr:lex:essence",
+      "fr:lex:hors",
+      "fr:lex:demarrer",
+      "fr:lex:croiser",
+      "fr:lex:itineraire",
+      "fr:lex:embouteillage",
+      "fr:lex:poussiere",
+      "fr:lex:venere"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "animals-lion",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "At the zoo in the park {Au zoo du parc}",
+  "plan": {
+    "words": [
+      "fr:lex:lion",
+      "fr:lex:singe",
+      "fr:lex:geant",
+      "fr:lex:poupee",
+      "fr:lex:jouet",
+      "fr:lex:adulte",
+      "fr:lex:reuf"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

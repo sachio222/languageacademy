@@ -3,22 +3,28 @@
   "module_key": "unit16-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · People and family, Food and meals and Travel and transport",
+  "title": "Reading · {La surprise d'Henri}",
   "plan": {
     "words": [
-      "fr:lex:pomme-de-terre",
-      "fr:lex:jour-ferie",
-      "fr:lex:courriel",
-      "fr:lex:geographie",
-      "fr:lex:yaourt",
-      "fr:lex:refrigerateur",
-      "fr:lex:informatique",
-      "fr:lex:carrefour",
-      "fr:lex:fourchette",
-      "fr:lex:librairie"
+      "fr:lex:feter",
+      "fr:lex:chanson",
+      "fr:lex:champagne",
+      "fr:lex:appareil",
+      "fr:lex:saison",
+      "fr:lex:court"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (People and family; Body and health; Nature, animals and weather and Linking and degree words), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:imparfait",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:si.present",
+      "fr:cx:subj.emotion-que",
+      "fr:cx:pronoun.direct-object",
+      "fr:cx:frame.aller-infinitive"
+    ],
+    "source": "course-plan.json"
   }
 }

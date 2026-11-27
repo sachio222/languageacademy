@@ -3,19 +3,29 @@
   "module_key": "unit14-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · The rest of the present tense, then verbs",
+  "title": "Reading · {Une semaine à la boulangerie}",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:caisse",
+      "fr:lex:plein",
+      "fr:lex:vide",
+      "fr:lex:propre"
+    ],
     "constructions": [
+      "fr:cx:verb.ir.present",
+      "fr:cx:verb.re.present",
       "fr:cx:passe-compose.avoir",
       "fr:cx:imparfait",
       "fr:cx:futur-simple",
       "fr:cx:frame.modal-infinitive",
       "fr:cx:relative.qui",
       "fr:cx:relative.que",
-      "fr:cx:si.present"
+      "fr:cx:si.present",
+      "fr:cx:imperative.vous",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:gerondif",
+      "fr:cx:pronoun.indirect-object"
     ],
-    "source": "plan.json",
-    "note": "A week at a holiday job in a bakery, told day by day: what the narrator chooses, sells, waits for and answers, with the unit's verbs in every tense the learner knows."
+    "source": "course-plan.json"
   }
 }

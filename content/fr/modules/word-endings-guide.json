@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "word-endings-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Adjective endings: -eux and -able, -ible",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

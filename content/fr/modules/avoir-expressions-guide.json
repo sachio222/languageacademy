@@ -3,10 +3,10 @@
   "module_key": "avoir-expressions-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: avoir mal à, avoir besoin de, avoir envie de (the body and health phrases)",
+  "title": "{avoir} where English says to be",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

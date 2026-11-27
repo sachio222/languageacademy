@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "housing-delicat",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Moving day {Le jour du déménagement}",
+  "plan": {
+    "words": [
+      "fr:lex:delicat",
+      "fr:lex:superieur",
+      "fr:lex:des.preposition",
+      "fr:lex:fixer",
+      "fr:lex:briser",
+      "fr:lex:coller",
+      "fr:lex:confortable",
+      "fr:lex:bruyant",
+      "fr:lex:pourboire",
+      "fr:lex:colis",
+      "fr:lex:cimer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

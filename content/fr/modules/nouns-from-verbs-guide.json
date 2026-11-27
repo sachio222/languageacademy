@@ -3,10 +3,10 @@
   "module_key": "nouns-from-verbs-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: Nouns from verbs (-tion, -ment, -age: explication, changement, mariage)",
+  "title": "Nouns from verbs {arriver, l'arrivée}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "slang-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Everyday slang ({mec}, {boulot}, {wesh}, {kiffer}, {grave})",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

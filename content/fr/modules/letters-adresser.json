@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "letters-adresser",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A formal complaint {Une réclamation}",
+  "plan": {
+    "words": [
+      "fr:lex:lors",
+      "fr:lex:durant",
+      "fr:lex:aupres",
+      "fr:lex:reel",
+      "fr:lex:totalement",
+      "fr:lex:adresser",
+      "fr:lex:rechercher",
+      "fr:lex:renvoyer",
+      "fr:lex:reclamer",
+      "fr:lex:politesse",
+      "fr:lex:desagreable"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

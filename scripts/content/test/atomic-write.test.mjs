@@ -5,7 +5,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
-import { chmodSync, cpSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { chmodSync, cpSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -48,10 +48,12 @@ test('content:bundle writes the bundle through a temporary file', { skip: skipRo
   assert.equal(readFileSync(out, 'utf8'), 'OLD\n', 'the old bundle is untouched');
 });
 
-test('plan-stubs --write writes course.json through a temporary file', { skip: skipRoot }, async (t) => {
-  const { main } = await import('../plan-stubs.mjs');
-  const root = tempDir(t);
+test('plan:stubs --write writes course.json through a temporary file', { skip: skipRoot }, async (t) => {
+  const { stubsCommand } = await import('../../plan/stubs.mjs');
+  const repo = tempDir(t);
+  const root = join(repo, 'content', 'fr');
   cpSync(CONTENT_ROOT, root, { recursive: true });
+  symlinkSync(join(CONTENT_ROOT, '..', '..', 'curriculum-graph'), join(repo, 'curriculum-graph'));
   // The course loses its last planned stub (file and listing), so --write must write course.json again.
   const file = join(root, 'course.json');
   const outline = JSON.parse(readFileSync(file, 'utf8'));
@@ -63,7 +65,7 @@ test('plan-stubs --write writes course.json through a temporary file', { skip: s
   t.mock.method(console, 'error', () => {});
   let failed = false;
   try {
-    failed = main(['--write', '--root', root]) !== 0;
+    failed = (await stubsCommand({ repoRoot: repo, lang: 'fr', write: true })) !== 0;
   } catch {
     failed = true;
   }

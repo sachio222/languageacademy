@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verlan-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Verlan, words turned round ({meuf}, {ouf}, {relou}, {chelou}, {teuf})",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

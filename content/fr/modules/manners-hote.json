@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "manners-hote",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A guest in France {un invité en France}",
+  "plan": {
+    "words": [
+      "fr:lex:hote",
+      "fr:lex:habituel",
+      "fr:lex:curiosite",
+      "fr:lex:discret",
+      "fr:lex:sincere",
+      "fr:lex:modeste",
+      "fr:lex:attentif",
+      "fr:lex:etonnant",
+      "fr:lex:loger",
+      "fr:lex:reprocher",
+      "fr:lex:coutume",
+      "fr:lex:bise"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

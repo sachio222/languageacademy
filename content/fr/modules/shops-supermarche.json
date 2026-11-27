@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "shops-supermarche",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Shopping in Belleville {les courses}",
+  "plan": {
+    "words": [
+      "fr:lex:supermarche",
+      "fr:lex:boucherie",
+      "fr:lex:epicerie",
+      "fr:lex:portefeuille",
+      "fr:lex:depenser",
+      "fr:lex:cheque",
+      "fr:lex:gratuit",
+      "fr:lex:monnaie",
+      "fr:lex:boutique",
+      "fr:lex:marchand",
+      "fr:lex:panier",
+      "fr:lex:paire"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

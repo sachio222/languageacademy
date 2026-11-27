@@ -3,11 +3,29 @@
   "module_key": "unit20-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Home, Town and places and Free time, sport and culture",
+  "title": "Reading · {Le mystère de la cour}",
   "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Home; Free time, sport and culture; Work and jobs), reusing its lessons' words."
+    "words": [
+      "fr:lex:mystere",
+      "fr:lex:interroger",
+      "fr:lex:cesser",
+      "fr:lex:identifier",
+      "fr:lex:enfuir",
+      "fr:lex:meuf",
+      "fr:lex:wesh"
+    ],
+    "constructions": [
+      "fr:cx:imparfait",
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:plus-que-parfait.etre",
+      "fr:cx:q.quest-ce-qui",
+      "fr:cx:q.embedded",
+      "fr:cx:relative.ce-que",
+      "fr:cx:subj.douter-que",
+      "fr:cx:subj.possible-que",
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:gerondif"
+    ],
+    "source": "course-plan.json"
   }
 }

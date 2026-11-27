@@ -3,23 +3,23 @@
   "module_key": "nature-sable",
   "kind": "lesson",
   "status": "planned",
-  "title": "Nature, animals and weather (A2)",
+  "title": "Camping by the river {Au camping, au bord de l'eau}",
   "plan": {
     "words": [
+      "fr:lex:tente",
       "fr:lex:sable",
-      "fr:lex:ocean",
-      "fr:lex:canard",
-      "fr:lex:souris",
       "fr:lex:fleuve",
-      "fr:lex:degre",
-      "fr:lex:lion",
-      "fr:lex:orage",
-      "fr:lex:mouton",
-      "fr:lex:paysage",
-      "fr:lex:brouillard",
-      "fr:lex:bouquet"
+      "fr:lex:peche",
+      "fr:lex:baigner",
+      "fr:lex:casque",
+      "fr:lex:colline",
+      "fr:lex:source",
+      "fr:lex:ombre",
+      "fr:lex:fantastique",
+      "fr:lex:flamme",
+      "fr:lex:paysan"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

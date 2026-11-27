@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "health-chute",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A fall on the site {Une chute sur le chantier}",
+  "plan": {
+    "words": [
+      "fr:lex:chute",
+      "fr:lex:front",
+      "fr:lex:levre",
+      "fr:lex:nerf",
+      "fr:lex:choc",
+      "fr:lex:cri",
+      "fr:lex:hurler",
+      "fr:lex:trembler",
+      "fr:lex:allonger",
+      "fr:lex:rassurer",
+      "fr:lex:calmer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

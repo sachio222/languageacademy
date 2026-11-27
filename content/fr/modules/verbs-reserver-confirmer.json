@@ -3,15 +3,18 @@
   "module_key": "verbs-reserver-confirmer",
   "kind": "lesson",
   "status": "planned",
-  "title": "Verbs: réserver, confirmer, dessiner, féliciter",
+  "title": "Orders by phone ({téléphoner}, {réserver}, {confirmer}, {rappeler}, {répéter}, {épeler})",
   "plan": {
     "words": [
       "fr:lex:reserver",
       "fr:lex:confirmer",
-      "fr:lex:dessiner",
-      "fr:lex:feliciter"
+      "fr:lex:telephoner",
+      "fr:lex:rappeler",
+      "fr:lex:repeter",
+      "fr:lex:epeler",
+      "fr:lex:allo"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

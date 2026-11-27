@@ -3,11 +3,30 @@
   "module_key": "unit27-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Ideas and arguments, Describing things and Society, law and conflict",
+  "title": "Reading · {Quarante ans de chantiers}",
   "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Describing people and Nature, animals and weather; Town and places; Linking and degree words), reusing its lessons' words."
+    "words": [
+      "fr:lex:instruction",
+      "fr:lex:concours",
+      "fr:lex:maitre",
+      "fr:lex:agent",
+      "fr:lex:suffire",
+      "fr:lex:debrouiller",
+      "fr:lex:milliard",
+      "fr:lex:recent",
+      "fr:lex:immediat",
+      "fr:lex:applaudir"
+    ],
+    "constructions": [
+      "fr:cx:q.inversion",
+      "fr:cx:q.embedded",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:si.plus-que-parfait-conditionnel-passe",
+      "fr:cx:subj.emotion-que",
+      "fr:cx:passive",
+      "fr:cx:relative.dont"
+    ],
+    "source": "course-plan.json"
   }
 }

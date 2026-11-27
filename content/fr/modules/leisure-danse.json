@@ -3,20 +3,23 @@
   "module_key": "leisure-danse",
   "kind": "lesson",
   "status": "planned",
-  "title": "Free time, sport and culture (A2)",
+  "title": "Sport and TV {les loisirs}",
   "plan": {
     "words": [
       "fr:lex:danse",
       "fr:lex:serie",
+      "fr:lex:emission",
       "fr:lex:champion",
       "fr:lex:disque",
       "fr:lex:ballon",
-      "fr:lex:emission",
-      "fr:lex:concert",
       "fr:lex:entrainer",
-      "fr:lex:feter"
+      "fr:lex:pilote",
+      "fr:lex:stade",
+      "fr:lex:joueur",
+      "fr:lex:camera",
+      "fr:lex:filmer"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

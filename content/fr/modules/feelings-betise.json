@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "feelings-betise",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Trouble in the dormitory {les bêtises}",
+  "plan": {
+    "words": [
+      "fr:lex:betise",
+      "fr:lex:oser",
+      "fr:lex:pardonner",
+      "fr:lex:moquer",
+      "fr:lex:honte",
+      "fr:lex:colere",
+      "fr:lex:peine",
+      "fr:lex:pitie",
+      "fr:lex:punir",
+      "fr:lex:obeir",
+      "fr:lex:plaindre",
+      "fr:lex:jaloux"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

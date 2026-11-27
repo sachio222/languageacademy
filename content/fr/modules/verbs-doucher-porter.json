@@ -1,0 +1,18 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verbs-doucher-porter",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Before work ({se doucher}, {porter}, {traverser}, {emmener})",
+  "plan": {
+    "words": [
+      "fr:lex:doucher",
+      "fr:lex:porter",
+      "fr:lex:traverser",
+      "fr:lex:emmener",
+      "fr:lex:bosser"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

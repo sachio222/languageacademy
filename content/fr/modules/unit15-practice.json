@@ -3,10 +3,10 @@
   "module_key": "unit15-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · The remaining tenses",
+  "title": "Practice · Looking back and ahead",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

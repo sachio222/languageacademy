@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "spoken-fillers-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "How people really talk ({euh}, {ben}, {hein}, {quoi}, {en fait}, {du coup}, {genre}, {bref})",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

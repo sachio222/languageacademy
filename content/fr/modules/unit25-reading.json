@@ -3,22 +3,27 @@
   "module_key": "unit25-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Emotions and states of mind, Ideas and arguments and Work and jobs",
+  "title": "Reading · {Le voisin de chambre}",
   "plan": {
     "words": [
-      "fr:lex:etendre",
-      "fr:lex:charme",
-      "fr:lex:auteur",
-      "fr:lex:ceremonie",
-      "fr:lex:forcement",
-      "fr:lex:songer",
-      "fr:lex:fidele",
-      "fr:lex:avantage",
-      "fr:lex:religion",
-      "fr:lex:protection"
+      "fr:lex:aveugle",
+      "fr:lex:sourd",
+      "fr:lex:raser",
+      "fr:lex:concentrer",
+      "fr:lex:paraitre",
+      "fr:lex:vivant",
+      "fr:lex:humain"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Town and places; Stories, legends and the arts; Seeing, hearing and feeling and Numbers and measures), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:imparfait",
+      "fr:cx:plus-que-parfait.etre",
+      "fr:cx:si.plus-que-parfait-conditionnel-passe",
+      "fr:cx:subj.emotion-que",
+      "fr:cx:subj.avant-que",
+      "fr:cx:relative.dont",
+      "fr:cx:pronoun.indirect-object",
+      "fr:cx:gerondif"
+    ],
+    "source": "course-plan.json"
   }
 }

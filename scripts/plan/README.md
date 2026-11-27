@@ -80,6 +80,6 @@ Each part of a reading names a type from `reading-types.json`: the human situati
 
 ## The earlier stub tool
 
-`scripts/content/plan-stubs.mjs` made the planned module files now in `content/fr/modules/` from an earlier plan kept
-outside the repository, with keys from `content/fr/plan-keys.json`. `plan:stubs` replaces it: the plan file holds the
-keys. Until `pnpm plan:stubs --write` is run, the planned files on disk are still the earlier tool's.
+`plan:stubs` replaced `scripts/content/plan-stubs.mjs` and its key map, `content/fr/plan-keys.json`, which made planned
+module files from an earlier plan kept outside the repository. Both are retired: the plan file holds the keys, and the
+planned files in `content/fr/modules/` are `plan:stubs` output.

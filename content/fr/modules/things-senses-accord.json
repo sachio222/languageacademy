@@ -3,22 +3,23 @@
   "module_key": "things-senses-accord",
   "kind": "lesson",
   "status": "planned",
-  "title": "Everyday things, Seeing, hearing and feeling and more (A1)",
+  "title": "The surprise party {la fête}",
   "plan": {
     "words": [
-      "fr:lex:accord",
-      "fr:lex:gros",
+      "fr:lex:surprise",
+      "fr:lex:felicitations",
+      "fr:lex:bravo",
       "fr:lex:joli",
-      "fr:lex:sens",
-      "fr:lex:vue",
-      "fr:lex:sympa",
-      "fr:lex:course",
       "fr:lex:intelligent",
-      "fr:lex:enchante",
       "fr:lex:blond",
-      "fr:lex:felicitations"
+      "fr:lex:gros",
+      "fr:lex:dessin",
+      "fr:lex:metier",
+      "fr:lex:volontiers",
+      "fr:lex:accord",
+      "fr:lex:invitation"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

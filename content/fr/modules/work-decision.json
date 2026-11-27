@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-decision",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "So that it never happens again {prévoir}",
+  "plan": {
+    "words": [
+      "fr:lex:decision",
+      "fr:lex:occasion",
+      "fr:lex:maniere",
+      "fr:lex:detail",
+      "fr:lex:cas",
+      "fr:lex:prevoir",
+      "fr:lex:eviter",
+      "fr:lex:risque",
+      "fr:lex:risquer",
+      "fr:lex:empecher",
+      "fr:lex:resoudre",
+      "fr:lex:annoncer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

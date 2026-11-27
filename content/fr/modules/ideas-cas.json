@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-cas",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "What did you think? {Qu'est-ce que tu en as pensé ?}",
+  "plan": {
+    "words": [
+      "fr:lex:forcement",
+      "fr:lex:evident",
+      "fr:lex:egal",
+      "fr:lex:conclure",
+      "fr:lex:brillant",
+      "fr:lex:impressionner",
+      "fr:lex:decevoir",
+      "fr:lex:exagerer",
+      "fr:lex:personnellement",
+      "fr:lex:probable",
+      "fr:lex:parier"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

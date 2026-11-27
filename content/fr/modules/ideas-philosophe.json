@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-philosophe",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A café philo with Odile {le café philo}",
+  "plan": {
+    "words": [
+      "fr:lex:reflexion",
+      "fr:lex:logique",
+      "fr:lex:certitude",
+      "fr:lex:conviction",
+      "fr:lex:jugement",
+      "fr:lex:moral",
+      "fr:lex:evidence",
+      "fr:lex:education",
+      "fr:lex:affirmer",
+      "fr:lex:citer",
+      "fr:lex:justifier",
+      "fr:lex:philosophe"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

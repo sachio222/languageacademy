@@ -63,10 +63,10 @@ test('--allow is no longer an option', () => {
 test('the default content folder validates clean', () => {
   const r = run('validate');
   assert.equal(r.status, 0, r.stderr);
-  // Every module of the outline has its file: 146 lessons, practice sets and unit exams, 14 guides, 11 readings and
-  // 10 Reference pages written, and the course plan's 194 planned stubs (Task 17). Translations outside Unit 1 still
+  // Every module of the outline has its file: the modules written for Units 1 to 12 and the Reference pages, and a
+  // planned stub for each module of content/fr/course-plan.json (pnpm plan:stubs). Translations outside Unit 1 still
   // print as warnings.
-  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 375 modules');
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 401 modules');
   assert.match(r.stdout, /^\d+ warnings: translate_outside_unit1 \d+$/m);
 });
 

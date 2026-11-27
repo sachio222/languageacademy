@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-enquete",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The officer's story {l'enquête}",
+  "plan": {
+    "words": [
+      "fr:lex:enquete",
+      "fr:lex:temoin",
+      "fr:lex:attaque",
+      "fr:lex:arme",
+      "fr:lex:violence",
+      "fr:lex:crime",
+      "fr:lex:victime",
+      "fr:lex:menacer",
+      "fr:lex:attaquer",
+      "fr:lex:voleur",
+      "fr:lex:fuir",
+      "fr:lex:poursuivre"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

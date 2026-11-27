@@ -3,22 +3,28 @@
   "module_key": "unit26-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Society, law and conflict, Travel and transport and Nature, animals and weather",
+  "title": "Reading · {La nuit de l'orage}",
   "plan": {
     "words": [
-      "fr:lex:surface",
-      "fr:lex:geler",
-      "fr:lex:estomac",
-      "fr:lex:entourer",
-      "fr:lex:poussiere",
-      "fr:lex:total",
-      "fr:lex:mouche",
-      "fr:lex:precieux",
-      "fr:lex:sauvage",
-      "fr:lex:particulier"
+      "fr:lex:approcher",
+      "fr:lex:ramener",
+      "fr:lex:creuser",
+      "fr:lex:plonger",
+      "fr:lex:travers",
+      "fr:lex:pur",
+      "fr:lex:reservation",
+      "fr:lex:keuf"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Travel and transport; Society, law and conflict; People and family), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:passe-compose.etre",
+      "fr:cx:imparfait",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:q.quest-ce-qui",
+      "fr:cx:subj.douter-que",
+      "fr:cx:subj.possible-que",
+      "fr:cx:gerondif",
+      "fr:cx:relative.dont"
+    ],
+    "source": "course-plan.json"
   }
 }

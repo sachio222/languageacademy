@@ -3,13 +3,15 @@
   "module_key": "ir-verbs-like-finir",
   "kind": "lesson",
   "status": "planned",
-  "title": "-ir verbs like finir (je choisis, nous choisissons)",
+  "title": "-ir verbs like {finir} (je choisis, nous choisissons)",
   "plan": {
     "words": [
       "fr:lex:choisir",
       "fr:lex:reflechir",
+      "fr:lex:remplir",
       "fr:lex:grandir",
-      "fr:lex:remplir"
+      "fr:lex:boulanger",
+      "fr:lex:boulot"
     ],
     "constructions": [
       "fr:cx:verb.ir.present",
@@ -17,6 +19,6 @@
       "fr:cx:verb.ir.subjunctive",
       "fr:cx:prsptcp.ir"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

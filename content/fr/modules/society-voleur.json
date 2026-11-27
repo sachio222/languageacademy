@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "society-voleur",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Stolen! {Volé !}",
+  "plan": {
+    "words": [
+      "fr:lex:gardien",
+      "fr:lex:portrait",
+      "fr:lex:palais",
+      "fr:lex:effacer",
+      "fr:lex:galerie",
+      "fr:lex:visible",
+      "fr:lex:invisible",
+      "fr:lex:menace",
+      "fr:lex:forcer",
+      "fr:lex:evenement",
+      "fr:lex:foule"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

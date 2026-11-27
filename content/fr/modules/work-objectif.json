@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-objectif",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Goals for the site {Les objectifs du chantier}",
+  "plan": {
+    "words": [
+      "fr:lex:objectif",
+      "fr:lex:proposition",
+      "fr:lex:element",
+      "fr:lex:atteindre",
+      "fr:lex:reduire",
+      "fr:lex:lancer",
+      "fr:lex:achever",
+      "fr:lex:tenter",
+      "fr:lex:annuel",
+      "fr:lex:amelioration",
+      "fr:lex:augmentation",
+      "fr:lex:reussite"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "media-fichier",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Files, printers and websites {Fichiers, imprimantes et sites}",
+  "plan": {
+    "words": [
+      "fr:lex:fichier",
+      "fr:lex:electronique",
+      "fr:lex:logiciel",
+      "fr:lex:telechargement",
+      "fr:lex:option",
+      "fr:lex:site",
+      "fr:lex:blog",
+      "fr:lex:publicite",
+      "fr:lex:clavier",
+      "fr:lex:imprimante",
+      "fr:lex:imprimer",
+      "fr:lex:tablette"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

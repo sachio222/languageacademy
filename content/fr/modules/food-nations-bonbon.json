@@ -3,24 +3,23 @@
   "module_key": "food-nations-bonbon",
   "kind": "lesson",
   "status": "planned",
-  "title": "Food and meals and Countries and languages (A2)",
+  "title": "The housewarming {La pendaison de crémaillère}",
   "plan": {
     "words": [
+      "fr:lex:gramme",
       "fr:lex:bonbon",
-      "fr:lex:huile",
-      "fr:lex:creme",
-      "fr:lex:bol",
-      "fr:lex:cuisinier",
-      "fr:lex:arabe",
       "fr:lex:grec",
       "fr:lex:indien",
       "fr:lex:polonais",
       "fr:lex:britannique",
-      "fr:lex:tranche",
       "fr:lex:portugais",
-      "fr:lex:cuire"
+      "fr:lex:quantite",
+      "fr:lex:ingredient",
+      "fr:lex:melanger",
+      "fr:lex:decouper",
+      "fr:lex:specialite"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

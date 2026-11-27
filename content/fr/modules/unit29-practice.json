@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "unit29-practice",
+  "kind": "practice",
+  "status": "planned",
+  "title": "Practice · France through a visitor's eyes {la France vue d'ailleurs}",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "money-vente",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Second-hand {D'occasion}",
+  "plan": {
+    "words": [
+      "fr:lex:echange",
+      "fr:lex:faveur",
+      "fr:lex:fortune",
+      "fr:lex:valoir",
+      "fr:lex:baisser",
+      "fr:lex:presser",
+      "fr:lex:reduction",
+      "fr:lex:achat",
+      "fr:lex:etiquette",
+      "fr:lex:tarif",
+      "fr:lex:centime",
+      "fr:lex:echanger"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

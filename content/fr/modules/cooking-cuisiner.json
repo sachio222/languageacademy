@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "cooking-cuisiner",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Cooking with Grandpa {cuisiner}",
+  "plan": {
+    "words": [
+      "fr:lex:cuisiner",
+      "fr:lex:parfum",
+      "fr:lex:simple",
+      "fr:lex:prefere",
+      "fr:lex:bougie",
+      "fr:lex:bruler",
+      "fr:lex:odeur",
+      "fr:lex:huile",
+      "fr:lex:creme",
+      "fr:lex:cuire",
+      "fr:lex:tranche",
+      "fr:lex:gourmand"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

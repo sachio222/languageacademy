@@ -3,22 +3,23 @@
   "module_key": "food-verre",
   "kind": "lesson",
   "status": "planned",
-  "title": "Food and meals (A1)",
+  "title": "Setting the table {la table}",
   "plan": {
     "words": [
-      "fr:lex:verre",
       "fr:lex:couteau",
-      "fr:lex:bouteille",
-      "fr:lex:dejeuner",
-      "fr:lex:repas",
-      "fr:lex:soupe",
-      "fr:lex:tasse",
+      "fr:lex:fourchette",
+      "fr:lex:cuillere",
       "fr:lex:assiette",
+      "fr:lex:tasse",
+      "fr:lex:bouteille",
+      "fr:lex:repas",
+      "fr:lex:dejeuner",
+      "fr:lex:petit-dejeuner",
       "fr:lex:appetit",
-      "fr:lex:oignon",
-      "fr:lex:petit-dejeuner"
+      "fr:lex:midi",
+      "fr:lex:bol"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

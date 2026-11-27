@@ -3,12 +3,18 @@
   "module_key": "ce-que-and-ce-qui",
   "kind": "lesson",
   "status": "planned",
-  "title": "ce que and ce qui (je fais ce que je veux, ce qui est important)",
+  "title": "{ce que} and {ce qui}: saying what (ce que j'aime, ce qui est drôle)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:facile",
+      "fr:lex:surtout",
+      "fr:lex:drole",
+      "fr:lex:genre",
+      "fr:lex:en-fait"
+    ],
     "constructions": [
       "fr:cx:relative.ce-que"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

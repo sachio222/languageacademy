@@ -3,22 +3,30 @@
   "module_key": "unit22-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Work and jobs, Shops, money and clothes and Nature, animals and weather",
+  "title": "Reading · {Messages de la Croix-Rousse}",
   "plan": {
     "words": [
-      "fr:lex:randonnee",
-      "fr:lex:oreiller",
-      "fr:lex:armoire",
-      "fr:lex:balcon",
-      "fr:lex:guitare",
-      "fr:lex:tiroir",
-      "fr:lex:promenade",
-      "fr:lex:casque",
-      "fr:lex:ski",
-      "fr:lex:bougie"
+      "fr:lex:laid",
+      "fr:lex:complique",
+      "fr:lex:bouquet",
+      "fr:lex:guide",
+      "fr:lex:mouchoir",
+      "fr:lex:extraordinaire",
+      "fr:lex:relou"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Work and jobs; Town and places, Linking and degree words and more; Free time, sport and culture), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:passe-compose.avoir",
+      "fr:cx:passe-compose.etre",
+      "fr:cx:imparfait",
+      "fr:cx:futur-simple",
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:si.present",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:pronoun.y",
+      "fr:cx:pronoun.en"
+    ],
+    "source": "course-plan.json"
   }
 }

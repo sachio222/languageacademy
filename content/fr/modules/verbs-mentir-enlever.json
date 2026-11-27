@@ -3,15 +3,16 @@
   "module_key": "verbs-mentir-enlever",
   "kind": "lesson",
   "status": "planned",
-  "title": "Verbs: mentir, enlever, conduire, casser",
+  "title": "Something broken ({casser}, {enlever}, {mentir}, {raconter})",
   "plan": {
     "words": [
-      "fr:lex:mentir",
+      "fr:lex:casser",
       "fr:lex:enlever",
-      "fr:lex:conduire",
-      "fr:lex:casser"
+      "fr:lex:mentir",
+      "fr:lex:raconter",
+      "fr:lex:verre"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

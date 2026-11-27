@@ -3,12 +3,16 @@
   "module_key": "pluperfect-with-etre",
   "kind": "lesson",
   "status": "planned",
-  "title": "Pluperfect with être (j'étais déjà parti)",
+  "title": "Pluperfect with {être} (elle était déjà partie)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:mariage",
+      "fr:lex:cousin",
+      "fr:lex:cousine"
+    ],
     "constructions": [
       "fr:cx:plus-que-parfait.etre"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

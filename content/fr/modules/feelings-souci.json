@@ -3,25 +3,23 @@
   "module_key": "feelings-souci",
   "kind": "lesson",
   "status": "planned",
-  "title": "Emotions and states of mind (B1)",
+  "title": "Nerves before the big day {le trac}",
   "plan": {
     "words": [
       "fr:lex:souci",
-      "fr:lex:horreur",
-      "fr:lex:desir",
-      "fr:lex:passion",
-      "fr:lex:haine",
       "fr:lex:humeur",
-      "fr:lex:souffrance",
       "fr:lex:emotion",
+      "fr:lex:sentiment",
+      "fr:lex:nerveux",
       "fr:lex:craindre",
-      "fr:lex:moquer",
       "fr:lex:gener",
       "fr:lex:enerver",
       "fr:lex:detendre",
-      "fr:lex:habituer"
+      "fr:lex:ennui",
+      "fr:lex:folie",
+      "fr:lex:horreur"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

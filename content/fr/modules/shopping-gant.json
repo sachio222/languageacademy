@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "shopping-gant",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A present for Raymond {Un cadeau pour Raymond}",
+  "plan": {
+    "words": [
+      "fr:lex:gant",
+      "fr:lex:ceinture",
+      "fr:lex:collier",
+      "fr:lex:cravate",
+      "fr:lex:cuir",
+      "fr:lex:casquette",
+      "fr:lex:bijou",
+      "fr:lex:large",
+      "fr:lex:rond",
+      "fr:lex:pratique",
+      "fr:lex:original"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

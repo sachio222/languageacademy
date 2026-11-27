@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "cinema-spectateur",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "An evening at Le Familia {Une soirée au Familia}",
+  "plan": {
+    "words": [
+      "fr:lex:spectateur",
+      "fr:lex:ambiance",
+      "fr:lex:episode",
+      "fr:lex:humour",
+      "fr:lex:invention",
+      "fr:lex:version",
+      "fr:lex:melange",
+      "fr:lex:specialement",
+      "fr:lex:extremement",
+      "fr:lex:effectivement",
+      "fr:lex:negatif",
+      "fr:lex:dialogue"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

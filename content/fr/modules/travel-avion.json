@@ -3,21 +3,23 @@
   "module_key": "travel-avion",
   "kind": "lesson",
   "status": "planned",
-  "title": "Travel and transport (A1)",
+  "title": "Getting there {le trajet}",
   "plan": {
     "words": [
       "fr:lex:avion",
-      "fr:lex:bateau",
-      "fr:lex:voyage",
-      "fr:lex:billet",
-      "fr:lex:taxi",
-      "fr:lex:valise",
-      "fr:lex:velo",
       "fr:lex:aeroport",
+      "fr:lex:taxi",
+      "fr:lex:ticket",
       "fr:lex:moto",
-      "fr:lex:ticket"
+      "fr:lex:longtemps",
+      "fr:lex:minuit",
+      "fr:lex:quart",
+      "fr:lex:demi-heure",
+      "fr:lex:sans",
+      "fr:lex:siege",
+      "fr:lex:arriere"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

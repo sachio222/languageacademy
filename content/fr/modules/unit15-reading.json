@@ -3,18 +3,27 @@
   "module_key": "unit15-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · The remaining tenses",
+  "title": "Reading · {Mon journal de Saint-Malo}",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:plage",
+      "fr:lex:bateau",
+      "fr:lex:port",
+      "fr:lex:ile"
+    ],
     "constructions": [
       "fr:cx:conditionnel-passe.avoir",
       "fr:cx:conditionnel-passe.etre",
       "fr:cx:plus-que-parfait.etre",
+      "fr:cx:plus-que-parfait.avoir",
       "fr:cx:futur-anterieur",
       "fr:cx:passive",
-      "fr:cx:si.plus-que-parfait-conditionnel-passe"
+      "fr:cx:si.plus-que-parfait-conditionnel-passe",
+      "fr:cx:passe-compose.reflexive",
+      "fr:cx:imparfait",
+      "fr:cx:relative.qui",
+      "fr:cx:relative.ou"
     ],
-    "source": "plan.json",
-    "note": "A travel diary that looks back and forward: what had happened before the trip, what would have happened if the train had been late, what will have been done by the end, and the monuments built and visited (passive)."
+    "source": "course-plan.json"
   }
 }

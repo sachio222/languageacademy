@@ -3,23 +3,18 @@
   "module_key": "society-juge",
   "kind": "lesson",
   "status": "planned",
-  "title": "Society, law and conflict (B1)",
+  "title": "In court {Au tribunal}",
   "plan": {
     "words": [
-      "fr:lex:juge",
-      "fr:lex:attaque",
-      "fr:lex:enquete",
-      "fr:lex:pretre",
-      "fr:lex:justice",
       "fr:lex:defense",
-      "fr:lex:volonte",
-      "fr:lex:parti",
-      "fr:lex:defendre",
-      "fr:lex:trahir",
-      "fr:lex:appuyer",
-      "fr:lex:transmettre"
+      "fr:lex:prison",
+      "fr:lex:prisonnier",
+      "fr:lex:juger",
+      "fr:lex:tribunal",
+      "fr:lex:cruel",
+      "fr:lex:violent"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

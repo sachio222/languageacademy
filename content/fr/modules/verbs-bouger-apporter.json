@@ -3,15 +3,16 @@
   "module_key": "verbs-bouger-apporter",
   "kind": "lesson",
   "status": "planned",
-  "title": "Verbs: bouger, apporter, imaginer, recevoir",
+  "title": "The wedding meal ({recevoir}, {imaginer}, {bouger}, with {apporter})",
   "plan": {
     "words": [
-      "fr:lex:bouger",
-      "fr:lex:apporter",
+      "fr:lex:recevoir",
       "fr:lex:imaginer",
-      "fr:lex:recevoir"
+      "fr:lex:bouger",
+      "fr:lex:invite",
+      "fr:lex:bouffer"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "review-tenses-a2",
+  "kind": "practice",
+  "status": "planned",
+  "title": "Review 1, part 2: tenses, si, the subjunctive and the passive",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

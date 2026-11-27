@@ -3,23 +3,23 @@
   "module_key": "describing-plein",
   "kind": "lesson",
   "status": "planned",
-  "title": "Describing things (A2)",
+  "title": "After the smoke {le nettoyage}",
   "plan": {
     "words": [
-      "fr:lex:plein",
-      "fr:lex:pauvre",
-      "fr:lex:propre",
       "fr:lex:sale",
       "fr:lex:bizarre",
       "fr:lex:impossible",
-      "fr:lex:faux",
       "fr:lex:tranquille",
       "fr:lex:dangereux",
       "fr:lex:terrible",
       "fr:lex:sonner",
-      "fr:lex:assister"
+      "fr:lex:doucement",
+      "fr:lex:exactement",
+      "fr:lex:tache.stain",
+      "fr:lex:secher",
+      "fr:lex:trace"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

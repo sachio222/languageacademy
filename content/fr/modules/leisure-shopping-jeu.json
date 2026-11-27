@@ -3,23 +3,23 @@
   "module_key": "leisure-shopping-jeu",
   "kind": "lesson",
   "status": "planned",
-  "title": "Free time, sport and culture and Shops, money and clothes (A2)",
+  "title": "Games after lunch {les jeux}",
   "plan": {
     "words": [
-      "fr:lex:jeu",
-      "fr:lex:equipe",
-      "fr:lex:balle",
-      "fr:lex:chanson",
-      "fr:lex:image",
-      "fr:lex:club",
       "fr:lex:spectacle",
-      "fr:lex:plaisanter",
+      "fr:lex:jeu",
+      "fr:lex:balle",
+      "fr:lex:club",
+      "fr:lex:image",
       "fr:lex:peindre",
-      "fr:lex:cheque",
+      "fr:lex:plaisanter",
+      "fr:lex:blague",
+      "fr:lex:louer",
       "fr:lex:ennuyer",
-      "fr:lex:louer"
+      "fr:lex:joie",
+      "fr:lex:bonheur"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

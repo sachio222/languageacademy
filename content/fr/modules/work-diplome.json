@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-diplome",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Diplomas and forms {Diplômes et formulaires}",
+  "plan": {
+    "words": [
+      "fr:lex:debutant",
+      "fr:lex:chimie",
+      "fr:lex:obligatoire",
+      "fr:lex:diplome",
+      "fr:lex:inscription",
+      "fr:lex:nationalite",
+      "fr:lex:formulaire",
+      "fr:lex:scolaire",
+      "fr:lex:correctement",
+      "fr:lex:corriger",
+      "fr:lex:profession",
+      "fr:lex:completer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

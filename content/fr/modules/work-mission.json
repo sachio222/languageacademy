@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-mission",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Who does what {les tâches de chacun}",
+  "plan": {
+    "words": [
+      "fr:lex:mission",
+      "fr:lex:rapport",
+      "fr:lex:point",
+      "fr:lex:ordre",
+      "fr:lex:diriger",
+      "fr:lex:mener",
+      "fr:lex:realiser",
+      "fr:lex:confier",
+      "fr:lex:charger",
+      "fr:lex:regler",
+      "fr:lex:traiter",
+      "fr:lex:reunir"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

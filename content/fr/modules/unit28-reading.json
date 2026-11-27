@@ -3,11 +3,25 @@
   "module_key": "unit28-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Shops, money and clothes and Body and health",
+  "title": "Reading · {Madame, Monsieur}",
   "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Shops, money and clothes and Body and health), reusing its lessons' words."
+    "words": [
+      "fr:lex:protection",
+      "fr:lex:precis",
+      "fr:lex:assurer",
+      "fr:lex:ecraser",
+      "fr:lex:etendre"
+    ],
+    "constructions": [
+      "fr:cx:conditionnel-present",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:subj.bien-que",
+      "fr:cx:passive",
+      "fr:cx:q.inversion",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:relative.dont",
+      "fr:cx:futur-anterieur"
+    ],
+    "source": "course-plan.json"
   }
 }

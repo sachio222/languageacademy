@@ -3,25 +3,23 @@
   "module_key": "food-society-guerre",
   "kind": "lesson",
   "status": "planned",
-  "title": "Food and meals, Society, law and conflict and more (A2)",
+  "title": "Tasting the menu {la dégustation}",
   "plan": {
     "words": [
-      "fr:lex:guerre",
-      "fr:lex:plan",
-      "fr:lex:forme",
-      "fr:lex:ferme",
-      "fr:lex:morceau",
-      "fr:lex:reine",
       "fr:lex:gout",
+      "fr:lex:gouter",
       "fr:lex:nourriture",
       "fr:lex:alcool",
-      "fr:lex:identite",
-      "fr:lex:champagne",
-      "fr:lex:verifier",
+      "fr:lex:qualite",
+      "fr:lex:ferme",
+      "fr:lex:forme",
       "fr:lex:partager",
-      "fr:lex:inventer"
+      "fr:lex:verifier",
+      "fr:lex:reprendre",
+      "fr:lex:inutile",
+      "fr:lex:sorte"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

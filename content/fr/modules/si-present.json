@@ -3,12 +3,17 @@
   "module_key": "si-present",
   "kind": "lesson",
   "status": "planned",
-  "title": "si + present (si tu veux, on y va)",
+  "title": "{si} + present: plans that depend on something (s'il pleut, on va à la bibliothèque)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:meteo",
+      "fr:lex:velo",
+      "fr:lex:neiger",
+      "fr:lex:bof"
+    ],
     "constructions": [
       "fr:cx:si.present"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

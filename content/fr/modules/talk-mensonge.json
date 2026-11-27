@@ -3,23 +3,23 @@
   "module_key": "talk-mensonge",
   "kind": "lesson",
   "status": "planned",
-  "title": "Talking, agreeing and feelings (B1)",
+  "title": "Keeping the secret {le secret}",
   "plan": {
     "words": [
       "fr:lex:mensonge",
-      "fr:lex:cri",
-      "fr:lex:adieu",
-      "fr:lex:betise",
       "fr:lex:promesse",
-      "fr:lex:voeu",
-      "fr:lex:pardonner",
-      "fr:lex:prevenir",
-      "fr:lex:parier",
-      "fr:lex:annoncer",
-      "fr:lex:nommer",
-      "fr:lex:interroger"
+      "fr:lex:jurer",
+      "fr:lex:avouer",
+      "fr:lex:taire",
+      "fr:lex:trahir",
+      "fr:lex:pretendre",
+      "fr:lex:remarquer",
+      "fr:lex:etonner",
+      "fr:lex:ignorer",
+      "fr:lex:apercevoir",
+      "fr:lex:piege"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

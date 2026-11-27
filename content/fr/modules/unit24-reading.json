@@ -3,22 +3,29 @@
   "module_key": "unit24-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Starting, stopping and changing, Work and jobs and Ideas and arguments",
+  "title": "Reading · {Faut-il fermer le Familia ?}",
   "plan": {
     "words": [
-      "fr:lex:fonction",
-      "fr:lex:instruction",
-      "fr:lex:delicat",
-      "fr:lex:inconnu",
-      "fr:lex:correspondre",
-      "fr:lex:annonce",
-      "fr:lex:concours",
-      "fr:lex:renverser",
-      "fr:lex:element",
-      "fr:lex:ceder"
+      "fr:lex:poete",
+      "fr:lex:envers",
+      "fr:lex:desormais",
+      "fr:lex:autrefois",
+      "fr:lex:davantage",
+      "fr:lex:autrement",
+      "fr:lex:voter",
+      "fr:lex:honneur",
+      "fr:lex:banlieue"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Society, law and conflict; Work and jobs; Time and the day, Rules, choices and duties and more), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:subj.ne-pas-penser-que",
+      "fr:cx:subj.bien-que",
+      "fr:cx:subj.vouloir-que",
+      "fr:cx:si.imparfait-conditionnel",
+      "fr:cx:q.negative-inversion",
+      "fr:cx:relative.ce-que",
+      "fr:cx:passive",
+      "fr:cx:conditionnel-passe.avoir"
+    ],
+    "source": "course-plan.json"
   }
 }

@@ -3,10 +3,27 @@
   "module_key": "final-reading-a2",
   "kind": "reading",
   "status": "planned",
-  "title": "Final reading: a long story that uses the whole course",
+  "title": "Reading · {Le soir de la Fête de la musique}",
   "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "plan.json"
+    "words": [
+      "fr:lex:musicien",
+      "fr:lex:chanteur",
+      "fr:lex:guitare"
+    ],
+    "constructions": [
+      "fr:cx:passe-compose.etre",
+      "fr:cx:imparfait",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:futur-simple",
+      "fr:cx:conditionnel-passe.etre",
+      "fr:cx:si.imparfait-conditionnel",
+      "fr:cx:subj.emotion-que",
+      "fr:cx:relative.dont",
+      "fr:cx:passive",
+      "fr:cx:gerondif",
+      "fr:cx:q.embedded",
+      "fr:cx:imperative.vous"
+    ],
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-rediger",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Writing it up {Rédiger le compte rendu}",
+  "plan": {
+    "words": [
+      "fr:lex:rediger",
+      "fr:lex:ameliorer",
+      "fr:lex:concerner",
+      "fr:lex:supprimer",
+      "fr:lex:commentaire",
+      "fr:lex:theme",
+      "fr:lex:clairement",
+      "fr:lex:precisement",
+      "fr:lex:quotidiennement",
+      "fr:lex:pratiquement",
+      "fr:lex:discussion",
+      "fr:lex:modifier"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

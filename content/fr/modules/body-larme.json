@@ -3,22 +3,20 @@
   "module_key": "body-larme",
   "kind": "lesson",
   "status": "planned",
-  "title": "Body and health (B1)",
+  "title": "Saying goodbye {Dire adieu}",
   "plan": {
     "words": [
+      "fr:lex:adieu",
+      "fr:lex:cimetiere",
       "fr:lex:larme",
-      "fr:lex:blessure",
-      "fr:lex:front",
-      "fr:lex:aveugle",
-      "fr:lex:levre",
-      "fr:lex:medical",
-      "fr:lex:nerf",
-      "fr:lex:piquer",
-      "fr:lex:guerir",
-      "fr:lex:croiser",
-      "fr:lex:raser"
+      "fr:lex:malheur",
+      "fr:lex:souffrance",
+      "fr:lex:croix",
+      "fr:lex:separer",
+      "fr:lex:songer",
+      "fr:lex:consoler"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -13,7 +13,6 @@ The spec behind these files is `projects/product/curriculum/2026-11-24-content-l
 | `course-plan.json` | The plan of every unit not yet written: each module, what it teaches, its goal and situation, the readings and guides (`scripts/plan/README.md`) | Planners; check with `pnpm plan:check` |
 | `writing-notes.md` | Notes every French writer brief carries: the course's world and how this course treats French | Planners |
 | `recipes/` | How each kind of module is built and how large it may be, with the time constants | Planners |
-| `plan-keys.json` | The module key of every module in the earlier course plan, for `scripts/content/plan-stubs.mjs`; `pnpm plan:stubs` takes keys from `course-plan.json` | Nobody |
 | `legacy/l-sources.json` | Prototype L's guides and illustrated story records | `pnpm content:migrate l-sources` |
 | `legacy/hand-fixes.json` | Every hand edit to a module converted from `src/lessons/modules`, as data | `pnpm content:migrate` |
 | `legacy/migration-sources.json` | For each converted module, the hash of each part's source and of what the converter last wrote | `pnpm content:migrate` |

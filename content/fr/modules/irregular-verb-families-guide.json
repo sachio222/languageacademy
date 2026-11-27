@@ -1,0 +1,12 @@
+{
+  "schema": "la-module@1",
+  "module_key": "irregular-verb-families-guide",
+  "kind": "guide",
+  "status": "planned",
+  "title": "Irregular verb families (écrire and décrire, conduire and réduire, tenir and obtenir, mettre and remettre, joindre and atteindre)",
+  "plan": {
+    "words": [],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

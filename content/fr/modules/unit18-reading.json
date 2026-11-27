@@ -3,22 +3,32 @@
   "module_key": "unit18-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Talking, agreeing and feelings, Work and jobs and Describing things",
+  "title": "Reading · {Le journal de la classe verte}",
   "plan": {
     "words": [
-      "fr:lex:quai",
-      "fr:lex:sejour",
-      "fr:lex:renseignement",
-      "fr:lex:passager",
-      "fr:lex:ecran",
-      "fr:lex:courrier",
-      "fr:lex:document",
-      "fr:lex:passeport",
-      "fr:lex:courageux",
-      "fr:lex:qualite"
+      "fr:lex:grippe",
+      "fr:lex:joue",
+      "fr:lex:epaule",
+      "fr:lex:os",
+      "fr:lex:genou",
+      "fr:lex:cou",
+      "fr:lex:peau",
+      "fr:lex:respirer",
+      "fr:lex:passe",
+      "fr:lex:present"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Talking, agreeing and feelings; Work and jobs; Free time, sport and culture and Shops, money and clothes), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:passe-compose.etre",
+      "fr:cx:imparfait",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:passive",
+      "fr:cx:q.inversion",
+      "fr:cx:relative.ou",
+      "fr:cx:comparative",
+      "fr:cx:superlative",
+      "fr:cx:futur-simple",
+      "fr:cx:subj.emotion-que"
+    ],
+    "source": "course-plan.json"
   }
 }

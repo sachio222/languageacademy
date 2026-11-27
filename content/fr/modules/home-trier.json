@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "home-trier",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Sorting the rubbish {Le tri}",
+  "plan": {
+    "words": [
+      "fr:lex:trier",
+      "fr:lex:gaspiller",
+      "fr:lex:polluer",
+      "fr:lex:pollution",
+      "fr:lex:paresseux",
+      "fr:lex:emmenager",
+      "fr:lex:lessive"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

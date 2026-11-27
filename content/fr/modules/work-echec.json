@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-echec",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A problem on the site {Un problème sur le chantier}",
+  "plan": {
+    "words": [
+      "fr:lex:echec",
+      "fr:lex:pression",
+      "fr:lex:crise",
+      "fr:lex:explosion",
+      "fr:lex:echouer",
+      "fr:lex:routine",
+      "fr:lex:raisonnable",
+      "fr:lex:prudent",
+      "fr:lex:furieux",
+      "fr:lex:affreux",
+      "fr:lex:rage"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

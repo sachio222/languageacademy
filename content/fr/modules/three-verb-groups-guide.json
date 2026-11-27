@@ -3,10 +3,10 @@
   "module_key": "three-verb-groups-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: Verb patterns, part 2 (-er, -ir, -re side by side; the irregular verbs that follow -ir or -re)",
+  "title": "Verb patterns, part 2 (-er, -ir and -re side by side; the irregular verbs that follow -ir or -re)",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -3,24 +3,23 @@
   "module_key": "nature-courant",
   "kind": "lesson",
   "status": "planned",
-  "title": "Nature, animals and weather (B1)",
+  "title": "Storm warning {Alerte orage}",
   "plan": {
     "words": [
+      "fr:lex:orage",
+      "fr:lex:brouillard",
+      "fr:lex:degre",
+      "fr:lex:rayon",
+      "fr:lex:goutte",
       "fr:lex:courant",
-      "fr:lex:source",
-      "fr:lex:ombre",
-      "fr:lex:singe",
-      "fr:lex:patte",
-      "fr:lex:univers",
+      "fr:lex:surface",
+      "fr:lex:abri",
       "fr:lex:sombre",
-      "fr:lex:loup",
-      "fr:lex:desert",
-      "fr:lex:chasser",
-      "fr:lex:adresser",
-      "fr:lex:creuser",
-      "fr:lex:achever"
+      "fr:lex:couler",
+      "fr:lex:glisser",
+      "fr:lex:geler"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

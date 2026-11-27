@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "work-offre",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "We are hiring {On recrute}",
+  "plan": {
+    "words": [
+      "fr:lex:offre",
+      "fr:lex:annonce",
+      "fr:lex:carriere",
+      "fr:lex:recherche",
+      "fr:lex:condition",
+      "fr:lex:avantage",
+      "fr:lex:capable",
+      "fr:lex:personnel",
+      "fr:lex:fournir",
+      "fr:lex:exiger",
+      "fr:lex:joindre",
+      "fr:lex:candidature"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

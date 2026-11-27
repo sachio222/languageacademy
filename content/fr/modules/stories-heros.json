@@ -3,22 +3,18 @@
   "module_key": "stories-heros",
   "kind": "lesson",
   "status": "planned",
-  "title": "Stories, legends and the arts (B1)",
+  "title": "Tonight's film {Le film de ce soir}",
   "plan": {
     "words": [
-      "fr:lex:heros",
-      "fr:lex:ange",
-      "fr:lex:monstre",
-      "fr:lex:miracle",
-      "fr:lex:destin",
-      "fr:lex:fantome",
-      "fr:lex:sort",
-      "fr:lex:prevoir",
-      "fr:lex:accorder",
-      "fr:lex:rompre",
-      "fr:lex:interrompre"
+      "fr:lex:seance",
+      "fr:lex:bande",
+      "fr:lex:charme",
+      "fr:lex:critique",
+      "fr:lex:comedien",
+      "fr:lex:univers",
+      "fr:lex:imagination"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

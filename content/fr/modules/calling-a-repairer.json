@@ -3,7 +3,7 @@
   "module_key": "calling-a-repairer",
   "kind": "lesson",
   "status": "planned",
-  "title": "Getting things done: calling someone to fix it",
+  "title": "Calling someone to fix it {le dépannage}",
   "plan": {
     "words": [
       "fr:lex:urgent",
@@ -12,9 +12,14 @@
       "fr:lex:devis",
       "fr:lex:facture",
       "fr:lex:depanner",
-      "fr:lex:disponible"
+      "fr:lex:disponible",
+      "fr:lex:appel",
+      "fr:lex:message",
+      "fr:lex:portable",
+      "fr:lex:rembourser",
+      "fr:lex:electricite"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

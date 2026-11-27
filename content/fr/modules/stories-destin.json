@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "stories-destin",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "How it ends {La fin du film}",
+  "plan": {
+    "words": [
+      "fr:lex:destin",
+      "fr:lex:sort",
+      "fr:lex:miracle",
+      "fr:lex:paradis",
+      "fr:lex:etrange",
+      "fr:lex:survivre",
+      "fr:lex:reveler",
+      "fr:lex:philosophie"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

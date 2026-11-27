@@ -3,10 +3,10 @@
   "module_key": "review-words-a2",
   "kind": "practice",
   "status": "planned",
-  "title": "Review · The A2 words by theme",
+  "title": "Review 2: the A2 words by theme",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -121,6 +121,6 @@ test('writing a clean Unit 13 lesson leaves every legacy count as it is', async 
   assert.deepEqual((await partsOf(root)).new, misses(dueBeforeUnit12));
   for (const [stubKey] of unit12End) cpSync(join(CONTENT_ROOT, 'modules', `${stubKey}.json`), join(root, 'modules', `${stubKey}.json`));
   writeFileSync(join(root, 'modules', `${key}.json`), JSON.stringify(lesson, null, 2) + '\n');
-  // The stubs change nothing: the same counts with them left out of the load (plan-stubs.test.mjs, checker ignores planned).
+  // The stubs change nothing: the same counts with them left out of the load (scripts/plan/test/stubs.test.mjs, checker ignores planned).
   assert.deepEqual(await partsOf(root, false), after);
 });

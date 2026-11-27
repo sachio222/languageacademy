@@ -3,10 +3,10 @@
   "module_key": "unit14-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · The rest of the present tense, then verbs",
+  "title": "Practice · Verbs at work",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

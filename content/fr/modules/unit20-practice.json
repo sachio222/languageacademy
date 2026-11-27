@@ -3,10 +3,10 @@
   "module_key": "unit20-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · Home, Town and places and Free time, sport and culture",
+  "title": "Practice · A new life in Belleville {une nouvelle vie}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

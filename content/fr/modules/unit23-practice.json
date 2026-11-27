@@ -3,10 +3,10 @@
   "module_key": "unit23-practice",
   "kind": "practice",
   "status": "planned",
-  "title": "Practice · Society, law and conflict, Emotions and states of mind and Body and health",
+  "title": "Practice · In the news {dans le journal}",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

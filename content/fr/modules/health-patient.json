@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "health-patient",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "In the emergency department {Aux urgences}",
+  "plan": {
+    "words": [
+      "fr:lex:patient",
+      "fr:lex:soin",
+      "fr:lex:traitement",
+      "fr:lex:operation",
+      "fr:lex:medical",
+      "fr:lex:cerveau",
+      "fr:lex:poitrine",
+      "fr:lex:estomac",
+      "fr:lex:surveiller",
+      "fr:lex:observer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

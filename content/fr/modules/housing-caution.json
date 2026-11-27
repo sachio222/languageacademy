@@ -1,0 +1,22 @@
+{
+  "schema": "la-module@1",
+  "module_key": "housing-caution",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "A bigger flat {Un appartement plus grand}",
+  "plan": {
+    "words": [
+      "fr:lex:prive",
+      "fr:lex:naturel",
+      "fr:lex:rare",
+      "fr:lex:commun",
+      "fr:lex:entourer",
+      "fr:lex:caution",
+      "fr:lex:locataire",
+      "fr:lex:exterieur",
+      "fr:lex:logement"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

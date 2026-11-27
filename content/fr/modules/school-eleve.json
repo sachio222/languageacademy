@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "school-eleve",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Packing for the trip {la liste}",
+  "plan": {
+    "words": [
+      "fr:lex:eleve",
+      "fr:lex:cahier",
+      "fr:lex:stylo",
+      "fr:lex:crayon",
+      "fr:lex:gomme",
+      "fr:lex:liste",
+      "fr:lex:nombre",
+      "fr:lex:compte",
+      "fr:lex:responsable",
+      "fr:lex:necessaire",
+      "fr:lex:botte",
+      "fr:lex:general"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "culture-exposition",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Going out {sortir}",
+  "plan": {
+    "words": [
+      "fr:lex:concert",
+      "fr:lex:lycee",
+      "fr:lex:fumer",
+      "fr:lex:cigarette",
+      "fr:lex:poeme",
+      "fr:lex:mode",
+      "fr:lex:titre",
+      "fr:lex:personnage",
+      "fr:lex:style",
+      "fr:lex:roman",
+      "fr:lex:comedie",
+      "fr:lex:magazine"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

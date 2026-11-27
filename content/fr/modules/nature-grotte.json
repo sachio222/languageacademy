@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "nature-grotte",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The painted cave {la grotte ornée}",
+  "plan": {
+    "words": [
+      "fr:lex:rocher",
+      "fr:lex:vallee",
+      "fr:lex:decouverte",
+      "fr:lex:merveille",
+      "fr:lex:mysterieux",
+      "fr:lex:immense",
+      "fr:lex:minuscule",
+      "fr:lex:fragile",
+      "fr:lex:trait",
+      "fr:lex:silencieux",
+      "fr:lex:eclairer",
+      "fr:lex:grotte"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

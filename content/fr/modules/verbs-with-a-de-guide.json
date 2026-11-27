@@ -3,10 +3,10 @@
   "module_key": "verbs-with-a-de-guide",
   "kind": "guide",
   "status": "planned",
-  "title": "Guide: Verbs with à and de (penser à, parler de, empêcher de, réussir à)",
+  "title": "Verbs with à and de (empêcher de, accuser de, réussir à, se moquer de)",
   "plan": {
     "words": [],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

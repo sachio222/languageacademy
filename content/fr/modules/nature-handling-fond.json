@@ -3,26 +3,23 @@
   "module_key": "nature-handling-fond",
   "kind": "lesson",
   "status": "planned",
-  "title": "Nature, animals and weather and Moving and handling things (A2)",
+  "title": "Forest, lake and storm {la nature}",
   "plan": {
     "words": [
-      "fr:lex:fond",
-      "fr:lex:boite",
-      "fr:lex:bord",
-      "fr:lex:objet",
-      "fr:lex:chaine",
-      "fr:lex:poule",
       "fr:lex:foret",
-      "fr:lex:bouton",
-      "fr:lex:serpent",
-      "fr:lex:cochon",
-      "fr:lex:boule",
+      "fr:lex:bois",
+      "fr:lex:bord",
+      "fr:lex:fond",
+      "fr:lex:chaleur",
+      "fr:lex:sec",
       "fr:lex:temperature",
-      "fr:lex:frapper",
-      "fr:lex:attraper",
-      "fr:lex:deposer"
+      "fr:lex:agreable",
+      "fr:lex:planter",
+      "fr:lex:apprecier",
+      "fr:lex:geographie",
+      "fr:lex:tempete"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

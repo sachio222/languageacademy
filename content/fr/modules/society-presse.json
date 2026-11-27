@@ -3,23 +3,23 @@
   "module_key": "society-presse",
   "kind": "lesson",
   "status": "planned",
-  "title": "Society, law and conflict (B1)",
+  "title": "The morning's headlines {les titres du jour}",
   "plan": {
     "words": [
       "fr:lex:presse",
-      "fr:lex:presence",
-      "fr:lex:militaire",
-      "fr:lex:violence",
-      "fr:lex:ministre",
-      "fr:lex:prisonnier",
-      "fr:lex:responsabilite",
-      "fr:lex:pression",
+      "fr:lex:mouvement",
+      "fr:lex:meurtre",
+      "fr:lex:drogue",
+      "fr:lex:tuer",
+      "fr:lex:exploser",
+      "fr:lex:detruire",
       "fr:lex:liberer",
-      "fr:lex:punir",
-      "fr:lex:convenir",
-      "fr:lex:impressionner"
+      "fr:lex:president",
+      "fr:lex:ministre",
+      "fr:lex:etat",
+      "fr:lex:societe"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

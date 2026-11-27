@@ -1,0 +1,24 @@
+{
+  "schema": "la-module@1",
+  "module_key": "ideas-decision",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "For or against {Pour ou contre}",
+  "plan": {
+    "words": [
+      "fr:lex:acte",
+      "fr:lex:suggerer",
+      "fr:lex:resister",
+      "fr:lex:exprimer",
+      "fr:lex:abandonner",
+      "fr:lex:parti",
+      "fr:lex:autorite",
+      "fr:lex:puissance",
+      "fr:lex:religion",
+      "fr:lex:rejeter",
+      "fr:lex:eliminer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

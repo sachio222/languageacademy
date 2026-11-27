@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "history-ruine",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Roman Lyon {Lugdunum}",
+  "plan": {
+    "words": [
+      "fr:lex:ruine",
+      "fr:lex:statue",
+      "fr:lex:batir",
+      "fr:lex:sommet",
+      "fr:lex:hauteur",
+      "fr:lex:vaste",
+      "fr:lex:situer",
+      "fr:lex:etape",
+      "fr:lex:expert",
+      "fr:lex:conserver",
+      "fr:lex:romain",
+      "fr:lex:empereur"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

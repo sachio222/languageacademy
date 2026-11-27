@@ -3,15 +3,17 @@
   "module_key": "verbs-passer-oublier",
   "kind": "lesson",
   "status": "planned",
-  "title": "Verbs: passer, oublier, ouvrir, fermer",
+  "title": "Opening hours and errands ({ouvrir}, {fermer}, {passer}, {oublier})",
   "plan": {
     "words": [
       "fr:lex:passer",
       "fr:lex:oublier",
       "fr:lex:ouvrir",
-      "fr:lex:fermer"
+      "fr:lex:fermer",
+      "fr:lex:bref",
+      "fr:lex:ouais"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

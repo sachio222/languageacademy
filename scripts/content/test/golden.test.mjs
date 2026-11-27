@@ -19,7 +19,7 @@ import { loadCourse, CONTENT_ROOT } from '../load.mjs';
 import { frenchSpans } from '../spans.mjs';
 import { toLegacyLesson, plain } from '../legacy/to-legacy-lesson.mjs';
 import { compareLesson, classify, parseReport, describe, goldenChecks, changedSince, handFixCheck, handFixPrints, sourcesFingerprint } from '../legacy/golden.mjs';
-import { planKeyList, readPlanKeys } from '../plan-stubs.mjs';
+import { readPlan } from '../../plan/plan.mjs';
 import { REWRITES } from '../migrate/holds.mjs';
 
 const here = new URL('./fixtures/', import.meta.url);
@@ -157,10 +157,11 @@ test('adapter shows the same lessons as today', () => {
 });
 
 test('a module written after the snapshot takes no live number and is not compared', () => {
-  // Exactly the guides and the Reference page written after the snapshot, and any course plan module written since
-  // (content/fr/plan-keys.json); any other new module joins this list by hand.
-  const planned = new Set(planKeyList(readPlanKeys()));
-  assert.deepEqual(writtenAfter.filter((k) => !planned.has(k)), ['silent-ent-guide', 'gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'y-en-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'phrasebook']);
+  // Exactly the guides, the Reference page and Unit 12's reading, practice set and exam written after the snapshot,
+  // and any course plan module written since (content/fr/course-plan.json); any other new module joins this list by
+  // hand.
+  const planned = new Set(readPlan(join(CONTENT_ROOT, '..', '..'), 'fr').units.flatMap((u) => u.modules.map((m) => m.module_key)));
+  assert.deepEqual(writtenAfter.filter((k) => !planned.has(k)), ['silent-ent-guide', 'gender-endings-guide', 'which-past-guide', 'future-conditional-guide', 'y-en-guide', 'past-with-etre-guide', 'subjunctive-que-guide', 'pronoun-order-guide', 'who-what-questions-guide', 'unit12-reading', 'unit12-practice', 'unit12-exam', 'phrasebook']);
   for (const key of writtenAfter) assert.equal(liveIds[key], undefined, `${key} was converted from the live app`);
   // The reading after the guide keeps its live number.
   const key = '2024-03-30-reading-4';

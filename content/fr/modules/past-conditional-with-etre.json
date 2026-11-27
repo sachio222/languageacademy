@@ -3,12 +3,15 @@
   "module_key": "past-conditional-with-etre",
   "kind": "lesson",
   "status": "planned",
-  "title": "Past conditional with être (je serais venu, elle serait partie)",
+  "title": "Past conditional with {être} (je serais venue, nous serions arrivés)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:quai",
+      "fr:lex:voyage"
+    ],
     "constructions": [
       "fr:cx:conditionnel-passe.etre"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

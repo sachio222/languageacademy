@@ -3,22 +3,23 @@
   "module_key": "people-monsieur",
   "kind": "lesson",
   "status": "planned",
-  "title": "People and family (A1)",
+  "title": "The family arrives {la famille}",
   "plan": {
     "words": [
-      "fr:lex:monsieur",
       "fr:lex:mari",
       "fr:lex:bebe",
-      "fr:lex:copain",
-      "fr:lex:oncle",
       "fr:lex:tante",
-      "fr:lex:mademoiselle",
-      "fr:lex:cousin",
       "fr:lex:grand-mere",
-      "fr:lex:eleve",
-      "fr:lex:prenom"
+      "fr:lex:mademoiselle",
+      "fr:lex:prenom",
+      "fr:lex:enchante",
+      "fr:lex:neveu",
+      "fr:lex:niece",
+      "fr:lex:saluer",
+      "fr:lex:beau-pere",
+      "fr:lex:belle-mere"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

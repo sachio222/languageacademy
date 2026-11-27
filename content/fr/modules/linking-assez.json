@@ -3,21 +3,23 @@
   "module_key": "linking-assez",
   "kind": "lesson",
   "status": "planned",
-  "title": "Linking and degree words (A2)",
+  "title": "The residents' meeting {la réunion}",
   "plan": {
     "words": [
-      "fr:lex:assez",
+      "fr:lex:reunion",
+      "fr:lex:avis",
+      "fr:lex:chacun",
       "fr:lex:plutot",
       "fr:lex:tellement",
-      "fr:lex:surtout",
-      "fr:lex:exactement",
-      "fr:lex:doucement",
-      "fr:lex:chacun",
       "fr:lex:debout",
       "fr:lex:interesser",
-      "fr:lex:facher"
+      "fr:lex:facher",
+      "fr:lex:faux",
+      "fr:lex:pauvre",
+      "fr:lex:assister",
+      "fr:lex:apparemment"
     ],
     "constructions": [],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

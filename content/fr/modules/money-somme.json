@@ -1,0 +1,23 @@
+{
+  "schema": "la-module@1",
+  "module_key": "money-somme",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "At the bank {À la banque}",
+  "plan": {
+    "words": [
+      "fr:lex:somme",
+      "fr:lex:millier",
+      "fr:lex:centaine",
+      "fr:lex:environ",
+      "fr:lex:dette",
+      "fr:lex:lequel",
+      "fr:lex:emprunter",
+      "fr:lex:verser",
+      "fr:lex:retirer",
+      "fr:lex:appuyer"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

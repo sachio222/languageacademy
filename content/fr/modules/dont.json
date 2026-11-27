@@ -3,12 +3,16 @@
   "module_key": "dont",
   "kind": "lesson",
   "status": "planned",
-  "title": "dont (la chose dont je parle)",
+  "title": "{dont}: the one you talk about (le quartier dont je suis fière)",
   "plan": {
-    "words": [],
+    "words": [
+      "fr:lex:dont",
+      "fr:lex:fier",
+      "fr:lex:pote"
+    ],
     "constructions": [
       "fr:cx:relative.dont"
     ],
-    "source": "plan.json"
+    "source": "course-plan.json"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "schema": "la-module@1",
+  "module_key": "animals-loup",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Wild animals round the farm {les bêtes sauvages}",
+  "plan": {
+    "words": [
+      "fr:lex:loup",
+      "fr:lex:sauvage",
+      "fr:lex:chasse",
+      "fr:lex:chasser",
+      "fr:lex:mordre",
+      "fr:lex:piquer",
+      "fr:lex:mouche",
+      "fr:lex:patte",
+      "fr:lex:canard",
+      "fr:lex:mouton",
+      "fr:lex:souris",
+      "fr:lex:nourrir"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

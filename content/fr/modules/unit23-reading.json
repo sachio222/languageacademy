@@ -3,22 +3,25 @@
   "module_key": "unit23-reading",
   "kind": "reading",
   "status": "planned",
-  "title": "Reading · Society, law and conflict, Emotions and states of mind and Body and health",
+  "title": "Reading · {Le portrait disparu}",
   "plan": {
     "words": [
-      "fr:lex:tenue",
-      "fr:lex:intervenir",
-      "fr:lex:proposition",
-      "fr:lex:poete",
-      "fr:lex:absence",
-      "fr:lex:seance",
-      "fr:lex:rejeter",
-      "fr:lex:paysan",
-      "fr:lex:genereux",
-      "fr:lex:epreuve"
+      "fr:lex:figure",
+      "fr:lex:rang",
+      "fr:lex:subir",
+      "fr:lex:renverser",
+      "fr:lex:actuel"
     ],
-    "constructions": [],
-    "source": "plan.json",
-    "note": "A connected text on the unit's largest themes (Describing people and Home; Free time, sport and culture, Body and health and more; Food and meals and Countries and languages), reusing its lessons' words."
+    "constructions": [
+      "fr:cx:passive",
+      "fr:cx:plus-que-parfait.avoir",
+      "fr:cx:plus-que-parfait.etre",
+      "fr:cx:conditionnel-passe.avoir",
+      "fr:cx:q.embedded",
+      "fr:cx:subj.bien-que",
+      "fr:cx:relative.dont",
+      "fr:cx:relative.ce-que"
+    ],
+    "source": "course-plan.json"
   }
 }
