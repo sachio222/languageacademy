@@ -33,6 +33,27 @@ export const LEVELS = new Map([
   ...levels('B1', JD, `neg.ne-pas-infinitive causative.faire rendre-adjective q.negative-inversion chunk.cest-a-dire`),
   ...levels('B2', EG, `conditionnel-passe.avoir conditionnel-passe.etre si.plus-que-parfait-conditionnel-passe
     futur-anterieur chunk.nulle-part`),
+  // Added on 2026-11-26. Two object pronouns together (je te le donne) is key at B1 and again at B2 in the inventory,
+  // and the course teaches it at B1 in the pronoun order guide, so it is B1.
+  ...levels('B1', EG, 'pronoun.double'),
+  // The B2 patterns added on 2026-11-26. The inventory lists the compound relatives (lequel after a preposition, auquel,
+  // duquel), the mise en relief and nominalisation as key at both B1 and B2; they are B2 here, where the inventory
+  // gives them in full, because the B1 core list was drafted without them and no B1 lesson teaches them. The passé
+  // simple is B2 for reading only, as the inventory lists it (use: 'recognize').
+  ...levels('B2', EG, `subj.passe participe-present.clause relative.lequel relative.auquel-duquel reported-speech
+    mise-en-relief mise-en-relief.ce-qui-cest subj.condition-que subj.quoique connector.contrast
+    connector.cause-consequence passive.tenses infinitive.past subj.superlative subj.doubt-denial subj.judgment
+    ne-expletif hypothesis.au-cas-ou hypothesis.avec-sans q.lequel n-importe neg.nul
+    ptcp.agreement-exceptions nominalisation frame.etre-oblige-de conj.apres-que connector.concession
+    connector.addition connector.purpose connector.cause-prep consequence.tellement-que passe-simple`),
+  // Judgment: patterns the inventory does not name at B2 that a B2 learner meets, and the B2 discourse markers that
+  // order, sum up and reword an argument (the inventory lists them under discourse, not grammar). de peur que and de
+  // crainte que + subjunctive are listed at C1; they are B2 here, beside de peur de + infinitive, which is B2.
+  ...levels('B2', JD, `causative.se-faire causative.laisser gerondif.passe relative.dont-noun relative.ce-dont
+    quiconque tel-que subj.de-peur-que conditional.hearsay frame.avoir-beau connector.argument-order connector.summary
+    connector.reformulation inversion.literary`),
+  // For reading only (use: 'recognize'): literary forms a B2 learner seldom meets.
+  ...levels('C1', JD, `subj.imparfait subj.plus-que-parfait neg.ne-alone`),
 ]);
 // { cefr, cefrSource } for a construction key (the ID without fr:cx:).
 export function levelOf(key, levels = LEVELS) {

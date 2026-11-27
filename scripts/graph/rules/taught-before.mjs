@@ -162,6 +162,11 @@ function run(ctx) {
   const firstTyped = firstTypedUse(ctx);
   const titleAt = new Map(ctx.course.map((m) => [m.position, m.title]));
   const issues = [];
+  // A recognition-only pattern (use: 'recognize', such as the passé simple) is one the learner reads and hears but never
+  // types, so it is reported only where some match of it lies wholly in French the learner reads or hears.
+  const recognize = new Map((graph.constructions ?? []).filter((c) => c.use === 'recognize' && c.detect).map((c) => [c.id, c]));
+  const readOnlyMatch = (id, a, typedAt) => matchSpans(a.tokens, a.readings, recognize.get(id).detect, graph.names)
+    .some((span) => span.every((i) => !typedAt(i)));
 
   const laterNote = (id, position) => {
     const at = timeline.taughtAt.get(id);
@@ -261,6 +266,7 @@ function run(ctx) {
         });
         for (const id of a.constructions) {
           if (seenCx.has(id) || ignore.has(id) || timeline.isAvailable(id, m.position)) continue;
+          if (recognize.has(id) && !readOnlyMatch(id, a, typedAt)) continue;
           seenCx.add(id);
           const later = laterNote(id, m.position);
           issues.push(issue({

@@ -2,7 +2,7 @@ import { fold, norm } from '../fold.mjs';
 
 export { fold, norm };
 
-const ELISIONS = ['jusqu', 'lorsqu', 'puisqu', 'qu', 'c', 'd', 'j', 'l', 'm', 'n', 's', 't'];
+const ELISIONS = ['jusqu', 'lorsqu', 'puisqu', 'quoiqu', 'qu', 'c', 'd', 'j', 'l', 'm', 'n', 's', 't'];
 const ELISION_RE = new RegExp(`^(${ELISIONS.join('|')})['’ʼ‘]`, 'i');
 // Longest first so "-t-il" wins over "-il".
 const CLITICS = [

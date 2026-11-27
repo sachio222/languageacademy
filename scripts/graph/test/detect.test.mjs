@@ -173,3 +173,11 @@ test('matchSpans returns the token indices of every match, one per start', () =>
   const p = [{ surface: 'je' }, { surface: 'ne', optional: true }, { surface: 'parle' }];
   assert.deepEqual(matchSpans(prep('Je parle.').tokens, prep('Je parle.').readings, p), [[0, 1]]);
 });
+
+test('end anchors a step to the last token, accented reads the accents the surface folds away', () => {
+  assert.equal(run([{ surface: 'je' }, { surface: 'pars', end: true }], 'je pars'), true);
+  assert.equal(run([{ surface: 'je' }, { surface: 'pars', end: true }], 'je pars demain'), false);
+  assert.equal(run([{ surface: 'fut' }], "qu'il fût"), true);
+  assert.equal(run([{ accented: 'fût' }], "qu'il fût"), true);
+  assert.equal(run([{ accented: 'fût' }], 'il fut'), false);
+});

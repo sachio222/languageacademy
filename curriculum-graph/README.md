@@ -183,6 +183,13 @@ The arguments are the ID without `fr:cx:`, a label in plain words, the construct
 
 A seventh argument, `{ licenses: [headword IDs] }`, names the words the construction teaches inside its own match. `fr:cx:neg.de` licenses `fr:lex:de`: once a module teaches neg.de, the de of "je n'ai pas de chat" counts as taught from there, but the de of "combien de livres" or "d'où viens-tu" still waits for the lesson that teaches the preposition.
 
+The same argument can hold `use: 'recognize'` for a pattern the learner reads and hears but never writes, such as the passé simple (`fr:cx:passe-simple`): il fut, elle entra, ils firent. The field is written into `constructions.json` as `"use": "recognize"`. It is optional, and `pnpm graph:check` reports any other value as `construction-use-bad`. The checker treats such a pattern as reading knowledge:
+
+- Section 1 of the fix list reports it only where the learner reads or hears it before a module teaches it, such as a reading passage in the passé simple before the guide that explains the tense. In French the learner types it is never reported: not in an answer, and not in a gap-fill whose blank the match runs through.
+- A guide may teach it alone, so `guide_only_teaching` leaves it out.
+
+The B2 patterns of this kind are `fr:cx:passe-simple` and `fr:cx:inversion.literary` (peut-être viendra-t-il, « Bonjour », dit-il), both B2, and `fr:cx:subj.imparfait` (qu'il fût), `fr:cx:subj.plus-que-parfait` (qu'il eût fini) and `fr:cx:neg.ne-alone` (je ne sais, je ne peux le croire), all C1.
+
 Give the new construction a level in the `LEVELS` table in `scripts/graph/fr/build/construction-levels.mjs`; `constructions.mjs` stops with a message that names any construction without one.
 
 Then run `node scripts/graph/fr/build/constructions.mjs` and `pnpm graph:test`. The test fails when a detector misses one of its match sentences or matches one of its noMatch sentences. Finally, add the new ID to `teaches.constructions` in the file of the lesson that explains it.
@@ -194,6 +201,8 @@ A detector is a list of steps, one for each word it matches, read left to right 
 - `name: true`: the word is in `names.json`.
 - `clitic: true`: the word is a pronoun joined by a hyphen, such as -tu or -t-il.
 - `start: true`: the word is the first word of the sentence.
+- `end: true`: the word is the last word of the text, which the tokenizer reads without its punctuation.
+- `accented`: a regular expression the word must match with its accents kept (in lowercase), for forms that only an accent tells apart, such as the subjonctif imparfait fût and the passé simple fut. Text typed without accents never matches it.
 - `any`: the word matches at least one of the listed steps.
 - `skip: n`: up to n other words may sit between the previous step's word and this one.
 - `optional: true`: the step may match no word.
@@ -312,6 +321,7 @@ A share in the curve is its count divided by `coreWords` or `coreConstructions` 
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
 - `core-words.mjs` records the words added for the core lists, with their levels and the irregular forms for their spelling changes (rangeons, jette, mène), and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
 - `constructions.mjs` takes construction levels from `construction-levels.mjs`.
+- `constructions.mjs` builds the passé simple and subjonctif imparfait forms that `fr:cx:passe-simple` and `fr:cx:subj.imparfait` look for from the graph's verbs, leaving out a form spelled like a word the graph already reads (il finit is also the present). After you add verbs to `headwords.json`, run it again so their forms are read too.
 - `levels-propose.mjs` proposed the first headword levels from Lexique and FLELex files kept outside the repository, in a table that stays outside it too. It is not part of the build. The levels in `headwords.json` were decided from that table and are now edited by hand.
 
 `scripts/graph/fr/seed-headwords.mjs` and `scripts/graph/fr/import-conjugations.mjs` made the first word list and irregular forms from the lesson files. Do not run them against the committed data, which has been checked and corrected by hand since.

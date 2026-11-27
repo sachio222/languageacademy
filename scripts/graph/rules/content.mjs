@@ -89,11 +89,14 @@ function withoutGuides(ctx) {
 // guide_only_teaching (error): a module other than a guide uses a word or pattern that, at its position, only a guide
 // has taught. A guide is never a prerequisite (spec 5.6): a learner may skip it, so a lesson teaches it first. One
 // issue per word or pattern per module; hints, feedback, instructions and titles are left out as for taught-before.
+// A recognition-only pattern (use: 'recognize') is left out: the learner only reads it, and a recognition guide is
+// the way the course teaches it.
 export function ruleGuideOnlyTeaching(ctx) {
   if (!ctx.course.some((m) => m.kind === 'help')) return [];
   const own = withoutGuides(ctx);
   const full = ctx.timeline;
   const analysis = analyzeItems(ctx);
+  const recognize = new Set((ctx.graph.constructions ?? []).filter((c) => c.use === 'recognize').map((c) => c.id));
   const issues = [];
   for (const m of ctx.course) {
     if (m.kind === 'help') continue;
@@ -128,7 +131,7 @@ export function ruleGuideOnlyTeaching(ctx) {
           report(it, head, `"${t.surface}"`, a.text);
         });
         for (const id of a.constructions) {
-          if (ignore.has(id) || !full.isAvailable(id, m.position) || own.isAvailable(id, m.position)) continue;
+          if (recognize.has(id) || ignore.has(id) || !full.isAvailable(id, m.position) || own.isAvailable(id, m.position)) continue;
           report(it, id, id, a.text);
         }
       }

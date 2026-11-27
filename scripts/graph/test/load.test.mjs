@@ -161,3 +161,11 @@ test('validate: reference.modules must name Reference modules, and openFrom must
   assert.match(late.message, /reference\.openFrom is 3, past the last course position \(2\)/);
   assert.equal(validateGraph(graph({ openFrom: null, modules: [] }), { course, referenceModules }).some((i) => i.rule === 'reference-open-from'), false);
 });
+
+test('validateGraph accepts use: recognize on a construction and flags any other value', () => {
+  const g = loadMutated('constructions.json', (cs) => [...cs,
+    { id: 'fr:cx:read-only', label: 'Read only', needs: [], detect: null, examples: { match: ['Il fut là.'] }, contrastsWith: [], cefr: null, use: 'recognize' },
+    { id: 'fr:cx:bad-use', label: 'Bad use', needs: [], detect: null, examples: { match: ['Il fut là.'] }, contrastsWith: [], cefr: null, use: 'read' }]);
+  const bad = validateGraph(g).filter((i) => i.rule === 'construction-use-bad');
+  assert.deepEqual(bad.map((i) => i.nodeId), ['fr:cx:bad-use']);
+});
