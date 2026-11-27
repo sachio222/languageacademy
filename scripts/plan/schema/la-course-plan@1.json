@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "la-course-plan@1",
+  "title": "Course plan",
+  "description": "The part of a course that is planned and not yet written: every unit with every module, and what each module teaches. One file per language, content/<lang>/course-plan.json. Nothing here names a language: ids are graph ids, and text in the language being taught sits in a native-language string between braces. Positions, word counts and where each level is reached are computed by plan:check, never stored.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "language", "native", "units"],
+  "properties": {
+    "schema": { "const": "la-course-plan@1" },
+    "language": { "$ref": "#/$defs/code", "description": "The language taught." },
+    "native": { "$ref": "#/$defs/code", "description": "The language the plan's prose is written in." },
+    "about": { "$ref": "#/$defs/text" },
+    "levels": {
+      "description": "The unit by whose end each level must be reached. plan:check fails when the course reaches a level later.",
+      "type": "object",
+      "propertyNames": { "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] },
+      "additionalProperties": { "$ref": "#/$defs/key" }
+    },
+    "units": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/unit" } },
+    "words_to_add": {
+      "description": "Words the plan teaches that the graph does not hold yet. Each is taught by the module named. When a word becomes a headword, its entry leaves this list.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/word_to_add" }
+    },
+    "later": { "description": "Topics kept for the level after this plan.", "type": "array", "items": { "$ref": "#/$defs/text" } }
+  },
+  "$defs": {
+    "code": { "type": "string", "pattern": "^[a-z]{2,3}$" },
+    "key": { "type": "string", "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$" },
+    "node": { "type": "string", "pattern": "^[a-z]{2,3}:[a-z]+:[^\\s]+$" },
+    "text": { "type": "string", "minLength": 1 },
+    "texts": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit_key", "title", "can_do", "setting", "modules"],
+      "properties": {
+        "unit_key": { "$ref": "#/$defs/key" },
+        "title": { "$ref": "#/$defs/text" },
+        "can_do": { "$ref": "#/$defs/text", "description": "What the learner can do at the end, observable." },
+        "setting": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["cast"],
+          "properties": {
+            "cast": { "$ref": "#/$defs/texts", "description": "Who is in the unit: name, age, who they are to each other, and a lead's look." },
+            "places": { "$ref": "#/$defs/texts" },
+            "situations": { "$ref": "#/$defs/texts", "description": "The real things to get done that the lessons practise." }
+          }
+        },
+        "culture": {
+          "description": "What the unit carries of the country: its history and its customs.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": { "history": { "$ref": "#/$defs/text" }, "customs": { "$ref": "#/$defs/text" } }
+        },
+        "sound": { "$ref": "#/$defs/text", "description": "The sounds this unit's words make a good place to practise." },
+        "modules": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/module" } },
+        "notes": { "$ref": "#/$defs/texts", "description": "Why the unit is built this way: where its guides sit and why." },
+        "open": { "$ref": "#/$defs/texts", "description": "Points to settle when the unit is written." }
+      }
+    },
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["module_key", "kind", "title", "teaches", "minutes"],
+      "properties": {
+        "module_key": { "$ref": "#/$defs/key", "description": "Permanent. A module keeps its key when it moves or is retitled." },
+        "kind": { "enum": ["lesson", "guide", "reading", "practice", "unit_exam"] },
+        "title": { "$ref": "#/$defs/text" },
+        "goal": { "$ref": "#/$defs/text", "description": "For a lesson, what the learner can do after it. For a guide, what it gathers." },
+        "situation": { "$ref": "#/$defs/text", "description": "The situation the module opens and closes in." },
+        "teaches": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["words", "constructions"],
+          "properties": {
+            "words": { "description": "Every new word, each taught once in the whole course. A reading's are the words of its table.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+            "constructions": { "type": "array", "items": { "$ref": "#/$defs/node" } }
+          }
+        },
+        "practises": { "description": "Patterns taught earlier that this module leans on.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+        "minutes": { "description": "First-pass study minutes for one sitting, by the recipe constants. A reading in parts gives the minutes of one part.", "type": "integer", "minimum": 1 },
+        "culture_note": { "$ref": "#/$defs/text", "description": "A short note on a custom, where it meets one of the module's words." },
+        "spoken": { "$ref": "#/$defs/texts", "description": "The small words of speech, short forms and slang the module's dialogue uses." },
+        "spoken_example": { "$ref": "#/$defs/text" },
+        "summary": { "$ref": "#/$defs/text", "description": "One line on a practice set." },
+        "note": { "$ref": "#/$defs/text" },
+        "reading": { "$ref": "#/$defs/reading" },
+        "exam": { "$ref": "#/$defs/exam" }
+      },
+      "allOf": [
+        { "if": { "properties": { "kind": { "const": "reading" } } }, "then": { "required": ["reading"] }, "else": { "properties": { "reading": false } } },
+        { "if": { "properties": { "kind": { "const": "unit_exam" } } }, "then": { "required": ["exam"] }, "else": { "properties": { "exam": false } } }
+      ]
+    },
+    "reading": {
+      "description": "A reading is one module with one word table. A long reading has parts, each read in one sitting.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parts", "premise", "must_use"],
+      "properties": {
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "title", "title_native"],
+            "properties": {
+              "kind": { "enum": ["story", "article", "exposition", "learning-alongside"], "description": "story; article on a custom, a piece of history or a place; exposition with no characters or plot; learning-alongside, where a character learns with the reader." },
+              "title": { "$ref": "#/$defs/text" },
+              "title_native": { "$ref": "#/$defs/text" }
+            }
+          }
+        },
+        "genre": { "$ref": "#/$defs/text" },
+        "premise": { "$ref": "#/$defs/text" },
+        "must_use": { "description": "Patterns the text must use.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+        "distinct_words": { "type": "integer", "minimum": 1 },
+        "running_words": { "description": "Length of one part.", "type": "integer", "minimum": 1 },
+        "questions": { "$ref": "#/$defs/text", "description": "What the questions ask about." },
+        "art": { "$ref": "#/$defs/text" },
+        "note": { "$ref": "#/$defs/text" }
+      }
+    },
+    "exam": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["items", "minutes"],
+      "properties": {
+        "items": { "type": "integer", "minimum": 1 },
+        "minutes": { "type": "integer", "minimum": 1 },
+        "checks": { "$ref": "#/$defs/text" }
+      }
+    },
+    "word_to_add": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "lemma", "pos", "level", "gloss", "module_key"],
+      "properties": {
+        "id": { "$ref": "#/$defs/node", "description": "The id the word will take in the graph." },
+        "lemma": { "$ref": "#/$defs/text" },
+        "pos": { "$ref": "#/$defs/text" },
+        "gender": { "$ref": "#/$defs/text" },
+        "level": { "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] },
+        "gloss": { "$ref": "#/$defs/text" },
+        "register": { "enum": ["spoken", "slang"] },
+        "use": { "enum": ["produce", "recognize"], "description": "recognize: the learner must understand it and is never asked to produce it." },
+        "held": { "$ref": "#/$defs/text", "description": "Why the word cannot join the graph yet." },
+        "module_key": { "$ref": "#/$defs/key" }
+      }
+    }
+  }
+}

@@ -21,6 +21,12 @@
     "content:migrate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/migrate/run.mjs",
     "content:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/content/test/**/*.test.mjs\"",
     "graph:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/graph/test/**/*.test.mjs\"",
+    "plan:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs check fr",
+    "plan:md": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs md fr",
+    "plan:page": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs page fr",
+    "plan:stubs": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs stubs fr",
+    "plan:brief": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs brief fr",
+    "plan:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/plan/test/**/*.test.mjs\"",
     "pipeline": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/pipeline/cli.mjs",
     "pipeline:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/pipeline/test/**/*.test.mjs\""
   },

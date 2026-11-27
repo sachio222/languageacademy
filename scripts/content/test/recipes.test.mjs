@@ -36,7 +36,7 @@ test('the working numbers are the ones the controller set', () => {
   assert.deepEqual(lesson.size.items, { min: 12, max: 20 });
   const exam = r.byKind.get('unit_exam');
   assert.equal(exam.blueprint.items_per_goal, 3);
-  assert.equal(exam.size.cap_items, 30);
+  assert.equal(exam.size.cap_items, 35);
   assert.equal(exam.size.cap_minutes, 25);
   assert.deepEqual(r.byKind.get('practice').size.items, { min: 16, max: 24 });
   assert.equal(r.byKind.get('reading').size.new_words.max, 10);

@@ -7,7 +7,7 @@
     { "part": "items", "from": "card:blueprint/exam", "rule": "Items per goal as the blueprint sets, interleaved; each item names its goal." }
   ],
   "size": {
-    "cap_items": 30,
+    "cap_items": 35,
     "cap_minutes": 25,
     "first_pass_minutes": { "max": "five_day_minutes" }
   },
@@ -28,7 +28,7 @@
     "Each item names the goal it tests."
   ],
   "basis": {
-    "size.cap_items": "controller 2026-11-26: about 3 questions per goal, capped at about 30 (research check pending)",
+    "size.cap_items": "controller 2026-11-26: about 3 questions per goal, capped at 35 items, as unit-prep design section 7.2 and the planning brief set it (research check pending)",
     "size.cap_minutes": "working",
     "blueprint.items_per_goal": "controller 2026-11-26: about 3 questions per goal (research check pending)",
     "blueprint.production_min": "working",

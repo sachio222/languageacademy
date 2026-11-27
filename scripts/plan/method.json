@@ -1,0 +1,30 @@
+{
+  "about": "What the planning method fixes for every language, beyond the sizes each module kind's recipe sets (content/<lang>/recipes). plan:check reads both.",
+  "unit": {
+    "max_guides": 2
+  },
+  "frequency": {
+    "bands": [
+      {
+        "to_rank": 1000,
+        "name": "the 1,000 most common words"
+      },
+      {
+        "to_rank": 2000,
+        "name": "words 1,000 to 2,000"
+      },
+      {
+        "to_rank": 4000,
+        "name": "words 2,000 to 4,000"
+      },
+      {
+        "to_rank": 8000,
+        "name": "words 4,000 to 8,000"
+      },
+      {
+        "to_rank": null,
+        "name": "beyond the 8,000 most common"
+      }
+    ]
+  }
+}
