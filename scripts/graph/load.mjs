@@ -56,14 +56,32 @@ const DEFAULT_SETTINGS = {
   levelThreshold: 0.9,
   defaultNative: 'en',
   cognates: { allowIn: 'shown' },
+  levelOrder: { words: 1, patterns: 1 },
 };
 
 // opts.native: the learner's native language, which picks the language pair (pairs.mjs); settings.defaultNative
 // when left out.
 export function loadGraph(graphDir, lang, opts = {}) {
-  const settings = { ...DEFAULT_SETTINGS, ...readJson(join(graphDir, 'core', 'settings.json')) };
+  // Settings: the defaults, then core/settings.json (shared by every language), then the language's own
+  // languages/<lang>/settings.json when it has one, each replacing the keys it names.
+  const ownSettings = join(graphDir, 'languages', lang, 'settings.json');
+  const settings = {
+    ...DEFAULT_SETTINGS,
+    ...readJson(join(graphDir, 'core', 'settings.json')),
+    ...(existsSync(ownSettings) ? readJson(ownSettings) : {}),
+  };
   if (!ALLOW_IN.includes(settings.cognates?.allowIn)) {
     throw new Error(`settings.json: cognates.allowIn must be one of ${ALLOW_IN.join(', ')}, not ${JSON.stringify(settings.cognates?.allowIn)}`);
+  }
+  // levelOrder: how many levels above the highest level the course has reached a lesson may teach, for words and for
+  // patterns (constructions, paradigms and forms). 1, the default, suits a course ordered by level; a course ordered by
+  // its own method, such as grammar first and common words first, allows more. The level-order rule reads it.
+  settings.levelOrder = { ...DEFAULT_SETTINGS.levelOrder, ...settings.levelOrder };
+  for (const kind of ['words', 'patterns']) {
+    const n = settings.levelOrder[kind];
+    if (!(Number.isInteger(n) && n >= 1)) {
+      throw new Error(`settings.json: levelOrder.${kind} must be a whole number of levels (1 or more), not ${JSON.stringify(n)}`);
+    }
   }
   // reference.openFrom: the course position from which the Reference unit's words count as available, or null to keep
   // the unit closed. reference.modules: the module keys of the Reference unit whose words open. With no reference

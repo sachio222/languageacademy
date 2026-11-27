@@ -169,3 +169,52 @@ test('validateGraph accepts use: recognize on a construction and flags any other
   const bad = validateGraph(g).filter((i) => i.rule === 'construction-use-bad');
   assert.deepEqual(bad.map((i) => i.nodeId), ['fr:cx:bad-use']);
 });
+
+test('validateGraph accepts register and use on a headword and flags any other value', () => {
+  const g = loadMutated('headwords.json', (hs) => [
+    { ...hs[0], register: 'slang', use: 'recognize' },
+    { ...hs[1], register: 'spoken' },
+    { ...hs[2], register: 'rude' },
+    { ...hs[3], use: 'produce' },
+    ...hs.slice(4)]);
+  const issues = validateGraph(g);
+  assert.deepEqual(issues.filter((i) => i.rule === 'headword-register-bad').map((i) => i.nodeId), ['fr:lex:il']);
+  assert.deepEqual(issues.filter((i) => i.rule === 'headword-use-bad').map((i) => i.nodeId), ['fr:lex:nous']);
+});
+
+test('settings.levelOrder must give whole numbers of levels', () => {
+  const settingsOf = (levelOrder) => {
+    const dir = mkdtempSync(join(tmpdir(), 'graph-mini-'));
+    try {
+      cpSync(fixtureDir, dir, { recursive: true });
+      const path = join(dir, 'core', 'settings.json');
+      writeFileSync(path, JSON.stringify({ ...JSON.parse(readFileSync(path, 'utf8')), levelOrder }));
+      return loadGraph(dir, 'fr').settings.levelOrder;
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  };
+  assert.deepEqual(loadGraph(fixtureDir, 'fr').settings.levelOrder, { words: 1, patterns: 1 });
+  assert.deepEqual(settingsOf({ words: 2, patterns: 3 }), { words: 2, patterns: 3 });
+  assert.deepEqual(settingsOf({ words: 2 }), { words: 2, patterns: 1 });
+  assert.throws(() => settingsOf({ words: 0 }), /levelOrder\.words/);
+  assert.throws(() => settingsOf({ patterns: 'all' }), /levelOrder\.patterns/);
+});
+
+test('a language folder may hold its own settings, which override the shared ones', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'graph-mini-'));
+  try {
+    cpSync(fixtureDir, dir, { recursive: true });
+    const shared = loadGraph(dir, 'fr').settings;
+    writeFileSync(join(dir, 'languages', 'fr', 'settings.json'), JSON.stringify({ levelOrder: { words: 2, patterns: 3 }, levelThreshold: 0.8 }));
+    const own = loadGraph(dir, 'fr').settings;
+    assert.deepEqual(own.levelOrder, { words: 2, patterns: 3 });
+    assert.equal(own.levelThreshold, 0.8);
+    assert.deepEqual(own.reuse, shared.reuse);
+    assert.equal(own.defaultNative, shared.defaultNative);
+    writeFileSync(join(dir, 'languages', 'fr', 'settings.json'), JSON.stringify({ levelOrder: { words: 0 } }));
+    assert.throws(() => loadGraph(dir, 'fr'), /levelOrder\.words/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

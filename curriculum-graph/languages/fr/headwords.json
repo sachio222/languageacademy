@@ -3160,6 +3160,23 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:aperitif",
+    "lemma": "apéritif",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "drink and snacks before a meal"
+      }
+    ]
+  },
+  {
     "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -5234,6 +5251,25 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:bagnole",
+    "lemma": "bagnole",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "car"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -6059,6 +6095,23 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:bise",
+    "lemma": "bise",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "kiss on the cheek, as a greeting (faire la bise)"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:bizarre",
@@ -6183,6 +6236,21 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:bof",
+    "lemma": "bof",
+    "paradigms": [],
+    "pos": "interjection",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "meh, not really"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "boire-fr",
@@ -6299,6 +6367,30 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:bosser",
+    "lemma": "bosser",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "to work"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:botte",
@@ -6344,6 +6436,30 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:bouffer",
+    "lemma": "bouffer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "to eat"
+      }
+    ],
+    "use": "recognize"
   },
   {
     "cefr": "A2",
@@ -6444,6 +6560,25 @@
         "gloss": "to upset deeply; to disrupt"
       }
     ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:boulot",
+    "lemma": "boulot",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "work, job"
+      }
+    ],
+    "use": "recognize"
   },
   {
     "cefr": "A2",
@@ -8958,6 +9093,22 @@
   },
   {
     "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:cimer",
+    "lemma": "cimer",
+    "paradigms": [],
+    "pos": "interjection",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "thanks (verlan of merci)"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
+    "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:cimetiere",
@@ -9296,6 +9447,23 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:cliche",
+    "lemma": "cliché",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "cliché, stereotype"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -17616,6 +17784,21 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:du-coup",
+    "lemma": "du coup",
+    "paradigms": [],
+    "pos": "adverb",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "so, as a result"
+      }
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "dur-fr",
@@ -19138,6 +19321,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:empereur",
+    "lemma": "empereur",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "emperor"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
@@ -19307,6 +19507,21 @@
     "paradigms": [],
     "pos": "pronoun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:en-fait",
+    "lemma": "en fait",
+    "paradigms": [],
+    "pos": "adverb",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "in fact, actually"
+      }
+    ]
   },
   {
     "cefr": "B2",
@@ -21307,6 +21522,21 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:euh",
+    "lemma": "euh",
+    "paradigms": [],
+    "pos": "interjection",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "um, er"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -24393,6 +24623,23 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:fric",
+    "lemma": "fric",
+    "paradigms": [],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "money, cash"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -25691,6 +25938,23 @@
   },
   {
     "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:grotte",
+    "lemma": "grotte",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "cave"
+      }
+    ]
+  },
+  {
+    "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:groupe",
@@ -26122,6 +26386,21 @@
     "senses": [
       {
         "gloss": "to put up, house; to host"
+      }
+    ]
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:hein",
+    "lemma": "hein",
+    "paradigms": [],
+    "pos": "interjection",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "eh? right? (at the end of a sentence, to check the listener agrees)"
       }
     ]
   },
@@ -30191,6 +30470,49 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:keuf",
+    "lemma": "keuf",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "cop (verlan of flic); said about the police, never to them"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:kiffer",
+    "lemma": "kiffer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "to love, be really into"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -32606,6 +32928,25 @@
     "senses": []
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:mec",
+    "lemma": "mec",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "guy, bloke; boyfriend"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -33406,6 +33747,25 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:meuf",
+    "lemma": "meuf",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "woman, girl; girlfriend (verlan of femme)"
+      }
+    ],
+    "use": "recognize"
   },
   {
     "cefr": "B1",
@@ -36429,6 +36789,21 @@
     "senses": []
   },
   {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:ouais",
+    "lemma": "ouais",
+    "paradigms": [],
+    "pos": "interjection",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "yeah"
+      }
+    ]
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -38479,6 +38854,23 @@
     "cefr": "B1",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:philosophe",
+    "lemma": "philosophe",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "philosopher"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:philosophie",
     "lemma": "philosophie",
@@ -39808,6 +40200,25 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m/f",
+    "id": "fr:lex:pote",
+    "lemma": "pote",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "mate, buddy"
+      }
+    ],
+    "use": "recognize"
   },
   {
     "cefr": "B2",
@@ -44330,6 +44741,22 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:relou",
+    "lemma": "relou",
+    "paradigms": [],
+    "pos": "adjective",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "annoying, a pain (verlan of lourd)"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -45873,6 +46300,25 @@
     "senses": []
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:reuf",
+    "lemma": "reuf",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "brother; also said to a friend (verlan of frère)"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -46297,6 +46743,23 @@
     "senses": []
   },
   {
+    "cefr": "B2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:rivalite",
+    "lemma": "rivalité",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "senses": [
+      {
+        "gloss": "rivalry"
+      }
+    ]
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "rivière-fr",
@@ -46394,6 +46857,22 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:romain",
+    "lemma": "romain",
+    "paradigms": [
+      "fr:cx:adj.regular"
+    ],
+    "pos": "adjective",
+    "senses": [
+      {
+        "gloss": "Roman"
+      }
+    ]
   },
   {
     "cefr": "A2",
@@ -51518,6 +51997,25 @@
     ]
   },
   {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "f",
+    "id": "fr:lex:teuf",
+    "lemma": "teuf",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "party (verlan of fête)"
+      }
+    ],
+    "use": "recognize"
+  },
+  {
     "cefr": "A2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -52730,6 +53228,28 @@
   },
   {
     "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:trinquer",
+    "lemma": "trinquer",
+    "paradigms": [
+      "fr:cx:verb.er.present",
+      "fr:cx:ptcp.er",
+      "fr:cx:verb.er.impf",
+      "fr:cx:verb.future",
+      "fr:cx:verb.conditional",
+      "fr:cx:verb.er.subjunctive",
+      "fr:cx:prsptcp.er"
+    ],
+    "pos": "verb",
+    "senses": [
+      {
+        "gloss": "to clink glasses, drink a toast"
+      }
+    ]
+  },
+  {
+    "cefr": "B1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "triomphe-fr",
     "id": "fr:lex:triomphe",
@@ -52910,6 +53430,24 @@
     ],
     "pos": "verb",
     "senses": []
+  },
+  {
+    "cefr": "A1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "gender": "m",
+    "id": "fr:lex:truc",
+    "lemma": "truc",
+    "paradigms": [
+      "fr:cx:noun.plural"
+    ],
+    "pos": "noun",
+    "register": "spoken",
+    "senses": [
+      {
+        "gloss": "thing, thingy"
+      }
+    ]
   },
   {
     "cefr": "A1",
@@ -53704,6 +54242,24 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:venere",
+    "lemma": "vénère",
+    "paradigms": [
+      "fr:cx:adj.e"
+    ],
+    "pos": "adjective",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "annoyed, wound up (verlan of énervé)"
+      }
+    ],
+    "use": "recognize"
   },
   {
     "cefr": "A1",
@@ -55066,6 +55622,22 @@
     ],
     "pos": "noun",
     "senses": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "dictionaryId": null,
+    "id": "fr:lex:wesh",
+    "lemma": "wesh",
+    "paradigms": [],
+    "pos": "interjection",
+    "register": "slang",
+    "senses": [
+      {
+        "gloss": "hey, yo; also said in surprise"
+      }
+    ],
+    "use": "recognize"
   },
   {
     "cefr": "A1",

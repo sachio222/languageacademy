@@ -277,13 +277,21 @@ export function ruleLevels(ctx) {
     }
   }
 
-  // Out-of-order teaching: nodes two or more levels above the highest level reached before the module. Before any
-  // level is reached, the learner works toward A1, so A1 is the base.
+  // Out-of-order teaching: nodes further above the highest level reached before the module than the course allows
+  // (settings.levelOrder: 1 level by default, so a node two or more levels up is reported; words and patterns each
+  // have their own allowance, a pattern being a construction, a paradigm or a form). Before any level is reached,
+  // the learner works toward A1, so A1 is the base.
+  const allowed = { words: 1, patterns: 1, ...ctx.graph.settings?.levelOrder };
+  const allowance = (id) => (id.includes(':lex:') ? allowed.words : allowed.patterns);
+  const levelsOf = (n) => `${n} level${n === 1 ? '' : 's'}`;
+  const beyond = allowed.words === 1 && allowed.patterns === 1
+    ? 'two or more levels above'
+    : `further than the course allows (a word ${levelsOf(allowed.words)}, a pattern ${levelsOf(allowed.patterns)}) above`;
   for (const m of report.modules) {
     const reached = reachedBefore(report.levels, m.position);
     const floor = reached ?? ORDER[0];
     const ahead = withoutRepeatedForms(ctx.graph, taughtNodes.get(m.position)
-      .filter((n) => n.level && rank(n.level) - rank(floor) >= 2))
+      .filter((n) => n.level && rank(n.level) - rank(floor) > allowance(n.id)))
       .sort((a, b) => rank(b.level) - rank(a.level) || byId(a.id, b.id));
     if (!ahead.length) continue;
     const where = reached
@@ -297,7 +305,7 @@ export function ruleLevels(ctx) {
       position: m.position,
       nodes: ahead.map((n) => n.id),
       nodeLevels: ahead,
-      message: `${name(m)} teaches ${ahead.length} word${s} or pattern${s} two or more levels above ${where}: `
+      message: `${name(m)} teaches ${ahead.length} word${s} or pattern${s} ${beyond} ${where}: `
         + ahead.map((n) => `${n.id} (${n.level})`).join(', '),
     }));
   }

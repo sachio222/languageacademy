@@ -24924,6 +24924,12 @@
     "surface": "relève"
   },
   {
+    "cell": "pl",
+    "id": "fr:form:relou.pl",
+    "of": "fr:lex:relou",
+    "surface": "relous"
+  },
+  {
     "cell": "prs.1pl",
     "id": "fr:form:remettre.prs.1pl",
     "of": "fr:lex:remettre",

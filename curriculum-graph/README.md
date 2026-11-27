@@ -86,9 +86,11 @@ Words and patterns a guide teaches count as taught at the guide's position, but 
 | `core/functions.json` | What a learner can do with a language, shared by every language | By hand |
 | `core/levels/fr-A1.json`, `fr-A2.json`, `fr-B1.json` | Core words and constructions a learner needs to reach each level (drafts until the team approves them) | By hand |
 | `core/settings.json` | Reuse windows, the last unit allowed English-to-French translation prompts, the default native language, where cognates are allowed and the position from which the Reference unit is open | By hand |
+| `languages/fr/settings.json` | Settings that belong to the French course alone. Each key replaces the same key of `core/settings.json`. It holds `levelOrder` (see Level and function reports) | By hand |
 | `pairs/en-fr/cognates.json` | Cognates and false friends for English speakers learning French | By hand |
-| `languages/fr/headwords.json` | Course word list, plus the words the core lists need that no lesson uses yet | By hand |
-| `languages/fr/forms.json` | Irregular forms | By hand |
+| `languages/fr/word-list.json` | The words to add, one line each: lemma, part of speech, level, English gloss, and gender for a noun (see Adding a headword) | By hand |
+| `languages/fr/headwords.json` | Course word list, plus the words the core lists need that no lesson uses yet | `pnpm graph:add-words` adds the words of `word-list.json`; changes to a word already there are made by hand |
+| `languages/fr/forms.json` | Irregular forms | `pnpm graph:add-words` adds the irregular forms of new words; other changes by hand |
 | `languages/fr/paradigms.json` | Regular patterns that generate forms (present tense of -er verbs, plural in -s) | By hand |
 | `languages/fr/exponents.json` | The French words and patterns that perform each function | By hand |
 | `languages/fr/reading-limits.json` | Verbs whose forms the checker cannot yet tell from a noun or adjective with the same spelling | By hand |
@@ -106,6 +108,7 @@ Run these from the repository root.
 - `pnpm graph:check` prints a count for each rule it found, plus `dangling-ref`, `level-data-missing` and `unread-items` even at 0, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of that level's core words and the core constructions taught by the end of the course and where the level is reached, followed from A2 on by the same counts through that level (the level and the levels below it), then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--budget` to compare each count with `reports/issue-budget.json` instead: it exits with status 1 only when a rule has more issues than its budget (a rule the budget does not list has a budget of 0), and lists each rule over or under. CI runs `pnpm graph:check --budget` on every push, so a change that adds issues fails. After you fix issues, run `pnpm graph:check --lower-budget` to write the lower counts into the budget; it never raises one. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
 - `pnpm graph:due <moduleKey|position>` lists the words and patterns the module at that position should use again. A taught word or pattern should come back within 2 modules, then within 5, 12 and 30 modules of each use. The list holds those with no use yet inside their current window, when that window ends at the next module or has already ended. Each line gives the ID, where it was taught, its last use and where its window ends.
 - `pnpm graph:report` writes the fix list (`reports/fr-fix-list.md`), the counts (`reports/fr-summary.json`) and the level and function data (`reports/fr-levels.json`, `reports/fr-functions.json`; see Level and function reports). The same input always gives byte-identical files.
+- `pnpm graph:add-words` adds every word of `languages/fr/word-list.json` that `headwords.json` does not have yet, with its irregular forms. Running it again changes nothing.
 - `pnpm graph:extract` prints the words each lesson and reading teaches, as the checker reads them from its vocabulary table, and each vocabulary word the course word list does not have. It writes nothing; the checker derives these words on every run.
 - `pnpm graph:test` runs the checker's tests, including the example sentences of every construction.
 
@@ -140,23 +143,64 @@ For a pair file, it reports `dangling-ref` for a cognate or false friend that is
 
 ## Adding a headword
 
-Add an object to `headwords.json` and keep the file sorted by `id`:
+Add one line to `languages/fr/word-list.json`, in alphabetical order, then run `pnpm graph:add-words`:
+
+```json
+{"lemma": "grotte", "pos": "noun", "gender": "f", "level": "A2", "gloss": "cave"}
+```
+
+The builder writes the headword into `headwords.json` and its irregular forms into `forms.json`. It works out the ID, the paradigms, the spelling changes of an -er verb (corrigeons, pèse, sèche, tutoie) and the app dictionary key. A word already in `headwords.json` with the same lemma and part of speech is skipped.
+
+| Field | Meaning |
+|---|---|
+| `lemma`, `pos`, `level`, `gloss` | Required. `pos` is the part of speech: noun, verb, adjective, adverb, pronoun, preposition, conjunction, article, determiner, interjection, interrogative, or alphabet for a letter. `level` is A1 to C2. `gloss` is the meaning in English. A lemma of two words, such as du coup, is written with its space. |
+| `gender` | For a noun, and only a noun: `m`, `f`, or `m/f` for a noun with one form for both (un or une philosophe). |
+| `register` | `spoken` for a word people say but seldom write (euh, du coup, truc), `slang` for slang and verlan (mec, meuf). Leave it out for any other word. |
+| `use` | `recognize` for a word the learner reads and hears but is never asked to produce, as slang is taught here. Leave it out for any other word. |
+| `class` | For a verb that is not a regular -er verb: `ir` (like finir), `re` (like attendre), or `double` for an -eter or -eler verb that doubles its consonant (projette, renouvelle). |
+| `like` | For an irregular verb built on a verb already in the list: défaire is `"like": "faire"`. The lemma must end with that verb. Every form is copied with the start added (fais gives défais). |
+| `paradigms` | The paradigm IDs, when the rules would pick the wrong ones: festival takes `fr:cx:noun.plural` (festivals), fric takes none (`[]`, no plural). |
+| `forms` | Forms no paradigm builds, as `{ "pl": "beaux-pères" }`. The cell names are those of `forms.json` (see Adding an irregular form). |
+| `id` | The ID, when the plain one belongs to another word: tache (a stain) is `fr:lex:tache.stain`, because tâche holds `fr:lex:tache`. |
+| `source` | Where the level comes from. Left out, it is `agent: judgment`. |
+
+The builder stops with a message when a line lacks a required field, names a field it does not know, gives a gender to a word that is not a noun, or would reuse an ID.
+
+What the builder writes, and what a headword holds:
 
 ```json
 { "id": "fr:lex:pomme", "lemma": "pomme", "pos": "noun", "paradigms": ["fr:cx:noun.plural"], "senses": [], "dictionaryId": "pomme-fr", "cefr": "A1", "cefrSource": "agent: frequency + Eaquals" }
 ```
 
 - `id` is `fr:lex:` plus the lemma in lowercase without accents, with spaces and apostrophes written as hyphens (`fr:lex:pomme-de-terre`). When another headword already has that ID, add the part of speech: `fr:lex:savoir.verb`. When that headword has the same part of speech and differs only in accents, add a word for the meaning instead: `fr:lex:repartir.distribute` for répartir, beside `fr:lex:repartir`.
-- `pos` is the part of speech: noun, verb, adjective, adverb, pronoun, preposition, conjunction, article, determiner, interjection, interrogative, or alphabet for a letter.
 - `paradigms` lists the patterns in `paradigms.json` that generate the word's regular forms. A regular -er verb takes the same seven patterns as `fr:lex:parler`; a noun takes `fr:cx:noun.plural`; an adjective takes the `fr:cx:adj.*` pattern that fits its endings. An irregular verb lists only the patterns its regular cells follow and gets the rest as irregular forms.
 - `dictionaryId` is the word's key in `src/data/dictionary/`, or null.
-- `senses` lists the word's meanings as `{ "gloss": "plumber" }`, in English. Most headwords still have an empty list; give a new headword at least one gloss.
-- `gender` is `"m"` or `"f"` for a noun, or `"m/f"` for a noun with one form for both genders (un or une propriétaire). Leave it out for other parts of speech. No rule reads `gender` or `senses` yet; they are there for lesson writers and the app.
+- `senses` lists the word's meanings as `{ "gloss": "plumber" }`, in English. Most older headwords still have an empty list.
+- `gender` is `"m"`, `"f"` or `"m/f"` for a noun. No rule reads `gender` or `senses` yet; they are there for lesson writers and the app.
+- `register` and `use` are as in the word list. `pnpm graph:check` reports any other value as `headword-register-bad` or `headword-use-bad`. Where an exercise makes the learner type a word marked `"use": "recognize"`, it warns `recognize-typed`, as it does for a recognition-only pattern (see Adding a construction). A word shown or heard raises nothing.
 - `cefr` and `cefrSource` give the word's level and how it was decided (see Levels and core lists). Every headword needs both. When you choose the level yourself, write `cefrSource` as `team: ` followed by a few words, such as `team: teacher review, 2026-12`. A level an agent set under Jake's delegation is written `team: set by agent, Jake delegated 2026-11-25`.
+
+`headwords.json` and `forms.json` stay the source of truth. To change a word that is already there (its gloss, its level, a form), edit those files. If the word has a line in `word-list.json`, change that line the same way: `pnpm graph:test` rebuilds every listed word from the list alone and fails when the result differs from the two files by a single byte.
 
 A new headword does not go into a core list, even at A1, A2 or B1. The core lists change only when the team changes a level's target (see Levels and core lists).
 
 Then run `pnpm graph:extract` and `pnpm graph:check`.
+
+Before you add a word, check three things the builder cannot see:
+
+- **A spelling the list already reads as another word.** In running text the checker counts such a word as known when either reading is taught. A lesson whose vocabulary table lists one of them may credit the other reading, and then needs that reading's ID in its `excludeWords` correction. Pairs among the words added through the list: bavarde (bavard and bavarder), inventions (invention and inventer), versions (version and verser), concernant (concerner and the preposition), défaite (défaire and the noun), photographie (photographier and the noun), vote (voter and the noun), tache and tâche, envie and envier, mélange and mélanger.
+- **A word spelled as in English.** The converter in `scripts/content/migrate` reads an English label as French when every word in it is in the list, and `pnpm content:migrate --check` then fails. Three words the plan teaches in Unit 27 wait for that reason: compléter, modifier and profession, which would turn the English notes "complete direction instruction" (the directions lesson), "modifier" (Reading 7) and "profession" (Reading 8) into French. Add them once those notes are reworded. A word French never writes that way goes into `ENGLISH_ONLY` in `scripts/graph/french-text.mjs`, as presentation did.
+- **A word of two or more words.** It is a headword a lesson can teach and a core list can name, but the checker reads running text one word at a time, so du coup in a sentence counts as du and coup.
+
+### A new language
+
+The builder, `scripts/graph/add-words.mjs`, knows nothing about French. For another language it needs:
+
+1. `languages/<lang>/paradigms.json`: the regular patterns, each a list of `{ cell, strip, add }` rules.
+2. `languages/<lang>/word-list.json`: the words, in the format above.
+3. `scripts/graph/<lang>/inflect.mjs`: one function, `inflect(entry, rulesOf)`, that returns the paradigm IDs a word takes and any spellings those paradigms do not build. The French one is under 100 lines: plurals in -x and -aux, the adjective pattern by ending, and the spelling changes of -er verbs.
+
+Then `node scripts/graph/add-words.mjs <lang>` writes that language's `headwords.json` and `forms.json`.
 
 ## Adding an irregular form
 
@@ -187,7 +231,7 @@ The same argument can hold `use: 'recognize'` for a pattern the learner reads an
 
 - What counts is the literary form itself: the words its detector marks with `form: true`, such as the verb of il fut, or the whole match when no step is marked.
 - Section 1 of the fix list reports it only where the learner reads or hears that form before a module teaches it, such as a reading passage in the passé simple before the guide that explains the tense. It is never reported where the learner types the form: in an answer, or in a gap-fill whose blank is the form. A gap-fill whose blank is another word of the match (the il of il fut) still leaves the form read.
-- Where the learner must type the form, `pnpm graph:check` warns `recognize-typed`: a learner should read such a pattern, not write it.
+- Where the learner must type the form, `pnpm graph:check` warns `recognize-typed`: a learner should read such a pattern, not write it. A headword can be recognition-only too (see Adding a headword), and gets the same warning.
 - A guide may teach it alone, so `guide_only_teaching` leaves it out.
 
 The B2 patterns of this kind are `fr:cx:passe-simple` and `fr:cx:inversion.literary` (peut-être viendra-t-il, « Bonjour », dit-il), both B2, and `fr:cx:subj.imparfait` (qu'il fût), `fr:cx:subj.plus-que-parfait` (qu'il eût fini) and `fr:cx:neg.ne-alone` (je ne sais, je ne peux le croire), all C1.
@@ -299,7 +343,7 @@ The checker measures the course against the core lists. These are the terms the 
 The reports add three warnings. Where they use the highest level the course has reached, a level counts only once the course has reached it together with the levels below it, so a course that covers the B1 list before the A1 list has not reached B1:
 
 - `level-label`: a module title or concept card names a level above the module's level, or a unit title or unit description (B2 Level Phrases) names a level above the unit's level. A reading, practice set or exam teaches nothing, so its label is compared with the highest level the course has reached by its position instead.
-- `level-order`: a module teaches a word or pattern two or more levels above the highest level reached before it. Until the course reaches a level, the count starts from A1, so the warning names every B1 or higher node. One line per module lists the nodes. A form is left out when the same line already names its headword or the pattern that builds its tense.
+- `level-order`: a module teaches a word or pattern two or more levels above the highest level reached before it. Until the course reaches a level, the count starts from A1, so the warning names every B1 or higher node. One line per module lists the nodes. A form is left out when the same line already names its headword or the pattern that builds its tense. The allowance is a setting, `levelOrder`, with one number for words and one for patterns (constructions, paradigms and forms): how many levels above the highest level reached a lesson may teach. The default is 1 for both, which suits a course ordered by level. The French course sets `{ "words": 2, "patterns": 3 }` in `languages/fr/settings.json`, because it teaches grammar first and common words first (Jake, 2026-11-27): a common B1 word may come before A2 is reached, and B1 or B2 grammar before A1. A B2 word before A2, or a C1 pattern before A1, is still reported.
 - `function-unreachable`: no exponent of an A1 or A2 function is fully taught by the end of the course. The line names what the closest exponent still needs. While the Reference unit is open its words are available, so they never appear there. With `reference.openFrom` set to null, the line marks words that no lesson teaches and only the Reference unit lists, such as huit in "Il est huit heures".
 
 `languages/fr/reading-limits.json` lists verbs the checker cannot yet tell from a noun or adjective with the same spelling. Their present, past participle and subjunctive forms were left out of the graph because they are spelled like an older entry: il porte reads as the noun porte, and j'ai téléphoné does not read as téléphoner. For intéresser only the present participle is left out, because intéressant is also an adjective. For taire only the past participle is left out: tu is the subject pronoun and tue a form of tuer, and a participle reading on tu would make the checker read a passé composé into as-tu. Each entry gives the headword and the cells left out:
@@ -319,14 +363,15 @@ A share in the curve is its count divided by `coreWords` or `coreConstructions` 
 
 ## Build scripts
 
-`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs`, `b2-words.mjs`, `plan-words.mjs` and `constructions.mjs` with `node`, in that order, reproduces the data files they wrote byte for byte.
+New words go through `languages/fr/word-list.json` and `pnpm graph:add-words` (see Adding a headword). `scripts/graph/fr/build/` holds the older scripts that built the French data. Running `add-words.mjs`, `core-words.mjs`, `b2-words.mjs`, `pnpm graph:add-words` and `constructions.mjs`, in that order, reproduces the data files they wrote byte for byte.
 
 - `constructions.mjs` writes `constructions.json` and stays its source of truth.
 - `course-map.mjs` and `course-map-data.mjs` wrote the first course map, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The course map has since been split between the module files and the corrections, keyed by item id, so `course-map.mjs` now stops before writing. Edit the JSON files and module files directly.
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
 - `core-words.mjs` records the words added for the core lists, with their levels and the irregular forms for their spelling changes (rangeons, jette, mène), and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
 - `b2-words.mjs` records the words of the B2 pass (most at B2, some moved to A2, B1 or C1), with their glosses, genders and levels, the irregular forms of their verbs (copied from a verb of the same family, such as soumettre from mettre) and adjectives, and why some words were left out. Running it again changes nothing.
-- `plan-words.mjs` records the 144 everyday words the plan for Units 13 to 29 teaches that the list lacked (A1 to B1), with their glosses, genders and levels, the spelling changes of their verbs (pèse, sèche, tutoie, corrigeons), and why compléter, modifier and profession wait: three English notes in the course would be read as French. tache (a stain) has the ID `fr:lex:tache.stain`, because tâche holds `fr:lex:tache`. Running it again changes nothing.
+- `add-words.mjs`, `core-words.mjs` and `b2-words.mjs` stay as the record of three earlier passes. Each holds, beside its words, the reasons some words were left out and the forms it chose case by case, and `headwords.json` is the source of truth for what they wrote. They are not converted into `word-list.json`. Do not add words to them.
+- `word-list.json` began with the 147 everyday words the plan for Units 13 to 29 teaches that the list lacked (A1 to B1), which `plan-words.mjs` used to hold; that script is gone.
 - `constructions.mjs` takes construction levels from `construction-levels.mjs`.
 - `constructions.mjs` builds the passé simple and subjonctif imparfait forms that `fr:cx:passe-simple` and `fr:cx:subj.imparfait` look for from the graph's verbs, leaving out a form spelled like a word the graph already reads (il finit is also the present). After you add verbs to `headwords.json`, run it again so their forms are read too.
 - `levels-propose.mjs` proposed the first headword levels from Lexique and FLELex files kept outside the repository, in a table that stays outside it too. It is not part of the build. The levels in `headwords.json` were decided from that table and are now edited by hand.

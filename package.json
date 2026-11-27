@@ -21,6 +21,7 @@
     "content:glosses": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/glosses.mjs",
     "content:migrate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/migrate/run.mjs",
     "content:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/content/test/**/*.test.mjs\"",
+    "graph:add-words": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/add-words.mjs fr",
     "graph:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/graph/test/**/*.test.mjs\"",
     "pipeline": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/pipeline/cli.mjs",
     "pipeline:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/pipeline/test/**/*.test.mjs\""

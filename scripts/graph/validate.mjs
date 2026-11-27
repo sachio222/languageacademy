@@ -5,6 +5,8 @@ import { parseId } from './ids.mjs';
 import { GROUPS, LEVELS } from './functions.mjs';
 import { nodeLevel, validCefrSource, coreListStatusProblem, CEFR_SOURCE_PREFIXES } from './levels-data.mjs';
 
+export const HEADWORD_REGISTERS = ['spoken', 'slang'];
+
 // opts.course and opts.repoRoot turn on the help screen checks: every help module without guide data names its
 // screen component in the course map, and that file exists. opts.course also checks that the language pair's cognates lesson is in the
 // course, and that settings.reference.openFrom is not past its last position. opts.referenceModules (the module keys
@@ -183,6 +185,23 @@ export function validateGraph(graph, opts = {}) {
       out.push(issue({
         rule: 'dangling-ref', nodeId: `courseMap:${moduleKey}`, moduleKey,
         message: `courseMap:${moduleKey}.screen points at missing file ${entry.screen}`,
+      }));
+    }
+  }
+
+  // A headword's register and use, both optional: register is 'spoken' (said, seldom written) or 'slang'; use
+  // 'recognize' marks a word the learner reads and hears but is never asked to produce, as on a construction.
+  for (const h of graph.headwords) {
+    if (h.register !== undefined && !HEADWORD_REGISTERS.includes(h.register)) {
+      out.push(issue({
+        rule: 'headword-register-bad', nodeId: h.id,
+        message: `Headword ${h.id} has register ${JSON.stringify(h.register)}; leave register out, or set it to one of ${HEADWORD_REGISTERS.join(', ')}`,
+      }));
+    }
+    if (h.use !== undefined && h.use !== 'recognize') {
+      out.push(issue({
+        rule: 'headword-use-bad', nodeId: h.id,
+        message: `Headword ${h.id} has use ${JSON.stringify(h.use)}; leave use out, or set it to "recognize" for a word the learner only reads and hears`,
       }));
     }
   }

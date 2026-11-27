@@ -504,3 +504,21 @@ test('a recognition-only construction is never reported in French the learner ty
   });
   assert.deepEqual(ruleGuideOnlyTeaching(guided).map((i) => i.nodeId), ['fr:cx:test.productive']);
 });
+
+// A recognition-only word (use: 'recognize' on its headword, such as slang) is one the learner reads and hears but is
+// never asked to produce: recognize-typed warns where the learner would have to type it, once per word and module.
+test('a recognition-only word warns where the learner must type it, never where it is read', () => {
+  const graph = { ...base, courseMap: {}, headwords: base.headwords.map((h) => (h.id === 'fr:lex:cafe' ? { ...h, register: 'slang', use: 'recognize' } : h)) };
+  const run = (items) => ruleTaughtBefore(makeCtx({ graph, course: [mod(1, items)] })).filter((i) => i.rule === 'recognize-typed');
+  const typed = run([
+    item(['Je parle au café.']),
+    item([], { lenient: ['je parle au cafe'] }),
+    item(['Je parle au café.'], { blankAnswers: ['café'] }),
+  ]);
+  assert.deepEqual(typed.map((i) => [i.itemRef, i.nodeId, i.severity]), [['m1#1', 'fr:lex:cafe', 'warning']]);
+  assert.match(typed[0].message, /only reads and hears/);
+  assert.deepEqual(run([item([], { shown: ['Je parle au café.'] }), item(['Je parle au café.'], { blankAnswers: ['parle'] })]), []);
+  // an ignore on the item silences it, as for any other word
+  const ignored = { ...graph, courseMap: { m1: { overrides: { 'm1#1': { ignore: ['fr:lex:cafe'] } } } } };
+  assert.deepEqual(ruleTaughtBefore(makeCtx({ graph: ignored, course: [mod(1, [item(['Je parle au café.'])])] })).filter((i) => i.rule === 'recognize-typed'), []);
+});

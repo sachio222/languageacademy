@@ -537,3 +537,24 @@ test('with cognates allowed only in shown French, cognates do not count as avail
   const r = levelReport(cognateCtx('shown'));
   assert.deepEqual([r.levels.A1.cognateWords, r.levels.A1.availableWords, r.levels.A1.reachedAt], [0, 2, null]);
 });
+
+// settings.levelOrder: how many levels above the highest level reached a lesson may teach, for words and for
+// patterns. A course ordered by its own method (grammar first, common words first) sets them higher than 1.
+test('level-order follows settings.levelOrder: words and patterns each have their own allowance', () => {
+  const order = (levelOrder, courseMap = COURSE_MAP) => ruleLevels(ctxOf({ settings: { ...base.settings, levelThreshold: 0.75, levelOrder } }, COURSE, courseMap))
+    .filter((i) => i.rule === 'level-order').map((i) => [i.moduleKey, i.nodes]);
+  // the default flags a node two levels up (manger, B1, counted from A1)
+  assert.deepEqual(order({ words: 1, patterns: 1 }), [['m2', ['fr:lex:manger']], ['m4', ['fr:lex:travailler']]]);
+  // B1 words before A2 is reached are allowed once words may be two levels up
+  assert.deepEqual(order({ words: 2, patterns: 1 }), []);
+  // a pattern keeps its own allowance: a B1 pattern before A1 is flagged at 1 and allowed at 2, a word beside it is not
+  const ctx = (levelOrder) => {
+    const graph = levelGraph({ courseMap: { m1: { teachesWords: ['fr:lex:manger'], teachesConstructions: ['fr:cx:q.inversion'] } }, settings: { ...base.settings, levelThreshold: 0.75, levelOrder } });
+    graph.nodes.set('fr:cx:q.inversion', { ...graph.nodes.get('fr:cx:q.inversion'), cefr: 'B2' });
+    return ruleLevels(makeCtx({ graph, course: [makeModule({ position: 1 })] })).filter((i) => i.rule === 'level-order').map((i) => i.nodes);
+  };
+  assert.deepEqual(ctx({ words: 1, patterns: 1 }), [['fr:cx:q.inversion', 'fr:lex:manger']]);
+  assert.deepEqual(ctx({ words: 2, patterns: 2 }), [['fr:cx:q.inversion']]);
+  assert.deepEqual(ctx({ words: 1, patterns: 3 }), [['fr:lex:manger']]);
+  assert.deepEqual(ctx({ words: 2, patterns: 3 }), []);
+});
