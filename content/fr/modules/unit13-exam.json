@@ -2,10 +2,442 @@
   "schema": "la-module@1",
   "module_key": "unit13-exam",
   "kind": "unit_exam",
-  "status": "planned",
-  "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "course-plan.json"
-  }
+  "status": "written",
+  "description": "Show a newcomer round: say who and what you mean with {qui}, {que}, {où} and {dont}, plan round the weather, and invite people to a party.",
+  "can_do": [
+    "Say which person, thing or place you mean with {qui}, {que}, {où} and {dont}",
+    "Make plans with {si}, say what you like with {ce que}, and invite, accept, refuse and thank"
+  ],
+  "tests": {
+    "constructions": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:relative.dont",
+      "fr:cx:relative.ce-que",
+      "fr:cx:mise-en-relief.ce-qui-cest",
+      "fr:cx:si.present",
+      "fr:cx:subj.il-faut-que",
+      "fr:cx:q.inversion",
+      "fr:cx:chunk.nulle-part",
+      "fr:cx:frame.apprendre-a-infinitive",
+      "fr:cx:q.quest-ce-qui"
+    ]
+  },
+  "items": [
+    {
+      "id": "i-monsieur-qui-fait-le-pain",
+      "type": "gapfill",
+      "text": "Karim, c'est le monsieur ___ fait le pain que tu aimes.",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "gloss": "Karim is the man who makes the bread you like.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "The man does the making, so the verb comes next: {qui fait}."
+        }
+      ]
+    },
+    {
+      "id": "i-s-il-fait-beau-au-parc",
+      "type": "respond",
+      "situation": "Tell Maya: if it's nice next Saturday, we go to the park.",
+      "answer": "S'il fait beau samedi prochain, on va au parc.",
+      "accept": [
+        "S'il fait beau samedi prochain, nous allons au parc.",
+        "On va au parc s'il fait beau samedi prochain.",
+        "Nous allons au parc s'il fait beau samedi prochain.",
+        "Samedi prochain, s'il fait beau, on va au parc."
+      ],
+      "mistakes": [
+        {
+          "answer": "S'il fera beau samedi prochain, on va au parc.",
+          "feedback": "After {si}, the verb stays in the present: {s'il fait beau}."
+        }
+      ]
+    },
+    {
+      "id": "i-etage-ou-lea-habite",
+      "type": "gapfill",
+      "text": "Voilà l'étage ___ Léa habite avec son frère.",
+      "blanks": [
+        {
+          "answer": "où"
+        }
+      ],
+      "gloss": "This is the floor where Léa lives with her brother.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "A floor is a place, and Léa lives there: {où}."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-que-je-deteste-le-bruit",
+      "type": "transform",
+      "instruction": "Say it with what you hate first. Start with {Ce que}.",
+      "shown": "Je déteste le bruit.",
+      "answer": "Ce que je déteste, c'est le bruit.",
+      "mistakes": [
+        {
+          "answer": "Ce qui je déteste, c'est le bruit.",
+          "feedback": "A subject comes next, {je}, so it is {ce que}."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-ferme-a-six-heures",
+      "type": "respond",
+      "situation": "Maya asks when the library closes. Tell her: it closes at six in the evening.",
+      "answer": "Elle ferme à six heures du soir.",
+      "accept": [
+        "La bibliothèque ferme à six heures du soir.",
+        "Elle ferme à dix-huit heures.",
+        "La bibliothèque ferme à dix-huit heures.",
+        "Elle ferme à six heures."
+      ]
+    },
+    {
+      "id": "i-voix-dont-je-me-souviens",
+      "type": "gapfill",
+      "text": "C'est une voix ___ je me souviens bien.",
+      "blanks": [
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "It's a voice I remember well.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "You remember something with {se souvenir de}, so the word is {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-vous-invite-a-la-fete",
+      "type": "respond",
+      "situation": "Invite your neighbour Madame Garnier to the party on Saturday evening. You say {vous} to her.",
+      "answer": "Je vous invite à la fête samedi soir.",
+      "accept": [
+        "Madame Garnier, je vous invite à la fête samedi soir.",
+        "Je vous invite à la fête, samedi soir.",
+        "Je vous invite samedi soir à la fête."
+      ],
+      "mistakes": [
+        {
+          "answer": "Je t'invite à la fête samedi soir.",
+          "feedback": "You say {vous} to Madame Garnier: {je vous invite}."
+        }
+      ]
+    },
+    {
+      "id": "i-rue-que-maya-cherche",
+      "type": "transform",
+      "instruction": "Join the two sentences with {que}.",
+      "shown": "Maya cherche une rue. La rue est longue.",
+      "answer": "La rue que Maya cherche est longue.",
+      "mistakes": [
+        {
+          "answer": "La rue qui Maya cherche est longue.",
+          "feedback": "A new subject comes next, {Maya}, so the word is {que}."
+        }
+      ]
+    },
+    {
+      "id": "i-maman-je-te-presente",
+      "type": "gapfill",
+      "text": "Maman, je te ___ Hugo, un copain de l'école.",
+      "blanks": [
+        {
+          "answer": "présente"
+        }
+      ],
+      "gloss": "Mum, this is Hugo, a friend from school."
+    },
+    {
+      "id": "i-je-passe-vers-huit-heures",
+      "type": "gapfill",
+      "text": "Je ___ chez toi vers huit heures ce soir.",
+      "blanks": [
+        {
+          "answer": "passe"
+        }
+      ],
+      "gloss": "I'll drop by your place at about eight tonight."
+    },
+    {
+      "id": "i-si-tu-as-le-temps",
+      "type": "gapfill",
+      "text": "Si tu ___ le temps, passe à la bibliothèque avant six heures.",
+      "blanks": [
+        {
+          "answer": "as"
+        }
+      ],
+      "gloss": "If you have time, drop by the library before six.",
+      "mistakes": [
+        {
+          "answer": "auras",
+          "feedback": "After {si}, the verb stays in the present: {si tu as}."
+        }
+      ]
+    },
+    {
+      "id": "i-piscine-que-j-adore",
+      "type": "choice",
+      "question": "Which word fits? {C'est la piscine ___ j'adore.}",
+      "options": [
+        {
+          "text": "que",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "où",
+          "fr": true
+        },
+        {
+          "text": "dont",
+          "fr": true
+        }
+      ],
+      "hint": "You love the pool: it receives the action."
+    },
+    {
+      "id": "i-ce-qui-me-fait-peur",
+      "type": "gapfill",
+      "text": "Ce ___ me fait peur, c'est de chanter devant tout le monde.",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "gloss": "What scares me is singing in front of everyone.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "{me} is not the subject. No subject comes before {fait}, so it is {ce qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-frere-dont-elle-est-fiere",
+      "type": "transform",
+      "instruction": "Join the two sentences with {dont}.",
+      "shown": "Léa a un frère. Elle est fière de son frère.",
+      "answer": "Léa a un frère dont elle est fière.",
+      "mistakes": [
+        {
+          "answer": "Léa a un frère qu'elle est fière.",
+          "feedback": "{fière de} takes {de}, so the word is {dont}."
+        },
+        {
+          "answer": "Léa a un frère dont elle est fière de.",
+          "feedback": "{dont} already holds {de}; nothing comes after {fière}."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-vous-remercions",
+      "type": "gapfill",
+      "text": "Nous vous ___ pour le gâteau, madame !",
+      "blanks": [
+        {
+          "answer": "remercions"
+        }
+      ],
+      "gloss": "Thank you for the cake, madame!"
+    },
+    {
+      "id": "i-noe-a-oublie-son-livre",
+      "type": "transform",
+      "instruction": "Put it in the past.",
+      "shown": "Noé oublie son livre à la piscine.",
+      "answer": "Noé a oublié son livre à la piscine."
+    },
+    {
+      "id": "i-le-soir-ou-hugo-a-chante",
+      "type": "transform",
+      "instruction": "Join the two sentences with {où}. Start with {Le soir}.",
+      "shown": "Hugo a chanté un soir. Ce soir-là, tout le monde a dansé.",
+      "answer": "Le soir où Hugo a chanté, tout le monde a dansé.",
+      "mistakes": [
+        {
+          "answer": "Le soir quand Hugo a chanté, tout le monde a dansé.",
+          "feedback": "After a time word such as {le soir}, French says {où}, not {quand}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-deteste-danser",
+      "type": "gapfill",
+      "text": "Maya ___ danser, mais elle adore chanter.",
+      "blanks": [
+        {
+          "answer": "déteste"
+        }
+      ],
+      "gloss": "Maya hates dancing, but she loves singing."
+    },
+    {
+      "id": "i-s-il-neige-les-enfants-restent",
+      "type": "transform",
+      "instruction": "Join the two sentences with {s'il}.",
+      "shown": "Il neige. Les enfants restent dans l'immeuble.",
+      "answer": "S'il neige, les enfants restent dans l'immeuble.",
+      "accept": [
+        "Les enfants restent dans l'immeuble s'il neige."
+      ],
+      "mistakes": [
+        {
+          "answer": "Si il neige, les enfants restent dans l'immeuble.",
+          "feedback": "{si} shortens before {il}: {s'il}."
+        }
+      ]
+    },
+    {
+      "id": "i-chanter-ce-que-tu-veux",
+      "type": "respond",
+      "situation": "Hugo asks what he should sing at the party. Tell him: you can sing what you want.",
+      "answer": "Tu peux chanter ce que tu veux.",
+      "accept": [
+        "Chante ce que tu veux.",
+        "Tu peux chanter ce que tu veux, Hugo."
+      ],
+      "mistakes": [
+        {
+          "answer": "Tu peux chanter ce qui tu veux.",
+          "feedback": "A subject comes next, {tu}, so it is {ce que}."
+        }
+      ]
+    },
+    {
+      "id": "i-film-dont-tout-le-monde-parle",
+      "type": "choice",
+      "question": "Which word fits? {Le film ___ tout le monde parle est sympa.}",
+      "options": [
+        {
+          "text": "dont",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "que",
+          "fr": true
+        },
+        {
+          "text": "où",
+          "fr": true
+        }
+      ],
+      "hint": "People talk about a film: {parler de}."
+    },
+    {
+      "id": "i-hugo-accepte-de-chanter",
+      "type": "transform",
+      "instruction": "Say the opposite with {accepter}.",
+      "shown": "Hugo refuse de chanter.",
+      "answer": "Hugo accepte de chanter."
+    },
+    {
+      "id": "i-chien-qu-elle-a",
+      "type": "gapfill",
+      "text": "Le chien ___ elle a est très vieux.",
+      "blanks": [
+        {
+          "answer": "qu'"
+        }
+      ],
+      "gloss": "The dog she has is very old.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "{que} shortens before a vowel: {qu'elle}."
+        }
+      ]
+    },
+    {
+      "id": "i-hugo-et-maya-chantent",
+      "type": "gapfill",
+      "text": "Ce soir, Hugo et Maya ___ ensemble pour Léa.",
+      "blanks": [
+        {
+          "answer": "chantent"
+        }
+      ],
+      "gloss": "Tonight Hugo and Maya are singing together for Léa."
+    },
+    {
+      "id": "i-il-faut-que-tu-sois-a-l-heure",
+      "type": "gapfill",
+      "text": "La fête est à huit heures. Il faut que tu ___ à l'heure !",
+      "blanks": [
+        {
+          "answer": "sois"
+        }
+      ],
+      "gloss": "The party is at eight. You have to be on time!",
+      "mistakes": [
+        {
+          "answer": "es",
+          "feedback": "After {il faut que}, the verb takes the subjunctive: {que tu sois}."
+        }
+      ]
+    },
+    {
+      "id": "i-habitez-vous-dans-cet-immeuble",
+      "type": "transform",
+      "instruction": "Ask it with inversion.",
+      "shown": "Vous habitez dans cet immeuble.",
+      "answer": "Habitez-vous dans cet immeuble ?",
+      "accept": [
+        "Habitez-vous dans cet immeuble"
+      ]
+    },
+    {
+      "id": "i-cle-nulle-part",
+      "type": "gapfill",
+      "text": "J'ai oublié ma clé ? Je ne la trouve ___ !",
+      "blanks": [
+        {
+          "answer": "nulle part"
+        }
+      ],
+      "gloss": "Did I forget my key? I can't find it anywhere!"
+    },
+    {
+      "id": "i-noe-apprend-a-nager",
+      "type": "gapfill",
+      "text": "À la piscine, Noé apprend ___ nager.",
+      "blanks": [
+        {
+          "answer": "à"
+        }
+      ],
+      "gloss": "At the pool, Noé is learning to swim."
+    },
+    {
+      "id": "i-qu-est-ce-qui-fait-ce-bruit-la-nuit",
+      "type": "respond",
+      "situation": "You hear a noise in the building at night. Ask Léa what is making that noise.",
+      "answer": "Qu'est-ce qui fait ce bruit ?",
+      "accept": [
+        "Qu'est-ce qui fait ce bruit la nuit ?",
+        "Qu'est-ce qui fait ce bruit, Léa ?",
+        "Qu'est-ce qui fait du bruit ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "Qu'est-ce que fait ce bruit ?",
+          "feedback": "The thing asked about makes the noise, so it is the subject: {qu'est-ce qui}."
+        }
+      ]
+    }
+  ]
 }

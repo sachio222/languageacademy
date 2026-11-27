@@ -2,11 +2,315 @@
   "schema": "la-module@1",
   "module_key": "unit13-practice",
   "kind": "practice",
-  "status": "planned",
+  "status": "written",
   "title": "Practice · Joining sentences",
-  "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "course-plan.json"
-  }
+  "description": "Join two sentences with {qui}, {que}, {où} and {dont}, say what you like with {ce que}, plan round the weather with {si}, and invite, accept, refuse and thank.",
+  "can_do": [
+    "Join two sentences with {qui}, {que}, {où} or {dont}",
+    "Say what you like or find hard with {ce qui} and {ce que}",
+    "Make a plan that depends on the weather, and answer an invitation"
+  ],
+  "tests": {
+    "constructions": [
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que",
+      "fr:cx:relative.ou",
+      "fr:cx:relative.dont",
+      "fr:cx:relative.ce-que",
+      "fr:cx:mise-en-relief.ce-qui-cest",
+      "fr:cx:si.present"
+    ]
+  },
+  "items": [
+    {
+      "id": "i-monsieur-premier-etage",
+      "type": "transform",
+      "instruction": "Léa tells Maya who lives where. Join the two sentences with {qui}.",
+      "shown": "Le monsieur habite au premier étage. Il a un chien.",
+      "answer": "Le monsieur qui habite au premier étage a un chien.",
+      "mistakes": [
+        {
+          "answer": "Le monsieur que habite au premier étage a un chien.",
+          "feedback": "The man does the living, so the verb comes next: {qui habite}."
+        }
+      ]
+    },
+    {
+      "id": "i-s-il-pleut-samedi-prochain",
+      "type": "gapfill",
+      "text": "La météo dit qu'il va pleuvoir samedi prochain. ___ pleut, on va à la bibliothèque.",
+      "blanks": [
+        {
+          "answer": "S'il"
+        }
+      ],
+      "gloss": "The forecast says it will rain next Saturday. If it rains, we'll go to the library.",
+      "mistakes": [
+        {
+          "answer": "Si il",
+          "feedback": "{si} shortens before {il}: {s'il}."
+        }
+      ]
+    },
+    {
+      "id": "i-immeuble-ou-j-habite",
+      "type": "gapfill",
+      "text": "L'immeuble ___ j'habite est vieux, mais il est sympa.",
+      "blanks": [
+        {
+          "answer": "où"
+        }
+      ],
+      "gloss": "The building I live in is old, but it's nice.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "A building is a place, and Léa lives there: {où}."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-que-j-aime-le-quartier",
+      "type": "transform",
+      "instruction": "Maya has been here a week. Say it with what she likes first. Start with {Ce que}.",
+      "shown": "J'aime surtout le quartier.",
+      "answer": "Ce que j'aime surtout, c'est le quartier.",
+      "accept": [
+        "Ce que j'aime, c'est surtout le quartier."
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce qui j'aime surtout, c'est le quartier.",
+          "feedback": "A subject comes next, {je}, so it is {ce que}."
+        }
+      ]
+    },
+    {
+      "id": "i-livre-que-lea-lit",
+      "type": "transform",
+      "instruction": "Join the two sentences with {que}.",
+      "shown": "Léa lit un livre. Le livre est très long.",
+      "answer": "Le livre que Léa lit est très long.",
+      "mistakes": [
+        {
+          "answer": "Le livre qui Léa lit est très long.",
+          "feedback": "A new subject comes next, {Léa}, so the word is {que}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-vous-remercie-madame",
+      "type": "gapfill",
+      "text": "Je vous ___, madame, mais je ne peux pas venir samedi.",
+      "blanks": [
+        {
+          "answer": "remercie"
+        }
+      ],
+      "gloss": "Léa to Madame Garnier, who has invited her for tea: Thank you, madame, but I can't come on Saturday.",
+      "mistakes": [
+        {
+          "answer": "remercies",
+          "feedback": "The subject is {je}: {je remercie}. {vous} is the person thanked."
+        }
+      ]
+    },
+    {
+      "id": "i-grand-pere-dont-je-parle",
+      "type": "gapfill",
+      "text": "Mon grand-père, ___ je parle souvent, habite près de Lyon.",
+      "blanks": [
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "My grandfather, whom I often talk about, lives near Lyon.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "You talk about someone with {parler de}, so the word is {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-qui-est-lourd",
+      "type": "gapfill",
+      "text": "Ce ___ est lourd, c'est ce vieux livre ; le livre de Noé est léger.",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "gloss": "What's heavy is this old book; Noé's book is light.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "No other subject comes before {est}, so it is {ce qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-ferme-a-vingt-heures",
+      "type": "gapfill",
+      "text": "La boulangerie ouvre à sept heures et elle ___ à vingt heures.",
+      "blanks": [
+        {
+          "answer": "ferme"
+        }
+      ],
+      "gloss": "The bakery opens at seven and closes at eight in the evening."
+    },
+    {
+      "id": "i-maya-refuse-de-danser",
+      "type": "transform",
+      "instruction": "Hugo asks Maya to dance. Say the opposite with {refuser}.",
+      "shown": "Maya accepte de danser.",
+      "answer": "Maya refuse de danser."
+    },
+    {
+      "id": "i-voisine-qui-dame-dont",
+      "type": "gapfill",
+      "text": "La voisine ___ habite au premier étage, c'est la dame ___ je t'ai parlé.",
+      "blanks": [
+        {
+          "answer": "qui"
+        },
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "The neighbour who lives on the first floor is the lady I told you about."
+    },
+    {
+      "id": "i-s-il-neige-on-reste",
+      "type": "transform",
+      "instruction": "Noé asks about Saturday. Join the two sentences with {s'il}.",
+      "shown": "Il neige samedi. On reste chez Léa.",
+      "answer": "S'il neige samedi, on reste chez Léa.",
+      "accept": [
+        "On reste chez Léa s'il neige samedi.",
+        "Samedi, s'il neige, on reste chez Léa."
+      ],
+      "mistakes": [
+        {
+          "answer": "Si il neige samedi, on reste chez Léa.",
+          "feedback": "{si} shortens before {il}: {s'il}."
+        }
+      ]
+    },
+    {
+      "id": "i-a-bientot",
+      "type": "gapfill",
+      "text": "À ___ ! Je passe chez toi samedi prochain.",
+      "blanks": [
+        {
+          "answer": "bientôt"
+        }
+      ],
+      "gloss": "See you soon! I'll drop by your place next Saturday."
+    },
+    {
+      "id": "i-karim-est-sympa",
+      "type": "choice",
+      "question": "Maya says {Karim est sympa.} What does she think of him?",
+      "options": [
+        {
+          "text": "He is nice.",
+          "right": true
+        },
+        {
+          "text": "He is sad."
+        },
+        {
+          "text": "He is tall."
+        }
+      ]
+    },
+    {
+      "id": "i-le-jour-ou-maya-est-arrivee",
+      "type": "transform",
+      "instruction": "Join the two sentences with {où}. Start with {Le jour}.",
+      "shown": "Maya est arrivée un jour. Ce jour-là, il pleuvait.",
+      "answer": "Le jour où Maya est arrivée, il pleuvait.",
+      "mistakes": [
+        {
+          "answer": "Le jour quand Maya est arrivée, il pleuvait.",
+          "feedback": "After a time word such as {le jour}, French says {où}, not {quand}."
+        }
+      ]
+    },
+    {
+      "id": "i-film-qu-on-regarde",
+      "type": "gapfill",
+      "text": "Le film ___ on regarde ce soir est très long.",
+      "blanks": [
+        {
+          "answer": "qu'"
+        }
+      ],
+      "gloss": "The film we're watching tonight is very long.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "{que} shortens before a vowel: {qu'on}."
+        },
+        {
+          "answer": "qui",
+          "feedback": "A new subject comes next, {on}, so the word is {que}, shortened to {qu'}."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-qui-est-sympa-le-marche",
+      "type": "transform",
+      "instruction": "Maya asks what is nice round here. Start with {Ce qui} and end with the market.",
+      "shown": "Le marché est sympa.",
+      "answer": "Ce qui est sympa, c'est le marché.",
+      "mistakes": [
+        {
+          "answer": "Ce que est sympa, c'est le marché.",
+          "feedback": "No other subject comes before {est}, so it is {ce qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-jardin-ou-on-voit-la-lune",
+      "type": "gapfill",
+      "text": "Du jardin ___ Madame Garnier lit le soir, on voit la lune.",
+      "blanks": [
+        {
+          "answer": "où"
+        }
+      ],
+      "gloss": "From the garden where Madame Garnier reads in the evening, you can see the moon."
+    },
+    {
+      "id": "i-tu-viens-samedi-prochain",
+      "type": "gapfill",
+      "text": "Tu ___ samedi prochain, Hugo ? Ouais, bien sûr !",
+      "blanks": [
+        {
+          "answer": "viens"
+        }
+      ],
+      "gloss": "Are you coming next Saturday, Hugo? Yeah, of course!"
+    },
+    {
+      "id": "i-si-vous-voulez-je-passe",
+      "type": "gapfill",
+      "text": "Si vous ___, je passe chez vous samedi, madame.",
+      "blanks": [
+        {
+          "answer": "voulez"
+        }
+      ],
+      "gloss": "Léa to Madame Garnier: If you like, I'll drop by your place on Saturday.",
+      "mistakes": [
+        {
+          "answer": "veux",
+          "feedback": "Léa says {vous} to Madame Garnier: {si vous voulez}."
+        }
+      ]
+    }
+  ]
 }

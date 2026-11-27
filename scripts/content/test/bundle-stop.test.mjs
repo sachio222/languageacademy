@@ -39,10 +39,11 @@ test('the real bundle stops at a unit holding a stub, or at a fully written unit
   const course = loadCourse();
   const { bundle, report } = buildBundleWithReport(course, await loadBundleSources());
   assertValidStop(course, report);
-  // Today (L cf55739): Reading 12's story is in L as text only, so Units 1 to 12 publish and the stop is Unit 13's stubs.
+  // Today (L cf55739): Reading 12's story is in L as text only, so Units 1 to 12 publish. Unit 13 is fully written,
+  // and its reading names story reading13, which L does not hold yet: the stop is Unit 13, for its missing story.
   assert.deepEqual(bundle.units.map((u) => u.unit_key), Array.from({ length: 12 }, (_, i) => `unit${i + 1}`));
   assert.equal(report.units_stopped_at, 'unit13');
-  assert.equal(report.stopped_because.code, 'planned');
+  assert.equal(report.stopped_because.code, 'story_missing');
   assert.deepEqual(bundle.stories.find((s) => s.story_id === 'reading12')?.cover, null, 'a text-only story has cover null');
 });
 
@@ -66,9 +67,9 @@ test('with its story added, the reading publishes and the bundle stops at the ne
   writeUnit12(root, { story: true });
   const course = loadCourse({ root });
   const { bundle, report } = buildBundleWithReport(course, await loadBundleSources({ root }));
-  const firstPlanned = course.units.find((u) => u.modules.some((m) => m.status === 'planned'));
-  assert.equal(report.units_stopped_at, firstPlanned.unit_key);
-  assert.equal(report.stopped_because.code, 'planned');
+  // The next unready unit holds a stub, or is fully written with a reading whose story L does not hold (Unit 13 today).
+  assertValidStop(course, report);
+  assert.notEqual(report.units_stopped_at, 'unit12');
   assert.ok(bundle.entries.some((e) => e.module_key === 'unit12-reading'));
   assert.deepEqual(releaseProblems(bundle, null), []);
   const r = bundleCheck(root);
