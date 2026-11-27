@@ -84,6 +84,21 @@ Each part of a reading names a type from `reading-types.json`: the human situati
 module files from an earlier plan kept outside the repository. Both are retired: the plan file holds the keys, and the
 planned files in `content/fr/modules/` are `plan:stubs` output.
 
+## The method's rules in plan:check
+
+`plan:check` holds a plan to the teaching method as well as to its sizes. It reads which patterns count as structure, which verbs open a slot and which words announce a pattern from `curriculum-graph/languages/<lang>/method-roles.json` (`frameVerbs`, `markers`, `roleExact`). A word also counts as a marker when it sets off a pattern's detector on its own.
+
+| Problem | What it means |
+|---|---|
+| `structure_stops` | No lesson of the unit teaches a pattern, and a pattern with every need met waits. `held_patterns` in the plan sets a pattern aside for the next level, with the reason. |
+| `no_carrier` | A lesson of six or more new words with no new verb, frame word or pattern. |
+| `marker_without_pattern` | A word that announces a pattern is planned before any of its patterns. |
+| `guide_gathers_untaught` | A guide's `gathers` names a pattern no lesson teaches before it. |
+| `carrier_unknown`, `reuses_unknown` | A module's `carrier` or a word in `reuses` is not taught there and not known before. |
+| `met_through_unknown`, `met_through_missing` | A word's `met_through` names something the learner does not own at that point, or a word has no entry. |
+
+A lesson's `carrier` is the pattern or verb taught first. `met_through` gives, for each new word, the owned material its first sentence is built on, and the words are listed in teaching order. A unit's `carry` lists the words its practice set and exam must use, because no later lesson of the unit can. Briefs print all of these.
+
 ## plan:method: the course scored against the teaching method
 
 `pnpm plan:method` (or `node scripts/plan/cli.mjs method <lang>`) measures the whole course, written and planned,
@@ -98,4 +113,4 @@ It writes `.plan-out/<lang>/method/method-score.txt` and `.json`.
   course before the plan's first unit is the baseline.
 
 Each language says how its patterns map to the method's roles and slots in
-`curriculum-graph/languages/<lang>/method-roles.json`. The report is a measure, not a gate: it never fails a run.
+`curriculum-graph/languages/<lang>/method-roles.json`. The report is a measure and never fails a run; the rules above are what `plan:check` enforces.

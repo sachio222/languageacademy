@@ -150,3 +150,79 @@ test('the report counts where each reading type is used', () => {
   const { report } = run(plan);
   assert.deepEqual(report.reading_types, { 'a-mystery': ['u1', 'u2'] });
 });
+
+// ---- the teaching method's own rules (structure never stops, carriers, markers, guides)
+const POS = { 'xx:lex:a': 'noun', 'xx:lex:b': 'noun', 'xx:lex:c': 'noun', 'xx:lex:d': 'verb', 'xx:lex:e': 'adverb', 'xx:lex:old': 'verb' };
+const METHOD_LOOKUPS = {
+  ...LOOKUPS,
+  headwords: new Map([...LOOKUPS.headwords].map(([id, h]) => [id, { ...h, pos: POS[id] }])),
+  constructions: new Map([...LOOKUPS.constructions, ['xx:cx:three', { id: 'xx:cx:three', needs: [] }], ['xx:cx:chunk.hi', { id: 'xx:cx:chunk.hi', needs: [] }]]),
+};
+const METHOD = {
+  filler_list: 3,
+  counts: (id) => !id.includes(':cx:chunk.'),
+  markers: new Map([['xx:lex:e', ['xx:cx:three']]]),
+  frameWords: new Set(),
+};
+function runMethod(plan, { taught = new Map() } = {}) {
+  const position = new Map();
+  const at = new Map(taught);
+  let p = 100;
+  for (const u of plan.units) for (const m of u.modules) {
+    position.set(m.module_key, ++p);
+    for (const id of [...(m.kind === 'reading' ? [] : m.teaches.constructions), ...m.teaches.words]) if (!at.has(id)) at.set(id, p);
+  }
+  return checkPlan({ plan, readingTypes: READING_TYPES, limits: { ...LIMITS, lesson_words: 12 }, lookups: METHOD_LOOKUPS, taughtAt: taught, isAvailable: (id, pos) => at.has(id) && at.get(id) <= pos, position, method: METHOD });
+}
+
+test('structure never stops: a unit whose lessons teach no pattern fails while a ready pattern remains', () => {
+  const stops = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:d'], ['xx:cx:one'])]), unit('u2', [lesson('l2', ['xx:lex:a'])])]));
+  assert.deepEqual(codes(stops), ['structure_stops']);
+  assert.match(stops.problems[0].message, /xx:cx:three/);
+  // a pattern whose needs are not met is not ready, a fixed phrase is not structure, and a held pattern is set aside
+  const held = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:d'], ['xx:cx:one'])]), unit('u2', [lesson('l2', ['xx:lex:a'], ['xx:cx:chunk.hi'])])],
+    { held_patterns: [{ id: 'xx:cx:three', why: 'kept for the next level' }, { id: 'xx:cx:two', why: 'kept for the next level' }] }));
+  assert.deepEqual(codes(held), []);
+  // a unit with no lesson (a review unit) is not asked for a pattern
+  const review = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:d'], ['xx:cx:one', 'xx:cx:two'])]), unit('u2', [exam('e2')])]));
+  assert.deepEqual(codes(review), []);
+});
+
+test('a list of fillers needs a carrier: a new verb, a frame word or a pattern', () => {
+  const all = { held_patterns: [{ id: 'xx:cx:two', why: 'x' }, { id: 'xx:cx:three', why: 'x' }] };
+  const flat = runMethod(planOf([unit('u1', [lesson('l0', [], ['xx:cx:one']), lesson('l1', ['xx:lex:a', 'xx:lex:b', 'xx:lex:c'])])], all));
+  assert.deepEqual(codes(flat), ['no_carrier']);
+  const verb = runMethod(planOf([unit('u1', [lesson('l0', [], ['xx:cx:one']), lesson('l1', ['xx:lex:d', 'xx:lex:a', 'xx:lex:b', 'xx:lex:c'])])], all));
+  assert.deepEqual(codes(verb), []);
+  const pattern = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:a', 'xx:lex:b', 'xx:lex:c'], ['xx:cx:one'])])], all));
+  assert.deepEqual(codes(pattern), []);
+});
+
+test('a marker word is taught in or after the module that teaches its pattern', () => {
+  const all = { held_patterns: [{ id: 'xx:cx:two', why: 'x' }] };
+  const early = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:e'], ['xx:cx:one']), lesson('l2', [], ['xx:cx:three'])])], all));
+  assert.deepEqual(codes(early), ['marker_without_pattern']);
+  const together = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:e'], ['xx:cx:one', 'xx:cx:three'])])], all));
+  assert.deepEqual(codes(together), []);
+});
+
+test('a guide gathers only patterns a lesson has taught before it', () => {
+  const guide = (key, gathers) => ({ module_key: key, kind: 'guide', title: key, teaches: { words: [], constructions: [] }, minutes: 5, gathers });
+  const all = { held_patterns: [{ id: 'xx:cx:two', why: 'x' }, { id: 'xx:cx:three', why: 'x' }] };
+  const early = runMethod(planOf([unit('u1', [guide('g1', ['xx:cx:one']), lesson('l1', ['xx:lex:d'], ['xx:cx:one'])])], all));
+  assert.deepEqual(codes(early), ['guide_gathers_untaught']);
+  const after = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:d'], ['xx:cx:one']), guide('g1', ['xx:cx:one'])])], all));
+  assert.deepEqual(codes(after), []);
+});
+
+test('a carrier is something the module teaches or the learner owns, and each word is met through owned material', () => {
+  const all = { held_patterns: [{ id: 'xx:cx:two', why: 'x' }, { id: 'xx:cx:three', why: 'x' }] };
+  const good = lesson('l1', ['xx:lex:d', 'xx:lex:a'], ['xx:cx:one'], { carrier: 'xx:cx:one', met_through: { 'xx:lex:d': ['xx:cx:one'], 'xx:lex:a': ['xx:lex:d'] } });
+  assert.deepEqual(schemaProblems(planOf([unit('u1', [good])], all)), []);
+  assert.deepEqual(codes(runMethod(planOf([unit('u1', [good])], all))), []);
+  const strangerCarrier = lesson('l1', ['xx:lex:d'], ['xx:cx:one'], { carrier: 'xx:lex:b' });
+  assert.deepEqual(codes(runMethod(planOf([unit('u1', [strangerCarrier])], all))), ['carrier_unknown']);
+  // a word met through a word that comes after it in the lesson, and a word with no entry
+  const backwards = lesson('l1', ['xx:lex:d', 'xx:lex:a'], ['xx:cx:one'], { carrier: 'xx:cx:one', met_through: { 'xx:lex:d': ['xx:lex:a'] } });
+  assert.deepEqual(codes(runMethod(planOf([unit('u1', [backwards])], all))).sort(), ['met_through_missing', 'met_through_unknown']);
+});

@@ -130,3 +130,26 @@ test('writing: the share of new words, how each is first met, what it carries an
   assert.equal(f.carried_a_later_new_word, 1);
   assert.equal(f.supports_a_new_word_in_the_next_modules, 1);
 });
+
+test('methodRules: what counts as structure, which words announce a pattern, which open a slot', async () => {
+  const { methodRules, roles: rolesOf } = await import('../method-score.mjs');
+  const g = {
+    ...graph,
+    headwords: [...graph.headwords, { id: 'zz:lex:tamen', lemma: 'tamen', pos: 'adverb' }, { id: 'zz:lex:provi', lemma: 'provi', pos: 'verb' }],
+    constructions: [...graph.constructions,
+      { id: 'zz:cx:connector.contrast', label: 'yet', needs: [], detect: [[{ surface: 'tamen|sed' }], [{ surface: 'kontraue' }, { surface: 'al' }]] },
+      { id: 'zz:cx:frame.verb-infinitive', label: 'verb + infinitive', needs: [], detect: null }],
+  };
+  const t = { ...table, roleExact: { 'connector.contrast': 'wrapper' }, frameVerbs: { 'frame.verb-infinitive': ['zz:lex:provi'] }, markers: { 'zz:lex:kato': ['zz:cx:relative.kiu'] } };
+  const rules = methodRules(g, t);
+  assert.equal(rules.counts('zz:cx:relative.kiu'), true);
+  assert.equal(rules.counts('zz:cx:chunk.saluton'), false); // a fixed phrase is not structure
+  assert.equal(rules.counts('zz:cx:verb.present'), false); // nor is a form table
+  assert.deepEqual(rules.markers.get('zz:lex:kato'), ['zz:cx:relative.kiu']); // named by the language's table
+  assert.deepEqual(rules.markers.get('zz:lex:tamen'), ['zz:cx:connector.contrast']); // sets off the detector on its own
+  assert.equal(rules.markers.has('zz:lex:voli'), false); // voli + a verb: two required steps, so voli alone announces nothing
+  assert.ok(rules.frameWords.has('zz:lex:provi'));
+  const r = rolesOf(g, t);
+  assert.equal(r.patterns.get('zz:cx:connector.contrast').role, 'wrapper');
+  assert.equal(r.wordRole('zz:lex:provi'), 'frame'); // a verb the table lists under a frame opens a slot
+});

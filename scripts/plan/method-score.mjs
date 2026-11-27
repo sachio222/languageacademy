@@ -18,6 +18,7 @@
 // here names a language.
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { fold } from '../graph/fold.mjs';
 
 export const readRoles = (repoRoot, lang) => JSON.parse(readFileSync(join(repoRoot, 'curriculum-graph', 'languages', lang, 'method-roles.json'), 'utf8'));
 
@@ -50,6 +51,7 @@ export function roles(graph, table) {
   const cxRole = (c) => {
     const s = shortId(c.id);
     const f = family(c.id);
+    if (table.roleExact?.[s]) return table.roleExact[s];
     if ((table.chunkFamilies ?? []).includes(f)) return 'chunk';
     if (guideCovered(c)) return 'guide-covered';
     if (c.paradigm) return 'paradigm';
@@ -69,6 +71,8 @@ export function roles(graph, table) {
       if (st.optional) continue;
       for (const o of st.any ?? [st]) if (o.headword && hw.has(o.headword)) heads.add(o.headword);
     }
+    // verbs the language's table lists as taking this frame
+    for (const h of table.frameVerbs?.[shortId(c.id)] ?? []) if (hw.has(h)) heads.add(h);
     carriersOf.set(c.id, [...heads]);
     for (const h of heads) carrierWords.add(h);
   }
@@ -131,7 +135,8 @@ export function scoreShape({ graph, table, course, taughtAt }) {
     }));
     knownWords.push(...newWords);
     // a list of fillers with nothing new to carry them: six or more new words, no new verb, frame word or pattern
-    const noCarrier = words.length >= 6 && !words.some((w) => w.pos === 'verb' || w.role !== 'filler') && !patterns.some((x) => x.role !== 'paradigm');
+    // (lessons only: a reading's table words are met in the story, which is their carrier)
+    const noCarrier = m.kind === 'lesson' && words.length >= 6 && !words.some((w) => w.pos === 'verb' || w.role !== 'filler') && !patterns.some((x) => x.role !== 'paradigm');
     modules.push({
       no_carrier: noCarrier,
       position: m.position, module_key: m.moduleKey, unit_key: m.unitKey, kind: m.kind,
@@ -264,6 +269,49 @@ export function foundationSummary(rows) {
     with_later_modules: ws.filter((w) => w.later_available > 0).length,
     never_used_again: ws.filter((w) => w.later_available >= 5 && w.after === 0).length,
   };
+}
+
+/**
+ * The method's rules as plan:check reads them (check.mjs, `method`): which patterns count as structure, which words
+ * announce a pattern, and which words open a slot. A marker is a word the language's table names, or a word that sets
+ * off a pattern's detector by itself: the only required step of one of its alternatives.
+ */
+export function methodRules(graph, table) {
+  const r = roles(graph, table);
+  const counts = (id) => {
+    const p = r.patterns.get(id);
+    return !!p && p.role !== 'chunk' && !p.paradigm;
+  };
+  const markers = new Map();
+  const add = (word, pattern) => {
+    if (!r.hw.has(word)) return;
+    if (!markers.has(word)) markers.set(word, []);
+    if (!markers.get(word).includes(pattern)) markers.get(word).push(pattern);
+  };
+  for (const [word, patterns] of Object.entries(table.markers ?? {})) for (const p of patterns) add(word, p);
+  const byFold = new Map();
+  for (const h of graph.headwords) {
+    const k = fold(h.lemma);
+    if (!byFold.has(k)) byFold.set(k, []);
+    byFold.get(k).push(h.id);
+  }
+  for (const c of graph.constructions ?? []) {
+    if (!c.detect || !counts(c.id)) continue;
+    const alts = Array.isArray(c.detect[0]) ? c.detect : [c.detect];
+    for (const steps of alts) {
+      const required = steps.filter((st) => !st.optional);
+      if (required.length !== 1) continue;
+      const [st] = required;
+      for (const o of st.any ?? [st]) if (o.headword && !o.cell) add(o.headword, c.id);
+      if (st.surface && !st.pos && !st.cell && !st.any) {
+        let re;
+        try { re = new RegExp(`^(?:${st.surface})$`); } catch { continue; }
+        for (const [k, ids] of byFold) if (re.test(k)) for (const id of ids) add(id, c.id);
+      }
+    }
+  }
+  const frameWords = new Set(Object.values(table.frameVerbs ?? {}).flat().filter((id) => r.hw.has(id)));
+  return { filler_list: table.fillerList ?? 6, counts, markers, frameWords };
 }
 
 export { median, quantile, shortId };

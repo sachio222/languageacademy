@@ -17,5 +17,33 @@
     "adj": ["A"], "superlative": ["A"], "adverb": ["D"], "relative": ["N", "V"], "nominalisation": ["N"]
   },
   "slotDefault": ["V"],
-  "wordClass": { "noun": "N", "verb": "V", "adjective": "A", "adverb": "D", "preposition": "P", "interjection": "I", "alphabet": "L" }
+  "wordClass": { "noun": "N", "verb": "V", "adjective": "A", "adverb": "D", "preposition": "P", "interjection": "I", "alphabet": "L" },
+  "roleExact": { "mise-en-relief": "operator", "mise-en-relief.ce-qui-cest": "operator", "conj.apres-que": "wrapper", "nominalisation": "operator", "quiconque": "wrapper", "infinitive.past": "operator", "ne-expletif": "operator", "tel-que": "frame", "hypothesis.avec-sans": "operator", "demonstrative.pronoun": "frame", "frame.saying-que-clause": "wrapper" },
+  "frameVerbsNote": "Verbs that open a slot for an infinitive or a clause, by the frame they take. A verb listed here counts as a frame word, and the frame gives a verb the learner already has a new job.",
+  "frameVerbs": {
+    "frame.verb-infinitive": ["fr:lex:desirer", "fr:lex:esperer", "fr:lex:souhaiter", "fr:lex:compter", "fr:lex:sembler", "fr:lex:oser", "fr:lex:paraitre"],
+    "frame.verb-de-infinitive": ["fr:lex:essayer", "fr:lex:decider", "fr:lex:oublier", "fr:lex:accepter", "fr:lex:refuser", "fr:lex:finir", "fr:lex:arreter", "fr:lex:eviter", "fr:lex:risquer", "fr:lex:proposer", "fr:lex:conseiller", "fr:lex:promettre", "fr:lex:empecher", "fr:lex:interdire", "fr:lex:accuser", "fr:lex:cesser", "fr:lex:menacer", "fr:lex:craindre", "fr:lex:meriter", "fr:lex:permettre", "fr:lex:tenter", "fr:lex:jurer", "fr:lex:regretter", "fr:lex:rever", "fr:lex:prier", "fr:lex:supporter", "fr:lex:suggerer"],
+    "frame.verb-a-infinitive": ["fr:lex:commencer", "fr:lex:continuer", "fr:lex:reussir", "fr:lex:aider", "fr:lex:hesiter", "fr:lex:inviter", "fr:lex:obliger", "fr:lex:forcer", "fr:lex:habituer", "fr:lex:autoriser", "fr:lex:encourager", "fr:lex:chercher", "fr:lex:arriver", "fr:lex:tenir", "fr:lex:servir"],
+    "frame.saying-que-clause": ["fr:lex:promettre", "fr:lex:expliquer", "fr:lex:raconter", "fr:lex:repondre", "fr:lex:annoncer", "fr:lex:declarer", "fr:lex:affirmer", "fr:lex:jurer", "fr:lex:avouer", "fr:lex:admettre", "fr:lex:supposer", "fr:lex:pretendre", "fr:lex:remarquer", "fr:lex:considerer", "fr:lex:ajouter", "fr:lex:ignorer", "fr:lex:prouver", "fr:lex:conclure", "fr:lex:reveler", "fr:lex:informer", "fr:lex:signaler", "fr:lex:avertir", "fr:lex:prevenir"]
+  },
+  "markersNote": "Words that announce a pattern. A plan may teach such a word only in or after the module that teaches one of its patterns; plan:check also treats as a marker any word that sets off a pattern's detector on its own.",
+  "markers": {
+    "fr:lex:laisser": ["fr:cx:causative.laisser"],
+    "fr:lex:selon": ["fr:cx:conditional.hearsay"],
+    "fr:lex:malgre": ["fr:cx:connector.concession"],
+    "fr:lex:tellement": ["fr:cx:consequence.tellement-que"],
+    "fr:lex:tel": ["fr:cx:tel-que"],
+    "fr:lex:obliger": ["fr:cx:frame.etre-oblige-de"],
+    "fr:lex:forcer": ["fr:cx:frame.etre-oblige-de"],
+    "fr:lex:lequel": ["fr:cx:relative.lequel"],
+    "fr:lex:annoncer": ["fr:cx:frame.saying-que-clause"],
+    "fr:lex:declarer": ["fr:cx:frame.saying-que-clause"],
+    "fr:lex:affirmer": ["fr:cx:frame.saying-que-clause"],
+    "fr:lex:raconter": ["fr:cx:frame.saying-que-clause"],
+    "fr:lex:necessaire": ["fr:cx:subj.judgment"],
+    "fr:lex:urgent": ["fr:cx:subj.judgment"],
+    "fr:lex:quoique": ["fr:cx:subj.quoique"],
+    "fr:lex:quiconque": ["fr:cx:quiconque"],
+    "fr:lex:celui": ["fr:cx:demonstrative.pronoun"]
+  }
 }

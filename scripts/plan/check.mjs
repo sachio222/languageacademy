@@ -1,7 +1,7 @@
 // plan:check, the whole-course check of a course plan. A pure function over the plan and what it is checked against,
 // so the same rules hold for every language.
 //
-// checkPlan({ plan, readingTypes, limits, lookups, taughtAt, isAvailable, position, written, reached, previous }) -> { problems, report }
+// checkPlan({ plan, readingTypes, limits, lookups, taughtAt, isAvailable, position, written, reached, previous, method }) -> { problems, report }
 //   readingTypes the ids of the shared catalog of reading types (Set or Map)
 //   limits      the sizes a module may have (limits.mjs), read from the language's recipes
 //   lookups     { headwords, forms, constructions }: Map<id, node> of the language's graph
@@ -11,6 +11,9 @@
 //   written     Set<module_key> of written modules
 //   reached     { level: position | null }: where the course with the plan reaches each level
 //   previous    an earlier version of the plan, or null: nothing it taught may be missing now
+//   method      the teaching method's own rules for this language, or null to leave them out:
+//               { filler_list, counts(id), markers: Map<word id, [pattern ids]>, frameWords: Set<word id> }
+//               counts(id) is true for a pattern that is structure (not a fixed phrase, not a form table)
 // problems: [{ code, where, message }], empty when the plan holds. report: what the plan amounts to (counts, where each
 // level is reached, each unit's size).
 //
@@ -27,11 +30,18 @@
 //   level_late                         a level reached after the unit the plan names, or never
 //   word_dropped                       a word the previous plan taught that no module teaches now
 //   reading_type_unknown               a reading part names a type the shared catalog does not have
+// The method's rules (only with `method`):
+//   structure_stops                    a unit whose lessons teach no pattern while a pattern with its needs met waits
+//   no_carrier                         a lesson of filler_list or more new words with no new verb, frame word or pattern
+//   marker_without_pattern             a word that announces a pattern, taught before any of its patterns
+//   guide_gathers_untaught             a guide gathers a pattern no lesson has taught before it
+//   carrier_unknown, reuses_unknown    a carrier or a reused word the module does not teach and the learner does not own
+//   met_through_unknown, met_through_missing   a word met through something not owned yet, or with no entry at all
 import { planModules, schemaProblems, TEACHES } from './plan.mjs';
 
 const problem = (code, where, message) => ({ code, where, message });
 
-export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null }) {
+export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null, method = null }) {
   const problems = schemaProblems(plan).map((m) => problem('schema', 'course-plan.json', m));
   if (problems.length) return { problems, report: null };
 
@@ -151,6 +161,9 @@ export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, tau
     }
   }
 
+  // the teaching method's own rules
+  const structure = method ? methodProblems({ plan, open, lookups, isAvailable, position, method, lemma, problems }) : null;
+
   // nothing dropped
   if (previous) {
     const before = new Set(planModules(previous).flatMap(({ module }) => module.teaches.words));
@@ -170,6 +183,7 @@ export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, tau
     last_position: open.length ? Math.max(...open.map(({ module }) => position.get(module.module_key))) : null,
     levels,
     reading_types: typeUse,
+    structure,
     by_unit: plan.units.map((u) => ({
       unit_key: u.unit_key,
       lessons: u.modules.filter((m) => m.kind === 'lesson').length,
@@ -178,4 +192,74 @@ export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, tau
     })),
   };
   return { problems, report };
+}
+
+/**
+ * The method's rules. Adds to `problems` and returns, per unit, how many of its lessons teach a pattern.
+ * A pattern is ready when every pattern it needs is known and nothing teaches it yet.
+ */
+function methodProblems({ plan, open, lookups, isAvailable, position, method, lemma, problems }) {
+  const held = new Set((plan.held_patterns ?? []).map((h) => h.id));
+  const patterns = [...lookups.constructions.values()].filter((c) => method.counts(c.id) && !held.has(c.id));
+  const needsOf = (c) => (c.needs ?? []).filter((n) => lookups.constructions.has(n));
+  const taughtInPlan = new Map();
+  for (const { module } of open) for (const id of module.teaches.constructions) if (!taughtInPlan.has(id)) taughtInPlan.set(id, position.get(module.module_key));
+  const byUnit = [];
+  for (const unit of plan.units) {
+    const mods = unit.modules.filter((m) => position.has(m.module_key));
+    const lessons = mods.filter((m) => m.kind === 'lesson');
+    if (!lessons.length) continue;
+    const first = Math.min(...mods.map((m) => position.get(m.module_key)));
+    const last = Math.max(...mods.map((m) => position.get(m.module_key)));
+    const teaching = lessons.filter((m) => m.teaches.constructions.some((id) => method.counts(id)));
+    byUnit.push({ unit_key: unit.unit_key, lessons: lessons.length, lessons_with_a_pattern: teaching.length });
+    if (teaching.length) continue;
+    const ready = patterns.filter((c) => !isAvailable(c.id, last) && needsOf(c).every((n) => isAvailable(n, first - 1)));
+    if (ready.length) {
+      problems.push(problem('structure_stops', unit.unit_key, `no lesson of this unit teaches a pattern, and ${ready.length} with every need met wait: ${ready.slice(0, 6).map((c) => c.id).join(', ')}${ready.length > 6 ? ', …' : ''}`));
+    }
+  }
+  for (const { module } of open) {
+    const key = module.module_key;
+    const at = position.get(key);
+    const words = module.teaches.words;
+    const here = new Set([...words, ...module.teaches.constructions]);
+    const owned = (id) => isAvailable(id, at - 1);
+    if (module.kind === 'lesson' && words.length >= method.filler_list) {
+      const carried = module.teaches.constructions.some((id) => method.counts(id))
+        || words.some((id) => lookups.headwords.get(id)?.pos === 'verb' || method.frameWords.has(id) || method.markers.has(id));
+      if (!carried) problems.push(problem('no_carrier', key, `${words.length} new words with no new verb, frame word or pattern to carry them`));
+    }
+    for (const id of words) {
+      const marks = method.markers.get(id);
+      if (marks && !marks.some((p) => isAvailable(p, at))) {
+        problems.push(problem('marker_without_pattern', key, `${lemma(id)} (${id}) announces ${marks.join(' or ')}, which nothing teaches by then`));
+      }
+    }
+    for (const id of module.gathers ?? []) {
+      if (!lookups.constructions.has(id)) problems.push(problem('construction_unknown', key, `gathers: ${id} is not in the graph`));
+      else if (!owned(id)) problems.push(problem('guide_gathers_untaught', key, `it gathers ${id}, which no lesson teaches before it`));
+    }
+    if (module.carrier && !here.has(module.carrier) && !owned(module.carrier)) {
+      problems.push(problem('carrier_unknown', key, `the carrier ${module.carrier} is not taught here and not known before`));
+    }
+    for (const id of module.reuses ?? []) {
+      if (!owned(id)) problems.push(problem('reuses_unknown', key, `${id} is given a new job here, and the learner does not have it yet`));
+    }
+    if (module.met_through) {
+      const order = new Map(words.map((id, i) => [id, i]));
+      for (const [word, through] of Object.entries(module.met_through)) {
+        if (!order.has(word)) {
+          problems.push(problem('met_through_unknown', key, `${word} has a met_through entry and is not a word of this module`));
+          continue;
+        }
+        for (const id of through) {
+          const ok = owned(id) || module.teaches.constructions.includes(id) || (order.has(id) && order.get(id) < order.get(word));
+          if (!ok) problems.push(problem('met_through_unknown', key, `${lemma(word)} is met through ${id}, which the learner does not own at that point`));
+        }
+      }
+      for (const id of words) if (!module.met_through[id]) problems.push(problem('met_through_missing', key, `${lemma(id)} (${id}) has no met_through entry`));
+    }
+  }
+  return byUnit;
 }

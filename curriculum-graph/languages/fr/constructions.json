@@ -3011,6 +3011,30 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
+    "contrastsWith": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "Je préfère celui de Marie.",
+        "Celle qui habite au deuxième est italienne.",
+        "Prends celui-ci."
+      ],
+      "noMatch": [
+        "Ce livre est à moi.",
+        "Cette maison est grande."
+      ]
+    },
+    "id": "fr:cx:demonstrative.pronoun",
+    "label": "Demonstrative pronoun celui, celle, ceux, celles + de, qui, que or -ci and -là: the one, the ones (celui de Marie, celle qui habite au deuxième, ceux que je préfère, celui-ci)",
+    "needs": [
+      "fr:cx:demonstrative.adjective",
+      "fr:cx:relative.qui",
+      "fr:cx:relative.que"
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: judgment",
     "contrastsWith": [],
@@ -3601,6 +3625,28 @@
     ]
   },
   {
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
+    "contrastsWith": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "C'est facile de parler.",
+        "Il est impossible de dormir ici.",
+        "Je suis content de te voir."
+      ],
+      "noMatch": [
+        "C'est facile.",
+        "Je suis content que tu viennes."
+      ]
+    },
+    "id": "fr:cx:frame.il-est-adjective-de-infinitive",
+    "label": "il est or c'est + adjective + de + infinitive, and a person + être + adjective + de + infinitive: it is easy to, I am glad to (c'est facile de parler, il est impossible de dormir, je suis content de te voir)",
+    "needs": [
+      "fr:cx:cest"
+    ]
+  },
+  {
     "cefr": "A1",
     "cefrSource": "agent: Eaquals grammar",
     "contrastsWith": [],
@@ -3756,6 +3802,94 @@
     },
     "id": "fr:cx:frame.savoir-infinitive",
     "label": "savoir + infinitive: know how to (je sais nager)",
+    "needs": [
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "contrastsWith": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "Il promet qu'il viendra.",
+        "Elle explique que le train est en retard.",
+        "Je remarque que tu es fatigué."
+      ],
+      "noMatch": [
+        "Il promet un cadeau.",
+        "Elle explique la leçon."
+      ]
+    },
+    "id": "fr:cx:frame.saying-que-clause",
+    "label": "A verb of saying, promising or noticing + que + clause, beyond dire, penser, croire, savoir and trouver: promettre, expliquer, raconter, répondre, annoncer, déclarer, affirmer, jurer, avouer, admettre, supposer, remarquer + que (il promet qu'il viendra, elle explique que le train est en retard)",
+    "needs": [
+      "fr:cx:frame.verb-que-clause"
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
+    "contrastsWith": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "Il commence à pleuvoir.",
+        "Je n'arrive pas à dormir.",
+        "Elle a réussi à ouvrir la porte."
+      ],
+      "noMatch": [
+        "Il commence le livre.",
+        "Je pense à toi."
+      ]
+    },
+    "id": "fr:cx:frame.verb-a-infinitive",
+    "label": "Verb + à + infinitive: commencer à, continuer à, réussir à, aider à, hésiter à, inviter à, arriver à, chercher à + infinitive (il commence à pleuvoir, je n'arrive pas à dormir); apprendre à is the first of them",
+    "needs": [
+      "fr:cx:frame.apprendre-a-infinitive"
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
+    "contrastsWith": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "J'essaie de dormir.",
+        "Il a oublié de fermer la porte.",
+        "Elle refuse de venir."
+      ],
+      "noMatch": [
+        "J'essaie la robe.",
+        "Il parle de son frère."
+      ]
+    },
+    "id": "fr:cx:frame.verb-de-infinitive",
+    "label": "Verb + de + infinitive: essayer de, décider de, oublier de, accepter de, refuser de, finir de, arrêter de, éviter de, risquer de, proposer de, promettre de + infinitive (j'essaie de dormir, il a oublié de fermer la porte)",
+    "needs": [
+      "fr:cx:frame.modal-infinitive"
+    ]
+  },
+  {
+    "cefr": "A2",
+    "cefrSource": "agent: Eaquals grammar",
+    "contrastsWith": [],
+    "detect": null,
+    "examples": {
+      "match": [
+        "J'espère venir samedi.",
+        "Vous désirez goûter ?",
+        "Elle compte partir demain."
+      ],
+      "noMatch": [
+        "J'espère que tu viens.",
+        "Je désire un café."
+      ]
+    },
+    "id": "fr:cx:frame.verb-infinitive",
+    "label": "Verb + infinitive with nothing between: désirer, espérer, souhaiter, compter, sembler, oser + infinitive (j'espère venir, vous désirez goûter ?, il semble dormir); aimer, préférer and the modal verbs already work this way",
     "needs": [
       "fr:cx:frame.modal-infinitive"
     ]

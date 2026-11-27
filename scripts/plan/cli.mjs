@@ -18,6 +18,7 @@ import { checkPlan } from './check.mjs';
 import { levelsReached, planContext } from './context.mjs';
 import { frequencyDir, frequencyTrend, readRanks } from './frequency.mjs';
 import { readLimits } from './limits.mjs';
+import { methodRules, readRoles } from './method-score.mjs';
 import { PLAN_FILE, PlanError, REPO_ROOT, planModules, readMethod, readPlan, readReadingTypes } from './plan.mjs';
 
 const USAGE = [
@@ -64,8 +65,9 @@ export async function loadChecked({ repoRoot = REPO_ROOT, lang, previous = null 
   const limits = readLimits(repoRoot, lang);
   const context = await planContext({ repoRoot, lang, plan });
   const { base, projected, position, written, lookups } = context;
+  const rules = methodRules(projected.graph, readRoles(repoRoot, lang));
   const result = checkPlan({
-    plan, readingTypes: readingTypes.byId, limits, lookups, written, position, previous,
+    plan, readingTypes: readingTypes.byId, limits, lookups, written, position, previous, method: rules,
     taughtAt: base.timeline.taughtAt,
     isAvailable: (id, at) => projected.timeline.isAvailable(id, at),
     reached: levelsReached(projected),
@@ -114,6 +116,7 @@ async function check(lang, args) {
       for (const t of trend) console.log(`  ${t.unit_key}: ${t.band ?? 'no ranked word'}${t.steps_back ? '  (more common than the unit before)' : ''}`);
     }
     const types = Object.entries(report.reading_types);
+    if (report.structure) console.log(`structure: lessons that teach a pattern, by unit: ${report.structure.map((u) => `${u.unit_key} ${u.lessons_with_a_pattern} of ${u.lessons}`).join(', ')}`);
     console.log(`reading types: ${types.length} of ${checked.readingTypes.types.length} used (${types.map(([t, u]) => `${t} ${u.length}`).join(', ')})`);
     if (previous) console.log(`against ${against}: ${problems.filter((p) => p.code === 'word_dropped').length} words dropped`);
   }
