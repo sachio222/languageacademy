@@ -6381,13 +6381,12 @@
       "fr:cx:prsptcp.er"
     ],
     "pos": "verb",
-    "register": "slang",
+    "register": "spoken",
     "senses": [
       {
         "gloss": "to work"
       }
-    ],
-    "use": "recognize"
+    ]
   },
   {
     "cefr": "A2",
@@ -6572,13 +6571,12 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
-    "register": "slang",
+    "register": "spoken",
     "senses": [
       {
         "gloss": "work, job"
       }
-    ],
-    "use": "recognize"
+    ]
   },
   {
     "cefr": "A2",
@@ -19538,7 +19536,6 @@
     "lemma": "en fait",
     "paradigms": [],
     "pos": "adverb",
-    "register": "spoken",
     "senses": [
       {
         "gloss": "in fact, actually"
@@ -26422,7 +26419,7 @@
     "register": "spoken",
     "senses": [
       {
-        "gloss": "eh? right? (at the end of a sentence, to check the listener agrees)"
+        "gloss": "eh? right? (at the end of a sentence, to check the listener agrees); alone (Hein ?) it means 'what?' and is impolite"
       }
     ]
   },
@@ -30505,7 +30502,7 @@
     "register": "slang",
     "senses": [
       {
-        "gloss": "cop (verlan of flic); said about the police, never to them"
+        "gloss": "cop (verlan of flic, the everyday word for a police officer); said about the police, never to them"
       }
     ],
     "use": "recognize"
@@ -32960,13 +32957,12 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
-    "register": "slang",
+    "register": "spoken",
     "senses": [
       {
         "gloss": "guy, bloke; boyfriend"
       }
-    ],
-    "use": "recognize"
+    ]
   },
   {
     "cefr": "B2",
@@ -33784,7 +33780,7 @@
     "register": "slang",
     "senses": [
       {
-        "gloss": "woman, girl; girlfriend (verlan of femme)"
+        "gloss": "woman, girl; girlfriend (verlan of femme); casual, and can sound disrespectful"
       }
     ],
     "use": "recognize"
@@ -40256,13 +40252,12 @@
       "fr:cx:noun.plural"
     ],
     "pos": "noun",
-    "register": "slang",
+    "register": "spoken",
     "senses": [
       {
         "gloss": "mate, buddy"
       }
-    ],
-    "use": "recognize"
+    ]
   },
   {
     "cefr": "B2",
@@ -52071,7 +52066,7 @@
     "register": "slang",
     "senses": [
       {
-        "gloss": "party (verlan of fête)"
+        "gloss": "party, often a rave (verlan of fête)"
       }
     ],
     "use": "recognize"
@@ -54317,7 +54312,7 @@
     "register": "slang",
     "senses": [
       {
-        "gloss": "annoyed, wound up (verlan of énervé)"
+        "gloss": "angry, really annoyed (verlan of énervé)"
       }
     ],
     "use": "recognize"
@@ -55695,7 +55690,7 @@
     "register": "slang",
     "senses": [
       {
-        "gloss": "hey, yo; also said in surprise"
+        "gloss": "hey, yo; also said in surprise; youth slang, not for a learner to use"
       }
     ],
     "use": "recognize"
