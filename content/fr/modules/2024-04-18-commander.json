@@ -633,6 +633,18 @@
           "feedback": "Expected: \"{ils ont commandé le dessert}\""
         }
       ]
+    },
+    {
+      "id": "i-miam-j-ai-commande",
+      "type": "respond",
+      "situation": "The pizza you ordered arrives. Say yum, I ordered a pizza!",
+      "answer": "miam, j'ai commandé une pizza !",
+      "accept": [
+        "miam, j'ai commandé une pizza",
+        "miam j'ai commandé une pizza",
+        "miam, j'ai commande une pizza"
+      ],
+      "hint": "{miam} + j'ai commandé une pizza"
     }
   ]
 }

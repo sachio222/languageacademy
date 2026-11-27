@@ -49,6 +49,12 @@
       "note": "large numbers"
     },
     {
+      "word_id": "attirer-fr",
+      "fr": "attirer",
+      "gloss": "to attract",
+      "note": "il attire"
+    },
+    {
       "word_id": "visiteurs-fr",
       "fr": "visiteurs",
       "gloss": "visitors",
@@ -65,6 +71,12 @@
       "fr": "monuments",
       "gloss": "monuments",
       "note": "historic buildings"
+    },
+    {
+      "word_id": "lieux-fr",
+      "fr": "lieux",
+      "gloss": "places",
+      "note": "plural of lieu (a place)"
     },
     {
       "word_id": "historiques-fr",
@@ -151,6 +163,17 @@
       "note": "artistic creations"
     },
     {
+      "word_id": "peintre-fr",
+      "fr": "peintre",
+      "gloss": "painter"
+    },
+    {
+      "word_id": "memoire-fr",
+      "fr": "mémoire",
+      "gloss": "memory",
+      "note": "feminine noun: la mémoire"
+    },
+    {
       "word_id": "inspirent-fr",
       "fr": "inspirent",
       "gloss": "inspire",
@@ -161,6 +184,11 @@
       "fr": "planète",
       "gloss": "planet",
       "note": "feminine noun"
+    },
+    {
+      "word_id": "egalement-fr",
+      "fr": "également",
+      "gloss": "also, as well"
     },
     {
       "word_id": "populaire-fr",
@@ -181,6 +209,11 @@
       "note": "meal items"
     },
     {
+      "word_id": "inoubliable-fr",
+      "fr": "inoubliable",
+      "gloss": "unforgettable"
+    },
+    {
       "word_id": "economie-fr",
       "fr": "économie",
       "gloss": "economy",
@@ -191,6 +224,11 @@
       "fr": "dépend",
       "gloss": "depends",
       "note": "from dépendre"
+    },
+    {
+      "word_id": "plusieurs-fr",
+      "fr": "plusieurs",
+      "gloss": "several"
     },
     {
       "word_id": "secteurs-fr",
@@ -233,6 +271,11 @@
       "fr": "produits",
       "gloss": "products",
       "note": "manufactured goods"
+    },
+    {
+      "word_id": "au-dela-fr",
+      "fr": "au-delà",
+      "gloss": "beyond"
     },
     {
       "word_id": "transport-fr",
@@ -844,8 +887,8 @@
     },
     {
       "id": "b-paris-sa-capitale-compte",
-      "fr": "Paris, sa capitale, compte plus de deux millions de personnes. Cette ville magnifique attire des millions de visiteurs chaque année. Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame, le Louvre, et l'Arc de Triomphe sur les Champs-Élysées. Beaucoup visitent aussi le château de Versailles. Les touristes cherchent souvent des directions pour trouver ces lieux historiques.",
-      "en": "Paris, its capital, has more than two million people. This magnificent city attracts millions of visitors each year. They come to admire its famous monuments like the Eiffel Tower, Notre-Dame, the Louvre, and the Arc de Triomphe on the Champs-Élysées. Many also visit the Palace of Versailles. Tourists often look for directions to find these historic places."
+      "fr": "Paris, sa capitale, a plus de deux millions d'habitants. Cette ville magnifique attire des millions de visiteurs chaque année. Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame, le Louvre, et l'Arc de Triomphe sur les Champs-Élysées. Beaucoup visitent aussi le château de Versailles. Les touristes cherchent souvent des directions pour trouver ces lieux historiques.",
+      "en": "Paris, its capital, has more than two million inhabitants. This magnificent city attracts millions of visitors each year. They come to admire its famous monuments like the Eiffel Tower, Notre-Dame, the Louvre, and the Arc de Triomphe on the Champs-Élysées. Many also visit the Palace of Versailles. Tourists often look for directions to find these historic places."
     },
     {
       "id": "img-paris",
@@ -896,8 +939,8 @@
     },
     {
       "id": "img-tgv",
-      "fr": "Un train rapide traverse la campagne vers le sud.",
-      "en": "A fast train crosses the countryside toward the south.",
+      "fr": "Un train rapide part vers le sud.",
+      "en": "A fast train leaves for the south.",
       "img": {
         "src": "img/reading11/tgv",
         "w": 1600,
@@ -912,8 +955,8 @@
     },
     {
       "id": "img-mer",
-      "fr": "L'été à Nice, au bord de la Méditerranée.",
-      "en": "Summer in Nice, on the Mediterranean.",
+      "fr": "L'été à Nice, près de la mer.",
+      "en": "Summer in Nice, by the sea.",
       "img": {
         "src": "img/reading11/mer",
         "w": 1600,
@@ -933,8 +976,8 @@
     },
     {
       "id": "img-avenir",
-      "fr": "À vélo et en tram, la France pense à l'avenir.",
-      "en": "By bike and by tram, France thinks about the future.",
+      "fr": "Les jeunes pensent à l'avenir de la France.",
+      "en": "Young people think about the future of France.",
       "img": {
         "src": "img/reading11/avenir",
         "w": 1600,
@@ -960,10 +1003,6 @@
     }
   ],
   "glossary": [
-    {
-      "fr": "compte",
-      "en": "has (in number)"
-    },
     {
       "fr": "attire",
       "en": "attracts"
@@ -1003,22 +1042,6 @@
     {
       "fr": "au-delà",
       "en": "beyond"
-    },
-    {
-      "fr": "traverse",
-      "en": "crosses"
-    },
-    {
-      "fr": "au bord de",
-      "en": "on the shore of"
-    },
-    {
-      "fr": "vélo",
-      "en": "bike"
-    },
-    {
-      "fr": "quels",
-      "en": "which"
     }
   ],
   "glosses": [
@@ -1085,13 +1108,16 @@
     {
       "id": "reading-11-5",
       "type": "comprehension",
-      "question": "{Dans quels secteurs travaillent les Français?}",
-      "cue": "In which sectors do French people work?",
+      "question": "{Où travaillent les Français?}",
+      "cue": "Where do French people work?",
       "answer": "l'agriculture",
       "accept": [
         "agriculture",
         "les services",
-        "l'industrie"
+        "l'industrie",
+        "dans les services",
+        "dans l'industrie",
+        "dans l'agriculture"
       ],
       "hint": "{Les services, l'industrie ou...}"
     },

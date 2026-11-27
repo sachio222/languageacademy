@@ -277,6 +277,18 @@
       ],
       "gloss": "We don't have the money here",
       "hint": "ne with apostrophe before vowel / second part of negation / location adverb meaning 'here'"
+    },
+    {
+      "id": "i-miam-tres",
+      "type": "gapfill",
+      "text": "Miam ! Le pain est ___ bon ici.",
+      "blanks": [
+        {
+          "answer": "très"
+        }
+      ],
+      "gloss": "Yum! The bread is very good here.",
+      "hint": "very"
     }
   ],
   "tests": {

@@ -364,6 +364,56 @@
         }
       ],
       "gloss": "In spring, plants grow fast."
+    },
+    {
+      "id": "i-pourquoi-paris-attire-t-il",
+      "type": "transform",
+      "instruction": "Ask why, with inversion.",
+      "shown": "Paris attire les visiteurs.",
+      "answer": "pourquoi Paris attire-t-il les visiteurs ?",
+      "accept": [
+        "pourquoi Paris attire-t-il les visiteurs"
+      ]
+    },
+    {
+      "id": "i-est-ce-que-le-peintre-a-plusieurs",
+      "type": "transform",
+      "instruction": "Ask it with {est-ce que}.",
+      "shown": "Le peintre a plusieurs œuvres célèbres.",
+      "answer": "est-ce que le peintre a plusieurs œuvres célèbres ?",
+      "accept": [
+        "est-ce que le peintre a plusieurs œuvres célèbres"
+      ]
+    },
+    {
+      "id": "i-pourquoi-ces-lieux-sont-ils",
+      "type": "transform",
+      "instruction": "Ask why, with inversion.",
+      "shown": "Ces lieux sont inoubliables.",
+      "answer": "pourquoi ces lieux sont-ils inoubliables ?",
+      "accept": [
+        "pourquoi ces lieux sont-ils inoubliables"
+      ]
+    },
+    {
+      "id": "i-pourquoi-monet-reste-t-il",
+      "type": "transform",
+      "instruction": "Ask why, with inversion.",
+      "shown": "Monet reste dans la mémoire des Français.",
+      "answer": "pourquoi Monet reste-t-il dans la mémoire des Français ?",
+      "accept": [
+        "pourquoi Monet reste-t-il dans la mémoire des Français"
+      ]
+    },
+    {
+      "id": "i-est-ce-que-tu-as-egalement-visite",
+      "type": "transform",
+      "instruction": "Ask it with {est-ce que}.",
+      "shown": "Tu as également visité des villes au-delà de la France.",
+      "answer": "est-ce que tu as également visité des villes au-delà de la France ?",
+      "accept": [
+        "est-ce que tu as également visité des villes au-delà de la France"
+      ]
     }
   ]
 }

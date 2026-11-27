@@ -578,6 +578,12 @@
   },
   "2024-01-22-reading2": {
     "description": "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far.",
+    "passage/b-ca-c-est-un": {
+      "id": "b-ca-c-est-un",
+      "speaker": "Marie",
+      "fr": "Ça ? C'est un livre sur la Normandie. Mont-Saint-Michel, Rouen... Ces choses sont très belles !",
+      "en": "That? It's a book about Normandy. Mont-Saint-Michel, Rouen... These things are very beautiful!"
+    },
     "title": "Reading Comprehension - {Rendez-vous en Normandie}",
     "vocabulary/en-normandie-fr": {
       "word_id": "en-normandie-fr",
@@ -1584,10 +1590,6 @@
   "2024-02-12-reading-11": {
     "glossary": [
       {
-        "fr": "compte",
-        "en": "has (in number)"
-      },
-      {
         "fr": "attire",
         "en": "attracts"
       },
@@ -1626,22 +1628,6 @@
       {
         "fr": "au-delà",
         "en": "beyond"
-      },
-      {
-        "fr": "traverse",
-        "en": "crosses"
-      },
-      {
-        "fr": "au bord de",
-        "en": "on the shore of"
-      },
-      {
-        "fr": "vélo",
-        "en": "bike"
-      },
-      {
-        "fr": "quels",
-        "en": "which"
       }
     ],
     "glosses": [
@@ -1656,7 +1642,104 @@
         "note": "feminine plural of {français}"
       }
     ],
-    "title": "Reading - {La France Moderne}"
+    "items/reading-11-5": {
+      "id": "reading-11-5",
+      "type": "comprehension",
+      "question": "{Où travaillent les Français?}",
+      "cue": "Where do French people work?",
+      "answer": "l'agriculture",
+      "accept": [
+        "agriculture",
+        "les services",
+        "l'industrie",
+        "dans les services",
+        "dans l'industrie",
+        "dans l'agriculture"
+      ],
+      "hint": "{Les services, l'industrie ou...}"
+    },
+    "passage/b-paris-sa-capitale-compte": {
+      "id": "b-paris-sa-capitale-compte",
+      "fr": "Paris, sa capitale, a plus de deux millions d'habitants. Cette ville magnifique attire des millions de visiteurs chaque année. Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame, le Louvre, et l'Arc de Triomphe sur les Champs-Élysées. Beaucoup visitent aussi le château de Versailles. Les touristes cherchent souvent des directions pour trouver ces lieux historiques.",
+      "en": "Paris, its capital, has more than two million inhabitants. This magnificent city attracts millions of visitors each year. They come to admire its famous monuments like the Eiffel Tower, Notre-Dame, the Louvre, and the Arc de Triomphe on the Champs-Élysées. Many also visit the Palace of Versailles. Tourists often look for directions to find these historic places."
+    },
+    "passage/img-avenir": {
+      "id": "img-avenir",
+      "fr": "Les jeunes pensent à l'avenir de la France.",
+      "en": "Young people think about the future of France.",
+      "img": {
+        "src": "img/reading11/avenir",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of young people cycling on a green bike lane past Haussmann buildings with solar panels, a tram, recycling bins, a Gothic spire, a glass tower and wind turbines."
+      }
+    },
+    "passage/img-mer": {
+      "id": "img-mer",
+      "fr": "L'été à Nice, près de la mer.",
+      "en": "Summer in Nice, by the sea.",
+      "img": {
+        "src": "img/reading11/mer",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of Nice in summer: palm trees along the curving seafront promenade, blue parasols on the beach, swimmers and a sailboat under a huge golden sun."
+      }
+    },
+    "passage/img-tgv": {
+      "id": "img-tgv",
+      "fr": "Un train rapide part vers le sud.",
+      "en": "A fast train leaves for the south.",
+      "img": {
+        "src": "img/reading11/tgv",
+        "w": 1600,
+        "h": 1067,
+        "alt": "Art Deco poster of a high-speed train racing across a stone viaduct over vineyards, with a metro train leaving a tunnel and travellers pulling suitcases below."
+      }
+    },
+    "title": "Reading - {La France Moderne}",
+    "vocabulary/attirer-fr": {
+      "word_id": "attirer-fr",
+      "fr": "attirer",
+      "gloss": "to attract",
+      "note": "il attire"
+    },
+    "vocabulary/au-dela-fr": {
+      "word_id": "au-dela-fr",
+      "fr": "au-delà",
+      "gloss": "beyond"
+    },
+    "vocabulary/egalement-fr": {
+      "word_id": "egalement-fr",
+      "fr": "également",
+      "gloss": "also, as well"
+    },
+    "vocabulary/inoubliable-fr": {
+      "word_id": "inoubliable-fr",
+      "fr": "inoubliable",
+      "gloss": "unforgettable"
+    },
+    "vocabulary/lieux-fr": {
+      "word_id": "lieux-fr",
+      "fr": "lieux",
+      "gloss": "places",
+      "note": "plural of lieu (a place)"
+    },
+    "vocabulary/memoire-fr": {
+      "word_id": "memoire-fr",
+      "fr": "mémoire",
+      "gloss": "memory",
+      "note": "feminine noun: la mémoire"
+    },
+    "vocabulary/peintre-fr": {
+      "word_id": "peintre-fr",
+      "fr": "peintre",
+      "gloss": "painter"
+    },
+    "vocabulary/plusieurs-fr": {
+      "word_id": "plusieurs-fr",
+      "fr": "plusieurs",
+      "gloss": "several"
+    }
   },
   "2024-02-13-search-and-find": {
     "concepts": [
@@ -1770,6 +1853,66 @@
   },
   "2024-02-16-unit-11-practice": {
     "description": "Complete sentences using this unit's essential vocabulary: age expressions, missing top 100 verbs, and directions!",
+    "items/i-attire-lieux": {
+      "id": "i-attire-lieux",
+      "type": "gapfill",
+      "text": "Paris ___ des millions de visiteurs. Ils veulent voir ses ___ historiques.",
+      "blanks": [
+        {
+          "answer": "attire"
+        },
+        {
+          "answer": "lieux"
+        }
+      ],
+      "gloss": "Paris attracts millions of visitors. They want to see its historic places.",
+      "hint": "attracts (il form of attirer) / places (plural of lieu)"
+    },
+    "items/i-inoubliables-egalement": {
+      "id": "i-inoubliables-egalement",
+      "type": "gapfill",
+      "text": "Nos vacances à Nice étaient ___ ! Nous avons ___ visité Marseille.",
+      "blanks": [
+        {
+          "answer": "inoubliables"
+        },
+        {
+          "answer": "également"
+        }
+      ],
+      "gloss": "Our holiday in Nice was unforgettable! We also visited Marseille.",
+      "hint": "unforgettable (plural, like vacances) / also"
+    },
+    "items/i-peintre-memoire": {
+      "id": "i-peintre-memoire",
+      "type": "gapfill",
+      "text": "Monet est un ___ français. Ses œuvres restent dans la ___ de tout le monde.",
+      "blanks": [
+        {
+          "answer": "peintre"
+        },
+        {
+          "answer": "mémoire"
+        }
+      ],
+      "gloss": "Monet is a French painter. His works stay in everyone's memory.",
+      "hint": "painter / memory"
+    },
+    "items/i-plusieurs-au-dela": {
+      "id": "i-plusieurs-au-dela",
+      "type": "gapfill",
+      "text": "La France exporte ses produits dans ___ pays d'Europe, et ___.",
+      "blanks": [
+        {
+          "answer": "plusieurs"
+        },
+        {
+          "answer": "au-delà"
+        }
+      ],
+      "gloss": "France exports its products to several countries in Europe, and beyond.",
+      "hint": "several / beyond"
+    },
     "items/i-te-le": {
       "id": "i-te-le",
       "type": "gapfill",
@@ -2106,6 +2249,27 @@
         "example": "{Le soleil brille} → {Qu'est-ce qui brille?} (What shines?), {Je vois un oiseau} → {Qu'est-ce que tu vois?} (What do you see?)"
       }
     ],
+    "items/i-qu-est-ce-que-le-peintre-regarde": {
+      "id": "i-qu-est-ce-que-le-peintre-regarde",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce que}.",
+      "shown": "Le peintre regarde quelque chose.",
+      "answer": "qu'est-ce que le peintre regarde ?",
+      "accept": [
+        "qu'est-ce que le peintre regarde"
+      ]
+    },
+    "items/i-qu-est-ce-que-tu-as-visite-au-dela": {
+      "id": "i-qu-est-ce-que-tu-as-visite-au-dela",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce que tu as visité au-delà de Paris ?} Answer: I also visited Versailles.",
+      "answer": "j'ai également visité Versailles",
+      "accept": [
+        "j'ai aussi visité Versailles",
+        "également Versailles",
+        "Versailles"
+      ]
+    },
     "items/i-qu-est-ce-qui": {
       "id": "i-qu-est-ce-qui",
       "type": "respond",
@@ -2127,12 +2291,26 @@
         }
       ]
     },
+    "items/i-qu-est-ce-qui-attire-les-visiteurs": {
+      "id": "i-qu-est-ce-qui-attire-les-visiteurs",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose attire les visiteurs dans ces lieux.",
+      "answer": "qu'est-ce qui attire les visiteurs dans ces lieux ?"
+    },
     "items/i-qu-est-ce-qui-court-tres-vite": {
       "id": "i-qu-est-ce-qui-court-tres-vite",
       "type": "transform",
       "instruction": "Ask what it is, with {qu'est-ce qui}.",
       "shown": "Quelque chose court très vite dans le jardin.",
       "answer": "qu'est-ce qui court très vite dans le jardin ?"
+    },
+    "items/i-qu-est-ce-qui-est-inoubliable": {
+      "id": "i-qu-est-ce-qui-est-inoubliable",
+      "type": "transform",
+      "instruction": "Ask what it is, with {qu'est-ce qui}.",
+      "shown": "Quelque chose est inoubliable à Nice.",
+      "answer": "qu'est-ce qui est inoubliable à Nice ?"
     },
     "items/i-qu-est-ce-qui-nage-dans-la-mer": {
       "id": "i-qu-est-ce-qui-nage-dans-la-mer",
@@ -2155,6 +2333,16 @@
       "accept": [
         "la pluie",
         "c'est la pluie"
+      ]
+    },
+    "items/i-qu-est-ce-qui-reste-dans-ta-memoire": {
+      "id": "i-qu-est-ce-qui-reste-dans-ta-memoire",
+      "type": "respond",
+      "situation": "Your friend asks: {Qu'est-ce qui reste dans ta mémoire ?} Answer: several places.",
+      "answer": "plusieurs lieux",
+      "accept": [
+        "plusieurs lieux restent dans ma mémoire",
+        "des lieux"
       ]
     },
     "items/i-qu-est-ce-qui-saute-et-grimpe": {
@@ -4190,6 +4378,12 @@
       ],
       "hint": "Look at what Marie must do"
     },
+    "passage/b-mmmh-j-aime-cette": {
+      "id": "b-mmmh-j-aime-cette",
+      "speaker": "Marie",
+      "fr": "C'est beau ! J'aime cette ville. Je ne vais jamais partir !",
+      "en": "It's beautiful! I love this city. I'll never leave!"
+    },
     "title": "Reading Comprehension - {La nouvelle époque de Marie}",
     "vocabulary/alors-fr": {
       "word_id": "alors-fr",
@@ -4206,6 +4400,12 @@
       "fr": "la fin",
       "gloss": "the end",
       "note": "feminine; {Fin} alone ends a story"
+    },
+    "vocabulary/miam-fr": {
+      "word_id": "miam-fr",
+      "fr": "miam",
+      "gloss": "yum",
+      "note": "said about good food"
     },
     "vocabulary/six-heures-fr": {
       "word_id": "six-heures-fr",
@@ -4259,6 +4459,18 @@
       ],
       "gloss": "I found that yesterday",
       "hint": "time adverb meaning 'yesterday'"
+    },
+    "items/i-miam-tres": {
+      "id": "i-miam-tres",
+      "type": "gapfill",
+      "text": "Miam ! Le pain est ___ bon ici.",
+      "blanks": [
+        {
+          "answer": "très"
+        }
+      ],
+      "gloss": "Yum! The bread is very good here.",
+      "hint": "very"
     },
     "title": "Everyday Words Practice - Fill in the Blanks"
   },
@@ -4367,6 +4579,18 @@
     }
   },
   "2024-04-08-comparisons": {
+    "items/i-miam-c-est-meilleur": {
+      "id": "i-miam-c-est-meilleur",
+      "type": "respond",
+      "situation": "You taste the bread at the café. It is better than the bread at home. Say yum, it's better!",
+      "answer": "miam ! c'est meilleur",
+      "accept": [
+        "miam, c'est meilleur",
+        "miam c'est meilleur",
+        "c'est meilleur"
+      ],
+      "hint": "{miam} + c'est + meilleur"
+    },
     "vocabulary/cher-fr": {
       "word_id": "cher-fr",
       "fr": "cher",
@@ -4378,6 +4602,20 @@
       "word_id": "tu-pourrais-m-aider-fr",
       "fr": "tu pourrais m'aider ?",
       "gloss": "could you help me?"
+    }
+  },
+  "2024-04-11-food-nouns": {
+    "items/i-miam-un-croissant": {
+      "id": "i-miam-un-croissant",
+      "type": "respond",
+      "situation": "Your friend gives you a warm croissant. Say yum, a croissant!",
+      "answer": "miam, un croissant !",
+      "accept": [
+        "miam, un croissant",
+        "miam un croissant",
+        "miam ! un croissant"
+      ],
+      "hint": "{miam} + un croissant"
     }
   },
   "2024-04-12-manger": {
@@ -4645,6 +4883,18 @@
         "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
       }
     ],
+    "items/i-miam-j-ai-commande": {
+      "id": "i-miam-j-ai-commande",
+      "type": "respond",
+      "situation": "The pizza you ordered arrives. Say yum, I ordered a pizza!",
+      "answer": "miam, j'ai commandé une pizza !",
+      "accept": [
+        "miam, j'ai commandé une pizza",
+        "miam j'ai commandé une pizza",
+        "miam, j'ai commande une pizza"
+      ],
+      "hint": "{miam} + j'ai commandé une pizza"
+    },
     "vocabulary/par-telephone-fr": {
       "word_id": "par-telephone-fr",
       "fr": "par téléphone",

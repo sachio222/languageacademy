@@ -215,6 +215,12 @@
       "note": "polite request"
     },
     {
+      "word_id": "miam-fr",
+      "fr": "miam",
+      "gloss": "yum",
+      "note": "said about good food"
+    },
+    {
       "word_id": "le-pain-fr",
       "fr": "le pain",
       "gloss": "bread",
@@ -554,8 +560,8 @@
     {
       "id": "b-mmmh-j-aime-cette",
       "speaker": "Marie",
-      "fr": "Mmmh! J'aime cette ville. Je ne vais jamais partir !",
-      "en": "Mmmh! I love this city. I'll never leave!"
+      "fr": "C'est beau ! J'aime cette ville. Je ne vais jamais partir !",
+      "en": "It's beautiful! I love this city. I'll never leave!"
     },
     {
       "id": "img-ville",

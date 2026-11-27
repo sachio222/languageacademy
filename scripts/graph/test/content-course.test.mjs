@@ -166,7 +166,9 @@ test('corrections follow item ids', async () => {
 test('every committed override names a ref of its module', async () => {
   const corrections = JSON.parse(readFileSync(join(repoRoot, 'curriculum-graph/languages/fr/course-map.json'), 'utf8'));
   const keys = Object.values(corrections).flatMap((e) => Object.keys(e.overrides ?? {}));
-  assert.equal(keys.length, 35);
+  // 35, then 10 for the proper names Readings 3 and 4 use (Café de la Paix, Le Comte de Monte-Cristo, Vingt mille
+  // lieues sous les mers, Les Éditeurs, carrefour de l'Odéon), which the checker reads as words.
+  assert.equal(keys.length, 45);
   const { ctx, issues } = await runCheck({ repoRoot, lang: 'fr' });
   const refs = new Set(ctx.course.flatMap((m) => m.items.map((it) => it.ref)));
   assert.deepEqual(keys.filter((k) => !refs.has(k)), []);

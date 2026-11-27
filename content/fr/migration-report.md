@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2627 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2640 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -30,9 +30,9 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
 | English prompts written as respond items | 822 |
-| Passage words with no pop-up | 6 |
+| Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1134 |
+| Hand edits kept | 1149 |
 | Live ids with no converted item | 340 (25 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
@@ -1774,10 +1774,6 @@ Each word below appears in the reading’s passage and has no dictionary entry (
 
 - 5 words: boisson, favorite, fées, vertes, Terrasse
 
-**2024-02-12-reading-11**
-
-- 1 word: tram
-
 ## Estimates to confirm
 
 The source sets no value, so the conversion wrote an estimate.
@@ -1869,6 +1865,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading Comprehension 2 - Rendez-vous en Normandie" → "Reading Comprehension - Rendez-vous en Normandie"
 - `description` "An exciting trip through beautiful Normandy! Explore famous places using vocabulary from Units 1 & 2." → "An exciting trip through beautiful Normandy! Explore famous places with the words you know so far."
+- `passage[6].fr` "Ça ? C'est un livre sur la Normandie. Il y a Mont-Saint-Michel, Rouen... Ces choses sont très belles !" → "Ça ? C'est un livre sur la Normandie. Mont-Saint-Michel, Rouen... Ces choses sont très belles !"
+- `passage[6].en` "That? It's a book about Normandy. There's Mont-Saint-Michel, Rouen... These things are very beautiful!" → "That? It's a book about Normandy. Mont-Saint-Michel, Rouen... These things are very beautiful!"
 
 **2024-01-23-unit2-practice**
 
@@ -1958,6 +1956,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `title` "Reading Comprehension 4 - La nouvelle époque de Marie" → "Reading Comprehension - La nouvelle époque de Marie"
 - `description` "Unit 4 mastery! A natural conversation using all your vocabulary." → "A natural conversation using all your vocabulary."
+- `passage[31].fr` "Mmmh! J'aime cette ville. Je ne vais jamais partir !" → "C'est beau ! J'aime cette ville. Je ne vais jamais partir !"
+- `passage[31].en` "Mmmh! I love this city. I'll never leave!" → "It's beautiful! I love this city. I'll never leave!"
 - `items[16]` "(none)" → ""id":"i-travail","type":"comprehension","question":"Why can't Marie go with Paul now?","cue":"Je dois aller au ___","answer":"travail","accept":["au travail","elle doit aller au travail","elle doit travailler"],"hint":"Look at what Marie must do""
 
 **2024-04-03-unit-4-practice**
@@ -2497,8 +2497,19 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-02-12-reading-11**
 
 - `title` "Reading 11 - La France Moderne" → "Reading - La France Moderne"
-- `glossary` "(none)" → "["fr":"compte","en":"has (in number)","fr":"attire","en":"attracts","fr":"lieux","en":"places","fr":"étrangères","en":"foreign","fr":"peintres","en":"painters","fr":"mémoire","en":"memory","fr":"également","en":"also, as well","fr":"inoubliables","en":"unforgettable","fr":"plusieurs","en":"several","fr":"françaises","en":"French","fr":"au-delà","en":"beyond","fr":"traverse","en":"crosses","fr":"au bord de","en":"on the shore of","fr":"vélo","en":"bike","fr":"quels","en":"which"]"
+- `passage[1].fr` "Paris, sa capitale, compte plus de deux millions de personnes. Cette ville magnifique attire des millions de visiteurs chaque année. Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame, le Louvre, et l'Arc de Triomphe sur les Champs-Élysées. Beaucoup visitent aussi le château de Versailles. Les touristes cherchent souvent des directions pour trouver ces lieux historiques." → "Paris, sa capitale, a plus de deux millions d'habitants. Cette ville magnifique attire des millions de visiteurs chaque année. Ils viennent admirer ses monuments célèbres comme la Tour Eiffel, Notre-Dame, le Louvre, et l'Arc de Triomphe sur les Champs-Élysées. Beaucoup visitent aussi le château de Versailles. Les touristes cherchent souvent des directions pour trouver ces lieux historiques."
+- `passage[1].en` "Paris, its capital, has more than two million people. This magnificent city attracts millions of visitors each year. They come to admire its famous monuments like the Eiffel Tower, Notre-Dame, the Louvre, and the Arc de Triomphe on the Champs-Élysées. Many also visit the Palace of Versailles. Tourists often look for directions to find these historic places." → "Paris, its capital, has more than two million inhabitants. This magnificent city attracts millions of visitors each year. They come to admire its famous monuments like the Eiffel Tower, Notre-Dame, the Louvre, and the Arc de Triomphe on the Champs-Élysées. Many also visit the Palace of Versailles. Tourists often look for directions to find these historic places."
+- `passage[9].fr` "Un train rapide traverse la campagne vers le sud." → "Un train rapide part vers le sud."
+- `passage[9].en` "A fast train crosses the countryside toward the south." → "A fast train leaves for the south."
+- `passage[11].fr` "L'été à Nice, au bord de la Méditerranée." → "L'été à Nice, près de la mer."
+- `passage[11].en` "Summer in Nice, on the Mediterranean." → "Summer in Nice, by the sea."
+- `passage[14].fr` "À vélo et en tram, la France pense à l'avenir." → "Les jeunes pensent à l'avenir de la France."
+- `passage[14].en` "By bike and by tram, France thinks about the future." → "Young people think about the future of France."
+- `glossary` "(none)" → "["fr":"attire","en":"attracts","fr":"lieux","en":"places","fr":"étrangères","en":"foreign","fr":"peintres","en":"painters","fr":"mémoire","en":"memory","fr":"également","en":"also, as well","fr":"inoubliables","en":"unforgettable","fr":"plusieurs","en":"several","fr":"françaises","en":"French","fr":"au-delà","en":"beyond"]"
 - `glosses` "(none)" → "["fr":"étrangères","en":"foreign","note":"feminine plural of étranger","fr":"françaises","en":"French","note":"feminine plural of français"]"
+- `items[4].question` "Dans quels secteurs travaillent les Français?" → "Où travaillent les Français?"
+- `items[4].cue` "In which sectors do French people work?" → "Where do French people work?"
+- `items[4].accept` "["agriculture","les services","l'industrie"]" → "["agriculture","les services","l'industrie","dans les services","dans l'industrie","dans l'agriculture"]"
 
 **2024-02-16-unit-11-practice**
 
