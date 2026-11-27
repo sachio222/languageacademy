@@ -78,6 +78,9 @@ STEPS_BY_KIND = {
     "practice": ["practice-exercises"],
     "unit_exam": ["exam-questions"],
 }
+# Steps an entry of a kind may add, each right after the step it names: a lesson that teaches a verb's forms adds
+# verb-forms after vocabulary-intro (domains/curriculum.md section 2, the verb step).
+OPTIONAL_STEPS = {"lesson": {"verb-forms": "vocabulary-intro"}}
 REFERENCE_PART = "reference-content"
 FREE_UNIT = "unit1"
 FREE_STEP_OUTSIDE_UNIT1 = "vocabulary-intro"
@@ -105,6 +108,7 @@ def same_form(text):
 # also allows any object, so format_rules validates these bodies again against their own definition.
 BODY_BY_SECTION = {
     "vocabulary-intro": ("VocabularyIntroBody", "curriculum.openapi.json#/components/schemas/VocabularyIntroBody"),
+    "verb-forms": ("VerbFormsBody", "curriculum.openapi.json#/components/schemas/VerbFormsBody"),
     "reference-content": ("ReferenceBody", "curriculum.openapi.json#/components/schemas/ReferenceBody"),
     "interactive-help": ("GuideBody", "#/$defs/GuideBody"),
     "reading-passage": ("ReadingBody", "#/$defs/ReadingBody"),
@@ -553,10 +557,23 @@ def format_rules(b, report, validator):
 
     form = b["placement_form"]
     if form is not None:
+        ordinal = {u["unit_key"]: u["ordinal"] for u in b["units"]}
+        before = None
         for i, level in enumerate(form["levels"]):
+            at = join("/placement_form/levels", i)
+            if level["level"] != i + 1:
+                bad(join(at, "level"), f"placement level {level['level']} is at place {i + 1}; levels count from 1 in order")
             if level["unit_key"] not in units:
-                bad(join("/placement_form/levels", i, "unit_key"),
+                bad(join(at, "unit_key"),
                     f"placement level places into {level['unit_key']!r}, which is not in units")
+                continue
+            # A learner who fails a level starts at its unit, so each level's unit must come later in the
+            # course than the unit of the level before it.
+            if before is not None and ordinal[level["unit_key"]] <= ordinal[before]:
+                bad(join(at, "unit_key"),
+                    f"placement level {level['level']} places into {level['unit_key']!r}, which does not come after "
+                    f"{before!r}, the unit of the level before it; levels rise in course order")
+            before = level["unit_key"]
 
     stories = {s["story_id"] for s in b["stories"]}
     for i, c in enumerate(b["content"]):
@@ -693,8 +710,13 @@ def release_checks(b, report):
     #                                                                  access_rule_broken
     for i, e in enumerate(entries):
         at = join("/entries", i)
-        fixed = STEPS_BY_KIND[e["kind"]]
         ids = [s["section_id"] for s in e["steps"]]
+        optional = OPTIONAL_STEPS.get(e["kind"], {})
+        fixed = list(STEPS_BY_KIND[e["kind"]])
+        # An optional step the entry has sits right after the step it follows; one it lacks is not expected.
+        for sid, after in optional.items():
+            if sid in ids and after in fixed:
+                fixed.insert(fixed.index(after) + 1, sid)
         for j, sid in enumerate(ids):
             if sid not in fixed:
                 report.error("section_id_invalid", join(at, "steps", j, "section_id"),
@@ -702,7 +724,7 @@ def release_checks(b, report):
             elif sid in ids[:j]:
                 report.error("section_id_invalid", join(at, "steps", j, "section_id"),
                              f"step {sid!r} appears twice in {e['module_key']}")
-        missing = [sid for sid in fixed if sid not in ids]
+        missing = [sid for sid in fixed if sid not in ids and sid not in optional]
         if missing:
             report.error("section_id_invalid", join(at, "steps"),
                          f"{e['module_key']} lacks {', '.join(missing)}; steps are fixed per kind")

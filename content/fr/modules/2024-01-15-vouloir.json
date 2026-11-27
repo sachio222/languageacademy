@@ -23,54 +23,6 @@
       "note": "infinitive form"
     },
     {
-      "word_id": "je-veux-fr",
-      "fr": "je veux",
-      "gloss": "I want",
-      "note": "irregular form"
-    },
-    {
-      "word_id": "tu-veux-fr",
-      "fr": "tu veux",
-      "gloss": "you want (informal)",
-      "note": "same as je!"
-    },
-    {
-      "word_id": "il-veut-fr",
-      "fr": "il veut",
-      "gloss": "he wants",
-      "note": "different ending"
-    },
-    {
-      "word_id": "elle-veut-fr",
-      "fr": "elle veut",
-      "gloss": "she wants",
-      "note": "same as il"
-    },
-    {
-      "word_id": "nous-voulons-fr",
-      "fr": "nous voulons",
-      "gloss": "we want",
-      "note": "regular ending"
-    },
-    {
-      "word_id": "vous-voulez-fr",
-      "fr": "vous voulez",
-      "gloss": "you want (formal)",
-      "note": "formal/plural"
-    },
-    {
-      "word_id": "ils-veulent-fr",
-      "fr": "ils veulent",
-      "gloss": "they want (masc)",
-      "note": "irregular"
-    },
-    {
-      "word_id": "elles-veulent-fr",
-      "fr": "elles veulent",
-      "gloss": "they want (fem)",
-      "note": "same as ils"
-    },
-    {
       "word_id": "s-il-te-plait-fr",
       "fr": "s'il te plaît",
       "gloss": "please (to a friend)"
@@ -333,5 +285,79 @@
         }
       ]
     }
-  ]
+  ],
+  "conjugation": {
+    "verb": "vouloir",
+    "en": "to want",
+    "pattern": "irregular",
+    "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}.",
+    "groups": [
+      {
+        "id": "veu",
+        "sound": "/vø/"
+      },
+      {
+        "id": "veul",
+        "sound": "/vœl/"
+      },
+      {
+        "id": "voulez",
+        "sound": "/vu.le/"
+      },
+      {
+        "id": "voulons",
+        "sound": "/vu.lɔ̃/"
+      }
+    ],
+    "rows": [
+      {
+        "person": "je",
+        "form": "veux",
+        "en": "I want",
+        "group": "veu",
+        "stem": "veu",
+        "silent": "x"
+      },
+      {
+        "person": "tu",
+        "form": "veux",
+        "en": "you want (to one person you know well)",
+        "group": "veu",
+        "stem": "veu",
+        "silent": "x"
+      },
+      {
+        "person": "il/elle/on",
+        "form": "veut",
+        "en": "he wants, she wants, we want (on)",
+        "group": "veu",
+        "stem": "veu",
+        "silent": "t"
+      },
+      {
+        "person": "vous",
+        "form": "voulez",
+        "en": "you want (polite, or to more than one)",
+        "group": "voulez",
+        "stem": "voul",
+        "silent": "z"
+      },
+      {
+        "person": "ils/elles",
+        "form": "veulent",
+        "en": "they want",
+        "group": "veul",
+        "stem": "veul",
+        "silent": "ent"
+      },
+      {
+        "person": "nous",
+        "form": "voulons",
+        "en": "we want",
+        "group": "voulons",
+        "stem": "voul",
+        "silent": "s"
+      }
+    ]
+  }
 }

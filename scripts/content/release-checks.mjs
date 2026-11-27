@@ -1,7 +1,7 @@
 // L's release checks that need no database (domains/curriculum.md section 3), run on a built bundle and, where a
 // check needs one, the last published bundle. A bundle L would refuse fails here first. Problems are L's
 // ReleaseProblem objects: { code, severity, module_key, section_id, detail }.
-import { STEPS_BY_KIND } from './schema/module.mjs';
+import { STEPS_BY_KIND, VERB_STEP } from './schema/module.mjs';
 import { accessTier, canonicalJson } from './bundle.mjs';
 
 const problem = (code, module_key, section_id, detail, severity = 'error') => ({ code, severity, module_key: module_key ?? null, section_id: section_id ?? null, detail });
@@ -74,7 +74,9 @@ export function releaseProblems(bundle, previous = null, { warnUnits = new Set()
   // section_id_invalid, estimate_invalid, access_rule_broken
   for (const e of bundle.entries) {
     const ids = e.steps.map((s) => s.section_id);
-    const fixed = STEPS_BY_KIND[e.kind] || [];
+    // A lesson may add the verb step right after vocabulary-intro (L's OPTIONAL_STEPS).
+    const fixed = [...(STEPS_BY_KIND[e.kind] || [])];
+    if (e.kind === 'lesson' && ids.includes(VERB_STEP)) fixed.splice(fixed.indexOf('vocabulary-intro') + 1, 0, VERB_STEP);
     if (ids.join() !== fixed.join()) out.push(problem('section_id_invalid', e.module_key, null, `a ${e.kind} runs ${fixed.join(', ')}; ${e.module_key} has ${ids.join(', ')}`));
     for (const s of e.steps) {
       if (s.counted && !(s.estimate_minutes > 0)) out.push(problem('estimate_invalid', e.module_key, s.section_id, `counted step with ${s.estimate_minutes} minutes`));

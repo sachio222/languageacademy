@@ -11,6 +11,8 @@
 //                         per blank after the first
 //   reading-passage       passage words at words_per_minute, s_per_popup per vocabulary row, s_per_question per item
 //   interactive-help      the guide's minutes
+//   verb-forms            s_full_step for a new verb or a pattern's model, s_like_step for a verb shaped like its
+//                         model, s_pattern_check for a regular -er verb after its model
 // Conversation is a step L marks "soon": it holds nothing and is not estimated.
 // Review minutes: round((new words × reviews_per_word × s_review_word + constructions × reviews_per_construction ×
 // s_review_construction) ÷ 60). Practice sets and unit exams teach nothing, so they add none.
@@ -18,7 +20,7 @@
 // A stub (status planned) has no contents yet: it is estimated as if written to its recipe, with its plan words as
 // vocabulary rows and phrases, one concept card per plan construction, and items = opts.items (the blueprint's count)
 // or the recipe's size.items.max, split by mix.typical, with mistakes.items_with_mistakes_min of them also in Writing.
-import { STEPS_BY_KIND, defaultSteps } from '../schema/module.mjs';
+import { moduleSteps, defaultSteps } from '../schema/module.mjs';
 
 export const SOON_STEPS = new Set(['conversation']);
 const v = (c) => c.value;
@@ -104,6 +106,14 @@ export function stepSeconds(module, stepId, time) {
     }
     case 'interactive-help':
       return (module.minutes ?? 0) * 60;
+    case 'verb-forms': {
+      // The full step for a new verb (and for a pattern's model verb), a shorter one for a verb shaped like its model,
+      // a quick check for a regular -er verb once its model had the full step.
+      const c = module.conjugation ?? {}, vf = s['verb-forms'];
+      if (c.pattern === 'like') return v(vf.s_like_step);
+      if (c.pattern === 'er' && c.model !== c.verb) return v(vf.s_pattern_check);
+      return v(vf.s_full_step);
+    }
     default:
       return itemsIn(stepId).reduce((n, it) => n + itemSeconds(it, time), 0);
   }
@@ -135,7 +145,7 @@ export function reviewMinutes(module, time, opts = {}) {
 export function moduleMinutes(module, time, opts = {}) {
   const counted = module.status === 'planned' ? projectedModule(module, opts.recipe, opts) : module;
   const steps = {};
-  for (const sid of STEPS_BY_KIND[module.kind] ?? []) if (!SOON_STEPS.has(sid)) steps[sid] = stepMinutes(counted, sid, time);
+  for (const sid of moduleSteps(counted)) if (!SOON_STEPS.has(sid)) steps[sid] = stepMinutes(counted, sid, time);
   const first_pass = Object.values(steps).reduce((a, b) => a + b, 0);
   return { steps, first_pass, review: reviewMinutes(module, time, opts) };
 }

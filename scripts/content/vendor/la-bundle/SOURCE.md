@@ -5,14 +5,14 @@ Copied from prototype L's build spec in the product vault, so `pnpm content:test
 | | |
 |---|---|
 | Source | `projects/product/mockups/2026-11-23-dashboard-revisions/prototypes/build-spec/` in the product vault |
-| L commit that last changed these files | `d8714f1 2026-11-26T16:59:50-05:00` |
-| Vault HEAD when copied | `cf55739` |
+| L commit that last changed these files | `5f7836b 2026-11-26T22:31:04-05:00` |
+| Vault HEAD when copied | `a93b672` |
 
 | File | SHA-256 |
 |---|---|
-| `check/check_bundle.py` | `474128f4fd12a7aa197df41060d19683e7a746713278a2762e6aa03145bbc291` |
-| `contracts/curriculum.bundle.schema.json` | `f9fc7523c57d3da02f81e8717795f39baee5a6af9b7967be6f5aa436e97f361d` |
+| `check/check_bundle.py` | `c8cf1ce0503619cb9dca91b44d72f98d0c3083fbbf6010a801db84159eb615b8` |
+| `contracts/curriculum.bundle.schema.json` | `8b8fcc7f5742ad6b39f9936ed8565981223b77e05a6ced9a847786ae24d97218` |
 | `contracts/common.openapi.json` | `ebddbba3470ade1e19242f97dc4a35a6acf5b0878690a5057d6483d73f034d4f` |
-| `contracts/curriculum.openapi.json` | `32baf1a94dc6bb09e6c77692c0d2c1d9627f74610a6e3a247aa3a2a8809c351c` |
+| `contracts/curriculum.openapi.json` | `f1b88be81cf4278eb6249ce05abe2a84a73c3c529e9981a231fe8df5af6073d9` |
 
 Run: `python3 scripts/content/vendor/la-bundle/check/check_bundle.py <bundle.json> [--json]` (Python 3.9 or later, no packages; exit 0 ok, 1 errors, 2 usage). The checker reads `../contracts` beside its own folder, so keep the layout.

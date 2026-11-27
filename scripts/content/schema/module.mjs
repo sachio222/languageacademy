@@ -17,6 +17,16 @@ export const STEPS_BY_KIND = {
   reference: [],
 };
 
+// L's verb step (Verb forms): a lesson whose module has a conjugation runs it right after vocabulary-intro. No item is
+// placed in it; its body is the conjugation (bundle.mjs verbFormsBody).
+export const VERB_STEP = 'verb-forms';
+/** A module's steps in order: its kind's steps, with the verb step after vocabulary-intro in a lesson that has a conjugation. */
+export function moduleSteps(mod) {
+  const steps = [...(STEPS_BY_KIND[mod?.kind] || [])];
+  if (mod?.kind === 'lesson' && mod.conjugation && typeof mod.conjugation === 'object') steps.splice(steps.indexOf('vocabulary-intro') + 1, 0, VERB_STEP);
+  return steps;
+}
+
 // Spec 5.4, "Steps it may appear in". choice: "any scored step" that holds authored items.
 export const TYPE_STEPS = {
   translate: ['writing', 'lesson-exam', 'exam-questions'], // a unit exam asks translations too; outside Unit 1 each is a warning
@@ -178,12 +188,34 @@ const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), exa
 // fr is the form as the French spells it (1 to 100 characters), en its meaning (1 to 200), note how it relates to the
 // word the learner knows, French in braces (at most 200). A form the module teaches as a card is gloss_is_card.
 const GLOSSES = LIST(OBJ({ fr: S('fr', 100), en: S('native', 200), note: S('native_fr', 200) }, ['fr', 'en']), { unique: 'fr' });
+// A lesson's conjugation: the data of L's verb step (Verb forms). verb and en name the verb; pattern says how it is
+// taught: irregular (the full step), er (a regular -er verb, a short check once its model verb had the full step), or
+// like (a verb that shares a model's shape). groups are the forms that sound alike, each with its sound in slashes.
+// rows go in order of use in speech; each names its group, its stem (the start of the form, coloured) and its silent
+// letters (the end of the form, greyed). person is written as the learner reads it: je, j', il/elle/on, ils/elles.
+const CONJUGATION_ROW = OBJ(
+  // stem and silent are pieces of the form, not French to read on their own, so the checker reads only person and form.
+  { person: S('fr'), form: S('fr'), en: S('native'), group: KEY, stem: MATCH(/^\S+$/, 60), silent: MATCH(/^\S+$/, 20) },
+  ['person', 'form', 'en', 'group', 'stem'],
+);
+const CONJUGATION = OBJ(
+  {
+    verb: S('fr'),
+    en: S('native'),
+    pattern: ENUM(['irregular', 'er', 'like']),
+    model: S('fr'),
+    note: S('native_fr'),
+    groups: LIST(OBJ({ id: ID, sound: MATCH(/^\/[^/\s][^/]*\/$/, 40) }, ['id', 'sound']), { nonEmpty: true, unique: 'id' }),
+    rows: LIST(CONJUGATION_ROW, { nonEmpty: true, unique: 'person' }),
+  },
+  ['verb', 'en', 'pattern', 'groups', 'rows'],
+);
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY, note: S('native') }, ['words', 'constructions', 'source']);
 
 export const KIND_SCHEMAS = {
   lesson: {
     // A lesson teaches at least one word: Flash Cards, Speed Match and Pronunciation are made from its vocabulary.
-    fields: { vocabulary: LIST(LESSON_WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }), glosses: GLOSSES },
+    fields: { vocabulary: LIST(LESSON_WORD, { unique: 'word_id', nonEmpty: true }), concepts: CONCEPTS, tables: TABLES, phrases: PHRASES, speed_match: LIST(KEY), items: ITEMS, options: OBJ({ study_mode: BOOL }), glosses: GLOSSES, conjugation: CONJUGATION },
     required: ['vocabulary', 'items'],
   },
   guide: {
@@ -374,6 +406,7 @@ function kindRules(mod, cx) {
     else if (!mod.speed_match.every((w) => words.has(w)))
       bad('speed_match', 'speed_match_invalid', 'speed_match lists only word_ids from this lesson’s vocabulary');
   }
+  if (kind === 'lesson' && isObj(mod.conjugation)) conjugationRules(mod.conjugation, cx);
   if (kind === 'reading' && Array.isArray(mod.passage)) {
     mod.passage.forEach((b, i) => {
       if (!isObj(b)) return;
@@ -387,6 +420,35 @@ function kindRules(mod, cx) {
       });
     }
   }
+}
+
+// The verb step's data holds together: each row's group exists and every group has a row; the stem starts the form
+// and the silent letters end it, without overlapping; a verb taught by a pattern names its model verb.
+function conjugationRules(c, cx) {
+  const { bad } = cx;
+  const groups = Array.isArray(c.groups) ? c.groups.filter(isObj) : [];
+  const rows = Array.isArray(c.rows) ? c.rows : [];
+  const ids = new Set(groups.map((g) => g.id));
+  const used = new Set();
+  rows.forEach((r, i) => {
+    if (!isObj(r)) return;
+    if (isStr(r.group)) {
+      used.add(r.group);
+      if (!ids.has(r.group)) bad(`conjugation.rows[${i}].group`, 'conjugation_group_unknown', `${r.group} is not one of the conjugation's sound groups`);
+    }
+    if (!isStr(r.form)) return;
+    const stemOk = !isStr(r.stem) || r.form.startsWith(r.stem);
+    const silentOk = r.silent === undefined || (isStr(r.silent) && r.form.endsWith(r.silent));
+    if (!stemOk) bad(`conjugation.rows[${i}].stem`, 'conjugation_split_invalid', `the stem ${r.stem} does not start the form ${r.form}`);
+    if (!silentOk) bad(`conjugation.rows[${i}].silent`, 'conjugation_split_invalid', `the silent letters ${r.silent} do not end the form ${r.form}`);
+    if (stemOk && silentOk && isStr(r.stem) && isStr(r.silent) && r.stem.length + r.silent.length > r.form.length)
+      bad(`conjugation.rows[${i}].silent`, 'conjugation_split_invalid', `the stem and the silent letters overlap in ${r.form}`);
+  });
+  groups.forEach((g, i) => {
+    if (isStr(g.id) && !used.has(g.id)) bad(`conjugation.groups[${i}]`, 'conjugation_group_empty', `no row sounds like group ${g.id}`);
+  });
+  if ((c.pattern === 'er' || c.pattern === 'like') && !isStr(c.model))
+    bad('conjugation.model', 'conjugation_model_missing', `a verb taught as ${c.pattern} names its model verb`);
 }
 
 // A gloss and a word card are the same form when they match after this: lower case, every apostrophe as ', and each

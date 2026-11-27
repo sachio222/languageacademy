@@ -11,6 +11,11 @@
       "s_per_concept": { "value": 40, "basis": "working" },
       "s_per_table_row": { "value": 5, "basis": "working" }
     },
+    "verb-forms": {
+      "s_full_step": { "value": 240, "basis": "research:2026-11-27-verb-forms-research.md (sound map 30 s, meet each form 60 to 80 s, recall 60 to 90 s, who is it 45 s)" },
+      "s_like_step": { "value": 90, "basis": "research:2026-11-27-verb-forms-research.md (sound map and recall only)" },
+      "s_pattern_check": { "value": 20, "basis": "research:2026-11-27-verb-forms-research.md (two typed recalls)" }
+    },
     "pronunciation": { "s_per_phrase": { "value": 20, "basis": "working" } },
     "flash-cards": { "s_per_word_pass": { "value": 8, "basis": "working" }, "passes": { "value": 2, "basis": "working" } },
     "speed-match": { "s_per_round": { "value": 60, "basis": "working" }, "round_size": { "value": 6, "basis": "l:SPEED_MATCH_SIZE" } },

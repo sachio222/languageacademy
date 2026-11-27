@@ -37,6 +37,16 @@ const plain = (text) => parseSpans(text).map((s) => s.text).join('');
 const tidy = (s) => s.replace(/\s+/g, ' ').trim();
 const spansOf = (text) => frenchSpans(text).map((s) => s.trim()).filter(Boolean);
 
+/** A conjugation's forms with their persons, as the learner reads them: il/elle/on veut gives il veut, elle veut, on veut. */
+export function conjugationForms(c) {
+  if (!c || !Array.isArray(c.rows)) return [];
+  return c.rows.flatMap((r) =>
+    typeof r?.person === 'string' && typeof r?.form === 'string'
+      ? r.person.split('/').map((p) => p.trim()).filter(Boolean).map((p) => (p.endsWith("'") ? p + r.form : `${p} ${r.form}`))
+      : [],
+  );
+}
+
 // "parts[2].blocks[1].lines[0][0]" -> "parts/p-no-more/blocks/1/lines/0/0", naming id-carrying entries by their id.
 export function refPath(mod, path) {
   const tokens = [...path.matchAll(/([A-Za-z_]+)|\[(\d+)\]/g)].map((m) => (m[1] !== undefined ? m[1] : Number(m[2])));
@@ -230,7 +240,10 @@ export function readCourseFromContent(course, opts = {}) { // eslint-disable-lin
         // Each vocab entry's part_of_speech (or null), in step with vocab.
         vocabPos: teachingRows(mod).map((v) => v.part_of_speech ?? null),
         // The French of a lesson's conjugation tables: the forms they show count as taught (extract-teaches.mjs).
-        tableForms: mod.kind === 'lesson' ? (mod.tables ?? []).flatMap((t) => (t.rows ?? []).map((r) => r.fr)).filter((f) => typeof f === 'string') : [],
+        // A conjugation (the verb step's data) teaches its forms the same way, one per person.
+        tableForms: mod.kind === 'lesson'
+          ? [...(mod.tables ?? []).flatMap((t) => (t.rows ?? []).map((r) => r.fr)), ...conjugationForms(mod.conjugation)].filter((f) => typeof f === 'string')
+          : [],
         conceptTerms: (mod.concepts ?? []).map((c) => plain(c.term)).filter(Boolean),
         items,
         shapes,

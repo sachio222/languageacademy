@@ -739,23 +739,10 @@
       "2024-01-29-partir.5": "i-nous-partons",
       "2024-01-29-partir.6": "i-vous-partez",
       "2024-01-29-partir.7": "i-ils-partent",
-      "2024-01-29-partir.8": "i-elles-partent",
-      "2024-01-29-partir.9": "i-je-pars-de-ca",
-      "2024-01-29-partir.10": "i-qu-est-ce-que",
-      "2024-01-29-partir.11": "i-il-part-de-ca",
-      "2024-01-29-partir.12": "i-nous-partons-de-ca",
-      "2024-01-29-partir.13": "i-qu-est-ce-que-2",
-      "2024-01-29-partir.14": "i-je-veux-partir-de",
-      "2024-01-29-partir.15": "i-peux-tu-partir",
-      "2024-01-29-partir.16": "i-je-peux-partir-de",
-      "2024-01-29-partir.17": "i-je-vais-partir-de",
-      "2024-01-29-partir.18": "i-qu-est-ce-que-3",
-      "2024-01-29-partir.19": "i-je-viens-partir-de",
-      "2024-01-29-partir.20": "i-pourquoi-viens-tu-partir"
+      "2024-01-29-partir.8": "i-elles-partent"
     },
     "concepts": {
       "0": "c-partir-to-leave-to",
-      "1": "c-regular-ir-conjugation",
       "2": "c-composition-power"
     }
   },

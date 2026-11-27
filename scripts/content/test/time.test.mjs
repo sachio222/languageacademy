@@ -90,3 +90,14 @@ test('a stub counts its plan words and the recipe’s typical items', () => {
   assert.ok(m.steps['lesson-exam'] >= 10, 'twenty typical items take about 12 minutes');
   assert.equal(m.review, Math.round((2 * 4 * 6 + 1 * 3 * 40) / 60));
 });
+
+test('the verb step: about 4 minutes for a new verb, 90 seconds for one shaped like its model, 20 for a regular -er verb', () => {
+  const rows = [{ person: 'je', form: 'veux', en: 'I want', group: 'a', stem: 'veu' }];
+  const withVerb = (c) => ({ ...structuredClone(EXAMPLE_LESSON), conjugation: { verb: 'x', en: 'x', groups: [{ id: 'a', sound: '/a/' }], rows, ...c } });
+  assert.equal(moduleMinutes(withVerb({ pattern: 'irregular' }), time).steps['verb-forms'], 4);
+  assert.equal(moduleMinutes(withVerb({ pattern: 'like', model: 'vouloir' }), time).steps['verb-forms'], 2);
+  assert.equal(moduleMinutes(withVerb({ pattern: 'er', model: 'parler' }), time).steps['verb-forms'], 1);
+  // The model verb itself gets the full step.
+  assert.equal(moduleMinutes(withVerb({ pattern: 'er', model: 'parler', verb: 'parler' }), time).steps['verb-forms'], 4);
+  assert.equal(moduleMinutes(EXAMPLE_LESSON, time).steps['verb-forms'], undefined);
+});

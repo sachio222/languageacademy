@@ -341,3 +341,19 @@ test('a reading table that lists a noun spelled like a verb form credits the nou
   for (const id of ['fr:lex:cuisiner', 'fr:lex:rencontrer', 'fr:form:sortir.ptcp.f']) assert.ok(!r9.includes(id), id);
   assert.ok(ctx.graph.courseMap['2024-05-20-reading-8'].teachesWords.includes('fr:lex:cuisine'));
 });
+
+test("a lesson's conjugation teaches each person's form, the way a table row does", async () => {
+  const { conjugationForms } = await import('../content-course.mjs');
+  assert.deepEqual(
+    conjugationForms({
+      rows: [
+        { person: 'je', form: 'veux' },
+        { person: "j'", form: 'ouvre' },
+        { person: 'il/elle/on', form: 'veut' },
+        { person: 'ils/elles', form: 'veulent' },
+      ],
+    }),
+    ['je veux', "j'ouvre", 'il veut', 'elle veut', 'on veut', 'ils veulent', 'elles veulent'],
+  );
+  assert.deepEqual(conjugationForms(undefined), []);
+});

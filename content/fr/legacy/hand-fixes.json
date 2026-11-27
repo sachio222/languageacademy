@@ -214,11 +214,93 @@
         "example": "{je veux + ça, nous voulons + être, ils veulent + avoir + un livre}"
       }
     ],
+    "conjugation": {
+      "verb": "vouloir",
+      "en": "to want",
+      "pattern": "irregular",
+      "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}.",
+      "groups": [
+        {
+          "id": "veu",
+          "sound": "/vø/"
+        },
+        {
+          "id": "veul",
+          "sound": "/vœl/"
+        },
+        {
+          "id": "voulez",
+          "sound": "/vu.le/"
+        },
+        {
+          "id": "voulons",
+          "sound": "/vu.lɔ̃/"
+        }
+      ],
+      "rows": [
+        {
+          "person": "je",
+          "form": "veux",
+          "en": "I want",
+          "group": "veu",
+          "stem": "veu",
+          "silent": "x"
+        },
+        {
+          "person": "tu",
+          "form": "veux",
+          "en": "you want (to one person you know well)",
+          "group": "veu",
+          "stem": "veu",
+          "silent": "x"
+        },
+        {
+          "person": "il/elle/on",
+          "form": "veut",
+          "en": "he wants, she wants, we want (on)",
+          "group": "veu",
+          "stem": "veu",
+          "silent": "t"
+        },
+        {
+          "person": "vous",
+          "form": "voulez",
+          "en": "you want (polite, or to more than one)",
+          "group": "voulez",
+          "stem": "voul",
+          "silent": "z"
+        },
+        {
+          "person": "ils/elles",
+          "form": "veulent",
+          "en": "they want",
+          "group": "veul",
+          "stem": "veul",
+          "silent": "ent"
+        },
+        {
+          "person": "nous",
+          "form": "voulons",
+          "en": "we want",
+          "group": "voulons",
+          "stem": "voul",
+          "silent": "s"
+        }
+      ]
+    },
+    "vocabulary/elle-veut-fr": null,
+    "vocabulary/elles-veulent-fr": null,
+    "vocabulary/il-veut-fr": null,
+    "vocabulary/ils-veulent-fr": null,
+    "vocabulary/je-veux-fr": null,
+    "vocabulary/nous-voulons-fr": null,
     "vocabulary/s-il-te-plait-fr": {
       "word_id": "s-il-te-plait-fr",
       "fr": "s'il te plaît",
       "gloss": "please (to a friend)"
-    }
+    },
+    "vocabulary/tu-veux-fr": null,
+    "vocabulary/vous-voulez-fr": null
   },
   "2024-01-17-voir": {
     "concepts": [
@@ -1068,6 +1150,320 @@
       "gloss": "Marie wants to leave early. I think it's good to leave early.",
       "hint": "c'est + adjective + ? + infinitive"
     }
+  },
+  "2024-01-29-partir": {
+    "concepts": [
+      {
+        "id": "c-partir-to-leave-to",
+        "term": "{partir} = to leave / to depart",
+        "definition": "Common verb for leaving a place or departing",
+        "example": "Essential for talking about travel and movement away from places"
+      },
+      {
+        "id": "c-regular-ir-conjugation",
+        "term": "The t you hear only in the plural",
+        "definition": "In {je pars}, {tu pars} and {il part} you hear no t. In {ils partent}, {vous partez} and {nous partons} the t comes back and is heard.",
+        "example": "{il part} (no t heard), {ils partent} (t heard)"
+      },
+      {
+        "id": "c-composition-power",
+        "term": "Composition Power",
+        "definition": "{partir} slots into the verbs you know: {vouloir}, {pouvoir} and {aller} each take it straight after.",
+        "example": "{je veux partir}, {tu peux partir}, {on va partir}"
+      }
+    ],
+    "conjugation": {
+      "verb": "partir",
+      "en": "to leave",
+      "pattern": "irregular",
+      "note": "{partir} drops its t in {je pars}, {tu pars} and {il part}, where you hear no t. The t comes back, and is heard, in {ils partent}, {vous partez} and {nous partons}.",
+      "groups": [
+        {
+          "id": "par",
+          "sound": "/paʁ/"
+        },
+        {
+          "id": "part",
+          "sound": "/paʁt/"
+        },
+        {
+          "id": "partez",
+          "sound": "/paʁ.te/"
+        },
+        {
+          "id": "partons",
+          "sound": "/paʁ.tɔ̃/"
+        }
+      ],
+      "rows": [
+        {
+          "person": "je",
+          "form": "pars",
+          "en": "I'm leaving",
+          "group": "par",
+          "stem": "par",
+          "silent": "s"
+        },
+        {
+          "person": "tu",
+          "form": "pars",
+          "en": "you're leaving (to one person you know well)",
+          "group": "par",
+          "stem": "par",
+          "silent": "s"
+        },
+        {
+          "person": "il/elle/on",
+          "form": "part",
+          "en": "he's leaving, she's leaving, we're leaving (on)",
+          "group": "par",
+          "stem": "par",
+          "silent": "t"
+        },
+        {
+          "person": "vous",
+          "form": "partez",
+          "en": "you're leaving (polite, or to more than one)",
+          "group": "partez",
+          "stem": "part",
+          "silent": "z"
+        },
+        {
+          "person": "ils/elles",
+          "form": "partent",
+          "en": "they're leaving",
+          "group": "part",
+          "stem": "part",
+          "silent": "ent"
+        },
+        {
+          "person": "nous",
+          "form": "partons",
+          "en": "we're leaving",
+          "group": "partons",
+          "stem": "part",
+          "silent": "s"
+        }
+      ]
+    },
+    "items/i-elle-part-avec-qui": {
+      "id": "i-elle-part-avec-qui",
+      "type": "respond",
+      "hint": "{je viens partir + de ça}",
+      "situation": "Your sister is leaving the party. Ask who she is leaving with.",
+      "cue": "Who is she leaving with?",
+      "answer": "elle part avec qui ?",
+      "accept": [
+        "avec qui part-elle ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "elle pars avec qui ?",
+          "feedback": "With {elle} it is {part}, like {il part}."
+        }
+      ]
+    },
+    "items/i-il-part-avec-elle": {
+      "id": "i-il-part-avec-elle",
+      "type": "respond",
+      "hint": "{il part + de ça}",
+      "situation": "Someone asks where your brother is. He is leaving with your sister.",
+      "cue": "He's leaving with her",
+      "answer": "il part avec elle",
+      "mistakes": [
+        {
+          "answer": "il pars avec elle",
+          "feedback": "With {il} it is {part}, ending in a t you do not hear."
+        }
+      ]
+    },
+    "items/i-il-part-de-ca": null,
+    "items/i-je-pars-avec-toi": {
+      "id": "i-je-pars-avec-toi",
+      "type": "respond",
+      "hint": "{je pars + de ça}",
+      "situation": "Your friend asks if you are coming to the café. You are leaving, and you want her to come too.",
+      "cue": "I'm leaving with you",
+      "answer": "je pars avec toi",
+      "mistakes": [
+        {
+          "answer": "je part avec toi",
+          "feedback": "With {je} it is {pars}, with an s you do not hear."
+        }
+      ]
+    },
+    "items/i-je-pars-de-ca": null,
+    "items/i-je-peux-partir-avec-vous": {
+      "id": "i-je-peux-partir-avec-vous",
+      "type": "respond",
+      "hint": "{je peux partir + de ça}",
+      "situation": "Your teacher is leaving too. Tell her you can leave with her, politely.",
+      "cue": "I can leave with you",
+      "answer": "je peux partir avec vous",
+      "accept": [
+        "je peux partir avec toi"
+      ],
+      "mistakes": [
+        {
+          "answer": "je peux pars avec vous",
+          "feedback": "After {peux}, the verb stays whole: {partir}."
+        }
+      ]
+    },
+    "items/i-je-peux-partir-de": null,
+    "items/i-je-vais-partir-de": null,
+    "items/i-je-vais-partir-en-normandie": {
+      "id": "i-je-vais-partir-en-normandie",
+      "type": "respond",
+      "hint": "{je vais partir + de ça}",
+      "situation": "A friend asks about your summer.",
+      "cue": "I'm going to leave for Normandy",
+      "answer": "je vais partir en Normandie",
+      "mistakes": [
+        {
+          "answer": "je vais pars en Normandie",
+          "feedback": "After {vais}, the verb stays whole: {partir}."
+        }
+      ]
+    },
+    "items/i-je-veux-partir": {
+      "id": "i-je-veux-partir",
+      "type": "respond",
+      "hint": "{je veux partir + de ça}",
+      "situation": "It is late and you are tired. Tell your friends.",
+      "cue": "I want to leave",
+      "answer": "je veux partir",
+      "mistakes": [
+        {
+          "answer": "je veux pars",
+          "feedback": "After {veux}, the verb stays whole: {partir}."
+        }
+      ]
+    },
+    "items/i-je-veux-partir-de": null,
+    "items/i-je-viens-partir-de": null,
+    "items/i-nous-partons-de-ca": null,
+    "items/i-nous-partons-en-normandie": {
+      "id": "i-nous-partons-en-normandie",
+      "type": "respond",
+      "hint": "{nous partons + de ça}",
+      "situation": "A neighbour asks about your weekend plans. Your family is going to Normandy.",
+      "cue": "We're leaving for Normandy",
+      "answer": "nous partons en Normandie",
+      "accept": [
+        "on part en Normandie"
+      ],
+      "mistakes": [
+        {
+          "answer": "nous pars en Normandie",
+          "feedback": "With {nous} it is {partons}: the t comes back."
+        }
+      ]
+    },
+    "items/i-peux-tu-partir": null,
+    "items/i-pourquoi-ils-partent": {
+      "id": "i-pourquoi-ils-partent",
+      "type": "respond",
+      "hint": "{pourquoi viens-tu partir}",
+      "situation": "Your neighbours are packing their car. Ask why they are leaving.",
+      "cue": "Why are they leaving?",
+      "answer": "pourquoi est-ce qu'ils partent ?",
+      "accept": [
+        "pourquoi partent-ils ?",
+        "ils partent pourquoi ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce qu'ils part ?",
+          "feedback": "With {ils} it is {partent}: the t comes back, and you hear it."
+        }
+      ]
+    },
+    "items/i-pourquoi-tu-veux-partir": {
+      "id": "i-pourquoi-tu-veux-partir",
+      "type": "respond",
+      "hint": "{qu'est-ce que tu veux partir}",
+      "situation": "Your friend says she does not like the party. Ask her why she wants to leave.",
+      "cue": "Why do you want to leave?",
+      "answer": "pourquoi est-ce que tu veux partir ?",
+      "accept": [
+        "pourquoi veux-tu partir ?",
+        "pourquoi tu veux partir ?",
+        "tu veux partir pourquoi ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "pourquoi est-ce que tu veux pars ?",
+          "feedback": "After {veux}, the verb stays whole: {partir}."
+        }
+      ]
+    },
+    "items/i-pourquoi-viens-tu-partir": null,
+    "items/i-qu-est-ce-que": null,
+    "items/i-qu-est-ce-que-2": null,
+    "items/i-qu-est-ce-que-3": null,
+    "items/i-quand-tu-pars": {
+      "id": "i-quand-tu-pars",
+      "type": "respond",
+      "hint": "{qu'est-ce que tu pars}",
+      "situation": "Your friend has her coat on. Ask her when she is leaving.",
+      "cue": "When are you leaving?",
+      "answer": "quand est-ce que tu pars ?",
+      "accept": [
+        "quand pars-tu ?",
+        "tu pars quand ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "quand est-ce que tu part ?",
+          "feedback": "With {tu} it is {pars}, like {je pars}."
+        }
+      ]
+    },
+    "items/i-quand-tu-vas-partir": {
+      "id": "i-quand-tu-vas-partir",
+      "type": "respond",
+      "hint": "{qu'est-ce que tu vas partir}",
+      "situation": "Your friend says she is going away. Ask her when.",
+      "cue": "When are you going to leave?",
+      "answer": "quand est-ce que tu vas partir ?",
+      "accept": [
+        "quand vas-tu partir ?",
+        "tu vas partir quand ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "quand est-ce que tu vas pars ?",
+          "feedback": "After {vas}, the verb stays whole: {partir}."
+        }
+      ]
+    },
+    "items/i-tu-peux-partir": {
+      "id": "i-tu-peux-partir",
+      "type": "respond",
+      "hint": "{peux-tu partir}",
+      "situation": "Your friend has a train to catch. Ask if she can leave now.",
+      "cue": "Can you leave?",
+      "answer": "tu peux partir ?",
+      "accept": [
+        "peux-tu partir ?",
+        "est-ce que tu peux partir ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "tu peux pars ?",
+          "feedback": "After {peux}, the verb stays whole: {partir}."
+        }
+      ]
+    },
+    "vocabulary/elle-part-fr": null,
+    "vocabulary/elles-partent-fr": null,
+    "vocabulary/il-part-fr": null,
+    "vocabulary/ils-partent-fr": null,
+    "vocabulary/je-pars-fr": null,
+    "vocabulary/nous-partons-fr": null,
+    "vocabulary/tu-pars-fr": null,
+    "vocabulary/vous-partez-fr": null
   },
   "2024-01-30-past-regret-phrases": {
     "items/i-elle-a-commence-a-parler": {

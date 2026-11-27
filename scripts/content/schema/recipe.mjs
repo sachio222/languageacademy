@@ -75,6 +75,7 @@ const TIME_SHAPE = {
   smallest_daily_minutes: null, review_minutes_per_session: null, days: null,
   steps: {
     'vocabulary-intro': { s_per_word: null, s_per_concept: null, s_per_table_row: null },
+    'verb-forms': { s_full_step: null, s_like_step: null, s_pattern_check: null },
     pronunciation: { s_per_phrase: null },
     'flash-cards': { s_per_word_pass: null, passes: null },
     'speed-match': { s_per_round: null, round_size: null },

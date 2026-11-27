@@ -8,7 +8,7 @@
 // build.built_at: canonicalJson sorts every key, and arrays follow the outline.
 import { createHash } from 'node:crypto';
 import { FREE_UNIT_KEY } from './assemble.mjs';
-import { STEPS_BY_KIND } from './schema/module.mjs';
+import { moduleSteps } from './schema/module.mjs';
 import { BLANK_MARKER, blankCount } from './schema/item.mjs';
 
 export const FORMAT = 'la-bundle@1';
@@ -21,6 +21,7 @@ const REFERENCE_HAS_NO_TIER = null;
 // own `minutes`.
 export const STEP_DEFS = {
   'vocabulary-intro': { name: 'Vocabulary Intro', short_name: 'Vocabulary', estimate: 2, scored: false },
+  'verb-forms': { name: 'Verb forms', short_name: 'Verb forms', estimate: 4, scored: true },
   pronunciation: { name: 'Pronunciation', short_name: 'Pronunciation', estimate: 3, scored: true },
   'flash-cards': { name: 'Flash Cards', short_name: 'Flash Cards', estimate: 2, scored: true },
   'speed-match': { name: 'Speed Match', short_name: 'Speed Match', estimate: 1, scored: true },
@@ -181,6 +182,7 @@ function guideCheckItem(c) {
 
 /** Speed Match: one pair item from `speed_match` (six word_ids) or, by default, the lesson's first six words. */
 function speedMatchItem(m, words, taken) {
+  if (m.conjugation && !Array.isArray(m.speed_match)) return formPairsItem(m, taken);
   const ids = Array.isArray(m.speed_match) ? m.speed_match : words.slice(0, SPEED_MATCH_SIZE).map((w) => w.word_id);
   const cards = ids.map((id) => words.find((w) => w.word_id === id)).filter(Boolean);
   if (!cards.length) return null;
@@ -194,6 +196,31 @@ function speedMatchItem(m, words, taken) {
     answer_key: { pairs: cards.map((_, k) => ({ left_id: card('l', k), right_id: card('r', k) })) },
     miss_text: null,
     word_ids: cards.map((w) => w.word_id),
+  };
+}
+
+// A verb lesson's Speed Match: each person with its form (je with veux), so the round tests the ending, never the
+// pronoun. One pair per spelling, the first person that spells it, so no form has two right partners. It is a new
+// question, so it takes its own id (FORM_PAIRS_ID): ids are frozen once released (L item_id_reused).
+const FORM_PAIRS_ID = `${SPEED_MATCH_ID}-forms`;
+function formPairsItem(m, taken) {
+  if (taken.has(FORM_PAIRS_ID)) throw new Error(`${m.module_key}: item id ${FORM_PAIRS_ID} is taken, so Speed Match has no id`);
+  const seen = new Set();
+  const pairs = [];
+  for (const r of m.conjugation.rows) {
+    if (seen.has(r.form)) continue;
+    seen.add(r.form);
+    pairs.push([String(r.person).split('/')[0].trim(), r.form]);
+  }
+  const card = (side, k) => `${FORM_PAIRS_ID}.${side}${k + 1}`;
+  return {
+    item_id: FORM_PAIRS_ID,
+    kind: 'pair',
+    prompt: { text: 'Match each person to its form.', left_label: 'Person', right_label: `Form of {${m.conjugation.verb}}` },
+    choices: [...pairs.map((p, k) => ({ choice_id: card('l', k), text: p[0] })), ...pairs.map((p, k) => ({ choice_id: card('r', k), text: p[1] }))],
+    answer_key: { pairs: pairs.map((_, k) => ({ left_id: card('l', k), right_id: card('r', k) })) },
+    miss_text: null,
+    word_ids: [],
   };
 }
 
@@ -277,6 +304,20 @@ function phrasesOf(m, words, note) {
 const rowsOf = (rows) => rows.map((r) => defined({ fr: r.fr, en: r.en, note: r.note }));
 const tableBlock = (t) => ({ type: 'table', block_id: t.id, title: t.title, rows: rowsOf(t.rows) });
 
+// The verb step's body (L VerbFormsBody): the conjugation, with model and note null when the module has none.
+function verbFormsBody(m) {
+  const c = m.conjugation;
+  return {
+    verb: c.verb,
+    en: c.en,
+    pattern: c.pattern,
+    model: c.model ?? null,
+    note: c.note ?? null,
+    groups: c.groups.map((g) => ({ id: g.id, sound: g.sound })),
+    rows: c.rows.map((r) => defined({ person: r.person, form: r.form, en: r.en, group: r.group, stem: r.stem, silent: r.silent })),
+  };
+}
+
 function vocabularyIntroBody(m) {
   return {
     blocks: [
@@ -338,7 +379,7 @@ function readingBody(m, story) {
 /* ---------- entries and content ---------- */
 
 function entrySteps(m, unitKey) {
-  return STEPS_BY_KIND[m.kind].map((sid, i) => {
+  return moduleSteps(m).map((sid, i) => {
     const d = STEP_DEFS[sid];
     return {
       section_id: sid,
@@ -392,6 +433,7 @@ function contentOf(m, unitKey, { dictionary, storyOf, note }) {
   }
   if (m.kind === 'lesson') {
     bodies['vocabulary-intro'] = vocabularyIntroBody(m);
+    if (m.conjugation) bodies['verb-forms'] = verbFormsBody(m);
     const pair = speedMatchItem(m, words, new Set(items.map((i) => i.item_id)));
     if (pair) {
       items.push(pair);
@@ -400,7 +442,7 @@ function contentOf(m, unitKey, { dictionary, storyOf, note }) {
   }
   if (m.kind === 'reading') bodies['reading-passage'] = readingBody(m, storyOf(m.story_id));
 
-  const sections = m.kind === 'reference' ? [REFERENCE_PART] : STEPS_BY_KIND[m.kind];
+  const sections = m.kind === 'reference' ? [REFERENCE_PART] : moduleSteps(m);
   const steps = sections.map((sid) => {
     const body = m.kind === 'reference' ? referenceBody(m) : (bodies[sid] ?? null);
     // The bundle carries no access tier for a Reference page's text, so it gets no preview either.

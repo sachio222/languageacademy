@@ -294,3 +294,17 @@ test('an item and a vocabulary card added by hand are recorded as hand fixes, an
   assert.equal('items/i-tu-es-la' in third.handFixes, false);
   assert.equal('vocabulary/la-fr' in third.handFixes, false);
 });
+
+test('a conjugation written by hand has no source and survives a rerun', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  edited.conjugation = {
+    verb: 'être', en: 'to be', pattern: 'irregular',
+    groups: [{ id: 'suis', sound: '/sɥi/' }],
+    rows: [{ person: 'je', form: 'suis', en: 'I am', group: 'suis', stem: 'sui', silent: 's' }],
+  };
+  const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
+  assert.deepEqual(second.mod.conjugation, edited.conjugation);
+  const third = convertModule(old, { ...ctx, existing: second.mod, record: second.record });
+  assert.deepEqual(third.mod.conjugation, edited.conjugation);
+});

@@ -445,3 +445,18 @@ test('a planted loss is caught: every live card beside a newly fixed or added ca
   assert.ok(tried > 20, `only ${tried} cards tried`);
   assert.deepEqual(slipped, []);
 });
+
+test('vocabulary cards removed by hand pass once content:migrate records them, and an unrecorded removal still fails', () => {
+  const mod = structuredClone(course.modules.get(TARGET));
+  assert.ok((mod.vocabulary || []).length >= 3, 'the target lesson has cards to remove');
+  const gone = mod.vocabulary.slice(0, 2);
+  mod.vocabulary = mod.vocabulary.slice(2);
+  const parts = Object.fromEntries(gone.map((w) => [`vocabulary/${w.word_id}`, null]));
+  const fixes = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), ...parts } };
+  const r = run(null, { modules: { [TARGET]: mod }, handFixes: fixes });
+  assert.deepEqual(r.unexplained.map(describe), []);
+  assert.deepEqual(r.off, []);
+  // Only one of the two removals recorded: the other card's loss, and the shift it makes, stay unexplained.
+  const half = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), [`vocabulary/${gone[0].word_id}`]: null } };
+  assert.ok(run(null, { modules: { [TARGET]: mod }, handFixes: half }).unexplained.length > 0);
+});

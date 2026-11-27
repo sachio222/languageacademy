@@ -826,6 +826,30 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
       // module moves a neighbour into that place, and the neighbour's fix never explains the loss.
       const live = d.cards?.live?.[i];
       const conv = d.cards?.converted?.[i];
+      // Cards removed by hand (a verb's person forms, now taught by its Verb forms step): each is recorded as
+      // vocabulary/<word_id> null. The difference passes when every live card the module no longer has is a recorded
+      // removal and the rest stand in their live order, so a removal explains its own place and the shift after it, and
+      // nothing else.
+      if (Array.isArray(d.cards?.live) && Array.isArray(d.cards?.converted) && d.cards.live.length > d.cards.converted.length) {
+        const idOf = (card) => {
+          const key = `${normText(card?.french)}|${normText(card?.english)}`;
+          const ids = (records[d.module_key]?.vocabulary ?? []).filter((r) => r.key === key).map((r) => r.word_id);
+          return ids.length === 1 ? ids[0] : null;
+        };
+        const removed = (card) => {
+          const id = idOf(card);
+          return !!id && handFixed.get(d.module_key)?.has(`vocabulary/${id}`) && handFixes[d.module_key]?.[`vocabulary/${id}`] === null && !(m.vocabulary || []).some((x) => x.word_id === id);
+        };
+        const same = (a, b) => normText(a?.french) === normText(b?.french) && normText(a?.english) === normText(b?.english);
+        const kept = d.cards.live.filter((card) => !removed(card));
+        // Cards added by hand (recorded, and no live card has their text) stand apart from the live order.
+        const added = (card) => {
+          const w = (m.vocabulary || []).find((x) => normText(x.fr) === normText(card?.french) && normText(x.gloss) === normText(card?.english));
+          return !!w && !d.cards.live.some((c) => same(c, card)) && holds(d.module_key, `vocabulary/${w.word_id}`, w);
+        };
+        const rest = d.cards.converted.filter((card) => !added(card));
+        if (d.cards.live.some(removed) && kept.length === rest.length && kept.every((card, k) => same(card, rest[k]))) return true;
+      }
       let w = (m.vocabulary || []).find((x) => x.fr === live?.french && x.gloss === live?.english);
       if (!w && live) {
         const key = `${normText(live.french)}|${normText(live.english)}`;

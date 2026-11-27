@@ -2453,6 +2453,10 @@
         "src": "21253dd0bab9",
         "out": "b22122820ec5"
       },
+      "conjugation": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
+      },
       "description": {
         "src": "a2bb35b15e0d",
         "out": "a2bb35b15e0d"
@@ -7126,6 +7130,10 @@
       "concepts": {
         "src": "0d33a8829645",
         "out": "47be27ec23ab"
+      },
+      "conjugation": {
+        "src": "2be88ca4242c",
+        "out": "2be88ca4242c"
       },
       "description": {
         "src": "03b115502330",

@@ -4394,6 +4394,125 @@
             "maxLength": 500
           }
         }
+      },
+      "VerbFormsBody": {
+        "type": "object",
+        "required": [
+          "verb",
+          "en",
+          "pattern",
+          "groups",
+          "rows"
+        ],
+        "additionalProperties": false,
+        "description": "Body of the verb-forms step: one verb's forms for one tense. groups are the forms that sound alike; rows go in order of use in speech, each with its person as the learner reads it (je, j', il/elle/on), its form, its meaning, its sound group, the stem that starts the form and the silent letters that end it. pattern irregular gets the full step; er and like name a model verb whose full step comes first.",
+        "properties": {
+          "verb": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "pattern": {
+            "enum": [
+              "irregular",
+              "er",
+              "like"
+            ]
+          },
+          "model": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 300
+          },
+          "groups": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "sound"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9-]*$",
+                  "maxLength": 100
+                },
+                "sound": {
+                  "type": "string",
+                  "pattern": "^/[^/\\s][^/]*/$",
+                  "maxLength": 40
+                }
+              }
+            }
+          },
+          "rows": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "required": [
+                "person",
+                "form",
+                "en",
+                "group",
+                "stem"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "person": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40
+                },
+                "form": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 60
+                },
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "group": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9-]*$",
+                  "maxLength": 100
+                },
+                "stem": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 60
+                },
+                "silent": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 20
+                }
+              }
+            }
+          }
+        }
       }
     },
     "parameters": {

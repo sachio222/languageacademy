@@ -6,7 +6,8 @@
   "skeleton": [
     { "part": "vocabulary", "from": "card:teach/words", "rule": "One card per new lemma the card places here, in the card's order. Each new word is first met in a sentence made of known words; a word taught earlier gets a review row, never a second card." },
     { "part": "concepts", "from": "card:teach/constructions", "rule": "One concept card per construction, with a French example built from words the learner already knows." },
-    { "part": "tables", "rule": "A conjugation table for each new verb; its forms need no cards." },
+    { "part": "conjugation", "rule": "A verb whose forms the lesson teaches gets a conjugation: one row per person in order of use in speech (je, tu, il/elle/on, vous, ils/elles, nous), each with its English, its sound group, its stem and its silent letters. L's Verb forms step teaches each form from it: the sound map, then each form met and said, then each form typed from memory and checked off only when right, then who is it by ear. The forms need no cards; the infinitive keeps its card. A regular -er verb after its model, or a verb shaped like one taught, names the model (pattern er or like) and gets the short check." },
+    { "part": "tables", "rule": "A table only for a set of forms that is not one verb's present (a contraction set, possessives). A verb's forms go in the conjugation, never a bare table." },
     { "part": "phrases", "from": "card:sound/focus", "rule": "Pronunciation phrases include at least one word with the card's sound focus." },
     { "part": "items", "order": ["situation", "practice", "situation"], "rule": "Open and close with items set in a card situation." }
   ],

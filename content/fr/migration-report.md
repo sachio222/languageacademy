@@ -10,7 +10,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 |---|---|---|
 | unit1 Essential Grammar | 35 | 48 |
 | unit2 Asking & Describing | 57 | 99 |
-| unit3 Movement & Possession | 11 | 104 |
+| unit3 Movement & Possession | 11 | 92 |
 | unit4 Everyday Words | 109 | 85 |
 | unit5 Time & Taste | 174 | 112 |
 | unit6 Basic Fluency | 249 | 37 |
@@ -25,15 +25,15 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 |---|---|
 | Guide checks written by hand | 1 |
 | Spellings taught more than once | 401 |
-| Item types to confirm | 259 |
+| Item types to confirm | 247 |
 | Practice blanks that were in the wrong place | 51 |
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
-| English prompts written as respond items | 822 |
+| English prompts written as respond items | 810 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1149 |
-| Live ids with no converted item | 340 (25 real misses) |
+| Hand edits kept | 1172 |
+| Live ids with no converted item | 353 (38 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
 | Notes | 3 |
@@ -784,18 +784,6 @@ The classifier had no clear rule for these items, so the type is its best guess.
 - `items[5]` i-vous-partez: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[6]` i-ils-partent: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[7]` i-elles-partent: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[8]` i-je-pars-de-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[9]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[10]` i-il-part-de-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[11]` i-nous-partons-de-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[12]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[13]` i-je-veux-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[14]` i-peux-tu-partir: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[15]` i-je-peux-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[16]` i-je-vais-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[17]` i-qu-est-ce-que-3: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[18]` i-je-viens-partir-de: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[19]` i-pourquoi-viens-tu-partir: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-31-possessive-adjectives**
 
@@ -1417,7 +1405,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-01-29-partir**
 
-- 20 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
+- 8 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`
 
 **2024-02-01-possessive-pronouns**
 
@@ -1828,7 +1816,16 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-15-vouloir**
 
+- `vocabulary/je-veux-fr` ""word_id":"je-veux-fr","fr":"je veux","gloss":"I want","note":"irregular form"" → "(removed)"
+- `vocabulary/tu-veux-fr` ""word_id":"tu-veux-fr","fr":"tu veux","gloss":"you want (informal)","note":"same as je!"" → "(removed)"
+- `vocabulary/il-veut-fr` ""word_id":"il-veut-fr","fr":"il veut","gloss":"he wants","note":"different ending"" → "(removed)"
+- `vocabulary/elle-veut-fr` ""word_id":"elle-veut-fr","fr":"elle veut","gloss":"she wants","note":"same as il"" → "(removed)"
+- `vocabulary/nous-voulons-fr` ""word_id":"nous-voulons-fr","fr":"nous voulons","gloss":"we want","note":"regular ending"" → "(removed)"
+- `vocabulary/vous-voulez-fr` ""word_id":"vous-voulez-fr","fr":"vous voulez","gloss":"you want (formal)","note":"formal/plural"" → "(removed)"
+- `vocabulary/ils-veulent-fr` ""word_id":"ils-veulent-fr","fr":"ils veulent","gloss":"they want (masc)","note":"irregular"" → "(removed)"
+- `vocabulary/elles-veulent-fr` ""word_id":"elles-veulent-fr","fr":"elles veulent","gloss":"they want (fem)","note":"same as ils"" → "(removed)"
 - `concepts[0].example` "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)" → "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre ?), 'We want to have a house' (Nous voulons avoir une maison), 'How are you? Do you want a coffee?' (Ça va ? Tu veux un café ?)"
+- `conjugation` "(none)" → ""verb":"vouloir","en":"to want","pattern":"irregular","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.","groups":["id":"veu","sound":"/vø/","id":"veul","sound":"/vœl/","id":"voulez","sound":"/vu.le/","id":"voulons","sound":"/vu.lɔ̃/"],"rows":["person":"je","form":"veux","en":"I want","group":"veu","stem":"veu","silent":"x","person":"tu","form":"veux","en":"you want (to one person you know well)","group":"veu","stem":"veu","silent":"x","person":"il/elle/on","form":"veut","en":"he wants, she wants, we want (on)","group":"veu","stem":"veu","silent":"t","person":"vous","form":"voulez","en":"you want (polite, or to more than one)","group":"voulez","stem":"voul","silent":"z","person":"ils/elles","form":"veulent","en":"they want","group":"veul","stem":"veul","silent":"ent","person":"nous","form":"voulons","en":"we want","group":"voulons","stem":"voul","silent":"s"]"
 
 **2024-01-17-voir**
 
@@ -1902,6 +1899,23 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `parts[3].note` "The -ent is written but never spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut." → "The -ent is written but not spoken. In writing, it tells you that several people are doing something. It can change how the letters before it sound, so ils veulent sounds a little different from il veut."
 - `parts[7].blocks[0].list[2]` "Most verbs you meet next follow these patterns, starting with partir in the next lesson." → "Most verbs you meet next follow these patterns, starting with the verb for 'to leave' in the next lesson."
 - `checks[1].why` "The -ent is written but never spoken." → "The -ent is written but not spoken."
+
+**2024-01-29-partir**
+
+- `vocabulary/je-pars-fr` ""word_id":"je-pars-fr","fr":"je pars","gloss":"I leave / I'm leaving","note":"partir"" → "(removed)"
+- `vocabulary/tu-pars-fr` ""word_id":"tu-pars-fr","fr":"tu pars","gloss":"you leave (informal)","note":"same as je!"" → "(removed)"
+- `vocabulary/il-part-fr` ""word_id":"il-part-fr","fr":"il part","gloss":"he leaves","note":"drops -s"" → "(removed)"
+- `vocabulary/elle-part-fr` ""word_id":"elle-part-fr","fr":"elle part","gloss":"she leaves","note":"same as il"" → "(removed)"
+- `vocabulary/nous-partons-fr` ""word_id":"nous-partons-fr","fr":"nous partons","gloss":"we leave","note":"add -ons to stem"" → "(removed)"
+- `vocabulary/vous-partez-fr` ""word_id":"vous-partez-fr","fr":"vous partez","gloss":"you leave (formal)","note":"add -ez"" → "(removed)"
+- `vocabulary/ils-partent-fr` ""word_id":"ils-partent-fr","fr":"ils partent","gloss":"they leave (masc)","note":"add -ent"" → "(removed)"
+- `vocabulary/elles-partent-fr` ""word_id":"elles-partent-fr","fr":"elles partent","gloss":"they leave (fem)","note":"same as ils"" → "(removed)"
+- `concepts[1].term` "Regular -ir Conjugation" → "The t you hear only in the plural"
+- `concepts[1].definition` "Follows standard -ir pattern (drop singular endings)" → "In je pars, tu pars and il part you hear no t. In ils partent, vous partez and nous partons the t comes back and is heard."
+- `concepts[1].example` "Singular: je/tu pars, il part. Plural: nous partons, vous partez" → "il part (no t heard), ils partent (t heard)"
+- `concepts[2].definition` "Combine partir with previous modules for infinite expressions" → "partir slots into the verbs you know: vouloir, pouvoir and aller each take it straight after."
+- `concepts[2].example` "je pars + ça, nous partons + être, ils partent + avoir" → "je veux partir, tu peux partir, on va partir"
+- `conjugation` "(none)" → ""verb":"partir","en":"to leave","pattern":"irregular","note":"partir drops its t in je pars, tu pars and il part, where you hear no t. The t comes back, and is heard, in ils partent, vous partez and nous partons.","groups":["id":"par","sound":"/paʁ/","id":"part","sound":"/paʁt/","id":"partez","sound":"/paʁ.te/","id":"partons","sound":"/paʁ.tɔ̃/"],"rows":["person":"je","form":"pars","en":"I'm leaving","group":"par","stem":"par","silent":"s","person":"tu","form":"pars","en":"you're leaving (to one person you know well)","group":"par","stem":"par","silent":"s","person":"il/elle/on","form":"part","en":"he's leaving, she's leaving, we're leaving (on)","group":"par","stem":"par","silent":"t","person":"vous","form":"partez","en":"you're leaving (polite, or to more than one)","group":"partez","stem":"part","silent":"z","person":"ils/elles","form":"partent","en":"they're leaving","group":"part","stem":"part","silent":"ent","person":"nous","form":"partons","en":"we're leaving","group":"partons","stem":"part","silent":"s"]"
 
 **2024-01-31-possessive-adjectives**
 
@@ -3279,6 +3293,22 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 The live app stores answers under these exercise ids and concept indexes, and no converted item, concept or section has the same content, so live-ids.json has no entry for them. Real misses come first: each needs a look. The other two groups are expected, since the new files hold nothing for those ids.
 
 ### Real misses
+
+**2024-01-29-partir**
+
+- `2024-01-29-partir.9` exercise "I leave that" → "je pars de ça"
+- `2024-01-29-partir.10` exercise "What do you leave?" → "qu'est-ce que tu pars?"
+- `2024-01-29-partir.11` exercise "He leaves that" → "il part de ça"
+- `2024-01-29-partir.12` exercise "We leave that" → "nous partons de ça"
+- `2024-01-29-partir.13` exercise "What do you want to leave?" → "qu'est-ce que tu veux partir?"
+- `2024-01-29-partir.14` exercise "I want to leave that" → "je veux partir de ça"
+- `2024-01-29-partir.15` exercise "Can you leave?" → "peux-tu partir?"
+- `2024-01-29-partir.16` exercise "I can leave that" → "je peux partir de ça"
+- `2024-01-29-partir.17` exercise "I am going to leave that" → "je vais partir de ça"
+- `2024-01-29-partir.18` exercise "What are you going to leave?" → "qu'est-ce que tu vas partir?"
+- `2024-01-29-partir.19` exercise "I come to leave that" → "je viens partir de ça"
+- `2024-01-29-partir.20` exercise "Why do you come to leave?" → "pourquoi viens-tu partir?"
+- `concepts[1]` concept "Regular -ir Conjugation"
 
 **2024-05-05-on-and-people**
 

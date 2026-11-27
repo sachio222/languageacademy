@@ -582,3 +582,37 @@ test("L's checker refuses a gloss that is one of the module's word cards (gloss_
   assert.equal(r.status, 1);
   assert.ok(r.problems.some((p) => p.code === 'gloss_taught'), JSON.stringify(r.problems?.slice(0, 3)));
 });
+
+test('a lesson with a conjugation carries the verb step after Vocabulary Intro, with its forms as the body', () => {
+  const { outline, files } = writtenContent();
+  const key = '2024-01-15-vouloir';
+  const conjugation = {
+    verb: 'vouloir', en: 'to want', pattern: 'irregular',
+    groups: [{ id: 'veu', sound: '/vø/' }],
+    rows: [{ person: 'je', form: 'veux', en: 'I want', group: 'veu', stem: 'veu', silent: 'x' }],
+  };
+  const changed = files.map((f) => (f.file.endsWith(`/${key}.json`) ? { file: f.file, json: { ...JSON.parse(f.text), conjugation } } : f));
+  const b = buildBundle(assembleCourse(outline, changed, { checkAnswer: defaultCheckAnswer }), { ...sources, build: BUILD });
+  const entry = entryOf(b, key);
+  assert.deepEqual(entry.steps.slice(0, 3).map((s) => s.section_id), ['vocabulary-intro', 'verb-forms', 'pronunciation']);
+  assert.deepEqual(entry.steps.map((s) => s.ordinal), entry.steps.map((_, i) => i + 1));
+  const step = entry.steps[1];
+  assert.equal(step.name, 'Verb forms');
+  assert.equal(step.scored, true);
+  assert.equal(step.access_tier, 'premium');
+  const body = contentOf(b, key).steps.find((s) => s.section_id === 'verb-forms').body;
+  assert.equal(body.verb, 'vouloir');
+  assert.deepEqual(body.rows[0], { person: 'je', form: 'veux', en: 'I want', group: 'veu', stem: 'veu', silent: 'x' });
+  assert.equal(body.model, null);
+  assert.deepEqual(releaseProblems(b).filter((p) => p.code === 'section_id_invalid'), []);
+});
+
+test("a verb lesson's Speed Match pairs each person with its form, one pair per spelling", () => {
+  const sm = itemOf(bundle, '2024-01-15-vouloir', 'speed-match-forms');
+  assert.ok(sm, 'vouloir has a Speed Match item');
+  assert.equal(sm.prompt.left_label, 'Person');
+  assert.equal(sm.prompt.right_label, 'Form of {vouloir}');
+  const text = Object.fromEntries(sm.choices.map((c) => [c.choice_id, c.text]));
+  const pairs = sm.answer_key.pairs.map((p) => [text[p.left_id], text[p.right_id]]);
+  assert.deepEqual(pairs, [['je', 'veux'], ['il', 'veut'], ['vous', 'voulez'], ['ils', 'veulent'], ['nous', 'voulons']]);
+});

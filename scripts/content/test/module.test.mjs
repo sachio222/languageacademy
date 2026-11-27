@@ -489,3 +489,81 @@ test("gloss_is_card: a gloss that spells one of the module's word cards, compare
   assert.ok(reading.vocabulary.length > 0);
   assert.deepEqual(codes({ ...reading, glosses: [{ fr: reading.vocabulary[0].fr, en: 'x' }] }), ['gloss_is_card']);
 });
+
+// A lesson's conjugation: the verb step's data (one row per person, grouped by sound, stem and silent letters marked).
+const VOULOIR = () => ({
+  verb: 'vouloir',
+  en: 'to want',
+  pattern: 'irregular',
+  note: '{vouloir} has three stems and four spoken forms.',
+  groups: [
+    { id: 'veu', sound: '/vø/' },
+    { id: 'veul', sound: '/vœl/' },
+    { id: 'voulons', sound: '/vu.lɔ̃/' },
+    { id: 'voulez', sound: '/vu.le/' },
+  ],
+  rows: [
+    { person: 'je', form: 'veux', en: 'I want', group: 'veu', stem: 'veu', silent: 'x' },
+    { person: 'tu', form: 'veux', en: 'you want', group: 'veu', stem: 'veu', silent: 'x' },
+    { person: 'il/elle/on', form: 'veut', en: 'he, she, one wants', group: 'veu', stem: 'veu', silent: 't' },
+    { person: 'vous', form: 'voulez', en: 'you want (polite or plural)', group: 'voulez', stem: 'voul' },
+    { person: 'ils/elles', form: 'veulent', en: 'they want', group: 'veul', stem: 'veul', silent: 'ent' },
+    { person: 'nous', form: 'voulons', en: 'we want', group: 'voulons', stem: 'voul' },
+  ],
+});
+
+test('a lesson may carry a conjugation for its verb step', () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  mod.conjugation = VOULOIR();
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }), []);
+});
+
+test('a conjugation row names a sound group the conjugation has', () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  mod.conjugation = VOULOIR();
+  mod.conjugation.rows[0].group = 'vo';
+  assert.deepEqual(codes(mod), ['conjugation_group_unknown']);
+});
+
+test('a conjugation row splits its form: the stem starts it, the silent letters end it', () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  mod.conjugation = VOULOIR();
+  mod.conjugation.rows[0].stem = 'vou';
+  mod.conjugation.rows[2].silent = 'x';
+  const ps = validateModule(mod, { file: 'l.json', unitIndex: 1 });
+  assert.deepEqual(ps.map((p) => [p.code, p.path]), [
+    ['conjugation_split_invalid', 'conjugation.rows[0].stem'],
+    ['conjugation_split_invalid', 'conjugation.rows[2].silent'],
+  ]);
+});
+
+test('every sound group of a conjugation has a row, and each person comes once', () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  mod.conjugation = VOULOIR();
+  mod.conjugation.groups.push({ id: 'spare', sound: '/x/' });
+  mod.conjugation.rows[1].person = 'je';
+  assert.deepEqual(codes(mod).sort(), ['conjugation_group_empty', 'id_duplicate'].sort());
+});
+
+test('a verb that follows a pattern names its model verb', () => {
+  const mod = miniModule(MINI_KEYS.lesson);
+  mod.conjugation = { ...VOULOIR(), pattern: 'er' };
+  assert.deepEqual(codes(mod), ['conjugation_model_missing']);
+  mod.conjugation.model = 'parler';
+  assert.deepEqual(codes(mod), []);
+});
+
+test('a conjugation belongs to a lesson only', () => {
+  const mod = miniModule(MINI_KEYS.guide);
+  mod.conjugation = VOULOIR();
+  assert.deepEqual(codes(mod, 2), ['field_unknown']);
+});
+
+test('a lesson with a conjugation adds the verb step right after vocabulary-intro', async () => {
+  const { moduleSteps } = await import('../schema/module.mjs');
+  const mod = miniModule(MINI_KEYS.lesson);
+  assert.deepEqual(moduleSteps(mod), STEPS_BY_KIND.lesson);
+  mod.conjugation = VOULOIR();
+  assert.deepEqual(moduleSteps(mod), ['vocabulary-intro', 'verb-forms', ...STEPS_BY_KIND.lesson.slice(1)]);
+  assert.deepEqual(moduleSteps(miniModule(MINI_KEYS.guide)), STEPS_BY_KIND.guide);
+});
