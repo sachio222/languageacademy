@@ -121,7 +121,7 @@ Run these from the repository root.
 
 Every verb has all six present forms except the verbs in `reading-limits.json` (see Level and function reports), falloir and pleuvoir, which have only il, and suivre, whose suis is left to être. A new irregular verb follows a verb of the same family (see Adding an irregular form): tenir and its compounds like venir, sentir like partir, employer and essuyer like nettoyer. A verb that never agrees, such as rire, mentir or réagir, has one past participle (ri, menti, réagi) and no ptcp.f, ptcp.pl or ptcp.fpl.
 
-Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in its `excludeWords` correction and the noun in its file's `teaches.words` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne.
+Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in its `excludeWords` correction and the noun in its file's `teaches.words` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne. The B2 words added more such pairs that no lesson uses yet: the nouns approche, baisse, dépense, lutte, mérite, donnée, plainte and parcours and the plurals soutiens, adoptions, mentions and précisions (forms of approcher, baisser, dépenser, lutter, mériter, donner, plaindre, parcourir, soutenir, adopter, mentir and préciser), fréquente (fréquent and fréquenter), lions (lier and lion) and entretiens (entretenir and entretien). New words also pair with each other, such as analyse and analyser or garantie and garantir; `b2-words.mjs` lists them all. A lesson that teaches one of these needs the same correction when extraction credits the other reading.
 
 ## Course-map fields
 
@@ -146,7 +146,7 @@ Add an object to `headwords.json` and keep the file sorted by `id`:
 { "id": "fr:lex:pomme", "lemma": "pomme", "pos": "noun", "paradigms": ["fr:cx:noun.plural"], "senses": [], "dictionaryId": "pomme-fr", "cefr": "A1", "cefrSource": "agent: frequency + Eaquals" }
 ```
 
-- `id` is `fr:lex:` plus the lemma in lowercase without accents, with spaces and apostrophes written as hyphens (`fr:lex:pomme-de-terre`). When another headword already has that ID, add the part of speech: `fr:lex:savoir.verb`.
+- `id` is `fr:lex:` plus the lemma in lowercase without accents, with spaces and apostrophes written as hyphens (`fr:lex:pomme-de-terre`). When another headword already has that ID, add the part of speech: `fr:lex:savoir.verb`. When that headword has the same part of speech and differs only in accents, add a word for the meaning instead: `fr:lex:repartir.distribute` for répartir, beside `fr:lex:repartir`.
 - `pos` is the part of speech: noun, verb, adjective, adverb, pronoun, preposition, conjunction, article, determiner, interjection, interrogative, or alphabet for a letter.
 - `paradigms` lists the patterns in `paradigms.json` that generate the word's regular forms. A regular -er verb takes the same seven patterns as `fr:lex:parler`; a noun takes `fr:cx:noun.plural`; an adjective takes the `fr:cx:adj.*` pattern that fits its endings. An irregular verb lists only the patterns its regular cells follow and gets the rest as irregular forms.
 - `dictionaryId` is the word's key in `src/data/dictionary/`, or null.
@@ -183,6 +183,15 @@ The arguments are the ID without `fr:cx:`, a label in plain words, the construct
 
 A seventh argument, `{ licenses: [headword IDs] }`, names the words the construction teaches inside its own match. `fr:cx:neg.de` licenses `fr:lex:de`: once a module teaches neg.de, the de of "je n'ai pas de chat" counts as taught from there, but the de of "combien de livres" or "d'où viens-tu" still waits for the lesson that teaches the preposition.
 
+The same argument can hold `use: 'recognize'` for a pattern the learner reads and hears but never writes, such as the passé simple (`fr:cx:passe-simple`): il fut, elle entra, ils firent. The field is written into `constructions.json` as `"use": "recognize"`. It is optional, and `pnpm graph:check` reports any other value as `construction-use-bad`. The checker treats such a pattern as reading knowledge:
+
+- What counts is the literary form itself: the words its detector marks with `form: true`, such as the verb of il fut, or the whole match when no step is marked.
+- Section 1 of the fix list reports it only where the learner reads or hears that form before a module teaches it, such as a reading passage in the passé simple before the guide that explains the tense. It is never reported where the learner types the form: in an answer, or in a gap-fill whose blank is the form. A gap-fill whose blank is another word of the match (the il of il fut) still leaves the form read.
+- Where the learner must type the form, `pnpm graph:check` warns `recognize-typed`: a learner should read such a pattern, not write it.
+- A guide may teach it alone, so `guide_only_teaching` leaves it out.
+
+The B2 patterns of this kind are `fr:cx:passe-simple` and `fr:cx:inversion.literary` (peut-être viendra-t-il, « Bonjour », dit-il), both B2, and `fr:cx:subj.imparfait` (qu'il fût), `fr:cx:subj.plus-que-parfait` (qu'il eût fini) and `fr:cx:neg.ne-alone` (je ne sais, je ne peux le croire), all C1.
+
 Give the new construction a level in the `LEVELS` table in `scripts/graph/fr/build/construction-levels.mjs`; `constructions.mjs` stops with a message that names any construction without one.
 
 Then run `node scripts/graph/fr/build/constructions.mjs` and `pnpm graph:test`. The test fails when a detector misses one of its match sentences or matches one of its noMatch sentences. Finally, add the new ID to `teaches.constructions` in the file of the lesson that explains it.
@@ -193,10 +202,15 @@ A detector is a list of steps, one for each word it matches, read left to right 
 - `headword`, `cell`, `pos`, `via`: the word must be a form of that headword, fill that cell (`*` stands for any text, so `prs.*` is any present-tense form), have that part of speech, or be that kind of reading (`lemma`, `irregular` or `generated`). `{ pos: 'verb', via: 'lemma' }` matches an infinitive.
 - `name: true`: the word is in `names.json`.
 - `clitic: true`: the word is a pronoun joined by a hyphen, such as -tu or -t-il.
-- `start: true`: the word is the first word of the sentence.
+- `start: true`: the word is the first word of its sentence. `start: 'text'` asks for the first word of the whole text: the imperative detectors use it, because an answer that leaves out its subject starts the same way.
+- `end: true`: the word is the last word of its sentence.
+- `accented`: a regular expression the word must match with its accents kept (in lowercase), for forms that only an accent tells apart, such as the subjonctif imparfait fût and the passé simple fut. Text typed without accents never matches it.
 - `any`: the word matches at least one of the listed steps.
 - `skip: n`: up to n other words may sit between the previous step's word and this one.
 - `optional: true`: the step may match no word.
+- `form: true`: the word carries a recognition-only form (see `use: 'recognize'` above). It does not change what the step matches.
+
+The tokenizer drops punctuation but numbers the sentences of a text: a full stop, question mark, exclamation mark or line break ends one, and an ellipsis does not, since exercise prompts use it for a gap (je ... lave). Every word of a match lies in one sentence, so `skip` never reaches into the next sentence of a reading passage.
 
 ## Functions and exponents
 
@@ -264,7 +278,7 @@ The core lists in `core/levels/` name what a learner must have to reach a level.
 - `words` was drafted from every headword of that level in the word list at the time, leaving out letters of the alphabet, interjections other than greetings, thanks, oui, non, ah, oh, allô and bravo, and words a learner does not need: slang, vulgar words, grammar terms such as verbe, and named dishes and landmarks the course happens to mention. It does not grow when the word list does.
 - Every node in a list has the list's level, and no node is in two lists.
 
-The word list holds the words the course uses and about 1,400 more that a learner needs at A1, A2 or B1 and that no lesson uses yet, such as écrire, fermer, avion and noir. They came from the 3,000 most frequent lemmas in Lexique and the Eaquals vocabulary themes, each placed by hand, and `scripts/graph/fr/build/core-words.mjs` records them. A core word that no lesson teaches is expected: it is a gap the coverage report shows.
+The word list holds the words the course uses and about 1,400 more that a learner needs at A1, A2 or B1 and that no lesson uses yet, such as écrire, fermer, avion and noir. They came from the 3,000 most frequent lemmas in Lexique and the Eaquals vocabulary themes, each placed by hand, and `scripts/graph/fr/build/core-words.mjs` records them. About 1,280 more came from the next frequency band of Lexique and the Eaquals B2 themes, each with an English gloss: words a learner needs at B2, a few useful C1 words, and some everyday words a review moved down to A2 or B1. `scripts/graph/fr/build/b2-words.mjs` records them. The plan for Units 13 to 29 added 144 everyday words below B2 that its lessons teach, such as loyer, trajet, gratuit and saluer; `scripts/graph/fr/build/plan-words.mjs` records them. A core word that no lesson teaches is expected: it is a gap the coverage report shows.
 
 The lists hold 733 words at A1, 681 at A2 and 841 at B1, so 1,414 words through A2 and 2,255 through B1. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1, 1,650 at A2 and 2,420 at B1, out of the 5,000 most frequent. The A1 list sits below that A1 figure and the A2 and B1 totals sit just below theirs, because a core list holds what every learner must know at a level, not every word a learner at that level happens to know.
 
@@ -305,13 +319,16 @@ A share in the curve is its count divided by `coreWords` or `coreConstructions` 
 
 ## Build scripts
 
-`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs` and `constructions.mjs` with `node`, in that order, reproduces the data files they wrote byte for byte.
+`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs`, `b2-words.mjs`, `plan-words.mjs` and `constructions.mjs` with `node`, in that order, reproduces the data files they wrote byte for byte.
 
 - `constructions.mjs` writes `constructions.json` and stays its source of truth.
 - `course-map.mjs` and `course-map-data.mjs` wrote the first course map, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The course map has since been split between the module files and the corrections, keyed by item id, so `course-map.mjs` now stops before writing. Edit the JSON files and module files directly.
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
 - `core-words.mjs` records the words added for the core lists, with their levels and the irregular forms for their spelling changes (rangeons, jette, mène), and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
+- `b2-words.mjs` records the words of the B2 pass (most at B2, some moved to A2, B1 or C1), with their glosses, genders and levels, the irregular forms of their verbs (copied from a verb of the same family, such as soumettre from mettre) and adjectives, and why some words were left out. Running it again changes nothing.
+- `plan-words.mjs` records the 144 everyday words the plan for Units 13 to 29 teaches that the list lacked (A1 to B1), with their glosses, genders and levels, the spelling changes of their verbs (pèse, sèche, tutoie, corrigeons), and why compléter, modifier and profession wait: three English notes in the course would be read as French. tache (a stain) has the ID `fr:lex:tache.stain`, because tâche holds `fr:lex:tache`. Running it again changes nothing.
 - `constructions.mjs` takes construction levels from `construction-levels.mjs`.
+- `constructions.mjs` builds the passé simple and subjonctif imparfait forms that `fr:cx:passe-simple` and `fr:cx:subj.imparfait` look for from the graph's verbs, leaving out a form spelled like a word the graph already reads (il finit is also the present). After you add verbs to `headwords.json`, run it again so their forms are read too.
 - `levels-propose.mjs` proposed the first headword levels from Lexique and FLELex files kept outside the repository, in a table that stays outside it too. It is not part of the build. The levels in `headwords.json` were decided from that table and are now edited by hand.
 
 `scripts/graph/fr/seed-headwords.mjs` and `scripts/graph/fr/import-conjugations.mjs` made the first word list and irregular forms from the lesson files. Do not run them against the committed data, which has been checked and corrected by hand since.
