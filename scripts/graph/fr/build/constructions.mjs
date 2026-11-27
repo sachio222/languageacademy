@@ -35,6 +35,7 @@ const QUE = S("que|qu'");
 const DE = S("de|d'");
 const NE = S("ne|n'");
 const SUBJ = "je|j'|tu|il|elle|on|nous|vous|ils|elles";
+const SUBJ_NOT_NV = "je|j'|tu|il|elle|on|ils|elles";
 const CL_SUBJ = { clitic: true, surface: '-(t-)?(tu|il|elle|on|nous|vous|ils|elles)' };
 // The next token is not an inverted subject (-tu, -t-il, -vous …) and not the -ce of est-ce.
 const NOT_CL_SUBJ = S('(?!-(t-)?(tu|il|elle|on|nous|vous|ils|elles|ce)$).+');
@@ -150,27 +151,54 @@ const AUQUEL = 'auquel|auxquels|auxquelles|duquel|desquels|desquelles';
 const REL_PREP = "sur|sous|dans|avec|pour|par|sans|chez|vers|contre|entre|parmi|selon|derriere|devant|pendant|apres|avant|malgre|envers|durant|a|de|d'|en";
 // The noun or pronoun a relative clause hangs on. demande is left out: je me demande avec lequel is an embedded question.
 const ANTECEDENT = { any: [{ pos: 'noun', surface: '(?!(demande|est|-?ce)$).+' }, S('celui|celle|ceux|celles|cela'), { name: true }] };
+// Verbs of saying only: after savoir, penser or croire the same tenses are the sequence of tenses of a thought, not
+// reported speech.
 const REPORT_PAST_VERBS = ['dire', 'annoncer', 'affirmer', 'declarer', 'expliquer', 'repondre', 'raconter', 'promettre',
-  'assurer', 'ecrire', 'demander', 'penser', 'croire', 'savoir.verb', 'jurer', 'avouer', 'admettre', 'reconnaitre', 'preciser', 'ajouter'].filter(exists);
+  'assurer', 'ecrire', 'demander', 'jurer', 'avouer', 'admettre', 'reconnaitre', 'preciser', 'ajouter'].filter(exists);
 const REPORT_PTCP = { any: REPORT_PAST_VERBS.map((k) => ({ headword: lex(k), cell: 'ptcp*' })) };
 const REPORT_IMPF = { any: REPORT_PAST_VERBS.map((k) => ({ headword: lex(k), cell: 'impf.*' })) };
 // The subject of a reported clause, which may also be c' or ça (il a dit que c'était facile).
 const REPORTED_SUBJ = { any: [S(`${SUBJ}|c'|ce|ca|cela`), { pos: 'noun' }, { name: true }] };
 const BACKSHIFT = { any: [{ cell: 'cond.*' }, { cell: 'impf.*' }] };
-const NOT_POLITE = '(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|pourriez)$).+';
+// The clause after the verb of saying: que or si, its subject, then the moved-back tense.
+const REPORTED = [S("que|qu'|si|s'"), DET, REPORTED_SUBJ, opt(NE), opt(OBJ), opt(OBJ), BACKSHIFT];
+// The person spoken to, between the verb and que: à + noun, name or stressed pronoun (il a dit à sa mère que).
+const TO_WHOM = [S('a|au|aux'), DET, { any: [{ pos: 'noun' }, { name: true }, S('moi|toi|lui|elle|nous|vous|eux|elles')] }];
+const POLITE_COND = 'voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|aimerions|aimeriez|aimeraient|pourrais|pourrait|pourriez';
+const NOT_POLITE = `(?!(${POLITE_COND})$).+`;
+// Hearsay leaves out the polite conditionals and advice (il faudrait, tu devrais).
+const NOT_ADVICE = `(?!(${POLITE_COND}|faudrait|devrais|devrait|devrions|devriez|devraient)$).+`;
 const NEG_WORD = "pas|plus|jamais|rien|personne|que|qu'|guere|point|aucun|aucune|nul|nulle|ni";
 const NOT_NEG_WORD = `(?!(${NEG_WORD}|-.*)$).+`;
 const SUPERLATIVE_HEAD = S('le|la|les');
 const SUPERLATIVE_WORD = S('plus|moins|meilleur|meilleure|meilleurs|meilleures|pire|pires|seul|seule|seuls|seules|premier|premiere|premiers|premieres|dernier|derniere|derniers|dernieres|unique');
 const SBJV_VERB = { cell: 'sbjv.*' };
+// Verbs that take de, so dont after them is their complement (le problème dont les gens parlent), and the forms of avoir.
+const DONT_DE_VERBS = '(parl|discut|souvien|souvienn|rev|rêv|occup|plaign|plain|moqu|dout|mefi|serv|ser|sert|profit|depend|approch|eloign|vien|vienn|ven|sort|part|chang|soucie|souci|preoccup|felicit|remerci|nourr|nourrissent|vit|viv|meur|mour)[a-z]*';
+const AVOIR_FORMS = 'ai|as|a|avons|avez|ont|avais|avait|avions|aviez|avaient|aura|auront|aurait|auraient|aie|ait|aient';
+// The verb of an inversion: any conjugated form, or a passé simple (aussi décida-t-il).
+const INV_VERB = { any: [{ cell: '*.*' }, { surface: PS_FORMS }] };
+const SAY_VERB = S('dit|dis|disait|repond|repondit|repondait|demande|demanda|demandait|ajoute|ajouta|ajoutait|explique|expliqua|crie|cria|murmure|murmura|continue|continua|reprit|soupira|lanca|fit|s\'ecria|ecria');
+const NOT_QUESTION_WORD = "(?!(que|qu'|qui|quoi|comment|pourquoi|ou|quand|combien|quel|quelle|quels|quelles|ne|n'|lequel|laquelle|et|-ce)$).+";
+// A reflexive pronoun with its subject: se alone, or me after je, te after tu, nous after nous, vous after vous, with
+// up to three words between (tu vas te faire renverser), so tu me fais voir (me is an object) does not count.
+const REFL_HEADS = [[S("se|s'")], [S("je|j'"), S("me|m'", { skip: 3 })], [S('tu'), S("te|t'", { skip: 3 })], [S('nous'), S('nous', { skip: 3 })], [S('vous'), S('vous', { skip: 3 })]];
+const SE_FAIRE_VERBS = 'voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler|recaler|refuser|rembourser|oublier|respecter|aimer|detester|entendre|comprendre|connaitre|accepter|embaucher|renvoyer|tromper|piquer|frapper|bousculer|doubler|contredire';
+const LAISSER_OBJ = "le|la|les|l'|lui|leur|me|m'|te|t'|nous|vous";
+const NOT_DETERMINER = "(?!(le|la|les|l'|un|une|des|du|de|d'|ce|cet|cette|ces|son|sa|ses|mon|ma|mes|ton|ta|tes|notre|nos|votre|vos|leur|leurs)$).+";
 const NE_ALONE_VERBS = 'sais|sait|savais|savait|saurais|saurait|peux|peut|puis|pouvais|pouvait|pourrais|pourrait|ose|oses|osait|osais|osent|cesse|cesses|cessait|cessent';
 // A past participle, but not the article du (dû keeps its accent: qu'il ait dû partir).
 const PTCP_NOT_DU = { cell: 'ptcp*', accented: '(?!du$).+' };
-// A present participle that can head a clause: spellings the graph also reads as another word (maintenant, pendant,
-// étudiant, suivant) and participles mostly used as adjectives are left out.
-const VERBAL_ADJECTIVES = 'amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant';
+// A present participle that can head a clause. Left out: spellings the graph also reads as another word (maintenant,
+// pendant, étudiant), which PRSPTCP_AMBIGUOUS lists from the graph, and participles mostly used as adjectives after a
+// noun (suivant, couchant, brûlant, obéissant), which VERBAL_ADJECTIVES lists by hand.
+const VERBAL_ADJECTIVES = 'suivant|couchant|levant|brulant|obeissant|tremblant|bouillant|pendant|cependant|maintenant|grimpant|glissant|perdant|naissant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant';
 const PRSPTCP_AMBIGUOUS = [...INDEX].filter(([, rs]) => rs.some((r) => r.cell === 'prsptcp') && rs.some((r) => r.cell !== 'prsptcp')).map(([f]) => f).sort();
 const PRSPTCP_CLAUSE = { cell: 'prsptcp', surface: `(?!(${[...PRSPTCP_AMBIGUOUS, VERBAL_ADJECTIVES].join('|')})$).+` };
+// What follows a participle that heads a clause after a noun: an object, a complement or a participle (les voyageurs
+// ayant un billet, une lettre expliquant la règle, les invités ayant répondu). An adjective after a noun is followed by
+// something else (le mois suivant, il est parti).
+const CLAUSE_NEXT = { any: [{ pos: 'article' }, { pos: 'determiner' }, { pos: 'preposition' }, { cell: 'ptcp*' }, S("que|qu'|le|la|les|l'|lui|leur|y|en|pas|plus|jamais|deja|toujours|bien|beaucoup|tout")] };
 
 // opts.licenses: headword IDs the construction teaches inside its own match, such as the de of "pas de" (neg.de).
 // opts.use: 'recognize' for a pattern the learner only reads and hears (the passé simple), never types; the checker
@@ -564,34 +592,34 @@ const C = [
   // ---- Imperative, reciprocal
   node('imperative.tu', 'Imperative, tu form: the tu present without the pronoun, -er verbs drop the -s (mange !, viens ici !, ne mange pas !); counted when the verb is the first word and another word follows that is not an inverted subject; a one-word command (Mange !) is not detected, and avoir, être, pouvoir, vouloir, devoir and savoir present forms do not count, because answers that leave out the subject (ai acheté, veux voir) start the same way', PRESENT,
     [
-      [{ start: true, surface: '(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+', any: [{ pos: 'verb', cell: 'prs.2sg' }, { pos: 'verb', cell: 'prs.1sg' }] }, NOT_CL_SUBJ],
-      [S('ne|n\'', { start: true }), opt(OBJ), opt(OBJ), { any: [{ pos: 'verb', cell: 'prs.2sg' }, { pos: 'verb', cell: 'prs.1sg' }] }, S('pas|jamais|plus|rien')],
+      [{ start: 'text', surface: '(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+', any: [{ pos: 'verb', cell: 'prs.2sg' }, { pos: 'verb', cell: 'prs.1sg' }] }, NOT_CL_SUBJ],
+      [S('ne|n\'', { start: 'text' }), opt(OBJ), opt(OBJ), { any: [{ pos: 'verb', cell: 'prs.2sg' }, { pos: 'verb', cell: 'prs.1sg' }] }, S('pas|jamais|plus|rien')],
     ],
     ['Mange ta soupe !', 'Viens ici !', 'Prends le bus.', 'Ne mange pas ça !'],
     ['Tu manges ta soupe.', 'Viens-tu ici ?', 'Est-ce que tu viens ?', 'Ne veux-tu pas venir ?', 'Entre toi et moi, c\'est un secret.']),
   node('imperative.vous', 'Imperative, vous form: the vous present without the pronoun (mangez !, venez avec moi !, ne parlez pas !); counted when the verb is the first word and another word follows that is not an inverted subject; a one-word command (Mangez !) is not detected, and avoir, être, pouvoir, vouloir, devoir and savoir present forms do not count, because answers that leave out the subject start the same way', PRESENT,
     [
-      [{ start: true, surface: '(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+', pos: 'verb', cell: 'prs.2pl' }, NOT_CL_SUBJ],
-      [S('ne|n\'', { start: true }), opt(OBJ), opt(OBJ), { pos: 'verb', cell: 'prs.2pl' }, S('pas|jamais|plus|rien')],
+      [{ start: 'text', surface: '(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+', pos: 'verb', cell: 'prs.2pl' }, NOT_CL_SUBJ],
+      [S('ne|n\'', { start: 'text' }), opt(OBJ), opt(OBJ), { pos: 'verb', cell: 'prs.2pl' }, S('pas|jamais|plus|rien')],
     ],
     ['Venez avec moi !', 'Parlez plus lentement, s\'il vous plaît.', 'Ne parlez pas !'],
     ['Vous parlez français.', 'Parlez-vous français ?', 'Excusez-moi.', 'Êtes-vous partis en vacances ?']),
   node('imperative.nous', 'Imperative, nous form: let us … (allons au café !, partons !, ne parlons pas !); counted when the verb is the first word and another word follows that is not an inverted subject', PRESENT,
     [
-      [{ start: true, pos: 'verb', cell: 'prs.1pl' }, NOT_CL_SUBJ],
-      [S('ne|n\'', { start: true }), opt(OBJ), opt(OBJ), { pos: 'verb', cell: 'prs.1pl' }, S('pas|jamais|plus|rien')],
+      [{ start: 'text', pos: 'verb', cell: 'prs.1pl' }, NOT_CL_SUBJ],
+      [S('ne|n\'', { start: 'text' }), opt(OBJ), opt(OBJ), { pos: 'verb', cell: 'prs.1pl' }, S('pas|jamais|plus|rien')],
     ],
     ['Allons au café !', 'Mangeons ensemble.', 'Allons-y !', 'Ne parlons pas de ça.'],
     ['Nous allons au café.', 'Allons-nous au café ?']),
   node('imperative.irregular', 'Irregular imperatives of être, avoir, savoir, vouloir and aller (sois, soyez, soyons, aie, ayez, ayons, sache, sachez, veuillez, va), as the first word; va counts only when another word follows that is not an inverted subject (va là-bas, not va-t-il)', ['imperative.tu', 'imperative.vous'],
     [
-      [{ start: true, any: [
+      [{ start: 'text', any: [
         { headword: lex('etre'), surface: 'sois|soyez|soyons' },
         { headword: lex('avoir'), surface: 'aie|ayez|ayons' },
         { headword: lex('savoir.verb'), surface: 'sache|sachons|sachez' },
         { surface: 'veuillez' },
       ] }],
-      [S('va', { start: true }), NOT_CL_SUBJ],
+      [S('va', { start: 'text' }), NOT_CL_SUBJ],
     ],
     ['Sois gentil !', 'Aie confiance !', 'Soyez patients.', 'Va là-bas !'],
     ['Il faut que tu sois gentil.', 'Tu es gentil.', 'Va-t-il venir ?', 'Il va là-bas.']),
@@ -689,7 +717,7 @@ const C = [
     ],
     ['Si tu veux, on y va.', 'Si j\'ai le temps, je viens.', 'Je viens si tu veux.', 'Si c\'est possible, je pars demain.'],
     ['Si j\'étais riche, je voyagerais.', 'Je ne sais pas si tu viens.', 'Je me demande s\'il vient.', 'Il est si grand.']),
-  node('relative.qui', 'Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c\'est toi qui pars, le Café de Flore qui est en face); a reading passage is one text, so a name ending one sentence before a question starting with qui also matches', [],
+  node('relative.qui', 'Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c\'est toi qui pars, le Café de Flore qui est en face); a match stays inside one sentence, so a name that ends one sentence before a question starting with qui does not count', [],
     [
       [{ pos: 'noun', surface: '(?!(-?ce|est)$).+' }, opt(ADJ_STEP), opt(ADJ_STEP), S('qui'), opt(NE), opt(OBJ), opt(OBJ), VERB],
       [{ any: [S(REL_PRONOUN), { name: true }] }, S('qui'), opt(NE), opt(OBJ), opt(OBJ), VERB],
@@ -742,13 +770,14 @@ const C = [
     ],
     ['Je suis content que tu aies réussi ton examen.', 'Bien qu\'il soit parti tôt, il est arrivé en retard.', 'Je doute qu\'elle se soit trompée de route.', 'C\'est dommage que Marie n\'ait pas pu venir.'],
     ['Je suis content que tu sois là.', 'Il faut que tu aies du courage.', 'Je pense qu\'il a réussi.', 'Je sais qu\'elle est partie.']),
-  node('participe-present.clause', 'Present participle as a clause of its own, without en: a reason or a description (étant fatiguée, elle est rentrée; les élèves ayant fini peuvent sortir); the gérondif with en is a separate pattern, and étant donné que is a connector', ['gerondif', 'prsptcp.er', 'passe-compose.avoir'],
+  node('participe-present.clause', 'Present participle as a clause of its own, without en: a reason or a description (étant fatiguée, elle est rentrée; ne sachant pas quoi dire, il s\'est tu; les voyageurs ayant un billet peuvent monter); the gérondif with en is a separate pattern, étant donné que is a connector, and participles used as adjectives after a noun (le mois suivant, un café brûlant) do not count', ['gerondif', 'prsptcp.er', 'passe-compose.avoir'],
     [
       [{ ...PRSPTCP_CLAUSE, start: true }, S('(?!(donne|donnee|donnes|donnees)$).+')],
-      [{ any: [{ pos: 'noun', surface: '(?!(est|-?ce)$).+' }, S('ceux|celles|celui|celle|tous|toutes')] }, PRSPTCP_CLAUSE],
+      [S('ne|n\'', { start: true }), opt(OBJ), PRSPTCP_CLAUSE, S('pas|plus|jamais|rien|personne')],
+      [{ any: [{ pos: 'noun', surface: '(?!(est|-?ce)$).+' }, S('ceux|celles|celui|celle|tous|toutes')] }, PRSPTCP_CLAUSE, CLAUSE_NEXT],
     ],
-    ['Étant fatiguée, elle est rentrée tôt.', 'Les élèves ayant fini peuvent sortir.', 'Sachant que le musée fermait tôt, nous sommes partis à midi.', 'Ayant perdu ses clés, il a appelé sa sœur.'],
-    ['Je travaille en écoutant de la musique.', 'Étant donné qu\'il pleut, je reste ici.', 'Le cours commence maintenant.', 'C\'est un film amusant.']),
+    ['Étant fatiguée, elle est rentrée tôt.', 'Les voyageurs ayant un billet peuvent monter.', 'Sachant que le musée fermait tôt, nous sommes partis à midi.', 'Ayant perdu ses clés, il a appelé sa sœur.', 'Ne sachant pas quoi dire, il s\'est tu.', 'Il était tard. Étant fatiguée, elle est rentrée.'],
+    ['Je travaille en écoutant de la musique.', 'Étant donné qu\'il pleut, je reste ici.', 'Le cours commence maintenant.', 'C\'est un film amusant.', 'Le mois suivant, il est parti.', 'Il boit un café brûlant.', 'Le soleil couchant est beau.', 'Un enfant obéissant écoute ses parents.']),
   node('passive.tenses', 'Passive in the other tenses: être in the future, the conditional or the subjunctive, avait, aura or aurait été, or a modal or aller + être, before the past participle, with par for the agent (la loi sera votée, il aurait été arrêté par la police, ce mur doit être réparé); participles used as everyday adjectives do not count', ['passive', 'futur-simple', 'conditionnel-present', 'plus-que-parfait.avoir'],
     [
       [{ any: [{ headword: 'fr:lex:etre', cell: 'fut.*' }, { headword: 'fr:lex:etre', cell: 'cond.*' }, { headword: 'fr:lex:etre', cell: 'sbjv.*' }] }, ...AUX_TAIL, PASSIVE_PTCP],
@@ -769,19 +798,19 @@ const C = [
     [S('en'), S('ayant|etant'), opt(ADV), opt(ADV), PTCP],
     ['En ayant fini plus tôt, il a pu partir.', 'Elle a réussi en ayant beaucoup travaillé.', 'Tout en ayant compris la règle, il fait encore des fautes.'],
     ['Il a réussi en travaillant beaucoup.', 'Ayant fini, il est parti.', 'En ayant peur, on n\'avance pas.']),
-  node('subj.superlative', 'Subjunctive in a relative clause after a superlative or after seul, premier, dernier or unique (c\'est le meilleur film que j\'aie vu, la seule personne qui puisse m\'aider)', ['superlative', 'relative.que', 'relative.qui', 'subj.il-faut-que'],
+  node('subj.superlative', 'Subjunctive in a relative clause after a superlative or after seul, premier, dernier or unique (c\'est le meilleur film que j\'aie vu, la seule personne qui puisse m\'aider); the present indicative and subjunctive of -er verbs are spelled alike in most persons (le plus beau pays qui existe), so those count too', ['superlative', 'relative.que', 'relative.qui', 'subj.il-faut-que'],
     [SUPERLATIVE_HEAD, SUPERLATIVE_WORD, S("que|qu'|qui", { skip: 2 }), opt(CLAUSE_SUBJ), opt(NE), opt(OBJ), opt(OBJ), SBJV_VERB],
     ['C\'est le meilleur film que j\'aie vu.', 'C\'est la seule personne qui puisse m\'aider.', 'C\'est le plus beau pays que je connaisse.'],
     ['C\'est le meilleur film que j\'ai vu.', 'C\'est la seule personne qui peut m\'aider.', 'Il est le plus grand de la classe.', 'Les meilleurs moments sont ceux qu\'on ne prévoit pas.']),
-  node('subj.doubt-denial', 'Subjunctive after a denial or a doubt other than douter: nier que, contester que, je ne suis pas sûr que, il n\'est pas certain que, il est peu probable que (il nie qu\'il soit coupable, je ne suis pas sûr qu\'elle vienne)', ['subj.douter-que', 'subj.ne-pas-penser-que'],
+  node('subj.doubt-denial', 'Subjunctive after a denial or a doubt other than douter: nier que, contester que, je ne suis pas sûr que, il n\'est pas certain que, il est peu probable que (il nie que son frère soit coupable, je ne suis pas sûr qu\'elle vienne)', ['subj.douter-que', 'subj.ne-pas-penser-que'],
     [
       [S('nie|nies|nient|nions|niez|niait|nier|conteste|contestes|contestent|contestons|contestez|contestait|contester'), QUE],
       [NE, { headword: 'fr:lex:etre' }, opt(CL_SUBJ), S('pas'), S('sur|sure|surs|sures|certain|certaine|certains|certaines|evident|vrai|prouve|exclu'), QUE],
       [S('peu'), S('probable|vraisemblable'), QUE],
       [S('douteux'), QUE],
     ],
-    ['Il nie qu\'il soit coupable.', 'Je ne suis pas sûr qu\'elle vienne.', 'Il n\'est pas certain que le train parte à l\'heure.', 'Il est peu probable qu\'il pleuve demain.'],
-    ['Je suis sûr qu\'elle viendra.', 'Il est probable qu\'il pleuvra.', 'Je doute qu\'elle sache.', 'Il n\'est pas sûr de lui.']),
+    ['Il nie que son frère soit coupable.', 'Je ne suis pas sûr qu\'elle vienne.', 'Il n\'est pas certain que le train parte à l\'heure.', 'Il est peu probable qu\'il pleuve demain.'],
+    ['Je suis sûr qu\'elle viendra.', 'Il est probable qu\'il pleuvra.', 'Je doute qu\'elle le sache.', 'Il n\'est pas sûr de lui.']),
   node('subj.judgment', 'Subjunctive after an impersonal judgment: il est important, nécessaire, essentiel, normal, naturel, préférable, urgent or temps que, il vaut mieux que (il est important que tu dormes, il vaut mieux qu\'on parte)', ['subj.il-faut-que', 'subj.possible-que'],
     [
       [S("il|c'|ce"), opt(NE), { headword: 'fr:lex:etre' }, opt(S('pas|tres|vraiment|plus')), S('important|importante|necessaire|essentiel|essentielle|indispensable|normal|naturel|preferable|urgent|temps|utile|inutile|rare|logique|souhaitable'), QUE],
@@ -789,44 +818,47 @@ const C = [
     ],
     ['Il est important que tu dormes bien.', 'Il vaut mieux qu\'on parte maintenant.', 'C\'est normal que tu sois fatigué.', 'Il est temps que nous rentrions.'],
     ['Il est important de dormir.', 'C\'est le temps que je préfère.', 'Il vaut mieux partir.', 'Je pense que c\'est important.']),
-  node('ne-expletif', 'Ne explétif: a ne that adds no negation, after avant que, à moins que, de peur que, de crainte que or craindre que (rentrons avant qu\'il ne fasse nuit, je crains qu\'il ne pleuve); counted when the verb after ne is followed by a word that is not pas, plus, jamais or another negation word, or ends the sentence', ['subj.avant-que', 'neg.ne-pas'],
+  node('ne-expletif', 'Ne explétif: a ne that adds no negation, after avant que, à moins que, de peur que, de crainte que, craindre que, or que after a comparison (rentrons avant qu\'il ne fasse nuit, je crains qu\'il ne pleuve, il est plus grand que je ne le pensais); counted when the verb after ne is followed by a word that is not pas, plus, jamais or another negation word, or ends the sentence', ['subj.avant-que', 'neg.ne-pas'],
     [
-      [S('avant|moins|peur|crainte|crains|craint|craignons|craignez|craignent|craignais|craignait'), QUE, DET, CLAUSE_SUBJ, opt(OBJ), NE, opt(OBJ), opt(OBJ), { pos: 'verb' }, S(NOT_NEG_WORD)],
-      [S('avant|moins|peur|crainte|crains|craint|craignons|craignez|craignent|craignais|craignait'), QUE, DET, CLAUSE_SUBJ, opt(OBJ), NE, opt(OBJ), opt(OBJ), { pos: 'verb', end: true }],
+      ...[S('avant|moins|peur|crainte|crains|craint|craignons|craignez|craignent|craignais|craignait'), S('plus|moins|mieux|meilleur|meilleure|pire|autre|autrement')]
+        .flatMap((trigger) => [
+          [trigger, S("que|qu'", trigger.surface.startsWith('plus') ? { skip: 3 } : {}), DET, CLAUSE_SUBJ, opt(OBJ), NE, opt(OBJ), opt(OBJ), { pos: 'verb' }, S(NOT_NEG_WORD)],
+          [trigger, S("que|qu'", trigger.surface.startsWith('plus') ? { skip: 3 } : {}), DET, CLAUSE_SUBJ, opt(OBJ), NE, opt(OBJ), opt(OBJ), { pos: 'verb', end: true }],
+        ]),
     ],
-    ['Rentrons avant qu\'il ne fasse nuit.', 'Je crains qu\'il ne pleuve.', 'Je viendrai, à moins que tu ne préfères rester seul.', 'Il parle bas de peur qu\'on ne l\'entende.'],
-    ['Je crains qu\'il ne vienne pas.', 'Rentrons avant qu\'il fasse nuit.', 'Il ne pleut pas.', 'Il a peur que tu ne viennes plus.']),
-  node('conditional.hearsay', 'Conditional for news that is not confirmed, after selon or d\'après (selon la police, le voleur serait parti en train; d\'après la radio, il y aurait eu dix blessés)', ['conditionnel-present', 'conditionnel-passe.avoir'],
+    ['Rentrons avant qu\'il ne fasse nuit.', 'Je crains qu\'il ne pleuve.', 'Je viendrai, à moins que tu ne préfères rester seul.', 'Il parle bas de peur qu\'on ne l\'entende.', 'Il est plus grand que je ne le pensais.'],
+    ['Je crains qu\'il ne vienne pas.', 'Rentrons avant qu\'il fasse nuit.', 'Il ne pleut pas.', 'Il a peur que tu ne viennes plus.', 'Il est plus grand que je ne le pensais pas.']),
+  node('conditional.hearsay', 'Conditional for news that is not confirmed, after selon or d\'après + a source (selon la police, le voleur serait parti en train; d\'après la radio, il y aurait eu dix blessés); selon moi or d\'après toi gives an opinion, and the polite conditionals and advice (il faudrait, tu devrais) do not count', ['conditionnel-present', 'conditionnel-passe.avoir'],
     [
-      [S('selon'), { cell: 'cond.*', surface: NOT_POLITE, skip: 6 }],
-      [S("d'"), S('apres'), { cell: 'cond.*', surface: NOT_POLITE, skip: 6 }],
+      [S('selon'), S('(?!(moi|toi|nous|vous)$).+'), { cell: 'cond.*', surface: NOT_ADVICE, skip: 10 }],
+      [S("d'"), S('apres'), S('(?!(moi|toi|nous|vous)$).+'), { cell: 'cond.*', surface: NOT_ADVICE, skip: 10 }],
     ],
-    ['Selon la police, le voleur serait parti en train.', 'D\'après la radio, il y aurait eu dix blessés.', 'Selon les experts, les prix augmenteraient encore.'],
-    ['Selon moi, c\'est une bonne idée.', 'D\'après la radio, il y a eu dix blessés.', 'Je voudrais partir après le dîner.']),
+    ['Selon la police, le voleur serait parti en train.', 'D\'après la radio, il y aurait eu dix blessés.', 'Selon les experts, les prix augmenteraient encore.', 'D\'après les témoins, le conducteur roulait trop vite et aurait perdu le contrôle.'],
+    ['Selon moi, c\'est une bonne idée.', 'D\'après la radio, il y a eu dix blessés.', 'Je voudrais partir après le dîner.', 'Selon moi, tu devrais rester.', 'D\'après toi, que ferait-il ?', 'Selon le guide, il faudrait réserver.']),
   node('hypothesis.au-cas-ou', 'au cas où + conditional: in case something happens (au cas où le train aurait du retard, prends un taxi)', ['conditionnel-present', 'si.imparfait-conditionnel'],
     [S('au'), S('cas'), S('ou'), opt(DET), opt(CLAUSE_SUBJ), opt(NE), opt(OBJ), opt(OBJ), { cell: 'cond.*' }],
     ['Au cas où le train aurait du retard, prends un taxi.', 'Prends un parapluie au cas où il pleuvrait.', 'Je laisse la clé au cas où Marie arriverait avant moi.'],
     ['Dans ce cas, appelle-moi.', 'Au cas où, prends un parapluie.', 'Si tu changes d\'avis, appelle-moi.']),
   node('hypothesis.avec-sans', 'Hypothesis with avec or sans + noun or pronoun at the start of the sentence and the result in the conditional (sans ton aide, je n\'aurais pas réussi; avec plus de temps, on finirait); sans doute and avec plaisir do not count', ['si.imparfait-conditionnel', 'conditionnel-passe.avoir'],
     [S('sans|avec', { start: true }), S('(?!(doute|plaisir)$).+'), { cell: 'cond.*', surface: NOT_POLITE, skip: 6 }],
-    ['Sans ton aide, je n\'aurais pas réussi.', 'Avec un peu plus de temps, on finirait ce projet.', 'Sans toi, je serais perdu.'],
-    ['Sans toi, je suis perdu.', 'Avec plaisir, je voudrais un café.', 'Sans doute qu\'il viendrait.', 'Je bois mon café sans sucre.']),
+    ['Sans ton aide, je n\'aurais pas réussi.', 'Avec un peu plus de temps, on finirait ce projet.', 'Sans toi, je serais perdu.', 'Il pleut. Sans ton aide, je n\'aurais pas réussi.'],
+    ['Sans toi, je suis perdu.', 'Avec mon café, je voudrais un croissant.', 'Sans doute qu\'il viendrait si tu l\'invitais.', 'Je bois mon café sans sucre.', 'Il pleut. Sans parapluie, je sors quand même.']),
   // ---- B2: pronouns and relatives
-  node('relative.lequel', 'Relative pronoun lequel, laquelle, lesquels, lesquelles after a preposition, referring to a noun (la table sur laquelle, les raisons pour lesquelles, l\'ami avec lequel je voyage)', ['relative.que', 'relative.dont'],
+  node('relative.lequel', 'Relative pronoun lequel, laquelle, lesquels, lesquelles after a preposition, referring to a noun (la table sur laquelle, les raisons pour lesquelles, la valise avec laquelle je voyage)', ['relative.que', 'relative.dont'],
     [ANTECEDENT, opt(ADJ_STEP), opt(ADJ_STEP), opt(S('a|au|aux')), opt(S('pres|loin|autour|lors|cote|face|grace|cause|milieu|bord|sujet|propos|long|travers|partir|fond|centre|haut|bas|cours|aide|moyen')), S(REL_PREP), S(LEQUEL)],
-    ['La table sur laquelle tu écris est vieille.', 'Voilà les raisons pour lesquelles je pars.', 'C\'est l\'ami avec lequel je voyage.', 'La maison à côté de laquelle j\'habite est jaune.'],
+    ['La table sur laquelle tu écris est vieille.', 'Voilà les raisons pour lesquelles je pars.', 'C\'est la valise avec laquelle je voyage.', 'La maison à côté de laquelle j\'habite est jaune.'],
     ['Lequel préfères-tu ?', 'Avec lequel de tes amis es-tu parti ?', 'Je me demande avec lequel il parle.', 'La table sur la terrasse est vieille.']),
   node('relative.auquel-duquel', 'auquel, auxquels, auxquelles (à + lequel) and duquel, desquels, desquelles (de + lequel) in a relative clause after a noun or a preposition phrase (le projet auquel je pense, le parc près duquel j\'habite)', ['relative.lequel', 'contraction.a', 'contraction.de'],
     [ANTECEDENT, S(AUQUEL, { skip: 3 })],
     ['C\'est le projet auquel je pense.', 'Le parc près duquel j\'habite est grand.', 'Les questions auxquelles il a répondu étaient difficiles.'],
     ['Auquel de ces livres penses-tu ?', 'Je pense à ce projet.', 'Duquel parles-tu ?']),
-  node('relative.dont-noun', 'dont followed by a noun it owns or a quantity: whose, of which (l\'homme dont la fille est médecin, des livres dont trois sont en anglais)', ['relative.dont', 'article.definite'],
+  node('relative.dont-noun', 'dont for possession: whose, the noun it owns as the subject of the relative clause (l\'homme dont la fille est médecin, un ami dont le père a un restaurant); when the verb after the noun takes de (le problème dont les gens parlent, le livre dont les enfants ont besoin), dont is its complement, not a possessor, so it does not count', ['relative.dont', 'article.definite'],
     [
-      [S('dont'), S("le|la|les|l'"), { pos: 'noun' }],
-      [S('dont'), S('un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|certains|certaines|plusieurs|beaucoup')],
+      [S('dont'), S("le|la|les|l'"), { pos: 'noun' }, opt(ADJ_STEP), opt(NE), opt(OBJ), { cell: '*.*', surface: `(?!(${DONT_DE_VERBS}|${AVOIR_FORMS})$).+` }],
+      [S('dont'), S("le|la|les|l'"), { pos: 'noun' }, opt(ADJ_STEP), opt(NE), { headword: 'fr:lex:avoir', cell: '*.*' }, S('(?!(besoin|peur|envie|honte)$).+')],
     ],
-    ['L\'homme dont la fille est médecin habite ici.', 'J\'ai acheté des livres dont trois sont en anglais.', 'C\'est un pays dont les habitants parlent deux langues.'],
-    ['La chose dont je parle est importante.', 'Le livre dont tu as besoin est ici.', 'La fille de cet homme est médecin.']),
+    ['L\'homme dont la fille est médecin habite ici.', 'J\'ai un ami dont le père a un restaurant.', 'C\'est un pays dont les habitants sont très accueillants.'],
+    ['La chose dont je parle est importante.', 'Le problème dont les gens parlent est grave.', 'Le livre dont les enfants ont besoin est ici.', 'La fille de cet homme est médecin.', 'Le sujet dont les élèves discutent est difficile.']),
   node('relative.ce-dont', 'Compound headless relatives: ce dont (what … of) and ce + preposition + quoi (ce à quoi je pense, ce sur quoi il compte)', ['relative.ce-que', 'relative.dont'],
     [
       [S('ce'), S('dont')],
@@ -834,49 +866,57 @@ const C = [
     ],
     ['Dis-moi ce dont tu as besoin.', 'Ce à quoi je pense est un secret.', 'C\'est ce sur quoi il compte.'],
     ['Dis-moi ce que tu veux.', 'À quoi penses-tu ?', 'Ce livre dont je parle est ici.']),
-  node('q.lequel', 'Interrogative lequel, laquelle, lesquels, lesquelles: which one (lequel préfères-tu ? avec laquelle es-tu sorti ? dis-moi lequel tu veux; tu prends lequel ?)', ['q.words', 'q.inversion'],
+  node('q.lequel', 'Interrogative lequel, laquelle, lesquels, lesquelles: which one (lequel préfères-tu ? avec laquelle es-tu sorti ? dis-moi lequel tu veux; tu prends lequel ?)', ['q.words', 'q.inversion', 'relative.lequel'],
     [
       [S(`${LEQUEL}|${AUQUEL}`, { start: true })],
       [S(REL_PREP, { start: true }), S(LEQUEL)],
       [KNOW_ASK, opt(S('-moi|-nous|-lui|-leur', { clitic: true })), opt(S('pas')), opt(S(REL_PREP)), S(`${LEQUEL}|${AUQUEL}`)],
       [{ pos: 'verb', cell: '*.*' }, S(LEQUEL)],
     ],
-    ['Lequel préfères-tu ?', 'Avec laquelle es-tu sorti ?', 'Dis-moi lequel tu veux.', 'Tu prends lequel ?'],
+    ['Lequel préfères-tu ?', 'Avec laquelle es-tu sorti ?', 'Dis-moi lequel tu veux.', 'Tu prends lequel ?', 'Il y a deux robes. Laquelle préfères-tu ?'],
     ['La table sur laquelle tu écris est vieille.', 'Quel livre préfères-tu ?', 'C\'est le projet auquel je pense.']),
-  node('pronoun.double', 'Two object pronouns together: me, te, se, nous or vous before le, la or les (il me l\'a dit, je te les donne, on se le demande), and lui or leur before en (je lui en ai parlé); le lui and leur, already taught, stay with the indirect object pronouns, and y en with il y a', ['pronoun.direct-object', 'pronoun.indirect-object', 'pronoun.en'],
+  node('pronoun.double', 'Two object pronouns together: me, te, se, nous or vous before le, la or les (il me l\'a dit, je te les donne, je vais te le dire), and lui or leur before en (je lui en ai parlé, je vais lui en parler); le lui and le leur, already taught, stay with the indirect object pronouns, y en with il y a, and a stressed pronoun before its subject (nous, nous les aimons) does not count', ['pronoun.direct-object', 'pronoun.indirect-object', 'pronoun.en'],
     [
-      [S(`${SUBJ}|ne|n'`), S("me|m'|te|t'|se|s'|nous|vous"), S("le|la|les|l'"), { cell: '*.*' }],
+      [S(`${SUBJ_NOT_NV}|ne|n'`), S("me|m'|te|t'|se|s'|nous|vous"), S("le|la|les|l'"), { cell: '*.*' }],
+      [S('nous'), S("me|m'|te|t'|vous"), S("le|la|les|l'"), { cell: '*.*' }],
+      [S('vous'), S("me|m'|te|t'|nous"), S("le|la|les|l'"), { cell: '*.*' }],
       [S(`${SUBJ}|ne|n'`), S('lui|leur'), S('en'), { cell: '*.*' }],
+      [{ pos: 'verb', cell: '*.*' }, opt(S('pas|jamais|plus')), S("me|m'|te|t'|se|s'|nous|vous"), S("le|la|les|l'"), INF],
+      [{ pos: 'verb', cell: '*.*' }, opt(S('pas|jamais|plus')), S('lui|leur'), S('en'), INF],
     ],
-    ['Il me l\'a dit hier.', 'Je te les donne demain.', 'On se le demande tous.', 'Je lui en ai parlé.'],
-    ['Je le lui donne.', 'Il me donne le livre.', 'Il y en a deux.', 'Nous le faisons ensemble.']),
-  node('causative.laisser', 'laisser + infinitive: let someone do something, with the person as a noun or an object pronoun (je laisse les enfants jouer, je les laisse partir, laisse-moi faire); faire + infinitive is its own pattern', ['causative.faire', 'pronoun.direct-object'],
+    ['Il me l\'a dit hier.', 'Je te les donne demain.', 'Elle se le répète chaque matin.', 'Je lui en ai parlé.', 'Je vais te le dire.', 'Tu peux me le donner ?', 'Il faut me les envoyer.', 'Je vais lui en parler.', 'Vous nous le dites souvent.'],
+    ['Je le lui donne.', 'Il me donne le livre.', 'Il y en a deux.', 'Nous le faisons ensemble.', 'Nous, nous les aimons.', 'Je vais le lui dire.']),
+  node('causative.laisser', 'laisser + infinitive: let someone do something, with the person as a noun or an object pronoun, in any tense (je laisse les enfants jouer, je les laisse partir, je l\'ai laissé partir, laisse-moi faire); faire + infinitive is its own pattern', ['causative.faire', 'pronoun.direct-object'],
     [
       [HW(['laisser']), opt(S('pas|jamais')), DET, { any: [{ pos: 'noun' }, { name: true }] }, INF],
-      [S(`${SUBJ}|ne|n'`), S("le|la|les|l'|lui|leur|me|m'|te|t'|nous|vous"), HW(['laisser']), opt(S('pas|jamais')), INF],
+      [S(`${SUBJ}|ne|n'`), S(LAISSER_OBJ), HW(['laisser']), opt(S('pas|jamais')), INF],
+      [S(`${SUBJ}|ne|n'`), S(LAISSER_OBJ), { headword: 'fr:lex:avoir', cell: '*.*' }, opt(S('pas|jamais')), { headword: lex('laisser'), cell: 'ptcp*' }, INF],
+      [{ headword: 'fr:lex:avoir', cell: '*.*' }, opt(S('pas|jamais')), { headword: lex('laisser'), cell: 'ptcp*' }, INF],
       [S('laisse|laissez|laissons'), S('-(moi|toi|le|la|les|lui|leur|nous)', { clitic: true }), INF],
     ],
-    ['Je laisse les enfants jouer dehors.', 'Je les laisse partir.', 'Laisse-moi faire !', 'Elle ne nous laisse pas sortir.'],
-    ['Laisse la porte ouverte.', 'Je fais réparer ma voiture.', 'Il me laisse un message.']),
-  node('reported-speech', 'Reported speech in the past with the tenses moved back: a past verb of saying or thinking + que or si, then the imparfait, the plus-que-parfait or the conditional (il a dit qu\'il viendrait, elle m\'a demandé si j\'avais fini, je savais que c\'était vrai)', ['frame.verb-que-clause', 'q.embedded', 'conditionnel-present', 'plus-que-parfait.avoir'],
+    ['Je laisse les enfants jouer dehors.', 'Je les laisse partir.', 'Laisse-moi faire !', 'Elle ne nous laisse pas sortir.', 'Je l\'ai laissé partir.', 'Elle a laissé tomber son verre.'],
+    ['Laisse la porte ouverte.', 'Je fais réparer ma voiture.', 'Il me laisse un message.', 'Je l\'ai laissé sur la table.']),
+  node('reported-speech', 'Reported speech in the past with the tenses moved back: a past verb of saying (dire, demander, expliquer, annoncer, répondre …) + que or si, then the imparfait, the plus-que-parfait or the conditional (il a dit qu\'il viendrait, elle m\'a demandé si j\'avais fini, il a expliqué à sa mère qu\'il était malade); only the person spoken to may stand between the verb and que, and savoir, penser and croire are left out, because after them the same tenses report a thought, not speech', ['frame.verb-que-clause', 'q.embedded', 'conditionnel-present', 'plus-que-parfait.avoir'],
     [
-      [{ headword: 'fr:lex:avoir', cell: '*.*' }, opt(CL_SUBJ), opt(ADV), REPORT_PTCP, S("que|qu'|si|s'", { skip: 4 }), DET, REPORTED_SUBJ, opt(NE), opt(OBJ), opt(OBJ), BACKSHIFT],
-      [REPORT_IMPF, S("que|qu'|si|s'", { skip: 4 }), DET, REPORTED_SUBJ, opt(NE), opt(OBJ), opt(OBJ), BACKSHIFT],
+      [{ headword: 'fr:lex:avoir', cell: '*.*' }, opt(CL_SUBJ), opt(ADV), REPORT_PTCP, ...REPORTED],
+      [{ headword: 'fr:lex:avoir', cell: '*.*' }, opt(CL_SUBJ), opt(ADV), REPORT_PTCP, ...TO_WHOM, ...REPORTED],
+      [REPORT_IMPF, opt(ADV), ...REPORTED],
+      [REPORT_IMPF, opt(ADV), ...TO_WHOM, ...REPORTED],
     ],
-    ['Il m\'a dit qu\'il viendrait.', 'Elle m\'a demandé si j\'avais fini.', 'Paul a expliqué à sa mère qu\'il était malade.', 'Ils ont annoncé que le train partirait en retard.', 'Je savais que c\'était vrai.'],
-    ['Il dit qu\'il viendra.', 'Elle m\'a demandé de venir.', 'Il a dit qu\'il viendra demain.', 'Je sais que c\'est vrai.']),
-  node('causative.se-faire', 'se faire + infinitive for something that happens to the subject, done by someone else (il s\'est fait voler sa voiture, elle s\'est fait renverser par un vélo), and the passé composé of se faire + infinitive, where fait does not agree (elle s\'est fait couper les cheveux)', ['causative.faire', 'passe-compose.reflexive'],
+    ['Il m\'a dit qu\'il viendrait.', 'Elle m\'a demandé si j\'avais fini.', 'Paul a expliqué à sa mère qu\'il était malade.', 'Ils ont annoncé que le train partirait en retard.', 'Il disait toujours qu\'il voulait voyager.'],
+    ['Il dit qu\'il viendra.', 'Elle m\'a demandé de venir.', 'Il a dit qu\'il viendra demain.', 'Je savais que c\'était vrai.', 'Il a dit quelque chose que je ne comprenais pas.', 'Il a écrit une lettre que sa mère lisait.', 'Il a dit au revoir. Il savait que tu étais là.']),
+  node('causative.se-faire', 'se faire + infinitive for something that happens to the subject, done by someone else (il s\'est fait piquer par une guêpe, elle s\'est fait renverser par un vélo, il se fait toujours remarquer), and se faire + infinitive in a compound tense, where fait does not agree (elle s\'est fait couper les cheveux); the present je me fais couper les cheveux is the causative faire already taught, so in the present and the infinitive only the verbs of this passive sense count', ['causative.faire', 'passe-compose.reflexive'],
     [
-      [REFL, opt(NE), { headword: 'fr:lex:etre' }, ...AUX_TAIL, S('fait'), INF],
-      [REFL, opt(NE), FAIRE, S('voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler')],
+      ...REFL_HEADS.map((head) => [...head, opt(NE), { headword: 'fr:lex:etre' }, ...AUX_TAIL, S('fait'), INF]),
+      ...REFL_HEADS.map((head) => [...head, opt(NE), FAIRE, opt(S('pas|jamais|plus')), opt(ADV), S(SE_FAIRE_VERBS)]),
     ],
-    ['Il s\'est fait voler sa voiture devant chez lui.', 'Elle s\'est fait couper les cheveux.', 'Attention, tu vas te faire renverser !', 'Ils se sont fait arrêter à la frontière.'],
-    ['Je me fais couper les cheveux.', 'Il fait réparer sa voiture.', 'Elle s\'est fait des amis.', 'Il s\'est fâché.']),
+    ['Il s\'est fait piquer par une guêpe.', 'Elle s\'est fait couper les cheveux.', 'Attention, tu vas te faire renverser !', 'Ils se sont fait arrêter à la frontière.', 'Il se fait toujours remarquer.', 'Je me suis fait avoir par un vendeur.'],
+    ['Je me fais du souci.', 'Il fait réparer sa voiture.', 'Elle s\'est fait des amis.', 'Il s\'est fâché.', 'Qu\'est-ce que tu me fais voir ?']),
   node('n-importe', 'n\'importe + qui, quoi, où, quand, comment, quel or lequel: anyone, anything, anywhere … at all (elle ne prête pas sa voiture à n\'importe qui, tu peux venir n\'importe quand)', ['q.words'],
     [S("n'"), S('importe'), S(`qui|quoi|ou|quand|comment|quel|quelle|quels|quelles|${LEQUEL}`)],
     ['Elle ne prête pas sa voiture à n\'importe qui.', 'Tu peux venir n\'importe quand.', 'Il dit n\'importe quoi.', 'Choisis n\'importe quelle couleur.'],
     ['Je ne sais pas qui vient.', 'Peu importe qui vient.', 'Qui parle ?']),
-  node('quiconque', 'quiconque: whoever, anyone at all (quiconque a vu cet homme doit appeler la police; il parle mieux que quiconque)', ['relative.qui'],
+  node('quiconque', 'quiconque: whoever, anyone at all (quiconque a vu cet homme doit appeler la police; il le sait mieux que quiconque)', ['relative.qui'],
     [S('quiconque')],
     ['Quiconque a vu cet homme doit appeler la police.', 'Il le sait mieux que quiconque.', 'Il refuse de parler à quiconque.'],
     ['Qui a vu cet homme ?', 'Tout le monde le sait.']),
@@ -884,16 +924,17 @@ const C = [
     [S('tel|telle|tels|telles'), QUE],
     ['J\'aime les pays tels que la France ou le Canada.', 'Une ville telle que Paris est chère.', 'Mangez des fruits tels que les pommes ou les poires.'],
     ['Je n\'ai jamais vu une telle ville.', 'Il fait tellement froid.', 'C\'est une ville comme Paris.']),
-  node('neg.nul', 'nul, nulle as a negative word: nul ne (no one), nulle + noun (no … at all): nul ne sait, je n\'ai nulle envie de partir; nulle part is its own phrase, and c\'est nul (it is rubbish) does not count', ['neg.ne-personne', 'chunk.nulle-part'],
+  node('neg.nul', 'nul, nulle as a negative word: nul ne (no one), nulle + noun (no … at all), sans nul doute (without any doubt): nul ne sait, elle n\'avait nulle intention de rester; nulle part is its own phrase, and c\'est nul (it is rubbish) does not count', ['neg.ne-personne', 'chunk.nulle-part'],
     [
       [S('nul|nulle', { start: true }), NE],
       [NE, opt(OBJ), { cell: '*.*' }, S('nul|nulle'), S('(?!part$).+')],
+      [S('sans'), S('nul|nulle'), S('doute')],
     ],
-    ['Nul ne sait où il est parti.', 'Je n\'ai nulle envie de partir.', 'Nul n\'est parfait.'],
-    ['Ce film est nul.', 'Je ne vais nulle part.', 'Personne ne sait où il est parti.']),
-  node('ptcp.agreement-exceptions', 'Past participle agreement in the harder cases: a preceding direct object makes the participle agree after avoir (la lettre que j\'ai écrite), but not en (des pommes, j\'en ai mangé), and fait before an infinitive stays fait (je les ai fait venir); which noun a participle agrees with is not visible in the tokens', ['ptcp.agreement', 'passe-compose.avoir', 'pronoun.en'],
+    ['Nul ne sait où il est parti.', 'Elle n\'avait nulle intention de rester.', 'Nul n\'est parfait.', 'Il est parti. Nul ne sait où.', 'C\'est sans nul doute le meilleur choix.'],
+    ['Ce film est nul.', 'Je ne vais nulle part.', 'Personne ne sait où il est parti.', 'Sans doute, il viendra.']),
+  node('ptcp.agreement-exceptions', 'Past participle agreement in the harder cases after avoir: a direct object placed before makes the participle agree (la lettre que j\'ai écrite), with these exceptions: en does not (des cerises, j\'en ai acheté deux kilos), fait before an infinitive stays fait (je les ai fait venir), laissé before an infinitive usually stays laissé (je les ai laissé partir), and entendu or vu before an infinitive agrees only when the object does the action (les musiciens que j\'ai entendus jouer, les airs que j\'ai entendu jouer); which noun a participle agrees with is not visible in the tokens', ['ptcp.agreement', 'passe-compose.avoir', 'pronoun.en', 'causative.faire'],
     null,
-    ['La lettre que j\'ai écrite est sur la table.', 'Des pommes ? J\'en ai mangé trois.', 'Je les ai fait venir.'],
+    ['La lettre que j\'ai écrite est sur la table.', 'Des cerises ? J\'en ai acheté deux kilos.', 'Je les ai fait venir.'],
     ['Il a mangé.', 'Elle est partie.']),
   node('nominalisation', 'Nominalisation: saying with a noun what a verb says (la construction du pont for on construit le pont, son départ for il part, l\'ouverture de la piscine); which noun comes from a verb is not visible in the tokens', [],
     null,
@@ -905,13 +946,15 @@ const C = [
       [S("c'|ce"), opt(NE), S('est|etait|sera|serait|fut'), opt(S('pas')), S("demain|hier|aujourd'hui|ici|la|maintenant|alors|ainsi|ensemble|seulement|surtout|toujours|souvent|parfois"), QUE],
       [S("c'|ce"), opt(NE), S('est|etait|sera|serait|fut'), opt(S('pas')), S('a|au|aux|en|dans|avec|chez|depuis|pendant|par|pour|sans|grace|apres|avant|sur|sous|vers|lors'), S('(?!(ca|cela|dire)$).+'), opt(S('.+')), opt(S('.+')), QUE],
       [S("c'|ce"), opt(NE), S('est|etait|sera|serait|fut'), opt(S('pas')), { name: true }, S("que|qu'|qui")],
+      // a year or a date in digits leaves no token: c'était en 2010 qu'ils se sont rencontrés
+      [S("c'|ce"), opt(NE), S('est|etait|sera|serait|fut'), opt(S('pas')), S('en|depuis'), QUE],
     ],
-    ['C\'est demain que je pars.', 'C\'est à Paris qu\'elle habite.', 'C\'est Marie qui a raison.', 'C\'est pour cette raison que je reste.', 'Ce n\'est pas hier qu\'il est venu.'],
+    ['C\'est demain que je pars.', 'C\'est à Paris qu\'elle habite.', 'C\'est Marie qui a raison.', 'C\'est pour cette raison que je reste.', 'Ce n\'est pas hier qu\'il est venu.', 'C\'était en 2010 qu\'ils se sont rencontrés.'],
     ['C\'est pour ça que je reste.', 'C\'est toi qui pars.', 'C\'est la ville que nous aimons.', 'Je pense que c\'est demain.', 'C\'est-à-dire que je ne viens pas.']),
-  node('mise-en-relief.ce-qui-cest', 'Mise en relief with ce qui, ce que or ce dont … c\'est: the idea first, then what it is (ce qui compte, c\'est la santé; ce que je pense, c\'est que tu as raison; ce dont j\'ai besoin, c\'est de calme)', ['mise-en-relief', 'relative.ce-que', 'relative.ce-dont'],
-    [S('ce'), S("qui|que|qu'|dont"), S('.+'), S("c'|ce", { skip: 7 }), opt(NE), S('est|etait|sera|serait|sont|seront')],
-    ['Ce qui compte, c\'est la santé.', 'Ce que je pense, c\'est que tu as raison.', 'Ce dont j\'ai besoin, c\'est de calme.'],
-    ['Je fais ce que je veux.', 'C\'est ce qui compte.', 'Ce qui est sur la table est à moi.', 'Je ne sais pas ce que c\'est.']),
+  node('mise-en-relief.ce-qui-cest', 'Mise en relief with ce qui, ce que or ce dont … c\'est: the idea first, then what it is (ce qui compte, c\'est la santé; ce que je pense, c\'est que tu as raison; ce dont je rêve, c\'est d\'une maison au bord de la mer); ce starts the sentence', ['mise-en-relief', 'relative.ce-que', 'relative.ce-dont'],
+    [S('ce', { start: true }), S("qui|que|qu'|dont"), S('.+'), S("c'|ce", { skip: 7 }), opt(NE), S('est|etait|sera|serait|sont|seront')],
+    ['Ce qui compte, c\'est la santé.', 'Ce que je pense, c\'est que tu as raison.', 'Ce dont je rêve, c\'est d\'une maison au bord de la mer.'],
+    ['Je fais ce que je veux.', 'C\'est ce qui compte.', 'Ce qui est sur la table est à moi.', 'Je ne sais pas ce que c\'est.', 'Je ne comprends pas ce qui se passe, c\'est bizarre.', 'Dis-moi ce que tu veux. C\'est important.']),
   node('frame.etre-oblige-de', 'être obligé de or être forcé de + infinitive, and s\'obliger or se forcer à + infinitive: to have to, to make oneself (je suis obligé de partir, elle se force à manger)', ['frame.modal-infinitive', 'frame.il-faut-infinitive'],
     [
       [{ headword: 'fr:lex:etre' }, ...AUX_TAIL, S('oblige|obligee|obliges|obligees|force|forcee|forces|forcees'), DE, opt(OBJ), opt(OBJ), INF],
@@ -919,17 +962,17 @@ const C = [
         .map((head) => [...head, HW(['obliger', 'forcer']), opt(S('pas|jamais')), S('a'), opt(OBJ), INF]),
     ],
     ['Je suis obligé de partir tôt.', 'Nous avons été obligés d\'attendre.', 'Elle se force à manger un peu.', 'Il s\'oblige à courir tous les matins.'],
-    ['Il m\'oblige à partir.', 'Je suis fatigué de partir.', 'La porte est forcée.', 'Elle nous force à rester.']),
+    ['Il m\'oblige à partir.', 'Je suis content de partir.', 'La porte est forcée.', 'Elle nous force à rester.']),
   node('frame.avoir-beau', 'avoir beau + infinitive: however much one does something, it does not help (j\'ai beau téléphoner, personne ne répond)', ['subj.bien-que'],
     [{ headword: 'fr:lex:avoir' }, opt(CL_SUBJ), S('beau'), opt(OBJ), INF],
     ['J\'ai beau téléphoner, personne ne répond.', 'Il a beau travailler, il ne réussit pas.', 'Tu as beau lui expliquer, il ne comprend rien.'],
     ['Il fait beau.', 'Il a un beau jardin.', 'J\'ai cherché mes clés.']),
-  node('conj.apres-que', 'après que and une fois que + indicative, for an action finished before the main one (après qu\'il est parti, nous avons mangé; on partira une fois que tu auras fini)', ['subj.avant-que', 'plus-que-parfait.avoir', 'futur-anterieur'],
+  node('conj.apres-que', 'après que and une fois que + indicative, for an action finished before the main one (nous mangerons après que tu seras rentré, on partira une fois que tu auras fini)', ['subj.avant-que', 'plus-que-parfait.avoir', 'futur-anterieur'],
     [
       [S('apres'), QUE],
       [S('une'), S('fois'), QUE],
     ],
-    ['Après qu\'il est parti, nous avons mangé.', 'On partira une fois que tu auras fini.', 'Il a appelé après que nous étions rentrés.'],
+    ['Nous mangerons après que tu seras rentré.', 'Après qu\'il est parti, nous mangeons.', 'On partira une fois que tu auras fini.', 'Il a appelé après que nous étions rentrés.'],
     ['Après le dîner, nous partons.', 'Je l\'ai vu une fois.', 'Avant qu\'il parte, nous mangeons.']),
   // ---- B2: subjunctive conjunctions
   node('subj.condition-que', 'Subjunctive after a condition: à condition que, pourvu que, à moins que (je viens à condition que tu viennes aussi, pourvu qu\'il fasse beau, à moins qu\'il pleuve)', ['subj.pour-que', 'si.present'],
@@ -951,26 +994,31 @@ const C = [
     ['Il parle bas de peur qu\'on l\'entende.', 'Je pars tôt de crainte que la route soit bloquée.', 'Elle se tait de peur qu\'il ne se fâche.'],
     ['J\'ai peur qu\'il parte.', 'Il tremble de peur.', 'Elle se tait de peur de se tromper.']),
   // ---- B2: connectors
-  node('connector.contrast', 'Contrast connectors: en revanche, par contre, néanmoins, toutefois, contrairement à, à l\'inverse (Paul aime la mer; sa sœur, en revanche, préfère la montagne); cependant and pourtant are taught as words at B1 and are not counted here', ['frame.verb-que-clause'],
+  node('connector.contrast', 'Contrast connectors: en revanche, par contre, néanmoins, toutefois, contrairement à, à l\'inverse, à l\'opposé (Paul aime la mer; sa sœur, en revanche, préfère la montagne); cependant and pourtant are taught as words at B1 and are not counted here, nor is à l\'opposé de for a place (à l\'opposé de la ville)', [],
     [
       [S('en'), S('revanche')],
       [S('par'), S('contre')],
       [S('neanmoins|toutefois|inversement')],
       [S('contrairement'), S('a|au|aux')],
-      [S('a'), S("l'"), S('inverse|oppose')],
+      [S('a'), S("l'"), S('inverse')],
+      [S('a'), S("l'"), S('oppose'), S("(?!(de|d'|du|des)$).+")],
+      [S('a'), S("l'"), S('oppose', { end: true })],
     ],
-    ['Paul aime la mer ; sa sœur, en revanche, préfère la montagne.', 'Le film est long, par contre il est très beau.', 'Il était malade ; néanmoins, il est venu.', 'Contrairement à son frère, elle adore lire.'],
-    ['Je suis contre cette idée.', 'Il est malade, pourtant il est venu.', 'Je vote pour elle.']),
-  node('connector.concession', 'Concession connectors: même si (even if, with the indicative), tout de même, malgré tout (même si je suis fatigué, je viens; il pleuvait, mais nous sommes sortis tout de même)', ['subj.bien-que'],
+    ['Paul aime la mer ; sa sœur, en revanche, préfère la montagne.', 'Le film est long, par contre il est très beau.', 'Il était malade ; néanmoins, il est venu.', 'Contrairement à son frère, elle adore lire.', 'Lui travaille la nuit ; elle, à l\'opposé, travaille le jour.'],
+    ['Je suis contre cette idée.', 'Il est malade, pourtant il est venu.', 'Je vote pour elle.', 'Il habite à l\'opposé de la ville.']),
+  node('connector.concession', 'Concession connectors: tout de même and malgré tout (it is still so): il pleuvait, mais nous sommes sortis tout de même; malgré tout, elle a réussi; même si is a B1 pattern of its own', ['subj.bien-que', 'connector.meme-si'],
     [
-      [S('meme'), S("si|s'")],
       [S('tout'), S('de'), S('meme')],
-      [S('malgre'), S('tout'), S("(?!(le|la|les|l'|ce|cet|cette|ces|son|sa|ses|mon|ma|mes|ton|ta|tes|notre|nos|votre|vos|leur|leurs|un|une|des)$).+")],
+      [S('malgre'), S('tout'), S("(?!(le|la|les|l'|ce|cet|cette|ces|ca|cela|son|sa|ses|mon|ma|mes|ton|ta|tes|notre|nos|votre|vos|leur|leurs|un|une|des)$).+")],
       [S('malgre'), S('tout', { end: true })],
     ],
-    ['Même si je suis fatigué, je viens.', 'Il pleuvait, mais nous sommes sortis tout de même.', 'C\'était difficile ; malgré tout, elle a réussi.'],
-    ['C\'est le même livre.', 'Malgré la pluie, nous sommes sortis.', 'Si je suis fatigué, je reste.', 'Malgré tout le bruit, il dort.']),
-  node('connector.addition', 'Connectors that add an argument: en outre, de plus, d\'ailleurs, par ailleurs, non seulement … mais (de plus, ce travail est mal payé; non seulement il chante, mais il danse aussi); de plus counts at the start of a sentence or after et or mais', [],
+    ['Il pleuvait, mais nous sommes sortis tout de même.', 'C\'était difficile ; malgré tout, elle a réussi.', 'Elle était fatiguée. Elle a fini malgré tout.'],
+    ['C\'est le même livre.', 'Malgré la pluie, nous sommes sortis.', 'Malgré tout le bruit, il dort.', 'Malgré tout ça, il reste.']),
+  node('connector.meme-si', 'même si + indicative: even if (même si je suis fatigué, je viens; même s\'il pleut, on sort)', ['si.present'],
+    [S('meme'), S("si|s'"), { any: [S(`${SUBJ}|c'|ce|ca|cela`), { pos: 'article' }, { pos: 'determiner' }, { pos: 'noun' }, { name: true }] }],
+    ['Même si je suis fatigué, je viens.', 'Même s\'il pleut, on sort.', 'Je viendrai même si Marie ne vient pas.'],
+    ['C\'est le même livre.', 'Il pleut même si fort.', 'Si je suis fatigué, je reste.']),
+  node('connector.addition', 'Connectors that add an argument: en outre, de plus, d\'ailleurs, par ailleurs, non seulement … mais (de plus, ce travail est mal payé; non seulement il chante, mais il danse aussi); de plus counts at the start of a sentence or after et or mais, and non seulement when mais follows in the sentence', [],
     [
       [S('en'), S('outre')],
       [S('de', { start: true }), S('plus'), S("(?!(en|de|d'|que|qu')$).+")],
@@ -978,37 +1026,39 @@ const C = [
       [S("d'", { start: true }), S('ailleurs')],
       [S('(?!(vient|viens|viennent|venu|venue|venus|venues|venait|venaient|arrive|arrivent|arrivait|vienne|viendra)$).+'), S("d'"), S('ailleurs')],
       [S('par'), S('ailleurs')],
-      [S('non'), S('seulement')],
+      [S('non'), S('seulement'), S('mais', { skip: 12 })],
     ],
     ['De plus, ce travail est mal payé.', 'En outre, la ville est très chère.', 'Je n\'ai pas le temps, et d\'ailleurs je n\'ai pas envie.', 'Non seulement il chante, mais il danse aussi.'],
-    ['Il fait de plus en plus froid.', 'J\'ai deux ans de plus que toi.', 'Il habite ailleurs.', 'Il en veut plus.', 'Ce fromage vient d\'ailleurs.']),
-  node('connector.argument-order', 'Connectors that order an argument: d\'une part … d\'autre part, d\'un côté … de l\'autre, en premier lieu, en second lieu, en dernier lieu, dans un premier temps (d\'une part c\'est cher, d\'autre part c\'est loin)', [],
+    ['Il fait de plus en plus froid.', 'J\'ai deux ans de plus que toi.', 'Il habite ailleurs.', 'Il en veut plus.', 'Ce fromage vient d\'ailleurs.', 'Non, seulement deux.']),
+  node('connector.argument-order', 'Connectors that order an argument: d\'une part … d\'autre part, d\'un côté … de l\'autre, en premier lieu, en second lieu, en dernier lieu, dans un premier temps (d\'une part c\'est cher, d\'autre part c\'est loin); d\'un côté de for a place (d\'un côté de la rue) does not count', [],
     [
       [S("d'"), S('une|autre'), S('part')],
       [S('en'), S('premier|second|dernier|deuxieme|troisieme'), S('lieu')],
       [S('dans'), S('un'), S('premier|second|deuxieme|dernier'), S('temps')],
-      [S("d'"), S('un'), S('cote')],
+      [S("d'"), S('un'), S('cote'), S("(?!(de|d'|du|des)$).+")],
     ],
-    ['D\'une part c\'est cher, d\'autre part c\'est loin.', 'En premier lieu, je voudrais vous remercier.', 'Dans un premier temps, nous allons lire le texte.', 'D\'un côté il a raison, de l\'autre il exagère.'],
-    ['Il part demain.', 'C\'est un lieu magnifique.', 'J\'ai le temps.', 'Mets-le de côté.']),
-  node('connector.summary', 'Connectors that sum up or conclude: bref, en bref, en somme, en résumé, somme toute, en définitive, pour conclure, pour résumer, tout compte fait (bref, c\'était une belle soirée); bref counts at the start of a sentence, and en conclusion, which an English speaker reads at sight, is not counted', [],
+    ['D\'une part c\'est cher, d\'autre part c\'est loin.', 'En premier lieu, je voudrais vous remercier.', 'Dans un premier temps, je présenterai le projet.', 'D\'un côté il a raison, de l\'autre il exagère.'],
+    ['Il part demain.', 'C\'est un lieu magnifique.', 'J\'ai le temps.', 'Mets-le de côté.', 'Il habite d\'un côté de la rue.']),
+  node('connector.summary', 'Connectors that sum up or conclude: bref, en bref, en somme, en résumé, somme toute, en définitive, pour conclure, pour résumer, tout compte fait (bref, c\'était une belle soirée); bref counts at the start of a sentence, pour conclure and pour résumer at the start of a sentence and not before an object (pour conclure un accord), and en conclusion, which an English speaker reads at sight, is not counted', [],
     [
       [S('bref', { start: true })],
       [S('en'), S('bref|somme|resume|definitive')],
       [S('somme'), S('toute')],
-      [S('pour'), S('conclure|resumer')],
+      [S('pour', { start: true }), S('conclure|resumer'), S(NOT_DETERMINER)],
+      [S('pour', { start: true }), S('conclure|resumer', { end: true })],
       [S('tout'), S('compte'), S('fait')],
     ],
-    ['Bref, c\'était une belle soirée.', 'En somme, tout s\'est bien passé.', 'En résumé, nous devons partir plus tôt.', 'Tout compte fait, je préfère rester.'],
-    ['C\'est une somme importante.', 'Il a fait un bref discours.', 'Je vais conclure demain.', 'En conclusion, la ville est belle.']),
+    ['Bref, c\'était une belle soirée.', 'En somme, tout s\'est bien passé.', 'En résumé, nous devons partir plus tôt.', 'Tout compte fait, je préfère rester.', 'Pour conclure, je vous remercie.'],
+    ['C\'est une somme importante.', 'Il a fait un bref discours.', 'Je vais conclure demain.', 'En conclusion, la ville est belle.', 'Pour conclure un accord, il faut parler.', 'Pour résumer le livre, il faut le lire.']),
   node('connector.reformulation', 'Connectors that say it another way: autrement dit, en d\'autres termes, en un mot (il est parti sans payer, autrement dit il nous a volés)', ['chunk.cest-a-dire'],
     [
-      [S('autrement'), S('dit')],
+      [S('autrement'), S('dit'), { clitic: false }],
+      [S('autrement'), S('dit', { end: true })],
       [S('en'), S("d'"), S('autres'), S('termes|mots')],
       [S('en'), S('un'), S('mot')],
     ],
     ['Il est parti sans payer, autrement dit il nous a volés.', 'En d\'autres termes, c\'est trop tard.', 'En un mot, c\'est parfait.'],
-    ['Il l\'a dit autrement.', 'Écris un mot.', 'C\'est-à-dire que je ne viens pas.']),
+    ['Il l\'a dit autrement.', 'Écris un mot.', 'C\'est-à-dire que je ne viens pas.', 'Il a fait autrement, dit-il.']),
   node('connector.purpose', 'Purpose phrases: en vue de, dans le but de, dans l\'intention de, dans l\'espoir de, de façon à, de manière à, histoire de (il économise en vue d\'acheter une maison)', ['subj.pour-que'],
     [
       [S('en'), S('vue'), S("de|d'|du|des")],
@@ -1044,48 +1094,49 @@ const C = [
     ],
     ['Étant donné qu\'il pleut, nous restons ici.', 'Vu que tu es là, on peut commencer.', 'Il a beaucoup neigé, si bien que l\'école est fermée.', 'Il parle lentement de sorte que tout le monde comprend.', 'La route était fermée ; de ce fait, nous avons pris le train.'],
     ['Il parle bien.', 'Il a vu que tu étais là.', 'Puisque tu es là, on commence.', 'Il a fait ce gâteau.']),
-  node('consequence.tellement-que', 'Consequence with tellement or tant … que: so much that (il a tellement plu que la rivière a débordé; elle a tant de travail qu\'elle ne sort plus); tellement plus … que is a comparison and tant que (as long as) is not counted', ['connector.cause-consequence', 'comparative'],
+  node('consequence.tellement-que', 'Consequence with tellement or tant … que: so much that (il a tellement plu que la rivière a débordé; elle a tant de travail qu\'elle ne sort plus); tellement plus … que is a comparison and tant que (as long as) is not counted', ['comparative'],
     [S('tellement|tant'), S('(?!(plus|moins|mieux|meilleur|meilleure|pire|autant|que|qu\')$).+'), S("que|qu'", { skip: 3 })],
     ['Il a tellement plu que la rivière a débordé.', 'Elle a tant de travail qu\'elle ne sort plus.', 'J\'étais tellement fatigué que je me suis endormi.'],
     ['C\'est tellement mieux que l\'autre.', 'Reste tant que tu veux.', 'Il est tellement gentil !']),
   // ---- B2: patterns the learner only reads (use: 'recognize')
   node('passe-simple', 'Passé simple, third person, for recognition in stories and history (il fut, il eut, il alla, elle entra, ils firent, ils allèrent, répondit-il); the learner reads it and does not write it; il dit, il finit and other forms spelled like the present are not counted', ['passe-compose.avoir', 'passe-compose.etre', 'imparfait'],
     [
-      [SUBJ3, opt(NE), opt(OBJ), opt(OBJ), PS],
-      [PS, CL_SUBJ],
+      [SUBJ3, opt(NE), opt(OBJ), opt(OBJ), { ...PS, form: true }],
+      [{ ...PS, form: true }, CL_SUBJ],
     ],
     ['Il fut très surpris par la nouvelle.', 'Ils firent un long voyage en Italie.', 'Le roi mourut en 1715.', 'Elle entra et regarda autour d\'elle.', '« Viens », répondit-il.', 'Ils allèrent à la mer.'],
     ['Il est très surpris.', 'Ils ont fait un long voyage.', 'Il finit son travail.', 'Ils préfèrent partir.', 'Bien qu\'il fût malade, il travaillait.'],
     { use: 'recognize' }),
   node('subj.imparfait', 'Subjonctif imparfait, for recognition in older and literary texts (qu\'il fût, qu\'il eût, qu\'il vînt, qu\'il parlât, qu\'ils fissent); the third person singular is read from its circumflex, so text typed without accents does not show it', ['subj.il-faut-que', 'passe-simple'],
-    [QUE, DET, CLAUSE_SUBJ, opt(NE), opt(OBJ), opt(OBJ), { any: [{ surface: SI_FORMS }, { accented: SI_3SG }] }],
+    [QUE, DET, CLAUSE_SUBJ, opt(NE), opt(OBJ), opt(OBJ), { any: [{ surface: SI_FORMS }, { accented: SI_3SG }], form: true }],
     ['Bien qu\'il fût malade, il travaillait.', 'Il fallait qu\'elle vînt seule.', 'Je voulais qu\'ils fissent attention.', 'Il attendait que sa mère parlât.'],
     ['Il fut malade tout l\'hiver.', 'Bien qu\'il soit malade, il travaille.', 'Il faut qu\'elle vienne seule.', 'Il plaît à tout le monde.'],
     { use: 'recognize' }),
   node('subj.plus-que-parfait', 'Subjonctif plus-que-parfait, for recognition in literary texts: eût or fût (and their other persons) + past participle (bien qu\'il eût fini, qu\'elle fût partie), also eût été for the conditionnel passé (il eût été préférable)', ['subj.imparfait', 'subj.passe'],
     [
-      [CLAUSE_SUBJ, opt(NE), opt(OBJ), opt(OBJ), { accented: AUX_SI }, opt(ADV), opt(ADV), PTCP],
-      [CLAUSE_SUBJ, opt(NE), opt(OBJ), { accented: ETRE_SI }, opt(ADV), opt(ADV), ETRE_PTCP],
+      [CLAUSE_SUBJ, opt(NE), opt(OBJ), opt(OBJ), { accented: AUX_SI, form: true }, opt(ADV), opt(ADV), PTCP],
+      [CLAUSE_SUBJ, opt(NE), opt(OBJ), { accented: ETRE_SI, form: true }, opt(ADV), opt(ADV), ETRE_PTCP],
     ],
     ['Bien qu\'il eût fini, il resta.', 'Je regrettais qu\'elle fût partie si tôt.', 'Il eût été préférable de se taire.'],
     ['Quand il eut fini, il partit.', 'Bien qu\'il ait fini, il reste.', 'Il fut surpris.'],
     { use: 'recognize' }),
-  node('inversion.literary', 'Subject inversion in written French, for recognition: after peut-être, sans doute, aussi (so), ainsi or à peine at the start of a sentence (peut-être viendra-t-il, à peine était-il arrivé), and after a quotation (« Bonjour », dit-il)', ['q.inversion'],
+  node('inversion.literary', 'Subject inversion in written French, for recognition: after peut-être, sans doute, aussi (so), ainsi or à peine at the start of a sentence (peut-être viendra-t-il, à peine était-il arrivé, aussi décida-t-il de partir), and a verb of saying after a quotation (« Bonjour », dit-il en souriant); a question with inversion (Marie dit-elle la vérité ?) does not count, so the verb of saying counts only at the end of its sentence, before en + participle, or first in its sentence', ['q.inversion'],
     [
-      [S('peut-etre|aussi|ainsi', { start: true }), opt(OBJ), { cell: '*.*' }, CL_SUBJ],
-      [S('sans', { start: true }), S('doute'), opt(OBJ), { cell: '*.*' }, CL_SUBJ],
-      [S('a', { start: true }), S('peine'), opt(OBJ), { cell: '*.*' }, CL_SUBJ],
-      [S("(?!(que|qu'|qui|quoi|comment|pourquoi|ou|quand|combien|quel|quelle|quels|quelles|ne|n'|lequel|laquelle|et|-ce)$).+"),
-        S('dit|dis|disait|repond|repondit|repondait|demande|demanda|demandait|ajoute|ajouta|ajoutait|explique|expliqua|crie|cria|murmure|murmura|continue|continua|reprit|soupira|lanca'), CL_SUBJ],
+      [S('peut-etre|aussi|ainsi', { start: true }), opt(OBJ), { ...INV_VERB, form: true }, { ...CL_SUBJ, form: true }],
+      [S('sans', { start: true }), S('doute'), opt(OBJ), { ...INV_VERB, form: true }, { ...CL_SUBJ, form: true }],
+      [S('a', { start: true }), S('peine'), opt(OBJ), { ...INV_VERB, form: true }, { ...CL_SUBJ, form: true }],
+      [S(NOT_QUESTION_WORD), { ...SAY_VERB, form: true }, { ...CL_SUBJ, form: true, end: true }],
+      [S(NOT_QUESTION_WORD), { ...SAY_VERB, form: true }, { ...CL_SUBJ, form: true }, S('en'), { cell: 'prsptcp' }],
+      [{ ...SAY_VERB, start: true, form: true }, { ...CL_SUBJ, form: true, end: true }],
     ],
-    ['Peut-être viendra-t-il demain.', 'À peine était-il arrivé qu\'il se mit à pleuvoir.', '« Bonjour », dit-il en souriant.', 'Sans doute a-t-elle raison.'],
-    ['Peut-être qu\'il viendra demain.', 'Que dit-il ?', 'Il dit bonjour.', 'Viendra-t-il demain ?'],
+    ['Peut-être viendra-t-il demain.', 'À peine était-il arrivé qu\'il se mit à pleuvoir.', '« Bonjour », dit-il en souriant.', 'Sans doute a-t-elle raison.', 'Aussi décida-t-il de partir.', '« Viens ! » répondit-elle.'],
+    ['Peut-être qu\'il viendra demain.', 'Que dit-il ?', 'Il dit bonjour.', 'Viendra-t-il demain ?', 'Marie dit-elle la vérité ?', 'Le professeur explique-t-il la règle ?', 'Paul demande-t-il de l\'aide ?'],
     { use: 'recognize' }),
   node('neg.ne-alone', 'ne without pas in written French, for recognition: a subject pronoun, then ne alone with savoir, pouvoir, oser or cesser (je ne sais, je ne peux le croire, il ne cesse de pleuvoir), and si je ne me trompe; the learner writes ne … pas', ['neg.ne-pas'],
     [
-      [S(SUBJ), NE, opt(OBJ), S(NE_ALONE_VERBS), S(NOT_NEG_WORD)],
-      [S(SUBJ), NE, opt(OBJ), S(NE_ALONE_VERBS, { end: true })],
-      [S("si|s'"), S(SUBJ), NE, S("me|m'"), S('trompe|abuse')],
+      [S(SUBJ), { ...NE, form: true }, opt(OBJ), S(NE_ALONE_VERBS, { form: true }), S(NOT_NEG_WORD)],
+      [S(SUBJ), { ...NE, form: true }, opt(OBJ), S(NE_ALONE_VERBS, { end: true, form: true })],
+      [S("si|s'"), S(SUBJ), { ...NE, form: true }, S("me|m'"), S('trompe|abuse', { form: true })],
     ],
     ['Je ne sais quoi lui répondre.', 'Je ne peux le croire.', 'Il ne cesse de pleuvoir.', 'Si je ne me trompe, il est déjà parti.'],
     ['Je ne sais pas.', 'Il ne peut plus marcher.', 'Je ne peux que t\'aider.', 'Ne peux-tu pas venir ?', 'Il ne cesse jamais de parler.', 'Personne ne sait tout.'],

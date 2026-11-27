@@ -467,36 +467,36 @@ test('a taught construction licenses the words it lists only inside its own matc
 });
 
 // A recognition-only construction (use: 'recognize', such as the passé simple) is reported where the learner reads or
-// hears it before it is taught, never in French the learner types: not in a typed answer, and not in a gap-fill when
-// the answer the learner types is part of the match.
+// hears its literary form before it is taught, never where the learner types that form: not in a typed answer, and not
+// in a gap-fill whose blank is the form. A blank elsewhere in the match (the subject il) leaves the form read. Where the
+// learner must type the form, recognize-typed warns.
 test('a recognition-only construction is never reported in French the learner types', () => {
   const pastSimple = {
     id: 'fr:cx:test.read-only', label: 'a literary form', needs: [], contrastsWith: [], cefr: 'B2', cefrSource: 'agent: judgment',
-    use: 'recognize', detect: [{ surface: 'il' }, { surface: 'fut' }], examples: { match: ['Il fut là.'], noMatch: ['Il est là.'] },
+    use: 'recognize', detect: [{ surface: 'il' }, { surface: 'fut', form: true }], examples: { match: ['Il fut là.'], noMatch: ['Il est là.'] },
   };
   const productive = { ...pastSimple, id: 'fr:cx:test.productive', use: undefined, detect: [{ surface: 'il' }, { surface: 'parle' }] };
   const graph = { ...base, constructions: [...base.constructions, pastSimple, productive] };
-  const course = [mod(1, [
+  const ofTest = (issues, rule) => issues.filter((i) => i.rule === rule && i.nodeId.startsWith('fr:cx:test.')).map((i) => [i.itemRef, i.nodeId]);
+  const run = (items, position = 1) => ruleTaughtBefore(makeCtx({ graph: { ...graph, courseMap: {} }, course: [mod(position, items)] }));
+  // typed answers, a lenient answer and a gap-fill whose blank is the form: the learner types the form
+  const typed = run([
     item(['Il fut content.']),
     item([], { lenient: ['il fut content'] }),
     item(['Il fut content.'], { blankAnswers: ['fut'] }),
     item(['Il parle.']),
-  ]), mod(2, [
-    item([], { shown: ['Il fut content.'] }),
-    item(['Il fut content.'], { blankAnswers: ['content'] }),
-  ])];
-  const ctx = makeCtx({ graph: { ...graph, courseMap: {} }, course });
-  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-construction' && i.nodeId.startsWith('fr:cx:test.'))
-    .map((i) => [i.itemRef, i.nodeId]);
-  assert.deepEqual(hits, [
-    // the productive pattern is reported where the learner types it
-    ['m1#4', 'fr:cx:test.productive'],
-    // the recognition-only one only where the learner reads it: a shown text, and a gap-fill whose blank is elsewhere
-    ['m2#1', 'fr:cx:test.read-only'],
   ]);
-  // a gap-fill whose blank lies outside the match is French the learner reads there
-  const gap = makeCtx({ graph: { ...graph, courseMap: {} }, course: [mod(2, [item(['Il fut content.'], { blankAnswers: ['content'] })])] });
-  assert.deepEqual(ruleTaughtBefore(gap).filter((i) => i.nodeId === 'fr:cx:test.read-only').map((i) => i.itemRef), ['m2#1']);
+  assert.deepEqual(ofTest(typed, 'untaught-construction'), [['m1#4', 'fr:cx:test.productive']]);
+  assert.deepEqual(ofTest(typed, 'recognize-typed'), [['m1#1', 'fr:cx:test.read-only']]);
+  assert.ok(typed.filter((i) => i.rule === 'recognize-typed').every((i) => i.severity === 'warning'));
+  // a shown text, a gap-fill whose blank lies outside the match, and one whose blank is inside the match but outside
+  // the form: each is French the learner reads there
+  for (const it of [item([], { shown: ['Il fut content.'] }), item(['Il fut content.'], { blankAnswers: ['content'] }),
+    item(['Il fut content.'], { blankAnswers: ['il'] })]) {
+    const read = run([it], 2);
+    assert.deepEqual(ofTest(read, 'untaught-construction'), [['m2#1', 'fr:cx:test.read-only']]);
+    assert.deepEqual(ofTest(read, 'recognize-typed'), []);
+  }
   // a guide may teach it alone: guide_only_teaching leaves it out, and still reports a productive pattern
   const guided = makeCtx({
     graph: { ...graph, courseMap: { m1: { teachesConstructions: ['fr:cx:test.read-only', 'fr:cx:test.productive'] } } },

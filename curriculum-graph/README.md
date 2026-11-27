@@ -185,7 +185,9 @@ A seventh argument, `{ licenses: [headword IDs] }`, names the words the construc
 
 The same argument can hold `use: 'recognize'` for a pattern the learner reads and hears but never writes, such as the passé simple (`fr:cx:passe-simple`): il fut, elle entra, ils firent. The field is written into `constructions.json` as `"use": "recognize"`. It is optional, and `pnpm graph:check` reports any other value as `construction-use-bad`. The checker treats such a pattern as reading knowledge:
 
-- Section 1 of the fix list reports it only where the learner reads or hears it before a module teaches it, such as a reading passage in the passé simple before the guide that explains the tense. In French the learner types it is never reported: not in an answer, and not in a gap-fill whose blank the match runs through.
+- What counts is the literary form itself: the words its detector marks with `form: true`, such as the verb of il fut, or the whole match when no step is marked.
+- Section 1 of the fix list reports it only where the learner reads or hears that form before a module teaches it, such as a reading passage in the passé simple before the guide that explains the tense. It is never reported where the learner types the form: in an answer, or in a gap-fill whose blank is the form. A gap-fill whose blank is another word of the match (the il of il fut) still leaves the form read.
+- Where the learner must type the form, `pnpm graph:check` warns `recognize-typed`: a learner should read such a pattern, not write it.
 - A guide may teach it alone, so `guide_only_teaching` leaves it out.
 
 The B2 patterns of this kind are `fr:cx:passe-simple` and `fr:cx:inversion.literary` (peut-être viendra-t-il, « Bonjour », dit-il), both B2, and `fr:cx:subj.imparfait` (qu'il fût), `fr:cx:subj.plus-que-parfait` (qu'il eût fini) and `fr:cx:neg.ne-alone` (je ne sais, je ne peux le croire), all C1.
@@ -200,12 +202,15 @@ A detector is a list of steps, one for each word it matches, read left to right 
 - `headword`, `cell`, `pos`, `via`: the word must be a form of that headword, fill that cell (`*` stands for any text, so `prs.*` is any present-tense form), have that part of speech, or be that kind of reading (`lemma`, `irregular` or `generated`). `{ pos: 'verb', via: 'lemma' }` matches an infinitive.
 - `name: true`: the word is in `names.json`.
 - `clitic: true`: the word is a pronoun joined by a hyphen, such as -tu or -t-il.
-- `start: true`: the word is the first word of the sentence.
-- `end: true`: the word is the last word of the text, which the tokenizer reads without its punctuation.
+- `start: true`: the word is the first word of its sentence. `start: 'text'` asks for the first word of the whole text: the imperative detectors use it, because an answer that leaves out its subject starts the same way.
+- `end: true`: the word is the last word of its sentence.
 - `accented`: a regular expression the word must match with its accents kept (in lowercase), for forms that only an accent tells apart, such as the subjonctif imparfait fût and the passé simple fut. Text typed without accents never matches it.
 - `any`: the word matches at least one of the listed steps.
 - `skip: n`: up to n other words may sit between the previous step's word and this one.
 - `optional: true`: the step may match no word.
+- `form: true`: the word carries a recognition-only form (see `use: 'recognize'` above). It does not change what the step matches.
+
+The tokenizer drops punctuation but numbers the sentences of a text: a full stop, question mark, exclamation mark or line break ends one, and an ellipsis does not, since exercise prompts use it for a gap (je ... lave). Every word of a match lies in one sentence, so `skip` never reaches into the next sentence of a reading passage.
 
 ## Functions and exponents
 

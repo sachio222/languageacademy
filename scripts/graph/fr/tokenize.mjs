@@ -43,13 +43,26 @@ export function restoreElisions(text) {
   return String(text).normalize('NFC').replace(LONE_ELISION_RE, "$1$2'");
 }
 
+// A full stop, question mark, exclamation mark or line break between two words ends a sentence. An ellipsis (… or
+// ...) does not: exercise prompts use it for a gap (je ... lave).
+const SENTENCE_END_RE = /[!?\n]|(?<![.…])\.(?![.…])/;
+
+// Each token carries `sentence`, the number of its sentence in the text (0 for the first), so that a detector match
+// stays inside one sentence of a reading passage.
 export function tokenize(text, opts = {}) {
   const isWord = opts.isWord ?? (() => false);
   const tokens = [];
-  for (const [run] of String(text).normalize('NFC').matchAll(RUN_RE)) {
+  const source = String(text).normalize('NFC');
+  let sentence = 0;
+  let prevEnd = 0;
+  for (const found of source.matchAll(RUN_RE)) {
+    const [run] = found;
+    if (tokens.length && SENTENCE_END_RE.test(source.slice(prevEnd, found.index))) sentence += 1;
+    prevEnd = found.index + run.length;
     if (HOUR.test(run)) continue;
     let rest = run;
     let m;
+    const at = tokens.length;
     while ((m = ELISION_RE.exec(rest))) {
       tokens.push(make(m[0]));
       rest = rest.slice(m[0].length);
@@ -57,6 +70,7 @@ export function tokenize(text, opts = {}) {
     // A trailing apostrophe only means something after an elision prefix.
     rest = rest.replace(/['’ʼ‘]$/, '');
     if (rest) tokens.push(...splitHyphenated(rest, isWord));
+    for (let i = at; i < tokens.length; i++) tokens[i].sentence = sentence;
   }
   return tokens;
 }

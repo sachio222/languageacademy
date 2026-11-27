@@ -1,6 +1,6 @@
 import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
 import { lookupToken, lookupTokenStrict, lookupKey, strictKey } from '../fr/forms.mjs';
-import { detectConstructions, matchSpans } from '../fr/detect.mjs';
+import { detectConstructions, matchSpans, matchStepSpans } from '../fr/detect.mjs';
 import { issue } from '../issues.mjs';
 import { languageName } from '../pairs.mjs';
 import { OUTSIDE } from '../content-course.mjs';
@@ -163,10 +163,17 @@ function run(ctx) {
   const titleAt = new Map(ctx.course.map((m) => [m.position, m.title]));
   const issues = [];
   // A recognition-only pattern (use: 'recognize', such as the passé simple) is one the learner reads and hears but never
-  // types, so it is reported only where some match of it lies wholly in French the learner reads or hears.
+  // types. What counts is the literary form itself, the tokens its detector marks with form: true (all of the match when
+  // none is marked): untaught-construction is reported only where some match has its form in French the learner reads
+  // or hears, and recognize-typed warns where the learner would have to type the form.
   const recognize = new Map((graph.constructions ?? []).filter((c) => c.use === 'recognize' && c.detect).map((c) => [c.id, c]));
-  const readOnlyMatch = (id, a, typedAt) => matchSpans(a.tokens, a.readings, recognize.get(id).detect, graph.names)
-    .some((span) => span.every((i) => !typedAt(i)));
+  const formTokens = (span) => {
+    const marked = span.filter(([si, , steps]) => steps[si]?.form);
+    return (marked.length ? marked : span).map(([, p]) => p);
+  };
+  const recognizeSpans = (id, a) => matchStepSpans(a.tokens, a.readings, recognize.get(id).detect, graph.names).map(formTokens);
+  const readOnlyMatch = (id, a, typedAt) => recognizeSpans(id, a).some((form) => form.every((i) => !typedAt(i)));
+  const typedFormMatch = (id, a, typedAt) => recognizeSpans(id, a).some((form) => form.some((i) => typedAt(i)));
 
   const laterNote = (id, position) => {
     const at = timeline.taughtAt.get(id);
@@ -188,6 +195,7 @@ function run(ctx) {
       else seenLenient.add(lk);
     };
     const seenCx = new Set();
+    const seenTyped = new Set();
     for (const it of m.items) {
       // Hints, feedback, instructions and titles stay outside this rule (Jake); their French still counts for reuse.
       if (OUTSIDE.has(it.source)) continue;
@@ -265,6 +273,15 @@ function run(ctx) {
           }));
         });
         for (const id of a.constructions) {
+          if (recognize.has(id) && !ignore.has(id) && !seenTyped.has(id) && typedFormMatch(id, a, typedAt)) {
+            seenTyped.add(id);
+            issues.push(issue({
+              rule: 'recognize-typed', severity: 'warning', moduleKey: m.moduleKey, position: m.position,
+              itemRef: it.ref, nodeId: id, text: a.text,
+              message: `${id} is a pattern the learner only reads, but ${it.ref} asks the learner to type it (${a.text}); make it French the learner reads, or change the answer`,
+              fix: { kind: 'rewrite-item', moduleKey: m.moduleKey },
+            }));
+          }
           if (seenCx.has(id) || ignore.has(id) || timeline.isAvailable(id, m.position)) continue;
           if (recognize.has(id) && !readOnlyMatch(id, a, typedAt)) continue;
           seenCx.add(id);

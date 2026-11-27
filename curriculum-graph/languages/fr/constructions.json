@@ -314,6 +314,48 @@
       ],
       [
         {
+          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|ne|n'"
+        },
+        {
+          "surface": "le|la|les|l'|lui|leur|me|m'|te|t'|nous|vous"
+        },
+        {
+          "cell": "*.*",
+          "headword": "fr:lex:avoir"
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais"
+        },
+        {
+          "cell": "ptcp*",
+          "headword": "fr:lex:laisser"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "cell": "*.*",
+          "headword": "fr:lex:avoir"
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais"
+        },
+        {
+          "cell": "ptcp*",
+          "headword": "fr:lex:laisser"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
           "surface": "laisse|laissez|laissons"
         },
         {
@@ -331,16 +373,19 @@
         "Je laisse les enfants jouer dehors.",
         "Je les laisse partir.",
         "Laisse-moi faire !",
-        "Elle ne nous laisse pas sortir."
+        "Elle ne nous laisse pas sortir.",
+        "Je l'ai laissé partir.",
+        "Elle a laissé tomber son verre."
       ],
       "noMatch": [
         "Laisse la porte ouverte.",
         "Je fais réparer ma voiture.",
-        "Il me laisse un message."
+        "Il me laisse un message.",
+        "Je l'ai laissé sur la table."
       ]
     },
     "id": "fr:cx:causative.laisser",
-    "label": "laisser + infinitive: let someone do something, with the person as a noun or an object pronoun (je laisse les enfants jouer, je les laisse partir, laisse-moi faire); faire + infinitive is its own pattern",
+    "label": "laisser + infinitive: let someone do something, with the person as a noun or an object pronoun, in any tense (je laisse les enfants jouer, je les laisse partir, je l'ai laissé partir, laisse-moi faire); faire + infinitive is its own pattern",
     "needs": [
       "fr:cx:causative.faire",
       "fr:cx:pronoun.direct-object"
@@ -353,7 +398,7 @@
     "detect": [
       [
         {
-          "surface": "me|m'|te|t'|se|s'|nous|vous"
+          "surface": "se|s'"
         },
         {
           "optional": true,
@@ -399,7 +444,207 @@
       ],
       [
         {
-          "surface": "me|m'|te|t'|se|s'|nous|vous"
+          "surface": "je|j'"
+        },
+        {
+          "skip": 3,
+          "surface": "me|m'"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "fait"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "tu"
+        },
+        {
+          "skip": 3,
+          "surface": "te|t'"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "fait"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "nous"
+        },
+        {
+          "skip": 3,
+          "surface": "nous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "fait"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "vous"
+        },
+        {
+          "skip": 3,
+          "surface": "vous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "headword": "fr:lex:etre"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "fait"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "surface": "se|s'"
         },
         {
           "optional": true,
@@ -413,26 +658,196 @@
           ]
         },
         {
-          "surface": "voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler"
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler|recaler|refuser|rembourser|oublier|respecter|aimer|detester|entendre|comprendre|connaitre|accepter|embaucher|renvoyer|tromper|piquer|frapper|bousculer|doubler|contredire"
+        }
+      ],
+      [
+        {
+          "surface": "je|j'"
+        },
+        {
+          "skip": 3,
+          "surface": "me|m'"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "any": [
+            {
+              "headword": "fr:lex:faire"
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler|recaler|refuser|rembourser|oublier|respecter|aimer|detester|entendre|comprendre|connaitre|accepter|embaucher|renvoyer|tromper|piquer|frapper|bousculer|doubler|contredire"
+        }
+      ],
+      [
+        {
+          "surface": "tu"
+        },
+        {
+          "skip": 3,
+          "surface": "te|t'"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "any": [
+            {
+              "headword": "fr:lex:faire"
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler|recaler|refuser|rembourser|oublier|respecter|aimer|detester|entendre|comprendre|connaitre|accepter|embaucher|renvoyer|tromper|piquer|frapper|bousculer|doubler|contredire"
+        }
+      ],
+      [
+        {
+          "surface": "nous"
+        },
+        {
+          "skip": 3,
+          "surface": "nous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "any": [
+            {
+              "headword": "fr:lex:faire"
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler|recaler|refuser|rembourser|oublier|respecter|aimer|detester|entendre|comprendre|connaitre|accepter|embaucher|renvoyer|tromper|piquer|frapper|bousculer|doubler|contredire"
+        }
+      ],
+      [
+        {
+          "surface": "vous"
+        },
+        {
+          "skip": 3,
+          "surface": "vous"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "any": [
+            {
+              "headword": "fr:lex:faire"
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "voler|renverser|arreter|attraper|piquer|mordre|agresser|licencier|virer|insulter|gronder|cambrioler|escroquer|avoir|rouler|expulser|elire|remarquer|operer|vacciner|soigner|punir|tuer|battre|disputer|engueuler|recaler|refuser|rembourser|oublier|respecter|aimer|detester|entendre|comprendre|connaitre|accepter|embaucher|renvoyer|tromper|piquer|frapper|bousculer|doubler|contredire"
         }
       ]
     ],
     "examples": {
       "match": [
-        "Il s'est fait voler sa voiture devant chez lui.",
+        "Il s'est fait piquer par une guêpe.",
         "Elle s'est fait couper les cheveux.",
         "Attention, tu vas te faire renverser !",
-        "Ils se sont fait arrêter à la frontière."
+        "Ils se sont fait arrêter à la frontière.",
+        "Il se fait toujours remarquer.",
+        "Je me suis fait avoir par un vendeur."
       ],
       "noMatch": [
-        "Je me fais couper les cheveux.",
+        "Je me fais du souci.",
         "Il fait réparer sa voiture.",
         "Elle s'est fait des amis.",
-        "Il s'est fâché."
+        "Il s'est fâché.",
+        "Qu'est-ce que tu me fais voir ?"
       ]
     },
     "id": "fr:cx:causative.se-faire",
-    "label": "se faire + infinitive for something that happens to the subject, done by someone else (il s'est fait voler sa voiture, elle s'est fait renverser par un vélo), and the passé composé of se faire + infinitive, where fait does not agree (elle s'est fait couper les cheveux)",
+    "label": "se faire + infinitive for something that happens to the subject, done by someone else (il s'est fait piquer par une guêpe, elle s'est fait renverser par un vélo, il se fait toujours remarquer), and se faire + infinitive in a compound tense, where fait does not agree (elle s'est fait couper les cheveux); the present je me fais couper les cheveux is the causative faire already taught, so in the present and the infinitive only the verbs of this passive sense count",
     "needs": [
       "fr:cx:causative.faire",
       "fr:cx:passe-compose.reflexive"
@@ -1380,9 +1795,12 @@
           "surface": "selon"
         },
         {
+          "surface": "(?!(moi|toi|nous|vous)$).+"
+        },
+        {
           "cell": "cond.*",
-          "skip": 6,
-          "surface": "(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|pourriez)$).+"
+          "skip": 10,
+          "surface": "(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|aimerions|aimeriez|aimeraient|pourrais|pourrait|pourriez|faudrait|devrais|devrait|devrions|devriez|devraient)$).+"
         }
       ],
       [
@@ -1393,9 +1811,12 @@
           "surface": "apres"
         },
         {
+          "surface": "(?!(moi|toi|nous|vous)$).+"
+        },
+        {
           "cell": "cond.*",
-          "skip": 6,
-          "surface": "(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|pourriez)$).+"
+          "skip": 10,
+          "surface": "(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|aimerions|aimeriez|aimeraient|pourrais|pourrait|pourriez|faudrait|devrais|devrait|devrions|devriez|devraient)$).+"
         }
       ]
     ],
@@ -1403,16 +1824,20 @@
       "match": [
         "Selon la police, le voleur serait parti en train.",
         "D'après la radio, il y aurait eu dix blessés.",
-        "Selon les experts, les prix augmenteraient encore."
+        "Selon les experts, les prix augmenteraient encore.",
+        "D'après les témoins, le conducteur roulait trop vite et aurait perdu le contrôle."
       ],
       "noMatch": [
         "Selon moi, c'est une bonne idée.",
         "D'après la radio, il y a eu dix blessés.",
-        "Je voudrais partir après le dîner."
+        "Je voudrais partir après le dîner.",
+        "Selon moi, tu devrais rester.",
+        "D'après toi, que ferait-il ?",
+        "Selon le guide, il faudrait réserver."
       ]
     },
     "id": "fr:cx:conditional.hearsay",
-    "label": "Conditional for news that is not confirmed, after selon or d'après (selon la police, le voleur serait parti en train; d'après la radio, il y aurait eu dix blessés)",
+    "label": "Conditional for news that is not confirmed, after selon or d'après + a source (selon la police, le voleur serait parti en train; d'après la radio, il y aurait eu dix blessés); selon moi or d'après toi gives an opinion, and the polite conditionals and advice (il faudrait, tu devrais) do not count",
     "needs": [
       "fr:cx:conditionnel-present",
       "fr:cx:conditionnel-passe.avoir"
@@ -1588,7 +2013,8 @@
     ],
     "examples": {
       "match": [
-        "Après qu'il est parti, nous avons mangé.",
+        "Nous mangerons après que tu seras rentré.",
+        "Après qu'il est parti, nous mangeons.",
         "On partira une fois que tu auras fini.",
         "Il a appelé après que nous étions rentrés."
       ],
@@ -1599,7 +2025,7 @@
       ]
     },
     "id": "fr:cx:conj.apres-que",
-    "label": "après que and une fois que + indicative, for an action finished before the main one (après qu'il est parti, nous avons mangé; on partira une fois que tu auras fini)",
+    "label": "après que and une fois que + indicative, for an action finished before the main one (nous mangerons après que tu seras rentré, on partira une fois que tu auras fini)",
     "needs": [
       "fr:cx:subj.avant-que",
       "fr:cx:plus-que-parfait.avoir",
@@ -1679,6 +2105,10 @@
         },
         {
           "surface": "seulement"
+        },
+        {
+          "skip": 12,
+          "surface": "mais"
         }
       ]
     ],
@@ -1694,11 +2124,12 @@
         "J'ai deux ans de plus que toi.",
         "Il habite ailleurs.",
         "Il en veut plus.",
-        "Ce fromage vient d'ailleurs."
+        "Ce fromage vient d'ailleurs.",
+        "Non, seulement deux."
       ]
     },
     "id": "fr:cx:connector.addition",
-    "label": "Connectors that add an argument: en outre, de plus, d'ailleurs, par ailleurs, non seulement … mais (de plus, ce travail est mal payé; non seulement il chante, mais il danse aussi); de plus counts at the start of a sentence or after et or mais",
+    "label": "Connectors that add an argument: en outre, de plus, d'ailleurs, par ailleurs, non seulement … mais (de plus, ce travail est mal payé; non seulement il chante, mais il danse aussi); de plus counts at the start of a sentence or after et or mais, and non seulement when mais follows in the sentence",
     "needs": []
   },
   {
@@ -1751,6 +2182,9 @@
         },
         {
           "surface": "cote"
+        },
+        {
+          "surface": "(?!(de|d'|du|des)$).+"
         }
       ]
     ],
@@ -1758,18 +2192,19 @@
       "match": [
         "D'une part c'est cher, d'autre part c'est loin.",
         "En premier lieu, je voudrais vous remercier.",
-        "Dans un premier temps, nous allons lire le texte.",
+        "Dans un premier temps, je présenterai le projet.",
         "D'un côté il a raison, de l'autre il exagère."
       ],
       "noMatch": [
         "Il part demain.",
         "C'est un lieu magnifique.",
         "J'ai le temps.",
-        "Mets-le de côté."
+        "Mets-le de côté.",
+        "Il habite d'un côté de la rue."
       ]
     },
     "id": "fr:cx:connector.argument-order",
-    "label": "Connectors that order an argument: d'une part … d'autre part, d'un côté … de l'autre, en premier lieu, en second lieu, en dernier lieu, dans un premier temps (d'une part c'est cher, d'autre part c'est loin)",
+    "label": "Connectors that order an argument: d'une part … d'autre part, d'un côté … de l'autre, en premier lieu, en second lieu, en dernier lieu, dans un premier temps (d'une part c'est cher, d'autre part c'est loin); d'un côté de for a place (d'un côté de la rue) does not count",
     "needs": []
   },
   {
@@ -2017,14 +2452,6 @@
     "detect": [
       [
         {
-          "surface": "meme"
-        },
-        {
-          "surface": "si|s'"
-        }
-      ],
-      [
-        {
           "surface": "tout"
         },
         {
@@ -2042,7 +2469,7 @@
           "surface": "tout"
         },
         {
-          "surface": "(?!(le|la|les|l'|ce|cet|cette|ces|son|sa|ses|mon|ma|mes|ton|ta|tes|notre|nos|votre|vos|leur|leurs|un|une|des)$).+"
+          "surface": "(?!(le|la|les|l'|ce|cet|cette|ces|ca|cela|son|sa|ses|mon|ma|mes|ton|ta|tes|notre|nos|votre|vos|leur|leurs|un|une|des)$).+"
         }
       ],
       [
@@ -2057,21 +2484,22 @@
     ],
     "examples": {
       "match": [
-        "Même si je suis fatigué, je viens.",
         "Il pleuvait, mais nous sommes sortis tout de même.",
-        "C'était difficile ; malgré tout, elle a réussi."
+        "C'était difficile ; malgré tout, elle a réussi.",
+        "Elle était fatiguée. Elle a fini malgré tout."
       ],
       "noMatch": [
         "C'est le même livre.",
         "Malgré la pluie, nous sommes sortis.",
-        "Si je suis fatigué, je reste.",
-        "Malgré tout le bruit, il dort."
+        "Malgré tout le bruit, il dort.",
+        "Malgré tout ça, il reste."
       ]
     },
     "id": "fr:cx:connector.concession",
-    "label": "Concession connectors: même si (even if, with the indicative), tout de même, malgré tout (même si je suis fatigué, je viens; il pleuvait, mais nous sommes sortis tout de même)",
+    "label": "Concession connectors: tout de même and malgré tout (it is still so): il pleuvait, mais nous sommes sortis tout de même; malgré tout, elle a réussi; même si is a B1 pattern of its own",
     "needs": [
-      "fr:cx:subj.bien-que"
+      "fr:cx:subj.bien-que",
+      "fr:cx:connector.meme-si"
     ]
   },
   {
@@ -2116,7 +2544,33 @@
           "surface": "l'"
         },
         {
-          "surface": "inverse|oppose"
+          "surface": "inverse"
+        }
+      ],
+      [
+        {
+          "surface": "a"
+        },
+        {
+          "surface": "l'"
+        },
+        {
+          "surface": "oppose"
+        },
+        {
+          "surface": "(?!(de|d'|du|des)$).+"
+        }
+      ],
+      [
+        {
+          "surface": "a"
+        },
+        {
+          "surface": "l'"
+        },
+        {
+          "end": true,
+          "surface": "oppose"
         }
       ]
     ],
@@ -2125,18 +2579,67 @@
         "Paul aime la mer ; sa sœur, en revanche, préfère la montagne.",
         "Le film est long, par contre il est très beau.",
         "Il était malade ; néanmoins, il est venu.",
-        "Contrairement à son frère, elle adore lire."
+        "Contrairement à son frère, elle adore lire.",
+        "Lui travaille la nuit ; elle, à l'opposé, travaille le jour."
       ],
       "noMatch": [
         "Je suis contre cette idée.",
         "Il est malade, pourtant il est venu.",
-        "Je vote pour elle."
+        "Je vote pour elle.",
+        "Il habite à l'opposé de la ville."
       ]
     },
     "id": "fr:cx:connector.contrast",
-    "label": "Contrast connectors: en revanche, par contre, néanmoins, toutefois, contrairement à, à l'inverse (Paul aime la mer; sa sœur, en revanche, préfère la montagne); cependant and pourtant are taught as words at B1 and are not counted here",
+    "label": "Contrast connectors: en revanche, par contre, néanmoins, toutefois, contrairement à, à l'inverse, à l'opposé (Paul aime la mer; sa sœur, en revanche, préfère la montagne); cependant and pourtant are taught as words at B1 and are not counted here, nor is à l'opposé de for a place (à l'opposé de la ville)",
+    "needs": []
+  },
+  {
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
+    "contrastsWith": [],
+    "detect": [
+      {
+        "surface": "meme"
+      },
+      {
+        "surface": "si|s'"
+      },
+      {
+        "any": [
+          {
+            "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|c'|ce|ca|cela"
+          },
+          {
+            "pos": "article"
+          },
+          {
+            "pos": "determiner"
+          },
+          {
+            "pos": "noun"
+          },
+          {
+            "name": true
+          }
+        ]
+      }
+    ],
+    "examples": {
+      "match": [
+        "Même si je suis fatigué, je viens.",
+        "Même s'il pleut, on sort.",
+        "Je viendrai même si Marie ne vient pas."
+      ],
+      "noMatch": [
+        "C'est le même livre.",
+        "Il pleut même si fort.",
+        "Si je suis fatigué, je reste."
+      ]
+    },
+    "id": "fr:cx:connector.meme-si",
+    "label": "même si + indicative: even if (même si je suis fatigué, je viens; même s'il pleut, on sort)",
     "needs": [
-      "fr:cx:frame.verb-que-clause"
+      "fr:cx:si.present"
     ]
   },
   {
@@ -2223,6 +2726,18 @@
         },
         {
           "surface": "dit"
+        },
+        {
+          "clitic": false
+        }
+      ],
+      [
+        {
+          "surface": "autrement"
+        },
+        {
+          "end": true,
+          "surface": "dit"
         }
       ],
       [
@@ -2260,7 +2775,8 @@
       "noMatch": [
         "Il l'a dit autrement.",
         "Écris un mot.",
-        "C'est-à-dire que je ne viens pas."
+        "C'est-à-dire que je ne viens pas.",
+        "Il a fait autrement, dit-il."
       ]
     },
     "id": "fr:cx:connector.reformulation",
@@ -2298,9 +2814,23 @@
       ],
       [
         {
+          "start": true,
           "surface": "pour"
         },
         {
+          "surface": "conclure|resumer"
+        },
+        {
+          "surface": "(?!(le|la|les|l'|un|une|des|du|de|d'|ce|cet|cette|ces|son|sa|ses|mon|ma|mes|ton|ta|tes|notre|nos|votre|vos|leur|leurs)$).+"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "pour"
+        },
+        {
+          "end": true,
           "surface": "conclure|resumer"
         }
       ],
@@ -2321,17 +2851,20 @@
         "Bref, c'était une belle soirée.",
         "En somme, tout s'est bien passé.",
         "En résumé, nous devons partir plus tôt.",
-        "Tout compte fait, je préfère rester."
+        "Tout compte fait, je préfère rester.",
+        "Pour conclure, je vous remercie."
       ],
       "noMatch": [
         "C'est une somme importante.",
         "Il a fait un bref discours.",
         "Je vais conclure demain.",
-        "En conclusion, la ville est belle."
+        "En conclusion, la ville est belle.",
+        "Pour conclure un accord, il faut parler.",
+        "Pour résumer le livre, il faut le lire."
       ]
     },
     "id": "fr:cx:connector.summary",
-    "label": "Connectors that sum up or conclude: bref, en bref, en somme, en résumé, somme toute, en définitive, pour conclure, pour résumer, tout compte fait (bref, c'était une belle soirée); bref counts at the start of a sentence, and en conclusion, which an English speaker reads at sight, is not counted",
+    "label": "Connectors that sum up or conclude: bref, en bref, en somme, en résumé, somme toute, en définitive, pour conclure, pour résumer, tout compte fait (bref, c'était une belle soirée); bref counts at the start of a sentence, pour conclure and pour résumer at the start of a sentence and not before an object (pour conclure un accord), and en conclusion, which an English speaker reads at sight, is not counted",
     "needs": []
   },
   {
@@ -2365,7 +2898,6 @@
     "id": "fr:cx:consequence.tellement-que",
     "label": "Consequence with tellement or tant … que: so much that (il a tellement plu que la rivière a débordé; elle a tant de travail qu'elle ne sort plus); tellement plus … que is a comparison and tant que (as long as) is not counted",
     "needs": [
-      "fr:cx:connector.cause-consequence",
       "fr:cx:comparative"
     ]
   },
@@ -3056,7 +3588,7 @@
       ],
       "noMatch": [
         "Il m'oblige à partir.",
-        "Je suis fatigué de partir.",
+        "Je suis content de partir.",
         "La porte est forcée.",
         "Elle nous force à rester."
       ]
@@ -3582,20 +4114,22 @@
       {
         "cell": "cond.*",
         "skip": 6,
-        "surface": "(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|pourriez)$).+"
+        "surface": "(?!(voudrais|voudrait|voudrions|voudriez|voudraient|aimerais|aimerait|aimerions|aimeriez|aimeraient|pourrais|pourrait|pourriez)$).+"
       }
     ],
     "examples": {
       "match": [
         "Sans ton aide, je n'aurais pas réussi.",
         "Avec un peu plus de temps, on finirait ce projet.",
-        "Sans toi, je serais perdu."
+        "Sans toi, je serais perdu.",
+        "Il pleut. Sans ton aide, je n'aurais pas réussi."
       ],
       "noMatch": [
         "Sans toi, je suis perdu.",
-        "Avec plaisir, je voudrais un café.",
-        "Sans doute qu'il viendrait.",
-        "Je bois mon café sans sucre."
+        "Avec mon café, je voudrais un croissant.",
+        "Sans doute qu'il viendrait si tu l'invitais.",
+        "Je bois mon café sans sucre.",
+        "Il pleut. Sans parapluie, je sors quand même."
       ]
     },
     "id": "fr:cx:hypothesis.avec-sans",
@@ -3697,12 +4231,12 @@
               "surface": "veuillez"
             }
           ],
-          "start": true
+          "start": "text"
         }
       ],
       [
         {
-          "start": true,
+          "start": "text",
           "surface": "va"
         },
         {
@@ -3740,7 +4274,7 @@
         {
           "cell": "prs.1pl",
           "pos": "verb",
-          "start": true
+          "start": "text"
         },
         {
           "surface": "(?!-(t-)?(tu|il|elle|on|nous|vous|ils|elles|ce)$).+"
@@ -3748,7 +4282,7 @@
       ],
       [
         {
-          "start": true,
+          "start": "text",
           "surface": "ne|n'"
         },
         {
@@ -3840,7 +4374,7 @@
               "pos": "verb"
             }
           ],
-          "start": true,
+          "start": "text",
           "surface": "(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+"
         },
         {
@@ -3849,7 +4383,7 @@
       ],
       [
         {
-          "start": true,
+          "start": "text",
           "surface": "ne|n'"
         },
         {
@@ -3909,7 +4443,7 @@
         {
           "cell": "prs.2pl",
           "pos": "verb",
-          "start": true,
+          "start": "text",
           "surface": "(?!(excusez|excuse|faut|entre|ai|as|avons|avez|suis|es|sommes|etes|veux|peux|dois|voulons|voulez|pouvons|pouvez|devons|devez|sais|savons|savez)$).+"
         },
         {
@@ -3918,7 +4452,7 @@
       ],
       [
         {
-          "start": true,
+          "start": "text",
           "surface": "ne|n'"
         },
         {
@@ -4084,10 +4618,19 @@
           "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
         },
         {
-          "cell": "*.*"
+          "any": [
+            {
+              "cell": "*.*"
+            },
+            {
+              "surface": "abandonna|abandonnerent|accepta|accepterent|accompagna|accompagnerent|accorda|accorderent|accrocha|accrocherent|accusa|accuserent|acheta|acheterent|acheva|acheverent|admira|admirerent|admit|adopta|adopterent|adora|adorerent|adressa|adresserent|affirma|affirmerent|agirent|aida|aiderent|aima|aimerent|ajouta|ajouterent|alla|allerent|allongea|allongerent|alluma|allumerent|amena|amenerent|amusa|amuserent|anima|animerent|annonca|annoncerent|annula|annulerent|apercurent|apercut|appartint|apparurent|apparut|appela|appelerent|appliqua|appliquerent|apporta|apporterent|apprecia|apprecierent|apprirent|apprit|approcha|approcherent|appuya|appuyerent|arrangea|arrangerent|arreta|arreterent|arriva|arriverent|assirent|assista|assisterent|assit|assura|assurerent|attacha|attacherent|attaqua|attaquerent|atteignirent|atteignit|attendirent|attendit|attira|attirerent|attrapa|attraperent|augmenta|augmenterent|autorisa|autoriserent|avala|avalerent|avanca|avancerent|avertirent|avoua|avouerent|baigna|baignerent|baissa|baisserent|batirent|battirent|battit|bavarda|bavarderent|blessa|blesserent|bloqua|bloquerent|bougea|bougerent|brilla|brillerent|brisa|briserent|brula|brulerent|burent|cacha|cacherent|calma|calmerent|cassa|casserent|causa|causerent|ceda|cederent|cessa|cesserent|changea|changerent|chanta|chanterent|chargea|chargerent|chassa|chasserent|chauffa|chaufferent|chercha|chercherent|choisirent|circula|circulerent|cita|citerent|coiffa|coifferent|colla|collerent|combina|combinerent|commanda|commanderent|commenca|commencerent|communiqua|communiquerent|compara|comparerent|comprirent|comprit|compta|compterent|concentra|concentrerent|conduisirent|conduisit|confia|confierent|confirma|confirmerent|confondirent|confondit|connecta|connecterent|connurent|connut|conseilla|conseillerent|conserva|conserverent|considera|considererent|consista|consisterent|constata|constaterent|construisirent|construisit|consulta|consulterent|contacta|contacterent|contint|continua|continuerent|controla|controlerent|correspondirent|correspondit|coucha|coucherent|coula|coulerent|coupa|couperent|coururent|courut|couta|couterent|couvrit|craignirent|craignit|crea|creerent|creusa|creuserent|cria|crierent|croisa|croiserent|crurent|crut|cuisina|cuisinerent|dansa|danserent|debarrassa|debarrasserent|debrouilla|debrouillerent|dechira|dechirerent|decida|deciderent|declara|declarerent|decolla|decollerent|decouvrirent|decouvrit|decrivit|decrocha|decrocherent|defendirent|defendit|demanda|demanderent|demarra|demarrerent|demenagea|demenagerent|depanna|depannerent|depassa|depasserent|depecha|depecherent|dependirent|dependit|depensa|depenserent|deplaca|deplacerent|deposa|deposerent|derangea|derangerent|deroula|deroulerent|descendirent|descendit|desira|desirerent|dessina|dessinerent|detendirent|detendit|detesta|detesterent|detruisit|developpa|developperent|devina|devinerent|devinrent|devint|dirent|dirigea|dirigerent|discuta|discuterent|disparurent|disparut|disputa|disputerent|distingua|distinguerent|distribua|distribuerent|donna|donnerent|dormirent|dormit|doucha|doucherent|douta|douterent|dura|durerent|dut|echangea|echangerent|echappa|echapperent|echoua|echouerent|eclaira|eclairerent|eclata|eclaterent|economisa|economiserent|ecouta|ecouterent|ecrasa|ecraserent|ecrivirent|ecrivit|effaca|effacerent|eleva|eleverent|elimina|eliminerent|eloigna|eloignerent|embrassa|embrasserent|emmena|emmenerent|empecha|empecherent|employa|employerent|emporta|emporterent|emprunta|emprunterent|encouragea|encouragerent|enerva|enerverent|enferma|enfermerent|engagea|engagerent|enleva|enleverent|ennuya|ennuyerent|enregistra|enregistrerent|enrichirent|enseigna|enseignerent|entendirent|entendit|entoura|entourerent|entra|entraina|entrainerent|entrerent|envisagea|envisagerent|envoya|envoyerent|epela|epelerent|epousa|epouserent|espera|espererent|essaya|essayerent|essuya|essuyerent|estima|estimerent|etablirent|eteignit|etendirent|etendit|etonna|etonnerent|etudia|etudierent|eurent|eut|evita|eviterent|evolua|evoluerent|evoqua|evoquerent|exagera|exagererent|examina|examinerent|excusa|excuserent|exigea|exigerent|exista|existerent|expliqua|expliquerent|explosa|exploserent|exporta|exporterent|exprima|exprimerent|fabriqua|fabriquerent|facha|facherent|fallut|felicita|feliciterent|ferma|fermerent|feterent|filma|filmerent|finirent|firent|fit|fixa|fixerent|fleurirent|fonctionna|fonctionnerent|fondirent|fondit|forca|forcerent|forma|formerent|fournirent|franchirent|frappa|frapperent|frequenta|frequenterent|fuma|fumerent|furent|fut|gagna|gagnerent|gara|garda|garderent|garerent|gela|gelerent|gena|generent|glissa|glisserent|gouta|gouterent|grandirent|grimpa|grimperent|guerirent|habilla|habillerent|habita|habiterent|habitua|habituerent|hesita|hesiterent|hurla|hurlerent|identifia|identifierent|ignora|ignorerent|imagina|imaginerent|imita|imiterent|imposa|imposerent|impressionna|impressionnerent|indiqua|indiquerent|informa|informerent|inquieta|inquieterent|inscrivit|insista|insisterent|inspira|inspirerent|installa|installerent|interessa|interesserent|interrogea|interrogerent|interrompirent|interrompit|inventa|inventerent|invita|inviterent|jeta|jeterent|joignit|joua|jouerent|jugea|jugerent|jura|jurerent|justifia|justifierent|lacha|lacherent|laissa|laisserent|lanca|lancerent|lava|laverent|leva|leverent|libera|libererent|logea|logerent|loua|louerent|lurent|lut|lutta|lutterent|maintint|mangea|mangerent|manifesta|manifesterent|manqua|manquerent|maquilla|maquillerent|marcha|marcherent|maria|marierent|marqua|marquerent|mefia|mefierent|mena|menaca|menacerent|menerent|mentit|merita|meriterent|mesura|mesurerent|mirent|mit|monta|monterent|montra|montrerent|moqua|moquerent|mordirent|mordit|moururent|mourut|murmura|murmurerent|nagea|nagerent|naquirent|naquit|neigea|neigerent|nettoya|nettoyerent|nomma|nommerent|nourrirent|obeirent|obligea|obligerent|observa|observerent|obtinrent|obtint|occupa|occuperent|offrirent|offrit|organisa|organiserent|osa|oserent|oublia|oublierent|ouvrirent|ouvrit|parcourut|pardonna|pardonnerent|parierent|parla|parlerent|partagea|partagerent|participa|participerent|partirent|partit|parurent|parut|parvint|passa|passerent|paya|payerent|peignit|pensa|penserent|perdirent|perdit|permirent|permit|piqua|piquerent|placa|placerent|plaignit|plaisanta|plaisanterent|planta|planterent|pleura|pleurerent|plia|plierent|plongea|plongerent|plurent|plut|porta|porterent|posa|poserent|posseda|possederent|poursuivit|poussa|pousserent|pratiqua|pratiquerent|precisa|preciserent|prefera|prefererent|prepara|preparerent|presenta|presenterent|preserva|preserverent|pressa|presserent|preta|pretendirent|pretendit|preterent|pria|prierent|prirent|prit|produisirent|produisit|profita|profiterent|prolongea|prolongerent|promena|promenerent|promirent|promit|prononca|prononcerent|proposa|proposerent|protegea|protegerent|protesta|protesterent|prouva|prouverent|provoqua|provoquerent|publia|publierent|punirent|purent|put|quitta|quitterent|raccrocha|raccrocherent|raconta|raconterent|ralentirent|ramassa|ramasserent|ramena|ramenerent|rangea|rangerent|rappela|rappelerent|rapporta|rapporterent|rasa|raserent|rassura|rassurerent|rata|raterent|rattrapa|rattraperent|reagirent|realisa|realiserent|rechauffa|rechaufferent|rechercha|rechercherent|reclama|reclamerent|recommanda|recommanderent|recommenca|recommencerent|reconnut|recula|reculerent|recupera|recupererent|recurent|recut|recycla|recyclerent|reflechirent|refusa|refuserent|regarda|regarderent|regla|reglerent|regretta|regretterent|rejeta|rejeterent|rejoignirent|rejoignit|remarqua|remarquerent|remercia|remercierent|remit|remplaca|remplacerent|remplirent|rencontra|rencontrerent|rendirent|rendit|renonca|renoncerent|renseigna|renseignerent|rentra|rentrerent|renversa|renverserent|renvoya|renvoyerent|repara|reparerent|repeta|repeterent|repondirent|repondit|reposa|reposerent|representa|representerent|reprit|reprocha|reprocherent|reserva|reserverent|resista|resisterent|resolut|respecta|respecterent|respira|respirerent|ressentit|resta|resterent|retint|retira|retirerent|retourna|retournerent|retrouva|retrouverent|reunirent|reussirent|reva|reveilla|reveillerent|revela|revelerent|reverent|revinrent|revint|revisa|reviserent|risqua|risquerent|rompirent|rompit|roula|roulerent|sauta|sauterent|sauva|sauverent|secoua|secouerent|sembla|semblerent|sentirent|sentit|separa|separerent|serra|serrerent|servirent|servit|signa|signala|signalerent|signerent|signifia|signifierent|situa|situerent|soigna|soignerent|songea|songerent|sonna|sonnerent|sortirent|sortit|souffla|soufflerent|souffrit|souhaita|souhaiterent|souleva|souleverent|soutint|subirent|suggera|suggererent|suivirent|suivit|supporta|supporterent|supposa|supposerent|surent|surprit|surveilla|surveillerent|survint|sut|tapa|taperent|telephona|telephonerent|tenta|tenterent|termina|terminerent|tinrent|tint|tira|tirerent|tomba|tomberent|toucha|toucherent|tourna|tournerent|traduisit|trahirent|traita|traiterent|transforma|transformerent|transmit|transporta|transporterent|travailla|travaillerent|traversa|traverserent|trembla|tremblerent|trompa|tromperent|trouva|trouverent|tua|tuerent|turent|tut|utilisa|utiliserent|vainquit|valut|vecurent|vecut|vendirent|vendit|verifia|verifierent|versa|verserent|vida|viderent|vieillirent|vinrent|vint|virent|visita|visiterent|vola|volerent|voulurent|voulut|voyagea|voyagerent"
+            }
+          ],
+          "form": true
         },
         {
           "clitic": true,
+          "form": true,
           "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
         }
       ],
@@ -4104,10 +4647,19 @@
           "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
         },
         {
-          "cell": "*.*"
+          "any": [
+            {
+              "cell": "*.*"
+            },
+            {
+              "surface": "abandonna|abandonnerent|accepta|accepterent|accompagna|accompagnerent|accorda|accorderent|accrocha|accrocherent|accusa|accuserent|acheta|acheterent|acheva|acheverent|admira|admirerent|admit|adopta|adopterent|adora|adorerent|adressa|adresserent|affirma|affirmerent|agirent|aida|aiderent|aima|aimerent|ajouta|ajouterent|alla|allerent|allongea|allongerent|alluma|allumerent|amena|amenerent|amusa|amuserent|anima|animerent|annonca|annoncerent|annula|annulerent|apercurent|apercut|appartint|apparurent|apparut|appela|appelerent|appliqua|appliquerent|apporta|apporterent|apprecia|apprecierent|apprirent|apprit|approcha|approcherent|appuya|appuyerent|arrangea|arrangerent|arreta|arreterent|arriva|arriverent|assirent|assista|assisterent|assit|assura|assurerent|attacha|attacherent|attaqua|attaquerent|atteignirent|atteignit|attendirent|attendit|attira|attirerent|attrapa|attraperent|augmenta|augmenterent|autorisa|autoriserent|avala|avalerent|avanca|avancerent|avertirent|avoua|avouerent|baigna|baignerent|baissa|baisserent|batirent|battirent|battit|bavarda|bavarderent|blessa|blesserent|bloqua|bloquerent|bougea|bougerent|brilla|brillerent|brisa|briserent|brula|brulerent|burent|cacha|cacherent|calma|calmerent|cassa|casserent|causa|causerent|ceda|cederent|cessa|cesserent|changea|changerent|chanta|chanterent|chargea|chargerent|chassa|chasserent|chauffa|chaufferent|chercha|chercherent|choisirent|circula|circulerent|cita|citerent|coiffa|coifferent|colla|collerent|combina|combinerent|commanda|commanderent|commenca|commencerent|communiqua|communiquerent|compara|comparerent|comprirent|comprit|compta|compterent|concentra|concentrerent|conduisirent|conduisit|confia|confierent|confirma|confirmerent|confondirent|confondit|connecta|connecterent|connurent|connut|conseilla|conseillerent|conserva|conserverent|considera|considererent|consista|consisterent|constata|constaterent|construisirent|construisit|consulta|consulterent|contacta|contacterent|contint|continua|continuerent|controla|controlerent|correspondirent|correspondit|coucha|coucherent|coula|coulerent|coupa|couperent|coururent|courut|couta|couterent|couvrit|craignirent|craignit|crea|creerent|creusa|creuserent|cria|crierent|croisa|croiserent|crurent|crut|cuisina|cuisinerent|dansa|danserent|debarrassa|debarrasserent|debrouilla|debrouillerent|dechira|dechirerent|decida|deciderent|declara|declarerent|decolla|decollerent|decouvrirent|decouvrit|decrivit|decrocha|decrocherent|defendirent|defendit|demanda|demanderent|demarra|demarrerent|demenagea|demenagerent|depanna|depannerent|depassa|depasserent|depecha|depecherent|dependirent|dependit|depensa|depenserent|deplaca|deplacerent|deposa|deposerent|derangea|derangerent|deroula|deroulerent|descendirent|descendit|desira|desirerent|dessina|dessinerent|detendirent|detendit|detesta|detesterent|detruisit|developpa|developperent|devina|devinerent|devinrent|devint|dirent|dirigea|dirigerent|discuta|discuterent|disparurent|disparut|disputa|disputerent|distingua|distinguerent|distribua|distribuerent|donna|donnerent|dormirent|dormit|doucha|doucherent|douta|douterent|dura|durerent|dut|echangea|echangerent|echappa|echapperent|echoua|echouerent|eclaira|eclairerent|eclata|eclaterent|economisa|economiserent|ecouta|ecouterent|ecrasa|ecraserent|ecrivirent|ecrivit|effaca|effacerent|eleva|eleverent|elimina|eliminerent|eloigna|eloignerent|embrassa|embrasserent|emmena|emmenerent|empecha|empecherent|employa|employerent|emporta|emporterent|emprunta|emprunterent|encouragea|encouragerent|enerva|enerverent|enferma|enfermerent|engagea|engagerent|enleva|enleverent|ennuya|ennuyerent|enregistra|enregistrerent|enrichirent|enseigna|enseignerent|entendirent|entendit|entoura|entourerent|entra|entraina|entrainerent|entrerent|envisagea|envisagerent|envoya|envoyerent|epela|epelerent|epousa|epouserent|espera|espererent|essaya|essayerent|essuya|essuyerent|estima|estimerent|etablirent|eteignit|etendirent|etendit|etonna|etonnerent|etudia|etudierent|eurent|eut|evita|eviterent|evolua|evoluerent|evoqua|evoquerent|exagera|exagererent|examina|examinerent|excusa|excuserent|exigea|exigerent|exista|existerent|expliqua|expliquerent|explosa|exploserent|exporta|exporterent|exprima|exprimerent|fabriqua|fabriquerent|facha|facherent|fallut|felicita|feliciterent|ferma|fermerent|feterent|filma|filmerent|finirent|firent|fit|fixa|fixerent|fleurirent|fonctionna|fonctionnerent|fondirent|fondit|forca|forcerent|forma|formerent|fournirent|franchirent|frappa|frapperent|frequenta|frequenterent|fuma|fumerent|furent|fut|gagna|gagnerent|gara|garda|garderent|garerent|gela|gelerent|gena|generent|glissa|glisserent|gouta|gouterent|grandirent|grimpa|grimperent|guerirent|habilla|habillerent|habita|habiterent|habitua|habituerent|hesita|hesiterent|hurla|hurlerent|identifia|identifierent|ignora|ignorerent|imagina|imaginerent|imita|imiterent|imposa|imposerent|impressionna|impressionnerent|indiqua|indiquerent|informa|informerent|inquieta|inquieterent|inscrivit|insista|insisterent|inspira|inspirerent|installa|installerent|interessa|interesserent|interrogea|interrogerent|interrompirent|interrompit|inventa|inventerent|invita|inviterent|jeta|jeterent|joignit|joua|jouerent|jugea|jugerent|jura|jurerent|justifia|justifierent|lacha|lacherent|laissa|laisserent|lanca|lancerent|lava|laverent|leva|leverent|libera|libererent|logea|logerent|loua|louerent|lurent|lut|lutta|lutterent|maintint|mangea|mangerent|manifesta|manifesterent|manqua|manquerent|maquilla|maquillerent|marcha|marcherent|maria|marierent|marqua|marquerent|mefia|mefierent|mena|menaca|menacerent|menerent|mentit|merita|meriterent|mesura|mesurerent|mirent|mit|monta|monterent|montra|montrerent|moqua|moquerent|mordirent|mordit|moururent|mourut|murmura|murmurerent|nagea|nagerent|naquirent|naquit|neigea|neigerent|nettoya|nettoyerent|nomma|nommerent|nourrirent|obeirent|obligea|obligerent|observa|observerent|obtinrent|obtint|occupa|occuperent|offrirent|offrit|organisa|organiserent|osa|oserent|oublia|oublierent|ouvrirent|ouvrit|parcourut|pardonna|pardonnerent|parierent|parla|parlerent|partagea|partagerent|participa|participerent|partirent|partit|parurent|parut|parvint|passa|passerent|paya|payerent|peignit|pensa|penserent|perdirent|perdit|permirent|permit|piqua|piquerent|placa|placerent|plaignit|plaisanta|plaisanterent|planta|planterent|pleura|pleurerent|plia|plierent|plongea|plongerent|plurent|plut|porta|porterent|posa|poserent|posseda|possederent|poursuivit|poussa|pousserent|pratiqua|pratiquerent|precisa|preciserent|prefera|prefererent|prepara|preparerent|presenta|presenterent|preserva|preserverent|pressa|presserent|preta|pretendirent|pretendit|preterent|pria|prierent|prirent|prit|produisirent|produisit|profita|profiterent|prolongea|prolongerent|promena|promenerent|promirent|promit|prononca|prononcerent|proposa|proposerent|protegea|protegerent|protesta|protesterent|prouva|prouverent|provoqua|provoquerent|publia|publierent|punirent|purent|put|quitta|quitterent|raccrocha|raccrocherent|raconta|raconterent|ralentirent|ramassa|ramasserent|ramena|ramenerent|rangea|rangerent|rappela|rappelerent|rapporta|rapporterent|rasa|raserent|rassura|rassurerent|rata|raterent|rattrapa|rattraperent|reagirent|realisa|realiserent|rechauffa|rechaufferent|rechercha|rechercherent|reclama|reclamerent|recommanda|recommanderent|recommenca|recommencerent|reconnut|recula|reculerent|recupera|recupererent|recurent|recut|recycla|recyclerent|reflechirent|refusa|refuserent|regarda|regarderent|regla|reglerent|regretta|regretterent|rejeta|rejeterent|rejoignirent|rejoignit|remarqua|remarquerent|remercia|remercierent|remit|remplaca|remplacerent|remplirent|rencontra|rencontrerent|rendirent|rendit|renonca|renoncerent|renseigna|renseignerent|rentra|rentrerent|renversa|renverserent|renvoya|renvoyerent|repara|reparerent|repeta|repeterent|repondirent|repondit|reposa|reposerent|representa|representerent|reprit|reprocha|reprocherent|reserva|reserverent|resista|resisterent|resolut|respecta|respecterent|respira|respirerent|ressentit|resta|resterent|retint|retira|retirerent|retourna|retournerent|retrouva|retrouverent|reunirent|reussirent|reva|reveilla|reveillerent|revela|revelerent|reverent|revinrent|revint|revisa|reviserent|risqua|risquerent|rompirent|rompit|roula|roulerent|sauta|sauterent|sauva|sauverent|secoua|secouerent|sembla|semblerent|sentirent|sentit|separa|separerent|serra|serrerent|servirent|servit|signa|signala|signalerent|signerent|signifia|signifierent|situa|situerent|soigna|soignerent|songea|songerent|sonna|sonnerent|sortirent|sortit|souffla|soufflerent|souffrit|souhaita|souhaiterent|souleva|souleverent|soutint|subirent|suggera|suggererent|suivirent|suivit|supporta|supporterent|supposa|supposerent|surent|surprit|surveilla|surveillerent|survint|sut|tapa|taperent|telephona|telephonerent|tenta|tenterent|termina|terminerent|tinrent|tint|tira|tirerent|tomba|tomberent|toucha|toucherent|tourna|tournerent|traduisit|trahirent|traita|traiterent|transforma|transformerent|transmit|transporta|transporterent|travailla|travaillerent|traversa|traverserent|trembla|tremblerent|trompa|tromperent|trouva|trouverent|tua|tuerent|turent|tut|utilisa|utiliserent|vainquit|valut|vecurent|vecut|vendirent|vendit|verifia|verifierent|versa|verserent|vida|viderent|vieillirent|vinrent|vint|virent|visita|visiterent|vola|volerent|voulurent|voulut|voyagea|voyagerent"
+            }
+          ],
+          "form": true
         },
         {
           "clitic": true,
+          "form": true,
           "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
         }
       ],
@@ -4124,10 +4676,19 @@
           "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
         },
         {
-          "cell": "*.*"
+          "any": [
+            {
+              "cell": "*.*"
+            },
+            {
+              "surface": "abandonna|abandonnerent|accepta|accepterent|accompagna|accompagnerent|accorda|accorderent|accrocha|accrocherent|accusa|accuserent|acheta|acheterent|acheva|acheverent|admira|admirerent|admit|adopta|adopterent|adora|adorerent|adressa|adresserent|affirma|affirmerent|agirent|aida|aiderent|aima|aimerent|ajouta|ajouterent|alla|allerent|allongea|allongerent|alluma|allumerent|amena|amenerent|amusa|amuserent|anima|animerent|annonca|annoncerent|annula|annulerent|apercurent|apercut|appartint|apparurent|apparut|appela|appelerent|appliqua|appliquerent|apporta|apporterent|apprecia|apprecierent|apprirent|apprit|approcha|approcherent|appuya|appuyerent|arrangea|arrangerent|arreta|arreterent|arriva|arriverent|assirent|assista|assisterent|assit|assura|assurerent|attacha|attacherent|attaqua|attaquerent|atteignirent|atteignit|attendirent|attendit|attira|attirerent|attrapa|attraperent|augmenta|augmenterent|autorisa|autoriserent|avala|avalerent|avanca|avancerent|avertirent|avoua|avouerent|baigna|baignerent|baissa|baisserent|batirent|battirent|battit|bavarda|bavarderent|blessa|blesserent|bloqua|bloquerent|bougea|bougerent|brilla|brillerent|brisa|briserent|brula|brulerent|burent|cacha|cacherent|calma|calmerent|cassa|casserent|causa|causerent|ceda|cederent|cessa|cesserent|changea|changerent|chanta|chanterent|chargea|chargerent|chassa|chasserent|chauffa|chaufferent|chercha|chercherent|choisirent|circula|circulerent|cita|citerent|coiffa|coifferent|colla|collerent|combina|combinerent|commanda|commanderent|commenca|commencerent|communiqua|communiquerent|compara|comparerent|comprirent|comprit|compta|compterent|concentra|concentrerent|conduisirent|conduisit|confia|confierent|confirma|confirmerent|confondirent|confondit|connecta|connecterent|connurent|connut|conseilla|conseillerent|conserva|conserverent|considera|considererent|consista|consisterent|constata|constaterent|construisirent|construisit|consulta|consulterent|contacta|contacterent|contint|continua|continuerent|controla|controlerent|correspondirent|correspondit|coucha|coucherent|coula|coulerent|coupa|couperent|coururent|courut|couta|couterent|couvrit|craignirent|craignit|crea|creerent|creusa|creuserent|cria|crierent|croisa|croiserent|crurent|crut|cuisina|cuisinerent|dansa|danserent|debarrassa|debarrasserent|debrouilla|debrouillerent|dechira|dechirerent|decida|deciderent|declara|declarerent|decolla|decollerent|decouvrirent|decouvrit|decrivit|decrocha|decrocherent|defendirent|defendit|demanda|demanderent|demarra|demarrerent|demenagea|demenagerent|depanna|depannerent|depassa|depasserent|depecha|depecherent|dependirent|dependit|depensa|depenserent|deplaca|deplacerent|deposa|deposerent|derangea|derangerent|deroula|deroulerent|descendirent|descendit|desira|desirerent|dessina|dessinerent|detendirent|detendit|detesta|detesterent|detruisit|developpa|developperent|devina|devinerent|devinrent|devint|dirent|dirigea|dirigerent|discuta|discuterent|disparurent|disparut|disputa|disputerent|distingua|distinguerent|distribua|distribuerent|donna|donnerent|dormirent|dormit|doucha|doucherent|douta|douterent|dura|durerent|dut|echangea|echangerent|echappa|echapperent|echoua|echouerent|eclaira|eclairerent|eclata|eclaterent|economisa|economiserent|ecouta|ecouterent|ecrasa|ecraserent|ecrivirent|ecrivit|effaca|effacerent|eleva|eleverent|elimina|eliminerent|eloigna|eloignerent|embrassa|embrasserent|emmena|emmenerent|empecha|empecherent|employa|employerent|emporta|emporterent|emprunta|emprunterent|encouragea|encouragerent|enerva|enerverent|enferma|enfermerent|engagea|engagerent|enleva|enleverent|ennuya|ennuyerent|enregistra|enregistrerent|enrichirent|enseigna|enseignerent|entendirent|entendit|entoura|entourerent|entra|entraina|entrainerent|entrerent|envisagea|envisagerent|envoya|envoyerent|epela|epelerent|epousa|epouserent|espera|espererent|essaya|essayerent|essuya|essuyerent|estima|estimerent|etablirent|eteignit|etendirent|etendit|etonna|etonnerent|etudia|etudierent|eurent|eut|evita|eviterent|evolua|evoluerent|evoqua|evoquerent|exagera|exagererent|examina|examinerent|excusa|excuserent|exigea|exigerent|exista|existerent|expliqua|expliquerent|explosa|exploserent|exporta|exporterent|exprima|exprimerent|fabriqua|fabriquerent|facha|facherent|fallut|felicita|feliciterent|ferma|fermerent|feterent|filma|filmerent|finirent|firent|fit|fixa|fixerent|fleurirent|fonctionna|fonctionnerent|fondirent|fondit|forca|forcerent|forma|formerent|fournirent|franchirent|frappa|frapperent|frequenta|frequenterent|fuma|fumerent|furent|fut|gagna|gagnerent|gara|garda|garderent|garerent|gela|gelerent|gena|generent|glissa|glisserent|gouta|gouterent|grandirent|grimpa|grimperent|guerirent|habilla|habillerent|habita|habiterent|habitua|habituerent|hesita|hesiterent|hurla|hurlerent|identifia|identifierent|ignora|ignorerent|imagina|imaginerent|imita|imiterent|imposa|imposerent|impressionna|impressionnerent|indiqua|indiquerent|informa|informerent|inquieta|inquieterent|inscrivit|insista|insisterent|inspira|inspirerent|installa|installerent|interessa|interesserent|interrogea|interrogerent|interrompirent|interrompit|inventa|inventerent|invita|inviterent|jeta|jeterent|joignit|joua|jouerent|jugea|jugerent|jura|jurerent|justifia|justifierent|lacha|lacherent|laissa|laisserent|lanca|lancerent|lava|laverent|leva|leverent|libera|libererent|logea|logerent|loua|louerent|lurent|lut|lutta|lutterent|maintint|mangea|mangerent|manifesta|manifesterent|manqua|manquerent|maquilla|maquillerent|marcha|marcherent|maria|marierent|marqua|marquerent|mefia|mefierent|mena|menaca|menacerent|menerent|mentit|merita|meriterent|mesura|mesurerent|mirent|mit|monta|monterent|montra|montrerent|moqua|moquerent|mordirent|mordit|moururent|mourut|murmura|murmurerent|nagea|nagerent|naquirent|naquit|neigea|neigerent|nettoya|nettoyerent|nomma|nommerent|nourrirent|obeirent|obligea|obligerent|observa|observerent|obtinrent|obtint|occupa|occuperent|offrirent|offrit|organisa|organiserent|osa|oserent|oublia|oublierent|ouvrirent|ouvrit|parcourut|pardonna|pardonnerent|parierent|parla|parlerent|partagea|partagerent|participa|participerent|partirent|partit|parurent|parut|parvint|passa|passerent|paya|payerent|peignit|pensa|penserent|perdirent|perdit|permirent|permit|piqua|piquerent|placa|placerent|plaignit|plaisanta|plaisanterent|planta|planterent|pleura|pleurerent|plia|plierent|plongea|plongerent|plurent|plut|porta|porterent|posa|poserent|posseda|possederent|poursuivit|poussa|pousserent|pratiqua|pratiquerent|precisa|preciserent|prefera|prefererent|prepara|preparerent|presenta|presenterent|preserva|preserverent|pressa|presserent|preta|pretendirent|pretendit|preterent|pria|prierent|prirent|prit|produisirent|produisit|profita|profiterent|prolongea|prolongerent|promena|promenerent|promirent|promit|prononca|prononcerent|proposa|proposerent|protegea|protegerent|protesta|protesterent|prouva|prouverent|provoqua|provoquerent|publia|publierent|punirent|purent|put|quitta|quitterent|raccrocha|raccrocherent|raconta|raconterent|ralentirent|ramassa|ramasserent|ramena|ramenerent|rangea|rangerent|rappela|rappelerent|rapporta|rapporterent|rasa|raserent|rassura|rassurerent|rata|raterent|rattrapa|rattraperent|reagirent|realisa|realiserent|rechauffa|rechaufferent|rechercha|rechercherent|reclama|reclamerent|recommanda|recommanderent|recommenca|recommencerent|reconnut|recula|reculerent|recupera|recupererent|recurent|recut|recycla|recyclerent|reflechirent|refusa|refuserent|regarda|regarderent|regla|reglerent|regretta|regretterent|rejeta|rejeterent|rejoignirent|rejoignit|remarqua|remarquerent|remercia|remercierent|remit|remplaca|remplacerent|remplirent|rencontra|rencontrerent|rendirent|rendit|renonca|renoncerent|renseigna|renseignerent|rentra|rentrerent|renversa|renverserent|renvoya|renvoyerent|repara|reparerent|repeta|repeterent|repondirent|repondit|reposa|reposerent|representa|representerent|reprit|reprocha|reprocherent|reserva|reserverent|resista|resisterent|resolut|respecta|respecterent|respira|respirerent|ressentit|resta|resterent|retint|retira|retirerent|retourna|retournerent|retrouva|retrouverent|reunirent|reussirent|reva|reveilla|reveillerent|revela|revelerent|reverent|revinrent|revint|revisa|reviserent|risqua|risquerent|rompirent|rompit|roula|roulerent|sauta|sauterent|sauva|sauverent|secoua|secouerent|sembla|semblerent|sentirent|sentit|separa|separerent|serra|serrerent|servirent|servit|signa|signala|signalerent|signerent|signifia|signifierent|situa|situerent|soigna|soignerent|songea|songerent|sonna|sonnerent|sortirent|sortit|souffla|soufflerent|souffrit|souhaita|souhaiterent|souleva|souleverent|soutint|subirent|suggera|suggererent|suivirent|suivit|supporta|supporterent|supposa|supposerent|surent|surprit|surveilla|surveillerent|survint|sut|tapa|taperent|telephona|telephonerent|tenta|tenterent|termina|terminerent|tinrent|tint|tira|tirerent|tomba|tomberent|toucha|toucherent|tourna|tournerent|traduisit|trahirent|traita|traiterent|transforma|transformerent|transmit|transporta|transporterent|travailla|travaillerent|traversa|traverserent|trembla|tremblerent|trompa|tromperent|trouva|trouverent|tua|tuerent|turent|tut|utilisa|utiliserent|vainquit|valut|vecurent|vecut|vendirent|vendit|verifia|verifierent|versa|verserent|vida|viderent|vieillirent|vinrent|vint|virent|visita|visiterent|vola|volerent|voulurent|voulut|voyagea|voyagerent"
+            }
+          ],
+          "form": true
         },
         {
           "clitic": true,
+          "form": true,
           "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
         }
       ],
@@ -4136,10 +4697,46 @@
           "surface": "(?!(que|qu'|qui|quoi|comment|pourquoi|ou|quand|combien|quel|quelle|quels|quelles|ne|n'|lequel|laquelle|et|-ce)$).+"
         },
         {
-          "surface": "dit|dis|disait|repond|repondit|repondait|demande|demanda|demandait|ajoute|ajouta|ajoutait|explique|expliqua|crie|cria|murmure|murmura|continue|continua|reprit|soupira|lanca"
+          "form": true,
+          "surface": "dit|dis|disait|repond|repondit|repondait|demande|demanda|demandait|ajoute|ajouta|ajoutait|explique|expliqua|crie|cria|murmure|murmura|continue|continua|reprit|soupira|lanca|fit|s'ecria|ecria"
         },
         {
           "clitic": true,
+          "end": true,
+          "form": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        }
+      ],
+      [
+        {
+          "surface": "(?!(que|qu'|qui|quoi|comment|pourquoi|ou|quand|combien|quel|quelle|quels|quelles|ne|n'|lequel|laquelle|et|-ce)$).+"
+        },
+        {
+          "form": true,
+          "surface": "dit|dis|disait|repond|repondit|repondait|demande|demanda|demandait|ajoute|ajouta|ajoutait|explique|expliqua|crie|cria|murmure|murmura|continue|continua|reprit|soupira|lanca|fit|s'ecria|ecria"
+        },
+        {
+          "clitic": true,
+          "form": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "surface": "en"
+        },
+        {
+          "cell": "prsptcp"
+        }
+      ],
+      [
+        {
+          "form": true,
+          "start": true,
+          "surface": "dit|dis|disait|repond|repondit|repondait|demande|demanda|demandait|ajoute|ajouta|ajoutait|explique|expliqua|crie|cria|murmure|murmura|continue|continua|reprit|soupira|lanca|fit|s'ecria|ecria"
+        },
+        {
+          "clitic": true,
+          "end": true,
+          "form": true,
           "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
         }
       ]
@@ -4149,17 +4746,22 @@
         "Peut-être viendra-t-il demain.",
         "À peine était-il arrivé qu'il se mit à pleuvoir.",
         "« Bonjour », dit-il en souriant.",
-        "Sans doute a-t-elle raison."
+        "Sans doute a-t-elle raison.",
+        "Aussi décida-t-il de partir.",
+        "« Viens ! » répondit-elle."
       ],
       "noMatch": [
         "Peut-être qu'il viendra demain.",
         "Que dit-il ?",
         "Il dit bonjour.",
-        "Viendra-t-il demain ?"
+        "Viendra-t-il demain ?",
+        "Marie dit-elle la vérité ?",
+        "Le professeur explique-t-il la règle ?",
+        "Paul demande-t-il de l'aide ?"
       ]
     },
     "id": "fr:cx:inversion.literary",
-    "label": "Subject inversion in written French, for recognition: after peut-être, sans doute, aussi (so), ainsi or à peine at the start of a sentence (peut-être viendra-t-il, à peine était-il arrivé), and after a quotation (« Bonjour », dit-il)",
+    "label": "Subject inversion in written French, for recognition: after peut-être, sans doute, aussi (so), ainsi or à peine at the start of a sentence (peut-être viendra-t-il, à peine était-il arrivé, aussi décida-t-il de partir), and a verb of saying after a quotation (« Bonjour », dit-il en souriant); a question with inversion (Marie dit-elle la vérité ?) does not count, so the verb of saying counts only at the end of its sentence, before en + participle, or first in its sentence",
     "needs": [
       "fr:cx:q.inversion"
     ],
@@ -4246,6 +4848,28 @@
         {
           "surface": "que|qu'|qui"
         }
+      ],
+      [
+        {
+          "surface": "c'|ce"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "surface": "est|etait|sera|serait|fut"
+        },
+        {
+          "optional": true,
+          "surface": "pas"
+        },
+        {
+          "surface": "en|depuis"
+        },
+        {
+          "surface": "que|qu'"
+        }
       ]
     ],
     "examples": {
@@ -4254,7 +4878,8 @@
         "C'est à Paris qu'elle habite.",
         "C'est Marie qui a raison.",
         "C'est pour cette raison que je reste.",
-        "Ce n'est pas hier qu'il est venu."
+        "Ce n'est pas hier qu'il est venu.",
+        "C'était en 2010 qu'ils se sont rencontrés."
       ],
       "noMatch": [
         "C'est pour ça que je reste.",
@@ -4278,6 +4903,7 @@
     "contrastsWith": [],
     "detect": [
       {
+        "start": true,
         "surface": "ce"
       },
       {
@@ -4302,17 +4928,19 @@
       "match": [
         "Ce qui compte, c'est la santé.",
         "Ce que je pense, c'est que tu as raison.",
-        "Ce dont j'ai besoin, c'est de calme."
+        "Ce dont je rêve, c'est d'une maison au bord de la mer."
       ],
       "noMatch": [
         "Je fais ce que je veux.",
         "C'est ce qui compte.",
         "Ce qui est sur la table est à moi.",
-        "Je ne sais pas ce que c'est."
+        "Je ne sais pas ce que c'est.",
+        "Je ne comprends pas ce qui se passe, c'est bizarre.",
+        "Dis-moi ce que tu veux. C'est important."
       ]
     },
     "id": "fr:cx:mise-en-relief.ce-qui-cest",
-    "label": "Mise en relief with ce qui, ce que or ce dont … c'est: the idea first, then what it is (ce qui compte, c'est la santé; ce que je pense, c'est que tu as raison; ce dont j'ai besoin, c'est de calme)",
+    "label": "Mise en relief with ce qui, ce que or ce dont … c'est: the idea first, then what it is (ce qui compte, c'est la santé; ce que je pense, c'est que tu as raison; ce dont je rêve, c'est d'une maison au bord de la mer); ce starts the sentence",
     "needs": [
       "fr:cx:mise-en-relief",
       "fr:cx:relative.ce-que",
@@ -4461,6 +5089,112 @@
           "end": true,
           "pos": "verb"
         }
+      ],
+      [
+        {
+          "surface": "plus|moins|mieux|meilleur|meilleure|pire|autre|autrement"
+        },
+        {
+          "skip": 3,
+          "surface": "que|qu'"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+            },
+            {
+              "pos": "noun"
+            },
+            {
+              "name": true
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "pos": "verb"
+        },
+        {
+          "surface": "(?!(pas|plus|jamais|rien|personne|que|qu'|guere|point|aucun|aucune|nul|nulle|ni|-.*)$).+"
+        }
+      ],
+      [
+        {
+          "surface": "plus|moins|mieux|meilleur|meilleure|pire|autre|autrement"
+        },
+        {
+          "skip": 3,
+          "surface": "que|qu'"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
+            },
+            {
+              "pos": "noun"
+            },
+            {
+              "name": true
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "end": true,
+          "pos": "verb"
+        }
       ]
     ],
     "examples": {
@@ -4468,17 +5202,19 @@
         "Rentrons avant qu'il ne fasse nuit.",
         "Je crains qu'il ne pleuve.",
         "Je viendrai, à moins que tu ne préfères rester seul.",
-        "Il parle bas de peur qu'on ne l'entende."
+        "Il parle bas de peur qu'on ne l'entende.",
+        "Il est plus grand que je ne le pensais."
       ],
       "noMatch": [
         "Je crains qu'il ne vienne pas.",
         "Rentrons avant qu'il fasse nuit.",
         "Il ne pleut pas.",
-        "Il a peur que tu ne viennes plus."
+        "Il a peur que tu ne viennes plus.",
+        "Il est plus grand que je ne le pensais pas."
       ]
     },
     "id": "fr:cx:ne-expletif",
-    "label": "Ne explétif: a ne that adds no negation, after avant que, à moins que, de peur que, de crainte que or craindre que (rentrons avant qu'il ne fasse nuit, je crains qu'il ne pleuve); counted when the verb after ne is followed by a word that is not pas, plus, jamais or another negation word, or ends the sentence",
+    "label": "Ne explétif: a ne that adds no negation, after avant que, à moins que, de peur que, de crainte que, craindre que, or que after a comparison (rentrons avant qu'il ne fasse nuit, je crains qu'il ne pleuve, il est plus grand que je ne le pensais); counted when the verb after ne is followed by a word that is not pas, plus, jamais or another negation word, or ends the sentence",
     "needs": [
       "fr:cx:subj.avant-que",
       "fr:cx:neg.ne-pas"
@@ -4532,6 +5268,7 @@
           "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
         },
         {
+          "form": true,
           "surface": "ne|n'"
         },
         {
@@ -4539,6 +5276,7 @@
           "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
         },
         {
+          "form": true,
           "surface": "sais|sait|savais|savait|saurais|saurait|peux|peut|puis|pouvais|pouvait|pourrais|pourrait|ose|oses|osait|osais|osent|cesse|cesses|cessait|cessent"
         },
         {
@@ -4550,6 +5288,7 @@
           "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
         },
         {
+          "form": true,
           "surface": "ne|n'"
         },
         {
@@ -4558,6 +5297,7 @@
         },
         {
           "end": true,
+          "form": true,
           "surface": "sais|sait|savais|savait|saurais|saurait|peux|peut|puis|pouvais|pouvait|pourrais|pourrait|ose|oses|osait|osais|osent|cesse|cesses|cessait|cessent"
         }
       ],
@@ -4569,12 +5309,14 @@
           "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles"
         },
         {
+          "form": true,
           "surface": "ne|n'"
         },
         {
           "surface": "me|m'"
         },
         {
+          "form": true,
           "surface": "trompe|abuse"
         }
       ]
@@ -4834,22 +5576,36 @@
         {
           "surface": "(?!part$).+"
         }
+      ],
+      [
+        {
+          "surface": "sans"
+        },
+        {
+          "surface": "nul|nulle"
+        },
+        {
+          "surface": "doute"
+        }
       ]
     ],
     "examples": {
       "match": [
         "Nul ne sait où il est parti.",
-        "Je n'ai nulle envie de partir.",
-        "Nul n'est parfait."
+        "Elle n'avait nulle intention de rester.",
+        "Nul n'est parfait.",
+        "Il est parti. Nul ne sait où.",
+        "C'est sans nul doute le meilleur choix."
       ],
       "noMatch": [
         "Ce film est nul.",
         "Je ne vais nulle part.",
-        "Personne ne sait où il est parti."
+        "Personne ne sait où il est parti.",
+        "Sans doute, il viendra."
       ]
     },
     "id": "fr:cx:neg.nul",
-    "label": "nul, nulle as a negative word: nul ne (no one), nulle + noun (no … at all): nul ne sait, je n'ai nulle envie de partir; nulle part is its own phrase, and c'est nul (it is rubbish) does not count",
+    "label": "nul, nulle as a negative word: nul ne (no one), nulle + noun (no … at all), sans nul doute (without any doubt): nul ne sait, elle n'avait nulle intention de rester; nulle part is its own phrase, and c'est nul (it is rubbish) does not count",
     "needs": [
       "fr:cx:neg.ne-personne",
       "fr:cx:chunk.nulle-part"
@@ -4902,10 +5658,27 @@
         {
           "cell": "prsptcp",
           "start": true,
-          "surface": "(?!(amusant|assistant|brillant|courant|devant|durant|etonnant|etudiant|habitant|reconnaissant|vivant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant)$).+"
+          "surface": "(?!(amusant|assistant|brillant|courant|devant|durant|etonnant|etudiant|habitant|reconnaissant|vivant|suivant|couchant|levant|brulant|obeissant|tremblant|bouillant|pendant|cependant|maintenant|grimpant|glissant|perdant|naissant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant)$).+"
         },
         {
           "surface": "(?!(donne|donnee|donnes|donnees)$).+"
+        }
+      ],
+      [
+        {
+          "start": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "prsptcp",
+          "surface": "(?!(amusant|assistant|brillant|courant|devant|durant|etonnant|etudiant|habitant|reconnaissant|vivant|suivant|couchant|levant|brulant|obeissant|tremblant|bouillant|pendant|cependant|maintenant|grimpant|glissant|perdant|naissant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant)$).+"
+        },
+        {
+          "surface": "pas|plus|jamais|rien|personne"
         }
       ],
       [
@@ -4922,26 +5695,51 @@
         },
         {
           "cell": "prsptcp",
-          "surface": "(?!(amusant|assistant|brillant|courant|devant|durant|etonnant|etudiant|habitant|reconnaissant|vivant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant)$).+"
+          "surface": "(?!(amusant|assistant|brillant|courant|devant|durant|etonnant|etudiant|habitant|reconnaissant|vivant|suivant|couchant|levant|brulant|obeissant|tremblant|bouillant|pendant|cependant|maintenant|grimpant|glissant|perdant|naissant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant)$).+"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            },
+            {
+              "pos": "preposition"
+            },
+            {
+              "cell": "ptcp*"
+            },
+            {
+              "surface": "que|qu'|le|la|les|l'|lui|leur|y|en|pas|plus|jamais|deja|toujours|bien|beaucoup|tout"
+            }
+          ]
         }
       ]
     ],
     "examples": {
       "match": [
         "Étant fatiguée, elle est rentrée tôt.",
-        "Les élèves ayant fini peuvent sortir.",
+        "Les voyageurs ayant un billet peuvent monter.",
         "Sachant que le musée fermait tôt, nous sommes partis à midi.",
-        "Ayant perdu ses clés, il a appelé sa sœur."
+        "Ayant perdu ses clés, il a appelé sa sœur.",
+        "Ne sachant pas quoi dire, il s'est tu.",
+        "Il était tard. Étant fatiguée, elle est rentrée."
       ],
       "noMatch": [
         "Je travaille en écoutant de la musique.",
         "Étant donné qu'il pleut, je reste ici.",
         "Le cours commence maintenant.",
-        "C'est un film amusant."
+        "C'est un film amusant.",
+        "Le mois suivant, il est parti.",
+        "Il boit un café brûlant.",
+        "Le soleil couchant est beau.",
+        "Un enfant obéissant écoute ses parents."
       ]
     },
     "id": "fr:cx:participe-present.clause",
-    "label": "Present participle as a clause of its own, without en: a reason or a description (étant fatiguée, elle est rentrée; les élèves ayant fini peuvent sortir); the gérondif with en is a separate pattern, and étant donné que is a connector",
+    "label": "Present participle as a clause of its own, without en: a reason or a description (étant fatiguée, elle est rentrée; ne sachant pas quoi dire, il s'est tu; les voyageurs ayant un billet peuvent monter); the gérondif with en is a separate pattern, étant donné que is a connector, and participles used as adjectives after a noun (le mois suivant, un café brûlant) do not count",
     "needs": [
       "fr:cx:gerondif",
       "fr:cx:prsptcp.er",
@@ -5266,12 +6064,14 @@
         },
         {
           "accented": "(?![a-zàâäçéèêëîïôöùûüÿœæ']*[âîû]n?t$).+",
+          "form": true,
           "surface": "abandonna|abandonnerent|accepta|accepterent|accompagna|accompagnerent|accorda|accorderent|accrocha|accrocherent|accusa|accuserent|acheta|acheterent|acheva|acheverent|admira|admirerent|admit|adopta|adopterent|adora|adorerent|adressa|adresserent|affirma|affirmerent|agirent|aida|aiderent|aima|aimerent|ajouta|ajouterent|alla|allerent|allongea|allongerent|alluma|allumerent|amena|amenerent|amusa|amuserent|anima|animerent|annonca|annoncerent|annula|annulerent|apercurent|apercut|appartint|apparurent|apparut|appela|appelerent|appliqua|appliquerent|apporta|apporterent|apprecia|apprecierent|apprirent|apprit|approcha|approcherent|appuya|appuyerent|arrangea|arrangerent|arreta|arreterent|arriva|arriverent|assirent|assista|assisterent|assit|assura|assurerent|attacha|attacherent|attaqua|attaquerent|atteignirent|atteignit|attendirent|attendit|attira|attirerent|attrapa|attraperent|augmenta|augmenterent|autorisa|autoriserent|avala|avalerent|avanca|avancerent|avertirent|avoua|avouerent|baigna|baignerent|baissa|baisserent|batirent|battirent|battit|bavarda|bavarderent|blessa|blesserent|bloqua|bloquerent|bougea|bougerent|brilla|brillerent|brisa|briserent|brula|brulerent|burent|cacha|cacherent|calma|calmerent|cassa|casserent|causa|causerent|ceda|cederent|cessa|cesserent|changea|changerent|chanta|chanterent|chargea|chargerent|chassa|chasserent|chauffa|chaufferent|chercha|chercherent|choisirent|circula|circulerent|cita|citerent|coiffa|coifferent|colla|collerent|combina|combinerent|commanda|commanderent|commenca|commencerent|communiqua|communiquerent|compara|comparerent|comprirent|comprit|compta|compterent|concentra|concentrerent|conduisirent|conduisit|confia|confierent|confirma|confirmerent|confondirent|confondit|connecta|connecterent|connurent|connut|conseilla|conseillerent|conserva|conserverent|considera|considererent|consista|consisterent|constata|constaterent|construisirent|construisit|consulta|consulterent|contacta|contacterent|contint|continua|continuerent|controla|controlerent|correspondirent|correspondit|coucha|coucherent|coula|coulerent|coupa|couperent|coururent|courut|couta|couterent|couvrit|craignirent|craignit|crea|creerent|creusa|creuserent|cria|crierent|croisa|croiserent|crurent|crut|cuisina|cuisinerent|dansa|danserent|debarrassa|debarrasserent|debrouilla|debrouillerent|dechira|dechirerent|decida|deciderent|declara|declarerent|decolla|decollerent|decouvrirent|decouvrit|decrivit|decrocha|decrocherent|defendirent|defendit|demanda|demanderent|demarra|demarrerent|demenagea|demenagerent|depanna|depannerent|depassa|depasserent|depecha|depecherent|dependirent|dependit|depensa|depenserent|deplaca|deplacerent|deposa|deposerent|derangea|derangerent|deroula|deroulerent|descendirent|descendit|desira|desirerent|dessina|dessinerent|detendirent|detendit|detesta|detesterent|detruisit|developpa|developperent|devina|devinerent|devinrent|devint|dirent|dirigea|dirigerent|discuta|discuterent|disparurent|disparut|disputa|disputerent|distingua|distinguerent|distribua|distribuerent|donna|donnerent|dormirent|dormit|doucha|doucherent|douta|douterent|dura|durerent|dut|echangea|echangerent|echappa|echapperent|echoua|echouerent|eclaira|eclairerent|eclata|eclaterent|economisa|economiserent|ecouta|ecouterent|ecrasa|ecraserent|ecrivirent|ecrivit|effaca|effacerent|eleva|eleverent|elimina|eliminerent|eloigna|eloignerent|embrassa|embrasserent|emmena|emmenerent|empecha|empecherent|employa|employerent|emporta|emporterent|emprunta|emprunterent|encouragea|encouragerent|enerva|enerverent|enferma|enfermerent|engagea|engagerent|enleva|enleverent|ennuya|ennuyerent|enregistra|enregistrerent|enrichirent|enseigna|enseignerent|entendirent|entendit|entoura|entourerent|entra|entraina|entrainerent|entrerent|envisagea|envisagerent|envoya|envoyerent|epela|epelerent|epousa|epouserent|espera|espererent|essaya|essayerent|essuya|essuyerent|estima|estimerent|etablirent|eteignit|etendirent|etendit|etonna|etonnerent|etudia|etudierent|eurent|eut|evita|eviterent|evolua|evoluerent|evoqua|evoquerent|exagera|exagererent|examina|examinerent|excusa|excuserent|exigea|exigerent|exista|existerent|expliqua|expliquerent|explosa|exploserent|exporta|exporterent|exprima|exprimerent|fabriqua|fabriquerent|facha|facherent|fallut|felicita|feliciterent|ferma|fermerent|feterent|filma|filmerent|finirent|firent|fit|fixa|fixerent|fleurirent|fonctionna|fonctionnerent|fondirent|fondit|forca|forcerent|forma|formerent|fournirent|franchirent|frappa|frapperent|frequenta|frequenterent|fuma|fumerent|furent|fut|gagna|gagnerent|gara|garda|garderent|garerent|gela|gelerent|gena|generent|glissa|glisserent|gouta|gouterent|grandirent|grimpa|grimperent|guerirent|habilla|habillerent|habita|habiterent|habitua|habituerent|hesita|hesiterent|hurla|hurlerent|identifia|identifierent|ignora|ignorerent|imagina|imaginerent|imita|imiterent|imposa|imposerent|impressionna|impressionnerent|indiqua|indiquerent|informa|informerent|inquieta|inquieterent|inscrivit|insista|insisterent|inspira|inspirerent|installa|installerent|interessa|interesserent|interrogea|interrogerent|interrompirent|interrompit|inventa|inventerent|invita|inviterent|jeta|jeterent|joignit|joua|jouerent|jugea|jugerent|jura|jurerent|justifia|justifierent|lacha|lacherent|laissa|laisserent|lanca|lancerent|lava|laverent|leva|leverent|libera|libererent|logea|logerent|loua|louerent|lurent|lut|lutta|lutterent|maintint|mangea|mangerent|manifesta|manifesterent|manqua|manquerent|maquilla|maquillerent|marcha|marcherent|maria|marierent|marqua|marquerent|mefia|mefierent|mena|menaca|menacerent|menerent|mentit|merita|meriterent|mesura|mesurerent|mirent|mit|monta|monterent|montra|montrerent|moqua|moquerent|mordirent|mordit|moururent|mourut|murmura|murmurerent|nagea|nagerent|naquirent|naquit|neigea|neigerent|nettoya|nettoyerent|nomma|nommerent|nourrirent|obeirent|obligea|obligerent|observa|observerent|obtinrent|obtint|occupa|occuperent|offrirent|offrit|organisa|organiserent|osa|oserent|oublia|oublierent|ouvrirent|ouvrit|parcourut|pardonna|pardonnerent|parierent|parla|parlerent|partagea|partagerent|participa|participerent|partirent|partit|parurent|parut|parvint|passa|passerent|paya|payerent|peignit|pensa|penserent|perdirent|perdit|permirent|permit|piqua|piquerent|placa|placerent|plaignit|plaisanta|plaisanterent|planta|planterent|pleura|pleurerent|plia|plierent|plongea|plongerent|plurent|plut|porta|porterent|posa|poserent|posseda|possederent|poursuivit|poussa|pousserent|pratiqua|pratiquerent|precisa|preciserent|prefera|prefererent|prepara|preparerent|presenta|presenterent|preserva|preserverent|pressa|presserent|preta|pretendirent|pretendit|preterent|pria|prierent|prirent|prit|produisirent|produisit|profita|profiterent|prolongea|prolongerent|promena|promenerent|promirent|promit|prononca|prononcerent|proposa|proposerent|protegea|protegerent|protesta|protesterent|prouva|prouverent|provoqua|provoquerent|publia|publierent|punirent|purent|put|quitta|quitterent|raccrocha|raccrocherent|raconta|raconterent|ralentirent|ramassa|ramasserent|ramena|ramenerent|rangea|rangerent|rappela|rappelerent|rapporta|rapporterent|rasa|raserent|rassura|rassurerent|rata|raterent|rattrapa|rattraperent|reagirent|realisa|realiserent|rechauffa|rechaufferent|rechercha|rechercherent|reclama|reclamerent|recommanda|recommanderent|recommenca|recommencerent|reconnut|recula|reculerent|recupera|recupererent|recurent|recut|recycla|recyclerent|reflechirent|refusa|refuserent|regarda|regarderent|regla|reglerent|regretta|regretterent|rejeta|rejeterent|rejoignirent|rejoignit|remarqua|remarquerent|remercia|remercierent|remit|remplaca|remplacerent|remplirent|rencontra|rencontrerent|rendirent|rendit|renonca|renoncerent|renseigna|renseignerent|rentra|rentrerent|renversa|renverserent|renvoya|renvoyerent|repara|reparerent|repeta|repeterent|repondirent|repondit|reposa|reposerent|representa|representerent|reprit|reprocha|reprocherent|reserva|reserverent|resista|resisterent|resolut|respecta|respecterent|respira|respirerent|ressentit|resta|resterent|retint|retira|retirerent|retourna|retournerent|retrouva|retrouverent|reunirent|reussirent|reva|reveilla|reveillerent|revela|revelerent|reverent|revinrent|revint|revisa|reviserent|risqua|risquerent|rompirent|rompit|roula|roulerent|sauta|sauterent|sauva|sauverent|secoua|secouerent|sembla|semblerent|sentirent|sentit|separa|separerent|serra|serrerent|servirent|servit|signa|signala|signalerent|signerent|signifia|signifierent|situa|situerent|soigna|soignerent|songea|songerent|sonna|sonnerent|sortirent|sortit|souffla|soufflerent|souffrit|souhaita|souhaiterent|souleva|souleverent|soutint|subirent|suggera|suggererent|suivirent|suivit|supporta|supporterent|supposa|supposerent|surent|surprit|surveilla|surveillerent|survint|sut|tapa|taperent|telephona|telephonerent|tenta|tenterent|termina|terminerent|tinrent|tint|tira|tirerent|tomba|tomberent|toucha|toucherent|tourna|tournerent|traduisit|trahirent|traita|traiterent|transforma|transformerent|transmit|transporta|transporterent|travailla|travaillerent|traversa|traverserent|trembla|tremblerent|trompa|tromperent|trouva|trouverent|tua|tuerent|turent|tut|utilisa|utiliserent|vainquit|valut|vecurent|vecut|vendirent|vendit|verifia|verifierent|versa|verserent|vida|viderent|vieillirent|vinrent|vint|virent|visita|visiterent|vola|volerent|voulurent|voulut|voyagea|voyagerent"
         }
       ],
       [
         {
           "accented": "(?![a-zàâäçéèêëîïôöùûüÿœæ']*[âîû]n?t$).+",
+          "form": true,
           "surface": "abandonna|abandonnerent|accepta|accepterent|accompagna|accompagnerent|accorda|accorderent|accrocha|accrocherent|accusa|accuserent|acheta|acheterent|acheva|acheverent|admira|admirerent|admit|adopta|adopterent|adora|adorerent|adressa|adresserent|affirma|affirmerent|agirent|aida|aiderent|aima|aimerent|ajouta|ajouterent|alla|allerent|allongea|allongerent|alluma|allumerent|amena|amenerent|amusa|amuserent|anima|animerent|annonca|annoncerent|annula|annulerent|apercurent|apercut|appartint|apparurent|apparut|appela|appelerent|appliqua|appliquerent|apporta|apporterent|apprecia|apprecierent|apprirent|apprit|approcha|approcherent|appuya|appuyerent|arrangea|arrangerent|arreta|arreterent|arriva|arriverent|assirent|assista|assisterent|assit|assura|assurerent|attacha|attacherent|attaqua|attaquerent|atteignirent|atteignit|attendirent|attendit|attira|attirerent|attrapa|attraperent|augmenta|augmenterent|autorisa|autoriserent|avala|avalerent|avanca|avancerent|avertirent|avoua|avouerent|baigna|baignerent|baissa|baisserent|batirent|battirent|battit|bavarda|bavarderent|blessa|blesserent|bloqua|bloquerent|bougea|bougerent|brilla|brillerent|brisa|briserent|brula|brulerent|burent|cacha|cacherent|calma|calmerent|cassa|casserent|causa|causerent|ceda|cederent|cessa|cesserent|changea|changerent|chanta|chanterent|chargea|chargerent|chassa|chasserent|chauffa|chaufferent|chercha|chercherent|choisirent|circula|circulerent|cita|citerent|coiffa|coifferent|colla|collerent|combina|combinerent|commanda|commanderent|commenca|commencerent|communiqua|communiquerent|compara|comparerent|comprirent|comprit|compta|compterent|concentra|concentrerent|conduisirent|conduisit|confia|confierent|confirma|confirmerent|confondirent|confondit|connecta|connecterent|connurent|connut|conseilla|conseillerent|conserva|conserverent|considera|considererent|consista|consisterent|constata|constaterent|construisirent|construisit|consulta|consulterent|contacta|contacterent|contint|continua|continuerent|controla|controlerent|correspondirent|correspondit|coucha|coucherent|coula|coulerent|coupa|couperent|coururent|courut|couta|couterent|couvrit|craignirent|craignit|crea|creerent|creusa|creuserent|cria|crierent|croisa|croiserent|crurent|crut|cuisina|cuisinerent|dansa|danserent|debarrassa|debarrasserent|debrouilla|debrouillerent|dechira|dechirerent|decida|deciderent|declara|declarerent|decolla|decollerent|decouvrirent|decouvrit|decrivit|decrocha|decrocherent|defendirent|defendit|demanda|demanderent|demarra|demarrerent|demenagea|demenagerent|depanna|depannerent|depassa|depasserent|depecha|depecherent|dependirent|dependit|depensa|depenserent|deplaca|deplacerent|deposa|deposerent|derangea|derangerent|deroula|deroulerent|descendirent|descendit|desira|desirerent|dessina|dessinerent|detendirent|detendit|detesta|detesterent|detruisit|developpa|developperent|devina|devinerent|devinrent|devint|dirent|dirigea|dirigerent|discuta|discuterent|disparurent|disparut|disputa|disputerent|distingua|distinguerent|distribua|distribuerent|donna|donnerent|dormirent|dormit|doucha|doucherent|douta|douterent|dura|durerent|dut|echangea|echangerent|echappa|echapperent|echoua|echouerent|eclaira|eclairerent|eclata|eclaterent|economisa|economiserent|ecouta|ecouterent|ecrasa|ecraserent|ecrivirent|ecrivit|effaca|effacerent|eleva|eleverent|elimina|eliminerent|eloigna|eloignerent|embrassa|embrasserent|emmena|emmenerent|empecha|empecherent|employa|employerent|emporta|emporterent|emprunta|emprunterent|encouragea|encouragerent|enerva|enerverent|enferma|enfermerent|engagea|engagerent|enleva|enleverent|ennuya|ennuyerent|enregistra|enregistrerent|enrichirent|enseigna|enseignerent|entendirent|entendit|entoura|entourerent|entra|entraina|entrainerent|entrerent|envisagea|envisagerent|envoya|envoyerent|epela|epelerent|epousa|epouserent|espera|espererent|essaya|essayerent|essuya|essuyerent|estima|estimerent|etablirent|eteignit|etendirent|etendit|etonna|etonnerent|etudia|etudierent|eurent|eut|evita|eviterent|evolua|evoluerent|evoqua|evoquerent|exagera|exagererent|examina|examinerent|excusa|excuserent|exigea|exigerent|exista|existerent|expliqua|expliquerent|explosa|exploserent|exporta|exporterent|exprima|exprimerent|fabriqua|fabriquerent|facha|facherent|fallut|felicita|feliciterent|ferma|fermerent|feterent|filma|filmerent|finirent|firent|fit|fixa|fixerent|fleurirent|fonctionna|fonctionnerent|fondirent|fondit|forca|forcerent|forma|formerent|fournirent|franchirent|frappa|frapperent|frequenta|frequenterent|fuma|fumerent|furent|fut|gagna|gagnerent|gara|garda|garderent|garerent|gela|gelerent|gena|generent|glissa|glisserent|gouta|gouterent|grandirent|grimpa|grimperent|guerirent|habilla|habillerent|habita|habiterent|habitua|habituerent|hesita|hesiterent|hurla|hurlerent|identifia|identifierent|ignora|ignorerent|imagina|imaginerent|imita|imiterent|imposa|imposerent|impressionna|impressionnerent|indiqua|indiquerent|informa|informerent|inquieta|inquieterent|inscrivit|insista|insisterent|inspira|inspirerent|installa|installerent|interessa|interesserent|interrogea|interrogerent|interrompirent|interrompit|inventa|inventerent|invita|inviterent|jeta|jeterent|joignit|joua|jouerent|jugea|jugerent|jura|jurerent|justifia|justifierent|lacha|lacherent|laissa|laisserent|lanca|lancerent|lava|laverent|leva|leverent|libera|libererent|logea|logerent|loua|louerent|lurent|lut|lutta|lutterent|maintint|mangea|mangerent|manifesta|manifesterent|manqua|manquerent|maquilla|maquillerent|marcha|marcherent|maria|marierent|marqua|marquerent|mefia|mefierent|mena|menaca|menacerent|menerent|mentit|merita|meriterent|mesura|mesurerent|mirent|mit|monta|monterent|montra|montrerent|moqua|moquerent|mordirent|mordit|moururent|mourut|murmura|murmurerent|nagea|nagerent|naquirent|naquit|neigea|neigerent|nettoya|nettoyerent|nomma|nommerent|nourrirent|obeirent|obligea|obligerent|observa|observerent|obtinrent|obtint|occupa|occuperent|offrirent|offrit|organisa|organiserent|osa|oserent|oublia|oublierent|ouvrirent|ouvrit|parcourut|pardonna|pardonnerent|parierent|parla|parlerent|partagea|partagerent|participa|participerent|partirent|partit|parurent|parut|parvint|passa|passerent|paya|payerent|peignit|pensa|penserent|perdirent|perdit|permirent|permit|piqua|piquerent|placa|placerent|plaignit|plaisanta|plaisanterent|planta|planterent|pleura|pleurerent|plia|plierent|plongea|plongerent|plurent|plut|porta|porterent|posa|poserent|posseda|possederent|poursuivit|poussa|pousserent|pratiqua|pratiquerent|precisa|preciserent|prefera|prefererent|prepara|preparerent|presenta|presenterent|preserva|preserverent|pressa|presserent|preta|pretendirent|pretendit|preterent|pria|prierent|prirent|prit|produisirent|produisit|profita|profiterent|prolongea|prolongerent|promena|promenerent|promirent|promit|prononca|prononcerent|proposa|proposerent|protegea|protegerent|protesta|protesterent|prouva|prouverent|provoqua|provoquerent|publia|publierent|punirent|purent|put|quitta|quitterent|raccrocha|raccrocherent|raconta|raconterent|ralentirent|ramassa|ramasserent|ramena|ramenerent|rangea|rangerent|rappela|rappelerent|rapporta|rapporterent|rasa|raserent|rassura|rassurerent|rata|raterent|rattrapa|rattraperent|reagirent|realisa|realiserent|rechauffa|rechaufferent|rechercha|rechercherent|reclama|reclamerent|recommanda|recommanderent|recommenca|recommencerent|reconnut|recula|reculerent|recupera|recupererent|recurent|recut|recycla|recyclerent|reflechirent|refusa|refuserent|regarda|regarderent|regla|reglerent|regretta|regretterent|rejeta|rejeterent|rejoignirent|rejoignit|remarqua|remarquerent|remercia|remercierent|remit|remplaca|remplacerent|remplirent|rencontra|rencontrerent|rendirent|rendit|renonca|renoncerent|renseigna|renseignerent|rentra|rentrerent|renversa|renverserent|renvoya|renvoyerent|repara|reparerent|repeta|repeterent|repondirent|repondit|reposa|reposerent|representa|representerent|reprit|reprocha|reprocherent|reserva|reserverent|resista|resisterent|resolut|respecta|respecterent|respira|respirerent|ressentit|resta|resterent|retint|retira|retirerent|retourna|retournerent|retrouva|retrouverent|reunirent|reussirent|reva|reveilla|reveillerent|revela|revelerent|reverent|revinrent|revint|revisa|reviserent|risqua|risquerent|rompirent|rompit|roula|roulerent|sauta|sauterent|sauva|sauverent|secoua|secouerent|sembla|semblerent|sentirent|sentit|separa|separerent|serra|serrerent|servirent|servit|signa|signala|signalerent|signerent|signifia|signifierent|situa|situerent|soigna|soignerent|songea|songerent|sonna|sonnerent|sortirent|sortit|souffla|soufflerent|souffrit|souhaita|souhaiterent|souleva|souleverent|soutint|subirent|suggera|suggererent|suivirent|suivit|supporta|supporterent|supposa|supposerent|surent|surprit|surveilla|surveillerent|survint|sut|tapa|taperent|telephona|telephonerent|tenta|tenterent|termina|terminerent|tinrent|tint|tira|tirerent|tomba|tomberent|toucha|toucherent|tourna|tournerent|traduisit|trahirent|traita|traiterent|transforma|transformerent|transmit|transporta|transporterent|travailla|travaillerent|traversa|traverserent|trembla|tremblerent|trompa|tromperent|trouva|trouverent|tua|tuerent|turent|tut|utilisa|utiliserent|vainquit|valut|vecurent|vecut|vendirent|vendit|verifia|verifierent|versa|verserent|vida|viderent|vieillirent|vinrent|vint|virent|visita|visiterent|vola|volerent|voulurent|voulut|voyagea|voyagerent"
         },
         {
@@ -5881,10 +6681,38 @@
     "detect": [
       [
         {
-          "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|ne|n'"
+          "surface": "je|j'|tu|il|elle|on|ils|elles|ne|n'"
         },
         {
           "surface": "me|m'|te|t'|se|s'|nous|vous"
+        },
+        {
+          "surface": "le|la|les|l'"
+        },
+        {
+          "cell": "*.*"
+        }
+      ],
+      [
+        {
+          "surface": "nous"
+        },
+        {
+          "surface": "me|m'|te|t'|vous"
+        },
+        {
+          "surface": "le|la|les|l'"
+        },
+        {
+          "cell": "*.*"
+        }
+      ],
+      [
+        {
+          "surface": "vous"
+        },
+        {
+          "surface": "me|m'|te|t'|nous"
         },
         {
           "surface": "le|la|les|l'"
@@ -5906,24 +6734,71 @@
         {
           "cell": "*.*"
         }
+      ],
+      [
+        {
+          "cell": "*.*",
+          "pos": "verb"
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "surface": "me|m'|te|t'|se|s'|nous|vous"
+        },
+        {
+          "surface": "le|la|les|l'"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
+      ],
+      [
+        {
+          "cell": "*.*",
+          "pos": "verb"
+        },
+        {
+          "optional": true,
+          "surface": "pas|jamais|plus"
+        },
+        {
+          "surface": "lui|leur"
+        },
+        {
+          "surface": "en"
+        },
+        {
+          "pos": "verb",
+          "via": "lemma"
+        }
       ]
     ],
     "examples": {
       "match": [
         "Il me l'a dit hier.",
         "Je te les donne demain.",
-        "On se le demande tous.",
-        "Je lui en ai parlé."
+        "Elle se le répète chaque matin.",
+        "Je lui en ai parlé.",
+        "Je vais te le dire.",
+        "Tu peux me le donner ?",
+        "Il faut me les envoyer.",
+        "Je vais lui en parler.",
+        "Vous nous le dites souvent."
       ],
       "noMatch": [
         "Je le lui donne.",
         "Il me donne le livre.",
         "Il y en a deux.",
-        "Nous le faisons ensemble."
+        "Nous le faisons ensemble.",
+        "Nous, nous les aimons.",
+        "Je vais le lui dire."
       ]
     },
     "id": "fr:cx:pronoun.double",
-    "label": "Two object pronouns together: me, te, se, nous or vous before le, la or les (il me l'a dit, je te les donne, on se le demande), and lui or leur before en (je lui en ai parlé); le lui and leur, already taught, stay with the indirect object pronouns, and y en with il y a",
+    "label": "Two object pronouns together: me, te, se, nous or vous before le, la or les (il me l'a dit, je te les donne, je vais te le dire), and lui or leur before en (je lui en ai parlé, je vais lui en parler); le lui and le leur, already taught, stay with the indirect object pronouns, y en with il y a, and a stressed pronoun before its subject (nous, nous les aimons) does not count",
     "needs": [
       "fr:cx:pronoun.direct-object",
       "fr:cx:pronoun.indirect-object",
@@ -6434,7 +7309,7 @@
     "examples": {
       "match": [
         "La lettre que j'ai écrite est sur la table.",
-        "Des pommes ? J'en ai mangé trois.",
+        "Des cerises ? J'en ai acheté deux kilos.",
         "Je les ai fait venir."
       ],
       "noMatch": [
@@ -6443,11 +7318,12 @@
       ]
     },
     "id": "fr:cx:ptcp.agreement-exceptions",
-    "label": "Past participle agreement in the harder cases: a preceding direct object makes the participle agree after avoir (la lettre que j'ai écrite), but not en (des pommes, j'en ai mangé), and fait before an infinitive stays fait (je les ai fait venir); which noun a participle agrees with is not visible in the tokens",
+    "label": "Past participle agreement in the harder cases after avoir: a direct object placed before makes the participle agree (la lettre que j'ai écrite), with these exceptions: en does not (des cerises, j'en ai acheté deux kilos), fait before an infinitive stays fait (je les ai fait venir), laissé before an infinitive usually stays laissé (je les ai laissé partir), and entendu or vu before an infinitive agrees only when the object does the action (les musiciens que j'ai entendus jouer, les airs que j'ai entendu jouer); which noun a participle agrees with is not visible in the tokens",
     "needs": [
       "fr:cx:ptcp.agreement",
       "fr:cx:passe-compose.avoir",
-      "fr:cx:pronoun.en"
+      "fr:cx:pronoun.en",
+      "fr:cx:causative.faire"
     ]
   },
   {
@@ -6664,7 +7540,8 @@
         "Lequel préfères-tu ?",
         "Avec laquelle es-tu sorti ?",
         "Dis-moi lequel tu veux.",
-        "Tu prends lequel ?"
+        "Tu prends lequel ?",
+        "Il y a deux robes. Laquelle préfères-tu ?"
       ],
       "noMatch": [
         "La table sur laquelle tu écris est vieille.",
@@ -6676,7 +7553,8 @@
     "label": "Interrogative lequel, laquelle, lesquels, lesquelles: which one (lequel préfères-tu ? avec laquelle es-tu sorti ? dis-moi lequel tu veux; tu prends lequel ?)",
     "needs": [
       "fr:cx:q.words",
-      "fr:cx:q.inversion"
+      "fr:cx:q.inversion",
+      "fr:cx:relative.lequel"
     ]
   },
   {
@@ -6947,7 +7825,7 @@
     "needs": []
   },
   {
-    "cefr": "B2",
+    "cefr": "C1",
     "cefrSource": "agent: judgment",
     "contrastsWith": [],
     "detect": [
@@ -6967,7 +7845,7 @@
       ]
     },
     "id": "fr:cx:quiconque",
-    "label": "quiconque: whoever, anyone at all (quiconque a vu cet homme doit appeler la police; il parle mieux que quiconque)",
+    "label": "quiconque: whoever, anyone at all (quiconque a vu cet homme doit appeler la police; il le sait mieux que quiconque)",
     "needs": [
       "fr:cx:relative.qui"
     ]
@@ -7193,7 +8071,7 @@
     "needs": []
   },
   {
-    "cefr": "B2",
+    "cefr": "B1",
     "cefrSource": "agent: judgment",
     "contrastsWith": [],
     "detect": [
@@ -7206,6 +8084,22 @@
         },
         {
           "pos": "noun"
+        },
+        {
+          "optional": true,
+          "pos": "adjective"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "cell": "*.*",
+          "surface": "(?!((parl|discut|souvien|souvienn|rev|rêv|occup|plaign|plain|moqu|dout|mefi|serv|ser|sert|profit|depend|approch|eloign|vien|vienn|ven|sort|part|chang|soucie|souci|preoccup|felicit|remerci|nourr|nourrissent|vit|viv|meur|mour)[a-z]*|ai|as|a|avons|avez|ont|avais|avait|avions|aviez|avaient|aura|auront|aurait|auraient|aie|ait|aient)$).+"
         }
       ],
       [
@@ -7213,24 +8107,44 @@
           "surface": "dont"
         },
         {
-          "surface": "un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|certains|certaines|plusieurs|beaucoup"
+          "surface": "le|la|les|l'"
+        },
+        {
+          "pos": "noun"
+        },
+        {
+          "optional": true,
+          "pos": "adjective"
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "cell": "*.*",
+          "headword": "fr:lex:avoir"
+        },
+        {
+          "surface": "(?!(besoin|peur|envie|honte)$).+"
         }
       ]
     ],
     "examples": {
       "match": [
         "L'homme dont la fille est médecin habite ici.",
-        "J'ai acheté des livres dont trois sont en anglais.",
-        "C'est un pays dont les habitants parlent deux langues."
+        "J'ai un ami dont le père a un restaurant.",
+        "C'est un pays dont les habitants sont très accueillants."
       ],
       "noMatch": [
         "La chose dont je parle est importante.",
-        "Le livre dont tu as besoin est ici.",
-        "La fille de cet homme est médecin."
+        "Le problème dont les gens parlent est grave.",
+        "Le livre dont les enfants ont besoin est ici.",
+        "La fille de cet homme est médecin.",
+        "Le sujet dont les élèves discutent est difficile."
       ]
     },
     "id": "fr:cx:relative.dont-noun",
-    "label": "dont followed by a noun it owns or a quantity: whose, of which (l'homme dont la fille est médecin, des livres dont trois sont en anglais)",
+    "label": "dont for possession: whose, the noun it owns as the subject of the relative clause (l'homme dont la fille est médecin, un ami dont le père a un restaurant); when the verb after the noun takes de (le problème dont les gens parlent, le livre dont les enfants ont besoin), dont is its complement, not a possessor, so it does not count",
     "needs": [
       "fr:cx:relative.dont",
       "fr:cx:article.definite"
@@ -7282,7 +8196,7 @@
       "match": [
         "La table sur laquelle tu écris est vieille.",
         "Voilà les raisons pour lesquelles je pars.",
-        "C'est l'ami avec lequel je voyage.",
+        "C'est la valise avec laquelle je voyage.",
         "La maison à côté de laquelle j'habite est jaune."
       ],
       "noMatch": [
@@ -7293,7 +8207,7 @@
       ]
     },
     "id": "fr:cx:relative.lequel",
-    "label": "Relative pronoun lequel, laquelle, lesquels, lesquelles after a preposition, referring to a noun (la table sur laquelle, les raisons pour lesquelles, l'ami avec lequel je voyage)",
+    "label": "Relative pronoun lequel, laquelle, lesquels, lesquelles after a preposition, referring to a noun (la table sur laquelle, les raisons pour lesquelles, la valise avec laquelle je voyage)",
     "needs": [
       "fr:cx:relative.que",
       "fr:cx:relative.dont"
@@ -7495,7 +8409,7 @@
       ]
     },
     "id": "fr:cx:relative.qui",
-    "label": "Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c'est toi qui pars, le Café de Flore qui est en face); a reading passage is one text, so a name ending one sentence before a question starting with qui also matches",
+    "label": "Relative pronoun qui as the subject of a relative clause after a noun (optionally followed by up to two adjectives), a pronoun or a name (la personne qui parle, le livre rouge qui est ici, c'est toi qui pars, le Café de Flore qui est en face); a match stays inside one sentence, so a name that ends one sentence before a question starting with qui does not count",
     "needs": []
   },
   {
@@ -7590,15 +8504,146 @@
             },
             {
               "cell": "ptcp*",
-              "headword": "fr:lex:penser"
+              "headword": "fr:lex:jurer"
             },
             {
               "cell": "ptcp*",
-              "headword": "fr:lex:croire"
+              "headword": "fr:lex:avouer"
             },
             {
               "cell": "ptcp*",
-              "headword": "fr:lex:savoir.verb"
+              "headword": "fr:lex:admettre"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:reconnaitre"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:preciser"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:ajouter"
+            }
+          ]
+        },
+        {
+          "surface": "que|qu'|si|s'"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|c'|ce|ca|cela"
+            },
+            {
+              "pos": "noun"
+            },
+            {
+              "name": true
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "any": [
+            {
+              "cell": "cond.*"
+            },
+            {
+              "cell": "impf.*"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "cell": "*.*",
+          "headword": "fr:lex:avoir"
+        },
+        {
+          "clitic": true,
+          "optional": true,
+          "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:dire"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:annoncer"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:affirmer"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:declarer"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:expliquer"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:repondre"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:raconter"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:promettre"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:assurer"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:ecrire"
+            },
+            {
+              "cell": "ptcp*",
+              "headword": "fr:lex:demander"
             },
             {
               "cell": "ptcp*",
@@ -7627,7 +8672,33 @@
           ]
         },
         {
-          "skip": 4,
+          "surface": "a|au|aux"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "noun"
+            },
+            {
+              "name": true
+            },
+            {
+              "surface": "moi|toi|lui|elle|nous|vous|eux|elles"
+            }
+          ]
+        },
+        {
           "surface": "que|qu'|si|s'"
         },
         {
@@ -7726,15 +8797,137 @@
             },
             {
               "cell": "impf.*",
-              "headword": "fr:lex:penser"
+              "headword": "fr:lex:jurer"
             },
             {
               "cell": "impf.*",
-              "headword": "fr:lex:croire"
+              "headword": "fr:lex:avouer"
             },
             {
               "cell": "impf.*",
-              "headword": "fr:lex:savoir.verb"
+              "headword": "fr:lex:admettre"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:reconnaitre"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:preciser"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:ajouter"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "que|qu'|si|s'"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|c'|ce|ca|cela"
+            },
+            {
+              "pos": "noun"
+            },
+            {
+              "name": true
+            }
+          ]
+        },
+        {
+          "optional": true,
+          "surface": "ne|n'"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "optional": true,
+          "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+        },
+        {
+          "any": [
+            {
+              "cell": "cond.*"
+            },
+            {
+              "cell": "impf.*"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "any": [
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:dire"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:annoncer"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:affirmer"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:declarer"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:expliquer"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:repondre"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:raconter"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:promettre"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:assurer"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:ecrire"
+            },
+            {
+              "cell": "impf.*",
+              "headword": "fr:lex:demander"
             },
             {
               "cell": "impf.*",
@@ -7763,7 +8956,44 @@
           ]
         },
         {
-          "skip": 4,
+          "any": [
+            {
+              "pos": "adverb"
+            },
+            {
+              "surface": "rien|tout"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "surface": "a|au|aux"
+        },
+        {
+          "any": [
+            {
+              "pos": "article"
+            },
+            {
+              "pos": "determiner"
+            }
+          ],
+          "optional": true
+        },
+        {
+          "any": [
+            {
+              "pos": "noun"
+            },
+            {
+              "name": true
+            },
+            {
+              "surface": "moi|toi|lui|elle|nous|vous|eux|elles"
+            }
+          ]
+        },
+        {
           "surface": "que|qu'|si|s'"
         },
         {
@@ -7820,17 +9050,20 @@
         "Elle m'a demandé si j'avais fini.",
         "Paul a expliqué à sa mère qu'il était malade.",
         "Ils ont annoncé que le train partirait en retard.",
-        "Je savais que c'était vrai."
+        "Il disait toujours qu'il voulait voyager."
       ],
       "noMatch": [
         "Il dit qu'il viendra.",
         "Elle m'a demandé de venir.",
         "Il a dit qu'il viendra demain.",
-        "Je sais que c'est vrai."
+        "Je savais que c'était vrai.",
+        "Il a dit quelque chose que je ne comprenais pas.",
+        "Il a écrit une lettre que sa mère lisait.",
+        "Il a dit au revoir. Il savait que tu étais là."
       ]
     },
     "id": "fr:cx:reported-speech",
-    "label": "Reported speech in the past with the tenses moved back: a past verb of saying or thinking + que or si, then the imparfait, the plus-que-parfait or the conditional (il a dit qu'il viendrait, elle m'a demandé si j'avais fini, je savais que c'était vrai)",
+    "label": "Reported speech in the past with the tenses moved back: a past verb of saying (dire, demander, expliquer, annoncer, répondre …) + que or si, then the imparfait, the plus-que-parfait or the conditional (il a dit qu'il viendrait, elle m'a demandé si j'avais fini, il a expliqué à sa mère qu'il était malade); only the person spoken to may stand between the verb and que, and savoir, penser and croire are left out, because after them the same tenses report a thought, not speech",
     "needs": [
       "fr:cx:frame.verb-que-clause",
       "fr:cx:q.embedded",
@@ -8278,7 +9511,7 @@
     ],
     "examples": {
       "match": [
-        "Il nie qu'il soit coupable.",
+        "Il nie que son frère soit coupable.",
         "Je ne suis pas sûr qu'elle vienne.",
         "Il n'est pas certain que le train parte à l'heure.",
         "Il est peu probable qu'il pleuve demain."
@@ -8286,12 +9519,12 @@
       "noMatch": [
         "Je suis sûr qu'elle viendra.",
         "Il est probable qu'il pleuvra.",
-        "Je doute qu'elle sache.",
+        "Je doute qu'elle le sache.",
         "Il n'est pas sûr de lui."
       ]
     },
     "id": "fr:cx:subj.doubt-denial",
-    "label": "Subjunctive after a denial or a doubt other than douter: nier que, contester que, je ne suis pas sûr que, il n'est pas certain que, il est peu probable que (il nie qu'il soit coupable, je ne suis pas sûr qu'elle vienne)",
+    "label": "Subjunctive after a denial or a doubt other than douter: nier que, contester que, je ne suis pas sûr que, il n'est pas certain que, il est peu probable que (il nie que son frère soit coupable, je ne suis pas sûr qu'elle vienne)",
     "needs": [
       "fr:cx:subj.douter-que",
       "fr:cx:subj.ne-pas-penser-que"
@@ -8486,7 +9719,8 @@
           {
             "accented": "(?![a-zàâäçéèêëîïôöùûüÿœæ']*aît$)[a-zàâäçéèêëîïôöùûüÿœæ']+(ât|ît|ût|înt)"
           }
-        ]
+        ],
+        "form": true
       }
     ],
     "examples": {
@@ -8640,7 +9874,7 @@
   },
   {
     "cefr": "B2",
-    "cefrSource": "agent: Eaquals grammar",
+    "cefrSource": "agent: judgment",
     "contrastsWith": [],
     "detect": [
       [
@@ -8898,7 +10132,8 @@
           "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
         },
         {
-          "accented": "eusse|eusses|eût|eussions|eussiez|eussent"
+          "accented": "eusse|eusses|eût|eussions|eussiez|eussent",
+          "form": true
         },
         {
           "any": [
@@ -8949,7 +10184,8 @@
           "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
         },
         {
-          "accented": "fusse|fusses|fût|fussions|fussiez|fussent"
+          "accented": "fusse|fusses|fût|fussions|fussiez|fussent",
+          "form": true
         },
         {
           "any": [
@@ -9155,7 +10391,7 @@
       ]
     },
     "id": "fr:cx:subj.superlative",
-    "label": "Subjunctive in a relative clause after a superlative or after seul, premier, dernier or unique (c'est le meilleur film que j'aie vu, la seule personne qui puisse m'aider)",
+    "label": "Subjunctive in a relative clause after a superlative or after seul, premier, dernier or unique (c'est le meilleur film que j'aie vu, la seule personne qui puisse m'aider); the present indicative and subjunctive of -er verbs are spelled alike in most persons (le plus beau pays qui existe), so those count too",
     "needs": [
       "fr:cx:superlative",
       "fr:cx:relative.que",
