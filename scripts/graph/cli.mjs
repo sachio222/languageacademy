@@ -1,6 +1,6 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { runCheck } from './check.mjs';
 import { renderFixList, summarize, checkSummaryLines } from './report.mjs';
 import { dueFor } from './rules/reuse.mjs';
@@ -9,10 +9,11 @@ import { ContentError, countByCode, plural, problemLine } from '../content/probl
 import { writeSortedJson } from './write-json.mjs';
 import { writeReportData } from './report-data.mjs';
 import { readBudget, writeBudget, checkBudgetParts, loweredParts, BUDGET_PARTS } from './budget.mjs';
+import { defaultLanguage } from './language.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
-const USAGE = 'usage: cli.mjs <check|due|report> <lang> [arg] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
+const USAGE = 'usage: cli.mjs <check|due|report> [lang] [arg] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
 const BUDGET_FILE = join(repoRoot, 'curriculum-graph/reports/issue-budget.json');
 
 async function main() {
@@ -46,7 +47,11 @@ async function main() {
   };
   const lower = takeFlag('--lower-budget');
   const budget = takeFlag('--budget') || lower;
-  const [cmd, lang = 'fr', arg] = args;
+  // The language: the second word when it is a language code, else core/settings.json defaultLanguage.
+  const [cmd, ...rest] = args;
+  const named = /^[a-z]{2,3}$/.test(rest[0] ?? '') && existsSync(join(repoRoot, 'curriculum-graph', 'languages', rest[0]));
+  const lang = named ? rest.shift() : defaultLanguage();
+  const [arg] = rest;
   if (!['check', 'due', 'report'].includes(cmd) || (contentDir && (lower || cmd === 'report'))) {
     console.error(USAGE);
     process.exit(2);

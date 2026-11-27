@@ -127,7 +127,7 @@ export function validateGraph(graph, opts = {}) {
     if (parseId(r.id).kind === 'lex') continue;
     out.push(issue({
       rule: 'reading-limit-not-headword', nodeId: r.id,
-      message: `reading-limits.json names ${r.id}, which is not a headword; list the headword (fr:lex:...) whose forms the checker cannot read`,
+      message: `reading-limits.json names ${r.id}, which is not a headword; list the headword (${graph.lang}:lex:...) whose forms the checker cannot read`,
     }));
   }
 

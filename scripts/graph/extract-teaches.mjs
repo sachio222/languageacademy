@@ -1,8 +1,7 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from './load.mjs';
-import { tokenize } from './fr/tokenize.mjs';
-import { buildFormIndex, lookupToken, lookupTokenStrict } from './fr/forms.mjs';
+import { defaultLanguage, languageOf, languageOfIndex } from './language.mjs';
 
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
 // A reading teaches the words of its own vocabulary table, at its own position (Jake's ruling, spec 5.7).
@@ -15,6 +14,7 @@ const TEACHING_KINDS = new Set(['lesson', 'help', 'reading']);
 // best kind is chosen, so "la cuisine" with fr:lex:cuisiner excluded credits the noun cuisine, not a form of
 // cuisiner. An excluded form ID is only left out of the result (extractTeaches), so its headword still counts.
 export function entryReadings(text, index, isWord, exclude = null) {
+  const { tokenize, lookupToken, lookupTokenStrict } = languageOfIndex(index);
   return tokenize(text, { isWord }).map((token) => {
     const keep = (rs) => (exclude ? rs.filter((r) => !exclude.has(r.headwordId)) : rs);
     let readings = keep(lookupTokenStrict(index, token));
@@ -29,6 +29,7 @@ export function entryReadings(text, index, isWord, exclude = null) {
 // excludeWords lists over-taught homograph IDs to drop from the result.
 // Only teachesWords is rewritten; every other course-map field is kept.
 export function extractTeaches(graph, course, index) {
+  const { lookupToken } = languageOfIndex(index);
   const isWord = (f) => index.has(f);
   const courseMap = { ...(graph.courseMap ?? {}) };
   const unknown = [];
@@ -63,12 +64,16 @@ export function extractTeaches(graph, course, index) {
 // know. It writes nothing: course-map.json holds checker corrections only, and the checker derives these words on
 // every run (content-course.mjs courseMapFromContent).
 async function main() {
-  const repoRoot = resolve(process.argv[2] ?? join(dirname(fileURLToPath(import.meta.url)), '../..'));
+  // extract-teaches.mjs [repo root] [--lang <code>] (core/settings.json defaultLanguage when left out)
+  const args = process.argv.slice(2);
+  const at = args.indexOf('--lang');
+  const lang = at >= 0 ? args.splice(at, 2)[1] : defaultLanguage();
+  const repoRoot = resolve(args[0] ?? join(dirname(fileURLToPath(import.meta.url)), '../..'));
   const { loadCourse } = await import('../content/load.mjs');
   const { readCourseFromContent } = await import('./content-course.mjs');
-  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), 'fr');
-  const course = readCourseFromContent(loadCourse({ root: join(repoRoot, 'content', 'fr') }));
-  const { courseMap, unknown } = extractTeaches(graph, course, buildFormIndex(graph));
+  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang);
+  const course = readCourseFromContent(loadCourse({ root: join(repoRoot, 'content', lang) }));
+  const { courseMap, unknown } = extractTeaches(graph, course, languageOf(graph).buildFormIndex(graph));
   for (const m of course) {
     const words = courseMap[m.moduleKey]?.teachesWords;
     if (words?.length) console.log(`${m.moduleKey}\t${[...words].sort().join(' ')}`);

@@ -1,0 +1,16 @@
+{
+  "reuse": {
+    "immediateWindow": 2,
+    "windows": [
+      5,
+      12,
+      30
+    ]
+  },
+  "translateAllowedThroughUnit": 1,
+  "levelThreshold": 0.9,
+  "defaultNative": "en",
+  "cognates": {
+    "allowIn": "shown"
+  }
+}

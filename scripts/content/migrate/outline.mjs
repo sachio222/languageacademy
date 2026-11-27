@@ -31,7 +31,7 @@ const keyOf = (m, where) => {
 };
 
 // unitConfigs: today's array from src/lessons/unitConfigLoader.js, numbered units then the Reference config.
-// opensWords: the Reference pages whose words the checker treats as known (curriculum-graph/core/settings.json
+// opensWords: the Reference pages whose words the checker treats as known (curriculum-graph/languages/fr/settings.json
 // reference.modules today). Returns { outline, report }; report lines name every change from today's configs.
 export function outlineFromUnitConfigs(unitConfigs, { opensWords = [] } = {}) {
   const report = [];

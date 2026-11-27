@@ -4,8 +4,8 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { buildFormIndex } from '../fr/forms.mjs';
-import { frenchIn, frenchWordTest, ENGLISH_ONLY } from '../french-text.mjs';
-import { readModule } from '../course.mjs';
+import { frenchIn, frenchWordTest, ENGLISH_ONLY } from '../fr/text.mjs';
+import { readModule } from '../fr/live-course.mjs';
 import { makeCtx } from './helpers.mjs';
 import { ruleTaughtBefore } from '../rules/taught-before.mjs';
 

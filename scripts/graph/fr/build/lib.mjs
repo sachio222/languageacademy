@@ -4,7 +4,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from '../../load.mjs';
 import { readCourse } from '../../course.mjs';
-import { frenchWordTest } from '../../french-text.mjs';
+import { frenchWordTest } from '../text.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict } from '../forms.mjs';
 import { tokenize, restoreElisions } from '../tokenize.mjs';
 import { matchPattern } from '../detect.mjs';

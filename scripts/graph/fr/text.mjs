@@ -1,8 +1,8 @@
 // Finds the French inside text that mixes English and French: concept cards, hints, instructions, vocabulary
 // notes, feedback and help screens. Used by course.mjs (lesson fields) and screens.mjs (help screen components).
-import { fold } from './fold.mjs';
-import { tokenize } from './fr/tokenize.mjs';
-import { lookupKey } from './fr/forms.mjs';
+import { fold } from '../fold.mjs';
+import { tokenize } from './tokenize.mjs';
+import { lookupKey } from './forms.mjs';
 
 const ENGLISH_WORDS = new Set([
   'the', 'a', 'an', 'is', 'are', 'i', 'you', 'he', 'she', 'we', 'they', 'to', 'of',

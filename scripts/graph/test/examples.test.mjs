@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { buildFormIndex, lookupToken } from '../fr/forms.mjs';
 import { tokenize } from '../fr/tokenize.mjs';
-import { matchPattern } from '../fr/detect.mjs';
+import { matchPattern } from '../detect.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const graph = loadGraph(join(here, '..', '..', '..', 'curriculum-graph'), 'fr');

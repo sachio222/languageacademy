@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { fold } from './fold.mjs';
+import { language } from './language.mjs';
 import { loadPair, ALLOW_IN } from './pairs.mjs';
 import { readCoreLists } from './levels-data.mjs';
 
@@ -60,8 +60,10 @@ const DEFAULT_SETTINGS = {
 };
 
 // opts.native: the learner's native language, which picks the language pair (pairs.mjs); settings.defaultNative
-// when left out.
+// when left out. opts.languageModule: the file of the language module to read text with (language.mjs), for a test
+// language kept outside scripts/graph.
 export function loadGraph(graphDir, lang, opts = {}) {
+  const reader = language(lang, opts.languageModule);
   // Settings: the defaults, then core/settings.json (shared by every language), then the language's own
   // languages/<lang>/settings.json when it has one, each replacing the keys it names.
   const ownSettings = join(graphDir, 'languages', lang, 'settings.json');
@@ -126,11 +128,13 @@ export function loadGraph(graphDir, lang, opts = {}) {
     for (const node of list) add(node);
   }
 
-  const names = new Set(nameList.map((n) => fold(n.surface)));
+  const names = new Set(nameList.map((n) => reader.fold(n.surface)));
   // courseMap is the file as written; runCheck replaces it with the per-module entries built from the content layer and
   // the corrections (content-course.mjs courseMapFromContent).
-  return {
+  const graph = {
     lang, native, pair, settings, functions, exponents, coreLists, readingLimits, nodes, duplicates, headwords, forms, paradigms, constructions, names,
     courseMap, corrections: fixes, courseMapProblems,
   };
+  // The language module rides along unlisted, so the graph's own fields stay what they were (languageOf reads it).
+  return Object.defineProperty(graph, 'language', { value: reader });
 }

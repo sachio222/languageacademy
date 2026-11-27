@@ -9,7 +9,7 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadCourse, readContent, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
 import { assembleCourse, withoutPlanned } from '../assemble.mjs';
-import { defaultCheckAnswer } from '../passable.mjs';
+import { checkAnswer as defaultCheckAnswer } from '../../graph/fr/answers.mjs';
 import { buildBundle, buildBundleWithReport, bundleHash, canonicalJson, splitBlankMistakes, ipaMismatch } from '../bundle.mjs';
 import { releaseProblems } from '../release-checks.mjs';
 import { loadBundleSources, frenchIpa } from '../bundle-sources.mjs';

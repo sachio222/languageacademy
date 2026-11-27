@@ -1,16 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { LEVELS } from '../functions.mjs';
-import { nodeLevel, cellConstruction, CELL_CONSTRUCTIONS, CEFR_SOURCES, CORE_LEVELS, POLITE_CONDITIONALS, POLITE_CONSTRUCTION, readCoreLists, validCefrSource, coreListStatusProblem } from '../levels-data.mjs';
+import { nodeLevel, cellConstruction, CEFR_SOURCES, CORE_LEVELS, readCoreLists, validCefrSource, coreListStatusProblem } from '../levels-data.mjs';
 import { checkLevels } from '../fr/build/construction-levels.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const graphDir = join(repoRoot, 'curriculum-graph');
+// French form levels (tense constructions and the je voudrais chunk) live in the French settings.
+const FR_SETTINGS = JSON.parse(readFileSync(join(graphDir, 'languages/fr/settings.json'), 'utf8'));
+const CELL_CONSTRUCTIONS = FR_SETTINGS.formLevels.tenses;
+const POLITE = FR_SETTINGS.formLevels.chunks[0];
+const POLITE_CONSTRUCTION = POLITE.construction;
 
 // A tiny graph: an A1 verb with an irregular present and subjunctive, a B1 verb, a regular -er verb, and the
 // constructions that build the tense cells.
@@ -42,7 +47,7 @@ function miniGraph() {
   add({ id: 'fr:cx:gerondif', label: 'Gérondif', cefr: 'B1', cefrSource: 'agent: Eaquals grammar' });
   add({ id: 'fr:name:paris', surface: 'Paris' });
   add({ id: 'fn:greet', group: 'socialising', label: 'Greet', canDo: 'Can greet.', cefr: 'A1' });
-  return { lang: 'fr', nodes };
+  return { lang: 'fr', nodes, settings: FR_SETTINGS };
 }
 
 test('nodeLevel of a headword is its stored level', () => {
@@ -102,7 +107,7 @@ test('polite conditionals take the level of the je voudrais phrase, other condit
   assert.equal(nodeLevel(g, 'fr:form:vouloir.cond.1sg'), 'A1');
   assert.equal(nodeLevel(g, 'fr:form:vouloir.cond.2pl'), 'A1');
   assert.equal(nodeLevel(g, 'fr:form:vouloir.cond.3pl'), 'A2');
-  assert.deepEqual(Object.keys(POLITE_CONDITIONALS).sort(), ['fr:lex:aimer', 'fr:lex:pouvoir', 'fr:lex:vouloir']);
+  assert.deepEqual(Object.keys(POLITE.cells).sort(), ['fr:lex:aimer', 'fr:lex:pouvoir', 'fr:lex:vouloir']);
 });
 
 test('other tense cells take their construction', () => {
@@ -115,12 +120,12 @@ test('other tense cells take their construction', () => {
 });
 
 test('cellConstruction maps tense cells and leaves the rest to the headword', () => {
-  assert.equal(cellConstruction('sbjv.2pl'), 'fr:cx:subj.il-faut-que');
-  assert.equal(cellConstruction('cond.1sg'), 'fr:cx:conditionnel-present');
-  assert.equal(cellConstruction('fut.3pl'), 'fr:cx:futur-simple');
-  assert.equal(cellConstruction('impf.3sg'), 'fr:cx:imparfait');
-  assert.equal(cellConstruction('prsptcp'), 'fr:cx:gerondif');
-  for (const cell of ['prs.1sg', 'ptcp', 'ptcp.f', 'ptcp.fpl', 'f', 'pl', 'fpl', 'mv', 'elided']) assert.equal(cellConstruction(cell), null, cell);
+  assert.equal(cellConstruction({ settings: FR_SETTINGS }, 'sbjv.2pl'), 'fr:cx:subj.il-faut-que');
+  assert.equal(cellConstruction({ settings: FR_SETTINGS }, 'cond.1sg'), 'fr:cx:conditionnel-present');
+  assert.equal(cellConstruction({ settings: FR_SETTINGS }, 'fut.3pl'), 'fr:cx:futur-simple');
+  assert.equal(cellConstruction({ settings: FR_SETTINGS }, 'impf.3sg'), 'fr:cx:imparfait');
+  assert.equal(cellConstruction({ settings: FR_SETTINGS }, 'prsptcp'), 'fr:cx:gerondif');
+  for (const cell of ['prs.1sg', 'ptcp', 'ptcp.f', 'ptcp.fpl', 'f', 'pl', 'fpl', 'mv', 'elided']) assert.equal(cellConstruction({ settings: FR_SETTINGS }, cell), null, cell);
 });
 
 test('nodeLevel is null for names, unknown IDs and forms of unknown headwords; functions keep their level', () => {

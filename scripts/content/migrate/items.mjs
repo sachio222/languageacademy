@@ -7,7 +7,7 @@
 // Native text gets its French marked with braces (mark-french.mjs). Pure apart from the classifier and checker
 // it reads; report lines go to the caller.
 import { classifyItem } from '../../graph/rules/item-kinds.mjs';
-import { isEnglish, ENGLISH_ONLY } from '../../graph/french-text.mjs';
+import { isEnglish, ENGLISH_ONLY } from '../../graph/fr/text.mjs';
 import { markFrench } from './mark-french.mjs';
 import { tokenize } from '../../graph/fr/tokenize.mjs';
 

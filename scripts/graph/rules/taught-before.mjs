@@ -1,6 +1,5 @@
-import { tokenize, fold, restoreElisions } from '../fr/tokenize.mjs';
-import { lookupToken, lookupTokenStrict, lookupKey, strictKey } from '../fr/forms.mjs';
-import { detectConstructions, matchSpans, matchStepSpans } from '../fr/detect.mjs';
+import { detectConstructions, matchSpans, matchStepSpans } from '../detect.mjs';
+import { languageOf } from '../language.mjs';
 import { issue } from '../issues.mjs';
 import { languageName } from '../pairs.mjs';
 import { OUTSIDE } from '../content-course.mjs';
@@ -16,6 +15,7 @@ export function analyzeItems(ctx) {
   const cached = memo.get(ctx);
   if (cached) return cached;
   const { graph, index } = ctx;
+  const { tokenize, lenient, lookupToken, lookupTokenStrict } = languageOf(graph);
   const isWord = (f) => index.has(f) || graph.names.has(f);
   const out = new Map();
   for (const m of ctx.course) {
@@ -24,7 +24,7 @@ export function analyzeItems(ctx) {
       const texts = [...new Set([...strictTexts, ...(it.lenient ?? [])])];
       out.set(it.ref, texts.map((text) => {
         const strict = strictTexts.has(text);
-        const tokens = tokenize(strict ? text : restoreElisions(text), { isWord });
+        const tokens = tokenize(strict ? text : lenient(text), { isWord });
         const readings = tokens.map((t) => (strict ? lookupTokenStrict(index, t) : lookupToken(index, t)));
         const constructions = detectConstructions(tokens, readings, graph.constructions ?? [], graph.names);
         const licenses = (graph.constructions ?? [])
@@ -55,6 +55,8 @@ const usesMemo = new WeakMap();
 function uses(ctx) {
   const done = usesMemo.get(ctx);
   if (done) return done;
+  const lang = languageOf(ctx.graph);
+  const { lookupKey } = lang;
   const analysis = analyzeItems(ctx);
   const isWord = (f) => ctx.index.has(f) || ctx.graph.names.has(f);
   const first = new Map();
@@ -68,7 +70,7 @@ function uses(ctx) {
     for (const it of m.items) {
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
-        const typedAt = typedTest(it, a, isWord);
+        const typedAt = typedTest(it, a, isWord, lang);
         a.tokens.forEach((t, i) => {
           if (ctx.graph.names.has(t.fold)) return;
           const lk = lookupKey(t);
@@ -95,6 +97,7 @@ function uses(ctx) {
 // The words and patterns a course-map override tells the checker to ignore in one item (graph ids or folded words).
 export const suppressions = (ctx, moduleKey, itemRef) => {
   const list = ctx.graph.courseMap?.[moduleKey]?.overrides?.[itemRef]?.ignore ?? [];
+  const { fold } = languageOf(ctx.graph);
   return new Set(list.map((x) => (String(x).includes(':') ? String(x) : fold(String(x)))));
 };
 
@@ -120,7 +123,7 @@ function cognateTest(ctx) {
 // For one analyzed text of an item: is the token at index i French the learner types? `french` and `lenient` are
 // typed and `shown` is not. In a blank sentence (an item with blankAnswers) only the words of the answers are typed:
 // the learner reads the rest of the sentence.
-function typedTest(it, a, isWord) {
+function typedTest(it, a, isWord, { tokenize }) {
   const typed = new Set([...(it.french ?? []), ...(it.lenient ?? [])]);
   if (!typed.has(a.text)) return () => false;
   if (!Array.isArray(it.blankAnswers) || !(it.french ?? []).includes(a.text)) return () => true;
@@ -170,6 +173,8 @@ function run(ctx) {
   const done = results.get(ctx);
   if (done) return done;
   const { graph, timeline, index } = ctx;
+  const lang = languageOf(graph);
+  const { tokenize, lookupKey, strictKey } = lang;
   const analysis = analyzeItems(ctx);
   const cognate = cognateTest(ctx);
   const isWord = (f) => index.has(f) || graph.names.has(f);
@@ -228,7 +233,7 @@ function run(ctx) {
       if (OUTSIDE.has(it.source)) continue;
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
-        const typedAt = typedTest(it, a, isWord);
+        const typedAt = typedTest(it, a, isWord, lang);
         const glossed = glossCover(m, it, a, typedAt, glossTokens);
         a.tokens.forEach((t, i) => {
           const lk = lookupKey(t);
@@ -378,6 +383,8 @@ function run(ctx) {
 // once per key (the form lower-cased, apostrophes straight).
 export function glossCandidates(ctx, kinds = ['lesson', 'reading']) {
   const { graph, timeline, index } = ctx;
+  const lang = languageOf(graph);
+  const { lookupKey } = lang;
   const analysis = analyzeItems(ctx);
   const cognate = cognateTest(ctx);
   const isWord = (f) => index.has(f) || graph.names.has(f);
@@ -390,7 +397,7 @@ export function glossCandidates(ctx, kinds = ['lesson', 'reading']) {
       const ignore = suppressions(ctx, m.moduleKey, it.ref);
       for (const a of analysis.get(it.ref) ?? []) {
         if (!it.glossable.includes(a.text)) continue;
-        const typedAt = typedTest(it, a, isWord);
+        const typedAt = typedTest(it, a, isWord, lang);
         a.tokens.forEach((t, i) => {
           if (typedAt(i)) return;
           const lk = lookupKey(t);

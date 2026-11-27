@@ -1,0 +1,51 @@
+{
+  "schema": "la-module@1",
+  "module_key": "zz-hello",
+  "kind": "lesson",
+  "status": "written",
+  "title": "Hello · {ka}",
+  "topic": "ka",
+  "description": "Say {ka} and name a {kota}.",
+  "can_do": [
+    "Say hello with {ka}."
+  ],
+  "teaches": {
+    "constructions": [
+      "zz:cx:plural"
+    ]
+  },
+  "tests": {
+    "constructions": []
+  },
+  "vocabulary": [
+    {
+      "word_id": "ka-zz",
+      "fr": "ka",
+      "gloss": "hello"
+    },
+    {
+      "word_id": "kota-zz",
+      "fr": "kota",
+      "gloss": "cat"
+    },
+    {
+      "word_id": "kotai-zz",
+      "fr": "kotai",
+      "gloss": "cats"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-hello",
+      "type": "translate",
+      "prompt": "hello",
+      "answer": "ka"
+    },
+    {
+      "id": "i-cats",
+      "type": "translate",
+      "prompt": "cats",
+      "answer": "kotai"
+    }
+  ]
+}

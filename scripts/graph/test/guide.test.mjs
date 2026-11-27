@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readModule } from '../course.mjs';
+import { readModule } from '../fr/live-course.mjs';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { ruleTaughtBefore } from '../rules/taught-before.mjs';

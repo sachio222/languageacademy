@@ -62,10 +62,11 @@ import { liveIdMatch } from './live-ids.mjs';
 import { declarationsOf, correctionsOf, isSplit, resplitProblem } from './course-map.mjs';
 import { renderReport, RUN_ONLY_KINDS } from './report.mjs';
 import { proposeWordId } from '../word-ids.mjs';
-import { checkItemPassable, defaultCheckAnswer } from '../passable.mjs';
+import { checkItemPassable } from '../passable.mjs';
+import { checkAnswer as defaultCheckAnswer } from '../../graph/fr/answers.mjs';
 import { loadGraph } from '../../graph/load.mjs';
 import { buildFormIndex } from '../../graph/fr/forms.mjs';
-import { frenchWordTest } from '../../graph/french-text.mjs';
+import { frenchWordTest } from '../../graph/fr/text.mjs';
 
 const rel = (p) => relative(REPO_ROOT, p) || '.';
 const json = (v) => JSON.stringify(v, null, 2) + '\n';
@@ -102,7 +103,7 @@ function writeFile(file, text, { check, force }) {
 
 async function outline(args, flags) {
   const { unitConfigs } = await importFrom(REPO_ROOT, 'src/lessons/unitConfigLoader.js');
-  const settings = JSON.parse(readFileSync(join(REPO_ROOT, 'curriculum-graph/core/settings.json'), 'utf8'));
+  const settings = JSON.parse(readFileSync(join(REPO_ROOT, 'curriculum-graph/languages/fr/settings.json'), 'utf8'));
   const { outline: generated, report } = outlineFromUnitConfigs(unitConfigs, { opensWords: settings.reference.modules });
   const rootArg = option(args, '--root');
   const root = rootArg === undefined ? CONTENT_ROOT : resolve(rootArg);
@@ -442,7 +443,7 @@ async function modules(args, flags, kindWords = ['modules']) {
     lines.push(...[...declared.report, ...corrected.report].map((l, i) => ({ l, i })).sort((a, b) => at(a.l) - at(b.l) || a.i - b.i).map(({ l }) => l));
   }
 
-  const settings = readJson(join(REPO_ROOT, 'curriculum-graph/core/settings.json'));
+  const settings = readJson(join(REPO_ROOT, 'curriculum-graph/languages/fr/settings.json'));
   for (const line of outlineFromUnitConfigs(unitConfigs, { opensWords: settings.reference.modules }).report)
     lines.push({ module_key: null, path: 'course.json', kind: 'outline', detail: line });
 

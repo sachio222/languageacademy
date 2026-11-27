@@ -7,7 +7,7 @@
 // (cognateOpening), because a learner can use all three.
 import { issue } from '../issues.mjs';
 import { moduleTeaches, cognateOpening } from '../timeline.mjs';
-import { LEVELS as ORDER, CORE_LEVELS, nodeLevel, formOf, cellConstruction, POLITE_CONDITIONALS, POLITE_CONSTRUCTION } from '../levels-data.mjs';
+import { LEVELS as ORDER, CORE_LEVELS, nodeLevel, formOf, cellConstruction, chunkConstruction } from '../levels-data.mjs';
 
 const rank = (c) => ORDER.indexOf(c);
 const LABEL = /\b(A1|A2|B1|B2|C1|C2)\+?/g;
@@ -214,9 +214,8 @@ function reachedBefore(levels, position) {
 }
 
 // The construction that sets a form's level (the polite conditionals take je voudrais), or null.
-function formConstruction(form) {
-  if (POLITE_CONDITIONALS[form.headwordId]?.includes(form.cell)) return POLITE_CONSTRUCTION;
-  return cellConstruction(form.cell);
+function formConstruction(graph, form) {
+  return chunkConstruction(graph, form.headwordId, form.cell) ?? cellConstruction(graph, form.cell);
 }
 
 // Drops a form whose headword or tense pattern is in the same list: the form only repeats it.
@@ -224,7 +223,7 @@ function withoutRepeatedForms(graph, nodes) {
   const ids = new Set(nodes.map((n) => n.id));
   return nodes.filter((n) => {
     const form = formOf(graph, n.id);
-    return !form || !(ids.has(form.headwordId) || ids.has(formConstruction(form)));
+    return !form || !(ids.has(form.headwordId) || ids.has(formConstruction(graph, form)));
   });
 }
 

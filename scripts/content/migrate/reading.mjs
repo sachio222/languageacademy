@@ -11,6 +11,10 @@ import { createMerger, mergeField, mergeList, mergeVocabulary, mergeDeclared, fi
 import { preTeachRows } from './course-map.mjs';
 import { MODULE_SCHEMA, hasPositionWord, moduleTexts } from '../schema/module.mjs';
 import { tokenize, fold } from '../../graph/fr/tokenize.mjs';
+import { wordsWithoutPopup as sharedWordsWithoutPopup } from '../../graph/popups.mjs';
+import { language } from '../../graph/language.mjs';
+
+const french = language('fr');
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 
@@ -185,31 +189,8 @@ export function changedSentences(liveText, passage) {
 
 /* ---------- pop-ups ---------- */
 
-const ELIDED = { "j'": 'je', "l'": 'le', "d'": 'de', "n'": 'ne', "s'": 'se', "c'": 'ce', "qu'": 'que', "m'": 'me', "t'": 'te', "jusqu'": 'jusque', "lorsqu'": 'lorsque', "puisqu'": 'puisque' };
-// A clitic after a hyphen (est-ce, excusez-moi, va-t-il) is the word itself: ce, moi, il.
-const foldTok = (t) => fold(t.surface.replace(/[’ʼ‘]/g, "'").replace(/^-(?:t-)?/, ''));
-
-/**
- * The distinct passage words with no pop-up (spec 5.7): not in the dictionary (`dictionaryForms`, folded spellings
- * and forms), the reading's glossary, glosses or vocabulary table, and not a name (`names`, folded). Capitalised words count
- * as names only when names.json lists them.
- */
-export function wordsWithoutPopup(mod, { dictionaryForms = new Set(), names = new Set() } = {}) {
-  const covered = new Set();
-  // A gloss (a form of a known word, L c3da2c0) opens the same pop-up as a glossary row.
-  for (const row of [...(mod.glossary || []), ...(mod.glosses || []), ...(mod.vocabulary || [])]) for (const t of tokenize(row.fr)) covered.add(foldTok(t));
-  const missing = new Map();
-  for (const b of mod.passage || []) {
-    if (!isStr(b.fr)) continue;
-    for (const t of tokenize(b.fr.replace(/\*/g, ''))) {
-      const f = foldTok(t);
-      const base = ELIDED[f] ?? f;
-      if (covered.has(f) || dictionaryForms.has(f) || dictionaryForms.has(base) || names.has(f)) continue;
-      if (!missing.has(f)) missing.set(f, t.surface);
-    }
-  }
-  return [...missing.values()];
-}
+// The pop-up rule reads French text with the French language module (scripts/graph/popups.mjs).
+export const wordsWithoutPopup = (mod, opts = {}) => sharedWordsWithoutPopup(mod, { ...opts, lang: french });
 
 /* ---------- conversion ---------- */
 

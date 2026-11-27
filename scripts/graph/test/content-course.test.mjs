@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { readModule } from '../course.mjs';
+import { readModule } from '../fr/live-course.mjs';
 import { readCourseFromContent } from '../content-course.mjs';
 import { runCheck } from '../check.mjs';
 import { miniCourse, checkMini, ofRule, repoRoot } from './content-helpers.mjs';

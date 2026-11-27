@@ -2,10 +2,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { readCourse, readModule, isEnglish, stripPassage } from '../course.mjs';
+import { readCourse, readModule, isEnglish, stripPassage } from '../fr/live-course.mjs';
 import { loadGraph } from '../load.mjs';
 import { buildFormIndex } from '../fr/forms.mjs';
-import { frenchWordTest } from '../french-text.mjs';
+import { frenchWordTest } from '../fr/text.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const course = await readCourse(repoRoot);

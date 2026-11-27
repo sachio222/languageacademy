@@ -25,6 +25,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { fold } from './fold.mjs';
+import { defaultLanguage } from './language.mjs';
 import { LEVELS } from './levels-data.mjs';
 import { writeSortedJson } from './write-json.mjs';
 
@@ -34,6 +35,7 @@ const GENDERS = ['m', 'f', 'm/f'];
 const FIELDS = new Set(['lemma', 'pos', 'level', 'gloss', 'gender', 'register', 'use', 'class', 'like', 'paradigms', 'forms', 'id', 'source']);
 const DEFAULT_SOURCE = 'agent: judgment';
 
+// A lemma's ID key, the same rule in every language so IDs stay plain: folded, spaces and apostrophes as hyphens.
 export const keyOf = (lemma) => fold(lemma).replace(/[\s']+/g, '-');
 export const idOf = (lang, entry) => entry.id ?? `${lang}:lex:${keyOf(entry.lemma)}`;
 const byId = (a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
@@ -157,11 +159,8 @@ export function readLanguage(lang, repo = REPO) {
 export const loadRules = async (lang) => import(pathToFileURL(join(dirname(fileURLToPath(import.meta.url)), lang, 'inflect.mjs')).href);
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const lang = process.argv[2];
-  if (!lang) {
-    console.error('Usage: node scripts/graph/add-words.mjs <lang>');
-    process.exit(2);
-  }
+  // add-words.mjs [lang]: core/settings.json defaultLanguage when left out.
+  const lang = process.argv[2] ?? defaultLanguage();
   const { list, data } = readLanguage(lang);
   const out = addWords({ lang, list, data, rules: await loadRules(lang), dictionaryIds: readDictionaryIds() });
   writeSortedJson(join(langDir(lang), 'headwords.json'), out.headwords);

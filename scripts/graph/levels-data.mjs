@@ -1,14 +1,14 @@
 // CEFR levels of graph nodes and the frozen core lists (curriculum-graph/core/levels/<lang>-<level>.json).
 // Headwords, constructions and paradigms store their level in `cefr`, with `cefrSource` saying how it was decided.
 // A form's level is never stored: it is the higher of its headword's level and the level of the construction that
-// builds its cell (CELL_CONSTRUCTIONS). Present-tense, past-participle and agreement cells add nothing, so those
+// builds its cell (settings formLevels.tenses). Present-tense, past-participle and agreement cells add nothing, so those
 // forms take the headword's level. A form spelled like another cell of the same headword takes the lowest level
-// among those cells (donne is a present form before it is a subjunctive one), and the polite conditionals of
-// POLITE_CONDITIONALS take the level of the je voudrais phrase.
+// among those cells (donne is a present form before it is a subjunctive one), and a cell the language lists under
+// formLevels.chunks takes the level of its phrase (French: the polite conditionals take je voudrais).
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseId } from './ids.mjs';
-import { buildFormIndex } from './fr/forms.mjs';
+import { languageOf } from './language.mjs';
 
 // CEFR levels in order, A1 lowest. Every level list in the checker comes from here.
 export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
@@ -53,32 +53,24 @@ function isIsoDate(value) {
 // Levels with a core list.
 export const CORE_LEVELS = ['A1', 'A2', 'B1'];
 
-// Tense prefix of a form cell -> the construction that builds that tense. The subjunctive enters with il faut que,
-// the first subjunctive trigger a learner meets; the present participle with the gérondif (en parlant).
-export const CELL_CONSTRUCTIONS = {
-  sbjv: 'fr:cx:subj.il-faut-que',
-  cond: 'fr:cx:conditionnel-present',
-  fut: 'fr:cx:futur-simple',
-  impf: 'fr:cx:imparfait',
-  prsptcp: 'fr:cx:gerondif',
-};
+// A form cell's tense prefix -> the construction that builds that tense, and the chunks a learner meets as set
+// phrases before their tense (French je voudrais, j'aimerais): the language's settings.json formLevels.
+//   formLevels.tenses   { <cell prefix>: <construction id> }
+//   formLevels.chunks   [{ construction, cells: { <headword id>: [<cell>, ...] } }]
+const formLevels = (graph) => graph.settings?.formLevels ?? {};
 
-// Conditional cells a learner meets as polite requests before the conditional tense: je voudrais, tu voudrais,
-// vous voudriez, j'aimerais, tu aimerais, pourriez-vous, on pourrait. They take the level of this construction.
-export const POLITE_CONSTRUCTION = 'fr:cx:chunk.je-voudrais';
-export const POLITE_CONDITIONALS = {
-  'fr:lex:vouloir': ['cond.1sg', 'cond.2sg', 'cond.2pl'],
-  'fr:lex:aimer': ['cond.1sg', 'cond.2sg'],
-  'fr:lex:pouvoir': ['cond.2pl', 'cond.3sg'],
-};
+// The chunk construction that sets the level of one cell of a headword, or null.
+export function chunkConstruction(graph, headwordId, cell) {
+  return (formLevels(graph).chunks ?? []).find((c) => c.cells?.[headwordId]?.includes(cell))?.construction ?? null;
+}
 
 const rank = (level) => LEVELS.indexOf(level);
 const higher = (a, b) => (rank(a) >= rank(b) ? a : b);
 const lower = (a, b) => (rank(a) <= rank(b) ? a : b);
 
 // The construction that builds a form cell such as "sbjv.1sg", or null when the cell takes the headword's level.
-export function cellConstruction(cell) {
-  return CELL_CONSTRUCTIONS[String(cell).split('.')[0]] ?? null;
+export function cellConstruction(graph, cell) {
+  return formLevels(graph).tenses?.[String(cell).split('.')[0]] ?? null;
 }
 
 // An irregular form is a node with `of` and `cell`. A regular form has an ID (fr:form:<headword key>.<cell>) but
@@ -115,7 +107,7 @@ function cellSurfaces(graph) {
   let byHeadword = SURFACES.get(graph);
   if (byHeadword) return byHeadword;
   const nodes = [...graph.nodes.values()];
-  const index = buildFormIndex({
+  const index = languageOf(graph).buildFormIndex({
     ...graph,
     headwords: graph.headwords ?? nodes.filter((n) => n.lemma !== undefined && n.pos !== undefined),
     forms: graph.forms ?? nodes.filter((n) => n.of),
@@ -135,7 +127,7 @@ function cellSurfaces(graph) {
 // Level of one cell of a headword, ignoring homographs.
 function cellLevel(graph, headwordId, cell) {
   const headword = storedLevel(graph.nodes.get(headwordId));
-  const cxId = POLITE_CONDITIONALS[headwordId]?.includes(cell) ? POLITE_CONSTRUCTION : cellConstruction(cell);
+  const cxId = chunkConstruction(graph, headwordId, cell) ?? cellConstruction(graph, cell);
   if (!cxId) return headword;
   const cx = storedLevel(graph.nodes.get(cxId));
   return headword && cx ? higher(headword, cx) : null;

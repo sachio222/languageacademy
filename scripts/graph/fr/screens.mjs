@@ -6,12 +6,12 @@
 //   <strong> so a sentence stays whole;
 // - the `text` attribute of an element ("<SpeakButton text="vous êtes" />"), which the learner hears;
 // - string values under an object key that names French ({ french: "un restaurant", english: "restaurant" }).
-// Each text is then split like a concept example (see frenchIn in french-text.mjs) and only its French is kept.
+// Each text is then split like a concept example (see frenchIn in text.mjs) and only its French is kept.
 // Button labels are skipped.
 // Imports, class names, styles, ids, log messages, database names and progress keys are code, never JSX text or
 // such a value, so they are never returned. Arguments of speak() calls are not read: they repeat the text on screen,
 // and LiaisonHelp misspells two on purpose ("vou avez") so the voice drops the liaison.
-import { frenchIn } from './french-text.mjs';
+import { frenchIn } from './text.mjs';
 
 // Tags that sit inside a run of text without breaking it.
 const INLINE = new Set(['strong', 'em', 'b', 'i', 'u', 'br']);

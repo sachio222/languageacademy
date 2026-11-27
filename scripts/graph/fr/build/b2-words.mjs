@@ -22,7 +22,7 @@
 // - words below B2 that the earlier lists missed (discussion, possibilité, concerner, peser, loisir, gratuit, récent,
 //   logement, horaire, imprimante, tutoyer): they belong to a lower level;
 // - words the checker uses as signs of English (section, location, positive and progressive, in ENGLISH_ONLY in
-//   french-text.mjs), and words whose English spelling course labels and notes use, so that the converter in
+//   fr/text.mjs), and words whose English spelling course labels and notes use, so that the converter in
 //   scripts/content/migrate would read those labels as French: gratitude, regret, transactions, perception,
 //   Integration, institutions, modifications, compliment, Structure, Formation, Concrete, intense, progression;
 // - words the course already uses that the word list lacks (boisson, clarification, louche, fée, étudiante, avocate):

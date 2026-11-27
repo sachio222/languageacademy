@@ -4,8 +4,7 @@ import { issue } from './issues.mjs';
 import { validateGraph } from './validate.mjs';
 import { readCourseFromContent, referenceModulesFromContent, courseMapFromContent } from './content-course.mjs';
 import { loadCourse } from '../content/load.mjs';
-import { buildFormIndex } from './fr/forms.mjs';
-import { frenchWordTest } from './french-text.mjs';
+import { languageOf, languageOfIndex } from './language.mjs';
 import { buildTimeline } from './timeline.mjs';
 import { ruleTaughtBefore, cognatesAllowed } from './rules/taught-before.mjs';
 import { ruleReuse } from './rules/reuse.mjs';
@@ -21,8 +20,6 @@ import { ruleExamItemCopied, ruleReadingWordNoPopup, ruleGuideOnlyTeaching } fro
 import { ruleFunctionExponents, ruleFunctionUnreachable, functionReport } from './functions.mjs';
 import { reportStats } from './report-data.mjs';
 import { entryReadings } from './extract-teaches.mjs';
-import { tokenize } from './fr/tokenize.mjs';
-import { lookupToken, lookupTokenStrict } from './fr/forms.mjs';
 
 const RULES = [
   ruleTaughtBefore, ruleReuse, ruleTranslation, ruleClaims,
@@ -61,6 +58,7 @@ const opens = (reading) => OPENS.has(reading.pos);
 // (irregular form, then generated form, then lemma). Filtering before ranking lets l'été read as the season when the
 // past participle of être would otherwise win.
 export function referenceOpenNodes(index, vocab) {
+  const { tokenize, lookupToken, lookupTokenStrict } = languageOfIndex(index);
   const isWord = (f) => index.has(f);
   const out = new Set();
   for (const text of vocab) {
@@ -81,16 +79,18 @@ export function referenceOpenNodes(index, vocab) {
 // native: the learner's native language, which picks the language pair; settings.defaultNative when left out.
 // The course is the content layer: loadCourse() over content/<lang> (or opts.content, an already loaded Course), read
 // by readCourseFromContent. opts.corrections replaces the committed course-map corrections and opts.dictionaryForms
-// the dictionary's folded spellings (src/data/dictionary), for tests.
-export async function runCheck({ repoRoot, lang, native, content, corrections, dictionaryForms }) {
-  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang, { native });
+// the dictionary's folded spellings (src/data/dictionary), for tests. opts.languageModule: the language module's file
+// (language.mjs), for a language kept outside scripts/graph such as a test fixture.
+export async function runCheck({ repoRoot, lang, native, content, corrections, dictionaryForms, languageModule }) {
+  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang, { native, languageModule });
   if (corrections) {
     graph.corrections = corrections;
     graph.courseMapProblems = [];
   }
-  const index = buildFormIndex(graph);
-  const loaded = content ?? loadCourse({ root: join(repoRoot, 'content', lang), graphDir: join(repoRoot, 'curriculum-graph', 'languages', lang) });
-  const course = readCourseFromContent(loaded, { isWord: frenchWordTest(graph, index) });
+  const reader = languageOf(graph);
+  const index = reader.buildFormIndex(graph);
+  const loaded = content ?? loadCourse({ root: join(repoRoot, 'content', lang), graphDir: join(repoRoot, 'curriculum-graph', 'languages', lang), languageModule });
+  const course = readCourseFromContent(loaded, { isWord: reader.targetWordTest(graph, index) });
   // What each module teaches and tests comes from its own file; the course map adds the corrections.
   graph.courseMap = courseMapFromContent(course, graph.corrections, { graph, index });
   const referenceModules = referenceModulesFromContent(loaded);
@@ -101,7 +101,7 @@ export async function runCheck({ repoRoot, lang, native, content, corrections, d
   const timeline = buildTimeline(graph, course, { reference: open, openFrom: graph.settings?.reference?.openFrom ?? null });
   // referenceOpenTitles: the titles of the Reference pages that open, for the fix list.
   const referenceOpenTitles = referenceModules.filter((m) => openKeys.has(m.moduleKey)).map((m) => m.title);
-  const forms = dictionaryForms ?? await (await import('../content/migrate/sources.mjs')).dictionaryForms();
+  const forms = dictionaryForms ?? await reader.dictionaryForms();
   const ctx = { graph, course, index, timeline, reference, referenceOpen: open, referenceOpenTitles, content: loaded, dictionaryForms: forms };
   // settings.reference.modules and the outline's shelf.opens_words name the same pages; the checker opens the shelf's.
   const listed = [...(graph.settings?.reference?.modules ?? [])].sort();

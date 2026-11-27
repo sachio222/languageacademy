@@ -9,7 +9,7 @@ import { validateGraph } from '../validate.mjs';
 import { ruleLevels, levelReport } from '../rules/levels.mjs';
 import { writeReportData, reportStats, percent } from '../report-data.mjs';
 import { referenceNodes, referenceOpenNodes } from '../check.mjs';
-import { readReferenceVocab, readReferenceModules } from '../course.mjs';
+import { readReferenceVocab, readReferenceModules } from '../fr/live-course.mjs';
 import { buildFormIndex } from '../fr/forms.mjs';
 import { summarize, checkSummaryLines, renderFixList } from '../report.mjs';
 import { functionReport } from '../functions.mjs';

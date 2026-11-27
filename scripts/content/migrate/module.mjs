@@ -7,7 +7,7 @@
 // hand stays, with a merge_conflict line when the new output differs too. `handFixes` (legacy/hand-fixes.json)
 // is applied again when nothing is written (--force). With no record the written file wins wherever it has the part.
 import '../vite-shim.mjs';
-import { readModule } from '../../graph/course.mjs';
+import { readModule } from '../../graph/fr/live-course.mjs';
 import { convertTyped, convertFillblank, convertSentence, normText } from './items.mjs';
 import { markFrench, unmark } from './mark-french.mjs';
 import { makeItemId, makeConceptId, makeTableId, acceptedAnswers, acceptsAnOldAnswer } from '../item-ids.mjs';
