@@ -101,8 +101,8 @@ const verbsWith = (test) => graph.headwords.filter((h) => h.pos === 'verb')
 const regularRe = ({ h, v }) => v.endsWith('re') && (h.paradigms ?? []).includes('fr:cx:verb.re.present');
 const regularIr = ({ h, v }) => v.endsWith('ir') && (h.paradigms ?? []).includes('fr:cx:verb.ir.present');
 const firstGroup = ({ v }) => v.endsWith('er') && v !== 'aller';
-// Generated forms that are also nouns outside the graph (la feta, un paria).
-const NOT_LITERARY = new Set(['feta', 'paria']);
+// Generated forms that are also nouns outside the graph or the graph reads only as a verb (la feta, un paria, un visa).
+const NOT_LITERARY = new Set(['feta', 'paria', 'visa']);
 const alternation = (forms) => [...new Set(forms)].filter((f) => !taken(f) && !NOT_LITERARY.has(f)).sort().join('|');
 // Passé simple, third person, folded. Regular verbs are generated from the graph's -er verbs and its regular -ir and
 // -re verbs; a form spelled like a word the graph already reads (il finit, ils durent, le but) is left out. The
@@ -195,10 +195,10 @@ const PTCP_NOT_DU = { cell: 'ptcp*', accented: '(?!du$).+' };
 const VERBAL_ADJECTIVES = 'suivant|couchant|levant|brulant|obeissant|tremblant|bouillant|pendant|cependant|maintenant|grimpant|glissant|perdant|naissant|amusant|charmant|etonnant|fatigant|passionnant|surprenant|plaisant|mechant|seduisant|inquietant|genant|brillant|courant|vivant|savant|croissant|souriant|interessant|tournant|marchant|gagnant|passant|precedent|present|puissant|pesant|suffisant|apaisant|eclatant|emouvant|decevant|epuisant|effrayant|enervant|excitant|rassurant|touchant|vivifiant';
 const PRSPTCP_AMBIGUOUS = [...INDEX].filter(([, rs]) => rs.some((r) => r.cell === 'prsptcp') && rs.some((r) => r.cell !== 'prsptcp')).map(([f]) => f).sort();
 const PRSPTCP_CLAUSE = { cell: 'prsptcp', surface: `(?!(${[...PRSPTCP_AMBIGUOUS, VERBAL_ADJECTIVES].join('|')})$).+` };
-// What follows a participle that heads a clause after a noun: an object, a complement or a participle (les voyageurs
+// What follows a participle that heads a clause after a noun: an object, a complement, an infinitive or a participle (les voyageurs
 // ayant un billet, une lettre expliquant la règle, les invités ayant répondu). An adjective after a noun is followed by
 // something else (le mois suivant, il est parti).
-const CLAUSE_NEXT = { any: [{ pos: 'article' }, { pos: 'determiner' }, { pos: 'preposition' }, { cell: 'ptcp*' }, S("que|qu'|le|la|les|l'|lui|leur|y|en|pas|plus|jamais|deja|toujours|bien|beaucoup|tout")] };
+const CLAUSE_NEXT = { any: [INF, { pos: 'article' }, { pos: 'determiner' }, { pos: 'preposition' }, { cell: 'ptcp*' }, S("que|qu'|le|la|les|l'|lui|leur|y|en|pas|plus|jamais|deja|toujours|bien|beaucoup|tout")] };
 
 // opts.licenses: headword IDs the construction teaches inside its own match, such as the de of "pas de" (neg.de).
 // opts.use: 'recognize' for a pattern the learner only reads and hears (the passé simple), never types; the checker
