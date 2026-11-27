@@ -2113,8 +2113,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:allergie",
@@ -2405,7 +2405,7 @@
     "senses": []
   },
   {
-    "cefr": "B2",
+    "cefr": "B1",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
@@ -2532,8 +2532,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:amical",
     "lemma": "amical",
@@ -2875,8 +2875,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:annuel",
     "lemma": "annuel",
@@ -4513,8 +4513,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:augmentation",
@@ -6311,28 +6311,6 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
-    "dictionaryId": null,
-    "id": "fr:lex:brancher",
-    "lemma": "brancher",
-    "paradigms": [
-      "fr:cx:verb.er.present",
-      "fr:cx:ptcp.er",
-      "fr:cx:verb.er.impf",
-      "fr:cx:verb.future",
-      "fr:cx:verb.conditional",
-      "fr:cx:verb.er.subjunctive",
-      "fr:cx:prsptcp.er"
-    ],
-    "pos": "verb",
-    "senses": [
-      {
-        "gloss": "to plug in, connect"
-      }
-    ]
-  },
-  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
@@ -7343,8 +7321,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:categorie",
@@ -7791,8 +7769,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:chaleureux",
     "lemma": "chaleureux",
@@ -7867,8 +7845,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:chanceux",
     "lemma": "chanceux",
@@ -8411,8 +8389,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:chimie",
@@ -13178,8 +13156,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:debutant",
@@ -15610,28 +15588,6 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
-    "dictionaryId": null,
-    "id": "fr:lex:differer",
-    "lemma": "différer",
-    "paradigms": [
-      "fr:cx:verb.er.present",
-      "fr:cx:ptcp.er",
-      "fr:cx:verb.er.impf",
-      "fr:cx:verb.future",
-      "fr:cx:verb.conditional",
-      "fr:cx:verb.er.subjunctive",
-      "fr:cx:prsptcp.er"
-    ],
-    "pos": "verb",
-    "senses": [
-      {
-        "gloss": "to differ; to postpone"
-      }
-    ]
-  },
-  {
     "cefr": "A1",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": "difficile-fr",
@@ -17848,8 +17804,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:egoiste",
     "lemma": "égoïste",
@@ -17965,8 +17921,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:electronique",
     "lemma": "électronique",
@@ -18330,8 +18286,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:emmenager",
     "lemma": "emménager",
@@ -18394,22 +18350,6 @@
     "senses": [
       {
         "gloss": "emotional"
-      }
-    ]
-  },
-  {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
-    "dictionaryId": null,
-    "id": "fr:lex:emouvant",
-    "lemma": "émouvant",
-    "paradigms": [
-      "fr:cx:adj.regular"
-    ],
-    "pos": "adjective",
-    "senses": [
-      {
-        "gloss": "moving, touching"
       }
     ]
   },
@@ -19343,8 +19283,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "C1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:entraver",
     "lemma": "entraver",
@@ -22342,8 +22282,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:fichier",
@@ -23918,8 +23858,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:gaspiller",
     "lemma": "gaspiller",
@@ -24750,7 +24690,7 @@
     "senses": []
   },
   {
-    "cefr": "B2",
+    "cefr": "C1",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:guere",
@@ -28293,8 +28233,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:irregulier",
     "lemma": "irrégulier",
@@ -29996,8 +29936,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:logiciel",
@@ -31640,8 +31580,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:mensuel",
     "lemma": "mensuel",
@@ -34192,8 +34132,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:obligatoire",
     "lemma": "obligatoire",
@@ -34689,8 +34629,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:optimiste",
     "lemma": "optimiste",
@@ -34705,8 +34645,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:option",
@@ -35573,8 +35513,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:paresseux",
     "lemma": "paresseux",
@@ -36817,7 +36757,7 @@
     ]
   },
   {
-    "cefr": "B2",
+    "cefr": "B1",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:pessimiste",
@@ -36964,8 +36904,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:philosophie",
@@ -37811,8 +37751,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:polluer",
     "lemma": "polluer",
@@ -37833,8 +37773,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:pollution",
@@ -38470,28 +38410,6 @@
     ],
     "pos": "adjective",
     "senses": []
-  },
-  {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
-    "dictionaryId": null,
-    "id": "fr:lex:preceder",
-    "lemma": "précéder",
-    "paradigms": [
-      "fr:cx:verb.er.present",
-      "fr:cx:ptcp.er",
-      "fr:cx:verb.er.impf",
-      "fr:cx:verb.future",
-      "fr:cx:verb.conditional",
-      "fr:cx:verb.er.subjunctive",
-      "fr:cx:prsptcp.er"
-    ],
-    "pos": "verb",
-    "senses": [
-      {
-        "gloss": "to precede"
-      }
-    ]
   },
   {
     "cefr": "B1",
@@ -39351,28 +39269,6 @@
   },
   {
     "cefr": "B2",
-    "cefrSource": "agent: judgment",
-    "dictionaryId": null,
-    "id": "fr:lex:priver",
-    "lemma": "priver",
-    "paradigms": [
-      "fr:cx:verb.er.present",
-      "fr:cx:ptcp.er",
-      "fr:cx:verb.er.impf",
-      "fr:cx:verb.future",
-      "fr:cx:verb.conditional",
-      "fr:cx:verb.er.subjunctive",
-      "fr:cx:prsptcp.er"
-    ],
-    "pos": "verb",
-    "senses": [
-      {
-        "gloss": "to deprive"
-      }
-    ]
-  },
-  {
-    "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "id": "fr:lex:privilegier",
@@ -39907,8 +39803,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:promotion",
@@ -40561,8 +40457,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:quantite",
@@ -41980,8 +41876,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:reduction",
@@ -42613,8 +42509,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "A2",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:rembourser",
     "lemma": "rembourser",
@@ -43123,7 +43019,7 @@
     "cefr": "B2",
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
-    "id": "fr:lex:repartir.verb",
+    "id": "fr:lex:repartir.distribute",
     "lemma": "répartir",
     "paradigms": [
       "fr:cx:verb.ir.present",
@@ -44057,7 +43953,7 @@
     "cefrSource": "agent: frequency + Eaquals",
     "dictionaryId": null,
     "gender": "m",
-    "id": "fr:lex:retraite.noun",
+    "id": "fr:lex:retraite.person",
     "lemma": "retraité",
     "paradigms": [
       "fr:cx:noun.plural"
@@ -44702,8 +44598,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "f",
     "id": "fr:lex:routine",
@@ -45198,22 +45094,6 @@
     "senses": [
       {
         "gloss": "to satisfy"
-      }
-    ]
-  },
-  {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
-    "dictionaryId": null,
-    "id": "fr:lex:satisfaisant",
-    "lemma": "satisfaisant",
-    "paradigms": [
-      "fr:cx:adj.regular"
-    ],
-    "pos": "adjective",
-    "senses": [
-      {
-        "gloss": "satisfactory"
       }
     ]
   },
@@ -48762,7 +48642,7 @@
     "senses": []
   },
   {
-    "cefr": "B2",
+    "cefr": "C1",
     "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:tantot",
@@ -48957,8 +48837,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "gender": "m",
     "id": "fr:lex:telechargement",
@@ -49024,9 +48904,7 @@
     "gender": "m",
     "id": "fr:lex:teletravail",
     "lemma": "télétravail",
-    "paradigms": [
-      "fr:cx:noun.plural"
-    ],
+    "paradigms": [],
     "pos": "noun",
     "senses": [
       {
@@ -49424,8 +49302,8 @@
     "senses": []
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:tetu",
     "lemma": "têtu",
@@ -49712,22 +49590,6 @@
     "senses": [
       {
         "gloss": "tolerance"
-      }
-    ]
-  },
-  {
-    "cefr": "B2",
-    "cefrSource": "agent: judgment",
-    "dictionaryId": null,
-    "id": "fr:lex:tolerant",
-    "lemma": "tolérant",
-    "paradigms": [
-      "fr:cx:adj.regular"
-    ],
-    "pos": "adjective",
-    "senses": [
-      {
-        "gloss": "tolerant"
       }
     ]
   },
@@ -50546,8 +50408,8 @@
     ]
   },
   {
-    "cefr": "B2",
-    "cefrSource": "agent: frequency + Eaquals",
+    "cefr": "B1",
+    "cefrSource": "agent: judgment",
     "dictionaryId": null,
     "id": "fr:lex:trier",
     "lemma": "trier",

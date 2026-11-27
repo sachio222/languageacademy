@@ -7896,6 +7896,54 @@
     "surface": "dégageant"
   },
   {
+    "cell": "prs.1sg",
+    "id": "fr:form:deleguer.prs.1sg",
+    "of": "fr:lex:deleguer",
+    "surface": "délègue"
+  },
+  {
+    "cell": "prs.2sg",
+    "id": "fr:form:deleguer.prs.2sg",
+    "of": "fr:lex:deleguer",
+    "surface": "délègues"
+  },
+  {
+    "cell": "prs.3pl",
+    "id": "fr:form:deleguer.prs.3pl",
+    "of": "fr:lex:deleguer",
+    "surface": "délèguent"
+  },
+  {
+    "cell": "prs.3sg",
+    "id": "fr:form:deleguer.prs.3sg",
+    "of": "fr:lex:deleguer",
+    "surface": "délègue"
+  },
+  {
+    "cell": "sbjv.1sg",
+    "id": "fr:form:deleguer.sbjv.1sg",
+    "of": "fr:lex:deleguer",
+    "surface": "délègue"
+  },
+  {
+    "cell": "sbjv.2sg",
+    "id": "fr:form:deleguer.sbjv.2sg",
+    "of": "fr:lex:deleguer",
+    "surface": "délègues"
+  },
+  {
+    "cell": "sbjv.3pl",
+    "id": "fr:form:deleguer.sbjv.3pl",
+    "of": "fr:lex:deleguer",
+    "surface": "délèguent"
+  },
+  {
+    "cell": "sbjv.3sg",
+    "id": "fr:form:deleguer.sbjv.3sg",
+    "of": "fr:lex:deleguer",
+    "surface": "délègue"
+  },
+  {
     "cell": "impf.1sg",
     "id": "fr:form:demenager.impf.1sg",
     "of": "fr:lex:demenager",
@@ -9184,54 +9232,6 @@
     "id": "fr:form:devoir.sbjv.3sg",
     "of": "fr:lex:devoir",
     "surface": "doive"
-  },
-  {
-    "cell": "prs.1sg",
-    "id": "fr:form:differer.prs.1sg",
-    "of": "fr:lex:differer",
-    "surface": "diffère"
-  },
-  {
-    "cell": "prs.2sg",
-    "id": "fr:form:differer.prs.2sg",
-    "of": "fr:lex:differer",
-    "surface": "diffères"
-  },
-  {
-    "cell": "prs.3pl",
-    "id": "fr:form:differer.prs.3pl",
-    "of": "fr:lex:differer",
-    "surface": "diffèrent"
-  },
-  {
-    "cell": "prs.3sg",
-    "id": "fr:form:differer.prs.3sg",
-    "of": "fr:lex:differer",
-    "surface": "diffère"
-  },
-  {
-    "cell": "sbjv.1sg",
-    "id": "fr:form:differer.sbjv.1sg",
-    "of": "fr:lex:differer",
-    "surface": "diffère"
-  },
-  {
-    "cell": "sbjv.2sg",
-    "id": "fr:form:differer.sbjv.2sg",
-    "of": "fr:lex:differer",
-    "surface": "diffères"
-  },
-  {
-    "cell": "sbjv.3pl",
-    "id": "fr:form:differer.sbjv.3pl",
-    "of": "fr:lex:differer",
-    "surface": "diffèrent"
-  },
-  {
-    "cell": "sbjv.3sg",
-    "id": "fr:form:differer.sbjv.3sg",
-    "of": "fr:lex:differer",
-    "surface": "diffère"
   },
   {
     "cell": "impf.1pl",
@@ -20218,54 +20218,6 @@
     "id": "fr:form:pouvoir.sbjv.3sg",
     "of": "fr:lex:pouvoir",
     "surface": "puisse"
-  },
-  {
-    "cell": "prs.1sg",
-    "id": "fr:form:preceder.prs.1sg",
-    "of": "fr:lex:preceder",
-    "surface": "précède"
-  },
-  {
-    "cell": "prs.2sg",
-    "id": "fr:form:preceder.prs.2sg",
-    "of": "fr:lex:preceder",
-    "surface": "précèdes"
-  },
-  {
-    "cell": "prs.3pl",
-    "id": "fr:form:preceder.prs.3pl",
-    "of": "fr:lex:preceder",
-    "surface": "précèdent"
-  },
-  {
-    "cell": "prs.3sg",
-    "id": "fr:form:preceder.prs.3sg",
-    "of": "fr:lex:preceder",
-    "surface": "précède"
-  },
-  {
-    "cell": "sbjv.1sg",
-    "id": "fr:form:preceder.sbjv.1sg",
-    "of": "fr:lex:preceder",
-    "surface": "précède"
-  },
-  {
-    "cell": "sbjv.2sg",
-    "id": "fr:form:preceder.sbjv.2sg",
-    "of": "fr:lex:preceder",
-    "surface": "précèdes"
-  },
-  {
-    "cell": "sbjv.3pl",
-    "id": "fr:form:preceder.sbjv.3pl",
-    "of": "fr:lex:preceder",
-    "surface": "précèdent"
-  },
-  {
-    "cell": "sbjv.3sg",
-    "id": "fr:form:preceder.sbjv.3sg",
-    "of": "fr:lex:preceder",
-    "surface": "précède"
   },
   {
     "cell": "impf.1pl",

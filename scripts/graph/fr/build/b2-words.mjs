@@ -11,9 +11,11 @@
 // arts, law, feelings and attitudes); FLELex as a cross-check; and the words of argument a B1 learner still lacks,
 // such as souligner, nier and remédier à. The lists below are in alphabetical order and record no frequency value or
 // rank.
-// Levels: B2 for a word a B2 learner needs, C1 for a word that is useful but beyond that need. A word marked /J was
-// placed by judgment, because its frequency points to another level; /G marks a grammar word placed by the Eaquals
-// grammar lists. The other words were placed by frequency and the Eaquals themes.
+// Levels: B2 for a word a B2 learner needs, C1 for a word that is useful but beyond that need. A review moved some
+// everyday words of this pass down to A2 or B1, in line with the levels of their neighbours in the older lists, and
+// three rare ones up to C1 (entraver, guère, tantôt). A word marked /J was placed by judgment, because its frequency
+// points to another level; /G marks a grammar word placed by the Eaquals grammar lists. The other words were placed
+// by frequency and the Eaquals themes.
 // Left out:
 // - proper nouns, slang and familiar words (bosser, bouffer, fric, flic, rigoler, se balader), vulgar words, and words
 //   that mostly literature or war films need (vengeance, orgueil, fureur);
@@ -26,25 +28,41 @@
 // - words the course already uses that the word list lacks (boisson, clarification, louche, fée, étudiante, avocate):
 //   they stay unknown words until a lesson fix adds them;
 // - words that made the checker read course text differently: influencer (the noun influence in the table of Reading
-//   157 read as the verb), triompher (the noun triomphe), flore (Café de Flore in Reading 9);
+//   11, at position 157, read as the verb), triompher (the noun triomphe), flore (Café de Flore in Reading 9);
 // - nouns and adjectives spelled like a form of a verb already in the list: employé, revenu, reproche, dispute,
 //   représentant, enseignant, identifiant, communiqué, accusé, blessé, juré, rentrée, traité, partage, prise, mise,
 //   reprise, atteinte, étendue, écrit, survivant, descendant, correspondant, tournant, envoyé, associé, dirigeant,
 //   manifestant, lâche, souvenir (se souvenir), nouvelle (nouveau), and adjectives built on the present participle of a
-//   listed verb (inquiétant, surprenant, rassurant, touchant, menaçant, exigeant, décevant, méfiant, résistant);
+//   listed verb (inquiétant, surprenant, rassurant, touchant, menaçant, exigeant, décevant, méfiant, résistant), or of
+//   a verb this pass adds (satisfaisant, émouvant, tolérant);
 // - verbs whose forms are spelled like a word already in the list: baser (base), classer (classe), copier (copie),
 //   critiquer (critique), dater (date), enquêter (enquête), équiper (équipe), figurer (figure), limiter (limite),
 //   masquer (masque), ménager (ménage), piloter (pilote), programmer (programme), ruiner (ruine), tracer (trace),
 //   veiller (veille), restaurer (restaurant), fonder (fondons and fondent, forms of fondre), importer (n'importe),
-//   se fier (fier), nuire (il nuit), secourir (je secours); and a noun reading for droit, pouvoir, moyen, physique,
-//   objectif and politique.
+//   se fier (fier), nuire (il nuit), secourir (je secours), priver (privé), brancher (branche), différer (ils
+//   diffèrent, différent once accents are set aside) and précéder (précèdent, précédent); and a noun reading for
+//   droit, pouvoir, moyen, physique, objectif and politique.
 // Two verbs keep all their cells but one: maintenir has no present participle (maintenant is the adverb) and
 // entreprendre no feminine participle (entreprise is the noun). foi takes no plural, which would be spelled fois.
-// Some new words share a spelling with an older form, as offre and offrir already do; course text does not use these
-// spellings yet: baisse (baisser), dépense (dépenser), lutte (lutter), approche (approcher), mérite (mériter),
-// plainte (plaindre), donnée (donner), parcours (parcourir), soutiens (soutenir), fréquente (fréquenter), branche
-// (brancher), lions (lier) and privé (priver). New words may also share a spelling with each other: vote and voter,
-// analyse and analyser, débat and débattre, contrainte and contraindre, résumé and résumer, extrait and extraire.
+// Some new words are spelled like a form of an older word, as offre and offrir already are. Course text does not use
+// these spellings yet. In running text the checker counts such a word as known when either reading is taught; a
+// lesson whose vocabulary table lists one of them may credit the other reading, and then needs that reading's ID in
+// its excludeWords correction (see the README):
+// - new nouns spelled like a form of an older verb: approche (approcher), baisse (baisser), dépense (dépenser), lutte
+//   (lutter), mérite (mériter), donnée (donner), plainte (plaindre), parcours (parcourir), and the plurals soutiens
+//   (soutenir), adoptions (adopter), mentions (mentir) and précisions (préciser); fréquente, the feminine of fréquent,
+//   is also a form of fréquenter;
+// - new verb forms spelled like an older noun: lions (lier, and the plural of lion), entretiens (entretenir, and the
+//   plural of entretien);
+// - words that differ from an older one only by accents, which the checker tells apart but folded lookups do not:
+//   générer and gêner (générais, gênerais), répartir and repartir, retraité and retraite. répartir and retraité take
+//   the IDs fr:lex:repartir.distribute and fr:lex:retraite.person (see IDS).
+// New words also share spellings with each other: affection and affecter (affections), affiche and afficher,
+// alternative and alternatif (alternative), analyse and analyser, cible and cibler, compromis and compromettre,
+// contrainte and contraindre, cultivé and cultiver, débat and débattre, délégué and déléguer, épargne and épargner,
+// extrait and extraire, facilité and faciliter, finance and financer, formule and formuler, garantie and garantir,
+// immigré and immigrer, maintien and maintenir (maintiens), maîtrise and maîtriser, recours and recourir, résumé and
+// résumer, trouble and troubler, vision and viser (visions).
 // Source of truth: headwords.json and forms.json. Entries already present are skipped, so running it again changes
 // nothing; add or change words by editing the JSON files.
 // Usage: node scripts/graph/fr/build/b2-words.mjs   (run after add-words.mjs and core-words.mjs)
@@ -59,6 +77,53 @@ const SOURCE = { F: 'agent: frequency + Eaquals', G: 'agent: Eaquals grammar', J
 // level -> pos -> one entry per line: "lemma[/J|/G] [gender]: gloss". A noun's gender is m, f or m/f (one form for
 // both). "_" in a lemma stands for a space.
 const WORDS = {
+  // Words first drafted for B2 that a review placed lower, in line with the levels of their neighbours in the older
+  // lists (chimie with géographie, fichier with informatique). They stay here so every word of this pass is in one
+  // place.
+  A2: {
+    noun: `
+      allergie/J f: allergy
+      chimie/J f: chemistry
+      débutant/J m: beginner
+      fichier/J m: file
+      quantité/J f: quantity
+      réduction/J f: reduction; discount`,
+    verb: `
+      emménager/J: to move in
+      rembourser/J: to pay back, refund`,
+    adjective: `
+      paresseux/J: lazy`,
+  },
+  B1: {
+    noun: `
+      amélioration/J f: improvement
+      augmentation/J f: increase, pay rise
+      catégorie/J f: category
+      logiciel/J m: software
+      option/J f: option
+      philosophie/J f: philosophy
+      pollution/J f: pollution
+      promotion/J f: promotion; special offer
+      routine/J f: routine
+      téléchargement/J m: download`,
+    verb: `
+      gaspiller/J: to waste
+      polluer/J: to pollute
+      trier/J: to sort`,
+    adjective: `
+      amical/J: friendly
+      annuel/J: annual, yearly
+      chaleureux/J: warm, friendly
+      chanceux/J: lucky
+      égoïste/J: selfish
+      électronique/J: electronic
+      irrégulier/J: irregular
+      mensuel/J: monthly
+      obligatoire/J: compulsory
+      optimiste/J: optimistic
+      pessimiste/J: pessimistic
+      têtu/J: stubborn`,
+  },
   B2: {
     noun: `
       abandon m: abandonment, giving up
@@ -89,7 +154,6 @@ const WORDS = {
       algorithme m: algorithm
       aliment m: food, foodstuff
       alimentation f: diet, food supply
-      allergie f: allergy
       alliance f: alliance; wedding ring
       allocation f: allowance, benefit
       allusion f: allusion, hint
@@ -97,7 +161,6 @@ const WORDS = {
       alternative f: alternative, option
       ambassade f: embassy
       ambassadeur m: ambassador
-      amélioration/J f: improvement
       amende f: fine (penalty)
       amertume f: bitterness
       ampleur f: scale, extent
@@ -128,7 +191,6 @@ const WORDS = {
       audace f: boldness, daring
       audience f: audience; court hearing
       auditeur m: listener
-      augmentation f: increase, pay rise
       autorisation f: permission, authorisation
       aveu m: confession, admission
       baisse f: fall, drop
@@ -159,13 +221,11 @@ const WORDS = {
       caractéristique f: feature, characteristic
       carburant m: fuel
       catalogue m: catalogue
-      catégorie f: category
       cellule/J f: cell
       censure f: censorship
       chantier m: building site
       charbon m: coal
       chercheur m: researcher
-      chimie f: chemistry
       chirurgie f: surgery
       chirurgien m: surgeon
       chômage m: unemployment
@@ -241,7 +301,6 @@ const WORDS = {
       cycle m: cycle
       débat m: debate
       débouché m: job opening; outlet, market
-      débutant m: beginner
       décalage m: gap, time difference
       décennie/J f: decade
       déception f: disappointment
@@ -360,7 +419,6 @@ const WORDS = {
       fermeture f: closing, closure
       fiabilité/J f: reliability
       fiançailles f: engagement (to marry)
-      fichier m: file
       fidélité f: loyalty, faithfulness
       fierté f: pride
       filière f: field of study, career path
@@ -456,7 +514,6 @@ const WORDS = {
       licenciement m: dismissal, layoff
       livraison f: delivery
       locataire m/f: tenant
-      logiciel m: software
       loyauté f: loyalty
       lutte/J f: struggle, fight
       maintien m: maintenance, keeping
@@ -504,7 +561,6 @@ const WORDS = {
       opportunité f: opportunity
       opposition f: opposition
       optimisme m: optimism
-      option f: option
       ordonnance f: prescription; order
       organisme m: organism; body, organisation
       orientation f: guidance; direction
@@ -530,11 +586,9 @@ const WORDS = {
       pétrole m: oil, petroleum
       phase f: phase, stage
       phénomène m: phenomenon
-      philosophie f: philosophy
       piratage m: hacking; piracy
       plainte f: complaint (porter plainte: to press charges)
       polémique f: controversy
-      pollution f: pollution
       popularité/J f: popularity
       portée f: reach, scope
       pourcentage m: percentage
@@ -556,7 +610,6 @@ const WORDS = {
       profil m: profile
       profit m: profit
       profondeur f: depth
-      promotion f: promotion; special offer
       propagande f: propaganda
       proportion f: proportion
       propriété f: property; ownership
@@ -567,7 +620,6 @@ const WORDS = {
       psychologue m/f: psychologist
       publication f: publication; post (online)
       qualification f: qualification
-      quantité f: quantity
       racine f: root
       racisme m: racism
       raisonnement m: reasoning
@@ -586,7 +638,6 @@ const WORDS = {
       recyclage m: recycling
       rédacteur m: editor, writer
       rédaction f: writing; editorial staff
-      réduction f: reduction; discount
       référence f: reference
       réforme f: reform
       réfugié m: refugee
@@ -617,7 +668,6 @@ const WORDS = {
       revendication f: demand, claim
       richesse f: wealth, richness
       rigueur f: rigour, strictness
-      routine f: routine
       rumeur/J f: rumour
       rupture f: break, break-up
       sacrifice/J m: sacrifice
@@ -673,7 +723,6 @@ const WORDS = {
       taux m: rate
       taxe f: tax
       technicien m: technician
-      téléchargement m: download
       téléspectateur m: (TV) viewer
       télétravail m: remote work
       témoignage m: testimony, account
@@ -764,7 +813,6 @@ const WORDS = {
       avérer: to prove to be (s'avérer)
       bénéficier: to benefit (bénéficier de)
       bouleverser: to upset deeply; to disrupt
-      brancher: to plug in, connect
       capter: to pick up (a signal); to capture (attention)
       cibler/J: to target
       collaborer: to collaborate
@@ -820,7 +868,6 @@ const WORDS = {
       déterminer: to determine
       détourner/J: to divert; to hijack
       dévoiler: to reveal, unveil
-      différer: to differ; to postpone
       diffuser: to broadcast; to spread
       diminuer: to decrease, reduce
       discriminer: to discriminate
@@ -843,7 +890,6 @@ const WORDS = {
       émerger: to emerge
       émettre: to emit; to issue, express
       émigrer: to emigrate
-      emménager: to move in
       émouvoir: to move, touch (emotionally)
       emparer/J: to seize (s'emparer de)
       empirer/J: to get worse
@@ -852,7 +898,6 @@ const WORDS = {
       endommager: to damage
       engendrer: to cause, give rise to
       entamer: to start, open
-      entraver: to hinder
       entreprendre/J: to undertake
       entretenir/J: to maintain; to keep up
       envahir/J: to invade
@@ -882,7 +927,6 @@ const WORDS = {
       frustrer: to frustrate
       gâcher/J: to spoil, waste
       garantir: to guarantee
-      gaspiller: to waste
       générer/J: to generate
       gérer: to manage
       gonfler/J: to inflate, swell
@@ -940,15 +984,12 @@ const WORDS = {
       perturber: to disrupt, disturb
       plaider: to plead
       planifier: to plan
-      polluer: to pollute
       postuler: to apply (postuler à: for a job)
-      précéder: to precede
       précipiter/J: to rush, hasten
       prédire: to predict
       prélever: to take (a sample, an amount)
       préoccuper: to worry, concern
       prescrire: to prescribe
-      priver/J: to deprive
       privilégier: to favour, give priority to
       procéder: to proceed; to carry out (procéder à)
       procurer: to obtain, provide
@@ -969,7 +1010,6 @@ const WORDS = {
       relancer: to revive; to remind, chase up
       relever/J: to raise; to note; to pick up (relever de: to come under)
       relier: to connect, link
-      rembourser: to pay back, refund
       remédier: to remedy (remédier à)
       renforcer: to strengthen
       renouveler: to renew
@@ -1009,7 +1049,6 @@ const WORDS = {
       témoigner/J: to testify; to show (témoigner de)
       tolérer: to tolerate
       transférer: to transfer
-      trier: to sort
       troubler/J: to disturb, trouble
       vaincre/J: to defeat, overcome
       valoriser/J: to value, enhance
@@ -1032,8 +1071,6 @@ const WORDS = {
       alternatif/J: alternative
       ambigu: ambiguous
       ambitieux: ambitious
-      amical: friendly
-      annuel: annual, yearly
       anonyme: anonymous
       antérieur: previous, earlier
       anxieux: anxious
@@ -1054,8 +1091,6 @@ const WORDS = {
       cardiaque: cardiac, heart
       catastrophique: disastrous
       catégorique: categorical, firm
-      chaleureux: warm, friendly
-      chanceux: lucky
       chimique: chemical
       civil/J: civil, civilian
       clandestin: illegal, clandestine
@@ -1094,12 +1129,9 @@ const WORDS = {
       durable: lasting; sustainable
       écologique: ecological, environmentally friendly
       efficace: effective, efficient
-      égoïste: selfish
       électoral: electoral
-      électronique: electronic
       élémentaire: basic, elementary
       émotionnel: emotional
-      émouvant: moving, touching
       énergique: energetic
       enthousiaste: enthusiastic
       environnemental: environmental
@@ -1155,7 +1187,6 @@ const WORDS = {
       intellectuel: intellectual
       interne: internal
       intime/J: intimate, private
-      irrégulier: irregular
       irresponsable: irresponsible
       juridique: legal, juridical
       légal: legal
@@ -1169,7 +1200,6 @@ const WORDS = {
       malhonnête: dishonest
       mécontent: dissatisfied
       médiatique: media
-      mensuel: monthly
       mental: mental
       mineur: minor; under age
       mobile: mobile, moving
@@ -1179,15 +1209,11 @@ const WORDS = {
       naïf: naive
       nucléaire: nuclear
       numérique: digital
-      obligatoire: compulsory
       obscur/J: dark; obscure
-      optimiste: optimistic
       parallèle: parallel
-      paresseux: lazy
       passif: passive
       permanent: permanent
       pertinent/J: relevant
-      pessimiste/J: pessimistic
       plausible: plausible
       ponctuel/J: punctual; occasional
       potentiel: potential
@@ -1210,7 +1236,6 @@ const WORDS = {
       respectueux: respectful
       rigoureux: rigorous; harsh
       rural: rural
-      satisfaisant: satisfactory
       scandaleux: outrageous, scandalous
       secondaire: secondary
       serein: calm, serene
@@ -1229,9 +1254,7 @@ const WORDS = {
       suspect: suspicious; suspect
       symbolique: symbolic
       temporaire: temporary
-      têtu: stubborn
       théorique/J: theoretical
-      tolérant/J: tolerant
       toxique: toxic
       tragique: tragic
       transparent: transparent
@@ -1271,7 +1294,6 @@ const WORDS = {
       fréquemment: frequently
       globalement/J: overall, on the whole
       gravement: seriously
-      guère/J: hardly, barely (ne … guère)
       honnêtement: honestly
       indirectement/J: indirectly
       infiniment: infinitely, immensely
@@ -1313,7 +1335,6 @@ const WORDS = {
       spontanément: spontaneously
       strictement: strictly
       systématiquement/J: systematically
-      tantôt/J: sometimes (tantôt … tantôt: now … now)
       techniquement: technically
       vaguement/J: vaguely
       véritablement: truly
@@ -1348,6 +1369,7 @@ const WORDS = {
       déceler: to detect
       enfreindre: to break, infringe (a rule)
       entériner: to ratify, confirm
+      entraver/J: to hinder
       omettre: to omit, leave out
       pallier: to make up for, alleviate
       préconiser: to recommend, advocate
@@ -1360,8 +1382,10 @@ const WORDS = {
       pérenne: lasting, enduring
       sous-jacent: underlying`,
     adverb: `
+      guère/J: hardly, barely (ne … guère)
       jadis: long ago, formerly
-      naguère: not long ago; formerly`,
+      naguère: not long ago; formerly
+      tantôt/J: sometimes (tantôt … tantôt: now … now)`,
   },
 };
 
@@ -1472,9 +1496,9 @@ const HAND = {
   promouvoir: mouvoir('prom', 'promu'),
 };
 
-// Nouns with no plural form: invariable (sans-abri), plural only (fiançailles) or never plural (foi, whose plural would
-// be spelled like fois). A noun ending in s, x or z takes no plural pattern either.
-const NOUN_PLAIN = set(`bien-être fiançailles foi sans-abri`);
+// Nouns with no plural form: invariable (sans-abri), plural only (fiançailles) or never plural (télétravail, and foi,
+// whose plural would be spelled like fois). A noun ending in s, x or z takes no plural pattern either.
+const NOUN_PLAIN = set(`bien-être fiançailles foi sans-abri télétravail`);
 
 // Adjectives in -al whose plural takes -s (banals, fatals); feminines no pattern builds.
 const ADJ_REGULAR = set(`banal fatal`);
@@ -1517,7 +1541,8 @@ function paradigms(lemma, pos) {
 // Spelling changes the plain -er patterns miss, written as irregular forms as core-words.mjs does: -ger and -cer
 // keep a soft g or c before a and o (influençons, dirigeait); -yer verbs write i before a silent e (aboie, aboiera);
 // DOUBLE verbs double the consonant there (projette); other e + consonant + er verbs take è (relève, relèvera);
-// é + consonants + er verbs take è in the singular and third plural of the present and subjunctive (règne).
+// é + consonants + er verbs, and é + consonants + uer verbs such as déléguer, take è in the singular and third plural of
+// the present and subjunctive (gère, délègue).
 const SILENT_E = /^(prs|sbjv)\.(1sg|2sg|3sg|3pl)$|^(fut|cond)\./;
 const SILENT_E_PRESENT = /^(prs|sbjv)\.(1sg|2sg|3sg|3pl)$/;
 function spell(lemma, cell, regular) {
@@ -1530,9 +1555,13 @@ function spell(lemma, cell, regular) {
     else if (DOUBLE.has(lemma)) base += base.at(-1);
     else if (/e[bcdfghjklmnpqrstvwxz]$/.test(base)) base = base.replace(/e([bcdfghjklmnpqrstvwxz])$/, 'è$1');
   }
-  if (SILENT_E_PRESENT.test(cell) && /é[^aeiouyéè]+$/.test(base)) base = base.replace(/é([^aeiouyéè]+)$/, 'è$1');
+  if (SILENT_E_PRESENT.test(cell) && /é[^aeiouyàâäéèêëîïôöùûü]+u?$/.test(base)) base = base.replace(/é([^aeiouyàâäéèêëîïôöùûü]+u?)$/, 'è$1');
   return base + ending;
 }
+
+// Words whose plain ID belongs to a word of the same part of speech spelled the same without accents: the ID adds a
+// word for the meaning, since a part of speech would not tell them apart.
+const IDS = { répartir: 'fr:lex:repartir.distribute', retraité: 'fr:lex:retraite.person' };
 
 const ENTRY = /^(\S+?)(?:\/([GJ]))?(?: (m|f|m\/f))?: (.+)$/;
 const collator = new Intl.Collator('fr');
@@ -1645,7 +1674,7 @@ for (const key of NOUN_PLAIN) {
 
 for (const e of plan) {
   if (headwords.some((h) => h.lemma === e.lemma && h.pos === e.pos)) continue; // already in the word list
-  let id = `fr:lex:${keyOf(e.lemma)}`;
+  let id = IDS[e.lemma] ?? `fr:lex:${keyOf(e.lemma)}`;
   if (byId.has(id)) {
     id = `${id}.${e.pos}`;
     collected.renamed.push(`${e.lemma} -> ${id}`);
