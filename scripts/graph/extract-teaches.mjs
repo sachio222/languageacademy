@@ -44,12 +44,12 @@ export function entryReadings(text, index, isWord, exclude = null, pos = null) {
 // que), as [id, folded words with spaces between]. A reflexive verb (se souvenir) is read whole already; a compound
 // noun (pomme de terre) is taught and used through its head noun, as before; a phrase the graph also holds as a
 // fixed-phrase pattern (chunk.en-fait) is taught and reused as that pattern, so it is not counted twice.
-export function multiWordHeadwords(graph) {
+export function multiWordHeadwords(graph, lang = languageOf(graph)) {
   const chunks = new Set((graph.constructions ?? []).map((c) => c.id));
   return (graph.headwords ?? [])
     .filter((h) => / /.test(h.lemma) && !/^se /.test(h.lemma) && h.pos !== 'noun')
     .filter((h) => !chunks.has(h.id.replace(':lex:', ':cx:chunk.')))
-    .map((h) => [h.id, languageOf(graph).fold(h.lemma).split(/\s+/).join(' ')]);
+    .map((h) => [h.id, lang.fold(h.lemma).split(/\s+/).join(' ')]);
 }
 // fold: the course language's fold (languageOf(graph).fold).
 export const wordsOf = (text, fold) => ` ${fold(text).replace(/[^\p{L}\p{N}'-]+/gu, ' ').trim()} `;
@@ -57,7 +57,7 @@ export const wordsOf = (text, fold) => ` ${fold(text).replace(/[^\p{L}\p{N}'-]+/
 export function extractTeaches(graph, course, index) {
   const { lookupToken } = languageOfIndex(index);
   const isWord = (f) => index.has(f);
-  const multi = multiWordHeadwords(graph);
+  const multi = multiWordHeadwords(graph, languageOfIndex(index));
   const courseMap = { ...(graph.courseMap ?? {}) };
   const unknown = [];
   for (const mod of course) {
@@ -80,7 +80,7 @@ export function extractTeaches(graph, course, index) {
     });
     // A headword of several words is taught where an entry holds its words in order (the card "en fait").
     for (const text of mod.vocab ?? []) {
-      const words = wordsOf(text);
+      const words = wordsOf(text, languageOfIndex(index).fold);
       for (const [id, lemma] of multi) if (words.includes(` ${lemma} `) && !exclude.has(id)) ids.add(id);
     }
     // A lesson's conjugation table teaches the forms it shows (the recipe: "its forms need no cards"), never the
