@@ -6,20 +6,22 @@
   "title": "Nerves before the big day {le trac}",
   "plan": {
     "words": [
-      "fr:lex:souci",
-      "fr:lex:humeur",
-      "fr:lex:emotion",
-      "fr:lex:sentiment",
-      "fr:lex:nerveux",
       "fr:lex:craindre",
       "fr:lex:gener",
       "fr:lex:enerver",
       "fr:lex:detendre",
+      "fr:lex:souci",
+      "fr:lex:humeur",
+      "fr:lex:emotion",
+      "fr:lex:sentiment",
       "fr:lex:ennui",
       "fr:lex:folie",
-      "fr:lex:horreur"
+      "fr:lex:horreur",
+      "fr:lex:nerveux"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.meme-si"
+    ],
     "source": "course-plan.json"
   }
 }

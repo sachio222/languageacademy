@@ -3014,16 +3014,24 @@
     "cefr": "A2",
     "cefrSource": "agent: Eaquals grammar",
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      {
+        "surface": "celui|celle|ceux|celles"
+      }
+    ],
     "examples": {
       "match": [
         "Je préfère celui de Marie.",
         "Celle qui habite au deuxième est italienne.",
-        "Prends celui-ci."
+        "Prends celui-ci.",
+        "Ceux qui veulent venir sont les bienvenus.",
+        "C'est celle dont je t'ai parlé."
       ],
       "noMatch": [
         "Ce livre est à moi.",
-        "Cette maison est grande."
+        "Cette maison est grande.",
+        "Ces livres sont à moi.",
+        "Cela me plaît."
       ]
     },
     "id": "fr:cx:demonstrative.pronoun",
@@ -3628,16 +3636,65 @@
     "cefr": "A2",
     "cefrSource": "agent: judgment",
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      {
+        "surface": "je|j'|tu|il|elle|on|nous|vous|ils|elles|c'|ce|cela|ca"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "headword": "fr:lex:etre"
+      },
+      {
+        "optional": true,
+        "surface": "pas|plus|tres|vraiment|trop|si|tellement|bien|toujours|assez"
+      },
+      {
+        "optional": true,
+        "surface": "pas|tres|vraiment|trop|si"
+      },
+      {
+        "pos": "adjective"
+      },
+      {
+        "surface": "de|d'"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "pas"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "pos": "verb",
+        "via": "lemma"
+      }
+    ],
     "examples": {
       "match": [
         "C'est facile de parler.",
         "Il est impossible de dormir ici.",
-        "Je suis content de te voir."
+        "Je suis content de te voir.",
+        "Ce n'est pas facile de parler.",
+        "Nous sommes heureux de vous voir."
       ],
       "noMatch": [
         "C'est facile.",
-        "Je suis content que tu viennes."
+        "Je suis content que tu viennes.",
+        "Il est fier de son fils.",
+        "C'est difficile pour moi."
       ]
     },
     "id": "fr:cx:frame.il-est-adjective-de-infinitive",
@@ -3810,16 +3867,118 @@
     "cefr": "B1",
     "cefrSource": "agent: judgment",
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      {
+        "any": [
+          {
+            "headword": "fr:lex:promettre"
+          },
+          {
+            "headword": "fr:lex:expliquer"
+          },
+          {
+            "headword": "fr:lex:raconter"
+          },
+          {
+            "headword": "fr:lex:repondre"
+          },
+          {
+            "headword": "fr:lex:annoncer"
+          },
+          {
+            "headword": "fr:lex:declarer"
+          },
+          {
+            "headword": "fr:lex:affirmer"
+          },
+          {
+            "headword": "fr:lex:jurer"
+          },
+          {
+            "headword": "fr:lex:avouer"
+          },
+          {
+            "headword": "fr:lex:admettre"
+          },
+          {
+            "headword": "fr:lex:supposer"
+          },
+          {
+            "headword": "fr:lex:pretendre"
+          },
+          {
+            "headword": "fr:lex:remarquer"
+          },
+          {
+            "headword": "fr:lex:considerer"
+          },
+          {
+            "headword": "fr:lex:ajouter"
+          },
+          {
+            "headword": "fr:lex:ignorer"
+          },
+          {
+            "headword": "fr:lex:prouver"
+          },
+          {
+            "headword": "fr:lex:conclure"
+          },
+          {
+            "headword": "fr:lex:reveler"
+          },
+          {
+            "headword": "fr:lex:informer"
+          },
+          {
+            "headword": "fr:lex:signaler"
+          },
+          {
+            "headword": "fr:lex:avertir"
+          },
+          {
+            "headword": "fr:lex:prevenir"
+          }
+        ]
+      },
+      {
+        "clitic": true,
+        "optional": true,
+        "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "pas|plus|jamais|bien|vraiment|toujours|encore|deja|souvent|enfin"
+      },
+      {
+        "optional": true,
+        "surface": "pas"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "surface": "que|qu'"
+      }
+    ],
     "examples": {
       "match": [
         "Il promet qu'il viendra.",
         "Elle explique que le train est en retard.",
-        "Je remarque que tu es fatigué."
+        "Je remarque que tu es fatigué.",
+        "Il m'a répondu qu'il était malade.",
+        "Elle a annoncé qu'elle partait."
       ],
       "noMatch": [
         "Il promet un cadeau.",
-        "Elle explique la leçon."
+        "Elle explique la leçon.",
+        "Explique-moi ce que tu veux.",
+        "Il raconte une histoire que je connais."
       ]
     },
     "id": "fr:cx:frame.saying-que-clause",
@@ -3832,16 +3991,107 @@
     "cefr": "A2",
     "cefrSource": "agent: Eaquals grammar",
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      {
+        "any": [
+          {
+            "headword": "fr:lex:commencer"
+          },
+          {
+            "headword": "fr:lex:continuer"
+          },
+          {
+            "headword": "fr:lex:reussir"
+          },
+          {
+            "headword": "fr:lex:aider"
+          },
+          {
+            "headword": "fr:lex:hesiter"
+          },
+          {
+            "headword": "fr:lex:inviter"
+          },
+          {
+            "headword": "fr:lex:obliger"
+          },
+          {
+            "headword": "fr:lex:forcer"
+          },
+          {
+            "headword": "fr:lex:habituer"
+          },
+          {
+            "headword": "fr:lex:autoriser"
+          },
+          {
+            "headword": "fr:lex:encourager"
+          },
+          {
+            "headword": "fr:lex:chercher"
+          },
+          {
+            "headword": "fr:lex:arriver"
+          },
+          {
+            "headword": "fr:lex:tenir"
+          },
+          {
+            "headword": "fr:lex:servir"
+          }
+        ]
+      },
+      {
+        "clitic": true,
+        "optional": true,
+        "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "pas|plus|jamais|bien|vraiment|toujours|encore|deja|souvent|enfin"
+      },
+      {
+        "optional": true,
+        "surface": "pas"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "surface": "a"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "pos": "verb",
+        "via": "lemma"
+      }
+    ],
     "examples": {
       "match": [
         "Il commence à pleuvoir.",
         "Je n'arrive pas à dormir.",
-        "Elle a réussi à ouvrir la porte."
+        "Elle a réussi à ouvrir la porte.",
+        "Tu m'aides à porter ça ?",
+        "Je t'invite à manger."
       ],
       "noMatch": [
         "Il commence le livre.",
-        "Je pense à toi."
+        "Je pense à toi.",
+        "J'arrive à la gare.",
+        "Il commence à huit heures.",
+        "Je cherche à la bibliothèque."
       ]
     },
     "id": "fr:cx:frame.verb-a-infinitive",
@@ -3854,16 +4104,151 @@
     "cefr": "A2",
     "cefrSource": "agent: Eaquals grammar",
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      {
+        "any": [
+          {
+            "headword": "fr:lex:essayer"
+          },
+          {
+            "headword": "fr:lex:decider"
+          },
+          {
+            "headword": "fr:lex:oublier"
+          },
+          {
+            "headword": "fr:lex:accepter"
+          },
+          {
+            "headword": "fr:lex:refuser"
+          },
+          {
+            "headword": "fr:lex:finir"
+          },
+          {
+            "headword": "fr:lex:arreter"
+          },
+          {
+            "headword": "fr:lex:eviter"
+          },
+          {
+            "headword": "fr:lex:risquer"
+          },
+          {
+            "headword": "fr:lex:proposer"
+          },
+          {
+            "headword": "fr:lex:conseiller"
+          },
+          {
+            "headword": "fr:lex:promettre"
+          },
+          {
+            "headword": "fr:lex:empecher"
+          },
+          {
+            "headword": "fr:lex:interdire"
+          },
+          {
+            "headword": "fr:lex:accuser"
+          },
+          {
+            "headword": "fr:lex:cesser"
+          },
+          {
+            "headword": "fr:lex:menacer"
+          },
+          {
+            "headword": "fr:lex:craindre"
+          },
+          {
+            "headword": "fr:lex:meriter"
+          },
+          {
+            "headword": "fr:lex:permettre"
+          },
+          {
+            "headword": "fr:lex:tenter"
+          },
+          {
+            "headword": "fr:lex:jurer"
+          },
+          {
+            "headword": "fr:lex:regretter"
+          },
+          {
+            "headword": "fr:lex:rever"
+          },
+          {
+            "headword": "fr:lex:prier"
+          },
+          {
+            "headword": "fr:lex:supporter"
+          },
+          {
+            "headword": "fr:lex:suggerer"
+          }
+        ]
+      },
+      {
+        "clitic": true,
+        "optional": true,
+        "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "pas|plus|jamais|bien|vraiment|toujours|encore|deja|souvent|enfin"
+      },
+      {
+        "optional": true,
+        "surface": "pas"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "surface": "de|d'"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "pas"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "pos": "verb",
+        "via": "lemma"
+      }
+    ],
     "examples": {
       "match": [
         "J'essaie de dormir.",
         "Il a oublié de fermer la porte.",
-        "Elle refuse de venir."
+        "Elle refuse de venir.",
+        "J'ai décidé de ne pas venir.",
+        "Elle m'a promis de venir."
       ],
       "noMatch": [
         "J'essaie la robe.",
-        "Il parle de son frère."
+        "Il parle de son frère.",
+        "Je propose de la soupe.",
+        "Il a fini ses devoirs.",
+        "Elle rêve de Paris."
       ]
     },
     "id": "fr:cx:frame.verb-de-infinitive",
@@ -3876,16 +4261,74 @@
     "cefr": "A2",
     "cefrSource": "agent: Eaquals grammar",
     "contrastsWith": [],
-    "detect": null,
+    "detect": [
+      {
+        "any": [
+          {
+            "headword": "fr:lex:desirer"
+          },
+          {
+            "headword": "fr:lex:esperer"
+          },
+          {
+            "headword": "fr:lex:souhaiter"
+          },
+          {
+            "headword": "fr:lex:compter"
+          },
+          {
+            "headword": "fr:lex:sembler"
+          },
+          {
+            "headword": "fr:lex:oser"
+          },
+          {
+            "headword": "fr:lex:paraitre"
+          }
+        ]
+      },
+      {
+        "clitic": true,
+        "optional": true,
+        "surface": "-(t-)?(tu|il|elle|on|nous|vous|ils|elles)"
+      },
+      {
+        "optional": true,
+        "surface": "ne|n'"
+      },
+      {
+        "optional": true,
+        "surface": "pas|plus|jamais|bien|vraiment|toujours|encore|deja|souvent|enfin"
+      },
+      {
+        "optional": true,
+        "surface": "pas"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "optional": true,
+        "surface": "le|la|les|l'|me|m'|te|t'|se|s'|nous|vous|lui|leur|y|en"
+      },
+      {
+        "pos": "verb",
+        "via": "lemma"
+      }
+    ],
     "examples": {
       "match": [
         "J'espère venir samedi.",
         "Vous désirez goûter ?",
-        "Elle compte partir demain."
+        "Il semble dormir.",
+        "Je n'ose pas te le dire."
       ],
       "noMatch": [
         "J'espère que tu viens.",
-        "Je désire un café."
+        "Je désire un café.",
+        "Il semble content.",
+        "Je compte les jours."
       ]
     },
     "id": "fr:cx:frame.verb-infinitive",

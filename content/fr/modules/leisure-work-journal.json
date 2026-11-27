@@ -16,10 +16,12 @@
       "fr:lex:jour-ferie",
       "fr:lex:sens",
       "fr:lex:montagne",
-      "fr:lex:normalement",
-      "fr:lex:envie"
+      "fr:lex:envie",
+      "fr:lex:normalement"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:passive.tenses"
+    ],
     "source": "course-plan.json"
   }
 }

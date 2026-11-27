@@ -6,20 +6,22 @@
   "title": "Keeping the secret {le secret}",
   "plan": {
     "words": [
-      "fr:lex:mensonge",
-      "fr:lex:promesse",
       "fr:lex:jurer",
       "fr:lex:avouer",
-      "fr:lex:taire",
-      "fr:lex:trahir",
       "fr:lex:pretendre",
       "fr:lex:remarquer",
-      "fr:lex:etonner",
       "fr:lex:ignorer",
+      "fr:lex:taire",
+      "fr:lex:trahir",
+      "fr:lex:etonner",
       "fr:lex:apercevoir",
+      "fr:lex:mensonge",
+      "fr:lex:promesse",
       "fr:lex:piege"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:reported-speech"
+    ],
     "source": "course-plan.json"
   }
 }

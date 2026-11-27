@@ -801,13 +801,12 @@
               "fr:lex:mauvais",
               "fr:lex:pret"
             ],
-            "constructions": [
-              "fr:cx:frame.verb-de-infinitive"
-            ]
+            "constructions": []
           },
           "practises": [
             "fr:cx:frame.modal-infinitive",
-            "fr:cx:passe-compose.avoir"
+            "fr:cx:passe-compose.avoir",
+            "fr:cx:frame.verb-de-infinitive"
           ],
           "minutes": 30,
           "carrier": "fr:cx:frame.verb-de-infinitive",
@@ -969,7 +968,8 @@
       "notes": [
         "Kept: Verb patterns, part 2, moved two lessons later so that four lessons with -ir and -re verbs come before it.",
         "Added: Spelling changes in -er verbs, after the phone lesson. Unit 14 is where most stem-changing -er verbs arrive (emmener, espérer, rappeler, répéter, épeler), and Units 5 to 13 already use préfère and achète.",
-        "Three frames join the verbs they belong to: verb + infinitive with désirer at the counter, verb + de + infinitive in a lesson of its own, where essayer, décider, oublier, accepter and refuser take a new job, and laisser + infinitive when Karim leaves Léa in charge."
+        "Three frames join the verbs they belong to: verb + infinitive with désirer at the counter, verb + de + infinitive in a lesson of its own, where essayer, décider, oublier, accepter and refuser take a new job, and laisser + infinitive when Karim leaves Léa in charge.",
+        "The frame its lesson extends is taught in Units 9 and 10, where Units 1 to 12 first use it (décider de, commencer à, content de); this unit adds verbs to it."
       ],
       "open": [
         "Level order: prsptcp.ir and prsptcp.re are B1 in the graph (the gérondif they serve was taught in Unit 10). Options for Jake: (a) accept level-order warnings for the grammar units 13 to 15, recorded as an allowance in the issue budget's new part; (b) move the pattern after A1 (Unit 16 or later); (c) review the graph level.",
@@ -2570,15 +2570,14 @@
               "fr:lex:document",
               "fr:lex:dossier"
             ],
-            "constructions": [
-              "fr:cx:frame.verb-a-infinitive"
-            ]
+            "constructions": []
           },
           "practises": [
             "fr:cx:relative.qui",
             "fr:cx:relative.dont",
             "fr:cx:pronoun.indirect-object",
-            "fr:cx:futur-simple"
+            "fr:cx:futur-simple",
+            "fr:cx:frame.verb-a-infinitive"
           ],
           "minutes": 34,
           "carrier": "fr:cx:frame.verb-a-infinitive",
@@ -2731,15 +2730,14 @@
               "fr:lex:malheureux",
               "fr:lex:pareil"
             ],
-            "constructions": [
-              "fr:cx:frame.il-est-adjective-de-infinitive"
-            ]
+            "constructions": []
           },
           "practises": [
             "fr:cx:comparative",
             "fr:cx:superlative",
             "fr:cx:adj.agreement",
-            "fr:cx:relative.que"
+            "fr:cx:relative.que",
+            "fr:cx:frame.il-est-adjective-de-infinitive"
           ],
           "minutes": 33,
           "note": "drôle and fier moved to Units 13 to 15. bête, idiot, stupide and malheureux come from Unit 18's stub.",
@@ -3478,7 +3476,8 @@
         "Word families for people moves to Unit 19, where the jobs and nationalities it gathers are taught.",
         "Adverbs from adjectives stays, at the end of the unit; doucement, exactement and immédiatement leave its examples because Unit 19 teaches them.",
         "Ten or more lessons: the exam fits one sitting at 3 items per goal. If the test-sizing research sets 4 items per goal as the floor, the unit splits after its sixth lesson (unit-prep design, section 11).",
-        "Five lessons carry a pattern: verb + à + infinitive on the first day (commencer, continuer, réussir, aider and arriver take a new job), c'est + adjective + de + infinitive with the character words, n'importe with the clothes, même si with the nerves, and être obligé de with the question of whose fault it was."
+        "Five lessons carry a pattern: verb + à + infinitive on the first day (commencer, continuer, réussir, aider and arriver take a new job), c'est + adjective + de + infinitive with the character words, n'importe with the clothes, même si with the nerves, and être obligé de with the question of whose fault it was.",
+        "The frame its lesson extends is taught in Units 9 and 10, where Units 1 to 12 first use it (décider de, commencer à, content de); this unit adds verbs to it."
       ],
       "open": [
         "Feminine forms for the people guide and the lessons: directrice, boulangère, infirmière, pharmacienne, policière, avocate, comédienne, musicienne, chanteuse, and the feminine nationalities (américaine, allemande, italienne, espagnole, japonaise, chinoise, canadienne). voisine, copine, vendeuse and cousine are added by the Units 13 to 15 plan.",
@@ -4552,10 +4551,7 @@
             "fr:lex:canadien": [
               "fr:cx:demonstrative.pronoun"
             ]
-          },
-          "reuses": [
-            "fr:lex:celui"
-          ]
+          }
         },
         {
           "module_key": "measures-deuxieme",

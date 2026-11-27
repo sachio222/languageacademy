@@ -12,9 +12,13 @@
       "fr:lex:critique",
       "fr:lex:comedien",
       "fr:lex:univers",
-      "fr:lex:imagination"
+      "fr:lex:imagination",
+      "fr:lex:dialogue",
+      "fr:lex:autrement"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.reformulation"
+    ],
     "source": "course-plan.json"
   }
 }

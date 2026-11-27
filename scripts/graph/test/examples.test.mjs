@@ -25,3 +25,11 @@ test('construction examples', async (t) => {
     });
   }
 });
+
+// The frames a lesson teaches and the method check counts (2026-11-27) need a detector, so the checker can see
+// whether a written lesson uses them.
+test('the verb and adjective frames and celui have detectors', () => {
+  const ids = ['frame.verb-infinitive', 'frame.verb-de-infinitive', 'frame.verb-a-infinitive', 'frame.saying-que-clause',
+    'frame.il-est-adjective-de-infinitive', 'demonstrative.pronoun'].map((k) => `fr:cx:${k}`);
+  for (const id of ids) assert.ok(graph.constructions.find((c) => c.id === id)?.detect, `${id} has no detector`);
+});

@@ -766,6 +766,12 @@
         "term": "Common Emotion Phrases",
         "definition": "Happy, sad, afraid, sorry - all followed by 'que + person + action'",
         "example": "{Je suis triste que tu partes} (I'm sad you're leaving), {J'ai peur qu'elle ne comprenne pas} (I'm afraid she won't understand)"
+      },
+      {
+        "id": "c-content-de-infinitive",
+        "term": "Same person: {de} + infinitive, not {que}",
+        "definition": "When the feeling and the action belong to the same person, French uses {de} + infinitive. {Que} + subjunctive is for someone else's action. The same {de} follows {c'est} + adjective.",
+        "example": "{Je suis content de te voir.} (I'm happy to see you.) but {Je suis content que tu sois là.} (I'm happy you're here.) {C'est bon de te voir.} (It's good to see you.)"
       }
     ],
     "vocabulary/je-suis-content-que-tu-sois-la-fr.i-m-happy": {
@@ -1044,6 +1050,55 @@
           ]
         }
       ]
+    }
+  },
+  "2024-01-29-opinion-phrases": {
+    "items/i-c-est-bon-de-partir": {
+      "id": "i-c-est-bon-de-partir",
+      "type": "gapfill",
+      "text": "Marie veut partir tôt. Je pense que c'est bon ___ partir tôt.",
+      "blanks": [
+        {
+          "answer": "de",
+          "accept": [
+            "d'"
+          ]
+        }
+      ],
+      "gloss": "Marie wants to leave early. I think it's good to leave early.",
+      "hint": "c'est + adjective + ? + infinitive"
+    }
+  },
+  "2024-01-30-past-regret-phrases": {
+    "items/i-elle-a-commence-a-parler": {
+      "id": "i-elle-a-commence-a-parler",
+      "type": "gapfill",
+      "text": "Au téléphone, ma mère a commencé ___ parler de son voyage.",
+      "blanks": [
+        {
+          "answer": "à",
+          "accept": [
+            "a"
+          ]
+        }
+      ],
+      "gloss": "On the phone, my mother started to talk about her trip.",
+      "hint": "commencer + ? + infinitive"
+    },
+    "items/i-j-ai-decide-de-rester": {
+      "id": "i-j-ai-decide-de-rester",
+      "type": "gapfill",
+      "text": "J'étais malade, alors hier j'ai décidé ___ rester à la maison.",
+      "blanks": [
+        {
+          "answer": "de",
+          "accept": [
+            "d'"
+          ]
+        }
+      ],
+      "gloss": "I was ill, so yesterday I decided to stay at home.",
+      "hint": "décider + ? + infinitive"
     }
   },
   "2024-01-31-possessive-adjectives": {
@@ -7133,6 +7188,12 @@
         "term": "Time and Space Integration",
         "definition": "Combine temporal words (d'abord, ensuite) with spatial (près de, devant)",
         "example": "{D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma. Après, j'ai joué avec mon chien.}"
+      },
+      {
+        "id": "c-decider-de-commencer-a",
+        "term": "A verb, then {de} or {à}, then a second verb",
+        "definition": "Some verbs take a second verb after {de}, like {décider de}. Others take it after {à}, like {commencer à}. The second verb stays in the infinitive, in every tense.",
+        "example": "{J'ai décidé d'aller au café.} (I decided to go to the café.) {Il a commencé à parler.} (He started to speak.)"
       }
     ],
     "items/i-a-cause-de": {
@@ -7393,6 +7454,11 @@
       "fr": "Nous avons parlé pendant une heure. Pierre voulait un nouveau travail à la Sorbonne parce qu'il n'aimait pas son travail. Je le comprenais, car j'ai eu le même problème l'année dernière.",
       "en": "We talked for an hour. Pierre wanted a new job at the Sorbonne because he didn't like his job. I understood him, because I had the same problem last year."
     },
+    "passage/b-parfois-les-meilleures-journees": {
+      "id": "b-parfois-les-meilleures-journees",
+      "fr": "Parfois, les meilleures journées sont des surprises. Grâce à ma sortie au Jardin du Luxembourg, j'ai eu une très belle journée avec mes amis.",
+      "en": "Sometimes the best days are surprises. Thanks to my outing to Jardin du Luxembourg, I had a very beautiful day with my friends."
+    },
     "passage/b-quelle-surprise-elle-a": {
       "id": "b-quelle-surprise-elle-a",
       "fr": "Elle a dit: \"Quelle surprise! Je ne savais pas que vous étiez ici!\"",
@@ -7649,8 +7715,38 @@
       "gloss": "Since we were tired, we stayed home",
       "hint": "since/as (causal connector) / passé composé of rester (être verb)"
     },
+    "items/i-commence-a-parler": {
+      "id": "i-commence-a-parler",
+      "type": "gapfill",
+      "text": "Au café, Marie a commencé ___ parler de son voyage.",
+      "blanks": [
+        {
+          "answer": "à",
+          "accept": [
+            "a"
+          ]
+        }
+      ],
+      "gloss": "At the café, Marie started to talk about her trip",
+      "hint": "commencer + ? + infinitive"
+    },
     "items/i-courait-a-marche": null,
     "items/i-cuisinais-ai-entendu": null,
+    "items/i-decide-d-aller": {
+      "id": "i-decide-d-aller",
+      "type": "gapfill",
+      "text": "Il faisait beau, alors nous avons décidé ___ aller au parc.",
+      "blanks": [
+        {
+          "answer": "d'",
+          "accept": [
+            "d’"
+          ]
+        }
+      ],
+      "gloss": "It was nice, so we decided to go to the park",
+      "hint": "décider + ? + infinitive"
+    },
     "items/i-entre": {
       "id": "i-entre",
       "type": "gapfill",

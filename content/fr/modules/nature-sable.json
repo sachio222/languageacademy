@@ -6,18 +6,18 @@
   "title": "Camping by the river {Au camping, au bord de l'eau}",
   "plan": {
     "words": [
+      "fr:lex:baigner",
       "fr:lex:tente",
       "fr:lex:sable",
       "fr:lex:fleuve",
       "fr:lex:peche",
-      "fr:lex:baigner",
       "fr:lex:casque",
       "fr:lex:colline",
       "fr:lex:source",
       "fr:lex:ombre",
-      "fr:lex:fantastique",
       "fr:lex:flamme",
-      "fr:lex:paysan"
+      "fr:lex:paysan",
+      "fr:lex:fantastique"
     ],
     "constructions": [],
     "source": "course-plan.json"

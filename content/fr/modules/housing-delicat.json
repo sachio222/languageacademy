@@ -6,16 +6,15 @@
   "title": "Moving day {Le jour du déménagement}",
   "plan": {
     "words": [
-      "fr:lex:delicat",
-      "fr:lex:superieur",
-      "fr:lex:des.preposition",
-      "fr:lex:fixer",
       "fr:lex:briser",
       "fr:lex:coller",
-      "fr:lex:confortable",
-      "fr:lex:bruyant",
       "fr:lex:pourboire",
       "fr:lex:colis",
+      "fr:lex:delicat",
+      "fr:lex:superieur",
+      "fr:lex:confortable",
+      "fr:lex:bruyant",
+      "fr:lex:des.preposition",
       "fr:lex:cimer"
     ],
     "constructions": [],

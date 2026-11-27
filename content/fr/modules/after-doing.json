@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "after-doing",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "After doing it ({après avoir}, {après être} + participle)",
+  "plan": {
+    "words": [
+      "fr:lex:coucher",
+      "fr:lex:annuler",
+      "fr:lex:lendemain",
+      "fr:lex:bagage",
+      "fr:lex:chambre",
+      "fr:lex:lit"
+    ],
+    "constructions": [
+      "fr:cx:infinitive.past"
+    ],
+    "source": "course-plan.json"
+  }
+}

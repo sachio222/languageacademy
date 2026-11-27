@@ -6,14 +6,14 @@
   "title": "How it ends {La fin du film}",
   "plan": {
     "words": [
+      "fr:lex:reveler",
+      "fr:lex:survivre",
       "fr:lex:destin",
       "fr:lex:sort",
       "fr:lex:miracle",
       "fr:lex:paradis",
-      "fr:lex:etrange",
-      "fr:lex:survivre",
-      "fr:lex:reveler",
-      "fr:lex:philosophie"
+      "fr:lex:philosophie",
+      "fr:lex:etrange"
     ],
     "constructions": [],
     "source": "course-plan.json"

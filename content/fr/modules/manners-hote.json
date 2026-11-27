@@ -6,18 +6,18 @@
   "title": "A guest in France {un invité en France}",
   "plan": {
     "words": [
+      "fr:lex:loger",
+      "fr:lex:reprocher",
       "fr:lex:hote",
-      "fr:lex:habituel",
       "fr:lex:curiosite",
+      "fr:lex:coutume",
+      "fr:lex:bise",
+      "fr:lex:habituel",
       "fr:lex:discret",
       "fr:lex:sincere",
       "fr:lex:modeste",
       "fr:lex:attentif",
-      "fr:lex:etonnant",
-      "fr:lex:loger",
-      "fr:lex:reprocher",
-      "fr:lex:coutume",
-      "fr:lex:bise"
+      "fr:lex:etonnant"
     ],
     "constructions": [],
     "source": "course-plan.json"

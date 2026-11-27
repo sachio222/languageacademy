@@ -6,19 +6,22 @@
   "title": "A problem on the site {Un problème sur le chantier}",
   "plan": {
     "words": [
+      "fr:lex:echouer",
       "fr:lex:echec",
       "fr:lex:pression",
       "fr:lex:crise",
       "fr:lex:explosion",
-      "fr:lex:echouer",
       "fr:lex:routine",
+      "fr:lex:rage",
+      "fr:lex:patience",
       "fr:lex:raisonnable",
       "fr:lex:prudent",
       "fr:lex:furieux",
-      "fr:lex:affreux",
-      "fr:lex:rage"
+      "fr:lex:affreux"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.cause-consequence"
+    ],
     "source": "course-plan.json"
   }
 }

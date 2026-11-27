@@ -10,14 +10,14 @@
       "fr:lex:ameliorer",
       "fr:lex:concerner",
       "fr:lex:supprimer",
+      "fr:lex:modifier",
       "fr:lex:commentaire",
       "fr:lex:theme",
+      "fr:lex:discussion",
       "fr:lex:clairement",
       "fr:lex:precisement",
       "fr:lex:quotidiennement",
-      "fr:lex:pratiquement",
-      "fr:lex:discussion",
-      "fr:lex:modifier"
+      "fr:lex:pratiquement"
     ],
     "constructions": [],
     "source": "course-plan.json"

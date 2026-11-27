@@ -6,19 +6,21 @@
   "title": "A fall on the site {Une chute sur le chantier}",
   "plan": {
     "words": [
+      "fr:lex:hurler",
+      "fr:lex:trembler",
+      "fr:lex:allonger",
+      "fr:lex:rassurer",
+      "fr:lex:calmer",
       "fr:lex:chute",
       "fr:lex:front",
       "fr:lex:levre",
       "fr:lex:nerf",
       "fr:lex:choc",
-      "fr:lex:cri",
-      "fr:lex:hurler",
-      "fr:lex:trembler",
-      "fr:lex:allonger",
-      "fr:lex:rassurer",
-      "fr:lex:calmer"
+      "fr:lex:cri"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:subj.de-peur-que"
+    ],
     "source": "course-plan.json"
   }
 }

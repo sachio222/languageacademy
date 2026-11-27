@@ -6,17 +6,17 @@
   "title": "Hélène's farewell {Le départ d'Hélène}",
   "plan": {
     "words": [
+      "fr:lex:remettre",
+      "fr:lex:representer",
+      "fr:lex:transmettre",
       "fr:lex:retraite",
       "fr:lex:discours",
       "fr:lex:membre",
       "fr:lex:modele",
+      "fr:lex:promotion",
       "fr:lex:fidele",
       "fr:lex:genereux",
-      "fr:lex:honnete",
-      "fr:lex:remettre",
-      "fr:lex:representer",
-      "fr:lex:transmettre",
-      "fr:lex:promotion"
+      "fr:lex:honnete"
     ],
     "constructions": [],
     "source": "course-plan.json"

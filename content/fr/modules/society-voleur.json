@@ -6,19 +6,22 @@
   "title": "Stolen! {Volé !}",
   "plan": {
     "words": [
+      "fr:lex:forcer",
+      "fr:lex:effacer",
       "fr:lex:gardien",
       "fr:lex:portrait",
       "fr:lex:palais",
-      "fr:lex:effacer",
       "fr:lex:galerie",
+      "fr:lex:menace",
+      "fr:lex:evenement",
+      "fr:lex:foule",
       "fr:lex:visible",
       "fr:lex:invisible",
-      "fr:lex:menace",
-      "fr:lex:forcer",
-      "fr:lex:evenement",
-      "fr:lex:foule"
+      "fr:lex:quiconque"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:quiconque"
+    ],
     "source": "course-plan.json"
   }
 }

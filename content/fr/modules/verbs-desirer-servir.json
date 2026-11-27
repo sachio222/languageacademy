@@ -9,11 +9,16 @@
       "fr:lex:desirer",
       "fr:lex:servir",
       "fr:lex:tenir",
-      "fr:lex:garder",
       "fr:lex:prier",
-      "fr:lex:toucher"
+      "fr:lex:compter",
+      "fr:lex:sembler",
+      "fr:lex:garder",
+      "fr:lex:toucher",
+      "fr:lex:soif"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:frame.verb-infinitive"
+    ],
     "source": "course-plan.json"
   }
 }

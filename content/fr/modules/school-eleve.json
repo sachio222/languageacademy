@@ -14,12 +14,14 @@
       "fr:lex:liste",
       "fr:lex:nombre",
       "fr:lex:compte",
+      "fr:lex:botte",
       "fr:lex:responsable",
       "fr:lex:necessaire",
-      "fr:lex:botte",
       "fr:lex:general"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:subj.judgment"
+    ],
     "source": "course-plan.json"
   }
 }

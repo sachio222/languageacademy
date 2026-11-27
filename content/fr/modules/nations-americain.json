@@ -18,7 +18,9 @@
       "fr:lex:chinois",
       "fr:lex:canadien"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:demonstrative.pronoun"
+    ],
     "source": "course-plan.json"
   }
 }

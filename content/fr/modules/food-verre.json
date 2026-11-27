@@ -19,7 +19,9 @@
       "fr:lex:midi",
       "fr:lex:bol"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:conj.apres-que"
+    ],
     "source": "course-plan.json"
   }
 }

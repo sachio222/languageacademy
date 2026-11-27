@@ -6,20 +6,22 @@
   "title": "Forest, lake and storm {la nature}",
   "plan": {
     "words": [
+      "fr:lex:planter",
+      "fr:lex:apprecier",
       "fr:lex:foret",
       "fr:lex:bois",
       "fr:lex:bord",
       "fr:lex:fond",
       "fr:lex:chaleur",
-      "fr:lex:sec",
       "fr:lex:temperature",
-      "fr:lex:agreable",
-      "fr:lex:planter",
-      "fr:lex:apprecier",
       "fr:lex:geographie",
-      "fr:lex:tempete"
+      "fr:lex:tempete",
+      "fr:lex:sec",
+      "fr:lex:agreable"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:hypothesis.avec-sans"
+    ],
     "source": "course-plan.json"
   }
 }

@@ -3,11 +3,11 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from '../../load.mjs';
-import { readCourse } from '../../course.mjs';
+import { readCourse } from '../live-course.mjs';
 import { frenchWordTest } from '../text.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict } from '../forms.mjs';
 import { tokenize, restoreElisions } from '../tokenize.mjs';
-import { matchPattern } from '../detect.mjs';
+import { matchPattern } from '../../detect.mjs';
 
 export const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..');
 export const FR_DIR = join(REPO, 'curriculum-graph/languages/fr');

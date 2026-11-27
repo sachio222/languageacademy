@@ -6,18 +6,18 @@
   "title": "How much? {un kilo de…}",
   "plan": {
     "words": [
+      "fr:lex:peser",
       "fr:lex:kilo",
       "fr:lex:litre",
       "fr:lex:metre",
-      "fr:lex:demi",
       "fr:lex:moitie",
       "fr:lex:poids",
       "fr:lex:morceau",
       "fr:lex:paquet",
       "fr:lex:boite",
       "fr:lex:chou",
-      "fr:lex:assez",
-      "fr:lex:peser"
+      "fr:lex:demi",
+      "fr:lex:assez"
     ],
     "constructions": [],
     "source": "course-plan.json"

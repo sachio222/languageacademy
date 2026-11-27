@@ -6,6 +6,7 @@
   "title": "Visiting the château {la visite}",
   "plan": {
     "words": [
+      "fr:lex:interdire",
       "fr:lex:visite",
       "fr:lex:special",
       "fr:lex:superbe",
@@ -13,11 +14,10 @@
       "fr:lex:incroyable",
       "fr:lex:horrible",
       "fr:lex:formidable",
+      "fr:lex:exact",
       "fr:lex:la-haut",
       "fr:lex:dedans",
-      "fr:lex:bas",
-      "fr:lex:interdire",
-      "fr:lex:exact"
+      "fr:lex:bas"
     ],
     "constructions": [],
     "source": "course-plan.json"

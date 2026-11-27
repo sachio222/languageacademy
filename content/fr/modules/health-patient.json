@@ -6,16 +6,16 @@
   "title": "In the emergency department {Aux urgences}",
   "plan": {
     "words": [
+      "fr:lex:surveiller",
+      "fr:lex:observer",
       "fr:lex:patient",
       "fr:lex:soin",
       "fr:lex:traitement",
       "fr:lex:operation",
-      "fr:lex:medical",
       "fr:lex:cerveau",
       "fr:lex:poitrine",
       "fr:lex:estomac",
-      "fr:lex:surveiller",
-      "fr:lex:observer"
+      "fr:lex:medical"
     ],
     "constructions": [],
     "source": "course-plan.json"

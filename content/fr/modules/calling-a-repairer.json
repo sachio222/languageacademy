@@ -6,18 +6,18 @@
   "title": "Calling someone to fix it {le dépannage}",
   "plan": {
     "words": [
-      "fr:lex:urgent",
-      "fr:lex:immediatement",
+      "fr:lex:depanner",
+      "fr:lex:rembourser",
       "fr:lex:assurance",
       "fr:lex:devis",
       "fr:lex:facture",
-      "fr:lex:depanner",
-      "fr:lex:disponible",
       "fr:lex:appel",
       "fr:lex:message",
       "fr:lex:portable",
-      "fr:lex:rembourser",
-      "fr:lex:electricite"
+      "fr:lex:electricite",
+      "fr:lex:urgent",
+      "fr:lex:disponible",
+      "fr:lex:immediatement"
     ],
     "constructions": [],
     "source": "course-plan.json"

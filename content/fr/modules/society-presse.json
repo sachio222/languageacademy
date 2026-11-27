@@ -6,20 +6,22 @@
   "title": "The morning's headlines {les titres du jour}",
   "plan": {
     "words": [
-      "fr:lex:presse",
-      "fr:lex:mouvement",
-      "fr:lex:meurtre",
-      "fr:lex:drogue",
       "fr:lex:tuer",
       "fr:lex:exploser",
       "fr:lex:detruire",
       "fr:lex:liberer",
+      "fr:lex:presse",
+      "fr:lex:mouvement",
+      "fr:lex:meurtre",
+      "fr:lex:drogue",
       "fr:lex:president",
       "fr:lex:ministre",
       "fr:lex:etat",
       "fr:lex:societe"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:nominalisation"
+    ],
     "source": "course-plan.json"
   }
 }

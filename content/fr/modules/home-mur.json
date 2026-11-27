@@ -6,18 +6,18 @@
   "title": "Moving in {le ménage}",
   "plan": {
     "words": [
-      "fr:lex:menage",
-      "fr:lex:poubelle",
-      "fr:lex:couverture",
       "fr:lex:installer",
       "fr:lex:refaire",
       "fr:lex:reposer",
       "fr:lex:vider",
-      "fr:lex:courrier",
-      "fr:lex:vaisselle",
       "fr:lex:placer",
       "fr:lex:arranger",
-      "fr:lex:debarrasser"
+      "fr:lex:debarrasser",
+      "fr:lex:menage",
+      "fr:lex:poubelle",
+      "fr:lex:couverture",
+      "fr:lex:courrier",
+      "fr:lex:vaisselle"
     ],
     "constructions": [],
     "source": "course-plan.json"

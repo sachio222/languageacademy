@@ -6,6 +6,8 @@
   "title": "The Monday meeting {La réunion du lundi}",
   "plan": {
     "words": [
+      "fr:lex:informer",
+      "fr:lex:signaler",
       "fr:lex:responsabilite",
       "fr:lex:fonction",
       "fr:lex:assistant",
@@ -14,9 +16,7 @@
       "fr:lex:base",
       "fr:lex:periode",
       "fr:lex:presence",
-      "fr:lex:absence",
-      "fr:lex:informer",
-      "fr:lex:signaler"
+      "fr:lex:absence"
     ],
     "constructions": [],
     "source": "course-plan.json"

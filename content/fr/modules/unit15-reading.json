@@ -9,7 +9,8 @@
       "fr:lex:plage",
       "fr:lex:bateau",
       "fr:lex:port",
-      "fr:lex:ile"
+      "fr:lex:ile",
+      "fr:lex:diner"
     ],
     "constructions": [
       "fr:cx:conditionnel-passe.avoir",

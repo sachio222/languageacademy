@@ -6,6 +6,7 @@
   "title": "Emergencies {les urgences}",
   "plan": {
     "words": [
+      "fr:lex:blesser",
       "fr:lex:urgence",
       "fr:lex:secours",
       "fr:lex:ambulance",
@@ -15,7 +16,6 @@
       "fr:lex:feu",
       "fr:lex:incendie",
       "fr:lex:fumee",
-      "fr:lex:blesser",
       "fr:lex:sang",
       "fr:lex:douleur"
     ],

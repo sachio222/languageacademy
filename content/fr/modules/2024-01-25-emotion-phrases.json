@@ -12,7 +12,8 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:subj.emotion-que"
+      "fr:cx:subj.emotion-que",
+      "fr:cx:frame.il-est-adjective-de-infinitive"
     ],
     "words": [
       "fr:lex:surpris"
@@ -68,6 +69,12 @@
       "term": "Common Emotion Phrases",
       "definition": "Happy, sad, afraid, sorry - all followed by 'que + person + action'",
       "example": "{Je suis triste que tu partes} (I'm sad you're leaving), {J'ai peur qu'elle ne comprenne pas} (I'm afraid she won't understand)"
+    },
+    {
+      "id": "c-content-de-infinitive",
+      "term": "Same person: {de} + infinitive, not {que}",
+      "definition": "When the feeling and the action belong to the same person, French uses {de} + infinitive. {Que} + subjunctive is for someone else's action. The same {de} follows {c'est} + adjective.",
+      "example": "{Je suis content de te voir.} (I'm happy to see you.) but {Je suis content que tu sois là.} (I'm happy you're here.) {C'est bon de te voir.} (It's good to see you.)"
     }
   ],
   "items": [

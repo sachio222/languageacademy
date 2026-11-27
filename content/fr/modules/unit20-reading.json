@@ -12,7 +12,8 @@
       "fr:lex:identifier",
       "fr:lex:enfuir",
       "fr:lex:meuf",
-      "fr:lex:wesh"
+      "fr:lex:wesh",
+      "fr:lex:attaque"
     ],
     "constructions": [
       "fr:cx:imparfait",

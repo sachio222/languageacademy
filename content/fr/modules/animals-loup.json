@@ -6,18 +6,18 @@
   "title": "Wild animals round the farm {les bêtes sauvages}",
   "plan": {
     "words": [
-      "fr:lex:loup",
-      "fr:lex:sauvage",
-      "fr:lex:chasse",
       "fr:lex:chasser",
       "fr:lex:mordre",
       "fr:lex:piquer",
+      "fr:lex:nourrir",
+      "fr:lex:loup",
+      "fr:lex:chasse",
       "fr:lex:mouche",
       "fr:lex:patte",
       "fr:lex:canard",
       "fr:lex:mouton",
       "fr:lex:souris",
-      "fr:lex:nourrir"
+      "fr:lex:sauvage"
     ],
     "constructions": [],
     "source": "course-plan.json"

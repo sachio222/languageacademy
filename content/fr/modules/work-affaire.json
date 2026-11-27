@@ -6,6 +6,8 @@
   "title": "First day at the agency {le bureau}",
   "plan": {
     "words": [
+      "fr:lex:organiser",
+      "fr:lex:terminer",
       "fr:lex:directeur",
       "fr:lex:patron",
       "fr:lex:chef",
@@ -13,8 +15,6 @@
       "fr:lex:equipe",
       "fr:lex:groupe",
       "fr:lex:affaire",
-      "fr:lex:organiser",
-      "fr:lex:terminer",
       "fr:lex:ecran",
       "fr:lex:document",
       "fr:lex:dossier"

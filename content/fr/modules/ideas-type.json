@@ -6,17 +6,17 @@
   "title": "What people say {les réactions}",
   "plan": {
     "words": [
+      "fr:lex:declarer",
+      "fr:lex:considerer",
       "fr:lex:impression",
       "fr:lex:effet",
       "fr:lex:type",
       "fr:lex:reaction",
-      "fr:lex:ridicule",
-      "fr:lex:veritable",
       "fr:lex:parole",
       "fr:lex:geste",
       "fr:lex:signe",
-      "fr:lex:declarer",
-      "fr:lex:considerer"
+      "fr:lex:ridicule",
+      "fr:lex:veritable"
     ],
     "constructions": [],
     "source": "course-plan.json"

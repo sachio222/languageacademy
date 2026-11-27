@@ -6,18 +6,18 @@
   "title": "The housewarming {La pendaison de crémaillère}",
   "plan": {
     "words": [
+      "fr:lex:melanger",
+      "fr:lex:decouper",
       "fr:lex:gramme",
       "fr:lex:bonbon",
+      "fr:lex:quantite",
+      "fr:lex:ingredient",
+      "fr:lex:specialite",
       "fr:lex:grec",
       "fr:lex:indien",
       "fr:lex:polonais",
       "fr:lex:britannique",
-      "fr:lex:portugais",
-      "fr:lex:quantite",
-      "fr:lex:ingredient",
-      "fr:lex:melanger",
-      "fr:lex:decouper",
-      "fr:lex:specialite"
+      "fr:lex:portugais"
     ],
     "constructions": [],
     "source": "course-plan.json"

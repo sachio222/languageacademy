@@ -6,6 +6,7 @@
   "title": "At the counter and at table {au comptoir et à table}",
   "plan": {
     "words": [
+      "fr:lex:trinquer",
       "fr:lex:comptoir",
       "fr:lex:tabac",
       "fr:lex:commerce",
@@ -13,11 +14,10 @@
       "fr:lex:atmosphere",
       "fr:lex:decor",
       "fr:lex:plateau",
-      "fr:lex:amer",
-      "fr:lex:gras",
       "fr:lex:regime",
       "fr:lex:aperitif",
-      "fr:lex:trinquer"
+      "fr:lex:amer",
+      "fr:lex:gras"
     ],
     "constructions": [],
     "source": "course-plan.json"

@@ -6,8 +6,8 @@
   "title": "Files, printers and websites {Fichiers, imprimantes et sites}",
   "plan": {
     "words": [
+      "fr:lex:imprimer",
       "fr:lex:fichier",
-      "fr:lex:electronique",
       "fr:lex:logiciel",
       "fr:lex:telechargement",
       "fr:lex:option",
@@ -16,8 +16,8 @@
       "fr:lex:publicite",
       "fr:lex:clavier",
       "fr:lex:imprimante",
-      "fr:lex:imprimer",
-      "fr:lex:tablette"
+      "fr:lex:tablette",
+      "fr:lex:electronique"
     ],
     "constructions": [],
     "source": "course-plan.json"

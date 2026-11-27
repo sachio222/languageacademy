@@ -1,0 +1,20 @@
+{
+  "schema": "la-module@1",
+  "module_key": "relative-lequel",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "The office in which I work {lequel, laquelle}",
+  "plan": {
+    "words": [
+      "fr:lex:bureau",
+      "fr:lex:couloir",
+      "fr:lex:niveau",
+      "fr:lex:centre",
+      "fr:lex:lequel"
+    ],
+    "constructions": [
+      "fr:cx:relative.lequel"
+    ],
+    "source": "course-plan.json"
+  }
+}

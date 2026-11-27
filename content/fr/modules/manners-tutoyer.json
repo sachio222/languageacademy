@@ -6,17 +6,17 @@
   "title": "Tu or vous? {tutoyer ou vouvoyer}",
   "plan": {
     "words": [
-      "fr:lex:aimable",
-      "fr:lex:timide",
-      "fr:lex:caractere",
       "fr:lex:tutoyer",
       "fr:lex:vouvoyer",
-      "fr:lex:poli",
-      "fr:lex:gentiment",
+      "fr:lex:caractere",
       "fr:lex:presentation",
-      "fr:lex:calmement",
+      "fr:lex:aimable",
+      "fr:lex:timide",
+      "fr:lex:poli",
       "fr:lex:sympathique",
       "fr:lex:bavard",
+      "fr:lex:gentiment",
+      "fr:lex:calmement",
       "fr:lex:habituellement"
     ],
     "constructions": [],

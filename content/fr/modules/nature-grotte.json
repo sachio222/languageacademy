@@ -6,18 +6,18 @@
   "title": "The painted cave {la grotte ornée}",
   "plan": {
     "words": [
+      "fr:lex:eclairer",
       "fr:lex:rocher",
       "fr:lex:vallee",
       "fr:lex:decouverte",
       "fr:lex:merveille",
+      "fr:lex:trait",
+      "fr:lex:grotte",
       "fr:lex:mysterieux",
       "fr:lex:immense",
       "fr:lex:minuscule",
       "fr:lex:fragile",
-      "fr:lex:trait",
-      "fr:lex:silencieux",
-      "fr:lex:eclairer",
-      "fr:lex:grotte"
+      "fr:lex:silencieux"
     ],
     "constructions": [],
     "source": "course-plan.json"

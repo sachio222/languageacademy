@@ -6,15 +6,15 @@
   "title": "A bigger flat {Un appartement plus grand}",
   "plan": {
     "words": [
+      "fr:lex:entourer",
+      "fr:lex:caution",
+      "fr:lex:locataire",
+      "fr:lex:logement",
       "fr:lex:prive",
       "fr:lex:naturel",
       "fr:lex:rare",
       "fr:lex:commun",
-      "fr:lex:entourer",
-      "fr:lex:caution",
-      "fr:lex:locataire",
-      "fr:lex:exterieur",
-      "fr:lex:logement"
+      "fr:lex:exterieur"
     ],
     "constructions": [],
     "source": "course-plan.json"

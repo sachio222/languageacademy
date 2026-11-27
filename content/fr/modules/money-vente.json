@@ -6,18 +6,18 @@
   "title": "Second-hand {D'occasion}",
   "plan": {
     "words": [
-      "fr:lex:echange",
-      "fr:lex:faveur",
-      "fr:lex:fortune",
       "fr:lex:valoir",
       "fr:lex:baisser",
       "fr:lex:presser",
+      "fr:lex:echanger",
+      "fr:lex:echange",
+      "fr:lex:faveur",
+      "fr:lex:fortune",
       "fr:lex:reduction",
       "fr:lex:achat",
       "fr:lex:etiquette",
       "fr:lex:tarif",
-      "fr:lex:centime",
-      "fr:lex:echanger"
+      "fr:lex:centime"
     ],
     "constructions": [],
     "source": "course-plan.json"

@@ -16,7 +16,7 @@ import { fold } from '../../fold.mjs';
 import { tokenize } from '../tokenize.mjs';
 import { lookupToken, lookupTokenStrict } from '../forms.mjs';
 import { TEACH, TESTS, HOMOGRAPHS, NAMES, NAME_HEADWORDS, PRONOUN_NOTES, CONTENT_NOTES, CHUNK_ONLY, MISREADS } from './course-map-data.mjs';
-import { matchPattern } from '../detect.mjs';
+import { matchPattern } from '../../detect.mjs';
 import { classifyItem } from '../../rules/item-kinds.mjs';
 
 const REPORT = process.argv.includes('--report');

@@ -7,17 +7,19 @@
   "plan": {
     "words": [
       "fr:lex:categorie",
-      "fr:lex:chanceux",
-      "fr:lex:egoiste",
-      "fr:lex:optimiste",
-      "fr:lex:pessimiste",
       "fr:lex:comptable",
       "fr:lex:photographe",
       "fr:lex:architecte",
       "fr:lex:visa",
-      "fr:lex:continent"
+      "fr:lex:continent",
+      "fr:lex:chanceux",
+      "fr:lex:egoiste",
+      "fr:lex:optimiste",
+      "fr:lex:pessimiste"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:participe-present.clause"
+    ],
     "source": "course-plan.json"
   }
 }

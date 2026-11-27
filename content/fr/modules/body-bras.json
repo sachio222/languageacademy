@@ -19,7 +19,9 @@
       "fr:lex:course",
       "fr:lex:blessure"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:causative.se-faire"
+    ],
     "source": "course-plan.json"
   }
 }

@@ -6,18 +6,18 @@
   "title": "Sport and TV {les loisirs}",
   "plan": {
     "words": [
+      "fr:lex:entrainer",
+      "fr:lex:filmer",
       "fr:lex:danse",
       "fr:lex:serie",
       "fr:lex:emission",
       "fr:lex:champion",
       "fr:lex:disque",
       "fr:lex:ballon",
-      "fr:lex:entrainer",
       "fr:lex:pilote",
       "fr:lex:stade",
       "fr:lex:joueur",
-      "fr:lex:camera",
-      "fr:lex:filmer"
+      "fr:lex:camera"
     ],
     "constructions": [],
     "source": "course-plan.json"

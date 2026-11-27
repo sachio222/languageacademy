@@ -6,6 +6,10 @@
   "title": "Animals on the farm {les animaux}",
   "plan": {
     "words": [
+      "fr:lex:attraper",
+      "fr:lex:promener",
+      "fr:lex:deranger",
+      "fr:lex:ramasser",
       "fr:lex:vache",
       "fr:lex:cheval",
       "fr:lex:cochon",
@@ -13,11 +17,7 @@
       "fr:lex:serpent",
       "fr:lex:enorme",
       "fr:lex:nombreux",
-      "fr:lex:doux",
-      "fr:lex:attraper",
-      "fr:lex:promener",
-      "fr:lex:deranger",
-      "fr:lex:ramasser"
+      "fr:lex:doux"
     ],
     "constructions": [],
     "source": "course-plan.json"

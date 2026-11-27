@@ -6,18 +6,18 @@
   "title": "Evening at the farm {la soirée}",
   "plan": {
     "words": [
-      "fr:lex:boule",
+      "fr:lex:ajouter",
       "fr:lex:allumer",
-      "fr:lex:bouton",
-      "fr:lex:chaine",
       "fr:lex:frapper",
       "fr:lex:ranger",
       "fr:lex:preter",
       "fr:lex:deposer",
+      "fr:lex:recommencer",
+      "fr:lex:boule",
+      "fr:lex:bouton",
+      "fr:lex:chaine",
       "fr:lex:objet",
-      "fr:lex:unique",
-      "fr:lex:ajouter",
-      "fr:lex:recommencer"
+      "fr:lex:unique"
     ],
     "constructions": [],
     "source": "course-plan.json"

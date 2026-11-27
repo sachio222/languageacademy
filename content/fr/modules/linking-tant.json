@@ -3,23 +3,19 @@
   "module_key": "linking-tant",
   "kind": "lesson",
   "status": "planned",
-  "title": "Linking your reasons {relier ses idées}",
+  "title": "Adding it up {de plus, d'ailleurs, autant, sinon}",
   "plan": {
     "words": [
-      "fr:lex:pourtant",
-      "fr:lex:cependant",
-      "fr:lex:malgre",
-      "fr:lex:selon",
+      "fr:lex:autant",
+      "fr:lex:tant",
       "fr:lex:sinon",
       "fr:lex:ni",
       "fr:lex:aucun",
-      "fr:lex:sauf",
-      "fr:lex:tel",
-      "fr:lex:autant",
-      "fr:lex:tant",
       "fr:lex:lorsque"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.addition"
+    ],
     "source": "course-plan.json"
   }
 }

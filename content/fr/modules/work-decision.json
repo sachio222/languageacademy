@@ -6,18 +6,18 @@
   "title": "So that it never happens again {prévoir}",
   "plan": {
     "words": [
+      "fr:lex:eviter",
+      "fr:lex:risquer",
+      "fr:lex:empecher",
+      "fr:lex:annoncer",
+      "fr:lex:prevoir",
+      "fr:lex:resoudre",
       "fr:lex:decision",
       "fr:lex:occasion",
       "fr:lex:maniere",
       "fr:lex:detail",
       "fr:lex:cas",
-      "fr:lex:prevoir",
-      "fr:lex:eviter",
-      "fr:lex:risque",
-      "fr:lex:risquer",
-      "fr:lex:empecher",
-      "fr:lex:resoudre",
-      "fr:lex:annoncer"
+      "fr:lex:risque"
     ],
     "constructions": [],
     "source": "course-plan.json"

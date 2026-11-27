@@ -6,18 +6,18 @@
   "title": "History at the museum {L'histoire au musée}",
   "plan": {
     "words": [
-      "fr:lex:bataille",
-      "fr:lex:victoire",
-      "fr:lex:militaire",
-      "fr:lex:revolution",
       "fr:lex:lutter",
       "fr:lex:eclater",
-      "fr:lex:puissant",
-      "fr:lex:sacre",
       "fr:lex:intervenir",
       "fr:lex:rapporter",
       "fr:lex:nommer",
-      "fr:lex:resistance"
+      "fr:lex:bataille",
+      "fr:lex:victoire",
+      "fr:lex:revolution",
+      "fr:lex:resistance",
+      "fr:lex:militaire",
+      "fr:lex:puissant",
+      "fr:lex:sacre"
     ],
     "constructions": [],
     "source": "course-plan.json"

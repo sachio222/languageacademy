@@ -6,18 +6,19 @@
   "title": "At the bank {À la banque}",
   "plan": {
     "words": [
-      "fr:lex:somme",
-      "fr:lex:millier",
-      "fr:lex:centaine",
-      "fr:lex:environ",
-      "fr:lex:dette",
-      "fr:lex:lequel",
       "fr:lex:emprunter",
       "fr:lex:verser",
       "fr:lex:retirer",
-      "fr:lex:appuyer"
+      "fr:lex:appuyer",
+      "fr:lex:somme",
+      "fr:lex:millier",
+      "fr:lex:centaine",
+      "fr:lex:dette",
+      "fr:lex:environ"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:relative.auquel-duquel"
+    ],
     "source": "course-plan.json"
   }
 }

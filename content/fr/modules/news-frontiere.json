@@ -6,17 +6,20 @@
   "title": "Sold abroad? {Vendu à l'étranger ?}",
   "plan": {
     "words": [
+      "fr:lex:transporter",
       "fr:lex:frontiere",
       "fr:lex:vente",
+      "fr:lex:perte",
+      "fr:lex:douane",
+      "fr:lex:exposition",
       "fr:lex:particulier",
       "fr:lex:precieux",
       "fr:lex:inconnu",
-      "fr:lex:transporter",
-      "fr:lex:perte",
-      "fr:lex:douane",
-      "fr:lex:exposition"
+      "fr:lex:ailleurs"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:gerondif.passe"
+    ],
     "source": "course-plan.json"
   }
 }

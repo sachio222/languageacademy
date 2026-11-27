@@ -6,15 +6,15 @@
   "title": "At the tourist office {À l'office de tourisme}",
   "plan": {
     "words": [
+      "fr:lex:photographier",
       "fr:lex:randonnee",
       "fr:lex:paysage",
       "fr:lex:tourisme",
-      "fr:lex:touristique",
       "fr:lex:excursion",
       "fr:lex:festival",
-      "fr:lex:sportif",
-      "fr:lex:photographier",
-      "fr:lex:teuf"
+      "fr:lex:teuf",
+      "fr:lex:touristique",
+      "fr:lex:sportif"
     ],
     "constructions": [],
     "source": "course-plan.json"

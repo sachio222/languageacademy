@@ -127,6 +127,36 @@
       "cue": "If I could have",
       "answer": "si j'avais pu",
       "hint": "{si + j'avais pu}"
+    },
+    {
+      "id": "i-j-ai-decide-de-rester",
+      "type": "gapfill",
+      "text": "J'étais malade, alors hier j'ai décidé ___ rester à la maison.",
+      "blanks": [
+        {
+          "answer": "de",
+          "accept": [
+            "d'"
+          ]
+        }
+      ],
+      "gloss": "I was ill, so yesterday I decided to stay at home.",
+      "hint": "décider + ? + infinitive"
+    },
+    {
+      "id": "i-elle-a-commence-a-parler",
+      "type": "gapfill",
+      "text": "Au téléphone, ma mère a commencé ___ parler de son voyage.",
+      "blanks": [
+        {
+          "answer": "à",
+          "accept": [
+            "a"
+          ]
+        }
+      ],
+      "gloss": "On the phone, my mother started to talk about her trip.",
+      "hint": "commencer + ? + infinitive"
     }
   ]
 }

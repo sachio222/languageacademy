@@ -6,6 +6,9 @@
   "title": "Théo is ill {la santé}",
   "plan": {
     "words": [
+      "fr:lex:soigner",
+      "fr:lex:guerir",
+      "fr:lex:souffrir",
       "fr:lex:sante",
       "fr:lex:maladie",
       "fr:lex:medicament",
@@ -14,10 +17,7 @@
       "fr:lex:rhume",
       "fr:lex:gorge",
       "fr:lex:infirmier",
-      "fr:lex:soigner",
-      "fr:lex:guerir",
-      "fr:lex:faible",
-      "fr:lex:souffrir"
+      "fr:lex:faible"
     ],
     "constructions": [],
     "source": "course-plan.json"

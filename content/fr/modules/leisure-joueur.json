@@ -6,16 +6,16 @@
   "title": "What shall we do? {Qu'est-ce qu'on fait ?}",
   "plan": {
     "words": [
+      "fr:lex:bavarder",
+      "fr:lex:kiffer",
       "fr:lex:cirque",
       "fr:lex:rock",
       "fr:lex:video",
       "fr:lex:lecture",
       "fr:lex:promenade",
-      "fr:lex:bavarder",
       "fr:lex:adolescent",
       "fr:lex:loisir",
-      "fr:lex:passe-temps",
-      "fr:lex:kiffer"
+      "fr:lex:passe-temps"
     ],
     "constructions": [],
     "source": "course-plan.json"

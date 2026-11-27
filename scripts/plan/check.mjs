@@ -34,7 +34,7 @@
 //   unit_outline_missing               a unit with a written module lacks its course.json description and can-do lines
 // The method's rules (only with `method`):
 //   structure_stops                    a unit whose lessons teach no pattern while a pattern with its needs met waits
-//   no_carrier                         a lesson of filler_list or more new words with no new verb, frame word or pattern
+//   no_carrier                         a lesson of filler_list or more new words with no new verb, frame word or pattern, and no owned pattern as its carrier
 //   marker_without_pattern             a word that announces a pattern, taught before any of its patterns
 //   carrier_unknown, reuses_unknown    a carrier or a reused word the module does not teach and the learner does not own
 //   met_through_unknown, met_through_missing   a word met through something not owned yet, or with no entry at all
@@ -263,7 +263,9 @@ function methodProblems({ plan, open, lookups, isAvailable, position, method, le
     const owned = (id) => isAvailable(id, at - 1);
     if (module.kind === 'lesson' && words.length >= method.filler_list) {
       const carried = module.teaches.constructions.some((id) => method.counts(id))
-        || words.some((id) => lookups.headwords.get(id)?.pos === 'verb' || method.frameWords.has(id) || method.markers.has(id));
+        || words.some((id) => lookups.headwords.get(id)?.pos === 'verb' || method.frameWords.has(id) || method.markers.has(id))
+        // a pattern the learner already owns can carry the list (Jake: each new word is met through what is owned)
+        || (module.carrier && lookups.constructions.has(module.carrier) && method.counts(module.carrier) && owned(module.carrier));
       if (!carried) problems.push(problem('no_carrier', key, `${words.length} new words with no new verb, frame word or pattern to carry them`));
     }
     for (const id of words) {

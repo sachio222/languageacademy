@@ -12,7 +12,9 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:il-y-a"
+      "fr:cx:il-y-a",
+      "fr:cx:frame.verb-de-infinitive",
+      "fr:cx:frame.verb-a-infinitive"
     ]
   },
   "vocabulary": [
@@ -77,6 +79,12 @@
       "term": "Time and Space Integration",
       "definition": "Combine temporal words (d'abord, ensuite) with spatial (près de, devant)",
       "example": "{D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma. Après, j'ai joué avec mon chien.}"
+    },
+    {
+      "id": "c-decider-de-commencer-a",
+      "term": "A verb, then {de} or {à}, then a second verb",
+      "definition": "Some verbs take a second verb after {de}, like {décider de}. Others take it after {à}, like {commencer à}. The second verb stays in the infinitive, in every tense.",
+      "example": "{J'ai décidé d'aller au café.} (I decided to go to the café.) {Il a commencé à parler.} (He started to speak.)"
     }
   ],
   "items": [

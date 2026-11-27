@@ -66,7 +66,7 @@ test('the default content folder validates clean', () => {
   // Every module of the outline has its file: the modules written for Units 1 to 12 and the Reference pages, and a
   // planned stub for each module of content/fr/course-plan.json (pnpm plan:stubs). Translations outside Unit 1 still
   // print as warnings, and so do drills with no situation (Jake, 2026-11-27).
-  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 401 modules');
+  assert.equal(r.stdout.trim().split('\n').at(-1), 'ok 405 modules');
   assert.match(r.stdout, /^\d+ warnings: (?:[a-z_]+ \d+, )*translate_outside_unit1 \d+(?:, [a-z_]+ \d+)*$/m);
 });
 

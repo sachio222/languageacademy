@@ -6,13 +6,14 @@
   "title": "At the zoo in the park {Au zoo du parc}",
   "plan": {
     "words": [
+      "fr:lex:approcher",
       "fr:lex:lion",
       "fr:lex:singe",
-      "fr:lex:geant",
       "fr:lex:poupee",
       "fr:lex:jouet",
       "fr:lex:adulte",
-      "fr:lex:reuf"
+      "fr:lex:reuf",
+      "fr:lex:geant"
     ],
     "constructions": [],
     "source": "course-plan.json"

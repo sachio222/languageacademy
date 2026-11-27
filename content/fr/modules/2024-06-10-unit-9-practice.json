@@ -283,6 +283,36 @@
       ],
       "gloss": "She got up at seven because her class was at eight",
       "hint": "passé composé of se lever (reflexive) / because"
+    },
+    {
+      "id": "i-decide-d-aller",
+      "type": "gapfill",
+      "text": "Il faisait beau, alors nous avons décidé ___ aller au parc.",
+      "blanks": [
+        {
+          "answer": "d'",
+          "accept": [
+            "d’"
+          ]
+        }
+      ],
+      "gloss": "It was nice, so we decided to go to the park",
+      "hint": "décider + ? + infinitive"
+    },
+    {
+      "id": "i-commence-a-parler",
+      "type": "gapfill",
+      "text": "Au café, Marie a commencé ___ parler de son voyage.",
+      "blanks": [
+        {
+          "answer": "à",
+          "accept": [
+            "a"
+          ]
+        }
+      ],
+      "gloss": "At the café, Marie started to talk about her trip",
+      "hint": "commencer + ? + infinitive"
     }
   ],
   "tests": {

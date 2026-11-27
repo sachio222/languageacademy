@@ -9,10 +9,10 @@
       "fr:lex:trier",
       "fr:lex:gaspiller",
       "fr:lex:polluer",
-      "fr:lex:pollution",
-      "fr:lex:paresseux",
       "fr:lex:emmenager",
-      "fr:lex:lessive"
+      "fr:lex:pollution",
+      "fr:lex:lessive",
+      "fr:lex:paresseux"
     ],
     "constructions": [],
     "source": "course-plan.json"

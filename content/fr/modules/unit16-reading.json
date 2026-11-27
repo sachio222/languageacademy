@@ -11,7 +11,9 @@
       "fr:lex:champagne",
       "fr:lex:appareil",
       "fr:lex:saison",
-      "fr:lex:court"
+      "fr:lex:court",
+      "fr:lex:chaise",
+      "fr:lex:piece"
     ],
     "constructions": [
       "fr:cx:passe-compose.avoir",

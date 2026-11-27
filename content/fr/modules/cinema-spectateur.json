@@ -13,13 +13,15 @@
       "fr:lex:invention",
       "fr:lex:version",
       "fr:lex:melange",
+      "fr:lex:negatif",
       "fr:lex:specialement",
       "fr:lex:extremement",
       "fr:lex:effectivement",
-      "fr:lex:negatif",
-      "fr:lex:dialogue"
+      "fr:lex:quoique"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:subj.quoique"
+    ],
     "source": "course-plan.json"
   }
 }

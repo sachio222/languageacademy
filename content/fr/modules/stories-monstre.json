@@ -6,17 +6,17 @@
   "title": "Stories in the dark {les histoires qui font peur}",
   "plan": {
     "words": [
+      "fr:lex:sauver",
+      "fr:lex:echapper",
+      "fr:lex:disparaitre",
+      "fr:lex:apparaitre",
+      "fr:lex:transformer",
       "fr:lex:monstre",
       "fr:lex:fantome",
       "fr:lex:ange",
       "fr:lex:genie",
       "fr:lex:tresor",
       "fr:lex:masque",
-      "fr:lex:sauver",
-      "fr:lex:echapper",
-      "fr:lex:disparaitre",
-      "fr:lex:apparaitre",
-      "fr:lex:transformer",
       "fr:lex:cauchemar"
     ],
     "constructions": [],

@@ -6,18 +6,18 @@
   "title": "Goals for the site {Les objectifs du chantier}",
   "plan": {
     "words": [
-      "fr:lex:objectif",
-      "fr:lex:proposition",
-      "fr:lex:element",
+      "fr:lex:tenter",
       "fr:lex:atteindre",
       "fr:lex:reduire",
       "fr:lex:lancer",
       "fr:lex:achever",
-      "fr:lex:tenter",
-      "fr:lex:annuel",
+      "fr:lex:objectif",
+      "fr:lex:proposition",
+      "fr:lex:element",
       "fr:lex:amelioration",
       "fr:lex:augmentation",
-      "fr:lex:reussite"
+      "fr:lex:reussite",
+      "fr:lex:annuel"
     ],
     "constructions": [],
     "source": "course-plan.json"

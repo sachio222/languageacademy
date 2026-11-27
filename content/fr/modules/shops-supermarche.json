@@ -6,18 +6,18 @@
   "title": "Shopping in Belleville {les courses}",
   "plan": {
     "words": [
+      "fr:lex:depenser",
       "fr:lex:supermarche",
       "fr:lex:boucherie",
       "fr:lex:epicerie",
       "fr:lex:portefeuille",
-      "fr:lex:depenser",
       "fr:lex:cheque",
-      "fr:lex:gratuit",
       "fr:lex:monnaie",
       "fr:lex:boutique",
       "fr:lex:marchand",
       "fr:lex:panier",
-      "fr:lex:paire"
+      "fr:lex:paire",
+      "fr:lex:gratuit"
     ],
     "constructions": [],
     "source": "course-plan.json"

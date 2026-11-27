@@ -16,9 +16,12 @@
       "fr:lex:raisin",
       "fr:lex:poire",
       "fr:lex:confiture",
-      "fr:lex:yaourt"
+      "fr:lex:yaourt",
+      "fr:lex:tel"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:tel-que"
+    ],
     "source": "course-plan.json"
   }
 }

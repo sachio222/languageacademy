@@ -13,13 +13,15 @@
       "fr:lex:douche",
       "fr:lex:canape",
       "fr:lex:refrigerateur",
-      "fr:lex:contre",
       "fr:lex:vue",
       "fr:lex:meuble",
       "fr:lex:fauteuil",
-      "fr:lex:placard"
+      "fr:lex:placard",
+      "fr:lex:contre"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:subj.superlative"
+    ],
     "source": "course-plan.json"
   }
 }

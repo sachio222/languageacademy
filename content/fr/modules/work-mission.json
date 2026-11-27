@@ -6,10 +6,6 @@
   "title": "Who does what {les tâches de chacun}",
   "plan": {
     "words": [
-      "fr:lex:mission",
-      "fr:lex:rapport",
-      "fr:lex:point",
-      "fr:lex:ordre",
       "fr:lex:diriger",
       "fr:lex:mener",
       "fr:lex:realiser",
@@ -17,7 +13,11 @@
       "fr:lex:charger",
       "fr:lex:regler",
       "fr:lex:traiter",
-      "fr:lex:reunir"
+      "fr:lex:reunir",
+      "fr:lex:mission",
+      "fr:lex:rapport",
+      "fr:lex:point",
+      "fr:lex:ordre"
     ],
     "constructions": [],
     "source": "course-plan.json"

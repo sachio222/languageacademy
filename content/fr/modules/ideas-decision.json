@@ -6,19 +6,21 @@
   "title": "For or against {Pour ou contre}",
   "plan": {
     "words": [
-      "fr:lex:acte",
       "fr:lex:suggerer",
       "fr:lex:resister",
       "fr:lex:exprimer",
       "fr:lex:abandonner",
+      "fr:lex:rejeter",
+      "fr:lex:eliminer",
+      "fr:lex:acte",
       "fr:lex:parti",
       "fr:lex:autorite",
       "fr:lex:puissance",
-      "fr:lex:religion",
-      "fr:lex:rejeter",
-      "fr:lex:eliminer"
+      "fr:lex:religion"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:mise-en-relief.ce-dont-cest"
+    ],
     "source": "course-plan.json"
   }
 }

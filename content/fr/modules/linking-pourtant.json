@@ -1,0 +1,21 @@
+{
+  "schema": "la-module@1",
+  "module_key": "linking-pourtant",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "And yet {pourtant, par contre, malgré tout}",
+  "plan": {
+    "words": [
+      "fr:lex:pourtant",
+      "fr:lex:neanmoins",
+      "fr:lex:cependant",
+      "fr:lex:malgre",
+      "fr:lex:sauf"
+    ],
+    "constructions": [
+      "fr:cx:connector.contrast",
+      "fr:cx:connector.concession"
+    ],
+    "source": "course-plan.json"
+  }
+}

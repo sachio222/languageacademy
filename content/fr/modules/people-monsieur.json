@@ -6,20 +6,22 @@
   "title": "The family arrives {la famille}",
   "plan": {
     "words": [
+      "fr:lex:saluer",
       "fr:lex:mari",
       "fr:lex:bebe",
       "fr:lex:tante",
       "fr:lex:grand-mere",
       "fr:lex:mademoiselle",
       "fr:lex:prenom",
-      "fr:lex:enchante",
       "fr:lex:neveu",
       "fr:lex:niece",
-      "fr:lex:saluer",
       "fr:lex:beau-pere",
-      "fr:lex:belle-mere"
+      "fr:lex:belle-mere",
+      "fr:lex:enchante"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:relative.dont-noun"
+    ],
     "source": "course-plan.json"
   }
 }

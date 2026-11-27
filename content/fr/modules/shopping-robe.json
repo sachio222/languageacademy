@@ -19,7 +19,9 @@
       "fr:lex:vetement",
       "fr:lex:taille"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:n-importe"
+    ],
     "source": "course-plan.json"
   }
 }

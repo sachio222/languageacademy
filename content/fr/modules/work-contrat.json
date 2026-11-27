@@ -6,20 +6,22 @@
   "title": "The contract {Le contrat}",
   "plan": {
     "words": [
-      "fr:lex:contrat",
-      "fr:lex:copie",
-      "fr:lex:terme",
-      "fr:lex:moyen",
-      "fr:lex:total",
       "fr:lex:etablir",
       "fr:lex:accorder",
       "fr:lex:augmenter",
       "fr:lex:enregistrer",
       "fr:lex:convenir",
+      "fr:lex:contrat",
+      "fr:lex:copie",
+      "fr:lex:terme",
+      "fr:lex:moyen",
+      "fr:lex:total",
       "fr:lex:mensuel",
       "fr:lex:irregulier"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:neg.nul"
+    ],
     "source": "course-plan.json"
   }
 }

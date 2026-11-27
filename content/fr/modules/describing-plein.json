@@ -6,18 +6,18 @@
   "title": "After the smoke {le nettoyage}",
   "plan": {
     "words": [
+      "fr:lex:sonner",
+      "fr:lex:secher",
+      "fr:lex:tache.stain",
+      "fr:lex:trace",
       "fr:lex:sale",
       "fr:lex:bizarre",
       "fr:lex:impossible",
       "fr:lex:tranquille",
       "fr:lex:dangereux",
       "fr:lex:terrible",
-      "fr:lex:sonner",
       "fr:lex:doucement",
-      "fr:lex:exactement",
-      "fr:lex:tache.stain",
-      "fr:lex:secher",
-      "fr:lex:trace"
+      "fr:lex:exactement"
     ],
     "constructions": [],
     "source": "course-plan.json"

@@ -219,6 +219,12 @@ test('a list of fillers needs a carrier: a new verb, a frame word or a pattern',
   assert.deepEqual(codes(pattern), []);
 });
 
+test('a list of fillers may be carried by a pattern the learner already owns', () => {
+  const all = { held_patterns: [{ id: 'xx:cx:two', why: 'x' }, { id: 'xx:cx:three', why: 'x' }] };
+  const owned = runMethod(planOf([unit('u1', [lesson('l0', [], ['xx:cx:one']), lesson('l1', ['xx:lex:a', 'xx:lex:b', 'xx:lex:c'], [], { carrier: 'xx:cx:one' })])], all));
+  assert.deepEqual(codes(owned), []);
+});
+
 test('a marker word is taught in or after the module that teaches its pattern', () => {
   const all = { held_patterns: [{ id: 'xx:cx:two', why: 'x' }] };
   const early = runMethod(planOf([unit('u1', [lesson('l1', ['xx:lex:e'], ['xx:cx:one']), lesson('l2', [], ['xx:cx:three'])])], all));

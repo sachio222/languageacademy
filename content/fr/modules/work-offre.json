@@ -6,20 +6,22 @@
   "title": "We are hiring {On recrute}",
   "plan": {
     "words": [
+      "fr:lex:fournir",
+      "fr:lex:exiger",
+      "fr:lex:joindre",
       "fr:lex:offre",
       "fr:lex:annonce",
       "fr:lex:carriere",
       "fr:lex:recherche",
       "fr:lex:condition",
       "fr:lex:avantage",
+      "fr:lex:candidature",
       "fr:lex:capable",
-      "fr:lex:personnel",
-      "fr:lex:fournir",
-      "fr:lex:exiger",
-      "fr:lex:joindre",
-      "fr:lex:candidature"
+      "fr:lex:personnel"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.purpose"
+    ],
     "source": "course-plan.json"
   }
 }

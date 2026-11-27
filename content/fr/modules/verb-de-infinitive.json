@@ -1,0 +1,18 @@
+{
+  "schema": "la-module@1",
+  "module_key": "verb-de-infinitive",
+  "kind": "lesson",
+  "status": "planned",
+  "title": "Trying, forgetting, deciding ({essayer de}, {oublier de}, {décider de} + infinitive)",
+  "plan": {
+    "words": [
+      "fr:lex:rater",
+      "fr:lex:erreur",
+      "fr:lex:magasin",
+      "fr:lex:mauvais",
+      "fr:lex:pret"
+    ],
+    "constructions": [],
+    "source": "course-plan.json"
+  }
+}

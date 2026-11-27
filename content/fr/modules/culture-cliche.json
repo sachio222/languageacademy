@@ -6,18 +6,18 @@
   "title": "A series about us {une série sur nous}",
   "plan": {
     "words": [
-      "fr:lex:apparence",
-      "fr:lex:elegant",
-      "fr:lex:chic",
-      "fr:lex:luxe",
-      "fr:lex:illusion",
-      "fr:lex:ideal",
-      "fr:lex:ordinaire",
-      "fr:lex:reputation",
       "fr:lex:imiter",
       "fr:lex:confondre",
+      "fr:lex:apparence",
+      "fr:lex:luxe",
+      "fr:lex:illusion",
+      "fr:lex:reputation",
       "fr:lex:exception",
-      "fr:lex:cliche"
+      "fr:lex:cliche",
+      "fr:lex:elegant",
+      "fr:lex:chic",
+      "fr:lex:ideal",
+      "fr:lex:ordinaire"
     ],
     "constructions": [],
     "source": "course-plan.json"

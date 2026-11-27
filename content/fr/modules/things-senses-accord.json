@@ -8,18 +8,20 @@
     "words": [
       "fr:lex:surprise",
       "fr:lex:felicitations",
-      "fr:lex:bravo",
+      "fr:lex:dessin",
+      "fr:lex:metier",
+      "fr:lex:accord",
+      "fr:lex:invitation",
       "fr:lex:joli",
       "fr:lex:intelligent",
       "fr:lex:blond",
       "fr:lex:gros",
-      "fr:lex:dessin",
-      "fr:lex:metier",
       "fr:lex:volontiers",
-      "fr:lex:accord",
-      "fr:lex:invitation"
+      "fr:lex:bravo"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:mise-en-relief"
+    ],
     "source": "course-plan.json"
   }
 }

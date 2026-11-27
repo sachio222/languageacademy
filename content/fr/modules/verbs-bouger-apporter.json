@@ -9,10 +9,13 @@
       "fr:lex:recevoir",
       "fr:lex:imaginer",
       "fr:lex:bouger",
+      "fr:lex:bouffer",
       "fr:lex:invite",
-      "fr:lex:bouffer"
+      "fr:lex:cadeau"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:subj.passe"
+    ],
     "source": "course-plan.json"
   }
 }

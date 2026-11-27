@@ -9,7 +9,8 @@
       "fr:lex:caisse",
       "fr:lex:plein",
       "fr:lex:vide",
-      "fr:lex:propre"
+      "fr:lex:propre",
+      "fr:lex:garçon"
     ],
     "constructions": [
       "fr:cx:verb.ir.present",

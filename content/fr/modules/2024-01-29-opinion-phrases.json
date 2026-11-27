@@ -141,6 +141,21 @@
       "cue": "I doubt that's possible",
       "answer": "je doute que ce soit possible",
       "hint": "{je doute que + ce + soit possible}"
+    },
+    {
+      "id": "i-c-est-bon-de-partir",
+      "type": "gapfill",
+      "text": "Marie veut partir tôt. Je pense que c'est bon ___ partir tôt.",
+      "blanks": [
+        {
+          "answer": "de",
+          "accept": [
+            "d'"
+          ]
+        }
+      ],
+      "gloss": "Marie wants to leave early. I think it's good to leave early.",
+      "hint": "c'est + adjective + ? + infinitive"
     }
   ]
 }

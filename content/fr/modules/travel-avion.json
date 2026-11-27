@@ -11,15 +11,17 @@
       "fr:lex:taxi",
       "fr:lex:ticket",
       "fr:lex:moto",
-      "fr:lex:longtemps",
       "fr:lex:minuit",
       "fr:lex:quart",
       "fr:lex:demi-heure",
-      "fr:lex:sans",
       "fr:lex:siege",
-      "fr:lex:arriere"
+      "fr:lex:arriere",
+      "fr:lex:longtemps",
+      "fr:lex:sans"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:hypothesis.au-cas-ou"
+    ],
     "source": "course-plan.json"
   }
 }

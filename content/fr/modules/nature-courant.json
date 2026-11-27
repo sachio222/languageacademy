@@ -6,6 +6,9 @@
   "title": "Storm warning {Alerte orage}",
   "plan": {
     "words": [
+      "fr:lex:couler",
+      "fr:lex:glisser",
+      "fr:lex:geler",
       "fr:lex:orage",
       "fr:lex:brouillard",
       "fr:lex:degre",
@@ -14,10 +17,7 @@
       "fr:lex:courant",
       "fr:lex:surface",
       "fr:lex:abri",
-      "fr:lex:sombre",
-      "fr:lex:couler",
-      "fr:lex:glisser",
-      "fr:lex:geler"
+      "fr:lex:sombre"
     ],
     "constructions": [],
     "source": "course-plan.json"

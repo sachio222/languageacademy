@@ -6,18 +6,18 @@
   "title": "Tasting the menu {la dégustation}",
   "plan": {
     "words": [
-      "fr:lex:gout",
       "fr:lex:gouter",
+      "fr:lex:partager",
+      "fr:lex:verifier",
+      "fr:lex:reprendre",
+      "fr:lex:gout",
       "fr:lex:nourriture",
       "fr:lex:alcool",
       "fr:lex:qualite",
       "fr:lex:ferme",
       "fr:lex:forme",
-      "fr:lex:partager",
-      "fr:lex:verifier",
-      "fr:lex:reprendre",
-      "fr:lex:inutile",
-      "fr:lex:sorte"
+      "fr:lex:sorte",
+      "fr:lex:inutile"
     ],
     "constructions": [],
     "source": "course-plan.json"

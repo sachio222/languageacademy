@@ -6,6 +6,9 @@
   "title": "Why did he do it? {Pourquoi a-t-il fait ça ?}",
   "plan": {
     "words": [
+      "fr:lex:agir",
+      "fr:lex:causer",
+      "fr:lex:marquer",
       "fr:lex:intention",
       "fr:lex:conscience",
       "fr:lex:esprit",
@@ -14,10 +17,7 @@
       "fr:lex:theorie",
       "fr:lex:existence",
       "fr:lex:volonte",
-      "fr:lex:hasard",
-      "fr:lex:agir",
-      "fr:lex:causer",
-      "fr:lex:marquer"
+      "fr:lex:hasard"
     ],
     "constructions": [],
     "source": "course-plan.json"

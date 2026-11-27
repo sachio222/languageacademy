@@ -6,19 +6,21 @@
   "title": "A formal complaint {Une réclamation}",
   "plan": {
     "words": [
-      "fr:lex:lors",
-      "fr:lex:durant",
-      "fr:lex:aupres",
-      "fr:lex:reel",
-      "fr:lex:totalement",
       "fr:lex:adresser",
       "fr:lex:rechercher",
       "fr:lex:renvoyer",
       "fr:lex:reclamer",
       "fr:lex:politesse",
-      "fr:lex:desagreable"
+      "fr:lex:reel",
+      "fr:lex:desagreable",
+      "fr:lex:lors",
+      "fr:lex:totalement",
+      "fr:lex:durant",
+      "fr:lex:aupres"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:ne-expletif"
+    ],
     "source": "course-plan.json"
   }
 }

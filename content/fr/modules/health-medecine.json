@@ -6,15 +6,15 @@
   "title": "Getting better {Guérir}",
   "plan": {
     "words": [
-      "fr:lex:force",
-      "fr:lex:sain",
-      "fr:lex:manque",
-      "fr:lex:avaler",
       "fr:lex:supporter",
-      "fr:lex:ressentir",
       "fr:lex:habituer",
+      "fr:lex:avaler",
+      "fr:lex:ressentir",
+      "fr:lex:force",
+      "fr:lex:manque",
       "fr:lex:medecine",
       "fr:lex:laboratoire",
+      "fr:lex:sain",
       "fr:lex:difficilement"
     ],
     "constructions": [],

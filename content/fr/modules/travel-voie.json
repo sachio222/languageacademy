@@ -6,20 +6,22 @@
   "title": "A train that does not leave {Le train ne part pas}",
   "plan": {
     "words": [
-      "fr:lex:voie",
-      "fr:lex:attente",
-      "fr:lex:greve",
       "fr:lex:correspondre",
       "fr:lex:ceder",
       "fr:lex:retenir",
+      "fr:lex:contenir",
+      "fr:lex:defaire",
+      "fr:lex:voie",
+      "fr:lex:attente",
+      "fr:lex:greve",
       "fr:lex:trajet",
       "fr:lex:horaire",
       "fr:lex:code",
-      "fr:lex:contenir",
-      "fr:lex:defaire",
       "fr:lex:enveloppe"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.cause-prep"
+    ],
     "source": "course-plan.json"
   }
 }

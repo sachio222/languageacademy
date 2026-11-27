@@ -6,6 +6,10 @@
   "title": "Guests from abroad {les arrivées}",
   "plan": {
     "words": [
+      "fr:lex:prevenir",
+      "fr:lex:emporter",
+      "fr:lex:recuperer",
+      "fr:lex:accueillir",
       "fr:lex:arrivee",
       "fr:lex:depart",
       "fr:lex:vol",
@@ -13,11 +17,7 @@
       "fr:lex:passeport",
       "fr:lex:sejour",
       "fr:lex:renseignement",
-      "fr:lex:russe",
-      "fr:lex:emporter",
-      "fr:lex:recuperer",
-      "fr:lex:prevenir",
-      "fr:lex:accueillir"
+      "fr:lex:russe"
     ],
     "constructions": [],
     "source": "course-plan.json"

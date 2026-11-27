@@ -6,18 +6,18 @@
   "title": "Roman Lyon {Lugdunum}",
   "plan": {
     "words": [
+      "fr:lex:batir",
+      "fr:lex:situer",
+      "fr:lex:conserver",
       "fr:lex:ruine",
       "fr:lex:statue",
-      "fr:lex:batir",
       "fr:lex:sommet",
       "fr:lex:hauteur",
-      "fr:lex:vaste",
-      "fr:lex:situer",
       "fr:lex:etape",
       "fr:lex:expert",
-      "fr:lex:conserver",
-      "fr:lex:romain",
-      "fr:lex:empereur"
+      "fr:lex:empereur",
+      "fr:lex:vaste",
+      "fr:lex:romain"
     ],
     "constructions": [],
     "source": "course-plan.json"

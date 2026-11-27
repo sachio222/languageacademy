@@ -224,6 +224,10 @@ const TEACHING_ADDED_AFTER_SPLIT = {
   // Units 1 to 12 settled for the B2 grammar: donner teaches two pronouns together (je te le donne), which the
   // pronoun order guide after it explains and only that guide used before.
   '2024-02-10-donner': { teaches: ['fr:cx:pronoun.double'] },
+  // course-main, 2026-11-27: the verb frames the checker can now see are taught where Units 1 to 12 first use them:
+  // décider de and commencer à in the past-tense composition lesson, content de + infinitive with the emotion phrases.
+  '2024-06-03-past-tense-composition': { teaches: ['fr:cx:frame.verb-de-infinitive', 'fr:cx:frame.verb-a-infinitive'] },
+  '2024-01-25-emotion-phrases': { teaches: ['fr:cx:frame.il-est-adjective-de-infinitive'] },
 };
 // Teaching a writer moved to an earlier lesson after the split (content Task C4b): the ça lesson no longer teaches
 // c'est, which Basic Nouns now teaches. Each id was in what the split declared and is gone from the file.
