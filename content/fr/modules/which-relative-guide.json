@@ -2,11 +2,296 @@
   "schema": "la-module@1",
   "module_key": "which-relative-guide",
   "kind": "guide",
-  "status": "planned",
+  "status": "written",
   "title": "Which relative? ({qui}, {que}, {où}, {dont}, {ce qui}, {ce que})",
-  "plan": {
-    "words": [],
-    "constructions": [],
-    "source": "course-plan.json"
-  }
+  "short_title": "Which relative?",
+  "description": "Put {qui}, {que}, {où}, {dont}, {ce qui} and {ce que} in one table, and pick each one by what follows it.",
+  "can_do": [
+    "Pick the word that joins a second idea to a noun: {le monsieur qui habite à côté}, {la piscine où Noé nage}, {le pote dont je t'ai parlé}",
+    "Say what you mean without naming the thing: {Je fais ce que je veux.} {Tu sais ce qui est drôle ?}"
+  ],
+  "minutes": 6,
+  "line": "Choose the word by what follows the noun: a verb takes {qui}, a new subject takes {que}, a place or a time takes {où}, a word used with {de} takes {dont}, and with no noun you say {ce qui} or {ce que}.",
+  "parts": [
+    {
+      "id": "p-one-table",
+      "heading": "Each word and what follows it",
+      "text": [
+        "Each of these words adds a second idea to a noun, so you can say which person, thing, place or day you mean. To pick one, look at the noun and at what comes right after it."
+      ],
+      "blocks": [
+        {
+          "cmp": {
+            "left": "The word",
+            "right": "In a sentence",
+            "rows": [
+              [
+                {
+                  "fr": "qui",
+                  "en": "who, that",
+                  "sub": "a verb comes next"
+                },
+                {
+                  "fr": "le voisin qui parle",
+                  "en": "the neighbour who is talking"
+                }
+              ],
+              [
+                {
+                  "fr": "que",
+                  "en": "who, that",
+                  "sub": "a new subject comes next"
+                },
+                {
+                  "fr": "le livre que je lis",
+                  "en": "the book I'm reading"
+                }
+              ],
+              [
+                {
+                  "fr": "où",
+                  "en": "where, when",
+                  "sub": "the noun is a place or a time"
+                },
+                {
+                  "fr": "la piscine où Noé nage",
+                  "en": "the pool where Noé swims"
+                }
+              ],
+              [
+                {
+                  "fr": "dont",
+                  "en": "about which, of which",
+                  "sub": "a word used with {de} follows"
+                },
+                {
+                  "fr": "le quartier dont je suis fière",
+                  "en": "the neighbourhood I'm proud of"
+                }
+              ],
+              [
+                {
+                  "fr": "ce qui",
+                  "en": "what",
+                  "sub": "no noun, and a verb comes next"
+                },
+                {
+                  "fr": "ce qui est drôle",
+                  "en": "what is funny"
+                }
+              ],
+              [
+                {
+                  "fr": "ce que",
+                  "en": "what",
+                  "sub": "no noun, and a new subject comes next"
+                },
+                {
+                  "fr": "ce que j'aime",
+                  "en": "what I like"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "p-qui-que",
+      "heading": "{qui} or {que}: a verb or a new subject",
+      "text": [
+        "In questions, {qui est-ce qui} asks who does the action and {qui est-ce que} asks who receives it. After a noun the split is the same. {qui} means the noun does the action, so the verb comes next. {que} means the noun receives the action, so a new subject comes next, such as {je}, {tu} or {on}."
+      ],
+      "note": "{que} becomes {qu'} before a vowel: {le livre qu'elle lit}. {qui} never shortens: {la voisine qui a un chien}.",
+      "blocks": [
+        {
+          "pairs": [
+            [
+              "le monsieur qui habite à côté",
+              "the man who lives next door"
+            ],
+            [
+              "le copain que tu cherches",
+              "the friend you're looking for"
+            ],
+            [
+              "la voisine qui a un chien",
+              "the neighbour who has a dog"
+            ],
+            [
+              "Maya, c'est la copine que j'invite samedi.",
+              "Maya is the friend I'm inviting on Saturday."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-ou",
+      "heading": "{où}: a place or a time",
+      "text": [
+        "After a place or a day, {où} says what happens there or then. A new subject often comes next, as it does after {que}, but the noun is a place or a time, so the word is {où}."
+      ],
+      "note": "{où} with an accent means where or when. {ou} without one means or.",
+      "blocks": [
+        {
+          "lines": [
+            [
+              "la bibliothèque où je travaille",
+              "the library where I work"
+            ],
+            [
+              "la boulangerie où je vais tous les matins",
+              "the bakery I go to every morning"
+            ],
+            [
+              "le jour où Maya est arrivée",
+              "the day Maya arrived"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-dont",
+      "heading": "{dont}: words used with {de}",
+      "text": [
+        "Some words are used with {de}: {parler de}, {être fier de}. With them, {dont} stands for {de} and the noun together, so no {de} comes after it."
+      ],
+      "blocks": [
+        {
+          "build": [
+            {
+              "k": "With de",
+              "fr": "Je suis fière de ce quartier.",
+              "en": "I'm proud of this neighbourhood."
+            },
+            {
+              "k": "With dont",
+              "fr": "C'est un quartier dont je suis fière.",
+              "en": "It's a neighbourhood I'm proud of."
+            }
+          ]
+        },
+        {
+          "build": [
+            {
+              "k": "With de",
+              "fr": "Je t'ai parlé de Hugo.",
+              "en": "I told you about Hugo."
+            },
+            {
+              "k": "With dont",
+              "fr": "Hugo, c'est le pote dont je t'ai parlé.",
+              "en": "Hugo is the mate I told you about."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p-ce",
+      "heading": "{ce qui} and {ce que}: no noun",
+      "text": [
+        "When you do not name the thing first, {ce} takes the place of the noun, and the English is usually what. The same split holds: a verb next takes {ce qui}, a new subject next takes {ce que}."
+      ],
+      "blocks": [
+        {
+          "lines": [
+            [
+              "Tu sais ce qui est drôle ?",
+              "You know what's funny?"
+            ],
+            [
+              "Je fais ce que je veux.",
+              "I do what I want."
+            ],
+            [
+              "Dis-moi ce que tu aimes ici.",
+              "Tell me what you like here."
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k1",
+      "ask": "Léa shows Maya round. Which word fills the gap? «C'est la piscine ___ Noé nage le samedi.»",
+      "options": [
+        {
+          "text": "que",
+          "fr": true
+        },
+        {
+          "text": "où",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "dont",
+          "fr": true
+        }
+      ],
+      "why": "A new subject comes next, {Noé}, but the noun is a place, so the word is {où}: Noé swims there."
+    },
+    {
+      "id": "k2",
+      "ask": "Which one says “Hugo is the mate I told you about”?",
+      "options": [
+        {
+          "text": "Hugo, c'est le pote que je t'ai parlé.",
+          "fr": true
+        },
+        {
+          "text": "Hugo, c'est le pote dont je t'ai parlé.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Hugo, c'est le pote qui je t'ai parlé.",
+          "fr": true
+        }
+      ],
+      "why": "You talk about someone with {parler de}, so the word is {dont}. It stands for {de Hugo}."
+    },
+    {
+      "id": "k3",
+      "ask": "Léa tells Maya she is free on Saturday. Which words fill the gap? «Samedi, je fais ___ je veux.»",
+      "options": [
+        {
+          "text": "ce qui",
+          "fr": true
+        },
+        {
+          "text": "que",
+          "fr": true
+        },
+        {
+          "text": "ce que",
+          "fr": true,
+          "right": true
+        }
+      ],
+      "why": "There is no noun, so the gap starts with {ce}. A new subject comes next, {je}, so it is {ce que}."
+    }
+  ],
+  "glosses": [
+    {
+      "fr": "lis",
+      "en": "read, am reading",
+      "note": "present of {lire}"
+    },
+    {
+      "fr": "lit",
+      "en": "reads, is reading",
+      "note": "present of {lire}"
+    },
+    {
+      "fr": "fière",
+      "en": "proud",
+      "note": "feminine of {fier}"
+    }
+  ]
 }

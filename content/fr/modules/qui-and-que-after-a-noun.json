@@ -2,23 +2,549 @@
   "schema": "la-module@1",
   "module_key": "qui-and-que-after-a-noun",
   "kind": "lesson",
-  "status": "planned",
+  "status": "written",
   "title": "{qui} and {que} after a noun (le voisin qui parle, le livre que je lis)",
-  "plan": {
-    "words": [
-      "fr:lex:voisin",
-      "fr:lex:copain",
-      "fr:lex:monsieur",
-      "fr:lex:lire",
-      "fr:lex:voisine",
-      "fr:lex:copine",
-      "fr:lex:mec",
-      "fr:lex:truc"
-    ],
+  "description": "Say which person or thing you mean by what it does, or by what someone does to it: {le monsieur qui habite à côté}, {le livre que je lis}.",
+  "can_do": [
+    "Say which person you mean by what they do: {le monsieur qui habite à côté}",
+    "Say which thing you mean by what someone does to it: {le livre que je lis}",
+    "Say what you and others read: {je lis}, {elle lit}, {j'ai lu}"
+  ],
+  "teaches": {
     "constructions": [
       "fr:cx:relative.qui",
       "fr:cx:relative.que"
     ],
-    "source": "course-plan.json"
-  }
+    "words": [
+      "fr:form:lire.prs.1sg",
+      "fr:form:lire.prs.2sg",
+      "fr:form:lire.prs.3sg",
+      "fr:form:lire.prs.1pl",
+      "fr:form:lire.prs.2pl",
+      "fr:form:lire.prs.3pl",
+      "fr:form:lire.ptcp"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word_id": "voisin-fr",
+      "fr": "voisin",
+      "gloss": "neighbour (a man or boy)",
+      "note": "Ends in a nasal vowel, with no n sound: {un voisin}.",
+      "example_fr": "Le voisin qui habite à côté est très gentil.",
+      "example_en": "The neighbour who lives next door is very kind.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "copain-fr",
+      "fr": "copain",
+      "gloss": "friend (a boy or man); boyfriend",
+      "note": "{un copain} is a friend; {mon copain} often means my boyfriend.",
+      "example_fr": "Hugo, c'est un copain que je vois tous les jours.",
+      "example_en": "Hugo is a friend I see every day.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "monsieur-fr",
+      "fr": "monsieur",
+      "gloss": "man; Mr, sir",
+      "note": "The polite word for a man: {le monsieur}, {Bonjour, monsieur.} The first syllable sounds like {me}.",
+      "example_fr": "Le monsieur qui parle à mon voisin, c'est Karim.",
+      "example_en": "The man talking to my neighbour is Karim.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "lire-fr",
+      "fr": "lire",
+      "gloss": "to read",
+      "note": "Its forms are in the table: {je lis}, {nous lisons}, {j'ai lu}.",
+      "example_fr": "Le livre que je lis est très long.",
+      "example_en": "The book I'm reading is very long.",
+      "part_of_speech": "verb"
+    },
+    {
+      "word_id": "voisine-fr",
+      "fr": "voisine",
+      "gloss": "neighbour (a woman or girl)",
+      "note": "The feminine of {voisin}: now you hear the n.",
+      "example_fr": "La voisine qui a un chien habite ici depuis un an.",
+      "example_en": "The neighbour with the dog has lived here for a year.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "copine-fr",
+      "fr": "copine",
+      "gloss": "friend (a girl or woman); girlfriend",
+      "note": "The feminine of {copain}: now you hear the n. {ma copine} often means my girlfriend.",
+      "example_fr": "C'est une copine que je vois souvent au parc.",
+      "example_en": "She's a friend I often see at the park.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "mec-fr",
+      "fr": "mec",
+      "gloss": "guy",
+      "note": "Casual spoken French, used between friends. You need to understand it, not say it.",
+      "example_fr": "C'est qui, le mec qui parle à Karim ?",
+      "example_en": "Who's the guy talking to Karim?",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "truc-fr",
+      "fr": "truc",
+      "gloss": "thing, thingy",
+      "note": "Spoken French for a thing you don't name. Written French says {chose}.",
+      "example_fr": "C'est quoi, le truc que tu cherches ?",
+      "example_en": "What's that thing you're looking for?",
+      "part_of_speech": "noun"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-qui-after-a-noun",
+      "term": "{qui}: the one who does it",
+      "definition": "Put {qui} after a noun to say what that person or thing does. {qui} is the subject of the next verb, so no other subject comes after it. The verb agrees with the noun before {qui}: {les enfants qui jouent}, {c'est toi qui viens}. {qui} never shortens before a vowel: {qui a}, {qui habite}.",
+      "example": "{La dame qui habite à côté a un chien.} The woman who lives next door has a dog."
+    },
+    {
+      "id": "c-que-after-a-noun",
+      "term": "{que}: the one someone does it to",
+      "definition": "Put {que} after a noun when someone else does the action to it. A subject and a verb come after {que}. English can drop \"that\" (the film I'm watching), but French always keeps {que}. Before a vowel, {que} becomes {qu'}: {qu'il}, {qu'elle}, {qu'on}.",
+      "example": "{C'est le film que je regarde.} That's the film I'm watching."
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-lire",
+      "title": "{lire}: to read",
+      "rows": [
+        {
+          "fr": "je lis",
+          "en": "I read, I'm reading"
+        },
+        {
+          "fr": "tu lis",
+          "en": "you read"
+        },
+        {
+          "fr": "il lit, elle lit, on lit",
+          "en": "he reads, she reads, we read"
+        },
+        {
+          "fr": "nous lisons",
+          "en": "we read"
+        },
+        {
+          "fr": "vous lisez",
+          "en": "you read"
+        },
+        {
+          "fr": "ils lisent, elles lisent",
+          "en": "they read"
+        },
+        {
+          "fr": "j'ai lu",
+          "en": "I read, I have read",
+          "note": "passé composé, with the participle {lu}"
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "voisin",
+      "fr": "voisin",
+      "word_id": "voisin-fr"
+    },
+    {
+      "phrase_id_suffix": "voisine",
+      "fr": "voisine",
+      "word_id": "voisine-fr"
+    },
+    {
+      "phrase_id_suffix": "copain",
+      "fr": "copain",
+      "word_id": "copain-fr"
+    },
+    {
+      "phrase_id_suffix": "copine",
+      "fr": "copine",
+      "word_id": "copine-fr"
+    },
+    {
+      "phrase_id_suffix": "monsieur",
+      "fr": "monsieur",
+      "word_id": "monsieur-fr"
+    },
+    {
+      "phrase_id_suffix": "lire",
+      "fr": "lire",
+      "word_id": "lire-fr"
+    },
+    {
+      "phrase_id_suffix": "truc",
+      "fr": "truc",
+      "word_id": "truc-fr"
+    },
+    {
+      "phrase_id_suffix": "la-voisine-qui-a-un-chien",
+      "fr": "la voisine qui a un chien"
+    },
+    {
+      "phrase_id_suffix": "le-chat-qu-elle-adore",
+      "fr": "le chat qu'elle adore"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-monsieur-qui-habite-a-cote",
+      "type": "transform",
+      "instruction": "At the window, Léa points out a man in the street to Maya. Join her two sentences with {qui}.",
+      "shown": "C'est le monsieur. Il habite à côté.",
+      "answer": "C'est le monsieur qui habite à côté.",
+      "mistakes": [
+        {
+          "answer": "C'est le monsieur qu'habite à côté.",
+          "feedback": "{qui} never shortens before a vowel: {qui habite}."
+        },
+        {
+          "answer": "C'est le monsieur qui il habite à côté.",
+          "feedback": "{qui} already stands for the man, so drop {il}: {qui habite}."
+        },
+        {
+          "answer": "C'est le monsieur que habite à côté.",
+          "feedback": "The man does the living, so use {qui}. {que} needs its own subject after it, as in {que je}."
+        }
+      ]
+    },
+    {
+      "id": "i-karim-qui-fait-le-pain",
+      "type": "gapfill",
+      "text": "Et Karim, c'est le monsieur ___ fait le pain du quartier.",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "gloss": "And Karim is the man who makes the neighbourhood's bread."
+    },
+    {
+      "id": "i-mec-meaning",
+      "type": "meaning",
+      "instruction": "Maya asks Léa about someone in the street. What does {mec} mean here?",
+      "shown": "C'est qui, le mec qui parle à Karim ?",
+      "answer": "guy",
+      "accept": [
+        "the guy",
+        "a guy",
+        "bloke",
+        "man",
+        "the man",
+        "dude"
+      ]
+    },
+    {
+      "id": "i-vieille-dame-qui-lit",
+      "type": "gapfill",
+      "text": "La vieille dame qui ___ sur le banc, c'est notre voisine.",
+      "blanks": [
+        {
+          "answer": "lit"
+        }
+      ],
+      "gloss": "The old woman reading on the bench is our neighbour.",
+      "mistakes": [
+        {
+          "answer": "lis",
+          "feedback": "{lis} goes with {je} and {tu}. After {qui}, the verb agrees with {la vieille dame}: {lit}."
+        }
+      ]
+    },
+    {
+      "id": "i-banc-qui-est-humide",
+      "type": "gapfill",
+      "text": "Il a plu ce matin, alors le banc ___ est devant le café est encore humide.",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "gloss": "It rained this morning, so the bench in front of the café is still damp.",
+      "mistakes": [
+        {
+          "answer": "qu'",
+          "feedback": "{qui} never shortens: {qui est}."
+        },
+        {
+          "answer": "que",
+          "feedback": "The bench is the subject of {est}, so use {qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-livre-que-je-lis",
+      "type": "transform",
+      "instruction": "Maya picks up a book from Léa's table. Léa tells her about it. Join the two sentences with {que}.",
+      "shown": "C'est le livre. Je lis ce livre.",
+      "answer": "C'est le livre que je lis.",
+      "mistakes": [
+        {
+          "answer": "C'est le livre je lis.",
+          "feedback": "English can drop \"that\", but French keeps {que}: {le livre que je lis}."
+        },
+        {
+          "answer": "C'est le livre qui je lis.",
+          "feedback": "{je} is the subject: you read the book. Use {que}."
+        },
+        {
+          "answer": "C'est le livre que je le lis.",
+          "feedback": "{que} already stands for the book, so drop {le}."
+        }
+      ]
+    },
+    {
+      "id": "i-livre-que-j-ai-lu",
+      "type": "gapfill",
+      "text": "Prends-le : c'est un livre que j'ai ___ la semaine dernière. Il est super.",
+      "blanks": [
+        {
+          "answer": "lu"
+        }
+      ],
+      "gloss": "Take it: it's a book I read last week. It's great.",
+      "mistakes": [
+        {
+          "answer": "lis",
+          "feedback": "After {j'ai}, use the participle: {j'ai lu}."
+        },
+        {
+          "answer": "lire",
+          "feedback": "After {j'ai}, use the participle: {j'ai lu}."
+        }
+      ]
+    },
+    {
+      "id": "i-livre-que-nous-lisons",
+      "type": "gapfill",
+      "text": "Le livre que nous ___ en classe est très long.",
+      "blanks": [
+        {
+          "answer": "lisons"
+        }
+      ],
+      "gloss": "The book we're reading in class is very long.",
+      "mistakes": [
+        {
+          "answer": "lisez",
+          "feedback": "{lisez} goes with {vous}. With {nous}, say {lisons}."
+        },
+        {
+          "answer": "lit",
+          "feedback": "After {que}, the verb agrees with its own subject, {nous}: {lisons}."
+        }
+      ]
+    },
+    {
+      "id": "i-enfants-qui-lisent",
+      "type": "gapfill",
+      "text": "Les enfants qui ___ sous l'arbre, ce sont Noé et ses copains.",
+      "blanks": [
+        {
+          "answer": "lisent"
+        }
+      ],
+      "gloss": "The children reading under the tree are Noé and his friends.",
+      "mistakes": [
+        {
+          "answer": "lit",
+          "feedback": "After {qui}, the verb agrees with the noun before it. {les enfants} is plural: {lisent}."
+        }
+      ]
+    },
+    {
+      "id": "i-chat-qu-elle-adore",
+      "type": "transform",
+      "instruction": "Léa tells Maya about Mme Garnier, the neighbour on the ground floor, and her cat. Join the two sentences with {que}.",
+      "shown": "Voilà le chat. Elle adore ce chat.",
+      "answer": "Voilà le chat qu'elle adore.",
+      "mistakes": [
+        {
+          "answer": "Voilà le chat que elle adore.",
+          "feedback": "Before a vowel, {que} becomes {qu'}: {qu'elle}."
+        },
+        {
+          "answer": "Voilà le chat qui elle adore.",
+          "feedback": "{elle} is the subject: she loves the cat. Use {que}, shortened before the vowel: {qu'elle}."
+        }
+      ]
+    },
+    {
+      "id": "i-dame-qu-on-voit",
+      "type": "transform",
+      "instruction": "Léa tells Maya about a woman in the street. Join the two sentences with {que}.",
+      "shown": "C'est la dame. On la voit tous les matins devant le café.",
+      "answer": "C'est la dame qu'on voit tous les matins devant le café.",
+      "accept": [
+        "C'est la dame que l'on voit tous les matins devant le café."
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est la dame qu'on la voit tous les matins devant le café.",
+          "feedback": "{qu'} already stands for the woman, so drop {la}."
+        },
+        {
+          "answer": "C'est la dame que on voit tous les matins devant le café.",
+          "feedback": "Before a vowel, {que} becomes {qu'}: {qu'on}."
+        },
+        {
+          "answer": "C'est la dame qui on voit tous les matins devant le café.",
+          "feedback": "{on} is the subject: we see the woman. Use {que}, shortened: {qu'on}."
+        }
+      ]
+    },
+    {
+      "id": "i-choice-copain-que-je-cherche",
+      "type": "choice",
+      "question": "Léa is looking for Hugo. Which one says \"the friend I'm looking for\"?",
+      "options": [
+        {
+          "text": "le copain que je cherche",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "le copain qui je cherche",
+          "fr": true
+        },
+        {
+          "text": "le copain je cherche",
+          "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-toi-qui-viens",
+      "type": "respond",
+      "situation": "On the stairs, Mme Garnier meets Maya for the first time. Ask, as Mme Garnier, whether Maya is the one who comes from Montréal. Start with {C'est toi qui}.",
+      "answer": "C'est toi qui viens de Montréal ?",
+      "accept": [
+        "Bonjour ! C'est toi qui viens de Montréal ?",
+        "C'est vous qui venez de Montréal ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est toi qui vient de Montréal ?",
+          "feedback": "After {toi qui}, the verb agrees with {toi}, as in {tu viens}: {toi qui viens}."
+        }
+      ]
+    },
+    {
+      "id": "i-toi-que-je-cherche",
+      "type": "gapfill",
+      "text": "Ah, c'est toi ___ je cherche ! Tu veux un gâteau ?",
+      "blanks": [
+        {
+          "answer": "que"
+        }
+      ],
+      "gloss": "Mme Garnier: Ah, you're the one I'm looking for! Would you like a cake?"
+    },
+    {
+      "id": "i-truc-que-tu-cherches",
+      "type": "respond",
+      "situation": "Back upstairs, Maya is searching Léa's table for something. Ask her what the thing she's looking for is, the way friends say it. Use {truc} and {que}.",
+      "answer": "C'est quoi, le truc que tu cherches ?",
+      "accept": [
+        "Le truc que tu cherches, c'est quoi ?",
+        "Qu'est-ce que c'est, le truc que tu cherches ?",
+        "C'est quoi, ce truc que tu cherches ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est quoi, le truc tu cherches ?",
+          "feedback": "French keeps {que} where English drops \"that\": {le truc que tu cherches}."
+        },
+        {
+          "answer": "C'est quoi, le truc qui tu cherches ?",
+          "feedback": "{tu} is the subject: you are looking for the thing. Use {que}."
+        }
+      ]
+    },
+    {
+      "id": "i-copine-que-je-vois",
+      "type": "respond",
+      "situation": "Maya points at a girl in the street and asks: {C'est qui ?} Tell her it's a friend you see often. Start with {C'est une copine}.",
+      "answer": "C'est une copine que je vois souvent.",
+      "accept": [
+        "C'est une copine que je vois souvent au parc.",
+        "C'est une copine qu'on voit souvent.",
+        "C'est une copine que je vois tout le temps."
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est une copine qui je vois souvent.",
+          "feedback": "{je} is the subject: you see her. Use {que}."
+        },
+        {
+          "answer": "C'est une copine je vois souvent.",
+          "feedback": "French keeps {que} where English drops \"that\": {une copine que je vois}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-voisine-qui-a-un-chien",
+      "type": "respond",
+      "situation": "Now Maya names the people back. Léa points at the woman with the dog and asks: {C'est qui, elle ?} Answer as Maya, with {la voisine} and {qui}.",
+      "answer": "C'est la voisine qui a un chien.",
+      "accept": [
+        "La voisine qui a un chien.",
+        "Elle, c'est la voisine qui a un chien.",
+        "C'est la voisine qui a le chien."
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est la voisine qu'a un chien.",
+          "feedback": "{qui} never shortens before a vowel: {qui a}."
+        },
+        {
+          "answer": "C'est la voisine que a un chien.",
+          "feedback": "The neighbour has the dog, so she is the subject: use {qui}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-copain-que-tu-cherches",
+      "type": "respond",
+      "situation": "Léa asks: {Et Hugo, il est où ?} Maya sees him in front of the café. Answer as Maya. Start with {Le copain que tu cherches}.",
+      "answer": "Le copain que tu cherches est devant le café.",
+      "accept": [
+        "Le copain que tu cherches, il est devant le café.",
+        "Le copain que tu cherches est là, devant le café.",
+        "Le copain que tu cherches, il est là, devant le café."
+      ],
+      "mistakes": [
+        {
+          "answer": "Le copain qui tu cherches est devant le café.",
+          "feedback": "{tu} is the subject: you are looking for him. Use {que}."
+        }
+      ]
+    },
+    {
+      "id": "i-au-revoir-livre-que-tu-me-donnes",
+      "type": "gapfill",
+      "text": "Bon, je monte. Au revoir, Léa ! Et merci pour le livre ___ tu me donnes !",
+      "blanks": [
+        {
+          "answer": "que"
+        }
+      ],
+      "gloss": "Maya: Right, I'm going up. Bye, Léa! And thanks for the book you're giving me!",
+      "mistakes": [
+        {
+          "answer": "qui",
+          "feedback": "{tu} is the subject: Léa gives the book. Use {que}."
+        }
+      ]
+    }
+  ]
 }

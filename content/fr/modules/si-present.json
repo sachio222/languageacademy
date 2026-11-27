@@ -2,18 +2,468 @@
   "schema": "la-module@1",
   "module_key": "si-present",
   "kind": "lesson",
-  "status": "planned",
+  "status": "written",
   "title": "{si} + present: plans that depend on something (s'il pleut, on va à la bibliothèque)",
-  "plan": {
-    "words": [
-      "fr:lex:meteo",
-      "fr:lex:velo",
-      "fr:lex:neiger",
-      "fr:lex:bof"
-    ],
+  "description": "Make a plan that depends on the weather or on someone: {s'il pleut, on va à la bibliothèque}.",
+  "can_do": [
+    "Say what you will do if the weather is nice, wet or snowy: {S'il fait beau, on prend les vélos.}",
+    "Answer a plan with a condition of your own: {Si tu veux, on y va.}"
+  ],
+  "teaches": {
     "constructions": [
       "fr:cx:si.present"
-    ],
-    "source": "course-plan.json"
-  }
+    ]
+  },
+  "vocabulary": [
+    {
+      "word_id": "meteo-fr",
+      "fr": "la météo",
+      "gloss": "weather forecast",
+      "note": "Feminine: {la météo}.",
+      "example_fr": "La météo dit qu'il va pleuvoir samedi.",
+      "example_en": "The forecast says it is going to rain on Saturday.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "velo-fr",
+      "fr": "un vélo",
+      "gloss": "bike",
+      "note": "Masculine: {un vélo}, {les vélos}.",
+      "example_fr": "S'il fait beau, on prend les vélos.",
+      "example_en": "If it's nice, we'll take the bikes.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "il-pleut-fr",
+      "fr": "il pleut",
+      "gloss": "it is raining",
+      "review": true,
+      "example_fr": "S'il pleut, on va à la bibliothèque.",
+      "example_en": "If it rains, we'll go to the library."
+    },
+    {
+      "word_id": "neiger-fr",
+      "fr": "neiger",
+      "gloss": "to snow",
+      "note": "Like {pleuvoir}, it only takes {il}: {il neige}, it is snowing.",
+      "example_fr": "S'il neige, on reste à la maison.",
+      "example_en": "If it snows, we'll stay at home.",
+      "part_of_speech": "verb"
+    },
+    {
+      "word_id": "bof-fr",
+      "fr": "bof",
+      "gloss": "meh, not really",
+      "note": "Spoken, often with a shrug. It says you are not keen.",
+      "example_fr": "On va au parc ? Bof, l'herbe est humide.",
+      "example_en": "Shall we go to the park? Meh, the grass is wet.",
+      "part_of_speech": "interjection"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-si-present",
+      "term": "{si} + present: a plan that depends on something",
+      "definition": "Say the condition with {si} and a verb in the present, then say the plan. The plan can be in the present, with {aller} + infinitive, or an order. The condition stays in the present, even when it is about next Saturday. It can also come after the plan.",
+      "example": "{Si tu veux, on y va.} (If you want, let's go.) {Je passe chez toi si j'ai le temps.} (I'll drop by if I have time.)"
+    },
+    {
+      "id": "c-sil-si-elle",
+      "term": "{s'il}, but {si elle} and {si on}",
+      "definition": "{Si} drops its i before {il} and {ils} only. Before {elle}, {on} and every other word, it stays whole.",
+      "example": "{s'il pleut}, {s'ils veulent}, {si elle vient}, {si on a le temps}"
+    },
+    {
+      "id": "c-si-not-a-plan",
+      "term": "Some {si} are not plans",
+      "definition": "After {je ne sais pas} or {je me demande}, {si} means whether. {S'il te plaît} and {s'il vous plaît} mean please.",
+      "example": "{Je ne sais pas s'il pleut.} (I don't know whether it's raining.)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-neiger",
+      "title": "{neiger}",
+      "rows": [
+        {
+          "fr": "il neige",
+          "en": "it is snowing"
+        },
+        {
+          "fr": "s'il neige",
+          "en": "if it snows"
+        },
+        {
+          "fr": "il va neiger",
+          "en": "it is going to snow",
+          "note": "{aller} + infinitive"
+        }
+      ]
+    },
+    {
+      "id": "t-plans-with-si",
+      "title": "Plans with {si}",
+      "rows": [
+        {
+          "fr": "S'il fait beau, on prend les vélos.",
+          "en": "If it's nice, we'll take the bikes."
+        },
+        {
+          "fr": "S'il fait chaud, on regarde les animaux du parc : les abeilles, les papillons.",
+          "en": "If it's hot, we'll watch the animals in the park: the bees, the butterflies."
+        },
+        {
+          "fr": "S'il pleut, on va à la bibliothèque.",
+          "en": "If it rains, we'll go to the library."
+        },
+        {
+          "fr": "S'il fait froid, on va à la piscine où mon frère nage.",
+          "en": "If it's cold, we'll go to the pool where my brother swims."
+        },
+        {
+          "fr": "S'il neige, on reste à la maison.",
+          "en": "If it snows, we'll stay at home."
+        },
+        {
+          "fr": "Si tu veux, on y va.",
+          "en": "If you want, let's go."
+        },
+        {
+          "fr": "Je viens si j'ai le temps.",
+          "en": "I'll come if I have time."
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "voisine-velos",
+      "fr": "Si ta voisine veut, on prend les vélos."
+    },
+    {
+      "phrase_id_suffix": "copain-maison",
+      "fr": "S'il pleut, mon copain reste à la maison."
+    },
+    {
+      "phrase_id_suffix": "copine-temps",
+      "fr": "Si ta copine a le temps, elle vient."
+    },
+    {
+      "phrase_id_suffix": "meteo-quil",
+      "fr": "La météo dit qu'il va neiger."
+    }
+  ],
+  "items": [
+    {
+      "id": "i-meteo-samedi",
+      "type": "respond",
+      "situation": "Léa and Hugo read the weather forecast for Saturday on Léa's phone. Hugo asks: {Qu'est-ce que la météo dit pour samedi ?} Tell him it says it is going to rain.",
+      "answer": "La météo dit qu'il va pleuvoir.",
+      "accept": [
+        "La météo dit qu'il va pleuvoir samedi.",
+        "Elle dit qu'il va pleuvoir.",
+        "Elle dit qu'il va pleuvoir samedi.",
+        "Il va pleuvoir.",
+        "Il va pleuvoir samedi."
+      ],
+      "hint": "{dire que} + {aller} + infinitive",
+      "mistakes": [
+        {
+          "answer": "La météo dit que il va pleuvoir.",
+          "feedback": "{Que} shortens before a vowel: {qu'il}."
+        },
+        {
+          "answer": "La météo dit qu'il pleuvoir.",
+          "feedback": "Keep {va} before the infinitive: {il va pleuvoir}."
+        }
+      ]
+    },
+    {
+      "id": "i-gap-sil-pleut",
+      "type": "gapfill",
+      "text": "___ pleut, on va à la bibliothèque.",
+      "gloss": "Hugo: if it rains, we'll go to the library.",
+      "blanks": [
+        {
+          "answer": "S'il",
+          "accept": [
+            "s'il"
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "Si il",
+          "feedback": "{Si} drops its i before {il}: {s'il pleut}."
+        }
+      ]
+    },
+    {
+      "id": "i-gap-si-tu-veux-velos",
+      "type": "gapfill",
+      "text": "Si tu ___, on prend les vélos.",
+      "gloss": "Léa to Hugo: if you want, we'll take the bikes.",
+      "blanks": [
+        {
+          "answer": "veux"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "voudrais",
+          "feedback": "In a real plan, the verb after {si} is in the present: {si tu veux}."
+        },
+        {
+          "answer": "voudras",
+          "feedback": "No future after {si}: {si tu veux}, even for Saturday."
+        }
+      ]
+    },
+    {
+      "id": "i-tf-beau-velos",
+      "type": "transform",
+      "instruction": "Hugo makes the plan depend on the sun. Join his two sentences with {s'il}.",
+      "shown": "Il fait beau. On prend les vélos.",
+      "answer": "S'il fait beau, on prend les vélos.",
+      "accept": [
+        "On prend les vélos s'il fait beau.",
+        "S'il fait beau, nous prenons les vélos."
+      ],
+      "mistakes": [
+        {
+          "answer": "Si il fait beau, on prend les vélos.",
+          "feedback": "{Si} drops its i before {il}: {s'il fait beau}."
+        }
+      ]
+    },
+    {
+      "id": "i-tf-pleut-bibliotheque",
+      "type": "transform",
+      "instruction": "Léa makes a plan for rain. Join her two sentences with {s'il}.",
+      "shown": "Il pleut. On va à la bibliothèque.",
+      "answer": "S'il pleut, on va à la bibliothèque.",
+      "accept": [
+        "On va à la bibliothèque s'il pleut.",
+        "S'il pleut, nous allons à la bibliothèque."
+      ],
+      "mistakes": [
+        {
+          "answer": "S'il pleuvra, on va à la bibliothèque.",
+          "feedback": "No future after {si}: {s'il pleut}, even for Saturday."
+        }
+      ]
+    },
+    {
+      "id": "i-tf-neige-maison",
+      "type": "transform",
+      "instruction": "The forecast says it may snow. Join Hugo's two sentences with {s'il}.",
+      "shown": "Il neige. On reste à la maison.",
+      "answer": "S'il neige, on reste à la maison.",
+      "accept": [
+        "On reste à la maison s'il neige.",
+        "S'il neige, nous restons à la maison."
+      ],
+      "mistakes": [
+        {
+          "answer": "S'il va neiger, on reste à la maison.",
+          "feedback": "For the condition, use the present: {s'il neige}. The plan can use {aller}: {on va rester à la maison}."
+        }
+      ]
+    },
+    {
+      "id": "i-tf-viens-si-temps",
+      "type": "transform",
+      "instruction": "Hugo asks if Léa is coming to the market on Sunday. She puts her plan first. Start with {Je viens}.",
+      "shown": "J'ai le temps. Je viens.",
+      "answer": "Je viens si j'ai le temps.",
+      "mistakes": [
+        {
+          "answer": "Je viens si j'aurai le temps.",
+          "feedback": "No future after {si}: {si j'ai le temps}."
+        }
+      ]
+    },
+    {
+      "id": "i-bof-bibliotheque",
+      "type": "respond",
+      "situation": "Hugo asks: {S'il pleut, on va à la bibliothèque, hein ?} Léa is not keen. Say meh, then say that if it rains, you stay at home.",
+      "answer": "Bof. S'il pleut, on reste à la maison.",
+      "accept": [
+        "Bof, s'il pleut, on reste à la maison.",
+        "Bof. S'il pleut, je reste à la maison.",
+        "Bof, s'il pleut, je reste à la maison.",
+        "Bof. On reste à la maison s'il pleut.",
+        "Bof. Je reste à la maison s'il pleut.",
+        "Bof. S'il pleut, nous restons à la maison."
+      ],
+      "mistakes": [
+        {
+          "answer": "Bof. Si il pleut, on reste à la maison.",
+          "feedback": "{Si} drops its i before {il}: {s'il pleut}."
+        }
+      ]
+    },
+    {
+      "id": "i-choice-which-plan",
+      "type": "choice",
+      "question": "Which sentence makes a plan?",
+      "options": [
+        {
+          "text": "Si tu veux, on y va.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je ne sais pas si tu veux.",
+          "fr": true
+        },
+        {
+          "text": "Un café, s'il te plaît.",
+          "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-choice-sais-pas-si",
+      "type": "choice",
+      "question": "Hugo says {Je ne sais pas s'il va neiger samedi.} What does he mean?",
+      "options": [
+        {
+          "text": "He does not know whether it will snow on Saturday.",
+          "right": true
+        },
+        {
+          "text": "If it snows on Saturday, he has a plan."
+        },
+        {
+          "text": "He wants it to snow on Saturday."
+        }
+      ]
+    },
+    {
+      "id": "i-gap-si-elle",
+      "type": "gapfill",
+      "text": "___ elle veut, Maya vient avec nous.",
+      "gloss": "Léa: if she wants, Maya comes with us.",
+      "blanks": [
+        {
+          "answer": "Si",
+          "accept": [
+            "si"
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "S'",
+          "feedback": "{Si} shortens only before {il} and {ils}: {si elle veut}."
+        }
+      ]
+    },
+    {
+      "id": "i-gap-si-on-a-boulangerie",
+      "type": "gapfill",
+      "text": "Si on ___ le temps, on passe à la boulangerie.",
+      "gloss": "Hugo: if we have time, we'll drop by the bakery.",
+      "blanks": [
+        {
+          "answer": "a"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "avait",
+          "feedback": "{Si on avait le temps} goes with {on passerait}, for something you imagine. For a real plan, use the present: {si on a}."
+        }
+      ]
+    },
+    {
+      "id": "i-gap-si-vous-voulez",
+      "type": "gapfill",
+      "text": "Si vous ___, on passe samedi. Au revoir, madame !",
+      "gloss": "On the stairs, Léa to Mme Garnier: if you like, we'll drop by on Saturday. Goodbye!",
+      "blanks": [
+        {
+          "answer": "voulez"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "veux",
+          "feedback": "Léa says {vous} to Mme Garnier, so {si vous voulez}."
+        }
+      ]
+    },
+    {
+      "id": "i-piscine-sil-fait-beau",
+      "type": "respond",
+      "situation": "Maya, who has just moved from Montréal, asks Léa: {Euh, on va à la piscine samedi ?} Say yes, if it's nice.",
+      "answer": "Oui, s'il fait beau.",
+      "accept": [
+        "Oui, on y va s'il fait beau.",
+        "Oui, s'il fait beau, on y va.",
+        "S'il fait beau, oui.",
+        "S'il fait beau, on y va."
+      ]
+    },
+    {
+      "id": "i-marche-si-tu-veux",
+      "type": "respond",
+      "situation": "Hugo wants to go to the Sunday market. Tell him: if you want, let's go.",
+      "answer": "Si tu veux, on y va.",
+      "accept": [
+        "On y va si tu veux.",
+        "Ouais, si tu veux, on y va.",
+        "Oui, si tu veux, on y va."
+      ],
+      "mistakes": [
+        {
+          "answer": "Si tu voudrais, on y va.",
+          "feedback": "In a real plan, the verb after {si} is in the present: {si tu veux}."
+        }
+      ]
+    },
+    {
+      "id": "i-plan-soleil",
+      "type": "respond",
+      "situation": "Léa puts her phone away, and she and Hugo write three plans for Saturday. First plan, for sun: they take the bikes.",
+      "answer": "S'il fait beau, on prend les vélos.",
+      "accept": [
+        "On prend les vélos s'il fait beau.",
+        "S'il fait beau, nous prenons les vélos."
+      ]
+    },
+    {
+      "id": "i-plan-pluie",
+      "type": "respond",
+      "situation": "Second plan, for rain: they go to the library.",
+      "answer": "S'il pleut, on va à la bibliothèque.",
+      "accept": [
+        "On va à la bibliothèque s'il pleut.",
+        "S'il pleut, nous allons à la bibliothèque."
+      ],
+      "mistakes": [
+        {
+          "answer": "S'il pleuvra, on va à la bibliothèque.",
+          "feedback": "No future after {si}: {s'il pleut}."
+        }
+      ]
+    },
+    {
+      "id": "i-plan-neige",
+      "type": "respond",
+      "situation": "Third plan, for snow: they stay at home and watch a film.",
+      "answer": "S'il neige, on reste à la maison et on regarde un film.",
+      "accept": [
+        "On reste à la maison et on regarde un film s'il neige.",
+        "S'il neige, nous restons à la maison et nous regardons un film."
+      ],
+      "mistakes": [
+        {
+          "answer": "S'il neigera, on reste à la maison et on regarde un film.",
+          "feedback": "No future after {si}: {s'il neige}."
+        }
+      ]
+    }
+  ]
 }

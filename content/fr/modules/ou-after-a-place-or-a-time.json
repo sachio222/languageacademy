@@ -2,20 +2,458 @@
   "schema": "la-module@1",
   "module_key": "ou-after-a-place-or-a-time",
   "kind": "lesson",
-  "status": "planned",
+  "status": "written",
   "title": "{où} after a place or a time (la bibliothèque où je travaille, le jour où Maya est arrivée)",
-  "plan": {
-    "words": [
-      "fr:lex:boulangerie",
-      "fr:lex:bibliotheque",
-      "fr:lex:piscine",
-      "fr:lex:marche",
-      "fr:lex:euh",
-      "fr:lex:hein"
-    ],
+  "description": "Léa shows Maya round the Croix-Rousse. You name each place by what happens there, and each day by what happened then, with {où}.",
+  "can_do": [
+    "Name a place by what happens there: {la piscine où Noé nage}.",
+    "Name a day or a time by what happened then: {le jour où Maya est arrivée}.",
+    "Choose {où} or {que} after the name of a place."
+  ],
+  "teaches": {
     "constructions": [
       "fr:cx:relative.ou"
-    ],
-    "source": "course-plan.json"
-  }
+    ]
+  },
+  "vocabulary": [
+    {
+      "word_id": "la-boulangerie-fr",
+      "fr": "la boulangerie",
+      "gloss": "the bakery",
+      "example_fr": "Voilà la boulangerie où j'achète le pain tous les matins.",
+      "example_en": "There's the bakery where I buy bread every morning.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "la-bibliotheque-fr",
+      "fr": "la bibliothèque",
+      "gloss": "the library",
+      "example_fr": "C'est la bibliothèque où je travaille le samedi.",
+      "example_en": "That's the library where I work on Saturdays.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "la-piscine-fr",
+      "fr": "la piscine",
+      "gloss": "the swimming pool",
+      "example_fr": "Voilà la piscine où Noé a appris à nager.",
+      "example_en": "There's the pool where Noé learned to swim.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "le-marche-fr",
+      "fr": "le marché",
+      "gloss": "the market",
+      "note": "The noun, not a form of {marcher}.",
+      "example_fr": "Le week-end, il y a un petit marché où on trouve des fruits et des légumes.",
+      "example_en": "At the weekend there's a little market where you can find fruit and vegetables.",
+      "part_of_speech": "noun"
+    },
+    {
+      "word_id": "euh-fr",
+      "fr": "euh",
+      "gloss": "um, er",
+      "note": "The sound you make while you think. Spoken French only.",
+      "example_fr": "Euh… on va où, d'abord ?",
+      "example_en": "Um… where do we go first?",
+      "part_of_speech": "interjection"
+    },
+    {
+      "word_id": "hein-fr",
+      "fr": "hein",
+      "gloss": "right? eh?",
+      "note": "At the end of a sentence it checks that the listener agrees. Said alone, {Hein ?} means what? and sounds rude.",
+      "example_fr": "La boulangerie où je vais est super, hein ?",
+      "example_en": "The bakery I go to is great, right?",
+      "part_of_speech": "interjection"
+    },
+    {
+      "word_id": "ou-fr.where",
+      "fr": "où",
+      "gloss": "where; after a place or a time: where, when",
+      "note": "You know {où} from questions. After a noun it starts the part that says what happens there or then.",
+      "example_fr": "La ville où j'habite est belle.",
+      "example_en": "The town where I live is beautiful.",
+      "review": true
+    },
+    {
+      "word_id": "bonjour-fr",
+      "fr": "bonjour",
+      "gloss": "hello",
+      "note": "In a French building you say {bonjour} to every neighbour you pass on the stairs, even one you have never met. Walking past in silence is what counts as rude.",
+      "example_fr": "Bonjour ! C'est notre nouvelle voisine, Maya.",
+      "example_en": "Hello! This is our new neighbour, Maya.",
+      "review": true
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-ou-after-a-place-or-a-time",
+      "term": "{où} after a place or a time",
+      "definition": "Put {où} after a noun for a place or a time, then say what happens there or then. English says where for a place and when for a time; French says {où} for both, never {quand}. {Où} already means there, so the verb after it takes no {y}. When the verb takes the noun itself as its object, use {que}: {la ville que j'aime}. You can put one or two adjectives before {où}: {le petit parc où on joue}.",
+      "example": "{La ville où j'habite est belle.} (The town where I live is beautiful.) {Le jour où Maya est arrivée, il pleuvait.} (The day Maya arrived, it was raining.)"
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "boulangerie",
+      "fr": "la boulangerie où je vais tous les matins",
+      "word_id": "la-boulangerie-fr"
+    },
+    {
+      "phrase_id_suffix": "bibliotheque",
+      "fr": "la bibliothèque où ma copine travaille",
+      "word_id": "la-bibliotheque-fr"
+    },
+    {
+      "phrase_id_suffix": "piscine",
+      "fr": "la piscine où Noé nage avec son copain",
+      "word_id": "la-piscine-fr"
+    },
+    {
+      "phrase_id_suffix": "marche",
+      "fr": "le marché où notre voisine trouve ses légumes",
+      "word_id": "le-marche-fr"
+    },
+    {
+      "phrase_id_suffix": "jour",
+      "fr": "le jour où mon voisin est arrivé"
+    },
+    {
+      "phrase_id_suffix": "euh",
+      "fr": "Euh… on va où, d'abord ?",
+      "word_id": "euh-fr"
+    }
+  ],
+  "speed_match": [
+    "la-boulangerie-fr",
+    "la-bibliotheque-fr",
+    "la-piscine-fr",
+    "le-marche-fr",
+    "euh-fr",
+    "hein-fr"
+  ],
+  "items": [
+    {
+      "id": "i-bonjour-on-the-stairs",
+      "type": "choice",
+      "question": "On the stairs, Maya passes Mme Garnier, who lives on the ground floor. They have never met. What does Maya do?",
+      "options": [
+        {
+          "text": "She says bonjour as she passes.",
+          "right": true
+        },
+        {
+          "text": "She walks past without a word, since they have never met."
+        },
+        {
+          "text": "She waits for Mme Garnier to speak first."
+        }
+      ]
+    },
+    {
+      "id": "i-euh-on-va-ou",
+      "type": "respond",
+      "situation": "On the stairs, Léa offers to show Maya round. Maya can't decide: {la boulangerie} or {le marché} first? Ask Léa, and start with the sound you make while you think.",
+      "answer": "Euh, on va à la boulangerie ou au marché d'abord ?",
+      "accept": [
+        "Euh… on va à la boulangerie ou au marché d'abord ?",
+        "Euh, on va d'abord à la boulangerie ou au marché ?",
+        "Euh, d'abord, on va à la boulangerie ou au marché ?",
+        "Euh, est-ce qu'on va à la boulangerie ou au marché d'abord ?",
+        "Euh, est-ce qu'on va d'abord à la boulangerie ou au marché ?",
+        "Euh, va-t-on à la boulangerie ou au marché d'abord ?",
+        "Euh, on va au marché ou à la boulangerie d'abord ?"
+      ],
+      "hint": "{euh}, then {on va à la boulangerie ou au marché}",
+      "mistakes": [
+        {
+          "answer": "Hein, on va à la boulangerie ou au marché d'abord ?",
+          "feedback": "{Hein} goes at the end, to check the other person agrees. The sound you make while you think is {euh}."
+        }
+      ]
+    },
+    {
+      "id": "i-boulangerie-ou-je-vais",
+      "type": "transform",
+      "instruction": "Léa points across the street. Join her two sentences with {où}.",
+      "shown": "Voilà la boulangerie. J'y vais tous les matins.",
+      "answer": "Voilà la boulangerie où je vais tous les matins.",
+      "hint": "{où} takes the place of {y}.",
+      "mistakes": [
+        {
+          "answer": "Voilà la boulangerie où j'y vais tous les matins.",
+          "feedback": "{Où} already means there, so drop {y}: {la boulangerie où je vais}."
+        },
+        {
+          "answer": "Voilà la boulangerie que je vais tous les matins.",
+          "feedback": "You go to the bakery; the bakery is where you go. Use {où}, not {que}."
+        }
+      ]
+    },
+    {
+      "id": "i-bibliotheque-ou-je-travaille",
+      "type": "transform",
+      "instruction": "Join the two sentences with {où}.",
+      "shown": "C'est la bibliothèque. Je travaille là le samedi.",
+      "answer": "C'est la bibliothèque où je travaille le samedi.",
+      "hint": "{là} goes, {où} comes in.",
+      "mistakes": [
+        {
+          "answer": "C'est la bibliothèque que je travaille le samedi.",
+          "feedback": "You don't work the library; you work there. For the place where something happens, use {où}."
+        },
+        {
+          "answer": "C'est la bibliothèque où je travaille là le samedi.",
+          "feedback": "{Où} already says there, so {là} goes."
+        }
+      ]
+    },
+    {
+      "id": "i-piscine-ou-noe-a-appris",
+      "type": "transform",
+      "instruction": "Noé shows Maya his pool. Join his two sentences with {où}.",
+      "shown": "C'est la piscine. J'ai appris à nager dans cette piscine.",
+      "answer": "C'est la piscine où j'ai appris à nager.",
+      "mistakes": [
+        {
+          "answer": "C'est la piscine que j'ai appris à nager.",
+          "feedback": "Noé learned to swim in the pool; the pool is where. Use {où}."
+        },
+        {
+          "answer": "C'est la piscine où j'ai appris à nager dans cette piscine.",
+          "feedback": "{Où} takes the place of {dans cette piscine}, so drop it."
+        }
+      ]
+    },
+    {
+      "id": "i-le-jour-ou-il-pleuvait",
+      "type": "transform",
+      "instruction": "Léa tells Maya what she remembers. Say it in one sentence, with {le jour où}.",
+      "shown": "Maya est arrivée samedi. Ce jour-là, il pleuvait.",
+      "answer": "Il pleuvait le jour où Maya est arrivée.",
+      "accept": [
+        "Le jour où Maya est arrivée, il pleuvait.",
+        "Il pleuvait le jour où est arrivée Maya.",
+        "Le jour où est arrivée Maya, il pleuvait."
+      ],
+      "hint": "{le jour où} + what happened that day",
+      "mistakes": [
+        {
+          "answer": "Il pleuvait le jour quand Maya est arrivée.",
+          "feedback": "English says the day when, but French says {le jour où}. After a time, {où} means when."
+        },
+        {
+          "answer": "Le jour quand Maya est arrivée, il pleuvait.",
+          "feedback": "After {le jour}, French uses {où}, not {quand}: {le jour où Maya est arrivée}."
+        },
+        {
+          "answer": "Il pleuvait le jour où Maya est arrivé.",
+          "feedback": "Maya is a girl, so {arrivée} takes the e."
+        }
+      ]
+    },
+    {
+      "id": "i-petit-marche-ou-maman",
+      "type": "gapfill",
+      "text": "Le petit marché ___ maman achète les légumes est à côté de la bibliothèque.",
+      "blanks": [
+        {
+          "answer": "où"
+        }
+      ],
+      "gloss": "The little market where Mum buys vegetables is next to the library.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "Maman buys the vegetables, not the market. The market is where she buys them, so use {où}."
+        }
+      ]
+    },
+    {
+      "id": "i-boulangerie-que-j-adore",
+      "type": "gapfill",
+      "text": "La boulangerie ___ j'adore est au coin de la rue.",
+      "blanks": [
+        {
+          "answer": "que"
+        }
+      ],
+      "gloss": "The bakery I love is on the corner of the street.",
+      "hint": "What does Léa love?",
+      "mistakes": [
+        {
+          "answer": "où",
+          "feedback": "Léa loves the bakery itself: it is the object of {j'adore}. Use {que}, as in {la boulangerie que j'adore}."
+        },
+        {
+          "answer": "qui",
+          "feedback": "{Je} is the subject of {adore}, so the bakery is the object: {que}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-monsieur-qui-travaille",
+      "type": "choice",
+      "question": "Maya asks who the man in the bakery is. Which word completes Léa's answer? {C'est le monsieur ___ travaille à la boulangerie. Il s'appelle Karim.}",
+      "options": [
+        {
+          "text": "qui",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "que",
+          "fr": true
+        },
+        {
+          "text": "où",
+          "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-le-soir-ou-maman-travaillait",
+      "type": "gapfill",
+      "text": "Le soir ___ Maya est arrivée, maman travaillait.",
+      "blanks": [
+        {
+          "answer": "où"
+        }
+      ],
+      "gloss": "The evening Maya arrived, Mum was at work.",
+      "mistakes": [
+        {
+          "answer": "quand",
+          "feedback": "After a time such as {le soir}, French says {où}: {le soir où Maya est arrivée}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-samedi-c-est-le-jour-ou",
+      "type": "transform",
+      "instruction": "Léa explains when Karim bakes his chocolate cake. Start with {Le samedi, c'est le jour où}.",
+      "shown": "Karim fait un gâteau au chocolat le samedi.",
+      "answer": "Le samedi, c'est le jour où Karim fait un gâteau au chocolat.",
+      "accept": [
+        "Le samedi, c'est le jour où Karim fait son gâteau au chocolat."
+      ],
+      "mistakes": [
+        {
+          "answer": "Le samedi, c'est le jour quand Karim fait un gâteau au chocolat.",
+          "feedback": "After {le jour}, use {où}, never {quand}."
+        },
+        {
+          "answer": "Le samedi, c'est le jour où Karim fait un gâteau au chocolat le samedi.",
+          "feedback": "{Le jour où} already says when, so drop the second {le samedi}."
+        }
+      ]
+    },
+    {
+      "id": "i-hein-meaning",
+      "type": "meaning",
+      "instruction": "Noé says this to Maya outside the pool. What does {hein} ask at the end?",
+      "shown": "La piscine est super, hein ?",
+      "answer": "right?",
+      "accept": [
+        "right",
+        "eh?",
+        "eh",
+        "isn't it?",
+        "isn't it",
+        "don't you think?",
+        "don't you think"
+      ]
+    },
+    {
+      "id": "i-c-est-la-bibliotheque-ou-j-aime-lire",
+      "type": "respond",
+      "situation": "Next to {la piscine}, Maya points at a big door and asks what it is. Tell her it is the library where you like to read on Saturdays.",
+      "answer": "C'est la bibliothèque où j'aime lire le samedi.",
+      "accept": [
+        "Voilà la bibliothèque où j'aime lire le samedi.",
+        "Ça, c'est la bibliothèque où j'aime lire le samedi.",
+        "C'est la bibliothèque où j'aime lire le samedi, hein.",
+        "C'est la bibliothèque où le samedi j'aime lire."
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est la bibliothèque que j'aime lire le samedi.",
+          "feedback": "You like to read there; you don't read the library. The library is where it happens, so use {où}."
+        }
+      ]
+    },
+    {
+      "id": "i-piscine-ou-noe-nage",
+      "type": "respond",
+      "situation": "Noé runs ahead and waves from the door of {la piscine}. Tell Maya it is the pool where Noé swims with his {copain}.",
+      "answer": "C'est la piscine où Noé nage avec son copain.",
+      "accept": [
+        "Voilà la piscine où Noé nage avec son copain.",
+        "C'est la piscine où Noé nage avec son copain, hein."
+      ],
+      "mistakes": [
+        {
+          "answer": "C'est la piscine où Noé y nage avec son copain.",
+          "feedback": "{Où} already means there, so drop {y}."
+        },
+        {
+          "answer": "C'est la piscine que Noé nage avec son copain.",
+          "feedback": "Noé swims in the pool; the pool is where. Use {où}."
+        }
+      ]
+    },
+    {
+      "id": "i-hein-croissants",
+      "type": "gapfill",
+      "text": "Les croissants de la boulangerie sont délicieux, ___ ?",
+      "blanks": [
+        {
+          "answer": "hein"
+        }
+      ],
+      "gloss": "The croissants from the bakery are delicious, right?",
+      "hint": "The little word that asks the listener to agree",
+      "mistakes": [
+        {
+          "answer": "euh",
+          "feedback": "{Euh} is the sound you make while you think. To ask the listener to agree, end with {hein}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-vais-d-abord-a-la-bibliotheque",
+      "type": "respond",
+      "situation": "At the top of the street, Léa asks: {Alors, tu vas où d'abord ?} Maya picks the library where Léa works. Answer as Maya.",
+      "answer": "Je vais d'abord à la bibliothèque où tu travailles.",
+      "accept": [
+        "D'abord, je vais à la bibliothèque où tu travailles.",
+        "Je vais à la bibliothèque où tu travailles.",
+        "À la bibliothèque où tu travailles.",
+        "Je vais aller d'abord à la bibliothèque où tu travailles.",
+        "Je vais d'abord aller à la bibliothèque où tu travailles.",
+        "D'abord, je vais aller à la bibliothèque où tu travailles.",
+        "Euh, je vais d'abord à la bibliothèque où tu travailles.",
+        "Euh, d'abord, je vais à la bibliothèque où tu travailles.",
+        "Euh, à la bibliothèque où tu travailles."
+      ],
+      "mistakes": [
+        {
+          "answer": "Je vais d'abord à la bibliothèque que tu travailles.",
+          "feedback": "Léa works there; she doesn't work the library. Use {où}."
+        },
+        {
+          "answer": "Je vais d'abord à la bibliothèque où tu y travailles.",
+          "feedback": "{Où} already means there, so drop {y}."
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "fr": "achète",
+      "en": "buy, buys",
+      "note": "present of {acheter}: {j'achète}, {elle achète}"
+    }
+  ]
 }

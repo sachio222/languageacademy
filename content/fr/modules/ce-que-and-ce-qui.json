@@ -2,19 +2,480 @@
   "schema": "la-module@1",
   "module_key": "ce-que-and-ce-qui",
   "kind": "lesson",
-  "status": "planned",
-  "title": "{ce que} and {ce qui}: saying what (ce que j'aime, ce qui est drôle)",
-  "plan": {
-    "words": [
-      "fr:lex:facile",
-      "fr:lex:surtout",
-      "fr:lex:drole",
-      "fr:lex:genre",
-      "fr:lex:en-fait"
-    ],
+  "status": "written",
+  "title": "{ce que} and {ce qui}: saying what ({ce que j'aime}, {ce qui est drôle})",
+  "description": "Say what you like, what is easy and what is hard without naming the thing first: {Ce que j'aime surtout, c'est le marché.} {Ce qui est drôle, c'est Hugo.}",
+  "can_do": [
+    "Say what you like with {ce que}: {Ce que j'aime, c'est le marché.}",
+    "Say what is easy, hard or funny with {ce qui}: {Ce qui est drôle, c'est Hugo.}"
+  ],
+  "teaches": {
     "constructions": [
       "fr:cx:relative.ce-que"
-    ],
-    "source": "course-plan.json"
-  }
+    ]
+  },
+  "vocabulary": [
+    {
+      "word_id": "facile-fr",
+      "fr": "facile",
+      "gloss": "easy",
+      "note": "same form for a man, a woman or a thing",
+      "example_fr": "C'est facile : la piscine est à côté.",
+      "example_en": "It's easy: the pool is next door."
+    },
+    {
+      "word_id": "surtout-fr",
+      "fr": "surtout",
+      "gloss": "especially, above all",
+      "note": "usually right after the verb: {j'aime surtout}",
+      "example_fr": "J'aime le quartier, surtout le marché.",
+      "example_en": "I like the neighbourhood, especially the market."
+    },
+    {
+      "word_id": "drole-fr",
+      "fr": "drôle",
+      "gloss": "funny",
+      "note": "same form for a man, a woman or a thing",
+      "example_fr": "Hugo est très drôle.",
+      "example_en": "Hugo is very funny."
+    },
+    {
+      "word_id": "genre-fr",
+      "fr": "genre",
+      "gloss": "kind, type; in speech, like",
+      "note": "a masculine noun ({un genre}); friends also drop it into a sentence before a rough number or an example, as English speakers say 'like'",
+      "example_fr": "Il y a, genre, dix boulangeries dans le quartier.",
+      "example_en": "There are, like, ten bakeries in the neighbourhood."
+    },
+    {
+      "word_id": "en-fait-fr",
+      "fr": "en fait",
+      "gloss": "in fact, actually",
+      "note": "met in an earlier lesson; said when you correct or add to what you just said",
+      "example_fr": "En fait, la bibliothèque est à côté.",
+      "example_en": "Actually, the library is next door.",
+      "review": true
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-ce-que-ce-qui",
+      "term": "{ce que} and {ce qui}: what",
+      "definition": "To say 'what' inside a sentence, French puts {ce} before {que} or {qui}, as after a noun. {Ce qui} is the subject, so the verb comes straight after it: {ce qui est difficile}. {Ce que} is the object, so a subject comes after it: {ce que j'aime}. {Que} becomes {qu'} before a vowel; {qui} never does. To say the thing at the end, add {c'est}. {Qu'est-ce que} asks a question; {ce que} sits inside a statement.",
+      "example": "{Ce que j'aime, c'est le marché.} (What I like is the market.) {Ce qui est difficile, c'est le vélo.} (What's hard is cycling.)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-ce-qui-ce-que",
+      "title": "{ce qui}, {ce que}, {ce qu'}",
+      "rows": [
+        {
+          "fr": "ce qui",
+          "en": "what (it does the action)",
+          "note": "a verb follows: {ce qui est facile}, {ce qui me plaît}"
+        },
+        {
+          "fr": "ce que",
+          "en": "what (someone does something to it)",
+          "note": "a subject follows: {ce que j'aime}, {ce que tu veux}"
+        },
+        {
+          "fr": "ce qu'",
+          "en": "what, before a vowel",
+          "note": "{ce qu'il y a à faire}; {qui} stays whole: {ce qui est drôle}"
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "ce-qu-il-y-a",
+      "fr": "Ce qu'il y a à faire ici ?"
+    },
+    {
+      "phrase_id_suffix": "ce-qui-est-drole",
+      "fr": "Ce qui est drôle, c'est Hugo.",
+      "word_id": "drole-fr"
+    },
+    {
+      "phrase_id_suffix": "voisin-copine",
+      "fr": "Mon voisin est drôle, et sa copine aussi.",
+      "word_id": "drole-fr"
+    },
+    {
+      "phrase_id_suffix": "ce-que-j-aime-surtout",
+      "fr": "Ce que j'aime surtout, c'est le marché.",
+      "word_id": "surtout-fr"
+    }
+  ],
+  "glosses": [
+    {
+      "fr": "préfère",
+      "en": "prefer",
+      "note": "present of {préférer}: {je préfère}"
+    },
+    {
+      "fr": "plaît",
+      "en": "pleases",
+      "note": "present of {plaire}: {ça me plaît}, I like it"
+    },
+    {
+      "fr": "adoré",
+      "en": "loved",
+      "note": "past participle of {adorer}: {j'ai adoré}"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-maya-asks-what-to-do",
+      "type": "respond",
+      "situation": "Maya has just moved from Montréal into the flat above. On the stairs she asks you, Léa: {Qu'est-ce qu'il y a à faire ici ?} Tell her that what you like especially is the market.",
+      "answer": "Ce que j'aime surtout, c'est le marché.",
+      "accept": [
+        "Ce que j'aime surtout ici, c'est le marché.",
+        "Ce que j'aime surtout, c'est le marché, quoi.",
+        "Ce que j'aime, c'est surtout le marché.",
+        "Ce que j'aime surtout est le marché.",
+        "En fait, ce que j'aime surtout, c'est le marché."
+      ],
+      "hint": "Start with {Ce que j'aime surtout}, then {c'est}.",
+      "mistakes": [
+        {
+          "answer": "Qu'est-ce que j'aime surtout, c'est le marché.",
+          "feedback": "{Qu'est-ce que} asks a question. Inside a statement, 'what' is {ce que}: {Ce que j'aime surtout}."
+        },
+        {
+          "answer": "Ce qui j'aime surtout, c'est le marché.",
+          "feedback": "A subject, {j'}, comes after 'what', so the word is {que}: {ce que j'aime}."
+        }
+      ]
+    },
+    {
+      "id": "i-market-first",
+      "type": "transform",
+      "instruction": "Léa says it again with what she likes first. Start with {Ce que} and name the thing after {c'est}.",
+      "shown": "J'aime le marché.",
+      "answer": "Ce que j'aime, c'est le marché.",
+      "accept": [
+        "Ce que j'aime est le marché."
+      ],
+      "mistakes": [
+        {
+          "answer": "Que j'aime, c'est le marché.",
+          "feedback": "French needs {ce} before {que} here: {ce que j'aime}."
+        }
+      ]
+    },
+    {
+      "id": "i-hugo-is-what-is-funny",
+      "type": "transform",
+      "instruction": "Léa tells Maya about Hugo, her best friend. Start with {Ce qui} and end with Hugo.",
+      "shown": "Hugo est drôle.",
+      "answer": "Ce qui est drôle, c'est Hugo.",
+      "mistakes": [
+        {
+          "answer": "Ce que est drôle, c'est Hugo.",
+          "feedback": "No other subject comes before {est}, so 'what' is the subject: {ce qui est drôle}."
+        },
+        {
+          "answer": "Ce qu'est drôle, c'est Hugo.",
+          "feedback": "{Qui} never shortens before a vowel: {ce qui est}."
+        }
+      ]
+    },
+    {
+      "id": "i-great-is-karims-bakery",
+      "type": "gapfill",
+      "text": "___ est génial, c'est la boulangerie de Karim : elle ouvre à sept heures.",
+      "gloss": "Léa shows Maya the street: what's great is Karim's bakery. It opens at seven.",
+      "blanks": [
+        {
+          "answer": "Ce qui"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce que",
+          "feedback": "{Est} has no other subject, so 'what' is the subject: {ce qui est génial}."
+        }
+      ]
+    },
+    {
+      "id": "i-noe-prefers-the-animals",
+      "type": "gapfill",
+      "text": "___ Noé préfère au parc, ce sont les animaux.",
+      "gloss": "Léa tells Maya about her brother: what Noé likes best in the park is the animals.",
+      "blanks": [
+        {
+          "answer": "Ce que"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce qui",
+          "feedback": "{Noé} is the subject, so 'what' is the object: {ce que Noé préfère}."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-qu-il-y-a",
+      "type": "gapfill",
+      "text": "Ce ___ il y a à faire ici ? Beaucoup de choses !",
+      "gloss": "Léa repeats Maya's question before she answers: What is there to do here? Lots of things!",
+      "blanks": [
+        {
+          "answer": "qu'"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "{Que} shortens before a vowel: {ce qu'il y a}."
+        },
+        {
+          "answer": "qui",
+          "feedback": "{Il} is the subject here, so 'what' is {que}, shortened before the vowel: {ce qu'il y a}."
+        }
+      ]
+    },
+    {
+      "id": "i-what-i-like-here",
+      "type": "gapfill",
+      "text": "Ouais ! Ce ___ me plaît ici, c'est le quartier.",
+      "gloss": "Maya, after a week: Yeah! What I like here is the neighbourhood.",
+      "blanks": [
+        {
+          "answer": "qui"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "{Me} is not the subject. The neighbourhood does the pleasing, so 'what' is the subject: {ce qui me plaît}."
+        }
+      ]
+    },
+    {
+      "id": "i-telling-not-asking",
+      "type": "choice",
+      "question": "Léa is telling Maya, not asking her. Which sentence says 'What's funny is Hugo'?",
+      "options": [
+        {
+          "text": "Ce qui est drôle, c'est Hugo.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Qu'est-ce qui est drôle ? Hugo.",
+          "fr": true
+        },
+        {
+          "text": "Ce que est drôle, c'est Hugo.",
+          "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-hard-is-the-bike",
+      "type": "transform",
+      "instruction": "Maya wants to bring her bike. The Croix-Rousse is on a hill, so Léa warns her. Start with {Ce qui}.",
+      "shown": "Le vélo, c'est difficile ici.",
+      "answer": "Ce qui est difficile ici, c'est le vélo.",
+      "accept": [
+        "Ce qui est difficile, ici, c'est le vélo.",
+        "Ici, ce qui est difficile, c'est le vélo."
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce que est difficile ici, c'est le vélo.",
+          "feedback": "{Est} follows straight after 'what', so 'what' is the subject: {ce qui est difficile}."
+        }
+      ]
+    },
+    {
+      "id": "i-looking-for-the-library",
+      "type": "transform",
+      "instruction": "Maya first asked for the pool, then corrects herself. Start with {Ce que} and put {en fait} after the first part.",
+      "shown": "Je cherche la bibliothèque.",
+      "answer": "Ce que je cherche, en fait, c'est la bibliothèque.",
+      "accept": [
+        "Ce que je cherche en fait, c'est la bibliothèque.",
+        "En fait, ce que je cherche, c'est la bibliothèque."
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce qui je cherche, en fait, c'est la bibliothèque.",
+          "feedback": "A subject, {je}, comes after 'what', so the word is {que}: {ce que je cherche}."
+        }
+      ]
+    },
+    {
+      "id": "i-what-lea-forgets",
+      "type": "transform",
+      "instruction": "Léa admits to Maya what she always forgets. Start with {Ce que}.",
+      "shown": "J'oublie toujours l'heure où la bibliothèque ferme.",
+      "answer": "Ce que j'oublie toujours, c'est l'heure où la bibliothèque ferme.",
+      "accept": [
+        "Ce que j'oublie toujours est l'heure où la bibliothèque ferme."
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce qui j'oublie toujours, c'est l'heure où la bibliothèque ferme.",
+          "feedback": "A subject, {j'}, comes after 'what', so the word is {que}: {ce que j'oublie}."
+        }
+      ]
+    },
+    {
+      "id": "i-genre-ten-bakeries",
+      "type": "choice",
+      "question": "Léa says: {Il y a, genre, dix boulangeries dans le quartier.} What does {genre} tell Maya?",
+      "options": [
+        {
+          "text": "Ten is a rough number: 'like ten'.",
+          "right": true
+        },
+        {
+          "text": "There are ten kinds of bakery."
+        },
+        {
+          "text": "The bakeries are especially good."
+        }
+      ]
+    },
+    {
+      "id": "i-ouais-what-i-like",
+      "type": "meaning",
+      "instruction": "Léa sums up her tour for Maya. What does she say?",
+      "shown": "Ouais, ce que j'aime ici, c'est le marché, quoi.",
+      "answer": "Yeah, what I like here is the market.",
+      "accept": [
+        "Yeah, what I like here is the market, you know.",
+        "Yes, what I like here is the market.",
+        "Yeah, the thing I like here is the market.",
+        "Yeah, what I like here is the market, basically.",
+        "Yeah, what I love here is the market."
+      ]
+    },
+    {
+      "id": "i-if-it-rains-noe",
+      "type": "respond",
+      "situation": "Noé, Léa's brother, is 9. He asks what you will do on Saturday if it rains. Tell him: if it rains, we do what you want.",
+      "answer": "S'il pleut, on fait ce que tu veux.",
+      "accept": [
+        "On fait ce que tu veux s'il pleut.",
+        "S'il pleut, nous faisons ce que tu veux.",
+        "Nous faisons ce que tu veux s'il pleut.",
+        "S'il pleut, on fera ce que tu veux.",
+        "S'il pleut, on va faire ce que tu veux.",
+        "On fera ce que tu veux s'il pleut."
+      ],
+      "mistakes": [
+        {
+          "answer": "S'il pleut, on fait qu'est-ce que tu veux.",
+          "feedback": "Inside a statement, 'what' is {ce que}, never {qu'est-ce que}: {on fait ce que tu veux}."
+        },
+        {
+          "answer": "S'il pleut, on fait ce qui tu veux.",
+          "feedback": "{Tu} is the subject, so 'what' is the object: {ce que tu veux}."
+        }
+      ]
+    },
+    {
+      "id": "i-two-blanks-hugo-market",
+      "type": "gapfill",
+      "text": "Ce ___ est drôle, c'est Hugo, et ce ___ j'aime surtout, c'est le marché.",
+      "gloss": "Léa sums up for Maya: what's funny is Hugo, and what I like especially is the market.",
+      "blanks": [
+        {
+          "answer": "qui"
+        },
+        {
+          "answer": "que"
+        }
+      ]
+    },
+    {
+      "id": "i-lea-list-bref",
+      "type": "gapfill",
+      "text": "Il y a le marché, la piscine, la bibliothèque. Bref, il y a tout ___ tu veux.",
+      "gloss": "Léa's list for Maya starts: there's the market, the pool, the library. In short, there's everything you want.",
+      "blanks": [
+        {
+          "answer": "ce que"
+        }
+      ],
+      "mistakes": [
+        {
+          "answer": "ce qui",
+          "feedback": "{Tu} is the subject, so 'what' is the object: {tout ce que tu veux}."
+        },
+        {
+          "answer": "que",
+          "feedback": "After {tout}, French still needs {ce}: {tout ce que tu veux}."
+        }
+      ]
+    },
+    {
+      "id": "i-lea-list-noe",
+      "type": "respond",
+      "situation": "Léa writes Maya a list of her favourite things in the neighbourhood. The last line is about Noé. Write: what's funny, in fact, is my brother.",
+      "answer": "Ce qui est drôle, en fait, c'est mon frère.",
+      "accept": [
+        "En fait, ce qui est drôle, c'est mon frère.",
+        "Ce qui est drôle en fait, c'est mon frère.",
+        "Ce qui est drôle, en fait, c'est mon frère Noé.",
+        "En fait, ce qui est drôle, c'est mon frère Noé."
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce que est drôle, en fait, c'est mon frère.",
+          "feedback": "{Est} follows straight after 'what', so 'what' is the subject: {ce qui est drôle}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-loved-montreal",
+      "type": "respond",
+      "situation": "Léa asks Maya: {Et toi, qu'est-ce que tu as adoré à Montréal ?} Answer as Maya: what you loved was the winter.",
+      "answer": "Ce que j'ai adoré, c'est l'hiver.",
+      "accept": [
+        "Ce que j'ai adoré, c'était l'hiver.",
+        "Ce que j'ai adoré à Montréal, c'est l'hiver.",
+        "Ce que j'ai adoré à Montréal, c'était l'hiver.",
+        "Ce que j'ai surtout adoré, c'est l'hiver.",
+        "Ce que j'ai surtout adoré, c'était l'hiver."
+      ],
+      "mistakes": [
+        {
+          "answer": "Qu'est-ce que j'ai adoré, c'est l'hiver.",
+          "feedback": "Maya is telling, not asking: {ce que j'ai adoré}."
+        },
+        {
+          "answer": "Ce qui j'ai adoré, c'est l'hiver.",
+          "feedback": "A subject, {j'}, comes after 'what', so the word is {que}: {ce que j'ai adoré}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-easy-in-montreal",
+      "type": "respond",
+      "situation": "Maya adds what was easy in Montréal: the metro. Start with {Ce qui} and use the imparfait.",
+      "answer": "Ce qui était facile, c'était le métro.",
+      "accept": [
+        "Ce qui était facile à Montréal, c'était le métro.",
+        "À Montréal, ce qui était facile, c'était le métro."
+      ],
+      "mistakes": [
+        {
+          "answer": "Ce que était facile, c'était le métro.",
+          "feedback": "{Était} follows straight after 'what', so 'what' is the subject: {ce qui était facile}."
+        },
+        {
+          "answer": "Ce qui est facile, c'est le métro.",
+          "feedback": "Maya is talking about Montréal, where she used to live, so both verbs go in the imparfait: {ce qui était facile, c'était}."
+        }
+      ]
+    }
+  ]
 }

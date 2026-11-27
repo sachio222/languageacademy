@@ -2,17 +2,456 @@
   "schema": "la-module@1",
   "module_key": "verbs-inviter-accepter",
   "kind": "lesson",
-  "status": "planned",
+  "status": "written",
   "title": "An invitation ({inviter}, {accepter}, {refuser}, {remercier})",
-  "plan": {
-    "words": [
-      "fr:lex:inviter",
-      "fr:lex:accepter",
-      "fr:lex:refuser",
-      "fr:lex:remercier",
-      "fr:lex:du-coup"
-    ],
-    "constructions": [],
-    "source": "course-plan.json"
-  }
+  "description": "Léa turns sixteen on Saturday and invites her friends and neighbours. Learn to invite someone, say yes or no kindly, and thank them: {Je t'invite à mon anniversaire samedi.} {Merci, j'accepte avec plaisir.}",
+  "can_do": [
+    "Invite someone to a party: {Je t'invite à mon anniversaire samedi.}",
+    "Accept an invitation: {Merci, j'accepte avec plaisir.}",
+    "Say no kindly and thank the person: {Je vous remercie, mais je ne peux pas venir.}",
+    "Say what happens as a result with {du coup}"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "inviter-fr",
+      "fr": "inviter",
+      "gloss": "to invite",
+      "note": "a regular -er verb: {j'invite}, {tu invites}, {nous invitons}. The first sound is the nasal in {vin}, with no n heard.",
+      "example_fr": "Je t'invite à mon anniversaire samedi.",
+      "example_en": "I'm inviting you to my birthday on Saturday."
+    },
+    {
+      "word_id": "accepter-fr",
+      "fr": "accepter",
+      "gloss": "to accept, to say yes",
+      "note": "a regular -er verb: {j'accepte}. {J'accepte avec plaisir} is the warm way to say yes.",
+      "example_fr": "Hugo accepte avec plaisir.",
+      "example_en": "Hugo accepts with pleasure."
+    },
+    {
+      "word_id": "refuser-fr",
+      "fr": "refuser",
+      "gloss": "to refuse, to say no",
+      "note": "a regular -er verb. {refuser de} + a verb: {Noé refuse de manger sa salade.} To the person who invites you, say {je ne peux pas} rather than {je refuse}.",
+      "example_fr": "Hugo accepte, mais Madame Garnier refuse.",
+      "example_en": "Hugo accepts, but Mme Garnier says no."
+    },
+    {
+      "word_id": "remercier-fr",
+      "fr": "remercier",
+      "gloss": "to thank",
+      "note": "the verb behind {merci}: {je te remercie}, {je vous remercie}. A regular -er verb; write the e you don't hear: {je remercie}.",
+      "example_fr": "Je vous remercie, c'est très gentil.",
+      "example_en": "Thank you, that's very kind."
+    },
+    {
+      "word_id": "du-coup-fr",
+      "fr": "du coup",
+      "gloss": "so, as a result",
+      "note": "spoken French: it starts the result of what you just said. In writing, use {donc}.",
+      "example_fr": "Maya ne connaît personne ici. Du coup, Léa l'invite.",
+      "example_en": "Maya doesn't know anyone here. So Léa invites her."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-yes-or-no-to-an-invitation",
+      "term": "Saying yes or no to an invitation",
+      "definition": "To say yes, thank the person and accept. To say no, thank them, say sorry and say you can't come. {Je refuse} to someone's face sounds cold.",
+      "example": "{Merci, j'accepte avec plaisir !} (Thanks, I'd love to!) {Je te remercie, mais je ne peux pas venir.} (Thank you, but I can't come.)"
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "je-t-invite",
+      "fr": "Je t'invite à mon anniversaire samedi.",
+      "word_id": "inviter-fr"
+    },
+    {
+      "phrase_id_suffix": "voisin-voisine",
+      "fr": "J'invite mon voisin et ma voisine.",
+      "word_id": "inviter-fr"
+    },
+    {
+      "phrase_id_suffix": "j-accepte",
+      "fr": "Merci, j'accepte avec plaisir.",
+      "word_id": "accepter-fr"
+    },
+    {
+      "phrase_id_suffix": "je-vous-remercie",
+      "fr": "Je vous remercie, mais je ne peux pas venir.",
+      "word_id": "remercier-fr"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-je-t-invite-hugo",
+      "type": "gapfill",
+      "text": "Hugo ! Samedi, j'ai seize ans. Je t'___ à mon anniversaire !",
+      "blanks": [
+        {
+          "answer": "invite"
+        }
+      ],
+      "gloss": "Léa's message to Hugo: Hugo, on Saturday I turn sixteen. I'm inviting you to my birthday!",
+      "mistakes": [
+        {
+          "answer": "invites",
+          "feedback": "{invites} goes with {tu}. With {je}, an -er verb ends in -e: {je t'invite}."
+        },
+        {
+          "answer": "inviter",
+          "feedback": "After {je t'}, use the present: {je t'invite}."
+        }
+      ]
+    },
+    {
+      "id": "i-invite-maya",
+      "type": "respond",
+      "situation": "You are Léa. Maya has just moved in upstairs and knows nobody yet. Invite her to your birthday on Saturday. She is fifteen, like you, so say {tu}.",
+      "answer": "je t'invite à mon anniversaire samedi",
+      "accept": [
+        "je t'invite à mon anniversaire, samedi",
+        "samedi, je t'invite à mon anniversaire",
+        "Maya, je t'invite à mon anniversaire samedi",
+        "je t'invite à mon anniversaire ce samedi"
+      ],
+      "mistakes": [
+        {
+          "answer": "je vous invite à mon anniversaire samedi",
+          "feedback": "Maya is fifteen, like Léa, so Léa says {tu}: {je t'invite}."
+        },
+        {
+          "answer": "je te invite à mon anniversaire samedi",
+          "feedback": "{te} drops its e before a vowel: {je t'invite}."
+        }
+      ]
+    },
+    {
+      "id": "i-invite-mme-garnier",
+      "type": "respond",
+      "situation": "Now invite Mme Garnier, who lives on the ground floor. She is seventy-eight, so you say {vous} to her.",
+      "answer": "je vous invite à mon anniversaire samedi",
+      "accept": [
+        "madame, je vous invite à mon anniversaire samedi",
+        "Madame Garnier, je vous invite à mon anniversaire samedi",
+        "je vous invite à mon anniversaire, samedi",
+        "samedi, je vous invite à mon anniversaire"
+      ],
+      "mistakes": [
+        {
+          "answer": "je t'invite à mon anniversaire samedi",
+          "feedback": "Léa says {vous} to Mme Garnier: {je vous invite}."
+        }
+      ]
+    },
+    {
+      "id": "i-tu-invites-qui",
+      "type": "meaning",
+      "instruction": "Noé looks at his sister's list and asks this. What does he want to know?",
+      "shown": "Tu invites qui, en fait ?",
+      "answer": "who are you inviting, actually?",
+      "accept": [
+        "who are you inviting?",
+        "who are you inviting actually?",
+        "so who are you inviting?",
+        "who do you invite, actually?",
+        "who are you actually inviting?",
+        "who are you inviting, in fact?"
+      ]
+    },
+    {
+      "id": "i-bof",
+      "type": "choice",
+      "question": "Léa says she will invite Mme Garnier too. Noé answers {« Bof… »}. What does he mean?",
+      "options": [
+        {
+          "text": "He is not keen on the idea.",
+          "right": true
+        },
+        {
+          "text": "He thinks it is a great idea."
+        },
+        {
+          "text": "He does not know who she is."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-que-j-aime-surtout",
+      "type": "gapfill",
+      "text": "Tu sais ___ j'aime surtout chez Hugo ? Il est drôle !",
+      "blanks": [
+        {
+          "answer": "ce que"
+        }
+      ],
+      "gloss": "Léa to Noé: You know what I like most about Hugo? He's funny!",
+      "mistakes": [
+        {
+          "answer": "ce qui",
+          "feedback": "The verb {aime} already has a subject, {je}, so use {ce que}: {ce que j'aime}."
+        },
+        {
+          "answer": "que",
+          "feedback": "With no noun before it, say {ce que}: {Tu sais ce que j'aime ?}"
+        }
+      ]
+    },
+    {
+      "id": "i-du-coup-maya",
+      "type": "transform",
+      "instruction": "Join the two sentences with {du coup}, so the second one is the result.",
+      "shown": "Maya ne connaît personne ici. Léa l'invite.",
+      "answer": "Maya ne connaît personne ici, du coup Léa l'invite",
+      "accept": [
+        "Maya ne connaît personne ici, du coup, Léa l'invite",
+        "Maya ne connaît personne ici. du coup, Léa l'invite",
+        "Maya ne connaît personne ici. du coup Léa l'invite",
+        "Maya ne connait personne ici, du coup Léa l'invite",
+        "Maya ne connait personne ici, du coup, Léa l'invite"
+      ],
+      "mistakes": [
+        {
+          "answer": "du coup Maya ne connaît personne ici, Léa l'invite",
+          "feedback": "{du coup} starts the result, so it goes before the second sentence: {…, du coup Léa l'invite}."
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-facile",
+      "type": "gapfill",
+      "text": "Inviter Hugo, c'est ___ : il accepte toujours.",
+      "blanks": [
+        {
+          "answer": "facile"
+        }
+      ],
+      "gloss": "Inviting Hugo is easy: he always says yes.",
+      "mistakes": [
+        {
+          "answer": "difficile",
+          "feedback": "Hugo always says yes, so inviting him is {facile}."
+        }
+      ]
+    },
+    {
+      "id": "i-hugo-accepte",
+      "type": "gapfill",
+      "text": "Super ! Merci, Léa, j'___ avec plaisir !",
+      "blanks": [
+        {
+          "answer": "accepte"
+        }
+      ],
+      "gloss": "Hugo's answer: Great! Thanks, Léa, I'd love to!",
+      "mistakes": [
+        {
+          "answer": "accepter",
+          "feedback": "After {j'}, use the present: {j'accepte}."
+        },
+        {
+          "answer": "acceptes",
+          "feedback": "{acceptes} goes with {tu}. With {je}: {j'accepte}."
+        }
+      ]
+    },
+    {
+      "id": "i-accept-a-friend",
+      "type": "respond",
+      "situation": "A friend invites you to a party on Saturday evening. Thank them and say yes, warmly.",
+      "answer": "merci, j'accepte avec plaisir",
+      "accept": [
+        "j'accepte avec plaisir, merci",
+        "merci beaucoup, j'accepte avec plaisir",
+        "merci, j'accepte",
+        "je te remercie, j'accepte avec plaisir",
+        "je vous remercie, j'accepte avec plaisir",
+        "super, merci, j'accepte avec plaisir",
+        "oui, merci, j'accepte avec plaisir"
+      ],
+      "mistakes": [
+        {
+          "answer": "merci, je accepte avec plaisir",
+          "feedback": "{je} drops its e before a vowel: {j'accepte}."
+        },
+        {
+          "answer": "merci, j'accepter avec plaisir",
+          "feedback": "After {j'}, use the present: {j'accepte}."
+        }
+      ]
+    },
+    {
+      "id": "i-refuse-de-venir",
+      "type": "transform",
+      "instruction": "Mme Garnier says no. Say the opposite with {refuser}.",
+      "shown": "Elle accepte de venir.",
+      "answer": "elle refuse de venir",
+      "mistakes": [
+        {
+          "answer": "elle n'accepte pas de venir",
+          "feedback": "That is right French, but use {refuser} here: {elle refuse de venir}."
+        },
+        {
+          "answer": "elle refuser de venir",
+          "feedback": "With {elle}, use the present: {elle refuse}."
+        }
+      ]
+    },
+    {
+      "id": "i-polite-no",
+      "type": "choice",
+      "question": "Mme Garnier can't come on Saturday. Which answer says no kindly?",
+      "options": [
+        {
+          "text": "C'est très gentil, mais je ne peux pas venir.",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Non. Je refuse.",
+          "fr": true
+        },
+        {
+          "text": "Merci, j'accepte avec plaisir.",
+          "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-je-te-remercie",
+      "type": "gapfill",
+      "text": "Je te ___, Léa, c'est très gentil. Mais le samedi soir, je reste chez moi.",
+      "blanks": [
+        {
+          "answer": "remercie"
+        }
+      ],
+      "gloss": "Mme Garnier's answer: Thank you, Léa, that's very kind. But on Saturday evenings I stay at home.",
+      "mistakes": [
+        {
+          "answer": "merci",
+          "feedback": "{merci} is not a verb. After {je te}, use {remercie}: {je te remercie}."
+        },
+        {
+          "answer": "remercies",
+          "feedback": "{remercies} goes with {tu}. With {je}: {je te remercie}."
+        }
+      ]
+    },
+    {
+      "id": "i-thank-mme-garnier",
+      "type": "respond",
+      "situation": "You are Léa. Mme Garnier can't come, but she wishes you a happy birthday. Thank her with {remercier}. You say {vous} to her.",
+      "answer": "je vous remercie",
+      "accept": [
+        "je vous remercie, madame",
+        "je vous remercie, Madame Garnier",
+        "je vous remercie beaucoup",
+        "merci, je vous remercie",
+        "je vous remercie, c'est très gentil",
+        "je vous remercie, c'est gentil"
+      ],
+      "mistakes": [
+        {
+          "answer": "je te remercie",
+          "feedback": "Léa says {vous} to Mme Garnier: {je vous remercie}."
+        },
+        {
+          "answer": "je vous merci",
+          "feedback": "{merci} is not a verb. Say {je vous remercie}."
+        }
+      ]
+    },
+    {
+      "id": "i-du-coup-velo",
+      "type": "transform",
+      "instruction": "Hugo reads the weather. Join the two sentences with {du coup}.",
+      "shown": "Il va neiger samedi. Hugo ne vient pas à vélo.",
+      "answer": "il va neiger samedi, du coup Hugo ne vient pas à vélo",
+      "accept": [
+        "il va neiger samedi, du coup, Hugo ne vient pas à vélo",
+        "il va neiger samedi. du coup, Hugo ne vient pas à vélo",
+        "il va neiger samedi. du coup Hugo ne vient pas à vélo",
+        "il va neiger samedi, du coup Hugo ne vient pas a velo"
+      ],
+      "mistakes": [
+        {
+          "answer": "il va neiger samedi, parce que Hugo ne vient pas à vélo",
+          "feedback": "{parce que} gives a reason. Here the second sentence is the result, so use {du coup}."
+        }
+      ]
+    },
+    {
+      "id": "i-say-no-kindly",
+      "type": "respond",
+      "situation": "A classmate invites you to the cinema on Saturday, but you are busy. Thank them and say you can't come.",
+      "answer": "merci, mais je ne peux pas venir",
+      "accept": [
+        "je te remercie, mais je ne peux pas venir",
+        "je vous remercie, mais je ne peux pas venir",
+        "merci, mais je peux pas venir",
+        "je te remercie, mais je peux pas venir",
+        "merci, c'est gentil, mais je ne peux pas venir",
+        "c'est gentil, merci, mais je ne peux pas venir",
+        "merci, mais je suis désolé, je ne peux pas venir",
+        "merci, mais je suis désolée, je ne peux pas venir",
+        "je suis désolé, je ne peux pas venir, mais merci",
+        "je suis désolée, je ne peux pas venir, mais merci",
+        "merci beaucoup, mais je ne peux pas venir"
+      ],
+      "mistakes": [
+        {
+          "answer": "merci, mais je refuse",
+          "feedback": "{je refuse} sounds cold to the person who invites you. Say {je ne peux pas venir}."
+        },
+        {
+          "answer": "merci, mais je ne peux venir pas",
+          "feedback": "{pas} comes right after the conjugated verb: {je ne peux pas venir}."
+        }
+      ]
+    },
+    {
+      "id": "i-du-coup-je-sais-pas",
+      "type": "gapfill",
+      "text": "Bah, Maya a encore rien dit. ___, je sais pas si elle vient.",
+      "blanks": [
+        {
+          "answer": "Du coup"
+        }
+      ],
+      "gloss": "Noé asks if Maya is coming. Léa: Well, Maya still hasn't said anything. So I don't know if she's coming.",
+      "mistakes": [
+        {
+          "answer": "parce que",
+          "feedback": "{parce que} gives a reason. Here Léa gives the result: {Du coup, je sais pas}."
+        }
+      ]
+    },
+    {
+      "id": "i-who-is-coming",
+      "type": "respond",
+      "situation": "On Friday evening Noé asks about Hugo and Mme Garnier. Tell him that Hugo has accepted and she has refused. Use the passé composé.",
+      "cue": "{Et Hugo et Madame Garnier, ils viennent ?}",
+      "answer": "Hugo a accepté et elle a refusé",
+      "accept": [
+        "Hugo a accepté, mais elle a refusé",
+        "Hugo a accepté, et elle a refusé",
+        "Hugo a accepté et elle, elle a refusé",
+        "Hugo a accepté, et elle, elle a refusé",
+        "Hugo a accepté, mais elle, elle a refusé",
+        "Hugo a accepté, elle a refusé"
+      ],
+      "mistakes": [
+        {
+          "answer": "Hugo est accepté et elle est refusée",
+          "feedback": "{accepter} and {refuser} take {avoir}: {Hugo a accepté}, {elle a refusé}."
+        },
+        {
+          "answer": "Hugo accepte et elle refuse",
+          "feedback": "They have already answered, so use the passé composé: {Hugo a accepté}, {elle a refusé}."
+        }
+      ]
+    }
+  ]
 }

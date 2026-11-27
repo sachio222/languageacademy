@@ -2,18 +2,437 @@
   "schema": "la-module@1",
   "module_key": "verbs-passer-oublier",
   "kind": "lesson",
-  "status": "planned",
+  "status": "written",
   "title": "Opening hours and errands ({ouvrir}, {fermer}, {passer}, {oublier})",
-  "plan": {
+  "description": "Say when a place opens and closes, that you will drop by, and what someone forgot: {La boulangerie ouvre à sept heures.} {Je passe chez toi ce soir.}",
+  "can_do": [
+    "Say when a place opens and closes: {La boulangerie ouvre à sept heures.}",
+    "Say that you will drop by: {Je passe chez toi ce soir.}",
+    "Say what someone forgot: {J'ai oublié ma clé.}"
+  ],
+  "teaches": {
+    "constructions": ["fr:cx:connector.summary"],
     "words": [
-      "fr:lex:passer",
-      "fr:lex:oublier",
-      "fr:lex:ouvrir",
-      "fr:lex:fermer",
-      "fr:lex:bref",
-      "fr:lex:ouais"
-    ],
-    "constructions": [],
-    "source": "course-plan.json"
-  }
+      "fr:form:ouvrir.prs.1sg",
+      "fr:form:ouvrir.prs.2sg",
+      "fr:form:ouvrir.prs.3sg",
+      "fr:form:ouvrir.prs.1pl",
+      "fr:form:ouvrir.prs.2pl",
+      "fr:form:ouvrir.prs.3pl",
+      "fr:form:ouvrir.ptcp",
+      "fr:form:ouvrir.ptcp.f"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word_id": "passer-fr",
+      "fr": "passer",
+      "gloss": "to drop by; to pass; to spend (time)",
+      "note": "{passer chez quelqu'un} is to drop by their place. In the past, dropping by takes {être} ({je suis passée chez toi}) and spending time takes {avoir} ({j'ai passé le week-end ici}).",
+      "example_fr": "Je passe chez toi ce soir.",
+      "example_en": "I'll drop by your place tonight.",
+      "part_of_speech": "verb"
+    },
+    {
+      "word_id": "oublier-fr",
+      "fr": "oublier",
+      "gloss": "to forget",
+      "note": "{oublier de} + a verb is to forget to do something: {n'oublie pas de passer}.",
+      "example_fr": "J'ai oublié ma clé.",
+      "example_en": "I forgot my key.",
+      "part_of_speech": "verb"
+    },
+    {
+      "word_id": "ouvrir-fr",
+      "fr": "ouvrir",
+      "gloss": "to open",
+      "note": "An -ir verb with the present endings of {parler}: {j'ouvre}, {nous ouvrons}. Its past participle is {ouvert}.",
+      "example_fr": "La boulangerie ouvre à sept heures.",
+      "example_en": "The bakery opens at seven.",
+      "part_of_speech": "verb"
+    },
+    {
+      "word_id": "fermer-fr",
+      "fr": "fermer",
+      "gloss": "to close",
+      "note": "A regular -er verb. On a door, {fermé} means closed.",
+      "example_fr": "La boulangerie ferme à vingt heures.",
+      "example_en": "The bakery closes at eight in the evening.",
+      "part_of_speech": "verb"
+    },
+    {
+      "word_id": "bref-fr",
+      "fr": "bref",
+      "gloss": "in short; anyway",
+      "note": "Spoken: it ends a story and gets to the point.",
+      "example_fr": "J'ai oublié ma clé, maman travaille ce soir. Bref, je peux pas entrer.",
+      "example_en": "I forgot my key, Mum is working tonight. Anyway, I can't get in.",
+      "part_of_speech": "adverb"
+    },
+    {
+      "word_id": "ouais-fr",
+      "fr": "ouais",
+      "gloss": "yeah",
+      "note": "Spoken {oui} between friends. To a teacher or a shopkeeper, say {oui}.",
+      "example_fr": "Tu passes chez moi ce soir ? Ouais, à huit heures.",
+      "example_en": "Are you dropping by tonight? Yeah, at eight.",
+      "part_of_speech": "interjection"
+    },
+    {
+      "word_id": "la-boulangerie-fr",
+      "fr": "la boulangerie",
+      "gloss": "the bakery",
+      "review": true
+    },
+    {
+      "word_id": "la-bibliotheque-fr",
+      "fr": "la bibliothèque",
+      "gloss": "the library",
+      "review": true
+    },
+    {
+      "word_id": "la-piscine-fr",
+      "fr": "la piscine",
+      "gloss": "the swimming pool",
+      "review": true
+    }
+  ],
+  "tables": [
+    {
+      "id": "t-ouvrir",
+      "title": "{ouvrir}: present",
+      "rows": [
+        { "fr": "j'ouvre", "en": "I open" },
+        { "fr": "tu ouvres", "en": "you open" },
+        { "fr": "il ouvre", "en": "he opens" },
+        { "fr": "elle ouvre", "en": "she opens" },
+        { "fr": "nous ouvrons", "en": "we open" },
+        { "fr": "vous ouvrez", "en": "you open (formal or plural)" },
+        { "fr": "ils ouvrent", "en": "they open" },
+        { "fr": "elles ouvrent", "en": "they open (feminine)" },
+        { "fr": "j'ai ouvert", "en": "I opened", "note": "past participle {ouvert}" },
+        { "fr": "la porte est ouverte", "en": "the door is open", "note": "feminine {ouverte}" }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-bref",
+      "term": "{Bref,} to get to the point",
+      "definition": "At the start of a sentence, {bref} sums up what came before and gives the main point. It is common in speech.",
+      "example": "{J'ai oublié ma clé, maman travaille ce soir. Bref, je peux pas entrer.} (I forgot my key, Mum is working tonight. Anyway, I can't get in.)"
+    }
+  ],
+  "phrases": [
+    { "phrase_id_suffix": "passe-chez-ma-voisine", "fr": "Je passe chez ma voisine ce soir.", "word_id": "passer-fr" },
+    { "phrase_id_suffix": "mon-copain-a-oublie", "fr": "Mon copain a oublié sa clé.", "word_id": "oublier-fr" },
+    { "phrase_id_suffix": "ma-copine-ouvre", "fr": "Ma copine ouvre la porte.", "word_id": "ouvrir-fr" }
+  ],
+  "speed_match": ["passer-fr", "oublier-fr", "ouvrir-fr", "fermer-fr", "bref-fr", "ouais-fr"],
+  "items": [
+    {
+      "id": "i-elle-ouvre-a-sept-heures",
+      "type": "respond",
+      "situation": "Maya reads the sign on the door of Karim's bakery: {Ouvert de sept heures à vingt heures}. Noé asks her what time it opens. Answer as Maya: it opens at seven.",
+      "answer": "elle ouvre à sept heures",
+      "accept": [
+        "la boulangerie ouvre à sept heures",
+        "ça ouvre à sept heures",
+        "elle ouvre à 7 heures"
+      ],
+      "mistakes": [
+        {
+          "answer": "elle ouvert à sept heures",
+          "feedback": "{ouvert} is the past participle. In the present: {elle ouvre}."
+        },
+        {
+          "answer": "elle ouvrir à sept heures",
+          "feedback": "Give {ouvrir} its {elle} form: {elle ouvre}."
+        }
+      ]
+    },
+    {
+      "id": "i-elle-ferme-a-quelle-heure",
+      "type": "gapfill",
+      "text": "Noé : Euh, et elle ___ à quelle heure ? Maya : À vingt heures.",
+      "blanks": [{ "answer": "ferme" }],
+      "gloss": "Noé: Um, and what time does it close? Maya: At eight in the evening.",
+      "mistakes": [
+        {
+          "answer": "fermes",
+          "feedback": "{elle} is the bakery, so no -s: {elle ferme}."
+        },
+        {
+          "answer": "ouvre",
+          "feedback": "Noé knows when it opens now. He asks when it closes: {ferme}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-monsieur-qui-ouvre",
+      "type": "gapfill",
+      "text": "Le monsieur qui ___ la boulangerie à sept heures, c'est Karim.",
+      "blanks": [{ "answer": "ouvre" }],
+      "gloss": "The man who opens the bakery at seven is Karim.",
+      "mistakes": [
+        {
+          "answer": "ouvrent",
+          "feedback": "One man, so {il ouvre}: {le monsieur qui ouvre}."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-ouvrons-la-fenetre",
+      "type": "transform",
+      "instruction": "It is hot in Léa's flat, and Léa and Noé open the window together. Start the sentence with {nous}.",
+      "shown": "Il fait chaud et humide, j'ouvre la fenêtre.",
+      "answer": "il fait chaud et humide, nous ouvrons la fenêtre",
+      "accept": ["il fait chaud et humide nous ouvrons la fenêtre"],
+      "mistakes": [
+        {
+          "answer": "il fait chaud et humide, nous ouvrez la fenêtre",
+          "feedback": "{nous} takes -ons: {nous ouvrons}."
+        },
+        {
+          "answer": "il fait chaud et humide, nous ouvre la fenêtre",
+          "feedback": "{nous} takes -ons: {nous ouvrons}."
+        }
+      ]
+    },
+    {
+      "id": "i-ferme-la-fenetre-une-abeille",
+      "type": "gapfill",
+      "text": "Noé : ___ la fenêtre, il y a une abeille ! Léa : Mais non, c'est un papillon.",
+      "blanks": [{ "answer": "Ferme" }],
+      "gloss": "Noé: Close the window, there's a bee! Léa: No, it's a butterfly.",
+      "mistakes": [
+        {
+          "answer": "Fermes",
+          "feedback": "A command to {tu} drops the -s of an -er verb: {Ferme}."
+        },
+        {
+          "answer": "Ouvre",
+          "feedback": "The window is already open. Noé wants it closed: {Ferme}."
+        }
+      ]
+    },
+    {
+      "id": "i-bibliotheque-et-piscine-ouvrent",
+      "type": "gapfill",
+      "text": "Le samedi, la bibliothèque et la piscine ___ à neuf heures.",
+      "blanks": [{ "answer": "ouvrent" }],
+      "gloss": "On Saturdays, the library and the pool open at nine.",
+      "mistakes": [
+        {
+          "answer": "ouvre",
+          "feedback": "Two places, so {elles ouvrent}."
+        },
+        {
+          "answer": "ouvrons",
+          "feedback": "{ouvrons} goes with {nous}. Two places: {elles ouvrent}."
+        }
+      ]
+    },
+    {
+      "id": "i-la-bibliotheque-est-fermee",
+      "type": "transform",
+      "instruction": "Maya reaches the library at nine in the evening. Say the opposite of what she hoped.",
+      "shown": "La bibliothèque où Léa travaille est ouverte.",
+      "answer": "la bibliothèque où léa travaille est fermée",
+      "mistakes": [
+        {
+          "answer": "la bibliothèque où léa travaille est fermé",
+          "feedback": "{bibliothèque} is feminine, so add -e: {fermée}."
+        },
+        {
+          "answer": "la bibliothèque où léa travaille est ferme",
+          "feedback": "After {est}, use the participle: {fermée}."
+        }
+      ]
+    },
+    {
+      "id": "i-hugo-est-passe-chez-nous",
+      "type": "choice",
+      "question": "Noé tells Léa: {Hugo est passé chez nous ce matin.} What did Hugo do?",
+      "options": [
+        { "text": "He dropped by their flat this morning.", "right": true },
+        { "text": "He spent the whole morning at their flat." },
+        { "text": "He forgot about them this morning." }
+      ]
+    },
+    {
+      "id": "i-je-passe-chez-toi-ce-soir",
+      "type": "respond",
+      "situation": "Maya wants to see Léa's flat. Tell Léa you will drop by her place tonight.",
+      "answer": "je passe chez toi ce soir",
+      "accept": ["je vais passer chez toi ce soir", "ce soir, je passe chez toi"],
+      "mistakes": [
+        {
+          "answer": "je passe à toi ce soir",
+          "feedback": "To drop by someone's place: {passer chez}. {Je passe chez toi}."
+        },
+        {
+          "answer": "je passer chez toi ce soir",
+          "feedback": "Give {passer} its {je} form: {je passe}."
+        }
+      ]
+    },
+    {
+      "id": "i-j-ai-passe-le-samedi-a-la-piscine",
+      "type": "transform",
+      "instruction": "Noé tells Maya about last Saturday. Put his sentence in the past.",
+      "shown": "Je passe le samedi à la piscine.",
+      "answer": "j'ai passé le samedi à la piscine",
+      "mistakes": [
+        {
+          "answer": "je suis passé le samedi à la piscine",
+          "feedback": "Spending time takes {avoir}: {j'ai passé le samedi}."
+        },
+        {
+          "answer": "j'ai passer le samedi à la piscine",
+          "feedback": "After {j'ai}, use the participle: {passé}."
+        }
+      ]
+    },
+    {
+      "id": "i-ouais-a-huit-heures",
+      "type": "respond",
+      "situation": "Hugo asks Léa: {Tu passes chez moi ce soir, hein ?} Answer as Léa, the way friends talk: yeah, at eight.",
+      "answer": "ouais, à huit heures",
+      "accept": ["ouais, je passe à huit heures", "ouais, je passe chez toi à huit heures", "ouais, à 8 heures"],
+      "mistakes": [
+        {
+          "answer": "ouais, je passes à huit heures",
+          "feedback": "With {je}, no -s: {je passe}."
+        }
+      ]
+    },
+    {
+      "id": "i-ouais-mec-who",
+      "type": "choice",
+      "question": "Hugo says: {Ouais, mec, je passe chez toi ce soir.} Who is he talking to?",
+      "options": [
+        { "text": "A friend his age.", "right": true },
+        { "text": "Mme Garnier, the neighbour downstairs." },
+        { "text": "Karim, at the bakery." }
+      ]
+    },
+    {
+      "id": "i-j-ai-oublie-un-truc",
+      "type": "gapfill",
+      "text": "Léa : J'ai ___ un truc chez Hugo : le livre que je lis.",
+      "blanks": [{ "answer": "oublié" }],
+      "gloss": "Léa: I left something at Hugo's: the book I'm reading.",
+      "mistakes": [
+        {
+          "answer": "oublier",
+          "feedback": "After {j'ai}, use the participle: {oublié}."
+        }
+      ]
+    },
+    {
+      "id": "i-n-oublie-pas-de-passer",
+      "type": "respond",
+      "situation": "Maman is leaving for work. She asks Noé not to forget to drop by the bakery. What does she say?",
+      "answer": "n'oublie pas de passer à la boulangerie",
+      "accept": ["oublie pas de passer à la boulangerie", "noé, n'oublie pas de passer à la boulangerie"],
+      "mistakes": [
+        {
+          "answer": "n'oublies pas de passer à la boulangerie",
+          "feedback": "A command to {tu} drops the -s of an -er verb: {n'oublie pas}."
+        },
+        {
+          "answer": "n'oublie pas passer à la boulangerie",
+          "feedback": "Forget to do something: {oublier de}. {N'oublie pas de passer}."
+        }
+      ]
+    },
+    {
+      "id": "i-ferme-la-porte",
+      "type": "respond",
+      "situation": "Noé says {Au revoir !} and runs out, leaving the building door open. Mme Garnier asks him to close the door, please. What does she say?",
+      "answer": "ferme la porte, s'il te plaît",
+      "accept": ["ferme la porte s'il te plaît", "ferme la porte"],
+      "mistakes": [
+        {
+          "answer": "fermes la porte, s'il te plaît",
+          "feedback": "A command to {tu} drops the -s of an -er verb: {ferme}."
+        },
+        {
+          "answer": "ferme la porte, s'il vous plaît",
+          "feedback": "Noé is nine, so Mme Garnier says {tu} to him: {s'il te plaît}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-est-seule-lea-passe",
+      "type": "gapfill",
+      "text": "Maya est seule devant la porte rouge. Tout à coup, Léa ___ par là.",
+      "blanks": [{ "answer": "passe" }],
+      "gloss": "Maya is alone at the red front door. All of a sudden, Léa comes by.",
+      "mistakes": [
+        {
+          "answer": "passes",
+          "feedback": "{Léa} is {elle}, so no -s: {elle passe}."
+        }
+      ]
+    },
+    {
+      "id": "i-ouais-j-ai-oublie-ma-cle",
+      "type": "respond",
+      "situation": "Léa sees Maya stuck at the door and asks: {Ça va, Maya ?} Answer as Maya, the way friends talk: yeah, I forgot my key.",
+      "answer": "ouais, j'ai oublié ma clé",
+      "accept": ["ouais j'ai oublié ma clé"],
+      "mistakes": [
+        {
+          "answer": "ouais, j'ai oublier ma clé",
+          "feedback": "After {j'ai}, use the participle: {oublié}."
+        },
+        {
+          "answer": "ouais, je suis oublié ma clé",
+          "feedback": "{oublier} takes {avoir}: {j'ai oublié}."
+        }
+      ]
+    },
+    {
+      "id": "i-bref-je-peux-pas-entrer",
+      "type": "gapfill",
+      "text": "Maya : Mes parents travaillent ce soir. ___, je peux pas entrer.",
+      "blanks": [{ "answer": "bref" }],
+      "gloss": "Maya: My parents are working tonight. Anyway, I can't get in.",
+      "mistakes": [
+        {
+          "answer": "ouais",
+          "feedback": "{ouais} says yes. To sum up and get to the point: {bref}."
+        }
+      ]
+    },
+    {
+      "id": "i-what-bref-means",
+      "type": "choice",
+      "question": "Maya says: {J'ai oublié ma clé. Bref, je peux pas entrer.} What does {bref} do here?",
+      "options": [
+        { "text": "It sums up and gets to the point.", "right": true },
+        { "text": "It says yes." },
+        { "text": "It asks a question." }
+      ]
+    },
+    {
+      "id": "i-maya-a-oublie-sa-cle",
+      "type": "transform",
+      "instruction": "Noé comes down the stairs. Léa tells him what Maya just said. Start with {Maya}.",
+      "shown": "J'ai oublié ma clé.",
+      "answer": "maya a oublié sa clé",
+      "mistakes": [
+        {
+          "answer": "maya a oublié ma clé",
+          "feedback": "It is Maya's key now: {sa clé}."
+        },
+        {
+          "answer": "maya est oubliée sa clé",
+          "feedback": "{oublier} takes {avoir}: {Maya a oublié}."
+        }
+      ]
+    }
+  ]
 }

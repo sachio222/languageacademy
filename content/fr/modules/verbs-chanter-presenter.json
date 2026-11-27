@@ -2,17 +2,520 @@
   "schema": "la-module@1",
   "module_key": "verbs-chanter-presenter",
   "kind": "lesson",
-  "status": "planned",
+  "status": "written",
   "title": "The party ({présenter}, {chanter}, {danser}, {détester})",
-  "plan": {
-    "words": [
-      "fr:lex:presenter",
-      "fr:lex:chanter",
-      "fr:lex:danser",
-      "fr:lex:detester",
-      "fr:lex:franchement"
-    ],
-    "constructions": [],
-    "source": "course-plan.json"
-  }
+  "description": "It is Léa's birthday party. Introduce your friends, say who sings and who dances, and say what you love or hate doing: {Je te présente Maya. Hugo chante, mais je déteste danser.}",
+  "can_do": [
+    "Introduce a friend to a friend with {je te présente}, and to an adult with {je vous présente}",
+    "Say who sings and who dances at a party",
+    "Say what you love or hate doing: {J'adore chanter, mais je déteste danser.}"
+  ],
+  "vocabulary": [
+    {
+      "word_id": "presenter-fr",
+      "fr": "présenter",
+      "gloss": "to introduce; to present",
+      "note": "A regular -er verb: {je présente}, {tu présentes}, {nous présentons}.",
+      "example_fr": "Hugo, je te présente Maya, ma voisine.",
+      "example_en": "Hugo, this is Maya, my neighbour."
+    },
+    {
+      "word_id": "chanter-fr",
+      "fr": "chanter",
+      "gloss": "to sing",
+      "note": "A regular -er verb: {il chante}, {nous chantons}.",
+      "example_fr": "Hugo chante très mal, mais il adore ça.",
+      "example_en": "Hugo sings very badly, but he loves it."
+    },
+    {
+      "word_id": "danser-fr",
+      "fr": "danser",
+      "gloss": "to dance",
+      "note": "A regular -er verb: {je danse}, {vous dansez}.",
+      "example_fr": "Hugo chante et Maya danse avec Noé.",
+      "example_en": "Hugo sings and Maya dances with Noé."
+    },
+    {
+      "word_id": "detester-fr",
+      "fr": "détester",
+      "gloss": "to hate",
+      "note": "Like {aimer}, it takes a noun or an infinitive: {je déteste danser}.",
+      "example_fr": "Je déteste danser, mais j'adore chanter.",
+      "example_en": "I hate dancing, but I love singing."
+    },
+    {
+      "word_id": "adorer-fr",
+      "fr": "adorer",
+      "gloss": "to love",
+      "note": "The opposite of {détester}.",
+      "example_fr": "Noé adore danser avec Maya.",
+      "example_en": "Noé loves dancing with Maya.",
+      "review": true
+    },
+    {
+      "word_id": "franchement-fr",
+      "fr": "franchement",
+      "gloss": "frankly; honestly",
+      "note": "Friends often start a sentence with it to give their real opinion.",
+      "example_fr": "Franchement, tu danses trop bien !",
+      "example_en": "Honestly, you dance really well!"
+    },
+    {
+      "word_id": "fier-fr",
+      "fr": "fier / fière",
+      "gloss": "proud",
+      "note": "{fière} for a girl or a woman: {Léa est fière de son frère.}",
+      "example_fr": "Noé danse avec Maya, et il est très fier.",
+      "example_en": "Noé is dancing with Maya, and he is very proud.",
+      "review": true
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-introducing-people",
+      "term": "Introducing people: {je te présente}",
+      "definition": "To a friend, say {je te présente} and the person's name. To an adult you call {vous}, say {je vous présente}.",
+      "example": "{Hugo, je te présente Maya.} (Hugo, this is Maya.) {Madame Garnier, je vous présente Maya.} (Mrs Garnier, this is Maya.)"
+    },
+    {
+      "id": "c-love-hate-doing",
+      "term": "Saying what you love or hate doing",
+      "definition": "Put the infinitive straight after {aimer}, {adorer} or {détester}, with nothing between them.",
+      "example": "{J'adore chanter, mais je déteste danser.} (I love singing, but I hate dancing.)"
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "voisine",
+      "fr": "Je te présente ma voisine.",
+      "word_id": "presenter-fr"
+    },
+    {
+      "phrase_id_suffix": "copain-copine",
+      "fr": "Hugo est un copain, et Maya est une copine.",
+      "word_id": "presenter-fr"
+    },
+    {
+      "phrase_id_suffix": "voisin-chante",
+      "fr": "Mon voisin chante, ma voisine danse.",
+      "word_id": "chanter-fr"
+    },
+    {
+      "phrase_id_suffix": "deteste-danser",
+      "fr": "Hugo chante, mais je déteste danser.",
+      "word_id": "detester-fr"
+    },
+    {
+      "phrase_id_suffix": "franchement",
+      "fr": "Franchement, tu danses trop bien !",
+      "word_id": "franchement-fr"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-hugo-je-te-presente-maya",
+      "type": "respond",
+      "situation": "The guests are arriving at Léa's flat for her birthday. Maya, who has just moved in upstairs, knows nobody. Introduce her to Hugo, Léa's best friend.",
+      "answer": "Hugo, je te présente Maya",
+      "accept": [
+        "je te présente Maya"
+      ],
+      "word_ids": [
+        "presenter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "Hugo, je présente Maya",
+          "feedback": "Say who meets her: {je te présente Maya}."
+        },
+        {
+          "answer": "Hugo, je te présente à Maya",
+          "feedback": "{je te présente à Maya} introduces Hugo to Maya. Put Maya straight after the verb: {je te présente Maya}."
+        }
+      ]
+    },
+    {
+      "id": "i-madame-garnier-je-vous-presente-maya",
+      "type": "respond",
+      "situation": "Mme Garnier comes up from the ground floor with a present for Léa: {Je passe juste dire bonjour !} She is 78, and everyone calls her {vous}. Introduce Maya to her.",
+      "answer": "Madame Garnier, je vous présente Maya",
+      "accept": [
+        "je vous présente Maya",
+        "Madame, je vous présente Maya"
+      ],
+      "word_ids": [
+        "presenter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "Madame Garnier, je te présente Maya",
+          "feedback": "You call Mme Garnier {vous}: {je vous présente Maya}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-frere-dont-je-t-ai-parle",
+      "type": "gapfill",
+      "text": "Maya, je te présente Noé, le frère ___ je t'ai parlé.",
+      "blanks": [
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "Maya, this is Noé, the brother I told you about.",
+      "word_ids": [
+        "presenter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "You say {parler de} someone, so the {de} becomes {dont}: {le frère dont je t'ai parlé}."
+        }
+      ]
+    },
+    {
+      "id": "i-maya-ne-connait-personne",
+      "type": "transform",
+      "instruction": "Maya has just moved from Montréal. Say the opposite with {ne … personne}.",
+      "shown": "Maya connaît tout le monde ici.",
+      "answer": "Maya ne connaît personne ici",
+      "accept": [
+        "Maya ne connait personne ici"
+      ],
+      "mistakes": [
+        {
+          "answer": "Maya ne connaît pas personne ici",
+          "feedback": "{personne} takes the place of {pas}: {ne connaît personne}."
+        }
+      ]
+    },
+    {
+      "id": "i-tu-chantes-ce-soir",
+      "type": "respond",
+      "situation": "Hugo is at the door. Ask him if he is singing tonight.",
+      "answer": "tu chantes ce soir ?",
+      "accept": [
+        "est-ce que tu chantes ce soir ?",
+        "chantes-tu ce soir ?",
+        "Hugo, tu chantes ce soir ?"
+      ],
+      "word_ids": [
+        "chanter-fr"
+      ]
+    },
+    {
+      "id": "i-hugo-chante-tres-mal",
+      "type": "gapfill",
+      "text": "Hugo ___ très mal, mais il adore ça.",
+      "blanks": [
+        {
+          "answer": "chante"
+        }
+      ],
+      "gloss": "Hugo sings very badly, but he loves it.",
+      "word_ids": [
+        "chanter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "chantes",
+          "feedback": "With {il} or a name, the ending is a silent -e: {Hugo chante}."
+        },
+        {
+          "answer": "chanter",
+          "feedback": "Conjugate the verb after {Hugo}: {Hugo chante}."
+        }
+      ]
+    },
+    {
+      "id": "i-hugo-adore-chanter",
+      "type": "choice",
+      "question": "Hugo sings badly and loves it. Which line is his?",
+      "options": [
+        {
+          "text": "J'adore chanter !",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "Je déteste chanter.",
+          "fr": true
+        },
+        {
+          "text": "Je ne chante jamais.",
+          "fr": true
+        }
+      ],
+      "word_ids": [
+        "chanter-fr",
+        "detester-fr"
+      ]
+    },
+    {
+      "id": "i-maman-danse-dans-la-cuisine",
+      "type": "gapfill",
+      "text": "Hugo chante, et maman ___ dans la cuisine !",
+      "blanks": [
+        {
+          "answer": "danse"
+        }
+      ],
+      "gloss": "Hugo sings, and Mum dances in the kitchen!",
+      "word_ids": [
+        "chanter-fr",
+        "danser-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "dansent",
+          "feedback": "Maman is one person: {maman danse}."
+        },
+        {
+          "answer": "danser",
+          "feedback": "Conjugate the verb after {maman}: {maman danse}."
+        }
+      ]
+    },
+    {
+      "id": "i-nous-dansons-et-nous-chantons",
+      "type": "transform",
+      "instruction": "Léa tells Maya what she and Hugo do at every party. Say it with {nous}.",
+      "shown": "On danse et on chante.",
+      "answer": "nous dansons et nous chantons",
+      "word_ids": [
+        "danser-fr",
+        "chanter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "nous danser et nous chanter",
+          "feedback": "After {nous}, an -er verb ends in -ons: {nous dansons}, {nous chantons}."
+        },
+        {
+          "answer": "nous danse et nous chante",
+          "feedback": "After {nous}, an -er verb ends in -ons: {nous dansons}, {nous chantons}."
+        }
+      ]
+    },
+    {
+      "id": "i-si-tu-danses-je-chante",
+      "type": "gapfill",
+      "text": "Maya ne veut pas danser. Hugo : Si tu danses, je ___ !",
+      "blanks": [
+        {
+          "answer": "chante",
+          "accept": [
+            "chanterai"
+          ]
+        }
+      ],
+      "gloss": "Maya doesn't want to dance. Hugo: If you dance, I'll sing!",
+      "word_ids": [
+        "danser-fr",
+        "chanter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "chanter",
+          "feedback": "Conjugate the verb after {je}: {je chante}."
+        }
+      ]
+    },
+    {
+      "id": "i-je-deteste-danser",
+      "type": "respond",
+      "situation": "Hugo wants you to dance: {Allez, essaie !} Tell him you hate dancing, but you love singing.",
+      "answer": "je déteste danser, mais j'adore chanter",
+      "accept": [
+        "je déteste danser, mais j'aime chanter",
+        "non, je déteste danser, mais j'adore chanter"
+      ],
+      "word_ids": [
+        "detester-fr",
+        "danser-fr",
+        "chanter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "je déteste de danser, mais j'adore de chanter",
+          "feedback": "Put the infinitive straight after the verb: {je déteste danser}, {j'adore chanter}."
+        },
+        {
+          "answer": "je déteste danse, mais j'adore chante",
+          "feedback": "After {détester} and {adorer}, use the infinitive: {danser}, {chanter}."
+        }
+      ]
+    },
+    {
+      "id": "i-franchement-je-chante-tres-mal",
+      "type": "gapfill",
+      "text": "Maya : T'as une belle voix, Hugo ! Hugo : ___, non ! Je chante très mal. Allez, on danse ?",
+      "blanks": [
+        {
+          "answer": "Franchement"
+        }
+      ],
+      "gloss": "Maya: You have a lovely voice, Hugo! Hugo: Honestly, no! I sing really badly. Come on, shall we dance?",
+      "word_ids": [
+        "franchement-fr",
+        "chanter-fr",
+        "danser-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "Franchment",
+          "feedback": "Keep the e in the middle: {franchement}."
+        }
+      ]
+    },
+    {
+      "id": "i-t-as-means-tu-as",
+      "type": "choice",
+      "question": "Noé shouts {T'as vu ? Hugo danse !} Which words does {t'as} stand for?",
+      "options": [
+        {
+          "text": "tu as",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "tu es",
+          "fr": true
+        },
+        {
+          "text": "tu vas",
+          "fr": true
+        }
+      ],
+      "word_ids": [
+        "danser-fr"
+      ]
+    },
+    {
+      "id": "i-c-est-mon-pote",
+      "type": "meaning",
+      "instruction": "Léa points at Hugo and tells Maya this. What does she mean?",
+      "shown": "Hugo, c'est mon pote.",
+      "answer": "Hugo is my mate",
+      "accept": [
+        "Hugo is my friend",
+        "Hugo is my buddy",
+        "Hugo's my mate",
+        "Hugo's my friend",
+        "Hugo's my buddy",
+        "Hugo is my pal"
+      ]
+    },
+    {
+      "id": "i-je-doute-qu-il-chante-bien",
+      "type": "gapfill",
+      "text": "Hugo veut chanter pour Léa. Je doute qu'il ___ bien !",
+      "blanks": [
+        {
+          "answer": "chante"
+        }
+      ],
+      "gloss": "Hugo wants to sing for Léa. I doubt he sings well!",
+      "word_ids": [
+        "chanter-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "chantera",
+          "feedback": "After {je doute que}, the verb takes the subjunctive. For {il}, it is {chante}."
+        }
+      ]
+    },
+    {
+      "id": "i-des-gens-partout",
+      "type": "gapfill",
+      "text": "Il y a des gens ___ chez Léa : il n'y a plus de place pour danser !",
+      "blanks": [
+        {
+          "answer": "partout"
+        }
+      ],
+      "gloss": "There are people everywhere at Léa's: there's no more room to dance!",
+      "word_ids": [
+        "danser-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "nulle part",
+          "feedback": "{nulle part} means nowhere. Here the flat is full: {partout}."
+        }
+      ]
+    },
+    {
+      "id": "i-on-change-de-musique",
+      "type": "respond",
+      "situation": "Hugo puts on the same song for the third time. Ask your friends if you can change the music.",
+      "answer": "on change de musique ?",
+      "accept": [
+        "est-ce qu'on change de musique ?",
+        "on peut changer de musique ?",
+        "est-ce qu'on peut changer de musique ?"
+      ]
+    },
+    {
+      "id": "i-ca-va-devenir-drole",
+      "type": "gapfill",
+      "text": "Hugo va chanter pour Léa ? Ça va ___ drôle !",
+      "blanks": [
+        {
+          "answer": "devenir"
+        }
+      ],
+      "gloss": "Hugo is going to sing for Léa? This is going to get funny!",
+      "word_ids": [
+        "chanter-fr"
+      ]
+    },
+    {
+      "id": "i-noe-est-fier",
+      "type": "gapfill",
+      "text": "Le gâteau arrive, avec du chocolat dessus. Tout le monde chante pour Léa, et Maya danse avec Noé. Noé est très ___ !",
+      "blanks": [
+        {
+          "answer": "fier"
+        }
+      ],
+      "gloss": "The cake arrives, with chocolate on top. Everyone sings for Léa, and Maya dances with Noé. Noé is very proud!",
+      "word_ids": [
+        "chanter-fr",
+        "danser-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "fière",
+          "feedback": "Noé is a boy: {fier}. {fière} is for a girl or a woman."
+        }
+      ]
+    },
+    {
+      "id": "i-franchement-tu-danses-trop-bien",
+      "type": "respond",
+      "situation": "Everyone has sung {Joyeux anniversaire} to Léa, and Maya is dancing with Noé. Tell Noé, frankly, that he dances really well. Say it the way friends talk.",
+      "answer": "franchement, tu danses trop bien !",
+      "accept": [
+        "franchement, tu danses très bien !",
+        "Noé, franchement, tu danses trop bien !",
+        "franchement, Noé, tu danses trop bien !"
+      ],
+      "word_ids": [
+        "franchement-fr",
+        "danser-fr"
+      ],
+      "mistakes": [
+        {
+          "answer": "franchement, tu danse trop bien",
+          "feedback": "With {tu}, the -er verb adds a silent -s: {tu danses}."
+        },
+        {
+          "answer": "franchement, tu dansez trop bien",
+          "feedback": "{dansez} goes with {vous}. With {tu}, say {tu danses}."
+        }
+      ]
+    }
+  ]
 }

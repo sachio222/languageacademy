@@ -2,17 +2,390 @@
   "schema": "la-module@1",
   "module_key": "dont",
   "kind": "lesson",
-  "status": "planned",
-  "title": "{dont}: the one you talk about (le quartier dont je suis fière)",
-  "plan": {
-    "words": [
-      "fr:lex:dont",
-      "fr:lex:fier",
-      "fr:lex:pote"
-    ],
+  "status": "written",
+  "title": "{dont}: the one you talk about ({le quartier dont je suis fière})",
+  "description": "Use {dont} to name a person or a thing by what you say or feel about it: {le monsieur dont je t'ai parlé}, {un quartier dont je suis fière}.",
+  "can_do": [
+    "Name someone by what you said about them: {la dame dont je t'ai parlé}",
+    "Say what you are proud of: {un quartier dont je suis fière}"
+  ],
+  "teaches": {
     "constructions": [
       "fr:cx:relative.dont"
-    ],
-    "source": "course-plan.json"
-  }
+    ]
+  },
+  "vocabulary": [
+    {
+      "word_id": "dont-fr",
+      "fr": "dont",
+      "gloss": "of which, about which, whose",
+      "note": "Takes the place of {de} + a noun: {je parle de la rue} becomes {la rue dont je parle}.",
+      "example_fr": "Voilà la rue dont je parle.",
+      "example_en": "There's the street I'm talking about."
+    },
+    {
+      "word_id": "fier-fr",
+      "fr": "fier / fière",
+      "gloss": "proud",
+      "note": "{fier} for a man, {fière} for a woman. Proud of something: {fier de}.",
+      "example_fr": "C'est un quartier dont je suis fière.",
+      "example_en": "It's a neighbourhood I'm proud of."
+    },
+    {
+      "word_id": "pote-fr",
+      "fr": "pote",
+      "gloss": "mate, buddy",
+      "note": "Spoken, between friends. Léa calls Hugo her {pote} with Maya, never with Mme Garnier.",
+      "example_fr": "C'est Hugo, le pote dont je t'ai parlé, tu vois ?",
+      "example_en": "That's Hugo, the mate I told you about, you see?"
+    },
+    {
+      "word_id": "parler-fr",
+      "fr": "parler",
+      "gloss": "to speak, to talk",
+      "note": "{parler de}: to talk about. {la rue dont je parle}",
+      "review": true
+    },
+    {
+      "word_id": "besoin-fr",
+      "fr": "besoin",
+      "gloss": "need",
+      "note": "{avoir besoin de}: to need. {le livre dont j'ai besoin}",
+      "review": true
+    },
+    {
+      "word_id": "se-souvenir-fr",
+      "fr": "se souvenir",
+      "gloss": "to remember",
+      "note": "{se souvenir de}: to remember. {une dame dont je me souviens}",
+      "review": true
+    },
+    {
+      "word_id": "vous-fr",
+      "fr": "vous",
+      "gloss": "you (polite)",
+      "note": "Léa says {vous} to Mme Garnier and {tu} to Maya. An adult neighbour gets {vous} until she offers {tu}; someone your own age gets {tu} from the first word.",
+      "review": true
+    }
+  ],
+  "concepts": [
+    {
+      "id": "c-dont",
+      "term": "{dont}: the one you talk about",
+      "definition": "{dont} takes the place of {de} + a noun. Use it when the words after the noun take {de}: {parler de}, {avoir besoin de}, {avoir peur de}, {se souvenir de}, {rêver de}, {être fier de}. Put {dont} right after the noun and leave the {de} part out. Use {que} when the verb takes its object straight: {le pain que j'aime}, but {le pain dont j'ai besoin}. English can end on \"about\" or \"of\"; French never ends on {de}.",
+      "example": "{Je parle de la rue.} → {Voilà la rue dont je parle.} {J'ai besoin de ce livre.} → {C'est le livre dont j'ai besoin.}"
+    }
+  ],
+  "phrases": [
+    {
+      "phrase_id_suffix": "voisine-dont-je-suis-fiere",
+      "fr": "C'est une voisine dont je suis fière."
+    },
+    {
+      "phrase_id_suffix": "copain-dont-je-t-ai-parle",
+      "fr": "C'est le copain dont je t'ai parlé."
+    },
+    {
+      "phrase_id_suffix": "pote-dont-je-t-ai-parle",
+      "fr": "C'est Hugo, le pote dont je t'ai parlé, tu vois ?",
+      "word_id": "pote-fr"
+    }
+  ],
+  "items": [
+    {
+      "id": "i-c-est-le-monsieur-dont-vous-m-avez-parle",
+      "type": "respond",
+      "situation": "You are Léa. Mme Garnier, your neighbour on the ground floor, gives you a {thé glacé} and shows you old photos of the street. You spot a man she told you about. Ask her: is that the man you told me about?",
+      "answer": "C'est le monsieur dont vous m'avez parlé ?",
+      "accept": [
+        "Est-ce que c'est le monsieur dont vous m'avez parlé ?",
+        "Est-ce le monsieur dont vous m'avez parlé ?"
+      ],
+      "hint": "{vous m'avez parlé de ce monsieur}: {de} + the noun becomes {dont}.",
+      "mistakes": [
+        {
+          "answer": "C'est le monsieur que vous m'avez parlé ?",
+          "feedback": "{parler} takes {de}: {vous m'avez parlé de ce monsieur}. {de} + a noun becomes {dont}, not {que}."
+        },
+        {
+          "answer": "C'est le monsieur dont tu m'as parlé ?",
+          "feedback": "Mme Garnier is an adult neighbour. Léa says {vous} to her until she offers {tu}."
+        }
+      ]
+    },
+    {
+      "id": "i-un-quartier-dont-je-suis-fiere",
+      "type": "gapfill",
+      "text": "La Croix-Rousse, c'est un quartier ___ je suis fière.",
+      "blanks": [
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "The Croix-Rousse is a neighbourhood I'm proud of.",
+      "hint": "Mme Garnier is proud of the neighbourhood: {fière de}.",
+      "mistakes": [
+        {
+          "answer": "que",
+          "feedback": "{fière} takes {de}: {je suis fière du quartier}. So the word is {dont}."
+        },
+        {
+          "answer": "qui",
+          "feedback": "{qui} is the one who does the action. Here {je} is the subject, and {fière de} needs {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-voila-la-rue-dont-je-parle-souvent",
+      "type": "transform",
+      "instruction": "Mme Garnier points at the street in a photo. Join her two sentences with {dont}.",
+      "shown": "Voilà la rue. Je parle souvent de cette rue.",
+      "answer": "Voilà la rue dont je parle souvent.",
+      "mistakes": [
+        {
+          "answer": "Voilà la rue que je parle souvent.",
+          "feedback": "{parler} takes {de}: {je parle de cette rue}. Use {dont}."
+        },
+        {
+          "answer": "Voilà la rue dont je parle souvent de cette rue.",
+          "feedback": "{dont} already stands for {de cette rue}, so leave that part out."
+        }
+      ]
+    },
+    {
+      "id": "i-une-petite-ecole-dont-j-etais-fiere",
+      "type": "transform",
+      "instruction": "Mme Garnier taught at the school in this photo. Join her two sentences with {dont}.",
+      "shown": "C'était une petite école. J'étais fière de cette école.",
+      "answer": "C'était une petite école dont j'étais fière.",
+      "mistakes": [
+        {
+          "answer": "C'était une petite école que j'étais fière.",
+          "feedback": "{fière} takes {de}: {fière de cette école}. Use {dont}."
+        },
+        {
+          "answer": "C'était une petite école dont j'en étais fière.",
+          "feedback": "{dont} already holds the {de}, so no {en} after it."
+        }
+      ]
+    },
+    {
+      "id": "i-un-chien-dont-tout-le-monde-avait-peur",
+      "type": "transform",
+      "instruction": "Mme Garnier tells Léa about a dog in an old photo. Join her two sentences with {dont}.",
+      "shown": "Dans la rue, il y avait un chien. Tout le monde avait peur de ce chien.",
+      "answer": "Dans la rue, il y avait un chien dont tout le monde avait peur.",
+      "mistakes": [
+        {
+          "answer": "Dans la rue, il y avait un chien que tout le monde avait peur.",
+          "feedback": "{avoir peur} takes {de}: {peur de ce chien}. Use {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-une-dame-dont-je-me-souviens-bien",
+      "type": "transform",
+      "instruction": "Mme Garnier shows Léa a lady in a photo. Join her two sentences with {dont}.",
+      "shown": "C'est une dame. Je me souviens bien de cette dame.",
+      "answer": "C'est une dame dont je me souviens bien.",
+      "mistakes": [
+        {
+          "answer": "C'est une dame que je me souviens bien.",
+          "feedback": "{se souvenir} takes {de}: {je me souviens de cette dame}. Use {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-choice-le-pain-dont-tout-le-monde-parlait",
+      "type": "choice",
+      "question": "Mme Garnier talks about the bakery on the corner, long before Karim. Which word fills the gap? {C'était le pain ___ tout le monde parlait.}",
+      "options": [
+        {
+          "text": "qui",
+          "fr": true
+        },
+        {
+          "text": "que",
+          "fr": true
+        },
+        {
+          "text": "dont",
+          "fr": true,
+          "right": true
+        },
+        {
+          "text": "où",
+          "fr": true
+        }
+      ]
+    },
+    {
+      "id": "i-le-pain-que-les-croissants-dont",
+      "type": "gapfill",
+      "text": "Chez Karim, il y a le pain ___ j'aime et les croissants ___ Noé rêve.",
+      "blanks": [
+        {
+          "answer": "que"
+        },
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "At Karim's there's the bread I love and the croissants Noé dreams of.",
+      "hint": "{aimer} takes its object straight. {rêver} takes {de}."
+    },
+    {
+      "id": "i-tu-sais-ce-que-j-aime-la-rue-dont",
+      "type": "gapfill",
+      "text": "Tu sais ___ j'aime surtout ? La rue ___ elle m'a parlé.",
+      "blanks": [
+        {
+          "answer": "ce que"
+        },
+        {
+          "answer": "dont"
+        }
+      ],
+      "gloss": "Do you know what I like most? The street she told me about.",
+      "hint": "Léa tells Maya about the street Mme Garnier showed her. First blank: what I like, with no noun before it. Second blank: {parler de}."
+    },
+    {
+      "id": "i-karim-fier-lea-fiere",
+      "type": "gapfill",
+      "text": "Karim est ___ de sa boulangerie, et Léa est ___ de son quartier.",
+      "blanks": [
+        {
+          "answer": "fier"
+        },
+        {
+          "answer": "fière"
+        }
+      ],
+      "gloss": "Karim is proud of his bakery, and Léa is proud of her neighbourhood.",
+      "hint": "{fier} for a man, {fière} for a woman."
+    },
+    {
+      "id": "i-meaning-hugo-le-pote-dont-je-t-ai-parle",
+      "type": "meaning",
+      "instruction": "Léa points at a boy across the street and tells Maya:",
+      "shown": "C'est Hugo, le pote dont je t'ai parlé. Il est genre super drôle, tu vois ?",
+      "answer": "That's Hugo, the mate I told you about. He's like really funny, you see?",
+      "accept": [
+        "That's Hugo, the mate I told you about. He's really funny, you see?",
+        "It's Hugo, the mate I told you about. He's really funny, you see?",
+        "That's Hugo, the friend I told you about. He's really funny, you see?",
+        "It's Hugo, the friend I told you about. He's really funny, you see?",
+        "That's Hugo, the buddy I told you about. He's like super funny, you see?",
+        "That's Hugo, the friend I told you about. He's like really funny, you know?",
+        "That's Hugo, the mate I talked to you about. He's really funny, you see?"
+      ]
+    },
+    {
+      "id": "i-choice-who-hears-pote",
+      "type": "choice",
+      "question": "Léa calls Hugo her {pote}. Who would she say that word to?",
+      "options": [
+        {
+          "text": "Maya, who is 15 like her",
+          "right": true
+        },
+        {
+          "text": "Mme Garnier, her neighbour of 78"
+        },
+        {
+          "text": "Karim, the baker on the corner"
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-la-dame-dont-je-t-ai-parle",
+      "type": "respond",
+      "situation": "Léa says {au revoir} to Mme Garnier and meets Maya on the stairs. Maya asks who lives on the ground floor. Tell her: the lady I told you about.",
+      "answer": "C'est la dame dont je t'ai parlé.",
+      "accept": [
+        "La dame dont je t'ai parlé."
+      ],
+      "hint": "{je t'ai parlé de cette dame}: {de} + the noun becomes {dont}.",
+      "mistakes": [
+        {
+          "answer": "C'est la dame dont je vous ai parlé.",
+          "feedback": "Maya is 15, like Léa: {tu} from the first word, so {je t'ai parlé}."
+        },
+        {
+          "answer": "C'est la dame que je t'ai parlé.",
+          "feedback": "{parler} takes {de}: {je t'ai parlé de cette dame}. Use {dont}."
+        },
+        {
+          "answer": "C'est la dame que je t'ai parlé de.",
+          "feedback": "English can end on \"about\"; French never ends on {de}. Put {dont} right after the noun."
+        }
+      ]
+    },
+    {
+      "id": "i-c-est-un-quartier-dont-elle-est-fiere",
+      "type": "respond",
+      "situation": "Maya asks why Mme Garnier has lived in the Croix-Rousse for fifty years. Tell her: it's a neighbourhood she is proud of.",
+      "answer": "C'est un quartier dont elle est fière.",
+      "hint": "{elle est fière du quartier}: {du quartier} becomes {dont}.",
+      "mistakes": [
+        {
+          "answer": "C'est un quartier dont elle est fier.",
+          "feedback": "Mme Garnier is a woman, so {fière}."
+        },
+        {
+          "answer": "C'est un quartier qu'elle est fière.",
+          "feedback": "{fière} takes {de}: {fière du quartier}. Use {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-le-monsieur-dont-je-t-ai-parle-habitait",
+      "type": "transform",
+      "instruction": "Léa tells Maya about a man from Mme Garnier's photos. Join the two sentences with {dont}, starting with {Le monsieur}.",
+      "shown": "Je t'ai parlé du monsieur. Il habitait dans notre rue.",
+      "answer": "Le monsieur dont je t'ai parlé habitait dans notre rue.",
+      "mistakes": [
+        {
+          "answer": "Le monsieur que je t'ai parlé habitait dans notre rue.",
+          "feedback": "{parler} takes {de}: {je t'ai parlé du monsieur}. Use {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-j-invite-hugo-le-copain-dont-je-t-ai-parle",
+      "type": "respond",
+      "situation": "Maya asks Léa: {Tu invites qui samedi ?} Answer: Hugo, the friend I told you about.",
+      "answer": "J'invite Hugo, le copain dont je t'ai parlé.",
+      "accept": [
+        "Hugo, le copain dont je t'ai parlé.",
+        "J'invite Hugo, l'ami dont je t'ai parlé.",
+        "Hugo, l'ami dont je t'ai parlé.",
+        "J'invite Hugo, le pote dont je t'ai parlé.",
+        "Hugo, le pote dont je t'ai parlé."
+      ],
+      "mistakes": [
+        {
+          "answer": "J'invite Hugo, le copain que je t'ai parlé.",
+          "feedback": "{parler} takes {de}: {je t'ai parlé de ce copain}. Use {dont}."
+        }
+      ]
+    },
+    {
+      "id": "i-ce-sont-les-gens-dont-elle-m-a-parle",
+      "type": "respond",
+      "situation": "Léa shows Maya a photo Mme Garnier gave her. Maya asks: {En fait, c'est qui, ces gens ?} Tell her they're the people Mme Garnier told you about, with {elle} for Mme Garnier.",
+      "answer": "Ce sont les gens dont elle m'a parlé.",
+      "accept": [
+        "C'est les gens dont elle m'a parlé.",
+        "Les gens dont elle m'a parlé."
+      ],
+      "hint": "{elle m'a parlé de ces gens}: {de ces gens} becomes {dont}.",
+      "mistakes": [
+        {
+          "answer": "Ce sont les gens qu'elle m'a parlé.",
+          "feedback": "{parler} takes {de}: {elle m'a parlé de ces gens}. Use {dont}."
+        }
+      ]
+    }
+  ]
 }
