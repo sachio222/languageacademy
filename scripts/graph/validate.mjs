@@ -187,6 +187,14 @@ export function validateGraph(graph, opts = {}) {
     }
   }
 
+  // use: optional; 'recognize' marks a pattern the learner reads and hears but never types (the passé simple).
+  for (const c of graph.constructions) {
+    if (c.use === undefined || c.use === 'recognize') continue;
+    out.push(issue({
+      rule: 'construction-use-bad', nodeId: c.id,
+      message: `Construction ${c.id} has use ${JSON.stringify(c.use)}; leave use out, or set it to "recognize" for a pattern the learner only reads`,
+    }));
+  }
   for (const c of graph.constructions) {
     const m = c.examples && c.examples.match;
     if (!Array.isArray(m) || m.length === 0) {

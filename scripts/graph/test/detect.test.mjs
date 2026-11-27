@@ -173,3 +173,26 @@ test('matchSpans returns the token indices of every match, one per start', () =>
   const p = [{ surface: 'je' }, { surface: 'ne', optional: true }, { surface: 'parle' }];
   assert.deepEqual(matchSpans(prep('Je parle.').tokens, prep('Je parle.').readings, p), [[0, 1]]);
 });
+
+test('end anchors a step to the last token, accented reads the accents the surface folds away', () => {
+  assert.equal(run([{ surface: 'je' }, { surface: 'pars', end: true }], 'je pars'), true);
+  assert.equal(run([{ surface: 'je' }, { surface: 'pars', end: true }], 'je pars demain'), false);
+  assert.equal(run([{ surface: 'fut' }], "qu'il fût"), true);
+  assert.equal(run([{ accented: 'fût' }], "qu'il fût"), true);
+  assert.equal(run([{ accented: 'fût' }], 'il fut'), false);
+});
+
+// A reading passage is one text: the tokenizer numbers its sentences, and a match stays inside one of them.
+test('a match stays inside one sentence; start and end anchor to the sentence', () => {
+  const { tokens } = prep('Il pleut. Sans toi, je pars ! Tu viens ? Oui… je viens');
+  assert.deepEqual(tokens.map((t) => t.sentence), [0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3]);
+  assert.equal(run([{ surface: 'sans', start: true }, { surface: 'pars', skip: 3 }], 'Il pleut. Sans toi, je pars.'), true);
+  assert.equal(run([{ surface: 'sans', start: 'text' }], 'Il pleut. Sans toi, je pars.'), false);
+  assert.equal(run([{ surface: 'pleut', end: true }], 'Il pleut. Sans toi, je pars.'), true);
+  // adjacency and skip never cross a full stop, a question mark or an exclamation mark
+  assert.equal(run([{ surface: 'dit' }, { surface: 'je' }], 'Il a dit. Je savais.'), false);
+  assert.equal(run([{ surface: 'dit' }, { surface: 'savais', skip: 3 }], 'Il a dit. Je savais.'), false);
+  assert.equal(run([{ surface: 'dit' }, { surface: 'savais', skip: 3 }], 'Il a dit, je savais.'), true);
+  // an ellipsis marks a gap, not a sentence end
+  assert.equal(run([{ surface: 'je' }, { surface: 'lave' }], 'je ... lave'), true);
+});
