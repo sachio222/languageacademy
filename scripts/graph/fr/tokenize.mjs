@@ -44,8 +44,10 @@ export function restoreElisions(text) {
 }
 
 // A full stop, question mark, exclamation mark or line break between two words ends a sentence. An ellipsis (… or
-// ...) does not: exercise prompts use it for a gap (je ... lave).
-const SENTENCE_END_RE = /[!?\n]|(?<![.…])\.(?![.…])/;
+// ...) does not: exercise prompts use it for a gap (je ... lave). A colon that opens quoted speech ends one too
+// (il a dit : « Si on avait le temps… »): the words spoken are their own sentence, so the verb of saying before the
+// colon never joins them into reported speech or an embedded question. A colon before anything else does not.
+const SENTENCE_END_RE = /[!?\n]|(?<![.…])\.(?![.…])|:\s*["«“]/;
 
 // Each token carries `sentence`, the number of its sentence in the text (0 for the first), so that a detector match
 // stays inside one sentence of a reading passage.

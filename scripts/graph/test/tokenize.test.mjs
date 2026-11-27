@@ -109,3 +109,11 @@ test('hour notation (7h, 7h30, 18h) is a time, not the letter h', () => {
   assert.deepEqual(surfaces('à 8 heures'), ['à', 'heures']);
   assert.deepEqual(surfaces('8heures'), ['heures']);
 });
+
+test('quoted speech after a colon starts a new sentence', () => {
+  const sentences = (text) => tokenize(text).map((t) => t.sentence);
+  assert.deepEqual(sentences('Marc a dit: "Si on avait le temps, on resterait."'), [0, 0, 0, 1, 1, 1, 1, 1, 1, 1]);
+  assert.deepEqual(sentences('Elle a dit : « Viens ! »'), [0, 0, 0, 1]);
+  // a colon before a list or an explanation does not end the sentence
+  assert.deepEqual(sentences('Il a un rêve: être artiste.'), [0, 0, 0, 0, 0, 0]);
+});

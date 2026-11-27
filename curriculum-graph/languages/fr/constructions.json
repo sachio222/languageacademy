@@ -7377,7 +7377,8 @@
       "noMatch": [
         "Je sais que tu es là.",
         "Où est la gare ?",
-        "Je ne sais pas."
+        "Je ne sais pas.",
+        "Marc a dit: \"Si on avait plus de temps, on pourrait marcher toute la nuit.\""
       ]
     },
     "id": "fr:cx:q.embedded",
@@ -9063,7 +9064,8 @@
         "Je savais que c'était vrai.",
         "Il a dit quelque chose que je ne comprenais pas.",
         "Il a écrit une lettre que sa mère lisait.",
-        "Il a dit au revoir. Il savait que tu étais là."
+        "Il a dit au revoir. Il savait que tu étais là.",
+        "Marc a dit: \"Si on avait plus de temps, on pourrait marcher toute la nuit.\""
       ]
     },
     "id": "fr:cx:reported-speech",
