@@ -1,9 +1,7 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadGraph } from './load.mjs';
-import { tokenize } from './fr/tokenize.mjs';
-import { buildFormIndex, lookupToken, lookupTokenStrict } from './fr/forms.mjs';
-import { fold } from './fold.mjs';
+import { defaultLanguage, languageOf, languageOfIndex } from './language.mjs';
 
 const RANK = { irregular: 0, generated: 1, lemma: 2 };
 // A reading teaches the words of its own vocabulary table, at its own position (Jake's ruling, spec 5.7).
@@ -23,6 +21,7 @@ const TEACHING_KINDS = new Set(['lesson', 'help', 'reading']);
 const DETERMINER_POS = new Set(['article', 'determiner']);
 
 export function entryReadings(text, index, isWord, exclude = null, pos = null) {
+  const { tokenize, lookupToken, lookupTokenStrict } = languageOfIndex(index);
   let afterDeterminer = false;
   return tokenize(text, { isWord }).map((token) => {
     const keep = (rs) => (exclude ? rs.filter((r) => !exclude.has(r.headwordId)) : rs);
@@ -50,11 +49,13 @@ export function multiWordHeadwords(graph) {
   return (graph.headwords ?? [])
     .filter((h) => / /.test(h.lemma) && !/^se /.test(h.lemma) && h.pos !== 'noun')
     .filter((h) => !chunks.has(h.id.replace(':lex:', ':cx:chunk.')))
-    .map((h) => [h.id, fold(h.lemma).split(/\s+/).join(' ')]);
+    .map((h) => [h.id, languageOf(graph).fold(h.lemma).split(/\s+/).join(' ')]);
 }
-export const wordsOf = (text) => ` ${fold(text).replace(/[^\p{L}\p{N}'-]+/gu, ' ').trim()} `;
+// fold: the course language's fold (languageOf(graph).fold).
+export const wordsOf = (text, fold) => ` ${fold(text).replace(/[^\p{L}\p{N}'-]+/gu, ' ').trim()} `;
 
 export function extractTeaches(graph, course, index) {
+  const { lookupToken } = languageOfIndex(index);
   const isWord = (f) => index.has(f);
   const multi = multiWordHeadwords(graph);
   const courseMap = { ...(graph.courseMap ?? {}) };
@@ -102,12 +103,16 @@ export function extractTeaches(graph, course, index) {
 // know. It writes nothing: course-map.json holds checker corrections only, and the checker derives these words on
 // every run (content-course.mjs courseMapFromContent).
 async function main() {
-  const repoRoot = resolve(process.argv[2] ?? join(dirname(fileURLToPath(import.meta.url)), '../..'));
+  // extract-teaches.mjs [repo root] [--lang <code>] (core/settings.json defaultLanguage when left out)
+  const args = process.argv.slice(2);
+  const at = args.indexOf('--lang');
+  const lang = at >= 0 ? args.splice(at, 2)[1] : defaultLanguage();
+  const repoRoot = resolve(args[0] ?? join(dirname(fileURLToPath(import.meta.url)), '../..'));
   const { loadCourse } = await import('../content/load.mjs');
   const { readCourseFromContent } = await import('./content-course.mjs');
-  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), 'fr');
-  const course = readCourseFromContent(loadCourse({ root: join(repoRoot, 'content', 'fr') }));
-  const { courseMap, unknown } = extractTeaches(graph, course, buildFormIndex(graph));
+  const graph = loadGraph(join(repoRoot, 'curriculum-graph'), lang);
+  const course = readCourseFromContent(loadCourse({ root: join(repoRoot, 'content', lang) }));
+  const { courseMap, unknown } = extractTeaches(graph, course, languageOf(graph).buildFormIndex(graph));
   for (const m of course) {
     const words = courseMap[m.moduleKey]?.teachesWords;
     if (words?.length) console.log(`${m.moduleKey}\t${[...words].sort().join(' ')}`);

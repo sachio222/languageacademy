@@ -103,7 +103,7 @@ Words and patterns a guide teaches count as taught at the guide's position, exac
 
 ## Commands
 
-Run these from the repository root.
+Run these from the repository root. Each command reads the course `core/settings.json` names as `defaultLanguage` (French today). Name another language after the command: `node scripts/graph/cli.mjs check <lang>`, `node scripts/graph/add-words.mjs <lang>`, `node scripts/content/cli.mjs validate --lang <lang>`.
 
 - `pnpm graph:check` prints a count for each rule it found, plus `dangling-ref`, `level-data-missing` and `unread-items` even at 0, then the number of errors and warnings, the native language it checked for (`native`) and how many uses of an untaught cognate it allowed (`cognatesAllowed`). It ends with one line per level giving the share of that level's core words and the core constructions taught by the end of the course and where the level is reached, followed from A2 on by the same counts through that level (the level and the levels below it), then how many functions of each level become possible. It exits with status 1 while any error remains, so expect a failing exit until the course can lock. Add `--budget` to compare each count with `reports/issue-budget.json` instead: it exits with status 1 only when a rule has more issues than its budget (a rule the budget does not list has a budget of 0), and lists each rule over or under. CI runs `pnpm graph:check --budget` on every push, so a change that adds issues fails. After you fix issues, run `pnpm graph:check --lower-budget` to write the lower counts into the budget; it never raises one. Add `--native <code>` to check for another native language, such as `--native ja`; `graph:report` takes the same option.
 - `pnpm graph:due <moduleKey|position>` lists the words and patterns the module at that position should use again. A taught word or pattern should come back within 2 modules, then within 5, 12 and 30 modules of each use. The list holds those with no use yet inside their current window, when that window ends at the next module or has already ended. Each line gives the ID, where it was taught, its last use and where its window ends.
@@ -194,13 +194,15 @@ Before you add a word, check three things the builder cannot see:
 
 ### A new language
 
-The builder, `scripts/graph/add-words.mjs`, knows nothing about French. For another language it needs:
+The checker, the content loader and the word builder hold no French. Everything they need to know about a language comes from three places, and a new language adds only these:
 
-1. `languages/<lang>/paradigms.json`: the regular patterns, each a list of `{ cell, strip, add }` rules.
-2. `languages/<lang>/word-list.json`: the words, in the format above.
-3. `scripts/graph/<lang>/inflect.mjs`: one function, `inflect(entry, rulesOf)`, that returns the paradigm IDs a word takes and any spellings those paradigms do not build. The French one is under 100 lines: plurals in -x and -aux, the adjective pattern by ending, and the spelling changes of -er verbs.
+1. **Its data**, in `curriculum-graph/languages/<lang>/`: `headwords.json`, `forms.json`, `paradigms.json` (the regular patterns, each a list of `{ cell, strip, add }` rules), `constructions.json`, `names.json`, `course-map.json` and `word-list.json`. Optional: `settings.json`, which overrides `core/settings.json` key by key and holds what only this language has (French: `formLevels`, which tense pattern sets the level of each form cell and which cells a set phrase such as *je voudrais* teaches early; `reference`, the Reference pages that open; `levelOrder`), `exponents.json`, `reading-limits.json` and the core lists `core/levels/<lang>-<level>.json`. Learner-language material, such as cognates and English glosses, lives in `pairs/<native>-<lang>/`, because a French course for Spanish speakers needs different cognates and different glosses from one for English speakers.
+2. **Its language module**, `scripts/graph/<lang>/language.mjs`, whose default export has the members `scripts/graph/language.mjs` lists: how text splits into words (`tokenize`), how spellings compare (`fold`, `norm`, `lenient`), how words are looked up (most languages pass their fold and two small rules to `makeForms` in `scripts/graph/forms.mjs` and get the form index for free), how its text is told from the learner's (`isNativeText`, `targetIn`, `targetWordTest`), how a typed answer is graded (`checkAnswer`), the app dictionary's spellings for reading pop-ups (`dictionaryForms`, `popupKeys`), and a sort order and example word for reports. The shared code reaches a language only through `language(code)` or `languageOf(graph)`. A missing member stops the run with its name.
+3. **Its inflection rules**, `scripts/graph/<lang>/inflect.mjs`: one function, `inflect(entry, rulesOf)`, that returns the paradigm IDs a word takes and any spellings those paradigms do not build. The French one is under 100 lines: plurals in -x and -aux, the adjective pattern by ending, and the spelling changes of -er verbs.
 
-Then `node scripts/graph/add-words.mjs <lang>` writes that language's `headwords.json` and `forms.json`.
+Its course lives in `content/<lang>/`, with `course.json` naming the language. Then `node scripts/graph/add-words.mjs <lang>` builds the word list, and `graph:check` and `content:validate` take the language as shown under Commands.
+
+`scripts/graph/test/fixtures/lang-zz/` is the smallest working language: three words, one plural pattern, one lesson, and a module of about 40 lines. The test `language.test.mjs` runs it through the content loader and the checker and fails if any French file loads on the way.
 
 ## Adding an irregular form
 

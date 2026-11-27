@@ -1,5 +1,6 @@
 // Turns the checker's issues into counts and a markdown fix list for the product owner.
 import { languageName } from './pairs.mjs';
+import { languageOf } from './language.mjs';
 import { percent } from './report-data.mjs';
 import { LEVELS } from './levels-data.mjs';
 
@@ -112,7 +113,7 @@ export function excerpt(text, surface, max = 80) {
 
 // The opening paragraph of How to read this. openFrom: the position from which the Reference unit counts as open
 // (settings.reference.openFrom), or null when it stays closed. titles: the titles of the Reference pages that open.
-function openingParagraph(openFrom, titles = []) {
+function openingParagraph(openFrom, titles = [], lang = languageOf(null)) {
   const pages = titles.length > 1 ? `${titles.slice(0, -1).join(', ')} and ${titles.at(-1)}` : titles[0];
   const reference = openFrom == null
     ? 'The Reference unit (alphabet, numbers, days and months, colors and similar pages) has no position, because learners can '
@@ -125,7 +126,7 @@ function openingParagraph(openFrom, titles = []) {
       + 'Reference words apart from the words lessons teach.';
   return 'A checker read every lesson, practice, reading and exam in course order and tested one thing for each French word '
     + 'and grammar pattern: was it taught before the learner meets it? Positions count the modules in course order, from 1 to 160. '
-    + 'A code such as fr:lex:livre names the entry in the course word list, and a code starting fr:cx: names a grammar pattern. '
+    + `A code such as ${lang.code}:lex:${lang.exampleWord} names the entry in the course word list, and a code starting ${lang.code}:cx: names a grammar pattern. `
     + reference;
 }
 
@@ -168,13 +169,14 @@ const SOURCE_LABEL = {
 
 // The how-to-read paragraph on cognates, for the native language the list was checked for. allowIn:
 // settings.cognates.allowIn, 'shown' (cognates count as known only in French the learner reads or hears) or 'all'.
-function cognatesParagraph(pair, allowIn = 'shown') {
+function cognatesParagraph(pair, allowIn = 'shown', course = languageOf(null)) {
+  const target = pair.target ?? course.code;
   const lang = languageName(pair.native);
   if (!pair.words?.length) {
     return `This list was checked for ${lang} speakers. No cognate list exists for ${lang} speakers, so every untaught word `
       + 'counts, however close it is to a word they know.';
   }
-  const file = `curriculum-graph/pairs/${pair.native}-${pair.target ?? 'fr'}/cognates.json`;
+  const file = `curriculum-graph/pairs/${pair.native}-${target}/cognates.json`;
   if (allowIn === 'all') {
     return `This list was checked for ${lang} speakers. A cognate is a French word they read correctly without a lesson, `
       + 'such as restaurant. From the cognates lesson on, every cognate counts as known, in French the learner types as well '
@@ -182,7 +184,7 @@ function cognatesParagraph(pair, allowIn = 'shown') {
   }
   return `This list was checked for ${lang} speakers, so a cognate (a French word they read correctly without a lesson, `
     + 'such as restaurant) may appear in French the learner reads or hears from the cognates lesson on, before a lesson '
-    + `teaches it. The cognates come from curriculum-graph/pairs/${pair.native}-${pair.target ?? 'fr'}/cognates.json, and `
+    + `teaches it. The cognates come from curriculum-graph/pairs/${pair.native}-${target}/cognates.json, and `
     + 'Section 1 still lists a cognate the learner has to type. That line names the module where the learner first types it: '
     + 'teach the word there, or let the learner read it instead of typing it.';
 }
@@ -338,13 +340,13 @@ function renderFunctions(out, byPosition, opts) {
   }
   out.push('');
   const viaReference = [...new Set(fns.flatMap((f) => f.viaReferenceNodes ?? []).map((id) => shortName(opts.graph, id)))]
-    .sort((a, b) => a.localeCompare(b, 'fr'));
+    .sort((a, b) => a.localeCompare(b, languageOf(opts.graph).locale));
   if (viaReference.length) {
     out.push(`Some functions rely on words that no lesson teaches by then but the Reference unit lists (${viaReference.join(', ')}). `
       + 'The Reference unit is always open, so those functions count as possible, and "(relies on the Reference unit)" marks them below.', '');
   }
   const viaCognates = [...new Set(fns.flatMap((f) => f.viaCognateNodes ?? []).map((id) => shortName(opts.graph, id)))]
-    .sort((a, b) => a.localeCompare(b, 'fr'));
+    .sort((a, b) => a.localeCompare(b, languageOf(opts.graph).locale));
   if (viaCognates.length) {
     out.push(`Some functions rely on cognates that no lesson teaches by then (${viaCognates.join(', ')}). `
       + 'From the cognates lesson on, cognates count as known, so those functions count as possible, and "(relies on cognates)" marks them below.', '');
@@ -397,8 +399,8 @@ export function renderFixList(issues, course, courseMap = {}, opts = {}) {
   const s = summarize(issues);
   out.push(`${s.errors} errors, ${s.warnings} warnings, ${s.modulesWithErrors} modules with errors.`, '');
   out.push('## How to read this', '');
-  for (const para of [openingParagraph(opts.referenceOpenFrom, opts.referenceOpenTitles), ...HOW_TO_READ]) out.push(para, '');
-  if (opts.pair) out.push(cognatesParagraph(opts.pair, opts.cognatesAllowIn), '');
+  for (const para of [openingParagraph(opts.referenceOpenFrom, opts.referenceOpenTitles, languageOf(opts.graph)), ...HOW_TO_READ]) out.push(para, '');
+  if (opts.pair) out.push(cognatesParagraph(opts.pair, opts.cognatesAllowIn, languageOf(opts.graph)), '');
   const notes = course.flatMap((m) => (courseMap[m.moduleKey]?.contentNotes ?? []).map((n) => `- ${m.position}. ${m.title}: ${n}`));
   if (notes.length) out.push('## Lesson text to fix', '', ...notes, '');
 

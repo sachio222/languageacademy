@@ -5,10 +5,12 @@ import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assembleCourse, withoutPlanned } from './assemble.mjs';
 import { problem, ContentError } from './problems.mjs';
-import { defaultCheckAnswer } from './passable.mjs';
+import { defaultLanguage, language } from '../graph/language.mjs';
 
 export const REPO_ROOT = fileURLToPath(new URL('../../', import.meta.url));
-export const CONTENT_ROOT = join(REPO_ROOT, 'content', 'fr');
+// A language's course folder, content/<code>; the default course is the one core/settings.json defaultLanguage names.
+export const contentRoot = (code = defaultLanguage()) => join(REPO_ROOT, 'content', code);
+export const CONTENT_ROOT = contentRoot();
 
 // Problem file names are relative to the repository root, with forward slashes.
 const rel = (p) => relative(REPO_ROOT, p).split(sep).join('/');
@@ -25,7 +27,7 @@ export function readContent(root = CONTENT_ROOT) {
   return { outlineFile: rel(outlinePath), outlineText: existsSync(outlinePath) ? readFileSync(outlinePath, 'utf8') : null, files };
 }
 
-export const GRAPH_LANG_DIR = join(REPO_ROOT, 'curriculum-graph', 'languages', 'fr');
+export const GRAPH_LANG_DIR = join(REPO_ROOT, 'curriculum-graph', 'languages', defaultLanguage());
 
 // The graph ids teaches and tests may name: constructions (constructions.json, and the regular patterns in
 // paradigms.json, which share the fr:cx: ids and which the course map lists among taught constructions, such as
@@ -43,10 +45,13 @@ export function graphIds(dir = GRAPH_LANG_DIR) {
 }
 
 // graphDir: the graph language folder whose ids teaches and tests are checked against; null checks only their shape.
+// Left out, it is curriculum-graph/languages/<course.json language>. checkAnswer: the pass decision for one typed
+// answer; left out, the course language's (language.mjs checkAnswer). languageModule: the file of that language's
+// module, for a test language kept outside scripts/graph.
 // planned: false loads the written course only (assemble.mjs withoutPlanned), for checks of what the stubs hide.
 // replace: module file (repo-relative, as problems name it) -> text to read in its place, so a checker can stand a
 // module that does not load in for a planned stub and still read the rest of the course.
-export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnswer, graphDir = GRAPH_LANG_DIR, planned = true, replace = null } = {}) {
+export function loadCourse({ root = CONTENT_ROOT, checkAnswer, graphDir, planned = true, languageModule, replace = null } = {}) {
   const read = readContent(root);
   const { outlineFile, outlineText } = read;
   const files = replace ? read.files.map((f) => (replace.has(f.file) ? { ...f, text: replace.get(f.file) } : f)) : read.files;
@@ -66,6 +71,9 @@ export function loadCourse({ root = CONTENT_ROOT, checkAnswer = defaultCheckAnsw
     }
     throw new ContentError(ps);
   }
+  const code = typeof outline?.language === 'string' && outline.language ? outline.language : defaultLanguage();
+  checkAnswer ??= language(code, languageModule).checkAnswer;
+  if (graphDir === undefined) graphDir = join(REPO_ROOT, 'curriculum-graph', 'languages', code);
   const content = planned ? { outline, files } : withoutPlanned(outline, files);
   return assembleCourse(content.outline, content.files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir) });
 }

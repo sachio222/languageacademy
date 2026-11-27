@@ -1,0 +1,16 @@
+[
+  {
+    "id": "zz:cx:plural",
+    "label": "Plural: add -i",
+    "needs": [],
+    "rules": [
+      {
+        "cell": "pl",
+        "strip": "",
+        "add": "i"
+      }
+    ],
+    "cefr": "A1",
+    "cefrSource": "agent: judgment"
+  }
+]

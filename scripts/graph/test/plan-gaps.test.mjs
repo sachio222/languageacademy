@@ -9,9 +9,9 @@ import { fileURLToPath } from 'node:url';
 import { loadGraph } from '../load.mjs';
 import { buildFormIndex, lookupToken, lookupTokenStrict } from '../fr/forms.mjs';
 import { tokenize } from '../fr/tokenize.mjs';
-import { matchPattern, detectConstructions } from '../fr/detect.mjs';
+import { matchPattern, detectConstructions } from '../detect.mjs';
 import { validCefrSource } from '../levels-data.mjs';
-import { readCourse } from '../course.mjs';
+import { readCourse } from '../fr/live-course.mjs';
 import { runCheck } from '../check.mjs';
 import { extractTeaches } from '../extract-teaches.mjs';
 

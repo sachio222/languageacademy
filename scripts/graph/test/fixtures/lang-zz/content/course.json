@@ -1,0 +1,27 @@
+{
+  "schema": "la-course@1",
+  "language": "zz",
+  "native": "en",
+  "units": [
+    {
+      "unit_key": "unit1",
+      "name": "First words",
+      "description": "Say hello and name a cat.",
+      "can_do": "say hello",
+      "can_do_short": "say hello",
+      "can_do_example_fr": "Ka!",
+      "theme": {
+        "icon": "u-essentials",
+        "color": "unit-1"
+      },
+      "entries": [
+        "zz-hello"
+      ]
+    }
+  ],
+  "shelf": {
+    "pages": [],
+    "opens_words": []
+  },
+  "retired": []
+}

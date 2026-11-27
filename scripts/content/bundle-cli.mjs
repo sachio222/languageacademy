@@ -17,7 +17,7 @@ import { dirname, join, relative, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { loadCourse, CONTENT_ROOT, REPO_ROOT } from './load.mjs';
+import { loadCourse, CONTENT_ROOT, REPO_ROOT, contentRoot } from './load.mjs';
 import { ContentError } from './problems.mjs';
 import { buildBundleWithReport, bundleHash, canonicalJson } from './bundle.mjs';
 import { releaseProblems, diffBundles } from './release-checks.mjs';
@@ -30,7 +30,7 @@ export const LAST_RELEASE_FILE = 'legacy/last-release.json'; // in the content r
 export const CHECKER = fileURLToPath(new URL('./vendor/la-bundle/check/check_bundle.py', import.meta.url));
 const BUNDLE_SCHEMA = fileURLToPath(new URL('./vendor/la-bundle/contracts/curriculum.bundle.schema.json', import.meta.url));
 
-const OPTIONS = { '--root': true, '--out': true, '--units': true, '--previous': true, '--check': false };
+const OPTIONS = { '--root': true, '--lang': true, '--out': true, '--units': true, '--previous': true, '--check': false };
 
 function parse(args) {
   const opts = {};
@@ -110,7 +110,7 @@ export async function bundleCommand(args, { usage, printWarnings, line, countByC
     console.error(`${error}\n${usage}`);
     return 2;
   }
-  const root = opts['--root'] ? resolve(opts['--root']) : CONTENT_ROOT;
+  const root = opts['--root'] ? resolve(opts['--root']) : opts['--lang'] ? contentRoot(opts['--lang']) : CONTENT_ROOT;
   if (!existsSync(root)) {
     console.error(`${opts['--root']}: no such content folder`);
     return 1;

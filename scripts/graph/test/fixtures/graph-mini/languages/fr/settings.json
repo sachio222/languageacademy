@@ -1,0 +1,31 @@
+{
+  "formLevels": {
+    "tenses": {
+      "sbjv": "fr:cx:subj.il-faut-que",
+      "cond": "fr:cx:conditionnel-present",
+      "fut": "fr:cx:futur-simple",
+      "impf": "fr:cx:imparfait",
+      "prsptcp": "fr:cx:gerondif"
+    },
+    "chunks": [
+      {
+        "construction": "fr:cx:chunk.je-voudrais",
+        "cells": {
+          "fr:lex:vouloir": [
+            "cond.1sg",
+            "cond.2sg",
+            "cond.2pl"
+          ],
+          "fr:lex:aimer": [
+            "cond.1sg",
+            "cond.2sg"
+          ],
+          "fr:lex:pouvoir": [
+            "cond.2pl",
+            "cond.3sg"
+          ]
+        }
+      }
+    ]
+  }
+}

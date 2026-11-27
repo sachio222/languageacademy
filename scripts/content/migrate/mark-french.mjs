@@ -1,8 +1,8 @@
 // Marks the French inside native text with braces (spec 5.3), using the language-graph checker's own reading of
-// mixed text (scripts/graph/french-text.mjs frenchIn), so the content checker sees the French today's checker sees.
+// mixed text (scripts/graph/fr/text.mjs frenchIn), so the content checker sees the French today's checker sees.
 // Quote marks stay outside the braces ("Use '{être}'"), so the live text, with braces removed, is unchanged.
 // Pure apart from the word test passed in.
-import { frenchIn } from '../../graph/french-text.mjs';
+import { frenchIn } from '../../graph/fr/text.mjs';
 import { tokenize } from '../../graph/fr/tokenize.mjs';
 
 const escape = (s) => s.replace(/\{/g, '\\{');

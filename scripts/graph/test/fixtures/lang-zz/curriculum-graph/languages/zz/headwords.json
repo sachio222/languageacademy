@@ -1,0 +1,46 @@
+[
+  {
+    "id": "zz:lex:ka",
+    "lemma": "ka",
+    "pos": "interjection",
+    "paradigms": [],
+    "senses": [
+      {
+        "gloss": "hello"
+      }
+    ],
+    "dictionaryId": null,
+    "cefr": "A1",
+    "cefrSource": "agent: judgment"
+  },
+  {
+    "id": "zz:lex:kota",
+    "lemma": "kota",
+    "pos": "noun",
+    "paradigms": [
+      "zz:cx:plural"
+    ],
+    "senses": [
+      {
+        "gloss": "cat"
+      }
+    ],
+    "dictionaryId": null,
+    "cefr": "A1",
+    "cefrSource": "agent: judgment"
+  },
+  {
+    "id": "zz:lex:sela",
+    "lemma": "sela",
+    "pos": "adjective",
+    "paradigms": [],
+    "senses": [
+      {
+        "gloss": "good"
+      }
+    ],
+    "dictionaryId": null,
+    "cefr": "A1",
+    "cefrSource": "agent: judgment"
+  }
+]

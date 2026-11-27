@@ -6,7 +6,7 @@ import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { buildFormIndex, lookupToken } from '../fr/forms.mjs';
 import { tokenize } from '../fr/tokenize.mjs';
-import { matchPattern, matchSpans, detectConstructions } from '../fr/detect.mjs';
+import { matchPattern, matchSpans, detectConstructions } from '../detect.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const graph = loadGraph(join(here, 'fixtures', 'graph-mini'), 'fr');

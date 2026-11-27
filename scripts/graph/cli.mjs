@@ -1,6 +1,6 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { runCheck } from './check.mjs';
 import { renderFixList, summarize, checkSummaryLines } from './report.mjs';
 import { dueFor } from './rules/reuse.mjs';
@@ -9,10 +9,11 @@ import { ContentError, countByCode, plural, problemLine } from '../content/probl
 import { writeSortedJson } from './write-json.mjs';
 import { writeReportData } from './report-data.mjs';
 import { readBudget, writeBudget, checkBudgetParts, loweredParts, BUDGET_PARTS } from './budget.mjs';
+import { defaultLanguage } from './language.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
-const USAGE = 'usage: cli.mjs <check|due|report> <lang> [module_key] [--module <key>] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
+const USAGE = 'usage: cli.mjs <check|due|report> [lang] [module_key] [--module <key>] [--native <code>] [--content <dir>] [--budget] [--lower-budget]';
 
 // A planned stub standing in for a module file that does not load: its key from the file name, its kind and title
 // from the file when they can be read; null when even its kind cannot be read.
@@ -60,11 +61,6 @@ async function main() {
   };
   const lower = takeFlag('--lower-budget');
   const budget = takeFlag('--budget') || lower;
-  const [cmd, lang = 'fr', arg] = args;
-  if (!['check', 'due', 'report'].includes(cmd) || (contentDir && (lower || cmd === 'report'))) {
-    console.error(USAGE);
-    process.exit(2);
-  }
   // --module <key> (or the key as the third argument): check prints that module's findings in full.
   let only = null;
   const mflag = args.indexOf('--module');
@@ -72,6 +68,15 @@ async function main() {
     only = args[mflag + 1];
     if (!only || only.startsWith('--')) { console.error(USAGE); process.exit(2); }
     args.splice(mflag, 2);
+  }
+  // The language: the second word when it is a language code, else core/settings.json defaultLanguage.
+  const [cmd, ...rest] = args;
+  const named = /^[a-z]{2,3}$/.test(rest[0] ?? '') && existsSync(join(repoRoot, 'curriculum-graph', 'languages', rest[0]));
+  const lang = named ? rest.shift() : defaultLanguage();
+  const [arg] = rest;
+  if (!['check', 'due', 'report'].includes(cmd) || (contentDir && (lower || cmd === 'report'))) {
+    console.error(USAGE);
+    process.exit(2);
   }
   // Content that does not load is listed as content:validate lists it: each problem, then a count by code. A module
   // file that does not load is read as a planned stub, so one module mid-edit never stops the check of the rest; the

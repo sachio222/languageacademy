@@ -16,7 +16,7 @@ const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../.
 const imp = (p) => import(pathToFileURL(path.join(repo, p)).href);
 const { unitConfigs } = await imp('src/lessons/unitConfigLoader.js');
 const { lessons } = await imp('src/lessons/lessonData.js');
-const settings = JSON.parse(readFileSync(path.join(repo, 'curriculum-graph/core/settings.json'), 'utf8'));
+const settings = JSON.parse(readFileSync(path.join(repo, 'curriculum-graph/languages/fr/settings.json'), 'utf8'));
 
 const { outline, report } = outlineFromUnitConfigs(unitConfigs, { opensWords: settings.reference.modules });
 const unitOf = (key) => outline.units.filter((u) => u.entries.includes(key)).map((u) => u.unit_key);

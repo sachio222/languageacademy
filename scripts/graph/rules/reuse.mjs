@@ -3,6 +3,7 @@ import { parseId } from '../ids.mjs';
 import { issue } from '../issues.mjs';
 import { multiWordHeadwords, wordsOf } from '../extract-teaches.mjs';
 import { chunkTwins } from '../timeline.mjs';
+import { languageOf } from '../language.mjs';
 
 const memo = new WeakMap();
 
@@ -32,7 +33,7 @@ export function usesByNode(ctx) {
       }
       // A headword of several words (en fait) is read word by word, so its use is its words in order in the text.
       if (multi.length) {
-        const words = wordsOf([...(it.french ?? []), ...(it.shown ?? [])].join(' / '));
+        const words = wordsOf([...(it.french ?? []), ...(it.shown ?? [])].join(' / '), languageOf(ctx.graph).fold);
         for (const [id, lemma] of multi) if (words.includes(` ${lemma} `)) note(id, m.position);
       }
     }

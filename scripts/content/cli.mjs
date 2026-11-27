@@ -6,7 +6,7 @@
 // release bundle (bundle.mjs) and prints its hash, byte size and counts; see bundleCommand.
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { loadCourse, CONTENT_ROOT } from './load.mjs';
+import { loadCourse, CONTENT_ROOT, contentRoot } from './load.mjs';
 import { ContentError, countByCode, plural, problemLine as line } from './problems.mjs';
 
 function printWarnings(warnings) {
@@ -17,18 +17,21 @@ function printWarnings(warnings) {
 }
 
 const USAGE = [
-  'usage: node scripts/content/cli.mjs validate [--root <content dir>]',
-  '       node scripts/content/cli.mjs bundle [--root <content dir>] [--out <file>] [--units <unit_key,...>] [--previous <bundle.json>] [--check]',
+  'usage: node scripts/content/cli.mjs validate [--lang <code> | --root <content dir>]',
+  '       node scripts/content/cli.mjs bundle [--lang <code> | --root <content dir>] [--out <file>] [--units <unit_key,...>] [--previous <bundle.json>] [--check]',
 ].join('\n');
 
 function validate(args) {
   for (let j = 0; j < args.length; j++) {
-    if (args[j] === '--root') j++;
+    if (args[j] === '--root' || args[j] === '--lang') j++;
     else {
       console.error(`${args[j]}: not an option here\n${USAGE}`);
       return 2;
     }
   }
+  // --lang <code> reads content/<code>; --root names any content folder; neither reads the default course.
+  const l = args.indexOf('--lang');
+  if (l !== -1) args = ['--root', contentRoot(args[l + 1] ?? ''), ...args.filter((_, k) => k !== l && k !== l + 1)];
   const i = args.indexOf('--root');
   let root = CONTENT_ROOT;
   if (i !== -1) {

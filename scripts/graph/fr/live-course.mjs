@@ -8,9 +8,9 @@
 import path from 'node:path';
 import { existsSync, readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
-import { fold } from './fold.mjs';
-import { isEnglish, frenchIn } from './french-text.mjs';
-import { tokenize } from './fr/tokenize.mjs';
+import { fold } from '../fold.mjs';
+import { isEnglish, frenchIn } from './text.mjs';
+import { tokenize } from './tokenize.mjs';
 import { readScreen } from './screens.mjs';
 
 export { isEnglish };

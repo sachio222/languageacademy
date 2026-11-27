@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readScreen } from '../screens.mjs';
+import { readScreen } from '../fr/screens.mjs';
 import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { makeModule } from './helpers.mjs';

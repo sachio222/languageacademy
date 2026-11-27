@@ -2,7 +2,8 @@
 // and passage words with no pop-up. A guide's teaching counts like a lesson's (Jake, 2026-11-27): a guide explains,
 // often for the first time, what lessons cannot explain well, so no rule asks for a lesson to teach it first.
 import { issue } from '../issues.mjs';
-import { wordsWithoutPopup } from '../../content/migrate/reading.mjs';
+import { languageOf } from '../language.mjs';
+import { wordsWithoutPopup } from '../popups.mjs';
 
 // Case, spacing and the final punctuation do not make an item new ("Allons-y !" and "allons-y").
 const norm = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().toLowerCase().replace(/[\s.!?…;:,]+$/u, '');
@@ -57,7 +58,7 @@ export function ruleReadingWordNoPopup(ctx) {
   for (const m of ctx.course) {
     if (m.kind !== 'reading') continue;
     const mod = ctx.content.modules.get(m.moduleKey);
-    for (const surface of wordsWithoutPopup(mod, { dictionaryForms: ctx.dictionaryForms, names: ctx.graph.names })) {
+    for (const surface of wordsWithoutPopup(mod, { lang: languageOf(ctx.graph), dictionaryForms: ctx.dictionaryForms, names: ctx.graph.names })) {
       issues.push(issue({
         rule: 'reading_word_no_popup',
         severity: 'error',

@@ -9,7 +9,7 @@
 // only literature or war films need, and closed-class words the graph already covers (sa, cette, quelques …). Also
 // left out, because adding them would change how the checker reads course text:
 // - French words the checker uses as signs of English text (ours, four, article, futur, note and noter; see
-//   ENGLISH_ONLY in french-text.mjs);
+//   ENGLISH_ONLY in fr/text.mjs);
 // - livrer, whose present livre would read the noun livre as a verb;
 // - nouns spelled like a form of a verb already in the list and read that way in vocabulary tables (reste, souffle,
 //   commande, allée) or by a detector (doute made je doute qu'elle read as a relative clause);
