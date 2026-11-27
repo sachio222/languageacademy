@@ -1,0 +1,75 @@
+{
+  "schema": "la-recipe@1",
+  "kind": "reading",
+  "version": 1,
+  "about": "How a reading is built (unit-prep design section 6.2). Readings publish text-first; art is a last pass.",
+  "skeleton": [
+    {
+      "part": "passage",
+      "from": "card:setting",
+      "rule": "A passage set in the card's setting and on the card's reading topic."
+    },
+    {
+      "part": "vocabulary",
+      "from": "card:reading/new_words",
+      "rule": "One card per reading word the card lists, at most ten."
+    },
+    {
+      "part": "items",
+      "rule": "Comprehension questions, each answerable from the text."
+    }
+  ],
+  "size": {
+    "new_words": {
+      "max": 10
+    },
+    "items": {
+      "min": 8,
+      "max": 12
+    },
+    "first_pass_minutes": {
+      "max": "five_day_minutes"
+    }
+  },
+  "distinct_words": {
+    "first_reading": 40,
+    "per_unit": 18,
+    "tolerance": 0.15,
+    "passage_words_per_distinct": 2
+  },
+  "patterns_min": 0.7,
+  "mix": {
+    "types": [
+      "comprehension"
+    ],
+    "typical": {
+      "comprehension": 1
+    }
+  },
+  "accept": [],
+  "mistakes": {
+    "from": "none"
+  },
+  "glosses": {
+    "fill": "content:glosses",
+    "hand_rows": false
+  },
+  "drafter_rules": [
+    "Give each new word of the passage a vocabulary card: at most 10, counting the card's reading words, each a core word for the unit's level that fits the reading topic.",
+    "Every other passage word was taught before this reading.",
+    "Every passage word has a glossary row or a dictionary entry.",
+    "Names, cognates and sound words may appear without a card.",
+    "Each comprehension question is answerable from the text.",
+    "A different form of a word already taught gets a gloss row, never a card, with the fields fr, en and note."
+  ],
+  "basis": {
+    "size.new_words": "jake:2026-11-25 readings teach at most ten words of their own",
+    "size.items": "working",
+    "distinct_words.first_reading": "working",
+    "distinct_words.per_unit": "working",
+    "distinct_words.tolerance": "working",
+    "distinct_words.passage_words_per_distinct": "working",
+    "patterns_min": "working",
+    "mix.typical": "every reading question is a comprehension question"
+  }
+}
