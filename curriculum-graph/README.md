@@ -121,7 +121,7 @@ Run these from the repository root.
 
 Every verb has all six present forms except the verbs in `reading-limits.json` (see Level and function reports), falloir and pleuvoir, which have only il, and suivre, whose suis is left to être. A new irregular verb follows a verb of the same family (see Adding an irregular form): tenir and its compounds like venir, sentir like partir, employer and essuyer like nettoyer. A verb that never agrees, such as rire, mentir or réagir, has one past participle (ri, menti, réagi) and no ptcp.f, ptcp.pl or ptcp.fpl.
 
-Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in its `excludeWords` correction and the noun in its file's `teaches.words` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne.
+Some new verb forms are spelled like an older word: offre (offrir and the noun offre), produit, tiens and tienne (tenir and the pronoun le tien), reconnu, reconnaissant, crainte, tenue, sens (sentir and the noun sens) and mort (mourir and the noun mort). In running text the checker counts such a word as known when either reading is taught. A vocabulary table credits the verb form, because extraction ranks irregular forms first, so a lesson that lists the noun or pronoun needs the verb's IDs in its `excludeWords` correction and the noun in its file's `teaches.words` if extraction drops it. The possessive pronouns lesson already excludes tenir for la tienne. The B2 words added more such pairs that no lesson uses yet: dépense, baisse, lutte, approche, mérite (forms of dépenser, baisser, lutter, approcher and mériter), plainte (plaindre), donnée (donner), parcours (parcourir) and branche (brancher). A lesson that teaches one of them needs the same correction.
 
 ## Course-map fields
 
@@ -264,7 +264,7 @@ The core lists in `core/levels/` name what a learner must have to reach a level.
 - `words` was drafted from every headword of that level in the word list at the time, leaving out letters of the alphabet, interjections other than greetings, thanks, oui, non, ah, oh, allô and bravo, and words a learner does not need: slang, vulgar words, grammar terms such as verbe, and named dishes and landmarks the course happens to mention. It does not grow when the word list does.
 - Every node in a list has the list's level, and no node is in two lists.
 
-The word list holds the words the course uses and about 1,400 more that a learner needs at A1, A2 or B1 and that no lesson uses yet, such as écrire, fermer, avion and noir. They came from the 3,000 most frequent lemmas in Lexique and the Eaquals vocabulary themes, each placed by hand, and `scripts/graph/fr/build/core-words.mjs` records them. A core word that no lesson teaches is expected: it is a gap the coverage report shows.
+The word list holds the words the course uses and about 1,400 more that a learner needs at A1, A2 or B1 and that no lesson uses yet, such as écrire, fermer, avion and noir. They came from the 3,000 most frequent lemmas in Lexique and the Eaquals vocabulary themes, each placed by hand, and `scripts/graph/fr/build/core-words.mjs` records them. About 1,300 more are words a learner needs at B2 (and a few useful C1 words), from the next frequency band of Lexique and the Eaquals B2 themes, each with an English gloss; `scripts/graph/fr/build/b2-words.mjs` records them. A core word that no lesson teaches is expected: it is a gap the coverage report shows.
 
 The lists hold 733 words at A1, 681 at A2 and 841 at B1, so 1,414 words through A2 and 2,255 through B1. Milton and Alexiou (2009) measured French learners knowing about 1,160 lemmas at A1, 1,650 at A2 and 2,420 at B1, out of the 5,000 most frequent. The A1 list sits below that A1 figure and the A2 and B1 totals sit just below theirs, because a core list holds what every learner must know at a level, not every word a learner at that level happens to know.
 
@@ -305,12 +305,13 @@ A share in the curve is its count divided by `coreWords` or `coreConstructions` 
 
 ## Build scripts
 
-`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs` and `constructions.mjs` with `node`, in that order, reproduces the data files they wrote byte for byte.
+`scripts/graph/fr/build/` holds the scripts that built the French data. Running `add-words.mjs`, `core-words.mjs`, `b2-words.mjs` and `constructions.mjs` with `node`, in that order, reproduces the data files they wrote byte for byte.
 
 - `constructions.mjs` writes `constructions.json` and stays its source of truth.
 - `course-map.mjs` and `course-map-data.mjs` wrote the first course map, `names.json` and a few headword changes; `course-map-data.mjs` records why each entry exists. The course map has since been split between the module files and the corrections, keyed by item id, so `course-map.mjs` now stops before writing. Edit the JSON files and module files directly.
 - `add-words.mjs` records the words added after the first full check. Running it again changes nothing.
 - `core-words.mjs` records the words added for the core lists, with their levels and the irregular forms for their spelling changes (rangeons, jette, mène), and why some frequent words were left out (a spelling the checker already reads as another word, or an English word in course labels). Running it again changes nothing.
+- `b2-words.mjs` records the B2 and C1 words, with their glosses, genders and levels, the irregular forms of their verbs (copied from a verb of the same family, such as soumettre from mettre) and adjectives, and why some words were left out. Running it again changes nothing.
 - `constructions.mjs` takes construction levels from `construction-levels.mjs`.
 - `levels-propose.mjs` proposed the first headword levels from Lexique and FLELex files kept outside the repository, in a table that stays outside it too. It is not part of the build. The levels in `headwords.json` were decided from that table and are now edited by hand.
 
