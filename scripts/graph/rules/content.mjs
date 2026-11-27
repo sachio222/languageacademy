@@ -1,10 +1,7 @@
 // Rules that read the content layer (ctx.content, loadCourse() output): unit exam items copied from a lesson,
-// passage words with no pop-up, and teaching that only a guide gives.
+// and passage words with no pop-up. A guide's teaching counts like a lesson's (Jake, 2026-11-27): a guide explains,
+// often for the first time, what lessons cannot explain well, so no rule asks for a lesson to teach it first.
 import { issue } from '../issues.mjs';
-import { buildTimeline } from '../timeline.mjs';
-import { OUTSIDE } from '../content-course.mjs';
-import { analyzeItems, suppressions } from './taught-before.mjs';
-import { lookupKey } from '../fr/forms.mjs';
 import { wordsWithoutPopup } from '../../content/migrate/reading.mjs';
 
 // Case, spacing and the final punctuation do not make an item new ("Allons-y !" and "allons-y").
@@ -70,71 +67,6 @@ export function ruleReadingWordNoPopup(ctx) {
         message: `"${surface}" in the passage of ${m.moduleKey} has no pop-up: add it to the dictionary or the reading's glossary`,
         fix: { kind: 'add-to-graph' },
       }));
-    }
-  }
-  return issues;
-}
-
-const timelines = new WeakMap();
-
-// The timeline with every guide left out, so it shows what lessons, readings and the Reference teach on their own.
-function withoutGuides(ctx) {
-  if (!timelines.has(ctx)) {
-    const course = ctx.course.filter((m) => m.kind !== 'help');
-    timelines.set(ctx, buildTimeline(ctx.graph, course, { reference: ctx.referenceOpen ?? null, openFrom: ctx.timeline.openFrom }));
-  }
-  return timelines.get(ctx);
-}
-
-// guide_only_teaching (error): a module other than a guide uses a word or pattern that, at its position, only a guide
-// has taught. A guide is never a prerequisite (spec 5.6): a learner may skip it, so a lesson teaches it first. One
-// issue per word or pattern per module; hints, feedback, instructions and titles are left out as for taught-before.
-// A recognition-only pattern (use: 'recognize') is left out: the learner only reads it, and a recognition guide is
-// the way the course teaches it.
-export function ruleGuideOnlyTeaching(ctx) {
-  if (!ctx.course.some((m) => m.kind === 'help')) return [];
-  const own = withoutGuides(ctx);
-  const full = ctx.timeline;
-  const analysis = analyzeItems(ctx);
-  const recognize = new Set((ctx.graph.constructions ?? []).filter((c) => c.use === 'recognize').map((c) => c.id));
-  const issues = [];
-  for (const m of ctx.course) {
-    if (m.kind === 'help') continue;
-    const seen = new Set();
-    const report = (it, nodeId, what, text) => {
-      if (seen.has(nodeId)) return;
-      seen.add(nodeId);
-      issues.push(issue({
-        rule: 'guide_only_teaching',
-        severity: 'error',
-        moduleKey: m.moduleKey,
-        position: m.position,
-        itemRef: it.ref,
-        nodeId,
-        text,
-        message: `${it.ref} uses ${what}, which only a guide teaches by position ${m.position}; teach it in a lesson first (${text})`,
-        fix: { kind: 'teach-earlier', moduleKey: m.moduleKey },
-      }));
-    };
-    for (const it of m.items) {
-      if (OUTSIDE.has(it.source)) continue;
-      const ignore = suppressions(ctx, m.moduleKey, it.ref);
-      for (const a of analysis.get(it.ref) ?? []) {
-        a.tokens.forEach((t, i) => {
-          const rs = a.readings[i];
-          if (!rs.length || ctx.graph.names.has(t.fold)) return;
-          if (ignore.has(lookupKey(t)) || ignore.has(t.fold) || rs.some((r) => ignore.has(r.headwordId) || ignore.has(r.nodeId))) return;
-          if (!full.isTokenAvailable(rs, m.position) || own.isTokenAvailable(rs, m.position)) return;
-          const licensed = (tl) => (a.licenses ?? []).some((l) => l.at.has(i) && tl.isAvailable(l.id, m.position) && rs.some((r) => l.heads.has(r.headwordId)));
-          if (licensed(own)) return;
-          const head = rs.find((r) => full.isTaught(r.headwordId, m.position))?.headwordId ?? rs[0].headwordId;
-          report(it, head, `"${t.surface}"`, a.text);
-        });
-        for (const id of a.constructions) {
-          if (recognize.has(id) || ignore.has(id) || !full.isAvailable(id, m.position) || own.isAvailable(id, m.position)) continue;
-          report(it, id, id, a.text);
-        }
-      }
     }
   }
   return issues;

@@ -72,6 +72,9 @@ for (const lang of languages) {
       const m = modules[i];
       for (const heading of ['## What to write', '## This module', '## The unit', '## Sizes', '## What the learner knows by now', '## Rules of every module']) assert.ok(b.text.includes(heading), `${m.module_key}: ${heading}`);
       if (m.goal) assert.ok(b.text.includes(m.goal), `${m.module_key}: its goal`);
+      // One world: every brief of a unit prints the unit's cast facts, so all its writers agree (Jake, 2026-11-27).
+      assert.ok(unit.setting.facts?.length, `${unit.unit_key}: the plan gives its cast facts`);
+      assert.ok(b.text.includes('**Cast facts.**') && unit.setting.facts.every((f) => b.text.includes(f)), `${m.module_key}: its unit's cast facts`);
       assert.ok(templatesFor(m).length > 0);
     }
     const one = briefsFor({ ...checked, lang, repoRoot: REPO_ROOT, target: modules[1].module_key });

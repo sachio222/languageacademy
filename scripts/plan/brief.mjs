@@ -88,7 +88,11 @@ function briefText({ plan, unit, module, context, limits, lang, repoRoot, word }
 
   section('The unit', [
     field('Can do', unit.can_do), field('Cast', unit.setting.cast.join('; ')), field('Places', unit.setting.places?.join('; ')),
-    field('Situations', unit.setting.situations?.join('; ')), field('History', unit.culture?.history), field('Customs', unit.culture?.customs), field('Sound focus', unit.sound),
+    field('Situations', unit.setting.situations?.join('; ')),
+    unit.setting.facts?.length
+      ? `- **Cast facts.** Every module of the unit agrees with them.\n${unit.setting.facts.map((f) => `  - ${f}`).join('\n')}`
+      : '- **Cast facts.** Not set yet: settle who likes what, who lives where and where each place is in the plan before writing.',
+    field('History', unit.culture?.history), field('Customs', unit.culture?.customs), field('Sound focus', unit.sound),
     '- **Modules, in order.**',
     ...unit.modules.map((m, i) => `  ${i + 1}. ${KIND[m.kind]}: ${plain(m.title)}${m.module_key === module.module_key ? ' (this module)' : ''}${m.goal && m.kind === 'lesson' ? `. ${m.goal}` : ''}`),
     ...(unit.open?.length ? ['- **To settle when the unit is written.**', ...unit.open.map((x) => `  - ${x}`)] : []),

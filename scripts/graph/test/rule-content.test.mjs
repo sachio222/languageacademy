@@ -38,24 +38,16 @@ test('no popup', async () => {
   assert.equal(none[0].moduleKey, 'reading-cafe');
 });
 
-test('guide only teaching', async () => {
+test("a guide's teaching counts like a lesson's (Jake, 2026-11-27)", async () => {
   // The guide (position 3) teaches est-ce que; the practice set after it (position 4) uses it, and no lesson teaches
-  // it, so learners who skip the guide meet it untaught.
+  // it. A guide explains, often for the first time, what lessons cannot explain well, and what it teaches counts as
+  // taught from its position, so the practice set raises nothing.
   const course = miniCourse((modules) => {
     modules.get('practice-etre').items.push({ id: 'p-question', type: 'gapfill', text: 'Est-ce que tu ___ Paul ?', blanks: [{ answer: 'es' }] });
   });
   const { issues } = await checkMini(course);
-  const only = ofRule(issues, 'guide_only_teaching');
-  assert.ok(only.some((i) => i.nodeId === 'fr:cx:q.est-ce-que' && i.itemRef === 'practice-etre#p-question'), JSON.stringify(only));
-  assert.ok(only.every((i) => i.severity === 'error'));
-  // The guide itself may use what it teaches.
-  assert.ok(!only.some((i) => i.moduleKey === 'questions-help'));
-  // A lesson teaching it too clears the issue.
-  const taught = miniCourse((modules) => {
-    modules.get('practice-etre').items.push({ id: 'p-question', type: 'gapfill', text: 'Est-ce que tu ___ Paul ?', blanks: [{ answer: 'es' }] });
-    modules.get('2024-01-02-etre').teaches.constructions.push('fr:cx:q.est-ce-que');
-  });
-  assert.deepEqual(ofRule((await checkMini(taught)).issues, 'guide_only_teaching').filter((i) => i.nodeId === 'fr:cx:q.est-ce-que'), []);
+  assert.deepEqual(ofRule(issues, 'guide_only_teaching'), []);
+  assert.deepEqual(issues.filter((i) => i.nodeId === 'fr:cx:q.est-ce-que' && i.itemRef === 'practice-etre#p-question'), []);
 });
 
 test('phrasebook opens nothing', async () => {

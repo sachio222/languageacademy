@@ -208,7 +208,7 @@
     {
       "id": "i-piscine-que-j-adore",
       "type": "choice",
-      "question": "Which word fits? {C'est la piscine ___ j'adore.}",
+      "question": "Noé shows Maya his favourite place. Which word fits? {C'est la piscine ___ j'adore.}",
       "options": [
         {
           "text": "que",
@@ -340,7 +340,7 @@
     {
       "id": "i-film-dont-tout-le-monde-parle",
       "type": "choice",
-      "question": "Which word fits? {Le film ___ tout le monde parle est sympa.}",
+      "question": "Hugo tells Léa about a film for Saturday night. Which word fits? {Le film ___ tout le monde parle est sympa.}",
       "options": [
         {
           "text": "dont",

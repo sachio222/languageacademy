@@ -126,6 +126,10 @@
             "situations": {
               "$ref": "#/$defs/texts",
               "description": "The real things to get done that the lessons practise."
+            },
+            "facts": {
+              "$ref": "#/$defs/texts",
+              "description": "The unit's cast facts, one world for every module: who likes what, who lives where and on which floor, where each place is and when it opens. Every brief of the unit prints them."
             }
           }
         },

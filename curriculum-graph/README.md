@@ -75,7 +75,7 @@ Around the exercises it reads the French of vocabulary examples and notes, table
 
 Hints, mistake feedback, instructions and titles stay outside the taught-before rule: a word in them may come before its lesson. Their French still counts as a use for the reuse windows. Where the checker misreads a sentence, an `overrides` entry in `course-map.json` names the words or patterns to ignore in that item.
 
-Words and patterns a guide teaches count as taught at the guide's position, but a guide is never a prerequisite, because a learner may skip it. When another module uses something only a guide has taught by then, the checker reports `guide_only_teaching`, and a lesson should teach it first.
+Words and patterns a guide teaches count as taught at the guide's position, exactly like a lesson's. A guide explains, often for the first time, what lessons cannot explain well (Jake, 2026-11-27), so a later module may build on what only a guide has taught.
 
 `pnpm graph:test` fails when any learner-facing string of the course gets no ref, so French cannot sit in a field the checker skips. The content schema rejects a field it does not know (`field_unknown`), so a new field needs a role there first.
 
@@ -232,7 +232,7 @@ The same argument can hold `use: 'recognize'` for a pattern the learner reads an
 - What counts is the literary form itself: the words its detector marks with `form: true`, such as the verb of il fut, or the whole match when no step is marked.
 - Section 1 of the fix list reports it only where the learner reads or hears that form before a module teaches it, such as a reading passage in the passé simple before the guide that explains the tense. It is never reported where the learner types the form: in an answer, or in a gap-fill whose blank is the form. A gap-fill whose blank is another word of the match (the il of il fut) still leaves the form read.
 - Where the learner must type the form, `pnpm graph:check` warns `recognize-typed`: a learner should read such a pattern, not write it. A headword can be recognition-only too (see Adding a headword), and gets the same warning.
-- A guide may teach it alone, so `guide_only_teaching` leaves it out.
+- A guide may teach it alone, like any other pattern.
 
 The B2 patterns of this kind are `fr:cx:passe-simple` and `fr:cx:inversion.literary` (peut-être viendra-t-il, « Bonjour », dit-il), both B2, and `fr:cx:subj.imparfait` (qu'il fût), `fr:cx:subj.plus-que-parfait` (qu'il eût fini) and `fr:cx:neg.ne-alone` (je ne sais, je ne peux le croire), all C1.
 

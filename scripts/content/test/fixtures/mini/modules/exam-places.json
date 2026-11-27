@@ -8,7 +8,7 @@
   "tests": { "constructions": ["fr:cx:pronoun.subject"] },
   "items": [
     { "id": "e-cafe", "type": "respond", "situation": "A friend calls. Say you are at the café.", "answer": "je suis au café" },
-    { "id": "e-nous", "type": "transform", "instruction": "Say it for {nous}.", "shown": "je suis là", "answer": "nous sommes là" },
+    { "id": "e-nous", "type": "transform", "instruction": "Paul talks about himself and his sister. Say it for {nous}.", "shown": "je suis là", "answer": "nous sommes là" },
     { "id": "e-gare", "type": "gapfill", "text": "Il ___ à la gare.", "blanks": [{ "answer": "est" }] },
     { "id": "e-meaning", "type": "meaning", "shown": "vous êtes", "answer": "you are" },
     { "id": "e-which", "type": "choice", "question": "Which one means we are?", "options": [{ "text": "nous sommes", "fr": true, "right": true }, { "text": "vous êtes", "fr": true }] }

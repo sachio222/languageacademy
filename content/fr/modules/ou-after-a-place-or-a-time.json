@@ -197,7 +197,7 @@
     {
       "id": "i-bibliotheque-ou-je-travaille",
       "type": "transform",
-      "instruction": "Join the two sentences with {où}.",
+      "instruction": "Léa shows Maya the place where she studies. Join her two sentences with {où}.",
       "shown": "C'est la bibliothèque. Je travaille là le samedi.",
       "answer": "C'est la bibliothèque où je travaille le samedi.",
       "hint": "{là} goes, {où} comes in.",

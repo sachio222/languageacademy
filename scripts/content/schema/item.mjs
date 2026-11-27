@@ -5,6 +5,11 @@ import { spanProblems } from '../spans.mjs';
 export const ITEM_TYPES = ['translate', 'respond', 'transform', 'gapfill', 'meaning', 'choice', 'comprehension'];
 export const ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 
+// "Tell Maya: …", "Tell him: …" followed by English, not by a {…} cue in the course language.
+const TRANSLATION_FRAMED = /\bTell (?:him|her|them|[A-Z][\w-]+)\b[^:.]{0,25}:\s*(?!\{)\S/;
+// An instruction that is one bare command, with no speaker or situation before it.
+const BARE_DRILL = /^(?:Join|Put|Ask|Say|Make|Rewrite|Change|Use|Give|Turn)\b[^.!?]*[.!?]?$/;
+
 // A gap-fill blank is exactly three underscores; the bundle counts markers with this same pattern. A run of four or
 // more underscores is no blank at all (blank_marker_invalid), so the schema and the bundle can never disagree.
 export const BLANK = '___';
@@ -113,6 +118,17 @@ export function validateItem(item, { file, path, kind, unitIndex, stepsAllowed }
   // A checker finding, not a load failure (spec 5.4): a warning, which Task 10 counts under the issue budget.
   if (item.type === 'translate' && unitIndex !== 1)
     ps.push(problem(file, `${path}.type`, 'translate_outside_unit1', 'a bare English sentence to translate, outside Unit 1; rewrite it over time (Jake, 2026-11-25)', 'warning'));
+
+  // Two more checker findings (Jake, 2026-11-27), warnings like the one above. After Unit 1, an item is set in a
+  // situation with a speaker and a reason: "Tell Maya: <an English sentence>" is a translation in disguise, and an
+  // instruction that is only a command ("Put it in the past.") is a drill with no situation.
+  if (unitIndex !== 1) {
+    const prompt = [item.situation, item.instruction, item.question].filter(isStr).join(' ');
+    if (TRANSLATION_FRAMED.test(prompt))
+      ps.push(problem(file, path, 'translation_framed', 'an English sentence to say in French after "Tell …:"; describe the situation and what the speaker wants instead', 'warning'));
+    if (isStr(item.instruction) && BARE_DRILL.test(item.instruction.trim()))
+      ps.push(problem(file, `${path}.instruction`, 'drill_without_situation', 'the instruction is only a command; give it a speaker, a situation and a reason', 'warning'));
+  }
 
   // Plain string fields.
   for (const field of Object.keys(FIELD_ROLES[item.type])) {

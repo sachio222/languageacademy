@@ -17,7 +17,7 @@ import { ruleUnread } from './rules/unread.mjs';
 import { ruleShapes } from './rules/shapes.mjs';
 import { ruleBlanks } from './rules/blanks.mjs';
 import { ruleCourseMapKeys, ruleCourseMapItems } from './rules/course-map.mjs';
-import { ruleExamItemCopied, ruleReadingWordNoPopup, ruleGuideOnlyTeaching } from './rules/content.mjs';
+import { ruleExamItemCopied, ruleReadingWordNoPopup } from './rules/content.mjs';
 import { ruleFunctionExponents, ruleFunctionUnreachable, functionReport } from './functions.mjs';
 import { reportStats } from './report-data.mjs';
 import { entryReadings } from './extract-teaches.mjs';
@@ -28,7 +28,7 @@ const RULES = [
   ruleTaughtBefore, ruleReuse, ruleTranslation, ruleClaims,
   ruleDuplicates, ruleLevels, ruleUnread, ruleShapes, ruleBlanks, ruleCourseMapKeys, ruleCourseMapItems,
   ruleFunctionExponents, ruleFunctionUnreachable,
-  ruleExamItemCopied, ruleReadingWordNoPopup, ruleGuideOnlyTeaching,
+  ruleExamItemCopied, ruleReadingWordNoPopup,
 ];
 
 // Headwords and forms the Reference unit's vocabulary tables list, read the way lesson vocabulary is. The report

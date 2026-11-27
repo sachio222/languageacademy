@@ -17,3 +17,14 @@ These notes go into every writer brief for French, after the method that holds f
 - When a situation does not say who is spoken to, items accept both *tu* and *vous*. When it does not fix the question form, items accept intonation, *est-ce que* and inversion. When the speaker's gender is not fixed, items accept both agreements.
 - History is told in the *passé composé* and the *imparfait*. The *passé simple* waits for the B2 units.
 - France is part of every unit: its history, ancient history included, and its customs. The plan names what each unit carries.
+
+## Lessons learned from the Unit 13 review
+
+- A speaker from Québec, such as Maya, speaks native French but not France's slang: no *mec*, *chais* or *du coup* in her mouth. She can quote a French friend's words.
+- *n'est-ce pas* is bookish: an older speaker may use it, a teenager says *non ?* or *hein ?*.
+- *J'accepte avec plaisir* is for writing and for adults; friends say *Avec plaisir !* or *Je viens !*.
+- *Bref* cuts a list or a long story short; after a single cause, French says *du coup*.
+- *Ce qui est drôle, c'est…* names a thing or a moment (*c'est quand Hugo chante*), not a person; for a person, *celui qui* or *Hugo, il est drôle*.
+- *le samedi* is every Saturday; last Saturday is *samedi*.
+- Before a name with a mute h, write *d'Hugo*.
+- *ça va devenir drôle* is a calque of *get funny*: French says *ça va être drôle*.

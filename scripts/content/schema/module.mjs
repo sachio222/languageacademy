@@ -325,6 +325,8 @@ function collectStrings(v, path, texts) {
   else if (isObj(v)) for (const [k, x] of Object.entries(v)) collectStrings(x, join(path, k), texts);
 }
 
+const UNIT_RULES = new Set(['translate_outside_unit1', 'translation_framed', 'drill_without_situation']);
+
 function walkItems(items, path, cx) {
   if (!Array.isArray(items)) return cx.bad(path, 'field_type', `${path} must be a list`);
   if (items.length === 0) return cx.bad(path, 'field_type', `${path} must not be empty`);
@@ -337,9 +339,9 @@ function walkItems(items, path, cx) {
       cx.bad(`${p}.type`, 'item_type_not_allowed', `a ${kind} module cannot hold ${item.type} items`);
     const stepsAllowed = known ? TYPE_STEPS[item.type].filter((s) => STEPS_BY_KIND[kind].includes(s)) : STEPS_BY_KIND[kind];
     // A module the outline does not place (unitIndex null) has no unit yet: the outline check reports
-    // that, so the Unit 1 translation rule waits until the module is placed.
+    // that, so the rules that depend on the unit (translation, framed translation, bare drills) wait until it is placed.
     const itemProblems = validateItem(item, { file, path: p, kind, unitIndex, stepsAllowed });
-    cx.problems.push(...(unitIndex == null ? itemProblems.filter((q) => q.code !== 'translate_outside_unit1') : itemProblems));
+    cx.problems.push(...(unitIndex == null ? itemProblems.filter((q) => !UNIT_RULES.has(q.code)) : itemProblems));
     if (isObj(item) && typeof item.id === 'string') {
       if (seen.has(item.id)) cx.bad(`${p}.id`, 'id_duplicate', `item id ${item.id} is used twice in this module`);
       seen.add(item.id);

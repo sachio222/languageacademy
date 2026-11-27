@@ -488,14 +488,14 @@
   ],
   "glosses": [
     {
-      "fr": "gentille",
-      "en": "nice, kind",
-      "note": "feminine of {gentil}"
-    },
-    {
       "fr": "connaissais",
       "en": "knew",
       "note": "imparfait of {connaître}"
+    },
+    {
+      "fr": "gentille",
+      "en": "nice, kind",
+      "note": "feminine of {gentil}"
     },
     {
       "fr": "préfère",

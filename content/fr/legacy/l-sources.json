@@ -7074,6 +7074,306 @@
           "note": "From {devenir}, to become: {le ciel devient rouge}, {les nuages deviennent trop lourds}."
         }
       ]
+    },
+    {
+      "n": 13,
+      "unit": 13,
+      "title": "Mon nouveau quartier",
+      "titleEn": "My New Neighbourhood",
+      "style": "",
+      "credit": "",
+      "ext": "webp",
+      "cover": null,
+      "href": "reading13.html",
+      "blocks": [
+        {
+          "fr": "*De Rosalie, à Montréal*",
+          "en": "From Rosalie, in Montréal",
+          "dateline": true
+        },
+        {
+          "fr": "Salut Maya ! Ça va ? Tu es à Lyon depuis trois semaines, et tu ne m'as presque rien dit ! C'est comment, ton quartier ? Tu as des amis ? Qu'est-ce que tu fais le samedi ? Et les Français, ils parlent comme nous ?",
+          "en": "Hi Maya! How are you? You've been in Lyon for three weeks, and you've told me almost nothing! What's your neighbourhood like? Have you got friends? What do you do on Saturdays? And the French, do they talk like us?"
+        },
+        {
+          "fr": "Dis-moi tout !",
+          "en": "Tell me everything!"
+        },
+        {
+          "scene": "Le soir, après la fête de Léa, Maya prend son téléphone.",
+          "en": "That evening, after Léa's party, Maya picks up her phone."
+        },
+        {
+          "fr": "Salut Rosalie ! Au début, j'étais un peu triste : je ne connaissais personne, j'étais toute seule. Mais il y a une fille de quinze ans, comme moi, qui habite juste en dessous de chez moi. Elle s'appelle Léa. Le jour où je suis arrivée, elle m'a vue à ma fenêtre : j'avais l'air un peu triste. Alors elle est montée me dire bonjour, et après, elle m'a montré tout le quartier. Maintenant, c'est ma meilleure amie ici.",
+          "en": "Hi Rosalie! At first I was a bit sad: I didn't know anyone, I was all alone. But there's a girl of fifteen, like me, who lives just below me. Her name is Léa. The day I arrived, she saw me at my window: I looked a bit sad. So she came up to say hello, and then she showed me the whole neighbourhood. Now she's my best friend here."
+        },
+        {
+          "fr": "Tu demandes si les Français parlent comme nous. Pas vraiment ! Ici, dans l'immeuble, on dit bonjour à chaque voisin qu'on voit, même à un voisin qu'on ne connaît pas. Si tu ne dis rien, les gens pensent que tu n'es pas gentille. Et avec Madame Garnier, notre vieille voisine, on dit vous, jusqu'au jour où elle te dit : « Tu peux me dire tu. » Léa la connaît depuis toujours, et elle lui dit encore vous !",
+          "en": "You ask if the French talk like us. Not really! Here, in the building, you say hello to every neighbour you see, even a neighbour you don't know. If you say nothing, people think you're not nice. And with Madame Garnier, our old neighbour, you say vous, until the day she tells you: \"You can call me tu.\" Léa has known her all her life, and she still says vous to her!"
+        },
+        {
+          "fr": "Madame Garnier a soixante-dix-huit ans et les cheveux blancs. Avant, elle était professeur de français. C'est une dame dont tout le quartier est fier. Derrière l'immeuble, elle a un petit jardin avec un vieux banc, et elle adore voir son jardin fleurir.",
+          "en": "Madame Garnier is seventy-eight and has white hair. Before, she was a French teacher. She's a lady the whole neighbourhood is proud of. Behind the building she has a little garden with an old bench, and she loves to see her garden flower."
+        },
+        {
+          "fr": "Et les mots ! Ici, les jeunes disent « du coup » tout le temps. Ça veut dire « alors ». Léa dit aussi « un truc » pour une chose. Et ce qui est drôle, c'est qu'ici, personne ne dit « la fin de semaine » : on dit « le week-end » ! Franchement, après trois semaines, moi aussi, je dis « du coup » !",
+          "en": "And the words! Here, young people say \"du coup\" all the time. It means \"so\". Léa also says \"un truc\" for a thing. And what's funny is that here, nobody says \"la fin de semaine\": they say \"le week-end\"! Honestly, after three weeks, I say \"du coup\" too!"
+        },
+        {
+          "fr": "Le matin, je passe à la boulangerie de Karim, au coin de la rue. Elle ouvre à sept heures. Karim, c'est le monsieur qui fait les meilleurs croissants de Lyon. Mais ce que je prends tous les matins, c'est un pain au chocolat.",
+          "en": "In the morning I drop by Karim's bakery, on the corner of the street. It opens at seven. Karim is the man who makes the best croissants in Lyon. But what I get every morning is a pain au chocolat."
+        },
+        {
+          "fr": "Tu demandes ce que je fais le samedi. Ça change avec la météo ! S'il pleut, on va à la bibliothèque en haut de la rue, où Léa fait ses devoirs. S'il fait beau, on prend les vélos et on descend jusqu'au parc, près de l'eau. Pour revenir, c'est moins facile : ça monte beaucoup ! Et s'il neige, on passe chez Madame Garnier : elle fait le meilleur chocolat chaud du monde. Noé, le petit frère de Léa, préfère la piscine, à côté de la bibliothèque. Il y va tous les samedis.",
+          "en": "You ask what I do on Saturdays. It changes with the weather! If it rains, we go to the library at the top of the street, where Léa does her homework. If it's sunny, we take the bikes and ride down to the park, by the water. Coming back is harder: it's all uphill! And if it snows, we drop by Madame Garnier's: she makes the best hot chocolate in the world. Noé, Léa's little brother, would rather go to the pool, next to the library. He goes there every Saturday."
+        },
+        {
+          "fr": "Et ce soir, c'était l'anniversaire de Léa : elle a seize ans ! Je suis arrivée à huit heures avec un gâteau. Léa m'a présentée à ses amis, et surtout à Hugo, son meilleur ami depuis l'école primaire. Hugo a chanté très mal et très fort, mais il adore ça ! Moi, je ne voulais pas danser : je ne connaissais presque personne. Mais Noé est venu me chercher, et on a dansé ensemble. Il était très fier ! Léa déteste danser, mais ce soir, elle a dansé aussi. Madame Garnier n'est pas venue à la fête, mais elle est passée dire bonjour.",
+          "en": "And tonight was Léa's birthday: she's sixteen! I arrived at eight with a cake. Léa introduced me to her friends, and above all to Hugo, her best friend since primary school. Hugo sang very badly and very loudly, but he loves it! Me, I didn't want to dance: I hardly knew anyone. But Noé came to get me, and we danced together. He was very proud! Léa hates dancing, but tonight she danced too. Madame Garnier didn't come to the party, but she dropped by to say hello."
+        },
+        {
+          "fr": "Viens me voir bientôt : la Croix-Rousse, c'est le quartier le plus sympa de Lyon ! Samedi prochain, je vais aller au marché avec Léa. Tu vois, j'ai déjà une vie ici. À bientôt !",
+          "en": "Come and see me soon: the Croix-Rousse is the nicest neighbourhood in Lyon! Next Saturday I'm going to go to the market with Léa. You see, I already have a life here. See you soon!"
+        },
+        {
+          "fr": "Maya",
+          "en": "Maya"
+        },
+        {
+          "end": "Une minute après, il y a déjà une réponse de Rosalie : « Du coup, je viens quand ? »",
+          "en": "A minute later, there's already an answer from Rosalie: \"So when am I coming?\""
+        }
+      ],
+      "vocab": [
+        {
+          "fr": "un étage",
+          "en": "a floor (of a building)"
+        },
+        {
+          "fr": "un immeuble",
+          "en": "a block of flats, a building"
+        },
+        {
+          "fr": "prochain / prochaine",
+          "en": "next"
+        },
+        {
+          "fr": "sympa",
+          "en": "nice, friendly"
+        },
+        {
+          "fr": "bientôt",
+          "en": "soon"
+        },
+        {
+          "fr": "semaines",
+          "en": "weeks"
+        },
+        {
+          "fr": "presque",
+          "en": "almost"
+        },
+        {
+          "fr": "triste",
+          "en": "sad"
+        },
+        {
+          "fr": "seule",
+          "en": "alone"
+        },
+        {
+          "fr": "quinze",
+          "en": "fifteen"
+        },
+        {
+          "fr": "juste",
+          "en": "just, right"
+        },
+        {
+          "fr": "en dessous de",
+          "en": "below, underneath"
+        },
+        {
+          "fr": "arrivée",
+          "en": "arrived"
+        },
+        {
+          "fr": "montée",
+          "en": "came up"
+        },
+        {
+          "fr": "demandes",
+          "en": "ask"
+        },
+        {
+          "fr": "voisin",
+          "en": "neighbour"
+        },
+        {
+          "fr": "connaît",
+          "en": "knows"
+        },
+        {
+          "fr": "voisine",
+          "en": "neighbour (a woman)"
+        },
+        {
+          "fr": "jusqu'à",
+          "en": "until, as far as"
+        },
+        {
+          "fr": "cheveux",
+          "en": "hair"
+        },
+        {
+          "fr": "blancs",
+          "en": "white"
+        },
+        {
+          "fr": "fier",
+          "en": "proud"
+        },
+        {
+          "fr": "fleurir",
+          "en": "to flower, to bloom"
+        },
+        {
+          "fr": "du coup",
+          "en": "so, as a result"
+        },
+        {
+          "fr": "truc",
+          "en": "thing"
+        },
+        {
+          "fr": "drôle",
+          "en": "funny"
+        },
+        {
+          "fr": "franchement",
+          "en": "honestly, frankly"
+        },
+        {
+          "fr": "passe",
+          "en": "drop by"
+        },
+        {
+          "fr": "boulangerie",
+          "en": "bakery"
+        },
+        {
+          "fr": "coin",
+          "en": "corner"
+        },
+        {
+          "fr": "ouvre",
+          "en": "opens"
+        },
+        {
+          "fr": "monsieur",
+          "en": "man, gentleman"
+        },
+        {
+          "fr": "croissants",
+          "en": "croissants"
+        },
+        {
+          "fr": "matins",
+          "en": "mornings"
+        },
+        {
+          "fr": "météo",
+          "en": "weather, forecast"
+        },
+        {
+          "fr": "pleut",
+          "en": "rains"
+        },
+        {
+          "fr": "bibliothèque",
+          "en": "library"
+        },
+        {
+          "fr": "en haut de",
+          "en": "at the top of"
+        },
+        {
+          "fr": "devoirs",
+          "en": "homework"
+        },
+        {
+          "fr": "vélos",
+          "en": "bikes"
+        },
+        {
+          "fr": "descend",
+          "en": "go down"
+        },
+        {
+          "fr": "chaud",
+          "en": "hot"
+        },
+        {
+          "fr": "piscine",
+          "en": "swimming pool"
+        },
+        {
+          "fr": "anniversaire",
+          "en": "birthday"
+        },
+        {
+          "fr": "seize",
+          "en": "sixteen"
+        },
+        {
+          "fr": "présentée",
+          "en": "introduced"
+        },
+        {
+          "fr": "surtout",
+          "en": "above all, especially"
+        },
+        {
+          "fr": "chanté",
+          "en": "sang"
+        },
+        {
+          "fr": "fort",
+          "en": "loudly"
+        },
+        {
+          "fr": "danser",
+          "en": "to dance"
+        },
+        {
+          "fr": "dansé",
+          "en": "danced"
+        },
+        {
+          "fr": "déteste",
+          "en": "hates"
+        },
+        {
+          "fr": "passée",
+          "en": "dropped by"
+        },
+        {
+          "fr": "la Croix-Rousse",
+          "en": "a hillside neighbourhood of Lyon"
+        },
+        {
+          "fr": "facile",
+          "en": "easy"
+        },
+        {
+          "fr": "avoir l'air",
+          "en": "to look, to seem"
+        },
+        {
+          "fr": "fenêtre",
+          "en": "window"
+        }
+      ]
     }
   ]
 }

@@ -180,3 +180,27 @@ test('mistakes or blanks that are no list are field_type, never a crash', () => 
     assert.deepEqual(codes({ id: 'g', type: 'gapfill', text: 'Je ___ ici.', blanks: bad }), ['field_type'], `blanks ${JSON.stringify(bad)}`);
   }
 });
+
+test('a translation dressed as a situation is flagged (Jake, 2026-11-27)', () => {
+  const tell = { id: 'i-t', type: 'respond', situation: "Tell Maya: if it's nice next Saturday, we go to the park.", answer: "S'il fait beau samedi prochain, on va au parc." };
+  assert.deepEqual(codes(tell, { unitIndex: 13 }), ['translation_framed']);
+  const him = { id: 'i-h', type: 'respond', situation: 'Hugo wants to go to the market. Tell him: if you want, let\'s go.', answer: 'Si tu veux, on y va.' };
+  assert.deepEqual(codes(him, { unitIndex: 13 }), ['translation_framed']);
+  // A French cue after the colon is a frame, not a translation.
+  const cue = { id: 'i-c', type: 'respond', situation: 'Tell Maya: {Ce que j\'aime}, then the place.', answer: "Ce que j'aime, c'est le marché." };
+  assert.deepEqual(codes(cue, { unitIndex: 13 }), []);
+  const framed = { id: 'i-f', type: 'respond', situation: 'Maya asks what you will do next Saturday. Make a plan that depends on the sun. Start with {S\'il fait beau}.', answer: "S'il fait beau samedi prochain, on va au parc." };
+  assert.deepEqual(codes(framed, { unitIndex: 13 }), []);
+  assert.deepEqual(validateItem(tell, { ...ctx, unitIndex: 13 }).map((p) => p.severity), ['warning']);
+});
+
+test('a drill with no speaker or situation is flagged (Jake, 2026-11-27)', () => {
+  const bare = { id: 'i-b', type: 'transform', instruction: 'Put it in the past.', shown: 'Noé oublie son livre.', answer: 'Noé a oublié son livre.' };
+  assert.deepEqual(codes(bare, { unitIndex: 13 }), ['drill_without_situation']);
+  const join = { id: 'i-j', type: 'transform', instruction: 'Join the two sentences with {que}.', shown: 'a. b.', answer: 'ab' };
+  assert.deepEqual(codes(join, { unitIndex: 13 }), ['drill_without_situation']);
+  const framed = { id: 'i-k', type: 'transform', instruction: 'Léa tells Maman what happened at the pool yesterday. Put it in the past.', shown: 'Noé oublie son livre.', answer: 'Noé a oublié son livre.' };
+  assert.deepEqual(codes(framed, { unitIndex: 13 }), []);
+  // Unit 1 drills are the kernel's first moves and stay allowed.
+  assert.deepEqual(codes(bare, { unitIndex: 1 }), []);
+});

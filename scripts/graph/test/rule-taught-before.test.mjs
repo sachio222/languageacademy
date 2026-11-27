@@ -6,7 +6,6 @@ import { loadGraph } from '../load.mjs';
 import { validateGraph } from '../validate.mjs';
 import { makeModule, makeCtx } from './helpers.mjs';
 import { ruleTaughtBefore, analyzeItems, firstUse, cognatesAllowed } from '../rules/taught-before.mjs';
-import { ruleGuideOnlyTeaching } from '../rules/content.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const fixtureDir = join(here, 'fixtures', 'graph-mini');
@@ -497,12 +496,6 @@ test('a recognition-only construction is never reported in French the learner ty
     assert.deepEqual(ofTest(read, 'untaught-construction'), [['m2#1', 'fr:cx:test.read-only']]);
     assert.deepEqual(ofTest(read, 'recognize-typed'), []);
   }
-  // a guide may teach it alone: guide_only_teaching leaves it out, and still reports a productive pattern
-  const guided = makeCtx({
-    graph: { ...graph, courseMap: { m1: { teachesConstructions: ['fr:cx:test.read-only', 'fr:cx:test.productive'] } } },
-    course: [mod(1, [], { kind: 'help' }), mod(2, [item([], { shown: ['Il fut content.', 'Il parle.'] })])],
-  });
-  assert.deepEqual(ruleGuideOnlyTeaching(guided).map((i) => i.nodeId), ['fr:cx:test.productive']);
 });
 
 // A recognition-only word (use: 'recognize' on its headword, such as slang) is one the learner reads and hears but is

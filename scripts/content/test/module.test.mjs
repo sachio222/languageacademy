@@ -239,7 +239,8 @@ test('reading item types', () => {
 
 test('translate items stay in unit 1', () => {
   const mod = miniModule(MINI_KEYS.lesson);
-  assert.deepEqual(codes(mod, 2), ['translate_outside_unit1']);
+  // The mini lesson also holds bare drills, which a later unit flags too (drill_without_situation).
+  assert.deepEqual(codes(mod, 2).filter((c) => c !== 'drill_without_situation'), ['translate_outside_unit1']);
   // Not placed by the outline yet: the outline reports it, and the unit rule waits.
   assert.deepEqual(codes(mod, null), []);
 });
