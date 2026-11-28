@@ -17,9 +17,7 @@
       "fr:lex:optimiste",
       "fr:lex:pessimiste"
     ],
-    "constructions": [
-      "fr:cx:participe-present.clause"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

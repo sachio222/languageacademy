@@ -9,12 +9,9 @@
       "fr:lex:bureau",
       "fr:lex:couloir",
       "fr:lex:niveau",
-      "fr:lex:centre",
-      "fr:lex:lequel"
+      "fr:lex:centre"
     ],
-    "constructions": [
-      "fr:cx:relative.lequel"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

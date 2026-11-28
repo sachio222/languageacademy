@@ -7,17 +7,11 @@
   "plan": {
     "words": [
       "fr:lex:entrainer",
-      "fr:lex:filmer",
-      "fr:lex:danse",
-      "fr:lex:serie",
       "fr:lex:emission",
-      "fr:lex:champion",
       "fr:lex:disque",
       "fr:lex:ballon",
-      "fr:lex:pilote",
       "fr:lex:stade",
-      "fr:lex:joueur",
-      "fr:lex:camera"
+      "fr:lex:joueur"
     ],
     "constructions": [],
     "source": "course-plan.json"

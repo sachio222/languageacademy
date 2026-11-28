@@ -98,6 +98,22 @@ planned files in `content/fr/modules/` are `plan:stubs` output.
 
 A lesson's `carrier` is the pattern or verb taught first. `met_through` gives, for each new word, the owned material its first sentence is built on, and the words are listed in teaching order. A unit's `carry` lists the words its practice set and exam must use, because no later lesson of the unit can. Briefs print all of these.
 
+## plan:speed: the course against other orders of the same items
+
+`pnpm plan:speed` (or `node scripts/plan/cli.mjs speed <lang> [--seeds n]`) takes every word and pattern the course
+teaches through its last planned unit and puts the same items in other orders: the teaching method's own rule, a
+textbook order (level by level), a frequency list (words by frequency, a pattern once its words are known, at the
+textbook's pace of patterns per word) and 200 seeded random orders. Every order teaches each item once and a pattern
+only after what it needs, and every order pays the same time: a cost per lesson, per new word and per new pattern,
+fitted to the course's own written lessons from the recipe time constants, plus the course's reading, practice and
+exam time every so many lessons. Words the Reference pages and the cognates open count as known from the start in
+every order. It reports patterns known, sentence shapes (every known word in every known pattern whose slot takes it)
+and the share of each level list usable, at equal study hours and at equal words, the course against the others at
+the end of each of its units, and how the answer moves with the main assumptions (patterns per lesson, words per
+lesson, a fixed cost per lesson, reading and exam time). Output: `.plan-out/<lang>/speed/speed.json` (chart series,
+random bands) and `speed.txt`. It reads the local frequency file (frequency.mjs) to order words and writes no
+frequency value; with no file, every word weighs the same.
+
 ## plan:method: the course scored against the teaching method
 
 `pnpm plan:method` (or `node scripts/plan/cli.mjs method <lang>`) measures the whole course, written and planned,

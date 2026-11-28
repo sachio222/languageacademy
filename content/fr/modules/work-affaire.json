@@ -6,20 +6,17 @@
   "title": "First day at the agency {le bureau}",
   "plan": {
     "words": [
-      "fr:lex:organiser",
-      "fr:lex:terminer",
       "fr:lex:directeur",
-      "fr:lex:patron",
-      "fr:lex:chef",
       "fr:lex:collegue",
-      "fr:lex:equipe",
       "fr:lex:groupe",
-      "fr:lex:affaire",
       "fr:lex:ecran",
       "fr:lex:document",
-      "fr:lex:dossier"
+      "fr:lex:dossier",
+      "fr:lex:lequel"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:relative.lequel"
+    ],
     "source": "course-plan.json"
   }
 }

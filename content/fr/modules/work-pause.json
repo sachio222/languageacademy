@@ -19,7 +19,9 @@
       "fr:lex:professionnel",
       "fr:lex:directement"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:mise-en-relief.ce-dont-cest"
+    ],
     "source": "course-plan.json"
   }
 }

@@ -5,14 +5,7 @@
   "status": "planned",
   "title": "After doing it ({après avoir}, {après être} + participle)",
   "plan": {
-    "words": [
-      "fr:lex:coucher",
-      "fr:lex:annuler",
-      "fr:lex:lendemain",
-      "fr:lex:bagage",
-      "fr:lex:chambre",
-      "fr:lex:lit"
-    ],
+    "words": [],
     "constructions": [
       "fr:cx:infinitive.past"
     ],

@@ -7,19 +7,16 @@
   "plan": {
     "words": [
       "fr:lex:lutter",
-      "fr:lex:eclater",
-      "fr:lex:intervenir",
-      "fr:lex:rapporter",
-      "fr:lex:nommer",
       "fr:lex:bataille",
-      "fr:lex:victoire",
       "fr:lex:revolution",
       "fr:lex:resistance",
       "fr:lex:militaire",
       "fr:lex:puissant",
       "fr:lex:sacre"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:q.lequel"
+    ],
     "source": "course-plan.json"
   }
 }

@@ -1,7 +1,8 @@
 // One projection for the pipeline's brief builder and the unit card (unit-prep design §5.4, plan Task 3), moved
 // unchanged from scripts/pipeline/brief.mjs at 4fc897c (lines 159 to 179 and 220 to 276) so both compute it once.
 //
-// projectContext(ctx, stubs): the checker context with each stub counted as written from its plan block: the timeline
+// projectContext(ctx, stubs, additions): the checker context with each stub counted as written from its plan block (and
+//   additions: { written module_key: [word ids] } taught at those written modules' positions): the timeline
 //   teaches its plan words (a form with its headword, as a vocabulary row would) and, for kinds that teach them, its
 //   plan constructions, at its position; it holds no items, so no uses. Everything else is the shared context.
 //   stubs: Array<{ module_key, kind, title, position, unit_key, unit_index, unit_name, plan }>.
@@ -18,11 +19,17 @@ export const OWN_TEACHING = { lesson: ['words', 'constructions'], guide: ['words
 
 const byId = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 
-export function projectContext(ctx, stubs) {
-  if (stubs.length === 0) return ctx;
+export function projectContext(ctx, stubs, additions = {}) {
+  if (stubs.length === 0 && Object.keys(additions).length === 0) return ctx;
   const formOf = new Map(ctx.graph.forms.map((f) => [f.id, f.of]));
   const entries = {};
   const extra = [];
+  // Words a plan adds to written modules: taught there, at the written module's own position.
+  for (const [key, words] of Object.entries(additions)) {
+    const old = ctx.graph.courseMap?.[key] ?? {};
+    const add = words.flatMap((id) => (formOf.has(id) ? [formOf.get(id), id] : [id]));
+    entries[key] = { ...old, teachesWordsManual: [...new Set([...(old.teachesWordsManual ?? []), ...add])] };
+  }
   for (const s of stubs) {
     const words = [...new Set(s.plan.words.flatMap((id) => (formOf.has(id) ? [formOf.get(id), id] : [id])))];
     const constructions = [...s.plan.constructions];

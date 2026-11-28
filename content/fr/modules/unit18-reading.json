@@ -9,13 +9,7 @@
       "fr:lex:grippe",
       "fr:lex:joue",
       "fr:lex:epaule",
-      "fr:lex:os",
-      "fr:lex:genou",
-      "fr:lex:cou",
-      "fr:lex:peau",
-      "fr:lex:respirer",
-      "fr:lex:passe",
-      "fr:lex:present"
+      "fr:lex:os"
     ],
     "constructions": [
       "fr:cx:passe-compose.etre",

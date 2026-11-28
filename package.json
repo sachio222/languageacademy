@@ -30,6 +30,7 @@
     "plan:stubs": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs stubs fr",
     "plan:brief": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs brief fr",
     "plan:method": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs method fr",
+    "plan:speed": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/plan/cli.mjs speed fr",
     "plan:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/plan/test/**/*.test.mjs\"",
     "pipeline": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/pipeline/cli.mjs",
     "pipeline:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/pipeline/test/**/*.test.mjs\""

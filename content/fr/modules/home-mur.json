@@ -7,19 +7,11 @@
   "plan": {
     "words": [
       "fr:lex:installer",
-      "fr:lex:refaire",
-      "fr:lex:reposer",
-      "fr:lex:vider",
-      "fr:lex:placer",
-      "fr:lex:arranger",
-      "fr:lex:debarrasser",
-      "fr:lex:menage",
-      "fr:lex:poubelle",
-      "fr:lex:couverture",
-      "fr:lex:courrier",
       "fr:lex:vaisselle"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:passe-simple"
+    ],
     "source": "course-plan.json"
   }
 }

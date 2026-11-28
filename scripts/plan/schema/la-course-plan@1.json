@@ -60,9 +60,106 @@
     "held_patterns": {
       "description": "Patterns whose needs are met that the plan leaves for the level after it, each with the reason. plan:check asks every other ready pattern to be taught.",
       "type": "array",
-      "items": { "type": "object", "additionalProperties": false, "required": ["id", "why"], "properties": { "id": { "$ref": "#/$defs/node" }, "why": { "$ref": "#/$defs/text" } } }
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "why"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/node"
+          },
+          "why": {
+            "$ref": "#/$defs/text"
+          }
+        }
+      }
     },
-    "later": { "description": "Topics kept for the level after this plan.", "type": "array", "items": { "$ref": "#/$defs/text" } }
+    "later": {
+      "description": "Topics kept for the level after this plan.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "additions": {
+      "description": "Words a written module will also teach, so words reach the learner at the method's pace: { written module_key: [addition] }. Each word is taught at that written module's position and no plan module teaches it again. Writers add each word to its module, carried by the frame named and met through what is named.",
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/module_ref"
+      },
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "carrier",
+            "met_through"
+          ],
+          "properties": {
+            "id": {
+              "$ref": "#/$defs/node"
+            },
+            "carrier": {
+              "$ref": "#/$defs/node",
+              "description": "The owned pattern whose slot the word fills first."
+            },
+            "met_through": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/node"
+              },
+              "description": "What the learner owns that introduces the word."
+            },
+            "from": {
+              "$ref": "#/$defs/key",
+              "description": "The plan module that taught the word before it moved here."
+            }
+          }
+        }
+      }
+    },
+    "cognate_guides": {
+      "description": "Short guides that teach a near-cognate family (curriculum-graph/pairs/<native>-<lang>/near-cognates.json), so the learner recognises every word of the family. Each sits right after a module (written or planned), once the learner owns an example of each family it teaches.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "title",
+          "families",
+          "after"
+        ],
+        "properties": {
+          "key": {
+            "$ref": "#/$defs/key"
+          },
+          "title": {
+            "$ref": "#/$defs/text"
+          },
+          "families": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "after": {
+            "$ref": "#/$defs/module_ref"
+          },
+          "minutes": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 35
+          }
+        }
+      }
+    }
   },
   "$defs": {
     "code": {
@@ -156,7 +253,13 @@
             "$ref": "#/$defs/module"
           }
         },
-        "carry": { "description": "Words the unit's practice set and exam must carry, because no later lesson of the unit can use them again.", "type": "array", "items": { "$ref": "#/$defs/node" } },
+        "carry": {
+          "description": "Words the unit's practice set and exam must carry, because no later lesson of the unit can use them again.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        },
         "notes": {
           "$ref": "#/$defs/texts",
           "description": "Why the unit is built this way: where its guides sit and why."
@@ -241,23 +344,71 @@
             }
           }
         },
-        "carrier": { "$ref": "#/$defs/node", "description": "What carries the module's new words: the pattern or the verb taught first, which every other new word is met through. A list of six or more new words with no new verb, frame word or pattern fails the check." },
+        "carrier": {
+          "$ref": "#/$defs/node",
+          "description": "What carries the module's new words: the pattern or the verb taught first, which every other new word is met through. A list of six or more new words with no new verb, frame word or pattern fails the check."
+        },
         "met_through": {
           "description": "For each new word, the owned material its first sentence is built on: the carrier, earlier words of this module, or words and patterns taught before. Keys are the module's words.",
           "type": "object",
-          "additionalProperties": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/node" } }
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/node"
+            }
+          }
         },
-        "reuses": { "description": "Words the learner already has that this module's pattern gives a new job.", "type": "array", "items": { "$ref": "#/$defs/node" } },
-        "gathers": { "description": "For a guide: the patterns it gathers into one rule or explains, often for the first time; what it gathers counts as taught from its position.", "type": "array", "items": { "$ref": "#/$defs/node" } },
-        "practises": { "description": "Patterns taught earlier that this module leans on.", "type": "array", "items": { "$ref": "#/$defs/node" } },
-        "minutes": { "description": "First-pass study minutes for one sitting, by the recipe constants. A reading in parts gives the minutes of one part.", "type": "integer", "minimum": 1 },
-        "culture_note": { "$ref": "#/$defs/text", "description": "A short note on a custom, where it meets one of the module's words." },
-        "spoken": { "$ref": "#/$defs/texts", "description": "The small words of speech, short forms and slang the module's dialogue uses." },
-        "spoken_example": { "$ref": "#/$defs/text" },
-        "summary": { "$ref": "#/$defs/text", "description": "One line on a practice set." },
-        "note": { "$ref": "#/$defs/text" },
-        "reading": { "$ref": "#/$defs/reading" },
-        "exam": { "$ref": "#/$defs/exam" }
+        "reuses": {
+          "description": "Words the learner already has that this module's pattern gives a new job.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        },
+        "gathers": {
+          "description": "For a guide: the patterns it gathers into one rule or explains, often for the first time; what it gathers counts as taught from its position.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        },
+        "practises": {
+          "description": "Patterns taught earlier that this module leans on.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        },
+        "minutes": {
+          "description": "First-pass study minutes for one sitting, by the recipe constants. A reading in parts gives the minutes of one part.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "culture_note": {
+          "$ref": "#/$defs/text",
+          "description": "A short note on a custom, where it meets one of the module's words."
+        },
+        "spoken": {
+          "$ref": "#/$defs/texts",
+          "description": "The small words of speech, short forms and slang the module's dialogue uses."
+        },
+        "spoken_example": {
+          "$ref": "#/$defs/text"
+        },
+        "summary": {
+          "$ref": "#/$defs/text",
+          "description": "One line on a practice set."
+        },
+        "note": {
+          "$ref": "#/$defs/text"
+        },
+        "reading": {
+          "$ref": "#/$defs/reading"
+        },
+        "exam": {
+          "$ref": "#/$defs/exam"
+        }
       },
       "allOf": [
         {
@@ -465,6 +616,11 @@
           "$ref": "#/$defs/key"
         }
       }
+    },
+    "module_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "A module key of the course, written (which may start with a date) or planned."
     }
   }
 }

@@ -6,11 +6,7 @@
   "title": "The residents' meeting {la réunion}",
   "plan": {
     "words": [
-      "fr:lex:interesser",
-      "fr:lex:facher",
-      "fr:lex:assister",
       "fr:lex:reunion",
-      "fr:lex:avis",
       "fr:lex:faux",
       "fr:lex:pauvre",
       "fr:lex:plutot",
@@ -20,7 +16,8 @@
       "fr:lex:chacun"
     ],
     "constructions": [
-      "fr:cx:consequence.tellement-que"
+      "fr:cx:consequence.tellement-que",
+      "fr:cx:ptcp.agreement-exceptions"
     ],
     "source": "course-plan.json"
   }

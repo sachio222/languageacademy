@@ -6,13 +6,7 @@
   "title": "Sorting the rubbish {Le tri}",
   "plan": {
     "words": [
-      "fr:lex:trier",
-      "fr:lex:gaspiller",
-      "fr:lex:polluer",
-      "fr:lex:emmenager",
-      "fr:lex:pollution",
-      "fr:lex:lessive",
-      "fr:lex:paresseux"
+      "fr:lex:trier"
     ],
     "constructions": [],
     "source": "course-plan.json"

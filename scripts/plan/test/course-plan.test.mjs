@@ -39,9 +39,11 @@ for (const lang of languages) {
   test(`${lang}: the report counts each planned word once`, () => {
     const words = planModules(plan).flatMap(({ module }) => module.teaches.words);
     assert.equal(new Set(words).size, words.length);
-    // A written module is done and leaves the report: it counts the words the plan's open modules teach.
+    // A written module is done and leaves the report: it counts the words the plan's open modules teach, and the
+    // words the plan adds to written modules.
     const open = planModules(plan).filter(({ module }) => !context.written.has(module.module_key)).flatMap(({ module }) => module.teaches.words);
-    assert.equal(report.words, open.length);
+    const added = Object.values(plan.additions ?? {}).flat().length;
+    assert.equal(report.words, open.length + added);
   });
 
   test(`${lang}: the readable plan names every unit and module`, () => {

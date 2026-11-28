@@ -6,14 +6,8 @@
   "title": "Serving at the counter ({désirer}, {servir}, {tenir}, {garder}, {prier}, {toucher})",
   "plan": {
     "words": [
-      "fr:lex:desirer",
-      "fr:lex:servir",
       "fr:lex:tenir",
-      "fr:lex:prier",
-      "fr:lex:compter",
-      "fr:lex:sembler",
       "fr:lex:garder",
-      "fr:lex:toucher",
       "fr:lex:soif"
     ],
     "constructions": [

@@ -7,19 +7,13 @@
   "plan": {
     "words": [
       "fr:lex:diriger",
-      "fr:lex:mener",
-      "fr:lex:realiser",
-      "fr:lex:confier",
-      "fr:lex:charger",
-      "fr:lex:regler",
-      "fr:lex:traiter",
-      "fr:lex:reunir",
       "fr:lex:mission",
       "fr:lex:rapport",
-      "fr:lex:point",
       "fr:lex:ordre"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:participe-present.clause"
+    ],
     "source": "course-plan.json"
   }
 }

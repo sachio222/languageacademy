@@ -16,12 +16,9 @@
       "fr:lex:negatif",
       "fr:lex:specialement",
       "fr:lex:extremement",
-      "fr:lex:effectivement",
-      "fr:lex:quoique"
+      "fr:lex:effectivement"
     ],
-    "constructions": [
-      "fr:cx:subj.quoique"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

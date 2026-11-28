@@ -6,18 +6,13 @@
   "title": "Emergencies {les urgences}",
   "plan": {
     "words": [
-      "fr:lex:blesser",
       "fr:lex:urgence",
       "fr:lex:secours",
       "fr:lex:ambulance",
-      "fr:lex:police",
       "fr:lex:pompier",
       "fr:lex:pharmacie",
-      "fr:lex:feu",
       "fr:lex:incendie",
-      "fr:lex:fumee",
-      "fr:lex:sang",
-      "fr:lex:douleur"
+      "fr:lex:fumee"
     ],
     "constructions": [
       "fr:cx:chunk.au-secours",

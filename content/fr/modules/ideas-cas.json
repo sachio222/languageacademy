@@ -6,11 +6,7 @@
   "title": "What did you think? {Qu'est-ce que tu en as pensé ?}",
   "plan": {
     "words": [
-      "fr:lex:conclure",
       "fr:lex:impressionner",
-      "fr:lex:decevoir",
-      "fr:lex:exagerer",
-      "fr:lex:parier",
       "fr:lex:evident",
       "fr:lex:egal",
       "fr:lex:brillant",
@@ -18,9 +14,7 @@
       "fr:lex:forcement",
       "fr:lex:personnellement"
     ],
-    "constructions": [
-      "fr:cx:relative.ce-dont"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

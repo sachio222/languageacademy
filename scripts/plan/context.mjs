@@ -37,6 +37,9 @@ export function planStubs(plan, { after, unitIndexAfter, written = new Set() }) 
   return stubs;
 }
 
+/** The plan's additions to written modules as { module_key: [word ids] }, for written modules only. */
+export const additionsOf = (plan, written) => Object.fromEntries(Object.entries(plan.additions ?? {}).filter(([k]) => written.has(k)).map(([k, xs]) => [k, xs.map((x) => x.id)]));
+
 export async function planContext({ repoRoot, lang, plan, dictionaryForms }) {
   const paths = planPaths(repoRoot, lang);
   const content = loadCourse({ root: paths.content, graphDir: paths.graphLang, planned: false });
@@ -46,7 +49,7 @@ export async function planContext({ repoRoot, lang, plan, dictionaryForms }) {
   // A plan unit that already holds written modules keeps its place; the others follow the last written unit.
   const unitIndexAfter = Math.max(0, ...base.course.map((m) => m.unitId).filter(Number.isInteger));
   const stubs = planStubs(plan, { after, unitIndexAfter, written });
-  const projected = projectContext(base, stubs);
+  const projected = projectContext(base, stubs, additionsOf(plan, written));
   const g = projected.graph;
   const lookups = {
     headwords: new Map(g.headwords.map((h) => [h.id, h])),

@@ -7,17 +7,11 @@
   "plan": {
     "words": [
       "fr:lex:agir",
-      "fr:lex:causer",
-      "fr:lex:marquer",
-      "fr:lex:intention",
       "fr:lex:conscience",
-      "fr:lex:esprit",
       "fr:lex:lien",
       "fr:lex:origine",
       "fr:lex:theorie",
-      "fr:lex:existence",
-      "fr:lex:volonte",
-      "fr:lex:hasard"
+      "fr:lex:existence"
     ],
     "constructions": [],
     "source": "course-plan.json"

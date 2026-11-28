@@ -32,6 +32,10 @@
 //   reading_type_unknown               a reading part names a type the shared catalog does not have
 //   cast_name_unknown                  a name in a unit's cast that names.json lacks
 //   unit_outline_missing               a unit with a written module lacks its course.json description and can-do lines
+//   addition_module_unknown            an addition names a module that is not written
+//   addition_carrier_unknown           an addition's carrier or met_through item the learner does not own at that module
+//   cognate_family_unknown, cognate_guide_place, cognate_guide_no_example   a cognate guide names a family the pair lacks,
+//                                      sits after a module the course lacks, or comes before the learner owns an example
 // The method's rules (only with `method`):
 //   structure_stops                    a unit whose lessons teach no pattern while a pattern with its needs met waits
 //   no_carrier                         a lesson of filler_list or more new words with no new verb, frame word or pattern, and no owned pattern as its carrier
@@ -60,7 +64,7 @@ export function castNames(line) {
 }
 const OUTLINE_FIELDS = ['description', 'can_do', 'can_do_short', 'can_do_example_fr'];
 
-export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null, names = null, writtenUnits = new Set(), outlineUnits = new Map(), method = null }) {
+export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, taughtAt, isAvailable, position, written = new Set(), reached = {}, previous = null, names = null, writtenUnits = new Set(), outlineUnits = new Map(), method = null, writtenAt = new Map(), families = null }) {
   const problems = schemaProblems(plan).map((m) => problem('schema', 'course-plan.json', m));
   if (problems.length) return { problems, report: null };
 
@@ -81,8 +85,21 @@ export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, tau
     seenUnits.add(unit.unit_key);
   }
 
-  // every word once
+  // every word once: a word added to a written module counts as taught there
   const taughtBy = new Map();
+  for (const [key, adds] of Object.entries(plan.additions ?? {})) {
+    if (!written.has(key)) { problems.push(problem('addition_module_unknown', key, 'additions name this module, which is not written')); continue; }
+    const at = writtenAt.get(key);
+    for (const a of adds) {
+      if (taughtBy.has(a.id)) problems.push(problem('word_twice', key, `${lemma(a.id)} (${a.id}) is already taught by ${taughtBy.get(a.id)}`));
+      else taughtBy.set(a.id, key);
+      if (taughtAt.has(a.id)) problems.push(problem('word_already_taught', key, `${lemma(a.id)} (${a.id}) is taught by the written course, at position ${taughtAt.get(a.id)}`));
+      if (!lookups.headwords.has(a.id) && !lookups.forms.has(a.id)) problems.push(problem('word_unknown', key, `${a.id} is not in the graph`));
+      for (const id of [a.carrier, ...a.met_through]) {
+        if (at !== undefined && !isAvailable(id, at)) problems.push(problem('addition_carrier_unknown', key, `${lemma(a.id)} is carried by or met through ${id}, which the learner does not own here`));
+      }
+    }
+  }
   for (const { unit, module } of open) {
     const key = module.module_key;
     const may = TEACHES[module.kind];
@@ -154,6 +171,17 @@ export function checkPlan({ plan, readingTypes = new Set(), limits, lookups, tau
     if (unit.outline) for (const k of ['description', 'can_do_short', 'can_do_example_fr', 'can_do']) if (k === 'can_do' || unit.outline[k]) have.add(k);
     const missing = OUTLINE_FIELDS.filter((k) => !have.has(k));
     if (missing.length) problems.push(problem('unit_outline_missing', unit.unit_key, `a module of this unit is written, so course.json needs ${missing.join(', ')}: put them in the unit's outline in the plan`));
+  }
+
+  // cognate guides: each family exists, the guide sits after a module of the course, and an example is owned there
+  for (const g of plan.cognate_guides ?? []) {
+    const at = writtenAt.get(g.after) ?? position.get(g.after);
+    if (at === undefined) { problems.push(problem('cognate_guide_place', g.key, `sits after ${g.after}, which the course does not have`)); continue; }
+    for (const f of g.families) {
+      const members = families?.get(f);
+      if (!members) { problems.push(problem('cognate_family_unknown', g.key, `${f} is not a near-cognate family of this pair`)); continue; }
+      if (!members.some((id) => isAvailable(id, at))) problems.push(problem('cognate_guide_no_example', g.key, `the learner owns no word of the ${f} family by then`));
+    }
   }
 
   // words to add

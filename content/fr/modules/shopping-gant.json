@@ -18,9 +18,7 @@
       "fr:lex:pratique",
       "fr:lex:original"
     ],
-    "constructions": [
-      "fr:cx:q.lequel"
-    ],
+    "constructions": [],
     "source": "course-plan.json"
   }
 }

@@ -6,14 +6,8 @@
   "title": "Reading · {La surprise d'Henri}",
   "plan": {
     "words": [
-      "fr:lex:feter",
-      "fr:lex:chanson",
-      "fr:lex:champagne",
-      "fr:lex:appareil",
       "fr:lex:saison",
-      "fr:lex:court",
-      "fr:lex:chaise",
-      "fr:lex:piece"
+      "fr:lex:court"
     ],
     "constructions": [
       "fr:cx:passe-compose.avoir",

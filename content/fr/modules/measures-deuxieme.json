@@ -19,7 +19,9 @@
       "fr:lex:demi",
       "fr:lex:assez"
     ],
-    "constructions": [],
+    "constructions": [
+      "fr:cx:connector.purpose"
+    ],
     "source": "course-plan.json"
   }
 }

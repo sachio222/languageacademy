@@ -5,14 +5,7 @@
   "status": "planned",
   "title": "The wedding meal ({recevoir}, {imaginer}, {bouger}, with {apporter})",
   "plan": {
-    "words": [
-      "fr:lex:recevoir",
-      "fr:lex:imaginer",
-      "fr:lex:bouger",
-      "fr:lex:bouffer",
-      "fr:lex:invite",
-      "fr:lex:cadeau"
-    ],
+    "words": [],
     "constructions": [
       "fr:cx:subj.passe"
     ],

@@ -6,13 +6,8 @@
   "title": "Reading · {Une fuite le dimanche soir}",
   "plan": {
     "words": [
-      "fr:lex:escalier",
-      "fr:lex:serviette",
-      "fr:lex:eteindre",
       "fr:lex:complet",
-      "fr:lex:aventure",
-      "fr:lex:evier",
-      "fr:lex:tuyau"
+      "fr:lex:evier"
     ],
     "constructions": [
       "fr:cx:imperative.vous",

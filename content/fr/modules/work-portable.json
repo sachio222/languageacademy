@@ -7,16 +7,9 @@
   "plan": {
     "words": [
       "fr:lex:remplacer",
-      "fr:lex:taper",
       "fr:lex:emploi",
-      "fr:lex:journaliste",
-      "fr:lex:secretaire",
-      "fr:lex:avocat",
-      "fr:lex:policier",
-      "fr:lex:marque",
       "fr:lex:informatique",
-      "fr:lex:courriel",
-      "fr:lex:ordinateur"
+      "fr:lex:courriel"
     ],
     "constructions": [],
     "source": "course-plan.json"

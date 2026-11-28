@@ -6,16 +6,9 @@
   "title": "Reading · {Quarante ans de chantiers}",
   "plan": {
     "words": [
-      "fr:lex:instruction",
-      "fr:lex:concours",
-      "fr:lex:maitre",
-      "fr:lex:agent",
-      "fr:lex:suffire",
-      "fr:lex:debrouiller",
       "fr:lex:milliard",
       "fr:lex:recent",
-      "fr:lex:immediat",
-      "fr:lex:applaudir"
+      "fr:lex:immediat"
     ],
     "constructions": [
       "fr:cx:q.inversion",
