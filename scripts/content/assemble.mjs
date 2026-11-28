@@ -49,6 +49,29 @@ export function assembleCourse(outline, files, opts = {}) {
     sources.set(key, { file: f.file, json, parsed });
   }
 
+  // A lesson names its verb; the conjugation is built here, in course order, so a verb shaped like an earlier one
+  // names it as its model (opts.conjugationOf, from load.mjs; scripts/content/conjugation.mjs).
+  if (opts.conjugationOf) {
+    const earlier = new Map();
+    const SHORT = ['verb', 'en', 'gloss', 'aspect', 'ing', 'note'];
+    for (const key of courseOrder(outline)) {
+      const src = sources.get(key);
+      const c = src?.parsed && isObj(src.json) ? src.json.conjugation : undefined;
+      if (!isObj(c) || c.rows !== undefined || typeof c.verb !== 'string') continue;
+      const extra = Object.keys(c).filter((k) => !SHORT.includes(k));
+      if (extra.length) {
+        problems.push(problem(src.file, `conjugation.${extra[0]}`, 'field_unknown', `${extra[0]} is not a field of a conjugation that names its verb (${SHORT.join(', ')})`));
+        continue;
+      }
+      try {
+        src.json.conjugation = opts.conjugationOf(c, earlier);
+      } catch (e) {
+        problems.push(problem(src.file, 'conjugation', 'conjugation_not_built', e.message));
+        delete src.json.conjugation;
+      }
+    }
+  }
+
   const unitIndexOf = unitIndexes(outline);
   for (const [key, { file, json, parsed }] of sources) {
     if (!parsed) continue;

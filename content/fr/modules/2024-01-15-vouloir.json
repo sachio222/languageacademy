@@ -50,136 +50,100 @@
   ],
   "items": [
     {
-      "id": "i-je-veux",
-      "type": "respond",
-      "situation": "Say what you want",
-      "cue": "I want",
-      "answer": "je veux",
-      "hint": "Conjugate '{vouloir}' in the present for '{je}'.",
-      "mistakes": [
+      "id": "i-je-veux-un-livre",
+      "type": "gapfill",
+      "text": "Je ___ un livre.",
+      "blanks": [
         {
-          "answer": "je veut",
-          "feedback": "Je takes '{veux}', not 'veut'. Remember: je veux, il veut"
-        },
-        {
-          "answer": "tu veux",
-          "feedback": "That's 'you want', not 'I want'. Focus on the pronoun!"
+          "answer": "veux"
         }
-      ]
+      ],
+      "gloss": "I want a book",
+      "hint": "{vouloir} for {je}"
     },
     {
-      "id": "i-tu-veux",
-      "type": "respond",
-      "situation": "Say what you want",
-      "cue": "you want (informal)",
-      "answer": "tu veux",
-      "hint": "Conjugate '{vouloir}' in the present for '{tu}'.",
-      "mistakes": [
+      "id": "i-tu-veux-un-chat",
+      "type": "gapfill",
+      "text": "Tu ___ un chat ?",
+      "blanks": [
         {
-          "answer": "tu veut",
-          "feedback": "Tu takes '{veux}', not 'veut'. Pattern: je veux, tu veux"
+          "answer": "veux"
         }
-      ]
+      ],
+      "gloss": "Do you want a cat?",
+      "hint": "{vouloir} for {tu}"
     },
     {
-      "id": "i-il-veut",
-      "type": "respond",
-      "situation": "Say what he wants",
-      "cue": "he wants",
-      "answer": "il veut",
-      "hint": "Conjugate '{vouloir}' in the present for '{il}'.",
-      "mistakes": [
+      "id": "i-il-veut-ce-livre",
+      "type": "gapfill",
+      "text": "Il ___ ce livre.",
+      "blanks": [
         {
-          "answer": "il veux",
-          "feedback": "Il takes '{veut}', not 'veux'. Remember: il veut, elle veut"
+          "answer": "veut"
         }
-      ]
+      ],
+      "gloss": "He wants this book",
+      "hint": "{vouloir} for {il}"
     },
     {
-      "id": "i-elle-veut",
-      "type": "respond",
-      "situation": "Say what she wants",
-      "cue": "she wants",
-      "answer": "elle veut",
-      "hint": "Conjugate '{vouloir}' in the present for '{elle}'.",
-      "mistakes": [
+      "id": "i-elle-veut-etre-une-amie",
+      "type": "gapfill",
+      "text": "Elle ___ être une amie.",
+      "blanks": [
         {
-          "answer": "elle veux",
-          "feedback": "Elle takes '{veut}', not 'veux'. Same as il veut"
+          "answer": "veut"
         }
-      ]
+      ],
+      "gloss": "She wants to be a friend",
+      "hint": "{vouloir} for {elle}"
     },
     {
-      "id": "i-nous-voulons",
-      "type": "respond",
-      "situation": "Say what we want",
-      "cue": "we want",
-      "answer": "nous voulons",
-      "hint": "Conjugate '{vouloir}' in the present for '{nous}' (regular -ons ending).",
-      "mistakes": [
+      "id": "i-nous-voulons-avoir-une-maison",
+      "type": "gapfill",
+      "text": "Nous ___ avoir une maison.",
+      "blanks": [
         {
-          "answer": "nous veux",
-          "feedback": "Nous takes '{voulons}', not 'veux'. Completely different!"
-        },
-        {
-          "answer": "nous veut",
-          "feedback": "Nous takes '{voulons}', not 'veut'. Regular -ons pattern!"
+          "answer": "voulons"
         }
-      ]
+      ],
+      "gloss": "We want to have a house",
+      "hint": "{vouloir} for {nous}"
     },
     {
-      "id": "i-vous-voulez",
-      "type": "respond",
-      "situation": "Say what you want (formal)",
-      "cue": "you want (formal)",
-      "answer": "vous voulez",
-      "hint": "Conjugate '{vouloir}' in the present for '{vous}' (regular -ez ending).",
-      "mistakes": [
+      "id": "i-vous-voulez-ca",
+      "type": "gapfill",
+      "text": "Vous ___ ça ?",
+      "blanks": [
         {
-          "answer": "vous veux",
-          "feedback": "Vous takes '{voulez}', not 'veux'. Regular -ez pattern!"
-        },
-        {
-          "answer": "vous veut",
-          "feedback": "Vous takes '{voulez}', not 'veut'. Remember: vous voulez"
+          "answer": "voulez"
         }
-      ]
+      ],
+      "gloss": "Do you want that?",
+      "hint": "{vouloir} for {vous}"
     },
     {
-      "id": "i-ils-veulent",
-      "type": "respond",
-      "situation": "Say what they want (masculine)",
-      "cue": "they want (masculine)",
-      "answer": "ils veulent",
-      "hint": "Conjugate '{vouloir}' in the present for '{ils}'.",
-      "mistakes": [
+      "id": "i-ils-veulent-un-chat",
+      "type": "gapfill",
+      "text": "Ils ___ un chat.",
+      "blanks": [
         {
-          "answer": "ils veux",
-          "feedback": "Ils takes '{veulent}', not 'veux'. Irregular ending!"
-        },
-        {
-          "answer": "ils veut",
-          "feedback": "Ils takes '{veulent}', not 'veut'. Plural form!"
+          "answer": "veulent"
         }
-      ]
+      ],
+      "gloss": "They want a cat",
+      "hint": "{vouloir} for {ils}"
     },
     {
-      "id": "i-elles-veulent",
-      "type": "respond",
-      "situation": "Say what they want (feminine)",
-      "cue": "they want (feminine)",
-      "answer": "elles veulent",
-      "hint": "Conjugate '{vouloir}' in the present for '{elles}'.",
-      "mistakes": [
+      "id": "i-elles-veulent-ce-livre",
+      "type": "gapfill",
+      "text": "Elles ___ ce livre.",
+      "blanks": [
         {
-          "answer": "elles veux",
-          "feedback": "Elles takes '{veulent}', not 'veux'. Same as ils veulent"
-        },
-        {
-          "answer": "elles veut",
-          "feedback": "Elles takes '{veulent}', not 'veut'. Plural form!"
+          "answer": "veulent"
         }
-      ]
+      ],
+      "gloss": "They want this book",
+      "hint": "{vouloir} for {elles}"
     },
     {
       "id": "i-je-veux-ca",
@@ -289,75 +253,6 @@
   "conjugation": {
     "verb": "vouloir",
     "en": "to want",
-    "pattern": "irregular",
-    "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}.",
-    "groups": [
-      {
-        "id": "veu",
-        "sound": "/vø/"
-      },
-      {
-        "id": "veul",
-        "sound": "/vœl/"
-      },
-      {
-        "id": "voulez",
-        "sound": "/vu.le/"
-      },
-      {
-        "id": "voulons",
-        "sound": "/vu.lɔ̃/"
-      }
-    ],
-    "rows": [
-      {
-        "person": "je",
-        "form": "veux",
-        "en": "I want",
-        "group": "veu",
-        "stem": "veu",
-        "silent": "x"
-      },
-      {
-        "person": "tu",
-        "form": "veux",
-        "en": "you want (to one person you know well)",
-        "group": "veu",
-        "stem": "veu",
-        "silent": "x"
-      },
-      {
-        "person": "il/elle/on",
-        "form": "veut",
-        "en": "he wants, she wants, we want (on)",
-        "group": "veu",
-        "stem": "veu",
-        "silent": "t"
-      },
-      {
-        "person": "vous",
-        "form": "voulez",
-        "en": "you want (polite, or to more than one)",
-        "group": "voulez",
-        "stem": "voul",
-        "silent": "z"
-      },
-      {
-        "person": "ils/elles",
-        "form": "veulent",
-        "en": "they want",
-        "group": "veul",
-        "stem": "veul",
-        "silent": "ent"
-      },
-      {
-        "person": "nous",
-        "form": "voulons",
-        "en": "we want",
-        "group": "voulons",
-        "stem": "voul",
-        "silent": "s"
-      }
-    ]
+    "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}."
   }
 }

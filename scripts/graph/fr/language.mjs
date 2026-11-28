@@ -3,6 +3,7 @@ import { fold, norm, tokenize, restoreElisions } from './tokenize.mjs';
 import { buildFormIndex, lookupKey, strictKey, lookupToken, lookupTokenStrict } from './forms.mjs';
 import { isEnglish, frenchIn, frenchWordTest } from './text.mjs';
 import { checkAnswer } from './answers.mjs';
+import { conjugation } from './conjugation.mjs';
 
 // The full form an elided word is a pop-up for: l' opens le.
 const ELIDED = { "j'": 'je', "l'": 'le', "d'": 'de', "n'": 'ne', "s'": 'se', "c'": 'ce', "qu'": 'que', "m'": 'me', "t'": 'te', "jusqu'": 'jusque', "lorsqu'": 'lorsque', "puisqu'": 'puisque' };
@@ -27,4 +28,5 @@ export default {
   buildFormIndex, lookupKey, strictKey, lookupToken, lookupTokenStrict,
   isNativeText: isEnglish, targetIn: frenchIn, targetWordTest: frenchWordTest,
   checkAnswer, dictionaryForms, popupKeys,
+  conjugation,
 };

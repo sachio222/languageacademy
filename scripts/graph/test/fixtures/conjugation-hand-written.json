@@ -1,0 +1,150 @@
+{
+  "vouloir": {
+    "verb": "vouloir",
+    "en": "to want",
+    "pattern": "irregular",
+    "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}.",
+    "groups": [
+      {
+        "id": "veu",
+        "sound": "/vø/"
+      },
+      {
+        "id": "veul",
+        "sound": "/vœl/"
+      },
+      {
+        "id": "voulez",
+        "sound": "/vu.le/"
+      },
+      {
+        "id": "voulons",
+        "sound": "/vu.lɔ̃/"
+      }
+    ],
+    "rows": [
+      {
+        "person": "je",
+        "form": "veux",
+        "en": "I want",
+        "group": "veu",
+        "stem": "veu",
+        "silent": "x"
+      },
+      {
+        "person": "tu",
+        "form": "veux",
+        "en": "you want (to one person you know well)",
+        "group": "veu",
+        "stem": "veu",
+        "silent": "x"
+      },
+      {
+        "person": "il/elle/on",
+        "form": "veut",
+        "en": "he wants, she wants, we want (on)",
+        "group": "veu",
+        "stem": "veu",
+        "silent": "t"
+      },
+      {
+        "person": "vous",
+        "form": "voulez",
+        "en": "you want (polite, or to more than one)",
+        "group": "voulez",
+        "stem": "voul",
+        "silent": "z"
+      },
+      {
+        "person": "ils/elles",
+        "form": "veulent",
+        "en": "they want",
+        "group": "veul",
+        "stem": "veul",
+        "silent": "ent"
+      },
+      {
+        "person": "nous",
+        "form": "voulons",
+        "en": "we want",
+        "group": "voulons",
+        "stem": "voul",
+        "silent": "s"
+      }
+    ]
+  },
+  "partir": {
+    "verb": "partir",
+    "en": "to leave",
+    "pattern": "irregular",
+    "note": "{partir} drops its t in {je pars}, {tu pars} and {il part}, where you hear no t. The t comes back, and is heard, in {ils partent}, {vous partez} and {nous partons}.",
+    "groups": [
+      {
+        "id": "par",
+        "sound": "/paʁ/"
+      },
+      {
+        "id": "part",
+        "sound": "/paʁt/"
+      },
+      {
+        "id": "partez",
+        "sound": "/paʁ.te/"
+      },
+      {
+        "id": "partons",
+        "sound": "/paʁ.tɔ̃/"
+      }
+    ],
+    "rows": [
+      {
+        "person": "je",
+        "form": "pars",
+        "en": "I'm leaving",
+        "group": "par",
+        "stem": "par",
+        "silent": "s"
+      },
+      {
+        "person": "tu",
+        "form": "pars",
+        "en": "you're leaving (to one person you know well)",
+        "group": "par",
+        "stem": "par",
+        "silent": "s"
+      },
+      {
+        "person": "il/elle/on",
+        "form": "part",
+        "en": "he's leaving, she's leaving, we're leaving (on)",
+        "group": "par",
+        "stem": "par",
+        "silent": "t"
+      },
+      {
+        "person": "vous",
+        "form": "partez",
+        "en": "you're leaving (polite, or to more than one)",
+        "group": "partez",
+        "stem": "part",
+        "silent": "z"
+      },
+      {
+        "person": "ils/elles",
+        "form": "partent",
+        "en": "they're leaving",
+        "group": "part",
+        "stem": "part",
+        "silent": "ent"
+      },
+      {
+        "person": "nous",
+        "form": "partons",
+        "en": "we're leaving",
+        "group": "partons",
+        "stem": "part",
+        "silent": "s"
+      }
+    ]
+  }
+}

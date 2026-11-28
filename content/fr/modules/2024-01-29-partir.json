@@ -40,141 +40,105 @@
   ],
   "items": [
     {
-      "id": "i-je-pars",
-      "type": "respond",
-      "situation": "Say what you do",
-      "cue": "I leave",
-      "answer": "je pars",
-      "hint": "{je pars}",
-      "mistakes": [
+      "id": "i-je-pars-avec-elle",
+      "type": "gapfill",
+      "text": "Je ___ avec elle.",
+      "blanks": [
         {
-          "answer": "je part",
-          "feedback": "Je takes '{pars}', not 'part'. Remember: je pars, il part"
-        },
-        {
-          "answer": "tu pars",
-          "feedback": "That's 'you leave', not 'I leave'. Focus on the pronoun!"
+          "answer": "pars"
         }
-      ]
+      ],
+      "gloss": "I'm leaving with her",
+      "hint": "{partir} for {je}"
     },
     {
-      "id": "i-tu-pars",
-      "type": "respond",
-      "situation": "Say what you do",
-      "cue": "you leave (informal)",
-      "answer": "tu pars",
-      "hint": "{tu pars}",
-      "mistakes": [
+      "id": "i-tu-pars-avec-qui",
+      "type": "gapfill",
+      "text": "Tu ___ avec qui ?",
+      "blanks": [
         {
-          "answer": "tu part",
-          "feedback": "Tu takes '{pars}', not 'part'. Pattern: je pars, tu pars"
+          "answer": "pars"
         }
-      ]
+      ],
+      "gloss": "Who are you leaving with?",
+      "hint": "{partir} for {tu}"
     },
     {
-      "id": "i-il-part",
-      "type": "respond",
-      "situation": "Say what he does",
-      "cue": "he leaves",
-      "answer": "il part",
-      "hint": "{il part}",
-      "mistakes": [
+      "id": "i-il-part-en-normandie",
+      "type": "gapfill",
+      "text": "Il ___ en Normandie.",
+      "blanks": [
         {
-          "answer": "il pars",
-          "feedback": "Il takes '{part}', not 'pars'. Remember: il part, elle part"
+          "answer": "part"
         }
-      ]
+      ],
+      "gloss": "He's leaving for Normandy",
+      "hint": "{partir} for {il}"
     },
     {
-      "id": "i-elle-part",
-      "type": "respond",
-      "situation": "Say what she does",
-      "cue": "she leaves",
-      "answer": "elle part",
-      "hint": "{elle part}",
-      "mistakes": [
+      "id": "i-elle-part-avec-toi",
+      "type": "gapfill",
+      "text": "Elle ___ avec toi ?",
+      "blanks": [
         {
-          "answer": "elle pars",
-          "feedback": "Elle takes '{part}', not 'pars'. Same as il part"
+          "answer": "part"
         }
-      ]
+      ],
+      "gloss": "Is she leaving with you?",
+      "hint": "{partir} for {elle}"
     },
     {
-      "id": "i-nous-partons",
-      "type": "respond",
-      "situation": "Say what we do",
-      "cue": "we leave",
-      "answer": "nous partons",
-      "hint": "{nous partons}",
-      "mistakes": [
+      "id": "i-nous-partons-avec-vous",
+      "type": "gapfill",
+      "text": "Nous ___ avec vous.",
+      "blanks": [
         {
-          "answer": "nous pars",
-          "feedback": "Nous takes '{partons}', not 'pars'. Regular ending!"
-        },
-        {
-          "answer": "nous part",
-          "feedback": "Nous takes '{partons}', not 'part'. Completely different!"
+          "answer": "partons"
         }
-      ]
+      ],
+      "gloss": "We're leaving with you",
+      "hint": "{partir} for {nous}"
     },
     {
-      "id": "i-vous-partez",
-      "type": "respond",
-      "situation": "Say what you do (formal)",
-      "cue": "you leave (formal)",
-      "answer": "vous partez",
-      "hint": "{vous partez}",
-      "mistakes": [
+      "id": "i-vous-partez-quand",
+      "type": "gapfill",
+      "text": "Vous ___ quand ?",
+      "blanks": [
         {
-          "answer": "vous pars",
-          "feedback": "Vous takes '{partez}', not 'pars'. Regular ending!"
-        },
-        {
-          "answer": "vous part",
-          "feedback": "Vous takes '{partez}', not 'part'. Remember: vous partez"
+          "answer": "partez"
         }
-      ]
+      ],
+      "gloss": "When are you leaving?",
+      "hint": "{partir} for {vous}"
     },
     {
-      "id": "i-ils-partent",
-      "type": "respond",
-      "situation": "Say what they do (masculine)",
-      "cue": "they leave (masculine)",
-      "answer": "ils partent",
-      "hint": "{ils partent}",
-      "mistakes": [
+      "id": "i-ils-partent-en-normandie",
+      "type": "gapfill",
+      "text": "Ils ___ en Normandie.",
+      "blanks": [
         {
-          "answer": "ils pars",
-          "feedback": "Ils takes '{partent}', not 'pars'. Regular ending!"
-        },
-        {
-          "answer": "ils part",
-          "feedback": "Ils takes '{partent}', not 'part'. Regular ending!"
+          "answer": "partent"
         }
-      ]
+      ],
+      "gloss": "They're leaving for Normandy",
+      "hint": "{partir} for {ils}"
     },
     {
-      "id": "i-elles-partent",
-      "type": "respond",
-      "situation": "Say what they do (feminine)",
-      "cue": "they leave (feminine)",
-      "answer": "elles partent",
-      "hint": "{elles partent}",
-      "mistakes": [
+      "id": "i-elles-partent-avec-qui",
+      "type": "gapfill",
+      "text": "Elles ___ avec qui ?",
+      "blanks": [
         {
-          "answer": "elles pars",
-          "feedback": "Elles takes '{partent}', not 'pars'. Same as ils partent"
-        },
-        {
-          "answer": "elles part",
-          "feedback": "Elles takes '{partent}', not 'part'. Regular ending!"
+          "answer": "partent"
         }
-      ]
+      ],
+      "gloss": "Who are they leaving with?",
+      "hint": "{partir} for {elles}"
     },
     {
       "id": "i-je-pars-avec-toi",
       "type": "respond",
-      "hint": "{je pars + de ça}",
+      "hint": "The form of {partir} for {je}, then {avec toi}.",
       "situation": "Your friend asks if you are coming to the café. You are leaving, and you want her to come too.",
       "cue": "I'm leaving with you",
       "answer": "je pars avec toi",
@@ -188,7 +152,7 @@
     {
       "id": "i-quand-tu-pars",
       "type": "respond",
-      "hint": "{qu'est-ce que tu pars}",
+      "hint": "{quand est-ce que}, then the form of {partir} for {tu}.",
       "situation": "Your friend has her coat on. Ask her when she is leaving.",
       "cue": "When are you leaving?",
       "answer": "quand est-ce que tu pars ?",
@@ -206,7 +170,7 @@
     {
       "id": "i-il-part-avec-elle",
       "type": "respond",
-      "hint": "{il part + de ça}",
+      "hint": "The form of {partir} for {il}, then {avec elle}.",
       "situation": "Someone asks where your brother is. He is leaving with your sister.",
       "cue": "He's leaving with her",
       "answer": "il part avec elle",
@@ -220,7 +184,7 @@
     {
       "id": "i-nous-partons-en-normandie",
       "type": "respond",
-      "hint": "{nous partons + de ça}",
+      "hint": "The form of {partir} for {nous}, then {en Normandie}.",
       "situation": "A neighbour asks about your weekend plans. Your family is going to Normandy.",
       "cue": "We're leaving for Normandy",
       "answer": "nous partons en Normandie",
@@ -237,7 +201,7 @@
     {
       "id": "i-pourquoi-tu-veux-partir",
       "type": "respond",
-      "hint": "{qu'est-ce que tu veux partir}",
+      "hint": "{pourquoi est-ce que}, then {tu veux} and the whole verb.",
       "situation": "Your friend says she does not like the party. Ask her why she wants to leave.",
       "cue": "Why do you want to leave?",
       "answer": "pourquoi est-ce que tu veux partir ?",
@@ -256,7 +220,7 @@
     {
       "id": "i-je-veux-partir",
       "type": "respond",
-      "hint": "{je veux partir + de ça}",
+      "hint": "{je veux}, then the whole verb.",
       "situation": "It is late and you are tired. Tell your friends.",
       "cue": "I want to leave",
       "answer": "je veux partir",
@@ -270,7 +234,7 @@
     {
       "id": "i-tu-peux-partir",
       "type": "respond",
-      "hint": "{peux-tu partir}",
+      "hint": "{tu peux}, then the whole verb.",
       "situation": "Your friend has a train to catch. Ask if she can leave now.",
       "cue": "Can you leave?",
       "answer": "tu peux partir ?",
@@ -288,7 +252,7 @@
     {
       "id": "i-je-peux-partir-avec-vous",
       "type": "respond",
-      "hint": "{je peux partir + de ça}",
+      "hint": "{je peux}, then the whole verb and {avec vous}.",
       "situation": "Your teacher is leaving too. Tell her you can leave with her, politely.",
       "cue": "I can leave with you",
       "answer": "je peux partir avec vous",
@@ -305,7 +269,7 @@
     {
       "id": "i-je-vais-partir-en-normandie",
       "type": "respond",
-      "hint": "{je vais partir + de ça}",
+      "hint": "{je vais}, then the whole verb.",
       "situation": "A friend asks about your summer.",
       "cue": "I'm going to leave for Normandy",
       "answer": "je vais partir en Normandie",
@@ -319,7 +283,7 @@
     {
       "id": "i-quand-tu-vas-partir",
       "type": "respond",
-      "hint": "{qu'est-ce que tu vas partir}",
+      "hint": "{quand est-ce que}, then {tu vas} and the whole verb.",
       "situation": "Your friend says she is going away. Ask her when.",
       "cue": "When are you going to leave?",
       "answer": "quand est-ce que tu vas partir ?",
@@ -337,7 +301,7 @@
     {
       "id": "i-elle-part-avec-qui",
       "type": "respond",
-      "hint": "{je viens partir + de ça}",
+      "hint": "The form of {partir} for {elle}, then {avec qui}.",
       "situation": "Your sister is leaving the party. Ask who she is leaving with.",
       "cue": "Who is she leaving with?",
       "answer": "elle part avec qui ?",
@@ -354,7 +318,7 @@
     {
       "id": "i-pourquoi-ils-partent",
       "type": "respond",
-      "hint": "{pourquoi viens-tu partir}",
+      "hint": "{pourquoi est-ce que}, then the form of {partir} for {ils}.",
       "situation": "Your neighbours are packing their car. Ask why they are leaving.",
       "cue": "Why are they leaving?",
       "answer": "pourquoi est-ce qu'ils partent ?",
@@ -373,75 +337,7 @@
   "conjugation": {
     "verb": "partir",
     "en": "to leave",
-    "pattern": "irregular",
-    "note": "{partir} drops its t in {je pars}, {tu pars} and {il part}, where you hear no t. The t comes back, and is heard, in {ils partent}, {vous partez} and {nous partons}.",
-    "groups": [
-      {
-        "id": "par",
-        "sound": "/paʁ/"
-      },
-      {
-        "id": "part",
-        "sound": "/paʁt/"
-      },
-      {
-        "id": "partez",
-        "sound": "/paʁ.te/"
-      },
-      {
-        "id": "partons",
-        "sound": "/paʁ.tɔ̃/"
-      }
-    ],
-    "rows": [
-      {
-        "person": "je",
-        "form": "pars",
-        "en": "I'm leaving",
-        "group": "par",
-        "stem": "par",
-        "silent": "s"
-      },
-      {
-        "person": "tu",
-        "form": "pars",
-        "en": "you're leaving (to one person you know well)",
-        "group": "par",
-        "stem": "par",
-        "silent": "s"
-      },
-      {
-        "person": "il/elle/on",
-        "form": "part",
-        "en": "he's leaving, she's leaving, we're leaving (on)",
-        "group": "par",
-        "stem": "par",
-        "silent": "t"
-      },
-      {
-        "person": "vous",
-        "form": "partez",
-        "en": "you're leaving (polite, or to more than one)",
-        "group": "partez",
-        "stem": "part",
-        "silent": "z"
-      },
-      {
-        "person": "ils/elles",
-        "form": "partent",
-        "en": "they're leaving",
-        "group": "part",
-        "stem": "part",
-        "silent": "ent"
-      },
-      {
-        "person": "nous",
-        "form": "partons",
-        "en": "we're leaving",
-        "group": "partons",
-        "stem": "part",
-        "silent": "s"
-      }
-    ]
+    "aspect": "progressive",
+    "note": "{partir} drops its t in {je pars}, {tu pars} and {il part}, where you hear no t. The t comes back, and is heard, in {ils partent}, {vous partez} and {nous partons}."
   }
 }

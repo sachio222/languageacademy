@@ -10,6 +10,7 @@ import { createHash } from 'node:crypto';
 import { FREE_UNIT_KEY } from './assemble.mjs';
 import { moduleSteps } from './schema/module.mjs';
 import { BLANK_MARKER, blankCount } from './schema/item.mjs';
+import { rowSentences } from './verb-sentences.mjs';
 
 export const FORMAT = 'la-bundle@1';
 export const REFERENCE_PART = 'reference-content';
@@ -305,6 +306,7 @@ const rowsOf = (rows) => rows.map((r) => defined({ fr: r.fr, en: r.en, note: r.n
 const tableBlock = (t) => ({ type: 'table', block_id: t.id, title: t.title, rows: rowsOf(t.rows) });
 
 // The verb step's body (L VerbFormsBody): the conjugation, with model and note null when the module has none.
+const SENTENCES_PER_FORM = 6;
 function verbFormsBody(m) {
   const c = m.conjugation;
   return {
@@ -313,8 +315,14 @@ function verbFormsBody(m) {
     pattern: c.pattern,
     model: c.model ?? null,
     note: c.note ?? null,
-    groups: c.groups.map((g) => ({ id: g.id, sound: g.sound })),
-    rows: c.rows.map((r) => defined({ person: r.person, form: r.form, en: r.en, group: r.group, stem: r.stem, silent: r.silent })),
+    groups: c.groups.map((g) => defined({ id: g.id, sound: g.sound })),
+    // Each form's sentences: the lesson's own items that say it, the form taken out (verb-sentences.mjs). L brings the
+    // form back in review inside one of them.
+    rows: c.rows.map((r) => ({
+      ...defined({ person: r.person, form: r.form, en: r.en, group: r.group, stem: r.stem, silent: r.silent }),
+      sentences: rowSentences(r, m.items).slice(0, SENTENCES_PER_FORM).map((x) => ({ fr: x.fr, en: x.en, answer: x.answer })),
+    })),
+    contrast: c.contrast ? { same: c.contrast.same, one: c.contrast.one, many: c.contrast.many, listen: c.contrast.listen, liaison: c.contrast.liaison ?? null } : null,
   };
 }
 

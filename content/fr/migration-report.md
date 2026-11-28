@@ -9,8 +9,8 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Unit | Bare `translate` | Framed `respond` |
 |---|---|---|
 | unit1 Essential Grammar | 35 | 48 |
-| unit2 Asking & Describing | 57 | 99 |
-| unit3 Movement & Possession | 11 | 92 |
+| unit2 Asking & Describing | 57 | 91 |
+| unit3 Movement & Possession | 11 | 84 |
 | unit4 Everyday Words | 109 | 85 |
 | unit5 Time & Taste | 174 | 112 |
 | unit6 Basic Fluency | 249 | 37 |
@@ -25,15 +25,15 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 |---|---|
 | Guide checks written by hand | 1 |
 | Spellings taught more than once | 401 |
-| Item types to confirm | 247 |
+| Item types to confirm | 231 |
 | Practice blanks that were in the wrong place | 51 |
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
-| English prompts written as respond items | 810 |
+| English prompts written as respond items | 794 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
 | Hand edits kept | 1172 |
-| Live ids with no converted item | 353 (38 real misses) |
+| Live ids with no converted item | 365 (50 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
 | Notes | 3 |
@@ -678,14 +678,6 @@ The classifier had no clear rule for these items, so the type is its best guess.
 
 **2024-01-15-vouloir**
 
-- `items[0]` i-je-veux: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[1]` i-tu-veux: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[2]` i-il-veut: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[3]` i-elle-veut: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[4]` i-nous-voulons: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[5]` i-vous-voulez: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[6]` i-ils-veulent: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[7]` i-elles-veulent: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[8]` i-je-veux-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[9]` i-nous-voulons-ce-livre: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[10]` i-je-veux-etre-un: classifier: translate (English prompt with a French answer); written as respond (framed)
@@ -773,17 +765,6 @@ The classifier had no clear rule for these items, so the type is its best guess.
 - `items[17]` i-qu-est-ce-que: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[18]` i-je-vais-avoir-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[19]` i-qu-est-ce-que-2: classifier: translate (English prompt with a French answer); written as respond (framed) (fixed by hand)
-
-**2024-01-29-partir**
-
-- `items[0]` i-je-pars: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[1]` i-tu-pars: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[2]` i-il-part: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[3]` i-elle-part: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[4]` i-nous-partons: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[5]` i-vous-partez: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[6]` i-ils-partent: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[7]` i-elles-partent: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-31-possessive-adjectives**
 
@@ -1369,7 +1350,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-01-15-vouloir**
 
-- 14 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
+- 6 × framed by its instruction: `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
 
 **2024-01-16-pouvoir**
 
@@ -1402,10 +1383,6 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 **2024-01-27-aller**
 
 - 20 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`, `items[16]`, `items[17]`, `items[18]`, `items[19]`
-
-**2024-01-29-partir**
-
-- 8 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`
 
 **2024-02-01-possessive-pronouns**
 
@@ -1825,7 +1802,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary/ils-veulent-fr` ""word_id":"ils-veulent-fr","fr":"ils veulent","gloss":"they want (masc)","note":"irregular"" → "(removed)"
 - `vocabulary/elles-veulent-fr` ""word_id":"elles-veulent-fr","fr":"elles veulent","gloss":"they want (fem)","note":"same as ils"" → "(removed)"
 - `concepts[0].example` "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)" → "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre ?), 'We want to have a house' (Nous voulons avoir une maison), 'How are you? Do you want a coffee?' (Ça va ? Tu veux un café ?)"
-- `conjugation` "(none)" → ""verb":"vouloir","en":"to want","pattern":"irregular","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.","groups":["id":"veu","sound":"/vø/","id":"veul","sound":"/vœl/","id":"voulez","sound":"/vu.le/","id":"voulons","sound":"/vu.lɔ̃/"],"rows":["person":"je","form":"veux","en":"I want","group":"veu","stem":"veu","silent":"x","person":"tu","form":"veux","en":"you want (to one person you know well)","group":"veu","stem":"veu","silent":"x","person":"il/elle/on","form":"veut","en":"he wants, she wants, we want (on)","group":"veu","stem":"veu","silent":"t","person":"vous","form":"voulez","en":"you want (polite, or to more than one)","group":"voulez","stem":"voul","silent":"z","person":"ils/elles","form":"veulent","en":"they want","group":"veul","stem":"veul","silent":"ent","person":"nous","form":"voulons","en":"we want","group":"voulons","stem":"voul","silent":"s"]"
+- `conjugation` "(none)" → ""verb":"vouloir","en":"to want","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.""
 
 **2024-01-17-voir**
 
@@ -1915,7 +1892,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `concepts[1].example` "Singular: je/tu pars, il part. Plural: nous partons, vous partez" → "il part (no t heard), ils partent (t heard)"
 - `concepts[2].definition` "Combine partir with previous modules for infinite expressions" → "partir slots into the verbs you know: vouloir, pouvoir and aller each take it straight after."
 - `concepts[2].example` "je pars + ça, nous partons + être, ils partent + avoir" → "je veux partir, tu peux partir, on va partir"
-- `conjugation` "(none)" → ""verb":"partir","en":"to leave","pattern":"irregular","note":"partir drops its t in je pars, tu pars and il part, where you hear no t. The t comes back, and is heard, in ils partent, vous partez and nous partons.","groups":["id":"par","sound":"/paʁ/","id":"part","sound":"/paʁt/","id":"partez","sound":"/paʁ.te/","id":"partons","sound":"/paʁ.tɔ̃/"],"rows":["person":"je","form":"pars","en":"I'm leaving","group":"par","stem":"par","silent":"s","person":"tu","form":"pars","en":"you're leaving (to one person you know well)","group":"par","stem":"par","silent":"s","person":"il/elle/on","form":"part","en":"he's leaving, she's leaving, we're leaving (on)","group":"par","stem":"par","silent":"t","person":"vous","form":"partez","en":"you're leaving (polite, or to more than one)","group":"partez","stem":"part","silent":"z","person":"ils/elles","form":"partent","en":"they're leaving","group":"part","stem":"part","silent":"ent","person":"nous","form":"partons","en":"we're leaving","group":"partons","stem":"part","silent":"s"]"
+- `conjugation` "(none)" → ""verb":"partir","en":"to leave","aspect":"progressive","note":"partir drops its t in je pars, tu pars and il part, where you hear no t. The t comes back, and is heard, in ils partent, vous partez and nous partons.""
 
 **2024-01-31-possessive-adjectives**
 
@@ -3294,8 +3271,23 @@ The live app stores answers under these exercise ids and concept indexes, and no
 
 ### Real misses
 
+**2024-01-15-vouloir**
+
+- `2024-01-15-vouloir.1` exercise "I want" → "je veux"
+- `2024-01-15-vouloir.2` exercise "you want (informal)" → "tu veux"
+- `2024-01-15-vouloir.3` exercise "he wants" → "il veut"
+- `2024-01-15-vouloir.4` exercise "she wants" → "elle veut"
+- `2024-01-15-vouloir.7` exercise "they want (masculine)" → "ils veulent"
+- `2024-01-15-vouloir.8` exercise "they want (feminine)" → "elles veulent"
+
 **2024-01-29-partir**
 
+- `2024-01-29-partir.1` exercise "I leave" → "je pars"
+- `2024-01-29-partir.2` exercise "you leave (informal)" → "tu pars"
+- `2024-01-29-partir.3` exercise "he leaves" → "il part"
+- `2024-01-29-partir.4` exercise "she leaves" → "elle part"
+- `2024-01-29-partir.7` exercise "they leave (masculine)" → "ils partent"
+- `2024-01-29-partir.8` exercise "they leave (feminine)" → "elles partent"
 - `2024-01-29-partir.9` exercise "I leave that" → "je pars de ça"
 - `2024-01-29-partir.10` exercise "What do you leave?" → "qu'est-ce que tu pars?"
 - `2024-01-29-partir.11` exercise "He leaves that" → "il part de ça"

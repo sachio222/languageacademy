@@ -13,6 +13,6 @@ Copied from prototype L's build spec in the product vault, so `pnpm content:test
 | `check/check_bundle.py` | `c8cf1ce0503619cb9dca91b44d72f98d0c3083fbbf6010a801db84159eb615b8` |
 | `contracts/curriculum.bundle.schema.json` | `8b8fcc7f5742ad6b39f9936ed8565981223b77e05a6ced9a847786ae24d97218` |
 | `contracts/common.openapi.json` | `ebddbba3470ade1e19242f97dc4a35a6acf5b0878690a5057d6483d73f034d4f` |
-| `contracts/curriculum.openapi.json` | `f1b88be81cf4278eb6249ce05abe2a84a73c3c529e9981a231fe8df5af6073d9` |
+| `contracts/curriculum.openapi.json` | `5a532cc3c81812da6397fd19880dccb7ce21c09d0a3d5d8e8715d7c0ab2e8359` |
 
 Run: `python3 scripts/content/vendor/la-bundle/check/check_bundle.py <bundle.json> [--json]` (Python 3.9 or later, no packages; exit 0 ok, 1 errors, 2 usage). The checker reads `../contracts` beside its own folder, so keep the layout.

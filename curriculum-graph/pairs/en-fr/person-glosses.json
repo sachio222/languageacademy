@@ -1,0 +1,28 @@
+{
+  "about": "English for each person of a French verb, as the Verb forms step shows it. {base} is the English verb (want), {s} its he/she form (wants), {ing} its -ing form (leaving). simple is the plain present; progressive is used when a lesson's conjugation says aspect progressive (I'm leaving). be lists the forms of to be, the one English verb whose persons differ.",
+  "simple": {
+    "prs.1sg": "I {base}",
+    "prs.2sg": "you {base} (to one person you know well)",
+    "prs.3sg": "he {s}, she {s}, we {base} (on)",
+    "prs.2pl": "you {base} (polite, or to more than one)",
+    "prs.3pl": "they {base}",
+    "prs.1pl": "we {base}"
+  },
+  "progressive": {
+    "prs.1sg": "I'm {ing}",
+    "prs.2sg": "you're {ing} (to one person you know well)",
+    "prs.3sg": "he's {ing}, she's {ing}, we're {ing} (on)",
+    "prs.2pl": "you're {ing} (polite, or to more than one)",
+    "prs.3pl": "they're {ing}",
+    "prs.1pl": "we're {ing}"
+  },
+  "be": {
+    "prs.1sg": "I am",
+    "prs.2sg": "you are (to one person you know well)",
+    "prs.3sg": "he is, she is, we are (on)",
+    "prs.2pl": "you are (polite, or to more than one)",
+    "prs.3pl": "they are",
+    "prs.1pl": "we are"
+  },
+  "s_forms": { "have": "has", "do": "does", "go": "goes", "can": "can", "must": "must" }
+}

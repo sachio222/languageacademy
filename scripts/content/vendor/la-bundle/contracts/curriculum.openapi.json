@@ -4405,7 +4405,7 @@
           "rows"
         ],
         "additionalProperties": false,
-        "description": "Body of the verb-forms step: one verb's forms for one tense. groups are the forms that sound alike; rows go in order of use in speech, each with its person as the learner reads it (je, j', il/elle/on), its form, its meaning, its sound group, the stem that starts the form and the silent letters that end it. pattern irregular gets the full step; er and like name a model verb whose full step comes first.",
+        "description": "Body of the verb-forms step: one verb's forms for one tense. groups are the forms that sound alike; rows go in order of use in speech, each with its person as the learner reads it (je, j', il/elle/on), its form, its meaning, its sound group, the stem that starts the form and the silent letters that end it. A row's sentences are the lesson's sentences that say the form, with ___ in its place: the form comes back in review inside one of them. contrast is what a learner can hear between il and ils. pattern irregular gets the full step; er and like name a model verb whose full step comes first.",
         "properties": {
           "verb": {
             "type": "string",
@@ -4444,8 +4444,7 @@
             "items": {
               "type": "object",
               "required": [
-                "id",
-                "sound"
+                "id"
               ],
               "additionalProperties": false,
               "properties": {
@@ -4455,7 +4454,10 @@
                   "maxLength": 100
                 },
                 "sound": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
                   "pattern": "^/[^/\\s][^/]*/$",
                   "maxLength": 40
                 }
@@ -4508,6 +4510,100 @@
                     "null"
                   ],
                   "maxLength": 20
+                },
+                "sentences": {
+                  "type": "array",
+                  "maxItems": 6,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "fr",
+                      "en",
+                      "answer"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "fr": {
+                        "type": "string",
+                        "minLength": 4,
+                        "maxLength": 200,
+                        "pattern": "^[^_]*___[^_]*$"
+                      },
+                      "en": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "answer": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 60
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "contrast": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "required": [
+              "same",
+              "one",
+              "many",
+              "listen"
+            ],
+            "additionalProperties": false,
+            "description": "What a learner can hear between il and ils. same: the two forms sound alike (parle, parlent), so the step explains and does not test. one and many are the pair as said; listen is the line on what to listen for, French in braces. liaison is the pair before a vowel, where the s of ils is said.",
+            "properties": {
+              "same": {
+                "type": "boolean"
+              },
+              "one": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "many": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "listen": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "liaison": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "required": [
+                  "one",
+                  "many",
+                  "listen"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "one": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 80
+                  },
+                  "many": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 80
+                  },
+                  "listen": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 300
+                  }
                 }
               }
             }

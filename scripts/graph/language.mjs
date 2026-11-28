@@ -22,6 +22,9 @@
 //   dictionaryForms()      async: folded spellings the app dictionary has a pop-up for; optional (a language with no
 //                          dictionary yet returns an empty set, and reading-word-no-popup flags every untabled word)
 //   popupKeys(token)       [key, base]: the spelling a reading pop-up is looked up by, and its base when elided
+// Verb forms (optional: a language without it has no Verb forms step)
+//   conjugation(graph, spec)   a verb's present as the Verb forms step teaches it: { verb, rows, groups, contrast,
+//                          shape }, from { headwords, forms, paradigms } and a lesson's { verb } (fr/conjugation.mjs)
 // Report
 //   locale                 sort order for word lists in reports
 //   exampleWord            a headword key the report uses to explain IDs (lex:<exampleWord>)

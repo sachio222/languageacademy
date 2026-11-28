@@ -7,7 +7,7 @@ import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, sta
 import { tmpdir } from 'node:os';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCourse, readContent, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
+import { loadCourse, readContent, conjugationBuilder, CONTENT_ROOT, REPO_ROOT } from '../load.mjs';
 import { assembleCourse, withoutPlanned } from '../assemble.mjs';
 import { checkAnswer as defaultCheckAnswer } from '../../graph/fr/answers.mjs';
 import { buildBundle, buildBundleWithReport, bundleHash, canonicalJson, splitBlankMistakes, ipaMismatch } from '../bundle.mjs';
@@ -324,7 +324,7 @@ test('topic defaults are reported', () => {
   const { outline: written, files } = writtenContent();
   const key = '2024-01-02-etre';
   const withTopic = files.map((f) => (f.file.endsWith(`/${key}.json`) ? { file: f.file, json: { ...JSON.parse(f.text), topic: 'être' } } : f));
-  const r = buildBundleWithReport(assembleCourse(written, withTopic, { checkAnswer: defaultCheckAnswer }), { ...sources, build: BUILD });
+  const r = buildBundleWithReport(assembleCourse(written, withTopic, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
   assert.equal(entryOf(r.bundle, key).topic, 'être');
   assert.ok(!r.report.topic_defaulted.some((d) => d.module_key === key));
   assert.equal(r.report.topic_defaulted.length, report.topic_defaulted.length - 1);
@@ -342,7 +342,7 @@ test('reorder changes no key', () => {
   const u2 = outline.units[1].entries;
   const [a, b] = [u2.indexOf('2024-01-12-demonstratives'), u2.indexOf('2024-01-13-ca-survival')];
   [u2[a], u2[b]] = [u2[b], u2[a]];
-  const swapped = buildBundle(assembleCourse(outline, files, { checkAnswer: defaultCheckAnswer }), { ...sources, build: BUILD });
+  const swapped = buildBundle(assembleCourse(outline, files, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
   const keys = (x) => ({
     modules: x.entries.map((e) => e.module_key).sort(),
     items: x.content.flatMap((c) => c.items.map((i) => `${c.module_key}/${i.item_id}`)).sort(),
@@ -592,7 +592,7 @@ test('a lesson with a conjugation carries the verb step after Vocabulary Intro, 
     rows: [{ person: 'je', form: 'veux', en: 'I want', group: 'veu', stem: 'veu', silent: 'x' }],
   };
   const changed = files.map((f) => (f.file.endsWith(`/${key}.json`) ? { file: f.file, json: { ...JSON.parse(f.text), conjugation } } : f));
-  const b = buildBundle(assembleCourse(outline, changed, { checkAnswer: defaultCheckAnswer }), { ...sources, build: BUILD });
+  const b = buildBundle(assembleCourse(outline, changed, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
   const entry = entryOf(b, key);
   assert.deepEqual(entry.steps.slice(0, 3).map((s) => s.section_id), ['vocabulary-intro', 'verb-forms', 'pronunciation']);
   assert.deepEqual(entry.steps.map((s) => s.ordinal), entry.steps.map((_, i) => i + 1));
@@ -602,9 +602,39 @@ test('a lesson with a conjugation carries the verb step after Vocabulary Intro, 
   assert.equal(step.access_tier, 'premium');
   const body = contentOf(b, key).steps.find((s) => s.section_id === 'verb-forms').body;
   assert.equal(body.verb, 'vouloir');
-  assert.deepEqual(body.rows[0], { person: 'je', form: 'veux', en: 'I want', group: 'veu', stem: 'veu', silent: 'x' });
+  const { sentences, ...row } = body.rows[0];
+  assert.deepEqual(row, { person: 'je', form: 'veux', en: 'I want', group: 'veu', stem: 'veu', silent: 'x' });
+  assert.ok(sentences.every((x) => x.answer === 'veux' && x.fr.includes('___')));
   assert.equal(body.model, null);
   assert.deepEqual(releaseProblems(b).filter((p) => p.code === 'section_id_invalid'), []);
+});
+
+test('the verb step is built from the graph: a lesson names its verb, and each form carries its sentences', () => {
+  const body = contentOf(bundle, '2024-01-15-vouloir').steps.find((s) => s.section_id === 'verb-forms').body;
+  assert.deepEqual(body.rows.map((r) => `${r.person} ${r.form}`), ['je veux', 'tu veux', 'il/elle/on veut', 'vous voulez', 'ils/elles veulent', 'nous voulons']);
+  assert.deepEqual(body.groups.map((g) => g.id), ['veu', 'veul', 'voulez', 'voulons']);
+  // Every form has a sentence of the lesson with the form taken out, and its English.
+  for (const r of body.rows) assert.ok(r.sentences.length >= 1, `${r.person} has a sentence`);
+  assert.deepEqual(body.rows[3].sentences[0], { fr: 'Vous ___ ça ?', en: 'Do you want that?', answer: 'voulez' });
+  assert.ok(body.rows[4].sentences.some((x) => /^Elles ___/.test(x.fr)) && body.rows[4].sentences.some((x) => /^Ils ___/.test(x.fr)));
+  assert.deepEqual(body.contrast, {
+    same: false, one: 'il veut', many: 'ils veulent',
+    listen: '{veut} ends on a vowel sound. {veulent} ends with an l sound. The -ent itself is never said.', liaison: null,
+  });
+  const partir = contentOf(bundle, '2024-01-29-partir').steps.find((s) => s.section_id === 'verb-forms').body;
+  assert.equal(partir.rows[0].en, "I'm leaving");
+  assert.ok(partir.rows[4].sentences.some((x) => x.fr === "pourquoi est-ce qu'ils ___ ?"));
+});
+
+test('a lesson whose verb form has no sentence does not load', () => {
+  const { files } = writtenContent();
+  const f = files.find((x) => x.file.endsWith('/2024-01-15-vouloir.json'));
+  const json = JSON.parse(f.text);
+  json.items = json.items.filter((i) => i.id !== 'i-vous-voulez-ca');
+  assert.throws(
+    () => loadCourse({ replace: new Map([[f.file, JSON.stringify(json)]]), planned: false }),
+    (e) => e.problems.some((p) => p.code === 'conjugation_row_no_sentence' && p.path === 'conjugation.rows[3]'),
+  );
 });
 
 test("a verb lesson's Speed Match pairs each person with its form, one pair per spelling", () => {

@@ -512,21 +512,39 @@ const VOULOIR = () => ({
   ],
 });
 
-test('a lesson may carry a conjugation for its verb step', () => {
+// A lesson with a sentence for every person of vouloir: each form comes back in review inside one.
+const verbLesson = () => {
   const mod = miniModule(MINI_KEYS.lesson);
+  const said = [['je', 'veux'], ['tu', 'veux'], ['il', 'veut'], ['vous', 'voulez'], ['ils', 'veulent'], ['nous', 'voulons']];
+  mod.items = [...mod.items, ...said.map(([p, f]) => ({ id: `i-verb-${p}`, type: 'respond', situation: 'Say who wants it', cue: `${p} want it`, answer: `${p} ${f} ça` }))];
+  return mod;
+};
+
+test('every form of a conjugation has a sentence among the lesson\'s items', () => {
+  const mod = verbLesson();
+  mod.conjugation = VOULOIR();
+  mod.items = mod.items.filter((i) => i.id !== 'i-verb-vous');
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }).map((x) => [x.code, x.path]), [['conjugation_row_no_sentence', 'conjugation.rows[3]']]);
+  // The person and the form alone are not a sentence.
+  mod.items.push({ id: 'i-verb-vous', type: 'respond', situation: 'Say it', cue: 'you want', answer: 'vous voulez' });
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }).map((x) => x.code), ['conjugation_row_no_sentence']);
+});
+
+test('a lesson may carry a conjugation for its verb step', () => {
+  const mod = verbLesson();
   mod.conjugation = VOULOIR();
   assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }), []);
 });
 
 test('a conjugation row names a sound group the conjugation has', () => {
-  const mod = miniModule(MINI_KEYS.lesson);
+  const mod = verbLesson();
   mod.conjugation = VOULOIR();
   mod.conjugation.rows[0].group = 'vo';
   assert.deepEqual(codes(mod), ['conjugation_group_unknown']);
 });
 
 test('a conjugation row splits its form: the stem starts it, the silent letters end it', () => {
-  const mod = miniModule(MINI_KEYS.lesson);
+  const mod = verbLesson();
   mod.conjugation = VOULOIR();
   mod.conjugation.rows[0].stem = 'vou';
   mod.conjugation.rows[2].silent = 'x';
@@ -538,7 +556,7 @@ test('a conjugation row splits its form: the stem starts it, the silent letters 
 });
 
 test('every sound group of a conjugation has a row, and each person comes once', () => {
-  const mod = miniModule(MINI_KEYS.lesson);
+  const mod = verbLesson();
   mod.conjugation = VOULOIR();
   mod.conjugation.groups.push({ id: 'spare', sound: '/x/' });
   mod.conjugation.rows[1].person = 'je';
@@ -546,7 +564,7 @@ test('every sound group of a conjugation has a row, and each person comes once',
 });
 
 test('a verb that follows a pattern names its model verb', () => {
-  const mod = miniModule(MINI_KEYS.lesson);
+  const mod = verbLesson();
   mod.conjugation = { ...VOULOIR(), pattern: 'er' };
   assert.deepEqual(codes(mod), ['conjugation_model_missing']);
   mod.conjugation.model = 'parler';

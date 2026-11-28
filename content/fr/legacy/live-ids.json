@@ -258,14 +258,8 @@
   },
   "2024-01-15-vouloir": {
     "items": {
-      "2024-01-15-vouloir.1": "i-je-veux",
-      "2024-01-15-vouloir.2": "i-tu-veux",
-      "2024-01-15-vouloir.3": "i-il-veut",
-      "2024-01-15-vouloir.4": "i-elle-veut",
-      "2024-01-15-vouloir.5": "i-nous-voulons",
-      "2024-01-15-vouloir.6": "i-vous-voulez",
-      "2024-01-15-vouloir.7": "i-ils-veulent",
-      "2024-01-15-vouloir.8": "i-elles-veulent",
+      "2024-01-15-vouloir.5": "i-nous-voulons-avoir-une-maison",
+      "2024-01-15-vouloir.6": "i-vous-voulez-ca",
       "2024-01-15-vouloir.9": "i-je-veux-ca",
       "2024-01-15-vouloir.10": "i-nous-voulons-ce-livre",
       "2024-01-15-vouloir.11": "i-je-veux-etre-un",
@@ -732,14 +726,8 @@
   },
   "2024-01-29-partir": {
     "items": {
-      "2024-01-29-partir.1": "i-je-pars",
-      "2024-01-29-partir.2": "i-tu-pars",
-      "2024-01-29-partir.3": "i-il-part",
-      "2024-01-29-partir.4": "i-elle-part",
-      "2024-01-29-partir.5": "i-nous-partons",
-      "2024-01-29-partir.6": "i-vous-partez",
-      "2024-01-29-partir.7": "i-ils-partent",
-      "2024-01-29-partir.8": "i-elles-partent"
+      "2024-01-29-partir.5": "i-nous-partons-avec-vous",
+      "2024-01-29-partir.6": "i-vous-partez-quand"
     },
     "concepts": {
       "0": "c-partir-to-leave-to",

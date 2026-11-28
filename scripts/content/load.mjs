@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { assembleCourse, withoutPlanned } from './assemble.mjs';
 import { problem, ContentError } from './problems.mjs';
 import { defaultLanguage, language } from '../graph/language.mjs';
+import { expandConjugation, conjugationGraph, personGlosses } from './conjugation.mjs';
 
 export const REPO_ROOT = fileURLToPath(new URL('../../', import.meta.url));
 // A language's course folder, content/<code>; the default course is the one core/settings.json defaultLanguage names.
@@ -44,6 +45,20 @@ export function graphIds(dir = GRAPH_LANG_DIR) {
   return graphIdCache.get(dir);
 }
 
+/**
+ * assembleCourse's conjugationOf for one course: a lesson's conjugation built from the course language's graph
+ * (language.conjugation) and the pair's English for each person (scripts/content/conjugation.mjs).
+ */
+export function conjugationBuilder({ code = defaultLanguage(), native = 'en', graphDir = join(REPO_ROOT, 'curriculum-graph', 'languages', code), languageModule } = {}) {
+  const lang = language(code, languageModule);
+  return (spec, earlier) =>
+    expandConjugation(spec, {
+      generate: lang.conjugation ? (s) => lang.conjugation(conjugationGraph(graphDir), s) : null,
+      glosses: personGlosses(join(graphDir, '..', '..'), native, code),
+      earlier,
+    });
+}
+
 // graphDir: the graph language folder whose ids teaches and tests are checked against; null checks only their shape.
 // Left out, it is curriculum-graph/languages/<course.json language>. checkAnswer: the pass decision for one typed
 // answer; left out, the course language's (language.mjs checkAnswer). languageModule: the file of that language's
@@ -75,5 +90,7 @@ export function loadCourse({ root = CONTENT_ROOT, checkAnswer, graphDir, planned
   checkAnswer ??= language(code, languageModule).checkAnswer;
   if (graphDir === undefined) graphDir = join(REPO_ROOT, 'curriculum-graph', 'languages', code);
   const content = planned ? { outline, files } : withoutPlanned(outline, files);
-  return assembleCourse(content.outline, content.files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir) });
+  const native = typeof outline?.native === 'string' && outline.native ? outline.native : 'en';
+  const conjugationOf = conjugationBuilder({ code, native, graphDir: graphDir ?? undefined, languageModule });
+  return assembleCourse(content.outline, content.files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir), conjugationOf });
 }

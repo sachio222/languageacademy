@@ -3,6 +3,7 @@
 // module and lists its learner-facing text (moduleTexts) for the span and position-word rules.
 import { problem } from '../problems.mjs';
 import { spanProblems } from '../spans.mjs';
+import { rowSentences } from '../verb-sentences.mjs';
 import { validateItem, itemTexts, checkOptions, ITEM_TYPES, ID_PATTERN, BRACE, plainFieldMessage } from './item.mjs';
 
 export const KINDS = ['lesson', 'guide', 'reading', 'practice', 'unit_exam', 'reference'];
@@ -190,7 +191,8 @@ const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), exa
 const GLOSSES = LIST(OBJ({ fr: S('fr', 100), en: S('native', 200), note: S('native_fr', 200) }, ['fr', 'en']), { unique: 'fr' });
 // A lesson's conjugation: the data of L's verb step (Verb forms). verb and en name the verb; pattern says how it is
 // taught: irregular (the full step), er (a regular -er verb, a short check once its model verb had the full step), or
-// like (a verb that shares a model's shape). groups are the forms that sound alike, each with its sound in slashes.
+// like (a verb that shares a model's shape). groups are the forms that sound alike; sound, in slashes, is optional.
+// A module file gives the short form ({ verb, en }, scripts/content/conjugation.mjs); the loader builds this from the graph.
 // rows go in order of use in speech; each names its group, its stem (the start of the form, coloured) and its silent
 // letters (the end of the form, greyed). person is written as the learner reads it: je, j', il/elle/on, ils/elles.
 const CONJUGATION_ROW = OBJ(
@@ -198,6 +200,11 @@ const CONJUGATION_ROW = OBJ(
   { person: S('fr'), form: S('fr'), en: S('native'), group: KEY, stem: MATCH(/^\S+$/, 60), silent: MATCH(/^\S+$/, 20) },
   ['person', 'form', 'en', 'group', 'stem'],
 );
+// What a learner can hear between il and ils: same says the two forms sound alike (parle, parlent), one and many are
+// the pair as said, listen is the line on what to listen for, and liaison is the pair before a vowel, where the s of
+// ils is said (ils aiment).
+const CONTRAST_PAIR = { one: S('fr'), many: S('fr'), listen: S('native_fr') };
+const CONTRAST = OBJ({ same: BOOL, ...CONTRAST_PAIR, liaison: OBJ(CONTRAST_PAIR, ['one', 'many', 'listen']) }, ['same', 'one', 'many', 'listen']);
 const CONJUGATION = OBJ(
   {
     verb: S('fr'),
@@ -205,8 +212,9 @@ const CONJUGATION = OBJ(
     pattern: ENUM(['irregular', 'er', 'like']),
     model: S('fr'),
     note: S('native_fr'),
-    groups: LIST(OBJ({ id: ID, sound: MATCH(/^\/[^/\s][^/]*\/$/, 40) }, ['id', 'sound']), { nonEmpty: true, unique: 'id' }),
+    groups: LIST(OBJ({ id: ID, sound: MATCH(/^\/[^/\s][^/]*\/$/, 40) }, ['id']), { nonEmpty: true, unique: 'id' }),
     rows: LIST(CONJUGATION_ROW, { nonEmpty: true, unique: 'person' }),
+    contrast: CONTRAST,
   },
   ['verb', 'en', 'pattern', 'groups', 'rows'],
 );
@@ -406,7 +414,7 @@ function kindRules(mod, cx) {
     else if (!mod.speed_match.every((w) => words.has(w)))
       bad('speed_match', 'speed_match_invalid', 'speed_match lists only word_ids from this lesson’s vocabulary');
   }
-  if (kind === 'lesson' && isObj(mod.conjugation)) conjugationRules(mod.conjugation, cx);
+  if (kind === 'lesson' && isObj(mod.conjugation)) conjugationRules(mod.conjugation, cx, Array.isArray(mod.items) ? mod.items : []);
   if (kind === 'reading' && Array.isArray(mod.passage)) {
     mod.passage.forEach((b, i) => {
       if (!isObj(b)) return;
@@ -424,7 +432,7 @@ function kindRules(mod, cx) {
 
 // The verb step's data holds together: each row's group exists and every group has a row; the stem starts the form
 // and the silent letters end it, without overlapping; a verb taught by a pattern names its model verb.
-function conjugationRules(c, cx) {
+function conjugationRules(c, cx, items) {
   const { bad } = cx;
   const groups = Array.isArray(c.groups) ? c.groups.filter(isObj) : [];
   const rows = Array.isArray(c.rows) ? c.rows : [];
@@ -437,6 +445,9 @@ function conjugationRules(c, cx) {
       if (!ids.has(r.group)) bad(`conjugation.rows[${i}].group`, 'conjugation_group_unknown', `${r.group} is not one of the conjugation's sound groups`);
     }
     if (!isStr(r.form)) return;
+    // Every form comes back in review inside a sentence, so the lesson holds one for each person's row.
+    if (isStr(r.person) && rowSentences(r, items).length === 0)
+      bad(`conjugation.rows[${i}]`, 'conjugation_row_no_sentence', `no item of the lesson has a sentence with ${r.person} ${r.form} and its English (a gapfill with a gloss, or a respond item with a cue)`);
     const stemOk = !isStr(r.stem) || r.form.startsWith(r.stem);
     const silentOk = r.silent === undefined || (isStr(r.silent) && r.form.endsWith(r.silent));
     if (!stemOk) bad(`conjugation.rows[${i}].stem`, 'conjugation_split_invalid', `the stem ${r.stem} does not start the form ${r.form}`);

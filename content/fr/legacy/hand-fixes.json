@@ -217,76 +217,111 @@
     "conjugation": {
       "verb": "vouloir",
       "en": "to want",
-      "pattern": "irregular",
-      "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}.",
-      "groups": [
+      "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}."
+    },
+    "items/i-elle-veut": null,
+    "items/i-elle-veut-etre-une-amie": {
+      "id": "i-elle-veut-etre-une-amie",
+      "type": "gapfill",
+      "text": "Elle ___ être une amie.",
+      "blanks": [
         {
-          "id": "veu",
-          "sound": "/vø/"
-        },
-        {
-          "id": "veul",
-          "sound": "/vœl/"
-        },
-        {
-          "id": "voulez",
-          "sound": "/vu.le/"
-        },
-        {
-          "id": "voulons",
-          "sound": "/vu.lɔ̃/"
+          "answer": "veut"
         }
       ],
-      "rows": [
+      "gloss": "She wants to be a friend",
+      "hint": "{vouloir} for {elle}"
+    },
+    "items/i-elles-veulent": null,
+    "items/i-elles-veulent-ce-livre": {
+      "id": "i-elles-veulent-ce-livre",
+      "type": "gapfill",
+      "text": "Elles ___ ce livre.",
+      "blanks": [
         {
-          "person": "je",
-          "form": "veux",
-          "en": "I want",
-          "group": "veu",
-          "stem": "veu",
-          "silent": "x"
-        },
-        {
-          "person": "tu",
-          "form": "veux",
-          "en": "you want (to one person you know well)",
-          "group": "veu",
-          "stem": "veu",
-          "silent": "x"
-        },
-        {
-          "person": "il/elle/on",
-          "form": "veut",
-          "en": "he wants, she wants, we want (on)",
-          "group": "veu",
-          "stem": "veu",
-          "silent": "t"
-        },
-        {
-          "person": "vous",
-          "form": "voulez",
-          "en": "you want (polite, or to more than one)",
-          "group": "voulez",
-          "stem": "voul",
-          "silent": "z"
-        },
-        {
-          "person": "ils/elles",
-          "form": "veulent",
-          "en": "they want",
-          "group": "veul",
-          "stem": "veul",
-          "silent": "ent"
-        },
-        {
-          "person": "nous",
-          "form": "voulons",
-          "en": "we want",
-          "group": "voulons",
-          "stem": "voul",
-          "silent": "s"
+          "answer": "veulent"
         }
-      ]
+      ],
+      "gloss": "They want this book",
+      "hint": "{vouloir} for {elles}"
+    },
+    "items/i-il-veut": null,
+    "items/i-il-veut-ce-livre": {
+      "id": "i-il-veut-ce-livre",
+      "type": "gapfill",
+      "text": "Il ___ ce livre.",
+      "blanks": [
+        {
+          "answer": "veut"
+        }
+      ],
+      "gloss": "He wants this book",
+      "hint": "{vouloir} for {il}"
+    },
+    "items/i-ils-veulent": null,
+    "items/i-ils-veulent-un-chat": {
+      "id": "i-ils-veulent-un-chat",
+      "type": "gapfill",
+      "text": "Ils ___ un chat.",
+      "blanks": [
+        {
+          "answer": "veulent"
+        }
+      ],
+      "gloss": "They want a cat",
+      "hint": "{vouloir} for {ils}"
+    },
+    "items/i-je-veux": null,
+    "items/i-je-veux-un-livre": {
+      "id": "i-je-veux-un-livre",
+      "type": "gapfill",
+      "text": "Je ___ un livre.",
+      "blanks": [
+        {
+          "answer": "veux"
+        }
+      ],
+      "gloss": "I want a book",
+      "hint": "{vouloir} for {je}"
+    },
+    "items/i-nous-voulons": null,
+    "items/i-nous-voulons-avoir-une-maison": {
+      "id": "i-nous-voulons-avoir-une-maison",
+      "type": "gapfill",
+      "text": "Nous ___ avoir une maison.",
+      "blanks": [
+        {
+          "answer": "voulons"
+        }
+      ],
+      "gloss": "We want to have a house",
+      "hint": "{vouloir} for {nous}"
+    },
+    "items/i-tu-veux": null,
+    "items/i-tu-veux-un-chat": {
+      "id": "i-tu-veux-un-chat",
+      "type": "gapfill",
+      "text": "Tu ___ un chat ?",
+      "blanks": [
+        {
+          "answer": "veux"
+        }
+      ],
+      "gloss": "Do you want a cat?",
+      "hint": "{vouloir} for {tu}"
+    },
+    "items/i-vous-voulez": null,
+    "items/i-vous-voulez-ca": {
+      "id": "i-vous-voulez-ca",
+      "type": "gapfill",
+      "text": "Vous ___ ça ?",
+      "blanks": [
+        {
+          "answer": "voulez"
+        }
+      ],
+      "gloss": "Do you want that?",
+      "hint": "{vouloir} for {vous}"
     },
     "vocabulary/elle-veut-fr": null,
     "vocabulary/elles-veulent-fr": null,
@@ -1175,81 +1210,14 @@
     "conjugation": {
       "verb": "partir",
       "en": "to leave",
-      "pattern": "irregular",
-      "note": "{partir} drops its t in {je pars}, {tu pars} and {il part}, where you hear no t. The t comes back, and is heard, in {ils partent}, {vous partez} and {nous partons}.",
-      "groups": [
-        {
-          "id": "par",
-          "sound": "/paʁ/"
-        },
-        {
-          "id": "part",
-          "sound": "/paʁt/"
-        },
-        {
-          "id": "partez",
-          "sound": "/paʁ.te/"
-        },
-        {
-          "id": "partons",
-          "sound": "/paʁ.tɔ̃/"
-        }
-      ],
-      "rows": [
-        {
-          "person": "je",
-          "form": "pars",
-          "en": "I'm leaving",
-          "group": "par",
-          "stem": "par",
-          "silent": "s"
-        },
-        {
-          "person": "tu",
-          "form": "pars",
-          "en": "you're leaving (to one person you know well)",
-          "group": "par",
-          "stem": "par",
-          "silent": "s"
-        },
-        {
-          "person": "il/elle/on",
-          "form": "part",
-          "en": "he's leaving, she's leaving, we're leaving (on)",
-          "group": "par",
-          "stem": "par",
-          "silent": "t"
-        },
-        {
-          "person": "vous",
-          "form": "partez",
-          "en": "you're leaving (polite, or to more than one)",
-          "group": "partez",
-          "stem": "part",
-          "silent": "z"
-        },
-        {
-          "person": "ils/elles",
-          "form": "partent",
-          "en": "they're leaving",
-          "group": "part",
-          "stem": "part",
-          "silent": "ent"
-        },
-        {
-          "person": "nous",
-          "form": "partons",
-          "en": "we're leaving",
-          "group": "partons",
-          "stem": "part",
-          "silent": "s"
-        }
-      ]
+      "aspect": "progressive",
+      "note": "{partir} drops its t in {je pars}, {tu pars} and {il part}, where you hear no t. The t comes back, and is heard, in {ils partent}, {vous partez} and {nous partons}."
     },
+    "items/i-elle-part": null,
     "items/i-elle-part-avec-qui": {
       "id": "i-elle-part-avec-qui",
       "type": "respond",
-      "hint": "{je viens partir + de ça}",
+      "hint": "The form of {partir} for {elle}, then {avec qui}.",
       "situation": "Your sister is leaving the party. Ask who she is leaving with.",
       "cue": "Who is she leaving with?",
       "answer": "elle part avec qui ?",
@@ -1263,10 +1231,36 @@
         }
       ]
     },
+    "items/i-elle-part-avec-toi": {
+      "id": "i-elle-part-avec-toi",
+      "type": "gapfill",
+      "text": "Elle ___ avec toi ?",
+      "blanks": [
+        {
+          "answer": "part"
+        }
+      ],
+      "gloss": "Is she leaving with you?",
+      "hint": "{partir} for {elle}"
+    },
+    "items/i-elles-partent": null,
+    "items/i-elles-partent-avec-qui": {
+      "id": "i-elles-partent-avec-qui",
+      "type": "gapfill",
+      "text": "Elles ___ avec qui ?",
+      "blanks": [
+        {
+          "answer": "partent"
+        }
+      ],
+      "gloss": "Who are they leaving with?",
+      "hint": "{partir} for {elles}"
+    },
+    "items/i-il-part": null,
     "items/i-il-part-avec-elle": {
       "id": "i-il-part-avec-elle",
       "type": "respond",
-      "hint": "{il part + de ça}",
+      "hint": "The form of {partir} for {il}, then {avec elle}.",
       "situation": "Someone asks where your brother is. He is leaving with your sister.",
       "cue": "He's leaving with her",
       "answer": "il part avec elle",
@@ -1278,10 +1272,48 @@
       ]
     },
     "items/i-il-part-de-ca": null,
+    "items/i-il-part-en-normandie": {
+      "id": "i-il-part-en-normandie",
+      "type": "gapfill",
+      "text": "Il ___ en Normandie.",
+      "blanks": [
+        {
+          "answer": "part"
+        }
+      ],
+      "gloss": "He's leaving for Normandy",
+      "hint": "{partir} for {il}"
+    },
+    "items/i-ils-partent": null,
+    "items/i-ils-partent-en-normandie": {
+      "id": "i-ils-partent-en-normandie",
+      "type": "gapfill",
+      "text": "Ils ___ en Normandie.",
+      "blanks": [
+        {
+          "answer": "partent"
+        }
+      ],
+      "gloss": "They're leaving for Normandy",
+      "hint": "{partir} for {ils}"
+    },
+    "items/i-je-pars": null,
+    "items/i-je-pars-avec-elle": {
+      "id": "i-je-pars-avec-elle",
+      "type": "gapfill",
+      "text": "Je ___ avec elle.",
+      "blanks": [
+        {
+          "answer": "pars"
+        }
+      ],
+      "gloss": "I'm leaving with her",
+      "hint": "{partir} for {je}"
+    },
     "items/i-je-pars-avec-toi": {
       "id": "i-je-pars-avec-toi",
       "type": "respond",
-      "hint": "{je pars + de ça}",
+      "hint": "The form of {partir} for {je}, then {avec toi}.",
       "situation": "Your friend asks if you are coming to the café. You are leaving, and you want her to come too.",
       "cue": "I'm leaving with you",
       "answer": "je pars avec toi",
@@ -1296,7 +1328,7 @@
     "items/i-je-peux-partir-avec-vous": {
       "id": "i-je-peux-partir-avec-vous",
       "type": "respond",
-      "hint": "{je peux partir + de ça}",
+      "hint": "{je peux}, then the whole verb and {avec vous}.",
       "situation": "Your teacher is leaving too. Tell her you can leave with her, politely.",
       "cue": "I can leave with you",
       "answer": "je peux partir avec vous",
@@ -1315,7 +1347,7 @@
     "items/i-je-vais-partir-en-normandie": {
       "id": "i-je-vais-partir-en-normandie",
       "type": "respond",
-      "hint": "{je vais partir + de ça}",
+      "hint": "{je vais}, then the whole verb.",
       "situation": "A friend asks about your summer.",
       "cue": "I'm going to leave for Normandy",
       "answer": "je vais partir en Normandie",
@@ -1329,7 +1361,7 @@
     "items/i-je-veux-partir": {
       "id": "i-je-veux-partir",
       "type": "respond",
-      "hint": "{je veux partir + de ça}",
+      "hint": "{je veux}, then the whole verb.",
       "situation": "It is late and you are tired. Tell your friends.",
       "cue": "I want to leave",
       "answer": "je veux partir",
@@ -1342,11 +1374,24 @@
     },
     "items/i-je-veux-partir-de": null,
     "items/i-je-viens-partir-de": null,
+    "items/i-nous-partons": null,
+    "items/i-nous-partons-avec-vous": {
+      "id": "i-nous-partons-avec-vous",
+      "type": "gapfill",
+      "text": "Nous ___ avec vous.",
+      "blanks": [
+        {
+          "answer": "partons"
+        }
+      ],
+      "gloss": "We're leaving with you",
+      "hint": "{partir} for {nous}"
+    },
     "items/i-nous-partons-de-ca": null,
     "items/i-nous-partons-en-normandie": {
       "id": "i-nous-partons-en-normandie",
       "type": "respond",
-      "hint": "{nous partons + de ça}",
+      "hint": "The form of {partir} for {nous}, then {en Normandie}.",
       "situation": "A neighbour asks about your weekend plans. Your family is going to Normandy.",
       "cue": "We're leaving for Normandy",
       "answer": "nous partons en Normandie",
@@ -1364,7 +1409,7 @@
     "items/i-pourquoi-ils-partent": {
       "id": "i-pourquoi-ils-partent",
       "type": "respond",
-      "hint": "{pourquoi viens-tu partir}",
+      "hint": "{pourquoi est-ce que}, then the form of {partir} for {ils}.",
       "situation": "Your neighbours are packing their car. Ask why they are leaving.",
       "cue": "Why are they leaving?",
       "answer": "pourquoi est-ce qu'ils partent ?",
@@ -1382,7 +1427,7 @@
     "items/i-pourquoi-tu-veux-partir": {
       "id": "i-pourquoi-tu-veux-partir",
       "type": "respond",
-      "hint": "{qu'est-ce que tu veux partir}",
+      "hint": "{pourquoi est-ce que}, then {tu veux} and the whole verb.",
       "situation": "Your friend says she does not like the party. Ask her why she wants to leave.",
       "cue": "Why do you want to leave?",
       "answer": "pourquoi est-ce que tu veux partir ?",
@@ -1405,7 +1450,7 @@
     "items/i-quand-tu-pars": {
       "id": "i-quand-tu-pars",
       "type": "respond",
-      "hint": "{qu'est-ce que tu pars}",
+      "hint": "{quand est-ce que}, then the form of {partir} for {tu}.",
       "situation": "Your friend has her coat on. Ask her when she is leaving.",
       "cue": "When are you leaving?",
       "answer": "quand est-ce que tu pars ?",
@@ -1423,7 +1468,7 @@
     "items/i-quand-tu-vas-partir": {
       "id": "i-quand-tu-vas-partir",
       "type": "respond",
-      "hint": "{qu'est-ce que tu vas partir}",
+      "hint": "{quand est-ce que}, then {tu vas} and the whole verb.",
       "situation": "Your friend says she is going away. Ask her when.",
       "cue": "When are you going to leave?",
       "answer": "quand est-ce que tu vas partir ?",
@@ -1438,10 +1483,23 @@
         }
       ]
     },
+    "items/i-tu-pars": null,
+    "items/i-tu-pars-avec-qui": {
+      "id": "i-tu-pars-avec-qui",
+      "type": "gapfill",
+      "text": "Tu ___ avec qui ?",
+      "blanks": [
+        {
+          "answer": "pars"
+        }
+      ],
+      "gloss": "Who are you leaving with?",
+      "hint": "{partir} for {tu}"
+    },
     "items/i-tu-peux-partir": {
       "id": "i-tu-peux-partir",
       "type": "respond",
-      "hint": "{peux-tu partir}",
+      "hint": "{tu peux}, then the whole verb.",
       "situation": "Your friend has a train to catch. Ask if she can leave now.",
       "cue": "Can you leave?",
       "answer": "tu peux partir ?",
@@ -1455,6 +1513,19 @@
           "feedback": "After {peux}, the verb stays whole: {partir}."
         }
       ]
+    },
+    "items/i-vous-partez": null,
+    "items/i-vous-partez-quand": {
+      "id": "i-vous-partez-quand",
+      "type": "gapfill",
+      "text": "Vous ___ quand ?",
+      "blanks": [
+        {
+          "answer": "partez"
+        }
+      ],
+      "gloss": "When are you leaving?",
+      "hint": "{partir} for {vous}"
     },
     "vocabulary/elle-part-fr": null,
     "vocabulary/elles-partent-fr": null,
