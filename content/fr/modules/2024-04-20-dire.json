@@ -120,33 +120,111 @@
   "concepts": [
     {
       "id": "c-dire-to-say-or",
-      "term": "{dire} = to say OR to tell",
-      "definition": "Essential communication verb - irregular conjugation in present tense",
-      "example": "{je dis bonjour} (I say hello), {tu dis la vérité} (you tell the truth)"
+      "term": "{dire} = to say, to tell",
+      "definition": "One verb for saying something and for telling someone.",
+      "examples": [
+        {
+          "fr": "Je dis bonjour.",
+          "en": "I say hello."
+        },
+        {
+          "fr": "Tu dis la vérité.",
+          "en": "You're telling the truth."
+        },
+        {
+          "fr": "Elle dit oui.",
+          "en": "She says yes."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular conjugation",
-      "definition": "Present tense: je dis, tu dis, il dit, nous disons, vous dites, ils disent",
-      "example": "Notice: {vous dites} (NOT disez!), {nous disons} (regular), {ils disent} (regular)"
+      "term": "The forms of {dire}",
+      "definition": "{vous dites} is one of only three vous forms that end in -tes, with {vous êtes} and {vous faites}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je dis",
+          "en": "I say"
+        },
+        {
+          "fr": "tu dis",
+          "en": "you say"
+        },
+        {
+          "fr": "il dit",
+          "en": "he says"
+        },
+        {
+          "fr": "nous disons",
+          "en": "we say"
+        },
+        {
+          "fr": "vous dites",
+          "en": "you say"
+        },
+        {
+          "fr": "ils disent",
+          "en": "they say"
+        }
+      ]
     },
     {
       "id": "c-dire-que-to-say",
-      "term": "{dire que...} (to say that...)",
-      "definition": "Use '{que}' to introduce what someone says",
-      "example": "{je dis que c'est bon} (I say that it's good), {il dit qu'il vient} (he says he's coming)"
+      "term": "{dire que}: to say that",
+      "definition": "Put {que} after {dire} to report what someone says. English can leave out that, but French keeps {que}.",
+      "examples": [
+        {
+          "fr": "Je dis que c'est bon.",
+          "en": "I say it's good."
+        },
+        {
+          "fr": "Il dit qu'il vient.",
+          "en": "He says he's coming."
+        },
+        {
+          "fr": "Ils disent que c'est vrai.",
+          "en": "They say it's true."
+        }
+      ]
     },
     {
       "id": "c-dire-a-quelqu-un",
-      "term": "{dire à quelqu'un} (to tell someone)",
-      "definition": "Use 'à' + person to say who you're telling",
-      "example": "{je dis à Marie} (I tell Marie), {tu me dis} (you tell me), {il lui dit} (he tells him/her)"
+      "term": "Telling someone",
+      "definition": "Use {à} before the person you tell. A pronoun like {me} goes before the verb instead.",
+      "examples": [
+        {
+          "fr": "Je dis bonjour à Marie.",
+          "en": "I say hello to Marie."
+        },
+        {
+          "fr": "Je te dis la vérité.",
+          "en": "I'm telling you the truth."
+        },
+        {
+          "fr": "Il me dit qu'il vient.",
+          "en": "He tells me he's coming."
+        }
+      ]
     },
     {
       "id": "c-common-expressions",
-      "term": "Common expressions",
-      "definition": "Useful phrases: c'est-à-dire (that is to say), on dit que (they say that), comme on dit (as they say)",
-      "example": "{c'est-à-dire que...} (that is to say...), {on dit que c'est bon} (they say it's good)"
+      "term": "Common sayings with {dire}",
+      "definition": "These short phrases come up in everyday conversation.",
+      "examples": [
+        {
+          "fr": "On dit que c'est bon.",
+          "en": "People say it's good."
+        },
+        {
+          "fr": "Comme on dit, c'est la vie.",
+          "en": "As they say, that's life."
+        },
+        {
+          "fr": "C'est-à-dire ?",
+          "en": "Meaning what?"
+        }
+      ]
     }
   ],
   "items": [

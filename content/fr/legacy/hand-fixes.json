@@ -8729,6 +8729,116 @@
     ]
   },
   "2024-04-17-besoin": {
+    "concepts": [
+      {
+        "id": "c-avoir-besoin-de-to",
+        "term": "{avoir besoin de} = to need",
+        "definition": "French says to have need of. Only {avoir} changes.",
+        "examples": [
+          {
+            "fr": "J'ai besoin de café.",
+            "en": "I need coffee."
+          },
+          {
+            "fr": "Tu as besoin d'aide ?",
+            "en": "Do you need help?"
+          },
+          {
+            "fr": "De quoi tu as besoin ?",
+            "en": "What do you need?"
+          }
+        ]
+      },
+      {
+        "id": "c-structure-avoir-besoin-de",
+        "term": "The forms of {avoir besoin}",
+        "definition": "{avoir} changes with the person, and {besoin de} stays the same.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "j'ai besoin",
+            "en": "I need"
+          },
+          {
+            "fr": "tu as besoin",
+            "en": "you need"
+          },
+          {
+            "fr": "il a besoin",
+            "en": "he needs"
+          },
+          {
+            "fr": "nous avons besoin",
+            "en": "we need"
+          },
+          {
+            "fr": "vous avez besoin",
+            "en": "you need"
+          },
+          {
+            "fr": "ils ont besoin",
+            "en": "they need"
+          }
+        ]
+      },
+      {
+        "id": "c-with-nouns-de-noun",
+        "term": "Needing a thing",
+        "definition": "Put the thing after {de}, or {d'} before a vowel.",
+        "examples": [
+          {
+            "fr": "J'ai besoin de temps.",
+            "en": "I need time."
+          },
+          {
+            "fr": "J'ai besoin d'argent.",
+            "en": "I need money."
+          },
+          {
+            "fr": "Elle a besoin d'une voiture.",
+            "en": "She needs a car."
+          }
+        ]
+      },
+      {
+        "id": "c-with-verbs-de-infinitive",
+        "term": "Needing to do something",
+        "definition": "Put a second verb after {de}.",
+        "examples": [
+          {
+            "fr": "J'ai besoin de dormir.",
+            "en": "I need to sleep."
+          },
+          {
+            "fr": "Nous avons besoin de parler.",
+            "en": "We need to talk."
+          },
+          {
+            "fr": "Tu as besoin de partir ?",
+            "en": "Do you need to leave?"
+          }
+        ]
+      },
+      {
+        "id": "c-negative-form",
+        "term": "Not needing",
+        "definition": "Put {ne} … {pas} around {avoir}.",
+        "examples": [
+          {
+            "fr": "Je n'ai pas besoin d'aide.",
+            "en": "I don't need help."
+          },
+          {
+            "fr": "Tu n'as pas besoin de ça.",
+            "en": "You don't need that."
+          },
+          {
+            "fr": "Elle n'a pas besoin de partir.",
+            "en": "She doesn't need to leave."
+          }
+        ]
+      }
+    ],
     "vocabulary/j-ai-besoin-de-dormir-fr": {
       "word_id": "j-ai-besoin-de-dormir-fr",
       "fr": "j'ai besoin de dormir",
@@ -8751,32 +8861,102 @@
       {
         "id": "c-commander-to-order",
         "term": "{commander} = to order",
-        "definition": "Order food at restaurants, drinks at cafés, products online - regular -ER verb",
-        "example": "{je commande un café} (I order a coffee), {nous commandons une pizza} (we order a pizza)"
+        "definition": "The verb for ordering in a café or a restaurant, or buying online.",
+        "examples": [
+          {
+            "fr": "Je commande un café.",
+            "en": "I order a coffee."
+          },
+          {
+            "fr": "Nous commandons une pizza.",
+            "en": "We order a pizza."
+          },
+          {
+            "fr": "Je voudrais commander.",
+            "en": "I would like to order."
+          }
+        ]
       },
       {
         "id": "c-regular-er-verb-pattern",
-        "term": "Regular -ER verb pattern",
-        "definition": "Follows same pattern as parler, demander - drop -er, add endings",
-        "example": "{je commande}, {tu commandes}, {il commande}, {nous commandons}, {vous commandez}, {ils commandent}"
+        "term": "The forms of {commander}",
+        "definition": "{commander} changes like {parler}.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je commande",
+            "en": "I order"
+          },
+          {
+            "fr": "tu commandes",
+            "en": "you order"
+          },
+          {
+            "fr": "il commande",
+            "en": "he orders"
+          },
+          {
+            "fr": "nous commandons",
+            "en": "we order"
+          },
+          {
+            "fr": "vous commandez",
+            "en": "you order"
+          },
+          {
+            "fr": "ils commandent",
+            "en": "they order"
+          }
+        ]
       },
       {
         "id": "c-restaurant-cafe-context",
-        "term": "Restaurant/café context",
-        "definition": "Most common use - ordering food and drinks in restaurants",
-        "example": "{je commande un steak} (I order a steak), {vous commandez le menu?} (are you ordering the set menu?)"
+        "term": "At a restaurant",
+        "definition": "You hear {commander} from the waiter as well as say it.",
+        "examples": [
+          {
+            "fr": "Vous commandez ?",
+            "en": "Are you ready to order?"
+          },
+          {
+            "fr": "Qu'est-ce que tu commandes ?",
+            "en": "What are you ordering?"
+          },
+          {
+            "fr": "Il commande un steak.",
+            "en": "He orders a steak."
+          }
+        ]
       },
       {
         "id": "c-online-shopping",
-        "term": "Online shopping",
-        "definition": "Also used for ordering products online or by phone",
-        "example": "{je commande en ligne} (I order online), {commander sur Amazon} (to order on Amazon)"
+        "term": "Ordering online",
+        "definition": "{commander} also means to order something online or by phone.",
+        "examples": [
+          {
+            "fr": "Je commande en ligne.",
+            "en": "I order online."
+          },
+          {
+            "fr": "Nous commandons par téléphone.",
+            "en": "We order by phone."
+          }
+        ]
       },
       {
         "id": "c-similar-to-demander",
-        "term": "Similar to demander",
-        "definition": "Both mean 'to ask for', but commander specifically means 'to order' (more formal/transactional)",
-        "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
+        "term": "{commander} or {demander}",
+        "definition": "{demander} is to ask for anything. {commander} is to order, in a shop or a restaurant.",
+        "examples": [
+          {
+            "fr": "Je demande l'addition.",
+            "en": "I ask for the bill."
+          },
+          {
+            "fr": "Je commande un café.",
+            "en": "I order a coffee."
+          }
+        ]
       }
     ],
     "items/i-miam-j-ai-commande": {
@@ -8804,6 +8984,127 @@
     }
   },
   "2024-04-19-demander": {
+    "concepts": [
+      {
+        "id": "c-demander-to-ask-for",
+        "term": "{demander} = to ask, to ask for",
+        "definition": "One verb for asking a question and for asking for something.",
+        "examples": [
+          {
+            "fr": "Je demande de l'aide.",
+            "en": "I'm asking for help."
+          },
+          {
+            "fr": "Pourquoi tu demandes ?",
+            "en": "Why do you ask?"
+          }
+        ]
+      },
+      {
+        "id": "c-regular-er-verb-pattern",
+        "term": "The forms of {demander}",
+        "definition": "{demander} changes like {parler}.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je demande",
+            "en": "I ask"
+          },
+          {
+            "fr": "tu demandes",
+            "en": "you ask"
+          },
+          {
+            "fr": "il demande",
+            "en": "he asks"
+          },
+          {
+            "fr": "nous demandons",
+            "en": "we ask"
+          },
+          {
+            "fr": "vous demandez",
+            "en": "you ask"
+          },
+          {
+            "fr": "ils demandent",
+            "en": "they ask"
+          }
+        ]
+      },
+      {
+        "id": "c-demander-quelque-chose-to",
+        "term": "Asking for something",
+        "definition": "The thing you ask for comes straight after the verb. English needs for, French does not.",
+        "examples": [
+          {
+            "fr": "Tu demandes un café.",
+            "en": "You ask for a coffee."
+          },
+          {
+            "fr": "Il demande ton nom.",
+            "en": "He asks for your name."
+          },
+          {
+            "fr": "Elle demande l'addition.",
+            "en": "She asks for the bill."
+          }
+        ]
+      },
+      {
+        "id": "c-demander-a-quelqu-un",
+        "term": "Asking someone",
+        "definition": "Use {à} before the person you ask.",
+        "examples": [
+          {
+            "fr": "Je demande à Marie.",
+            "en": "I'll ask Marie."
+          },
+          {
+            "fr": "Tu demandes à ton père.",
+            "en": "You ask your father."
+          },
+          {
+            "fr": "Il demande à sa mère.",
+            "en": "He asks his mother."
+          }
+        ]
+      },
+      {
+        "id": "c-demander-de-infinitive",
+        "term": "Asking someone to do something",
+        "definition": "Put {de} before the second verb.",
+        "examples": [
+          {
+            "fr": "Il me demande de venir.",
+            "en": "He asks me to come."
+          },
+          {
+            "fr": "Elle nous demande d'attendre.",
+            "en": "She asks us to wait."
+          },
+          {
+            "fr": "Je demande de partir.",
+            "en": "I ask to leave."
+          }
+        ]
+      },
+      {
+        "id": "c-common-uses",
+        "term": "Saying sorry, asking permission",
+        "definition": "Two phrases with {demander} that you hear often.",
+        "examples": [
+          {
+            "fr": "Je demande pardon.",
+            "en": "I apologize."
+          },
+          {
+            "fr": "Nous demandons la permission.",
+            "en": "We ask for permission."
+          }
+        ]
+      }
+    ],
     "vocabulary/demander-a-ton-pere-fr": {
       "word_id": "demander-a-ton-pere-fr",
       "fr": "demander à ton père",
@@ -8816,6 +9117,116 @@
     }
   },
   "2024-04-20-dire": {
+    "concepts": [
+      {
+        "id": "c-dire-to-say-or",
+        "term": "{dire} = to say, to tell",
+        "definition": "One verb for saying something and for telling someone.",
+        "examples": [
+          {
+            "fr": "Je dis bonjour.",
+            "en": "I say hello."
+          },
+          {
+            "fr": "Tu dis la vérité.",
+            "en": "You're telling the truth."
+          },
+          {
+            "fr": "Elle dit oui.",
+            "en": "She says yes."
+          }
+        ]
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "The forms of {dire}",
+        "definition": "{vous dites} is one of only three vous forms that end in -tes, with {vous êtes} and {vous faites}.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je dis",
+            "en": "I say"
+          },
+          {
+            "fr": "tu dis",
+            "en": "you say"
+          },
+          {
+            "fr": "il dit",
+            "en": "he says"
+          },
+          {
+            "fr": "nous disons",
+            "en": "we say"
+          },
+          {
+            "fr": "vous dites",
+            "en": "you say"
+          },
+          {
+            "fr": "ils disent",
+            "en": "they say"
+          }
+        ]
+      },
+      {
+        "id": "c-dire-que-to-say",
+        "term": "{dire que}: to say that",
+        "definition": "Put {que} after {dire} to report what someone says. English can leave out that, but French keeps {que}.",
+        "examples": [
+          {
+            "fr": "Je dis que c'est bon.",
+            "en": "I say it's good."
+          },
+          {
+            "fr": "Il dit qu'il vient.",
+            "en": "He says he's coming."
+          },
+          {
+            "fr": "Ils disent que c'est vrai.",
+            "en": "They say it's true."
+          }
+        ]
+      },
+      {
+        "id": "c-dire-a-quelqu-un",
+        "term": "Telling someone",
+        "definition": "Use {à} before the person you tell. A pronoun like {me} goes before the verb instead.",
+        "examples": [
+          {
+            "fr": "Je dis bonjour à Marie.",
+            "en": "I say hello to Marie."
+          },
+          {
+            "fr": "Je te dis la vérité.",
+            "en": "I'm telling you the truth."
+          },
+          {
+            "fr": "Il me dit qu'il vient.",
+            "en": "He tells me he's coming."
+          }
+        ]
+      },
+      {
+        "id": "c-common-expressions",
+        "term": "Common sayings with {dire}",
+        "definition": "These short phrases come up in everyday conversation.",
+        "examples": [
+          {
+            "fr": "On dit que c'est bon.",
+            "en": "People say it's good."
+          },
+          {
+            "fr": "Comme on dit, c'est la vie.",
+            "en": "As they say, that's life."
+          },
+          {
+            "fr": "C'est-à-dire ?",
+            "en": "Meaning what?"
+          }
+        ]
+      }
+    ],
     "vocabulary/c-est-une-histoire-fr": {
       "word_id": "c-est-une-histoire-fr",
       "fr": "c'est une histoire",
@@ -8836,33 +9247,107 @@
     "concepts": [
       {
         "id": "c-mettre-to-put-to",
-        "term": "{mettre} = to put / to set / to wear",
-        "definition": "Versatile verb - put things somewhere, set the table, put on clothes",
-        "example": "{je mets le livre sur la table} (I put the book on the table), {je mets un pantalon} (I put on pants)"
+        "term": "{mettre} = to put, to put on",
+        "definition": "The verb for putting things somewhere, and for putting on clothes.",
+        "examples": [
+          {
+            "fr": "Je mets le livre sur la table.",
+            "en": "I put the book on the table."
+          },
+          {
+            "fr": "Tu mets ça ici.",
+            "en": "You put that here."
+          },
+          {
+            "fr": "Je mets un manteau.",
+            "en": "I'm putting on a coat."
+          }
+        ]
       },
       {
         "id": "c-irregular-conjugation",
-        "term": "Irregular conjugation",
-        "definition": "Present tense: je mets, tu mets, il met, nous mettons, vous mettez, ils mettent",
-        "example": "Notice: singular has single 't', plural has double 'tt'"
+        "term": "The forms of {mettre}",
+        "definition": "The singular forms have one t and sound the same. The plural forms have two.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je mets",
+            "en": "I put"
+          },
+          {
+            "fr": "tu mets",
+            "en": "you put"
+          },
+          {
+            "fr": "il met",
+            "en": "he puts"
+          },
+          {
+            "fr": "nous mettons",
+            "en": "we put"
+          },
+          {
+            "fr": "vous mettez",
+            "en": "you put"
+          },
+          {
+            "fr": "ils mettent",
+            "en": "they put"
+          }
+        ]
       },
       {
         "id": "c-mettre-la-table",
-        "term": "{mettre la table}",
-        "definition": "Common expression meaning 'to set the table'",
-        "example": "{je mets la table} (I set the table), {tu peux mettre la table?} (can you set the table?)"
+        "term": "{mettre la table}: to set the table",
+        "definition": "French puts the table, where English sets it.",
+        "examples": [
+          {
+            "fr": "Je mets la table.",
+            "en": "I'm setting the table."
+          },
+          {
+            "fr": "Tu peux mettre la table ?",
+            "en": "Can you set the table?"
+          }
+        ]
       },
       {
         "id": "c-mettre-clothing",
-        "term": "mettre + clothing",
-        "definition": "Use mettre to say you're putting on or wearing clothes",
-        "example": "{je mets un manteau} (I put on a coat), {qu'est-ce que tu mets?} (what are you wearing?)"
+        "term": "Putting on clothes",
+        "definition": "With clothes, {mettre} means to put on, and sometimes to wear.",
+        "examples": [
+          {
+            "fr": "Il met une chemise.",
+            "en": "He's putting on a shirt."
+          },
+          {
+            "fr": "Nous mettons nos chaussures.",
+            "en": "We're putting on our shoes."
+          },
+          {
+            "fr": "Qu'est-ce que tu mets ?",
+            "en": "What are you wearing?"
+          }
+        ]
       },
       {
         "id": "c-other-common-uses",
-        "term": "Other common uses",
-        "definition": "mettre du temps (to take time), se mettre à (to start doing something)",
-        "example": "{ça met deux heures} (it takes two hours, like {ça prend deux heures}), {je me mets à travailler} (I start working), {je me mets à apprendre le français} (I start learning French)"
+        "term": "Taking time",
+        "definition": "{ça met du temps} means it takes time, like {ça prend du temps}.",
+        "examples": [
+          {
+            "fr": "Ça met du temps.",
+            "en": "It takes time."
+          },
+          {
+            "fr": "Ça met deux heures.",
+            "en": "It takes two hours."
+          },
+          {
+            "fr": "Apprendre le français, ça prend du temps.",
+            "en": "Learning French takes time."
+          }
+        ]
       }
     ],
     "vocabulary/j-ai-mis-fr": {
@@ -8882,6 +9367,116 @@
     }
   },
   "2024-04-22-prendre": {
+    "concepts": [
+      {
+        "id": "c-prendre-to-take",
+        "term": "{prendre} = to take",
+        "definition": "The verb for taking things, a bus or your time.",
+        "examples": [
+          {
+            "fr": "Je prends le bus.",
+            "en": "I take the bus."
+          },
+          {
+            "fr": "Elle prend son temps.",
+            "en": "She takes her time."
+          },
+          {
+            "fr": "Nous prenons la voiture.",
+            "en": "We're taking the car."
+          }
+        ]
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "The forms of {prendre}",
+        "definition": "The singular forms sound the same. The plural forms drop the d, and the form for they doubles the n.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je prends",
+            "en": "I take"
+          },
+          {
+            "fr": "tu prends",
+            "en": "you take"
+          },
+          {
+            "fr": "il prend",
+            "en": "he takes"
+          },
+          {
+            "fr": "nous prenons",
+            "en": "we take"
+          },
+          {
+            "fr": "vous prenez",
+            "en": "you take"
+          },
+          {
+            "fr": "ils prennent",
+            "en": "they take"
+          }
+        ]
+      },
+      {
+        "id": "c-apprendre-to-learn",
+        "term": "{apprendre} = to learn",
+        "definition": "{apprendre} changes just like {prendre}.",
+        "examples": [
+          {
+            "fr": "J'apprends le français.",
+            "en": "I'm learning French."
+          },
+          {
+            "fr": "Tu apprends vite.",
+            "en": "You learn fast."
+          },
+          {
+            "fr": "Nous apprenons ensemble.",
+            "en": "We learn together."
+          }
+        ]
+      },
+      {
+        "id": "c-comprendre-to-understand",
+        "term": "{comprendre} = to understand",
+        "definition": "{comprendre} changes like {prendre} too.",
+        "examples": [
+          {
+            "fr": "Je comprends.",
+            "en": "I understand."
+          },
+          {
+            "fr": "Tu comprends ?",
+            "en": "Do you understand?"
+          },
+          {
+            "fr": "Je ne comprends pas.",
+            "en": "I don't understand."
+          }
+        ]
+      },
+      {
+        "id": "c-common-uses-of-prendre",
+        "term": "Having a coffee, taking time",
+        "definition": "French uses {prendre} for food and drink you order, and for how long something takes.",
+        "examples": [
+          {
+            "fr": "Je prends un café.",
+            "en": "I'll have a coffee."
+          },
+          {
+            "fr": "Ça prend deux heures.",
+            "en": "It takes two hours."
+          },
+          {
+            "fr": "Tu prends le train ?",
+            "en": "Are you taking the train?"
+          }
+        ]
+      }
+    ],
     "vocabulary/elle-apprend-fr": {
       "word_id": "elle-apprend-fr",
       "fr": "elle apprend",
@@ -8930,6 +9525,112 @@
     }
   },
   "2024-04-23-progressive-tenses": {
+    "concepts": [
+      {
+        "id": "c-etre-en-train-de",
+        "term": "{être en train de}: in the middle of",
+        "definition": "Use it to stress that something is happening right now. French often says the same thing with the plain present.",
+        "examples": [
+          {
+            "fr": "Je suis en train de manger.",
+            "en": "I'm eating."
+          },
+          {
+            "fr": "Elle est en train de parler.",
+            "en": "She's talking."
+          },
+          {
+            "fr": "Nous sommes en train de partir.",
+            "en": "We're leaving."
+          }
+        ]
+      },
+      {
+        "id": "c-aller-infinitive-near-future",
+        "term": "Going to: {aller} with a verb",
+        "definition": "Put a form of {aller} before a verb to say what you are going to do.",
+        "examples": [
+          {
+            "fr": "Je vais manger.",
+            "en": "I'm going to eat."
+          },
+          {
+            "fr": "Tu vas parler.",
+            "en": "You're going to speak."
+          },
+          {
+            "fr": "Ils vont venir.",
+            "en": "They're going to come."
+          }
+        ]
+      },
+      {
+        "id": "c-future-tense-je-rai",
+        "term": "Will: the future tense",
+        "definition": "For most verbs, add the ending to the infinitive: {je parlerai} means I will speak. Some verbs change, like {aller}, which becomes {j'irai}.",
+        "examples": [
+          {
+            "fr": "Je parlerai à Marie.",
+            "en": "I'll talk to Marie."
+          },
+          {
+            "fr": "Il partira demain.",
+            "en": "He'll leave tomorrow."
+          },
+          {
+            "fr": "Nous viendrons.",
+            "en": "We'll come."
+          },
+          {
+            "fr": "J'irai à Paris.",
+            "en": "I'll go to Paris."
+          }
+        ]
+      },
+      {
+        "id": "c-negative-modals",
+        "term": "Can't, won't, shouldn't",
+        "definition": "Put {ne} … {pas} around the first verb. The second verb stays after {pas}.",
+        "examples": [
+          {
+            "fr": "Je ne peux pas partir.",
+            "en": "I can't leave."
+          },
+          {
+            "fr": "Je ne devrais pas manger ça.",
+            "en": "I shouldn't eat that."
+          },
+          {
+            "fr": "Il ne le fera pas.",
+            "en": "He won't do it."
+          },
+          {
+            "fr": "Nous ne pourrons pas venir.",
+            "en": "We won't be able to come."
+          }
+        ]
+      },
+      {
+        "id": "c-j-etais-en-train",
+        "term": "{j'étais en train de}: I was in the middle of",
+        "definition": "Use the past of {être} to say what you were doing.",
+        "examples": [
+          {
+            "fr": "J'étais en train de manger.",
+            "en": "I was eating."
+          },
+          {
+            "fr": "Ils étaient en train de parler.",
+            "en": "They were talking."
+          },
+          {
+            "fr": "J'allais partir.",
+            "en": "I was going to leave.",
+            "note": "the past of {je vais partir}"
+          }
+        ]
+      }
+    ],
     "vocabulary/il-fera-fr": {
       "word_id": "il-fera-fr",
       "fr": "il fera",
@@ -9075,33 +9776,106 @@
     "concepts": [
       {
         "id": "c-time-nouns",
-        "term": "Time nouns",
-        "definition": "Express time periods and moments: année, fois, moment, heure, minute",
-        "example": "{une année} (a year), {une fois} (once/one time), {un moment} (a moment)"
+        "term": "Words for time",
+        "definition": "These nouns name lengths of time and moments.",
+        "examples": [
+          {
+            "fr": "une année",
+            "en": "a year"
+          },
+          {
+            "fr": "une fois",
+            "en": "once"
+          },
+          {
+            "fr": "un moment",
+            "en": "a moment"
+          },
+          {
+            "fr": "au début",
+            "en": "at the beginning"
+          },
+          {
+            "fr": "à la fin",
+            "en": "at the end"
+          }
+        ]
       },
       {
         "id": "c-people-relationships",
-        "term": "People & relationships",
-        "definition": "Family and general people: famille, père, mère, personne",
-        "example": "{ma famille} (my family), {mon père} (my father), {une personne} (a person)"
+        "term": "Family and people",
+        "definition": "Words for your family and for people in general.",
+        "examples": [
+          {
+            "fr": "Toute ma famille est ici.",
+            "en": "My whole family is here."
+          },
+          {
+            "fr": "C'est mon frère.",
+            "en": "This is my brother."
+          },
+          {
+            "fr": "C'est ma sœur.",
+            "en": "This is my sister."
+          }
+        ]
       },
       {
         "id": "c-body-parts",
-        "term": "Body parts",
-        "definition": "Beyond basic body parts: yeux (eyes), visage (face), corps (body), cœur (heart)",
-        "example": "{les yeux} (the eyes), {le visage} (the face), {le cœur} (the heart)"
+        "term": "The face and the body",
+        "definition": "Words for the face and the body.",
+        "examples": [
+          {
+            "fr": "les yeux",
+            "en": "the eyes"
+          },
+          {
+            "fr": "le visage",
+            "en": "the face"
+          },
+          {
+            "fr": "le cœur",
+            "en": "the heart"
+          },
+          {
+            "fr": "la voix",
+            "en": "the voice"
+          }
+        ]
       },
       {
         "id": "c-abstract-concepts",
-        "term": "Abstract concepts",
-        "definition": "Ideas and concepts: histoire, problème, question, raison, fait",
-        "example": "{une histoire} (a story), {un problème} (a problem), {la raison} (the reason)"
+        "term": "Ideas",
+        "definition": "Nouns for stories, problems, questions and reasons.",
+        "examples": [
+          {
+            "fr": "J'ai un problème.",
+            "en": "I have a problem."
+          },
+          {
+            "fr": "J'ai une question.",
+            "en": "I have a question."
+          },
+          {
+            "fr": "C'est une longue histoire.",
+            "en": "It's a long story."
+          }
+        ]
       },
       {
         "id": "c-special-plurals",
-        "term": "Special plurals",
-        "definition": "Some nouns have irregular plurals: œil → yeux (eye → eyes)",
-        "example": "{un œil} (one eye), {les yeux} (the eyes - irregular!)"
+        "term": "One eye, two eyes",
+        "definition": "{un œil} becomes {les yeux} in the plural, a completely different word.",
+        "examples": [
+          {
+            "fr": "un œil",
+            "en": "an eye"
+          },
+          {
+            "fr": "les yeux",
+            "en": "the eyes"
+          }
+        ]
       }
     ],
     "vocabulary/c-est-une-longue-histoire-fr": {
@@ -11720,38 +12494,118 @@
       {
         "id": "c-donner-to-give",
         "term": "{donner} = to give",
-        "definition": "Very common verb for giving things, offering help, providing information",
-        "example": "{je donne le livre} (I give the book), {tu donnes ton nom} (you give your name)"
+        "definition": "The verb for giving things and information.",
+        "examples": [
+          {
+            "fr": "Tu donnes ton nom.",
+            "en": "You give your name."
+          },
+          {
+            "fr": "Donne-moi ta main.",
+            "en": "Give me your hand."
+          },
+          {
+            "fr": "Qu'est-ce que tu donnes ?",
+            "en": "What are you giving?"
+          }
+        ]
       },
       {
         "id": "c-regular-er-conjugation",
-        "term": "Regular -er conjugation",
-        "definition": "Present tense: je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent",
-        "example": "Regular pattern: donn- + endings (-e, -{es}, -e, -ons, -ez, -ent)"
+        "term": "The forms of {donner}",
+        "definition": "{donner} changes like {parler}.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je donne",
+            "en": "I give"
+          },
+          {
+            "fr": "tu donnes",
+            "en": "you give"
+          },
+          {
+            "fr": "il donne",
+            "en": "he gives"
+          },
+          {
+            "fr": "nous donnons",
+            "en": "we give"
+          },
+          {
+            "fr": "vous donnez",
+            "en": "you give"
+          },
+          {
+            "fr": "ils donnent",
+            "en": "they give"
+          }
+        ]
       },
       {
         "id": "c-common-uses-of-donner",
-        "term": "Common uses of donner",
-        "definition": "Giving objects (donner un cadeau), giving information (donner l'adresse), giving help (donner de l'aide)",
-        "example": "{je donne mon numéro} (I give my number), {ça donne faim} (it makes you hungry)"
+        "term": "Giving a number, giving you hunger",
+        "definition": "You also give information with {donner}. {ça donne faim} means it makes you hungry.",
+        "examples": [
+          {
+            "fr": "Je donne mon numéro.",
+            "en": "I give my number."
+          },
+          {
+            "fr": "Ça donne faim.",
+            "en": "It makes you hungry."
+          }
+        ]
       },
       {
         "id": "c-donner-vs-prendre",
-        "term": "Donner vs Prendre",
-        "definition": "Perfect opposites - donner (to give) and prendre (to take)",
-        "example": "{je donne le livre à Marie, elle prend le livre} (I give the book to Marie, she takes the book)"
+        "term": "Give and take",
+        "definition": "{donner} and {prendre} are opposites.",
+        "examples": [
+          {
+            "fr": "Je donne le livre à Marie.",
+            "en": "I give the book to Marie."
+          },
+          {
+            "fr": "Elle prend le livre.",
+            "en": "She takes the book."
+          }
+        ]
       },
       {
         "id": "c-with-prepositions",
-        "term": "With prepositions",
-        "definition": "Often used with 'à' (to) - donner quelque chose à quelqu'un",
-        "example": "{je donne le livre à mon ami} (I give the book to my friend)"
+        "term": "Giving to someone",
+        "definition": "Use {à} before the person who gets the thing.",
+        "examples": [
+          {
+            "fr": "Je donne le livre à mon ami.",
+            "en": "I give the book to my friend."
+          },
+          {
+            "fr": "Donne-moi ça.",
+            "en": "Give me that.",
+            "note": "with {moi}, no {à}"
+          }
+        ]
       },
       {
         "id": "c-ne-rien",
-        "term": "{ne … rien}: nothing",
+        "term": "{ne} … {rien}: nothing",
         "definition": "{rien} takes the place of {pas}: {ne} goes before the verb and {rien} after it.",
-        "example": "{Il ne donne rien.} (He doesn't give anything.), {Je ne vois rien.} (I don't see anything.)"
+        "examples": [
+          {
+            "fr": "Il ne donne rien.",
+            "en": "He doesn't give anything."
+          },
+          {
+            "fr": "Je ne vois rien.",
+            "en": "I don't see anything."
+          },
+          {
+            "fr": "Je ne fais rien.",
+            "en": "I'm not doing anything."
+          }
+        ]
       }
     ],
     "items/i-il-ne-dit-rien": {

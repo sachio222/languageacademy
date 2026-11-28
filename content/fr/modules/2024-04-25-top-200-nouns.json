@@ -195,33 +195,106 @@
   "concepts": [
     {
       "id": "c-time-nouns",
-      "term": "Time nouns",
-      "definition": "Express time periods and moments: année, fois, moment, heure, minute",
-      "example": "{une année} (a year), {une fois} (once/one time), {un moment} (a moment)"
+      "term": "Words for time",
+      "definition": "These nouns name lengths of time and moments.",
+      "examples": [
+        {
+          "fr": "une année",
+          "en": "a year"
+        },
+        {
+          "fr": "une fois",
+          "en": "once"
+        },
+        {
+          "fr": "un moment",
+          "en": "a moment"
+        },
+        {
+          "fr": "au début",
+          "en": "at the beginning"
+        },
+        {
+          "fr": "à la fin",
+          "en": "at the end"
+        }
+      ]
     },
     {
       "id": "c-people-relationships",
-      "term": "People & relationships",
-      "definition": "Family and general people: famille, père, mère, personne",
-      "example": "{ma famille} (my family), {mon père} (my father), {une personne} (a person)"
+      "term": "Family and people",
+      "definition": "Words for your family and for people in general.",
+      "examples": [
+        {
+          "fr": "Toute ma famille est ici.",
+          "en": "My whole family is here."
+        },
+        {
+          "fr": "C'est mon frère.",
+          "en": "This is my brother."
+        },
+        {
+          "fr": "C'est ma sœur.",
+          "en": "This is my sister."
+        }
+      ]
     },
     {
       "id": "c-body-parts",
-      "term": "Body parts",
-      "definition": "Beyond basic body parts: yeux (eyes), visage (face), corps (body), cœur (heart)",
-      "example": "{les yeux} (the eyes), {le visage} (the face), {le cœur} (the heart)"
+      "term": "The face and the body",
+      "definition": "Words for the face and the body.",
+      "examples": [
+        {
+          "fr": "les yeux",
+          "en": "the eyes"
+        },
+        {
+          "fr": "le visage",
+          "en": "the face"
+        },
+        {
+          "fr": "le cœur",
+          "en": "the heart"
+        },
+        {
+          "fr": "la voix",
+          "en": "the voice"
+        }
+      ]
     },
     {
       "id": "c-abstract-concepts",
-      "term": "Abstract concepts",
-      "definition": "Ideas and concepts: histoire, problème, question, raison, fait",
-      "example": "{une histoire} (a story), {un problème} (a problem), {la raison} (the reason)"
+      "term": "Ideas",
+      "definition": "Nouns for stories, problems, questions and reasons.",
+      "examples": [
+        {
+          "fr": "J'ai un problème.",
+          "en": "I have a problem."
+        },
+        {
+          "fr": "J'ai une question.",
+          "en": "I have a question."
+        },
+        {
+          "fr": "C'est une longue histoire.",
+          "en": "It's a long story."
+        }
+      ]
     },
     {
       "id": "c-special-plurals",
-      "term": "Special plurals",
-      "definition": "Some nouns have irregular plurals: œil → yeux (eye → eyes)",
-      "example": "{un œil} (one eye), {les yeux} (the eyes - irregular!)"
+      "term": "One eye, two eyes",
+      "definition": "{un œil} becomes {les yeux} in the plural, a completely different word.",
+      "examples": [
+        {
+          "fr": "un œil",
+          "en": "an eye"
+        },
+        {
+          "fr": "les yeux",
+          "en": "the eyes"
+        }
+      ]
     }
   ],
   "items": [

@@ -120,33 +120,107 @@
   "concepts": [
     {
       "id": "c-etre-en-train-de",
-      "term": "être en train de + infinitive",
-      "definition": "Express an action happening RIGHT NOW - like English 'I am doing...'",
-      "example": "{je suis en train de manger} (I am eating), {il est en train de parler} (he is talking)"
+      "term": "{être en train de}: in the middle of",
+      "definition": "Use it to stress that something is happening right now. French often says the same thing with the plain present.",
+      "examples": [
+        {
+          "fr": "Je suis en train de manger.",
+          "en": "I'm eating."
+        },
+        {
+          "fr": "Elle est en train de parler.",
+          "en": "She's talking."
+        },
+        {
+          "fr": "Nous sommes en train de partir.",
+          "en": "We're leaving."
+        }
+      ]
     },
     {
       "id": "c-aller-infinitive-near-future",
-      "term": "aller + infinitive (near future)",
-      "definition": "Express what you're GOING TO DO - aller (to go) + verb infinitive",
-      "example": "{je vais manger} (I'm going to eat), {tu vas parler} (you're going to speak)"
+      "term": "Going to: {aller} with a verb",
+      "definition": "Put a form of {aller} before a verb to say what you are going to do.",
+      "examples": [
+        {
+          "fr": "Je vais manger.",
+          "en": "I'm going to eat."
+        },
+        {
+          "fr": "Tu vas parler.",
+          "en": "You're going to speak."
+        },
+        {
+          "fr": "Ils vont venir.",
+          "en": "They're going to come."
+        }
+      ]
     },
     {
       "id": "c-future-tense-je-rai",
-      "term": "Future tense - je ...-rai",
-      "definition": "Express what you WILL do - add -rai, -ras, -ra, -rons, -rez, -ront to infinitive",
-      "example": "{je parlerai} (I will speak), {tu mangeras} (you will eat), {il ira} (he will go - irregular)"
+      "term": "Will: the future tense",
+      "definition": "For most verbs, add the ending to the infinitive: {je parlerai} means I will speak. Some verbs change, like {aller}, which becomes {j'irai}.",
+      "examples": [
+        {
+          "fr": "Je parlerai à Marie.",
+          "en": "I'll talk to Marie."
+        },
+        {
+          "fr": "Il partira demain.",
+          "en": "He'll leave tomorrow."
+        },
+        {
+          "fr": "Nous viendrons.",
+          "en": "We'll come."
+        },
+        {
+          "fr": "J'irai à Paris.",
+          "en": "I'll go to Paris."
+        }
+      ]
     },
     {
       "id": "c-negative-modals",
-      "term": "Negative modals",
-      "definition": "Express can't, won't, shouldn't - je ne peux pas, je ne vais pas, je ne devrais pas",
-      "example": "{je ne peux pas partir} (I can't leave), {je ne devrais pas manger ça} (I shouldn't eat that)"
+      "term": "Can't, won't, shouldn't",
+      "definition": "Put {ne} … {pas} around the first verb. The second verb stays after {pas}.",
+      "examples": [
+        {
+          "fr": "Je ne peux pas partir.",
+          "en": "I can't leave."
+        },
+        {
+          "fr": "Je ne devrais pas manger ça.",
+          "en": "I shouldn't eat that."
+        },
+        {
+          "fr": "Il ne le fera pas.",
+          "en": "He won't do it."
+        },
+        {
+          "fr": "Nous ne pourrons pas venir.",
+          "en": "We won't be able to come."
+        }
+      ]
     },
     {
       "id": "c-j-etais-en-train",
-      "term": "{J'étais en train de...} (past progressive)",
-      "definition": "Say what you WERE doing - use past tense of être + en train de",
-      "example": "{j'étais en train de manger} (I was eating), {ils étaient en train de parler} (they were talking)"
+      "term": "{j'étais en train de}: I was in the middle of",
+      "definition": "Use the past of {être} to say what you were doing.",
+      "examples": [
+        {
+          "fr": "J'étais en train de manger.",
+          "en": "I was eating."
+        },
+        {
+          "fr": "Ils étaient en train de parler.",
+          "en": "They were talking."
+        },
+        {
+          "fr": "J'allais partir.",
+          "en": "I was going to leave.",
+          "note": "the past of {je vais partir}"
+        }
+      ]
     }
   ],
   "items": [

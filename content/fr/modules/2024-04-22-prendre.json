@@ -170,32 +170,110 @@
     {
       "id": "c-prendre-to-take",
       "term": "{prendre} = to take",
-      "definition": "Very common verb for taking things, taking transportation, taking time",
-      "example": "{je prends le bus} (I take the bus), {tu prends ton temps} (you take your time)"
+      "definition": "The verb for taking things, a bus or your time.",
+      "examples": [
+        {
+          "fr": "Je prends le bus.",
+          "en": "I take the bus."
+        },
+        {
+          "fr": "Elle prend son temps.",
+          "en": "She takes her time."
+        },
+        {
+          "fr": "Nous prenons la voiture.",
+          "en": "We're taking the car."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular conjugation",
-      "definition": "Present tense: je prends, tu prends, il prend, nous prenons, vous prenez, ils prennent",
-      "example": "Notice: singular sounds like 'pran', plural 'pren-on', 'pren-ay', 'pren'"
+      "term": "The forms of {prendre}",
+      "definition": "The singular forms sound the same. The plural forms drop the d, and the form for they doubles the n.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je prends",
+          "en": "I take"
+        },
+        {
+          "fr": "tu prends",
+          "en": "you take"
+        },
+        {
+          "fr": "il prend",
+          "en": "he takes"
+        },
+        {
+          "fr": "nous prenons",
+          "en": "we take"
+        },
+        {
+          "fr": "vous prenez",
+          "en": "you take"
+        },
+        {
+          "fr": "ils prennent",
+          "en": "they take"
+        }
+      ]
     },
     {
       "id": "c-apprendre-to-learn",
       "term": "{apprendre} = to learn",
-      "definition": "Uses same conjugation pattern as prendre - very useful verb!",
-      "example": "{j'apprends le français} (I learn French), {nous apprenons ensemble} (we learn together)"
+      "definition": "{apprendre} changes just like {prendre}.",
+      "examples": [
+        {
+          "fr": "J'apprends le français.",
+          "en": "I'm learning French."
+        },
+        {
+          "fr": "Tu apprends vite.",
+          "en": "You learn fast."
+        },
+        {
+          "fr": "Nous apprenons ensemble.",
+          "en": "We learn together."
+        }
+      ]
     },
     {
       "id": "c-comprendre-to-understand",
       "term": "{comprendre} = to understand",
-      "definition": "Also follows prendre pattern - essential for communication!",
-      "example": "{je comprends} (I understand), {tu comprends?} (do you understand?)"
+      "definition": "{comprendre} changes like {prendre} too.",
+      "examples": [
+        {
+          "fr": "Je comprends.",
+          "en": "I understand."
+        },
+        {
+          "fr": "Tu comprends ?",
+          "en": "Do you understand?"
+        },
+        {
+          "fr": "Je ne comprends pas.",
+          "en": "I don't understand."
+        }
+      ]
     },
     {
       "id": "c-common-uses-of-prendre",
-      "term": "Common uses of prendre",
-      "definition": "Transportation (prendre le bus), food/drink (prendre un café), time (ça prend du temps)",
-      "example": "{je prends un café} (I'm having a coffee), {ça prend deux heures} (it takes two hours)"
+      "term": "Having a coffee, taking time",
+      "definition": "French uses {prendre} for food and drink you order, and for how long something takes.",
+      "examples": [
+        {
+          "fr": "Je prends un café.",
+          "en": "I'll have a coffee."
+        },
+        {
+          "fr": "Ça prend deux heures.",
+          "en": "It takes two hours."
+        },
+        {
+          "fr": "Tu prends le train ?",
+          "en": "Are you taking the train?"
+        }
+      ]
     }
   ],
   "items": [

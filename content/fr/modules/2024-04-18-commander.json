@@ -93,32 +93,102 @@
     {
       "id": "c-commander-to-order",
       "term": "{commander} = to order",
-      "definition": "Order food at restaurants, drinks at cafés, products online - regular -ER verb",
-      "example": "{je commande un café} (I order a coffee), {nous commandons une pizza} (we order a pizza)"
+      "definition": "The verb for ordering in a café or a restaurant, or buying online.",
+      "examples": [
+        {
+          "fr": "Je commande un café.",
+          "en": "I order a coffee."
+        },
+        {
+          "fr": "Nous commandons une pizza.",
+          "en": "We order a pizza."
+        },
+        {
+          "fr": "Je voudrais commander.",
+          "en": "I would like to order."
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb-pattern",
-      "term": "Regular -ER verb pattern",
-      "definition": "Follows same pattern as parler, demander - drop -er, add endings",
-      "example": "{je commande}, {tu commandes}, {il commande}, {nous commandons}, {vous commandez}, {ils commandent}"
+      "term": "The forms of {commander}",
+      "definition": "{commander} changes like {parler}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je commande",
+          "en": "I order"
+        },
+        {
+          "fr": "tu commandes",
+          "en": "you order"
+        },
+        {
+          "fr": "il commande",
+          "en": "he orders"
+        },
+        {
+          "fr": "nous commandons",
+          "en": "we order"
+        },
+        {
+          "fr": "vous commandez",
+          "en": "you order"
+        },
+        {
+          "fr": "ils commandent",
+          "en": "they order"
+        }
+      ]
     },
     {
       "id": "c-restaurant-cafe-context",
-      "term": "Restaurant/café context",
-      "definition": "Most common use - ordering food and drinks in restaurants",
-      "example": "{je commande un steak} (I order a steak), {vous commandez le menu?} (are you ordering the set menu?)"
+      "term": "At a restaurant",
+      "definition": "You hear {commander} from the waiter as well as say it.",
+      "examples": [
+        {
+          "fr": "Vous commandez ?",
+          "en": "Are you ready to order?"
+        },
+        {
+          "fr": "Qu'est-ce que tu commandes ?",
+          "en": "What are you ordering?"
+        },
+        {
+          "fr": "Il commande un steak.",
+          "en": "He orders a steak."
+        }
+      ]
     },
     {
       "id": "c-online-shopping",
-      "term": "Online shopping",
-      "definition": "Also used for ordering products online or by phone",
-      "example": "{je commande en ligne} (I order online), {commander sur Amazon} (to order on Amazon)"
+      "term": "Ordering online",
+      "definition": "{commander} also means to order something online or by phone.",
+      "examples": [
+        {
+          "fr": "Je commande en ligne.",
+          "en": "I order online."
+        },
+        {
+          "fr": "Nous commandons par téléphone.",
+          "en": "We order by phone."
+        }
+      ]
     },
     {
       "id": "c-similar-to-demander",
-      "term": "Similar to demander",
-      "definition": "Both mean 'to ask for', but commander specifically means 'to order' (more formal/transactional)",
-      "example": "{demander} = ask for (general), {commander} = order (restaurant/shop)"
+      "term": "{commander} or {demander}",
+      "definition": "{demander} is to ask for anything. {commander} is to order, in a shop or a restaurant.",
+      "examples": [
+        {
+          "fr": "Je demande l'addition.",
+          "en": "I ask for the bill."
+        },
+        {
+          "fr": "Je commande un café.",
+          "en": "I order a coffee."
+        }
+      ]
     }
   ],
   "items": [

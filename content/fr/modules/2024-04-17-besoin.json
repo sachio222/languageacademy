@@ -112,32 +112,110 @@
     {
       "id": "c-avoir-besoin-de-to",
       "term": "{avoir besoin de} = to need",
-      "definition": "Literally 'to have need of' - use avoir + besoin + de + noun/verb",
-      "example": "{j'ai besoin de café} (I need coffee), {tu as besoin d'aide} (you need help)"
+      "definition": "French says to have need of. Only {avoir} changes.",
+      "examples": [
+        {
+          "fr": "J'ai besoin de café.",
+          "en": "I need coffee."
+        },
+        {
+          "fr": "Tu as besoin d'aide ?",
+          "en": "Do you need help?"
+        },
+        {
+          "fr": "De quoi tu as besoin ?",
+          "en": "What do you need?"
+        }
+      ]
     },
     {
       "id": "c-structure-avoir-besoin-de",
-      "term": "Structure: {avoir + besoin + de}",
-      "definition": "Always use this three-part structure - conjugate avoir, besoin stays the same",
-      "example": "{j'ai besoin}, {tu as besoin}, {il a besoin}, {nous avons besoin}, {vous avez besoin}, {ils ont besoin}"
+      "term": "The forms of {avoir besoin}",
+      "definition": "{avoir} changes with the person, and {besoin de} stays the same.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'ai besoin",
+          "en": "I need"
+        },
+        {
+          "fr": "tu as besoin",
+          "en": "you need"
+        },
+        {
+          "fr": "il a besoin",
+          "en": "he needs"
+        },
+        {
+          "fr": "nous avons besoin",
+          "en": "we need"
+        },
+        {
+          "fr": "vous avez besoin",
+          "en": "you need"
+        },
+        {
+          "fr": "ils ont besoin",
+          "en": "they need"
+        }
+      ]
     },
     {
       "id": "c-with-nouns-de-noun",
-      "term": "With nouns - de + noun",
-      "definition": "After besoin, use '{de}' (or d' before vowel) before the noun",
-      "example": "{j'ai besoin de temps} (I need time), {j'ai besoin d'argent} (I need money)"
+      "term": "Needing a thing",
+      "definition": "Put the thing after {de}, or {d'} before a vowel.",
+      "examples": [
+        {
+          "fr": "J'ai besoin de temps.",
+          "en": "I need time."
+        },
+        {
+          "fr": "J'ai besoin d'argent.",
+          "en": "I need money."
+        },
+        {
+          "fr": "Elle a besoin d'une voiture.",
+          "en": "She needs a car."
+        }
+      ]
     },
     {
       "id": "c-with-verbs-de-infinitive",
-      "term": "With verbs - de + infinitive",
-      "definition": "To say you need TO DO something, use de + infinitive verb",
-      "example": "{j'ai besoin de manger} (I need to eat), {tu as besoin de partir} (you need to leave)"
+      "term": "Needing to do something",
+      "definition": "Put a second verb after {de}.",
+      "examples": [
+        {
+          "fr": "J'ai besoin de dormir.",
+          "en": "I need to sleep."
+        },
+        {
+          "fr": "Nous avons besoin de parler.",
+          "en": "We need to talk."
+        },
+        {
+          "fr": "Tu as besoin de partir ?",
+          "en": "Do you need to leave?"
+        }
+      ]
     },
     {
       "id": "c-negative-form",
-      "term": "Negative form",
-      "definition": "Put ne...pas around avoir: je n'ai pas besoin de...",
-      "example": "{je n'ai pas besoin d'aide} (I don't need help), {tu n'as pas besoin de ça} (you don't need that)"
+      "term": "Not needing",
+      "definition": "Put {ne} … {pas} around {avoir}.",
+      "examples": [
+        {
+          "fr": "Je n'ai pas besoin d'aide.",
+          "en": "I don't need help."
+        },
+        {
+          "fr": "Tu n'as pas besoin de ça.",
+          "en": "You don't need that."
+        },
+        {
+          "fr": "Elle n'a pas besoin de partir.",
+          "en": "She doesn't need to leave."
+        }
+      ]
     }
   ],
   "items": [

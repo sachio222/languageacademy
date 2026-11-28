@@ -102,33 +102,107 @@
   "concepts": [
     {
       "id": "c-mettre-to-put-to",
-      "term": "{mettre} = to put / to set / to wear",
-      "definition": "Versatile verb - put things somewhere, set the table, put on clothes",
-      "example": "{je mets le livre sur la table} (I put the book on the table), {je mets un pantalon} (I put on pants)"
+      "term": "{mettre} = to put, to put on",
+      "definition": "The verb for putting things somewhere, and for putting on clothes.",
+      "examples": [
+        {
+          "fr": "Je mets le livre sur la table.",
+          "en": "I put the book on the table."
+        },
+        {
+          "fr": "Tu mets ça ici.",
+          "en": "You put that here."
+        },
+        {
+          "fr": "Je mets un manteau.",
+          "en": "I'm putting on a coat."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular conjugation",
-      "definition": "Present tense: je mets, tu mets, il met, nous mettons, vous mettez, ils mettent",
-      "example": "Notice: singular has single 't', plural has double 'tt'"
+      "term": "The forms of {mettre}",
+      "definition": "The singular forms have one t and sound the same. The plural forms have two.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je mets",
+          "en": "I put"
+        },
+        {
+          "fr": "tu mets",
+          "en": "you put"
+        },
+        {
+          "fr": "il met",
+          "en": "he puts"
+        },
+        {
+          "fr": "nous mettons",
+          "en": "we put"
+        },
+        {
+          "fr": "vous mettez",
+          "en": "you put"
+        },
+        {
+          "fr": "ils mettent",
+          "en": "they put"
+        }
+      ]
     },
     {
       "id": "c-mettre-la-table",
-      "term": "{mettre la table}",
-      "definition": "Common expression meaning 'to set the table'",
-      "example": "{je mets la table} (I set the table), {tu peux mettre la table?} (can you set the table?)"
+      "term": "{mettre la table}: to set the table",
+      "definition": "French puts the table, where English sets it.",
+      "examples": [
+        {
+          "fr": "Je mets la table.",
+          "en": "I'm setting the table."
+        },
+        {
+          "fr": "Tu peux mettre la table ?",
+          "en": "Can you set the table?"
+        }
+      ]
     },
     {
       "id": "c-mettre-clothing",
-      "term": "mettre + clothing",
-      "definition": "Use mettre to say you're putting on or wearing clothes",
-      "example": "{je mets un manteau} (I put on a coat), {qu'est-ce que tu mets?} (what are you wearing?)"
+      "term": "Putting on clothes",
+      "definition": "With clothes, {mettre} means to put on, and sometimes to wear.",
+      "examples": [
+        {
+          "fr": "Il met une chemise.",
+          "en": "He's putting on a shirt."
+        },
+        {
+          "fr": "Nous mettons nos chaussures.",
+          "en": "We're putting on our shoes."
+        },
+        {
+          "fr": "Qu'est-ce que tu mets ?",
+          "en": "What are you wearing?"
+        }
+      ]
     },
     {
       "id": "c-other-common-uses",
-      "term": "Other common uses",
-      "definition": "mettre du temps (to take time), se mettre à (to start doing something)",
-      "example": "{ça met deux heures} (it takes two hours, like {ça prend deux heures}), {je me mets à travailler} (I start working), {je me mets à apprendre le français} (I start learning French)"
+      "term": "Taking time",
+      "definition": "{ça met du temps} means it takes time, like {ça prend du temps}.",
+      "examples": [
+        {
+          "fr": "Ça met du temps.",
+          "en": "It takes time."
+        },
+        {
+          "fr": "Ça met deux heures.",
+          "en": "It takes two hours."
+        },
+        {
+          "fr": "Apprendre le français, ça prend du temps.",
+          "en": "Learning French takes time."
+        }
+      ]
     }
   ],
   "items": [

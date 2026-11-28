@@ -117,39 +117,122 @@
   "concepts": [
     {
       "id": "c-demander-to-ask-for",
-      "term": "{demander} = to ask (for)",
-      "definition": "Request things, ask questions, ask for help - regular -ER verb",
-      "example": "{je demande de l'aide} (I ask for help), {tu demandes pourquoi?} (you ask why?)"
+      "term": "{demander} = to ask, to ask for",
+      "definition": "One verb for asking a question and for asking for something.",
+      "examples": [
+        {
+          "fr": "Je demande de l'aide.",
+          "en": "I'm asking for help."
+        },
+        {
+          "fr": "Pourquoi tu demandes ?",
+          "en": "Why do you ask?"
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb-pattern",
-      "term": "Regular -ER verb pattern",
-      "definition": "Follows same pattern as parler - drop -er, add endings: -e, -es, -e, -ons, -ez, -ent",
-      "example": "{je demande}, {tu demandes}, {il demande}, {nous demandons}, {vous demandez}, {ils demandent}"
+      "term": "The forms of {demander}",
+      "definition": "{demander} changes like {parler}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je demande",
+          "en": "I ask"
+        },
+        {
+          "fr": "tu demandes",
+          "en": "you ask"
+        },
+        {
+          "fr": "il demande",
+          "en": "he asks"
+        },
+        {
+          "fr": "nous demandons",
+          "en": "we ask"
+        },
+        {
+          "fr": "vous demandez",
+          "en": "you ask"
+        },
+        {
+          "fr": "ils demandent",
+          "en": "they ask"
+        }
+      ]
     },
     {
       "id": "c-demander-quelque-chose-to",
-      "term": "{demander quelque chose} (to ask for something)",
-      "definition": "Ask for objects, favors, information - direct object",
-      "example": "{je demande un café} (I ask for a coffee), {il demande ton nom} (he asks for your name)"
+      "term": "Asking for something",
+      "definition": "The thing you ask for comes straight after the verb. English needs for, French does not.",
+      "examples": [
+        {
+          "fr": "Tu demandes un café.",
+          "en": "You ask for a coffee."
+        },
+        {
+          "fr": "Il demande ton nom.",
+          "en": "He asks for your name."
+        },
+        {
+          "fr": "Elle demande l'addition.",
+          "en": "She asks for the bill."
+        }
+      ]
     },
     {
       "id": "c-demander-a-quelqu-un",
-      "term": "{demander à quelqu'un} (to ask someone)",
-      "definition": "Use 'à' when specifying who you're asking",
-      "example": "{je demande à Marie} (I ask Marie), {tu demandes à ton père} (you ask your father)"
+      "term": "Asking someone",
+      "definition": "Use {à} before the person you ask.",
+      "examples": [
+        {
+          "fr": "Je demande à Marie.",
+          "en": "I'll ask Marie."
+        },
+        {
+          "fr": "Tu demandes à ton père.",
+          "en": "You ask your father."
+        },
+        {
+          "fr": "Il demande à sa mère.",
+          "en": "He asks his mother."
+        }
+      ]
     },
     {
       "id": "c-demander-de-infinitive",
-      "term": "demander de + infinitive",
-      "definition": "Ask someone TO DO something - use '{de}' before verb",
-      "example": "{je demande de partir} (I ask to leave), {il me demande de venir} (he asks me to come)"
+      "term": "Asking someone to do something",
+      "definition": "Put {de} before the second verb.",
+      "examples": [
+        {
+          "fr": "Il me demande de venir.",
+          "en": "He asks me to come."
+        },
+        {
+          "fr": "Elle nous demande d'attendre.",
+          "en": "She asks us to wait."
+        },
+        {
+          "fr": "Je demande de partir.",
+          "en": "I ask to leave."
+        }
+      ]
     },
     {
       "id": "c-common-uses",
-      "term": "Common uses",
-      "definition": "demander de l'aide (ask for help), demander pardon (ask forgiveness), demander la permission (ask permission)",
-      "example": "{je demande de l'aide} (I ask for help), {tu demandes pardon} (you ask forgiveness)"
+      "term": "Saying sorry, asking permission",
+      "definition": "Two phrases with {demander} that you hear often.",
+      "examples": [
+        {
+          "fr": "Je demande pardon.",
+          "en": "I apologize."
+        },
+        {
+          "fr": "Nous demandons la permission.",
+          "en": "We ask for permission."
+        }
+      ]
     }
   ],
   "items": [
