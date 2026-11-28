@@ -165,21 +165,71 @@
   "sections": [
     {
       "id": "s-french-pronunciation-patterns",
-      "heading": "French Pronunciation Patterns",
-      "text": "French has unique sounds that differ from English",
-      "example": "The French 'r' is guttural, vowels are pure, and many final consonants are silent"
+      "heading": "French sounds",
+      "text": "Three things make French sound unlike English. Listen for each one in these words.",
+      "examples": [
+        {
+          "fr": "rouge",
+          "en": "red",
+          "note": "the r comes from the back of the throat"
+        },
+        {
+          "fr": "très bien",
+          "en": "very good",
+          "note": "each vowel stays pure, with no glide"
+        },
+        {
+          "fr": "trois",
+          "en": "three",
+          "note": "the final s is silent"
+        }
+      ]
     },
     {
       "id": "s-nasal-vowels",
-      "heading": "Nasal Vowels",
-      "text": "French has four nasal vowel sounds not found in English",
-      "example": "Words like '{bon}', '{un}', '{vin}', and '{pain}' use nasal vowels"
+      "heading": "Nasal vowels",
+      "text": "French has vowels you say partly through the nose. English has none of them.",
+      "examples": [
+        {
+          "fr": "bon",
+          "en": "good"
+        },
+        {
+          "fr": "un",
+          "en": "one"
+        },
+        {
+          "fr": "le vin",
+          "en": "wine"
+        },
+        {
+          "fr": "le pain",
+          "en": "bread",
+          "note": "the same vowel as {vin}"
+        }
+      ]
     },
     {
       "id": "s-liaison-and-elision",
-      "heading": "Liaison and Elision",
-      "text": "French words flow together in speech",
-      "example": "Silent consonants become pronounced when followed by vowels, like 'les amis' (lay-za-mee)"
+      "heading": "Words that run together",
+      "text": "A silent final consonant is said before a vowel. A short word like {je} drops its vowel before another vowel.",
+      "examples": [
+        {
+          "fr": "les amis",
+          "en": "the friends",
+          "note": "sounds like lay-za-mee"
+        },
+        {
+          "fr": "vous êtes",
+          "en": "you are",
+          "note": "the s of {vous} is said as z"
+        },
+        {
+          "fr": "j'ai",
+          "en": "I have",
+          "note": "{je} becomes {j'}"
+        }
+      ]
     }
   ],
   "screen": "pronunciation-test"

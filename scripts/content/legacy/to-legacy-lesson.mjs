@@ -142,7 +142,9 @@ const conceptOf = (c) => {
 };
 
 // The spelling patterns page: its sections are today's frenchPhonics.js sounds, each with spelling rows.
-const isPhonicsPage = (mod) => mod.kind === 'reference' && !mod.screen && (mod.sections || []).some((s) => Array.isArray(s.rows));
+// Every section of it is a sound with its spelling rows; a page with a table in one section (the days, the months) is
+// not it.
+const isPhonicsPage = (mod) => mod.kind === 'reference' && !mod.screen && (mod.sections || []).length > 0 && mod.sections.every((s) => Array.isArray(s.rows));
 
 // Passage blocks back in today's markup: paragraphs separated by a blank line, a speaker as "**Name:** ", a scene
 // heading as "## ", a picture as ![src] with its caption after it. The translation keeps an empty paragraph where a picture stands.

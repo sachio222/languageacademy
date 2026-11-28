@@ -89,20 +89,60 @@
     {
       "id": "s-greeting",
       "heading": "Saying hello",
-      "text": "{ça va ?} and {comment ça va ?} ask how someone is, and {ça va} answers.",
-      "example": "{Salut, ça va ? Oui, ça va bien.}"
+      "text": "{Ça va ?} asks how someone is. The answer uses the same words: {ça va}.",
+      "examples": [
+        {
+          "fr": "Salut, ça va ?",
+          "en": "Hi, how's it going?"
+        },
+        {
+          "fr": "Oui, ça va bien.",
+          "en": "Yes, I'm fine."
+        },
+        {
+          "fr": "Comment ça va ?",
+          "en": "How are you?"
+        }
+      ]
     },
     {
       "id": "s-being-polite",
       "heading": "Being polite",
-      "text": "Use {excusez-moi} to get someone's attention, {je voudrais} to ask for something, and {s'il te plaît} or {s'il vous plaît} to say please.",
-      "example": "{Excusez-moi, je voudrais un café, s'il vous plaît.}"
+      "text": "Say {excusez-moi} to get someone's attention and {je voudrais} to ask for something. Say {s'il vous plaît} to a stranger and {s'il te plaît} to a friend.",
+      "examples": [
+        {
+          "fr": "Excusez-moi, je voudrais un café, s'il vous plaît.",
+          "en": "Excuse me, I would like a coffee, please."
+        },
+        {
+          "fr": "Un café, s'il te plaît.",
+          "en": "A coffee, please.",
+          "note": "to a friend"
+        }
+      ]
     },
     {
       "id": "s-in-conversation",
       "heading": "In conversation",
-      "text": "You will hear these often in everyday conversation: {bien sûr}, {de temps en temps}, {quelque chose}, {tout le monde} and {n'est-ce pas}.",
-      "example": "{Tout le monde aime le chocolat, n'est-ce pas ?}"
+      "text": "You will hear these words in everyday talk.",
+      "examples": [
+        {
+          "fr": "Bien sûr !",
+          "en": "Of course!"
+        },
+        {
+          "fr": "Je vais au café de temps en temps.",
+          "en": "I go to the café from time to time."
+        },
+        {
+          "fr": "Tu veux quelque chose ?",
+          "en": "Do you want something?"
+        },
+        {
+          "fr": "Tout le monde aime le chocolat, n'est-ce pas ?",
+          "en": "Everyone likes chocolate, right?"
+        }
+      ]
     }
   ]
 }

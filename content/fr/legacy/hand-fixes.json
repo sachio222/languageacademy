@@ -9233,6 +9233,152 @@
       "note": "{merci beaucoup}: thank you very much"
     }
   },
+  "2024-04-01-alphabet": {
+    "sections/s-accent-aigu-e": {
+      "id": "s-accent-aigu-e",
+      "heading": "The acute accent: é",
+      "text": "It sits only on e and makes it sound like ay.",
+      "examples": [
+        {
+          "fr": "le café",
+          "en": "coffee, or a café"
+        },
+        {
+          "fr": "l'été",
+          "en": "summer"
+        },
+        {
+          "fr": "déjà",
+          "en": "already"
+        }
+      ]
+    },
+    "sections/s-accent-circonflexe-a-e": {
+      "id": "s-accent-circonflexe-a-e",
+      "heading": "The circumflex: â, ê, î, ô, û",
+      "text": "It can sit on any vowel. It often marks an s the word lost long ago: {hôtel} was once spelled hostel.",
+      "examples": [
+        {
+          "fr": "être",
+          "en": "to be"
+        },
+        {
+          "fr": "l'hôtel",
+          "en": "the hotel"
+        },
+        {
+          "fr": "les pâtes",
+          "en": "pasta"
+        },
+        {
+          "fr": "l'île",
+          "en": "the island"
+        }
+      ]
+    },
+    "sections/s-accent-grave-e-a": {
+      "id": "s-accent-grave-e-a",
+      "heading": "The grave accent: è, à, ù",
+      "text": "On e it makes the sound eh. On a and u it does not change the sound but tells two words apart, like {où} (where) and {ou} (or).",
+      "examples": [
+        {
+          "fr": "très",
+          "en": "very"
+        },
+        {
+          "fr": "où",
+          "en": "where"
+        },
+        {
+          "fr": "là",
+          "en": "there"
+        }
+      ]
+    },
+    "sections/s-cedille-c": {
+      "id": "s-cedille-c",
+      "heading": "The cedilla: ç",
+      "text": "It makes c sound like s before a, o or u.",
+      "examples": [
+        {
+          "fr": "ça",
+          "en": "that"
+        },
+        {
+          "fr": "français",
+          "en": "French"
+        },
+        {
+          "fr": "le garçon",
+          "en": "the boy"
+        }
+      ]
+    },
+    "sections/s-ligatures-oe-ae": {
+      "id": "s-ligatures-oe-ae",
+      "heading": "Joined letters: œ and æ",
+      "text": "Two letters written as one. You see œ often, and æ almost never.",
+      "examples": [
+        {
+          "fr": "le cœur",
+          "en": "the heart"
+        },
+        {
+          "fr": "la sœur",
+          "en": "the sister"
+        },
+        {
+          "fr": "un œuf",
+          "en": "an egg"
+        }
+      ]
+    },
+    "sections/s-the-french-alphabet": {
+      "id": "s-the-french-alphabet",
+      "heading": "The French alphabet",
+      "text": "French uses the same 26 letters as English, but names them differently. These are the names that sound least like English.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "A is said ah"
+        },
+        {
+          "text": "E is said euh"
+        },
+        {
+          "text": "G is said zhay, and J is said zhee"
+        },
+        {
+          "text": "I is said ee"
+        },
+        {
+          "text": "R is said air, from the back of the throat"
+        },
+        {
+          "text": "W is said doo-bluh-vay"
+        }
+      ]
+    },
+    "sections/s-trema-e-i-u": {
+      "id": "s-trema-e-i-u",
+      "heading": "The diaeresis: ë, ï, ü, ÿ",
+      "text": "It tells you to say two vowels one after the other, not as one sound.",
+      "examples": [
+        {
+          "fr": "Noël",
+          "en": "Christmas"
+        },
+        {
+          "fr": "naïf",
+          "en": "naive"
+        },
+        {
+          "fr": "le maïs",
+          "en": "corn"
+        }
+      ]
+    }
+  },
   "2024-04-01-time-adverbs": {
     "concepts": [
       {
@@ -9304,6 +9450,253 @@
       "gloss": "I eat"
     }
   },
+  "2024-04-02-numbers": {
+    "sections/s-belgian-swiss-variation": {
+      "id": "s-belgian-swiss-variation",
+      "heading": "In Belgium and Switzerland",
+      "text": "People there say {septante} for 70 and {nonante} for 90. In parts of Switzerland they also say {huitante} for 80.",
+      "examples": [
+        {
+          "fr": "septante",
+          "en": "seventy",
+          "note": "in France, {soixante-dix}"
+        },
+        {
+          "fr": "septante-cinq",
+          "en": "seventy-five",
+          "note": "in France, {soixante-quinze}"
+        },
+        {
+          "fr": "nonante",
+          "en": "ninety",
+          "note": "in France, {quatre-vingt-dix}"
+        }
+      ]
+    },
+    "sections/s-important-exceptions-rules": {
+      "id": "s-important-exceptions-rules",
+      "heading": "Spelling rules that catch people out",
+      "text": "A few small rules decide when a number takes an s or {et}. Each example shows one.",
+      "examples": [
+        {
+          "fr": "quatre-vingt-un",
+          "en": "eighty-one",
+          "note": "no {et}, unlike {vingt-et-un}"
+        },
+        {
+          "fr": "quatre-vingts",
+          "en": "eighty",
+          "note": "an s when nothing follows"
+        },
+        {
+          "fr": "quatre-vingt-deux",
+          "en": "eighty-two",
+          "note": "no s when a number follows"
+        },
+        {
+          "fr": "deux cents",
+          "en": "two hundred",
+          "note": "an s when nothing follows"
+        },
+        {
+          "fr": "deux cent un",
+          "en": "two hundred one",
+          "note": "no s when a number follows"
+        },
+        {
+          "fr": "trois mille",
+          "en": "three thousand",
+          "note": "{mille} never takes an s"
+        }
+      ]
+    },
+    "sections/s-large-numbers": {
+      "id": "s-large-numbers",
+      "heading": "Hundreds and more",
+      "text": "{cent} is a hundred and {mille} is a thousand. Bigger numbers are built from them.",
+      "examples": [
+        {
+          "fr": "cent",
+          "en": "one hundred"
+        },
+        {
+          "fr": "deux cents",
+          "en": "two hundred"
+        },
+        {
+          "fr": "mille",
+          "en": "one thousand"
+        },
+        {
+          "fr": "un million",
+          "en": "one million"
+        },
+        {
+          "fr": "un milliard",
+          "en": "one billion"
+        }
+      ]
+    },
+    "sections/s-numbers-0-20": {
+      "id": "s-numbers-0-20",
+      "heading": "Numbers 0 to 20",
+      "text": "Every number up to 16 is its own word, and these six from 11 to 16 follow no pattern. From 17 on, French adds: {dix-sept} is ten-seven.",
+      "examples": [
+        {
+          "fr": "onze",
+          "en": "eleven"
+        },
+        {
+          "fr": "douze",
+          "en": "twelve"
+        },
+        {
+          "fr": "treize",
+          "en": "thirteen"
+        },
+        {
+          "fr": "quatorze",
+          "en": "fourteen"
+        },
+        {
+          "fr": "quinze",
+          "en": "fifteen"
+        },
+        {
+          "fr": "seize",
+          "en": "sixteen"
+        }
+      ]
+    },
+    "sections/s-numbers-21-69-pattern": {
+      "id": "s-numbers-21-69-pattern",
+      "heading": "21 to 69",
+      "text": "Join the ten and the unit with a hyphen. For 21, 31, 41, 51 and 61, put {et} between them.",
+      "examples": [
+        {
+          "fr": "vingt-et-un",
+          "en": "twenty-one"
+        },
+        {
+          "fr": "vingt-deux",
+          "en": "twenty-two"
+        },
+        {
+          "fr": "trente-cinq",
+          "en": "thirty-five"
+        },
+        {
+          "fr": "quarante-sept",
+          "en": "forty-seven"
+        },
+        {
+          "fr": "soixante-neuf",
+          "en": "sixty-nine"
+        }
+      ]
+    },
+    "sections/s-tens-20-60": {
+      "id": "s-tens-20-60",
+      "heading": "Tens from 20 to 60",
+      "text": "Each ten has its own word.",
+      "examples": [
+        {
+          "fr": "vingt",
+          "en": "twenty"
+        },
+        {
+          "fr": "trente",
+          "en": "thirty"
+        },
+        {
+          "fr": "quarante",
+          "en": "forty"
+        },
+        {
+          "fr": "cinquante",
+          "en": "fifty"
+        },
+        {
+          "fr": "soixante",
+          "en": "sixty"
+        }
+      ]
+    },
+    "sections/s-the-famous-french-70s": {
+      "id": "s-the-famous-french-70s",
+      "heading": "70 to 79",
+      "text": "French counts 70 as sixty-ten, so 71 is sixty-eleven and 75 is sixty-fifteen.",
+      "examples": [
+        {
+          "fr": "soixante-dix",
+          "en": "seventy",
+          "note": "sixty-ten"
+        },
+        {
+          "fr": "soixante-et-onze",
+          "en": "seventy-one",
+          "note": "sixty-eleven"
+        },
+        {
+          "fr": "soixante-quinze",
+          "en": "seventy-five",
+          "note": "sixty-fifteen"
+        },
+        {
+          "fr": "soixante-dix-neuf",
+          "en": "seventy-nine",
+          "note": "sixty-nineteen"
+        }
+      ]
+    },
+    "sections/s-the-infamous-french-80s": {
+      "id": "s-the-infamous-french-80s",
+      "heading": "80 to 89",
+      "text": "French counts 80 as four twenties. It takes an s only when nothing comes after it.",
+      "examples": [
+        {
+          "fr": "quatre-vingts",
+          "en": "eighty",
+          "note": "four twenties"
+        },
+        {
+          "fr": "quatre-vingt-un",
+          "en": "eighty-one"
+        },
+        {
+          "fr": "quatre-vingt-cinq",
+          "en": "eighty-five"
+        },
+        {
+          "fr": "quatre-vingt-neuf",
+          "en": "eighty-nine"
+        }
+      ]
+    },
+    "sections/s-the-wild-french-90s": {
+      "id": "s-the-wild-french-90s",
+      "heading": "90 to 99",
+      "text": "French counts 90 as four twenties and ten, so 91 is four twenties and eleven.",
+      "examples": [
+        {
+          "fr": "quatre-vingt-dix",
+          "en": "ninety"
+        },
+        {
+          "fr": "quatre-vingt-onze",
+          "en": "ninety-one"
+        },
+        {
+          "fr": "quatre-vingt-quinze",
+          "en": "ninety-five"
+        },
+        {
+          "fr": "quatre-vingt-dix-neuf",
+          "en": "ninety-nine"
+        }
+      ]
+    }
+  },
   "2024-04-02-unit-4-exam": {
     "description": "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place.",
     "items/i-la-bas": {
@@ -9315,6 +9708,152 @@
         "la-bas"
       ],
       "hint": "Location adverb - distant place"
+    }
+  },
+  "2024-04-03-days-months": {
+    "sections/s-days-of-the-week": {
+      "id": "s-days-of-the-week",
+      "heading": "Days of the week",
+      "text": "French writes the days with a small letter. The week starts on Monday.",
+      "rows": [
+        {
+          "fr": "lundi",
+          "en": "Monday"
+        },
+        {
+          "fr": "mardi",
+          "en": "Tuesday"
+        },
+        {
+          "fr": "mercredi",
+          "en": "Wednesday"
+        },
+        {
+          "fr": "jeudi",
+          "en": "Thursday"
+        },
+        {
+          "fr": "vendredi",
+          "en": "Friday"
+        },
+        {
+          "fr": "samedi",
+          "en": "Saturday"
+        },
+        {
+          "fr": "dimanche",
+          "en": "Sunday"
+        }
+      ]
+    },
+    "sections/s-months-of-the-year": {
+      "id": "s-months-of-the-year",
+      "heading": "Months of the year",
+      "text": "Months take a small letter too. Say {en} before a month for in: {en mai}, in May.",
+      "rows": [
+        {
+          "fr": "janvier",
+          "en": "January"
+        },
+        {
+          "fr": "février",
+          "en": "February"
+        },
+        {
+          "fr": "mars",
+          "en": "March"
+        },
+        {
+          "fr": "avril",
+          "en": "April"
+        },
+        {
+          "fr": "mai",
+          "en": "May"
+        },
+        {
+          "fr": "juin",
+          "en": "June"
+        },
+        {
+          "fr": "juillet",
+          "en": "July"
+        },
+        {
+          "fr": "août",
+          "en": "August"
+        },
+        {
+          "fr": "septembre",
+          "en": "September"
+        },
+        {
+          "fr": "octobre",
+          "en": "October"
+        },
+        {
+          "fr": "novembre",
+          "en": "November"
+        },
+        {
+          "fr": "décembre",
+          "en": "December"
+        }
+      ]
+    },
+    "sections/s-seasons-les-saisons": {
+      "id": "s-seasons-les-saisons",
+      "heading": "Seasons",
+      "text": "Each season takes {le} or {l'}. Say {au printemps} for in spring, and {en} for the other three.",
+      "examples": [
+        {
+          "fr": "le printemps",
+          "en": "spring"
+        },
+        {
+          "fr": "l'été",
+          "en": "summer"
+        },
+        {
+          "fr": "l'automne",
+          "en": "fall"
+        },
+        {
+          "fr": "l'hiver",
+          "en": "winter"
+        },
+        {
+          "fr": "en hiver",
+          "en": "in winter"
+        }
+      ]
+    },
+    "sections/s-useful-time-phrases": {
+      "id": "s-useful-time-phrases",
+      "heading": "Today, tomorrow, this week",
+      "text": "Words for saying when.",
+      "examples": [
+        {
+          "fr": "aujourd'hui",
+          "en": "today"
+        },
+        {
+          "fr": "demain",
+          "en": "tomorrow"
+        },
+        {
+          "fr": "hier",
+          "en": "yesterday"
+        },
+        {
+          "fr": "cette semaine",
+          "en": "this week"
+        },
+        {
+          "fr": "la semaine prochaine",
+          "en": "next week"
+        }
+      ]
     }
   },
   "2024-04-03-unit-4-practice": {
@@ -9455,6 +9994,188 @@
       "gloss": "I love my mother"
     }
   },
+  "2024-04-04-holidays": {
+    "sections/s-bastille-day-la-fete": {
+      "id": "s-bastille-day-la-fete",
+      "heading": "14 July: {la Fête nationale}",
+      "text": "France's biggest holiday marks the storming of the Bastille prison in 1789, at the start of the French Revolution.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "A military parade on the Champs-Élysées in Paris"
+        },
+        {
+          "text": "Fireworks across the country at night"
+        },
+        {
+          "text": "Dances the night before, often at fire stations"
+        }
+      ]
+    },
+    "sections/s-christmas-new-year-les": {
+      "id": "s-christmas-new-year-les",
+      "heading": "Christmas and New Year",
+      "text": "Both nights bring a long, festive dinner called a {réveillon}.",
+      "examples": [
+        {
+          "fr": "le réveillon de Noël",
+          "en": "Christmas Eve dinner"
+        },
+        {
+          "fr": "le réveillon du Nouvel An",
+          "en": "New Year's Eve dinner"
+        },
+        {
+          "fr": "la galette des rois",
+          "en": "king cake",
+          "note": "eaten in January, with a small figure hidden inside"
+        }
+      ]
+    },
+    "sections/s-fun-french-traditions": {
+      "id": "s-fun-french-traditions",
+      "heading": "Other French traditions",
+      "text": "These are not days off, but most people mark them.",
+      "examples": [
+        {
+          "fr": "la Chandeleur",
+          "en": "Candlemas",
+          "note": "2 February, when people make crêpes"
+        },
+        {
+          "fr": "le poisson d'avril",
+          "en": "April Fools' Day",
+          "note": "1 April, when children stick paper fish on people's backs"
+        },
+        {
+          "fr": "la Fête de la musique",
+          "en": "Music Day",
+          "note": "21 June, with free concerts in the street"
+        }
+      ]
+    },
+    "sections/s-holiday-greetings": {
+      "id": "s-holiday-greetings",
+      "heading": "Holiday greetings",
+      "text": "What to say on the day.",
+      "examples": [
+        {
+          "fr": "Joyeux Noël !",
+          "en": "Merry Christmas!"
+        },
+        {
+          "fr": "Bonne année !",
+          "en": "Happy New Year!"
+        },
+        {
+          "fr": "Joyeuses Pâques !",
+          "en": "Happy Easter!"
+        },
+        {
+          "fr": "Bon anniversaire !",
+          "en": "Happy birthday!"
+        },
+        {
+          "fr": "Bonnes fêtes !",
+          "en": "Happy holidays!"
+        }
+      ]
+    },
+    "sections/s-les-jours-feries-national": {
+      "id": "s-les-jours-feries-national",
+      "heading": "Public holidays",
+      "text": "France has 11 public holidays, when most people do not work.",
+      "examples": [
+        {
+          "fr": "le Nouvel An",
+          "en": "New Year's Day",
+          "note": "1 January"
+        },
+        {
+          "fr": "Pâques",
+          "en": "Easter"
+        },
+        {
+          "fr": "la fête du Travail",
+          "en": "Labor Day",
+          "note": "1 May"
+        },
+        {
+          "fr": "la Fête nationale",
+          "en": "National Day",
+          "note": "14 July"
+        },
+        {
+          "fr": "Noël",
+          "en": "Christmas",
+          "note": "25 December"
+        }
+      ]
+    },
+    "sections/s-quebec-holidays": {
+      "id": "s-quebec-holidays",
+      "heading": "Holidays in Quebec",
+      "text": "French Canada has holidays of its own.",
+      "examples": [
+        {
+          "fr": "la Saint-Jean-Baptiste",
+          "en": "Quebec's National Day",
+          "note": "24 June"
+        },
+        {
+          "fr": "le jour du Souvenir",
+          "en": "Remembrance Day",
+          "note": "11 November"
+        }
+      ]
+    },
+    "sections/s-religious-holidays": {
+      "id": "s-religious-holidays",
+      "heading": "Religious holidays",
+      "text": "The French state is secular, but several Catholic holidays are still days off.",
+      "examples": [
+        {
+          "fr": "Pâques",
+          "en": "Easter"
+        },
+        {
+          "fr": "l'Ascension",
+          "en": "Ascension Day"
+        },
+        {
+          "fr": "le lundi de Pentecôte",
+          "en": "Whit Monday"
+        },
+        {
+          "fr": "l'Assomption",
+          "en": "Assumption Day",
+          "note": "15 August"
+        },
+        {
+          "fr": "la Toussaint",
+          "en": "All Saints' Day",
+          "note": "1 November"
+        }
+      ]
+    },
+    "sections/s-wwi-wwii-commemorations": {
+      "id": "s-wwi-wwii-commemorations",
+      "heading": "The two world wars",
+      "text": "Two public holidays remember the end of each world war.",
+      "examples": [
+        {
+          "fr": "le 8 mai",
+          "en": "8 May",
+          "note": "the end of the Second World War in Europe, 1945"
+        },
+        {
+          "fr": "le 11 novembre",
+          "en": "11 November",
+          "note": "the armistice that ended the First World War, 1918"
+        }
+      ]
+    }
+  },
   "2024-04-05-avoir-past": {
     "concepts": [
       {
@@ -9542,6 +10263,157 @@
         ]
       }
     ]
+  },
+  "2024-04-05-colors": {
+    "sections/s-basic-colors": {
+      "id": "s-basic-colors",
+      "heading": "Basic colors",
+      "text": "The six colors you will use most.",
+      "examples": [
+        {
+          "fr": "bleu",
+          "en": "blue"
+        },
+        {
+          "fr": "rouge",
+          "en": "red"
+        },
+        {
+          "fr": "vert",
+          "en": "green"
+        },
+        {
+          "fr": "jaune",
+          "en": "yellow"
+        },
+        {
+          "fr": "blanc",
+          "en": "white"
+        },
+        {
+          "fr": "noir",
+          "en": "black"
+        }
+      ]
+    },
+    "sections/s-colors-are-adjectives": {
+      "id": "s-colors-are-adjectives",
+      "heading": "Colors are adjectives",
+      "text": "A color agrees with its noun in gender and number, and it usually comes after the noun.",
+      "examples": [
+        {
+          "fr": "le ciel bleu",
+          "en": "the blue sky"
+        },
+        {
+          "fr": "une maison blanche",
+          "en": "a white house"
+        },
+        {
+          "fr": "des yeux verts",
+          "en": "green eyes"
+        }
+      ]
+    },
+    "sections/s-compound-colors": {
+      "id": "s-compound-colors",
+      "heading": "Two-word colors",
+      "text": "A color with a second word, such as light or dark, never changes.",
+      "examples": [
+        {
+          "fr": "des yeux bleu clair",
+          "en": "light blue eyes"
+        },
+        {
+          "fr": "des robes bleu foncé",
+          "en": "dark blue dresses"
+        }
+      ]
+    },
+    "sections/s-feminine-forms": {
+      "id": "s-feminine-forms",
+      "heading": "Feminine forms",
+      "text": "Most colors add -e with a feminine noun. A color that already ends in -e stays the same.",
+      "examples": [
+        {
+          "fr": "une voiture bleue",
+          "en": "a blue car"
+        },
+        {
+          "fr": "une robe verte",
+          "en": "a green dress"
+        },
+        {
+          "fr": "une maison blanche",
+          "en": "a white house",
+          "note": "{blanc} becomes {blanche}"
+        },
+        {
+          "fr": "une fleur rouge",
+          "en": "a red flower",
+          "note": "no change"
+        }
+      ]
+    },
+    "sections/s-invariable-colors": {
+      "id": "s-invariable-colors",
+      "heading": "Colors that never change",
+      "text": "{marron} and {orange} are also nouns, a chestnut and an orange, so they never change.",
+      "examples": [
+        {
+          "fr": "un chat marron",
+          "en": "a brown cat"
+        },
+        {
+          "fr": "une maison marron",
+          "en": "a brown house"
+        },
+        {
+          "fr": "des chats marron",
+          "en": "brown cats",
+          "note": "no -s"
+        }
+      ]
+    },
+    "sections/s-plural-forms": {
+      "id": "s-plural-forms",
+      "heading": "Plural forms",
+      "text": "Add -s with a plural noun, unless the color already ends in -s or -x.",
+      "examples": [
+        {
+          "fr": "des yeux bleus",
+          "en": "blue eyes"
+        },
+        {
+          "fr": "des fleurs bleues",
+          "en": "blue flowers"
+        },
+        {
+          "fr": "des chats gris",
+          "en": "gray cats",
+          "note": "no change"
+        }
+      ]
+    },
+    "sections/s-using-colors-in-questions": {
+      "id": "s-using-colors-in-questions",
+      "heading": "Asking about colors",
+      "text": "Ask {De quelle couleur est…} and answer with the color.",
+      "examples": [
+        {
+          "fr": "De quelle couleur est le ciel ?",
+          "en": "What color is the sky?"
+        },
+        {
+          "fr": "Le ciel est bleu.",
+          "en": "The sky is blue."
+        },
+        {
+          "fr": "Pourquoi est-ce que l'herbe est verte ?",
+          "en": "Why is grass green?"
+        }
+      ]
+    }
   },
   "2024-04-06-boire": {
     "concepts": [
@@ -9681,6 +10553,309 @@
       "note": "passé composé"
     }
   },
+  "2024-04-06-french-countries": {
+    "sections/s-africa-the-future-of": {
+      "id": "s-africa-the-future-of",
+      "heading": "Africa",
+      "text": "About 60% of the world's French speakers live in Africa, and their number grows fast.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "By 2050, about 85% of French speakers may live in Africa"
+        },
+        {
+          "text": "The Democratic Republic of the Congo is set to pass France as the largest French-speaking country"
+        }
+      ]
+    },
+    "sections/s-caribbean-les-antilles": {
+      "id": "s-caribbean-les-antilles",
+      "heading": "The Caribbean: {les Antilles}",
+      "text": "These are parts of France, with the euro and French law.",
+      "examples": [
+        {
+          "fr": "la Guadeloupe",
+          "en": "Guadeloupe",
+          "note": "400,000 people"
+        },
+        {
+          "fr": "la Martinique",
+          "en": "Martinique",
+          "note": "375,000 people"
+        },
+        {
+          "fr": "la Guyane",
+          "en": "French Guiana",
+          "note": "290,000 people, in South America"
+        }
+      ]
+    },
+    "sections/s-central-africa-congo-basin": {
+      "id": "s-central-africa-congo-basin",
+      "heading": "Central Africa",
+      "text": "French connects people who speak hundreds of different languages.",
+      "examples": [
+        {
+          "fr": "la République démocratique du Congo",
+          "en": "Democratic Republic of the Congo",
+          "note": "90 million people"
+        },
+        {
+          "fr": "le Cameroun",
+          "en": "Cameroon",
+          "note": "27 million people; English is spoken too"
+        },
+        {
+          "fr": "le Tchad",
+          "en": "Chad",
+          "note": "16 million people"
+        },
+        {
+          "fr": "le Congo",
+          "en": "Republic of the Congo",
+          "note": "5.5 million people"
+        },
+        {
+          "fr": "la Centrafrique",
+          "en": "Central African Republic",
+          "note": "4.8 million people"
+        },
+        {
+          "fr": "le Gabon",
+          "en": "Gabon",
+          "note": "2.2 million people"
+        }
+      ]
+    },
+    "sections/s-east-africa-islands": {
+      "id": "s-east-africa-islands",
+      "heading": "East Africa and the Indian Ocean",
+      "text": "French is an official language in several countries here, most of them islands.",
+      "examples": [
+        {
+          "fr": "Madagascar",
+          "en": "Madagascar",
+          "note": "28 million people"
+        },
+        {
+          "fr": "le Rwanda",
+          "en": "Rwanda",
+          "note": "13 million people"
+        },
+        {
+          "fr": "le Burundi",
+          "en": "Burundi",
+          "note": "12 million people"
+        },
+        {
+          "fr": "Djibouti",
+          "en": "Djibouti",
+          "note": "990,000 people"
+        },
+        {
+          "fr": "les Comores",
+          "en": "the Comoros",
+          "note": "870,000 people"
+        },
+        {
+          "fr": "les Seychelles",
+          "en": "the Seychelles",
+          "note": "98,000 people"
+        }
+      ]
+    },
+    "sections/s-europe-where-it-all": {
+      "id": "s-europe-where-it-all",
+      "heading": "Europe, where French began",
+      "text": "French is spoken in five European countries, three of them with other languages beside it.",
+      "examples": [
+        {
+          "fr": "la France",
+          "en": "France",
+          "note": "67 million people"
+        },
+        {
+          "fr": "la Belgique",
+          "en": "Belgium",
+          "note": "11.5 million people; Dutch and German are spoken too"
+        },
+        {
+          "fr": "la Suisse",
+          "en": "Switzerland",
+          "note": "8.6 million people; German and Italian are spoken too"
+        },
+        {
+          "fr": "le Luxembourg",
+          "en": "Luxembourg",
+          "note": "632,000 people"
+        },
+        {
+          "fr": "Monaco",
+          "en": "Monaco",
+          "note": "39,000 people"
+        }
+      ]
+    },
+    "sections/s-la-francophonie-the-french": {
+      "id": "s-la-francophonie-the-french",
+      "heading": "{la Francophonie}: the French-speaking world",
+      "text": "About 300 million people speak French, and it is an official language in 29 countries.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "The fifth most spoken language in the world"
+        },
+        {
+          "text": "The second most studied language"
+        },
+        {
+          "text": "An official language of the UN, the EU, NATO and the Olympic Games"
+        }
+      ]
+    },
+    "sections/s-middle-east-asia": {
+      "id": "s-middle-east-asia",
+      "heading": "The Middle East and Asia",
+      "text": "French is still spoken where France once had influence.",
+      "examples": [
+        {
+          "fr": "le Liban",
+          "en": "Lebanon",
+          "note": "about 40% of people speak French"
+        },
+        {
+          "fr": "le Viêt Nam",
+          "en": "Vietnam",
+          "note": "about 600,000 speakers"
+        }
+      ]
+    },
+    "sections/s-north-africa-le-maghreb": {
+      "id": "s-north-africa-le-maghreb",
+      "heading": "North Africa: {le Maghreb}",
+      "text": "French is widely spoken beside Arabic, in business, schools and the media.",
+      "examples": [
+        {
+          "fr": "le Maroc",
+          "en": "Morocco",
+          "note": "about a third of people speak French"
+        },
+        {
+          "fr": "l'Algérie",
+          "en": "Algeria",
+          "note": "about a third of people speak French"
+        },
+        {
+          "fr": "la Tunisie",
+          "en": "Tunisia",
+          "note": "about two thirds of people speak French"
+        }
+      ]
+    },
+    "sections/s-north-america-quebec-haiti": {
+      "id": "s-north-america-quebec-haiti",
+      "heading": "North America and Haiti",
+      "text": "French is spoken in Quebec, a province of Canada, and in Haiti, beside Haitian Creole.",
+      "examples": [
+        {
+          "fr": "le Québec",
+          "en": "Quebec",
+          "note": "7.9 million people; its motto is {Je me souviens}, I remember"
+        },
+        {
+          "fr": "Haïti",
+          "en": "Haiti",
+          "note": "11.4 million people; French and Creole"
+        },
+        {
+          "fr": "la Louisiane",
+          "en": "Louisiana",
+          "note": "about 200,000 speakers"
+        },
+        {
+          "fr": "Saint-Pierre-et-Miquelon",
+          "en": "Saint Pierre and Miquelon",
+          "note": "6,000 people; part of France"
+        }
+      ]
+    },
+    "sections/s-pacific-islands-polynesie-francaise": {
+      "id": "s-pacific-islands-polynesie-francaise",
+      "heading": "The Pacific: {la Polynésie française}",
+      "text": "French is spoken on islands across the Pacific Ocean, most of them French territories.",
+      "examples": [
+        {
+          "fr": "la Polynésie française",
+          "en": "French Polynesia",
+          "note": "280,000 people; its best-known island is Tahiti"
+        },
+        {
+          "fr": "la Nouvelle-Calédonie",
+          "en": "New Caledonia",
+          "note": "271,000 people"
+        },
+        {
+          "fr": "le Vanuatu",
+          "en": "Vanuatu",
+          "note": "307,000 people; French, English and Bislama"
+        }
+      ]
+    },
+    "sections/s-the-future-is-african": {
+      "id": "s-the-future-is-african",
+      "heading": "French in 2050",
+      "text": "Forecasts put French at about 700 million speakers by 2050, mostly because Africa's population is growing.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "The Democratic Republic of the Congo is expected to have more French speakers than France"
+        },
+        {
+          "text": "French is expected to be the most spoken language in Africa"
+        },
+        {
+          "text": "About 85% of French speakers are expected to live in Africa"
+        }
+      ]
+    },
+    "sections/s-west-africa-french-belt": {
+      "id": "s-west-africa-french-belt",
+      "heading": "West Africa",
+      "text": "French is spoken across West Africa, in government, schools and business.",
+      "examples": [
+        {
+          "fr": "le Sénégal",
+          "en": "Senegal",
+          "note": "16 million people"
+        },
+        {
+          "fr": "la Côte d'Ivoire",
+          "en": "Ivory Coast",
+          "note": "26 million people; the region's business center"
+        },
+        {
+          "fr": "le Mali",
+          "en": "Mali",
+          "note": "20 million people"
+        },
+        {
+          "fr": "le Burkina Faso",
+          "en": "Burkina Faso",
+          "note": "21 million people"
+        },
+        {
+          "fr": "le Niger",
+          "en": "Niger",
+          "note": "24 million people"
+        },
+        {
+          "fr": "le Bénin",
+          "en": "Benin",
+          "note": "12 million people"
+        }
+      ]
+    }
+  },
   "2024-04-07-comparisons-slang": {
     "concepts": [
       {
@@ -9767,6 +10942,254 @@
       "word_id": "fou-fr",
       "fr": "fou",
       "gloss": "crazy"
+    }
+  },
+  "2024-04-07-language-stats": {
+    "sections/s-french-influence-on-english": {
+      "id": "s-french-influence-on-english",
+      "heading": "French in English",
+      "text": "About 29% of English words come from French, many since the Norman Conquest of 1066. English took the French words for several kinds of meat.",
+      "examples": [
+        {
+          "fr": "le bœuf",
+          "en": "beef, and also the animal"
+        },
+        {
+          "fr": "le porc",
+          "en": "pork, and also the animal"
+        },
+        {
+          "fr": "le mouton",
+          "en": "mutton, and also the sheep"
+        },
+        {
+          "fr": "le parlement",
+          "en": "parliament"
+        }
+      ]
+    },
+    "sections/s-french-sounds-phonology": {
+      "id": "s-french-sounds-phonology",
+      "heading": "French sounds",
+      "text": "French has about 36 distinct sounds. Four of them are nasal vowels, which English does not have.",
+      "examples": [
+        {
+          "fr": "blanc",
+          "en": "white",
+          "note": "the nasal vowel in {an}"
+        },
+        {
+          "fr": "le vin",
+          "en": "wine",
+          "note": "the nasal vowel in {in}"
+        },
+        {
+          "fr": "bon",
+          "en": "good",
+          "note": "the nasal vowel in {on}"
+        },
+        {
+          "fr": "un",
+          "en": "one",
+          "note": "the nasal vowel in {un}"
+        },
+        {
+          "fr": "rouge",
+          "en": "red",
+          "note": "the r comes from the back of the throat"
+        }
+      ]
+    },
+    "sections/s-fun-language-facts": {
+      "id": "s-fun-language-facts",
+      "heading": "Records",
+      "text": "A few records from French. The most common letter is e.",
+      "examples": [
+        {
+          "fr": "anticonstitutionnellement",
+          "en": "unconstitutionally",
+          "note": "one of the longest French words, with 25 letters"
+        },
+        {
+          "fr": "de",
+          "en": "of, from",
+          "note": "the most common French word"
+        }
+      ]
+    },
+    "sections/s-global-ranking": {
+      "id": "s-global-ranking",
+      "heading": "French in the world",
+      "text": "French is the fifth most spoken language and the second most studied.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "About 300 million speakers in 2023"
+        },
+        {
+          "text": "About 700 million expected by 2050"
+        },
+        {
+          "text": "An official language in 29 countries"
+        },
+        {
+          "text": "One of the six official languages of the UN"
+        }
+      ]
+    },
+    "sections/s-grammar-complexity": {
+      "id": "s-grammar-complexity",
+      "heading": "Grammar in numbers",
+      "text": "French has two genders and many tenses, though everyday speech uses only a few of them.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "Every noun is masculine or feminine"
+        },
+        {
+          "text": "Three groups of regular verbs, ending in -er, -ir and -re"
+        },
+        {
+          "text": "About 350 irregular verbs, of which about 50 are common"
+        },
+        {
+          "text": "Subject, verb, object: the same order as English"
+        }
+      ]
+    },
+    "sections/s-l-academie-francaise": {
+      "id": "s-l-academie-francaise",
+      "heading": "{l'Académie française}",
+      "text": "Since 1635 the French Academy has set the official rules of French. Its 40 members are called the immortals, and they suggest French words in place of English ones.",
+      "examples": [
+        {
+          "fr": "un ordinateur",
+          "en": "a computer"
+        },
+        {
+          "fr": "un courriel",
+          "en": "an email",
+          "note": "the Academy's word; many people say {e-mail}"
+        }
+      ]
+    },
+    "sections/s-liaison-flow": {
+      "id": "s-liaison-flow",
+      "heading": "Liaison",
+      "text": "A final consonant that is usually silent is said when the next word starts with a vowel.",
+      "examples": [
+        {
+          "fr": "les enfants",
+          "en": "the children",
+          "note": "sounds like lay-zahn-fahn"
+        },
+        {
+          "fr": "un homme",
+          "en": "a man",
+          "note": "sounds like uh-nom"
+        },
+        {
+          "fr": "les amis",
+          "en": "the friends",
+          "note": "sounds like lay-za-mee"
+        }
+      ]
+    },
+    "sections/s-perfect-french-pangram": {
+      "id": "s-perfect-french-pangram",
+      "heading": "A sentence with every letter",
+      "text": "This sentence uses all 26 letters of the alphabet.",
+      "examples": [
+        {
+          "fr": "Portez ce vieux whisky au juge blond qui fume.",
+          "en": "Bring this old whisky to the blond judge who is smoking."
+        }
+      ]
+    },
+    "sections/s-speaking-speed": {
+      "id": "s-speaking-speed",
+      "heading": "Speaking speed",
+      "text": "French speakers say about 7 to 8 syllables a second, and English speakers about 6.5.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "French needs more syllables to say the same thing"
+        },
+        {
+          "text": "So speakers talk faster, and about as much is said each second"
+        }
+      ]
+    },
+    "sections/s-syllable-timed-language": {
+      "id": "s-syllable-timed-language",
+      "heading": "Even rhythm",
+      "text": "French gives each syllable about the same length. English stresses some syllables and shortens others.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "No stressed syllable inside a word, as English has"
+        },
+        {
+          "text": "A little more weight on the last syllable of a phrase"
+        },
+        {
+          "text": "An even, flowing rhythm"
+        }
+      ]
+    },
+    "sections/s-the-alphabet-accents": {
+      "id": "s-the-alphabet-accents",
+      "heading": "Letters and accents",
+      "text": "French uses the 26 English letters, five accents and two joined letters. Each word below shows one of them.",
+      "examples": [
+        {
+          "fr": "l'été",
+          "en": "summer",
+          "note": "é"
+        },
+        {
+          "fr": "très",
+          "en": "very",
+          "note": "è"
+        },
+        {
+          "fr": "la fête",
+          "en": "the party",
+          "note": "ê"
+        },
+        {
+          "fr": "Noël",
+          "en": "Christmas",
+          "note": "ë"
+        },
+        {
+          "fr": "ça",
+          "en": "that",
+          "note": "ç"
+        },
+        {
+          "fr": "le cœur",
+          "en": "the heart",
+          "note": "œ"
+        }
+      ]
+    },
+    "sections/s-vocabulary-size": {
+      "id": "s-vocabulary-size",
+      "heading": "How many words",
+      "text": "A large French dictionary lists about 100,000 words in common use.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "Le Grand Robert dictionary: 100,000 words and 350,000 definitions"
+        },
+        {
+          "text": "An educated speaker uses about 30,000 words"
+        },
+        {
+          "text": "Most people know between 5,000 and 30,000"
+        }
+      ]
     }
   },
   "2024-04-08-comparisons": {
@@ -17209,6 +18632,76 @@
       "word_id": "j-ai-trouve-fr",
       "fr": "j'ai trouvé",
       "gloss": "I found / I have found"
+    }
+  },
+  "2024-12-18-pronunciation-test": {
+    "sections/s-french-pronunciation-patterns": {
+      "id": "s-french-pronunciation-patterns",
+      "heading": "French sounds",
+      "text": "Three things make French sound unlike English. Listen for each one in these words.",
+      "examples": [
+        {
+          "fr": "rouge",
+          "en": "red",
+          "note": "the r comes from the back of the throat"
+        },
+        {
+          "fr": "très bien",
+          "en": "very good",
+          "note": "each vowel stays pure, with no glide"
+        },
+        {
+          "fr": "trois",
+          "en": "three",
+          "note": "the final s is silent"
+        }
+      ]
+    },
+    "sections/s-liaison-and-elision": {
+      "id": "s-liaison-and-elision",
+      "heading": "Words that run together",
+      "text": "A silent final consonant is said before a vowel. A short word like {je} drops its vowel before another vowel.",
+      "examples": [
+        {
+          "fr": "les amis",
+          "en": "the friends",
+          "note": "sounds like lay-za-mee"
+        },
+        {
+          "fr": "vous êtes",
+          "en": "you are",
+          "note": "the s of {vous} is said as z"
+        },
+        {
+          "fr": "j'ai",
+          "en": "I have",
+          "note": "{je} becomes {j'}"
+        }
+      ]
+    },
+    "sections/s-nasal-vowels": {
+      "id": "s-nasal-vowels",
+      "heading": "Nasal vowels",
+      "text": "French has vowels you say partly through the nose. English has none of them.",
+      "examples": [
+        {
+          "fr": "bon",
+          "en": "good"
+        },
+        {
+          "fr": "un",
+          "en": "one"
+        },
+        {
+          "fr": "le vin",
+          "en": "wine"
+        },
+        {
+          "fr": "le pain",
+          "en": "bread",
+          "note": "the same vowel as {vin}"
+        }
+      ]
     }
   },
   "2026-11-24-negation-guide": {

@@ -5,6 +5,7 @@
 import { normText } from './items.mjs';
 import { unmark } from './mark-french.mjs';
 import { makeConceptId } from '../item-ids.mjs';
+import { sectionId } from './reference.mjs';
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 
@@ -76,8 +77,10 @@ export function liveIdMatch(mainLessons, converted) {
     // A concept matches by term, else by definition or example when the term was rewritten (a position word
     // fixed by hand), else by the id the converter minted from the live term (item-ids.mjs makeConceptId), which a
     // card keeps when its term, definition and examples are all rewritten on this branch.
+    // A Reference page's sections take the section id the converter mints from the live term (reference.mjs).
     const minted = new Set();
-    const mintedIds = (lesson.concepts || []).map((c) => makeConceptId(c, minted));
+    const isPage = !mod.concepts && Array.isArray(mod.sections);
+    const mintedIds = (lesson.concepts || []).map((c) => (isPage ? sectionId(c.term, minted) : makeConceptId(c, minted)));
     (lesson.concepts || []).forEach((c, i) => {
       const free = concepts.filter((k) => !usedC.has(k.id));
       const hit =

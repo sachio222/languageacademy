@@ -244,57 +244,248 @@
   "sections": [
     {
       "id": "s-numbers-0-20",
-      "heading": "Numbers 0-20",
-      "text": "The foundation numbers you need to memorize",
-      "example": "{0 zéro}, {1 un}, {2 deux}, {3 trois}, {4 quatre}, {5 cinq}, {6 six}, {7 sept}, {8 huit}, {9 neuf}, {10 dix}, {11 onze}, {12 douze}, {13 treize}, {14 quatorze}, {15 quinze}, {16 seize}, {17 dix-sept}, {18 dix-huit}, {19 dix-neuf}, {20 vingt}"
+      "heading": "Numbers 0 to 20",
+      "text": "Every number up to 16 is its own word, and these six from 11 to 16 follow no pattern. From 17 on, French adds: {dix-sept} is ten-seven.",
+      "examples": [
+        {
+          "fr": "onze",
+          "en": "eleven"
+        },
+        {
+          "fr": "douze",
+          "en": "twelve"
+        },
+        {
+          "fr": "treize",
+          "en": "thirteen"
+        },
+        {
+          "fr": "quatorze",
+          "en": "fourteen"
+        },
+        {
+          "fr": "quinze",
+          "en": "fifteen"
+        },
+        {
+          "fr": "seize",
+          "en": "sixteen"
+        }
+      ]
     },
     {
       "id": "s-tens-20-60",
-      "heading": "Tens (20-60)",
-      "text": "Regular tens that follow a pattern",
-      "example": "{20 vingt}, {30 trente}, {40 quarante}, {50 cinquante}, {60 soixante}"
+      "heading": "Tens from 20 to 60",
+      "text": "Each ten has its own word.",
+      "examples": [
+        {
+          "fr": "vingt",
+          "en": "twenty"
+        },
+        {
+          "fr": "trente",
+          "en": "thirty"
+        },
+        {
+          "fr": "quarante",
+          "en": "forty"
+        },
+        {
+          "fr": "cinquante",
+          "en": "fifty"
+        },
+        {
+          "fr": "soixante",
+          "en": "sixty"
+        }
+      ]
     },
     {
       "id": "s-the-famous-french-70s",
-      "heading": "The Famous French 70s!",
-      "text": "70 = sixty-ten (soixante-dix). French counts: 71 (sixty-eleven), 72 (sixty-twelve), etc.",
-      "example": "{70 soixante-dix}, {71 soixante-et-onze}, {75 soixante-quinze}, {79 soixante-dix-neuf}"
+      "heading": "70 to 79",
+      "text": "French counts 70 as sixty-ten, so 71 is sixty-eleven and 75 is sixty-fifteen.",
+      "examples": [
+        {
+          "fr": "soixante-dix",
+          "en": "seventy",
+          "note": "sixty-ten"
+        },
+        {
+          "fr": "soixante-et-onze",
+          "en": "seventy-one",
+          "note": "sixty-eleven"
+        },
+        {
+          "fr": "soixante-quinze",
+          "en": "seventy-five",
+          "note": "sixty-fifteen"
+        },
+        {
+          "fr": "soixante-dix-neuf",
+          "en": "seventy-nine",
+          "note": "sixty-nineteen"
+        }
+      ]
     },
     {
       "id": "s-the-infamous-french-80s",
-      "heading": "The Infamous French 80s!",
-      "text": "80 = four-twenties (quatre-vingts). A remnant of Celtic base-20 counting!",
-      "example": "{80 quatre-vingts}, {81 quatre-vingt-un}, {85 quatre-vingt-cinq}, {89 quatre-vingt-neuf}"
+      "heading": "80 to 89",
+      "text": "French counts 80 as four twenties. It takes an s only when nothing comes after it.",
+      "examples": [
+        {
+          "fr": "quatre-vingts",
+          "en": "eighty",
+          "note": "four twenties"
+        },
+        {
+          "fr": "quatre-vingt-un",
+          "en": "eighty-one"
+        },
+        {
+          "fr": "quatre-vingt-cinq",
+          "en": "eighty-five"
+        },
+        {
+          "fr": "quatre-vingt-neuf",
+          "en": "eighty-nine"
+        }
+      ]
     },
     {
       "id": "s-the-wild-french-90s",
-      "heading": "The Wild French 90s!",
-      "text": "90 = four-twenty-ten (quatre-vingt-dix). Combining both systems!",
-      "example": "{90 quatre-vingt-dix, 91 quatre-vingt-onze, 95 quatre-vingt-quinze, 99 quatre-vingt-dix-neuf}"
+      "heading": "90 to 99",
+      "text": "French counts 90 as four twenties and ten, so 91 is four twenties and eleven.",
+      "examples": [
+        {
+          "fr": "quatre-vingt-dix",
+          "en": "ninety"
+        },
+        {
+          "fr": "quatre-vingt-onze",
+          "en": "ninety-one"
+        },
+        {
+          "fr": "quatre-vingt-quinze",
+          "en": "ninety-five"
+        },
+        {
+          "fr": "quatre-vingt-dix-neuf",
+          "en": "ninety-nine"
+        }
+      ]
     },
     {
       "id": "s-numbers-21-69-pattern",
-      "heading": "Numbers 21-69 Pattern",
-      "text": "Add single digits with a hyphen. Use '{et}' (and) for 21, 31, 41, 51, 61",
-      "example": "{21 vingt-et-un}, {22 vingt-deux}, {35 trente-cinq}, {47 quarante-sept}, {69 soixante-neuf}"
+      "heading": "21 to 69",
+      "text": "Join the ten and the unit with a hyphen. For 21, 31, 41, 51 and 61, put {et} between them.",
+      "examples": [
+        {
+          "fr": "vingt-et-un",
+          "en": "twenty-one"
+        },
+        {
+          "fr": "vingt-deux",
+          "en": "twenty-two"
+        },
+        {
+          "fr": "trente-cinq",
+          "en": "thirty-five"
+        },
+        {
+          "fr": "quarante-sept",
+          "en": "forty-seven"
+        },
+        {
+          "fr": "soixante-neuf",
+          "en": "sixty-nine"
+        }
+      ]
     },
     {
       "id": "s-large-numbers",
-      "heading": "Large Numbers",
-      "text": "Hundreds, thousands, millions - building bigger numbers",
-      "example": "{100 cent}, {200 deux cents}, {1000 mille}, 1,000,{000 un million}, 1,000,000,{000 un milliard}"
+      "heading": "Hundreds and more",
+      "text": "{cent} is a hundred and {mille} is a thousand. Bigger numbers are built from them.",
+      "examples": [
+        {
+          "fr": "cent",
+          "en": "one hundred"
+        },
+        {
+          "fr": "deux cents",
+          "en": "two hundred"
+        },
+        {
+          "fr": "mille",
+          "en": "one thousand"
+        },
+        {
+          "fr": "un million",
+          "en": "one million"
+        },
+        {
+          "fr": "un milliard",
+          "en": "one billion"
+        }
+      ]
     },
     {
       "id": "s-belgian-swiss-variation",
-      "heading": "Belgian & Swiss Variation",
-      "text": "More logical! Belgium and Switzerland use: 70 septante, 90 nonante",
-      "example": "70 septante (vs soixante-dix), 90 nonante (vs quatre-vingt-dix). Much easier!"
+      "heading": "In Belgium and Switzerland",
+      "text": "People there say {septante} for 70 and {nonante} for 90. In parts of Switzerland they also say {huitante} for 80.",
+      "examples": [
+        {
+          "fr": "septante",
+          "en": "seventy",
+          "note": "in France, {soixante-dix}"
+        },
+        {
+          "fr": "septante-cinq",
+          "en": "seventy-five",
+          "note": "in France, {soixante-quinze}"
+        },
+        {
+          "fr": "nonante",
+          "en": "ninety",
+          "note": "in France, {quatre-vingt-dix}"
+        }
+      ]
     },
     {
       "id": "s-important-exceptions-rules",
-      "heading": "Important Exceptions & Rules",
-      "text": "Key exceptions you need to know to avoid common mistakes",
-      "example": "1) '{et}' (and) only for 21, 31, 41, 51, 61, 71 - NOT 81 or 91! 2) '{quatre-vingts}' (80) has 's' but '{quatre-vingt-un}' (81) loses it. 3) '{cents}' plural: '{deux cents}' (200) but '{deux cent un}' (201). 4) '{mille}' NEVER plural: '{trois mille}' (3,000) not 'milles'. 5) Hyphens between all parts EXCEPT before/after 'et' or '{cent}/{mille'}"
+      "heading": "Spelling rules that catch people out",
+      "text": "A few small rules decide when a number takes an s or {et}. Each example shows one.",
+      "examples": [
+        {
+          "fr": "quatre-vingt-un",
+          "en": "eighty-one",
+          "note": "no {et}, unlike {vingt-et-un}"
+        },
+        {
+          "fr": "quatre-vingts",
+          "en": "eighty",
+          "note": "an s when nothing follows"
+        },
+        {
+          "fr": "quatre-vingt-deux",
+          "en": "eighty-two",
+          "note": "no s when a number follows"
+        },
+        {
+          "fr": "deux cents",
+          "en": "two hundred",
+          "note": "an s when nothing follows"
+        },
+        {
+          "fr": "deux cent un",
+          "en": "two hundred one",
+          "note": "no s when a number follows"
+        },
+        {
+          "fr": "trois mille",
+          "en": "three thousand",
+          "note": "{mille} never takes an s"
+        }
+      ]
     }
   ]
 }

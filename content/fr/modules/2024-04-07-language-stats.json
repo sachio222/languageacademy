@@ -130,75 +130,249 @@
   "sections": [
     {
       "id": "s-french-sounds-phonology",
-      "heading": "French Sounds - Phonology",
-      "text": "French has 36-37 distinct sounds (phonemes) - 16 vowels and 20-21 consonants",
-      "example": "4 nasal vowels (ã, ẽ, õ, {œ̃}) - unique to French! No 'th' sound (why 'the' is hard). Uvular 'r' (back of throat)."
+      "heading": "French sounds",
+      "text": "French has about 36 distinct sounds. Four of them are nasal vowels, which English does not have.",
+      "examples": [
+        {
+          "fr": "blanc",
+          "en": "white",
+          "note": "the nasal vowel in {an}"
+        },
+        {
+          "fr": "le vin",
+          "en": "wine",
+          "note": "the nasal vowel in {in}"
+        },
+        {
+          "fr": "bon",
+          "en": "good",
+          "note": "the nasal vowel in {on}"
+        },
+        {
+          "fr": "un",
+          "en": "one",
+          "note": "the nasal vowel in {un}"
+        },
+        {
+          "fr": "rouge",
+          "en": "red",
+          "note": "the r comes from the back of the throat"
+        }
+      ]
     },
     {
       "id": "s-syllable-timed-language",
-      "heading": "Syllable-Timed Language",
-      "text": "Each syllable gets equal time - unlike English which stresses certain words",
-      "example": "French flows smoothly with even rhythm. No word stress like English! Emphasis on last syllable of phrases. Creates musical, flowing sound."
+      "heading": "Even rhythm",
+      "text": "French gives each syllable about the same length. English stresses some syllables and shortens others.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "No stressed syllable inside a word, as English has"
+        },
+        {
+          "text": "A little more weight on the last syllable of a phrase"
+        },
+        {
+          "text": "An even, flowing rhythm"
+        }
+      ]
     },
     {
       "id": "s-speaking-speed",
-      "heading": "Speaking Speed",
-      "text": "French speakers talk fast! 7.0-8.0 syllables per second vs English 6.5",
-      "example": "French needs more syllables to convey same info (lower information density), so speakers compensate by speaking faster!"
+      "heading": "Speaking speed",
+      "text": "French speakers say about 7 to 8 syllables a second, and English speakers about 6.5.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "French needs more syllables to say the same thing"
+        },
+        {
+          "text": "So speakers talk faster, and about as much is said each second"
+        }
+      ]
     },
     {
       "id": "s-the-alphabet-accents",
-      "heading": "The Alphabet & Accents",
-      "text": "26 letters + 5 diacritical marks + 2 ligatures",
-      "example": "Letters: same as English. Accents: {é è ê ë à ù û ç. Ligatures}: œ ({cœur}), æ ({rare}). {Total}: {33 unique characters!}"
+      "heading": "Letters and accents",
+      "text": "French uses the 26 English letters, five accents and two joined letters. Each word below shows one of them.",
+      "examples": [
+        {
+          "fr": "l'été",
+          "en": "summer",
+          "note": "é"
+        },
+        {
+          "fr": "très",
+          "en": "very",
+          "note": "è"
+        },
+        {
+          "fr": "la fête",
+          "en": "the party",
+          "note": "ê"
+        },
+        {
+          "fr": "Noël",
+          "en": "Christmas",
+          "note": "ë"
+        },
+        {
+          "fr": "ça",
+          "en": "that",
+          "note": "ç"
+        },
+        {
+          "fr": "le cœur",
+          "en": "the heart",
+          "note": "œ"
+        }
+      ]
     },
     {
       "id": "s-vocabulary-size",
-      "heading": "Vocabulary Size",
-      "text": "100,000 words in common use - educated speakers know 30,000 actively",
-      "example": "{Le Grand Robert dictionary}: 100,000 words, 350,000 definitions. Average person: 5,000-30,000 words depending on education."
+      "heading": "How many words",
+      "text": "A large French dictionary lists about 100,000 words in common use.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "Le Grand Robert dictionary: 100,000 words and 350,000 definitions"
+        },
+        {
+          "text": "An educated speaker uses about 30,000 words"
+        },
+        {
+          "text": "Most people know between 5,000 and 30,000"
+        }
+      ]
     },
     {
       "id": "s-french-influence-on-english",
-      "heading": "French Influence on English",
-      "text": "29% of English vocabulary comes from French (thanks to Norman Conquest 1066!)",
-      "example": "45% of English has Latin/French origins total. Beef, pork, royal, justice, parliament - all from French!"
+      "heading": "French in English",
+      "text": "About 29% of English words come from French, many since the Norman Conquest of 1066. English took the French words for several kinds of meat.",
+      "examples": [
+        {
+          "fr": "le bœuf",
+          "en": "beef, and also the animal"
+        },
+        {
+          "fr": "le porc",
+          "en": "pork, and also the animal"
+        },
+        {
+          "fr": "le mouton",
+          "en": "mutton, and also the sheep"
+        },
+        {
+          "fr": "le parlement",
+          "en": "parliament"
+        }
+      ]
     },
     {
       "id": "s-grammar-complexity",
-      "heading": "Grammar Complexity",
-      "text": "2 genders, 17-20 verb tenses, ~350 irregular verbs (only ~50 common)",
-      "example": "Masculine/Feminine. 3 verb groups (-er, -ir, -re) + irregulars. ~25 '{essential}' irregular verbs to memorize. SVO word order like English."
+      "heading": "Grammar in numbers",
+      "text": "French has two genders and many tenses, though everyday speech uses only a few of them.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "Every noun is masculine or feminine"
+        },
+        {
+          "text": "Three groups of regular verbs, ending in -er, -ir and -re"
+        },
+        {
+          "text": "About 350 irregular verbs, of which about 50 are common"
+        },
+        {
+          "text": "Subject, verb, object: the same order as English"
+        }
+      ]
     },
     {
       "id": "s-global-ranking",
-      "heading": "Global Ranking",
-      "text": "5th most spoken, 2nd most studied, 3rd language of business",
-      "example": "300M speakers (2023), projected 700M by 2050. Official in 29 countries. One of 6 UN languages. Growing fast in Africa!"
+      "heading": "French in the world",
+      "text": "French is the fifth most spoken language and the second most studied.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "About 300 million speakers in 2023"
+        },
+        {
+          "text": "About 700 million expected by 2050"
+        },
+        {
+          "text": "An official language in 29 countries"
+        },
+        {
+          "text": "One of the six official languages of the UN"
+        }
+      ]
     },
     {
       "id": "s-fun-language-facts",
-      "heading": "Fun Language Facts",
-      "text": "Quirky and interesting trivia about French",
-      "example": "Longest word: '{anticonstitutionnellement}' (25 letters). Most common word: '{de}'. Most common letter: 'e' (15%). No word for 'home' or '{shallow}'!"
+      "heading": "Records",
+      "text": "A few records from French. The most common letter is e.",
+      "examples": [
+        {
+          "fr": "anticonstitutionnellement",
+          "en": "unconstitutionally",
+          "note": "one of the longest French words, with 25 letters"
+        },
+        {
+          "fr": "de",
+          "en": "of, from",
+          "note": "the most common French word"
+        }
+      ]
     },
     {
       "id": "s-liaison-flow",
-      "heading": "Liaison & Flow",
-      "text": "Words link together smoothly - consonants connect to following vowels",
-      "example": "'{les enfants}' sounds like 'lay-zahn-fahn' (z sound links). '{un homme}' = '{uh-nom}'. Creates beautiful flowing speech!"
+      "heading": "Liaison",
+      "text": "A final consonant that is usually silent is said when the next word starts with a vowel.",
+      "examples": [
+        {
+          "fr": "les enfants",
+          "en": "the children",
+          "note": "sounds like lay-zahn-fahn"
+        },
+        {
+          "fr": "un homme",
+          "en": "a man",
+          "note": "sounds like uh-nom"
+        },
+        {
+          "fr": "les amis",
+          "en": "the friends",
+          "note": "sounds like lay-za-mee"
+        }
+      ]
     },
     {
       "id": "s-l-academie-francaise",
-      "heading": "{L'Académie Française}",
-      "text": "Official authority on French language since 1635 - protects '{purity}' of French",
-      "example": "40 immortals (lifetime members) decide official French. Resist English words. Prefer '{ordinateur}' to '{computer}', '{courriel}' to '{email}'."
+      "heading": "{l'Académie française}",
+      "text": "Since 1635 the French Academy has set the official rules of French. Its 40 members are called the immortals, and they suggest French words in place of English ones.",
+      "examples": [
+        {
+          "fr": "un ordinateur",
+          "en": "a computer"
+        },
+        {
+          "fr": "un courriel",
+          "en": "an email",
+          "note": "the Academy's word; many people say {e-mail}"
+        }
+      ]
     },
     {
       "id": "s-perfect-french-pangram",
-      "heading": "Perfect French Pangram",
-      "text": "A sentence using all 26 letters",
-      "example": "'{Portez ce vieux whisky au juge blond qui fume}' (Bring this old whisky to the blonde judge who smokes)"
+      "heading": "A sentence with every letter",
+      "text": "This sentence uses all 26 letters of the alphabet.",
+      "examples": [
+        {
+          "fr": "Portez ce vieux whisky au juge blond qui fume.",
+          "en": "Bring this old whisky to the blond judge who is smoking."
+        }
+      ]
     }
   ]
 }

@@ -813,6 +813,11 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
     }
     // A card as the adapter shows it must be a card of the recorded concepts, its id with its own text, so a fix never
     // explains a card the learner would see with another card's id or definition.
+    // A Reference page shows its sections as concept cards: each section is its own part, sections/<id>.
+    if (/^concepts\[/.test(d.path) && !m.concepts && Array.isArray(m.sections)) {
+      const s = isObj(d.concept) ? m.sections.find((x) => x.id === d.concept.id) : null;
+      return !!s && holds(d.module_key, `sections/${s.id}`, s) && shownCard([{ id: s.id, term: s.heading, definition: s.text }], d.concept);
+    }
     if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts) && (!isObj(d.concept) || shownCard(m.concepts, d.concept));
     // An added exercise: the item it is drawn from was added by hand and is recorded.
     if (/^exercises\[\+\d+\]$/.test(d.path) && d.live === undefined && isObj(d.converted))

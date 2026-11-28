@@ -91,3 +91,17 @@ test('a concept card rewritten on the branch (term, definition and examples) kee
   assert.deepEqual(map[old.moduleKey].concepts, { 0: a.id, 1: b.id });
   assert.deepEqual(unmatched.filter((u) => u.what === 'concept'), []);
 });
+
+test('a Reference section rewritten on the branch keeps its live index through the section id minted from its live term', () => {
+  const page = { moduleKey: '2024-04-05-colors', title: 'Colors', exerciseConfig: { items: [] }, concepts: [
+    { term: 'Colors are Adjectives', definition: 'They agree.', example: '{le ciel bleu} (the blue sky)' },
+    { term: 'Basic Colors', definition: 'The common ones.', example: '{bleu} (blue), {rouge} (red)' },
+  ] };
+  const rewritten = { module_key: page.moduleKey, kind: 'reference', sections: [
+    { id: 's-colors-are-adjectives', heading: 'Colors agree with their noun', text: 'A color takes the gender of its noun.', examples: [{ fr: 'le ciel bleu', en: 'the blue sky' }] },
+    { id: 's-basic-colors', heading: 'The colors you use most', text: 'Learn these first.', examples: [{ fr: 'bleu', en: 'blue' }] },
+  ] };
+  const { map, unmatched } = liveIdMatch([live(page)], new Map([[page.moduleKey, rewritten]]));
+  assert.deepEqual(map[page.moduleKey].concepts, { 0: 's-colors-are-adjectives', 1: 's-basic-colors' });
+  assert.deepEqual(unmatched.filter((u) => u.what === 'concept'), []);
+});

@@ -226,45 +226,152 @@
   "sections": [
     {
       "id": "s-colors-are-adjectives",
-      "heading": "Colors are Adjectives",
-      "text": "In French, colors are adjectives that agree with the noun in gender and number. They usually come AFTER the noun.",
-      "example": "{le ciel bleu} (the blue sky), {une maison blanche} (a white house), {des yeux verts} (green eyes)"
+      "heading": "Colors are adjectives",
+      "text": "A color agrees with its noun in gender and number, and it usually comes after the noun.",
+      "examples": [
+        {
+          "fr": "le ciel bleu",
+          "en": "the blue sky"
+        },
+        {
+          "fr": "une maison blanche",
+          "en": "a white house"
+        },
+        {
+          "fr": "des yeux verts",
+          "en": "green eyes"
+        }
+      ]
     },
     {
       "id": "s-basic-colors",
-      "heading": "Basic Colors",
-      "text": "The most common colors you'll use every day - memorize these first!",
-      "example": "{bleu} (blue), {rouge} (red), {vert} (green), {jaune} (yellow), {blanc} (white), {noir} (black)"
+      "heading": "Basic colors",
+      "text": "The six colors you will use most.",
+      "examples": [
+        {
+          "fr": "bleu",
+          "en": "blue"
+        },
+        {
+          "fr": "rouge",
+          "en": "red"
+        },
+        {
+          "fr": "vert",
+          "en": "green"
+        },
+        {
+          "fr": "jaune",
+          "en": "yellow"
+        },
+        {
+          "fr": "blanc",
+          "en": "white"
+        },
+        {
+          "fr": "noir",
+          "en": "black"
+        }
+      ]
     },
     {
       "id": "s-feminine-forms",
-      "heading": "Feminine Forms",
-      "text": "Add -e to make most colors feminine. Some have special forms.",
-      "example": "{bleu} → {bleue}, {vert} → {verte}, {blanc} → {blanche}, {rouge} → rouge (no change)"
+      "heading": "Feminine forms",
+      "text": "Most colors add -e with a feminine noun. A color that already ends in -e stays the same.",
+      "examples": [
+        {
+          "fr": "une voiture bleue",
+          "en": "a blue car"
+        },
+        {
+          "fr": "une robe verte",
+          "en": "a green dress"
+        },
+        {
+          "fr": "une maison blanche",
+          "en": "a white house",
+          "note": "{blanc} becomes {blanche}"
+        },
+        {
+          "fr": "une fleur rouge",
+          "en": "a red flower",
+          "note": "no change"
+        }
+      ]
     },
     {
       "id": "s-plural-forms",
-      "heading": "Plural Forms",
-      "text": "Add -s for plural (unless already ends in -s or -x)",
-      "example": "{bleu} → {bleus} (masculine plural), {bleue} → {bleues} (feminine plural), {gris} → gris (no change)"
+      "heading": "Plural forms",
+      "text": "Add -s with a plural noun, unless the color already ends in -s or -x.",
+      "examples": [
+        {
+          "fr": "des yeux bleus",
+          "en": "blue eyes"
+        },
+        {
+          "fr": "des fleurs bleues",
+          "en": "blue flowers"
+        },
+        {
+          "fr": "des chats gris",
+          "en": "gray cats",
+          "note": "no change"
+        }
+      ]
     },
     {
       "id": "s-invariable-colors",
-      "heading": "Invariable Colors",
-      "text": "Some colors never change: marron (brown), orange (orange). These are actually nouns used as adjectives!",
-      "example": "{un chat marron}, {une maison marron}, {des chats marron} (no -s!)"
+      "heading": "Colors that never change",
+      "text": "{marron} and {orange} are also nouns, a chestnut and an orange, so they never change.",
+      "examples": [
+        {
+          "fr": "un chat marron",
+          "en": "a brown cat"
+        },
+        {
+          "fr": "une maison marron",
+          "en": "a brown house"
+        },
+        {
+          "fr": "des chats marron",
+          "en": "brown cats",
+          "note": "no -s"
+        }
+      ]
     },
     {
       "id": "s-compound-colors",
-      "heading": "Compound Colors",
-      "text": "Colors with two words or modified colors are invariable (never change)",
-      "example": "{des yeux bleu clair} (light blue eyes), {des robes bleu foncé} (dark blue dresses)"
+      "heading": "Two-word colors",
+      "text": "A color with a second word, such as light or dark, never changes.",
+      "examples": [
+        {
+          "fr": "des yeux bleu clair",
+          "en": "light blue eyes"
+        },
+        {
+          "fr": "des robes bleu foncé",
+          "en": "dark blue dresses"
+        }
+      ]
     },
     {
       "id": "s-using-colors-in-questions",
-      "heading": "Using Colors in Questions",
-      "text": "Now you can ask about colors of things!",
-      "example": "{De quelle couleur est le ciel?} (What color is the sky?) → {Le ciel est bleu. Pourquoi est-ce que l'herbe est verte?} (Why is grass green?)"
+      "heading": "Asking about colors",
+      "text": "Ask {De quelle couleur est…} and answer with the color.",
+      "examples": [
+        {
+          "fr": "De quelle couleur est le ciel ?",
+          "en": "What color is the sky?"
+        },
+        {
+          "fr": "Le ciel est bleu.",
+          "en": "The sky is blue."
+        },
+        {
+          "fr": "Pourquoi est-ce que l'herbe est verte ?",
+          "en": "Why is grass green?"
+        }
+      ]
     }
   ]
 }

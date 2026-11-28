@@ -178,27 +178,147 @@
   "sections": [
     {
       "id": "s-days-of-the-week",
-      "heading": "Days of the Week",
-      "text": "Seven days - NEVER capitalized in French (unlike English!)",
-      "example": "{lundi} (Monday), {mardi} (Tuesday), {mercredi} (Wednesday), {jeudi} (Thursday), {vendredi} (Friday), {samedi} (Saturday), {dimanche} (Sunday)"
+      "heading": "Days of the week",
+      "text": "French writes the days with a small letter. The week starts on Monday.",
+      "rows": [
+        {
+          "fr": "lundi",
+          "en": "Monday"
+        },
+        {
+          "fr": "mardi",
+          "en": "Tuesday"
+        },
+        {
+          "fr": "mercredi",
+          "en": "Wednesday"
+        },
+        {
+          "fr": "jeudi",
+          "en": "Thursday"
+        },
+        {
+          "fr": "vendredi",
+          "en": "Friday"
+        },
+        {
+          "fr": "samedi",
+          "en": "Saturday"
+        },
+        {
+          "fr": "dimanche",
+          "en": "Sunday"
+        }
+      ]
     },
     {
       "id": "s-months-of-the-year",
-      "heading": "Months of the Year",
-      "text": "Twelve months - also NEVER capitalized in French",
-      "example": "{janvier}, {février}, {mars}, {avril}, {mai}, {juin}, {juillet}, {août}, {septembre}, {octobre}, {novembre}, {décembre}"
+      "heading": "Months of the year",
+      "text": "Months take a small letter too. Say {en} before a month for in: {en mai}, in May.",
+      "rows": [
+        {
+          "fr": "janvier",
+          "en": "January"
+        },
+        {
+          "fr": "février",
+          "en": "February"
+        },
+        {
+          "fr": "mars",
+          "en": "March"
+        },
+        {
+          "fr": "avril",
+          "en": "April"
+        },
+        {
+          "fr": "mai",
+          "en": "May"
+        },
+        {
+          "fr": "juin",
+          "en": "June"
+        },
+        {
+          "fr": "juillet",
+          "en": "July"
+        },
+        {
+          "fr": "août",
+          "en": "August"
+        },
+        {
+          "fr": "septembre",
+          "en": "September"
+        },
+        {
+          "fr": "octobre",
+          "en": "October"
+        },
+        {
+          "fr": "novembre",
+          "en": "November"
+        },
+        {
+          "fr": "décembre",
+          "en": "December"
+        }
+      ]
     },
     {
       "id": "s-seasons-les-saisons",
-      "heading": "Seasons ({Les Saisons})",
-      "text": "Four seasons - note the articles!",
-      "example": "{le printemps} (spring), {l'été} (summer), {l'automne} (fall), {l'hiver} (winter)"
+      "heading": "Seasons",
+      "text": "Each season takes {le} or {l'}. Say {au printemps} for in spring, and {en} for the other three.",
+      "examples": [
+        {
+          "fr": "le printemps",
+          "en": "spring"
+        },
+        {
+          "fr": "l'été",
+          "en": "summer"
+        },
+        {
+          "fr": "l'automne",
+          "en": "fall"
+        },
+        {
+          "fr": "l'hiver",
+          "en": "winter"
+        },
+        {
+          "fr": "en hiver",
+          "en": "in winter"
+        }
+      ]
     },
     {
       "id": "s-useful-time-phrases",
-      "heading": "Useful Time Phrases",
-      "text": "Essential words for talking about days and time",
-      "example": "{aujourd'hui} (today), {demain} (tomorrow), {hier} (yesterday), {cette semaine} (this week), {le week-end} (the weekend)"
+      "heading": "Today, tomorrow, this week",
+      "text": "Words for saying when.",
+      "examples": [
+        {
+          "fr": "aujourd'hui",
+          "en": "today"
+        },
+        {
+          "fr": "demain",
+          "en": "tomorrow"
+        },
+        {
+          "fr": "hier",
+          "en": "yesterday"
+        },
+        {
+          "fr": "cette semaine",
+          "en": "this week"
+        },
+        {
+          "fr": "la semaine prochaine",
+          "en": "next week"
+        }
+      ]
     }
   ]
 }

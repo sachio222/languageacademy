@@ -208,45 +208,147 @@
   "sections": [
     {
       "id": "s-the-french-alphabet",
-      "heading": "The French Alphabet",
-      "text": "French uses the same 26 letters as English, but pronunciation is very different!",
-      "example": "A ({ah}), B (bay), C (say), D (day), E ({euh}), F (eff), G (zhay), H (ash), I (ee), J (zhee), K (kah), L (ell), M (emm), N (enn), O ({oh}), P (pay), Q (koo), R ({air}), S (ess), T (tay), U (oo), V (vay), W (doo-bluh-vay), X (eex), Y (ee-grek), Z (zed)"
+      "heading": "The French alphabet",
+      "text": "French uses the same 26 letters as English, but names them differently. These are the names that sound least like English.",
+      "layout": "plain",
+      "examples": [
+        {
+          "text": "A is said ah"
+        },
+        {
+          "text": "E is said euh"
+        },
+        {
+          "text": "G is said zhay, and J is said zhee"
+        },
+        {
+          "text": "I is said ee"
+        },
+        {
+          "text": "R is said air, from the back of the throat"
+        },
+        {
+          "text": "W is said doo-bluh-vay"
+        }
+      ]
     },
     {
       "id": "s-accent-aigu-e",
-      "heading": "Accent Aigu (é)",
-      "text": "The acute accent - appears only on 'e' and makes it sound like 'ay'",
-      "example": "{café}, {été} (summer), {déjà}"
+      "heading": "The acute accent: é",
+      "text": "It sits only on e and makes it sound like ay.",
+      "examples": [
+        {
+          "fr": "le café",
+          "en": "coffee, or a café"
+        },
+        {
+          "fr": "l'été",
+          "en": "summer"
+        },
+        {
+          "fr": "déjà",
+          "en": "already"
+        }
+      ]
     },
     {
       "id": "s-accent-grave-e-a",
-      "heading": "{Accent Grave} ({è, à, ù})",
-      "text": "The grave accent - on 'e' makes it sound like 'eh', on 'a' and 'u' it distinguishes meaning",
-      "example": "{très}, {où} (where), {là} (there)"
+      "heading": "The grave accent: è, à, ù",
+      "text": "On e it makes the sound eh. On a and u it does not change the sound but tells two words apart, like {où} (where) and {ou} (or).",
+      "examples": [
+        {
+          "fr": "très",
+          "en": "very"
+        },
+        {
+          "fr": "où",
+          "en": "where"
+        },
+        {
+          "fr": "là",
+          "en": "there"
+        }
+      ]
     },
     {
       "id": "s-accent-circonflexe-a-e",
-      "heading": "Accent Circonflexe ({â, ê, î, ô, û})",
-      "text": "The circumflex - can appear on any vowel, often indicates a historical 's' was dropped",
-      "example": "{être} (to be), {hôtel}, {pâtes} (pasta), {île} (island)"
+      "heading": "The circumflex: â, ê, î, ô, û",
+      "text": "It can sit on any vowel. It often marks an s the word lost long ago: {hôtel} was once spelled hostel.",
+      "examples": [
+        {
+          "fr": "être",
+          "en": "to be"
+        },
+        {
+          "fr": "l'hôtel",
+          "en": "the hotel"
+        },
+        {
+          "fr": "les pâtes",
+          "en": "pasta"
+        },
+        {
+          "fr": "l'île",
+          "en": "the island"
+        }
+      ]
     },
     {
       "id": "s-trema-e-i-u",
-      "heading": "{Tréma} ({ë, ï, ü, ÿ})",
-      "text": "The diaeresis - indicates two vowels are pronounced separately",
-      "example": "{Noël} (Christmas), {naïve}, {maïs} (corn)"
+      "heading": "The diaeresis: ë, ï, ü, ÿ",
+      "text": "It tells you to say two vowels one after the other, not as one sound.",
+      "examples": [
+        {
+          "fr": "Noël",
+          "en": "Christmas"
+        },
+        {
+          "fr": "naïf",
+          "en": "naive"
+        },
+        {
+          "fr": "le maïs",
+          "en": "corn"
+        }
+      ]
     },
     {
       "id": "s-cedille-c",
-      "heading": "{Cédille} (ç)",
-      "text": "The cedilla - makes 'c' sound like 's' before a, o, u",
-      "example": "{ça}, {français}, {garçon} (boy)"
+      "heading": "The cedilla: ç",
+      "text": "It makes c sound like s before a, o or u.",
+      "examples": [
+        {
+          "fr": "ça",
+          "en": "that"
+        },
+        {
+          "fr": "français",
+          "en": "French"
+        },
+        {
+          "fr": "le garçon",
+          "en": "the boy"
+        }
+      ]
     },
     {
       "id": "s-ligatures-oe-ae",
-      "heading": "Ligatures ({œ, æ})",
-      "text": "Two letters merged together - œ is common, æ is rare",
-      "example": "{cœur} (heart), {sœur} (sister), curriculum vitæ"
+      "heading": "Joined letters: œ and æ",
+      "text": "Two letters written as one. You see œ often, and æ almost never.",
+      "examples": [
+        {
+          "fr": "le cœur",
+          "en": "the heart"
+        },
+        {
+          "fr": "la sœur",
+          "en": "the sister"
+        },
+        {
+          "fr": "un œuf",
+          "en": "an egg"
+        }
+      ]
     }
   ]
 }
