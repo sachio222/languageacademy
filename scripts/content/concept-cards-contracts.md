@@ -108,6 +108,21 @@ See the handback report of the change for each run's evidence; the claims and ho
 | L draws the list, the two columns and the single strip | `l/tests/run.sh "card"`; the Unit 2 playthrough | vault |
 | New units are written in the new shape | `node --test scripts/plan/test/brief-cards.test.mjs` | course-main |
 
+### Results at commit fc4e204 (2026-11-27)
+
+| Claim | Evidence | Checked from | Status |
+|---|---|---|---|
+| Checker rules hold | content:test 444 of 444 pass (concept-cards 32, concept-cards-migrate 6) | course-main | PROVEN |
+| Units 1 to 3 hold no old string | content test "Units 1 to 3 are migrated" passes; content:validate ok, 405 modules | course-main | PROVEN |
+| Example French is taught before used | graph:check --budget ok; Units 1 to 3 issues 258 to 248, none on a concept card | course-main | PROVEN |
+| Records match the edits | content:migrate --check ok; live-ids lose no concept (one more matched) | course-main | PROVEN |
+| Bundle and L's checker | content:bundle --check ok; build-spec test_check_bundle 51 of 51; check_contracts 0 problems; vendor-check matches | course-main, vault | PROVEN |
+| L draws list, forms, plain, single strip, old strings | l/tests/run.sh 285 of 286 (the one failure is the paused-plan test, unrelated) | vault | PROVEN |
+| L takes the bundle | check-release.sh PASSED, SHA-256 a9fc402a…; course.html 16 of 16, play.html 16 of 16 | vault | PROVEN |
+| Unit 2 cards render as the Example list | 50 cards in 11 lessons drawn as ex-list (forms as two columns), none as the old line, no play control on a plain list | L in headless Chrome | PROVEN |
+| French is what a native speaker says | not checked by a native speaker | none | UNKNOWN |
+| pipeline:test agreement suite | fails before and after on unclassified conjugation codes; the new codes are classified | course-main | FAILED (earlier work) |
+
 ## 8. Open items
 
 - A native speaker checks every example sentence written or changed in Units 1 to 3 (listed on the review page).
