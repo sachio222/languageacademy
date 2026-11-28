@@ -258,14 +258,13 @@
   },
   "2024-01-15-vouloir": {
     "items": {
-      "2024-01-15-vouloir.2": "i-je-veux-un-cafe-maintenant",
+      "2024-01-15-vouloir.1": "i-je-veux-un-cafe-maintenant",
       "2024-01-15-vouloir.5": "i-nous-voulons-une-chambre",
       "2024-01-15-vouloir.6": "i-vous-voulez-la-carte",
       "2024-01-15-vouloir.12": "i-je-veux-avoir-un-chat"
     },
     "concepts": {
       "0": "c-vouloir-to-want",
-      "1": "c-irregular-conjugation-pattern",
       "2": "c-composition-power"
     }
   },

@@ -32,8 +32,8 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 788 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1568 |
-| Live ids with no converted item | 368 (53 real misses) |
+| Hand edits kept | 1580 |
+| Live ids with no converted item | 369 (54 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
 | Notes | 3 |
@@ -1991,7 +1991,19 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary/vous-voulez-fr` ""word_id":"vous-voulez-fr","fr":"vous voulez","gloss":"you want (formal)","note":"formal/plural"" → "(removed)"
 - `vocabulary/ils-veulent-fr` ""word_id":"ils-veulent-fr","fr":"ils veulent","gloss":"they want (masc)","note":"irregular"" → "(removed)"
 - `vocabulary/elles-veulent-fr` ""word_id":"elles-veulent-fr","fr":"elles veulent","gloss":"they want (fem)","note":"same as ils"" → "(removed)"
-- `concepts` "["id":"c-vouloir-to-want","term":"vouloir = to want","definition":"Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French.","example":"'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)","id":"c-irregular-conjugation-pattern","term":"Irregular Conjugation Pattern","definition":"Notice the pattern: je/tu both use 'veux', then il/elle use 'veut', nous uses 'voulons', and ils/elles use 'veulent'!","example":"je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent","id":"c-composition-power","term":"Composition Power","definition":"Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!","example":"je veux + ça, nous voulons + être, ils veulent + avoir + un livre"]" → "["id":"c-vouloir-to-want","term":"vouloir = to want","definition":"Put a thing after vouloir to say what you want. Ask Tu veux…? to offer a friend something.","examples":["fr":"Je veux un café.","en":"I want a coffee.","fr":"Tu veux ça ?","en":"Do you want that?","fr":"Ça va ? Tu veux un café ?","en":"How are you? Do you want a coffee?","fr":"Non merci, je ne veux rien.","en":"No thanks, I don't want anything."],"id":"c-composition-power","term":"Wanting to do something","definition":"Put a second verb straight after vouloir to say what you want to do. The second verb does not change.","examples":["fr":"Je veux être heureux.","en":"I want to be happy.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."],"id":"c-irregular-conjugation-pattern","term":"Three stems","definition":"The stem changes three times: once for the singular, once for we and you, and once for they.","layout":"forms","examples":["fr":"je veux","en":"I want","fr":"tu veux","en":"you want","fr":"il veut","en":"he wants","fr":"nous voulons","en":"we want","fr":"vous voulez","en":"you want","fr":"ils veulent","en":"they want"],"id":"c-je-voudrais","term":"Je voudrais, the polite way to ask","definition":"Je voudrais means I would like. Use it with a waiter, a clerk or anyone you do not know, since je veux can sound blunt to them.","examples":["fr":"Je voudrais un café, s'il vous plaît.","en":"I'd like a coffee, please.","fr":"Bonjour, je voudrais ce livre.","en":"Hello, I'd like this book.","fr":"Je veux un café, s'il te plaît.","en":"I want a coffee, please.","note":"to a friend"]]"
+- `concepts[0].definition` "Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French." → "Put a thing after vouloir to say what you want. Ask Tu veux…? to offer a friend something."
+- `concepts[0].examples` "(none)" → "["fr":"Je veux un café.","en":"I want a coffee.","fr":"Tu veux ça ?","en":"Do you want that?","fr":"Ça va ? Tu veux un café ?","en":"How are you? Do you want a coffee?","fr":"Non merci, je ne veux rien.","en":"No thanks, I don't want anything."]"
+- `concepts[0].example` ""'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)"" → "(removed)"
+- `concepts[1].id` "c-irregular-conjugation-pattern" → "c-composition-power"
+- `concepts[1].term` "Irregular Conjugation Pattern" → "Wanting to do something"
+- `concepts[1].definition` "Notice the pattern: je/tu both use 'veux', then il/elle use 'veut', nous uses 'voulons', and ils/elles use 'veulent'!" → "Put a second verb straight after vouloir to say what you want to do. The second verb does not change."
+- `concepts[1].examples` "(none)" → "["fr":"Je veux être heureux.","en":"I want to be happy.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."]"
+- `concepts[1].example` ""je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent"" → "(removed)"
+- `concepts[2].id` "c-composition-power" → "c-je-voudrais"
+- `concepts[2].term` "Composition Power" → "Je voudrais, the polite way to ask"
+- `concepts[2].definition` "Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!" → "Je voudrais means I would like. Use it with a waiter, a clerk or anyone you do not know, since je veux can sound blunt to them."
+- `concepts[2].examples` "(none)" → "["fr":"Je voudrais un café, s'il vous plaît.","en":"I'd like a coffee, please.","fr":"Bonjour, je voudrais ce livre.","en":"Hello, I'd like this book.","fr":"Je veux un café, s'il te plaît.","en":"I want a coffee, please.","note":"to a friend"]"
+- `concepts[2].example` ""je veux + ça, nous voulons + être, ils veulent + avoir + un livre"" → "(removed)"
 - `conjugation` "(none)" → ""verb":"vouloir","en":"to want","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.""
 - `phrases` "(none)" → "["phrase_id_suffix":"je-veux-un-the","fr":"Je veux un thé.","word_id":"vouloir-fr","phrase_id_suffix":"je-voudrais-un-billet","fr":"Je voudrais un billet, s'il vous plaît.","word_id":"je-voudrais-fr","phrase_id_suffix":"ils-veulent-quelque-chose","fr":"Ils veulent quelque chose.","word_id":"quelque-chose-fr","phrase_id_suffix":"tu-veux-un-verre","fr":"Tu veux un verre ?","word_id":"un-verre-fr","phrase_id_suffix":"encore-un-cafe","fr":"Tu veux encore un café ?","word_id":"encore-fr","phrase_id_suffix":"laddition-maintenant","fr":"Vous voulez l'addition maintenant ?","word_id":"maintenant-fr"]"
 
@@ -3713,7 +3725,7 @@ The live app stores answers under these exercise ids and concept indexes, and no
 
 **2024-01-15-vouloir**
 
-- `2024-01-15-vouloir.1` exercise "I want" → "je veux"
+- `2024-01-15-vouloir.2` exercise "you want (informal)" → "tu veux"
 - `2024-01-15-vouloir.3` exercise "he wants" → "il veut"
 - `2024-01-15-vouloir.4` exercise "she wants" → "elle veut"
 - `2024-01-15-vouloir.7` exercise "they want (masculine)" → "ils veulent"
@@ -3723,6 +3735,7 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `2024-01-15-vouloir.11` exercise "I want to be a friend" → "je veux être un ami"
 - `2024-01-15-vouloir.13` exercise "She wants to have a house" → "elle veut avoir une maison"
 - `2024-01-15-vouloir.14` exercise "I want this, please" → "je veux ça, s'il vous plaît"
+- `concepts[1]` concept "Irregular Conjugation Pattern"
 
 **2024-01-29-partir**
 

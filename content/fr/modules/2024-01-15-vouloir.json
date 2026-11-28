@@ -165,38 +165,6 @@
       ]
     },
     {
-      "id": "c-irregular-conjugation-pattern",
-      "term": "Three stems",
-      "definition": "The stem changes three times: once for the singular, once for we and you, and once for they.",
-      "layout": "forms",
-      "examples": [
-        {
-          "fr": "je veux",
-          "en": "I want"
-        },
-        {
-          "fr": "tu veux",
-          "en": "you want"
-        },
-        {
-          "fr": "il veut",
-          "en": "he wants"
-        },
-        {
-          "fr": "nous voulons",
-          "en": "we want"
-        },
-        {
-          "fr": "vous voulez",
-          "en": "you want"
-        },
-        {
-          "fr": "ils veulent",
-          "en": "they want"
-        }
-      ]
-    },
-    {
       "id": "c-je-voudrais",
       "term": "{Je voudrais}, the polite way to ask",
       "definition": "{Je voudrais} means I would like. Use it with a waiter, a clerk or anyone you do not know, since {je veux} can sound blunt to them.",
@@ -341,19 +309,23 @@
     },
     {
       "id": "i-la-carte-poliment",
-      "type": "choice",
-      "question": "Sophie and Thomas sit down. Sophie wants the menu from the waiter. What does she say?",
-      "options": [
+      "type": "respond",
+      "situation": "Sophie and Thomas sit down at the café. Sophie asks the waiter for the menu.",
+      "answer": "je voudrais la carte, s'il vous plaît",
+      "accept": [
+        "la carte, s'il vous plaît",
+        "je voudrais la carte",
+        "bonjour, je voudrais la carte, s'il vous plaît",
+        "bonjour, la carte, s'il vous plaît"
+      ],
+      "mistakes": [
         {
-          "text": "Je voudrais la carte, s'il vous plaît.",
-          "right": true
-        },
-        {
-          "text": "Je veux la carte, s'il te plaît."
-        },
-        {
-          "text": "Je voudrais l'addition, s'il vous plaît."
+          "answer": "je voudrais la carte, s'il te plaît",
+          "feedback": "{s'il te plaît} is for a friend. To the waiter, say {s'il vous plaît}."
         }
+      ],
+      "steps": [
+        "lesson-exam"
       ]
     },
     {
@@ -461,19 +433,24 @@
     },
     {
       "id": "i-non-merci-je-ne-veux-rien",
-      "type": "choice",
-      "question": "Thomas asks Sophie: {Tu veux encore un café ?} She has had enough coffee. What does she say?",
-      "options": [
+      "type": "respond",
+      "situation": "Thomas asks Sophie: {Tu veux encore un café ?} She has had enough coffee and says no, kindly.",
+      "answer": "non merci, je ne veux rien",
+      "accept": [
+        "non merci",
+        "non, merci",
+        "non merci, ça va",
+        "non merci, je ne veux pas de café",
+        "non merci, je ne veux plus de café"
+      ],
+      "mistakes": [
         {
-          "text": "Non merci, je ne veux rien.",
-          "right": true
-        },
-        {
-          "text": "Oui, encore un café, s'il te plaît."
-        },
-        {
-          "text": "Non merci, je veux encore un café."
+          "answer": "non merci, je ne veux pas rien",
+          "feedback": "With {rien}, leave out {pas}: {je ne veux rien}."
         }
+      ],
+      "steps": [
+        "lesson-exam"
       ]
     },
     {
@@ -583,19 +560,21 @@
     },
     {
       "id": "i-encore-quelque-chose",
-      "type": "choice",
-      "question": "The waiter asks Sophie and Thomas: {Vous voulez encore quelque chose ?} What does he want to know?",
-      "options": [
+      "type": "transform",
+      "instruction": "The waiter has brought two coffees. Later he asks Sophie and Thomas if they want anything more. Ask it as the waiter, with {encore}.",
+      "shown": "Vous voulez quelque chose ?",
+      "answer": "vous voulez encore quelque chose ?",
+      "accept": [
+        "encore quelque chose ?"
+      ],
+      "mistakes": [
         {
-          "text": "If they want anything else.",
-          "right": true
-        },
-        {
-          "text": "If they want the bill now."
-        },
-        {
-          "text": "If they want the menu."
+          "answer": "vous voulez quelque chose encore ?",
+          "feedback": "{encore} goes right before what is offered: {encore quelque chose}."
         }
+      ],
+      "steps": [
+        "lesson-exam"
       ]
     },
     {
