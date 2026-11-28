@@ -75,33 +75,103 @@
   "concepts": [
     {
       "id": "c-connaitre-to-know-people",
-      "term": "{connaître} = to know (people or places)",
-      "definition": "CRITICAL distinction: connaître is for people you know or places you're familiar with",
-      "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris), {Je ne sais pas, je ne connais pas Paris} (I don't know, I don't know Paris)"
+      "term": "{connaître} = to know",
+      "definition": "Use {connaître} for people and places you know, and for things you are familiar with.",
+      "examples": [
+        {
+          "fr": "Je connais Marie.",
+          "en": "I know Marie."
+        },
+        {
+          "fr": "Je connais Paris.",
+          "en": "I know Paris."
+        },
+        {
+          "fr": "Je ne sais pas, je ne connais pas Paris.",
+          "en": "I don't know, I don't know Paris."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation-with-i",
-      "term": "Irregular conjugation with î",
-      "definition": "Present: je connais, tu connais, il connaît, nous connaissons, vous connaissez, ils connaissent",
-      "example": "Notice: î with circumflex accent in il/elle form, double -ss- in plural"
+      "term": "The forms of {connaître}",
+      "definition": "The form for he and she keeps the î. The plural forms add -ss-.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je connais",
+          "en": "I know"
+        },
+        {
+          "fr": "tu connais",
+          "en": "you know"
+        },
+        {
+          "fr": "il connaît",
+          "en": "he knows"
+        },
+        {
+          "fr": "nous connaissons",
+          "en": "we know"
+        },
+        {
+          "fr": "vous connaissez",
+          "en": "you know"
+        },
+        {
+          "fr": "ils connaissent",
+          "en": "they know"
+        }
+      ]
     },
     {
       "id": "c-the-key-distinction-savoir",
-      "term": "THE KEY DISTINCTION: savoir vs connaître",
-      "definition": "savoir = facts/skills (learned), connaître = people/places (familiarity)",
-      "example": "{je sais la réponse} (I know the answer) BUT je connais Marie (I know Marie)"
+      "term": "{savoir} or {connaître}",
+      "definition": "{savoir} is for facts and skills. {connaître} is for people, places and things you know well.",
+      "examples": [
+        {
+          "fr": "Je sais la réponse.",
+          "en": "I know the answer."
+        },
+        {
+          "fr": "Je connais Marie.",
+          "en": "I know Marie."
+        },
+        {
+          "fr": "Je sais son nom, mais je ne le connais pas.",
+          "en": "I know his name, but I don't know him."
+        }
+      ]
     },
     {
       "id": "c-never-use-connaitre-infinitive",
-      "term": "NEVER use connaître + infinitive",
-      "definition": "You CANNOT say '{je connais parler}' - use savoir for skills!",
-      "example": "✓ {je sais parler} (I know how to speak), ✗ {je connais parler} (WRONG!)"
+      "term": "A skill takes {savoir}",
+      "definition": "Before another verb, always use {savoir}, never {connaître}.",
+      "examples": [
+        {
+          "fr": "Je sais parler français.",
+          "en": "I can speak French."
+        },
+        {
+          "fr": "Tu sais faire ça ?",
+          "en": "Do you know how to do that?"
+        }
+      ]
     },
     {
       "id": "c-common-uses",
-      "term": "Common uses",
-      "definition": "Know people, know places, be familiar with things (movies, books, brands)",
-      "example": "{je connais ce film} (I know this movie), {tu connais ce restaurant?} (do you know this restaurant?)"
+      "term": "Knowing places and things",
+      "definition": "Use {connaître} for a film, a restaurant or a book you know.",
+      "examples": [
+        {
+          "fr": "Je connais ce film.",
+          "en": "I know this film."
+        },
+        {
+          "fr": "Tu connais ce restaurant ?",
+          "en": "Do you know this restaurant?"
+        }
+      ]
     }
   ],
   "tables": [

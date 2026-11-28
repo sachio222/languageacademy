@@ -76,32 +76,102 @@
     {
       "id": "c-comprendre-to-understand",
       "term": "{comprendre} = to understand",
-      "definition": "Essential learning verb - follows same pattern as prendre (which you already know!)",
-      "example": "{je comprends le français} (I understand French), {tu comprends?} (do you understand?)"
+      "definition": "The verb for understanding a language, a person or an idea.",
+      "examples": [
+        {
+          "fr": "Je comprends le français.",
+          "en": "I understand French."
+        },
+        {
+          "fr": "Je comprends bien.",
+          "en": "I understand well."
+        }
+      ]
     },
     {
       "id": "c-same-pattern-as-prendre",
-      "term": "Same pattern as prendre",
-      "definition": "If you know prendre, you know comprendre! Just add com- prefix",
-      "example": "{je prends} → {je comprends}, {tu prends} → {tu comprends}, {ils prennent} → {ils comprennent}"
+      "term": "Like {prendre}",
+      "definition": "{comprendre} is {prendre} with com- in front, so its forms change the same way.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je comprends",
+          "en": "I understand"
+        },
+        {
+          "fr": "tu comprends",
+          "en": "you understand"
+        },
+        {
+          "fr": "il comprend",
+          "en": "he understands"
+        },
+        {
+          "fr": "nous comprenons",
+          "en": "we understand"
+        },
+        {
+          "fr": "vous comprenez",
+          "en": "you understand"
+        },
+        {
+          "fr": "ils comprennent",
+          "en": "they understand"
+        }
+      ]
     },
     {
       "id": "c-most-common-use-je",
-      "term": "Most common use: '{Je ne comprends pas}'",
-      "definition": "THE essential phrase for learning - I don't understand",
-      "example": "{Je ne comprends pas} (I don't understand), {Tu comprends?} (Do you understand?)"
+      "term": "{Je ne comprends pas}",
+      "definition": "The sentence you will need most while you learn.",
+      "examples": [
+        {
+          "fr": "Je ne comprends pas.",
+          "en": "I don't understand."
+        },
+        {
+          "fr": "Pardon, je ne comprends pas.",
+          "en": "Sorry, I don't understand."
+        },
+        {
+          "fr": "Tu comprends ?",
+          "en": "Do you understand?"
+        }
+      ]
     },
     {
       "id": "c-comprendre-noun",
-      "term": "comprendre + noun",
-      "definition": "You can understand things, people, languages, concepts",
-      "example": "{je comprends le français} (I understand French), {je comprends Marie} (I understand Marie), {je comprends la leçon} (I understand the lesson)"
+      "term": "Understanding people and things",
+      "definition": "Put the person or thing straight after the verb.",
+      "examples": [
+        {
+          "fr": "Je comprends Marie.",
+          "en": "I understand Marie."
+        },
+        {
+          "fr": "Je comprends la leçon.",
+          "en": "I understand the lesson."
+        }
+      ]
     },
     {
       "id": "c-building-on-prendre-knowledge",
-      "term": "Building on prendre knowledge",
-      "definition": "Three verbs in prendre family: prendre (take), apprendre (learn), comprendre (understand)",
-      "example": "{j'apprends} → {je comprends} (I learn → I understand) - natural progression!"
+      "term": "The {prendre} family",
+      "definition": "{prendre} means to take. With a front added, it gives {apprendre}, to learn, and {comprendre}, to understand.",
+      "examples": [
+        {
+          "fr": "Je prends le livre.",
+          "en": "I take the book."
+        },
+        {
+          "fr": "J'apprends le français.",
+          "en": "I'm learning French."
+        },
+        {
+          "fr": "Je comprends la leçon.",
+          "en": "I understand the lesson."
+        }
+      ]
     }
   ],
   "tables": [

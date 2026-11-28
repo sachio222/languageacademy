@@ -81,33 +81,99 @@
   "concepts": [
     {
       "id": "c-savoir-to-know-facts",
-      "term": "{savoir} = to know (facts or skills)",
-      "definition": "CRITICAL distinction: savoir is for facts you learned or skills you have",
-      "example": "{je sais la réponse} (I know the answer), {je sais parler anglais} (I can speak English)"
+      "term": "{savoir} = to know",
+      "definition": "Use {savoir} for facts you know and for things you know how to do.",
+      "examples": [
+        {
+          "fr": "Je sais la réponse.",
+          "en": "I know the answer."
+        },
+        {
+          "fr": "Je sais que c'est vrai.",
+          "en": "I know it's true."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular conjugation",
-      "definition": "Must memorize! Present: je sais, tu sais, il sait, nous savons, vous savez, ils savent",
-      "example": "Notice: {je}/{tu}/il all sound the same ('say'), {nous}/vous different"
+      "term": "The forms of {savoir}",
+      "definition": "The three singular forms sound the same. The plural forms change the stem to sav-.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je sais",
+          "en": "I know"
+        },
+        {
+          "fr": "tu sais",
+          "en": "you know"
+        },
+        {
+          "fr": "il sait",
+          "en": "he knows"
+        },
+        {
+          "fr": "nous savons",
+          "en": "we know"
+        },
+        {
+          "fr": "vous savez",
+          "en": "you know"
+        },
+        {
+          "fr": "ils savent",
+          "en": "they know"
+        }
+      ]
     },
     {
       "id": "c-je-ne-sais-pas",
-      "term": "'{Je ne sais pas}' - THE phrase",
-      "definition": "Rank 21 = one of most common phrases in ALL of French! You'll use it constantly",
-      "example": "{Je ne sais pas} (I don't know), {Tu sais?} (You know? / Do you know?)"
+      "term": "{Je ne sais pas}",
+      "definition": "One of the most common sentences in French.",
+      "examples": [
+        {
+          "fr": "Je ne sais pas.",
+          "en": "I don't know."
+        },
+        {
+          "fr": "Tu sais ?",
+          "en": "You know?"
+        },
+        {
+          "fr": "Vous savez ?",
+          "en": "Do you know?"
+        }
+      ]
     },
     {
       "id": "c-savoir-infinitive-know-how",
-      "term": "savoir + infinitive = know how to",
-      "definition": "Use savoir + verb to express skills/abilities",
-      "example": "{je sais parler français} (I know how to speak French), {je sais faire du café} (I know how to make coffee)"
+      "term": "Knowing how to do something",
+      "definition": "Put a verb after {savoir} to say what you know how to do.",
+      "examples": [
+        {
+          "fr": "Je sais parler français.",
+          "en": "I can speak French."
+        },
+        {
+          "fr": "Je sais faire du café.",
+          "en": "I know how to make coffee."
+        }
+      ]
     },
     {
       "id": "c-savoir-vs-connaitre-preview",
-      "term": "savoir vs connaître (preview)",
-      "definition": "savoir = facts/skills, connaître = people/places (you'll learn connaître next!)",
-      "example": "{je sais la réponse} (I know the answer). To know Marie, a person, the next lesson uses another verb."
+      "term": "Knowing a fact",
+      "definition": "{savoir} is for facts and skills, never for people or places.",
+      "examples": [
+        {
+          "fr": "Je sais qu'il est là.",
+          "en": "I know he's here."
+        },
+        {
+          "fr": "Nous savons ça.",
+          "en": "We know that."
+        }
+      ]
     }
   ],
   "tables": [

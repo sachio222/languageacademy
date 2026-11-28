@@ -138,39 +138,103 @@
   "concepts": [
     {
       "id": "c-what-are-discourse-markers",
-      "term": "What are discourse markers?",
-      "definition": "Words that organize speech, show transitions, add emphasis, or fill pauses - natives use them CONSTANTLY!",
-      "example": "Without: '{Je ne comprends pas. Je veux apprendre.}' With: '{Bon, je ne comprends pas, donc je veux apprendre, quoi.}' ← Native!"
+      "term": "Small words that fill speech",
+      "definition": "French speakers use short words to link ideas, take a pause and soften what they say. They make you sound natural.",
+      "examples": [
+        {
+          "fr": "Je ne comprends pas.",
+          "en": "I don't understand."
+        },
+        {
+          "fr": "Bon, je ne comprends pas, donc je veux apprendre, quoi.",
+          "en": "Well, I don't understand, so I want to learn, you know.",
+          "note": "the same idea, the way people say it"
+        }
+      ]
     },
     {
       "id": "c-donc-so-therefore",
-      "term": "{donc} = so / therefore",
-      "definition": "Shows logical conclusion - very common! Connects cause and effect",
-      "example": "{Je pense}, {donc je suis} (I think, therefore I am - Descartes!), {Donc}, {tu comprends?} (So, do you understand?)"
+      "term": "{donc} = so, therefore",
+      "definition": "{donc} links a cause to its result. At the start of a question it means so.",
+      "examples": [
+        {
+          "fr": "Je pense, donc je suis.",
+          "en": "I think, therefore I am.",
+          "note": "Descartes"
+        },
+        {
+          "fr": "Donc, tu comprends ?",
+          "en": "So, do you understand?"
+        }
+      ]
     },
     {
       "id": "c-en-fait-in-fact",
-      "term": "{en fait} = in fact / actually",
-      "definition": "Corrects or clarifies something - super common in conversation",
-      "example": "{En fait, je ne sais pas} (Actually, I don't know), {En fait, c'est comme ça} (In fact, that's how it is)"
+      "term": "{en fait} = actually",
+      "definition": "Use it to correct or explain what was just said.",
+      "examples": [
+        {
+          "fr": "En fait, je ne sais pas.",
+          "en": "Actually, I don't know."
+        },
+        {
+          "fr": "En fait, c'est comme ça.",
+          "en": "In fact, that's how it is."
+        }
+      ]
     },
     {
       "id": "c-bah-well",
-      "term": "{bah} = well...",
-      "definition": "Filler word - shows hesitation or introduces explanation (informal!)",
-      "example": "{Bah, c'est comme ça} (Well, that's how it is), {Bah}, {je sais pas} (Well, I don't know)"
+      "term": "{bah} = well",
+      "definition": "An informal sound for a pause before you explain.",
+      "examples": [
+        {
+          "fr": "Bah, c'est comme ça.",
+          "en": "Well, that's how it is."
+        },
+        {
+          "fr": "Bah, je ne sais pas.",
+          "en": "Well, I don't know."
+        }
+      ]
     },
     {
       "id": "c-quoi-like-you-know",
-      "term": "{quoi} = like / you know (at end)",
-      "definition": "End-of-sentence filler - VERY French! Emphasizes or seeks agreement",
-      "example": "{C'est bon}, {quoi} (It's good, you know), {Je pense ça}, quoi (I think that, like)"
+      "term": "{quoi} at the end = you know",
+      "definition": "Put {quoi} at the end of a sentence to stress it in casual speech.",
+      "examples": [
+        {
+          "fr": "C'est bon, quoi.",
+          "en": "It's good, you know."
+        },
+        {
+          "fr": "C'est comme ça, quoi.",
+          "en": "That's how it is, you know."
+        }
+      ]
     },
     {
       "id": "c-more-discourse-markers",
-      "term": "More discourse markers",
-      "definition": "bon (well, so), alors (so, then), ainsi (thus - formal)",
-      "example": "{Bon}, {on commence?} (Well, shall we start?), {Alors}, {tu viens?} (So, are you coming?), {Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui.} (So, are you going to the university? Actually, I don't have class today.), {Bon, voilà la réponse.} (Well, there's the answer.)"
+      "term": "{bon} and {alors}",
+      "definition": "Both often start a sentence. {bon} means well, and {alors} means so or then.",
+      "examples": [
+        {
+          "fr": "Bon, on commence ?",
+          "en": "Well, shall we start?"
+        },
+        {
+          "fr": "Alors, tu viens ?",
+          "en": "So, are you coming?"
+        },
+        {
+          "fr": "Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui.",
+          "en": "So, are you going to the university? Actually, I don't have class today."
+        },
+        {
+          "fr": "Bon, voilà la réponse.",
+          "en": "Well, there's the answer."
+        }
+      ]
     }
   ],
   "items": [

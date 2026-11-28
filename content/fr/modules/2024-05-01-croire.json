@@ -80,33 +80,101 @@
   "concepts": [
     {
       "id": "c-croire-to-believe-to",
-      "term": "{croire} = to believe / to think",
-      "definition": "Express belief or softer opinions - often used like penser but more tentative",
-      "example": "{je crois que c'est vrai} (I believe it's true), {tu crois?} (do you think so?)"
+      "term": "{croire} = to believe, to think",
+      "definition": "Like {penser}, but less sure. It also means to believe someone.",
+      "examples": [
+        {
+          "fr": "Je crois que c'est vrai.",
+          "en": "I believe it's true."
+        },
+        {
+          "fr": "Tu crois ?",
+          "en": "Do you think so?"
+        },
+        {
+          "fr": "Je te crois.",
+          "en": "I believe you."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular conjugation",
-      "definition": "Present: je crois, tu crois, il croit, nous croyons, vous croyez, ils croient",
-      "example": "Notice: singular all same sound ('kwa'), {nous}/vous have y, ils have -ient"
+      "term": "The forms of {croire}",
+      "definition": "The three singular forms sound the same. The forms for we and you take a y.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je crois",
+          "en": "I believe"
+        },
+        {
+          "fr": "tu crois",
+          "en": "you believe"
+        },
+        {
+          "fr": "il croit",
+          "en": "he believes"
+        },
+        {
+          "fr": "nous croyons",
+          "en": "we believe"
+        },
+        {
+          "fr": "vous croyez",
+          "en": "you believe"
+        },
+        {
+          "fr": "ils croient",
+          "en": "they believe"
+        }
+      ]
     },
     {
       "id": "c-croire-que-to-believe",
-      "term": "{croire que...} (to believe that...)",
-      "definition": "Like penser que, use with '{que}' to introduce what you believe",
-      "example": "{je crois que oui} (I believe so), {je ne crois pas} (I don't believe so / I don't think so)"
+      "term": "{croire que} = to believe that",
+      "definition": "Put {que} before what you believe, as with {penser}.",
+      "examples": [
+        {
+          "fr": "Je crois que oui.",
+          "en": "I think so."
+        },
+        {
+          "fr": "Je ne crois pas.",
+          "en": "I don't think so."
+        }
+      ]
     },
     {
       "id": "c-croire-a-croire-en",
-      "term": "{croire à} / {croire en} (to believe in)",
-      "definition": "Use à or en to express belief in concepts or things",
-      "example": "{je crois en toi} (I believe in you), {je crois à ça} (I believe in that)"
+      "term": "{croire en}, {croire à} = to believe in",
+      "definition": "Use {en} for a person you trust, and {à} for an idea or a thing.",
+      "examples": [
+        {
+          "fr": "Je crois en toi.",
+          "en": "I believe in you."
+        },
+        {
+          "fr": "Je crois à ça.",
+          "en": "I believe in that."
+        }
+      ]
     },
     {
       "id": "c-penser-vs-croire",
-      "term": "penser vs croire",
-      "definition": "penser = think (more definite), croire = believe (more tentative/hopeful)",
-      "example": "{je pense qu'il vient} (I think he's coming - pretty sure), {je crois qu'il vient} (I believe he's coming - less certain)"
+      "term": "{penser} or {croire}",
+      "definition": "{je pense} sounds more sure. {je crois} leaves more room for doubt.",
+      "examples": [
+        {
+          "fr": "Je pense qu'il vient.",
+          "en": "I think he's coming.",
+          "note": "fairly sure"
+        },
+        {
+          "fr": "Je crois qu'il vient.",
+          "en": "I believe he's coming.",
+          "note": "less sure"
+        }
+      ]
     }
   ],
   "tables": [

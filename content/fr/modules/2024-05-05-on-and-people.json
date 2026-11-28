@@ -142,39 +142,106 @@
   "concepts": [
     {
       "id": "c-on-we-one-people",
-      "term": "{on} = we / one / people",
-      "definition": "THE most versatile pronoun! Used MORE than '{nous}' in everyday French. Three meanings depending on context.",
-      "example": "{on va au cinéma} (we're going to movies), {on va au restaurant en famille} (we're going to a restaurant as a family), {on dit que} (people say that), {on ne peut pas} (one cannot)"
+      "term": "{on} = we, one, people",
+      "definition": "In everyday French, {on} often takes the place of {nous}. It can also mean people in general.",
+      "examples": [
+        {
+          "fr": "On va au cinéma.",
+          "en": "We're going to the movies."
+        },
+        {
+          "fr": "On va au restaurant en famille.",
+          "en": "We're going to a restaurant with the family."
+        },
+        {
+          "fr": "On peut parler ensemble.",
+          "en": "We can talk together."
+        }
+      ]
     },
     {
       "id": "c-on-conjugates-like-il",
-      "term": "on conjugates like il/{elle} (third person singular)",
-      "definition": "CRITICAL: Even though '{on}' means 'we', it uses il/elle verb forms!",
-      "example": "{on est} (we are), {on a} (we have), {on va} (we go), {on fait} (we do) - all use il/elle forms"
+      "term": "{on} takes the verb of {il}",
+      "definition": "Even when {on} means we, its verb has the form for he and she.",
+      "examples": [
+        {
+          "fr": "On est ici.",
+          "en": "We're here.",
+          "note": "like {il est}"
+        },
+        {
+          "fr": "On a le temps.",
+          "en": "We have time.",
+          "note": "like {il a}"
+        },
+        {
+          "fr": "On fait ça ensemble.",
+          "en": "We do that together.",
+          "note": "like {il fait}"
+        }
+      ]
     },
     {
       "id": "c-on-vs-nous",
-      "term": "on vs nous",
-      "definition": "on = informal, conversational (90% of speech). nous = formal, written (10%)",
-      "example": "Friends: '{on va manger?}' Formal: '{nous allons manger}' (much less common!)"
+      "term": "{on} or {nous}",
+      "definition": "Friends say {on}. {nous} sounds more formal and is more common in writing.",
+      "examples": [
+        {
+          "fr": "On va manger ?",
+          "en": "Shall we eat?",
+          "note": "with friends"
+        },
+        {
+          "fr": "Nous allons manger.",
+          "en": "We are going to eat.",
+          "note": "more formal"
+        }
+      ]
     },
     {
       "id": "c-les-gens-people-general",
-      "term": "{les gens} = people (general)",
-      "definition": "Plural noun for referring to people in general - very common!",
-      "example": "{les gens disent} (people say), {les gens pensent} (people think), {les gens sont gentils} (people are nice)"
+      "term": "{les gens} = people",
+      "definition": "A plural noun for people in general, so its verb is plural.",
+      "examples": [
+        {
+          "fr": "Les gens sont gentils.",
+          "en": "People are nice."
+        },
+        {
+          "fr": "Les gens disent que c'est bon.",
+          "en": "People say it's good."
+        }
+      ]
     },
     {
       "id": "c-tout-le-monde-everyone",
       "term": "{tout le monde} = everyone",
-      "definition": "Fixed expression (literally 'all the world') - uses SINGULAR verb!",
-      "example": "{tout le monde sait} (everyone knows - singular!), {tout le monde pense} (everyone thinks)"
+      "definition": "Literally all the world. Its verb is singular, like the verb of {il}.",
+      "examples": [
+        {
+          "fr": "Tout le monde sait.",
+          "en": "Everyone knows."
+        },
+        {
+          "fr": "Tout le monde est ici.",
+          "en": "Everybody is here."
+        }
+      ]
     },
     {
       "id": "c-making-general-statements",
-      "term": "Making general statements",
-      "definition": "Use '{on}' for universal truths or common wisdom - sounds philosophical!",
-      "example": "{On apprend tous les jours} (We learn every day), {On ne peut pas tout savoir} (One can't know everything)"
+      "term": "Saying what is true for anyone",
+      "definition": "Use {on} for things that are true for everyone.",
+      "examples": [
+        {
+          "fr": "On apprend tous les jours.",
+          "en": "We learn every day."
+        },
+        {
+          "fr": "On ne peut pas tout savoir.",
+          "en": "You can't know everything."
+        }
+      ]
     }
   ],
   "items": [

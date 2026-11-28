@@ -9897,6 +9897,96 @@
     "title": "Basic Fluency Practice - Fill in the Blanks"
   },
   "2024-04-28-comparison-modifiers": {
+    "concepts": [
+      {
+        "id": "c-tout-all-everything",
+        "term": "{tout} = all, everything",
+        "definition": "On its own, {tout} means everything. Before a noun it means all or the whole, and it agrees with the noun.",
+        "examples": [
+          {
+            "fr": "Je sais tout.",
+            "en": "I know everything."
+          },
+          {
+            "fr": "Toute la classe est là.",
+            "en": "The whole class is here."
+          },
+          {
+            "fr": "On apprend tous les jours.",
+            "en": "We learn every day."
+          },
+          {
+            "fr": "C'est tout petit.",
+            "en": "It's very small.",
+            "note": "before an adjective, {tout} means very"
+          }
+        ]
+      },
+      {
+        "id": "c-tout-le-monde-everyone",
+        "term": "{tout le monde} = everyone",
+        "definition": "Literally all the world. Its verb is singular.",
+        "examples": [
+          {
+            "fr": "Tout le monde comprend.",
+            "en": "Everyone understands."
+          },
+          {
+            "fr": "Tout le monde est là ?",
+            "en": "Is everyone here?"
+          }
+        ]
+      },
+      {
+        "id": "c-meme-same-even",
+        "term": "{même} = same, even",
+        "definition": "With an article in front, {même} means same. Before a word, it means even.",
+        "examples": [
+          {
+            "fr": "C'est la même chose.",
+            "en": "It's the same thing."
+          },
+          {
+            "fr": "Même moi, je sais.",
+            "en": "Even I know."
+          }
+        ]
+      },
+      {
+        "id": "c-mal-badly-poorly",
+        "term": "{mal} = badly",
+        "definition": "The opposite of {bien}.",
+        "examples": [
+          {
+            "fr": "Ça va mal.",
+            "en": "Things are going badly."
+          },
+          {
+            "fr": "Il va mal.",
+            "en": "He's not well."
+          }
+        ]
+      },
+      {
+        "id": "c-complete-comparison-toolkit",
+        "term": "Saying how well",
+        "definition": "Put these words after the verb to say how well something goes.",
+        "examples": [
+          {
+            "fr": "Je comprends très bien.",
+            "en": "I understand very well."
+          },
+          {
+            "fr": "Je comprends bien.",
+            "en": "I understand well."
+          },
+          {
+            "fr": "Je comprends mal.",
+            "en": "I don't understand well."
+          }
+        ]
+      }
+    ],
     "glosses": [
       {
         "fr": "enchantée",
@@ -9920,32 +10010,102 @@
       {
         "id": "c-comprendre-to-understand",
         "term": "{comprendre} = to understand",
-        "definition": "Essential learning verb - follows same pattern as prendre (which you already know!)",
-        "example": "{je comprends le français} (I understand French), {tu comprends?} (do you understand?)"
+        "definition": "The verb for understanding a language, a person or an idea.",
+        "examples": [
+          {
+            "fr": "Je comprends le français.",
+            "en": "I understand French."
+          },
+          {
+            "fr": "Je comprends bien.",
+            "en": "I understand well."
+          }
+        ]
       },
       {
         "id": "c-same-pattern-as-prendre",
-        "term": "Same pattern as prendre",
-        "definition": "If you know prendre, you know comprendre! Just add com- prefix",
-        "example": "{je prends} → {je comprends}, {tu prends} → {tu comprends}, {ils prennent} → {ils comprennent}"
+        "term": "Like {prendre}",
+        "definition": "{comprendre} is {prendre} with com- in front, so its forms change the same way.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je comprends",
+            "en": "I understand"
+          },
+          {
+            "fr": "tu comprends",
+            "en": "you understand"
+          },
+          {
+            "fr": "il comprend",
+            "en": "he understands"
+          },
+          {
+            "fr": "nous comprenons",
+            "en": "we understand"
+          },
+          {
+            "fr": "vous comprenez",
+            "en": "you understand"
+          },
+          {
+            "fr": "ils comprennent",
+            "en": "they understand"
+          }
+        ]
       },
       {
         "id": "c-most-common-use-je",
-        "term": "Most common use: '{Je ne comprends pas}'",
-        "definition": "THE essential phrase for learning - I don't understand",
-        "example": "{Je ne comprends pas} (I don't understand), {Tu comprends?} (Do you understand?)"
+        "term": "{Je ne comprends pas}",
+        "definition": "The sentence you will need most while you learn.",
+        "examples": [
+          {
+            "fr": "Je ne comprends pas.",
+            "en": "I don't understand."
+          },
+          {
+            "fr": "Pardon, je ne comprends pas.",
+            "en": "Sorry, I don't understand."
+          },
+          {
+            "fr": "Tu comprends ?",
+            "en": "Do you understand?"
+          }
+        ]
       },
       {
         "id": "c-comprendre-noun",
-        "term": "comprendre + noun",
-        "definition": "You can understand things, people, languages, concepts",
-        "example": "{je comprends le français} (I understand French), {je comprends Marie} (I understand Marie), {je comprends la leçon} (I understand the lesson)"
+        "term": "Understanding people and things",
+        "definition": "Put the person or thing straight after the verb.",
+        "examples": [
+          {
+            "fr": "Je comprends Marie.",
+            "en": "I understand Marie."
+          },
+          {
+            "fr": "Je comprends la leçon.",
+            "en": "I understand the lesson."
+          }
+        ]
       },
       {
         "id": "c-building-on-prendre-knowledge",
-        "term": "Building on prendre knowledge",
-        "definition": "Three verbs in prendre family: prendre (take), apprendre (learn), comprendre (understand)",
-        "example": "{j'apprends} → {je comprends} (I learn → I understand) - natural progression!"
+        "term": "The {prendre} family",
+        "definition": "{prendre} means to take. With a front added, it gives {apprendre}, to learn, and {comprendre}, to understand.",
+        "examples": [
+          {
+            "fr": "Je prends le livre.",
+            "en": "I take the book."
+          },
+          {
+            "fr": "J'apprends le français.",
+            "en": "I'm learning French."
+          },
+          {
+            "fr": "Je comprends la leçon.",
+            "en": "I understand the lesson."
+          }
+        ]
       }
     ],
     "glosses": [
@@ -9966,38 +10126,208 @@
     "concepts": [
       {
         "id": "c-connaitre-to-know-people",
-        "term": "{connaître} = to know (people or places)",
-        "definition": "CRITICAL distinction: connaître is for people you know or places you're familiar with",
-        "example": "{je connais Marie} (I know Marie), {je connais Paris} (I know/am familiar with Paris), {Je ne sais pas, je ne connais pas Paris} (I don't know, I don't know Paris)"
+        "term": "{connaître} = to know",
+        "definition": "Use {connaître} for people and places you know, and for things you are familiar with.",
+        "examples": [
+          {
+            "fr": "Je connais Marie.",
+            "en": "I know Marie."
+          },
+          {
+            "fr": "Je connais Paris.",
+            "en": "I know Paris."
+          },
+          {
+            "fr": "Je ne sais pas, je ne connais pas Paris.",
+            "en": "I don't know, I don't know Paris."
+          }
+        ]
       },
       {
         "id": "c-irregular-conjugation-with-i",
-        "term": "Irregular conjugation with î",
-        "definition": "Present: je connais, tu connais, il connaît, nous connaissons, vous connaissez, ils connaissent",
-        "example": "Notice: î with circumflex accent in il/elle form, double -ss- in plural"
+        "term": "The forms of {connaître}",
+        "definition": "The form for he and she keeps the î. The plural forms add -ss-.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je connais",
+            "en": "I know"
+          },
+          {
+            "fr": "tu connais",
+            "en": "you know"
+          },
+          {
+            "fr": "il connaît",
+            "en": "he knows"
+          },
+          {
+            "fr": "nous connaissons",
+            "en": "we know"
+          },
+          {
+            "fr": "vous connaissez",
+            "en": "you know"
+          },
+          {
+            "fr": "ils connaissent",
+            "en": "they know"
+          }
+        ]
       },
       {
         "id": "c-the-key-distinction-savoir",
-        "term": "THE KEY DISTINCTION: savoir vs connaître",
-        "definition": "savoir = facts/skills (learned), connaître = people/places (familiarity)",
-        "example": "{je sais la réponse} (I know the answer) BUT je connais Marie (I know Marie)"
+        "term": "{savoir} or {connaître}",
+        "definition": "{savoir} is for facts and skills. {connaître} is for people, places and things you know well.",
+        "examples": [
+          {
+            "fr": "Je sais la réponse.",
+            "en": "I know the answer."
+          },
+          {
+            "fr": "Je connais Marie.",
+            "en": "I know Marie."
+          },
+          {
+            "fr": "Je sais son nom, mais je ne le connais pas.",
+            "en": "I know his name, but I don't know him."
+          }
+        ]
       },
       {
         "id": "c-never-use-connaitre-infinitive",
-        "term": "NEVER use connaître + infinitive",
-        "definition": "You CANNOT say '{je connais parler}' - use savoir for skills!",
-        "example": "✓ {je sais parler} (I know how to speak), ✗ {je connais parler} (WRONG!)"
+        "term": "A skill takes {savoir}",
+        "definition": "Before another verb, always use {savoir}, never {connaître}.",
+        "examples": [
+          {
+            "fr": "Je sais parler français.",
+            "en": "I can speak French."
+          },
+          {
+            "fr": "Tu sais faire ça ?",
+            "en": "Do you know how to do that?"
+          }
+        ]
       },
       {
         "id": "c-common-uses",
-        "term": "Common uses",
-        "definition": "Know people, know places, be familiar with things (movies, books, brands)",
-        "example": "{je connais ce film} (I know this movie), {tu connais ce restaurant?} (do you know this restaurant?)"
+        "term": "Knowing places and things",
+        "definition": "Use {connaître} for a film, a restaurant or a book you know.",
+        "examples": [
+          {
+            "fr": "Je connais ce film.",
+            "en": "I know this film."
+          },
+          {
+            "fr": "Tu connais ce restaurant ?",
+            "en": "Do you know this restaurant?"
+          }
+        ]
       }
     ],
     "title": "{connaître} - To Know (People/Places)"
   },
   "2024-05-01-croire": {
+    "concepts": [
+      {
+        "id": "c-croire-to-believe-to",
+        "term": "{croire} = to believe, to think",
+        "definition": "Like {penser}, but less sure. It also means to believe someone.",
+        "examples": [
+          {
+            "fr": "Je crois que c'est vrai.",
+            "en": "I believe it's true."
+          },
+          {
+            "fr": "Tu crois ?",
+            "en": "Do you think so?"
+          },
+          {
+            "fr": "Je te crois.",
+            "en": "I believe you."
+          }
+        ]
+      },
+      {
+        "id": "c-irregular-conjugation",
+        "term": "The forms of {croire}",
+        "definition": "The three singular forms sound the same. The forms for we and you take a y.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je crois",
+            "en": "I believe"
+          },
+          {
+            "fr": "tu crois",
+            "en": "you believe"
+          },
+          {
+            "fr": "il croit",
+            "en": "he believes"
+          },
+          {
+            "fr": "nous croyons",
+            "en": "we believe"
+          },
+          {
+            "fr": "vous croyez",
+            "en": "you believe"
+          },
+          {
+            "fr": "ils croient",
+            "en": "they believe"
+          }
+        ]
+      },
+      {
+        "id": "c-croire-que-to-believe",
+        "term": "{croire que} = to believe that",
+        "definition": "Put {que} before what you believe, as with {penser}.",
+        "examples": [
+          {
+            "fr": "Je crois que oui.",
+            "en": "I think so."
+          },
+          {
+            "fr": "Je ne crois pas.",
+            "en": "I don't think so."
+          }
+        ]
+      },
+      {
+        "id": "c-croire-a-croire-en",
+        "term": "{croire en}, {croire à} = to believe in",
+        "definition": "Use {en} for a person you trust, and {à} for an idea or a thing.",
+        "examples": [
+          {
+            "fr": "Je crois en toi.",
+            "en": "I believe in you."
+          },
+          {
+            "fr": "Je crois à ça.",
+            "en": "I believe in that."
+          }
+        ]
+      },
+      {
+        "id": "c-penser-vs-croire",
+        "term": "{penser} or {croire}",
+        "definition": "{je pense} sounds more sure. {je crois} leaves more room for doubt.",
+        "examples": [
+          {
+            "fr": "Je pense qu'il vient.",
+            "en": "I think he's coming.",
+            "note": "fairly sure"
+          },
+          {
+            "fr": "Je crois qu'il vient.",
+            "en": "I believe he's coming.",
+            "note": "less sure"
+          }
+        ]
+      }
+    ],
     "glosses": [
       {
         "fr": "croyais",
@@ -10010,39 +10340,103 @@
     "concepts": [
       {
         "id": "c-what-are-discourse-markers",
-        "term": "What are discourse markers?",
-        "definition": "Words that organize speech, show transitions, add emphasis, or fill pauses - natives use them CONSTANTLY!",
-        "example": "Without: '{Je ne comprends pas. Je veux apprendre.}' With: '{Bon, je ne comprends pas, donc je veux apprendre, quoi.}' ← Native!"
+        "term": "Small words that fill speech",
+        "definition": "French speakers use short words to link ideas, take a pause and soften what they say. They make you sound natural.",
+        "examples": [
+          {
+            "fr": "Je ne comprends pas.",
+            "en": "I don't understand."
+          },
+          {
+            "fr": "Bon, je ne comprends pas, donc je veux apprendre, quoi.",
+            "en": "Well, I don't understand, so I want to learn, you know.",
+            "note": "the same idea, the way people say it"
+          }
+        ]
       },
       {
         "id": "c-donc-so-therefore",
-        "term": "{donc} = so / therefore",
-        "definition": "Shows logical conclusion - very common! Connects cause and effect",
-        "example": "{Je pense}, {donc je suis} (I think, therefore I am - Descartes!), {Donc}, {tu comprends?} (So, do you understand?)"
+        "term": "{donc} = so, therefore",
+        "definition": "{donc} links a cause to its result. At the start of a question it means so.",
+        "examples": [
+          {
+            "fr": "Je pense, donc je suis.",
+            "en": "I think, therefore I am.",
+            "note": "Descartes"
+          },
+          {
+            "fr": "Donc, tu comprends ?",
+            "en": "So, do you understand?"
+          }
+        ]
       },
       {
         "id": "c-en-fait-in-fact",
-        "term": "{en fait} = in fact / actually",
-        "definition": "Corrects or clarifies something - super common in conversation",
-        "example": "{En fait, je ne sais pas} (Actually, I don't know), {En fait, c'est comme ça} (In fact, that's how it is)"
+        "term": "{en fait} = actually",
+        "definition": "Use it to correct or explain what was just said.",
+        "examples": [
+          {
+            "fr": "En fait, je ne sais pas.",
+            "en": "Actually, I don't know."
+          },
+          {
+            "fr": "En fait, c'est comme ça.",
+            "en": "In fact, that's how it is."
+          }
+        ]
       },
       {
         "id": "c-bah-well",
-        "term": "{bah} = well...",
-        "definition": "Filler word - shows hesitation or introduces explanation (informal!)",
-        "example": "{Bah, c'est comme ça} (Well, that's how it is), {Bah}, {je sais pas} (Well, I don't know)"
+        "term": "{bah} = well",
+        "definition": "An informal sound for a pause before you explain.",
+        "examples": [
+          {
+            "fr": "Bah, c'est comme ça.",
+            "en": "Well, that's how it is."
+          },
+          {
+            "fr": "Bah, je ne sais pas.",
+            "en": "Well, I don't know."
+          }
+        ]
       },
       {
         "id": "c-quoi-like-you-know",
-        "term": "{quoi} = like / you know (at end)",
-        "definition": "End-of-sentence filler - VERY French! Emphasizes or seeks agreement",
-        "example": "{C'est bon}, {quoi} (It's good, you know), {Je pense ça}, quoi (I think that, like)"
+        "term": "{quoi} at the end = you know",
+        "definition": "Put {quoi} at the end of a sentence to stress it in casual speech.",
+        "examples": [
+          {
+            "fr": "C'est bon, quoi.",
+            "en": "It's good, you know."
+          },
+          {
+            "fr": "C'est comme ça, quoi.",
+            "en": "That's how it is, you know."
+          }
+        ]
       },
       {
         "id": "c-more-discourse-markers",
-        "term": "More discourse markers",
-        "definition": "bon (well, so), alors (so, then), ainsi (thus - formal)",
-        "example": "{Bon}, {on commence?} (Well, shall we start?), {Alors}, {tu viens?} (So, are you coming?), {Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui.} (So, are you going to the university? Actually, I don't have class today.), {Bon, voilà la réponse.} (Well, there's the answer.)"
+        "term": "{bon} and {alors}",
+        "definition": "Both often start a sentence. {bon} means well, and {alors} means so or then.",
+        "examples": [
+          {
+            "fr": "Bon, on commence ?",
+            "en": "Well, shall we start?"
+          },
+          {
+            "fr": "Alors, tu viens ?",
+            "en": "So, are you coming?"
+          },
+          {
+            "fr": "Alors, tu vas à l'université ? En fait, je n'ai pas de cours aujourd'hui.",
+            "en": "So, are you going to the university? Actually, I don't have class today."
+          },
+          {
+            "fr": "Bon, voilà la réponse.",
+            "en": "Well, there's the answer."
+          }
+        ]
       }
     ],
     "items/discourse-markers-17": null,
@@ -10061,27 +10455,81 @@
     "concepts": [
       {
         "id": "c-academic-nouns",
-        "term": "Academic nouns",
-        "definition": "Essential vocabulary for school, university, and learning contexts",
-        "example": "{le cours} (class), {la leçon} (lesson), {l'école} (school), {l'université} (university)"
+        "term": "School words",
+        "definition": "Nouns for school, university and class.",
+        "examples": [
+          {
+            "fr": "Je vais à l'université.",
+            "en": "I go to university."
+          },
+          {
+            "fr": "L'école est là-bas.",
+            "en": "The school is over there."
+          },
+          {
+            "fr": "J'apprends mes leçons.",
+            "en": "I'm learning my lessons."
+          }
+        ]
       },
       {
         "id": "c-knowledge-nouns",
-        "term": "Knowledge nouns",
-        "definition": "Abstract nouns related to knowing and understanding",
-        "example": "{la connaissance} (knowledge - what you know), {le savoir} (knowledge - abstract), {la pensée} (thought)"
+        "term": "Words for knowledge",
+        "definition": "Nouns for knowing and thinking.",
+        "examples": [
+          {
+            "fr": "la connaissance",
+            "en": "knowledge",
+            "note": "what a person knows"
+          },
+          {
+            "fr": "le savoir",
+            "en": "knowledge",
+            "note": "knowledge in general"
+          },
+          {
+            "fr": "la pensée",
+            "en": "thought"
+          }
+        ]
       },
       {
         "id": "c-communication-nouns",
-        "term": "Communication nouns",
-        "definition": "Question-and-answer vocabulary - essential for learning!",
-        "example": "{la question} (question), {la réponse} (answer), {l'idée} (idea)"
+        "term": "Questions and answers",
+        "definition": "Nouns you need in any lesson.",
+        "examples": [
+          {
+            "fr": "J'ai une question.",
+            "en": "I have a question."
+          },
+          {
+            "fr": "Je sais la réponse.",
+            "en": "I know the answer."
+          },
+          {
+            "fr": "C'est une bonne idée.",
+            "en": "That's a good idea."
+          }
+        ]
       },
       {
         "id": "c-complete-sentence-composition",
-        "term": "Complete sentence composition",
-        "definition": "Now you can build full sentences about learning and knowing",
-        "example": "{J'ai une question} (I have a question), {C'est une bonne idée} (That's a good idea), {Je vais au cours} (I'm going to class)"
+        "term": "Sentences about learning",
+        "definition": "Put these nouns with the verbs of this unit.",
+        "examples": [
+          {
+            "fr": "Je comprends la question.",
+            "en": "I understand the question."
+          },
+          {
+            "fr": "Je vais au cours.",
+            "en": "I'm going to class."
+          },
+          {
+            "fr": "Tu as une idée ?",
+            "en": "Do you have an idea?"
+          }
+        ]
       }
     ],
     "glosses": [
@@ -10097,32 +10545,102 @@
       {
         "id": "c-apprendre-to-learn",
         "term": "{apprendre} = to learn",
-        "definition": "Part of prendre family (you already know this pattern!) - essential for education",
-        "example": "{j'apprends le français} (I'm learning French), {j'apprends beaucoup de mots} (I'm learning a lot of words), {nous apprenons ensemble} (we're learning together)"
+        "definition": "The verb for learning something. It changes like {prendre}.",
+        "examples": [
+          {
+            "fr": "J'apprends le français.",
+            "en": "I'm learning French."
+          },
+          {
+            "fr": "J'apprends beaucoup de mots.",
+            "en": "I'm learning a lot of words."
+          },
+          {
+            "fr": "Nous apprenons ensemble.",
+            "en": "We're learning together."
+          }
+        ]
       },
       {
         "id": "c-same-pattern-as-prendre",
-        "term": "Same pattern as prendre/{comprendre}",
-        "definition": "If you know prendre and comprendre, you know apprendre! Add ap- prefix",
-        "example": "{je prends} → {j'apprends}, {tu comprends} → {tu apprends} (same pattern!)"
+        "term": "Like {prendre}",
+        "definition": "{apprendre} is {prendre} with ap- in front, so its forms change the same way.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "j'apprends",
+            "en": "I learn"
+          },
+          {
+            "fr": "tu apprends",
+            "en": "you learn"
+          },
+          {
+            "fr": "il apprend",
+            "en": "he learns"
+          },
+          {
+            "fr": "nous apprenons",
+            "en": "we learn"
+          },
+          {
+            "fr": "vous apprenez",
+            "en": "you learn"
+          },
+          {
+            "fr": "ils apprennent",
+            "en": "they learn"
+          }
+        ]
       },
       {
         "id": "c-enseigner-to-teach",
         "term": "{enseigner} = to teach",
-        "definition": "Regular -ER verb - easy! Natural pair with apprendre",
-        "example": "{j'enseigne le français} (I teach French), {il m'enseigne} (he teaches me)"
+        "definition": "A regular -er verb. One person teaches and another learns.",
+        "examples": [
+          {
+            "fr": "J'enseigne le français.",
+            "en": "I teach French."
+          },
+          {
+            "fr": "Ils enseignent à l'université.",
+            "en": "They teach at the university."
+          }
+        ]
       },
       {
         "id": "c-beautiful-semantic-progression",
-        "term": "Beautiful semantic progression",
-        "definition": "Teacher teaches → student learns → student understands → student knows",
-        "example": "{Il m'enseigne} → {j'apprends} → {je comprends} (complete learning cycle!)"
+        "term": "Teaching, learning, understanding",
+        "definition": "One person teaches. The other learns, and then understands.",
+        "examples": [
+          {
+            "fr": "Il m'enseigne le français.",
+            "en": "He teaches me French."
+          },
+          {
+            "fr": "J'apprends le français avec lui.",
+            "en": "I'm learning French with him."
+          },
+          {
+            "fr": "Maintenant, je comprends.",
+            "en": "Now I understand."
+          }
+        ]
       },
       {
         "id": "c-apprendre-a-infinitive",
-        "term": "apprendre à + infinitive",
-        "definition": "Use 'à' before infinitive to say learning how to do something",
-        "example": "{j'apprends à faire du café} (I'm learning to make coffee), {j'apprends à parler français} (I'm learning to speak French)"
+        "term": "Learning to do something",
+        "definition": "Put {à} before the verb to say what you are learning to do.",
+        "examples": [
+          {
+            "fr": "J'apprends à parler français.",
+            "en": "I'm learning to speak French."
+          },
+          {
+            "fr": "J'apprends à faire du café.",
+            "en": "I'm learning to make coffee."
+          }
+        ]
       }
     ]
   },
@@ -10130,39 +10648,106 @@
     "concepts": [
       {
         "id": "c-on-we-one-people",
-        "term": "{on} = we / one / people",
-        "definition": "THE most versatile pronoun! Used MORE than '{nous}' in everyday French. Three meanings depending on context.",
-        "example": "{on va au cinéma} (we're going to movies), {on va au restaurant en famille} (we're going to a restaurant as a family), {on dit que} (people say that), {on ne peut pas} (one cannot)"
+        "term": "{on} = we, one, people",
+        "definition": "In everyday French, {on} often takes the place of {nous}. It can also mean people in general.",
+        "examples": [
+          {
+            "fr": "On va au cinéma.",
+            "en": "We're going to the movies."
+          },
+          {
+            "fr": "On va au restaurant en famille.",
+            "en": "We're going to a restaurant with the family."
+          },
+          {
+            "fr": "On peut parler ensemble.",
+            "en": "We can talk together."
+          }
+        ]
       },
       {
         "id": "c-on-conjugates-like-il",
-        "term": "on conjugates like il/{elle} (third person singular)",
-        "definition": "CRITICAL: Even though '{on}' means 'we', it uses il/elle verb forms!",
-        "example": "{on est} (we are), {on a} (we have), {on va} (we go), {on fait} (we do) - all use il/elle forms"
+        "term": "{on} takes the verb of {il}",
+        "definition": "Even when {on} means we, its verb has the form for he and she.",
+        "examples": [
+          {
+            "fr": "On est ici.",
+            "en": "We're here.",
+            "note": "like {il est}"
+          },
+          {
+            "fr": "On a le temps.",
+            "en": "We have time.",
+            "note": "like {il a}"
+          },
+          {
+            "fr": "On fait ça ensemble.",
+            "en": "We do that together.",
+            "note": "like {il fait}"
+          }
+        ]
       },
       {
         "id": "c-on-vs-nous",
-        "term": "on vs nous",
-        "definition": "on = informal, conversational (90% of speech). nous = formal, written (10%)",
-        "example": "Friends: '{on va manger?}' Formal: '{nous allons manger}' (much less common!)"
+        "term": "{on} or {nous}",
+        "definition": "Friends say {on}. {nous} sounds more formal and is more common in writing.",
+        "examples": [
+          {
+            "fr": "On va manger ?",
+            "en": "Shall we eat?",
+            "note": "with friends"
+          },
+          {
+            "fr": "Nous allons manger.",
+            "en": "We are going to eat.",
+            "note": "more formal"
+          }
+        ]
       },
       {
         "id": "c-les-gens-people-general",
-        "term": "{les gens} = people (general)",
-        "definition": "Plural noun for referring to people in general - very common!",
-        "example": "{les gens disent} (people say), {les gens pensent} (people think), {les gens sont gentils} (people are nice)"
+        "term": "{les gens} = people",
+        "definition": "A plural noun for people in general, so its verb is plural.",
+        "examples": [
+          {
+            "fr": "Les gens sont gentils.",
+            "en": "People are nice."
+          },
+          {
+            "fr": "Les gens disent que c'est bon.",
+            "en": "People say it's good."
+          }
+        ]
       },
       {
         "id": "c-tout-le-monde-everyone",
         "term": "{tout le monde} = everyone",
-        "definition": "Fixed expression (literally 'all the world') - uses SINGULAR verb!",
-        "example": "{tout le monde sait} (everyone knows - singular!), {tout le monde pense} (everyone thinks)"
+        "definition": "Literally all the world. Its verb is singular, like the verb of {il}.",
+        "examples": [
+          {
+            "fr": "Tout le monde sait.",
+            "en": "Everyone knows."
+          },
+          {
+            "fr": "Tout le monde est ici.",
+            "en": "Everybody is here."
+          }
+        ]
       },
       {
         "id": "c-making-general-statements",
-        "term": "Making general statements",
-        "definition": "Use '{on}' for universal truths or common wisdom - sounds philosophical!",
-        "example": "{On apprend tous les jours} (We learn every day), {On ne peut pas tout savoir} (One can't know everything)"
+        "term": "Saying what is true for anyone",
+        "definition": "Use {on} for things that are true for everyone.",
+        "examples": [
+          {
+            "fr": "On apprend tous les jours.",
+            "en": "We learn every day."
+          },
+          {
+            "fr": "On ne peut pas tout savoir.",
+            "en": "You can't know everything."
+          }
+        ]
       }
     ],
     "items/i-on-doit-partir": {
@@ -10210,32 +10795,102 @@
       {
         "id": "c-penser-to-think",
         "term": "{penser} = to think",
-        "definition": "Core cognitive verb for expressing opinions and thoughts",
-        "example": "{je pense que c'est bon} (I think it's good), {tu penses?} (what do you think?)"
+        "definition": "The verb for saying what you think.",
+        "examples": [
+          {
+            "fr": "Je pense que c'est bon.",
+            "en": "I think it's good."
+          },
+          {
+            "fr": "Les gens pensent ça.",
+            "en": "People think that."
+          }
+        ]
       },
       {
         "id": "c-regular-er-verb",
-        "term": "Regular -ER verb",
-        "definition": "Easy conjugation! Like parler, manger, etc. (verbs you already know)",
-        "example": "{je pense}, {tu penses}, {il pense} - add -e, -{es}, -e endings"
+        "term": "A regular -er verb",
+        "definition": "{penser} changes like {parler}.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je pense",
+            "en": "I think"
+          },
+          {
+            "fr": "tu penses",
+            "en": "you think"
+          },
+          {
+            "fr": "il pense",
+            "en": "he thinks"
+          },
+          {
+            "fr": "nous pensons",
+            "en": "we think"
+          },
+          {
+            "fr": "vous pensez",
+            "en": "you think"
+          },
+          {
+            "fr": "ils pensent",
+            "en": "they think"
+          }
+        ]
       },
       {
         "id": "c-penser-que-to-think",
-        "term": "{penser que...} (to think that...)",
-        "definition": "Use '{que}' to introduce your opinion - VERY common pattern",
-        "example": "{je pense que oui} (I think so), {je pense que non} (I don't think so), {je pense que je connais Marie} (I think I know Marie), {je pense qu'il sait parler anglais} (I think he can speak English)"
+        "term": "{penser que} = to think that",
+        "definition": "Put {que} before what you think. Before a vowel it becomes {qu'}.",
+        "examples": [
+          {
+            "fr": "Je pense que oui.",
+            "en": "I think so."
+          },
+          {
+            "fr": "Je pense que non.",
+            "en": "I don't think so."
+          },
+          {
+            "fr": "Je pense que je connais Marie.",
+            "en": "I think I know Marie."
+          },
+          {
+            "fr": "Je pense qu'il sait parler anglais.",
+            "en": "I think he can speak English."
+          }
+        ]
       },
       {
         "id": "c-penser-a-to-think",
-        "term": "{penser à...} (to think about...)",
-        "definition": "Use 'à' + person/thing when thinking about something",
-        "example": "{je pense à toi} (I'm thinking about you), {je pense à ça} (I'm thinking about that)"
+        "term": "{penser à} = to think about",
+        "definition": "Put {à} before the person or thing on your mind.",
+        "examples": [
+          {
+            "fr": "Je pense à toi.",
+            "en": "I'm thinking about you."
+          },
+          {
+            "fr": "Je pense à ça.",
+            "en": "I'm thinking about that."
+          }
+        ]
       },
       {
         "id": "c-asking-opinions",
-        "term": "Asking opinions",
-        "definition": "Qu'est-ce que tu penses? = What do you think? (essential!)",
-        "example": "{Qu'est-ce que tu penses de ça?} (What do you think about that?)"
+        "term": "Asking what someone thinks",
+        "definition": "Add {de} before the thing you ask about.",
+        "examples": [
+          {
+            "fr": "Qu'est-ce que tu penses ?",
+            "en": "What do you think?"
+          },
+          {
+            "fr": "Qu'est-ce que tu penses de ça ?",
+            "en": "What do you think of that?"
+          }
+        ]
       }
     ]
   },
@@ -10366,33 +11021,99 @@
     "concepts": [
       {
         "id": "c-savoir-to-know-facts",
-        "term": "{savoir} = to know (facts or skills)",
-        "definition": "CRITICAL distinction: savoir is for facts you learned or skills you have",
-        "example": "{je sais la réponse} (I know the answer), {je sais parler anglais} (I can speak English)"
+        "term": "{savoir} = to know",
+        "definition": "Use {savoir} for facts you know and for things you know how to do.",
+        "examples": [
+          {
+            "fr": "Je sais la réponse.",
+            "en": "I know the answer."
+          },
+          {
+            "fr": "Je sais que c'est vrai.",
+            "en": "I know it's true."
+          }
+        ]
       },
       {
         "id": "c-irregular-conjugation",
-        "term": "Irregular conjugation",
-        "definition": "Must memorize! Present: je sais, tu sais, il sait, nous savons, vous savez, ils savent",
-        "example": "Notice: {je}/{tu}/il all sound the same ('say'), {nous}/vous different"
+        "term": "The forms of {savoir}",
+        "definition": "The three singular forms sound the same. The plural forms change the stem to sav-.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je sais",
+            "en": "I know"
+          },
+          {
+            "fr": "tu sais",
+            "en": "you know"
+          },
+          {
+            "fr": "il sait",
+            "en": "he knows"
+          },
+          {
+            "fr": "nous savons",
+            "en": "we know"
+          },
+          {
+            "fr": "vous savez",
+            "en": "you know"
+          },
+          {
+            "fr": "ils savent",
+            "en": "they know"
+          }
+        ]
       },
       {
         "id": "c-je-ne-sais-pas",
-        "term": "'{Je ne sais pas}' - THE phrase",
-        "definition": "Rank 21 = one of most common phrases in ALL of French! You'll use it constantly",
-        "example": "{Je ne sais pas} (I don't know), {Tu sais?} (You know? / Do you know?)"
+        "term": "{Je ne sais pas}",
+        "definition": "One of the most common sentences in French.",
+        "examples": [
+          {
+            "fr": "Je ne sais pas.",
+            "en": "I don't know."
+          },
+          {
+            "fr": "Tu sais ?",
+            "en": "You know?"
+          },
+          {
+            "fr": "Vous savez ?",
+            "en": "Do you know?"
+          }
+        ]
       },
       {
         "id": "c-savoir-infinitive-know-how",
-        "term": "savoir + infinitive = know how to",
-        "definition": "Use savoir + verb to express skills/abilities",
-        "example": "{je sais parler français} (I know how to speak French), {je sais faire du café} (I know how to make coffee)"
+        "term": "Knowing how to do something",
+        "definition": "Put a verb after {savoir} to say what you know how to do.",
+        "examples": [
+          {
+            "fr": "Je sais parler français.",
+            "en": "I can speak French."
+          },
+          {
+            "fr": "Je sais faire du café.",
+            "en": "I know how to make coffee."
+          }
+        ]
       },
       {
         "id": "c-savoir-vs-connaitre-preview",
-        "term": "savoir vs connaître (preview)",
-        "definition": "savoir = facts/skills, connaître = people/places (you'll learn connaître next!)",
-        "example": "{je sais la réponse} (I know the answer). To know Marie, a person, the next lesson uses another verb."
+        "term": "Knowing a fact",
+        "definition": "{savoir} is for facts and skills, never for people or places.",
+        "examples": [
+          {
+            "fr": "Je sais qu'il est là.",
+            "en": "I know he's here."
+          },
+          {
+            "fr": "Nous savons ça.",
+            "en": "We know that."
+          }
+        ]
       }
     ],
     "glosses": [
@@ -10408,32 +11129,93 @@
       {
         "id": "c-etudier-to-study",
         "term": "{étudier} = to study",
-        "definition": "Regular -ER verb - easy! Essential for academic contexts",
-        "example": "{j'étudie à l'université} (I study at university), {j'étudie le français} (I'm studying French)"
+        "definition": "A regular -er verb for studying, at school or on your own.",
+        "examples": [
+          {
+            "fr": "J'étudie le français.",
+            "en": "I'm studying French."
+          },
+          {
+            "fr": "Tu étudies à l'université ?",
+            "en": "Do you study at university?"
+          },
+          {
+            "fr": "Nous étudions ensemble.",
+            "en": "We study together."
+          }
+        ]
       },
       {
         "id": "c-reviser-to-review-to",
-        "term": "{réviser} = to review / to revise",
-        "definition": "Regular -ER verb - going over material you've learned",
-        "example": "{je révise mes leçons} (I'm reviewing my lessons), {je révise pour l'examen} (I'm reviewing for the exam)"
+        "term": "{réviser} = to review",
+        "definition": "A regular -er verb for going over what you studied before.",
+        "examples": [
+          {
+            "fr": "Je révise mes leçons.",
+            "en": "I'm reviewing my lessons."
+          },
+          {
+            "fr": "Elle révise pour l'examen.",
+            "en": "She's reviewing for the exam."
+          }
+        ]
       },
       {
         "id": "c-study-workflow",
-        "term": "Study workflow",
-        "definition": "Natural progression: study → learn → understand → review → know",
-        "example": "{j'étudie} → {j'apprends} → {je comprends} → {je révise}"
+        "term": "From studying to knowing",
+        "definition": "These verbs follow the steps of learning something.",
+        "examples": [
+          {
+            "fr": "J'étudie.",
+            "en": "I study."
+          },
+          {
+            "fr": "J'apprends.",
+            "en": "I learn."
+          },
+          {
+            "fr": "Je comprends.",
+            "en": "I understand."
+          },
+          {
+            "fr": "Je révise.",
+            "en": "I review."
+          }
+        ]
       },
       {
         "id": "c-etudier-vs-apprendre",
-        "term": "étudier vs apprendre",
-        "definition": "étudier = the act of studying (action), apprendre = acquiring knowledge (result)",
-        "example": "{j'étudie le soir} (I study in the evening - action), {j'apprends beaucoup} (I learn a lot - result)"
+        "term": "{étudier} or {apprendre}",
+        "definition": "{étudier} is the work you do. {apprendre} is what you get from it.",
+        "examples": [
+          {
+            "fr": "J'étudie le soir.",
+            "en": "I study in the evening."
+          },
+          {
+            "fr": "J'apprends beaucoup.",
+            "en": "I learn a lot."
+          }
+        ]
       },
       {
         "id": "c-complete-learning-narrative",
-        "term": "Complete learning narrative",
-        "definition": "Now you can describe your entire learning journey in French!",
-        "example": "{J'étudie} → {j'apprends} → {je comprends} → {je révise} → {je pense} (I study → learn → understand → review → think). Knowing and believing come in the next lessons."
+        "term": "Saying how you learn",
+        "definition": "Put these verbs together to say how you learn French.",
+        "examples": [
+          {
+            "fr": "J'étudie le français et j'apprends beaucoup.",
+            "en": "I'm studying French and I'm learning a lot."
+          },
+          {
+            "fr": "Je révise mes leçons le soir.",
+            "en": "I review my lessons in the evening."
+          },
+          {
+            "fr": "Je pense en français.",
+            "en": "I think in French."
+          }
+        ]
       }
     ]
   },

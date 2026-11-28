@@ -98,33 +98,91 @@
   "concepts": [
     {
       "id": "c-tout-all-everything",
-      "term": "{tout} = all / everything",
-      "definition": "VERY versatile word! Can be pronoun, adjective, or adverb - rank 49",
-      "example": "{tout} (everything), {tout le monde} (everyone), {toute la classe} (the whole class), {tout petit} (very small)"
+      "term": "{tout} = all, everything",
+      "definition": "On its own, {tout} means everything. Before a noun it means all or the whole, and it agrees with the noun.",
+      "examples": [
+        {
+          "fr": "Je sais tout.",
+          "en": "I know everything."
+        },
+        {
+          "fr": "Toute la classe est là.",
+          "en": "The whole class is here."
+        },
+        {
+          "fr": "On apprend tous les jours.",
+          "en": "We learn every day."
+        },
+        {
+          "fr": "C'est tout petit.",
+          "en": "It's very small.",
+          "note": "before an adjective, {tout} means very"
+        }
+      ]
     },
     {
       "id": "c-tout-le-monde-everyone",
       "term": "{tout le monde} = everyone",
-      "definition": "Fixed expression! Literally 'all the world' but means 'everyone'",
-      "example": "{Tout le monde sait} (Everyone knows), {Tout le monde comprend} (Everyone understands)"
+      "definition": "Literally all the world. Its verb is singular.",
+      "examples": [
+        {
+          "fr": "Tout le monde comprend.",
+          "en": "Everyone understands."
+        },
+        {
+          "fr": "Tout le monde est là ?",
+          "en": "Is everyone here?"
+        }
+      ]
     },
     {
       "id": "c-meme-same-even",
-      "term": "{même} = same / even",
-      "definition": "Expresses sameness OR emphasis - rank 85, very common!",
-      "example": "{C'est la même chose} (It's the same thing), {Même moi}, {je sais} (Even I know)"
+      "term": "{même} = same, even",
+      "definition": "With an article in front, {même} means same. Before a word, it means even.",
+      "examples": [
+        {
+          "fr": "C'est la même chose.",
+          "en": "It's the same thing."
+        },
+        {
+          "fr": "Même moi, je sais.",
+          "en": "Even I know."
+        }
+      ]
     },
     {
       "id": "c-mal-badly-poorly",
-      "term": "{mal} = badly / poorly",
-      "definition": "Opposite of '{bien}' (well) - rank 87, for negative descriptions",
-      "example": "{Je comprends mal} (I understand poorly), {Ça va mal} (It's going badly)"
+      "term": "{mal} = badly",
+      "definition": "The opposite of {bien}.",
+      "examples": [
+        {
+          "fr": "Ça va mal.",
+          "en": "Things are going badly."
+        },
+        {
+          "fr": "Il va mal.",
+          "en": "He's not well."
+        }
+      ]
     },
     {
       "id": "c-complete-comparison-toolkit",
-      "term": "Complete comparison toolkit",
-      "definition": "Now you have: plus, moins, trop, très, aussi, tout, même, mal - full range!",
-      "example": "{Je comprends très bien} (very well), {Je comprends mal} (poorly), {C'est la même chose} (same), {Tout le monde comprend} (everyone)"
+      "term": "Saying how well",
+      "definition": "Put these words after the verb to say how well something goes.",
+      "examples": [
+        {
+          "fr": "Je comprends très bien.",
+          "en": "I understand very well."
+        },
+        {
+          "fr": "Je comprends bien.",
+          "en": "I understand well."
+        },
+        {
+          "fr": "Je comprends mal.",
+          "en": "I don't understand well."
+        }
+      ]
     }
   ],
   "items": [

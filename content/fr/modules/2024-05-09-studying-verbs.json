@@ -112,32 +112,93 @@
     {
       "id": "c-etudier-to-study",
       "term": "{étudier} = to study",
-      "definition": "Regular -ER verb - easy! Essential for academic contexts",
-      "example": "{j'étudie à l'université} (I study at university), {j'étudie le français} (I'm studying French)"
+      "definition": "A regular -er verb for studying, at school or on your own.",
+      "examples": [
+        {
+          "fr": "J'étudie le français.",
+          "en": "I'm studying French."
+        },
+        {
+          "fr": "Tu étudies à l'université ?",
+          "en": "Do you study at university?"
+        },
+        {
+          "fr": "Nous étudions ensemble.",
+          "en": "We study together."
+        }
+      ]
     },
     {
       "id": "c-reviser-to-review-to",
-      "term": "{réviser} = to review / to revise",
-      "definition": "Regular -ER verb - going over material you've learned",
-      "example": "{je révise mes leçons} (I'm reviewing my lessons), {je révise pour l'examen} (I'm reviewing for the exam)"
+      "term": "{réviser} = to review",
+      "definition": "A regular -er verb for going over what you studied before.",
+      "examples": [
+        {
+          "fr": "Je révise mes leçons.",
+          "en": "I'm reviewing my lessons."
+        },
+        {
+          "fr": "Elle révise pour l'examen.",
+          "en": "She's reviewing for the exam."
+        }
+      ]
     },
     {
       "id": "c-study-workflow",
-      "term": "Study workflow",
-      "definition": "Natural progression: study → learn → understand → review → know",
-      "example": "{j'étudie} → {j'apprends} → {je comprends} → {je révise}"
+      "term": "From studying to knowing",
+      "definition": "These verbs follow the steps of learning something.",
+      "examples": [
+        {
+          "fr": "J'étudie.",
+          "en": "I study."
+        },
+        {
+          "fr": "J'apprends.",
+          "en": "I learn."
+        },
+        {
+          "fr": "Je comprends.",
+          "en": "I understand."
+        },
+        {
+          "fr": "Je révise.",
+          "en": "I review."
+        }
+      ]
     },
     {
       "id": "c-etudier-vs-apprendre",
-      "term": "étudier vs apprendre",
-      "definition": "étudier = the act of studying (action), apprendre = acquiring knowledge (result)",
-      "example": "{j'étudie le soir} (I study in the evening - action), {j'apprends beaucoup} (I learn a lot - result)"
+      "term": "{étudier} or {apprendre}",
+      "definition": "{étudier} is the work you do. {apprendre} is what you get from it.",
+      "examples": [
+        {
+          "fr": "J'étudie le soir.",
+          "en": "I study in the evening."
+        },
+        {
+          "fr": "J'apprends beaucoup.",
+          "en": "I learn a lot."
+        }
+      ]
     },
     {
       "id": "c-complete-learning-narrative",
-      "term": "Complete learning narrative",
-      "definition": "Now you can describe your entire learning journey in French!",
-      "example": "{J'étudie} → {j'apprends} → {je comprends} → {je révise} → {je pense} (I study → learn → understand → review → think). Knowing and believing come in the next lessons."
+      "term": "Saying how you learn",
+      "definition": "Put these verbs together to say how you learn French.",
+      "examples": [
+        {
+          "fr": "J'étudie le français et j'apprends beaucoup.",
+          "en": "I'm studying French and I'm learning a lot."
+        },
+        {
+          "fr": "Je révise mes leçons le soir.",
+          "en": "I review my lessons in the evening."
+        },
+        {
+          "fr": "Je pense en français.",
+          "en": "I think in French."
+        }
+      ]
     }
   ],
   "items": [

@@ -87,32 +87,102 @@
     {
       "id": "c-penser-to-think",
       "term": "{penser} = to think",
-      "definition": "Core cognitive verb for expressing opinions and thoughts",
-      "example": "{je pense que c'est bon} (I think it's good), {tu penses?} (what do you think?)"
+      "definition": "The verb for saying what you think.",
+      "examples": [
+        {
+          "fr": "Je pense que c'est bon.",
+          "en": "I think it's good."
+        },
+        {
+          "fr": "Les gens pensent ça.",
+          "en": "People think that."
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb",
-      "term": "Regular -ER verb",
-      "definition": "Easy conjugation! Like parler, manger, etc. (verbs you already know)",
-      "example": "{je pense}, {tu penses}, {il pense} - add -e, -{es}, -e endings"
+      "term": "A regular -er verb",
+      "definition": "{penser} changes like {parler}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je pense",
+          "en": "I think"
+        },
+        {
+          "fr": "tu penses",
+          "en": "you think"
+        },
+        {
+          "fr": "il pense",
+          "en": "he thinks"
+        },
+        {
+          "fr": "nous pensons",
+          "en": "we think"
+        },
+        {
+          "fr": "vous pensez",
+          "en": "you think"
+        },
+        {
+          "fr": "ils pensent",
+          "en": "they think"
+        }
+      ]
     },
     {
       "id": "c-penser-que-to-think",
-      "term": "{penser que...} (to think that...)",
-      "definition": "Use '{que}' to introduce your opinion - VERY common pattern",
-      "example": "{je pense que oui} (I think so), {je pense que non} (I don't think so), {je pense que je connais Marie} (I think I know Marie), {je pense qu'il sait parler anglais} (I think he can speak English)"
+      "term": "{penser que} = to think that",
+      "definition": "Put {que} before what you think. Before a vowel it becomes {qu'}.",
+      "examples": [
+        {
+          "fr": "Je pense que oui.",
+          "en": "I think so."
+        },
+        {
+          "fr": "Je pense que non.",
+          "en": "I don't think so."
+        },
+        {
+          "fr": "Je pense que je connais Marie.",
+          "en": "I think I know Marie."
+        },
+        {
+          "fr": "Je pense qu'il sait parler anglais.",
+          "en": "I think he can speak English."
+        }
+      ]
     },
     {
       "id": "c-penser-a-to-think",
-      "term": "{penser à...} (to think about...)",
-      "definition": "Use 'à' + person/thing when thinking about something",
-      "example": "{je pense à toi} (I'm thinking about you), {je pense à ça} (I'm thinking about that)"
+      "term": "{penser à} = to think about",
+      "definition": "Put {à} before the person or thing on your mind.",
+      "examples": [
+        {
+          "fr": "Je pense à toi.",
+          "en": "I'm thinking about you."
+        },
+        {
+          "fr": "Je pense à ça.",
+          "en": "I'm thinking about that."
+        }
+      ]
     },
     {
       "id": "c-asking-opinions",
-      "term": "Asking opinions",
-      "definition": "Qu'est-ce que tu penses? = What do you think? (essential!)",
-      "example": "{Qu'est-ce que tu penses de ça?} (What do you think about that?)"
+      "term": "Asking what someone thinks",
+      "definition": "Add {de} before the thing you ask about.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que tu penses ?",
+          "en": "What do you think?"
+        },
+        {
+          "fr": "Qu'est-ce que tu penses de ça ?",
+          "en": "What do you think of that?"
+        }
+      ]
     }
   ],
   "tables": [

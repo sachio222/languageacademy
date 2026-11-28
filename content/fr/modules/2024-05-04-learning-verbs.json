@@ -111,32 +111,102 @@
     {
       "id": "c-apprendre-to-learn",
       "term": "{apprendre} = to learn",
-      "definition": "Part of prendre family (you already know this pattern!) - essential for education",
-      "example": "{j'apprends le français} (I'm learning French), {j'apprends beaucoup de mots} (I'm learning a lot of words), {nous apprenons ensemble} (we're learning together)"
+      "definition": "The verb for learning something. It changes like {prendre}.",
+      "examples": [
+        {
+          "fr": "J'apprends le français.",
+          "en": "I'm learning French."
+        },
+        {
+          "fr": "J'apprends beaucoup de mots.",
+          "en": "I'm learning a lot of words."
+        },
+        {
+          "fr": "Nous apprenons ensemble.",
+          "en": "We're learning together."
+        }
+      ]
     },
     {
       "id": "c-same-pattern-as-prendre",
-      "term": "Same pattern as prendre/{comprendre}",
-      "definition": "If you know prendre and comprendre, you know apprendre! Add ap- prefix",
-      "example": "{je prends} → {j'apprends}, {tu comprends} → {tu apprends} (same pattern!)"
+      "term": "Like {prendre}",
+      "definition": "{apprendre} is {prendre} with ap- in front, so its forms change the same way.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'apprends",
+          "en": "I learn"
+        },
+        {
+          "fr": "tu apprends",
+          "en": "you learn"
+        },
+        {
+          "fr": "il apprend",
+          "en": "he learns"
+        },
+        {
+          "fr": "nous apprenons",
+          "en": "we learn"
+        },
+        {
+          "fr": "vous apprenez",
+          "en": "you learn"
+        },
+        {
+          "fr": "ils apprennent",
+          "en": "they learn"
+        }
+      ]
     },
     {
       "id": "c-enseigner-to-teach",
       "term": "{enseigner} = to teach",
-      "definition": "Regular -ER verb - easy! Natural pair with apprendre",
-      "example": "{j'enseigne le français} (I teach French), {il m'enseigne} (he teaches me)"
+      "definition": "A regular -er verb. One person teaches and another learns.",
+      "examples": [
+        {
+          "fr": "J'enseigne le français.",
+          "en": "I teach French."
+        },
+        {
+          "fr": "Ils enseignent à l'université.",
+          "en": "They teach at the university."
+        }
+      ]
     },
     {
       "id": "c-beautiful-semantic-progression",
-      "term": "Beautiful semantic progression",
-      "definition": "Teacher teaches → student learns → student understands → student knows",
-      "example": "{Il m'enseigne} → {j'apprends} → {je comprends} (complete learning cycle!)"
+      "term": "Teaching, learning, understanding",
+      "definition": "One person teaches. The other learns, and then understands.",
+      "examples": [
+        {
+          "fr": "Il m'enseigne le français.",
+          "en": "He teaches me French."
+        },
+        {
+          "fr": "J'apprends le français avec lui.",
+          "en": "I'm learning French with him."
+        },
+        {
+          "fr": "Maintenant, je comprends.",
+          "en": "Now I understand."
+        }
+      ]
     },
     {
       "id": "c-apprendre-a-infinitive",
-      "term": "apprendre à + infinitive",
-      "definition": "Use 'à' before infinitive to say learning how to do something",
-      "example": "{j'apprends à faire du café} (I'm learning to make coffee), {j'apprends à parler français} (I'm learning to speak French)"
+      "term": "Learning to do something",
+      "definition": "Put {à} before the verb to say what you are learning to do.",
+      "examples": [
+        {
+          "fr": "J'apprends à parler français.",
+          "en": "I'm learning to speak French."
+        },
+        {
+          "fr": "J'apprends à faire du café.",
+          "en": "I'm learning to make coffee."
+        }
+      ]
     }
   ],
   "items": [

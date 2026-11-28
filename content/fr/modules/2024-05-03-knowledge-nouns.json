@@ -100,27 +100,81 @@
   "concepts": [
     {
       "id": "c-academic-nouns",
-      "term": "Academic nouns",
-      "definition": "Essential vocabulary for school, university, and learning contexts",
-      "example": "{le cours} (class), {la leçon} (lesson), {l'école} (school), {l'université} (university)"
+      "term": "School words",
+      "definition": "Nouns for school, university and class.",
+      "examples": [
+        {
+          "fr": "Je vais à l'université.",
+          "en": "I go to university."
+        },
+        {
+          "fr": "L'école est là-bas.",
+          "en": "The school is over there."
+        },
+        {
+          "fr": "J'apprends mes leçons.",
+          "en": "I'm learning my lessons."
+        }
+      ]
     },
     {
       "id": "c-knowledge-nouns",
-      "term": "Knowledge nouns",
-      "definition": "Abstract nouns related to knowing and understanding",
-      "example": "{la connaissance} (knowledge - what you know), {le savoir} (knowledge - abstract), {la pensée} (thought)"
+      "term": "Words for knowledge",
+      "definition": "Nouns for knowing and thinking.",
+      "examples": [
+        {
+          "fr": "la connaissance",
+          "en": "knowledge",
+          "note": "what a person knows"
+        },
+        {
+          "fr": "le savoir",
+          "en": "knowledge",
+          "note": "knowledge in general"
+        },
+        {
+          "fr": "la pensée",
+          "en": "thought"
+        }
+      ]
     },
     {
       "id": "c-communication-nouns",
-      "term": "Communication nouns",
-      "definition": "Question-and-answer vocabulary - essential for learning!",
-      "example": "{la question} (question), {la réponse} (answer), {l'idée} (idea)"
+      "term": "Questions and answers",
+      "definition": "Nouns you need in any lesson.",
+      "examples": [
+        {
+          "fr": "J'ai une question.",
+          "en": "I have a question."
+        },
+        {
+          "fr": "Je sais la réponse.",
+          "en": "I know the answer."
+        },
+        {
+          "fr": "C'est une bonne idée.",
+          "en": "That's a good idea."
+        }
+      ]
     },
     {
       "id": "c-complete-sentence-composition",
-      "term": "Complete sentence composition",
-      "definition": "Now you can build full sentences about learning and knowing",
-      "example": "{J'ai une question} (I have a question), {C'est une bonne idée} (That's a good idea), {Je vais au cours} (I'm going to class)"
+      "term": "Sentences about learning",
+      "definition": "Put these nouns with the verbs of this unit.",
+      "examples": [
+        {
+          "fr": "Je comprends la question.",
+          "en": "I understand the question."
+        },
+        {
+          "fr": "Je vais au cours.",
+          "en": "I'm going to class."
+        },
+        {
+          "fr": "Tu as une idée ?",
+          "en": "Do you have an idea?"
+        }
+      ]
     }
   ],
   "items": [
