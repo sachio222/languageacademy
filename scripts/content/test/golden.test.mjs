@@ -198,22 +198,28 @@ function writerEdit(key, edit) {
   mod.items = mod.items.map((it) => (it.id === item.id ? { ...item, steps: it.steps } : it));
   return { mod, item, fixes: { ...handFixes, [key]: { ...(handFixes[key] || {}), [`items/${item.id}`]: item } } };
 }
-// A converted lesson unchanged since the freeze, with an item that has a hint and one that has mistakes.
-const TARGET = [...course.modules.values()].find(
-  (m) => m.kind === 'lesson' && liveIds[m.module_key] && !result.since.changed.has(m.module_key) && m.items.some((it) => it.hint) && m.items.some((it) => (it.mistakes || []).length),
-).module_key;
+// A converted lesson with an item that has a hint and one that has mistakes: one unchanged since the freeze while there
+// is one, else the first such lesson (every converted lesson now holds hand-written concept cards, plan
+// 2026-11-27-concept-cards-structured, so none may be left unchanged).
+const editable = (m) => m.kind === 'lesson' && liveIds[m.module_key] && m.items.some((it) => it.hint) && m.items.some((it) => (it.mistakes || []).length);
+const TARGET = ([...course.modules.values()].find((m) => editable(m) && !result.since.changed.has(m.module_key))
+  ?? [...course.modules.values()].find(editable)).module_key;
+const TARGET_WAS_CHANGED = result.since.changed.has(TARGET);
 const rehint = { find: (it) => Boolean(it.hint), change: () => ({ hint: 'A hint written after the freeze.' }) };
 const feedback = { find: (it) => (it.mistakes || []).length > 0, change: (it) => ({ mistakes: it.mistakes.map((m, i) => (i === 0 ? { ...m, feedback: 'Look again at the verb.' } : m)) }) };
 
 test("a writer's recorded hand fix to a converted lesson passes, and the other modules keep their frozen counts", () => {
   for (const edit of [rehint, feedback]) {
     const { mod, fixes } = writerEdit(TARGET, edit);
+    // The differences the edit makes (one or more, by how the adapter shows the item), each explained by its fix.
+    const made = run(null, { modules: { [TARGET]: mod } }).unexplained.length - result.unexplained.length;
+    assert.ok(made > 0, 'the edit makes a difference');
     const r = run(null, { modules: { [TARGET]: mod }, handFixes: fixes });
     assert.deepEqual(r.unexplained.map(describe), []);
     assert.deepEqual(r.off, []);
-    assert.equal(r.counts.hand_fix_recorded, (result.counts.hand_fix_recorded || 0) + 1);
+    assert.equal(r.counts.hand_fix_recorded, (result.counts.hand_fix_recorded || 0) + made);
     assert.ok(r.since.changed.has(TARGET));
-    assert.equal(r.since.changed.size, result.since.changed.size + 1);
+    assert.equal(r.since.changed.size, result.since.changed.size + (TARGET_WAS_CHANGED ? 0 : 1));
   }
 });
 

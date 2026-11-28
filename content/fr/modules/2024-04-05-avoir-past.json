@@ -68,33 +68,87 @@
   "concepts": [
     {
       "id": "c-past-tense-imperfect-imparfait",
-      "term": "Past Tense = Imperfect (Imparfait)",
-      "definition": "Describes what you possessed or experienced in the past",
-      "example": "{j'avais un chat} (I had a cat), {nous avions une maison} (we had a house)"
+      "term": "{j'avais} = I had",
+      "definition": "This past tense describes what you had, or how things were.",
+      "examples": [
+        {
+          "fr": "J'avais un chat.",
+          "en": "I had a cat."
+        },
+        {
+          "fr": "Nous avions une maison.",
+          "en": "We had a house."
+        }
+      ]
     },
     {
       "id": "c-avais-had-singular",
-      "term": "{avais} = had (singular)",
-      "definition": "For je, tu - describing past possession",
-      "example": "{j'avais un livre} (I had a book), {tu avais raison} (you were right - literally 'had reason')"
+      "term": "I had, you had",
+      "definition": "{j'avais} and {tu avais} have the same ending and the same sound.",
+      "examples": [
+        {
+          "fr": "J'avais un livre.",
+          "en": "I had a book."
+        },
+        {
+          "fr": "Tu avais raison.",
+          "en": "You were right.",
+          "note": "French says you had reason"
+        }
+      ]
     },
     {
       "id": "c-avait-had-third-person",
-      "term": "{avait} = had (third person singular)",
-      "definition": "For il/elle - describing what he/she/it had",
-      "example": "{il avait un chien} (he had a dog), {elle avait le temps} (she had time)"
+      "term": "He had, she had",
+      "definition": "{il avait} ends in -ait, but it sounds just like {j'avais}.",
+      "examples": [
+        {
+          "fr": "Il avait un chien.",
+          "en": "He had a dog."
+        },
+        {
+          "fr": "Elle avait le temps.",
+          "en": "She had time."
+        }
+      ]
     },
     {
       "id": "c-avions-aviez-avaient-had",
-      "term": "{avions, aviez, avaient} = had (plural)",
-      "definition": "For nous, vous, ils/elles - plural past possession",
-      "example": "{nous avions une voiture} (we had a car), {ils avaient faim} (they were hungry)"
+      "term": "Had: the plural forms",
+      "definition": "For we, you and they. {ils avaient} sounds like {il avait}.",
+      "examples": [
+        {
+          "fr": "Nous avions une voiture.",
+          "en": "We had a car."
+        },
+        {
+          "fr": "Vous aviez de l'argent.",
+          "en": "You had money."
+        },
+        {
+          "fr": "Ils avaient faim.",
+          "en": "They were hungry."
+        }
+      ]
     },
     {
       "id": "c-common-expressions-with-avoir",
-      "term": "Common expressions with avoir",
-      "definition": "Many French expressions use avoir (not être!): avoir faim (to be hungry), avoir raison (to be right)",
-      "example": "{j'avais faim} (I was hungry), {tu avais raison} (you were right)"
+      "term": "Hungry and right with {avoir}",
+      "definition": "French uses {avoir} where English uses to be: you have hunger, you have reason.",
+      "examples": [
+        {
+          "fr": "J'avais faim.",
+          "en": "I was hungry."
+        },
+        {
+          "fr": "Tu avais raison.",
+          "en": "You were right."
+        },
+        {
+          "fr": "Nous avions faim.",
+          "en": "We were hungry."
+        }
+      ]
     }
   ],
   "items": [

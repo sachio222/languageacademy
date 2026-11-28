@@ -97,27 +97,92 @@
   "concepts": [
     {
       "id": "c-should-devrais-conditional-of",
-      "term": "Should = {devrais} (conditional of devoir)",
-      "definition": "Give advice, suggestions, or express obligation softly",
-      "example": "{tu devrais partir} (you should leave), {nous devrions parler} (we should talk)"
+      "term": "Should: {je devrais}",
+      "definition": "{devoir} in this form gives advice. It is softer than must.",
+      "examples": [
+        {
+          "fr": "Tu devrais partir.",
+          "en": "You should leave."
+        },
+        {
+          "fr": "Nous devrions parler.",
+          "en": "We should talk."
+        },
+        {
+          "fr": "Il devrait travailler.",
+          "en": "He should work."
+        }
+      ]
     },
     {
       "id": "c-could-pourrais-conditional-of",
-      "term": "Could = {pourrais} (conditional of pouvoir)",
-      "definition": "Express possibility or make polite requests",
-      "example": "{je pourrais venir} (I could come), {vous pourriez m'aider} (you could help me)"
+      "term": "Could: {je pourrais}",
+      "definition": "{pouvoir} in this form says what is possible. It also makes a request polite.",
+      "examples": [
+        {
+          "fr": "Je pourrais venir.",
+          "en": "I could come."
+        },
+        {
+          "fr": "Tu pourrais m'aider ?",
+          "en": "Could you help me?"
+        },
+        {
+          "fr": "Elle pourrait le faire.",
+          "en": "She could do it."
+        }
+      ]
     },
     {
       "id": "c-pattern-alternating-should-could",
-      "term": "Pattern: Alternating Should & Could",
-      "definition": "Practice both forms together - they work the same way!",
-      "example": "{je devrais} / {je pourrais}, {tu devrais} / {tu pourrais}, {il devrait} / {il pourrait}"
+      "term": "Same endings for both",
+      "definition": "{devoir} and {pouvoir} take the same endings in this form, so if you know one you know the other.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je devrais",
+          "en": "I should"
+        },
+        {
+          "fr": "tu devrais",
+          "en": "you should"
+        },
+        {
+          "fr": "il devrait",
+          "en": "he should"
+        },
+        {
+          "fr": "nous devrions",
+          "en": "we should"
+        },
+        {
+          "fr": "vous devriez",
+          "en": "you should"
+        },
+        {
+          "fr": "ils devraient",
+          "en": "they should"
+        }
+      ]
     },
     {
       "id": "c-negation",
-      "term": "Negation",
-      "definition": "Use ne...pas around the conditional verb",
-      "example": "{je ne devrais pas} (I should not), {tu ne pourrais pas} (you could not)"
+      "term": "Should not, could not",
+      "definition": "Put {ne} … {pas} around the verb, as in the present.",
+      "examples": [
+        {
+          "fr": "Je ne devrais pas partir.",
+          "en": "I shouldn't leave."
+        },
+        {
+          "fr": "Tu ne pourrais pas faire ça.",
+          "en": "You couldn't do that."
+        },
+        {
+          "fr": "Nous ne devrions pas partir.",
+          "en": "We shouldn't leave."
+        }
+      ]
     }
   ],
   "items": [

@@ -79,33 +79,104 @@
   "concepts": [
     {
       "id": "c-aimer-to-like-or",
-      "term": "{aimer} = to like OR to love",
-      "definition": "Context determines meaning - can mean both 'like' and 'love'",
-      "example": "{j'aime le café} (I like coffee), {j'aime ma mère} (I love my mother)"
+      "term": "{aimer} = to like, to love",
+      "definition": "One verb for liking and for loving. The situation tells you which one.",
+      "examples": [
+        {
+          "fr": "J'aime le café.",
+          "en": "I like coffee."
+        },
+        {
+          "fr": "J'aime ma mère.",
+          "en": "I love my mother."
+        },
+        {
+          "fr": "Je t'aime.",
+          "en": "I love you."
+        }
+      ]
     },
     {
       "id": "c-aimer-bien-to-like",
-      "term": "{aimer bien} = to like (casual)",
-      "definition": "Adding '{bien}' makes it clearly 'like' not 'love' - less intense",
-      "example": "{j'aime bien ce livre} (I like this book)"
+      "term": "{aimer bien} = to like",
+      "definition": "Adding {bien} makes it clearly like, not love.",
+      "examples": [
+        {
+          "fr": "J'aime bien ce livre.",
+          "en": "I like this book."
+        },
+        {
+          "fr": "Je l'aime bien.",
+          "en": "I like him.",
+          "note": "with a person, {bien} keeps it to like"
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb-pattern",
-      "term": "Regular -ER verb pattern",
-      "definition": "Follows same pattern as parler - drop -er, add endings",
-      "example": "{je parle} → {j'aime}, {tu parles} → {tu aimes}, {il parle} → {il aime}"
+      "term": "The -er pattern again",
+      "definition": "{aimer} changes like {parler}. Before a vowel, {je} becomes {j'}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'aime",
+          "en": "I like"
+        },
+        {
+          "fr": "tu aimes",
+          "en": "you like"
+        },
+        {
+          "fr": "il aime",
+          "en": "he likes"
+        },
+        {
+          "fr": "nous aimons",
+          "en": "we like"
+        },
+        {
+          "fr": "vous aimez",
+          "en": "you like"
+        },
+        {
+          "fr": "ils aiment",
+          "en": "they like"
+        }
+      ]
     },
     {
       "id": "c-with-people-vs-things",
-      "term": "With people vs things",
-      "definition": "With people often means 'love', with things means 'like'",
-      "example": "{j'aime Pierre} (I love Pierre), {j'aime le pain} (I like bread)"
+      "term": "People and things",
+      "definition": "With a person, {aimer} usually means love. With a thing, it means like.",
+      "examples": [
+        {
+          "fr": "J'aime Pierre.",
+          "en": "I love Pierre."
+        },
+        {
+          "fr": "J'aime le pain.",
+          "en": "I like bread."
+        }
+      ]
     },
     {
       "id": "c-with-infinitives",
-      "term": "With infinitives",
-      "definition": "Use aimer + infinitive to say you like doing something",
-      "example": "{j'aime parler français} (I like speaking French)"
+      "term": "Liking to do something",
+      "definition": "Put a second verb after {aimer} to say what you like doing.",
+      "examples": [
+        {
+          "fr": "J'aime parler français.",
+          "en": "I like speaking French."
+        },
+        {
+          "fr": "Nous aimons travailler.",
+          "en": "We like working."
+        },
+        {
+          "fr": "Tu aimes aller à Paris ?",
+          "en": "Do you like going to Paris?"
+        }
+      ]
     }
   ],
   "items": [

@@ -99,32 +99,106 @@
     {
       "id": "c-boire-to-drink",
       "term": "{boire} = to drink",
-      "definition": "Essential daily verb - talk about beverages!",
-      "example": "{je bois du café} (I drink coffee), {nous buvons de l'eau} (we drink water)"
+      "definition": "The verb for drinking.",
+      "examples": [
+        {
+          "fr": "Je bois du café.",
+          "en": "I drink coffee."
+        },
+        {
+          "fr": "Nous buvons de l'eau.",
+          "en": "We drink water."
+        },
+        {
+          "fr": "Qu'est-ce que tu bois ?",
+          "en": "What are you drinking?"
+        }
+      ]
     },
     {
       "id": "c-irregular-verb-changes-stem",
-      "term": "Irregular verb - changes stem!",
-      "definition": "Uses 'boi-' for singular, 'buv-' for plural forms",
-      "example": "je bois, tu bois, il boit BUT nous buvons, vous buvez, ils boivent"
+      "term": "The forms of {boire}",
+      "definition": "The singular forms sound the same. The stem changes to buv- for we and you, and to boiv- for they.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je bois",
+          "en": "I drink"
+        },
+        {
+          "fr": "tu bois",
+          "en": "you drink"
+        },
+        {
+          "fr": "il boit",
+          "en": "he drinks"
+        },
+        {
+          "fr": "nous buvons",
+          "en": "we drink"
+        },
+        {
+          "fr": "vous buvez",
+          "en": "you drink"
+        },
+        {
+          "fr": "ils boivent",
+          "en": "they drink"
+        }
+      ]
     },
     {
       "id": "c-passe-compose-past-tense",
-      "term": "Passé Composé (Past Tense)",
-      "definition": "Use avoir + bu to say 'drank' or 'have drunk'",
-      "example": "{j'ai bu} (I drank/have drunk), {tu as bu} (you drank), {il a bu} (he drank)"
+      "term": "I drank: {j'ai bu}",
+      "definition": "Put {avoir} before {bu} to say what you drank.",
+      "examples": [
+        {
+          "fr": "J'ai bu du café.",
+          "en": "I drank some coffee."
+        },
+        {
+          "fr": "Il a bu du vin.",
+          "en": "He drank some wine."
+        },
+        {
+          "fr": "Nous n'avons pas bu de café.",
+          "en": "We didn't drink any coffee."
+        }
+      ]
     },
     {
       "id": "c-past-participle-bu-irregular",
-      "term": "Past Participle: {bu} (irregular!)",
-      "definition": "Irregular past participle - NOT 'buvé'!",
-      "example": "{boire} → {bu} (short and irregular)"
+      "term": "{bu}, a short past form",
+      "definition": "{boire} does not follow the -er pattern, so its past form is short: {bu}.",
+      "examples": [
+        {
+          "fr": "J'ai bu.",
+          "en": "I drank."
+        },
+        {
+          "fr": "Tu as bu de l'eau ?",
+          "en": "Did you drink some water?"
+        }
+      ]
     },
     {
       "id": "c-with-drink-nouns",
-      "term": "With drink nouns",
-      "definition": "Use partitive (du/de la/de l') for some, or article for specific items",
-      "example": "{je bois du café} (I drink some coffee), {j'ai bu de l'eau} (I drank water)"
+      "term": "Some coffee, some water",
+      "definition": "Drinks take the word for some, as food does. Before a vowel, {de la} becomes {de l'}.",
+      "examples": [
+        {
+          "fr": "Il boit de la bière.",
+          "en": "He drinks beer."
+        },
+        {
+          "fr": "Je veux boire de l'eau.",
+          "en": "I want to drink some water."
+        },
+        {
+          "fr": "Elle boit du jus.",
+          "en": "She drinks juice."
+        }
+      ]
     }
   ],
   "items": [

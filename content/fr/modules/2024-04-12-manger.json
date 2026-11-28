@@ -100,32 +100,110 @@
     {
       "id": "c-manger-to-eat",
       "term": "{manger} = to eat",
-      "definition": "Essential daily verb - talk about meals and food!",
-      "example": "{je mange du pain} (I eat bread), {nous mangeons ensemble} (we eat together)"
+      "definition": "The verb for eating and for meals.",
+      "examples": [
+        {
+          "fr": "Je mange du pain.",
+          "en": "I'm eating some bread."
+        },
+        {
+          "fr": "Nous mangeons ensemble.",
+          "en": "We eat together."
+        },
+        {
+          "fr": "Qu'est-ce que tu manges ?",
+          "en": "What are you eating?"
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb",
-      "term": "Regular -ER verb",
-      "definition": "Follows same pattern as parler and aimer",
-      "example": "{je mange}, {tu manges}, {il mange}, {nous mangeons}, {vous mangez}, {ils mangent}"
+      "term": "The forms of {manger}",
+      "definition": "{manger} changes like {parler}. With {nous}, it keeps an e so the g stays soft.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je mange",
+          "en": "I eat"
+        },
+        {
+          "fr": "tu manges",
+          "en": "you eat"
+        },
+        {
+          "fr": "il mange",
+          "en": "he eats"
+        },
+        {
+          "fr": "nous mangeons",
+          "en": "we eat"
+        },
+        {
+          "fr": "vous mangez",
+          "en": "you eat"
+        },
+        {
+          "fr": "ils mangent",
+          "en": "they eat"
+        }
+      ]
     },
     {
       "id": "c-passe-compose-past-tense",
-      "term": "Passé Composé (Past Tense)",
-      "definition": "Use avoir + mangé to say 'ate' or 'have eaten'",
-      "example": "{j'ai mangé} (I ate/have eaten), {tu as mangé} (you ate), {il a mangé} (he ate)"
+      "term": "I ate: {j'ai mangé}",
+      "definition": "To say what you ate, put {avoir} before {mangé}.",
+      "examples": [
+        {
+          "fr": "J'ai mangé du pain.",
+          "en": "I ate some bread."
+        },
+        {
+          "fr": "Tu as mangé une pizza ?",
+          "en": "Did you eat a pizza?"
+        },
+        {
+          "fr": "Nous avons mangé ensemble.",
+          "en": "We ate together."
+        }
+      ]
     },
     {
       "id": "c-past-participle-mange",
-      "term": "Past Participle: {mangé}",
-      "definition": "For -ER verbs, past participle is -é",
-      "example": "{manger} → {mangé}, {parler} → {parlé}, {aimer} → {aimé}"
+      "term": "The -é ending",
+      "definition": "For a verb in -er, the past form ends in -é. It sounds just like the infinitive.",
+      "examples": [
+        {
+          "fr": "J'ai mangé.",
+          "en": "I ate."
+        },
+        {
+          "fr": "J'ai parlé avec Marie.",
+          "en": "I talked with Marie."
+        },
+        {
+          "fr": "J'ai aimé ce livre.",
+          "en": "I liked this book."
+        }
+      ]
     },
     {
       "id": "c-with-food-nouns",
-      "term": "With food nouns",
-      "definition": "Use partitive (du/de la/des) for some, or article for specific items",
-      "example": "{je mange du pain} (I eat some bread), {je mange une pomme} (I eat an apple)"
+      "term": "Some, or one",
+      "definition": "Use {du} or {de la} for some of a food. Use {un} or {une} for one whole thing.",
+      "examples": [
+        {
+          "fr": "Je mange du pain.",
+          "en": "I'm eating some bread."
+        },
+        {
+          "fr": "Je mange une pomme.",
+          "en": "I'm eating an apple."
+        },
+        {
+          "fr": "Je ne mange pas de viande.",
+          "en": "I don't eat meat."
+        }
+      ]
     }
   ],
   "items": [

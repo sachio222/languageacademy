@@ -88,27 +88,83 @@
   "concepts": [
     {
       "id": "c-basic-comparisons-plus-moins",
-      "term": "Basic Comparisons - {plus}/{moins}",
-      "definition": "Use '{plus}' (more) and '{moins}' (less) with adjectives to compare things",
-      "example": "{plus grand} (bigger), {moins cher} (less expensive)"
+      "term": "More and less: {plus} and {moins}",
+      "definition": "Put {plus} or {moins} before an adjective to compare two things.",
+      "examples": [
+        {
+          "fr": "Ce livre est plus grand.",
+          "en": "This book is bigger."
+        },
+        {
+          "fr": "Cette maison est moins grande.",
+          "en": "This house is smaller."
+        },
+        {
+          "fr": "C'est moins cher.",
+          "en": "It's cheaper."
+        }
+      ]
     },
     {
       "id": "c-better-and-worse-meilleur",
-      "term": "Better and Worse - {meilleur}/{pire}",
-      "definition": "Special forms for 'better' and 'worse' - they agree with gender!",
-      "example": "{un meilleur livre} (a better book), {une meilleure maison} (a better house)"
+      "term": "Better and worse: {meilleur} and {pire}",
+      "definition": "French has its own words for better and worse. {meilleur} agrees with its noun, like any adjective.",
+      "examples": [
+        {
+          "fr": "C'est un meilleur livre.",
+          "en": "It's a better book."
+        },
+        {
+          "fr": "C'est une meilleure maison.",
+          "en": "It's a better house."
+        },
+        {
+          "fr": "C'est pire.",
+          "en": "It's worse."
+        }
+      ]
     },
     {
       "id": "c-superlatives-the-best-the",
-      "term": "Superlatives - the best/the worst",
-      "definition": "Add '{le/la/les}' before meilleur/pire for 'the best/the worst'",
-      "example": "{le meilleur} (the best), {la pire} (the worst)"
+      "term": "The best and the worst",
+      "definition": "Put {le} or {la} before {meilleur} or {pire} to say the best or the worst.",
+      "examples": [
+        {
+          "fr": "C'est le meilleur livre.",
+          "en": "It's the best book."
+        },
+        {
+          "fr": "C'est la meilleure maison.",
+          "en": "It's the best house."
+        },
+        {
+          "fr": "C'est la pire chose.",
+          "en": "It's the worst thing."
+        }
+      ]
     },
     {
       "id": "c-intensity-modifiers",
-      "term": "Intensity Modifiers",
-      "definition": "Words like '{trop}' (too much), '{tout}' (all), and '{même}' (same/even) add nuance",
-      "example": "{c'est trop cher} (it's too expensive), {tout le monde} (everyone)"
+      "term": "Too much, everything, the same",
+      "definition": "{trop} means too or too much. {tout} means all or everything, and {même} means same.",
+      "examples": [
+        {
+          "fr": "C'est trop cher.",
+          "en": "It's too expensive."
+        },
+        {
+          "fr": "J'ai trop de travail.",
+          "en": "I have too much work."
+        },
+        {
+          "fr": "Je veux tout.",
+          "en": "I want everything."
+        },
+        {
+          "fr": "C'est la même chose.",
+          "en": "It's the same thing."
+        }
+      ]
     }
   ],
   "items": [

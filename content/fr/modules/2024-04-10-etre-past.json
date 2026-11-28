@@ -56,33 +56,111 @@
   "concepts": [
     {
       "id": "c-past-tense-imperfect-imparfait",
-      "term": "Past Tense = Imperfect (Imparfait)",
-      "definition": "Describes ongoing states or repeated actions in the past",
-      "example": "{j'étais heureux} (I was happy), {nous étions à Paris} (we were in Paris)"
+      "term": "{j'étais} = I was",
+      "definition": "This past tense describes how things were: a state, a place, a feeling.",
+      "examples": [
+        {
+          "fr": "J'étais content.",
+          "en": "I was happy."
+        },
+        {
+          "fr": "Nous étions à Paris.",
+          "en": "We were in Paris."
+        },
+        {
+          "fr": "C'était bon.",
+          "en": "It was good."
+        }
+      ]
     },
     {
       "id": "c-etait-was-singular",
-      "term": "{était} = was (singular)",
-      "definition": "For je, tu, il/elle - describing past states",
-      "example": "{j'étais jeune} (I was young), {tu étais là} (you were there), {il était bon} (it was good)"
+      "term": "Was: the singular forms",
+      "definition": "For one person or thing. The three forms sound the same.",
+      "examples": [
+        {
+          "fr": "J'étais jeune.",
+          "en": "I was young."
+        },
+        {
+          "fr": "Tu étais là.",
+          "en": "You were there."
+        },
+        {
+          "fr": "Il était ici.",
+          "en": "He was here."
+        }
+      ]
     },
     {
       "id": "c-etions-etiez-etaient-were",
-      "term": "{étions, étiez, étaient} = were (plural)",
-      "definition": "For nous, vous, ils/elles - plural past states",
-      "example": "{nous étions contents} (we were happy), {ils étaient ici} (they were here)"
+      "term": "Were: the plural forms",
+      "definition": "For we, you and they.",
+      "examples": [
+        {
+          "fr": "Nous étions contents.",
+          "en": "We were happy."
+        },
+        {
+          "fr": "Vous étiez là.",
+          "en": "You were there."
+        },
+        {
+          "fr": "Ils étaient ici.",
+          "en": "They were here."
+        }
+      ]
     },
     {
       "id": "c-pattern-recognition",
-      "term": "Pattern Recognition",
-      "definition": "Notice: j'étais, tu étais, il/elle était all sound the same!",
-      "example": "All singular forms end in -ais, -ais, -ait (similar sound)"
+      "term": "The forms of {être} in the past",
+      "definition": "The stem is ét- for every person. The singular forms and the form for they all sound the same.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'étais",
+          "en": "I was"
+        },
+        {
+          "fr": "tu étais",
+          "en": "you were"
+        },
+        {
+          "fr": "il était",
+          "en": "he was"
+        },
+        {
+          "fr": "nous étions",
+          "en": "we were"
+        },
+        {
+          "fr": "vous étiez",
+          "en": "you were"
+        },
+        {
+          "fr": "ils étaient",
+          "en": "they were"
+        }
+      ]
     },
     {
       "id": "c-with-negation",
-      "term": "With Negation",
-      "definition": "Use ne...pas around the past tense verb",
-      "example": "{je n'étais pas} (I was not), {il n'était pas} (he was not)"
+      "term": "Was not",
+      "definition": "Put {ne} … {pas} around the verb. Before {étais}, {ne} becomes {n'}.",
+      "examples": [
+        {
+          "fr": "Je n'étais pas ici.",
+          "en": "I wasn't here."
+        },
+        {
+          "fr": "Il n'était pas content.",
+          "en": "He wasn't happy."
+        },
+        {
+          "fr": "Nous n'étions pas là.",
+          "en": "We weren't there."
+        }
+      ]
     }
   ],
   "items": [

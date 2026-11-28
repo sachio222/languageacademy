@@ -7527,43 +7527,308 @@
     "title": "Everyday Words Practice - Fill in the Blanks"
   },
   "2024-04-04-aimer": {
+    "concepts": [
+      {
+        "id": "c-aimer-to-like-or",
+        "term": "{aimer} = to like, to love",
+        "definition": "One verb for liking and for loving. The situation tells you which one.",
+        "examples": [
+          {
+            "fr": "J'aime le café.",
+            "en": "I like coffee."
+          },
+          {
+            "fr": "J'aime ma mère.",
+            "en": "I love my mother."
+          },
+          {
+            "fr": "Je t'aime.",
+            "en": "I love you."
+          }
+        ]
+      },
+      {
+        "id": "c-aimer-bien-to-like",
+        "term": "{aimer bien} = to like",
+        "definition": "Adding {bien} makes it clearly like, not love.",
+        "examples": [
+          {
+            "fr": "J'aime bien ce livre.",
+            "en": "I like this book."
+          },
+          {
+            "fr": "Je l'aime bien.",
+            "en": "I like him.",
+            "note": "with a person, {bien} keeps it to like"
+          }
+        ]
+      },
+      {
+        "id": "c-regular-er-verb-pattern",
+        "term": "The -er pattern again",
+        "definition": "{aimer} changes like {parler}. Before a vowel, {je} becomes {j'}.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "j'aime",
+            "en": "I like"
+          },
+          {
+            "fr": "tu aimes",
+            "en": "you like"
+          },
+          {
+            "fr": "il aime",
+            "en": "he likes"
+          },
+          {
+            "fr": "nous aimons",
+            "en": "we like"
+          },
+          {
+            "fr": "vous aimez",
+            "en": "you like"
+          },
+          {
+            "fr": "ils aiment",
+            "en": "they like"
+          }
+        ]
+      },
+      {
+        "id": "c-with-people-vs-things",
+        "term": "People and things",
+        "definition": "With a person, {aimer} usually means love. With a thing, it means like.",
+        "examples": [
+          {
+            "fr": "J'aime Pierre.",
+            "en": "I love Pierre."
+          },
+          {
+            "fr": "J'aime le pain.",
+            "en": "I like bread."
+          }
+        ]
+      },
+      {
+        "id": "c-with-infinitives",
+        "term": "Liking to do something",
+        "definition": "Put a second verb after {aimer} to say what you like doing.",
+        "examples": [
+          {
+            "fr": "J'aime parler français.",
+            "en": "I like speaking French."
+          },
+          {
+            "fr": "Nous aimons travailler.",
+            "en": "We like working."
+          },
+          {
+            "fr": "Tu aimes aller à Paris ?",
+            "en": "Do you like going to Paris?"
+          }
+        ]
+      }
+    ],
     "vocabulary/j-aime-ma-mere-fr": {
       "word_id": "j-aime-ma-mere-fr",
       "fr": "j'aime ma mère",
       "gloss": "I love my mother"
     }
   },
+  "2024-04-05-avoir-past": {
+    "concepts": [
+      {
+        "id": "c-past-tense-imperfect-imparfait",
+        "term": "{j'avais} = I had",
+        "definition": "This past tense describes what you had, or how things were.",
+        "examples": [
+          {
+            "fr": "J'avais un chat.",
+            "en": "I had a cat."
+          },
+          {
+            "fr": "Nous avions une maison.",
+            "en": "We had a house."
+          }
+        ]
+      },
+      {
+        "id": "c-avais-had-singular",
+        "term": "I had, you had",
+        "definition": "{j'avais} and {tu avais} have the same ending and the same sound.",
+        "examples": [
+          {
+            "fr": "J'avais un livre.",
+            "en": "I had a book."
+          },
+          {
+            "fr": "Tu avais raison.",
+            "en": "You were right.",
+            "note": "French says you had reason"
+          }
+        ]
+      },
+      {
+        "id": "c-avait-had-third-person",
+        "term": "He had, she had",
+        "definition": "{il avait} ends in -ait, but it sounds just like {j'avais}.",
+        "examples": [
+          {
+            "fr": "Il avait un chien.",
+            "en": "He had a dog."
+          },
+          {
+            "fr": "Elle avait le temps.",
+            "en": "She had time."
+          }
+        ]
+      },
+      {
+        "id": "c-avions-aviez-avaient-had",
+        "term": "Had: the plural forms",
+        "definition": "For we, you and they. {ils avaient} sounds like {il avait}.",
+        "examples": [
+          {
+            "fr": "Nous avions une voiture.",
+            "en": "We had a car."
+          },
+          {
+            "fr": "Vous aviez de l'argent.",
+            "en": "You had money."
+          },
+          {
+            "fr": "Ils avaient faim.",
+            "en": "They were hungry."
+          }
+        ]
+      },
+      {
+        "id": "c-common-expressions-with-avoir",
+        "term": "Hungry and right with {avoir}",
+        "definition": "French uses {avoir} where English uses to be: you have hunger, you have reason.",
+        "examples": [
+          {
+            "fr": "J'avais faim.",
+            "en": "I was hungry."
+          },
+          {
+            "fr": "Tu avais raison.",
+            "en": "You were right."
+          },
+          {
+            "fr": "Nous avions faim.",
+            "en": "We were hungry."
+          }
+        ]
+      }
+    ]
+  },
   "2024-04-06-boire": {
     "concepts": [
       {
         "id": "c-boire-to-drink",
         "term": "{boire} = to drink",
-        "definition": "Essential daily verb - talk about beverages!",
-        "example": "{je bois du café} (I drink coffee), {nous buvons de l'eau} (we drink water)"
+        "definition": "The verb for drinking.",
+        "examples": [
+          {
+            "fr": "Je bois du café.",
+            "en": "I drink coffee."
+          },
+          {
+            "fr": "Nous buvons de l'eau.",
+            "en": "We drink water."
+          },
+          {
+            "fr": "Qu'est-ce que tu bois ?",
+            "en": "What are you drinking?"
+          }
+        ]
       },
       {
         "id": "c-irregular-verb-changes-stem",
-        "term": "Irregular verb - changes stem!",
-        "definition": "Uses 'boi-' for singular, 'buv-' for plural forms",
-        "example": "je bois, tu bois, il boit BUT nous buvons, vous buvez, ils boivent"
+        "term": "The forms of {boire}",
+        "definition": "The singular forms sound the same. The stem changes to buv- for we and you, and to boiv- for they.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je bois",
+            "en": "I drink"
+          },
+          {
+            "fr": "tu bois",
+            "en": "you drink"
+          },
+          {
+            "fr": "il boit",
+            "en": "he drinks"
+          },
+          {
+            "fr": "nous buvons",
+            "en": "we drink"
+          },
+          {
+            "fr": "vous buvez",
+            "en": "you drink"
+          },
+          {
+            "fr": "ils boivent",
+            "en": "they drink"
+          }
+        ]
       },
       {
         "id": "c-passe-compose-past-tense",
-        "term": "Passé Composé (Past Tense)",
-        "definition": "Use avoir + bu to say 'drank' or 'have drunk'",
-        "example": "{j'ai bu} (I drank/have drunk), {tu as bu} (you drank), {il a bu} (he drank)"
+        "term": "I drank: {j'ai bu}",
+        "definition": "Put {avoir} before {bu} to say what you drank.",
+        "examples": [
+          {
+            "fr": "J'ai bu du café.",
+            "en": "I drank some coffee."
+          },
+          {
+            "fr": "Il a bu du vin.",
+            "en": "He drank some wine."
+          },
+          {
+            "fr": "Nous n'avons pas bu de café.",
+            "en": "We didn't drink any coffee."
+          }
+        ]
       },
       {
         "id": "c-past-participle-bu-irregular",
-        "term": "Past Participle: {bu} (irregular!)",
-        "definition": "Irregular past participle - NOT 'buvé'!",
-        "example": "{boire} → {bu} (short and irregular)"
+        "term": "{bu}, a short past form",
+        "definition": "{boire} does not follow the -er pattern, so its past form is short: {bu}.",
+        "examples": [
+          {
+            "fr": "J'ai bu.",
+            "en": "I drank."
+          },
+          {
+            "fr": "Tu as bu de l'eau ?",
+            "en": "Did you drink some water?"
+          }
+        ]
       },
       {
         "id": "c-with-drink-nouns",
-        "term": "With drink nouns",
-        "definition": "Use partitive (du/de la/de l') for some, or article for specific items",
-        "example": "{je bois du café} (I drink some coffee), {j'ai bu de l'eau} (I drank water)"
+        "term": "Some coffee, some water",
+        "definition": "Drinks take the word for some, as food does. Before a vowel, {de la} becomes {de l'}.",
+        "examples": [
+          {
+            "fr": "Il boit de la bière.",
+            "en": "He drinks beer."
+          },
+          {
+            "fr": "Je veux boire de l'eau.",
+            "en": "I want to drink some water."
+          },
+          {
+            "fr": "Elle boit du jus.",
+            "en": "She drinks juice."
+          }
+        ]
       }
     ],
     "vocabulary/il-elle-a-bu-fr": {
@@ -7601,27 +7866,82 @@
     "concepts": [
       {
         "id": "c-french-slang-france",
-        "term": "French Slang (France)",
-        "definition": "Informal expressions you'll hear on the streets of Paris and throughout France",
-        "example": "{c'est ouf} (it's crazy - verlan for '{fou}'), {c'est chelou} (it's weird - verlan for '{louche}')"
+        "term": "Slang in France",
+        "definition": "Informal words you hear from young people in Paris and across France. Use them with friends, not at work.",
+        "examples": [
+          {
+            "fr": "C'est ouf !",
+            "en": "It's crazy!"
+          },
+          {
+            "fr": "C'est chelou.",
+            "en": "It's weird."
+          },
+          {
+            "fr": "C'est trop bien !",
+            "en": "It's really good!"
+          },
+          {
+            "fr": "C'est nul.",
+            "en": "It's rubbish."
+          }
+        ]
       },
       {
         "id": "c-quebec-french",
-        "term": "Quebec French",
-        "definition": "Unique expressions from Quebec - very different from France!",
-        "example": "{c'est malade} (it's sick/awesome), {c'est capot} (it's crazy), {c'est écœurant} (it's disgusting/amazing)"
+        "term": "Slang in Quebec",
+        "definition": "Quebec French has its own informal words. Many of them would sound strange in Paris.",
+        "examples": [
+          {
+            "fr": "C'est malade !",
+            "en": "It's awesome!"
+          },
+          {
+            "fr": "C'est le fun.",
+            "en": "It's fun."
+          },
+          {
+            "fr": "C'est poche.",
+            "en": "It's bad."
+          },
+          {
+            "fr": "C'est ben correct.",
+            "en": "It's fine."
+          }
+        ]
       },
       {
         "id": "c-african-french",
-        "term": "African French",
-        "definition": "Expressions from French-speaking Africa (Senegal, Ivory Coast, etc.)",
-        "example": "{c'est gnama} (it's good - West Africa), {c'est grave} (it's serious/intense)"
+        "term": "Words from French-speaking Africa",
+        "definition": "French is spoken across West and Central Africa, and each country adds its own words.",
+        "examples": [
+          {
+            "fr": "C'est gnama.",
+            "en": "It's tasty.",
+            "note": "West Africa"
+          },
+          {
+            "fr": "C'est grave.",
+            "en": "It's serious."
+          }
+        ]
       },
       {
         "id": "c-verlan-french-slang-technique",
-        "term": "Verlan - French Slang Technique",
-        "definition": "Reversing syllables - très (very) becomes trop, fou (crazy) becomes ouf",
-        "example": "{c'est ouf} = {c'est fou} (it's crazy), {chelou} = louche (weird)"
+        "term": "Verlan: words said backwards",
+        "definition": "Verlan swaps the syllables of a word, so {fou} becomes {ouf}.",
+        "examples": [
+          {
+            "fr": "C'est ouf.",
+            "en": "It's crazy.",
+            "note": "verlan for {c'est fou}"
+          },
+          {
+            "fr": "C'est chelou.",
+            "en": "It's weird.",
+            "note": "verlan for louche, shady"
+          }
+        ]
       }
     ],
     "vocabulary/fou-fr": {
@@ -7631,6 +7951,88 @@
     }
   },
   "2024-04-08-comparisons": {
+    "concepts": [
+      {
+        "id": "c-basic-comparisons-plus-moins",
+        "term": "More and less: {plus} and {moins}",
+        "definition": "Put {plus} or {moins} before an adjective to compare two things.",
+        "examples": [
+          {
+            "fr": "Ce livre est plus grand.",
+            "en": "This book is bigger."
+          },
+          {
+            "fr": "Cette maison est moins grande.",
+            "en": "This house is smaller."
+          },
+          {
+            "fr": "C'est moins cher.",
+            "en": "It's cheaper."
+          }
+        ]
+      },
+      {
+        "id": "c-better-and-worse-meilleur",
+        "term": "Better and worse: {meilleur} and {pire}",
+        "definition": "French has its own words for better and worse. {meilleur} agrees with its noun, like any adjective.",
+        "examples": [
+          {
+            "fr": "C'est un meilleur livre.",
+            "en": "It's a better book."
+          },
+          {
+            "fr": "C'est une meilleure maison.",
+            "en": "It's a better house."
+          },
+          {
+            "fr": "C'est pire.",
+            "en": "It's worse."
+          }
+        ]
+      },
+      {
+        "id": "c-superlatives-the-best-the",
+        "term": "The best and the worst",
+        "definition": "Put {le} or {la} before {meilleur} or {pire} to say the best or the worst.",
+        "examples": [
+          {
+            "fr": "C'est le meilleur livre.",
+            "en": "It's the best book."
+          },
+          {
+            "fr": "C'est la meilleure maison.",
+            "en": "It's the best house."
+          },
+          {
+            "fr": "C'est la pire chose.",
+            "en": "It's the worst thing."
+          }
+        ]
+      },
+      {
+        "id": "c-intensity-modifiers",
+        "term": "Too much, everything, the same",
+        "definition": "{trop} means too or too much. {tout} means all or everything, and {même} means same.",
+        "examples": [
+          {
+            "fr": "C'est trop cher.",
+            "en": "It's too expensive."
+          },
+          {
+            "fr": "J'ai trop de travail.",
+            "en": "I have too much work."
+          },
+          {
+            "fr": "Je veux tout.",
+            "en": "I want everything."
+          },
+          {
+            "fr": "C'est la même chose.",
+            "en": "It's the same thing."
+          }
+        ]
+      }
+    ],
     "items/i-miam-c-est-meilleur": {
       "id": "i-miam-c-est-meilleur",
       "type": "respond",
@@ -7650,13 +8052,297 @@
     }
   },
   "2024-04-09-conditionals": {
+    "concepts": [
+      {
+        "id": "c-should-devrais-conditional-of",
+        "term": "Should: {je devrais}",
+        "definition": "{devoir} in this form gives advice. It is softer than must.",
+        "examples": [
+          {
+            "fr": "Tu devrais partir.",
+            "en": "You should leave."
+          },
+          {
+            "fr": "Nous devrions parler.",
+            "en": "We should talk."
+          },
+          {
+            "fr": "Il devrait travailler.",
+            "en": "He should work."
+          }
+        ]
+      },
+      {
+        "id": "c-could-pourrais-conditional-of",
+        "term": "Could: {je pourrais}",
+        "definition": "{pouvoir} in this form says what is possible. It also makes a request polite.",
+        "examples": [
+          {
+            "fr": "Je pourrais venir.",
+            "en": "I could come."
+          },
+          {
+            "fr": "Tu pourrais m'aider ?",
+            "en": "Could you help me?"
+          },
+          {
+            "fr": "Elle pourrait le faire.",
+            "en": "She could do it."
+          }
+        ]
+      },
+      {
+        "id": "c-pattern-alternating-should-could",
+        "term": "Same endings for both",
+        "definition": "{devoir} and {pouvoir} take the same endings in this form, so if you know one you know the other.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je devrais",
+            "en": "I should"
+          },
+          {
+            "fr": "tu devrais",
+            "en": "you should"
+          },
+          {
+            "fr": "il devrait",
+            "en": "he should"
+          },
+          {
+            "fr": "nous devrions",
+            "en": "we should"
+          },
+          {
+            "fr": "vous devriez",
+            "en": "you should"
+          },
+          {
+            "fr": "ils devraient",
+            "en": "they should"
+          }
+        ]
+      },
+      {
+        "id": "c-negation",
+        "term": "Should not, could not",
+        "definition": "Put {ne} … {pas} around the verb, as in the present.",
+        "examples": [
+          {
+            "fr": "Je ne devrais pas partir.",
+            "en": "I shouldn't leave."
+          },
+          {
+            "fr": "Tu ne pourrais pas faire ça.",
+            "en": "You couldn't do that."
+          },
+          {
+            "fr": "Nous ne devrions pas partir.",
+            "en": "We shouldn't leave."
+          }
+        ]
+      }
+    ],
     "vocabulary/tu-pourrais-m-aider-fr": {
       "word_id": "tu-pourrais-m-aider-fr",
       "fr": "tu pourrais m'aider ?",
       "gloss": "could you help me?"
     }
   },
+  "2024-04-10-etre-past": {
+    "concepts": [
+      {
+        "id": "c-past-tense-imperfect-imparfait",
+        "term": "{j'étais} = I was",
+        "definition": "This past tense describes how things were: a state, a place, a feeling.",
+        "examples": [
+          {
+            "fr": "J'étais content.",
+            "en": "I was happy."
+          },
+          {
+            "fr": "Nous étions à Paris.",
+            "en": "We were in Paris."
+          },
+          {
+            "fr": "C'était bon.",
+            "en": "It was good."
+          }
+        ]
+      },
+      {
+        "id": "c-etait-was-singular",
+        "term": "Was: the singular forms",
+        "definition": "For one person or thing. The three forms sound the same.",
+        "examples": [
+          {
+            "fr": "J'étais jeune.",
+            "en": "I was young."
+          },
+          {
+            "fr": "Tu étais là.",
+            "en": "You were there."
+          },
+          {
+            "fr": "Il était ici.",
+            "en": "He was here."
+          }
+        ]
+      },
+      {
+        "id": "c-etions-etiez-etaient-were",
+        "term": "Were: the plural forms",
+        "definition": "For we, you and they.",
+        "examples": [
+          {
+            "fr": "Nous étions contents.",
+            "en": "We were happy."
+          },
+          {
+            "fr": "Vous étiez là.",
+            "en": "You were there."
+          },
+          {
+            "fr": "Ils étaient ici.",
+            "en": "They were here."
+          }
+        ]
+      },
+      {
+        "id": "c-pattern-recognition",
+        "term": "The forms of {être} in the past",
+        "definition": "The stem is ét- for every person. The singular forms and the form for they all sound the same.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "j'étais",
+            "en": "I was"
+          },
+          {
+            "fr": "tu étais",
+            "en": "you were"
+          },
+          {
+            "fr": "il était",
+            "en": "he was"
+          },
+          {
+            "fr": "nous étions",
+            "en": "we were"
+          },
+          {
+            "fr": "vous étiez",
+            "en": "you were"
+          },
+          {
+            "fr": "ils étaient",
+            "en": "they were"
+          }
+        ]
+      },
+      {
+        "id": "c-with-negation",
+        "term": "Was not",
+        "definition": "Put {ne} … {pas} around the verb. Before {étais}, {ne} becomes {n'}.",
+        "examples": [
+          {
+            "fr": "Je n'étais pas ici.",
+            "en": "I wasn't here."
+          },
+          {
+            "fr": "Il n'était pas content.",
+            "en": "He wasn't happy."
+          },
+          {
+            "fr": "Nous n'étions pas là.",
+            "en": "We weren't there."
+          }
+        ]
+      }
+    ]
+  },
   "2024-04-11-food-nouns": {
+    "concepts": [
+      {
+        "id": "c-food-genders-learn-the",
+        "term": "Learn the article with each food",
+        "definition": "The article shows whether a food word is masculine or feminine.",
+        "examples": [
+          {
+            "fr": "le pain",
+            "en": "bread",
+            "note": "masculine"
+          },
+          {
+            "fr": "la viande",
+            "en": "meat",
+            "note": "feminine"
+          },
+          {
+            "fr": "l'eau",
+            "en": "water",
+            "note": "feminine: {la} becomes {l'} before a vowel"
+          }
+        ]
+      },
+      {
+        "id": "c-using-partitive-articles",
+        "term": "Some bread, some meat",
+        "definition": "For food you do not count, French says some with {du} or {de la}. For a plural, it uses {des}.",
+        "examples": [
+          {
+            "fr": "Je veux du café.",
+            "en": "I want some coffee."
+          },
+          {
+            "fr": "Je veux de la viande.",
+            "en": "I want some meat."
+          },
+          {
+            "fr": "Je veux des fruits.",
+            "en": "I want some fruit."
+          }
+        ]
+      },
+      {
+        "id": "c-at-the-restaurant",
+        "term": "Ordering food",
+        "definition": "Use {je voudrais} and {s'il vous plaît} to order in a café or a restaurant.",
+        "examples": [
+          {
+            "fr": "Je voudrais du pain, s'il vous plaît.",
+            "en": "I would like some bread, please."
+          },
+          {
+            "fr": "Je voudrais un croissant.",
+            "en": "I would like a croissant."
+          },
+          {
+            "fr": "Je voudrais une salade, s'il vous plaît.",
+            "en": "I would like a salad, please."
+          }
+        ]
+      },
+      {
+        "id": "c-with-aimer",
+        "term": "Food you like",
+        "definition": "After {aimer}, a food takes the word for the, because you like it in general.",
+        "examples": [
+          {
+            "fr": "J'aime le café.",
+            "en": "I like coffee."
+          },
+          {
+            "fr": "J'aime la pizza.",
+            "en": "I like pizza."
+          },
+          {
+            "fr": "J'aime les frites.",
+            "en": "I like fries."
+          }
+        ]
+      }
+    ],
     "items/i-miam-un-croissant": {
       "id": "i-miam-un-croissant",
       "type": "respond",
@@ -7675,32 +8361,110 @@
       {
         "id": "c-manger-to-eat",
         "term": "{manger} = to eat",
-        "definition": "Essential daily verb - talk about meals and food!",
-        "example": "{je mange du pain} (I eat bread), {nous mangeons ensemble} (we eat together)"
+        "definition": "The verb for eating and for meals.",
+        "examples": [
+          {
+            "fr": "Je mange du pain.",
+            "en": "I'm eating some bread."
+          },
+          {
+            "fr": "Nous mangeons ensemble.",
+            "en": "We eat together."
+          },
+          {
+            "fr": "Qu'est-ce que tu manges ?",
+            "en": "What are you eating?"
+          }
+        ]
       },
       {
         "id": "c-regular-er-verb",
-        "term": "Regular -ER verb",
-        "definition": "Follows same pattern as parler and aimer",
-        "example": "{je mange}, {tu manges}, {il mange}, {nous mangeons}, {vous mangez}, {ils mangent}"
+        "term": "The forms of {manger}",
+        "definition": "{manger} changes like {parler}. With {nous}, it keeps an e so the g stays soft.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je mange",
+            "en": "I eat"
+          },
+          {
+            "fr": "tu manges",
+            "en": "you eat"
+          },
+          {
+            "fr": "il mange",
+            "en": "he eats"
+          },
+          {
+            "fr": "nous mangeons",
+            "en": "we eat"
+          },
+          {
+            "fr": "vous mangez",
+            "en": "you eat"
+          },
+          {
+            "fr": "ils mangent",
+            "en": "they eat"
+          }
+        ]
       },
       {
         "id": "c-passe-compose-past-tense",
-        "term": "Passé Composé (Past Tense)",
-        "definition": "Use avoir + mangé to say 'ate' or 'have eaten'",
-        "example": "{j'ai mangé} (I ate/have eaten), {tu as mangé} (you ate), {il a mangé} (he ate)"
+        "term": "I ate: {j'ai mangé}",
+        "definition": "To say what you ate, put {avoir} before {mangé}.",
+        "examples": [
+          {
+            "fr": "J'ai mangé du pain.",
+            "en": "I ate some bread."
+          },
+          {
+            "fr": "Tu as mangé une pizza ?",
+            "en": "Did you eat a pizza?"
+          },
+          {
+            "fr": "Nous avons mangé ensemble.",
+            "en": "We ate together."
+          }
+        ]
       },
       {
         "id": "c-past-participle-mange",
-        "term": "Past Participle: {mangé}",
-        "definition": "For -ER verbs, past participle is -é",
-        "example": "{manger} → {mangé}, {parler} → {parlé}, {aimer} → {aimé}"
+        "term": "The -é ending",
+        "definition": "For a verb in -er, the past form ends in -é. It sounds just like the infinitive.",
+        "examples": [
+          {
+            "fr": "J'ai mangé.",
+            "en": "I ate."
+          },
+          {
+            "fr": "J'ai parlé avec Marie.",
+            "en": "I talked with Marie."
+          },
+          {
+            "fr": "J'ai aimé ce livre.",
+            "en": "I liked this book."
+          }
+        ]
       },
       {
         "id": "c-with-food-nouns",
-        "term": "With food nouns",
-        "definition": "Use partitive (du/de la/des) for some, or article for specific items",
-        "example": "{je mange du pain} (I eat some bread), {je mange une pomme} (I eat an apple)"
+        "term": "Some, or one",
+        "definition": "Use {du} or {de la} for some of a food. Use {un} or {une} for one whole thing.",
+        "examples": [
+          {
+            "fr": "Je mange du pain.",
+            "en": "I'm eating some bread."
+          },
+          {
+            "fr": "Je mange une pomme.",
+            "en": "I'm eating an apple."
+          },
+          {
+            "fr": "Je ne mange pas de viande.",
+            "en": "I don't eat meat."
+          }
+        ]
       }
     ],
     "vocabulary/il-elle-a-mange-fr": {
@@ -7883,6 +8647,86 @@
     ],
     "description": "Complete sentences using comparisons, past tense, conditionals, and food vocabulary from this unit!",
     "title": "Time & Taste Practice - Fill in the Blanks"
+  },
+  "2024-04-16-would-conditionals": {
+    "concepts": [
+      {
+        "id": "c-would-like-voudrais-conditional",
+        "term": "Would like: {je voudrais}",
+        "definition": "{vouloir} in this form asks for something politely. It sounds softer than {je veux}.",
+        "examples": [
+          {
+            "fr": "Je voudrais de l'eau.",
+            "en": "I would like some water."
+          },
+          {
+            "fr": "Tu voudrais du café ?",
+            "en": "Would you like some coffee?"
+          },
+          {
+            "fr": "Nous voudrions partir.",
+            "en": "We would like to leave."
+          }
+        ]
+      },
+      {
+        "id": "c-would-go-irais-conditional",
+        "term": "Would go: {j'irais}",
+        "definition": "{aller} in this form says where you would go.",
+        "examples": [
+          {
+            "fr": "J'irais à Paris.",
+            "en": "I would go to Paris."
+          },
+          {
+            "fr": "Ils iraient avec toi.",
+            "en": "They would go with you."
+          },
+          {
+            "fr": "Tu irais là-bas ?",
+            "en": "Would you go there?"
+          }
+        ]
+      },
+      {
+        "id": "c-would-do-ferais-conditional",
+        "term": "Would do: {je ferais}",
+        "definition": "{faire} in this form says what you would do.",
+        "examples": [
+          {
+            "fr": "Je ferais ça.",
+            "en": "I would do that."
+          },
+          {
+            "fr": "Vous feriez quoi ?",
+            "en": "What would you do?"
+          },
+          {
+            "fr": "Elle ferait ça.",
+            "en": "She would do that."
+          }
+        ]
+      },
+      {
+        "id": "c-negation-with-would",
+        "term": "Would not",
+        "definition": "Put {ne} … {pas} around the verb. Before a vowel, {ne} becomes {n'}.",
+        "examples": [
+          {
+            "fr": "Je ne voudrais pas ça.",
+            "en": "I wouldn't want that."
+          },
+          {
+            "fr": "Il n'irait pas.",
+            "en": "He wouldn't go."
+          },
+          {
+            "fr": "Nous ne ferions pas ça.",
+            "en": "We wouldn't do that."
+          }
+        ]
+      }
+    ]
   },
   "2024-04-17-besoin": {
     "vocabulary/j-ai-besoin-de-dormir-fr": {

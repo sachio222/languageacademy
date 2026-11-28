@@ -146,27 +146,82 @@
   "concepts": [
     {
       "id": "c-french-slang-france",
-      "term": "French Slang (France)",
-      "definition": "Informal expressions you'll hear on the streets of Paris and throughout France",
-      "example": "{c'est ouf} (it's crazy - verlan for '{fou}'), {c'est chelou} (it's weird - verlan for '{louche}')"
+      "term": "Slang in France",
+      "definition": "Informal words you hear from young people in Paris and across France. Use them with friends, not at work.",
+      "examples": [
+        {
+          "fr": "C'est ouf !",
+          "en": "It's crazy!"
+        },
+        {
+          "fr": "C'est chelou.",
+          "en": "It's weird."
+        },
+        {
+          "fr": "C'est trop bien !",
+          "en": "It's really good!"
+        },
+        {
+          "fr": "C'est nul.",
+          "en": "It's rubbish."
+        }
+      ]
     },
     {
       "id": "c-quebec-french",
-      "term": "Quebec French",
-      "definition": "Unique expressions from Quebec - very different from France!",
-      "example": "{c'est malade} (it's sick/awesome), {c'est capot} (it's crazy), {c'est écœurant} (it's disgusting/amazing)"
+      "term": "Slang in Quebec",
+      "definition": "Quebec French has its own informal words. Many of them would sound strange in Paris.",
+      "examples": [
+        {
+          "fr": "C'est malade !",
+          "en": "It's awesome!"
+        },
+        {
+          "fr": "C'est le fun.",
+          "en": "It's fun."
+        },
+        {
+          "fr": "C'est poche.",
+          "en": "It's bad."
+        },
+        {
+          "fr": "C'est ben correct.",
+          "en": "It's fine."
+        }
+      ]
     },
     {
       "id": "c-african-french",
-      "term": "African French",
-      "definition": "Expressions from French-speaking Africa (Senegal, Ivory Coast, etc.)",
-      "example": "{c'est gnama} (it's good - West Africa), {c'est grave} (it's serious/intense)"
+      "term": "Words from French-speaking Africa",
+      "definition": "French is spoken across West and Central Africa, and each country adds its own words.",
+      "examples": [
+        {
+          "fr": "C'est gnama.",
+          "en": "It's tasty.",
+          "note": "West Africa"
+        },
+        {
+          "fr": "C'est grave.",
+          "en": "It's serious."
+        }
+      ]
     },
     {
       "id": "c-verlan-french-slang-technique",
-      "term": "Verlan - French Slang Technique",
-      "definition": "Reversing syllables - très (very) becomes trop, fou (crazy) becomes ouf",
-      "example": "{c'est ouf} = {c'est fou} (it's crazy), {chelou} = louche (weird)"
+      "term": "Verlan: words said backwards",
+      "definition": "Verlan swaps the syllables of a word, so {fou} becomes {ouf}.",
+      "examples": [
+        {
+          "fr": "C'est ouf.",
+          "en": "It's crazy.",
+          "note": "verlan for {c'est fou}"
+        },
+        {
+          "fr": "C'est chelou.",
+          "en": "It's weird.",
+          "note": "verlan for louche, shady"
+        }
+      ]
     }
   ],
   "items": [

@@ -248,27 +248,82 @@
   "concepts": [
     {
       "id": "c-food-genders-learn-the",
-      "term": "Food Genders - Learn the article!",
-      "definition": "Always learn food nouns with their article - gender matters!",
-      "example": "{le pain} (masculine), {la viande} (feminine), {l'eau} (feminine)"
+      "term": "Learn the article with each food",
+      "definition": "The article shows whether a food word is masculine or feminine.",
+      "examples": [
+        {
+          "fr": "le pain",
+          "en": "bread",
+          "note": "masculine"
+        },
+        {
+          "fr": "la viande",
+          "en": "meat",
+          "note": "feminine"
+        },
+        {
+          "fr": "l'eau",
+          "en": "water",
+          "note": "feminine: {la} becomes {l'} before a vowel"
+        }
+      ]
     },
     {
       "id": "c-using-partitive-articles",
-      "term": "Using Partitive Articles",
-      "definition": "With food, use du/de la/des for 'some' - je veux du pain (I want some bread)",
-      "example": "{je veux du café} (some coffee), {de la viande} (some meat), {des légumes} (some vegetables)"
+      "term": "Some bread, some meat",
+      "definition": "For food you do not count, French says some with {du} or {de la}. For a plural, it uses {des}.",
+      "examples": [
+        {
+          "fr": "Je veux du café.",
+          "en": "I want some coffee."
+        },
+        {
+          "fr": "Je veux de la viande.",
+          "en": "I want some meat."
+        },
+        {
+          "fr": "Je veux des fruits.",
+          "en": "I want some fruit."
+        }
+      ]
     },
     {
       "id": "c-at-the-restaurant",
-      "term": "At the Restaurant",
-      "definition": "These are the foods you'll see and order every day!",
-      "example": "{je voudrais du pain, s'il vous plaît} (I would like some bread, please)"
+      "term": "Ordering food",
+      "definition": "Use {je voudrais} and {s'il vous plaît} to order in a café or a restaurant.",
+      "examples": [
+        {
+          "fr": "Je voudrais du pain, s'il vous plaît.",
+          "en": "I would like some bread, please."
+        },
+        {
+          "fr": "Je voudrais un croissant.",
+          "en": "I would like a croissant."
+        },
+        {
+          "fr": "Je voudrais une salade, s'il vous plaît.",
+          "en": "I would like a salad, please."
+        }
+      ]
     },
     {
       "id": "c-with-aimer",
-      "term": "With aimer",
-      "definition": "Use definite article (le/la/les) with aimer - j'aime le pain (I like bread)",
-      "example": "{j'aime le café} (I like coffee), {j'aime la viande} (I like meat)"
+      "term": "Food you like",
+      "definition": "After {aimer}, a food takes the word for the, because you like it in general.",
+      "examples": [
+        {
+          "fr": "J'aime le café.",
+          "en": "I like coffee."
+        },
+        {
+          "fr": "J'aime la pizza.",
+          "en": "I like pizza."
+        },
+        {
+          "fr": "J'aime les frites.",
+          "en": "I like fries."
+        }
+      ]
     }
   ],
   "items": [
