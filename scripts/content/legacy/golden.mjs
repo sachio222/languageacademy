@@ -781,6 +781,10 @@ export function changedSince(baseline, { handFixes = {}, records = {} } = {}) {
  * An item, concept card or vocabulary card added by hand passes when it is recorded and no live id maps to it, and so
  * do the later live exercises it renumbers, by exactly the recorded additions before them.
  */
+// A converted card as toLegacyLesson draws it ({ id, term, definition }, braces removed) is one of the module's cards.
+const unbrace = (t) => (isStr(t) ? t.replace(/[{}]/g, '') : t);
+const shownCard = (cards, shown) => (cards ?? []).some((c) => c.id === shown.id && normText(unbrace(c.term)) === normText(shown.term) && normText(unbrace(c.definition)) === normText(shown.definition));
+
 export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), liveIds = {}, records = {} }) {
   const mod = (key) => course?.modules.get(key) ?? null;
   const strip = (item) => (isObj(item) ? Object.fromEntries(Object.entries(item).filter(([k]) => k !== 'steps')) : item);
@@ -807,7 +811,9 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
       const addedBefore = m.concepts.slice(0, at).filter((x) => !liveConcept(d.module_key, x.id)).length;
       return Number.isInteger(liveAt) && addedBefore > 0 && at - liveAt === addedBefore;
     }
-    if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts);
+    // A card as the adapter shows it must be a card of the recorded concepts, its id with its own text, so a fix never
+    // explains a card the learner would see with another card's id or definition.
+    if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts) && (!isObj(d.concept) || shownCard(m.concepts, d.concept));
     // An added exercise: the item it is drawn from was added by hand and is recorded.
     if (/^exercises\[\+\d+\]$/.test(d.path) && d.live === undefined && isObj(d.converted))
       return addedItem(d.module_key, m.items?.[d.converted.displayNumber - 1]);

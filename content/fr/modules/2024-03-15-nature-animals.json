@@ -135,33 +135,101 @@
   "concepts": [
     {
       "id": "c-animals-for-question-asking",
-      "term": "Animals for Question-Asking",
-      "definition": "The next lessons ask how and why these animals move. Start with what each one is like.",
-      "example": "{La tortue est lente.} (The turtle is slow.) {L'écureuil est rapide.} (The squirrel is fast.)"
+      "term": "What animals are like",
+      "definition": "Each animal here has a word that describes it: slow, fast or small.",
+      "examples": [
+        {
+          "fr": "La tortue est lente.",
+          "en": "The turtle is slow."
+        },
+        {
+          "fr": "L'écureuil est rapide.",
+          "en": "The squirrel is fast."
+        },
+        {
+          "fr": "L'abeille est petite.",
+          "en": "The bee is small."
+        }
+      ]
     },
     {
       "id": "c-learning-animal-genders",
-      "term": "Learning Animal Genders",
-      "definition": "Always learn the article with the animal - gender matters for questions!",
-      "example": "{un oiseau} (masculine), {une tortue} (feminine), {un écureuil} (masculine)"
+      "term": "Learn the article with the animal",
+      "definition": "The article shows whether an animal's noun is masculine or feminine, so learn the two together.",
+      "examples": [
+        {
+          "fr": "un oiseau",
+          "en": "a bird",
+          "note": "masculine"
+        },
+        {
+          "fr": "une tortue",
+          "en": "a turtle",
+          "note": "feminine"
+        },
+        {
+          "fr": "un écureuil",
+          "en": "a squirrel",
+          "note": "masculine"
+        }
+      ]
     },
     {
       "id": "c-nature-elements",
       "term": "Nature words",
-      "definition": "Essential nature vocabulary for asking questions about natural phenomena",
-      "example": "{le vent} (wind), {la pluie} (rain), {une plante} (plant), {un arbre} (tree); {Il y a des millions d'oiseaux} (There are millions of birds)"
+      "definition": "Words for the world outside: the weather, trees and plants.",
+      "examples": [
+        {
+          "fr": "Les plantes aiment la pluie.",
+          "en": "Plants like the rain."
+        },
+        {
+          "fr": "Il y a un écureuil dans l'arbre.",
+          "en": "There is a squirrel in the tree."
+        },
+        {
+          "fr": "J'aime le soleil, mais je n'aime pas le vent.",
+          "en": "I like the sun, but I don't like the wind."
+        },
+        {
+          "fr": "Il y a des millions d'oiseaux.",
+          "en": "There are millions of birds."
+        }
+      ]
     },
     {
       "id": "c-combining-with-colors",
-      "term": "Combining with Colors",
-      "definition": "Use color vocabulary from Reference module to describe animals",
-      "example": "{un oiseau bleu} (a blue bird), {un papillon jaune} (a yellow butterfly)"
+      "term": "Animals and colors",
+      "definition": "A color comes after the animal, like most adjectives.",
+      "examples": [
+        {
+          "fr": "un oiseau bleu",
+          "en": "a blue bird"
+        },
+        {
+          "fr": "un papillon jaune",
+          "en": "a yellow butterfly"
+        },
+        {
+          "fr": "Sur la fleur, il y a un papillon jaune.",
+          "en": "On the flower, there is a yellow butterfly."
+        }
+      ]
     },
     {
       "id": "c-setting-up-for-questions",
-      "term": "Setting Up for Questions",
-      "definition": "These words come back in the question lessons that follow.",
-      "example": "{Pourquoi est-ce que la tortue est lente ?} (Why is the turtle slow?)"
+      "term": "Asking about animals",
+      "definition": "Put {pourquoi est-ce que} before a sentence you know to ask why.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que la tortue est lente ?",
+          "en": "Why is the turtle slow?"
+        },
+        {
+          "fr": "Pourquoi est-ce que l'écureuil est rapide ?",
+          "en": "Why is the squirrel fast?"
+        }
+      ]
     }
   ],
   "items": [

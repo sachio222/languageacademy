@@ -79,33 +79,93 @@
   "concepts": [
     {
       "id": "c-comment-est-ce-que",
-      "term": "comment est-ce que + [subject] + [verb]",
-      "definition": "Pattern for asking how something does something - subject does the action",
-      "example": "{Comment est-ce qu'une tortue nage? Comment est-ce qu'un oiseau vole?}"
+      "term": "{comment est-ce que}: how",
+      "definition": "Put {comment est-ce que} before a sentence to ask how something happens.",
+      "examples": [
+        {
+          "fr": "Comment est-ce qu'une tortue nage ?",
+          "en": "How does a turtle swim?"
+        },
+        {
+          "fr": "Comment est-ce qu'un oiseau vole ?",
+          "en": "How does a bird fly?"
+        }
+      ]
     },
     {
       "id": "c-animals-movement-questions",
-      "term": "Animals + Movement Questions",
-      "definition": "Perfect for asking how animals perform their characteristic movements",
-      "example": "{Comment est-ce qu'un lapin saute? Comment est-ce qu'un poisson nage?}"
+      "term": "How animals move",
+      "definition": "Ask how an animal does what it does.",
+      "examples": [
+        {
+          "fr": "Comment est-ce qu'un lapin saute ?",
+          "en": "How does a rabbit jump?"
+        },
+        {
+          "fr": "Comment est-ce qu'un écureuil grimpe ?",
+          "en": "How does a squirrel climb?"
+        },
+        {
+          "fr": "Comment est-ce que le papillon vole ?",
+          "en": "How does the butterfly fly?"
+        }
+      ]
     },
     {
       "id": "c-natural-process-questions",
-      "term": "Natural Process Questions",
-      "definition": "Ask how natural phenomena occur",
-      "example": "{Comment est-ce que les plantes poussent? Comment est-ce que le soleil brille?}"
+      "term": "How nature works",
+      "definition": "Ask how the things around you happen.",
+      "examples": [
+        {
+          "fr": "Comment est-ce que les plantes poussent ?",
+          "en": "How do plants grow?"
+        },
+        {
+          "fr": "Comment est-ce que le soleil brille ?",
+          "en": "How does the sun shine?"
+        },
+        {
+          "fr": "Comment est-ce que les abeilles trouvent les fleurs ?",
+          "en": "How do bees find the flowers?"
+        }
+      ]
     },
     {
       "id": "c-people-questions",
-      "term": "People Questions",
-      "definition": "Ask how people do things - very practical!",
-      "example": "{Comment est-ce qu'on fait ça? Comment est-ce que tu fais ça? Comment est-ce qu'il court si vite?}"
+      "term": "How people do things",
+      "definition": "Ask someone how they do something, or how it is done.",
+      "examples": [
+        {
+          "fr": "Comment est-ce qu'on fait ça ?",
+          "en": "How do you do that?"
+        },
+        {
+          "fr": "Comment est-ce que tu fais ça ?",
+          "en": "How do you do that?",
+          "note": "asking one person"
+        },
+        {
+          "fr": "Comment est-ce qu'il court si vite ?",
+          "en": "How does he run so fast?"
+        }
+      ]
     },
     {
       "id": "c-formal-inversion-introduction",
-      "term": "Formal Inversion (Introduction)",
-      "definition": "In formal French, you can invert subject-verb: Comment nage une tortue?",
-      "example": "Informal: Comment est-ce qu'une tortue nage? Formal: {Comment nage une tortue?}"
+      "term": "A shorter, formal way",
+      "definition": "In careful speech and in writing, the verb can come straight after {comment}.",
+      "examples": [
+        {
+          "fr": "Comment est-ce qu'une tortue nage ?",
+          "en": "How does a turtle swim?",
+          "note": "everyday"
+        },
+        {
+          "fr": "Comment nage une tortue ?",
+          "en": "How does a turtle swim?",
+          "note": "formal"
+        }
+      ]
     }
   ],
   "items": [

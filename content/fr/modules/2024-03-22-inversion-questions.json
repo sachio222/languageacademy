@@ -75,33 +75,94 @@
   "concepts": [
     {
       "id": "c-verb-subject-inversion",
-      "term": "Verb-Subject Inversion",
-      "definition": "In formal French, flip the verb and subject with a hyphen",
-      "example": "Informal: Comment est-ce que tu fais ça? Formal: {Comment fais-tu ça?}"
+      "term": "Turning the verb around",
+      "definition": "In formal French, the verb comes before the pronoun, joined to it by a hyphen.",
+      "examples": [
+        {
+          "fr": "Comment est-ce que tu fais ça ?",
+          "en": "How do you do that?",
+          "note": "everyday"
+        },
+        {
+          "fr": "Comment fais-tu ça ?",
+          "en": "How do you do that?",
+          "note": "formal"
+        }
+      ]
     },
     {
       "id": "c-when-to-use-inversion",
-      "term": "When to Use Inversion",
-      "definition": "More common in: formal writing, literature, professional settings, with question words",
-      "example": "{Où vas-tu?} (Where are you going?), {Quand arrives-tu?} (When do you arrive?)"
+      "term": "Where you hear it",
+      "definition": "Inversion is common in writing, at work and in short questions with a question word.",
+      "examples": [
+        {
+          "fr": "Où vas-tu ?",
+          "en": "Where are you going?"
+        },
+        {
+          "fr": "Quand arrives-tu ?",
+          "en": "When do you arrive?"
+        },
+        {
+          "fr": "Où vit-elle ?",
+          "en": "Where does she live?"
+        }
+      ]
     },
     {
       "id": "c-the-t-liaison-trick",
-      "term": "The -t- Liaison Trick",
-      "definition": "Add -t- between vowel-ending verbs and il/elle/on for pronunciation",
-      "example": "{a + il} → {a-t-il} ({Pourquoi a-t-il ça?}), {va + elle} → {va-t-elle} ({Où va-t-elle?})"
+      "term": "The added t",
+      "definition": "When a verb ends in a vowel before {il} or {elle}, French adds a t between them. You write it {-t-}.",
+      "examples": [
+        {
+          "fr": "Pourquoi a-t-il ça ?",
+          "en": "Why does he have that?"
+        },
+        {
+          "fr": "Où va-t-elle ?",
+          "en": "Where is she going?"
+        },
+        {
+          "fr": "Quand arrive-t-il ?",
+          "en": "When does he arrive?"
+        },
+        {
+          "fr": "A-t-il plu hier ?",
+          "en": "Did it rain yesterday?"
+        }
+      ]
     },
     {
       "id": "c-with-complex-subjects",
-      "term": "With Complex Subjects",
-      "definition": "When subject is a noun phrase, keep noun then add inverted pronoun",
-      "example": "{Les nuages sont-ils blancs?} (noun '{les nuages}' + inverted '{sont-ils}')"
+      "term": "With a noun as the subject",
+      "definition": "When the subject is a noun, keep the noun first and add a pronoun after the verb.",
+      "examples": [
+        {
+          "fr": "Les nuages sont-ils blancs ?",
+          "en": "Are the clouds white?"
+        },
+        {
+          "fr": "Pourquoi les nuages sont-ils blancs ?",
+          "en": "Why are clouds white?"
+        }
+      ]
     },
     {
       "id": "c-both-forms-are-correct",
-      "term": "Both Forms Are Correct!",
-      "definition": "Students can choose based on formality level - both are valid French",
-      "example": "Casual: Comment est-ce que tu fais ça? Formal: {Comment fais-tu ça?} (same meaning)"
+      "term": "Both are correct",
+      "definition": "Choose the form that fits the moment. The meaning stays the same.",
+      "examples": [
+        {
+          "fr": "Où est-ce que tu vas ?",
+          "en": "Where are you going?",
+          "note": "everyday"
+        },
+        {
+          "fr": "Où vas-tu ?",
+          "en": "Where are you going?",
+          "note": "formal"
+        }
+      ]
     }
   ],
   "items": [

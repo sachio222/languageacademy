@@ -76,27 +76,81 @@
   "concepts": [
     {
       "id": "c-same-pattern-as-qu",
-      "term": "Same Pattern as qu'est-ce qui/{que!}",
-      "definition": "You already know this pattern from the qu'est-ce qui module - just change WHAT to WHO!",
-      "example": "{qu'est-ce qui} → {qui est-ce qui} (what DOES → who DOES), {qu'est-ce que} → {qui est-ce que} (what DO you → who DO you)"
+      "term": "Who works like what",
+      "definition": "Put {qui est-ce} in place of {qu'est-ce} to ask who instead of what. The ending works the same way.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce qui fait du bruit ?",
+          "en": "What is making noise?"
+        },
+        {
+          "fr": "Qui est-ce qui fait du bruit ?",
+          "en": "Who is making noise?"
+        },
+        {
+          "fr": "Qu'est-ce que tu vois ?",
+          "en": "What do you see?"
+        },
+        {
+          "fr": "Qui est-ce que tu vois ?",
+          "en": "Who do you see?"
+        }
+      ]
     },
     {
       "id": "c-qui-est-ce-qui",
-      "term": "{qui est-ce qui} - Subject Questions",
-      "definition": "Use QUI when asking WHO is doing the action. No other subject after qui!",
-      "example": "{Qui est-ce qui parle?} (Who speaks?), {Qui est-ce qui fait ça?} (Who does that?), {Qui est-ce qui nage?} (Who swims?)"
+      "term": "{qui est-ce qui}: who does it",
+      "definition": "Use it when the person you ask about does the action. The verb comes straight after.",
+      "examples": [
+        {
+          "fr": "Qui est-ce qui parle français ?",
+          "en": "Who speaks French?"
+        },
+        {
+          "fr": "Qui est-ce qui fait ça ?",
+          "en": "Who does that?"
+        },
+        {
+          "fr": "Qui est-ce qui vit à Paris ?",
+          "en": "Who lives in Paris?"
+        }
+      ]
     },
     {
       "id": "c-qui-est-ce-que",
-      "term": "{qui est-ce que} - Object Questions",
-      "definition": "Use QUE when asking who someone DOES something to. Subject comes after que!",
-      "example": "{Qui est-ce que tu vois?} (Who do you see?), {Qui est-ce que tu aimes?} (Who do you like?), {Qui est-ce que je dois appeler?} (Who should I call?)"
+      "term": "{qui est-ce que}: who you see, like or call",
+      "definition": "Use it when someone else does the action. That person comes after {que}.",
+      "examples": [
+        {
+          "fr": "Qui est-ce que tu vois ?",
+          "en": "Who do you see?"
+        },
+        {
+          "fr": "Qui est-ce que tu aimes ?",
+          "en": "Who do you love?"
+        },
+        {
+          "fr": "Qui est-ce que je dois appeler ?",
+          "en": "Who should I call?"
+        }
+      ]
     },
     {
       "id": "c-transfer-learning-from-qu",
-      "term": "Transfer Learning from qu'est-ce qui Module",
-      "definition": "You mastered qu'est-ce qui/que discrimination - same rule applies here!",
-      "example": "Subject (thing doing action) → QUI. Object (thing receiving action) → {QUE}"
+      "term": "One test for both",
+      "definition": "Look at the word after the question. A verb means {qui}, and a subject means {que}.",
+      "examples": [
+        {
+          "fr": "Qui est-ce qui court vite ?",
+          "en": "Who runs fast?",
+          "note": "a verb comes next"
+        },
+        {
+          "fr": "Qui est-ce que tu cherches ?",
+          "en": "Who are you looking for?",
+          "note": "a subject comes next"
+        }
+      ]
     }
   ],
   "items": [

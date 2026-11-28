@@ -286,39 +286,109 @@
   "concepts": [
     {
       "id": "c-natural-process-verbs",
-      "term": "Natural Process Verbs",
-      "definition": "Verbs that describe what happens in nature - shining, growing, raining",
-      "example": "{Le soleil brille} (the sun shines), {Les plantes poussent} (plants grow), {Le vent souffle} (the wind blows)"
+      "term": "What nature does",
+      "definition": "Verbs for what happens around us: the sun shines, plants grow and the wind blows.",
+      "examples": [
+        {
+          "fr": "Le soleil brille.",
+          "en": "The sun is shining."
+        },
+        {
+          "fr": "Les plantes poussent.",
+          "en": "Plants grow."
+        },
+        {
+          "fr": "Le vent souffle.",
+          "en": "The wind is blowing."
+        }
+      ]
     },
     {
       "id": "c-pleuvoir-impersonal-verb",
-      "term": "{pleuvoir} - Impersonal Verb",
-      "definition": "Pleuvoir (to rain) only uses '{il}' form - il pleut (it rains)",
-      "example": "{il pleut} (it rains), {il a plu} (it rained), {il pleuvait} (it was raining)"
+      "term": "{pleuvoir} = to rain",
+      "definition": "{pleuvoir} has only one person, {il}, which here means it.",
+      "examples": [
+        {
+          "fr": "Il pleut.",
+          "en": "It's raining."
+        },
+        {
+          "fr": "Il a plu.",
+          "en": "It rained."
+        },
+        {
+          "fr": "Hier, quand je suis sorti, il pleuvait.",
+          "en": "Yesterday, when I went out, it was raining."
+        }
+      ]
     },
     {
       "id": "c-rendre-critical-causative-verb",
-      "term": "{rendre} - CRITICAL Causative Verb!",
-      "definition": "{rendre} with an adjective means to make something that way. It is a regular -re verb, like {attendre}: {nous rendons}, {ils rendent}.",
-      "example": "{Le soleil rend l'herbe verte} (the sun makes grass green), {Le froid rend l'eau glacée} (cold makes water frozen)"
+      "term": "{rendre} = to make",
+      "definition": "{rendre} with an adjective means to make someone or something that way. It changes like {attendre}.",
+      "examples": [
+        {
+          "fr": "Le soleil me rend heureux.",
+          "en": "The sun makes me happy."
+        },
+        {
+          "fr": "Les vacances me rendent heureux.",
+          "en": "Holidays make me happy."
+        },
+        {
+          "fr": "Je rends ma mère heureuse.",
+          "en": "I make my mother happy."
+        }
+      ]
     },
     {
       "id": "c-causative-pattern-rendre-adjective",
-      "term": "Causative Pattern: rendre + adjective",
-      "definition": "Pattern: [subject] + rendre + [object] + [adjective] = subject makes object [adjective]",
-      "example": "{La pluie rend la terre humide} (rain makes the earth wet), {Le soleil rend l'herbe verte} (the sun makes grass green)"
+      "term": "What makes it that way",
+      "definition": "The thing that changes comes after {rendre}, and the adjective comes last.",
+      "examples": [
+        {
+          "fr": "La pluie rend la terre humide.",
+          "en": "Rain makes the ground wet."
+        },
+        {
+          "fr": "Le soleil rend l'herbe verte.",
+          "en": "The sun makes the grass green."
+        },
+        {
+          "fr": "Le froid rend l'eau glacée.",
+          "en": "The cold makes the water icy."
+        }
+      ]
     },
     {
       "id": "c-setting-up-question-patterns",
-      "term": "Setting Up Question Patterns",
-      "definition": "The next lessons use these verbs to ask why and how.",
-      "example": "{Pourquoi est-ce que le soleil brille ? Comment est-ce que les plantes poussent ?}"
+      "term": "Asking why and how",
+      "definition": "Put {pourquoi est-ce que} or {comment est-ce que} before a sentence you know.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que le soleil brille ?",
+          "en": "Why does the sun shine?"
+        },
+        {
+          "fr": "Comment est-ce que les plantes poussent ?",
+          "en": "How do plants grow?"
+        }
+      ]
     },
     {
       "id": "c-ne-plus-no-longer",
       "term": "{ne … plus}: no longer",
       "definition": "Put {ne} before the verb and {plus} after it to say that something has stopped. It works like {ne … pas}.",
-      "example": "{Il ne pleut plus.} (It isn't raining any more.) {Le vent ne souffle plus.} (The wind isn't blowing any more.)"
+      "examples": [
+        {
+          "fr": "Il ne pleut plus.",
+          "en": "It isn't raining any more."
+        },
+        {
+          "fr": "Le vent ne souffle plus.",
+          "en": "The wind isn't blowing any more."
+        }
+      ]
     }
   ],
   "items": [

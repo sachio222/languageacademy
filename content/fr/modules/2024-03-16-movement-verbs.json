@@ -310,39 +310,157 @@
   "concepts": [
     {
       "id": "c-six-essential-movement-verbs",
-      "term": "Six Essential Movement Verbs",
-      "definition": "These verbs describe all basic types of movement in nature and daily life",
-      "example": "{nager} (swim), {sauter} (jump), {voler} (fly), {courir} (run), {marcher} (walk), {grimper} (climb)"
+      "term": "Verbs for moving",
+      "definition": "Six verbs for the ways people and animals move.",
+      "examples": [
+        {
+          "fr": "Je nage dans la mer.",
+          "en": "I swim in the sea."
+        },
+        {
+          "fr": "Les lapins sautent dans le jardin.",
+          "en": "The rabbits are jumping in the garden."
+        },
+        {
+          "fr": "Le papillon vole de fleur en fleur.",
+          "en": "The butterfly flies from flower to flower."
+        },
+        {
+          "fr": "Je cours jusqu'à la gare.",
+          "en": "I run all the way to the station."
+        },
+        {
+          "fr": "La tortue marche lentement.",
+          "en": "The turtle walks slowly."
+        },
+        {
+          "fr": "L'écureuil grimpe dans l'arbre.",
+          "en": "The squirrel climbs the tree."
+        }
+      ]
     },
     {
       "id": "c-regular-er-verbs-pattern",
-      "term": "Regular -ER Verbs Pattern",
-      "definition": "Most movement verbs follow the regular -ER pattern you already know",
-      "example": "{nager}: {je nage}, {tu nages}, {il nage}, {nous nageons}, {vous nagez}, {ils nagent}"
+      "term": "Five -er verbs",
+      "definition": "Five of these verbs change like {parler}. In {nous nageons} an e stays so the g sounds soft.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je nage",
+          "en": "I swim"
+        },
+        {
+          "fr": "tu nages",
+          "en": "you swim"
+        },
+        {
+          "fr": "il nage",
+          "en": "he swims"
+        },
+        {
+          "fr": "nous nageons",
+          "en": "we swim"
+        },
+        {
+          "fr": "vous nagez",
+          "en": "you swim"
+        },
+        {
+          "fr": "ils nagent",
+          "en": "they swim"
+        }
+      ]
     },
     {
       "id": "c-courir-irregular-ir-verb",
-      "term": "{courir} - Irregular -IR Verb",
-      "definition": "Courir (to run) is irregular but common - memorize the pattern",
-      "example": "{je cours}, {tu cours}, {il court}, {nous courons}, {vous courez}, {ils courent}; {Je cours jusqu'à la gare} (I run as far as the station)"
+      "term": "{courir} = to run",
+      "definition": "{courir} has its own pattern, but every form keeps the stem cour. The three singular forms sound the same.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je cours",
+          "en": "I run"
+        },
+        {
+          "fr": "tu cours",
+          "en": "you run"
+        },
+        {
+          "fr": "il court",
+          "en": "he runs"
+        },
+        {
+          "fr": "nous courons",
+          "en": "we run"
+        },
+        {
+          "fr": "vous courez",
+          "en": "you run"
+        },
+        {
+          "fr": "ils courent",
+          "en": "they run"
+        }
+      ]
     },
     {
       "id": "c-animals-movement",
-      "term": "Animals + Movement",
-      "definition": "Combine with animal vocabulary to describe how animals move",
-      "example": "{La tortue nage} (the turtle swims), {Les oiseaux volent} (birds fly), {L'écureuil saute} (the squirrel jumps)"
+      "term": "How animals move",
+      "definition": "Put an animal before the verb to say how it moves.",
+      "examples": [
+        {
+          "fr": "La tortue nage.",
+          "en": "The turtle swims."
+        },
+        {
+          "fr": "Les oiseaux volent.",
+          "en": "Birds fly."
+        },
+        {
+          "fr": "L'écureuil saute.",
+          "en": "The squirrel jumps."
+        }
+      ]
     },
     {
       "id": "c-works-in-all-tenses",
-      "term": "Works in All Tenses",
+      "term": "In the past too",
       "definition": "These verbs work in every tense you know. The table below shows the present, the passé composé and the imparfait.",
-      "example": "{Je nage} (I swim), {J'ai nagé} (I swam), {Je nageais} (I was swimming, I used to swim)"
+      "examples": [
+        {
+          "fr": "Je nage.",
+          "en": "I swim."
+        },
+        {
+          "fr": "J'ai nagé.",
+          "en": "I swam."
+        },
+        {
+          "fr": "Je nageais.",
+          "en": "I was swimming.",
+          "note": "also I used to swim"
+        }
+      ]
     },
     {
       "id": "c-savoir-infinitive",
-      "term": "{savoir} + infinitive: know how to",
-      "definition": "Use {savoir} with an infinitive for a skill someone has learned, and {pouvoir} for whether they are able to at that moment.",
-      "example": "{Je sais nager.} (I can swim, I know how.) {Les jeunes oiseaux ne savent pas encore voler.} (Baby birds can't fly yet.)"
+      "term": "Knowing how to",
+      "definition": "Use {savoir} with a verb for a skill someone has learned, and {pouvoir} for whether they are able to at that moment.",
+      "examples": [
+        {
+          "fr": "Je sais nager.",
+          "en": "I can swim.",
+          "note": "I know how"
+        },
+        {
+          "fr": "Je ne sais pas nager.",
+          "en": "I can't swim."
+        },
+        {
+          "fr": "Les jeunes oiseaux ne savent pas encore voler.",
+          "en": "Young birds can't fly yet."
+        }
+      ]
     }
   ],
   "tables": [

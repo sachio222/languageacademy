@@ -64,33 +64,90 @@
   "concepts": [
     {
       "id": "c-questions-unit-10-structures",
-      "term": "Questions + Mastery & Nuance Structures",
-      "definition": "Combine question words with all the sophisticated structures from the Mastery & Nuance unit",
-      "example": "{Pourquoi est-ce qu'il faut que je fasse ça?} (Why do I have to do that? - necessity + question)"
+      "term": "Questions with {il faut que}",
+      "definition": "A question can hold {il faut que}, and the verb after it takes the subjunctive.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce qu'il faut que je fasse ça ?",
+          "en": "Why do I have to do that?"
+        },
+        {
+          "fr": "Pourquoi est-ce qu'il faut que tu partes ?",
+          "en": "Why do you have to leave?"
+        }
+      ]
     },
     {
       "id": "c-questions-subjunctive-phrases",
-      "term": "Questions + Subjunctive Phrases",
-      "definition": "Ask questions about wishes, emotions, necessity using subjunctive",
-      "example": "{Comment est-ce que tu veux que je le fasse?} (How do you want me to do it?)"
+      "term": "Questions with {vouloir que}",
+      "definition": "Ask what someone wants another person to do. The second verb takes the subjunctive.",
+      "examples": [
+        {
+          "fr": "Comment est-ce que tu veux que je le fasse ?",
+          "en": "How do you want me to do it?"
+        },
+        {
+          "fr": "Pourquoi est-ce que tu veux que je fasse ça ?",
+          "en": "Why do you want me to do that?"
+        },
+        {
+          "fr": "Pourquoi est-ce que tu veux qu'il vienne ?",
+          "en": "Why do you want him to come?"
+        }
+      ]
     },
     {
       "id": "c-questions-opinion-phrases",
-      "term": "Questions + Opinion Phrases",
-      "definition": "Ask about what people think using penser/croire patterns",
-      "example": "{Pourquoi est-ce que tu penses que c'est comme ça?} (Why do you think it's like that?)"
+      "term": "Asking what someone thinks",
+      "definition": "Ask about an opinion with {penser que}.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que tu penses que c'est comme ça ?",
+          "en": "Why do you think it's like that?"
+        },
+        {
+          "fr": "Comment est-ce que tu penses qu'on devrait faire ça ?",
+          "en": "How do you think we should do that?"
+        },
+        {
+          "fr": "Qu'est-ce que tu penses qu'il devrait faire ?",
+          "en": "What do you think he should do?"
+        }
+      ]
     },
     {
       "id": "c-questions-conditional",
-      "term": "Questions + Conditional",
-      "definition": "Ask hypothetical questions using conditional mood",
-      "example": "{Qu'est-ce qui rendrait l'herbe plus verte?} (What would make grass greener?)"
+      "term": "Questions with would",
+      "definition": "Use the conditional to ask what would happen.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce qui rendrait l'herbe plus verte ?",
+          "en": "What would make the grass greener?"
+        },
+        {
+          "fr": "Pourquoi est-ce que tu ferais ça ?",
+          "en": "Why would you do that?"
+        }
+      ]
     },
     {
       "id": "c-native-level-complexity",
-      "term": "Native-Level Complexity",
-      "definition": "These questions demonstrate complete mastery of French question formation",
-      "example": "Can ask ANY question about ANY thought - you've reached full competency!"
+      "term": "Long questions",
+      "definition": "Put question words, the subjunctive and the conditional together to ask about any thought.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce qu'il ne veut pas venir ?",
+          "en": "Why doesn't he want to come?"
+        },
+        {
+          "fr": "Comment est-ce que tu penses qu'on pourrait le faire marcher ?",
+          "en": "How do you think we could make it work?"
+        },
+        {
+          "fr": "Je me demande pourquoi il faut que je parte.",
+          "en": "I wonder why I have to leave."
+        }
+      ]
     }
   ],
   "items": [

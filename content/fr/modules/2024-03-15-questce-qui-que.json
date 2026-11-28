@@ -81,33 +81,96 @@
   "concepts": [
     {
       "id": "c-the-critical-distinction",
-      "term": "THE Critical Distinction",
-      "definition": "qu'est-ce qui = what DOES something (subject). qu'est-ce que = what DO you verb (object)",
-      "example": "{Qu'est-ce qui brille?} (What shines? - subject) vs Qu'est-ce que tu vois? (What do you see? - object)"
+      "term": "What does it, or what you do",
+      "definition": "{qu'est-ce qui} asks about the thing doing the action. {qu'est-ce que} asks about the thing someone does something to.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce qui brille ?",
+          "en": "What is shining?"
+        },
+        {
+          "fr": "Qu'est-ce que tu vois ?",
+          "en": "What do you see?"
+        }
+      ]
     },
     {
       "id": "c-qu-est-ce-qui",
-      "term": "{qu'est-ce qui} - Subject Questions",
-      "definition": "Use QUI when asking WHAT is doing the action. No other subject after qui!",
-      "example": "{Qu'est-ce qui brille?} (What shines?), {Qu'est-ce qui fait du bruit?} (What makes noise?), {Qu'est-ce qui rend l'herbe verte?} (What makes grass green?)"
+      "term": "{qu'est-ce qui}: what does it",
+      "definition": "Use {qui} when the thing you ask about does the action. The verb comes straight after.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce qui brille dans le ciel ?",
+          "en": "What is shining in the sky?"
+        },
+        {
+          "fr": "Qu'est-ce qui fait du bruit ?",
+          "en": "What is making noise?"
+        },
+        {
+          "fr": "Qu'est-ce qui rend l'herbe verte ?",
+          "en": "What makes the grass green?"
+        }
+      ]
     },
     {
       "id": "c-qu-est-ce-que",
-      "term": "{qu'est-ce que} - Object Questions",
-      "definition": "Use QUE when asking what someone/something DOES TO something. Subject comes after que!",
-      "example": "{Qu'est-ce que tu vois?} (What do you see?), {Qu'est-ce que tu manges?} (What are you eating?), {Qu'est-ce que le soleil fait?} (What does the sun do?)"
+      "term": "{qu'est-ce que}: what someone does",
+      "definition": "Use {que} when someone else does the action. The person or thing doing it comes after {que}.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que tu vois ?",
+          "en": "What do you see?"
+        },
+        {
+          "fr": "Qu'est-ce que tu manges ?",
+          "en": "What are you eating?"
+        },
+        {
+          "fr": "Qu'est-ce que les oiseaux mangent ?",
+          "en": "What do birds eat?"
+        }
+      ]
     },
     {
       "id": "c-visual-pattern-recognition",
-      "term": "Visual Pattern Recognition",
-      "definition": "If 'what' is the subject (no other subject follows) → {qui}. If another subject follows → {que}.",
-      "example": "Pattern: [qu'est-ce qui] + [VERB] OR [qu'est-ce que] + [SUBJECT] + [VERB]"
+      "term": "A quick test",
+      "definition": "Look at the word after the question. A verb means {qui}, and a subject means {que}.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce qui tombe ?",
+          "en": "What is falling?",
+          "note": "a verb comes next"
+        },
+        {
+          "fr": "Qu'est-ce que le soleil fait ?",
+          "en": "What does the sun do?",
+          "note": "a subject comes next"
+        }
+      ]
     },
     {
       "id": "c-transform-any-statement-into",
-      "term": "Transform ANY Statement into a Question",
-      "definition": "You can now ask 'what' questions about anything you've learned!",
-      "example": "{Le soleil brille} → {Qu'est-ce qui brille?} (What shines?), {Je vois un oiseau} → {Qu'est-ce que tu vois?} (What do you see?)"
+      "term": "From a sentence to a question",
+      "definition": "Put {qu'est-ce qui} or {qu'est-ce que} in place of the thing you want to know.",
+      "examples": [
+        {
+          "fr": "Le soleil brille.",
+          "en": "The sun is shining."
+        },
+        {
+          "fr": "Qu'est-ce qui brille ?",
+          "en": "What is shining?"
+        },
+        {
+          "fr": "Je vois un oiseau.",
+          "en": "I see a bird."
+        },
+        {
+          "fr": "Qu'est-ce que tu vois ?",
+          "en": "What do you see?"
+        }
+      ]
     }
   ],
   "items": [

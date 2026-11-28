@@ -372,8 +372,8 @@ const PLANTED = [
   ['a story caption translation changed (story_translation)', only('2024-01-09-reading1', (c) => {
     c.readingPassage.translation = c.readingPassage.translation.replace('Paul, a cat and a dog.', 'Paul.');
   })],
-  // Units 1 to 3's concept cards are rewritten by hand (examples lists), so their recorded hand edits cover the cards;
-  // the card plantings use a module past Unit 3 whose cards keep the converter's text.
+  // Every converted lesson's concept cards are rewritten by hand (examples lists) and recorded; a recorded fix explains
+  // a card only when the card shown is one of the fix's cards with its own id and text, so these plantings are caught.
   ["a position-word fix swapped for another card's fix (position_words_fixed, own path)", only('2024-03-25-multi-clause-questions', (c) => {
     c.concepts[0].definition = c.concepts[1].definition;
   })],

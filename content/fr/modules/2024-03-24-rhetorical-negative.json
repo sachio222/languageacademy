@@ -71,33 +71,91 @@
   "concepts": [
     {
       "id": "c-negative-questions-for-agreement",
-      "term": "Negative Questions for Agreement",
-      "definition": "Ask negative questions to seek agreement or confirmation",
-      "example": "{N'est-ce pas vrai?} (Isn't that true?), {N'as-tu pas faim?} (Aren't you hungry?)"
+      "term": "Asking for agreement",
+      "definition": "A negative question asks the other person to agree with you.",
+      "examples": [
+        {
+          "fr": "N'est-ce pas vrai ?",
+          "en": "Isn't that true?"
+        },
+        {
+          "fr": "N'as-tu pas faim ?",
+          "en": "Aren't you hungry?"
+        },
+        {
+          "fr": "N'es-tu pas content ?",
+          "en": "Aren't you happy?"
+        }
+      ]
     },
     {
       "id": "c-rhetorical-questions-for-opinion",
-      "term": "Rhetorical Questions for Opinion",
-      "definition": "Ask questions that express opinion rather than seeking actual answers",
-      "example": "{Comment ne pas aimer ça?} (How can you not love that? = Of course you love it!), {Qui ne voudrait pas ça?} (Who wouldn't want that? = Everyone wants it!)"
+      "term": "Questions that give an opinion",
+      "definition": "Some questions expect no answer. They say what you think.",
+      "examples": [
+        {
+          "fr": "Comment ne pas aimer ça ?",
+          "en": "How can you not love that?",
+          "note": "of course you love it"
+        },
+        {
+          "fr": "Qui ne voudrait pas ça ?",
+          "en": "Who wouldn't want that?",
+          "note": "everyone wants it"
+        }
+      ]
     },
     {
       "id": "c-ne-pas-pattern-in",
-      "term": "Ne...pas Pattern in Questions",
-      "definition": "In negative questions, ne comes before verb, pas after (or before infinitive)",
-      "example": "{N'es-tu pas content? Ne veux-tu pas essayer? Comment ne pas aimer?}"
+      "term": "{ne} … {pas} in a question",
+      "definition": "With an inverted verb, {ne} comes first and {pas} comes after the pronoun. Before an infinitive, both come first.",
+      "examples": [
+        {
+          "fr": "N'es-tu pas content ?",
+          "en": "Aren't you happy?"
+        },
+        {
+          "fr": "Ne veux-tu pas essayer ?",
+          "en": "Don't you want to try?"
+        },
+        {
+          "fr": "Comment ne pas aimer le soleil ?",
+          "en": "How can you not love the sun?"
+        }
+      ]
     },
     {
       "id": "c-persuasion-and-emphasis",
-      "term": "Persuasion and Emphasis",
-      "definition": "These questions are tools for persuasive speech and emphasizing points",
-      "example": "{Pourquoi ne pas essayer?} (Why not try? = You should try!)"
+      "term": "Making a suggestion",
+      "definition": "{Pourquoi ne pas} with a verb suggests doing it.",
+      "examples": [
+        {
+          "fr": "Pourquoi ne pas essayer ?",
+          "en": "Why not try?",
+          "note": "you should try"
+        },
+        {
+          "fr": "Pourquoi ne pas aller là-bas ?",
+          "en": "Why not go there?"
+        }
+      ]
     },
     {
       "id": "c-native-level-sophistication",
-      "term": "Native-Level Sophistication",
-      "definition": "Using these questions makes your French sound more sophisticated and natural",
-      "example": "From basic: Tu aimes ça? To sophisticated: {Comment ne pas aimer ça?}"
+      "term": "From plain to expressive",
+      "definition": "The same idea can be a plain question or a question that gives your opinion.",
+      "examples": [
+        {
+          "fr": "Tu aimes ça ?",
+          "en": "Do you like that?",
+          "note": "plain"
+        },
+        {
+          "fr": "Comment ne pas aimer ça ?",
+          "en": "How can you not love that?",
+          "note": "expressive"
+        }
+      ]
     }
   ],
   "items": [

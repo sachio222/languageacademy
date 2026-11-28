@@ -87,33 +87,99 @@
   "concepts": [
     {
       "id": "c-pourquoi-any-structure",
-      "term": "pourquoi + ANY Structure",
-      "definition": "You already know pourquoi - now compose it with EVERYTHING you've learned so far!",
-      "example": "{Pourquoi + être}, {avoir}, action verbs, progressive, past tense, reflexive, modal verbs = infinite questions"
+      "term": "{pourquoi} with any sentence",
+      "definition": "{pourquoi est-ce que} works with every verb you know.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que je dois faire ça ?",
+          "en": "Why do I have to do that?"
+        },
+        {
+          "fr": "Pourquoi est-ce que tu te dépêches ?",
+          "en": "Why are you hurrying?"
+        },
+        {
+          "fr": "Pourquoi est-ce que les plantes ont besoin d'eau ?",
+          "en": "Why do plants need water?"
+        }
+      ]
     },
     {
       "id": "c-basic-pattern-pourquoi-est",
-      "term": "Basic Pattern: pourquoi est-ce que + statement",
-      "definition": "Take any statement and add pourquoi est-ce que before it",
-      "example": "Statement: {Le ciel est bleu} → Question: {Pourquoi est-ce que le ciel est bleu?}"
+      "term": "{pourquoi est-ce que} before a sentence",
+      "definition": "Take a sentence and put {pourquoi est-ce que} in front of it. The word order stays the same.",
+      "examples": [
+        {
+          "fr": "Le ciel est bleu.",
+          "en": "The sky is blue."
+        },
+        {
+          "fr": "Pourquoi est-ce que le ciel est bleu ?",
+          "en": "Why is the sky blue?"
+        },
+        {
+          "fr": "Pourquoi est-ce qu'il pleut ?",
+          "en": "Why is it raining?",
+          "note": "{que} becomes {qu'} before a vowel"
+        }
+      ]
     },
     {
       "id": "c-nature-curiosity-questions",
-      "term": "Nature Curiosity Questions",
-      "definition": "Ask why about natural phenomena using vocabulary from previous modules",
-      "example": "{Pourquoi est-ce que le soleil brille? Pourquoi est-ce que l'herbe est verte? Pourquoi est-ce que les nuages sont blancs?}"
+      "term": "Why questions about nature",
+      "definition": "Ask why about the sky, the weather and what grows.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que le soleil brille ?",
+          "en": "Why does the sun shine?"
+        },
+        {
+          "fr": "Pourquoi est-ce que l'herbe est verte ?",
+          "en": "Why is grass green?"
+        },
+        {
+          "fr": "Pourquoi est-ce que les nuages sont blancs ?",
+          "en": "Why are clouds white?"
+        }
+      ]
     },
     {
       "id": "c-with-all-tenses",
-      "term": "With All Tenses",
-      "definition": "Pourquoi works with present, past, imparfait, and all verb forms",
-      "example": "Present: Pourquoi tu fais ça? Past: Pourquoi as-tu fait ça? Progressive: {Pourquoi es-tu en train de faire ça?}"
+      "term": "In the past, or right now",
+      "definition": "{pourquoi est-ce que} works with the passé composé and with {être en train de}.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que tu as fait ça ?",
+          "en": "Why did you do that?"
+        },
+        {
+          "fr": "Pourquoi est-ce que tu es tombé ?",
+          "en": "Why did you fall?"
+        },
+        {
+          "fr": "Pourquoi est-ce qu'il est en train de faire ça ?",
+          "en": "Why is he doing that?"
+        }
+      ]
     },
     {
       "id": "c-infinite-composition-power",
-      "term": "Infinite Composition Power",
-      "definition": "Once you master pourquoi, you can ask 'why' about literally anything you can say in French!",
-      "example": "Any vocabulary × pourquoi × any tense = unlimited curiosity questions"
+      "term": "Asking why about anything",
+      "definition": "With {pourquoi est-ce que} you can ask why about any sentence you can say.",
+      "examples": [
+        {
+          "fr": "Pourquoi est-ce que le vent souffle ?",
+          "en": "Why is the wind blowing?"
+        },
+        {
+          "fr": "Pourquoi est-ce qu'il ne pleut plus ?",
+          "en": "Why has it stopped raining?"
+        },
+        {
+          "fr": "Pourquoi est-ce que c'est comme ça ?",
+          "en": "Why is it like that?"
+        }
+      ]
     }
   ],
   "items": [
