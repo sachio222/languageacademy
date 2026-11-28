@@ -15,7 +15,7 @@
       "word_id": "presenter-fr",
       "fr": "présenter",
       "gloss": "to introduce; to present",
-      "note": "A regular -er verb: {je présente}, {tu présentes}, {nous présentons}.",
+      "note": "A regular -er verb, like {parler}.",
       "example_fr": "Hugo, je te présente Maya, ma voisine.",
       "example_en": "Hugo, this is Maya, my neighbour."
     },
@@ -91,13 +91,36 @@
       "id": "c-introducing-people",
       "term": "Introducing people: {je te présente}",
       "definition": "To a friend, say {je te présente} and the person's name. To an adult you call {vous}, say {je vous présente}.",
-      "example": "{Hugo, je te présente Maya.} (Hugo, this is Maya.) {Madame Garnier, je vous présente Maya.} (Mrs Garnier, this is Maya.)"
+      "examples": [
+        {
+          "fr": "Hugo, je te présente Maya.",
+          "en": "Hugo, this is Maya."
+        },
+        {
+          "fr": "Madame Garnier, je vous présente Maya.",
+          "en": "Mrs Garnier, this is Maya."
+        },
+        {
+          "fr": "Maya, je te présente Noé, le petit frère dont je t'ai parlé.",
+          "en": "Maya, this is Noé, the little brother I told you about."
+        }
+      ]
     },
     {
       "id": "c-love-hate-doing",
       "term": "Saying what you love or hate doing",
-      "definition": "Put the infinitive straight after {aimer}, {adorer} or {détester}, with nothing between them.",
-      "example": "{J'adore chanter, mais je déteste danser.} (I love singing, but I hate dancing.)"
+      "definition": "Put the second verb straight after {adorer} or {détester}, with nothing between them. {aimer} works the same way.",
+      "examples": [
+        {
+          "fr": "J'adore chanter, mais je déteste danser.",
+          "en": "I love singing, but I hate dancing."
+        },
+        {
+          "fr": "Hugo chante très mal, mais il adore ça.",
+          "en": "Hugo sings very badly, but he loves it.",
+          "note": "with a thing, not a verb"
+        }
+      ]
     }
   ],
   "phrases": [

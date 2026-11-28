@@ -63,21 +63,61 @@
   "concepts": [
     {
       "id": "c-si-present",
-      "term": "{si} + present: a plan that depends on something",
-      "definition": "Say the condition with {si} and a verb in the present, then say the plan. The plan can be in the present, in the future, with {aller} + infinitive, or an order. When {si} means if, the condition stays in the present, even when it is about next Saturday. It can also come after the plan.",
-      "example": "{Si tu veux, on y va.} (If you want, let's go.) {Je passe chez toi si j'ai le temps.} (I'll drop by if I have time.)"
+      "term": "{si} with the present: a plan that depends on something",
+      "definition": "Say the condition with {si} and a verb in the present, then say the plan. When {si} means if, the condition stays in the present, even when it is about next Saturday.",
+      "examples": [
+        {
+          "fr": "S'il pleut, on va à la bibliothèque.",
+          "en": "If it rains, we'll go to the library."
+        },
+        {
+          "fr": "S'il fait beau, on prend les vélos.",
+          "en": "If the weather's nice, we'll take the bikes."
+        },
+        {
+          "fr": "Si tu veux, on y va.",
+          "en": "If you want, let's go."
+        },
+        {
+          "fr": "Je passe chez toi si j'ai le temps.",
+          "en": "I'll drop by if I have time.",
+          "note": "the condition can come second"
+        }
+      ]
     },
     {
       "id": "c-sil-si-elle",
-      "term": "{s'il}, but {si elle} and {si on}",
+      "term": "When {si} becomes {s'}",
       "definition": "{Si} drops its i before {il} and {ils} only. Before {elle}, {on} and every other word, it stays whole.",
-      "example": "{s'il pleut}, {s'ils veulent}, {si elle vient}, {si on a le temps}"
+      "examples": [
+        {
+          "fr": "S'il neige, on reste à la maison.",
+          "en": "If it snows, we stay at home."
+        },
+        {
+          "fr": "Si elle veut, Maya vient avec nous.",
+          "en": "If she wants, Maya can come with us."
+        },
+        {
+          "fr": "Si on a le temps, on passe au marché.",
+          "en": "If we have time, we'll drop by the market."
+        }
+      ]
     },
     {
       "id": "c-si-not-a-plan",
       "term": "Some {si} are not plans",
-      "definition": "After {je ne sais pas} or {je me demande}, {si} means whether. {S'il te plaît} and {s'il vous plaît} mean please.",
-      "example": "{Je ne sais pas s'il pleut.} (I don't know whether it's raining.)"
+      "definition": "After {je ne sais pas} or {je me demande}, the word means whether. {S'il te plaît} and {s'il vous plaît} mean please.",
+      "examples": [
+        {
+          "fr": "Je ne sais pas s'il pleut.",
+          "en": "I don't know whether it's raining."
+        },
+        {
+          "fr": "Ferme la porte, s'il te plaît.",
+          "en": "Close the door, please."
+        }
+      ]
     }
   ],
   "tables": [

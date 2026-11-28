@@ -62,14 +62,67 @@
     {
       "id": "c-ce-que-ce-qui",
       "term": "{ce que} and {ce qui}: what",
-      "definition": "To say 'what' inside a sentence, French puts {ce} before {que} or {qui}, as after a noun. {Ce qui} is the subject of the verb that follows, so the verb usually comes straight after it; a small word such as {me} can sit between: {ce qui me plaît}. {Ce que} is the object, so the clause has its own subject, usually right after {que}: {ce que j'aime}. {Que} becomes {qu'} before a vowel; {qui} never does. {Qu'est-ce que} asks a question; {ce que} sits inside a statement. To repeat someone's question back, start with {ce que}: {Ce qu'il y a à faire ici ?} After {tout}, keep {ce}: {tout ce que tu veux}.",
-      "example": "{Ce que j'aime, c'est le marché.} (What I like is the market.) {Ce qui est difficile, c'est le vélo.} (What's hard is cycling.)"
+      "definition": "To say what inside a sentence, put {ce} before {qui} or {que}. {ce qui} is the subject of the next verb, and {ce que} has its own subject after it.",
+      "examples": [
+        {
+          "fr": "Ce que j'aime, c'est le marché.",
+          "en": "What I like is the market."
+        },
+        {
+          "fr": "Ce qui est difficile, c'est le vélo.",
+          "en": "What's hard is cycling."
+        },
+        {
+          "fr": "Ce qui me plaît ici, c'est le quartier.",
+          "en": "What I like here is the neighbourhood.",
+          "note": "a small word like {me} can come between"
+        },
+        {
+          "fr": "Ce qu'il y a à faire ici ? Beaucoup de choses !",
+          "en": "What is there to do here? Lots of things!",
+          "note": "repeating a question back; {que} becomes {qu'}"
+        },
+        {
+          "fr": "Il y a tout ce que tu veux.",
+          "en": "There's everything you want.",
+          "note": "after {tout}, keep {ce}"
+        },
+        {
+          "fr": "Tu as vu ce que la météo dit pour samedi ?",
+          "en": "Have you seen what the forecast says for Saturday?",
+          "note": "{qu'est-ce que} asks; {ce que} sits inside a sentence"
+        }
+      ]
     },
     {
       "id": "c-ce-que-cest",
       "term": "{Ce que …, c'est …}: the idea first, then the thing",
-      "definition": "To put weight on one thing, French says the idea first and names the thing after {c'est}. {J'aime le marché} becomes {Ce que j'aime, c'est le marché.} With {ce qui}: {Le vélo est difficile ici} becomes {Ce qui est difficile ici, c'est le vélo.} After {c'est}, the thing can also be a whole moment, with {quand}: {Ce qui est drôle, c'est quand Hugo parle anglais.} French speakers use this shape all the time. Before a plural you will also hear {ce sont}: {Ce que Noé préfère, ce sont les animaux.}",
-      "example": "{Ce que j'aime surtout, c'est le marché.} (What I like most is the market.) {Ce qui est difficile ici, c'est le vélo.} (What's hard here is cycling.)"
+      "definition": "To put weight on one thing, say the idea first and name the thing after {c'est}. French speakers use this shape all the time.",
+      "examples": [
+        {
+          "fr": "Ce que j'aime surtout, c'est le marché.",
+          "en": "What I like most is the market.",
+          "note": "from {j'aime le marché}"
+        },
+        {
+          "fr": "Ce qui est difficile ici, c'est le vélo.",
+          "en": "What's hard here is cycling."
+        },
+        {
+          "fr": "Ce qui est drôle, c'est quand Hugo parle anglais.",
+          "en": "What's funny is when Hugo speaks English.",
+          "note": "a whole moment after {c'est}, with {quand}"
+        },
+        {
+          "fr": "Ce que Noé préfère au parc, ce sont les animaux.",
+          "en": "What Noé likes best in the park is the animals.",
+          "note": "before a plural you also hear {ce sont}"
+        },
+        {
+          "fr": "Ce que je cherche, en fait, c'est la bibliothèque.",
+          "en": "What I'm looking for, actually, is the library."
+        }
+      ]
     }
   ],
   "tables": [

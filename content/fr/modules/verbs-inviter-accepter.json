@@ -16,7 +16,7 @@
       "word_id": "inviter-fr",
       "fr": "inviter",
       "gloss": "to invite",
-      "note": "a regular -er verb: {j'invite}, {tu invites}, {nous invitons}. The first sound is the nasal in {vin}, with no n heard.",
+      "note": "A regular -er verb, like {parler}. The first sound is the nasal in {vin}, with no n heard.",
       "example_fr": "Je t'invite à mon anniversaire samedi.",
       "example_en": "I'm inviting you to my birthday on Saturday."
     },
@@ -57,8 +57,23 @@
     {
       "id": "c-yes-or-no-to-an-invitation",
       "term": "Saying yes or no to an invitation",
-      "definition": "To say yes, thank the person and accept: friends say {Merci, avec plaisir !} or {Je viens !}; in writing or to an adult, {j'accepte avec plaisir}. To say no, thank them, say sorry and say you can't come. {Je refuse} to someone's face sounds cold.",
-      "example": "{Merci, j'accepte avec plaisir !} (Thanks, I'd love to!) {Je te remercie, mais je ne peux pas venir.} (Thank you, but I can't come.)"
+      "definition": "To say yes, thank the person and accept; to say no, thank them and say you can't come. {Je refuse} to someone's face sounds cold.",
+      "examples": [
+        {
+          "fr": "Merci, avec plaisir !",
+          "en": "Thanks, I'd love to!",
+          "note": "to a friend"
+        },
+        {
+          "fr": "Merci, j'accepte avec plaisir !",
+          "en": "Thank you, I'm happy to accept!",
+          "note": "in writing, or to an adult"
+        },
+        {
+          "fr": "Je te remercie, mais je ne peux pas venir.",
+          "en": "Thank you, but I can't come."
+        }
+      ]
     }
   ],
   "phrases": [

@@ -144,7 +144,12 @@
       "id": "c-bref",
       "term": "{Bref,} to get to the point",
       "definition": "At the start of a sentence, {bref} cuts a list or a long story short and gives the main point. It is common in speech.",
-      "example": "{J'ai cherché partout : chez Léa, à la boulangerie, à la piscine… Bref, je n'ai plus ma clé.} (I looked everywhere: at Léa's, at the bakery, at the pool… Anyway, I haven't got my key any more.)"
+      "examples": [
+        {
+          "fr": "J'ai cherché partout : chez Léa, à la boulangerie, à la piscine… Bref, je n'ai plus ma clé.",
+          "en": "I looked everywhere: at Léa's, at the bakery, at the pool… Anyway, I haven't got my key any more."
+        }
+      ]
     }
   ],
   "phrases": [

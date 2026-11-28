@@ -90,8 +90,31 @@
     {
       "id": "c-ou-after-a-place-or-a-time",
       "term": "{où} after a place or a time",
-      "definition": "Put {où} after a noun for a place or a time, then say what happens there or then. English says where for a place and when for a time; French says {où} for both, never {quand}. {Où} already means there, so the verb after it takes no {y}. When the verb takes the noun itself as its object, use {que}: {la ville que j'aime}. The noun can keep its adjectives: {le petit parc où on joue}.",
-      "example": "{La ville où j'habite est belle.} (The town where I live is beautiful.) {Le jour où Maya est arrivée, il pleuvait.} (The day Maya arrived, it was raining.)"
+      "definition": "Put {où} after a noun for a place or a time, then say what happens there or then. French uses {où} for both where and when, and the verb after it takes no {y}.",
+      "examples": [
+        {
+          "fr": "La ville où j'habite est belle.",
+          "en": "The town where I live is beautiful."
+        },
+        {
+          "fr": "C'est la bibliothèque où je travaille le samedi.",
+          "en": "That's the library where I work on Saturdays."
+        },
+        {
+          "fr": "Le jour où Maya est arrivée, il pleuvait.",
+          "en": "The day Maya arrived, it was raining."
+        },
+        {
+          "fr": "Le petit marché où maman achète les légumes est à côté de la bibliothèque.",
+          "en": "The little market where Mum buys vegetables is next to the library.",
+          "note": "the noun keeps its adjectives"
+        },
+        {
+          "fr": "La boulangerie que j'adore est au coin de la rue.",
+          "en": "The bakery I love is on the corner of the street.",
+          "note": "{que}, since the verb takes the place itself as its object"
+        }
+      ]
     }
   ],
   "phrases": [

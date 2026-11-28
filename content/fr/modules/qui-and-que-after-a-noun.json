@@ -57,7 +57,7 @@
       "word_id": "lire-fr",
       "fr": "lire",
       "gloss": "to read",
-      "note": "Its forms are in the table: {je lis}, {nous lisons}, {j'ai lu}.",
+      "note": "An irregular verb. Its forms, such as {nous lisons} and {j'ai lu}, are in the table.",
       "example_fr": "Le livre que je lis est très long.",
       "example_en": "The book I'm reading is very long.",
       "part_of_speech": "verb"
@@ -103,14 +103,51 @@
     {
       "id": "c-qui-after-a-noun",
       "term": "{qui}: the one who does it",
-      "definition": "Put {qui} after a noun to say what that person or thing does. {qui} is the subject of the next verb, so no other subject comes after it. The verb agrees with the noun before {qui}: {les enfants qui jouent}, {c'est toi qui viens}. {qui} never shortens before a vowel: {qui a}, {qui habite}.",
-      "example": "{La dame qui habite à côté a un chien.} The woman who lives next door has a dog."
+      "definition": "Put {qui} after a noun to say what that person or thing does. {qui} is the subject of the next verb, and it never shortens before a vowel.",
+      "examples": [
+        {
+          "fr": "La dame qui habite à côté a un chien.",
+          "en": "The woman who lives next door has a dog."
+        },
+        {
+          "fr": "C'est la voisine qui a un chien.",
+          "en": "She's the neighbour who has a dog.",
+          "note": "{qui} stays whole before a vowel"
+        },
+        {
+          "fr": "Les enfants qui lisent sous l'arbre, ce sont Noé et ses copains.",
+          "en": "The children reading under the tree are Noé and his friends.",
+          "note": "the verb agrees with {les enfants}"
+        },
+        {
+          "fr": "C'est toi qui viens de Montréal ?",
+          "en": "Are you the one from Montreal?"
+        }
+      ]
     },
     {
       "id": "c-que-after-a-noun",
       "term": "{que}: the one someone does it to",
-      "definition": "Put {que} after a noun when someone else does the action to it. A subject and a verb come after {que}. English can drop \"that\" (the film I'm watching), but French always keeps {que}. Before a vowel, {que} becomes {qu'}: {qu'il}, {qu'elle}, {qu'on}.",
-      "example": "{C'est le film que je regarde.} That's the film I'm watching."
+      "definition": "Put {que} after a noun when someone else does the action to it, so a subject and a verb follow. English can drop that, but French always keeps {que}.",
+      "examples": [
+        {
+          "fr": "C'est le film que je regarde.",
+          "en": "That's the film I'm watching."
+        },
+        {
+          "fr": "C'est le livre que je lis.",
+          "en": "That's the book I'm reading."
+        },
+        {
+          "fr": "Voilà le chat qu'elle adore.",
+          "en": "There's the cat she loves.",
+          "note": "{que} becomes {qu'} before a vowel"
+        },
+        {
+          "fr": "C'est une copine que je vois souvent.",
+          "en": "She's a friend I see often."
+        }
+      ]
     }
   ],
   "tables": [

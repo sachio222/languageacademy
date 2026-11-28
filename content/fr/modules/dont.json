@@ -72,8 +72,32 @@
     {
       "id": "c-dont",
       "term": "{dont}: the one you talk about",
-      "definition": "{dont} takes the place of {de} + a noun. Use it when the words after the noun take {de}: {parler de}, {avoir besoin de}, {avoir peur de}, {se souvenir de}, {rêver de}, {être fier de}. Put {dont} right after the noun and leave the {de} part out. Use {que} when the verb takes its object straight: {le pain que j'aime}, but {le pain dont j'ai besoin}. English can end on \"about\" or \"of\"; French never ends on {de}.",
-      "example": "{Je parle de la rue.} → {Voilà la rue dont je parle.} {J'ai besoin de ce livre.} → {C'est le livre dont j'ai besoin.}"
+      "definition": "{dont} stands for {de} and a noun. Use it after the noun when the verb that follows takes {de}, and leave the {de} out.",
+      "examples": [
+        {
+          "fr": "Voilà la rue dont je parle souvent.",
+          "en": "That's the street I often talk about.",
+          "note": "from {parler de}"
+        },
+        {
+          "fr": "C'est le livre dont j'ai besoin.",
+          "en": "That's the book I need.",
+          "note": "from {avoir besoin de}"
+        },
+        {
+          "fr": "C'est un quartier dont elle est fière.",
+          "en": "It's a neighbourhood she's proud of."
+        },
+        {
+          "fr": "C'est une dame dont je me souviens bien.",
+          "en": "She's a woman I remember well."
+        },
+        {
+          "fr": "Chez Karim, il y a le pain que j'aime et les croissants dont Noé rêve.",
+          "en": "At Karim's there's the bread I love and the croissants Noé dreams of.",
+          "note": "{aimer} takes its object straight, so {que}"
+        }
+      ]
     }
   ],
   "phrases": [
