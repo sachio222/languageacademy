@@ -530,6 +530,26 @@ test('every form of a conjugation has a sentence among the lesson\'s items', () 
   assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }).map((x) => x.code), ['conjugation_row_no_sentence']);
 });
 
+// A writer gives the short form (scripts/plan/templates/lesson-grammar.md): it names the verb, and the loader builds
+// the rest from the graph (scripts/content/conjugation.mjs). Files hold the short form; the checked course the built one.
+test('a lesson file may give its conjugation in the short form that names the verb', () => {
+  const mod = verbLesson();
+  mod.conjugation = { verb: 'vouloir', en: 'to want', note: '{vouloir} has three stems.' };
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }), []);
+  mod.conjugation = { verb: 'partir', en: 'to leave', aspect: 'progressive', ing: 'leaving', gloss: 'leave' };
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }), []);
+});
+
+test('a built conjugation holds its pattern, groups and rows together', () => {
+  const mod = verbLesson();
+  mod.conjugation = VOULOIR();
+  delete mod.conjugation.rows;
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }).map((x) => [x.code, x.path]), [['field_missing', 'conjugation.rows']]);
+  mod.conjugation = VOULOIR();
+  delete mod.conjugation.pattern;
+  assert.deepEqual(validateModule(mod, { file: 'l.json', unitIndex: 1 }).map((x) => [x.code, x.path]), [['field_missing', 'conjugation.pattern']]);
+});
+
 test('a lesson may carry a conjugation for its verb step', () => {
   const mod = verbLesson();
   mod.conjugation = VOULOIR();

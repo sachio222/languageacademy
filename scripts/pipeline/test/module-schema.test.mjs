@@ -23,6 +23,7 @@ import {
 import { ITEM_TYPES, SHAPES } from '../../content/schema/item.mjs';
 import { SCHEMA_DIR, validateContract } from '../contracts/index.mjs';
 import { DRAFT_KINDS, checkModuleSchemas, moduleJsonSchema, moduleSchemaFile, moduleSchemaId, moduleSchemaText } from '../contracts/module-schema.mjs';
+import fr from '../../graph/fr/language.mjs';
 
 const ROOT = fileURLToPath(new URL('../../../', import.meta.url));
 const CLI = join(ROOT, 'scripts/pipeline/cli.mjs');
@@ -33,7 +34,7 @@ const VALIDATOR_SOURCES = ['scripts/content/schema/module.mjs', 'scripts/content
 // The schema states these: validateModule reports one exactly when the schema refuses. The first ten are the shape
 // codes of the controller's ruling (2026-11-25); the rest are structural rules JSON Schema states too.
 const SCHEMA_CODES = new Set([
-  'field_type', 'field_unknown', 'field_missing', 'schema_invalid', 'module_key_invalid', 'status_invalid', 'kind_invalid',
+  'field_type', 'field_unknown', 'schema_invalid', 'module_key_invalid', 'status_invalid', 'kind_invalid',
   'id_invalid', 'item_type_not_allowed', 'teaches_in_test',
   'item_invalid', 'item_type_invalid', 'guide_checks_count', 'short_title_long', 'mistakes_not_allowed',
 ]);
@@ -44,9 +45,15 @@ const SPLIT_CODES = {
   options_invalid: (p) => (/exactly one right/.test(p.message) ? 'validator' : 'schema'),
   steps_invalid: (p) => (/at least one step/.test(p.message) ? 'schema' : 'validator'),
   speed_match_invalid: (p) => (/lists six word_ids$/.test(p.message) ? 'schema' : 'validator'),
-  // On a concept card or section an error the validator keeps; on a word card's note a warning.
+  // A required field the schema names; the validator's own: an example's fr (which an item needs by its card's layout)
+  // and the built half of a conjugation (pattern, groups and rows come together).
+  field_missing: (p) => (/\.examples\[\d+\]\.fr$|^conjugation\.(pattern|groups|rows)$/.test(p.path) ? 'validator' : 'schema'),
+};
+// Codes the validator keeps, as an error or, until the cut-over, as a warning: no half of them is the schema's.
+const SEVERITY_CODES = {
+  // On a concept card or section an error; on a word card's note a warning.
   concept_inline_list: (p) => (p.severity === 'warning' ? 'warning' : 'validator'),
-  // A card with no examples is a warning until the cut-over; a list of the wrong size an error the validator keeps.
+  // A card with no examples is a warning until the cut-over; a list of the wrong size an error.
   concept_examples_size: (p) => (p.severity === 'warning' ? 'warning' : 'validator'),
 };
 const VALIDATOR_CODES = new Set([
@@ -55,13 +62,19 @@ const VALIDATOR_CODES = new Set([
   // A concept card's examples (scripts/content/concept-examples.mjs): counts, pairs and text the schema cannot state.
   'concept_example_both', 'concept_example_formula', 'concept_example_meaning', 'concept_forms_pair',
   'concept_layout_without_examples', 'concept_plain_item', 'concept_example_not_target',
+  // A lesson's conjugation (the verb step): rules across its groups, rows and items, which the schema cannot state.
+  'conjugation_group_unknown', 'conjugation_group_empty', 'conjugation_row_no_sentence', 'conjugation_split_invalid',
+  'conjugation_model_missing',
 ]);
-const WARNING_CODES = new Set(['translate_outside_unit1']);
+// Checker findings that never stop a load (item.mjs): a translation item outside Unit 1, an English sentence framed as
+// "Tell Maya: …", and an instruction that is only a command.
+const WARNING_CODES = new Set(['translate_outside_unit1', 'translation_framed', 'drill_without_situation']);
 
 /** 'schema' when the schema states the problem, 'validator' when it is left to the validator. */
 function classify(p) {
   if (SCHEMA_CODES.has(p.code)) return 'schema';
   if (Object.hasOwn(SPLIT_CODES, p.code)) return SPLIT_CODES[p.code](p);
+  if (Object.hasOwn(SEVERITY_CODES, p.code)) return SEVERITY_CODES[p.code](p);
   if (VALIDATOR_CODES.has(p.code)) return 'validator';
   if (WARNING_CODES.has(p.code)) return 'warning';
   throw new Error(`problem code ${p.code} is not classified in module-schema.test.mjs`);
@@ -83,7 +96,7 @@ test('every problem code the content validator can report is classified, and no 
   const found = sourceCodes();
   for (const known of ['field_type', 'teaches_in_test', 'construction_unknown', 'word_unknown', 'span_nested', 'short_title_long', 'translate_outside_unit1'])
     assert.ok(found.has(known), `the scan finds ${known}`);
-  const classified = new Set([...SCHEMA_CODES, ...Object.keys(SPLIT_CODES), ...VALIDATOR_CODES, ...WARNING_CODES]);
+  const classified = new Set([...SCHEMA_CODES, ...Object.keys(SPLIT_CODES), ...Object.keys(SEVERITY_CODES), ...VALIDATOR_CODES, ...WARNING_CODES]);
   assert.deepEqual([...found].filter((c) => !classified.has(c)).sort(), [], 'codes in the source with no class');
   assert.deepEqual([...classified].filter((c) => !found.has(c)).sort(), [], 'classified codes the source no longer reports');
 });
@@ -175,6 +188,13 @@ function fullModule(kind) {
   for (const card of [...(m.concepts ?? []), ...(m.sections ?? [])]) {
     Reflect.deleteProperty(card, 'example');
     for (const x of card.examples ?? []) Reflect.deleteProperty(x, 'text');
+  }
+  // The verb step's data holds together (conjugationRules): the row sounds like a group the lesson names, its stem
+  // starts the form and its silent letters end it, and an item says the form in a sentence (the gap-fill below,
+  // "Je suis ici.", with its gloss).
+  if (m.conjugation) {
+    m.conjugation.groups = [{ id: 'a', sound: '/a/' }];
+    m.conjugation.rows = [{ ...m.conjugation.rows[0], person: 'je', form: 'suis', group: 'a', stem: 's', silent: 's' }];
   }
   // A gloss is a form the module does not teach as a card (gloss_is_card), so it spells another form than the cards.
   if (m.glosses) m.glosses = [{ ...m.glosses[0], fr: 'mots' }];
@@ -503,6 +523,25 @@ test('every code left to the content validator is pinned: the schema accepts, va
     ['a word the graph lacks', edit(lesson, (m) => { m.teaches = { constructions: [], words: ['zz-none'] }; }), 'word_unknown', graph],
     ['a gloss that is a word card', edit(full.lesson, (m) => { m.glosses[0].fr = m.vocabulary[0].fr; }), 'gloss_is_card'],
     ['a translation outside Unit 1 (a warning)', clone(full.lesson), 'translate_outside_unit1', { unitIndex: 2 }],
+    ['an English sentence framed as Tell Maya (a warning)', edit(full.lesson, (m) => { m.items.find((i) => i.type === 'respond').situation = 'Tell Maya: I am here.'; }), 'translation_framed', { unitIndex: 2 }],
+    ['an instruction that is only a command (a warning)', edit(full.lesson, (m) => { m.items.find((i) => i.instruction !== undefined).instruction = 'Put it in the past.'; }), 'drill_without_situation', { unitIndex: 2 }],
+    ['an example with no French', edit(full.lesson, (m) => { delete m.concepts[0].examples[0].fr; }), 'field_missing'],
+    // A concept card's examples (concept-examples.mjs).
+    ['a card with the old string and the list', edit(full.lesson, (m) => { m.concepts[0].example = '{Je suis ici}'; }), 'concept_example_both'],
+    ['a formula for an example', edit(full.lesson, (m) => { m.concepts[0].examples[0].fr = 'je suis + ici'; }), 'concept_example_formula'],
+    ['a list example with no English', edit(full.lesson, (m) => { delete m.concepts[0].examples[0].en; m.concepts[0].layout = 'list'; }), 'concept_example_meaning'],
+    ['forms that do not pair singular with plural', edit(full.lesson, (m) => { m.concepts[0].layout = 'forms'; m.concepts[0].examples = [{ fr: 'je suis' }, { fr: 'tu es' }]; }), 'concept_forms_pair', { persons: fr.persons }],
+    ['a layout with no examples', edit(full.lesson, (m) => { delete m.concepts[0].examples; }), 'concept_layout_without_examples'],
+    ['a plain item that holds French', edit(full.lesson, (m) => { m.concepts[0].layout = 'plain'; m.concepts[0].examples = [{ fr: 'je suis' }]; }), 'concept_plain_item'],
+    ['English where the French goes', edit(full.lesson, (m) => { m.concepts[0].layout = 'list'; m.concepts[0].examples = [{ fr: 'I am here with my friends.', en: 'I am here with my friends.' }]; }), 'concept_example_not_target', { isNativeText: fr.isNativeExample }],
+    ['a definition that runs a French list together', edit(full.lesson, (m) => { m.concepts[0].definition = 'Learn {ce}, {cet}, {cette}.'; }), 'concept_inline_list'],
+    ['a card with no examples in its list', edit(full.lesson, (m) => { m.concepts[0].examples = []; }), 'concept_examples_size'],
+    // A lesson's conjugation (conjugationRules).
+    ['a row in a group the lesson does not name', edit(full.lesson, (m) => { m.conjugation.rows[0].group = 'zz'; m.conjugation.groups.push({ id: 'zz2', sound: '/z/' }); m.conjugation.rows.push({ ...m.conjugation.rows[0], person: 'tu', group: 'zz2' }); }), 'conjugation_group_unknown'],
+    ['a group no row sounds like', edit(full.lesson, (m) => { m.conjugation.groups.push({ id: 'b', sound: '/b/' }); }), 'conjugation_group_empty'],
+    ['a form no item says in a sentence', edit(full.lesson, (m) => { m.conjugation.rows[0].form = 'sommes'; }), 'conjugation_row_no_sentence'],
+    ['a stem that does not start the form', edit(full.lesson, (m) => { m.conjugation.rows[0].stem = 'x'; }), 'conjugation_split_invalid'],
+    ['a verb taught by a pattern with no model', edit(full.lesson, (m) => { m.conjugation.pattern = 'er'; delete m.conjugation.model; }), 'conjugation_model_missing'],
   ];
   const pinned = new Set();
   for (const [label, mod, code, ctx] of cases) {
@@ -514,7 +553,7 @@ test('every code left to the content validator is pinned: the schema accepts, va
     assert.deepEqual(v.stated, [], `${label}: no problem the schema states`);
     pinned.add(code);
   }
-  const left = new Set([...VALIDATOR_CODES, ...WARNING_CODES, ...Object.keys(SPLIT_CODES)]);
+  const left = new Set([...VALIDATOR_CODES, ...WARNING_CODES, ...Object.keys(SPLIT_CODES), ...Object.keys(SEVERITY_CODES)]);
   assert.deepEqual([...left].filter((c) => !pinned.has(c)).sort(), [], 'every code left to the validator has a case');
   // A planned stub is valid content but no draft: the draft schemas take status written only.
   const planned = ALL.find(({ mod }) => mod.status === 'planned' && mod.kind === 'lesson').mod;

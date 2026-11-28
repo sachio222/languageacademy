@@ -215,10 +215,15 @@ const CONJUGATION_ROW = OBJ(
 // ils is said (ils aiment).
 const CONTRAST_PAIR = { one: S('fr'), many: S('fr'), listen: S('native_fr') };
 const CONTRAST = OBJ({ same: BOOL, ...CONTRAST_PAIR, liaison: OBJ(CONTRAST_PAIR, ['one', 'many', 'listen']) }, ['same', 'one', 'many', 'listen']);
+// A lesson file gives the short form a writer writes, { verb, en, gloss?, aspect?, ing?, note? } (conjugation.mjs), and
+// the loader builds the rest from the graph; the built form holds pattern, groups and rows together (conjugationRules).
 const CONJUGATION = OBJ(
   {
     verb: S('fr'),
     en: S('native'),
+    gloss: S('native'),
+    aspect: ENUM(['progressive']),
+    ing: S('native'),
     pattern: ENUM(['irregular', 'er', 'like']),
     model: S('fr'),
     note: S('native_fr'),
@@ -226,8 +231,9 @@ const CONJUGATION = OBJ(
     rows: LIST(CONJUGATION_ROW, { nonEmpty: true, unique: 'person' }),
     contrast: CONTRAST,
   },
-  ['verb', 'en', 'pattern', 'groups', 'rows'],
+  ['verb', 'en'],
 );
+const CONJUGATION_BUILT = ['pattern', 'groups', 'rows'];
 const PLAN = OBJ({ words: LIST(KEY), constructions: LIST(KEY), source: KEY, draft: KEY, note: S('native') }, ['words', 'constructions', 'source']);
 
 export const KIND_SCHEMAS = {
@@ -520,6 +526,12 @@ function noteRules(mod, cx) {
 // and the silent letters end it, without overlapping; a verb taught by a pattern names its model verb.
 function conjugationRules(c, cx, items) {
   const { bad } = cx;
+  // The short form names the verb only; once any of the built fields is there, all are.
+  const built = CONJUGATION_BUILT.filter((f) => c[f] !== undefined);
+  if (!built.length) return;
+  for (const f of CONJUGATION_BUILT)
+    if (c[f] === undefined) bad(`conjugation.${f}`, 'field_missing', `conjugation.${f} is required in a built conjugation, which holds ${built.join(' and ')}`);
+  if (c.rows === undefined || c.groups === undefined) return;
   const groups = Array.isArray(c.groups) ? c.groups.filter(isObj) : [];
   const rows = Array.isArray(c.rows) ? c.rows : [];
   const ids = new Set(groups.map((g) => g.id));

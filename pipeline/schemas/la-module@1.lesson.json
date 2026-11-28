@@ -354,10 +354,7 @@
       "type": "object",
       "required": [
         "verb",
-        "en",
-        "pattern",
-        "groups",
-        "rows"
+        "en"
       ],
       "properties": {
         "verb": {
@@ -366,6 +363,21 @@
           "pattern": "\\S"
         },
         "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "gloss": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "aspect": {
+          "enum": [
+            "progressive"
+          ]
+        },
+        "ing": {
           "type": "string",
           "minLength": 1,
           "pattern": "\\S"
