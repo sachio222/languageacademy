@@ -552,6 +552,8 @@
           "situation": "Opens with Mme Garnier's morning order; closes with a small boy touching every cake in the window and Léa asking him, kindly, to stop.",
           "teaches": {
             "words": [
+              "fr:lex:tenir",
+              "fr:lex:garder",
               "fr:lex:soif"
             ],
             "constructions": [
@@ -565,6 +567,12 @@
           "met_through": {
             "fr:lex:soif": [
               "fr:lex:desirer"
+            ],
+            "fr:lex:tenir": [
+              "fr:cx:frame.verb-infinitive"
+            ],
+            "fr:lex:garder": [
+              "fr:cx:frame.verb-infinitive"
             ]
           }
         },
@@ -10222,20 +10230,70 @@
     ],
     "2024-01-15-vouloir": [
       {
-        "id": "fr:lex:tenir",
-        "carrier": "fr:cx:frame.modal-infinitive",
+        "id": "fr:lex:the",
+        "carrier": "fr:lex:vouloir",
         "met_through": [
-          "fr:cx:frame.modal-infinitive"
-        ],
-        "from": "verbs-desirer-servir"
+          "fr:lex:vouloir"
+        ]
       },
       {
-        "id": "fr:lex:garder",
-        "carrier": "fr:cx:frame.modal-infinitive",
+        "id": "fr:lex:verre",
+        "carrier": "fr:lex:vouloir",
         "met_through": [
-          "fr:cx:frame.modal-infinitive"
+          "fr:lex:vouloir"
         ],
-        "from": "verbs-desirer-servir"
+        "from": "verbs-mentir-enlever"
+      },
+      {
+        "id": "fr:lex:addition",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ]
+      },
+      {
+        "id": "fr:lex:carte",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ]
+      },
+      {
+        "id": "fr:lex:encore",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ]
+      },
+      {
+        "id": "fr:lex:maintenant",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ]
+      },
+      {
+        "id": "fr:lex:quelque",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ]
+      },
+      {
+        "id": "fr:lex:billet",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ],
+        "from": "past-conditional-with-avoir"
+      },
+      {
+        "id": "fr:lex:chambre",
+        "carrier": "fr:lex:vouloir",
+        "met_through": [
+          "fr:lex:vouloir"
+        ],
+        "from": "after-doing"
       }
     ],
     "2024-01-16-pouvoir": [
@@ -12286,14 +12344,6 @@
         "carrier": "fr:cx:pronoun.reflexive",
         "met_through": [
           "fr:cx:pronoun.reflexive"
-        ],
-        "from": "after-doing"
-      },
-      {
-        "id": "fr:lex:chambre",
-        "carrier": "fr:cx:frame.avoir-besoin-de",
-        "met_through": [
-          "fr:cx:frame.avoir-besoin-de"
         ],
         "from": "after-doing"
       },
