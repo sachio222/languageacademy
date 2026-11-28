@@ -112,7 +112,7 @@ See the handback report of the change for each run's evidence; the claims and ho
 
 | Claim | Evidence | Checked from | Status |
 |---|---|---|---|
-| Checker rules hold | content:test 444 of 444 pass (concept-cards 32, concept-cards-migrate 6) | course-main | PROVEN |
+| Checker rules hold | content:test 444 of 444 pass (concept-cards 31, concept-cards-migrate 6) | course-main | PROVEN |
 | Units 1 to 3 hold no old string | content test "Units 1 to 3 are migrated" passes; content:validate ok, 405 modules | course-main | PROVEN |
 | Example French is taught before used | graph:check --budget ok; Units 1 to 3 issues 258 to 248, none on a concept card | course-main | PROVEN |
 | Records match the edits | content:migrate --check ok; live-ids lose no concept (one more matched) | course-main | PROVEN |
