@@ -122,27 +122,76 @@
   "concepts": [
     {
       "id": "c-french-age-expression-j",
-      "term": "French Age Expression: {J'ai ... ans}",
-      "definition": "French uses '{avoir}' (to have) + number + '{ans}' (years) to express age",
-      "example": "{J'ai vingt-cinq ans} (I am 25 years old - literally 'I have 25 years')"
+      "term": "Age with {avoir}",
+      "definition": "French gives your age with {avoir}: you have so many years.",
+      "examples": [
+        {
+          "fr": "J'ai vingt-deux ans.",
+          "en": "I'm 22.",
+          "note": "word for word, I have 22 years"
+        },
+        {
+          "fr": "Elle a dix-huit ans.",
+          "en": "She's 18."
+        },
+        {
+          "fr": "Il a quinze ans.",
+          "en": "He's 15."
+        }
+      ]
     },
     {
       "id": "c-asking-age-quel-age",
-      "term": "Asking Age: {Quel âge...?}",
-      "definition": "Use '{quel âge}' (what age) to ask someone's age politely",
-      "example": "{Quel âge avez-vous?} (How old are you? - formal), {Quel âge as-tu?} (informal)"
+      "term": "Asking someone's age",
+      "definition": "Use {avez-vous} with a stranger and {as-tu} with a friend.",
+      "examples": [
+        {
+          "fr": "Quel âge avez-vous ?",
+          "en": "How old are you?",
+          "note": "to a stranger"
+        },
+        {
+          "fr": "Quel âge as-tu ?",
+          "en": "How old are you?",
+          "note": "to a friend"
+        },
+        {
+          "fr": "Tu as quel âge ?",
+          "en": "How old are you?",
+          "note": "casual"
+        }
+      ]
     },
     {
       "id": "c-birth-information",
-      "term": "Birth Information",
-      "definition": "Express when and where you were born using être + né(e)",
-      "example": "{Je suis né en 1995} (I was born in 1995), {Je suis née à Paris} (I was born in Paris - feminine)"
+      "term": "When and where you were born",
+      "definition": "Use {je suis né} with {en} for the year and {à} for the city. A woman writes {née}, which sounds the same.",
+      "examples": [
+        {
+          "fr": "Je suis né en deux mille.",
+          "en": "I was born in 2000."
+        },
+        {
+          "fr": "Je suis née à Paris.",
+          "en": "I was born in Paris.",
+          "note": "a woman speaking"
+        }
+      ]
     },
     {
       "id": "c-personal-details-integration",
-      "term": "Personal Details Integration",
-      "definition": "Combine with s'appeler, être, avoir for complete self-introduction",
-      "example": "{Je m'appelle Marie, j'ai 30 ans, je suis née à Lyon} (My name is Marie, I'm 30, I was born in Lyon)"
+      "term": "Introducing yourself",
+      "definition": "Put your name, your age and where you were born together to introduce yourself.",
+      "examples": [
+        {
+          "fr": "Je m'appelle Sophie, j'ai vingt-huit ans.",
+          "en": "My name is Sophie, I'm 28."
+        },
+        {
+          "fr": "Je m'appelle Marie, j'ai trente ans, je suis née à Lyon.",
+          "en": "My name is Marie, I'm 30, I was born in Lyon."
+        }
+      ]
     }
   ],
   "items": [

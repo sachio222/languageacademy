@@ -188,27 +188,71 @@
   "concepts": [
     {
       "id": "c-chercher-to-look-for",
-      "term": "{chercher} = to look for / to search (rank 57)",
-      "definition": "Regular -ER verb for searching - used constantly in daily life",
-      "example": "{Je cherche mes clés} (I'm looking for my keys), {Tu cherches quoi?} (What are you looking for?), {C'est dur de trouver mes clés !} (It's hard to find my keys!)"
+      "term": "{chercher} = to look for",
+      "definition": "The verb for looking for something. Nothing goes between {chercher} and the thing.",
+      "examples": [
+        {
+          "fr": "Je cherche mes clés.",
+          "en": "I'm looking for my keys."
+        },
+        {
+          "fr": "Tu cherches quoi ?",
+          "en": "What are you looking for?"
+        },
+        {
+          "fr": "Je cherche du travail.",
+          "en": "I'm looking for work."
+        }
+      ]
     },
     {
       "id": "c-trouver-to-find-rank",
-      "term": "{trouver} = to find (rank 58)",
-      "definition": "Regular -ER verb for finding - the successful result of chercher!",
-      "example": "{J'ai trouvé!} (I found it!), {Tu trouves ça comment?} (What do you think of that?)"
+      "term": "{trouver} = to find",
+      "definition": "The verb for finding what you looked for.",
+      "examples": [
+        {
+          "fr": "J'ai trouvé !",
+          "en": "I found it!"
+        },
+        {
+          "fr": "Tu as trouvé ton téléphone ?",
+          "en": "Did you find your phone?"
+        },
+        {
+          "fr": "Je ne peux pas le trouver.",
+          "en": "I can't find it."
+        }
+      ]
     },
     {
       "id": "c-the-perfect-sequence",
-      "term": "The Perfect Sequence",
-      "definition": "These two verbs form a natural action sequence",
-      "example": "{Je cherche} → {Je trouve} (I search → I find). The complete search-and-discovery process!"
+      "term": "Looking, then finding",
+      "definition": "{chercher} is the search and {trouver} is the result.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que tu cherches ?",
+          "en": "What are you looking for?"
+        },
+        {
+          "fr": "C'est dur de trouver mes clés !",
+          "en": "It's hard to find my keys!"
+        }
+      ]
     },
     {
       "id": "c-extended-meanings",
-      "term": "Extended Meanings",
-      "definition": "Both verbs have broader meanings beyond physical searching",
-      "example": "{chercher} = try to do, {trouver} = think/consider ({Je trouve que...} = I think that...)"
+      "term": "{trouver} for an opinion",
+      "definition": "{je trouve que} means I think that. {tu trouves ça comment ?} asks what someone thinks.",
+      "examples": [
+        {
+          "fr": "Je trouve que c'est bon.",
+          "en": "I think it's good."
+        },
+        {
+          "fr": "Tu trouves ça comment ?",
+          "en": "What do you think of it?"
+        }
+      ]
     }
   ],
   "items": [

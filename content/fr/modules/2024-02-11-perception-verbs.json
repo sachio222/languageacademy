@@ -183,27 +183,79 @@
   "concepts": [
     {
       "id": "c-ecouter-to-listen-rank",
-      "term": "{écouter} = to listen (rank 65)",
-      "definition": "Regular -ER verb for active listening - music, people, sounds",
-      "example": "{J'écoute de la musique} (I listen to music), {Tu écoutes le professeur} (You listen to the teacher)"
+      "term": "{écouter} = to listen to",
+      "definition": "English listens to something. In French, nothing goes between {écouter} and the thing.",
+      "examples": [
+        {
+          "fr": "J'écoute de la musique.",
+          "en": "I'm listening to music."
+        },
+        {
+          "fr": "Qu'est-ce que tu écoutes ?",
+          "en": "What are you listening to?"
+        },
+        {
+          "fr": "Tu écoutes le professeur.",
+          "en": "You listen to the teacher."
+        }
+      ]
     },
     {
       "id": "c-regarder-to-watch-to",
-      "term": "{regarder} = to watch / to look at (rank 66)",
-      "definition": "Regular -ER verb for visual attention - TV, people, things",
-      "example": "{Je regarde la télé} (I watch TV), {Il regarde par la fenêtre} (He looks out the window)"
+      "term": "{regarder} = to watch, to look at",
+      "definition": "Nothing goes between {regarder} and the thing either.",
+      "examples": [
+        {
+          "fr": "Je regarde la télé.",
+          "en": "I'm watching TV."
+        },
+        {
+          "fr": "Il regarde par la fenêtre.",
+          "en": "He's looking out the window."
+        },
+        {
+          "fr": "Qu'est-ce que tu regardes ?",
+          "en": "What are you watching?"
+        }
+      ]
     },
     {
       "id": "c-beyond-commands",
-      "term": "Beyond Commands",
-      "definition": "You know '{Écoute!}' and '{Regarde!}' - now learn full conjugations",
-      "example": "From commands to conversations: '{Regarde!}' → '{Je regarde souvent des films}' (I often watch movies)"
+      "term": "From commands to sentences",
+      "definition": "You know {Regarde !} and {Écoute !} as commands. The same verbs work with every person.",
+      "examples": [
+        {
+          "fr": "Regarde !",
+          "en": "Look!"
+        },
+        {
+          "fr": "Je regarde souvent des films.",
+          "en": "I often watch movies."
+        },
+        {
+          "fr": "Nous regardons un film.",
+          "en": "We're watching a movie."
+        }
+      ]
     },
     {
       "id": "c-perception-integration",
-      "term": "Perception Integration",
-      "definition": "Complete your five senses with voir (see), écouter (hear), sentir (smell/feel)",
-      "example": "{Je vois} (I see), {j'écoute} (I listen), {je regarde} (I look at) - complete visual and auditory perception"
+      "term": "Seeing, watching, listening",
+      "definition": "{voir} is what your eyes take in. {regarder} is looking on purpose, and {écouter} is listening on purpose.",
+      "examples": [
+        {
+          "fr": "Je vois la maison.",
+          "en": "I see the house."
+        },
+        {
+          "fr": "Je regarde la maison.",
+          "en": "I'm looking at the house."
+        },
+        {
+          "fr": "J'écoute la musique.",
+          "en": "I'm listening to the music."
+        }
+      ]
     }
   ],
   "items": [

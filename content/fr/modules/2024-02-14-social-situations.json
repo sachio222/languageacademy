@@ -237,27 +237,72 @@
   "concepts": [
     {
       "id": "c-attendre-to-wait-rank",
-      "term": "{attendre} = to wait (rank 67)",
-      "definition": "Regular -RE verb for waiting - essential for appointments and transport",
-      "example": "{J'attends le bus} (I'm waiting for the bus), {Tu attends quelqu'un?} (Are you waiting for someone?), {J'attends Marie et j'écoute de la musique} (I'm waiting for Marie and listening to music)"
+      "term": "{attendre} = to wait for",
+      "definition": "Like {chercher}, {attendre} takes the person or thing straight after it, with no word for \"for\".",
+      "examples": [
+        {
+          "fr": "J'attends le bus.",
+          "en": "I'm waiting for the bus."
+        },
+        {
+          "fr": "Tu attends quelqu'un ?",
+          "en": "Are you waiting for someone?"
+        },
+        {
+          "fr": "J'attends Marie et j'écoute de la musique.",
+          "en": "I'm waiting for Marie and listening to music."
+        }
+      ]
     },
     {
       "id": "c-arriver-to-arrive-rank",
-      "term": "{arriver} = to arrive (rank 69)",
-      "definition": "Regular -ER verb for arriving - completing journeys and meetings",
-      "example": "{J'arrive à 8h} (I arrive at 8am), {Le train arrive} (The train is arriving)"
+      "term": "{arriver} = to arrive",
+      "definition": "Use {à} for the time or the place you arrive.",
+      "examples": [
+        {
+          "fr": "J'arrive à neuf heures.",
+          "en": "I arrive at nine."
+        },
+        {
+          "fr": "Le train arrive.",
+          "en": "The train is coming in."
+        },
+        {
+          "fr": "Quand tu arrives ?",
+          "en": "When do you get here?"
+        }
+      ]
     },
     {
       "id": "c-rester-to-stay-rank",
-      "term": "{rester} = to stay (rank 70)",
-      "definition": "Regular -ER verb for staying - not leaving, remaining somewhere",
-      "example": "{Je reste ici} (I'm staying here), {Tu restes combien de temps?} (How long are you staying?)"
+      "term": "{rester} = to stay",
+      "definition": "The verb for staying where you are.",
+      "examples": [
+        {
+          "fr": "Je reste ici.",
+          "en": "I'm staying here."
+        },
+        {
+          "fr": "Tu restes combien de temps ?",
+          "en": "How long are you staying?"
+        },
+        {
+          "fr": "Il reste du pain.",
+          "en": "There's some bread left.",
+          "note": "{il reste} also means there is some left"
+        }
+      ]
     },
     {
       "id": "c-social-coordination",
-      "term": "Social Coordination",
-      "definition": "These three verbs enable complete social planning and coordination",
-      "example": "{J'attends Marie, elle arrive à 7h, et nous restons ensemble} (I'm waiting for Marie, she arrives at 7, and we stay together)"
+      "term": "Making plans",
+      "definition": "With these three verbs you can plan a meeting.",
+      "examples": [
+        {
+          "fr": "J'attends Marie, elle arrive à sept heures et nous restons ensemble.",
+          "en": "I'm waiting for Marie, she arrives at seven and we're staying together."
+        }
+      ]
     }
   ],
   "items": [

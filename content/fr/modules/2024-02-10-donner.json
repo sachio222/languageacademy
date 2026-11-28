@@ -133,32 +133,102 @@
     {
       "id": "c-donner-to-give",
       "term": "{donner} = to give",
-      "definition": "One of the most common verbs - used for gifts, help, information, objects",
-      "example": "{Je donne un livre} (I give a book), {Tu me donnes ton numéro?} (Do you give me your number?)"
+      "definition": "The verb for giving things, money or help.",
+      "examples": [
+        {
+          "fr": "Elle donne de l'argent aux enfants.",
+          "en": "She gives money to the children."
+        },
+        {
+          "fr": "Tu peux me donner ton numéro ?",
+          "en": "Can you give me your number?"
+        }
+      ]
     },
     {
       "id": "c-regular-er-conjugation",
-      "term": "Regular -ER Conjugation",
-      "definition": "Follows standard -ER pattern like parler, manger",
-      "example": "{je donne}, {tu donnes}, {il donne}, {nous donnons}, {vous donnez}, {ils donnent}"
+      "term": "The forms of {donner}",
+      "definition": "{donner} follows the -er pattern, like {parler}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je donne",
+          "en": "I give"
+        },
+        {
+          "fr": "tu donnes",
+          "en": "you give"
+        },
+        {
+          "fr": "il donne",
+          "en": "he gives"
+        },
+        {
+          "fr": "nous donnons",
+          "en": "we give"
+        },
+        {
+          "fr": "vous donnez",
+          "en": "you give"
+        },
+        {
+          "fr": "ils donnent",
+          "en": "they give"
+        }
+      ]
     },
     {
       "id": "c-direct-and-indirect-objects",
-      "term": "Direct and Indirect Objects",
-      "definition": "Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un",
-      "example": "{Je donne le livre à Marie} (I give the book to Marie) → {Je lui donne le livre} (I give it to her)"
+      "term": "Giving something to someone",
+      "definition": "The thing comes straight after {donner}, and the person after {à}. As a pronoun, the person becomes {lui} and goes before the verb.",
+      "examples": [
+        {
+          "fr": "Je donne le livre à Marie.",
+          "en": "I give the book to Marie."
+        },
+        {
+          "fr": "Je lui donne le livre.",
+          "en": "I give her the book."
+        }
+      ]
     },
     {
       "id": "c-two-pronouns",
       "term": "Two pronouns: {je te le donne}",
-      "definition": "When the thing you give becomes {le}, {la} or {les}, it goes after {me}, {te}, {nous} or {vous}, and both stay before the verb",
-      "example": "{Je te donne le livre} (I give you the book) → {Je te le donne} (I give it to you). {Tu me donnes ton numéro ?} (Do you give me your number?) → {Tu me le donnes ?} (Do you give it to me?)"
+      "definition": "When the thing you give becomes a pronoun like {le}, it goes after the person. Both pronouns stay before the verb.",
+      "examples": [
+        {
+          "fr": "Je te donne le livre.",
+          "en": "I give you the book."
+        },
+        {
+          "fr": "Je te le donne.",
+          "en": "I give it to you."
+        },
+        {
+          "fr": "Tu me le donnes ?",
+          "en": "Will you give it to me?"
+        }
+      ]
     },
     {
       "id": "c-common-expressions",
-      "term": "Common Expressions",
-      "definition": "Many fixed phrases use donner in French",
-      "example": "{donner l'heure} (tell the time), {donner raison} (agree with someone), {donner rendez-vous} (make an appointment)"
+      "term": "Set phrases with {donner}",
+      "definition": "In some set phrases, {donner} turns into a different English verb.",
+      "examples": [
+        {
+          "fr": "Ils me donnent l'heure.",
+          "en": "They tell me the time."
+        },
+        {
+          "fr": "Je te donne rendez-vous au café.",
+          "en": "Let's meet at the café."
+        },
+        {
+          "fr": "Je te donne raison.",
+          "en": "I agree with you."
+        }
+      ]
     }
   ],
   "items": [

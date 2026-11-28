@@ -214,33 +214,102 @@
   "concepts": [
     {
       "id": "c-cardinal-directions",
-      "term": "Cardinal Directions",
-      "definition": "The four main compass directions in French",
-      "example": "{le nord} (north), {le sud} (south), {l'est} (east), {l'ouest} (west)"
+      "term": "North, south, east, west",
+      "definition": "The four points of the compass.",
+      "examples": [
+        {
+          "fr": "le nord",
+          "en": "north"
+        },
+        {
+          "fr": "le sud",
+          "en": "south"
+        },
+        {
+          "fr": "l'est",
+          "en": "east"
+        },
+        {
+          "fr": "l'ouest",
+          "en": "west"
+        }
+      ]
     },
     {
       "id": "c-turn-directions",
-      "term": "Turn Directions",
-      "definition": "Essential for giving and following directions",
-      "example": "{tournez à gauche} (turn left), {tournez à droite} (turn right), {tout droit} (straight ahead)"
+      "term": "Turning",
+      "definition": "Phrases for left, right and straight ahead.",
+      "examples": [
+        {
+          "fr": "Tournez à gauche.",
+          "en": "Turn left."
+        },
+        {
+          "fr": "Tournez à droite.",
+          "en": "Turn right."
+        },
+        {
+          "fr": "Allez tout droit.",
+          "en": "Go straight ahead."
+        }
+      ]
     },
     {
       "id": "c-location-descriptions",
-      "term": "Location Descriptions",
-      "definition": "Describe where things are relative to other things",
-      "example": "{à côté de} (next to), {en face de} (across from), {près de} (near), {loin de} (far from)"
+      "term": "Where something is",
+      "definition": "These phrases place one thing beside, across from, near or far from another.",
+      "examples": [
+        {
+          "fr": "C'est à côté de la gare.",
+          "en": "It's next to the station."
+        },
+        {
+          "fr": "C'est en face du café.",
+          "en": "It's across from the café."
+        },
+        {
+          "fr": "C'est près d'ici.",
+          "en": "It's near here."
+        },
+        {
+          "fr": "C'est loin d'ici ?",
+          "en": "Is it far from here?"
+        }
+      ]
     },
     {
       "id": "c-giving-directions",
-      "term": "Giving Directions",
-      "definition": "Complete phrases for helping someone navigate",
-      "example": "{Allez tout droit jusqu'à la gare, puis tournez à gauche} (Go straight as far as the station, then turn left)"
+      "term": "Giving directions",
+      "definition": "Put the steps in order with {puis}, which means then.",
+      "examples": [
+        {
+          "fr": "Allez tout droit jusqu'à la gare, puis tournez à gauche.",
+          "en": "Go straight as far as the station, then turn left."
+        },
+        {
+          "fr": "C'est à cinq minutes à pied.",
+          "en": "It's five minutes on foot."
+        }
+      ]
     },
     {
       "id": "c-asking-for-directions",
-      "term": "Asking for Directions",
-      "definition": "How to ask for help when lost",
-      "example": "{Excusez-moi}, {où est...?} ({Excuse me}, where is...?), {Comment aller à...?} (How do you get to...?)"
+      "term": "Asking the way",
+      "definition": "Start with {excusez-moi}, then ask where the place is or how to get there.",
+      "examples": [
+        {
+          "fr": "Excusez-moi, où est la gare ?",
+          "en": "Excuse me, where is the station?"
+        },
+        {
+          "fr": "Excusez-moi, comment aller au musée ?",
+          "en": "Excuse me, how do I get to the museum?"
+        },
+        {
+          "fr": "C'est loin ?",
+          "en": "Is it far?"
+        }
+      ]
     }
   ],
   "items": [

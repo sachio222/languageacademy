@@ -213,27 +213,67 @@
   "concepts": [
     {
       "id": "c-dormir-to-sleep-rank",
-      "term": "{dormir} = to sleep (rank 54)",
-      "definition": "Regular -IR verb for sleeping - essential for daily routines",
-      "example": "{je dors} (I sleep), {je dors huit heures} (I sleep 8 hours), {tu dors bien?} (do you sleep well?)"
+      "term": "{dormir} = to sleep",
+      "definition": "The singular forms drop the m: {je dors}, but {nous dormons}.",
+      "examples": [
+        {
+          "fr": "Je dors huit heures.",
+          "en": "I sleep eight hours."
+        },
+        {
+          "fr": "Tu dors bien ?",
+          "en": "Do you sleep well?"
+        },
+        {
+          "fr": "Il dort.",
+          "en": "He's asleep."
+        }
+      ]
     },
     {
       "id": "c-travailler-to-work-rank",
-      "term": "{travailler} = to work (rank 55)",
-      "definition": "Regular -ER verb for working - essential for adult life",
-      "example": "{je travaille} (I work), {je travaille à Paris} (I work in Paris), {où travaillez-vous?} (where do you work?)"
+      "term": "{travailler} = to work",
+      "definition": "An -er verb, like {parler}.",
+      "examples": [
+        {
+          "fr": "Je travaille à Paris.",
+          "en": "I work in Paris."
+        },
+        {
+          "fr": "Où travaillez-vous ?",
+          "en": "Where do you work?"
+        },
+        {
+          "fr": "Je travaille dur.",
+          "en": "I work hard."
+        }
+      ]
     },
     {
       "id": "c-vivre-to-live-rank",
-      "term": "{vivre} = to live (rank 56)",
-      "definition": "Irregular verb for living/being alive - existential and location",
-      "example": "{je vis} (I live), {je vis à Paris} (I live in Paris), {vivre sa vie} (to live one's life)"
+      "term": "{vivre} = to live",
+      "definition": "{vivre} is to live in a place, and to live your life.",
+      "examples": [
+        {
+          "fr": "Je vis à Paris.",
+          "en": "I live in Paris."
+        },
+        {
+          "fr": "Je vis ma vie.",
+          "en": "I'm living my life."
+        }
+      ]
     },
     {
       "id": "c-daily-life-integration",
-      "term": "Daily Life Integration",
-      "definition": "These three verbs complete your ability to describe human existence",
-      "example": "{Je vis à Paris, je travaille près d'ici, et je dors bien} (I live in Paris, work near here, and sleep well)"
+      "term": "Your day in three verbs",
+      "definition": "With these three verbs you can say where you live, where you work and how you sleep.",
+      "examples": [
+        {
+          "fr": "Je vis à Paris, je travaille près d'ici et je dors bien.",
+          "en": "I live in Paris, I work near here and I sleep well."
+        }
+      ]
     }
   ],
   "items": [

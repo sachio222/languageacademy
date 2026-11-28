@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 791 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 2768 |
+| Hand edits kept | 2864 |
 | Live ids with no converted item | 368 (53 real misses) |
 | Fields with no place in a module file | 1953 |
 | Text written differently | 661 |
@@ -4185,28 +4185,127 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-02-08-age-personal-info**
 
 - `description` "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information. Finally complete what should have been in Unit 1!" → "Essential life skills! Learn to say your age (J'ai 25 ans), ask others' ages (Quel âge avez-vous?), and share personal information."
+- `concepts[0].term` "French Age Expression: J'ai ... ans" → "Age with avoir"
+- `concepts[0].definition` "French uses 'avoir' (to have) + number + 'ans' (years) to express age" → "French gives your age with avoir: you have so many years."
+- `concepts[0].examples` "(none)" → "["fr":"J'ai vingt-deux ans.","en":"I'm 22.","note":"word for word, I have 22 years","fr":"Elle a dix-huit ans.","en":"She's 18.","fr":"Il a quinze ans.","en":"He's 15."]"
+- `concepts[0].example` ""J'ai vingt-cinq ans (I am 25 years old - literally 'I have 25 years')"" → "(removed)"
+- `concepts[1].term` "Asking Age: Quel âge...?" → "Asking someone's age"
+- `concepts[1].definition` "Use 'quel âge' (what age) to ask someone's age politely" → "Use avez-vous with a stranger and as-tu with a friend."
+- `concepts[1].examples` "(none)" → "["fr":"Quel âge avez-vous ?","en":"How old are you?","note":"to a stranger","fr":"Quel âge as-tu ?","en":"How old are you?","note":"to a friend","fr":"Tu as quel âge ?","en":"How old are you?","note":"casual"]"
+- `concepts[1].example` ""Quel âge avez-vous? (How old are you? - formal), Quel âge as-tu? (informal)"" → "(removed)"
+- `concepts[2].term` "Birth Information" → "When and where you were born"
+- `concepts[2].definition` "Express when and where you were born using être + né(e)" → "Use je suis né with en for the year and à for the city. A woman writes née, which sounds the same."
+- `concepts[2].examples` "(none)" → "["fr":"Je suis né en deux mille.","en":"I was born in 2000.","fr":"Je suis née à Paris.","en":"I was born in Paris.","note":"a woman speaking"]"
+- `concepts[2].example` ""Je suis né en 1995 (I was born in 1995), Je suis née à Paris (I was born in Paris - feminine)"" → "(removed)"
+- `concepts[3].term` "Personal Details Integration" → "Introducing yourself"
+- `concepts[3].definition` "Combine with s'appeler, être, avoir for complete self-introduction" → "Put your name, your age and where you were born together to introduce yourself."
+- `concepts[3].examples` "(none)" → "["fr":"Je m'appelle Sophie, j'ai vingt-huit ans.","en":"My name is Sophie, I'm 28.","fr":"Je m'appelle Marie, j'ai trente ans, je suis née à Lyon.","en":"My name is Marie, I'm 30, I was born in Lyon."]"
+- `concepts[3].example` ""Je m'appelle Marie, j'ai 30 ans, je suis née à Lyon (My name is Marie, I'm 30, I was born in Lyon)"" → "(removed)"
 
 **2024-02-10-donner**
 
-- `concepts` "["id":"c-donner-to-give","term":"donner = to give","definition":"One of the most common verbs - used for gifts, help, information, objects","example":"Je donne un cadeau (I give a gift), Tu me donnes ton numéro? (Do you give me your number?)","id":"c-regular-er-conjugation","term":"Regular -ER Conjugation","definition":"Follows standard -ER pattern like parler, manger","example":"je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","id":"c-direct-and-indirect-objects","term":"Direct and Indirect Objects","definition":"Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un","example":"Je donne le livre à Marie (I give the book to Marie) → Je lui donne le livre (I give it to her)","id":"c-common-expressions","term":"Common Expressions","definition":"Many fixed phrases use donner in French","example":"donner l'heure (tell the time), donner raison (agree with someone), donner rendez-vous (make an appointment)"]" → "["id":"c-donner-to-give","term":"donner = to give","definition":"One of the most common verbs - used for gifts, help, information, objects","example":"Je donne un livre (I give a book), Tu me donnes ton numéro? (Do you give me your number?)","id":"c-regular-er-conjugation","term":"Regular -ER Conjugation","definition":"Follows standard -ER pattern like parler, manger","example":"je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","id":"c-direct-and-indirect-objects","term":"Direct and Indirect Objects","definition":"Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un","example":"Je donne le livre à Marie (I give the book to Marie) → Je lui donne le livre (I give it to her)","id":"c-two-pronouns","term":"Two pronouns: je te le donne","definition":"When the thing you give becomes le, la or les, it goes after me, te, nous or vous, and both stay before the verb","example":"Je te donne le livre (I give you the book) → Je te le donne (I give it to you). Tu me donnes ton numéro ? (Do you give me your number?) → Tu me le donnes ? (Do you give it to me?)","id":"c-common-expressions","term":"Common Expressions","definition":"Many fixed phrases use donner in French","example":"donner l'heure (tell the time), donner raison (agree with someone), donner rendez-vous (make an appointment)"]"
+- `concepts` "["id":"c-donner-to-give","term":"donner = to give","definition":"One of the most common verbs - used for gifts, help, information, objects","example":"Je donne un cadeau (I give a gift), Tu me donnes ton numéro? (Do you give me your number?)","id":"c-regular-er-conjugation","term":"Regular -ER Conjugation","definition":"Follows standard -ER pattern like parler, manger","example":"je donne, tu donnes, il donne, nous donnons, vous donnez, ils donnent","id":"c-direct-and-indirect-objects","term":"Direct and Indirect Objects","definition":"Give WHAT (direct) to WHOM (indirect) - donner quelque chose à quelqu'un","example":"Je donne le livre à Marie (I give the book to Marie) → Je lui donne le livre (I give it to her)","id":"c-common-expressions","term":"Common Expressions","definition":"Many fixed phrases use donner in French","example":"donner l'heure (tell the time), donner raison (agree with someone), donner rendez-vous (make an appointment)"]" → "["id":"c-donner-to-give","term":"donner = to give","definition":"The verb for giving things, money or help.","examples":["fr":"Elle donne de l'argent aux enfants.","en":"She gives money to the children.","fr":"Tu peux me donner ton numéro ?","en":"Can you give me your number?"],"id":"c-regular-er-conjugation","term":"The forms of donner","definition":"donner follows the -er pattern, like parler.","layout":"forms","examples":["fr":"je donne","en":"I give","fr":"tu donnes","en":"you give","fr":"il donne","en":"he gives","fr":"nous donnons","en":"we give","fr":"vous donnez","en":"you give","fr":"ils donnent","en":"they give"],"id":"c-direct-and-indirect-objects","term":"Giving something to someone","definition":"The thing comes straight after donner, and the person after à. As a pronoun, the person becomes lui and goes before the verb.","examples":["fr":"Je donne le livre à Marie.","en":"I give the book to Marie.","fr":"Je lui donne le livre.","en":"I give her the book."],"id":"c-two-pronouns","term":"Two pronouns: je te le donne","definition":"When the thing you give becomes a pronoun like le, it goes after the person. Both pronouns stay before the verb.","examples":["fr":"Je te donne le livre.","en":"I give you the book.","fr":"Je te le donne.","en":"I give it to you.","fr":"Tu me le donnes ?","en":"Will you give it to me?"],"id":"c-common-expressions","term":"Set phrases with donner","definition":"In some set phrases, donner turns into a different English verb.","examples":["fr":"Ils me donnent l'heure.","en":"They tell me the time.","fr":"Je te donne rendez-vous au café.","en":"Let's meet at the café.","fr":"Je te donne raison.","en":"I agree with you."]]"
 
 **2024-05-15-daily-actions-1**
 
-- `concepts[3].example` "Je vis à Paris, je travaille au centre-ville, et je dors bien (I live in Paris, work downtown, and sleep well)" → "Je vis à Paris, je travaille près d'ici, et je dors bien (I live in Paris, work near here, and sleep well)"
+- `concepts[0].term` "dormir = to sleep (rank 54)" → "dormir = to sleep"
+- `concepts[0].definition` "Regular -IR verb for sleeping - essential for daily routines" → "The singular forms drop the m: je dors, but nous dormons."
+- `concepts[0].examples` "(none)" → "["fr":"Je dors huit heures.","en":"I sleep eight hours.","fr":"Tu dors bien ?","en":"Do you sleep well?","fr":"Il dort.","en":"He's asleep."]"
+- `concepts[0].example` ""je dors (I sleep), je dors huit heures (I sleep 8 hours), tu dors bien? (do you sleep well?)"" → "(removed)"
+- `concepts[1].term` "travailler = to work (rank 55)" → "travailler = to work"
+- `concepts[1].definition` "Regular -ER verb for working - essential for adult life" → "An -er verb, like parler."
+- `concepts[1].examples` "(none)" → "["fr":"Je travaille à Paris.","en":"I work in Paris.","fr":"Où travaillez-vous ?","en":"Where do you work?","fr":"Je travaille dur.","en":"I work hard."]"
+- `concepts[1].example` ""je travaille (I work), je travaille à Paris (I work in Paris), où travaillez-vous? (where do you work?)"" → "(removed)"
+- `concepts[2].term` "vivre = to live (rank 56)" → "vivre = to live"
+- `concepts[2].definition` "Irregular verb for living/being alive - existential and location" → "vivre is to live in a place, and to live your life."
+- `concepts[2].examples` "(none)" → "["fr":"Je vis à Paris.","en":"I live in Paris.","fr":"Je vis ma vie.","en":"I'm living my life."]"
+- `concepts[2].example` ""je vis (I live), je vis à Paris (I live in Paris), vivre sa vie (to live one's life)"" → "(removed)"
+- `concepts[3].term` "Daily Life Integration" → "Your day in three verbs"
+- `concepts[3].definition` "These three verbs complete your ability to describe human existence" → "With these three verbs you can say where you live, where you work and how you sleep."
+- `concepts[3].examples` "(none)" → "["fr":"Je vis à Paris, je travaille près d'ici et je dors bien.","en":"I live in Paris, I work near here and I sleep well."]"
+- `concepts[3].example` ""Je vis à Paris, je travaille au centre-ville, et je dors bien (I live in Paris, work downtown, and sleep well)"" → "(removed)"
 
 **2024-02-13-search-and-find**
 
-- `concepts[0].example` "Je cherche mes clés (I'm looking for my keys), Tu cherches quoi? (What are you looking for?)" → "Je cherche mes clés (I'm looking for my keys), Tu cherches quoi? (What are you looking for?), C'est dur de trouver mes clés ! (It's hard to find my keys!)"
+- `concepts[0].term` "chercher = to look for / to search (rank 57)" → "chercher = to look for"
+- `concepts[0].definition` "Regular -ER verb for searching - used constantly in daily life" → "The verb for looking for something. Nothing goes between chercher and the thing."
+- `concepts[0].examples` "(none)" → "["fr":"Je cherche mes clés.","en":"I'm looking for my keys.","fr":"Tu cherches quoi ?","en":"What are you looking for?","fr":"Je cherche du travail.","en":"I'm looking for work."]"
+- `concepts[0].example` ""Je cherche mes clés (I'm looking for my keys), Tu cherches quoi? (What are you looking for?)"" → "(removed)"
+- `concepts[1].term` "trouver = to find (rank 58)" → "trouver = to find"
+- `concepts[1].definition` "Regular -ER verb for finding - the successful result of chercher!" → "The verb for finding what you looked for."
+- `concepts[1].examples` "(none)" → "["fr":"J'ai trouvé !","en":"I found it!","fr":"Tu as trouvé ton téléphone ?","en":"Did you find your phone?","fr":"Je ne peux pas le trouver.","en":"I can't find it."]"
+- `concepts[1].example` ""J'ai trouvé! (I found it!), Tu trouves ça comment? (What do you think of that?)"" → "(removed)"
+- `concepts[2].term` "The Perfect Sequence" → "Looking, then finding"
+- `concepts[2].definition` "These two verbs form a natural action sequence" → "chercher is the search and trouver is the result."
+- `concepts[2].examples` "(none)" → "["fr":"Qu'est-ce que tu cherches ?","en":"What are you looking for?","fr":"C'est dur de trouver mes clés !","en":"It's hard to find my keys!"]"
+- `concepts[2].example` ""Je cherche → Je trouve (I search → I find). The complete search-and-discovery process!"" → "(removed)"
+- `concepts[3].term` "Extended Meanings" → "trouver for an opinion"
+- `concepts[3].definition` "Both verbs have broader meanings beyond physical searching" → "je trouve que means I think that. tu trouves ça comment ? asks what someone thinks."
+- `concepts[3].examples` "(none)" → "["fr":"Je trouve que c'est bon.","en":"I think it's good.","fr":"Tu trouves ça comment ?","en":"What do you think of it?"]"
+- `concepts[3].example` ""chercher = try to do, trouver = think/consider (Je trouve que... = I think that...)"" → "(removed)"
+
+**2024-02-11-perception-verbs**
+
+- `concepts[0].term` "écouter = to listen (rank 65)" → "écouter = to listen to"
+- `concepts[0].definition` "Regular -ER verb for active listening - music, people, sounds" → "English listens to something. In French, nothing goes between écouter and the thing."
+- `concepts[0].examples` "(none)" → "["fr":"J'écoute de la musique.","en":"I'm listening to music.","fr":"Qu'est-ce que tu écoutes ?","en":"What are you listening to?","fr":"Tu écoutes le professeur.","en":"You listen to the teacher."]"
+- `concepts[0].example` ""J'écoute de la musique (I listen to music), Tu écoutes le professeur (You listen to the teacher)"" → "(removed)"
+- `concepts[1].term` "regarder = to watch / to look at (rank 66)" → "regarder = to watch, to look at"
+- `concepts[1].definition` "Regular -ER verb for visual attention - TV, people, things" → "Nothing goes between regarder and the thing either."
+- `concepts[1].examples` "(none)" → "["fr":"Je regarde la télé.","en":"I'm watching TV.","fr":"Il regarde par la fenêtre.","en":"He's looking out the window.","fr":"Qu'est-ce que tu regardes ?","en":"What are you watching?"]"
+- `concepts[1].example` ""Je regarde la télé (I watch TV), Il regarde par la fenêtre (He looks out the window)"" → "(removed)"
+- `concepts[2].term` "Beyond Commands" → "From commands to sentences"
+- `concepts[2].definition` "You know 'Écoute!' and 'Regarde!' - now learn full conjugations" → "You know Regarde ! and Écoute ! as commands. The same verbs work with every person."
+- `concepts[2].examples` "(none)" → "["fr":"Regarde !","en":"Look!","fr":"Je regarde souvent des films.","en":"I often watch movies.","fr":"Nous regardons un film.","en":"We're watching a movie."]"
+- `concepts[2].example` ""From commands to conversations: 'Regarde!' → 'Je regarde souvent des films' (I often watch movies)"" → "(removed)"
+- `concepts[3].term` "Perception Integration" → "Seeing, watching, listening"
+- `concepts[3].definition` "Complete your five senses with voir (see), écouter (hear), sentir (smell/feel)" → "voir is what your eyes take in. regarder is looking on purpose, and écouter is listening on purpose."
+- `concepts[3].examples` "(none)" → "["fr":"Je vois la maison.","en":"I see the house.","fr":"Je regarde la maison.","en":"I'm looking at the house.","fr":"J'écoute la musique.","en":"I'm listening to the music."]"
+- `concepts[3].example` ""Je vois (I see), j'écoute (I listen), je regarde (I look at) - complete visual and auditory perception"" → "(removed)"
 
 **2024-02-14-social-situations**
 
-- `concepts[0].example` "J'attends le bus (I'm waiting for the bus), Tu attends quelqu'un? (Are you waiting for someone?)" → "J'attends le bus (I'm waiting for the bus), Tu attends quelqu'un? (Are you waiting for someone?), J'attends Marie et j'écoute de la musique (I'm waiting for Marie and listening to music)"
+- `concepts[0].term` "attendre = to wait (rank 67)" → "attendre = to wait for"
+- `concepts[0].definition` "Regular -RE verb for waiting - essential for appointments and transport" → "Like chercher, attendre takes the person or thing straight after it, with no word for "for"."
+- `concepts[0].examples` "(none)" → "["fr":"J'attends le bus.","en":"I'm waiting for the bus.","fr":"Tu attends quelqu'un ?","en":"Are you waiting for someone?","fr":"J'attends Marie et j'écoute de la musique.","en":"I'm waiting for Marie and listening to music."]"
+- `concepts[0].example` ""J'attends le bus (I'm waiting for the bus), Tu attends quelqu'un? (Are you waiting for someone?)"" → "(removed)"
+- `concepts[1].term` "arriver = to arrive (rank 69)" → "arriver = to arrive"
+- `concepts[1].definition` "Regular -ER verb for arriving - completing journeys and meetings" → "Use à for the time or the place you arrive."
+- `concepts[1].examples` "(none)" → "["fr":"J'arrive à neuf heures.","en":"I arrive at nine.","fr":"Le train arrive.","en":"The train is coming in.","fr":"Quand tu arrives ?","en":"When do you get here?"]"
+- `concepts[1].example` ""J'arrive à 8h (I arrive at 8am), Le train arrive (The train is arriving)"" → "(removed)"
+- `concepts[2].term` "rester = to stay (rank 70)" → "rester = to stay"
+- `concepts[2].definition` "Regular -ER verb for staying - not leaving, remaining somewhere" → "The verb for staying where you are."
+- `concepts[2].examples` "(none)" → "["fr":"Je reste ici.","en":"I'm staying here.","fr":"Tu restes combien de temps ?","en":"How long are you staying?","fr":"Il reste du pain.","en":"There's some bread left.","note":"il reste also means there is some left"]"
+- `concepts[2].example` ""Je reste ici (I'm staying here), Tu restes combien de temps? (How long are you staying?)"" → "(removed)"
+- `concepts[3].term` "Social Coordination" → "Making plans"
+- `concepts[3].definition` "These three verbs enable complete social planning and coordination" → "With these three verbs you can plan a meeting."
+- `concepts[3].examples` "(none)" → "["fr":"J'attends Marie, elle arrive à sept heures et nous restons ensemble.","en":"I'm waiting for Marie, she arrives at seven and we're staying together."]"
+- `concepts[3].example` ""J'attends Marie, elle arrive à 7h, et nous restons ensemble (I'm waiting for Marie, she arrives at 7, and we stay together)"" → "(removed)"
 
 **2024-02-09-directions-navigation**
 
 - `vocabulary[9].note` "complete direction instruction" → "a full instruction, ready to say"
 - `vocabulary[10].note` "complete direction instruction" → "a full instruction, ready to say"
-- `concepts[3].example` "Allez tout droit, puis tournez à gauche (Go straight, then turn left)" → "Allez tout droit jusqu'à la gare, puis tournez à gauche (Go straight as far as the station, then turn left)"
+- `concepts[0].term` "Cardinal Directions" → "North, south, east, west"
+- `concepts[0].definition` "The four main compass directions in French" → "The four points of the compass."
+- `concepts[0].examples` "(none)" → "["fr":"le nord","en":"north","fr":"le sud","en":"south","fr":"l'est","en":"east","fr":"l'ouest","en":"west"]"
+- `concepts[0].example` ""le nord (north), le sud (south), l'est (east), l'ouest (west)"" → "(removed)"
+- `concepts[1].term` "Turn Directions" → "Turning"
+- `concepts[1].definition` "Essential for giving and following directions" → "Phrases for left, right and straight ahead."
+- `concepts[1].examples` "(none)" → "["fr":"Tournez à gauche.","en":"Turn left.","fr":"Tournez à droite.","en":"Turn right.","fr":"Allez tout droit.","en":"Go straight ahead."]"
+- `concepts[1].example` ""tournez à gauche (turn left), tournez à droite (turn right), tout droit (straight ahead)"" → "(removed)"
+- `concepts[2].term` "Location Descriptions" → "Where something is"
+- `concepts[2].definition` "Describe where things are relative to other things" → "These phrases place one thing beside, across from, near or far from another."
+- `concepts[2].examples` "(none)" → "["fr":"C'est à côté de la gare.","en":"It's next to the station.","fr":"C'est en face du café.","en":"It's across from the café.","fr":"C'est près d'ici.","en":"It's near here.","fr":"C'est loin d'ici ?","en":"Is it far from here?"]"
+- `concepts[2].example` ""à côté de (next to), en face de (across from), près de (near), loin de (far from)"" → "(removed)"
+- `concepts[3].term` "Giving Directions" → "Giving directions"
+- `concepts[3].definition` "Complete phrases for helping someone navigate" → "Put the steps in order with puis, which means then."
+- `concepts[3].examples` "(none)" → "["fr":"Allez tout droit jusqu'à la gare, puis tournez à gauche.","en":"Go straight as far as the station, then turn left.","fr":"C'est à cinq minutes à pied.","en":"It's five minutes on foot."]"
+- `concepts[3].example` ""Allez tout droit, puis tournez à gauche (Go straight, then turn left)"" → "(removed)"
+- `concepts[4].term` "Asking for Directions" → "Asking the way"
+- `concepts[4].definition` "How to ask for help when lost" → "Start with excusez-moi, then ask where the place is or how to get there."
+- `concepts[4].examples` "(none)" → "["fr":"Excusez-moi, où est la gare ?","en":"Excuse me, where is the station?","fr":"Excusez-moi, comment aller au musée ?","en":"Excuse me, how do I get to the museum?","fr":"C'est loin ?","en":"Is it far?"]"
+- `concepts[4].example` ""Excusez-moi, où est...? (Excuse me, where is...?), Comment aller à...? (How do you get to...?)"" → "(removed)"
 
 **2024-02-12-reading-11**
 
