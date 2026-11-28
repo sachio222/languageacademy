@@ -50,16 +50,36 @@
   ],
   "items": [
     {
-      "id": "i-je-veux-un-livre",
+      "id": "i-il-veut-ce-livre",
       "type": "gapfill",
-      "text": "Je ___ un livre.",
+      "text": "Il ___ ce livre.",
       "blanks": [
         {
-          "answer": "veux"
+          "answer": "veut"
         }
       ],
-      "gloss": "I want a book",
-      "hint": "{vouloir} for {je}"
+      "gloss": "He wants this book",
+      "hint": "{vouloir} for {il}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
+    },
+    {
+      "id": "i-elles-veulent-ce-livre",
+      "type": "gapfill",
+      "text": "Elles ___ ce livre.",
+      "blanks": [
+        {
+          "answer": "veulent"
+        }
+      ],
+      "gloss": "They want this book",
+      "hint": "{vouloir} for {elles}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     {
       "id": "i-tu-veux-un-chat",
@@ -71,31 +91,27 @@
         }
       ],
       "gloss": "Do you want a cat?",
-      "hint": "{vouloir} for {tu}"
+      "hint": "{vouloir} for {tu}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     {
-      "id": "i-il-veut-ce-livre",
+      "id": "i-ils-veulent-un-chat",
       "type": "gapfill",
-      "text": "Il ___ ce livre.",
+      "text": "Ils ___ un chat.",
       "blanks": [
         {
-          "answer": "veut"
+          "answer": "veulent"
         }
       ],
-      "gloss": "He wants this book",
-      "hint": "{vouloir} for {il}"
-    },
-    {
-      "id": "i-elle-veut-etre-une-amie",
-      "type": "gapfill",
-      "text": "Elle ___ être une amie.",
-      "blanks": [
-        {
-          "answer": "veut"
-        }
-      ],
-      "gloss": "She wants to be a friend",
-      "hint": "{vouloir} for {elle}"
+      "gloss": "They want a cat",
+      "hint": "{vouloir} for {ils}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     {
       "id": "i-nous-voulons-avoir-une-maison",
@@ -119,31 +135,35 @@
         }
       ],
       "gloss": "Do you want that?",
-      "hint": "{vouloir} for {vous}"
+      "hint": "{vouloir} for {vous}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     {
-      "id": "i-ils-veulent-un-chat",
+      "id": "i-je-veux-un-livre",
       "type": "gapfill",
-      "text": "Ils ___ un chat.",
+      "text": "Je ___ un livre.",
       "blanks": [
         {
-          "answer": "veulent"
+          "answer": "veux"
         }
       ],
-      "gloss": "They want a cat",
-      "hint": "{vouloir} for {ils}"
+      "gloss": "I want a book",
+      "hint": "{vouloir} for {je}"
     },
     {
-      "id": "i-elles-veulent-ce-livre",
+      "id": "i-elle-veut-etre-une-amie",
       "type": "gapfill",
-      "text": "Elles ___ ce livre.",
+      "text": "Elle ___ être une amie.",
       "blanks": [
         {
-          "answer": "veulent"
+          "answer": "veut"
         }
       ],
-      "gloss": "They want this book",
-      "hint": "{vouloir} for {elles}"
+      "gloss": "She wants to be a friend",
+      "hint": "{vouloir} for {elle}"
     },
     {
       "id": "i-je-veux-ca",

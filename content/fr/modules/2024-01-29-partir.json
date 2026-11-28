@@ -40,16 +40,32 @@
   ],
   "items": [
     {
-      "id": "i-je-pars-avec-elle",
+      "id": "i-il-part-en-normandie",
       "type": "gapfill",
-      "text": "Je ___ avec elle.",
+      "text": "Il ___ en Normandie.",
       "blanks": [
         {
-          "answer": "pars"
+          "answer": "part"
         }
       ],
-      "gloss": "I'm leaving with her",
-      "hint": "{partir} for {je}"
+      "gloss": "He's leaving for Normandy",
+      "hint": "{partir} for {il}"
+    },
+    {
+      "id": "i-elles-partent-avec-qui",
+      "type": "gapfill",
+      "text": "Elles ___ avec qui ?",
+      "blanks": [
+        {
+          "answer": "partent"
+        }
+      ],
+      "gloss": "Who are they leaving with?",
+      "hint": "{partir} for {elles}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     {
       "id": "i-tu-pars-avec-qui",
@@ -64,28 +80,16 @@
       "hint": "{partir} for {tu}"
     },
     {
-      "id": "i-il-part-en-normandie",
+      "id": "i-ils-partent-en-normandie",
       "type": "gapfill",
-      "text": "Il ___ en Normandie.",
+      "text": "Ils ___ en Normandie.",
       "blanks": [
         {
-          "answer": "part"
+          "answer": "partent"
         }
       ],
-      "gloss": "He's leaving for Normandy",
-      "hint": "{partir} for {il}"
-    },
-    {
-      "id": "i-elle-part-avec-toi",
-      "type": "gapfill",
-      "text": "Elle ___ avec toi ?",
-      "blanks": [
-        {
-          "answer": "part"
-        }
-      ],
-      "gloss": "Is she leaving with you?",
-      "hint": "{partir} for {elle}"
+      "gloss": "They're leaving for Normandy",
+      "hint": "{partir} for {ils}"
     },
     {
       "id": "i-nous-partons-avec-vous",
@@ -109,31 +113,35 @@
         }
       ],
       "gloss": "When are you leaving?",
-      "hint": "{partir} for {vous}"
+      "hint": "{partir} for {vous}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     {
-      "id": "i-ils-partent-en-normandie",
+      "id": "i-je-pars-avec-elle",
       "type": "gapfill",
-      "text": "Ils ___ en Normandie.",
+      "text": "Je ___ avec elle.",
       "blanks": [
         {
-          "answer": "partent"
+          "answer": "pars"
         }
       ],
-      "gloss": "They're leaving for Normandy",
-      "hint": "{partir} for {ils}"
+      "gloss": "I'm leaving with her",
+      "hint": "{partir} for {je}"
     },
     {
-      "id": "i-elles-partent-avec-qui",
+      "id": "i-elle-part-avec-toi",
       "type": "gapfill",
-      "text": "Elles ___ avec qui ?",
+      "text": "Elle ___ avec toi ?",
       "blanks": [
         {
-          "answer": "partent"
+          "answer": "part"
         }
       ],
-      "gloss": "Who are they leaving with?",
-      "hint": "{partir} for {elles}"
+      "gloss": "Is she leaving with you?",
+      "hint": "{partir} for {elle}"
     },
     {
       "id": "i-je-pars-avec-toi",

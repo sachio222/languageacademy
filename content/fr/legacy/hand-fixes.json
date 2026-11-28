@@ -243,7 +243,11 @@
         }
       ],
       "gloss": "They want this book",
-      "hint": "{vouloir} for {elles}"
+      "hint": "{vouloir} for {elles}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "items/i-il-veut": null,
     "items/i-il-veut-ce-livre": {
@@ -256,7 +260,11 @@
         }
       ],
       "gloss": "He wants this book",
-      "hint": "{vouloir} for {il}"
+      "hint": "{vouloir} for {il}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "items/i-ils-veulent": null,
     "items/i-ils-veulent-un-chat": {
@@ -269,7 +277,11 @@
         }
       ],
       "gloss": "They want a cat",
-      "hint": "{vouloir} for {ils}"
+      "hint": "{vouloir} for {ils}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "items/i-je-veux": null,
     "items/i-je-veux-un-livre": {
@@ -308,7 +320,11 @@
         }
       ],
       "gloss": "Do you want a cat?",
-      "hint": "{vouloir} for {tu}"
+      "hint": "{vouloir} for {tu}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "items/i-vous-voulez": null,
     "items/i-vous-voulez-ca": {
@@ -321,7 +337,11 @@
         }
       ],
       "gloss": "Do you want that?",
-      "hint": "{vouloir} for {vous}"
+      "hint": "{vouloir} for {vous}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "vocabulary/elle-veut-fr": null,
     "vocabulary/elles-veulent-fr": null,
@@ -1254,7 +1274,11 @@
         }
       ],
       "gloss": "Who are they leaving with?",
-      "hint": "{partir} for {elles}"
+      "hint": "{partir} for {elles}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "items/i-il-part": null,
     "items/i-il-part-avec-elle": {
@@ -1525,7 +1549,11 @@
         }
       ],
       "gloss": "When are you leaving?",
-      "hint": "{partir} for {vous}"
+      "hint": "{partir} for {vous}",
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
     },
     "vocabulary/elle-part-fr": null,
     "vocabulary/elles-partent-fr": null,
