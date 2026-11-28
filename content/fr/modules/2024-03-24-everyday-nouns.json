@@ -12,7 +12,6 @@
   ],
   "teaches": {
     "constructions": [
-      "fr:cx:chunk.quelque-chose",
       "fr:cx:chunk.tout-le-monde",
       "fr:cx:neg.ne-personne",
       "fr:cx:neg.de"
@@ -147,7 +146,8 @@
       "word_id": "quelque-chose-fr",
       "fr": "quelque chose",
       "gloss": "something",
-      "note": "masculine - je veux quelque chose (I want something)"
+      "note": "masculine - je veux quelque chose (I want something)",
+      "review": true
     },
     {
       "word_id": "la-carte-de-credit-fr",
@@ -171,7 +171,8 @@
       "word_id": "l-addition-fr",
       "fr": "l'addition",
       "gloss": "the bill/check",
-      "note": "feminine (addition) - at restaurants"
+      "note": "feminine (addition) - at restaurants",
+      "review": true
     },
     {
       "word_id": "le-tableau-fr",

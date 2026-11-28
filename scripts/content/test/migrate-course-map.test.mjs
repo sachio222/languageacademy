@@ -231,11 +231,17 @@ const TEACHING_ADDED_AFTER_SPLIT = {
   // décider de and commencer à in the past-tense composition lesson, content de + infinitive with the emotion phrases.
   '2024-06-03-past-tense-composition': { teaches: ['fr:cx:frame.verb-de-infinitive', 'fr:cx:frame.verb-a-infinitive'] },
   '2024-01-25-emotion-phrases': { teaches: ['fr:cx:frame.il-est-adjective-de-infinitive'] },
+  // vouloir-b, 2026-11-28: the vouloir lesson teaches the phrases that fill its frame (je voudrais, s'il te plaît,
+  // quelque chose), which Survival Phrases and Everyday Nouns taught before.
+  '2024-01-15-vouloir': { teaches: ['fr:cx:chunk.je-voudrais', 'fr:cx:chunk.sil-te-plait', 'fr:cx:chunk.quelque-chose'] },
 };
 // Teaching a writer moved to an earlier lesson after the split (content Task C4b): the ça lesson no longer teaches
 // c'est, which Basic Nouns now teaches. Each id was in what the split declared and is gone from the file.
 const TEACHING_MOVED_EARLIER_AFTER_SPLIT = {
   '2024-01-13-ca-survival': { teaches: ['fr:cx:cest'] },
+  // vouloir-b, 2026-11-28: these phrases are taught in the vouloir lesson now.
+  '2024-03-31-survival-phrases': { teaches: ['fr:cx:chunk.je-voudrais', 'fr:cx:chunk.sil-te-plait'] },
+  '2024-03-24-everyday-nouns': { teaches: ['fr:cx:chunk.quelque-chose'] },
 };
 function withoutMovedTeaching(key, field, expected) {
   const moved = TEACHING_MOVED_EARLIER_AFTER_SPLIT[key]?.[field];

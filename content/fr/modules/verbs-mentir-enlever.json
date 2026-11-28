@@ -10,8 +10,7 @@
       "fr:lex:casser",
       "fr:lex:enlever",
       "fr:lex:mentir",
-      "fr:lex:cacher",
-      "fr:lex:verre"
+      "fr:lex:cacher"
     ],
     "constructions": [],
     "source": "course-plan.json"

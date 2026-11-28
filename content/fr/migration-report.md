@@ -1,6 +1,6 @@
 # Converting today’s modules to module files
 
-`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2645 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
+`pnpm content:migrate` wrote 171 module files (124 lessons, 11 practice sets, 11 unit exams, 5 guides, 11 readings and 9 Reference pages) under `content/fr/modules/` from today’s modules in `src/lessons/modules/`, with 2651 items. Guides and readings also read prototype L’s guides and illustrated stories (`content/fr/legacy/l-sources.json`). 530 word ids are first minted in a reading’s vocabulary table, since a reading teaches its own table. The sections below list every guess the conversion made and every place where the written files differ from today’s source.
 
 This file is written again on every run. Fixes go in the module files, never here.
 
@@ -9,7 +9,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Unit | Bare `translate` | Framed `respond` |
 |---|---|---|
 | unit1 Essential Grammar | 35 | 48 |
-| unit2 Asking & Describing | 57 | 91 |
+| unit2 Asking & Describing | 57 | 85 |
 | unit3 Movement & Possession | 11 | 84 |
 | unit4 Everyday Words | 109 | 85 |
 | unit5 Time & Taste | 174 | 112 |
@@ -24,16 +24,16 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | Section | Lines |
 |---|---|
 | Guide checks written by hand | 1 |
-| Spellings taught more than once | 401 |
-| Item types to confirm | 231 |
+| Spellings taught more than once | 407 |
+| Item types to confirm | 225 |
 | Practice blanks that were in the wrong place | 51 |
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
-| English prompts written as respond items | 794 |
+| English prompts written as respond items | 788 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1561 |
-| Live ids with no converted item | 364 (49 real misses) |
+| Hand edits kept | 1568 |
+| Live ids with no converted item | 368 (53 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
 | Notes | 3 |
@@ -91,12 +91,16 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-03-31-survival-phrases**
 
+- `vocabulary[0]` "je voudrais": same meaning as "I would like" in 2024-01-15-vouloir: kept je-voudrais-fr (fixed by hand)
 - `vocabulary[1]` "s'il vous plaît": same meaning as "please" in 2024-01-01-famous-words: kept s-il-vous-plait-fr
-- `vocabulary[2]` "s'il te plaît": same meaning as "please (to a friend)" in 2024-01-15-vouloir: kept s-il-te-plait-fr
+- `vocabulary[2]` "s'il te plaît": same meaning as "please (to a friend)" in 2024-01-15-vouloir: kept s-il-te-plait-fr (fixed by hand)
+- `vocabulary[10]` "l'addition": same meaning as "the bill" in 2024-01-15-vouloir: kept l-addition-fr (fixed by hand)
 - `vocabulary[11]` "pardon": same meaning as "excuse me / sorry" in 2024-01-01-famous-words: kept pardon-fr
 
 **2024-04-01-time-adverbs**
 
+- `vocabulary[9]` "encore": new meaning "still": encore-fr.still; met before as "more; another" (encore-fr, 2024-01-15-vouloir) (written: encore-fr) (fixed by hand)
+- `vocabulary[11]` "maintenant": same meaning as "now" in 2024-01-15-vouloir: kept maintenant-fr (fixed by hand)
 - `vocabulary[12]` "aujourd'hui": same meaning as "today" in 2024-02-03-reading3: kept aujourd-hui-fr
 
 **2024-03-27-negation-2**
@@ -111,13 +115,14 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-03-24-everyday-nouns**
 
 - `vocabulary[7]` "la ville": same meaning as "the town / the city" in 2024-01-22-reading2: kept la-ville-fr
-- `vocabulary[22]` "l'addition": same meaning as "the bill/check" in 2024-03-31-survival-phrases: kept l-addition-fr
+- `vocabulary[18]` "quelque chose": same meaning as "something; anything" in 2024-01-15-vouloir: kept quelque-chose-fr (fixed by hand)
+- `vocabulary[22]` "l'addition": same meaning as "the bill" in 2024-01-15-vouloir: kept l-addition-fr (fixed by hand)
 
 **2024-03-30-reading-4**
 
 - `vocabulary[2]` "comment ça va": new meaning "how are you": comment-ca-va-fr.how-are-you; met before as "how's it going?" (comment-ca-va-fr, 2024-01-18-questions)
 - `vocabulary[4]` "je ne peux pas": same meaning as "I can't" in 2024-03-27-negation-2: kept je-ne-peux-pas-fr
-- `vocabulary[5]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr
+- `vocabulary[5]` "maintenant": same meaning as "now" in 2024-01-15-vouloir: kept maintenant-fr
 - `vocabulary[6]` "je dois": same meaning as "I must" in 2024-03-23-devoir: kept je-dois-fr
 - `vocabulary[7]` "le travail": same meaning as "work" in 2024-03-24-everyday-nouns: kept le-travail-fr
 - `vocabulary[8]` "aujourd'hui": same meaning as "today" in 2024-02-03-reading3: kept aujourd-hui-fr
@@ -147,7 +152,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 
 **2024-04-16-would-conditionals**
 
-- `vocabulary[0]` "je voudrais": same meaning as "I would like" in 2024-03-31-survival-phrases: kept je-voudrais-fr
+- `vocabulary[0]` "je voudrais": same meaning as "I would like" in 2024-01-15-vouloir: kept je-voudrais-fr
 - `vocabulary[3]` "nous voudrions": same meaning as "we would like" in 2024-03-30-reading-4: kept nous-voudrions-fr
 
 **2024-04-04-aimer**
@@ -157,6 +162,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 **2024-04-11-food-nouns**
 
 - `vocabulary[0]` "l'eau": same meaning as "water" in 2024-03-24-everyday-nouns: kept l-eau-fr
+- `vocabulary[3]` "le thé": le-the-fr already names "un thé", a different spelling: le-the-fr.tea (written: le-the-fr) (fixed by hand)
 - `vocabulary[8]` "le pain": same meaning as "bread" in 2024-03-24-everyday-nouns: kept le-pain-fr
 
 **2024-04-12-manger**
@@ -182,7 +188,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[26]` "parler": same meaning as "to speak / to talk" in 2024-03-29-parler: kept parler-fr (fixed by hand)
 - `vocabulary[35]` "mon ami": same meaning as "my friend" in 2024-03-30-reading-4: kept mon-ami-fr
 - `vocabulary[37]` "excusez-moi": same meaning as "excuse me" in 2024-03-31-survival-phrases: kept excusez-moi-fr (fixed by hand)
-- `vocabulary[38]` "encore": new meaning "more / again": encore-fr.more; met before as "still" (encore-fr, 2024-04-01-time-adverbs)
+- `vocabulary[38]` "encore": same meaning as "more; another" in 2024-01-15-vouloir: kept encore-fr (written: encore-fr.more)
 
 **2024-04-23-progressive-tenses**
 
@@ -217,7 +223,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[41]` "oui": same meaning as "yes" in 2024-01-01-famous-words: kept oui-fr
 - `vocabulary[45]` "trois": same meaning as "three" in 2026-11-24-numbers: kept trois-fr
 - `vocabulary[46]` "est-ce que": new meaning "question marker": est-ce-que-fr.question-marker; met before as "question maker" (est-ce-que-fr, 2024-01-18-questions)
-- `vocabulary[47]` "quelque chose": same meaning as "something" in 2024-03-24-everyday-nouns: kept quelque-chose-fr
+- `vocabulary[47]` "quelque chose": same meaning as "something; anything" in 2024-01-15-vouloir: kept quelque-chose-fr
 - `vocabulary[51]` "toujours": same meaning as "always" in 2024-04-01-time-adverbs: kept toujours-fr (fixed by hand)
 - `vocabulary[52]` "c'est vrai": same meaning as "that's true" in 2024-04-20-dire: kept c-est-vrai-fr
 - `vocabulary[53]` "voir": same meaning as "to see" in 2024-01-17-voir: kept voir-fr (fixed by hand)
@@ -226,7 +232,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[64]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
 - `vocabulary[65]` "tu parles": same meaning as "you speak (informal)" in 2024-03-29-parler: kept tu-parles-fr (fixed by hand)
 - `vocabulary[67]` "merci": same meaning as "thank you" in 2024-01-01-famous-words: kept merci-fr (fixed by hand)
-- `vocabulary[69]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr (fixed by hand)
+- `vocabulary[69]` "maintenant": same meaning as "now" in 2024-01-15-vouloir: kept maintenant-fr (fixed by hand)
 - `vocabulary[70]` "avoir": same meaning as "to have" in 2024-01-04-avoir: kept avoir-fr (fixed by hand)
 - `vocabulary[74]` "pour": same meaning as "for" in 2024-01-20-prepositions: kept pour-fr (fixed by hand)
 
@@ -309,7 +315,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[55]` "demander": same meaning as "to ask / to ask for" in 2024-04-19-demander: kept demander-fr (fixed by hand)
 - `vocabulary[60]` "bons": same meaning as "good (plural)" in 2024-01-09-reading1: kept bons-fr
 - `vocabulary[62]` "meilleures": same meaning as "better (plural)" in 2024-04-13-reading-5: kept meilleures-fr
-- `vocabulary[64]` "maintenant": same meaning as "now" in 2024-04-01-time-adverbs: kept maintenant-fr
+- `vocabulary[64]` "maintenant": same meaning as "now" in 2024-01-15-vouloir: kept maintenant-fr
 - `vocabulary[65]` "beaucoup": same meaning as "a lot / very much" in 2024-03-31-survival-phrases: kept beaucoup-fr
 - `vocabulary[75]` "déjà": same meaning as "already" in 2024-04-01-time-adverbs: kept deja-fr
 
@@ -375,7 +381,7 @@ Each line proposes whether a spelling taught again is the same meaning (same wor
 - `vocabulary[28]` "quelques": same meaning as "some/a few" in 2024-04-24-reading-6: kept quelques-fr
 - `vocabulary[31]` "café": same meaning as "coffee" in 2024-01-01-famous-words: kept cafe-fr
 - `vocabulary[39]` "contente": same meaning as "happy" in 2024-04-24-reading-6: kept contente-fr
-- `vocabulary[40]` "encore": same meaning as "more / again" in 2024-04-13-reading-5: kept encore-fr.more
+- `vocabulary[40]` "encore": same meaning as "more; another" in 2024-01-15-vouloir: kept encore-fr (written: encore-fr.more)
 - `vocabulary[42]` "voilà": new meaning "there is / that's": voila-fr.there-is; met before as "there it is / here you go" (voila-fr, 2024-01-01-famous-words); "there you go" (voila-fr.there-you-go, 2024-03-30-reading-4)
 - `vocabulary[43]` "votre": same meaning as "your (singular, formal)" in 2024-01-31-possessive-adjectives: kept votre-fr
 
@@ -675,15 +681,6 @@ The classifier had no clear rule for these items, so the type is its best guess.
 **2024-01-12-demonstratives**
 
 - `items[0]` i-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
-
-**2024-01-15-vouloir**
-
-- `items[8]` i-je-veux-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[9]` i-nous-voulons-ce-livre: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[10]` i-je-veux-etre-un: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[11]` i-je-veux-avoir-un: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[12]` i-elle-veut-avoir-une: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[13]` i-je-veux-ca-s: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-16-pouvoir**
 
@@ -1348,10 +1345,6 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 - 3 × framed by a context note: `items[3]`, `items[4]`, `items[8]`
 
-**2024-01-15-vouloir**
-
-- 6 × framed by its instruction: `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`
-
 **2024-01-16-pouvoir**
 
 - 16 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
@@ -1981,6 +1974,15 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-15-vouloir**
 
+- `title` "Essential Verb - vouloir (to want)" → "Asking for what you want (vouloir)"
+- `description` "Express what you want! Master desires through active recall and composition practice!" → "Say what you want, offer a friend a drink and ask politely in a café, a hotel or a station: Je voudrais un thé, s'il vous plaît."
+- `can_do[0]` "Express what you want (I want, you want, they want)" → "Ask a waiter, a clerk or a receptionist politely: Je voudrais une chambre, s'il vous plaît."
+- `can_do[1]` "Make polite requests and express desires" → "Offer a friend something: Tu veux encore un café ?"
+- `can_do[2]` "Say 'I want this book' or 'Do you want that?' in French" → "Say what you want to be or have: Je veux avoir un chat."
+- `vocabulary[0].note` "infinitive form" → "With friends and family, je veux is the everyday way to say what you want."
+- `vocabulary[0].example_fr` "(none)" → ""Je veux un café.""
+- `vocabulary[0].example_en` "(none)" → ""I want a coffee.""
+- `vocabulary[0].part_of_speech` "(none)" → ""verb""
 - `vocabulary/je-veux-fr` ""word_id":"je-veux-fr","fr":"je veux","gloss":"I want","note":"irregular form"" → "(removed)"
 - `vocabulary/tu-veux-fr` ""word_id":"tu-veux-fr","fr":"tu veux","gloss":"you want (informal)","note":"same as je!"" → "(removed)"
 - `vocabulary/il-veut-fr` ""word_id":"il-veut-fr","fr":"il veut","gloss":"he wants","note":"different ending"" → "(removed)"
@@ -1989,19 +1991,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary/vous-voulez-fr` ""word_id":"vous-voulez-fr","fr":"vous voulez","gloss":"you want (formal)","note":"formal/plural"" → "(removed)"
 - `vocabulary/ils-veulent-fr` ""word_id":"ils-veulent-fr","fr":"ils veulent","gloss":"they want (masc)","note":"irregular"" → "(removed)"
 - `vocabulary/elles-veulent-fr` ""word_id":"elles-veulent-fr","fr":"elles veulent","gloss":"they want (fem)","note":"same as ils"" → "(removed)"
-- `concepts[0].definition` "Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French." → "The verb for wanting a thing or wanting to do something. It is also how you ask for things politely."
-- `concepts[0].examples` "(none)" → "["fr":"Je veux ça.","en":"I want that.","fr":"Tu veux un chat ?","en":"Do you want a cat?","fr":"Nous voulons avoir une maison.","en":"We want to have a house.","fr":"Ça va ? Tu veux un café ?","en":"How are you? Do you want a coffee?"]"
-- `concepts[0].example` ""'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)"" → "(removed)"
-- `concepts[1].term` "Irregular Conjugation Pattern" → "Three stems"
-- `concepts[1].definition` "Notice the pattern: je/tu both use 'veux', then il/elle use 'veut', nous uses 'voulons', and ils/elles use 'veulent'!" → "The stem changes three times: once for the singular, once for we and you, and once for they."
-- `concepts[1].layout` "(none)" → ""forms""
-- `concepts[1].examples` "(none)" → "["fr":"je veux","en":"I want","fr":"tu veux","en":"you want","fr":"il veut","en":"he wants","fr":"nous voulons","en":"we want","fr":"vous voulez","en":"you want","fr":"ils veulent","en":"they want"]"
-- `concepts[1].example` ""je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent"" → "(removed)"
-- `concepts[2].term` "Composition Power" → "Wanting to do something"
-- `concepts[2].definition` "Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!" → "Put a second verb straight after vouloir to say what you want to do. The second verb does not change."
-- `concepts[2].examples` "(none)" → "["fr":"Je veux être un ami.","en":"I want to be a friend.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."]"
-- `concepts[2].example` ""je veux + ça, nous voulons + être, ils veulent + avoir + un livre"" → "(removed)"
+- `concepts` "["id":"c-vouloir-to-want","term":"vouloir = to want","definition":"Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French.","example":"'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)","id":"c-irregular-conjugation-pattern","term":"Irregular Conjugation Pattern","definition":"Notice the pattern: je/tu both use 'veux', then il/elle use 'veut', nous uses 'voulons', and ils/elles use 'veulent'!","example":"je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent","id":"c-composition-power","term":"Composition Power","definition":"Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!","example":"je veux + ça, nous voulons + être, ils veulent + avoir + un livre"]" → "["id":"c-vouloir-to-want","term":"vouloir = to want","definition":"Put a thing after vouloir to say what you want. Ask Tu veux…? to offer a friend something.","examples":["fr":"Je veux un café.","en":"I want a coffee.","fr":"Tu veux ça ?","en":"Do you want that?","fr":"Ça va ? Tu veux un café ?","en":"How are you? Do you want a coffee?","fr":"Non merci, je ne veux rien.","en":"No thanks, I don't want anything."],"id":"c-composition-power","term":"Wanting to do something","definition":"Put a second verb straight after vouloir to say what you want to do. The second verb does not change.","examples":["fr":"Je veux être heureux.","en":"I want to be happy.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."],"id":"c-irregular-conjugation-pattern","term":"Three stems","definition":"The stem changes three times: once for the singular, once for we and you, and once for they.","layout":"forms","examples":["fr":"je veux","en":"I want","fr":"tu veux","en":"you want","fr":"il veut","en":"he wants","fr":"nous voulons","en":"we want","fr":"vous voulez","en":"you want","fr":"ils veulent","en":"they want"],"id":"c-je-voudrais","term":"Je voudrais, the polite way to ask","definition":"Je voudrais means I would like. Use it with a waiter, a clerk or anyone you do not know, since je veux can sound blunt to them.","examples":["fr":"Je voudrais un café, s'il vous plaît.","en":"I'd like a coffee, please.","fr":"Bonjour, je voudrais ce livre.","en":"Hello, I'd like this book.","fr":"Je veux un café, s'il te plaît.","en":"I want a coffee, please.","note":"to a friend"]]"
 - `conjugation` "(none)" → ""verb":"vouloir","en":"to want","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.""
+- `phrases` "(none)" → "["phrase_id_suffix":"je-veux-un-the","fr":"Je veux un thé.","word_id":"vouloir-fr","phrase_id_suffix":"je-voudrais-un-billet","fr":"Je voudrais un billet, s'il vous plaît.","word_id":"je-voudrais-fr","phrase_id_suffix":"ils-veulent-quelque-chose","fr":"Ils veulent quelque chose.","word_id":"quelque-chose-fr","phrase_id_suffix":"tu-veux-un-verre","fr":"Tu veux un verre ?","word_id":"un-verre-fr","phrase_id_suffix":"encore-un-cafe","fr":"Tu veux encore un café ?","word_id":"encore-fr","phrase_id_suffix":"laddition-maintenant","fr":"Vous voulez l'addition maintenant ?","word_id":"maintenant-fr"]"
 
 **2024-01-16-pouvoir**
 
@@ -2354,6 +2346,12 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations." → "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
 
+**2024-03-31-survival-phrases**
+
+- `vocabulary[0].review` "(none)" → "true"
+- `vocabulary[2].review` "(none)" → "true"
+- `vocabulary[10].review` "(none)" → "true"
+
 **2024-03-29-parler**
 
 - `concepts[4].example` "je parle français (I speak French), nous parlons de toi (we talk about you)" → "je parle français maintenant (I speak French now), nous parlons de toi (we talk about you)"
@@ -2361,6 +2359,11 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 **2024-10-22-search-find**
 
 - `concepts[0].example` "je cherche mes clés (I'm looking for my keys), tu cherches quoi? (what are you looking for?)" → "je cherche mon livre (I'm looking for my book), tu cherches quoi? (what are you looking for?)"
+
+**2024-04-01-time-adverbs**
+
+- `vocabulary[9].review` "(none)" → "true"
+- `vocabulary[11].review` "(none)" → "true"
 
 **2024-03-27-negation-2**
 
@@ -2372,6 +2375,8 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-03-24-everyday-nouns**
 
+- `vocabulary[18].review` "(none)" → "true"
+- `vocabulary[22].review` "(none)" → "true"
 - `concepts` "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)"]" → "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)","id":"c-pas-de","term":"pas de: no, not any","definition":"After ne … pas, un, une, des, du, de la and de l' usually become de, or d' before a vowel. le, la and les stay as they are. After être they stay: ce n'est pas un livre.","example":"J'ai du pain. becomes Je n'ai pas de pain. (I don't have any bread.)"]"
 
 **2024-03-30-reading-4**
@@ -2393,6 +2398,10 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 4! Survival phrases, essential verbs, negation, and expressing time and place." → "Test everything from this unit! Survival phrases, essential verbs, negation, and expressing time and place."
 - `items[35].accept` "["là bas","la-bas","la bas"]" → "["la-bas"]"
+
+**2024-04-11-food-nouns**
+
+- `vocabulary[3].review` "(none)" → "true"
 
 **2024-04-12-manger**
 
@@ -3705,11 +3714,15 @@ The live app stores answers under these exercise ids and concept indexes, and no
 **2024-01-15-vouloir**
 
 - `2024-01-15-vouloir.1` exercise "I want" → "je veux"
-- `2024-01-15-vouloir.2` exercise "you want (informal)" → "tu veux"
 - `2024-01-15-vouloir.3` exercise "he wants" → "il veut"
 - `2024-01-15-vouloir.4` exercise "she wants" → "elle veut"
 - `2024-01-15-vouloir.7` exercise "they want (masculine)" → "ils veulent"
 - `2024-01-15-vouloir.8` exercise "they want (feminine)" → "elles veulent"
+- `2024-01-15-vouloir.9` exercise "I want that" → "je veux ça"
+- `2024-01-15-vouloir.10` exercise "We want this book" → "nous voulons ce livre"
+- `2024-01-15-vouloir.11` exercise "I want to be a friend" → "je veux être un ami"
+- `2024-01-15-vouloir.13` exercise "She wants to have a house" → "elle veut avoir une maison"
+- `2024-01-15-vouloir.14` exercise "I want this, please" → "je veux ça, s'il vous plaît"
 
 **2024-01-29-partir**
 

@@ -308,3 +308,22 @@ test('a conjugation written by hand has no source and survives a rerun', () => {
   const third = convertModule(old, { ...ctx, existing: second.mod, record: second.record });
   assert.deepEqual(third.mod.conjugation, edited.conjugation);
 });
+
+// Pronunciation phrases and a Speed Match list have no source in the live app either: a writer adds them to a converted
+// lesson, and a rerun keeps them, records them as hand fixes and writes them again with --force.
+test('phrases and a speed_match written by hand have no source and survive a rerun', () => {
+  const first = convertModule(old, ctx);
+  const edited = clone(first.mod);
+  const words = edited.vocabulary.map((w) => w.word_id);
+  edited.phrases = [{ phrase_id_suffix: 'je-suis-la', fr: 'Je suis là.', word_id: words[0] }];
+  edited.speed_match = words.slice(0, 1);
+  const second = convertModule(old, { ...ctx, existing: edited, record: first.record });
+  assert.deepEqual(second.mod.phrases, edited.phrases);
+  assert.deepEqual(second.mod.speed_match, edited.speed_match);
+  const third = convertModule(old, { ...ctx, existing: clone(second.mod), record: second.record });
+  assert.deepEqual(third.mod.phrases, edited.phrases);
+  assert.deepEqual(third.mod.speed_match, edited.speed_match);
+  const forced = convertModule(old, { ...ctx, existing: null, record: null, handFixes: second.handFixes, written: second.mod, idRecord: second.record });
+  assert.deepEqual(forced.mod.phrases, edited.phrases);
+  assert.deepEqual(forced.mod.speed_match, edited.speed_match);
+});

@@ -1043,7 +1043,6 @@
           "teaches": {
             "words": [
               "fr:lex:valise",
-              "fr:lex:billet",
               "fr:lex:fric"
             ],
             "constructions": [
@@ -1059,9 +1058,6 @@
           "carrier": "fr:cx:conditionnel-passe.avoir",
           "met_through": {
             "fr:lex:valise": [
-              "fr:cx:conditionnel-passe.avoir"
-            ],
-            "fr:lex:billet": [
               "fr:cx:conditionnel-passe.avoir"
             ],
             "fr:lex:fric": [
@@ -1200,7 +1196,6 @@
               "fr:lex:annuler",
               "fr:lex:lendemain",
               "fr:lex:bagage",
-              "fr:lex:chambre",
               "fr:lex:lit"
             ],
             "constructions": [
@@ -1226,10 +1221,6 @@
               "fr:lex:coucher"
             ],
             "fr:lex:bagage": [
-              "fr:cx:infinitive.past",
-              "fr:lex:coucher"
-            ],
-            "fr:lex:chambre": [
               "fr:cx:infinitive.past",
               "fr:lex:coucher"
             ],
@@ -1415,13 +1406,12 @@
               "fr:lex:casser",
               "fr:lex:enlever",
               "fr:lex:mentir",
-              "fr:lex:cacher",
-              "fr:lex:verre"
+              "fr:lex:cacher"
             ],
             "constructions": []
           },
           "minutes": 28,
-          "note": "verre moves here from Unit 16. mentir gets a table (mens, mentons, menti); enlever has the è change.",
+          "note": "verre is taught in Unit 2 (vouloir) and comes back here as review. mentir gets a table (mens, mentons, menti); enlever has the è change.",
           "carrier": "fr:lex:raconter",
           "met_through": {
             "fr:lex:raconter": [
@@ -1438,9 +1428,6 @@
             ],
             "fr:lex:cacher": [
               "fr:cx:frame.modal-infinitive"
-            ],
-            "fr:lex:verre": [
-              "fr:lex:raconter"
             ]
           }
         },
