@@ -1309,7 +1309,10 @@
     },
     "id": "fr:cx:chunk.je-voudrais",
     "label": "Fixed phrase: je voudrais (I would like), the polite request taught as a phrase before the conditionnel",
-    "needs": []
+    "needs": [],
+    "licenses": [
+      "fr:cx:conditionnel-present"
+    ]
   },
   {
     "cefr": "A2",

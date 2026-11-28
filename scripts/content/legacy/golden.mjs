@@ -819,16 +819,49 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
       return !!s && holds(d.module_key, `sections/${s.id}`, s) && shownCard([{ id: s.id, term: s.heading, definition: s.text }], d.concept);
     }
     if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts) && (!isObj(d.concept) || shownCard(m.concepts, d.concept));
-    // An added exercise: the item it is drawn from was added by hand and is recorded.
-    if (/^exercises\[\+\d+\]$/.test(d.path) && d.live === undefined && isObj(d.converted))
-      return addedItem(d.module_key, m.items?.[d.converted.displayNumber - 1]);
+    // A lesson rebuilt by hand removes and moves live exercises. The migration record names the live exercise each item
+    // came from (items/<id>.ref = exerciseConfig.items[k], live number k + 1). A removal is recorded as items/<id> null
+    // with the item gone from the module; a moved live item holds its own recorded fix.
+    const recs = records[d.module_key]?.items ?? {};
+    const liveMap = liveIds[d.module_key]?.items ?? {};
+    const itemOfLive = (n) => liveMap[`${d.module_key}.${n}`] ?? Object.keys(recs).find((id) => recs[id]?.ref === `exerciseConfig.items[${n - 1}]`);
+    const liveNo = (id) => {
+      const k = Object.keys(liveMap).find((x) => liveMap[x] === id);
+      if (k) return +k.slice(k.lastIndexOf('.') + 1);
+      const r = /^exerciseConfig\.items\[(\d+)\]$/.exec(recs[id]?.ref ?? '');
+      return r ? +r[1] + 1 : null;
+    };
+    const removedItem = (id) => !!id && handFixes[d.module_key]?.[`items/${id}`] === null && !!handFixed.get(d.module_key)?.has(`items/${id}`) && !(m.items || []).some((x) => x.id === id);
+    // A live item moved by hand: recorded, and standing away from its live number (an item in its own live place that
+    // the compare calls added is no move).
+    const at = (it) => (m.items || []).indexOf(it) + 1;
+    const placedByHand = (it) => !!it && liveNo(it.id) !== null && liveNo(it.id) !== at(it) && holds(d.module_key, `items/${it.id}`, it);
+    // A live exercise lost from its place: its item is a recorded removal, or was moved by hand and stands elsewhere.
+    if (/^exercises\[\d+\]$/.test(d.path) && isObj(d.live) && d.converted === undefined && Number.isInteger(d.live.displayNumber))
+      { const id = itemOfLive(d.live.displayNumber); return removedItem(id) || placedByHand((m.items || []).find((x) => x.id === id)); }
+    // An added exercise: the item it is drawn from was added by hand and is recorded, or is a live item moved by hand.
+    if (/^exercises\[\+\d+\]$/.test(d.path) && d.live === undefined && isObj(d.converted)) {
+      const it = m.items?.[d.converted.displayNumber - 1];
+      return addedItem(d.module_key, it) || placedByHand(it);
+    }
     // A live exercise numbered later because recorded added items now come before it: the same exercise (its live id),
-    // moved by exactly that many.
+    // moved by exactly that many. In a rebuilt lesson, every exercise before it on either side is accounted for: a live
+    // one stands before it still, was removed or was moved by hand; a converted one is live, added or moved by hand.
     if (/^exercises\[\d+\]\.displayNumber$/.test(d.path) && d.exercise?.live && d.exercise?.converted) {
       const { live, converted } = d.exercise;
-      if (live.id !== converted.id || !Number.isInteger(live.displayNumber) || !Number.isInteger(converted.displayNumber)) return false;
-      const before = (m.items ?? []).slice(0, converted.displayNumber - 1).filter((it) => addedItem(d.module_key, it)).length;
-      return before > 0 && converted.displayNumber - live.displayNumber === before;
+      if (!Number.isInteger(live.displayNumber) || !Number.isInteger(converted.displayNumber)) return false;
+      // Paired only by their words: a live exercise recorded as removed beside a new item added by hand with the same text.
+      if (removedItem(itemOfLive(live.displayNumber)) && addedItem(d.module_key, m.items?.[converted.displayNumber - 1])) return true;
+      if (live.id !== converted.id) return false;
+      const convBefore = (m.items ?? []).slice(0, converted.displayNumber - 1);
+      const before = convBefore.filter((it) => addedItem(d.module_key, it)).length;
+      if (before > 0 && converted.displayNumber - live.displayNumber === before) return true;
+      const liveBefore = Array.from({ length: live.displayNumber - 1 }, (_, k) => itemOfLive(k + 1));
+      if (liveBefore.some((id) => !id)) return false;
+      const changed = liveBefore.some((id) => !convBefore.some((it) => it.id === id)) || convBefore.some((it) => !liveBefore.includes(it.id));
+      return changed
+        && liveBefore.every((id) => convBefore.some((it) => it.id === id) || removedItem(id) || placedByHand((m.items || []).find((x) => x.id === id)))
+        && convBefore.every((it) => liveBefore.includes(it.id) || addedItem(d.module_key, it) || placedByHand(it));
     }
     if ((p = /^vocabularyReference\[\+?(\d+)\]/.exec(d.path))) {
       // An added card's row carries the card itself (compareLesson attaches the tables to paired rows only).
@@ -848,7 +881,7 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
       // vocabulary/<word_id> null. The difference passes when every live card the module no longer has is a recorded
       // removal and the rest stand in their live order, so a removal explains its own place and the shift after it, and
       // nothing else.
-      if (Array.isArray(d.cards?.live) && Array.isArray(d.cards?.converted) && d.cards.live.length > d.cards.converted.length) {
+      if (Array.isArray(d.cards?.live) && Array.isArray(d.cards?.converted)) {
         const idOf = (card) => {
           const key = `${normText(card?.french)}|${normText(card?.english)}`;
           const ids = (records[d.module_key]?.vocabulary ?? []).filter((r) => r.key === key).map((r) => r.word_id);

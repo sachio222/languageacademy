@@ -615,8 +615,8 @@ test('the verb step is built from the graph: a lesson names its verb, and each f
   assert.deepEqual(body.groups.map((g) => g.id), ['veu', 'veul', 'voulez', 'voulons']);
   // Every form has a sentence of the lesson with the form taken out, and its English.
   for (const r of body.rows) assert.ok(r.sentences.length >= 1, `${r.person} has a sentence`);
-  assert.deepEqual(body.rows[3].sentences[0], { fr: 'Vous ___ ça ?', en: 'Do you want that?', answer: 'voulez' });
-  assert.ok(body.rows[4].sentences.some((x) => /^Elles ___/.test(x.fr)) && body.rows[4].sentences.some((x) => /^Ils ___/.test(x.fr)));
+  assert.deepEqual(body.rows[3].sentences[0], { fr: 'Vous ___ la carte ?', en: 'Would you like the menu?', answer: 'voulez' });
+  assert.ok(body.rows[4].sentences.some((x) => /(^|\s)Elles ___/.test(x.fr)) && body.rows[4].sentences.some((x) => /(^|\s)Ils ___/.test(x.fr)));
   assert.deepEqual(body.contrast, {
     same: false, one: 'il veut', many: 'ils veulent',
     listen: '{veut} ends on a vowel sound. {veulent} ends with an l sound. The -ent itself is never said.', liaison: null,
@@ -630,7 +630,7 @@ test('a lesson whose verb form has no sentence does not load', () => {
   const { files } = writtenContent();
   const f = files.find((x) => x.file.endsWith('/2024-01-15-vouloir.json'));
   const json = JSON.parse(f.text);
-  json.items = json.items.filter((i) => i.id !== 'i-vous-voulez-ca');
+  json.items = json.items.filter((i) => !['i-vous-voulez-la-carte', 'i-laddition-maintenant'].includes(i.id));
   assert.throws(
     () => loadCourse({ replace: new Map([[f.file, JSON.stringify(json)]]), planned: false }),
     (e) => e.problems.some((p) => p.code === 'conjugation_row_no_sentence' && p.path === 'conjugation.rows[3]'),

@@ -78,17 +78,28 @@
       "definition": "The verb for what someone can do: ability, chance and permission. It is one of the verbs French uses most.",
       "examples": [
         {
-          "fr": "Je peux avoir ça, s'il vous plaît ?",
-          "en": "Can I have that, please?"
+          "fr": "Je peux avoir l'addition, s'il vous plaît ?",
+          "en": "Can I have the bill, please?"
         },
         {
-          "fr": "Je peux avoir ça, s'il te plaît ?",
-          "en": "Can I have that, please?",
-          "note": "to a friend"
+          "fr": "Nous pouvons avoir la carte, s'il vous plaît ?",
+          "en": "Can we have the menu, please?"
         },
         {
-          "fr": "Tu peux ?",
-          "en": "Can you?"
+          "fr": "Je peux avoir une chambre, s'il vous plaît ?",
+          "en": "Can I have a room, please?"
+        },
+        {
+          "fr": "Je peux avoir encore un thé ?",
+          "en": "Can I have another tea?"
+        },
+        {
+          "fr": "Je peux avoir un verre ?",
+          "en": "Can I have a glass?"
+        },
+        {
+          "fr": "Vous pouvez avoir un billet maintenant.",
+          "en": "You can get a ticket now."
         }
       ]
     },

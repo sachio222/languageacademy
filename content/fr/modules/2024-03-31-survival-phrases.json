@@ -13,9 +13,7 @@
   "teaches": {
     "constructions": [
       "fr:cx:chunk.sil-vous-plait",
-      "fr:cx:chunk.sil-te-plait",
-      "fr:cx:chunk.excusez-moi",
-      "fr:cx:chunk.je-voudrais"
+      "fr:cx:chunk.excusez-moi"
     ]
   },
   "vocabulary": [
@@ -23,7 +21,8 @@
       "word_id": "je-voudrais-fr",
       "fr": "je voudrais",
       "gloss": "I would like",
-      "note": "polite form!"
+      "note": "polite form!",
+      "review": true
     },
     {
       "word_id": "s-il-vous-plait-fr",
@@ -35,7 +34,8 @@
       "word_id": "s-il-te-plait-fr",
       "fr": "s'il te plaît",
       "gloss": "please",
-      "note": "informal politeness"
+      "note": "informal politeness",
+      "review": true
     },
     {
       "word_id": "excusez-moi-fr",
@@ -83,7 +83,8 @@
       "word_id": "l-addition-fr",
       "fr": "l'addition",
       "gloss": "the bill/check",
-      "note": "at restaurants"
+      "note": "at restaurants",
+      "review": true
     },
     {
       "word_id": "pardon-fr",

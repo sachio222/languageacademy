@@ -6,8 +6,7 @@
   "title": "Something broken ({casser}, {enlever}, {mentir}, {raconter})",
   "plan": {
     "words": [
-      "fr:lex:raconter",
-      "fr:lex:verre"
+      "fr:lex:raconter"
     ],
     "constructions": [],
     "source": "course-plan.json"

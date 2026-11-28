@@ -180,6 +180,16 @@ function run(ctx) {
   const done = results.get(ctx);
   if (done) return done;
   const { graph, timeline, index } = ctx;
+  // A pattern inside a taught fixed phrase that lists it (je voudrais licenses the conditional, before the conditional
+  // is taught): passes where every match of the pattern in the text lies within a match of the phrase.
+  const cxById = new Map((graph.constructions ?? []).map((c) => [c.id, c]));
+  const licensedInside = (id, a, position) => {
+    const own = (a.licenses ?? []).filter((l) => l.heads.has(id) && timeline.isAvailable(l.id, position));
+    const c = cxById.get(id);
+    if (!own.length || !c?.detect) return false;
+    const spans = matchSpans(a.tokens, a.readings, c.detect, graph.names);
+    return spans.length > 0 && spans.every((span) => [...span].every((k) => own.some((l) => l.at.has(k))));
+  };
   const lang = languageOf(graph);
   const { tokenize, lookupKey, strictKey } = lang;
   const analysis = analyzeItems(ctx);
@@ -361,6 +371,7 @@ function run(ctx) {
             }));
           }
           if (seenCx.has(id) || ignore.has(id) || timeline.isAvailable(id, m.position)) continue;
+          if (licensedInside(id, a, m.position)) continue;
           if (recognize.has(id) && !readOnlyMatch(id, a, typedAt)) continue;
           seenCx.add(id);
           const later = laterNote(id, m.position);

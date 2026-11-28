@@ -38,7 +38,8 @@
       "word_id": "le-the-fr",
       "fr": "le thé",
       "gloss": "tea",
-      "note": "masculine"
+      "note": "masculine",
+      "review": true
     },
     {
       "word_id": "le-lait-fr",

@@ -257,18 +257,13 @@
   },
   "2024-01-15-vouloir": {
     "items": {
-      "2024-01-15-vouloir.5": "i-nous-voulons-avoir-une-maison",
-      "2024-01-15-vouloir.6": "i-vous-voulez-ca",
-      "2024-01-15-vouloir.9": "i-je-veux-ca",
-      "2024-01-15-vouloir.10": "i-nous-voulons-ce-livre",
-      "2024-01-15-vouloir.11": "i-je-veux-etre-un",
-      "2024-01-15-vouloir.12": "i-je-veux-avoir-un",
-      "2024-01-15-vouloir.13": "i-elle-veut-avoir-une",
-      "2024-01-15-vouloir.14": "i-je-veux-ca-s"
+      "2024-01-15-vouloir.1": "i-je-veux-un-cafe-maintenant",
+      "2024-01-15-vouloir.5": "i-nous-voulons-une-chambre",
+      "2024-01-15-vouloir.6": "i-vous-voulez-la-carte",
+      "2024-01-15-vouloir.12": "i-je-veux-avoir-un-chat"
     },
     "concepts": {
       "0": "c-vouloir-to-want",
-      "1": "c-irregular-conjugation-pattern",
       "2": "c-composition-power"
     }
   },

@@ -468,3 +468,35 @@ test('vocabulary cards removed by hand pass once content:migrate records them, a
   const half = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), [`vocabulary/${gone[0].word_id}`]: null } };
   assert.ok(run(null, { modules: { [TARGET]: mod }, handFixes: half }).unexplained.length > 0);
 });
+
+// A rebuilt lesson can remove live cards and add more cards than it removed (vouloir's person forms gave way to the
+// words that fill its frame), so the lesson ends up longer than the live one. Both are recorded, and both pass.
+test('cards removed by hand pass beside more cards added by hand, once both are recorded', () => {
+  const mod = structuredClone(course.modules.get(TARGET));
+  const gone = mod.vocabulary.slice(0, 1);
+  const added = ['un', 'deux', 'trois'].map((n) => ({ word_id: `added-by-hand-${n}-fr`, fr: `bonjour ${n}`, gloss: `hello ${n}` }));
+  mod.vocabulary = [...mod.vocabulary.slice(1), ...added];
+  const removals = Object.fromEntries(gone.map((w) => [`vocabulary/${w.word_id}`, null]));
+  const additions = Object.fromEntries(added.map((w) => [`vocabulary/${w.word_id}`, w]));
+  const ofTarget = (r) => r.unexplained.filter((d) => d.module_key === TARGET).map(describe);
+  const both = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), ...removals, ...additions } };
+  assert.deepEqual(ofTarget(run(null, { modules: { [TARGET]: mod }, handFixes: both })), []);
+  // The removal unrecorded: the lost card stays unexplained, whatever was added.
+  const addedOnly = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), ...additions } };
+  assert.ok(ofTarget(run(null, { modules: { [TARGET]: mod }, handFixes: addedOnly })).length > 0);
+});
+
+// A rebuilt lesson can remove live exercises and move a live one later (vouloir's frame lesson). Each is recorded:
+// a removed item as items/<id> null, a moved item as its own items/<id> fix. The exercises then pass, and the live ones
+// numbered later by the move pass too. An unrecorded removal is still caught.
+test('exercises removed and moved by hand pass once recorded, and an unrecorded removal still fails', () => {
+  const mod = structuredClone(course.modules.get(TARGET));
+  const [gone, moved] = mod.items.slice(0, 2);
+  mod.items = [...mod.items.slice(2), moved];
+  const { steps, ...plainMoved } = moved;
+  const ofTarget = (r) => r.unexplained.filter((d) => d.module_key === TARGET).map(describe);
+  const recorded = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), [`items/${gone.id}`]: null, [`items/${moved.id}`]: plainMoved } };
+  assert.deepEqual(ofTarget(run(null, { modules: { [TARGET]: mod }, handFixes: recorded })), []);
+  const moveOnly = { ...handFixes, [TARGET]: { ...(handFixes[TARGET] || {}), [`items/${moved.id}`]: plainMoved } };
+  assert.ok(ofTarget(run(null, { modules: { [TARGET]: mod }, handFixes: moveOnly })).length > 0);
+});

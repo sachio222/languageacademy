@@ -465,6 +465,34 @@ test('a taught construction licenses the words it lists only inside its own matc
   ]);
 });
 
+// A fixed phrase taught before its grammar (je voudrais, before the conditional) licenses the pattern it lists inside
+// its own match: once the phrase is taught, "je voudrais" is no untaught conditional, and any other conditional is.
+test('a taught fixed phrase licenses the patterns it lists only inside its own match', () => {
+  const cond = {
+    id: 'fr:cx:test.cond', label: 'a conditional', needs: [], contrastsWith: [], cefr: null,
+    detect: [{ surface: 'voudrais|voudrait' }], examples: { match: ['Tu voudrais un café ?'], noMatch: ['Tu veux un café ?'] },
+  };
+  const chunk = {
+    id: 'fr:cx:test.je-voudrais', label: 'Fixed phrase: je voudrais', needs: [], contrastsWith: [], cefr: null,
+    detect: [{ surface: 'je' }, { surface: 'voudrais' }], licenses: ['fr:cx:test.cond'],
+    examples: { match: ['Je voudrais un café.'], noMatch: ['Tu voudrais un café ?'] },
+  };
+  const graph = { ...base, constructions: [...base.constructions, cond, chunk] };
+  const course = [
+    mod(1, [item([], { shown: ['Je voudrais un café.'] })]),
+    mod(2, [item([], { shown: ['Je voudrais un café.'] }), item([], { shown: ['Il voudrait un café.'] })]),
+  ];
+  const ctx = makeCtx({ graph: { ...graph, courseMap: { m2: { teachesConstructions: ['fr:cx:test.je-voudrais'] } } }, course });
+  const hits = ruleTaughtBefore(ctx).filter((i) => i.rule === 'untaught-construction' && i.nodeId.startsWith('fr:cx:test.')).map((i) => [i.itemRef, i.nodeId]);
+  assert.deepEqual(hits, [
+    // before the phrase is taught, both the phrase and the conditional in it are untaught
+    ['m1#1', 'fr:cx:test.cond'],
+    ['m1#1', 'fr:cx:test.je-voudrais'],
+    // once it is taught, its own conditional passes and a conditional outside it does not
+    ['m2#2', 'fr:cx:test.cond'],
+  ]);
+});
+
 // A recognition-only construction (use: 'recognize', such as the passé simple) is reported where the learner reads or
 // hears its literary form before it is taught, never where the learner types that form: not in a typed answer, and not
 // in a gap-fill whose blank is the form. A blank elsewhere in the match (the subject il) leaves the form read. Where the

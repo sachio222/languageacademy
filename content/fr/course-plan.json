@@ -894,7 +894,6 @@
           "teaches": {
             "words": [
               "fr:lex:valise",
-              "fr:lex:billet",
               "fr:lex:fric"
             ],
             "constructions": [
@@ -910,9 +909,6 @@
           "carrier": "fr:cx:conditionnel-passe.avoir",
           "met_through": {
             "fr:lex:valise": [
-              "fr:cx:conditionnel-passe.avoir"
-            ],
-            "fr:lex:billet": [
               "fr:cx:conditionnel-passe.avoir"
             ],
             "fr:lex:fric": [
@@ -1169,8 +1165,7 @@
           "situation": "Opens with a crash in the hotel breakfast room; closes with Noé telling the truth and helping pick up the pieces.",
           "teaches": {
             "words": [
-              "fr:lex:raconter",
-              "fr:lex:verre"
+              "fr:lex:raconter"
             ],
             "constructions": []
           },
@@ -1180,9 +1175,6 @@
           "met_through": {
             "fr:lex:raconter": [
               "fr:cx:frame.modal-infinitive"
-            ],
-            "fr:lex:verre": [
-              "fr:lex:raconter"
             ]
           }
         },
@@ -10226,74 +10218,6 @@
           "fr:cx:pronoun.on"
         ],
         "from": "re-verbs-like-attendre"
-      }
-    ],
-    "2024-01-15-vouloir": [
-      {
-        "id": "fr:lex:the",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ]
-      },
-      {
-        "id": "fr:lex:verre",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ],
-        "from": "verbs-mentir-enlever"
-      },
-      {
-        "id": "fr:lex:addition",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ]
-      },
-      {
-        "id": "fr:lex:carte",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ]
-      },
-      {
-        "id": "fr:lex:encore",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ]
-      },
-      {
-        "id": "fr:lex:maintenant",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ]
-      },
-      {
-        "id": "fr:lex:quelque",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ]
-      },
-      {
-        "id": "fr:lex:billet",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ],
-        "from": "past-conditional-with-avoir"
-      },
-      {
-        "id": "fr:lex:chambre",
-        "carrier": "fr:lex:vouloir",
-        "met_through": [
-          "fr:lex:vouloir"
-        ],
-        "from": "after-doing"
       }
     ],
     "2024-01-16-pouvoir": [

@@ -923,59 +923,32 @@
     ]
   },
   "2024-01-15-vouloir": {
+    "can_do": [
+      "Ask a waiter, a clerk or a receptionist politely: {Je voudrais une chambre, s'il vous plaît.}",
+      "Offer a friend something: {Tu veux encore un café ?}",
+      "Say what you want to be or have: {Je veux avoir un chat.}"
+    ],
     "concepts": [
       {
         "id": "c-vouloir-to-want",
         "term": "{vouloir} = to want",
-        "definition": "The verb for wanting a thing or wanting to do something. It is also how you ask for things politely.",
+        "definition": "Put a thing after {vouloir} to say what you want. Ask {Tu veux…?} to offer a friend something.",
         "examples": [
           {
-            "fr": "Je veux ça.",
-            "en": "I want that."
+            "fr": "Je veux un café.",
+            "en": "I want a coffee."
           },
           {
-            "fr": "Tu veux un chat ?",
-            "en": "Do you want a cat?"
-          },
-          {
-            "fr": "Nous voulons avoir une maison.",
-            "en": "We want to have a house."
+            "fr": "Tu veux ça ?",
+            "en": "Do you want that?"
           },
           {
             "fr": "Ça va ? Tu veux un café ?",
             "en": "How are you? Do you want a coffee?"
-          }
-        ]
-      },
-      {
-        "id": "c-irregular-conjugation-pattern",
-        "term": "Three stems",
-        "definition": "The stem changes three times: once for the singular, once for we and you, and once for they.",
-        "layout": "forms",
-        "examples": [
-          {
-            "fr": "je veux",
-            "en": "I want"
           },
           {
-            "fr": "tu veux",
-            "en": "you want"
-          },
-          {
-            "fr": "il veut",
-            "en": "he wants"
-          },
-          {
-            "fr": "nous voulons",
-            "en": "we want"
-          },
-          {
-            "fr": "vous voulez",
-            "en": "you want"
-          },
-          {
-            "fr": "ils veulent",
-            "en": "they want"
+            "fr": "Non merci, je ne veux rien.",
+            "en": "No thanks, I don't want anything."
           }
         ]
       },
@@ -997,6 +970,26 @@
             "en": "She wants to have a house."
           }
         ]
+      },
+      {
+        "id": "c-je-voudrais",
+        "term": "{Je voudrais}, the polite way to ask",
+        "definition": "{Je voudrais} means I would like. Use it with a waiter, a clerk or anyone you do not know, since {je veux} can sound blunt to them.",
+        "examples": [
+          {
+            "fr": "Je voudrais un café, s'il vous plaît.",
+            "en": "I'd like a coffee, please."
+          },
+          {
+            "fr": "Bonjour, je voudrais ce livre.",
+            "en": "Hello, I'd like this book."
+          },
+          {
+            "fr": "Je veux un café, s'il te plaît.",
+            "en": "I want a coffee, please.",
+            "note": "to a friend"
+          }
+        ]
       }
     ],
     "conjugation": {
@@ -1004,142 +997,595 @@
       "en": "to want",
       "note": "{vouloir} has three stems and four spoken forms. {veux}, {veut} and {veulent} change the stem; {voulons} and {voulez} keep the stem of {vouloir}."
     },
+    "description": "Say what you want, offer a friend a drink and ask politely in a café, a hotel or a station: {Je voudrais un thé, s'il vous plaît.}",
+    "items/i-ca-va-tu-veux-un-verre": {
+      "id": "i-ca-va-tu-veux-un-verre",
+      "type": "respond",
+      "situation": "Thomas meets Sophie at a café in Caen. As Sophie, greet him, ask how he is and offer him a drink.",
+      "answer": "salut ! ça va ? tu veux un verre ?",
+      "accept": [
+        "ça va ? tu veux un verre ?",
+        "bonjour ! ça va ? tu veux un verre ?",
+        "salut ! ça va ? tu veux quelque chose ?",
+        "ça va ? tu veux quelque chose ?",
+        "bonjour ! ça va ? tu veux quelque chose ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "salut ! ça va ? vous voulez un verre ?",
+          "feedback": "{vous} is for a stranger or for more than one person. Thomas is a friend: {tu veux}."
+        },
+        {
+          "answer": "salut ! ça va ? tu veut un verre ?",
+          "feedback": "With {tu}, the form is {veux}, with an x."
+        }
+      ],
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
+    },
     "items/i-elle-veut": null,
-    "items/i-elle-veut-etre-une-amie": {
-      "id": "i-elle-veut-etre-une-amie",
+    "items/i-elle-veut-avoir-une": null,
+    "items/i-elle-veut-avoir-une-voiture": {
+      "id": "i-elle-veut-avoir-une-voiture",
       "type": "gapfill",
-      "text": "Elle ___ être une amie.",
+      "text": "Sophie a vingt ans et elle ___ avoir une voiture.",
       "blanks": [
         {
           "answer": "veut"
         }
       ],
-      "gloss": "She wants to be a friend",
-      "hint": "{vouloir} for {elle}"
+      "gloss": "Sophie is twenty and she wants to have a car.",
+      "mistakes": [
+        {
+          "answer": "veux",
+          "feedback": "With {elle}, the form ends in t: {elle veut}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
     },
     "items/i-elles-veulent": null,
-    "items/i-elles-veulent-ce-livre": {
-      "id": "i-elles-veulent-ce-livre",
+    "items/i-elles-veulent-laddition": {
+      "id": "i-elles-veulent-laddition",
       "type": "gapfill",
-      "text": "Elles ___ ce livre.",
+      "text": "Et les deux femmes ? Elles ___ l'addition.",
       "blanks": [
         {
           "answer": "veulent"
         }
       ],
-      "gloss": "They want this book",
-      "hint": "{vouloir} for {elles}",
+      "gloss": "And the two women? They want the bill.",
+      "mistakes": [
+        {
+          "answer": "veut",
+          "feedback": "Two women, so {elles}: {elles veulent}."
+        },
+        {
+          "answer": "voulent",
+          "feedback": "For {ils} and {elles} the stem changes: {veulent}."
+        }
+      ],
       "steps": [
         "writing",
+        "lesson-exam"
+      ]
+    },
+    "items/i-encore-quelque-chose": {
+      "id": "i-encore-quelque-chose",
+      "type": "transform",
+      "instruction": "The waiter has brought two coffees. Later he asks Sophie and Thomas if they want anything more. Ask it as the waiter, with {encore}.",
+      "shown": "Vous voulez quelque chose ?",
+      "answer": "vous voulez encore quelque chose ?",
+      "accept": [
+        "encore quelque chose ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "vous voulez quelque chose encore ?",
+          "feedback": "{encore} goes right before what is offered: {encore quelque chose}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-et-thomas-il-veut-un-the": {
+      "id": "i-et-thomas-il-veut-un-the",
+      "type": "gapfill",
+      "text": "Oui, c'est ça. Je voudrais un café, et Thomas, il ___ un thé.",
+      "blanks": [
+        {
+          "answer": "veut"
+        }
+      ],
+      "gloss": "Yes, that's right. I'd like a coffee, and Thomas wants a tea.",
+      "mistakes": [
+        {
+          "answer": "voudrais",
+          "feedback": "{voudrais} goes with {je}. For Thomas, {il veut}."
+        }
+      ],
+      "steps": [
         "lesson-exam"
       ]
     },
     "items/i-il-veut": null,
-    "items/i-il-veut-ce-livre": {
-      "id": "i-il-veut-ce-livre",
-      "type": "gapfill",
-      "text": "Il ___ ce livre.",
-      "blanks": [
-        {
-          "answer": "veut"
-        }
-      ],
-      "gloss": "He wants this book",
-      "hint": "{vouloir} for {il}",
-      "steps": [
-        "writing",
-        "lesson-exam"
-      ]
-    },
     "items/i-ils-veulent": null,
-    "items/i-ils-veulent-un-chat": {
-      "id": "i-ils-veulent-un-chat",
+    "items/i-ils-veulent-la-carte": {
+      "id": "i-ils-veulent-la-carte",
       "type": "gapfill",
-      "text": "Ils ___ un chat.",
+      "text": "Et les deux hommes ? Ils ___ la carte.",
       "blanks": [
         {
           "answer": "veulent"
         }
       ],
-      "gloss": "They want a cat",
-      "hint": "{vouloir} for {ils}",
+      "gloss": "And the two men? They want the menu.",
+      "mistakes": [
+        {
+          "answer": "veut",
+          "feedback": "Two men, so {ils}: {ils veulent}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-je-veux": null,
+    "items/i-je-veux-avoir-un": null,
+    "items/i-je-veux-avoir-un-chat": {
+      "id": "i-je-veux-avoir-un-chat",
+      "type": "transform",
+      "instruction": "Sophie tells Thomas she has a cat. Thomas has no cat, but he wants one. Say it as Thomas, with {vouloir} and {avoir}.",
+      "shown": "J'ai un chat.",
+      "answer": "je veux avoir un chat",
+      "accept": [
+        "je voudrais avoir un chat",
+        "je veux un chat",
+        "je voudrais un chat"
+      ],
+      "mistakes": [
+        {
+          "answer": "je veux ai un chat",
+          "feedback": "After {vouloir}, the second verb stays as it is: {je veux avoir un chat}."
+        }
+      ],
       "steps": [
         "writing",
         "lesson-exam"
       ]
     },
-    "items/i-je-veux": null,
-    "items/i-je-veux-un-livre": {
-      "id": "i-je-veux-un-livre",
+    "items/i-je-veux-ca": null,
+    "items/i-je-veux-ca-s": null,
+    "items/i-je-veux-etre-un": null,
+    "items/i-je-veux-un-cafe-maintenant": {
+      "id": "i-je-veux-un-cafe-maintenant",
       "type": "gapfill",
-      "text": "Je ___ un livre.",
+      "text": "Je ___ un café, maintenant !",
       "blanks": [
         {
           "answer": "veux"
         }
       ],
-      "gloss": "I want a book",
-      "hint": "{vouloir} for {je}"
+      "gloss": "I want a coffee, now!",
+      "mistakes": [
+        {
+          "answer": "veut",
+          "feedback": "With {je}, the form ends in x: {je veux}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-je-voudrais-un-billet": {
+      "id": "i-je-voudrais-un-billet",
+      "type": "respond",
+      "situation": "Sophie and her friend Thomas are taking the train to Caen. At the station, Sophie asks the clerk for a ticket, politely.",
+      "answer": "je voudrais un billet, s'il vous plaît",
+      "accept": [
+        "bonjour, je voudrais un billet, s'il vous plaît",
+        "un billet, s'il vous plaît",
+        "bonjour, un billet, s'il vous plaît",
+        "je voudrais un billet"
+      ],
+      "hint": "Start with {je voudrais}.",
+      "mistakes": [
+        {
+          "answer": "je voudrais une billet, s'il vous plaît",
+          "feedback": "{billet} is masculine: {un billet}."
+        },
+        {
+          "answer": "je voudrais un billet, s'il te plaît",
+          "feedback": "{s'il te plaît} is for a friend. To the clerk, say {s'il vous plaît}."
+        }
+      ],
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
+    },
+    "items/i-je-voudrais-un-the": {
+      "id": "i-je-voudrais-un-the",
+      "type": "respond",
+      "situation": "The waiter asks Sophie: {Vous voulez quelque chose ?} She would like a tea.",
+      "answer": "je voudrais un thé, s'il vous plaît",
+      "accept": [
+        "je voudrais un thé",
+        "un thé, s'il vous plaît",
+        "oui, je voudrais un thé, s'il vous plaît",
+        "oui, un thé, s'il vous plaît",
+        "oui, je voudrais un thé"
+      ],
+      "mistakes": [
+        {
+          "answer": "je voudrais une thé, s'il vous plaît",
+          "feedback": "{thé} is masculine: {un thé}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-je-voudrais-une-chambre": {
+      "id": "i-je-voudrais-une-chambre",
+      "type": "respond",
+      "situation": "At the hotel in Caen, Sophie asks the receptionist for a room.",
+      "answer": "je voudrais une chambre, s'il vous plaît",
+      "accept": [
+        "bonjour, je voudrais une chambre, s'il vous plaît",
+        "je voudrais une chambre",
+        "bonjour, je voudrais une chambre",
+        "une chambre, s'il vous plaît",
+        "bonjour, une chambre, s'il vous plaît"
+      ],
+      "mistakes": [
+        {
+          "answer": "je voudrais un chambre, s'il vous plaît",
+          "feedback": "{chambre} is feminine: {une chambre}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-la-carte-poliment": {
+      "id": "i-la-carte-poliment",
+      "type": "respond",
+      "situation": "Sophie and Thomas sit down at the café. Sophie asks the waiter for the menu.",
+      "answer": "je voudrais la carte, s'il vous plaît",
+      "accept": [
+        "la carte, s'il vous plaît",
+        "je voudrais la carte",
+        "bonjour, je voudrais la carte, s'il vous plaît",
+        "bonjour, la carte, s'il vous plaît"
+      ],
+      "mistakes": [
+        {
+          "answer": "je voudrais la carte, s'il te plaît",
+          "feedback": "{s'il te plaît} is for a friend. To the waiter, say {s'il vous plaît}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-laddition-maintenant": {
+      "id": "i-laddition-maintenant",
+      "type": "gapfill",
+      "text": "Vous voulez l'addition ___ ?",
+      "blanks": [
+        {
+          "answer": "maintenant"
+        }
+      ],
+      "gloss": "Would you like the bill now?",
+      "mistakes": [
+        {
+          "answer": "encore",
+          "feedback": "{encore} means one more. The waiter is asking about the time: {maintenant}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-laddition-sil-vous-plait": {
+      "id": "i-laddition-sil-vous-plait",
+      "type": "respond",
+      "situation": "Sophie and Thomas are ready to go. Sophie asks the waiter for the bill.",
+      "answer": "l'addition, s'il vous plaît",
+      "accept": [
+        "je voudrais l'addition, s'il vous plaît",
+        "je voudrais l'addition"
+      ],
+      "mistakes": [
+        {
+          "answer": "la addition, s'il vous plaît",
+          "feedback": "Before a vowel, {la} becomes {l'}: {l'addition}."
+        }
+      ],
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
+    },
+    "items/i-non-merci-je-ne-veux-rien": {
+      "id": "i-non-merci-je-ne-veux-rien",
+      "type": "respond",
+      "situation": "Thomas asks Sophie: {Tu veux encore un café ?} She has had enough coffee and says no, kindly.",
+      "answer": "non merci, je ne veux rien",
+      "accept": [
+        "non merci",
+        "non, merci",
+        "non merci, ça va",
+        "non merci, je ne veux pas de café",
+        "non merci, je ne veux plus de café"
+      ],
+      "mistakes": [
+        {
+          "answer": "non merci, je ne veux pas rien",
+          "feedback": "With {rien}, leave out {pas}: {je ne veux rien}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
     },
     "items/i-nous-voulons": null,
-    "items/i-nous-voulons-avoir-une-maison": {
-      "id": "i-nous-voulons-avoir-une-maison",
+    "items/i-nous-voulons-ce-livre": null,
+    "items/i-nous-voulons-une-chambre": {
+      "id": "i-nous-voulons-une-chambre",
       "type": "gapfill",
-      "text": "Nous ___ avoir une maison.",
+      "text": "Nous ___ une chambre ou deux chambres ?",
       "blanks": [
         {
           "answer": "voulons"
         }
       ],
-      "gloss": "We want to have a house",
-      "hint": "{vouloir} for {nous}"
-    },
-    "items/i-tu-veux": null,
-    "items/i-tu-veux-un-chat": {
-      "id": "i-tu-veux-un-chat",
-      "type": "gapfill",
-      "text": "Tu ___ un chat ?",
-      "blanks": [
+      "gloss": "Do we want one room or two rooms?",
+      "mistakes": [
         {
-          "answer": "veux"
+          "answer": "voulez",
+          "feedback": "{voulez} goes with {vous}. With {nous}: {voulons}."
+        },
+        {
+          "answer": "veux",
+          "feedback": "{nous} keeps the stem of {vouloir}: {voulons}."
         }
       ],
-      "gloss": "Do you want a cat?",
-      "hint": "{vouloir} for {tu}",
       "steps": [
         "writing",
         "lesson-exam"
       ]
     },
-    "items/i-vous-voulez": null,
-    "items/i-vous-voulez-ca": {
-      "id": "i-vous-voulez-ca",
+    "items/i-thomas-demande-poliment": {
+      "id": "i-thomas-demande-poliment",
+      "type": "transform",
+      "instruction": "Thomas talks to the waiter the way he talks to Sophie. Make his request polite to a stranger.",
+      "shown": "Je veux un café, s'il te plaît.",
+      "answer": "je voudrais un café, s'il vous plaît",
+      "mistakes": [
+        {
+          "answer": "je voudrais un café, s'il te plaît",
+          "feedback": "{je voudrais} is right. {s'il te plaît} is for a friend; to the waiter, say {s'il vous plaît}."
+        },
+        {
+          "answer": "je veux un café, s'il vous plaît",
+          "feedback": "{s'il vous plaît} is right. To a stranger, ask with {je voudrais}; {je veux} can sound blunt."
+        }
+      ],
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
+    },
+    "items/i-tu-veux": null,
+    "items/i-tu-veux-encore-un-the": {
+      "id": "i-tu-veux-encore-un-the",
+      "type": "transform",
+      "instruction": "Thomas has finished his tea. As Sophie, offer him another one.",
+      "shown": "Tu veux un thé ?",
+      "answer": "tu veux encore un thé ?",
+      "accept": [
+        "encore un thé ?"
+      ],
+      "mistakes": [
+        {
+          "answer": "tu veux un thé encore ?",
+          "feedback": "{encore} goes right before what you offer: {encore un thé}."
+        }
+      ],
+      "steps": [
+        "writing",
+        "lesson-exam"
+      ]
+    },
+    "items/i-tu-veux-quelque-chose": {
+      "id": "i-tu-veux-quelque-chose",
       "type": "gapfill",
-      "text": "Vous ___ ça ?",
+      "text": "Tu veux ___ ? Un café, un thé ?",
+      "blanks": [
+        {
+          "answer": "quelque chose"
+        }
+      ],
+      "gloss": "Do you want anything? A coffee, a tea?",
+      "mistakes": [
+        {
+          "answer": "ça",
+          "feedback": "{ça} is one thing you point at. To offer anything at all, say {quelque chose}."
+        }
+      ],
+      "steps": [
+        "lesson-exam"
+      ]
+    },
+    "items/i-vous-voulez": null,
+    "items/i-vous-voulez-la-carte": {
+      "id": "i-vous-voulez-la-carte",
+      "type": "gapfill",
+      "text": "Vous ___ la carte ?",
       "blanks": [
         {
           "answer": "voulez"
         }
       ],
-      "gloss": "Do you want that?",
-      "hint": "{vouloir} for {vous}",
+      "gloss": "Would you like the menu?",
+      "mistakes": [
+        {
+          "answer": "voulons",
+          "feedback": "{voulons} goes with {nous}. The waiter speaks to Sophie: {vous voulez}."
+        }
+      ],
       "steps": [
-        "writing",
         "lesson-exam"
       ]
     },
+    "phrases": [
+      {
+        "phrase_id_suffix": "je-veux-un-the",
+        "fr": "Je veux un thé.",
+        "word_id": "vouloir-fr"
+      },
+      {
+        "phrase_id_suffix": "je-voudrais-un-billet",
+        "fr": "Je voudrais un billet, s'il vous plaît.",
+        "word_id": "je-voudrais-fr"
+      },
+      {
+        "phrase_id_suffix": "ils-veulent-quelque-chose",
+        "fr": "Ils veulent quelque chose.",
+        "word_id": "quelque-chose-fr"
+      },
+      {
+        "phrase_id_suffix": "tu-veux-un-verre",
+        "fr": "Tu veux un verre ?",
+        "word_id": "un-verre-fr"
+      },
+      {
+        "phrase_id_suffix": "encore-un-cafe",
+        "fr": "Tu veux encore un café ?",
+        "word_id": "encore-fr"
+      },
+      {
+        "phrase_id_suffix": "laddition-maintenant",
+        "fr": "Vous voulez l'addition maintenant ?",
+        "word_id": "maintenant-fr"
+      }
+    ],
+    "title": "Asking for what you want ({vouloir})",
     "vocabulary/elle-veut-fr": null,
     "vocabulary/elles-veulent-fr": null,
+    "vocabulary/encore-fr": {
+      "word_id": "encore-fr",
+      "fr": "encore",
+      "gloss": "more; another",
+      "note": "Before a noun, {encore} means one more: {encore un café}.",
+      "example_fr": "Tu veux encore un thé ?",
+      "example_en": "Do you want another tea?",
+      "part_of_speech": "adverb"
+    },
     "vocabulary/il-veut-fr": null,
     "vocabulary/ils-veulent-fr": null,
     "vocabulary/je-veux-fr": null,
+    "vocabulary/je-voudrais-fr": {
+      "word_id": "je-voudrais-fr",
+      "fr": "je voudrais",
+      "gloss": "I would like",
+      "note": "A form of {vouloir}. It is the polite way to ask a waiter, a clerk or anyone you do not know.",
+      "example_fr": "Je voudrais un café, s'il vous plaît.",
+      "example_en": "I'd like a coffee, please."
+    },
+    "vocabulary/l-addition-fr": {
+      "word_id": "l-addition-fr",
+      "fr": "l'addition",
+      "gloss": "the bill",
+      "example_fr": "Je voudrais l'addition, s'il vous plaît.",
+      "example_en": "I'd like the bill, please.",
+      "part_of_speech": "noun"
+    },
+    "vocabulary/la-carte-fr": {
+      "word_id": "la-carte-fr",
+      "fr": "la carte",
+      "gloss": "the menu",
+      "note": "In a café or a restaurant, {la carte} is the menu. It also means a card or a map.",
+      "example_fr": "Je voudrais la carte, s'il vous plaît.",
+      "example_en": "I'd like the menu, please.",
+      "part_of_speech": "noun"
+    },
+    "vocabulary/le-the-fr": {
+      "word_id": "le-the-fr",
+      "fr": "un thé",
+      "gloss": "a tea",
+      "example_fr": "Je voudrais un thé, s'il vous plaît.",
+      "example_en": "I'd like a tea, please.",
+      "part_of_speech": "noun"
+    },
+    "vocabulary/maintenant-fr": {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now",
+      "example_fr": "Vous voulez l'addition maintenant ?",
+      "example_en": "Would you like the bill now?",
+      "part_of_speech": "adverb"
+    },
     "vocabulary/nous-voulons-fr": null,
+    "vocabulary/quelque-chose-fr": {
+      "word_id": "quelque-chose-fr",
+      "fr": "quelque chose",
+      "gloss": "something; anything",
+      "note": "In a question, {quelque chose} is anything: {Tu veux quelque chose ?}",
+      "example_fr": "Tu veux quelque chose ?",
+      "example_en": "Do you want anything?"
+    },
     "vocabulary/s-il-te-plait-fr": {
       "word_id": "s-il-te-plait-fr",
       "fr": "s'il te plaît",
-      "gloss": "please (to a friend)"
+      "gloss": "please (to a friend)",
+      "note": "To a stranger or to more than one person, say {s'il vous plaît}.",
+      "example_fr": "Je veux un café, s'il te plaît.",
+      "example_en": "I want a coffee, please."
     },
     "vocabulary/tu-veux-fr": null,
+    "vocabulary/un-billet-fr": {
+      "word_id": "un-billet-fr",
+      "fr": "un billet",
+      "gloss": "a ticket",
+      "example_fr": "Je voudrais un billet, s'il vous plaît.",
+      "example_en": "I'd like a ticket, please.",
+      "part_of_speech": "noun"
+    },
+    "vocabulary/un-verre-fr": {
+      "word_id": "un-verre-fr",
+      "fr": "un verre",
+      "gloss": "a glass; a drink",
+      "note": "Say {Tu veux un verre ?} to invite someone for a drink.",
+      "example_fr": "Tu veux un verre ?",
+      "example_en": "Do you want a drink?",
+      "part_of_speech": "noun"
+    },
+    "vocabulary/une-chambre-fr": {
+      "word_id": "une-chambre-fr",
+      "fr": "une chambre",
+      "gloss": "a room; a bedroom",
+      "note": "At a hotel, {une chambre} is a room.",
+      "example_fr": "Bonjour, je voudrais une chambre.",
+      "example_en": "Hello, I'd like a room.",
+      "part_of_speech": "noun"
+    },
+    "vocabulary/vouloir-fr": {
+      "word_id": "vouloir-fr",
+      "fr": "vouloir",
+      "gloss": "to want",
+      "note": "With friends and family, {je veux} is the everyday way to say what you want.",
+      "example_fr": "Je veux un café.",
+      "example_en": "I want a coffee.",
+      "part_of_speech": "verb"
+    },
     "vocabulary/vous-voulez-fr": null
   },
   "2024-01-16-pouvoir": {
@@ -1150,17 +1596,28 @@
         "definition": "The verb for what someone can do: ability, chance and permission. It is one of the verbs French uses most.",
         "examples": [
           {
-            "fr": "Je peux avoir ça, s'il vous plaît ?",
-            "en": "Can I have that, please?"
+            "fr": "Je peux avoir l'addition, s'il vous plaît ?",
+            "en": "Can I have the bill, please?"
           },
           {
-            "fr": "Je peux avoir ça, s'il te plaît ?",
-            "en": "Can I have that, please?",
-            "note": "to a friend"
+            "fr": "Nous pouvons avoir la carte, s'il vous plaît ?",
+            "en": "Can we have the menu, please?"
           },
           {
-            "fr": "Tu peux ?",
-            "en": "Can you?"
+            "fr": "Je peux avoir une chambre, s'il vous plaît ?",
+            "en": "Can I have a room, please?"
+          },
+          {
+            "fr": "Je peux avoir encore un thé ?",
+            "en": "Can I have another tea?"
+          },
+          {
+            "fr": "Je peux avoir un verre ?",
+            "en": "Can I have a glass?"
+          },
+          {
+            "fr": "Vous pouvez avoir un billet maintenant.",
+            "en": "You can get a ticket now."
           }
         ]
       },
@@ -8213,6 +8670,13 @@
         }
       ]
     },
+    "vocabulary/l-addition-fr": {
+      "word_id": "l-addition-fr",
+      "fr": "l'addition",
+      "gloss": "the bill/check",
+      "note": "feminine (addition) - at restaurants",
+      "review": true
+    },
     "vocabulary/marie-habite-a-paris-fr": {
       "word_id": "marie-habite-a-paris-fr",
       "fr": "Marie habite à Paris",
@@ -8223,6 +8687,13 @@
       "word_id": "marie-vit-a-paris-fr",
       "fr": "Marie vit à Paris",
       "gloss": "Marie lives in Paris"
+    },
+    "vocabulary/quelque-chose-fr": {
+      "word_id": "quelque-chose-fr",
+      "fr": "quelque chose",
+      "gloss": "something",
+      "note": "masculine - je veux quelque chose (I want something)",
+      "review": true
     },
     "vocabulary/travailler-fr": {
       "word_id": "travailler-fr",
@@ -9231,6 +9702,27 @@
       "fr": "beaucoup",
       "gloss": "a lot / very much",
       "note": "{merci beaucoup}: thank you very much"
+    },
+    "vocabulary/je-voudrais-fr": {
+      "word_id": "je-voudrais-fr",
+      "fr": "je voudrais",
+      "gloss": "I would like",
+      "note": "polite form!",
+      "review": true
+    },
+    "vocabulary/l-addition-fr": {
+      "word_id": "l-addition-fr",
+      "fr": "l'addition",
+      "gloss": "the bill/check",
+      "note": "at restaurants",
+      "review": true
+    },
+    "vocabulary/s-il-te-plait-fr": {
+      "word_id": "s-il-te-plait-fr",
+      "fr": "s'il te plaît",
+      "gloss": "please",
+      "note": "informal politeness",
+      "review": true
     }
   },
   "2024-04-01-alphabet": {
@@ -9439,6 +9931,13 @@
         ]
       }
     ],
+    "vocabulary/encore-fr": {
+      "word_id": "encore-fr",
+      "fr": "encore",
+      "gloss": "still",
+      "note": "continuing, not yet finished",
+      "review": true
+    },
     "vocabulary/ici-fr": {
       "word_id": "ici-fr",
       "fr": "ici",
@@ -9448,6 +9947,13 @@
       "word_id": "je-mange-fr",
       "fr": "je mange",
       "gloss": "I eat"
+    },
+    "vocabulary/maintenant-fr": {
+      "word_id": "maintenant-fr",
+      "fr": "maintenant",
+      "gloss": "now",
+      "note": "present time",
+      "review": true
     }
   },
   "2024-04-02-numbers": {
@@ -11596,6 +12102,13 @@
         "miam ! un croissant"
       ],
       "hint": "{miam} + un croissant"
+    },
+    "vocabulary/le-the-fr": {
+      "word_id": "le-the-fr",
+      "fr": "le thé",
+      "gloss": "tea",
+      "note": "masculine",
+      "review": true
     }
   },
   "2024-04-12-manger": {

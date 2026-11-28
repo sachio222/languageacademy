@@ -75,7 +75,8 @@
       "word_id": "encore-fr",
       "fr": "encore",
       "gloss": "still",
-      "note": "continuing, not yet finished"
+      "note": "continuing, not yet finished",
+      "review": true
     },
     {
       "word_id": "juste-fr",
@@ -87,7 +88,8 @@
       "word_id": "maintenant-fr",
       "fr": "maintenant",
       "gloss": "now",
-      "note": "present time"
+      "note": "present time",
+      "review": true
     },
     {
       "word_id": "aujourd-hui-fr",

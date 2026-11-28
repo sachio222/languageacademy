@@ -458,6 +458,9 @@ export function convertModule(old, opts = {}) {
   if (authoredPart(merger, 'glosses')) fieldPart('glosses', undefined);
   // A conjugation (the verb step's data) has no source in the live app either: a writer adds it, and it is kept the same way.
   if (authoredPart(merger, 'conjugation')) fieldPart('conjugation', undefined);
+  // Pronunciation phrases and a Speed Match list are authored too, for a converted lesson a writer rebuilds.
+  if (authoredPart(merger, 'phrases')) fieldPart('phrases', undefined);
+  if (authoredPart(merger, 'speed_match')) fieldPart('speed_match', undefined);
   mergeDeclared(merger, opts.declaration, 'tests', { mod, outFields: outRecord.fields, testsBefore: fresh.tests, written: opts.written });
 
   // Position words in what the source says (spec 5.2): reported, written as they are, fixed by hand.
