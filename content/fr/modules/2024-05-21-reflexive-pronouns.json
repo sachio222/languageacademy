@@ -74,27 +74,91 @@
   "concepts": [
     {
       "id": "c-reflexive-pronouns",
-      "term": "Reflexive Pronouns",
-      "definition": "Pronouns that refer back to the subject - 'myself', 'yourself', 'himself', etc.",
-      "example": "{je me lave} (I wash myself), {tu te lèves} (you get yourself up), {il se prépare} (he prepares himself)"
+      "term": "Reflexive pronouns",
+      "definition": "A reflexive pronoun points back to the subject, like myself or yourself in English.",
+      "examples": [
+        {
+          "fr": "Je me lave.",
+          "en": "I wash myself."
+        },
+        {
+          "fr": "Tu te lèves ?",
+          "en": "Are you getting up?"
+        },
+        {
+          "fr": "Il se prépare.",
+          "en": "He's getting ready."
+        }
+      ]
     },
     {
       "id": "c-parallel-to-object-pronouns",
-      "term": "Parallel to Object Pronouns",
-      "definition": "Same forms as object pronouns, but refer back to the subject",
-      "example": "Object: {il me voit} (he sees me). Reflexive: {je me vois} (I see myself)"
+      "term": "Like object pronouns",
+      "definition": "The forms are the same as the object pronouns. The difference is who they point to.",
+      "examples": [
+        {
+          "fr": "Il me voit.",
+          "en": "He sees me.",
+          "note": "an object pronoun"
+        },
+        {
+          "fr": "Je me vois.",
+          "en": "I see myself.",
+          "note": "a reflexive pronoun"
+        }
+      ]
     },
     {
       "id": "c-position-before-the-verb",
-      "term": "Position: Before the Verb",
-      "definition": "Reflexive pronouns go BEFORE the conjugated verb, just like object pronouns",
-      "example": "{je me lave} (not je lave me), {tu te lèves} (not tu lèves te)"
+      "term": "Before the verb",
+      "definition": "The reflexive pronoun goes right before the verb, like an object pronoun.",
+      "examples": [
+        {
+          "fr": "Tu te lèves.",
+          "en": "You get up."
+        },
+        {
+          "fr": "Elle se lave.",
+          "en": "She's washing."
+        },
+        {
+          "fr": "Je ne me lave pas.",
+          "en": "I'm not washing.",
+          "note": "with {ne} … {pas}, it stays before the verb"
+        }
+      ]
     },
     {
       "id": "c-the-reflexive-pronoun-set",
-      "term": "The Reflexive Pronoun Set",
-      "definition": "me (myself), te (yourself), se (himself/herself/oneself), nous (ourselves), vous (yourselves), se (themselves)",
-      "example": "Each pronoun matches a subject: {je} → {me}, {tu} → {te}, {il}/{elle} → {se}, {nous} → nous, {vous} → vous, {ils}/{elles} → se"
+      "term": "One pronoun for each person",
+      "definition": "Each subject has its own reflexive pronoun. {se} works for he, she and they.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je me lave",
+          "en": "I wash"
+        },
+        {
+          "fr": "tu te laves",
+          "en": "you wash"
+        },
+        {
+          "fr": "il se lave",
+          "en": "he washes"
+        },
+        {
+          "fr": "nous nous lavons",
+          "en": "we wash"
+        },
+        {
+          "fr": "vous vous lavez",
+          "en": "you wash"
+        },
+        {
+          "fr": "ils se lavent",
+          "en": "they wash"
+        }
+      ]
     }
   ],
   "items": [

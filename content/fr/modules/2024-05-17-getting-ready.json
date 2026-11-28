@@ -81,27 +81,79 @@
   "concepts": [
     {
       "id": "c-se-laver-to-wash",
-      "term": "{se laver} = to wash oneself",
-      "definition": "Personal hygiene - wash yourself",
-      "example": "{je me lave} (I wash myself), {tu te laves} (you wash yourself)"
+      "term": "{se laver} = to wash",
+      "definition": "A reflexive verb: you wash yourself.",
+      "examples": [
+        {
+          "fr": "Je me lave le matin.",
+          "en": "I wash in the morning."
+        },
+        {
+          "fr": "Tu te laves ?",
+          "en": "Are you washing?"
+        }
+      ]
     },
     {
       "id": "c-s-habiller-to-get",
       "term": "{s'habiller} = to get dressed",
-      "definition": "Put clothes on yourself - daily essential!",
-      "example": "{je m'habille} (I get dressed), {elle s'habille bien} (she dresses well)"
+      "definition": "A reflexive verb for putting your clothes on.",
+      "examples": [
+        {
+          "fr": "Je m'habille.",
+          "en": "I'm getting dressed."
+        },
+        {
+          "fr": "Elle s'habille bien.",
+          "en": "She dresses well."
+        }
+      ]
     },
     {
       "id": "c-se-preparer-to-get",
-      "term": "{se préparer} = to get ready / to prepare oneself",
-      "definition": "General preparation - for school, work, going out",
-      "example": "{je me prépare pour le cours} (I get ready for class), {je me prépare tôt le matin} (I get ready early in the morning), {on se prépare} (we get ready)"
+      "term": "{se préparer} = to get ready",
+      "definition": "Getting ready for school, for work or to go out.",
+      "examples": [
+        {
+          "fr": "Je me prépare pour le cours.",
+          "en": "I'm getting ready for class."
+        },
+        {
+          "fr": "Je me prépare tôt le matin.",
+          "en": "I get ready early in the morning."
+        },
+        {
+          "fr": "On se prépare.",
+          "en": "We're getting ready."
+        }
+      ]
     },
     {
       "id": "c-complete-morning-sequence",
-      "term": "Complete Morning Sequence",
-      "definition": "Now you can tell your entire morning story!",
-      "example": "{D'abord, je me réveille. Ensuite, je me lève. Après, je me lave. Puis, je m'habille. Finalement, je me prépare.}"
+      "term": "A whole morning",
+      "definition": "Order words and reflexive verbs together tell a whole morning.",
+      "examples": [
+        {
+          "fr": "D'abord, je me réveille.",
+          "en": "First, I wake up."
+        },
+        {
+          "fr": "Ensuite, je me lève.",
+          "en": "Then I get up."
+        },
+        {
+          "fr": "Après, je me lave.",
+          "en": "After that, I wash."
+        },
+        {
+          "fr": "Puis, je m'habille.",
+          "en": "Then I get dressed."
+        },
+        {
+          "fr": "Finalement, je me prépare.",
+          "en": "Finally, I get ready."
+        }
+      ]
     }
   ],
   "items": [

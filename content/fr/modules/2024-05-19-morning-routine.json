@@ -106,26 +106,62 @@
     {
       "id": "c-se-reveiller-to-wake",
       "term": "{se réveiller} = to wake up",
-      "definition": "First action of the day - reflexive because you wake yourself up",
-      "example": "{je me réveille à 7h} (I wake up at 7am), {tu te réveilles tôt} (you wake up early)"
+      "definition": "A reflexive verb: you wake yourself up.",
+      "examples": [
+        {
+          "fr": "Je me réveille à sept heures.",
+          "en": "I wake up at seven."
+        },
+        {
+          "fr": "Tu te réveilles tôt ?",
+          "en": "Do you wake up early?"
+        }
+      ]
     },
     {
       "id": "c-se-lever-to-get",
-      "term": "{se lever} = to get up / to stand up",
-      "definition": "After waking, you get yourself up - natural sequence!",
-      "example": "{je me lève à 7h30} (I get up at 7:30), {tu te lèves tard} (you get up late)"
+      "term": "{se lever} = to get up",
+      "definition": "Once you are awake, you get up. The e becomes è in {je me lève}.",
+      "examples": [
+        {
+          "fr": "Elle se lève à huit heures.",
+          "en": "She gets up at eight."
+        },
+        {
+          "fr": "Tu te lèves tard.",
+          "en": "You get up late."
+        },
+        {
+          "fr": "Nous nous levons tôt.",
+          "en": "We get up early."
+        }
+      ]
     },
     {
       "id": "c-telling-your-morning-story",
-      "term": "Telling Your Morning Story",
-      "definition": "Now you can describe your morning routine with temporal words!",
-      "example": "{D'abord, je me réveille. Ensuite, je me lève.} (First, I wake up. Then, I get up.)"
+      "term": "Your morning, in order",
+      "definition": "Put an order word before each verb.",
+      "examples": [
+        {
+          "fr": "D'abord, je me réveille. Ensuite, je me lève.",
+          "en": "First, I wake up. Then I get up."
+        }
+      ]
     },
     {
       "id": "c-asking-about-morning-routines",
-      "term": "Asking About Morning Routines",
-      "definition": "Common questions about daily schedules",
-      "example": "{À quelle heure tu te réveilles?} (What time do you wake up?), {Tu te lèves tôt?} (Do you get up early?)"
+      "term": "Asking about someone's morning",
+      "definition": "Two questions about when someone starts the day.",
+      "examples": [
+        {
+          "fr": "À quelle heure tu te réveilles ?",
+          "en": "What time do you wake up?"
+        },
+        {
+          "fr": "Tu te lèves tôt ?",
+          "en": "Do you get up early?"
+        }
+      ]
     }
   ],
   "items": [

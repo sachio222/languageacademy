@@ -69,27 +69,90 @@
   "concepts": [
     {
       "id": "c-reflexive-verbs-always-use",
-      "term": "Reflexive Verbs ALWAYS use être in Past",
-      "definition": "CRITICAL: ALL reflexive verbs use être (never avoir) in passé composé",
-      "example": "{je me suis lavé} (I washed myself - uses être), {elle s'est levée} (she got up - uses être)"
+      "term": "Reflexive verbs take {être}",
+      "definition": "In the past, every reflexive verb uses {être}, never {avoir}.",
+      "examples": [
+        {
+          "fr": "Je me suis lavé.",
+          "en": "I washed."
+        },
+        {
+          "fr": "Elle s'est levée.",
+          "en": "She got up."
+        },
+        {
+          "fr": "On s'est amusé.",
+          "en": "We had fun."
+        }
+      ]
     },
     {
       "id": "c-agreement-with-subject",
-      "term": "Agreement with Subject",
-      "definition": "Past participle agrees with the subject (like all être verbs)",
-      "example": "{je me suis réveillé} (masc), {je me suis réveillée} (fem), {ils se sont levés} (masc pl), {elles se sont levées} (fem pl)"
+      "term": "The ending agrees",
+      "definition": "As with other verbs that take {être}, the past participle agrees with the subject.",
+      "examples": [
+        {
+          "fr": "Je me suis réveillé.",
+          "en": "I woke up.",
+          "note": "a man speaking"
+        },
+        {
+          "fr": "Je me suis réveillée.",
+          "en": "I woke up.",
+          "note": "a woman speaking"
+        },
+        {
+          "fr": "Ils se sont levés.",
+          "en": "They got up."
+        },
+        {
+          "fr": "Elles se sont levées.",
+          "en": "They got up.",
+          "note": "all women"
+        }
+      ]
     },
     {
       "id": "c-pronoun-position",
-      "term": "Pronoun Position",
-      "definition": "Reflexive pronoun stays BEFORE the auxiliary être",
-      "example": "{je me suis levé} (not je suis me levé), {tu t'es lavé} (not tu es te lavé)"
+      "term": "The pronoun before {être}",
+      "definition": "The reflexive pronoun comes before the form of {être}.",
+      "examples": [
+        {
+          "fr": "Je me suis levé.",
+          "en": "I got up."
+        },
+        {
+          "fr": "Tu t'es lavé ?",
+          "en": "Did you wash?"
+        },
+        {
+          "fr": "Ils se sont habillés.",
+          "en": "They got dressed."
+        }
+      ]
     },
     {
       "id": "c-telling-past-routines",
-      "term": "Telling Past Routines",
-      "definition": "Now you can describe what you did this morning!",
-      "example": "{Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé. J'étais en retard, donc je me suis dépêché.}"
+      "term": "What you did this morning",
+      "definition": "The same order words work in the past.",
+      "examples": [
+        {
+          "fr": "Ce matin, je me suis réveillé à sept heures.",
+          "en": "This morning I woke up at seven."
+        },
+        {
+          "fr": "Ensuite, je me suis levé.",
+          "en": "Then I got up."
+        },
+        {
+          "fr": "Après, je me suis lavé.",
+          "en": "After that, I washed."
+        },
+        {
+          "fr": "J'étais en retard, donc je me suis dépêché.",
+          "en": "I was late, so I hurried."
+        }
+      ]
     }
   ],
   "items": [

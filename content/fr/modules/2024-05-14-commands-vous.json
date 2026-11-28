@@ -56,21 +56,56 @@
   "concepts": [
     {
       "id": "c-vous-commands-formal-or",
-      "term": "vous Commands = Formal or Groups",
-      "definition": "Use vous form for strangers, bosses, or multiple people",
-      "example": "To strangers: Mangez! To a group: {Venez ! On se voit demain !} (Come! See you tomorrow!)"
+      "term": "Commands with {vous}",
+      "definition": "Use the {vous} form with a stranger, a boss or a group of people.",
+      "examples": [
+        {
+          "fr": "Écoutez !",
+          "en": "Listen!",
+          "note": "to a class"
+        },
+        {
+          "fr": "Venez ! On se voit demain !",
+          "en": "Come! See you tomorrow!",
+          "note": "to a group"
+        }
+      ]
     },
     {
       "id": "c-easy-formation-drop-the",
-      "term": "Easy Formation: Drop the Pronoun!",
-      "definition": "Just use vous form without saying '{vous}'",
-      "example": "{vous mangez} → {Mangez!}, {vous parlez} → {Parlez!}"
+      "term": "The {vous} form without {vous}",
+      "definition": "Take the {vous} form and leave out the pronoun.",
+      "examples": [
+        {
+          "fr": "Mangez !",
+          "en": "Eat!",
+          "note": "from {vous mangez}"
+        },
+        {
+          "fr": "Parlez !",
+          "en": "Speak!",
+          "note": "from {vous parlez}"
+        }
+      ]
     },
     {
       "id": "c-keep-the-ez-ending",
-      "term": "Keep the -ez Ending",
-      "definition": "Unlike tu commands, vous commands keep all letters!",
-      "example": "{Mangez!} (not Mange!), {Parlez!} (not Parle!)"
+      "term": "The -ez stays",
+      "definition": "Unlike the {tu} command, the {vous} command keeps its ending.",
+      "examples": [
+        {
+          "fr": "Venez !",
+          "en": "Come!"
+        },
+        {
+          "fr": "Prenez !",
+          "en": "Take it!"
+        },
+        {
+          "fr": "Regardez !",
+          "en": "Look!"
+        }
+      ]
     }
   ],
   "items": [

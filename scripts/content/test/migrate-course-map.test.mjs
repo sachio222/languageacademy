@@ -293,7 +293,8 @@ const NAME_OVERRIDES_AFTER_SPLIT = {
 // The split's overrides on concept cards' old example strings, which the examples lists replaced: no place is left for
 // them in the module files.
 const CARD_EXAMPLE_OVERRIDES_GONE = ['2024-01-02-etre#concepts[0].example', '2024-01-19-stressed-pronouns#concepts[1].example',
-  '2024-03-31-survival-phrases#concepts[0].example'];
+  '2024-03-31-survival-phrases#concepts[0].example', '2024-05-18-irregular-commands#concepts[1].example',
+  '2024-05-18-irregular-commands#concepts[4].example'];
 // Overrides moved by hand after the split onto a concept card's examples (plan 2026-11-27-concept-cards-structured):
 // the card's old example string, which the split keys, is gone, and each example whose French still needs the
 // correction carries it on concepts/<id>/examples/<n>/fr.

@@ -68,27 +68,85 @@
   "concepts": [
     {
       "id": "c-imperative-mood-commands",
-      "term": "Imperative Mood = Commands",
-      "definition": "Tell someone to do something - no subject pronoun needed!",
-      "example": "{Mange!} (Eat!), {Parle!} (Speak!), {Va!} (Go!), {Pars tôt!} (Leave early!)"
+      "term": "Telling someone to do something",
+      "definition": "A command has no subject pronoun. The verb starts the sentence.",
+      "examples": [
+        {
+          "fr": "Mange !",
+          "en": "Eat!"
+        },
+        {
+          "fr": "Parle !",
+          "en": "Speak!"
+        },
+        {
+          "fr": "Pars tôt !",
+          "en": "Leave early!"
+        }
+      ]
     },
     {
       "id": "c-tu-form-just-drop",
-      "term": "tu form: Just Drop the Pronoun!",
-      "definition": "For most verbs, use the tu form without '{tu}'",
-      "example": "{tu manges} → {Mange!} (you eat → Eat!), {tu parles} → {Parle!} (you speak → Speak!)"
+      "term": "The {tu} form without {tu}",
+      "definition": "For most verbs, a command to a friend is the {tu} form with no pronoun.",
+      "examples": [
+        {
+          "fr": "Viens !",
+          "en": "Come!",
+          "note": "from {tu viens}"
+        },
+        {
+          "fr": "Prends !",
+          "en": "Take it!",
+          "note": "from {tu prends}"
+        },
+        {
+          "fr": "Pars !",
+          "en": "Leave!",
+          "note": "from {tu pars}"
+        }
+      ]
     },
     {
       "id": "c-er-verbs-drop-the",
-      "term": "-ER verbs: Drop the final -s",
-      "definition": "For -ER verbs only, also drop the final -s in tu command form",
-      "example": "{tu manges} → {Mange!} (not Manges!), {tu parles} → {Parle!} (not Parles!)"
+      "term": "-er verbs drop the s",
+      "definition": "For -er verbs, the command also drops the final s of the {tu} form.",
+      "examples": [
+        {
+          "fr": "Mange !",
+          "en": "Eat!",
+          "note": "from {tu manges}"
+        },
+        {
+          "fr": "Parle !",
+          "en": "Speak!",
+          "note": "from {tu parles}"
+        },
+        {
+          "fr": "Pense !",
+          "en": "Think!",
+          "note": "from {tu penses}"
+        }
+      ]
     },
     {
       "id": "c-use-with-friends-and",
-      "term": "Use with Friends and Family",
-      "definition": "tu commands are informal - use with people you'd call '{tu}'",
-      "example": "To a friend: {Mange!} (Eat!), {Écoute!} (Listen!), {Viens!} (Come!), {Viens, on est en retard!} (Come on, we're late!)"
+      "term": "For friends and family",
+      "definition": "Use these commands with people you call {tu}.",
+      "examples": [
+        {
+          "fr": "Écoute !",
+          "en": "Listen!"
+        },
+        {
+          "fr": "Regarde !",
+          "en": "Look!"
+        },
+        {
+          "fr": "Viens, on est en retard !",
+          "en": "Come on, we're late!"
+        }
+      ]
     }
   ],
   "items": [

@@ -58,27 +58,83 @@
   "concepts": [
     {
       "id": "c-affirmative-commands-attach-with",
-      "term": "Affirmative Commands: Attach with Hyphens",
-      "definition": "In positive commands, pronouns attach to the verb with hyphens",
-      "example": "{Donne-le!} (Give it!), {Regarde-moi!} (Look at me!), {Écoute-le!} (Listen to him!), {Regarde-moi et fais attention!} (Look at me and pay attention!), {Amuse-toi bien!} (Have fun!), {Dépêche-toi, habille-toi!} (Hurry up, get dressed!)"
+      "term": "Pronouns after the verb",
+      "definition": "In a positive command, the pronoun comes after the verb, joined with a hyphen.",
+      "examples": [
+        {
+          "fr": "Donne-le !",
+          "en": "Give it!"
+        },
+        {
+          "fr": "Regarde-moi !",
+          "en": "Look at me!"
+        },
+        {
+          "fr": "Écoute-le !",
+          "en": "Listen to him!"
+        },
+        {
+          "fr": "Amuse-toi bien !",
+          "en": "Have fun!"
+        },
+        {
+          "fr": "Dépêche-toi, habille-toi !",
+          "en": "Hurry up, get dressed!"
+        },
+        {
+          "fr": "Regarde-moi et fais attention !",
+          "en": "Look at me and pay attention!"
+        }
+      ]
     },
     {
       "id": "c-negative-commands-separate-with",
-      "term": "Negative Commands: Separate with ne...pas",
-      "definition": "In negative commands, pronouns go BEFORE the verb (normal position)",
-      "example": "{Ne le fais pas!} (Don't do it!), {Ne me regarde pas!} (Don't look at me!)"
+      "term": "Pronouns in a negative command",
+      "definition": "With {ne} … {pas}, the pronoun goes back before the verb.",
+      "examples": [
+        {
+          "fr": "Ne le fais pas !",
+          "en": "Don't do it!"
+        },
+        {
+          "fr": "Ne me regarde pas !",
+          "en": "Don't look at me!"
+        }
+      ]
     },
     {
       "id": "c-pronoun-order-in-commands",
-      "term": "Pronoun Order in Commands",
-      "definition": "Object pronouns: le/la/les come first, then moi/toi",
-      "example": "{Donne-le-moi!} (Give it to me! - le before moi), {Montre-la-moi!} (Show it to me!)"
+      "term": "Two pronouns",
+      "definition": "With two pronouns, the one for the thing comes first, then {moi}.",
+      "examples": [
+        {
+          "fr": "Donne-le-moi !",
+          "en": "Give it to me!"
+        },
+        {
+          "fr": "Montre-la-moi !",
+          "en": "Show it to me!"
+        }
+      ]
     },
     {
       "id": "c-en-some",
       "term": "{en}: some, of them",
-      "definition": "{en} stands for something you already named with {du}, {de la}, {de l'}, {des} or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.",
-      "example": "{Tu veux du café ? Oui, j'en veux.} (Do you want some coffee? Yes, I want some.), {Prends-en !} (Take some!)"
+      "definition": "{en} stands for some of a thing you already named. It goes before the verb, but after it in a positive command.",
+      "examples": [
+        {
+          "fr": "Tu veux du café ? Oui, j'en veux.",
+          "en": "Do you want some coffee? Yes, I'd like some."
+        },
+        {
+          "fr": "Oui, j'en ai trois.",
+          "en": "Yes, I have three of them."
+        },
+        {
+          "fr": "Prends-en !",
+          "en": "Take some!"
+        }
+      ]
     }
   ],
   "items": [

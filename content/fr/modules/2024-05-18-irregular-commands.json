@@ -114,45 +114,140 @@
   "concepts": [
     {
       "id": "c-most-common-verbs-irregular",
-      "term": "Most Common Verbs = Irregular Commands",
-      "definition": "être, avoir, aller, and faire don't follow normal command patterns",
-      "example": "{Sois gentil!} (Be nice!), {Aie courage!} (Have courage!), {Va là-bas!} (Go over there!)"
+      "term": "Irregular commands",
+      "definition": "The most common verbs have command forms of their own.",
+      "examples": [
+        {
+          "fr": "Sois gentil !",
+          "en": "Be nice!"
+        },
+        {
+          "fr": "Aie courage !",
+          "en": "Have courage!"
+        },
+        {
+          "fr": "Va là-bas !",
+          "en": "Go over there!"
+        },
+        {
+          "fr": "Fais attention !",
+          "en": "Be careful!"
+        }
+      ]
     },
     {
       "id": "c-must-memorize-these",
-      "term": "Must Memorize These",
-      "definition": "These irregular forms are used constantly, so they are worth memorizing!",
-      "example": "{Vas-y!} (Go ahead! / Go for it!), an extremely common phrase"
+      "term": "{Vas-y !}",
+      "definition": "A very common phrase for go ahead or go for it. The {y} means there.",
+      "examples": [
+        {
+          "fr": "Vas-y !",
+          "en": "Go ahead!"
+        },
+        {
+          "fr": "Allons-y !",
+          "en": "Let's go!"
+        }
+      ]
     },
     {
       "id": "c-etre-commands",
-      "term": "être Commands",
-      "definition": "{tu: Sois! vous: Soyez! nous: Soyons!}",
-      "example": "{Sois là à six heures!} (Be there at six!), {Soyez gentil!} (Be kind!)"
+      "term": "Commands of {être}",
+      "definition": "The command forms of {être} are irregular.",
+      "examples": [
+        {
+          "fr": "Sois gentil !",
+          "en": "Be nice!",
+          "note": "to a friend"
+        },
+        {
+          "fr": "Soyez gentil !",
+          "en": "Be kind!",
+          "note": "to someone you call {vous}"
+        },
+        {
+          "fr": "Soyons gentils !",
+          "en": "Let's be nice!"
+        },
+        {
+          "fr": "Sois là à six heures !",
+          "en": "Be there at six!"
+        }
+      ]
     },
     {
       "id": "c-avoir-commands",
-      "term": "avoir Commands",
-      "definition": "{tu: Aie! vous: Ayez! nous: Ayons!}",
-      "example": "{Aie confiance!} (Have confidence!), {N'ayez pas peur!} (Don't be afraid!)"
+      "term": "Commands of {avoir}",
+      "definition": "The command forms of {avoir} are irregular too.",
+      "examples": [
+        {
+          "fr": "Aie confiance !",
+          "en": "Have confidence!",
+          "note": "to a friend"
+        },
+        {
+          "fr": "N'ayez pas peur !",
+          "en": "Don't be afraid!",
+          "note": "to someone you call {vous}"
+        },
+        {
+          "fr": "Ayons confiance !",
+          "en": "Let's be confident!"
+        }
+      ]
     },
     {
       "id": "c-aller-commands",
-      "term": "aller Commands",
-      "definition": "tu: Va! vous: Allez! nous: Allons! Special: Vas-y!",
-      "example": "{Va là-bas!} (Go over there!), {Allons-y!} (Let's go!), {Vas-y!} (Go ahead!)"
+      "term": "Commands of {aller}",
+      "definition": "To a friend, the command is {va}, with no s. Before {y}, the s comes back: {vas-y}.",
+      "examples": [
+        {
+          "fr": "Va là-bas !",
+          "en": "Go over there!"
+        },
+        {
+          "fr": "Allons-y !",
+          "en": "Let's go!"
+        },
+        {
+          "fr": "Vas-y !",
+          "en": "Go ahead!"
+        }
+      ]
     },
     {
       "id": "c-faire-commands",
-      "term": "faire Commands",
-      "definition": "{tu: Fais! vous: Faites! nous: Faisons!}",
-      "example": "{Fais attention!} (Pay attention! / Be careful!), {Faites ça!} (Do that!)"
+      "term": "Commands of {faire}",
+      "definition": "Say {fais} to a friend and {faites} to someone you call {vous}.",
+      "examples": [
+        {
+          "fr": "Fais attention !",
+          "en": "Be careful!"
+        },
+        {
+          "fr": "Faites ça !",
+          "en": "Do that!"
+        }
+      ]
     },
     {
       "id": "c-y-there",
       "term": "{y}: there",
-      "definition": "{y} stands for a place you already named, like {au café} or {chez Paul}. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the {y} in {vas-y} comes from.",
-      "example": "{Tu vas au café ? Oui, j'y vais.} (Are you going to the café? Yes, I'm going there.)"
+      "definition": "{y} stands for a place you already named, like {au café}. It goes before the verb, but after the verb in a positive command.",
+      "examples": [
+        {
+          "fr": "Tu vas au café ? Oui, j'y vais.",
+          "en": "Are you going to the café? Yes, I'm going there."
+        },
+        {
+          "fr": "Non, je n'y vais pas.",
+          "en": "No, I'm not going there."
+        },
+        {
+          "fr": "Nous y allons.",
+          "en": "We're going there."
+        }
+      ]
     }
   ],
   "items": [

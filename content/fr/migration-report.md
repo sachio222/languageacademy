@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 791 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 2254 |
+| Hand edits kept | 2381 |
 | Live ids with no converted item | 368 (53 real misses) |
 | Fields with no place in a module file | 1953 |
 | Text written differently | 661 |
@@ -3317,10 +3317,27 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-05-23-temporal-words**
 
-- `concepts` "["id":"c-temporal-prepositions","term":"Temporal Prepositions","definition":"Words that show when or for how long something happens - used with nouns","example":"pendant des heures (for hours), avant le cours (before class), après le dîner (after dinner)","id":"c-sequential-connectors","term":"Sequential Connectors","definition":"Words that show the order of actions - connect sentences smoothly","example":"D'abord, je mange. Ensuite, je pars. Finalement, j'arrive. (First, I eat. Then, I leave. Finally, I arrive.)","id":"c-building-smooth-narratives","term":"Building Smooth Narratives","definition":"Use these words to tell stories and describe routines naturally","example":"Before: 'Je mange. Je pars.' (choppy) After: 'D'abord, je mange. Ensuite, je pars.' (smooth!)","id":"c-position-in-sentence","term":"Position in Sentence","definition":"Sequential connectors usually start sentences. Prepositions go before nouns.","example":"D'abord, je pars (First, I leave). Je pars après le cours (I leave after class)."]" → "["id":"c-temporal-prepositions","term":"Temporal Prepositions","definition":"Words that show when or for how long something happens - used with nouns","example":"pendant des heures (for hours), avant le cours (before class), après le travail (after work); Après le travail, je bois un café (After work, I have a coffee)","id":"c-time-phrases","term":"Time Phrases","definition":"Short phrases that say when or how often","example":"une fois (once), cette année (this year), en ce moment (right now)","id":"c-sequential-connectors","term":"Sequential Connectors","definition":"Words that show the order of actions - connect sentences smoothly","example":"D'abord, je mange. Ensuite, je pars. Finalement, j'arrive. (First, I eat. Then, I leave. Finally, I arrive.)","id":"c-building-smooth-narratives","term":"Building Smooth Narratives","definition":"Use these words to tell stories and describe routines naturally","example":"Before: 'Je mange. Je pars.' (choppy) After: 'D'abord, je mange. Ensuite, je pars.' (smooth!)","id":"c-position-in-sentence","term":"Position in Sentence","definition":"Sequential connectors usually start sentences. Prepositions go before nouns.","example":"D'abord, je pars (First, I leave). Je pars après le cours (I leave after class)."]"
+- `concepts` "["id":"c-temporal-prepositions","term":"Temporal Prepositions","definition":"Words that show when or for how long something happens - used with nouns","example":"pendant des heures (for hours), avant le cours (before class), après le dîner (after dinner)","id":"c-sequential-connectors","term":"Sequential Connectors","definition":"Words that show the order of actions - connect sentences smoothly","example":"D'abord, je mange. Ensuite, je pars. Finalement, j'arrive. (First, I eat. Then, I leave. Finally, I arrive.)","id":"c-building-smooth-narratives","term":"Building Smooth Narratives","definition":"Use these words to tell stories and describe routines naturally","example":"Before: 'Je mange. Je pars.' (choppy) After: 'D'abord, je mange. Ensuite, je pars.' (smooth!)","id":"c-position-in-sentence","term":"Position in Sentence","definition":"Sequential connectors usually start sentences. Prepositions go before nouns.","example":"D'abord, je pars (First, I leave). Je pars après le cours (I leave after class)."]" → "["id":"c-temporal-prepositions","term":"Before, after, during","definition":"These words go before a noun to say when something happens or how long it lasts.","examples":["fr":"Après le travail, je bois un café.","en":"After work, I have a coffee.","fr":"Avant le cours, j'étudie.","en":"Before class, I study.","fr":"J'étudie pendant une heure.","en":"I study for an hour."],"id":"c-time-phrases","term":"When and how often","definition":"Short phrases that say when something happens or how often.","examples":["fr":"En ce moment, je suis à Paris.","en":"Right now I'm in Paris.","fr":"Cette année, j'apprends le français.","en":"This year I'm learning French.","fr":"J'ai mangé là-bas une fois.","en":"I ate there once."],"id":"c-sequential-connectors","term":"First, then, finally","definition":"These words put actions in order. They usually start the sentence.","examples":["fr":"D'abord, je mange.","en":"First, I eat.","fr":"Ensuite, je pars.","en":"Then I leave.","fr":"Finalement, j'arrive.","en":"Finally, I arrive."],"id":"c-building-smooth-narratives","term":"Telling things in order","definition":"Without these words, short sentences sound choppy. With them, they sound like a story.","examples":["fr":"Je mange. Je pars.","en":"I eat. I leave.","note":"choppy","fr":"D'abord, je mange. Ensuite, je pars.","en":"First I eat. Then I leave.","note":"smooth"],"id":"c-position-in-sentence","term":"Where these words go","definition":"Words for order usually start the sentence. Words like avant and après go before a noun.","examples":["fr":"D'abord, je pars.","en":"First, I leave.","fr":"Je pars après le cours.","en":"I leave after class.","fr":"Je suis ici depuis ce matin.","en":"I've been here since this morning."]]"
 
 **2024-05-21-reflexive-pronouns**
 
+- `concepts[0].term` "Reflexive Pronouns" → "Reflexive pronouns"
+- `concepts[0].definition` "Pronouns that refer back to the subject - 'myself', 'yourself', 'himself', etc." → "A reflexive pronoun points back to the subject, like myself or yourself in English."
+- `concepts[0].examples` "(none)" → "["fr":"Je me lave.","en":"I wash myself.","fr":"Tu te lèves ?","en":"Are you getting up?","fr":"Il se prépare.","en":"He's getting ready."]"
+- `concepts[0].example` ""je me lave (I wash myself), tu te lèves (you get yourself up), il se prépare (he prepares himself)"" → "(removed)"
+- `concepts[1].term` "Parallel to Object Pronouns" → "Like object pronouns"
+- `concepts[1].definition` "Same forms as object pronouns, but refer back to the subject" → "The forms are the same as the object pronouns. The difference is who they point to."
+- `concepts[1].examples` "(none)" → "["fr":"Il me voit.","en":"He sees me.","note":"an object pronoun","fr":"Je me vois.","en":"I see myself.","note":"a reflexive pronoun"]"
+- `concepts[1].example` ""Object: il me voit (he sees me). Reflexive: je me vois (I see myself)"" → "(removed)"
+- `concepts[2].term` "Position: Before the Verb" → "Before the verb"
+- `concepts[2].definition` "Reflexive pronouns go BEFORE the conjugated verb, just like object pronouns" → "The reflexive pronoun goes right before the verb, like an object pronoun."
+- `concepts[2].examples` "(none)" → "["fr":"Tu te lèves.","en":"You get up.","fr":"Elle se lave.","en":"She's washing.","fr":"Je ne me lave pas.","en":"I'm not washing.","note":"with ne … pas, it stays before the verb"]"
+- `concepts[2].example` ""je me lave (not je lave me), tu te lèves (not tu lèves te)"" → "(removed)"
+- `concepts[3].term` "The Reflexive Pronoun Set" → "One pronoun for each person"
+- `concepts[3].definition` "me (myself), te (yourself), se (himself/herself/oneself), nous (ourselves), vous (yourselves), se (themselves)" → "Each subject has its own reflexive pronoun. se works for he, she and they."
+- `concepts[3].layout` "(none)" → ""forms""
+- `concepts[3].examples` "(none)" → "["fr":"je me lave","en":"I wash","fr":"tu te laves","en":"you wash","fr":"il se lave","en":"he washes","fr":"nous nous lavons","en":"we wash","fr":"vous vous lavez","en":"you wash","fr":"ils se lavent","en":"they wash"]"
+- `concepts[3].example` ""Each pronoun matches a subject: je → me, tu → te, il/elle → se, nous → nous, vous → vous, ils/elles → se"" → "(removed)"
 - `items[3].instruction` "Which reflexive pronoun goes with 'elle'?" → "Which reflexive pronoun goes with 'elle'? The sentence means "her name is Marie"."
 - `items[3].shown` "elle ... habille (she gets dressed)" → "elle ... appelle Marie"
 - `items[6].instruction` "Which reflexive pronoun goes with 'ils'?" → "Which reflexive pronoun goes with 'ils'? The sentence means "they meet up"."
@@ -3328,30 +3345,146 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-05-22-s-appeler**
 
-- `concepts[0].example` "Je m'appelle Marie (I call myself Marie = My name is Marie), Comment tu t'appelles? (What do you call yourself? = What's your name?)" → "Je m'appelle Marie (I call myself Marie = My name is Marie), Comment tu t'appelles? (What do you call yourself? = What's your name?), Mon frère s'appelle Paul (My brother's name is Paul)"
-- `concepts[1].term` "This should've been in Unit 1!" → "The Most Basic Introduction"
+- `concepts[0].term` "s'appeler = to be called / to call oneself" → "s'appeler = to be called"
+- `concepts[0].definition` "THE way to say your name in French! Literally 'to call oneself'" → "The verb for saying a name. Literally, it means to call yourself."
+- `concepts[0].examples` "(none)" → "["fr":"Je m'appelle Marie.","en":"My name is Marie.","fr":"Comment tu t'appelles ?","en":"What's your name?","fr":"Mon frère s'appelle Paul.","en":"My brother's name is Paul."]"
+- `concepts[0].example` ""Je m'appelle Marie (I call myself Marie = My name is Marie), Comment tu t'appelles? (What do you call yourself? = What's your name?)"" → "(removed)"
+- `concepts[1].term` "This should've been in Unit 1!" → "Introducing yourself"
+- `concepts[1].definition` "You've been waiting to learn this - the most basic introduction!" → "With s'appeler you can say who you are and ask someone's name."
+- `concepts[1].examples` "(none)" → "["fr":"Bonjour, je m'appelle Marie.","en":"Hello, my name is Marie.","fr":"Comment vous vous appelez ?","en":"What's your name?","note":"to someone you call vous","fr":"Elle s'appelle Sophie.","en":"Her name is Sophie."]"
+- `concepts[1].example` ""Now you can finally properly introduce yourself in French!"" → "(removed)"
+- `concepts[2].term` "Reflexive Pattern" → "me becomes m'"
+- `concepts[2].definition` "Uses reflexive pronouns: je m'appelle, tu t'appelles, il s'appelle" → "Before a vowel, me and te drop their e."
+- `concepts[2].examples` "(none)" → "["fr":"Je m'appelle Paul.","en":"My name is Paul.","fr":"Tu t'appelles Pierre ?","en":"Is your name Pierre?"]"
+- `concepts[2].example` ""Notice the elision: je m'appelle (not je me appelle), tu t'appelles (not tu te appelles)"" → "(removed)"
+- `concepts[3].term` "Regular -ER verb conjugation" → "The forms of s'appeler"
+- `concepts[3].definition` "Once you know the reflexive pronouns, the verb part is easy - regular -ER pattern!" → "The endings are the -er endings. The forms for we and you write one l, the others two."
+- `concepts[3].layout` "(none)" → ""forms""
+- `concepts[3].examples` "(none)" → "["fr":"je m'appelle","en":"my name is","fr":"tu t'appelles","en":"your name is","fr":"il s'appelle","en":"his name is","fr":"nous nous appelons","en":"our names are","fr":"vous vous appelez","en":"your name is","fr":"ils s'appellent","en":"their names are"]"
+- `concepts[3].example` ""appelle, appelles, appelle, appelons, appelez, appellent"" → "(removed)"
+
+**2024-05-19-morning-routine**
+
+- `concepts[0].definition` "First action of the day - reflexive because you wake yourself up" → "A reflexive verb: you wake yourself up."
+- `concepts[0].examples` "(none)" → "["fr":"Je me réveille à sept heures.","en":"I wake up at seven.","fr":"Tu te réveilles tôt ?","en":"Do you wake up early?"]"
+- `concepts[0].example` ""je me réveille à 7h (I wake up at 7am), tu te réveilles tôt (you wake up early)"" → "(removed)"
+- `concepts[1].term` "se lever = to get up / to stand up" → "se lever = to get up"
+- `concepts[1].definition` "After waking, you get yourself up - natural sequence!" → "Once you are awake, you get up. The e becomes è in je me lève."
+- `concepts[1].examples` "(none)" → "["fr":"Elle se lève à huit heures.","en":"She gets up at eight.","fr":"Tu te lèves tard.","en":"You get up late.","fr":"Nous nous levons tôt.","en":"We get up early."]"
+- `concepts[1].example` ""je me lève à 7h30 (I get up at 7:30), tu te lèves tard (you get up late)"" → "(removed)"
+- `concepts[2].term` "Telling Your Morning Story" → "Your morning, in order"
+- `concepts[2].definition` "Now you can describe your morning routine with temporal words!" → "Put an order word before each verb."
+- `concepts[2].examples` "(none)" → "["fr":"D'abord, je me réveille. Ensuite, je me lève.","en":"First, I wake up. Then I get up."]"
+- `concepts[2].example` ""D'abord, je me réveille. Ensuite, je me lève. (First, I wake up. Then, I get up.)"" → "(removed)"
+- `concepts[3].term` "Asking About Morning Routines" → "Asking about someone's morning"
+- `concepts[3].definition` "Common questions about daily schedules" → "Two questions about when someone starts the day."
+- `concepts[3].examples` "(none)" → "["fr":"À quelle heure tu te réveilles ?","en":"What time do you wake up?","fr":"Tu te lèves tôt ?","en":"Do you get up early?"]"
+- `concepts[3].example` ""À quelle heure tu te réveilles? (What time do you wake up?), Tu te lèves tôt? (Do you get up early?)"" → "(removed)"
 
 **2024-05-17-getting-ready**
 
 - `vocabulary[1].word_id` "je-me-lave-fr.i-wash-myself" → "je-me-lave-fr"
-- `concepts[2].example` "je me prépare pour le cours (I get ready for class), on se prépare (we get ready)" → "je me prépare pour le cours (I get ready for class), je me prépare tôt le matin (I get ready early in the morning), on se prépare (we get ready)"
+- `concepts[0].term` "se laver = to wash oneself" → "se laver = to wash"
+- `concepts[0].definition` "Personal hygiene - wash yourself" → "A reflexive verb: you wash yourself."
+- `concepts[0].examples` "(none)" → "["fr":"Je me lave le matin.","en":"I wash in the morning.","fr":"Tu te laves ?","en":"Are you washing?"]"
+- `concepts[0].example` ""je me lave (I wash myself), tu te laves (you wash yourself)"" → "(removed)"
+- `concepts[1].definition` "Put clothes on yourself - daily essential!" → "A reflexive verb for putting your clothes on."
+- `concepts[1].examples` "(none)" → "["fr":"Je m'habille.","en":"I'm getting dressed.","fr":"Elle s'habille bien.","en":"She dresses well."]"
+- `concepts[1].example` ""je m'habille (I get dressed), elle s'habille bien (she dresses well)"" → "(removed)"
+- `concepts[2].term` "se préparer = to get ready / to prepare oneself" → "se préparer = to get ready"
+- `concepts[2].definition` "General preparation - for school, work, going out" → "Getting ready for school, for work or to go out."
+- `concepts[2].examples` "(none)" → "["fr":"Je me prépare pour le cours.","en":"I'm getting ready for class.","fr":"Je me prépare tôt le matin.","en":"I get ready early in the morning.","fr":"On se prépare.","en":"We're getting ready."]"
+- `concepts[2].example` ""je me prépare pour le cours (I get ready for class), on se prépare (we get ready)"" → "(removed)"
+- `concepts[3].term` "Complete Morning Sequence" → "A whole morning"
+- `concepts[3].definition` "Now you can tell your entire morning story!" → "Order words and reflexive verbs together tell a whole morning."
+- `concepts[3].examples` "(none)" → "["fr":"D'abord, je me réveille.","en":"First, I wake up.","fr":"Ensuite, je me lève.","en":"Then I get up.","fr":"Après, je me lave.","en":"After that, I wash.","fr":"Puis, je m'habille.","en":"Then I get dressed.","fr":"Finalement, je me prépare.","en":"Finally, I get ready."]"
+- `concepts[3].example` ""D'abord, je me réveille. Ensuite, je me lève. Après, je me lave. Puis, je m'habille. Finalement, je me prépare."" → "(removed)"
 
 **2024-05-16-daily-reflexives**
 
-- `concepts[2].example` "je me dépêche (I'm hurrying), dépêche-toi! (hurry up!)" → "je me dépêche (I'm hurrying), je me dépêche, je suis en retard (I'm hurrying, I'm late), dépêche-toi! (hurry up!)"
+- `concepts[0].definition` "Recall memories - important mental action" → "Put de before what you remember."
+- `concepts[0].examples` "(none)" → "["fr":"Je me souviens de ça.","en":"I remember that.","fr":"Tu te souviens ?","en":"Do you remember?"]"
+- `concepts[0].example` ""je me souviens de ça (I remember that), tu te souviens? (do you remember?)"" → "(removed)"
+- `concepts[1].term` "s'amuser = to have fun / to enjoy oneself" → "s'amuser = to have fun"
+- `concepts[1].definition` "Enjoying yourself - social/emotional" → "A reflexive verb for enjoying yourself."
+- `concepts[1].examples` "(none)" → "["fr":"Je m'amuse.","en":"I'm having fun.","fr":"On s'amuse bien.","en":"We're having a good time."]"
+- `concepts[1].example` ""je m'amuse (I'm having fun), on s'amuse bien (we're having a good time)"" → "(removed)"
+- `concepts[2].term` "se dépêcher = to hurry / to rush" → "se dépêcher = to hurry"
+- `concepts[2].definition` "Moving quickly - time pressure!" → "A reflexive verb for moving fast when time is short."
+- `concepts[2].examples` "(none)" → "["fr":"Je me dépêche.","en":"I'm hurrying.","fr":"Je me dépêche, je suis en retard.","en":"I'm hurrying, I'm late.","fr":"Tu te dépêches ?","en":"Are you hurrying?"]"
+- `concepts[2].example` ""je me dépêche (I'm hurrying), dépêche-toi! (hurry up!)"" → "(removed)"
 
 **2024-06-07-reflexive-past**
 
-- `concepts[3].example` "Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé." → "Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé. J'étais en retard, donc je me suis dépêché."
+- `concepts[0].term` "Reflexive Verbs ALWAYS use être in Past" → "Reflexive verbs take être"
+- `concepts[0].definition` "CRITICAL: ALL reflexive verbs use être (never avoir) in passé composé" → "In the past, every reflexive verb uses être, never avoir."
+- `concepts[0].examples` "(none)" → "["fr":"Je me suis lavé.","en":"I washed.","fr":"Elle s'est levée.","en":"She got up.","fr":"On s'est amusé.","en":"We had fun."]"
+- `concepts[0].example` ""je me suis lavé (I washed myself - uses être), elle s'est levée (she got up - uses être)"" → "(removed)"
+- `concepts[1].term` "Agreement with Subject" → "The ending agrees"
+- `concepts[1].definition` "Past participle agrees with the subject (like all être verbs)" → "As with other verbs that take être, the past participle agrees with the subject."
+- `concepts[1].examples` "(none)" → "["fr":"Je me suis réveillé.","en":"I woke up.","note":"a man speaking","fr":"Je me suis réveillée.","en":"I woke up.","note":"a woman speaking","fr":"Ils se sont levés.","en":"They got up.","fr":"Elles se sont levées.","en":"They got up.","note":"all women"]"
+- `concepts[1].example` ""je me suis réveillé (masc), je me suis réveillée (fem), ils se sont levés (masc pl), elles se sont levées (fem pl)"" → "(removed)"
+- `concepts[2].term` "Pronoun Position" → "The pronoun before être"
+- `concepts[2].definition` "Reflexive pronoun stays BEFORE the auxiliary être" → "The reflexive pronoun comes before the form of être."
+- `concepts[2].examples` "(none)" → "["fr":"Je me suis levé.","en":"I got up.","fr":"Tu t'es lavé ?","en":"Did you wash?","fr":"Ils se sont habillés.","en":"They got dressed."]"
+- `concepts[2].example` ""je me suis levé (not je suis me levé), tu t'es lavé (not tu es te lavé)"" → "(removed)"
+- `concepts[3].term` "Telling Past Routines" → "What you did this morning"
+- `concepts[3].definition` "Now you can describe what you did this morning!" → "The same order words work in the past."
+- `concepts[3].examples` "(none)" → "["fr":"Ce matin, je me suis réveillé à sept heures.","en":"This morning I woke up at seven.","fr":"Ensuite, je me suis levé.","en":"Then I got up.","fr":"Après, je me suis lavé.","en":"After that, I washed.","fr":"J'étais en retard, donc je me suis dépêché.","en":"I was late, so I hurried."]"
+- `concepts[3].example` ""Ce matin, je me suis réveillé à 7h. Ensuite, je me suis levé. Après, je me suis lavé."" → "(removed)"
+
+**2024-06-06-reciprocal-reflexives**
+
+- `concepts[0].term` "Reciprocal = Each Other" → "Each other"
+- `concepts[0].definition` "Plural reflexive pronouns can mean 'each other' - mutual action!" → "With a plural subject, the reflexive pronoun can mean each other."
+- `concepts[0].examples` "(none)" → "["fr":"Nous nous aimons.","en":"We love each other.","fr":"Ils se regardent.","en":"They look at each other."]"
+- `concepts[0].example` ""nous nous aimons (we love each other), ils se regardent (they look at each other)"" → "(removed)"
+- `concepts[1].term` "Only with Plural Subjects" → "Plural subjects only"
+- `concepts[1].definition` "You need nous, vous, ils, elles, or on to have 'each other'" → "Each other needs at least two people, so the subject is plural, or on meaning we."
+- `concepts[1].examples` "(none)" → "["fr":"Nous nous parlons.","en":"We talk to each other.","fr":"Ils se connaissent.","en":"They know each other.","fr":"Vous vous comprenez.","en":"You understand each other."]"
+- `concepts[1].example` ""nous nous parlons (we talk to each other), ils se connaissent (they know each other)"" → "(removed)"
+- `concepts[2].term` "Same Form, Different Meaning" → "Ourselves or each other"
+- `concepts[2].definition` "The reflexive form is the same - context tells you if it's 'ourselves' or 'each other'" → "The form is the same for both meanings. The situation tells you which one is meant."
+- `concepts[2].examples` "(none)" → "["fr":"Nous nous préparons.","en":"We're getting ready.","note":"or: we're getting each other ready","fr":"Ils se voient.","en":"They see each other.","note":"or: they see themselves"]"
+- `concepts[2].example` ""nous nous préparons (we prepare ourselves OR we prepare each other - context!)"" → "(removed)"
+- `concepts[3].term` "Common Reciprocal Expressions" → "Seeing and talking to each other"
+- `concepts[3].definition` "Very common in relationships and social contexts" → "You hear these between friends all the time."
+- `concepts[3].examples` "(none)" → "["fr":"On se voit demain.","en":"See you tomorrow.","fr":"Ils se parlent.","en":"They talk to each other."]"
+- `concepts[3].example` ""on se voit demain (we'll see each other tomorrow), ils se parlent (they talk to each other)"" → "(removed)"
 
 **2024-05-13-commands-tu**
 
-- `concepts[0].example` "Mange! (Eat!), Parle! (Speak!), Va! (Go!)" → "Mange! (Eat!), Parle! (Speak!), Va! (Go!), Pars tôt! (Leave early!)"
-- `concepts[3].example` "To a friend: Mange! (Eat!), Écoute! (Listen!), Viens! (Come!)" → "To a friend: Mange! (Eat!), Écoute! (Listen!), Viens! (Come!), Viens, on est en retard! (Come on, we're late!)"
+- `concepts[0].term` "Imperative Mood = Commands" → "Telling someone to do something"
+- `concepts[0].definition` "Tell someone to do something - no subject pronoun needed!" → "A command has no subject pronoun. The verb starts the sentence."
+- `concepts[0].examples` "(none)" → "["fr":"Mange !","en":"Eat!","fr":"Parle !","en":"Speak!","fr":"Pars tôt !","en":"Leave early!"]"
+- `concepts[0].example` ""Mange! (Eat!), Parle! (Speak!), Va! (Go!)"" → "(removed)"
+- `concepts[1].term` "tu form: Just Drop the Pronoun!" → "The tu form without tu"
+- `concepts[1].definition` "For most verbs, use the tu form without 'tu'" → "For most verbs, a command to a friend is the tu form with no pronoun."
+- `concepts[1].examples` "(none)" → "["fr":"Viens !","en":"Come!","note":"from tu viens","fr":"Prends !","en":"Take it!","note":"from tu prends","fr":"Pars !","en":"Leave!","note":"from tu pars"]"
+- `concepts[1].example` ""tu manges → Mange! (you eat → Eat!), tu parles → Parle! (you speak → Speak!)"" → "(removed)"
+- `concepts[2].term` "-ER verbs: Drop the final -s" → "-er verbs drop the s"
+- `concepts[2].definition` "For -ER verbs only, also drop the final -s in tu command form" → "For -er verbs, the command also drops the final s of the tu form."
+- `concepts[2].examples` "(none)" → "["fr":"Mange !","en":"Eat!","note":"from tu manges","fr":"Parle !","en":"Speak!","note":"from tu parles","fr":"Pense !","en":"Think!","note":"from tu penses"]"
+- `concepts[2].example` ""tu manges → Mange! (not Manges!), tu parles → Parle! (not Parles!)"" → "(removed)"
+- `concepts[3].term` "Use with Friends and Family" → "For friends and family"
+- `concepts[3].definition` "tu commands are informal - use with people you'd call 'tu'" → "Use these commands with people you call tu."
+- `concepts[3].examples` "(none)" → "["fr":"Écoute !","en":"Listen!","fr":"Regarde !","en":"Look!","fr":"Viens, on est en retard !","en":"Come on, we're late!"]"
+- `concepts[3].example` ""To a friend: Mange! (Eat!), Écoute! (Listen!), Viens! (Come!)"" → "(removed)"
 
 **2024-05-14-commands-vous**
 
-- `concepts[0].example` "To strangers: Mangez! To a group: Venez! (Come!)" → "To strangers: Mangez! To a group: Venez ! On se voit demain ! (Come! See you tomorrow!)"
+- `concepts[0].term` "vous Commands = Formal or Groups" → "Commands with vous"
+- `concepts[0].definition` "Use vous form for strangers, bosses, or multiple people" → "Use the vous form with a stranger, a boss or a group of people."
+- `concepts[0].examples` "(none)" → "["fr":"Écoutez !","en":"Listen!","note":"to a class","fr":"Venez ! On se voit demain !","en":"Come! See you tomorrow!","note":"to a group"]"
+- `concepts[0].example` ""To strangers: Mangez! To a group: Venez! (Come!)"" → "(removed)"
+- `concepts[1].term` "Easy Formation: Drop the Pronoun!" → "The vous form without vous"
+- `concepts[1].definition` "Just use vous form without saying 'vous'" → "Take the vous form and leave out the pronoun."
+- `concepts[1].examples` "(none)" → "["fr":"Mangez !","en":"Eat!","note":"from vous mangez","fr":"Parlez !","en":"Speak!","note":"from vous parlez"]"
+- `concepts[1].example` ""vous mangez → Mangez!, vous parlez → Parlez!"" → "(removed)"
+- `concepts[2].term` "Keep the -ez Ending" → "The -ez stays"
+- `concepts[2].definition` "Unlike tu commands, vous commands keep all letters!" → "Unlike the tu command, the vous command keeps its ending."
+- `concepts[2].examples` "(none)" → "["fr":"Venez !","en":"Come!","fr":"Prenez !","en":"Take it!","fr":"Regardez !","en":"Look!"]"
+- `concepts[2].example` ""Mangez! (not Mange!), Parlez! (not Parle!)"" → "(removed)"
 
 **2024-05-18-irregular-commands**
 
@@ -3363,12 +3496,12 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[7].note` "aller command - vous form" → "aller command, vous form"
 - `vocabulary[10].note` "faire command - tu form" → "faire command, tu form"
 - `vocabulary[11].note` "faire command - vous form" → "faire command, vous form"
-- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly, so they are worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!), an extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois là à six heures! (Be there at six!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), N'ayez pas peur! (Don't be afraid!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)","id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café or chez Paul. In a statement it goes before the verb. In a positive command it goes after the verb, which is where the y in vas-y comes from.","example":"Tu vas au café ? Oui, j'y vais. (Are you going to the café? Yes, I'm going there.)"]"
+- `concepts` "["id":"c-most-common-verbs-irregular","term":"Most Common Verbs = Irregular Commands","definition":"être, avoir, aller, and faire don't follow normal command patterns","example":"Sois gentil! (Be nice!), Aie courage! (Have courage!), Va là-bas! (Go over there!)","id":"c-must-memorize-these","term":"Must Memorize These","definition":"These irregular forms are used constantly - worth memorizing!","example":"Vas-y! (Go ahead! / Go for it!) - extremely common phrase","id":"c-etre-commands","term":"être Commands","definition":"tu: Sois! vous: Soyez! nous: Soyons!","example":"Sois sage! (Be good!), Soyez gentil! (Be kind!)","id":"c-avoir-commands","term":"avoir Commands","definition":"tu: Aie! vous: Ayez! nous: Ayons!","example":"Aie confiance! (Have confidence!), Ayez patience! (Have patience!)","id":"c-aller-commands","term":"aller Commands","definition":"tu: Va! vous: Allez! nous: Allons! Special: Vas-y!","example":"Va là-bas! (Go over there!), Allons-y! (Let's go!), Vas-y! (Go ahead!)","id":"c-faire-commands","term":"faire Commands","definition":"tu: Fais! vous: Faites! nous: Faisons!","example":"Fais attention! (Pay attention! / Be careful!), Faites ça! (Do that!)"]" → "["id":"c-most-common-verbs-irregular","term":"Irregular commands","definition":"The most common verbs have command forms of their own.","examples":["fr":"Sois gentil !","en":"Be nice!","fr":"Aie courage !","en":"Have courage!","fr":"Va là-bas !","en":"Go over there!","fr":"Fais attention !","en":"Be careful!"],"id":"c-must-memorize-these","term":"Vas-y !","definition":"A very common phrase for go ahead or go for it. The y means there.","examples":["fr":"Vas-y !","en":"Go ahead!","fr":"Allons-y !","en":"Let's go!"],"id":"c-etre-commands","term":"Commands of être","definition":"The command forms of être are irregular.","examples":["fr":"Sois gentil !","en":"Be nice!","note":"to a friend","fr":"Soyez gentil !","en":"Be kind!","note":"to someone you call vous","fr":"Soyons gentils !","en":"Let's be nice!","fr":"Sois là à six heures !","en":"Be there at six!"],"id":"c-avoir-commands","term":"Commands of avoir","definition":"The command forms of avoir are irregular too.","examples":["fr":"Aie confiance !","en":"Have confidence!","note":"to a friend","fr":"N'ayez pas peur !","en":"Don't be afraid!","note":"to someone you call vous","fr":"Ayons confiance !","en":"Let's be confident!"],"id":"c-aller-commands","term":"Commands of aller","definition":"To a friend, the command is va, with no s. Before y, the s comes back: vas-y.","examples":["fr":"Va là-bas !","en":"Go over there!","fr":"Allons-y !","en":"Let's go!","fr":"Vas-y !","en":"Go ahead!"],"id":"c-faire-commands","term":"Commands of faire","definition":"Say fais to a friend and faites to someone you call vous.","examples":["fr":"Fais attention !","en":"Be careful!","fr":"Faites ça !","en":"Do that!"],"id":"c-y-there","term":"y: there","definition":"y stands for a place you already named, like au café. It goes before the verb, but after the verb in a positive command.","examples":["fr":"Tu vas au café ? Oui, j'y vais.","en":"Are you going to the café? Yes, I'm going there.","fr":"Non, je n'y vais pas.","en":"No, I'm not going there.","fr":"Nous y allons.","en":"We're going there."]]"
 
 **2024-05-12-commands-pronouns**
 
 - `can_do` "["Give commands with object pronouns (Give it to me!)","Use pronouns with affirmative and negative commands","Form complex commands like 'Don't do it!' or 'Look at me!'"]" → "["Give commands with object pronouns (Give it to me!)","Use pronouns with affirmative and negative commands","Form complex commands like 'Don't do it!' or 'Look at me!'","Say some or how many with en: j'en veux, j'en ai trois."]"
-- `concepts` "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)"]" → "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!), Regarde-moi et fais attention! (Look at me and pay attention!), Amuse-toi bien! (Have fun!), Dépêche-toi, habille-toi! (Hurry up, get dressed!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)","id":"c-en-some","term":"en: some, of them","definition":"en stands for something you already named with du, de la, de l', des or a number. In a statement it goes before the verb. In a positive command it goes after the verb, with a hyphen, like the other pronouns.","example":"Tu veux du café ? Oui, j'en veux. (Do you want some coffee? Yes, I want some.), Prends-en ! (Take some!)"]"
+- `concepts` "["id":"c-affirmative-commands-attach-with","term":"Affirmative Commands: Attach with Hyphens","definition":"In positive commands, pronouns attach to the verb with hyphens","example":"Donne-le! (Give it!), Regarde-moi! (Look at me!), Écoute-le! (Listen to him!)","id":"c-negative-commands-separate-with","term":"Negative Commands: Separate with ne...pas","definition":"In negative commands, pronouns go BEFORE the verb (normal position)","example":"Ne le fais pas! (Don't do it!), Ne me regarde pas! (Don't look at me!)","id":"c-pronoun-order-in-commands","term":"Pronoun Order in Commands","definition":"Object pronouns: le/la/les come first, then moi/toi","example":"Donne-le-moi! (Give it to me! - le before moi), Montre-la-moi! (Show it to me!)"]" → "["id":"c-affirmative-commands-attach-with","term":"Pronouns after the verb","definition":"In a positive command, the pronoun comes after the verb, joined with a hyphen.","examples":["fr":"Donne-le !","en":"Give it!","fr":"Regarde-moi !","en":"Look at me!","fr":"Écoute-le !","en":"Listen to him!","fr":"Amuse-toi bien !","en":"Have fun!","fr":"Dépêche-toi, habille-toi !","en":"Hurry up, get dressed!","fr":"Regarde-moi et fais attention !","en":"Look at me and pay attention!"],"id":"c-negative-commands-separate-with","term":"Pronouns in a negative command","definition":"With ne … pas, the pronoun goes back before the verb.","examples":["fr":"Ne le fais pas !","en":"Don't do it!","fr":"Ne me regarde pas !","en":"Don't look at me!"],"id":"c-pronoun-order-in-commands","term":"Two pronouns","definition":"With two pronouns, the one for the thing comes first, then moi.","examples":["fr":"Donne-le-moi !","en":"Give it to me!","fr":"Montre-la-moi !","en":"Show it to me!"],"id":"c-en-some","term":"en: some, of them","definition":"en stands for some of a thing you already named. It goes before the verb, but after it in a positive command.","examples":["fr":"Tu veux du café ? Oui, j'en veux.","en":"Do you want some coffee? Yes, I'd like some.","fr":"Oui, j'en ai trois.","en":"Yes, I have three of them.","fr":"Prends-en !","en":"Take some!"]]"
 
 **2024-05-20-reading-8**
 

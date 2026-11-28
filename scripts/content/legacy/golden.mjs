@@ -795,10 +795,17 @@ export function handFixCheck({ course, handFixes = {}, handFixed = new Map(), li
     if (!m || !handFixed.has(d.module_key)) return false;
     let p;
     if (d.path === 'title' || d.path === 'description') return holds(d.module_key, d.path, m[d.path]);
-    // An added card: the module holds the recorded concepts and no live card maps to the new one.
+    // An added card: the module holds the recorded concepts and no live card maps to the new one. The compare pairs
+    // cards by term, so once every term is rewritten by hand (plan 2026-11-27-concept-cards-structured) it pairs them
+    // by place, and the card it calls added may be a live one moved down by the cards added before it.
     if ((p = /^concepts\[\+(\d+)\]$/.exec(d.path)) && d.live === undefined) {
-      const c = m.concepts?.[+p[1]];
-      return !!c && !liveConcept(d.module_key, c.id) && holds(d.module_key, 'concepts', m.concepts);
+      const at = +p[1], c = m.concepts?.[at];
+      if (!c || !holds(d.module_key, 'concepts', m.concepts)) return false;
+      if (!liveConcept(d.module_key, c.id)) return true;
+      // A live card in a later place than its live one, moved by exactly the cards added by hand before it.
+      const liveAt = Number(Object.entries(liveIds[d.module_key]?.concepts ?? {}).find(([, id]) => id === c.id)?.[0]);
+      const addedBefore = m.concepts.slice(0, at).filter((x) => !liveConcept(d.module_key, x.id)).length;
+      return Number.isInteger(liveAt) && addedBefore > 0 && at - liveAt === addedBefore;
     }
     if (/^concepts(\[|$)/.test(d.path)) return holds(d.module_key, 'concepts', m.concepts);
     // An added exercise: the item it is drawn from was added by hand and is recorded.

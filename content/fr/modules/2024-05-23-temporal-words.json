@@ -69,33 +69,96 @@
   "concepts": [
     {
       "id": "c-temporal-prepositions",
-      "term": "Temporal Prepositions",
-      "definition": "Words that show when or for how long something happens - used with nouns",
-      "example": "{pendant des heures} (for hours), {avant le cours} (before class), {après le travail} (after work); {Après le travail, je bois un café} (After work, I have a coffee)"
+      "term": "Before, after, during",
+      "definition": "These words go before a noun to say when something happens or how long it lasts.",
+      "examples": [
+        {
+          "fr": "Après le travail, je bois un café.",
+          "en": "After work, I have a coffee."
+        },
+        {
+          "fr": "Avant le cours, j'étudie.",
+          "en": "Before class, I study."
+        },
+        {
+          "fr": "J'étudie pendant une heure.",
+          "en": "I study for an hour."
+        }
+      ]
     },
     {
       "id": "c-time-phrases",
-      "term": "Time Phrases",
-      "definition": "Short phrases that say when or how often",
-      "example": "{une fois} (once), {cette année} (this year), {en ce moment} (right now)"
+      "term": "When and how often",
+      "definition": "Short phrases that say when something happens or how often.",
+      "examples": [
+        {
+          "fr": "En ce moment, je suis à Paris.",
+          "en": "Right now I'm in Paris."
+        },
+        {
+          "fr": "Cette année, j'apprends le français.",
+          "en": "This year I'm learning French."
+        },
+        {
+          "fr": "J'ai mangé là-bas une fois.",
+          "en": "I ate there once."
+        }
+      ]
     },
     {
       "id": "c-sequential-connectors",
-      "term": "Sequential Connectors",
-      "definition": "Words that show the order of actions - connect sentences smoothly",
-      "example": "{D'abord}, {je mange. Ensuite}, {je pars. Finalement}, {j'arrive.} (First, I eat. Then, I leave. Finally, I arrive.)"
+      "term": "First, then, finally",
+      "definition": "These words put actions in order. They usually start the sentence.",
+      "examples": [
+        {
+          "fr": "D'abord, je mange.",
+          "en": "First, I eat."
+        },
+        {
+          "fr": "Ensuite, je pars.",
+          "en": "Then I leave."
+        },
+        {
+          "fr": "Finalement, j'arrive.",
+          "en": "Finally, I arrive."
+        }
+      ]
     },
     {
       "id": "c-building-smooth-narratives",
-      "term": "Building Smooth Narratives",
-      "definition": "Use these words to tell stories and describe routines naturally",
-      "example": "Before: '{Je mange. Je pars.}' (choppy) After: '{D'abord, je mange. Ensuite, je pars.}' (smooth!)"
+      "term": "Telling things in order",
+      "definition": "Without these words, short sentences sound choppy. With them, they sound like a story.",
+      "examples": [
+        {
+          "fr": "Je mange. Je pars.",
+          "en": "I eat. I leave.",
+          "note": "choppy"
+        },
+        {
+          "fr": "D'abord, je mange. Ensuite, je pars.",
+          "en": "First I eat. Then I leave.",
+          "note": "smooth"
+        }
+      ]
     },
     {
       "id": "c-position-in-sentence",
-      "term": "Position in Sentence",
-      "definition": "Sequential connectors usually start sentences. Prepositions go before nouns.",
-      "example": "{D'abord}, {je pars} (First, I leave). {Je pars après le cours} (I leave after class)."
+      "term": "Where these words go",
+      "definition": "Words for order usually start the sentence. Words like {avant} and {après} go before a noun.",
+      "examples": [
+        {
+          "fr": "D'abord, je pars.",
+          "en": "First, I leave."
+        },
+        {
+          "fr": "Je pars après le cours.",
+          "en": "I leave after class."
+        },
+        {
+          "fr": "Je suis ici depuis ce matin.",
+          "en": "I've been here since this morning."
+        }
+      ]
     }
   ],
   "items": [

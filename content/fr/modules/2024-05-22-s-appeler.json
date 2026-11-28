@@ -86,27 +86,89 @@
   "concepts": [
     {
       "id": "c-s-appeler-to-be",
-      "term": "{s'appeler} = to be called / to call oneself",
-      "definition": "THE way to say your name in French! Literally 'to call oneself'",
-      "example": "{Je m'appelle Marie} (I call myself Marie = My name is Marie), {Comment tu t'appelles?} (What do you call yourself? = What's your name?), {Mon frère s'appelle Paul} (My brother's name is Paul)"
+      "term": "{s'appeler} = to be called",
+      "definition": "The verb for saying a name. Literally, it means to call yourself.",
+      "examples": [
+        {
+          "fr": "Je m'appelle Marie.",
+          "en": "My name is Marie."
+        },
+        {
+          "fr": "Comment tu t'appelles ?",
+          "en": "What's your name?"
+        },
+        {
+          "fr": "Mon frère s'appelle Paul.",
+          "en": "My brother's name is Paul."
+        }
+      ]
     },
     {
       "id": "c-this-should-ve-been",
-      "term": "The Most Basic Introduction",
-      "definition": "You've been waiting to learn this - the most basic introduction!",
-      "example": "Now you can finally properly introduce yourself in French!"
+      "term": "Introducing yourself",
+      "definition": "With {s'appeler} you can say who you are and ask someone's name.",
+      "examples": [
+        {
+          "fr": "Bonjour, je m'appelle Marie.",
+          "en": "Hello, my name is Marie."
+        },
+        {
+          "fr": "Comment vous vous appelez ?",
+          "en": "What's your name?",
+          "note": "to someone you call {vous}"
+        },
+        {
+          "fr": "Elle s'appelle Sophie.",
+          "en": "Her name is Sophie."
+        }
+      ]
     },
     {
       "id": "c-reflexive-pattern",
-      "term": "Reflexive Pattern",
-      "definition": "Uses reflexive pronouns: je m'appelle, tu t'appelles, il s'appelle",
-      "example": "Notice the elision: {je m'appelle} (not je me appelle), {tu t'appelles} (not tu te appelles)"
+      "term": "{me} becomes {m'}",
+      "definition": "Before a vowel, {me} and {te} drop their e.",
+      "examples": [
+        {
+          "fr": "Je m'appelle Paul.",
+          "en": "My name is Paul."
+        },
+        {
+          "fr": "Tu t'appelles Pierre ?",
+          "en": "Is your name Pierre?"
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb-conjugation",
-      "term": "Regular -ER verb conjugation",
-      "definition": "Once you know the reflexive pronouns, the verb part is easy - regular -ER pattern!",
-      "example": "{appelle}, {appelles}, appelle, {appelons}, {appelez}, {appellent}"
+      "term": "The forms of {s'appeler}",
+      "definition": "The endings are the -er endings. The forms for we and you write one l, the others two.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je m'appelle",
+          "en": "my name is"
+        },
+        {
+          "fr": "tu t'appelles",
+          "en": "your name is"
+        },
+        {
+          "fr": "il s'appelle",
+          "en": "his name is"
+        },
+        {
+          "fr": "nous nous appelons",
+          "en": "our names are"
+        },
+        {
+          "fr": "vous vous appelez",
+          "en": "your name is"
+        },
+        {
+          "fr": "ils s'appellent",
+          "en": "their names are"
+        }
+      ]
     }
   ],
   "items": [

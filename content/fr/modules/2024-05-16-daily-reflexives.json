@@ -94,20 +94,51 @@
     {
       "id": "c-se-souvenir-to-remember",
       "term": "{se souvenir} = to remember",
-      "definition": "Recall memories - important mental action",
-      "example": "{je me souviens de ça} (I remember that), {tu te souviens?} (do you remember?)"
+      "definition": "Put {de} before what you remember.",
+      "examples": [
+        {
+          "fr": "Je me souviens de ça.",
+          "en": "I remember that."
+        },
+        {
+          "fr": "Tu te souviens ?",
+          "en": "Do you remember?"
+        }
+      ]
     },
     {
       "id": "c-s-amuser-to-have",
-      "term": "{s'amuser} = to have fun / to enjoy oneself",
-      "definition": "Enjoying yourself - social/emotional",
-      "example": "{je m'amuse} (I'm having fun), {on s'amuse bien} (we're having a good time)"
+      "term": "{s'amuser} = to have fun",
+      "definition": "A reflexive verb for enjoying yourself.",
+      "examples": [
+        {
+          "fr": "Je m'amuse.",
+          "en": "I'm having fun."
+        },
+        {
+          "fr": "On s'amuse bien.",
+          "en": "We're having a good time."
+        }
+      ]
     },
     {
       "id": "c-se-depecher-to-hurry",
-      "term": "{se dépêcher} = to hurry / to rush",
-      "definition": "Moving quickly - time pressure!",
-      "example": "{je me dépêche} (I'm hurrying), {je me dépêche, je suis en retard} (I'm hurrying, I'm late), {dépêche-toi!} (hurry up!)"
+      "term": "{se dépêcher} = to hurry",
+      "definition": "A reflexive verb for moving fast when time is short.",
+      "examples": [
+        {
+          "fr": "Je me dépêche.",
+          "en": "I'm hurrying."
+        },
+        {
+          "fr": "Je me dépêche, je suis en retard.",
+          "en": "I'm hurrying, I'm late."
+        },
+        {
+          "fr": "Tu te dépêches ?",
+          "en": "Are you hurrying?"
+        }
+      ]
     }
   ],
   "items": [

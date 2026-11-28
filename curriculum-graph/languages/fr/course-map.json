@@ -608,16 +608,6 @@
   },
   "2024-05-18-irregular-commands": {
     "overrides": {
-      "2024-05-18-irregular-commands#concepts/c-aller-commands/example": {
-        "ignore": [
-          "fr:cx:pronoun.y"
-        ]
-      },
-      "2024-05-18-irregular-commands#concepts/c-must-memorize-these/example": {
-        "ignore": [
-          "fr:cx:pronoun.y"
-        ]
-      },
       "2024-05-18-irregular-commands#irreg-cmd-4": {
         "ignore": [
           "fr:cx:pronoun.y"
