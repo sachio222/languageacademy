@@ -82,39 +82,130 @@
   "concepts": [
     {
       "id": "c-avoir-eu-had",
-      "term": "{avoir} → {eu} (had)",
-      "definition": "Irregular past participle: j'ai eu, tu as eu, il a eu",
-      "example": "{J'ai eu le temps} (I had time), {J'ai eu de la chance} (I had luck/I was lucky)"
+      "term": "{avoir}: {j'ai eu}",
+      "definition": "The participle of {avoir} is {eu}, said like the French letter u.",
+      "examples": [
+        {
+          "fr": "Hier, j'ai eu le temps.",
+          "en": "Yesterday I had time."
+        },
+        {
+          "fr": "Nous avons eu de la chance.",
+          "en": "We were lucky."
+        },
+        {
+          "fr": "Ils n'ont pas eu le temps.",
+          "en": "They didn't have time."
+        }
+      ]
     },
     {
       "id": "c-etre-ete-was-been",
-      "term": "{être} → {été} (was/been)",
-      "definition": "Irregular past participle: j'ai été, tu as été, il a été",
-      "example": "{J'ai été content} (I was happy), {J'ai été à Paris} (I went to Paris - informal)"
+      "term": "{être}: {j'ai été}",
+      "definition": "The participle of {être} is {été}, and it takes {avoir}.",
+      "examples": [
+        {
+          "fr": "Tu as été content ?",
+          "en": "Were you happy?"
+        },
+        {
+          "fr": "Elle a été très occupée.",
+          "en": "She was very busy."
+        },
+        {
+          "fr": "J'ai été au cinéma hier.",
+          "en": "I went to the cinema yesterday.",
+          "note": "in everyday speech, {j'ai été} can mean I went"
+        }
+      ]
     },
     {
       "id": "c-faire-fait-did-made",
-      "term": "{faire} → {fait} (did/made)",
-      "definition": "Irregular past participle: j'ai fait, tu as fait, il a fait",
-      "example": "{J'ai fait ça} (I did that), {J'ai fait mes devoirs} (I did my homework), {J'ai fait un gâteau} (I made a cake)"
+      "term": "{faire}: {j'ai fait}",
+      "definition": "The participle of {faire} is {fait}.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que tu as fait ?",
+          "en": "What did you do?"
+        },
+        {
+          "fr": "Elle a fait ses devoirs.",
+          "en": "She did her homework."
+        },
+        {
+          "fr": "J'ai fait un gâteau.",
+          "en": "I made a cake."
+        }
+      ]
     },
     {
       "id": "c-voir-vu-saw",
-      "term": "{voir} → {vu} (saw)",
-      "definition": "Irregular past participle: j'ai vu, tu as vu, il a vu",
-      "example": "{J'ai vu le film} (I saw the movie), {Tu as vu Marie?} (Did you see Marie?), {J'ai vu Paul, il est assis au café} (I saw Paul, he's sitting at the café)"
+      "term": "{voir}: {j'ai vu}",
+      "definition": "The participle of {voir} is {vu}.",
+      "examples": [
+        {
+          "fr": "J'ai vu le film hier.",
+          "en": "I saw the movie yesterday."
+        },
+        {
+          "fr": "Tu as vu Marie ?",
+          "en": "Did you see Marie?"
+        },
+        {
+          "fr": "Nous avons vu un bon film.",
+          "en": "We saw a good movie."
+        },
+        {
+          "fr": "J'ai vu Paul, il est assis au café.",
+          "en": "I saw Paul, he's sitting at the café."
+        }
+      ]
     },
     {
       "id": "c-memory-tip",
-      "term": "Memory tip",
-      "definition": "These 4 verbs are the most common - memorize them!",
-      "example": "{eu}, {été}, {fait}, {vu} - practice these until automatic"
+      "term": "Learn these four first",
+      "definition": "These four participles come up in almost every story about the past.",
+      "examples": [
+        {
+          "fr": "J'ai eu raison.",
+          "en": "I was right."
+        },
+        {
+          "fr": "On a été à Paris.",
+          "en": "We went to Paris."
+        },
+        {
+          "fr": "On a fait attention.",
+          "en": "We were careful."
+        },
+        {
+          "fr": "Est-ce que vous avez vu le problème ?",
+          "en": "Did you see the problem?"
+        }
+      ]
     },
     {
       "id": "c-all-use-avoir-as",
-      "term": "All use AVOIR as auxiliary",
-      "definition": "These 4 verbs all use '{avoir}' (not être) in passé composé",
-      "example": "{j'ai eu}, {j'ai été}, {j'ai fait}, {j'ai vu} (all with '{avoir}')"
+      "term": "All four take {avoir}",
+      "definition": "Like most verbs, these four make their past with {avoir}.",
+      "examples": [
+        {
+          "fr": "j'ai eu",
+          "en": "I had"
+        },
+        {
+          "fr": "j'ai été",
+          "en": "I was"
+        },
+        {
+          "fr": "j'ai fait",
+          "en": "I did, I made"
+        },
+        {
+          "fr": "j'ai vu",
+          "en": "I saw"
+        }
+      ]
     }
   ],
   "items": [

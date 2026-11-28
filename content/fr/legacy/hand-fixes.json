@@ -12474,39 +12474,105 @@
     "concepts": [
       {
         "id": "c-parce-que-because-most",
-        "term": "{parce que} - because (most common)",
-        "definition": "Answers '{pourquoi?}' - used in all situations",
-        "example": "{Je mange parce que j'ai faim} (I eat because I'm hungry), {Je ne viens pas parce que je suis malade} (I'm not coming because I'm sick)"
+        "term": "{parce que} = because",
+        "definition": "The everyday word for because. It answers a question with {pourquoi}.",
+        "examples": [
+          {
+            "fr": "Pourquoi tu ne viens pas ? Parce que je suis fatigué.",
+            "en": "Why aren't you coming? Because I'm tired."
+          },
+          {
+            "fr": "Je ne viens pas parce que je suis malade.",
+            "en": "I'm not coming because I'm sick."
+          },
+          {
+            "fr": "Je mange parce que j'ai faim.",
+            "en": "I'm eating because I'm hungry."
+          }
+        ]
       },
       {
         "id": "c-car-for-because-formal",
-        "term": "{car} - for, because (formal/literary)",
-        "definition": "More formal than '{parce que}', CANNOT start a sentence, common in writing",
-        "example": "{On étudie le français car c'est beau} (We study French for it's beautiful), {Je prends un café car je suis fatigué} (I'm having a coffee for I'm tired)"
+        "term": "{car} = because, in writing",
+        "definition": "{car} also means because, but it sounds more formal and is common in writing. It never starts a sentence.",
+        "examples": [
+          {
+            "fr": "On étudie le français car c'est beau.",
+            "en": "We study French because it's beautiful."
+          },
+          {
+            "fr": "Je prends un café car je suis fatigué.",
+            "en": "I'm having a coffee because I'm tired."
+          }
+        ]
       },
       {
         "id": "c-puisque-since-seeing-as",
-        "term": "{puisque} - since, seeing as",
-        "definition": "Indicates logical conclusion or something already known, slightly formal",
-        "example": "{Puisque tu es là, on commence} (Since you're here, we'll start), {Puisque c'est vrai, je te crois} (Since it's true, I believe you)"
+        "term": "{puisque} = since, seeing as",
+        "definition": "Use {puisque} when the reason is something you both already know.",
+        "examples": [
+          {
+            "fr": "Puisque tu es là, on commence.",
+            "en": "Since you're here, let's start."
+          },
+          {
+            "fr": "Puisque c'est vrai, je te crois.",
+            "en": "Since it's true, I believe you."
+          }
+        ]
       },
       {
         "id": "c-comme-as-since-at",
-        "term": "{comme} - as, since (at START of sentence)",
-        "definition": "Explains reason, MUST come at beginning of sentence",
-        "example": "{Comme il fait beau, on va au parc} (As it's nice, we're going to the park), {Comme je suis fatigué, je vais dormir} (As I'm tired, I'm going to sleep)"
+        "term": "{comme} = as, since",
+        "definition": "{comme} gives the reason at the start of a sentence.",
+        "examples": [
+          {
+            "fr": "Comme il fait beau, on va au parc.",
+            "en": "As it's nice out, we're going to the park."
+          },
+          {
+            "fr": "Comme je suis fatigué, je vais dormir.",
+            "en": "As I'm tired, I'm going to sleep."
+          },
+          {
+            "fr": "Comme c'est ton anniversaire, on va au restaurant.",
+            "en": "As it's your birthday, we're going to a restaurant."
+          }
+        ]
       },
       {
         "id": "c-grace-a-thanks-to",
-        "term": "{grâce à} - thanks to (positive reason + NOUN)",
-        "definition": "Positive attribution, followed by a noun or pronoun",
-        "example": "{Grâce à toi}, {je comprends mieux} (Thanks to you, I understand better), {Grâce au professeur}, {je parle bien} (Thanks to the teacher, I speak well)"
+        "term": "{grâce à} = thanks to",
+        "definition": "Use {grâce à} before a noun or a pronoun, for a reason that helped.",
+        "examples": [
+          {
+            "fr": "Grâce à toi, je comprends mieux.",
+            "en": "Thanks to you, I understand better."
+          },
+          {
+            "fr": "Je comprends grâce au professeur.",
+            "en": "I understand thanks to the teacher."
+          }
+        ]
       },
       {
         "id": "c-a-cause-de-because",
-        "term": "{à cause de} - because of (negative/neutral + NOUN)",
-        "definition": "Often negative or neutral, followed by a noun (NOT a clause!)",
-        "example": "{À cause de la musique, je ne peux pas travailler} (Because of the music, I can't work), {À cause du bus, je suis en retard} (Because of the bus, I'm late)"
+        "term": "{à cause de} = because of",
+        "definition": "Use {à cause de} before a noun, usually for a reason that caused a problem.",
+        "examples": [
+          {
+            "fr": "À cause de la musique, je ne peux pas travailler.",
+            "en": "Because of the music, I can't work."
+          },
+          {
+            "fr": "Je suis en retard à cause du bus.",
+            "en": "I'm late because of the bus."
+          },
+          {
+            "fr": "Je suis fatigué à cause du travail.",
+            "en": "I'm tired because of work."
+          }
+        ]
       }
     ],
     "items/i-a-cause": {
@@ -12679,6 +12745,147 @@
     }
   },
   "2024-05-27-imparfait-all-verbs": {
+    "concepts": [
+      {
+        "id": "c-the-golden-rule-nous",
+        "term": "The imparfait starts from {nous}",
+        "definition": "Take the {nous} form of the present, drop -ons and add the imparfait endings. Every verb works this way except {être}.",
+        "examples": [
+          {
+            "fr": "Nous parlons français.",
+            "en": "We speak French."
+          },
+          {
+            "fr": "Je parlais français tous les jours.",
+            "en": "I used to speak French every day."
+          }
+        ]
+      },
+      {
+        "id": "c-step-1-find-the",
+        "term": "Step 1: the {nous} form",
+        "definition": "Start from the present {nous} form of the verb.",
+        "examples": [
+          {
+            "fr": "nous parlons",
+            "en": "we speak"
+          },
+          {
+            "fr": "nous faisons",
+            "en": "we do"
+          },
+          {
+            "fr": "nous prenons",
+            "en": "we take"
+          }
+        ]
+      },
+      {
+        "id": "c-step-2-remove-ons",
+        "term": "Step 2: drop -ons",
+        "definition": "Take off the -ons, and what is left is the stem. The stem of {nous faisons} is fais-.",
+        "examples": [
+          {
+            "fr": "Il faisait beau.",
+            "en": "It was nice out.",
+            "note": "stem fais-"
+          },
+          {
+            "fr": "Je prenais le bus tous les jours.",
+            "en": "I used to take the bus every day.",
+            "note": "stem pren-"
+          },
+          {
+            "fr": "On allait au café chaque samedi.",
+            "en": "We used to go to the café every Saturday.",
+            "note": "stem all-"
+          }
+        ]
+      },
+      {
+        "id": "c-step-3-add-imparfait",
+        "term": "Step 3: add the endings",
+        "definition": "The endings are the same for every verb. Four of the six forms sound the same.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je parlais",
+            "en": "I was speaking"
+          },
+          {
+            "fr": "tu parlais",
+            "en": "you were speaking"
+          },
+          {
+            "fr": "il parlait",
+            "en": "he was speaking"
+          },
+          {
+            "fr": "nous parlions",
+            "en": "we were speaking"
+          },
+          {
+            "fr": "vous parliez",
+            "en": "you were speaking"
+          },
+          {
+            "fr": "ils parlaient",
+            "en": "they were speaking"
+          }
+        ]
+      },
+      {
+        "id": "c-one-exception-etre",
+        "term": "{être}: the one exception",
+        "definition": "{être} uses the stem ét- instead. The endings are the same.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "j'étais",
+            "en": "I was"
+          },
+          {
+            "fr": "tu étais",
+            "en": "you were"
+          },
+          {
+            "fr": "il était",
+            "en": "he was"
+          },
+          {
+            "fr": "nous étions",
+            "en": "we were"
+          },
+          {
+            "fr": "vous étiez",
+            "en": "you were"
+          },
+          {
+            "fr": "ils étaient",
+            "en": "they were"
+          }
+        ]
+      },
+      {
+        "id": "c-when-to-use-imparfait",
+        "term": "When to use the imparfait",
+        "definition": "Use it to describe how things were and what you used to do.",
+        "examples": [
+          {
+            "fr": "Quand j'étais jeune, je jouais avec mon chien.",
+            "en": "When I was young, I used to play with my dog."
+          },
+          {
+            "fr": "Il y avait beaucoup de gens.",
+            "en": "There were a lot of people."
+          },
+          {
+            "fr": "Elle travaillait beaucoup.",
+            "en": "She used to work a lot."
+          }
+        ]
+      }
+    ],
     "items/i-etais-2": {
       "id": "i-etais-2",
       "type": "gapfill",
@@ -12722,51 +12929,127 @@
     "concepts": [
       {
         "id": "c-pres-de-near-close",
-        "term": "{près de} - near, close to",
-        "definition": "Indicates proximity, nearness",
-        "example": "{Le café est près de l'école} (The café is near the school), {J'habite près d'ici} (I live near here)"
+        "term": "{près de} = near",
+        "definition": "Says that something is close. Before a vowel, {de} becomes {d'}.",
+        "examples": [
+          {
+            "fr": "Le café est près de l'école.",
+            "en": "The café is near the school."
+          },
+          {
+            "fr": "J'habite près d'ici.",
+            "en": "I live near here."
+          }
+        ]
       },
       {
         "id": "c-loin-de-far-from",
-        "term": "{loin de} - far from",
-        "definition": "Indicates distance, remoteness",
-        "example": "{La gare est loin de la maison} (The station is far from the house), {C'est loin d'ici?} (Is it far from here?)"
+        "term": "{loin de} = far from",
+        "definition": "Says that something is a long way away.",
+        "examples": [
+          {
+            "fr": "La gare est loin de la maison.",
+            "en": "The station is far from the house."
+          },
+          {
+            "fr": "C'est loin d'ici ?",
+            "en": "Is it far from here?"
+          },
+          {
+            "fr": "Le parc est loin de la ville.",
+            "en": "The park is far from the city."
+          }
+        ]
       },
       {
         "id": "c-a-cote-de-next",
-        "term": "{à côté de} - next to, beside",
-        "definition": "Indicates immediate proximity, side-by-side position",
-        "example": "{Je suis à côté de toi} (I'm next to you), {Le restaurant est à côté du cinéma} (The restaurant is next to the cinema)"
+        "term": "{à côté de} = next to",
+        "definition": "Says that something is right beside something else.",
+        "examples": [
+          {
+            "fr": "Je suis à côté de toi.",
+            "en": "I'm next to you."
+          },
+          {
+            "fr": "Le restaurant est à côté du cinéma.",
+            "en": "The restaurant is next to the cinema."
+          }
+        ]
       },
       {
         "id": "c-en-face-de-across",
-        "term": "{en face de} - across from, opposite",
-        "definition": "Indicates facing position, directly opposite",
-        "example": "{Ma maison est en face du parc} (My house is across from the park), {Il est assis en face de moi} (He's sitting across from me)"
+        "term": "{en face de} = across from",
+        "definition": "Says that something faces something else.",
+        "examples": [
+          {
+            "fr": "Ma maison est en face du parc.",
+            "en": "My house is across from the park."
+          },
+          {
+            "fr": "Il est assis en face de moi.",
+            "en": "He's sitting across from me."
+          }
+        ]
       },
       {
         "id": "c-autour-de-around",
-        "term": "{autour de} - around",
-        "definition": "Indicates surrounding position",
-        "example": "{Les gens sont autour de la table} (People are around the table), {Autour de la ville} (Around the city)"
+        "term": "{autour de} = around",
+        "definition": "Says that something is all around something else.",
+        "examples": [
+          {
+            "fr": "Les gens sont autour de la table.",
+            "en": "People are around the table."
+          },
+          {
+            "fr": "Il y a un jardin autour de la maison.",
+            "en": "There's a garden around the house."
+          }
+        ]
       },
       {
         "id": "c-le-long-de-along",
-        "term": "{le long de} - along",
-        "definition": "Indicates position along a length",
-        "example": "{Le long de la rue} (Along the street), {On marche le long de la rivière} (We walk along the river)"
+        "term": "{le long de} = along",
+        "definition": "Says that something follows the length of a street, a road or a river.",
+        "examples": [
+          {
+            "fr": "On marche le long de la rivière.",
+            "en": "We walk along the river."
+          },
+          {
+            "fr": "Il y a des arbres le long de la route.",
+            "en": "There are trees along the road."
+          }
+        ]
       },
       {
         "id": "c-au-milieu-de-in",
-        "term": "{au milieu de} - in the middle of",
-        "definition": "Indicates center position",
-        "example": "{Au milieu de la place} (In the middle of the square), {Il est au milieu} (He's in the middle)"
+        "term": "{au milieu de} = in the middle of",
+        "definition": "Says that something is in the center of a place.",
+        "examples": [
+          {
+            "fr": "Il y a une fontaine au milieu de la place.",
+            "en": "There's a fountain in the middle of the square."
+          },
+          {
+            "fr": "La table est au milieu de la cuisine.",
+            "en": "The table is in the middle of the kitchen."
+          }
+        ]
       },
       {
         "id": "c-au-bout-de-at",
-        "term": "{au bout de} - at the end of",
-        "definition": "Indicates end position",
-        "example": "{Au bout de la rue} (At the end of the street), {C'est au bout} (It's at the end)"
+        "term": "{au bout de} = at the end of",
+        "definition": "Says that something is at the far end of a place.",
+        "examples": [
+          {
+            "fr": "Le restaurant est au bout de la rue.",
+            "en": "The restaurant is at the end of the street."
+          },
+          {
+            "fr": "La porte est au bout du jardin.",
+            "en": "The door is at the end of the garden."
+          }
+        ]
       }
     ],
     "items/i-a-cote-de-2": {
@@ -12840,6 +13123,152 @@
     }
   },
   "2024-05-29-passe-compose-agreement": {
+    "concepts": [
+      {
+        "id": "c-agreement-rule-with-etre",
+        "term": "Agreement with {être}",
+        "definition": "With {être}, the participle matches the subject: -e for feminine, -s for plural.",
+        "examples": [
+          {
+            "fr": "Il est allé au café.",
+            "en": "He went to the café."
+          },
+          {
+            "fr": "Elle est allée au café.",
+            "en": "She went to the café.",
+            "note": "add -e"
+          },
+          {
+            "fr": "Ils sont allés au café.",
+            "en": "They went to the café.",
+            "note": "add -s"
+          },
+          {
+            "fr": "Elles sont allées au café.",
+            "en": "They went to the café.",
+            "note": "all women: add -es"
+          }
+        ]
+      },
+      {
+        "id": "c-masculine-singular-no-change",
+        "term": "One man: no ending",
+        "definition": "For a man, with {il}, the participle has no ending.",
+        "examples": [
+          {
+            "fr": "Mon frère est allé en France.",
+            "en": "My brother went to France."
+          },
+          {
+            "fr": "Ton ami est venu hier ?",
+            "en": "Did your friend come yesterday?"
+          },
+          {
+            "fr": "Il est parti tôt.",
+            "en": "He left early."
+          }
+        ]
+      },
+      {
+        "id": "c-feminine-singular-add-e",
+        "term": "One woman: add -e",
+        "definition": "For a woman, with {elle}, add -e. You do not hear it.",
+        "examples": [
+          {
+            "fr": "Marie est venue hier.",
+            "en": "Marie came yesterday."
+          },
+          {
+            "fr": "Ma mère est allée au marché.",
+            "en": "My mother went to the market."
+          },
+          {
+            "fr": "Elle est montée dans le bus.",
+            "en": "She got on the bus."
+          }
+        ]
+      },
+      {
+        "id": "c-masculine-plural-add-s",
+        "term": "More than one: add -s",
+        "definition": "For a group, add -s, as with {ils} or {nous}. You do not hear it either.",
+        "examples": [
+          {
+            "fr": "Nous sommes partis tôt.",
+            "en": "We left early."
+          },
+          {
+            "fr": "Paul et Marc sont rentrés tard.",
+            "en": "Paul and Marc came home late."
+          },
+          {
+            "fr": "Ils sont venus hier.",
+            "en": "They came yesterday."
+          }
+        ]
+      },
+      {
+        "id": "c-feminine-plural-add-es",
+        "term": "Only women: add -es",
+        "definition": "For a group of women, add -es.",
+        "examples": [
+          {
+            "fr": "Mes sœurs sont allées à Paris.",
+            "en": "My sisters went to Paris."
+          },
+          {
+            "fr": "Les filles sont arrivées hier soir.",
+            "en": "The girls arrived last night."
+          },
+          {
+            "fr": "Nous sommes restées à la maison.",
+            "en": "We stayed at home.",
+            "note": "said by women"
+          },
+          {
+            "fr": "Vous êtes allées où, les filles ?",
+            "en": "Where did you go, girls?"
+          }
+        ]
+      },
+      {
+        "id": "c-mixed-group-use-masculine",
+        "term": "Men and women together: add -s",
+        "definition": "When a group has men and women, use the masculine -s.",
+        "examples": [
+          {
+            "fr": "Pierre et Marie sont partis ensemble.",
+            "en": "Pierre and Marie left together."
+          },
+          {
+            "fr": "Pierre et Marie sont allés au café.",
+            "en": "Pierre and Marie went to the café."
+          }
+        ]
+      },
+      {
+        "id": "c-remember-only-with-etre",
+        "term": "Only with {être}",
+        "definition": "With {avoir}, the participle does not change for the subject.",
+        "examples": [
+          {
+            "fr": "Elle est allée au café.",
+            "en": "She went to the café.",
+            "note": "with {être}: add -e"
+          },
+          {
+            "fr": "Elle a étudié le français.",
+            "en": "She studied French.",
+            "note": "with {avoir}: no -e"
+          },
+          {
+            "fr": "Elles ont parlé français.",
+            "en": "They spoke French.",
+            "note": "with {avoir}: no -es"
+          }
+        ]
+      }
+    ],
     "items/i-sont-rentres": {
       "id": "i-sont-rentres",
       "type": "gapfill",
@@ -12897,39 +13326,134 @@
     "concepts": [
       {
         "id": "c-passe-compose-avoir-past",
-        "term": "Passé Composé = avoir + past participle",
-        "definition": "Compound past tense for completed actions: auxiliary verb '{avoir}' + past participle",
-        "example": "{j'ai parlé} (I spoke), {tu as mangé} (you ate), {il a étudié} (he studied)"
+        "term": "The passé composé with {avoir}",
+        "definition": "The passé composé tells what happened. It is the present of {avoir} followed by a past participle.",
+        "examples": [
+          {
+            "fr": "J'ai parlé avec Marie.",
+            "en": "I spoke with Marie."
+          },
+          {
+            "fr": "Tu as mangé au restaurant.",
+            "en": "You ate at the restaurant."
+          },
+          {
+            "fr": "Elle a étudié le français.",
+            "en": "She studied French."
+          }
+        ]
       },
       {
         "id": "c-regular-er-verbs-e",
-        "term": "Regular -ER verbs → -é past participle",
-        "definition": "Remove -er, add -é: parler → parlé, manger → mangé, étudier → étudié",
-        "example": "{parler} → {parlé} (spoken), {manger} → {mangé} (eaten), {aimer} → {aimé} (loved)"
+        "term": "-er verbs: the participle ends in -é",
+        "definition": "Take off the -er and add -é. It sounds the same as the infinitive.",
+        "examples": [
+          {
+            "fr": "J'ai parlé français.",
+            "en": "I spoke French.",
+            "note": "from {parler}"
+          },
+          {
+            "fr": "J'ai mangé au restaurant.",
+            "en": "I ate at the restaurant.",
+            "note": "from {manger}"
+          },
+          {
+            "fr": "J'ai cherché mon livre.",
+            "en": "I looked for my book.",
+            "note": "from {chercher}"
+          }
+        ]
       },
       {
         "id": "c-formation-j-ai-past",
-        "term": "Formation: j'ai + past participle",
-        "definition": "Use present tense of avoir + past participle ending in -é",
-        "example": "{j'ai parlé}, {tu as parlé}, {il}/{elle a parlé}, {nous avons parlé}, {vous avez parlé}, {ils}/{elles ont parlé}"
+        "term": "Every person",
+        "definition": "Only {avoir} changes with the person. The participle stays the same.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "j'ai parlé",
+            "en": "I spoke"
+          },
+          {
+            "fr": "tu as parlé",
+            "en": "you spoke"
+          },
+          {
+            "fr": "il a parlé",
+            "en": "he spoke"
+          },
+          {
+            "fr": "nous avons parlé",
+            "en": "we spoke"
+          },
+          {
+            "fr": "vous avez parlé",
+            "en": "you spoke"
+          },
+          {
+            "fr": "ils ont parlé",
+            "en": "they spoke"
+          }
+        ]
       },
       {
         "id": "c-negation-ne-pas-around",
-        "term": "Negation: ne...pas around avoir",
-        "definition": "Place ne and pas around the auxiliary verb avoir",
-        "example": "{je n'ai pas parlé} (I didn't speak), {tu n'as pas mangé} (you didn't eat)"
+        "term": "{ne} … {pas} around {avoir}",
+        "definition": "{ne} and {pas} go around the form of {avoir}, and the participle comes after them.",
+        "examples": [
+          {
+            "fr": "Je n'ai pas aimé le film.",
+            "en": "I didn't like the movie."
+          },
+          {
+            "fr": "Tu n'as pas travaillé hier.",
+            "en": "You didn't work yesterday."
+          },
+          {
+            "fr": "Nous n'avons pas mangé.",
+            "en": "We didn't eat."
+          }
+        ]
       },
       {
         "id": "c-questions-inversion-or-est",
-        "term": "Questions: inversion or {Est-ce que}",
-        "definition": "Invert avoir with subject, or use est-ce que",
-        "example": "{As-tu parlé?} (Did you speak?), {Est-ce que tu as mangé?} (Did you eat?)"
+        "term": "Asking about the past",
+        "definition": "Ask with {est-ce que}, or put the form of {avoir} before the subject.",
+        "examples": [
+          {
+            "fr": "Est-ce que tu as mangé ?",
+            "en": "Did you eat?"
+          },
+          {
+            "fr": "As-tu trouvé le livre ?",
+            "en": "Did you find the book?"
+          },
+          {
+            "fr": "Vous avez cherché mon livre ?",
+            "en": "Did you look for my book?",
+            "note": "the voice goes up at the end"
+          }
+        ]
       },
       {
         "id": "c-when-to-use-passe",
-        "term": "When to use Passé Composé",
-        "definition": "For specific completed actions in the past, countable events",
-        "example": "{Hier, j'ai parlé avec Marie} (Yesterday, I spoke with Marie), {J'ai mangé à 8h} (I ate at 8)"
+        "term": "When to use it",
+        "definition": "Use the passé composé for something that happened and is over, often at a time you name.",
+        "examples": [
+          {
+            "fr": "Hier, j'ai parlé français.",
+            "en": "Yesterday I spoke French."
+          },
+          {
+            "fr": "On a regardé un film hier soir.",
+            "en": "We watched a film last night."
+          },
+          {
+            "fr": "J'ai déjà mangé.",
+            "en": "I've already eaten."
+          }
+        ]
       }
     ],
     "items/i-a-regarde": {
@@ -12989,6 +13513,141 @@
     }
   },
   "2024-05-31-passe-compose-etre": {
+    "concepts": [
+      {
+        "id": "c-dr-mrs-vandertramp-mnemonic",
+        "term": "Verbs that take {être}",
+        "definition": "A small group of verbs makes the passé composé with {être}, not {avoir}. Most are about moving somewhere or changing state.",
+        "examples": [
+          {
+            "fr": "Hier, je suis allé au café.",
+            "en": "Yesterday I went to the café."
+          },
+          {
+            "fr": "Je suis tombé.",
+            "en": "I fell."
+          }
+        ]
+      },
+      {
+        "id": "c-formation-etre-past-participle",
+        "term": "{être} and a past participle",
+        "definition": "Use the present of {être}, then the participle.",
+        "layout": "forms",
+        "examples": [
+          {
+            "fr": "je suis allé",
+            "en": "I went"
+          },
+          {
+            "fr": "tu es allé",
+            "en": "you went"
+          },
+          {
+            "fr": "il est allé",
+            "en": "he went"
+          },
+          {
+            "fr": "nous sommes allés",
+            "en": "we went"
+          },
+          {
+            "fr": "vous êtes allés",
+            "en": "you went"
+          },
+          {
+            "fr": "ils sont allés",
+            "en": "they went"
+          }
+        ]
+      },
+      {
+        "id": "c-the-dr-mrs-vandertramp",
+        "term": "The verbs that take {être}",
+        "definition": "English speakers remember them with the name DR MRS VANDERTRAMP, one letter per verb. Many come in opposite pairs, like going in and going out.",
+        "examples": [
+          {
+            "fr": "Elles sont entrées dans le café.",
+            "en": "They went into the café."
+          },
+          {
+            "fr": "Tu es monté dans le bus.",
+            "en": "You got on the bus."
+          },
+          {
+            "fr": "Elle est descendue du train.",
+            "en": "She got off the train."
+          },
+          {
+            "fr": "Il est devenu professeur.",
+            "en": "He became a teacher."
+          }
+        ]
+      },
+      {
+        "id": "c-key-motion-verbs-most",
+        "term": "The ones you will use most",
+        "definition": "Going, coming, leaving and arriving come up in every story.",
+        "examples": [
+          {
+            "fr": "Tu es venu hier ?",
+            "en": "Did you come yesterday?"
+          },
+          {
+            "fr": "Il est parti tôt.",
+            "en": "He left early."
+          },
+          {
+            "fr": "Nous sommes arrivés hier soir.",
+            "en": "We arrived last night."
+          },
+          {
+            "fr": "Je suis resté à la maison.",
+            "en": "I stayed at home."
+          }
+        ]
+      },
+      {
+        "id": "c-agreement-with-subject-important",
+        "term": "The participle agrees",
+        "definition": "With {être}, the participle takes -e for a woman and -s for more than one person.",
+        "examples": [
+          {
+            "fr": "Il est allé au café.",
+            "en": "He went to the café."
+          },
+          {
+            "fr": "Elle est allée au café.",
+            "en": "She went to the café.",
+            "note": "add -e"
+          },
+          {
+            "fr": "Ils sont venus hier.",
+            "en": "They came yesterday.",
+            "note": "add -s"
+          }
+        ]
+      },
+      {
+        "id": "c-negation-ne-pas-around",
+        "term": "{ne} … {pas} around {être}",
+        "definition": "The form of {être} goes between {ne} and {pas}. It works the same way with {avoir}.",
+        "examples": [
+          {
+            "fr": "Elle n'est pas venue.",
+            "en": "She didn't come."
+          },
+          {
+            "fr": "Je ne suis pas allé au café.",
+            "en": "I didn't go to the café."
+          },
+          {
+            "fr": "Il n'est pas parti.",
+            "en": "He didn't leave."
+          }
+        ]
+      }
+    ],
     "items/i-est-venue": {
       "id": "i-est-venue",
       "type": "gapfill",
@@ -13096,39 +13755,263 @@
     "concepts": [
       {
         "id": "c-avoir-eu-had",
-        "term": "{avoir} → {eu} (had)",
-        "definition": "Irregular past participle: j'ai eu, tu as eu, il a eu",
-        "example": "{J'ai eu le temps} (I had time), {J'ai eu de la chance} (I had luck/I was lucky)"
+        "term": "{avoir}: {j'ai eu}",
+        "definition": "The participle of {avoir} is {eu}, said like the French letter u.",
+        "examples": [
+          {
+            "fr": "Hier, j'ai eu le temps.",
+            "en": "Yesterday I had time."
+          },
+          {
+            "fr": "Nous avons eu de la chance.",
+            "en": "We were lucky."
+          },
+          {
+            "fr": "Ils n'ont pas eu le temps.",
+            "en": "They didn't have time."
+          }
+        ]
       },
       {
         "id": "c-etre-ete-was-been",
-        "term": "{être} → {été} (was/been)",
-        "definition": "Irregular past participle: j'ai été, tu as été, il a été",
-        "example": "{J'ai été content} (I was happy), {J'ai été à Paris} (I went to Paris - informal)"
+        "term": "{être}: {j'ai été}",
+        "definition": "The participle of {être} is {été}, and it takes {avoir}.",
+        "examples": [
+          {
+            "fr": "Tu as été content ?",
+            "en": "Were you happy?"
+          },
+          {
+            "fr": "Elle a été très occupée.",
+            "en": "She was very busy."
+          },
+          {
+            "fr": "J'ai été au cinéma hier.",
+            "en": "I went to the cinema yesterday.",
+            "note": "in everyday speech, {j'ai été} can mean I went"
+          }
+        ]
       },
       {
         "id": "c-faire-fait-did-made",
-        "term": "{faire} → {fait} (did/made)",
-        "definition": "Irregular past participle: j'ai fait, tu as fait, il a fait",
-        "example": "{J'ai fait ça} (I did that), {J'ai fait mes devoirs} (I did my homework), {J'ai fait un gâteau} (I made a cake)"
+        "term": "{faire}: {j'ai fait}",
+        "definition": "The participle of {faire} is {fait}.",
+        "examples": [
+          {
+            "fr": "Qu'est-ce que tu as fait ?",
+            "en": "What did you do?"
+          },
+          {
+            "fr": "Elle a fait ses devoirs.",
+            "en": "She did her homework."
+          },
+          {
+            "fr": "J'ai fait un gâteau.",
+            "en": "I made a cake."
+          }
+        ]
       },
       {
         "id": "c-voir-vu-saw",
-        "term": "{voir} → {vu} (saw)",
-        "definition": "Irregular past participle: j'ai vu, tu as vu, il a vu",
-        "example": "{J'ai vu le film} (I saw the movie), {Tu as vu Marie?} (Did you see Marie?), {J'ai vu Paul, il est assis au café} (I saw Paul, he's sitting at the café)"
+        "term": "{voir}: {j'ai vu}",
+        "definition": "The participle of {voir} is {vu}.",
+        "examples": [
+          {
+            "fr": "J'ai vu le film hier.",
+            "en": "I saw the movie yesterday."
+          },
+          {
+            "fr": "Tu as vu Marie ?",
+            "en": "Did you see Marie?"
+          },
+          {
+            "fr": "Nous avons vu un bon film.",
+            "en": "We saw a good movie."
+          },
+          {
+            "fr": "J'ai vu Paul, il est assis au café.",
+            "en": "I saw Paul, he's sitting at the café."
+          }
+        ]
       },
       {
         "id": "c-memory-tip",
-        "term": "Memory tip",
-        "definition": "These 4 verbs are the most common - memorize them!",
-        "example": "{eu}, {été}, {fait}, {vu} - practice these until automatic"
+        "term": "Learn these four first",
+        "definition": "These four participles come up in almost every story about the past.",
+        "examples": [
+          {
+            "fr": "J'ai eu raison.",
+            "en": "I was right."
+          },
+          {
+            "fr": "On a été à Paris.",
+            "en": "We went to Paris."
+          },
+          {
+            "fr": "On a fait attention.",
+            "en": "We were careful."
+          },
+          {
+            "fr": "Est-ce que vous avez vu le problème ?",
+            "en": "Did you see the problem?"
+          }
+        ]
       },
       {
         "id": "c-all-use-avoir-as",
-        "term": "All use AVOIR as auxiliary",
-        "definition": "These 4 verbs all use '{avoir}' (not être) in passé composé",
-        "example": "{j'ai eu}, {j'ai été}, {j'ai fait}, {j'ai vu} (all with '{avoir}')"
+        "term": "All four take {avoir}",
+        "definition": "Like most verbs, these four make their past with {avoir}.",
+        "examples": [
+          {
+            "fr": "j'ai eu",
+            "en": "I had"
+          },
+          {
+            "fr": "j'ai été",
+            "en": "I was"
+          },
+          {
+            "fr": "j'ai fait",
+            "en": "I did, I made"
+          },
+          {
+            "fr": "j'ai vu",
+            "en": "I saw"
+          }
+        ]
+      }
+    ]
+  },
+  "2024-06-02-passe-compose-irregular-2": {
+    "concepts": [
+      {
+        "id": "c-modal-verbs-with-u",
+        "term": "Participles in -u",
+        "definition": "{vouloir} gives {voulu} and {pouvoir} gives {pu}. {devoir} gives {dû}, with an accent.",
+        "examples": [
+          {
+            "fr": "J'ai voulu partir, mais je n'ai pas pu.",
+            "en": "I wanted to leave, but I couldn't."
+          },
+          {
+            "fr": "Tu as pu venir ?",
+            "en": "Were you able to come?"
+          },
+          {
+            "fr": "Elle a dû travailler hier.",
+            "en": "She had to work yesterday."
+          }
+        ]
+      },
+      {
+        "id": "c-dire-dit-said",
+        "term": "{dire}: {j'ai dit}",
+        "definition": "The participle of {dire} is {dit}.",
+        "examples": [
+          {
+            "fr": "J'ai dit oui.",
+            "en": "I said yes."
+          },
+          {
+            "fr": "Qu'est-ce que tu as dit ?",
+            "en": "What did you say?"
+          },
+          {
+            "fr": "On a dit non.",
+            "en": "We said no."
+          }
+        ]
+      },
+      {
+        "id": "c-prendre-family-is-ending",
+        "term": "{prendre} and its family: -is",
+        "definition": "{prendre} gives {pris}, and the verbs built on it end the same way.",
+        "examples": [
+          {
+            "fr": "J'ai pris le bus.",
+            "en": "I took the bus.",
+            "note": "from {prendre}"
+          },
+          {
+            "fr": "Vous avez compris ?",
+            "en": "Did you understand?",
+            "note": "from {comprendre}"
+          },
+          {
+            "fr": "On a appris le français.",
+            "en": "We learned French.",
+            "note": "from {apprendre}"
+          }
+        ]
+      },
+      {
+        "id": "c-mettre-mis-put",
+        "term": "{mettre}: {j'ai mis}",
+        "definition": "The participle of {mettre} is {mis}.",
+        "examples": [
+          {
+            "fr": "J'ai mis mon manteau.",
+            "en": "I put on my coat."
+          },
+          {
+            "fr": "Nous avons mis nos livres sur la table.",
+            "en": "We put our books on the table."
+          },
+          {
+            "fr": "J'ai mis ça là.",
+            "en": "I put that there."
+          }
+        ]
+      },
+      {
+        "id": "c-modal-verbs-infinitive-in",
+        "term": "Wanted to, could, had to",
+        "definition": "After these participles, the second verb stays in the infinitive.",
+        "examples": [
+          {
+            "fr": "J'ai voulu aller au cinéma, mais je n'ai pas eu le temps.",
+            "en": "I wanted to go to the cinema, but I didn't have time."
+          },
+          {
+            "fr": "J'ai pu venir.",
+            "en": "I was able to come."
+          },
+          {
+            "fr": "Elle a dû partir tôt.",
+            "en": "She had to leave early."
+          }
+        ]
+      },
+      {
+        "id": "c-all-use-avoir-as",
+        "term": "All of these take {avoir}",
+        "definition": "Like most verbs, these make their past with {avoir}.",
+        "examples": [
+          {
+            "fr": "j'ai voulu",
+            "en": "I wanted"
+          },
+          {
+            "fr": "j'ai pu",
+            "en": "I could"
+          },
+          {
+            "fr": "j'ai dû",
+            "en": "I had to"
+          },
+          {
+            "fr": "j'ai dit",
+            "en": "I said"
+          },
+          {
+            "fr": "j'ai pris",
+            "en": "I took"
+          },
+          {
+            "fr": "j'ai mis",
+            "en": "I put"
+          }
+        ]
       }
     ]
   },
@@ -13136,39 +14019,106 @@
     "concepts": [
       {
         "id": "c-complete-narrative-structure",
-        "term": "Complete Narrative Structure",
-        "definition": "Combine: 1) Scene-setting (IMP), 2) Events (PC), 3) Causal reasoning (parce que, car), 4) Spatial context (près de, devant)",
-        "example": "{Hier, il faisait beau donc je suis allé au parc près de chez moi. J'étais content parce que j'avais du temps.}"
+        "term": "A complete story",
+        "definition": "Set the scene, say what happened and give the reason.",
+        "examples": [
+          {
+            "fr": "Hier, il faisait beau, donc je suis allé au parc.",
+            "en": "Yesterday it was nice out, so I went to the park."
+          },
+          {
+            "fr": "J'étais content parce que j'avais du temps.",
+            "en": "I was happy because I had time."
+          }
+        ]
       },
       {
         "id": "c-layered-storytelling-pattern",
-        "term": "Layered Storytelling Pattern",
-        "definition": "Background (IMP) → Event (PC) → Reason (parce que) → Next Event (PC)",
-        "example": "{Il faisait beau} (background) {quand je suis sorti} (event). {J'ai décidé d'aller au café} (event) {parce que j'avais faim} (reason)."
+        "term": "Building a story step by step",
+        "definition": "Start with the scene, add an event, then give the reason for the next event.",
+        "examples": [
+          {
+            "fr": "Il faisait beau quand je suis sorti.",
+            "en": "It was nice out when I went out."
+          },
+          {
+            "fr": "J'ai décidé d'aller au café parce que j'avais faim.",
+            "en": "I decided to go to the café because I was hungry."
+          }
+        ]
       },
       {
         "id": "c-rich-scene-setting",
-        "term": "Rich Scene-Setting",
-        "definition": "Use spatial prepositions + imparfait to paint the picture",
-        "example": "{Le café était près de l'école. Il y avait beaucoup de gens. Ils étaient assis autour des tables.}"
+        "term": "Setting the scene",
+        "definition": "Use the imparfait with words for places to paint the picture.",
+        "examples": [
+          {
+            "fr": "Le café était près de l'école.",
+            "en": "The café was near the school."
+          },
+          {
+            "fr": "Il y avait beaucoup de gens.",
+            "en": "There were a lot of people."
+          },
+          {
+            "fr": "Ils étaient assis autour des tables.",
+            "en": "They were sitting around the tables."
+          }
+        ]
       },
       {
         "id": "c-causal-flow-in-narratives",
-        "term": "Causal Flow in Narratives",
-        "definition": "Use donc, parce que, car, comme to connect events logically",
-        "example": "{Comme il faisait beau, je suis sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait faim.}"
+        "term": "Linking events with reasons",
+        "definition": "Words like {donc} and {comme} tie one event to the next.",
+        "examples": [
+          {
+            "fr": "Comme il faisait beau, je suis sorti.",
+            "en": "As it was nice out, I went out."
+          },
+          {
+            "fr": "J'ai vu Marie, donc on a parlé.",
+            "en": "I saw Marie, so we talked."
+          },
+          {
+            "fr": "On est allés au café car on avait faim.",
+            "en": "We went to the café because we were hungry."
+          }
+        ]
       },
       {
         "id": "c-time-and-space-integration",
-        "term": "Time and Space Integration",
-        "definition": "Combine temporal words (d'abord, ensuite) with spatial (près de, devant)",
-        "example": "{D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma. Après, j'ai joué avec mon chien.}"
+        "term": "First, then, after that",
+        "definition": "Put the events in order with {d'abord} and {ensuite}, and say where each one happened.",
+        "examples": [
+          {
+            "fr": "D'abord, je suis allé au café près de l'école.",
+            "en": "First I went to the café near the school."
+          },
+          {
+            "fr": "Ensuite, j'ai vu Marie devant le cinéma.",
+            "en": "Then I saw Marie in front of the cinema."
+          },
+          {
+            "fr": "Après, j'ai joué avec mon chien.",
+            "en": "After that I played with my dog."
+          }
+        ]
       },
       {
         "id": "c-decider-de-commencer-a",
         "term": "A verb, then {de} or {à}, then a second verb",
-        "definition": "Some verbs take a second verb after {de}, like {décider de}. Others take it after {à}, like {commencer à}. The second verb stays in the infinitive, in every tense.",
-        "example": "{J'ai décidé d'aller au café.} (I decided to go to the café.) {Il a commencé à parler.} (He started to speak.)"
+        "definition": "Some verbs take a second verb after {de}, like {décider de}. Others take it after {à}, like {commencer à}.",
+        "examples": [
+          {
+            "fr": "J'ai décidé d'aller au café.",
+            "en": "I decided to go to the café.",
+            "note": "the second verb stays in the infinitive"
+          },
+          {
+            "fr": "Il a commencé à parler.",
+            "en": "He started to speak."
+          }
+        ]
       }
     ],
     "items/i-a-cause-de": {
@@ -13312,45 +14262,125 @@
     "concepts": [
       {
         "id": "c-the-golden-rule",
-        "term": "The Golden Rule",
-        "definition": "PASSÉ COMPOSÉ = Specific completed action (What happened?). IMPARFAIT = Ongoing state/description/habit (How things were/used to be)",
-        "example": "{J'ai mangé} (I ate - specific event) vs Je mangeais (I was eating/used to eat - ongoing or habit)"
+        "term": "Two past tenses",
+        "definition": "The passé composé tells what happened. The imparfait describes how things were or what used to happen.",
+        "examples": [
+          {
+            "fr": "Hier, j'ai mangé au restaurant.",
+            "en": "Yesterday I ate at the restaurant."
+          },
+          {
+            "fr": "D'habitude, je mangeais à la maison.",
+            "en": "I usually ate at home."
+          }
+        ]
       },
       {
         "id": "c-passe-compose-specific-events",
-        "term": "Passé Composé - Specific Events",
-        "definition": "Completed actions, countable events, things that started/stopped, main storyline",
-        "example": "{J'ai vu Marie} (I saw Marie - one time), {Je suis allé au café} (I went to the café - completed)"
+        "term": "Passé composé: what happened",
+        "definition": "Use it for an event that started and finished: the main line of the story.",
+        "examples": [
+          {
+            "fr": "Soudain, j'ai vu Marie.",
+            "en": "Suddenly I saw Marie."
+          },
+          {
+            "fr": "Hier matin, j'ai pris le bus.",
+            "en": "Yesterday morning I took the bus."
+          },
+          {
+            "fr": "À ce moment-là, j'ai compris.",
+            "en": "At that moment, I understood."
+          }
+        ]
       },
       {
         "id": "c-imparfait-background-habits",
-        "term": "Imparfait - Background & Habits",
-        "definition": "Descriptions, ongoing states, repeated habits ('used to'), scene-setting, background information",
-        "example": "{Il faisait beau} (It was nice - description), {Je parlais français tous les jours} (I used to speak French every day - habit)"
+        "term": "Imparfait: the scene and the habits",
+        "definition": "Use it for descriptions, for states that went on and for things you used to do.",
+        "examples": [
+          {
+            "fr": "Il faisait beau.",
+            "en": "It was nice out."
+          },
+          {
+            "fr": "Elle était toujours en retard.",
+            "en": "She was always late."
+          },
+          {
+            "fr": "Je prenais le bus tous les matins.",
+            "en": "I used to take the bus every morning."
+          }
+        ]
       },
       {
         "id": "c-pattern-background-imp-event",
-        "term": "Pattern: Background (IMP) + Event (PC)",
-        "definition": "Use imparfait to set the scene, passé composé for what happened",
-        "example": "{Il faisait beau} (background - IMP) {quand je suis arrivé} (event - PC) = It was nice when I arrived"
+        "term": "The scene, then the event",
+        "definition": "Set the scene in the imparfait, then say what happened in the passé composé.",
+        "examples": [
+          {
+            "fr": "Il faisait beau quand je suis arrivé.",
+            "en": "It was nice out when I arrived."
+          },
+          {
+            "fr": "Je prenais un café quand tu es arrivé.",
+            "en": "I was having a coffee when you arrived."
+          }
+        ]
       },
       {
         "id": "c-time-expressions-help",
-        "term": "Time expressions help",
-        "definition": "PC: hier (yesterday), soudain (suddenly), à 8h (at 8). IMP: tous les jours (every day), toujours (always), d'habitude (usually)",
-        "example": "{Hier}, {j'ai mangé} (PC - specific time) vs Je mangeais tous les jours (IMP - habit)"
+        "term": "Words that point to each tense",
+        "definition": "{hier} and {soudain} usually go with the passé composé. {tous les jours} and {d'habitude} go with the imparfait.",
+        "examples": [
+          {
+            "fr": "Hier, je suis allé au café.",
+            "en": "Yesterday I went to the café."
+          },
+          {
+            "fr": "Je parlais français tous les jours.",
+            "en": "I spoke French every day."
+          },
+          {
+            "fr": "D'habitude, on allait au café.",
+            "en": "We usually went to the café."
+          }
+        ]
       },
       {
         "id": "c-was-doing-interrupted-by",
-        "term": "'Was doing' interrupted by event",
-        "definition": "Use imparfait for ongoing action, passé composé for interruption",
-        "example": "{Je parlais avec Marie} (I was talking - IMP) {quand tu as appelé} (you called - PC event)"
+        "term": "Interrupted in the middle",
+        "definition": "The imparfait says what was going on. The passé composé says what cut in.",
+        "examples": [
+          {
+            "fr": "Je parlais avec Marie quand tu as appelé.",
+            "en": "I was talking with Marie when you called."
+          },
+          {
+            "fr": "Pendant que je mangeais, tu as appelé.",
+            "en": "While I was eating, you called."
+          }
+        ]
       },
       {
         "id": "c-mental-vs-physical-age",
-        "term": "Mental vs Physical age",
-        "definition": "Physical age/description = IMP. Mental state at moment = can be PC",
-        "example": "{J'avais 20 ans} (I was 20 - IMP description) vs J'ai eu peur (I got scared - {PC reaction})"
+        "term": "Age and feelings",
+        "definition": "Age and a state that lasted take the imparfait. A feeling at one moment can take the passé composé.",
+        "examples": [
+          {
+            "fr": "J'avais 20 ans.",
+            "en": "I was 20."
+          },
+          {
+            "fr": "J'étais content hier.",
+            "en": "I was happy yesterday."
+          },
+          {
+            "fr": "J'ai eu peur.",
+            "en": "I got scared.",
+            "note": "at one moment"
+          }
+        ]
       }
     ],
     "items/i-buvait": null,
@@ -13616,45 +14646,128 @@
     "concepts": [
       {
         "id": "c-devant-in-front-of",
-        "term": "{devant} - in front of",
-        "definition": "Indicates position in front of something",
-        "example": "{Je suis devant la porte} (I'm in front of the door), {La voiture est devant la maison} (The car is in front of the house)"
+        "term": "{devant} = in front of",
+        "definition": "Says what is in front of something or someone.",
+        "examples": [
+          {
+            "fr": "Je suis devant la porte.",
+            "en": "I'm in front of the door."
+          },
+          {
+            "fr": "La voiture est devant la maison.",
+            "en": "The car is in front of the house."
+          },
+          {
+            "fr": "Il y a un arbre devant ma fenêtre.",
+            "en": "There's a tree in front of my window."
+          }
+        ]
       },
       {
         "id": "c-derriere-behind",
-        "term": "{derrière} - behind",
-        "definition": "Indicates position behind something",
-        "example": "{Le chat est derrière le sofa} (The cat is behind the sofa), {Il est derrière moi} (He's behind me)"
+        "term": "{derrière} = behind",
+        "definition": "Says what is behind something or someone.",
+        "examples": [
+          {
+            "fr": "Le chat est derrière le sofa.",
+            "en": "The cat is behind the sofa."
+          },
+          {
+            "fr": "Il y a un jardin derrière la maison.",
+            "en": "There's a garden behind the house."
+          },
+          {
+            "fr": "Il est derrière moi.",
+            "en": "He's behind me."
+          }
+        ]
       },
       {
         "id": "c-entre-between",
-        "term": "{entre} - between",
-        "definition": "Indicates position between two things",
-        "example": "{Le café est entre l'école et le parc} (The café is between the school and the park), {Entre toi et moi} (Between you and me)"
+        "term": "{entre} = between",
+        "definition": "Says what is between two things or two people.",
+        "examples": [
+          {
+            "fr": "Le café est entre l'école et le parc.",
+            "en": "The café is between the school and the park."
+          },
+          {
+            "fr": "Entre toi et moi, c'est un secret.",
+            "en": "Between you and me, it's a secret."
+          }
+        ]
       },
       {
         "id": "c-parmi-among",
-        "term": "{parmi} - among",
-        "definition": "Indicates being among multiple things or people",
-        "example": "{Parmi les étudiants} (Among the students), {Il est parmi nous} (He's among us)"
+        "term": "{parmi} = among",
+        "definition": "Says that someone or something is one of a group.",
+        "examples": [
+          {
+            "fr": "Ton livre est parmi mes livres.",
+            "en": "Your book is among my books."
+          },
+          {
+            "fr": "Parmi les étudiants, il y a des Français.",
+            "en": "Among the students, there are some French people."
+          },
+          {
+            "fr": "Il est parmi nous.",
+            "en": "He's among us."
+          }
+        ]
       },
       {
         "id": "c-au-dessus-de-above",
-        "term": "{au-dessus} ({de}) - above, over",
-        "definition": "Indicates position above something",
-        "example": "{Le tableau est au-dessus de la table} (The painting is above the table), {Au-dessus de la ville} (Above the city)"
+        "term": "{au-dessus de} = above, over",
+        "definition": "Says what is higher than something. Before {le}, {de} becomes {du}.",
+        "examples": [
+          {
+            "fr": "Le tableau est au-dessus de la table.",
+            "en": "The painting is above the table."
+          },
+          {
+            "fr": "J'habite au-dessus du café.",
+            "en": "I live above the café."
+          }
+        ]
       },
       {
         "id": "c-au-dessous-de-below",
-        "term": "{au-dessous} ({de}) - below, beneath, under",
-        "definition": "Indicates position below something",
-        "example": "{au-dessous de nous} (below us), {Le parking est au-dessous} (The parking is below)"
+        "term": "{au-dessous de} = below, under",
+        "definition": "Says what is lower than something. On its own, {au-dessous} means downstairs.",
+        "examples": [
+          {
+            "fr": "Il habite au-dessous de nous.",
+            "en": "He lives below us."
+          },
+          {
+            "fr": "Le parking est au-dessous.",
+            "en": "The parking is downstairs."
+          },
+          {
+            "fr": "La cuisine est au-dessous.",
+            "en": "The kitchen is downstairs."
+          }
+        ]
       },
       {
         "id": "c-review-dans-sur-sous",
-        "term": "Review: {dans, sur, sous}",
-        "definition": "Reinforce: dans (in/inside), sur (on/on top of), sous (under/beneath)",
-        "example": "{Le livre est dans le sac} (in the bag), {sur la table} (on the table), {sous la table} (under the table)"
+        "term": "In, on and under",
+        "definition": "Short words you already use to say where a thing is: inside something, on top of it or under it.",
+        "examples": [
+          {
+            "fr": "Le livre est dans le sac.",
+            "en": "The book is in the bag."
+          },
+          {
+            "fr": "Mon téléphone est sur la table.",
+            "en": "My phone is on the table."
+          },
+          {
+            "fr": "Le chien est sous la table.",
+            "en": "The dog is under the table."
+          }
+        ]
       }
     ],
     "items/i-au-dessous-2": {

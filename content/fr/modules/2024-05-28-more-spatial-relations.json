@@ -96,51 +96,127 @@
   "concepts": [
     {
       "id": "c-pres-de-near-close",
-      "term": "{près de} - near, close to",
-      "definition": "Indicates proximity, nearness",
-      "example": "{Le café est près de l'école} (The café is near the school), {J'habite près d'ici} (I live near here)"
+      "term": "{près de} = near",
+      "definition": "Says that something is close. Before a vowel, {de} becomes {d'}.",
+      "examples": [
+        {
+          "fr": "Le café est près de l'école.",
+          "en": "The café is near the school."
+        },
+        {
+          "fr": "J'habite près d'ici.",
+          "en": "I live near here."
+        }
+      ]
     },
     {
       "id": "c-loin-de-far-from",
-      "term": "{loin de} - far from",
-      "definition": "Indicates distance, remoteness",
-      "example": "{La gare est loin de la maison} (The station is far from the house), {C'est loin d'ici?} (Is it far from here?)"
+      "term": "{loin de} = far from",
+      "definition": "Says that something is a long way away.",
+      "examples": [
+        {
+          "fr": "La gare est loin de la maison.",
+          "en": "The station is far from the house."
+        },
+        {
+          "fr": "C'est loin d'ici ?",
+          "en": "Is it far from here?"
+        },
+        {
+          "fr": "Le parc est loin de la ville.",
+          "en": "The park is far from the city."
+        }
+      ]
     },
     {
       "id": "c-a-cote-de-next",
-      "term": "{à côté de} - next to, beside",
-      "definition": "Indicates immediate proximity, side-by-side position",
-      "example": "{Je suis à côté de toi} (I'm next to you), {Le restaurant est à côté du cinéma} (The restaurant is next to the cinema)"
+      "term": "{à côté de} = next to",
+      "definition": "Says that something is right beside something else.",
+      "examples": [
+        {
+          "fr": "Je suis à côté de toi.",
+          "en": "I'm next to you."
+        },
+        {
+          "fr": "Le restaurant est à côté du cinéma.",
+          "en": "The restaurant is next to the cinema."
+        }
+      ]
     },
     {
       "id": "c-en-face-de-across",
-      "term": "{en face de} - across from, opposite",
-      "definition": "Indicates facing position, directly opposite",
-      "example": "{Ma maison est en face du parc} (My house is across from the park), {Il est assis en face de moi} (He's sitting across from me)"
+      "term": "{en face de} = across from",
+      "definition": "Says that something faces something else.",
+      "examples": [
+        {
+          "fr": "Ma maison est en face du parc.",
+          "en": "My house is across from the park."
+        },
+        {
+          "fr": "Il est assis en face de moi.",
+          "en": "He's sitting across from me."
+        }
+      ]
     },
     {
       "id": "c-autour-de-around",
-      "term": "{autour de} - around",
-      "definition": "Indicates surrounding position",
-      "example": "{Les gens sont autour de la table} (People are around the table), {Autour de la ville} (Around the city)"
+      "term": "{autour de} = around",
+      "definition": "Says that something is all around something else.",
+      "examples": [
+        {
+          "fr": "Les gens sont autour de la table.",
+          "en": "People are around the table."
+        },
+        {
+          "fr": "Il y a un jardin autour de la maison.",
+          "en": "There's a garden around the house."
+        }
+      ]
     },
     {
       "id": "c-le-long-de-along",
-      "term": "{le long de} - along",
-      "definition": "Indicates position along a length",
-      "example": "{Le long de la rue} (Along the street), {On marche le long de la rivière} (We walk along the river)"
+      "term": "{le long de} = along",
+      "definition": "Says that something follows the length of a street, a road or a river.",
+      "examples": [
+        {
+          "fr": "On marche le long de la rivière.",
+          "en": "We walk along the river."
+        },
+        {
+          "fr": "Il y a des arbres le long de la route.",
+          "en": "There are trees along the road."
+        }
+      ]
     },
     {
       "id": "c-au-milieu-de-in",
-      "term": "{au milieu de} - in the middle of",
-      "definition": "Indicates center position",
-      "example": "{Au milieu de la place} (In the middle of the square), {Il est au milieu} (He's in the middle)"
+      "term": "{au milieu de} = in the middle of",
+      "definition": "Says that something is in the center of a place.",
+      "examples": [
+        {
+          "fr": "Il y a une fontaine au milieu de la place.",
+          "en": "There's a fountain in the middle of the square."
+        },
+        {
+          "fr": "La table est au milieu de la cuisine.",
+          "en": "The table is in the middle of the kitchen."
+        }
+      ]
     },
     {
       "id": "c-au-bout-de-at",
-      "term": "{au bout de} - at the end of",
-      "definition": "Indicates end position",
-      "example": "{Au bout de la rue} (At the end of the street), {C'est au bout} (It's at the end)"
+      "term": "{au bout de} = at the end of",
+      "definition": "Says that something is at the far end of a place.",
+      "examples": [
+        {
+          "fr": "Le restaurant est au bout de la rue.",
+          "en": "The restaurant is at the end of the street."
+        },
+        {
+          "fr": "La porte est au bout du jardin.",
+          "en": "The door is at the end of the garden."
+        }
+      ]
     }
   ],
   "items": [

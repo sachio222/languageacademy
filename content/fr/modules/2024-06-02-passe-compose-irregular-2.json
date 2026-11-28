@@ -75,39 +75,132 @@
   "concepts": [
     {
       "id": "c-modal-verbs-with-u",
-      "term": "Modal verbs with -u ending",
-      "definition": "vouloir → voulu, pouvoir → pu, devoir → dû (all end in -u)",
-      "example": "{J'ai voulu partir} (I wanted to leave), {J'ai pu venir} (I could come), {J'ai dû travailler} (I had to work)"
+      "term": "Participles in -u",
+      "definition": "{vouloir} gives {voulu} and {pouvoir} gives {pu}. {devoir} gives {dû}, with an accent.",
+      "examples": [
+        {
+          "fr": "J'ai voulu partir, mais je n'ai pas pu.",
+          "en": "I wanted to leave, but I couldn't."
+        },
+        {
+          "fr": "Tu as pu venir ?",
+          "en": "Were you able to come?"
+        },
+        {
+          "fr": "Elle a dû travailler hier.",
+          "en": "She had to work yesterday."
+        }
+      ]
     },
     {
       "id": "c-dire-dit-said",
-      "term": "{dire} → {dit} (said)",
-      "definition": "Irregular past participle: j'ai dit, tu as dit, il a dit",
-      "example": "{J'ai dit oui} (I said yes), {Tu as dit non} (You said no)"
+      "term": "{dire}: {j'ai dit}",
+      "definition": "The participle of {dire} is {dit}.",
+      "examples": [
+        {
+          "fr": "J'ai dit oui.",
+          "en": "I said yes."
+        },
+        {
+          "fr": "Qu'est-ce que tu as dit ?",
+          "en": "What did you say?"
+        },
+        {
+          "fr": "On a dit non.",
+          "en": "We said no."
+        }
+      ]
     },
     {
       "id": "c-prendre-family-is-ending",
-      "term": "prendre family → -is ending",
-      "definition": "{prendre → pris, comprendre → compris, apprendre → appris}",
-      "example": "{J'ai pris le bus} (I took the bus), {J'ai compris} (I understood), {J'ai appris le français} (I learned French)"
+      "term": "{prendre} and its family: -is",
+      "definition": "{prendre} gives {pris}, and the verbs built on it end the same way.",
+      "examples": [
+        {
+          "fr": "J'ai pris le bus.",
+          "en": "I took the bus.",
+          "note": "from {prendre}"
+        },
+        {
+          "fr": "Vous avez compris ?",
+          "en": "Did you understand?",
+          "note": "from {comprendre}"
+        },
+        {
+          "fr": "On a appris le français.",
+          "en": "We learned French.",
+          "note": "from {apprendre}"
+        }
+      ]
     },
     {
       "id": "c-mettre-mis-put",
-      "term": "{mettre} → {mis} (put)",
-      "definition": "Irregular past participle: j'ai mis, tu as mis, il a mis",
-      "example": "{J'ai mis mon manteau} (I put on my coat), {J'ai mis ça là} (I put that there)"
+      "term": "{mettre}: {j'ai mis}",
+      "definition": "The participle of {mettre} is {mis}.",
+      "examples": [
+        {
+          "fr": "J'ai mis mon manteau.",
+          "en": "I put on my coat."
+        },
+        {
+          "fr": "Nous avons mis nos livres sur la table.",
+          "en": "We put our books on the table."
+        },
+        {
+          "fr": "J'ai mis ça là.",
+          "en": "I put that there."
+        }
+      ]
     },
     {
       "id": "c-modal-verbs-infinitive-in",
-      "term": "Modal verbs + infinitive in past",
-      "definition": "Modal verbs can be followed by infinitives in past tense",
-      "example": "{J'ai voulu aller} (I wanted to go), {J'ai pu venir} (I was able to come), {J'ai dû partir} (I had to leave)"
+      "term": "Wanted to, could, had to",
+      "definition": "After these participles, the second verb stays in the infinitive.",
+      "examples": [
+        {
+          "fr": "J'ai voulu aller au cinéma, mais je n'ai pas eu le temps.",
+          "en": "I wanted to go to the cinema, but I didn't have time."
+        },
+        {
+          "fr": "J'ai pu venir.",
+          "en": "I was able to come."
+        },
+        {
+          "fr": "Elle a dû partir tôt.",
+          "en": "She had to leave early."
+        }
+      ]
     },
     {
       "id": "c-all-use-avoir-as",
-      "term": "All use AVOIR as auxiliary",
-      "definition": "All these verbs use '{avoir}' (not être) in passé composé",
-      "example": "{j'ai voulu}, {j'ai pu}, {j'ai dû}, {j'ai dit}, {j'ai pris}, {j'ai mis}"
+      "term": "All of these take {avoir}",
+      "definition": "Like most verbs, these make their past with {avoir}.",
+      "examples": [
+        {
+          "fr": "j'ai voulu",
+          "en": "I wanted"
+        },
+        {
+          "fr": "j'ai pu",
+          "en": "I could"
+        },
+        {
+          "fr": "j'ai dû",
+          "en": "I had to"
+        },
+        {
+          "fr": "j'ai dit",
+          "en": "I said"
+        },
+        {
+          "fr": "j'ai pris",
+          "en": "I took"
+        },
+        {
+          "fr": "j'ai mis",
+          "en": "I put"
+        }
+      ]
     }
   ],
   "items": [

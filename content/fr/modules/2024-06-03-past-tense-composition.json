@@ -52,39 +52,106 @@
   "concepts": [
     {
       "id": "c-complete-narrative-structure",
-      "term": "Complete Narrative Structure",
-      "definition": "Combine: 1) Scene-setting (IMP), 2) Events (PC), 3) Causal reasoning (parce que, car), 4) Spatial context (près de, devant)",
-      "example": "{Hier, il faisait beau donc je suis allé au parc près de chez moi. J'étais content parce que j'avais du temps.}"
+      "term": "A complete story",
+      "definition": "Set the scene, say what happened and give the reason.",
+      "examples": [
+        {
+          "fr": "Hier, il faisait beau, donc je suis allé au parc.",
+          "en": "Yesterday it was nice out, so I went to the park."
+        },
+        {
+          "fr": "J'étais content parce que j'avais du temps.",
+          "en": "I was happy because I had time."
+        }
+      ]
     },
     {
       "id": "c-layered-storytelling-pattern",
-      "term": "Layered Storytelling Pattern",
-      "definition": "Background (IMP) → Event (PC) → Reason (parce que) → Next Event (PC)",
-      "example": "{Il faisait beau} (background) {quand je suis sorti} (event). {J'ai décidé d'aller au café} (event) {parce que j'avais faim} (reason)."
+      "term": "Building a story step by step",
+      "definition": "Start with the scene, add an event, then give the reason for the next event.",
+      "examples": [
+        {
+          "fr": "Il faisait beau quand je suis sorti.",
+          "en": "It was nice out when I went out."
+        },
+        {
+          "fr": "J'ai décidé d'aller au café parce que j'avais faim.",
+          "en": "I decided to go to the café because I was hungry."
+        }
+      ]
     },
     {
       "id": "c-rich-scene-setting",
-      "term": "Rich Scene-Setting",
-      "definition": "Use spatial prepositions + imparfait to paint the picture",
-      "example": "{Le café était près de l'école. Il y avait beaucoup de gens. Ils étaient assis autour des tables.}"
+      "term": "Setting the scene",
+      "definition": "Use the imparfait with words for places to paint the picture.",
+      "examples": [
+        {
+          "fr": "Le café était près de l'école.",
+          "en": "The café was near the school."
+        },
+        {
+          "fr": "Il y avait beaucoup de gens.",
+          "en": "There were a lot of people."
+        },
+        {
+          "fr": "Ils étaient assis autour des tables.",
+          "en": "They were sitting around the tables."
+        }
+      ]
     },
     {
       "id": "c-causal-flow-in-narratives",
-      "term": "Causal Flow in Narratives",
-      "definition": "Use donc, parce que, car, comme to connect events logically",
-      "example": "{Comme il faisait beau, je suis sorti. J'ai vu Marie donc on a parlé. On est allés au café car on avait faim.}"
+      "term": "Linking events with reasons",
+      "definition": "Words like {donc} and {comme} tie one event to the next.",
+      "examples": [
+        {
+          "fr": "Comme il faisait beau, je suis sorti.",
+          "en": "As it was nice out, I went out."
+        },
+        {
+          "fr": "J'ai vu Marie, donc on a parlé.",
+          "en": "I saw Marie, so we talked."
+        },
+        {
+          "fr": "On est allés au café car on avait faim.",
+          "en": "We went to the café because we were hungry."
+        }
+      ]
     },
     {
       "id": "c-time-and-space-integration",
-      "term": "Time and Space Integration",
-      "definition": "Combine temporal words (d'abord, ensuite) with spatial (près de, devant)",
-      "example": "{D'abord, je suis allé au café près de l'école. Ensuite, j'ai vu Marie devant le cinéma. Après, j'ai joué avec mon chien.}"
+      "term": "First, then, after that",
+      "definition": "Put the events in order with {d'abord} and {ensuite}, and say where each one happened.",
+      "examples": [
+        {
+          "fr": "D'abord, je suis allé au café près de l'école.",
+          "en": "First I went to the café near the school."
+        },
+        {
+          "fr": "Ensuite, j'ai vu Marie devant le cinéma.",
+          "en": "Then I saw Marie in front of the cinema."
+        },
+        {
+          "fr": "Après, j'ai joué avec mon chien.",
+          "en": "After that I played with my dog."
+        }
+      ]
     },
     {
       "id": "c-decider-de-commencer-a",
       "term": "A verb, then {de} or {à}, then a second verb",
-      "definition": "Some verbs take a second verb after {de}, like {décider de}. Others take it after {à}, like {commencer à}. The second verb stays in the infinitive, in every tense.",
-      "example": "{J'ai décidé d'aller au café.} (I decided to go to the café.) {Il a commencé à parler.} (He started to speak.)"
+      "definition": "Some verbs take a second verb after {de}, like {décider de}. Others take it after {à}, like {commencer à}.",
+      "examples": [
+        {
+          "fr": "J'ai décidé d'aller au café.",
+          "en": "I decided to go to the café.",
+          "note": "the second verb stays in the infinitive"
+        },
+        {
+          "fr": "Il a commencé à parler.",
+          "en": "He started to speak."
+        }
+      ]
     }
   ],
   "items": [

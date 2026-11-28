@@ -111,39 +111,136 @@
   "concepts": [
     {
       "id": "c-dr-mrs-vandertramp-mnemonic",
-      "term": "DR & MRS VANDERTRAMP - Mnemonic for être verbs",
-      "definition": "Motion and state-change verbs use ÊTRE (not avoir) in passé composé",
-      "example": "{je suis allé} (I went - with être!), NOT j'ai allé ❌"
+      "term": "Verbs that take {être}",
+      "definition": "A small group of verbs makes the passé composé with {être}, not {avoir}. Most are about moving somewhere or changing state.",
+      "examples": [
+        {
+          "fr": "Hier, je suis allé au café.",
+          "en": "Yesterday I went to the café."
+        },
+        {
+          "fr": "Je suis tombé.",
+          "en": "I fell."
+        }
+      ]
     },
     {
       "id": "c-formation-etre-past-participle",
-      "term": "Formation: être + past participle",
-      "definition": "Use present tense of être + past participle",
-      "example": "{je suis allé}, {tu es venu}, {il est parti}, {elle est arrivée}"
+      "term": "{être} and a past participle",
+      "definition": "Use the present of {être}, then the participle.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je suis allé",
+          "en": "I went"
+        },
+        {
+          "fr": "tu es allé",
+          "en": "you went"
+        },
+        {
+          "fr": "il est allé",
+          "en": "he went"
+        },
+        {
+          "fr": "nous sommes allés",
+          "en": "we went"
+        },
+        {
+          "fr": "vous êtes allés",
+          "en": "you went"
+        },
+        {
+          "fr": "ils sont allés",
+          "en": "they went"
+        }
+      ]
     },
     {
       "id": "c-the-dr-mrs-vandertramp",
-      "term": "The DR & MRS VANDERTRAMP verbs",
-      "definition": "{Descendre, Revenir, Mourir, Retourner, Sortir, Venir, Aller, Naître, Devenir, Entrer, Rentrer, Tomber, Rester, Arriver, Monter, Partir}",
-      "example": "All motion/state-change verbs - use ÊTRE!"
+      "term": "The verbs that take {être}",
+      "definition": "English speakers remember them with the name DR MRS VANDERTRAMP, one letter per verb. Many come in opposite pairs, like going in and going out.",
+      "examples": [
+        {
+          "fr": "Elles sont entrées dans le café.",
+          "en": "They went into the café."
+        },
+        {
+          "fr": "Tu es monté dans le bus.",
+          "en": "You got on the bus."
+        },
+        {
+          "fr": "Elle est descendue du train.",
+          "en": "She got off the train."
+        },
+        {
+          "fr": "Il est devenu professeur.",
+          "en": "He became a teacher."
+        }
+      ]
     },
     {
       "id": "c-key-motion-verbs-most",
-      "term": "Key motion verbs (most common)",
-      "definition": "aller (went), venir (came), partir (left), arriver (arrived), sortir (went out), entrer (entered), rentrer (returned home)",
-      "example": "{Je suis allé au café, Je suis venu hier, Je suis parti tôt}"
+      "term": "The ones you will use most",
+      "definition": "Going, coming, leaving and arriving come up in every story.",
+      "examples": [
+        {
+          "fr": "Tu es venu hier ?",
+          "en": "Did you come yesterday?"
+        },
+        {
+          "fr": "Il est parti tôt.",
+          "en": "He left early."
+        },
+        {
+          "fr": "Nous sommes arrivés hier soir.",
+          "en": "We arrived last night."
+        },
+        {
+          "fr": "Je suis resté à la maison.",
+          "en": "I stayed at home."
+        }
+      ]
     },
     {
       "id": "c-agreement-with-subject-important",
-      "term": "Agreement with subject ({important!})",
-      "definition": "Past participle agrees with subject when using être (add e/s/es)",
-      "example": "{Il est allé} (masculine), {Elle est allée} (+ e for feminine)"
+      "term": "The participle agrees",
+      "definition": "With {être}, the participle takes -e for a woman and -s for more than one person.",
+      "examples": [
+        {
+          "fr": "Il est allé au café.",
+          "en": "He went to the café."
+        },
+        {
+          "fr": "Elle est allée au café.",
+          "en": "She went to the café.",
+          "note": "add -e"
+        },
+        {
+          "fr": "Ils sont venus hier.",
+          "en": "They came yesterday.",
+          "note": "add -s"
+        }
+      ]
     },
     {
       "id": "c-negation-ne-pas-around",
-      "term": "Negation: ne...pas around être",
-      "definition": "Place ne and pas around être (like with avoir)",
-      "example": "{Je ne suis pas allé} (I didn't go), {Elle n'est pas venue} (She didn't come)"
+      "term": "{ne} … {pas} around {être}",
+      "definition": "The form of {être} goes between {ne} and {pas}. It works the same way with {avoir}.",
+      "examples": [
+        {
+          "fr": "Elle n'est pas venue.",
+          "en": "She didn't come."
+        },
+        {
+          "fr": "Je ne suis pas allé au café.",
+          "en": "I didn't go to the café."
+        },
+        {
+          "fr": "Il n'est pas parti.",
+          "en": "He didn't leave."
+        }
+      ]
     }
   ],
   "items": [

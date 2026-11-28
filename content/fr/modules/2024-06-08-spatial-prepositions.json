@@ -106,45 +106,128 @@
   "concepts": [
     {
       "id": "c-devant-in-front-of",
-      "term": "{devant} - in front of",
-      "definition": "Indicates position in front of something",
-      "example": "{Je suis devant la porte} (I'm in front of the door), {La voiture est devant la maison} (The car is in front of the house)"
+      "term": "{devant} = in front of",
+      "definition": "Says what is in front of something or someone.",
+      "examples": [
+        {
+          "fr": "Je suis devant la porte.",
+          "en": "I'm in front of the door."
+        },
+        {
+          "fr": "La voiture est devant la maison.",
+          "en": "The car is in front of the house."
+        },
+        {
+          "fr": "Il y a un arbre devant ma fenêtre.",
+          "en": "There's a tree in front of my window."
+        }
+      ]
     },
     {
       "id": "c-derriere-behind",
-      "term": "{derrière} - behind",
-      "definition": "Indicates position behind something",
-      "example": "{Le chat est derrière le sofa} (The cat is behind the sofa), {Il est derrière moi} (He's behind me)"
+      "term": "{derrière} = behind",
+      "definition": "Says what is behind something or someone.",
+      "examples": [
+        {
+          "fr": "Le chat est derrière le sofa.",
+          "en": "The cat is behind the sofa."
+        },
+        {
+          "fr": "Il y a un jardin derrière la maison.",
+          "en": "There's a garden behind the house."
+        },
+        {
+          "fr": "Il est derrière moi.",
+          "en": "He's behind me."
+        }
+      ]
     },
     {
       "id": "c-entre-between",
-      "term": "{entre} - between",
-      "definition": "Indicates position between two things",
-      "example": "{Le café est entre l'école et le parc} (The café is between the school and the park), {Entre toi et moi} (Between you and me)"
+      "term": "{entre} = between",
+      "definition": "Says what is between two things or two people.",
+      "examples": [
+        {
+          "fr": "Le café est entre l'école et le parc.",
+          "en": "The café is between the school and the park."
+        },
+        {
+          "fr": "Entre toi et moi, c'est un secret.",
+          "en": "Between you and me, it's a secret."
+        }
+      ]
     },
     {
       "id": "c-parmi-among",
-      "term": "{parmi} - among",
-      "definition": "Indicates being among multiple things or people",
-      "example": "{Parmi les étudiants} (Among the students), {Il est parmi nous} (He's among us)"
+      "term": "{parmi} = among",
+      "definition": "Says that someone or something is one of a group.",
+      "examples": [
+        {
+          "fr": "Ton livre est parmi mes livres.",
+          "en": "Your book is among my books."
+        },
+        {
+          "fr": "Parmi les étudiants, il y a des Français.",
+          "en": "Among the students, there are some French people."
+        },
+        {
+          "fr": "Il est parmi nous.",
+          "en": "He's among us."
+        }
+      ]
     },
     {
       "id": "c-au-dessus-de-above",
-      "term": "{au-dessus} ({de}) - above, over",
-      "definition": "Indicates position above something",
-      "example": "{Le tableau est au-dessus de la table} (The painting is above the table), {Au-dessus de la ville} (Above the city)"
+      "term": "{au-dessus de} = above, over",
+      "definition": "Says what is higher than something. Before {le}, {de} becomes {du}.",
+      "examples": [
+        {
+          "fr": "Le tableau est au-dessus de la table.",
+          "en": "The painting is above the table."
+        },
+        {
+          "fr": "J'habite au-dessus du café.",
+          "en": "I live above the café."
+        }
+      ]
     },
     {
       "id": "c-au-dessous-de-below",
-      "term": "{au-dessous} ({de}) - below, beneath, under",
-      "definition": "Indicates position below something",
-      "example": "{au-dessous de nous} (below us), {Le parking est au-dessous} (The parking is below)"
+      "term": "{au-dessous de} = below, under",
+      "definition": "Says what is lower than something. On its own, {au-dessous} means downstairs.",
+      "examples": [
+        {
+          "fr": "Il habite au-dessous de nous.",
+          "en": "He lives below us."
+        },
+        {
+          "fr": "Le parking est au-dessous.",
+          "en": "The parking is downstairs."
+        },
+        {
+          "fr": "La cuisine est au-dessous.",
+          "en": "The kitchen is downstairs."
+        }
+      ]
     },
     {
       "id": "c-review-dans-sur-sous",
-      "term": "Review: {dans, sur, sous}",
-      "definition": "Reinforce: dans (in/inside), sur (on/on top of), sous (under/beneath)",
-      "example": "{Le livre est dans le sac} (in the bag), {sur la table} (on the table), {sous la table} (under the table)"
+      "term": "In, on and under",
+      "definition": "Short words you already use to say where a thing is: inside something, on top of it or under it.",
+      "examples": [
+        {
+          "fr": "Le livre est dans le sac.",
+          "en": "The book is in the bag."
+        },
+        {
+          "fr": "Mon téléphone est sur la table.",
+          "en": "My phone is on the table."
+        },
+        {
+          "fr": "Le chien est sous la table.",
+          "en": "The dog is under the table."
+        }
+      ]
     }
   ],
   "items": [

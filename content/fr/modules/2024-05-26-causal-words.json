@@ -82,39 +82,105 @@
   "concepts": [
     {
       "id": "c-parce-que-because-most",
-      "term": "{parce que} - because (most common)",
-      "definition": "Answers '{pourquoi?}' - used in all situations",
-      "example": "{Je mange parce que j'ai faim} (I eat because I'm hungry), {Je ne viens pas parce que je suis malade} (I'm not coming because I'm sick)"
+      "term": "{parce que} = because",
+      "definition": "The everyday word for because. It answers a question with {pourquoi}.",
+      "examples": [
+        {
+          "fr": "Pourquoi tu ne viens pas ? Parce que je suis fatigué.",
+          "en": "Why aren't you coming? Because I'm tired."
+        },
+        {
+          "fr": "Je ne viens pas parce que je suis malade.",
+          "en": "I'm not coming because I'm sick."
+        },
+        {
+          "fr": "Je mange parce que j'ai faim.",
+          "en": "I'm eating because I'm hungry."
+        }
+      ]
     },
     {
       "id": "c-car-for-because-formal",
-      "term": "{car} - for, because (formal/literary)",
-      "definition": "More formal than '{parce que}', CANNOT start a sentence, common in writing",
-      "example": "{On étudie le français car c'est beau} (We study French for it's beautiful), {Je prends un café car je suis fatigué} (I'm having a coffee for I'm tired)"
+      "term": "{car} = because, in writing",
+      "definition": "{car} also means because, but it sounds more formal and is common in writing. It never starts a sentence.",
+      "examples": [
+        {
+          "fr": "On étudie le français car c'est beau.",
+          "en": "We study French because it's beautiful."
+        },
+        {
+          "fr": "Je prends un café car je suis fatigué.",
+          "en": "I'm having a coffee because I'm tired."
+        }
+      ]
     },
     {
       "id": "c-puisque-since-seeing-as",
-      "term": "{puisque} - since, seeing as",
-      "definition": "Indicates logical conclusion or something already known, slightly formal",
-      "example": "{Puisque tu es là, on commence} (Since you're here, we'll start), {Puisque c'est vrai, je te crois} (Since it's true, I believe you)"
+      "term": "{puisque} = since, seeing as",
+      "definition": "Use {puisque} when the reason is something you both already know.",
+      "examples": [
+        {
+          "fr": "Puisque tu es là, on commence.",
+          "en": "Since you're here, let's start."
+        },
+        {
+          "fr": "Puisque c'est vrai, je te crois.",
+          "en": "Since it's true, I believe you."
+        }
+      ]
     },
     {
       "id": "c-comme-as-since-at",
-      "term": "{comme} - as, since (at START of sentence)",
-      "definition": "Explains reason, MUST come at beginning of sentence",
-      "example": "{Comme il fait beau, on va au parc} (As it's nice, we're going to the park), {Comme je suis fatigué, je vais dormir} (As I'm tired, I'm going to sleep)"
+      "term": "{comme} = as, since",
+      "definition": "{comme} gives the reason at the start of a sentence.",
+      "examples": [
+        {
+          "fr": "Comme il fait beau, on va au parc.",
+          "en": "As it's nice out, we're going to the park."
+        },
+        {
+          "fr": "Comme je suis fatigué, je vais dormir.",
+          "en": "As I'm tired, I'm going to sleep."
+        },
+        {
+          "fr": "Comme c'est ton anniversaire, on va au restaurant.",
+          "en": "As it's your birthday, we're going to a restaurant."
+        }
+      ]
     },
     {
       "id": "c-grace-a-thanks-to",
-      "term": "{grâce à} - thanks to (positive reason + NOUN)",
-      "definition": "Positive attribution, followed by a noun or pronoun",
-      "example": "{Grâce à toi}, {je comprends mieux} (Thanks to you, I understand better), {Grâce au professeur}, {je parle bien} (Thanks to the teacher, I speak well)"
+      "term": "{grâce à} = thanks to",
+      "definition": "Use {grâce à} before a noun or a pronoun, for a reason that helped.",
+      "examples": [
+        {
+          "fr": "Grâce à toi, je comprends mieux.",
+          "en": "Thanks to you, I understand better."
+        },
+        {
+          "fr": "Je comprends grâce au professeur.",
+          "en": "I understand thanks to the teacher."
+        }
+      ]
     },
     {
       "id": "c-a-cause-de-because",
-      "term": "{à cause de} - because of (negative/neutral + NOUN)",
-      "definition": "Often negative or neutral, followed by a noun (NOT a clause!)",
-      "example": "{À cause de la musique, je ne peux pas travailler} (Because of the music, I can't work), {À cause du bus, je suis en retard} (Because of the bus, I'm late)"
+      "term": "{à cause de} = because of",
+      "definition": "Use {à cause de} before a noun, usually for a reason that caused a problem.",
+      "examples": [
+        {
+          "fr": "À cause de la musique, je ne peux pas travailler.",
+          "en": "Because of the music, I can't work."
+        },
+        {
+          "fr": "Je suis en retard à cause du bus.",
+          "en": "I'm late because of the bus."
+        },
+        {
+          "fr": "Je suis fatigué à cause du travail.",
+          "en": "I'm tired because of work."
+        }
+      ]
     }
   ],
   "items": [

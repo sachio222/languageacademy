@@ -97,45 +97,147 @@
   "concepts": [
     {
       "id": "c-agreement-rule-with-etre",
-      "term": "Agreement Rule with être",
-      "definition": "When using ÊTRE in passé composé, past participle MUST agree with subject in gender and number",
-      "example": "{il est allé} (masculine), {elle est allée} (+e), {ils sont allés} (+s), {elles sont allées} ({+es})"
+      "term": "Agreement with {être}",
+      "definition": "With {être}, the participle matches the subject: -e for feminine, -s for plural.",
+      "examples": [
+        {
+          "fr": "Il est allé au café.",
+          "en": "He went to the café."
+        },
+        {
+          "fr": "Elle est allée au café.",
+          "en": "She went to the café.",
+          "note": "add -e"
+        },
+        {
+          "fr": "Ils sont allés au café.",
+          "en": "They went to the café.",
+          "note": "add -s"
+        },
+        {
+          "fr": "Elles sont allées au café.",
+          "en": "They went to the café.",
+          "note": "all women: add -es"
+        }
+      ]
     },
     {
       "id": "c-masculine-singular-no-change",
-      "term": "Masculine singular - No change",
-      "definition": "Il/On: No change to past participle (base form)",
-      "example": "{il est allé}, {il est venu}, {il est parti}, {on est resté}"
+      "term": "One man: no ending",
+      "definition": "For a man, with {il}, the participle has no ending.",
+      "examples": [
+        {
+          "fr": "Mon frère est allé en France.",
+          "en": "My brother went to France."
+        },
+        {
+          "fr": "Ton ami est venu hier ?",
+          "en": "Did your friend come yesterday?"
+        },
+        {
+          "fr": "Il est parti tôt.",
+          "en": "He left early."
+        }
+      ]
     },
     {
       "id": "c-feminine-singular-add-e",
-      "term": "Feminine singular - Add e",
-      "definition": "Elle: Add -e to past participle",
-      "example": "{elle est allée}, {elle est venue}, {elle est partie}, {elle est restée}"
+      "term": "One woman: add -e",
+      "definition": "For a woman, with {elle}, add -e. You do not hear it.",
+      "examples": [
+        {
+          "fr": "Marie est venue hier.",
+          "en": "Marie came yesterday."
+        },
+        {
+          "fr": "Ma mère est allée au marché.",
+          "en": "My mother went to the market."
+        },
+        {
+          "fr": "Elle est montée dans le bus.",
+          "en": "She got on the bus."
+        }
+      ]
     },
     {
       "id": "c-masculine-plural-add-s",
-      "term": "Masculine plural - Add s",
-      "definition": "Ils/Nous/Vous (masculine): Add -s to past participle",
-      "example": "{ils sont allés}, {nous sommes venus}, {vous êtes partis}"
+      "term": "More than one: add -s",
+      "definition": "For a group, add -s, as with {ils} or {nous}. You do not hear it either.",
+      "examples": [
+        {
+          "fr": "Nous sommes partis tôt.",
+          "en": "We left early."
+        },
+        {
+          "fr": "Paul et Marc sont rentrés tard.",
+          "en": "Paul and Marc came home late."
+        },
+        {
+          "fr": "Ils sont venus hier.",
+          "en": "They came yesterday."
+        }
+      ]
     },
     {
       "id": "c-feminine-plural-add-es",
-      "term": "Feminine plural - Add es",
-      "definition": "Elles/Nous/Vous (feminine): Add -es to past participle",
-      "example": "{elles sont allées}, {nous sommes venues} (all feminine), {vous êtes parties} (all feminine)"
+      "term": "Only women: add -es",
+      "definition": "For a group of women, add -es.",
+      "examples": [
+        {
+          "fr": "Mes sœurs sont allées à Paris.",
+          "en": "My sisters went to Paris."
+        },
+        {
+          "fr": "Les filles sont arrivées hier soir.",
+          "en": "The girls arrived last night."
+        },
+        {
+          "fr": "Nous sommes restées à la maison.",
+          "en": "We stayed at home.",
+          "note": "said by women"
+        },
+        {
+          "fr": "Vous êtes allées où, les filles ?",
+          "en": "Where did you go, girls?"
+        }
+      ]
     },
     {
       "id": "c-mixed-group-use-masculine",
-      "term": "Mixed group - Use masculine form",
-      "definition": "When group has both masculine and feminine, use masculine plural (-s)",
-      "example": "{Pierre et Marie sont allés} (masculine plural wins)"
+      "term": "Men and women together: add -s",
+      "definition": "When a group has men and women, use the masculine -s.",
+      "examples": [
+        {
+          "fr": "Pierre et Marie sont partis ensemble.",
+          "en": "Pierre and Marie left together."
+        },
+        {
+          "fr": "Pierre et Marie sont allés au café.",
+          "en": "Pierre and Marie went to the café."
+        }
+      ]
     },
     {
       "id": "c-remember-only-with-etre",
-      "term": "Remember: Only with ÊTRE verbs!",
-      "definition": "This rule ONLY applies to être verbs (DR MRS VANDERTRAMP + reflexives)",
-      "example": "{j'ai mangé} (no change with avoir!), BUT je suis allé/{allée} (agrees with être)"
+      "term": "Only with {être}",
+      "definition": "With {avoir}, the participle does not change for the subject.",
+      "examples": [
+        {
+          "fr": "Elle est allée au café.",
+          "en": "She went to the café.",
+          "note": "with {être}: add -e"
+        },
+        {
+          "fr": "Elle a étudié le français.",
+          "en": "She studied French.",
+          "note": "with {avoir}: no -e"
+        },
+        {
+          "fr": "Elles ont parlé français.",
+          "en": "They spoke French.",
+          "note": "with {avoir}: no -es"
+        }
+      ]
     }
   ],
   "items": [

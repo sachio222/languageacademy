@@ -99,39 +99,134 @@
   "concepts": [
     {
       "id": "c-passe-compose-avoir-past",
-      "term": "Passé Composé = avoir + past participle",
-      "definition": "Compound past tense for completed actions: auxiliary verb '{avoir}' + past participle",
-      "example": "{j'ai parlé} (I spoke), {tu as mangé} (you ate), {il a étudié} (he studied)"
+      "term": "The passé composé with {avoir}",
+      "definition": "The passé composé tells what happened. It is the present of {avoir} followed by a past participle.",
+      "examples": [
+        {
+          "fr": "J'ai parlé avec Marie.",
+          "en": "I spoke with Marie."
+        },
+        {
+          "fr": "Tu as mangé au restaurant.",
+          "en": "You ate at the restaurant."
+        },
+        {
+          "fr": "Elle a étudié le français.",
+          "en": "She studied French."
+        }
+      ]
     },
     {
       "id": "c-regular-er-verbs-e",
-      "term": "Regular -ER verbs → -é past participle",
-      "definition": "Remove -er, add -é: parler → parlé, manger → mangé, étudier → étudié",
-      "example": "{parler} → {parlé} (spoken), {manger} → {mangé} (eaten), {aimer} → {aimé} (loved)"
+      "term": "-er verbs: the participle ends in -é",
+      "definition": "Take off the -er and add -é. It sounds the same as the infinitive.",
+      "examples": [
+        {
+          "fr": "J'ai parlé français.",
+          "en": "I spoke French.",
+          "note": "from {parler}"
+        },
+        {
+          "fr": "J'ai mangé au restaurant.",
+          "en": "I ate at the restaurant.",
+          "note": "from {manger}"
+        },
+        {
+          "fr": "J'ai cherché mon livre.",
+          "en": "I looked for my book.",
+          "note": "from {chercher}"
+        }
+      ]
     },
     {
       "id": "c-formation-j-ai-past",
-      "term": "Formation: j'ai + past participle",
-      "definition": "Use present tense of avoir + past participle ending in -é",
-      "example": "{j'ai parlé}, {tu as parlé}, {il}/{elle a parlé}, {nous avons parlé}, {vous avez parlé}, {ils}/{elles ont parlé}"
+      "term": "Every person",
+      "definition": "Only {avoir} changes with the person. The participle stays the same.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'ai parlé",
+          "en": "I spoke"
+        },
+        {
+          "fr": "tu as parlé",
+          "en": "you spoke"
+        },
+        {
+          "fr": "il a parlé",
+          "en": "he spoke"
+        },
+        {
+          "fr": "nous avons parlé",
+          "en": "we spoke"
+        },
+        {
+          "fr": "vous avez parlé",
+          "en": "you spoke"
+        },
+        {
+          "fr": "ils ont parlé",
+          "en": "they spoke"
+        }
+      ]
     },
     {
       "id": "c-negation-ne-pas-around",
-      "term": "Negation: ne...pas around avoir",
-      "definition": "Place ne and pas around the auxiliary verb avoir",
-      "example": "{je n'ai pas parlé} (I didn't speak), {tu n'as pas mangé} (you didn't eat)"
+      "term": "{ne} … {pas} around {avoir}",
+      "definition": "{ne} and {pas} go around the form of {avoir}, and the participle comes after them.",
+      "examples": [
+        {
+          "fr": "Je n'ai pas aimé le film.",
+          "en": "I didn't like the movie."
+        },
+        {
+          "fr": "Tu n'as pas travaillé hier.",
+          "en": "You didn't work yesterday."
+        },
+        {
+          "fr": "Nous n'avons pas mangé.",
+          "en": "We didn't eat."
+        }
+      ]
     },
     {
       "id": "c-questions-inversion-or-est",
-      "term": "Questions: inversion or {Est-ce que}",
-      "definition": "Invert avoir with subject, or use est-ce que",
-      "example": "{As-tu parlé?} (Did you speak?), {Est-ce que tu as mangé?} (Did you eat?)"
+      "term": "Asking about the past",
+      "definition": "Ask with {est-ce que}, or put the form of {avoir} before the subject.",
+      "examples": [
+        {
+          "fr": "Est-ce que tu as mangé ?",
+          "en": "Did you eat?"
+        },
+        {
+          "fr": "As-tu trouvé le livre ?",
+          "en": "Did you find the book?"
+        },
+        {
+          "fr": "Vous avez cherché mon livre ?",
+          "en": "Did you look for my book?",
+          "note": "the voice goes up at the end"
+        }
+      ]
     },
     {
       "id": "c-when-to-use-passe",
-      "term": "When to use Passé Composé",
-      "definition": "For specific completed actions in the past, countable events",
-      "example": "{Hier, j'ai parlé avec Marie} (Yesterday, I spoke with Marie), {J'ai mangé à 8h} (I ate at 8)"
+      "term": "When to use it",
+      "definition": "Use the passé composé for something that happened and is over, often at a time you name.",
+      "examples": [
+        {
+          "fr": "Hier, j'ai parlé français.",
+          "en": "Yesterday I spoke French."
+        },
+        {
+          "fr": "On a regardé un film hier soir.",
+          "en": "We watched a film last night."
+        },
+        {
+          "fr": "J'ai déjà mangé.",
+          "en": "I've already eaten."
+        }
+      ]
     }
   ],
   "items": [

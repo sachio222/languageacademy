@@ -76,45 +76,125 @@
   "concepts": [
     {
       "id": "c-the-golden-rule",
-      "term": "The Golden Rule",
-      "definition": "PASSÉ COMPOSÉ = Specific completed action (What happened?). IMPARFAIT = Ongoing state/description/habit (How things were/used to be)",
-      "example": "{J'ai mangé} (I ate - specific event) vs Je mangeais (I was eating/used to eat - ongoing or habit)"
+      "term": "Two past tenses",
+      "definition": "The passé composé tells what happened. The imparfait describes how things were or what used to happen.",
+      "examples": [
+        {
+          "fr": "Hier, j'ai mangé au restaurant.",
+          "en": "Yesterday I ate at the restaurant."
+        },
+        {
+          "fr": "D'habitude, je mangeais à la maison.",
+          "en": "I usually ate at home."
+        }
+      ]
     },
     {
       "id": "c-passe-compose-specific-events",
-      "term": "Passé Composé - Specific Events",
-      "definition": "Completed actions, countable events, things that started/stopped, main storyline",
-      "example": "{J'ai vu Marie} (I saw Marie - one time), {Je suis allé au café} (I went to the café - completed)"
+      "term": "Passé composé: what happened",
+      "definition": "Use it for an event that started and finished: the main line of the story.",
+      "examples": [
+        {
+          "fr": "Soudain, j'ai vu Marie.",
+          "en": "Suddenly I saw Marie."
+        },
+        {
+          "fr": "Hier matin, j'ai pris le bus.",
+          "en": "Yesterday morning I took the bus."
+        },
+        {
+          "fr": "À ce moment-là, j'ai compris.",
+          "en": "At that moment, I understood."
+        }
+      ]
     },
     {
       "id": "c-imparfait-background-habits",
-      "term": "Imparfait - Background & Habits",
-      "definition": "Descriptions, ongoing states, repeated habits ('used to'), scene-setting, background information",
-      "example": "{Il faisait beau} (It was nice - description), {Je parlais français tous les jours} (I used to speak French every day - habit)"
+      "term": "Imparfait: the scene and the habits",
+      "definition": "Use it for descriptions, for states that went on and for things you used to do.",
+      "examples": [
+        {
+          "fr": "Il faisait beau.",
+          "en": "It was nice out."
+        },
+        {
+          "fr": "Elle était toujours en retard.",
+          "en": "She was always late."
+        },
+        {
+          "fr": "Je prenais le bus tous les matins.",
+          "en": "I used to take the bus every morning."
+        }
+      ]
     },
     {
       "id": "c-pattern-background-imp-event",
-      "term": "Pattern: Background (IMP) + Event (PC)",
-      "definition": "Use imparfait to set the scene, passé composé for what happened",
-      "example": "{Il faisait beau} (background - IMP) {quand je suis arrivé} (event - PC) = It was nice when I arrived"
+      "term": "The scene, then the event",
+      "definition": "Set the scene in the imparfait, then say what happened in the passé composé.",
+      "examples": [
+        {
+          "fr": "Il faisait beau quand je suis arrivé.",
+          "en": "It was nice out when I arrived."
+        },
+        {
+          "fr": "Je prenais un café quand tu es arrivé.",
+          "en": "I was having a coffee when you arrived."
+        }
+      ]
     },
     {
       "id": "c-time-expressions-help",
-      "term": "Time expressions help",
-      "definition": "PC: hier (yesterday), soudain (suddenly), à 8h (at 8). IMP: tous les jours (every day), toujours (always), d'habitude (usually)",
-      "example": "{Hier}, {j'ai mangé} (PC - specific time) vs Je mangeais tous les jours (IMP - habit)"
+      "term": "Words that point to each tense",
+      "definition": "{hier} and {soudain} usually go with the passé composé. {tous les jours} and {d'habitude} go with the imparfait.",
+      "examples": [
+        {
+          "fr": "Hier, je suis allé au café.",
+          "en": "Yesterday I went to the café."
+        },
+        {
+          "fr": "Je parlais français tous les jours.",
+          "en": "I spoke French every day."
+        },
+        {
+          "fr": "D'habitude, on allait au café.",
+          "en": "We usually went to the café."
+        }
+      ]
     },
     {
       "id": "c-was-doing-interrupted-by",
-      "term": "'Was doing' interrupted by event",
-      "definition": "Use imparfait for ongoing action, passé composé for interruption",
-      "example": "{Je parlais avec Marie} (I was talking - IMP) {quand tu as appelé} (you called - PC event)"
+      "term": "Interrupted in the middle",
+      "definition": "The imparfait says what was going on. The passé composé says what cut in.",
+      "examples": [
+        {
+          "fr": "Je parlais avec Marie quand tu as appelé.",
+          "en": "I was talking with Marie when you called."
+        },
+        {
+          "fr": "Pendant que je mangeais, tu as appelé.",
+          "en": "While I was eating, you called."
+        }
+      ]
     },
     {
       "id": "c-mental-vs-physical-age",
-      "term": "Mental vs Physical age",
-      "definition": "Physical age/description = IMP. Mental state at moment = can be PC",
-      "example": "{J'avais 20 ans} (I was 20 - IMP description) vs J'ai eu peur (I got scared - {PC reaction})"
+      "term": "Age and feelings",
+      "definition": "Age and a state that lasted take the imparfait. A feeling at one moment can take the passé composé.",
+      "examples": [
+        {
+          "fr": "J'avais 20 ans.",
+          "en": "I was 20."
+        },
+        {
+          "fr": "J'étais content hier.",
+          "en": "I was happy yesterday."
+        },
+        {
+          "fr": "J'ai eu peur.",
+          "en": "I got scared.",
+          "note": "at one moment"
+        }
+      ]
     }
   ],
   "items": [

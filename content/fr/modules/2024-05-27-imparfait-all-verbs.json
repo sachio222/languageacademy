@@ -91,39 +91,142 @@
   "concepts": [
     {
       "id": "c-the-golden-rule-nous",
-      "term": "The Golden Rule: nous stem + -ais endings",
-      "definition": "Take '{nous}' form of present tense, remove -ons, add -ais endings to ALL verbs (except être)",
-      "example": "{parler}: {nous parlons} → parl- → {je parlais}, {tu parlais}, {il parlait}"
+      "term": "The imparfait starts from {nous}",
+      "definition": "Take the {nous} form of the present, drop -ons and add the imparfait endings. Every verb works this way except {être}.",
+      "examples": [
+        {
+          "fr": "Nous parlons français.",
+          "en": "We speak French."
+        },
+        {
+          "fr": "Je parlais français tous les jours.",
+          "en": "I used to speak French every day."
+        }
+      ]
     },
     {
       "id": "c-step-1-find-the",
-      "term": "Step 1: Find the nous form",
-      "definition": "Take the present tense '{nous}' form of the verb",
-      "example": "{parler} → {nous parlons}, {faire} → {nous faisons}, {aller} → {nous allons}"
+      "term": "Step 1: the {nous} form",
+      "definition": "Start from the present {nous} form of the verb.",
+      "examples": [
+        {
+          "fr": "nous parlons",
+          "en": "we speak"
+        },
+        {
+          "fr": "nous faisons",
+          "en": "we do"
+        },
+        {
+          "fr": "nous prenons",
+          "en": "we take"
+        }
+      ]
     },
     {
       "id": "c-step-2-remove-ons",
-      "term": "Step 2: Remove -ons",
-      "definition": "Drop the -ons ending to get the stem",
-      "example": "{nous parlons} → {parl}-, {nous faisons} → {fais}-, {nous allons} → all-"
+      "term": "Step 2: drop -ons",
+      "definition": "Take off the -ons, and what is left is the stem. The stem of {nous faisons} is fais-.",
+      "examples": [
+        {
+          "fr": "Il faisait beau.",
+          "en": "It was nice out.",
+          "note": "stem fais-"
+        },
+        {
+          "fr": "Je prenais le bus tous les jours.",
+          "en": "I used to take the bus every day.",
+          "note": "stem pren-"
+        },
+        {
+          "fr": "On allait au café chaque samedi.",
+          "en": "We used to go to the café every Saturday.",
+          "note": "stem all-"
+        }
+      ]
     },
     {
       "id": "c-step-3-add-imparfait",
-      "term": "Step 3: Add imparfait endings",
-      "definition": "Add: -ais, -ais, -ait, -ions, -iez, -aient (same for ALL verbs!)",
-      "example": "parl- → {je parlais}, {tu parlais}, {il parlait}, {nous parlions}, {vous parliez}, {ils parlaient}"
+      "term": "Step 3: add the endings",
+      "definition": "The endings are the same for every verb. Four of the six forms sound the same.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je parlais",
+          "en": "I was speaking"
+        },
+        {
+          "fr": "tu parlais",
+          "en": "you were speaking"
+        },
+        {
+          "fr": "il parlait",
+          "en": "he was speaking"
+        },
+        {
+          "fr": "nous parlions",
+          "en": "we were speaking"
+        },
+        {
+          "fr": "vous parliez",
+          "en": "you were speaking"
+        },
+        {
+          "fr": "ils parlaient",
+          "en": "they were speaking"
+        }
+      ]
     },
     {
       "id": "c-one-exception-etre",
-      "term": "ONE EXCEPTION: {être}",
-      "definition": "être is irregular: ét- stem (not nous sommes) → j'étais, tu étais...",
-      "example": "{j'étais}, {tu étais}, {il était}, {nous étions}, {vous étiez}, {ils étaient}"
+      "term": "{être}: the one exception",
+      "definition": "{être} uses the stem ét- instead. The endings are the same.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'étais",
+          "en": "I was"
+        },
+        {
+          "fr": "tu étais",
+          "en": "you were"
+        },
+        {
+          "fr": "il était",
+          "en": "he was"
+        },
+        {
+          "fr": "nous étions",
+          "en": "we were"
+        },
+        {
+          "fr": "vous étiez",
+          "en": "you were"
+        },
+        {
+          "fr": "ils étaient",
+          "en": "they were"
+        }
+      ]
     },
     {
       "id": "c-when-to-use-imparfait",
-      "term": "When to use Imparfait",
-      "definition": "Descriptions, habits/repeated actions, ongoing states in past, background/scene-setting",
-      "example": "{Il faisait beau} (it was nice - description), {Je parlais français tous les jours} (I spoke French every day - habit)"
+      "term": "When to use the imparfait",
+      "definition": "Use it to describe how things were and what you used to do.",
+      "examples": [
+        {
+          "fr": "Quand j'étais jeune, je jouais avec mon chien.",
+          "en": "When I was young, I used to play with my dog."
+        },
+        {
+          "fr": "Il y avait beaucoup de gens.",
+          "en": "There were a lot of people."
+        },
+        {
+          "fr": "Elle travaillait beaucoup.",
+          "en": "She used to work a lot."
+        }
+      ]
     }
   ],
   "items": [
