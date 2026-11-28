@@ -58,21 +58,52 @@
   "concepts": [
     {
       "id": "c-positive-opinion-belief",
-      "term": "Positive Opinion = Belief",
-      "definition": "'{Je pense que...}' expresses what you believe is true",
-      "example": "{Je pense qu'il vient} (I think he's coming - I believe it)"
+      "term": "{je pense que}: what you believe",
+      "definition": "{je pense que} says what you believe is true. The verb after it keeps its ordinary form.",
+      "examples": [
+        {
+          "fr": "Je pense qu'il vient.",
+          "en": "I think he's coming."
+        },
+        {
+          "fr": "Je pense que c'est bon de partir tôt.",
+          "en": "I think it's good to leave early."
+        }
+      ]
     },
     {
       "id": "c-negative-opinion-doubt",
-      "term": "Negative Opinion = Doubt",
-      "definition": "'{Je ne pense pas que...}' expresses uncertainty - more diplomatic!",
-      "example": "{Je ne pense pas qu'il vienne} (I don't think he's coming - diplomatic disagreement)"
+      "term": "{je ne pense pas que}: doubt",
+      "definition": "When you doubt something, the verb after {que} takes the special form.",
+      "examples": [
+        {
+          "fr": "Je ne pense pas qu'il vienne.",
+          "en": "I don't think he's coming."
+        },
+        {
+          "fr": "Je doute qu'elle sache.",
+          "en": "I doubt she knows."
+        },
+        {
+          "fr": "Je ne crois pas qu'il ait raison.",
+          "en": "I don't think he's right."
+        }
+      ]
     },
     {
       "id": "c-diplomatic-communication",
-      "term": "Diplomatic Communication",
-      "definition": "'{Je ne pense pas que...}' sounds gentler than saying '{Non!}'",
-      "example": "Instead of 'That's wrong!', say '{Je ne pense pas que ce soit vrai}' (I don't think that's true)"
+      "term": "Disagreeing gently",
+      "definition": "{Je ne pense pas que} sounds gentler than a plain no.",
+      "examples": [
+        {
+          "fr": "Je ne pense pas que ce soit vrai.",
+          "en": "I don't think that's true."
+        },
+        {
+          "fr": "Je doute que ce soit possible.",
+          "en": "I doubt that's possible."
+        }
+      ]
     }
   ],
   "items": [

@@ -51,15 +51,42 @@
   "concepts": [
     {
       "id": "c-je-me-fais-verb",
-      "term": "Je me fais + verb = Getting Something Done TO YOU",
-      "definition": "Services for yourself: haircut, makeup, medical exams, etc.",
-      "example": "{Je me fais couper les cheveux} (I'm getting my hair cut - at salon)"
+      "term": "{je me fais} with a verb: done to you",
+      "definition": "Use {je me fais} with a verb for a service someone does to you.",
+      "examples": [
+        {
+          "fr": "Je me fais couper les cheveux.",
+          "en": "I'm getting my hair cut."
+        },
+        {
+          "fr": "Je me fais maquiller.",
+          "en": "I'm getting my makeup done."
+        },
+        {
+          "fr": "Je me fais examiner.",
+          "en": "I'm getting examined.",
+          "note": "at the doctor's"
+        }
+      ]
     },
     {
       "id": "c-je-fais-verb-having",
-      "term": "Je fais + verb = Having Something Done (Not You)",
-      "definition": "Having something repaired, built, cleaned by someone else",
-      "example": "{Je fais réparer ma voiture} (I'm having my car repaired - by mechanic)"
+      "term": "{je fais} with a verb: done for you",
+      "definition": "Use {je fais} with a verb for work someone else does on a thing of yours.",
+      "examples": [
+        {
+          "fr": "Je fais réparer ma voiture.",
+          "en": "I'm having my car repaired."
+        },
+        {
+          "fr": "Je fais nettoyer la maison.",
+          "en": "I'm having the house cleaned."
+        },
+        {
+          "fr": "Je fais construire une maison.",
+          "en": "I'm having a house built."
+        }
+      ]
     }
   ],
   "items": [

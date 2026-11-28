@@ -51,15 +51,37 @@
   "concepts": [
     {
       "id": "c-what-happened-first",
-      "term": "What Happened FIRST",
-      "definition": "Use '{j'avais déjà...}' to show something happened BEFORE another past event",
-      "example": "{Quand il est arrivé} (when he arrived), {j'avais déjà mangé} (I had already eaten) - I ate FIRST, he arrived SECOND"
+      "term": "What happened first",
+      "definition": "{j'avais déjà} with a past verb shows that one thing happened before another thing in the past.",
+      "examples": [
+        {
+          "fr": "Quand il est arrivé, j'avais déjà mangé.",
+          "en": "When he arrived, I had already eaten."
+        },
+        {
+          "fr": "J'avais déjà vu ce film.",
+          "en": "I had already seen this movie."
+        }
+      ]
     },
     {
       "id": "c-deja-already",
-      "term": "'{Déjà}' = Already",
-      "definition": "Often used with these phrases to emphasize 'already done'",
-      "example": "{J'avais déjà fini} (I had already finished)"
+      "term": "{déjà} = already",
+      "definition": "{déjà} usually goes between the two parts of the verb.",
+      "examples": [
+        {
+          "fr": "J'avais déjà fini.",
+          "en": "I had already finished."
+        },
+        {
+          "fr": "Il avait déjà commencé.",
+          "en": "He had already started."
+        },
+        {
+          "fr": "Elle était déjà partie.",
+          "en": "She had already left."
+        }
+      ]
     }
   ],
   "items": [

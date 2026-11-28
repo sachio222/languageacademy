@@ -32,7 +32,7 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 791 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 2637 |
+| Hand edits kept | 2768 |
 | Live ids with no converted item | 368 (53 real misses) |
 | Fields with no place in a module file | 1953 |
 | Text written differently | 661 |
@@ -3923,8 +3923,37 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-23-common-special-forms-1**
 
-- `concepts[0].example` "Normal statement: Tu es sage (You are good). Wish about you: Il faut que tu sois sage (You need to be good - different form!)" → "Normal statement: Tu es gentil (You are kind). Wish about you: Il faut que tu sois gentil (You need to be kind - different form!)"
-- `concepts[1].example` "✓ Il faut que tu sois sage (You need to be good), ✓ Je veux qu'il aille (I want him to go)" → "✓ Il faut que tu sois gentil (You need to be kind), ✓ Je veux qu'il aille (I want him to go)"
+- `concepts[0].term` "Why These Forms Exist" → "A different form after il faut que"
+- `concepts[0].definition` "French uses different verb forms after phrases like 'il faut que' (someone needs to), 'je veux que' (I want someone to), 'je suis content que' (I'm happy that someone...). These express wishes, needs, or emotions about OTHER PEOPLE's actions." → "After phrases like il faut que, the verb takes a special form, called the subjunctive. It shows a need, a wish or a feeling about what someone does."
+- `concepts[0].examples` "(none)" → "["fr":"Tu es gentil.","en":"You are kind.","fr":"Il faut que tu sois gentil.","en":"You need to be kind.","note":"es becomes sois"]"
+- `concepts[0].example` ""Normal statement: Tu es sage (You are good). Wish about you: Il faut que tu sois sage (You need to be good - different form!)"" → "(removed)"
+- `concepts[1].term` "Where You CAN Use These Forms" → "Where these forms go"
+- `concepts[1].definition` "ONLY after certain phrases: il faut que, je veux que, je suis content que, j'ai peur que, avant que, pour que, bien que, etc." → "They come after a phrase that ends in que and names a need, a wish or a feeling."
+- `concepts[1].examples` "(none)" → "["fr":"Il faut que tu fasses ça.","en":"You need to do that.","fr":"Il faut qu'il aille à Paris.","en":"He needs to go to Paris."]"
+- `concepts[1].example` ""✓ Il faut que tu sois sage (You need to be good), ✓ Je veux qu'il aille (I want him to go)"" → "(removed)"
+- `concepts[2].term` "Where You CANNOT Use These Forms" → "Where they do not go"
+- `concepts[2].definition` "DON'T use these for normal statements, questions, or with just il faut/je veux (no 'que')" → "In an ordinary statement or question, use the ordinary form."
+- `concepts[2].examples` "(none)" → "["fr":"Tu es content ?","en":"Are you happy?","fr":"Il fait ça.","en":"He does that.","note":"the ordinary form: fait, not fasse"]"
+- `concepts[2].example` ""✗ Tu sois content? (Wrong! Say: Tu es content?). ✗ Il faut aller (Correct - no 'que' = normal form)"" → "(removed)"
+- `concepts[3].term` "The Trigger: Look for 'que'" → "Look for que and a person"
+- `concepts[3].definition` "If you see 'que' + a person after these starter phrases, use these forms!" → "When que and a person follow il faut, the verb after them takes the special form."
+- `concepts[3].examples` "(none)" → "["fr":"Il faut que tu sois là.","en":"You need to be there.","fr":"Il faut qu'il ait le livre.","en":"He needs to have the book.","fr":"Il faut que tu ailles au café.","en":"You need to go to the café."]"
+- `concepts[3].example` ""il faut QUE tu → use sois/aies/ailles/fasses, je veux QUE tu → use sois/aies/ailles/fasses"" → "(removed)"
+
+**2024-01-24-common-special-forms-2**
+
+- `concepts[0].term` "More Verbs That Change After 'que'" → "More verbs that change after que"
+- `concepts[0].definition` "Like the previous special forms module, these verbs change ONLY after phrases with 'que' (il faut que, je veux que, je suis content que, etc.)" → "These verbs change the same way after il faut que and phrases like it."
+- `concepts[0].examples` "(none)" → "["fr":"Il faut que tu viennes.","en":"You need to come.","fr":"Il faut qu'il parte.","en":"He needs to leave.","fr":"Il faut que tu saches ça.","en":"You need to know that.","fr":"Il faut qu'il comprenne.","en":"He needs to understand."]"
+- `concepts[0].example` ""Normal: tu viens (you come) → After 'je veux que': tu viennes. Normal: tu peux (you can) → After 'il faut que': tu puisses"" → "(removed)"
+- `concepts[1].term` "When To Use vs When NOT To Use" → "Special form or ordinary form"
+- `concepts[1].definition` "USE: After 'que' in wish/need/emotion phrases. DON'T USE: For normal statements or questions." → "Use the special form after que in a phrase of need, wish or feeling. Everywhere else, use the ordinary form."
+- `concepts[1].examples` "(none)" → "["fr":"Je veux que tu viennes.","en":"I want you to come.","fr":"Tu viens ici ?","en":"Are you coming here?","note":"the ordinary form: viens"]"
+- `concepts[1].example` ""✓ Je veux que tu viennes (I want you to come). ✗ Tu viennes ici? (Wrong! Say: Tu viens ici?)"" → "(removed)"
+- `concepts[2].term` "The Trigger: Look for 'que'" → "No que, no change"
+- `concepts[2].definition` "If you see 'il faut/je veux/je suis content + QUE + person', use these forms. No 'que' = normal forms." → "With que and a person after il faut, the verb changes. Without them, it does not."
+- `concepts[2].examples` "(none)" → "["fr":"Tu pars maintenant.","en":"You're leaving now.","fr":"Il faut que tu partes maintenant.","en":"You need to leave now."]"
+- `concepts[2].example` ""Il faut partir (leave - normal). Il faut QUE tu partes (you leave - changed form!)"" → "(removed)"
 
 **2024-01-28-necessity-phrases**
 
@@ -3935,42 +3964,162 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary[4].review` "(none)" → "true"
 - `vocabulary[5].review` "(none)" → "true"
 - `vocabulary[6].review` "(none)" → "true"
-- `concepts[0].example` "Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat)" → "Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat); Il faut qu'on aille au parc (We need to go to the park)"
+- `concepts[0].term` "Il faut que... - Directed Necessity" → "il faut que for one person"
+- `concepts[0].definition` "Tell SOMEONE SPECIFIC what needs to happen. More direct than 'il faut + verb'" → "il faut with a verb says what has to be done in general. il faut que with a person says who has to do it."
+- `concepts[0].examples` "(none)" → "["fr":"Il faut manger.","en":"You have to eat.","note":"in general","fr":"Il faut que tu manges.","en":"You need to eat.","note":"you in particular","fr":"Il faut qu'on aille au parc.","en":"We need to go to the park."]"
+- `concepts[0].example` ""Il faut manger (general: someone should eat) → Il faut que tu manges (YOU specifically need to eat)"" → "(removed)"
+- `concepts[1].term` "Parent/Friend Language" → "At home and with friends"
+- `concepts[1].definition` "These phrases are used constantly in daily life!" → "Parents and friends say these phrases every day."
+- `concepts[1].examples` "(none)" → "["fr":"Il faut que tu sois sage.","en":"You need to be good.","note":"a parent to a child","fr":"Il faut que tu fasses attention.","en":"You need to pay attention.","fr":"Il faut qu'on parte.","en":"We need to leave."]"
+- `concepts[1].example` ""Parent to kid: 'Il faut que tu finisses tes devoirs' (You need to finish homework)"" → "(removed)"
 
 **2024-02-07-wish-phrases**
 
-- `concepts[1].example` "J'aimerais que tu viennes (I'd like you to come)" → "J'aimerais que tu viennes (I'd like you to come), Je ne veux pas que tu tombes ! (I don't want you to fall!)"
+- `concepts[0].term` "Je veux que... - Directing Wishes" → "je veux que for someone else"
+- `concepts[0].definition` "Express what you want SOMEONE ELSE to do (not yourself!)" → "je veux with a verb is what you want to do. je veux que with a person is what you want someone else to do."
+- `concepts[0].examples` "(none)" → "["fr":"Je veux manger.","en":"I want to eat.","fr":"Je veux que tu manges.","en":"I want you to eat.","fr":"Je veux qu'il parte.","en":"I want him to leave.","fr":"Je ne veux pas que tu tombes !","en":"I don't want you to fall!"]"
+- `concepts[0].example` ""Je veux manger (I want to eat - me) → Je veux que tu manges (I want YOU to eat - you)"" → "(removed)"
+- `concepts[1].term` "Softer Version: J'aimerais que..." → "Softer: j'aimerais que"
+- `concepts[1].definition` "More polite way to express wishes" → "j'aimerais que means I'd like someone to do something. It sounds more polite than je veux que."
+- `concepts[1].examples` "(none)" → "["fr":"J'aimerais que tu viennes.","en":"I'd like you to come.","fr":"J'aimerais que tu sois là.","en":"I'd like you to be there."]"
+- `concepts[1].example` ""J'aimerais que tu viennes (I'd like you to come)"" → "(removed)"
 
 **2024-01-25-emotion-phrases**
 
 - `vocabulary[0].word_id` "je-suis-content-que-tu-sois-la-fr.i-m-happy" → "je-suis-content-que-tu-sois-la-fr"
-- `concepts` "["id":"c-expressing-emotions-about-others","term":"Expressing Emotions About Others","definition":"Your feelings are usually about what OTHER PEOPLE do or say!","example":"Je suis content (I'm happy - about what?) → Je suis content que tu sois là (I'm happy YOU'RE here!)","id":"c-common-emotion-phrases","term":"Common Emotion Phrases","definition":"Happy, sad, afraid, sorry - all followed by 'que + person + action'","example":"Je suis triste que tu partes (I'm sad you're leaving), J'ai peur qu'elle ne comprenne pas (I'm afraid she won't understand)"]" → "["id":"c-expressing-emotions-about-others","term":"Expressing Emotions About Others","definition":"Your feelings are usually about what OTHER PEOPLE do or say!","example":"Je suis content (I'm happy - about what?) → Je suis content que tu sois là (I'm happy YOU'RE here!); Il faut que tu viennes : je veux que tu sois là ! (You have to come: I want you to be there!)","id":"c-common-emotion-phrases","term":"Common Emotion Phrases","definition":"Happy, sad, afraid, sorry - all followed by 'que + person + action'","example":"Je suis triste que tu partes (I'm sad you're leaving), J'ai peur qu'elle ne comprenne pas (I'm afraid she won't understand)","id":"c-content-de-infinitive","term":"Same person: de + infinitive, not que","definition":"When the feeling and the action belong to the same person, French uses de + infinitive. Que + subjunctive is for someone else's action. The same de follows c'est + adjective.","example":"Je suis content de te voir. (I'm happy to see you.) but Je suis content que tu sois là. (I'm happy you're here.) C'est bon de te voir. (It's good to see you.)"]"
+- `concepts` "["id":"c-expressing-emotions-about-others","term":"Expressing Emotions About Others","definition":"Your feelings are usually about what OTHER PEOPLE do or say!","example":"Je suis content (I'm happy - about what?) → Je suis content que tu sois là (I'm happy YOU'RE here!)","id":"c-common-emotion-phrases","term":"Common Emotion Phrases","definition":"Happy, sad, afraid, sorry - all followed by 'que + person + action'","example":"Je suis triste que tu partes (I'm sad you're leaving), J'ai peur qu'elle ne comprenne pas (I'm afraid she won't understand)"]" → "["id":"c-expressing-emotions-about-others","term":"Feelings about what others do","definition":"After a feeling and que, the verb takes the special form.","examples":["fr":"Je suis content que tu sois là.","en":"I'm happy you're here.","fr":"Je suis triste que tu partes.","en":"I'm sad you're leaving.","fr":"Je regrette que tu ne puisses pas venir.","en":"I'm sorry you can't come.","fr":"Il faut que tu viennes : je veux que tu sois là !","en":"You have to come: I want you to be there!"],"id":"c-common-emotion-phrases","term":"Common feelings","definition":"Happy, sad, afraid, sorry and surprised all work the same way.","examples":["fr":"J'ai peur qu'il parte.","en":"I'm afraid he'll leave.","fr":"Je suis désolé que tu sois malade.","en":"I'm sorry you're sick.","fr":"Je suis surpris que tu saches ça.","en":"I'm surprised you know that.","fr":"J'ai peur qu'elle ne comprenne pas.","en":"I'm afraid she won't understand."],"id":"c-content-de-infinitive","term":"Same person: de and a verb, not que","definition":"When the feeling and the action belong to the same person, use de and the verb as it is. Use que and the special form for someone else's action.","examples":["fr":"Je suis content de te voir.","en":"I'm happy to see you.","fr":"Je suis content que tu sois là.","en":"I'm happy you're here.","fr":"C'est bon de te voir.","en":"It's good to see you.","note":"de also follows c'est and a describing word"]]"
+
+**2024-01-29-opinion-phrases**
+
+- `concepts[0].term` "Positive Opinion = Belief" → "je pense que: what you believe"
+- `concepts[0].definition` "'Je pense que...' expresses what you believe is true" → "je pense que says what you believe is true. The verb after it keeps its ordinary form."
+- `concepts[0].examples` "(none)" → "["fr":"Je pense qu'il vient.","en":"I think he's coming.","fr":"Je pense que c'est bon de partir tôt.","en":"I think it's good to leave early."]"
+- `concepts[0].example` ""Je pense qu'il vient (I think he's coming - I believe it)"" → "(removed)"
+- `concepts[1].term` "Negative Opinion = Doubt" → "je ne pense pas que: doubt"
+- `concepts[1].definition` "'Je ne pense pas que...' expresses uncertainty - more diplomatic!" → "When you doubt something, the verb after que takes the special form."
+- `concepts[1].examples` "(none)" → "["fr":"Je ne pense pas qu'il vienne.","en":"I don't think he's coming.","fr":"Je doute qu'elle sache.","en":"I doubt she knows.","fr":"Je ne crois pas qu'il ait raison.","en":"I don't think he's right."]"
+- `concepts[1].example` ""Je ne pense pas qu'il vienne (I don't think he's coming - diplomatic disagreement)"" → "(removed)"
+- `concepts[2].term` "Diplomatic Communication" → "Disagreeing gently"
+- `concepts[2].definition` "'Je ne pense pas que...' sounds gentler than saying 'Non!'" → "Je ne pense pas que sounds gentler than a plain no."
+- `concepts[2].examples` "(none)" → "["fr":"Je ne pense pas que ce soit vrai.","en":"I don't think that's true.","fr":"Je doute que ce soit possible.","en":"I doubt that's possible."]"
+- `concepts[2].example` ""Instead of 'That's wrong!', say 'Je ne pense pas que ce soit vrai' (I don't think that's true)"" → "(removed)"
 
 **2024-01-27-hypothetical-phrases**
 
 - `description` "Talk about fantasies and what-ifs! 'Si j'étais riche, j'achèterais...' (If I were rich, I'd buy...), 'Si j'avais le temps, je voyagerais' (If I had time, I'd travel). Everyone loves daydreaming!" → "Talk about fantasies and what-ifs! 'Si j'étais riche...' (If I were rich...), 'Si j'avais le temps, je voyagerais' (If I had time, I'd travel). Everyone loves daydreaming!"
+- `concepts[0].term` "Daydreaming in French" → "Daydreaming with si"
+- `concepts[0].definition` "Use 'si + past form' to talk about fantasies and hypotheticals" → "si with a past form, like j'étais, talks about something that is not real."
+- `concepts[0].examples` "(none)" → "["fr":"Si j'étais riche…","en":"If I were rich…","fr":"Si tu étais ici…","en":"If you were here…","fr":"Si on avait le temps, on marcherait.","en":"If we had time, we'd walk."]"
+- `concepts[0].example` ""Si j'étais riche... (If I were rich...), Si j'avais de l'argent... (If I had money...)"" → "(removed)"
+- `concepts[1].term` "Giving Advice: Si j'étais toi" → "Advice: si j'étais toi"
+- `concepts[1].definition` "'If I were you...' - super common for giving advice!" → "If I were you: a common way to give advice."
+- `concepts[1].examples` "(none)" → "["fr":"Si j'étais toi, je ferais ça.","en":"If I were you, I'd do that."]"
+- `concepts[1].example` ""Si j'étais toi, je ferais ça (If I were you, I'd do that)"" → "(removed)"
+
+**2024-01-30-past-regret-phrases**
+
+- `concepts[0].term` "Expressing Regret" → "Regret: si j'avais"
+- `concepts[0].definition` "Use 'si j'avais...' to talk about things you wish you'd done differently" → "si j'avais with a past verb talks about something you wish had gone differently."
+- `concepts[0].examples` "(none)" → "["fr":"Si j'avais su…","en":"If I'd known…","fr":"Si j'avais étudié…","en":"If I'd studied…","fr":"Si j'avais pu…","en":"If I could have…"]"
+- `concepts[0].example` ""Si j'avais su... (If I'd known...), Si j'avais fait ça... (If I'd done that...)"" → "(removed)"
+- `concepts[1].term` "Common Regret Phrases" → "What would have happened"
+- `concepts[1].definition` "Everyone regrets not knowing, not studying, not coming, etc." → "The second half of the sentence says what would have happened."
+- `concepts[1].examples` "(none)" → "["fr":"Si j'avais su, je serais venu.","en":"If I'd known, I would have come.","fr":"Si j'avais étudié, j'aurais réussi.","en":"If I'd studied, I would have succeeded."]"
+- `concepts[1].example` ""Si j'avais su, je serais venu (If I'd known, I would have come)"" → "(removed)"
+
+**2024-01-26-had-already-phrases**
+
+- `concepts[0].term` "What Happened FIRST" → "What happened first"
+- `concepts[0].definition` "Use 'j'avais déjà...' to show something happened BEFORE another past event" → "j'avais déjà with a past verb shows that one thing happened before another thing in the past."
+- `concepts[0].examples` "(none)" → "["fr":"Quand il est arrivé, j'avais déjà mangé.","en":"When he arrived, I had already eaten.","fr":"J'avais déjà vu ce film.","en":"I had already seen this movie."]"
+- `concepts[0].example` ""Quand il est arrivé (when he arrived), j'avais déjà mangé (I had already eaten) - I ate FIRST, he arrived SECOND"" → "(removed)"
+- `concepts[1].term` "'Déjà' = Already" → "déjà = already"
+- `concepts[1].definition` "Often used with these phrases to emphasize 'already done'" → "déjà usually goes between the two parts of the verb."
+- `concepts[1].examples` "(none)" → "["fr":"J'avais déjà fini.","en":"I had already finished.","fr":"Il avait déjà commencé.","en":"He had already started.","fr":"Elle était déjà partie.","en":"She had already left."]"
+- `concepts[1].example` ""J'avais déjà fini (I had already finished)"" → "(removed)"
 
 **2024-01-22-common-adverbs**
 
 - `vocabulary[3].note` "courir rapidement" → "manger rapidement"
+- `concepts[0].term` "Add Nuance to Any Verb" → "How you do something"
+- `concepts[0].definition` "Adverbs describe HOW you do something" → "These words say how you do something. Many end in -ment, as many English ones end in -ly."
+- `concepts[0].examples` "(none)" → "["fr":"Je parle lentement.","en":"I speak slowly.","fr":"Il mange rapidement.","en":"He eats quickly.","fr":"Tu comprends facilement.","en":"You understand easily."]"
+- `concepts[0].example` ""parler (speak) → parler lentement (speak slowly), parler rapidement (speak quickly)"" → "(removed)"
+- `concepts[1].term` "Most Common Adverbs" → "Before a describing word"
+- `concepts[1].definition` "Learn the top ones - you'll use these constantly!" → "Some of these words go before a describing word to make it stronger."
+- `concepts[1].examples` "(none)" → "["fr":"C'est vraiment bon.","en":"It's really good.","fr":"C'est complètement fini.","en":"It's completely finished."]"
+- `concepts[1].example` ""vraiment bon (really good), sérieusement fatigué (seriously tired)"" → "(removed)"
 
 **2024-02-06-while-doing-phrases**
 
 - `description` "Describe multitasking! 'En mangeant, je regarde la télé' (While eating, I watch TV), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!" → "Describe multitasking! 'En mangeant, je regarde un film' (While eating, I watch a film), 'On apprend en pratiquant' (We learn by practicing). Natural speech patterns!"
-- `concepts[1].example` "Je travaille en écoutant de la musique (I work while listening to music)" → "Je travaille en écoutant de la musique (I work while listening to music), Je mange lentement en regardant un film (I eat slowly while watching a film)"
+- `concepts[0].term` "En + -ant = While Doing" → "en with -ant: while doing"
+- `concepts[0].definition` "Describe two actions happening at the same time, or the METHOD you use" → "en with the -ant form of a verb says you do two things at once."
+- `concepts[0].examples` "(none)" → "["fr":"Il parle en mangeant.","en":"He talks while eating.","fr":"On parle en marchant.","en":"We talk while walking."]"
+- `concepts[0].example` ""En mangeant (while eating), en parlant (while speaking), en travaillant (while working)"" → "(removed)"
+- `concepts[1].term` "Common Uses" → "Two things at once, or how"
+- `concepts[1].definition` "Multitasking, explaining method, simultaneous actions" → "The -ant form can say what else you are doing, or how you get something done."
+- `concepts[1].examples` "(none)" → "["fr":"Je travaille en écoutant de la musique.","en":"I work while listening to music.","fr":"Je mange lentement en regardant un film.","en":"I eat slowly while watching a film.","fr":"J'apprends le français en pratiquant.","en":"I learn French by practicing."]"
+- `concepts[1].example` ""Je travaille en écoutant de la musique (I work while listening to music)"" → "(removed)"
+
+**2024-02-02-service-phrases**
+
+- `concepts[0].term` "Je me fais + verb = Getting Something Done TO YOU" → "je me fais with a verb: done to you"
+- `concepts[0].definition` "Services for yourself: haircut, makeup, medical exams, etc." → "Use je me fais with a verb for a service someone does to you."
+- `concepts[0].examples` "(none)" → "["fr":"Je me fais couper les cheveux.","en":"I'm getting my hair cut.","fr":"Je me fais maquiller.","en":"I'm getting my makeup done.","fr":"Je me fais examiner.","en":"I'm getting examined.","note":"at the doctor's"]"
+- `concepts[0].example` ""Je me fais couper les cheveux (I'm getting my hair cut - at salon)"" → "(removed)"
+- `concepts[1].term` "Je fais + verb = Having Something Done (Not You)" → "je fais with a verb: done for you"
+- `concepts[1].definition` "Having something repaired, built, cleaned by someone else" → "Use je fais with a verb for work someone else does on a thing of yours."
+- `concepts[1].examples` "(none)" → "["fr":"Je fais réparer ma voiture.","en":"I'm having my car repaired.","fr":"Je fais nettoyer la maison.","en":"I'm having the house cleaned.","fr":"Je fais construire une maison.","en":"I'm having a house built."]"
+- `concepts[1].example` ""Je fais réparer ma voiture (I'm having my car repaired - by mechanic)"" → "(removed)"
 
 **2024-01-21-before-phrases**
 
-- `concepts[1].example` "Finis avant que papa rentre! (Finish before dad gets home!)" → "Finis avant que papa rentre! (Finish before dad gets home!), Avant que tu partes, parlons en mangeant (Before you leave, let's talk while we eat)"
+- `concepts[0].term` "Avant que... - Before Someone Does Something" → "avant que: before someone does something"
+- `concepts[0].definition` "Use to talk about timing relative to someone else's action" → "avant que sets your action before someone else's. The verb after it takes the special form."
+- `concepts[0].examples` "(none)" → "["fr":"avant que tu partes","en":"before you leave","fr":"avant qu'il arrive","en":"before he arrives","fr":"avant qu'il soit trop tard","en":"before it's too late"]"
+- `concepts[0].example` ""Avant que tu partes (Before you leave), Avant qu'il arrive (Before he arrives)"" → "(removed)"
+- `concepts[1].term` "Common in Daily Life" → "Timing in daily life"
+- `concepts[1].definition` "Coordinating actions, giving warnings, setting deadlines" → "Use it to say what has to happen first."
+- `concepts[1].examples` "(none)" → "["fr":"Finis avant que papa rentre !","en":"Finish before Dad gets home!","fr":"Avant que tu partes, parlons en mangeant.","en":"Before you leave, let's talk while we eat."]"
+- `concepts[1].example` ""Finis avant que papa rentre! (Finish before dad gets home!)"" → "(removed)"
 
 **2024-02-03-so-that-phrases**
 
-- `concepts[1].example` "Je parle lentement pour que tu comprennes (I speak slowly so you understand)" → "Je parle lentement pour que tu comprennes (I speak slowly so you understand), Je fais venir Marie pour que tu sois content (I'm having Marie come so that you're happy)"
+- `concepts[0].term` "Pour que... - So That Someone Can..." → "pour que = so that"
+- `concepts[0].definition` "Express your PURPOSE or GOAL for someone else" → "pour que gives the goal of an action for someone else. The verb after it takes the special form."
+- `concepts[0].examples` "(none)" → "["fr":"pour que tu comprennes","en":"so that you understand","fr":"pour qu'elle sache","en":"so that she knows"]"
+- `concepts[0].example` ""Pour que tu comprennes (So that you understand), Pour qu'elle sache (So that she knows)"" → "(removed)"
+- `concepts[1].term` "Explaining Why You're Doing Something" → "Saying why you do something"
+- `concepts[1].definition` "Super useful for explaining your intentions!" → "Put pour que after what you do to say why you do it."
+- `concepts[1].examples` "(none)" → "["fr":"Je parle lentement pour que tu comprennes.","en":"I speak slowly so you understand.","fr":"Je fais venir Marie pour que tu sois content.","en":"I'm having Marie come so you're happy."]"
+- `concepts[1].example` ""Je parle lentement pour que tu comprennes (I speak slowly so you understand)"" → "(removed)"
 
 **2024-01-20-although-phrases**
 
-- `concepts[0].example` "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working)" → "Bien que je sois fatigué, je travaille (Although I'm tired, I'm working), Bien que je sois fatigué, je t'aide pour que tu partes avant qu'il soit trop tard (Although I'm tired, I'm helping you so you can leave before it's too late)"
-- `concepts[1].example` "Bien qu'il fasse froid, on sort (Even though it's cold, we're going out)" → "Bien qu'il fasse froid, on va au parc (Even though it's cold, we're going to the park)"
+- `concepts[0].term` "Bien que... - Although / Even Though" → "bien que = although"
+- `concepts[0].definition` "Express doing something DESPITE another condition" → "bien que says you do something despite another fact. The verb after it takes the special form."
+- `concepts[0].examples` "(none)" → "["fr":"Bien que je sois fatigué, je travaille.","en":"Although I'm tired, I'm working.","fr":"Bien qu'elle soit malade, elle vient.","en":"Although she's sick, she's coming."]"
+- `concepts[0].example` ""Bien que je sois fatigué, je travaille (Although I'm tired, I'm working)"" → "(removed)"
+- `concepts[1].term` "Showing Determination" → "Doing it anyway"
+- `concepts[1].definition` "Doing something despite obstacles - shows perseverance!" → "The second half of the sentence says what happens anyway."
+- `concepts[1].examples` "(none)" → "["fr":"Bien qu'il fasse froid, on va au parc.","en":"Even though it's cold, we're going to the park.","fr":"Bien que je sois fatigué, je t'aide pour que tu partes avant qu'il soit trop tard.","en":"Although I'm tired, I'm helping you so you can leave before it's too late."]"
+- `concepts[1].example` ""Bien qu'il fasse froid, on sort (Even though it's cold, we're going out)"" → "(removed)"
+
+**2024-01-31-possibility-phrases**
+
+- `concepts[0].term` "Il est possible que... - It's Possible That..." → "il est possible que: it might happen"
+- `concepts[0].definition` "Express something that MIGHT happen (not certain!)" → "It says something might happen. The verb after it takes the special form."
+- `concepts[0].examples` "(none)" → "["fr":"Il est possible qu'il vienne.","en":"He might come.","fr":"Il est possible qu'on parte.","en":"We might leave."]"
+- `concepts[0].example` ""Il est possible qu'il vienne (It's possible he'll come - not sure!)"" → "(removed)"
+- `concepts[1].term` "Peut-être - Maybe" → "peut-être = maybe"
+- `concepts[1].definition` "Quick way to express uncertainty" → "A quick way to say you are not sure. With que after it, the verb keeps its ordinary form."
+- `concepts[1].examples` "(none)" → "["fr":"Peut-être qu'il viendra.","en":"Maybe he'll come.","fr":"Peut-être demain.","en":"Maybe tomorrow.","fr":"Peut-être pas.","en":"Maybe not."]"
+- `concepts[1].example` ""Peut-être qu'il viendra (Maybe he'll come), Peut-être demain (Maybe tomorrow)"" → "(removed)"
+- `concepts[2].term` "Planning and Hedging" → "Keeping plans open"
+- `concepts[2].definition` "Essential for making flexible plans!" → "These phrases leave room to change a plan."
+- `concepts[2].examples` "(none)" → "["fr":"Il est possible qu'on parte demain.","en":"We might leave tomorrow.","fr":"Il se peut qu'il vienne.","en":"He may come."]"
+- `concepts[2].example` ""Il est possible qu'on parte demain (We might leave tomorrow)"" → "(removed)"
 
 **2024-02-01-reading-10**
 

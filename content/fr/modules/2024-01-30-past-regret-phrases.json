@@ -56,15 +56,37 @@
   "concepts": [
     {
       "id": "c-expressing-regret",
-      "term": "Expressing Regret",
-      "definition": "Use '{si j'avais...}' to talk about things you wish you'd done differently",
-      "example": "{Si j'avais su...} (If I'd known...), {Si j'avais fait ça...} (If I'd done that...)"
+      "term": "Regret: {si j'avais}",
+      "definition": "{si j'avais} with a past verb talks about something you wish had gone differently.",
+      "examples": [
+        {
+          "fr": "Si j'avais su…",
+          "en": "If I'd known…"
+        },
+        {
+          "fr": "Si j'avais étudié…",
+          "en": "If I'd studied…"
+        },
+        {
+          "fr": "Si j'avais pu…",
+          "en": "If I could have…"
+        }
+      ]
     },
     {
       "id": "c-common-regret-phrases",
-      "term": "Common Regret Phrases",
-      "definition": "Everyone regrets not knowing, not studying, not coming, etc.",
-      "example": "{Si j'avais su, je serais venu} (If I'd known, I would have come)"
+      "term": "What would have happened",
+      "definition": "The second half of the sentence says what would have happened.",
+      "examples": [
+        {
+          "fr": "Si j'avais su, je serais venu.",
+          "en": "If I'd known, I would have come."
+        },
+        {
+          "fr": "Si j'avais étudié, j'aurais réussi.",
+          "en": "If I'd studied, I would have succeeded."
+        }
+      ]
     }
   ],
   "items": [

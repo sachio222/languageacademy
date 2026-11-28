@@ -45,15 +45,33 @@
   "concepts": [
     {
       "id": "c-pour-que-so-that",
-      "term": "{Pour que...} - So That Someone Can...",
-      "definition": "Express your PURPOSE or GOAL for someone else",
-      "example": "{Pour que tu comprennes} (So that you understand), {Pour qu'elle sache} (So that she knows)"
+      "term": "{pour que} = so that",
+      "definition": "{pour que} gives the goal of an action for someone else. The verb after it takes the special form.",
+      "examples": [
+        {
+          "fr": "pour que tu comprennes",
+          "en": "so that you understand"
+        },
+        {
+          "fr": "pour qu'elle sache",
+          "en": "so that she knows"
+        }
+      ]
     },
     {
       "id": "c-explaining-why-you-re",
-      "term": "Explaining Why You're Doing Something",
-      "definition": "Super useful for explaining your intentions!",
-      "example": "{Je parle lentement pour que tu comprennes} (I speak slowly so you understand), {Je fais venir Marie pour que tu sois content} (I'm having Marie come so that you're happy)"
+      "term": "Saying why you do something",
+      "definition": "Put {pour que} after what you do to say why you do it.",
+      "examples": [
+        {
+          "fr": "Je parle lentement pour que tu comprennes.",
+          "en": "I speak slowly so you understand."
+        },
+        {
+          "fr": "Je fais venir Marie pour que tu sois content.",
+          "en": "I'm having Marie come so you're happy."
+        }
+      ]
     }
   ],
   "items": [

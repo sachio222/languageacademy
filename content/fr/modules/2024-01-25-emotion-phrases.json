@@ -60,21 +60,69 @@
   "concepts": [
     {
       "id": "c-expressing-emotions-about-others",
-      "term": "Expressing Emotions About Others",
-      "definition": "Your feelings are usually about what OTHER PEOPLE do or say!",
-      "example": "{Je suis content} (I'm happy - about what?) → {Je suis content que tu sois là} (I'm happy YOU'RE here!); {Il faut que tu viennes : je veux que tu sois là !} (You have to come: I want you to be there!)"
+      "term": "Feelings about what others do",
+      "definition": "After a feeling and {que}, the verb takes the special form.",
+      "examples": [
+        {
+          "fr": "Je suis content que tu sois là.",
+          "en": "I'm happy you're here."
+        },
+        {
+          "fr": "Je suis triste que tu partes.",
+          "en": "I'm sad you're leaving."
+        },
+        {
+          "fr": "Je regrette que tu ne puisses pas venir.",
+          "en": "I'm sorry you can't come."
+        },
+        {
+          "fr": "Il faut que tu viennes : je veux que tu sois là !",
+          "en": "You have to come: I want you to be there!"
+        }
+      ]
     },
     {
       "id": "c-common-emotion-phrases",
-      "term": "Common Emotion Phrases",
-      "definition": "Happy, sad, afraid, sorry - all followed by 'que + person + action'",
-      "example": "{Je suis triste que tu partes} (I'm sad you're leaving), {J'ai peur qu'elle ne comprenne pas} (I'm afraid she won't understand)"
+      "term": "Common feelings",
+      "definition": "Happy, sad, afraid, sorry and surprised all work the same way.",
+      "examples": [
+        {
+          "fr": "J'ai peur qu'il parte.",
+          "en": "I'm afraid he'll leave."
+        },
+        {
+          "fr": "Je suis désolé que tu sois malade.",
+          "en": "I'm sorry you're sick."
+        },
+        {
+          "fr": "Je suis surpris que tu saches ça.",
+          "en": "I'm surprised you know that."
+        },
+        {
+          "fr": "J'ai peur qu'elle ne comprenne pas.",
+          "en": "I'm afraid she won't understand."
+        }
+      ]
     },
     {
       "id": "c-content-de-infinitive",
-      "term": "Same person: {de} + infinitive, not {que}",
-      "definition": "When the feeling and the action belong to the same person, French uses {de} + infinitive. {Que} + subjunctive is for someone else's action. The same {de} follows {c'est} + adjective.",
-      "example": "{Je suis content de te voir.} (I'm happy to see you.) but {Je suis content que tu sois là.} (I'm happy you're here.) {C'est bon de te voir.} (It's good to see you.)"
+      "term": "Same person: {de} and a verb, not {que}",
+      "definition": "When the feeling and the action belong to the same person, use {de} and the verb as it is. Use {que} and the special form for someone else's action.",
+      "examples": [
+        {
+          "fr": "Je suis content de te voir.",
+          "en": "I'm happy to see you."
+        },
+        {
+          "fr": "Je suis content que tu sois là.",
+          "en": "I'm happy you're here."
+        },
+        {
+          "fr": "C'est bon de te voir.",
+          "en": "It's good to see you.",
+          "note": "{de} also follows {c'est} and a describing word"
+        }
+      ]
     }
   ],
   "items": [

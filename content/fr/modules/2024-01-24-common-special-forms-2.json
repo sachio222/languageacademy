@@ -81,21 +81,57 @@
   "concepts": [
     {
       "id": "c-more-verbs-that-change",
-      "term": "More Verbs That Change After '{que}'",
-      "definition": "Like the previous special forms module, these verbs change ONLY after phrases with '{que}' (il faut que, je veux que, je suis content que, etc.)",
-      "example": "Normal: {tu viens} (you come) → After '{je veux que}': {tu viennes. Normal}: {tu peux} (you can) → After '{il faut que}': {tu puisses}"
+      "term": "More verbs that change after {que}",
+      "definition": "These verbs change the same way after {il faut que} and phrases like it.",
+      "examples": [
+        {
+          "fr": "Il faut que tu viennes.",
+          "en": "You need to come."
+        },
+        {
+          "fr": "Il faut qu'il parte.",
+          "en": "He needs to leave."
+        },
+        {
+          "fr": "Il faut que tu saches ça.",
+          "en": "You need to know that."
+        },
+        {
+          "fr": "Il faut qu'il comprenne.",
+          "en": "He needs to understand."
+        }
+      ]
     },
     {
       "id": "c-when-to-use-vs",
-      "term": "When To Use vs When NOT To Use",
-      "definition": "USE: After '{que}' in wish/need/emotion phrases. DON'T USE: For normal statements or questions.",
-      "example": "✓ {Je veux que tu viennes} (I want you to come). ✗ {Tu viennes ici?} (Wrong! Say: {Tu viens ici?})"
+      "term": "Special form or ordinary form",
+      "definition": "Use the special form after {que} in a phrase of need, wish or feeling. Everywhere else, use the ordinary form.",
+      "examples": [
+        {
+          "fr": "Je veux que tu viennes.",
+          "en": "I want you to come."
+        },
+        {
+          "fr": "Tu viens ici ?",
+          "en": "Are you coming here?",
+          "note": "the ordinary form: {viens}"
+        }
+      ]
     },
     {
       "id": "c-the-trigger-look-for",
-      "term": "The Trigger: Look for '{que}'",
-      "definition": "If you see 'il faut/je veux/je suis content + QUE + person', use these forms. No '{que}' = normal forms.",
-      "example": "{Il faut partir} (leave - normal). {Il faut QUE tu partes} (you leave - changed form!)"
+      "term": "No {que}, no change",
+      "definition": "With {que} and a person after {il faut}, the verb changes. Without them, it does not.",
+      "examples": [
+        {
+          "fr": "Tu pars maintenant.",
+          "en": "You're leaving now."
+        },
+        {
+          "fr": "Il faut que tu partes maintenant.",
+          "en": "You need to leave now."
+        }
+      ]
     }
   ],
   "items": [

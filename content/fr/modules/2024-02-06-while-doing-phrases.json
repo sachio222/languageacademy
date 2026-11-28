@@ -52,15 +52,37 @@
   "concepts": [
     {
       "id": "c-en-ant-while-doing",
-      "term": "En + -ant = While Doing",
-      "definition": "Describe two actions happening at the same time, or the METHOD you use",
-      "example": "{En mangeant} (while eating), {en parlant} (while speaking), {en travaillant} (while working)"
+      "term": "{en} with -ant: while doing",
+      "definition": "{en} with the -ant form of a verb says you do two things at once.",
+      "examples": [
+        {
+          "fr": "Il parle en mangeant.",
+          "en": "He talks while eating."
+        },
+        {
+          "fr": "On parle en marchant.",
+          "en": "We talk while walking."
+        }
+      ]
     },
     {
       "id": "c-common-uses",
-      "term": "Common Uses",
-      "definition": "Multitasking, explaining method, simultaneous actions",
-      "example": "{Je travaille en écoutant de la musique} (I work while listening to music), {Je mange lentement en regardant un film} (I eat slowly while watching a film)"
+      "term": "Two things at once, or how",
+      "definition": "The -ant form can say what else you are doing, or how you get something done.",
+      "examples": [
+        {
+          "fr": "Je travaille en écoutant de la musique.",
+          "en": "I work while listening to music."
+        },
+        {
+          "fr": "Je mange lentement en regardant un film.",
+          "en": "I eat slowly while watching a film."
+        },
+        {
+          "fr": "J'apprends le français en pratiquant.",
+          "en": "I learn French by practicing."
+        }
+      ]
     }
   ],
   "items": [

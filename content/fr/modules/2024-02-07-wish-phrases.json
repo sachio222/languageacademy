@@ -56,15 +56,41 @@
   "concepts": [
     {
       "id": "c-je-veux-que-directing",
-      "term": "{Je veux que...} - Directing Wishes",
-      "definition": "Express what you want SOMEONE ELSE to do (not yourself!)",
-      "example": "{Je veux manger} (I want to eat - {me}) → {Je veux que tu manges} (I want YOU to eat - you)"
+      "term": "{je veux que} for someone else",
+      "definition": "{je veux} with a verb is what you want to do. {je veux que} with a person is what you want someone else to do.",
+      "examples": [
+        {
+          "fr": "Je veux manger.",
+          "en": "I want to eat."
+        },
+        {
+          "fr": "Je veux que tu manges.",
+          "en": "I want you to eat."
+        },
+        {
+          "fr": "Je veux qu'il parte.",
+          "en": "I want him to leave."
+        },
+        {
+          "fr": "Je ne veux pas que tu tombes !",
+          "en": "I don't want you to fall!"
+        }
+      ]
     },
     {
       "id": "c-softer-version-j-aimerais",
-      "term": "Softer Version: {J'aimerais que...}",
-      "definition": "More polite way to express wishes",
-      "example": "{J'aimerais que tu viennes} (I'd like you to come), {Je ne veux pas que tu tombes !} (I don't want you to fall!)"
+      "term": "Softer: {j'aimerais que}",
+      "definition": "{j'aimerais que} means I'd like someone to do something. It sounds more polite than {je veux que}.",
+      "examples": [
+        {
+          "fr": "J'aimerais que tu viennes.",
+          "en": "I'd like you to come."
+        },
+        {
+          "fr": "J'aimerais que tu sois là.",
+          "en": "I'd like you to be there."
+        }
+      ]
     }
   ],
   "items": [

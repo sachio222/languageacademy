@@ -45,15 +45,33 @@
   "concepts": [
     {
       "id": "c-bien-que-although-even",
-      "term": "{Bien que...} - Although / Even Though",
-      "definition": "Express doing something DESPITE another condition",
-      "example": "{Bien que je sois fatigué, je travaille} (Although I'm tired, I'm working), {Bien que je sois fatigué, je t'aide pour que tu partes avant qu'il soit trop tard} (Although I'm tired, I'm helping you so you can leave before it's too late)"
+      "term": "{bien que} = although",
+      "definition": "{bien que} says you do something despite another fact. The verb after it takes the special form.",
+      "examples": [
+        {
+          "fr": "Bien que je sois fatigué, je travaille.",
+          "en": "Although I'm tired, I'm working."
+        },
+        {
+          "fr": "Bien qu'elle soit malade, elle vient.",
+          "en": "Although she's sick, she's coming."
+        }
+      ]
     },
     {
       "id": "c-showing-determination",
-      "term": "Showing Determination",
-      "definition": "Doing something despite obstacles - shows perseverance!",
-      "example": "{Bien qu'il fasse froid, on va au parc} (Even though it's cold, we're going to the park)"
+      "term": "Doing it anyway",
+      "definition": "The second half of the sentence says what happens anyway.",
+      "examples": [
+        {
+          "fr": "Bien qu'il fasse froid, on va au parc.",
+          "en": "Even though it's cold, we're going to the park."
+        },
+        {
+          "fr": "Bien que je sois fatigué, je t'aide pour que tu partes avant qu'il soit trop tard.",
+          "en": "Although I'm tired, I'm helping you so you can leave before it's too late."
+        }
+      ]
     }
   ],
   "items": [

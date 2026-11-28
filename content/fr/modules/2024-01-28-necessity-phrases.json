@@ -75,15 +75,44 @@
   "concepts": [
     {
       "id": "c-il-faut-que-directed",
-      "term": "{Il faut que...} - Directed Necessity",
-      "definition": "Tell SOMEONE SPECIFIC what needs to happen. More direct than 'il faut + verb'",
-      "example": "{Il faut manger} (general: someone should eat) → {Il faut que tu manges} (YOU specifically need to eat); {Il faut qu'on aille au parc} (We need to go to the park)"
+      "term": "{il faut que} for one person",
+      "definition": "{il faut} with a verb says what has to be done in general. {il faut que} with a person says who has to do it.",
+      "examples": [
+        {
+          "fr": "Il faut manger.",
+          "en": "You have to eat.",
+          "note": "in general"
+        },
+        {
+          "fr": "Il faut que tu manges.",
+          "en": "You need to eat.",
+          "note": "you in particular"
+        },
+        {
+          "fr": "Il faut qu'on aille au parc.",
+          "en": "We need to go to the park."
+        }
+      ]
     },
     {
       "id": "c-parent-friend-language",
-      "term": "Parent/Friend Language",
-      "definition": "These phrases are used constantly in daily life!",
-      "example": "Parent to kid: '{Il faut que tu finisses tes devoirs}' (You need to finish homework)"
+      "term": "At home and with friends",
+      "definition": "Parents and friends say these phrases every day.",
+      "examples": [
+        {
+          "fr": "Il faut que tu sois sage.",
+          "en": "You need to be good.",
+          "note": "a parent to a child"
+        },
+        {
+          "fr": "Il faut que tu fasses attention.",
+          "en": "You need to pay attention."
+        },
+        {
+          "fr": "Il faut qu'on parte.",
+          "en": "We need to leave."
+        }
+      ]
     }
   ],
   "items": [

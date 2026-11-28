@@ -57,15 +57,37 @@
   "concepts": [
     {
       "id": "c-add-nuance-to-any",
-      "term": "Add Nuance to Any Verb",
-      "definition": "Adverbs describe HOW you do something",
-      "example": "{parler} (speak) → {parler lentement} (speak slowly), {parler rapidement} (speak quickly)"
+      "term": "How you do something",
+      "definition": "These words say how you do something. Many end in -ment, as many English ones end in -ly.",
+      "examples": [
+        {
+          "fr": "Je parle lentement.",
+          "en": "I speak slowly."
+        },
+        {
+          "fr": "Il mange rapidement.",
+          "en": "He eats quickly."
+        },
+        {
+          "fr": "Tu comprends facilement.",
+          "en": "You understand easily."
+        }
+      ]
     },
     {
       "id": "c-most-common-adverbs",
-      "term": "Most Common Adverbs",
-      "definition": "Learn the top ones - you'll use these constantly!",
-      "example": "{vraiment bon} (really good), {sérieusement fatigué} (seriously tired)"
+      "term": "Before a describing word",
+      "definition": "Some of these words go before a describing word to make it stronger.",
+      "examples": [
+        {
+          "fr": "C'est vraiment bon.",
+          "en": "It's really good."
+        },
+        {
+          "fr": "C'est complètement fini.",
+          "en": "It's completely finished."
+        }
+      ]
     }
   ],
   "items": [

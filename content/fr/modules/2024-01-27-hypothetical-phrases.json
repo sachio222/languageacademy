@@ -68,15 +68,33 @@
   "concepts": [
     {
       "id": "c-daydreaming-in-french",
-      "term": "Daydreaming in French",
-      "definition": "Use 'si + past form' to talk about fantasies and hypotheticals",
-      "example": "{Si j'étais riche...} (If I were rich...), {Si j'avais de l'argent...} (If I had money...)"
+      "term": "Daydreaming with {si}",
+      "definition": "{si} with a past form, like {j'étais}, talks about something that is not real.",
+      "examples": [
+        {
+          "fr": "Si j'étais riche…",
+          "en": "If I were rich…"
+        },
+        {
+          "fr": "Si tu étais ici…",
+          "en": "If you were here…"
+        },
+        {
+          "fr": "Si on avait le temps, on marcherait.",
+          "en": "If we had time, we'd walk."
+        }
+      ]
     },
     {
       "id": "c-giving-advice-si-j",
-      "term": "Giving Advice: {Si j'étais toi}",
-      "definition": "'If I were you...' - super common for giving advice!",
-      "example": "{Si j'étais toi, je ferais ça} (If I were you, I'd do that)"
+      "term": "Advice: {si j'étais toi}",
+      "definition": "If I were you: a common way to give advice.",
+      "examples": [
+        {
+          "fr": "Si j'étais toi, je ferais ça.",
+          "en": "If I were you, I'd do that."
+        }
+      ]
     }
   ],
   "items": [

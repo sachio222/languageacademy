@@ -45,15 +45,37 @@
   "concepts": [
     {
       "id": "c-avant-que-before-someone",
-      "term": "{Avant que...} - Before Someone Does Something",
-      "definition": "Use to talk about timing relative to someone else's action",
-      "example": "{Avant que tu partes} (Before you leave), {Avant qu'il arrive} (Before he arrives)"
+      "term": "{avant que}: before someone does something",
+      "definition": "{avant que} sets your action before someone else's. The verb after it takes the special form.",
+      "examples": [
+        {
+          "fr": "avant que tu partes",
+          "en": "before you leave"
+        },
+        {
+          "fr": "avant qu'il arrive",
+          "en": "before he arrives"
+        },
+        {
+          "fr": "avant qu'il soit trop tard",
+          "en": "before it's too late"
+        }
+      ]
     },
     {
       "id": "c-common-in-daily-life",
-      "term": "Common in Daily Life",
-      "definition": "Coordinating actions, giving warnings, setting deadlines",
-      "example": "{Finis avant que papa rentre!} (Finish before dad gets home!), {Avant que tu partes, parlons en mangeant} (Before you leave, let's talk while we eat)"
+      "term": "Timing in daily life",
+      "definition": "Use it to say what has to happen first.",
+      "examples": [
+        {
+          "fr": "Finis avant que papa rentre !",
+          "en": "Finish before Dad gets home!"
+        },
+        {
+          "fr": "Avant que tu partes, parlons en mangeant.",
+          "en": "Before you leave, let's talk while we eat."
+        }
+      ]
     }
   ],
   "items": [

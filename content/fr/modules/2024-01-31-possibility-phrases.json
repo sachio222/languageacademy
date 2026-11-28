@@ -51,21 +51,52 @@
   "concepts": [
     {
       "id": "c-il-est-possible-que",
-      "term": "{Il est possible que...} - It's Possible That...",
-      "definition": "Express something that MIGHT happen (not certain!)",
-      "example": "{Il est possible qu'il vienne} (It's possible he'll come - not sure!)"
+      "term": "{il est possible que}: it might happen",
+      "definition": "It says something might happen. The verb after it takes the special form.",
+      "examples": [
+        {
+          "fr": "Il est possible qu'il vienne.",
+          "en": "He might come."
+        },
+        {
+          "fr": "Il est possible qu'on parte.",
+          "en": "We might leave."
+        }
+      ]
     },
     {
       "id": "c-peut-etre-maybe",
-      "term": "{Peut-être} - Maybe",
-      "definition": "Quick way to express uncertainty",
-      "example": "{Peut-être qu'il viendra} (Maybe he'll come), {Peut-être demain} (Maybe tomorrow)"
+      "term": "{peut-être} = maybe",
+      "definition": "A quick way to say you are not sure. With {que} after it, the verb keeps its ordinary form.",
+      "examples": [
+        {
+          "fr": "Peut-être qu'il viendra.",
+          "en": "Maybe he'll come."
+        },
+        {
+          "fr": "Peut-être demain.",
+          "en": "Maybe tomorrow."
+        },
+        {
+          "fr": "Peut-être pas.",
+          "en": "Maybe not."
+        }
+      ]
     },
     {
       "id": "c-planning-and-hedging",
-      "term": "Planning and Hedging",
-      "definition": "Essential for making flexible plans!",
-      "example": "{Il est possible qu'on parte demain} (We might leave tomorrow)"
+      "term": "Keeping plans open",
+      "definition": "These phrases leave room to change a plan.",
+      "examples": [
+        {
+          "fr": "Il est possible qu'on parte demain.",
+          "en": "We might leave tomorrow."
+        },
+        {
+          "fr": "Il se peut qu'il vienne.",
+          "en": "He may come."
+        }
+      ]
     }
   ],
   "items": [

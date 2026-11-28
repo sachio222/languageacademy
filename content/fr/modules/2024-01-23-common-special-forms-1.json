@@ -81,27 +81,69 @@
   "concepts": [
     {
       "id": "c-why-these-forms-exist",
-      "term": "Why These Forms Exist",
-      "definition": "French uses different verb forms after phrases like '{il faut que}' (someone needs to), '{je veux que}' (I want someone to), '{je suis content que}' (I'm happy that someone...). These express wishes, needs, or emotions about OTHER PEOPLE's actions.",
-      "example": "Normal statement: {Tu es gentil} (You are kind). Wish about you: {Il faut que tu sois gentil} (You need to be kind - different form!)"
+      "term": "A different form after {il faut que}",
+      "definition": "After phrases like {il faut que}, the verb takes a special form, called the subjunctive. It shows a need, a wish or a feeling about what someone does.",
+      "examples": [
+        {
+          "fr": "Tu es gentil.",
+          "en": "You are kind."
+        },
+        {
+          "fr": "Il faut que tu sois gentil.",
+          "en": "You need to be kind.",
+          "note": "{es} becomes {sois}"
+        }
+      ]
     },
     {
       "id": "c-where-you-can-use",
-      "term": "Where You CAN Use These Forms",
-      "definition": "ONLY after certain phrases: il faut que, je veux que, je suis content que, j'ai peur que, avant que, pour que, bien que, etc.",
-      "example": "✓ {Il faut que tu sois gentil} (You need to be kind), ✓ {Je veux qu'il aille} (I want him to go)"
+      "term": "Where these forms go",
+      "definition": "They come after a phrase that ends in {que} and names a need, a wish or a feeling.",
+      "examples": [
+        {
+          "fr": "Il faut que tu fasses ça.",
+          "en": "You need to do that."
+        },
+        {
+          "fr": "Il faut qu'il aille à Paris.",
+          "en": "He needs to go to Paris."
+        }
+      ]
     },
     {
       "id": "c-where-you-cannot-use",
-      "term": "Where You CANNOT Use These Forms",
-      "definition": "DON'T use these for normal statements, questions, or with just il faut/je veux (no '{que}')",
-      "example": "✗ {Tu sois content?} (Wrong! Say: {Tu es content?}). ✗ {Il faut aller} (Correct - no '{que}' = normal form)"
+      "term": "Where they do not go",
+      "definition": "In an ordinary statement or question, use the ordinary form.",
+      "examples": [
+        {
+          "fr": "Tu es content ?",
+          "en": "Are you happy?"
+        },
+        {
+          "fr": "Il fait ça.",
+          "en": "He does that.",
+          "note": "the ordinary form: {fait}, not {fasse}"
+        }
+      ]
     },
     {
       "id": "c-the-trigger-look-for",
-      "term": "The Trigger: Look for '{que}'",
-      "definition": "If you see '{que}' + a person after these starter phrases, use these forms!",
-      "example": "{il faut QUE tu} → use sois/{aies}/{ailles}/{fasses, je veux QUE tu} → use sois/aies/ailles/{fasses}"
+      "term": "Look for {que} and a person",
+      "definition": "When {que} and a person follow {il faut}, the verb after them takes the special form.",
+      "examples": [
+        {
+          "fr": "Il faut que tu sois là.",
+          "en": "You need to be there."
+        },
+        {
+          "fr": "Il faut qu'il ait le livre.",
+          "en": "He needs to have the book."
+        },
+        {
+          "fr": "Il faut que tu ailles au café.",
+          "en": "You need to go to the café."
+        }
+      ]
     }
   ],
   "items": [
