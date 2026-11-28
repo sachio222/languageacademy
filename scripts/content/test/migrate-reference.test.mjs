@@ -10,6 +10,7 @@ import { unmark } from '../migrate/mark-french.mjs';
 const { configs } = await todaysModules();
 const phonics = await frenchPhonics();
 const clone = (v) => JSON.parse(JSON.stringify(v));
+const retiredExample = (p) => p.code === 'field_unknown' && /^sections\[\d+\]\.example$/.test(p.path);
 
 test('reference shelf page', () => {
   const old = configs.get('2024-04-01-alphabet');
@@ -21,7 +22,10 @@ test('reference shelf page', () => {
   // Marked as a lesson's concept example is (mark-french 'example'), so the checker reads what it reads today.
   assert.match(unmark(mod.sections[0].example), /^A \(ah\), B \(bay\)/);
   assert.equal(mod.vocabulary.length, old.vocabularyReference.length);
-  assert.deepEqual(validateModule(mod, {}), []);
+  // The live page's example strings are retired in the module files (plan 2026-11-27-concept-cards-structured): the
+  // converter keeps them, the checker refuses them, and content:migrate's recorded hand fixes put the examples lists
+  // in their place.
+  assert.deepEqual(validateModule(mod, {}).filter((p) => !retiredExample(p)), []);
 });
 
 test('the spelling patterns page writes its phonics data out as sections', () => {
@@ -45,7 +49,7 @@ test('the pronunciation test page takes the pronunciation-test screen', () => {
   const { mod } = referenceFrom(old);
   assert.equal(mod.screen, 'pronunciation-test');
   assert.equal(mod.vocabulary.length, old.vocabularyReference.length);
-  assert.deepEqual(validateModule(mod, {}), []);
+  assert.deepEqual(validateModule(mod, {}).filter((p) => !retiredExample(p)), []);
 });
 
 test('rerun keeps a hand edit to a section, and live concept ticks map to section ids', () => {

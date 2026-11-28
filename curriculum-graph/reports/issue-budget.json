@@ -5,11 +5,11 @@
     "exam_item_copied": 93,
     "function-unreachable": 1,
     "reading_word_no_popup": 5,
-    "reuse-missed": 639,
+    "reuse-missed": 631,
     "taught-twice": 138,
     "translate-item": 839,
-    "unknown-word": 73,
-    "untaught-construction": 67
+    "unknown-word": 68,
+    "untaught-construction": 55
   },
   "new": {}
 }

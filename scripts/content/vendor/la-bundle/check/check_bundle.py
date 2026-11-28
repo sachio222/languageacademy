@@ -583,8 +583,8 @@ def format_rules(b, report, validator):
 
 
 def example_rules(block, at, bad):
-    """A concept card's or Reference section's examples (ConceptBlock.examples, layout): one shape at a time, a layout
-    exactly when there are examples, each example's English in a list card, an even count in a forms card, whose
+    """A concept card's or Reference section's examples (ConceptBlock.examples, layout): a layout exactly when there are
+    examples (the schema requires both on a concept card and refuses the old example string), each example's English in a list card, an even count in a forms card, whose
     first half are the singular forms and second half their plurals, and text only in a plain card's items (fr only in
     the others')."""
     examples, layout = block.get("examples"), block.get("layout")
@@ -592,8 +592,6 @@ def example_rules(block, at, bad):
         if layout is not None:
             bad(join(at, "layout"), f"layout {layout!r} is set but the {block['type']} has no examples")
         return
-    if block.get("example") is not None:
-        bad(join(at, "example"), "the block holds both the old example string and examples; example is null when examples is set")
     if layout is None:
         bad(join(at, "layout"), "a block with examples sets its layout, list, forms or plain")
     elif layout == "plain":

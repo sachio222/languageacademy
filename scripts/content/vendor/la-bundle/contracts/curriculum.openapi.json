@@ -4114,10 +4114,12 @@
           "type",
           "block_id",
           "term",
-          "definition"
+          "definition",
+          "examples",
+          "layout"
         ],
         "additionalProperties": false,
-        "description": "A grammar card. Text is English with French marked with braces. Its examples are a list (examples, layout); a card not yet migrated holds the old example string instead, never both.",
+        "description": "A grammar card. Text is English with French marked with braces. Its examples are a list (examples) drawn with its layout.",
         "properties": {
           "type": {
             "const": "concept"
@@ -4136,34 +4138,22 @@
             "type": "string",
             "maxLength": 1000
           },
-          "example": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "maxLength": 300,
-            "description": "The old one-string example (English text with French in braces), kept only while a unit waits for its migration to examples. Null when examples is set."
-          },
           "examples": {
-            "type": [
-              "array",
-              "null"
-            ],
+            "type": "array",
             "minItems": 1,
             "maxItems": 6,
             "items": {
               "$ref": "#/components/schemas/ConceptExample"
             },
-            "description": "The card's examples, drawn as the Example list (ds/library.html#examplelist): one row per example, French first, English under it. Null or absent while the card still holds the old one-string example. With examples, example is null and layout is set."
+            "description": "The card's examples, drawn as the Example list (ds/library.html#examplelist): one row per example, French first, English under it."
           },
           "layout": {
             "enum": [
               "list",
               "forms",
-              "plain",
-              null
+              "plain"
             ],
-            "description": "list: one example per row, each with its fr and en. forms: a verb's person forms in two columns; the first half of examples are the singular forms and the second half their plurals in the same order (je with nous), so the count is even and en may be null. plain: a list that is not examples of the taught language (points in the learner's language, a list of meanings); each example holds text only and is drawn as a line of body text with no sound. Set exactly when examples is."
+            "description": "list: one example per row, each with its fr and en. forms: a verb's person forms in two columns; the first half of examples are the singular forms and the second half their plurals in the same order (je with nous), so the count is even and en may be null. plain: a list that is not examples of the taught language (points in the learner's language, a list of meanings); each example holds text only and is drawn as a line of body text with no sound."
           }
         }
       },
@@ -4298,7 +4288,7 @@
             "items": {
               "$ref": "#/components/schemas/ConceptExample"
             },
-            "description": "The section's examples, drawn as the Example list (ds/library.html#examplelist): one row per example, French first, English under it. Null or absent while the section still holds the old one-string example. With examples, example is null and layout is set."
+            "description": "The section's examples, drawn as the Example list (ds/library.html#examplelist): one row per example, French first, English under it. Null or absent for a section with no examples; with examples, layout is set."
           },
           "layout": {
             "enum": [

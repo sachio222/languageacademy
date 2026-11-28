@@ -73,15 +73,17 @@ test('reportMarkdown counts each status for all units and for the applied units'
   assert.match(md, /c-prose/);
 });
 
-test('Units 1 to 3 are migrated: every concept card there holds an examples list and no old string', async () => {
+test('every unit and the Reference shelf are migrated: no card or section holds the old string', async () => {
   const { readFileSync } = await import('node:fs');
   const { CONTENT_ROOT } = await import('../load.mjs');
   const outline = JSON.parse(readFileSync(`${CONTENT_ROOT}/course.json`, 'utf8'));
+  const shelf = (Array.isArray(outline.shelf) ? outline.shelf : outline.shelf.pages).map((p) => (typeof p === 'string' ? p : p.module_key));
   const left = [];
-  for (const u of outline.units.slice(0, 3))
-    for (const key of u.entries) {
-      const mod = JSON.parse(readFileSync(`${CONTENT_ROOT}/modules/${key}.json`, 'utf8'));
-      for (const c of mod.concepts ?? []) if (!Array.isArray(c.examples) || c.example !== undefined) left.push(`${key} ${c.id}`);
-    }
+  for (const key of [...outline.units.flatMap((u) => u.entries), ...shelf]) {
+    const mod = JSON.parse(readFileSync(`${CONTENT_ROOT}/modules/${key}.json`, 'utf8'));
+    if (mod.status === 'planned') continue;
+    for (const c of mod.concepts ?? []) if (!Array.isArray(c.examples) || c.example !== undefined) left.push(`${key} ${c.id}`);
+    for (const s of mod.sections ?? []) if (s.example !== undefined) left.push(`${key} ${s.id}`);
+  }
   assert.deepEqual(left, []);
 });

@@ -76,7 +76,7 @@ test('item roles come from the item type', () => {
   assert.deepEqual(at('2024-01-02-etre#i-je-suis/mistakes/0/feedback').shown, ['je', 'suis']);
   assert.ok(![...items.values()].some((it) => [...it.french, ...it.shown, ...it.lenient].includes('je es')));
   // module texts: concept cards, tables, phrases, notes and the passage
-  assert.deepEqual(at('2024-01-02-etre#concepts/c-etre-forms/example').shown, ['Je suis Paul.']);
+  assert.deepEqual(at('2024-01-02-etre#concepts/c-etre-forms/examples/0/fr').shown, ['Je suis Paul.']);
   assert.deepEqual(at('2024-01-02-etre#tables/t-etre-present/rows/2/fr').shown, ['il est']);
   assert.deepEqual(at('2024-01-02-etre#vocabulary/je-suis-fr/example_fr').shown, ['Je suis Paul.']);
   assert.ok(items.has('2024-01-02-etre#vocabulary/tu-es-fr/note'));

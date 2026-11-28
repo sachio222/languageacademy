@@ -166,13 +166,13 @@ const TABLES = LIST(OBJ({ id: ID, title: S('native_fr'), rows: LIST(ROW, { nonEm
 // as L's Example list. layout "list" (the default) draws one example per row with its English; "forms" draws a verb's
 // person forms in two columns, singular then plural, and may leave out the English; "plain" is a list that is not
 // examples of the taught language (points in the learner's language, a list of meanings): each item is { text }, drawn
-// in the body font with no sound. The old one-string `example` is accepted only while a unit waits for its migration
-// (plan 2026-11-27-concept-cards-structured); a card holds one or the other. Which fields an item needs depends on the
-// layout, so exampleRules checks them.
+// in the body font with no sound. The old one-string `example` is retired (plan 2026-11-27-concept-cards-structured,
+// cut-over): the walk refuses it as an unknown field. Which fields an item needs depends on the layout, so
+// exampleRules checks them.
 const EXAMPLE = OBJ({ fr: S('fr', 300), en: S('native', 300), note: S('native_fr', 200), text: S('native', 300) }, []);
 const EXAMPLE_FIELDS = { examples: LIST(EXAMPLE), layout: ENUM(LAYOUTS) };
 const CONCEPTS = LIST(
-  OBJ({ id: ID, term: S('native_fr'), definition: S('native_fr'), example: S('native_fr'), ...EXAMPLE_FIELDS }, ['id', 'term', 'definition']),
+  OBJ({ id: ID, term: S('native_fr'), definition: S('native_fr'), ...EXAMPLE_FIELDS }, ['id', 'term', 'definition']),
   { unique: 'id' },
 );
 const PHRASES = LIST(OBJ({ phrase_id_suffix: ID, fr: S('fr'), word_id: KEY }, ['phrase_id_suffix', 'fr']), { unique: 'phrase_id_suffix' });
@@ -188,8 +188,8 @@ const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w
 // layout: the story's dateline, scene heading or closing line (stories/readingN.html), drawn apart from the text.
 // speaker: the label shown beside the French (Paul, Le père), so French the learner reads.
 const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('fr'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
-// example: a section made from a concept card keeps the card's example line; examples and layout as on a concept card.
-const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), ...EXAMPLE_FIELDS, rows: LIST(ROW) }, ['id', 'heading', 'text']);
+// examples and layout as on a concept card; rows: a table of French and English under the text.
+const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), ...EXAMPLE_FIELDS, rows: LIST(ROW) }, ['id', 'heading', 'text']);
 // A planned module's plan (Task 17): the graph ids it will teach or use, where the plan lives (source, "plan.json") and,
 // optionally, the draft it will be written from and a note for its writer (a unit exam's subtitle, a reading's theme
 // brief). source and draft are paths relative to the vault's curriculum folder, projects/product/curriculum/
@@ -365,9 +365,15 @@ function walk(node, v, path, cx, parent) {
   }
 }
 
+// A field that was retired, named in its field_unknown message with what replaced it.
+const RETIRED = { example: (fields) => (Object.hasOwn(fields, 'examples') ? 'the one-string example is retired; write examples, a list of { fr, en, note? }' : null) };
 function walkFields(fields, required, v, path, cx) {
   // Own keys only: `k in fields` would let constructor, toString or __proto__ through as known fields.
-  for (const k of Object.keys(v)) if (!Object.hasOwn(fields, k)) cx.bad(join(path, k), 'field_unknown', `${k} is not a field here`);
+  for (const k of Object.keys(v))
+    if (!Object.hasOwn(fields, k)) {
+      const why = Object.hasOwn(RETIRED, k) ? RETIRED[k](fields) : null;
+      cx.bad(join(path, k), 'field_unknown', why ? `${k} is not a field here: ${why}` : `${k} is not a field here`);
+    }
   for (const k of required) if (v[k] === undefined) cx.bad(join(path, k), 'field_missing', `${join(path, k)} is required`);
   for (const [k, node] of Object.entries(fields)) if (node && v[k] !== undefined) walk(node, v[k], join(path, k), cx, v);
 }
@@ -450,9 +456,8 @@ function kindRules(mod, cx) {
 }
 
 // A concept card's or a Reference section's examples (concept-examples.mjs; plan 2026-11-27-concept-cards-structured).
-// A card in the new shape (examples) is checked by every rule; a card that still holds the old string waits for its
-// unit's migration and is checked only for holding one shape. required: a concept card needs examples; a section may
-// have none. texts: the prose fields that may not run a list of French together.
+// required: a concept card needs examples; a section may have none. texts: the prose fields that may not run a list of
+// French together. The old one-string example is refused by the walk (field_unknown).
 function exampleRules(list, field, { required, texts }, cx) {
   if (!Array.isArray(list)) return;
   const { bad } = cx;
@@ -460,20 +465,14 @@ function exampleRules(list, field, { required, texts }, cx) {
     if (!isObj(card)) return;
     const at = `${field}[${i}]`;
     const hasList = card.examples !== undefined;
-    if (hasList && card.example !== undefined) {
-      bad(`${at}.example`, 'concept_example_both', `${at} holds both the old example string and examples; keep examples only`);
-      return;
-    }
     if (!hasList) {
       if (card.layout !== undefined) bad(`${at}.layout`, 'concept_layout_without_examples', `${at} sets a layout but holds no examples list`);
-      // A card with neither shape is the old shape with no example: a warning until the cut-over makes examples required.
-      if (required && card.example === undefined)
-        cx.problems.push(problem(cx.file, `${at}.examples`, 'concept_examples_size', `${at} needs ${EXAMPLES_MIN} to ${EXAMPLES_MAX} examples`, 'warning'));
-      return;
+      if (required) bad(`${at}.examples`, 'concept_examples_size', `${at} needs ${EXAMPLES_MIN} to ${EXAMPLES_MAX} examples`);
     }
     for (const t of texts)
       for (const run of isStr(card[t]) ? inlineListRuns(card[t]) : [])
         bad(`${at}.${t}`, 'concept_inline_list', `${at}.${t} runs ${run.length} French items together (${run.join(', ')}); move them to examples and keep the ${t} to prose`);
+    if (!hasList) return;
     if (!Array.isArray(card.examples)) return; // the walk reports the type
     const n = card.examples.length;
     if (n < EXAMPLES_MIN || n > EXAMPLES_MAX)
@@ -512,13 +511,13 @@ function exampleRules(list, field, { required, texts }, cx) {
 }
 
 // A word card's note stays prose (one example per word card is example_fr): a note that runs a list of French
-// together is flagged. A warning until every unit's cards are migrated, since a few notes past Unit 3 still do it.
+// together fails.
 function noteRules(mod, cx) {
   if (!Array.isArray(mod.vocabulary)) return;
   mod.vocabulary.forEach((w, k) => {
     if (!isObj(w) || !isStr(w.note)) return;
     for (const run of inlineListRuns(w.note))
-      cx.problems.push(problem(cx.file, `vocabulary[${k}].note`, 'concept_inline_list', `vocabulary[${k}].note runs ${run.length} French items together (${run.join(', ')}); a note stays prose`, 'warning'));
+      cx.bad(`vocabulary[${k}].note`, 'concept_inline_list', `vocabulary[${k}].note runs ${run.length} French items together (${run.join(', ')}); a note stays prose`);
   });
 }
 

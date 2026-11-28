@@ -16,7 +16,7 @@ const READING = 'reading-cafe';
 function lessonWith({ french, glosses, edit = () => {} }) {
   return miniCourse((mods) => {
     const m = mods.get(LESSON);
-    if (french) m.concepts.push({ id: 'c-probe', term: 'Other forms', definition: `Read ${french.map((f) => `{${f}}`).join(' and ')}.` });
+    if (french) m.concepts.push({ id: 'c-probe', term: 'Other forms', definition: `Read ${french.map((f) => `{${f}}`).join(' and ')}.`, examples: [{ fr: 'Bonjour !', en: 'Hello!' }] });
     if (glosses) m.glosses = glosses;
     edit(m, mods);
   });

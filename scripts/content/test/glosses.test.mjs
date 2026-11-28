@@ -39,7 +39,7 @@ const edit = (root, key, fn) => {
   writeFileSync(file, JSON.stringify(mod, null, 2) + '\n');
   return file;
 };
-const probe = (mod) => mod.concepts.push({ id: 'c-probe', term: 'Later forms', definition: 'Later you will read {nous irons} and {tu serais}.' });
+const probe = (mod) => mod.concepts.push({ id: 'c-probe', term: 'Later forms', definition: 'Later you will read {nous irons} and {tu serais}.', examples: [{ fr: 'Bonjour !', en: 'Hello!' }] });
 
 test('a note names the form; a verb form takes its English from the verb', () => {
   assert.equal(formNote('cond.1sg', 'voler'), 'conditional of {voler}');

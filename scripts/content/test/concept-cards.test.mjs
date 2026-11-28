@@ -1,5 +1,5 @@
 // Concept cards and Reference sections hold their examples as a list, examples: [{ fr, en?, note? }], with an optional
-// layout ("list" or "forms"). The old example string is accepted only while a unit waits for its migration.
+// layout ("list", "forms" or "plain"). Since the cut-over the old one-string example is refused everywhere.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateModule, moduleTexts } from '../schema/module.mjs';
@@ -28,17 +28,16 @@ test('a card with a list of examples validates clean', () => {
   assert.deepEqual(codes(lessonWith({ examples: [{ fr: 'Je veux ça.', en: 'I want that.', note: 'said of a thing you point at' }] })), []);
 });
 
-test('the old example string is still accepted while a unit waits for its migration', () => {
-  assert.deepEqual(codes(lessonWith({ example: '{Je veux ça} (I want that), {Tu veux ?} (do you want?)' })), []);
+test('the old example string is refused: examples is the only shape', () => {
+  const ps = validateModule(lessonWith({ example: '{Je veux ça} (I want that)', examples: LIST }), { file: 'm.json', unitIndex: 1, persons: PERSONS });
+  assert.deepEqual(ps.map((p) => [p.code, p.path]), [['field_unknown', 'concepts[0].example']]);
+  assert.match(ps[0].message, /examples/);
+  assert.ok(codes(lessonWith({ example: '{Je veux ça} (I want that)' })).includes('field_unknown'));
 });
 
-test('a card holds either the old string or the list, never both', () => {
-  assert.deepEqual(codes(lessonWith({ example: '{Je veux ça}', examples: LIST })), ['concept_example_both']);
-});
-
-test('a card with neither the string nor the list is flagged as a warning until the cut-over', () => {
+test('a card with no examples fails (concept_examples_size)', () => {
   const ps = validateModule(lessonWith({}), { file: 'm.json', unitIndex: 1, persons: PERSONS });
-  assert.deepEqual(ps.map((p) => [p.code, p.severity]), [['concept_examples_size', 'warning']]);
+  assert.deepEqual(ps.map((p) => [p.code, p.severity ?? 'error']), [['concept_examples_size', 'error']]);
 });
 
 test('examples: one to six (concept_examples_size)', () => {
@@ -56,7 +55,7 @@ test('an example is an object with fr; fields are fr, en and note only', () => {
 
 test('layout is list or forms, and only with examples', () => {
   assert.ok(codes(lessonWith({ examples: LIST, layout: 'grid' })).includes('field_type'));
-  assert.deepEqual(codes(lessonWith({ example: '{je veux}, {tu veux}, {il veut}', layout: 'forms' })), ['concept_layout_without_examples']);
+  assert.deepEqual(codes(lessonWith({ layout: 'forms' })), ['concept_layout_without_examples', 'concept_examples_size']);
 });
 
 test('example French is plain French: no braces, its English plain English', () => {
@@ -150,8 +149,8 @@ test('prose that names one or two French words passes concept_inline_list', () =
   for (const definition of prose) assert.deepEqual(codes(lessonWith({ definition, examples: LIST })), [], definition);
 });
 
-test('the old shape waits for its migration: its definition is not checked for lists yet', () => {
-  assert.deepEqual(codes(lessonWith({ definition: 'Learn {ce}, {cet}, {cette}, {ces}.', example: '{ce livre}' })), []);
+test('a definition is checked for lists on every card, one with no examples too', () => {
+  assert.deepEqual(codes(lessonWith({ definition: 'Learn {ce}, {cet}, {cette}, {ces}.' })), ['concept_examples_size', 'concept_inline_list']);
 });
 
 test('inlineListRuns finds each run of three or more items in a sentence', () => {
@@ -161,13 +160,13 @@ test('inlineListRuns finds each run of three or more items in a sentence', () =>
 
 /* ---------- Reference sections ---------- */
 
-test('a Reference section may hold examples in the same shape, and keeps its old string while it waits', () => {
+test('a Reference section may hold examples in the same shape, and never the old string', () => {
   const mod = miniModule(MINI_KEYS.reference);
   assert.deepEqual(codes(mod, { unitIndex: null }), []);
   mod.sections[0].examples = [{ fr: 'été', en: 'summer' }, { fr: 'café', en: 'coffee' }];
   assert.deepEqual(codes(mod, { unitIndex: null }), []);
   mod.sections[0].example = '{été}';
-  assert.deepEqual(codes(mod, { unitIndex: null }), ['concept_example_both']);
+  assert.deepEqual(codes(mod, { unitIndex: null }), ['field_unknown']);
   delete mod.sections[0].example;
   mod.sections[0].examples = [{ fr: 'été' }];
   assert.deepEqual(codes(mod, { unitIndex: null }), ['concept_example_meaning']);
@@ -234,11 +233,11 @@ test('loadCourse checks a forms card against the course language’s persons', a
   assert.doesNotThrow(() => loadCourse({ root: MINI_ROOT, replace: new Map([[file, JSON.stringify(mod)]]) }));
 });
 
-test('a word card’s note that runs three or more French items together is flagged as a warning until the cut-over', () => {
+test('a word card’s note that runs three or more French items together fails (concept_inline_list)', () => {
   const mod = miniModule(MINI_KEYS.lesson);
   mod.vocabulary[0].note = 'Its forms: {je suis}, {tu es}, {il est}.';
   const ps = validateModule(mod, { file: 'm.json', unitIndex: 1, persons: PERSONS });
-  assert.deepEqual(ps.map((p) => [p.code, p.path, p.severity]), [['concept_inline_list', 'vocabulary[0].note', 'warning']]);
+  assert.deepEqual(ps.map((p) => [p.code, p.path, p.severity ?? 'error']), [['concept_inline_list', 'vocabulary[0].note', 'error']]);
   mod.vocabulary[0].note = 'Say it to anyone, as in {je suis Paul}.';
   assert.deepEqual(codes(mod), []);
 });

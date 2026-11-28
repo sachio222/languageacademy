@@ -49,18 +49,13 @@ const SPLIT_CODES = {
   // and the built half of a conjugation (pattern, groups and rows come together).
   field_missing: (p) => (/\.examples\[\d+\]\.fr$|^conjugation\.(pattern|groups|rows)$/.test(p.path) ? 'validator' : 'schema'),
 };
-// Codes the validator keeps, as an error or, until the cut-over, as a warning: no half of them is the schema's.
-const SEVERITY_CODES = {
-  // On a concept card or section an error; on a word card's note a warning.
-  concept_inline_list: (p) => (p.severity === 'warning' ? 'warning' : 'validator'),
-  // A card with no examples is a warning until the cut-over; a list of the wrong size an error.
-  concept_examples_size: (p) => (p.severity === 'warning' ? 'warning' : 'validator'),
-};
+
 const VALIDATOR_CODES = new Set([
   'id_duplicate', 'step_not_allowed', 'step_empty', 'blank_count', 'blank_marker_invalid', 'preview_block_unknown', 'position_word',
   'span_nested', 'span_empty', 'span_unclosed', 'span_in_plain_field', 'construction_unknown', 'word_unknown', 'gloss_is_card',
-  // A concept card's examples (scripts/content/concept-examples.mjs): counts, pairs and text the schema cannot state.
-  'concept_example_both', 'concept_example_formula', 'concept_example_meaning', 'concept_forms_pair',
+  // A concept card's examples (scripts/content/concept-examples.mjs): counts, pairs and text the schema cannot state,
+  // and a term, definition or word note that runs a French list together.
+  'concept_examples_size', 'concept_inline_list', 'concept_example_formula', 'concept_example_meaning', 'concept_forms_pair',
   'concept_layout_without_examples', 'concept_plain_item', 'concept_example_not_target',
   // A lesson's conjugation (the verb step): rules across its groups, rows and items, which the schema cannot state.
   'conjugation_group_unknown', 'conjugation_group_empty', 'conjugation_row_no_sentence', 'conjugation_split_invalid',
@@ -74,7 +69,6 @@ const WARNING_CODES = new Set(['translate_outside_unit1', 'translation_framed', 
 function classify(p) {
   if (SCHEMA_CODES.has(p.code)) return 'schema';
   if (Object.hasOwn(SPLIT_CODES, p.code)) return SPLIT_CODES[p.code](p);
-  if (Object.hasOwn(SEVERITY_CODES, p.code)) return SEVERITY_CODES[p.code](p);
   if (VALIDATOR_CODES.has(p.code)) return 'validator';
   if (WARNING_CODES.has(p.code)) return 'warning';
   throw new Error(`problem code ${p.code} is not classified in module-schema.test.mjs`);
@@ -96,7 +90,7 @@ test('every problem code the content validator can report is classified, and no 
   const found = sourceCodes();
   for (const known of ['field_type', 'teaches_in_test', 'construction_unknown', 'word_unknown', 'span_nested', 'short_title_long', 'translate_outside_unit1'])
     assert.ok(found.has(known), `the scan finds ${known}`);
-  const classified = new Set([...SCHEMA_CODES, ...Object.keys(SPLIT_CODES), ...Object.keys(SEVERITY_CODES), ...VALIDATOR_CODES, ...WARNING_CODES]);
+  const classified = new Set([...SCHEMA_CODES, ...Object.keys(SPLIT_CODES), ...VALIDATOR_CODES, ...WARNING_CODES]);
   assert.deepEqual([...found].filter((c) => !classified.has(c)).sort(), [], 'codes in the source with no class');
   assert.deepEqual([...classified].filter((c) => !found.has(c)).sort(), [], 'classified codes the source no longer reports');
 });
@@ -183,12 +177,8 @@ function fullModule(kind) {
     m.checks = ['a', 'b', 'c'].map((id) => ({ ...m.checks[0], id }));
   }
   if (kind === 'reading') m.preview_blocks = [m.passage[0].id];
-  // A concept card or section holds the old example string or the examples list, never both (concept_example_both).
   // A list card's items hold fr, never a plain card's text (concept_plain_item).
-  for (const card of [...(m.concepts ?? []), ...(m.sections ?? [])]) {
-    Reflect.deleteProperty(card, 'example');
-    for (const x of card.examples ?? []) Reflect.deleteProperty(x, 'text');
-  }
+  for (const card of [...(m.concepts ?? []), ...(m.sections ?? [])]) for (const x of card.examples ?? []) Reflect.deleteProperty(x, 'text');
   // The verb step's data holds together (conjugationRules): the row sounds like a group the lesson names, its stem
   // starts the form and its silent letters end it, and an item says the form in a sentence (the gap-fill below,
   // "Je suis ici.", with its gloss).
@@ -527,7 +517,6 @@ test('every code left to the content validator is pinned: the schema accepts, va
     ['an instruction that is only a command (a warning)', edit(full.lesson, (m) => { m.items.find((i) => i.instruction !== undefined).instruction = 'Put it in the past.'; }), 'drill_without_situation', { unitIndex: 2 }],
     ['an example with no French', edit(full.lesson, (m) => { delete m.concepts[0].examples[0].fr; }), 'field_missing'],
     // A concept card's examples (concept-examples.mjs).
-    ['a card with the old string and the list', edit(full.lesson, (m) => { m.concepts[0].example = '{Je suis ici}'; }), 'concept_example_both'],
     ['a formula for an example', edit(full.lesson, (m) => { m.concepts[0].examples[0].fr = 'je suis + ici'; }), 'concept_example_formula'],
     ['a list example with no English', edit(full.lesson, (m) => { delete m.concepts[0].examples[0].en; m.concepts[0].layout = 'list'; }), 'concept_example_meaning'],
     ['forms that do not pair singular with plural', edit(full.lesson, (m) => { m.concepts[0].layout = 'forms'; m.concepts[0].examples = [{ fr: 'je suis' }, { fr: 'tu es' }]; }), 'concept_forms_pair', { persons: fr.persons }],
@@ -553,7 +542,7 @@ test('every code left to the content validator is pinned: the schema accepts, va
     assert.deepEqual(v.stated, [], `${label}: no problem the schema states`);
     pinned.add(code);
   }
-  const left = new Set([...VALIDATOR_CODES, ...WARNING_CODES, ...Object.keys(SPLIT_CODES), ...Object.keys(SEVERITY_CODES)]);
+  const left = new Set([...VALIDATOR_CODES, ...WARNING_CODES, ...Object.keys(SPLIT_CODES)]);
   assert.deepEqual([...left].filter((c) => !pinned.has(c)).sort(), [], 'every code left to the validator has a case');
   // A planned stub is valid content but no draft: the draft schemas take status written only.
   const planned = ALL.find(({ mod }) => mod.status === 'planned' && mod.kind === 'lesson').mod;

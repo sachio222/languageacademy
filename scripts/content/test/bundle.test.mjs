@@ -647,7 +647,7 @@ test("a verb lesson's Speed Match pairs each person with its form, one pair per 
   assert.deepEqual(pairs, [['je', 'veux'], ['il', 'veut'], ['vous', 'voulez'], ['ils', 'veulent'], ['nous', 'voulons']]);
 });
 
-test('a concept card carries its examples and layout to L; a card that still holds the old string keeps it', (t) => {
+test('a concept card carries its examples and layout to L, and no old example field', (t) => {
   const { outline, files } = writtenContent();
   const key = '2024-01-15-vouloir';
   const examples = [{ fr: 'Je veux ça.', en: 'I want that.' }, { fr: 'Tu veux un café ?', en: 'Do you want a coffee?', note: 'a polite offer' }];
@@ -659,7 +659,7 @@ test('a concept card carries its examples and layout to L; a card that still hol
     for (const card of [a, b, c]) for (const k of ['example', 'examples', 'layout']) Reflect.deleteProperty(card, k);
     a.examples = examples;
     Object.assign(b, { definition: 'The stem changes with the person.', layout: 'forms', examples: forms });
-    c.example = '{Je veux être un ami.} (I want to be a friend.)';
+    c.examples = [{ fr: 'Je veux être heureux.', en: 'I want to be happy.' }];
     return { file: f.file, json: m };
   });
   const bun = buildBundle(assembleCourse(outline, changed, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
@@ -667,13 +667,11 @@ test('a concept card carries its examples and layout to L; a card that still hol
   const [a, b, c] = blocks;
   assert.deepEqual(a.examples, [{ fr: 'Je veux ça.', en: 'I want that.', note: null }, { fr: 'Tu veux un café ?', en: 'Do you want a coffee?', note: 'a polite offer' }]);
   assert.equal(a.layout, 'list');
-  assert.equal(a.example, null);
+  for (const x of [a, b, c]) assert.equal('example' in x, false);
   assert.equal(b.layout, 'forms');
   assert.deepEqual(b.examples.map((x) => [x.fr, x.en]), forms.map((x) => [x.fr, null]));
-  // the third card is still in the old shape
-  assert.equal(typeof c.example, 'string');
-  assert.equal(c.examples, undefined);
-  assert.equal(c.layout, undefined);
+  assert.equal(c.layout, 'list');
+  assert.deepEqual(c.examples, [{ fr: 'Je veux être heureux.', en: 'I want to be happy.', note: null }]);
   const v = schemaValidator(join(VENDOR, 'contracts'), 'curriculum.bundle.schema.json');
   assert.deepEqual(v.validate(bun).slice(0, 5), []);
   const r = runChecker(bun);
@@ -697,11 +695,11 @@ test('a plain card carries its { text } items to L, and passes L’s checker', (
   assert.equal(r.status, 0, JSON.stringify(r.problems?.slice(0, 3)));
 });
 
-test("L's checker refuses a forms card with an odd number of examples, and a concept card with both shapes", () => {
+test("L's checker refuses a forms card with an odd number of examples, and the old example field", () => {
   const { outline, files } = writtenContent();
   const b = buildBundle(assembleCourse(outline, files, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
   const block = contentOf(b, '2024-01-15-vouloir').steps.find((s) => s.section_id === 'vocabulary-intro').body.blocks[0];
-  Object.assign(block, { example: null, layout: 'forms', examples: [{ fr: 'je veux', en: null, note: null }, { fr: 'tu veux', en: null, note: null }, { fr: 'il veut', en: null, note: null }] });
+  Object.assign(block, { layout: 'forms', examples: [{ fr: 'je veux', en: null, note: null }, { fr: 'tu veux', en: null, note: null }, { fr: 'il veut', en: null, note: null }] });
   let r = runChecker(b);
   assert.equal(r.status, 1);
   assert.ok(r.problems.some((p) => p.code === 'bundle_invalid' && /even/.test(p.detail)), JSON.stringify(r.problems?.slice(0, 3)));

@@ -18,7 +18,7 @@
     { "word_id": "vous-etes-fr", "fr": "vous êtes", "gloss": "you are (formal or plural)" }
   ],
   "concepts": [
-    { "id": "c-etre-forms", "term": "{être} changes with the subject", "definition": "Say {je suis} for I am and {tu es} for you are.", "example": "{Je suis Paul.}" }
+    { "id": "c-etre-forms", "term": "{être} changes with the subject", "definition": "Say {je suis} for I am and {tu es} for you are.", "examples": [{ "fr": "Je suis Paul.", "en": "I am Paul." }] }
   ],
   "tables": [
     {
