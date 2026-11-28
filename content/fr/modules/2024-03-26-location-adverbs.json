@@ -61,27 +61,71 @@
   "concepts": [
     {
       "id": "c-basic-location",
-      "term": "Basic Location",
-      "definition": "ici (here) vs là (there) - pointing to places",
-      "example": "{je suis ici} (I am here), {le chat est là} (the cat is there)"
+      "term": "{ici} and {là}",
+      "definition": "{ici} is here, where you are. {là} is there, a place you can point to.",
+      "examples": [
+        {
+          "fr": "Je suis ici.",
+          "en": "I'm here."
+        },
+        {
+          "fr": "Le chat est là.",
+          "en": "The cat is there."
+        }
+      ]
     },
     {
       "id": "c-distance-with-la-bas",
-      "term": "Distance with là-bas",
-      "definition": "là-bas means 'over there' (farther away than '{là}')",
-      "example": "{le café est là-bas} (the café is over there)"
+      "term": "{là-bas} = over there",
+      "definition": "{là-bas} is farther away than {là}.",
+      "examples": [
+        {
+          "fr": "Le café est là-bas.",
+          "en": "The café is over there."
+        },
+        {
+          "fr": "Je vais là-bas.",
+          "en": "I'm going over there."
+        }
+      ]
     },
     {
       "id": "c-quantity-of-places",
-      "term": "Quantity of Places",
-      "definition": "partout (everywhere), quelque part (somewhere), nulle part (nowhere)",
-      "example": "Express presence or absence across locations"
+      "term": "Everywhere, somewhere, nowhere",
+      "definition": "{nulle part} needs {ne} before the verb, like {jamais}.",
+      "examples": [
+        {
+          "fr": "Je vais partout.",
+          "en": "I go everywhere."
+        },
+        {
+          "fr": "Le livre est quelque part.",
+          "en": "The book is somewhere."
+        },
+        {
+          "fr": "Je ne vais jamais nulle part.",
+          "en": "I never go anywhere."
+        }
+      ]
     },
     {
       "id": "c-position-in-sentence",
-      "term": "Position in Sentence",
-      "definition": "Usually placed AFTER the verb",
-      "example": "{je vais là} (I go there), {il est ici} (he is here), {demain, il est là-bas} (tomorrow he is over there)"
+      "term": "Where these words go",
+      "definition": "They usually come after the verb.",
+      "examples": [
+        {
+          "fr": "Il est ici.",
+          "en": "He's here."
+        },
+        {
+          "fr": "Le chat est partout.",
+          "en": "The cat is everywhere."
+        },
+        {
+          "fr": "Demain, il est là-bas.",
+          "en": "Tomorrow he's over there."
+        }
+      ]
     }
   ],
   "items": [

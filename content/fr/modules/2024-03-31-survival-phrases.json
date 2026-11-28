@@ -101,27 +101,80 @@
   "concepts": [
     {
       "id": "c-polite-requests",
-      "term": "Polite Requests",
-      "definition": "Use '{je voudrais}' (I would like) instead of '{je veux}' - much more polite!",
-      "example": "At a bakery: '{Je voudrais un croissant, s'il vous plaît}'"
+      "term": "Asking politely",
+      "definition": "{Je voudrais} means I would like. It sounds softer than {je veux}, so use it in shops and cafés.",
+      "examples": [
+        {
+          "fr": "Je voudrais un café, s'il vous plaît.",
+          "en": "I would like a coffee, please."
+        },
+        {
+          "fr": "Je voudrais un croissant, s'il vous plaît.",
+          "en": "I would like a croissant, please.",
+          "note": "at a bakery"
+        },
+        {
+          "fr": "L'addition, s'il vous plaît.",
+          "en": "The bill, please."
+        }
+      ]
     },
     {
       "id": "c-essential-questions",
-      "term": "Essential Questions",
-      "definition": "Phrases for prices, locations, and understanding",
-      "example": "{C'est combien?} (How much?), {Où sont les toilettes?} (Where's the bathroom?)"
+      "term": "Prices and places",
+      "definition": "Two questions you ask on any trip: what something costs and where something is.",
+      "examples": [
+        {
+          "fr": "C'est combien ?",
+          "en": "How much is it?"
+        },
+        {
+          "fr": "Combien ça coûte ?",
+          "en": "How much does it cost?"
+        },
+        {
+          "fr": "Où sont les toilettes ?",
+          "en": "Where are the restrooms?"
+        }
+      ]
     },
     {
       "id": "c-polite-words",
-      "term": "Polite Words",
-      "definition": "Please, excuse me, good night - essential politeness",
-      "example": "{S'il vous plaît, excusez-moi, bonne nuit}"
+      "term": "Polite words",
+      "definition": "Short words that keep a conversation friendly. Say {s'il vous plaît} to a stranger and {s'il te plaît} to a friend.",
+      "examples": [
+        {
+          "fr": "Excusez-moi.",
+          "en": "Excuse me."
+        },
+        {
+          "fr": "Pardon !",
+          "en": "Sorry!"
+        },
+        {
+          "fr": "Bonne journée !",
+          "en": "Have a good day!"
+        },
+        {
+          "fr": "Bonne nuit !",
+          "en": "Good night!"
+        }
+      ]
     },
     {
       "id": "c-restrooms-always-plural",
-      "term": "Restrooms Always Plural",
-      "definition": "When asking for restrooms, always use plural '{les toilettes}' and '{où sont}'",
-      "example": "{Où + sont + les toilettes?} (Never 'où est la toilette')"
+      "term": "{les toilettes} is plural",
+      "definition": "French always says the restrooms in the plural, so the question uses {sont}, the plural of {est}.",
+      "examples": [
+        {
+          "fr": "Où sont les toilettes ?",
+          "en": "Where are the restrooms?"
+        },
+        {
+          "fr": "Excusez-moi, où sont les toilettes ?",
+          "en": "Excuse me, where are the restrooms?"
+        }
+      ]
     }
   ],
   "items": [

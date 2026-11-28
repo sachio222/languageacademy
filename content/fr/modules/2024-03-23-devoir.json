@@ -79,21 +79,73 @@
   "concepts": [
     {
       "id": "c-devoir-must-to-have",
-      "term": "{devoir} = must / to have to",
-      "definition": "Express obligation, necessity, or moral duty",
-      "example": "Essential for saying 'I must...' or 'I have to...' - very common!"
+      "term": "{devoir} = must, to have to",
+      "definition": "The verb for what you must do. The verb after it stays as it is.",
+      "examples": [
+        {
+          "fr": "Je dois faire ça.",
+          "en": "I have to do that."
+        },
+        {
+          "fr": "Il doit partir maintenant.",
+          "en": "He has to leave now."
+        },
+        {
+          "fr": "Nous devons aller à Paris.",
+          "en": "We have to go to Paris."
+        }
+      ]
     },
     {
       "id": "c-key-forms-to-master",
-      "term": "Key Forms to Master",
-      "definition": "je/tu dois (same!), il/elle doit, nous devons",
-      "example": "Notice: je and tu have the SAME form - both '{dois}'"
+      "term": "The forms of {devoir}",
+      "definition": "The three singular forms sound the same. The stem changes for we and you, and again for they.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je dois",
+          "en": "I must"
+        },
+        {
+          "fr": "tu dois",
+          "en": "you must"
+        },
+        {
+          "fr": "il doit",
+          "en": "he must"
+        },
+        {
+          "fr": "nous devons",
+          "en": "we must"
+        },
+        {
+          "fr": "vous devez",
+          "en": "you must"
+        },
+        {
+          "fr": "ils doivent",
+          "en": "they must"
+        }
+      ]
     },
     {
       "id": "c-composition-power",
-      "term": "Composition Power",
-      "definition": "Combine devoir with previous modules for infinite expressions",
-      "example": "{je dois + ça}, {nous devons + être}, {ils doivent + avoir}"
+      "term": "Asking what someone has to do",
+      "definition": "Put {devoir} in a question to ask what someone has to do, or when.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que tu dois faire ?",
+          "en": "What do you have to do?"
+        },
+        {
+          "fr": "Quand dois-tu partir ?",
+          "en": "When do you have to leave?"
+        },
+        {
+          "fr": "Pourquoi dois-tu partir ?",
+          "en": "Why do you have to leave?"
+        }
+      ]
     }
   ],
   "items": [

@@ -86,27 +86,84 @@
   "concepts": [
     {
       "id": "c-negating-modal-verbs",
-      "term": "Negating Modal Verbs",
-      "definition": "Apply ne...pas to vouloir, pouvoir, aller, voir",
-      "example": "{je peux} → {je ne peux pas} (I can't), {je veux} → {je ne veux pas} (I won't/don't want)"
+      "term": "I can't, I don't want to",
+      "definition": "Put {ne} … {pas} around {pouvoir} or {vouloir}. The second verb comes after {pas}.",
+      "examples": [
+        {
+          "fr": "Je ne peux pas.",
+          "en": "I can't."
+        },
+        {
+          "fr": "Je ne veux pas.",
+          "en": "I don't want to."
+        },
+        {
+          "fr": "Tu ne peux pas avoir ça.",
+          "en": "You can't have that."
+        }
+      ]
     },
     {
       "id": "c-ne-jamais-never",
-      "term": "{ne...jamais} (never)",
-      "definition": "Replace '{pas}' with '{jamais}' to mean 'never'",
-      "example": "{je vais} → {je ne vais jamais} (I never go), {je mange toujours ici} → {je ne mange jamais ici} (I never eat here)"
+      "term": "{ne} … {jamais} = never",
+      "definition": "Put {jamais} where {pas} goes to say never.",
+      "examples": [
+        {
+          "fr": "Je mange toujours ici.",
+          "en": "I always eat here."
+        },
+        {
+          "fr": "Je ne mange jamais ici.",
+          "en": "I never eat here."
+        },
+        {
+          "fr": "Il ne fait jamais ça.",
+          "en": "He never does that."
+        },
+        {
+          "fr": "Nous ne voulons jamais partir.",
+          "en": "We never want to leave."
+        }
+      ]
     },
     {
       "id": "c-with-object-pronouns",
-      "term": "With Object Pronouns",
-      "definition": "Object pronouns stay inside the negation sandwich",
-      "example": "{je le veux} → {je ne le veux pas} (I don't want it)"
+      "term": "With an object pronoun",
+      "definition": "The pronoun stays before its verb, inside {ne} … {pas}.",
+      "examples": [
+        {
+          "fr": "Je ne le veux pas.",
+          "en": "I don't want it."
+        },
+        {
+          "fr": "Je ne le vois pas.",
+          "en": "I don't see it."
+        },
+        {
+          "fr": "Je ne peux pas le voir.",
+          "en": "I can't see it.",
+          "note": "with two verbs, the pronoun goes before the second"
+        }
+      ]
     },
     {
       "id": "c-common-patterns",
-      "term": "Common Patterns",
-      "definition": "I can't, I won't, I never go, I don't see it - very useful!",
-      "example": "Master these patterns for real conversations"
+      "term": "Sentences you will say often",
+      "definition": "These short sentences come up in everyday conversation.",
+      "examples": [
+        {
+          "fr": "Ils ne sont pas ici.",
+          "en": "They're not here."
+        },
+        {
+          "fr": "Nous n'allons pas au café.",
+          "en": "We're not going to the café."
+        },
+        {
+          "fr": "Nous ne faisons pas ça.",
+          "en": "We don't do that."
+        }
+      ]
     }
   ],
   "items": [

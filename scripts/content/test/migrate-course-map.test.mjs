@@ -103,7 +103,7 @@ test('text inside an item, concept cards and module fields keep their correction
   const { corrections } = split({
     '2024-01-13-ca-survival': { overrides: { '2024-01-13-ca-survival#exerciseConfig.items[4].hint': ig('fr:lex:combiner') } },
     '2024-02-02-combining': { overrides: { '2024-02-02-combining#exerciseConfig.items[11].wrongAnswers[0].feedback': ig('fr:cx:imperative.irregular') } },
-    '2024-03-31-survival-phrases': { overrides: { '2024-03-31-survival-phrases#concepts[0].example': ig('fr:lex:express') } },
+    '2024-03-31-survival-phrases': { overrides: { '2024-03-31-survival-phrases#concepts[0].definition': ig('fr:lex:express') } },
     '2024-02-02-service-phrases': { overrides: { '2024-02-02-service-phrases#title': ig('fr:lex:service') } },
     '2024-05-18-irregular-commands': { itemKinds: { '2024-05-18-irregular-commands#exercises[3]': 'translate' } },
   });
@@ -115,7 +115,7 @@ test('text inside an item, concept cards and module fields keep their correction
   const k = combining.mistakes.findIndex((m) => m.answer === configs.get('2024-02-02-combining').exerciseConfig.items[11].wrongAnswers[0].answer);
   assert.ok(k >= 0);
   assert.deepEqual(Object.keys(corrections['2024-02-02-combining'].overrides), [`2024-02-02-combining#${combining.id}/mistakes/${k}/feedback`]);
-  assert.deepEqual(Object.keys(corrections['2024-03-31-survival-phrases'].overrides), [`2024-03-31-survival-phrases#concepts/${concept('2024-03-31-survival-phrases', 0)}/example`]);
+  assert.deepEqual(Object.keys(corrections['2024-03-31-survival-phrases'].overrides), [`2024-03-31-survival-phrases#concepts/${concept('2024-03-31-survival-phrases', 0)}/definition`]);
   assert.deepEqual(Object.keys(corrections['2024-02-02-service-phrases'].overrides), ['2024-02-02-service-phrases#title']);
   assert.deepEqual(corrections['2024-05-18-irregular-commands'].itemKinds, { [`2024-05-18-irregular-commands#${item('2024-05-18-irregular-commands', 4)}`]: 'translate' });
 });
@@ -149,13 +149,15 @@ test('corrections at places with no live id come through by the id the migration
   const negation = mod('2026-11-24-negation-guide').parts.find((p) => p.id === 'p-no-more-nothing-never');
   assert.equal(negation.blocks[1].lines[0][0], configs.get('2026-11-24-negation-guide').guide.sections[2].examples[0].french);
   assert.ok(mod('2024-04-03-unit-4-practice').items.some((it) => it.id === 'i-je-voudrais'));
-  // Nothing in the committed course map is lost: every override is keyed, except the one about dropped text and the two
-  // on Units 1 to 3 concept examples, whose old example strings the examples lists replaced (plan
-  // 2026-11-27-concept-cards-structured): the words they ignored are gone from the cards.
+  // Nothing in the committed course map is lost: every override is keyed, except the one about dropped text and those
+  // on concept examples, whose old example strings the examples lists replaced (plan
+  // 2026-11-27-concept-cards-structured): a card holds no example string any more, so the correction has no place to
+  // go. Where the new examples still need it, course-map.json carries it by hand on each example's French
+  // (concepts/<id>/examples/<n>/fr).
   const before = Object.values(COURSE_MAP).reduce((n, e) => n + Object.keys(e.overrides ?? {}).length, 0);
   const after = Object.values(corrections).reduce((n, e) => n + Object.keys(e.overrides ?? {}).length, 0);
-  assert.equal(after, before - 3);
-  const gone = ['2024-01-02-etre#concepts[0].example', '2024-01-19-stressed-pronouns#concepts[1].example'];
+  const gone = CARD_EXAMPLE_OVERRIDES_GONE;
+  assert.equal(after, before - 1 - gone.length);
   assert.deepEqual(report.filter((l) => /^(no_item_id|no_target)/.test(l.detail)).map((l) => [l.path, l.detail.split(':')[0]]), gone.map((g) => [g, 'no_target']));
 });
 
@@ -288,6 +290,18 @@ const NAME_OVERRIDES_AFTER_SPLIT = {
     'passage/b-oui-je-vais-au/fr', 'passage/b-non-merci-j-ai/fr', 'passage/img-cafe/fr'],
   '2024-03-30-reading-4': ['i-les-editeurs', 'i-carrefour-de-l-odeon', 'passage/b-les-editeurs-il-est/fr', 'passage/img-cafe/fr'],
 };
+// The split's overrides on concept cards' old example strings, which the examples lists replaced: no place is left for
+// them in the module files.
+const CARD_EXAMPLE_OVERRIDES_GONE = ['2024-01-02-etre#concepts[0].example', '2024-01-19-stressed-pronouns#concepts[1].example',
+  '2024-03-31-survival-phrases#concepts[0].example'];
+// Overrides moved by hand after the split onto a concept card's examples (plan 2026-11-27-concept-cards-structured):
+// the card's old example string, which the split keys, is gone, and each example whose French still needs the
+// correction carries it on concepts/<id>/examples/<n>/fr.
+const CARD_OVERRIDES_AFTER_SPLIT = {
+  // s'il vous plaît, a chunk taught whole in its first lesson, carries the override its item has.
+  '2024-01-01-famous-words': ['concepts/c-essential-greetings-politeness/examples/1/fr'],
+  '2024-03-31-survival-phrases': ['concepts/c-polite-requests/examples/0/fr', 'concepts/c-polite-requests/examples/1/fr'],
+};
 // Content notes settled after the split (C4b): the être-verbs gap-fill now reads "Elle n'___ pas ___".
 const NOTES_SETTLED_AFTER_SPLIT = ['2024-05-31-passe-compose-etre'];
 
@@ -305,7 +319,7 @@ test('the committed course-map.json is the split of the course map before the sp
     if (!committed[key].excludeWords.length) delete committed[key].excludeWords;
     if (!Object.keys(committed[key]).length) delete committed[key];
   }
-  for (const [key, refs] of Object.entries(NAME_OVERRIDES_AFTER_SPLIT)) {
+  for (const [key, refs] of [...Object.entries(NAME_OVERRIDES_AFTER_SPLIT), ...Object.entries(CARD_OVERRIDES_AFTER_SPLIT)]) {
     for (const ref of refs) {
       assert.ok(committed[key]?.overrides?.[`${key}#${ref}`], `${key}#${ref}`);
       delete committed[key].overrides[`${key}#${ref}`];
@@ -444,9 +458,11 @@ test('keys already in the id shape pass through unchanged', () => {
   assert.deepEqual(corrections, CORRECTIONS);
   assert.deepEqual(report.filter((l) => /^(no_item_id|no_target|text_dropped|rekeyed)/.test(l.detail)), []);
   const c = correctionsOf(CORRECTIONS, course.modules, { liveIds: LIVE_IDS, sources: configs, records: RECORDS }).counts;
-  // 35 overrides, then 10 for the proper names in Readings 3 and 4 (NAME_OVERRIDES_AFTER_SPLIT), less the 2 on Units 1
-  // to 3 concept examples that the examples lists replaced (plan 2026-11-27-concept-cards-structured).
-  assert.deepEqual(c, { rekeyed: 0, kept: 43, dropped: 0, textDropped: 0 });
+  // 35 overrides, then 10 for the proper names in Readings 3 and 4 (NAME_OVERRIDES_AFTER_SPLIT), less the old example
+  // strings of concept cards that the examples lists replaced, plus the overrides carried onto their examples
+  // (CARD_OVERRIDES_AFTER_SPLIT; plan 2026-11-27-concept-cards-structured).
+  const cardMoved = Object.values(CARD_OVERRIDES_AFTER_SPLIT).flat().length;
+  assert.deepEqual(c, { rekeyed: 0, kept: 45 - CARD_EXAMPLE_OVERRIDES_GONE.length + cardMoved, dropped: 0, textDropped: 0 });
   // An old dotted path is not an id key.
   const odd = correctionsOf({ '2024-01-13-ca-survival': { overrides: { '2024-01-13-ca-survival#readingPassage.title': { ignore: ['x'] } } } }, course.modules, { liveIds: LIVE_IDS }).counts;
   assert.equal(odd.dropped, 1);

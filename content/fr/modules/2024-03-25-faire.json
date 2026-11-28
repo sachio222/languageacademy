@@ -69,21 +69,73 @@
   "concepts": [
     {
       "id": "c-faire-to-do-make",
-      "term": "{faire} = to do/make",
-      "definition": "Extremely versatile verb - doing actions and making things",
-      "example": "Used constantly in daily life - one of the top 15 words!"
+      "term": "{faire} = to do, to make",
+      "definition": "One verb for doing things and for making things. You use it every day.",
+      "examples": [
+        {
+          "fr": "Je fais ça.",
+          "en": "I do that."
+        },
+        {
+          "fr": "Qu'est-ce que tu fais ?",
+          "en": "What are you doing?"
+        },
+        {
+          "fr": "Qu'est-ce que tu vas faire ?",
+          "en": "What are you going to do?"
+        }
+      ]
     },
     {
       "id": "c-irregular-pattern",
-      "term": "Irregular Pattern",
-      "definition": "faire is irregular - but you've seen a pattern like this before!",
-      "example": "je fais, tu fais, il fait, elle fait, are all the same sounding, but different spellings. Nous faisons, vous faites, ils font, elles font are like the other irregular verbs you've learned. Easy!"
+      "term": "The forms of {faire}",
+      "definition": "The three singular forms sound the same. {vous faites} ends like {vous êtes}, and {ils font} like {ils sont}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je fais",
+          "en": "I do"
+        },
+        {
+          "fr": "tu fais",
+          "en": "you do"
+        },
+        {
+          "fr": "il fait",
+          "en": "he does"
+        },
+        {
+          "fr": "nous faisons",
+          "en": "we do"
+        },
+        {
+          "fr": "vous faites",
+          "en": "you do"
+        },
+        {
+          "fr": "ils font",
+          "en": "they do"
+        }
+      ]
     },
     {
       "id": "c-composition-power",
-      "term": "Composition Power",
-      "definition": "Combine faire with previous modules for infinite expressions",
-      "example": "{je fais + ça, nous faisons + le travail, ils font + attention}"
+      "term": "{faire} after another verb",
+      "definition": "Put {faire} after another verb to say what you want, can or are going to do. It stays as it is.",
+      "examples": [
+        {
+          "fr": "Je veux faire ça.",
+          "en": "I want to do that."
+        },
+        {
+          "fr": "Je peux faire ça.",
+          "en": "I can do that."
+        },
+        {
+          "fr": "Je vais faire ça.",
+          "en": "I'm going to do that."
+        }
+      ]
     }
   ],
   "items": [

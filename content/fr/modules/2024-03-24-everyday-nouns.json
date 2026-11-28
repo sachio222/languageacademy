@@ -195,27 +195,93 @@
   "concepts": [
     {
       "id": "c-abstract-vs-concrete-nouns",
-      "term": "Abstract vs Concrete Nouns",
-      "definition": "Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.",
-      "example": "{la vie} (life - abstract), {le pain} (bread - concrete)"
+      "term": "Ideas and things",
+      "definition": "Some nouns name ideas, like life and time. Others name things you can touch, like bread and water.",
+      "examples": [
+        {
+          "fr": "La vie est bonne.",
+          "en": "Life is good."
+        },
+        {
+          "fr": "Le monde est grand.",
+          "en": "The world is big."
+        },
+        {
+          "fr": "Le pain est sur la table.",
+          "en": "The bread is on the table."
+        }
+      ]
     },
     {
       "id": "c-using-in-real-conversations",
-      "term": "Using in Real Conversations",
-      "definition": "These are the nouns you'll use constantly in French - combine with verbs you know!",
-      "example": "{je veux du pain, j'ai le temps, il parle du monde}"
+      "term": "Nouns with the verbs you know",
+      "definition": "Put these nouns with the verbs you know to say real things.",
+      "examples": [
+        {
+          "fr": "Je veux du pain.",
+          "en": "I want some bread."
+        },
+        {
+          "fr": "J'ai le temps.",
+          "en": "I have time."
+        },
+        {
+          "fr": "Tout le monde est ici.",
+          "en": "Everybody is here."
+        }
+      ]
     },
     {
       "id": "c-remember-the-gender",
-      "term": "Remember the Gender!",
-      "definition": "Always learn the article with the noun - it shows the gender",
-      "example": "{le temps} (masculine), {la vie} (feminine)"
+      "term": "Learn the article with the noun",
+      "definition": "The article shows whether a noun is masculine or feminine, so learn the two together.",
+      "examples": [
+        {
+          "fr": "le temps",
+          "en": "time",
+          "note": "masculine"
+        },
+        {
+          "fr": "la vie",
+          "en": "life",
+          "note": "feminine"
+        },
+        {
+          "fr": "la main",
+          "en": "hand",
+          "note": "feminine"
+        }
+      ]
     },
     {
       "id": "c-pas-de",
       "term": "{pas de}: no, not any",
-      "definition": "After {ne … pas}, {un}, {une}, {des}, {du}, {de la} and {de l'} usually become {de}, or {d'} before a vowel. {le}, {la} and {les} stay as they are. After {être} they stay: {ce n'est pas un livre}.",
-      "example": "{J'ai du pain.} becomes {Je n'ai pas de pain.} (I don't have any bread.)"
+      "definition": "In a sentence with {ne} … {pas}, a word for a or some becomes {de}. The words {le} and {la} stay as they are.",
+      "examples": [
+        {
+          "fr": "J'ai du pain.",
+          "en": "I have some bread."
+        },
+        {
+          "fr": "Je n'ai pas de pain.",
+          "en": "I don't have any bread."
+        },
+        {
+          "fr": "Il n'a pas d'argent.",
+          "en": "He doesn't have any money.",
+          "note": "{de} becomes {d'} before a vowel"
+        },
+        {
+          "fr": "Je n'ai pas le livre.",
+          "en": "I don't have the book.",
+          "note": "{le} stays"
+        },
+        {
+          "fr": "Ce n'est pas un livre.",
+          "en": "It isn't a book.",
+          "note": "after {être}, {un} stays too"
+        }
+      ]
     }
   ],
   "items": [

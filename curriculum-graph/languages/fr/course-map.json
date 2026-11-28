@@ -1,6 +1,12 @@
 {
   "2024-01-01-famous-words": {
     "overrides": {
+      "2024-01-01-famous-words#concepts/c-essential-greetings-politeness/examples/1/fr": {
+        "ignore": [
+          "fr:cx:elision",
+          "fr:cx:pronoun.subject"
+        ]
+      },
       "2024-01-01-famous-words#i-s-il-vous-plait": {
         "ignore": [
           "fr:cx:elision",
@@ -350,7 +356,12 @@
           "fr:cx:conditionnel-present"
         ]
       },
-      "2024-03-31-survival-phrases#concepts/c-polite-requests/example": {
+      "2024-03-31-survival-phrases#concepts/c-polite-requests/examples/0/fr": {
+        "ignore": [
+          "fr:cx:conditionnel-present"
+        ]
+      },
+      "2024-03-31-survival-phrases#concepts/c-polite-requests/examples/1/fr": {
         "ignore": [
           "fr:cx:conditionnel-present"
         ]

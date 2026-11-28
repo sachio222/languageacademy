@@ -201,14 +201,14 @@
       ]
     },
     {
-      "id": "i-ils-sont-les-amis",
+      "id": "i-elles-ont-les-chiens",
       "type": "respond",
-      "situation": "they are the friends (masculine)",
-      "answer": "ils sont les amis",
-      "hint": "Combine: they are + the + friends (plural)",
+      "situation": "they have the dogs (all women or girls)",
+      "answer": "elles ont les chiens",
+      "hint": "Use {elles ont}, then {les} for the dogs.",
       "mistakes": [
         {
-          "answer": "ils sont des amis",
+          "answer": "elles ont des chiens",
           "feedback": "Use '{les}' (the), not 'des' (some)"
         }
       ]

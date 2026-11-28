@@ -79,33 +79,109 @@
   "concepts": [
     {
       "id": "c-parler-to-speak-to",
-      "term": "{parler} = to speak / to talk",
-      "definition": "Talk about languages you speak and conversations you have",
-      "example": "{je parle français} (I speak French), {nous parlons ensemble} (we talk together)"
+      "term": "{parler} = to speak, to talk",
+      "definition": "The verb for speaking a language and for talking with people.",
+      "examples": [
+        {
+          "fr": "Je parle français.",
+          "en": "I speak French."
+        },
+        {
+          "fr": "Nous parlons ensemble.",
+          "en": "We're talking together."
+        },
+        {
+          "fr": "Je parle français maintenant.",
+          "en": "I speak French now."
+        }
+      ]
     },
     {
       "id": "c-regular-er-verb-pattern",
-      "term": "Regular -ER Verb Pattern",
-      "definition": "This is THE standard French verb pattern - master it!",
-      "example": "Remove -er, add: -e, -{es}, -e, -ons, -ez, -ent (most verbs follow this!)"
+      "term": "The -er pattern",
+      "definition": "Most French verbs end in -er and change like {parler}. Take off the -er and add the ending for each person.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je parle",
+          "en": "I speak"
+        },
+        {
+          "fr": "tu parles",
+          "en": "you speak"
+        },
+        {
+          "fr": "il parle",
+          "en": "he speaks"
+        },
+        {
+          "fr": "nous parlons",
+          "en": "we speak"
+        },
+        {
+          "fr": "vous parlez",
+          "en": "you speak"
+        },
+        {
+          "fr": "ils parlent",
+          "en": "they speak"
+        }
+      ]
     },
     {
       "id": "c-silent-endings",
-      "term": "Silent Endings",
-      "definition": "je/tu/il/elle/ils/elles all SOUND the same! Only nous/vous are different",
-      "example": "{je parle}, {tu parles}, {il parle}, {elle parle}, {ils parlent} - all sound like 'parl'"
+      "term": "Endings you do not hear",
+      "definition": "The endings -e, -es and -ent are silent. Only the forms for we and you sound different.",
+      "examples": [
+        {
+          "fr": "Il parle français.",
+          "en": "He speaks French."
+        },
+        {
+          "fr": "Ils parlent français.",
+          "en": "They speak French.",
+          "note": "sounds just like {il parle}"
+        },
+        {
+          "fr": "Nous parlons français.",
+          "en": "We speak French.",
+          "note": "here you hear the ending"
+        }
+      ]
     },
     {
       "id": "c-with-prepositions",
-      "term": "With Prepositions",
-      "definition": "Use 'à' when talking TO someone: parler à quelqu'un",
-      "example": "{je parle à Marie} (I speak to Marie)"
+      "term": "Talking to someone",
+      "definition": "Use {à} before the person you talk to.",
+      "examples": [
+        {
+          "fr": "Je parle à Marie.",
+          "en": "I'm talking to Marie."
+        },
+        {
+          "fr": "Tu parles à qui ?",
+          "en": "Who are you talking to?"
+        }
+      ]
     },
     {
       "id": "c-common-uses",
-      "term": "Common Uses",
-      "definition": "Describe languages (parler français), conversations (parler avec), topics (parler de)",
-      "example": "{je parle français maintenant} (I speak French now), {nous parlons de toi} (we talk about you)"
+      "term": "Talking with someone, about something",
+      "definition": "Use {avec} for the person you talk with, and {de} for what or who you talk about.",
+      "examples": [
+        {
+          "fr": "Je parle avec Marie.",
+          "en": "I'm talking with Marie."
+        },
+        {
+          "fr": "Nous parlons de toi.",
+          "en": "We're talking about you."
+        },
+        {
+          "fr": "Il parle de la maison.",
+          "en": "He's talking about the house."
+        }
+      ]
     }
   ],
   "tables": [

@@ -127,21 +127,60 @@
   "concepts": [
     {
       "id": "c-frequency-adverbs",
-      "term": "Frequency Adverbs",
-      "definition": "Words that express how often something happens",
-      "example": "{toujours} (always), {jamais} (never)"
+      "term": "How often",
+      "definition": "These words say how often something happens.",
+      "examples": [
+        {
+          "fr": "Je vais souvent au café.",
+          "en": "I often go to the café."
+        },
+        {
+          "fr": "Je mange parfois ici.",
+          "en": "I sometimes eat here."
+        },
+        {
+          "fr": "Il parle rarement.",
+          "en": "He rarely talks."
+        }
+      ]
     },
     {
       "id": "c-time-expressions",
-      "term": "Time Expressions",
-      "definition": "Words that express when something happens",
-      "example": "{maintenant} (now), {aujourd'hui} (today), {demain} (tomorrow), {hier} (yesterday)"
+      "term": "When",
+      "definition": "These words say when something happens.",
+      "examples": [
+        {
+          "fr": "Je mange maintenant.",
+          "en": "I'm eating now."
+        },
+        {
+          "fr": "Il va à Paris aujourd'hui.",
+          "en": "He's going to Paris today."
+        },
+        {
+          "fr": "Je veux ça demain.",
+          "en": "I want that tomorrow."
+        }
+      ]
     },
     {
       "id": "c-position-in-sentence",
-      "term": "Position in Sentence",
-      "definition": "Usually placed AFTER the verb in French",
-      "example": "{je vais maintenant} (I go now), {il a toujours} (he always has)"
+      "term": "Where these words go",
+      "definition": "Words for how often come right after the verb. Words for when can go at the end or at the start.",
+      "examples": [
+        {
+          "fr": "Nous sommes toujours ici.",
+          "en": "We're always here."
+        },
+        {
+          "fr": "Je veux juste ça.",
+          "en": "I just want that."
+        },
+        {
+          "fr": "Demain, je vais à Paris.",
+          "en": "Tomorrow I'm going to Paris."
+        }
+      ]
     }
   ],
   "items": [

@@ -104,27 +104,67 @@
   "concepts": [
     {
       "id": "c-chercher-to-search-look",
-      "term": "{chercher} - to search/look for",
-      "definition": "Active searching - when you're looking for something but haven't found it yet",
-      "example": "{je cherche mon livre} (I'm looking for my book), {tu cherches quoi?} (what are you looking for?)"
+      "term": "{chercher} = to look for",
+      "definition": "You are looking for something you have not found yet.",
+      "examples": [
+        {
+          "fr": "Je cherche mon livre.",
+          "en": "I'm looking for my book."
+        },
+        {
+          "fr": "Tu cherches quoi ?",
+          "en": "What are you looking for?"
+        }
+      ]
     },
     {
       "id": "c-trouver-to-find",
-      "term": "{trouver} - to find",
-      "definition": "Successfully locating something - the result of searching",
-      "example": "{j'ai trouvé!} (I found it!), {tu trouves ça où?} (where do you find that?)"
+      "term": "{trouver} = to find",
+      "definition": "The verb for the moment the search ends and you have the thing.",
+      "examples": [
+        {
+          "fr": "Je trouve le livre.",
+          "en": "I find the book."
+        },
+        {
+          "fr": "Tu trouves ça où ?",
+          "en": "Where do you find that?"
+        }
+      ]
     },
     {
       "id": "c-common-usage-patterns",
-      "term": "Common Usage Patterns",
-      "definition": "These verbs are used constantly in daily French conversation",
-      "example": "je cherche + noun (I'm looking for...), je trouve + noun (I find...)"
+      "term": "Looking, then finding",
+      "definition": "{chercher} is the search and {trouver} is the result.",
+      "examples": [
+        {
+          "fr": "Je cherche mon chat.",
+          "en": "I'm looking for my cat."
+        },
+        {
+          "fr": "Je trouve mon chat.",
+          "en": "I find my cat."
+        }
+      ]
     },
     {
       "id": "c-with-prepositions",
-      "term": "With Prepositions",
-      "definition": "chercher takes direct objects, trouver can use various prepositions",
-      "example": "{je cherche le livre} (I'm looking for the book), {je trouve dans la maison} (I find in the house)"
+      "term": "No word for \"for\"",
+      "definition": "{chercher} already means to look for, so nothing goes between the verb and the thing.",
+      "examples": [
+        {
+          "fr": "Je cherche le livre.",
+          "en": "I'm looking for the book."
+        },
+        {
+          "fr": "Nous cherchons la maison.",
+          "en": "We're looking for the house."
+        },
+        {
+          "fr": "Il cherche la voiture.",
+          "en": "He's looking for the car."
+        }
+      ]
     }
   ],
   "items": [

@@ -69,27 +69,75 @@
   "concepts": [
     {
       "id": "c-the-negation-sandwich",
-      "term": "The Negation Sandwich",
-      "definition": "Put '{ne}' BEFORE the verb and '{pas}' AFTER the verb",
-      "example": "{je suis} → {je ne suis pas} (I am → I am not)"
+      "term": "{ne} … {pas} around the verb",
+      "definition": "Put {ne} before the verb and {pas} after it.",
+      "examples": [
+        {
+          "fr": "Je suis au café.",
+          "en": "I'm at the café."
+        },
+        {
+          "fr": "Je ne suis pas au café.",
+          "en": "I'm not at the café."
+        },
+        {
+          "fr": "Elle ne veut pas ça.",
+          "en": "She doesn't want that."
+        }
+      ]
     },
     {
       "id": "c-ne-contracts-to-n",
-      "term": "ne contracts to n'",
-      "definition": "Before vowels or silent h, '{ne}' becomes 'n''",
-      "example": "{je ai} → {je n'ai pas} (I don't have)"
+      "term": "{ne} becomes {n'}",
+      "definition": "Before a vowel or a silent h, {ne} drops its e.",
+      "examples": [
+        {
+          "fr": "Il n'a pas le livre.",
+          "en": "He doesn't have the book."
+        },
+        {
+          "fr": "Elle n'est pas au café.",
+          "en": "She isn't at the café."
+        }
+      ]
     },
     {
       "id": "c-works-with-all-verbs",
-      "term": "Works with ALL Verbs",
-      "definition": "Any verb you've learned can be negated with ne...pas",
-      "example": "{je veux} → {je ne veux pas, tu vas} → {tu ne vas pas}"
+      "term": "Any verb",
+      "definition": "{ne} … {pas} works the same way with every verb you know.",
+      "examples": [
+        {
+          "fr": "Je ne veux pas ça.",
+          "en": "I don't want that."
+        },
+        {
+          "fr": "Tu ne vas pas à Paris.",
+          "en": "You're not going to Paris."
+        },
+        {
+          "fr": "Il ne parle pas français.",
+          "en": "He doesn't speak French."
+        }
+      ]
     },
     {
       "id": "c-with-object-pronouns",
-      "term": "With Object Pronouns",
-      "definition": "Object pronouns stay BEFORE the verb, inside the sandwich",
-      "example": "{je le vois} → {je ne le vois pas} (I don't see it)"
+      "term": "With an object pronoun",
+      "definition": "A pronoun like {le} stays before the verb, inside {ne} … {pas}.",
+      "examples": [
+        {
+          "fr": "Je le vois.",
+          "en": "I see it."
+        },
+        {
+          "fr": "Je ne le vois pas.",
+          "en": "I don't see it."
+        },
+        {
+          "fr": "Il ne la voit pas.",
+          "en": "He doesn't see her."
+        }
+      ]
     }
   ],
   "items": [

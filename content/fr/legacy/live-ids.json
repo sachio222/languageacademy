@@ -121,7 +121,6 @@
       "2024-01-07-plurals.3": "i-nous-avons-les-livres",
       "2024-01-07-plurals.4": "i-ils-ont-les-chats",
       "2024-01-07-plurals.5": "i-j-ai-des-chiens",
-      "2024-01-07-plurals.6": "i-ils-sont-les-amis",
       "2024-01-07-plurals.7": "i-vous-avez-les-choses",
       "2024-01-07-plurals.8": "i-elle-a-les-enfants"
     },
@@ -288,8 +287,6 @@
       "2024-01-16-pouvoir.11": "i-nous-pouvons-avoir-une",
       "2024-01-16-pouvoir.12": "i-je-peux-etre-un",
       "2024-01-16-pouvoir.13": "i-elle-peut-etre-artiste",
-      "2024-01-16-pouvoir.14": "i-je-peux-vouloir-ca",
-      "2024-01-16-pouvoir.15": "i-ils-peuvent-vouloir-un",
       "2024-01-16-pouvoir.16": "i-je-peux-avoir-ca-2"
     },
     "concepts": {
@@ -331,7 +328,6 @@
       "2024-01-18-questions.11": "i-est-ce-que-tu",
       "2024-01-18-questions.12": "i-ou-est-ce-que",
       "2024-01-18-questions.13": "i-quand-est-ce-que",
-      "2024-01-18-questions.14": "i-est-ce-que-elle",
       "2024-01-18-questions.15": "i-combien-est-ce",
       "2024-01-18-questions.16": "i-combien-est-ce-que",
       "2024-01-18-questions.17": "i-quel-livre",

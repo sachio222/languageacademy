@@ -8,8 +8,8 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 
 | Unit | Bare `translate` | Framed `respond` |
 |---|---|---|
-| unit1 Essential Grammar | 35 | 48 |
-| unit2 Asking & Describing | 57 | 91 |
+| unit1 Essential Grammar | 35 | 47 |
+| unit2 Asking & Describing | 57 | 89 |
 | unit3 Movement & Possession | 11 | 84 |
 | unit4 Everyday Words | 109 | 85 |
 | unit5 Time & Taste | 174 | 112 |
@@ -25,16 +25,16 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 |---|---|
 | Guide checks written by hand | 1 |
 | Spellings taught more than once | 401 |
-| Item types to confirm | 231 |
+| Item types to confirm | 229 |
 | Practice blanks that were in the wrong place | 51 |
 | Position words | 119 |
 | Exercises rewritten as Jake ruled | 2 |
-| English prompts written as respond items | 794 |
+| English prompts written as respond items | 791 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1561 |
-| Live ids with no converted item | 364 (49 real misses) |
-| Fields with no place in a module file | 1954 |
+| Hand edits kept | 1699 |
+| Live ids with no converted item | 368 (53 real misses) |
+| Fields with no place in a module file | 1953 |
 | Text written differently | 661 |
 | Notes | 3 |
 | Outline | 16 |
@@ -700,8 +700,6 @@ The classifier had no clear rule for these items, so the type is its best guess.
 - `items[10]` i-nous-pouvons-avoir-une: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[11]` i-je-peux-etre-un: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[12]` i-elle-peut-etre-artiste: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[13]` i-je-peux-vouloir-ca: classifier: translate (English prompt with a French answer); written as respond (framed)
-- `items[14]` i-ils-peuvent-vouloir-un: classifier: translate (English prompt with a French answer); written as respond (framed)
 - `items[15]` i-je-peux-avoir-ca-2: classifier: translate (English prompt with a French answer); written as respond (framed)
 
 **2024-01-18-questions**
@@ -1326,7 +1324,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-01-07-plurals**
 
-- 4 × framed by a context note: `items[1]`, `items[3]`, `items[5]`, `items[6]`
+- 3 × framed by a context note: `items[1]`, `items[3]`, `items[6]`
 
 **2024-01-08-connectors**
 
@@ -1354,7 +1352,7 @@ An English prompt framed by its instruction ("Say 'you would do it' (informal)")
 
 **2024-01-16-pouvoir**
 
-- 16 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[13]`, `items[14]`, `items[15]`
+- 14 × framed by its instruction: `items[0]`, `items[1]`, `items[2]`, `items[3]`, `items[4]`, `items[5]`, `items[6]`, `items[7]`, `items[8]`, `items[9]`, `items[10]`, `items[11]`, `items[12]`, `items[15]`
 
 **2024-01-18-questions**
 
@@ -1759,7 +1757,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `concepts[0].example` ""Some of these words may be familiar from movies, restaurants, or everyday use"" → "(removed)"
 - `concepts[1].term` "Essential Greetings & Politeness" → "Greetings and polite words"
 - `concepts[1].definition` "Basic phrases needed for any conversation" → "Say bonjour when you arrive and au revoir when you leave. Add please when you ask for something, and thank you when you get it."
-- `concepts[1].examples` "(none)" → "["fr":"Bonjour !","en":"Hello!","fr":"Merci !","en":"Thank you!","fr":"Oui.","en":"Yes.","fr":"Non.","en":"No.","fr":"Au revoir !","en":"Goodbye!"]"
+- `concepts[1].examples` "(none)" → "["fr":"Bonjour !","en":"Hello!","fr":"S'il vous plaît.","en":"Please.","fr":"Merci !","en":"Thank you!","fr":"Oui.","en":"Yes.","fr":"Non.","en":"No.","fr":"Au revoir !","en":"Goodbye!"]"
 - `concepts[1].example` ""Hello, thank you, yes, no, please, goodbye - universal communication"" → "(removed)"
 - `concepts[2].term` "Building Your Foundation" → "Short answers"
 - `concepts[2].definition` "Starting with common, useful words builds confidence" → "These words already make whole replies. Each one answers a question on its own."
@@ -1999,7 +1997,7 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `concepts[1].example` ""je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent"" → "(removed)"
 - `concepts[2].term` "Composition Power" → "Wanting to do something"
 - `concepts[2].definition` "Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!" → "Put a second verb straight after vouloir to say what you want to do. The second verb does not change."
-- `concepts[2].examples` "(none)" → "["fr":"Je veux être un ami.","en":"I want to be a friend.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."]"
+- `concepts[2].examples` "(none)" → "["fr":"Je veux être heureux.","en":"I want to be happy.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."]"
 - `concepts[2].example` ""je veux + ça, nous voulons + être, ils veulent + avoir + un livre"" → "(removed)"
 - `conjugation` "(none)" → ""verb":"vouloir","en":"to want","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.""
 
@@ -2073,6 +2071,9 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `concepts[7].definition` "Some questions are used so often they become fixed phrases" → "Some questions are so common that people say them as one block."
 - `concepts[7].examples` "(none)" → "["fr":"Qu'est-ce que c'est ?","en":"What is it?","fr":"Comment ça va ?","en":"How are you?","fr":"Qu'est-ce que tu veux ?","en":"What do you want?","fr":"Est-ce que tu peux ?","en":"Can you?"]"
 - `concepts[7].example` ""qu'est-ce que c'est? (what is it?), comment ça va? (how's it going?), ça va? (you good?), qu'est-ce que tu veux? (what do you want?), est-ce que tu peux? (can you?)"" → "(removed)"
+- `items[13].answer` "est-ce que elle est une femme" → "est-ce qu'elle est une femme"
+- `items[13].hint` "est-ce que + elle est une femme" → "Put est-ce qu' before elle est une femme: que drops its e before a vowel."
+- `items[13].accept` "["est-ce qu'elle est une femme"]" → "(removed)"
 
 **2024-01-19-questions-help**
 
@@ -2354,25 +2355,175 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 - `description` "Test everything from Unit 3! Motion verbs, object pronouns, possessives, and complex sentence combinations." → "Test everything from this unit! Motion verbs, object pronouns, possessives, and complex sentence combinations."
 
+**2024-03-31-survival-phrases**
+
+- `concepts[0].term` "Polite Requests" → "Asking politely"
+- `concepts[0].definition` "Use 'je voudrais' (I would like) instead of 'je veux' - much more polite!" → "Je voudrais means I would like. It sounds softer than je veux, so use it in shops and cafés."
+- `concepts[0].examples` "(none)" → "["fr":"Je voudrais un café, s'il vous plaît.","en":"I would like a coffee, please.","fr":"Je voudrais un croissant, s'il vous plaît.","en":"I would like a croissant, please.","note":"at a bakery","fr":"L'addition, s'il vous plaît.","en":"The bill, please."]"
+- `concepts[0].example` ""At a bakery: 'Je voudrais un croissant, s'il vous plaît'"" → "(removed)"
+- `concepts[1].term` "Essential Questions" → "Prices and places"
+- `concepts[1].definition` "Phrases for prices, locations, and understanding" → "Two questions you ask on any trip: what something costs and where something is."
+- `concepts[1].examples` "(none)" → "["fr":"C'est combien ?","en":"How much is it?","fr":"Combien ça coûte ?","en":"How much does it cost?","fr":"Où sont les toilettes ?","en":"Where are the restrooms?"]"
+- `concepts[1].example` ""C'est combien? (How much?), Où sont les toilettes? (Where's the bathroom?)"" → "(removed)"
+- `concepts[2].term` "Polite Words" → "Polite words"
+- `concepts[2].definition` "Please, excuse me, good night - essential politeness" → "Short words that keep a conversation friendly. Say s'il vous plaît to a stranger and s'il te plaît to a friend."
+- `concepts[2].examples` "(none)" → "["fr":"Excusez-moi.","en":"Excuse me.","fr":"Pardon !","en":"Sorry!","fr":"Bonne journée !","en":"Have a good day!","fr":"Bonne nuit !","en":"Good night!"]"
+- `concepts[2].example` ""S'il vous plaît, excusez-moi, bonne nuit"" → "(removed)"
+- `concepts[3].term` "Restrooms Always Plural" → "les toilettes is plural"
+- `concepts[3].definition` "When asking for restrooms, always use plural 'les toilettes' and 'où sont'" → "French always says the restrooms in the plural, so the question uses sont, the plural of est."
+- `concepts[3].examples` "(none)" → "["fr":"Où sont les toilettes ?","en":"Where are the restrooms?","fr":"Excusez-moi, où sont les toilettes ?","en":"Excuse me, where are the restrooms?"]"
+- `concepts[3].example` ""Où + sont + les toilettes? (Never 'où est la toilette')"" → "(removed)"
+
+**2024-03-25-faire**
+
+- `concepts[0].term` "faire = to do/make" → "faire = to do, to make"
+- `concepts[0].definition` "Extremely versatile verb - doing actions and making things" → "One verb for doing things and for making things. You use it every day."
+- `concepts[0].examples` "(none)" → "["fr":"Je fais ça.","en":"I do that.","fr":"Qu'est-ce que tu fais ?","en":"What are you doing?","fr":"Qu'est-ce que tu vas faire ?","en":"What are you going to do?"]"
+- `concepts[0].example` ""Used constantly in daily life - one of the top 15 words!"" → "(removed)"
+- `concepts[1].term` "Irregular Pattern" → "The forms of faire"
+- `concepts[1].definition` "faire is irregular - but you've seen a pattern like this before!" → "The three singular forms sound the same. vous faites ends like vous êtes, and ils font like ils sont."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je fais","en":"I do","fr":"tu fais","en":"you do","fr":"il fait","en":"he does","fr":"nous faisons","en":"we do","fr":"vous faites","en":"you do","fr":"ils font","en":"they do"]"
+- `concepts[1].example` ""je fais, tu fais, il fait, elle fait, are all the same sounding, but different spellings. Nous faisons, vous faites, ils font, elles font are like the other irregular verbs you've learned. Easy!"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "faire after another verb"
+- `concepts[2].definition` "Combine faire with previous modules for infinite expressions" → "Put faire after another verb to say what you want, can or are going to do. It stays as it is."
+- `concepts[2].examples` "(none)" → "["fr":"Je veux faire ça.","en":"I want to do that.","fr":"Je peux faire ça.","en":"I can do that.","fr":"Je vais faire ça.","en":"I'm going to do that."]"
+- `concepts[2].example` ""je fais + ça, nous faisons + le travail, ils font + attention"" → "(removed)"
+
+**2024-03-23-devoir**
+
+- `concepts[0].term` "devoir = must / to have to" → "devoir = must, to have to"
+- `concepts[0].definition` "Express obligation, necessity, or moral duty" → "The verb for what you must do. The verb after it stays as it is."
+- `concepts[0].examples` "(none)" → "["fr":"Je dois faire ça.","en":"I have to do that.","fr":"Il doit partir maintenant.","en":"He has to leave now.","fr":"Nous devons aller à Paris.","en":"We have to go to Paris."]"
+- `concepts[0].example` ""Essential for saying 'I must...' or 'I have to...' - very common!"" → "(removed)"
+- `concepts[1].term` "Key Forms to Master" → "The forms of devoir"
+- `concepts[1].definition` "je/tu dois (same!), il/elle doit, nous devons" → "The three singular forms sound the same. The stem changes for we and you, and again for they."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je dois","en":"I must","fr":"tu dois","en":"you must","fr":"il doit","en":"he must","fr":"nous devons","en":"we must","fr":"vous devez","en":"you must","fr":"ils doivent","en":"they must"]"
+- `concepts[1].example` ""Notice: je and tu have the SAME form - both 'dois'"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "Asking what someone has to do"
+- `concepts[2].definition` "Combine devoir with previous modules for infinite expressions" → "Put devoir in a question to ask what someone has to do, or when."
+- `concepts[2].examples` "(none)" → "["fr":"Qu'est-ce que tu dois faire ?","en":"What do you have to do?","fr":"Quand dois-tu partir ?","en":"When do you have to leave?","fr":"Pourquoi dois-tu partir ?","en":"Why do you have to leave?"]"
+- `concepts[2].example` ""je dois + ça, nous devons + être, ils doivent + avoir"" → "(removed)"
+
 **2024-03-29-parler**
 
-- `concepts[4].example` "je parle français (I speak French), nous parlons de toi (we talk about you)" → "je parle français maintenant (I speak French now), nous parlons de toi (we talk about you)"
+- `concepts[0].term` "parler = to speak / to talk" → "parler = to speak, to talk"
+- `concepts[0].definition` "Talk about languages you speak and conversations you have" → "The verb for speaking a language and for talking with people."
+- `concepts[0].examples` "(none)" → "["fr":"Je parle français.","en":"I speak French.","fr":"Nous parlons ensemble.","en":"We're talking together.","fr":"Je parle français maintenant.","en":"I speak French now."]"
+- `concepts[0].example` ""je parle français (I speak French), nous parlons ensemble (we talk together)"" → "(removed)"
+- `concepts[1].term` "Regular -ER Verb Pattern" → "The -er pattern"
+- `concepts[1].definition` "This is THE standard French verb pattern - master it!" → "Most French verbs end in -er and change like parler. Take off the -er and add the ending for each person."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je parle","en":"I speak","fr":"tu parles","en":"you speak","fr":"il parle","en":"he speaks","fr":"nous parlons","en":"we speak","fr":"vous parlez","en":"you speak","fr":"ils parlent","en":"they speak"]"
+- `concepts[1].example` ""Remove -er, add: -e, -es, -e, -ons, -ez, -ent (most verbs follow this!)"" → "(removed)"
+- `concepts[2].term` "Silent Endings" → "Endings you do not hear"
+- `concepts[2].definition` "je/tu/il/elle/ils/elles all SOUND the same! Only nous/vous are different" → "The endings -e, -es and -ent are silent. Only the forms for we and you sound different."
+- `concepts[2].examples` "(none)" → "["fr":"Il parle français.","en":"He speaks French.","fr":"Ils parlent français.","en":"They speak French.","note":"sounds just like il parle","fr":"Nous parlons français.","en":"We speak French.","note":"here you hear the ending"]"
+- `concepts[2].example` ""je parle, tu parles, il parle, elle parle, ils parlent - all sound like 'parl'"" → "(removed)"
+- `concepts[3].term` "With Prepositions" → "Talking to someone"
+- `concepts[3].definition` "Use 'à' when talking TO someone: parler à quelqu'un" → "Use à before the person you talk to."
+- `concepts[3].examples` "(none)" → "["fr":"Je parle à Marie.","en":"I'm talking to Marie.","fr":"Tu parles à qui ?","en":"Who are you talking to?"]"
+- `concepts[3].example` ""je parle à Marie (I speak to Marie)"" → "(removed)"
+- `concepts[4].term` "Common Uses" → "Talking with someone, about something"
+- `concepts[4].definition` "Describe languages (parler français), conversations (parler avec), topics (parler de)" → "Use avec for the person you talk with, and de for what or who you talk about."
+- `concepts[4].examples` "(none)" → "["fr":"Je parle avec Marie.","en":"I'm talking with Marie.","fr":"Nous parlons de toi.","en":"We're talking about you.","fr":"Il parle de la maison.","en":"He's talking about the house."]"
+- `concepts[4].example` ""je parle français (I speak French), nous parlons de toi (we talk about you)"" → "(removed)"
 
 **2024-10-22-search-find**
 
-- `concepts[0].example` "je cherche mes clés (I'm looking for my keys), tu cherches quoi? (what are you looking for?)" → "je cherche mon livre (I'm looking for my book), tu cherches quoi? (what are you looking for?)"
+- `concepts[0].term` "chercher - to search/look for" → "chercher = to look for"
+- `concepts[0].definition` "Active searching - when you're looking for something but haven't found it yet" → "You are looking for something you have not found yet."
+- `concepts[0].examples` "(none)" → "["fr":"Je cherche mon livre.","en":"I'm looking for my book.","fr":"Tu cherches quoi ?","en":"What are you looking for?"]"
+- `concepts[0].example` ""je cherche mes clés (I'm looking for my keys), tu cherches quoi? (what are you looking for?)"" → "(removed)"
+- `concepts[1].term` "trouver - to find" → "trouver = to find"
+- `concepts[1].definition` "Successfully locating something - the result of searching" → "The verb for the moment the search ends and you have the thing."
+- `concepts[1].examples` "(none)" → "["fr":"Je trouve le livre.","en":"I find the book.","fr":"Tu trouves ça où ?","en":"Where do you find that?"]"
+- `concepts[1].example` ""j'ai trouvé! (I found it!), tu trouves ça où? (where do you find that?)"" → "(removed)"
+- `concepts[2].term` "Common Usage Patterns" → "Looking, then finding"
+- `concepts[2].definition` "These verbs are used constantly in daily French conversation" → "chercher is the search and trouver is the result."
+- `concepts[2].examples` "(none)" → "["fr":"Je cherche mon chat.","en":"I'm looking for my cat.","fr":"Je trouve mon chat.","en":"I find my cat."]"
+- `concepts[2].example` ""je cherche + noun (I'm looking for...), je trouve + noun (I find...)"" → "(removed)"
+- `concepts[3].term` "With Prepositions" → "No word for "for""
+- `concepts[3].definition` "chercher takes direct objects, trouver can use various prepositions" → "chercher already means to look for, so nothing goes between the verb and the thing."
+- `concepts[3].examples` "(none)" → "["fr":"Je cherche le livre.","en":"I'm looking for the book.","fr":"Nous cherchons la maison.","en":"We're looking for the house.","fr":"Il cherche la voiture.","en":"He's looking for the car."]"
+- `concepts[3].example` ""je cherche le livre (I'm looking for the book), je trouve dans la maison (I find in the house)"" → "(removed)"
+
+**2024-03-28-negation**
+
+- `concepts[0].term` "The Negation Sandwich" → "ne … pas around the verb"
+- `concepts[0].definition` "Put 'ne' BEFORE the verb and 'pas' AFTER the verb" → "Put ne before the verb and pas after it."
+- `concepts[0].examples` "(none)" → "["fr":"Je suis au café.","en":"I'm at the café.","fr":"Je ne suis pas au café.","en":"I'm not at the café.","fr":"Elle ne veut pas ça.","en":"She doesn't want that."]"
+- `concepts[0].example` ""je suis → je ne suis pas (I am → I am not)"" → "(removed)"
+- `concepts[1].term` "ne contracts to n'" → "ne becomes n'"
+- `concepts[1].definition` "Before vowels or silent h, 'ne' becomes 'n''" → "Before a vowel or a silent h, ne drops its e."
+- `concepts[1].examples` "(none)" → "["fr":"Il n'a pas le livre.","en":"He doesn't have the book.","fr":"Elle n'est pas au café.","en":"She isn't at the café."]"
+- `concepts[1].example` ""je ai → je n'ai pas (I don't have)"" → "(removed)"
+- `concepts[2].term` "Works with ALL Verbs" → "Any verb"
+- `concepts[2].definition` "Any verb you've learned can be negated with ne...pas" → "ne … pas works the same way with every verb you know."
+- `concepts[2].examples` "(none)" → "["fr":"Je ne veux pas ça.","en":"I don't want that.","fr":"Tu ne vas pas à Paris.","en":"You're not going to Paris.","fr":"Il ne parle pas français.","en":"He doesn't speak French."]"
+- `concepts[2].example` ""je veux → je ne veux pas, tu vas → tu ne vas pas"" → "(removed)"
+- `concepts[3].term` "With Object Pronouns" → "With an object pronoun"
+- `concepts[3].definition` "Object pronouns stay BEFORE the verb, inside the sandwich" → "A pronoun like le stays before the verb, inside ne … pas."
+- `concepts[3].examples` "(none)" → "["fr":"Je le vois.","en":"I see it.","fr":"Je ne le vois pas.","en":"I don't see it.","fr":"Il ne la voit pas.","en":"He doesn't see her."]"
+- `concepts[3].example` ""je le vois → je ne le vois pas (I don't see it)"" → "(removed)"
+
+**2024-04-01-time-adverbs**
+
+- `concepts[0].term` "Frequency Adverbs" → "How often"
+- `concepts[0].definition` "Words that express how often something happens" → "These words say how often something happens."
+- `concepts[0].examples` "(none)" → "["fr":"Je vais souvent au café.","en":"I often go to the café.","fr":"Je mange parfois ici.","en":"I sometimes eat here.","fr":"Il parle rarement.","en":"He rarely talks."]"
+- `concepts[0].example` ""toujours (always), jamais (never)"" → "(removed)"
+- `concepts[1].term` "Time Expressions" → "When"
+- `concepts[1].definition` "Words that express when something happens" → "These words say when something happens."
+- `concepts[1].examples` "(none)" → "["fr":"Je mange maintenant.","en":"I'm eating now.","fr":"Il va à Paris aujourd'hui.","en":"He's going to Paris today.","fr":"Je veux ça demain.","en":"I want that tomorrow."]"
+- `concepts[1].example` ""maintenant (now), aujourd'hui (today), demain (tomorrow), hier (yesterday)"" → "(removed)"
+- `concepts[2].term` "Position in Sentence" → "Where these words go"
+- `concepts[2].definition` "Usually placed AFTER the verb in French" → "Words for how often come right after the verb. Words for when can go at the end or at the start."
+- `concepts[2].examples` "(none)" → "["fr":"Nous sommes toujours ici.","en":"We're always here.","fr":"Je veux juste ça.","en":"I just want that.","fr":"Demain, je vais à Paris.","en":"Tomorrow I'm going to Paris."]"
+- `concepts[2].example` ""je vais maintenant (I go now), il a toujours (he always has)"" → "(removed)"
 
 **2024-03-27-negation-2**
 
-- `concepts[1].example` "je vais → je ne vais jamais (I never go)" → "je vais → je ne vais jamais (I never go), je mange toujours ici → je ne mange jamais ici (I never eat here)"
+- `concepts[0].term` "Negating Modal Verbs" → "I can't, I don't want to"
+- `concepts[0].definition` "Apply ne...pas to vouloir, pouvoir, aller, voir" → "Put ne … pas around pouvoir or vouloir. The second verb comes after pas."
+- `concepts[0].examples` "(none)" → "["fr":"Je ne peux pas.","en":"I can't.","fr":"Je ne veux pas.","en":"I don't want to.","fr":"Tu ne peux pas avoir ça.","en":"You can't have that."]"
+- `concepts[0].example` ""je peux → je ne peux pas (I can't), je veux → je ne veux pas (I won't/don't want)"" → "(removed)"
+- `concepts[1].term` "ne...jamais (never)" → "ne … jamais = never"
+- `concepts[1].definition` "Replace 'pas' with 'jamais' to mean 'never'" → "Put jamais where pas goes to say never."
+- `concepts[1].examples` "(none)" → "["fr":"Je mange toujours ici.","en":"I always eat here.","fr":"Je ne mange jamais ici.","en":"I never eat here.","fr":"Il ne fait jamais ça.","en":"He never does that.","fr":"Nous ne voulons jamais partir.","en":"We never want to leave."]"
+- `concepts[1].example` ""je vais → je ne vais jamais (I never go)"" → "(removed)"
+- `concepts[2].term` "With Object Pronouns" → "With an object pronoun"
+- `concepts[2].definition` "Object pronouns stay inside the negation sandwich" → "The pronoun stays before its verb, inside ne … pas."
+- `concepts[2].examples` "(none)" → "["fr":"Je ne le veux pas.","en":"I don't want it.","fr":"Je ne le vois pas.","en":"I don't see it.","fr":"Je ne peux pas le voir.","en":"I can't see it.","note":"with two verbs, the pronoun goes before the second"]"
+- `concepts[2].example` ""je le veux → je ne le veux pas (I don't want it)"" → "(removed)"
+- `concepts[3].term` "Common Patterns" → "Sentences you will say often"
+- `concepts[3].definition` "I can't, I won't, I never go, I don't see it - very useful!" → "These short sentences come up in everyday conversation."
+- `concepts[3].examples` "(none)" → "["fr":"Ils ne sont pas ici.","en":"They're not here.","fr":"Nous n'allons pas au café.","en":"We're not going to the café.","fr":"Nous ne faisons pas ça.","en":"We don't do that."]"
+- `concepts[3].example` ""Master these patterns for real conversations"" → "(removed)"
 
 **2024-03-26-location-adverbs**
 
-- `concepts[3].example` "je vais là (I go there), il est ici (he is here)" → "je vais là (I go there), il est ici (he is here), demain, il est là-bas (tomorrow he is over there)"
+- `concepts[0].term` "Basic Location" → "ici and là"
+- `concepts[0].definition` "ici (here) vs là (there) - pointing to places" → "ici is here, where you are. là is there, a place you can point to."
+- `concepts[0].examples` "(none)" → "["fr":"Je suis ici.","en":"I'm here.","fr":"Le chat est là.","en":"The cat is there."]"
+- `concepts[0].example` ""je suis ici (I am here), le chat est là (the cat is there)"" → "(removed)"
+- `concepts[1].term` "Distance with là-bas" → "là-bas = over there"
+- `concepts[1].definition` "là-bas means 'over there' (farther away than 'là')" → "là-bas is farther away than là."
+- `concepts[1].examples` "(none)" → "["fr":"Le café est là-bas.","en":"The café is over there.","fr":"Je vais là-bas.","en":"I'm going over there."]"
+- `concepts[1].example` ""le café est là-bas (the café is over there)"" → "(removed)"
+- `concepts[2].term` "Quantity of Places" → "Everywhere, somewhere, nowhere"
+- `concepts[2].definition` "partout (everywhere), quelque part (somewhere), nulle part (nowhere)" → "nulle part needs ne before the verb, like jamais."
+- `concepts[2].examples` "(none)" → "["fr":"Je vais partout.","en":"I go everywhere.","fr":"Le livre est quelque part.","en":"The book is somewhere.","fr":"Je ne vais jamais nulle part.","en":"I never go anywhere."]"
+- `concepts[2].example` ""Express presence or absence across locations"" → "(removed)"
+- `concepts[3].term` "Position in Sentence" → "Where these words go"
+- `concepts[3].definition` "Usually placed AFTER the verb" → "They usually come after the verb."
+- `concepts[3].examples` "(none)" → "["fr":"Il est ici.","en":"He's here.","fr":"Le chat est partout.","en":"The cat is everywhere.","fr":"Demain, il est là-bas.","en":"Tomorrow he's over there."]"
+- `concepts[3].example` ""je vais là (I go there), il est ici (he is here)"" → "(removed)"
 
 **2024-03-24-everyday-nouns**
 
-- `concepts` "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)"]" → "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)","id":"c-pas-de","term":"pas de: no, not any","definition":"After ne … pas, un, une, des, du, de la and de l' usually become de, or d' before a vowel. le, la and les stay as they are. After être they stay: ce n'est pas un livre.","example":"J'ai du pain. becomes Je n'ai pas de pain. (I don't have any bread.)"]"
+- `concepts` "["id":"c-abstract-vs-concrete-nouns","term":"Abstract vs Concrete Nouns","definition":"Abstract nouns (temps, vie, monde) express ideas. Concrete nouns (pain, eau, table) are physical objects.","example":"la vie (life - abstract), le pain (bread - concrete)","id":"c-using-in-real-conversations","term":"Using in Real Conversations","definition":"These are the nouns you'll use constantly in French - combine with verbs you know!","example":"je veux du pain, j'ai le temps, il parle du monde","id":"c-remember-the-gender","term":"Remember the Gender!","definition":"Always learn the article with the noun - it shows the gender","example":"le temps (masculine), la vie (feminine)"]" → "["id":"c-abstract-vs-concrete-nouns","term":"Ideas and things","definition":"Some nouns name ideas, like life and time. Others name things you can touch, like bread and water.","examples":["fr":"La vie est bonne.","en":"Life is good.","fr":"Le monde est grand.","en":"The world is big.","fr":"Le pain est sur la table.","en":"The bread is on the table."],"id":"c-using-in-real-conversations","term":"Nouns with the verbs you know","definition":"Put these nouns with the verbs you know to say real things.","examples":["fr":"Je veux du pain.","en":"I want some bread.","fr":"J'ai le temps.","en":"I have time.","fr":"Tout le monde est ici.","en":"Everybody is here."],"id":"c-remember-the-gender","term":"Learn the article with the noun","definition":"The article shows whether a noun is masculine or feminine, so learn the two together.","examples":["fr":"le temps","en":"time","note":"masculine","fr":"la vie","en":"life","note":"feminine","fr":"la main","en":"hand","note":"feminine"],"id":"c-pas-de","term":"pas de: no, not any","definition":"In a sentence with ne … pas, a word for a or some becomes de. The words le and la stay as they are.","examples":["fr":"J'ai du pain.","en":"I have some bread.","fr":"Je n'ai pas de pain.","en":"I don't have any bread.","fr":"Il n'a pas d'argent.","en":"He doesn't have any money.","note":"de becomes d' before a vowel","fr":"Je n'ai pas le livre.","en":"I don't have the book.","note":"le stays","fr":"Ce n'est pas un livre.","en":"It isn't a book.","note":"after être, un stays too"]]"
 
 **2024-03-30-reading-4**
 
@@ -3702,6 +3853,10 @@ The live app stores answers under these exercise ids and concept indexes, and no
 
 ### Real misses
 
+**2024-01-07-plurals**
+
+- `2024-01-07-plurals.6` exercise "they are the friends (masculine)" → "ils sont les amis"
+
 **2024-01-15-vouloir**
 
 - `2024-01-15-vouloir.1` exercise "I want" → "je veux"
@@ -3710,6 +3865,15 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `2024-01-15-vouloir.4` exercise "she wants" → "elle veut"
 - `2024-01-15-vouloir.7` exercise "they want (masculine)" → "ils veulent"
 - `2024-01-15-vouloir.8` exercise "they want (feminine)" → "elles veulent"
+
+**2024-01-16-pouvoir**
+
+- `2024-01-16-pouvoir.14` exercise "I can want that" → "je peux vouloir ça"
+- `2024-01-16-pouvoir.15` exercise "They can want a cat" → "ils peuvent vouloir un chat"
+
+**2024-01-18-questions**
+
+- `2024-01-18-questions.14` exercise "is she a woman?" → "est-ce que elle est une femme"
 
 **2024-01-29-partir**
 
@@ -3899,7 +4063,7 @@ Today’s objects hold these, and the module schema has no field for them.
 
 - `emailMetadata.realWorldUse` "talk about multiple objects and groups" (no field; the next-module teaser is computed from the outline)
 - `emailMetadata.nextModuleTeaser` "Learn demonstratives to point to specific things" (no field; the next-module teaser is computed from the outline)
-- 8 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[5].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`
+- 7 × generic instruction dropped (Say "…"): `exerciseConfig.items[0].instruction`, `exerciseConfig.items[1].instruction`, `exerciseConfig.items[2].instruction`, `exerciseConfig.items[3].instruction`, `exerciseConfig.items[4].instruction`, `exerciseConfig.items[6].instruction`, `exerciseConfig.items[7].instruction`
 
 **2024-10-20-liaison-help**
 

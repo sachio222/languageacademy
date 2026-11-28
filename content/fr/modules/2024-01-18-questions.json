@@ -474,11 +474,8 @@
       "type": "respond",
       "situation": "Ask \"is she a woman?\" using est-ce que method",
       "cue": "is she a woman?",
-      "answer": "est-ce que elle est une femme",
-      "accept": [
-        "est-ce qu'elle est une femme"
-      ],
-      "hint": "{est-ce que + elle est une femme}",
+      "answer": "est-ce qu'elle est une femme",
+      "hint": "Put {est-ce qu'} before {elle est une femme}: {que} drops its e before a vowel.",
       "mistakes": [
         {
           "answer": "elle est une femme",

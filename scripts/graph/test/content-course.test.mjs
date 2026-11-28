@@ -169,7 +169,9 @@ test('every committed override names a ref of its module', async () => {
   // 35, then 10 for the proper names Readings 3 and 4 use (Café de la Paix, Le Comte de Monte-Cristo, Vingt mille
   // lieues sous les mers, Les Éditeurs, carrefour de l'Odéon), which the checker reads as words, less the 2 on Units 1 to
   // 3 concept examples (être, stressed pronouns) that the examples lists replaced: their words are gone from the card.
-  assert.equal(keys.length, 43);
+  // Survival Phrases' polite-request card: its one override on the old string is now on the two examples with je voudrais.
+  // The Unit 1 greetings card's s'il vous plaît carries the override its item has.
+  assert.equal(keys.length, 45);
   const { ctx, issues } = await runCheck({ repoRoot, lang: 'fr' });
   const refs = new Set(ctx.course.flatMap((m) => m.items.map((it) => it.ref)));
   assert.deepEqual(keys.filter((k) => !refs.has(k)), []);

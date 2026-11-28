@@ -374,41 +374,41 @@
       ]
     },
     {
-      "id": "i-je-peux-vouloir-ca",
+      "id": "i-tu-peux-avoir-un",
       "type": "respond",
-      "situation": "Say what you can want",
-      "cue": "I can want that",
-      "answer": "je peux vouloir ça",
-      "hint": "Use '{pouvoir}' in the present for '{je}' + infinitive '{vouloir}' + 'that'.",
+      "situation": "Your friend asks if a cat is allowed. Say yes, she can have one.",
+      "cue": "You can have a cat",
+      "answer": "tu peux avoir un chat",
+      "hint": "Use {tu peux}, then {avoir} as it is.",
       "mistakes": [
         {
-          "answer": "je veux ça",
-          "feedback": "This needs pouvoir! Try: je peux vouloir ça"
+          "answer": "tu veux un chat",
+          "feedback": "This needs {pouvoir}: {tu peux avoir un chat}."
         },
         {
-          "answer": "je peux veux ça",
-          "feedback": "When you chain two verbs, the second verb should be in the infinitive. Here: je peux vouloir ça."
+          "answer": "tu peux as un chat",
+          "feedback": "After {pouvoir} the second verb stays as it is: {tu peux avoir un chat}."
         }
       ]
     },
     {
-      "id": "i-ils-peuvent-vouloir-un",
+      "id": "i-ils-peuvent-avoir-un",
       "type": "respond",
-      "situation": "Say what they can want",
-      "cue": "They can want a cat",
-      "answer": "ils peuvent vouloir un chat",
+      "situation": "Say that they are allowed to have a dog.",
+      "cue": "They can have a dog",
+      "answer": "ils peuvent avoir un chien",
       "accept": [
-        "elles peuvent vouloir un chat"
+        "elles peuvent avoir un chien"
       ],
-      "hint": "Use '{pouvoir}' in the present for '{ils}' + infinitive '{vouloir}' + 'a cat'.",
+      "hint": "Use {ils peuvent}, then {avoir} as it is.",
       "mistakes": [
         {
-          "answer": "ils veulent un chat",
-          "feedback": "This needs pouvoir! Try: ils peuvent vouloir un chat"
+          "answer": "ils ont un chien",
+          "feedback": "This needs {pouvoir}: {ils peuvent avoir un chien}."
         },
         {
-          "answer": "ils peux vouloir un chat",
-          "feedback": "Ils takes '{peuvent}', not 'peux'. Remember: ils peuvent, elles peuvent."
+          "answer": "ils peux avoir un chien",
+          "feedback": "{ils} takes {peuvent}: {ils peuvent avoir un chien}."
         }
       ]
     },
