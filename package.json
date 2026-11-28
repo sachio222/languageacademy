@@ -19,6 +19,7 @@
     "content:vendor-check": "node scripts/content/vendor-check.mjs",
     "content:src-guard": "node scripts/content/src-guard.mjs",
     "content:glosses": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/glosses.mjs",
+    "content:cards": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/concept-cards.mjs",
     "content:migrate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content/migrate/run.mjs",
     "content:test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"scripts/content/test/**/*.test.mjs\"",
     "graph:add-words": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/graph/add-words.mjs",

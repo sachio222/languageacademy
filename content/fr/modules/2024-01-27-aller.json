@@ -75,20 +75,72 @@
     {
       "id": "c-aller-to-go",
       "term": "{aller} = to go",
-      "definition": "Completely irregular verb - one of the most common in French! Essential for talking about movement and future plans.",
-      "example": "'I am going in the house' ({Je vais dans la maison}), 'I am going to see Paul' ({Je vais voir Paul})"
+      "definition": "The verb for going somewhere. With a second verb after it, it also says what is going to happen.",
+      "examples": [
+        {
+          "fr": "Je vais au café.",
+          "en": "I'm going to the café."
+        },
+        {
+          "fr": "Je vais voir Paul.",
+          "en": "I'm going to see Paul."
+        },
+        {
+          "fr": "Il va me voir.",
+          "en": "He's going to see me."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular Conjugation",
-      "definition": "Every form is different - but it shouldn't be too hard to remember!",
-      "example": "{je vais}, {tu vas}, {il va}, {nous allons}, {vous allez}, {ils vont}"
+      "term": "Its forms",
+      "definition": "Almost every form is different, so learn each one with its pronoun.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je vais",
+          "en": "I go"
+        },
+        {
+          "fr": "tu vas",
+          "en": "you go"
+        },
+        {
+          "fr": "il va",
+          "en": "he goes"
+        },
+        {
+          "fr": "nous allons",
+          "en": "we go"
+        },
+        {
+          "fr": "vous allez",
+          "en": "you go"
+        },
+        {
+          "fr": "ils vont",
+          "en": "they go"
+        }
+      ]
     },
     {
       "id": "c-composition-power",
-      "term": "Composition Power",
-      "definition": "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to come' you can say '{je vais venir}'.",
-      "example": "{je vais + ça}, {nous allons + être}, {ils vont + avoir}, {tu vas + me voir}"
+      "term": "Going to do something",
+      "definition": "Put a second verb after {aller} to say what is going to happen, as in English.",
+      "examples": [
+        {
+          "fr": "Je vais venir.",
+          "en": "I'm going to come."
+        },
+        {
+          "fr": "Je vais avoir ça.",
+          "en": "I'm going to have that."
+        },
+        {
+          "fr": "Qu'est-ce que tu vas avoir ?",
+          "en": "What are you going to have?"
+        }
+      ]
     }
   ],
   "items": [

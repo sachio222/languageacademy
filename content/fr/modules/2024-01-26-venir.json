@@ -139,26 +139,95 @@
     {
       "id": "c-venir-to-come",
       "term": "{venir} = to come",
-      "definition": "Essential irregular verb for coming or arriving! One of the most common verbs in French. Used constantly in conversation.",
-      "example": "'I am coming' ({Je viens}), 'Who is coming?' ({Qui vient?}), 'I come from Paris' ({Je viens de Paris})"
+      "definition": "The verb for coming and arriving. You hear it all the time in conversation.",
+      "examples": [
+        {
+          "fr": "Je viens !",
+          "en": "I'm coming!"
+        },
+        {
+          "fr": "Qui vient ?",
+          "en": "Who is coming?"
+        },
+        {
+          "fr": "Je viens de Paris.",
+          "en": "I'm from Paris."
+        },
+        {
+          "fr": "Je viens avec lui.",
+          "en": "I'm coming with him."
+        },
+        {
+          "fr": "Je viens te voir.",
+          "en": "I'm coming to see you."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation-pattern",
-      "term": "Irregular Conjugation Pattern",
-      "definition": "Notice the pattern: je/tu both use '{viens}', then il/elle use '{vient}', nous uses '{venons}', and ils/elles use '{viennent}' with double 'n'!",
-      "example": "{je viens}, {tu viens}, {il vient}, {nous venons}, {vous venez}, {ils viennent}"
+      "term": "Three stems",
+      "definition": "The stem changes three times: once for the singular, once for we and you, and once for they, which doubles the n.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je viens",
+          "en": "I come"
+        },
+        {
+          "fr": "tu viens",
+          "en": "you come"
+        },
+        {
+          "fr": "il vient",
+          "en": "he comes"
+        },
+        {
+          "fr": "nous venons",
+          "en": "we come"
+        },
+        {
+          "fr": "vous venez",
+          "en": "you come"
+        },
+        {
+          "fr": "ils viennent",
+          "en": "they come"
+        }
+      ]
     },
     {
       "id": "c-composition-power",
-      "term": "Composition Power",
-      "definition": "Combine venir with previous modules for infinite expressions. For example, to say 'I want to come' you can say '{je veux venir}'.",
-      "example": "{je viens + de ça, nous venons + avec vous, ils viennent + voir}"
+      "term": "{venir} after another verb",
+      "definition": "Like other verbs, {venir} can come straight after {vouloir} or {pouvoir}.",
+      "examples": [
+        {
+          "fr": "Je veux venir.",
+          "en": "I want to come."
+        },
+        {
+          "fr": "Tu peux venir ?",
+          "en": "Can you come?"
+        },
+        {
+          "fr": "Je peux venir à l'hôtel.",
+          "en": "I can come to the hotel."
+        }
+      ]
     },
     {
       "id": "c-the-re-prefix",
-      "term": "The re- Prefix",
-      "definition": "Adding 're-' to a verb means 'again' or 'back'. So '{revenir}' means 'to come back' or 'to return'. It follows the same conjugation pattern as '{venir}' - just add 're-' before each form!",
-      "example": "{venir} → {revenir} (to come → to come back), {je viens} → {je reviens}, {il vient} → {il revient}"
+      "term": "re- in front",
+      "definition": "Adding re- to a verb often means again or back, so {revenir} means to come back. Its forms are the forms of {venir} with re- in front.",
+      "examples": [
+        {
+          "fr": "Je reviens.",
+          "en": "I'm coming back."
+        },
+        {
+          "fr": "Tu reviens ?",
+          "en": "Are you coming back?"
+        }
+      ]
     }
   ],
   "items": [

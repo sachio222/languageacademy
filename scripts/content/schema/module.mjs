@@ -4,6 +4,7 @@
 import { problem } from '../problems.mjs';
 import { spanProblems } from '../spans.mjs';
 import { rowSentences } from '../verb-sentences.mjs';
+import { EXAMPLES_MIN, EXAMPLES_MAX, LAYOUTS, inlineListRuns, isFormula, formsProblems } from '../concept-examples.mjs';
 import { validateItem, itemTexts, checkOptions, ITEM_TYPES, ID_PATTERN, BRACE, plainFieldMessage } from './item.mjs';
 
 export const KINDS = ['lesson', 'guide', 'reading', 'practice', 'unit_exam', 'reference'];
@@ -161,8 +162,17 @@ const INFO_CARD = OBJ(
 const READING_VOCABULARY = LIST(OBJ({ ...WORD.fields, info_card: INFO_CARD }, WORD.required), { unique: 'word_id' });
 const ROW = OBJ({ fr: S('fr'), en: S('native'), note: S('native_fr') }, ['fr', 'en']);
 const TABLES = LIST(OBJ({ id: ID, title: S('native_fr'), rows: LIST(ROW, { nonEmpty: true }) }, ['id', 'title', 'rows']), { unique: 'id' });
+// A concept card's examples (concept-examples.mjs): 1 to 6 of { fr, en, note }, the field names of a table row, drawn
+// as L's Example list. layout "list" (the default) draws one example per row with its English; "forms" draws a verb's
+// person forms in two columns, singular then plural, and may leave out the English; "plain" is a list that is not
+// examples of the taught language (points in the learner's language, a list of meanings): each item is { text }, drawn
+// in the body font with no sound. The old one-string `example` is accepted only while a unit waits for its migration
+// (plan 2026-11-27-concept-cards-structured); a card holds one or the other. Which fields an item needs depends on the
+// layout, so exampleRules checks them.
+const EXAMPLE = OBJ({ fr: S('fr', 300), en: S('native', 300), note: S('native_fr', 200), text: S('native', 300) }, []);
+const EXAMPLE_FIELDS = { examples: LIST(EXAMPLE), layout: ENUM(LAYOUTS) };
 const CONCEPTS = LIST(
-  OBJ({ id: ID, term: S('native_fr'), definition: S('native_fr'), example: S('native_fr') }, ['id', 'term', 'definition']),
+  OBJ({ id: ID, term: S('native_fr'), definition: S('native_fr'), example: S('native_fr'), ...EXAMPLE_FIELDS }, ['id', 'term', 'definition']),
   { unique: 'id' },
 );
 const PHRASES = LIST(OBJ({ phrase_id_suffix: ID, fr: S('fr'), word_id: KEY }, ['phrase_id_suffix', 'fr']), { unique: 'phrase_id_suffix' });
@@ -178,8 +188,8 @@ const IMG = OBJ({ src: KEY, w: INT(1), h: INT(1), alt: S('native') }, ['src', 'w
 // layout: the story's dateline, scene heading or closing line (stories/readingN.html), drawn apart from the text.
 // speaker: the label shown beside the French (Paul, Le père), so French the learner reads.
 const PASSAGE_BLOCK = OBJ({ id: ID, fr: S('fr'), en: S('native'), speaker: S('fr'), img: IMG, layout: ENUM(['dateline', 'scene', 'end']) }, ['id']);
-// example: a section made from a concept card keeps the card's example line.
-const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), rows: LIST(ROW) }, ['id', 'heading', 'text']);
+// example: a section made from a concept card keeps the card's example line; examples and layout as on a concept card.
+const SECTION = OBJ({ id: ID, heading: S('native_fr'), text: S('native_fr'), example: S('native_fr'), ...EXAMPLE_FIELDS, rows: LIST(ROW) }, ['id', 'heading', 'text']);
 // A planned module's plan (Task 17): the graph ids it will teach or use, where the plan lives (source, "plan.json") and,
 // optionally, the draft it will be written from and a note for its writer (a unit exam's subtitle, a reading's theme
 // brief). source and draft are paths relative to the vault's curriculum folder, projects/product/curriculum/
@@ -408,6 +418,9 @@ function kindRules(mod, cx) {
     bad('checks', 'guide_checks_count', `a guide has exactly three checks, found ${mod.checks.length}`);
   stepRules(mod, cx);
   glossRules(mod, cx);
+  if (kind === 'lesson') exampleRules(mod.concepts, 'concepts', { required: true, texts: ['term', 'definition'] }, cx);
+  if (kind === 'reference') exampleRules(mod.sections, 'sections', { required: false, texts: ['heading', 'text'] }, cx);
+  noteRules(mod, cx);
   if (kind === 'lesson' && Array.isArray(mod.speed_match)) {
     const words = new Set((Array.isArray(mod.vocabulary) ? mod.vocabulary : []).map((w) => isObj(w) && w.word_id));
     if (mod.speed_match.length !== SPEED_MATCH_WORDS) bad('speed_match', 'speed_match_invalid', 'speed_match lists six word_ids');
@@ -428,6 +441,79 @@ function kindRules(mod, cx) {
       });
     }
   }
+}
+
+// A concept card's or a Reference section's examples (concept-examples.mjs; plan 2026-11-27-concept-cards-structured).
+// A card in the new shape (examples) is checked by every rule; a card that still holds the old string waits for its
+// unit's migration and is checked only for holding one shape. required: a concept card needs examples; a section may
+// have none. texts: the prose fields that may not run a list of French together.
+function exampleRules(list, field, { required, texts }, cx) {
+  if (!Array.isArray(list)) return;
+  const { bad } = cx;
+  list.forEach((card, i) => {
+    if (!isObj(card)) return;
+    const at = `${field}[${i}]`;
+    const hasList = card.examples !== undefined;
+    if (hasList && card.example !== undefined) {
+      bad(`${at}.example`, 'concept_example_both', `${at} holds both the old example string and examples; keep examples only`);
+      return;
+    }
+    if (!hasList) {
+      if (card.layout !== undefined) bad(`${at}.layout`, 'concept_layout_without_examples', `${at} sets a layout but holds no examples list`);
+      // A card with neither shape is the old shape with no example: a warning until the cut-over makes examples required.
+      if (required && card.example === undefined)
+        cx.problems.push(problem(cx.file, `${at}.examples`, 'concept_examples_size', `${at} needs ${EXAMPLES_MIN} to ${EXAMPLES_MAX} examples`, 'warning'));
+      return;
+    }
+    for (const t of texts)
+      for (const run of isStr(card[t]) ? inlineListRuns(card[t]) : [])
+        bad(`${at}.${t}`, 'concept_inline_list', `${at}.${t} runs ${run.length} French items together (${run.join(', ')}); move them to examples and keep the ${t} to prose`);
+    if (!Array.isArray(card.examples)) return; // the walk reports the type
+    const n = card.examples.length;
+    if (n < EXAMPLES_MIN || n > EXAMPLES_MAX)
+      bad(`${at}.examples`, 'concept_examples_size', `${at} has ${n} examples; a card holds ${EXAMPLES_MIN} to ${EXAMPLES_MAX} (more is two cards or a table)`);
+    const examples = card.examples.filter(isObj);
+    if (card.layout === 'plain') {
+      // A plain item is one line in the learner's language: { text } and nothing else.
+      card.examples.forEach((x, k) => {
+        if (isObj(x) && (x.text === undefined || x.fr !== undefined || x.en !== undefined || x.note !== undefined))
+          bad(`${at}.examples[${k}]`, 'concept_plain_item', `${at}.examples[${k}] is an item of a plain card: { text } only, with no fr, en or note`);
+      });
+      return;
+    }
+    card.examples.forEach((x, k) => {
+      if (!isObj(x)) return;
+      if (x.text !== undefined) bad(`${at}.examples[${k}].text`, 'concept_plain_item', `${at}.examples[${k}] holds text, which only a plain card's items hold; give it fr`);
+      else if (x.fr === undefined) bad(`${at}.examples[${k}].fr`, 'field_missing', `${at}.examples[${k}].fr is required`);
+    });
+    examples.forEach((x, k) => {
+      if (isStr(x.fr) && isFormula(x.fr))
+        bad(`${at}.examples[${k}].fr`, 'concept_example_formula', `${JSON.stringify(x.fr)} is a formula; write the sentence a person says`);
+      // L draws a list or forms example as the taught language with its sound, so it is never the learner's language.
+      else if (isStr(x.fr) && typeof cx.isNativeText === 'function' && cx.isNativeText(x.fr))
+        bad(`${at}.examples[${k}].fr`, 'concept_example_not_target', `${JSON.stringify(x.fr)} is in the learner's language; write it in the taught language, or make the card plain`);
+    });
+    if (card.layout === 'forms') {
+      const why = formsProblems(examples, cx.persons);
+      if (why.length) bad(`${at}.examples`, 'concept_forms_pair', `${at}: ${why.join('; ')}`);
+    } else {
+      examples.forEach((x, k) => {
+        if (isStr(x.fr) && x.en === undefined)
+          bad(`${at}.examples[${k}].en`, 'concept_example_meaning', `${at}.examples[${k}] needs its English (en); only a forms card may leave it out`);
+      });
+    }
+  });
+}
+
+// A word card's note stays prose (one example per word card is example_fr): a note that runs a list of French
+// together is flagged. A warning until every unit's cards are migrated, since a few notes past Unit 3 still do it.
+function noteRules(mod, cx) {
+  if (!Array.isArray(mod.vocabulary)) return;
+  mod.vocabulary.forEach((w, k) => {
+    if (!isObj(w) || !isStr(w.note)) return;
+    for (const run of inlineListRuns(w.note))
+      cx.problems.push(problem(cx.file, `vocabulary[${k}].note`, 'concept_inline_list', `vocabulary[${k}].note runs ${run.length} French items together (${run.join(', ')}); a note stays prose`, 'warning'));
+  });
 }
 
 // The verb step's data holds together: each row's group exists and every group has a row; the stem starts the form
@@ -528,9 +614,9 @@ function textRules(cx) {
   }
 }
 
-function inspect(mod, { file, unitIndex = null, graphIds = null } = {}) {
+function inspect(mod, { file, unitIndex = null, graphIds = null, persons = null, isNativeText = null } = {}) {
   const problems = [];
-  const cx = { file, unitIndex, graphIds, kind: null, texts: [], problems, bad: (path, code, msg) => problems.push(problem(file, path, code, msg)) };
+  const cx = { file, unitIndex, graphIds, persons, isNativeText, kind: null, texts: [], problems, bad: (path, code, msg) => problems.push(problem(file, path, code, msg)) };
   if (!isObj(mod)) {
     cx.bad('', 'field_type', 'a module file holds one JSON object');
     return cx;

@@ -46,38 +46,92 @@
     {
       "id": "c-et-and",
       "term": "{et} = and",
-      "definition": "Connect two things or ideas together",
-      "example": "{un chat et un chien} (a cat and a dog)"
+      "definition": "{Et} joins two words or two ideas.",
+      "examples": [
+        {
+          "fr": "un chat et un chien",
+          "en": "a cat and a dog"
+        },
+        {
+          "fr": "J'ai un livre et un chat.",
+          "en": "I have a book and a cat."
+        }
+      ]
     },
     {
       "id": "c-mais-but",
       "term": "{mais} = but",
-      "definition": "Show contrast between two ideas",
-      "example": "{je suis un homme, mais tu es une femme} (I am a man, but you are a woman)"
+      "definition": "{Mais} sets one idea against another.",
+      "examples": [
+        {
+          "fr": "J'ai un chat, mais il a un chien.",
+          "en": "I have a cat, but he has a dog."
+        },
+        {
+          "fr": "Je suis un homme, mais tu es une femme.",
+          "en": "I am a man, but you are a woman."
+        }
+      ]
     },
     {
       "id": "c-ou-or",
       "term": "{ou} = or",
-      "definition": "Present a choice between options",
-      "example": "{un chat ou un chien?} (a cat or a dog?)"
+      "definition": "{Ou} offers a choice between two things.",
+      "examples": [
+        {
+          "fr": "Un chat ou un chien ?",
+          "en": "A cat or a dog?"
+        },
+        {
+          "fr": "C'est un ami ou une amie ?",
+          "en": "Is it a male or a female friend?"
+        }
+      ]
     },
     {
       "id": "c-aussi-also-too",
-      "term": "{aussi} = also / too",
-      "definition": "Add something extra to your statement",
-      "example": "{j'ai un chat aussi} (I have a cat too / also)"
+      "term": "{aussi} = also, too",
+      "definition": "{Aussi} adds one more thing to what you said. It usually comes at the end.",
+      "examples": [
+        {
+          "fr": "J'ai un chat aussi.",
+          "en": "I have a cat too."
+        },
+        {
+          "fr": "Elle a un livre aussi.",
+          "en": "She has a book too."
+        }
+      ]
     },
     {
       "id": "c-tres-very",
       "term": "{très} = very",
-      "definition": "Intensify adjectives - make things stronger!",
-      "example": "{très bon} (very good)"
+      "definition": "{Très} makes a describing word stronger. It goes right before it.",
+      "examples": [
+        {
+          "fr": "C'est très bon.",
+          "en": "It's very good."
+        },
+        {
+          "fr": "La maison est très bonne.",
+          "en": "The house is very good."
+        }
+      ]
     },
     {
       "id": "c-making-natural-sentences",
-      "term": "Making Natural Sentences",
-      "definition": "Combine with everything you've learned to sound natural!",
-      "example": "Use with nouns, verbs, and phrases from previous modules"
+      "term": "Longer sentences",
+      "definition": "These five words join the nouns and verbs you know into longer sentences.",
+      "examples": [
+        {
+          "fr": "Nous avons une maison et une voiture.",
+          "en": "We have a house and a car."
+        },
+        {
+          "fr": "Le café est très bon, merci.",
+          "en": "The coffee is very good, thank you."
+        }
+      ]
     }
   ],
   "items": [

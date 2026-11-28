@@ -57,27 +57,71 @@
   "concepts": [
     {
       "id": "c-ca-that-it",
-      "term": "{ça} = that/it",
-      "definition": "Informal, versatile, used constantly in conversation",
-      "example": "You'll use this word in almost every sentence!"
+      "term": "{ça} = that, it",
+      "definition": "{Ça} points at a thing without naming it. It is how people say that or it in conversation.",
+      "examples": [
+        {
+          "fr": "J'ai ça.",
+          "en": "I have that."
+        },
+        {
+          "fr": "Il a ça.",
+          "en": "He has that."
+        }
+      ]
     },
     {
       "id": "c-c-est-ca",
       "term": "{c'est ça}",
-      "definition": "That's it / That's right - super common phrase",
-      "example": "Used to confirm, agree, or point to something"
+      "definition": "{C'est ça} says yes, that's right. People use it to agree or to confirm.",
+      "examples": [
+        {
+          "fr": "C'est ça !",
+          "en": "That's right!"
+        },
+        {
+          "fr": "Oui, c'est ça.",
+          "en": "Yes, that's it."
+        }
+      ]
     },
     {
       "id": "c-ca-va",
-      "term": "{ça va?}",
-      "definition": "How's it going? / Are you OK? - most common greeting!",
-      "example": "The first thing you say when meeting someone"
+      "term": "{ça va ?}",
+      "definition": "{Ça va ?} asks how someone is, and {ça va} answers it. It is the usual greeting between people who know each other.",
+      "examples": [
+        {
+          "fr": "Salut ! Ça va ?",
+          "en": "Hi! How are you?"
+        },
+        {
+          "fr": "Ça va, merci.",
+          "en": "Fine, thanks."
+        },
+        {
+          "fr": "Ça va bien.",
+          "en": "I'm fine."
+        }
+      ]
     },
     {
       "id": "c-building-blocks",
-      "term": "Building Blocks",
-      "definition": "Combine with être and avoir from previous modules",
-      "example": "{c'est + ça}, {j'ai + ça} - real useful phrases!"
+      "term": "{ça} with verbs you know",
+      "definition": "{Ça} works with {être} and {avoir} the way a noun does.",
+      "examples": [
+        {
+          "fr": "Ça, c'est bon !",
+          "en": "That's good!"
+        },
+        {
+          "fr": "Tu as ça ?",
+          "en": "Do you have that?"
+        },
+        {
+          "fr": "Ça, c'est un livre.",
+          "en": "That's a book."
+        }
+      ]
     }
   ],
   "items": [

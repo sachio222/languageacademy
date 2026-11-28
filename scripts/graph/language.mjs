@@ -25,6 +25,11 @@
 // Verb forms (optional: a language without it has no Verb forms step)
 //   conjugation(graph, spec)   a verb's present as the Verb forms step teaches it: { verb, rows, groups, contrast,
 //                          shape }, from { headwords, forms, paradigms } and a lesson's { verb } (fr/conjugation.mjs)
+//   isNativeExample(s)     true when a concept card's example is in the learner's language, not the target one
+//                          (optional: without it the content check does not look)
+//   persons                [[singular pronouns, plural pronouns], ...]: the persons a verb form starts with, in the
+//                          order a concept card's forms layout pairs its two columns (optional: without it the
+//                          content check counts a forms card's examples but cannot pair them)
 // Report
 //   locale                 sort order for word lists in reports
 //   exampleWord            a headword key the report uses to explain IDs (lex:<exampleWord>)

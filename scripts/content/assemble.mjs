@@ -21,6 +21,9 @@ const keyOfFile = (file) => file.replace(/^.*[\\/]/, '').replace(/\.json$/, '');
  *                 checkAnswer(item, typed, { blank? }) runs every declared answer of every well-formed item
  *                 through the app's checker (item_unpassable, mistake_accepted; spec 5.4). Omitted: nothing is checked.
  *                 graphIds (Sets of graph ids) checks the ids in teaches and tests (construction_unknown, word_unknown).
+ *                 persons (the language pack's persons, scripts/graph/<code>/language.mjs) pairs a concept card's
+ *                 forms layout (concept_forms_pair); omitted, only its count is checked. isNativeText (the
+ *                 language pack's) refuses example French in the learner's language (concept_example_not_target).
  */
 export function assembleCourse(outline, files, opts = {}) {
   const outlineFile = opts.outlineFile || 'course.json';
@@ -77,7 +80,7 @@ export function assembleCourse(outline, files, opts = {}) {
     if (!parsed) continue;
     if (isObj(json) && typeof json.module_key === 'string' && json.module_key !== key)
       problems.push(problem(file, 'module_key', 'module_key_mismatch', `module_key ${json.module_key} does not match the file name ${key}.json`));
-    const own = validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null, graphIds: opts.graphIds ?? null });
+    const own = validateModule(json, { file, unitIndex: unitIndexOf.get(key) ?? null, graphIds: opts.graphIds ?? null, persons: opts.persons ?? null, isNativeText: opts.isNativeText ?? null });
     problems.push(...own);
     // Only a module whose items are well formed can have its answers checked; a warning does not stop it.
     if (opts.checkAnswer && !own.some((p) => !isWarning(p)) && isObj(json) && Array.isArray(json.items))

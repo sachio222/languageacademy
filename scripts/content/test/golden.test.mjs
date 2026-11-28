@@ -366,8 +366,10 @@ const PLANTED = [
   ['a story caption translation changed (story_translation)', only('2024-01-09-reading1', (c) => {
     c.readingPassage.translation = c.readingPassage.translation.replace('Paul, a cat and a dog.', 'Paul.');
   })],
-  ["a position-word fix swapped for another card's fix (position_words_fixed, own path)", only('2024-01-06-basic-nouns', (c) => {
-    c.concepts[1].definition = 'Every exercise uses être or avoir - reinforcing what you learned!';
+  // Units 1 to 3's concept cards are rewritten by hand (examples lists), so their recorded hand edits cover the cards;
+  // the card plantings use a module past Unit 3 whose cards keep the converter's text.
+  ["a position-word fix swapped for another card's fix (position_words_fixed, own path)", only('2024-03-25-multi-clause-questions', (c) => {
+    c.concepts[0].definition = c.concepts[1].definition;
   })],
   ['a position-word hint set to a mistake answer of the module (position_words_fixed, own path)', only('2024-01-06-basic-nouns', (c) => {
     c.exercises[0].hint = "j'ai le livre";
@@ -382,7 +384,7 @@ const PLANTED = [
     const [a, b] = ['The city of Arles.', 'It is sometimes said to make one see green fairies.'];
     c.readingPassage.translation = c.readingPassage.translation.replace(a, '\u0000').replace(b, a).replace('\u0000', b);
   })],
-  ['two concept ids swapped in a module main lacks (concept_id_added)', only('2026-11-24-numbers', (c) => {
+  ['two concept ids swapped (concept_id_added)', only('2024-03-25-multi-clause-questions', (c) => {
     [c.concepts[0].id, c.concepts[1].id] = [c.concepts[1].id, c.concepts[0].id];
   })],
   ['a passage title added back (story_title_from_stories)', only('2024-01-09-reading1', (c) => {

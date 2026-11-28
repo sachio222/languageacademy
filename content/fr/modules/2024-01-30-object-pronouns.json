@@ -62,21 +62,56 @@
   "concepts": [
     {
       "id": "c-object-pronouns",
-      "term": "Object Pronouns",
-      "definition": "Pronouns that receive the action of a verb (me, you, him, her, us, them)",
-      "example": "7 object pronouns to learn - different from subject pronouns!"
+      "term": "Object pronouns",
+      "definition": "An object pronoun stands for the person or thing the action happens to: me, you, him, her, it, us or them.",
+      "examples": [
+        {
+          "fr": "Il me voit.",
+          "en": "He sees me."
+        },
+        {
+          "fr": "Tu nous vois.",
+          "en": "You see us."
+        },
+        {
+          "fr": "Je les ai.",
+          "en": "I have them."
+        }
+      ]
     },
     {
       "id": "c-critical-placement-rule",
-      "term": "Critical Placement Rule",
-      "definition": "Object pronouns go BEFORE the verb in French (opposite of English!)",
-      "example": "English: 'I see HIM', French: 'I HIM see' - pronoun comes first"
+      "term": "Before the verb",
+      "definition": "French puts the object pronoun before the verb, the other way round from English.",
+      "examples": [
+        {
+          "fr": "Je le vois.",
+          "en": "I see him."
+        },
+        {
+          "fr": "Je la vois.",
+          "en": "I see her."
+        },
+        {
+          "fr": "Elle l'a.",
+          "en": "She has it."
+        }
+      ]
     },
     {
       "id": "c-subject-vs-object",
-      "term": "Subject vs Object",
-      "definition": "Subject does action (he/she), object receives action (him/her)",
-      "example": "Don't confuse subject and object pronouns - they're different words!"
+      "term": "Subject or object",
+      "definition": "The subject does the action and the object receives it. {Il} is he, and {le} is him.",
+      "examples": [
+        {
+          "fr": "Il voit Paul.",
+          "en": "He sees Paul."
+        },
+        {
+          "fr": "Paul le voit.",
+          "en": "Paul sees him."
+        }
+      ]
     }
   ],
   "items": [

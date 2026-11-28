@@ -80,21 +80,56 @@
   "concepts": [
     {
       "id": "c-sentence-building",
-      "term": "Sentence Building",
-      "definition": "Combine subject + verb + object/possessive to make real sentences",
-      "example": "Use everything from previous 9 modules together!"
+      "term": "Who has what",
+      "definition": "Put a subject and a verb with an object pronoun or a possessive to say who has what.",
+      "examples": [
+        {
+          "fr": "Il l'a.",
+          "en": "He has it."
+        },
+        {
+          "fr": "Ils les ont.",
+          "en": "They have them."
+        },
+        {
+          "fr": "C'est le mien.",
+          "en": "It's mine."
+        }
+      ]
     },
     {
       "id": "c-object-pronoun-placement",
-      "term": "Object Pronoun Placement",
-      "definition": "Object pronouns go BEFORE the verb in French (opposite of English!)",
-      "example": "English: 'I see IT', French: 'I IT see' - pronoun comes first"
+      "term": "The pronoun before the verb",
+      "definition": "The object pronoun comes before the verb, even where English puts it after.",
+      "examples": [
+        {
+          "fr": "Je le veux.",
+          "en": "I want it."
+        },
+        {
+          "fr": "Elle l'a.",
+          "en": "She has it."
+        }
+      ]
     },
     {
       "id": "c-possessive-constructions",
-      "term": "Possessive Constructions",
-      "definition": "Multiple ways to express ownership in French",
-      "example": "Choose between possessive adjectives and possessive pronouns"
+      "term": "Two ways to say whose",
+      "definition": "Use a possessive before a noun, as in my book, or a pronoun on its own, as in mine.",
+      "examples": [
+        {
+          "fr": "C'est mon livre.",
+          "en": "It's my book."
+        },
+        {
+          "fr": "C'est le mien.",
+          "en": "It's mine."
+        },
+        {
+          "fr": "Est-ce le tien ?",
+          "en": "Is it yours?"
+        }
+      ]
     }
   ],
   "items": [

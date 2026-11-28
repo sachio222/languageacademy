@@ -116,51 +116,170 @@
   "concepts": [
     {
       "id": "c-three-ways-to-ask",
-      "term": "Three Ways to Ask Questions in French",
-      "definition": "French has 3 methods for asking questions. Start with the easiest!",
-      "example": "1) {Est-ce que} (easiest), 2) Intonation (informal), 3) Inversion (formal)"
+      "term": "Three ways to ask a question",
+      "definition": "French can ask the same question three ways. In speech the easiest are {est-ce que} and a rising voice.",
+      "examples": [
+        {
+          "fr": "Est-ce que tu as un chat ?",
+          "en": "Do you have a cat?",
+          "note": "with {est-ce que}"
+        },
+        {
+          "fr": "Tu as un chat ?",
+          "en": "Do you have a cat?",
+          "note": "with your voice rising"
+        },
+        {
+          "fr": "As-tu un chat ?",
+          "en": "Do you have a cat?",
+          "note": "with the verb first, more formal"
+        }
+      ]
     },
     {
       "id": "c-method-1-est-ce",
-      "term": "Method 1: {Est-ce que} (Beginner-Friendly!)",
-      "definition": "Add '{est-ce que}' before ANY statement to make it a question. No word order change needed!",
-      "example": "Statement: '{tu as un chat}' → Question: '{est-ce que tu as un chat?}' (do you have a cat?)"
+      "term": "{Est-ce que}",
+      "definition": "Put {est-ce que} before a statement to make it a question. The other words keep their order.",
+      "examples": [
+        {
+          "fr": "Est-ce que tu veux un café ?",
+          "en": "Do you want a coffee?"
+        },
+        {
+          "fr": "Est-ce que vous voyez la maison ?",
+          "en": "Do you see the house?"
+        }
+      ]
     },
     {
       "id": "c-with-question-words-est",
-      "term": "With Question Words + Est-ce que",
-      "definition": "Put question word first, then '{est-ce que}', then statement",
-      "example": "{où est-ce que tu es?} (where are you?), {quand est-ce que tu as le livre?} (when do you have the book?)"
+      "term": "A question word and {est-ce que}",
+      "definition": "Put the question word first, then {est-ce que}, then the statement.",
+      "examples": [
+        {
+          "fr": "Où est-ce que tu es ?",
+          "en": "Where are you?"
+        },
+        {
+          "fr": "Pourquoi est-ce que tu veux ça ?",
+          "en": "Why do you want that?"
+        },
+        {
+          "fr": "Qu'est-ce que tu veux ?",
+          "en": "What do you want?"
+        }
+      ]
     },
     {
       "id": "c-method-2-rising-intonation",
-      "term": "Method 2: Rising Intonation (Spoken French)",
-      "definition": "Just say a statement with rising voice at the end - super informal!",
-      "example": "{Tu as un chat? ↗} (you have a cat?), {Tu es où? ↗} (you are where?)"
+      "term": "A rising voice",
+      "definition": "Say the statement and let your voice rise at the end. It is the most common way to ask in conversation.",
+      "examples": [
+        {
+          "fr": "Tu as un chat ?",
+          "en": "You have a cat?"
+        },
+        {
+          "fr": "Tu es où ?",
+          "en": "Where are you?"
+        },
+        {
+          "fr": "Ça va ?",
+          "en": "Are you OK?"
+        }
+      ]
     },
     {
       "id": "c-method-3-inversion-formal",
-      "term": "Method 3: Inversion (Formal)",
-      "definition": "Flip verb and subject, add hyphen. Used in formal/written French",
-      "example": "{As-tu un chat?} (have you a cat?), {Où es-tu?} (where are you?)"
+      "term": "The verb first",
+      "definition": "Put the verb before the pronoun and join them with a hyphen. It sounds formal and is used most in writing.",
+      "examples": [
+        {
+          "fr": "As-tu un chat ?",
+          "en": "Do you have a cat?"
+        },
+        {
+          "fr": "Où es-tu ?",
+          "en": "Where are you?"
+        },
+        {
+          "fr": "Que veux-tu ?",
+          "en": "What do you want?"
+        }
+      ]
     },
     {
       "id": "c-the-7-essential-question",
-      "term": "The 7 Essential Question Words",
-      "definition": "These words unlock every question you need: what, who, where, when, how, why, how much",
-      "example": "{que}/{quoi} (what), {qui} (who), {où} (where), {quand} (when), {comment} (how), {pourquoi} (why), {combien} (how much/many)"
+      "term": "Question words",
+      "definition": "These words ask who, where, when, how, why, and how much or how many.",
+      "examples": [
+        {
+          "fr": "qui",
+          "en": "who"
+        },
+        {
+          "fr": "où",
+          "en": "where"
+        },
+        {
+          "fr": "quand",
+          "en": "when"
+        },
+        {
+          "fr": "comment",
+          "en": "how"
+        },
+        {
+          "fr": "pourquoi",
+          "en": "why"
+        },
+        {
+          "fr": "combien",
+          "en": "how much, how many"
+        }
+      ]
     },
     {
       "id": "c-que-vs-quoi-both",
-      "term": "Que vs Quoi (both mean 'what')",
-      "definition": "'{Que}' starts questions, '{quoi}' ends them or stands alone",
-      "example": "{Que veux-tu?} (what do you want?) vs {Tu veux quoi?} (you want what?) vs {Quoi?} (what?!)"
+      "term": "{que} and {quoi}: what",
+      "definition": "{Que} starts a question. {Quoi} ends one or stands on its own.",
+      "examples": [
+        {
+          "fr": "Que veux-tu ?",
+          "en": "What do you want?"
+        },
+        {
+          "fr": "Tu veux quoi ?",
+          "en": "You want what?"
+        },
+        {
+          "fr": "Quoi ?",
+          "en": "What?"
+        }
+      ]
     },
     {
       "id": "c-common-question-phrases-memorize",
-      "term": "Common Question Phrases - Memorize These!",
-      "definition": "Some questions are used so often they become fixed phrases",
-      "example": "{qu'est-ce que c'est?} (what is it?), {comment ça va?} (how's it going?), {ça va?} (you good?), {qu'est-ce que tu veux?} (what do you want?), {est-ce que tu peux?} (can you?)"
+      "term": "Questions to learn whole",
+      "definition": "Some questions are so common that people say them as one block.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que c'est ?",
+          "en": "What is it?"
+        },
+        {
+          "fr": "Comment ça va ?",
+          "en": "How are you?"
+        },
+        {
+          "fr": "Qu'est-ce que tu veux ?",
+          "en": "What do you want?"
+        },
+        {
+          "fr": "Est-ce que tu peux ?",
+          "en": "Can you?"
+        }
+      ]
     }
   ],
   "items": [

@@ -21,21 +21,77 @@
   "concepts": [
     {
       "id": "c-partir-to-leave-to",
-      "term": "{partir} = to leave / to depart",
-      "definition": "Common verb for leaving a place or departing",
-      "example": "Essential for talking about travel and movement away from places"
+      "term": "{partir} = to leave",
+      "definition": "The verb for leaving a place or setting off on a trip.",
+      "examples": [
+        {
+          "fr": "Je pars avec toi.",
+          "en": "I'm leaving with you."
+        },
+        {
+          "fr": "Quand est-ce que tu pars ?",
+          "en": "When are you leaving?"
+        },
+        {
+          "fr": "Nous partons en Normandie.",
+          "en": "We're leaving for Normandy."
+        },
+        {
+          "fr": "Elle part avec eux.",
+          "en": "She's leaving with them."
+        }
+      ]
     },
     {
       "id": "c-regular-ir-conjugation",
       "term": "The t you hear only in the plural",
-      "definition": "In {je pars}, {tu pars} and {il part} you hear no t. In {ils partent}, {vous partez} and {nous partons} the t comes back and is heard.",
-      "example": "{il part} (no t heard), {ils partent} (t heard)"
+      "definition": "In the singular forms you hear no t. In the plural forms the t comes back and is heard.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je pars",
+          "en": "I leave"
+        },
+        {
+          "fr": "tu pars",
+          "en": "you leave"
+        },
+        {
+          "fr": "il part",
+          "en": "he leaves"
+        },
+        {
+          "fr": "nous partons",
+          "en": "we leave"
+        },
+        {
+          "fr": "vous partez",
+          "en": "you leave"
+        },
+        {
+          "fr": "ils partent",
+          "en": "they leave"
+        }
+      ]
     },
     {
       "id": "c-composition-power",
-      "term": "Composition Power",
-      "definition": "{partir} slots into the verbs you know: {vouloir}, {pouvoir} and {aller} each take it straight after.",
-      "example": "{je veux partir}, {tu peux partir}, {on va partir}"
+      "term": "{partir} after another verb",
+      "definition": "{Partir} goes straight after the verbs for wanting, being able and going.",
+      "examples": [
+        {
+          "fr": "Je veux partir.",
+          "en": "I want to leave."
+        },
+        {
+          "fr": "Tu peux partir ?",
+          "en": "Can you leave?"
+        },
+        {
+          "fr": "On va partir.",
+          "en": "We're going to leave."
+        }
+      ]
     }
   ],
   "items": [

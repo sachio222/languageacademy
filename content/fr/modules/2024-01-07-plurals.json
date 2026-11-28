@@ -70,21 +70,60 @@
   "concepts": [
     {
       "id": "c-basic-plural-rule",
-      "term": "Basic Plural Rule",
-      "definition": "Add -s to most nouns (just like English!)",
-      "example": "{chat} → {chats}, {livre} → {livres}, {ami} → {amis}; {c'est un livre} (it's a book) → {ce sont des livres} (they're books)"
+      "term": "Add -s for more than one",
+      "definition": "Most nouns add -s in the plural, as in English. The s is silent, so you hear the plural in the article.",
+      "examples": [
+        {
+          "fr": "C'est un chat.",
+          "en": "It's a cat."
+        },
+        {
+          "fr": "J'ai des chats.",
+          "en": "I have cats."
+        },
+        {
+          "fr": "Nous avons les livres.",
+          "en": "We have the books."
+        }
+      ]
     },
     {
       "id": "c-plural-articles",
-      "term": "Plural Articles",
-      "definition": "les = the (plural), des = some/plural a",
-      "example": "Pattern: [pronoun] + [verb] + [des/les] + [plural noun]"
+      "term": "{les} and {des}",
+      "definition": "{Les} is the for more than one. {Des} is the plural of a: English often says nothing there, or some.",
+      "examples": [
+        {
+          "fr": "Ils ont les chats.",
+          "en": "They have the cats."
+        },
+        {
+          "fr": "Tu as des chats.",
+          "en": "You have cats."
+        },
+        {
+          "fr": "Elle a les enfants.",
+          "en": "She has the children."
+        }
+      ]
     },
     {
       "id": "c-practice-with-etre-avoir",
-      "term": "Practice With être & avoir!",
-      "definition": "Every exercise combines plurals with {être} and {avoir}",
-      "example": "Learn plurals WHILE reinforcing your verb conjugations"
+      "term": "Plurals with {être} and {avoir}",
+      "definition": "Every sentence in this lesson puts a plural noun after a verb you know.",
+      "examples": [
+        {
+          "fr": "Nous sommes des amis.",
+          "en": "We are friends."
+        },
+        {
+          "fr": "Vous avez les choses.",
+          "en": "You have the things."
+        },
+        {
+          "fr": "J'ai des enfants.",
+          "en": "I have children."
+        }
+      ]
     }
   ],
   "items": [

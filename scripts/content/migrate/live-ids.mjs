@@ -4,6 +4,7 @@
 // Pure: takes the live lessons (lessonData.js `lessons` on main) and the converted modules.
 import { normText } from './items.mjs';
 import { unmark } from './mark-french.mjs';
+import { makeConceptId } from '../item-ids.mjs';
 
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 
@@ -73,13 +74,17 @@ export function liveIdMatch(mainLessons, converted) {
     const concepts = [...cards].sort((a, b) => (a.id < b.id ? -1 : 1));
     const usedC = new Set();
     // A concept matches by term, else by definition or example when the term was rewritten (a position word
-    // fixed by hand).
+    // fixed by hand), else by the id the converter minted from the live term (item-ids.mjs makeConceptId), which a
+    // card keeps when its term, definition and examples are all rewritten on this branch.
+    const minted = new Set();
+    const mintedIds = (lesson.concepts || []).map((c) => makeConceptId(c, minted));
     (lesson.concepts || []).forEach((c, i) => {
       const free = concepts.filter((k) => !usedC.has(k.id));
       const hit =
         free.find((k) => normText(unmark(k.term)) === normText(c.term)) ??
         free.find((k) => normText(unmark(k.definition)) === normText(c.definition)) ??
-        free.find((k) => c.example && normText(unmark(k.example)) === normText(c.example));
+        free.find((k) => c.example && normText(unmark(k.example)) === normText(c.example)) ??
+        free.find((k) => k.id === mintedIds[i]);
       if (hit) {
         usedC.add(hit.id);
         entry.concepts[String(i)] = hit.id;

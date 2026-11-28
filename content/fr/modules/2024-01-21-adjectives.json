@@ -83,33 +83,114 @@
   "concepts": [
     {
       "id": "c-adjective-gender-agreement-critical",
-      "term": "Adjective Gender Agreement - Critical!",
-      "definition": "Adjectives must match the gender of the noun they describe!",
-      "example": "{bon livre} (masc) BUT bonne maison (fem)"
+      "term": "Adjectives match their noun",
+      "definition": "An adjective takes the gender of the noun it describes. Most add an -e for a feminine noun.",
+      "examples": [
+        {
+          "fr": "J'ai un bon livre.",
+          "en": "I have a good book."
+        },
+        {
+          "fr": "Elle a une bonne maison.",
+          "en": "She has a good house."
+        }
+      ]
     },
     {
       "id": "c-regular-vs-irregular-forms",
-      "term": "Regular vs Irregular Forms",
-      "definition": "Most adjectives add -e for feminine (petit→petite), but some are irregular (beau→belle)",
-      "example": "Regular: {grand}/grande. Irregular: {nouveau}/{nouvelle}, {vieux}/{vieille}"
+      "term": "Regular and irregular forms",
+      "definition": "Most adjectives add -e for the feminine, as {petit} does. A few change more, as {nouveau} and {vieux} do.",
+      "examples": [
+        {
+          "fr": "un petit chat",
+          "en": "a small cat"
+        },
+        {
+          "fr": "une petite maison",
+          "en": "a small house"
+        },
+        {
+          "fr": "un nouveau livre",
+          "en": "a new book"
+        },
+        {
+          "fr": "une nouvelle voiture",
+          "en": "a new car"
+        },
+        {
+          "fr": "un vieux chat",
+          "en": "an old cat"
+        },
+        {
+          "fr": "une vieille maison",
+          "en": "an old house"
+        }
+      ]
     },
     {
       "id": "c-same-form-both-genders",
-      "term": "Same Form Both Genders",
-      "definition": "A few adjectives like '{jeune}' and '{autre}' don't change",
-      "example": "{un jeune homme} / {une jeune femme} (both use '{jeune}')"
+      "term": "One form for both genders",
+      "definition": "A few adjectives, such as {jeune} and {autre}, have one form for both genders.",
+      "examples": [
+        {
+          "fr": "un jeune homme",
+          "en": "a young man"
+        },
+        {
+          "fr": "une jeune femme",
+          "en": "a young woman"
+        },
+        {
+          "fr": "un autre livre",
+          "en": "another book"
+        },
+        {
+          "fr": "une autre voiture",
+          "en": "another car"
+        }
+      ]
     },
     {
       "id": "c-adjective-placement",
-      "term": "Adjective Placement",
-      "definition": "These common adjectives usually go BEFORE the noun (unlike most French adjectives)",
-      "example": "{un petit chat} (a small cat), NOT un chat petit"
+      "term": "Before the noun",
+      "definition": "These common adjectives go before the noun, while most French adjectives go after it.",
+      "examples": [
+        {
+          "fr": "J'ai un petit chat.",
+          "en": "I have a small cat."
+        },
+        {
+          "fr": "C'est un beau livre.",
+          "en": "It's a beautiful book."
+        },
+        {
+          "fr": "Nous avons une belle maison.",
+          "en": "We have a beautiful house."
+        }
+      ]
     },
     {
       "id": "c-before-a-vowel-bel",
-      "term": "Before a Vowel: {bel, nouvel, vieil}",
-      "definition": "Before a masculine singular noun that starts with a vowel sound, '{beau}', '{nouveau}' and '{vieux}' become '{bel}', '{nouvel}' and '{vieil}'. Feminine forms do not change: '{une nouvelle amie}'.",
-      "example": "{un bel enfant}, {un nouvel ami}, {un vieil homme}"
+      "term": "Before a vowel sound",
+      "definition": "Before a masculine noun that starts with a vowel sound, three of these adjectives change form so the words run together. Feminine forms stay the same.",
+      "examples": [
+        {
+          "fr": "un bel enfant",
+          "en": "a beautiful child"
+        },
+        {
+          "fr": "un nouvel ami",
+          "en": "a new friend"
+        },
+        {
+          "fr": "un vieil homme",
+          "en": "an old man"
+        },
+        {
+          "fr": "une nouvelle amie",
+          "en": "a new friend, a woman"
+        }
+      ]
     }
   ],
   "items": [

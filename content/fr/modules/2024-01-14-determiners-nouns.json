@@ -86,21 +86,64 @@
   "concepts": [
     {
       "id": "c-functional-composition",
-      "term": "Functional Composition",
-      "definition": "Determiners are functions that take nouns as arguments",
-      "example": "{ce}({livre}) → {ce livre}, {cette}({maison}) → {cette maison}"
+      "term": "The word before the noun",
+      "definition": "A word such as {ce} or {le} goes before the noun and matches its gender and number.",
+      "examples": [
+        {
+          "fr": "ce livre",
+          "en": "this book"
+        },
+        {
+          "fr": "cette maison",
+          "en": "this house"
+        },
+        {
+          "fr": "le chat",
+          "en": "the cat"
+        },
+        {
+          "fr": "la maison",
+          "en": "the house"
+        }
+      ]
     },
     {
       "id": "c-full-sentence-practice",
-      "term": "Full Sentence Practice",
-      "definition": "Every exercise uses être, avoir, or vouloir - combining multiple modules!",
-      "example": "Not just 'this book', but 'I have this book' - real usage!"
+      "term": "Whole sentences",
+      "definition": "Every sentence in this lesson puts one of these noun groups after {être} or {avoir}.",
+      "examples": [
+        {
+          "fr": "J'ai ce livre.",
+          "en": "I have this book."
+        },
+        {
+          "fr": "Elle a cette maison.",
+          "en": "She has this house."
+        },
+        {
+          "fr": "C'est cet homme.",
+          "en": "It's this man."
+        }
+      ]
     },
     {
       "id": "c-using-all-previous-verbs",
-      "term": "Using ALL Previous Verbs",
-      "definition": "Practice with être and avoir from previous modules",
-      "example": "Pattern: [pronoun] + [verb] + [determiner] + [noun]"
+      "term": "The order of the words",
+      "definition": "The pronoun comes first, then the verb, then the noun with its word before it, as in English.",
+      "examples": [
+        {
+          "fr": "Nous avons ces livres.",
+          "en": "We have these books."
+        },
+        {
+          "fr": "Ils ont les chiens.",
+          "en": "They have the dogs."
+        },
+        {
+          "fr": "J'ai ces enfants.",
+          "en": "I have these children."
+        }
+      ]
     }
   ],
   "items": [

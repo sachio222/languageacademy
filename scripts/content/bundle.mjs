@@ -326,10 +326,21 @@ function verbFormsBody(m) {
   };
 }
 
+// A concept card's or section's examples as L draws them (ConceptBlock.examples, layout): a list or forms item with
+// fr, en and note (null when the source leaves it out), a plain item with its text only. A card still in the old shape
+// carries no examples and no layout.
+const examplesOf = (c) =>
+  Array.isArray(c.examples)
+    ? {
+        examples: c.examples.map((x) => (c.layout === 'plain' ? { text: x.text } : { fr: x.fr, en: x.en ?? null, note: x.note ?? null })),
+        layout: c.layout ?? 'list',
+      }
+    : {};
+
 function vocabularyIntroBody(m) {
   return {
     blocks: [
-      ...(m.concepts || []).map((c) => ({ type: 'concept', block_id: c.id, term: c.term, definition: c.definition, example: c.example ?? null })),
+      ...(m.concepts || []).map((c) => ({ type: 'concept', block_id: c.id, term: c.term, definition: c.definition, example: c.example ?? null, ...examplesOf(c) })),
       ...(m.tables || []).map(tableBlock),
     ],
   };
@@ -344,6 +355,7 @@ function referenceBody(m) {
         block_id: s.id,
         heading: s.heading,
         text: [s.text, ...(isStr(s.example) ? [s.example] : [])],
+        ...examplesOf(s),
         ...(s.rows ? { rows: rowsOf(s.rows) } : {}),
       })),
       ...(m.tables || []).map(tableBlock),

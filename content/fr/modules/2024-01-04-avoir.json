@@ -76,20 +76,67 @@
     {
       "id": "c-avoir-to-have",
       "term": "{avoir} = to have",
-      "definition": "Express possession, age, and physical states",
-      "example": "Use to say what you have, your age, or physical sensations"
+      "definition": "The verb for what you have. French also uses it to give your age.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "j'ai",
+          "en": "I have"
+        },
+        {
+          "fr": "tu as",
+          "en": "you have"
+        },
+        {
+          "fr": "il a",
+          "en": "he has"
+        },
+        {
+          "fr": "nous avons",
+          "en": "we have"
+        },
+        {
+          "fr": "vous avez",
+          "en": "you have"
+        },
+        {
+          "fr": "ils ont",
+          "en": "they have"
+        }
+      ]
     },
     {
       "id": "c-elision-with-first-person",
-      "term": "Elision with First Person",
-      "definition": "When 'I' meets a verb starting with vowel, letters merge with apostrophe",
-      "example": "The 'e' disappears and apostrophe appears for smooth pronunciation"
+      "term": "{je} becomes {j'} before a vowel",
+      "definition": "Before a vowel sound, {je} drops its e and joins the verb with an apostrophe. Before a consonant it stays as it is.",
+      "examples": [
+        {
+          "fr": "j'ai",
+          "en": "I have",
+          "note": "before a vowel"
+        },
+        {
+          "fr": "je suis",
+          "en": "I am",
+          "note": "before a consonant"
+        }
+      ]
     },
     {
       "id": "c-common-uses",
-      "term": "Common Uses",
-      "definition": "Possession: \"I have a cat\", Age: \"I have 20 years\" (French way to say age!)",
-      "example": "Possession and age are the most common uses"
+      "term": "What {avoir} says",
+      "definition": "Use {avoir} for what someone has. French gives your age with it too: it says I have 20 years for I am 20.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "elle a",
+          "en": "she has"
+        },
+        {
+          "fr": "elles ont",
+          "en": "they have, all women"
+        }
+      ]
     }
   ],
   "tables": [

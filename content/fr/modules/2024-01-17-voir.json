@@ -70,26 +70,91 @@
     {
       "id": "c-voir-to-see",
       "term": "{voir} = to see",
-      "definition": "Irregular verb for seeing and perceiving",
-      "example": "Very common, often after {vouloir}: {je veux voir} (I want to see). The next lesson uses it with object pronouns."
+      "definition": "The verb for seeing. It often comes after {vouloir}, as in {je veux voir}, I want to see.",
+      "examples": [
+        {
+          "fr": "Je veux voir.",
+          "en": "I want to see."
+        },
+        {
+          "fr": "Tu vois ?",
+          "en": "You see?"
+        },
+        {
+          "fr": "Je vois un chat.",
+          "en": "I see a cat."
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation",
-      "term": "Irregular Conjugation",
-      "definition": "Stem changes throughout conjugation",
-      "example": "{je}/{tu vois}, {il voit}, {nous voyons}, {vous voyez}, {ils voient}"
+      "term": "Its forms",
+      "definition": "The stem has a y for we and you, and an i everywhere else.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je vois",
+          "en": "I see"
+        },
+        {
+          "fr": "tu vois",
+          "en": "you see"
+        },
+        {
+          "fr": "il voit",
+          "en": "he sees"
+        },
+        {
+          "fr": "nous voyons",
+          "en": "we see"
+        },
+        {
+          "fr": "vous voyez",
+          "en": "you see"
+        },
+        {
+          "fr": "ils voient",
+          "en": "they see"
+        }
+      ]
     },
     {
       "id": "c-building-on-previous-vocabulary",
-      "term": "Building on Previous Vocabulary",
-      "definition": "Combine with nouns, adjectives, and phrases you already know",
-      "example": "Pattern: '{je vois}' + articles + nouns + adjectives"
+      "term": "What you see",
+      "definition": "Put what you see after the verb, as in English.",
+      "examples": [
+        {
+          "fr": "Nous voyons la maison.",
+          "en": "We see the house."
+        },
+        {
+          "fr": "Tu vois ce livre ?",
+          "en": "Do you see this book?"
+        },
+        {
+          "fr": "Ils voient un chien.",
+          "en": "They see a dog."
+        }
+      ]
     },
     {
       "id": "c-prepares-for-object-pronouns",
-      "term": "Prepares for Object Pronouns",
-      "definition": "Next module teaches 'I see HIM/HER/IT/THEM' - need voir first!",
-      "example": "Foundation for: {je le vois}, {je la vois}, {je les vois}, {je te vois} (I see you)"
+      "term": "Seeing people",
+      "definition": "{Voir} works with people too: put a name or a noun after it.",
+      "examples": [
+        {
+          "fr": "Je vois Paul.",
+          "en": "I see Paul."
+        },
+        {
+          "fr": "Tu vois cette femme ?",
+          "en": "Do you see that woman?"
+        },
+        {
+          "fr": "Il voit les enfants.",
+          "en": "He sees the children."
+        }
+      ]
     }
   ],
   "tables": [

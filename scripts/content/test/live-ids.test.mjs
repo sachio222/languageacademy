@@ -76,3 +76,18 @@ test('a live exercise with no converted item is listed', () => {
   const { unmatched } = liveIdMatch([lesson], new Map([[old.moduleKey, mod]]));
   assert.deepEqual(unmatched.map((u) => u.live_id), [`${old.moduleKey}.4`]);
 });
+
+test('a concept card rewritten on the branch (term, definition and examples) keeps its live index through its id', () => {
+  const { mod } = convertModule(old, { unitKey: 'unit2', unitIndex: 2 });
+  const [a, b] = mod.concepts;
+  const rewritten = {
+    ...mod,
+    concepts: [
+      { id: a.id, term: 'Adjectives match their noun', definition: 'An adjective takes the gender of its noun.', examples: [{ fr: 'un petit chat', en: 'a small cat' }] },
+      { id: b.id, term: 'Before the noun', definition: 'These adjectives go first.', examples: [{ fr: 'une petite maison', en: 'a small house' }] },
+    ],
+  };
+  const { map, unmatched } = liveIdMatch([live(old)], new Map([[old.moduleKey, rewritten]]));
+  assert.deepEqual(map[old.moduleKey].concepts, { 0: a.id, 1: b.id });
+  assert.deepEqual(unmatched.filter((u) => u.what === 'concept'), []);
+});

@@ -44,10 +44,17 @@ const SPLIT_CODES = {
   options_invalid: (p) => (/exactly one right/.test(p.message) ? 'validator' : 'schema'),
   steps_invalid: (p) => (/at least one step/.test(p.message) ? 'schema' : 'validator'),
   speed_match_invalid: (p) => (/lists six word_ids$/.test(p.message) ? 'schema' : 'validator'),
+  // On a concept card or section an error the validator keeps; on a word card's note a warning.
+  concept_inline_list: (p) => (p.severity === 'warning' ? 'warning' : 'validator'),
+  // A card with no examples is a warning until the cut-over; a list of the wrong size an error the validator keeps.
+  concept_examples_size: (p) => (p.severity === 'warning' ? 'warning' : 'validator'),
 };
 const VALIDATOR_CODES = new Set([
   'id_duplicate', 'step_not_allowed', 'step_empty', 'blank_count', 'blank_marker_invalid', 'preview_block_unknown', 'position_word',
   'span_nested', 'span_empty', 'span_unclosed', 'span_in_plain_field', 'construction_unknown', 'word_unknown', 'gloss_is_card',
+  // A concept card's examples (scripts/content/concept-examples.mjs): counts, pairs and text the schema cannot state.
+  'concept_example_both', 'concept_example_formula', 'concept_example_meaning', 'concept_forms_pair',
+  'concept_layout_without_examples', 'concept_plain_item', 'concept_example_not_target',
 ]);
 const WARNING_CODES = new Set(['translate_outside_unit1']);
 
@@ -108,7 +115,7 @@ for (const { mod } of WRITTEN)
 // One module per kind with every optional field the tables declare filled, so the sweep also mutates fields the
 // course leaves empty (word_ids, steps, review rows, phrases, options.study_mode, part_of_speech, info cards, ...).
 const OPTIONS = () => [{ text: 'oui', fr: true, right: true }, { text: 'non', fr: false, right: false }];
-const MATCH_SAMPLES = ['/img/a.jpg', 'https://example.org/a'];
+const MATCH_SAMPLES = ['/img/a.jpg', 'https://example.org/a', '/a/'];
 function sample(n) {
   switch (n.t) {
     case 'str': return 'mot';
@@ -163,6 +170,12 @@ function fullModule(kind) {
     m.checks = ['a', 'b', 'c'].map((id) => ({ ...m.checks[0], id }));
   }
   if (kind === 'reading') m.preview_blocks = [m.passage[0].id];
+  // A concept card or section holds the old example string or the examples list, never both (concept_example_both).
+  // A list card's items hold fr, never a plain card's text (concept_plain_item).
+  for (const card of [...(m.concepts ?? []), ...(m.sections ?? [])]) {
+    Reflect.deleteProperty(card, 'example');
+    for (const x of card.examples ?? []) Reflect.deleteProperty(x, 'text');
+  }
   // A gloss is a form the module does not teach as a card (gloss_is_card), so it spells another form than the cards.
   if (m.glosses) m.glosses = [{ ...m.glosses[0], fr: 'mots' }];
   if (ks.fields.items) m.items = ITEM_TYPES_BY_KIND[kind].flatMap((t) => fullItems(t, kind));

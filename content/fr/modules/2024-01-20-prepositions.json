@@ -93,33 +93,110 @@
   "concepts": [
     {
       "id": "c-prepositions-connect-ideas",
-      "term": "Prepositions Connect Ideas",
-      "definition": "Small words that show relationships between nouns and pronouns",
-      "example": "{avec moi} (with me), {dans la maison} (in the house), {sous la table} (under the table)"
+      "term": "Prepositions",
+      "definition": "Small words such as with, in or under that link a noun or a pronoun to the rest of the sentence.",
+      "examples": [
+        {
+          "fr": "avec moi",
+          "en": "with me"
+        },
+        {
+          "fr": "dans la maison",
+          "en": "in the house"
+        },
+        {
+          "fr": "sous la table",
+          "en": "under the table"
+        }
+      ]
     },
     {
       "id": "c-spatial-prepositions",
-      "term": "Spatial Prepositions",
-      "definition": "Describe physical location: in, on, under, in front, behind, between",
-      "example": "{sur la table} (on the table), {sous le livre} (under the book), {devant la maison} (in front of the house)"
+      "term": "Where something is",
+      "definition": "These say where something is: on, under, in front of, behind or between.",
+      "examples": [
+        {
+          "fr": "sur la table",
+          "en": "on the table"
+        },
+        {
+          "fr": "devant la maison",
+          "en": "in front of the house"
+        },
+        {
+          "fr": "Le livre est derrière la porte.",
+          "en": "The book is behind the door."
+        }
+      ]
     },
     {
       "id": "c-relational-prepositions",
-      "term": "Relational Prepositions",
-      "definition": "Show relationships: with, for, to, at, of, from",
-      "example": "{avec toi} (with you), {pour moi} (for me), {à Paris} (to/at Paris), {de France} (from France)"
+      "term": "With, for, at and from",
+      "definition": "These link people and places: with, for, at, to and from.",
+      "examples": [
+        {
+          "fr": "avec toi",
+          "en": "with you"
+        },
+        {
+          "fr": "pour moi",
+          "en": "for me"
+        },
+        {
+          "fr": "à Paris",
+          "en": "in Paris, to Paris"
+        },
+        {
+          "fr": "de France",
+          "en": "from France"
+        },
+        {
+          "fr": "chez Pierre",
+          "en": "at Pierre's place"
+        }
+      ]
     },
     {
       "id": "c-use-with-stressed-pronouns",
-      "term": "Use with Stressed Pronouns!",
-      "definition": "After prepositions, use moi/toi/lui (NOT je/tu/il)!",
-      "example": "{avec moi ✓} (not avec je ✗), {pour toi ✓} (not pour tu ✗)"
+      "term": "After a preposition",
+      "definition": "After a preposition, use a stressed pronoun such as {moi}, never a subject pronoun such as {je}.",
+      "examples": [
+        {
+          "fr": "avec moi",
+          "en": "with me"
+        },
+        {
+          "fr": "pour toi",
+          "en": "for you"
+        },
+        {
+          "fr": "chez lui",
+          "en": "at his place"
+        },
+        {
+          "fr": "avec eux",
+          "en": "with them"
+        }
+      ]
     },
     {
       "id": "c-building-real-sentences",
-      "term": "Building Real Sentences",
-      "definition": "Combine with verbs, nouns, and stressed pronouns",
-      "example": "{le chat est sous la table} (the cat is under the table), {je suis devant la maison} (I am in front of the house)"
+      "term": "Prepositions in sentences",
+      "definition": "Put the preposition and its noun after the verb, as in English.",
+      "examples": [
+        {
+          "fr": "Le chat est sous la table.",
+          "en": "The cat is under the table."
+        },
+        {
+          "fr": "Je suis devant la maison.",
+          "en": "I am in front of the house."
+        },
+        {
+          "fr": "Je veux ça pour toi.",
+          "en": "I want this for you."
+        }
+      ]
     }
   ],
   "items": [

@@ -32,8 +32,8 @@ English-to-French prompts by unit: a bare English sentence is a `translate` item
 | English prompts written as respond items | 794 |
 | Passage words with no pop-up | 5 |
 | Estimates to confirm | 1 |
-| Hand edits kept | 1172 |
-| Live ids with no converted item | 365 (50 real misses) |
+| Hand edits kept | 1561 |
+| Live ids with no converted item | 364 (49 real misses) |
 | Fields with no place in a module file | 1954 |
 | Text written differently | 661 |
 | Notes | 3 |
@@ -1751,13 +1751,80 @@ The source sets no value, so the conversion wrote an estimate.
 
 The module file differs from a fresh conversion of an unchanged source here. A rerun keeps the file.
 
+**2024-01-01-famous-words**
+
+- `concepts[0].term` "Internationally Recognized Words" → "Words you may already know"
+- `concepts[0].definition` "Many words are used across languages and cultures" → "Some French words are already familiar from cafés, films and travel."
+- `concepts[0].examples` "(none)" → "["fr":"Voilà !","en":"There you go!","fr":"Café ? Oui, merci.","en":"Coffee? Yes, thank you."]"
+- `concepts[0].example` ""Some of these words may be familiar from movies, restaurants, or everyday use"" → "(removed)"
+- `concepts[1].term` "Essential Greetings & Politeness" → "Greetings and polite words"
+- `concepts[1].definition` "Basic phrases needed for any conversation" → "Say bonjour when you arrive and au revoir when you leave. Add please when you ask for something, and thank you when you get it."
+- `concepts[1].examples` "(none)" → "["fr":"Bonjour !","en":"Hello!","fr":"Merci !","en":"Thank you!","fr":"Oui.","en":"Yes.","fr":"Non.","en":"No.","fr":"Au revoir !","en":"Goodbye!"]"
+- `concepts[1].example` ""Hello, thank you, yes, no, please, goodbye - universal communication"" → "(removed)"
+- `concepts[2].term` "Building Your Foundation" → "Short answers"
+- `concepts[2].definition` "Starting with common, useful words builds confidence" → "These words already make whole replies. Each one answers a question on its own."
+- `concepts[2].examples` "(none)" → "["fr":"Oui, merci.","en":"Yes, thank you.","fr":"Bien, merci.","en":"Fine, thank you.","fr":"Bon, au revoir !","en":"Right, goodbye!"]"
+- `concepts[2].example` ""These common words appear in daily conversation"" → "(removed)"
+
 **2024-01-01-pronouns**
 
-- `concepts[3].example` "On va au café (We're going to the café) - uses il/elle verb forms, not nous forms" → "On means 'we' when friends talk, or 'people' in general. It takes the same verb form as il and elle."
+- `concepts[0].term` "Subject Pronouns" → "Subject pronouns"
+- `concepts[0].definition` "Words that replace nouns as the subject of a sentence" → "A subject pronoun says who does the action: I, you, he, we or they."
+- `concepts[0].layout` "(none)" → ""forms""
+- `concepts[0].examples` "(none)" → "["fr":"je","en":"I","fr":"tu","en":"you","fr":"il","en":"he","fr":"nous","en":"we","fr":"vous","en":"you","fr":"ils","en":"they"]"
+- `concepts[0].example` ""9 essential words: I, you, he, she, we, you (formal), they (masc), they (fem), on"" → "(removed)"
+- `concepts[1].term` "Singular vs Plural" → "One person or more"
+- `concepts[1].definition` "4 singular pronouns (one person) and 4 plural pronouns (multiple people)" → "Each pronoun for one person has a partner for more than one. Ils is for men or a mixed group, elles only for women."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"il","en":"he","fr":"elle","en":"she","fr":"ils","en":"they, men or a mixed group","fr":"elles","en":"they, all women"]"
+- `concepts[1].example` ""I/you/he/she are singular, we/you all/they are plural"" → "(removed)"
+- `concepts[2].term` "Formal vs Informal" → "Two words for you"
+- `concepts[2].definition` "French has TWO words for "you" - informal (friends) and formal (strangers/bosses)" → "Say tu to a friend, a child or family. Say vous to someone you do not know, or to more than one person."
+- `concepts[2].examples` "(none)" → "["fr":"tu","en":"you","note":"to a friend, a child or family","fr":"vous","en":"you","note":"to someone you do not know, or to a group"]"
+- `concepts[2].example` ""Friends vs strangers require different pronouns"" → "(removed)"
+- `concepts[3].term` "On - The Special Pronoun" → "On, the everyday we"
+- `concepts[3].definition` "The most common way to say 'we' in French - more natural than 'nous'" → "In conversation French speakers say on for we more often than nous. It takes the same verb form as il and elle."
+- `concepts[3].examples` "(none)" → "["fr":"on","en":"we, in conversation; also people in general","fr":"nous","en":"we, in writing and careful speech"]"
+- `concepts[3].example` ""On va au café (We're going to the café) - uses il/elle verb forms, not nous forms"" → "(removed)"
 
 **2024-01-02-etre**
 
-- `concepts` "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"","example":"Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)"]" → "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".","example":"Je suis heureux (I am happy), Il est heureux (he is happy), Je suis Paul (I am Paul), Tu es bon ! (you're good!)","id":"c-at-the-cafe","term":"At the café","definition":"With the words from the first lesson, you can already answer a waiter.","example":"Bonjour ! Café ? (Hello! Coffee?) Oui, merci ! (Yes, thanks!)"]"
+- `concepts` "["id":"c-etre-to-be","term":"être = to be","definition":"The most important verb. Describes states and identity.","example":"Express: I am, you are, he is, she is, we are, they are","id":"c-conjugation-pattern","term":"Conjugation Pattern","definition":"Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!","example":"je suis, tu es, il est, elle est, nous sommes, vous êtes, ils sont, elles sont","id":"c-practical-usage","term":"Practical Usage","definition":"Use with adjectives: \"I am happy\" or professions: \"I am a student\", or locations: \"I am in Paris\"","example":"Je suis heureux (I am happy), Je suis étudiant (I am a student), Je suis à Paris (I am in Paris)"]" → "["id":"c-etre-to-be","term":"être = to be","definition":"The verb for who you are and how you are. It is the verb French uses most.","examples":["fr":"Je suis heureux.","en":"I am happy.","fr":"Tu es Paul ?","en":"Are you Paul?","fr":"Nous sommes heureux.","en":"We are happy."],"id":"c-conjugation-pattern","term":"One form for each person","definition":"Each person has its own form of être, so learn the pronoun and the verb together. Elle est and elles sont go like il est and ils sont.","layout":"forms","examples":["fr":"je suis","en":"I am","fr":"tu es","en":"you are","fr":"il est","en":"he is","fr":"nous sommes","en":"we are","fr":"vous êtes","en":"you are","fr":"ils sont","en":"they are"],"id":"c-practical-usage","term":"être with a word or a name","definition":"Use it with a describing word, as in I am happy, or with your name, as in I am Paul.","examples":["fr":"Je suis heureux.","en":"I am happy.","fr":"Il est heureux.","en":"He is happy.","fr":"Je suis Paul.","en":"I am Paul.","fr":"Tu es bon !","en":"You're good!"],"id":"c-at-the-cafe","term":"At the café","definition":"With the words from the first lesson, you can already answer a waiter.","examples":["fr":"Bonjour ! Café ?","en":"Hello! Coffee?","fr":"Oui, merci !","en":"Yes, thanks!"]]"
+
+**2024-01-04-avoir**
+
+- `concepts[0].definition` "Express possession, age, and physical states" → "The verb for what you have. French also uses it to give your age."
+- `concepts[0].layout` "(none)" → ""forms""
+- `concepts[0].examples` "(none)" → "["fr":"j'ai","en":"I have","fr":"tu as","en":"you have","fr":"il a","en":"he has","fr":"nous avons","en":"we have","fr":"vous avez","en":"you have","fr":"ils ont","en":"they have"]"
+- `concepts[0].example` ""Use to say what you have, your age, or physical sensations"" → "(removed)"
+- `concepts[1].term` "Elision with First Person" → "je becomes j' before a vowel"
+- `concepts[1].definition` "When 'I' meets a verb starting with vowel, letters merge with apostrophe" → "Before a vowel sound, je drops its e and joins the verb with an apostrophe. Before a consonant it stays as it is."
+- `concepts[1].examples` "(none)" → "["fr":"j'ai","en":"I have","note":"before a vowel","fr":"je suis","en":"I am","note":"before a consonant"]"
+- `concepts[1].example` ""The 'e' disappears and apostrophe appears for smooth pronunciation"" → "(removed)"
+- `concepts[2].term` "Common Uses" → "What avoir says"
+- `concepts[2].definition` "Possession: "I have a cat", Age: "I have 20 years" (French way to say age!)" → "Use avoir for what someone has. French gives your age with it too: it says I have 20 years for I am 20."
+- `concepts[2].layout` "(none)" → ""forms""
+- `concepts[2].examples` "(none)" → "["fr":"elle a","en":"she has","fr":"elles ont","en":"they have, all women"]"
+- `concepts[2].example` ""Possession and age are the most common uses"" → "(removed)"
+
+**2024-01-05-articles**
+
+- `concepts[0].term` "Why Articles Matter" → "A noun comes with an article"
+- `concepts[0].definition` "You can NEVER say a noun alone in French - must use an article!" → "In French a noun almost never stands alone. You say a coffee or the coffee, not just coffee."
+- `concepts[0].examples` "(none)" → "["fr":"Le café est bon.","en":"The coffee is good.","fr":"Un café, s'il vous plaît.","en":"A coffee, please."]"
+- `concepts[0].example` ""English: 'book', French: MUST say 'a book' or 'the book'"" → "(removed)"
+- `concepts[1].term` "Indefinite Articles (a/an)" → "un and une: a or an"
+- `concepts[1].definition` "un (masculine), une (feminine) = a/an" → "Use un or une for any one thing, not a particular one. Un goes with a masculine noun and une with a feminine one."
+- `concepts[1].examples` "(none)" → "["fr":"Un café ?","en":"A coffee?","fr":"Oui, un café, merci.","en":"Yes, a coffee, thank you."]"
+- `concepts[1].example` ""Use when talking about any one thing, not a specific thing"" → "(removed)"
+- `concepts[2].term` "Definite Articles (the)" → "Three words for the"
+- `concepts[2].definition` "le (masculine), la (feminine), les (plural) = the" → "Use le or la for one particular thing. Les is for more than one, and l' replaces both before a vowel."
+- `concepts[2].examples` "(none)" → "["fr":"Voilà le café !","en":"Here's the coffee!","fr":"Le café est bon.","en":"The coffee is good."]"
+- `concepts[2].example` ""Use when talking about a specific thing"" → "(removed)"
+- `concepts[3].term` "Gender Agreement" → "The article shows the gender"
+- `concepts[3].definition` "Article must match the noun's gender - this is critical!" → "Every noun is masculine or feminine, and its article must match. Café is masculine: it takes un and le."
+- `concepts[3].examples` "(none)" → "["fr":"un café","en":"a coffee","fr":"le café","en":"the coffee"]"
+- `concepts[3].example` ""Masculine nouns use un/le, feminine nouns use une/la"" → "(removed)"
 
 **2024-10-21-cognates-help**
 
@@ -1769,13 +1836,61 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-06-basic-nouns**
 
-- `concepts[1].definition` "Combine nouns with verbs you already know from M2-M3" → "Combine nouns with être and avoir, the verbs you already know"
+- `concepts[0].term` "Noun Gender - Critical Concept!" → "Every noun is masculine or feminine"
+- `concepts[0].definition` "Every French noun is either masculine or feminine - you must memorize this!" → "Nothing in most nouns shows their gender, so learn each one with its article."
+- `concepts[0].examples` "(none)" → "["fr":"un livre","en":"a book","fr":"une maison","en":"a house","fr":"un chien","en":"a dog","fr":"une voiture","en":"a car"]"
+- `concepts[0].example` ""Masculine nouns use 'le/un', feminine use 'la/une'"" → "(removed)"
+- `concepts[1].term` "Using With être and avoir" → "Nouns with être and avoir"
+- `concepts[1].definition` "Combine nouns with verbs you already know from M2-M3" → "Put a noun after avoir to say what someone has, or after c'est to say what something is."
+- `concepts[1].examples` "(none)" → "["fr":"J'ai un livre.","en":"I have a book.","fr":"Il a un chien.","en":"He has a dog.","fr":"C'est une maison.","en":"It's a house."]"
+- `concepts[1].example` ""Pattern: pronoun + verb + article + noun"" → "(removed)"
+- `concepts[2].term` "Practice Previous Modules!" → "Every sentence uses a verb you know"
+- `concepts[2].definition` "Every exercise uses être or avoir - reinforcing what you learned!" → "Each sentence in this lesson puts a new noun with être or avoir."
+- `concepts[2].examples` "(none)" → "["fr":"Tu as une voiture.","en":"You have a car.","fr":"Elle a une amie.","en":"She has a friend.","fr":"Nous avons une chienne.","en":"We have a dog."]"
+- `concepts[2].example` ""Learn nouns WHILE practicing your verbs"" → "(removed)"
+- `concepts[3].term` "Rule: Identifying vs. Profession" → "Saying who someone is"
+- `concepts[3].definition` "When you identify someone with a noun (like 'man' or 'friend'), you MUST use an article (un, une). NOTE: A special rule for professions and nationalities will be taught later." → "To say who someone is with a noun, put un or une before the noun. For he is or she is, French usually says c'est."
+- `concepts[3].examples` "(none)" → "["fr":"Je suis un homme.","en":"I am a man.","fr":"C'est une amie.","en":"She's a friend.","fr":"C'est un enfant.","en":"It's a child."]"
+- `concepts[3].example` ""Correct for now: 'elle est une amie'. Future rule: 'elle est avocate' (she is a lawyer)."" → "(removed)"
 - `items[0].hint` "Combine avoir (M3) + article (M4) + noun - all previous modules!" → "Combine avoir + article + noun - all from earlier lessons!"
 
 **2024-01-07-plurals**
 
-- `concepts[0].example` "chat → chats, livre → livres, ami → amis" → "chat → chats, livre → livres, ami → amis; c'est un livre (it's a book) → ce sont des livres (they're books)"
-- `concepts[2].definition` "Every exercise combines plurals with verbs from M2-M3" → "Every exercise combines plurals with être and avoir"
+- `concepts[0].term` "Basic Plural Rule" → "Add -s for more than one"
+- `concepts[0].definition` "Add -s to most nouns (just like English!)" → "Most nouns add -s in the plural, as in English. The s is silent, so you hear the plural in the article."
+- `concepts[0].examples` "(none)" → "["fr":"C'est un chat.","en":"It's a cat.","fr":"J'ai des chats.","en":"I have cats.","fr":"Nous avons les livres.","en":"We have the books."]"
+- `concepts[0].example` ""chat → chats, livre → livres, ami → amis"" → "(removed)"
+- `concepts[1].term` "Plural Articles" → "les and des"
+- `concepts[1].definition` "les = the (plural), des = some/plural a" → "Les is the for more than one. Des is the plural of a: English often says nothing there, or some."
+- `concepts[1].examples` "(none)" → "["fr":"Ils ont les chats.","en":"They have the cats.","fr":"Tu as des chats.","en":"You have cats.","fr":"Elle a les enfants.","en":"She has the children."]"
+- `concepts[1].example` ""Pattern: [pronoun] + [verb] + [des/les] + [plural noun]"" → "(removed)"
+- `concepts[2].term` "Practice With être & avoir!" → "Plurals with être and avoir"
+- `concepts[2].definition` "Every exercise combines plurals with verbs from M2-M3" → "Every sentence in this lesson puts a plural noun after a verb you know."
+- `concepts[2].examples` "(none)" → "["fr":"Nous sommes des amis.","en":"We are friends.","fr":"Vous avez les choses.","en":"You have the things.","fr":"J'ai des enfants.","en":"I have children."]"
+- `concepts[2].example` ""Learn plurals WHILE reinforcing your verb conjugations"" → "(removed)"
+
+**2024-01-08-connectors**
+
+- `concepts[0].definition` "Connect two things or ideas together" → "Et joins two words or two ideas."
+- `concepts[0].examples` "(none)" → "["fr":"un chat et un chien","en":"a cat and a dog","fr":"J'ai un livre et un chat.","en":"I have a book and a cat."]"
+- `concepts[0].example` ""un chat et un chien (a cat and a dog)"" → "(removed)"
+- `concepts[1].definition` "Show contrast between two ideas" → "Mais sets one idea against another."
+- `concepts[1].examples` "(none)" → "["fr":"J'ai un chat, mais il a un chien.","en":"I have a cat, but he has a dog.","fr":"Je suis un homme, mais tu es une femme.","en":"I am a man, but you are a woman."]"
+- `concepts[1].example` ""je suis un homme, mais tu es une femme (I am a man, but you are a woman)"" → "(removed)"
+- `concepts[2].definition` "Present a choice between options" → "Ou offers a choice between two things."
+- `concepts[2].examples` "(none)" → "["fr":"Un chat ou un chien ?","en":"A cat or a dog?","fr":"C'est un ami ou une amie ?","en":"Is it a male or a female friend?"]"
+- `concepts[2].example` ""un chat ou un chien? (a cat or a dog?)"" → "(removed)"
+- `concepts[3].term` "aussi = also / too" → "aussi = also, too"
+- `concepts[3].definition` "Add something extra to your statement" → "Aussi adds one more thing to what you said. It usually comes at the end."
+- `concepts[3].examples` "(none)" → "["fr":"J'ai un chat aussi.","en":"I have a cat too.","fr":"Elle a un livre aussi.","en":"She has a book too."]"
+- `concepts[3].example` ""j'ai un chat aussi (I have a cat too / also)"" → "(removed)"
+- `concepts[4].definition` "Intensify adjectives - make things stronger!" → "Très makes a describing word stronger. It goes right before it."
+- `concepts[4].examples` "(none)" → "["fr":"C'est très bon.","en":"It's very good.","fr":"La maison est très bonne.","en":"The house is very good."]"
+- `concepts[4].example` ""très bon (very good)"" → "(removed)"
+- `concepts[5].term` "Making Natural Sentences" → "Longer sentences"
+- `concepts[5].definition` "Combine with everything you've learned to sound natural!" → "These five words join the nouns and verbs you know into longer sentences."
+- `concepts[5].examples` "(none)" → "["fr":"Nous avons une maison et une voiture.","en":"We have a house and a car.","fr":"Le café est très bon, merci.","en":"The coffee is very good, thank you."]"
+- `concepts[5].example` ""Use with nouns, verbs, and phrases from previous modules"" → "(removed)"
 
 **2024-01-10-unit1-practice**
 
@@ -1783,13 +1898,86 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `description` "Complete sentences using everything you've learned in Unit 1. Fill in the blanks to create correct French sentences!" → "Complete sentences using everything you've learned in this unit. Fill in the blanks to create correct French sentences!"
 - `can_do[2]` "Apply everything from Unit 1 in context" → "Apply everything from this unit in context"
 
+**2026-11-24-numbers**
+
+- `concepts[0].definition` "Each number up to 16 has its own word. Learn these by heart." → "Each number up to 16 has its own word, so learn these by heart."
+- `concepts[0].examples` "(none)" → "["fr":"Il a trois chats.","en":"He has three cats.","fr":"Nous avons deux enfants.","en":"We have two children.","fr":"Elle a douze livres.","en":"She has twelve books.","fr":"Le chien a seize ans.","en":"The dog is sixteen."]"
+- `concepts[0].example` ""zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix, onze, douze, treize, quatorze, quinze, seize"" → "(removed)"
+- `concepts[1].examples` "(none)" → "["fr":"dix-sept","en":"17","fr":"dix-huit","en":"18","fr":"dix-neuf","en":"19","fr":"Marie a dix-neuf ans.","en":"Marie is nineteen."]"
+- `concepts[1].example` ""dix-sept (17), dix-huit (18), dix-neuf (19)"" → "(removed)"
+- `concepts[2].examples` "(none)" → "["fr":"vingt","en":"20","fr":"trente","en":"30","fr":"quarante","en":"40","fr":"cinquante","en":"50","fr":"soixante","en":"60"]"
+- `concepts[2].example` ""vingt (20), trente (30), quarante (40), cinquante (50), soixante (60)"" → "(removed)"
+- `concepts[3].definition` "Put 'et' between the ten and 'un'. From 2 to 9, join them with a hyphen. Before a feminine noun, 'un' becomes 'une', as in 'une voiture'." → "Put et between the ten and un, and a hyphen between the ten and 2 to 9. Before a feminine noun, un becomes une."
+- `concepts[3].examples` "(none)" → "["fr":"vingt et un","en":"21","fr":"vingt-deux","en":"22","fr":"trente et un","en":"31","fr":"quarante-cinq","en":"45","fr":"Elles ont cinquante et une voitures.","en":"They have fifty-one cars."]"
+- `concepts[3].example` ""vingt et un (21), vingt-deux (22), trente et un (31), quarante-cinq (45), cinquante et une voitures (51)"" → "(removed)"
+- `concepts[4].definition` "French says 70 as sixty-ten, then counts on with 11 to 19: sixty-eleven, sixty-twelve, up to sixty-nineteen. 71 keeps 'et': 'soixante et onze'." → "French says 70 as sixty-ten and counts on with 11 to 19, so 75 is sixty-fifteen. Only 71 keeps et."
+- `concepts[4].examples` "(none)" → "["fr":"soixante-dix","en":"70","fr":"soixante et onze","en":"71","fr":"soixante-douze","en":"72","fr":"soixante-quinze","en":"75","fr":"soixante-dix-neuf","en":"79"]"
+- `concepts[4].example` ""soixante-dix (70), soixante et onze (71), soixante-douze (72), soixante-quinze (75), soixante-dix-neuf (79)"" → "(removed)"
+- `concepts[5].definition` "80 is four twenties, with an s. From 81 on, the s goes and there is no 'et'. 90 to 99 add 10 to 19 to four twenties. 100 is 'cent'." → "80 is four twenties, with an s that goes from 81 on, and there is no et. 90 to 99 add 10 to 19 to four twenties, and 100 is cent."
+- `concepts[5].examples` "(none)" → "["fr":"quatre-vingts","en":"80","fr":"quatre-vingt-un","en":"81","fr":"quatre-vingt-dix","en":"90","fr":"quatre-vingt-onze","en":"91","fr":"quatre-vingt-dix-neuf","en":"99","fr":"cent","en":"100"]"
+- `concepts[5].example` ""quatre-vingts (80), quatre-vingt-un (81), quatre-vingt-cinq (85), quatre-vingt-dix (90), quatre-vingt-onze (91), quatre-vingt-dix-neuf (99), cent (100)"" → "(removed)"
+- `concepts[6].definition` "To give an age, French says you have that many years: 'avoir', the number, then 'ans'." → "To give an age, French says you have that many years: avoir, the number, then ans."
+- `concepts[6].examples` "(none)" → "["fr":"J'ai vingt ans.","en":"I am twenty.","fr":"Paul a trente et un ans.","en":"Paul is thirty-one.","fr":"La maison a cent ans.","en":"The house is a hundred years old."]"
+- `concepts[6].example` ""J'ai vingt ans. Paul a trente et un ans. La maison a cent ans."" → "(removed)"
+- `concepts[7].examples` "(none)" → "["fr":"deux cents","en":"200","fr":"mille","en":"1,000"]"
+- `concepts[7].example` ""deux cents (200), mille (1,000)"" → "(removed)"
+
 **2026-11-24-negation-guide**
 
 - `checks` "[]" → "["id":"k1","ask":"Which one means “I don't have a cat”?","options":["text":"Je n'ai pas de chat.","fr":true,"right":true,"text":"Je n'ai pas un chat.","fr":true,"text":"Je ne ai pas de chat.","fr":true],"why":"After pas, un becomes de, and ne becomes n' before a vowel: Je n'ai pas de chat.","id":"k2","ask":"Which one means “You aren't a child”?","options":["text":"Tu ne pas es un enfant.","fr":true,"text":"Tu n'es pas un enfant.","fr":true,"right":true,"text":"Tu n'es pas d'enfant.","fr":true],"why":"ne goes before the verb and pas after it. After être, un stays as it is: Tu n'es pas un enfant.","id":"k3","ask":"Which one means “I don't have a car anymore”?","options":["text":"Je n'ai jamais de voiture.","fr":true,"text":"Je n'ai pas de voiture.","fr":true,"text":"Je n'ai plus de voiture.","fr":true,"right":true],"why":"plus takes the place of pas and means anymore."]"
 
+**2024-01-12-demonstratives**
+
+- `concepts[0].term` "ça - The Most Useful Word!" → "ça, the most useful word"
+- `concepts[0].definition` "Informal 'that/it' - you'll use this constantly!" → "Ça means that or it in everyday speech. You hear it in almost every conversation."
+- `concepts[0].examples` "(none)" → "["fr":"J'ai ça.","en":"I have that.","fr":"Tu as ça ?","en":"Do you have that?"]"
+- `concepts[0].example` ""Used standalone or in phrases constantly in conversation"" → "(removed)"
+- `concepts[1].term` "Demonstrative Forms" → "This and that"
+- `concepts[1].definition` "Learn the standalone forms: ce, cet, cette, ces" → "These four words mean this or that, and in the plural these or those. Each one goes before a noun."
+- `concepts[1].examples` "(none)" → "["fr":"ce livre","en":"this book","fr":"cet homme","en":"this man","fr":"cette maison","en":"this house","fr":"ces chats","en":"these cats"]"
+- `concepts[1].example` ""Like variables in programming - you'll compose them with nouns soon!"" → "(removed)"
+- `concepts[2].term` "Gender and Sound Agreement" → "Which one to use"
+- `concepts[2].definition` "Choose based on: 1) gender of noun, 2) sound it starts with" → "The noun decides: its gender, its number and the sound it starts with."
+- `concepts[2].examples` "(none)" → "["fr":"ce chien","en":"this dog","note":"masculine, before a consonant","fr":"cet homme","en":"this man","note":"masculine, before a vowel sound","fr":"cette femme","en":"this woman","note":"feminine","fr":"ces livres","en":"these books","note":"plural"]"
+- `concepts[2].example` ""masculine + consonant = ce, masculine + vowel = cet, feminine = cette, plural = ces"" → "(removed)"
+- `concepts[3].term` "Next: Functional Composition!" → "With a noun you know"
+- `concepts[3].definition` "After practicing ça, you'll compose demonstratives with nouns" → "Put the word before any noun you know to point at it."
+- `concepts[3].examples` "(none)" → "["fr":"C'est ce livre.","en":"It's this book.","fr":"J'ai ces livres.","en":"I have these books.","fr":"Tu as ce chat ?","en":"Do you have this cat?"]"
+- `concepts[3].example` ""Coming soon: ce(livre) = ce livre, ces(chats) = ces chats"" → "(removed)"
+
 **2024-01-13-ca-survival**
 
+- `concepts[0].term` "ça = that/it" → "ça = that, it"
+- `concepts[0].definition` "Informal, versatile, used constantly in conversation" → "Ça points at a thing without naming it. It is how people say that or it in conversation."
+- `concepts[0].examples` "(none)" → "["fr":"J'ai ça.","en":"I have that.","fr":"Il a ça.","en":"He has that."]"
+- `concepts[0].example` ""You'll use this word in almost every sentence!"" → "(removed)"
+- `concepts[1].definition` "That's it / That's right - super common phrase" → "C'est ça says yes, that's right. People use it to agree or to confirm."
+- `concepts[1].examples` "(none)" → "["fr":"C'est ça !","en":"That's right!","fr":"Oui, c'est ça.","en":"Yes, that's it."]"
+- `concepts[1].example` ""Used to confirm, agree, or point to something"" → "(removed)"
+- `concepts[2].term` "ça va?" → "ça va ?"
+- `concepts[2].definition` "How's it going? / Are you OK? - most common greeting!" → "Ça va ? asks how someone is, and ça va answers it. It is the usual greeting between people who know each other."
+- `concepts[2].examples` "(none)" → "["fr":"Salut ! Ça va ?","en":"Hi! How are you?","fr":"Ça va, merci.","en":"Fine, thanks.","fr":"Ça va bien.","en":"I'm fine."]"
+- `concepts[2].example` ""The first thing you say when meeting someone"" → "(removed)"
+- `concepts[3].term` "Building Blocks" → "ça with verbs you know"
+- `concepts[3].definition` "Combine with être and avoir from previous modules" → "Ça works with être and avoir the way a noun does."
+- `concepts[3].examples` "(none)" → "["fr":"Ça, c'est bon !","en":"That's good!","fr":"Tu as ça ?","en":"Do you have that?","fr":"Ça, c'est un livre.","en":"That's a book."]"
+- `concepts[3].example` ""c'est + ça, j'ai + ça - real useful phrases!"" → "(removed)"
 - `items[1].hint` "Combine: it is + that (using être from M3)" → "Combine: it is + that (using être)"
+
+**2024-01-14-determiners-nouns**
+
+- `concepts[0].term` "Functional Composition" → "The word before the noun"
+- `concepts[0].definition` "Determiners are functions that take nouns as arguments" → "A word such as ce or le goes before the noun and matches its gender and number."
+- `concepts[0].examples` "(none)" → "["fr":"ce livre","en":"this book","fr":"cette maison","en":"this house","fr":"le chat","en":"the cat","fr":"la maison","en":"the house"]"
+- `concepts[0].example` ""ce(livre) → ce livre, cette(maison) → cette maison"" → "(removed)"
+- `concepts[1].term` "Full Sentence Practice" → "Whole sentences"
+- `concepts[1].definition` "Every exercise uses être, avoir, or vouloir - combining multiple modules!" → "Every sentence in this lesson puts one of these noun groups after être or avoir."
+- `concepts[1].examples` "(none)" → "["fr":"J'ai ce livre.","en":"I have this book.","fr":"Elle a cette maison.","en":"She has this house.","fr":"C'est cet homme.","en":"It's this man."]"
+- `concepts[1].example` ""Not just 'this book', but 'I have this book' - real usage!"" → "(removed)"
+- `concepts[2].term` "Using ALL Previous Verbs" → "The order of the words"
+- `concepts[2].definition` "Practice with être and avoir from previous modules" → "The pronoun comes first, then the verb, then the noun with its word before it, as in English."
+- `concepts[2].examples` "(none)" → "["fr":"Nous avons ces livres.","en":"We have these books.","fr":"Ils ont les chiens.","en":"They have the dogs.","fr":"J'ai ces enfants.","en":"I have these children."]"
+- `concepts[2].example` ""Pattern: [pronoun] + [verb] + [determiner] + [noun]"" → "(removed)"
 
 **2024-01-15-vouloir**
 
@@ -1801,18 +1989,90 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary/vous-voulez-fr` ""word_id":"vous-voulez-fr","fr":"vous voulez","gloss":"you want (formal)","note":"formal/plural"" → "(removed)"
 - `vocabulary/ils-veulent-fr` ""word_id":"ils-veulent-fr","fr":"ils veulent","gloss":"they want (masc)","note":"irregular"" → "(removed)"
 - `vocabulary/elles-veulent-fr` ""word_id":"elles-veulent-fr","fr":"elles veulent","gloss":"they want (fem)","note":"same as ils"" → "(removed)"
-- `concepts[0].example` "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)" → "'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre ?), 'We want to have a house' (Nous voulons avoir une maison), 'How are you? Do you want a coffee?' (Ça va ? Tu veux un café ?)"
+- `concepts[0].definition` "Essential irregular verb for expressing desires and polite requests! One of the most common verbs in French." → "The verb for wanting a thing or wanting to do something. It is also how you ask for things politely."
+- `concepts[0].examples` "(none)" → "["fr":"Je veux ça.","en":"I want that.","fr":"Tu veux un chat ?","en":"Do you want a cat?","fr":"Nous voulons avoir une maison.","en":"We want to have a house.","fr":"Ça va ? Tu veux un café ?","en":"How are you? Do you want a coffee?"]"
+- `concepts[0].example` ""'I want that' (Je veux ça), 'Do you want a book?' (Veux-tu un livre?), 'We want to have a house' (Nous voulons avoir une maison)"" → "(removed)"
+- `concepts[1].term` "Irregular Conjugation Pattern" → "Three stems"
+- `concepts[1].definition` "Notice the pattern: je/tu both use 'veux', then il/elle use 'veut', nous uses 'voulons', and ils/elles use 'veulent'!" → "The stem changes three times: once for the singular, once for we and you, and once for they."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je veux","en":"I want","fr":"tu veux","en":"you want","fr":"il veut","en":"he wants","fr":"nous voulons","en":"we want","fr":"vous voulez","en":"you want","fr":"ils veulent","en":"they want"]"
+- `concepts[1].example` ""je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "Wanting to do something"
+- `concepts[2].definition` "Combine vouloir with previous modules for infinite expressions. Use with ça, être, avoir, and nouns you've learned!" → "Put a second verb straight after vouloir to say what you want to do. The second verb does not change."
+- `concepts[2].examples` "(none)" → "["fr":"Je veux être un ami.","en":"I want to be a friend.","fr":"Je veux avoir un chat.","en":"I want to have a cat.","fr":"Elle veut avoir une maison.","en":"She wants to have a house."]"
+- `concepts[2].example` ""je veux + ça, nous voulons + être, ils veulent + avoir + un livre"" → "(removed)"
 - `conjugation` "(none)" → ""verb":"vouloir","en":"to want","note":"vouloir has three stems and four spoken forms. veux, veut and veulent change the stem; voulons and voulez keep the stem of vouloir.""
+
+**2024-01-16-pouvoir**
+
+- `concepts[0].term` "pouvoir = can/to be able" → "pouvoir = can, to be able"
+- `concepts[0].definition` "Essential irregular verb for expressing ability, possibility, and permission! One of the most useful verbs in French." → "The verb for what someone can do: ability, chance and permission. It is one of the verbs French uses most."
+- `concepts[0].examples` "(none)" → "["fr":"Je peux avoir ça, s'il vous plaît ?","en":"Can I have that, please?","fr":"Je peux avoir ça, s'il te plaît ?","en":"Can I have that, please?","note":"to a friend","fr":"Tu peux ?","en":"Can you?"]"
+- `concepts[0].example` ""'I can have that' (Je peux avoir ça), 'Can you be a friend?' (Peux-tu être un ami?), 'We can want a house' (Nous pouvons vouloir une maison)"" → "(removed)"
+- `concepts[1].term` "Irregular Conjugation Pattern" → "Three stems"
+- `concepts[1].definition` "Notice the pattern: je/tu both use 'peux', then il/elle use 'peut', nous uses 'pouvons', and ils/elles use 'peuvent'!" → "The stem changes three times: once for the singular, once for we and you, and once for they."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je peux","en":"I can","fr":"tu peux","en":"you can","fr":"il peut","en":"he can","fr":"nous pouvons","en":"we can","fr":"vous pouvez","en":"you can","fr":"ils peuvent","en":"they can"]"
+- `concepts[1].example` ""je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "What someone can do"
+- `concepts[2].definition` "Combine pouvoir with previous modules for infinite expressions. Use with être, avoir, vouloir, and nouns you've learned!" → "Put a second verb straight after pouvoir to say what someone can do."
+- `concepts[2].examples` "(none)" → "["fr":"Je peux être un ami.","en":"I can be a friend.","fr":"Il peut avoir un livre.","en":"He can have a book.","fr":"Nous pouvons avoir une maison.","en":"We can have a house."]"
+- `concepts[2].example` ""je peux + avoir + ça, nous pouvons + être, ils peuvent + vouloir + un livre"" → "(removed)"
 
 **2024-01-17-voir**
 
-- `concepts[0].example` "Very common! Essential for object pronouns in next module" → "Very common, often after vouloir: je veux voir (I want to see). The next lesson uses it with object pronouns."
-- `concepts[3].example` "Foundation for: je le vois, je la vois, je les vois" → "Foundation for: je le vois, je la vois, je les vois, je te vois (I see you)"
+- `concepts[0].definition` "Irregular verb for seeing and perceiving" → "The verb for seeing. It often comes after vouloir, as in je veux voir, I want to see."
+- `concepts[0].examples` "(none)" → "["fr":"Je veux voir.","en":"I want to see.","fr":"Tu vois ?","en":"You see?","fr":"Je vois un chat.","en":"I see a cat."]"
+- `concepts[0].example` ""Very common! Essential for object pronouns in next module"" → "(removed)"
+- `concepts[1].term` "Irregular Conjugation" → "Its forms"
+- `concepts[1].definition` "Stem changes throughout conjugation" → "The stem has a y for we and you, and an i everywhere else."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je vois","en":"I see","fr":"tu vois","en":"you see","fr":"il voit","en":"he sees","fr":"nous voyons","en":"we see","fr":"vous voyez","en":"you see","fr":"ils voient","en":"they see"]"
+- `concepts[1].example` ""je/tu vois, il voit, nous voyons, vous voyez, ils voient"" → "(removed)"
+- `concepts[2].term` "Building on Previous Vocabulary" → "What you see"
+- `concepts[2].definition` "Combine with nouns, adjectives, and phrases you already know" → "Put what you see after the verb, as in English."
+- `concepts[2].examples` "(none)" → "["fr":"Nous voyons la maison.","en":"We see the house.","fr":"Tu vois ce livre ?","en":"Do you see this book?","fr":"Ils voient un chien.","en":"They see a dog."]"
+- `concepts[2].example` ""Pattern: 'je vois' + articles + nouns + adjectives"" → "(removed)"
+- `concepts[3].term` "Prepares for Object Pronouns" → "Seeing people"
+- `concepts[3].definition` "Next module teaches 'I see HIM/HER/IT/THEM' - need voir first!" → "Voir works with people too: put a name or a noun after it."
+- `concepts[3].examples` "(none)" → "["fr":"Je vois Paul.","en":"I see Paul.","fr":"Tu vois cette femme ?","en":"Do you see that woman?","fr":"Il voit les enfants.","en":"He sees the children."]"
+- `concepts[3].example` ""Foundation for: je le vois, je la vois, je les vois"" → "(removed)"
 
 **2024-01-18-questions**
 
 - `vocabulary[11].word_id` "ca-va-fr.question-2" → "ca-va-fr.question"
-- `concepts[6].example` "Que fais-tu? (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)" → "Que veux-tu? (what do you want?) vs Tu veux quoi? (you want what?) vs Quoi? (what?!)"
+- `concepts[0].term` "Three Ways to Ask Questions in French" → "Three ways to ask a question"
+- `concepts[0].definition` "French has 3 methods for asking questions. Start with the easiest!" → "French can ask the same question three ways. In speech the easiest are est-ce que and a rising voice."
+- `concepts[0].examples` "(none)" → "["fr":"Est-ce que tu as un chat ?","en":"Do you have a cat?","note":"with est-ce que","fr":"Tu as un chat ?","en":"Do you have a cat?","note":"with your voice rising","fr":"As-tu un chat ?","en":"Do you have a cat?","note":"with the verb first, more formal"]"
+- `concepts[0].example` ""1) Est-ce que (easiest), 2) Intonation (informal), 3) Inversion (formal)"" → "(removed)"
+- `concepts[1].term` "Method 1: Est-ce que (Beginner-Friendly!)" → "Est-ce que"
+- `concepts[1].definition` "Add 'est-ce que' before ANY statement to make it a question. No word order change needed!" → "Put est-ce que before a statement to make it a question. The other words keep their order."
+- `concepts[1].examples` "(none)" → "["fr":"Est-ce que tu veux un café ?","en":"Do you want a coffee?","fr":"Est-ce que vous voyez la maison ?","en":"Do you see the house?"]"
+- `concepts[1].example` ""Statement: 'tu as un chat' → Question: 'est-ce que tu as un chat?' (do you have a cat?)"" → "(removed)"
+- `concepts[2].term` "With Question Words + Est-ce que" → "A question word and est-ce que"
+- `concepts[2].definition` "Put question word first, then 'est-ce que', then statement" → "Put the question word first, then est-ce que, then the statement."
+- `concepts[2].examples` "(none)" → "["fr":"Où est-ce que tu es ?","en":"Where are you?","fr":"Pourquoi est-ce que tu veux ça ?","en":"Why do you want that?","fr":"Qu'est-ce que tu veux ?","en":"What do you want?"]"
+- `concepts[2].example` ""où est-ce que tu es? (where are you?), quand est-ce que tu as le livre? (when do you have the book?)"" → "(removed)"
+- `concepts[3].term` "Method 2: Rising Intonation (Spoken French)" → "A rising voice"
+- `concepts[3].definition` "Just say a statement with rising voice at the end - super informal!" → "Say the statement and let your voice rise at the end. It is the most common way to ask in conversation."
+- `concepts[3].examples` "(none)" → "["fr":"Tu as un chat ?","en":"You have a cat?","fr":"Tu es où ?","en":"Where are you?","fr":"Ça va ?","en":"Are you OK?"]"
+- `concepts[3].example` ""Tu as un chat? ↗ (you have a cat?), Tu es où? ↗ (you are where?)"" → "(removed)"
+- `concepts[4].term` "Method 3: Inversion (Formal)" → "The verb first"
+- `concepts[4].definition` "Flip verb and subject, add hyphen. Used in formal/written French" → "Put the verb before the pronoun and join them with a hyphen. It sounds formal and is used most in writing."
+- `concepts[4].examples` "(none)" → "["fr":"As-tu un chat ?","en":"Do you have a cat?","fr":"Où es-tu ?","en":"Where are you?","fr":"Que veux-tu ?","en":"What do you want?"]"
+- `concepts[4].example` ""As-tu un chat? (have you a cat?), Où es-tu? (where are you?)"" → "(removed)"
+- `concepts[5].term` "The 7 Essential Question Words" → "Question words"
+- `concepts[5].definition` "These words unlock every question you need: what, who, where, when, how, why, how much" → "These words ask who, where, when, how, why, and how much or how many."
+- `concepts[5].examples` "(none)" → "["fr":"qui","en":"who","fr":"où","en":"where","fr":"quand","en":"when","fr":"comment","en":"how","fr":"pourquoi","en":"why","fr":"combien","en":"how much, how many"]"
+- `concepts[5].example` ""que/quoi (what), qui (who), où (where), quand (when), comment (how), pourquoi (why), combien (how much/many)"" → "(removed)"
+- `concepts[6].term` "Que vs Quoi (both mean 'what')" → "que and quoi: what"
+- `concepts[6].definition` "'Que' starts questions, 'quoi' ends them or stands alone" → "Que starts a question. Quoi ends one or stands on its own."
+- `concepts[6].examples` "(none)" → "["fr":"Que veux-tu ?","en":"What do you want?","fr":"Tu veux quoi ?","en":"You want what?","fr":"Quoi ?","en":"What?"]"
+- `concepts[6].example` ""Que fais-tu? (what do you do?) vs Tu fais quoi? (you do what?) vs Quoi? (what?!)"" → "(removed)"
+- `concepts[7].term` "Common Question Phrases - Memorize These!" → "Questions to learn whole"
+- `concepts[7].definition` "Some questions are used so often they become fixed phrases" → "Some questions are so common that people say them as one block."
+- `concepts[7].examples` "(none)" → "["fr":"Qu'est-ce que c'est ?","en":"What is it?","fr":"Comment ça va ?","en":"How are you?","fr":"Qu'est-ce que tu veux ?","en":"What do you want?","fr":"Est-ce que tu peux ?","en":"Can you?"]"
+- `concepts[7].example` ""qu'est-ce que c'est? (what is it?), comment ça va? (how's it going?), ça va? (you good?), qu'est-ce que tu veux? (what do you want?), est-ce que tu peux? (can you?)"" → "(removed)"
 
 **2024-01-19-questions-help**
 
@@ -1834,6 +2094,67 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `checks[2].options[1].text` "Es-tu prêt ?" → "Es-tu fatigué ?"
 - `checks[2].options[2].text` "Est-ce que tu es prêt ?" → "Est-ce que tu es fatigué ?"
 - `checks[2].why` "The verb comes first, joined to tu with a hyphen: Es-tu prêt ?" → "The verb comes first, joined to tu with a hyphen: Es-tu fatigué ?"
+
+**2024-01-19-stressed-pronouns**
+
+- `concepts[0].term` "Stressed Pronouns (Pronoms Toniques)" → "Stressed pronouns"
+- `concepts[0].definition` "Special pronouns used after prepositions, for emphasis, and alone" → "These pronouns stand on their own, come after a word such as avec, or add weight to who you mean."
+- `concepts[0].examples` "(none)" → "["fr":"avec moi","en":"with me","fr":"pour toi","en":"for you","fr":"Moi ?","en":"Me?"]"
+- `concepts[0].example` ""Can't use 'je' or 'tu' after 'avec' or 'pour' - need 'moi' and 'toi'!"" → "(removed)"
+- `concepts[1].term` "When to Use Stressed Pronouns" → "When to use them"
+- `concepts[1].definition` "After prepositions (avec, pour, sans, chez), for emphasis, or alone" → "Use them after a word such as avec, after c'est, and on their own as a one-word answer."
+- `concepts[1].examples` "(none)" → "["fr":"Il est avec moi.","en":"He is with me.","fr":"C'est pour toi.","en":"It's for you.","fr":"C'est lui.","en":"It's him.","fr":"Moi ?","en":"Me?"]"
+- `concepts[1].example` ""avec moi (with me), pour toi (for you), c'est lui (it's him), Moi? (Me?)"" → "(removed)"
+- `concepts[2].term` "Subject vs. Stressed" → "Subject or stressed"
+- `concepts[2].definition` "Subject pronouns go before verbs. Stressed pronouns go after prepositions." → "Subject pronouns go before the verb. Stressed pronouns go after a preposition."
+- `concepts[2].examples` "(none)" → "["fr":"Je suis avec toi.","en":"I am with you.","fr":"Tu es avec moi.","en":"You are with me."]"
+- `concepts[2].example` ""je suis (I am) BUT avec moi (with me) - different pronouns!"" → "(removed)"
+
+**2024-01-20-prepositions**
+
+- `concepts[0].term` "Prepositions Connect Ideas" → "Prepositions"
+- `concepts[0].definition` "Small words that show relationships between nouns and pronouns" → "Small words such as with, in or under that link a noun or a pronoun to the rest of the sentence."
+- `concepts[0].examples` "(none)" → "["fr":"avec moi","en":"with me","fr":"dans la maison","en":"in the house","fr":"sous la table","en":"under the table"]"
+- `concepts[0].example` ""avec moi (with me), dans la maison (in the house), sous la table (under the table)"" → "(removed)"
+- `concepts[1].term` "Spatial Prepositions" → "Where something is"
+- `concepts[1].definition` "Describe physical location: in, on, under, in front, behind, between" → "These say where something is: on, under, in front of, behind or between."
+- `concepts[1].examples` "(none)" → "["fr":"sur la table","en":"on the table","fr":"devant la maison","en":"in front of the house","fr":"Le livre est derrière la porte.","en":"The book is behind the door."]"
+- `concepts[1].example` ""sur la table (on the table), sous le livre (under the book), devant la maison (in front of the house)"" → "(removed)"
+- `concepts[2].term` "Relational Prepositions" → "With, for, at and from"
+- `concepts[2].definition` "Show relationships: with, for, to, at, of, from" → "These link people and places: with, for, at, to and from."
+- `concepts[2].examples` "(none)" → "["fr":"avec toi","en":"with you","fr":"pour moi","en":"for me","fr":"à Paris","en":"in Paris, to Paris","fr":"de France","en":"from France","fr":"chez Pierre","en":"at Pierre's place"]"
+- `concepts[2].example` ""avec toi (with you), pour moi (for me), à Paris (to/at Paris), de France (from France)"" → "(removed)"
+- `concepts[3].term` "Use with Stressed Pronouns!" → "After a preposition"
+- `concepts[3].definition` "After prepositions, use moi/toi/lui (NOT je/tu/il)!" → "After a preposition, use a stressed pronoun such as moi, never a subject pronoun such as je."
+- `concepts[3].examples` "(none)" → "["fr":"avec moi","en":"with me","fr":"pour toi","en":"for you","fr":"chez lui","en":"at his place","fr":"avec eux","en":"with them"]"
+- `concepts[3].example` ""avec moi ✓ (not avec je ✗), pour toi ✓ (not pour tu ✗)"" → "(removed)"
+- `concepts[4].term` "Building Real Sentences" → "Prepositions in sentences"
+- `concepts[4].definition` "Combine with verbs, nouns, and stressed pronouns" → "Put the preposition and its noun after the verb, as in English."
+- `concepts[4].examples` "(none)" → "["fr":"Le chat est sous la table.","en":"The cat is under the table.","fr":"Je suis devant la maison.","en":"I am in front of the house.","fr":"Je veux ça pour toi.","en":"I want this for you."]"
+- `concepts[4].example` ""le chat est sous la table (the cat is under the table), je suis devant la maison (I am in front of the house)"" → "(removed)"
+
+**2024-01-21-adjectives**
+
+- `concepts[0].term` "Adjective Gender Agreement - Critical!" → "Adjectives match their noun"
+- `concepts[0].definition` "Adjectives must match the gender of the noun they describe!" → "An adjective takes the gender of the noun it describes. Most add an -e for a feminine noun."
+- `concepts[0].examples` "(none)" → "["fr":"J'ai un bon livre.","en":"I have a good book.","fr":"Elle a une bonne maison.","en":"She has a good house."]"
+- `concepts[0].example` ""bon livre (masc) BUT bonne maison (fem)"" → "(removed)"
+- `concepts[1].term` "Regular vs Irregular Forms" → "Regular and irregular forms"
+- `concepts[1].definition` "Most adjectives add -e for feminine (petit→petite), but some are irregular (beau→belle)" → "Most adjectives add -e for the feminine, as petit does. A few change more, as nouveau and vieux do."
+- `concepts[1].examples` "(none)" → "["fr":"un petit chat","en":"a small cat","fr":"une petite maison","en":"a small house","fr":"un nouveau livre","en":"a new book","fr":"une nouvelle voiture","en":"a new car","fr":"un vieux chat","en":"an old cat","fr":"une vieille maison","en":"an old house"]"
+- `concepts[1].example` ""Regular: grand/grande. Irregular: nouveau/nouvelle, vieux/vieille"" → "(removed)"
+- `concepts[2].term` "Same Form Both Genders" → "One form for both genders"
+- `concepts[2].definition` "A few adjectives like 'jeune' and 'autre' don't change" → "A few adjectives, such as jeune and autre, have one form for both genders."
+- `concepts[2].examples` "(none)" → "["fr":"un jeune homme","en":"a young man","fr":"une jeune femme","en":"a young woman","fr":"un autre livre","en":"another book","fr":"une autre voiture","en":"another car"]"
+- `concepts[2].example` ""un jeune homme / une jeune femme (both use 'jeune')"" → "(removed)"
+- `concepts[3].term` "Adjective Placement" → "Before the noun"
+- `concepts[3].definition` "These common adjectives usually go BEFORE the noun (unlike most French adjectives)" → "These common adjectives go before the noun, while most French adjectives go after it."
+- `concepts[3].examples` "(none)" → "["fr":"J'ai un petit chat.","en":"I have a small cat.","fr":"C'est un beau livre.","en":"It's a beautiful book.","fr":"Nous avons une belle maison.","en":"We have a beautiful house."]"
+- `concepts[3].example` ""un petit chat (a small cat), NOT un chat petit"" → "(removed)"
+- `concepts[4].term` "Before a Vowel: bel, nouvel, vieil" → "Before a vowel sound"
+- `concepts[4].definition` "Before a masculine singular noun that starts with a vowel sound, 'beau', 'nouveau' and 'vieux' become 'bel', 'nouvel' and 'vieil'. Feminine forms do not change: 'une nouvelle amie'." → "Before a masculine noun that starts with a vowel sound, three of these adjectives change form so the words run together. Feminine forms stay the same."
+- `concepts[4].examples` "(none)" → "["fr":"un bel enfant","en":"a beautiful child","fr":"un nouvel ami","en":"a new friend","fr":"un vieil homme","en":"an old man","fr":"une nouvelle amie","en":"a new friend, a woman"]"
+- `concepts[4].example` ""un bel enfant, un nouvel ami, un vieil homme"" → "(removed)"
 
 **2024-01-22-reading2**
 
@@ -1861,14 +2182,56 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 
 **2024-01-25-contractions**
 
-- `concepts[2].example` "du pain (some bread), de la viande (some meat), de l'eau (some water)" → "du café (some coffee), de la musique (some music), des livres (some books)"
-- `concepts[3].example` "de l'ami (of the friend), à l'école (at the school)" → "de l'ami (of the friend), à l'hôtel (at the hotel)"
+- `concepts[0].term` "Contractions with 'de' (of/from)" → "de with le and les"
+- `concepts[0].definition` "de + le = du, de + les = des (but de + la stays separate!)" → "De with le becomes du. With les it becomes des, but de la stays as it is."
+- `concepts[0].examples` "(none)" → "["fr":"du chat","en":"of the cat","fr":"de la maison","en":"of the house","fr":"des livres","en":"of the books"]"
+- `concepts[0].example` ""du chat (of the cat), de la maison (of the house), des livres (of the books)"" → "(removed)"
+- `concepts[1].term` "Contractions with 'à' (to/at)" → "à with le and les"
+- `concepts[1].definition` "à + le = au, à + les = aux (but à + la stays separate!)" → "À with le becomes au. With les it becomes aux, but à la stays as it is."
+- `concepts[1].examples` "(none)" → "["fr":"Je suis au café avec eux.","en":"I'm at the café with them.","fr":"Le chat est à la maison.","en":"The cat is at home.","fr":"aux amis","en":"to the friends"]"
+- `concepts[1].example` ""au café (at the café), à la maison (at the house), aux amis (to the friends)"" → "(removed)"
+- `concepts[2].term` "Partitive Articles (some/any)" → "Some"
+- `concepts[2].definition` "Use du/de la/de l'/des to mean 'some' (unspecified quantity)" → "The same words also mean some, for an amount you do not count. English often leaves the word out."
+- `concepts[2].examples` "(none)" → "["fr":"Je veux du café.","en":"I want some coffee.","fr":"de la musique","en":"some music","fr":"J'ai des livres.","en":"I have some books."]"
+- `concepts[2].example` ""du pain (some bread), de la viande (some meat), de l'eau (some water)"" → "(removed)"
+- `concepts[3].term` "Before Vowels" → "Before a vowel"
+- `concepts[3].definition` "de + l' and à + l' before vowel sounds (no contraction needed)" → "Before a vowel sound, de and à take l' for both genders."
+- `concepts[3].examples` "(none)" → "["fr":"de l'ami","en":"of the friend","fr":"à l'hôtel","en":"at the hotel"]"
+- `concepts[3].example` ""de l'ami (of the friend), à l'école (at the school)"" → "(removed)"
+
+**2024-01-26-venir**
+
+- `concepts[0].definition` "Essential irregular verb for coming or arriving! One of the most common verbs in French. Used constantly in conversation." → "The verb for coming and arriving. You hear it all the time in conversation."
+- `concepts[0].examples` "(none)" → "["fr":"Je viens !","en":"I'm coming!","fr":"Qui vient ?","en":"Who is coming?","fr":"Je viens de Paris.","en":"I'm from Paris.","fr":"Je viens avec lui.","en":"I'm coming with him.","fr":"Je viens te voir.","en":"I'm coming to see you."]"
+- `concepts[0].example` ""'I am coming' (Je viens), 'Who is coming?' (Qui vient?), 'I come from Paris' (Je viens de Paris)"" → "(removed)"
+- `concepts[1].term` "Irregular Conjugation Pattern" → "Three stems"
+- `concepts[1].definition` "Notice the pattern: je/tu both use 'viens', then il/elle use 'vient', nous uses 'venons', and ils/elles use 'viennent' with double 'n'!" → "The stem changes three times: once for the singular, once for we and you, and once for they, which doubles the n."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je viens","en":"I come","fr":"tu viens","en":"you come","fr":"il vient","en":"he comes","fr":"nous venons","en":"we come","fr":"vous venez","en":"you come","fr":"ils viennent","en":"they come"]"
+- `concepts[1].example` ""je viens, tu viens, il vient, nous venons, vous venez, ils viennent"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "venir after another verb"
+- `concepts[2].definition` "Combine venir with previous modules for infinite expressions. For example, to say 'I want to come' you can say 'je veux venir'." → "Like other verbs, venir can come straight after vouloir or pouvoir."
+- `concepts[2].examples` "(none)" → "["fr":"Je veux venir.","en":"I want to come.","fr":"Tu peux venir ?","en":"Can you come?","fr":"Je peux venir à l'hôtel.","en":"I can come to the hotel."]"
+- `concepts[2].example` ""je viens + de ça, nous venons + avec vous, ils viennent + voir"" → "(removed)"
+- `concepts[3].term` "The re- Prefix" → "re- in front"
+- `concepts[3].definition` "Adding 're-' to a verb means 'again' or 'back'. So 'revenir' means 'to come back' or 'to return'. It follows the same conjugation pattern as 'venir' - just add 're-' before each form!" → "Adding re- to a verb often means again or back, so revenir means to come back. Its forms are the forms of venir with re- in front."
+- `concepts[3].examples` "(none)" → "["fr":"Je reviens.","en":"I'm coming back.","fr":"Tu reviens ?","en":"Are you coming back?"]"
+- `concepts[3].example` ""venir → revenir (to come → to come back), je viens → je reviens, il vient → il revient"" → "(removed)"
 
 **2024-01-27-aller**
 
-- `concepts[0].example` "'I am going in the house' (Je vais dans la maison), 'I am going to eat' (Je vais manger)" → "'I am going in the house' (Je vais dans la maison), 'I am going to see Paul' (Je vais voir Paul)"
-- `concepts[2].definition` "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to leave' you can say 'je vais partir'." → "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to come' you can say 'je vais venir'."
-- `concepts[2].example` "je vais + ça, nous allons + être, ils vont + avoir" → "je vais + ça, nous allons + être, ils vont + avoir, tu vas + me voir"
+- `concepts[0].definition` "Completely irregular verb - one of the most common in French! Essential for talking about movement and future plans." → "The verb for going somewhere. With a second verb after it, it also says what is going to happen."
+- `concepts[0].examples` "(none)" → "["fr":"Je vais au café.","en":"I'm going to the café.","fr":"Je vais voir Paul.","en":"I'm going to see Paul.","fr":"Il va me voir.","en":"He's going to see me."]"
+- `concepts[0].example` ""'I am going in the house' (Je vais dans la maison), 'I am going to eat' (Je vais manger)"" → "(removed)"
+- `concepts[1].term` "Irregular Conjugation" → "Its forms"
+- `concepts[1].definition` "Every form is different - but it shouldn't be too hard to remember!" → "Almost every form is different, so learn each one with its pronoun."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je vais","en":"I go","fr":"tu vas","en":"you go","fr":"il va","en":"he goes","fr":"nous allons","en":"we go","fr":"vous allez","en":"you go","fr":"ils vont","en":"they go"]"
+- `concepts[1].example` ""je vais, tu vas, il va, nous allons, vous allez, ils vont"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "Going to do something"
+- `concepts[2].definition` "Combine aller with previous modules for infinite expressions. For example, to say 'I am going to leave' you can say 'je vais partir'." → "Put a second verb after aller to say what is going to happen, as in English."
+- `concepts[2].examples` "(none)" → "["fr":"Je vais venir.","en":"I'm going to come.","fr":"Je vais avoir ça.","en":"I'm going to have that.","fr":"Qu'est-ce que tu vas avoir ?","en":"What are you going to have?"]"
+- `concepts[2].example` ""je vais + ça, nous allons + être, ils vont + avoir"" → "(removed)"
 - `items[19].accept` "["qu'est-ce que tu as?"]" → "(removed)"
 
 **2024-01-28-verb-pattern-help**
@@ -1887,20 +2250,88 @@ The module file differs from a fresh conversion of an unchanged source here. A r
 - `vocabulary/vous-partez-fr` ""word_id":"vous-partez-fr","fr":"vous partez","gloss":"you leave (formal)","note":"add -ez"" → "(removed)"
 - `vocabulary/ils-partent-fr` ""word_id":"ils-partent-fr","fr":"ils partent","gloss":"they leave (masc)","note":"add -ent"" → "(removed)"
 - `vocabulary/elles-partent-fr` ""word_id":"elles-partent-fr","fr":"elles partent","gloss":"they leave (fem)","note":"same as ils"" → "(removed)"
+- `concepts[0].term` "partir = to leave / to depart" → "partir = to leave"
+- `concepts[0].definition` "Common verb for leaving a place or departing" → "The verb for leaving a place or setting off on a trip."
+- `concepts[0].examples` "(none)" → "["fr":"Je pars avec toi.","en":"I'm leaving with you.","fr":"Quand est-ce que tu pars ?","en":"When are you leaving?","fr":"Nous partons en Normandie.","en":"We're leaving for Normandy.","fr":"Elle part avec eux.","en":"She's leaving with them."]"
+- `concepts[0].example` ""Essential for talking about travel and movement away from places"" → "(removed)"
 - `concepts[1].term` "Regular -ir Conjugation" → "The t you hear only in the plural"
-- `concepts[1].definition` "Follows standard -ir pattern (drop singular endings)" → "In je pars, tu pars and il part you hear no t. In ils partent, vous partez and nous partons the t comes back and is heard."
-- `concepts[1].example` "Singular: je/tu pars, il part. Plural: nous partons, vous partez" → "il part (no t heard), ils partent (t heard)"
-- `concepts[2].definition` "Combine partir with previous modules for infinite expressions" → "partir slots into the verbs you know: vouloir, pouvoir and aller each take it straight after."
-- `concepts[2].example` "je pars + ça, nous partons + être, ils partent + avoir" → "je veux partir, tu peux partir, on va partir"
+- `concepts[1].definition` "Follows standard -ir pattern (drop singular endings)" → "In the singular forms you hear no t. In the plural forms the t comes back and is heard."
+- `concepts[1].layout` "(none)" → ""forms""
+- `concepts[1].examples` "(none)" → "["fr":"je pars","en":"I leave","fr":"tu pars","en":"you leave","fr":"il part","en":"he leaves","fr":"nous partons","en":"we leave","fr":"vous partez","en":"you leave","fr":"ils partent","en":"they leave"]"
+- `concepts[1].example` ""Singular: je/tu pars, il part. Plural: nous partons, vous partez"" → "(removed)"
+- `concepts[2].term` "Composition Power" → "partir after another verb"
+- `concepts[2].definition` "Combine partir with previous modules for infinite expressions" → "Partir goes straight after the verbs for wanting, being able and going."
+- `concepts[2].examples` "(none)" → "["fr":"Je veux partir.","en":"I want to leave.","fr":"Tu peux partir ?","en":"Can you leave?","fr":"On va partir.","en":"We're going to leave."]"
+- `concepts[2].example` ""je pars + ça, nous partons + être, ils partent + avoir"" → "(removed)"
 - `conjugation` "(none)" → ""verb":"partir","en":"to leave","aspect":"progressive","note":"partir drops its t in je pars, tu pars and il part, where you hear no t. The t comes back, and is heard, in ils partent, vous partez and nous partons.""
+
+**2024-01-30-object-pronouns**
+
+- `concepts[0].term` "Object Pronouns" → "Object pronouns"
+- `concepts[0].definition` "Pronouns that receive the action of a verb (me, you, him, her, us, them)" → "An object pronoun stands for the person or thing the action happens to: me, you, him, her, it, us or them."
+- `concepts[0].examples` "(none)" → "["fr":"Il me voit.","en":"He sees me.","fr":"Tu nous vois.","en":"You see us.","fr":"Je les ai.","en":"I have them."]"
+- `concepts[0].example` ""7 object pronouns to learn - different from subject pronouns!"" → "(removed)"
+- `concepts[1].term` "Critical Placement Rule" → "Before the verb"
+- `concepts[1].definition` "Object pronouns go BEFORE the verb in French (opposite of English!)" → "French puts the object pronoun before the verb, the other way round from English."
+- `concepts[1].examples` "(none)" → "["fr":"Je le vois.","en":"I see him.","fr":"Je la vois.","en":"I see her.","fr":"Elle l'a.","en":"She has it."]"
+- `concepts[1].example` ""English: 'I see HIM', French: 'I HIM see' - pronoun comes first"" → "(removed)"
+- `concepts[2].term` "Subject vs Object" → "Subject or object"
+- `concepts[2].definition` "Subject does action (he/she), object receives action (him/her)" → "The subject does the action and the object receives it. Il is he, and le is him."
+- `concepts[2].examples` "(none)" → "["fr":"Il voit Paul.","en":"He sees Paul.","fr":"Paul le voit.","en":"Paul sees him."]"
+- `concepts[2].example` ""Don't confuse subject and object pronouns - they're different words!"" → "(removed)"
 
 **2024-01-31-possessive-adjectives**
 
-- `concepts[2].example` "INFORMAL with friends/family: ton/ta/tes (ton frère, ta sœur, tes amis). FORMAL with strangers/respect: votre/vos (votre bureau, vos bagages)" → "INFORMAL with friends/family: ton/ta/tes (ton ami, ta maison, tes livres). FORMAL with strangers/respect: votre/vos (votre maison, vos amis)"
-- `concepts[3].example` "NOTRE/NOS (our): notre maison, notre jardin, nos enfants. VOTRE/VOS (your formal): votre livre, votre famille, vos idées. LEUR/LEURS (their): leur chat, leur maison, leurs amis" → "NOTRE/NOS (our): notre maison, notre ami, nos enfants. VOTRE/VOS (your formal): votre livre, votre famille, vos idées. LEUR/LEURS (their): leur chat, leur maison, leurs amis"
+- `concepts[0].term` "Possessive Adjectives Overview" → "Possessive adjectives"
+- `concepts[0].definition` "Words that show ownership and go directly before the noun they modify" → "These words say whose something is. They go right before the noun, where le or un would go."
+- `concepts[0].examples` "(none)" → "["fr":"mon livre","en":"my book","fr":"ta maison","en":"your house","fr":"ses enfants","en":"his children, her children","fr":"notre voiture","en":"our car","fr":"Je vais au café avec mon ami.","en":"I'm going to the café with my friend."]"
+- `concepts[0].example` ""15 total forms: MY (mon/ma/mes), YOUR informal (ton/ta/tes), HIS/HER (son/sa/ses), OUR (notre/nos), YOUR formal (votre/vos), THEIR (leur/leurs)"" → "(removed)"
+- `concepts[1].term` "🔑 CRITICAL RULE: Agreement with the THING owned" → "It matches the thing owned"
+- `concepts[1].definition` "The possessive adjective matches the gender/number of the THING being owned, NOT the owner" → "The possessive takes the gender and number of the thing owned, never of the owner."
+- `concepts[1].examples` "(none)" → "["fr":"Marie a son livre.","en":"Marie has her book.","note":"son, since livre is masculine","fr":"Paul a sa voiture.","en":"Paul has his car.","note":"sa, since voiture is feminine"]"
+- `concepts[1].example` ""Marie's book = SON livre (masculine 'son' because 'livre' is masculine, even though Marie is female). Pierre's house = SA maison (feminine 'sa' because 'maison' is feminine, even though Pierre is male)"" → "(removed)"
+- `concepts[2].term` "Formal vs Informal 'Your'" → "Two ways to say your"
+- `concepts[2].definition` "French has two ways to say 'your' depending on relationship and respect level" → "Use the tu words for your with a friend, and the vous words with someone you do not know or with a group."
+- `concepts[2].examples` "(none)" → "["fr":"ton ami","en":"your friend","note":"to someone you call tu","fr":"ta maison","en":"your house","note":"to someone you call tu","fr":"votre maison","en":"your house","note":"to someone you call vous","fr":"vos amis","en":"your friends","note":"to someone you call vous"]"
+- `concepts[2].example` ""INFORMAL with friends/family: ton/ta/tes (ton frère, ta sœur, tes amis). FORMAL with strangers/respect: votre/vos (votre bureau, vos bagages)"" → "(removed)"
+- `concepts[3].term` "Gender-Neutral Forms" → "One form for both genders"
+- `concepts[3].definition` "Some possessives don't change for masculine/feminine - only for singular/plural" → "Our, your and their have no masculine or feminine forms. They change only for the plural."
+- `concepts[3].examples` "(none)" → "["fr":"notre maison","en":"our house","fr":"notre ami","en":"our friend","fr":"nos enfants","en":"our children","fr":"votre livre","en":"your book","fr":"leur chat","en":"their cat","fr":"leurs amis","en":"their friends"]"
+- `concepts[3].example` ""NOTRE/NOS (our): notre maison, notre jardin, nos enfants. VOTRE/VOS (your formal): votre livre, votre famille, vos idées. LEUR/LEURS (their): leur chat, leur maison, leurs amis"" → "(removed)"
+- `concepts[4].term` "Memory Trick: The 3-2-2 Pattern" → "Three forms or two"
+- `concepts[4].definition` "Each owner has a predictable number of forms to memorize" → "My, your and his or her have three forms: masculine, feminine and plural. Our, your and their have two: singular and plural."
+- `concepts[4].examples` "(none)" → "["fr":"mon livre","en":"my book","fr":"ma maison","en":"my house","fr":"mes livres","en":"my books","fr":"notre livre","en":"our book","fr":"nos livres","en":"our books"]"
+- `concepts[4].example` ""MY, YOUR (informal), HIS/HER = 3 forms each (masc/fem/plural). OUR, YOUR (formal), THEIR = 2 forms each (singular/plural only)"" → "(removed)"
+
+**2024-02-01-possessive-pronouns**
+
+- `concepts[0].term` "Possessive Pronouns" → "Possessive pronouns"
+- `concepts[0].definition` "Stand-alone words meaning 'mine', 'yours', 'his', etc." → "These stand on their own and mean mine, yours, his and so on. They take the place of a noun you already named."
+- `concepts[0].examples` "(none)" → "["fr":"C'est le mien.","en":"It's mine.","fr":"C'est la sienne.","en":"It's his or hers.","fr":"C'est le leur.","en":"It's theirs."]"
+- `concepts[0].example` ""C'est le mien = It's mine, C'est la sienne = It's his/hers"" → "(removed)"
+- `concepts[1].term` "With Article" → "With its article"
+- `concepts[1].definition` "Always use 'le' or 'la' before the possessive pronoun" → "A possessive pronoun always comes with its article, le or la."
+- `concepts[1].examples` "(none)" → "["fr":"le mien","en":"mine","note":"for a masculine thing","fr":"la mienne","en":"mine","note":"for a feminine thing"]"
+- `concepts[1].example` ""LE mien (mine-masc), LA mienne (mine-fem)"" → "(removed)"
+- `concepts[2].term` "Gender Agreement" → "It matches the thing owned"
+- `concepts[2].definition` "Agrees with the THING owned, not the owner" → "Like the possessive adjectives, it agrees with the thing owned, not with the owner."
+- `concepts[2].examples` "(none)" → "["fr":"Le livre ? C'est le sien.","en":"The book? It's hers.","fr":"La voiture ? C'est la sienne.","en":"The car? It's his."]"
+- `concepts[2].example` ""le sien = his/hers (masculine thing), la sienne = his/hers (feminine thing)"" → "(removed)"
 
 **2024-02-02-combining**
 
+- `concepts[0].term` "Sentence Building" → "Who has what"
+- `concepts[0].definition` "Combine subject + verb + object/possessive to make real sentences" → "Put a subject and a verb with an object pronoun or a possessive to say who has what."
+- `concepts[0].examples` "(none)" → "["fr":"Il l'a.","en":"He has it.","fr":"Ils les ont.","en":"They have them.","fr":"C'est le mien.","en":"It's mine."]"
+- `concepts[0].example` ""Use everything from previous 9 modules together!"" → "(removed)"
+- `concepts[1].term` "Object Pronoun Placement" → "The pronoun before the verb"
+- `concepts[1].definition` "Object pronouns go BEFORE the verb in French (opposite of English!)" → "The object pronoun comes before the verb, even where English puts it after."
+- `concepts[1].examples` "(none)" → "["fr":"Je le veux.","en":"I want it.","fr":"Elle l'a.","en":"She has it."]"
+- `concepts[1].example` ""English: 'I see IT', French: 'I IT see' - pronoun comes first"" → "(removed)"
+- `concepts[2].term` "Possessive Constructions" → "Two ways to say whose"
+- `concepts[2].definition` "Multiple ways to express ownership in French" → "Use a possessive before a noun, as in my book, or a pronoun on its own, as in mine."
+- `concepts[2].examples` "(none)" → "["fr":"C'est mon livre.","en":"It's my book.","fr":"C'est le mien.","en":"It's mine.","fr":"Est-ce le tien ?","en":"Is it yours?"]"
+- `concepts[2].example` ""Choose between possessive adjectives and possessive pronouns"" → "(removed)"
 - `items[9].hint` "Combine vouloir from M12 + object pronoun BEFORE verb" → "Combine vouloir + object pronoun BEFORE verb"
 - `items[10].hint` "Combine venir (M17) + avec (M14) + moi" → "Combine venir + avec + moi"
 - `items[11].hint` "Combine aller (M18) + partir infinitive (M19) - future construction!" → "Combine aller + partir infinitive - future construction!"
@@ -3300,7 +3731,6 @@ The live app stores answers under these exercise ids and concept indexes, and no
 - `2024-01-29-partir.18` exercise "What are you going to leave?" → "qu'est-ce que tu vas partir?"
 - `2024-01-29-partir.19` exercise "I come to leave that" → "je viens partir de ça"
 - `2024-01-29-partir.20` exercise "Why do you come to leave?" → "pourquoi viens-tu partir?"
-- `concepts[1]` concept "Regular -ir Conjugation"
 
 **2024-05-05-on-and-people**
 

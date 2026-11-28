@@ -71,27 +71,75 @@
   "concepts": [
     {
       "id": "c-contractions-with-de-of",
-      "term": "Contractions with '{de}' (of/from)",
-      "definition": "de + le = du, de + les = des (but de + la stays separate!)",
-      "example": "{du chat} (of the cat), {de la maison} (of the house), {des livres} (of the books)"
+      "term": "{de} with {le} and {les}",
+      "definition": "{De} with {le} becomes {du}. With {les} it becomes {des}, but {de la} stays as it is.",
+      "examples": [
+        {
+          "fr": "du chat",
+          "en": "of the cat"
+        },
+        {
+          "fr": "de la maison",
+          "en": "of the house"
+        },
+        {
+          "fr": "des livres",
+          "en": "of the books"
+        }
+      ]
     },
     {
       "id": "c-contractions-with-a-to",
-      "term": "Contractions with 'à' (to/at)",
-      "definition": "à + le = au, à + les = aux (but à + la stays separate!)",
-      "example": "{au café} (at the café), {à la maison} (at the house), {aux amis} (to the friends)"
+      "term": "{à} with {le} and {les}",
+      "definition": "{À} with {le} becomes {au}. With {les} it becomes {aux}, but {à la} stays as it is.",
+      "examples": [
+        {
+          "fr": "Je suis au café avec eux.",
+          "en": "I'm at the café with them."
+        },
+        {
+          "fr": "Le chat est à la maison.",
+          "en": "The cat is at home."
+        },
+        {
+          "fr": "aux amis",
+          "en": "to the friends"
+        }
+      ]
     },
     {
       "id": "c-partitive-articles-some-any",
-      "term": "Partitive Articles (some/any)",
-      "definition": "Use du/de la/de l'/des to mean 'some' (unspecified quantity)",
-      "example": "{du café} (some coffee), {de la musique} (some music), {des livres} (some books)"
+      "term": "Some",
+      "definition": "The same words also mean some, for an amount you do not count. English often leaves the word out.",
+      "examples": [
+        {
+          "fr": "Je veux du café.",
+          "en": "I want some coffee."
+        },
+        {
+          "fr": "de la musique",
+          "en": "some music"
+        },
+        {
+          "fr": "J'ai des livres.",
+          "en": "I have some books."
+        }
+      ]
     },
     {
       "id": "c-before-vowels",
-      "term": "Before Vowels",
-      "definition": "de + l' and à + l' before vowel sounds (no contraction needed)",
-      "example": "{de l'ami} (of the friend), {à l'hôtel} (at the hotel)"
+      "term": "Before a vowel",
+      "definition": "Before a vowel sound, {de} and {à} take {l'} for both genders.",
+      "examples": [
+        {
+          "fr": "de l'ami",
+          "en": "of the friend"
+        },
+        {
+          "fr": "à l'hôtel",
+          "en": "at the hotel"
+        }
+      ]
     }
   ],
   "items": [

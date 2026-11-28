@@ -62,27 +62,87 @@
   "concepts": [
     {
       "id": "c-ca-the-most-useful",
-      "term": "{ça} - The Most Useful Word!",
-      "definition": "Informal 'that/it' - you'll use this constantly!",
-      "example": "Used standalone or in phrases constantly in conversation"
+      "term": "{ça}, the most useful word",
+      "definition": "{Ça} means that or it in everyday speech. You hear it in almost every conversation.",
+      "examples": [
+        {
+          "fr": "J'ai ça.",
+          "en": "I have that."
+        },
+        {
+          "fr": "Tu as ça ?",
+          "en": "Do you have that?"
+        }
+      ]
     },
     {
       "id": "c-demonstrative-forms",
-      "term": "Demonstrative Forms",
-      "definition": "Learn the standalone forms: ce, cet, cette, ces",
-      "example": "Like variables in programming - you'll compose them with nouns soon!"
+      "term": "This and that",
+      "definition": "These four words mean this or that, and in the plural these or those. Each one goes before a noun.",
+      "examples": [
+        {
+          "fr": "ce livre",
+          "en": "this book"
+        },
+        {
+          "fr": "cet homme",
+          "en": "this man"
+        },
+        {
+          "fr": "cette maison",
+          "en": "this house"
+        },
+        {
+          "fr": "ces chats",
+          "en": "these cats"
+        }
+      ]
     },
     {
       "id": "c-gender-and-sound-agreement",
-      "term": "Gender and Sound Agreement",
-      "definition": "Choose based on: 1) gender of noun, 2) sound it starts with",
-      "example": "masculine + consonant = {ce}, masculine + vowel = {cet}, feminine = {cette}, plural = {ces}"
+      "term": "Which one to use",
+      "definition": "The noun decides: its gender, its number and the sound it starts with.",
+      "examples": [
+        {
+          "fr": "ce chien",
+          "en": "this dog",
+          "note": "masculine, before a consonant"
+        },
+        {
+          "fr": "cet homme",
+          "en": "this man",
+          "note": "masculine, before a vowel sound"
+        },
+        {
+          "fr": "cette femme",
+          "en": "this woman",
+          "note": "feminine"
+        },
+        {
+          "fr": "ces livres",
+          "en": "these books",
+          "note": "plural"
+        }
+      ]
     },
     {
       "id": "c-next-functional-composition",
-      "term": "Next: Functional Composition!",
-      "definition": "After practicing ça, you'll compose demonstratives with nouns",
-      "example": "Coming soon: {ce}({livre}) = {ce livre}, {ces}({chats}) = {ces chats}"
+      "term": "With a noun you know",
+      "definition": "Put the word before any noun you know to point at it.",
+      "examples": [
+        {
+          "fr": "C'est ce livre.",
+          "en": "It's this book."
+        },
+        {
+          "fr": "J'ai ces livres.",
+          "en": "I have these books."
+        },
+        {
+          "fr": "Tu as ce chat ?",
+          "en": "Do you have this cat?"
+        }
+      ]
     }
   ],
   "items": [

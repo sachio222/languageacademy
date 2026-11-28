@@ -78,21 +78,60 @@
   "concepts": [
     {
       "id": "c-stressed-pronouns-pronoms-toniques",
-      "term": "Stressed Pronouns (Pronoms Toniques)",
-      "definition": "Special pronouns used after prepositions, for emphasis, and alone",
-      "example": "Can't use '{je}' or '{tu}' after '{avec}' or '{pour}' - need '{moi}' and '{toi}'!"
+      "term": "Stressed pronouns",
+      "definition": "These pronouns stand on their own, come after a word such as {avec}, or add weight to who you mean.",
+      "examples": [
+        {
+          "fr": "avec moi",
+          "en": "with me"
+        },
+        {
+          "fr": "pour toi",
+          "en": "for you"
+        },
+        {
+          "fr": "Moi ?",
+          "en": "Me?"
+        }
+      ]
     },
     {
       "id": "c-when-to-use-stressed",
-      "term": "When to Use Stressed Pronouns",
-      "definition": "After prepositions (avec, pour, sans, chez), for emphasis, or alone",
-      "example": "{avec moi} (with me), {pour toi} (for you), {c'est lui} (it's him), {Moi?} ({Me?})"
+      "term": "When to use them",
+      "definition": "Use them after a word such as {avec}, after {c'est}, and on their own as a one-word answer.",
+      "examples": [
+        {
+          "fr": "Il est avec moi.",
+          "en": "He is with me."
+        },
+        {
+          "fr": "C'est pour toi.",
+          "en": "It's for you."
+        },
+        {
+          "fr": "C'est lui.",
+          "en": "It's him."
+        },
+        {
+          "fr": "Moi ?",
+          "en": "Me?"
+        }
+      ]
     },
     {
       "id": "c-subject-vs-stressed",
-      "term": "Subject vs. Stressed",
-      "definition": "Subject pronouns go before verbs. Stressed pronouns go after prepositions.",
-      "example": "{je suis} (I am) BUT avec moi (with me) - different pronouns!"
+      "term": "Subject or stressed",
+      "definition": "Subject pronouns go before the verb. Stressed pronouns go after a preposition.",
+      "examples": [
+        {
+          "fr": "Je suis avec toi.",
+          "en": "I am with you."
+        },
+        {
+          "fr": "Tu es avec moi.",
+          "en": "You are with me."
+        }
+      ]
     }
   ],
   "items": [

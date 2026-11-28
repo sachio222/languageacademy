@@ -99,21 +99,64 @@
   "concepts": [
     {
       "id": "c-internationally-recognized-words",
-      "term": "Internationally Recognized Words",
-      "definition": "Many words are used across languages and cultures",
-      "example": "Some of these words may be familiar from movies, restaurants, or everyday use"
+      "term": "Words you may already know",
+      "definition": "Some French words are already familiar from cafés, films and travel.",
+      "examples": [
+        {
+          "fr": "Voilà !",
+          "en": "There you go!"
+        },
+        {
+          "fr": "Café ? Oui, merci.",
+          "en": "Coffee? Yes, thank you."
+        }
+      ]
     },
     {
       "id": "c-essential-greetings-politeness",
-      "term": "Essential Greetings & Politeness",
-      "definition": "Basic phrases needed for any conversation",
-      "example": "Hello, thank you, yes, no, please, goodbye - universal communication"
+      "term": "Greetings and polite words",
+      "definition": "Say {bonjour} when you arrive and {au revoir} when you leave. Add please when you ask for something, and thank you when you get it.",
+      "examples": [
+        {
+          "fr": "Bonjour !",
+          "en": "Hello!"
+        },
+        {
+          "fr": "Merci !",
+          "en": "Thank you!"
+        },
+        {
+          "fr": "Oui.",
+          "en": "Yes."
+        },
+        {
+          "fr": "Non.",
+          "en": "No."
+        },
+        {
+          "fr": "Au revoir !",
+          "en": "Goodbye!"
+        }
+      ]
     },
     {
       "id": "c-building-your-foundation",
-      "term": "Building Your Foundation",
-      "definition": "Starting with common, useful words builds confidence",
-      "example": "These common words appear in daily conversation"
+      "term": "Short answers",
+      "definition": "These words already make whole replies. Each one answers a question on its own.",
+      "examples": [
+        {
+          "fr": "Oui, merci.",
+          "en": "Yes, thank you."
+        },
+        {
+          "fr": "Bien, merci.",
+          "en": "Fine, thank you."
+        },
+        {
+          "fr": "Bon, au revoir !",
+          "en": "Right, goodbye!"
+        }
+      ]
     }
   ],
   "items": [

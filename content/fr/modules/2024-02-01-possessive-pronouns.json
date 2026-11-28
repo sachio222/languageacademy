@@ -92,21 +92,54 @@
   "concepts": [
     {
       "id": "c-possessive-pronouns",
-      "term": "Possessive Pronouns",
-      "definition": "Stand-alone words meaning 'mine', 'yours', 'his', etc.",
-      "example": "{C'est le mien} = It's mine, C'est la sienne = It's his/hers"
+      "term": "Possessive pronouns",
+      "definition": "These stand on their own and mean mine, yours, his and so on. They take the place of a noun you already named.",
+      "examples": [
+        {
+          "fr": "C'est le mien.",
+          "en": "It's mine."
+        },
+        {
+          "fr": "C'est la sienne.",
+          "en": "It's his or hers."
+        },
+        {
+          "fr": "C'est le leur.",
+          "en": "It's theirs."
+        }
+      ]
     },
     {
       "id": "c-with-article",
-      "term": "With Article",
-      "definition": "Always use '{le}' or '{la}' before the possessive pronoun",
-      "example": "{LE mien} (mine-masc), {LA mienne} (mine-fem)"
+      "term": "With its article",
+      "definition": "A possessive pronoun always comes with its article, {le} or {la}.",
+      "examples": [
+        {
+          "fr": "le mien",
+          "en": "mine",
+          "note": "for a masculine thing"
+        },
+        {
+          "fr": "la mienne",
+          "en": "mine",
+          "note": "for a feminine thing"
+        }
+      ]
     },
     {
       "id": "c-gender-agreement",
-      "term": "Gender Agreement",
-      "definition": "Agrees with the THING owned, not the owner",
-      "example": "{le sien} = his/hers (masculine thing), {la sienne} = his/hers (feminine thing)"
+      "term": "It matches the thing owned",
+      "definition": "Like the possessive adjectives, it agrees with the thing owned, not with the owner.",
+      "examples": [
+        {
+          "fr": "Le livre ? C'est le sien.",
+          "en": "The book? It's hers."
+        },
+        {
+          "fr": "La voiture ? C'est la sienne.",
+          "en": "The car? It's his."
+        }
+      ]
     }
   ],
   "items": [

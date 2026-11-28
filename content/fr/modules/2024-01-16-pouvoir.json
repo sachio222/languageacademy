@@ -74,21 +74,74 @@
   "concepts": [
     {
       "id": "c-pouvoir-can-to-be",
-      "term": "{pouvoir} = can/to be able",
-      "definition": "Essential irregular verb for expressing ability, possibility, and permission! One of the most useful verbs in French.",
-      "example": "'I can have that' ({Je peux avoir ça}), 'Can you be a friend?' ({Peux-tu être un ami?}), 'We can want a house' ({Nous pouvons vouloir une maison})"
+      "term": "{pouvoir} = can, to be able",
+      "definition": "The verb for what someone can do: ability, chance and permission. It is one of the verbs French uses most.",
+      "examples": [
+        {
+          "fr": "Je peux avoir ça, s'il vous plaît ?",
+          "en": "Can I have that, please?"
+        },
+        {
+          "fr": "Je peux avoir ça, s'il te plaît ?",
+          "en": "Can I have that, please?",
+          "note": "to a friend"
+        },
+        {
+          "fr": "Tu peux ?",
+          "en": "Can you?"
+        }
+      ]
     },
     {
       "id": "c-irregular-conjugation-pattern",
-      "term": "Irregular Conjugation Pattern",
-      "definition": "Notice the pattern: je/tu both use '{peux}', then il/elle use '{peut}', nous uses '{pouvons}', and ils/elles use '{peuvent}'!",
-      "example": "{je peux}, {tu peux}, {il peut}, {nous pouvons}, {vous pouvez}, {ils peuvent}"
+      "term": "Three stems",
+      "definition": "The stem changes three times: once for the singular, once for we and you, and once for they.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je peux",
+          "en": "I can"
+        },
+        {
+          "fr": "tu peux",
+          "en": "you can"
+        },
+        {
+          "fr": "il peut",
+          "en": "he can"
+        },
+        {
+          "fr": "nous pouvons",
+          "en": "we can"
+        },
+        {
+          "fr": "vous pouvez",
+          "en": "you can"
+        },
+        {
+          "fr": "ils peuvent",
+          "en": "they can"
+        }
+      ]
     },
     {
       "id": "c-composition-power",
-      "term": "Composition Power",
-      "definition": "Combine pouvoir with previous modules for infinite expressions. Use with être, avoir, vouloir, and nouns you've learned!",
-      "example": "{je peux + avoir + ça, nous pouvons + être, ils peuvent + vouloir + un livre}"
+      "term": "What someone can do",
+      "definition": "Put a second verb straight after {pouvoir} to say what someone can do.",
+      "examples": [
+        {
+          "fr": "Je peux être un ami.",
+          "en": "I can be a friend."
+        },
+        {
+          "fr": "Il peut avoir un livre.",
+          "en": "He can have a book."
+        },
+        {
+          "fr": "Nous pouvons avoir une maison.",
+          "en": "We can have a house."
+        }
+      ]
     }
   ],
   "items": [

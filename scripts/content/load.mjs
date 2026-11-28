@@ -87,10 +87,11 @@ export function loadCourse({ root = CONTENT_ROOT, checkAnswer, graphDir, planned
     throw new ContentError(ps);
   }
   const code = typeof outline?.language === 'string' && outline.language ? outline.language : defaultLanguage();
-  checkAnswer ??= language(code, languageModule).checkAnswer;
+  const lang = language(code, languageModule);
+  checkAnswer ??= lang.checkAnswer;
   if (graphDir === undefined) graphDir = join(REPO_ROOT, 'curriculum-graph', 'languages', code);
   const content = planned ? { outline, files } : withoutPlanned(outline, files);
   const native = typeof outline?.native === 'string' && outline.native ? outline.native : 'en';
   const conjugationOf = conjugationBuilder({ code, native, graphDir: graphDir ?? undefined, languageModule });
-  return assembleCourse(content.outline, content.files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir), conjugationOf });
+  return assembleCourse(content.outline, content.files, { outlineFile, checkAnswer, graphIds: graphDir === null ? null : graphIds(graphDir), conjugationOf, persons: lang.persons ?? null, isNativeText: lang.isNativeExample ?? null });
 }

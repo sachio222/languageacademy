@@ -3,7 +3,8 @@
 //   node scripts/plan/cli.mjs brief <lang> <unit_key | module_key> [--out <dir>]
 //
 // A brief is assembled, never written by hand:
-//   - what to write: the method for the module's kind (templates/<kind>.md), the same in every language;
+//   - what to write: the method for the module's kind (templates/<kind>.md), the same in every language, and for a
+//     lesson the shape of its concept cards (templates/concept-cards.md);
 //   - this module: what the plan says it teaches, its goal, situation, culture note and spoken words;
 //   - the unit: its can-do, cast, places and situations (the written parts of the unit card), and its modules in order;
 //   - what the learner knows by now: every pattern and word taught before this module, counting earlier planned
@@ -57,6 +58,8 @@ function briefText({ plan, unit, module, context, limits, lang, repoRoot, word }
 
   out.push(`# Brief: ${KIND[module.kind]} · ${plain(module.title)}`, '', `Module \`${module.module_key}\` in ${unit.unit_key} (${plain(unit.title)}), position ${at} in the course. Language: ${lang}.`, '');
   section('What to write', templatesFor(module).flatMap((t) => [template(t), '']));
+  // Every lesson may hold concept cards; the brief gives their shape and rules (templates/concept-cards.md).
+  if (module.kind === 'lesson') section('Concept cards', [template('concept-cards')]);
 
   const words = module.teaches.words.map(word);
   // A graph id as a writer reads it: a word by its lemma, a pattern by its short id.

@@ -58,27 +58,63 @@
   "concepts": [
     {
       "id": "c-why-articles-matter",
-      "term": "Why Articles Matter",
-      "definition": "You can NEVER say a noun alone in French - must use an article!",
-      "example": "English: 'book', French: MUST say 'a book' or 'the book'"
+      "term": "A noun comes with an article",
+      "definition": "In French a noun almost never stands alone. You say a coffee or the coffee, not just coffee.",
+      "examples": [
+        {
+          "fr": "Le café est bon.",
+          "en": "The coffee is good."
+        },
+        {
+          "fr": "Un café, s'il vous plaît.",
+          "en": "A coffee, please."
+        }
+      ]
     },
     {
       "id": "c-indefinite-articles-a-an",
-      "term": "Indefinite Articles (a/an)",
-      "definition": "un (masculine), une (feminine) = a/an",
-      "example": "Use when talking about any one thing, not a specific thing"
+      "term": "{un} and {une}: a or an",
+      "definition": "Use {un} or {une} for any one thing, not a particular one. {Un} goes with a masculine noun and {une} with a feminine one.",
+      "examples": [
+        {
+          "fr": "Un café ?",
+          "en": "A coffee?"
+        },
+        {
+          "fr": "Oui, un café, merci.",
+          "en": "Yes, a coffee, thank you."
+        }
+      ]
     },
     {
       "id": "c-definite-articles-the",
-      "term": "Definite Articles (the)",
-      "definition": "le (masculine), la (feminine), les (plural) = the",
-      "example": "Use when talking about a specific thing"
+      "term": "Three words for the",
+      "definition": "Use {le} or {la} for one particular thing. {Les} is for more than one, and {l'} replaces both before a vowel.",
+      "examples": [
+        {
+          "fr": "Voilà le café !",
+          "en": "Here's the coffee!"
+        },
+        {
+          "fr": "Le café est bon.",
+          "en": "The coffee is good."
+        }
+      ]
     },
     {
       "id": "c-gender-agreement",
-      "term": "Gender Agreement",
-      "definition": "Article must match the noun's gender - this is critical!",
-      "example": "Masculine nouns use un/le, feminine nouns use une/{la}"
+      "term": "The article shows the gender",
+      "definition": "Every noun is masculine or feminine, and its article must match. {Café} is masculine: it takes {un} and {le}.",
+      "examples": [
+        {
+          "fr": "un café",
+          "en": "a coffee"
+        },
+        {
+          "fr": "le café",
+          "en": "the coffee"
+        }
+      ]
     }
   ],
   "items": [

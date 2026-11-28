@@ -9,15 +9,6 @@
       }
     }
   },
-  "2024-01-02-etre": {
-    "overrides": {
-      "2024-01-02-etre#concepts/c-etre-to-be/example": {
-        "ignore": [
-          "fr:lex:express"
-        ]
-      }
-    }
-  },
   "2024-01-05-articles": {
     "excludeWords": [
       "fr:lex:le.pronoun",
@@ -36,7 +27,7 @@
   },
   "2024-01-13-ca-survival": {
     "contentNotes": [
-      "the vocabulary note \"ça + va (être)\" names the wrong verb: \"va\" comes from aller, so the note should read \"ça + va (aller)\"."
+      "the vocabulary note \"\u00e7a + va (\u00eatre)\" names the wrong verb: \"va\" comes from aller, so the note should read \"\u00e7a + va (aller)\"."
     ],
     "overrides": {
       "2024-01-13-ca-survival#i-il-a-ca/hint": {
@@ -65,15 +56,6 @@
       "fr:form:le.pronoun.pl",
       "fr:form:le.pronoun.elided"
     ]
-  },
-  "2024-01-19-stressed-pronouns": {
-    "overrides": {
-      "2024-01-19-stressed-pronouns#concepts/c-when-to-use-stressed/example": {
-        "ignore": [
-          "fr:lex:me"
-        ]
-      }
-    }
   },
   "2024-01-20-prepositions": {
     "excludeWords": [
@@ -238,7 +220,7 @@
   },
   "2024-02-16-unit-11-practice": {
     "contentNotes": [
-      "the gap-fill \"Je ___ mes amis au café\" with answer \"attends\" reads \"Je attends\"; French elides it to \"J'attends\"."
+      "the gap-fill \"Je ___ mes amis au caf\u00e9\" with answer \"attends\" reads \"Je attends\"; French elides it to \"J'attends\"."
     ]
   },
   "2024-03-15-nature-animals": {
@@ -653,7 +635,7 @@
   },
   "2024-05-26-causal-words": {
     "contentNotes": [
-      "the gap-fill \"Je suis en retard ___ le traffic\" with answer \"à cause du\" reads \"à cause du le traffic\" once filled; drop \"le\" from the prompt. \"traffic\" is the English spelling: French writes \"trafic\" (also in the à cause de concept card and a feedback line)."
+      "the gap-fill \"Je suis en retard ___ le traffic\" with answer \"\u00e0 cause du\" reads \"\u00e0 cause du le traffic\" once filled; drop \"le\" from the prompt. \"traffic\" is the English spelling: French writes \"trafic\" (also in the \u00e0 cause de concept card and a feedback line)."
     ],
     "excludeWords": [
       "fr:lex:le.pronoun",
@@ -664,7 +646,7 @@
   },
   "2024-05-27-imparfait-all-verbs": {
     "contentNotes": [
-      "the gap-fill \"Je ___ au café quand tu m'as appelé\" with answer \"allais\" reads \"Je allais\"; French elides it to \"J'allais\"."
+      "the gap-fill \"Je ___ au caf\u00e9 quand tu m'as appel\u00e9\" with answer \"allais\" reads \"Je allais\"; French elides it to \"J'allais\"."
     ],
     "excludeWords": [
       "fr:lex:le.pronoun",
@@ -704,7 +686,7 @@
   },
   "2024-06-03-past-tense-composition": {
     "contentNotes": [
-      "the gap-fill \"Pendant que je ___, on a parlé pendant une heure\" with answer \"étais\" reads \"je étais\"; French elides it to \"j'étais\" (and \"While I was there\" needs \"là\": \"Pendant que j'étais là\")."
+      "the gap-fill \"Pendant que je ___, on a parl\u00e9 pendant une heure\" with answer \"\u00e9tais\" reads \"je \u00e9tais\"; French elides it to \"j'\u00e9tais\" (and \"While I was there\" needs \"l\u00e0\": \"Pendant que j'\u00e9tais l\u00e0\")."
     ]
   },
   "2024-06-04-pc-vs-imparfait": {
@@ -738,7 +720,7 @@
   },
   "2024-06-10-unit-9-practice": {
     "contentNotes": [
-      "the gap-fill \"Il est fatigué ___ du travail\" with answer \"à cause de\" reads \"à cause de du travail\" once filled; French says \"à cause du travail\": make the answer \"à cause du\" and drop \"du\" from the prompt."
+      "the gap-fill \"Il est fatigu\u00e9 ___ du travail\" with answer \"\u00e0 cause de\" reads \"\u00e0 cause de du travail\" once filled; French says \"\u00e0 cause du travail\": make the answer \"\u00e0 cause du\" and drop \"du\" from the prompt."
     ]
   },
   "2024-10-22-donner": {

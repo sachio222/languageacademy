@@ -111,27 +111,83 @@
   "concepts": [
     {
       "id": "c-noun-gender-critical-concept",
-      "term": "Noun Gender - Critical Concept!",
-      "definition": "Every French noun is either masculine or feminine - you must memorize this!",
-      "example": "Masculine nouns use '{le/un}', feminine use 'la/{une'}"
+      "term": "Every noun is masculine or feminine",
+      "definition": "Nothing in most nouns shows their gender, so learn each one with its article.",
+      "examples": [
+        {
+          "fr": "un livre",
+          "en": "a book"
+        },
+        {
+          "fr": "une maison",
+          "en": "a house"
+        },
+        {
+          "fr": "un chien",
+          "en": "a dog"
+        },
+        {
+          "fr": "une voiture",
+          "en": "a car"
+        }
+      ]
     },
     {
       "id": "c-using-with-etre-and",
-      "term": "Using With être and avoir",
-      "definition": "Combine nouns with {être} and {avoir}, the verbs you already know",
-      "example": "Pattern: pronoun + verb + article + noun"
+      "term": "Nouns with {être} and {avoir}",
+      "definition": "Put a noun after {avoir} to say what someone has, or after {c'est} to say what something is.",
+      "examples": [
+        {
+          "fr": "J'ai un livre.",
+          "en": "I have a book."
+        },
+        {
+          "fr": "Il a un chien.",
+          "en": "He has a dog."
+        },
+        {
+          "fr": "C'est une maison.",
+          "en": "It's a house."
+        }
+      ]
     },
     {
       "id": "c-practice-previous-modules",
-      "term": "Practice Previous Modules!",
-      "definition": "Every exercise uses être or avoir - reinforcing what you learned!",
-      "example": "Learn nouns WHILE practicing your verbs"
+      "term": "Every sentence uses a verb you know",
+      "definition": "Each sentence in this lesson puts a new noun with {être} or {avoir}.",
+      "examples": [
+        {
+          "fr": "Tu as une voiture.",
+          "en": "You have a car."
+        },
+        {
+          "fr": "Elle a une amie.",
+          "en": "She has a friend."
+        },
+        {
+          "fr": "Nous avons une chienne.",
+          "en": "We have a dog."
+        }
+      ]
     },
     {
       "id": "c-rule-identifying-vs-profession",
-      "term": "Rule: Identifying vs. Profession",
-      "definition": "When you identify someone with a noun (like 'man' or 'friend'), you MUST use an article (un, une). NOTE: A special rule for professions and nationalities will be taught later.",
-      "example": "Correct for now: '{elle est une amie}'. Future rule: '{elle est avocate}' (she is a lawyer)."
+      "term": "Saying who someone is",
+      "definition": "To say who someone is with a noun, put {un} or {une} before the noun. For he is or she is, French usually says {c'est}.",
+      "examples": [
+        {
+          "fr": "Je suis un homme.",
+          "en": "I am a man."
+        },
+        {
+          "fr": "C'est une amie.",
+          "en": "She's a friend."
+        },
+        {
+          "fr": "C'est un enfant.",
+          "en": "It's a child."
+        }
+      ]
     }
   ],
   "items": [

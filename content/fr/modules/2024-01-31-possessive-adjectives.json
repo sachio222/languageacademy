@@ -110,33 +110,132 @@
   "concepts": [
     {
       "id": "c-possessive-adjectives-overview",
-      "term": "Possessive Adjectives Overview",
-      "definition": "Words that show ownership and go directly before the noun they modify",
-      "example": "15 total forms: MY ({mon}/{ma}/{mes}), YOUR informal ({ton}/{ta}/{tes}), HIS/HER ({son}/{sa}/{ses}), OUR ({notre}/{nos}), YOUR formal ({votre}/{vos}), THEIR ({leur}/{leurs})"
+      "term": "Possessive adjectives",
+      "definition": "These words say whose something is. They go right before the noun, where {le} or {un} would go.",
+      "examples": [
+        {
+          "fr": "mon livre",
+          "en": "my book"
+        },
+        {
+          "fr": "ta maison",
+          "en": "your house"
+        },
+        {
+          "fr": "ses enfants",
+          "en": "his children, her children"
+        },
+        {
+          "fr": "notre voiture",
+          "en": "our car"
+        },
+        {
+          "fr": "Je vais au café avec mon ami.",
+          "en": "I'm going to the café with my friend."
+        }
+      ]
     },
     {
       "id": "c-critical-rule-agreement-with",
-      "term": "🔑 CRITICAL RULE: Agreement with the THING owned",
-      "definition": "The possessive adjective matches the gender/number of the THING being owned, NOT the owner",
-      "example": "Marie's book = {SON livre} (masculine '{son}' because '{livre}' is masculine, even though Marie is female). Pierre's house = {SA maison} (feminine '{sa}' because '{maison}' is feminine, even though Pierre is male)"
+      "term": "It matches the thing owned",
+      "definition": "The possessive takes the gender and number of the thing owned, never of the owner.",
+      "examples": [
+        {
+          "fr": "Marie a son livre.",
+          "en": "Marie has her book.",
+          "note": "{son}, since {livre} is masculine"
+        },
+        {
+          "fr": "Paul a sa voiture.",
+          "en": "Paul has his car.",
+          "note": "{sa}, since {voiture} is feminine"
+        }
+      ]
     },
     {
       "id": "c-formal-vs-informal-your",
-      "term": "Formal vs Informal 'Your'",
-      "definition": "French has two ways to say 'your' depending on relationship and respect level",
-      "example": "INFORMAL with friends/family: {ton}/{ta}/{tes} ({ton ami}, {ta maison}, {tes livres}). FORMAL with strangers/respect: {votre}/{vos} ({votre maison}, {vos amis})"
+      "term": "Two ways to say your",
+      "definition": "Use the {tu} words for your with a friend, and the {vous} words with someone you do not know or with a group.",
+      "examples": [
+        {
+          "fr": "ton ami",
+          "en": "your friend",
+          "note": "to someone you call {tu}"
+        },
+        {
+          "fr": "ta maison",
+          "en": "your house",
+          "note": "to someone you call {tu}"
+        },
+        {
+          "fr": "votre maison",
+          "en": "your house",
+          "note": "to someone you call {vous}"
+        },
+        {
+          "fr": "vos amis",
+          "en": "your friends",
+          "note": "to someone you call {vous}"
+        }
+      ]
     },
     {
       "id": "c-gender-neutral-forms",
-      "term": "Gender-Neutral Forms",
-      "definition": "Some possessives don't change for masculine/feminine - only for singular/plural",
-      "example": "{NOTRE}/{NOS} (our): {notre maison}, {notre ami}, {nos enfants. VOTRE}/{VOS} (your formal): {votre livre}, {votre famille}, {vos idées. LEUR}/{LEURS} (their): {leur chat}, {leur maison}, {leurs amis}"
+      "term": "One form for both genders",
+      "definition": "Our, your and their have no masculine or feminine forms. They change only for the plural.",
+      "examples": [
+        {
+          "fr": "notre maison",
+          "en": "our house"
+        },
+        {
+          "fr": "notre ami",
+          "en": "our friend"
+        },
+        {
+          "fr": "nos enfants",
+          "en": "our children"
+        },
+        {
+          "fr": "votre livre",
+          "en": "your book"
+        },
+        {
+          "fr": "leur chat",
+          "en": "their cat"
+        },
+        {
+          "fr": "leurs amis",
+          "en": "their friends"
+        }
+      ]
     },
     {
       "id": "c-memory-trick-the-3",
-      "term": "Memory Trick: The 3-2-2 Pattern",
-      "definition": "Each owner has a predictable number of forms to memorize",
-      "example": "MY, YOUR (informal), HIS/HER = 3 forms each (masc/fem/plural). OUR, YOUR (formal), THEIR = 2 forms each (singular/plural only)"
+      "term": "Three forms or two",
+      "definition": "My, your and his or her have three forms: masculine, feminine and plural. Our, your and their have two: singular and plural.",
+      "examples": [
+        {
+          "fr": "mon livre",
+          "en": "my book"
+        },
+        {
+          "fr": "ma maison",
+          "en": "my house"
+        },
+        {
+          "fr": "mes livres",
+          "en": "my books"
+        },
+        {
+          "fr": "notre livre",
+          "en": "our book"
+        },
+        {
+          "fr": "nos livres",
+          "en": "our books"
+        }
+      ]
     }
   ],
   "items": [

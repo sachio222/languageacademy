@@ -646,3 +646,67 @@ test("a verb lesson's Speed Match pairs each person with its form, one pair per 
   const pairs = sm.answer_key.pairs.map((p) => [text[p.left_id], text[p.right_id]]);
   assert.deepEqual(pairs, [['je', 'veux'], ['il', 'veut'], ['vous', 'voulez'], ['ils', 'veulent'], ['nous', 'voulons']]);
 });
+
+test('a concept card carries its examples and layout to L; a card that still holds the old string keeps it', (t) => {
+  const { outline, files } = writtenContent();
+  const key = '2024-01-15-vouloir';
+  const examples = [{ fr: 'Je veux ça.', en: 'I want that.' }, { fr: 'Tu veux un café ?', en: 'Do you want a coffee?', note: 'a polite offer' }];
+  const forms = ['je veux', 'tu veux', 'il veut', 'nous voulons', 'vous voulez', 'ils veulent'].map((fr) => ({ fr }));
+  const changed = files.map((f) => {
+    if (!f.file.endsWith(`/${key}.json`)) return f;
+    const m = JSON.parse(f.text);
+    const [a, b, c] = m.concepts;
+    for (const card of [a, b, c]) for (const k of ['example', 'examples', 'layout']) Reflect.deleteProperty(card, k);
+    a.examples = examples;
+    Object.assign(b, { definition: 'The stem changes with the person.', layout: 'forms', examples: forms });
+    c.example = '{Je veux être un ami.} (I want to be a friend.)';
+    return { file: f.file, json: m };
+  });
+  const bun = buildBundle(assembleCourse(outline, changed, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
+  const blocks = contentOf(bun, key).steps.find((s) => s.section_id === 'vocabulary-intro').body.blocks;
+  const [a, b, c] = blocks;
+  assert.deepEqual(a.examples, [{ fr: 'Je veux ça.', en: 'I want that.', note: null }, { fr: 'Tu veux un café ?', en: 'Do you want a coffee?', note: 'a polite offer' }]);
+  assert.equal(a.layout, 'list');
+  assert.equal(a.example, null);
+  assert.equal(b.layout, 'forms');
+  assert.deepEqual(b.examples.map((x) => [x.fr, x.en]), forms.map((x) => [x.fr, null]));
+  // the third card is still in the old shape
+  assert.equal(typeof c.example, 'string');
+  assert.equal(c.examples, undefined);
+  assert.equal(c.layout, undefined);
+  const v = schemaValidator(join(VENDOR, 'contracts'), 'curriculum.bundle.schema.json');
+  assert.deepEqual(v.validate(bun).slice(0, 5), []);
+  const r = runChecker(bun);
+  assert.equal(r.status, 0, JSON.stringify(r.problems?.slice(0, 3)));
+});
+
+test('a plain card carries its { text } items to L, and passes L’s checker', () => {
+  const { outline, files } = writtenContent();
+  const key = '2024-01-01-famous-words';
+  const changed = files.map((f) => {
+    if (!f.file.endsWith(`/${key}.json`)) return f;
+    const m = JSON.parse(f.text);
+    Object.assign(m.concepts[0], { layout: 'plain', examples: [{ text: 'Hello' }, { text: 'Thank you' }] });
+    return { file: f.file, json: m };
+  });
+  const bun = buildBundle(assembleCourse(outline, changed, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
+  const block = contentOf(bun, key).steps.find((s) => s.section_id === 'vocabulary-intro').body.blocks[0];
+  assert.equal(block.layout, 'plain');
+  assert.deepEqual(block.examples, [{ text: 'Hello' }, { text: 'Thank you' }]);
+  const r = runChecker(bun);
+  assert.equal(r.status, 0, JSON.stringify(r.problems?.slice(0, 3)));
+});
+
+test("L's checker refuses a forms card with an odd number of examples, and a concept card with both shapes", () => {
+  const { outline, files } = writtenContent();
+  const b = buildBundle(assembleCourse(outline, files, { checkAnswer: defaultCheckAnswer, conjugationOf: conjugationBuilder() }), { ...sources, build: BUILD });
+  const block = contentOf(b, '2024-01-15-vouloir').steps.find((s) => s.section_id === 'vocabulary-intro').body.blocks[0];
+  Object.assign(block, { example: null, layout: 'forms', examples: [{ fr: 'je veux', en: null, note: null }, { fr: 'tu veux', en: null, note: null }, { fr: 'il veut', en: null, note: null }] });
+  let r = runChecker(b);
+  assert.equal(r.status, 1);
+  assert.ok(r.problems.some((p) => p.code === 'bundle_invalid' && /even/.test(p.detail)), JSON.stringify(r.problems?.slice(0, 3)));
+  Object.assign(block, { example: '{je veux}', layout: 'list', examples: [{ fr: 'je veux', en: 'I want', note: null }] });
+  r = runChecker(b);
+  assert.equal(r.status, 1);
+  assert.ok(r.problems.some((p) => p.code === 'bundle_invalid' && /example/.test(p.detail)), JSON.stringify(r.problems?.slice(0, 3)));
+});

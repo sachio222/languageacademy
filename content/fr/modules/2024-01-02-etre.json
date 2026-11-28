@@ -75,26 +75,91 @@
     {
       "id": "c-etre-to-be",
       "term": "{être} = to be",
-      "definition": "The most important verb. Describes states and identity.",
-      "example": "Express: I am, you are, he is, she is, we are, they are"
+      "definition": "The verb for who you are and how you are. It is the verb French uses most.",
+      "examples": [
+        {
+          "fr": "Je suis heureux.",
+          "en": "I am happy."
+        },
+        {
+          "fr": "Tu es Paul ?",
+          "en": "Are you Paul?"
+        },
+        {
+          "fr": "Nous sommes heureux.",
+          "en": "We are happy."
+        }
+      ]
     },
     {
       "id": "c-conjugation-pattern",
-      "term": "Conjugation Pattern",
-      "definition": "Each pronoun gets a unique verb form - you must memorize all 8 to communicate who is doing what!",
-      "example": "{je suis}, {tu es}, {il est}, {elle est}, {nous sommes}, {vous êtes}, {ils sont}, {elles sont}"
+      "term": "One form for each person",
+      "definition": "Each person has its own form of {être}, so learn the pronoun and the verb together. {Elle est} and {elles sont} go like {il est} and {ils sont}.",
+      "layout": "forms",
+      "examples": [
+        {
+          "fr": "je suis",
+          "en": "I am"
+        },
+        {
+          "fr": "tu es",
+          "en": "you are"
+        },
+        {
+          "fr": "il est",
+          "en": "he is"
+        },
+        {
+          "fr": "nous sommes",
+          "en": "we are"
+        },
+        {
+          "fr": "vous êtes",
+          "en": "you are"
+        },
+        {
+          "fr": "ils sont",
+          "en": "they are"
+        }
+      ]
     },
     {
       "id": "c-practical-usage",
-      "term": "Practical Usage",
-      "definition": "Use it with an adjective, as in \"I am happy\", or with your name, as in \"I am Paul\".",
-      "example": "{Je suis heureux} (I am happy), {Il est heureux} (he is happy), {Je suis Paul} (I am Paul), {Tu es bon !} (you're good!)"
+      "term": "{être} with a word or a name",
+      "definition": "Use it with a describing word, as in I am happy, or with your name, as in I am Paul.",
+      "examples": [
+        {
+          "fr": "Je suis heureux.",
+          "en": "I am happy."
+        },
+        {
+          "fr": "Il est heureux.",
+          "en": "He is happy."
+        },
+        {
+          "fr": "Je suis Paul.",
+          "en": "I am Paul."
+        },
+        {
+          "fr": "Tu es bon !",
+          "en": "You're good!"
+        }
+      ]
     },
     {
       "id": "c-at-the-cafe",
       "term": "At the café",
       "definition": "With the words from the first lesson, you can already answer a waiter.",
-      "example": "{Bonjour ! Café ?} (Hello! Coffee?) {Oui, merci !} (Yes, thanks!)"
+      "examples": [
+        {
+          "fr": "Bonjour ! Café ?",
+          "en": "Hello! Coffee?"
+        },
+        {
+          "fr": "Oui, merci !",
+          "en": "Yes, thanks!"
+        }
+      ]
     }
   ],
   "tables": [

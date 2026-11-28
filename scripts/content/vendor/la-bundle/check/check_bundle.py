@@ -582,6 +582,37 @@ def format_rules(b, report, validator):
             step_body(step, join("/content", i, "steps", j), entry, stories, validator, report, bad)
 
 
+def example_rules(block, at, bad):
+    """A concept card's or Reference section's examples (ConceptBlock.examples, layout): one shape at a time, a layout
+    exactly when there are examples, each example's English in a list card, an even count in a forms card, whose
+    first half are the singular forms and second half their plurals, and text only in a plain card's items (fr only in
+    the others')."""
+    examples, layout = block.get("examples"), block.get("layout")
+    if examples is None:
+        if layout is not None:
+            bad(join(at, "layout"), f"layout {layout!r} is set but the {block['type']} has no examples")
+        return
+    if block.get("example") is not None:
+        bad(join(at, "example"), "the block holds both the old example string and examples; example is null when examples is set")
+    if layout is None:
+        bad(join(at, "layout"), "a block with examples sets its layout, list, forms or plain")
+    elif layout == "plain":
+        for k, x in enumerate(examples):
+            if x.get("text") is None or any(x.get(f) is not None for f in ("fr", "en", "note")):
+                bad(join(at, "examples", k), "an item of a plain layout holds text only, with no fr, en or note")
+        return
+    for k, x in enumerate(examples):
+        if x.get("fr") is None or x.get("text") is not None:
+            bad(join(at, "examples", k), f"an item of a {layout} layout holds fr and no text; only a plain layout's items hold text")
+    if layout == "forms":
+        if len(examples) % 2:
+            bad(join(at, "examples"), f"a forms layout has an even number of examples, singular forms then their plurals; found {len(examples)}")
+    else:
+        for k, x in enumerate(examples):
+            if x.get("en") is None:
+                bad(join(at, "examples", k, "en"), "in a list layout every example has its en")
+
+
 def step_body(step, at, entry, stories, validator, report, bad):
     """A body checked against the one definition its section_id names, then the rules inside it."""
     sid = step["section_id"]
@@ -595,6 +626,11 @@ def step_body(step, at, entry, stories, validator, report, bad):
     if errors:
         return
     body = step["body"]
+
+    if name in ("VocabularyIntroBody", "ReferenceBody"):
+        for n, block in enumerate(body["blocks"]):
+            if block.get("type") in ("concept", "section"):
+                example_rules(block, join(bat, "blocks", n), bad)
 
     if name == "GuideBody":
         seen = {}

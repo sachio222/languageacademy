@@ -173,6 +173,46 @@
             "type": "string",
             "minLength": 1,
             "pattern": "\\S"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fr": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S",
+                  "maxLength": 300
+                },
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S",
+                  "maxLength": 300
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S",
+                  "maxLength": 200
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S",
+                  "maxLength": 300
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "layout": {
+            "enum": [
+              "list",
+              "forms",
+              "plain"
+            ]
           }
         },
         "additionalProperties": false
@@ -309,6 +349,171 @@
         },
         "additionalProperties": false
       }
+    },
+    "conjugation": {
+      "type": "object",
+      "required": [
+        "verb",
+        "en",
+        "pattern",
+        "groups",
+        "rows"
+      ],
+      "properties": {
+        "verb": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pattern": {
+          "enum": [
+            "irregular",
+            "er",
+            "like"
+          ]
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]*$"
+              },
+              "sound": {
+                "type": "string",
+                "pattern": "^\\/[^/\\s][^/]*\\/$",
+                "maxLength": 40
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "person",
+              "form",
+              "en",
+              "group",
+              "stem"
+            ],
+            "properties": {
+              "person": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "form": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "group": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "stem": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "maxLength": 60
+              },
+              "silent": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "maxLength": 20
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "contrast": {
+          "type": "object",
+          "required": [
+            "same",
+            "one",
+            "many",
+            "listen"
+          ],
+          "properties": {
+            "same": {
+              "type": "boolean"
+            },
+            "one": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "many": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "listen": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "liaison": {
+              "type": "object",
+              "required": [
+                "one",
+                "many",
+                "listen"
+              ],
+              "properties": {
+                "one": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "many": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "listen": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false,

@@ -1,7 +1,7 @@
 // The French language module (see ../language.mjs for what each member means).
 import { fold, norm, tokenize, restoreElisions } from './tokenize.mjs';
 import { buildFormIndex, lookupKey, strictKey, lookupToken, lookupTokenStrict } from './forms.mjs';
-import { isEnglish, frenchIn, frenchWordTest } from './text.mjs';
+import { isEnglish, isFrenchText, frenchIn, frenchWordTest } from './text.mjs';
 import { checkAnswer } from './answers.mjs';
 import { conjugation } from './conjugation.mjs';
 
@@ -20,6 +20,14 @@ async function dictionaryForms() {
   return (await import('../../content/migrate/sources.mjs')).dictionaryForms();
 }
 
+// The persons a verb form starts with, each [singular pronouns, plural pronouns], in the order a forms card's two
+// columns pair them (scripts/content/concept-examples.mjs): je with nous, tu with vous, il, elle and on with ils and elles.
+const PERSONS = [
+  [['je', "j'"], ['nous']],
+  [['tu'], ['vous']],
+  [['il', 'elle', 'on'], ['ils', 'elles']],
+];
+
 export default {
   code: 'fr',
   locale: 'fr',
@@ -29,4 +37,8 @@ export default {
   isNativeText: isEnglish, targetIn: frenchIn, targetWordTest: frenchWordTest,
   checkAnswer, dictionaryForms, popupKeys,
   conjugation,
+  persons: PERSONS,
+  // A concept card's example in the learner's language, not French: English that L would draw with a French play
+  // button (concept_example_not_target). Any English-only word, or isEnglish, marks it.
+  isNativeExample: (text) => !isFrenchText(text, null, { as: 'quoted' }),
 };
